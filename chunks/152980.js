@@ -81,7 +81,8 @@ function x(e) {
             for (let t of e)
                 c({
                     platform: d.ow.WEB,
-                    file: t
+                    file: t,
+                    origin: 'unknown:guild_product_attachment'
                 });
             x.current = !0;
         } catch (e) {}

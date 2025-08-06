@@ -13,8 +13,8 @@ var r = a(967752),
     R = a(255768),
     d = a(380132),
     N = a(151122),
-    A = a(112797),
-    f = a(305625),
+    f = a(112797),
+    A = a(305625),
     T = a(820754),
     p = a(822578);
 let L = "Not capturing exception because it's already been captured.";
@@ -59,7 +59,7 @@ class h {
         return (this._process(this._captureEvent(t, o, i || a)), o.event_id);
     }
     captureSession(t) {
-        'string' != typeof t.release ? R.X && _.kg.warn('Discarded session because of missing or non-string release') : (this.sendSession(t), (0, A.CT)(t, { init: !1 }));
+        'string' != typeof t.release ? R.X && _.kg.warn('Discarded session because of missing or non-string release') : (this.sendSession(t), (0, f.CT)(t, { init: !1 }));
     }
     getDsn() {
         return this._dsn;
@@ -149,7 +149,7 @@ class h {
             }
         let n = 'ok' === t.status;
         ((n && 0 === t.errors) || (n && a)) &&
-            ((0, A.CT)(t, {
+            ((0, f.CT)(t, {
                 ...(a && { status: 'crashed' }),
                 errors: t.errors || Number(r || a)
             }),
@@ -190,7 +190,7 @@ class h {
                         ...t.contexts
                     }),
                         (t.sdkProcessingMetadata = {
-                            dynamicSamplingContext: n || (0, f._l)(a, this),
+                            dynamicSamplingContext: n || (0, A._l)(a, this),
                             ...t.sdkProcessingMetadata
                         }));
                 }

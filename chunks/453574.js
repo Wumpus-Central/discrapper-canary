@@ -29,7 +29,7 @@ let R = (0, _._I)((t = {}) => {
                             [i, c] = r;
                         e &&
                             (function (t, e, a, r) {
-                                if (A(t, a.status, a.url)) {
+                                if (f(t, a.status, a.url)) {
                                     var _, o;
                                     let t,
                                         i,
@@ -37,7 +37,7 @@ let R = (0, _._I)((t = {}) => {
                                         E,
                                         s = ((_ = e), (!(o = r) && _ instanceof Request) || (_ instanceof Request && _.bodyUsed) ? _ : new Request(_, o));
                                     T() && (([t, c] = d('Cookie', s)), ([i, E] = d('Set-Cookie', a)));
-                                    let l = f({
+                                    let l = A({
                                         url: s.url,
                                         method: s.method,
                                         status: a.status,
@@ -61,7 +61,7 @@ let R = (0, _._I)((t = {}) => {
                         let { method: _, request_headers: E } = a;
                         try {
                             !(function (t, e, a, r) {
-                                if (A(t, e.status, e.responseURL)) {
+                                if (f(t, e.status, e.responseURL)) {
                                     let t, _, o;
                                     if (T()) {
                                         try {
@@ -85,7 +85,7 @@ let R = (0, _._I)((t = {}) => {
                                         }
                                         t = r;
                                     }
-                                    let i = f({
+                                    let i = A({
                                         url: e.responseURL,
                                         method: a,
                                         status: e.status,
@@ -128,11 +128,11 @@ function N(t) {
         return (a && r && (t[a] = r), t);
     }, {});
 }
-function A(t, e, a) {
+function f(t, e, a) {
     var r, _;
     return ((r = t.failedRequestStatusCodes), r.some((t) => ('number' == typeof t ? t === e : e >= t[0] && e <= t[1])) && ((_ = t.failedRequestTargets), _.some((t) => ('string' == typeof t ? a.includes(t) : t.test(a)))) && !(0, i.W)(a, (0, o.s3)()));
 }
-function f(t) {
+function A(t) {
     let e = `HTTP Client Error with status code: ${t.status}`,
         a = {
             message: e,

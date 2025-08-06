@@ -14,8 +14,8 @@ var r = n(255367),
     b = n(100527),
     g = n(906732),
     j = n(70097),
-    y = n(237617),
-    h = n(318374),
+    h = n(237617),
+    y = n(318374),
     x = n(594174),
     v = n(962399),
     O = n(626135),
@@ -77,7 +77,7 @@ let I = function (e) {
         { analyticsLocations: N } = (0, g.ZP)(b.Z.CLIPS_GALLERY_ITEM),
         [Z, L] = l.useState(!1),
         D = l.useRef(null),
-        I = (0, y.Z)(null != (a = null == (t = o.editMetadata) ? void 0 : t.start) ? a : 0),
+        I = (0, h.Z)(null != (a = null == (t = o.editMetadata) ? void 0 : t.start) ? a : 0),
         _ = l.useRef(
             new d.sW(500, () => {
                 var e;
@@ -157,7 +157,7 @@ let I = function (e) {
                         (0, r.jsxs)('div', {
                             className: k.usersAndDelete,
                             children: [
-                                (0, r.jsx)(h.Z, {
+                                (0, r.jsx)(y.Z, {
                                     maxUsers: 4,
                                     users: w,
                                     onFocusOverflow: (e) => {
@@ -258,9 +258,9 @@ function M(e) {
         u = !n.name,
         [d, b] = l.useState(!1),
         [g, j] = l.useState(null != (t = n.name) ? t : ''),
-        [y, h] = l.useState(!1),
+        [h, y] = l.useState(!1),
         x = async () => {
-            (h(!0), await (0, w.Tm)(n.id, { name: '' === g ? void 0 : g }), h(!1), b(!1));
+            (y(!0), await (0, w.Tm)(n.id, { name: '' === g ? void 0 : g }), y(!1), b(!1));
         };
     return (l.useEffect(() => {
         if (s !== n.name) {
@@ -277,7 +277,7 @@ function M(e) {
               onKeyDown: (e) => {
                   'Enter' === e.key && x();
               },
-              disabled: y,
+              disabled: h,
               onChange: j,
               onBlur: x
           })

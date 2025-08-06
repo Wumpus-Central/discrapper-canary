@@ -1,8 +1,8 @@
-n.d(t, { Z: () => b });
+n.d(t, { Z: () => g });
 var r = n(255367);
 n(73800);
-var o = n(755721),
-    l = n(572691),
+var l = n(755721),
+    o = n(572691),
     i = n(906732),
     a = n(444141),
     c = n(705556),
@@ -12,34 +12,34 @@ var o = n(755721),
     f = n(821706),
     p = n(562831),
     m = n(981631);
-function b(e) {
-    let { user: t, currentUser: n, guildId: b, channelId: g, displayProfile: y, relationshipType: O, onClose: j } = e,
-        { newestAnalyticsLocation: _ } = (0, i.ZP)(),
-        x = (0, a.Z)({
+function g(e) {
+    let { user: t, currentUser: n, guildId: g, channelId: b, displayProfile: j, relationshipType: h, onClose: y } = e,
+        { newestAnalyticsLocation: v } = (0, i.ZP)(),
+        O = (0, a.Z)({
             user: t,
-            guildId: b,
-            channelId: g,
-            displayProfile: y,
-            onClose: j
+            guildId: g,
+            channelId: b,
+            displayProfile: j,
+            onClose: y
         }),
-        { gameFriends: h, hasOutgoingPendingGameFriends: v, hasIncomingPendingGameFriends: I } = (0, p.H)({ userId: t.id }),
-        P = h.length > 0 || v || I;
-    return O === m.OGo.BLOCKED
+        { gameFriends: x, hasOutgoingPendingGameFriends: _, hasIncomingPendingGameFriends: I } = (0, p.H)({ userId: t.id }),
+        P = x.length > 0 || _ || I;
+    return h === m.OGo.BLOCKED
         ? null
         : t.id === n.id
           ? (0, r.jsxs)(r.Fragment, {
                 children: [
                     (0, r.jsx)(c.Z, {
                         user: t,
-                        guildId: b,
-                        onClose: j
+                        guildId: g,
+                        onClose: y
                     }),
-                    (0, r.jsx)(u.Z, { onClose: j }),
+                    (0, r.jsx)(u.Z, { onClose: y }),
                     (0, r.jsx)(d.Z, {
                         type: 'icon',
                         user: t,
-                        guildId: b,
-                        viewProfileItem: x,
+                        guildId: g,
+                        viewProfileItem: O,
                         themeColor: 'secondary'
                     })
                 ]
@@ -50,89 +50,89 @@ function b(e) {
                       (0, r.jsx)(s.Z, {
                           type: 'text',
                           userId: t.id,
-                          onClose: l.Z.popAll,
+                          onClose: o.Z.popAll,
                           autoFocus: !0
                       }),
                       (0, r.jsx)(d.Z, {
                           type: 'icon',
                           user: t,
-                          guildId: b,
-                          viewProfileItem: x,
+                          guildId: g,
+                          viewProfileItem: O,
                           themeColor: 'secondary'
                       })
                   ]
               })
-            : O === m.OGo.PENDING_INCOMING
+            : h === m.OGo.PENDING_INCOMING
               ? (0, r.jsxs)(r.Fragment, {
                     children: [
                         (0, r.jsx)(s.Z, {
                             type: 'text',
                             userId: t.id,
-                            color: o.zx.Colors.BRAND,
-                            onClose: l.Z.popAll,
+                            color: l.zx.Colors.BRAND,
+                            onClose: o.Z.popAll,
                             autoFocus: !0
                         }),
                         (0, r.jsx)(d.Z, {
                             type: 'icon',
                             user: t,
-                            guildId: b,
+                            guildId: g,
                             themeColor: 'secondary'
                         })
                     ]
                 })
-              : O === m.OGo.FRIEND || O === m.OGo.PENDING_OUTGOING
+              : h === m.OGo.FRIEND || h === m.OGo.PENDING_OUTGOING
                 ? (0, r.jsxs)(r.Fragment, {
                       children: [
                           (0, r.jsx)(s.Z, {
                               type: 'text',
                               userId: t.id,
-                              color: o.zx.Colors.BRAND,
-                              onClose: l.Z.popAll,
+                              color: l.zx.Colors.BRAND,
+                              onClose: o.Z.popAll,
                               autoFocus: !0
                           }),
                           (0, r.jsx)(f.g, {
                               type: 'icon',
                               user: t,
-                              relationshipType: O,
+                              relationshipType: h,
                               shouldShowTooltip: !0,
                               themeColor: 'secondary',
-                              analyticsLocation: _
+                              analyticsLocation: v
                           }),
                           (0, r.jsx)(d.Z, {
                               type: 'icon',
                               user: t,
-                              guildId: b,
-                              viewProfileItem: x,
+                              guildId: g,
+                              viewProfileItem: O,
                               themeColor: 'secondary'
                           })
                       ]
                   })
-                : O === m.OGo.NONE && P
+                : h === m.OGo.NONE && P
                   ? (0, r.jsxs)(r.Fragment, {
                         children: [
                             (0, r.jsx)(s.Z, {
                                 type: 'text',
                                 userId: t.id,
-                                onClose: l.Z.popAll,
+                                onClose: o.Z.popAll,
                                 autoFocus: !0
                             }),
                             (0, r.jsx)(f.k9, {
                                 type: 'icon',
                                 user: t,
-                                analyticsLocation: _,
+                                analyticsLocation: v,
                                 themeColor: 'secondary',
-                                gameFriends: h,
+                                gameFriends: x,
                                 tooltipPosition: 'top',
                                 tooltipAlign: 'center',
                                 shouldShowTooltip: !0,
                                 hasIncomingPendingGameFriends: I,
-                                hasOutgoingPendingGameFriends: v
+                                hasOutgoingPendingGameFriends: _
                             }),
                             (0, r.jsx)(d.Z, {
                                 type: 'icon',
                                 user: t,
-                                guildId: b,
-                                viewProfileItem: x,
+                                guildId: g,
+                                viewProfileItem: O,
                                 themeColor: 'secondary'
                             })
                         ]
@@ -142,21 +142,21 @@ function b(e) {
                             (0, r.jsx)(f.Z7, {
                                 type: 'text',
                                 userId: t.id,
-                                analyticsLocation: _,
-                                color: o.zx.Colors.BRAND,
+                                analyticsLocation: v,
+                                color: l.zx.Colors.BRAND,
                                 autoFocus: !0
                             }),
                             (0, r.jsx)(s.Z, {
                                 type: 'icon',
                                 userId: t.id,
-                                onClose: l.Z.popAll,
+                                onClose: o.Z.popAll,
                                 themeColor: 'secondary'
                             }),
                             (0, r.jsx)(d.Z, {
                                 type: 'icon',
                                 user: t,
-                                guildId: b,
-                                viewProfileItem: x,
+                                guildId: g,
+                                viewProfileItem: O,
                                 themeColor: 'secondary'
                             })
                         ]

@@ -1,4 +1,4 @@
-(n.d(t, { default: () => E }), n(953529), n(388685));
+(n.d(t, { default: () => D }), n(953529), n(388685));
 var r = n(255367),
     o = n(73800),
     l = n(522942),
@@ -154,26 +154,26 @@ function w(e) {
         children: s ? d : u
     });
 }
-function E(e) {
-    var t, n, p, f, m, _, T, E, D, R, I;
+function D(e) {
+    var t, n, p, f, m, _, T, D, E, R, I;
     let { transitionState: A, analyticsLocations: L, guild: B, onClose: Z } = e,
         G = (0, s.e7)([g.default], () => g.default.getCurrentUser()),
         H = (0, S.J)(),
-        [M, F] = o.useState(null != (D = null == G || null == (t = G.displayNameStyles) ? void 0 : t.fontId) ? D : i.C.DEFAULT),
+        [F, M] = o.useState(null != (E = null == G || null == (t = G.displayNameStyles) ? void 0 : t.fontId) ? E : i.C.DEFAULT),
         [z, U] = o.useState(null != (R = null == G || null == (n = G.displayNameStyles) ? void 0 : n.effectId) ? R : l.m.SOLID),
         [X, Y] = o.useState((null == G || null == (p = G.displayNameStyles) ? void 0 : p.colors) != null && (null == G || null == (f = G.displayNameStyles) ? void 0 : f.colors.length) > 0 ? (null == G || null == (m = G.displayNameStyles) ? void 0 : m.colors) : H[z].defaultColors),
-        { analyticsLocations: q } = (0, u.ZP)(L, d.Z.EDIT_DISPLAY_NAME_STYLES_MODAL),
-        { handleApplyDisplayNameStyles: K, isApplying: V } = (0, j.Z)({
+        { analyticsLocations: V } = (0, u.ZP)(L, d.Z.EDIT_DISPLAY_NAME_STYLES_MODAL),
+        { handleApplyDisplayNameStyles: q, isApplying: K } = (0, j.Z)({
             onSuccess: () => {
                 Z();
             },
             onError: (e) => {}
         }),
-        W = M !== (null == G || null == (_ = G.displayNameStyles) ? void 0 : _.fontId) || z !== (null == G || null == (T = G.displayNameStyles) ? void 0 : T.effectId) || !(0, a.E)(X, null != (I = null == G || null == (E = G.displayNameStyles) ? void 0 : E.colors) ? I : []);
-    return (o.useEffect(() => {}, [q]), null == G)
+        W = F !== (null == G || null == (_ = G.displayNameStyles) ? void 0 : _.fontId) || z !== (null == G || null == (T = G.displayNameStyles) ? void 0 : T.effectId) || !(0, a.E)(X, null != (I = null == G || null == (D = G.displayNameStyles) ? void 0 : D.colors) ? I : []);
+    return (o.useEffect(() => {}, [V]), null == G)
         ? null
         : (0, r.jsx)(u.Gt, {
-              value: q,
+              value: V,
               children: (0, r.jsx)(h.k.Provider, {
                   value: { overrideSettings: !0 },
                   children: (0, r.jsxs)(c.Y0X, {
@@ -201,8 +201,8 @@ function E(e) {
                                               })
                                           }),
                                           (0, r.jsx)(O.Z, {
-                                              selectedFontId: M,
-                                              setSelectedFontId: F,
+                                              selectedFontId: F,
+                                              setSelectedFontId: M,
                                               className: k.selectionSubSection
                                           }),
                                           (0, r.jsx)(y.Z, {
@@ -224,7 +224,7 @@ function E(e) {
                                   }),
                                   (0, r.jsx)(v.Z, {
                                       user: G,
-                                      selectedFontId: M,
+                                      selectedFontId: F,
                                       selectedEffectId: z,
                                       selectedColors: z === l.m.SOLID && (0, a.E)(X, H[z].defaultColors) ? [] : X,
                                       onClose: Z
@@ -232,13 +232,13 @@ function E(e) {
                               ]
                           }),
                           (0, r.jsx)(w, {
-                              isApplying: V,
+                              isApplying: K,
                               onApply: () => {
                                   if (W) {
                                       let e = X;
                                       (z === l.m.SOLID && X.length > 0 && X[0] === H[z].defaultColors[0] && (e = []),
-                                          K({
-                                              fontId: M,
+                                          q({
+                                              fontId: F,
                                               effectId: z,
                                               colors: e
                                           }));
@@ -246,11 +246,11 @@ function E(e) {
                               },
                               onSurpriseMe: () => {
                                   let e = (0, b.aY)();
-                                  (F(e.fontId), U(e.effectId), Y(e.colors));
+                                  (M(e.fontId), U(e.effectId), Y(e.colors));
                               },
                               onClose: Z,
                               canApply: W,
-                              analyticsLocations: q
+                              analyticsLocations: V
                           })
                       ]
                   })

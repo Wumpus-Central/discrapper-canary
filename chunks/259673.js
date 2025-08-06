@@ -72,7 +72,7 @@ let d = (e) => {
                     pendingBadges: [(0, c.X)()],
                     canUsePremiumCustomization: m,
                     disabledInputs: !0,
-                    hideExampleButton: !0
+                    hideViewFullProfileButton: !0
                 }),
             Object.getOwnPropertyDescriptors
                 ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))

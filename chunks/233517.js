@@ -2,8 +2,8 @@ a.d(e, {
     Qy: () => O,
     TM: () => g,
     Tb: () => s,
-    YA: () => A,
-    av: () => f,
+    YA: () => f,
+    av: () => A,
     cg: () => C,
     dk: () => h,
     eN: () => u,
@@ -47,10 +47,10 @@ function d(t, e) {
 function N(t) {
     (0, o.aF)().setTags(t);
 }
-function A(t, e) {
+function f(t, e) {
     (0, o.aF)().setTag(t, e);
 }
-function f(t) {
+function A(t) {
     (0, o.aF)().setUser(t);
 }
 function T() {

@@ -1,4 +1,4 @@
-a.d(e, { s: () => A });
+a.d(e, { s: () => f });
 var r = a(394798),
     _ = a(101284),
     n = a(370336),
@@ -13,7 +13,7 @@ var r = a(394798),
     R = a(966497),
     d = a(241225),
     N = a(881243);
-class A {
+class f {
     constructor(t = {}) {
         ((this._traceId = t.traceId || (0, r.DM)()),
             (this._spanId = t.spanId || (0, r.DM)().substring(16)),
@@ -90,8 +90,8 @@ class A {
     }
     addEvent(t, e, a) {
         c.X && o.kg.log('[Tracing] Adding an event to span:', t);
-        let r = f(e) ? e : a || (0, _.ph)(),
-            n = f(e) ? {} : e || {},
+        let r = A(e) ? e : a || (0, _.ph)(),
+            n = A(e) ? {} : e || {},
             i = {
                 name: t,
                 time: (0, u.$k)(r),
@@ -134,7 +134,7 @@ class A {
         let r = (0, u.Dp)(this)
                 .filter((t) => {
                     var e;
-                    return t !== this && !((e = t) instanceof A && e.isStandaloneSpan());
+                    return t !== this && !((e = t) instanceof f && e.isStandaloneSpan());
                 })
                 .map((t) => (0, u.XU)(t))
                 .filter(T),
@@ -158,7 +158,7 @@ class A {
         return (R && Object.keys(R).length && (c.X && o.kg.log('[Measurements] Adding measurements to transaction event', JSON.stringify(R, void 0, 2)), (E.measurements = R)), E);
     }
 }
-function f(t) {
+function A(t) {
     return (t && 'number' == typeof t) || t instanceof Date || Array.isArray(t);
 }
 function T(t) {

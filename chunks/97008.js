@@ -28,7 +28,8 @@ class s {
                 {
                     file: u,
                     platform: i.ow.WEB,
-                    isThumbnail: !1
+                    isThumbnail: !1,
+                    origin: 'unknown:canvas_export'
                 },
                 n
             );

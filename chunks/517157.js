@@ -1,11 +1,11 @@
 n.d(t, { Z: () => c });
 var r = n(379405),
-    o = n(296009),
-    l = n(442837),
+    l = n(296009),
+    o = n(442837),
     i = n(187162),
     a = n(570911);
 function c() {
-    let e = (0, l.e7)([i.Z], () => i.Z.getOverrideWidgets());
+    let e = (0, o.e7)([i.Z], () => i.Z.getOverrideWidgets());
     if (null !== e) return e;
     let t = {
             applicationId: a.J6['23'],
@@ -30,22 +30,22 @@ function c() {
     return [
         {
             id: '1',
-            type: o.l.FAVORITE_GAMES,
+            type: l.l.FAVORITE_GAMES,
             game: t
         },
         {
             id: '2',
-            type: o.l.CURRENT_GAMES,
+            type: l.l.CURRENT_GAMES,
             games: n
         },
         {
             id: '3',
-            type: o.l.WANT_TO_PLAY_GAMES,
+            type: l.l.WANT_TO_PLAY_GAMES,
             games: c
         },
         {
             id: '4',
-            type: o.l.PLAYED_GAMES,
+            type: l.l.PLAYED_GAMES,
             games: s
         }
     ];

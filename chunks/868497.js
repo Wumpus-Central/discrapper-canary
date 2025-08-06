@@ -11,10 +11,10 @@ var r = a(873567),
     u = a(793373),
     I = a(152228),
     R = a(305625);
-function d(t, e, a, N, A = 'auto.http.browser') {
+function d(t, e, a, N, f = 'auto.http.browser') {
     if (!t.fetchData) return;
-    let f = (0, E.z)() && e(t.fetchData.url);
-    if (t.endTimestamp && f) {
+    let A = (0, E.z)() && e(t.fetchData.url);
+    if (t.endTimestamp && A) {
         let e = t.fetchData.__span;
         if (!e) return;
         let a = N[e];
@@ -51,7 +51,7 @@ function d(t, e, a, N, A = 'auto.http.browser') {
         P = O ? (0, r.en)(O).host : void 0,
         g = !!(0, s.HN)(),
         D =
-            f && g
+            A && g
                 ? (0, I.qp)({
                       name: `${L} ${h}`,
                       attributes: {
@@ -60,7 +60,7 @@ function d(t, e, a, N, A = 'auto.http.browser') {
                           'http.method': L,
                           'http.url': O,
                           'server.address': P,
-                          [c.S3]: A,
+                          [c.S3]: f,
                           [c.$J]: 'http.client'
                       }
                   })
@@ -81,28 +81,28 @@ function d(t, e, a, N, A = 'auto.http.browser') {
                 },
                 d = c ? (0, s.Hb)(c) : (0, _.$p)(E, l, u),
                 N = (0, n.IQ)(I || (c ? (0, R.jC)(c) : (0, R._l)(E, e))),
-                A = r.headers || ('undefined' != typeof Request && (0, o.V9)(t, Request) ? t.headers : void 0);
-            if (!A)
+                f = r.headers || ('undefined' != typeof Request && (0, o.V9)(t, Request) ? t.headers : void 0);
+            if (!f)
                 return {
                     'sentry-trace': d,
                     baggage: N
                 };
-            if ('undefined' != typeof Headers && (0, o.V9)(A, Headers)) {
-                let t = new Headers(A);
+            if ('undefined' != typeof Headers && (0, o.V9)(f, Headers)) {
+                let t = new Headers(f);
                 return (t.append('sentry-trace', d), N && t.append(n.bU, N), t);
             }
-            if (Array.isArray(A)) {
-                let t = [...A, ['sentry-trace', d]];
+            if (Array.isArray(f)) {
+                let t = [...f, ['sentry-trace', d]];
                 return (N && t.push([n.bU, N]), t);
             }
             {
-                let t = 'baggage' in A ? A.baggage : void 0,
+                let t = 'baggage' in f ? f.baggage : void 0,
                     e = [];
                 return (
                     Array.isArray(t) ? e.push(...t) : t && e.push(t),
                     N && e.push(N),
                     {
-                        ...A,
+                        ...f,
                         'sentry-trace': d,
                         baggage: e.length > 0 ? e.join(',') : void 0
                     }

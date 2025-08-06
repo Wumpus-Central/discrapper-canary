@@ -1,10 +1,10 @@
 a.d(e, {
-    $k: () => f,
+    $k: () => A,
     Dp: () => C,
     Gx: () => m,
     HN: () => v,
     HR: () => d,
-    Hb: () => A,
+    Hb: () => f,
     Tt: () => L,
     XU: () => p,
     _4: () => h,
@@ -49,12 +49,12 @@ function N(t) {
         trace_id: a
     });
 }
-function A(t) {
+function f(t) {
     let { traceId: e, spanId: a } = t.spanContext(),
         r = L(t);
     return (0, _.$p)(e, a, r);
 }
-function f(t) {
+function A(t) {
     return 'number' == typeof t ? T(t) : Array.isArray(t) ? t[0] + t[1] / 1000000000 : t instanceof Date ? T(t.getTime()) : (0, n.ph)();
 }
 function T(t) {
@@ -73,8 +73,8 @@ function p(t) {
                 data: e,
                 description: o,
                 parent_span_id: c,
-                start_timestamp: f(n),
-                timestamp: f(i) || void 0,
+                start_timestamp: A(n),
+                timestamp: A(i) || void 0,
                 status: h(l),
                 op: e[s.$J],
                 origin: e[s.S3],

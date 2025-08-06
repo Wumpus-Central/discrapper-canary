@@ -2,17 +2,17 @@
 var r = n(255367),
     i = n(73800),
     l = n(442837),
-    s = n(481060),
+    a = n(481060),
     o = n(749210),
-    a = n(910693),
-    c = n(501517),
+    c = n(910693),
+    s = n(501517),
     u = n(592125),
     d = n(51144),
-    p = n(981631),
-    g = n(388032),
-    f = n(130883),
-    m = n(373283);
-function j(e) {
+    _ = n(981631),
+    f = n(388032),
+    g = n(130883),
+    p = n(373283);
+function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -37,7 +37,7 @@ function j(e) {
     }
     return e;
 }
-function h(e, t) {
+function O(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -56,7 +56,7 @@ function h(e, t) {
     );
 }
 function b(e) {
-    var { guildId: t, user: n, location: b, modReportId: x } = e,
+    var { guildId: t, user: n, location: b, modReportId: E } = e,
         y = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -76,14 +76,14 @@ function b(e) {
             }
             return i;
         })(e, ['guildId', 'user', 'location', 'modReportId']);
-    let [O, v] = i.useState(''),
-        [C, P] = i.useState(!1),
-        w = (0, a.sE)(t, {
+    let [j, h] = i.useState(''),
+        [x, v] = i.useState(!1),
+        C = (0, c.sE)(t, {
             location: b,
             targetUserId: n.id
         }),
-        { isModReportClosed: k, isModReport: N } = (0, l.cj)([u.Z], () => {
-            let e = u.Z.getChannel(x);
+        { isModReportClosed: M, isModReport: A } = (0, l.cj)([u.Z], () => {
+            let e = u.Z.getChannel(E);
             return {
                 isModReportClosed: null == e ? void 0 : e.isArchivedThread(),
                 isModReport: null == e ? void 0 : e.isModeratorReportChannel()
@@ -91,78 +91,78 @@ function b(e) {
         }),
         S = i.useCallback(() => {
             if (
-                (o.Z.kickUser(t, n.id, O, x).then(() => {
-                    C && null != x && c.Z.resolveFlag(x);
+                (o.Z.kickUser(t, n.id, j, E).then(() => {
+                    x && null != E && s.Z.resolveFlag(E);
                 }),
-                w(a.jQ.KICK),
-                null != x)
+                C(c.jQ.KICK),
+                null != E)
             ) {
                 var e;
                 null == (e = y.onClose) || e.call(y);
             }
-        }, [t, n.id, O, w, x, C, y]),
+        }, [t, n.id, j, C, E, x, y]),
         T = i.useCallback((e) => {
-            v(e);
+            h(e);
         }, []);
-    return null != x && N
+    return null != E && A
         ? (0, r.jsxs)(
-              s.Y0X,
-              h(j({}, y), {
+              a.Y0X,
+              O(m({}, y), {
                   parentComponent: 'KickConfirm',
                   children: [
-                      (0, r.jsx)(s.xBx, {
+                      (0, r.jsx)(a.xBx, {
                           separator: !1,
-                          children: (0, r.jsxs)(s.Kqy, {
+                          children: (0, r.jsxs)(a.Kqy, {
                               direction: 'vertical',
                               justify: 'space-between',
                               children: [
-                                  (0, r.jsx)(s.olH, {
-                                      className: m.closeButton,
+                                  (0, r.jsx)(a.olH, {
+                                      className: p.closeButton,
                                       onClick: y.onClose
                                   }),
-                                  (0, r.jsx)(s.X6q, {
+                                  (0, r.jsx)(a.X6q, {
                                       variant: 'heading-lg/semibold',
-                                      children: g.intl.formatToPlainString(g.t['1Ie87u'], { user: n.username })
+                                      children: f.intl.formatToPlainString(f.t['1Ie87u'], { user: n.username })
                                   })
                               ]
                           })
                       }),
-                      (0, r.jsxs)(s.hzk, {
+                      (0, r.jsxs)(a.hzk, {
                           children: [
-                              (0, r.jsx)(s.Text, {
+                              (0, r.jsx)(a.Text, {
                                   variant: 'text-md/normal',
-                                  className: m.spacing,
-                                  children: g.intl.format(g.t['/yH0UV'], { user: '@'.concat(d.ZP.getName(n)) })
+                                  className: p.spacing,
+                                  children: f.intl.format(f.t['/yH0UV'], { user: '@'.concat(d.ZP.getName(n)) })
                               }),
-                              (0, r.jsx)(s.xJW, {
-                                  titleClassName: m.title,
-                                  title: g.intl.string(null != x ? g.t.hmKy8P : g.t['+2QEPj']),
-                                  className: m.spacing,
-                                  children: (0, r.jsx)(s.Kx8, {
-                                      maxLength: p.GNZ,
+                              (0, r.jsx)(a.xJW, {
+                                  titleClassName: p.title,
+                                  title: f.intl.string(null != E ? f.t.hmKy8P : f.t['+2QEPj']),
+                                  className: p.spacing,
+                                  children: (0, r.jsx)(a.Kx8, {
+                                      maxLength: _.GNZ,
                                       onChange: T,
-                                      value: O,
+                                      value: j,
                                       rows: 2
                                   })
                               })
                           ]
                       }),
-                      (0, r.jsxs)(s.mzw, {
+                      (0, r.jsxs)(a.mzw, {
                           children: [
-                              (0, r.jsx)(s.zxk, {
+                              (0, r.jsx)(a.zxk, {
                                   variant: 'critical-primary',
                                   size: 'sm',
-                                  text: g.intl.string(g.t['3glT6e']),
+                                  text: f.intl.string(f.t['3glT6e']),
                                   type: 'submit',
                                   onClick: S
                               }),
-                              !k &&
-                                  (0, r.jsx)(s.XZJ, {
-                                      value: C,
+                              !M &&
+                                  (0, r.jsx)(a.XZJ, {
+                                      value: x,
                                       onChange: (e, t) => {
-                                          P(t);
+                                          v(t);
                                       },
-                                      children: g.intl.string(f.default['8yIKen'])
+                                      children: f.intl.string(g.default['8yIKen'])
                                   })
                           ]
                       })
@@ -170,31 +170,31 @@ function b(e) {
               })
           )
         : (0, r.jsxs)(
-              s.ConfirmModal,
-              h(
-                  j(
+              a.ConfirmModal,
+              O(
+                  m(
                       {
-                          header: g.intl.formatToPlainString(g.t['1Ie87u'], { user: n.username }),
-                          confirmText: g.intl.string(g.t['3glT6e']),
-                          cancelText: g.intl.string(g.t['ETE/oK']),
+                          header: f.intl.formatToPlainString(f.t['1Ie87u'], { user: n.username }),
+                          confirmText: f.intl.string(f.t['3glT6e']),
+                          cancelText: f.intl.string(f.t['ETE/oK']),
                           onConfirm: S
                       },
                       y
                   ),
                   {
                       children: [
-                          (0, r.jsx)(s.Text, {
+                          (0, r.jsx)(a.Text, {
                               variant: 'text-md/normal',
-                              className: m.spacing,
-                              children: g.intl.format(g.t['/yH0UV'], { user: '@'.concat(d.ZP.getName(n)) })
+                              className: p.spacing,
+                              children: f.intl.format(f.t['/yH0UV'], { user: '@'.concat(d.ZP.getName(n)) })
                           }),
-                          (0, r.jsx)(s.xJW, {
-                              title: g.intl.string(g.t['+2QEPj']),
-                              className: m.spacing,
-                              children: (0, r.jsx)(s.Kx8, {
-                                  maxLength: p.GNZ,
+                          (0, r.jsx)(a.xJW, {
+                              title: f.intl.string(f.t['+2QEPj']),
+                              className: p.spacing,
+                              children: (0, r.jsx)(a.Kx8, {
+                                  maxLength: _.GNZ,
                                   onChange: T,
-                                  value: O,
+                                  value: j,
                                   rows: 2
                               })
                           })

@@ -21,8 +21,8 @@ let R = {
 function d(t, e = {}) {
     let a,
         N = new Map(),
-        A = !1,
-        f = 'externalFinish',
+        f = !1,
+        A = 'externalFinish',
         T = !e.disableAutoFinish,
         p = [],
         { idleTimeout: L = R.idleTimeout, finalTimeout: h = R.finalTimeout, childSpanTimeout: O = R.childSpanTimeout, beforeSpanEnd: P } = e,
@@ -40,20 +40,20 @@ function d(t, e = {}) {
     function y(t) {
         (v(),
             (a = setTimeout(() => {
-                !A && 0 === N.size && T && ((f = 'idleTimeout'), m.end(t));
+                !f && 0 === N.size && T && ((A = 'idleTimeout'), m.end(t));
             }, L)));
     }
     function S(t) {
         a = setTimeout(() => {
-            !A && T && ((f = 'heartbeatFailed'), m.end(t));
+            !f && T && ((A = 'heartbeatFailed'), m.end(t));
         }, O);
     }
     function U(t) {
-        ((A = !0), N.clear(), p.forEach((t) => t()), (0, E.D)(D, C));
+        ((f = !0), N.clear(), p.forEach((t) => t()), (0, E.D)(D, C));
         let e = (0, s.XU)(m),
             { start_timestamp: a } = e;
         if (!a) return;
-        ((e.data || {})[i.ju] || m.setAttribute(i.ju, f), _.kg.log(`[Tracing] Idle span "${e.op}" finished`));
+        ((e.data || {})[i.ju] || m.setAttribute(i.ju, A), _.kg.log(`[Tracing] Idle span "${e.op}" finished`));
         let r = (0, s.Dp)(m).filter((t) => t !== m),
             n = 0;
         (r.forEach((e) => {
@@ -94,12 +94,12 @@ function d(t, e = {}) {
         p.push(
             g.on('spanStart', (t) => {
                 var e;
-                A || t === m || (0, s.XU)(t).timestamp || ((0, s.Dp)(m).includes(t) && ((e = t.spanContext().spanId), v(), N.set(e, !0), S((0, r.ph)() + O / 1000)));
+                f || t === m || (0, s.XU)(t).timestamp || ((0, s.Dp)(m).includes(t) && ((e = t.spanContext().spanId), v(), N.set(e, !0), S((0, r.ph)() + O / 1000)));
             })
         ),
         p.push(
             g.on('spanEnd', (t) => {
-                if (!A) {
+                if (!f) {
                     var e;
                     ((e = t.spanContext().spanId), N.has(e) && N.delete(e), 0 === N.size && y((0, r.ph)() + L / 1000));
                 }
@@ -112,12 +112,12 @@ function d(t, e = {}) {
         ),
         e.disableAutoFinish || y(),
         setTimeout(() => {
-            A ||
+            f ||
                 (m.setStatus({
                     code: u.jt,
                     message: 'deadline_exceeded'
                 }),
-                (f = 'finalTimeout'),
+                (A = 'finalTimeout'),
                 m.end());
         }, h),
         m

@@ -575,6 +575,6 @@ class x extends y.ZP {
             (this.currentSize = null != (s = null == (a = e.file) ? void 0 : a.size) ? s : 0),
             (this.reactNativeFileIndex = r),
             (this._abortController = new AbortController()),
-            e.platform === y.ow.WEB && null != e.origin && (this.uploadAnalytics.origin = e.origin));
+            null != this.origin && (this.uploadAnalytics.origin = 'string' == typeof this.origin ? this.origin : y.BS[this.origin]));
     }
 }

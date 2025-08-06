@@ -1,7 +1,7 @@
 (n.d(t, { Z: () => u }), n(539854), n(388685));
 var r = n(73800),
-    o = n(296009),
-    l = n(442837),
+    l = n(296009),
+    o = n(442837),
     i = n(224706),
     a = n(669764),
     c = n(823379);
@@ -57,12 +57,12 @@ function u(e) {
                     e.forEach((e) => {
                         let n = e.type;
                         switch (n) {
-                            case o.l.FAVORITE_GAMES:
+                            case l.l.FAVORITE_GAMES:
                                 t.push(e.game.applicationId);
                                 break;
-                            case o.l.CURRENT_GAMES:
-                            case o.l.WANT_TO_PLAY_GAMES:
-                            case o.l.PLAYED_GAMES:
+                            case l.l.CURRENT_GAMES:
+                            case l.l.WANT_TO_PLAY_GAMES:
+                            case l.l.PLAYED_GAMES:
                                 e.games.forEach((e) => {
                                     t.push(e.applicationId);
                                 });
@@ -79,8 +79,8 @@ function u(e) {
     r.useEffect(() => {
         t.length > 0 && i.Z.getDetectableGamesSupplemental(t);
     }, [t]);
-    let n = (0, l.e7)([a.Z], () => t.some((e) => a.Z.isFetching(e))),
-        u = (0, l.e7)([a.Z], () => {
+    let n = (0, o.e7)([a.Z], () => t.some((e) => a.Z.isFetching(e))),
+        u = (0, o.e7)([a.Z], () => {
             let e = {};
             return (
                 t.forEach((t) => {
@@ -96,7 +96,7 @@ function u(e) {
                 e.map((e) => {
                     let t = e.type;
                     switch (t) {
-                        case o.l.FAVORITE_GAMES: {
+                        case l.l.FAVORITE_GAMES: {
                             let t = u[e.game.applicationId],
                                 n = d(s({}, e.game), {
                                     gameName: null == t ? void 0 : t.name,
@@ -104,9 +104,9 @@ function u(e) {
                                 });
                             return d(s({}, e), { game: n });
                         }
-                        case o.l.CURRENT_GAMES:
-                        case o.l.WANT_TO_PLAY_GAMES:
-                        case o.l.PLAYED_GAMES: {
+                        case l.l.CURRENT_GAMES:
+                        case l.l.WANT_TO_PLAY_GAMES:
+                        case l.l.PLAYED_GAMES: {
                             let t = e.games.map((e) => {
                                 let t = u[e.applicationId];
                                 return d(s({}, e), {

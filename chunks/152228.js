@@ -20,8 +20,8 @@ var r = a(370541),
     R = a(696486),
     d = a(305625),
     N = a(966497),
-    A = a(787659),
-    f = a(789112),
+    f = a(787659),
+    A = a(789112),
     T = a(275689),
     p = a(793373),
     L = a(881243);
@@ -37,7 +37,7 @@ function O(t, e) {
                 n = b(a),
                 o =
                     t.onlyIfParent && !n
-                        ? new f.b()
+                        ? new A.b()
                         : v({
                               parentSpan: n,
                               spanArguments: r,
@@ -74,7 +74,7 @@ function P(t, e) {
                 n = b(a),
                 o =
                     t.onlyIfParent && !n
-                        ? new f.b()
+                        ? new A.b()
                         : v({
                               parentSpan: n,
                               spanArguments: r,
@@ -111,7 +111,7 @@ function g(t) {
         let e = (0, i.nZ)(),
             _ = b(e);
         return t.onlyIfParent && !_
-            ? new f.b()
+            ? new A.b()
             : v({
                   parentSpan: _,
                   spanArguments: a,
@@ -134,7 +134,7 @@ function m(t) {
 }
 function v({ parentSpan: t, spanArguments: e, forceTransaction: a, scope: r }) {
     let _;
-    if (!(0, u.z)()) return new f.b();
+    if (!(0, u.z)()) return new A.b();
     let n = (0, i.aF)();
     if (t && !a)
         ((_ = (function (t, e, a) {
@@ -147,7 +147,7 @@ function v({ parentSpan: t, spanArguments: e, forceTransaction: a, scope: r }) {
                           traceId: _,
                           sampled: n
                       })
-                    : new f.b({ traceId: _ });
+                    : new A.b({ traceId: _ });
             (0, R.j5)(t, o);
             let c = (0, i.s3)();
             return (c && (c.emit('spanStart', o), a.endTimestamp && c.emit('spanEnd', o)), o);
@@ -211,7 +211,7 @@ function U(t, e, a) {
         { name: n = '', attributes: o } = t,
         [c, E] = e.getScopeData().sdkProcessingMetadata[h]
             ? [!1]
-            : (0, A.R)(_, {
+            : (0, f.R)(_, {
                   name: n,
                   parentSampled: a,
                   attributes: o,

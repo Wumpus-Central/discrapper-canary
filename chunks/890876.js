@@ -7,10 +7,11 @@ var i = n(892001),
     s = n(388032),
     l = n(200669);
 function c(e) {
-    let { user: t, hideMessageInput: n, hideExampleButton: c, showViewFullProfileButton: u } = e;
+    let { user: t, hideMessageInput: n, hideViewFullProfileButton: c } = e;
     return n
-        ? u
-            ? (0, r.jsx)('div', {
+        ? c
+            ? null
+            : (0, r.jsx)('div', {
                   className: l.footer,
                   children: (0, r.jsx)(a.O1, {
                       variant: 'primary',
@@ -22,16 +23,6 @@ function c(e) {
                           }),
                       fullWidth: !0
                   })
-              })
-            : (0, r.jsx)('div', {
-                  className: l.footer,
-                  children:
-                      !c &&
-                      (0, r.jsx)(a.O1, {
-                          variant: 'primary',
-                          text: s.intl.string(s.t.hZkfwc),
-                          fullWidth: !0
-                      })
               })
         : (0, r.jsx)('div', {
               className: l.footer,

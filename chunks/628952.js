@@ -118,7 +118,8 @@ let I = (e) => {
                                                 pendingAvatarDecoration: R.type === s.Z.AVATAR_DECORATION ? R : null,
                                                 pendingProfileEffectId: R.type === s.Z.PROFILE_EFFECT ? R.id : null,
                                                 canUsePremiumCustomization: !0,
-                                                disabledInputs: !0
+                                                disabledInputs: !0,
+                                                hideViewFullProfileButton: !0
                                             })
                                         ),
                                     align: 'center',

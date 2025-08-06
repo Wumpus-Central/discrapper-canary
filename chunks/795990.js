@@ -1,7 +1,7 @@
-n.d(t, { Z: () => y });
+n.d(t, { Z: () => j });
 var r = n(255367),
-    o = n(73800),
-    l = n(296009),
+    l = n(73800),
+    o = n(296009),
     i = n(481060),
     a = n(634733),
     c = n(210753),
@@ -11,17 +11,17 @@ var r = n(255367),
     f = n(436860);
 function p(e) {
     let { widgetType: t } = e,
-        n = t === l.l.FAVORITE_GAMES ? d.J6['23'] : d.J6['58'],
-        { coverImageUrl: o, localizedName: i } = (0, c.$)(n);
+        n = t === o.l.FAVORITE_GAMES ? d.J6['23'] : d.J6['58'],
+        { coverImageUrl: l, localizedName: i } = (0, c.$)(n);
     return (0, r.jsxs)('div', {
         className: f.placeholderDetailCard,
         children: [
             (0, r.jsx)('div', {
                 className: f.placeholderCover,
                 children:
-                    null != o && '' !== o
+                    null != l && '' !== l
                         ? (0, r.jsx)('img', {
-                              src: o,
+                              src: l,
                               alt: null != i ? i : 'Game cover',
                               className: f.placeholderGameImage
                           })
@@ -36,30 +36,30 @@ function p(e) {
 }
 function m(e) {
     let { widgetType: t } = e,
-        n = t === l.l.WANT_TO_PLAY_GAMES ? [d.J6['0'], d.J6['1'], d.J6['2']] : [d.J6['20'], d.J6['35'], d.J6['42']];
+        n = t === o.l.WANT_TO_PLAY_GAMES ? [d.J6['0'], d.J6['1'], d.J6['2']] : [d.J6['20'], d.J6['35'], d.J6['42']];
     return (0, r.jsx)('div', {
         className: f.placeholderCoverGrid,
-        children: n.map((e, t) => (0, r.jsx)(b, { applicationId: e }, t))
+        children: n.map((e, t) => (0, r.jsx)(g, { applicationId: e }, t))
     });
 }
-function b(e) {
+function g(e) {
     let { applicationId: t } = e,
-        { coverImageUrl: n, localizedName: o } = (0, c.$)(t);
+        { coverImageUrl: n, localizedName: l } = (0, c.$)(t);
     return (0, r.jsx)('div', {
         className: f.placeholderCoverItem,
         children:
             null != n && '' !== n
                 ? (0, r.jsx)('img', {
                       src: n,
-                      alt: null != o ? o : 'Game cover',
+                      alt: null != l ? l : 'Game cover',
                       className: f.placeholderGameImage
                   })
                 : (0, r.jsx)('div', { className: f.placeholderGameFallback })
     });
 }
-function g(e) {
+function b(e) {
     let { widgetType: t } = e,
-        n = o.useCallback(() => {
+        n = l.useCallback(() => {
             (0, a.w6)(t);
         }, [t]);
     return (0, r.jsxs)(i.P3F, {
@@ -69,11 +69,11 @@ function g(e) {
         children: [
             (() => {
                 switch (t) {
-                    case l.l.FAVORITE_GAMES:
-                    case l.l.CURRENT_GAMES:
+                    case o.l.FAVORITE_GAMES:
+                    case o.l.CURRENT_GAMES:
                         return (0, r.jsx)(p, { widgetType: t });
-                    case l.l.WANT_TO_PLAY_GAMES:
-                    case l.l.PLAYED_GAMES:
+                    case o.l.WANT_TO_PLAY_GAMES:
+                    case o.l.PLAYED_GAMES:
                         return (0, r.jsx)(m, { widgetType: t });
                     default:
                         return null;
@@ -99,7 +99,7 @@ function g(e) {
         ]
     });
 }
-function y() {
+function j() {
     return (0, r.jsxs)('div', {
         className: f.empty,
         children: [
@@ -121,7 +121,7 @@ function y() {
             (0, r.jsx)('ul', {
                 className: f.widgetGrid,
                 'aria-label': 'Widget options',
-                children: s.rR.map((e) => (0, r.jsx)('li', { children: (0, r.jsx)(g, { widgetType: e }) }, e))
+                children: s.rR.map((e) => (0, r.jsx)('li', { children: (0, r.jsx)(b, { widgetType: e }) }, e))
             })
         ]
     });

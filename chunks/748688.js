@@ -24,8 +24,8 @@ let I = String(0),
     R = '',
     d = '',
     N = '',
-    A = (u.m9.navigator && u.m9.navigator.userAgent) || '',
-    f = '',
+    f = (u.m9.navigator && u.m9.navigator.userAgent) || '',
+    A = '',
     T = (u.m9.navigator && u.m9.navigator.language) || (u.m9.navigator && u.m9.navigator.languages && u.m9.navigator.languages['0']) || '',
     p = u.m9.navigator && u.m9.navigator.userAgentData;
 function L(t) {
@@ -55,9 +55,9 @@ function O(t) {
     p
         .getHighEntropyValues(['architecture', 'model', 'platform', 'platformVersion', 'fullVersionList'])
         .then((t) => {
-            if (((R = t.platform || ''), (N = t.architecture || ''), (f = t.model || ''), (d = t.platformVersion || ''), t.fullVersionList && t.fullVersionList.length > 0)) {
+            if (((R = t.platform || ''), (N = t.architecture || ''), (A = t.model || ''), (d = t.platformVersion || ''), t.fullVersionList && t.fullVersionList.length > 0)) {
                 let e = t.fullVersionList[t.fullVersionList.length - 1];
-                A = `${e.brand} ${e.version}`;
+                f = `${e.brand} ${e.version}`;
             }
         })
         .catch((t) => void 0);
@@ -167,12 +167,12 @@ function v(t, e, a, _) {
         os: {
             name: R,
             version: d,
-            build_number: A
+            build_number: f
         },
         device: {
             locale: T,
-            model: f,
-            manufacturer: A,
+            model: A,
+            manufacturer: f,
             architecture: N,
             is_emulator: !1
         },

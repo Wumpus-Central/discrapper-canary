@@ -3,12 +3,12 @@ var r = n(392711),
     i = n.n(r),
     a = n(159635),
     o = n.n(a),
-    s = n(633302),
-    l = n(606318),
-    c = n(402235),
-    u = n(11637),
-    d = n(592125),
-    f = n(77498),
+    s = n(89892),
+    l = n(633302),
+    c = n(606318),
+    u = n(402235),
+    d = n(11637),
+    f = n(592125),
     _ = n(485386),
     p = n(430824),
     h = n(594174),
@@ -108,7 +108,7 @@ function V(e) {
     };
 }
 let H = (e) => {
-        let t = d.Z.getChannel(e);
+        let t = f.Z.getChannel(e);
         return null == t ? void 0 : t.getGuildId();
     },
     Y = (e) => (null != e.guildId ? p.Z.getGuild(e.guildId) : null != e.channelId ? p.Z.getGuild(H(e.channelId)) : null),
@@ -243,18 +243,18 @@ let H = (e) => {
                         type: 'roleMention',
                         id: s
                     };
-                let u = Y(n),
-                    d = null != u ? _.Z.getRole(u.id, s) : null;
+                let l = Y(n),
+                    d = null != l ? _.Z.getRole(l.id, s) : null;
                 if (null == d)
                     return {
                         type: 'text',
                         content: '@'.concat(L.intl.string(L.t['YV4F/v']))
                     };
-                let f = (0, c.zI)(null == u ? void 0 : u.id, d) && !(0, l.Gr)(d);
+                let f = (0, u.zI)(null == l ? void 0 : l.id, d) && !(0, c.Gr)(d);
                 return {
                     type: 'mention',
                     channelId: n.channelId,
-                    guildId: null != u ? u.id : null,
+                    guildId: null != l ? l.id : null,
                     roleId: s,
                     roleColor: d.color,
                     roleColors: f
@@ -296,7 +296,7 @@ let H = (e) => {
                               id: e[1]
                           };
                 let a = h.default.getUser(e[1]),
-                    o = d.Z.getChannel(n.channelId);
+                    o = f.Z.getChannel(n.channelId);
                 if (null != a && ((i = a.id), (r = a.toString()), null != o)) {
                     var s;
                     r = null != (s = g.ZP.getNickname(o.getGuildId(), n.channelId, a)) ? s : E.ZP.getName(a);
@@ -364,11 +364,25 @@ let H = (e) => {
         },
         gameMention: {
             order: o().defaultRules.text.order,
-            requiredFirstCharacters: ['<', '@', '$'],
+            requiredFirstCharacters: ['<'],
             match: (e, t) => (t.allowGameMentions ? /^<@\$(\d+)>/.exec(e) : null),
             parse(e, t, n) {
-                var r;
-                let i = f.Z.getDetectableGame(e[1]);
+                var r, i, a;
+                if (null == n.channelId || null == n.messageId)
+                    return {
+                        type: 'gameMention',
+                        applicationId: e[1],
+                        channelId: n.channelId,
+                        content: [
+                            {
+                                type: 'text',
+                                content: L.intl.string(L.t['11pdXV'])
+                            }
+                        ],
+                        icon: void 0
+                    };
+                let o = null == (r = s.Z.get(n.channelId)) ? void 0 : r.get(n.messageId),
+                    l = null == o || null == (i = o.mentionGames) ? void 0 : i.find((t) => t.id === e[1]);
                 return {
                     type: 'gameMention',
                     applicationId: e[1],
@@ -376,14 +390,14 @@ let H = (e) => {
                     content: [
                         {
                             type: 'text',
-                            content: ''.concat(null != (r = null == i ? void 0 : i.name) ? r : L.intl.string(L.t['11pdXV']))
+                            content: ''.concat(null != (a = null == l ? void 0 : l.name) ? a : L.intl.string(L.t['11pdXV']))
                         }
                     ],
                     icon:
-                        null != i && null != i.icon
+                        null != l && null != l.icon_hash
                             ? m.ZP.getApplicationIconURL({
-                                  id: i.id,
-                                  icon: i.icon,
+                                  id: l.id,
+                                  icon: l.icon_hash,
                                   size: 32
                               })
                             : void 0
@@ -394,11 +408,11 @@ let H = (e) => {
             order: A.ZP.order,
             requiredFirstCharacters: [':'],
             match(e) {
-                let t = s.ZP.EMOJI_NAME_RE.exec(e);
-                return null != t && '' !== s.ZP.convertNameToSurrogate(t[1]) ? t : null;
+                let t = l.ZP.EMOJI_NAME_RE.exec(e);
+                return null != t && '' !== l.ZP.convertNameToSurrogate(t[1]) ? t : null;
             },
             parse(e) {
-                let t = s.ZP.convertNameToSurrogate(e[1]);
+                let t = l.ZP.convertNameToSurrogate(e[1]);
                 return {
                     type: 'text',
                     content: null == t || '' === t ? ':'.concat(e[1], ':') : t
@@ -408,8 +422,8 @@ let H = (e) => {
         soundboard: {
             order: A.ZP.order,
             requiredFirstCharacters: ['<'],
-            match: (e) => u.hf.exec(e),
-            parse: (e, t, n) => (0, u.ZP)(e, n)
+            match: (e) => d.hf.exec(e),
+            parse: (e, t, n) => (0, d.ZP)(e, n)
         },
         customEmoji: {
             order: A.ZP.order,

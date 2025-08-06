@@ -1,7 +1,7 @@
 (n.d(t, { Z: () => m }), n(388685));
 var r = n(255367),
-    o = n(73800),
-    l = n(481060),
+    l = n(73800),
+    o = n(481060),
     i = n(785717),
     a = n(128156),
     c = n(311044),
@@ -10,30 +10,30 @@ var r = n(255367),
     u = n(228168),
     f = n(662776);
 function p(e) {
-    let { user: t, currentUser: n, section: o, subsection: l, displayProfile: i, guildId: f, channelId: p, onClose: m } = e;
-    return o === u.oh.ACTIVITY
+    let { user: t, currentUser: n, section: l, subsection: o, displayProfile: i, guildId: f, channelId: p, onClose: m } = e;
+    return l === u.oh.ACTIVITY
         ? (0, r.jsx)(a.Z, {
               user: t,
               currentUser: n,
               displayProfile: i,
               guildId: f,
               channelId: p,
-              subsection: l,
+              subsection: o,
               onClose: m
           })
-        : o === u.oh.MUTUAL_FRIENDS
+        : l === u.oh.MUTUAL_FRIENDS
           ? (0, r.jsx)(c.Z, {
                 user: t,
                 guildId: f,
                 channelId: p,
                 onClose: m
             })
-          : o === u.oh.MUTUAL_GUILDS
+          : l === u.oh.MUTUAL_GUILDS
             ? (0, r.jsx)(s.Z, {
                   user: t,
                   onClose: m
               })
-            : o === u.oh.WIDGETS
+            : l === u.oh.WIDGETS
               ? (0, r.jsx)(d.Z, {
                     user: t,
                     guildId: f,
@@ -43,9 +43,9 @@ function p(e) {
 }
 function m(e) {
     var t, n, a;
-    let { user: c, currentUser: s, displayProfile: d, guildId: u, channelId: m, items: b, initialSection: g, initialSubsection: y, onClose: O } = e,
-        { trackUserProfileAction: j } = (0, i.KZ)(),
-        [{ section: _, subsection: x, text: h }, v] = o.useState(
+    let { user: c, currentUser: s, displayProfile: d, guildId: u, channelId: m, items: g, initialSection: b, initialSubsection: j, onClose: h } = e,
+        { trackUserProfileAction: y } = (0, i.KZ)(),
+        [{ section: v, subsection: O, text: x }, _] = l.useState(
             ((n = (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
@@ -73,14 +73,14 @@ function m(e) {
             })(
                 {},
                 null !=
-                    (t = b.find((e) => {
+                    (t = g.find((e) => {
                         let { section: t } = e;
-                        return t === g;
+                        return t === b;
                     }))
                     ? t
-                    : b[0]
+                    : g[0]
             )),
-            (a = a = { subsection: y }),
+            (a = a = { subsection: j }),
             Object.getOwnPropertyDescriptors
                 ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(a))
                 : (function (e, t) {
@@ -98,28 +98,28 @@ function m(e) {
     return (0, r.jsxs)('div', {
         className: f.container,
         children: [
-            (0, r.jsx)(l.Ttm, {
+            (0, r.jsx)(o.Ttm, {
                 orientation: 'horizontal',
                 className: f.scroller,
                 fade: !0,
                 paddingFix: !1,
-                children: (0, r.jsx)(l.njP, {
+                children: (0, r.jsx)(o.njP, {
                     type: 'top',
                     look: 'custom',
-                    selectedItem: _,
+                    selectedItem: v,
                     onItemSelect: (e) => {
-                        (j({
+                        (y({
                             action: 'PRESS_SECTION',
                             section: e
                         }),
-                            v((t) => {
+                            _((t) => {
                                 var n;
-                                return null != (n = b.find((t) => t.section === e)) ? n : t;
+                                return null != (n = g.find((t) => t.section === e)) ? n : t;
                             }));
                     },
-                    children: b.map((e) =>
+                    children: g.map((e) =>
                         (0, r.jsx)(
-                            l.njP.Item,
+                            o.njP.Item,
                             {
                                 className: f.tabBarItem,
                                 id: e.section,
@@ -131,9 +131,9 @@ function m(e) {
                     )
                 })
             }),
-            (0, r.jsx)(l.njP.Panel, {
-                id: _,
-                'aria-label': h,
+            (0, r.jsx)(o.njP.Panel, {
+                id: v,
+                'aria-label': x,
                 className: f.tabBarPanel,
                 children: (0, r.jsx)(p, {
                     user: c,
@@ -141,9 +141,9 @@ function m(e) {
                     displayProfile: d,
                     guildId: u,
                     channelId: m,
-                    section: _,
-                    subsection: x,
-                    onClose: O
+                    section: v,
+                    subsection: O,
+                    onClose: h
                 })
             })
         ]

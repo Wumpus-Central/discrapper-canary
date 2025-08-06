@@ -1,54 +1,54 @@
-t.d(n, { Z: () => d });
-var l = t(255367);
-t(73800);
-var r = t(81570),
-    i = t(527790),
-    o = t(248930);
-function s(e) {
-    for (var n = 1; n < arguments.length; n++) {
-        var t = null != arguments[n] ? arguments[n] : {},
-            l = Object.keys(t);
+n.d(t, { Z: () => c });
+var r = n(255367);
+n(73800);
+var l = n(81570),
+    o = n(527790),
+    i = n(248930);
+function a(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
         ('function' == typeof Object.getOwnPropertySymbols &&
-            (l = l.concat(
-                Object.getOwnPropertySymbols(t).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(t, e).enumerable;
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 })
             )),
-            l.forEach(function (n) {
-                var l;
-                ((l = t[n]),
-                    n in e
-                        ? Object.defineProperty(e, n, {
-                              value: l,
+            r.forEach(function (t) {
+                var r;
+                ((r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[n] = l));
+                        : (e[t] = r));
             }));
     }
     return e;
 }
-function d(e) {
-    var { location: n, user: t, currentUser: d } = e,
-        a = (function (e, n) {
+function c(e) {
+    var { location: t, user: n, currentUser: c } = e,
+        s = (function (e, t) {
             if (null == e) return {};
-            var t,
-                l,
-                r = (function (e, n) {
+            var n,
+                r,
+                l = (function (e, t) {
                     if (null == e) return {};
-                    var t,
-                        l,
-                        r = {},
-                        i = Object.keys(e);
-                    for (l = 0; l < i.length; l++) ((t = i[l]), n.indexOf(t) >= 0 || (r[t] = e[t]));
-                    return r;
-                })(e, n);
+                    var n,
+                        r,
+                        l = {},
+                        o = Object.keys(e);
+                    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (l[n] = e[n]));
+                    return l;
+                })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var i = Object.getOwnPropertySymbols(e);
-                for (l = 0; l < i.length; l++) ((t = i[l]), !(n.indexOf(t) >= 0) && Object.prototype.propertyIsEnumerable.call(e, t) && (r[t] = e[t]));
+                var o = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]));
             }
-            return r;
+            return l;
         })(e, ['location', 'user', 'currentUser']);
-    return (0, r.T)({ location: n }) && t.id !== d.id && !t.bot ? (0, l.jsx)(o.Z, s({ user: t }, a)) : (0, l.jsx)(i.Z, s({ user: t }, a));
+    return (0, l.T)({ location: t }) && n.id !== c.id && !n.bot ? (0, r.jsx)(i.Z, a({ user: n }, s)) : (0, r.jsx)(o.Z, a({ user: n }, s));
 }

@@ -11,8 +11,8 @@ var E,
     R,
     d,
     N,
-    A = a(505676),
-    f = a(507690),
+    f = a(505676),
+    A = a(507690),
     T = a(572299),
     p = a(263449),
     L = a(946471),
@@ -192,14 +192,14 @@ function tR() {
 }
 let td = /url\((?:(')([^']*)'|(")(.*?)"|([^)]*))\)/gm,
     tN = /^(?:[a-z+]+:)?\/\//i,
-    tA = /^www\..*/i,
-    tf = /^(data:)([^,]*),(.*)/i;
+    tf = /^www\..*/i,
+    tA = /^(data:)([^,]*),(.*)/i;
 function tT(t, e) {
     return (t || '').replace(td, (t, a, r, _, n, o) => {
         let i = r || n || o,
             c = a || _ || '';
         if (!i) return t;
-        if (tN.test(i) || tA.test(i) || tf.test(i)) return `url(${c}${i}${c})`;
+        if (tN.test(i) || tf.test(i) || tA.test(i)) return `url(${c}${i}${c})`;
         if ('/' === i[0]) {
             let t;
             return `url(${c}${(e.indexOf('//') > -1 ? e.split('/').slice(0, 3).join('/') : e.split('/')[0]).split('?')[0] + i}${c})`;
@@ -322,10 +322,10 @@ function tv(t) {
 }
 function ty(t, e) {
     let a,
-        { doc: n, mirror: o, blockClass: i, blockSelector: c, unblockSelector: E, maskAllText: s, maskTextClass: l, unmaskTextClass: u, maskTextSelector: I, unmaskTextSelector: R, skipChild: N = !1, inlineStylesheet: A = !0, maskInputOptions: f = {}, maskAttributeFn: T, maskTextFn: p, maskInputFn: L, slimDOMOptions: h, dataURLOptions: O = {}, inlineImages: P = !1, recordCanvas: g = !1, onSerialize: D, onIframeLoad: C, iframeLoadTimeout: m = 5000, onStylesheetLoad: v, stylesheetLoadTimeout: y = 5000, keepIframeSrcFn: S = () => !1, newlyAddedElement: U = !1 } = e,
+        { doc: n, mirror: o, blockClass: i, blockSelector: c, unblockSelector: E, maskAllText: s, maskTextClass: l, unmaskTextClass: u, maskTextSelector: I, unmaskTextSelector: R, skipChild: N = !1, inlineStylesheet: f = !0, maskInputOptions: A = {}, maskAttributeFn: T, maskTextFn: p, maskInputFn: L, slimDOMOptions: h, dataURLOptions: O = {}, inlineImages: P = !1, recordCanvas: g = !1, onSerialize: D, onIframeLoad: C, iframeLoadTimeout: m = 5000, onStylesheetLoad: v, stylesheetLoadTimeout: y = 5000, keepIframeSrcFn: S = () => !1, newlyAddedElement: U = !1 } = e,
         { preserveWhiteSpace: b = !0 } = e,
         G = (function (t, e) {
-            let { doc: a, mirror: n, blockClass: o, blockSelector: i, unblockSelector: c, maskAllText: E, maskAttributeFn: s, maskTextClass: l, unmaskTextClass: u, maskTextSelector: I, unmaskTextSelector: R, inlineStylesheet: N, maskInputOptions: A = {}, maskTextFn: f, maskInputFn: T, dataURLOptions: p = {}, inlineImages: L, recordCanvas: h, keepIframeSrcFn: O, newlyAddedElement: P = !1 } = e,
+            let { doc: a, mirror: n, blockClass: o, blockSelector: i, unblockSelector: c, maskAllText: E, maskAttributeFn: s, maskTextClass: l, unmaskTextClass: u, maskTextSelector: I, unmaskTextSelector: R, inlineStylesheet: N, maskInputOptions: f = {}, maskTextFn: A, maskInputFn: T, dataURLOptions: p = {}, inlineImages: L, recordCanvas: h, keepIframeSrcFn: O, newlyAddedElement: P = !1 } = e,
                 g = (function (t, e) {
                     if (!e.hasNode(t)) return;
                     let a = e.getId(t);
@@ -354,7 +354,7 @@ function ty(t, e) {
                 case t.ELEMENT_NODE:
                     return (function (t, e) {
                         let a,
-                            { doc: n, blockClass: o, blockSelector: i, unblockSelector: c, inlineStylesheet: E, maskInputOptions: s = {}, maskAttributeFn: l, maskInputFn: u, dataURLOptions: I = {}, inlineImages: R, recordCanvas: N, keepIframeSrcFn: A, newlyAddedElement: f = !1, rootId: T, maskAllText: p, maskTextClass: L, unmaskTextClass: h, maskTextSelector: O, unmaskTextSelector: P } = e,
+                            { doc: n, blockClass: o, blockSelector: i, unblockSelector: c, inlineStylesheet: E, maskInputOptions: s = {}, maskAttributeFn: l, maskInputFn: u, dataURLOptions: I = {}, inlineImages: R, recordCanvas: N, keepIframeSrcFn: f, newlyAddedElement: A = !1, rootId: T, maskAllText: p, maskTextClass: L, unmaskTextClass: h, maskTextSelector: O, unmaskTextSelector: P } = e,
                             g = (function (t, e, a, r) {
                                 try {
                                     if (r && t.matches(r)) return !1;
@@ -448,7 +448,7 @@ function ty(t, e) {
                             };
                             t.complete && 0 !== t.naturalWidth ? a() : t.addEventListener('load', a);
                         }
-                        if ((('audio' === D || 'video' === D) && ((C.rr_mediaState = t.paused ? 'paused' : 'played'), (C.rr_mediaCurrentTime = t.currentTime)), !f && (t.scrollLeft && (C.rr_scrollLeft = t.scrollLeft), t.scrollTop && (C.rr_scrollTop = t.scrollTop)), g)) {
+                        if ((('audio' === D || 'video' === D) && ((C.rr_mediaState = t.paused ? 'paused' : 'played'), (C.rr_mediaCurrentTime = t.currentTime)), !A && (t.scrollLeft && (C.rr_scrollLeft = t.scrollLeft), t.scrollTop && (C.rr_scrollTop = t.scrollTop)), g)) {
                             let { width: e, height: a } = t.getBoundingClientRect();
                             C = {
                                 class: C.class,
@@ -456,7 +456,7 @@ function ty(t, e) {
                                 rr_height: `${a}px`
                             };
                         }
-                        'iframe' !== D || A(C.src) || (g || t.contentDocument || (C.rr_src = C.src), delete C.src);
+                        'iframe' !== D || f(C.src) || (g || t.contentDocument || (C.rr_src = C.src), delete C.src);
                         try {
                             customElements.get(D) && (a = !0);
                         } catch (t) {}
@@ -477,7 +477,7 @@ function ty(t, e) {
                         unblockSelector: c,
                         inlineStylesheet: N,
                         maskAttributeFn: s,
-                        maskInputOptions: A,
+                        maskInputOptions: f,
                         maskInputFn: T,
                         dataURLOptions: p,
                         inlineImages: L,
@@ -508,10 +508,10 @@ function ty(t, e) {
                             u = tT(u, tO());
                         }
                         R && (u = 'SCRIPT_PLACEHOLDER');
-                        let A = tm(t, r, n, _, o, a);
+                        let f = tm(t, r, n, _, o, a);
                         return (
-                            I || R || N || !u || !A || (u = i ? i(u, t.parentElement) : u.replace(/[\S]/g, '*')),
-                            N && u && (c.textarea || A) && (u = E ? E(u, t.parentNode) : u.replace(/[\S]/g, '*')),
+                            I || R || N || !u || !f || (u = i ? i(u, t.parentElement) : u.replace(/[\S]/g, '*')),
+                            N && u && (c.textarea || f) && (u = E ? E(u, t.parentNode) : u.replace(/[\S]/g, '*')),
                             'OPTION' === l &&
                                 u &&
                                 (u = te({
@@ -544,8 +544,8 @@ function ty(t, e) {
                         unmaskTextClass: u,
                         maskTextSelector: I,
                         unmaskTextSelector: R,
-                        maskTextFn: f,
-                        maskInputOptions: A,
+                        maskTextFn: A,
+                        maskInputOptions: f,
                         maskInputFn: T,
                         rootId: g
                     });
@@ -575,8 +575,8 @@ function ty(t, e) {
             unmaskTextClass: u,
             maskTextSelector: I,
             unmaskTextSelector: R,
-            inlineStylesheet: A,
-            maskInputOptions: f,
+            inlineStylesheet: f,
+            maskInputOptions: A,
             maskAttributeFn: T,
             maskTextFn: p,
             maskInputFn: L,
@@ -631,8 +631,8 @@ function ty(t, e) {
             maskTextSelector: I,
             unmaskTextSelector: R,
             skipChild: N,
-            inlineStylesheet: A,
-            maskInputOptions: f,
+            inlineStylesheet: f,
+            maskInputOptions: A,
             maskAttributeFn: T,
             maskTextFn: p,
             maskInputFn: L,
@@ -701,8 +701,8 @@ function ty(t, e) {
                             maskTextSelector: I,
                             unmaskTextSelector: R,
                             skipChild: !1,
-                            inlineStylesheet: A,
-                            maskInputOptions: f,
+                            inlineStylesheet: f,
+                            maskInputOptions: A,
                             maskAttributeFn: T,
                             maskTextFn: p,
                             maskInputFn: L,
@@ -758,8 +758,8 @@ function ty(t, e) {
                             maskTextSelector: I,
                             unmaskTextSelector: R,
                             skipChild: !1,
-                            inlineStylesheet: A,
-                            maskInputOptions: f,
+                            inlineStylesheet: f,
+                            maskInputOptions: A,
                             maskAttributeFn: T,
                             maskTextFn: p,
                             maskInputFn: L,
@@ -913,7 +913,7 @@ class t$ {
         ((this.id = 1), (this.styleIDMap = new WeakMap()), (this.idStyleMap = new Map()));
     }
     getId(t) {
-        return (0, A.h)(this.styleIDMap.get(t), () => -1);
+        return (0, f.h)(this.styleIDMap.get(t), () => -1);
     }
     has(t) {
         return this.styleIDMap.has(t);
@@ -1595,10 +1595,10 @@ function el(t, e = {}) {
                     s = t.isTrusted,
                     N = a && tr(a.tagName);
                 if (('OPTION' === N && (a = a.parentElement), !a || !N || 0 > eo.indexOf(N) || tk(a, r, _, n, !0))) return;
-                let f = a;
-                if (f.classList.contains(o) || (i && f.matches(i))) return;
+                let A = a;
+                if (A.classList.contains(o) || (i && A.matches(i))) return;
                 let T = tn(a),
-                    p = to(f, N, T),
+                    p = to(A, N, T),
                     L = !1,
                     h = tt({
                         maskInputOptions: c,
@@ -1613,7 +1613,7 @@ function el(t, e = {}) {
                         value: p,
                         maskInputFn: E
                     })),
-                    A(
+                    f(
                         a,
                         l
                             ? {
@@ -1638,7 +1638,7 @@ function el(t, e = {}) {
                                 value: to(t, N, T),
                                 maskInputFn: E
                             });
-                            A(
+                            f(
                                 t,
                                 l
                                     ? {
@@ -1654,7 +1654,7 @@ function el(t, e = {}) {
                         }
                     });
             }
-            function A(e, r) {
+            function f(e, r) {
                 let _ = ei.get(e);
                 if (!_ || _.text !== r.text || _.isChecked !== r.isChecked) {
                     ei.set(e, r);
@@ -1665,11 +1665,11 @@ function el(t, e = {}) {
                     });
                 }
             }
-            let f = ('last' === s.input ? ['change'] : ['input', 'change']).map((t) => tU(t, et(N), e)),
+            let A = ('last' === s.input ? ['change'] : ['input', 'change']).map((t) => tU(t, et(N), e)),
                 T = e.defaultView;
             if (!T)
                 return () => {
-                    f.forEach((t) => t());
+                    A.forEach((t) => t());
                 };
             let p = T.Object.getOwnPropertyDescriptor(T.HTMLInputElement.prototype, 'value'),
                 L = [
@@ -1683,7 +1683,7 @@ function el(t, e = {}) {
             return (
                 p &&
                     p.set &&
-                    f.push(
+                    A.push(
                         ...L.map((t) =>
                             (function t(e, a, r, _, n = window) {
                                 let o = n.Object.getOwnPropertyDescriptor(e, a);
@@ -1721,7 +1721,7 @@ function el(t, e = {}) {
                         )
                     ),
                 et(() => {
-                    f.forEach((t) => t());
+                    A.forEach((t) => t());
                 })
             );
         })(t),
@@ -2089,7 +2089,7 @@ class eN {
     addLoadListener() {}
     attachIframe() {}
 }
-class eA {
+class ef {
     constructor(t) {
         ((this.iframes = new WeakMap()), (this.crossOriginIframeMap = new WeakMap()), (this.crossOriginIframeMirror = new eR(tR)), (this.crossOriginIframeRootIdMap = new WeakMap()), (this.mutationCb = t.mutationCb), (this.wrappedEmit = t.wrappedEmit), (this.stylesheetManager = t.stylesheetManager), (this.recordCrossOriginIframes = t.recordCrossOriginIframes), (this.crossOriginIframeStyleMirror = new eR(this.stylesheetManager.styleMirror.generateId.bind(this.stylesheetManager.styleMirror))), (this.mirror = t.mirror), this.recordCrossOriginIframes && window.addEventListener('message', this.handleMessage.bind(this)));
     }
@@ -2257,7 +2257,7 @@ class eA {
                 }));
     }
 }
-class ef {
+class eA {
     init() {}
     addShadowRoot() {}
     observeAttachShadow() {}
@@ -2419,7 +2419,7 @@ class eh {
 try {
     if (2 !== Array.from([1], (t) => 2 * t)[0]) {
         let t = document.createElement('iframe');
-        (document.body.appendChild(t), (Array.from = (0, f.x)([t, 'access', (t) => t.contentWindow, 'optionalAccess', (t) => t.Array, 'access', (t) => t.from]) || Array.from), document.body.removeChild(t));
+        (document.body.appendChild(t), (Array.from = (0, A.x)([t, 'access', (t) => t.contentWindow, 'optionalAccess', (t) => t.Array, 'access', (t) => t.from]) || Array.from), document.body.removeChild(t));
     }
 } catch (t) {
     console.debug('Unable to override Array.from', t);
@@ -2427,7 +2427,7 @@ try {
 let eO = new Q();
 function eP(t = {}) {
     let e,
-        { emit: a, checkoutEveryNms: r, checkoutEveryNth: _, blockClass: c = 'rr-block', blockSelector: E = null, unblockSelector: s = null, ignoreClass: l = 'rr-ignore', ignoreSelector: u = null, maskAllText: I = !1, maskTextClass: R = 'rr-mask', unmaskTextClass: d = null, maskTextSelector: N = null, unmaskTextSelector: A = null, inlineStylesheet: T = !0, maskAllInputs: p, maskInputOptions: L, slimDOMOptions: h, maskAttributeFn: O, maskInputFn: P, maskTextFn: g, maxCanvasSize: D = null, packFn: C, sampling: m = {}, dataURLOptions: v = {}, mousemoveWait: y, recordDOM: S = !0, recordCanvas: U = !1, recordCrossOriginIframes: b = !1, recordAfter: G = 'DOMContentLoaded' === t.recordAfter ? t.recordAfter : 'load', userTriggeredOnInput: W = !1, collectFonts: w = !1, inlineImages: M = !1, plugins: B, keepIframeSrcFn: Y = () => !1, ignoreCSSAttributes: H = new Set([]), errorHandler: K, onMutation: k, getCanvasManager: x } = t;
+        { emit: a, checkoutEveryNms: r, checkoutEveryNth: _, blockClass: c = 'rr-block', blockSelector: E = null, unblockSelector: s = null, ignoreClass: l = 'rr-ignore', ignoreSelector: u = null, maskAllText: I = !1, maskTextClass: R = 'rr-mask', unmaskTextClass: d = null, maskTextSelector: N = null, unmaskTextSelector: f = null, inlineStylesheet: T = !0, maskAllInputs: p, maskInputOptions: L, slimDOMOptions: h, maskAttributeFn: O, maskInputFn: P, maskTextFn: g, maxCanvasSize: D = null, packFn: C, sampling: m = {}, dataURLOptions: v = {}, mousemoveWait: y, recordDOM: S = !0, recordCanvas: U = !1, recordCrossOriginIframes: b = !1, recordAfter: G = 'DOMContentLoaded' === t.recordAfter ? t.recordAfter : 'load', userTriggeredOnInput: W = !1, collectFonts: w = !1, inlineImages: M = !1, plugins: B, keepIframeSrcFn: Y = () => !1, ignoreCSSAttributes: H = new Set([]), errorHandler: K, onMutation: k, getCanvasManager: x } = t;
     n = K;
     let F = !b || window.parent === window,
         V = !1;
@@ -2496,7 +2496,7 @@ function eP(t = {}) {
             return (C && !V && (t = C(t)), t);
         };
     o = (t, n) => {
-        if (((t.timestamp = tM()), (0, f.x)([ea, 'access', (t) => t[0], 'optionalAccess', (t) => t.isFrozen, 'call', (t) => t()]) && t.type !== t0.FullSnapshot && (t.type !== t0.IncrementalSnapshot || t.data.source !== t1.Mutation) && ea.forEach((t) => t.unfreeze()), F)) (0, f.x)([a, 'optionalCall', (e) => e(q(t), n)]);
+        if (((t.timestamp = tM()), (0, A.x)([ea, 'access', (t) => t[0], 'optionalAccess', (t) => t.isFrozen, 'call', (t) => t()]) && t.type !== t0.FullSnapshot && (t.type !== t0.IncrementalSnapshot || t.data.source !== t1.Mutation) && ea.forEach((t) => t.unfreeze()), F)) (0, A.x)([a, 'optionalCall', (e) => e(q(t), n)]);
         else if (V) {
             let e = {
                 type: 'rrweb',
@@ -2554,7 +2554,7 @@ function eP(t = {}) {
         te =
             'boolean' == typeof __RRWEB_EXCLUDE_IFRAME__ && __RRWEB_EXCLUDE_IFRAME__
                 ? new eN()
-                : new eA({
+                : new ef({
                       mirror: eO,
                       mutationCb: z,
                       stylesheetManager: tt,
@@ -2597,7 +2597,7 @@ function eP(t = {}) {
         }),
         t_ =
             'boolean' == typeof __RRWEB_EXCLUDE_SHADOW_DOM__ && __RRWEB_EXCLUDE_SHADOW_DOM__
-                ? new ef()
+                ? new eA()
                 : new eT({
                       mutationCb: z,
                       scrollCb: J,
@@ -2610,7 +2610,7 @@ function eP(t = {}) {
                           maskTextClass: R,
                           unmaskTextClass: d,
                           maskTextSelector: N,
-                          unmaskTextSelector: A,
+                          unmaskTextSelector: f,
                           inlineStylesheet: T,
                           maskInputOptions: j,
                           dataURLOptions: v,
@@ -2646,7 +2646,7 @@ function eP(t = {}) {
                 t_.init(),
                 ea.forEach((t) => t.lock()));
             let e = (function (t, e) {
-                let { mirror: a = new Q(), blockClass: r = 'rr-block', blockSelector: _ = null, unblockSelector: n = null, maskAllText: o = !1, maskTextClass: i = 'rr-mask', unmaskTextClass: c = null, maskTextSelector: E = null, unmaskTextSelector: s = null, inlineStylesheet: l = !0, inlineImages: u = !1, recordCanvas: I = !1, maskAllInputs: R = !1, maskAttributeFn: d, maskTextFn: N, maskInputFn: A, slimDOM: f = !1, dataURLOptions: T, preserveWhiteSpace: p, onSerialize: L, onIframeLoad: h, iframeLoadTimeout: O, onStylesheetLoad: P, stylesheetLoadTimeout: g, keepIframeSrcFn: D = () => !1 } = e || {};
+                let { mirror: a = new Q(), blockClass: r = 'rr-block', blockSelector: _ = null, unblockSelector: n = null, maskAllText: o = !1, maskTextClass: i = 'rr-mask', unmaskTextClass: c = null, maskTextSelector: E = null, unmaskTextSelector: s = null, inlineStylesheet: l = !0, inlineImages: u = !1, recordCanvas: I = !1, maskAllInputs: R = !1, maskAttributeFn: d, maskTextFn: N, maskInputFn: f, slimDOM: A = !1, dataURLOptions: T, preserveWhiteSpace: p, onSerialize: L, onIframeLoad: h, iframeLoadTimeout: O, onStylesheetLoad: P, stylesheetLoadTimeout: g, keepIframeSrcFn: D = () => !1 } = e || {};
                 return ty(t, {
                     doc: t,
                     mirror: a,
@@ -2684,24 +2684,24 @@ function eP(t = {}) {
                               : R,
                     maskAttributeFn: d,
                     maskTextFn: N,
-                    maskInputFn: A,
+                    maskInputFn: f,
                     slimDOMOptions:
-                        !0 === f || 'all' === f
+                        !0 === A || 'all' === A
                             ? {
                                   script: !0,
                                   comment: !0,
                                   headFavicon: !0,
                                   headWhitespace: !0,
-                                  headMetaDescKeywords: 'all' === f,
+                                  headMetaDescKeywords: 'all' === A,
                                   headMetaSocial: !0,
                                   headMetaRobots: !0,
                                   headMetaHttpEquiv: !0,
                                   headMetaAuthorship: !0,
                                   headMetaVerification: !0
                               }
-                            : !1 === f
+                            : !1 === A
                               ? {}
-                              : f,
+                              : A,
                     dataURLOptions: T,
                     inlineImages: u,
                     recordCanvas: I,
@@ -2723,7 +2723,7 @@ function eP(t = {}) {
                 maskTextClass: R,
                 unmaskTextClass: d,
                 maskTextSelector: N,
-                unmaskTextSelector: A,
+                unmaskTextSelector: f,
                 inlineStylesheet: T,
                 maskAllInputs: j,
                 maskAttributeFn: O,
@@ -2854,7 +2854,7 @@ function eP(t = {}) {
                         maskTextClass: R,
                         unmaskTextClass: d,
                         maskTextSelector: N,
-                        unmaskTextSelector: A,
+                        unmaskTextSelector: f,
                         maskInputOptions: j,
                         inlineStylesheet: T,
                         sampling: m,
@@ -2880,7 +2880,7 @@ function eP(t = {}) {
                         canvasManager: tr,
                         ignoreCSSAttributes: H,
                         plugins:
-                            (0, f.x)([
+                            (0, A.x)([
                                 B,
                                 'optionalAccess',
                                 (t) => t.filter,
@@ -3637,7 +3637,7 @@ function aE(t) {
         if ('string' == typeof t) return e.encode(t).length;
         if (t instanceof URLSearchParams) return e.encode(t.toString()).length;
         if (t instanceof FormData) {
-            let a = aA(t);
+            let a = af(t);
             return e.encode(a).length;
         }
         if (t instanceof Blob) return t.size;
@@ -3653,7 +3653,7 @@ function al(t) {
     try {
         if ('string' == typeof t) return [t];
         if (t instanceof URLSearchParams) return [t.toString()];
-        if (t instanceof FormData) return [aA(t)];
+        if (t instanceof FormData) return [af(t)];
         if (!t) return [void 0];
     } catch (e) {
         return (eX && U.kg.warn('[Replay] Failed to serialize body', t), [void 0, 'BODY_PARSE_ERROR']);
@@ -3740,10 +3740,10 @@ function aN(t, e) {
         return (e.includes(n) && t[r] && (a[n] = _), a);
     }, {});
 }
-function aA(t) {
+function af(t) {
     return new URLSearchParams(t).toString();
 }
-function af(t, e) {
+function aA(t, e) {
     let a = (function (t, e = F.document.baseURI) {
         if (t.startsWith('http://') || t.startsWith('https://') || t.startsWith(F.location.origin)) return t;
         let a = new URL(t, e);
@@ -3766,7 +3766,7 @@ async function ap(t, e, a) {
     let r = Date.now(),
         { startTimestamp: _ = r, endTimestamp: n = r } = e,
         { url: o, method: i, status_code: c = 0, request_body_size: E, response_body_size: s } = t.data,
-        l = af(o, a.networkDetailAllowUrls) && !af(o, a.networkDetailDenyUrls);
+        l = aA(o, a.networkDetailAllowUrls) && !aA(o, a.networkDetailDenyUrls);
     return {
         startTimestamp: _,
         endTimestamp: n,
@@ -3862,7 +3862,7 @@ async function aC(t, e, a) {
                     { startTimestamp: _ = r, endTimestamp: n = r, input: o, xhr: i } = e,
                     { url: c, method: E, status_code: s = 0, request_body_size: l, response_body_size: u } = t.data;
                 if (!c) return null;
-                if (!i || !af(c, a.networkDetailAllowUrls) || af(c, a.networkDetailDenyUrls)) {
+                if (!i || !aA(c, a.networkDetailAllowUrls) || aA(c, a.networkDetailDenyUrls)) {
                     let t = aR(l);
                     return {
                         startTimestamp: _,
@@ -3888,8 +3888,8 @@ async function aC(t, e, a) {
                         })(i),
                         a.networkResponseHeaders
                     ),
-                    [N, A] = a.networkCaptureBodies ? al(o) : [void 0],
-                    [f, T] = a.networkCaptureBodies
+                    [N, f] = a.networkCaptureBodies ? al(o) : [void 0],
+                    [A, T] = a.networkCaptureBodies
                         ? (function (t) {
                               let e = [];
                               try {
@@ -3916,14 +3916,14 @@ async function aC(t, e, a) {
                           })(i)
                         : [void 0],
                     p = ad(R, l, N),
-                    L = ad(d, u, f);
+                    L = ad(d, u, A);
                 return {
                     startTimestamp: _,
                     endTimestamp: n,
                     url: c,
                     method: E,
                     statusCode: s,
-                    request: A ? au(p, A) : p,
+                    request: f ? au(p, f) : p,
                     response: T ? au(L, T) : L
                 };
             })(t, e, a),
@@ -4003,7 +4003,7 @@ async function ay({ recordingData: t, replayId: e, segmentId: a, eventContext: r
         d = I && I.getTransport(),
         N = I && I.getDsn();
     if (!I || !d || !N || !n.sampled) return (0, w.WD)({});
-    let A = {
+    let f = {
             type: 'replay_event',
             replay_start_timestamp: u / 1000,
             timestamp: _ / 1000,
@@ -4014,18 +4014,18 @@ async function ay({ recordingData: t, replayId: e, segmentId: a, eventContext: r
             segment_id: a,
             replay_type: n.sampled
         },
-        f = await av({
+        A = await av({
             scope: R,
             client: I,
             replayId: e,
-            event: A
+            event: f
         });
-    if (!f) return (I.recordDroppedEvent('event_processor', 'replay', A), e$('An event processor returned `null`, will not send event.'), (0, w.WD)({}));
-    delete f.sdkProcessingMetadata;
+    if (!A) return (I.recordDroppedEvent('event_processor', 'replay', f), e$('An event processor returned `null`, will not send event.'), (0, w.WD)({}));
+    delete A.sdkProcessingMetadata;
     let T =
         ((o = I.getOptions().tunnel),
-        (0, W.Jd)((0, W.Cd)(f, (0, W.HY)(f), o, N), [
-            [{ type: 'replay_event' }, f],
+        (0, W.Jd)((0, W.Cd)(A, (0, W.HY)(A), o, N), [
+            [{ type: 'replay_event' }, A],
             [
                 {
                     type: 'replay_recording',
@@ -4963,7 +4963,7 @@ class aK {
     static __initStatic() {
         this.id = 'Replay';
     }
-    constructor({ flushMinDelay: t = 5000, flushMaxDelay: e = 5500, minReplayDuration: a = 4999, maxReplayDuration: r = 3600000, stickySession: _ = !0, useCompression: n = !0, workerUrl: o, _experiments: i = {}, maskAllText: c = !0, maskAllInputs: E = !0, blockAllMedia: s = !0, mutationBreadcrumbLimit: l = 750, mutationLimit: u = 10000, slowClickTimeout: I = 7000, slowClickIgnoreSelectors: R = [], networkDetailAllowUrls: d = [], networkDetailDenyUrls: N = [], networkCaptureBodies: A = !0, networkRequestHeaders: f = [], networkResponseHeaders: T = [], mask: p = [], maskAttributes: L = ['title', 'placeholder'], unmask: h = [], block: O = [], unblock: P = [], ignore: g = [], maskFn: D, beforeAddRecordingEvent: C, beforeErrorSampling: m } = {}) {
+    constructor({ flushMinDelay: t = 5000, flushMaxDelay: e = 5500, minReplayDuration: a = 4999, maxReplayDuration: r = 3600000, stickySession: _ = !0, useCompression: n = !0, workerUrl: o, _experiments: i = {}, maskAllText: c = !0, maskAllInputs: E = !0, blockAllMedia: s = !0, mutationBreadcrumbLimit: l = 750, mutationLimit: u = 10000, slowClickTimeout: I = 7000, slowClickIgnoreSelectors: R = [], networkDetailAllowUrls: d = [], networkDetailDenyUrls: N = [], networkCaptureBodies: f = !0, networkRequestHeaders: A = [], networkResponseHeaders: T = [], mask: p = [], maskAttributes: L = ['title', 'placeholder'], unmask: h = [], block: O = [], unblock: P = [], ignore: g = [], maskFn: D, beforeAddRecordingEvent: C, beforeErrorSampling: m } = {}) {
         this.name = aK.id;
         let v = (function ({ mask: t, unmask: e, block: a, unblock: r, ignore: _ }) {
             return {
@@ -5026,8 +5026,8 @@ class aK {
                 slowClickIgnoreSelectors: R,
                 networkDetailAllowUrls: d,
                 networkDetailDenyUrls: N,
-                networkCaptureBodies: A,
-                networkRequestHeaders: ak(f),
+                networkCaptureBodies: f,
+                networkRequestHeaders: ak(A),
                 networkResponseHeaders: ak(T),
                 beforeAddRecordingEvent: C,
                 beforeErrorSampling: m,

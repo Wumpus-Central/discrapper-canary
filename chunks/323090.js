@@ -1,71 +1,71 @@
-t.d(n, { Z: () => b });
-var l = t(255367);
-t(73800);
-var r = t(442837),
-    i = t(481060),
-    o = t(666520),
-    s = t(592125),
-    d = t(944486),
-    a = t(785717),
-    c = t(621853),
-    u = t(172351),
-    f = t(280885),
-    p = t(900927),
-    h = t(678738),
-    g = t(179828),
-    v = t(228168),
-    j = t(388032),
-    m = t(349966);
-function b(e) {
-    let { user: n, currentUser: t, displayProfile: b, guildId: x, subsection: Z, onClose: y } = e,
-        { trackUserProfileAction: O } = (0, a.KZ)(),
-        I = (0, r.e7)([c.Z], () => {
+n.d(t, { Z: () => y });
+var r = n(255367);
+n(73800);
+var l = n(442837),
+    o = n(481060),
+    i = n(666520),
+    a = n(592125),
+    c = n(944486),
+    s = n(785717),
+    d = n(621853),
+    u = n(172351),
+    f = n(280885),
+    p = n(900927),
+    m = n(678738),
+    g = n(179828),
+    b = n(228168),
+    j = n(388032),
+    h = n(349966);
+function y(e) {
+    let { user: t, currentUser: n, displayProfile: y, guildId: v, subsection: O, onClose: x } = e,
+        { trackUserProfileAction: _ } = (0, s.KZ)(),
+        I = (0, l.e7)([d.Z], () => {
             var e;
-            return null == (e = c.Z.getUserProfile(n.id)) ? void 0 : e.application;
+            return null == (e = d.Z.getUserProfile(t.id)) ? void 0 : e.application;
         }),
-        P = (0, r.e7)([s.Z, d.Z], () => s.Z.getChannel(d.Z.getChannelId()));
-    return (0, l.jsxs)(i.zJl, {
+        P = (0, l.e7)([a.Z, c.Z], () => a.Z.getChannel(c.Z.getChannelId()));
+    return (0, r.jsxs)(o.zJl, {
         fade: !0,
-        className: m.scroller,
+        className: h.scroller,
         children: [
-            (null == b ? void 0 : b.bio) != null &&
-                (null == b ? void 0 : b.bio) !== '' &&
-                (0, l.jsx)(f.Z, {
-                    userBio: b.bio,
+            (null == y ? void 0 : y.bio) != null &&
+                (null == y ? void 0 : y.bio) !== '' &&
+                (0, r.jsx)(f.Z, {
+                    userBio: y.bio,
                     setLineClamp: !1
                 }),
             (null == I ? void 0 : I.popularApplicationCommandIds) != null &&
                 null != P &&
-                (0, l.jsx)(u.Z, {
+                (0, r.jsx)(u.Z, {
                     applicationId: I.id,
                     commandIds: I.popularApplicationCommandIds,
                     channel: P,
-                    guildId: x,
-                    onClick: y
+                    guildId: v,
+                    onClick: x
                 }),
-            (null == b ? void 0 : b.guildId) != null &&
-                (0, l.jsx)(g.Z, {
-                    user: n,
-                    currentUser: t,
-                    guildId: b.guildId,
-                    scrollIntoView: Z === v.Tb.ROLES
+            (null == y ? void 0 : y.guildId) != null &&
+                (0, r.jsx)(g.Z, {
+                    user: t,
+                    currentUser: n,
+                    guildId: y.guildId,
+                    scrollIntoView: O === b.Tb.ROLES
                 }),
-            (0, l.jsx)(h.Z, {
+            (0, r.jsx)(m.Z, {
                 heading: j.intl.string(j.t['A//N4u']),
-                children: (0, l.jsx)(p.Z, {
-                    userId: n.id,
-                    guildId: x,
-                    tooltipDelay: v.vB
+                children: (0, r.jsx)(p.Z, {
+                    userId: t.id,
+                    guildId: v,
+                    tooltipDelay: b.vB
                 })
             }),
-            (0, l.jsx)(h.Z, {
+            (0, r.jsx)(m.Z, {
                 heading: j.intl.string(j.t['mQKv+v']),
-                scrollIntoView: Z === v.Tb.NOTE,
-                children: (0, l.jsx)(o.Z, {
-                    userId: n.id,
-                    className: m.note,
-                    autoFocus: Z === v.Tb.NOTE,
-                    onUpdate: () => O({ action: 'SET_NOTE' })
+                scrollIntoView: O === b.Tb.NOTE,
+                children: (0, r.jsx)(i.Z, {
+                    userId: t.id,
+                    className: h.note,
+                    autoFocus: O === b.Tb.NOTE,
+                    onUpdate: () => _({ action: 'SET_NOTE' })
                 })
             })
         ]

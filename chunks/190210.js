@@ -603,7 +603,11 @@ function ec(e) {
 function eu(e) {
     let { channel: t } = e,
         n = (e) => {
-            ((0, M.d)(e.currentTarget.files, t, D.d.ChannelMessage, { requireConfirm: !0 }), (e.currentTarget.value = null));
+            ((0, M.d)(e.currentTarget.files, t, D.d.ChannelMessage, {
+                requireConfirm: !0,
+                origin: 'file_picker'
+            }),
+                (e.currentTarget.value = null));
         };
     return (0, r.jsx)(A.Z, {
         'aria-label': q.intl.string(q.t['/IBYAg']),
@@ -629,7 +633,8 @@ function ed(e) {
                     id: (0, u.Z)(),
                     file: i,
                     platform: m.ow.WEB,
-                    isThumbnail: !1
+                    isThumbnail: !1,
+                    origin: 'file_picker'
                 };
             (p.Z.addFile({
                 file: a,

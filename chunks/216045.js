@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => H }), n(388685));
+(n.d(t, { Z: () => F }), n(388685));
 var i = n(255367),
     r = n(73800),
     s = n(512722),
@@ -26,30 +26,29 @@ var i = n(255367),
     I = n(935147),
     N = n(643879),
     y = n(373230),
-    A = n(726525),
-    P = n(246946),
-    R = n(25990),
-    D = n(594174),
-    Z = n(626135),
-    w = n(74538),
-    k = n(413182),
-    L = n(695346),
-    M = n(265159),
-    B = n(532495),
-    U = n(981631),
-    V = n(921944),
-    G = n(388032),
-    F = n(775274);
-function H() {
+    A = n(246946),
+    P = n(25990),
+    R = n(594174),
+    D = n(626135),
+    Z = n(74538),
+    w = n(413182),
+    k = n(695346),
+    L = n(265159),
+    M = n(532495),
+    B = n(981631),
+    U = n(921944),
+    V = n(388032),
+    G = n(775274);
+function F() {
     var e, t;
-    let n = (0, l.e7)([D.default], () => {
-            let e = D.default.getCurrentUser();
+    let n = (0, l.e7)([R.default], () => {
+            let e = R.default.getCurrentUser();
             return (a()(null != e, 'UserSettingsProfileCustomization: user cannot be undefined'), e);
         }),
-        s = (0, l.e7)([P.Z], () => P.Z.hidePersonalInformation),
-        H = (0, l.cj)([R.Z], () => R.Z.getAllPending()),
-        { pendingBio: z, pendingAvatar: W, pendingNameplate: Y } = H,
-        K = (function (e, t) {
+        s = (0, l.e7)([A.Z], () => A.Z.hidePersonalInformation),
+        F = (0, l.cj)([P.Z], () => P.Z.getAllPending()),
+        { pendingBio: H, pendingAvatar: z, pendingNameplate: W } = F,
+        Y = (function (e, t) {
             if (null == e) return {};
             var n,
                 i,
@@ -67,40 +66,38 @@ function H() {
                 for (i = 0; i < s.length; i++) ((n = s[i]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]));
             }
             return r;
-        })(H, ['pendingBio', 'pendingAvatar', 'pendingNameplate']),
-        q = (0, N.SD)({
+        })(F, ['pendingBio', 'pendingAvatar', 'pendingNameplate']),
+        K = (0, N.SD)({
             userId: n.id,
-            image: W
+            image: z
         }),
-        X = (0, l.e7)([R.Z], () => R.Z.showNotice()),
-        J = L.dN.useSetting() && null != z ? C.ZP.parse(void 0, z).content : z,
-        Q = w.ZP.canUsePremiumProfileCustomization(n),
-        { analyticsLocations: $, newestAnalyticsLocation: ee } = (0, f.ZP)(h.Z.USER_SETTINGS_USER_PROFILE),
-        et = (0, y.T)({ location: 'UserSettingsProfileCustomization' }),
-        en = (0, _.Nj)(o.z.RECENT_AVATARS_SETTINGS_MENU_NEW_BADGE),
-        ei = et && !en;
+        q = (0, l.e7)([P.Z], () => P.Z.showNotice()),
+        X = k.dN.useSetting() && null != H ? C.ZP.parse(void 0, H).content : H,
+        J = Z.ZP.canUsePremiumProfileCustomization(n),
+        { analyticsLocations: Q, newestAnalyticsLocation: $ } = (0, f.ZP)(h.Z.USER_SETTINGS_USER_PROFILE),
+        ee = (0, y.T)({ location: 'UserSettingsProfileCustomization' }),
+        et = (0, _.Nj)(o.z.RECENT_AVATARS_SETTINGS_MENU_NEW_BADGE),
+        en = ee && !et;
     r.useEffect(() => {
-        ei && (0, _.Q3)(o.z.RECENT_AVATARS_SETTINGS_MENU_NEW_BADGE, { forceTrack: !0 });
-    }, [ei]);
-    let [er, es] = (0, j.US)([o.z.NAMEPLATE_USER_SETTINGS_MENU_NEW_BADGE]),
-        ea = er === o.z.NAMEPLATE_USER_SETTINGS_MENU_NEW_BADGE;
+        en && (0, _.Q3)(o.z.RECENT_AVATARS_SETTINGS_MENU_NEW_BADGE, { forceTrack: !0 });
+    }, [en]);
+    let [ei, er] = (0, j.US)([o.z.NAMEPLATE_USER_SETTINGS_MENU_NEW_BADGE]),
+        es = ei === o.z.NAMEPLATE_USER_SETTINGS_MENU_NEW_BADGE;
     (r.useEffect(() => {
-        ea && es(V.L.TAKE_ACTION);
-    }, [ea, es]),
+        es && er(U.L.TAKE_ACTION);
+    }, [es, er]),
         r.useEffect(() => () => m.Z.wait(p.W3), []));
-    let [el, eo] = r.useState(!1),
-        { showRedesign: ec } = k.b.useExperiment({ location: 'profile customization' }),
-        ed = (0, A.q)({ location: 'UserSettingsProfileCustomization' }),
-        eu = !Q,
-        em = r.useRef(null);
+    let [ea, el] = r.useState(!1),
+        { showRedesign: eo } = w.b.useExperiment({ location: 'profile customization' }),
+        ec = !J,
+        ed = r.useRef(null);
     return s
         ? (0, i.jsx)(g.Z, {})
         : (0, i.jsxs)(f.Gt, {
-              value: $,
+              value: Q,
               children: [
                   (0, i.jsx)(b.Z, {}),
                   (0, i.jsx)(v.Z, {
-                      showViewFullProfileButton: ed,
                       profilePreview: (0, i.jsx)(
                           S.Z,
                           ((e = (function (e) {
@@ -130,17 +127,13 @@ function H() {
                           })(
                               {
                                   user: n,
-                                  canUsePremiumCustomization: Q,
-                                  onUpsellClick: M.Z,
-                                  pendingBio: J
+                                  canUsePremiumCustomization: J,
+                                  onUpsellClick: L.Z,
+                                  pendingBio: X
                               },
-                              K
+                              Y
                           )),
-                          (t = t =
-                              {
-                                  pendingAvatar: q,
-                                  showViewFullProfileButton: ed
-                              }),
+                          (t = t = { pendingAvatar: K }),
                           Object.getOwnPropertyDescriptors
                               ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
                               : (function (e, t) {
@@ -157,42 +150,42 @@ function H() {
                       ),
                       nameplatePreview: (0, i.jsx)(x.Z, {
                           user: n,
-                          nameplate: Y,
-                          nameplateData: void 0 === Y ? n.nameplate : void 0,
-                          pendingGlobalName: K.pendingGlobalName,
-                          className: F.nameplatePreview,
+                          nameplate: W,
+                          nameplateData: void 0 === W ? n.nameplate : void 0,
+                          pendingGlobalName: Y.pendingGlobalName,
+                          className: G.nameplatePreview,
                           isHighlighted: !0
                       }),
-                      children: (0, i.jsx)(B.Z, {})
+                      children: (0, i.jsx)(M.Z, {})
                   }),
-                  ec && (0, i.jsx)(T.Z, {}),
+                  eo && (0, i.jsx)(T.Z, {}),
                   (0, i.jsx)(c.$, {
-                      innerRef: em,
-                      onChange: (e) => eo(e),
+                      innerRef: ed,
+                      onChange: (e) => el(e),
                       threshold: 0.25,
-                      active: eu,
+                      active: ec,
                       children: (0, i.jsx)('div', {
-                          ref: em,
+                          ref: ed,
                           children: (0, i.jsx)(I.Z, {
                               user: n,
-                              shouldShow: eu,
-                              isVisible: el
+                              shouldShow: ec,
+                              isVisible: ea
                           })
                       })
                   }),
-                  eu &&
-                      !X &&
+                  ec &&
+                      !q &&
                       (0, i.jsx)(E.p, {
-                          className: F.floatingNitroUpsell,
-                          showUpsell: eu && !el,
-                          text: G.intl.format(G.t.TmfgIy, { onClick: () => (0, O.y)({ analyticsSource: ee }) }),
+                          className: G.floatingNitroUpsell,
+                          showUpsell: ec && !ea,
+                          text: V.intl.format(V.t.TmfgIy, { onClick: () => (0, O.y)({ analyticsSource: $ }) }),
                           textVariant: 'heading-md/medium',
                           button: (0, i.jsxs)(u.gtL, {
-                              className: F.floatingNitroButton,
-                              innerClassName: F.floatingNitroButtonInner,
+                              className: G.floatingNitroButton,
+                              innerClassName: G.floatingNitroButtonInner,
                               onClick: () => {
                                   var e;
-                                  (Z.default.track(U.rMx.TRY_IT_OUT_PRESET_CLICKED, { cta_variant: 'floating_action_button' }), null == em || null == (e = em.current) || e.scrollIntoView({ behavior: 'smooth' }));
+                                  (D.default.track(B.rMx.TRY_IT_OUT_PRESET_CLICKED, { cta_variant: 'floating_action_button' }), null == ed || null == (e = ed.current) || e.scrollIntoView({ behavior: 'smooth' }));
                               },
                               color: d.zx.Colors.GREEN,
                               size: d.Ph.MEDIUM,
@@ -204,7 +197,7 @@ function H() {
                                   (0, i.jsx)(u.Text, {
                                       variant: 'text-sm/medium',
                                       color: 'currentColor',
-                                      children: G.intl.string(G.t.uw9zIy)
+                                      children: V.intl.string(V.t.uw9zIy)
                                   })
                               ]
                           })

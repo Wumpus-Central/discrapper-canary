@@ -1,14 +1,14 @@
 a.d(e, {
     BO: () => c,
     Cd: () => T,
-    HY: () => f,
+    HY: () => A,
     Jd: () => i,
     KQ: () => R,
     R: () => s,
     V$: () => u,
     f4: () => I,
     gv: () => E,
-    mL: () => A,
+    mL: () => f,
     zQ: () => d
 });
 var r = a(967752),
@@ -122,10 +122,10 @@ let N = {
     span: 'span',
     statsd: 'metric_bucket'
 };
-function A(t) {
+function f(t) {
     return N[t];
 }
-function f(t) {
+function A(t) {
     if (!t || !t.sdk) return;
     let { name: e, version: a } = t.sdk;
     return {

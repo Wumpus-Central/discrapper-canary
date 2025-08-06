@@ -16,11 +16,14 @@ async function f(e, t) {
         j = a.Z.getChannel(f);
     if (null != j)
         try {
-            var y;
+            var h;
             let t = await (0, d.rO)(e, b),
-                n = null != (y = e.name) ? y : (0, p.yl)(s.default.extractTimestamp(e.id)),
+                n = null != (h = e.name) ? h : (0, p.yl)(s.default.extractTimestamp(e.id)),
                 r = (0, u.Z)(n);
-            ((0, c.d)([new File([t], ''.concat('' !== r ? r : 'clip', '.mp4'), { type: 'video/mp4' })], j, i.d.ChannelMessage, { filesMetadata: [{ clip: e }] }),
+            ((0, c.d)([new File([t], ''.concat('' !== r ? r : 'clip', '.mp4'), { type: 'video/mp4' })], j, i.d.ChannelMessage, {
+                filesMetadata: [{ clip: e }],
+                origin: 'unknown:clip_share'
+            }),
                 o.default.track(m.rMx.CLIP_SHARED, {
                     location_stack: g,
                     guild_id: j.guild_id,

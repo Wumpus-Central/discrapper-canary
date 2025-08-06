@@ -1,23 +1,23 @@
 (t.d(n, {
-    ZP: () => m,
-    so: () => g,
-    wg: () => h
+    ZP: () => h,
+    so: () => f,
+    wg: () => b
 }),
     t(388685));
-var l = t(442837),
-    i = t(159300),
-    r = t(427679),
+var r = t(442837),
+    a = t(159300),
+    i = t(427679),
     o = t(592125),
-    c = t(984933),
-    s = t(430824),
-    a = t(496675),
-    u = t(700785),
-    d = t(924301),
+    l = t(984933),
+    c = t(430824),
+    s = t(496675),
+    d = t(700785),
+    u = t(924301),
     _ = t(765305),
-    f = t(981631);
-function h(e) {
+    p = t(981631);
+function b(e) {
     let [n] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [o.Z],
-        { entityType: t, channelId: l } =
+        { entityType: t, channelId: r } =
             'entity_type' in e
                 ? {
                       entityType: e.entity_type,
@@ -25,18 +25,18 @@ function h(e) {
                   }
                 : e;
     if (t === _.WX.EXTERNAL) return !0;
-    let i = n.getChannel(l);
-    return null != i && u.Uu(f.Plq.VIEW_CHANNEL, i);
+    let a = n.getChannel(r);
+    return null != a && d.Uu(p.Plq.VIEW_CHANNEL, a);
 }
-function g(e) {
-    let [n, t, l, u] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [c.ZP, o.Z, s.Z, r.Z];
-    if ((0, d.Z2)(e)) return !1;
-    let { guild_id: f, channel_id: g } = e,
-        m = e.entity_type === _.WX.EXTERNAL ? n.getDefaultChannel(e.guild_id) : t.getChannel(g),
-        v = l.getGuild(f),
-        p = u.getStageInstanceByChannel(g);
-    return !!(0, i.b)(a.Z, v, m, p) && null != m && h(e, [t]);
+function f(e) {
+    let [n, t, r, d] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [l.ZP, o.Z, c.Z, i.Z];
+    if ((0, u.Z2)(e)) return !1;
+    let { guild_id: p, channel_id: f } = e,
+        h = e.entity_type === _.WX.EXTERNAL ? n.getDefaultChannel(e.guild_id) : t.getChannel(f),
+        m = r.getGuild(p),
+        g = d.getStageInstanceByChannel(f);
+    return !!(0, a.b)(s.Z, m, h, g) && null != h && b(e, [t]);
 }
-function m(e) {
-    return (0, l.e7)([c.ZP, o.Z, s.Z, r.Z], () => g(e, [c.ZP, o.Z, s.Z, r.Z]), [e]);
+function h(e) {
+    return (0, r.e7)([l.ZP, o.Z, c.Z, i.Z], () => f(e, [l.ZP, o.Z, c.Z, i.Z]), [e]);
 }

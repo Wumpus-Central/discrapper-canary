@@ -1,8 +1,8 @@
 (n.d(t, { Z: () => f }), n(388685));
 var r = n(255367);
 n(73800);
-var o = n(442837),
-    l = n(481060),
+var l = n(442837),
+    o = n(481060),
     i = n(567409),
     a = n(594174),
     c = n(823379),
@@ -15,24 +15,24 @@ function f(e) {
             if (null == e) return {};
             var n,
                 r,
-                o = (function (e, t) {
+                l = (function (e, t) {
                     if (null == e) return {};
                     var n,
                         r,
-                        o = {},
-                        l = Object.keys(e);
-                    for (r = 0; r < l.length; r++) ((n = l[r]), t.indexOf(n) >= 0 || (o[n] = e[n]));
-                    return o;
+                        l = {},
+                        o = Object.keys(e);
+                    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (l[n] = e[n]));
+                    return l;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var l = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < l.length; r++) ((n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (o[n] = e[n]));
+                var o = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]));
             }
-            return o;
+            return l;
         })(e, ['applicationId', 'hideLabel', 'className']);
     let m = (function (e) {
             let t = (0, i.N)(e);
-            return (0, o.Wu)(
+            return (0, l.Wu)(
                 [a.default],
                 () => {
                     let e = new Set();
@@ -51,7 +51,7 @@ function f(e) {
                 [t]
             );
         })(t),
-        b = m.length;
+        g = m.length;
     return m.length > 0
         ? (0, r.jsx)(
               s.Z,
@@ -81,10 +81,10 @@ function f(e) {
                   return e;
               })(
                   {
-                      label: d.intl.formatToPlainString(d.t.ujhJdH, { numFriends: b }),
+                      label: d.intl.formatToPlainString(d.t.ujhJdH, { numFriends: g }),
                       users: m,
                       maxUsers: 4,
-                      size: l.EFr.SIZE_16,
+                      size: o.EFr.SIZE_16,
                       overflowCountClassName: u.overflowButton,
                       className: f,
                       visuallyHideLabel: n

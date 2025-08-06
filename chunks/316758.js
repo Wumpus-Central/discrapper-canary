@@ -18,7 +18,8 @@ function s(e, t, n) {
         id: t,
         channelId: e,
         file: n,
-        platform: a.ow.WEB
+        platform: a.ow.WEB,
+        origin: 'unknown:poll_attachment'
     };
     r.Z.addFile({
         file: i,

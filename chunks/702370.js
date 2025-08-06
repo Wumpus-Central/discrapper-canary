@@ -20,8 +20,8 @@ var r = n(255367),
     j = n(570908),
     O = n(786761),
     _ = n(3148),
-    C = n(739566),
-    w = n(753206),
+    w = n(739566),
+    C = n(753206),
     y = n(4242),
     I = n(333867),
     S = n(767714),
@@ -74,8 +74,8 @@ var r = n(255367),
     ej = n(361110),
     eO = n(956472),
     e_ = n(832149),
-    eC = n(215023),
-    ew = n(981631),
+    ew = n(215023),
+    eC = n(981631),
     ey = n(474936),
     eI = n(231338),
     eS = n(388032),
@@ -217,7 +217,7 @@ let eN = (e) => {
                   product: t,
                   user: n
               })
-            : (0, eC.o0)(t.skuId)
+            : (0, ew.o0)(t.skuId)
               ? (0, r.jsx)(ef.b, {
                     animationState: 'on_hover',
                     product: t
@@ -235,7 +235,7 @@ let eN = (e) => {
             ? (0, r.jsx)(v.Text, {
                   variant: 'text-sm/normal',
                   className: eE.learnMoreLink,
-                  children: eS.intl.format(eS.t.Q1scdH, { helpdeskArticle: M.Z.getArticleURL(ew.BhN.FRACTIONAL_PREMIUM_ABOUT) })
+                  children: eS.intl.format(eS.t.Q1scdH, { helpdeskArticle: M.Z.getArticleURL(eC.BhN.FRACTIONAL_PREMIUM_ABOUT) })
               })
             : null;
     },
@@ -243,9 +243,9 @@ let eN = (e) => {
         let t,
             { product: n, user: a, category: o, shouldCheckoutWithOrbs: c, onClose: m, returnRef: b, previewingVariantIndexProps: g, selectedVariantIndex: j, tab: O } = e,
             { analyticsLocations: _ } = (0, x.ZP)(),
-            C = U.ZP.canUseCollectibles(a),
-            { previewingVariantIndex: w } = g,
-            y = (0, eP.N)(n, w),
+            w = U.ZP.canUseCollectibles(a),
+            { previewingVariantIndex: C } = g,
+            y = (0, eP.N)(n, C),
             E = (0, eg.W)(n, j);
         s()(null != E, 'Selected product should not be null');
         let T = (0, J.L)(n),
@@ -260,10 +260,10 @@ let eN = (e) => {
             W = (0, P.ZP)(),
             ee = (0, p.wj)(W),
             et = (0, G.G1)(E),
-            en = (0, G.ql)(E, ew.tuJ.DEFAULT),
+            en = (0, G.ql)(E, eC.tuJ.DEFAULT),
             ec = (null == en ? void 0 : en.amount) === 0,
             { firstAvatarDecoration: eu } = (0, Q.Rj)(null != y ? y : E),
-            em = i.useMemo(() => (0, G.BH)(E, C), [E, C]),
+            em = i.useMemo(() => (0, G.BH)(E, w), [E, w]),
             { handleUseNow: ef, isApplying: eh } = (0, q.W)({
                 product: E,
                 onSuccess: m
@@ -279,7 +279,7 @@ let eN = (e) => {
                 hasSufficientOrbs: eD
             } = (0, eO.Ip)({
                 product: E,
-                isPremiumUser: C,
+                isPremiumUser: w,
                 tab: O,
                 hasDiscountOffer: eZ
             }),
@@ -312,7 +312,7 @@ let eN = (e) => {
                                         product: E,
                                         analyticsLocations: _,
                                         itemConsumed: null == (t = n[0]) ? void 0 : t.consumed,
-                                        purchaseType: eC.o8.ORB
+                                        purchaseType: ew.o8.ORB
                                     }));
                             },
                             analyticsLocations: _
@@ -422,7 +422,7 @@ let eN = (e) => {
                                         ? (0, r.jsx)(ep.a, {
                                               prices: eL,
                                               product: E,
-                                              isPremiumUser: C,
+                                              isPremiumUser: w,
                                               discount: em,
                                               hasSufficientOrbs: eD,
                                               isProductDisabled: L,
@@ -434,13 +434,13 @@ let eN = (e) => {
                                                   (0, r.jsx)(el.Z, {
                                                       product: E,
                                                       discount: em,
-                                                      isPremiumUser: C,
-                                                      hideStrikethroughPrice: !C || eZ,
+                                                      isPremiumUser: w,
+                                                      hideStrikethroughPrice: !w || eZ,
                                                       nitroIconType: 'tooltip',
                                                       nitroIconSize: 'xs',
                                                       discountOfferAmount: eN
                                                   }),
-                                                  C || eZ ? null : (0, r.jsx)(eo.Z, { product: E })
+                                                  w || eZ ? null : (0, r.jsx)(eo.Z, { product: E })
                                               ]
                                           })
                             ]
@@ -462,7 +462,7 @@ let eN = (e) => {
                         (0, r.jsx)('div', {
                             className: eE.buttonsContainer,
                             children:
-                                !et || C || ec
+                                !et || w || ec
                                     ? D
                                         ? k
                                             ? (0, r.jsx)(v.zxk, {
@@ -483,7 +483,7 @@ let eN = (e) => {
                                                             (0, e_.Z)({
                                                                 product: E,
                                                                 analyticsLocations: _,
-                                                                purchaseType: eC.o8.PREMIUM_PURCHASE
+                                                                purchaseType: ew.o8.PREMIUM_PURCHASE
                                                             }));
                                                     },
                                                     text: eS.intl.string(eS.t.zp6caG),
@@ -645,9 +645,9 @@ let eN = (e) => {
                                       pendingProfileEffectId: null == p ? void 0 : p.id,
                                       disabledInputs: !0,
                                       hideMessageInput: !v,
-                                      hideExampleButton: !0,
                                       hideCustomStatus: !0,
                                       hideBioSection: c,
+                                      hideViewFullProfileButton: !0,
                                       interactive: !1
                                   })
                               ),
@@ -669,7 +669,7 @@ let eN = (e) => {
                     })
                 ),
                 {
-                    state: ew.yb.SENT,
+                    state: eC.yb.SENT,
                     id: '0'
                 }
             )
@@ -688,10 +688,10 @@ let eN = (e) => {
                     'aria-hidden': !0,
                     children: [
                         (0, r.jsx)(
-                            w.Z,
+                            C.Z,
                             {
                                 className: eE.mockMessage,
-                                author: (0, C.ZH)(n),
+                                author: (0, w.ZH)(n),
                                 message: n
                             },
                             n.id
@@ -723,30 +723,30 @@ let eN = (e) => {
             { previewingVariantIndex: j } = P,
             O = (0, f.e7)([z.Z], () => z.Z.purchases),
             _ = (0, W.o)(a, O),
-            C = (0, eP.N)(a, j),
-            w = (0, eg.W)(a, _);
-        s()(null != w, 'Selected product should not be null');
+            w = (0, eP.N)(a, j),
+            C = (0, eg.W)(a, _);
+        s()(null != C, 'Selected product should not be null');
         let { analyticsLocations: y } = (0, x.ZP)([...u, g.Z.COLLECTIBLES_SHOP_DETAILS_MODAL]);
-        (0, en.u9)(w.skuId);
+        (0, en.u9)(C.skuId);
         let { pdpBackground: I, logo: S } = (0, ex.OR)(l);
         i.useEffect(() => {
             null != b && (0, N.Z)(b.id, b.getAvatarURL(void 0, 80));
         }, [b]);
         let E = i.useMemo(() => (0, G.jm)(a.type, a.skuId), [a.type, a.skuId]);
         i.useEffect(() => {
-            (D.default.track(ew.rMx.OPEN_MODAL, {
-                type: ew.jXE.COLLECTIBLES_SHOP_DETAILS_MODAL,
+            (D.default.track(eC.rMx.OPEN_MODAL, {
+                type: eC.jXE.COLLECTIBLES_SHOP_DETAILS_MODAL,
                 source: c,
                 location_stack: y,
-                sku_id: w.skuId,
+                sku_id: C.skuId,
                 product_type: E
             }),
-                w.items.forEach(F.oK));
-        }, [c, y, w.skuId, w.items, E]);
+                C.items.forEach(F.oK));
+        }, [c, y, C.skuId, C.items, E]);
         let T = (0, R.r9)(),
             k = t === v.Dvm.EXITING;
         if (null == b) return null;
-        let Z = (0, eC.ZS)(l.skuId);
+        let Z = (0, ew.ZS)(l.skuId);
         return (0, r.jsx)(x.Gt, {
             value: y,
             children: (0, r.jsx)(v.Y0X, {
@@ -772,7 +772,7 @@ let eN = (e) => {
                             tab: h
                         }),
                         (0, r.jsxs)('div', {
-                            className: w.skuId === m.a.PREMIUM_TIER_2_3_DAY ? eE.fractionalNitroPreviewContainer : w.type === d.Z.AVATAR_DECORATION ? eE.collectiblePreviewsContainerWithChat : eE.collectiblePreviewsContainerNoChat,
+                            className: C.skuId === m.a.PREMIUM_TIER_2_3_DAY ? eE.fractionalNitroPreviewContainer : C.type === d.Z.AVATAR_DECORATION ? eE.collectiblePreviewsContainerWithChat : eE.collectiblePreviewsContainerNoChat,
                             children: [
                                 (0, r.jsx)(ee.Z, {
                                     asset: I,
@@ -780,8 +780,8 @@ let eN = (e) => {
                                     className: eE.categoryBanner,
                                     categoryBannerOverride: Z
                                 }),
-                                (0, eC.o0)(a.skuId)
-                                    ? a.skuId === eC.Vt.ORB_PROFILE_BADGE
+                                (0, ew.o0)(a.skuId)
+                                    ? a.skuId === ew.Vt.ORB_PROFILE_BADGE
                                         ? T || k
                                             ? null
                                             : (0, r.jsx)(em.M, { user: b })
@@ -793,7 +793,7 @@ let eN = (e) => {
                                             })
                                     : (0, r.jsx)(eM, {
                                           user: b,
-                                          product: null != C ? C : w
+                                          product: null != w ? w : C
                                       }),
                                 (0, r.jsxs)('div', {
                                     className: eE.profilePreviewHeader,
@@ -811,7 +811,7 @@ let eN = (e) => {
                                             className: eE.headerButtonContainer,
                                             children: [
                                                 (0, r.jsx)(et.n, {
-                                                    skuId: w.skuId,
+                                                    skuId: C.skuId,
                                                     tab: h
                                                 }),
                                                 (0, r.jsx)(v.hU, {

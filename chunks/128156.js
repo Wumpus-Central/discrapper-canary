@@ -1,8 +1,8 @@
 n.d(t, { Z: () => P });
 var r = n(255367);
 n(73800);
-var o = n(442837),
-    l = n(481060),
+var l = n(442837),
+    o = n(481060),
     i = n(468363),
     a = n(353647),
     c = n(566898),
@@ -12,34 +12,34 @@ var o = n(442837),
     f = n(209698),
     p = n(369566),
     m = n(29899),
-    b = n(151545),
-    g = n(744802),
-    y = n(493043),
-    O = n(864141),
-    j = n(264481),
-    _ = n(693408),
-    x = n(228168),
-    h = n(981631),
-    v = n(388032),
+    g = n(151545),
+    b = n(744802),
+    j = n(493043),
+    h = n(864141),
+    y = n(264481),
+    v = n(693408),
+    O = n(228168),
+    x = n(981631),
+    _ = n(388032),
     I = n(514656);
 function P(e) {
-    let { user: t, currentUser: n, displayProfile: P, guildId: N, channelId: E, subsection: A, onClose: w } = e,
-        { voiceActivityStatusEnabled: T } = (0, i.U)({ location: 'UserProfileModalV2Activity' }),
+    let { user: t, currentUser: n, displayProfile: P, guildId: Z, channelId: E, subsection: N, onClose: T } = e,
+        { voiceActivityStatusEnabled: A } = (0, i.U)({ location: 'UserProfileModalV2Activity' }),
         S = (0, f.b)({ location: 'UserProfileModalV2Activity' }),
-        { live: Z, recent: C, stream: G } = (0, p.Z)(t.id),
-        { voiceChannel: L, voiceActivity: k } = (0, m.Z)({
+        { live: w, recent: C, stream: G } = (0, p.Z)(t.id),
+        { voiceChannel: L, voiceActivity: M } = (0, m.Z)({
             userId: t.id,
-            guildId: N
+            guildId: Z
         }),
-        R = (0, o.e7)([a.Z], () => a.Z.isFetchingUserOutbox(t.id)),
+        R = (0, l.e7)([a.Z], () => a.Z.isFetchingUserOutbox(t.id)),
         D = t.id === n.id,
-        M = (0, o.e7)([d.Z, s.Z], () => {
+        k = (0, l.e7)([d.Z, s.Z], () => {
             let e = D ? d.Z.getStatus() : s.Z.getStatus(t.id);
-            return e === l.Skl.OFFLINE || e === l.Skl.INVISIBLE;
+            return e === o.Skl.OFFLINE || e === o.Skl.INVISIBLE;
         }),
-        B = Z.length > 0 || null != G,
-        U = T && null == G && null == k && null != L,
-        F = !M && (B || U),
+        U = w.length > 0 || null != G,
+        B = A && null == G && null == M && null != L,
+        F = !k && (U || B),
         V = C.length > 0;
     if (!F && !V && R)
         return (0, r.jsx)('div', {
@@ -67,68 +67,68 @@ function P(e) {
     if (!F && !V && !R) {
         var Y;
         return D
-            ? (0, r.jsx)(j.Uf, { onClose: w })
-            : (0, r.jsx)(j.P9, {
+            ? (0, r.jsx)(y.Uf, { onClose: T })
+            : (0, r.jsx)(y.P9, {
                   user: t,
                   guildId: null != (Y = null == P ? void 0 : P.guildId) ? Y : void 0,
                   channelId: E,
-                  onClose: w
+                  onClose: T
               });
     }
-    return (0, r.jsxs)(l.Ttm, {
+    return (0, r.jsxs)(o.Ttm, {
         className: I.scroller,
         fade: !0,
         children: [
             F
-                ? (0, r.jsx)(_.Z, {
-                      heading: v.intl.string(v.t.J6STd3),
+                ? (0, r.jsx)(v.Z, {
+                      heading: _.intl.string(_.t.J6STd3),
                       children: (0, r.jsxs)('ul', {
                           className: I.cards,
                           children: [
                               !S &&
-                                  U &&
+                                  B &&
                                   (0, r.jsx)('li', {
-                                      children: (0, r.jsx)(O.Z, {
+                                      children: (0, r.jsx)(h.Z, {
                                           user: t,
                                           currentUser: n,
                                           voiceChannel: L,
-                                          onClose: w
+                                          onClose: T
                                       })
                                   }),
                               null != G &&
                                   (0, r.jsx)('li', {
-                                      children: (0, r.jsx)(y.Z, {
+                                      children: (0, r.jsx)(j.Z, {
                                           location: 'UserProfileModalV2Activity',
                                           user: t,
                                           currentUser: n,
                                           stream: G,
-                                          onClose: w,
+                                          onClose: T,
                                           profileGuildId: null == P ? void 0 : P.guildId
                                       })
                                   }),
-                              Z.map((e, o) =>
+                              w.map((e, l) =>
                                   (0, r.jsx)(
                                       'li',
                                       {
-                                          children: (0, r.jsx)(b.Z, {
+                                          children: (0, r.jsx)(g.Z, {
                                               user: t,
                                               currentUser: n,
                                               activity: e,
-                                              onClose: w,
+                                              onClose: T,
                                               profileGuildId: null == P ? void 0 : P.guildId
                                           })
                                       },
-                                      'live-'.concat(o)
+                                      'live-'.concat(l)
                                   )
                               ),
                               S &&
-                                  U &&
+                                  B &&
                                   (0, r.jsx)('li', {
-                                      children: (0, r.jsx)(O.Z, {
+                                      children: (0, r.jsx)(h.Z, {
                                           user: t,
                                           currentUser: n,
                                           voiceChannel: L,
-                                          onClose: w
+                                          onClose: T
                                       })
                                   })
                           ]
@@ -136,35 +136,35 @@ function P(e) {
                   })
                 : null,
             V
-                ? (0, r.jsx)(_.Z, {
-                      heading: v.intl.string(v.t.jzgEoK),
+                ? (0, r.jsx)(v.Z, {
+                      heading: _.intl.string(_.t.jzgEoK),
                       introText: D
-                          ? v.intl.format(v.t['4bk9Ag'], {
+                          ? _.intl.format(_.t['4bk9Ag'], {
                                 learnMoreHook: (e, t) =>
                                     (0, r.jsx)(
-                                        l.eee,
+                                        o.eee,
                                         {
-                                            href: u.Z.getArticleURL(h.BhN.ACTIVITY_STATUS_SETTINGS),
+                                            href: u.Z.getArticleURL(x.BhN.ACTIVITY_STATUS_SETTINGS),
                                             children: e
                                         },
                                         t
                                     )
                             })
                           : void 0,
-                      scrollIntoView: A === x.Tb.RECENT_ACTIVITY,
+                      scrollIntoView: N === O.Tb.RECENT_ACTIVITY,
                       children: (0, r.jsx)('ul', {
                           className: I.cards,
                           children: C.map((e) =>
                               (0, r.jsx)(
                                   'li',
                                   {
-                                      children: (0, r.jsx)(g.Z, {
+                                      children: (0, r.jsx)(b.Z, {
                                           location: 'UserProfileModalV2Activity',
                                           user: t,
                                           currentUser: n,
                                           entry: e,
                                           profileGuildId: null == P ? void 0 : P.guildId,
-                                          onClose: w
+                                          onClose: T
                                       })
                                   },
                                   e.id

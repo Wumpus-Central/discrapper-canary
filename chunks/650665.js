@@ -18,8 +18,8 @@ var n = a(696486),
     R = a(395848),
     d = a(501684),
     N = a(108185),
-    A = a(896247),
-    f = a(416987);
+    f = a(896247),
+    A = a(416987);
 let T = 0,
     p = {};
 function L() {
@@ -186,7 +186,7 @@ function g(t) {
                             T = r,
                             h = _,
                             O = a;
-                        let n = (0, A.W)(),
+                        let n = (0, f.W)(),
                             o = O + Math.max(T, (0, N.XL)(n ? n.requestStart : 0)),
                             c = O + T,
                             u = { [i.S3]: 'auto.resource.browser.metrics' };
@@ -196,7 +196,7 @@ function g(t) {
                                 op: s.entryType,
                                 attributes: u
                             }));
-                        let R = (0, f.Y)(),
+                        let R = (0, A.Y)(),
                             d = e.startTime < R.firstHiddenTime;
                         ('first-paint' === e.name &&
                             d &&
@@ -249,7 +249,7 @@ function g(t) {
     ) {
         var h;
         ((function (t) {
-            let e = (0, A.W)();
+            let e = (0, f.W)();
             if (!e) return;
             let { responseStart: a, requestStart: r } = e;
             r <= a &&

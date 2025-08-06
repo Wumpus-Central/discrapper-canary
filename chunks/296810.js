@@ -8,7 +8,7 @@ var r = n(120356),
     o = n(388032),
     c = n(775853);
 function d(e) {
-    let { children: t, className: n, layoutClassName: r, profilePreview: d, profilePreviewTitle: u, nameplatePreview: m, showViewFullProfileButton: p } = e;
+    let { children: t, className: n, layoutClassName: r, profilePreview: d, profilePreviewTitle: u, nameplatePreview: m } = e;
     return (0, i.jsx)('div', {
         className: n,
         children: (0, i.jsx)(a.hjN, {
@@ -22,9 +22,9 @@ function d(e) {
                               children: [
                                   (0, i.jsx)(l.Z, {
                                       title: null != u ? u : o.intl.string(o.t.Zb06yM),
-                                      showViewFullProfileButton: p,
                                       hideDivider: !0,
                                       className: c.preview,
+                                      showViewFullProfileButton: !0,
                                       children: d
                                   }),
                                   null != m
@@ -39,9 +39,9 @@ function d(e) {
                           })
                         : (0, i.jsx)(l.Z, {
                               title: null != u ? u : o.intl.string(o.t.Zb06yM),
-                              showViewFullProfileButton: p,
                               hideDivider: !0,
                               className: c.preview,
+                              showViewFullProfileButton: !0,
                               children: d
                           })
                 ]

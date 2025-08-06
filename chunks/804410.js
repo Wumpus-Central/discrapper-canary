@@ -27,7 +27,7 @@ let d = (0, r._I)((t = {}) => {
             (e.onerror &&
                 ((a = t),
                 (0, o.V)((t) => {
-                    let { stackParser: e, attachStacktrace: r } = A();
+                    let { stackParser: e, attachStacktrace: r } = f();
                     if ((0, _.s3)() !== a || (0, R.Wz)()) return;
                     let { msg: o, url: i, line: l, column: u, error: d } = t,
                         N = (function (t, e, a, r) {
@@ -65,7 +65,7 @@ let d = (0, r._I)((t = {}) => {
                     ((r = t),
                     (0, i.h)((t) => {
                         var e;
-                        let { stackParser: a, attachStacktrace: o } = A();
+                        let { stackParser: a, attachStacktrace: o } = f();
                         if ((0, _.s3)() !== r || (0, R.Wz)()) return;
                         let i = (function (t) {
                                 if ((0, c.pt)(t)) return t;
@@ -104,7 +104,7 @@ let d = (0, r._I)((t = {}) => {
 function N(t) {
     u.X && l.kg.log(`Global Handler attached: ${t}`);
 }
-function A() {
+function f() {
     let t = (0, _.s3)();
     return (
         (t && t.getOptions()) || {

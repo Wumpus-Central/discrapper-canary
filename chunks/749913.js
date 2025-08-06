@@ -429,7 +429,7 @@ let eo = i.memo(function (e) {
         let O = i.useCallback(
                 (e) => {
                     let n = e.clipboardData.files[0];
-                    null != n && n.type.startsWith('image/') && (e.preventDefault(), (0, B.d)([n], t, Z.d.FirstThreadMessage), j.getState().setFormOpenFromUserAction());
+                    null != n && n.type.startsWith('image/') && (e.preventDefault(), (0, B.d)([n], t, Z.d.FirstThreadMessage, { origin: 'clipboard' }), j.getState().setFormOpenFromUserAction());
                 },
                 [t, j]
             ),

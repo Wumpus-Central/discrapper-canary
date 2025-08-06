@@ -172,7 +172,8 @@ function U(e) {
                     file: {
                         id: e,
                         file: i,
-                        platform: u.ow.WEB
+                        platform: u.ow.WEB,
+                        origin: 'unknown:app_recommendation'
                     },
                     draftType: T.d.SlashCommand
                 });

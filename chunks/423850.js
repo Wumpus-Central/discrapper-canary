@@ -1,5 +1,5 @@
 a.d(e, {
-    D: () => A,
+    D: () => f,
     N: () => d
 });
 var r = a(263449),
@@ -24,8 +24,8 @@ function d() {
             if (!l) return;
             let { interactionId: I } = l,
                 d = N[l.name],
-                A = a.getOptions(),
-                f = (0, u.XL)(i.Z1 + l.startTime),
+                f = a.getOptions(),
+                A = (0, u.XL)(i.Z1 + l.startTime),
                 T = (0, u.XL)(t.value),
                 p = (0, r.nZ)(),
                 L = (0, _.HN)(),
@@ -41,8 +41,8 @@ function d() {
             } catch (t) {}
             let v = (0, c.Rt)(l.target),
                 y = (0, E.Jr)({
-                    release: A.release,
-                    environment: A.environment,
+                    release: f.release,
+                    environment: f.environment,
                     transaction: P,
                     [n.JQ]: t.value,
                     [n.S3]: 'auto.http.browser.inp',
@@ -55,14 +55,14 @@ function d() {
                     name: v,
                     op: `ui.interaction.${d}`,
                     attributes: y,
-                    startTime: f,
+                    startTime: A,
                     experimental: { standalone: !0 }
                 });
             (S.addEvent('inp', {
                 [n.E1]: 'millisecond',
                 [n.Wb]: t.value
             }),
-                S.end(f + T));
+                S.end(A + T));
         });
         return () => {
             t();
@@ -98,7 +98,7 @@ let N = {
     keypress: 'press',
     input: 'press'
 };
-function A(t) {
+function f(t) {
     let e = ({ entries: t }) => {
         let e = (0, _.HN)(),
             a = e && (0, _.Gx)(e);

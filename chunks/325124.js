@@ -17,8 +17,8 @@ var r = a(650665),
     R = a(101284),
     d = a(731889),
     N = a(467510),
-    A = a(454463),
-    f = a(163162),
+    f = a(454463),
+    A = a(163162),
     T = a(119128),
     p = a(799033);
 let L = {
@@ -75,12 +75,12 @@ let L = {
                 }
             });
             function E() {
-                ['interactive', 'complete'].includes(f.m9.document.readyState) && t.emit('idleSpanEnableAutoFinish', i);
+                ['interactive', 'complete'].includes(A.m9.document.readyState) && t.emit('idleSpanEnableAutoFinish', i);
             }
             return (
                 a &&
-                    f.m9.document &&
-                    (f.m9.document.addEventListener('readystatechange', () => {
+                    A.m9.document &&
+                    (A.m9.document.addEventListener('readystatechange', () => {
                         E();
                     }),
                     E()),
@@ -93,10 +93,10 @@ let L = {
                 var a, r, i, d;
                 let L,
                     h,
-                    w = f.m9.location && f.m9.location.href;
+                    w = A.m9.location && A.m9.location.href;
                 (t.on('startNavigationSpan', (e) => {
                     (0, E.s3)() === t &&
-                        (h && !(0, s.XU)(h).timestamp && (A.X && u.kg.log(`[Tracing] Finishing current root span with op: ${(0, s.XU)(h).op}`), h.end()),
+                        (h && !(0, s.XU)(h).timestamp && (f.X && u.kg.log(`[Tracing] Finishing current root span with op: ${(0, s.XU)(h).op}`), h.end()),
                         (h = B(t, {
                             op: 'navigation',
                             ...e
@@ -104,7 +104,7 @@ let L = {
                 }),
                     t.on('startPageLoadSpan', (e, a = {}) => {
                         if ((0, E.s3)() !== t) return;
-                        h && !(0, s.XU)(h).timestamp && (A.X && u.kg.log(`[Tracing] Finishing current root span with op: ${(0, s.XU)(h).op}`), h.end());
+                        h && !(0, s.XU)(h).timestamp && (f.X && u.kg.log(`[Tracing] Finishing current root span with op: ${(0, s.XU)(h).op}`), h.end());
                         let r = a.sentryTrace || g('sentry-trace'),
                             _ = a.baggage || g('baggage'),
                             n = (0, I.pT)(r, _);
@@ -125,10 +125,10 @@ let L = {
                             dsc: r.dsc || (0, l.jC)(t)
                         });
                     }),
-                    f.m9.location &&
+                    A.m9.location &&
                         (G &&
                             O(t, {
-                                name: f.m9.location.pathname,
+                                name: A.m9.location.pathname,
                                 startTime: R.Z1 ? R.Z1 / 1000 : void 0,
                                 attributes: {
                                     [c.Zj]: 'url',
@@ -144,7 +144,7 @@ let L = {
                                 a !== e &&
                                     ((w = void 0),
                                     P(t, {
-                                        name: f.m9.location.pathname,
+                                        name: A.m9.location.pathname,
                                         attributes: {
                                             [c.Zj]: 'url',
                                             [c.S3]: 'auto.navigation.browser'
@@ -157,7 +157,7 @@ let L = {
                         (r = C),
                         (i = m),
                         (d = M),
-                        f.m9.document &&
+                        A.m9.document &&
                             addEventListener(
                                 'click',
                                 () => {
@@ -165,11 +165,11 @@ let L = {
                                         e = (0, s.HN)(),
                                         _ = e && (0, s.Gx)(e);
                                     if (_ && ['navigation', 'pageload'].includes((0, s.XU)(_).op)) {
-                                        A.X && u.kg.warn(`[Tracing] Did not create ${t} span because a pageload or navigation span is in progress.`);
+                                        f.X && u.kg.warn(`[Tracing] Did not create ${t} span because a pageload or navigation span is in progress.`);
                                         return;
                                     }
                                     if ((L && (L.setAttribute(c.ju, 'interactionInterrupted'), L.end(), (L = void 0)), !d.name)) {
-                                        A.X && u.kg.warn(`[Tracing] Did not create ${t} transaction because _latestRouteName is missing.`);
+                                        f.X && u.kg.warn(`[Tracing] Did not create ${t} transaction because _latestRouteName is missing.`);
                                         return;
                                     }
                                     L = (0, o.R)(

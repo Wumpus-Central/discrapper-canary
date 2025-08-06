@@ -68,7 +68,7 @@ function m(e) {
         avatarClassName: null != E || null != f || h.enabled ? void 0 : u.spinningAvatar,
         canUsePremiumCustomization: !0,
         isTryItOutFlow: !0,
-        hideExampleButton: !0,
-        disabledInputs: p
+        disabledInputs: p,
+        hideViewFullProfileButton: !0
     });
 }

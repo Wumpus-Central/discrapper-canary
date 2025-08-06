@@ -39,7 +39,8 @@ function E(e) {
                 let i = {
                     id: n.name,
                     file: null == (r = e.dataTransfer) ? void 0 : r.files[0],
-                    platform: u.ow.WEB
+                    platform: u.ow.WEB,
+                    origin: 'drag_drop'
                 };
                 l.Z.setFile({
                     channelId: t,
@@ -65,7 +66,8 @@ function E(e) {
             let r = {
                 id: n.name,
                 file: e.currentTarget.files[0],
-                platform: u.ow.WEB
+                platform: u.ow.WEB,
+                origin: 'file_picker'
             };
             (l.Z.setFile({
                 channelId: t,

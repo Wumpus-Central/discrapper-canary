@@ -15,14 +15,14 @@ let p = i.memo(function (e) {
     let { message: n, channel: a, compact: p, className: v, isGroupStart: h, hideSimpleEmbedContent: b = !0, disableInteraction: P, previewGuildId: g, preview: x, author: j } = e,
         O = null != g ? g : (0, s.k)(n),
         _ = (0, o.A)((null != (t = n.editedTimestamp) ? t : n.timestamp).valueOf()),
-        { content: C } = (0, u.Z)(n, {
+        { content: w } = (0, u.Z)(n, {
             hideSimpleEmbedContent: b,
             allowList: _,
             allowHeading: _,
             allowLinks: !0,
             previewLinkTarget: !0
         }),
-        w = i.useMemo(() => {
+        C = i.useMemo(() => {
             var t, n;
             return (0, m.Z)(
                 ((t = (function (e) {
@@ -77,8 +77,8 @@ let p = i.memo(function (e) {
             [f.cozyMessage]: !p,
             [f.groupStart]: h
         }),
-        childrenHeader: w,
-        childrenMessageContent: (0, d.Z)(e, C),
+        childrenHeader: C,
+        childrenMessageContent: (0, d.Z)(e, w),
         disableInteraction: P,
         author: j,
         preview: x

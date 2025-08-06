@@ -14,8 +14,8 @@ var a = n(255367),
     g = n(904245),
     b = n(166459),
     h = n(476326),
-    I = n(213609),
-    y = n(835473),
+    y = n(213609),
+    I = n(835473),
     w = n(43267),
     _ = n(933557),
     S = n(58873),
@@ -64,7 +64,7 @@ function H(e) {
             return i;
         })(e, ['applicationId', 'mediaUrl', 'onClose', 'transitionState']);
     let T = (0, d.e7)([L.ZP], () => L.ZP.getCurrentEmbeddedActivity());
-    (0, I.Z)({
+    (0, y.Z)({
         type: c.ImpressionTypes.MODAL,
         name: c.ImpressionNames.ACTIVITY_SHARE_MOMENT_MODAL,
         properties: {
@@ -72,7 +72,7 @@ function H(e) {
             activity_session_id: null == T ? void 0 : T.compositeInstanceId
         }
     });
-    let [j] = (0, y.Z)([r]),
+    let [j] = (0, I.Z)([r]),
         D = (0, d.e7)([Z.default], () => Z.default.getCurrentUser()),
         [U, k] = i.useState(''),
         [H, z] = i.useState([]),
@@ -154,7 +154,8 @@ function H(e) {
                     b.Z.addFile({
                         file: {
                             file: e,
-                            platform: h.ow.WEB
+                            platform: h.ow.WEB,
+                            origin: 'unknown:activity_share'
                         },
                         channelId: i,
                         draftType: O.d.ChannelMessage

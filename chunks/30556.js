@@ -1,69 +1,69 @@
-t.d(n, { Z: () => d });
-var l = t(255367);
-t(73800);
-var r = t(481060),
-    i = t(493683),
-    o = t(475413),
-    s = t(388032);
-function d(e) {
-    var { type: n, userId: t, onClose: d } = e,
-        a = (function (e, n) {
+n.d(t, { Z: () => c });
+var r = n(255367);
+n(73800);
+var l = n(481060),
+    o = n(493683),
+    i = n(475413),
+    a = n(388032);
+function c(e) {
+    var { type: t, userId: n, onClose: c } = e,
+        s = (function (e, t) {
             if (null == e) return {};
-            var t,
-                l,
-                r = (function (e, n) {
+            var n,
+                r,
+                l = (function (e, t) {
                     if (null == e) return {};
-                    var t,
-                        l,
-                        r = {},
-                        i = Object.keys(e);
-                    for (l = 0; l < i.length; l++) ((t = i[l]), n.indexOf(t) >= 0 || (r[t] = e[t]));
-                    return r;
-                })(e, n);
+                    var n,
+                        r,
+                        l = {},
+                        o = Object.keys(e);
+                    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (l[n] = e[n]));
+                    return l;
+                })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var i = Object.getOwnPropertySymbols(e);
-                for (l = 0; l < i.length; l++) ((t = i[l]), !(n.indexOf(t) >= 0) && Object.prototype.propertyIsEnumerable.call(e, t) && (r[t] = e[t]));
+                var o = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]));
             }
-            return r;
+            return l;
         })(e, ['type', 'userId', 'onClose']);
-    let c = n === o.j8.TEXT ? o.tG : o.ef;
-    return (0, l.jsx)(
-        c,
+    let d = t === i.j8.TEXT ? i.tG : i.ef;
+    return (0, r.jsx)(
+        d,
         (function (e) {
-            for (var n = 1; n < arguments.length; n++) {
-                var t = null != arguments[n] ? arguments[n] : {},
-                    l = Object.keys(t);
+            for (var t = 1; t < arguments.length; t++) {
+                var n = null != arguments[t] ? arguments[t] : {},
+                    r = Object.keys(n);
                 ('function' == typeof Object.getOwnPropertySymbols &&
-                    (l = l.concat(
-                        Object.getOwnPropertySymbols(t).filter(function (e) {
-                            return Object.getOwnPropertyDescriptor(t, e).enumerable;
+                    (r = r.concat(
+                        Object.getOwnPropertySymbols(n).filter(function (e) {
+                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
                         })
                     )),
-                    l.forEach(function (n) {
-                        var l;
-                        ((l = t[n]),
-                            n in e
-                                ? Object.defineProperty(e, n, {
-                                      value: l,
+                    r.forEach(function (t) {
+                        var r;
+                        ((r = n[t]),
+                            t in e
+                                ? Object.defineProperty(e, t, {
+                                      value: r,
                                       enumerable: !0,
                                       configurable: !0,
                                       writable: !0
                                   })
-                                : (e[n] = l));
+                                : (e[t] = r));
                     }));
             }
             return e;
         })(
             {
                 action: 'SEND_MESSAGE',
-                icon: r.kBi,
-                text: s.intl.string(s.t.zROXER),
-                tooltipText: s.intl.string(s.t.zROXER),
+                icon: l.kBi,
+                text: a.intl.string(a.t.zROXER),
+                tooltipText: a.intl.string(a.t.zROXER),
                 onClick: () => {
-                    (i.Z.openPrivateChannel({ recipientIds: t }), null == d || d());
+                    (o.Z.openPrivateChannel({ recipientIds: n }), null == c || c());
                 }
             },
-            a
+            s
         )
     );
 }

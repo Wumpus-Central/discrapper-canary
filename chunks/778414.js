@@ -1,8 +1,8 @@
-n.d(t, { Z: () => y });
+n.d(t, { Z: () => j });
 var r = n(255367);
 n(73800);
-var o = n(296009),
-    l = n(481060),
+var l = n(296009),
+    o = n(481060),
     i = n(747101),
     a = n(517157),
     c = n(985748),
@@ -36,55 +36,55 @@ function m(e) {
     }
     return e;
 }
-function b(e) {
+function g(e) {
     var { widget: t } = e,
         n = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
-                o = (function (e, t) {
+                l = (function (e, t) {
                     if (null == e) return {};
                     var n,
                         r,
-                        o = {},
-                        l = Object.keys(e);
-                    for (r = 0; r < l.length; r++) ((n = l[r]), t.indexOf(n) >= 0 || (o[n] = e[n]));
-                    return o;
+                        l = {},
+                        o = Object.keys(e);
+                    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (l[n] = e[n]));
+                    return l;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var l = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < l.length; r++) ((n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (o[n] = e[n]));
+                var o = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]));
             }
-            return o;
+            return l;
         })(e, ['widget']);
     switch (t.type) {
-        case o.l.FAVORITE_GAMES:
+        case l.l.FAVORITE_GAMES:
             return (0, r.jsx)(s.Z, m({ widget: t }, n));
-        case o.l.CURRENT_GAMES:
+        case l.l.CURRENT_GAMES:
             return (0, r.jsx)(c.Z, m({ widget: t }, n));
-        case o.l.WANT_TO_PLAY_GAMES:
+        case l.l.WANT_TO_PLAY_GAMES:
             return (0, r.jsx)(u.Z, m({ widget: t }, n));
-        case o.l.PLAYED_GAMES:
+        case l.l.PLAYED_GAMES:
             return (0, r.jsx)(d.Z, m({ widget: t }, n));
         default:
             return null;
     }
 }
-function g(e) {
-    let { user: t, guildId: n, channelId: o } = e,
-        l = (0, a.Z)(),
-        { widgets: c, isFetching: s } = (0, i.Z)(l);
+function b(e) {
+    let { user: t, guildId: n, channelId: l } = e,
+        o = (0, a.Z)(),
+        { widgets: c, isFetching: s } = (0, i.Z)(o);
     return 0 === c.length
         ? (0, r.jsx)(f.Z, {})
         : (0, r.jsx)(r.Fragment, {
               children: c.map((e) =>
                   (0, r.jsx)(
-                      b,
+                      g,
                       {
                           widget: e,
                           user: t,
                           guildId: n,
-                          channelId: o,
+                          channelId: l,
                           loading: s
                       },
                       e.id
@@ -92,10 +92,10 @@ function g(e) {
               )
           });
 }
-function y(e) {
-    return (0, r.jsx)(l.Ttm, {
+function j(e) {
+    return (0, r.jsx)(o.Ttm, {
         className: p.scroller,
         fade: !0,
-        children: (0, r.jsx)(g, m({}, e))
+        children: (0, r.jsx)(b, m({}, e))
     });
 }
