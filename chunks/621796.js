@@ -1,7 +1,7 @@
 var r = n(359282),
     i = n(716818),
-    a = n(836392),
-    o = n(108267),
+    o = n(836392),
+    a = n(108267),
     s = n(148727),
     l = n(65183),
     c = n(650132),
@@ -13,13 +13,13 @@ var r = n(359282),
     h = n(653216),
     m = l.OrderedSet,
     g = {
-        replaceText: function (e, t, n, i, a) {
-            var o = p(_(e, t), t),
+        replaceText: function (e, t, n, i, o) {
+            var a = p(_(e, t), t),
                 s = r.create({
                     style: i || m(),
-                    entity: a || null
+                    entity: o || null
                 });
-            return u(o, o.getSelectionAfter(), n, s);
+            return u(a, a.getSelectionAfter(), n, s);
         },
         insertText: function (e, t, n, r, i) {
             return (t.isCollapsed() || d(!1), g.replaceText(e, t, n, r, i));
@@ -45,17 +45,17 @@ var r = n(359282),
                 })),
                 (r = t.getAnchorKey()),
                 (i = t.getFocusKey()),
-                (a = e.getBlockForKey(r)));
+                (o = e.getBlockForKey(r)));
             var r,
                 i,
-                a,
+                o,
                 s = e.getBlockForKey(i),
                 l = t.getStartOffset(),
                 c = t.getEndOffset(),
-                u = a.getEntityAt(l),
+                u = o.getEntityAt(l),
                 d = s.getEntityAt(c - 1);
             if (r === i && u && u === d) {
-                var f = o(e.getEntityMap(), a, s, t, n);
+                var f = a(e.getEntityMap(), o, s, t, n);
                 return p(e, f);
             }
             return p(_(e, t), t);
@@ -89,7 +89,7 @@ var r = n(359282),
             });
         },
         applyEntity: function (e, t, n) {
-            return a(_(e, t), t, n);
+            return o(_(e, t), t, n);
         }
     };
 e.exports = g;

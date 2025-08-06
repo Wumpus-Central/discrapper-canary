@@ -1,8 +1,8 @@
 (n.d(t, { Z: () => y }), n(388685));
 var r = n(255367),
     i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(755721),
     l = n(481060),
     c = n(906732),
@@ -65,7 +65,7 @@ function E(e, t) {
 }
 let b = 57.75,
     y = i.memo(function (e) {
-        let { user: t, onClose: n, bio: a, hidePersonalInformation: h, viewFullBioDisabled: g = !1 } = e,
+        let { user: t, onClose: n, bio: o, hidePersonalInformation: h, viewFullBioDisabled: g = !1 } = e,
             { context: y } = (0, u.KZ)(),
             { analyticsLocations: O } = (0, c.ZP)(),
             [v, I] = i.useState(!1),
@@ -83,19 +83,19 @@ let b = 57.75,
                         })
                     ));
             },
-            w = (e) => {
+            R = (e) => {
                 null == A.current || A.current.contains(e.relatedTarget) || (A.current.scrollTop = 0);
             };
-        return h || null == a || '' === a
+        return h || null == o || '' === o
             ? null
             : (0, r.jsxs)('div', {
                   children: [
                       (0, r.jsx)('div', {
                           ref: N,
-                          className: o()(p.descriptionClamp, T && p.maxBioHeight),
-                          onBlur: w,
+                          className: a()(p.descriptionClamp, T && p.maxBioHeight),
+                          onBlur: R,
                           children: (0, r.jsx)(f.Z, {
-                              userBio: a,
+                              userBio: o,
                               setLineClamp: !1,
                               textColor: 'header-primary'
                           })
@@ -105,7 +105,7 @@ let b = 57.75,
                               look: s.zx.Looks.BLANK,
                               size: s.zx.Sizes.NONE,
                               className: p.viewFullBio,
-                              color: o()(p.viewFullBioColor, g && p.viewFullBioDisabled),
+                              color: a()(p.viewFullBioColor, g && p.viewFullBioDisabled),
                               onClick: C,
                               children: (0, r.jsx)(l.Text, {
                                   variant: 'text-xs/normal',

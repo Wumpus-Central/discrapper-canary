@@ -1,8 +1,8 @@
 (n.d(t, { e: () => y }), n(388685));
 var r = n(255367),
     i = n(73800),
-    a = n(680018),
-    o = n(481060),
+    o = n(680018),
+    a = n(481060),
     s = n(920155),
     l = n(454028),
     c = n(966902),
@@ -68,8 +68,8 @@ function E(e, t) {
         r,
         i = b(e, t);
     if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
@@ -78,8 +78,8 @@ function b(e, t) {
     var n,
         r,
         i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
 function y(e) {
@@ -107,51 +107,51 @@ function y(e) {
         i.useEffect(() => {
             null == v || v(N);
         }, [N, v]));
-    let w = b[N],
-        R = N + 1 === b.length,
-        P = i.useCallback(() => {
+    let R = b[N],
+        P = N + 1 === b.length,
+        w = i.useCallback(() => {
             var e;
-            (null == w || null == (e = w.onCta) || e.call(w), R ? null == I || I() : C((e) => e + 1));
-        }, [w, R, I]),
+            (null == R || null == (e = R.onCta) || e.call(R), P ? null == I || I() : C((e) => e + 1));
+        }, [R, P, I]),
         D = i.useCallback(() => {
             null == I || I();
         }, [I]),
         L = i.useCallback(() => {
             null == I || I();
         }, [I]);
-    if (!S || null == w) return null;
+    if (!S || null == R) return null;
     let x = h(
         {
-            text: null != (p = null == (t = w.action) ? void 0 : t.text) ? p : R ? f.intl.string(f.t.i4jeWV) : f.intl.string(f.t.PDTjLC),
-            variant: null != (m = null == (n = w.action) ? void 0 : n.variant) ? m : 'primary',
-            onClick: P
+            text: null != (p = null == (t = R.action) ? void 0 : t.text) ? p : P ? f.intl.string(f.t.i4jeWV) : f.intl.string(f.t.PDTjLC),
+            variant: null != (m = null == (n = R.action) ? void 0 : n.variant) ? m : 'primary',
+            onClick: w
         },
-        w.action
+        R.action
     );
     return (0, r.jsx)(
         s.m,
         g(h({}, A), {
             shouldShow: S,
             onRequestClose: D,
-            gradientColor: w.gradientColor,
+            gradientColor: R.gradientColor,
             children: (0, r.jsxs)('div', {
                 ref: T,
                 children: [
                     (0, r.jsx)(u.u, {
                         onClick: L,
-                        colorMix: null != w.gradientColor
+                        colorMix: null != R.gradientColor
                     }),
-                    null != w.asset
+                    null != R.asset
                         ? (0, r.jsx)(l.V, {
-                              asset: w.asset,
+                              asset: R.asset,
                               size: O
                           })
                         : null,
                     (0, r.jsx)(d.Y, {
-                        title: w.title,
-                        body: w.body,
-                        badge: w.badge,
-                        textLink: w.textLink,
+                        title: R.title,
+                        body: R.body,
+                        badge: R.badge,
+                        textLink: R.textLink,
                         hasBottomMargin: !0
                     }),
                     (0, r.jsx)('div', {
@@ -159,7 +159,7 @@ function y(e) {
                         children: (0, r.jsxs)('div', {
                             className: _.multistepActionLayout,
                             children: [
-                                (0, r.jsx)(o.Text, {
+                                (0, r.jsx)(a.Text, {
                                     variant: 'text-xs/normal',
                                     className: _.multistepIndicator,
                                     children: f.intl.formatToPlainString(f.t.rO31eX, {
@@ -167,7 +167,7 @@ function y(e) {
                                         totalSteps: b.length
                                     })
                                 }),
-                                (0, r.jsx)(a.z, h({ size: 'sm' }, x))
+                                (0, r.jsx)(o.z, h({ size: 'sm' }, x))
                             ]
                         })
                     }),

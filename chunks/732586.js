@@ -1,8 +1,8 @@
 (n.d(t, { Z: () => _ }), n(388685));
 var r = n(255367),
     i = n(73800),
-    a = n(755721),
-    o = n(481060),
+    o = n(755721),
+    a = n(481060),
     s = n(911969),
     l = n(970184),
     c = n(293979),
@@ -75,12 +75,12 @@ function _(e) {
     };
     switch (d) {
         case s.PT.SMALL:
-            t = (0, r.jsx)(o.oil, f({}, S));
+            t = (0, r.jsx)(a.oil, f({}, S));
             break;
         case s.PT.PARAGRAPH:
-            t = (0, r.jsx)(a.iS, f({ autosize: !0 }, S));
+            t = (0, r.jsx)(o.iS, f({ autosize: !0 }, S));
     }
-    return (0, r.jsx)(o.xJW, {
+    return (0, r.jsx)(a.xJW, {
         title: _,
         required: g,
         className: u.formItem,

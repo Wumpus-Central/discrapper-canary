@@ -7,35 +7,35 @@
     n(388685));
 var r = n(255367),
     i = n(73800),
-    a = n(392711),
-    o = n.n(a),
+    o = n(392711),
+    a = n.n(o),
     s = n(566898),
     l = n(981631),
     c = n(189271);
 function u() {
     return {
-        width: o().random(140, 400),
-        height: o().random(100, 320)
+        width: a().random(140, 400),
+        height: a().random(100, 320)
     };
 }
 function d(e) {
-    let { compact: t, messageGroups: n, groupRange: r, attachments: i, fontSize: a, groupSpacing: c } = e;
+    let { compact: t, messageGroups: n, groupRange: r, attachments: i, fontSize: o, groupSpacing: c } = e;
     if (i > n) throw Error('generateMessageSpecs: too many attachments relative to messageGroups: '.concat(n, ', ').concat(i));
-    let d = a / l.yqN.FONT_SIZE_DEFAULT,
+    let d = o / l.yqN.FONT_SIZE_DEFAULT,
         f = t ? s.iv : s.pk,
         _ = t ? s.Pb : s.XX,
         p = 0,
         h = Array(n)
             .fill(null)
             .map(() => {
-                let e = o().random(1, r);
+                let e = a().random(1, r);
                 return ((p += c * d), (p += f * d), (p += (e - 1) * _ * d), e);
             }),
         m = h.map((e, t) => t),
         g = [];
     for (; g.length < i; ) {
         let e = u();
-        (g.push([m.splice(o().random(0, m.length - 1), 1)[0], e]), (p += e.height + s.M9 * d));
+        (g.push([m.splice(a().random(0, m.length - 1), 1)[0], e]), (p += e.height + s.M9 * d));
     }
     return {
         messages: h,
@@ -45,13 +45,13 @@ function d(e) {
     };
 }
 function f(e) {
-    let { compact: t, messages: n, attachmentSpecs: a, totalHeight: o, groupSpacing: l } = e;
+    let { compact: t, messages: n, attachmentSpecs: o, totalHeight: a, groupSpacing: l } = e;
     return i.useMemo(() => {
         let e = Array(n.length).fill(void 0);
-        for (let [t, n] of a) e[t] = n;
+        for (let [t, n] of o) e[t] = n;
         return (0, r.jsx)('div', {
             className: c.wrapper,
-            style: { height: o },
+            style: { height: a },
             children: n.map((n, i) =>
                 (0, r.jsx)(
                     s.ZP,
@@ -65,5 +65,5 @@ function f(e) {
                 )
             )
         });
-    }, [t, n, a, o, l]);
+    }, [t, n, o, a, l]);
 }

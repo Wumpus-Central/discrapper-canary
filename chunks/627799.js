@@ -2,8 +2,8 @@
 var r = n(255367);
 n(73800);
 var i = n(243814),
-    a = n(993365),
-    o = n(481060),
+    o = n(993365),
+    a = n(481060),
     s = n(589414),
     l = n(63063),
     c = n(981631),
@@ -11,10 +11,10 @@ var i = n(243814),
     d = n(398032);
 function f(e) {
     let t,
-        { application: n, accountScopes: a } = e,
+        { application: n, accountScopes: o } = e,
         f = [],
         p = (0, s.Z)(n);
-    return (a.includes(i.x.SDK_SOCIAL_LAYER)
+    return (o.includes(i.x.SDK_SOCIAL_LAYER)
         ? ((t = p
               ? u.intl.format(u.t.GxjwZG, {
                     applicationName: n.name,
@@ -23,23 +23,23 @@ function f(e) {
               : u.intl.format(u.t.DfBeUl, { learnMoreURL: l.Z.getArticleURL(c.BhN.SOCIAL_LAYER_CONNECTIONS) })),
           f.push(
               {
-                  icon: o.iFz,
+                  icon: a.iFz,
                   text: p ? u.intl.formatToPlainString(u.t.z9peam, { maxFriends: c.L4X }) : u.intl.formatToPlainString(u.t.WNKzo6, { maxFriends: c.L4X })
               },
               {
-                  icon: o.mrm,
+                  icon: a.mrm,
                   text: p ? u.intl.string(u.t.daY6xs) : u.intl.string(u.t.j7peBg)
               },
               {
-                  icon: o.iWm,
+                  icon: a.iWm,
                   text: p ? u.intl.string(u.t['/bdaND']) : u.intl.string(u.t['feD3+v'])
               },
               {
-                  icon: o.ewm,
+                  icon: a.ewm,
                   text: p ? u.intl.string(u.t.mSqazM) : u.intl.string(u.t.YFFVMz)
               }
           ))
-        : a.includes(i.x.SDK_SOCIAL_LAYER_PRESENCE) &&
+        : o.includes(i.x.SDK_SOCIAL_LAYER_PRESENCE) &&
           ((t = p
               ? u.intl.format(u.t.GxjwZG, {
                     applicationName: n.name,
@@ -48,15 +48,15 @@ function f(e) {
               : u.intl.format(u.t.DfBeUl, { learnMoreURL: l.Z.getArticleURL(c.BhN.SOCIAL_LAYER_CONNECTIONS) })),
           f.push(
               {
-                  icon: o.iFz,
+                  icon: a.iFz,
                   text: p ? u.intl.formatToPlainString(u.t.z9peam, { maxFriends: c.L4X }) : u.intl.formatToPlainString(u.t.WNKzo6, { maxFriends: c.L4X })
               },
               {
-                  icon: o.iWm,
+                  icon: a.iWm,
                   text: p ? u.intl.string(u.t['/bdaND']) : u.intl.string(u.t['feD3+v'])
               },
               {
-                  icon: o.ewm,
+                  icon: a.ewm,
                   text: p ? u.intl.string(u.t.mSqazM) : u.intl.string(u.t.YFFVMz)
               }
           )),
@@ -66,7 +66,7 @@ function f(e) {
               className: d.applicationEducation,
               children: [
                   null != t
-                      ? (0, r.jsx)(o.X6q, {
+                      ? (0, r.jsx)(a.X6q, {
                             variant: 'heading-sm/normal',
                             className: d.sectionLabel,
                             children: t
@@ -95,7 +95,7 @@ function _(e) {
                 className: d.entryIcon,
                 color: 'currentColor'
             }),
-            (0, r.jsx)(a.x, {
+            (0, r.jsx)(o.x, {
                 variant: 'text-md/normal',
                 className: d.entryText,
                 children: n

@@ -1,7 +1,7 @@
 var r = n(512972),
     i = n(359282),
-    a = n(198392),
-    o = n(621796),
+    o = n(198392),
+    a = n(621796),
     s = n(659796),
     l = n(172367),
     c = n(505904),
@@ -10,7 +10,7 @@ var r = n(512972),
     f = n(352582),
     _ = n(108665);
 function p(e, t, n) {
-    var r = o.replaceWithFragment(e.getCurrentContent(), e.getSelection(), t);
+    var r = a.replaceWithFragment(e.getCurrentContent(), e.getSelection(), t);
     return l.push(e, r.set('entityMap', n), 'insert-fragment');
 }
 function h(e, t) {
@@ -23,7 +23,7 @@ function h(e, t) {
 }
 e.exports = function (e, t) {
     t.preventDefault();
-    var n = new a(t.clipboardData);
+    var n = new o(t.clipboardData);
     if (!n.isRichText()) {
         var m = n.getFiles(),
             g = n.getText();
@@ -32,15 +32,15 @@ e.exports = function (e, t) {
             d(m, function (t) {
                 if ((t = t || g)) {
                     var n = e._latestEditorState,
-                        a = _(t),
+                        o = _(t),
                         d = i.create({
                             style: n.getCurrentInlineStyle(),
                             entity: u(n.getCurrentContent(), n.getSelection())
                         }),
                         f = c.getCurrentBlockType(n),
-                        p = s.processText(a, d, f),
+                        p = s.processText(o, d, f),
                         h = r.createFromArray(p),
-                        m = o.replaceWithFragment(n.getCurrentContent(), n.getSelection(), h);
+                        m = a.replaceWithFragment(n.getCurrentContent(), n.getSelection(), h);
                     e.update(l.push(n, m, 'insert-fragment'));
                 }
             });
@@ -77,9 +77,9 @@ e.exports = function (e, t) {
                     entity: u(O.getCurrentContent(), O.getSelection())
                 }),
                 C = c.getCurrentBlockType(O),
-                w = s.processText(E, N, C),
-                R = r.createFromArray(w);
-            e.update(p(e._latestEditorState, R));
+                R = s.processText(E, N, C),
+                P = r.createFromArray(R);
+            e.update(p(e._latestEditorState, P));
         }
     }
 };

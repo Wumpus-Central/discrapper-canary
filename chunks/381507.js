@@ -20,9 +20,9 @@ let f = () => {
             animateOnHover: !0
         }),
         f = (0, o.Fg)(),
-        x = (0, i.ap)(f),
-        m = s.ZP.getName(e),
-        h = x ? C.Z : c.Z;
+        m = (0, i.ap)(f),
+        x = s.ZP.getName(e),
+        h = m ? C.Z : c.Z;
     return null == e
         ? null
         : (0, n.jsxs)('div', {
@@ -69,7 +69,7 @@ let f = () => {
                   (0, n.jsx)(l.Text, {
                       variant: 'text-xs/bold',
                       className: _.bannerHeader,
-                      children: p.intl.format(p.t.oxhCOj, { userName: m })
+                      children: p.intl.format(p.t.oxhCOj, { userName: x })
                   }),
                   (0, n.jsx)(h, { className: _.bannerIcon })
               ]

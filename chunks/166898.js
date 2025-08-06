@@ -12,11 +12,11 @@ function r(e, t, n) {
     );
 }
 var i = n(746117),
-    a = n(856084),
-    o = n(581079);
+    o = n(856084),
+    a = n(581079);
 e.exports = (function () {
     function e(e) {
-        (r(this, '_defaultDir', void 0), r(this, '_lastDir', void 0), e ? a.isStrong(e) || o(!1) : (e = a.getGlobalDir()), (this._defaultDir = e), this.reset());
+        (r(this, '_defaultDir', void 0), r(this, '_lastDir', void 0), e ? o.isStrong(e) || a(!1) : (e = o.getGlobalDir()), (this._defaultDir = e), this.reset());
     }
     var t = e.prototype;
     return (

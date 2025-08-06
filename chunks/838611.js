@@ -1,8 +1,8 @@
 (n.d(t, { Z: () => d }), n(388685));
 var r = n(392711),
     i = n(147913),
-    a = n(948154),
-    o = n(787879),
+    o = n(948154),
+    a = n(787879),
     s = n(982183);
 function l(e, t, n) {
     return (
@@ -20,7 +20,7 @@ function l(e, t, n) {
 let c = 5000;
 class u extends i.Z {
     preloadInbox() {
-        a.Z.loadMoreInbox({
+        o.Z.loadMoreInbox({
             preload: !0,
             loadingTrigger: s.X.AUTO_LOAD
         });
@@ -34,8 +34,8 @@ class u extends i.Z {
             l(
                 this,
                 'stores',
-                new Map().set(o.Z, () => {
-                    !o.Z.hasPreloaded && o.Z.canLoadMore({ preload: !0 }) && this.throttledPreloadInbox();
+                new Map().set(a.Z, () => {
+                    !a.Z.hasPreloaded && a.Z.canLoadMore({ preload: !0 }) && this.throttledPreloadInbox();
                 })
             ),
             (this.throttledPreloadInbox = (0, r.throttle)(this.preloadInbox, c)));

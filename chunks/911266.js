@@ -1,8 +1,8 @@
 (n.d(t, { Z: () => O }), n(388685));
 var r = n(255367),
     i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(392711),
     l = n(442837),
     c = n(570140),
@@ -18,7 +18,7 @@ var r = n(255367),
 let b = 1000,
     y = 256,
     O = (e) => {
-        let { message: t, hovering: n, compact: a } = e,
+        let { message: t, hovering: n, compact: o } = e,
             O = i.useRef((0, s.random)(-6, 24)).current,
             v = (0, l.e7)([_.Z], () => _.Z.confettiMode),
             I = (0, l.e7)([u.Z], () => u.Z.useReducedMotion),
@@ -26,7 +26,7 @@ let b = 1000,
             S = i.useRef(null),
             A = i.useRef(null),
             [N, C] = i.useState(!1),
-            w = i.useMemo(() => !n && !v && !I, [v, n, I]);
+            R = i.useMemo(() => !n && !v && !I, [v, n, I]);
         if (
             (i.useEffect(() => {
                 (n || C(!1), n && v && C(!0));
@@ -41,14 +41,14 @@ let b = 1000,
                             if (0 !== e && !1 !== n && !(Date.now() - e < b) && !v) {
                                 if (null != A.current) {
                                     var r;
-                                    let { x: e, y: n, width: i, height: a } = null == (r = A.current) ? void 0 : r.getBoundingClientRect();
+                                    let { x: e, y: n, width: i, height: o } = null == (r = A.current) ? void 0 : r.getBoundingClientRect();
                                     (0, m.Z)(
                                         t,
                                         {
                                             x: e,
                                             y: n - 20,
                                             w: i,
-                                            h: a
+                                            h: o
                                         },
                                         !0,
                                         p.LL.UserTriggered
@@ -65,19 +65,19 @@ let b = 1000,
             !(0, h.p7)('Message Confetti Peak') || !(0, g.Uw)(t))
         )
             return null;
-        let R = (0, g.Eq)(t);
-        if (null == R) return null;
-        if (a)
+        let P = (0, g.Eq)(t);
+        if (null == P) return null;
+        if (o)
             return (0, r.jsx)('span', {
                 className: E.hidden,
                 'aria-hidden': 'true'
             });
-        let P = R.emoji[0],
+        let w = P.emoji[0],
             D =
-                null == P.id
-                    ? f.ZP.getURL(P.name)
+                null == w.id
+                    ? f.ZP.getURL(w.name)
                     : d.ZP.getEmojiURL({
-                          id: P.id,
+                          id: w.id,
                           animated: !1,
                           size: 32,
                           forcePNG: !0
@@ -90,19 +90,19 @@ let b = 1000,
                 (0, r.jsx)('img', {
                     alt: '',
                     src: D,
-                    className: o()([E.emoji, E.left, w && E.shy, v && E.confettiMode]),
+                    className: a()([E.emoji, E.left, R && E.shy, v && E.confettiMode]),
                     width: 28
                 }),
                 (0, r.jsx)('img', {
                     alt: '',
                     src: D,
-                    className: o()([E.emoji, E.right, w && E.shy, v && E.confettiMode]),
+                    className: a()([E.emoji, E.right, R && E.shy, v && E.confettiMode]),
                     width: 26
                 }),
                 (0, r.jsx)('img', {
                     alt: '',
                     src: D,
-                    className: o()([E.emoji, E.center, w && E.shy, v && E.confettiMode]),
+                    className: a()([E.emoji, E.center, R && E.shy, v && E.confettiMode]),
                     width: 32
                 })
             ]

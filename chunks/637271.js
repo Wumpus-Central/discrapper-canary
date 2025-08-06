@@ -1,8 +1,8 @@
 n.d(t, { Z: () => h });
 var r,
     i = n(442837),
-    a = n(570140),
-    o = n(592125),
+    o = n(570140),
+    a = n(592125),
     s = n(176505);
 function l(e, t, n) {
     return (
@@ -22,10 +22,10 @@ let c = {},
 function d(e) {
     let { channelId: t, guildId: n } = e;
     if (null == n || t === s.oC.GUILD_HOME) return;
-    let r = o.Z.getChannel(t),
+    let r = a.Z.getChannel(t),
         i = c[n],
-        a = u[n];
-    ((null == r ? void 0 : r.isThread()) && (null == r ? void 0 : r.parent_id) != null && [a, i].includes(null == r ? void 0 : r.parent_id)) || (t !== i && delete c[n], t !== a && delete u[n]);
+        o = u[n];
+    ((null == r ? void 0 : r.isThread()) && (null == r ? void 0 : r.parent_id) != null && [o, i].includes(null == r ? void 0 : r.parent_id)) || (t !== i && delete c[n], t !== o && delete u[n]);
 }
 function f(e) {
     let { channelId: t, guildId: n } = e;
@@ -52,7 +52,7 @@ class p extends (r = i.ZP.PersistedStore) {
     }
 }
 (l(p, 'displayName', 'GuildOnboardingHomeNavigationStore'), l(p, 'persistKey', 'GuildOnboardingHomeNavigationStore'));
-let h = new p(a.Z, {
+let h = new p(o.Z, {
     CHANNEL_SELECT: d,
     SELECT_HOME_RESOURCE_CHANNEL: f,
     SELECT_NEW_MEMBER_ACTION_CHANNEL: _

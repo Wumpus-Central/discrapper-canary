@@ -3,14 +3,14 @@ n.d(t, {
     aY: () => A,
     dW: () => T,
     gm: () => d,
-    h1: () => m,
-    jQ: () => I,
-    sE: () => g
+    h1: () => g,
+    jQ: () => m,
+    sE: () => I
 });
 var r,
     l,
-    i = n(73800),
-    s = n(100527),
+    s = n(73800),
+    i = n(100527),
     a = n(367907),
     o = n(314897),
     u = n(626135),
@@ -45,11 +45,11 @@ function E(e, t, n) {
     u.default.track(e, l);
 }
 function d(e) {
-    return i.useCallback(
+    return s.useCallback(
         (t) => {
             let n = {
                 guild_id: e,
-                location: s.Z.MEMBER_SAFETY_PAGE
+                location: i.Z.MEMBER_SAFETY_PAGE
             };
             E(c.rMx.MOD_DASH_SEARCH_MEMBERS, n);
         },
@@ -57,12 +57,12 @@ function d(e) {
     );
 }
 function _(e) {
-    return i.useCallback(
+    return s.useCallback(
         (t) => {
             let n = {
                 selected_role_count: t.size,
                 guild_id: e,
-                location: s.Z.MEMBER_SAFETY_PAGE
+                location: i.Z.MEMBER_SAFETY_PAGE
             };
             E(c.rMx.MOD_DASH_FILTER_ROLES, n);
         },
@@ -71,38 +71,38 @@ function _(e) {
 }
 var A = (((r = {}).UNUSUAL_DM_ACTIVITY = 'unusual_dm_activity'), (r.COMMUNICATION_DISABLED = 'communication_disabled'), (r.UNUSUAL_ACCOUNT_ACTIVITY = 'unusual_account_activity'), (r.USERNAME_QUARANTINED = 'username_quarantined'), r);
 function T(e) {
-    return i.useCallback(
+    return s.useCallback(
         (t) => {
             let n = {
                 flag_type: t,
                 guild_id: e,
-                location: s.Z.MEMBER_SAFETY_PAGE
+                location: i.Z.MEMBER_SAFETY_PAGE
             };
             E(c.rMx.MOD_DASH_FILTER_SAFETY_FLAGS, n);
         },
         [e]
     );
 }
-var I = (((l = {}).BAN = 'ban'), (l.KICK = 'kick'), (l.MUTE = 'mute'), (l.TIMEOUT = 'timeout'), (l.ADD_ROLE = 'add_role'), (l.REMOVE_ROLE = 'remove_role'), (l.COPY_ID = 'copy_id'), (l.CHANGE_NICKNAME = 'change_nickname'), l);
-function g(e, t) {
-    let { location: n, targetUserId: r, targets: l, locations: s } = t;
-    return i.useCallback(
+var m = (((l = {}).BAN = 'ban'), (l.KICK = 'kick'), (l.MUTE = 'mute'), (l.TIMEOUT = 'timeout'), (l.ADD_ROLE = 'add_role'), (l.REMOVE_ROLE = 'remove_role'), (l.COPY_ID = 'copy_id'), (l.CHANGE_NICKNAME = 'change_nickname'), l);
+function I(e, t) {
+    let { location: n, targetUserId: r, targets: l, locations: i } = t;
+    return s.useCallback(
         (t) => {
-            let i = {
+            let s = {
                 action_type: t,
                 mod_user_id: o.default.getId(),
                 guild_id: e,
                 location: n,
-                locations: s,
+                locations: i,
                 target_user_id: null != r ? r : void 0,
                 targets: null != l ? l : void 0
             };
-            E(c.rMx.MODERATION_ACTION, i);
+            E(c.rMx.MODERATION_ACTION, s);
         },
-        [e, n, r, l, s]
+        [e, n, r, l, i]
     );
 }
-function m(e, t) {
+function g(e, t) {
     E(c.rMx.MOD_DASH_MEMBERS_TABLE_VIEWED, {
         guild_id: e,
         location: t

@@ -1,8 +1,8 @@
 (n.d(t, { Z: () => b }), n(314940), n(388685));
 var r = n(255367),
     i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(278074),
     l = n(481060),
     c = n(492593),
@@ -14,8 +14,8 @@ var r = n(255367),
     h = n(758010),
     m = n(30804);
 function g(e) {
-    let { expanded: t, onClick: n, count: i, compact: a, collapsedReason: o } = e,
-        u = (0, s.EQ)({ collapsedReason: o })
+    let { expanded: t, onClick: n, count: i, compact: o, collapsedReason: a } = e,
+        u = (0, s.EQ)({ collapsedReason: a })
             .with({ collapsedReason: p.t.VFWjc3 }, () =>
                 (0, r.jsx)(l.kZF, {
                     size: 'md',
@@ -38,16 +38,16 @@ function g(e) {
                 })
             );
     return (0, r.jsx)(c.Z, {
-        compact: a,
+        compact: o,
         role: 'group',
         childrenMessageContent: (0, r.jsx)(f.Z, {
-            compact: a,
+            compact: o,
             className: h.blockedSystemMessage,
             iconNode: u,
             children: (0, r.jsxs)('div', {
                 className: h.blockedMessageText,
                 children: [
-                    p.intl.format(o, { count: i }),
+                    p.intl.format(a, { count: i }),
                     ' \u2014',
                     ' ',
                     (0, r.jsx)(l.P3F, {
@@ -63,13 +63,13 @@ function g(e) {
 }
 function E(e) {
     var t;
-    let { messages: n, channel: a, compact: s = !1, unreadId: l, collapsedReason: c } = e,
+    let { messages: n, channel: o, compact: s = !1, unreadId: l, collapsedReason: c } = e,
         { hasJumpTarget: f = !1 } = n,
         [p, E] = i.useState(f),
         b = i.useCallback(() => E((e) => !e), []),
         y = n.hasUnread ? n.content.length - 1 : n.content.length;
     return (0, r.jsxs)('div', {
-        className: o()({
+        className: a()({
             [m.groupStart]: !0,
             [h.expanded]: p
         }),
@@ -98,8 +98,8 @@ function E(e) {
             p
                 ? n.content.map((e, t) => {
                       if (e.type === _.ys_.DIVIDER && t > 0) {
-                          var i, o;
-                          let e = null != (o = null == (i = n.content[t + 1]) ? void 0 : i.isGroupStart) && o;
+                          var i, a;
+                          let e = null != (a = null == (i = n.content[t + 1]) ? void 0 : i.isGroupStart) && a;
                           return (0, r.jsx)(
                               d.Z,
                               {
@@ -117,7 +117,7 @@ function E(e) {
                               {
                                   className: h.__invalid_blocked,
                                   compact: s,
-                                  channel: a,
+                                  channel: o,
                                   message: e.content,
                                   groupId: e.groupId,
                                   flashKey: e.flashKey,

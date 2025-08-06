@@ -2,19 +2,19 @@ n.d(t, { i: () => _ });
 var r = n(255367);
 n(73800);
 var i = n(913527),
-    a = n.n(i),
-    o = n(692547),
+    o = n.n(i),
+    a = n(692547),
     s = n(755721),
     l = n(481060),
     c = n(800530),
     u = n(388032),
     d = n(524438);
-let f = (e) => a()().diff(a().unix(e), 'days');
+let f = (e) => o()().diff(o().unix(e), 'days');
 function _(e) {
-    var t, i, a, _, p;
+    var t, i, o, _, p;
     if (null == e.message.embeds || null == e.message.embeds[0].fields) return null;
     let h = e.message.embeds[0],
-        m = null != (a = null == (t = h.fields) ? void 0 : t.find((e) => e.rawName === c.Cg.CLASSIFICATION_ID)) ? a : void 0,
+        m = null != (o = null == (t = h.fields) ? void 0 : t.find((e) => e.rawName === c.Cg.CLASSIFICATION_ID)) ? o : void 0,
         g = null != (_ = null == m ? void 0 : m.rawValue) ? _ : void 0,
         E = null != (p = null == (i = h.fields) ? void 0 : i.find((e) => e.rawName === c.Cg.INCIDENT_TIMESTAMP)) ? p : void 0,
         b = null == E || null == E.rawValue ? void 0 : parseFloat(E.rawValue);
@@ -43,7 +43,7 @@ function _(e) {
                         children: [
                             (0, r.jsx)(l.aNP, {
                                 className: d.warningIcon,
-                                color: o.Z.colors.STATUS_DANGER
+                                color: a.Z.colors.STATUS_DANGER
                             }),
                             (0, r.jsx)(l.Text, {
                                 variant: 'text-md/semibold',

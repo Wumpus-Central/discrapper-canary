@@ -6,8 +6,8 @@
     n(997841));
 var r = n(73800),
     i = n(399606),
-    a = n(230711),
-    o = n(18438),
+    o = n(230711),
+    a = n(18438),
     s = n(314897),
     l = n(271383),
     c = n(430824),
@@ -41,9 +41,9 @@ function E(e) {
                 r = null != e ? e : n,
                 i = c.Z.getGuild(r);
             if (null == i || null == r) return t;
-            let a = s.default.getId(),
-                o = l.ZP.getMember(r, a),
-                u = (0, f.Ow)(null == o ? void 0 : o.flags);
+            let o = s.default.getId(),
+                a = l.ZP.getMember(r, o),
+                u = (0, f.Ow)(null == a ? void 0 : a.flags);
             if (0 === u.size) return t;
             if (u.has(p.q.AUTOMOD_QUARANTINED_USERNAME_OR_GUILD_NICKNAME))
                 if (null == e) {
@@ -64,8 +64,8 @@ function b(e) {
             if (null == f) return;
             let e = _.oAB.PROFILE_CUSTOMIZATION,
                 t = h.NB.GUILD;
-            (p ? (0, o.Fq)(f) : (t = h.NB.USER_PROFILE),
-                a.Z.open(e, t, {
+            (p ? (0, a.Fq)(f) : (t = h.NB.USER_PROFILE),
+                o.Z.open(e, t, {
                     scrollPosition: n,
                     analyticsLocation: s,
                     analyticsLocations: l,

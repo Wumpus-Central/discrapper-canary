@@ -1,32 +1,19 @@
-n.d(t, { Z: () => O });
+n.d(t, { Z: () => x });
 var r = n(255367),
     i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+    l = n(120356),
+    a = n.n(l),
     s = n(442837),
-    l = n(481060),
+    o = n(481060),
     c = n(63063),
     u = n(518944),
     d = n(607802),
-    f = n(945577),
-    _ = n(28964),
-    p = n(981631),
-    h = n(388032),
+    h = n(945577),
+    p = n(28964),
+    f = n(981631),
+    g = n(388032),
     m = n(107242);
-function g(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0
-              })
-            : (e[t] = n),
-        e
-    );
-}
-function E(e) {
+function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -37,212 +24,216 @@ function E(e) {
                 })
             )),
             r.forEach(function (t) {
-                g(e, t, n[t]);
+                var r;
+                ((r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = r));
             }));
     }
     return e;
-}
-function b(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        (t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r));
-    }
-    return n;
 }
 function y(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : b(Object(t)).forEach(function (n) {
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function O(e) {
-    let { searchContext: t, searchMode: a, onSearchModeChange: c, totalResults: g, isIndexing: b, isSearching: O, documentsIndexed: I } = e,
-        T = (0, f.U)({ location: 'SearchHeader' }),
-        S = (0, _.xd)({
-            isXDMSearch: t.type === p.aib.DMS,
+function x(e) {
+    let { searchContext: t, searchMode: l, onSearchModeChange: c, totalResults: x, isIndexing: _, isSearching: O, documentsIndexed: v } = e,
+        C = (0, h.U)({ location: 'SearchHeader' }),
+        E = (0, p.xd)({
+            isXDMSearch: t.type === f.aib.DMS,
             location: 'SearchHeader'
         }),
-        A = (0, d.WJ)(t),
-        N = (0, s.e7)([u.Z], () => u.Z.getSearchResultsQueryString(A)),
-        C = i.useMemo(() => {
-            if (t.type === p.aib.DMS && T) {
+        S = (0, d.WJ)(t),
+        Z = (0, s.e7)([u.Z], () => u.Z.getSearchResultsQueryString(S)),
+        I = i.useMemo(() => {
+            if (t.type === f.aib.DMS && C) {
                 var e, n;
-                let t = (0, d.kG)(null != N ? N : ''),
+                let t = (0, d.kG)(null != Z ? Z : ''),
                     r = null != (n = null == (e = (0, d.$G)(t).channel_id) ? void 0 : e.length) ? n : 0;
-                return r > 0 ? h.intl.format(h.t.A2dqWF, { filterCount: r }) : h.intl.string(h.t.tc619f);
+                return r > 0 ? g.intl.format(g.t.A2dqWF, { filterCount: r }) : g.intl.string(g.t.tc619f);
             }
             return null;
-        }, [T, t.type, N]),
-        w = i.useMemo(
+        }, [C, t.type, Z]),
+        P = i.useMemo(
             () => [
                 {
-                    label: h.intl.string(h.t.CbaapK),
-                    value: p.QIO.NEWEST
+                    label: g.intl.string(g.t.CbaapK),
+                    value: f.QIO.NEWEST
                 },
                 {
-                    label: h.intl.string(h.t.OukXZm),
-                    value: p.QIO.OLDEST
+                    label: g.intl.string(g.t.OukXZm),
+                    value: f.QIO.OLDEST
                 },
                 {
-                    label: h.intl.string(h.t['q8gB5+']),
-                    value: p.QIO.MOST_RELEVANT
+                    label: g.intl.string(g.t['q8gB5+']),
+                    value: f.QIO.MOST_RELEVANT
                 }
             ],
             []
         ),
-        R = i.useCallback(() => {
-            (0, l.ZDy)(async () => {
+        T = i.useCallback(() => {
+            (0, o.ZDy)(async () => {
                 let { default: e } = await n.e('37979').then(n.bind(n, 238088));
-                return (n) => (0, r.jsx)(e, y(E({}, n), { searchContext: t }));
+                return (n) => (0, r.jsx)(e, y(b({}, n), { searchContext: t }));
             });
         }, [t]);
     return (0, r.jsxs)('header', {
-        className: o()(m.searchHeader, { [m.searchHeaderWithSubtitle]: null != C }),
+        className: a()(m.searchHeader, { [m.searchHeaderWithSubtitle]: null != I }),
         children: [
             (0, r.jsx)('div', {
                 className: m.totalResults,
                 role: 'status',
-                children: (0, r.jsx)(v, {
-                    totalResults: g,
-                    subtitle: C,
-                    isIndexing: b,
+                children: (0, r.jsx)(j, {
+                    totalResults: x,
+                    subtitle: I,
+                    isIndexing: _,
                     isSearching: O,
-                    documentsIndexed: I
+                    documentsIndexed: v
                 })
             }),
-            S
+            E
                 ? (0, r.jsxs)('div', {
                       className: m.searchModeAndFiltersContainer,
                       children: [
-                          (0, r.jsx)(l.q4e, {
-                              options: w,
-                              value: a,
+                          (0, r.jsx)(o.q4e, {
+                              options: P,
+                              value: l,
                               onChange: c,
-                              look: l.qQH.CUSTOM,
+                              look: o.qQH.CUSTOM,
                               className: m.searchModeSelect,
                               popoutWidth: 130
                           }),
-                          (0, r.jsx)(l.zxk, {
+                          (0, r.jsx)(o.zxk, {
                               variant: 'secondary',
-                              onClick: R,
-                              text: h.intl.string(h.t.UdhTtr),
-                              icon: l.gXV,
+                              onClick: T,
+                              text: g.intl.string(g.t.UdhTtr),
+                              icon: o.gXV,
                               size: 'sm'
                           })
                       ]
                   })
-                : (0, r.jsxs)(l.njP, {
+                : (0, r.jsxs)(o.njP, {
                       orientation: 'horizontal',
                       className: m.searchHeaderTabList,
-                      selectedItem: a,
+                      selectedItem: l,
                       onItemSelect: c,
                       children: [
-                          (0, r.jsx)(l.njP.Item, {
+                          (0, r.jsx)(o.njP.Item, {
                               className: m.searchHeaderTab,
-                              id: p.QIO.NEWEST,
-                              children: h.intl.string(h.t.rLjqbW)
+                              id: f.QIO.NEWEST,
+                              children: g.intl.string(g.t.rLjqbW)
                           }),
-                          (0, r.jsx)(l.njP.Item, {
+                          (0, r.jsx)(o.njP.Item, {
                               className: m.searchHeaderTab,
-                              id: p.QIO.OLDEST,
-                              children: h.intl.string(h.t.a1BaUl)
+                              id: f.QIO.OLDEST,
+                              children: g.intl.string(g.t.a1BaUl)
                           }),
-                          (0, r.jsx)(l.njP.Item, {
+                          (0, r.jsx)(o.njP.Item, {
                               className: m.searchHeaderTab,
-                              id: p.QIO.MOST_RELEVANT,
-                              children: h.intl.string(h.t.FtR97u)
+                              id: f.QIO.MOST_RELEVANT,
+                              children: g.intl.string(g.t.FtR97u)
                           })
                       ]
                   })
         ]
     });
 }
-function v(e) {
-    let { totalResults: t, subtitle: n, isSearching: i, isIndexing: a, documentsIndexed: o } = e;
-    return a
-        ? (0, r.jsx)(T, { documentsIndexed: o })
+function j(e) {
+    let { totalResults: t, subtitle: n, isSearching: i, isIndexing: l, documentsIndexed: a } = e;
+    return l
+        ? (0, r.jsx)(O, { documentsIndexed: a })
         : i
-          ? (0, r.jsx)(S, {})
-          : (0, r.jsx)(A, {
+          ? (0, r.jsx)(v, {})
+          : (0, r.jsx)(C, {
                 totalResults: t,
                 subtitle: n
             });
 }
-function I() {
+function _() {
     return (0, r.jsx)('div', {
         className: m.spinnerWrapper,
-        children: (0, r.jsx)(l.$jN, {
-            type: l.$jN.Type.SPINNING_CIRCLE,
+        children: (0, r.jsx)(o.$jN, {
+            type: o.$jN.Type.SPINNING_CIRCLE,
             className: m.spinner,
             itemClassName: m.spinnerPath
         })
     });
 }
-function T(e) {
+function O(e) {
     let { documentsIndexed: t } = e;
-    return (0, r.jsx)(l.ua7, {
-        text: h.intl.formatToPlainString(h.t['4Y3O+P'], { count: t }),
+    return (0, r.jsx)(o.ua7, {
+        text: g.intl.formatToPlainString(g.t['4Y3O+P'], { count: t }),
         children: (e) =>
             (0, r.jsxs)(
                 'div',
-                y(E({ className: m.totalResultsWrapper }, e), {
+                y(b({ className: m.totalResultsWrapper }, e), {
                     children: [
-                        (0, r.jsx)(l.Text, {
+                        (0, r.jsx)(o.Text, {
                             variant: 'text-md/medium',
                             color: 'text-muted',
-                            children: (0, r.jsx)(l.eee, {
+                            children: (0, r.jsx)(o.eee, {
                                 className: m.helpdeskLink,
-                                href: c.Z.getArticleURL(p.BhN.SEARCH_INDEXING),
-                                children: h.intl.string(h.t['G3EA+/'])
+                                href: c.Z.getArticleURL(f.BhN.SEARCH_INDEXING),
+                                children: g.intl.string(g.t['G3EA+/'])
                             })
                         }),
-                        (0, r.jsx)(I, {})
+                        (0, r.jsx)(_, {})
                     ]
                 })
             )
     });
 }
-function S() {
+function v() {
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(l.Text, {
+            (0, r.jsx)(o.Text, {
                 variant: 'text-md/medium',
                 color: 'header-secondary',
-                children: h.intl.string(h.t.uixzLS)
+                children: g.intl.string(g.t.uixzLS)
             }),
-            (0, r.jsx)(I, {})
+            (0, r.jsx)(_, {})
         ]
     });
 }
-function A(e) {
+function C(e) {
     let { totalResults: t, subtitle: n } = e,
-        a = i.useMemo(() => t.toLocaleString(), [t]),
-        o = (0, r.jsx)(l.Text, {
+        l = i.useMemo(() => t.toLocaleString(), [t]),
+        a = (0, r.jsx)(o.Text, {
             variant: 'text-md/medium',
             color: 'header-primary',
-            children: h.intl.format(h.t.ZGVL3t, { count: a })
+            children: g.intl.format(g.t.ZGVL3t, { count: l })
         });
     return null != n
         ? (0, r.jsxs)('div', {
               className: m.totalResultsWithSubtitle,
               children: [
-                  o,
-                  (0, r.jsx)(l.Text, {
+                  a,
+                  (0, r.jsx)(o.Text, {
                       variant: 'text-xs/medium',
                       color: 'text-secondary',
                       children: n
                   })
               ]
           })
-        : o;
+        : a;
 }

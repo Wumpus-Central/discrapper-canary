@@ -1,8 +1,8 @@
 (n.d(t, { Z: () => b }), n(388685));
 var r = n(255367),
     i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(392711),
     l = n(772848),
     c = n(442837),
@@ -43,13 +43,13 @@ let m = 50,
     g = [_.emoji1, _.emoji2, _.emoji3, _.emoji4],
     E = i.memo(function (e) {
         var t;
-        let { emoji: n, onAnimationEnd: a } = e,
+        let { emoji: n, onAnimationEnd: o } = e,
             l = (0, s.sample)(g),
             c = i.useCallback(() => {
-                a(n.key);
-            }, [n.key, a]);
+                o(n.key);
+            }, [n.key, o]);
         return (0, r.jsx)('div', {
-            className: o()(_.emoji, l),
+            className: a()(_.emoji, l),
             onAnimationEnd: c,
             children: (0, r.jsx)(d.Z, {
                 emojiId: n.id,
@@ -60,12 +60,12 @@ let m = 50,
     });
 function b(e) {
     let { channelId: t, callHeight: n } = e,
-        a = (0, c.e7)([f.Z], () => f.Z.useReducedMotion),
-        [o, s] = i.useState([]);
+        o = (0, c.e7)([f.Z], () => f.Z.useReducedMotion),
+        [a, s] = i.useState([]);
     i.useEffect(() => {
         function e(e) {
             let { channelId: n, emoji: r } = e;
-            n !== t || a || null == r || s((e) => [...e, h({ key: (0, l.Z)() }, r)]);
+            n !== t || o || null == r || s((e) => [...e, h({ key: (0, l.Z)() }, r)]);
         }
         return (
             u.Z.subscribe('VOICE_CHANNEL_EFFECT_SEND', e),
@@ -73,11 +73,11 @@ function b(e) {
                 u.Z.unsubscribe('VOICE_CHANNEL_EFFECT_SEND', e);
             }
         );
-    }, [t, a]);
+    }, [t, o]);
     let d = i.useCallback((e) => {
         s((t) => t.filter((t) => t.key !== e));
     }, []);
-    return a
+    return o
         ? null
         : (0, r.jsx)('div', {
               className: _.container,
@@ -86,7 +86,7 @@ function b(e) {
                   left: '52%'
               },
               'aria-hidden': !0,
-              children: o.map((e) =>
+              children: a.map((e) =>
                   (0, r.jsx)(
                       E,
                       {

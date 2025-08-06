@@ -1,6 +1,6 @@
 n.d(t, {
-    CL: () => o,
-    Ml: () => a,
+    CL: () => a,
+    Ml: () => o,
     VM: () => s
 });
 var r = n(338390);
@@ -61,11 +61,11 @@ let i = (0, n(818083).B)({
         }
     ]
 });
-function a(e) {
+function o(e) {
     let t = (0, r.Z)(e);
     return i.useExperiment({ location: e }).largerGuildIcons && !t;
 }
-function o(e) {
+function a(e) {
     return i.useExperiment({ location: e }).darkerGuildListBackground;
 }
 function s(e) {

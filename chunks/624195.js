@@ -2,8 +2,8 @@
 var r = n(255367);
 n(73800);
 var i = n(120356),
-    a = n.n(i),
-    o = n(729594),
+    o = n.n(i),
+    a = n(729594),
     s = n(94488);
 let l = RegExp('^music\\.amazon\\.(?:com|co\\.uk|de|co\\.jp|es|fr|it|com\\.au|in|ca|com\\.mx|com\\.br)'),
     c = 500,
@@ -13,7 +13,7 @@ function d(e) {
         n = null,
         r = null;
     try {
-        ((t = (r = o.parse(e, !0)).host), (n = r.pathname));
+        ((t = (r = a.parse(e, !0)).host), (n = r.pathname));
     } catch (e) {
         return null;
     }
@@ -25,9 +25,9 @@ function f(e) {
         embed: { url: n, thumbnail: i }
     } = e;
     if (null == n || null == i) return null;
-    let o = d(n);
-    if (null == o) return null;
-    let l = o.query.iframe_url;
+    let a = d(n);
+    if (null == a) return null;
+    let l = a.query.iframe_url;
     if (null == l || Array.isArray(l) || null == d(l)) return null;
     let { width: f, height: _ } = i,
         p = f,
@@ -35,7 +35,7 @@ function f(e) {
     return (
         (f > c || _ > u) && (f > _ ? ((p = c), (h = (c * _) / f)) : ((p = (u * f) / _), (h = u))),
         (0, r.jsx)('iframe', {
-            className: a()(s.embedAmazonMusic, t),
+            className: o()(s.embedAmazonMusic, t),
             src: l,
             style: {
                 width: p,

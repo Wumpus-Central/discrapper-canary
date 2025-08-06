@@ -1,7 +1,7 @@
 n.d(t, {
     X7: () => l,
-    Zy: () => o,
-    cB: () => a
+    Zy: () => a,
+    cB: () => o
 });
 var r = n(818083);
 let i = (0, r.B)({
@@ -22,11 +22,11 @@ let i = (0, r.B)({
             }
         ]
     }),
-    a = (e) => {
+    o = (e) => {
         let { location: t } = e;
         return i.getCurrentConfig({ location: t }, { autoTrackExposure: !1 }).enabled;
     },
-    o = (e) => {
+    a = (e) => {
         let { location: t } = e;
         return i.useExperiment({ location: t }, { autoTrackExposure: !1 }).enabled;
     },

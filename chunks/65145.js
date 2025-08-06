@@ -6,47 +6,47 @@
     n(388685));
 var r = n(255367),
     i = n(73800),
-    a = n(823379);
-let o = i.createContext(void 0);
+    o = n(823379);
+let a = i.createContext(void 0);
 function s() {
-    let e = i.useContext(o);
+    let e = i.useContext(a);
     if (null == e) throw Error('No PollFocusContextProvider found');
     return e;
 }
 function l(e) {
-    let { children: t, actionButtonRef: n, pollAnswerRef: a, manageFocusOnAction: s } = e,
+    let { children: t, actionButtonRef: n, pollAnswerRef: o, manageFocusOnAction: s } = e,
         l = i.useMemo(
             () => ({
                 actionButtonRef: n,
-                pollAnswerRef: a,
+                pollAnswerRef: o,
                 manageFocusOnAction: s
             }),
-            [n, a, s]
+            [n, o, s]
         );
-    return (0, r.jsx)(o.Provider, {
+    return (0, r.jsx)(a.Provider, {
         value: l,
         children: t
     });
 }
 function c(e) {
     let { children: t } = e,
-        [n, o] = i.useState(),
+        [n, a] = i.useState(),
         s = i.useRef(null),
         c = i.useRef(null),
         u = (e) => {
             switch (e) {
                 case 'submit':
                 case 'cancel':
-                    o('ACTION_BUTTON');
+                    a('ACTION_BUTTON');
                     break;
                 case 'remove':
                 case 'showVotes':
-                    o('POLL_ANSWERS');
+                    a('POLL_ANSWERS');
                     break;
                 case 'showVoterDetails':
                     break;
                 default:
-                    (0, a.vE)(e);
+                    (0, o.vE)(e);
             }
         };
     return (

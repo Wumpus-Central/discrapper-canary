@@ -1,8 +1,8 @@
 (n.d(t, { Z: () => v }), n(388685));
 var r = n(255367),
     i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(392711),
     l = n.n(s),
     c = n(481060),
@@ -88,13 +88,13 @@ function O() {
     }
 }
 function v(e) {
-    let { users: t, maxUsers: a, guildId: s, channelId: m, className: E, size: v = c.EFr.SIZE_24, overflowCountVariant: I, overflowCountColor: T = 'interactive-normal', overflowCountClassName: S, hideOverflowCount: A = !1, disableUsernameTooltip: N = !1, disableUserPopout: C = !1, onClickOverflow: w, onFocusOverflow: R, onUserClick: P, onUserPopoutRequestClose: D, 'aria-label': L, 'aria-labelledby': x, 'aria-hidden': k } = e,
-        [j, M] = i.useState(!1),
+    let { users: t, maxUsers: o, guildId: s, channelId: m, className: E, size: v = c.EFr.SIZE_24, overflowCountVariant: I, overflowCountColor: T = 'interactive-normal', overflowCountClassName: S, hideOverflowCount: A = !1, disableUsernameTooltip: N = !1, disableUserPopout: C = !1, onClickOverflow: R, onFocusOverflow: P, onUserClick: w, onUserPopoutRequestClose: D, 'aria-label': L, 'aria-labelledby': x, 'aria-hidden': M } = e,
+        [k, j] = i.useState(!1),
         U = y(v),
         G = i.useRef(null),
-        B = t.length - a,
+        B = t.length - o,
         Z = B + 1,
-        F = B > 0 && !A && !k,
+        F = B > 0 && !A && !M,
         V = () =>
             (0, r.jsx)(c.VqE, {
                 className: h.popoutWrapper,
@@ -111,9 +111,9 @@ function v(e) {
                                 channelId: m,
                                 nick: f.ZP.getNickname(s, m, e),
                                 disablePopout: 'function' == typeof C ? C(e.id) : C,
-                                onClick: P,
+                                onClick: w,
                                 onPopoutRequestClose: () => {
-                                    (M(!1), null == D || D());
+                                    (j(!1), null == D || D());
                                 },
                                 onContextMenu: (t) =>
                                     (0, u.jW)(
@@ -130,7 +130,7 @@ function v(e) {
                                                     })
                                                 );
                                         },
-                                        { onClose: () => M(!1) }
+                                        { onClose: () => j(!1) }
                                     )
                             },
                             e.id
@@ -139,15 +139,15 @@ function v(e) {
                 })
             }),
         H = () => {
-            let e = F ? a - 1 : Math.min(t.length, a),
+            let e = F ? o - 1 : Math.min(t.length, o),
                 n = e - 1,
                 i = l()(t)
                     .take(e)
                     .map((e, t) => {
                         let i = f.ZP.getNickname(s, m, e),
-                            a = null != i ? i : _.ZP.getName(e),
+                            o = null != i ? i : _.ZP.getName(e),
                             l = t === n && !F,
-                            u = o()(h.avatar, U, l && h.isLast),
+                            u = a()(h.avatar, U, l && h.isLast),
                             d = (0, r.jsx)(c.qEK, {
                                 src: e.getAvatarURL(s, 24),
                                 size: v,
@@ -160,18 +160,18 @@ function v(e) {
                                 children: N
                                     ? (0, r.jsx)('span', {
                                           role: 'img',
-                                          'aria-label': a,
+                                          'aria-label': o,
                                           children: d
                                       })
                                     : (0, r.jsx)(c.ua7, {
-                                          text: a,
+                                          text: o,
                                           'aria-label': !1,
                                           children: (e) =>
                                               (0, r.jsx)(
                                                   'span',
                                                   b(g({}, e), {
                                                       role: 'img',
-                                                      'aria-label': a,
+                                                      'aria-label': o,
                                                       children: d
                                                   })
                                               )
@@ -194,18 +194,18 @@ function v(e) {
                 {
                     targetElementRef: G,
                     renderPopout: V,
-                    shouldShow: j,
+                    shouldShow: k,
                     position: 'bottom',
-                    onRequestClose: () => M(!1),
+                    onRequestClose: () => j(!1),
                     children: (t) =>
                         (0, r.jsx)(
                             c.P3F,
                             b(g({}, t), {
                                 innerRef: G,
-                                className: o()(h.overflow, U, S),
-                                onFocus: R,
+                                className: a()(h.overflow, U, S),
+                                onFocus: P,
                                 onClick: (e) => {
-                                    (null == w || w(e), M(!0));
+                                    (null == R || R(e), j(!0));
                                 },
                                 'aria-label': p.intl.formatToPlainString(p.t.R8Z8Qk, { count: Z }),
                                 children: (0, r.jsx)(c.Text, {
@@ -225,8 +225,8 @@ function v(e) {
               role: 'group',
               'aria-label': L,
               'aria-labelledby': x,
-              className: o()(E, h.avatars),
-              'aria-hidden': k,
+              className: a()(E, h.avatars),
+              'aria-hidden': M,
               children: [H(), Y()]
           });
 }

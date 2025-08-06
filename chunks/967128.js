@@ -8,8 +8,8 @@
 var r = n(255367);
 n(73800);
 var i = n(120356),
-    a = n.n(i),
-    o = n(481060),
+    o = n.n(i),
+    a = n(481060),
     s = n(534091),
     l = n(981631),
     c = n(191052);
@@ -71,8 +71,8 @@ function p(e, t) {
         r,
         i = h(e, t);
     if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
@@ -81,17 +81,17 @@ function h(e, t) {
     var n,
         r,
         i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
 function m(e) {
     let { locked: t = !1, channelType: n } = e,
-        i = n === l.d4z.GUILD_VOICE || n === l.d4z.GUILD_STAGE_VOICE ? o.kBi : t ? o.W4G : o.VL1;
+        i = n === l.d4z.GUILD_VOICE || n === l.d4z.GUILD_STAGE_VOICE ? a.kBi : t ? a.W4G : a.VL1;
     return (0, r.jsx)('div', {
-        className: a()(c.emptyChannelIcon, c.emptyChannelIconComponent),
+        className: o()(c.emptyChannelIcon, c.emptyChannelIconComponent),
         children: (0, r.jsx)(i, {
-            color: o.TVs.colors.WHITE,
+            color: a.TVs.colors.WHITE,
             size: 'custom',
             width: 42,
             height: 42
@@ -100,34 +100,34 @@ function m(e) {
 }
 function g(e) {
     let { children: t, className: n } = e;
-    return (0, r.jsx)(o.X6q, {
+    return (0, r.jsx)(a.X6q, {
         'aria-hidden': 'true',
-        className: a()(n, c.header),
+        className: o()(n, c.header),
         variant: 'heading-xxl/extrabold',
         children: t
     });
 }
 function E(e) {
     let { children: t, className: n } = e;
-    return (0, r.jsx)(o.Text, {
+    return (0, r.jsx)(a.Text, {
         variant: 'text-md/normal',
         color: 'none',
-        className: a()(c.description, n),
+        className: o()(c.description, n),
         children: t
     });
 }
 let b = function (e) {
     var { className: t, channelId: n, children: i } = e,
-        o = p(e, ['className', 'channelId', 'children']);
+        a = p(e, ['className', 'channelId', 'children']);
     return (0, r.jsx)(
         'div',
         _(
             d(
                 {
-                    className: a()(t, c.container),
+                    className: o()(t, c.container),
                     id: (0, s.p)(n, n)
                 },
-                o
+                a
             ),
             { children: i }
         )

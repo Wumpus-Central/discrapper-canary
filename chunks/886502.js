@@ -1,7 +1,7 @@
 var r = n(620014),
     i = n(501979),
-    a = n(575473),
-    o = n(907287),
+    o = n(575473),
+    a = n(907287),
     s = n(65064),
     l = n(402428),
     c = n(207757),
@@ -24,15 +24,15 @@ e.exports = function (e, t, n, m, g, E) {
         if (!c(t)) return !1;
         ((b = !0), (I = !1));
     }
-    if (S && !I) return (E || (E = new r()), b || u(e) ? i(e, t, n, m, g, E) : a(e, t, O, n, m, g, E));
+    if (S && !I) return (E || (E = new r()), b || u(e) ? i(e, t, n, m, g, E) : o(e, t, O, n, m, g, E));
     if (!(n & d)) {
         var A = I && h.call(e, '__wrapped__'),
             N = T && h.call(t, '__wrapped__');
         if (A || N) {
             var C = A ? e.value() : e,
-                w = N ? t.value() : t;
-            return (E || (E = new r()), g(C, w, n, m, E));
+                R = N ? t.value() : t;
+            return (E || (E = new r()), g(C, R, n, m, E));
         }
     }
-    return !!S && (E || (E = new r()), o(e, t, n, m, g, E));
+    return !!S && (E || (E = new r()), a(e, t, n, m, g, E));
 };

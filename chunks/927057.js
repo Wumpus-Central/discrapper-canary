@@ -1,8 +1,8 @@
 n.d(t, { Z: () => p });
 var r = n(255367),
     i = n(73800),
-    a = n(481060),
-    o = n(471445),
+    o = n(481060),
+    a = n(471445),
     s = n(592125),
     l = n(430824),
     c = n(970184),
@@ -21,7 +21,7 @@ function p(e) {
         b = (e, t) => {
             let n = s.Z.getChannel(null == e ? void 0 : e.value);
             if (null == n) return null;
-            let i = n.type === f.d4z.GUILD_CATEGORY ? a.ROc : (0, o.KS)(n);
+            let i = n.type === f.d4z.GUILD_CATEGORY ? o.ROc : (0, a.KS)(n);
             return null != i
                 ? (0, r.jsx)(i, {
                       size: 'custom',

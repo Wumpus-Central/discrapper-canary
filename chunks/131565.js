@@ -1,8 +1,8 @@
 (n.d(t, { Z: () => b }), n(388685));
 var r = n(255367),
     i = n(73800),
-    a = n(788900),
-    o = n(357352),
+    o = n(788900),
+    a = n(357352),
     s = n(565942),
     l = n(626135),
     c = n(436952),
@@ -18,8 +18,8 @@ function E(e) {
     let { chatWallpaperState: t } = e,
         n = c.qM.useExperiment({ location: 'channel_chat_wallpaper' }).enabled,
         d = (0, _.Z)(t.wallpaperId),
-        p = null != d ? (0, o.I)(d.asset) : null,
-        E = (null == d ? void 0 : d.thumbhash) != null ? (0, a.xS)(g.from(d.thumbhash, 'base64')) : void 0,
+        p = null != d ? (0, a.I)(d.asset) : null,
+        E = (null == d ? void 0 : d.thumbhash) != null ? (0, o.xS)(g.from(d.thumbhash, 'base64')) : void 0,
         [b, y] = i.useState(E);
     return (i.useEffect(() => {
         null == p && t.isViewable && u.Z.shouldFetchWallpapers && (0, f.k9)();

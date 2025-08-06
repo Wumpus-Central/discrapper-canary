@@ -2,8 +2,8 @@ n.d(t, { Z: () => A });
 var r = n(255367);
 n(73800);
 var i = n(512722),
-    a = n.n(i),
-    o = n(442837),
+    o = n.n(i),
+    a = n(442837),
     s = n(481060),
     l = n(24124),
     c = n(40851),
@@ -73,8 +73,8 @@ function v(e, t) {
         r,
         i = I(e, t);
     if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
@@ -83,15 +83,15 @@ function I(e, t) {
     var n,
         r,
         i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
 function T(e, t) {
     return null != e && null != t && p.Z.can(m.Plq.CREATE_INSTANT_INVITE, t);
 }
 function S(e) {
-    let { guild: t, channel: i, streamUserId: a, applicationId: o, appContext: l, exitFullScreen: c, analyticsLocation: u, guildScheduledEvent: d } = e;
+    let { guild: t, channel: i, streamUserId: o, applicationId: a, appContext: l, exitFullScreen: c, analyticsLocation: u, guildScheduledEvent: d } = e;
     (null == c || c(),
         (0, s.ZDy)(
             async () => {
@@ -102,8 +102,8 @@ function S(e) {
                         O(b({}, n), {
                             guild: t,
                             channel: i,
-                            streamUserId: a,
-                            applicationId: o,
+                            streamUserId: o,
+                            applicationId: a,
                             analyticsLocation: u,
                             source: i.isGuildStageVoice() ? m.t4x.STAGE_CHANNEL : m.t4x.STREAM_INVITE,
                             guildScheduledEvent: d
@@ -117,41 +117,41 @@ function S(e) {
         ));
 }
 function A(e) {
-    var { applicationId: t, stream: n, channel: i, exitFullScreen: p, appContext: m, analyticsLocation: E, guildScheduledEvent: y, shouldPrioritizeGroupPlusIcon: O = !1, isRichPresenceInvite: I = !1, iconClassName: A, look: N, size: C, buttonText: w, color: R } = e,
-        P = v(e, ['applicationId', 'stream', 'channel', 'exitFullScreen', 'appContext', 'analyticsLocation', 'guildScheduledEvent', 'shouldPrioritizeGroupPlusIcon', 'isRichPresenceInvite', 'iconClassName', 'look', 'size', 'buttonText', 'color']);
+    var { applicationId: t, stream: n, channel: i, exitFullScreen: p, appContext: m, analyticsLocation: E, guildScheduledEvent: y, shouldPrioritizeGroupPlusIcon: O = !1, isRichPresenceInvite: I = !1, iconClassName: A, look: N, size: C, buttonText: R, color: P } = e,
+        w = v(e, ['applicationId', 'stream', 'channel', 'exitFullScreen', 'appContext', 'analyticsLocation', 'guildScheduledEvent', 'shouldPrioritizeGroupPlusIcon', 'isRichPresenceInvite', 'iconClassName', 'look', 'size', 'buttonText', 'color']);
     let D = (0, c.bp)(),
         { parentAnalyticsLocation: L } = (0, u.ZP)(),
         x = null == i ? void 0 : i.getGuildId(),
-        k = (0, o.e7)([f.Z], () => (null != x ? f.Z.getGuild(x) : null), [x]),
-        j = (0, o.e7)([_.Z], () => (null != t ? _.Z.getApplicationActivity(t) : void 0)),
-        M = null == t || O ? s.ejJ : s.gQj,
+        M = (0, a.e7)([f.Z], () => (null != x ? f.Z.getGuild(x) : null), [x]),
+        k = (0, a.e7)([_.Z], () => (null != t ? _.Z.getApplicationActivity(t) : void 0)),
+        j = null == t || O ? s.ejJ : s.gQj,
         U = null != t ? g.intl.string(g.t['OzOM/v']) : g.intl.string(g.t['6F9ivr']);
-    if (null != j && I) {
+    if (null != k && I) {
         let e = () => {
-            (null != L && (0, d.v)(L, d.d.INVITE), l.h7(j, !1, D));
+            (null != L && (0, d.v)(L, d.d.INVITE), l.h7(k, !1, D));
         };
         return (0, r.jsx)(h.Z, {
             onClick: e,
-            iconComponent: M,
+            iconComponent: j,
             label: U,
             iconClassName: A,
             look: N,
             size: C,
-            buttonText: w,
-            color: null != R ? R : void 0
+            buttonText: R,
+            color: null != P ? P : void 0
         });
     }
-    return T(k, i)
+    return T(M, i)
         ? (0, r.jsx)(
               h.Z,
               b(
                   {
                       onClick: () => {
-                          (a()(null != k, 'guild cannot be null'),
-                              a()(null != i, 'channel cannot be null'),
+                          (o()(null != M, 'guild cannot be null'),
+                              o()(null != i, 'channel cannot be null'),
                               null != L && (0, d.v)(L, d.d.INVITE),
                               S({
-                                  guild: k,
+                                  guild: M,
                                   channel: i,
                                   streamUserId: null == n ? void 0 : n.ownerId,
                                   applicationId: t,
@@ -161,15 +161,15 @@ function A(e) {
                                   guildScheduledEvent: y
                               }));
                       },
-                      iconComponent: M,
+                      iconComponent: j,
                       label: U,
                       iconClassName: A,
                       look: N,
                       size: C,
-                      color: R,
-                      buttonText: w
+                      color: P,
+                      buttonText: R
                   },
-                  P
+                  w
               )
           )
         : null;

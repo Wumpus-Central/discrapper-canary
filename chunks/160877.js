@@ -5,8 +5,8 @@
     n(953529));
 var r = n(255367),
     i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(470167),
     l = n(82659),
     c = n(572691),
@@ -29,10 +29,10 @@ let g = (e) => {
     },
     E = (e) => {
         var t, n, i;
-        let { embed: a } = e;
-        if (!p.n2.has(a.type)) return null;
-        let o = void 0 !== a.video && a.type !== s.h.GIFV ? a.video.url : null != (i = null == (t = a.thumbnail) ? void 0 : t.url) ? i : null == (n = a.image) ? void 0 : n.url;
-        return null == o ? null : (0, r.jsx)(b, { url: o });
+        let { embed: o } = e;
+        if (!p.n2.has(o.type)) return null;
+        let a = void 0 !== o.video && o.type !== s.h.GIFV ? o.video.url : null != (i = null == (t = o.thumbnail) ? void 0 : t.url) ? i : null == (n = o.image) ? void 0 : n.url;
+        return null == a ? null : (0, r.jsx)(b, { url: a });
     },
     b = (e) => {
         let { url: t, description: n } = e,
@@ -41,12 +41,12 @@ let g = (e) => {
             className: m.mediaContainer,
             children: i
                 ? (0, r.jsx)(u.Z, {
-                      className: o()(m.video, m.media),
+                      className: a()(m.video, m.media),
                       controls: !0,
                       src: t
                   })
                 : (0, r.jsx)('img', {
-                      className: o()(m.image, m.media),
+                      className: a()(m.image, m.media),
                       src: t,
                       alt: n
                   })
@@ -61,34 +61,34 @@ function y(e) {
         e());
 }
 function O(e) {
-    let { channelId: t, messageId: n, isReportFalsePositiveLoading: a, analyticsContext: o, attachmentPreview: s, embedPreview: c, onConfirmPress: u, transitionState: d, onClose: f } = e,
+    let { channelId: t, messageId: n, isReportFalsePositiveLoading: o, analyticsContext: a, attachmentPreview: s, embedPreview: c, onConfirmPress: u, transitionState: d, onClose: f } = e,
         p = i.useCallback(() => {
             ((0, _.aP)({
                 action: _.Yy.EXPLICIT_MEDIA_FALSE_POSITIVE_CLICK_CANCEL,
                 channelId: t,
                 messageId: n,
-                context: o
+                context: a
             }),
                 f());
-        }, [t, n, o, f]),
+        }, [t, n, a, f]),
         m = i.useCallback(() => {
             (null == u || u(),
                 (0, _.aP)({
                     action: _.Yy.EXPLICIT_MEDIA_FALSE_POSITIVE_CLICK_CONFIRM,
                     channelId: t,
                     messageId: n,
-                    context: o
+                    context: a
                 }));
-        }, [t, n, o, u]);
+        }, [t, n, a, u]);
     return (
         i.useEffect(() => {
             (0, _.aP)({
                 action: _.Yy.EXPLICIT_MEDIA_FALSE_POSITIVE_VIEWED,
                 channelId: t,
                 messageId: n,
-                context: o
+                context: a
             });
-        }, [t, n, o]),
+        }, [t, n, a]),
         (0, r.jsxs)(l.Modal, {
             transitionState: d,
             onClose: f,
@@ -99,13 +99,13 @@ function O(e) {
                     text: h.intl.string(h.t['ETE/oK']),
                     onClick: p,
                     variant: 'secondary',
-                    disabled: a
+                    disabled: o
                 },
                 {
                     text: h.intl.string(h.t['cY+Ooa']),
                     onClick: m,
-                    loading: a,
-                    disabled: a
+                    loading: o,
+                    disabled: o
                 }
             ],
             children: [null != s && (0, r.jsx)(g, { attachment: s }), null != c && (0, r.jsx)(E, { embed: c })]

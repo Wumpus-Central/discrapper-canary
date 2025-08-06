@@ -2,8 +2,8 @@ n.d(t, { Z: () => g });
 var r = n(255367);
 n(73800);
 var i = n(442837),
-    a = n(481060),
-    o = n(787014),
+    o = n(481060),
+    a = n(787014),
     s = n(933557),
     l = n(454585),
     c = n(131704),
@@ -36,9 +36,9 @@ function g(e) {
                       children: (0, r.jsx)(d.Z, {
                           label: p.intl.string(p.t['3gUsJS']),
                           onClick: () => {
-                              o.ZP.open(t.id);
+                              a.ZP.open(t.id);
                           },
-                          icon: (0, r.jsx)(a.vdY, {
+                          icon: (0, r.jsx)(o.vdY, {
                               size: 'xs',
                               color: 'currentColor'
                           })

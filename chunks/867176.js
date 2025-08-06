@@ -1,12 +1,12 @@
 (n.d(t, {
-    Z: () => w,
+    Z: () => R,
     b: () => C
 }),
     n(388685));
 var r = n(255367),
     i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(866442),
     l = n(442837),
     c = n(692547),
@@ -79,8 +79,8 @@ function S(e, t) {
         r,
         i = A(e, t);
     if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
@@ -89,8 +89,8 @@ function A(e, t) {
     var n,
         r,
         i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
 let N = (e) => {
@@ -99,30 +99,30 @@ let N = (e) => {
 };
 function C(e) {
     var t;
-    let { user: n, displayProfile: a, guildId: b, pendingBanner: O, children: v, className: I, avatarSize: T, avatarOffsetX: S, avatarOffsetY: A, bannerWidth: C, bannerHeight: w, themePadding: R, pendingAccentColor: P, animateOnHover: D = !1 } = e,
+    let { user: n, displayProfile: o, guildId: b, pendingBanner: O, children: v, className: I, avatarSize: T, avatarOffsetX: S, avatarOffsetY: A, bannerWidth: C, bannerHeight: R, themePadding: P, pendingAccentColor: w, animateOnHover: D = !1 } = e,
         L = (0, _.Dt)(),
-        [x, k] = i.useState(!1),
-        j = (0, l.e7)([m.Z], () => m.Z.isFocused()),
-        M = h.QK.getSetting(),
+        [x, M] = i.useState(!1),
+        k = (0, l.e7)([m.Z], () => m.Z.isFocused()),
+        j = h.QK.getSetting(),
         { bannerSrc: U, status: G } = (0, E.Z)({
-            displayProfile: a,
+            displayProfile: o,
             pendingBanner: O,
             size: C,
-            canAnimate: D || !M ? x : j
+            canAnimate: D || !j ? x : k
         }),
         B = (0, u.dQu)(c.Z.unsafe_rawColors.PRIMARY_800).hex(),
         Z = n.getAvatarURL(b, (0, u.pxk)(T)),
         F = (0, s._i)((0, d.ZP)(Z, B, !1)),
-        V = (0, f.Z)(null != (t = null != P ? P : null == a ? void 0 : a.primaryColor) ? t : F).hex,
+        V = (0, f.Z)(null != (t = null != w ? w : null == o ? void 0 : o.primaryColor) ? t : F).hex,
         H = N(T),
-        Y = H + S - R,
-        W = w - A - R;
+        Y = H + S - P,
+        W = R - A - P;
     return (0, r.jsxs)('svg', {
         className: y.mask,
-        viewBox: '0 0 '.concat(C, ' ').concat(w),
+        viewBox: '0 0 '.concat(C, ' ').concat(R),
         style: {
             minWidth: C,
-            minHeight: w
+            minHeight: R
         },
         children: [
             (0, r.jsxs)('mask', {
@@ -153,32 +153,32 @@ function C(e) {
                 children: [
                     v,
                     (0, r.jsxs)('div', {
-                        className: o()(y.banner, I),
-                        onMouseMove: () => k(!0),
-                        onMouseLeave: () => k(!1),
+                        className: a()(y.banner, I),
+                        onMouseMove: () => M(!0),
+                        onMouseLeave: () => M(!1),
                         style: {
-                            height: w,
-                            minHeight: w,
+                            height: R,
+                            minHeight: R,
                             backgroundImage: null != U ? 'url('.concat(U, ')') : void 0,
                             backgroundColor: 'COMPLETE' !== G ? c.Z.unsafe_rawColors.PRIMARY_800.css : V
                         },
-                        children: [!M && (0, g.F8)(U) && (0, r.jsx)(p.Z, { className: y.gifTag }), v]
+                        children: [!j && (0, g.F8)(U) && (0, r.jsx)(p.Z, { className: y.gifTag }), v]
                     })
                 ]
             })
         ]
     });
 }
-function w(e) {
+function R(e) {
     var { themeType: t, displayProfile: n, canUsePremiumProfileCustomization: i = !1 } = e,
-        a = S(e, ['themeType', 'displayProfile', 'canUsePremiumProfileCustomization']);
-    let o = b.q[t],
+        o = S(e, ['themeType', 'displayProfile', 'canUsePremiumProfileCustomization']);
+    let a = b.q[t],
         s = i || (null == n ? void 0 : n.canUsePremiumProfileCustomization) || !1;
     return (0, r.jsx)(
         C,
-        T(v({}, a, o), {
+        T(v({}, o, a), {
             displayProfile: n,
-            themePadding: s ? o.themePadding : 0
+            themePadding: s ? a.themePadding : 0
         })
     );
 }

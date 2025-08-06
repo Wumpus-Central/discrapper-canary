@@ -1,8 +1,8 @@
-n.d(t, { P: () => i });
+n.d(t, { P: () => a });
 var r = n(73800),
     o = n(522942),
     l = n(481060);
-function i() {
+function a() {
     let e = (0, l.dQu)(l.TVs.colors.TEXT_DEFAULT).int();
     return r.useMemo(
         () => ({

@@ -2,8 +2,8 @@ n.d(t, { Z: () => d });
 var r = n(255367);
 n(73800);
 var i = n(120356),
-    a = n.n(i),
-    o = n(481060),
+    o = n.n(i),
+    a = n(481060),
     s = n(381176),
     l = n(373370),
     c = n(644646),
@@ -22,7 +22,7 @@ let d = function (e) {
             questConfig: i.config
         });
     return (0, r.jsxs)('div', {
-        className: a()(u.wrapper, t),
+        className: o()(u.wrapper, t),
         style: m ? void 0 : { color: i.config.colors.primary },
         children: [
             (0, r.jsx)(c.Z, {
@@ -35,7 +35,7 @@ let d = function (e) {
             }),
             (0, r.jsx)('div', {
                 className: u.copy,
-                children: (0, r.jsx)(o.Text, {
+                children: (0, r.jsx)(a.Text, {
                     variant: 'text-sm/normal',
                     color: 'text-default',
                     children: h

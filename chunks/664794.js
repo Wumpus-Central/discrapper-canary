@@ -1,8 +1,8 @@
 n.d(t, { Z: () => y });
 var r = n(255367),
     i = n(73800),
-    a = n(481060),
-    o = n(100527),
+    o = n(481060),
+    a = n(100527),
     s = n(906732),
     l = n(299206),
     c = n(389052),
@@ -47,8 +47,8 @@ function E(e, t) {
         r,
         i = b(e, t);
     if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
@@ -57,8 +57,8 @@ function b(e, t) {
     var n,
         r,
         i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
 function y(e) {
@@ -66,7 +66,7 @@ function y(e) {
         O = E(e, ['type', 'user', 'guildId', 'viewProfileItem', 'appContext']);
     let v = i.useRef(null),
         { trackUserProfileAction: I } = (0, _.KZ)(),
-        { analyticsLocations: T, newestAnalyticsLocation: S } = (0, s.ZP)(o.Z.USER_PROFILE_OVERFLOW_MENU),
+        { analyticsLocations: T, newestAnalyticsLocation: S } = (0, s.ZP)(a.Z.USER_PROFILE_OVERFLOW_MENU),
         A = (0, d.Z)({
             user: n,
             guildId: m,
@@ -119,7 +119,7 @@ function y(e) {
                     analyticsLocations: T
                 })
         }),
-        w = (0, f.Z)({
+        R = (0, f.Z)({
             user: n,
             guildId: m,
             location: S,
@@ -131,12 +131,12 @@ function y(e) {
                     analyticsLocations: T
                 })
         }),
-        R = [
+        P = [
             [b, A],
             [
                 C,
                 N,
-                w,
+                R,
                 (0, f.T)({
                     user: n,
                     guildId: m,
@@ -162,30 +162,30 @@ function y(e) {
                 })
             ]
         ];
-    if (R.every((e) => e.every((e) => null == e))) return null;
-    let P = t === p.j8.BANNER ? p.oY : p.ef;
+    if (P.every((e) => e.every((e) => null == e))) return null;
+    let w = t === p.j8.BANNER ? p.oY : p.ef;
     return (0, r.jsx)(s.Gt, {
         value: T,
-        children: (0, r.jsx)(a.yRy, {
+        children: (0, r.jsx)(o.yRy, {
             targetElementRef: v,
             renderPopout: (e) => {
                 let { closePopout: t } = e;
-                return (0, r.jsx)(a.v2r, {
+                return (0, r.jsx)(o.v2r, {
                     navId: 'user-profile-overflow-menu',
                     onSelect: void 0,
                     onClose: t,
                     'aria-label': h.intl.string(h.t.AXIHpa),
-                    children: R.map((e, t) => (0, r.jsx)(a.kSQ, { children: e.map((e) => e) }, t))
+                    children: P.map((e, t) => (0, r.jsx)(o.kSQ, { children: e.map((e) => e) }, t))
                 });
             },
             children: (e) =>
                 (0, r.jsx)(
-                    P,
+                    w,
                     g(
                         {
                             ref: v,
                             action: 'PRESS_OPTIONS',
-                            icon: a.xhG,
+                            icon: o.xhG,
                             tooltipText: h.intl.string(h.t.UKOtz8)
                         },
                         e,

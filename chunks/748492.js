@@ -1,14 +1,14 @@
 n.d(t, {
-    Ds: () => M,
-    YB: () => k,
+    Ds: () => j,
+    YB: () => M,
     of: () => U,
-    q5: () => j
+    q5: () => k
 });
 var r = n(255367);
 n(73800);
 var i = n(120356),
-    a = n.n(i),
-    o = n(442837),
+    o = n.n(i),
+    a = n(442837),
     s = n(481060),
     l = n(846027),
     c = n(40851),
@@ -31,29 +31,29 @@ var i = n(120356),
     A = n(636449),
     N = n(884338),
     C = n(617552),
-    w = n(981631),
-    R = n(231338),
-    P = n(388032),
+    R = n(981631),
+    P = n(231338),
+    w = n(388032),
     D = n(816083),
     L = n(992955);
 function x(e) {
     let { onClick: t, isExpanded: n } = e;
     return (0, r.jsx)(y.Z, {
-        iconClassName: a()(D.arrowIcon, { [D.arrowIconExpanded]: n }),
+        iconClassName: o()(D.arrowIcon, { [D.arrowIconExpanded]: n }),
         onClick: t,
         iconComponent: s.CJ0,
-        label: n ? P.intl.string(P.t['2TiKgY']) : P.intl.string(P.t.oN8bqa)
+        label: n ? w.intl.string(w.t['2TiKgY']) : w.intl.string(w.t.oN8bqa)
     });
 }
-function k(e) {
+function M(e) {
     var t, n, i;
-    let { channel: a, applicationId: s, onMouseDown: y, onMouseMove: I, onMouseLeave: N, onJumpToChannel: P, idle: x, selectedParticipant: k, embeddedActivity: j } = e,
-        M = (0, c.bp)() === w.IlC.POPOUT,
-        U = (0, o.e7)([S.Z], () => S.Z.isVideoEnabled()),
-        G = (0, o.e7)([S.Z], () => Object.values(S.Z.getVideoDevices())[0]),
+    let { channel: o, applicationId: s, onMouseDown: y, onMouseMove: I, onMouseLeave: N, onJumpToChannel: w, idle: x, selectedParticipant: M, embeddedActivity: k } = e,
+        j = (0, c.bp)() === R.IlC.POPOUT,
+        U = (0, a.e7)([S.Z], () => S.Z.isVideoEnabled()),
+        G = (0, a.e7)([S.Z], () => Object.values(S.Z.getVideoDevices())[0]),
         B = !1 === (null == (t = null == G ? void 0 : G.disabled) || t),
         Z = (0, d.Z)([s])[0],
-        F = (0, m.Z)(a),
+        F = (0, m.Z)(o),
         { parentAnalyticsLocation: V } = (0, u.ZP)(),
         H = (e) => {
             ((0, _.v)(V, _.d.CAMERA, e), l.Z.setVideoEnabled(e));
@@ -62,7 +62,7 @@ function k(e) {
             B ? H(!0) : (0, g.Z)();
         },
         W = () => {
-            ((0, _.v)(V, _.d.POPOUT, !0), null != a && (0, C.Z)({ onConfirm: () => h.hP(a) }));
+            ((0, _.v)(V, _.d.POPOUT, !0), null != o && (0, C.Z)({ onConfirm: () => h.hP(o) }));
         };
     return (0, r.jsxs)('div', {
         className: L.videoControls,
@@ -74,8 +74,8 @@ function k(e) {
                 className: L.topControls,
                 children: (0, r.jsx)(b.r, {
                     idle: x,
-                    title: null != (i = null != (n = null == Z ? void 0 : Z.name) ? n : null == a ? void 0 : a.name) ? i : '',
-                    onJumpToChannel: P,
+                    title: null != (i = null != (n = null == Z ? void 0 : Z.name) ? n : null == o ? void 0 : o.name) ? i : '',
+                    onJumpToChannel: w,
                     preventIdleComponent: E.Z
                 })
             }),
@@ -96,13 +96,13 @@ function k(e) {
                                 onChange: H,
                                 onCameraUnavailable: Y
                             }),
-                            null != a &&
+                            null != o &&
                                 (0, r.jsx)(E.Z, {
                                     children: (0, r.jsx)(f.Z, {
-                                        channelId: a.id,
-                                        guildId: a.getGuildId(),
+                                        channelId: o.id,
+                                        guildId: o.getGuildId(),
                                         className: L.__invalid_leftTrayIcon,
-                                        participant: k,
+                                        participant: M,
                                         compact: !0
                                     })
                                 })
@@ -115,17 +115,17 @@ function k(e) {
                         basis: '50%',
                         align: p.Z.Align.CENTER,
                         children: [
-                            M || (0, A.R)()
+                            j || (0, A.R)()
                                 ? null
                                 : (0, r.jsx)(v.Z, {
                                       className: D.rightPipIcon,
                                       popoutOpen: !1,
                                       onOpenPopout: W,
-                                      onClosePopout: R.Vq
+                                      onClosePopout: P.Vq
                                   }),
                             (0, r.jsx)(O.Z, {
                                 applicationId: s,
-                                location: j.location,
+                                location: k.location,
                                 className: D.rightPipIcon
                             })
                         ]
@@ -135,12 +135,12 @@ function k(e) {
         ]
     });
 }
-function j(e) {
+function k(e) {
     var t, n;
-    let { channel: i, applicationId: o, onMouseDown: l, onMouseMove: c, onMouseLeave: u, onJumpToChannel: f, idle: _, users: p, embeddedActivity: h } = e,
-        m = (0, d.Z)([o])[0];
+    let { channel: i, applicationId: a, onMouseDown: l, onMouseMove: c, onMouseLeave: u, onJumpToChannel: f, idle: _, users: p, embeddedActivity: h } = e,
+        m = (0, d.Z)([a])[0];
     return (0, r.jsxs)(s.P3F, {
-        className: a()(L.videoControls, L.videoControlsTextActivity),
+        className: o()(L.videoControls, L.videoControlsTextActivity),
         onMouseMove: c,
         onMouseDown: l,
         onMouseLeave: u,
@@ -166,7 +166,7 @@ function j(e) {
                         className: D.__invalid_userSummaryContainer
                     }),
                     (0, r.jsx)(O.Z, {
-                        applicationId: o,
+                        applicationId: a,
                         location: h.location,
                         iconClassName: D.leaveActivityIcon,
                         isActive: !0
@@ -176,7 +176,7 @@ function j(e) {
         ]
     });
 }
-function M(e) {
+function j(e) {
     let { channelId: t, participantsOpen: n, showToggleParticipants: i } = e;
     return i
         ? (0, r.jsx)(I.Z, {
@@ -188,15 +188,15 @@ function M(e) {
 }
 function U(e) {
     var t, n;
-    let { onMouseDown: i, onMouseMove: o, onMouseLeave: l, showControls: c, applicationId: u, channel: f, onJumpToChannel: _, onToggleHeight: p, isExpanded: h, hideExpandedButton: m, embeddedActivity: g } = e,
+    let { onMouseDown: i, onMouseMove: a, onMouseLeave: l, showControls: c, applicationId: u, channel: f, onJumpToChannel: _, onToggleHeight: p, isExpanded: h, hideExpandedButton: m, embeddedActivity: g } = e,
         y = (0, d.Z)([u])[0];
     return (0, r.jsx)('div', {
         className: D.pipHeader,
-        onMouseMove: o,
+        onMouseMove: a,
         onMouseDown: i,
         onMouseLeave: l,
         children: (0, r.jsxs)('div', {
-            className: a()(L.topControls, D.pipHeaderContent, { [D.pipHeaderContentOpen]: c }),
+            className: o()(L.topControls, D.pipHeaderContent, { [D.pipHeaderContentOpen]: c }),
             children: [
                 !c &&
                     (0, r.jsx)(s.xhG, {

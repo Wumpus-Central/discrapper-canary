@@ -1,4 +1,4 @@
-n.d(t, { Z: () => E });
+n.d(t, { Z: () => C });
 var i = n(255367),
     r = n(73800),
     s = n(442837),
@@ -17,8 +17,8 @@ var i = n(255367),
     x = n(981631),
     _ = n(921944),
     j = n(388032),
-    C = n(669018);
-function E(e) {
+    E = n(669018);
+function C(e) {
     let { groupName: t, targetElementRef: n } = e,
         r = (0, h.Z)(),
         l = (0, g.Z)({ location: 'TenureLevelUpCoachmark' }),
@@ -60,12 +60,12 @@ function O(e) {
         h = (0, r.useCallback)(() => {
             (s(_.L.USER_DISMISS), a());
         }, [s, a]),
-        E = b.vK[n];
+        C = b.vK[n];
     return (0, i.jsxs)('div', {
-        className: C.contents,
+        className: E.contents,
         children: [
             (0, i.jsx)(o.M0o, {
-                className: C.closeButton,
+                className: E.closeButton,
                 tooltip: j.intl.string(j.t.cpT0Cg),
                 color: o.YX$.TERTIARY,
                 size: o.tT7.SIZE_24,
@@ -78,8 +78,8 @@ function O(e) {
             null != u &&
                 (0, i.jsx)('img', {
                     src: u,
-                    alt: j.intl.string(E.nameUnformatted),
-                    className: C.badgeImage
+                    alt: j.intl.string(C.nameUnformatted),
+                    className: E.badgeImage
                 }),
             (0, i.jsx)(o.X6q, {
                 variant: 'heading-md/extrabold',
@@ -87,17 +87,17 @@ function O(e) {
             }),
             (0, i.jsx)(o.Text, {
                 variant: 'text-sm/medium',
-                className: C.subtitle,
-                children: j.intl.formatToPlainString(j.t.ewkaVV, { timeMilestone: null == (t = (0, p.q)(E.id, E.tenureReqNumMonths)) ? void 0 : t.toLocaleLowerCase() })
+                className: E.subtitle,
+                children: j.intl.formatToPlainString(j.t.ewkaVV, { timeMilestone: null == (t = (0, p.q)(C.id, C.tenureReqNumMonths)) ? void 0 : t.toLocaleLowerCase() })
             }),
             (0, i.jsx)(l.zx, {
-                className: C.checkItOutButton,
+                className: E.checkItOutButton,
                 color: l.Tt.WHITE,
                 size: l.Ph.SMALL,
                 onClick: g,
                 children: j.intl.string(j.t.RzWDqa)
             }),
-            (0, i.jsx)('div', { className: C.pointer })
+            (0, i.jsx)('div', { className: E.pointer })
         ]
     });
 }

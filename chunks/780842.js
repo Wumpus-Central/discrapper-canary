@@ -2,8 +2,8 @@ n.d(t, { J: () => _ });
 var r = n(255367);
 n(73800);
 var i = n(657707),
-    a = n(780605),
-    o = n(388032);
+    o = n(780605),
+    a = n(388032);
 function s(e, t, n) {
     return (
         t in e
@@ -62,8 +62,8 @@ function d(e, t) {
         r,
         i = f(e, t);
     if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
@@ -72,17 +72,17 @@ function f(e, t) {
     var n,
         r,
         i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
 function _(e) {
     var { 'aria-label': t, playing: n } = e,
         s = d(e, ['aria-label', 'playing']);
     return (0, r.jsx)(
-        a.Y,
+        o.Y,
         u(l({}, s), {
-            'aria-label': null != t ? t : n ? o.intl.string(o.t.ZcgDJS) : o.intl.string(o.t.RscU7O),
+            'aria-label': null != t ? t : n ? a.intl.string(a.t.ZcgDJS) : a.intl.string(a.t.RscU7O),
             icon: n ? i.fpf : i.o1U,
             variant: 'overlay-secondary',
             fullWidth: !1,

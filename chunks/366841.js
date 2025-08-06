@@ -1,8 +1,8 @@
 (n.d(t, { G: () => T }), n(388685));
 var r = n(255367),
     i = n(73800),
-    a = n(442837),
-    o = n(704215),
+    o = n(442837),
+    a = n(704215),
     s = n(433517),
     l = n(481060),
     c = n(570140),
@@ -50,12 +50,12 @@ let I = 1000;
 function T() {
     let [e, t] = i.useState(!1),
         O = (0, l.VXO)(E.Xd),
-        T = i.useMemo(() => [o.z.DESKTOP_REFRESH_ONBOARDING_MODAL], []),
+        T = i.useMemo(() => [a.z.DESKTOP_REFRESH_ONBOARDING_MODAL], []),
         [S, A] = (0, _.US)(T),
-        N = S === o.z.DESKTOP_REFRESH_ONBOARDING_MODAL,
-        C = (0, a.e7)([h.default], () => h.default.getId());
+        N = S === a.z.DESKTOP_REFRESH_ONBOARDING_MODAL,
+        C = (0, o.e7)([h.default], () => h.default.getId());
     (i.useLayoutEffect(() => {
-        null != C && g.default.age(C) < m.Z.Millis.DAY && (0, f.Q3)(o.z.DESKTOP_REFRESH_ONBOARDING_MODAL);
+        null != C && g.default.age(C) < m.Z.Millis.DAY && (0, f.Q3)(a.z.DESKTOP_REFRESH_ONBOARDING_MODAL);
         let e = 'desktop_refresh_theme_migration_key',
             t = 'true' === s.K.get(e);
         !N || t || p.Z.theme !== y.BR.DARK || null != d.Z.gradientPreset || t || (s.K.set(e, 'true'), (0, u.ZI)({ theme: y.BR.DARKER }));
@@ -71,7 +71,7 @@ function T() {
                 }
             );
         }, []));
-    let w = i.useCallback(() => {
+    let R = i.useCallback(() => {
         (0, l.ZDy)(
             async () => {
                 let { DesktopRefreshOnboardingModal: e } = await n.e('49910').then(n.bind(n, 239191));
@@ -88,9 +88,9 @@ function T() {
     i.useEffect(() => {
         if (N && !O && e) {
             let e = setTimeout(() => {
-                w();
+                R();
             }, I);
             return () => clearTimeout(e);
         }
-    }, [e, O, N, w]);
+    }, [e, O, N, R]);
 }

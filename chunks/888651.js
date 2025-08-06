@@ -4,8 +4,8 @@ n.d(t, {
 });
 var r = n(617735),
     i = n(230826),
-    a = n(749210),
-    o = n(430824),
+    o = n(749210),
+    a = n(430824),
     s = n(496675),
     l = n(979651),
     c = n(938475),
@@ -19,15 +19,15 @@ function f(e) {
                 var t, n;
                 let { channel: r } = e,
                     i = r.getGuildId(),
-                    a = null != (n = null == (t = o.Z.getGuild(i)) ? void 0 : t.maxVideoChannelUsers) ? n : -1,
+                    o = null != (n = null == (t = a.Z.getGuild(i)) ? void 0 : t.maxVideoChannelUsers) ? n : -1,
                     d = c.ZP.countVoiceStatesForChannel(r.id),
-                    f = null != i && l.Z.hasVideo(r.id) && a > 0 && d >= a + 1;
+                    f = null != i && l.Z.hasVideo(r.id) && o > 0 && d >= o + 1;
                 return s.Z.can(u.Plq.MOVE_MEMBERS, r) && s.Z.can(u.Plq.CONNECT, r) && !f;
             },
             drop(e, t) {
                 let { channel: n } = e,
                     r = l.Z.getVoiceStateForUser(t.getItem().user.id);
-                (null == r ? void 0 : r.channelId) !== n.id && a.Z.setChannel(n.getGuildId(), t.getItem().user.id, n.id);
+                (null == r ? void 0 : r.channelId) !== n.id && o.Z.setChannel(n.getGuildId(), t.getItem().user.id, n.id);
             }
         },
         (e, t) => ({

@@ -1,11 +1,11 @@
 n.d(t, {
-    ZP: () => w,
+    ZP: () => R,
     ku: () => N
 });
 var r = n(255367),
     i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(399606),
     l = n(481060),
     c = n(596454),
@@ -94,20 +94,20 @@ function N(e) {
     let { soundId: t } = e,
         n = (0, s.e7)([h.Z], () => h.Z.getSoundById(t)),
         i = (0, d.V2)({ location: 'SoundboardMentionInline' }),
-        { isPlaying: a, playSound: o } = (0, p.Z)(n);
+        { isPlaying: o, playSound: a } = (0, p.Z)(n);
     return i
         ? null == n
             ? (0, r.jsx)(A, {})
             : (0, r.jsx)(C, {
                   className: O.inlineTextArea,
-                  isPlaying: a,
-                  playSound: o,
+                  isPlaying: o,
+                  playSound: a,
                   sound: n
               })
         : null;
 }
 function C(e) {
-    let { className: t, sound: n, playSound: i, isPlaying: a } = e,
+    let { className: t, sound: n, playSound: i, isPlaying: o } = e,
         s = (null == n ? void 0 : n.emojiId) != null || (null == n ? void 0 : n.emojiName) != null,
         d = y.intl.formatToPlainString(y.t.tuMUJy, {
             emojiName: null == n ? void 0 : n.emojiName,
@@ -118,7 +118,7 @@ function C(e) {
               'aria-label': d,
               tag: 'span',
               onClick: i,
-              className: o()(O.inlineContainer, O.inlineButton, { [O.playing]: !0 === a }, t),
+              className: a()(O.inlineContainer, O.inlineButton, { [O.playing]: !0 === o }, t),
               children: [
                   s &&
                       (0, r.jsx)(c.Z, {
@@ -131,24 +131,24 @@ function C(e) {
           })
         : null;
 }
-let w = function (e) {
-    let { channelId: t, messageId: n, soundId: a, messageSounds: o, jumbo: c = !1 } = e,
+let R = function (e) {
+    let { channelId: t, messageId: n, soundId: o, messageSounds: a, jumbo: c = !1 } = e,
         d = E.jU.useSetting(),
-        y = (0, s.e7)([h.Z], () => h.Z.getSoundById(a), [a]),
+        y = (0, s.e7)([h.Z], () => h.Z.getSoundById(o), [o]),
         v = i.useMemo(() => {
             var e;
-            return null != (e = (0, f.Z)(t, n, a, o)) ? e : y;
-        }, [t, n, a, o, y]),
+            return null != (e = (0, f.Z)(t, n, o, a)) ? e : y;
+        }, [t, n, o, a, y]),
         T = (0, s.e7)([b.Z], () => b.Z.getChannel(t)),
         N = (0, u.X0)({ location: 'SoundboardMention' }),
-        w = i.useRef(null),
-        { isPlaying: R, playSound: P } = (0, p.Z)(v, T),
+        R = i.useRef(null),
+        { isPlaying: P, playSound: w } = (0, p.Z)(v, T),
         D = i.useCallback(async () => {
-            if (await P()) {
+            if (await w()) {
                 var e;
-                null == (e = w.current) || e.addAnimation();
+                null == (e = R.current) || e.addAnimation();
             }
-        }, [P]);
+        }, [w]);
     return N
         ? null == v
             ? (0, r.jsx)(A, { playSound: D })
@@ -161,13 +161,13 @@ let w = function (e) {
                         sound: v,
                         channel: T,
                         onSelectItem: D,
-                        isPlayingSoundOverride: R,
+                        isPlayingSoundOverride: P,
                         isSoundmoji: !0,
                         buttonOverlay: m.Pb.SOUNDMOJI,
                         tooltipClassName: O.tooltip,
                         tooltipContentClassName: O.tooltipContainer,
                         tooltipOverride: (0, r.jsx)(_.Dp, { sound: v }),
-                        soundmojiVisualEffectRef: w
+                        soundmojiVisualEffectRef: R
                     },
                     ''.concat(v.soundId)
                 )
@@ -185,7 +185,7 @@ let w = function (e) {
                                 children: (0, r.jsx)(C, {
                                     sound: v,
                                     playSound: D,
-                                    isPlaying: R
+                                    isPlaying: P
                                 })
                             })
                         )

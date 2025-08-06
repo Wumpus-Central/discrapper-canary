@@ -2,8 +2,8 @@
 var r = n(255367);
 n(73800);
 var i = n(120356),
-    a = n.n(i),
-    o = n(442837),
+    o = n.n(i),
+    a = n(442837),
     s = n(481060),
     l = n(543241),
     c = n(222677),
@@ -73,12 +73,12 @@ let T = ['slight_smile', 'frowning', 'smile', 'stuck_out_tongue', 'wink'];
 function S(e) {
     var t;
     let { emoji: n, isFocused: i } = e,
-        { animated: o, src: l, surrogates: c } = n;
+        { animated: a, src: l, surrogates: c } = n;
     return (
         null == l && null != n.id
             ? (l = p.ZP.getEmojiURL({
                   id: n.id,
-                  animated: !!o,
+                  animated: !!a,
                   size: 20
               }))
             : null == l && (l = h.ZP.getURL(c)),
@@ -96,14 +96,14 @@ function S(e) {
                             O(
                                 {
                                     'aria-label': E.intl.formatToPlainString(E.t['/iYSo6'], { emojiName: n.name }),
-                                    className: a()(b.button, { [b.focused]: i })
+                                    className: o()(b.button, { [b.focused]: i })
                                 },
                                 e
                             ),
                             {
                                 children:
                                     null == l || '' === l.trim()
-                                        ? (0, r.jsx)('span', I(O({ className: a()('emoji', 'emoji-text', b.icon) }, e), { children: c }))
+                                        ? (0, r.jsx)('span', I(O({ className: o()('emoji', 'emoji-text', b.icon) }, e), { children: c }))
                                         : (0, r.jsx)('img', {
                                               className: b.icon,
                                               src: l,
@@ -131,8 +131,8 @@ function A(e, t) {
     });
     n.length > 4 && (n.length = 4);
     let i = f.nc.useSetting(),
-        a = (0, d.$R)(t),
-        p = (0, o.e7)([_.Z], () => i && a && (t.isPrivate() || _.Z.can(m.Plq.ADD_REACTIONS, t)), [t, a, i]),
+        o = (0, d.$R)(t),
+        p = (0, a.e7)([_.Z], () => i && o && (t.isPrivate() || _.Z.can(m.Plq.ADD_REACTIONS, t)), [t, o, i]),
         E = (n) => {
             (0, c.rU)(t.id, e.id, (0, u.g1)(n), c.TW.MESSAGE_CONTEXT_MENU);
         };

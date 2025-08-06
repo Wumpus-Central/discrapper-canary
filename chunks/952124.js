@@ -1,8 +1,8 @@
 n.d(t, { Z: () => v });
 var r = n(255367),
     i = n(73800),
-    a = n(442837),
-    o = n(481060),
+    o = n(442837),
+    a = n(481060),
     s = n(100527),
     l = n(906732),
     c = n(279332),
@@ -51,11 +51,11 @@ function v(e) {
         { trackUserProfileAction: T } = (0, m.KZ)(),
         { analyticsLocations: S, newestAnalyticsLocation: A } = (0, l.ZP)(s.Z.USER_PROFILE_OVERFLOW_MENU),
         N = c.J.useExperiment({ location: 'UserSettingsAuthedApps' }, { autoTrackExposure: !0 }).enabled,
-        C = (0, a.e7)([g.Z], () => g.Z.getUserProfile(t.id)),
-        w = null == C ? void 0 : C.application,
-        R = (0, f.Z)({
+        C = (0, o.e7)([g.Z], () => g.Z.getUserProfile(t.id)),
+        R = null == C ? void 0 : C.application,
+        P = (0, f.Z)({
             user: t,
-            application: null != w ? w : void 0,
+            application: null != R ? R : void 0,
             guildId: n,
             onItemClick: () => {
                 (T({
@@ -65,7 +65,7 @@ function v(e) {
                     null == v || v());
             }
         }),
-        P = (0, _.Z)({
+        w = (0, _.Z)({
             user: t,
             guildId: n,
             location: A,
@@ -108,7 +108,7 @@ function v(e) {
                 })
         }),
         x = (0, d.Z)({
-            id: null == w ? void 0 : w.id,
+            id: null == R ? void 0 : R.id,
             label: b.intl.string(b.t['+NP/b2']),
             onSuccess: () =>
                 T({
@@ -116,13 +116,13 @@ function v(e) {
                     analyticsLocations: S
                 })
         }),
-        k = [
+        M = [
             [y],
-            N ? [R] : [],
-            [D, P, L],
+            N ? [P] : [],
+            [D, w, L],
             [
                 (0, u.Z)({
-                    application: w,
+                    application: R,
                     label: b.intl.string(b.t.WqhZsr),
                     onSuccess: () =>
                         T({
@@ -133,18 +133,18 @@ function v(e) {
                 x
             ]
         ];
-    return k.every((e) => e.every((e) => null == e))
+    return M.every((e) => e.every((e) => null == e))
         ? null
-        : (0, r.jsx)(o.yRy, {
+        : (0, r.jsx)(a.yRy, {
               targetElementRef: I,
               renderPopout: (e) => {
                   let { closePopout: t } = e;
-                  return (0, r.jsx)(o.v2r, {
+                  return (0, r.jsx)(a.v2r, {
                       navId: 'user-bot-profile-overflow-menu',
                       onSelect: void 0,
                       onClose: t,
                       'aria-label': b.intl.string(b.t.AXIHpa),
-                      children: k.map((e, t) => (0, r.jsx)(o.kSQ, { children: e.map((e) => e) }, t))
+                      children: M.map((e, t) => (0, r.jsx)(a.kSQ, { children: e.map((e) => e) }, t))
                   });
               },
               children: (e) =>
@@ -154,7 +154,7 @@ function v(e) {
                           {
                               ref: I,
                               action: 'PRESS_OPTIONS',
-                              icon: o.xhG,
+                              icon: a.xhG,
                               tooltipText: b.intl.string(b.t.UKOtz8)
                           },
                           e

@@ -1,7 +1,7 @@
 var r = n(720379),
     i = n(65183),
-    a = i.List,
-    o = i.Repeat,
+    o = i.List,
+    a = i.Repeat,
     s = i.Record,
     l = function () {
         return !0;
@@ -36,7 +36,7 @@ function d(e, t) {
                 );
             }
         ),
-        a(n)
+        o(n)
     );
 }
 function f(e, t) {
@@ -46,12 +46,12 @@ e.exports = {
     generate: function (e, t, n) {
         var i = t.getLength();
         if (!i)
-            return a.of(
+            return o.of(
                 new u({
                     start: 0,
                     end: 0,
                     decoratorKey: null,
-                    leaves: a.of(
+                    leaves: o.of(
                         new c({
                             start: 0,
                             end: 0
@@ -60,7 +60,7 @@ e.exports = {
                 })
             );
         var s = [],
-            _ = n ? n.getDecorations(t, e) : a(o(null, i)),
+            _ = n ? n.getDecorations(t, e) : o(a(null, i)),
             p = t.getCharacterList();
         return (
             r(_, f, l, function (e, t) {
@@ -73,7 +73,7 @@ e.exports = {
                     })
                 );
             }),
-            a(s)
+            o(s)
         );
     }
 };

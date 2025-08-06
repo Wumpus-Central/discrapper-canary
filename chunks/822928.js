@@ -12,8 +12,8 @@ function r(e, t, n) {
     );
 }
 var i = n(65183).List,
-    a = '.';
-function o(e, t, n) {
+    o = '.';
+function a(e, t, n) {
     for (var r = t; r < n; r++) if (null != e[r]) return !1;
     return !0;
 }
@@ -34,7 +34,7 @@ e.exports = (function () {
                     (0, r.strategy)(
                         e,
                         function (e, t) {
-                            o(n, e, t) && (s(n, e, t, i + a + l), l++);
+                            a(n, e, t) && (s(n, e, t, i + o + l), l++);
                         },
                         t
                     );
@@ -43,11 +43,11 @@ e.exports = (function () {
             );
         }),
         (t.getComponentForKey = function (e) {
-            var t = parseInt(e.split(a)[0], 10);
+            var t = parseInt(e.split(o)[0], 10);
             return this._decorators[t].component;
         }),
         (t.getPropsForKey = function (e) {
-            var t = parseInt(e.split(a)[0], 10);
+            var t = parseInt(e.split(o)[0], 10);
             return this._decorators[t].props;
         }),
         e

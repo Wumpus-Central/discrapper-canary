@@ -1,14 +1,14 @@
 var r = n(954955),
     i = n(661233),
-    a = 'Expected a function';
+    o = 'Expected a function';
 e.exports = function (e, t, n) {
-    var o = !0,
+    var a = !0,
         s = !0;
-    if ('function' != typeof e) throw TypeError(a);
+    if ('function' != typeof e) throw TypeError(o);
     return (
-        i(n) && ((o = 'leading' in n ? !!n.leading : o), (s = 'trailing' in n ? !!n.trailing : s)),
+        i(n) && ((a = 'leading' in n ? !!n.leading : a), (s = 'trailing' in n ? !!n.trailing : s)),
         r(e, t, {
-            leading: o,
+            leading: a,
             maxWait: t,
             trailing: s
         })

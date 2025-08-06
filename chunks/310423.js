@@ -1,8 +1,8 @@
 (n.d(t, { Z: () => D }), n(467055), n(388685));
 var r = n(255367),
     i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(442837),
     l = n(481060),
     c = n(911969),
@@ -76,8 +76,8 @@ let N = {
         variant: 'text-md/normal',
         color: 'header-secondary'
     },
-    C = { className: o()('mention', v.mention) };
-function w(e) {
+    C = { className: a()('mention', v.mention) };
+function R(e) {
     return (0, r.jsx)(
         l.Text,
         A(T({}, N), {
@@ -86,11 +86,11 @@ function w(e) {
         })
     );
 }
-function R(e) {
-    var t, n, a, o, s, u, d;
+function P(e) {
+    var t, n, o, a, s, u, d;
     let f,
-        { option: g, channel: v, guild: I, messageId: S, parentOptionKey: P, commandOptionSpec: D, sourceAnalyticsLocations: L } = e,
-        x = null != P ? P + ' ' + g.name : g.name;
+        { option: g, channel: v, guild: I, messageId: S, parentOptionKey: w, commandOptionSpec: D, sourceAnalyticsLocations: L } = e,
+        x = null != w ? w + ' ' + g.name : g.name;
     if (g.type === c.jw.SUB_COMMAND || g.type === c.jw.SUB_COMMAND_GROUP) {
         let e = [
                 (0, r.jsxs)(
@@ -101,10 +101,10 @@ function R(e) {
                     x
                 )
             ],
-            s = Object.fromEntries(null == (t = null != (a = null == D ? void 0 : D.options) ? a : []) ? void 0 : t.map((e) => [e.name, e]));
-        for (let t of null != (o = g.options) ? o : [])
+            s = Object.fromEntries(null == (t = null != (o = null == D ? void 0 : D.options) ? o : []) ? void 0 : t.map((e) => [e.name, e]));
+        for (let t of null != (a = g.options) ? a : [])
             e = e.concat(
-                R({
+                P({
                     option: t,
                     channel: v,
                     guild: I,
@@ -116,7 +116,7 @@ function R(e) {
             );
         return e;
     }
-    let k = g.value;
+    let M = g.value;
     if (null != g.value)
         switch (g.type) {
             case c.jw.USER: {
@@ -193,15 +193,15 @@ function R(e) {
                 break;
             }
             case c.jw.ATTACHMENT:
-                f = w(O.intl.string(O.t.nONJVV));
+                f = R(O.intl.string(O.t.nONJVV));
                 break;
             default: {
                 let e = null == D || null == (s = D.choices) ? void 0 : s.find((e) => e.value === g.value);
-                null != e && (k = null != (u = e.name_localized) ? u : e.name);
+                null != e && (M = null != (u = e.name_localized) ? u : e.name);
             }
         }
     return (
-        null == f && (f = w(null == k ? void 0 : k.toString())),
+        null == f && (f = R(null == M ? void 0 : M.toString())),
         [
             (0, r.jsxs)(
                 i.Fragment,
@@ -221,8 +221,8 @@ function R(e) {
         ]
     );
 }
-function P(e) {
-    var t, n, a, o, _, p;
+function w(e) {
+    var t, n, o, a, _, p;
     let h,
         { channel: m, messageId: E, interactionData: b } = e,
         { analyticsLocations: y } = (0, u.ZP)(),
@@ -240,10 +240,10 @@ function P(e) {
         });
     else {
         let e = [],
-            t = Object.fromEntries((null != (o = null == (n = b.application_command) ? void 0 : n.options) ? o : []).map((e) => [e.name, e]));
+            t = Object.fromEntries((null != (a = null == (n = b.application_command) ? void 0 : n.options) ? a : []).map((e) => [e.name, e]));
         for (let n of null != (_ = b.options) ? _ : [])
             e = e.concat(
-                R({
+                P({
                     option: n,
                     channel: m,
                     guild: S,
@@ -258,7 +258,7 @@ function P(e) {
                 (0, r.jsxs)(
                     l.Text,
                     A(T({}, N), {
-                        children: ['/', null != (p = null == (a = b.application_command) ? void 0 : a.name_localized) ? p : b.name]
+                        children: ['/', null != (p = null == (o = b.application_command) ? void 0 : o.name_localized) ? p : b.name]
                     })
                 ),
                 e
@@ -283,4 +283,4 @@ function P(e) {
         ]
     });
 }
-let D = i.memo(P);
+let D = i.memo(w);

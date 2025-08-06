@@ -3,7 +3,7 @@ var r = n(271383);
 function i(e, t) {
     var n;
     let i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [r.ZP],
-        [a] = i,
-        o = null != t ? a.getMember(t, e.id) : null;
-    return null != (n = null == o ? void 0 : o.avatarDecoration) ? n : e.avatarDecoration;
+        [o] = i,
+        a = null != t ? o.getMember(t, e.id) : null;
+    return null != (n = null == a ? void 0 : a.avatarDecoration) ? n : e.avatarDecoration;
 }

@@ -46,29 +46,29 @@ e.exports = function (e) {
             },
             e.COMMENT('%', '$', { relevance: 0 })
         ],
-        a = {
+        o = {
             begin: /\{/,
             end: /\}/,
             relevance: 0,
             contains: ['self', ...i]
         },
-        o = e.inherit(a, {
+        a = e.inherit(o, {
             relevance: 0,
             endsParent: !0,
-            contains: [a, ...i]
+            contains: [o, ...i]
         }),
         s = {
             begin: /\s+/,
             relevance: 0
         },
-        l = [o],
+        l = [a],
         c = [
             {
                 begin: /\[/,
                 end: /\]/,
                 endsParent: !0,
                 relevance: 0,
-                contains: [a, ...i]
+                contains: [o, ...i]
             }
         ],
         u = function (e, t) {

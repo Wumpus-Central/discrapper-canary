@@ -1,8 +1,8 @@
 n.d(t, { Z: () => E });
 var r = n(255367),
     i = n(73800),
-    a = n(399606),
-    o = n(481060),
+    o = n(399606),
+    a = n(481060),
     s = n(125268),
     l = n(673125),
     c = n(871499),
@@ -76,7 +76,7 @@ function g(e, t) {
     );
 }
 function E() {
-    let e = (0, a.e7)([l.Z], () => !l.Z.visibleOverlayCanvas),
+    let e = (0, o.e7)([l.Z], () => !l.Z.visibleOverlayCanvas),
         t = i.useRef(null);
     return (0, r.jsx)(u.Z, {
         renderPopout: () => null,
@@ -89,7 +89,7 @@ function E() {
                     buttonRef: t,
                     label: d.intl.string(d.t.Cuo44O),
                     isActive: e,
-                    iconComponent: o.tEF,
+                    iconComponent: a.tEF,
                     onClick: s.LT
                 })
             );

@@ -5,8 +5,8 @@ n.d(t, {
 });
 var r = n(367907),
     i = n(368859),
-    a = n(626135),
-    o = n(135899),
+    o = n(626135),
+    a = n(135899),
     s = n(981631),
     l = n(943702);
 function c(e, t, n) {
@@ -39,17 +39,17 @@ function u(e) {
     return e;
 }
 function d(e) {
-    return ((0, i.Z)(e) && e.messageReference.guild_id === o.M_) || (null != e.author && e.author.id === o.c9);
+    return ((0, i.Z)(e) && e.messageReference.guild_id === a.M_) || (null != e.author && e.author.id === a.c9);
 }
 function f() {
     return l;
 }
 let _ = (e) => {
-    a.default.track(
+    o.default.track(
         s.rMx.USER_FLOW_TRANSITION,
         u(
             {
-                flow_type: o.tA,
+                flow_type: a.tA,
                 from_step: e.fromStep,
                 to_step: e.toStep
             },

@@ -2,8 +2,8 @@ n.d(t, { Z: () => c });
 var r = n(255367);
 n(73800);
 var i = n(481060),
-    a = n(388032),
-    o = n(499632);
+    o = n(388032),
+    a = n(499632);
 function s(e, t, n) {
     return (
         t in e
@@ -53,7 +53,7 @@ function c(e) {
         };
     return (0, r.jsxs)(i.P3F, {
         onClick: s,
-        className: o.accessory,
+        className: a.accessory,
         children: [
             (0, r.jsx)(i.d3s, {
                 size: 'xs',
@@ -61,8 +61,8 @@ function c(e) {
             }),
             (0, r.jsx)(i.Text, {
                 variant: 'text-xs/normal',
-                className: o.accessoryText,
-                children: a.intl.string(a.t['2aXnfX'])
+                className: a.accessoryText,
+                children: o.intl.string(o.t['2aXnfX'])
             })
         ]
     });

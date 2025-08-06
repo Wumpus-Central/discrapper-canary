@@ -1,8 +1,8 @@
 let r;
 n.d(t, { Z: () => d });
 var i,
-    a = n(442837),
-    o = n(570140);
+    o = n(442837),
+    a = n(570140);
 function s(e, t, n) {
     return (
         t in e
@@ -21,7 +21,7 @@ function c(e) {
     let { guildId: t } = e;
     r.lastGuildDismissedTime[t] = Date.now();
 }
-class u extends (i = a.ZP.DeviceSettingsStore) {
+class u extends (i = o.ZP.DeviceSettingsStore) {
     initialize() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : l;
         r = e;
@@ -34,4 +34,4 @@ class u extends (i = a.ZP.DeviceSettingsStore) {
     }
 }
 (s(u, 'displayName', 'ApplicationSubscriptionChannelNoticeStore'), s(u, 'persistKey', 'ApplicationSubscriptionChannelNoticeStore'));
-let d = new u(o.Z, { APPLICATION_SUBSCRIPTIONS_CHANNEL_NOTICE_DISMISSED: c });
+let d = new u(a.Z, { APPLICATION_SUBSCRIPTIONS_CHANNEL_NOTICE_DISMISSED: c });

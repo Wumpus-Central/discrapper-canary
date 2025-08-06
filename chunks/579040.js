@@ -1,7 +1,7 @@
 var r = n(745872),
     i = n(166691),
-    a = n(48511),
-    o = n(815329),
+    o = n(48511),
+    a = n(815329),
     s = r('%Map%', !0),
     l = i('Map.prototype.get', !0),
     c = i('Map.prototype.set', !0),
@@ -14,7 +14,7 @@ e.exports =
         var e,
             t = {
                 assert: function (e) {
-                    if (!t.has(e)) throw new o('Side channel does not contain ' + a(e));
+                    if (!t.has(e)) throw new a('Side channel does not contain ' + o(e));
                 },
                 delete: function (t) {
                     if (e) {

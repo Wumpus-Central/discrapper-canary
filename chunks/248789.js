@@ -1,8 +1,8 @@
 (n.d(t, { Y: () => y }), n(388685));
 var r = n(255367),
     i = n(73800),
-    a = n(286379),
-    o = n(442837),
+    o = n(286379),
+    a = n(442837),
     s = n(481060),
     l = n(797614),
     c = n(699516),
@@ -69,7 +69,7 @@ function y(e) {
         y = i.useCallback(() => {
             (0, u.T)(t, [m]);
         }, [t, m]),
-        O = (0, o.e7)([c.Z], () => c.Z.isBlocked(E)),
+        O = (0, a.e7)([c.Z], () => c.Z.isBlocked(E)),
         v = i.useMemo(
             () => ({
                 channelId: t,
@@ -80,7 +80,7 @@ function y(e) {
             [t, m, E]
         );
     i.useEffect(() => {
-        ((0, f.KQ)(b(g({}, v), { viewName: f.pb.SAFETY_WARNING_BANNER })), l.Z.increment({ name: a.V.SAFETY_WARNING_VIEW }));
+        ((0, f.KQ)(b(g({}, v), { viewName: f.pb.SAFETY_WARNING_BANNER })), l.Z.increment({ name: o.V.SAFETY_WARNING_VIEW }));
     }, [v]);
     let I = i.useCallback(
             (e) => {
@@ -93,14 +93,14 @@ function y(e) {
                 async () => {
                     let { default: e } = await Promise.all([n.e('49508'), n.e('9738'), n.e('28433')]).then(n.bind(n, 611446));
                     return (n) => {
-                        let { transitionState: i, onClose: a } = n;
+                        let { transitionState: i, onClose: o } = n;
                         return (0, r.jsx)(e, {
                             otherUserId: E,
                             channelId: t,
                             warningId: m,
                             warningType: d.pj.INAPPROPRIATE_CONVERSATION_TIER_2,
                             transitionState: i,
-                            onClose: a
+                            onClose: o
                         });
                     };
                 },
@@ -118,15 +118,15 @@ function y(e) {
             (0, s.ZDy)(async () => {
                 let { default: e } = await n.e('19538').then(n.bind(n, 699783));
                 return (n) => {
-                    let { transitionState: i, onClose: a } = n;
+                    let { transitionState: i, onClose: o } = n;
                     return (0, r.jsx)(e, {
                         transitionState: i,
                         onBlock: S,
                         onBlockAndReport: A,
                         onCancel: () => {
-                            (null == a || a(), I(f.NM.USER_BANNER_BLOCK_CANCEL));
+                            (null == o || o(), I(f.NM.USER_BANNER_BLOCK_CANCEL));
                         },
-                        onClose: a,
+                        onClose: o,
                         userId: E,
                         channelId: t
                     });

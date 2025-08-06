@@ -6,11 +6,11 @@ e.exports = function (e, t) {
     if (t.isCollapsed()) {
         var n,
             r = t.getAnchorKey(),
-            a = t.getAnchorOffset();
-        return a > 0 ? ((n = e.getBlockForKey(r).getEntityAt(a - 1)) !== e.getBlockForKey(r).getEntityAt(a) ? null : i(e.getEntityMap(), n)) : null;
+            o = t.getAnchorOffset();
+        return o > 0 ? ((n = e.getBlockForKey(r).getEntityAt(o - 1)) !== e.getBlockForKey(r).getEntityAt(o) ? null : i(e.getEntityMap(), n)) : null;
     }
-    var o = t.getStartKey(),
+    var a = t.getStartKey(),
         s = t.getStartOffset(),
-        l = e.getBlockForKey(o);
+        l = e.getBlockForKey(a);
     return ((n = s === l.getLength() ? null : l.getEntityAt(s)), i(e.getEntityMap(), n));
 };

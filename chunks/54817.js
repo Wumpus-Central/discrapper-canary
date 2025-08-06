@@ -2,8 +2,8 @@ n.d(t, { Z: () => m });
 var r = n(255367);
 n(73800);
 var i = n(120356),
-    a = n.n(i),
-    o = n(481060),
+    o = n.n(i),
+    a = n(481060),
     s = n(385499),
     l = n(739566),
     c = n(464891),
@@ -35,21 +35,21 @@ function m(e) {
         onMouseEnter: b,
         onMouseLeave: y,
         children: (0, r.jsx)(d.Z, {
-            className: a()(h.mainContainer, { [h.compact]: n }),
+            className: o()(h.mainContainer, { [h.compact]: n }),
             iconNode: n ? null : (0, r.jsx)(u.S, { src: E }),
             iconContainerClassName: h.iconContainer,
             compact: n,
             children: (0, r.jsxs)('div', {
-                className: a()(h.content, { [h.compact]: n }),
+                className: o()(h.content, { [h.compact]: n }),
                 children: [
                     (0, r.jsx)(c.nD, {
                         message: t,
                         messageClassname: h.spanCorrection,
-                        className: a()(h.usernameContainer, h.spanCorrection, { [h.compact]: n }),
+                        className: o()(h.usernameContainer, h.spanCorrection, { [h.compact]: n }),
                         username: (0, r.jsxs)('div', {
                             className: h.spanCorrection,
                             children: [
-                                (0, r.jsx)(o.Text, {
+                                (0, r.jsx)(a.Text, {
                                     variant: 'text-md/normal',
                                     color: 'text-brand',
                                     tag: 'span',
@@ -66,7 +66,7 @@ function m(e) {
                         showTimestamp: !0
                     }),
                     (0, r.jsx)('div', {
-                        className: a()(h.__invalid_messageContent, { [h.compact]: n }),
+                        className: o()(h.__invalid_messageContent, { [h.compact]: n }),
                         children:
                             t.type === f.uaV.GUILD_INCIDENT_ALERT_MODE_ENABLED
                                 ? p.intl.format(p.t['+m8eDw'], {

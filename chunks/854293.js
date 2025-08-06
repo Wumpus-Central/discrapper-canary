@@ -10,11 +10,11 @@ function n(e) {
 }
 var r,
     i = 'basil',
-    a = function (e) {
+    o = function (e) {
         return 3 === e ? 'v3' : e;
     },
-    o = 'https://js.stripe.com',
-    s = ''.concat(o, '/').concat(i, '/stripe.js'),
+    a = 'https://js.stripe.com',
+    s = ''.concat(a, '/').concat(i, '/stripe.js'),
     l = /^https:\/\/js\.stripe\.com\/v3\/?(\?.*)?$/,
     c = /^https:\/\/js\.stripe\.com\/(v3|[a-z]+)\/stripe\.js(\?.*)?$/,
     u = 'loadStripe.setLoadParameters was called but an existing Stripe.js script already exists in the document; existing script parameters will be used',
@@ -22,7 +22,7 @@ var r,
         return l.test(e) || c.test(e);
     },
     f = function () {
-        for (var e = document.querySelectorAll('script[src^="'.concat(o, '"]')), t = 0; t < e.length; t++) {
+        for (var e = document.querySelectorAll('script[src^="'.concat(a, '"]')), t = 0; t < e.length; t++) {
             var n = e[t];
             if (d(n.src)) return n;
         }
@@ -79,9 +79,9 @@ var r,
     O = function (e, t, n) {
         if (null === e) return null;
         var r = t[0].match(/^pk_test/),
-            o = a(e.version),
+            a = o(e.version),
             s = i;
-        r && o !== s && console.warn('Stripe.js@'.concat(o, ' was loaded on the page, but @stripe/stripe-js@').concat('7.3.1', ' expected Stripe.js@').concat(s, '. This may result in unexpected behavior. For more information, see https://docs.stripe.com/sdks/stripejs-versioning'));
+        r && a !== s && console.warn('Stripe.js@'.concat(a, ' was loaded on the page, but @stripe/stripe-js@').concat('7.3.1', ' expected Stripe.js@').concat(s, '. This may result in unexpected behavior. For more information, see https://docs.stripe.com/sdks/stripejs-versioning'));
         var l = e.apply(void 0, t);
         return (p(l, n), l);
     },

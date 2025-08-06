@@ -1,8 +1,8 @@
 (n.d(t, { Z: () => h }), n(539854));
 var r = n(979554),
     i = n(778787),
-    a = n(803358),
-    o = n(194165),
+    o = n(803358),
+    a = n(194165),
     s = n(889577);
 function l(e, t, n) {
     return (
@@ -62,8 +62,8 @@ function f(e, t) {
         r,
         i = _(e, t);
     if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
@@ -72,14 +72,14 @@ function _(e, t) {
     var n,
         r,
         i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
 let p = (e) => e === r.Z.VARIANTS_GROUP || e === r.Z.EXTERNAL_SKU;
-class h extends a.Z {
+class h extends o.Z {
     static fromServer(e) {
-        var { products: t, logo: n, hero_ranking: r, pdp_bg: a, mobile_bg: l, mobile_banner: u, banner: _, banner_asset: m, hero_banner: g, hero_banner_asset: E, featured_block: b, hero_logo: y, banner_text_color: O, hero_banner_config: v, hero_logo_display_config: I } = e,
+        var { products: t, logo: n, hero_ranking: r, pdp_bg: o, mobile_bg: l, mobile_banner: u, banner: _, banner_asset: m, hero_banner: g, hero_banner_asset: E, featured_block: b, hero_logo: y, banner_text_color: O, hero_banner_config: v, hero_logo_display_config: I } = e,
             T = f(e, ['products', 'logo', 'hero_ranking', 'pdp_bg', 'mobile_bg', 'mobile_banner', 'banner', 'banner_asset', 'hero_banner', 'hero_banner_asset', 'featured_block', 'hero_logo', 'banner_text_color', 'hero_banner_config', 'hero_logo_display_config']);
         return new h(
             d(c({}, super.fromServer(T)), {
@@ -89,7 +89,7 @@ class h extends a.Z {
                 }, []),
                 logo: n,
                 heroRanking: r,
-                pdpBg: a,
+                pdpBg: o,
                 mobileBg: l,
                 mobileBanner: u,
                 banner: _,
@@ -99,7 +99,7 @@ class h extends a.Z {
                 featuredBlock: b,
                 heroLogo: y,
                 bannerTextColor: O,
-                heroBannerConfig: null != v ? o.Z.fromServer(v) : void 0,
+                heroBannerConfig: null != v ? a.Z.fromServer(v) : void 0,
                 heroLogoDisplayConfig: null != I ? s.X.fromServer(I) : void 0
             })
         );

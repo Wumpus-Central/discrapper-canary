@@ -5,8 +5,8 @@ n.d(t, {
     jy: () => T
 });
 var i = n(570140),
-    a = n(519938),
-    o = n(317770),
+    o = n(519938),
+    a = n(317770),
     s = n(928518),
     l = n(592125),
     c = n(819640),
@@ -25,21 +25,21 @@ function O(e, t) {
     if ((0, h.R)() || u.Z.isOpen(t)) return !1;
     if (null != r) {
         let e = r;
-        i.Z.wait(() => a.xv(e));
+        i.Z.wait(() => o.xv(e));
     }
-    (i.Z.wait(() => a.bA(t, y.NYg.ACTIVITY, { channel: e })), (r = t));
+    (i.Z.wait(() => o.bA(t, y.NYg.ACTIVITY, { channel: e })), (r = t));
 }
 function v() {
     let e = r;
-    null != e && u.Z.isOpen(e) && (i.Z.wait(() => a.xv(e)), (r = null));
+    null != e && u.Z.isOpen(e) && (i.Z.wait(() => o.xv(e)), (r = null));
 }
 function I(e) {
     let t = null != e ? e : r;
-    null != t && u.Z.isOpen(t) && i.Z.wait(() => a.Cp(t));
+    null != t && u.Z.isOpen(t) && i.Z.wait(() => o.Cp(t));
 }
 function T(e) {
     let t = null != e ? e : r;
-    null != t && u.Z.isOpen(t) && i.Z.wait(() => a.$Z(t));
+    null != t && u.Z.isOpen(t) && i.Z.wait(() => o.$Z(t));
 }
 function S() {
     let e = m.ZP.getConnectedActivityLocation(),
@@ -56,7 +56,7 @@ function A() {
         ? I()
         : T();
 }
-class N extends o.Z {
+class N extends a.Z {
     _initialize() {
         (f.Z.addChangeListener(S), _.Z.addChangeListener(S), d.Z.addChangeListener(S), p.Z.addChangeListener(S), s.Z.addChangeListener(S), m.ZP.addChangeListener(S), c.Z.addChangeListener(A));
     }

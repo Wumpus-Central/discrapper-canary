@@ -2,8 +2,8 @@ n.d(t, { Z: () => g });
 var r = n(255367);
 n(73800);
 var i = n(120356),
-    a = n.n(i),
-    o = n(442837),
+    o = n.n(i),
+    a = n(442837),
     s = n(481060),
     l = n(385499),
     c = n(430824),
@@ -17,7 +17,7 @@ var i = n(120356),
 function g(e) {
     var t;
     let { message: n, compact: i, usernameHook: g, channel: E } = e,
-        b = (0, o.e7)([c.Z], () => c.Z.getGuild(E.guild_id)),
+        b = (0, a.e7)([c.Z], () => c.Z.getGuild(E.guild_id)),
         y = (0, u.ZP)(n),
         O = g(y),
         {
@@ -28,17 +28,17 @@ function g(e) {
         onMouseEnter: I,
         onMouseLeave: T,
         children: (0, r.jsx)(_.Z, {
-            className: a()(m.mainContainer, { [m.compact]: i }),
+            className: o()(m.mainContainer, { [m.compact]: i }),
             iconNode: i ? null : (0, r.jsx)(f.S, { src: v }),
             iconContainerClassName: m.iconContainer,
             compact: i,
             children: (0, r.jsxs)('div', {
-                className: a()(m.content, { [m.compact]: i }),
+                className: o()(m.content, { [m.compact]: i }),
                 children: [
                     (0, r.jsx)(d.nD, {
                         message: n,
                         messageClassname: m.spanCorrection,
-                        className: a()(m.usernameContainer, m.spanCorrection, { [m.compact]: i }),
+                        className: o()(m.usernameContainer, m.spanCorrection, { [m.compact]: i }),
                         username: (0, r.jsxs)('div', {
                             className: m.spanCorrection,
                             children: [
@@ -59,7 +59,7 @@ function g(e) {
                         showTimestamp: !0
                     }),
                     (0, r.jsx)('div', {
-                        className: a()(m.__invalid_messageContent, { [m.compact]: i }),
+                        className: o()(m.__invalid_messageContent, { [m.compact]: i }),
                         children: h.intl.format(h.t.W0UBIy, {
                             username: y.nick,
                             usernameHook: O,

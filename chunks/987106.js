@@ -2,8 +2,8 @@ n.d(t, { Z: () => S });
 var r = n(255367);
 n(73800);
 var i = n(120356),
-    a = n.n(i),
-    o = n(392711),
+    o = n.n(i),
+    a = n(392711),
     s = n(755721),
     l = n(481060),
     c = n(239091),
@@ -104,13 +104,13 @@ function S(e) {
         { label: n, style: i, disabled: _, emoji: g, url: b, skuId: O } = e,
         { executeStateUpdate: S, visualState: A, isDisabled: N } = (0, h.Ee)(e),
         C = (0, f.s)(O),
-        w = null != O && i === d.ZJ.PREMIUM,
-        R = w && (null == C ? void 0 : C.disabled),
-        P = w ? (null == C ? void 0 : C.label) : n,
+        R = null != O && i === d.ZJ.PREMIUM,
+        P = R && (null == C ? void 0 : C.disabled),
+        w = R ? (null == C ? void 0 : C.label) : n,
         D = null != g,
-        L = null != P && P.length > 0,
+        L = null != w && w.length > 0,
         x = i === d.ZJ.LINK && null != b && b.length > 0,
-        k = A === m.gH.LOADING || (w && null == C);
+        M = A === m.gH.LOADING || (R && null == C);
     return (
         (t = x
             ? () => {
@@ -119,16 +119,16 @@ function S(e) {
                       shouldConfirm: !0
                   });
               }
-            : w
+            : R
               ? null != C && !1 === C.disabled
                   ? C.onClick
-                  : o.noop
+                  : a.noop
               : () => S()),
         (0, r.jsxs)(s.zx, {
             'data-migration-pending': !0,
             color: I(i),
             size: s.zx.Sizes.SMALL,
-            disabled: _ || A === m.gH.DISABLED || N || R,
+            disabled: _ || A === m.gH.DISABLED || N || P,
             onClick: t,
             onContextMenu: (e) => {
                 x && (0, c.vq)(e, (e) => (0, r.jsx)(T, v(y({}, e), { url: b })));
@@ -136,13 +136,13 @@ function S(e) {
             role: x ? 'link' : 'button',
             children: [
                 (0, r.jsxs)('div', {
-                    className: a()(E.content, {
-                        [E.hidden]: k,
-                        [E.premium]: w
+                    className: o()(E.content, {
+                        [E.hidden]: M,
+                        [E.premium]: R
                     }),
-                    'aria-hidden': k,
+                    'aria-hidden': M,
                     children: [
-                        w
+                        R
                             ? (0, r.jsx)('div', {
                                   className: E.shopIcon,
                                   children: (0, r.jsx)(l.EOn, {
@@ -153,7 +153,7 @@ function S(e) {
                             : null,
                         D
                             ? (0, r.jsx)(u.Z, {
-                                  className: a()({ [E.textEmoji]: L }),
+                                  className: o()({ [E.textEmoji]: L }),
                                   src: g.src,
                                   emojiId: g.id,
                                   emojiName: g.name,
@@ -163,7 +163,7 @@ function S(e) {
                         L
                             ? (0, r.jsx)('div', {
                                   className: E.label,
-                                  children: P
+                                  children: w
                               })
                             : null,
                         x
@@ -175,7 +175,7 @@ function S(e) {
                             : null
                     ]
                 }),
-                k
+                M
                     ? (0, r.jsx)('div', {
                           className: E.loading,
                           children: (0, r.jsx)(l.bbz, {

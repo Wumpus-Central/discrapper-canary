@@ -1,6 +1,6 @@
-let r, i, a;
+let r, i, o;
 (n.d(t, { Z: () => T }), n(388685));
-var o,
+var a,
     s = n(442837),
     l = n(570140),
     c = n(372123),
@@ -25,7 +25,7 @@ function m(e, t, n) {
 }
 function g() {
     let e = u.ZP.getRunningDiscordApplicationIds();
-    for (let t of a.filter((t) => !e.includes(t))) {
+    for (let t of o.filter((t) => !e.includes(t))) {
         let e = d.Z.getActiveLibraryApplication(t);
         null != e &&
             l.Z.wait(() => {
@@ -34,7 +34,7 @@ function g() {
                 } catch (e) {}
             });
     }
-    return ((a = e), !1);
+    return ((o = e), !1);
 }
 function E(e) {
     let { applicationId: t, branchId: n } = e,
@@ -43,10 +43,10 @@ function E(e) {
 }
 function b(e) {
     let { applicationId: t, branchId: n } = e,
-        a = (0, f.Tu)(t, n);
+        o = (0, f.Tu)(t, n);
     return (
-        i.delete(a),
-        (r[a] = {
+        i.delete(o),
+        (r[o] = {
             type: h.TzF.DONE,
             timestamp: Date.now()
         }),
@@ -58,23 +58,23 @@ function y(e) {
     for (let e of Object.keys(t)) r[e] = t[e];
 }
 function O(e) {
-    let { applicationId: t, branchId: n, next: a, remote: o } = e,
+    let { applicationId: t, branchId: n, next: o, remote: a } = e,
         s = (0, f.Tu)(t, n);
     ((r[s] = {
         type: h.TzF.CONFLICT,
-        next: a,
-        remote: o
+        next: o,
+        remote: a
     }),
         i.delete(s));
 }
 function v(e) {
     let { applicationId: t, branchId: n } = e,
-        a = (0, f.Tu)(t, n);
-    ((r[a] = { type: h.TzF.ERROR }), i.delete(a));
+        o = (0, f.Tu)(t, n);
+    ((r[o] = { type: h.TzF.ERROR }), i.delete(o));
 }
-class I extends (o = s.ZP.Store) {
+class I extends (a = s.ZP.Store) {
     initialize() {
-        (_.isPlatformEmbedded && p.S(), (r = {}), (i = new Set()), (a = []));
+        (_.isPlatformEmbedded && p.S(), (r = {}), (i = new Set()), (o = []));
     }
     getState(e, t) {
         return r[(0, f.Tu)(e, t)];

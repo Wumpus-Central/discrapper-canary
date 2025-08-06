@@ -6,7 +6,7 @@ n.d(t, {
 var r = n(255367);
 n(73800);
 var i = n(481060);
-function a(e, t, n) {
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -19,7 +19,7 @@ function a(e, t, n) {
         e
     );
 }
-function o(e) {
+function a(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -30,7 +30,7 @@ function o(e) {
                 })
             )),
             r.forEach(function (t) {
-                a(e, t, n[t]);
+                o(e, t, n[t]);
             }));
     }
     return e;
@@ -72,11 +72,11 @@ function c(e) {
 }
 let u = (e) =>
         c(async (t, i) => {
-            let { default: a } = await n.e('44462').then(n.bind(n, 478472));
+            let { default: o } = await n.e('44462').then(n.bind(n, 478472));
             return (n) =>
                 (0, r.jsx)(
-                    a,
-                    l(o({}, n), {
+                    o,
+                    l(a({}, n), {
                         ruleName: e,
                         onConfirm: t,
                         onClose: () => i(n.onClose),
@@ -85,22 +85,22 @@ let u = (e) =>
                 );
         }),
     d = (e, t) =>
-        c(async (i, a) => {
+        c(async (i, o) => {
             let { default: s } = await n.e('92575').then(n.bind(n, 601787));
             return (n) =>
                 (0, r.jsx)(
                     s,
-                    l(o({}, n), {
+                    l(a({}, n), {
                         ruleName: e,
                         keyword: t,
                         onConfirm: i,
-                        onClose: () => a(n.onClose),
-                        onCancel: () => a(n.onClose)
+                        onClose: () => o(n.onClose),
+                        onCancel: () => o(n.onClose)
                     })
                 );
         }),
     f = (e) => (t) =>
-        c(async (i, a) => {
+        c(async (i, o) => {
             let { default: s } = await n.e('83613').then(n.bind(n, 449675)),
                 c = () => {
                     (t(), i());
@@ -108,10 +108,10 @@ let u = (e) =>
             return (t) =>
                 (0, r.jsx)(
                     s,
-                    l(o({ ruleName: e }, t), {
+                    l(a({ ruleName: e }, t), {
                         onConfirm: c,
-                        onClose: () => a(t.onClose),
-                        onCancel: () => a(t.onClose)
+                        onClose: () => o(t.onClose),
+                        onCancel: () => o(t.onClose)
                     })
                 );
         });

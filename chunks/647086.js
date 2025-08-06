@@ -1,10 +1,10 @@
 n.d(t, {
     _: () => i,
-    g: () => a
+    g: () => o
 });
 var r = n(411198);
 let i = '373',
-    a = (0, r.z$)({
+    o = (0, r.z$)({
         id: i,
         name: 'Favorites',
         description: 'The place for all your favorite channels!',

@@ -8,8 +8,8 @@
     n(35282));
 var r = n(255367),
     i = n(73800),
-    a = n(442837),
-    o = n(755721),
+    o = n(442837),
+    a = n(755721),
     s = n(481060),
     l = n(314897),
     c = n(594174),
@@ -70,33 +70,33 @@ function T(e) {
         }, [b, T, n]),
         N = l.default.getId(),
         C = (0, h.a)(S, N),
-        w = i.useMemo(() => (null == C || null == S ? null : S.system === f.I.LEGACY ? d.Z.getExperimentBucketName(C.bucket) : S.system === f.I.APEX ? 'Variant '.concat(C.variantId) : null), [C, S]),
-        R = (0, a.e7)([c.default], () => {
+        R = i.useMemo(() => (null == C || null == S ? null : S.system === f.I.LEGACY ? d.Z.getExperimentBucketName(C.bucket) : S.system === f.I.APEX ? 'Variant '.concat(C.variantId) : null), [C, S]),
+        P = (0, o.e7)([c.default], () => {
             let e = c.default.getCurrentUser();
             return (null == e ? void 0 : e.isStaff()) || (null == e ? void 0 : e.isStaffPersonal());
         });
     if (null == n || null == S) return null;
-    let P = (0, _.a)(S.variants).find((e) => e.value === u),
-        D = +(null != P),
-        L = null != A && null != P && A.variantId === P.value,
+    let w = (0, _.a)(S.variants).find((e) => e.value === u),
+        D = +(null != w),
+        L = null != A && null != w && A.variantId === w.value,
         x = () => {
-            null != P && (L ? (0, f.rX)(S.system, n, null) : (0, f.rX)(S.system, n, P.value));
+            null != w && (L ? (0, f.rX)(S.system, n, null) : (0, f.rX)(S.system, n, w.value));
         },
-        k = (0, r.jsx)(I, { url: t }),
-        j = null;
-    return (1 === D && null != P
-        ? (j = (0, r.jsx)(s.Text, {
+        M = (0, r.jsx)(I, { url: t }),
+        k = null;
+    return (1 === D && null != w
+        ? (k = (0, r.jsx)(s.Text, {
               variant: 'text-xs/normal',
               color: 'text-muted',
-              children: P.label
+              children: w.label
           }))
         : null != C &&
-          (j = (0, r.jsxs)(s.Text, {
+          (k = (0, r.jsxs)(s.Text, {
               variant: 'text-xs/normal',
               color: 'text-muted',
-              children: ['Server Config: ', w]
+              children: ['Server Config: ', R]
           })),
-    R)
+    P)
         ? (0, r.jsxs)('div', {
               className: g.root,
               children: [
@@ -117,10 +117,10 @@ function T(e) {
                                               variant: 'text-md/semibold',
                                               children: S.title
                                           }),
-                                          j
+                                          k
                                       ]
                                   }),
-                                  k
+                                  M
                               ]
                           })
                       })
@@ -131,17 +131,17 @@ function T(e) {
                       gap: 4,
                       justify: 'space-between',
                       children:
-                          null != P
+                          null != w
                               ? (0, r.jsx)(s.Kqy, {
                                     direction: 'horizontal',
                                     align: 'center',
                                     gap: 4,
                                     justify: 'end',
-                                    children: (0, r.jsx)(o.zx, {
+                                    children: (0, r.jsx)(a.zx, {
                                         fullWidth: !0,
                                         onClick: x,
-                                        color: L ? o.zx.Colors.RED : o.zx.Colors.BRAND,
-                                        children: L ? 'Clear Treatment '.concat(P.value) : 'Apply Treatment '.concat(P.value)
+                                        color: L ? a.zx.Colors.RED : a.zx.Colors.BRAND,
+                                        children: L ? 'Clear Treatment '.concat(w.value) : 'Apply Treatment '.concat(w.value)
                                     })
                                 })
                               : (0, r.jsx)('div', {

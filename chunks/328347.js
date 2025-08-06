@@ -1,8 +1,8 @@
 let r;
 n.d(t, { Z: () => h });
 var i,
-    a = n(442837),
-    o = n(570140);
+    o = n(442837),
+    a = n(570140);
 function s(e, t, n) {
     return (
         t in e
@@ -29,7 +29,7 @@ let l = [],
     _ = (e) => {
         e.item.skuId === r && (r = void 0);
     };
-class p extends (i = a.ZP.Store) {
+class p extends (i = o.ZP.Store) {
     get analyticsLocations() {
         return c;
     }
@@ -47,7 +47,7 @@ class p extends (i = a.ZP.Store) {
     }
 }
 s(p, 'displayName', 'CollectiblesShopStore');
-let h = new p(o.Z, {
+let h = new p(a.Z, {
     COLLECTIBLES_SHOP_OPEN: d,
     COLLECTIBLES_SHOP_CLOSE: f,
     COLLECTIBLES_PRODUCT_DETAILS_OPEN: _,

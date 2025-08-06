@@ -1,8 +1,8 @@
 (n.d(t, { Z: () => y }), n(388685));
 var r = n(255367),
     i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(442837),
     l = n(573385),
     c = n(481060),
@@ -68,8 +68,8 @@ function E(e, t) {
         r,
         i = b(e, t);
     if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
@@ -78,15 +78,15 @@ function b(e, t) {
     var n,
         r,
         i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
 let y = function (e) {
     var {
             className: t,
             compact: n = !1,
-            contentOnly: a = !1,
+            contentOnly: o = !1,
             zalgo: p = !0,
             preview: m = !1,
             disableInteraction: b = !1,
@@ -104,16 +104,16 @@ let y = function (e) {
                     right: 4
                 }
             },
-            hasThread: w,
-            isSystemMessage: R,
-            hasReply: P,
+            hasThread: R,
+            isSystemMessage: P,
+            hasReply: w,
             author: D,
             onMouseEnter: L,
             onMouseLeave: x
         } = e,
-        k = E(e, ['className', 'compact', 'contentOnly', 'zalgo', 'preview', 'disableInteraction', 'childrenRepliedMessage', 'childrenExecutedCommand', 'childrenHeader', 'childrenSystemMessage', 'childrenButtons', 'childrenMessageContent', 'childrenAccessories', 'messageRef', 'focusProps', 'hasThread', 'isSystemMessage', 'hasReply', 'author', 'onMouseEnter', 'onMouseLeave']);
-    let j = (0, s.e7)([f.Z], () => ((null == D ? void 0 : D.guildId) == null || (null == D ? void 0 : D.colorRoleId) == null ? null : f.Z.getRole(D.guildId, D.colorRoleId))),
-        M = (0, d.yH)(null == D ? void 0 : D.guildId, j) && (0, u.S2)(D),
+        M = E(e, ['className', 'compact', 'contentOnly', 'zalgo', 'preview', 'disableInteraction', 'childrenRepliedMessage', 'childrenExecutedCommand', 'childrenHeader', 'childrenSystemMessage', 'childrenButtons', 'childrenMessageContent', 'childrenAccessories', 'messageRef', 'focusProps', 'hasThread', 'isSystemMessage', 'hasReply', 'author', 'onMouseEnter', 'onMouseLeave']);
+    let k = (0, s.e7)([f.Z], () => ((null == D ? void 0 : D.guildId) == null || (null == D ? void 0 : D.colorRoleId) == null ? null : f.Z.getRole(D.guildId, D.colorRoleId))),
+        j = (0, d.yH)(null == D ? void 0 : D.guildId, k) && (0, u.S2)(D),
         [U, G] = i.useState(!1),
         B = i.useCallback(
             (e) => {
@@ -140,21 +140,21 @@ let y = function (e) {
                         g(
                             h(
                                 {
-                                    className: o()(t, {
-                                        [_.gradient]: M,
+                                    className: a()(t, {
+                                        [_.gradient]: j,
                                         [_.wrapper]: !0,
-                                        [_.contentOnly]: a,
+                                        [_.contentOnly]: o,
                                         [_.compact]: n,
                                         [_.preview]: m,
                                         [_.cozy]: !n,
                                         [_.zalgo]: p,
-                                        [_.hasThread]: w,
-                                        [_.isSystemMessage]: R,
-                                        [_.hasReply]: P
+                                        [_.hasThread]: R,
+                                        [_.isSystemMessage]: P,
+                                        [_.hasReply]: w
                                     }),
                                     ref: N
                                 },
-                                k
+                                M
                             ),
                             {
                                 role: 'article',

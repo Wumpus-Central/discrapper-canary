@@ -1,16 +1,16 @@
 n.d(t, {
-    C: () => o,
+    C: () => a,
     k: () => s
 });
 var r = n(73800),
     i = n(937615),
-    a = n(388032);
-function o(e) {
+    o = n(388032);
+function a(e) {
     return r.useMemo(() => {
         if (null == e) return;
         let t = null != e.role_id,
             n = e.attachments_count > 0;
-        return t && n ? a.intl.string(a.t.ih4QMT) : t ? a.intl.string(a.t.o9xphY) : n ? a.intl.string(a.t.DWYJub) : void 0;
+        return t && n ? o.intl.string(o.t.ih4QMT) : t ? o.intl.string(o.t.o9xphY) : n ? o.intl.string(o.t.DWYJub) : void 0;
     }, [e]);
 }
 function s(e) {

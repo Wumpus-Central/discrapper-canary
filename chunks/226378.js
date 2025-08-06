@@ -1,8 +1,8 @@
 n.d(t, { NL: () => d });
 var r = n(73800),
     i = n(595519),
-    a = n(527805),
-    o = n(388032);
+    o = n(527805),
+    a = n(388032);
 function s(e, t, n) {
     return (
         t in e
@@ -56,16 +56,16 @@ function u(e, t) {
     );
 }
 function d(e) {
-    let { embeddedActivity: t, joinability: n, currentEmbeddedActivity: i, channel: a } = e;
+    let { embeddedActivity: t, joinability: n, currentEmbeddedActivity: i, channel: o } = e;
     return r.useMemo(
         () =>
             f({
                 embeddedActivity: t,
                 joinability: n,
                 currentEmbeddedActivity: i,
-                channel: a
+                channel: o
             }),
-        [t, n, i, a]
+        [t, n, i, o]
     );
 }
 function f(e) {
@@ -74,47 +74,47 @@ function f(e) {
         d = {
             disabled: !1,
             isJoinAction: !c,
-            text: c ? o.intl.string(o.t.I0v0Qk) : o.intl.string(o.t.sqe0ho),
+            text: c ? a.intl.string(a.t.I0v0Qk) : a.intl.string(a.t.sqe0ho),
             tooltip: void 0
         },
         f = (0, i.WS)(s);
     if (null != t && null != r && t.launchId === r.launchId)
         return u(l({}, d), {
             disabled: !0,
-            text: o.intl.string(o.t.DPfdsr),
-            tooltip: o.intl.string(o.t.wJNK8P)
+            text: a.intl.string(a.t.DPfdsr),
+            tooltip: a.intl.string(a.t.wJNK8P)
         });
     if (c)
         return u(l({}, d), {
             disabled: !f,
-            tooltip: f ? void 0 : o.intl.string(o.t.f41E1t)
+            tooltip: f ? void 0 : a.intl.string(a.t.f41E1t)
         });
-    if (null != n && n !== a.Fw.CAN_JOIN) {
+    if (null != n && n !== o.Fw.CAN_JOIN) {
         let e;
         switch (n) {
-            case a.Fw.NO_USE_EMBEDDED_ACTIVITIES_PERMISSION:
-                e = o.intl.string(o.t.hHGrW1);
+            case o.Fw.NO_USE_EMBEDDED_ACTIVITIES_PERMISSION:
+                e = a.intl.string(a.t.hHGrW1);
                 break;
-            case a.Fw.ACTIVITY_AGE_GATED:
-                e = o.intl.string(o.t['4WuFRE']);
+            case o.Fw.ACTIVITY_AGE_GATED:
+                e = a.intl.string(a.t['4WuFRE']);
                 break;
-            case a.Fw.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS:
-                e = o.intl.string(o.t.uGDCc3);
+            case o.Fw.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS:
+                e = a.intl.string(a.t.uGDCc3);
                 break;
-            case a.Fw.ACTIVITY_NOT_SUPPORTED_ON_OS:
-                e = o.intl.string(o.t.UXoQTk);
+            case o.Fw.ACTIVITY_NOT_SUPPORTED_ON_OS:
+                e = a.intl.string(a.t.UXoQTk);
                 break;
-            case a.Fw.CHANNEL_FULL:
-                e = o.intl.string(o.t.rZfiNj);
+            case o.Fw.CHANNEL_FULL:
+                e = a.intl.string(a.t.rZfiNj);
                 break;
-            case a.Fw.NO_CHANNEL_CONNECT_PERMISSION:
-                e = o.intl.string(o.t.w5SApq);
+            case o.Fw.NO_CHANNEL_CONNECT_PERMISSION:
+                e = a.intl.string(a.t.w5SApq);
                 break;
-            case a.Fw.NO_CHANNEL:
-            case a.Fw.NO_GUILD:
-            case a.Fw.NO_USER:
-            case a.Fw.IS_AFK_CHANNEL:
-                e = o.intl.string(o.t.Etp6uL);
+            case o.Fw.NO_CHANNEL:
+            case o.Fw.NO_GUILD:
+            case o.Fw.NO_USER:
+            case o.Fw.IS_AFK_CHANNEL:
+                e = a.intl.string(a.t.Etp6uL);
         }
         return u(l({}, d), {
             disabled: !0,

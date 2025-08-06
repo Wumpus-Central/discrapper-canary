@@ -2,8 +2,8 @@ n.d(t, { $: () => u });
 var r = n(255367);
 n(73800);
 var i = n(120356),
-    a = n.n(i),
-    o = n(168179),
+    o = n.n(i),
+    a = n(168179),
     s = n(147282);
 let l = 12,
     c = function (e) {
@@ -21,10 +21,10 @@ function u(e) {
                       '--custom-caret-offset-y': ['left', 'right'].includes(i) ? ''.concat(c(u), 'px') : '0px'
                   }
                 : void 0,
-        f = a()(s.caret, s['caret--'.concat(i)], s['caret--'.concat(l)], n);
+        f = o()(s.caret, s['caret--'.concat(i)], s['caret--'.concat(l)], n);
     return (0, r.jsx)('div', {
         className: f,
         style: d,
-        children: (0, r.jsx)(o.v, {})
+        children: (0, r.jsx)(a.v, {})
     });
 }

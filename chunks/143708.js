@@ -2,8 +2,8 @@ n.d(t, { Z: () => m });
 var r = n(255367);
 n(73800);
 var i = n(442837),
-    a = n(144144),
-    o = n(955415),
+    o = n(144144),
+    a = n(955415),
     s = n(665906),
     l = n(314897),
     c = n(592125),
@@ -40,7 +40,7 @@ function m(e) {
             plainText: t,
             rawText: n
         }),
-            null != b && a.Z.startTyping(b));
+            null != b && o.Z.startTyping(b));
     }
     return (
         v
@@ -50,21 +50,21 @@ function m(e) {
                   ? (t = p.intl.string(p.t['57nBt7']))
                   : null != O && I
                     ? ((t = p.intl.formatToPlainString(p.t['9Akp1t'], { username: O })),
-                      (n = (0, r.jsx)(o.Z.Button, {
+                      (n = (0, r.jsx)(a.Z.Button, {
                           onClick: T,
                           children: p.intl.string(p.t.P8tvKC)
                       })))
                     : (t = p.intl.string(p.t['SMJr+f']))),
-        (0, r.jsxs)(o.Z, {
+        (0, r.jsxs)(a.Z, {
             children: [
-                (0, r.jsx)(o.Z.Header, { text: m }),
-                (0, r.jsxs)(o.Z.Body, {
+                (0, r.jsx)(a.Z.Header, { text: m }),
+                (0, r.jsxs)(a.Z.Body, {
                     children: [
                         (0, r.jsxs)('div', {
                             className: h.headerLine,
                             children: [
-                                (0, r.jsx)(o.Z.Icon, { expired: !0 }),
-                                (0, r.jsx)(o.Z.Info, {
+                                (0, r.jsx)(a.Z.Icon, { expired: !0 }),
+                                (0, r.jsx)(a.Z.Info, {
                                     expired: !0,
                                     title: p.intl.string(p.t['Jhx/ub']),
                                     children: t

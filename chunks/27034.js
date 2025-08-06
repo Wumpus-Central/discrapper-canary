@@ -5,8 +5,8 @@ n.d(t, {
 });
 var r = n(255367),
     i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(512722),
     l = n.n(s),
     c = n(867309),
@@ -21,8 +21,8 @@ function h(e, t) {
         r,
         i = m(e, t);
     if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
@@ -31,8 +31,8 @@ function m(e, t) {
     var n,
         r,
         i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
 function g(e) {
@@ -44,31 +44,31 @@ function g(e) {
     };
 }
 function E(e) {
-    var t, n, a, s, c, h;
+    var t, n, o, s, c, h;
     let { header: m, isLargeModal: E, stepProps: b } = g(e),
         { step: y, stepConfigs: O, setBodyNode: v, setFooterNode: I, setModalOverlayNode: T, setReadySlideId: S, premiumBrandRefreshBackgroundClassName: A, selectedSkuId: N } = (0, d.JL)(),
         C = null != N && N in _.y7,
-        w = O.find((e) => e.key === y);
+        R = O.find((e) => e.key === y);
     (i.useEffect(() => {
         T(null);
     }, [y, T]),
-        l()(null != w, 'Unknown step for current payment flow.'));
-    let R = null != (c = null == w || null == (t = w.options) ? void 0 : t.hideSlider) && c,
-        P = null == w || null == (n = w.options) ? void 0 : n.bodyClassName,
-        D = null == w || null == (a = w.options) ? void 0 : a.sliderBodyClassName;
+        l()(null != R, 'Unknown step for current payment flow.'));
+    let P = null != (c = null == R || null == (t = R.options) ? void 0 : t.hideSlider) && c,
+        w = null == R || null == (n = R.options) ? void 0 : n.bodyClassName,
+        D = null == R || null == (o = R.options) ? void 0 : o.sliderBodyClassName;
     return (
         void 0 !== E && E && (D = p.sliderBodyLarge),
         (0, r.jsxs)(r.Fragment, {
             children: [
-                null == (h = null == w || null == (s = w.options) ? void 0 : s.renderHeader) || h ? m : null,
-                w.renderStep(b),
-                null == y || R
+                null == (h = null == R || null == (s = R.options) ? void 0 : s.renderHeader) || h ? m : null,
+                R.renderStep(b),
+                null == y || P
                     ? null
                     : (0, r.jsxs)(r.Fragment, {
                           children: [
                               (0, r.jsx)(u.hzk, {
                                   'data-migration-pending': !0,
-                                  className: o()(P, p.body, A, {
+                                  className: a()(w, p.body, A, {
                                       [p.reviewStep]: y === f.h8.REVIEW,
                                       [p.addPaymentStepForPremium]: y === f.h8.ADD_PAYMENT_STEPS && C
                                   }),
@@ -83,7 +83,7 @@ function E(e) {
                                               {
                                                   id: e.key,
                                                   children: (0, r.jsx)('form', {
-                                                      className: o()(p.sliderBody, D),
+                                                      className: a()(p.sliderBody, D),
                                                       ref: (e) => {
                                                           v(e);
                                                       },

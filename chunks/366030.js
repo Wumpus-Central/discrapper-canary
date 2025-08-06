@@ -1,8 +1,8 @@
 (n.d(t, { Z: () => V }), n(953529), n(472816), n(794429), n(388685));
 var r = n(255367),
     i = n(73800),
-    a = n(512722),
-    o = n.n(a),
+    o = n(512722),
+    a = n.n(o),
     s = n(392711),
     l = n.n(s),
     c = n(442837),
@@ -25,14 +25,14 @@ var r = n(255367),
     A = n(107484),
     N = n(977392),
     C = n(134433),
-    w = n(753194),
-    R = n(458034),
-    P = n(856651),
+    R = n(753194),
+    P = n(458034),
+    w = n(856651),
     D = n(981631),
     L = n(228168),
     x = n(388032),
-    k = n(933466);
-function j(e, t, n) {
+    M = n(933466);
+function k(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -45,7 +45,7 @@ function j(e, t, n) {
         e
     );
 }
-function M(e) {
+function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -56,7 +56,7 @@ function M(e) {
                 })
             )),
             r.forEach(function (t) {
-                j(e, t, n[t]);
+                k(e, t, n[t]);
             }));
     }
     return e;
@@ -86,19 +86,19 @@ function G(e, t) {
 }
 function B(e) {
     let t,
-        { connectionType: n, connectionMetadataField: i, operator: a, value: o, description: s } = e;
+        { connectionType: n, connectionMetadataField: i, operator: o, value: a, description: s } = e;
     if (null != s)
-        switch (a) {
-            case P.iO.LESS_THAN:
+        switch (o) {
+            case w.iO.LESS_THAN:
                 t = x.intl.format(x.t['2p7dAw'], {
                     description: s,
-                    count: Math.max(0, Number(o) - 1)
+                    count: Math.max(0, Number(a) - 1)
                 });
                 break;
-            case P.iO.GREATER_THAN:
+            case w.iO.GREATER_THAN:
                 t = x.intl.format(x.t['2p7dAw'], {
                     description: s,
-                    count: Math.max(0, Number(o) + 1)
+                    count: Math.max(0, Number(a) + 1)
                 });
                 break;
             default:
@@ -108,18 +108,18 @@ function B(e) {
         t = (0, S.n_)({
             connectionType: n,
             connectionMetadataField: i,
-            operator: a,
-            value: o
+            operator: o,
+            value: a
         });
     return null == t
         ? null
         : (0, r.jsxs)('div', {
-              className: k.popoutCheck,
+              className: M.popoutCheck,
               children: [
                   (0, r.jsx)(_.dz2, {
                       size: 'md',
                       color: 'currentColor',
-                      className: k.popoutCheckIcon
+                      className: M.popoutCheckIcon
                   }),
                   (0, r.jsx)(_.Text, {
                       variant: 'text-xs/medium',
@@ -133,12 +133,12 @@ function Z(e) {
     let { eligibilityStates: t } = e,
         n = (0, m.ZP)(),
         i = (0, _.dQu)(u.Z.unsafe_rawColors.GREEN_330).hex(),
-        a = l().groupBy(t, (e) => ''.concat(e.connection_type).concat(null != e.application_id ? ':'.concat(e.application_id) : ''));
+        o = l().groupBy(t, (e) => ''.concat(e.connection_type).concat(null != e.application_id ? ':'.concat(e.application_id) : ''));
     return (0, r.jsx)(r.Fragment, {
-        children: Object.keys(a).map((e) => {
+        children: Object.keys(o).map((e) => {
             var t, s;
             let l,
-                c = a[e],
+                c = o[e],
                 u = c.filter((e) => null != e.operator),
                 f = c.find((e) => null != e.application),
                 p = g.Z.get(e),
@@ -146,36 +146,36 @@ function Z(e) {
                 E = (null == m ? void 0 : m.bot) != null ? new v.Z(m.bot) : null;
             return (
                 S.SJ.includes(null != (t = null == m ? void 0 : m.id) ? t : '')
-                    ? (l = (0, r.jsx)(w.Z, {
-                          className: k.botTag,
+                    ? (l = (0, r.jsx)(R.Z, {
+                          className: M.botTag,
                           color: i,
                           size: 16
                       }))
                     : null != E &&
                       (l = (0, r.jsx)(y.Z, {
-                          className: k.botTag,
+                          className: M.botTag,
                           verified: E.isVerifiedBot()
                       })),
                 (0, r.jsxs)(
                     'div',
                     {
-                        className: k.popoutChecksGroup,
+                        className: M.popoutChecksGroup,
                         children: [
                             (0, r.jsxs)('div', {
-                                className: k.popoutCheckGroupName,
+                                className: M.popoutCheckGroupName,
                                 children: [
                                     null != p
                                         ? (0, r.jsx)('img', {
                                               src: (0, d.wj)(n) ? p.icon.darkSVG : p.icon.lightSVG,
                                               alt: '',
-                                              className: k.popoutCheckGroupPlatformIcon
+                                              className: M.popoutCheckGroupPlatformIcon
                                           })
                                         : null,
                                     null != E
                                         ? (0, r.jsx)(h.Z, {
                                               user: E,
                                               size: _.EFr.SIZE_20,
-                                              className: k.popoutCheckGroupPlatformIcon
+                                              className: M.popoutCheckGroupPlatformIcon
                                           })
                                         : null,
                                     (0, r.jsx)(_.Text, {
@@ -187,21 +187,21 @@ function Z(e) {
                                 ]
                             }),
                             u.map((e) => {
-                                let { connection_type: t, connection_metadata_field: n, operator: i, value: a, description: s } = e;
+                                let { connection_type: t, connection_metadata_field: n, operator: i, value: o, description: s } = e;
                                 return (
-                                    o()(null != n, 'connectionMetadataField is null'),
-                                    o()(null != i, 'operator is null'),
-                                    o()(null != a, 'value is null'),
+                                    a()(null != n, 'connectionMetadataField is null'),
+                                    a()(null != i, 'operator is null'),
+                                    a()(null != o, 'value is null'),
                                     (0, r.jsx)(
                                         B,
                                         {
                                             connectionType: t,
                                             connectionMetadataField: n,
                                             operator: i,
-                                            value: a,
+                                            value: o,
                                             description: s
                                         },
-                                        ''.concat(t, ':').concat(n, ':').concat(i, ':').concat(a)
+                                        ''.concat(t, ':').concat(n, ':').concat(i, ':').concat(o)
                                     )
                                 );
                             })
@@ -215,11 +215,11 @@ function Z(e) {
 }
 function F(e) {
     let t,
-        { onGetRolesClicked: n, onOpenProfile: a, eligibilityStates: o, userId: s, roleId: l, channelId: u, guildId: d } = e;
+        { onGetRolesClicked: n, onOpenProfile: o, eligibilityStates: a, userId: s, roleId: l, channelId: u, guildId: d } = e;
     i.useEffect(() => {
         T.default.track(
             D.rMx.PASSPORT_ROLE_POPOUT_VIEWED,
-            M(
+            j(
                 {
                     other_user_id: s,
                     role_id: l
@@ -238,37 +238,37 @@ function F(e) {
         [d, l]
     );
     return (
-        (t = 1 === o.length && 1 === o[0].length ? x.intl.string(x.t.jDym4O) : 1 === o.length ? x.intl.format(x.t['0eBj39'], {}) : x.intl.format(x.t.D7uftL, {})),
+        (t = 1 === a.length && 1 === a[0].length ? x.intl.string(x.t.jDym4O) : 1 === a.length ? x.intl.format(x.t['0eBj39'], {}) : x.intl.format(x.t.D7uftL, {})),
         (0, r.jsxs)('div', {
-            className: k.popout,
+            className: M.popout,
             children: [
                 (0, r.jsx)('div', {
-                    className: k.popoutHeaderContainer,
+                    className: M.popoutHeaderContainer,
                     children: (0, r.jsx)(_.Text, {
                         variant: 'text-xs/normal',
                         color: 'text-default',
-                        className: k.popoutHeaderText,
+                        className: M.popoutHeaderText,
                         children: t
                     })
                 }),
                 (0, r.jsx)('div', {
-                    className: k.popoutChecks,
-                    children: (0, r.jsx)(Z, { eligibilityStates: o.flat() })
+                    className: M.popoutChecks,
+                    children: (0, r.jsx)(Z, { eligibilityStates: a.flat() })
                 }),
                 (0, r.jsxs)('div', {
-                    className: k.buttonContainer,
+                    className: M.buttonContainer,
                     children: [
                         p
                             ? null
                             : (0, r.jsx)(f.zx, {
-                                  className: k.getRolesButton,
+                                  className: M.getRolesButton,
                                   onClick: n,
                                   children: x.intl.string(x.t.T1t1WV)
                               }),
                         (0, r.jsx)(f.zx, {
-                            className: k.viewConnectionsButton,
+                            className: M.viewConnectionsButton,
                             color: f.zx.Colors.PRIMARY,
-                            onClick: a,
+                            onClick: o,
                             children: x.intl.string(x.t.hgKDnJ)
                         })
                     ]
@@ -278,36 +278,36 @@ function F(e) {
     );
 }
 function V(e) {
-    let { userId: t, messageId: n, guild: a, channel: s } = e,
+    let { userId: t, messageId: n, guild: o, channel: s } = e,
         { analyticsLocations: l } = (0, b.ZP)(),
-        u = (0, N.Z)(a, t, s.id, !0),
+        u = (0, N.Z)(o, t, s.id, !0),
         d = (0, c.e7)([A.Z], () => A.Z.getGuildRoleConnectionEligibility(null == u ? void 0 : u.id)),
         [f, h] = i.useState(null == d),
         m = i.useRef(null);
     if (null == u) return null;
     async function g() {
-        (o()(null != u, 'visibleConnectionsRole is null'), f && null == d && (await p.Z.fetchGuildRoleConnectionsEligibility(a.id, u.id), h(!1)));
+        (a()(null != u, 'visibleConnectionsRole is null'), f && null == d && (await p.Z.fetchGuildRoleConnectionsEligibility(o.id, u.id), h(!1)));
     }
     function E() {
         return Promise.resolve((e) => {
             let { closePopout: i } = e;
             return null == d
                 ? (0, r.jsx)(r.Fragment, {})
-                : (o()(null != u, 'visibleConnectionsRole is null'),
+                : (a()(null != u, 'visibleConnectionsRole is null'),
                   (0, r.jsx)(F, {
                       eligibilityStates: d,
                       userId: t,
                       roleId: u.id,
                       channelId: s.id,
-                      guildId: a.id,
+                      guildId: o.id,
                       onGetRolesClicked: () => {
-                          (0, R.Am)(a.id);
+                          (0, P.Am)(o.id);
                       },
                       onOpenProfile: () => {
                           ((0, O.openUserProfileModal)({
                               userId: t,
                               messageId: n,
-                              guildId: a.id,
+                              guildId: o.id,
                               channelId: s.id,
                               roleId: u.id,
                               subsection: L.Tb.CONNECTIONS,
@@ -331,10 +331,10 @@ function V(e) {
                     (0, r.jsxs)(
                         'div',
                         G(
-                            M(
+                            j(
                                 {
                                     ref: m,
-                                    className: k.badge
+                                    className: M.badge
                                 },
                                 t,
                                 e
@@ -342,14 +342,14 @@ function V(e) {
                             {
                                 children: [
                                     (0, r.jsx)(C.Z, {
-                                        className: k.badgeVerifiedIcon,
+                                        className: M.badgeVerifiedIcon,
                                         size: 16,
                                         color: u.colorString
                                     }),
                                     (0, r.jsx)(_.Text, {
                                         variant: 'text-xs/bold',
                                         color: 'header-primary',
-                                        className: k.roleName,
+                                        className: M.roleName,
                                         children: u.name
                                     })
                                 ]

@@ -1,8 +1,8 @@
 (n.d(t, { f: () => _ }), n(388685));
 var r = n(255367),
     i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(392711),
     l = n(793030),
     c = n(147479),
@@ -28,7 +28,7 @@ function _(e) {
 }
 function p(e) {
     let { controls: t, children: n } = e,
-        [a, u] = i.useState(!1),
+        [o, u] = i.useState(!1),
         [f, _] = i.useState(!1),
         p = i.useRef(null),
         h = i.useRef(null),
@@ -51,10 +51,10 @@ function p(e) {
         }, []),
         (0, r.jsxs)(l.y5, {
             children: [
-                (0, r.jsx)('div', { className: o()(d.bodySpacerTop, { [d.bodySpacerTopBorder]: f && null == t }) }),
+                (0, r.jsx)('div', { className: a()(d.bodySpacerTop, { [d.bodySpacerTopBorder]: f && null == t }) }),
                 null != t &&
                     (0, r.jsx)('header', {
-                        className: o()(d.bodyControls, { [d.bodyControlsWithFade]: a }),
+                        className: a()(d.bodyControls, { [d.bodyControlsWithFade]: o }),
                         children: t
                     }),
                 (0, r.jsx)(c.yW, {
@@ -63,11 +63,11 @@ function p(e) {
                     onScroll: m,
                     children: (0, r.jsx)('main', {
                         ref: h,
-                        className: o()(d.bodyInner, { [d.bodyInnerShouldScroll]: f }),
+                        className: a()(d.bodyInner, { [d.bodyInnerShouldScroll]: f }),
                         children: n
                     })
                 }),
-                (0, r.jsx)('div', { className: o()(d.bodySpacerBottom, { [d.bodySpacerBottomBorder]: f }) })
+                (0, r.jsx)('div', { className: a()(d.bodySpacerBottom, { [d.bodySpacerBottomBorder]: f }) })
             ]
         })
     );

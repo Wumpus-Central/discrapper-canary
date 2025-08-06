@@ -1,13 +1,13 @@
 (n.d(t, {
-    $: () => k,
+    $: () => M,
     Z: () => x
 }),
     n(388685),
     n(415506));
 var r,
     i = n(255367),
-    a = n(73800),
-    o = n(688642),
+    o = n(73800),
+    a = n(688642),
     s = n(442837),
     l = n(755721),
     c = n(558381),
@@ -68,7 +68,7 @@ function C(e, t) {
     }
     return n;
 }
-function w(e, t) {
+function R(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -79,13 +79,13 @@ function w(e, t) {
         e
     );
 }
-class R extends (r = a.Component) {
+class P extends (r = o.Component) {
     get analyticsLocation() {
         let {
             analyticsContext: { location: e },
             analyticsSection: t
         } = this.props;
-        return w(N({}, e), {
+        return R(N({}, e), {
             section: null != t ? t : I.jXE.APPLICATION_EMBED,
             object: I.qAy.CARD
         });
@@ -104,11 +104,11 @@ class R extends (r = a.Component) {
         });
     }
     render() {
-        let { sku: e, storeListing: t, width: n, fetchFailed: r, renderFallback: a } = this.props,
+        let { sku: e, storeListing: t, width: n, fetchFailed: r, renderFallback: o } = this.props,
             s = n > p.aL;
         return null == e || null == t
             ? r
-                ? a()
+                ? o()
                 : (0, i.jsx)(p.OR, { isHorizontal: s })
             : e.productLine === I.POd.COLLECTIBLES
               ? (0, i.jsx)(u.Z, {
@@ -117,7 +117,7 @@ class R extends (r = a.Component) {
                 })
               : (0, i.jsx)(u.Z, {
                     section: I.jXE.APPLICATION_EMBED,
-                    children: (0, i.jsx)(o.rU, {
+                    children: (0, i.jsx)(a.rU, {
                         onClick: this.handleLinkClick,
                         to: this.getStoreListingLocation(),
                         onMouseEnter: this.handleMouseEnter,
@@ -156,7 +156,7 @@ class R extends (r = a.Component) {
                 null != t && t(e);
             }),
             A(this, 'renderApplicationTile', (e, t) => {
-                let { inLibrary: n, width: r, renderCustomTitle: a, renderCustomTagline: o, renderCustomMedia: s } = this.props,
+                let { inLibrary: n, width: r, renderCustomTitle: o, renderCustomTagline: a, renderCustomMedia: s } = this.props,
                     { playing: l, muted: c } = this.state,
                     u = r > p.aL;
                 return (0, i.jsx)(_.Z, {
@@ -167,23 +167,23 @@ class R extends (r = a.Component) {
                     inLibrary: n,
                     onToggleMute: this.handleToggleMute,
                     renderCustomActions: () => this.renderActions(e),
-                    renderCustomTitle: a,
-                    renderCustomTagline: o,
+                    renderCustomTitle: o,
+                    renderCustomTagline: a,
                     renderCustomMedia: s,
                     isHorizontal: u,
                     isEmbed: !0
                 });
             }),
             A(this, 'renderActions', (e) => {
-                let { inLibrary: t, application: n, skuId: r, libraryApplication: a, renderCustomActions: o } = this.props;
-                if (null != o)
+                let { inLibrary: t, application: n, skuId: r, libraryApplication: o, renderCustomActions: a } = this.props;
+                if (null != a)
                     return (0, i.jsx)('div', {
                         className: S.tileActions,
-                        children: o()
+                        children: a()
                     });
                 if (null == n) return null;
                 let s = null != n && n.primarySkuId === r,
-                    c = null != a && a.hasFlag(I.eHb.HIDDEN);
+                    c = null != o && o.hasFlag(I.eHb.HIDDEN);
                 return (0, i.jsxs)('div', {
                     className: S.tileActions,
                     children: [
@@ -209,8 +209,8 @@ class R extends (r = a.Component) {
             }));
     }
 }
-A(R, 'defaultProps', { renderFallback: I.dG4 });
-let P = [y.Z, b.Z, E.Z, O.Z];
+A(P, 'defaultProps', { renderFallback: I.dG4 });
+let w = [y.Z, b.Z, E.Z, O.Z];
 function D(e) {
     let { skuId: t } = e,
         n = y.Z.get(t),
@@ -224,6 +224,6 @@ function D(e) {
         libraryApplication: null != n ? E.Z.getLibraryApplication(n.applicationId, n.applicationId, !0) : null
     };
 }
-let L = (0, m.Z)((0, h.Z)(R)),
-    x = s.ZP.connectStores(P, D)(L),
-    k = (0, h.Z)(s.ZP.connectStores(P, D)(R));
+let L = (0, m.Z)((0, h.Z)(P)),
+    x = s.ZP.connectStores(w, D)(L),
+    M = (0, h.Z)(s.ZP.connectStores(w, D)(P));

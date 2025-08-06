@@ -2,8 +2,8 @@
 var r = n(255367);
 n(73800);
 var i = n(442837),
-    a = n(481060),
-    o = n(346486),
+    o = n(481060),
+    a = n(346486),
     s = n(545594),
     l = n(314897),
     c = n(271383),
@@ -29,7 +29,7 @@ function m(e) {
         children: [
             b(),
             (0, r.jsx)(s.i, {
-                bannerIcon: (0, r.jsx)(a.YlB, {
+                bannerIcon: (0, r.jsx)(o.YlB, {
                     size: 'md',
                     color: 'currentColor',
                     className: h.bannerIcon
@@ -38,9 +38,9 @@ function m(e) {
                 bannerSubtext: p.intl.format(p.t['4ZwD5O'], { link: _.cu }),
                 textStyles: h.bannerContainer,
                 headerStyles: h.bannerHeader,
-                children: (0, r.jsx)(a.Text, {
+                children: (0, r.jsx)(o.Text, {
                     variant: 'text-sm/semibold',
-                    children: (0, r.jsx)(o.Z, {
+                    children: (0, r.jsx)(a.Z, {
                         deadline: new Date(n),
                         showUnits: !0,
                         stopAtOneSec: !0

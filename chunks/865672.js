@@ -10,8 +10,8 @@
     n(539854));
 var r = n(255367),
     i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(442837),
     l = n(607070),
     c = n(981631),
@@ -19,7 +19,7 @@ var r = n(255367),
 let d = RegExp('\\p{Emoji_Presentation}', 'gu');
 function f(e) {
     var t, n, r;
-    let { colorStrings: i, useReducedMotion: a, roleStyle: s, includeConvenienceGlow: l, animateGradient: d } = e,
+    let { colorStrings: i, useReducedMotion: o, roleStyle: s, includeConvenienceGlow: l, animateGradient: d } = e,
         f = 'username' === s,
         _ = 'dot' === s,
         p = f && l,
@@ -32,14 +32,14 @@ function f(e) {
         g = (null == i ? void 0 : i.tertiaryColor) != null ? u.threeColorGradient : u.twoColorGradient;
     return {
         gradientStyle: m,
-        gradientClassname: o()(g, {
+        gradientClassname: a()(g, {
             [u.usernameGradient]: f,
             [u.convenienceGlowGradient]: p,
             [u.convenienceGlowGradientActive]: p && d,
-            [u.gradientDotAnimation]: !a && _,
+            [u.gradientDotAnimation]: !o && _,
             [u.animateGradient]: d && f
         }),
-        gradientGlowClassname: o()(g, u.usernameGlow, {
+        gradientGlowClassname: a()(g, u.usernameGlow, {
             [u.usernameGradient]: f,
             [u.animateGradient]: d && f,
             [u.usernameGlowActive]: f && d
@@ -47,30 +47,30 @@ function f(e) {
     };
 }
 function _(e) {
-    let { colorStrings: t, roleStyle: n, includeConvenienceGlow: r, animateGradient: a } = e,
-        o = (0, s.e7)([l.Z], () => l.Z.useReducedMotion);
+    let { colorStrings: t, roleStyle: n, includeConvenienceGlow: r, animateGradient: o } = e,
+        a = (0, s.e7)([l.Z], () => l.Z.useReducedMotion);
     return i.useMemo(
         () =>
             f({
                 colorStrings: t,
-                useReducedMotion: o,
+                useReducedMotion: a,
                 roleStyle: n,
                 includeConvenienceGlow: r,
-                animateGradient: a
+                animateGradient: o
             }),
-        [t, n, r, o, a]
+        [t, n, r, a, o]
     );
 }
 function p(e, t, n) {
     return i.useMemo(() => {
         let i = [e, t, n].filter((e) => null != e),
-            a = i.length >= 2,
-            o = i.length > 1 ? 100 / (i.length - 1) : 0,
+            o = i.length >= 2,
+            a = i.length > 1 ? 100 / (i.length - 1) : 0,
             s = i.map((e, t) =>
                 (0, r.jsx)(
                     'stop',
                     {
-                        offset: ''.concat(t * o, '%'),
+                        offset: ''.concat(t * a, '%'),
                         style: { stopColor: e }
                     },
                     t
@@ -78,7 +78,7 @@ function p(e, t, n) {
             ),
             l = i.join('');
         return {
-            hasGradient: a,
+            hasGradient: o,
             stops: s,
             gradientId: 'dotGradient-'.concat(l),
             animatedGradientId: 'dotAnimatedGradient-'.concat(l)
@@ -91,16 +91,16 @@ function h(e) {
         if (null == e) return e;
         let n = new RegExp(d),
             i = [],
-            a = 0;
+            o = 0;
         for (; null !== (t = n.exec(e)); )
-            (t.index > a && i.push(e.slice(a, t.index)),
+            (t.index > o && i.push(e.slice(o, t.index)),
                 i.push(
                     (0, r.jsx)('span', {
                         className: u.emoji,
                         children: t[0]
                     })
                 ),
-                (a = n.lastIndex));
-        return (a < e.length && i.push(e.slice(a)), i);
+                (o = n.lastIndex));
+        return (o < e.length && i.push(e.slice(o)), i);
     }, [e]);
 }

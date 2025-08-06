@@ -13,8 +13,8 @@ var r = a(469359),
     R = a(954211),
     d = a(886115),
     N = a(873567),
-    f = a(454463),
-    A = a(163162);
+    A = a(454463),
+    f = a(163162);
 let T = (0, o._I)((t = {}) => {
     let e = {
         console: !0,
@@ -61,7 +61,7 @@ let T = (0, o._I)((t = {}) => {
                             if ((0, i.s3)() !== o) return;
                             let r = 'object' == typeof T ? T.serializeAttribute : void 0,
                                 _ = 'object' == typeof T && 'number' == typeof T.maxStringLength ? T.maxStringLength : void 0;
-                            (_ && _ > 1024 && (f.X && u.kg.warn(`\`dom.maxStringLength\` cannot exceed 1024, but a value of ${_} was configured. Sentry will use 1024 instead.`), (_ = 1024)), 'string' == typeof r && (r = [r]));
+                            (_ && _ > 1024 && (A.X && u.kg.warn(`\`dom.maxStringLength\` cannot exceed 1024, but a value of ${_} was configured. Sentry will use 1024 instead.`), (_ = 1024)), 'string' == typeof r && (r = [r]));
                             try {
                                 var n;
                                 let o = t.event,
@@ -170,7 +170,7 @@ let T = (0, o._I)((t = {}) => {
                             if ((0, i.s3)() !== h) return;
                             let e = t.from,
                                 a = t.to,
-                                r = (0, N.en)(A.m9.location.href),
+                                r = (0, N.en)(f.m9.location.href),
                                 _ = e ? (0, N.en)(e) : void 0,
                                 n = (0, N.en)(a);
                             ((_ && _.path) || (_ = r),

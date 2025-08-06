@@ -1,13 +1,13 @@
 (n.d(t, {
     Z: () => U,
-    i: () => k
+    i: () => M
 }),
     n(388685),
     n(539854));
 var r = n(255367),
     i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(748780),
     l = n(442837),
     c = n(704215),
@@ -30,9 +30,9 @@ var r = n(255367),
     A = n(967128),
     N = n(981631),
     C = n(231873),
-    w = n(388032),
-    R = n(646863);
-function P(e, t, n) {
+    R = n(388032),
+    P = n(646863);
+function w(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -56,7 +56,7 @@ function D(e) {
                 })
             )),
             r.forEach(function (t) {
-                P(e, t, n[t]);
+                w(e, t, n[t]);
             }));
     }
     return e;
@@ -84,8 +84,8 @@ function x(e, t) {
         e
     );
 }
-function k(e) {
-    let { className: t, iconUrl: n, icon: a, header: s, completed: l, onClick: c } = e,
+function M(e) {
+    let { className: t, iconUrl: n, icon: o, header: s, completed: l, onClick: c } = e,
         [d, _] = i.useState(!1),
         p = (0, f.Z)(l);
     return (
@@ -93,19 +93,19 @@ function k(e) {
             null != p && l !== p && (_(!0), setTimeout(() => _(!1), 1000));
         }, [l, p]),
         (0, r.jsxs)(u.P3F, {
-            className: o()(t, R.card, { [R.completed]: l }),
+            className: a()(t, P.card, { [P.completed]: l }),
             onClick: c,
             children: [
-                null != a
-                    ? a
+                null != o
+                    ? o
                     : (0, r.jsx)('img', {
-                          className: R.icon,
+                          className: P.icon,
                           src: n,
                           alt: ''
                       }),
                 (0, r.jsx)(u.Text, {
                     color: 'header-primary',
-                    className: o()(R.cardTextContainer, R.cardHeader),
+                    className: a()(P.cardTextContainer, P.cardHeader),
                     variant: 'text-sm/normal',
                     children: s
                 }),
@@ -113,17 +113,17 @@ function k(e) {
                     ? (0, r.jsx)(u.dz2, {
                           size: 'md',
                           color: 'currentColor',
-                          className: o()(R.checkmark, { [R.animate]: d })
+                          className: a()(P.checkmark, { [P.animate]: d })
                       })
                     : (0, r.jsx)(O.Z, {
-                          className: R.arrow,
+                          className: P.arrow,
                           direction: O.Z.Directions.RIGHT
                       })
             ]
         })
     );
 }
-function j(e) {
+function k(e) {
     let t = i.useCallback(() => {
             (_.ZP.trackWithMetadata(N.rMx.SERVER_SETUP_CTA_CLICKED, {
                 setup_type: C.Ft.CHANNEL_WELCOME,
@@ -143,7 +143,7 @@ function j(e) {
                             );
                     }));
         }, [e]),
-        a = i.useCallback(() => {
+        o = i.useCallback(() => {
             (_.ZP.trackWithMetadata(N.rMx.SERVER_SETUP_CTA_CLICKED, {
                 setup_type: C.Ft.CHANNEL_WELCOME,
                 action: C.j7.SEND_MESSAGE
@@ -153,7 +153,7 @@ function j(e) {
                     channelId: N.lds
                 }));
         }, []),
-        o = i.useCallback(() => {
+        a = i.useCallback(() => {
             (_.ZP.trackWithMetadata(N.rMx.SERVER_SETUP_CTA_CLICKED, {
                 setup_type: C.Ft.CHANNEL_WELCOME,
                 action: C.j7.PERSONALIZE_SERVER
@@ -162,8 +162,8 @@ function j(e) {
         }, [e]);
     return {
         handleInvite: t,
-        handleMessage: a,
-        handlePersonalize: o,
+        handleMessage: o,
+        handlePersonalize: a,
         handleDownload: i.useCallback(() => {
             (_.ZP.trackWithMetadata(N.rMx.SERVER_SETUP_CTA_CLICKED, {
                 setup_type: C.Ft.CHANNEL_WELCOME,
@@ -190,7 +190,7 @@ function j(e) {
         }, [e])
     };
 }
-function M(e) {
+function j(e) {
     let t = (0, d.Z)(() => new s.Z.Value(0)),
         n = (0, d.Z)(() => new s.Z.Value(0)),
         r = (0, d.Z)(() => [new s.Z.Value(0), new s.Z.Value(0), new s.Z.Value(0), new s.Z.Value(0)]);
@@ -248,7 +248,7 @@ function M(e) {
 function U(e) {
     let { channel: t } = e,
         n = (0, l.e7)([b.Z], () => (null != t ? b.Z.getGuild(t.getGuildId()) : null), [t]),
-        a = null != n && S.default.extractTimestamp(n.id) < Date.now() - N._8R,
+        o = null != n && S.default.extractTimestamp(n.id) < Date.now() - N._8R,
         c = (0, l.e7)([E.default], () => (null == n ? void 0 : n.ownerId) === E.default.getId(), [n]),
         { canInvite: d, canManageGuild: f, canMessage: _ } = (0, p.TE)(t, n),
         h = (0, l.e7)([y.default], () => {
@@ -256,9 +256,9 @@ function U(e) {
             return (null == (e = y.default.getCurrentUser()) ? void 0 : e.desktop) === !0 || (null == (t = y.default.getCurrentUser()) ? void 0 : t.mobile) === !0;
         }),
         { guildPopulated: g, guildMessaged: O, guildPersonalized: v } = (0, p.h_)(n),
-        { handleInvite: C, handleMessage: P, handlePersonalize: D, handleDownload: L, handleAddApplication: x } = j(n),
+        { handleInvite: C, handleMessage: w, handlePersonalize: D, handleDownload: L, handleAddApplication: x } = k(n),
         U = !(h || g || O || v),
-        { titleAnimatedStyle: G, opacities: B } = M(U),
+        { titleAnimatedStyle: G, opacities: B } = j(U),
         [Z, F] = i.useState([]),
         V = Z.length > 0;
     if (
@@ -275,17 +275,17 @@ function U(e) {
     )
         return null;
     let H = [];
-    a ||
+    o ||
         (d &&
             H.push(
                 (0, r.jsx)(
                     s.Z.div,
                     {
-                        className: R.cardWrapper,
+                        className: P.cardWrapper,
                         style: U ? { opacity: B[H.length] } : {},
-                        children: (0, r.jsx)(k, {
+                        children: (0, r.jsx)(M, {
                             iconUrl: u.YvY,
-                            header: w.intl.string(w.t.q9n0TU),
+                            header: R.intl.string(R.t.q9n0TU),
                             completed: g,
                             onClick: C
                         })
@@ -298,11 +298,11 @@ function U(e) {
                 (0, r.jsx)(
                     s.Z.div,
                     {
-                        className: R.cardWrapper,
+                        className: P.cardWrapper,
                         style: U ? { opacity: B[H.length] } : {},
-                        children: (0, r.jsx)(k, {
+                        children: (0, r.jsx)(M, {
                             iconUrl: u.$_T,
-                            header: w.intl.string(w.t.c5kxPj),
+                            header: R.intl.string(R.t.c5kxPj),
                             completed: v,
                             onClick: D
                         })
@@ -315,13 +315,13 @@ function U(e) {
                 (0, r.jsx)(
                     s.Z.div,
                     {
-                        className: R.cardWrapper,
+                        className: P.cardWrapper,
                         style: U ? { opacity: B[H.length] } : {},
-                        children: (0, r.jsx)(k, {
+                        children: (0, r.jsx)(M, {
                             iconUrl: u.qMX,
-                            header: w.intl.string(w.t['SoP7+v']),
+                            header: R.intl.string(R.t['SoP7+v']),
                             completed: O,
-                            onClick: P
+                            onClick: w
                         })
                     },
                     'message'
@@ -332,11 +332,11 @@ function U(e) {
                 (0, r.jsx)(
                     s.Z.div,
                     {
-                        className: R.cardWrapper,
+                        className: P.cardWrapper,
                         style: U ? { opacity: B[H.length] } : {},
-                        children: (0, r.jsx)(k, {
+                        children: (0, r.jsx)(M, {
                             iconUrl: u.yIb,
-                            header: w.intl.string(w.t.pGVNIy),
+                            header: R.intl.string(R.t.pGVNIy),
                             completed: h,
                             onClick: L
                         })
@@ -348,11 +348,11 @@ function U(e) {
             (0, r.jsx)(
                 s.Z.div,
                 {
-                    className: R.cardWrapper,
+                    className: P.cardWrapper,
                     style: U ? { opacity: B[H.length] } : {},
-                    children: (0, r.jsx)(k, {
+                    children: (0, r.jsx)(M, {
                         iconUrl: u.Tg$,
-                        header: w.intl.string(w.t.IhHDEB),
+                        header: R.intl.string(R.t.IhHDEB),
                         completed: V,
                         onClick: x
                     })
@@ -360,32 +360,32 @@ function U(e) {
                 'addapp'
             )
         ));
-    let Y = c ? w.intl.string(w.t['1ach9P']) : w.intl.string(w.t['ezm+/v']);
-    a && (Y = w.intl.string(w.t['gwyU/P']));
+    let Y = c ? R.intl.string(R.t['1ach9P']) : R.intl.string(R.t['ezm+/v']);
+    o && (Y = R.intl.string(R.t['gwyU/P']));
     let W = ''.concat(I.Z.getArticleURL(N.BhN.GUILD_GETTING_STARTED), '?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-new-user&utm_content=--t%3Apm');
     return (0, r.jsx)(A.ZP, {
         channelId: t.id,
         children: (0, r.jsx)('div', {
-            className: R.container,
+            className: P.container,
             children: (0, r.jsxs)('div', {
-                className: R.inner,
+                className: P.inner,
                 children: [
                     (0, r.jsxs)(s.Z.div, {
                         style: G,
                         children: [
                             (0, r.jsx)(u.X6q, {
-                                className: R.titleName,
+                                className: P.titleName,
                                 variant: 'heading-xxl/medium',
-                                children: w.intl.format(w.t.rkHVKS, { guildName: n.name })
+                                children: R.intl.format(R.t.rkHVKS, { guildName: n.name })
                             }),
                             (0, r.jsxs)(u.Text, {
                                 color: 'header-secondary',
-                                className: o()({
-                                    [R.subtitle]: !0,
-                                    [R.noChildren]: 0 === H.length
+                                className: a()({
+                                    [P.subtitle]: !0,
+                                    [P.noChildren]: 0 === H.length
                                 }),
                                 variant: 'text-sm/normal',
-                                children: [Y, ' ', H.length > 0 ? w.intl.format(w.t.UOtD39, { guideURL: W }) : null]
+                                children: [Y, ' ', H.length > 0 ? R.intl.format(R.t.UOtD39, { guideURL: W }) : null]
                             })
                         ]
                     }),

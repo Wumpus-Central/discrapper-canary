@@ -6,8 +6,8 @@
     n(35282));
 var r = n(73800),
     i = n(392711),
-    a = n(442837),
-    o = n(211266),
+    o = n(442837),
+    a = n(211266),
     s = n(131951),
     l = n(679613),
     c = n(996897),
@@ -90,18 +90,18 @@ function g(e) {
 }
 function E(e) {
     let { getRawDevices: t, getNoDevicesMessage: n } = g(e),
-        i = (0, a.e7)([s.Z], () => t(s.Z)),
-        o = n();
+        i = (0, o.e7)([s.Z], () => t(s.Z)),
+        a = n();
     return (0, r.useMemo)(() => {
         let e = p({}, i),
             t = e[d.w5];
-        return (null != t && (e[d.w5] = m(p({}, t), { name: t.disabled ? o : t.name.replace(d.fU, f.intl.string(f.t.bBvAEB)) })), e);
-    }, [i, o]);
+        return (null != t && (e[d.w5] = m(p({}, t), { name: t.disabled ? a : t.name.replace(d.fU, f.intl.string(f.t.bBvAEB)) })), e);
+    }, [i, a]);
 }
 function b(e) {
     let t = E(e),
         { getCurrentDeviceId: n } = g(e);
-    return t[(0, a.e7)([s.Z], () => n(s.Z))];
+    return t[(0, o.e7)([s.Z], () => n(s.Z))];
 }
 function y(e, t) {
     let { location: n } = t,
@@ -109,7 +109,7 @@ function y(e, t) {
         { shouldFilterDevicesByFrecency: d } = (0, c.w)({ location: n }),
         f = E(e),
         { getAllDeviceIdsSortedByFrecency: _ } = g(e),
-        p = (0, o.Z)((0, a.Wu)([u.Z], () => _(u.Z))),
+        p = (0, a.Z)((0, o.Wu)([u.Z], () => _(u.Z))),
         { id: h } = b(e);
     return (0, r.useMemo)(() => {
         let e = (e) => e.map((e) => f[e]),

@@ -2,8 +2,8 @@ n.d(t, { o: () => y });
 var r = n(255367);
 n(73800);
 var i = n(442837),
-    a = n(993365),
-    o = n(755721),
+    o = n(993365),
+    a = n(755721),
     s = n(481060),
     l = n(230711),
     c = n(767714),
@@ -59,7 +59,7 @@ function y(e) {
                     })
                 ]
             }),
-            (0, r.jsx)(a.x, {
+            (0, r.jsx)(o.x, {
                 variant: 'text-sm/normal',
                 children: O
             }),
@@ -76,7 +76,7 @@ function y(e) {
                           section: _.jXE.SOUNDBOARD_SOUND_PICKER,
                           object: _.qAy.BUTTON_CTA
                       },
-                      color: o.zx.Colors.GREEN,
+                      color: a.zx.Colors.GREEN,
                       onSubscribeModalClose: () => (null == n ? void 0 : n(p.L.PRIMARY))
                   })
         ]

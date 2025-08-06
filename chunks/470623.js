@@ -1,7 +1,7 @@
 (n.d(t, {
     AF: () => j,
-    oL: () => _,
-    xH: () => y
+    oL: () => y,
+    xH: () => x
 }),
     n(388685),
     n(781311));
@@ -12,8 +12,8 @@ var r = n(255367),
     s = n(362383),
     o = n(731965),
     c = n(430742),
-    d = n(752305),
-    u = n(592125),
+    u = n(752305),
+    d = n(592125),
     h = n(703558),
     p = n(883429),
     f = n(228392);
@@ -91,7 +91,7 @@ class m {
             (this.submitting = !1),
             (this.formOpen = !1),
             (this.name = ''),
-            (this.textAreaState = (0, d.eK)('')),
+            (this.textAreaState = (0, u.eK)('')),
             (this.hasClickedForm = !1),
             (this.titleFocused = !1),
             (this.bodyFocused = !1),
@@ -152,11 +152,11 @@ class m {
                 this.set({ hasClickedForm: e });
             }),
             (this.resetFormState = () => {
-                let e = u.Z.getChannel(this.channelId),
+                let e = d.Z.getChannel(this.channelId),
                     t = null == e || null == e.template ? '' : e.template.trim();
                 (this.set({
                     name: '',
-                    textAreaState: (0, d.eK)(t),
+                    textAreaState: (0, u.eK)(t),
                     appliedTags: new Set(),
                     hasClickedForm: !1
                 }),
@@ -164,7 +164,7 @@ class m {
             }),
             (this.setFormOpenFromUserAction = () => {
                 if (this.hasClickedForm) return;
-                let e = u.Z.getChannel(this.channelId);
+                let e = d.Z.getChannel(this.channelId);
                 (null != e &&
                     (0, f.HR)({
                         guildId: e.guild_id,
@@ -176,17 +176,17 @@ class m {
                     }),
                     p.Z.clearForumSearch(this.channelId));
             }));
-        let a = u.Z.getChannel(e);
+        let a = d.Z.getChannel(e);
         if (null == a) return;
         let s = null != (r = h.Z.getThreadSettings(a.id)) ? r : {},
             m = null == a.template ? '' : a.template.trim(),
             b = h.Z.getDraft(a.id, h.d.FirstThreadMessage),
-            _ = (0, d.eK)(null != b && '' !== b.trim() ? b : m);
-        ((this.name = null != (i = s.name) ? i : ''), (l = new Set(s.appliedTags)), (this.appliedTags = void 0 !== l ? l : new Set()), (this.formOpen = this.name.length > 0 && _.textValue.length > 0), (this.textAreaState = _));
+            y = (0, u.eK)(null != b && '' !== b.trim() ? b : m);
+        ((this.name = null != (i = s.name) ? i : ''), (l = new Set(s.appliedTags)), (this.appliedTags = void 0 !== l ? l : new Set()), (this.formOpen = this.name.length > 0 && y.textValue.length > 0), (this.textAreaState = y));
     }
 }
 let b = i.createContext(null);
-function _(e) {
+function y(e) {
     let { children: t, channel: n } = e,
         l = i.useMemo(() => (0, s.F)((e, t) => new m(n.id, e, t)), [n]);
     return (0, r.jsx)(b.Provider, {
@@ -194,7 +194,7 @@ function _(e) {
         children: t
     });
 }
-function y(e, t) {
+function x(e, t) {
     let n = i.useContext(b);
     return (a()(null != n, '[useForumPostComposerStore] Context should not be null'), n(e, t));
 }

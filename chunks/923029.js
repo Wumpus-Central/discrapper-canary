@@ -6,8 +6,8 @@ var r = n(255367),
     s = n(481060),
     o = n(665149),
     c = n(911560),
-    d = n(210887),
-    u = n(914010),
+    u = n(210887),
+    d = n(914010),
     h = n(981631),
     p = n(388032),
     f = n(487153);
@@ -17,8 +17,8 @@ function g(e) {
     i.useEffect(() => {
         c.Z.loadThread(g);
     });
-    let m = (0, a.e7)([u.Z], () => u.Z.getGuildId()) === h.I_8,
-        b = (0, a.e7)([d.Z], () => d.Z.theme);
+    let m = (0, a.e7)([d.Z], () => d.Z.getGuildId()) === h.I_8,
+        b = (0, a.e7)([u.Z], () => u.Z.theme);
     return (
         (t = m
             ? (0, r.jsx)(s.OZU, {

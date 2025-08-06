@@ -1,8 +1,8 @@
 (n.d(t, { Z: () => V }), n(388685), n(997841), n(358797));
 var r,
     i = n(392711),
-    a = n.n(i),
-    o = n(442837),
+    o = n.n(i),
+    a = n(442837),
     s = n(433517),
     l = n(570140),
     c = n(85521),
@@ -80,28 +80,28 @@ function N() {
 function C() {
     s.K.set(E, g(h({}, b()), { activeLibraryApplicationBranchIds: T }));
 }
-function w(e) {
+function R(e) {
     for (let t of e) {
         let e = c.Z.createFromServer(t);
         O[(0, d.Tu)(e.id, e.branchId)] = e;
     }
 }
-function R() {
+function P() {
     y = !1;
 }
-function P(e) {
+function w(e) {
     let { libraryApplications: t } = e;
-    ((O = {}), w(t), (y = !0));
+    ((O = {}), R(t), (y = !0));
 }
 function D(e) {
     let { libraryApplications: t } = e;
-    w(t);
+    R(t);
 }
 function L(e) {
     let { applicationId: t, branchId: n, flags: r } = e,
         i = (0, d.Tu)(t, n),
-        a = B(t, n);
-    (null != a && !a.isHidden() && u.yE(r, _.eHb.HIDDEN) && (A = !0), I.add(i));
+        o = B(t, n);
+    (null != o && !o.isHidden() && u.yE(r, _.eHb.HIDDEN) && (A = !0), I.add(i));
 }
 function x(e) {
     let { libraryApplication: t } = e,
@@ -109,16 +109,16 @@ function x(e) {
         r = (0, d.Tu)(n.id, n.branchId);
     ((O[r] = n), I.delete(r));
 }
-function k(e) {
+function M(e) {
     let { applicationId: t, branchId: n, launchOptionId: r } = e;
     ((S[(0, d.Tu)(t, n)] = r), N());
 }
-function j(e) {
+function k(e) {
     let { applicationId: t, branchId: n } = e;
     if (T[t] === n) return !1;
     ((T[t] = n), C());
 }
-function M(e) {
+function j(e) {
     let { libraryApplications: t } = e;
     for (let e of t) v[(0, d.Tu)(e.id, e.branchId)] = e;
 }
@@ -142,7 +142,7 @@ function B(e, t) {
 function Z() {
     return h({}, v, O);
 }
-class F extends (r = o.ZP.Store) {
+class F extends (r = a.ZP.Store) {
     initialize() {
         this.waitFor(f.default);
         let e = s.K.get(E);
@@ -173,8 +173,8 @@ class F extends (r = o.ZP.Store) {
         if (null != n) {
             var r;
             let i = (0, d.Tu)(e, n),
-                a = null != (r = O[i]) ? r : v[i];
-            if (null != a && (0, d.Je)(a) && (t || !a.isHidden())) return a;
+                o = null != (r = O[i]) ? r : v[i];
+            if (null != o && (0, d.Je)(o) && (t || !o.isHidden())) return o;
         }
         let i = Z();
         for (let n in i)
@@ -193,7 +193,7 @@ class F extends (r = o.ZP.Store) {
         return y;
     }
     get entitledBranchIds() {
-        return a()(Z())
+        return o()(Z())
             .values()
             .filter((e) => (0, d.Je)(e))
             .map((e) => e.branchId)
@@ -210,14 +210,14 @@ class F extends (r = o.ZP.Store) {
 }
 p(F, 'displayName', 'LibraryApplicationStore');
 let V = new F(l.Z, {
-    LOGOUT: R,
-    LIBRARY_FETCH_SUCCESS: P,
+    LOGOUT: P,
+    LIBRARY_FETCH_SUCCESS: w,
     SKU_PURCHASE_SUCCESS: D,
     LIBRARY_APPLICATION_FLAGS_UPDATE_START: L,
     LIBRARY_APPLICATION_FLAGS_UPDATE_SUCCESS: x,
     LIBRARY_APPLICATION_UPDATE: x,
-    LIBRARY_APPLICATION_ACTIVE_LAUNCH_OPTION_UPDATE: k,
-    LIBRARY_APPLICATION_ACTIVE_BRANCH_UPDATE: j,
-    LIBRARY_APPLICATIONS_TEST_MODE_ENABLED: M,
+    LIBRARY_APPLICATION_ACTIVE_LAUNCH_OPTION_UPDATE: M,
+    LIBRARY_APPLICATION_ACTIVE_BRANCH_UPDATE: k,
+    LIBRARY_APPLICATIONS_TEST_MODE_ENABLED: j,
     DEVELOPER_TEST_MODE_RESET: U
 });

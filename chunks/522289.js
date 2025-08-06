@@ -2,9 +2,9 @@ n.d(t, { Z: () => p });
 var r = n(255367);
 n(73800);
 var i = n(120356),
-    a = n.n(i),
-    o = n(392711),
-    s = n.n(o),
+    o = n.n(i),
+    a = n(392711),
+    s = n.n(a),
     l = n(755721),
     c = n(481060),
     u = n(565138),
@@ -33,7 +33,7 @@ function _() {
     }
 }
 function p(e) {
-    let { className: t, maxGuilds: n, guilds: i, onFocus: o, onClick: p, size: h = u.Z.Sizes.SMALLER, hideOverflowCount: m = !1, disableGuildNameTooltip: g = !1 } = e,
+    let { className: t, maxGuilds: n, guilds: i, onFocus: a, onClick: p, size: h = u.Z.Sizes.SMALLER, hideOverflowCount: m = !1, disableGuildNameTooltip: g = !1 } = e,
         E = f(h);
     function b() {
         let e = i.length - n,
@@ -45,10 +45,10 @@ function p(e) {
                 .map((e, t) => {
                     let n = e.name,
                         i = t === b && !f,
-                        o = a()(d.avatar, E, i && d.isLast);
+                        a = o()(d.avatar, E, i && d.isLast);
                     return g
                         ? (0, r.jsx)('div', {
-                              className: o,
+                              className: a,
                               children: (0, r.jsx)(u.Z, {
                                   guild: e,
                                   onClick: p,
@@ -60,7 +60,7 @@ function p(e) {
                               c.DY3,
                               {
                                   text: n,
-                                  className: o,
+                                  className: a,
                                   children: (0, r.jsx)(u.Z, {
                                       guild: e,
                                       onClick: p,
@@ -74,8 +74,8 @@ function p(e) {
         if (f) {
             let e = _(h);
             y[y.length - 1] = (0, r.jsx)(l.zx, {
-                className: a()(d.overflow, E),
-                onFocus: o,
+                className: o()(d.overflow, E),
+                onFocus: a,
                 onClick: (e) => (null == p ? void 0 : p(e)),
                 look: l.zx.Looks.BLANK,
                 size: l.zx.Sizes.NONE,
@@ -90,7 +90,7 @@ function p(e) {
     return i.length <= 0
         ? null
         : (0, r.jsx)('div', {
-              className: a()(t, d.avatars),
+              className: o()(t, d.avatars),
               children: b()
           });
 }

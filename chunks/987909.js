@@ -1,8 +1,8 @@
-(n.d(t, { Z: () => R }), n(388685));
+(n.d(t, { Z: () => P }), n(388685));
 var r = n(255367),
     i = n(73800),
-    a = n(442837),
-    o = n(159691),
+    o = n(442837),
+    a = n(159691),
     s = n(755721),
     l = n(904245),
     c = n(541716),
@@ -71,15 +71,15 @@ function T(e, t) {
 }
 function S(e) {
     let { channel: t, message: n, currentUser: r } = e;
-    return (0, a.e7)([p.Z, _.ZP], () => {
+    return (0, o.e7)([p.Z, _.ZP], () => {
         var e;
         let i = t.guild_id;
         if (null == r || null == i) return !1;
-        let a = (0, d.xl)(t),
-            o = p.Z.can(b.Plq.SEND_MESSAGES, t),
+        let o = (0, d.xl)(t),
+            a = p.Z.can(b.Plq.SEND_MESSAGES, t),
             s = null == (e = _.ZP.getMember(i, r.id)) ? void 0 : e.isPending,
             l = n.author.bot;
-        return o && !a && !s && !l;
+        return a && !o && !s && !l;
     });
 }
 function A(e) {
@@ -101,8 +101,8 @@ function C(e) {
     let { sticker: t, event: n, eventProperties: r } = e;
     null != n && m.default.track(n, T(v({}, r), { sticker_id: t.id }));
 }
-function w(e) {
-    let { currentUser: t, channel: n, message: a, buttonLabels: l, stickers: d, event: _, eventProperties: p } = e,
+function R(e) {
+    let { currentUser: t, channel: n, message: o, buttonLabels: l, stickers: d, event: _, eventProperties: p } = e,
         h = (0, f.t)(),
         [m, g] = i.useState(!1),
         b = i.useMemo(
@@ -110,18 +110,18 @@ function w(e) {
                 A({
                     assets: d,
                     currentUser: t,
-                    message: a
+                    message: o
                 }),
-            [d, t, a]
+            [d, t, o]
         ),
         O = i.useMemo(
             () =>
                 A({
                     assets: l,
                     currentUser: t,
-                    message: a
+                    message: o
                 }),
-            [l, t, a]
+            [l, t, o]
         ),
         v = i.useCallback(async () => {
             let { valid: e } = await (0, E.v)({
@@ -132,7 +132,7 @@ function w(e) {
             e &&
                 (N({
                     channel: n,
-                    message: a,
+                    message: o,
                     sticker: b
                 }),
                 C({
@@ -140,9 +140,9 @@ function w(e) {
                     event: _,
                     eventProperties: p
                 }));
-        }, [n, a, b, _, p]);
+        }, [n, o, b, _, p]);
     return h
-        ? (0, r.jsx)(o.zx, {
+        ? (0, r.jsx)(a.zx, {
               variant: 'secondary',
               size: 'md',
               onClick: v,
@@ -167,8 +167,8 @@ function w(e) {
               ]
           });
 }
-function R(e) {
-    let { channel: t, message: n, buttonLabels: i, stickers: a, event: o, eventProperties: s } = e,
+function P(e) {
+    let { channel: t, message: n, buttonLabels: i, stickers: o, event: a, eventProperties: s } = e,
         l = h.default.getCurrentUser(),
         c = S({
             channel: t,
@@ -178,13 +178,13 @@ function R(e) {
     return null != l && c
         ? (0, r.jsx)('div', {
               className: y.CTAMessage,
-              children: (0, r.jsx)(w, {
+              children: (0, r.jsx)(R, {
                   currentUser: l,
                   channel: t,
                   message: n,
                   buttonLabels: i,
-                  stickers: a,
-                  event: o,
+                  stickers: o,
+                  event: a,
                   eventProperties: s
               })
           })

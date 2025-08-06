@@ -2,8 +2,8 @@
 var r = n(255367);
 n(73800);
 var i = n(442837),
-    a = n(704215),
-    o = n(907459),
+    o = n(704215),
+    a = n(907459),
     s = n(514361),
     l = n(803038),
     c = n(662975),
@@ -27,36 +27,36 @@ let v = function () {
         { v2EditorEnabled: I } = l.M.useExperiment({ location: 'AppRightSidePanel' }),
         { activePanel: T, metadata: S } = (0, b.oq)(),
         A = [];
-    !e && null == T && (n && !t && A.push(a.z.CLIENT_THEMES_COACHMARK), v && A.push(a.z.CUSTOM_THEME_COACHMARK));
+    !e && null == T && (n && !t && A.push(o.z.CLIENT_THEMES_COACHMARK), v && A.push(o.z.CUSTOM_THEME_COACHMARK));
     let [N, C] = (0, h.US)(A, O.R.SIDEBAR, !0),
-        w = N === a.z.CLIENT_THEMES_COACHMARK,
-        R = N === a.z.CUSTOM_THEME_COACHMARK;
+        R = N === o.z.CLIENT_THEMES_COACHMARK,
+        P = N === o.z.CUSTOM_THEME_COACHMARK;
     if (((0, d.HA)(v, N), e)) return null;
-    let P = I ? _.Z : f.Z;
+    let w = I ? _.Z : f.Z;
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (T === b.wh.CLIENT_THEMES || w) &&
+            (T === b.wh.CLIENT_THEMES || R) &&
                 (0, r.jsx)(u.Z, {
-                    markAsDismissed: w
+                    markAsDismissed: R
                         ? C
                         : () => {
-                              (0, p.Q3)(a.z.CLIENT_THEMES_COACHMARK, {
+                              (0, p.Q3)(o.z.CLIENT_THEMES_COACHMARK, {
                                   dismissAction: O.L.INDIRECT_ACTION,
                                   forceTrack: !0
                               });
                           },
-                    showClientThemesCoachmark: w
+                    showClientThemesCoachmark: R
                 }),
             T === b.wh.APP_ICON &&
-                (0, r.jsx)(o.Z, {
+                (0, r.jsx)(a.Z, {
                     isCoachmark: !1,
                     markAsDismissed: C
                 }),
-            (T === b.wh.CUSTOM_THEME || R) &&
-                (0, r.jsx)(P, {
+            (T === b.wh.CUSTOM_THEME || P) &&
+                (0, r.jsx)(w, {
                     metadata: null != S ? S : {},
                     markAsDismissed: C,
-                    isCoachmark: R
+                    isCoachmark: P
                 })
         ]
     });

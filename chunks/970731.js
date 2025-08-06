@@ -6,8 +6,8 @@ n.d(t, {
 var r = n(255367);
 n(73800);
 var i = n(120356),
-    a = n.n(i),
-    o = n(755721),
+    o = n.n(i),
+    a = n(755721),
     s = n(481060),
     l = n(493773),
     c = n(921944),
@@ -95,56 +95,56 @@ function y(e) {
         onClick: O,
         onSecondaryClick: v,
         buttonProps: I = {
-            color: o.zx.Colors.BRAND,
-            look: o.zx.Looks.FILLED
+            color: a.zx.Colors.BRAND,
+            look: a.zx.Looks.FILLED
         },
-        secondaryButtonProps: T = { color: o.zx.Colors.BRAND_INVERTED },
+        secondaryButtonProps: T = { color: a.zx.Colors.BRAND_INVERTED },
         onComponentMount: S,
         asset: A,
         markAsDismissed: N,
         caretPosition: C = 'caretTopCenter',
-        buttonLayout: w = 0
+        buttonLayout: R = 0
     } = e;
     (0, l.ZP)(() => {
         null == S || S();
     });
-    let R = null != y,
-        P = (e) => {
+    let P = null != y,
+        w = (e) => {
             (O(e), null == N || N(c.L.PRIMARY));
         },
         D = () => {
             (null == v || v(), null == N || N(c.L.SECONDARY));
         };
     return (0, r.jsxs)('div', {
-        className: a()(n, g[t], u.upsellTooltipWrapper, u[C]),
+        className: o()(n, g[t], u.upsellTooltipWrapper, u[C]),
         children: [
             A,
             null == i
                 ? null
                 : (0, r.jsx)(s.X6q, {
                       color: E[t],
-                      className: a()(d, u.upsellTooltipHeader),
+                      className: o()(d, u.upsellTooltipHeader),
                       variant: 'heading-md/semibold',
                       children: i
                   }),
             (0, r.jsx)(s.Text, {
                 color: b[t],
-                className: a()(h, u.content),
+                className: o()(h, u.content),
                 variant: 'text-sm/normal',
                 children: _
             }),
-            null != m || R
+            null != m || P
                 ? (0, r.jsxs)('div', {
-                      className: a()(u.upsellButtonsContainer, {
-                          [u.upsellButtonsAdjacent]: 0 === w,
-                          [u.upsellButtonsStacked]: 1 === w
+                      className: o()(u.upsellButtonsContainer, {
+                          [u.upsellButtonsAdjacent]: 0 === R,
+                          [u.upsellButtonsStacked]: 1 === R
                       }),
                       children: [
-                          R
+                          P
                               ? (0, r.jsx)(
-                                    o.zx,
+                                    a.zx,
                                     p(f({}, T), {
-                                        fullWidth: 1 === w,
+                                        fullWidth: 1 === R,
                                         onClick: D,
                                         children: y
                                     })
@@ -153,10 +153,10 @@ function y(e) {
                           null == m
                               ? null
                               : (0, r.jsx)(
-                                    o.zx,
+                                    a.zx,
                                     p(f({}, I), {
-                                        fullWidth: !R || 1 === w,
-                                        onClick: P,
+                                        fullWidth: !P || 1 === R,
+                                        onClick: w,
                                         children: m
                                     })
                                 )

@@ -4,12 +4,12 @@ n.d(t, {
     g1: () => l,
     q8: () => u,
     qI: () => c,
-    sT: () => o
+    sT: () => a
 });
 var r = n(818083),
     i = n(981631),
-    a = n(647086);
-let o = (0, r.B)({
+    o = n(647086);
+let a = (0, r.B)({
     kind: 'guild',
     id: '2025-06_vanity_url_perk',
     label: 'Vanity URL Standalone Perk',
@@ -37,11 +37,11 @@ let o = (0, r.B)({
     ]
 });
 function s(e) {
-    return null != e && e !== a._ && e !== i.I_8;
+    return null != e && e !== o._ && e !== i.I_8;
 }
 function l(e, t) {
     let n = s(e);
-    return o.useExperiment(
+    return a.useExperiment(
         {
             guildId: e,
             location: t
@@ -54,7 +54,7 @@ function l(e, t) {
 }
 function c(e, t) {
     let n = s(e),
-        r = o.useExperiment(
+        r = a.useExperiment(
             {
                 guildId: e,
                 location: t
@@ -68,7 +68,7 @@ function c(e, t) {
 }
 function u(e, t) {
     let n = s(e);
-    return o.useExperiment(
+    return a.useExperiment(
         {
             guildId: e,
             location: t
@@ -82,7 +82,7 @@ function u(e, t) {
 function d(e, t) {
     return (
         !!s(e) &&
-        o.getCurrentConfig(
+        a.getCurrentConfig(
             {
                 guildId: e,
                 location: t
@@ -94,7 +94,7 @@ function d(e, t) {
 function f(e, t) {
     return (
         !!s(e) &&
-        o.getCurrentConfig(
+        a.getCurrentConfig(
             {
                 guildId: e,
                 location: t

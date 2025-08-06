@@ -1,12 +1,12 @@
 n.d(t, {
-    L: () => a,
+    L: () => o,
     R: () => i
 });
 var r = n(427164),
     i = (function (e) {
         return ((e.DISABLED = 'disabled'), (e.CONTROL = 'control'), (e.TREATMENT_1 = 'treatment_1'), (e.TREATMENT_2 = 'treatment_2'), e);
     })({});
-let a = (0, r.le)({
+let o = (0, r.le)({
     name: '2025-07-trial-redemption-cta-copy',
     kind: 'user',
     defaultConfig: {

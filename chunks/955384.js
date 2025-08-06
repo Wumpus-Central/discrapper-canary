@@ -1,8 +1,8 @@
 (n.d(t, { Z: () => _ }), n(388685));
 var r = n(255367),
     i = n(73800),
-    a = n(911969),
-    o = n(925975),
+    o = n(911969),
+    a = n(925975),
     s = n(957730),
     l = n(981631),
     c = n(388032),
@@ -25,11 +25,11 @@ function f(e) {
 }
 class _ extends i.PureComponent {
     render() {
-        let { className: e, textValue: t, richValue: n, message: i, channel: a, onCancel: o, children: s } = this.props,
+        let { className: e, textValue: t, richValue: n, message: i, channel: o, onCancel: a, children: s } = this.props,
             l = (0, r.jsx)('div', {
                 className: u.operations,
                 children: c.intl.format(c.t.wDsPXl, {
-                    onCancel: () => o(a.id),
+                    onCancel: () => a(o.id),
                     onSave: this.onClickSave
                 })
             });
@@ -42,7 +42,7 @@ class _ extends i.PureComponent {
                     textValue: t,
                     richValue: n,
                     message: i,
-                    channel: a,
+                    channel: o,
                     onChange: this.onChange,
                     onSubmit: this.onSubmit,
                     onKeyDown: this.onKeyDown,
@@ -78,13 +78,13 @@ class _ extends i.PureComponent {
                                   shouldClear: !1,
                                   shouldRefocus: !1
                               });
-                          let d = (0, o.g)(e, {
+                          let d = (0, a.g)(e, {
                               channel: n,
                               isEdit: !0
                           });
                           if (((null == d ? void 0 : d.content) != null && (e = d.content), t.hasFlag(l.iLy.IS_COMPONENTS_V2) && this.props.channel.type === l.d4z.GUILD_ANNOUNCEMENT)) {
                               let t = s.ZP.parse(this.props.channel, e),
-                                  n = this.props.message.components.filter((e) => e.type === a.re.TEXT_DISPLAY);
+                                  n = this.props.message.components.filter((e) => e.type === o.re.TEXT_DISPLAY);
                               if (1 === n.length) {
                                   let r = n[0];
                                   e !== r.content && c(this.props.channel.id, this.props.message.id, t);

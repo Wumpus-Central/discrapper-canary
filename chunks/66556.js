@@ -6,8 +6,8 @@ var r = n(255367),
     s = n(622822),
     o = n(665149),
     c = n(731290),
-    d = n(594174),
-    u = n(91159),
+    u = n(594174),
+    d = n(91159),
     h = n(593130),
     p = n(388032),
     f = n(522634);
@@ -16,18 +16,18 @@ function g(e) {
         [n, g] = i.useState(!1),
         m = i.useRef(null),
         b = (0, l.e7)(
-            [c.Z, d.default],
+            [c.Z, u.default],
             () => {
-                let e = d.default.getCurrentUser();
+                let e = u.default.getCurrentUser();
                 return null == e || ((0, s.aC)(t) && (!e.nsfwAllowed || !c.Z.didAgree(t.getGuildId())));
             },
             [t]
         ),
-        _ = i.useCallback(() => {
+        y = i.useCallback(() => {
             g(!1);
         }, []),
-        y = i.useCallback(() => {
-            (n || (0, u.U4)('Popout'), g(!n));
+        x = i.useCallback(() => {
+            (n || (0, d.U4)('Popout'), g(!n));
         }, [n]);
     return (0, r.jsx)(a.yRy, {
         targetElementRef: m,
@@ -36,13 +36,13 @@ function g(e) {
         align: 'right',
         autoInvert: !1,
         shouldShow: n,
-        onRequestClose: _,
+        onRequestClose: y,
         renderPopout: function () {
             return (0, r.jsx)(a.VqE, {
                 children: (0, r.jsx)(h.Z, {
                     className: f.browser,
                     channel: t,
-                    onClose: _
+                    onClose: y
                 })
             });
         },
@@ -81,7 +81,7 @@ function g(e) {
                     {
                         ref: m,
                         className: f.icon,
-                        onClick: y,
+                        onClick: x,
                         icon: a.or_,
                         'aria-label': p.intl.string(p.t.B2panJ),
                         tooltip: l ? null : p.intl.string(p.t.B2panJ),

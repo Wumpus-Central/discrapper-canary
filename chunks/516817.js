@@ -1,8 +1,8 @@
 n.d(t, { Z: () => _ });
 var r = n(255367),
     i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(70097),
     l = n(881474),
     c = n(168352),
@@ -10,9 +10,9 @@ var r = n(255367),
     d = n(359135),
     f = n(187182);
 function _(e) {
-    let { nameplate: t, hovered: n, selected: a, content: s, placement: c } = e,
-        _ = (0, u.p)(s, t, n, a, c),
-        h = (0, l.C)(n, a),
+    let { nameplate: t, hovered: n, selected: o, content: s, placement: c } = e,
+        _ = (0, u.p)(s, t, n, o, c),
+        h = (0, l.C)(n, o),
         m = i.useRef(null == t);
     return (i.useEffect(() => {
         m.current || null != t || (m.current = !0);
@@ -20,14 +20,14 @@ function _(e) {
     null == t)
         ? null
         : (0, r.jsx)('div', {
-              className: o()(f.container, { [f.fadeIn]: m.current }),
+              className: a()(f.container, { [f.fadeIn]: m.current }),
               style: { background: _.background },
               'aria-hidden': !0,
               children: (0, r.jsx)(p, {
                   nameplate: t,
-                  className: o()(f.img, {
+                  className: a()(f.img, {
                       [f.hover]: n,
-                      [f.selected]: a,
+                      [f.selected]: o,
                       [f.account]: c === d.i.ACCOUNT,
                       [f.preview]: c === d.i.PREVIEW,
                       [f.mini_preview]: c === d.i.MINI_PREVIEW,
@@ -40,33 +40,33 @@ function _(e) {
           });
 }
 function p(e) {
-    let { nameplate: t, className: n, style: i, animate: a, loop: o } = e,
+    let { nameplate: t, className: n, style: i, animate: o, loop: a } = e,
         { staticAsset: s, animatedAsset: l } = (0, c._)(t),
         u = !(null == l ? void 0 : l.endsWith('.webm'));
     return null == s || null == l
         ? null
         : u
           ? (0, r.jsx)(m, {
-                asset: a ? l : s,
+                asset: o ? l : s,
                 className: n,
                 style: i
             })
           : (0, r.jsx)(h, {
                 animatedAsset: l,
                 staticAsset: s,
-                animate: a,
-                loop: o,
+                animate: o,
+                loop: a,
                 style: i,
                 className: n
             });
 }
 function h(e) {
-    let { staticAsset: t, animatedAsset: n, animate: a, loop: o, className: l, style: c } = e,
+    let { staticAsset: t, animatedAsset: n, animate: o, loop: a, className: l, style: c } = e,
         u = i.useRef(null);
     return (
         i.useEffect(() => {
-            null != u.current && (a || o ? u.current.play() : u.current.pause());
-        }, [a, o]),
+            null != u.current && (o || a ? u.current.play() : u.current.pause());
+        }, [o, a]),
         (0, r.jsx)('div', {
             className: f.videoContainer,
             style: c,
@@ -75,7 +75,7 @@ function h(e) {
                 poster: t,
                 ref: u,
                 playsInline: !0,
-                loop: o,
+                loop: a,
                 controls: !1,
                 className: l,
                 tabIndex: -1

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => b });
 var r = n(255367),
     i = n(73800),
-    a = n(399606),
-    o = n(481060),
+    o = n(399606),
+    a = n(481060),
     s = n(125268),
     l = n(673125),
     c = n(984063),
@@ -77,7 +77,7 @@ function E(e, t) {
     );
 }
 function b() {
-    let e = (0, a.e7)([l.Z], () => l.Z.getDrawMode()),
+    let e = (0, o.e7)([l.Z], () => l.Z.getDrawMode()),
         t = (null == e ? void 0 : e.type) === c.W.LINE,
         n = i.useRef(null),
         _ = () => {
@@ -94,7 +94,7 @@ function b() {
                     buttonRef: n,
                     label: f.intl.string(f.t.ZQCf9f),
                     isActive: t,
-                    iconComponent: o.vdY,
+                    iconComponent: a.vdY,
                     onClick: _
                 })
             );

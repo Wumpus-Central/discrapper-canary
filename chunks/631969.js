@@ -2,9 +2,9 @@ n.d(t, { Z: () => s });
 var r = n(255367);
 n(73800);
 var i = n(120356),
-    a = n.n(i),
-    o = n(979263);
+    o = n.n(i),
+    a = n(979263);
 function s(e) {
     let { className: t } = e;
-    return (0, r.jsx)('div', { className: a()(o.image, t) });
+    return (0, r.jsx)('div', { className: o()(a.image, t) });
 }

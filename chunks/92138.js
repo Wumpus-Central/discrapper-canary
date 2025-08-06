@@ -2,8 +2,8 @@
 var r,
     i = n(960048);
 (n(789876), n(643191), n(323716), n(716578), n(314897), n(353926), n(450795), n(208258), n(528224));
-var a = n(213919),
-    o = n(902866),
+var o = n(213919),
+    a = n(902866),
     s = n(731965),
     l = n(442837),
     c = n(627420),
@@ -24,11 +24,11 @@ var g = n(981631);
             .then(n.bind(n, 353182))
             .then((e) => e.init()),
     (0, c.yR)(d.Z),
-    (0, o.Y)(a, f.Z),
+    (0, a.Y)(o, f.Z),
     l.ZP.Emitter.injectBatchEmitChanges(s.j),
     (l.ZP.PersistedStore.disableWrites = __OVERLAY__),
     l.ZP.initialize());
 let E = window.GLOBAL_ENV.RELEASE_CHANNEL,
-    b = '427601',
-    y = '4f51c3d0373ec286d71df64ac16ea7de61cc1686';
+    b = '427698',
+    y = '7ad6015dfeaac7f94f251907e56b1940bb0b14f2';
 (new m.Z().log('[BUILD INFO] Release Channel: '.concat(E, ', Build Number: ').concat(b, ', Version Hash: ').concat(y)), i.Z.setTags({ appContext: g.e3s }), _.Z.initBasic(), p.Z.init(), u.d.init(), h.S1());

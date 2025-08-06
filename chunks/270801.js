@@ -2,8 +2,8 @@ n.d(t, { Z: () => m });
 var r = n(255367);
 n(73800);
 var i = n(257465),
-    a = n(369585),
-    o = n(103866),
+    o = n(369585),
+    a = n(103866),
     s = n(481060),
     l = n(313201),
     c = n(388032),
@@ -85,7 +85,7 @@ let h = () =>
                             className: u.animationMiddle
                         })
                     }),
-                    (0, r.jsx)(o.f, {
+                    (0, r.jsx)(a.f, {
                         children: (0, r.jsxs)('div', {
                             className: u.manaContainer,
                             children: [
@@ -103,7 +103,7 @@ let h = () =>
                             ]
                         })
                     }),
-                    (0, r.jsx)(a.G, {
+                    (0, r.jsx)(o.G, {
                         actions: [
                             {
                                 variant: 'primary',

@@ -6,8 +6,8 @@ var r = n(255367),
     s = n(299206),
     o = n(726521),
     c = n(99325),
-    d = n(683818),
-    u = n(388032);
+    u = n(683818),
+    d = n(388032);
 function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -53,46 +53,46 @@ function p(e, t) {
 }
 function f(e) {
     let { entry: t, onSelect: f, closePopout: g, hideEditButton: m = !1 } = e,
-        { isEntryAdmin: b, canEdit: _, canRemove: y } = (0, d.Z)(t),
+        { isEntryAdmin: b, canEdit: y, canRemove: x } = (0, u.Z)(t),
         j = (0, s.Z)({
             id: t.guildId,
-            label: u.intl.string(u.t['94lLDw']),
+            label: d.intl.string(d.t['94lLDw']),
             onSuccess: g
         });
     i.useEffect(() => {
-        _ || y || null != j || (0, a.Zy)();
+        y || x || null != j || (0, a.Zy)();
     });
-    let O = () => {
+    let _ = () => {
         c.kx(t.channelId, t.guildId);
     };
-    function x() {
+    function O() {
         ((0, a.Zy)(), null == g || g());
     }
     return (0, r.jsxs)(l.v2r, {
         navId: 'guild-entry-context',
-        onClose: x,
-        'aria-label': u.intl.string(u.t.HpQykZ),
+        onClose: O,
+        'aria-label': d.intl.string(d.t.HpQykZ),
         onSelect: f,
         children: [
             (0, r.jsxs)(l.kSQ, {
                 children: [
-                    _ && !m
+                    y && !m
                         ? (0, r.jsx)(l.sNh, {
                               id: 'update-entry',
-                              label: u.intl.string(u.t.XnuOvL),
+                              label: d.intl.string(d.t.XnuOvL),
                               action: function () {
                                   ((0, l.ZDy)(async () => {
                                       let { default: e } = await n.e('34191').then(n.bind(n, 303647));
                                       return (n) => (0, r.jsx)(e, p(h({}, n), { entry: t }));
                                   }),
-                                      x());
+                                      O());
                               }
                           })
                         : null,
-                    y
+                    x
                         ? (0, r.jsx)(l.sNh, {
                               id: 'remove-from-hub',
-                              label: u.intl.string(u.t.KUxYWF),
+                              label: d.intl.string(d.t.KUxYWF),
                               action: function () {
                                   ((0, l.h7j)((e) =>
                                       (0, r.jsx)(
@@ -100,23 +100,23 @@ function f(e) {
                                           p(
                                               h(
                                                   {
-                                                      header: u.intl.string(u.t.KUxYWF),
-                                                      confirmText: u.intl.string(u.t.N86XcH),
-                                                      cancelText: u.intl.string(u.t['ETE/oK']),
-                                                      onConfirm: O
+                                                      header: d.intl.string(d.t.KUxYWF),
+                                                      confirmText: d.intl.string(d.t.N86XcH),
+                                                      cancelText: d.intl.string(d.t['ETE/oK']),
+                                                      onConfirm: _
                                                   },
                                                   e
                                               ),
                                               {
                                                   children: (0, r.jsx)(l.Text, {
                                                       variant: 'text-md/normal',
-                                                      children: u.intl.format(u.t['/5y0ub'], { guildName: t.name })
+                                                      children: d.intl.format(d.t['/5y0ub'], { guildName: t.name })
                                                   })
                                               }
                                           )
                                       )
                                   ),
-                                      x());
+                                      O());
                               },
                               color: 'danger'
                           })
@@ -125,9 +125,9 @@ function f(e) {
                         ? null
                         : (0, r.jsx)(l.sNh, {
                               id: 'report-server-listing',
-                              label: u.intl.string(u.t.Aen9en),
+                              label: d.intl.string(d.t.Aen9en),
                               action: function () {
-                                  null != t && ((0, o.sq)(t), x());
+                                  null != t && ((0, o.sq)(t), O());
                               },
                               icon: l.U65,
                               color: 'danger'

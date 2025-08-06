@@ -1,8 +1,8 @@
 (n.d(t, { U: () => g }), n(388685));
 var r = n(255367),
     i = n(704215),
-    a = n(755721),
-    o = n(481060),
+    o = n(755721),
+    a = n(481060),
     s = n(243778),
     l = n(970731),
     c = n(2818),
@@ -28,7 +28,7 @@ let p = i.z.FOR_LATER_POPOUT_COACHMARK,
             content: d.intl.string(d.t.URrJq6),
             buttonCTA: d.intl.string(d.t['NX+WJC']),
             buttonProps: {
-                color: a.Tt.WHITE,
+                color: o.Tt.WHITE,
                 innerClassName: f.primaryButton
             },
             onClick: () => e(u.L.USER_DISMISS),
@@ -37,18 +37,18 @@ let p = i.z.FOR_LATER_POPOUT_COACHMARK,
         });
 function g(e) {
     let { location: t, children: n, targetElementRef: i } = e,
-        { enabled: a, inInbox: l } = c.Z.useExperiment({ location: 'ForLaterCoachmarkWeb' }, { autoTrackExposure: !1 }),
+        { enabled: o, inInbox: l } = c.Z.useExperiment({ location: 'ForLaterCoachmarkWeb' }, { autoTrackExposure: !1 }),
         u = t === (l ? 'inbox-button' : 'bookmarks-button'),
-        d = a && u ? [p] : [],
+        d = o && u ? [p] : [],
         [f, _] = (0, s.US)(d, void 0);
     return f !== p
         ? n
-        : (0, r.jsx)(o.yRy, {
+        : (0, r.jsx)(a.yRy, {
               targetElementRef: i,
               renderPopout: () => m(_),
               position: 'bottom',
               align: 'right',
-              animation: o.yRy.Animation.TRANSLATE,
+              animation: a.yRy.Animation.TRANSLATE,
               shouldShow: !0,
               children: () => n
           });

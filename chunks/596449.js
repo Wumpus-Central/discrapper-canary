@@ -8,7 +8,7 @@ var i = n(692547),
     o = n(388032);
 function c(e) {
     let { className: t, guildId: c } = e,
-        d = (0, a.Z)();
+        u = (0, a.Z)();
     return (0, r.jsx)(s.Z, {
         className: t,
         icon: (0, r.jsx)(l.Que, {
@@ -68,7 +68,7 @@ function c(e) {
                         n)
                     );
                 };
-            }, d);
+            }, u);
         }
     });
 }

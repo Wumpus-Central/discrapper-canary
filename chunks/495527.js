@@ -1,13 +1,13 @@
-n.d(t, { Z: () => o });
+n.d(t, { Z: () => a });
 var r = n(579806);
 let i = new (n(710845).Z)('IntentsBindings');
-function a() {
+function o() {
     var e;
     return null != (e = null === r.Z || void 0 === r.Z ? void 0 : r.Z.features.supports('intents')) && e;
 }
-let o = {
-    hasSearch: () => a(),
-    hasUserActivity: () => a(),
+let a = {
+    hasSearch: () => o(),
+    hasUserActivity: () => o(),
     clearSearchIndex() {
         try {
             null === r.Z || void 0 === r.Z || r.Z.ipc.invoke('DISCORD_SEARCH_CLEAR_INDEX');

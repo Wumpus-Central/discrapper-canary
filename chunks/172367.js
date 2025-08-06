@@ -27,8 +27,8 @@ function i(e, t, n) {
         e
     );
 }
-var a = n(968514),
-    o = n(449168),
+var o = n(968514),
+    a = n(449168),
     s = n(497218),
     l = n(116514),
     c = n(65183),
@@ -52,7 +52,7 @@ var a = n(968514),
     }),
     p = (function () {
         ((t.createEmpty = function (e) {
-            return t.createWithContent(o.createFromText(''), e);
+            return t.createWithContent(a.createFromText(''), e);
         }),
             (t.createWithContent = function (e, n) {
                 if (0 === e.getBlockMap().count()) return t.createEmpty(n);
@@ -83,19 +83,19 @@ var a = n(968514),
                         var r = t.get('decorator'),
                             i = r;
                         null === n.decorator ? (i = null) : n.decorator && (i = n.decorator);
-                        var a = n.currentContent || e.getCurrentContent();
+                        var o = n.currentContent || e.getCurrentContent();
                         if (i !== r) {
-                            var o,
+                            var a,
                                 s = t.get('treeMap');
-                            ((o = i && r ? E(a, a.getBlockMap(), s, i, r) : m(a, i)),
+                            ((a = i && r ? E(o, o.getBlockMap(), s, i, r) : m(o, i)),
                                 t.merge({
                                     decorator: i,
-                                    treeMap: o,
+                                    treeMap: a,
                                     nativelyRenderedContent: null
                                 }));
                             return;
                         }
-                        (a !== e.getCurrentContent() && t.set('treeMap', g(e, a.getBlockMap(), a.getEntityMap(), i)), t.merge(n));
+                        (o !== e.getCurrentContent() && t.set('treeMap', g(e, o.getBlockMap(), o.getEntityMap(), i)), t.merge(n));
                     })
                 );
             }));
@@ -193,26 +193,26 @@ var a = n(968514),
             (t.push = function (e, n, r) {
                 var i = !(arguments.length > 3) || void 0 === arguments[3] || arguments[3];
                 if (e.getCurrentContent() === n) return e;
-                var a = s.getDirectionMap(n, e.getDirectionMap());
+                var o = s.getDirectionMap(n, e.getDirectionMap());
                 if (!e.getAllowUndo())
                     return t.set(e, {
                         currentContent: n,
-                        directionMap: a,
+                        directionMap: o,
                         lastChangeType: r,
                         selection: n.getSelectionAfter(),
                         forceSelection: i,
                         inlineStyleOverride: null
                     });
-                var o = e.getSelection(),
+                var a = e.getSelection(),
                     l = e.getCurrentContent(),
                     c = e.getUndoStack(),
                     u = n;
-                o !== l.getSelectionAfter() || b(e, r) ? ((c = c.push(l)), (u = u.set('selectionBefore', o))) : ('insert-characters' === r || 'backspace-character' === r || 'delete-character' === r) && (u = u.set('selectionBefore', l.getSelectionBefore()));
+                a !== l.getSelectionAfter() || b(e, r) ? ((c = c.push(l)), (u = u.set('selectionBefore', a))) : ('insert-characters' === r || 'backspace-character' === r || 'delete-character' === r) && (u = u.set('selectionBefore', l.getSelectionBefore()));
                 var d = e.getInlineStyleOverride();
                 -1 === ['adjust-depth', 'change-block-type', 'split-block'].indexOf(r) && (d = null);
                 var _ = {
                     currentContent: u,
-                    directionMap: a,
+                    directionMap: o,
                     undoStack: c,
                     redoStack: f(),
                     lastChangeType: r,
@@ -228,10 +228,10 @@ var a = n(968514),
                     r = n.peek();
                 if (!r) return e;
                 var i = e.getCurrentContent(),
-                    a = s.getDirectionMap(r, e.getDirectionMap());
+                    o = s.getDirectionMap(r, e.getDirectionMap());
                 return t.set(e, {
                     currentContent: r,
-                    directionMap: a,
+                    directionMap: o,
                     undoStack: n.shift(),
                     redoStack: e.getRedoStack().push(i),
                     forceSelection: !0,
@@ -247,10 +247,10 @@ var a = n(968514),
                     r = n.peek();
                 if (!r) return e;
                 var i = e.getCurrentContent(),
-                    a = s.getDirectionMap(r, e.getDirectionMap());
+                    o = s.getDirectionMap(r, e.getDirectionMap());
                 return t.set(e, {
                     currentContent: r,
-                    directionMap: a,
+                    directionMap: o,
                     undoStack: e.getUndoStack().push(i),
                     redoStack: n.shift(),
                     forceSelection: !0,
@@ -278,13 +278,13 @@ function m(e, t) {
     return e
         .getBlockMap()
         .map(function (n) {
-            return a.generate(e, n, t);
+            return o.generate(e, n, t);
         })
         .toOrderedMap();
 }
 function g(e, t, n, r) {
     var i = e.getCurrentContent().set('entityMap', n),
-        o = i.getBlockMap();
+        a = i.getBlockMap();
     return e
         .getImmutable()
         .get('treeMap')
@@ -292,10 +292,10 @@ function g(e, t, n, r) {
             t
                 .toSeq()
                 .filter(function (e, t) {
-                    return e !== o.get(t);
+                    return e !== a.get(t);
                 })
                 .map(function (e) {
-                    return a.generate(i, e, r);
+                    return o.generate(i, e, r);
                 })
         );
 }
@@ -307,7 +307,7 @@ function E(e, t, n, r, i) {
                 return r.getDecorations(t, e) !== i.getDecorations(t, e);
             })
             .map(function (t) {
-                return a.generate(e, t, r);
+                return o.generate(e, t, r);
             })
     );
 }

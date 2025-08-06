@@ -1,14 +1,14 @@
-n.d(t, { Z: () => o });
+n.d(t, { Z: () => a });
 var r = n(442837),
     i = n(311687),
-    a = n(873128);
-function o(e) {
-    let { userId: t, guildId: n, leaderboardId: o, intervalOffset: s = 0, statisticId: l } = e,
-        c = (0, r.e7)([i.Z], () => i.Z.getLastUpdateRequested(o)),
+    o = n(873128);
+function a(e) {
+    let { userId: t, guildId: n, leaderboardId: a, intervalOffset: s = 0, statisticId: l } = e,
+        c = (0, r.e7)([i.Z], () => i.Z.getLastUpdateRequested(a)),
         u = null != c ? new Date(1000 * c) : void 0,
-        d = (0, a.Z)({
+        d = (0, o.Z)({
             guildId: n,
-            leaderboardId: o,
+            leaderboardId: a,
             intervalOffset: s
         }),
         f = null == d ? void 0 : d.users.find((e) => e.user_id === t),

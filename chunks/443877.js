@@ -1,8 +1,8 @@
 (n.d(t, { Z: () => g }), n(388685));
 var r = n(442837),
     i = n(715903),
-    a = n(71619),
-    o = n(41776),
+    o = n(71619),
+    a = n(41776),
     s = n(665906),
     l = n(271383),
     c = n(607744),
@@ -64,11 +64,11 @@ function m(e, t) {
 function g(e) {
     let t = null == e ? void 0 : e.guild_id,
         n = (0, r.e7)([c.Z], () => null == t || c.Z.canChatInGuild(t), [t]),
-        _ = (0, r.e7)([o.Z], () => null != t && o.Z.isLurking(t), [t]),
+        _ = (0, r.e7)([a.Z], () => null != t && a.Z.isLurking(t), [t]),
         h = (0, r.e7)([l.ZP], () => null != t && l.ZP.isCurrentUserGuest(t), [t]),
         g = (0, r.e7)([u.Z], () => n && u.Z.can(f.Plq.ADD_REACTIONS, e), [n, e]),
         E = (0, i.ux)(t),
-        [, b] = (0, a.AB)(t),
+        [, b] = (0, o.AB)(t),
         y = (0, s.$R)(e);
     if (null == e)
         return {

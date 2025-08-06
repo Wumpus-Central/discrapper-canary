@@ -1,21 +1,21 @@
 n.d(t, {
     VR: () => l,
-    bc: () => o,
+    bc: () => a,
     l3: () => s
 });
 var r = n(134994),
     i = n(492733);
-function a(e, t, n, r) {
+function o(e, t, n, r) {
     if ('function' == typeof e.setBigUint64) return e.setBigUint64(t, n, r);
     let i = BigInt(32),
-        a = BigInt(4294967295),
-        o = Number((n >> i) & a),
-        s = Number(n & a),
+        o = BigInt(4294967295),
+        a = Number((n >> i) & o),
+        s = Number(n & o),
         l = 4 * !!r,
         c = 4 * !r;
-    (e.setUint32(t + l, o, r), e.setUint32(t + c, s, r));
+    (e.setUint32(t + l, a, r), e.setUint32(t + c, s, r));
 }
-let o = (e, t, n) => (e & t) ^ (~e & n),
+let a = (e, t, n) => (e & t) ^ (~e & n),
     s = (e, t, n) => (e & t) ^ (e & n) ^ (t & n);
 class l extends i.kb {
     constructor(e, t, n, r) {
@@ -23,26 +23,26 @@ class l extends i.kb {
     }
     update(e) {
         (0, r.Gg)(this);
-        let { view: t, buffer: n, blockLen: a } = this,
-            o = (e = (0, i.O0)(e)).length;
-        for (let r = 0; r < o; ) {
-            let s = Math.min(a - this.pos, o - r);
-            if (s === a) {
+        let { view: t, buffer: n, blockLen: o } = this,
+            a = (e = (0, i.O0)(e)).length;
+        for (let r = 0; r < a; ) {
+            let s = Math.min(o - this.pos, a - r);
+            if (s === o) {
                 let t = (0, i.GL)(e);
-                for (; a <= o - r; r += a) this.process(t, r);
+                for (; o <= a - r; r += o) this.process(t, r);
                 continue;
             }
-            (n.set(e.subarray(r, r + s), this.pos), (this.pos += s), (r += s), this.pos === a && (this.process(t, 0), (this.pos = 0)));
+            (n.set(e.subarray(r, r + s), this.pos), (this.pos += s), (r += s), this.pos === o && (this.process(t, 0), (this.pos = 0)));
         }
         return ((this.length += e.length), this.roundClean(), this);
     }
     digestInto(e) {
         ((0, r.Gg)(this), (0, r.J8)(e, this), (this.finished = !0));
-        let { buffer: t, view: n, blockLen: o, isLE: s } = this,
+        let { buffer: t, view: n, blockLen: a, isLE: s } = this,
             { pos: l } = this;
-        ((t[l++] = 128), this.buffer.subarray(l).fill(0), this.padOffset > o - l && (this.process(n, 0), (l = 0)));
-        for (let e = l; e < o; e++) t[e] = 0;
-        (a(n, o - 8, BigInt(8 * this.length), s), this.process(n, 0));
+        ((t[l++] = 128), this.buffer.subarray(l).fill(0), this.padOffset > a - l && (this.process(n, 0), (l = 0)));
+        for (let e = l; e < a; e++) t[e] = 0;
+        (o(n, a - 8, BigInt(8 * this.length), s), this.process(n, 0));
         let c = (0, i.GL)(e),
             u = this.outputLen;
         if (u % 4) throw Error('_sha2: outputLen should be aligned to 32bit');
@@ -59,7 +59,7 @@ class l extends i.kb {
     }
     _cloneInto(e) {
         (e || (e = new this.constructor()), e.set(...this.get()));
-        let { blockLen: t, buffer: n, length: r, finished: i, destroyed: a, pos: o } = this;
-        return ((e.length = r), (e.pos = o), (e.finished = i), (e.destroyed = a), r % t && e.buffer.set(n), e);
+        let { blockLen: t, buffer: n, length: r, finished: i, destroyed: o, pos: a } = this;
+        return ((e.length = r), (e.pos = a), (e.finished = i), (e.destroyed = o), r % t && e.buffer.set(n), e);
     }
 }

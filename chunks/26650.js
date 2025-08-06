@@ -1,8 +1,8 @@
 n.d(t, { Z: () => d });
 var r = n(255367),
     i = n(73800),
-    a = n(481060),
-    o = n(377171),
+    o = n(481060),
+    a = n(377171),
     s = n(332173);
 function l(e, t, n) {
     return (
@@ -40,14 +40,14 @@ function u(e, t) {
         className: s.desktopTooltip,
         style: c({ marginTop: 8 * !!n }, i),
         children: [
-            (0, r.jsx)(a.d3s, {
+            (0, r.jsx)(o.d3s, {
                 size: 'custom',
                 className: s.infoIcon,
                 height: n ? 16 : 12,
                 width: n ? 16 : 12,
-                color: n ? o.Z.TEXT_MUTED : o.Z.WHITE
+                color: n ? a.Z.TEXT_MUTED : a.Z.WHITE
             }),
-            (0, r.jsx)(a.Text, {
+            (0, r.jsx)(o.Text, {
                 color: n ? 'text-muted' : 'always-white',
                 variant: n ? 'text-xs/normal' : 'text-xxs/normal',
                 children: l

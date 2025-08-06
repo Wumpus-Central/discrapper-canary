@@ -1,8 +1,8 @@
 (n.d(t, { m: () => g }), n(388685));
 var r = n(73800),
     i = n(707019),
-    a = n.n(i),
-    o = n(881052),
+    o = n.n(i),
+    a = n(881052),
     s = n(726521),
     l = n(621853),
     c = n(484459),
@@ -21,59 +21,59 @@ function g(e) {
         [I, T] = r.useState(!1),
         [S, A] = r.useState(!1),
         [N, C] = r.useState(!1),
-        w = b || O || I,
-        R = r.useCallback(
+        R = b || O || I,
+        P = r.useCallback(
             async (e) => {
-                if (!w) {
+                if (!R) {
                     y(!0);
                     try {
                         (await (0, f.e4)(e), A(!0), null == n || n());
                     } catch (t) {
-                        let e = new o.Hx(t);
+                        let e = new a.Hx(t);
                         null == g || g(e);
                     } finally {
                         y(!1);
                     }
                 }
             },
-            [w, n, g]
+            [R, n, g]
         ),
-        P = r.useCallback(
+        w = r.useCallback(
             async (e) => {
-                if (!w) {
+                if (!R) {
                     v(!0);
                     try {
                         (await (0, f.gN)(e), C(!0), null == i || i());
                     } catch (t) {
-                        let e = new o.Hx(t);
+                        let e = new a.Hx(t);
                         null == g || g(e);
                     } finally {
                         v(!1);
                     }
                 }
             },
-            [w, i, g]
+            [R, i, g]
         ),
         D = r.useCallback(
             async (e) => {
-                if (w) return;
+                if (R) return;
                 v(!0);
-                let t = a()(e, h.t$);
+                let t = o()(e, h.t$);
                 try {
                     for (let e of t) await (0, f.r_)(e);
                     (C(!0), null == i || i());
                 } catch (t) {
-                    let e = new o.Hx(t);
+                    let e = new a.Hx(t);
                     null == g || g(e);
                 } finally {
                     v(!1);
                 }
             },
-            [w, i, g]
+            [R, i, g]
         ),
         L = r.useCallback(
             async (e) => {
-                if (w) return;
+                if (R) return;
                 if (null != t && null == l.Z.getMutualGuilds(t.id)) {
                     T(!0);
                     try {
@@ -105,7 +105,7 @@ function g(e) {
                             mutual_guild_ids: null != r ? r : [],
                             other_user_id: null == t ? void 0 : t.id
                         }),
-                            await R(e));
+                            await P(e));
                     };
                 (0, _.H)({
                     channelId: e,
@@ -113,14 +113,14 @@ function g(e) {
                     onCancel: n
                 });
             },
-            [R, w, t]
+            [P, R, t]
         ),
         x = r.useCallback(
             (e, t, n) => {
                 let r = (r, i) => {
                         (i && u.kJ.updateSetting(r),
                             r && null != t && (0, s.zd)(t),
-                            R(e.id),
+                            P(e.id),
                             d.default.track(m.rMx.MESSAGE_REQUEST_ACTION, {
                                 action: h.cl.ACCEPT_HAM_CONFIRMATION_PROMPT,
                                 channel_id: e.id,
@@ -135,20 +135,20 @@ function g(e) {
                             channel_id: e.id
                         });
                     },
-                    a = u.kJ.getSetting();
-                null == a
+                    o = u.kJ.getSetting();
+                null == o
                     ? (0, _.V)({
                           channel: e,
                           onConfirm: r,
                           onCancel: i
                       })
-                    : r(a);
+                    : r(o);
             },
-            [R]
+            [P]
         );
     return {
-        acceptMessageRequest: E ? L : R,
-        rejectMessageRequest: P,
+        acceptMessageRequest: E ? L : P,
+        rejectMessageRequest: w,
         rejectAll: D,
         markAsNotSpam: x,
         isAcceptLoading: b,

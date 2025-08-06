@@ -1,8 +1,8 @@
 n.d(t, { Z: () => h });
 var r = n(255367),
     i = n(73800),
-    a = n(846519),
-    o = n(388032);
+    o = n(846519),
+    a = n(388032);
 function s(e, t, n) {
     return (
         t in e
@@ -61,8 +61,8 @@ function d(e, t) {
         r,
         i = f(e, t);
     if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
@@ -71,8 +71,8 @@ function f(e, t) {
     var n,
         r,
         i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
 let _ = 13;
@@ -121,16 +121,16 @@ function h(e) {
             let t = this.props,
                 { timestamps: n } = t,
                 i = d(t, ['timestamps']),
-                { hours: a, minutes: s, seconds: c } = this.state,
+                { hours: o, minutes: s, seconds: c } = this.state,
                 f = {
-                    hours: this.renderTime(a, !0),
+                    hours: this.renderTime(o, !0),
                     minutes: this.renderTime(s),
                     seconds: this.renderTime(c)
                 };
-            return null != n.end ? (0, r.jsx)(e, u(l({}, i), { message: o.intl.formatToPlainString(o.t['I/J7vL'], f) })) : null != n.start ? (0, r.jsx)(e, u(l({}, i), { message: o.intl.formatToPlainString(o.t.M9Fexc, f) })) : null;
+            return null != n.end ? (0, r.jsx)(e, u(l({}, i), { message: a.intl.formatToPlainString(a.t['I/J7vL'], f) })) : null != n.start ? (0, r.jsx)(e, u(l({}, i), { message: a.intl.formatToPlainString(a.t.M9Fexc, f) })) : null;
         }
         constructor(e) {
-            (super(e), s(this, '_interval', void 0), (this._interval = new a.Xp()), (this.state = l({}, this.getUpdatedTime())));
+            (super(e), s(this, '_interval', void 0), (this._interval = new o.Xp()), (this.state = l({}, this.getUpdatedTime())));
         }
     };
 }

@@ -15,8 +15,8 @@ var r = n(255367),
     b = n(572004),
     O = n(424218),
     h = n(49012),
-    g = n(358085),
-    E = n(998502),
+    E = n(358085),
+    g = n(998502),
     v = n(254109),
     S = n(212459),
     j = n(369171),
@@ -169,13 +169,13 @@ function D(e) {
 function I(e) {
     let { item: t } = e,
         [n, o] = i.useState(!1);
-    if (!('VIDEO' === t.type || (g.isPlatformEmbedded && null == t.children && 'IMAGE' === t.type && (0, m.gS)(t.url, t.contentType)))) return null;
+    if (!('VIDEO' === t.type || (E.isPlatformEmbedded && null == t.children && 'IMAGE' === t.type && (0, m.gS)(t.url, t.contentType)))) return null;
     let l = (0, m.s$)(t.url, t.contentType, m.wV);
     async function a() {
         if (((0, v.yg)(v.uG.SAVE_MEDIA_PRESSED), 'VIDEO' === t.type && (0, h.q)({ href: l }), 'IMAGE' === t.type)) {
             o(!0);
             try {
-                (await E.ZP.saveImage(l, t.contentType, m.wV), (0, s.showToast)((0, s.createToast)(T.intl.string(T.t.cqpdJS), s.ToastType.SUCCESS)));
+                (await g.ZP.saveImage(l, t.contentType, m.wV), (0, s.showToast)((0, s.createToast)(T.intl.string(T.t.cqpdJS), s.ToastType.SUCCESS)));
             } catch (e) {
                 (0, s.showToast)((0, s.createToast)(T.intl.string(T.t['8Ve/S0']), s.ToastType.FAILURE));
             } finally {
@@ -214,9 +214,9 @@ function Z(e) {
         y = (function (e) {
             var t;
             let { alt: n, sourceMetadata: i, width: o, height: l } = e,
-                a = k(T.intl.string(T.t.ILJuBg), 'name', { subtextLineClamp: 1 }),
-                c = k(T.intl.string(T.t['3Nf9u7']), 'size'),
-                u = k(T.intl.string(T.t.eOB2eX), 'alt', { subtextLineClamp: 2 });
+                a = R(T.intl.string(T.t.ILJuBg), 'name', { subtextLineClamp: 1 }),
+                c = R(T.intl.string(T.t['3Nf9u7']), 'size'),
+                u = R(T.intl.string(T.t.eOB2eX), 'alt', { subtextLineClamp: 2 });
             if ((null == i || null == (t = i.identifier) ? void 0 : t.type) !== 'attachment') return null;
             let d = (0, f.Z)(i.identifier),
                 p = (0, O.BU)(i.identifier.size / 1000);
@@ -244,7 +244,7 @@ function Z(e) {
         (0, v.yg)(v.uG.COPY_IMAGE_PRESSED);
         let e = (0, m.s$)(i.url, i.contentType, m.wV);
         try {
-            (await E.ZP.copyImage(e, i.contentType), (0, s.showToast)((0, s.createToast)(T.intl.string(T.t.bhUpvL), s.ToastType.SUCCESS)));
+            (await g.ZP.copyImage(e, i.contentType), (0, s.showToast)((0, s.createToast)(T.intl.string(T.t.bhUpvL), s.ToastType.SUCCESS)));
         } catch (e) {
             (0, s.showToast)((0, s.createToast)(T.intl.string(T.t.PTPbj4), s.ToastType.FAILURE));
         }
@@ -291,7 +291,7 @@ function Z(e) {
         ]
     });
 }
-function k(e, t, n) {
+function R(e, t, n) {
     let o = i.useCallback((e) => {
         (0, b.JG)(e, () =>
             (0, s.showToast)({
@@ -318,7 +318,7 @@ function k(e, t, n) {
               )
             : null;
 }
-function R(e) {
+function k(e) {
     var t, n;
     let { item: o } = e,
         l = i.useRef(null),
@@ -378,7 +378,7 @@ let A = i.memo(function (e) {
                         'IMAGE' === t.type && (0, r.jsx)(M, {}),
                         !n &&
                             (0, r.jsxs)(r.Fragment, {
-                                children: [(0, r.jsx)(D, { item: t }), (0, r.jsx)(I, { item: t }), (0, r.jsx)(N, { item: t }), (0, r.jsx)(R, { item: t })]
+                                children: [(0, r.jsx)(D, { item: t }), (0, r.jsx)(I, { item: t }), (0, r.jsx)(N, { item: t }), (0, r.jsx)(k, { item: t })]
                             })
                     ]
                 })

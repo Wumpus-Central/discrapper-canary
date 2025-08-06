@@ -1,8 +1,8 @@
 n.d(t, { Z: () => h });
 var r = n(255367),
     i = n(73800),
-    a = n(481060),
-    o = n(980463),
+    o = n(481060),
+    a = n(980463),
     s = n(328908),
     l = n(992970),
     c = n(135793),
@@ -18,9 +18,9 @@ function h(e, t) {
         g = i.useCallback(
             (n) => {
                 try {
-                    (0, o.qc)(t.id, e.id, n);
+                    (0, a.qc)(t.id, e.id, n);
                 } catch (e) {
-                    (0, a.showToast)((0, a.createToast)(p.intl.string(p.t.xsfC2d), a.ToastType.FAILURE));
+                    (0, o.showToast)((0, o.createToast)(p.intl.string(p.t.xsfC2d), o.ToastType.FAILURE));
                 }
             },
             [t.id, e.id]
@@ -36,10 +36,10 @@ function h(e, t) {
                 }));
         }, [t.id, e, g]);
     return n && !h && m
-        ? (0, r.jsx)(a.sNh, {
+        ? (0, r.jsx)(o.sNh, {
               id: 'add-confetti-potion',
               label: p.intl.string(p.t.icaJW1),
-              icon: a.l22,
+              icon: o.l22,
               action: E
           })
         : null;

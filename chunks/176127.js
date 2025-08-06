@@ -2,8 +2,8 @@
 var r = n(255367);
 n(73800);
 var i = n(120356),
-    a = n.n(i),
-    o = n(442837),
+    o = n.n(i),
+    a = n(442837),
     s = n(435064),
     l = n(892983);
 function c(e, t, n) {
@@ -60,7 +60,7 @@ function f(e, t) {
 }
 let _ = 4;
 function p() {
-    let e = (0, o.Wu)([s.Z], () => {
+    let e = (0, a.Wu)([s.Z], () => {
         var e;
         let t = null == (e = s.Z.getLastClipsSession()) ? void 0 : e.newClipIds;
         return null == t
@@ -70,7 +70,7 @@ function p() {
                   .filter((e) => t.includes(e.id));
     });
     return (0, r.jsx)('div', {
-        className: a()(l.thumbnailStack, {
+        className: o()(l.thumbnailStack, {
             [l['height-1']]: 1 === e.length,
             [l['height-2']]: 2 === e.length,
             [l['height-3']]: 3 === e.length,

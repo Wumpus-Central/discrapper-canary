@@ -2,8 +2,8 @@ n.d(t, { Z: () => p });
 var r = n(255367);
 n(73800);
 var i = n(657707),
-    a = n(835473),
-    o = n(925329),
+    o = n(835473),
+    a = n(925329),
     s = n(63063),
     l = n(739566),
     c = n(942951),
@@ -20,7 +20,7 @@ function p(e) {
             guildId: void 0,
             messageId: void 0
         })(),
-        E = (0, a.q)(t.applicationId);
+        E = (0, o.q)(t.applicationId);
     if (null == E) return null;
     let b = f.intl.format(f.t.m7Lwam, {
         username: m,
@@ -30,9 +30,9 @@ function p(e) {
             (0, r.jsxs)('span', {
                 className: _.gameContainer,
                 children: [
-                    (0, r.jsx)(o.Z, {
+                    (0, r.jsx)(a.Z, {
                         game: E,
-                        size: o.Z.Sizes.XXSMALL,
+                        size: a.Z.Sizes.XXSMALL,
                         className: _.inlineIcon
                     }),
                     ' ',

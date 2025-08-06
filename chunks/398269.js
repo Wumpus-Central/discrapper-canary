@@ -2,8 +2,8 @@
 var r = n(255367);
 n(73800);
 var i = n(608787),
-    a = n(765250),
-    o = n(788983),
+    o = n(765250),
+    a = n(788983),
     s = n(355863),
     l = n(837268),
     c = n(32300),
@@ -30,7 +30,7 @@ async function f() {
                 withTitleBar: !1,
                 windowKey: t
             })),
-            (0, a.te)(u.$S, s.Z.getDefaultLayout(u.$S, u.HN), u.HN));
+            (0, o.te)(u.$S, s.Z.getDefaultLayout(u.$S, u.HN), u.HN));
     } else throw Error('OverlayV3Utils: No overlay rendering mode found');
-    await o.bA(d.$J, p, t);
+    await a.bA(d.$J, p, t);
 }

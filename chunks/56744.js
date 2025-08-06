@@ -1,8 +1,8 @@
 n.d(t, { Z: () => p });
 var r = n(255367),
     i = n(73800),
-    a = n(442837),
-    o = n(905405),
+    o = n(442837),
+    a = n(905405),
     s = n(869765),
     l = n(699516),
     c = n(937889),
@@ -12,7 +12,7 @@ var r = n(255367),
 let _ = i.memo(function (e) {
     let { baseMessage: t, channel: n, referencedMessage: f, compact: _ = !1 } = e,
         p = f.state === s.Y.LOADED ? f.message : void 0,
-        h = (0, o.p)(),
+        h = (0, a.p)(),
         m = i.useMemo(
             () =>
                 (null == p ? void 0 : p.content) != null && '' !== p.content
@@ -23,7 +23,7 @@ let _ = i.memo(function (e) {
                     : null,
             [p, h]
         ),
-        { isReplyAuthorBlocked: g, isReplyAuthorIgnored: E } = (0, a.cj)(
+        { isReplyAuthorBlocked: g, isReplyAuthorIgnored: E } = (0, o.cj)(
             [l.Z],
             () => ({
                 isReplyAuthorBlocked: null != p && l.Z.isBlockedForMessage(p),
@@ -47,13 +47,13 @@ let _ = i.memo(function (e) {
         showReplySpine: !0
     });
 });
-function p(e, t, n, i, a) {
+function p(e, t, n, i, o) {
     return e.type !== f.uaV.REPLY || null == n
         ? null
         : (0, r.jsx)(_, {
               baseMessage: e,
               channel: t,
               referencedMessage: i,
-              compact: a
+              compact: o
           });
 }

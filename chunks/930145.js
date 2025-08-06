@@ -1,7 +1,7 @@
-n.d(t, { A: () => a });
+n.d(t, { A: () => o });
 var r = n(198584),
     i = n(350167);
-class a {
+class o {
     static open(e, t) {
         return i.r.executeAsync('database_open', (n) => {
             var i;

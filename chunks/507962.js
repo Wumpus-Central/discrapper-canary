@@ -2,8 +2,8 @@ n.d(t, { Z: () => s });
 var r = n(255367);
 n(73800);
 var i = n(739566),
-    a = n(834129),
-    o = n(388032);
+    o = n(834129),
+    a = n(388032);
 function s(e) {
     let t,
         { message: s, usernameHook: l, otherUser: c, otherUsernameHook: u, compact: d, channel: f } = e,
@@ -13,18 +13,18 @@ function s(e) {
         m = (0, i.Sw)(c, f);
     if (null != m && null != u) {
         let e = u(m);
-        t = o.intl.format(o.t.L2FyVl, {
+        t = a.intl.format(a.t.L2FyVl, {
             username: p,
             usernameHook: h,
             otherUsername: m.nick,
             otherUsernameHook: e
         });
     } else
-        t = o.intl.format(o.t['5v2xa2'], {
+        t = a.intl.format(a.t['5v2xa2'], {
             username: p,
             usernameHook: h
         });
-    return (0, r.jsx)(a.Z, {
+    return (0, r.jsx)(o.Z, {
         icon: n(474019),
         timestamp: s.timestamp,
         compact: d,

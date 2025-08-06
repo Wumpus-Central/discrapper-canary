@@ -1,5 +1,5 @@
 n.d(t, {
-    Px: () => a,
+    Px: () => o,
     W$: () => i,
     jF: () => r
 });
@@ -13,4 +13,4 @@ let r = {
         tension: 1200,
         friction: 80
     },
-    a = r;
+    o = r;

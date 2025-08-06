@@ -1,8 +1,8 @@
 var r = n(511696),
     i = n(127849),
-    a = n(587218),
-    o = '__core-js_shared__',
-    s = (e.exports = i[o] || a(o, {}));
+    o = n(587218),
+    a = '__core-js_shared__',
+    s = (e.exports = i[a] || o(a, {}));
 (s.versions || (s.versions = [])).push({
     version: '3.41.0',
     mode: r ? 'pure' : 'global',

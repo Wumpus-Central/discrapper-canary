@@ -1,17 +1,17 @@
 (n.d(t, {
     J6: () => G,
     LO: () => D,
-    TQ: () => P,
+    TQ: () => w,
     UB: () => H,
     ZU: () => L,
     Zn: () => x,
-    aZ: () => w,
-    bo: () => k,
+    aZ: () => R,
+    bo: () => M,
     fz: () => W,
-    kK: () => j,
+    kK: () => k,
     lg: () => Y,
     om: () => F,
-    pL: () => R,
+    pL: () => P,
     uV: () => C,
     uX: () => V
 }),
@@ -30,9 +30,9 @@
     n(388685));
 var r = n(250683),
     i = n(512722),
-    a = n.n(i),
-    o = n(913527),
-    s = n.n(o),
+    o = n.n(i),
+    a = n(913527),
+    s = n.n(a),
     l = n(544891),
     c = n(974167),
     u = n(668781),
@@ -56,13 +56,13 @@ var r = n(250683),
 function C() {
     return g.Z.getArticleURL(A.BhN.END_TO_END_ENCRYPTION);
 }
-function w() {
-    return g.Z.getArticleURL(A.BhN.END_TO_END_ENCRYPTION);
-}
 function R() {
     return g.Z.getArticleURL(A.BhN.END_TO_END_ENCRYPTION);
 }
-function P(e, t, n, r, i) {
+function P() {
+    return g.Z.getArticleURL(A.BhN.END_TO_END_ENCRYPTION);
+}
+function w(e, t, n, r, i) {
     (n ? O.Z.createSecureFramesVerifiedKey(e, t) : O.Z.createSecureFramesTransientKey(e, t),
         (0, T.M1)({
             channelId: r,
@@ -96,7 +96,7 @@ function x(e) {
         }
     });
 }
-function k(e) {
+function M(e) {
     let t = s()(e),
         n = s()().diff(t, 's');
     if (n > 12 * m.Z.Seconds.DAYS_30) {
@@ -124,7 +124,7 @@ function k(e) {
         return N.intl.formatToPlainString(N.t.ws6rWl, { count: e });
     }
 }
-function j(e) {
+function k(e) {
     let { isCurrentUserKeyPersistent: t, isOtherUserKeyPersistent: n, otherUserNickname: r } = e;
     return t && n
         ? N.intl.format(N.t['FJN+kp'], { helpArticle: C() })
@@ -137,9 +137,9 @@ function j(e) {
             ? N.intl.format(N.t['qT5z8/'], { helpArticle: C() })
             : N.intl.format(N.t['6JLy+v'], { helpArticle: C() });
 }
-async function M(e) {
+async function j(e) {
     let t = d.default.getStaticAuthSessionId();
-    return (a()(null != t, '[getCurrentUserPublicKey] session id should not be null'), await f.Z.getMLSSigningKey(t, e));
+    return (o()(null != t, '[getCurrentUserPublicKey] session id should not be null'), await f.Z.getMLSSigningKey(t, e));
 }
 function U(e) {
     let t = r.fromByteArray(new Uint8Array(e));
@@ -162,7 +162,7 @@ async function G(e, t, n) {
     }
 }
 async function B(e) {
-    let { key: t, signature: n } = await M(e);
+    let { key: t, signature: n } = await j(e);
     try {
         (await l.tn.put({
             url: A.ANM.VOICE_PUBLIC_KEYS(),
@@ -187,7 +187,7 @@ async function F(e) {
 async function V(e) {
     if (!Z(e)) return (await B(e), !0);
     let t = d.default.getId(),
-        { key: n } = await M(e),
+        { key: n } = await j(e),
         r = await G(t, n, e);
     return (r || (0, T.KA)(e), r);
 }
@@ -196,13 +196,13 @@ function H(e, t) {
     if (!n.isUserConnected(e)) return !1;
     let i = n.getSecureFramesRosterMapEntry(e);
     if (null == i) return !1;
-    let a = new Uint8Array(i);
+    let o = new Uint8Array(i);
     for (let t of r.getAllActiveStreamKeys()) {
         if (!r.isUserConnected(t, e)) continue;
         let n = p.Z.getSecureFramesRosterMapEntry(t, e);
         if (null == n) return !0;
         let i = new Uint8Array(n);
-        for (let e = 0; e < a.length; e++) if (a[e] !== i[e]) return !0;
+        for (let e = 0; e < o.length; e++) if (o[e] !== i[e]) return !0;
     }
     return !1;
 }

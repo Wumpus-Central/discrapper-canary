@@ -1,8 +1,8 @@
 n.d(t, { Z: () => m });
 var r = n(255367),
     i = n(73800),
-    a = n(442837),
-    o = n(911969),
+    o = n(442837),
+    a = n(911969),
     s = n(581364),
     l = n(869765),
     c = n(699516),
@@ -41,7 +41,7 @@ function p(e) {
 let h = i.memo(function (e) {
     var t, n;
     let { message: _, channel: p, compact: h = !1, interactionUsernameProfile: m, interactionAvatarProfile: g, interactionData: E, referencedUsernameProfile: b, referencedAvatarProfile: y, setPopout: O } = e,
-        { isInteractionUserBlocked: v, isInteractionUserIgnored: I } = (0, a.cj)(
+        { isInteractionUserBlocked: v, isInteractionUserIgnored: I } = (0, o.cj)(
             [c.Z],
             () => ({
                 isInteractionUserBlocked: c.Z.isBlockedForMessage(_),
@@ -49,14 +49,14 @@ let h = i.memo(function (e) {
             }),
             [_]
         ),
-        T = (0, a.e7)([l.Z], () => l.Z.getMessageByReference(null == _ ? void 0 : _.messageReference)),
+        T = (0, o.e7)([l.Z], () => l.Z.getMessageByReference(null == _ ? void 0 : _.messageReference)),
         S = (0, d.wq)(null == (t = _.interaction) ? void 0 : t.user.id, p.id),
         A = (0, d.Nk)(_.interaction, p, m, O),
         N = (0, d.NU)(g, O),
         C = (0, s.t0)(_),
-        w = (null == C ? void 0 : C.type) === o.B8.APPLICATION_COMMAND ? (null == (n = C.target_user) ? void 0 : n.id) : void 0,
-        R = (0, d.wq)(w, p.id),
-        P = (0, d.JC)(w, p, b, O),
+        R = (null == C ? void 0 : C.type) === a.B8.APPLICATION_COMMAND ? (null == (n = C.target_user) ? void 0 : n.id) : void 0,
+        P = (0, d.wq)(R, p.id),
+        w = (0, d.JC)(R, p, b, O),
         D = (0, d.rY)(y, O),
         L = (0, d.Xn)(E, O),
         x = i.useCallback(() => {
@@ -68,7 +68,7 @@ let h = i.memo(function (e) {
                 referencedAvatarProfile: !1
             });
         }, [O]),
-        k = i.useCallback(
+        M = i.useCallback(
             () =>
                 (0, f.Z)({
                     message: _,
@@ -100,22 +100,22 @@ let h = i.memo(function (e) {
         onClickCommand: L,
         onUserContextMenu: S,
         onClickTargetAvatar: D,
-        onClickTargetUsername: P,
-        onTargetUserContextMenu: R,
+        onClickTargetUsername: w,
+        onTargetUserContextMenu: P,
         onPopoutRequestClose: x,
-        renderTargetMessage: k
+        renderTargetMessage: M
     });
 });
 function m(e, t, n) {
-    let { message: i, channel: a, compact: o } = e;
+    let { message: i, channel: o, compact: a } = e;
     return null != i.interaction && '' !== i.interaction.displayName
         ? (0, r.jsx)(
               h,
               p(
                   {
                       message: i,
-                      channel: a,
-                      compact: o,
+                      channel: o,
+                      compact: a,
                       setPopout: t
                   },
                   n

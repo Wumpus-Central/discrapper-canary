@@ -1,12 +1,12 @@
-n.d(t, { X: () => o });
+n.d(t, { X: () => a });
 var r = n(544891),
     i = n(881052),
-    a = n(981631);
-let o = async (e, t) => {
+    o = n(981631);
+let a = async (e, t) => {
     try {
         return (
             await r.tn.get({
-                url: a.ANM.PRICE_TIERS,
+                url: o.ANM.PRICE_TIERS,
                 query: {
                     price_tier_type: t,
                     guild_id: e

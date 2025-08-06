@@ -2,8 +2,8 @@ n.d(t, { i: () => l });
 var r = n(255367);
 n(73800);
 var i = n(481060),
-    a = n(981631);
-function o(e, t, n) {
+    o = n(981631);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -27,7 +27,7 @@ function s(e) {
                 })
             )),
             r.forEach(function (t) {
-                o(e, t, n[t]);
+                a(e, t, n[t]);
             }));
     }
     return e;
@@ -40,10 +40,10 @@ function l() {
                 e,
                 s(
                     {
-                        analyticsSource: a.Sbl.VOICE_FILTERS,
+                        analyticsSource: o.Sbl.VOICE_FILTERS,
                         analyticsLocation: {
-                            section: a.jXE.VOICE_FILTERS_UPSELL_MODAL,
-                            object: a.qAy.BUTTON_CTA
+                            section: o.jXE.VOICE_FILTERS_UPSELL_MODAL,
+                            object: o.qAy.BUTTON_CTA
                         }
                     },
                     t

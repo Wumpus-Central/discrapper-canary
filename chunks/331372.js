@@ -2,7 +2,7 @@ n.d(t, { Z: () => d });
 var r = n(255367);
 n(73800);
 var i = n(325767);
-function a(e, t, n) {
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -15,7 +15,7 @@ function a(e, t, n) {
         e
     );
 }
-function o(e) {
+function a(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -26,7 +26,7 @@ function o(e) {
                 })
             )),
             r.forEach(function (t) {
-                a(e, t, n[t]);
+                o(e, t, n[t]);
             }));
     }
     return e;
@@ -60,8 +60,8 @@ function c(e, t) {
         r,
         i = u(e, t);
     if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
@@ -70,18 +70,18 @@ function u(e, t) {
     var n,
         r,
         i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
 function d(e) {
-    var { width: t = 440, height: n = 200, avatar: a } = e,
+    var { width: t = 440, height: n = 200, avatar: o } = e,
         s = c(e, ['width', 'height', 'avatar']);
     return (0, r.jsxs)(
         'svg',
         l(
-            o(
-                l(o({}, (0, i.Z)(s)), {
+            a(
+                l(a({}, (0, i.Z)(s)), {
                     width: t,
                     height: n,
                     viewBox: '0 0 '.concat(t, ' ').concat(n),
@@ -163,7 +163,7 @@ function d(e) {
                         y: '100',
                         width: '56',
                         height: '56',
-                        children: a
+                        children: o
                     })
                 ]
             }

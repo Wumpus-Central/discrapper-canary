@@ -1,13 +1,13 @@
 n.d(t, { p: () => s });
 var r = n(573654),
     i = n(73800);
-function a(e) {
+function o(e) {
     if ('string' != typeof e.type) {
         var t = e.type.displayName || e.type.name || 'the component';
         throw Error('Only native element nodes can now be passed to React DnD connectors.' + 'You can either wrap '.concat(t, ' into a <div>, or turn it into a ') + 'drag source or a drop target itself.');
     }
 }
-function o(e) {
+function a(e) {
     return function () {
         var t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
             n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
@@ -15,11 +15,11 @@ function o(e) {
             var r = t;
             return (e(r, n), r);
         }
-        var o = t;
+        var a = t;
         return (
-            a(o),
+            o(a),
             c(
-                o,
+                a,
                 n
                     ? function (t) {
                           return e(t, n);
@@ -36,7 +36,7 @@ function s(e) {
             var r = e[n];
             if (n.endsWith('Ref')) t[n] = e[n];
             else {
-                var i = o(r);
+                var i = a(r);
                 t[n] = function () {
                     return i;
                 };

@@ -6,8 +6,8 @@
 var r = n(255367);
 n(73800);
 var i = n(120356),
-    a = n.n(i),
-    o = n(729594),
+    o = n.n(i),
+    a = n(729594),
     s = n(388032),
     l = n(519222);
 let c = ['sessionshare.sp-int.playstation.com', 'session-share.playstation.com'],
@@ -40,7 +40,7 @@ function m(e) {
     if (null == n || null == i) return null;
     let s = null;
     try {
-        s = o.parse(n, !0);
+        s = a.parse(n, !0);
     } catch (e) {
         return null;
     }
@@ -49,7 +49,7 @@ function m(e) {
         ? null
         : (0, r.jsx)('iframe', {
               src: c.embedUrl,
-              className: a()(l.embedIFrame, e.className),
+              className: o()(l.embedIFrame, e.className),
               style: c.style,
               sandbox: 'allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts'
           });

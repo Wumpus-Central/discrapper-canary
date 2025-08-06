@@ -1,8 +1,8 @@
-(n.d(t, { ZP: () => j }), n(388685));
+(n.d(t, { ZP: () => k }), n(388685));
 var r = n(592125),
     i = n(650774),
-    a = n(750041),
-    o = n(944486),
+    o = n(750041),
+    a = n(944486),
     s = n(368321),
     l = n(553245),
     c = n(143806),
@@ -33,9 +33,9 @@ let h = 750,
     v = new l.b(h, g),
     I = new c.S(m),
     T = !1;
-class S extends a.Z {
+class S extends o.Z {
     initialize() {
-        (this.waitFor(r.Z), this.waitFor(o.Z), this.waitFor(i.Z), this.syncWith([s.Z], () => !0), this.syncWith([o.Z], A));
+        (this.waitFor(r.Z), this.waitFor(a.Z), this.waitFor(i.Z), this.syncWith([s.Z], () => !0), this.syncWith([a.Z], A));
     }
     loadCache() {
         let e = this.readSnapshot(S.LATEST_SNAPSHOT_VERSION);
@@ -103,20 +103,20 @@ class S extends a.Z {
     }
     constructor() {
         super({
-            CACHE_LOADED_LAZY_NO_CACHE: k,
+            CACHE_LOADED_LAZY_NO_CACHE: M,
             CACHE_LOADED_LAZY: () => this.loadCache(),
-            CHANNEL_DELETE: R,
-            CHANNEL_UPDATES: w,
+            CHANNEL_DELETE: P,
+            CHANNEL_UPDATES: R,
             CONNECTION_OPEN_SUPPLEMENTAL: N,
             GUILD_DELETE: L,
             LOGIN_SUCCESS: x,
             THREAD_DELETE: D,
-            THREAD_UPDATE: P
+            THREAD_UPDATE: w
         });
     }
 }
 function A() {
-    let e = o.Z.getChannelId();
+    let e = a.Z.getChannelId();
     null != e && S.recordChannel(e);
 }
 function N() {
@@ -125,16 +125,16 @@ function N() {
 function C(e) {
     let t = e.id,
         n = (0, f.v)(e),
-        r = o.Z.getChannelId();
+        r = a.Z.getChannelId();
     (n && t === r && S.recordChannel(t), n || S.deleteChannel(t));
 }
-function w(e) {
+function R(e) {
     for (let t of e.channels) C(t);
 }
-function R(e) {
+function P(e) {
     S.deleteChannel(e.channel.id);
 }
-function P(e) {
+function w(e) {
     C(e.channel);
 }
 function D(e) {
@@ -146,8 +146,8 @@ function L(e) {
 function x(e) {
     (v.clear(), I.clear(), (T = !1));
 }
-function k(e) {
+function M(e) {
     T = !0;
 }
 (p(S, 'displayName', 'SaveableChannelsStore'), p(S, 'LATEST_SNAPSHOT_VERSION', 1));
-let j = new S();
+let k = new S();

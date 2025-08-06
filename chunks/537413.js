@@ -1,7 +1,7 @@
-(n.d(t, { Z: () => a }), n(388685));
+(n.d(t, { Z: () => o }), n(388685));
 var r = n(451467),
     i = n(37113);
-function a(e, t, n) {
-    for (let a of i.no[e]) if ((0, r.Z)(e, a.resolution, a.fps, t, n)) return [a.resolution, a.fps];
+function o(e, t, n) {
+    for (let o of i.no[e]) if ((0, r.Z)(e, o.resolution, o.fps, t, n)) return [o.resolution, o.fps];
     return null;
 }

@@ -1,8 +1,8 @@
 (n.d(t, { Z: () => f }), n(388685), n(410992), n(227481), n(730884), n(20464), n(341884), n(364341), n(629680), n(505025), n(918970), n(121784), n(644351), n(146733));
 var r,
     i = n(442837),
-    a = n(570140);
-function o(e, t, n) {
+    o = n(570140);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -39,8 +39,8 @@ class d extends (r = i.ZP.Store) {
         return !0;
     }
 }
-o(d, 'displayName', 'TransientKeyStore');
-let f = new d(a.Z, {
+a(d, 'displayName', 'TransientKeyStore');
+let f = new d(o.Z, {
     CONNECTION_OPEN: u,
     SECURE_FRAMES_TRANSIENT_KEY_CREATE: l,
     SECURE_FRAMES_TRANSIENT_KEY_DELETE: c

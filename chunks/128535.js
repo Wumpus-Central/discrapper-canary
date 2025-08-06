@@ -2,8 +2,8 @@
 var r = n(255367);
 n(73800);
 var i = n(120356),
-    a = n.n(i),
-    o = n(959078),
+    o = n.n(i),
+    a = n(959078),
     s = n(442837),
     l = n(755721),
     c = n(481060),
@@ -22,12 +22,12 @@ let O = 16,
     v = (e) => (0 === e.length ? y.warning : y.danger),
     I = (e, t) => (0 === e.length ? b.intl.formatToPlainString(b.t.gX0Qc3, { gameTitle: t }) : b.intl.formatToPlainString(b.t['28Ql29'], { gameTitle: t })),
     T = (e) => {
-        let { quest: t, location: n, errors: i, gameTitle: a, consoleHelpArticle: s, expiredCredentialsInteractable: l, impressionId: u, sourceQuestContent: p } = e;
+        let { quest: t, location: n, errors: i, gameTitle: o, consoleHelpArticle: s, expiredCredentialsInteractable: l, impressionId: u, sourceQuestContent: p } = e;
         if (0 === i.length)
             return (0, r.jsx)(c.Text, {
                 variant: 'text-sm/medium',
                 color: 'text-muted',
-                children: b.intl.format(b.t.GXqvCw, { gameTitle: a })
+                children: b.intl.format(b.t.GXqvCw, { gameTitle: o })
             });
         let h = [],
             g = [s];
@@ -35,17 +35,17 @@ let O = 16,
         let E = [
             ...h,
             ...i.map((e) => {
-                if (e.type !== o.K.EXPIRED_CREDENTIAL || !l) return e.message;
+                if (e.type !== a.K.EXPIRED_CREDENTIAL || !l) return e.message;
                 let r = d.Z.getAccount(e.connected_account_id, e.connected_account_type),
                     i = (0, m.C9)(e),
-                    a = (0, m._j)(e);
+                    o = (0, m._j)(e);
                 return b.intl.format(i, {
                     account_name: null == r ? void 0 : r.name,
                     onClick: () => {
                         (0, m.fY)(
                             {
                                 quest: t,
-                                platformType: a
+                                platformType: o
                             },
                             {
                                 content: n,
@@ -69,7 +69,7 @@ let O = 16,
         let t = e.quest.config.messages.gameTitle,
             n = (0, s.e7)([u.Z], () => u.Z.useReducedMotion),
             i = (0, E.k3)(e.quest.id, e.location, e.sourceQuestContent),
-            o = (0, h.n)(),
+            a = (0, h.n)(),
             d = (0, _.O5)(),
             f = (0, p.aM)(),
             m = (0, E.g2)({
@@ -94,7 +94,7 @@ let O = 16,
                 afterRequest: m.stopAnimation
             });
         return (0, r.jsxs)('div', {
-            className: a()(y.container, { [y.inFlight]: A }),
+            className: o()(y.container, { [y.inFlight]: A }),
             children: [
                 (0, r.jsxs)('div', {
                     className: y.info,
@@ -103,7 +103,7 @@ let O = 16,
                             className: y.header,
                             children: [
                                 (0, r.jsx)(c.Mgn, {
-                                    className: a()(y.headerIcon, v(S)),
+                                    className: o()(y.headerIcon, v(S)),
                                     size: 'custom',
                                     color: 'currentColor',
                                     width: O,
@@ -121,7 +121,7 @@ let O = 16,
                             gameTitle: t,
                             location: e.location,
                             consoleHelpArticle: i,
-                            expiredCredentialsInteractable: o,
+                            expiredCredentialsInteractable: a,
                             impressionId: f,
                             sourceQuestContent: e.sourceQuestContent
                         })

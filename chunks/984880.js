@@ -10,7 +10,7 @@ function i() {
             return e;
         }).apply(this, arguments);
 }
-function a(e) {
+function o(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -21,12 +21,12 @@ function a(e) {
                 })
             )),
             r.forEach(function (t) {
-                o(e, t, n[t]);
+                a(e, t, n[t]);
             }));
     }
     return e;
 }
-function o(e, t, n) {
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -75,69 +75,69 @@ e.exports = (function (e) {
             if (t.getDirectionMap() !== n.getDirectionMap() || t.getSelection().getHasFocus() !== n.getSelection().getHasFocus()) return !0;
             var r = n.getNativelyRenderedContent(),
                 i = t.isInCompositionMode(),
-                a = n.isInCompositionMode();
-            if (t === n || (null !== r && n.getCurrentContent() === r) || (i && a)) return !1;
-            var o = t.getCurrentContent(),
+                o = n.isInCompositionMode();
+            if (t === n || (null !== r && n.getCurrentContent() === r) || (i && o)) return !1;
+            var a = t.getCurrentContent(),
                 s = n.getCurrentContent(),
                 l = t.getDecorator(),
                 c = n.getDecorator();
-            return i !== a || o !== s || l !== c || n.mustForceSelection();
+            return i !== o || a !== s || l !== c || n.mustForceSelection();
         }),
         (n.render = function () {
-            for (var e = this.props, t = e.blockRenderMap, n = e.blockRendererFn, r = e.blockStyleFn, o = e.customStyleMap, s = e.customStyleFn, d = e.editorState, h = e.editorKey, m = e.preventScroll, g = e.textDirectionality, E = d.getCurrentContent(), b = d.getSelection(), y = d.mustForceSelection(), O = d.getDecorator(), v = _(d.getDirectionMap()), I = E.getBlocksAsArray(), T = [], S = null, A = null, N = 0; N < I.length; N++) {
+            for (var e = this.props, t = e.blockRenderMap, n = e.blockRendererFn, r = e.blockStyleFn, a = e.customStyleMap, s = e.customStyleFn, d = e.editorState, h = e.editorKey, m = e.preventScroll, g = e.textDirectionality, E = d.getCurrentContent(), b = d.getSelection(), y = d.mustForceSelection(), O = d.getDecorator(), v = _(d.getDirectionMap()), I = E.getBlocksAsArray(), T = [], S = null, A = null, N = 0; N < I.length; N++) {
                 var C = I[N],
-                    w = C.getKey(),
-                    R = C.getType(),
-                    P = n(C),
+                    R = C.getKey(),
+                    P = C.getType(),
+                    w = n(C),
                     D = void 0,
                     L = void 0,
                     x = void 0;
-                P && ((D = P.component), (L = P.props), (x = P.editable));
-                var k = g || v.get(w),
-                    j = c.encode(w, 0, 0),
-                    M = {
+                w && ((D = w.component), (L = w.props), (x = w.editable));
+                var M = g || v.get(R),
+                    k = c.encode(R, 0, 0),
+                    j = {
                         contentState: E,
                         block: C,
                         blockProps: L,
                         blockStyleFn: r,
-                        customStyleMap: o,
+                        customStyleMap: a,
                         customStyleFn: s,
                         decorator: O,
-                        direction: k,
+                        direction: M,
                         forceSelection: y,
-                        offsetKey: j,
+                        offsetKey: k,
                         preventScroll: m,
                         selection: b,
-                        tree: d.getBlockTree(w)
+                        tree: d.getBlockTree(R)
                     },
-                    U = t.get(R) || t.get('unstyled'),
+                    U = t.get(P) || t.get('unstyled'),
                     G = U.wrapper,
                     B = U.element || t.get('unstyled').element,
                     Z = C.getDepth(),
                     F = '';
                 if ((r && (F = r(C)), 'li' === B)) {
                     var V = A !== G || null === S || Z > S;
-                    F = f(F, p(R, Z, V, k));
+                    F = f(F, p(P, Z, V, M));
                 }
                 var H = D || l,
                     Y = {
                         className: F,
                         'data-block': !0,
                         'data-editor': h,
-                        'data-offset-key': j,
-                        key: w
+                        'data-offset-key': k,
+                        key: R
                     };
                 void 0 !== x &&
-                    (Y = a({}, Y, {
+                    (Y = o({}, Y, {
                         contentEditable: x,
                         suppressContentEditableWarning: !0
                     }));
-                var W = u.createElement(B, Y, u.createElement(H, i({}, M, { key: w })));
+                var W = u.createElement(B, Y, u.createElement(H, i({}, j, { key: R })));
                 (T.push({
                     block: W,
                     wrapperTemplate: G,
-                    key: w,
-                    offsetKey: j
+                    key: R,
+                    offsetKey: k
                 }),
                     (S = G ? C.getDepth() : null),
                     (A = G));
@@ -145,18 +145,18 @@ e.exports = (function (e) {
             for (var K = [], z = 0; z < T.length; ) {
                 var q = T[z];
                 if (q.wrapperTemplate) {
-                    var $ = [];
-                    do ($.push(T[z].block), z++);
+                    var X = [];
+                    do (X.push(T[z].block), z++);
                     while (z < T.length && T[z].wrapperTemplate === q.wrapperTemplate);
-                    var X = u.cloneElement(
+                    var Q = u.cloneElement(
                         q.wrapperTemplate,
                         {
                             key: q.key + '-wrap',
                             'data-offset-key': q.offsetKey
                         },
-                        $
+                        X
                     );
-                    K.push(X);
+                    K.push(Q);
                 } else (K.push(q.block), z++);
             }
             return u.createElement('div', { 'data-contents': 'true' }, K);

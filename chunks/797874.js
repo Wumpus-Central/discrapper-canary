@@ -1,8 +1,8 @@
 n.d(t, { Z: () => I });
 var r = n(255367),
     i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(442837),
     l = n(481060),
     c = n(239091),
@@ -69,8 +69,8 @@ function v(e, t) {
 }
 let I = function (e) {
     var t;
-    let { gameId: a, channelId: b } = e,
-        O = (0, s.e7)([_.Z], () => _.Z.getDetectableGame(a)),
+    let { gameId: o, channelId: b } = e,
+        O = (0, s.e7)([_.Z], () => _.Z.getDetectableGame(o)),
         I = (0, s.e7)([f.Z], () => f.Z.getChannel(b)),
         T = null != I ? I.getGuildId() : null,
         S =
@@ -93,7 +93,7 @@ let I = function (e) {
             null != O
                 ? (0, r.jsx)('img', {
                       alt: '',
-                      className: o()(E.icon, E.imageIcon),
+                      className: a()(E.icon, E.imageIcon),
                       src: p.ZP.getApplicationIconURL({
                           id: O.id,
                           icon: O.icon,
@@ -117,11 +117,11 @@ let I = function (e) {
                 return (t) => (0, r.jsx)(e, y({}, t));
             });
         }, []),
-        w = null != O ? '@game '.concat(O.name) : void 0;
+        R = null != O ? '@game '.concat(O.name) : void 0;
     return (0, r.jsx)(l.DY3, {
         element: 'span',
-        text: w,
-        'aria-label': w,
+        text: R,
+        'aria-label': R,
         delay: 750,
         children: (0, r.jsxs)(h.Z, {
             onClick: null != O ? N : C,

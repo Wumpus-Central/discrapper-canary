@@ -1,10 +1,10 @@
 n.d(t, {
-    J: () => o,
-    f: () => a
+    J: () => a,
+    f: () => o
 });
 var r = n(818083),
     i = n(987338);
-let a = (0, r.B)({
+let o = (0, r.B)({
         id: '2025-07_display_name_styles_viewer',
         kind: 'user',
         label: 'Display Name Styles Viewer',
@@ -32,7 +32,7 @@ let a = (0, r.B)({
             }
         ]
     }),
-    o = (0, r.B)({
+    a = (0, r.B)({
         id: '2025-07_display_name_styles_setter',
         kind: 'user',
         label: 'Display Name Styles Setter',

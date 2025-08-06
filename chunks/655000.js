@@ -1,19 +1,19 @@
 var r = n(621796),
     i = n(172367),
-    a = n(148727);
+    o = n(148727);
 e.exports = function (e) {
     var t,
         n,
-        o = e.getSelection();
-    if (!o.isCollapsed()) return e;
-    var s = o.getAnchorOffset();
+        a = e.getSelection();
+    if (!a.isCollapsed()) return e;
+    var s = a.getAnchorOffset();
     if (0 === s) return e;
-    var l = o.getAnchorKey(),
+    var l = a.getAnchorKey(),
         c = e.getCurrentContent(),
         u = c.getBlockForKey(l).getLength();
     if (u <= 1) return e;
-    s === u ? ((t = o.set('anchorOffset', s - 1)), (n = o)) : (n = (t = o.set('focusOffset', s + 1)).set('anchorOffset', s + 1));
-    var d = a(c, t),
+    s === u ? ((t = a.set('anchorOffset', s - 1)), (n = a)) : (n = (t = a.set('focusOffset', s + 1)).set('anchorOffset', s + 1));
+    var d = o(c, t),
         f = r.removeRange(c, t, 'backward'),
         _ = f.getSelectionAfter(),
         p = _.getAnchorOffset() - 1,

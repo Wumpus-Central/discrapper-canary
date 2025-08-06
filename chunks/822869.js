@@ -8,8 +8,8 @@ n.d(t, {
 });
 var r = n(73800),
     i = n(392711),
-    a = n(367907),
-    o = n(592125),
+    o = n(367907),
+    a = n(592125),
     s = n(626135),
     l = n(981631);
 function c(e, t, n) {
@@ -72,7 +72,7 @@ function _(e) {
         }),
         'message-shortcut' === p)
     ) {
-        let e = o.Z.getChannel(t);
+        let e = a.Z.getChannel(t);
         s.default.track(
             l.rMx.MESSAGE_SHORTCUT_ACTION_SENT,
             u(
@@ -80,8 +80,8 @@ function _(e) {
                     action: 'forward',
                     original_message_id: n
                 },
-                (0, a.hH)(null == e ? void 0 : e.guild_id),
-                (0, a.v_)(e)
+                (0, o.hH)(null == e ? void 0 : e.guild_id),
+                (0, o.v_)(e)
             )
         );
     }

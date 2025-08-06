@@ -26,15 +26,15 @@ let _ = (e) => {
     },
     j = () => {
         let { transitionState: e, onClose: t, premiumType: n, setStep: s, discountPrimary: g, churnUserDiscountOffer: x, isFetchingChurnDiscountOffer: j } = (0, f.a)(),
-            C = (0, l.e7)([u.default], () => {
+            E = (0, l.e7)([u.default], () => {
                 let e = u.default.getCurrentUser();
                 return (a()(null != e, 'ProfileItem: currentUser cannot be undefined'), e);
             });
         r.useEffect(() => {
-            (0, d.Z)(C.id, C.getAvatarURL(null, 80));
-        }, [C]);
-        let E = (0, m.Z)(),
-            O = 'US' === E.ipCountryCode && 'CA' === E.ipSubdivisionCode;
+            (0, d.Z)(E.id, E.getAvatarURL(null, 80));
+        }, [E]);
+        let C = (0, m.Z)(),
+            O = 'US' === C.ipCountryCode && 'CA' === C.ipSubdivisionCode;
         if (j)
             return (0, i.jsx)(o.Modal, {
                 transitionState: e,
@@ -72,7 +72,7 @@ let _ = (e) => {
                 preview: null !== x && (0, i.jsx)(_, { churnUserDiscountOffer: x }),
                 onClose: async () => t(),
                 children: (0, i.jsx)(p.g, {
-                    currentUser: C,
+                    currentUser: E,
                     premiumType: n,
                     onClose: t,
                     isDowngrade: !1,

@@ -6,8 +6,8 @@
 var r = n(255367);
 n(73800);
 var i = n(120356),
-    a = n.n(i),
-    o = n(481060),
+    o = n.n(i),
+    a = n(481060),
     s = n(916704);
 function l(e) {
     let { children: t } = e;
@@ -25,7 +25,7 @@ function c(e) {
         className: s.cell,
         children: [
             'numbered' === u && null != d
-                ? (0, r.jsx)(o.X6q, {
+                ? (0, r.jsx)(a.X6q, {
                       variant: 'heading-md/semibold',
                       color: 'text-brand',
                       className: s.number,
@@ -36,19 +36,19 @@ function c(e) {
                       className: s.iconContainer,
                       children: (0, r.jsx)(t, {
                           color: null != c ? c : 'currentColor',
-                          className: a()(s.icon, l)
+                          className: o()(s.icon, l)
                       })
                   }),
             (0, r.jsxs)('div', {
                 className: s.textContainer,
                 children: [
-                    (0, r.jsx)(o.Text, {
+                    (0, r.jsx)(a.Text, {
                         variant: 'text-md/semibold',
                         color: 'header-primary',
                         children: n
                     }),
                     null != i &&
-                        (0, r.jsx)(o.Text, {
+                        (0, r.jsx)(a.Text, {
                             variant: 'text-xs/medium',
                             color: 'text-secondary',
                             children: i

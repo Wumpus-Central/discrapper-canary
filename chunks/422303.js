@@ -13,12 +13,12 @@
     n(804061));
 let r = /[\t\n,]/g,
     i = ', ',
-    a = /\s{2,}/g,
-    o = /[*"']/g;
+    o = /\s{2,}/g,
+    a = /[*"']/g;
 function s(e) {
     return e
         .split(r)
-        .map((e) => e.replace(a, ' ').trim())
+        .map((e) => e.replace(o, ' ').trim())
         .filter((e) => e.length > 0);
 }
 function l(e) {
@@ -26,8 +26,8 @@ function l(e) {
 }
 function c(e) {
     return e.sort((e, t) => {
-        let n = e.replaceAll(o, ''),
-            r = t.replaceAll(o, '');
+        let n = e.replaceAll(a, ''),
+            r = t.replaceAll(a, '');
         return n.localeCompare(r);
     });
 }

@@ -1,15 +1,15 @@
-n.d(t, { Z: () => o });
+n.d(t, { Z: () => a });
 var r = n(570140),
     i = n(703558),
-    a = n(62817);
-let o = {
+    o = n(62817);
+let a = {
     cancel(e, t) {
         r.Z.dispatch({
             type: 'UPLOAD_CANCEL_REQUEST',
             channelId: e,
             file: t
         });
-        let n = a.Z.getMessageForFile(t.id);
+        let n = o.Z.getMessageForFile(t.id);
         null != n &&
             '' === i.Z.getDraft(n.channel_id, i.d.ChannelMessage) &&
             r.Z.dispatch({

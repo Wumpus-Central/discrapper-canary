@@ -1,12 +1,12 @@
 var r = n(172367),
     i = n(808570),
-    a = n(924125);
+    o = n(924125);
 e.exports = function (e, t) {
     var n = t.currentTarget.ownerDocument;
-    if (!e.props.preserveSelectionOnBlur && a(n) === n.body) {
-        var o = n.defaultView.getSelection(),
+    if (!e.props.preserveSelectionOnBlur && o(n) === n.body) {
+        var a = n.defaultView.getSelection(),
             s = e.editor;
-        1 === o.rangeCount && i(s, o.anchorNode) && i(s, o.focusNode) && o.removeAllRanges();
+        1 === a.rangeCount && i(s, a.anchorNode) && i(s, a.focusNode) && a.removeAllRanges();
     }
     var l = e._latestEditorState,
         c = l.getSelection();

@@ -1,5 +1,5 @@
 n.d(t, {
-    S: () => a,
+    S: () => o,
     T: () => i
 });
 var r = n(476326);
@@ -16,6 +16,6 @@ function i(e, t) {
     }
     return !1;
 }
-function a(e, t) {
+function o(e, t) {
     return 0 === t ? 0 : Math.min(Math.floor((e / t) * 100), 100);
 }

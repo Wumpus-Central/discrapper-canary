@@ -1,5 +1,5 @@
 n.d(t, {
-    SQ: () => a,
+    SQ: () => o,
     eB: () => r,
     wF: () => i
 });
@@ -10,7 +10,7 @@ let r = '363445589247131668',
         ROBLOX_USER_ID: 'robloxUserId',
         ROBLOX_TIME_STARTED: 'timeStarted'
     },
-    a = {
+    o = {
         UNIVERSE_ID: 'universeid',
         PLACE_ID: 'placeid',
         JOB_ID: 'sid',

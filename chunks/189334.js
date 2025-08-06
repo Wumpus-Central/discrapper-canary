@@ -1,8 +1,8 @@
 (n.d(t, { Z: () => m }), n(388685));
 var r = n(147913),
     i = n(282397),
-    a = n(626135),
-    o = n(131595),
+    o = n(626135),
+    a = n(131595),
     s = n(475774),
     l = n(981631);
 function c(e, t, n) {
@@ -22,14 +22,14 @@ let u = 'interaction_iframe_modal';
 async function d(e) {
     let { openInteractionModal: t } = await n.e('31453').then(n.bind(n, 440934));
     (t(e),
-        a.default.track(l.rMx.OPEN_MODAL, {
+        o.default.track(l.rMx.OPEN_MODAL, {
             type: 'interaction_modal',
             application_id: e.application.id
         }));
 }
 function f(e) {
     ((0, s.Z)(e),
-        a.default.track(l.rMx.OPEN_MODAL, {
+        o.default.track(l.rMx.OPEN_MODAL, {
             type: u,
             application_id: e.application.id
         }));
@@ -38,11 +38,11 @@ function _(e) {
     let { application: t } = e,
         n = i.ZP.getIFrameModalApplicationId(),
         r = i.ZP.getIFrameModalKey();
-    t.id === n && null != n && (0, o.Z)(n, r);
+    t.id === n && null != n && (0, a.Z)(n, r);
 }
 function p(e, t) {
     let n = null != t ? Date.now() - t : void 0;
-    a.default.track(l.rMx.MODAL_DISMISSED, {
+    o.default.track(l.rMx.MODAL_DISMISSED, {
         type: u,
         application_id: e.applicationId,
         duration_open_ms: n

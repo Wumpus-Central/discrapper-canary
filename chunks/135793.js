@@ -7,8 +7,8 @@
     n(35282));
 var r = n(255367),
     i = n(73800),
-    a = n(990547),
-    o = n(311570),
+    o = n(990547),
+    a = n(311570),
     s = n(704215),
     l = n(481060),
     c = n(596454),
@@ -31,9 +31,9 @@ var r = n(255367),
     A = n(981631),
     N = n(921944),
     C = n(388032),
-    w = n(956589),
-    R = n(99713);
-function P(e, t, n) {
+    R = n(956589),
+    P = n(99713);
+function w(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -57,7 +57,7 @@ function D(e) {
                 })
             )),
             r.forEach(function (t) {
-                P(e, t, n[t]);
+                w(e, t, n[t]);
             }));
     }
     return e;
@@ -85,11 +85,11 @@ function x(e, t) {
         e
     );
 }
-let k = 190,
-    j = 178,
-    M = 'MESSAGE_CONFETTI_POTION_MODAL_KEY',
+let M = 190,
+    k = 178,
+    j = 'MESSAGE_CONFETTI_POTION_MODAL_KEY',
     U = (e) => {
-        let { channelId: t, message: i, onRedeem: a, onClose: o, buttonUseState: c = 'activate', source: u } = e,
+        let { channelId: t, message: i, onRedeem: o, onClose: a, buttonUseState: c = 'activate', source: u } = e,
             d = h.Z.getChannel(t);
         null != d &&
             ((0, f.Q3)(s.z.CONFETTI_POTION_UPSELL, { dismissAction: N.L.INDIRECT_ACTION }),
@@ -102,31 +102,31 @@ let k = 190,
                             x(D({}, t), {
                                 channel: d,
                                 message: i,
-                                onRedeem: a,
-                                onUnmount: o,
+                                onRedeem: o,
+                                onUnmount: a,
                                 source: u,
                                 buttonUseState: c
                             })
                         );
                 },
-                { modalKey: M }
+                { modalKey: j }
             ));
     };
 function G(e) {
-    let { transitionState: t, channel: n, message: o, onRedeem: s, onUnmount: c, buttonUseState: u, source: d } = e;
+    let { transitionState: t, channel: n, message: a, onRedeem: s, onUnmount: c, buttonUseState: u, source: d } = e;
     return (
         (0, i.useEffect)(() => c, [c]),
         (0, r.jsx)(l.Y0X, {
             size: l.CgR.DYNAMIC,
             transitionState: t,
             impression: {
-                impressionName: a.ImpressionNames.CONFETTI_POTION_MODAL,
+                impressionName: o.ImpressionNames.CONFETTI_POTION_MODAL,
                 impressionProperties: { source: d }
             },
             parentComponent: 'MessageConfettiConsumableModal',
             children: (0, r.jsx)(B, {
                 channel: n,
-                message: o,
+                message: a,
                 onRedeem: s,
                 buttonUseState: u
             })
@@ -134,7 +134,7 @@ function G(e) {
     );
 }
 function B(e) {
-    let { channel: t, message: n, onRedeem: a, buttonUseState: s } = e,
+    let { channel: t, message: n, onRedeem: o, buttonUseState: s } = e,
         c = null != n,
         f = c && (0, I.Uw)(n),
         _ = (0, b.Qj)(t.id, c),
@@ -142,50 +142,50 @@ function B(e) {
         { entitlement: y, fetchedEntitlement: v, error: T } = (0, S.t6)(O.D1),
         N = g || T,
         { analyticsLocations: C } = (0, d.ZP)([u.Z.CONFETTI_POTION_MODAL]),
-        w = null != y && !y.consumed,
-        R = m || !v;
+        R = null != y && !y.consumed,
+        P = m || !v;
     (0, i.useEffect)(
         () => () => {
             N && (0, E.SN)(O.D1);
         },
         [N, c]
     );
-    let P = (0, i.useCallback)(() => {
-            null != _ && ((0, l.pTH)(), a(_));
-        }, [_, a]),
+    let w = (0, i.useCallback)(() => {
+            null != _ && ((0, l.pTH)(), o(_));
+        }, [_, o]),
         D = (0, i.useCallback)(() => {
             (0, p.Z)({
                 skuId: O.D1,
                 analyticsLocations: C,
                 onComplete: () => {
-                    (P(), (0, E.gA)(O.D1));
+                    (w(), (0, E.gA)(O.D1));
                 },
-                variantsReturnStyle: o.v.INDIVIDUAL_PRODUCTS
+                variantsReturnStyle: a.v.INDIVIDUAL_PRODUCTS
             });
-        }, [P, C]),
-        L = (0, i.useCallback)(() => (w ? P() : D()), [P, D, w]),
+        }, [w, C]),
+        L = (0, i.useCallback)(() => (R ? w() : D()), [w, D, R]),
         x = (0, i.useMemo)(() => {
             if (null != y) {
                 if ('apply' === s) return 3;
                 if (y.type === A.qc2.DEVELOPER_GIFT) return 1;
-                if (w) return 2;
+                if (R) return 2;
             }
             return 0;
-        }, [y, w, s]),
-        k = (0, i.useMemo)(() => (0 === x ? 1 : f ? 2 : 3 * (null == _)), [f, _, x]);
+        }, [y, R, s]),
+        M = (0, i.useMemo)(() => (0 === x ? 1 : f ? 2 : 3 * (null == _)), [f, _, x]);
     return (0, r.jsx)(Z, {
         channel: t,
         buttonPurchaseState: x,
-        buttonDisabledState: k,
+        buttonDisabledState: M,
         price: h,
         onActionClick: L,
-        loading: R,
+        loading: P,
         selectedEmoji: null != _ ? _ : void 0,
         isReaction: c
     });
 }
 let Z = (e) => {
-        let { channel: t, buttonPurchaseState: n, buttonDisabledState: a, price: o, onActionClick: s, loading: l, selectedEmoji: c, isReaction: u } = e,
+        let { channel: t, buttonPurchaseState: n, buttonDisabledState: o, price: a, onActionClick: s, loading: l, selectedEmoji: c, isReaction: u } = e,
             d = (0, i.useRef)(null);
         return ((0, i.useEffect)(() => {
             var e;
@@ -193,14 +193,14 @@ let Z = (e) => {
             let t = null == (e = d.current) ? void 0 : e.getBoundingClientRect();
             if (null == t) return;
             let n = (0, I.NV)(c),
-                { x: r, y: i, width: a, height: o } = t;
+                { x: r, y: i, width: o, height: a } = t;
             (0, v.I)(
                 n,
                 {
                     x: r,
                     y: i,
-                    w: a,
-                    h: o
+                    w: o,
+                    h: a
                 },
                 !0,
                 y.LL.ConfettiPreview
@@ -208,12 +208,12 @@ let Z = (e) => {
         }, [c]),
         l)
             ? (0, r.jsx)(z, {})
-            : null == o
+            : null == a
               ? (0, r.jsx)(K, {})
               : (0, r.jsxs)(r.Fragment, {
                     children: [
                         (0, r.jsx)('div', {
-                            className: w.modal,
+                            className: R.modal,
                             ref: d,
                             children: (0, r.jsx)(F, {
                                 channel: t,
@@ -223,8 +223,8 @@ let Z = (e) => {
                         }),
                         (0, r.jsx)(H, {
                             buttonPurchaseState: n,
-                            buttonDisabledState: a,
-                            price: o,
+                            buttonDisabledState: o,
+                            price: a,
                             onActionClick: s
                         })
                     ]
@@ -233,13 +233,13 @@ let Z = (e) => {
     F = (e) => {
         let { channel: t, selectedEmoji: n, isReaction: i } = e;
         return (0, r.jsxs)('div', {
-            className: w.body,
+            className: R.body,
             children: [
                 (0, r.jsxs)('div', {
-                    className: w.header,
+                    className: R.header,
                     children: [
                         (0, r.jsxs)('div', {
-                            className: w.heading,
+                            className: R.heading,
                             children: [
                                 (0, r.jsx)(l.X6q, {
                                     variant: 'heading-lg/bold',
@@ -259,9 +259,9 @@ let Z = (e) => {
                         })
                     ]
                 }),
-                (0, r.jsx)('div', { className: w.divider }),
+                (0, r.jsx)('div', { className: R.divider }),
                 (0, r.jsxs)('div', {
-                    className: w.selectContainer,
+                    className: R.selectContainer,
                     children: [
                         (0, r.jsx)(l.Text, {
                             variant: 'eyebrow',
@@ -278,12 +278,12 @@ let Z = (e) => {
         });
     },
     V = (e) => {
-        let { channel: t, selectedEmoji: n, isReaction: a } = e,
-            [o, s] = (0, i.useState)(!1),
+        let { channel: t, selectedEmoji: n, isReaction: o } = e,
+            [a, s] = (0, i.useState)(!1),
             u = (0, i.useCallback)(() => {
                 s(!1);
             }, []),
-            d = (0, i.useCallback)((e) => (0, b.t0)(e, t.id, a), [a, t.id]),
+            d = (0, i.useCallback)((e) => (0, b.t0)(e, t.id, o), [o, t.id]),
             { emojiName: f, selectionText: _ } = (0, i.useMemo)(
                 () =>
                     null == n
@@ -300,7 +300,7 @@ let Z = (e) => {
             p = (0, i.useRef)(null);
         return (0, r.jsx)(T.Z, {
             channel: t,
-            shouldShow: o,
+            shouldShow: a,
             onRequestClose: u,
             setEmojiConfetti: d,
             positionRef: p,
@@ -308,13 +308,13 @@ let Z = (e) => {
             align: 'top',
             children: () =>
                 (0, r.jsx)(l.P3F, {
-                    onClick: () => s(!o),
-                    className: w.emojiSelect,
+                    onClick: () => s(!a),
+                    className: R.emojiSelect,
                     children: (0, r.jsxs)('div', {
-                        className: w.emojiContent,
+                        className: R.emojiContent,
                         children: [
                             (0, r.jsxs)('div', {
-                                className: w.selectedEmoji,
+                                className: R.selectedEmoji,
                                 children: [
                                     (0, r.jsx)('div', {
                                         ref: p,
@@ -323,13 +323,13 @@ let Z = (e) => {
                                                 ? (0, r.jsx)(l.EO4, {
                                                       color: 'currentColor',
                                                       size: 'custom',
-                                                      className: w.emojiIcon
+                                                      className: R.emojiIcon
                                                   })
                                                 : (0, r.jsx)(c.Z, {
                                                       animated: !1,
                                                       emojiId: n.id,
                                                       emojiName: f,
-                                                      className: w.emojiIcon
+                                                      className: R.emojiIcon
                                                   })
                                     }),
                                     (0, r.jsx)(l.Text, {
@@ -339,16 +339,16 @@ let Z = (e) => {
                                     })
                                 ]
                             }),
-                            o
+                            a
                                 ? (0, r.jsx)(l.u04, {
                                       color: 'currentColor',
                                       size: 'custom',
-                                      className: w.chevron
+                                      className: R.chevron
                                   })
                                 : (0, r.jsx)(l.CJ0, {
                                       color: 'currentColor',
                                       size: 'custom',
-                                      className: w.chevron
+                                      className: R.chevron
                                   })
                         ]
                     })
@@ -356,26 +356,26 @@ let Z = (e) => {
         });
     },
     H = (e) => {
-        let { buttonPurchaseState: t, buttonDisabledState: n, price: i, onActionClick: a } = e;
+        let { buttonPurchaseState: t, buttonDisabledState: n, price: i, onActionClick: o } = e;
         return (0, r.jsxs)('div', {
-            className: w.footer,
+            className: R.footer,
             children: [
                 (0, r.jsx)(l.zxk, {
                     variant: 'secondary',
                     text: C.intl.string(C.t.w2Qbd3),
                     onClick: () => {
-                        (0, l.Mr3)(M);
+                        (0, l.Mr3)(j);
                     }
                 }),
                 (0, r.jsxs)('div', {
-                    className: w.footerRight,
+                    className: R.footerRight,
                     children: [
                         (0, r.jsx)(Y, {}),
                         (0, r.jsx)(W, {
                             buttonPurchaseState: t,
                             buttonDisabledState: n,
                             price: i,
-                            onActionClick: a
+                            onActionClick: o
                         })
                     ]
                 })
@@ -387,11 +387,11 @@ let Z = (e) => {
         if (null == t || 0 === t) return null;
         let n = (null == e ? void 0 : e.type) === A.qc2.DEVELOPER_GIFT ? C.t['b+P6ra'] : C.t.RiQ4cn;
         return (0, r.jsxs)('div', {
-            className: w.remaining,
+            className: R.remaining,
             children: [
                 (0, r.jsx)(l.l22, {
                     color: 'currentColor',
-                    className: w.shootingStar
+                    className: R.shootingStar
                 }),
                 (0, r.jsx)(l.Text, {
                     color: 'none',
@@ -402,7 +402,7 @@ let Z = (e) => {
         });
     },
     W = (e) => {
-        let { buttonPurchaseState: t, buttonDisabledState: n, price: a, onActionClick: o } = e,
+        let { buttonPurchaseState: t, buttonDisabledState: n, price: o, onActionClick: a } = e,
             {
                 isDisabled: s,
                 copy: c,
@@ -411,7 +411,7 @@ let Z = (e) => {
                 let e = {
                         0: C.intl.formatToPlainString(C.t.POGRmp, {
                             amount: O.pe,
-                            price: (0, g.T4)(a.amount, a.currency)
+                            price: (0, g.T4)(o.amount, o.currency)
                         }),
                         1: C.intl.string(C.t.RrKeDw),
                         2: C.intl.string(C.t.WOXaWF),
@@ -428,16 +428,16 @@ let Z = (e) => {
                     copy: e[t],
                     tooltipCopy: i ? r[n] : ''
                 };
-            }, [n, t, a.amount, a.currency]);
+            }, [n, t, o.amount, o.currency]);
         return (0, r.jsx)(l.ua7, {
-            tooltipContentClassName: w.tooltip,
+            tooltipContentClassName: R.tooltip,
             text: u,
             shouldShow: !!s,
             children: (e) =>
                 (0, r.jsx)(
                     l.zxk,
                     x(D({}, e), {
-                        onClick: o,
+                        onClick: a,
                         disabled: s,
                         text: c
                     })
@@ -446,14 +446,14 @@ let Z = (e) => {
     },
     K = () =>
         (0, r.jsx)('div', {
-            className: w.anomaly,
+            className: R.anomaly,
             children: (0, r.jsxs)('div', {
-                className: w.error,
+                className: R.error,
                 children: [
                     (0, r.jsx)(l.Eep, {
-                        src: R,
-                        width: j,
-                        height: k
+                        src: P,
+                        width: k,
+                        height: M
                     }),
                     (0, r.jsx)(l.Text, {
                         variant: 'text-md/normal',
@@ -464,9 +464,9 @@ let Z = (e) => {
         }),
     z = () =>
         (0, r.jsx)('div', {
-            className: w.anomaly,
+            className: R.anomaly,
             children: (0, r.jsx)('div', {
-                className: w.spinner,
+                className: R.spinner,
                 children: (0, r.jsx)(l.$jN, {})
             })
         });

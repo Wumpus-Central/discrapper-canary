@@ -2,8 +2,8 @@ n.d(t, { Z: () => m });
 var r = n(255367);
 n(73800);
 var i = n(120356),
-    a = n.n(i),
-    o = n(481060),
+    o = n.n(i),
+    a = n(481060),
     s = n(129861),
     l = n(406943),
     c = n(385499),
@@ -18,7 +18,7 @@ function m(e) {
         S = (e) =>
             null == v
                 ? e
-                : (0, r.jsx)(o.kL8, {
+                : (0, r.jsx)(a.kL8, {
                       onClick: v,
                       className: h.clickableUsername,
                       'aria-label': p.intl.string(p.t['+Xp3ho']),
@@ -27,13 +27,13 @@ function m(e) {
         A = null != E && E.length > 0,
         N = (0, l.D)(t);
     return (0, r.jsxs)('div', {
-        className: a()(h.container, { [h.bot]: null != N }, b),
+        className: o()(h.container, { [h.bot]: null != N }, b),
         children: [
             (0, r.jsxs)('div', {
                 className: h.usernameRow,
                 children: [
                     S(
-                        (0, r.jsx)(o.Text, {
+                        (0, r.jsx)(a.Text, {
                             className: h.nickname,
                             variant: T,
                             children: (0, r.jsx)(d.Z, {
@@ -58,7 +58,7 @@ function m(e) {
                 ]
             }),
             (0, r.jsxs)('div', {
-                className: a()(h.tags, {
+                className: o()(h.tags, {
                     [h.pronouns]: A,
                     [h.bot]: null != N
                 }),
@@ -70,7 +70,7 @@ function m(e) {
                                 usernameIcon: n,
                                 forceUsername: !0,
                                 forcePomelo: O,
-                                className: a()(h.userTag, y),
+                                className: o()(h.userTag, y),
                                 usernameClass: h.userTagUsername,
                                 discriminatorClass: h.userTagDiscriminator,
                                 hideBotTag: !0
@@ -83,12 +83,12 @@ function m(e) {
                                     'aria-hidden': 'true',
                                     className: h.dotSpacer
                                 }),
-                                (0, r.jsx)(o.DY3, {
+                                (0, r.jsx)(a.DY3, {
                                     className: h.pronounsTooltip,
                                     text: p.intl.string(p.t.GI2A8P),
                                     delay: _.vB,
-                                    children: (0, r.jsx)(o.Text, {
-                                        className: a()(h.pronounsText, y),
+                                    children: (0, r.jsx)(a.Text, {
+                                        className: o()(h.pronounsText, y),
                                         variant: 'text-sm/medium',
                                         color: 'header-primary',
                                         children: E

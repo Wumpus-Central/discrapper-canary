@@ -2,8 +2,8 @@ n.d(t, { Z: () => C });
 var r = n(255367);
 n(73800);
 var i = n(442837),
-    a = n(481060),
-    o = n(493773),
+    o = n(481060),
+    a = n(493773),
     s = n(367907),
     l = n(111028),
     c = n(91218),
@@ -76,7 +76,7 @@ let N = 40,
     C = (e) => {
         let { roleIcon: t, guild: n } = e,
             { name: I } = t;
-        (0, o.ZP)(() => {
+        (0, a.ZP)(() => {
             g.default.track(
                 b.rMx.OPEN_POPOUT,
                 T(
@@ -90,12 +90,12 @@ let N = 40,
         });
         let S = (0, i.e7)([h.Z], () => (null != t.roleId ? h.Z.getRole(n.id, t.roleId) : void 0)),
             C = (0, f.Z)(S),
-            w = C ? O.intl.formatToPlainString(O.t.t0928f, { name: I }) : O.intl.formatToPlainString(O.t.UDDkGx, { name: I }),
-            R = A(T({}, t), {
+            R = C ? O.intl.formatToPlainString(O.t.t0928f, { name: I }) : O.intl.formatToPlainString(O.t.UDDkGx, { name: I }),
+            P = A(T({}, t), {
                 src: null == t.src ? t.src : (0, u.o)(t.src, N),
                 size: N
             }),
-            P = () => {
+            w = () => {
                 (0, d.f)({
                     guildId: n.id,
                     location: { section: b.jXE.ROLE_ICON_POPOUT }
@@ -104,8 +104,8 @@ let N = 40,
             D = () => {
                 (0, _.uL)(b.Z5c.CHANNEL(n.id, y.oC.ROLE_SUBSCRIPTIONS));
             },
-            L = C ? D : P;
-        return (0, r.jsx)(a.VqE, {
+            L = C ? D : w;
+        return (0, r.jsx)(o.VqE, {
             children: (0, r.jsx)(E.W_, {
                 children: (0, r.jsxs)('div', {
                     className: v.popoutContainer,
@@ -117,7 +117,7 @@ let N = 40,
                                     className: v.roleIconContainer,
                                     children: (0, r.jsx)(
                                         c.Z,
-                                        A(T({}, R), {
+                                        A(T({}, P), {
                                             enableTooltip: !1,
                                             className: v.__invalid_roleIcon,
                                             enableHeight: !1
@@ -127,25 +127,25 @@ let N = 40,
                                 (0, r.jsxs)('div', {
                                     className: v.truncatingText,
                                     children: [
-                                        (0, r.jsx)(a.X6q, {
+                                        (0, r.jsx)(o.X6q, {
                                             variant: 'heading-md/semibold',
                                             className: v.roleName,
                                             children: (0, r.jsx)(l.Z, { children: I })
                                         }),
-                                        (0, r.jsx)(a.Text, {
+                                        (0, r.jsx)(o.Text, {
                                             variant: 'text-sm/normal',
-                                            children: w
+                                            children: R
                                         })
                                     ]
                                 })
                             ]
                         }),
-                        (0, r.jsx)(a.zxk, {
+                        (0, r.jsx)(o.zxk, {
                             size: 'sm',
                             variant: 'secondary',
                             text: O.intl.string(O.t['H930+P']),
                             onClick: L,
-                            icon: a.$Eu,
+                            icon: o.$Eu,
                             fullWidth: !0,
                             autoFocus: !0
                         })

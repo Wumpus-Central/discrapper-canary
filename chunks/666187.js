@@ -1,9 +1,9 @@
 (n.d(t, { L: () => T }), n(539854));
 var r,
     i = n(255367),
-    a = n(73800),
-    o = n(120356),
-    s = n.n(o),
+    o = n(73800),
+    a = n(120356),
+    s = n.n(a),
     l = n(772848),
     c = n(84735),
     u = n(15127),
@@ -32,7 +32,7 @@ let b = (0, l.Z)(),
     O = (0, l.Z)(),
     v = 10,
     I = 7.23;
-class T extends (r = a.Component) {
+class T extends (r = o.Component) {
     getPaddingRight() {
         let { maxLength: e, showCharacterCountFullPadding: t } = this.props;
         if (null == e) return v;
@@ -97,9 +97,9 @@ class T extends (r = a.Component) {
     }
     render() {
         var e, t;
-        let { disabled: n, value: r, placeholder: a, autoFocus: o, minLength: l, maxLength: u, allowOverflow: f, spellCheck: E, resizeable: b, className: v, id: I, rows: T, flex: S, autosize: A, required: N, onInvalid: C, inputRef: w } = this.props,
-            R = A ? _.l : 'textarea',
-            P = this.hasError(),
+        let { disabled: n, value: r, placeholder: o, autoFocus: a, minLength: l, maxLength: u, allowOverflow: f, spellCheck: E, resizeable: b, className: v, id: I, rows: T, flex: S, autosize: A, required: N, onInvalid: C, inputRef: R } = this.props,
+            P = A ? _.l : 'textarea',
+            w = this.hasError(),
             D = null != (t = this.props['aria-labelledby']) ? t : null == (e = this.context) ? void 0 : e.titleId,
             L = this.getAriaDescribedBy();
         return (0, i.jsxs)('div', {
@@ -109,22 +109,22 @@ class T extends (r = a.Component) {
                     className: s()(h.inputMaxLength, { [h.flex]: S }),
                     children: [
                         (0, i.jsx)(c.t, {
-                            children: (0, i.jsx)(R, {
+                            children: (0, i.jsx)(P, {
                                 type: 'text',
                                 className: s()(m.input, h.textArea, g.scrollbarDefault, v, {
-                                    [m.error]: P,
+                                    [m.error]: w,
                                     [m.disabled]: n,
                                     [h.resizeable]: b
                                 }),
                                 'aria-labelledby': D,
                                 'aria-describedby': L,
-                                'aria-invalid': P,
+                                'aria-invalid': w,
                                 style: { paddingRight: this.getPaddingRight() },
                                 id: I,
                                 disabled: n,
-                                placeholder: a,
+                                placeholder: o,
                                 value: r,
-                                autoFocus: o,
+                                autoFocus: a,
                                 minLength: l,
                                 maxLength: f ? void 0 : u,
                                 spellCheck: E,
@@ -135,7 +135,7 @@ class T extends (r = a.Component) {
                                 onKeyDown: this.onKeyDown,
                                 onInvalid: C,
                                 rows: T,
-                                ref: w
+                                ref: R
                             })
                         }),
                         null != l &&
@@ -163,8 +163,8 @@ class T extends (r = a.Component) {
                 var e;
                 let { maxLength: t, minLength: n, error: r } = this.props,
                     i = [],
-                    a = null == (e = this.context) ? void 0 : e.errorId;
-                return (null != a && i.push(a), null != r ? i.push(b) : (null != t && i.push(O), null != n && i.push(y)), i.length > 0 ? i.join(' ') : void 0);
+                    o = null == (e = this.context) ? void 0 : e.errorId;
+                return (null != o && i.push(o), null != r ? i.push(b) : (null != t && i.push(O), null != n && i.push(y)), i.length > 0 ? i.join(' ') : void 0);
             }),
             E(this, 'onChange', (e) => {
                 let { onChange: t, name: n } = this.props;

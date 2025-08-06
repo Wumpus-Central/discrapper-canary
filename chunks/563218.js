@@ -1,8 +1,8 @@
 n.d(t, { Z: () => g });
 var r = n(255367),
     i = n(73800),
-    a = n(442837),
-    o = n(570140),
+    o = n(442837),
+    a = n(570140),
     s = n(519938),
     l = n(928518),
     c = n(585483),
@@ -13,16 +13,16 @@ var r = n(255367),
     p = n(918559),
     h = n(981631);
 let m = (e, t) => {
-    o.Z.wait(() => {
+    a.Z.wait(() => {
         (0, s.Cz)(e, t);
     });
 };
 function g(e) {
     let t,
-        { embedId: n, className: o, style: s } = e,
-        g = (0, a.e7)([l.Z], () => l.Z.getWindow(h.KJ3.CHANNEL_CALL_POPOUT)),
+        { embedId: n, className: a, style: s } = e,
+        g = (0, o.e7)([l.Z], () => l.Z.getWindow(h.KJ3.CHANNEL_CALL_POPOUT)),
         E = (0, _.Z)(),
-        b = (0, a.e7)([u.ZP], () => u.ZP.getActivityPanelMode());
+        b = (0, o.e7)([u.ZP], () => u.ZP.getActivityPanelMode());
     if (null == E || (0, f.Z)((0, d.p)(E.location)) || b !== p.Ez.PANEL) {
         var y;
         t = null != (y = null == g ? void 0 : g.window) ? y : window;
@@ -66,7 +66,7 @@ function g(e) {
         (0, r.jsx)('div', {
             ref: O,
             style: s,
-            className: o
+            className: a
         })
     );
 }

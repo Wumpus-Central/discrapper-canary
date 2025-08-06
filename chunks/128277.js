@@ -1,8 +1,8 @@
 (n.d(t, { Z: () => L }), n(35282));
 var r = n(255367),
     i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(481060),
     l = n(503438),
     c = n(100527),
@@ -25,7 +25,7 @@ var r = n(255367),
     A = n(670451),
     N = n(228168),
     C = n(227832);
-function w(e, t, n) {
+function R(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -38,7 +38,7 @@ function w(e, t, n) {
         e
     );
 }
-function R(e) {
+function P(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -49,12 +49,12 @@ function R(e) {
                 })
             )),
             r.forEach(function (t) {
-                w(e, t, n[t]);
+                R(e, t, n[t]);
             }));
     }
     return e;
 }
-function P(e, t) {
+function w(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -71,43 +71,43 @@ function D(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : P(Object(t)).forEach(function (n) {
+            : w(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
 function L(e) {
-    let { user: t, currentUser: n, activity: a, className: w, onClose: P } = e,
+    let { user: t, currentUser: n, activity: o, className: R, onClose: w } = e,
         L = (0, p.Dt)(),
         x = (0, p.Dt)(),
-        { themeType: k } = (0, b.z)(),
-        j = (0, _.Z)({
-            activity: a,
+        { themeType: M } = (0, b.z)(),
+        k = (0, _.Z)({
+            activity: o,
             user: t
         }),
-        M = (0, E.Z)(a),
-        U = null != M.text && '' !== M.text,
-        { largeImage: G } = (0, d.FO)(a),
+        j = (0, E.Z)(o),
+        U = null != j.text && '' !== j.text,
+        { largeImage: G } = (0, d.FO)(o),
         { analyticsLocations: B } = (0, u.ZP)(c.Z.USER_PROFILE_LIVE_ACTIVITY_CARD),
         Z = (0, m.Z)({
             display: 'live',
             user: t,
-            activity: a,
-            entry: j,
+            activity: o,
+            entry: k,
             analyticsLocations: B
         }),
         F = (0, g.Z)({
             userId: t.id,
             onAction: Z
         });
-    if (!(0, l.Z)(a)) return null;
+    if (!(0, l.Z)(o)) return null;
     let V = () => {
             var e, n;
-            let l = null != (n = null == (e = a.state) ? void 0 : e.split(';')) ? n : [];
+            let l = null != (n = null == (e = o.state) ? void 0 : e.split(';')) ? n : [];
             return 0 === l.length
                 ? null
-                : null == a.sync_id
+                : null == o.sync_id
                   ? (0, r.jsx)(I.Z, {
                         variant: 'text-xs/normal',
                         text: l.join(', ')
@@ -120,9 +120,9 @@ function L(e) {
                                 {
                                     children: [
                                         (0, r.jsx)(s.P3F, {
-                                            className: o()(C.clickableText, C.inline),
+                                            className: a()(C.clickableText, C.inline),
                                             onClick: (e) => {
-                                                (e.stopPropagation(), Z({ action: 'OPEN_SPOTIFY_ARTIST' }), (0, h.d$)(a, t.id, n));
+                                                (e.stopPropagation(), Z({ action: 'OPEN_SPOTIFY_ARTIST' }), (0, h.d$)(o, t.id, n));
                                             },
                                             children: e
                                         }),
@@ -135,7 +135,7 @@ function L(e) {
                     });
         },
         H = () => {
-            let { timestamps: e } = a;
+            let { timestamps: e } = o;
             if (null == e) return null;
             let { start: t, end: n } = e;
             return null == t || null == n
@@ -152,7 +152,7 @@ function L(e) {
                       className: C.actions,
                       children: (0, r.jsx)(S.Z, {
                           user: t,
-                          activity: a,
+                          activity: o,
                           onAction: Z
                       })
                   });
@@ -160,20 +160,20 @@ function L(e) {
         value: B,
         children: (0, r.jsxs)(O.Z, {
             ref: F,
-            className: o()(C.card, w),
+            className: a()(C.card, R),
             onAction: Z,
-            onClose: P,
+            onClose: w,
             'aria-labelledby': U ? ''.concat(x, ' ').concat(L) : L,
             children: [
                 (0, r.jsx)(
                     v.Z,
-                    D(R({ textId: x }, M), {
+                    D(P({ textId: x }, j), {
                         contextMenu: (0, r.jsx)(A.Z, {
                             display: 'live',
                             user: t,
-                            activity: a,
-                            entry: j,
-                            onClose: P
+                            activity: o,
+                            entry: k,
+                            onClose: w
                         })
                     })
                 ),
@@ -184,10 +184,10 @@ function L(e) {
                         children: [
                             (0, r.jsx)(f.E, {
                                 image: G,
-                                size: k === N.lY.MODAL_V2 ? f.J.SIZE_100 : f.J.SIZE_60,
+                                size: M === N.lY.MODAL_V2 ? f.J.SIZE_100 : f.J.SIZE_60,
                                 className: C.clickableImage,
                                 onClick: (e) => {
-                                    (e.stopPropagation(), Z({ action: 'OPEN_SPOTIFY_ALBUM' }), (0, h.Z5)(a, t.id));
+                                    (e.stopPropagation(), Z({ action: 'OPEN_SPOTIFY_ALBUM' }), (0, h.Z5)(o, t.id));
                                 }
                             }),
                             (0, r.jsxs)('div', {
@@ -197,9 +197,9 @@ function L(e) {
                                         children: [
                                             (0, r.jsx)(I.f, {
                                                 variant: 'heading-sm/semibold',
-                                                text: a.details,
+                                                text: o.details,
                                                 onClick: () => {
-                                                    (Z({ action: 'OPEN_SPOTIFY_TRACK' }), (0, h.aG)(a));
+                                                    (Z({ action: 'OPEN_SPOTIFY_TRACK' }), (0, h.aG)(o));
                                                 },
                                                 id: L
                                             }),
@@ -208,18 +208,18 @@ function L(e) {
                                     }),
                                     (0, r.jsx)(y.Z, {
                                         user: t,
-                                        activity: a,
+                                        activity: o,
                                         className: C.badges
                                     }),
                                     H(),
-                                    k === N.lY.MODAL_V2 && Y()
+                                    M === N.lY.MODAL_V2 && Y()
                                 ]
                             }),
-                            k === N.lY.MODAL && Y()
+                            M === N.lY.MODAL && Y()
                         ]
                     })
                 }),
-                k !== N.lY.MODAL && k !== N.lY.MODAL_V2 && Y()
+                M !== N.lY.MODAL && M !== N.lY.MODAL_V2 && Y()
             ]
         })
     });

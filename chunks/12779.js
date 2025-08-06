@@ -1,4 +1,4 @@
-n.d(t, { Z: () => u });
+n.d(t, { Z: () => d });
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -6,12 +6,12 @@ var r = n(255367),
     s = n(481060),
     o = n(194082),
     c = n(14338),
-    d = n(76692);
-let u = i.memo(function (e) {
-    let { label: t, participantCount: n, onClick: i, className: l, collapsed: u, speakers: h, channel: p, isStreamLive: f } = e;
+    u = n(76692);
+let d = i.memo(function (e) {
+    let { label: t, participantCount: n, onClick: i, className: l, collapsed: d, speakers: h, channel: p, isStreamLive: f } = e;
     return (0, r.jsxs)(s.P3F, {
         onClick: i,
-        className: a()(d.container, l),
+        className: a()(u.container, l),
         children: [
             null == h
                 ? (0, r.jsx)(s.BFJ, {
@@ -19,22 +19,22 @@ let u = i.memo(function (e) {
                       color: 'currentColor',
                       width: 20,
                       height: 20,
-                      className: d.micIcon
+                      className: u.micIcon
                   })
                 : (0, r.jsx)(s.S6n, {
                       size: 'custom',
                       color: 'currentColor',
                       width: 20,
                       height: 20,
-                      className: d.micIcon
+                      className: u.micIcon
                   }),
             (0, r.jsxs)(s.Text, {
                 color: 'header-primary',
                 variant: 'text-md/semibold',
-                className: d.text,
+                className: u.text,
                 children: [t, ' \u2014 ', n]
             }),
-            u &&
+            d &&
                 null != p &&
                 null != h &&
                 h.length > 0 &&
@@ -52,7 +52,7 @@ let u = i.memo(function (e) {
                 color: 'currentColor',
                 width: 20,
                 height: 20,
-                className: a()(d.downIcon, { [d.upIcon]: u })
+                className: a()(u.downIcon, { [u.upIcon]: d })
             })
         ]
     });

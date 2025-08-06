@@ -1,5 +1,5 @@
 (n.d(t, {
-    H: () => y,
+    H: () => x,
     v: () => j
 }),
     n(388685));
@@ -10,8 +10,8 @@ var r = n(512722),
     s = n(697988),
     o = n(683860),
     c = n(731965),
-    d = n(442837),
-    u = n(592125),
+    u = n(442837),
+    d = n(592125),
     h = n(559241);
 function p(e, t, n) {
     return (
@@ -77,7 +77,7 @@ class b {
                 let { channelStates: t } = this.get(),
                     n = t[e];
                 if (null == n) {
-                    let t = u.Z.getChannel(e);
+                    let t = d.Z.getChannel(e);
                     (i()(null != t, '[Forum Channel Store] The channel should not be missing.'),
                         (n = {
                             layoutType: t.getDefaultLayout(),
@@ -110,9 +110,9 @@ class b {
             }));
     }
 }
-let _ = (0, l.U)((e, t) => new b(e, t)),
-    y = (e) => {
-        let t = _();
-        return null == (0, d.e7)([u.Z], () => u.Z.getChannel(e)) ? m : t.getChannelState(e);
+let y = (0, l.U)((e, t) => new b(e, t)),
+    x = (e) => {
+        let t = y();
+        return null == (0, u.e7)([d.Z], () => d.Z.getChannel(e)) ? m : t.getChannelState(e);
     },
-    j = () => _;
+    j = () => y;

@@ -2,7 +2,7 @@
 var r = n(843991),
     i = n(625306);
 (n(902704), n(626135), n(981631));
-function a(e, t, n, i) {
+function o(e, t, n, i) {
     if (e === t || (i && void 0 === e && null === t)) return !0;
     if ('object' != typeof e || 'object' != typeof t || null === e || null === t) return !1;
     if (n.has(e)) return n.get(e) === t;
@@ -10,18 +10,18 @@ function a(e, t, n, i) {
     if (e instanceof Set && t instanceof Set) return (0, r.O)(e, t);
     if (Array.isArray(e) && Array.isArray(t)) {
         if (e.length !== t.length) return !1;
-        for (let r = 0; r < e.length; r++) if (!a(e[r], t[r], n, !1)) return !1;
+        for (let r = 0; r < e.length; r++) if (!o(e[r], t[r], n, !1)) return !1;
         return !0;
     }
     if (Array.isArray(e) || Array.isArray(t)) return !1;
-    let o = Object.keys(e),
+    let a = Object.keys(e),
         s = Object.keys(t);
-    if (o.length !== s.length) return !1;
-    for (let r of o) if (!Object.prototype.hasOwnProperty.call(t, r) || !a(e[r], t[r], n, !1)) return !1;
+    if (a.length !== s.length) return !1;
+    for (let r of a) if (!Object.prototype.hasOwnProperty.call(t, r) || !o(e[r], t[r], n, !1)) return !1;
     return !0;
 }
-function o(e, t) {
-    return a(e, t, new Map(), !0);
+function a(e, t) {
+    return o(e, t, new Map(), !0);
 }
 function s(e, t, n) {
     let r = [];
@@ -32,7 +32,7 @@ function s(e, t, n) {
             shadowLength: n.derived.length
         });
     let i = Object.keys(t.root),
-        a = Object.keys(n.root);
+        o = Object.keys(n.root);
     for (let e of i) {
         if (!Object.prototype.hasOwnProperty.call(n.root, e)) {
             r.push({
@@ -44,7 +44,7 @@ function s(e, t, n) {
         let i = l(e, t.root[e], n.root[e]);
         null != i && r.push(i);
     }
-    for (let e of a)
+    for (let e of o)
         Object.prototype.hasOwnProperty.call(t.root, e) ||
             r.push({
                 type: 'extra-record',
@@ -64,13 +64,13 @@ function l(e, t, n) {
                 });
                 continue;
             }
-            let a = n[e];
-            o(i, a) ||
+            let o = n[e];
+            a(i, o) ||
                 r.push({
                     type: 'value-mismatch',
                     field: e,
                     primaryValue: i,
-                    shadowValue: a
+                    shadowValue: o
                 });
         }
     if (r.length > 0)
@@ -88,7 +88,7 @@ function c(e) {
 function u(e, t) {
     let n = new Map();
     function r(e, t) {
-        if (!o(e, t)) {
+        if (!a(e, t)) {
             if ('object' == typeof e && null !== e && 'object' == typeof t && null !== t) {
                 if (n.has(e)) return void (n.get(e) === t ? console.info('Cycle detected, already compared') : console.info('Cycle detected but different corresponding object'));
                 n.set(e, t);
@@ -102,14 +102,14 @@ function u(e, t) {
             }
             if (Array.isArray(e) && Array.isArray(t)) {
                 let n = Math.min(e.length, t.length);
-                for (let i = 0; i < n; i++) o(e[i], t[i]) || (console.group('Array index '.concat(i, ' mismatch:')), r(e[i], t[i]), console.groupEnd());
+                for (let i = 0; i < n; i++) a(e[i], t[i]) || (console.group('Array index '.concat(i, ' mismatch:')), r(e[i], t[i]), console.groupEnd());
                 e.length > t.length ? console.info('Extra in primary: ', e.slice(t.length)) : t.length > e.length && console.info('Extra in shadow: ', t.slice(e.length));
                 return;
             }
             if (c(e) && c(t)) {
                 let n = new Set(Object.keys(e)),
                     i = new Set(Object.keys(t));
-                for (let a of Array.from(new Set([...n, ...i])).sort()) n.has(a) ? (i.has(a) ? o(e[a], t[a]) || (console.group('Field '.concat(a, ' mismatch:')), r(e[a], t[a]), console.groupEnd()) : console.info('Missing field in shadow: '.concat(a, ' = '), e[a])) : console.info('Extra field in shadow: '.concat(a, ' = '), t[a]);
+                for (let o of Array.from(new Set([...n, ...i])).sort()) n.has(o) ? (i.has(o) ? a(e[o], t[o]) || (console.group('Field '.concat(o, ' mismatch:')), r(e[o], t[o]), console.groupEnd()) : console.info('Missing field in shadow: '.concat(o, ' = '), e[o])) : console.info('Extra field in shadow: '.concat(o, ' = '), t[o]);
                 return;
             }
             console.info('Value mismatch: primary ', e, ' shadow ', t);

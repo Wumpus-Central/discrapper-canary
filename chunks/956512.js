@@ -2,8 +2,8 @@ n.d(t, { Z: () => E });
 var r = n(255367);
 n(73800);
 var i = n(442837),
-    a = n(758371),
-    o = n(758199),
+    o = n(758371),
+    a = n(758199),
     s = n(914498),
     l = n(880251),
     c = n(594190),
@@ -33,18 +33,18 @@ function E(e) {
         ),
         N = (0, i.e7)([d.Z], () => d.Z.getCurrentUserActiveStream()),
         C = (0, i.e7)([f.Z], () => f.Z.getChannelId()),
-        w = p.default.extractTimestamp(E.id) + h.e < Date.now(),
-        R = (0, r.jsx)(r.Fragment, { children: (0, a._0)(E, b, y, n, !1) });
+        R = p.default.extractTimestamp(E.id) + h.e < Date.now(),
+        P = (0, r.jsx)(r.Fragment, { children: (0, o._0)(E, b, y, n, !1) });
     return (
-        w ? (t = g.intl.string(m.default.u4QmWl)) : null != N ? (t = g.intl.string(m.default.P0wwmJ)) : C !== y.id ? (t = g.intl.string(m.default.qRXatr)) : null == A && (t = g.intl.string(m.default['43zohI'])),
-        (0, r.jsx)(o.W, {
+        R ? (t = g.intl.string(m.default.u4QmWl)) : null != N ? (t = g.intl.string(m.default.P0wwmJ)) : C !== y.id ? (t = g.intl.string(m.default.qRXatr)) : null == A && (t = g.intl.string(m.default['43zohI'])),
+        (0, r.jsx)(a.W, {
             header: g.intl.string(m.default.DKHheX),
             title: b.name,
             staticBannerSrc: v,
             videoBannerSrc: I,
             bannerAspectRatio: T,
             iconSrc: null != S ? S : void 0,
-            info: R,
+            info: P,
             actions:
                 E.author.id === n
                     ? []

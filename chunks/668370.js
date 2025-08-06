@@ -1,24 +1,24 @@
 e.exports = function (e, t, n, r) {
     var i = t.getStartKey(),
-        a = t.getEndKey(),
-        o = e.getBlockMap(),
-        s = o
+        o = t.getEndKey(),
+        a = e.getBlockMap(),
+        s = a
             .toSeq()
             .skipUntil(function (e, t) {
                 return t === i;
             })
             .takeUntil(function (e, t) {
-                return t === a;
+                return t === o;
             })
-            .concat([[a, o.get(a)]])
+            .concat([[o, a.get(o)]])
             .map(function (e) {
                 var t = e.getDepth() + n;
                 return ((t = Math.max(0, Math.min(t, r))), e.set('depth', t));
             });
     return (
-        (o = o.merge(s)),
+        (a = a.merge(s)),
         e.merge({
-            blockMap: o,
+            blockMap: a,
             selectionBefore: t,
             selectionAfter: t
         })

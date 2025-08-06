@@ -1,8 +1,8 @@
 (n.d(t, { J: () => v }), n(388685));
 var r = n(255367),
     i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(164369),
     l = n(66546),
     c = n(481060),
@@ -177,17 +177,17 @@ let E = (e) => {
         });
     };
 function v(e) {
-    let { textVariant: t, className: n, catalogUpdateTime: a, isScrolled: s } = e,
-        [l, u] = i.useState(() => g(a));
+    let { textVariant: t, className: n, catalogUpdateTime: o, isScrolled: s } = e,
+        [l, u] = i.useState(() => g(o));
     return (
         i.useEffect(() => {
             let e = setInterval(() => {
-                u(() => g(a));
+                u(() => g(o));
             }, 1000);
             return () => clearInterval(e);
-        }, [a]),
+        }, [o]),
         (0, r.jsxs)('div', {
-            className: o()(n, f.countdownContainer, { [f.isScrolled]: s }),
+            className: a()(n, f.countdownContainer, { [f.isScrolled]: s }),
             'aria-label': l.countdownString,
             children: [
                 (0, r.jsxs)('div', {

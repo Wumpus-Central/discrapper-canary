@@ -1,5 +1,5 @@
-n.d(t, { Z: () => r });
-function r(e) {
-    var t;
-    return null != (t = e.safetyAlertsChannelId) ? t : e.publicUpdatesChannelId;
+n.d(e, { Z: () => r });
+function r(t) {
+    var e;
+    return null != (e = t.safetyAlertsChannelId) ? e : t.publicUpdatesChannelId;
 }

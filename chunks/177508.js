@@ -17,8 +17,8 @@ var i = n(255367),
     x = n(667202),
     _ = n(82659),
     j = n(369585),
-    C = n(103866),
-    E = n(213734),
+    E = n(103866),
+    C = n(213734),
     O = n(37148),
     v = n(907862),
     S = n(466590),
@@ -1027,8 +1027,8 @@ function em() {
         [g, h] = r.useState(!1),
         [f, b] = r.useState(!1),
         [x, _] = r.useState(!1),
-        [j, C] = r.useState(!1),
-        [E, O] = r.useState(!1),
+        [j, E] = r.useState(!1),
+        [C, O] = r.useState(!1),
         [I, N] = r.useState(!1),
         [y, A] = r.useState(!1),
         [P, R] = r.useState(!1),
@@ -1057,7 +1057,7 @@ function em() {
         ed = r.useRef(null),
         eu = r.useRef(null),
         em = r.useCallback(() => {
-            (t(!1), s(!1), l(!1), c(!1), u(!1), p(!1), h(!1), b(!1), _(!1), C(!1), O(!1), N(!1), A(!1), R(!1), Z(!1), k(!1), M(!1), V(!1), W(!1));
+            (t(!1), s(!1), l(!1), c(!1), u(!1), p(!1), h(!1), b(!1), _(!1), E(!1), O(!1), N(!1), A(!1), R(!1), Z(!1), k(!1), M(!1), V(!1), W(!1));
         }, []);
     return (0, i.jsxs)('div', {
         className: U.section,
@@ -1291,7 +1291,7 @@ function em() {
             }),
             (0, i.jsx)(v.J2, {
                 targetElementRef: ei,
-                shouldShow: E,
+                shouldShow: C,
                 onRequestClose: em,
                 caretConfig: {
                     position: 'bottom',
@@ -1672,7 +1672,7 @@ function em() {
                                 text: 'Left Center',
                                 buttonRef: en,
                                 onClick: () => {
-                                    (em(), C(!0));
+                                    (em(), E(!0));
                                 }
                             })
                         ]
@@ -2420,14 +2420,14 @@ function ex(e) {
             }),
             (0, i.jsx)('div', {
                 className: U.modalOutlines,
-                children: (0, i.jsx)(C.f, {
+                children: (0, i.jsx)(E.f, {
                     controls: (0, i.jsx)(r, { children: 'This ModalBody renders any controls here' }),
                     children: (0, i.jsx)(r, { children: 'This is the main ModalBody. This area scrolls if there is enough content' })
                 })
             }),
             (0, i.jsx)('div', {
                 className: U.modalOutlines,
-                children: (0, i.jsx)(E.m, { children: (0, i.jsx)(r, { children: 'This is the ModalFooter' }) })
+                children: (0, i.jsx)(C.m, { children: (0, i.jsx)(r, { children: 'This is the ModalFooter' }) })
             }),
             (0, i.jsx)('div', {
                 className: U.modalOutlines,
@@ -2470,7 +2470,7 @@ function e_(e) {
                 subtitle: c,
                 alignCenter: u
             }),
-            (0, i.jsx)(C.f, {
+            (0, i.jsx)(E.f, {
                 controls: p
                     ? (0, i.jsx)(T.E1j, {
                           placeholder: 'Search',
@@ -2572,7 +2572,7 @@ function e_(e) {
                 })
             }),
             h &&
-                (0, i.jsxs)(E.m, {
+                (0, i.jsxs)(C.m, {
                     children: [
                         (0, i.jsx)(T.X6q, {
                             variant: 'heading-lg/semibold',
@@ -2666,7 +2666,7 @@ function ej(e) {
         children: [(0, i.jsx)(s, { text: 'John Doe' }), (0, i.jsx)(s, { text: 'Mark' }), (0, i.jsx)(s, { text: 'KawaiiHermit' }), (0, i.jsx)(s, { text: 'YurBruhGio' }), (0, i.jsx)(s, { text: 'John Doe' }), (0, i.jsx)(s, { text: 'Mark' }), (0, i.jsx)(s, { text: 'KawaiiHermit' }), (0, i.jsx)(s, { text: 'YurBruhGio' }), (0, i.jsx)(s, { text: 'John Doe' }), (0, i.jsx)(s, { text: 'Mark' }), (0, i.jsx)(s, { text: 'KawaiiHermit' }), (0, i.jsx)(s, { text: 'YurBruhGio' }), (0, i.jsx)(s, { text: 'John Doe' }), (0, i.jsx)(s, { text: 'Mark' }), (0, i.jsx)(s, { text: 'KawaiiHermit' }), (0, i.jsx)(s, { text: 'YurBruhGio' })]
     });
 }
-function eC(e) {
+function eE(e) {
     let { transitionState: t, onClose: n } = e;
     return (0, i.jsx)(_.Modal, {
         transitionState: t,
@@ -2687,7 +2687,7 @@ function eC(e) {
         ]
     });
 }
-function eE(e) {
+function eC(e) {
     let { transitionState: t, onClose: s } = e,
         [a, l] = r.useState(0),
         o = r.useMemo(
@@ -2924,14 +2924,14 @@ function ev() {
                         variant: 'primary',
                         text: 'Open sample alert modal',
                         onClick: () => {
-                            (0, T.h7j)((e) => (0, i.jsx)(eC, W({}, e)));
+                            (0, T.h7j)((e) => (0, i.jsx)(eE, W({}, e)));
                         }
                     }),
                     (0, i.jsx)(T.zxk, {
                         variant: 'primary',
                         text: 'Open expressive modal',
                         onClick: () => {
-                            (0, T.h7j)((e) => (0, i.jsx)(eE, W({}, e)));
+                            (0, T.h7j)((e) => (0, i.jsx)(eC, W({}, e)));
                         }
                     }),
                     (0, i.jsx)(T.zxk, {

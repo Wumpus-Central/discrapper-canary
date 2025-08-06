@@ -10,11 +10,11 @@ function i() {
             return e;
         }).apply(this, arguments);
 }
-function a(e) {
+function o(e) {
     if (void 0 === e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
     return e;
 }
-function o(e, t) {
+function a(e, t) {
     ((e.prototype = Object.create(t.prototype)), (e.prototype.constructor = e), (e.__proto__ = t));
 }
 function s(e, t, n) {
@@ -51,9 +51,9 @@ var l = n(963956),
 e.exports = (function (e) {
     function t() {
         for (var t, n = arguments.length, r = Array(n), i = 0; i < n; i++) r[i] = arguments[i];
-        return (s(a((t = e.call.apply(e, [this].concat(r)) || this)), '_node', void 0), t);
+        return (s(o((t = e.call.apply(e, [this].concat(r)) || this)), '_node', void 0), t);
     }
-    o(t, e);
+    a(t, e);
     var n = t.prototype;
     return (
         (n.shouldComponentUpdate = function (e) {
@@ -68,11 +68,11 @@ e.exports = (function (e) {
                     var r = this._node;
                     if (null != r) {
                         var i = f.getScrollParent(r),
-                            a = g(i);
+                            o = g(i);
                         if (i === window) {
-                            var o = m(r);
-                            (e = o.y + o.height - E().height) > 0 && window.scrollTo(a.x, a.y + e + v);
-                        } else (y(r) || b(!1), (e = r.offsetHeight + r.offsetTop - (i.offsetTop + i.offsetHeight + a.y)) > 0 && d.setTop(i, d.getTop(i) + e + v));
+                            var a = m(r);
+                            (e = a.y + a.height - E().height) > 0 && window.scrollTo(o.x, o.y + e + v);
+                        } else (y(r) || b(!1), (e = r.offsetHeight + r.offsetTop - (i.offsetTop + i.offsetHeight + o.y)) > 0 && d.setTop(i, d.getTop(i) + e + v));
                     }
                 }
             }
@@ -82,8 +82,8 @@ e.exports = (function (e) {
                 t = this.props.block,
                 n = t.getKey(),
                 r = t.getText(),
-                a = this.props.tree.size - 1,
-                o = I(this.props.selection, n);
+                o = this.props.tree.size - 1,
+                a = I(this.props.selection, n);
             return this.props.tree
                 .map(function (s, d) {
                     var f = s.get('leaves');
@@ -99,13 +99,13 @@ e.exports = (function (e) {
                                     offsetKey: f,
                                     block: t,
                                     start: _,
-                                    selection: o ? e.props.selection : null,
+                                    selection: a ? e.props.selection : null,
                                     forceSelection: e.props.forceSelection,
                                     text: r.slice(_, p),
                                     styleSet: t.getInlineStyleAt(_),
                                     customStyleMap: e.props.customStyleMap,
                                     customStyleFn: e.props.customStyleFn,
-                                    isLast: d === a && s === h
+                                    isLast: d === o && s === h
                                 });
                             })
                             .toArray(),

@@ -1,8 +1,8 @@
 (n.d(t, { Z: () => L }), n(35282), n(388685), n(358797));
 var r,
     i = n(442837),
-    a = n(570140),
-    o = n(375954);
+    o = n(570140),
+    a = n(375954);
 function s(e, t, n) {
     return (
         t in e
@@ -77,13 +77,13 @@ function O() {
 }
 function v(e) {
     var t, n;
-    let { channelId: r, file: i, uploader: a, message: o } = e;
-    if (a._aborted || a._errored) return;
+    let { channelId: r, file: i, uploader: o, message: a } = e;
+    if (o._aborted || o._errored) return;
     let s = null != (t = f[r]) ? t : d;
-    if (((_[i.id] = a), (f[r] = [...s, i]), null == o)) return;
-    p[i.id] = o;
+    if (((_[i.id] = o), (f[r] = [...s, i]), null == a)) return;
+    p[i.id] = a;
     let { items: c } = i;
-    (null != c && (h[o.id] = u(l({}, i), { items: c })), null != (n = o.nonce) || o.id);
+    (null != c && (h[a.id] = u(l({}, i), { items: c })), null != (n = a.nonce) || a.id);
 }
 function I(e) {
     let { channelId: t, file: n } = e;
@@ -117,13 +117,13 @@ function C(e) {
         return null == (e = n.cancel) ? void 0 : e.call(n);
     });
 }
-function w(e) {
+function R(e) {
     let { file: t, itemId: n } = e,
         r = _[t.id];
     if (null == r) return !1;
     setImmediate(() => r.cancelItem(n));
 }
-function R(e) {
+function P(e) {
     let { channelId: t, file: n } = e,
         r = p[n.id];
     if (null != r) {
@@ -132,13 +132,13 @@ function R(e) {
     }
     S(t, n);
 }
-function P(e) {
+function w(e) {
     let { file: t, messageId: n } = e;
     h[n] = t;
 }
 class D extends (r = i.ZP.Store) {
     initialize() {
-        this.waitFor(o.Z);
+        this.waitFor(a.Z);
     }
     getFiles(e) {
         var t;
@@ -155,7 +155,7 @@ class D extends (r = i.ZP.Store) {
     }
 }
 s(D, 'displayName', 'UploadStore');
-let L = new D(a.Z, {
+let L = new D(o.Z, {
     CONNECTION_OPEN: y,
     LOGOUT: O,
     UPLOAD_START: v,
@@ -164,7 +164,7 @@ let L = new D(a.Z, {
     UPLOAD_COMPLETE: A,
     UPLOAD_FAIL: N,
     UPLOAD_CANCEL_REQUEST: C,
-    UPLOAD_ITEM_CANCEL_REQUEST: w,
-    UPLOAD_FILE_UPDATE: R,
-    UPLOAD_RESTORE_FAILED_UPLOAD: P
+    UPLOAD_ITEM_CANCEL_REQUEST: R,
+    UPLOAD_FILE_UPDATE: P,
+    UPLOAD_RESTORE_FAILED_UPLOAD: w
 });

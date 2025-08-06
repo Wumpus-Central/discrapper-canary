@@ -5,7 +5,7 @@
     P4: () => d,
     Tk: () => g,
     cO: () => f,
-    cj: () => o,
+    cj: () => a,
     qi: () => m,
     qu: () => h,
     sd: () => _
@@ -14,7 +14,7 @@
     n(415506));
 var r = n(654861),
     i = n.n(r);
-function a(e, t, n) {
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -27,18 +27,18 @@ function a(e, t, n) {
         e
     );
 }
-let o = 1420070400000,
+let a = 1420070400000,
     s = 4095,
     l = 22;
 function c(e) {
-    return Math.floor(Number(e) / 2 ** l) + o;
+    return Math.floor(Number(e) / 2 ** l) + a;
 }
 function u(e) {
-    let t = e - o;
+    let t = e - a;
     return t <= 0 ? '0' : i()(t).shiftLeft(l).toString();
 }
 function d(e, t) {
-    let n = e - o;
+    let n = e - a;
     return i()(n <= 0 ? 0 : n)
         .shiftLeft(l)
         .add(t.next())
@@ -59,7 +59,7 @@ function h(e, t) {
 function m(e) {
     if (null == e || !/^\d{17,19}$/.test(e)) return !1;
     try {
-        return c(e) >= o;
+        return c(e) >= a;
     } catch (e) {
         return !1;
     }
@@ -73,6 +73,6 @@ class g {
         this.seq = 0;
     }
     constructor() {
-        (a(this, 'seq', void 0), (this.seq = 0));
+        (o(this, 'seq', void 0), (this.seq = 0));
     }
 }

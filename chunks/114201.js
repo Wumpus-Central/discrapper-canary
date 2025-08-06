@@ -1,8 +1,8 @@
-n.d(t, { Z: () => w });
+n.d(t, { Z: () => R });
 var r = n(255367),
     i = n(73800),
-    a = n(99815),
-    o = n(442837),
+    o = n(99815),
+    a = n(442837),
     s = n(481060),
     l = n(239091),
     c = n(314897),
@@ -110,17 +110,17 @@ function C(e, t) {
         subtext: i
     };
 }
-function w(e) {
+function R(e) {
     let { guildId: t, leaderboardId: p } = e,
-        I = (0, o.e7)([c.default], () => c.default.getId()),
-        S = (0, o.e7)([u.Z], () => u.Z.getAccount(null, y.ABu.RIOT_GAMES)),
-        N = (0, o.e7)([u.Z], () => u.Z.getAccount(null, y.ABu.LEAGUE_OF_LEGENDS)),
-        w = (0, g.Z)({
+        I = (0, a.e7)([c.default], () => c.default.getId()),
+        S = (0, a.e7)([u.Z], () => u.Z.getAccount(null, y.ABu.RIOT_GAMES)),
+        N = (0, a.e7)([u.Z], () => u.Z.getAccount(null, y.ABu.LEAGUE_OF_LEGENDS)),
+        R = (0, g.Z)({
             guildId: t,
             leaderboardId: p
         }),
-        { leaderboardsDisabled: R } = (0, m.O)(t, p),
-        P =
+        { leaderboardsDisabled: P } = (0, m.O)(t, p),
+        w =
             null != N && null != S
                 ? () => {
                       (_.default.track(y.rMx.LEADERBOARD_USER_DATA_REFRESH_REQUESTED, {
@@ -133,15 +133,15 @@ function w(e) {
                           }));
                   }
                 : y.dG4,
-        D = null == S || R ? O.intl.string(O.t['0yRXHx']) : O.intl.string(O.t['KWpU6+']),
+        D = null == S || P ? O.intl.string(O.t['0yRXHx']) : O.intl.string(O.t['KWpU6+']),
         { lastUpdateRequested: L, statisticLastUpdatedDate: x } = (0, E.Z)({
             userId: I,
             guildId: t,
             leaderboardId: p,
-            statisticId: a.E.LOL_TOTAL_KILLS
+            statisticId: o.E.LOL_TOTAL_KILLS
         }),
-        { disabled: k, subtext: j } = C(L, x),
-        M = (0, o.e7)(
+        { disabled: M, subtext: k } = C(L, x),
+        j = (0, a.e7)(
             [f.Z, d.Z],
             () => {
                 let e = d.Z.getGuild(t);
@@ -150,7 +150,7 @@ function w(e) {
             [t]
         ),
         U = i.useRef(null);
-    return null == w
+    return null == R
         ? null
         : (0, r.jsx)(s.yRy, {
               targetElementRef: U,
@@ -168,14 +168,14 @@ function w(e) {
                       onSelect: void 0,
                       children: (0, r.jsxs)(s.kSQ, {
                           children: [
-                              w.leaderboard_id === b.z &&
+                              R.leaderboard_id === b.z &&
                                   null != S &&
                                   (0, r.jsx)(s.sNh, {
                                       id: 'refresh-my-data',
                                       label: O.intl.string(O.t.iopWUV),
-                                      action: P,
-                                      disabled: k,
-                                      subtext: j
+                                      action: w,
+                                      disabled: M,
+                                      subtext: k
                                   }),
                               (0, r.jsx)(s.sNh, {
                                   id: 'leaderboard-modal',
@@ -188,14 +188,14 @@ function w(e) {
                                                   e,
                                                   A(T({}, n), {
                                                       guildId: t,
-                                                      leaderboard: w
+                                                      leaderboard: R
                                                   })
                                               );
                                       }),
                                           null == i || i());
                                   }
                               }),
-                              M
+                              j
                                   ? (0, r.jsx)(s.sNh, {
                                         id: 'leaderboard-settings-modal',
                                         label: O.intl.string(O.t['QV4/6u']),

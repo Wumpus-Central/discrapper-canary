@@ -1,14 +1,14 @@
 (n.d(t, {
     Ai: () => es,
-    DL: () => ea,
-    Gg: () => eo
+    DL: () => eo,
+    Gg: () => ea
 }),
     n(415506),
     n(539854));
 var r = n(772848),
     i = n(923452),
-    a = n(442837),
-    o = n(433517),
+    o = n(442837),
+    a = n(433517),
     s = n(570140),
     l = n(188471),
     c = n(710845),
@@ -58,24 +58,24 @@ let T = 25,
     A = h.Z.Millis.SECOND,
     N = 'LAST_CLIENT_HEARTBEAT_SESSION',
     C = 'user',
-    w = new c.Z('SessionHeartbeatScheduler'),
-    R = null,
+    R = new c.Z('SessionHeartbeatScheduler'),
     P = null,
+    w = null,
     D = 0,
     L = 0,
     x = { state: 'uninitialized' },
-    k = _.Z.getState(),
-    j = (0, E.H)(),
-    M = d.default.getToken();
+    M = _.Z.getState(),
+    k = (0, E.H)(),
+    j = d.default.getToken();
 function U() {
-    if (null != R) return;
+    if (null != P) return;
     let e = 0 === L ? 0 : S - (performance.now() - L);
     (m.Z.addBreadcrumb({ message: 'Received Last Heartbeat Event Timestamp. Time Until Next Heartbeat: '.concat(e / 1000, ' seconds. Scheduling Heartbeat') }),
-        (R = {
+        (P = {
             type: 'timeout',
             id: setTimeout(() => {
                 (F(),
-                    (R = {
+                    (P = {
                         type: 'interval',
                         id: setInterval(() => {
                             F();
@@ -85,18 +85,18 @@ function U() {
         }));
 }
 function G() {
-    if (null == R) return !1;
-    switch (R.type) {
+    if (null == P) return !1;
+    switch (P.type) {
         case 'timeout':
-            clearTimeout(R.id);
+            clearTimeout(P.id);
             break;
         case 'interval':
-            clearInterval(R.id);
+            clearInterval(P.id);
             break;
         default:
-            R.type;
+            P.type;
     }
-    return ((R = null), !0);
+    return ((P = null), !0);
 }
 function B() {
     G() &&
@@ -119,7 +119,7 @@ function Z() {
 }
 async function F() {
     let e = Date.now(),
-        t = await eo(),
+        t = await ea(),
         n = Date.now();
     if (null == t) return void m.Z.captureException(Error('Null session when tracking session heartbeat. Waited '.concat(n - e, 'ms')));
     m.Z.addBreadcrumb({
@@ -138,7 +138,7 @@ async function F() {
     (p.default.track(O.rMx.CLIENT_HEARTBEAT, r), (L = performance.now()), (0, l.Z)());
 }
 function V() {
-    if (!(null != M && (0, y.y)()) || performance.now() - L <= S) return;
+    if (!(null != j && (0, y.y)()) || performance.now() - L <= S) return;
     let e = { client_heartbeat_version: T };
     p.default.track(O.rMx.CLIENT_HEARTBEAT_SKIPPED, e);
 }
@@ -146,7 +146,7 @@ function H() {}
 function Y() {
     let e = [];
     return (
-        null != M && (j && e.push('foregrounded'), k !== O.hes.DISCONNECTED && k !== O.hes.RTC_DISCONNECTED && e.push('rtc_connected')),
+        null != j && (k && e.push('foregrounded'), M !== O.hes.DISCONNECTED && M !== O.hes.RTC_DISCONNECTED && e.push('rtc_connected')),
         {
             active: e.length > 0,
             ver: T,
@@ -158,11 +158,11 @@ function W() {
     return Y().active;
 }
 function K() {
-    (W() ? U() : B(), Q());
+    (W() ? U() : B(), J());
 }
 function z() {
-    null == P &&
-        (P = {
+    null == w &&
+        (w = {
             id: setInterval(() => {
                 V();
             }, S),
@@ -173,16 +173,16 @@ function q(e) {
     let t = performance.now();
     if (!(t - D < A))
         try {
-            (o.K.set(N, e), (D = t));
+            (a.K.set(N, e), (D = t));
         } catch (e) {
             m.Z.captureException(e);
         }
 }
-function $(e) {
-    return null == e ? null : e.version !== b.EI ? (w.warn('Throwing away client session with invalid version: '.concat(e.version, ', expected ').concat(b.EI)), null) : e;
+function X(e) {
+    return null == e ? null : e.version !== b.EI ? (R.warn('Throwing away client session with invalid version: '.concat(e.version, ', expected ').concat(b.EI)), null) : e;
 }
-function X() {
-    (o.K.remove(N),
+function Q() {
+    (a.K.remove(N),
         (x = {
             state: 'loaded',
             session: null
@@ -190,12 +190,12 @@ function X() {
         B(),
         (L = 0));
 }
-function Q() {
+function J() {
     var e;
     null == (e = u.Z.getSocket()) || e.handleActiveStateChange(Y());
 }
-async function J() {
-    let e = await eo(!1);
+async function $() {
+    let e = await ea(!1);
     if (null != e) {
         var t;
         null == (t = u.Z.getSocket()) || t.handleUpdateTimeSpentSessionId(e.createdAtTimestamp, e.uuid, i.s);
@@ -203,32 +203,32 @@ async function J() {
 }
 function ee() {
     let e = d.default.getToken();
-    (M !== e && ((M = e), X()), K());
+    (j !== e && ((j = e), Q()), K());
 }
 function et() {
-    ((k = _.Z.getState()), K());
+    ((M = _.Z.getState()), K());
 }
 function en(e) {
     let { focused: t } = e;
-    ((j = t), K());
+    ((k = t), K());
 }
 function er(e) {
     let { state: t } = e;
-    ((j = t === O.$7l.ACTIVE), K());
+    ((k = t === O.$7l.ACTIVE), K());
 }
 function ei() {
-    ((k = _.Z.getState()), (j = (0, E.H)()), ee());
+    ((M = _.Z.getState()), (k = (0, E.H)()), ee());
 }
-function ea() {
-    (m.Z.addBreadcrumb({ message: 'Initializing SessionHeartbeatScheduler' }), _.Z.addChangeListener(et), d.default.addChangeListener(ee), s.Z.subscribe('WINDOW_FOCUS', en), s.Z.subscribe('APP_STATE_UPDATE', er), s.Z.subscribe('CONNECTION_OPEN', J), K(), z(), a.ZP.initialized.then(ei));
+function eo() {
+    (m.Z.addBreadcrumb({ message: 'Initializing SessionHeartbeatScheduler' }), _.Z.addChangeListener(et), d.default.addChangeListener(ee), s.Z.subscribe('WINDOW_FOCUS', en), s.Z.subscribe('APP_STATE_UPDATE', er), s.Z.subscribe('CONNECTION_OPEN', $), K(), z(), o.ZP.initialized.then(ei));
 }
-async function eo() {
+async function ea() {
     var e;
     let t = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
         n = null,
-        a = 'loaded' === x.state ? (null == (e = x.session) ? void 0 : e.uuid) : null;
+        o = 'loaded' === x.state ? (null == (e = x.session) ? void 0 : e.uuid) : null;
     try {
-        n = 'uninitialized' === x.state ? $(await o.K.getAfterRefresh(N)) : x.session;
+        n = 'uninitialized' === x.state ? X(await a.K.getAfterRefresh(N)) : x.session;
     } catch (e) {
         m.Z.captureException(e);
     }
@@ -251,15 +251,15 @@ async function eo() {
                 state: 'loaded',
                 session: n
             }),
-            null != n && a !== n.uuid && t)
+            null != n && o !== n.uuid && t)
         ) {
-            var o;
-            null == (o = u.Z.getSocket()) || o.handleUpdateTimeSpentSessionId(n.createdAtTimestamp, n.uuid, i.s);
+            var a;
+            null == (a = u.Z.getSocket()) || a.handleUpdateTimeSpentSessionId(n.createdAtTimestamp, n.uuid, i.s);
         }
         return n;
     })();
 }
 function es() {
-    let e = 'uninitialized' === x.state ? $(o.K.get(N)) : x.session;
+    let e = 'uninitialized' === x.state ? X(a.K.get(N)) : x.session;
     return null == e || (0, b.qK)(e) ? null : e;
 }

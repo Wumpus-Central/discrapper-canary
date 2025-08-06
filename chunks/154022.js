@@ -17,8 +17,8 @@ var i = n(255367),
     x = n(313201),
     _ = n(594928),
     j = n(829716),
-    C = n(786761),
-    E = n(3148),
+    E = n(786761),
+    C = n(3148),
     O = n(739566),
     v = n(753206),
     S = n(440849),
@@ -170,11 +170,11 @@ function J(e) {
 function Q() {
     let e = P.jU.useSetting(),
         [t] = r.useState(() => {
-            let e = (0, C.e5)(
+            let e = (0, E.e5)(
                 z(
                     H(
                         {},
-                        (0, E.ZP)({
+                        (0, C.ZP)({
                             channelId: '1337',
                             content: B.intl.formatToPlainString(B.t.bB80LC, { previewLink: 'https://discord.com/accessibility' })
                         })
@@ -348,7 +348,7 @@ function ei() {
         children: (0, i.jsx)(d.j7V, {
             value: e,
             onChange: function (e) {
-                (0, p.X2)(e);
+                ((0, p.X2)(e), y.default.track(k.rMx.DISPLAY_NAME_STYLES_ACCESSIBILITY_TOGGLE, { enabled: e }));
             },
             note: B.intl.format(U.default.L8U56u, {
                 onClickOpenModal() {

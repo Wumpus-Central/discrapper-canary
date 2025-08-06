@@ -2,8 +2,8 @@ n.d(t, { Z: () => g });
 var r = n(255367);
 n(73800);
 var i = n(442837),
-    a = n(481060),
-    o = n(955415),
+    o = n(481060),
+    a = n(955415),
     s = n(846587),
     l = n(409059),
     c = n(260539),
@@ -67,17 +67,17 @@ function g(e) {
     let { code: _ } = e,
         h = (0, i.e7)([l.Z], () => l.Z.getGuildTemplate(_));
     if (null == h || h.state === c.Rj.RESOLVING)
-        return (0, r.jsxs)(o.Z, {
-            children: [(0, r.jsx)(o.Z.Header, { text: u.intl.string(u.t.Xj87YW) }), (0, r.jsx)(o.Z.Body, { resolving: !0 })]
+        return (0, r.jsxs)(a.Z, {
+            children: [(0, r.jsx)(a.Z.Header, { text: u.intl.string(u.t.Xj87YW) }), (0, r.jsx)(a.Z.Body, { resolving: !0 })]
         });
     if (h.state === c.Rj.EXPIRED)
-        return (0, r.jsxs)(o.Z, {
+        return (0, r.jsxs)(a.Z, {
             children: [
-                (0, r.jsx)(o.Z.Header, { text: u.intl.string(u.t.C7ZRNz) }),
-                (0, r.jsxs)(o.Z.Body, {
+                (0, r.jsx)(a.Z.Header, { text: u.intl.string(u.t.C7ZRNz) }),
+                (0, r.jsxs)(a.Z.Body, {
                     children: [
-                        (0, r.jsx)(o.Z.Icon, { expired: !0 }),
-                        (0, r.jsx)(o.Z.Info, {
+                        (0, r.jsx)(a.Z.Icon, { expired: !0 }),
+                        (0, r.jsx)(a.Z.Info, {
                             expired: !0,
                             title: u.intl.string(u.t.A6MwXF)
                         })
@@ -86,33 +86,33 @@ function g(e) {
             ]
         });
     let g = () => {
-            (0, a.ZDy)(async () => {
+            (0, o.ZDy)(async () => {
                 let { default: e } = await Promise.all([n.e('10778'), n.e('44044')]).then(n.bind(n, 766775));
                 return (t) => (0, r.jsx)(e, m(p({}, t), { guildTemplate: h }));
             });
         },
         E = __OVERLAY__
-            ? (0, r.jsx)(o.Z.Button, {
+            ? (0, r.jsx)(a.Z.Button, {
                   isDisabled: !0,
-                  color: o.Z.Button.Colors.PRIMARY,
+                  color: a.Z.Button.Colors.PRIMARY,
                   children: u.intl.string(u.t.W7NTWl)
               })
-            : (0, r.jsx)(o.Z.Button, {
+            : (0, r.jsx)(a.Z.Button, {
                   onClick: g,
                   submitting: h.state === c.Rj.ACCEPTING,
-                  color: o.Z.Button.Colors.GREEN,
+                  color: a.Z.Button.Colors.GREEN,
                   children: u.intl.string(u.t['a3Gl+f'])
               });
-    return (0, r.jsxs)(o.Z, {
+    return (0, r.jsxs)(a.Z, {
         children: [
-            (0, r.jsx)(o.Z.Header, { text: u.intl.string(u.t.kAvFkJ) }),
-            (0, r.jsxs)(o.Z.Body, {
+            (0, r.jsx)(a.Z.Header, { text: u.intl.string(u.t.kAvFkJ) }),
+            (0, r.jsxs)(a.Z.Body, {
                 children: [
                     (0, r.jsxs)('div', {
                         className: f.headerLine,
                         children: [
                             (0, r.jsx)(s.Z, { className: d.icon }),
-                            (0, r.jsx)(o.Z.Info, {
+                            (0, r.jsx)(a.Z.Info, {
                                 title: h.name,
                                 children: u.intl.format(u.t.cGXXHB, { usageCount: String(null != (t = h.usageCount) ? t : 0) })
                             })

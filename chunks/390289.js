@@ -1,8 +1,8 @@
 (n.d(t, { Z: () => U }), n(388685), n(997841));
 var r,
     i = n(442837),
-    a = n(570140),
-    o = n(314897),
+    o = n(570140),
+    a = n(314897),
     s = n(592125),
     l = n(430824),
     c = n(944486),
@@ -58,7 +58,7 @@ let b = [
     A = 0;
 function N(e) {
     var t;
-    if (e.optimistic || e.isPushNotification || (null == (t = e.message.author) ? void 0 : t.id) !== o.default.getId() || !L(e.channelId)) return !1;
+    if (e.optimistic || e.isPushNotification || (null == (t = e.message.author) ? void 0 : t.id) !== a.default.getId() || !L(e.channelId)) return !1;
     let n = D(e.channelId);
     ((n.lastActionTime = Date.now()), n.numSends++);
 }
@@ -69,25 +69,25 @@ function C() {
     let t = Date.now();
     ((e.lastActionTime = t), (e.viewDuration += t - S), (S = t));
 }
-function w() {
-    ((T = c.Z.getChannelId()), (S = Date.now()), R());
+function R() {
+    ((T = c.Z.getChannelId()), (S = Date.now()), P());
     let e = Date.now() - O;
     _.default.forEach(v.channels, (t, n) => {
         let { lastActionTime: r } = t;
         r < e && delete v.channels[n];
     });
 }
-function R() {
+function P() {
     return (
         0 !== A && (clearInterval(A), (A = 0)),
         u.ZP.useNewNotifications &&
             (A = setInterval(() => {
-                C() && M.emitChange();
+                C() && j.emitChange();
             }, 15 * d.Z.Millis.SECOND)),
         !1
     );
 }
-function P() {
+function w() {
     let e = C();
     return ((T = c.Z.getChannelId()), (S = Date.now()), e);
 }
@@ -105,7 +105,7 @@ function D(e) {
 function L(e) {
     if (!u.ZP.useNewNotifications || I.has(e)) return !1;
     let t = s.Z.getBasicChannel(e);
-    if (null == t || null == t.guild_id || u.ZP.isGuildOrCategoryOrChannelMuted(t.guild_id, t.id) || k(t.guild_id, t.id) || k(t.guild_id, t.parent_id)) return !1;
+    if (null == t || null == t.guild_id || u.ZP.isGuildOrCategoryOrChannelMuted(t.guild_id, t.id) || M(t.guild_id, t.id) || M(t.guild_id, t.parent_id)) return !1;
     let n = u.ZP.resolveUnreadSetting(t);
     return u.ZP.getChannelUnreadSetting(t.guild_id, t.id) === m.i.UNSET && n !== m.i.ALL_MESSAGES;
 }
@@ -114,19 +114,19 @@ function x(e) {
     let n = l.Z.getGuild(e.guild_id),
         r = null != (t = null == n ? void 0 : n.joinedAt) ? t : new Date(),
         i = Math.min(_.default.age(e.id), Date.now() - r.getTime()),
-        a = v.channels[e.id];
-    if (null == a || a.lastActionTime < Date.now() - O) return !1;
-    for (let e of b) if (i < e.timeSinceJoin && (a.numSends >= e.sends || a.viewDuration >= e.viewTime)) return !0;
+        o = v.channels[e.id];
+    if (null == o || o.lastActionTime < Date.now() - O) return !1;
+    for (let e of b) if (i < e.timeSinceJoin && (o.numSends >= e.sends || o.viewDuration >= e.viewTime)) return !0;
     return !1;
 }
-function k(e, t) {
+function M(e, t) {
     if (null == t) return !1;
     let n = u.ZP.getChannelOverrides(e)[t];
     return null != n && !!((null != n.message_notifications && n.message_notifications !== h.bL.NULL) || (null != n.flags && (0, f.EB)(n.flags, g.ic.UNREADS_ALL_MESSAGES | g.ic.UNREADS_ONLY_MENTIONS)));
 }
-class j extends (r = i.ZP.PersistedStore) {
+class k extends (r = i.ZP.PersistedStore) {
     initialize(e) {
-        (null != e && (v.channels = e.channels), this.syncWith([u.ZP], R), this.waitFor(u.ZP, c.Z, s.Z));
+        (null != e && (v.channels = e.channels), this.syncWith([u.ZP], P), this.waitFor(u.ZP, c.Z, s.Z));
     }
     getState() {
         return v;
@@ -141,10 +141,10 @@ class j extends (r = i.ZP.PersistedStore) {
         return null != t && null != t.guild_id && !!x(t) && (delete v.channels[e], I.add(e), (0, p.IG)(t.guild_id, t.id, m.i.ALL_MESSAGES), !0);
     }
 }
-(E(j, 'displayName', 'UnreadSettingNoticeStore2'), E(j, 'persistKey', 'UnreadSettingNoticeStore2'));
-let M = new j(a.Z, {
-        CHANNEL_SELECT: P,
-        CONNECTION_OPEN: w,
+(E(k, 'displayName', 'UnreadSettingNoticeStore2'), E(k, 'persistKey', 'UnreadSettingNoticeStore2'));
+let j = new k(o.Z, {
+        CHANNEL_SELECT: w,
+        CONNECTION_OPEN: R,
         MESSAGE_CREATE: N
     }),
-    U = M;
+    U = j;

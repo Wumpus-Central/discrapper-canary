@@ -8,13 +8,13 @@ var r = n(73800),
 function c(e) {
     let t = (0, i.e7)([l.Z], () => l.Z.getChannel(e), [e]),
         n = a.Uu(o.Plq.REQUEST_TO_SPEAK, t),
-        [c, d] = r.useState(n);
+        [c, u] = r.useState(n);
     return (
-        n !== c && d(n),
+        n !== c && u(n),
         [
             c,
             (e) => {
-                null != t && (d(e), (0, s.Pq)(t, o.Plq.REQUEST_TO_SPEAK, e));
+                null != t && (u(e), (0, s.Pq)(t, o.Plq.REQUEST_TO_SPEAK, e));
             }
         ]
     );

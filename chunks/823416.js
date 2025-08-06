@@ -27,8 +27,8 @@ function i(e, t, n) {
         e
     );
 }
-var a = n(512972),
-    o = n(359282),
+var o = n(512972),
+    a = n(359282),
     s = n(879154),
     l = n(214788),
     c = n(621796),
@@ -50,7 +50,7 @@ e.exports = {
             _ = c.splitBlock(l, f),
             p = _.getSelectionAfter(),
             b = c.setBlockType(_, p, 'atomic'),
-            y = o.create({ entity: t }),
+            y = a.create({ entity: t }),
             O = {
                 key: d(),
                 type: 'atomic',
@@ -63,7 +63,7 @@ e.exports = {
             };
         h && ((O = r({}, O, { nextSibling: v.key })), (v = r({}, v, { prevSibling: O.key })));
         var I = [new m(O), new m(v)],
-            T = a.createFromArray(I),
+            T = o.createFromArray(I),
             S = c.replaceWithFragment(b, p, T),
             A = S.merge({
                 selectionBefore: s,
@@ -73,13 +73,13 @@ e.exports = {
     },
     moveAtomicBlock: function (e, t, n, r) {
         var i,
-            a = e.getCurrentContent(),
-            o = e.getSelection();
+            o = e.getCurrentContent(),
+            a = e.getSelection();
         if ('before' === r || 'after' === r) {
-            var s = a.getBlockForKey('before' === r ? n.getStartKey() : n.getEndKey());
-            i = p(a, t, s, r);
+            var s = o.getBlockForKey('before' === r ? n.getStartKey() : n.getEndKey());
+            i = p(o, t, s, r);
         } else {
-            var l = c.removeRange(a, n, 'backward'),
+            var l = c.removeRange(o, n, 'backward'),
                 d = l.getSelectionAfter(),
                 f = l.getBlockForKey(d.getFocusKey());
             if (0 === d.getStartOffset()) i = p(l, t, f, 'before');
@@ -92,7 +92,7 @@ e.exports = {
             }
         }
         var g = i.merge({
-            selectionBefore: o,
+            selectionBefore: a,
             selectionAfter: i.getSelectionAfter().set('hasFocus', !0)
         });
         return u.push(e, g, 'move-block');

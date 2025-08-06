@@ -12,16 +12,16 @@ function i(e) {
     var t = e.current;
     return null == t ? null : t.decoratedRef ? t.decoratedRef.current : t;
 }
-function a(e) {
+function o(e) {
     return e && e.prototype && 'function' == typeof e.prototype.render;
 }
-function o(e) {
+function a(e) {
     var t,
         n = e;
     return (null == n || null == (t = n.$$typeof) ? void 0 : t.toString()) === 'Symbol(react.forward_ref)';
 }
 function s(e) {
-    return a(e) || o(e);
+    return o(e) || a(e);
 }
 function l(e, t) {}
 function c(e) {

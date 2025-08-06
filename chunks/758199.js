@@ -11,8 +11,8 @@
     n(388685));
 var r = n(255367),
     i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(442837),
     l = n(755721),
     c = n(481060),
@@ -89,7 +89,7 @@ function A(e) {
     return null != t
         ? (0, r.jsx)(c.P3F, {
               onClick: t,
-              className: o()({ [b.cursorPointer]: null != t }, i),
+              className: a()({ [b.cursorPointer]: null != t }, i),
               children: n
           })
         : (0, r.jsx)('div', {
@@ -98,10 +98,10 @@ function A(e) {
           });
 }
 function N(e) {
-    let { title: t, header: n, footer: a, info: p, staticBannerSrc: y, videoBannerSrc: T, bannerAspectRatio: N = 0, iconSrc: C, embedUrl: w, infoUrl: R, actions: P = [], trackingConfig: D, onClickContent: L, onClickBanner: x } = e;
+    let { title: t, header: n, footer: o, info: p, staticBannerSrc: y, videoBannerSrc: T, bannerAspectRatio: N = 0, iconSrc: C, embedUrl: R, infoUrl: P, actions: w = [], trackingConfig: D, onClickContent: L, onClickBanner: x } = e;
     D = S(D);
-    let { primaryColor: k, secondaryColor: j } = (0, f.Z)(null != C ? C : y),
-        M = 'linear-gradient(45deg, '.concat(k, ', ').concat(j, ')'),
+    let { primaryColor: M, secondaryColor: k } = (0, f.Z)(null != C ? C : y),
+        j = 'linear-gradient(45deg, '.concat(M, ', ').concat(k, ')'),
         U = (0, s.e7)([d.Z], () => d.Z.useReducedMotion),
         G = i.useRef(!1),
         B = (0, u.O)(
@@ -114,14 +114,14 @@ function N(e) {
             void 0
         ),
         Z =
-            h.wS && null != w
+            h.wS && null != R
                 ? (0, r.jsx)(l.zx, {
                       look: l.zx.Looks.BLANK,
                       size: l.zx.Sizes.ICON,
                       'aria-label': E.intl.string(E.t.WqhZsr),
                       className: b.linkIcon,
                       onClick: () => {
-                          ((0, h.JG)(w, () => (0, c.showToast)((0, c.createToast)(E.intl.string(E.t['L/PwZW']), c.ToastType.SUCCESS))), (0, m.Yu)(D.id, D.linkType));
+                          ((0, h.JG)(R, () => (0, c.showToast)((0, c.createToast)(E.intl.string(E.t['L/PwZW']), c.ToastType.SUCCESS))), (0, m.Yu)(D.id, D.linkType));
                       },
                       children: (0, r.jsx)(c.xPt, {
                           size: 'xs',
@@ -130,11 +130,11 @@ function N(e) {
                   })
                 : null,
         F =
-            null != R
+            null != P
                 ? (0, r.jsx)(c.eee, {
                       'aria-label': E.intl.string(E.t.wuRE8P),
                       className: b.linkIcon,
-                      href: R,
+                      href: P,
                       children: (0, r.jsx)(c.d3s, {
                           size: 'xs',
                           color: c.TVs.colors.APP_MESSAGE_EMBED_SECONDARY_TEXT.css
@@ -151,13 +151,13 @@ function N(e) {
             null != e && ('hidden' === getComputedStyle(e).visibility ? e.pause() : e.play());
         }, []),
         q = i.useMemo(() => !!H && new URL(T).pathname.endsWith('.gif'), [H, T]),
-        $ = i.useMemo(() => {
+        X = i.useMemo(() => {
             if (null != L)
                 return (e) => {
                     (L(e), (0, m.KX)(D.id, D.linkType, m.j_.CONTENT, D.referrerId, D.activityCustomId));
                 };
         }, [L, D]),
-        X = i.useMemo(() => {
+        Q = i.useMemo(() => {
             if (null != x)
                 return (e) => {
                     (x(e), (0, m.KX)(D.id, D.linkType, m.j_.BANNER, D.referrerId, D.activityCustomId));
@@ -169,8 +169,8 @@ function N(e) {
         children: [
             Y &&
                 (0, r.jsxs)(A, {
-                    onClick: X,
-                    className: o()(b.bannerWrapper, W, { [b.showVideoOnFocus]: H }),
+                    onClick: Q,
+                    className: a()(b.bannerWrapper, W, { [b.showVideoOnFocus]: H }),
                     children: [
                         H &&
                             (q
@@ -195,7 +195,7 @@ function N(e) {
                     ]
                 }),
             (0, r.jsxs)('div', {
-                style: { background: M },
+                style: { background: j },
                 children: [
                     (0, r.jsxs)('div', {
                         className: b.contentContainer,
@@ -216,8 +216,8 @@ function N(e) {
                                 className: b.contentAndCopyButtonWrapper,
                                 children: [
                                     (0, r.jsxs)(A, {
-                                        onClick: $,
-                                        className: o()(b.contentWrapper, { [b.contentWrapperClickable]: null != $ }),
+                                        onClick: X,
+                                        className: a()(b.contentWrapper, { [b.contentWrapperClickable]: null != X }),
                                         children: [
                                             null != C &&
                                                 (0, r.jsx)('div', {
@@ -245,12 +245,12 @@ function N(e) {
                                     null == n && (null != Z ? Z : F)
                                 ]
                             }),
-                            P.length > 0 &&
+                            w.length > 0 &&
                                 (0, r.jsx)('div', {
                                     className: b.actionWrapper,
-                                    children: P.map((e, t) => {
-                                        let { label: n, icon: i, onClick: a, disabledReason: o, submitting: s, trackingArea: u } = e,
-                                            d = null != o,
+                                    children: w.map((e, t) => {
+                                        let { label: n, icon: i, onClick: o, disabledReason: a, submitting: s, trackingArea: u } = e,
+                                            d = null != a,
                                             f = 0 === t,
                                             _ =
                                                 null != i
@@ -265,14 +265,14 @@ function N(e) {
                                                 submitting: s,
                                                 children: _,
                                                 onClick(e) {
-                                                    (a(e), (0, m.KX)(D.id, D.linkType, u, D.referrerId, D.activityCustomId));
+                                                    (o(e), (0, m.KX)(D.id, D.linkType, u, D.referrerId, D.activityCustomId));
                                                 }
                                             };
                                         return d
                                             ? (0, r.jsx)(
                                                   c.ua7,
                                                   {
-                                                      text: o,
+                                                      text: a,
                                                       children: (e) => {
                                                           var t = O({}, v(e));
                                                           return (0, r.jsx)(l.zx, I({}, p, t));
@@ -285,7 +285,7 @@ function N(e) {
                                 })
                         ]
                     }),
-                    null != a && a
+                    null != o && o
                 ]
             })
         ]

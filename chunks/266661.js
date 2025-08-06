@@ -1,7 +1,7 @@
 n.d(t, { M: () => u });
 var r = n(818083),
     i = n(987338);
-function a(e, t, n) {
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -14,7 +14,7 @@ function a(e, t, n) {
         e
     );
 }
-function o(e) {
+function a(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -25,7 +25,7 @@ function o(e) {
                 })
             )),
             r.forEach(function (t) {
-                a(e, t, n[t]);
+                o(e, t, n[t]);
             }));
     }
     return e;
@@ -64,7 +64,7 @@ let c = { disableKrispVAD: !1 },
             {
                 id: 1,
                 label: 'Disable Krisp VAD',
-                config: l(o({}, c), { disableKrispVAD: !0 })
+                config: l(a({}, c), { disableKrispVAD: !0 })
             }
         ]
     });

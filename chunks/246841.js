@@ -2,8 +2,8 @@ n.d(t, { Z: () => c });
 var r = n(255367);
 n(73800);
 var i = n(755721),
-    a = n(481060),
-    o = n(395361),
+    o = n(481060),
+    a = n(395361),
     s = n(829820),
     l = n(862863);
 function c(e) {
@@ -12,7 +12,7 @@ function c(e) {
         O = () => {
             (null == h || h(), y());
         };
-    return (0, r.jsx)(a.ua7, {
+    return (0, r.jsx)(o.ua7, {
         text: g,
         children: (e) => {
             let { onMouseEnter: t, onMouseLeave: n } = e;
@@ -29,7 +29,7 @@ function c(e) {
                 disabled: b,
                 submitting: E,
                 children: [
-                    (0, r.jsx)(o.Z, {
+                    (0, r.jsx)(a.Z, {
                         width: 16,
                         height: 16
                     }),

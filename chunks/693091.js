@@ -1,12 +1,12 @@
 (n.d(t, {
-    AS: () => o,
+    AS: () => a,
     S4: () => s,
     X4: () => _
 }),
     n(388685));
 var r = n(73800),
     i = n(481060);
-function a(e, t, n) {
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -19,7 +19,7 @@ function a(e, t, n) {
         e
     );
 }
-class o {
+class a {
     updateState(e, t) {
         this.items = e;
         let n = this.locked !== t;
@@ -49,8 +49,8 @@ class o {
         for (let r of this.items) {
             let i = this.listeners.get(r.notification.id);
             if (null == i) continue;
-            let { offsetHeight: a } = i.element;
-            ((i.top !== t || i.height !== a || i.index !== n) && (e = !0), (i.top = t), (i.height = a), (i.index = n), 0 === t && (this.matchHeight !== a && (e = !0), (this.matchHeight = a)), (t += a + 8), n++);
+            let { offsetHeight: o } = i.element;
+            ((i.top !== t || i.height !== o || i.index !== n) && (e = !0), (i.top = t), (i.height = o), (i.index = n), 0 === t && (this.matchHeight !== o && (e = !0), (this.matchHeight = o)), (t += o + 8), n++);
         }
         e && this.broadcastLayoutUpdates();
     }
@@ -89,19 +89,19 @@ class o {
         return this.listeners.get(e);
     }
     constructor(e) {
-        (a(this, 'resizeObserver', void 0),
-            a(this, 'listeners', new Map()),
-            a(this, 'queuedCompute', !1),
-            a(this, 'items', []),
-            a(this, 'matchHeight', 0),
-            a(this, 'locked', !0),
-            a(this, 'handleResize', (e) => {
+        (o(this, 'resizeObserver', void 0),
+            o(this, 'listeners', new Map()),
+            o(this, 'queuedCompute', !1),
+            o(this, 'items', []),
+            o(this, 'matchHeight', 0),
+            o(this, 'locked', !0),
+            o(this, 'handleResize', (e) => {
                 this.computeLayout();
             }),
             (this.locked = e));
     }
 }
-let s = r.createContext(new o(!0));
+let s = r.createContext(new a(!0));
 function l(e, t) {
     return t && e > 4 ? 0 : t ? Math.min(1 - e / 4, 1) : 1;
 }
@@ -120,7 +120,7 @@ let f = {
     tension: 320
 };
 function _(e, t, n) {
-    let [a, o] = (0, i.q_F)(
+    let [o, a] = (0, i.q_F)(
             () => ({
                 from: {
                     opacity: 0,
@@ -133,7 +133,7 @@ function _(e, t, n) {
             void 0,
             []
         ),
-        _ = r.useRef(o),
+        _ = r.useRef(a),
         p = r.useContext(s),
         h = r.useMemo(() => {
             let t = !1;
@@ -141,13 +141,13 @@ function _(e, t, n) {
                 null == n
                     ? p.unsubscribe(e)
                     : p.subscribe(e, n, (e) => {
-                          let { locked: n, matchHeight: r, height: i, top: a, index: o } = e,
+                          let { locked: n, matchHeight: r, height: i, top: o, index: a } = e,
                               { current: s } = _,
                               p = {
-                                  opacity: l(o, n),
-                                  scale: c(o, n),
-                                  transform: u(o, n, a),
-                                  contentOpacity: d(o, n),
+                                  opacity: l(a, n),
+                                  scale: c(a, n),
+                                  transform: u(a, n, o),
+                                  contentOpacity: d(a, n),
                                   height: n ? r : i
                               };
                           (s({
@@ -185,7 +185,7 @@ function _(e, t, n) {
         }, [t, n, e, p]),
         {
             ref: h,
-            springs: a
+            springs: o
         }
     );
 }

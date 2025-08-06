@@ -1,8 +1,8 @@
-(n.d(t, { Z: () => w }), n(388685));
+(n.d(t, { Z: () => R }), n(388685));
 var r = n(73800),
     i = n(836560),
-    a = n(327432),
-    o = n(40851),
+    o = n(327432),
+    a = n(40851),
     s = n(213459),
     l = n(998698),
     c = n(695346),
@@ -74,18 +74,18 @@ function C(e, t) {
         e
     );
 }
-function w(e) {
-    let t = r.useContext(o.ZP),
+function R(e) {
+    let t = r.useContext(a.ZP),
         n = c.R$.useSetting(),
         [i] = r.useState(() => {
-            let r = (0, a.Jh)();
+            let r = (0, o.Jh)();
             return (
                 (r.children = (0, u.JM)('')),
                 (r.selection = {
                     anchor: T.nO,
                     focus: T.nO
                 }),
-                R(
+                P(
                     C(A({}, e), {
                         editor: r,
                         windowContext: t,
@@ -112,35 +112,35 @@ function w(e) {
         i
     );
 }
-function R(e) {
+function P(e) {
     var t, n, r;
-    let { editor: a, chatInputType: o, channel: s, canUseCommands: l, canOnlyUseTextCommands: c, windowContext: u, previewMarkdown: T, forTests: S, onChangeStart: A, onChangeEnd: N, updateState: C } = e,
-        w = a,
-        { onChange: R } = w;
-    ((w.chatInputType = o),
-        (w.windowContext = u),
-        (w.previewMarkdown = T),
-        (w.composition = null),
-        (w.events = new i.EventEmitter()),
-        (w.isMac = 'MacIntel' === navigator.platform),
-        (w.onChange = () => {
-            (w.events.emit('onChange'), R());
+    let { editor: o, chatInputType: a, channel: s, canUseCommands: l, canOnlyUseTextCommands: c, windowContext: u, previewMarkdown: T, forTests: S, onChangeStart: A, onChangeEnd: N, updateState: C } = e,
+        R = o,
+        { onChange: P } = R;
+    ((R.chatInputType = a),
+        (R.windowContext = u),
+        (R.previewMarkdown = T),
+        (R.composition = null),
+        (R.events = new i.EventEmitter()),
+        (R.isMac = 'MacIntel' === navigator.platform),
+        (R.onChange = () => {
+            (R.events.emit('onChange'), P());
         }),
-        (w = (0, y.B)(w, !0 === S)),
-        (w = (0, b.Z)(w)),
-        (w = (0, E.Z)(w)),
-        (null == (t = o.commands) ? void 0 : t.enabled) && (w = (0, d.Z)(w, s, !0 === l, !0 === c)),
-        (w = (0, g.ZP)(w, s.guild_id, s.id)),
-        (null == (n = o.markdown) ? void 0 : n.disableBlockQuotes) || (w = (0, f.Z)(w)),
-        (null == (r = o.markdown) ? void 0 : r.disableCodeBlocks) || (w = (0, _.ZP)(w)),
-        S && (w = (0, v.Z)(w)),
-        (w = (0, m.Z)(w)),
-        (w = (0, p.Z)(w)),
-        (w = (0, O.Z)(w)),
-        (w = (0, I.Z)(w, A, N)),
-        (w = (0, h.Z)(w, (e) => {
+        (R = (0, y.B)(R, !0 === S)),
+        (R = (0, b.Z)(R)),
+        (R = (0, E.Z)(R)),
+        (null == (t = a.commands) ? void 0 : t.enabled) && (R = (0, d.Z)(R, s, !0 === l, !0 === c)),
+        (R = (0, g.ZP)(R, s.guild_id, s.id)),
+        (null == (n = a.markdown) ? void 0 : n.disableBlockQuotes) || (R = (0, f.Z)(R)),
+        (null == (r = a.markdown) ? void 0 : r.disableCodeBlocks) || (R = (0, _.ZP)(R)),
+        S && (R = (0, v.Z)(R)),
+        (R = (0, m.Z)(R)),
+        (R = (0, p.Z)(R)),
+        (R = (0, O.Z)(R)),
+        (R = (0, I.Z)(R, A, N)),
+        (R = (0, h.Z)(R, (e) => {
             let { newValue: t, newSelection: n } = e;
-            return C(w, 'undo', {
+            return C(R, 'undo', {
                 value: t,
                 selection: n
             });

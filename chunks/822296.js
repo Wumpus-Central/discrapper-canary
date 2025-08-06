@@ -2,8 +2,8 @@ n.d(t, { Z: () => m });
 var r = n(255367);
 n(73800);
 var i = n(120356),
-    a = n.n(i),
-    o = n(442837),
+    o = n.n(i),
+    a = n(442837),
     s = n(755721),
     l = n(481060),
     c = n(872810),
@@ -15,7 +15,7 @@ var i = n(120356),
     h = n(65558);
 function m(e) {
     let { stream: t, width: n } = e,
-        i = (0, o.e7)([f.Z], () => f.Z.getChannel(t.channelId));
+        i = (0, a.e7)([f.Z], () => f.Z.getChannel(t.channelId));
     function m(e) {
         return e < 550 ? 'small' : e < 1000 ? 'medium' : 'large';
     }
@@ -30,13 +30,13 @@ function m(e) {
         theme: _.BR.MIDNIGHT,
         children: (e) =>
             (0, r.jsx)('div', {
-                className: a()(h.container, e),
+                className: o()(h.container, e),
                 children: (0, r.jsxs)('div', {
                     className: h.content,
                     children: [
                         (0, r.jsx)('div', {
-                            className: a()(h.artContainer, h[b]),
-                            children: (0, r.jsx)('div', { className: a()(h.art, h[b]) })
+                            className: o()(h.artContainer, h[b]),
+                            children: (0, r.jsx)('div', { className: o()(h.art, h[b]) })
                         }),
                         (0, r.jsxs)('div', {
                             className: h.cta,

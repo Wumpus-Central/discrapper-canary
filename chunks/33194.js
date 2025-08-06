@@ -10,7 +10,7 @@ n.d(t, {
 });
 var r = n(97519),
     i = n(296574);
-function a(e, t, n) {
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -23,7 +23,7 @@ function a(e, t, n) {
         e
     );
 }
-function o(e) {
+function a(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -34,7 +34,7 @@ function o(e) {
                 })
             )),
             r.forEach(function (t) {
-                a(e, t, n[t]);
+                o(e, t, n[t]);
             }));
     }
     return e;
@@ -92,18 +92,18 @@ function p() {
     c.setState({ queuedWarning: !1 });
 }
 function h(e) {
-    c.setState((t) => ({ channelDismissTimestamps: l(o({}, t.channelDismissTimestamps), { [e]: Date.now() }) }));
+    c.setState((t) => ({ channelDismissTimestamps: l(a({}, t.channelDismissTimestamps), { [e]: Date.now() }) }));
 }
 function m(e) {
     c.setState((t) => ({
-        userDismissTimestamps: l(o({}, t.userDismissTimestamps), { [e]: Date.now() }),
+        userDismissTimestamps: l(a({}, t.userDismissTimestamps), { [e]: Date.now() }),
         globalDismissTimestamp: Date.now()
     }));
 }
 function g(e) {
     let t = Array.from(e).reduce((e, t) => ((e[t] = Date.now()), e), {});
     c.setState((e) => ({
-        userDismissTimestamps: o({}, e.userDismissTimestamps, t),
+        userDismissTimestamps: a({}, e.userDismissTimestamps, t),
         globalDismissTimestamp: Date.now()
     }));
 }

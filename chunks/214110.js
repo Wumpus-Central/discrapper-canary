@@ -1,8 +1,8 @@
 (n.d(t, { Z: () => m }), n(388685));
 var r = n(255367),
     i = n(442837),
-    a = n(481060),
-    o = n(251794),
+    o = n(481060),
+    a = n(251794),
     s = n(386696),
     l = n(71619),
     c = n(271383),
@@ -20,7 +20,7 @@ function m(e) {
     if (!g || !y) return null;
     let O = () => {
         null != n &&
-            (0, o.z)({
+            (0, a.z)({
                 guildId: t.guild_id,
                 userId: n.id,
                 modReportId: t.id
@@ -34,7 +34,7 @@ function m(e) {
         _.Z,
         {
             text: v(),
-            icon: a.T39,
+            icon: o.T39,
             onClick: O,
             disabled: b
         },

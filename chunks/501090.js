@@ -3,40 +3,40 @@
     q: () => l
 }),
     n(388685));
-var r = n(73800),
-    i = n(626135),
+var i = n(73800),
+    r = n(626135),
     a = n(74538),
     s = n(45474),
     o = n(981631);
 let l = (e, t, n) => {
-    let [a, l] = r.useState(e),
-        [u, d] = r.useState(Date.now()),
-        [m] = r.useState(Date.now()),
-        p = r.useCallback(
+    let [a, l] = i.useState(e),
+        [u, d] = i.useState(Date.now()),
+        [m] = i.useState(Date.now()),
+        p = i.useCallback(
             (e) => {
-                (i.default.track(
+                (r.default.track(
                     o.rMx.CANCELLATION_FLOW_STEP,
                     (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
-                                r = Object.keys(n);
+                                i = Object.keys(n);
                             ('function' == typeof Object.getOwnPropertySymbols &&
-                                (r = r.concat(
+                                (i = i.concat(
                                     Object.getOwnPropertySymbols(n).filter(function (e) {
                                         return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                     })
                                 )),
-                                r.forEach(function (t) {
-                                    var r;
-                                    ((r = n[t]),
+                                i.forEach(function (t) {
+                                    var i;
+                                    ((i = n[t]),
                                         t in e
                                             ? Object.defineProperty(e, t, {
-                                                  value: r,
+                                                  value: i,
                                                   enumerable: !0,
                                                   configurable: !0,
                                                   writable: !0
                                               })
-                                            : (e[t] = r));
+                                            : (e[t] = i));
                                 }));
                         }
                         return e;

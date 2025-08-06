@@ -1,8 +1,8 @@
 (n.d(t, { Z: () => x }), n(804061), n(704826), n(35282), n(539854));
 var r = n(255367),
     i = n(73800),
-    a = n(423875),
-    o = n(442837),
+    o = n(423875),
+    a = n(442837),
     s = n(902704),
     l = n(481060),
     c = n(952164),
@@ -25,9 +25,9 @@ var r = n(255367),
     A = n(981631),
     N = n(616922),
     C = n(388032),
-    w = n(292199),
-    R = n(610220);
-function P(e, t) {
+    R = n(292199),
+    P = n(610220);
+function w(e, t) {
     return C.intl.formatToPlainString(C.t.h2yWWV, {
         username: t.username,
         activity: e
@@ -35,12 +35,12 @@ function P(e, t) {
 }
 let D = (e, t, n) => {
     let { artist: r, media: i } = e,
-        a = C.t['6iNxrq'],
-        o = m.ZP.getName(t.guild_id, t.id, n);
+        o = C.t['6iNxrq'],
+        a = m.ZP.getName(t.guild_id, t.id, n);
     return C.intl
-        .formatToMarkdownString(a, {
+        .formatToMarkdownString(o, {
             artist: r,
-            userName: o,
+            userName: a,
             media: i
         })
         .replaceAll('*', '');
@@ -48,38 +48,38 @@ let D = (e, t, n) => {
 function L(e) {
     let { activity: t } = e,
         n = t.timestamps,
-        { now: a } = (0, T.tS)(),
-        { durationTimestamp: o, seekBarStyles: s } = i.useMemo(() => {
+        { now: o } = (0, T.tS)(),
+        { durationTimestamp: a, seekBarStyles: s } = i.useMemo(() => {
             var e;
             let { start: n, end: r } = null != (e = t.timestamps) ? e : {};
             if (null == n || null == r) return {};
-            let i = Math.min(r, a),
-                o = r - n,
-                s = Math.floor((Math.max(i - n, 0) / o) * 100);
+            let i = Math.min(r, o),
+                a = r - n,
+                s = Math.floor((Math.max(i - n, 0) / a) * 100);
             return {
                 seekBarStyles: { width: ''.concat(s, '%') },
-                durationTimestamp: (0, E.T_)({ start: 0 }, o)
+                durationTimestamp: (0, E.T_)({ start: 0 }, a)
             };
-        }, [t, a]);
+        }, [t, o]);
     return null == s
         ? null
         : (0, r.jsxs)('div', {
-              className: w.listeningTimeline,
+              className: R.listeningTimeline,
               children: [
                   (0, r.jsx)(T.x3, { entry: n }),
                   (0, r.jsx)('div', {
-                      className: w.seekBarContainer,
+                      className: R.seekBarContainer,
                       children: (0, r.jsx)('div', {
-                          className: w.seekBarFill,
+                          className: R.seekBarFill,
                           style: s
                       })
                   }),
                   (0, r.jsx)(l.Text, {
-                      className: w.timestamp,
+                      className: R.timestamp,
                       variant: 'text-xs/normal',
                       tabularNumbers: !0,
                       color: void 0,
-                      children: o
+                      children: a
                   })
               ]
           });
@@ -89,20 +89,20 @@ function x(e) {
     let n,
         m,
         T,
-        { channel: w, entry: x, closePopout: k, onReaction: j, onVoiceChannelPreview: M } = e,
+        { channel: R, entry: x, closePopout: M, onReaction: k, onVoiceChannelPreview: j } = e,
         { largeImage: U } = (0, g.rv)({ entry: x }),
         { activity: G, currentEntry: B, artist: Z, title: F, user: V } = (0, v.pi)(x),
         { primaryColor: H, secondaryColor: Y } = (0, O.Z)(null == U ? void 0 : U.src),
         W = (0, y.Z)(A.ABu.SPOTIFY),
-        K = (0, o.e7)([u.Z, p.default], () => ((null == G ? void 0 : G.type) === A.IIU.LISTENING && null != V ? (0, f.Z)(u.Z, p.default, V, G) : void 0), [G, V], s.Z),
+        K = (0, a.e7)([u.Z, p.default], () => ((null == G ? void 0 : G.type) === A.IIU.LISTENING && null != V ? (0, f.Z)(u.Z, p.default, V, G) : void 0), [G, V], s.Z),
         z = i.useCallback(() => {
             var e;
-            if (null == w || null == V) return;
+            if (null == R || null == V) return;
             let t = null == (e = G.timestamps) ? void 0 : e.start,
                 n = (0, E.T_)(null != t ? { start: t } : x, Date.now());
             return (0, b.CR)({
                 user: V,
-                channel: w,
+                channel: R,
                 mediaImageSrc: null == U ? void 0 : U.src,
                 artist: Z,
                 description: D(
@@ -110,17 +110,17 @@ function x(e) {
                         artist: Z,
                         media: F
                     },
-                    w,
+                    R,
                     V
                 ),
                 colors: [H, Y],
                 badges: (0, b.jE)({ timestamp: n })
             });
-        }, [G, Z, w, x, null == U ? void 0 : U.src, H, Y, F, V]);
+        }, [G, Z, R, x, null == U ? void 0 : U.src, H, Y, F, V]);
     if (null == G || null == B) return null;
     let q = Z,
-        $ = [];
-    if (B.media.provider === a.p.SPOTIFY) {
+        X = [];
+    if (B.media.provider === o.p.SPOTIFY) {
         ((m = () => {
             (0, c.aG)(G);
         }),
@@ -138,15 +138,15 @@ function x(e) {
             ((q = (0, r.jsx)(d.Z, {
                 artists: Z,
                 canOpen: null != G.sync_id,
-                linkClassName: R.popoutTextSecondary,
+                linkClassName: P.popoutTextSecondary,
                 onOpenSpotifyArtist: e
             })),
             (null == K ? void 0 : K.syncDisabled) === !1)
         ) {
             let e = () => {
-                ((0, _.Z)(K, N.kG.USER_ACTIVITY_SYNC), k());
+                ((0, _.Z)(K, N.kG.USER_ACTIVITY_SYNC), M());
             };
-            $.push(
+            X.push(
                 (0, r.jsx)(
                     I.Ll,
                     {
@@ -159,12 +159,12 @@ function x(e) {
             );
         }
     }
-    let X = (0, r.jsx)(I.wG, {
+    let Q = (0, r.jsx)(I.wG, {
         onClickThumbnail: T,
-        channel: w,
+        channel: R,
         entry: x,
         headerIcons:
-            B.media.provider === a.p.SPOTIFY
+            B.media.provider === o.p.SPOTIFY
                 ? (0, r.jsx)(S.Z, {
                       onClick: n,
                       'aria-label': C.intl.string(C.t.rRffNz),
@@ -180,17 +180,17 @@ function x(e) {
     });
     return (0, r.jsxs)(I.yR, {
         children: [
-            X,
+            Q,
             (0, r.jsx)(I.St, {
                 children: (0, r.jsx)(I.WT, {
-                    onReaction: j,
-                    onVoiceChannelPreview: M,
+                    onReaction: k,
+                    onVoiceChannelPreview: j,
                     user: V,
-                    channel: w,
+                    channel: R,
                     generateReactionImage: z,
-                    reactionImageAltText: P(Z, V),
+                    reactionImageAltText: w(Z, V),
                     entry: x,
-                    buttons: $
+                    buttons: X
                 })
             })
         ]

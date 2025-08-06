@@ -9,17 +9,17 @@ n.d(t, {
     JO: () => S,
     Kw: () => N,
     MG: () => y,
-    OT: () => a,
+    OT: () => o,
     Qr: () => v,
     Ut: () => O,
     WM: () => p,
     X9: () => s,
     XH: () => b,
-    dJ: () => o,
+    dJ: () => a,
     f_: () => I,
-    i$: () => R,
+    i$: () => P,
     jF: () => d,
-    ji: () => w,
+    ji: () => R,
     jp: () => C,
     mg: () => m,
     nU: () => h,
@@ -28,10 +28,10 @@ n.d(t, {
 });
 var r = n(710845),
     i = n(70956),
-    a = (function (e) {
+    o = (function (e) {
         return ((e[(e.SECONDS_30 = 30 * i.Z.Millis.SECOND)] = 'SECONDS_30'), (e[(e.MINUTES_1 = i.Z.Millis.MINUTE)] = 'MINUTES_1'), (e[(e.MINUTES_2 = 2 * i.Z.Millis.MINUTE)] = 'MINUTES_2'), e);
     })({}),
-    o = (function (e) {
+    a = (function (e) {
         return ((e[(e.ALL = 0)] = 'ALL'), (e[(e.FRIENDS = 1)] = 'FRIENDS'), e);
     })({}),
     s = (function (e) {
@@ -60,6 +60,6 @@ let c = 'alt+c',
     A = (e) => 'Clip - '.concat(new Date(e).toLocaleString()),
     N = 15,
     C = 30000,
-    w = 30,
-    R = 10;
+    R = 30,
+    P = 10;
 i.Z.Millis.DAY;

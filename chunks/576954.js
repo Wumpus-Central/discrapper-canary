@@ -1,8 +1,8 @@
 (n.d(t, { M: () => A }), n(388685));
 var r = n(255367),
     i = n(73800),
-    a = n(286379),
-    o = n(442837),
+    o = n(286379),
+    a = n(442837),
     s = n(755721),
     l = n(481060),
     c = n(194359),
@@ -70,28 +70,28 @@ function T(e, t) {
     );
 }
 function S(e) {
-    let { senderId: t, channelId: n, warningId: a } = e,
-        { isIgnored: s } = (0, o.cj)([_.Z], () => ({ isIgnored: _.Z.isIgnored(t) }), [t]),
+    let { senderId: t, channelId: n, warningId: o } = e,
+        { isIgnored: s } = (0, a.cj)([_.Z], () => ({ isIgnored: _.Z.isIgnored(t) }), [t]),
         l = i.useCallback(() => {
             ((0, m.qc)({
                 channelId: n,
-                warningId: a,
+                warningId: o,
                 senderId: t,
                 warningType: h.pj.STRANGER_DANGER,
                 cta: m.NM.USER_MODAL_IGNORE
             }),
                 c.Z.ignoreUser(t, 'web_stranger_danger_more', n));
-        }, [n, a, t]),
+        }, [n, o, t]),
         u = i.useCallback(() => {
             ((0, m.qc)({
                 channelId: n,
-                warningId: a,
+                warningId: o,
                 senderId: t,
                 warningType: h.pj.STRANGER_DANGER,
                 cta: m.NM.USER_MODAL_UNIGNORE
             }),
                 c.Z.unignoreUser(t, 'web_stranger_danger_more', n));
-        }, [n, a, t]);
+        }, [n, o, t]);
     return (0, r.jsx)(f.ZP, {
         title: y.intl.string(y.t.avyV7O),
         description: y.intl.string(y.t.naWE6e),
@@ -101,12 +101,12 @@ function S(e) {
 }
 function A(e) {
     let { channelId: t, warningId: O, senderId: I } = e,
-        { isBlocked: A } = (0, o.cj)([_.Z], () => ({ isBlocked: _.Z.isBlocked(I) }), [I]),
+        { isBlocked: A } = (0, a.cj)([_.Z], () => ({ isBlocked: _.Z.isBlocked(I) }), [I]),
         N = i.useCallback(() => {
             (0, p.T)(t, [O]);
         }, [t, O]),
         C = (0, E.C2)(),
-        w = i.useCallback(
+        R = i.useCallback(
             (e) => () => {
                 (c.Z.blockUser(I, { location: E.zr }).then(() => {
                     N();
@@ -128,10 +128,10 @@ function A(e) {
             senderId: I,
             warningType: h.pj.STRANGER_DANGER
         }),
-            u.Z.increment({ name: a.V.SAFETY_WARNING_VIEW }));
+            u.Z.increment({ name: o.V.SAFETY_WARNING_VIEW }));
     }, [t, O, I]);
-    let R = () => {
-            (P(),
+    let P = () => {
+            (w(),
                 (0, m.qc)({
                     channelId: t,
                     warningId: O,
@@ -140,14 +140,14 @@ function A(e) {
                     cta: m.NM.OPEN_MORE_TIPS
                 }));
         },
-        P = () => {
+        w = () => {
             (0, l.ZDy)(async () => {
                 let { default: e } = await n.e('59385').then(n.bind(n, 480884));
                 return (n) => {
-                    let { transitionState: i, onClose: a } = n;
+                    let { transitionState: i, onClose: o } = n;
                     return (0, r.jsx)(e, {
                         transitionState: i,
-                        onClose: a,
+                        onClose: o,
                         channelId: t,
                         warningId: O,
                         senderId: I,
@@ -182,7 +182,7 @@ function A(e) {
                                         buttonText: y.intl.string(y.t['5QYPOz']),
                                         buttonColor: s.zx.Colors.RED,
                                         onButtonPress: () => {
-                                            (a(), D(m.NM.USER_MODAL_BLOCK_CONFIRM, m.NM.USER_MODAL_BLOCK_CANCEL, P));
+                                            (o(), D(m.NM.USER_MODAL_BLOCK_CONFIRM, m.NM.USER_MODAL_BLOCK_CANCEL, w));
                                         }
                                     },
                                     'block-button'
@@ -193,17 +193,17 @@ function A(e) {
                 };
             });
         },
-        D = (e, i, a) => {
+        D = (e, i, o) => {
             (0, l.ZDy)(async () => {
-                let { default: o } = await Promise.all([n.e('97652'), n.e('3078')]).then(n.bind(n, 744373));
+                let { default: a } = await Promise.all([n.e('97652'), n.e('3078')]).then(n.bind(n, 744373));
                 return (n) =>
                     (0, r.jsx)(
-                        o,
+                        a,
                         T(v({}, n), {
                             userId: I,
-                            confirmBlock: w(e),
+                            confirmBlock: R(e),
                             onCancel: () => {
-                                (null == a || a(),
+                                (null == o || o(),
                                     (0, m.qc)({
                                         channelId: t,
                                         warningId: O,
@@ -228,7 +228,7 @@ function A(e) {
             {
                 text: y.intl.string(y.t['Qk/c4+']),
                 variant: 'primary',
-                onClick: R
+                onClick: P
             },
             ...(A
                 ? []

@@ -5,14 +5,14 @@ n.d(t, {
 });
 var r = n(592125),
     i = n(650774),
-    a = n(496675),
-    o = n(594174),
+    o = n(496675),
+    a = n(594174),
     s = n(981631);
 let l = 50;
 function c(e) {
     if (null == e) return !1;
     let t = e.id,
-        n = o.default.getCurrentUser();
+        n = a.default.getCurrentUser();
     return null != n && n.id !== t && !0 !== e.system;
 }
 function u(e) {
@@ -22,7 +22,7 @@ function d(e) {
     let t = r.Z.getChannel(e);
     if (null == t) return !1;
     if (t.type === s.d4z.DM || t.type === s.d4z.GROUP_DM) return !0;
-    if (a.Z.canWithPartialContext(s.Plq.MANAGE_MESSAGES, { channelId: e })) {
+    if (o.Z.canWithPartialContext(s.Plq.MANAGE_MESSAGES, { channelId: e })) {
         let e = i.Z.getMemberCount(t.getGuildId());
         return null != e && e >= l;
     }

@@ -8,7 +8,7 @@
     IN: () => b,
     If: () => y,
     KW: () => v,
-    NL: () => w,
+    NL: () => R,
     NO: () => u,
     Q1: () => E,
     Rx: () => A,
@@ -17,14 +17,14 @@
     XW: () => _,
     ad: () => p,
     d5: () => T,
-    os: () => R,
+    os: () => P,
     uc: () => I
 }),
     n(388685));
 var r = n(494497),
     i = n(704215),
-    a = n(267642),
-    o = n(474936),
+    o = n(267642),
+    a = n(474936),
     s = n(981631),
     l = n(388032),
     c = (function (e) {
@@ -60,51 +60,51 @@ let u = '1340102344645283891',
     I = new Set([b, y, r.A$]),
     T = () => ({
         [s.oNc.VIDEO_BITRATE_ENHANCED]: {
-            perkIcon: a.Ro.STREAM,
+            perkIcon: o.Ro.STREAM,
             description: l.intl.string(l.t.y4ft4O)
         },
         [s.oNc.AUDIO_BITRATE_128_KBPS]: {
-            perkIcon: a.Ro.AUDIO,
-            description: l.intl.formatToPlainString(l.t.zoT1ZG, { bitrate: o.HO[s.Eu4.TIER_1].limits.bitrate / 1000 })
+            perkIcon: o.Ro.AUDIO,
+            description: l.intl.formatToPlainString(l.t.zoT1ZG, { bitrate: a.HO[s.Eu4.TIER_1].limits.bitrate / 1000 })
         },
         [s.oNc.INVITE_SPLASH]: {
-            perkIcon: a.Ro.CUSTOMIZATION,
+            perkIcon: o.Ro.CUSTOMIZATION,
             description: l.intl.string(l.t.Qwlpoq)
         },
         [s.oNc.ANIMATED_ICON]: {
-            perkIcon: a.Ro.ANIMATED,
+            perkIcon: o.Ro.ANIMATED,
             description: l.intl.string(l.t.PbAyub)
         },
         [s.oNc.AUDIO_BITRATE_256_KBPS]: {
-            perkIcon: a.Ro.AUDIO,
-            description: l.intl.formatToPlainString(l.t.zoT1ZG, { bitrate: o.HO[s.Eu4.TIER_2].limits.bitrate / 1000 })
+            perkIcon: o.Ro.AUDIO,
+            description: l.intl.formatToPlainString(l.t.zoT1ZG, { bitrate: a.HO[s.Eu4.TIER_2].limits.bitrate / 1000 })
         },
         [s.oNc.ROLE_ICONS]: {
-            perkIcon: a.Ro.CUSTOM_ROLE_ICON,
+            perkIcon: o.Ro.CUSTOM_ROLE_ICON,
             description: l.intl.string(l.t['6PV6QU'])
         },
         [s.oNc.MAX_FILE_SIZE_50_MB]: {
-            perkIcon: a.Ro.UPLOAD,
+            perkIcon: o.Ro.UPLOAD,
             description: l.intl.formatToPlainString(l.t['aFRl5+'], { uploadSizeLimit: l.intl.string(l.t.M6qV8v) })
         },
         [s.oNc.BANNER]: {
-            perkIcon: a.Ro.CUSTOMIZATION,
+            perkIcon: o.Ro.CUSTOMIZATION,
             description: l.intl.string(l.t['1a5rjo'])
         },
         [s.oNc.ANIMATED_BANNER]: {
-            perkIcon: a.Ro.ANIMATED,
+            perkIcon: o.Ro.ANIMATED,
             description: l.intl.string(l.t['1+Vmh4'])
         },
         [s.oNc.AUDIO_BITRATE_384_KBPS]: {
-            perkIcon: a.Ro.AUDIO,
-            description: l.intl.formatToPlainString(l.t.zoT1ZG, { bitrate: o.HO[s.Eu4.TIER_3].limits.bitrate / 1000 })
+            perkIcon: o.Ro.AUDIO,
+            description: l.intl.formatToPlainString(l.t.zoT1ZG, { bitrate: a.HO[s.Eu4.TIER_3].limits.bitrate / 1000 })
         },
         [s.oNc.VANITY_URL]: {
-            perkIcon: a.Ro.VANITY,
+            perkIcon: o.Ro.VANITY,
             description: l.intl.string(l.t['5XZKy8'])
         },
         [s.oNc.MAX_FILE_SIZE_100_MB]: {
-            perkIcon: a.Ro.UPLOAD,
+            perkIcon: o.Ro.UPLOAD,
             description: l.intl.formatToPlainString(l.t['aFRl5+'], { uploadSizeLimit: l.intl.string(l.t.yMOW8P) })
         }
     }),
@@ -137,8 +137,8 @@ var N = (function (e) {
     C = (function (e) {
         return ((e[(e.VANITY_URL = 1)] = 'VANITY_URL'), (e[(e.GUILD_TAG_BADGE_PACKS_WAVE_ONE = 2)] = 'GUILD_TAG_BADGE_PACKS_WAVE_ONE'), e);
     })({});
-let w = new Set([r.MB, r.Vk]),
-    R = {
+let R = new Set([r.MB, r.Vk]),
+    P = {
         1: new Set([r.A$]),
-        2: w
+        2: R
     };

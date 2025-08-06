@@ -1,8 +1,8 @@
 (n.d(t, { Z: () => S }), n(704826), n(35282));
 var r = n(255367),
     i = n(73800),
-    a = n(442837),
-    o = n(481060),
+    o = n(442837),
+    a = n(481060),
     s = n(80932),
     l = n(2052),
     c = n(543241),
@@ -76,9 +76,9 @@ function S(e) {
         { location: S } = (0, l.O)(),
         A = i.useMemo(() => I(O({}, S), { section: v ? E.jXE.EXPRESSION_PICKER : E.jXE.CONTEXT_MENU }), [S, v]),
         N = (0, h.Go)(),
-        C = (0, a.e7)([m.Z], () => (t === f.S.STICKER && null != n ? m.Z.getStickerById(n) : null)),
-        w = null != C && N.includes(C.id),
-        R = (0, a.e7)([u.ZP], () => {
+        C = (0, o.e7)([m.Z], () => (t === f.S.STICKER && null != n ? m.Z.getStickerById(n) : null)),
+        R = null != C && N.includes(C.id),
+        P = (0, o.e7)([u.ZP], () => {
             if (t === f.S.EMOJI) {
                 if (null != n) return u.ZP.getDisambiguatedEmojiContext().getById(n);
                 else if (null != y) {
@@ -87,17 +87,17 @@ function S(e) {
                 }
             }
         }),
-        P = (0, c.C1)(null, R);
+        w = (0, c.C1)(null, P);
     return null != C && t === f.S.STICKER
         ? (0, g.J8)(C) && !(0, g.V9)(C)
             ? null
-            : w
-              ? (0, r.jsx)(o.sNh, {
+            : R
+              ? (0, r.jsx)(a.sNh, {
                     id: 'unfavorite',
                     action: () => (0, _.hW)(C.id),
                     label: b.intl.string(b.t.XhzKyM)
                 })
-              : (0, r.jsx)(o.sNh, {
+              : (0, r.jsx)(a.sNh, {
                     id: 'favorite',
                     action: () => {
                         ((0, p.cQ)({
@@ -108,21 +108,21 @@ function S(e) {
                     },
                     label: b.intl.string(b.t.kWmiPT)
                 })
-        : null != R && t === f.S.EMOJI
-          ? P
-              ? (0, r.jsx)(o.sNh, {
+        : null != P && t === f.S.EMOJI
+          ? w
+              ? (0, r.jsx)(a.sNh, {
                     id: 'unfavorite',
-                    action: () => (0, s.Xe)(R),
+                    action: () => (0, s.Xe)(P),
                     label: b.intl.string(b.t.Ay49KC)
                 })
-              : (0, r.jsx)(o.sNh, {
+              : (0, r.jsx)(a.sNh, {
                     id: 'favorite',
                     action: () => {
                         ((0, c.J1)({
-                            emoji: R,
+                            emoji: P,
                             location: I(O({}, A), { object: E.qAy.EMOJI })
                         }),
-                            (0, s.$K)(R));
+                            (0, s.$K)(P));
                     },
                     label: b.intl.string(b.t['nNsr6+'])
                 })

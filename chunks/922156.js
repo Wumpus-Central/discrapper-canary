@@ -1,8 +1,8 @@
 n.d(t, { Z: () => p });
 var r,
     i = n(442837),
-    a = n(570140),
-    o = n(186901);
+    o = n(570140),
+    a = n(186901);
 function s(e, t, n) {
     return (
         t in e
@@ -17,8 +17,8 @@ function s(e, t, n) {
     );
 }
 let l = null,
-    c = [o.ff.REDISTRIBUTABLE_INSTALL_FAILED, o.ff.POST_INSTALL_FAILED, o.ff.POST_INSTALL_CANCELLED],
-    u = [o.ff.APPLICATION_NOT_FOUND, o.ff.APPLICATION_LOAD_FAILED, o.ff.INTERRUPTED, o.ff.DESERIALIZATION_FAILED];
+    c = [a.ff.REDISTRIBUTABLE_INSTALL_FAILED, a.ff.POST_INSTALL_FAILED, a.ff.POST_INSTALL_CANCELLED],
+    u = [a.ff.APPLICATION_NOT_FOUND, a.ff.APPLICATION_LOAD_FAILED, a.ff.INTERRUPTED, a.ff.DESERIALIZATION_FAILED];
 function d(e) {
     let { error: t } = e;
     l = null != t.code && u.includes(t.code) ? null : t;
@@ -32,7 +32,7 @@ class _ extends (r = i.ZP.Store) {
     }
 }
 s(_, 'displayName', 'DispatchApplicationErrorStore');
-let p = new _(a.Z, {
+let p = new _(o.Z, {
     DISPATCH_APPLICATION_LAUNCH_SETUP_START: f,
     DISPATCH_APPLICATION_ERROR: d
 });

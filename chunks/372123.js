@@ -1,8 +1,8 @@
 (n.d(t, { Z: () => u }), n(415506));
 var r = n(570140),
     i = n(710845),
-    a = n(209492),
-    o = n(981631);
+    o = n(209492),
+    a = n(981631);
 function s(e, t, n) {
     return (
         t in e
@@ -31,7 +31,7 @@ async function u(e, t) {
         branchId: t
     });
     try {
-        if ((n = await a.j(e, t, i)).type === o.QCD.CONFLICT)
+        if ((n = await o.j(e, t, i)).type === a.QCD.CONFLICT)
             throw (
                 r.Z.dispatch({
                     type: 'GAME_CLOUD_SYNC_CONFLICT',
@@ -42,7 +42,7 @@ async function u(e, t) {
                 }),
                 new c('Conflict in cloud sync.')
             );
-        (n.type === o.QCD.PULL || n.type === o.QCD.PUSH) && l.info('Sync complete', n);
+        (n.type === a.QCD.PULL || n.type === a.QCD.PUSH) && l.info('Sync complete', n);
     } catch (n) {
         if (n instanceof c) throw n;
         throw (

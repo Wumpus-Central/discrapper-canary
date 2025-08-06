@@ -1,8 +1,8 @@
 (n.d(t, { Z: () => b }), n(388685));
 var r = n(846519),
     i = n(147913),
-    a = n(509003),
-    o = n(77498),
+    o = n(509003),
+    a = n(77498),
     s = n(19780),
     l = n(626135),
     c = n(70956),
@@ -40,7 +40,7 @@ function p(e) {
 }
 let h = 5 * c.Z.Millis.MINUTE;
 function m(e) {
-    return e.distributor === f.GQo.ROBLOX ? (0, a.x3)(e) : null;
+    return e.distributor === f.GQo.ROBLOX ? (0, o.x3)(e) : null;
 }
 function g(e) {
     let t = null != e.name ? e.name : '',
@@ -87,7 +87,7 @@ class E extends i.Z {
                     var r, i;
                     let s = g(e),
                         c = !this.runningGameKeys.has(s),
-                        _ = null != (i = e.id) ? i : null == (r = o.Z.getGameByName(e.name)) ? void 0 : r.id;
+                        _ = null != (i = e.id) ? i : null == (r = a.Z.getGameByName(e.name)) ? void 0 : r.id;
                     (l.default.track(
                         f.rMx.RUNNING_GAME_HEARTBEAT,
                         p(
@@ -96,7 +96,7 @@ class E extends i.Z {
                                 game_name: e.name,
                                 game_distributor: e.distributor,
                                 game_distributor_game_id: e.sku,
-                                game_metadata: (0, a.sD)(e),
+                                game_metadata: (0, o.sD)(e),
                                 game_executable: (0, u.N6)(e.exePath),
                                 game_detection_enabled: (0, d.ik)(e),
                                 initial_heartbeat: c

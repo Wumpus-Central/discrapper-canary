@@ -2,8 +2,8 @@ n.d(t, { Z: () => u });
 var r = n(255367);
 n(73800);
 var i = n(481060),
-    a = n(230711),
-    o = n(549879),
+    o = n(230711),
+    a = n(549879),
     s = n(906732),
     l = n(981631),
     c = n(388032);
@@ -13,11 +13,11 @@ function u(e) {
         id: 'voice-settings',
         label: c.intl.string(c.t.NiTd0d),
         action: () => {
-            (a.Z.open(l.oAB.VOICE, null, {
+            (o.Z.open(l.oAB.VOICE, null, {
                 analyticsLocations: t,
                 appContext: e
             }),
-                (0, o.i)(e));
+                (0, a.i)(e));
         },
         icon: i.ewm
     });

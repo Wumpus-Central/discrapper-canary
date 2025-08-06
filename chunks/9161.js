@@ -1,6 +1,6 @@
 n.d(t, {
     O: () => i,
-    x: () => a
+    x: () => o
 });
 let r = (0, n(818083).B)({
         kind: 'user',
@@ -19,7 +19,7 @@ let r = (0, n(818083).B)({
         let { location: t, autoTrackExposure: n = !0 } = e;
         return r.useExperiment({ location: t }, { autoTrackExposure: n });
     },
-    a = (e) => {
+    o = (e) => {
         let { location: t, autoTrackExposure: n = !0 } = e;
         return r.getCurrentConfig({ location: t }, { autoTrackExposure: n });
     };

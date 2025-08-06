@@ -5,8 +5,8 @@
     n(388685));
 var r = n(255367),
     i = n(73800),
-    a = n(442837),
-    o = n(755721),
+    o = n(442837),
+    a = n(755721),
     s = n(481060),
     l = n(749210),
     c = n(313201),
@@ -22,7 +22,7 @@ let m = (e) => {
     let { type: t, guild: h, closePopout: m, ctaRef: g } = e,
         E = (0, c.Dt)(),
         [b, y] = i.useState(!1),
-        O = (0, a.e7)([d.Z], () => d.Z.isLurking(h.id), [h.id]);
+        O = (0, o.e7)([d.Z], () => d.Z.isLurking(h.id), [h.id]);
     i.useEffect(() => {
         b && !O && m();
     }, [b, O, m]);
@@ -79,9 +79,9 @@ let m = (e) => {
                                 onClick: T,
                                 loading: b
                             }),
-                            (0, r.jsx)(o.zx, {
+                            (0, r.jsx)(a.zx, {
                                 onClick: m,
-                                look: o.zx.Looks.BLANK,
+                                look: a.zx.Looks.BLANK,
                                 className: p.cancel,
                                 children: _.intl.string(_.t['2m+Sqq'])
                             })

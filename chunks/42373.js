@@ -17,8 +17,8 @@ var i = n(255367),
     x = n(981631),
     _ = n(869783),
     j = n(888723),
-    C = n(790895);
-function E(e) {
+    E = n(790895);
+function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -71,7 +71,7 @@ let v = (e) => {
             };
         return s
             ? (0, i.jsx)('div', {
-                  className: C.bentoBoxButton,
+                  className: E.bentoBoxButton,
                   children: (0, i.jsx)(o.z, {
                       variant: 'secondary',
                       onClick: g,
@@ -130,7 +130,7 @@ let v = (e) => {
             B = () => {
                 null == Z.current || N || ((w.current = Z.current.currentTime), Z.current.pause());
             },
-            U = R ? C : j;
+            U = R ? E : j;
         t = R ? (P === b.y$.LARGE ? 'heading-xxl/bold' : 'heading-xl/bold') : P === b.y$.SMALL ? 'heading-xl/extrabold' : 'heading-xxl/extrabold';
         let V = () =>
                 (0, i.jsxs)('div', {
@@ -202,7 +202,7 @@ let v = (e) => {
                           children: [(0, i.jsx)(G, {}), (0, i.jsx)(V, {})]
                       }),
             z = {
-                className: a()(R ? C.backgroundColor : k, U.boxContainer, U[''.concat(P)], R && C.gradientBackground),
+                className: a()(R ? E.backgroundColor : k, U.boxContainer, U[''.concat(P)], R && E.gradientBackground),
                 onMouseEnter: M,
                 onFocus: M,
                 onBlur: B,
@@ -211,10 +211,10 @@ let v = (e) => {
         return R
             ? (0, i.jsx)(
                   c.$,
-                  O(E({}, z), {
+                  O(C({}, z), {
                       color: 'purple',
                       children: (0, i.jsx)(H, {})
                   })
               )
-            : (0, i.jsx)('div', O(E({}, z), { children: (0, i.jsx)(H, {}) }));
+            : (0, i.jsx)('div', O(C({}, z), { children: (0, i.jsx)(H, {}) }));
     };

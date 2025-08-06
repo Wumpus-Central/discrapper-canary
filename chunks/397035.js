@@ -1,8 +1,8 @@
 n.d(t, { Z: () => h });
 var r = n(73800),
     i = n(835473),
-    a = n(81063),
-    o = n(591759),
+    o = n(81063),
+    a = n(591759),
     s = n(561308),
     l = n(206583),
     c = n(701488),
@@ -64,20 +64,20 @@ function h(e) {
         { entry: n, baseEntryData: d } = e,
         _ = (0, i.q)(n.extra.application_id),
         h = null == _ ? void 0 : _.getIconURL(128),
-        m = (0, a.xF)(n.extra.application_id, n.extra.media_assets_large_image, [c.Si.LARGE, c.Si.LARGE]),
+        m = (0, o.xF)(n.extra.application_id, n.extra.media_assets_large_image, [c.Si.LARGE, c.Si.LARGE]),
         g = n.extra.media_title,
         E = n.extra.media_subtitle,
         b = (0, s.Jg)(n) ? u.t['LH+Z39'] : u.t.YuKgmp,
         y = { type: l.kG.CRUNCHYROLL },
         O = r.useMemo(() => {
             if (null == n.extra.url) return;
-            let e = o.Z.safeParseWithQuery(n.extra.url);
+            let e = a.Z.safeParseWithQuery(n.extra.url);
             if (null != e && null != e.protocol && null != e.hostname) return e;
         }, [n.extra.url]);
     return (
         null != O &&
             (t = {
-                href: o.Z.format(O),
+                href: a.Z.format(O),
                 ariaDescription: u.intl.formatToPlainString(u.t.aFFQ3t, { title: g })
             }),
         p(f({}, d), {

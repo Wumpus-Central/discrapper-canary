@@ -1,8 +1,8 @@
 (n.d(t, { Z: () => C }), n(388685), n(953529));
 var r = n(255367),
     i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(990547),
     l = n(831209),
     c = n(442837),
@@ -54,11 +54,11 @@ function N(e) {
 function C(e) {
     var t;
     let { guildId: n } = e,
-        a = (0, c.e7)([E.Z], () => E.Z.getGuild(n)),
+        o = (0, c.e7)([E.Z], () => E.Z.getGuild(n)),
         { loading: A, subscriptionsSettings: C } = (0, y.H)(n),
-        { listingsLoaded: w } = (0, h.eD)(n),
-        R = (0, h.ue)(n, { publishedOnly: !0 }),
-        P = i.useCallback(async () => {
+        { listingsLoaded: R } = (0, h.eD)(n),
+        P = (0, h.ue)(n, { publishedOnly: !0 }),
+        w = i.useCallback(async () => {
             (b.default.track(I.rMx.GUILD_SHOP_EMBED_CLICKED, N({}, (0, f.hH)(n))), await (0, m.Z)(I.Z5c.SERVER_SHOP(n)));
         }, [n]);
     (0, _.Z)(
@@ -66,15 +66,15 @@ function C(e) {
             type: s.ImpressionTypes.VIEW,
             name: s.ImpressionNames.GUILD_SHOP_EMBED
         },
-        { disableTrack: null == a }
+        { disableTrack: null == o }
     );
-    let D = R.length > 0 ? new Date(Math.min(...R.map((e) => Date.parse(e.published_at)))) : void 0;
-    return A || !w
+    let D = P.length > 0 ? new Date(Math.min(...P.map((e) => Date.parse(e.published_at)))) : void 0;
+    return A || !R
         ? (0, r.jsx)('div', {
-              className: o()(S.guildShopEmbed, S.spinnerContainer),
+              className: a()(S.guildShopEmbed, S.spinnerContainer),
               children: (0, r.jsx)(d.$jN, {})
           })
-        : null == a || null == C
+        : null == o || null == C
           ? null
           : (0, r.jsxs)('div', {
                 className: S.guildShopEmbed,
@@ -101,7 +101,7 @@ function C(e) {
                     (0, r.jsx)(d.X6q, {
                         variant: 'heading-md/semibold',
                         color: 'text-default',
-                        children: T.intl.format(T.t.NZeik5, { guildName: a.name })
+                        children: T.intl.format(T.t.NZeik5, { guildName: o.name })
                     }),
                     (0, r.jsx)(d.LZC, { size: 4 }),
                     (0, r.jsx)(d.Text, {
@@ -116,7 +116,7 @@ function C(e) {
                     (0, r.jsxs)('div', {
                         className: S.guildShopEmbedFooter,
                         children: [
-                            (0, r.jsx)(p.Z, { guild: a }),
+                            (0, r.jsx)(p.Z, { guild: o }),
                             (0, r.jsxs)('ul', {
                                 className: S.guildShopSummary,
                                 children: [
@@ -124,7 +124,7 @@ function C(e) {
                                         children: (0, r.jsx)(d.Text, {
                                             variant: 'text-sm/normal',
                                             color: 'text-muted',
-                                            children: T.intl.format(T.t.tKZNlZ, { listingCount: R.length })
+                                            children: T.intl.format(T.t.tKZNlZ, { listingCount: P.length })
                                         })
                                     }),
                                     null != D &&
@@ -139,7 +139,7 @@ function C(e) {
                             }),
                             (0, r.jsx)(u.zx, {
                                 className: S.guildShopEmbedCta,
-                                onClick: P,
+                                onClick: w,
                                 children: (0, r.jsxs)('div', {
                                     className: S.guildShopEmbedCtaContent,
                                     children: [

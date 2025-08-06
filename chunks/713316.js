@@ -2,8 +2,8 @@ n.d(t, { w: () => p });
 var r = n(255367);
 n(73800);
 var i = n(512722),
-    a = n.n(i),
-    o = n(680018),
+    o = n.n(i),
+    a = n(680018),
     s = n(481060),
     l = n(563132),
     c = n(698708),
@@ -14,9 +14,9 @@ var i = n(512722),
 function p(e) {
     let { handleClose: t } = e,
         { skusById: n, selectedSkuId: i, application: p } = (0, l.JL)();
-    (a()(null != i, 'Expected selectedSkuId'), a()(null != p, 'Expected application'));
+    (o()(null != i, 'Expected selectedSkuId'), o()(null != p, 'Expected application'));
     let h = n[i];
-    a()(null != h, 'Expected sku');
+    o()(null != h, 'Expected sku');
     let m = f.intl.formatToPlainString(f.t.wK0IbG, {
         applicationName: p.name,
         itemName: h.name
@@ -38,7 +38,7 @@ function p(e) {
                         children: m
                     }),
                     (0, r.jsx)('div', { className: _.divider }),
-                    (0, r.jsx)(o.z, {
+                    (0, r.jsx)(a.z, {
                         onClick: t,
                         text: f.intl.string(f.t.cpT0Cg),
                         fullWidth: !0

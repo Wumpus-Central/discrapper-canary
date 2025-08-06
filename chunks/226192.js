@@ -7,8 +7,8 @@ n.d(t, {
 var r = n(255367);
 n(73800);
 var i = n(481060),
-    a = n(273504),
-    o = n(388032);
+    o = n(273504),
+    a = n(388032);
 function s(e, t, n) {
     return (
         t in e
@@ -67,13 +67,13 @@ function d(e) {
                 (0, i.ZDy)(async () => {
                     let { default: i } = await n.e('94005').then(n.bind(n, 144462));
                     return (n) => {
-                        var a;
+                        var o;
                         return (0, r.jsx)(
                             i,
                             u(
                                 l(
                                     {
-                                        initialCustomMessage: null != (a = t.metadata.customMessage) ? a : '',
+                                        initialCustomMessage: null != (o = t.metadata.customMessage) ? o : '',
                                         onSubmit: (r) => {
                                             ((t.metadata.customMessage = r), e(t), n.onClose());
                                         }
@@ -86,23 +86,23 @@ function d(e) {
                     };
                 });
             }),
-        o = (t, o) =>
+        a = (t, a) =>
             new Promise((s) => {
                 (0, i.ZDy)(async () => {
                     let { default: i } = await n.e('74543').then(n.bind(n, 643611)),
-                        c = t.actions.find((e) => e.type === a.jj.FLAG_TO_CHANNEL);
+                        c = t.actions.find((e) => e.type === o.jj.FLAG_TO_CHANNEL);
                     return (n) =>
                         (0, r.jsx)(
                             i,
                             u(
                                 l(
                                     {
-                                        action: o,
+                                        action: a,
                                         isEdit: null != c,
                                         triggerType: t.triggerType,
                                         guildId: e,
                                         onEditChannel: (e) => {
-                                            ((o.metadata.channelId = e), t.exemptChannels.add(e), s(o), n.onClose());
+                                            ((a.metadata.channelId = e), t.exemptChannels.add(e), s(a), n.onClose());
                                         }
                                     },
                                     n
@@ -113,10 +113,10 @@ function d(e) {
                 });
             }),
         s = (e, t) =>
-            new Promise((o) => {
+            new Promise((a) => {
                 (0, i.ZDy)(async () => {
                     let { default: i } = await n.e('78273').then(n.bind(n, 41767)),
-                        s = e.actions.find((e) => e.type === a.jj.USER_COMMUNICATION_DISABLED);
+                        s = e.actions.find((e) => e.type === o.jj.USER_COMMUNICATION_DISABLED);
                     return (n) =>
                         (0, r.jsx)(
                             i,
@@ -127,23 +127,23 @@ function d(e) {
                                         isEdit: null != s,
                                         triggerType: e.triggerType,
                                         onUpdateDuration: (e) => {
-                                            (null != e && (t.metadata.durationSeconds = e), o(t), n.onClose());
+                                            (null != e && (t.metadata.durationSeconds = e), a(t), n.onClose());
                                         }
                                     },
                                     n
                                 ),
-                                { onClose: () => (o(null), n.onClose()) }
+                                { onClose: () => (a(null), n.onClose()) }
                             )
                         );
                 });
             });
     return {
-        [a.jj.BLOCK_MESSAGE]: t,
-        [a.jj.FLAG_TO_CHANNEL]: o,
-        [a.jj.USER_COMMUNICATION_DISABLED]: s
+        [o.jj.BLOCK_MESSAGE]: t,
+        [o.jj.FLAG_TO_CHANNEL]: a,
+        [o.jj.USER_COMMUNICATION_DISABLED]: s
     };
 }
-function f(e, t, a, o) {
+function f(e, t, o, a) {
     (0, i.ZDy)(async () => {
         let { default: i } = await n.e('37483').then(n.bind(n, 241046));
         return (n) =>
@@ -153,8 +153,8 @@ function f(e, t, a, o) {
                     automodDecision: {
                         messageId: e,
                         messageContent: t,
-                        decisionId: a,
-                        channel: o
+                        decisionId: o,
+                        channel: a
                     }
                 })
             );
@@ -180,17 +180,17 @@ function p(e) {
             u(
                 l(
                     {
-                        header: o.intl.string(o.t.wLGrjI),
-                        confirmText: o.intl.string(o.t['cY+Ooa']),
+                        header: a.intl.string(a.t.wLGrjI),
+                        confirmText: a.intl.string(a.t['cY+Ooa']),
                         onConfirm: e,
-                        cancelText: o.intl.string(o.t['ETE/oK'])
+                        cancelText: a.intl.string(a.t['ETE/oK'])
                     },
                     t
                 ),
                 {
                     children: (0, r.jsx)(i.Text, {
                         variant: 'text-md/normal',
-                        children: o.intl.string(o.t.arYQ2d)
+                        children: a.intl.string(a.t.arYQ2d)
                     })
                 }
             )

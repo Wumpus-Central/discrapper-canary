@@ -1,10 +1,10 @@
 var r = n(507604),
     i = n(77025),
-    a = Function.prototype,
-    o = r && Object.getOwnPropertyDescriptor,
-    s = i(a, 'name'),
+    o = Function.prototype,
+    a = r && Object.getOwnPropertyDescriptor,
+    s = i(o, 'name'),
     l = s && 'something' === function () {}.name,
-    c = s && (!r || (r && o(a, 'name').configurable));
+    c = s && (!r || (r && a(o, 'name').configurable));
 e.exports = {
     EXISTS: s,
     PROPER: l,

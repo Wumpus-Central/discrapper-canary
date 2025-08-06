@@ -2,17 +2,17 @@ n.d(t, { Z: () => u });
 var r = n(255367);
 n(73800);
 var i = n(481060),
-    a = n(332148),
-    o = n(257559),
+    o = n(332148),
+    a = n(257559),
     s = n(151007),
     l = n(981631),
     c = n(388032);
 function u(e, t) {
     function n(n) {
-        n.shiftKey ? a.Z.pinMessage(t, e.id) : o.Z.confirmPin(t, e);
+        n.shiftKey ? o.Z.pinMessage(t, e.id) : a.Z.confirmPin(t, e);
     }
     function u(n) {
-        n.shiftKey ? a.Z.unpinMessage(t, e.id) : o.Z.confirmUnpin(t, e);
+        n.shiftKey ? o.Z.unpinMessage(t, e.id) : a.Z.confirmUnpin(t, e);
     }
     return e.state !== l.yb.SEND_FAILED && (0, s.Z)(e, t)
         ? !1 === e.pinned

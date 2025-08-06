@@ -5,8 +5,8 @@
     n(388685));
 var r = n(255367),
     i = n(73800),
-    a = n(433517),
-    o = n(82659),
+    o = n(433517),
+    a = n(82659),
     s = n(481060),
     l = n(130883),
     c = n(388032);
@@ -15,9 +15,9 @@ function d(e) {
     let { transitionState: t, onClose: n, handleResolveFlag: d } = e,
         [f, _] = i.useState(!1),
         p = () => {
-            (f && a.K.set(u, !0), n(), d());
+            (f && o.K.set(u, !0), n(), d());
         };
-    return (0, r.jsx)(o.Modal, {
+    return (0, r.jsx)(a.Modal, {
         transitionState: t,
         onClose: n,
         title: c.intl.string(l.default['8R4eur']),

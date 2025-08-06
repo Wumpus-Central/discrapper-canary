@@ -1,8 +1,8 @@
 (n.d(t, { g: () => p }), n(388685));
 var r = n(392711),
     i = n.n(r),
-    a = n(995774),
-    o = n(592125),
+    o = n(995774),
+    a = n(592125),
     s = n(542578),
     l = n(699516),
     c = n(5192),
@@ -42,7 +42,7 @@ function p(e, t) {
     let p = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : u.O.NORMAL,
         h = arguments.length > 3 ? arguments[3] : void 0,
         m = s.Z.getReactions(e.getChannelId(), e.id, t, f, p),
-        g = o.Z.getChannel(e.getChannelId()),
+        g = a.Z.getChannel(e.getChannelId()),
         E = null == g || g.isPrivate() ? null : g.getGuildId(),
         b = e.getReaction(t),
         y = p === u.O.BURST,
@@ -54,7 +54,7 @@ function p(e, t) {
     if (0 === O.length) return '';
     let v = y ? _.burst : _.standard,
         I = Math.max(0, (null != (r = y ? (null == b ? void 0 : b.burst_count) : null == b ? void 0 : b.count) ? r : 0) - O.length),
-        T = (0, a.Lh)(t);
+        T = (0, o.Lh)(t);
     if (1 === O.length)
         if (!(I > 0))
             return d.intl.formatToPlainString(v.reactionTooltip1, {

@@ -12,8 +12,8 @@ function r(e, t, n) {
     );
 }
 var i = n(169774),
-    a = n(630685),
-    o = n(319630),
+    o = n(630685),
+    a = n(319630),
     s = n(65183),
     l = n(581079),
     c = n(467159),
@@ -30,7 +30,7 @@ e.exports = (function () {
     function e(e) {
         var t = this;
         (r(this, 'observer', void 0), r(this, 'container', void 0), r(this, 'mutations', void 0), r(this, 'onCharData', void 0), (this.container = e), (this.mutations = u()));
-        var n = o(e);
+        var n = a(e);
         n.MutationObserver && !f
             ? (this.observer = new n.MutationObserver(function (e) {
                   return t.registerMutations(e);
@@ -72,7 +72,7 @@ e.exports = (function () {
         (t.registerMutation = function (e) {
             var t = this.getMutationTextContent(e);
             if (null != t) {
-                var n = c(a(e.target));
+                var n = c(o(e.target));
                 this.mutations = this.mutations.set(n, t);
             }
         }),

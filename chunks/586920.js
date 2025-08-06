@@ -15,11 +15,11 @@ var i = n(255367),
 let f = () => {
     let { transitionState: e, onClose: t, premiumType: n, confettiCanvas: f, churnUserDiscountOffer: b, discountedPrice: x } = (0, d.a)(),
         _ = (0, r.useRef)(null),
-        [j, C] = (0, r.useState)(!1),
-        E = (0, s.e7)([l.Z], () => l.Z.useReducedMotion);
+        [j, E] = (0, r.useState)(!1),
+        C = (0, s.e7)([l.Z], () => l.Z.useReducedMotion);
     if (
         ((0, r.useEffect)(() => {
-            null !== _.current && null !== x && C(!0);
+            null !== _.current && null !== x && E(!0);
         }, [_, x]),
         null === b)
     )
@@ -54,7 +54,7 @@ let f = () => {
                     })
                 })
             }),
-            !E &&
+            !C &&
                 j &&
                 (0, i.jsx)(o.Z, {
                     confettiTarget: _.current,

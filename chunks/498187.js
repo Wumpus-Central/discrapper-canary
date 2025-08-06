@@ -1,8 +1,8 @@
 n.d(t, { Z: () => b });
 var r = n(876215),
     i = n(758713),
-    a = n(835473),
-    o = n(810568),
+    o = n(835473),
+    a = n(810568),
     s = n(168524),
     l = n(561308),
     c = n(206583),
@@ -65,12 +65,12 @@ let g = {
         [i.z.XBOX]: c.kG.XBOX,
         [i.z.PLAYSTATION]: c.kG.PLAYSTATION
     },
-    E = { [u._.EMBED]: o.m1.Embed };
+    E = { [u._.EMBED]: a.m1.Embed };
 function b(e) {
     let t,
         n,
-        { entry: i, location: o, baseEntryData: c } = e,
-        u = (0, a.q)(i.extra.application_id),
+        { entry: i, location: a, baseEntryData: c } = e,
+        u = (0, o.q)(i.extra.application_id),
         _ = null == u ? void 0 : u.getIconURL(d.Si.LARGE),
         h = i.extra.game_name;
     if (null != i.extra.platform) {
@@ -78,7 +78,7 @@ function b(e) {
         null != e && (t = { type: e });
     }
     n = i.content_type === r.s.PLAYED_GAME && (0, l.kr)(i) && !(0, l.n2)(i) ? f.t.vPg1JS : f.t.rPqqtr;
-    let b = E[o],
+    let b = E[a],
         y = {
             onClick: (0, s.Z)({
                 location: b,

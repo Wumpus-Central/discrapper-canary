@@ -8,15 +8,15 @@ function o(e) {
     let t = (0, i.e7)([l.default], () => l.default.getId()),
         n = (0, s.ZP)(t, e.id),
         o = n === s.xO.REQUESTED_TO_SPEAK || n === s.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK,
-        [c, d] = r.useState(o);
+        [c, u] = r.useState(o);
     return (
         r.useEffect(() => {
-            d(o);
+            u(o);
         }, [o]),
         [
             c,
             function () {
-                (n === s.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK ? (0, a.RK)(e, !0) : (0, a.Q1)(e, !c), d(!c));
+                (n === s.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK ? (0, a.RK)(e, !0) : (0, a.Q1)(e, !c), u(!c));
             }
         ]
     );

@@ -1,10 +1,10 @@
 var r = n(214788),
     i = n(551558),
-    a = n(65183),
-    o = n(581079),
+    o = n(65183),
+    a = n(581079),
     s = n(170261),
-    l = a.List,
-    c = a.Map,
+    l = o.List,
+    c = o.Map,
     u = function (e, t, n) {
         if (e) {
             var r = t.get(e);
@@ -18,8 +18,8 @@ var r = n(214788),
             (u(t.getParentKey(), e, function (e) {
                 var t = e.getChildKeys(),
                     n = t.indexOf(r) + 1,
-                    a = t.toArray();
-                return (a.splice(n, 0, i), e.merge({ children: l(a) }));
+                    o = t.toArray();
+                return (o.splice(n, 0, i), e.merge({ children: l(o) }));
             }),
                 u(t.getNextSiblingKey(), e, function (e) {
                     return e.merge({ prevSibling: i });
@@ -33,10 +33,10 @@ var r = n(214788),
         });
     };
 e.exports = function (e, t) {
-    t.isCollapsed() || o(!1);
+    t.isCollapsed() || a(!1);
     var n = t.getAnchorKey(),
-        a = e.getBlockMap(),
-        l = a.get(n),
+        o = e.getBlockMap(),
+        l = o.get(n),
         u = l.getText();
     if (!u) {
         var f = l.getType();
@@ -62,10 +62,10 @@ e.exports = function (e, t) {
             characterList: p.slice(_),
             data: c()
         }),
-        b = a.toSeq().takeUntil(function (e) {
+        b = o.toSeq().takeUntil(function (e) {
             return e === l;
         }),
-        y = a
+        y = o
             .toSeq()
             .skipUntil(function (e) {
                 return e === l;
@@ -81,7 +81,7 @@ e.exports = function (e, t) {
             )
             .toOrderedMap();
     return (
-        m && (l.getChildKeys().isEmpty() || o(!1), (O = d(O, g, E))),
+        m && (l.getChildKeys().isEmpty() || a(!1), (O = d(O, g, E))),
         e.merge({
             blockMap: O,
             selectionBefore: t,

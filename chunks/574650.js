@@ -2,8 +2,8 @@
 var r = n(255367);
 n(73800);
 var i = n(120356),
-    a = n.n(i),
-    o = n(114858),
+    o = n.n(i),
+    a = n(114858),
     s = n(442837),
     l = n(755721),
     c = n(481060),
@@ -76,13 +76,13 @@ let A = () => {
     let i = (0, s.e7)([d.Z], () => d.Z.getGuildId(), []),
         v = (0, s.e7)([u.Z], () => u.Z.getGuild(i), [i]),
         T = (0, s.e7)([m.Z], () => (null != i ? m.Z.getRequest(i) : null), [i]),
-        A = (0, o.TH)(),
-        N = (null == (e = (0, o.LX)(A.pathname, g.Z5c.CHANNEL(null == v ? void 0 : v.id, E.oC.GUILD_ONBOARDING))) ? void 0 : e.isExact) === !0;
+        A = (0, a.TH)(),
+        N = (null == (e = (0, a.LX)(A.pathname, g.Z5c.CHANNEL(null == v ? void 0 : v.id, E.oC.GUILD_ONBOARDING))) ? void 0 : e.isExact) === !0;
     if (null == v || !(0, h.Dc)(v) || N) return null;
     let C = () => {
             (0, _.hk)(v.id);
         },
-        w = () => {
+        R = () => {
             (0, c.h7j)((e) =>
                 (0, r.jsx)(
                     c.ConfirmModal,
@@ -107,29 +107,29 @@ let A = () => {
                 )
             );
         },
-        R = () => {
+        P = () => {
             (0, c.ZDy)(async () => {
                 let { default: e } = await n.e('3378').then(n.bind(n, 76075));
                 return (t) => (0, r.jsx)(e, I({ guildId: v.id }, t));
             });
         },
-        P = null != (t = null == T ? void 0 : T.applicationStatus) ? t : p.wB.STARTED,
+        w = null != (t = null == T ? void 0 : T.applicationStatus) ? t : p.wB.STARTED,
         D = null,
         L = null,
         x = null,
-        k = [y.notice, O.notice];
-    switch (P) {
+        M = [y.notice, O.notice];
+    switch (w) {
         case p.wB.SUBMITTED:
-            ((D = b.intl.string(b.t['5iLvS0'])), (L = b.intl.string(b.t.mqtdmZ)), (x = w));
+            ((D = b.intl.string(b.t['5iLvS0'])), (L = b.intl.string(b.t.mqtdmZ)), (x = R));
             break;
         case p.wB.REJECTED:
-            ((D = b.intl.string(b.t.lk30cX)), (L = b.intl.string(b.t['8RrsHh'])), (x = R), k.push(y.error));
+            ((D = b.intl.string(b.t.lk30cX)), (L = b.intl.string(b.t['8RrsHh'])), (x = P), M.push(y.error));
             break;
         default:
             ((D = b.intl.string(b.t.G5YKXF)), (L = b.intl.string(b.t['r8/DT0'])), (x = C));
     }
     return (0, r.jsxs)('div', {
-        className: a()(...k),
+        className: o()(...M),
         children: [
             (0, r.jsx)(c.Text, {
                 className: y.header,

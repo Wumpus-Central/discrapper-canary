@@ -1,6 +1,6 @@
 (n.d(t, {
-    ZP: () => R,
-    yw: () => w
+    ZP: () => P,
+    yw: () => R
 }),
     n(388685),
     n(35282),
@@ -15,8 +15,8 @@
     n(781311));
 var r = n(392711),
     i = n.n(r),
-    a = n(31775),
-    o = n.n(a);
+    o = n(31775),
+    a = n.n(o);
 n(711739);
 var s = n(159635),
     l = n.n(s),
@@ -77,18 +77,18 @@ function g(e, t) {
         e
     );
 }
-let E = new (o())({ max: 50 });
+let E = new (a())({ max: 50 });
 function b(e) {
     let t = e,
         n = E.get(t);
     if (null != n) return n;
     let r = (0, _.yx)(e),
         i = (0, _.zq)(r),
-        a = {
+        o = {
             whitespaceSanitized: r,
             fullySanitized: i
         };
-    return (E.set(t, a), a);
+    return (E.set(t, o), o);
 }
 let y = ['http:', 'https:', 'discord:', 'tel:', 'sms:', 'mailto:'],
     O = [f.b.TEXT, f.b.UNDERLINE, f.b.STRONG, f.b.ITALICS, f.b.STRIKETHROUGH, f.b.INLINE_CODE, f.b.SPOILER, f.b.LINE_BREAK, f.b.TIMESTAMP],
@@ -154,7 +154,7 @@ function C(e) {
     let n = e.split('/');
     return n.length < 3 || '' !== n[1] || d.Z.safeDecodeURIComponent(n[2]) !== n[2];
 }
-function w(e) {
+function R(e) {
     try {
         var t;
         if (C(e)) throw Error('Rejected due to suspicious characters in URL: ' + JSON.stringify(e));
@@ -164,50 +164,50 @@ function w(e) {
         if (('http:' === r || 'https:' === r) && (null == n.hostname || 0 === n.hostname.length)) throw Error('no hostname');
         let i = (0, _.MO)(n);
         ((n.username = ''), (n.password = ''));
-        let a = (0, _.MO)(n);
+        let o = (0, _.MO)(n);
         return {
             target: i,
-            displayTarget: a
+            displayTarget: o
         };
     } catch (e) {
         return null;
     }
 }
-let R = g(h({}, l().defaultRules.link), {
+let P = g(h({}, l().defaultRules.link), {
     match: (e, t, n) => (t.allowLinks ? l().defaultRules.link.match(e, t, n) : null),
     parse(e, t, n) {
-        let [r, a, o, s] = e,
+        let [r, o, a, s] = e,
             u = () => ({
                 type: f.b.TEXT,
                 content: r
             });
-        if (C(o)) return u();
-        let d = b(o),
-            _ = b(a),
+        if (C(a)) return u();
+        let d = b(a),
+            _ = b(o),
             p = b(null != s ? s : ''),
             m = d.whitespaceSanitized,
             E = _.fullySanitized,
             y = p.fullySanitized,
-            R = E.trim();
-        if (0 === m.trim().length || 0 === R.length) return u();
-        let P = w(l().unescapeUrl(o)),
-            D = null == P,
-            L = (0, c.ZP)(a).length > 0 || (0, c.ZP)(s).length > 0;
+            P = E.trim();
+        if (0 === m.trim().length || 0 === P.length) return u();
+        let w = R(l().unescapeUrl(a)),
+            D = null == w,
+            L = (0, c.ZP)(o).length > 0 || (0, c.ZP)(s).length > 0;
         if (D || L) return u();
         let x = g(h({}, n), {
                 allowEscape: !1,
                 parseInlineCodeChildContent: !0
             }),
-            k = n.allowEmojiLinks ? v : O,
-            j = [...k, ...I],
-            M = [...T, ...S],
-            U = A(t(E, x), j, [f.b.EMOJI]),
-            G = A(t(y, x), M);
+            M = n.allowEmojiLinks ? v : O,
+            k = [...M, ...I],
+            j = [...T, ...S],
+            U = A(t(E, x), k, [f.b.EMOJI]),
+            G = A(t(y, x), j);
         if (null == U || null == G || 0 === N(U).trim().length) return u();
-        let B = i().pick(t.rules, k),
+        let B = i().pick(t.rules, M),
             Z = l().parserFor(B)(_.whitespaceSanitized, x),
             F = p.whitespaceSanitized,
-            { target: V } = P;
+            { target: V } = w;
         return {
             content: Z,
             target: V,

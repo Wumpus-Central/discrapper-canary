@@ -1,20 +1,20 @@
 var r = n(65183).Map;
 e.exports = function (e, t, n) {
     var i = t.getStartKey(),
-        a = t.getEndKey(),
-        o = e.getBlockMap(),
-        s = o
+        o = t.getEndKey(),
+        a = e.getBlockMap(),
+        s = a
             .toSeq()
             .skipUntil(function (e, t) {
                 return t === i;
             })
             .takeUntil(function (e, t) {
-                return t === a;
+                return t === o;
             })
-            .concat(r([[a, o.get(a)]]))
+            .concat(r([[o, a.get(o)]]))
             .map(n);
     return e.merge({
-        blockMap: o.merge(s),
+        blockMap: a.merge(s),
         selectionBefore: t,
         selectionAfter: t
     });

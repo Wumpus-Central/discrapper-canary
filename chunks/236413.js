@@ -16,8 +16,8 @@
     n(415506));
 var r = n(581364),
     i = n(314897),
-    a = n(866830),
-    o = n(539573),
+    o = n(866830),
+    a = n(539573),
     s = n(727072),
     l = n(85960),
     c = n(273504),
@@ -31,7 +31,7 @@ let d = (e, t) => ''.concat(e, '-').concat(t, '-new-rule'),
 function g(e, t) {
     let n = l.I6[t],
         r = (0, l.jp)(t, e),
-        o = {
+        a = {
             id: d(e, t),
             name: n.getDefaultRuleName(),
             guildId: e,
@@ -40,20 +40,20 @@ function g(e, t) {
             triggerMetadata: r,
             enabled: !0,
             creatorId: i.default.getId(),
-            actions: (0, a.qR)(n),
+            actions: (0, o.qR)(n),
             position: 0,
             exemptChannels: new Set(),
             exemptRoles: new Set()
         };
-    if (O(o)) throw Error(u.intl.string(u.t['A/nX8P']));
+    if (O(a)) throw Error(u.intl.string(u.t['A/nX8P']));
     let c = (0, s.mY)(e, t);
-    return (c > 0 && (o.name += ' '.concat(c + 1)), o);
+    return (c > 0 && (a.name += ' '.concat(c + 1)), a);
 }
 function E(e, t) {
     if (e.length > t) throw Error(u.intl.formatToPlainString(u.t.mee4qa, { limit: t }));
     e.forEach((e) => {
         if (e.length > c.hu || e.length < c.Vk)
-            throw new o.V6(
+            throw new a.V6(
                 u.intl.formatToPlainString(u.t.rbRvGR, {
                     keyword: e,
                     max: c.hu,
@@ -66,7 +66,7 @@ function b(e) {
     if (e.length > c.VW) throw Error(u.intl.formatToPlainString(u.t.tDjhFx, { limit: c.VW }));
     e.forEach((e) => {
         if (e.length > c.aj || e.length < c.uE)
-            throw new o.uS(
+            throw new a.uS(
                 u.intl.formatToPlainString(u.t['WR0m9/'], {
                     regex: e,
                     max: c.aj,

@@ -1,9 +1,9 @@
-(n.d(t, { Z: () => j }), n(539854), n(388685));
+(n.d(t, { Z: () => k }), n(539854), n(388685));
 var r,
     i = n(392711),
-    a = n.n(i),
-    o = n(31775),
-    s = n.n(o),
+    o = n.n(i),
+    a = n(31775),
+    s = n.n(a),
     l = n(442837),
     c = n(570140),
     u = n(704907),
@@ -89,7 +89,7 @@ function A(e) {
     let { soundId: n, userId: r } = e;
     if (!L()) return;
     let i = n.toString();
-    r !== (null == (t = f.default.getCurrentUser()) ? void 0 : t.id) && w(i) && N(i);
+    r !== (null == (t = f.default.getCurrentUser()) ? void 0 : t.id) && R(i) && N(i);
 }
 function N(e) {
     I.set(e, e);
@@ -102,18 +102,18 @@ function C(e) {
         }),
         T.compute());
 }
-function w(e) {
+function R(e) {
     for (let t of p.Z.getSounds().values()) if (null != t.find((t) => t.soundId.toString() === e)) return !0;
     return !1;
 }
-function R(e) {
-    return a().mapValues(e, (e) => O(b({}, e), { recentUses: e.recentUses.map(Number).filter((e) => e > 0) }));
+function P(e) {
+    return o().mapValues(e, (e) => O(b({}, e), { recentUses: e.recentUses.map(Number).filter((e) => e > 0) }));
 }
-function P() {
+function w() {
     var e;
     if (!x()) return;
     let t = null == (e = d.Z.frecencyWithoutFetchingLatest.playedSoundFrecency) ? void 0 : e.playedSounds;
-    T.overwriteHistory(R(null != t ? t : {}), v);
+    T.overwriteHistory(P(null != t ? t : {}), v);
 }
 function D(e) {
     let {
@@ -134,9 +134,9 @@ function x() {
         autoTrackExposure: !1
     }).canSeeFrequentlyPlayed;
 }
-class k extends (r = l.ZP.PersistedStore) {
+class M extends (r = l.ZP.PersistedStore) {
     initialize(e) {
-        (this.waitFor(f.default, p.Z), (null == e ? void 0 : e.recentlyHeardCache) != null && I.load(e.recentlyHeardCache), (null == e ? void 0 : e.playedEventsPendingFlush) != null && (v = e.playedEventsPendingFlush), this.syncWith([d.Z], P));
+        (this.waitFor(f.default, p.Z), (null == e ? void 0 : e.recentlyHeardCache) != null && I.load(e.recentlyHeardCache), (null == e ? void 0 : e.playedEventsPendingFlush) != null && (v = e.playedEventsPendingFlush), this.syncWith([d.Z], w));
     }
     getState() {
         return {
@@ -157,8 +157,8 @@ class k extends (r = l.ZP.PersistedStore) {
         return T.frequently;
     }
 }
-(E(k, 'displayName', 'SoundboardEventStore'), E(k, 'persistKey', 'SoundboardEventStore'));
-let j = new k(c.Z, {
+(E(M, 'displayName', 'SoundboardEventStore'), E(M, 'persistKey', 'SoundboardEventStore'));
+let k = new M(c.Z, {
     GUILD_SOUNDBOARD_SOUND_PLAY_LOCALLY: S,
     GUILD_SOUNDBOARD_SOUND_PLAY_START: A,
     USER_SETTINGS_PROTO_UPDATE: D

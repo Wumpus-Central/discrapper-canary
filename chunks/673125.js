@@ -1,8 +1,8 @@
 (n.d(t, { Z: () => C }), n(539854), n(388685));
 var r,
     i = n(442837),
-    a = n(570140),
-    o = n(633302),
+    o = n(570140),
+    a = n(633302),
     s = n(594174),
     l = n(176354),
     c = n(984063),
@@ -76,8 +76,8 @@ function O(e) {
 }
 function v(e) {
     let { lineId: t, newPoints: n, userId: r, streamerId: i } = e,
-        a = m[i];
-    if (null == a)
+        o = m[i];
+    if (null == o)
         m[i] = [
             {
                 type: c.W.LINE,
@@ -87,9 +87,9 @@ function v(e) {
             }
         ];
     else {
-        let e = a.find((e) => e.id === t);
+        let e = o.find((e) => e.id === t);
         null == e
-            ? a.push({
+            ? o.push({
                   type: c.W.LINE,
                   id: t,
                   userId: r,
@@ -101,16 +101,16 @@ function v(e) {
 }
 function I(e) {
     var t, n, r;
-    let { emojiHose: i, streamerId: a, userId: s } = e,
+    let { emojiHose: i, streamerId: o, userId: s } = e,
         u = h(_({}, i), { type: c.W.EMOJI_HOSE });
-    if (null == m[a]) m[a] = [u];
+    if (null == m[o]) m[o] = [u];
     else {
-        let e = m[a].findIndex((e) => e.id === i.id);
-        e >= 0 ? (m[a][e] = _({}, m[a][e], u)) : m[a].push(u);
+        let e = m[o].findIndex((e) => e.id === i.id);
+        e >= 0 ? (m[o][e] = _({}, m[o][e], u)) : m[o].push(u);
     }
     let f = null != (n = null != (t = i.emojiId) ? t : i.emojiName) ? n : '';
     if (null == E[f]) {
-        let e = null != i.emojiName ? o.ZP.convertNameToSurrogate(i.emojiName) : null;
+        let e = null != i.emojiName ? a.ZP.convertNameToSurrogate(i.emojiName) : null;
         ((E[f] = new Image()),
             (E[f].src = (0, l.qc)(
                 {
@@ -156,7 +156,7 @@ class N extends (r = i.ZP.Store) {
     }
 }
 f(N, 'displayName', 'SharedCanvasStore');
-let C = new N(a.Z, {
+let C = new N(o.Z, {
     SHARED_CANVAS_UPDATE_LINE_POINTS: v,
     SHARED_CANVAS_UPDATE_EMOJI_HOSE: I,
     SHARED_CANVAS_CLEAR_DRAWABLES: T,

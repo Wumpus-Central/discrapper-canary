@@ -1,8 +1,8 @@
 (n.d(t, { a: () => T }), n(953529), n(415506), n(388685));
 var r = n(255367),
     i = n(73800),
-    a = n(913527),
-    o = n.n(a),
+    o = n(913527),
+    a = n.n(o),
     s = n(442837),
     l = n(755721),
     c = n(481060),
@@ -63,7 +63,7 @@ class v extends i.PureComponent {
                         (0, r.jsx)('div', { children: g.intl.string(g.t.gflHOz) }),
                         (0, r.jsx)('div', {
                             className: E.timestamp,
-                            children: o()(t).calendar()
+                            children: a()(t).calendar()
                         })
                     ]
                 })
@@ -216,11 +216,11 @@ let I = s.ZP.connectStores([p.Z, f.Z], (e) => {
 async function T(e, t, n) {
     let i = f.Z.getApplication(e);
     if (null == i) return;
-    let { cloudSync: a = !0, cloudSyncForceHash: o = null, analyticsParams: s } = n;
-    if (a && null != t) {
+    let { cloudSync: o = !0, cloudSyncForceHash: a = null, analyticsParams: s } = n;
+    if (o && null != t) {
         let e = t.branchId;
         try {
-            await u.Z(t.id, e, o);
+            await u.Z(t.id, e, a);
         } catch (n) {
             (0, c.h7j)((n) =>
                 (0, r.jsx)(

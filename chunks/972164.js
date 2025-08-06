@@ -1,9 +1,9 @@
 n.d(t, { E: () => d });
 var r = n(134994),
     i = n(832454),
-    a = n(741605),
-    o = n(492733);
-function s(e, t, n, r, i, a) {
+    o = n(741605),
+    a = n(492733);
+function s(e, t, n, r, i, o) {
     let s = e[t++] ^ n[r++],
         l = e[t++] ^ n[r++],
         c = e[t++] ^ n[r++],
@@ -26,24 +26,24 @@ function s(e, t, n, r, i, a) {
         A = u,
         N = d,
         C = f,
-        w = _,
-        R = p,
-        P = h,
+        R = _,
+        P = p,
+        w = h,
         D = m,
         L = g,
         x = E,
-        k = b,
-        j = y,
-        M = O,
+        M = b,
+        k = y,
+        j = O,
         U = v;
-    for (let e = 0; e < 8; e += 2) ((N ^= (0, o.XG)((I + k) | 0, 7)), (P ^= (0, o.XG)((N + I) | 0, 9)), (k ^= (0, o.XG)((P + N) | 0, 13)), (I ^= (0, o.XG)((k + P) | 0, 18)), (D ^= (0, o.XG)((C + T) | 0, 7)), (j ^= (0, o.XG)((D + C) | 0, 9)), (T ^= (0, o.XG)((j + D) | 0, 13)), (C ^= (0, o.XG)((T + j) | 0, 18)), (M ^= (0, o.XG)((L + w) | 0, 7)), (S ^= (0, o.XG)((M + L) | 0, 9)), (w ^= (0, o.XG)((S + M) | 0, 13)), (L ^= (0, o.XG)((w + S) | 0, 18)), (A ^= (0, o.XG)((U + x) | 0, 7)), (R ^= (0, o.XG)((A + U) | 0, 9)), (x ^= (0, o.XG)((R + A) | 0, 13)), (U ^= (0, o.XG)((x + R) | 0, 18)), (T ^= (0, o.XG)((I + A) | 0, 7)), (S ^= (0, o.XG)((T + I) | 0, 9)), (A ^= (0, o.XG)((S + T) | 0, 13)), (I ^= (0, o.XG)((A + S) | 0, 18)), (w ^= (0, o.XG)((C + N) | 0, 7)), (R ^= (0, o.XG)((w + C) | 0, 9)), (N ^= (0, o.XG)((R + w) | 0, 13)), (C ^= (0, o.XG)((N + R) | 0, 18)), (x ^= (0, o.XG)((L + D) | 0, 7)), (P ^= (0, o.XG)((x + L) | 0, 9)), (D ^= (0, o.XG)((P + x) | 0, 13)), (L ^= (0, o.XG)((D + P) | 0, 18)), (k ^= (0, o.XG)((U + M) | 0, 7)), (j ^= (0, o.XG)((k + U) | 0, 9)), (M ^= (0, o.XG)((j + k) | 0, 13)), (U ^= (0, o.XG)((M + j) | 0, 18)));
-    ((i[a++] = (s + I) | 0), (i[a++] = (l + T) | 0), (i[a++] = (c + S) | 0), (i[a++] = (u + A) | 0), (i[a++] = (d + N) | 0), (i[a++] = (f + C) | 0), (i[a++] = (_ + w) | 0), (i[a++] = (p + R) | 0), (i[a++] = (h + P) | 0), (i[a++] = (m + D) | 0), (i[a++] = (g + L) | 0), (i[a++] = (E + x) | 0), (i[a++] = (b + k) | 0), (i[a++] = (y + j) | 0), (i[a++] = (O + M) | 0), (i[a++] = (v + U) | 0));
+    for (let e = 0; e < 8; e += 2) ((N ^= (0, a.XG)((I + M) | 0, 7)), (w ^= (0, a.XG)((N + I) | 0, 9)), (M ^= (0, a.XG)((w + N) | 0, 13)), (I ^= (0, a.XG)((M + w) | 0, 18)), (D ^= (0, a.XG)((C + T) | 0, 7)), (k ^= (0, a.XG)((D + C) | 0, 9)), (T ^= (0, a.XG)((k + D) | 0, 13)), (C ^= (0, a.XG)((T + k) | 0, 18)), (j ^= (0, a.XG)((L + R) | 0, 7)), (S ^= (0, a.XG)((j + L) | 0, 9)), (R ^= (0, a.XG)((S + j) | 0, 13)), (L ^= (0, a.XG)((R + S) | 0, 18)), (A ^= (0, a.XG)((U + x) | 0, 7)), (P ^= (0, a.XG)((A + U) | 0, 9)), (x ^= (0, a.XG)((P + A) | 0, 13)), (U ^= (0, a.XG)((x + P) | 0, 18)), (T ^= (0, a.XG)((I + A) | 0, 7)), (S ^= (0, a.XG)((T + I) | 0, 9)), (A ^= (0, a.XG)((S + T) | 0, 13)), (I ^= (0, a.XG)((A + S) | 0, 18)), (R ^= (0, a.XG)((C + N) | 0, 7)), (P ^= (0, a.XG)((R + C) | 0, 9)), (N ^= (0, a.XG)((P + R) | 0, 13)), (C ^= (0, a.XG)((N + P) | 0, 18)), (x ^= (0, a.XG)((L + D) | 0, 7)), (w ^= (0, a.XG)((x + L) | 0, 9)), (D ^= (0, a.XG)((w + x) | 0, 13)), (L ^= (0, a.XG)((D + w) | 0, 18)), (M ^= (0, a.XG)((U + j) | 0, 7)), (k ^= (0, a.XG)((M + U) | 0, 9)), (j ^= (0, a.XG)((k + M) | 0, 13)), (U ^= (0, a.XG)((j + k) | 0, 18)));
+    ((i[o++] = (s + I) | 0), (i[o++] = (l + T) | 0), (i[o++] = (c + S) | 0), (i[o++] = (u + A) | 0), (i[o++] = (d + N) | 0), (i[o++] = (f + C) | 0), (i[o++] = (_ + R) | 0), (i[o++] = (p + P) | 0), (i[o++] = (h + w) | 0), (i[o++] = (m + D) | 0), (i[o++] = (g + L) | 0), (i[o++] = (E + x) | 0), (i[o++] = (b + M) | 0), (i[o++] = (y + k) | 0), (i[o++] = (O + j) | 0), (i[o++] = (v + U) | 0));
 }
 function l(e, t, n, r, i) {
-    let a = r + 0,
-        o = r + 16 * i;
-    for (let r = 0; r < 16; r++) n[o + r] = e[t + (2 * i - 1) * 16 + r];
-    for (let r = 0; r < i; r++, a += 16, t += 16) (s(n, o, e, t, n, a), r > 0 && (o += 16), s(n, a, e, (t += 16), n, o));
+    let o = r + 0,
+        a = r + 16 * i;
+    for (let r = 0; r < 16; r++) n[a + r] = e[t + (2 * i - 1) * 16 + r];
+    for (let r = 0; r < i; r++, o += 16, t += 16) (s(n, a, e, t, n, o), r > 0 && (a += 16), s(n, o, e, (t += 16), n, a));
 }
 function c(e, t, n) {
     let {
@@ -54,7 +54,7 @@ function c(e, t, n) {
         asyncTick: d,
         maxmem: f,
         onProgress: _
-    } = (0, o.U5)(
+    } = (0, a.U5)(
         {
             dkLen: 32,
             asyncTick: 10,
@@ -70,13 +70,13 @@ function c(e, t, n) {
     if (u < 0 || u > (4294967296 - 1) * 32) throw Error('Scrypt: dkLen should be positive integer less than or equal to (2^32 - 1) * 32');
     let m = p * (s + c);
     if (m > f) throw Error(`Scrypt: parameters too large, ${m} (128 * r * (N + p)) > ${f} (maxmem)`);
-    let g = (0, a.n)(i.JQ, e, t, {
+    let g = (0, o.n)(i.JQ, e, t, {
             c: 1,
             dkLen: p * c
         }),
-        E = (0, o.Jq)(g),
-        b = (0, o.Jq)(new Uint8Array(p * s)),
-        y = (0, o.Jq)(new Uint8Array(p)),
+        E = (0, a.Jq)(g),
+        b = (0, a.Jq)(new Uint8Array(p * s)),
+        y = (0, a.Jq)(new Uint8Array(p)),
         O = () => {};
     if (_) {
         let e = 2 * s * c,
@@ -100,30 +100,30 @@ function c(e, t, n) {
         asyncTick: d
     };
 }
-function u(e, t, n, r, o) {
-    let s = (0, a.n)(i.JQ, e, n, {
+function u(e, t, n, r, a) {
+    let s = (0, o.n)(i.JQ, e, n, {
         c: 1,
         dkLen: t
     });
-    return (n.fill(0), r.fill(0), o.fill(0), s);
+    return (n.fill(0), r.fill(0), a.fill(0), s);
 }
 async function d(e, t, n) {
-    let { N: r, r: i, p: a, dkLen: s, blockSize32: d, V: f, B32: _, B: p, tmp: h, blockMixCb: m, asyncTick: g } = c(e, t, n);
-    o.iA || (0, o.l1)(_);
-    for (let e = 0; e < a; e++) {
+    let { N: r, r: i, p: o, dkLen: s, blockSize32: d, V: f, B32: _, B: p, tmp: h, blockMixCb: m, asyncTick: g } = c(e, t, n);
+    a.iA || (0, a.l1)(_);
+    for (let e = 0; e < o; e++) {
         let t = d * e;
         for (let e = 0; e < d; e++) f[e] = _[t + e];
         let n = 0;
-        (await (0, o.oY)(r - 1, g, () => {
+        (await (0, a.oY)(r - 1, g, () => {
             (l(f, n, f, (n += d), i), m());
         }),
             l(f, (r - 1) * d, _, t, i),
             m(),
-            await (0, o.oY)(r, g, () => {
+            await (0, a.oY)(r, g, () => {
                 let e = _[t + d - 16] % r;
                 for (let n = 0; n < d; n++) h[n] = _[t + n] ^ f[e * d + n];
                 (l(h, 0, _, t, i), m());
             }));
     }
-    return (o.iA || (0, o.l1)(_), u(e, s, p, f, h));
+    return (a.iA || (0, a.l1)(_), u(e, s, p, f, h));
 }

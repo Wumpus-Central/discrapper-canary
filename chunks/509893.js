@@ -1,8 +1,8 @@
-n.d(t, { K: () => R });
+n.d(t, { K: () => P });
 var r = n(255367),
     i = n(73800),
-    a = n(521548),
-    o = n(573654),
+    o = n(521548),
+    a = n(573654),
     s = n(136954),
     l = n(401251),
     c = n(528302),
@@ -42,21 +42,21 @@ function g(e, t) {
         r,
         i = null == e ? null : ('undefined' != typeof Symbol && e[Symbol.iterator]) || e['@@iterator'];
     if (null != i) {
-        var a = [],
-            o = !0,
+        var o = [],
+            a = !0,
             s = !1;
         try {
-            for (i = i.call(e); !(o = (n = i.next()).done) && (a.push(n.value), !t || a.length !== t); o = !0);
+            for (i = i.call(e); !(a = (n = i.next()).done) && (o.push(n.value), !t || o.length !== t); a = !0);
         } catch (e) {
             ((s = !0), (r = e));
         } finally {
             try {
-                o || null == i.return || i.return();
+                a || null == i.return || i.return();
             } finally {
                 if (s) throw r;
             }
         }
-        return a;
+        return o;
     }
 }
 function E(e) {
@@ -125,7 +125,7 @@ function C(e) {
               return e.__proto__ || Object.getPrototypeOf(e);
           })(e);
 }
-function w(e, t, n) {
+function R(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -138,7 +138,7 @@ function w(e, t, n) {
         e
     );
 }
-function R(e) {
+function P(e) {
     var t = e.DecoratedComponent,
         n = e.createHandler,
         u = e.createMonitor,
@@ -148,7 +148,7 @@ function R(e) {
         m = e.getType,
         g = e.collect,
         E = e.options.arePropsEqual,
-        y = void 0 === E ? a.w : E,
+        y = void 0 === E ? o.w : E,
         I = t,
         S = t.displayName || t.name || 'Component',
         N = (function (e) {
@@ -158,17 +158,17 @@ function R(e) {
                 var n;
                 return (
                     b(this, d),
-                    w(A((n = t.call(this, e))), 'decoratedRef', (0, i.createRef)()),
-                    w(A(n), 'handlerId', void 0),
-                    w(A(n), 'manager', void 0),
-                    w(A(n), 'handlerMonitor', void 0),
-                    w(A(n), 'handlerConnector', void 0),
-                    w(A(n), 'handler', void 0),
-                    w(A(n), 'disposable', void 0),
-                    w(A(n), 'currentType', void 0),
-                    w(A(n), 'handleChange', function () {
+                    R(A((n = t.call(this, e))), 'decoratedRef', (0, i.createRef)()),
+                    R(A(n), 'handlerId', void 0),
+                    R(A(n), 'manager', void 0),
+                    R(A(n), 'handlerMonitor', void 0),
+                    R(A(n), 'handlerConnector', void 0),
+                    R(A(n), 'handler', void 0),
+                    R(A(n), 'disposable', void 0),
+                    R(A(n), 'currentType', void 0),
+                    R(A(n), 'handleChange', function () {
                         var e = n.getCurrentState();
-                        (0, a.w)(e, n.state) || n.setState(e);
+                        (0, o.w)(e, n.state) || n.setState(e);
                     }),
                     (n.disposable = new l.M$()),
                     n.receiveProps(e),
@@ -187,13 +187,13 @@ function R(e) {
                     {
                         key: 'getDecoratedComponentInstance',
                         value: function () {
-                            return ((0, o.k)(this.decoratedRef.current, 'In order to access an instance of the decorated component, it must either be a class component or use React.forwardRef()'), this.decoratedRef.current);
+                            return ((0, a.k)(this.decoratedRef.current, 'In order to access an instance of the decorated component, it must either be a class component or use React.forwardRef()'), this.decoratedRef.current);
                         }
                     },
                     {
                         key: 'shouldComponentUpdate',
                         value: function (e, t) {
-                            return !y(e, this.props) || !(0, a.w)(t, this.state);
+                            return !y(e, this.props) || !(0, o.w)(t, this.state);
                         }
                     },
                     {
@@ -230,9 +230,9 @@ function R(e) {
                                     r = n[0],
                                     i = n[1];
                                 ((this.handlerId = r), this.handlerMonitor.receiveHandlerId(r), this.handlerConnector.receiveHandlerId(r));
-                                var a = this.manager.getMonitor(),
-                                    o = a.subscribeToStateChange(this.handleChange, { handlerIds: [r] });
-                                this.disposable.setDisposable(new l.Xz(new l.JT(o), new l.JT(i)));
+                                var o = this.manager.getMonitor(),
+                                    a = o.subscribeToStateChange(this.handleChange, { handlerIds: [r] });
+                                this.disposable.setDisposable(new l.Xz(new l.JT(a), new l.JT(i)));
                             }
                         }
                     },
@@ -275,12 +275,12 @@ function R(e) {
                     {
                         key: 'receiveDragDropManager',
                         value: function (e) {
-                            void 0 === this.manager && ((0, o.k)(void 0 !== e, 'Could not find the drag and drop manager in the context of %s. Make sure to render a DndProvider component in your top-level component. Read more: http://react-dnd.github.io/react-dnd/docs/troubleshooting#could-not-find-the-drag-and-drop-manager-in-the-context', S, S), void 0 !== e && ((this.manager = e), (this.handlerMonitor = u(e)), (this.handlerConnector = f(e.getBackend())), (this.handler = n(this.handlerMonitor, this.decoratedRef))));
+                            void 0 === this.manager && ((0, a.k)(void 0 !== e, 'Could not find the drag and drop manager in the context of %s. Make sure to render a DndProvider component in your top-level component. Read more: http://react-dnd.github.io/react-dnd/docs/troubleshooting#could-not-find-the-drag-and-drop-manager-in-the-context', S, S), void 0 !== e && ((this.manager = e), (this.handlerMonitor = u(e)), (this.handlerConnector = f(e.getBackend())), (this.handler = n(this.handlerMonitor, this.decoratedRef))));
                         }
                     }
                 ]),
                 d
             );
         })(i.Component);
-    return (w(N, 'DecoratedComponent', t), w(N, 'displayName', ''.concat(h, '(').concat(S, ')')), d()(N, t));
+    return (R(N, 'DecoratedComponent', t), R(N, 'displayName', ''.concat(h, '(').concat(S, ')')), d()(N, t));
 }

@@ -1,8 +1,8 @@
 var r = n(488437),
     i = n(429675),
-    a = 'object' == typeof StopIteration ? StopIteration : null;
+    o = 'object' == typeof StopIteration ? StopIteration : null;
 e.exports = function (e) {
-    if (!a) throw new i('this environment lacks StopIteration');
+    if (!o) throw new i('this environment lacks StopIteration');
     r.set(e, '[[Done]]', !1);
     var t = {
         next: function () {
@@ -14,7 +14,7 @@ e.exports = function (e) {
                     value: t ? void 0 : e.next()
                 };
             } catch (t) {
-                if ((r.set(e, '[[Done]]', !0), t !== a)) throw t;
+                if ((r.set(e, '[[Done]]', !0), t !== o)) throw t;
                 return {
                     done: !0,
                     value: void 0

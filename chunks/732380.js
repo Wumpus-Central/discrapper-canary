@@ -2,8 +2,8 @@ n.d(t, { O1: () => d });
 var r = n(255367);
 n(73800);
 var i = n(481060),
-    a = n(785717);
-function o(e, t, n) {
+    o = n(785717);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -27,7 +27,7 @@ function s(e) {
                 })
             )),
             r.forEach(function (t) {
-                o(e, t, n[t]);
+                a(e, t, n[t]);
             }));
     }
     return e;
@@ -38,8 +38,8 @@ function l(e, t) {
         r,
         i = c(e, t);
     if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
@@ -48,19 +48,19 @@ function c(e, t) {
     var n,
         r,
         i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
 function u(e) {
     let { action: t, onClick: n } = e,
-        { trackUserProfileAction: r } = (0, a.KZ)();
+        { trackUserProfileAction: r } = (0, o.KZ)();
     return (e) => {
         (null != t && r({ action: t }), null == n || n(e));
     };
 }
 function d(e) {
-    var { action: t, onClick: n, variant: a = 'secondary', size: o = 'sm' } = e,
+    var { action: t, onClick: n, variant: o = 'secondary', size: a = 'sm' } = e,
         c = l(e, ['action', 'onClick', 'variant', 'size']);
     let d = u({
         action: t,
@@ -71,8 +71,8 @@ function d(e) {
         s(
             {
                 onClick: d,
-                variant: a,
-                size: o
+                variant: o,
+                size: a
             },
             c
         )

@@ -7,8 +7,8 @@
     n(388685));
 var r = n(524846),
     i = n(911969),
-    a = n(592125),
-    o = n(271383),
+    o = n(592125),
+    a = n(271383),
     s = n(485386),
     l = n(430824),
     c = n(594174),
@@ -20,16 +20,16 @@ n(892902);
 let p = 15,
     h = 1000;
 function m(e, t, n) {
-    let r = a.Z.getChannel(n);
+    let r = o.Z.getChannel(n);
     if (null == r) return [];
-    let o = e === i.re.USER_SELECT || e === i.re.MENTIONABLE_SELECT,
+    let a = e === i.re.USER_SELECT || e === i.re.MENTIONABLE_SELECT,
         s = e === i.re.ROLE_SELECT || e === i.re.MENTIONABLE_SELECT,
         { users: l, roles: c } = u.ZP.queryMentionResults({
             query: t,
             channel: r,
             canMentionEveryone: !1,
             canMentionHere: !1,
-            canMentionUsers: o,
+            canMentionUsers: a,
             canMentionRoles: s,
             includeAllGuildUsers: !0,
             includeNonMentionableRoles: !0,
@@ -54,7 +54,7 @@ function m(e, t, n) {
     ];
 }
 function g(e, t, n) {
-    let r = a.Z.getChannel(t);
+    let r = o.Z.getChannel(t);
     return null == r
         ? []
         : u.ZP.queryApplicationCommandChannelResults({
@@ -79,7 +79,7 @@ function E(e, t) {
                     var t;
                     let n = c.default.getUser(e.id);
                     if (null == n) return null;
-                    let r = null != i ? o.ZP.getNick(i.id, n.id) : void 0;
+                    let r = null != i ? a.ZP.getNick(i.id, n.id) : void 0;
                     return {
                         type: _.tM.USER,
                         value: n.id,
@@ -98,7 +98,7 @@ function E(e, t) {
                 }
                 case r.$.CHANNEL: {
                     if (null == i) return null;
-                    let t = a.Z.getChannel(e.id);
+                    let t = o.Z.getChannel(e.id);
                     if (null == t || t.guild_id !== i.id || (n.length > 0 && !n.includes(t.type))) return null;
                     return {
                         type: _.tM.CHANNEL,

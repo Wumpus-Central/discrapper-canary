@@ -5,7 +5,7 @@ function r(e) {
 function i(e, t) {
     ((e.prototype = Object.create(t.prototype)), (e.prototype.constructor = e), (e.__proto__ = t));
 }
-function a(e, t, n) {
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -18,7 +18,7 @@ function a(e, t, n) {
         e
     );
 }
-var o = n(73800),
+var a = n(73800),
     s = n(169774),
     l = n(581079),
     c = n(613078),
@@ -28,7 +28,7 @@ function d(e) {
 }
 var f = function (e) {
         return u
-            ? o.createElement(
+            ? a.createElement(
                   'span',
                   {
                       key: 'A',
@@ -37,7 +37,7 @@ var f = function (e) {
                   },
                   '\n'
               )
-            : o.createElement('br', {
+            : a.createElement('br', {
                   key: 'A',
                   'data-text': 'true',
                   ref: e
@@ -45,7 +45,7 @@ var f = function (e) {
     },
     _ = function (e) {
         return u
-            ? o.createElement(
+            ? a.createElement(
                   'span',
                   {
                       key: 'B',
@@ -54,7 +54,7 @@ var f = function (e) {
                   },
                   '\n'
               )
-            : o.createElement('br', {
+            : a.createElement('br', {
                   key: 'B',
                   'data-text': 'true',
                   ref: e
@@ -63,7 +63,7 @@ var f = function (e) {
 e.exports = (function (e) {
     function t(t) {
         var n;
-        return (a(r((n = e.call(this, t) || this)), '_forceFlag', void 0), a(r(n), '_node', void 0), (n._forceFlag = !1), n);
+        return (o(r((n = e.call(this, t) || this)), '_forceFlag', void 0), o(r(n), '_node', void 0), (n._forceFlag = !1), n);
     }
     i(t, e);
     var n = t.prototype;
@@ -91,7 +91,7 @@ e.exports = (function (e) {
                     : _(function (t) {
                           return (e._node = t);
                       })
-                : o.createElement(
+                : a.createElement(
                       'span',
                       {
                           key: this._forceFlag ? 'A' : 'B',
@@ -105,4 +105,4 @@ e.exports = (function (e) {
         }),
         t
     );
-})(o.Component);
+})(a.Component);

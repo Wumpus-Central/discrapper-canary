@@ -1,7 +1,7 @@
 var r = n(98405),
     i = n(154028),
-    a = n(10693),
-    o = n(621523),
+    o = n(10693),
+    a = n(621523),
     s = n(713411),
     l = n(530575),
     c = n(117895).f,
@@ -24,7 +24,7 @@ var r = n(98405),
         i(v) ||
         (function () {
             try {
-                new (i('MessageChannel') || a('worker_threads').MessageChannel)().port1.postMessage(new WeakMap());
+                new (i('MessageChannel') || o('worker_threads').MessageChannel)().port1.postMessage(new WeakMap());
             } catch (e) {
                 if (e.name === I && 25 === e.code) return e.constructor;
             }
@@ -32,9 +32,9 @@ var r = n(98405),
     A = S && S.prototype,
     N = T.prototype,
     C = b.set,
-    w = b.getterFor(v),
-    R = 'stack' in new T(v),
-    P = function (e) {
+    R = b.getterFor(v),
+    P = 'stack' in new T(v),
+    w = function (e) {
         return f(g, e) && g[e].m ? g[e].c : 0;
     },
     D = function () {
@@ -42,7 +42,7 @@ var r = n(98405),
         var e = arguments.length,
             t = m(e < 1 ? void 0 : arguments[0]),
             n = m(e < 2 ? void 0 : arguments[1], 'Error'),
-            r = P(n);
+            r = w(n);
         if (
             (C(this, {
                 type: v,
@@ -51,7 +51,7 @@ var r = n(98405),
                 code: r
             }),
             y || ((this.name = n), (this.message = t), (this.code = r)),
-            R)
+            P)
         ) {
             var i = new T(t);
             ((i.name = v), c(this, 'stack', l(1, E(i.stack, 1))));
@@ -65,27 +65,27 @@ var r = n(98405),
             get: e
         };
     },
-    k = function (e) {
+    M = function (e) {
         return x(function () {
-            return w(this)[e];
+            return R(this)[e];
         });
     };
-(y && (d(L, 'code', k('code')), d(L, 'message', k('message')), d(L, 'name', k('name'))), c(L, 'constructor', l(1, D)));
-var j = o(function () {
+(y && (d(L, 'code', M('code')), d(L, 'message', M('message')), d(L, 'name', M('name'))), c(L, 'constructor', l(1, D)));
+var k = a(function () {
         return !(new S() instanceof T);
     }),
-    M =
-        j ||
-        o(function () {
+    j =
+        k ||
+        a(function () {
             return N.toString !== h || '2: 1' !== String(new S(1, 2));
         }),
     U =
-        j ||
-        o(function () {
+        k ||
+        a(function () {
             return 25 !== new S(1, 'DataCloneError').code;
         }),
-    G = j || 25 !== S[I] || 25 !== A[I],
-    B = O ? M || U || G : j;
+    G = k || 25 !== S[I] || 25 !== A[I],
+    B = O ? j || U || G : k;
 r(
     {
         global: !0,
@@ -96,7 +96,7 @@ r(
 );
 var Z = i(v),
     F = Z.prototype;
-for (var V in (M && (O || S === Z) && u(F, 'toString', h),
+for (var V in (j && (O || S === Z) && u(F, 'toString', h),
 U &&
     y &&
     S === Z &&
@@ -104,7 +104,7 @@ U &&
         F,
         'code',
         x(function () {
-            return P(p(this).name);
+            return w(p(this).name);
         })
     ),
 g))

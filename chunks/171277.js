@@ -2,8 +2,8 @@ n.d(t, { Z: () => _ });
 var r = n(255367);
 n(73800);
 var i = n(120356),
-    a = n.n(i),
-    o = n(442837),
+    o = n.n(i),
+    a = n(442837),
     s = n(481060),
     l = n(607070),
     c = n(254238),
@@ -12,7 +12,7 @@ var i = n(120356),
 let f = 280;
 function _(e) {
     let { height: t } = e,
-        i = (0, o.e7)([l.Z], () => l.Z.useReducedMotion),
+        i = (0, a.e7)([l.Z], () => l.Z.useReducedMotion),
         _ = () =>
             n
                 .e('78698')
@@ -27,7 +27,7 @@ function _(e) {
             (0, r.jsx)(s.Fmz, {
                 importData: _,
                 shouldAnimate: !i,
-                className: a()(d.art, { [d.hidden]: t <= f })
+                className: o()(d.art, { [d.hidden]: t <= f })
             }),
             (0, r.jsx)(s.X6q, {
                 className: d.header,

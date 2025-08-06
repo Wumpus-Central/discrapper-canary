@@ -1,8 +1,8 @@
 (n.d(t, { Z: () => O }), n(388685));
 var r,
     i = n(392711),
-    a = n.n(i),
-    o = n(442837),
+    o = n.n(i),
+    a = n(442837),
     s = n(570140),
     l = n(924301),
     c = n(411198),
@@ -41,7 +41,7 @@ function g() {
 function E(e) {
     let { channelId: t, entries: n } = e;
     f = !1;
-    let r = a().sortBy(
+    let r = o().sortBy(
             [...n],
             [
                 function (e) {
@@ -49,13 +49,13 @@ function E(e) {
                 }
             ]
         ),
-        i = a().map(r, m);
+        i = o().map(r, m);
     _[t] = i;
 }
 function b() {
     f = !1;
 }
-class y extends (r = o.ZP.Store) {
+class y extends (r = a.ZP.Store) {
     isFetching() {
         return f;
     }

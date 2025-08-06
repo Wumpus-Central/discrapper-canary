@@ -1,8 +1,8 @@
 n.d(t, { Z: () => f });
 var r = n(399606),
     i = n(317381),
-    a = n(16609),
-    o = n(917107),
+    o = n(16609),
+    a = n(917107),
     s = n(592125),
     l = n(226027),
     c = n(918559);
@@ -18,6 +18,6 @@ let u = 'no_text_activity',
 function f() {
     let e = (0, r.e7)([i.ZP], () => i.ZP.getCurrentEmbeddedActivity()),
         t = (0, r.e7)([i.ZP], () => i.ZP.getActivityPanelMode()),
-        n = (0, a.p)(null == e ? void 0 : e.location);
-    return void 0 === e || (0, o.Z)(n, s.Z) ? d[u] : d[t];
+        n = (0, o.p)(null == e ? void 0 : e.location);
+    return void 0 === e || (0, a.Z)(n, s.Z) ? d[u] : d[t];
 }

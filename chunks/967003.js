@@ -2,8 +2,8 @@ n.d(t, { Z: () => d });
 var r = n(255367);
 n(73800);
 var i = n(442837),
-    a = n(481060),
-    o = n(846027),
+    o = n(481060),
+    a = n(846027),
     s = n(131951),
     l = n(321614),
     c = n(345655),
@@ -18,18 +18,18 @@ function d(e) {
         d = (0, i.e7)([s.Z], () => s.Z.getActiveInputProfile()),
         f = t.map((t) =>
             (0, r.jsx)(
-                a.k5B,
+                o.k5B,
                 {
                     id: t,
                     group: 'input-profiles',
                     label: n[t],
                     checked: t === (null != d ? d : c._.CUSTOM),
-                    action: () => o.Z.setActiveInputProfile(t, { analyticsLocations: e })
+                    action: () => a.Z.setActiveInputProfile(t, { analyticsLocations: e })
                 },
                 t
             )
         );
-    return (0, r.jsx)(a.sNh, {
+    return (0, r.jsx)(o.sNh, {
         id: 'input-profiles',
         label: u.intl.string(u.t.LM3U3t),
         subtext: n[null != d ? d : c._.CUSTOM],

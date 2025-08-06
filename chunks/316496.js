@@ -43,6 +43,17 @@ let i = (0, n(818083).B)({
                 showLinkToSettings: !1,
                 variantName: 'treatment_3'
             }
+        },
+        {
+            id: 4,
+            label: '[Holdout] Popout not available when already sharing',
+            config: {
+                isEnabled: !0,
+                showActivitySharingIndicatorWhenSharing: !1,
+                showUpdatedSettingsPage: !0,
+                showLinkToSettings: !0,
+                variantName: 'treatment_4'
+            }
         }
     ]
 });

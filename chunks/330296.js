@@ -1,9 +1,9 @@
 var r = n(733359),
     i = n(720379),
-    a = function (e, t) {
+    o = function (e, t) {
         return e === t;
     },
-    o = function (e) {
+    a = function (e) {
         return !!e;
     },
     s = [];
@@ -16,13 +16,13 @@ function l(e, t, n) {
                     return e.has(n);
                 })
                 .toList(),
-            a,
             o,
+            a,
             function (t, i) {
-                var a = e.getText();
+                var o = e.getText();
                 s.push({
-                    offset: r.strlen(a.slice(0, t)),
-                    length: r.strlen(a.slice(t, i)),
+                    offset: r.strlen(o.slice(0, t)),
+                    length: r.strlen(o.slice(t, i)),
                     style: n
                 });
             }

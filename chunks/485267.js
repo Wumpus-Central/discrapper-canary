@@ -1,6 +1,6 @@
 n.d(t, {
-    Bt: () => u,
-    Jn: () => d,
+    Bt: () => d,
+    Jn: () => u,
     lY: () => c
 });
 var r = n(570140);
@@ -20,9 +20,9 @@ let c = () => {
             hidden: s.Z.hidden
         }));
 };
-function d() {
+function u() {
     r.Z.dispatch({ type: 'GAME_PROFILE_OPEN' });
 }
-function u() {
+function d() {
     r.Z.dispatch({ type: 'CONTENT_INVENTORY_CLEAR_DELETE_HISTORY_ERROR' });
 }

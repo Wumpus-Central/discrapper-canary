@@ -1,19 +1,19 @@
 n.d(t, { Z: () => s });
 var r = n(73800),
     i = n(772848),
-    a = n(125268);
-let o = () => {};
+    o = n(125268);
+let a = () => {};
 function s(e, t, n) {
     let s = r.useRef((0, i.Z)()),
         l = r.useRef(Date.now()),
         c = r.useCallback(
             (r, i) => {
-                let o = {
+                let a = {
                     x: r,
                     y: i,
                     deltaTime: Date.now() - l.current
                 };
-                ((0, a.oW)(t, s.current, e, n, o), (0, a.cV)(s.current, e, n, [o]));
+                ((0, o.oW)(t, s.current, e, n, a), (0, o.cV)(s.current, e, n, [a]));
             },
             [t, n, e]
         ),
@@ -29,7 +29,7 @@ function s(e, t, n) {
         () => ({
             handleMouseDown: u,
             handleMouseMove: d,
-            handleMouseUp: o,
+            handleMouseUp: a,
             handleMouseEnter: f
         }),
         [u, f, d]

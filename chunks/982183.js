@@ -17,16 +17,16 @@ n.d(t, {
 });
 var r = n(70956),
     i = n(411198),
-    a = n(981631),
-    o = n(388032);
+    o = n(981631),
+    a = n(388032);
 let s = 'Notifications Inbox',
     l = 88,
     c = r.Z.Millis.WEEK,
     u = 50,
     d = 'notifications-inbox',
     f = (0, i.yS)({
-        id: a.STv,
-        name: o.intl.string(o.t.HcoRu7),
+        id: o.STv,
+        name: a.intl.string(a.t.HcoRu7),
         description: '',
         icon: void 0,
         features: []
@@ -41,16 +41,16 @@ var _ = (function (e) {
         return ((e.ALL_MESSAGES_CHANNEL = 'ALL_MESSAGES_CHANNEL'), (e.MENTION = 'MENTION'), (e.BOOKMARK = 'BOOKMARK'), e);
     })({});
 let m = {
-        UNREAD: o.t.sRUdBw,
-        TODAY: o.t.F4jZQk,
-        YESTERDAY: o.t.gnv4pK,
-        OLDER: o.t.exrPZm
+        UNREAD: a.t.sRUdBw,
+        TODAY: a.t.F4jZQk,
+        YESTERDAY: a.t.gnv4pK,
+        OLDER: a.t.exrPZm
     },
     g = {
-        all: o.intl.string(o.t.iWyjNj),
-        bookmarks: o.intl.string(o.t['+rlGYW']),
-        announcements: o.intl.string(o.t.jR39HB),
-        mentions: o.intl.string(o.t['GRZF9/'])
+        all: a.intl.string(a.t.iWyjNj),
+        bookmarks: a.intl.string(a.t['+rlGYW']),
+        announcements: a.intl.string(a.t.jR39HB),
+        mentions: a.intl.string(a.t['GRZF9/'])
     };
 var E = (function (e) {
         return ((e.UNLOADED = 'unloaded'), (e.LOADED = 'loaded'), (e.LOADED_UNREAD = 'loadedUnread'), e);

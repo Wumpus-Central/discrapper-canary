@@ -1,9 +1,9 @@
 (n.d(t, { Z: () => v }), n(415506));
 var r,
     i = n(255367),
-    a = n(73800),
-    o = n(120356),
-    s = n.n(o),
+    o = n(73800),
+    a = n(120356),
+    s = n.n(a),
     l = n(481060),
     c = n(646288),
     u = n(388032),
@@ -87,7 +87,7 @@ let p = (e) => {
             children: u.intl.string(u.t.QQsaCQ)
         });
     };
-class O extends (r = a.PureComponent) {
+class O extends (r = o.PureComponent) {
     getState() {
         let { inLibrary: e, sku: t, hasEntitlementBranch: n } = this.props;
         if (n) return 5;
@@ -152,7 +152,7 @@ class O extends (r = a.PureComponent) {
                 t = (0, i.jsx)(y, {});
                 break;
             case 2:
-                t = (0, i.jsxs)(a.Fragment, {
+                t = (0, i.jsxs)(o.Fragment, {
                     children: [
                         (0, i.jsxs)('div', {
                             className: d.row,

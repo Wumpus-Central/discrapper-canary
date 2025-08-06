@@ -1,8 +1,8 @@
 n.d(t, { Z: () => G });
 var r,
     i = n(392711),
-    a = n.n(i),
-    o = n(442837),
+    o = n.n(i),
+    a = n(442837),
     s = n(570140),
     l = n(594174),
     c = n(981631);
@@ -54,9 +54,9 @@ function N(e) {
     ((y = !0), C(e));
 }
 function C(e) {
-    var t, n, r, i, a, o;
+    var t, n, r, i, o, a;
     let s = l.default.getCurrentUser();
-    if (null == s) return w();
+    if (null == s) return R();
     ((p = null != (t = e.section) ? t : p),
         (S = null != (n = e.section) ? n : p),
         null != e.subsection && null != p && (h[p] = e.subsection),
@@ -81,17 +81,17 @@ function C(e) {
         )),
         (v = null != (r = e.onClose) ? r : null),
         (I = null != (i = e.analyticsLocation) ? i : null),
-        (T = null != (a = e.analyticsLocations) ? a : []),
-        (A = null != (o = e.impressionSource) ? o : null));
+        (T = null != (o = e.analyticsLocations) ? o : []),
+        (A = null != (a = e.impressionSource) ? a : null));
 }
-function w() {
+function R() {
     ((f = c.QZA.CLOSED), (y = !1), (E = null), (S = null), (b = null), (_ = null), (p = null), (h = {}), (m = {}), (v = null), (I = null), (T = []), (A = null));
 }
-function R(e) {
+function P(e) {
     var t;
     ((_ = p), (p = e.section), (I = null), (T = null != (t = e.analyticsLocations) ? t : []), null != e.subsection && (h[p] = e.subsection));
 }
-function P(e) {
+function w(e) {
     let { forSection: t } = e;
     null != t ? delete h[t] : null != p && delete h[p];
 }
@@ -108,9 +108,9 @@ function L(e) {
 function x() {
     f = c.QZA.SUBMITTING;
 }
-function k() {
+function M() {
     let e = l.default.getCurrentUser();
-    (j(),
+    (k(),
         null != e &&
             (b = d(
                 {},
@@ -128,20 +128,20 @@ function k() {
                 })
             )));
 }
-function j() {
+function k() {
     ((f = c.QZA.OPEN), (g = {}));
 }
-function M(e) {
+function j(e) {
     var t;
     if (f !== c.QZA.SUBMITTING) return !1;
     ((f = c.QZA.OPEN), (p = c.oAB.ACCOUNT), (g = null != (t = e.errors) ? t : {}));
 }
-class U extends (r = o.ZP.Store) {
+class U extends (r = a.ZP.Store) {
     initialize() {
         this.waitFor(l.default);
     }
     hasChanges() {
-        return null != b && null != E && !!this.isOpen() && !a().isEqual(b, E);
+        return null != b && null != E && !!this.isOpen() && !o().isEqual(b, E);
     }
     isOpen() {
         return y;
@@ -185,14 +185,14 @@ u(U, 'displayName', 'UserSettingsModalStore');
 let G = new U(s.Z, {
     USER_SETTINGS_MODAL_OPEN: N,
     USER_SETTINGS_MODAL_INIT: C,
-    USER_SETTINGS_MODAL_CLOSE: w,
-    LOGOUT: w,
+    USER_SETTINGS_MODAL_CLOSE: R,
+    LOGOUT: R,
     USER_SETTINGS_MODAL_SUBMIT: x,
-    USER_SETTINGS_MODAL_SUBMIT_FAILURE: M,
-    USER_SETTINGS_MODAL_SET_SECTION: R,
-    USER_SETTINGS_MODAL_CLEAR_SUBSECTION: P,
+    USER_SETTINGS_MODAL_SUBMIT_FAILURE: j,
+    USER_SETTINGS_MODAL_SET_SECTION: P,
+    USER_SETTINGS_MODAL_CLEAR_SUBSECTION: w,
     USER_SETTINGS_MODAL_CLEAR_SCROLL_POSITION: D,
     USER_SETTINGS_MODAL_UPDATE_ACCOUNT: L,
-    USER_SETTINGS_MODAL_SUBMIT_COMPLETE: j,
-    USER_SETTINGS_MODAL_RESET: k
+    USER_SETTINGS_MODAL_SUBMIT_COMPLETE: k,
+    USER_SETTINGS_MODAL_RESET: M
 });

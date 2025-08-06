@@ -1,8 +1,8 @@
 (n.d(t, { Z: () => Z }), n(388685));
 var r = n(255367),
     i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(442837),
     l = n(846519),
     c = n(481060),
@@ -25,24 +25,24 @@ var r = n(255367),
     A = n(592125),
     N = n(158776),
     C = n(594174),
-    w = n(626135),
-    R = n(768581),
-    P = n(70956),
+    R = n(626135),
+    P = n(768581),
+    w = n(70956),
     D = n(823379),
     L = n(506071),
     x = n(226378),
-    k = n(981631),
-    j = n(701488),
-    M = n(388032),
+    M = n(981631),
+    k = n(701488),
+    j = n(388032),
     U = n(484608);
 function G(e) {
-    var t, n, a, l;
+    var t, n, o, l;
     let d,
-        { application: I, channelId: P, guildId: L } = e,
+        { application: I, channelId: w, guildId: L } = e,
         { analyticsLocations: G } = (0, g.ZP)(m.Z.ACTIVITY_INSTANCE_EMBED),
         Z = (0, u.O)(),
-        F = (0, s.e7)([A.Z], () => A.Z.getChannel(P), [P]),
-        V = (null == F || null == (t = F.isThread) ? void 0 : t.call(F)) ? (null == F ? void 0 : F.parent_id) : P,
+        F = (0, s.e7)([A.Z], () => A.Z.getChannel(w), [w]),
+        V = (null == F || null == (t = F.isThread) ? void 0 : t.call(F)) ? (null == F ? void 0 : F.parent_id) : w,
         H = (0, s.e7)([S.default], () => S.default.getId()),
         {
             embeddedActivity: Y,
@@ -66,7 +66,7 @@ function G(e) {
                     .filter(D.lm),
             [z]
         ),
-        $ = (0, s.e7)(
+        X = (0, s.e7)(
             [N.Z],
             () => {
                 if (null == z) return null;
@@ -78,29 +78,29 @@ function G(e) {
             },
             [I.id, z]
         ),
-        X = null == $ ? void 0 : $.details,
-        Q = i.useMemo(() => {
+        Q = null == X ? void 0 : X.details,
+        J = i.useMemo(() => {
             let e = new T.ZP(I);
-            return (null == e.embeddedActivityConfig && (e.embeddedActivityConfig = j.wT), e);
+            return (null == e.embeddedActivityConfig && (e.embeddedActivityConfig = k.wT), e);
         }, [I]),
-        J = (0, h.s5)({
+        $ = (0, h.s5)({
             userId: H,
-            channelId: P,
-            application: Q
+            channelId: w,
+            application: J
         }),
         ee = null == Y,
         et = (0, x.NL)({
             embeddedActivity: Y,
-            joinability: J,
+            joinability: $,
             currentEmbeddedActivity: W,
             channel: F
         }),
         en = i.useId(),
         er = null != K && K.isLaunching && K.componentId === en,
         ei = async () => {
-            (w.default.track(k.rMx.ACTIVITY_INSTANCE_EMBED_CLICKED, {
+            (R.default.track(M.rMx.ACTIVITY_INSTANCE_EMBED_CLICKED, {
                 application_id: I.id,
-                channel_id: P,
+                channel_id: w,
                 channel_type: null == F ? void 0 : F.type,
                 is_activity_start: ee,
                 cta: 'Play'
@@ -108,7 +108,7 @@ function G(e) {
                 ee
                     ? await (0, p.Z)({
                           targetApplicationId: I.id,
-                          channelId: P,
+                          channelId: w,
                           locationObject: Z.location,
                           analyticsLocations: G,
                           componentId: en,
@@ -116,33 +116,33 @@ function G(e) {
                       })
                     : await (0, _.Z)({
                           applicationId: Y.applicationId,
-                          activityChannelId: P,
+                          activityChannelId: w,
                           locationObject: Z.location,
                           analyticsLocations: G,
                           componentId: en
                       }));
         },
-        ea = et.disabled ? M.intl.string(M.t.JBnc7O) : M.intl.string(M.t.cX9uLS),
-        eo = (0, v.G)(Q, () => {
-            w.default.track(k.rMx.ACTIVITY_INSTANCE_EMBED_CLICKED, {
+        eo = et.disabled ? j.intl.string(j.t.JBnc7O) : j.intl.string(j.t.cX9uLS),
+        ea = (0, v.G)(J, () => {
+            R.default.track(M.rMx.ACTIVITY_INSTANCE_EMBED_CLICKED, {
                 application_id: I.id,
-                channel_id: P,
+                channel_id: w,
                 channel_type: null == F ? void 0 : F.type,
                 cta: 'View'
             });
         }),
-        es = R.ZP.getApplicationIconURL({
+        es = P.ZP.getApplicationIconURL({
             id: I.id,
             icon: I.icon,
             bot: I.bot
         });
-    et.disabled && (d = null != (a = et.tooltip) ? a : et.text);
+    et.disabled && (d = null != (o = et.tooltip) ? o : et.text);
     let el = q.length,
-        ec = null != (l = null == $ || null == (n = $.timestamps) ? void 0 : n.start) ? l : null == $ ? void 0 : $.created_at,
-        eu = (0, y.r)($),
+        ec = null != (l = null == X || null == (n = X.timestamps) ? void 0 : n.start) ? l : null == X ? void 0 : X.created_at,
+        eu = (0, y.r)(X),
         ed = [
             {
-                label: ee ? M.intl.string(M.t.RscU7O) : M.intl.string(M.t.VJlc0d),
+                label: ee ? j.intl.string(j.t.RscU7O) : j.intl.string(j.t.VJlc0d),
                 trackingArea: O.j_.PLAY,
                 onClick: ei,
                 disabledReason: d,
@@ -150,7 +150,7 @@ function G(e) {
             }
         ];
     return (0, r.jsx)(b.W, {
-        header: M.intl.string(M.t.pkq6Vl),
+        header: j.intl.string(j.t.pkq6Vl),
         title: I.name,
         iconSrc: es,
         info: (0, r.jsx)('div', {
@@ -159,11 +159,11 @@ function G(e) {
                 ? (0, r.jsx)(c.Text, {
                       variant: 'text-xs/medium',
                       color: 'none',
-                      children: ea
+                      children: eo
                   })
                 : (0, r.jsxs)(r.Fragment, {
                       children: [
-                          null != X &&
+                          null != Q &&
                               (0, r.jsxs)('div', {
                                   className: U.activityPresenceDetailsContainer,
                                   children: [
@@ -186,7 +186,7 @@ function G(e) {
                                               ]
                                           }),
                                       (0, r.jsxs)('div', {
-                                          className: o()(U.activityPresenceDetailsItemContainer, U.truncatesText),
+                                          className: a()(U.activityPresenceDetailsItemContainer, U.truncatesText),
                                           children: [
                                               (0, r.jsx)('div', {
                                                   children: (0, r.jsx)(c.hH0, {
@@ -198,7 +198,7 @@ function G(e) {
                                                   variant: 'text-xs/medium',
                                                   color: 'none',
                                                   lineClamp: 1,
-                                                  children: X
+                                                  children: Q
                                               })
                                           ]
                                       })
@@ -214,7 +214,7 @@ function G(e) {
                   })
         }),
         actions: ed,
-        onClickContent: eo,
+        onClickContent: ea,
         trackingConfig: {
             id: I.id,
             linkType: O.Un.ACTIVITY_INSTANCE
@@ -224,15 +224,15 @@ function G(e) {
 let B = i.memo((e) => {
     let { start: t } = e,
         [n, r] = i.useState(0),
-        a = (0, L.n)(),
-        o = (0, s.e7)([d.Z], () => d.Z.useReducedMotion),
-        c = !1 === a || o;
+        o = (0, L.n)(),
+        a = (0, s.e7)([d.Z], () => d.Z.useReducedMotion),
+        c = !1 === o || a;
     return (
         i.useEffect(() => {
             let e = new l.Xp();
             return (
-                e.start(c ? 15 * P.Z.Millis.SECOND : P.Z.Millis.SECOND, () => {
-                    r((new Date().getTime() - t) / P.Z.Millis.SECOND);
+                e.start(c ? 15 * w.Z.Millis.SECOND : w.Z.Millis.SECOND, () => {
+                    r((new Date().getTime() - t) / w.Z.Millis.SECOND);
                 }),
                 () => e.stop()
             );

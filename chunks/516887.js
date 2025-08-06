@@ -1,8 +1,8 @@
 n.d(t, { Z: () => h });
 var r = n(255367),
     i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(481060),
     l = n(826298),
     c = n(881046);
@@ -60,19 +60,19 @@ function _(e, t) {
 }
 function p(e) {
     var t;
-    let { className: n, channel: i, section: a } = e,
-        u = null != a ? (0, l.ky)(a) : null,
+    let { className: n, channel: i, section: o } = e,
+        u = null != o ? (0, l.ky)(o) : null,
         f =
             null != u
                 ? (0, r.jsx)(s.ua7, {
-                      text: null != (t = null == a ? void 0 : a.name) ? t : '',
+                      text: null != (t = null == o ? void 0 : o.name) ? t : '',
                       position: 'top',
                       children: (e) =>
                           (0, r.jsx)(
                               u,
                               _(d({}, e), {
                                   channel: i,
-                                  section: a,
+                                  section: o,
                                   width: 24,
                                   height: 24
                               })
@@ -80,7 +80,7 @@ function p(e) {
                   })
                 : null;
     return (0, r.jsx)('div', {
-        className: o()(n, c.wrapper),
+        className: a()(n, c.wrapper),
         children: (0, r.jsx)('div', {
             className: c.icon,
             children: f

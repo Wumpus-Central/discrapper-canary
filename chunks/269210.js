@@ -7,8 +7,8 @@
 var r = n(255367);
 n(73800);
 var i = n(120356),
-    a = n.n(i),
-    o = n(708816),
+    o = n.n(i),
+    a = n(708816),
     s = n(368072),
     l = n(777207),
     c = n(692547),
@@ -19,9 +19,9 @@ let _ = 48,
     p = 5;
 function h(e) {
     let { description: t, imgSrc: n, renderPurchaseButton: i, onPurchase: h, title: m, onDetails: g, benefitItems: E, benefitsSummary: b, subtitle: y, maxBenefits: O = p } = e;
-    return (0, r.jsx)(o.tE, {
+    return (0, r.jsx)(a.tE, {
         children: (0, r.jsxs)('div', {
-            className: a()(d.container, f.hoverCard),
+            className: o()(d.container, f.hoverCard),
             tabIndex: 0,
             onClick: () => {
                 null != g ? g() : null != h && h();

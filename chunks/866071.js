@@ -1,8 +1,8 @@
-n.d(t, { K: () => o });
+n.d(t, { K: () => a });
 var r = n(339085),
     i = n(176354),
-    a = n(185923);
-function o(e, t) {
+    o = n(185923);
+function a(e, t) {
     if (null == e.id) return !0;
     let n = r.ZP.getCustomEmojiById(e.id);
     return (
@@ -10,7 +10,7 @@ function o(e, t) {
         !i.ZP.isEmojiDisabled({
             emoji: n,
             channel: t,
-            intention: a.Hz.STATUS
+            intention: o.Hz.STATUS
         })
     );
 }

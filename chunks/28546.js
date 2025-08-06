@@ -9,8 +9,8 @@ n.d(t, {
     ql: () => E
 });
 var i = n(97613),
-    a = n.n(i),
-    o = n(296574),
+    o = n.n(i),
+    a = n(296574),
     s = n(362383),
     l = n(731965),
     c = n(182501),
@@ -23,13 +23,13 @@ let d = Object.freeze({
         isSearchSuggestion: !1,
         pickerId: (function () {
             let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 'uid_';
-            return a()(e);
+            return o()(e);
         })(),
         isNitroLockedSectionVisible: !1,
         areOnlyNitroLockedSectionsVisible: !1
     }),
     f = (0, s.F)()(
-        (0, o.tJ)((e, t) => d, {
+        (0, a.tJ)((e, t) => d, {
             name: 'expression-picker-last-active-view',
             partialize: (e) => ({ lastActiveView: e.lastActiveView })
         })

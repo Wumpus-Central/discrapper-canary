@@ -1,8 +1,8 @@
 (n.d(t, { X: () => D }), n(997841), n(388685));
 var r = n(255367),
     i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(954955),
     l = n.n(s),
     c = n(507274),
@@ -37,7 +37,7 @@ function C(e, t, n) {
         e
     );
 }
-function w(e) {
+function R(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -53,7 +53,7 @@ function w(e) {
     }
     return e;
 }
-function R(e, t) {
+function P(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -65,12 +65,12 @@ function R(e, t) {
     }
     return n;
 }
-function P(e, t) {
+function w(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : R(Object(t)).forEach(function (n) {
+            : P(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -78,7 +78,7 @@ function P(e, t) {
 }
 class D extends i.Component {
     render() {
-        let { type: e, message: t, className: n, children: i, useChatFontScaling: a, tabIndex: s = 0 } = this.props,
+        let { type: e, message: t, className: n, children: i, useChatFontScaling: o, tabIndex: s = 0 } = this.props,
             { isReactionPickerActive: l } = this.state,
             c = t.state === v.yb.SENDING,
             p = e === O.O.BURST;
@@ -87,7 +87,7 @@ class D extends i.Component {
             m = (0, y.I5)(h),
             g = p ? S.intl.string(S.t.Kfcszs) : S.intl.string(S.t.lfIHs7);
         !m && p && (g = (0, r.jsx)(_.X, { tooltipText: S.intl.string(S.t.Kfcszs) }));
-        let T = a ? N : A,
+        let T = o ? N : A,
             C = {
                 size: 'sm',
                 color: 'currentColor',
@@ -96,7 +96,7 @@ class D extends i.Component {
         return t.type === v.uaV.EMOJI_ADDED && 0 === t.reactions.length
             ? (0, r.jsx)(f.e, {
                   message: t,
-                  className: o()(T.reactionBtn, n)
+                  className: a()(T.reactionBtn, n)
               })
             : (0, r.jsx)(u.yRy, {
                   targetElementRef: this.ref,
@@ -105,7 +105,7 @@ class D extends i.Component {
                   renderPopout: this.renderReactionPopout,
                   position: 'right',
                   children: (e, t) => {
-                      let { isShown: a } = t;
+                      let { isShown: o } = t;
                       return (0, r.jsx)(u.DY3, {
                           text: g,
                           color: u.FGA.PRIMARY,
@@ -113,7 +113,7 @@ class D extends i.Component {
                           tooltipClassName: T.__invalid_addReactionTooltip,
                           children: (0, r.jsxs)(
                               u.P3F,
-                              P(w({}, e), {
+                              w(R({}, e), {
                                   innerRef: this.ref,
                                   tabIndex: s,
                                   onClick: (e) => {
@@ -121,8 +121,8 @@ class D extends i.Component {
                                   },
                                   onMouseEnter: () => (0, d.x)(I.qR.AddReactionPopoutMouseEntered),
                                   onFocus: () => (0, d.x)(I.qR.AddReactionPopoutFocused),
-                                  className: o()(T.reactionBtn, { [T.active]: a }, n),
-                                  children: [p ? (0, r.jsx)(u.Pt5, w({}, C)) : (0, r.jsx)(u.EO4, w({}, C)), i]
+                                  className: a()(T.reactionBtn, { [T.active]: o }, n),
+                                  children: [p ? (0, r.jsx)(u.Pt5, R({}, C)) : (0, r.jsx)(u.EO4, R({}, C)), i]
                               })
                           )
                       });
@@ -159,8 +159,8 @@ class D extends i.Component {
             }),
             C(this, 'renderReactionPopout', (e) => {
                 let { closePopout: t } = e,
-                    { type: n, channel: i, message: a } = this.props,
-                    o = w(
+                    { type: n, channel: i, message: o } = this.props,
+                    a = R(
                         { openPopoutType: 'message_reaction_emoji_picker' },
                         n === O.O.BURST && {
                             openPopoutType: 'message_super_reaction_emoji_picker',
@@ -176,8 +176,8 @@ class D extends i.Component {
                             let { emoji: n, willClose: r, isBurst: i } = e;
                             (this.onAddReaction(n, i), r && (i ? l()(t, 150)() : t()));
                         },
-                        analyticsOverride: o,
-                        messageId: a.id
+                        analyticsOverride: a,
+                        messageId: o.id
                     });
                 return (0, r.jsx)(c.M.Consumer, {
                     children: (e) => {

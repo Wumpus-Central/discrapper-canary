@@ -2,8 +2,8 @@
 var r = n(255367);
 n(73800);
 var i = n(120356),
-    a = n.n(i),
-    o = n(91192),
+    o = n.n(i),
+    a = n(91192),
     s = n(442837),
     l = n(481060),
     c = n(129861),
@@ -71,21 +71,21 @@ function b(e) {
         C = () => {
             null != I && I(n);
         },
-        w = () => {
+        R = () => {
             null != v && v(t.id);
         },
-        R = (0, o.JA)(String(t.id));
+        P = (0, a.JA)(String(t.id));
     return (0, r.jsx)(
         l.P3F,
         E(
             m(
                 {
                     id: 'user-row-'.concat(n),
-                    className: a()(p.friendWrapper, { [p.disabled]: y }),
-                    onClick: w,
+                    className: o()(p.friendWrapper, { [p.disabled]: y }),
+                    onClick: R,
                     onMouseEnter: C
                 },
-                R
+                P
             ),
             {
                 role: 'option',
@@ -95,7 +95,7 @@ function b(e) {
                 'aria-posinset': S,
                 children: (0, r.jsxs)(d.Z, {
                     align: d.Z.Align.CENTER,
-                    className: a()(p.friend, {
+                    className: o()(p.friend, {
                         [p.friendSelected]: g,
                         [p.twoRows]: !O
                     }),

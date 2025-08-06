@@ -1,8 +1,8 @@
 (n.d(t, { v: () => h }), n(388685), n(73800));
 var r = n(570140),
     i = n(668781),
-    a = n(673750),
-    o = n(300429),
+    o = n(673750),
+    a = n(300429),
     s = n(594174),
     l = n(626135),
     c = n(760729),
@@ -48,7 +48,7 @@ function p(e) {
         return;
     }
     if (null != h) {
-        if (null != h.getGuildId() && g && o.Z.getSlowmodeCooldownGuess(h.id) > 0)
+        if (null != h.getGuildId() && g && a.Z.getSlowmodeCooldownGuess(h.id) > 0)
             return void b({
                 valid: !1,
                 failureReason: d.zYc.SLOWMODE_COOLDOWN
@@ -71,7 +71,7 @@ function p(e) {
                     });
             }
     }
-    if (a.ZP.isFull()) {
+    if (o.ZP.isFull()) {
         (i.Z.show({
             title: f.intl.string(f.t['7Q4eo6']),
             body: f.intl.string(f.t.gi6XHh),
@@ -86,7 +86,7 @@ function p(e) {
     b({ valid: !0 });
 }
 function h(e) {
-    let { openWarningPopout: t, type: n, content: r, stickers: i, uploads: a, channel: o, restrictMentions: l = !0, respectCooldown: c = !0 } = e,
+    let { openWarningPopout: t, type: n, content: r, stickers: i, uploads: o, channel: a, restrictMentions: l = !0, respectCooldown: c = !0 } = e,
         d = u.ZP.canUseIncreasedMessageLength(s.default.getCurrentUser());
     return new Promise((e) =>
         p({
@@ -94,8 +94,8 @@ function h(e) {
             type: n,
             content: r,
             stickers: i,
-            uploads: a,
-            channel: o,
+            uploads: o,
+            channel: a,
             restrictMentions: l,
             respectCooldown: c,
             userCanUsePremiumMessageLength: d,

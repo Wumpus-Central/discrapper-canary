@@ -1,15 +1,15 @@
 n.d(t, {
     On: () => s,
     YD: () => r,
-    i$: () => o,
-    nO: () => a,
+    i$: () => a,
+    nO: () => o,
     u9: () => i
 });
 let r = [0],
     i = [0, 0],
-    a = {
+    o = {
         path: [0, 0],
         offset: 0
     },
-    o = /(\t|\s)/,
+    a = /(\t|\s)/,
     s = ['applicationCommandOption'];

@@ -1,7 +1,7 @@
 (n.d(t, { Z: () => s }), n(997841));
 var r = n(904245),
     i = n(667204);
-function a(e, t, n) {
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -14,7 +14,7 @@ function a(e, t, n) {
         e
     );
 }
-function o(e) {
+function a(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -25,15 +25,15 @@ function o(e) {
                 })
             )),
             r.forEach(function (t) {
-                a(e, t, n[t]);
+                o(e, t, n[t]);
             }));
     }
     return e;
 }
 function s(e, t, n) {
-    let a = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+    let o = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
     if ((r.Z.deleteMessage(e.id, t.id, !0), t.isCommandType())) {
-        null != t.interactionData && null != a.applicationId && (0, i.d)(t, e, a);
+        null != t.interactionData && null != o.applicationId && (0, i.d)(t, e, o);
         return;
     }
     let { content: s, tts: l, messageReference: c, flags: u, nonce: d } = t;
@@ -46,13 +46,13 @@ function s(e, t, n) {
             validNonShortcutEmojis: []
         },
         void 0,
-        o(
+        a(
             {
                 nonce: d,
                 flags: u,
                 messageReference: null != c ? c : void 0
             },
-            a
+            o
         )
     );
 }

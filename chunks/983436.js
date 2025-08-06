@@ -1,8 +1,8 @@
 n.d(t, { Z: () => h });
 var r = n(255367),
     i = n(73800),
-    a = n(287734),
-    o = n(475468),
+    o = n(287734),
+    a = n(475468),
     s = n(358555),
     l = n(955415),
     c = n(944486),
@@ -25,8 +25,8 @@ function h(e) {
                 guild_id: m,
                 channel_id: g
             }),
-                (0, o.K)(t.id, n.id),
-                a.default.selectVoiceChannel(n.id));
+                (0, a.K)(t.id, n.id),
+                o.default.selectVoiceChannel(n.id));
         }, [h, t, n, m, g]),
         b = (0, r.jsx)(l.Z.Channel, { channel: n });
     return (0, r.jsx)(l.Z, {

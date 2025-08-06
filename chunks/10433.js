@@ -1,8 +1,8 @@
 (n.d(t, { Z: () => E }), n(388685));
 var r = n(255367),
     i = n(73800),
-    a = n(873546),
-    o = n(399606),
+    o = n(873546),
+    a = n(399606),
     s = n(434650),
     l = n(230171),
     c = n(955415),
@@ -16,8 +16,8 @@ var r = n(255367),
     g = n(280306);
 function E(e) {
     let { code: t, message: n } = e,
-        [E, b, y] = (0, o.Wu)([p.Z], () => [p.Z.getApplication(t), p.Z.isInvalidApplication(t), p.Z.getApplicationFetchState(t)], [t]),
-        O = (0, o.e7)([d.Z], () => {
+        [E, b, y] = (0, a.Wu)([p.Z], () => [p.Z.getApplication(t), p.Z.isInvalidApplication(t), p.Z.getApplicationFetchState(t)], [t]),
+        O = (0, a.e7)([d.Z], () => {
             var e;
             return null != (e = d.Z.getGuildId()) ? e : void 0;
         }),
@@ -29,7 +29,7 @@ function E(e) {
         A = i.useCallback(() => {
             f.default.track(h.rMx.APP_DIRECTORY_PROFILE_EMBED_VIEWED, {
                 application_id: t,
-                device_platform: a.tq ? 'mobile_web' : 'desktop_web',
+                device_platform: o.tq ? 'mobile_web' : 'desktop_web',
                 sender_user_id: n.author.id,
                 guild_id: O,
                 channel_id: n.channel_id
@@ -45,7 +45,7 @@ function E(e) {
         v &&
             b &&
             f.default.track(h.rMx.APP_DIRECTORY_PROFILE_INVALID_EMBED_VIEWED, {
-                device_platform: a.tq ? 'mobile_web' : 'desktop_web',
+                device_platform: o.tq ? 'mobile_web' : 'desktop_web',
                 sender_user_id: n.author.id,
                 guild_id: O,
                 channel_id: n.channel_id

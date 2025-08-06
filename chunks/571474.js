@@ -1,8 +1,8 @@
 n.d(t, { Z: () => m });
 var r,
     i = n(442837),
-    a = n(570140),
-    o = n(70956),
+    o = n(570140),
+    a = n(70956),
     s = n(709054),
     l = n(314897),
     c = n(699516);
@@ -20,7 +20,7 @@ function u(e, t, n) {
     );
 }
 let d = 10,
-    f = 180 * o.Z.Millis.DAY,
+    f = 180 * a.Z.Millis.DAY,
     _ = !1;
 function p() {
     return _ !== (_ = c.Z.getFriendIDs().length >= d && s.default.extractTimestamp(l.default.getId()) < Date.now() - f);
@@ -34,4 +34,4 @@ class h extends (r = i.ZP.Store) {
     }
 }
 u(h, 'displayName', 'PremiumPromoStore');
-let m = new h(a.Z, { CONNECTION_OPEN: p });
+let m = new h(o.Z, { CONNECTION_OPEN: p });

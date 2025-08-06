@@ -53,14 +53,14 @@ e.exports = function (e) {
             className: 'variable',
             begin: /&[a-z\d_]*\b/
         },
-        a = {
+        o = {
             className: 'params',
             relevance: 0,
             begin: '<',
             end: '>',
             contains: [n, i]
         },
-        o = {
+        a = {
             scope: 'punctuation',
             relevance: 0,
             match: /\};|[;{}]/
@@ -100,13 +100,13 @@ e.exports = function (e) {
                 relevance: 0,
                 scope: 'attr'
             },
-            a,
+            o,
             e.C_LINE_COMMENT_MODE,
             e.C_BLOCK_COMMENT_MODE,
             n,
             t,
             r,
-            o,
+            a,
             {
                 begin: e.IDENT_RE + '::',
                 keywords: ''

@@ -1,7 +1,7 @@
 var r = n(880181),
     i = n(449285),
-    a = TypeError;
+    o = TypeError;
 e.exports = function (e) {
     if (r(e)) return e;
-    throw new a(i(e) + ' is not a function');
+    throw new o(i(e) + ' is not a function');
 };

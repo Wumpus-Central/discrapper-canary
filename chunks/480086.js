@@ -1,8 +1,8 @@
 (n.d(t, { u: () => g }), n(388685));
 var r = n(73800),
     i = n(442837),
-    a = n(481060),
-    o = n(835473),
+    o = n(481060),
+    a = n(835473),
     s = n(77498),
     l = n(626135),
     c = n(877481),
@@ -51,9 +51,9 @@ function g(e, t) {
     (0, r.useEffect)(() => {
         c.Z.isProtocolRegistered('steam').then(E);
     }, []);
-    let b = (0, o.q)(e),
+    let b = (0, a.q)(e),
         y = (0, i.e7)([s.Z], () => (null != b ? s.Z.getGameByName(b.name) : null)),
-        O = null != (n = (0, o.q)(null == y ? void 0 : y.id)) ? n : b,
+        O = null != (n = (0, a.q)(null == y ? void 0 : y.id)) ? n : b,
         v = (0, i.e7)([u.Z], () => (null != O ? u.Z.getGame(O.id) : null)),
         I = (0, r.useMemo)(() => {
             var e, t, n;
@@ -72,18 +72,18 @@ function g(e, t) {
                 return m({
                     url: i,
                     platform: 'battlenet',
-                    icon: a.DvD,
+                    icon: o.DvD,
                     labelKey: _.t['ZGax9/'],
                     applicationId: e,
                     applicationName: n.name,
                     location: t
                 });
-            let o = h[n.id];
-            return null != o && '' !== o
+            let a = h[n.id];
+            return null != a && '' !== a
                 ? m({
-                      url: o,
+                      url: a,
                       platform: 'riot',
-                      icon: a.mVV,
+                      icon: o.mVV,
                       labelKey: _.t['+KXANz'],
                       applicationId: e,
                       applicationName: n.name,
@@ -93,7 +93,7 @@ function g(e, t) {
                   ? m({
                         url: g ? 'steam://advertise/'.concat(r) : 'https://store.steampowered.com/app/'.concat(r),
                         platform: 'steam',
-                        icon: a.xCj,
+                        icon: o.xCj,
                         labelKey: _.t.OlubCw,
                         applicationId: e,
                         applicationName: n.name,

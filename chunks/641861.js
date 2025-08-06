@@ -2,8 +2,8 @@ n.d(t, { Z: () => v });
 var r = n(255367);
 n(73800);
 var i = n(120356),
-    a = n.n(i),
-    o = n(990547),
+    o = n.n(i),
+    a = n(990547),
     s = n(442837),
     l = n(680018),
     c = n(481060),
@@ -38,8 +38,8 @@ function v(e) {
         S = !l || (u && !h);
     return ((0, d.Z)(
         {
-            type: o.ImpressionTypes.PAGE,
-            name: o.ImpressionNames.RING_TO_GUILD_VC_BANNER_SHOWN,
+            type: a.ImpressionTypes.PAGE,
+            name: a.ImpressionNames.RING_TO_GUILD_VC_BANNER_SHOWN,
             properties: {
                 voice_channel_id: null == n ? void 0 : n.id,
                 voice_guild_id: null == n ? void 0 : n.guild_id
@@ -51,7 +51,7 @@ function v(e) {
     S)
         ? null
         : (0, r.jsxs)('div', {
-              className: a()(O.themed, O.chatHeaderBar),
+              className: o()(O.themed, O.chatHeaderBar),
               children: [
                   (0, r.jsxs)('div', {
                       className: O.chatHeaderBarInfo,
@@ -64,7 +64,7 @@ function v(e) {
                               children:
                                   null == T
                                       ? (0, r.jsx)('div', {
-                                            className: a()(O.guildIcon, O.guildIconWithoutImage),
+                                            className: o()(O.guildIcon, O.guildIconWithoutImage),
                                             children: (0, r.jsx)('div', {
                                                 className: O.guildAcronym,
                                                 children: null != v ? (0, m.gM)(v) : null
@@ -105,17 +105,17 @@ function v(e) {
 }
 function I(e) {
     let { channelId: t, recipientUserId: n, isUserRinging: i } = e,
-        a = i ? 'critical-secondary' : 'secondary',
-        o = i ? y.intl.string(y.t.ygslb2) : y.intl.string(y.t['3Hv9qa']),
+        o = i ? 'critical-secondary' : 'secondary',
+        a = i ? y.intl.string(y.t.ygslb2) : y.intl.string(y.t['3Hv9qa']),
         s = i
             ? () => u.Z.stopRinging(t, [n])
             : () => {
                   (u.Z.ring(t, [n], 'dm_banner'), (0, h.Kh)(t));
               };
     return (0, r.jsx)(l.z, {
-        variant: a,
+        variant: o,
         size: 'sm',
-        text: o,
+        text: a,
         iconPosition: 'start',
         icon: c.gj8,
         onClick: s

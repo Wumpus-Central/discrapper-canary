@@ -11,8 +11,8 @@
     n(865427));
 var r = n(830121),
     i = n(202131),
-    a = n(454585),
-    o = n(408433),
+    o = n(454585),
+    a = n(408433),
     s = n(960048),
     l = n(981631);
 function c(e, t, n) {
@@ -112,7 +112,7 @@ function g(e) {
 }
 function E(e, t, n) {
     var r;
-    let { toAST: a = !1, hideSimpleEmbedContent: o = !0, formatInline: s = !1, postProcessor: l, shouldFilterKeywords: c, contentMessage: u } = n,
+    let { toAST: o = !1, hideSimpleEmbedContent: a = !0, formatInline: s = !1, postProcessor: l, shouldFilterKeywords: c, contentMessage: u } = n,
         d = !1,
         f = (null != u ? u : t).content,
         _ = e(
@@ -126,7 +126,7 @@ function E(e, t, n) {
                 : f,
             !0,
             m(t, n),
-            (e, n) => (Array.isArray(e) || (e = [e]), o && (e = C(e, (null != u ? u : t).embeds)), s || (e = I(e, n)), (e = b(e)), t.embeds.length > 0 && (d = S(e, n)), s && (e = w(e)), null != l && (e = l(e, n)), e)
+            (e, n) => (Array.isArray(e) || (e = [e]), a && (e = C(e, (null != u ? u : t).embeds)), s || (e = I(e, n)), (e = b(e)), t.embeds.length > 0 && (d = S(e, n)), s && (e = R(e)), null != l && (e = l(e, n)), e)
         );
     return {
         hasSpoilerEmbeds: d,
@@ -143,7 +143,7 @@ function b(e) {
 }
 function y(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-    return E(t.formatInline ? a.Z.parseInlineReply : a.Z.parse, e, t);
+    return E(t.formatInline ? o.Z.parseInlineReply : o.Z.parse, e, t);
 }
 function O(e, t, n, r) {
     return e(
@@ -171,7 +171,7 @@ function O(e, t, n, r) {
     );
 }
 function v(e, t, n) {
-    return O(a.Z.parseAutoModerationSystemMessage, e, t, n);
+    return O(o.Z.parseAutoModerationSystemMessage, e, t, n);
 }
 function I(e, t) {
     return t ? T(e) : ('paragraph' === e[0].type && e[0].content instanceof Array && (e[0].content = T(e[0].content)), e);
@@ -205,15 +205,15 @@ function C(e, t) {
     if (1 !== e.length || 1 !== t.length) return e;
     let n = e[0],
         r = t[0];
-    return ('link' === n.type || 'attachmentLink' === n.type) && p.has(r.type) && (0, o.dY)(r) ? [] : e;
+    return ('link' === n.type || 'attachmentLink' === n.type) && p.has(r.type) && (0, a.dY)(r) ? [] : e;
 }
-function w(e) {
+function R(e) {
     return (
         e.forEach((e) => {
             h.has(e.type) &&
                 null != e.content &&
                 (Array.isArray(e.content)
-                    ? w(e.content)
+                    ? R(e.content)
                     : 'string' == typeof e.content
                       ? (e.content = e.content.replace(/\n/g, ' '))
                       : s.Z.captureMessage(

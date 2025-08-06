@@ -1,5 +1,5 @@
 n.d(t, {
-    L: () => a,
+    L: () => o,
     n: () => i
 });
 let r = (0, n(818083).B)({
@@ -32,6 +32,6 @@ let r = (0, n(818083).B)({
 function i() {
     return r.getCurrentConfig({ location: 'shouldLogConnectSkipped' }).logSkipped;
 }
-function a() {
+function o() {
     return r.getCurrentConfig({ location: 'shouldLogPostConnectSkipped' }).logPostSkipped;
 }

@@ -1,11 +1,11 @@
-n.d(t, { Z: () => a });
+n.d(t, { Z: () => o });
 var r = n(607070),
     i = n(981631);
-function a(e, t, n) {
-    var a, o, s, l, c, u, d, f;
+function o(e, t, n) {
+    var o, a, s, l, c, u, d, f;
     let _ = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
     return {
-        key: null != (o = null != (a = t.key) ? a : _) ? o : 'modal',
+        key: null != (a = null != (o = t.key) ? o : _) ? a : 'modal',
         modal: e,
         animation: null != (s = t.animation) ? s : r.Z.useReducedMotion ? i.fMv.FADE : i.fMv.SLIDE_UP,
         shouldPersistUnderModals: null != (l = t.shouldPersistUnderModals) && l,

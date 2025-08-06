@@ -1,8 +1,8 @@
 n.d(t, { Z: () => O });
 var r = n(255367),
     i = n(73800),
-    a = n(688619),
-    o = n.n(a),
+    o = n(688619),
+    a = n.n(o),
     s = n(120356),
     l = n.n(s),
     c = n(522942),
@@ -18,7 +18,7 @@ var r = n(255367),
     b = n(482695);
 let y = 3,
     O = i.memo(function (e) {
-        let { userName: t, displayNameStyles: n, effectDisplayType: a = m.F.STATIC, inProfile: s = !1, textClassName: O, loop: I = !1 } = e,
+        let { userName: t, displayNameStyles: n, effectDisplayType: o = m.F.STATIC, inProfile: s = !1, textClassName: O, loop: I = !1 } = e,
             T = (0, E.j)({
                 displayNameStyles: n,
                 inProfile: s
@@ -33,25 +33,25 @@ let y = 3,
                 desaturateUserColors: f.Z.desaturateUserColors
             })),
             { includeNonProfile: C } = p.f.useExperiment({ location: 'useDisplayNameStylesFont' }),
-            w = (0, h.Y)({ location: 'UserNameWithEffects' }),
-            R = (0, d.dQu)(d.TVs.colors.BACKGROUND_BASE_LOW).hex(),
-            P = i.useMemo(
+            R = (0, h.Y)({ location: 'UserNameWithEffects' }),
+            P = (0, d.dQu)(d.TVs.colors.BACKGROUND_BASE_LOW).hex(),
+            w = i.useMemo(
                 () =>
-                    null != n && w
+                    null != n && R
                         ? n.colors.map((e) => {
-                              let t = o()(e);
-                              return (N && (t = t.desaturate(1 - A)), (0, _.aP)(t.hex(), n.effectId === c.m.TOON ? '#333' : R, y));
+                              let t = a()(e);
+                              return (N && (t = t.desaturate(1 - A)), (0, _.aP)(t.hex(), n.effectId === c.m.TOON ? '#333' : P, y));
                           })
                         : [],
-                [n, w, N, A, R]
+                [n, R, N, A, P]
             );
-        if (!w || (!s && !C) || null == n) return t;
-        let D = (0, g.K)(n.effectId, P),
+        if (!R || (!s && !C) || null == n) return t;
+        let D = (0, g.K)(n.effectId, w),
             L = v(n.effectId);
         return (0, r.jsx)('div', {
             className: l()(b.container, L, T, O, {
-                [b.showEffect]: a !== m.F.PLAIN,
-                [b.animated]: a === m.F.ANIMATED && !S,
+                [b.showEffect]: o !== m.F.PLAIN,
+                [b.animated]: o === m.F.ANIMATED && !S,
                 [b.loop]: I
             }),
             style: D,

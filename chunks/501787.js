@@ -1,16 +1,16 @@
 n.d(t, {
     $J: () => r,
     At: () => s,
-    F$: () => o,
+    F$: () => a,
     Og: () => l,
-    mo: () => a,
+    mo: () => o,
     vZ: () => i,
     yC: () => c
 });
 let r = 'DISCORD_OutOfProcessOverlay',
     i = 192,
-    a = 120,
-    o = 4,
+    o = 120,
+    a = 4,
     s = 8,
     l = -1,
     c = 25;

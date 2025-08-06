@@ -1,7 +1,7 @@
 var r = n(154028),
     i = n(77025),
-    a = n(436207),
-    o = n(568033),
+    o = n(436207),
+    a = n(568033),
     s = n(769827),
     l = n(190289),
     c = n(316096),
@@ -24,11 +24,11 @@ e.exports = function (e, t, n, m) {
             T = t(function (e, t) {
                 var n = d(m ? t : e, void 0),
                     r = m ? new O(e) : new O();
-                return (void 0 !== n && a(r, 'message', n), _(r, T, r.stack, 2), this && o(v, this) && u(r, this, T), arguments.length > E && f(r, arguments[E]), r);
+                return (void 0 !== n && o(r, 'message', n), _(r, T, r.stack, 2), this && a(v, this) && u(r, this, T), arguments.length > E && f(r, arguments[E]), r);
             });
         if (((T.prototype = v), 'Error' !== y ? (s ? s(T, I) : l(T, I, { name: !0 })) : p && g in O && (c(T, O, g), c(T, O, 'prepareStackTrace')), l(T, O), !h))
             try {
-                (v.name !== y && a(v, 'name', y), (v.constructor = T));
+                (v.name !== y && o(v, 'name', y), (v.constructor = T));
             } catch (e) {}
         return T;
     }

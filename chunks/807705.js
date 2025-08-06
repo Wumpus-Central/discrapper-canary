@@ -1,17 +1,17 @@
-n.d(t, { Z: () => a });
+n.d(t, { Z: () => o });
 var r = n(73800),
     i = n(990169);
-function a(e, t) {
+function o(e, t) {
     let n = (0, r.useRef)(!1),
-        a = (0, r.useRef)(e);
+        o = (0, r.useRef)(e);
     ((0, r.useEffect)(() => {
-        ((n.current = e !== a.current), (a.current = e));
+        ((n.current = e !== o.current), (o.current = e));
     }, [e]),
         (0, r.useEffect)(() => {
             let e = setTimeout(() => (n.current = !1), t);
             return () => clearTimeout(e);
         }, [e, t]));
-    let o = e !== (0, i.Z)(a),
+    let a = e !== (0, i.Z)(o),
         s = (0, i.Z)(n);
-    return o || s;
+    return a || s;
 }

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => d });
+n.d(t, { Z: () => u });
 var r = n(255367);
 n(73800);
 var i = n(481060),
@@ -7,16 +7,16 @@ var i = n(481060),
     s = n(346479),
     o = n(723170),
     c = n(124368);
-function d(e) {
-    let { channel: t, closePopout: n, onSelect: d, navId: u, label: h } = e,
+function u(e) {
+    let { channel: t, closePopout: n, onSelect: u, navId: d, label: h } = e,
         p = (0, l.Z)(t, 'Notifications Bell'),
         f = (0, a.Z)(t),
         g = (0, o.B)(t);
     return (0, r.jsxs)(i.v2r, {
-        navId: u,
+        navId: d,
         onClose: n,
         'aria-label': h,
-        onSelect: d,
+        onSelect: u,
         children: [
             (0, r.jsxs)(i.kSQ, {
                 children: [t.isForumPost() ? p : null, f]

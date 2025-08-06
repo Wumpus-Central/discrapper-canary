@@ -1,8 +1,8 @@
 (n.d(t, { Z: () => p }), n(539854), n(388685));
 var r = n(73800),
     i = n(442837),
-    a = n(417438),
-    o = n(360787),
+    o = n(417438),
+    a = n(360787),
     s = n(158776);
 let l = [],
     c = [],
@@ -22,14 +22,14 @@ function f(e, t) {
     return (
         e.forEach((e) => {
             var r, i;
-            let a = null == (r = e.application) ? void 0 : r.id,
-                o = null == (i = e.activity) ? void 0 : i.party_id;
-            if (e.id in t || null == a || null == o) return;
+            let o = null == (r = e.application) ? void 0 : r.id,
+                a = null == (i = e.activity) ? void 0 : i.party_id;
+            if (e.id in t || null == o || null == a) return;
             let s = e.timestamp.getTime(),
                 l = {
                     userId: e.author.id,
-                    applicationId: a,
-                    partyId: o,
+                    applicationId: o,
+                    partyId: a,
                     messageId: e.id,
                     channelId: e.channel_id,
                     inviteTime: s
@@ -40,8 +40,8 @@ function f(e, t) {
     );
 }
 function _(e, t) {
-    let [n, a] = r.useMemo(() => d(e, t), [e, t]),
-        o = (0, i.Wu)(
+    let [n, o] = r.useMemo(() => d(e, t), [e, t]),
+        a = (0, i.Wu)(
             [s.Z],
             () => {
                 let e = [];
@@ -63,13 +63,13 @@ function _(e, t) {
             },
             [n]
         );
-    return [a, r.useMemo(() => f(n, o), [n, o])];
+    return [o, r.useMemo(() => f(n, a), [n, a])];
 }
 function p(e, t) {
     let [n, i] = _(e, t);
     return (
         r.useEffect(() => {
-            for (let e of i) o.Z.isSubscribed(e) || (0, a.L)(e);
+            for (let e of i) a.Z.isSubscribed(e) || (0, o.L)(e);
         }, [i]),
         [n, i]
     );

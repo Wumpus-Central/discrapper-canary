@@ -1,7 +1,7 @@
 var r = n(621796),
     i = n(172367),
-    a = n(148727),
-    o = n(467159),
+    o = n(148727),
+    a = n(467159),
     s = null;
 e.exports = {
     cut: function (e) {
@@ -17,7 +17,7 @@ e.exports = {
                 l = n.set('focusKey', d).set('focusOffset', 0);
             } else l = n.set('focusOffset', u);
         } else l = n;
-        s = a(t, (l = o(l)));
+        s = o(t, (l = a(l)));
         var f = r.removeRange(t, l, 'forward');
         return f === t ? e : i.push(e, f, 'remove-range');
     },

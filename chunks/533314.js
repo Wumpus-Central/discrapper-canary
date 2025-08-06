@@ -64,13 +64,13 @@ e.exports = function (e) {
             ]
         };
     n.contains = [r, i];
-    let a = ['Comparable', 'DateTime', 'Duration', 'Function', 'Iterable', 'Iterator', 'List', 'Map', 'Match', 'Object', 'Pattern', 'RegExp', 'Set', 'Stopwatch', 'String', 'StringBuffer', 'StringSink', 'Symbol', 'Type', 'Uri', 'bool', 'double', 'int', 'num', 'Element', 'ElementList'],
-        o = a.map((e) => `${e}?`);
+    let o = ['Comparable', 'DateTime', 'Duration', 'Function', 'Iterable', 'Iterator', 'List', 'Map', 'Match', 'Object', 'Pattern', 'RegExp', 'Set', 'Stopwatch', 'String', 'StringBuffer', 'StringSink', 'Symbol', 'Type', 'Uri', 'bool', 'double', 'int', 'num', 'Element', 'ElementList'],
+        a = o.map((e) => `${e}?`);
     return {
         name: 'Dart',
         keywords: {
             keyword: ['abstract', 'as', 'assert', 'async', 'await', 'base', 'break', 'case', 'catch', 'class', 'const', 'continue', 'covariant', 'default', 'deferred', 'do', 'dynamic', 'else', 'enum', 'export', 'extends', 'extension', 'external', 'factory', 'false', 'final', 'finally', 'for', 'Function', 'get', 'hide', 'if', 'implements', 'import', 'in', 'interface', 'is', 'late', 'library', 'mixin', 'new', 'null', 'on', 'operator', 'part', 'required', 'rethrow', 'return', 'sealed', 'set', 'show', 'static', 'super', 'switch', 'sync', 'this', 'throw', 'true', 'try', 'typedef', 'var', 'void', 'when', 'while', 'with', 'yield'],
-            built_in: a.concat(o).concat(['Never', 'Null', 'dynamic', 'print', 'document', 'querySelector', 'querySelectorAll', 'window']),
+            built_in: o.concat(a).concat(['Never', 'Null', 'dynamic', 'print', 'document', 'querySelector', 'querySelectorAll', 'window']),
             $pattern: /[A-Za-z][A-Za-z0-9_]*\??/
         },
         contains: [

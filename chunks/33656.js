@@ -36,7 +36,7 @@ function j() {
         }
     }, [s, t, e]);
     let j = g.M0.reduce((e, t) => e || !!n[t], !1),
-        C = {
+        E = {
             [g.$Z.COMMUNICATION]: h.s6.NOTIFICATIONS_EMAILS_COMMUNICATION,
             [g.$Z.SOCIAL]: h.s6.NOTIFICATIONS_EMAILS_SOCIAL,
             [g.$Z.UPDATES_AND_ANNOUNCEMENTS]: h.s6.NOTIFICATIONS_EMAILS_ANNOUNCEMENTS_AND_UPDATES,
@@ -55,7 +55,7 @@ function j() {
                       children: [
                           g.Od.map((e) => {
                               let { category: t, label: r, subLabel: s } = e,
-                                  a = C[t],
+                                  a = E[t],
                                   l = (0, i.jsx)(
                                       _,
                                       {

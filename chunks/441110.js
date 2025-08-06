@@ -2,8 +2,8 @@ n.d(t, { Z: () => h });
 var r = n(255367);
 n(73800);
 var i = n(481060),
-    a = n(493773),
-    o = n(367907),
+    o = n(493773),
+    a = n(367907),
     s = n(524444),
     l = n(297047),
     c = n(592125),
@@ -16,7 +16,7 @@ let h = function (e) {
     let { guild: t, message: n, onClose: h } = e,
         m = c.Z.getChannel(u.Z.getChannelId(t.id));
     if (
-        ((0, a.ZP)(() => {
+        ((0, o.ZP)(() => {
             d.default.track(f.rMx.OPEN_POPOUT, {
                 type: 'New Member Badge Popout',
                 guild_id: t.id,
@@ -27,7 +27,7 @@ let h = function (e) {
     )
         return null;
     let g = () => {
-        (o.ZP.trackWithMetadata(f.rMx.NEW_MEMBER_MENTION_CTA_CLICKED, { target_user_id: n.author.id }), h(), (0, l.q)(n.author, m.id));
+        (a.ZP.trackWithMetadata(f.rMx.NEW_MEMBER_MENTION_CTA_CLICKED, { target_user_id: n.author.id }), h(), (0, l.q)(n.author, m.id));
     };
     return (0, r.jsx)(s.W_, {
         className: p.messagePopoutContent,

@@ -5,8 +5,8 @@
     n(953529));
 var r = n(255367),
     i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(755721),
     l = n(481060),
     c = n(686546),
@@ -19,22 +19,22 @@ let h = 24,
     m = 16,
     g = (e) => {
         var t;
-        let { speaker: n, guildId: i, isEmbed: a } = e,
-            o = new d.Z(n.user);
+        let { speaker: n, guildId: i, isEmbed: o } = e,
+            a = new d.Z(n.user);
         return (0, r.jsxs)('div', {
             className: p.speaker,
             children: [
                 (0, r.jsx)(l.qEK, {
-                    src: o.getAvatarURL(i, a ? 16 : 24),
-                    size: a ? l.EFr.SIZE_16 : l.EFr.SIZE_24,
+                    src: a.getAvatarURL(i, o ? 16 : 24),
+                    size: o ? l.EFr.SIZE_16 : l.EFr.SIZE_24,
                     'aria-label': ''.concat(n.nick, '-avatar'),
-                    className: a ? null : p.avatar
+                    className: o ? null : p.avatar
                 }),
                 (0, r.jsx)(l.Text, {
-                    variant: a ? 'text-xs/normal' : 'text-sm/normal',
+                    variant: o ? 'text-xs/normal' : 'text-sm/normal',
                     color: 'text-secondary',
                     className: p.username,
-                    children: null != (t = n.nick) ? t : o.username
+                    children: null != (t = n.nick) ? t : a.username
                 })
             ]
         });
@@ -43,7 +43,7 @@ let h = 24,
         let { guild: t, onlineCount: n } = e;
         if (null == t) return null;
         let i = f.Qs(t),
-            { name: a, description: o } = i;
+            { name: o, description: a } = i;
         return (0, r.jsxs)('div', {
             children: [
                 (0, r.jsx)(l.X6q, {
@@ -70,7 +70,7 @@ let h = 24,
                             children: [
                                 (0, r.jsx)(l.X6q, {
                                     variant: 'heading-sm/semibold',
-                                    children: a
+                                    children: o
                                 }),
                                 (0, r.jsxs)('div', {
                                     className: p.speaker,
@@ -88,21 +88,21 @@ let h = 24,
                         })
                     ]
                 }),
-                null != o &&
-                    '' !== o &&
+                null != a &&
+                    '' !== a &&
                     (0, r.jsx)(l.Text, {
                         color: 'header-secondary',
                         className: p.alignStart,
                         variant: 'text-sm/normal',
-                        children: o
+                        children: a
                     })
             ]
         });
     },
     b = (e) => {
         var t;
-        let { stageInstance: n, guild: a, isCard: d = !1, isEmbed: E = !1, onClick: b } = e,
-            y = i.useMemo(() => (null == a ? null : f.lM(a) ? a : f.Qs(a)), [a]);
+        let { stageInstance: n, guild: o, isCard: d = !1, isEmbed: E = !1, onClick: b } = e,
+            y = i.useMemo(() => (null == o ? null : f.lM(o) ? o : f.Qs(o)), [o]);
         if (null == n || null == y) return null;
         let { topic: O, speaker_count: v, participant_count: I } = n,
             T = null != (t = n.members) ? t : [],
@@ -127,7 +127,7 @@ let h = 24,
                                     }),
                                     (0, r.jsx)(l.X6q, {
                                         variant: 'eyebrow',
-                                        className: o()(p.__invalid_label, p.live),
+                                        className: a()(p.__invalid_label, p.live),
                                         children: _.intl.string(_.t['X2K3//'])
                                     })
                                 ]
@@ -143,7 +143,7 @@ let h = 24,
                                         className: p.listeners
                                     }),
                                     (0, r.jsx)(l.X6q, {
-                                        className: o()(p.__invalid_label, p.listeners),
+                                        className: a()(p.__invalid_label, p.listeners),
                                         variant: 'heading-sm/semibold',
                                         children: I
                                     })
@@ -153,7 +153,7 @@ let h = 24,
                     }),
                     E &&
                         (0, r.jsxs)('div', {
-                            className: o()(p.guild, { [p.embed]: E }),
+                            className: a()(p.guild, { [p.embed]: E }),
                             children: [
                                 (0, r.jsx)(c.ZP, {
                                     mask: c.ZP.Masks.SQUIRCLE,
@@ -175,11 +175,11 @@ let h = 24,
                         }),
                     (0, r.jsx)(l.X6q, {
                         variant: d || E ? 'heading-md/semibold' : 'heading-lg/semibold',
-                        className: o()(p.header, { [p.embed]: E }),
+                        className: a()(p.header, { [p.embed]: E }),
                         children: O
                     }),
                     (0, r.jsxs)('div', {
-                        className: o()(p.members, { [p.embed]: E }),
+                        className: a()(p.members, { [p.embed]: E }),
                         children: [
                             S.length > 0 &&
                                 (0, r.jsxs)('div', {
@@ -201,7 +201,7 @@ let h = 24,
                                                   className: p.speaker,
                                                   children: [
                                                       (0, r.jsx)('div', {
-                                                          className: o()(p.icon, { [p.embed]: E }),
+                                                          className: a()(p.icon, { [p.embed]: E }),
                                                           children: (0, r.jsx)(l.S6n, {
                                                               size: 'custom',
                                                               color: 'currentColor',

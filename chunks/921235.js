@@ -1,8 +1,8 @@
 (n.d(t, { Z: () => T }), n(388685), n(583741));
 var r = n(255367),
     i = n(73800),
-    a = n(392711),
-    o = n.n(a),
+    o = n(392711),
+    a = n.n(o),
     s = n(442837),
     l = n(481060),
     c = n(904245),
@@ -23,22 +23,22 @@ let v = '847199849233514549',
 function T(e) {
     var t;
     let { channel: n } = e,
-        [a, T] = i.useState('');
+        [o, T] = i.useState('');
     i.useEffect(() => {
         (0, u.FQ)(v, !0);
     }, []);
     let S = (0, s.e7)(
             [p.Z, _.default],
             () =>
-                !!o()(p.Z.getMessages(n.id).toArray())
+                !!a()(p.Z.getMessages(n.id).toArray())
                     .reverse()
                     .find((e) => e.author.id !== _.default.getId() && e.state === b.yb.SENT && !(0, E.Z)(e))
         ),
         A = (0, s.e7)([h.default], () => h.default.getUser(n.isPrivate() ? n.getRecipientId() : null)),
         N = null != (t = g.ZP.useName(A)) ? t : y.intl.string(y.t.y1Wu2d),
         C = (0, s.e7)([d.Z], () => d.Z.getStickerById(I)),
-        w = i.useCallback(async () => {
-            if (null == a || '' === a)
+        R = i.useCallback(async () => {
+            if (null == o || '' === o)
                 try {
                     (await c.Z.sendGreetMessage(n.id, I),
                         m.default.track(b.rMx.DM_EMPTY_ACTION, {
@@ -50,15 +50,15 @@ function T(e) {
                 } catch (e) {
                     e.ok || 429 !== e.status || T(y.intl.string(y.t['Whhv4+']));
                 }
-        }, [n.id, n.type, a]),
-        R = y.intl.formatToPlainString(y.t.m0zYbW, { username: N }),
-        P =
-            null != a && '' !== a
+        }, [n.id, n.type, o]),
+        P = y.intl.formatToPlainString(y.t.m0zYbW, { username: N }),
+        w =
+            null != o && '' !== o
                 ? (0, r.jsx)(l.Text, {
                       className: O.error,
                       color: 'text-danger',
                       variant: 'text-sm/normal',
-                      children: a
+                      children: o
                   })
                 : null;
     return S
@@ -66,9 +66,9 @@ function T(e) {
               className: O.containerCompact,
               children: [
                   (0, r.jsxs)(l.P3F, {
-                      className: null != a && '' !== a ? O.compactButtonDisabled : O.compactButton,
+                      className: null != o && '' !== o ? O.compactButtonDisabled : O.compactButton,
                       'aria-label': y.intl.string(y.t.pJObYG),
-                      onClick: w,
+                      onClick: R,
                       children: [
                           (0, r.jsx)(f.Z, {
                               sticker: C,
@@ -77,11 +77,11 @@ function T(e) {
                           (0, r.jsx)(l.Text, {
                               className: O.text,
                               variant: 'text-md/medium',
-                              children: R
+                              children: P
                           })
                       ]
                   }),
-                  P
+                  w
               ]
           })
         : (0, r.jsxs)('div', {
@@ -96,11 +96,11 @@ function T(e) {
                       fullWidth: !0,
                       variant: 'primary',
                       size: 'md',
-                      onClick: w,
-                      disabled: !!a,
-                      text: R
+                      onClick: R,
+                      disabled: !!o,
+                      text: P
                   }),
-                  P
+                  w
               ]
           });
 }

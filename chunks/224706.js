@@ -1,8 +1,8 @@
-(n.d(t, { Z: () => M }), n(388685), n(35282), n(415506));
+(n.d(t, { Z: () => j }), n(388685), n(35282), n(415506));
 var r = n(664751),
     i = n(990547),
-    a = n(243814),
-    o = n(544891),
+    o = n(243814),
+    a = n(544891),
     s = n(283693),
     l = n(570140),
     c = n(638880),
@@ -25,17 +25,17 @@ var r = n(664751),
     A = n(58642),
     N = n(254854),
     C = n(981631),
-    w = n(701488),
-    R = n(388032);
-let P = 3,
+    R = n(701488),
+    P = n(388032);
+let w = 3,
     D = 20;
 function L(e) {
-    let { applicationId: t, secret: n, channelId: r, intent: i = w.Ws.PLAY, embedded: a = !1, source: o, locationObject: s, analyticsLocations: c } = e;
-    j({
+    let { applicationId: t, secret: n, channelId: r, intent: i = R.Ws.PLAY, embedded: o = !1, source: a, locationObject: s, analyticsLocations: c } = e;
+    k({
         applicationId: t,
         channelId: r,
-        embedded: a,
-        source: o,
+        embedded: o,
+        source: a,
         locationObject: s,
         analyticsLocations: c
     })
@@ -46,7 +46,7 @@ function L(e) {
                 applicationId: t,
                 secret: n,
                 intent: i,
-                embedded: a
+                embedded: o
             });
         })
         .catch(() =>
@@ -64,14 +64,14 @@ function x(e, t) {
               sku: t
           };
 }
-function k(e) {
-    return o.tn
+function M(e) {
+    return a.tn
         .post({
             url: C.ANM.OAUTH2_AUTHORIZE,
             query: {
                 client_id: e,
                 response_type: 'token',
-                scope: [a.x.IDENTIFY].join(' ')
+                scope: [o.x.IDENTIFY].join(' ')
             },
             retries: 3,
             body: { authorize: !0 },
@@ -95,8 +95,8 @@ function k(e) {
             }
         );
 }
-async function j(e) {
-    let { applicationId: t, branchId: n, channelId: r, embedded: i = !1, source: a, locationObject: o = {}, analyticsLocations: s = [] } = e;
+async function k(e) {
+    let { applicationId: t, branchId: n, channelId: r, embedded: i = !1, source: o, locationObject: a = {}, analyticsLocations: s = [] } = e;
     if (i) {
         let e = u.Z.getApplication(t);
         return null != e && (0, _.g)(e)
@@ -104,8 +104,8 @@ async function j(e) {
             : (await (0, c.Z)({
                     applicationId: t,
                     activityChannelId: null != r ? r : void 0,
-                    source: a,
-                    locationObject: o,
+                    source: o,
+                    locationObject: a,
                     analyticsLocations: s
                 }))
               ? 0
@@ -123,7 +123,7 @@ async function j(e) {
         if (null == e) throw Error('Missing dispatch game when launching');
         let i = E.Z.getLibraryApplication(t, n);
         if (null == i) throw Error('Missing library application when launching');
-        d = k(t).then((t) => v.Z.launchDispatchApplication(e, t, h.default.locale, i.getBranchName(), r));
+        d = M(t).then((t) => v.Z.launchDispatchApplication(e, t, h.default.locale, i.getBranchName(), r));
     } else {
         let e = u.Z.getApplication(t);
         d = null != e ? v.Z.launch(e) : v.Z.launchGame(t);
@@ -148,7 +148,7 @@ async function j(e) {
                   });
               })
               .catch((e) => {
-                  (N.Z.show(C.kVF.LAUNCH_GAME_FAILURE, R.intl.string(R.t.YZEBdn)),
+                  (N.Z.show(C.kVF.LAUNCH_GAME_FAILURE, P.intl.string(P.t.YZEBdn)),
                       l.Z.dispatch({
                           type: 'GAME_LAUNCH_FAIL',
                           applicationId: t,
@@ -162,7 +162,7 @@ async function j(e) {
           }),
           Promise.reject(p));
 }
-let M = {
+let j = {
     addGame(e, t) {
         (l.Z.dispatch({
             type: 'RUNNING_GAME_ADD_OVERRIDE',
@@ -178,8 +178,8 @@ let M = {
                 let r = e.getFlags(),
                     i = O.yE(r, C.eHb.OVERLAY_DISABLED);
                 t && i !== t && (r = O.x9(r, C.eHb.OVERLAY_DISABLED));
-                let a = O.yE(r, C.eHb.OVERLAY_V3_DISABLED);
-                (null != n && n !== a && (r = O.x9(r, C.eHb.OVERLAY_V3_DISABLED)), A.h(e.id, e.branchId, r));
+                let o = O.yE(r, C.eHb.OVERLAY_V3_DISABLED);
+                (null != n && n !== o && (r = O.x9(r, C.eHb.OVERLAY_V3_DISABLED)), A.h(e.id, e.branchId, r));
                 return;
             }
         }
@@ -232,7 +232,7 @@ let M = {
         });
         let r = async (e) => {
             try {
-                let t = await o.tn.get({
+                let t = await a.tn.get({
                     url: C.ANM.APPLICATIONS_GAMES_SUPPLEMENTAL,
                     query: { application_ids: e },
                     rejectWithError: !0
@@ -298,20 +298,20 @@ let M = {
         });
     },
     reportUnverifiedGame(e) {
-        let { name: t, iconHash: n, publisher: r, distributor: i, sku: a, executableName: s } = e,
+        let { name: t, iconHash: n, publisher: r, distributor: i, sku: o, executableName: s } = e,
             c = (0, d.F)(s);
         null != c &&
-            o.tn
+            a.tn
                 .post({
                     url: C.ANM.UNVERIFIED_APPLICATIONS,
                     body: {
                         name: t,
                         os: (0, I.getPlatformName)(),
                         icon: n,
-                        distributor_application: x(i, a),
+                        distributor_application: x(i, o),
                         executable: c,
                         publisher: r,
-                        report_version: P
+                        report_version: w
                     },
                     retries: 1,
                     oldFormErrors: !0,
@@ -330,7 +330,7 @@ let M = {
                 });
     },
     uploadIcon(e, t, n) {
-        o.tn.post({
+        a.tn.post({
             url: C.ANM.UNVERIFIED_APPLICATIONS_ICONS,
             body: {
                 application_name: e,
@@ -348,9 +348,9 @@ let M = {
             game: e
         });
     },
-    launch: j,
+    launch: k,
     async join(e) {
-        let { userId: t, sessionId: n, applicationId: r, channelId: i, messageId: a, intent: o = w.Ws.PLAY, embedded: s = !1, source: c, locationObject: u, analyticsLocations: d } = e;
+        let { userId: t, sessionId: n, applicationId: r, channelId: i, messageId: o, intent: a = R.Ws.PLAY, embedded: s = !1, source: c, locationObject: u, analyticsLocations: d } = e;
         if (__OVERLAY__)
             return (
                 l.Z.dispatch({
@@ -359,7 +359,7 @@ let M = {
                     sessionId: n,
                     applicationId: r,
                     channelId: i,
-                    messageId: a
+                    messageId: o
                 }),
                 Promise.resolve(!0)
             );
@@ -368,13 +368,13 @@ let M = {
             applicationId: r
         });
         try {
-            let e = await S.Z.getJoinSecret(t, n, r, i, a);
+            let e = await S.Z.getJoinSecret(t, n, r, i, o);
             return (
                 L({
                     applicationId: r,
                     secret: e,
                     channelId: i,
-                    intent: o,
+                    intent: a,
                     embedded: s,
                     source: c,
                     locationObject: u,

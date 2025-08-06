@@ -2,8 +2,8 @@ n.d(t, { A: () => h });
 var r = n(255367);
 n(73800);
 var i = n(120356),
-    a = n.n(i),
-    o = n(84735),
+    o = n.n(i),
+    a = n(84735),
     s = n(993365),
     l = n(550762);
 function c(e, t, n) {
@@ -64,8 +64,8 @@ function _(e, t) {
         r,
         i = p(e, t);
     if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
@@ -74,22 +74,22 @@ function p(e, t) {
     var n,
         r,
         i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
 function h(e) {
     var { focusProps: t, lineClamp: n = 1, role: i = 'button', text: c, textVariant: d = 'text-md/medium', type: p = 'button', variant: h = 'primary', className: m, style: g } = e,
         E = _(e, ['focusProps', 'lineClamp', 'role', 'text', 'textVariant', 'type', 'variant', 'className', 'style']);
     return (0, r.jsx)(
-        o.t,
+        a.t,
         f(u({}, t), {
             children: (0, r.jsx)(
                 'button',
                 f(
                     u(
                         {
-                            className: a()(l.textButton, l[h]),
+                            className: o()(l.textButton, l[h]),
                             'data-mana-component': 'text-button',
                             role: i,
                             type: p

@@ -1,8 +1,8 @@
 (n.d(t, { Z: () => E }), n(388685));
 var r = n(255367),
     i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(755721),
     l = n(481060),
     c = n(393238),
@@ -15,13 +15,13 @@ var r = n(255367),
     m = n(418952);
 let g = 280,
     E = i.forwardRef(function (e, t) {
-        let { body: n, header: a, artClassName: E, headerClassName: b, contentClassName: y, tryItText: O, dismissText: v, onTryFeature: I, onClose: T, className: S, inlineArt: A = !1, isPremiumFeature: N = !1, shouldUseHorizontalButtons: C = !1, showGIFTag: w = !1, dismissibleContent: R, position: P = 'top', align: D = 'center', art: L, isPremiumEarlyAccess: x = !1, maxWidth: k = g, hideDismissButton: j = !1, pointerClassName: M, dismissIconClassName: U, dismissIcon: G, onDismissIconClick: B, tryItButtonColor: Z } = e,
+        let { body: n, header: o, artClassName: E, headerClassName: b, contentClassName: y, tryItText: O, dismissText: v, onTryFeature: I, onClose: T, className: S, inlineArt: A = !1, isPremiumFeature: N = !1, shouldUseHorizontalButtons: C = !1, showGIFTag: R = !1, dismissibleContent: P, position: w = 'top', align: D = 'center', art: L, isPremiumEarlyAccess: x = !1, maxWidth: M = g, hideDismissButton: k = !1, pointerClassName: j, dismissIconClassName: U, dismissIcon: G, onDismissIconClick: B, tryItButtonColor: Z } = e,
             F = C ? s.zx.Sizes.LARGE : s.zx.Sizes.MAX,
             [V, H] = i.useState(!1),
             { ref: Y, width: W } = (0, c.ZP)();
         function K(e) {
-            if ((0, u.lg)(R)) return void (0, f.bj)(R, { dismissAction: e });
-            (0, d.Q3)(R, { dismissAction: e });
+            if ((0, u.lg)(P)) return void (0, f.bj)(P, { dismissAction: e });
+            (0, d.Q3)(P, { dismissAction: e });
         }
         function z() {
             return null == n
@@ -38,16 +38,16 @@ let g = 280,
             i.useEffect(() => {
                 var e, t;
                 let n = (null != (t = null == (e = Y.current) ? void 0 : e.scrollWidth) ? t : 0) + 64;
-                !V && n > k && H(!0);
-            }, [V, W, Y, k]),
+                !V && n > M && H(!0);
+            }, [V, W, Y, M]),
             i.useEffect(() => {
-                (0, f.kk)(R);
-            }, [R]),
+                (0, f.kk)(P);
+            }, [P]),
             (0, r.jsx)('div', {
                 className: S,
                 ref: t,
                 children: (0, r.jsxs)('div', {
-                    className: o()(m.content, y, {
+                    className: a()(m.content, y, {
                         [m.contentNoArt]: null == E || A,
                         [m.contentPremium]: N || x
                     }),
@@ -59,14 +59,14 @@ let g = 280,
                                 children: G
                             }),
                         (0, r.jsxs)('div', {
-                            className: o()(E, A ? m.artInline : m.artAbsolute),
-                            children: [w && (0, r.jsx)(_.Z, { className: m.gifTag }), L]
+                            className: a()(E, A ? m.artInline : m.artAbsolute),
+                            children: [R && (0, r.jsx)(_.Z, { className: m.gifTag }), L]
                         }),
                         (0, r.jsxs)('div', {
                             className: m.body,
                             children: [
                                 (0, r.jsxs)(l.X6q, {
-                                    className: o()(N ? m.headerWithPremiumIcon : m.header, b),
+                                    className: a()(N ? m.headerWithPremiumIcon : m.header, b),
                                     variant: 'heading-md/bold',
                                     color: 'always-white',
                                     children: [
@@ -95,7 +95,7 @@ let g = 280,
                                                   ]
                                               })
                                             : null,
-                                        a
+                                        o
                                     ]
                                 }),
                                 z()
@@ -117,7 +117,7 @@ let g = 280,
                                                   color: null != Z ? Z : N || x ? s.zx.Colors.BRAND_INVERTED : s.zx.Colors.WHITE,
                                                   children: null != O ? O : h.intl.string(h.t.IHf1RE)
                                               }),
-                                              !j &&
+                                              !k &&
                                                   (0, r.jsx)(s.zx, {
                                                       className: m.button,
                                                       size: F,
@@ -141,11 +141,11 @@ let g = 280,
                                       })
                         }),
                         (0, r.jsx)('div', {
-                            className: o()(m.pointer, M, {
-                                [m.bottomPointer]: 'top' === P,
-                                [m.centerLeftPointer]: 'right' === P && 'center' === D,
-                                [m.topLeftPointer]: 'right' === P && 'top' === D,
-                                [m.bottomLeftPointer]: 'right' === P && 'bottom' === D
+                            className: a()(m.pointer, j, {
+                                [m.bottomPointer]: 'top' === w,
+                                [m.centerLeftPointer]: 'right' === w && 'center' === D,
+                                [m.topLeftPointer]: 'right' === w && 'top' === D,
+                                [m.bottomLeftPointer]: 'right' === w && 'bottom' === D
                             })
                         })
                     ]

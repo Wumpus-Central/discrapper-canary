@@ -33,8 +33,8 @@ e.exports = function (e) {
             ]
         },
         i = ['break', 'breakWith', 'breakOut', 'breakTo', 'case', 'catch', 'continue', 'continueWith', 'default', 'do', 'else', 'exit', 'exitWith', 'for', 'forEach', 'from', 'if', 'local', 'private', 'switch', 'step', 'then', 'throw', 'to', 'try', 'waitUntil', 'while', 'with'],
-        a = ['blufor', 'civilian', 'configNull', 'controlNull', 'displayNull', 'diaryRecordNull', 'east', 'endl', 'false', 'grpNull', 'independent', 'lineBreak', 'locationNull', 'nil', 'objNull', 'opfor', 'pi', 'resistance', 'scriptNull', 'sideAmbientLife', 'sideEmpty', 'sideEnemy', 'sideFriendly', 'sideLogic', 'sideUnknown', 'taskNull', 'teamMemberNull', 'true', 'west'],
-        o = [
+        o = ['blufor', 'civilian', 'configNull', 'controlNull', 'displayNull', 'diaryRecordNull', 'east', 'endl', 'false', 'grpNull', 'independent', 'lineBreak', 'locationNull', 'nil', 'objNull', 'opfor', 'pi', 'resistance', 'scriptNull', 'sideAmbientLife', 'sideEmpty', 'sideEnemy', 'sideFriendly', 'sideLogic', 'sideUnknown', 'taskNull', 'teamMemberNull', 'true', 'west'],
+        a = [
             'abs',
             'accTime',
             'acos',
@@ -2518,8 +2518,8 @@ e.exports = function (e) {
         case_insensitive: !0,
         keywords: {
             keyword: i,
-            built_in: o,
-            literal: a
+            built_in: a,
+            literal: o
         },
         contains: [e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE, e.NUMBER_MODE, t, n, r, s],
         illegal: [/\$[^a-fA-F0-9]/, /\w\$/, /\?/, /@/, / \| /, /[a-zA-Z_]\./, /\:\=/, /\[\:/]

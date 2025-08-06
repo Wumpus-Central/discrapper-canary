@@ -1,7 +1,7 @@
 var r = n(98405),
     i = n(127849),
-    a = n(580983),
-    o = n(507604),
+    o = n(580983),
+    a = n(507604),
     s = n(569743),
     l = n(840475),
     c = n(391246),
@@ -24,17 +24,17 @@ var r = n(98405),
     A = n(264750).f,
     N = n(522169),
     C = n(920029).forEach,
-    w = n(108015),
-    R = n(573078),
-    P = n(117895),
+    R = n(108015),
+    P = n(573078),
+    w = n(117895),
     D = n(840991),
     L = n(335024),
     x = n(199838),
-    k = n(176682),
-    j = x.get,
-    M = x.set,
+    M = n(176682),
+    k = x.get,
+    j = x.set,
     U = x.enforce,
-    G = P.f,
+    G = w.f,
     B = D.f,
     Z = i.RangeError,
     F = c.ArrayBuffer,
@@ -45,17 +45,17 @@ var r = n(98405),
     K = l.TypedArray,
     z = l.TypedArrayPrototype,
     q = l.isTypedArray,
-    $ = 'BYTES_PER_ELEMENT',
-    X = 'Wrong length',
-    Q = function (e, t) {
-        R(e, t, {
+    X = 'BYTES_PER_ELEMENT',
+    Q = 'Wrong length',
+    J = function (e, t) {
+        P(e, t, {
             configurable: !0,
             get: function () {
-                return j(this)[t];
+                return k(this)[t];
             }
         });
     },
-    J = function (e) {
+    $ = function (e) {
         var t;
         return T(V, e) || 'ArrayBuffer' === (t = y(e)) || 'SharedArrayBuffer' === t;
     },
@@ -68,8 +68,8 @@ var r = n(98405),
     en = function (e, t, n) {
         return ee(e, (t = E(t))) && O(n) && b(n, 'value') && !b(n, 'get') && !b(n, 'set') && !n.configurable && (!b(n, 'writable') || n.writable) && (!b(n, 'enumerable') || n.enumerable) ? ((e[t] = n.value), e) : G(e, t, n);
     };
-o
-    ? (Y || ((D.f = et), (P.f = en), Q(z, 'buffer'), Q(z, 'byteOffset'), Q(z, 'byteLength'), Q(z, 'length')),
+a
+    ? (Y || ((D.f = et), (w.f = en), J(z, 'buffer'), J(z, 'byteOffset'), J(z, 'byteLength'), J(z, 'length')),
       r(
           {
               target: 'Object',
@@ -82,7 +82,7 @@ o
           }
       ),
       (e.exports = function (e, t, n) {
-          var o = e.match(/\d+/)[0] / 8,
+          var a = e.match(/\d+/)[0] / 8,
               l = e + (n ? 'Clamped' : '') + 'Array',
               c = 'get' + e,
               d = 'set' + e,
@@ -91,14 +91,14 @@ o
               b = E && E.prototype,
               y = {},
               v = function (e, t) {
-                  var n = j(e);
-                  return n.view[c](t * o + n.byteOffset, !0);
+                  var n = k(e);
+                  return n.view[c](t * a + n.byteOffset, !0);
               },
               T = function (e, t, r) {
-                  var i = j(e);
-                  i.view[d](t * o + i.byteOffset, n ? g(r) : r, !0);
+                  var i = k(e);
+                  i.view[d](t * a + i.byteOffset, n ? g(r) : r, !0);
               },
-              R = function (e, t) {
+              P = function (e, t) {
                   G(e, t, {
                       get: function () {
                           return v(this, t);
@@ -114,9 +114,9 @@ o
                 ((E = t(function (e, t, n, r) {
                     return (
                         u(e, b),
-                        k(
+                        M(
                             (function () {
-                                return O(t) ? (J(t) ? (void 0 !== r ? new _(t, m(n, o), r) : void 0 !== n ? new _(t, m(n, o)) : new _(t)) : q(t) ? L(E, t) : a(N, E, t)) : new _(h(t));
+                                return O(t) ? ($(t) ? (void 0 !== r ? new _(t, m(n, a), r) : void 0 !== n ? new _(t, m(n, a)) : new _(t)) : q(t) ? L(E, t) : o(N, E, t)) : new _(h(t));
                             })(),
                             e,
                             E
@@ -136,18 +136,18 @@ o
                         c = 0,
                         d = 0;
                     if (O(t))
-                        if (J(t)) {
-                            ((i = t), (d = m(n, o)));
+                        if ($(t)) {
+                            ((i = t), (d = m(n, a)));
                             var f = t.byteLength;
                             if (void 0 === r) {
-                                if (f % o || (s = f - d) < 0) throw new Z(X);
-                            } else if ((s = p(r) * o) + d > f) throw new Z(X);
-                            l = s / o;
+                                if (f % a || (s = f - d) < 0) throw new Z(Q);
+                            } else if ((s = p(r) * a) + d > f) throw new Z(Q);
+                            l = s / a;
                         } else if (q(t)) return L(E, t);
-                        else return a(N, E, t);
-                    else i = new F((s = (l = h(t)) * o));
+                        else return o(N, E, t);
+                    else i = new F((s = (l = h(t)) * a));
                     for (
-                        M(e, {
+                        j(e, {
                             buffer: i,
                             byteOffset: d,
                             byteLength: s,
@@ -157,26 +157,26 @@ o
                         c < l;
 
                     )
-                        R(e, c++);
+                        P(e, c++);
                 })),
                 S && S(E, K),
                 (b = E.prototype = I(z))),
               b.constructor !== E && f(b, 'constructor', E),
               (U(b).TypedArrayConstructor = E),
               W && f(b, W, l));
-          var P = E !== _;
+          var w = E !== _;
           ((y[l] = E),
               r(
                   {
                       global: !0,
                       constructor: !0,
-                      forced: P,
+                      forced: w,
                       sham: !Y
                   },
                   y
               ),
-              $ in E || f(E, $, o),
-              $ in b || f(b, $, o),
-              w(l));
+              X in E || f(E, X, a),
+              X in b || f(b, X, a),
+              R(l));
       }))
     : (e.exports = function () {});

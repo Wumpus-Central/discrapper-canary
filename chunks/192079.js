@@ -7,22 +7,22 @@
     n(392711));
 var r = n(19780),
     i = n(5192),
-    a = n(700785),
-    o = n(427679),
+    o = n(700785),
+    a = n(427679),
     s = n(157925),
     l = n(981631),
     c = n(71080),
     u = n(388032);
 function d(e, t, n, r) {
-    let a = t[0],
-        o = i.ZP.getName(e, n, a),
+    let o = t[0],
+        a = i.ZP.getName(e, n, o),
         s = null != r ? r : t.length;
-    return 1 === s && null != a
-        ? o
-        : null == a
+    return 1 === s && null != o
+        ? a
+        : null == o
           ? u.intl.formatToPlainString(u.t.chmM9P, { count: s })
           : u.intl.formatToPlainString(u.t.GhkJ29, {
-                name: o,
+                name: a,
                 count: s - 1
             });
 }
@@ -40,13 +40,13 @@ function f(e, t) {
     return null;
 }
 function _(e) {
-    let t = o.Z.getStageInstanceByChannel(e.id);
+    let t = a.Z.getStageInstanceByChannel(e.id);
     return {
         channel_id: e.id,
         guild_id: e.guild_id,
         topic: null == t ? void 0 : t.topic,
         media_session_id: r.Z.getMediaSessionId(),
-        request_to_speak_state: a.Uu(l.Plq.REQUEST_TO_SPEAK, e) ? s.BM.EVERYONE : s.BM.NO_ONE,
+        request_to_speak_state: o.Uu(l.Plq.REQUEST_TO_SPEAK, e) ? s.BM.EVERYONE : s.BM.NO_ONE,
         stage_instance_id: null == t ? void 0 : t.id
     };
 }

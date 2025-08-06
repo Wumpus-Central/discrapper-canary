@@ -1,8 +1,8 @@
 n.d(t, { Z: () => p });
 var r = n(592125),
     i = n(594174),
-    a = n(636449),
-    o = n(337682),
+    o = n(636449),
+    a = n(337682),
     s = n(566620),
     l = n(224189),
     c = n(574952);
@@ -63,24 +63,24 @@ async function p(e) {
     if (null == e.targetApplicationId) return !1;
     let n = !1;
     try {
-        ((t = await (0, l.Z)(e.targetApplicationId, e.channelId)), (n = (0, a.R)()));
+        ((t = await (0, l.Z)(e.targetApplicationId, e.channelId)), (n = (0, o.R)()));
     } catch (e) {
         return !1;
     }
-    return (0, a.C)(n, () => h(_(d({}, e), { targetApplication: t })));
+    return (0, o.C)(n, () => h(_(d({}, e), { targetApplication: t })));
 }
 async function h(e) {
-    let { targetApplication: t, locationObject: n, channelId: a, analyticsLocations: l, componentId: u, commandOrigin: d, sectionName: f, source: _, onExecutedCallback: p, referrerId: h, customId: m, inviterUserId: g, onConfirmActivityLaunchChecksAlertOpen: E } = e,
+    let { targetApplication: t, locationObject: n, channelId: o, analyticsLocations: l, componentId: u, commandOrigin: d, sectionName: f, source: _, onExecutedCallback: p, referrerId: h, customId: m, inviterUserId: g, onConfirmActivityLaunchChecksAlertOpen: E } = e,
         b = (0, c.Z)(),
         y = i.default.getCurrentUser();
     return (
-        null != a &&
-        null != r.Z.getChannel(a) &&
+        null != o &&
+        null != r.Z.getChannel(o) &&
         null != y &&
         null != t &&
-        (o.tZ(t.id),
+        (a.tZ(t.id),
         await (0, s.G6)({
-            channelId: a,
+            channelId: o,
             applicationId: t.id,
             isStart: !0,
             embeddedActivitiesManager: b,

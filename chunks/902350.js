@@ -24,7 +24,7 @@ e.exports = function (e) {
             end: /\}/,
             contains: r.contains
         },
-        a = {
+        o = {
             className: 'string',
             begin: "'\\\\?.",
             end: "'",
@@ -65,7 +65,7 @@ e.exports = function (e) {
                 keywords: 'port',
                 contains: [t]
             },
-            a,
+            o,
             e.QUOTE_STRING_MODE,
             e.C_NUMBER_MODE,
             n,

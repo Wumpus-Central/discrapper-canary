@@ -1,8 +1,8 @@
 n.d(t, { v: () => p });
 var r = n(255367),
     i = n(120356),
-    a = n.n(i),
-    o = n(481060),
+    o = n.n(i),
+    a = n(481060),
     s = n(140106),
     l = n(388032),
     c = n(639041);
@@ -61,20 +61,20 @@ function _(e, t) {
 function p(e) {
     let { channel: t, children: n, className: i, editable: u, location: f } = e;
     return u
-        ? (0, r.jsx)(o.ua7, {
+        ? (0, r.jsx)(a.ua7, {
               position: 'bottom',
               text: l.intl.string(l.t['0qPSMT']),
               children: (e) =>
                   (0, r.jsxs)(
-                      o.P3F,
+                      a.P3F,
                       _(d({}, e), {
-                          className: a()(c.editableGdmIcon, i),
+                          className: o()(c.editableGdmIcon, i),
                           onClick: () => (0, s.P5)(t.id, f),
                           children: [
                               n,
                               (0, r.jsx)('div', {
                                   className: c.editableGdmIconIndicator,
-                                  children: (0, r.jsx)(o.vdY, {
+                                  children: (0, r.jsx)(a.vdY, {
                                       size: 'xs',
                                       color: 'currentColor'
                                   })

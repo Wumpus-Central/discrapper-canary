@@ -1,7 +1,7 @@
-n.d(t, { C: () => a });
+n.d(t, { C: () => o });
 var r = n(818083),
     i = n(987338);
-let a = (0, r.B)({
+let o = (0, r.B)({
     id: '2025-06_soundboard_default_reordering',
     kind: 'user',
     label: 'Soundboard Default Reordering',

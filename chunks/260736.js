@@ -2,8 +2,8 @@ n.d(t, { Z: () => _ });
 var r = n(255367);
 n(73800);
 var i = n(481060),
-    a = n(67390),
-    o = n(63063),
+    o = n(67390),
+    a = n(63063),
     s = n(739566),
     l = n(942951),
     c = n(834129),
@@ -19,7 +19,7 @@ function _(e) {
             guildId: _.guild_id,
             messageId: n.id
         })(p),
-        m = o.Z.getArticleURL(u.BhN.HD_STREAMING_POTION);
+        m = a.Z.getArticleURL(u.BhN.HD_STREAMING_POTION);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)('div', {
@@ -36,11 +36,11 @@ function _(e) {
             }),
             (0, r.jsxs)(i.P3F, {
                 onClick: () => {
-                    window.open(o.Z.getArticleURL(u.BhN.HD_STREAMING_POTION), '_blank');
+                    window.open(a.Z.getArticleURL(u.BhN.HD_STREAMING_POTION), '_blank');
                 },
                 className: f.embed,
                 children: [
-                    (0, r.jsx)(a.Z, {}),
+                    (0, r.jsx)(o.Z, {}),
                     (0, r.jsxs)('div', {
                         className: f.text,
                         children: [

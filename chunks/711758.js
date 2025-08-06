@@ -1,8 +1,8 @@
 n.d(t, { Z: () => p });
 var r,
     i = n(442837),
-    a = n(570140);
-function o(e, t, n) {
+    o = n(570140);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -26,7 +26,7 @@ function s(e) {
                 })
             )),
             r.forEach(function (t) {
-                o(e, t, n[t]);
+                a(e, t, n[t]);
             }));
     }
     return e;
@@ -75,5 +75,5 @@ class _ extends (r = i.ZP.PersistedStore) {
         return u.ignoreTimestamps;
     }
 }
-(o(_, 'displayName', 'IgnoreNoticeStore'), o(_, 'persistKey', 'IgnoreNoticeStore'));
-let p = new _(a.Z, { RELATIONSHIP_IGNORE_USER_SUCCESS: f });
+(a(_, 'displayName', 'IgnoreNoticeStore'), a(_, 'persistKey', 'IgnoreNoticeStore'));
+let p = new _(o.Z, { RELATIONSHIP_IGNORE_USER_SUCCESS: f });

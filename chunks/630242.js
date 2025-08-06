@@ -1,8 +1,8 @@
 (n.d(t, { R: () => g }), n(388685));
 var r = n(73800),
     i = n(442837),
-    a = n(704215),
-    o = n(211644),
+    o = n(704215),
+    a = n(211644),
     s = n(266454),
     l = n(243778),
     c = n(592125),
@@ -34,39 +34,39 @@ function g(e) {
             channelId: y
         }),
         N = I && !t,
-        [C, w] = (0, l.US)(N ? [a.z.CHAT_WALLPAPERS_DM_LIST_COACHMARK] : [], void 0, !0),
-        R = C === a.z.CHAT_WALLPAPERS_DM_LIST_COACHMARK,
-        [P, D] = (0, l.US)(R ? [a.z.CHAT_WALLPAPERS_PICKER_COACHMARK] : []),
-        L = (0, o.ZP)((e) => e.recentlyShown[0]),
-        x = (0, s.Nj)(a.z.CHAT_WALLPAPERS_PICKER_COACHMARK);
+        [C, R] = (0, l.US)(N ? [o.z.CHAT_WALLPAPERS_DM_LIST_COACHMARK] : [], void 0, !0),
+        P = C === o.z.CHAT_WALLPAPERS_DM_LIST_COACHMARK,
+        [w, D] = (0, l.US)(P ? [o.z.CHAT_WALLPAPERS_PICKER_COACHMARK] : []),
+        L = (0, a.ZP)((e) => e.recentlyShown[0]),
+        x = (0, s.Nj)(o.z.CHAT_WALLPAPERS_PICKER_COACHMARK);
     if (
         (r.useMemo(() => {
             S &&
                 !0 === O &&
                 !x &&
-                P !== a.z.CHAT_WALLPAPERS_PICKER_COACHMARK &&
+                w !== o.z.CHAT_WALLPAPERS_PICKER_COACHMARK &&
                 d.default.track(h.rMx.CHAT_WALLPAPER_PICKER_COACHMARK_NOT_SHOW_REASON, {
                     channel_id: y,
                     channel_type: v,
                     is_settings_open: t,
                     is_dark_theme: A,
-                    is_overseer_dismissible_content_selected: R,
-                    last_dismissible_content_winner: null != L ? a.z[L] : 'None'
+                    is_overseer_dismissible_content_selected: P,
+                    last_dismissible_content_winner: null != L ? o.z[L] : 'None'
                 });
-        }, [O, S, v, y, x, P]),
+        }, [O, S, v, y, x, w]),
         !I)
     )
         return;
-    let k = R && P === a.z.CHAT_WALLPAPERS_PICKER_COACHMARK;
-    if ((k && null != y && null == n && b !== _.j.COACHMARK && g(y), n === y)) {
-        let e = k ? _.j.COACHMARK : _.j.DEFAULT;
+    let M = P && w === o.z.CHAT_WALLPAPERS_PICKER_COACHMARK;
+    if ((M && null != y && null == n && b !== _.j.COACHMARK && g(y), n === y)) {
+        let e = M ? _.j.COACHMARK : _.j.DEFAULT;
         return (
             b !== e && E(e),
             {
                 pickerType: e,
-                markDismissed: k
+                markDismissed: M
                     ? (e) => {
-                          (D(e), T === f.FN.TOOLBAR && w(m.L.INDIRECT_ACTION));
+                          (D(e), T === f.FN.TOOLBAR && R(m.L.INDIRECT_ACTION));
                       }
                     : void 0
             }

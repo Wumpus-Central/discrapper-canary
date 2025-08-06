@@ -5,8 +5,8 @@ let i = {
         LATIN24: r.latin24CompactTimeStamp,
         ASIAN: r.asianCompactTimeStamp
     },
-    a = 5,
-    o = /(AM|PM)$/;
+    o = 5,
+    a = /(AM|PM)$/;
 function s(e) {
-    return null != e.match(o) ? i.LATIN24 : e.length <= a ? i.LATIN12 : i.ASIAN;
+    return null != e.match(a) ? i.LATIN24 : e.length <= o ? i.LATIN12 : i.ASIAN;
 }

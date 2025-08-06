@@ -1,7 +1,7 @@
-n.d(t, { Z: () => a });
+n.d(t, { Z: () => o });
 var r = n(302463),
     i = n(981631);
-class a {
+class o {
     getCreateAttachmentURL(e) {
         return i.ANM.GUILD_PRODUCT_CREATE_ATTACHMENT_UPLOAD(e);
     }

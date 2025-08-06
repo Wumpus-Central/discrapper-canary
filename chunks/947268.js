@@ -1,8 +1,8 @@
 var r = n(567701),
     i = 'Unknown',
-    a = { 'Mac OS': 'Mac OS X' };
-function o(e) {
-    return a[e] || e;
+    o = { 'Mac OS': 'Mac OS X' };
+function a(e) {
+    return o[e] || e;
 }
 function s(e) {
     if (!e)
@@ -28,7 +28,7 @@ e.exports = {
     engineName: l.engine.name || i,
     engineVersion: l.engine.version || i,
     platformArchitecture: l.cpu.architecture || i,
-    platformName: o(l.os.name) || i,
+    platformName: a(l.os.name) || i,
     platformVersion: l.os.version || i,
     platformFullVersion: l.os.version || i
 };

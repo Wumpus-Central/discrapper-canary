@@ -1,8 +1,8 @@
-(n.d(t, { Z: () => k }), n(388685));
+(n.d(t, { Z: () => M }), n(388685));
 var r = n(255367),
     i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(505266),
     l = n(442837),
     c = n(570140),
@@ -25,9 +25,9 @@ var r = n(255367),
     A = n(981631),
     N = n(302800),
     C = n(215023),
-    w = n(231338),
-    R = n(770977);
-function P(e, t, n) {
+    R = n(231338),
+    P = n(770977);
+function w(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -51,7 +51,7 @@ function D(e) {
                 })
             )),
             r.forEach(function (t) {
-                P(e, t, n[t]);
+                w(e, t, n[t]);
             }));
     }
     return e;
@@ -79,9 +79,9 @@ function x(e, t) {
         e
     );
 }
-function k(e) {
+function M(e) {
     var t;
-    let { onClose: n, onComplete: a, onStepChange: P, transitionState: L, loadId: k, skuId: j, isGift: M = !1, giftRecipient: U, giftMessage: G, giftingOrigin: B, analyticsLocations: Z, returnRef: F } = e,
+    let { onClose: n, onComplete: o, onStepChange: w, transitionState: L, loadId: M, skuId: k, isGift: j = !1, giftRecipient: U, giftMessage: G, giftingOrigin: B, analyticsLocations: Z, returnRef: F } = e,
         { analyticsLocations: V } = (0, d.ZP)([...Z, u.Z.COLLECTIBLES_PAYMENT_MODAL]),
         H = i.useRef(new s.qA()),
         [Y, W] = i.useState(null),
@@ -90,17 +90,17 @@ function k(e) {
             () =>
                 (0, N.UY)({
                     purchaseType: C.o8.FIAT,
-                    skuId: j
+                    skuId: k
                 }),
-            [j]
+            [k]
         ),
-        $ = (0, l.Wu)([f.Z], () => f.Z.recommendedGiftSkuIds, []),
-        X = null != j ? [j] : $,
-        Q = null != (t = X[0]) ? t : null,
-        J = null != j && p.Rm.has(j),
+        X = (0, l.Wu)([f.Z], () => f.Z.recommendedGiftSkuIds, []),
+        Q = null != k ? [k] : X,
+        J = null != (t = Q[0]) ? t : null,
+        $ = null != k && p.Rm.has(k),
         ee = i.useCallback(() => {
-            (z(!0), null == a || a());
-        }, [a]),
+            (z(!0), null == o || o());
+        }, [o]),
         et = i.useCallback(
             (e) => {
                 (z(!1),
@@ -113,7 +113,7 @@ function k(e) {
             [n]
         ),
         en = (e, t, n) =>
-            M
+            j
                 ? (0, r.jsx)(O.Z, {
                       step: n,
                       onClose: () => t(!1),
@@ -126,7 +126,7 @@ function k(e) {
         er = i.useMemo(
             () => [
                 y.WA,
-                ...(M ? [T.Dd] : []),
+                ...(j ? [T.Dd] : []),
                 v.n,
                 ...y.yp,
                 y.wo,
@@ -142,37 +142,37 @@ function k(e) {
                             })
                         ),
                     options: {
-                        bodyClassName: R.modalOverrideBody,
-                        sliderBodyClassName: R.modalOverrideSliderBody
+                        bodyClassName: P.modalOverrideBody,
+                        sliderBodyClassName: P.modalOverrideSliderBody
                     }
                 }
             ],
-            [V, Y, q, M]
+            [V, Y, q, j]
         );
     return (0, r.jsxs)(d.Gt, {
         value: V,
         children: [
             (0, r.jsx)(s.O_, {
                 ref: W,
-                className: R.confettiCanvas,
+                className: P.confettiCanvas,
                 environment: H.current
             }),
             (0, r.jsx)(_.i, {
                 options: q,
-                className: o()(R.customConfetti, { [R.hidden]: !K })
+                className: a()(P.customConfetti, { [P.hidden]: !K })
             }),
             (0, r.jsx)(m.PaymentContextProvider, {
-                loadId: k,
+                loadId: M,
                 stepConfigs: er,
                 applicationId: A.XAJ,
-                skuIDs: X,
-                isGift: M,
+                skuIDs: Q,
+                isGift: j,
                 activeSubscription: null,
-                purchaseType: w.GZ.ONE_TIME,
+                purchaseType: R.GZ.ONE_TIME,
                 excludeSubscriptionPlansBySKU: !0,
                 children: (0, r.jsx)(E.c1, {
                     children: (0, r.jsx)(h.KB, {
-                        isGift: M,
+                        isGift: j,
                         giftRecipient: U,
                         giftMessage: G,
                         giftingOrigin: B,
@@ -180,14 +180,14 @@ function k(e) {
                             onClose: et,
                             onComplete: ee,
                             applicationId: A.XAJ,
-                            skuId: Q,
+                            skuId: J,
                             initialPlanId: null,
                             analyticsLocations: V,
                             transitionState: L,
                             renderHeader: en,
                             returnRef: F,
-                            onStepChange: P,
-                            skipConfirm: J,
+                            onStepChange: w,
+                            skipConfirm: $,
                             hideShadow: !0
                         })
                     })

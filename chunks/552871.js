@@ -1,37 +1,37 @@
 (n.d(t, { u: () => f }), n(35282), n(388685), n(49124));
 var r = n(544891),
     i = n(881052),
-    a = n(710845),
-    o = n(131951),
+    o = n(710845),
+    a = n(131951),
     s = n(403182),
     l = n(579806),
     c = n(981631);
-let u = new a.Z('uploadRtcLogFiles');
+let u = new o.Z('uploadRtcLogFiles');
 function d(e, t) {
     let n = t.split('.'),
         r = n.length > 1 ? n.pop() : '',
         i = n.join('.'),
-        a = ''.concat(i, '.').concat(r),
-        o = 1;
-    for (; e.has(a); ) ((a = ''.concat(i, '_').concat(o, '.').concat(r)), (o += 1));
-    return (e.add(a), a);
+        o = ''.concat(i, '.').concat(r),
+        a = 1;
+    for (; e.has(o); ) ((o = ''.concat(i, '_').concat(a, '.').concat(r)), (a += 1));
+    return (e.add(o), o);
 }
 async function f(e, t) {
     let n;
     if (null == l.Z.fileManager.readLogFiles) throw new i.n0(i.cz.GENERAL);
-    let a = [];
+    let o = [];
     try {
-        a = (a = await l.Z.fileManager.readLogFiles(e)).map((e) => (0, s.qF)(e, 'application/octet-stream'));
+        o = (o = await l.Z.fileManager.readLogFiles(e)).map((e) => (0, s.qF)(e, 'application/octet-stream'));
     } catch (e) {
         throw (u.error("uploadDebugFiles: read error '".concat(e, "'")), new i.n0(i.cz.READ));
     }
-    if (0 === a.length) throw new i.n0(i.cz.NO_FILE);
+    if (0 === o.length) throw new i.n0(i.cz.NO_FILE);
     let f = {
             extraInfo: t,
-            mediaEngineState: o.Z.getState()
+            mediaEngineState: a.Z.getState()
         },
         _ = [
-            ...a.map((e) => ({
+            ...o.map((e) => ({
                 name: e.name,
                 file: e,
                 filename: e.name

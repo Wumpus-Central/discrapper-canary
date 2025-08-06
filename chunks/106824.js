@@ -6,8 +6,8 @@
     n(388685));
 var r = n(836560),
     i = n(555573),
-    a = n(376918),
-    o = n(887490),
+    o = n(376918),
+    a = n(887490),
     s = n(695346),
     l = n(590921),
     c = n(152089);
@@ -138,7 +138,7 @@ class m extends r.EventEmitter {
         if (null == this.props.editorRef.current) return;
         let d = (0, c.FW)(this.props),
             f = this.props.editorRef.current.getSlateEditor();
-        null != f && (r = null != (n = o.bN.getSelectedParentOfType(f, p)) ? o.bN.getTextFromRange(f, o.bN.range(f, n[1])) : null);
+        null != f && (r = null != (n = a.bN.getSelectedParentOfType(f, p)) ? a.bN.getTextFromRange(f, a.bN.range(f, n[1])) : null);
         let _ = (0, c.fZ)({
                 channel: this.props.channel,
                 guild: this.props.guild,
@@ -166,7 +166,7 @@ class m extends r.EventEmitter {
             A = this.shouldShow(T, S, g),
             N = this.state.selectedIndex;
         (!A || S ? (N = null) : null != N && N >= T && (N = T - 1),
-            A && !this.state.isVisible && (0, a.a7)(m, this.props.channel, I),
+            A && !this.state.isVisible && (0, o.a7)(m, this.props.channel, I),
             this.setState({
                 query: {
                     type: m,
@@ -185,7 +185,7 @@ class m extends r.EventEmitter {
         return this.props.focused && null == this.props.expressionPickerView && (e > 0 || t || n.showEmpty);
     }
     selectResult(e, t, n) {
-        var r, i, o;
+        var r, i, a;
         if (!this.state.isVisible) return !1;
         let { type: s, typeInfo: c, results: u, resultCount: d, options: f } = this.state.query;
         if (e >= d) return !1;
@@ -202,7 +202,7 @@ class m extends r.EventEmitter {
                       tabOrEnter: n,
                       queryText: null == (r = this.state.query) ? void 0 : r.queryText
                   });
-        return (null != _ && (0, a.Qt)(s, null != (o = _.type) ? o : null, this.props.channel, _.metadata), !0);
+        return (null != _ && (0, o.Qt)(s, null != (a = _.type) ? a : null, this.props.channel, _.metadata), !0);
     }
     setState(e) {
         for (let t in e)

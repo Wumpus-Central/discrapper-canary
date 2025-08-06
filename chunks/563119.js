@@ -2,8 +2,8 @@ n.d(t, { Z: () => O });
 var r = n(255367);
 n(73800);
 var i = n(704215),
-    a = n(952265),
-    o = n(82659),
+    o = n(952265),
+    a = n(82659),
     s = n(231757),
     l = n(266454),
     c = n(131951),
@@ -82,7 +82,7 @@ let b = 'game_console_alert_modal',
                           },
                           s = (e) =>
                               (0, r.jsx)(
-                                  o.Modal,
+                                  a.Modal,
                                   E(m({}, e), {
                                       title: t,
                                       subtitle: p.intl.string(p.t.bL21zs),
@@ -94,7 +94,7 @@ let b = 'game_console_alert_modal',
                                       ]
                                   })
                               );
-                      (0, a.nf)(y) ? (0, a.o)(y, (e) => s(e)) : (0, a.ZD)(async () => (e) => s(e), { modalKey: y });
+                      (0, o.nf)(y) ? (0, o.o)(y, (e) => s(e)) : (0, o.ZD)(async () => (e) => s(e), { modalKey: y });
                   });
         },
         showSelfDismissableAlert(e) {
@@ -102,7 +102,7 @@ let b = 'game_console_alert_modal',
                 c = (0, r.jsx)(d.t, {
                     body: n,
                     errorCodeMessage: i,
-                    dismissCallback: () => (0, a.Mr)(b)
+                    dismissCallback: () => (0, o.Mr)(b)
                 });
             function h() {
                 null != l &&
@@ -115,7 +115,7 @@ let b = 'game_console_alert_modal',
             }
             let g = (e) =>
                 (0, r.jsx)(
-                    o.Modal,
+                    a.Modal,
                     E(m({}, e), {
                         title: t,
                         actions: [
@@ -127,6 +127,6 @@ let b = 'game_console_alert_modal',
                         children: c
                     })
                 );
-            (0, a.nf)(b) ? (0, a.o)(b, (e) => g(e)) : (0, a.ZD)(async () => (e) => g(e), { modalKey: b });
+            (0, o.nf)(b) ? (0, o.o)(b, (e) => g(e)) : (0, o.ZD)(async () => (e) => g(e), { modalKey: b });
         }
     };

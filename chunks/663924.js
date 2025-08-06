@@ -1,8 +1,8 @@
-n.d(t, { Z: () => P });
+n.d(t, { Z: () => w });
 var r = n(255367),
     i = n(73800),
-    a = n(374470),
-    o = n(952265),
+    o = n(374470),
+    a = n(952265),
     s = n(481060),
     l = n(40851),
     c = n(896449),
@@ -54,8 +54,8 @@ function S(e, t) {
         r,
         i = A(e, t);
     if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
@@ -64,8 +64,8 @@ function A(e, t) {
     var n,
         r,
         i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
 let N = { height: E.lv };
@@ -89,28 +89,28 @@ function C(e) {
                     role: 'dialog',
                     style: N,
                     'aria-label': O.intl.string(O.t['3CNGLC']),
-                    children: t && (0, r.jsx)(R, T({}, n))
+                    children: t && (0, r.jsx)(P, T({}, n))
                 });
             }
         })
     });
 }
-function w() {
+function R() {
     p.yT(h.ti.DISMISSED);
 }
-function R(e) {
+function P(e) {
     let { channel: t, closeOnModalOuterClick: n = !1, parentModalKey: u } = e,
         p = i.useRef(null),
         { renderWindow: O, windowDispatch: v } = i.useContext(l.ZP),
         I = null != u,
-        T = (0, o.Jw)(null != u ? u : ''),
+        T = (0, a.Jw)(null != u ? u : ''),
         S = i.useCallback(
             (e) => {
                 var t;
-                if ((!I && (0, o.$s)()) || (I && !(T && n)) || d.Z.isOpen() || e.defaultPrevented) return;
+                if ((!I && (0, a.$s)()) || (I && !(T && n)) || d.Z.isOpen() || e.defaultPrevented) return;
                 let { target: r } = e;
-                if ((0, a.k)(r) && null != r.closest('.' + E.Jh)) return;
-                for (; (0, a.k)(r); ) {
+                if ((0, o.k)(r) && null != r.closest('.' + E.Jh)) return;
+                for (; (0, o.k)(r); ) {
                     if (r === p.current) return;
                     if (r.classList.contains(E.t4) || r.classList.contains(E.Id)) return void e.preventDefault();
                     if (r.classList.contains(E.NN)) return;
@@ -118,7 +118,7 @@ function R(e) {
                     if (r.classList.contains(E.I4) || t.includes(r.id)) return;
                     r = r.parentNode;
                 }
-                w();
+                R();
                 let i = null == (t = (0, _.uB)(e)) ? void 0 : t.activeElement;
                 (null == i || 'BODY' === i.tagName) && f.S.dispatchToLastSubscribed(b.CkL.TEXTAREA_FOCUS);
             },
@@ -128,16 +128,16 @@ function R(e) {
         () => (
             O.addEventListener('mousedown', S),
             O.addEventListener('contextmenu', S),
-            v.subscribe(b.CkL.POPOUT_CLOSE, w),
+            v.subscribe(b.CkL.POPOUT_CLOSE, R),
             () => {
-                (O.removeEventListener('mousedown', S), O.removeEventListener('contextmenu', S), v.unsubscribe(b.CkL.POPOUT_CLOSE, w));
+                (O.removeEventListener('mousedown', S), O.removeEventListener('contextmenu', S), v.unsubscribe(b.CkL.POPOUT_CLOSE, R));
             }
         ),
         [S, O, v]
     ),
         (0, s.Tbt)(p),
         i.useEffect(() => {
-            ((!I && (0, o.$s)()) || (I && !T)) && w();
+            ((!I && (0, a.$s)()) || (I && !T)) && R();
         }, [T, I]));
     let A = (0, g.Z)();
     return (0, r.jsx)(m.Z, {
@@ -150,4 +150,4 @@ function R(e) {
         initHistory: A
     });
 }
-let P = i.memo(C);
+let w = i.memo(C);

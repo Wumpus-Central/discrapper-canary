@@ -1,8 +1,8 @@
 n.d(t, { Z: () => g });
 var r = n(255367),
     i = n(73800),
-    a = n(755721),
-    o = n(481060),
+    o = n(755721),
+    a = n(481060),
     s = n(287734),
     l = n(305325),
     c = n(281956),
@@ -61,25 +61,25 @@ let g = function (e) {
                     )
                 )
             }),
-            (0, r.jsx)(o.X6q, {
+            (0, r.jsx)(a.X6q, {
                 className: h.channelName,
                 variant: 'heading-xxl/semibold',
                 children: n.name
             }),
             (0, r.jsx)('div', {
                 className: h.participantsRow,
-                children: (0, r.jsx)(o.Text, {
+                children: (0, r.jsx)(a.Text, {
                     color: 'header-secondary',
                     variant: 'text-sm/normal',
                     children: m(n, g)
                 })
             }),
-            (0, r.jsx)(a.zx, {
+            (0, r.jsx)(o.zx, {
                 disabled: !u,
                 className: h.joinButton,
-                color: u ? a.zx.Colors.WHITE : a.zx.Colors.PRIMARY,
+                color: u ? o.zx.Colors.WHITE : o.zx.Colors.PRIMARY,
                 onClick: b,
-                size: a.zx.Sizes.MEDIUM,
+                size: o.zx.Sizes.MEDIUM,
                 children: u ? p.intl.string(p.t['96ANUF']) : p.intl.string(p.t.TVBCKS)
             })
         ]

@@ -6,25 +6,25 @@ var r = n(255367),
     s = n(481060),
     o = n(239091),
     c = n(144144),
-    d = n(100527),
-    u = n(906732),
+    u = n(100527),
+    d = n(906732),
     h = n(385499),
     p = n(545957),
     f = n(82295),
     g = n(850020),
     m = n(670188),
     b = n(158776),
-    _ = n(699516),
-    y = n(111583),
+    y = n(699516),
+    x = n(111583),
     j = n(594174),
-    O = n(626135),
-    x = n(585483),
+    _ = n(626135),
+    O = n(585483),
     v = n(233870),
     C = n(51144),
     E = n(998502),
-    Z = n(276264),
-    I = n(981631),
-    S = n(388032),
+    S = n(276264),
+    Z = n(981631),
+    I = n(388032),
     P = n(11847);
 function T(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -52,13 +52,13 @@ function T(e) {
     return e;
 }
 let N = [],
-    w = E.ZP.getEnableHardwareAcceleration();
-function R(e) {
-    let { user: t, channel: s, status: d, activities: u } = e,
-        h = (0, a.e7)([y.Z], () => null != y.Z.getTypingUsers(s.id)[t.id]),
+    R = E.ZP.getEnableHardwareAcceleration();
+function w(e) {
+    let { user: t, channel: s, status: u, activities: d } = e,
+        h = (0, a.e7)([x.Z], () => null != x.Z.getTypingUsers(s.id)[t.id]),
         f = (0, a.e7)([j.default], () => j.default.getCurrentUser()),
-        O = (0, a.e7)([b.Z], () => b.Z.isMobileOnline(t.id)),
-        v = (0, a.e7)([_.Z], () => _.Z.getNickname(t.id)),
+        _ = (0, a.e7)([b.Z], () => b.Z.isMobileOnline(t.id)),
+        v = (0, a.e7)([y.Z], () => y.Z.getNickname(t.id)),
         E = (0, p.Z)(t.id),
         P = i.useRef(null),
         N = (e) => {
@@ -91,11 +91,11 @@ function R(e) {
                 };
             });
         },
-        R = () => {
+        w = () => {
             let e = '@'.concat(C.ZP.getUserTag(t, { decoration: 'never' })),
                 n = '<@'.concat(t.id, '>');
-            (x.S.dispatch(I.CkL.TEXTAREA_FOCUS, { channelId: s.id }),
-                x.S.dispatchToLastSubscribed(I.CkL.INSERT_TEXT, {
+            (O.S.dispatch(Z.CkL.TEXTAREA_FOCUS, { channelId: s.id }),
+                O.S.dispatchToLastSubscribed(Z.CkL.INSERT_TEXT, {
                     plainText: e,
                     rawText: n
                 }),
@@ -109,7 +109,7 @@ function R(e) {
         channelId: s.id,
         position: l.tq ? 'window_center' : 'left',
         spacing: 16,
-        onShiftClick: R,
+        onShiftClick: w,
         shouldShow: D,
         onRequestClose: () => L(!1),
         children: (e) => {
@@ -134,27 +134,27 @@ function R(e) {
                     return i;
                 })(e, ['onClick', 'onMouseDown']);
             return (0, r.jsx)(
-                Z.Z,
+                S.Z,
                 T(
                     {
                         ref: P,
                         user: t,
                         currentUser: f,
                         isOwner: t.id === s.ownerId,
-                        ownerTooltipText: S.intl.string(S.t['MRXZ+/']),
-                        shouldAnimateStatus: w,
+                        ownerTooltipText: I.intl.string(I.t['MRXZ+/']),
+                        shouldAnimateStatus: R,
                         isTyping: h,
-                        status: d,
-                        activities: u,
+                        status: u,
+                        activities: d,
                         applicationStream: E,
                         channel: s,
                         onContextMenu: N,
                         selected: D,
-                        isMobile: O,
+                        isMobile: _,
                         nick: v,
                         nameplate: A,
                         onClick: (e) => {
-                            e.shiftKey ? null == R || R() : L((e) => !e);
+                            e.shiftKey ? null == w || w() : L((e) => !e);
                         },
                         onMouseDown: (e) => {
                             D ? e.stopPropagation() : null == i || i(e);
@@ -180,21 +180,21 @@ function D(e) {
     let { channel: t } = e,
         n = j.default.getCurrentUser(),
         l = null == n ? void 0 : n.isStaff(),
-        { analyticsLocations: o } = (0, u.ZP)(d.Z.MEMBER_LIST),
+        { analyticsLocations: o } = (0, d.ZP)(u.Z.MEMBER_LIST),
         { listItems: c } = (0, a.e7)(
-            [_.Z, j.default, b.Z],
+            [y.Z, j.default, b.Z],
             () => {
                 let e = (0, v.T)(t.recipients, j.default),
                     n = {};
                 for (let t of e) {
                     var r, i, l;
-                    _.Z.isFriend(t.id) || t.id === (null == (r = j.default.getCurrentUser()) ? void 0 : r.id)
+                    y.Z.isFriend(t.id) || t.id === (null == (r = j.default.getCurrentUser()) ? void 0 : r.id)
                         ? (n[t.id] = {
-                              status: null != (i = b.Z.getStatus(t.id)) ? i : I.Skl.OFFLINE,
+                              status: null != (i = b.Z.getStatus(t.id)) ? i : Z.Skl.OFFLINE,
                               activities: null != (l = b.Z.getActivities(t.id)) ? l : N
                           })
                         : (n[t.id] = {
-                              status: I.Skl.OFFLINE,
+                              status: Z.Skl.OFFLINE,
                               activities: N
                           });
                 }
@@ -213,14 +213,14 @@ function D(e) {
             A
         );
     i.useEffect(() => {
-        O.default.track(I.rMx.MEMBER_LIST_VIEWED, {
+        _.default.track(Z.rMx.MEMBER_LIST_VIEWED, {
             channel_id: t.id,
             channel_type: t.type,
             guild_id: t.guild_id
         });
     }, [t.guild_id, t.id, t.type]);
     let p = l && c.every((e) => e.user.isStaff());
-    return (0, r.jsx)(u.Gt, {
+    return (0, r.jsx)(d.Gt, {
         value: o,
         children: (0, r.jsx)('div', {
             className: P.container,
@@ -232,11 +232,11 @@ function D(e) {
                     children: [
                         (0, r.jsxs)(f.Z, {
                             className: P.membersGroup,
-                            children: [''.concat(S.intl.string(S.t['9Oq93t']), '\u2014').concat(c.length, ' '), p && (0, r.jsx)(h.Z, { type: h.Z.Types.STAFF_ONLY_DM })]
+                            children: [''.concat(I.intl.string(I.t['9Oq93t']), '\u2014').concat(c.length, ' '), p && (0, r.jsx)(h.Z, { type: h.Z.Types.STAFF_ONLY_DM })]
                         }),
                         c.map((e) =>
                             (0, r.jsx)(
-                                R,
+                                w,
                                 {
                                     user: e.user,
                                     status: e.status,

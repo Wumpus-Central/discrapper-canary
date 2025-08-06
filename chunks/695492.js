@@ -2,8 +2,8 @@ n.d(t, { Z: () => h });
 var r = n(255367);
 n(73800);
 var i = n(481060),
-    a = n(607187),
-    o = n(112560),
+    o = n(607187),
+    a = n(112560),
     s = n(981631),
     l = n(388032),
     c = n(91490),
@@ -62,11 +62,11 @@ function p(e, t) {
 }
 function h(e) {
     let { channel: t, guild: d, width: _, inPopout: h } = e;
-    return (0, r.jsx)(a.Z, {
+    return (0, r.jsx)(o.Z, {
         className: c.root,
-        children: (0, r.jsx)(o.Z, {
+        children: (0, r.jsx)(a.Z, {
             artURL: u,
-            size: (0, o.L)(_),
+            size: (0, a.L)(_),
             header: l.intl.string(l.t.O4FiWl),
             onCTAClick: () =>
                 (0, i.ZDy)(

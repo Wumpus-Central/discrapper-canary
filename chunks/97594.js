@@ -15,8 +15,8 @@ var r = n(255367),
     b = n(860153),
     O = n(981631),
     h = n(388032),
-    g = n(269045);
-function E(e, t) {
+    E = n(269045);
+function g(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     !0 === n || d.Z.useReducedMotion ? e.set(t) : e.start(t);
 }
@@ -64,9 +64,9 @@ function v(e) {
     }, [t]),
         i.useEffect(() => {
             var e, t;
-            (j === s.Dvm.ENTERING && E(w.scale, 1), j === s.Dvm.ENTERED && (u.Z.disable(), u.Z.enableTemp(c.P)), j === s.Dvm.HIDDEN && (E(w.scale, 0.9), u.Z.disable(), u.Z.enableTemp(c.v)), j === s.Dvm.EXITING && E(w.scale, 0.9));
+            (j === s.Dvm.ENTERING && g(w.scale, 1), j === s.Dvm.ENTERED && (u.Z.disable(), u.Z.enableTemp(c.P)), j === s.Dvm.HIDDEN && (g(w.scale, 0.9), u.Z.disable(), u.Z.enableTemp(c.v)), j === s.Dvm.EXITING && g(w.scale, 0.9));
             let n = () => {
-                    (u.Z.disable(), u.Z.enableTemp(c.P));
+                    (u.Z.disable(), j === s.Dvm.ENTERED ? u.Z.enableTemp(c.P) : u.Z.enableTemp(c.v));
                 },
                 r = () => {
                     u.Z.disableTemp();
@@ -89,14 +89,14 @@ function v(e) {
                 x: w.x,
                 y: w.y,
                 setScale(e, t) {
-                    E(w.scale, e, null == t ? void 0 : t.immediate);
+                    g(w.scale, e, null == t ? void 0 : t.immediate);
                 },
                 setOffset(e, t, n) {
-                    (E(w.x, e, null == n ? void 0 : n.immediate), E(w.y, t, null == n ? void 0 : n.immediate));
+                    (g(w.x, e, null == n ? void 0 : n.immediate), g(w.y, t, null == n ? void 0 : n.immediate));
                 },
                 zoomed: P,
                 setZoomed(e) {
-                    (_(e), E(w.scale, e ? 2.5 : 1), e || (E(w.x, 0), E(w.y, 0)));
+                    (_(e), g(w.scale, e ? 2.5 : 1), e || (g(w.x, 0), g(w.y, 0)));
                 }
             }),
             [P, w]
@@ -135,7 +135,7 @@ function v(e) {
                     {
                         'data-migration-pending': !0,
                         hideShadow: !0,
-                        className: l()(g.carouselModal, e),
+                        className: l()(E.carouselModal, e),
                         transitionState: j
                     },
                     x

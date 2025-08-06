@@ -22,8 +22,8 @@ var i = n(255367),
     x = n(230711),
     _ = n(410575),
     j = n(586902),
-    C = n(980591),
-    E = n(468363),
+    E = n(980591),
+    C = n(468363),
     O = n(326255),
     v = n(771173),
     S = n(963056),
@@ -76,8 +76,8 @@ var i = n(255367),
     ex = n(702977),
     e_ = n(56848),
     ej = n(940315),
-    eC = n(378441),
-    eE = n(358820),
+    eE = n(378441),
+    eC = n(358820),
     eO = n(723547),
     ev = n(361045),
     eS = n(74650),
@@ -177,7 +177,7 @@ function tr(e) {
             size: (0, A.y9)(f.EFr.SIZE_32)
         }),
         j = (0, f.dQu)(f.TVs.modules.guildbar.AVATAR_SIZE),
-        E = (0, U.Z)('Account') ? 32 : j,
+        C = (0, U.Z)('Account') ? 32 : j,
         {
             updateOpenPopoutRef: O,
             highlightBadge: v,
@@ -192,7 +192,7 @@ function tr(e) {
                 [n, i] = r.useState(),
                 [s, a] = r.useState(!1);
             return (
-                (0, C.Z)(() => a(!0), 750),
+                (0, E.Z)(() => a(!0), 750),
                 r.useEffect(() => {
                     let t = (t) => {
                         var n;
@@ -271,8 +271,8 @@ function tr(e) {
                                   className: a()(e4.avatarWrapper, { [e4.plated]: null != m }),
                                   children: [
                                       (0, i.jsx)(tt, {
-                                          size: f.EFr['SIZE_'.concat(E)],
-                                          src: l.getAvatarURL(void 0, E - 4, !1),
+                                          size: f.EFr['SIZE_'.concat(C)],
+                                          src: l.getAvatarURL(void 0, C - 4, !1),
                                           avatarDecoration: x,
                                           'aria-label': l.username,
                                           status: s ? e1.Skl.STREAMING : o,
@@ -657,14 +657,14 @@ class ts extends r.PureComponent {
     }
 }
 function ta(e) {
-    let { selfDeaf: t, selfMute: n, awaitingRemote: r, serverMute: s, serverDeaf: a, suppress: l, shouldShowSpeakingWhileMutedTooltip: o, isEligibleForPomelo: c, webBuildOverride: d, handleMouseEnterMute: u, handleMouseLeaveMute: m, handleToggleSelfDeaf: p, handleToggleSelfMute: g, handleInputAudioContextMenu: h, handleOutputAudioContextMenu: b, handleOpenAccountSettings: x, handleOpenSettingsContextMenu: _, dismissibleContents: j, nameplate: C, accountContainerRef: E } = e,
-        O = (0, ei.A)(C);
+    let { selfDeaf: t, selfMute: n, awaitingRemote: r, serverMute: s, serverDeaf: a, suppress: l, shouldShowSpeakingWhileMutedTooltip: o, isEligibleForPomelo: c, webBuildOverride: d, handleMouseEnterMute: u, handleMouseLeaveMute: m, handleToggleSelfDeaf: p, handleToggleSelfMute: g, handleInputAudioContextMenu: h, handleOutputAudioContextMenu: b, handleOpenAccountSettings: x, handleOpenSettingsContextMenu: _, dismissibleContents: j, nameplate: E, accountContainerRef: C } = e,
+        O = (0, ei.A)(E);
     return (0, i.jsxs)('div', {
         className: e4.buttons,
         style: O,
         children: [
             (0, i.jsx)(tc, {
-                accountContainerRef: E,
+                accountContainerRef: C,
                 selfMute: n,
                 serverMute: s,
                 suppress: l,
@@ -676,8 +676,8 @@ function ta(e) {
                 onMouseLeave: m,
                 onClick: g,
                 onContextMenu: h,
-                iconForeground: null != C ? e4.iconForeground : void 0,
-                nameplate: C
+                iconForeground: null != E ? e4.iconForeground : void 0,
+                nameplate: E
             }),
             (0, i.jsx)(td, {
                 selfDeaf: t,
@@ -685,8 +685,8 @@ function ta(e) {
                 onClick: p,
                 onContextMenu: b,
                 awaitingRemote: r,
-                iconForeground: null != C ? e4.iconForeground : void 0,
-                nameplate: C
+                iconForeground: null != E ? e4.iconForeground : void 0,
+                nameplate: E
             }),
             (0, i.jsx)(to, {
                 isEligibleForPomelo: c,
@@ -694,8 +694,8 @@ function ta(e) {
                 onClick: x,
                 onContextMenu: _,
                 dismissibleContents: j.settings,
-                iconForeground: null != C ? e4.iconForeground : void 0,
-                nameplate: C
+                iconForeground: null != E ? e4.iconForeground : void 0,
+                nameplate: E
             })
         ]
     });
@@ -730,7 +730,7 @@ function tl() {
             return null != e ? eP.Z.getChannel(e) : null;
         }),
         { mute: h, selfMute: b, suppress: x } = (0, ef.Z)(g),
-        { selfDeaf: _, deaf: C } = (0, eh.Z)(g),
+        { selfDeaf: _, deaf: E } = (0, eh.Z)(g),
         O = (0, d.e7)([P.C], () => {
             var e;
             return (0, R.fD)() ? (null == (e = P.C.getCurrentBuildOverride().overrides) ? void 0 : e.discord_web) : null;
@@ -745,7 +745,7 @@ function tl() {
         k = (0, d.e7)([ek.Z], () => ek.Z.getGuildId()),
         L = eK.ZP.canUsePremiumGuildMemberProfile(t),
         M = (null == t || null == (e = t.avatarDecoration) ? void 0 : e.skuId) === e8.rL,
-        { voiceActivityStatusEnabled: B } = (0, E.U)({ location: 'Account' }),
+        { voiceActivityStatusEnabled: B } = (0, C.U)({ location: 'Account' }),
         U = (0, $.m)(),
         [V, G] = (0, J.G)(null != k ? k : null),
         F = z.J.useExperiment({ location: 'Account' }).enabled,
@@ -788,7 +788,7 @@ function tl() {
                 premiumSubscription: v,
                 selfDeaf: _,
                 selfMute: b,
-                serverDeaf: C,
+                serverDeaf: E,
                 serverMute: h,
                 speaking: c,
                 speakingWhileMuted: S,
@@ -844,12 +844,12 @@ function to(e) {
     });
 }
 function tc(e) {
-    let { selfMute: t, serverMute: n, suppress: s, awaitingRemote: l, tooltipText: o, tooltipColor: m, tooltipForceOpen: p, iconForeground: g, onMouseEnter: b, onMouseLeave: x, onClick: _, onContextMenu: j, nameplate: C, accountContainerRef: E } = e,
+    let { selfMute: t, serverMute: n, suppress: s, awaitingRemote: l, tooltipText: o, tooltipColor: m, tooltipForceOpen: p, iconForeground: g, onMouseEnter: b, onMouseLeave: x, onClick: _, onContextMenu: j, nameplate: E, accountContainerRef: C } = e,
         O = t || s || n,
         v = r.useRef(null),
         S = r.useRef(null),
         T = (0, eN.b)(O),
-        { activeVoice: y, mostRecentlyRequestedVoiceId: A, lastInitAttemptMayHaveCrashed: P } = (0, eC.o)(),
+        { activeVoice: y, mostRecentlyRequestedVoiceId: A, lastInitAttemptMayHaveCrashed: P } = (0, eE.o)(),
         { showSilentLagWarning: R } = (0, ej.Y)(),
         D = null != y,
         Z = (0, e_.z)(y),
@@ -922,7 +922,7 @@ function tc(e) {
         );
     }, [k]);
     let ee = r.useCallback(() => {
-            P || (0, eE.r5)();
+            P || (0, eC.r5)();
         }, [P]),
         et = O ? f.TVs.colors.STATUS_DANGER : R ? f.TVs.colors.STATUS_WARNING : 'currentColor',
         en = O || R,
@@ -937,7 +937,7 @@ function tc(e) {
                     tooltipText: F,
                     tooltipColor: m,
                     tooltipForceOpen: p,
-                    plated: null != C,
+                    plated: null != E,
                     onMouseEnter: () => {
                         (b(), M.onMouseEnter());
                     },
@@ -963,7 +963,7 @@ function tc(e) {
                 }),
                 W &&
                     (0, i.jsx)(f.yRy, {
-                        targetElementRef: E,
+                        targetElementRef: C,
                         position: 'top',
                         align: 'left',
                         nudgeAlignIntoViewport: !1,
@@ -1031,7 +1031,7 @@ function tc(e) {
                                                     e9(
                                                         {
                                                             ref: S,
-                                                            plated: null != C,
+                                                            plated: null != E,
                                                             tooltipForceOpen: Q,
                                                             tooltipColor: Q ? f.FGA.GREEN : void 0,
                                                             tooltipContentClassName: Q ? e4.voiceFilterWarning : void 0,

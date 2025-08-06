@@ -1,8 +1,8 @@
-n.d(t, { Ji: () => o });
+n.d(t, { Ji: () => a });
 var r = n(818083);
 (n(638395), n(171393));
 var i = n(987338);
-let a = (0, r.B)({
+let o = (0, r.B)({
     kind: 'user',
     id: '2024-07_icymi',
     label: 'In-case-you-missed-it tab',
@@ -55,9 +55,9 @@ let a = (0, r.B)({
             }
         ]
     }));
-function o(e) {
+function a(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-    return a.getCurrentConfig(
+    return o.getCurrentConfig(
         { location: e },
         {
             disable: !0,

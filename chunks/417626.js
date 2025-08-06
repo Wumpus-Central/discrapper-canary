@@ -1,8 +1,8 @@
 n.d(t, { Z: () => u });
 var r,
     i = n(442837),
-    a = n(570140);
-function o(e, t, n) {
+    o = n(570140);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -24,5 +24,5 @@ class c extends (r = i.ZP.Store) {
         return s;
     }
 }
-o(c, 'displayName', 'ProxyBlockStore');
-let u = new c(a.Z, { PROXY_BLOCKED_REQUEST: l });
+a(c, 'displayName', 'ProxyBlockStore');
+let u = new c(o.Z, { PROXY_BLOCKED_REQUEST: l });

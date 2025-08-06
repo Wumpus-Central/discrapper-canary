@@ -4,8 +4,8 @@ n.d(t, {
 });
 var r = n(73800),
     i = n(442837),
-    a = n(783097),
-    o = n(176412),
+    o = n(783097),
+    a = n(176412),
     s = n(749681),
     l = n(258971),
     c = n(592125),
@@ -19,11 +19,11 @@ var r = n(73800),
     g = n(49898),
     E = n(388032);
 function b(e) {
-    let { isDiscoverable: t, customInstallUrl: n, installParams: r, integrationTypesConfig: o } = e,
+    let { isDiscoverable: t, customInstallUrl: n, installParams: r, integrationTypesConfig: a } = e,
         s = (0, p.Eb)({
             customInstallUrl: n,
             installParams: r,
-            integrationTypesConfig: o
+            integrationTypesConfig: a
         }),
         l = (0, i.e7)([f.Z], () => {
             var e;
@@ -37,13 +37,13 @@ function b(e) {
             },
             []
         ),
-        h = (0, a.PZ)(e, l) && _,
+        h = (0, o.PZ)(e, l) && _,
         g = t || h;
     return {
         isDiscoverable: t,
         customInstallUrl: n,
         installParams: r,
-        integrationTypesConfig: o,
+        integrationTypesConfig: a,
         canViewApp: g,
         canOpenAppLauncher: h,
         isInstallable: s,
@@ -51,19 +51,19 @@ function b(e) {
     };
 }
 function y(e, t) {
-    let { canViewApp: n, canOpenAppLauncher: i, isInstallable: a, customInstallUrl: c, installParams: u, integrationTypesConfig: d, selectedGuildId: f } = b(e);
+    let { canViewApp: n, canOpenAppLauncher: i, isInstallable: o, customInstallUrl: c, installParams: u, integrationTypesConfig: d, selectedGuildId: f } = b(e);
     return r.useMemo(
         () =>
             n
                 ? () => {
-                      if ((null == t || t(), i)) return void (0, o.X)(e.id);
+                      if ((null == t || t(), i)) return void (0, a.X)(e.id);
                       (0, s.transitionToGlobalDiscovery)({
                           tab: g.GlobalDiscoveryTab.APPS,
                           applicationId: e.id,
                           newSessionState: { entrypoint: { name: l.xF.APPLICATION_MESSAGE_EMBED } }
                       });
                   }
-                : a
+                : o
                   ? () => {
                         (null == t || t(),
                             (0, _.L)({
@@ -76,7 +76,7 @@ function y(e, t) {
                             }));
                     }
                   : void 0,
-        [e.id, i, n, c, u, d, a, t, f]
+        [e.id, i, n, c, u, d, o, t, f]
     );
 }
 function O(e) {

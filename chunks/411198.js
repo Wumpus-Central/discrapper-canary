@@ -15,13 +15,13 @@
     sp: () => g,
     wD: () => h,
     yS: () => S,
-    z$: () => w
+    z$: () => R
 }),
     n(953529));
 var r = n(512722),
     i = n.n(r),
-    a = n(843991),
-    o = n(311929),
+    o = n(843991),
+    a = n(311929),
     s = n(601964),
     l = n(981631);
 function c(e, t, n) {
@@ -77,11 +77,11 @@ function f(e, t) {
     );
 }
 function _(e) {
-    return (0, o.Wh)(s.VI, e);
+    return (0, a.Wh)(s.VI, e);
 }
 function p(e, t, n) {
-    var r, i, l, c, u, d, f, _, p, h, m, g, E, b, y, O, v, I, T, S, A, N, C, w, R, D, x;
-    return (0, o.oI)(s.VI, n, {
+    var r, i, l, c, u, d, f, _, p, h, m, g, E, b, y, O, v, I, T, S, A, N, C, R, P, D, x;
+    return (0, a.oI)(s.VI, n, {
         id: e.id,
         joinedAt: t.joinedAt,
         premiumSubscriberCount: t.premiumSubscriberCount,
@@ -91,7 +91,7 @@ function p(e, t, n) {
         splash: null != (l = e.splash) ? l : null,
         banner: null != (c = e.banner) ? c : null,
         homeHeader: null != (u = e.home_header) ? u : null,
-        features: (0, a.G)(e.features),
+        features: (0, o.G)(e.features),
         preferredLocale: null != (d = e.preferred_locale) ? d : s.Cx.preferredLocale,
         ownerId: e.owner_id,
         application_id: null != (f = e.application_id) ? f : null,
@@ -114,28 +114,28 @@ function p(e, t, n) {
         maxVideoChannelUsers: null != (A = e.max_video_channel_users) ? A : s.Cx.maxVideoChannelUsers,
         maxMembers: null != (N = e.max_members) ? N : s.Cx.maxMembers,
         nsfwLevel: null != (C = e.nsfw_level) ? C : s.Cx.nsfwLevel,
-        ownerConfiguredContentLevel: null != (w = e.owner_configured_content_level) ? w : null,
-        hubType: null != (R = e.hub_type) ? R : null,
+        ownerConfiguredContentLevel: null != (R = e.owner_configured_content_level) ? R : null,
+        hubType: null != (P = e.hub_type) ? P : null,
         latestOnboardingQuestionId: null != (D = e.latest_onboarding_question_id) ? D : null,
         profile: null != (x = e.profile) ? x : null,
-        premiumFeatures: null != e.premium_features ? P(e.premium_features) : null,
+        premiumFeatures: null != e.premium_features ? w(e.premium_features) : null,
         moderatorReporting: null != e.moderator_reporting ? L(e.moderator_reporting) : null
     });
 }
 function h(e, t) {
     var n, r;
-    let a = null != e.joined_at ? new Date(e.joined_at) : null != (n = null == t ? void 0 : t.joinedAt) ? n : null,
+    let o = null != e.joined_at ? new Date(e.joined_at) : null != (n = null == t ? void 0 : t.joinedAt) ? n : null,
         s = null != (r = e.premium_subscription_count) ? r : 0;
     return null == e.properties
         ? (i()(null != t, 'If guild.properties is null, existingGuild must be passed in'),
-          (0, o.TS)(t, {
-              joinedAt: a,
+          (0, a.TS)(t, {
+              joinedAt: o,
               premiumSubscriberCount: s
           }))
         : p(
               e.properties,
               {
-                  joinedAt: a,
+                  joinedAt: o,
                   premiumSubscriberCount: s
               },
               t
@@ -179,14 +179,14 @@ function E(e, t) {
     );
 }
 function b(e) {
-    return w({
+    return R({
         id: e.id,
         name: e.name,
         description: e.description,
         icon: e.icon,
         splash: e.splash,
         banner: e.banner,
-        features: (0, a.G)(e.features),
+        features: (0, o.G)(e.features),
         verificationLevel: e.verification_level,
         vanityURLCode: e.vanity_url_code,
         premiumSubscriberCount: e.premium_subscription_count,
@@ -197,19 +197,19 @@ function b(e) {
 }
 function y(e) {
     var t, n;
-    return w({
+    return R({
         id: e.id,
         name: e.name,
         description: e.description,
         icon: e.icon,
         premiumSubscriberCount: null != (t = e.premiumSubscriberCount) ? t : s.Cx.premiumSubscriberCount,
         premiumTier: null != (n = e.premiumTier) ? n : s.Cx.premiumTier,
-        features: (0, a.G)(e.features)
+        features: (0, o.G)(e.features)
     });
 }
 function O(e) {
     var t;
-    return w({
+    return R({
         id: e.id,
         name: e.name,
         icon: null != (t = e.icon) ? t : null
@@ -217,53 +217,53 @@ function O(e) {
 }
 function v(e) {
     var t, n, r;
-    return w({
+    return R({
         id: e.id,
         name: e.name,
         icon: null != (t = e.icon) ? t : null,
         description: null != (n = e.description) ? n : null,
         splash: null != (r = e.splash) ? r : null,
-        features: (0, a.G)(e.features)
+        features: (0, o.G)(e.features)
     });
 }
 function I(e) {
     var t, n, r, i;
-    return w({
+    return R({
         id: e.guildId,
         name: null != (t = e.name) ? t : '',
         icon: null != (n = e.icon) ? n : null,
         description: null != (r = e.description) ? r : null,
         splash: null != (i = e.splash) ? i : null,
-        features: (0, a.G)(e.features)
+        features: (0, o.G)(e.features)
     });
 }
 function T(e) {
     var t, n, r, i;
-    return w({
+    return R({
         id: e.id,
         name: e.name,
         icon: null != (t = e.icon) ? t : null,
         description: null != (n = e.description) ? n : null,
         splash: null != (r = e.splash) ? r : null,
-        features: (0, a.G)(e.features),
+        features: (0, o.G)(e.features),
         verificationLevel: null != (i = e.verification_level) ? i : s.Cx.verificationLevel
     });
 }
 function S(e) {
     var t, n, r, i;
-    return w({
+    return R({
         id: e.id,
         name: e.name,
         icon: null != (t = e.icon) ? t : null,
         description: null != (n = e.description) ? n : null,
         splash: null != (r = e.splash) ? r : null,
         discoverySplash: null != (i = e.discovery_splash) ? i : null,
-        features: (0, a.G)(e.features)
+        features: (0, o.G)(e.features)
     });
 }
 function A(e) {
-    var t, n, r, i, o, l;
-    return R({
+    var t, n, r, i, a, l;
+    return P({
         id: e.id,
         name: e.name || '',
         description: e.description || null,
@@ -272,7 +272,7 @@ function A(e) {
         splash: e.splash || null,
         banner: e.banner || null,
         homeHeader: e.homeHeader || null,
-        features: (0, a.G)(e.features),
+        features: (0, o.G)(e.features),
         preferredLocale: e.preferredLocale || s.Cx.preferredLocale,
         afkChannelId: e.afkChannelId || null,
         afkTimeout: e.afkTimeout,
@@ -300,7 +300,7 @@ function A(e) {
         hubType: e.hubType,
         latestOnboardingQuestionId: null != (r = e.latestOnboardingQuestionId) ? r : null,
         profile: null != (i = e.profile) ? i : null,
-        premiumFeatures: null != (o = e.premiumFeatures) ? o : null,
+        premiumFeatures: null != (a = e.premiumFeatures) ? a : null,
         moderatorReporting: null != (l = e.moderatorReporting) ? l : null
     });
 }
@@ -349,18 +349,18 @@ function N(e) {
 }
 function C(e) {
     let t = f(u({}, e), {
-        features: (0, a.G)(e.features),
+        features: (0, o.G)(e.features),
         joinedAt: null != e.joinedAt ? new Date(e.joinedAt) : null
     });
-    return (delete t.roles, delete t.member, R(t));
-}
-function w(e) {
-    return R(u({}, s.Cx, e));
+    return (delete t.roles, delete t.member, P(t));
 }
 function R(e) {
-    return (0, o.bk)(s.VI, e);
+    return P(u({}, s.Cx, e));
 }
 function P(e) {
+    return (0, a.bk)(s.VI, e);
+}
+function w(e) {
     return {
         features: e.features,
         additionalEmojiSlots: e.additional_emoji_slots,

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => g });
 var r,
     i = n(442837),
-    a = n(570140),
-    o = n(155268),
+    o = n(570140),
+    a = n(155268),
     s = n(408491);
 function l(e, t, n) {
     return (
@@ -59,7 +59,7 @@ function d(e, t) {
 let f = null;
 function _(e) {
     let { applicationId: t } = e,
-        n = (0, o.ZP)(t);
+        n = (0, a.ZP)(t);
     null != n &&
         (null != f && (f = null),
         (f = {
@@ -89,7 +89,7 @@ class m extends (r = i.ZP.Store) {
     }
 }
 l(m, 'displayName', 'FramesStore');
-let g = new m(a.Z, {
+let g = new m(o.Z, {
     FRAME_LAUNCH: _,
     FRAME_STOP: p,
     FRAME_UPDATE_LAYOUT_MODE: h

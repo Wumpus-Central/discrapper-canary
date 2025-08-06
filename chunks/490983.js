@@ -1,9 +1,9 @@
-(n.d(t, { Z: () => J }), n(388685), n(642613), n(583741));
+(n.d(t, { Z: () => $ }), n(388685), n(642613), n(583741));
 var r,
     i = n(658722),
-    a = n.n(i),
-    o = n(392711),
-    s = n.n(o),
+    o = n.n(i),
+    a = n(392711),
+    s = n.n(a),
     l = n(913527),
     c = n.n(l),
     u = n(442837),
@@ -25,9 +25,9 @@ var r,
     A = n(823379),
     N = n(780570),
     C = n(358085),
-    w = n(998502),
-    R = n(804739),
-    P = n(7956),
+    R = n(998502),
+    P = n(804739),
+    w = n(7956),
     D = n(981631);
 function L(e, t, n) {
     return (
@@ -43,15 +43,15 @@ function L(e, t, n) {
     );
 }
 let x = 5,
-    k = c()().subtract(1, 'week'),
-    j = [],
-    M = '',
+    M = c()().subtract(1, 'week'),
+    k = [],
+    j = '',
     U = !1;
 function G(e, t) {
     return e.application.name.localeCompare(t.application.name, h.default.locale, { sensitivity: 'base' });
 }
 function B(e, t) {
-    return null != e && c()(e.createdAt).isAfter(k) && 0 === t;
+    return null != e && c()(e.createdAt).isAfter(M) && 0 === t;
 }
 let Z = {
         [D.iEv.NAME]: G,
@@ -65,12 +65,12 @@ let Z = {
     },
     F = (0, S.oH)((e) => e.filter((e) => null != e.libraryApplication && e.shouldShowInLibrary)),
     V = (0, S.oH)((e) => e.filter((e) => null != e.libraryApplication && v.Z.isLaunchable(e.libraryApplication.id, e.libraryApplication.branchId))),
-    H = (0, S.oH)((e, t) => e.filter((e) => a()(t.toLowerCase(), e.application.name.toLowerCase()))),
+    H = (0, S.oH)((e, t) => e.filter((e) => o()(t.toLowerCase(), e.application.name.toLowerCase()))),
     Y = (0, S.oH)((e, t, n, r) => {
         let i = Z[t];
         if (null == i) return e;
-        let a = [...e].sort(i);
-        return n === D.sHY.DESCENDING ? a.reverse() : a;
+        let o = [...e].sort(i);
+        return n === D.sHY.DESCENDING ? o.reverse() : o;
     }),
     W = (0, S.oH)((e) => e.filter((e) => null != e.libraryApplication && e.libraryApplication.isHidden()));
 function K(e, t) {
@@ -81,24 +81,24 @@ function K(e, t) {
 }
 function z(e) {
     let { query: t } = e;
-    M = t;
+    j = t;
 }
 function q(e, t, n, r, i) {
     if (!i && t.has(e.id)) return null;
-    let a = f.Z.getApplication(e.id);
-    if (null == a) return null;
-    let o = K(a, n);
+    let o = f.Z.getApplication(e.id);
+    if (null == o) return null;
+    let a = K(o, n);
     return (t.add(e.id), (0, N.Je)(e) || v.Z.isInstalled(e.id, e.branchId))
         ? {
               key: ''.concat(e.id, '-').concat(e.branchId),
-              application: a,
+              application: o,
               libraryApplication: e,
-              lastPlayed: o,
+              lastPlayed: a,
               supportsCloudSync: null != e && v.Z.supportsCloudSync(e.id, e.branchId),
-              isNew: B(e, o),
+              isNew: B(e, a),
               isLaunching: p.Z.launchingGames.has(e.id),
               isRunning: r.has(e.id),
-              isLaunchable: (0, R.t)({
+              isLaunchable: (0, P.t)({
                   LibraryApplicationStore: E.Z,
                   LaunchableGameStore: p.Z,
                   DispatchApplicationStore: v.Z,
@@ -107,26 +107,26 @@ function q(e, t, n, r, i) {
                   branchId: e.branchId
               }),
               isUpdatingFlags: E.Z.isUpdatingFlags(e.id, e.branchId),
-              shouldShowInLibrary: (0, N.d0)(a, e, b.Z),
-              defaultAction: (0, P.i)(e, v.Z, I.Z)
+              shouldShowInLibrary: (0, N.d0)(o, e, b.Z),
+              defaultAction: (0, w.i)(e, v.Z, I.Z)
           }
         : null;
 }
-function $(e, t, n, r) {
+function X(e, t, n, r) {
     let i = null != e ? f.Z.getApplication(e) : null;
     if (null == i || null == e || t.has(e)) return null;
-    let a = K(i, n);
+    let o = K(i, n);
     return (
         t.add(e),
         {
             key: e,
             application: i,
-            lastPlayed: a,
+            lastPlayed: o,
             supportsCloudSync: !1,
             isNew: !1,
             isLaunching: p.Z.launchingGames.has(e),
             isRunning: r.has(e),
-            isLaunchable: (0, R.t)({
+            isLaunchable: (0, P.t)({
                 LibraryApplicationStore: E.Z,
                 LaunchableGameStore: p.Z,
                 DispatchApplicationStore: v.Z,
@@ -141,7 +141,7 @@ function $(e, t, n, r) {
         }
     );
 }
-function X() {
+function Q() {
     let e = new Set(_.ZP.getRunningVerifiedApplicationIds()),
         t = {},
         n = new Set(),
@@ -152,48 +152,48 @@ function X() {
         i = Object.values(E.Z.getAllLibraryApplications())
             .map((r) => q(r, n, t, e, !0))
             .filter(A.lm),
-        a = [...r.map((r) => $(r, n, t, e)).filter(A.lm), ...i].sort((e, t) => (e.lastPlayed === t.lastPlayed ? 0 : e.lastPlayed > t.lastPlayed ? -1 : 1));
+        o = [...r.map((r) => X(r, n, t, e)).filter(A.lm), ...i].sort((e, t) => (e.lastPlayed === t.lastPlayed ? 0 : e.lastPlayed > t.lastPlayed ? -1 : 1));
     return (
         (U = null != g.Z.lastFetched && E.Z.fetched),
-        !s().isEqual(a, j) &&
-            ((j = a),
+        !s().isEqual(o, k) &&
+            ((k = o),
             C.isPlatformEmbedded &&
-                w.ZP.setSystemTrayApplications(
-                    V(j)
+                R.ZP.setSystemTrayApplications(
+                    V(k)
                         .map((e) => e.application)
                         .slice(0, x)
                 ),
             !0)
     );
 }
-class Q extends (r = u.ZP.Store) {
+class J extends (r = u.ZP.Store) {
     initialize() {
-        (this.syncWith([f.Z, g.Z, p.Z, _.ZP, v.Z, I.Z, E.Z, y.Z, b.Z, m.Z], X, 200), this.syncWith([O.Z, h.default], () => !0));
+        (this.syncWith([f.Z, g.Z, p.Z, _.ZP, v.Z, I.Z, E.Z, y.Z, b.Z, m.Z], Q, 200), this.syncWith([O.Z, h.default], () => !0));
     }
     get applicationFilterQuery() {
-        return M;
-    }
-    get applicationViewItems() {
         return j;
     }
+    get applicationViewItems() {
+        return k;
+    }
     get launchableApplicationViewItems() {
-        return V(j);
+        return V(k);
     }
     get libraryApplicationViewItems() {
-        return F(j);
+        return F(k);
     }
     get filteredLibraryApplicationViewItems() {
-        return H(this.libraryApplicationViewItems, M);
+        return H(this.libraryApplicationViewItems, j);
     }
     get sortedFilteredLibraryApplicationViewItems() {
         return Y(this.filteredLibraryApplicationViewItems, O.Z.sortKey, O.Z.sortDirection, h.default.locale);
     }
     get hiddenLibraryApplicationViewItems() {
-        return W(j);
+        return W(k);
     }
     get hasFetchedApplications() {
         return U;
     }
 }
-L(Q, 'displayName', 'ApplicationViewStore');
-let J = new Q(d.Z, { LIBRARY_APPLICATION_FILTER_UPDATE: z });
+L(J, 'displayName', 'ApplicationViewStore');
+let $ = new J(d.Z, { LIBRARY_APPLICATION_FILTER_UPDATE: z });

@@ -1,9 +1,9 @@
 (n.d(t, { Z: () => O }), n(388685), n(415506));
 var r = n(255367),
     i = n(73800),
-    a = n(245364),
-    o = n(120356),
-    s = n.n(o),
+    o = n(245364),
+    a = n(120356),
+    s = n.n(a),
     l = n(846519),
     c = n(481060),
     u = n(609194),
@@ -19,19 +19,19 @@ var h = n(122289),
     b = n(106194);
 let y = new Set([p.h8.SKU_SELECT, p.h8.AWAITING_AUTHENTICATION, p.h8.AWAITING_PURCHASE_TOKEN_AUTH, p.h8.CONFIRM]);
 function O(e) {
-    let { steps: t, currentStep: n, body: o, overrideKey: O, paymentError: v, header: I, footer: T, isGift: S = !1, giftMessage: A = E.intl.string(E.t.DrgnS0), hideBreadcrumbs: N = !1, isLoading: C = !1, purchaseError: w, purchaseErrorBlockRef: R, planError: P, onScroll: D, scrollerClassName: L, hasCurrencies: x = !1 } = e,
-        k = null;
-    null != v && null == (0, p.ly)(v) ? (k = v) : null != w ? (k = w) : null != P && (k = P);
-    let j = null != k ? k.message : '';
-    null != k && k instanceof d.HF && (k.code === f.SM.CARD_DECLINED && x && (j += ' '.concat(E.intl.string(E.t.iWvwQU))), k.code === f.SM.INVALID_GIFT_REDEMPTION_FRAUD_REJECTED && (j = E.intl.string(E.t.ypuSd3)), k.code === g.evJ.BILLING_NON_REFUNDABLE_PAYMENT_SOURCE && (j = E.intl.string(E.t.mXMmWF)));
-    let { stripe: M } = (0, _.JL)();
-    C = C || null == M;
+    let { steps: t, currentStep: n, body: a, overrideKey: O, paymentError: v, header: I, footer: T, isGift: S = !1, giftMessage: A = E.intl.string(E.t.DrgnS0), hideBreadcrumbs: N = !1, isLoading: C = !1, purchaseError: R, purchaseErrorBlockRef: P, planError: w, onScroll: D, scrollerClassName: L, hasCurrencies: x = !1 } = e,
+        M = null;
+    null != v && null == (0, p.ly)(v) ? (M = v) : null != R ? (M = R) : null != w && (M = w);
+    let k = null != M ? M.message : '';
+    null != M && M instanceof d.HF && (M.code === f.SM.CARD_DECLINED && x && (k += ' '.concat(E.intl.string(E.t.iWvwQU))), M.code === f.SM.INVALID_GIFT_REDEMPTION_FRAUD_REJECTED && (k = E.intl.string(E.t.ypuSd3)), M.code === g.evJ.BILLING_NON_REFUNDABLE_PAYMENT_SOURCE && (k = E.intl.string(E.t.mXMmWF)));
+    let { stripe: j } = (0, _.JL)();
+    C = C || null == j;
     let U = i.useRef(new l.V7());
     i.useEffect(() => {
         let e = U.current;
         return (
-            null != M || e.isStarted()
-                ? null != M && e.stop()
+            null != j || e.isStarted()
+                ? null != j && e.stop()
                 : e.start(10 * m.Z.Millis.SECOND, () => {
                       let e = Error('Stripe took too long to load');
                       (0, h.q2)(e);
@@ -40,11 +40,11 @@ function O(e) {
                 e.stop();
             }
         );
-    }, [M]);
+    }, [j]);
     let G = t.includes(p.h8.PAYMENT_TYPE) ? p.h8.PAYMENT_TYPE : p.h8.ADD_PAYMENT_STEPS;
-    return (0, r.jsxs)(a.Elements, {
+    return (0, r.jsxs)(o.Elements, {
         options: g.OBo,
-        stripe: M,
+        stripe: j,
         children: [
             I,
             (0, r.jsxs)('div', {
@@ -76,13 +76,13 @@ function O(e) {
                     (0, r.jsxs)('div', {
                         className: b.bodyWrapper,
                         children: [
-                            null == k
+                            null == M
                                 ? null
                                 : (0, r.jsx)('div', {
                                       className: b.errorBlockWrapper,
                                       children: (0, r.jsx)(c.kzN, {
-                                          ref: R,
-                                          children: j
+                                          ref: P,
+                                          children: k
                                       })
                                   }),
                             C
@@ -99,7 +99,7 @@ function O(e) {
                                       children: (0, r.jsx)(c.h21, {
                                           onScroll: D,
                                           className: s()(b.scroller, L),
-                                          children: o
+                                          children: a
                                       })
                                   })
                         ]

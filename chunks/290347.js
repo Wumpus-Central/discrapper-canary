@@ -195,17 +195,20 @@ function P(e) {
             );
         }, [P, R]),
         (0, r.jsxs)(s.Y0X, {
+            'data-migration-pending': !0,
             className: a()(v.root, t),
             transitionState: U,
             'aria-labelledby': G,
             parentComponent: 'PremiumAnnouncementModalVariant1',
             children: [
                 (0, r.jsx)(s.olH, {
+                    'data-migration-pending': !0,
                     className: v.closeButton,
                     onClick: M
                 }),
                 null == j ? void 0 : j(),
                 (0, r.jsxs)(s.hzk, {
+                    'data-migration-pending': !0,
                     className: v.content,
                     children: [
                         (0, r.jsx)(s.X6q, {

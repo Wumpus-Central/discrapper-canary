@@ -2,8 +2,8 @@ n.d(t, { Z: () => O });
 var r = n(255367);
 n(73800);
 var i = n(442837),
-    a = n(481060),
-    o = n(194359),
+    o = n(481060),
+    a = n(194359),
     s = n(631937),
     l = n(702321),
     c = n(377171),
@@ -74,7 +74,7 @@ function O(e) {
         v = t.isSystemDM(),
         I = b && !v && !t.isMultiUserDM(),
         T = () => {
-            o.Z.unblockUser(t.getRecipientId());
+            a.Z.unblockUser(t.getRecipientId());
         },
         S = {};
     if (v) {
@@ -93,7 +93,7 @@ function O(e) {
                 ? (0, r.jsxs)(r.Fragment, {
                       children: [
                           m.intl.string(m.t['+KSnWV']),
-                          (0, r.jsx)(a.rgF, {
+                          (0, r.jsx)(o.rgF, {
                               size: 'xs',
                               color: c.Z.HEADER_PRIMARY
                           })

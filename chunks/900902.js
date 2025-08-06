@@ -1,15 +1,15 @@
 n.d(t, { Z: () => p });
 var r = n(255367),
     i = n(73800),
-    a = n(901461),
-    o = n(453687),
+    o = n(901461),
+    a = n(453687),
     s = n(464891),
     l = n(318713),
     c = n(507418),
     u = n(348238),
     d = n(981631);
 let f = i.memo(function (e) {
-        let { message: t, channel: n, compact: a = !1, groupId: o, isGroupStart: l, usernameProfile: f, avatarProfile: _, setPopout: p, author: h, repliedMessage: m, roleIcon: g } = e,
+        let { message: t, channel: n, compact: o = !1, groupId: a, isGroupStart: l, usernameProfile: f, avatarProfile: _, setPopout: p, author: h, repliedMessage: m, roleIcon: g } = e,
             E = (0, u.wq)(t.author.id, n.id),
             b = (0, u.XO)(t, n, f, p),
             y = (0, u.R9)(_, p),
@@ -26,9 +26,9 @@ let f = i.memo(function (e) {
             channel: n,
             repliedMessage: m,
             author: h,
-            compact: a,
-            subscribeToGroupId: o,
-            showTimestampOnHover: !l && a && t.type !== d.uaV.REPLY,
+            compact: o,
+            subscribeToGroupId: a,
+            showTimestampOnHover: !l && o && t.type !== d.uaV.REPLY,
             renderPopout: c.Z,
             showAvatarPopout: _,
             showUsernamePopout: f,
@@ -44,7 +44,7 @@ function p(e) {
     let { messageProps: t, setPopout: n, messagePopouts: i, replyReference: s, author: l, repliedMessage: c, roleIcon: u } = e,
         { message: d, compact: p, channel: h, groupId: m } = t,
         { usernameProfile: g, avatarProfile: E } = i;
-    if ((0, a.Z)(d)) return null;
+    if ((0, o.Z)(d)) return null;
     let b = d.id === m;
     return b || p || null != s
         ? (0, r.jsx)(f, {
@@ -65,7 +65,7 @@ function p(e) {
               compact: !0,
               timestamp: d.timestamp,
               isInline: !1,
-              id: (0, o.Dv)(d),
+              id: (0, a.Dv)(d),
               isVisibleOnlyOnHover: !0,
               cozyAlt: !0
           });

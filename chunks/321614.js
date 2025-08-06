@@ -4,8 +4,8 @@ n.d(t, {
 });
 var r = n(818083),
     i = n(984134),
-    a = n(345655);
-let o = (0, r.B)({
+    o = n(345655);
+let a = (0, r.B)({
     kind: 'user',
     id: '2025-05_input_profiles_experiment_web',
     label: 'Audio input profiles (studio mode)',
@@ -15,7 +15,7 @@ let o = (0, r.B)({
             id: 1,
             label: 'Show Voice Isolation, Studio, and Custom',
             config: {
-                enabledInputProfiles: [a._.VOICE_ISOLATION, a._.STUDIO, a._.CUSTOM]
+                enabledInputProfiles: [o._.VOICE_ISOLATION, o._.STUDIO, o._.CUSTOM]
             }
         }
     ]
@@ -23,7 +23,7 @@ let o = (0, r.B)({
 function s(e) {
     let { location: t, autoTrackExposure: n = !0 } = e,
         { isInHoldout: r } = i.Y.getCurrentConfig({ location: t }, { autoTrackExposure: n });
-    return o.getCurrentConfig(
+    return a.getCurrentConfig(
         { location: t },
         {
             disable: r,
@@ -34,7 +34,7 @@ function s(e) {
 function l(e) {
     let { location: t, autoTrackExposure: n = !0 } = e,
         { isInHoldout: r } = i.Y.useExperiment({ location: t }, { autoTrackExposure: n });
-    return o.useExperiment(
+    return a.useExperiment(
         { location: t },
         {
             disable: r,

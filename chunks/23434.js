@@ -1,8 +1,8 @@
 n.d(t, { Z: () => u });
 var r,
     i = n(442837),
-    a = n(570140);
-function o(e, t, n) {
+    o = n(570140);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -27,8 +27,8 @@ class l extends (r = i.ZP.Store) {
 function c(e) {
     s = e.requiredAction;
 }
-o(l, 'displayName', 'UserRequiredActionStore');
-let u = new l(a.Z, {
+a(l, 'displayName', 'UserRequiredActionStore');
+let u = new l(o.Z, {
     CONNECTION_OPEN: c,
     USER_REQUIRED_ACTION_UPDATE: c
 });

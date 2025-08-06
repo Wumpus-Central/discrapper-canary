@@ -1,8 +1,8 @@
 (n.d(t, { z: () => N }), n(388685));
 var r = n(255367),
     i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(913527),
     l = n.n(s),
     c = n(692547),
@@ -95,10 +95,10 @@ function v(e, t) {
             return null;
     }
 }
-function I(e, t, n, i, a) {
+function I(e, t, n, i, o) {
     switch (e) {
         case 1:
-            return a > 0 ? h.intl.formatToPlainString(h.t.PQlCWl, { minutes: a }) : h.intl.string(h.t.WINqKS);
+            return o > 0 ? h.intl.formatToPlainString(h.t.PQlCWl, { minutes: o }) : h.intl.string(h.t.WINqKS);
         case 2:
             return h.intl.string(h.t.WINqKS);
         case 3:
@@ -123,13 +123,13 @@ function I(e, t, n, i, a) {
 }
 function T(e) {
     let t,
-        { timeStatus: n, textBrand: r, textPositive: i, textDanger: a, endDateTimeString: o, startDateTimeString: s } = e,
+        { timeStatus: n, textBrand: r, textPositive: i, textDanger: o, endDateTimeString: a, startDateTimeString: s } = e,
         l = u.Que,
         c = r,
         d = 'header-secondary';
     switch (n) {
         case 3:
-            ((c = i), (d = null != o ? void 0 : 'text-feedback-positive'));
+            ((c = i), (d = null != a ? void 0 : 'text-feedback-positive'));
             break;
         case 4:
             l = u.T39;
@@ -139,7 +139,7 @@ function T(e) {
             ((d = 'text-brand'), (t = s));
             break;
         case 5:
-            c = a;
+            c = o;
     }
     return {
         Icon: l,
@@ -162,7 +162,7 @@ function S() {
 function A(e) {
     let { children: t, className: n, tooltipText: i } = e;
     return (0, r.jsx)('div', {
-        className: o()(m.eventStatusContainer, n),
+        className: a()(m.eventStatusContainer, n),
         children: (0, r.jsx)(u.ua7, {
             position: 'right',
             text: i,
@@ -171,7 +171,7 @@ function A(e) {
                 (0, r.jsx)(
                     'div',
                     y(E({}, e), {
-                        className: o()(m.eventStatusContainer, n),
+                        className: a()(m.eventStatusContainer, n),
                         children: t
                     })
                 )
@@ -179,13 +179,13 @@ function A(e) {
     });
 }
 function N(e) {
-    let { startTime: t, status: n, eventType: a, className: s, endTime: _, liveText: g, textVariant: E = 'text-sm/semibold', isNew: b, recurrenceRule: y, guildEventId: N, recurrenceId: C } = e,
-        w = (0, u.dQu)(c.Z.colors.TEXT_BRAND).hex(),
-        R = (0, u.dQu)(c.Z.colors.TEXT_FEEDBACK_POSITIVE).hex(),
-        P = (0, u.dQu)(c.Z.colors.TEXT_DANGER).hex();
-    null == g && (g = a === p.WX.EXTERNAL ? h.intl.string(h.t.IyZxjI) : h.intl.string(h.t['X2K3//']));
+    let { startTime: t, status: n, eventType: o, className: s, endTime: _, liveText: g, textVariant: E = 'text-sm/semibold', isNew: b, recurrenceRule: y, guildEventId: N, recurrenceId: C } = e,
+        R = (0, u.dQu)(c.Z.colors.TEXT_BRAND).hex(),
+        P = (0, u.dQu)(c.Z.colors.TEXT_FEEDBACK_POSITIVE).hex(),
+        w = (0, u.dQu)(c.Z.colors.TEXT_DANGER).hex();
+    null == g && (g = o === p.WX.EXTERNAL ? h.intl.string(h.t.IyZxjI) : h.intl.string(h.t['X2K3//']));
     let D = (0, d.Z)(C, N),
-        [{ startDateTimeString: L, endDateTimeString: x, currentOrPastEvent: k, upcomingEvent: j, diffMinutes: M }, U] = i.useState((0, f.ub)(t, _));
+        [{ startDateTimeString: L, endDateTimeString: x, currentOrPastEvent: M, upcomingEvent: k, diffMinutes: j }, U] = i.useState((0, f.ub)(t, _));
     i.useEffect(() => {
         U((0, f.ub)(t, _));
         let e = setInterval(() => U((0, f.ub)(t, _)), 1000);
@@ -200,8 +200,8 @@ function N(e) {
             start: L,
             end: x
         }));
-    let B = i.useMemo(() => (n === p.p1.CANCELED || (null == D ? void 0 : D.is_canceled) ? 5 : n === p.p1.ACTIVE ? 3 : p.$I.has(n) ? 4 : k ? 2 : +!!j), [n, null == D ? void 0 : D.is_canceled, k, j]),
-        Z = I(B, G, g, x, M),
+    let B = i.useMemo(() => (n === p.p1.CANCELED || (null == D ? void 0 : D.is_canceled) ? 5 : n === p.p1.ACTIVE ? 3 : p.$I.has(n) ? 4 : M ? 2 : +!!k), [n, null == D ? void 0 : D.is_canceled, M, k]),
+        Z = I(B, G, g, x, j),
         {
             Icon: F,
             iconColor: V,
@@ -211,13 +211,13 @@ function N(e) {
             () =>
                 T({
                     timeStatus: B,
-                    textBrand: w,
-                    textPositive: R,
-                    textDanger: P,
+                    textBrand: R,
+                    textPositive: P,
+                    textDanger: w,
                     endDateTimeString: x,
                     startDateTimeString: L
                 }),
-            [B, w, R, P, x, L]
+            [B, R, P, w, x, L]
         ),
         W = null;
     if (null != y) {
@@ -227,7 +227,7 @@ function N(e) {
         W = v((0, f.zi)(n, y), n);
     }
     return (0, r.jsxs)(A, {
-        className: o()(s, { [m.isRecurring]: null != W }),
+        className: a()(s, { [m.isRecurring]: null != W }),
         tooltipText: Y,
         children: [
             b && n === p.p1.SCHEDULED

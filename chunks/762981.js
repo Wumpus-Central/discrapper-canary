@@ -4,8 +4,8 @@ n.d(t, {
 });
 var r = n(255367),
     i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(66546),
     l = n(558452),
     c = n(770278),
@@ -45,9 +45,9 @@ function h(e) {
     return e !== c.f.TOP_RADIAL && e !== c.f.SUBTLE && e !== c.f.BLUR;
 }
 function m(e) {
-    let { variant: t = 'default', animationVariant: n = 'default', onClick: i, isVisible: a, disabled: c = !1, disablePointerEvents: u = !1 } = e;
+    let { variant: t = 'default', animationVariant: n = 'default', onClick: i, isVisible: o, disabled: c = !1, disablePointerEvents: u = !1 } = e;
     return (0, l.Y)(
-        a,
+        o,
         {
             keys: (e) => (e ? 'scrim' : 'empty'),
             config: d.Px,
@@ -60,7 +60,7 @@ function m(e) {
         n
             ? (0, r.jsx)(s.animated.div, {
                   role: 'none',
-                  className: o()(f.scrim, {
+                  className: a()(f.scrim, {
                       [f.lightbox]: 'lightbox' === t,
                       [f.pointerEventsNone]: u
                   }),

@@ -1,8 +1,8 @@
 (n.r(t), n.d(t, { SubscriptionDetailsModal: () => g }), n(953529));
 var r = n(255367),
     i = n(73800),
-    a = n(269210),
-    o = n(752843),
+    o = n(269210),
+    a = n(752843),
     s = n(481060),
     l = n(757746),
     c = n(930155),
@@ -33,7 +33,7 @@ function g(e) {
                     icon: (0, u.n)(g, e.icon)
                 }));
         }, [g, null == A ? void 0 : A.benefits]),
-        { openModal: w, subscriptionPurchaseButtonState: R } = (0, d.Z)({
+        { openModal: R, subscriptionPurchaseButtonState: P } = (0, d.Z)({
             skuId: y,
             initialSubscribeForGuild: null != O ? O : void 0
         });
@@ -46,12 +46,12 @@ function g(e) {
               onHeaderTitleClick: null != I ? I : b,
               onClose: b,
               footer: (0, r.jsx)(h.pV, {
-                  onClick: w,
+                  onClick: R,
                   appId: g,
                   subscriptionType: E,
                   skuId: y,
                   subscriptionPlan: S,
-                  state: R
+                  state: P
               }),
               children: (0, r.jsx)(m.i, {
                   appId: g,
@@ -60,7 +60,7 @@ function g(e) {
                       null != C
                           ? C.map((e) =>
                                 (0, r.jsx)(
-                                    a.Gm,
+                                    o.Gm,
                                     {
                                         header: e.title,
                                         icon: e.icon,
@@ -73,7 +73,7 @@ function g(e) {
                   description: null != (t = A.description) ? t : void 0,
                   imgSrc: N,
                   title: null != (n = null == S ? void 0 : S.name) ? n : A.summary,
-                  tag: (0, r.jsx)(o.Z, { type: E }),
+                  tag: (0, r.jsx)(a.Z, { type: E }),
                   FallbackIcon: s.Vh5
               })
           });

@@ -7,8 +7,8 @@ var i = n(399606),
     s = n(317381),
     o = n(16609),
     c = n(917107),
-    d = n(9145),
-    u = n(918559),
+    u = n(9145),
+    d = n(918559),
     h = n(981631);
 function p(e) {
     let { maxHeight: t, renderExternalHeader: n } = e,
@@ -28,9 +28,9 @@ function p(e) {
         m = (0, i.e7)([l.Z], () => l.Z.getWindowOpen(h.KJ3.ACTIVITY_POPOUT));
     if (!(0, a.NX)(p)) return null;
     let b = null == f ? void 0 : f.applicationId;
-    return g !== u.Ez.PANEL || null == b || m || null == p || null == f || (0, c.Z)(p)
+    return g !== d.Ez.PANEL || null == b || m || null == p || null == f || (0, c.Z)(p)
         ? null
-        : (0, r.jsx)(d.Z, {
+        : (0, r.jsx)(u.Z, {
               maxHeight: t,
               connectedLocation: f.location,
               renderExternalHeader: n

@@ -1,8 +1,8 @@
 n.d(t, { N: () => l });
 var r = n(569545),
     i = n(458725),
-    a = n(442741);
-function o(e, t, n) {
+    o = n(442741);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -26,7 +26,7 @@ function s(e) {
                 })
             )),
             r.forEach(function (t) {
-                o(e, t, n[t]);
+                a(e, t, n[t]);
             }));
     }
     return e;
@@ -42,7 +42,7 @@ let l = {
                         type: i.u.SCREENSHARE_OS_ERROR,
                         errorMessage: e.errorCode.toString()
                     },
-                    (0, a.rT)((0, r.V9)(e))
+                    (0, o.rT)((0, r.V9)(e))
                 )
             );
     },

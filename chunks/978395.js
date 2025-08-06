@@ -1,8 +1,8 @@
 n.d(t, { Z: () => D });
 var r = n(255367),
     i = n(442837),
-    a = n(481060),
-    o = n(320582),
+    o = n(481060),
+    a = n(320582),
     s = n(189156),
     l = n(699516),
     c = n(246946),
@@ -25,29 +25,29 @@ var r = n(255367),
     A = n(166584),
     N = n(915014),
     C = n(228168),
-    w = n(981631),
-    R = n(388032),
-    P = n(200669);
+    R = n(981631),
+    P = n(388032),
+    w = n(200669);
 function D(e) {
-    let { user: t, currentUser: n, displayProfile: D, guild: L, isHovering: x, onOpenProfile: k, channelId: j, onClose: M } = e,
-        U = u.ZP.useName(null == L ? void 0 : L.id, j, t),
+    let { user: t, currentUser: n, displayProfile: D, guild: L, isHovering: x, onOpenProfile: M, channelId: k, onClose: j } = e,
+        U = u.ZP.useName(null == L ? void 0 : L.id, k, t),
         { relationshipType: G, originApplicationId: B } = (0, i.cj)([l.Z], () => ({
             relationshipType: l.Z.getRelationshipType(t.id),
             originApplicationId: l.Z.getOriginApplicationId(t.id)
         })),
-        Z = (0, o.vh)(t.id),
+        Z = (0, a.vh)(t.id),
         F = (0, i.e7)([c.Z], () => c.Z.hidePersonalInformation),
         V = (0, f.b)({ location: 'UserProfilePopoutBody' }),
         H = t.id === n.id,
         Y = (0, d.I5)(n);
-    return (0, r.jsxs)(a.Ttm, {
+    return (0, r.jsxs)(o.Ttm, {
         fade: !0,
-        className: P.body,
+        className: w.body,
         children: [
             (0, r.jsx)(v.Z, {
                 user: t,
-                onOpenProfile: k,
-                onClose: M,
+                onOpenProfile: M,
+                onClose: j,
                 usernameIcon:
                     t.hasAvatarForGuild(null == L ? void 0 : L.id) &&
                     (0, r.jsx)(S.Z, {
@@ -59,7 +59,7 @@ function D(e) {
                 tags: (0, r.jsx)(_.Z, {
                     displayProfile: D,
                     themeType: C.lY.POPOUT,
-                    onClose: M
+                    onClose: j
                 }),
                 nicknameIcons: (0, r.jsxs)(r.Fragment, {
                     children: [
@@ -68,17 +68,17 @@ function D(e) {
                             (0, r.jsx)(I.Z, {
                                 userId: t.id,
                                 isHovering: x,
-                                onOpenProfile: k
+                                onOpenProfile: M
                             })
                     ]
                 })
             }),
-            G === w.OGo.PENDING_INCOMING &&
+            G === R.OGo.PENDING_INCOMING &&
                 (0, r.jsx)(O.Z.Overlay, {
                     children: (0, r.jsx)(g.Z, {
                         user: t,
                         guildId: null == L ? void 0 : L.id,
-                        channelId: j,
+                        channelId: k,
                         applicationId: B
                     })
                 }),
@@ -90,7 +90,7 @@ function D(e) {
                             user: t,
                             isGameRelationship: !0,
                             applicationId: e.applicationId,
-                            channelId: j
+                            channelId: k
                         })
                     },
                     e.applicationId
@@ -100,16 +100,16 @@ function D(e) {
             !H &&
                 (0, r.jsx)(N.Z, {
                     user: t,
-                    onOpenProfile: (e) => (null == k ? void 0 : k({ section: e }))
+                    onOpenProfile: (e) => (null == M ? void 0 : M({ section: e }))
                 }),
             t.isProvisional
                 ? (0, r.jsx)(O.Z.Overlay, {
-                      className: P.card,
+                      className: w.card,
                       children: (0, r.jsx)(b.Z, {
-                          heading: R.intl.string(R.t.Iyka0d),
-                          headingIcon: (0, r.jsx)(a.Mgn, {
+                          heading: P.intl.string(P.t.Iyka0d),
+                          headingIcon: (0, r.jsx)(o.Mgn, {
                               size: 'xxs',
-                              color: a.TVs.colors.HEADER_PRIMARY
+                              color: o.TVs.colors.HEADER_PRIMARY
                           }),
                           headingColor: 'header-primary',
                           children: (0, r.jsx)(s.n, { userId: t.id })
@@ -119,12 +119,12 @@ function D(e) {
                       user: t,
                       bio: null == D ? void 0 : D.bio,
                       hidePersonalInformation: F,
-                      onClose: M
+                      onClose: j
                   }),
             H &&
                 (0, r.jsx)(p.Z, {
                     isPremiumUser: Y,
-                    onInteraction: M
+                    onInteraction: j
                 }),
             V
                 ? (0, r.jsx)(y.Z, {
@@ -132,15 +132,15 @@ function D(e) {
                       currentUser: n,
                       displayProfile: D,
                       guildId: null == L ? void 0 : L.id,
-                      onOpenUserProfileModal: k,
-                      onClose: M
+                      onOpenUserProfileModal: M,
+                      onClose: j
                   })
                 : (0, r.jsx)(h.Z, {
                       user: t,
                       currentUser: n,
                       displayProfile: D,
                       guildId: null == L ? void 0 : L.id,
-                      onClose: M
+                      onClose: j
                   }),
             null != L &&
                 (0, r.jsx)(A.Z, {

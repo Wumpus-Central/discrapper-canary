@@ -1,8 +1,8 @@
 n.d(t, { Z: () => I });
 var r = n(255367),
     i = n(73800),
-    a = n(66546),
-    o = n(442837),
+    o = n(66546),
+    a = n(442837),
     s = n(780384),
     l = n(481060),
     c = n(435064),
@@ -60,8 +60,8 @@ function I(e) {
         I = (0, i.useRef)(null),
         T = d.n.getState().clipsButtonRef,
         S = (0, f.V9)(t),
-        A = (0, o.e7)([c.Z], () => c.Z.getActiveAnimation()),
-        N = (0, o.Wu)([c.Z], () => c.Z.getStreamClipAnimations(S)),
+        A = (0, a.e7)([c.Z], () => c.Z.getActiveAnimation()),
+        N = (0, a.Wu)([c.Z], () => c.Z.getStreamClipAnimations(S)),
         C = (0, i.useRef)(void 0);
     i.useEffect(
         () => () => {
@@ -69,7 +69,7 @@ function I(e) {
         },
         [S]
     );
-    let w = () => {
+    let R = () => {
             var e;
             let t = null == (e = I.current) ? void 0 : e.getBoundingClientRect();
             return null == t || n
@@ -81,7 +81,7 @@ function I(e) {
                       left: t.left
                   };
         },
-        R = (e) => {
+        P = (e) => {
             let t = null == T ? void 0 : T.getBoundingClientRect();
             if (((C.current = t), e.timestamp !== A || null == t || n)) return b;
             let { top: r, left: i } = t;
@@ -92,7 +92,7 @@ function I(e) {
                 width: 268
             };
         },
-        P = () => {
+        w = () => {
             if (null != C.current)
                 return {
                     top: C.current.top + 12,
@@ -112,7 +112,7 @@ function I(e) {
             'animate-always'
         ),
         x = (0, i.useRef)(null),
-        k = (0, l.Yzy)(
+        M = (0, l.Yzy)(
             N,
             {
                 ref: x,
@@ -124,7 +124,7 @@ function I(e) {
                             visibility: 'hidden',
                             opacity: 1
                         },
-                        h.enabled ? R(e) : w()
+                        h.enabled ? P(e) : R()
                     ),
                 enter: (e) => [
                     m(
@@ -132,7 +132,7 @@ function I(e) {
                             opacity: 1,
                             visibility: 'visible'
                         },
-                        R(e)
+                        P(e)
                     )
                 ],
                 leave: m(
@@ -143,7 +143,7 @@ function I(e) {
                                 height: 0,
                                 width: 0
                             },
-                            P()
+                            w()
                         )
                 ),
                 config: h.enabled ? v : O,
@@ -154,7 +154,7 @@ function I(e) {
             'animate-always'
         );
     return (
-        (0, a.useChain)([D, x], [0, E], g),
+        (0, o.useChain)([D, x], [0, E], g),
         (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)('div', {
@@ -164,7 +164,7 @@ function I(e) {
                 L(
                     (e, t) =>
                         null != t &&
-                        (0, r.jsx)(a.animated.div, {
+                        (0, r.jsx)(o.animated.div, {
                             className: p.whiteFlash,
                             style: e
                         })
@@ -172,10 +172,10 @@ function I(e) {
                 (0, r.jsx)(_.ZP, {
                     children: (0, r.jsx)('div', {
                         className: p.hidden,
-                        children: k(
+                        children: M(
                             (e, t, n, i) =>
                                 (null == t ? void 0 : t.thumbnail) != null &&
-                                (0, r.jsx)(a.animated.img, {
+                                (0, r.jsx)(o.animated.img, {
                                     src: t.thumbnail,
                                     className: p.movingImage,
                                     style: e

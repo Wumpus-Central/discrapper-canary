@@ -13,8 +13,8 @@ var i = t(120356),
     p = t(563132),
     _ = t(409813),
     f = t(614223),
-    x = t(48175),
-    m = t(474936),
+    m = t(48175),
+    x = t(474936),
     h = t(388032),
     j = t(677163);
 function L(e) {
@@ -32,8 +32,8 @@ function L(e) {
                 n(t);
                 let C = _.h8.PLAN_SELECT,
                     u = (0, c.k5)(r);
-                (u !== m.Si.TIER_1 && u !== m.Si.TIER_2) || t !== m.Si.TIER_0 || l || (C = _.h8.WHAT_YOU_LOSE);
-                let p = (0, x.T)({
+                (u !== x.Si.TIER_1 && u !== x.Si.TIER_2) || t !== x.Si.TIER_0 || l || (C = _.h8.WHAT_YOU_LOSE);
+                let p = (0, m.T)({
                         userTrialOffer: o,
                         isGift: l,
                         skuId: t
@@ -78,6 +78,7 @@ function b(e) {
     return (0, n.jsxs)(n.Fragment, {
         children: [
             (0, n.jsxs)(o.xBx, {
+                'data-migration-pending': !0,
                 className: l()(j.skuSelectModalHeader, { [j.premiumBrandRefreshHeader]: u }),
                 separator: !1,
                 children: [
@@ -90,6 +91,7 @@ function b(e) {
                 ]
             }),
             (0, n.jsx)(o.hzk, {
+                'data-migration-pending': !0,
                 className: l()(j.skuSelectModalContent, {
                     [j.modalSize]: !u,
                     [j.modalPadding]: a && !u,

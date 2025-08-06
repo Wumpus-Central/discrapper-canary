@@ -1,13 +1,13 @@
 (n.d(t, {
     ZP: () => D,
-    xX: () => R
+    xX: () => P
 }),
     n(388685));
 var r = n(255367);
 n(73800);
 var i = n(120356),
-    a = n.n(i),
-    o = n(481060),
+    o = n.n(i),
+    a = n(481060),
     s = n(911969),
     l = n(23750),
     c = n(970184),
@@ -68,7 +68,7 @@ function C(e, t) {
     }
     return n;
 }
-function w(e, t) {
+function R(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -79,17 +79,17 @@ function w(e, t) {
         e
     );
 }
-function R(e) {
+function P(e) {
     return e.map((e, t) =>
         (0, r.jsxs)(r.Fragment, {
-            children: [P(e, t.toString()), (0, r.jsx)(o.nn4, { children: ',' })]
+            children: [w(e, t.toString()), (0, r.jsx)(a.nn4, { children: ',' })]
         })
     );
 }
-function P(e, t) {
+function w(e, t) {
     switch (e.type) {
         case s.re.ACTION_ROW:
-            return (0, r.jsx)(v.Z, w(N({}, e), { renderComponents: R }), t);
+            return (0, r.jsx)(v.Z, R(N({}, e), { renderComponents: P }), t);
         case s.re.BUTTON:
             return (0, r.jsx)(d.Z, N({}, e), t);
         case s.re.STRING_SELECT:
@@ -103,7 +103,7 @@ function P(e, t) {
         case s.re.TEXT_INPUT:
             return (0, r.jsx)(h.Z, N({}, e), t);
         case s.re.SECTION:
-            return (0, r.jsx)(T.Z, w(N({}, e), { renderComponents: R }), t);
+            return (0, r.jsx)(T.Z, R(N({}, e), { renderComponents: P }), t);
         case s.re.TEXT_DISPLAY:
             return (0, r.jsx)(b.Z, N({}, e), t);
         case s.re.MEDIA_GALLERY:
@@ -117,13 +117,13 @@ function P(e, t) {
         case s.re.CONTENT_INVENTORY_ENTRY:
             return (0, r.jsx)(O.Z, N({}, e), t);
         case s.re.CONTAINER:
-            return (0, r.jsx)(I.ZP, w(N({}, e), { renderComponents: R }), t);
+            return (0, r.jsx)(I.ZP, R(N({}, e), { renderComponents: P }), t);
     }
 }
 function D(e) {
     let { message: t, shouldDisableInteractiveComponents: n } = e,
         { components: i } = t,
-        [o, s] = (0, u.e4)();
+        [a, s] = (0, u.e4)();
     return 0 === i.length
         ? null
         : (0, r.jsx)(c.Il, {
@@ -133,13 +133,13 @@ function D(e) {
                   containerInnerWidth: s,
                   children: (0, r.jsx)('div', {
                       style: { width: '100%' },
-                      ref: o,
+                      ref: a,
                       children: (0, r.jsx)(u.am.AutoMeasuredNestedContainer, {
                           children: (e) =>
                               (0, r.jsx)('div', {
                                   ref: e,
-                                  className: a()([S.container, { [S.isComponentsV2]: (0, l.hv)(t) }]),
-                                  children: R(i)
+                                  className: o()([S.container, { [S.isComponentsV2]: (0, l.hv)(t) }]),
+                                  children: P(i)
                               })
                       })
                   })

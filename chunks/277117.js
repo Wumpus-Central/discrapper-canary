@@ -1,4 +1,4 @@
-n.d(t, { Z: () => R });
+n.d(t, { Z: () => w });
 var r = n(255367);
 n(73800);
 var i = n(657707),
@@ -7,60 +7,60 @@ var i = n(657707),
     s = n(320582),
     o = n(246016),
     c = n(189156),
-    d = n(699516),
-    u = n(246946),
+    u = n(699516),
+    d = n(246946),
     h = n(5192),
     p = n(621853),
     f = n(209698),
     g = n(172351),
     m = n(648052),
     b = n(280885),
-    _ = n(483424),
-    y = n(681837),
+    y = n(483424),
+    x = n(681837),
     j = n(78806),
-    O = n(91433),
-    x = n(900927),
+    _ = n(91433),
+    O = n(900927),
     v = n(944043),
     C = n(678738),
     E = n(638970),
-    Z = n(502762),
-    I = n(530),
-    S = n(827313),
+    S = n(502762),
+    Z = n(530),
+    I = n(827313),
     P = n(228168),
     T = n(981631),
     N = n(388032),
-    w = n(283189);
-function R(e) {
-    let { user: t, currentUser: n, displayProfile: R, channel: A, isHovering: D, onOpenProfile: L } = e,
-        { relationshipType: M, originApplicationId: k } = (0, l.cj)([d.Z], () => ({
-            relationshipType: d.Z.getRelationshipType(t.id),
-            originApplicationId: d.Z.getOriginApplicationId(t.id)
+    R = n(283189);
+function w(e) {
+    let { user: t, currentUser: n, displayProfile: w, channel: A, isHovering: D, onOpenProfile: L } = e,
+        { relationshipType: k, originApplicationId: M } = (0, l.cj)([u.Z], () => ({
+            relationshipType: u.Z.getRelationshipType(t.id),
+            originApplicationId: u.Z.getOriginApplicationId(t.id)
         })),
         U = (0, s.vh)(t.id),
-        G = (0, o.Y)({ userId: t.id }),
-        F = (0, l.e7)([u.Z], () => u.Z.hidePersonalInformation),
-        B = (0, l.e7)([p.Z], () => {
+        H = (0, o.Y)({ userId: t.id }),
+        G = (0, l.e7)([d.Z], () => d.Z.hidePersonalInformation),
+        F = (0, l.e7)([p.Z], () => {
             var e;
             return null == (e = p.Z.getUserProfile(t.id)) ? void 0 : e.application;
         }),
-        H = (0, f.b)({ location: 'UserProfileSidebarBody' });
+        B = (0, f.b)({ location: 'UserProfileSidebarBody' });
     return (0, r.jsxs)('div', {
-        className: w.body,
+        className: R.body,
         children: [
-            (0, r.jsx)(I.Z, {
+            (0, r.jsx)(Z.Z, {
                 user: t,
                 nickname: h.ZP.getName(null, A.id, t),
-                pronouns: null == R ? void 0 : R.pronouns,
+                pronouns: null == w ? void 0 : w.pronouns,
                 onOpenProfile: L,
                 tags: (0, r.jsx)(m.Z, {
-                    displayProfile: R,
+                    displayProfile: w,
                     themeType: P.lY.SIDEBAR
                 }),
                 nicknameIcons: (0, r.jsxs)(r.Fragment, {
                     children: [
-                        (0, r.jsx)(y.Z, { userId: t.id }),
-                        !F &&
-                            (0, r.jsx)(S.Z, {
+                        (0, r.jsx)(x.Z, { userId: t.id }),
+                        !G &&
+                            (0, r.jsx)(I.Z, {
                                 userId: t.id,
                                 isHovering: D,
                                 onOpenProfile: L
@@ -68,19 +68,19 @@ function R(e) {
                     ]
                 })
             }),
-            M === T.OGo.PENDING_INCOMING &&
-                (0, r.jsx)(Z.Z.Overlay, {
-                    children: (0, r.jsx)(O.Z, {
+            k === T.OGo.PENDING_INCOMING &&
+                (0, r.jsx)(S.Z.Overlay, {
+                    children: (0, r.jsx)(_.Z, {
                         user: t,
                         channelId: A.id,
-                        applicationId: k
+                        applicationId: M
                     })
                 }),
             U.map((e) =>
                 (0, r.jsx)(
-                    Z.Z.Overlay,
+                    S.Z.Overlay,
                     {
-                        children: (0, r.jsx)(O.Z, {
+                        children: (0, r.jsx)(_.Z, {
                             user: t,
                             isGameRelationship: !0,
                             applicationId: e.applicationId,
@@ -92,11 +92,11 @@ function R(e) {
             ),
             (0, r.jsx)(v.Z, {
                 user: t,
-                className: w.card
+                className: R.card
             }),
             t.isProvisional &&
-                (0, r.jsx)(Z.Z.Overlay, {
-                    className: w.card,
+                (0, r.jsx)(S.Z.Overlay, {
+                    className: R.card,
                     children: (0, r.jsx)(C.Z, {
                         heading: N.intl.string(N.t.Iyka0d),
                         headingIcon: (0, r.jsx)(i.Mgn, {
@@ -107,51 +107,51 @@ function R(e) {
                         children: (0, r.jsx)(c.n, { userId: t.id })
                     })
                 }),
-            H
+            B
                 ? (0, r.jsx)(E.Z, {
                       user: t,
                       currentUser: n,
-                      displayProfile: R,
+                      displayProfile: w,
                       onOpenUserProfileModal: L
                   })
-                : (0, r.jsx)(_.Z, {
+                : (0, r.jsx)(y.Z, {
                       user: t,
                       currentUser: n,
-                      displayProfile: R,
-                      className: w.card
+                      displayProfile: w,
+                      className: R.card
                   }),
-            (0, r.jsxs)(Z.Z.Overlay, {
-                className: w.overlay,
+            (0, r.jsxs)(S.Z.Overlay, {
+                className: R.overlay,
                 children: [
-                    !F &&
-                        (null == R ? void 0 : R.bio) != null &&
-                        (null == R ? void 0 : R.bio) !== '' &&
+                    !G &&
+                        (null == w ? void 0 : w.bio) != null &&
+                        (null == w ? void 0 : w.bio) !== '' &&
                         (0, r.jsx)(C.Z, {
                             heading: N.intl.string(N.t['61W33d']),
                             headingColor: 'header-primary',
                             children: (0, r.jsx)(b.Z, {
-                                userBio: R.bio,
+                                userBio: w.bio,
                                 animateOnHover: !0,
                                 isHovering: D,
                                 userId: t.id
                             })
                         }),
-                    (null == B ? void 0 : B.popularApplicationCommandIds) != null &&
+                    (null == F ? void 0 : F.popularApplicationCommandIds) != null &&
                         (0, r.jsx)(g.Z, {
-                            applicationId: B.id,
-                            commandIds: B.popularApplicationCommandIds,
+                            applicationId: F.id,
+                            commandIds: F.popularApplicationCommandIds,
                             channel: A
                         }),
-                    G.length > 0 &&
+                    H.length > 0 &&
                         (0, r.jsx)(C.Z, {
                             heading: N.intl.string(N.t['Uv/eT0']),
                             headingColor: 'header-primary',
-                            children: (0, r.jsx)(j.Z, { applicationIds: G })
+                            children: (0, r.jsx)(j.Z, { applicationIds: H })
                         }),
                     (0, r.jsx)(C.Z, {
                         heading: t.bot ? N.intl.string(N.t['A//N4u']) : N.intl.string(N.t.a6XYDw),
                         headingColor: 'header-primary',
-                        children: (0, r.jsx)(x.Z, { userId: t.id })
+                        children: (0, r.jsx)(O.Z, { userId: t.id })
                     })
                 ]
             })

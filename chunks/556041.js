@@ -2,8 +2,8 @@
 var r = n(255367);
 n(73800);
 var i = n(481060),
-    a = n(600164),
-    o = n(245315),
+    o = n(600164),
+    a = n(245315),
     s = n(388032),
     l = n(49791);
 function c(e, t, n) {
@@ -59,20 +59,20 @@ function f(e, t) {
     );
 }
 let _ = () =>
-    (0, r.jsxs)(a.Z, {
-        align: a.Z.Align.CENTER,
-        justify: a.Z.Justify.CENTER,
-        direction: a.Z.Direction.VERTICAL,
+    (0, r.jsxs)(o.Z, {
+        align: o.Z.Align.CENTER,
+        justify: o.Z.Justify.CENTER,
+        direction: o.Z.Direction.VERTICAL,
         className: l.popout,
         children: [
             (0, r.jsx)('img', {
                 alt: '',
-                src: (0, o.QA)(),
+                src: (0, a.QA)(),
                 className: l.avatar
             }),
-            (0, r.jsxs)(a.Z, {
-                align: a.Z.Align.CENTER,
-                justify: a.Z.Justify.CENTER,
+            (0, r.jsxs)(o.Z, {
+                align: o.Z.Align.CENTER,
+                justify: o.Z.Justify.CENTER,
                 className: l.nameWrapper,
                 children: [
                     (0, r.jsx)(i.ua7, {

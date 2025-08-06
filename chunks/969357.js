@@ -3,14 +3,14 @@ var r = n(573654);
 function i(e, t) {
     if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
 }
-function a(e, t) {
+function o(e, t) {
     for (var n = 0; n < t.length; n++) {
         var r = t[n];
         ((r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r));
     }
 }
-function o(e, t, n) {
-    return (t && a(e.prototype, t), n && a(e, n), e);
+function a(e, t, n) {
+    return (t && o(e.prototype, t), n && o(e, n), e);
 }
 function s(e, t, n) {
     return (
@@ -32,7 +32,7 @@ var l = !1,
             (i(this, e), s(this, 'internalMonitor', void 0), s(this, 'sourceId', null), (this.internalMonitor = t.getMonitor()));
         }
         return (
-            o(e, [
+            a(e, [
                 {
                     key: 'receiveHandlerId',
                     value: function (e) {

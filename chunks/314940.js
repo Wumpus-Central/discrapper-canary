@@ -1,7 +1,7 @@
 var r = n(98405),
     i = n(351196),
-    a = n(146063),
-    o = Array;
+    o = n(146063),
+    a = Array;
 r(
     {
         target: 'Array',
@@ -9,7 +9,7 @@ r(
     },
     {
         with: function (e, t) {
-            return i(a(this), o, e, t);
+            return i(o(this), a, e, t);
         }
     }
 );

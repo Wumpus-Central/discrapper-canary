@@ -2,8 +2,8 @@
 var r = n(255367);
 n(73800);
 var i = n(442837),
-    a = n(481060),
-    o = n(300284),
+    o = n(481060),
+    a = n(300284),
     s = n(314897),
     l = n(271383),
     c = n(715903),
@@ -42,7 +42,7 @@ function h(e) {
 }
 function m(e) {
     let { guildId: t, analyticsLocations: n, analyticsLocation: i } = e,
-        [o, s] = (0, u.ww)({
+        [a, s] = (0, u.ww)({
             guildId: t,
             analyticsLocations: n,
             analyticsLocation: i,
@@ -50,24 +50,24 @@ function m(e) {
         }),
         l = s ? _.intl.string(_.t['6ndMcn']) : _.intl.string(_.t['0eiu6O']),
         c = s ? _.intl.string(_.t.S09nw8) : _.intl.string(_.t.tEttXV);
-    return (0, r.jsxs)(a.qXd, {
-        color: a.DM8.DANGER,
+    return (0, r.jsxs)(o.qXd, {
+        color: o.DM8.DANGER,
         children: [
             l,
-            (0, r.jsx)(a.EyT, {
-                onClick: o,
+            (0, r.jsx)(o.EyT, {
+                onClick: a,
                 children: c
             })
         ]
     });
 }
 function g() {
-    let e = (0, o.Z)({ scrollPosition: f.Y_.GUILD_TAG });
-    return (0, r.jsxs)(a.qXd, {
-        color: a.DM8.DANGER,
+    let e = (0, a.Z)({ scrollPosition: f.Y_.GUILD_TAG });
+    return (0, r.jsxs)(o.qXd, {
+        color: o.DM8.DANGER,
         children: [
             _.intl.string(_.t.ZqlecX),
-            (0, r.jsx)(a.EyT, {
+            (0, r.jsx)(o.EyT, {
                 onClick: e,
                 children: _.intl.string(_.t.SJehVV)
             })

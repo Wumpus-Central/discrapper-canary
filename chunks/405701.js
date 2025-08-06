@@ -1,8 +1,8 @@
 (n.d(t, { Z: () => I }), n(388685));
 var r = n(255367),
     i = n(73800),
-    a = n(913527),
-    o = n.n(a),
+    o = n(913527),
+    a = n.n(o),
     s = n(442837),
     l = n(481060),
     c = n(11769),
@@ -68,7 +68,7 @@ function O(e, t) {
 }
 function v(e) {
     let t,
-        { isEnabled: n, rateLimitPerUser: a, isBypassSlowmode: s, slowmodeCooldownGuess: d } = e,
+        { isEnabled: n, rateLimitPerUser: o, isBypassSlowmode: s, slowmodeCooldownGuess: d } = e,
         [f, E] = i.useState(!1);
     i.useEffect(() => {
         function e() {
@@ -86,9 +86,9 @@ function v(e) {
     }, []);
     let y = (0, u.Z)('SlowmodeIndicator');
     if (!n) return null;
-    let v = (0, c.k)(a);
+    let v = (0, c.k)(o);
     if (!s && d > 0) {
-        let e = o().duration(d);
+        let e = a().duration(d);
         if (d > p.Z.Millis.HOUR) {
             let n = ''.concat(e.minutes()).padStart(2, '0'),
                 r = ''.concat(e.seconds()).padStart(2, '0');
@@ -135,13 +135,13 @@ function v(e) {
 function I(e) {
     let { channel: t, isThreadCreation: n = !1 } = e,
         i = (0, s.e7)([f.Z], () => f.Z.getSlowmodeCooldownGuess(t.id, n ? f.S.CreateThread : f.S.SendMessage)),
-        a = (0, s.e7)([d.Z], () => (n ? d.Z.can(h.Plq.MANAGE_THREADS, t) : d.Z.can(h.Plq.MANAGE_CHANNELS, t) || d.Z.can(h.Plq.MANAGE_MESSAGES, t))),
-        { rateLimitPerUser: o } = t,
-        l = o > 0;
+        o = (0, s.e7)([d.Z], () => (n ? d.Z.can(h.Plq.MANAGE_THREADS, t) : d.Z.can(h.Plq.MANAGE_CHANNELS, t) || d.Z.can(h.Plq.MANAGE_MESSAGES, t))),
+        { rateLimitPerUser: a } = t,
+        l = a > 0;
     return (0, r.jsx)(v, {
         isEnabled: l,
-        rateLimitPerUser: o,
-        isBypassSlowmode: a,
+        rateLimitPerUser: a,
+        isBypassSlowmode: o,
         slowmodeCooldownGuess: i
     });
 }

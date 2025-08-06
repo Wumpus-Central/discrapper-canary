@@ -2,8 +2,8 @@ n.d(t, { Z: () => f });
 var r = n(255367);
 n(73800);
 var i = n(755721),
-    a = n(620662),
-    o = n(710845),
+    o = n(620662),
+    a = n(710845),
     s = n(652853),
     l = n(475413),
     c = n(228168),
@@ -12,9 +12,9 @@ var i = n(755721),
 function f(e) {
     let { user: t, activity: n, onAction: f } = e,
         { themeType: _ } = (0, s.z)();
-    if (!(0, a.Z)(n, u.xjy.INSTANCE)) return null;
+    if (!(0, o.Z)(n, u.xjy.INSTANCE)) return null;
     let p = (e) => {
-        (e.stopPropagation(), null == f || f({ action: 'PRESS_NOTIFY_BUTTON' }), new o.Z('UserActivityActions').log('notify', t.id, n));
+        (e.stopPropagation(), null == f || f({ action: 'PRESS_NOTIFY_BUTTON' }), new a.Z('UserActivityActions').log('notify', t.id, n));
     };
     return _ === c.lY.MODAL_V2
         ? (0, r.jsx)(l.tG, {

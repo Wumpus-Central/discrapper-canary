@@ -17,8 +17,8 @@ var i = n(255367),
     x = n(283595),
     _ = n(626135),
     j = n(251625),
-    C = n(358085),
-    E = n(210887),
+    E = n(358085),
+    C = n(210887),
     O = n(981631),
     v = n(388032),
     S = n(443474),
@@ -69,8 +69,8 @@ function P(e, t) {
         e
     );
 }
-let R = l.ZP.connectStores([E.Z], () => ({ theme: E.Z.theme }))(d.ubH),
-    D = (0, C.isWindows)();
+let R = l.ZP.connectStores([C.Z], () => ({ theme: C.Z.theme }))(d.ubH),
+    D = (0, E.isWindows)();
 function Z(e) {
     let { onClose: t } = e,
         n = (0, l.e7)([g.ZP], () => g.ZP.getCandidateGames()),
@@ -127,8 +127,8 @@ function w(e) {
     var t;
     let { rawGame: n, nowPlaying: s = !1, isOverride: c } = e,
         h = (0, l.cj)([g.ZP, b.Z, x.Z], () => (0, g.FZ)(n, g.ZP, b.Z, x.Z)),
-        [j, C] = r.useState(!1),
-        [E, T] = r.useState(null != (t = h.name) ? t : '???'),
+        [j, E] = r.useState(!1),
+        [C, T] = r.useState(null != (t = h.name) ? t : '???'),
         y = a()(I.flexCenter, {
             [S.game]: !s,
             [S.activeGame]: s,
@@ -146,7 +146,7 @@ function w(e) {
             game_name: h.name
         }),
             (0, d.showToast)((0, d.createToast)(v.intl.formatToPlainString(v.t['6klMOj'], { gameName: h.name }), d.ToastType.SUCCESS)),
-            C(!0));
+            E(!0));
     }
     return (0, i.jsxs)('div', {
         className: y,
@@ -193,9 +193,9 @@ function w(e) {
                               className: a()(S.gameName, S.gameNameInput),
                               type: 'text',
                               maxLength: 128,
-                              value: E,
+                              value: C,
                               onBlur: function () {
-                                  h.name !== E && u.Z.editName(h, E);
+                                  h.name !== C && u.Z.editName(h, C);
                               },
                               onKeyDown: function (e) {
                                   13 === e.keyCode && (e.currentTarget.blur(), e.preventDefault());

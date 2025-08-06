@@ -1,8 +1,8 @@
 (n.d(t, { Z: () => D }), n(388685));
 var r,
     i = n(392711),
-    a = n.n(i),
-    o = n(442837),
+    o = n.n(i),
+    a = n(442837),
     s = n(570140),
     l = n(314897),
     c = n(699516),
@@ -47,7 +47,7 @@ function g(e, t) {
     let n = m(e, t);
     if (null == n) return;
     let r = p[e];
-    (delete r[t], a().isEmpty(r) && delete p[e]);
+    (delete r[t], o().isEmpty(r) && delete p[e]);
     let i = h.get(n);
     null != i && (i.delete(e), 0 === i.size && h.delete(n));
 }
@@ -55,19 +55,19 @@ function E(e, t, n) {
     var r;
     let i = p[e];
     if ((null == i && (i = p[e] = {}), (i[t] = n), c.Z.isBlocked(e) || c.Z.isIgnored(e))) return;
-    let a = null != (r = h.get(n)) ? r : new Set();
-    (h.set(n, a), a.add(e));
+    let o = null != (r = h.get(n)) ? r : new Set();
+    (h.set(n, o), o.add(e));
 }
 function b(e, t, n, r) {
     let i = n.find((e) => null != e.party && e.party.id),
-        a = null != i && null != i.party ? i.party.id : null,
-        o = m(t, e);
-    if (null == a || r === d.Skl.OFFLINE) return null != o && void g(t, e);
-    if (null != o) {
-        if (o === a) return !1;
+        o = null != i && null != i.party ? i.party.id : null,
+        a = m(t, e);
+    if (null == o || r === d.Skl.OFFLINE) return null != a && void g(t, e);
+    if (null != a) {
+        if (a === o) return !1;
         g(t, e);
     }
-    E(t, e, a);
+    E(t, e, o);
 }
 function y(e) {
     let { guilds: t, presences: n } = e,
@@ -132,26 +132,26 @@ function C() {
         t = u.Z.getActivities();
     return b(d.ME, e, t);
 }
-function w(e) {
+function R(e) {
     let { relationship: t } = e;
     if (!c.Z.isBlocked(t.id) && !c.Z.isIgnored(t.id)) return !1;
     let n = p[t.id];
     if (null == n) return !1;
-    for (let e of a().values(n)) {
+    for (let e of o().values(n)) {
         let n = h.get(e);
         null != n && n.delete(t.id);
     }
 }
-function R(e) {
+function P(e) {
     let { relationship: t } = e,
         n = p[t.id];
     if (null == n) return !1;
-    for (let e of a().values(n)) {
+    for (let e of o().values(n)) {
         let n = h.get(e);
         null != n && n.add(t.id);
     }
 }
-class P extends (r = o.ZP.Store) {
+class w extends (r = a.ZP.Store) {
     initialize() {
         (this.syncWith([u.Z], C), this.waitFor(u.Z, c.Z));
     }
@@ -165,8 +165,8 @@ class P extends (r = o.ZP.Store) {
         return h;
     }
 }
-f(P, 'displayName', 'GamePartyStore');
-let D = new P(s.Z, {
+f(w, 'displayName', 'GamePartyStore');
+let D = new w(s.Z, {
     CONNECTION_OPEN_SUPPLEMENTAL: y,
     OVERLAY_INITIALIZE: O,
     GUILD_CREATE: v,
@@ -174,7 +174,7 @@ let D = new P(s.Z, {
     PRESENCE_UPDATES: T,
     THREAD_MEMBER_LIST_UPDATE: S,
     THREAD_MEMBERS_UPDATE: A,
-    RELATIONSHIP_ADD: w,
-    RELATIONSHIP_UPDATE: w,
-    RELATIONSHIP_REMOVE: R
+    RELATIONSHIP_ADD: R,
+    RELATIONSHIP_UPDATE: R,
+    RELATIONSHIP_REMOVE: P
 });

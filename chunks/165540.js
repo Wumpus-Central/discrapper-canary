@@ -1,8 +1,8 @@
 n.d(t, { Z: () => D });
 var r = n(255367),
     i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(442837),
     l = n(704215),
     c = n(755721),
@@ -63,7 +63,7 @@ function C(e, t) {
     }
     return n;
 }
-function w(e, t) {
+function R(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -74,12 +74,12 @@ function w(e, t) {
         e
     );
 }
-let R = i.forwardRef(function (e, t) {
-    let { type: n, animateRef: a } = e,
+let P = i.forwardRef(function (e, t) {
+    let { type: n, animateRef: o } = e,
         d = (0, s.e7)([_.Z], () => _.Z.shouldShowPopup() && _.Z.activeViewType() === n),
         { Component: h, events: m, play: b } = (0, g.Z)('ChannelAppLauncherButton');
     i.useImperativeHandle(
-        a,
+        o,
         () => ({
             animate: () => {
                 m.onMouseEnter();
@@ -95,17 +95,17 @@ let R = i.forwardRef(function (e, t) {
             color: 'currentColor'
         });
     return (0, r.jsx)('div', {
-        className: o()(S.buttonContainer, v.t4),
+        className: a()(S.buttonContainer, v.t4),
         ref: t,
         children: (0, r.jsx)(
             c.zx,
-            w(
+            R(
                 N(
                     {
                         look: c.zx.Looks.BLANK,
                         size: c.zx.Sizes.NONE,
                         tabIndex: 0,
-                        className: o()(S.button, { [S.buttonActive]: d }),
+                        className: a()(S.button, { [S.buttonActive]: d }),
                         onClick: y,
                         'aria-label': T.intl.string(T.t.erHFxM),
                         'aria-expanded': d,
@@ -127,8 +127,8 @@ let R = i.forwardRef(function (e, t) {
         )
     });
 });
-function P(e) {
-    let { channel: t, type: n, animateRef: a, entryPointCommandButtonRef: o } = e,
+function w(e) {
+    let { channel: t, type: n, animateRef: o, entryPointCommandButtonRef: a } = e,
         l = i.useRef(null),
         c = (0, m.R)({
             channel: t,
@@ -147,15 +147,15 @@ function P(e) {
                       animationContainerClassName: S.entrypointAnimation,
                       glowClassName: S.animationGlow,
                       trinketsClassName: S.animationTrinkets,
-                      children: (0, r.jsx)(R, {
+                      children: (0, r.jsx)(P, {
                           type: n,
                           ref: l,
-                          animateRef: a
+                          animateRef: o
                       })
                   }),
                   u
                       ? (0, r.jsx)(h.Z, {
-                            positionTargetRef: f && !p && g ? o : l,
+                            positionTargetRef: f && !p && g ? a : l,
                             channel: t
                         })
                       : null
@@ -163,4 +163,4 @@ function P(e) {
           })
         : null;
 }
-let D = i.memo(P);
+let D = i.memo(w);

@@ -2,8 +2,8 @@ n.d(t, { Z: () => O });
 var r = n(255367);
 n(73800);
 var i = n(442837),
-    a = n(692547),
-    o = n(481060),
+    o = n(692547),
+    a = n(481060),
     s = n(357156),
     l = n(592125),
     c = n(15274),
@@ -76,7 +76,7 @@ function O(e) {
     if (E.length < 1 || O) return null;
     function T(e) {
         v(e)
-            ? (0, o.ZDy)(async () => {
+            ? (0, a.ZDy)(async () => {
                   let { default: t } = await Promise.all([n.e('22347'), n.e('84722'), n.e('30057')]).then(n.bind(n, 296864));
                   return (n) => (0, r.jsx)(t, b(g({}, n), { event: e }));
               })
@@ -90,13 +90,13 @@ function O(e) {
             (0, r.jsx)(
                 _.Z,
                 {
-                    icon: (0, r.jsx)(o.Que, {
+                    icon: (0, r.jsx)(a.Que, {
                         size: 'custom',
                         color: 'currentColor',
                         height: y,
                         width: y
                     }),
-                    color: a.Z.unsafe_rawColors.GREEN_360.css,
+                    color: o.Z.unsafe_rawColors.GREEN_360.css,
                     title: p.intl.formatToPlainString(v(e) ? p.t['1vGXqK'] : p.t.xMJylZ, { eventName: e.name }),
                     description: p.intl.formatToPlainString(p.t.PTebCQ, { startTime: (0, f.ub)(e.scheduled_start_time).startDateTimeString }),
                     onClick: () => T(e),

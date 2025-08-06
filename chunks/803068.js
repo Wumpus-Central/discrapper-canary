@@ -1,17 +1,17 @@
 var r = n(172367),
     i = n(733359),
-    a = n(159759),
-    o = n(473297);
+    o = n(159759),
+    a = n(473297);
 e.exports = function (e) {
-    var t = o(
+    var t = a(
         e,
         function (e) {
             var t = e.getSelection(),
                 n = e.getCurrentContent(),
                 r = t.getAnchorKey(),
-                o = t.getAnchorOffset(),
-                s = n.getBlockForKey(r).getText()[o - 1];
-            return a(e, s ? i.getUTF16Length(s, 0) : 1);
+                a = t.getAnchorOffset(),
+                s = n.getBlockForKey(r).getText()[a - 1];
+            return o(e, s ? i.getUTF16Length(s, 0) : 1);
         },
         'backward'
     );

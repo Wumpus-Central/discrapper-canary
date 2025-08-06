@@ -1,8 +1,8 @@
 (n.d(t, { Z: () => S }), n(388685));
 var r,
     i = n(442837),
-    a = n(570140);
-function o(e, t, n) {
+    o = n(570140);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -26,7 +26,7 @@ function s(e) {
                 })
             )),
             r.forEach(function (t) {
-                o(e, t, n[t]);
+                a(e, t, n[t]);
             }));
     }
     return e;
@@ -120,8 +120,8 @@ class T extends (r = i.ZP.Store) {
         return u;
     }
 }
-o(T, 'displayName', 'scheduledMessageStore');
-let S = new T(a.Z, {
+a(T, 'displayName', 'scheduledMessageStore');
+let S = new T(o.Z, {
     SCHEDULED_MESSAGES_CREATE_SUCCESS: p,
     SCHEDULED_MESSAGES_DELETE_START: h,
     SCHEDULED_MESSAGES_DELETE_SUCCESS: m,

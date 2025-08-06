@@ -4,7 +4,7 @@
     Sk: () => u.Skl,
     W5: () => C,
     lm: () => y,
-    qb: () => w,
+    qb: () => R,
     rs: () => N,
     vP: () => A,
     vj: () => b
@@ -13,8 +13,8 @@
 var r = n(255367);
 n(73800);
 var i = n(120356),
-    a = n.n(i),
-    o = n(66546),
+    o = n.n(i),
+    a = n(66546),
     s = n(780384);
 n(481060);
 var l = n(44315),
@@ -114,9 +114,9 @@ function I(e, t, n) {
     return ''.concat(0.5625 * e + n, 'px ').concat(0.75 * e + t, 'px');
 }
 function T(e) {
-    let { size: t, status: n, isMobile: r, isTyping: i, topOffset: a = 0, leftOffset: o = 0 } = e,
-        s = (a / g) * t,
-        l = (o / g) * t;
+    let { size: t, status: n, isMobile: r, isTyping: i, topOffset: o = 0, leftOffset: a = 0 } = e,
+        s = (o / g) * t,
+        l = (a / g) * t;
     if (i)
         return {
             bgRadius: 0.5 * t,
@@ -258,20 +258,20 @@ function S(e) {
         .concat(0.25 * e);
 }
 function A(e, t, n) {
-    let { bgRadius: i, bgY: a, bgX: s, bgHeight: l, bgWidth: c, cutoutX: u, cutoutY: d, cutoutWidth: f, cutoutHeight: _, cutoutRadius: p, polygonScale: h, polygonOrigin: m, dotY: g, dotX: E, dotRadius: b } = e;
+    let { bgRadius: i, bgY: o, bgX: s, bgHeight: l, bgWidth: c, cutoutX: u, cutoutY: d, cutoutWidth: f, cutoutHeight: _, cutoutRadius: p, polygonScale: h, polygonOrigin: m, dotY: g, dotX: E, dotRadius: b } = e;
     return (0, r.jsxs)('mask', {
         id: n,
         children: [
-            (0, r.jsx)(o.animated.rect, {
+            (0, r.jsx)(a.animated.rect, {
                 x: s,
-                y: a,
+                y: o,
                 width: c,
                 height: l,
                 rx: i,
                 ry: i,
                 fill: 'white'
             }),
-            (0, r.jsx)(o.animated.rect, {
+            (0, r.jsx)(a.animated.rect, {
                 x: u,
                 y: d,
                 width: f,
@@ -280,13 +280,13 @@ function A(e, t, n) {
                 ry: p,
                 fill: 'black'
             }),
-            (0, r.jsx)(o.animated.polygon, {
+            (0, r.jsx)(a.animated.polygon, {
                 points: S(t),
                 fill: 'black',
                 transform: h,
                 style: { transformOrigin: m }
             }),
-            (0, r.jsx)(o.animated.circle, {
+            (0, r.jsx)(a.animated.circle, {
                 fill: 'black',
                 cx: E,
                 cy: g,
@@ -327,8 +327,8 @@ function C(e, t, n) {
               height: e
           };
 }
-function w(e) {
-    let { status: t, isMobile: n = !1, size: i = g, className: o, style: s, color: l } = e,
+function R(e) {
+    let { status: t, isMobile: n = !1, size: i = g, className: a, style: s, color: l } = e,
         d = t === u.Skl.ONLINE && n,
         _ = b(t, l);
     return (0, r.jsx)(
@@ -337,7 +337,7 @@ function w(e) {
             p(
                 {
                     mask: N(t, d),
-                    className: a()(f.mask, o),
+                    className: o()(f.mask, a),
                     style: s
                 },
                 C(i, t, d)

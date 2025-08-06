@@ -1,21 +1,21 @@
 n.d(t, {
     L6: () => Z,
     Rc: () => G,
-    WH: () => w,
-    aP: () => j,
+    WH: () => R,
+    aP: () => k,
     dV: () => B,
-    g: () => k,
+    g: () => M,
     iV: () => x,
-    n9: () => M,
+    n9: () => j,
     pR: () => L,
     rn: () => D,
-    tK: () => R,
+    tK: () => P,
     xc: () => U
 });
 var r = n(512722),
     i = n.n(r),
-    a = n(990547),
-    o = n(544891),
+    o = n(990547),
+    a = n(544891),
     s = n(570140),
     l = n(258609),
     c = n(569545),
@@ -67,7 +67,7 @@ function N(e) {
     return e;
 }
 let C = 2;
-function w(e, t, n) {
+function R(e, t, n) {
     s.Z.dispatch(
         N(
             {
@@ -81,7 +81,7 @@ function w(e, t, n) {
         )
     );
 }
-function R(e, t) {
+function P(e, t) {
     let n = (0, c.V9)(e);
     s.Z.dispatch({
         type: 'STREAM_SET_PAUSED',
@@ -89,16 +89,16 @@ function R(e, t) {
         paused: t
     });
 }
-function P(e, t) {
+function w(e, t) {
     let n = h.Z.getChannel(t);
     return (i()(null != n, 'Cannot join a null voice channel'), !E.Z.isInChannel(t) && (0, b.rY)(n, E.Z, m.Z));
 }
 function D(e, t) {
     if (null != l.Z.getRemoteSessionId()) return;
     let { guildId: n, channelId: r } = e;
-    if (null != n && P(n, r)) return;
+    if (null != n && w(n, r)) return;
     let i = (0, c.V9)(e),
-        a =
+        o =
             (null == t ? void 0 : t.forceMultiple) ||
             _.Z.getAllActiveStreamsForChannel(r).filter((e) => {
                 let { ownerId: t } = e;
@@ -107,9 +107,9 @@ function D(e, t) {
     (s.Z.dispatch({
         type: 'STREAM_WATCH',
         streamKey: i,
-        allowMultiple: a
+        allowMultiple: o
     }),
-        a || (null != t && t.noFocus) || I.Z.selectParticipant(e.channelId, i));
+        o || (null != t && t.noFocus) || I.Z.selectParticipant(e.channelId, i));
 }
 function L(e, t) {
     s.Z.dispatch({
@@ -120,23 +120,23 @@ function L(e, t) {
 }
 function x(e, t) {
     let { guildId: n, channelId: r } = e;
-    if (null != n && P(n, r)) return;
+    if (null != n && w(n, r)) return;
     D(e, t);
     let i = d.Z.getWindowOpen(T.KJ3.CHANNEL_CALL_POPOUT),
-        a = g.Z.getVoiceChannelId();
-    (i && a === r) || (0, u.Z)(e);
+        o = g.Z.getVoiceChannelId();
+    (i && o === r) || (0, u.Z)(e);
 }
-function k(e) {
+function M(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
         n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
-    (n && j(e, t),
+    (n && k(e, t),
         s.Z.dispatch({
             type: 'STREAM_STOP',
             streamKey: e,
             appContext: __OVERLAY__ ? T.IlC.OVERLAY : T.IlC.APP
         }));
 }
-function j(e) {
+function k(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
     s.Z.dispatch({
         type: 'STREAM_CLOSE',
@@ -144,7 +144,7 @@ function j(e) {
         canShowFeedback: t
     });
 }
-async function M(e, t, n) {
+async function j(e, t, n) {
     if (!f.Z.shouldFetchPreview(e, t, n)) return;
     let r = (0, c.V9)({
         streamType: null != e ? S.lo.GUILD : S.lo.CALL,
@@ -157,7 +157,7 @@ async function M(e, t, n) {
         streamKey: r
     });
     try {
-        let e = await o.tn.get({
+        let e = await a.tn.get({
             url: T.ANM.STREAM_PREVIEW(r),
             query: { version: Date.now() },
             oldFormErrors: !0,
@@ -183,7 +183,7 @@ async function U(e) {
         await v.Z.post({
             url: T.ANM.STREAM_NOTIFY(e),
             oldFormErrors: !0,
-            trackedActionData: { event: a.NetworkActionNames.STREAM_NOTIFY },
+            trackedActionData: { event: o.NetworkActionNames.STREAM_NOTIFY },
             rejectWithError: !0
         });
     } catch (e) {}
@@ -192,7 +192,7 @@ function G(e) {
     ((0, O.Ye)(e.preset, e.resolution, e.frameRate), s.Z.dispatch(N({ type: 'STREAM_UPDATE_SETTINGS' }, e)));
 }
 function B(e, t) {
-    o.tn.patch({
+    a.tn.patch({
         url: T.ANM.STREAM(e),
         body: { region: t },
         oldFormErrors: !0,
@@ -202,5 +202,5 @@ function B(e, t) {
 function Z() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
         t = _.Z.getCurrentUserActiveStream();
-    null != t && k((0, c.V9)(t), e);
+    null != t && M((0, c.V9)(t), e);
 }

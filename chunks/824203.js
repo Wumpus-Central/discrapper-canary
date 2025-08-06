@@ -1,7 +1,7 @@
-n.d(t, { i: () => a });
+n.d(t, { i: () => o });
 var r = n(39621),
     i = n(388032);
-function a(e) {
+function o(e) {
     switch (e) {
         case r.O.FEATURE_LIMITED:
             return i.intl.string(i.t.WCvmra);

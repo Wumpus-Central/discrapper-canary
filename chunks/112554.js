@@ -4,8 +4,8 @@ n.d(t, {
 });
 var r = n(399606),
     i = n(375954),
-    a = n(991621),
-    o = n(629710),
+    o = n(991621),
+    a = n(629710),
     s = n(262777);
 let l = (e, t, n) => {
         var l, c;
@@ -16,9 +16,9 @@ let l = (e, t, n) => {
             void 0 !== n
                 ? (e) => e.url === n || e.id === n
                 : (e) =>
-                      (0, o.g4)(
+                      (0, a.g4)(
                           {
-                              type: a.l.Attachment,
+                              type: o.l.Attachment,
                               media: e
                           },
                           d
@@ -34,9 +34,9 @@ let l = (e, t, n) => {
             void 0 !== n
                 ? (e) => e.id === n
                 : (e) =>
-                      (0, o.g4)(
+                      (0, a.g4)(
                           {
-                              type: a.l.Embed,
+                              type: o.l.Embed,
                               media: e
                           },
                           d

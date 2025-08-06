@@ -2,8 +2,8 @@ n.d(t, { Z: () => g });
 var r = n(255367);
 n(73800);
 var i = n(442837),
-    a = n(755721),
-    o = n(359110),
+    o = n(755721),
+    a = n(359110),
     s = n(922482),
     l = n(146085),
     c = n(750154),
@@ -24,19 +24,19 @@ function g(e) {
         T = (0, i.e7)([d.Z], () => null != I && d.Z.can(l.gl, I), [I]);
     if (!(0, c.dS)(t) || !T || null == O || null == y) return null;
     let S = (e) => {
-        (e.stopPropagation(), null == n || n({ action: 'PRESS_STAGE_CHANNEL_LISTEN_BUTTON' }), s.AC(O, y), (0, o.Kh)(y), null == g || g());
+        (e.stopPropagation(), null == n || n({ action: 'PRESS_STAGE_CHANNEL_LISTEN_BUTTON' }), s.AC(O, y), (0, a.Kh)(y), null == g || g());
     };
     return E === h.lY.MODAL_V2
         ? (0, r.jsx)(p.tG, {
               text: m.intl.string(m.t.ZYO5OD),
-              size: a.Ph.TINY,
+              size: o.Ph.TINY,
               themeColor: 'secondary',
               disabled: v,
               onClick: S
           })
         : (0, r.jsx)(p.tG, {
               text: m.intl.string(m.t.ZYO5OD),
-              size: a.Ph.SMALL,
+              size: o.Ph.SMALL,
               themeColor: 'secondary',
               fullWidth: !0,
               disabled: v,

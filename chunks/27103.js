@@ -2,8 +2,8 @@ n.d(t, { Z: () => h });
 var r = n(255367);
 n(73800);
 var i = n(120356),
-    a = n.n(i),
-    o = n(481060),
+    o = n.n(i),
+    a = n(481060),
     s = n(385499),
     l = n(739566),
     c = n(464891),
@@ -24,21 +24,21 @@ function h(e) {
         onMouseEnter: E,
         onMouseLeave: b,
         children: (0, r.jsx)(d.Z, {
-            className: a()(p.mainContainer, { [p.compact]: n }),
+            className: o()(p.mainContainer, { [p.compact]: n }),
             iconNode: n ? null : (0, r.jsx)(u.S, { src: g }),
             iconContainerClassName: p.iconContainer,
             compact: n,
             children: (0, r.jsxs)('div', {
-                className: a()(p.content, { [p.compact]: n }),
+                className: o()(p.content, { [p.compact]: n }),
                 children: [
                     (0, r.jsx)(c.nD, {
                         message: t,
                         messageClassname: p.spanCorrection,
-                        className: a()(p.usernameContainer, p.spanCorrection, { [p.compact]: n }),
+                        className: o()(p.usernameContainer, p.spanCorrection, { [p.compact]: n }),
                         username: (0, r.jsxs)('div', {
                             className: p.spanCorrection,
                             children: [
-                                (0, r.jsx)(o.Text, {
+                                (0, r.jsx)(a.Text, {
                                     variant: 'text-md/normal',
                                     color: 'text-brand',
                                     tag: 'span',
@@ -55,7 +55,7 @@ function h(e) {
                         showTimestamp: !0
                     }),
                     (0, r.jsx)('div', {
-                        className: a()(p.__invalid_messageContent, { [p.compact]: n }),
+                        className: o()(p.__invalid_messageContent, { [p.compact]: n }),
                         children: _.intl.format(_.t.qntXNT, {
                             username: h.nick,
                             usernameHook: m

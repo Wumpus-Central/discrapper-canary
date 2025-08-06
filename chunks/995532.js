@@ -1,11 +1,11 @@
 n.d(t, {
-    Z: () => g,
+    Z: () => I,
     a: () => o
 });
 var r,
     l,
-    i,
-    s = n(442837),
+    s,
+    i = n(442837),
     a = n(570140);
 let o = {},
     u = {},
@@ -21,7 +21,7 @@ function T(e) {
     let { welcomeScreen: t, guildId: n } = e;
     u[n] = null != t ? t : o;
 }
-class I extends (i = s.ZP.Store) {
+class m extends (s = i.ZP.Store) {
     get(e) {
         if (null != e) return u[e];
     }
@@ -42,15 +42,15 @@ class I extends (i = s.ZP.Store) {
     }
 }
 ((l = 'WelcomeScreenStore'),
-    (r = 'displayName') in I
-        ? Object.defineProperty(I, r, {
+    (r = 'displayName') in m
+        ? Object.defineProperty(m, r, {
               value: l,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (I[r] = l));
-let g = new I(a.Z, {
+        : (m[r] = l));
+let I = new m(a.Z, {
     INVITE_RESOLVE_SUCCESS: A,
     INVITE_ACCEPT_SUCCESS: A,
     WELCOME_SCREEN_SUBMIT_SUCCESS: T,

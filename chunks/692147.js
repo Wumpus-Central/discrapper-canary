@@ -1,8 +1,8 @@
 n.d(t, { Z: () => h });
 var r = n(255367),
     i = n(73800),
-    a = n(392711),
-    o = n(399606),
+    o = n(392711),
+    a = n(399606),
     s = n(351780),
     l = n(576125),
     c = n(465858),
@@ -40,13 +40,13 @@ function _(e) {
 function p(e) {
     let { reactionRef: t, count: n } = e,
         r = i.useRef(n),
-        l = (0, o.e7)([s.Z], () => s.Z.getState()),
+        l = (0, a.e7)([s.Z], () => s.Z.getState()),
         d = (0, u.Z)(),
         f = (0, c.Z)(t);
     return (
         i.useEffect(() => {
             if (n > r.current && null != f) {
-                let e = (0, a.clamp)(n, l.confettiCount / 2, 2 * l.confettiCount);
+                let e = (0, o.clamp)(n, l.confettiCount / 2, 2 * l.confettiCount);
                 d.fire(f.x, f.y, { count: e });
             }
             r.current = n;

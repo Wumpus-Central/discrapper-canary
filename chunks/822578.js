@@ -13,7 +13,7 @@ var r = a(394798),
     l = a(307854),
     u = a(396234);
 function I(t, e, a, I, d, N) {
-    var f, A;
+    var A, f;
     let { normalizeDepth: T = 3, normalizeMaxBreadth: p = 1000 } = t,
         L = {
             ...e,
@@ -29,8 +29,8 @@ function I(t, e, a, I, d, N) {
         let E = t.request;
         E && E.url && (E.url = (0, n.$G)(E.url, o));
     })(L, t),
-        (f = L),
-        (A = h).length > 0 && ((f.sdk = f.sdk || {}), (f.sdk.integrations = [...(f.sdk.integrations || []), ...A])),
+        (A = L),
+        (f = h).length > 0 && ((A.sdk = A.sdk || {}), (A.sdk.integrations = [...(A.sdk.integrations || []), ...f])),
         d && d.emit('applyFrameMetadata', e),
         void 0 === e.type &&
             (function (t, e) {

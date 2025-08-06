@@ -1,8 +1,8 @@
 (n.r(t), n.d(t, { transitionToGlobalDiscovery: () => h }), n(65234), n(111804), n(490233), n(97749), n(388685), n(415506));
 var r = n(258971),
     i = n(726115),
-    a = n(859921),
-    o = n(110560),
+    o = n(859921),
+    a = n(110560),
     s = n(703656),
     l = n(594174),
     c = n(626135),
@@ -19,26 +19,26 @@ function h(e) {
             let b = e.selectedServersTab;
             return (
                 null != b
-                    ? a.Z.setState({
+                    ? o.Z.setState({
                           selectedTab: b,
                           entrypoint: null != (t = e.entrypoint) ? t : p.Qq.UNKNOWN
                       })
-                    : a.Z.setState({ entrypoint: null != (n = e.entrypoint) ? n : p.Qq.UNKNOWN }),
+                    : o.Z.setState({ entrypoint: null != (n = e.entrypoint) ? n : p.Qq.UNKNOWN }),
                 (0, s.uL)(f.Z5c.GLOBAL_DISCOVERY_SERVERS, e.extra)
             );
         case d.GlobalDiscoveryTab.APPS:
             if (null != e.newSessionState) {
                 let t = (0, i.PM)(),
-                    { guildId: n, entrypoint: a } = e.newSessionState;
+                    { guildId: n, entrypoint: o } = e.newSessionState;
                 if (
                     (r.z8.setState({
                         sessionId: t,
                         guildId: null != n ? n : null,
-                        entrypoint: a,
+                        entrypoint: o,
                         trackedOpenedFromExternalEntrypoint: !1
                     }),
                     c.default.track(f.rMx.APP_DIRECTORY_OPENED, {
-                        source: null == a ? void 0 : a.name,
+                        source: null == o ? void 0 : o.name,
                         session_id: t,
                         guild_id: n,
                         user_id: null == (g = l.default.getCurrentUser()) ? void 0 : g.id
@@ -60,7 +60,7 @@ function h(e) {
             if (null != e.categoryId) return (0, s.uL)(f.Z5c.GLOBAL_DISCOVERY_APPS_CATEGORY(e.categoryId.toString()));
             else return (0, s.uL)(f.Z5c.GLOBAL_DISCOVERY_APPS);
         case d.GlobalDiscoveryTab.QUESTS:
-            return (0, o.navigateToQuestHome)({
+            return (0, a.navigateToQuestHome)({
                 fromContent: e.questContent,
                 questId: e.questId
             });

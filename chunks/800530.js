@@ -15,12 +15,12 @@ n.d(t, {
     oE: () => y,
     qS: () => b,
     s: () => d,
-    sQ: () => o,
+    sQ: () => a,
     wo: () => l
 });
 var r = n(990547),
     i = n(981631);
-function a(e, t, n) {
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -33,15 +33,15 @@ function a(e, t, n) {
         e
     );
 }
-class o {}
-(a(o, 'TOS_LINK', 'https://discord.com/terms'), a(o, 'COMMUNITY_GUIDELINES', 'https://discord.com/guidelines'), a(o, 'APPEALS_LINK', 'https://support.discord.com/hc/requests/new?ticket_form_id=360000029731'), a(o, 'WARNING_SYSTEM_HELPCENTER_LINK', 'https://support.discord.com/hc/articles/18210965981847'), a(o, 'AGE_VERIFICATION_LINK', 'https://support.discord.com/hc/requests/new?ticket_form_id=360000029731'), a(o, 'SPAM_LINK', 'https://support.discord.com/hc/requests/new?ticket_form_id=360000029731&tf_360055270593=__dc.ticket_form-tnsv1_appeals_other_questions__'), a(o, 'LEARN_MORE_UU_APPEAL_LINK', 'https://support.discord.com/hc/articles/360041820932'));
+class a {}
+(o(a, 'TOS_LINK', 'https://discord.com/terms'), o(a, 'COMMUNITY_GUIDELINES', 'https://discord.com/guidelines'), o(a, 'APPEALS_LINK', 'https://support.discord.com/hc/requests/new?ticket_form_id=360000029731'), o(a, 'WARNING_SYSTEM_HELPCENTER_LINK', 'https://support.discord.com/hc/articles/18210965981847'), o(a, 'AGE_VERIFICATION_LINK', 'https://support.discord.com/hc/requests/new?ticket_form_id=360000029731'), o(a, 'SPAM_LINK', 'https://support.discord.com/hc/requests/new?ticket_form_id=360000029731&tf_360055270593=__dc.ticket_form-tnsv1_appeals_other_questions__'), o(a, 'LEARN_MORE_UU_APPEAL_LINK', 'https://support.discord.com/hc/articles/360041820932'));
 class s {}
-(a(s, 'CLASSIFICATION_ID', 'classification_id'), a(s, 'INCIDENT_TIMESTAMP', 'incident_time'));
+(o(s, 'CLASSIFICATION_ID', 'classification_id'), o(s, 'INCIDENT_TIMESTAMP', 'incident_time'));
 var l = (function (e) {
     return ((e.POLICY_VIOLATION_DETAIL = 'policy_violation_detail'), (e.LEARN_MORE_LINK = 'learn_more_link'), e);
 })({});
 class c {}
-(a(c, 'ICON_TYPE', 'icon_type'), a(c, 'HEADER', 'header'), a(c, 'BODY', 'body'), a(c, 'CTAS', 'ctas'), a(c, 'TIMESTAMP', 'timestamp'), a(c, 'THEME', 'theme'), a(c, 'CLIENT_VERSION_MESSAGE', 'client_version_message'), a(c, 'LEARN_MORE_LINK', 'learn_more_link'), a(c, 'CLASSIFICATION_ID', 'classification_id'));
+(o(c, 'ICON_TYPE', 'icon_type'), o(c, 'HEADER', 'header'), o(c, 'BODY', 'body'), o(c, 'CTAS', 'ctas'), o(c, 'TIMESTAMP', 'timestamp'), o(c, 'THEME', 'theme'), o(c, 'CLIENT_VERSION_MESSAGE', 'client_version_message'), o(c, 'LEARN_MORE_LINK', 'learn_more_link'), o(c, 'CLASSIFICATION_ID', 'classification_id'));
 var u = (function (e) {
         return ((e[(e.ViewViolationDetail = 0)] = 'ViewViolationDetail'), (e[(e.ViewViolationsDropdown = 1)] = 'ViewViolationsDropdown'), (e[(e.ClickLetUsKnow = 2)] = 'ClickLetUsKnow'), (e[(e.ClickAgeVerificationLink = 3)] = 'ClickAgeVerificationLink'), (e[(e.ClickSpamWebformLink = 4)] = 'ClickSpamWebformLink'), (e[(e.ClickLearnMoreLink = 5)] = 'ClickLearnMoreLink'), (e[(e.ClickCommunityGuidelinesLink = 6)] = 'ClickCommunityGuidelinesLink'), (e[(e.ClickWarningSystemHelpcenterLink = 7)] = 'ClickWarningSystemHelpcenterLink'), e);
     })({}),

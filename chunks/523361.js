@@ -1,12 +1,12 @@
 n.d(t, {
     HG: () => s,
-    Md: () => o,
-    Q8: () => a
+    Md: () => a,
+    Q8: () => o
 });
 var r = n(373228),
     i = n(388032);
-let a = () => [i.intl.string(i.t.b6wEe3), i.intl.string(i.t.i8o9hY)],
-    o = () => [i.intl.string(i.t.vqnToa), i.intl.string(i.t['9yh+dH'])],
+let o = () => [i.intl.string(i.t.b6wEe3), i.intl.string(i.t.i8o9hY)],
+    a = () => [i.intl.string(i.t.vqnToa), i.intl.string(i.t['9yh+dH'])],
     s = [
         {
             id: '781323471249604648',

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => x });
 var r = n(255367),
     i = n(73800),
-    a = n(873546),
-    o = n(442837),
+    o = n(873546),
+    a = n(442837),
     s = n(755721),
     l = n(481060),
     c = n(194359),
@@ -25,16 +25,16 @@ var r = n(255367),
     A = n(228168),
     N = n(388032),
     C = n(882875);
-let w = 24,
-    R = 3,
-    P = (e) => {
+let R = 24,
+    P = 3,
+    w = (e) => {
         let { userId: t, channelId: n } = e,
-            a = (0, o.e7)([E.Z], () => E.Z.getMutualGuilds(t), [t]),
+            o = (0, a.e7)([E.Z], () => E.Z.getMutualGuilds(t), [t]),
             s = i.useMemo(
                 () =>
-                    null != a
-                        ? a
-                              .slice(0, R)
+                    null != o
+                        ? o
+                              .slice(0, P)
                               .map((e, t) => {
                                   let { guild: n } = e,
                                       i =
@@ -42,11 +42,11 @@ let w = 24,
                                               ? I.ZP.getGuildIconURL({
                                                     id: n.id,
                                                     icon: n.icon,
-                                                    size: w
+                                                    size: R
                                                 })
                                               : null;
                                   if (null == i) return null;
-                                  let o = t === (a.length > R ? R : a.length) - 1,
+                                  let a = t === (o.length > P ? P : o.length) - 1,
                                       s = (0, r.jsx)(
                                           'img',
                                           {
@@ -56,15 +56,15 @@ let w = 24,
                                           },
                                           t
                                       );
-                                  return o
+                                  return a
                                       ? s
                                       : (0, r.jsx)(
                                             d.ZP,
                                             {
                                                 className: C.avatarMask,
                                                 mask: d.ZP.Masks.VOICE_USER_SUMMARY_ITEM,
-                                                width: w,
-                                                height: w,
+                                                width: R,
+                                                height: R,
                                                 children: s
                                             },
                                             t
@@ -72,9 +72,9 @@ let w = 24,
                               })
                               .filter((e) => null != e)
                         : [],
-                [a]
+                [o]
             );
-        if (null == a || 0 === a.length)
+        if (null == o || 0 === o.length)
             return (0, r.jsx)(l.Text, {
                 color: 'header-secondary',
                 variant: 'text-sm/normal',
@@ -99,7 +99,7 @@ let w = 24,
                     children: (0, r.jsx)(l.Text, {
                         className: C.mutualGuilds,
                         variant: 'text-sm/normal',
-                        children: N.intl.format(N.t.eE3oen, { count: a.length })
+                        children: N.intl.format(N.t.eE3oen, { count: o.length })
                     })
                 })
             ]
@@ -107,8 +107,8 @@ let w = 24,
     },
     D = (e) => {
         var t;
-        let { relationshipType: n, userId: i, showingBanner: a } = e,
-            o = null == (t = v.default.getUser(i)) ? void 0 : t.bot,
+        let { relationshipType: n, userId: i, showingBanner: o } = e,
+            a = null == (t = v.default.getUser(i)) ? void 0 : t.bot,
             u = () => {
                 c.Z.blockUser(i, { location: S.ZY5.DM_CHANNEL });
             },
@@ -139,8 +139,8 @@ let w = 24,
             case S.OGo.NONE:
                 return (0, r.jsxs)(r.Fragment, {
                     children: [
-                        !o &&
-                            !a &&
+                        !a &&
+                            !o &&
                             (0, r.jsx)(s.zx, {
                                 className: C.action,
                                 size: s.zx.Sizes.TINY,
@@ -214,10 +214,10 @@ let w = 24,
     },
     L = (e) => {
         let { channelId: t, otherUserId: n } = e,
-            a = i.useCallback(() => {
+            o = i.useCallback(() => {
                 (0, l.showToast)((0, l.createToast)(N.intl.string(N.t.a2j0ho), l.ToastType.FAILURE));
             }, []),
-            o = i.useCallback(() => {
+            a = i.useCallback(() => {
                 g.Z.closeChannelSidebar(y.uZ);
             }, []),
             s = i.useCallback(() => {
@@ -232,9 +232,9 @@ let w = 24,
                 isOptimisticRejected: h
             } = (0, p.m)({
                 user: v.default.getUser(n),
-                onError: a,
+                onError: o,
                 onAcceptSuccess: s,
-                onRejectSuccess: o
+                onRejectSuccess: a
             }),
             m = _ || h,
             E = d || f || m;
@@ -262,11 +262,11 @@ let w = 24,
     x = (e) => {
         let { userId: t, channel: n, showingBanner: i } = e,
             { channelId: s } = (0, h._)(),
-            l = (0, o.e7)([_.Z], () => null != s && _.Z.isSpam(s), [s]),
-            c = (0, o.e7)([O.Z], () => O.Z.getRelationshipType(t), [t]),
+            l = (0, a.e7)([_.Z], () => null != s && _.Z.isSpam(s), [s]),
+            c = (0, a.e7)([O.Z], () => O.Z.getRelationshipType(t), [t]),
             u = n.id === s,
-            d = !a.tq && !u,
-            f = !!a.tq || u || l,
+            d = !o.tq && !u,
+            f = !!o.tq || u || l,
             p =
                 l || u
                     ? (0, r.jsxs)(r.Fragment, {
@@ -298,7 +298,7 @@ let w = 24,
             children: [
                 (0, r.jsx)('div', {
                     className: C.inline,
-                    children: (0, r.jsx)(P, {
+                    children: (0, r.jsx)(w, {
                         userId: t,
                         channelId: n.id
                     })

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => d });
+n.d(t, { Z: () => u });
 var r = n(255367);
 n(73800);
 var i = n(692547),
@@ -7,11 +7,11 @@ var i = n(692547),
     s = n(881824),
     o = n(688641),
     c = n(388032);
-function d(e) {
-    let { className: t, channel: n, highlight: d } = e,
-        u = (0, a.bp)();
+function u(e) {
+    let { className: t, channel: n, highlight: u } = e,
+        d = (0, a.bp)();
     return (0, r.jsx)(o.Z, {
-        highlight: null != d && d,
+        highlight: null != u && u,
         className: t,
         icon: (0, r.jsx)(l.ewx, {
             size: 'custom',
@@ -23,7 +23,7 @@ function d(e) {
         title: c.intl.string(c.t.OYbHfn),
         description: c.intl.string(c.t.yXwLMT),
         onClick: function () {
-            (0, s.T)(n, u);
+            (0, s.T)(n, d);
         }
     });
 }

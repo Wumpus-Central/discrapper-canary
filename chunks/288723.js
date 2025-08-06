@@ -1,15 +1,15 @@
 n.d(t, { Z: () => d });
 var r = n(244287),
     i = n(126387),
-    a = n(885952),
-    o = n(510104),
+    o = n(885952),
+    a = n(510104),
     s = n(891734),
     l = n(740078),
     c = n(632471);
 function u(e) {
     if ((0, i.Z)(e) === l.d7) return [];
     var t = (0, r.Z)(e);
-    return [(0, a.Z)(e), t, (0, a.Z)(t)];
+    return [(0, o.Z)(e), t, (0, o.Z)(t)];
 }
 let d = {
     name: 'flip',
@@ -18,8 +18,8 @@ let d = {
     fn: function (e) {
         var t = e.state,
             n = e.options,
-            a = e.name;
-        if (!t.modifiersData[a]._skip) {
+            o = e.name;
+        if (!t.modifiersData[o]._skip) {
             for (
                 var d = n.mainAxis,
                     f = void 0 === d || d,
@@ -52,48 +52,48 @@ let d = {
                         );
                     }, []),
                     C = t.rects.reference,
-                    w = t.rects.popper,
-                    R = new Map(),
-                    P = !0,
+                    R = t.rects.popper,
+                    P = new Map(),
+                    w = !0,
                     D = N[0],
                     L = 0;
                 L < N.length;
                 L++
             ) {
                 var x = N[L],
-                    k = (0, i.Z)(x),
-                    j = (0, c.Z)(x) === l.BL,
-                    M = [l.we, l.I].indexOf(k) >= 0,
-                    U = M ? 'width' : 'height',
-                    G = (0, o.Z)(t, {
+                    M = (0, i.Z)(x),
+                    k = (0, c.Z)(x) === l.BL,
+                    j = [l.we, l.I].indexOf(M) >= 0,
+                    U = j ? 'width' : 'height',
+                    G = (0, a.Z)(t, {
                         placement: x,
                         boundary: g,
                         rootBoundary: E,
                         altBoundary: b,
                         padding: m
                     }),
-                    B = M ? (j ? l.F2 : l.t$) : j ? l.I : l.we;
-                C[U] > w[U] && (B = (0, r.Z)(B));
+                    B = j ? (k ? l.F2 : l.t$) : k ? l.I : l.we;
+                C[U] > R[U] && (B = (0, r.Z)(B));
                 var Z = (0, r.Z)(B),
                     F = [];
                 if (
-                    (f && F.push(G[k] <= 0),
+                    (f && F.push(G[M] <= 0),
                     p && F.push(G[B] <= 0, G[Z] <= 0),
                     F.every(function (e) {
                         return e;
                     }))
                 ) {
-                    ((D = x), (P = !1));
+                    ((D = x), (w = !1));
                     break;
                 }
-                R.set(x, F);
+                P.set(x, F);
             }
-            if (P)
+            if (w)
                 for (
                     var V = O ? 3 : 1,
                         H = function (e) {
                             var t = N.find(function (t) {
-                                var n = R.get(t);
+                                var n = P.get(t);
                                 if (n)
                                     return n.slice(0, e).every(function (e) {
                                         return e;
@@ -105,7 +105,7 @@ let d = {
                     Y > 0 && 'break' !== H(Y);
                     Y--
                 );
-            t.placement !== D && ((t.modifiersData[a]._skip = !0), (t.placement = D), (t.reset = !0));
+            t.placement !== D && ((t.modifiersData[o]._skip = !0), (t.placement = D), (t.reset = !0));
         }
     },
     requiresIfExists: ['offset'],

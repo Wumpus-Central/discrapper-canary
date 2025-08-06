@@ -1,19 +1,19 @@
 n.d(t, {
-    L: () => o,
+    L: () => a,
     Z: () => s
 });
 var r = n(729594),
     i = n(981631);
-let a = 'music.apple.com';
-function o(e) {
-    return e === a;
+let o = 'music.apple.com';
+function a(e) {
+    return e === o;
 }
 function s(e) {
     var t;
     if (null == e.url || (null == (t = e.provider) ? void 0 : t.name) !== 'Apple Music' || (e.type !== i.hBH.ARTICLE && e.type !== i.hBH.LINK)) return !1;
     try {
         let t = r.parse(e.url, !0).host;
-        return o(t);
+        return a(t);
     } catch (e) {
         return !1;
     }

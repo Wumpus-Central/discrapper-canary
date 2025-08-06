@@ -58,6 +58,7 @@ var r = (function (e) {
             (e.DIRECTORY_ADD_GUILD_CONFIRMATION = 'impression_directory_add_guild_confirmation'),
             (e.DISCOVERABILITY = 'impression_discoverability'),
             (e.DISCOVERY_GAME_LANDING_PAGE = 'impression_discovery_game_landing_page'),
+            (e.DISPLAY_NAME_STYLES_MODAL = 'impression_display_name_styles_modal'),
             (e.DROPS_QUEST_COMPLETION = 'impression_drops_quest_completion'),
             (e.DROPS_QUEST_ENROLLMENT = 'impression_drops_quest_enrollment'),
             (e.EMBEDDED_ACTIVITY_HAPPENING_NOW = 'impression_embedded_activity_happening_now'),

@@ -1,6 +1,6 @@
 (n.d(t, {
-    X9: () => w,
-    b8: () => R,
+    X9: () => R,
+    b8: () => P,
     hz: () => N
 }),
     n(388685),
@@ -12,8 +12,8 @@
     n(97749));
 var r = n(73800),
     i = n(512722),
-    a = n.n(i),
-    o = n(442837),
+    o = n.n(i),
+    a = n(442837),
     s = n(544891),
     l = n(570140),
     c = n(911969),
@@ -65,12 +65,12 @@ function C(e) {
         };
     }, [e.id, e.icon, e.name, e.bot]);
 }
-function w(e, t) {
-    let { application: n, customId: i, components: a } = e,
+function R(e, t) {
+    let { application: n, customId: i, components: o } = e,
         s = (0, d.Z)(),
         [c, f] = r.useState(null),
         [_, p] = r.useState(null),
-        h = (0, o.e7)([v.Z], () => v.Z.getModalState(_), [_]),
+        h = (0, a.e7)([v.Z], () => v.Z.getModalState(_), [_]),
         m = (0, u.Z)(() => new Set()),
         g = r.useCallback(() => {
             (f(null), p(null), A(m) && p(D(e, s)));
@@ -86,7 +86,7 @@ function w(e, t) {
     }, [_, h, t, i]);
     let { applicationIconURL: E, applicationName: b } = C(n);
     return {
-        components: a,
+        components: o,
         applicationIconURL: E,
         applicationName: b,
         submissionState: h,
@@ -95,36 +95,36 @@ function w(e, t) {
         onSubmit: g
     };
 }
-function R(e) {
+function P(e) {
     let { application: t, customId: n } = e,
-        { applicationIconURL: r, applicationName: i, applicationBaseUrl: o } = C(t),
+        { applicationIconURL: r, applicationName: i, applicationBaseUrl: a } = C(t),
         s = h.Z.getChannel(e.channelId);
-    a()(null != s, 'channel should not be null');
+    o()(null != s, 'channel should not be null');
     let l = {
         instance_id: ''.concat(e.channelId, ':').concat(t.id, ':').concat(n),
         custom_id: n,
         channel_id: e.channelId
     };
     null != s.guild_id && '' !== s.guild_id && (l.guild_id = s.guild_id);
-    let c = new URL(null != o ? o : '');
+    let c = new URL(null != a ? a : '');
     return (
         (c.pathname = e.iframePath),
         {
             applicationIconURL: r,
             applicationName: i,
-            applicationBaseUrl: o,
+            applicationBaseUrl: a,
             queryParams: l,
             iframeUrl: c.toString()
         }
     );
 }
-let P = (e, t) =>
+let w = (e, t) =>
     t.map((t) => {
         switch (t.type) {
             case c.re.ACTION_ROW:
                 return {
                     type: t.type,
-                    components: P(e, t.components)
+                    components: w(e, t.components)
                 };
             case c.re.TEXT_INPUT: {
                 let n = I.Z.getInteractionComponentState(e, t.id);
@@ -143,15 +143,15 @@ let P = (e, t) =>
                 };
             }
             default:
-                a()(!1, 'unreachable');
+                o()(!1, 'unreachable');
         }
     });
 function D(e, t) {
     let n = y.default.fromTimestamp(Date.now()),
         r = e.channelId,
         i = h.Z.getChannel(r);
-    a()(null != i, 'expected channel');
-    let o = P(e.customId, e.components);
+    o()(null != i, 'expected channel');
+    let a = w(e.customId, e.components);
     (0, _.kz)(n, {
         data: {
             interactionType: c.B8.MODAL_SUBMIT,
@@ -171,7 +171,7 @@ function D(e, t) {
                         data: {
                             id: e.id,
                             custom_id: e.customId,
-                            components: o
+                            components: a
                         },
                         session_id: p.default.getSessionId(),
                         nonce: n

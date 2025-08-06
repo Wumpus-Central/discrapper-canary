@@ -8,8 +8,8 @@
     n(539854));
 var r = n(73800),
     i = n(442837),
-    a = n(835473),
-    o = n(158776),
+    o = n(835473),
+    a = n(158776),
     s = n(594174),
     l = n(823379),
     c = n(317381),
@@ -90,7 +90,7 @@ function m(e) {
 }
 function g(e, t) {
     let n = e.map((e) => e.applicationId),
-        o = (0, a.Z)(n),
+        a = (0, o.Z)(n),
         c = new Set([]);
     for (let t of e) for (let e of t.userIds) c.add(e);
     let u = (0, i.Wu)(
@@ -110,14 +110,14 @@ function g(e, t) {
             }),
             e
                 .map((e, r) => {
-                    let i = o[r],
-                        a = [];
-                    if (null != a)
+                    let i = a[r],
+                        o = [];
+                    if (null != o)
                         for (let r of e.userIds) {
                             let e = n.get(r);
                             if (null != e && null != t) {
                                 let n = t(e);
-                                null != n && a.push(n);
+                                null != n && o.push(n);
                             }
                         }
                     return null == i
@@ -125,22 +125,22 @@ function g(e, t) {
                         : {
                               embeddedActivity: e,
                               application: i,
-                              userParticipantAvatarUrls: a
+                              userParticipantAvatarUrls: o
                           };
                 })
                 .filter(l.lm)
         );
-    }, [e, o, u, t]);
+    }, [e, a, u, t]);
 }
 function E(e) {
     return (0, i.e7)(
-        [o.Z],
+        [a.Z],
         () => {
             let t = new Map();
             return (
                 e.forEach((e) => {
                     var n;
-                    let r = o.Z.findActivity(null == e ? void 0 : e.embeddedActivity.userIds.values().next().value, (t) => {
+                    let r = a.Z.findActivity(null == e ? void 0 : e.embeddedActivity.userIds.values().next().value, (t) => {
                         var n;
                         return t.application_id === (null == e || null == (n = e.application) ? void 0 : n.id);
                     });

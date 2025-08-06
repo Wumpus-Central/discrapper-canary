@@ -2,8 +2,8 @@
 var r = n(255367);
 n(73800);
 var i = n(952265),
-    a = n(82659),
-    o = n(755721),
+    o = n(82659),
+    a = n(755721),
     s = n(468026),
     l = n(724723),
     c = n(388032);
@@ -85,7 +85,7 @@ let p = {
                             variant: p
                         }),
                         (0, r.jsx)(
-                            a.Modal,
+                            o.Modal,
                             _(d({}, e), {
                                 size: 'sm',
                                 title: t,
@@ -100,7 +100,7 @@ let p = {
                     _(d({}, e), {
                         title: t,
                         body: n,
-                        confirmColor: 'critical-primary' === p ? o.Tt.RED : o.Tt.BRAND,
+                        confirmColor: 'critical-primary' === p ? a.Tt.RED : a.Tt.BRAND,
                         confirmText: f,
                         cancelText: h,
                         onConfirm: m,

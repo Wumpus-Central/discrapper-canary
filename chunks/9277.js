@@ -1,8 +1,8 @@
 (n.d(t, { Z: () => T }), n(388685));
 var r = n(255367),
     i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(94171),
     l = n(442837),
     c = n(114101),
@@ -68,7 +68,7 @@ function v(e, t) {
     );
 }
 function I(e, t) {
-    let { disabled: n, type: a } = e,
+    let { disabled: n, type: o } = e,
         [b, O] = i.useState(!1),
         I = (0, l.e7)([f.Z], () => {
             var e, t;
@@ -87,12 +87,12 @@ function I(e, t) {
         event: h.CkL.FAVORITE_GIF,
         handler: C
     });
-    let w = i.useCallback(() => {
-            (0, d.RO)(m.X1.GIF, a);
-        }, [a]),
-        { Component: R, events: P, play: D } = (0, c.V)();
+    let R = i.useCallback(() => {
+            (0, d.RO)(m.X1.GIF, o);
+        }, [o]),
+        { Component: P, events: w, play: D } = (0, c.V)();
     if (n) return null;
-    let L = T === m.X1.GIF && S === a;
+    let L = T === m.X1.GIF && S === o;
     return (0, r.jsx)(u.ua7, {
         text: I ? g.intl.string(g.t.mE2e8P) : null,
         forceOpen: !0,
@@ -103,17 +103,17 @@ function I(e, t) {
                     y(
                         {
                             ref: t,
-                            className: o()(m.CT, E.buttonContainer)
+                            className: a()(m.CT, E.buttonContainer)
                         },
                         e
                     ),
                     {
                         children: (0, r.jsx)(p.Z, {
                             className: E.button,
-                            onMouseEnter: P.onMouseEnter,
-                            onMouseLeave: P.onMouseLeave,
+                            onMouseEnter: w.onMouseEnter,
+                            onMouseLeave: w.onMouseLeave,
                             onClick: () => {
-                                (w(), D());
+                                (R(), D());
                             },
                             isActive: L,
                             pulse: b,
@@ -121,7 +121,7 @@ function I(e, t) {
                             'aria-expanded': L,
                             'aria-haspopup': 'dialog',
                             'aria-controls': A,
-                            children: (0, r.jsx)(R, {
+                            children: (0, r.jsx)(P, {
                                 size: 'refresh_sm',
                                 color: 'currentColor'
                             })

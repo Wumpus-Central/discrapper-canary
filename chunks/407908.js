@@ -6,8 +6,8 @@ var r = n(255367),
     s = n(549879),
     o = n(109590),
     c = n(189432),
-    d = n(665149),
-    u = n(359110),
+    u = n(665149),
+    d = n(359110),
     h = n(626135),
     p = n(981631),
     f = n(50493),
@@ -16,22 +16,22 @@ var r = n(255367),
 function b(e) {
     var t, n;
     let { channel: b } = e,
-        _ = i.useContext(h.AnalyticsContext),
-        y = (0, a.Aq)(),
+        y = i.useContext(h.AnalyticsContext),
+        x = (0, a.Aq)(),
         j = g.intl.string(m.default['Beo/7u']),
-        { firstMessage: O } = (0, o.cl)(b),
-        x = null == O || null == (t = O.messageSnapshots) ? void 0 : t[0],
-        v = null == x || null == (n = x.moderatorReport) ? void 0 : n.reported_user_id;
+        { firstMessage: _ } = (0, o.cl)(b),
+        O = null == _ || null == (t = _.messageSnapshots) ? void 0 : t[0],
+        v = null == O || null == (n = O.moderatorReport) ? void 0 : n.reported_user_id;
     return b.isModeratorReportChannel() && null != v
-        ? (0, r.jsx)(d.ZP.Icon, {
+        ? (0, r.jsx)(u.ZP.Icon, {
               onClick: () => {
-                  ((0, u.Kh)(b.id),
+                  ((0, d.Kh)(b.id),
                       (0, s.i)(),
                       (0, c.r)(b.guild_id, v, b.id, {
                           modViewPanel: f.k.INFO,
-                          sourceLocation: null != location ? location : _.location
+                          sourceLocation: null != location ? location : y.location
                       }),
-                      y.dispatch(p.CkL.POPOUT_CLOSE));
+                      x.dispatch(p.CkL.POPOUT_CLOSE));
               },
               tooltip: j,
               icon: l.HI3,

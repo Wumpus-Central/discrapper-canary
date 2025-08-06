@@ -1,13 +1,13 @@
 let r;
 (n.d(t, {
     U: () => Z,
-    Z: () => X
+    Z: () => Q
 }),
     n(388685),
     n(642613));
 var i,
-    a = n(392711),
-    o = n.n(a),
+    o = n(392711),
+    a = n.n(o),
     s = n(697988),
     l = n(683860),
     c = n(843991),
@@ -42,23 +42,23 @@ let O = [],
     A = s.z.MATCH_SOME,
     N = 0,
     C = [],
-    w = !1,
-    R = [],
-    P = o().chain(O),
-    D = o().chain(O),
+    R = !1,
+    P = [],
+    w = a().chain(O),
+    D = a().chain(O),
     L = new Set(),
     x = new Set();
-function k(e) {
+function M(e) {
     var t;
     return null != (t = m.ZP.lastMessageId(e)) ? t : e;
 }
-function j(e) {
+function k(e) {
     let t = _.Z.getCount(e);
     return null === t || 0 === t;
 }
-function M(e) {
+function j(e) {
     return function (t, n) {
-        return (0, b.yv)(t) ? -1 : (0, b.yv)(n) ? 1 : e === l.z.LATEST_ACTIVITY ? E.default.compare(k(n), k(t)) : E.default.compare(n, t);
+        return (0, b.yv)(t) ? -1 : (0, b.yv)(n) ? 1 : e === l.z.LATEST_ACTIVITY ? E.default.compare(M(n), M(t)) : E.default.compare(n, t);
     };
 }
 function U(e, t) {
@@ -72,7 +72,7 @@ function U(e, t) {
     };
 }
 function G() {
-    ((C = []), (r = null), (I = null), (T = new Set()), (S = l.z.LATEST_ACTIVITY), (A = s.z.MATCH_SOME), (N = 0), (R = []), (P = o().chain(O)), (D = o().chain(O)), x.clear(), L.clear());
+    ((C = []), (r = null), (I = null), (T = new Set()), (S = l.z.LATEST_ACTIVITY), (A = s.z.MATCH_SOME), (N = 0), (P = []), (w = a().chain(O)), (D = a().chain(O)), x.clear(), L.clear());
 }
 function B() {
     var e;
@@ -89,23 +89,23 @@ function Z(e) {
                   let { id: t } = e;
                   return t;
               })
-              .sort(M(S));
+              .sort(j(S));
 }
 function F(e) {
     let t = h.Z.getChannel(I);
     if (null == t) return;
     ((null == e ? void 0 : e.refreshThreadIds) &&
-        ((R = Object.values(f.Z.getThreadsForParent(t.guild_id, t.id)).map((e) => {
+        ((P = Object.values(f.Z.getThreadsForParent(t.guild_id, t.id)).map((e) => {
             let { id: t } = e;
             return t;
         })),
         (N = 0),
-        (w = !0)),
-        0 !== L.size && ((R = R.filter((e) => !L.has(e))), L.clear()),
-        0 !== x.size && ((R = Array.from(new Set([...R, ...x]))), x.clear()),
-        ((null == e ? void 0 : e.refreshThreadIds) || (null == e ? void 0 : e.sortThreadIds)) && ((D = o().chain(R).sort(M(l.z.LATEST_ACTIVITY))), (P = o().chain(R).sort(M(l.z.CREATION_DATE)))));
-    let n = (S === l.z.LATEST_ACTIVITY ? D : P).value(),
-        i = (C = 0 === T.size ? n : n.filter(U(T, A))).find((e) => j(e));
+        (R = !0)),
+        0 !== L.size && ((P = P.filter((e) => !L.has(e))), L.clear()),
+        0 !== x.size && ((P = Array.from(new Set([...P, ...x]))), x.clear()),
+        ((null == e ? void 0 : e.refreshThreadIds) || (null == e ? void 0 : e.sortThreadIds)) && ((D = a().chain(P).sort(j(l.z.LATEST_ACTIVITY))), (w = a().chain(P).sort(j(l.z.CREATION_DATE)))));
+    let n = (S === l.z.LATEST_ACTIVITY ? D : w).value(),
+        i = (C = 0 === T.size ? n : n.filter(U(T, A))).find((e) => k(e));
     r = null == i ? null : i;
 }
 function V(e) {
@@ -148,9 +148,9 @@ function z(e) {
 function q(e) {
     let { channelId: t } = e;
     if (null == t || t !== I) return !1;
-    w = !1;
+    R = !1;
 }
-class $ extends (i = u.ZP.Store) {
+class X extends (i = u.ZP.Store) {
     initialize() {
         this.waitFor(h.Z, f.Z, g.Z, m.ZP);
     }
@@ -158,14 +158,14 @@ class $ extends (i = u.ZP.Store) {
         return N;
     }
     getCanAckThreads() {
-        return w;
+        return R;
     }
     getThreadIds(e, t, n, r) {
         let i = e !== I,
-            a = !(0, c.O)(n, T),
-            o = t !== S,
+            o = !(0, c.O)(n, T),
+            a = t !== S,
             s = r !== A;
-        return ((I = e), (T = n), (S = t), (A = r), i ? F({ refreshThreadIds: !0 }) : o ? F({ sortThreadIds: !0 }) : (a || s) && F(), C);
+        return ((I = e), (T = n), (S = t), (A = r), i ? F({ refreshThreadIds: !0 }) : a ? F({ sortThreadIds: !0 }) : (o || s) && F(), C);
     }
     getCurrentThreadIds() {
         return C;
@@ -178,8 +178,8 @@ class $ extends (i = u.ZP.Store) {
         return r;
     }
 }
-y($, 'displayName', 'ForumActivePostStore');
-let X = new $(d.Z, {
+y(X, 'displayName', 'ForumActivePostStore');
+let Q = new X(d.Z, {
     CONNECTION_OPEN: B,
     OVERLAY_INITIALIZE: B,
     GUILD_CREATE: B,

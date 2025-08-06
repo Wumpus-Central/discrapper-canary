@@ -1,8 +1,8 @@
-(n.d(t, { Z: () => R }), n(388685));
+(n.d(t, { Z: () => P }), n(388685));
 var r = n(255367),
     i = n(73800),
-    a = n(442837),
-    o = n(704215),
+    o = n(442837),
+    a = n(704215),
     s = n(582019),
     l = n(235874),
     c = n(239091),
@@ -73,28 +73,28 @@ function N(e, t) {
     );
 }
 let C = 300,
-    w = 200;
-function R(e) {
-    let { channel: t, themeable: T, whichPopoutIsOpen: A, setWhichPopoutIsOpen: R } = e,
-        { parentAnalyticsLocation: P } = (0, u.ZP)(),
+    R = 200;
+function P(e) {
+    let { channel: t, themeable: T, whichPopoutIsOpen: A, setWhichPopoutIsOpen: P } = e,
+        { parentAnalyticsLocation: w } = (0, u.ZP)(),
         {
             Component: D,
             play: L,
-            events: { onMouseEnter: x, onMouseLeave: k }
+            events: { onMouseEnter: x, onMouseLeave: M }
         } = (0, s.j)(),
-        j = t.getGuildId(),
-        { mute: M, suppress: U } = (0, E.Z)(t),
-        G = (0, a.e7)([b.Z], () => b.Z.isDeaf()),
-        B = M || U || G,
+        k = t.getGuildId(),
+        { mute: j, suppress: U } = (0, E.Z)(t),
+        G = (0, o.e7)([b.Z], () => b.Z.isDeaf()),
+        B = j || U || G,
         Z = (0, h.sR)({ isSoundboardButtonDisabled: B }),
         [F, V] = (0, _.cv)(Z),
         { analyticsLocations: H } = (0, u.ZP)(),
-        { isHovered: Y, setIsHovered: W, onMouseEnter: K, onMouseLeave: z } = (0, p.Z)(w, C);
+        { isHovered: Y, setIsHovered: W, onMouseEnter: K, onMouseLeave: z } = (0, p.Z)(R, C);
     function q() {
-        return M ? I.intl.string(I.t['Ox4/zc']) : U ? I.intl.string(I.t['+YBKYG']) : G ? I.intl.string(I.t.X1lQlp) : void 0;
+        return j ? I.intl.string(I.t['Ox4/zc']) : U ? I.intl.string(I.t['+YBKYG']) : G ? I.intl.string(I.t.X1lQlp) : void 0;
     }
-    function $(e) {
-        null != j &&
+    function X(e) {
+        null != k &&
             (0, c.jW)(e, async () => {
                 let { default: e } = await n.e('56049').then(n.bind(n, 338991));
                 return (t) =>
@@ -103,22 +103,22 @@ function R(e) {
                         N(
                             S(
                                 {
-                                    guildId: j,
+                                    guildId: k,
                                     sourceAnalyticsLocations: H
                                 },
                                 t
                             ),
-                            { onInteraction: (0, f.u)('SoundboardContextMenu', P) }
+                            { onInteraction: (0, f.u)('SoundboardContextMenu', w) }
                         )
                     );
             });
     }
-    function X() {
-        ((0, d.v)(P, d.d.SOUNDBOARD), A === v.D.SOUNDBOARD ? (null == R || R(void 0), z()) : (null != A ? (L(), K()) : L(), null == R || R(v.D.SOUNDBOARD)));
+    function Q() {
+        ((0, d.v)(w, d.d.SOUNDBOARD), A === v.D.SOUNDBOARD ? (null == P || P(void 0), z()) : (null != A ? (L(), K()) : L(), null == P || P(v.D.SOUNDBOARD)));
     }
-    let Q = i.useRef(null);
+    let J = i.useRef(null);
     return (0, r.jsx)(l.y, {
-        targetElementRef: Q,
+        targetElementRef: J,
         shouldShow: (Y && (A === v.D.SOUNDBOARD || null == A)) || A === v.D.SOUNDBOARD,
         animation: l.y.Animation.FADE,
         animationPosition: 'top',
@@ -126,7 +126,7 @@ function R(e) {
         align: 'center',
         spacing: 16,
         onRequestClose: () => {
-            (W(!1), null == R || R(void 0));
+            (W(!1), null == P || P(void 0));
         },
         renderPopout: (e) => {
             let { closePopout: n } = e;
@@ -137,11 +137,11 @@ function R(e) {
                           onMouseEnter: K,
                           onMouseLeave: z,
                           children: (0, r.jsx)(g.Z, {
-                              guildId: j,
+                              guildId: k,
                               channel: t,
                               onClose: n,
                               gridNotice:
-                                  F === o.z.CUSTOM_CALL_SOUNDS_PICKER_UPSELL &&
+                                  F === a.z.CUSTOM_CALL_SOUNDS_PICKER_UPSELL &&
                                   (0, r.jsx)(m.o, {
                                       onClose: n,
                                       markAsDismissed: V
@@ -153,19 +153,19 @@ function R(e) {
         },
         children: () =>
             (0, r.jsx)(O.d, {
-                ref: Q,
+                ref: J,
                 isTrayButton: !0,
                 themeable: T,
                 label: q(),
                 iconComponent: D,
                 disabled: B,
-                onContextMenu: $,
-                onClick: X,
+                onContextMenu: X,
+                onClick: Q,
                 onMouseEnter: () => {
                     (K(), x());
                 },
                 onMouseLeave: () => {
-                    null == A && (z(), k());
+                    null == A && (z(), M());
                 },
                 isActive: Y || A === v.D.SOUNDBOARD,
                 color: Y || A === v.D.SOUNDBOARD ? 'primaryDark' : void 0

@@ -4,14 +4,14 @@ n.d(t, {
     Lg: () => g,
     OU: () => h,
     RH: () => s,
-    Ux: () => o,
+    Ux: () => a,
     VW: () => u,
     Vg: () => m,
     Vk: () => f,
     _6: () => b,
     aj: () => p,
     dc: () => y,
-    fX: () => a.f,
+    fX: () => o.f,
     hu: () => d,
     jj: () => r.j,
     n4: () => l,
@@ -20,11 +20,11 @@ n.d(t, {
 });
 var r = n(401653),
     i = n(95930),
-    a = n(41381),
-    o = (function (e) {
+    o = n(41381),
+    a = (function (e) {
         return ((e[(e.PROFANITY = 1)] = 'PROFANITY'), (e[(e.SEXUAL_CONTENT = 2)] = 'SEXUAL_CONTENT'), (e[(e.SLURS = 3)] = 'SLURS'), e);
     })({});
-(a.f.USER_PROFILE, a.f.SERVER_POLICY, a.f.MENTION_SPAM, a.f.ML_SPAM, a.f.DEFAULT_KEYWORD_LIST, a.f.KEYWORD);
+(o.f.USER_PROFILE, o.f.SERVER_POLICY, o.f.MENTION_SPAM, o.f.ML_SPAM, o.f.DEFAULT_KEYWORD_LIST, o.f.KEYWORD);
 let s = 1000,
     l = 100,
     c = 1000,

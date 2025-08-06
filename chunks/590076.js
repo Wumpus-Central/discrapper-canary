@@ -1,8 +1,8 @@
 n.d(t, { Z: () => g });
 var r = n(255367),
     i = n(73800),
-    a = n(512722),
-    o = n.n(a),
+    o = n(512722),
+    a = n.n(o),
     s = n(399606),
     l = n(618158),
     c = n(594174),
@@ -40,10 +40,10 @@ function h(e) {
     return e;
 }
 function m(e) {
-    let { focused: t, channelId: n, streamerId: a, stream: u } = e,
+    let { focused: t, channelId: n, streamerId: o, stream: u } = e,
         p = i.useRef(null),
         h = (0, s.e7)([c.default], () => c.default.getCurrentUser());
-    (o()(null != h, 'user cannot be null'), (0, f.Z)(p, h, a, n));
+    (a()(null != h, 'user cannot be null'), (0, f.Z)(p, h, o, n));
     let {
         handleClick: m,
         handleMouseDown: g,
@@ -53,7 +53,7 @@ function m(e) {
     } = (0, d.Z)({
         user: h,
         channelId: n,
-        streamerId: a,
+        streamerId: o,
         stream: u,
         focused: t,
         canvas: p.current

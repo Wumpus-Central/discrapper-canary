@@ -2,8 +2,8 @@ n.d(t, { Z: () => l });
 var r = n(255367);
 n(73800);
 var i = n(481060),
-    a = n(215023);
-function o(e, t, n) {
+    o = n(215023);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -27,16 +27,16 @@ function s(e) {
                 })
             )),
             r.forEach(function (t) {
-                o(e, t, n[t]);
+                a(e, t, n[t]);
             }));
     }
     return e;
 }
 let l = (e) => {
-    let { product: t, analyticsLocations: o, overrideTitle: l, overrideDescription: c, shouldShowPromotionalExperience: u, onCloseCallback: d, itemConsumed: f, purchaseType: _ = a.o8.FIAT } = e;
+    let { product: t, analyticsLocations: a, overrideTitle: l, overrideDescription: c, shouldShowPromotionalExperience: u, onCloseCallback: d, itemConsumed: f, purchaseType: _ = o.o8.FIAT } = e;
     (0, i.ZDy)(
         async () => {
-            if (t.skuId === a.Vt.FRACTIONAL_PREMIUM || t.skuId === a.Vt.ORB_PROFILE_BADGE) {
+            if (t.skuId === o.Vt.FRACTIONAL_PREMIUM || t.skuId === o.Vt.ORB_PROFILE_BADGE) {
                 let { default: e } = await Promise.all([n.e('30141'), n.e('77198')]).then(n.bind(n, 509428));
                 return (n) =>
                     (0, r.jsx)(
@@ -44,11 +44,11 @@ let l = (e) => {
                         s(
                             {
                                 product: t,
-                                analyticsLocations: o,
+                                analyticsLocations: a,
                                 overrideTitle: l,
                                 overrideDescription: c,
                                 itemConsumed: f,
-                                purchaseType: a.o8.ORB
+                                purchaseType: o.o8.ORB
                             },
                             n
                         )
@@ -61,7 +61,7 @@ let l = (e) => {
                     s(
                         {
                             product: t,
-                            analyticsLocations: o,
+                            analyticsLocations: a,
                             overrideTitle: l,
                             overrideDescription: c,
                             shouldShowPromotionalExperience: u,

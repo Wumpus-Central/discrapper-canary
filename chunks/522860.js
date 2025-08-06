@@ -2,15 +2,15 @@ n.d(t, { Z: () => u });
 var r = n(255367);
 n(73800);
 var i = n(481060),
-    a = n(194082),
-    o = n(739566),
+    o = n(194082),
+    a = n(739566),
     s = n(834129),
     l = n(388032);
 let c = 20;
 function u(e) {
     var t;
     let { message: n, channel: u, playingActivity: d, onJoinStream: f, usernameHook: _, compact: p } = e,
-        h = (0, o.ZP)(n),
+        h = (0, a.ZP)(n),
         m = null == (t = n.call) ? void 0 : t.duration,
         g = _(h),
         E = l.intl.format(l.t.FKXvaG, {
@@ -36,7 +36,7 @@ function u(e) {
                           width: c,
                           height: c
                       })
-                    : (0, r.jsx)(a.ZP, { size: a.ZP.Sizes.SMALL }),
+                    : (0, r.jsx)(o.ZP, { size: o.ZP.Sizes.SMALL }),
             timestamp: n.timestamp,
             compact: p,
             children: E

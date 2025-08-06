@@ -5,8 +5,8 @@
     n(388685));
 var r,
     i = n(392711),
-    a = n.n(i),
-    o = n(876215),
+    o = n.n(i),
+    a = n(876215),
     s = n(442837),
     l = n(570140),
     c = n(158776),
@@ -26,7 +26,7 @@ function _(e, t, n) {
         e
     );
 }
-let p = new Set([o.s.LISTENED_SESSION]),
+let p = new Set([a.s.LISTENED_SESSION]),
     h = new Map();
 function m(e) {
     return ''.concat(e.author_id, ':').concat(e.id);
@@ -63,12 +63,12 @@ function O() {
         n = new Set(),
         r = new Set();
     for (let t of u.Z.getFeeds().values()) {
-        let { updatedKeys: i, matchedKeys: a } = E(n.size > 0 ? t.entries.filter((e) => !n.has(m(e.content))) : t.entries);
+        let { updatedKeys: i, matchedKeys: o } = E(n.size > 0 ? t.entries.filter((e) => !n.has(m(e.content))) : t.entries);
         for (let e of i) n.add(e);
-        for (let e of a) r.add(e);
+        for (let e of o) r.add(e);
         e = e || i.size > 0;
     }
-    for (let n of a().difference(t, [...r])) (h.delete(n), (e = !0));
+    for (let n of o().difference(t, [...r])) (h.delete(n), (e = !0));
     return e;
 }
 class v extends (r = s.ZP.Store) {

@@ -2,12 +2,12 @@ var t = 'Function.prototype.bind called on incompatible ',
     n = Object.prototype.toString,
     r = Math.max,
     i = '[object Function]',
-    a = function (e, t) {
+    o = function (e, t) {
         for (var n = [], r = 0; r < e.length; r += 1) n[r] = e[r];
         for (var i = 0; i < t.length; i += 1) n[i + e.length] = t[i];
         return n;
     },
-    o = function (e, t) {
+    a = function (e, t) {
         for (var n = [], r = t || 0, i = 0; r < e.length; r += 1, i += 1) n[i] = e[r];
         return n;
     },
@@ -20,13 +20,13 @@ e.exports = function (e) {
         c = this;
     if ('function' != typeof c || n.apply(c) !== i) throw TypeError(t + c);
     for (
-        var u = o(arguments, 1),
+        var u = a(arguments, 1),
             d = function () {
                 if (this instanceof l) {
-                    var t = c.apply(this, a(u, arguments));
+                    var t = c.apply(this, o(u, arguments));
                     return Object(t) === t ? t : this;
                 }
-                return c.apply(e, a(u, arguments));
+                return c.apply(e, o(u, arguments));
             },
             f = r(0, c.length - u.length),
             _ = [],

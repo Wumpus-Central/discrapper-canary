@@ -21,8 +21,8 @@
     n(388685));
 var r = n(887003),
     i = n(591759),
-    a = n(921948),
-    o = n(509212),
+    o = n(921948),
+    a = n(509212),
     s = n(46140),
     l = n(981631),
     c = n(380299);
@@ -35,18 +35,18 @@ var _ = (function (e) {
 function p(e, t, n) {
     let r = E(e, t, n),
         i = b(t),
-        a = null != i && f.includes(i);
+        o = null != i && f.includes(i);
     return {
         url: r,
         mimetype: i,
-        isAnimated: a
+        isAnimated: o
     };
 }
 function h(e, t) {
     return null != e ? e : t;
 }
 function m(e, t, n) {
-    var i, a;
+    var i, o;
     let l;
     switch (t) {
         case 'hero':
@@ -68,14 +68,14 @@ function m(e, t, n) {
             break;
         case 'quest_bar_hero_video': {
             let t = e.config.assets.questBarHeroVideo,
-                n = 'videoMetadata' in e.config ? (null == (a = e.config.videoMetadata) ? void 0 : a.assets.questBarPreviewVideo) : null,
+                n = 'videoMetadata' in e.config ? (null == (o = e.config.videoMetadata) ? void 0 : o.assets.questBarPreviewVideo) : null,
                 r = null != t ? t : n;
             if (null == r) return null;
             l = r;
             break;
         }
         case 'reward': {
-            let t = (0, o.hF)(e);
+            let t = (0, a.hF)(e);
             if (t.type === r.w.VIRTUAL_CURRENCY)
                 return {
                     url: c.Z,
@@ -86,7 +86,7 @@ function m(e, t, n) {
             break;
         }
         case 'reward_image': {
-            let t = (0, o.hF)(e);
+            let t = (0, a.hF)(e);
             if (t.type === r.w.VIRTUAL_CURRENCY) return null;
             l = t.asset;
             break;
@@ -154,7 +154,7 @@ function y(e) {
     return Math.min(Math.ceil(e), l.hiG);
 }
 function O(e, t) {
-    let n = (0, a.Z)();
+    let n = (0, o.Z)();
     return n < u
         ? {
               width: e,

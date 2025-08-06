@@ -7,8 +7,8 @@ n.d(t, {
 var r = n(255367);
 n(73800);
 var i = n(481060),
-    a = n(822869);
-function o(e, t, n) {
+    o = n(822869);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -32,7 +32,7 @@ function s(e) {
                 })
             )),
             r.forEach(function (t) {
-                o(e, t, n[t]);
+                a(e, t, n[t]);
             }));
     }
     return e;
@@ -62,8 +62,8 @@ function c(e, t) {
 }
 let u = 'forward-modal';
 function d(e) {
-    let { message: t, source: o, initialSelectedDestinations: l = [], forwardOptions: d, onRequestSent: f } = e;
-    ((0, a.Lb)(t.channel_id, t.id, o),
+    let { message: t, source: a, initialSelectedDestinations: l = [], forwardOptions: d, onRequestSent: f } = e;
+    ((0, o.Lb)(t.channel_id, t.id, a),
         (0, i.ZDy)(
             async () => {
                 let { ForwardModal: e } = await n.e('33648').then(n.bind(n, 930864));
@@ -85,7 +85,7 @@ function f() {
     (0, i.Mr3)(u);
 }
 function _(e) {
-    let { message: t, failedDestinations: a, forwardOptions: o } = e;
+    let { message: t, failedDestinations: o, forwardOptions: a } = e;
     (0, i.ZDy)(async () => {
         let { ForwardFailedAlertModal: e } = await n.e('86590').then(n.bind(n, 384331));
         return (n) =>
@@ -93,8 +93,8 @@ function _(e) {
                 e,
                 c(s({}, n), {
                     message: t,
-                    failedDestinations: a,
-                    forwardOptions: o
+                    failedDestinations: o,
+                    forwardOptions: a
                 })
             );
     });

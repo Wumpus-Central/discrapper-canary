@@ -6,8 +6,8 @@ n.d(t, {
 var r = n(255367);
 n(73800);
 var i = n(120356),
-    a = n.n(i),
-    o = n(345898),
+    o = n.n(i),
+    a = n(345898),
     s = n(433962);
 function l(e, t, n) {
     return (
@@ -64,9 +64,9 @@ function d(e, t) {
 let f = 660,
     _ = (e) =>
         (0, r.jsx)(
-            o.Z,
+            a.Z,
             d(c({}, e), {
-                className: a()(e.className, {
+                className: o()(e.className, {
                     [s.embedVertical]: !e.isHorizontal,
                     [s.embedHorizontal]: e.isHorizontal
                 })
@@ -74,12 +74,12 @@ let f = 660,
         ),
     p = (e) => {
         let { isHorizontal: t } = e,
-            n = () => (0, r.jsx)('div', { className: a()(s.loadingImage, { [s.loadingImageHorizontal]: t }) }),
+            n = () => (0, r.jsx)('div', { className: o()(s.loadingImage, { [s.loadingImageHorizontal]: t }) }),
             i = () =>
                 (0, r.jsx)('div', {
                     className: s.loadingDescription,
                     children: (0, r.jsx)('div', {
-                        className: a()(s.loadingBackgroundWrapper, { [s.loadingBackgroundWrapperHorizontal]: t }),
+                        className: o()(s.loadingBackgroundWrapper, { [s.loadingBackgroundWrapperHorizontal]: t }),
                         children: (0, r.jsx)('div', { className: s.loadingBackground })
                     })
                 });

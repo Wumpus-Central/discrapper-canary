@@ -1,8 +1,8 @@
 n.d(t, { Z: () => E });
 var r = n(255367),
     i = n(73800),
-    a = n(112724),
-    o = n(413458),
+    o = n(112724),
+    a = n(413458),
     s = n(351248),
     l = n(600164),
     c = n(585483),
@@ -14,21 +14,21 @@ var r = n(255367),
     h = n(981631),
     m = n(354459),
     g = n(363987);
-let E = (0, a.Z)((e) => {
-    let { participants: t, filteredParticipants: n, selectedParticipant: a, participantsVersion: E, layout: b, onSelectParticipant: y, onContextMenuParticipant: O, onFullscreenParticipant: v, channel: I, hasConnectPermission: T, className: S, inCall: A, showParticipants: N = !0, width: C, height: w, idle: R, mode: P, popoutWindow: D, awaitingRemoteSessionInfo: L, callContainerDimensions: x } = e;
+let E = (0, o.Z)((e) => {
+    let { participants: t, filteredParticipants: n, selectedParticipant: o, participantsVersion: E, layout: b, onSelectParticipant: y, onContextMenuParticipant: O, onFullscreenParticipant: v, channel: I, hasConnectPermission: T, className: S, inCall: A, showParticipants: N = !0, width: C, height: R, idle: P, mode: w, popoutWindow: D, awaitingRemoteSessionInfo: L, callContainerDimensions: x } = e;
     i.useEffect(() => {
         c.S.dispatch(h.CkL.REMEASURE_TARGET);
-    }, [C, w, x.width, x.height]);
-    let k = i.useMemo(() => n.filter((e) => e.type !== m.fO.ACTIVITY || !e.participants.some((e) => (0, o.J)(e))), [n, E]);
+    }, [C, R, x.width, x.height]);
+    let M = i.useMemo(() => n.filter((e) => e.type !== m.fO.ACTIVITY || !e.participants.some((e) => (0, a.J)(e))), [n, E]);
     return (null == L ? void 0 : L.channelId) === I.id
-        ? (0, r.jsx)(d.Z, { height: w })
+        ? (0, r.jsx)(d.Z, { height: R })
         : (null == I ? void 0 : I.isGuildVocal()) && !A
           ? (0, r.jsx)(u.Z, {
                 channel: I,
                 participants: t,
                 hasConnectPermission: T
             })
-          : P === h.WtW.VOICE
+          : w === h.WtW.VOICE
             ? (0, r.jsx)(s.Z, {
                   guildId: I.guild_id,
                   width: C,
@@ -36,7 +36,7 @@ let E = (0, a.Z)((e) => {
                   participants: t,
                   onContextMenu: O
               })
-            : ((n = A ? n : t), null == a)
+            : ((n = A ? n : t), null == o)
               ? 0 === n.length
                   ? (0, r.jsx)(p.Z, { channelId: I.id })
                   : (0, r.jsx)(l.Z, {
@@ -46,7 +46,7 @@ let E = (0, a.Z)((e) => {
                         children: (0, r.jsx)(f.Z, {
                             channel: I,
                             className: g.videoGrid,
-                            participants: k,
+                            participants: M,
                             totalNumberOfParticipants: t.length,
                             onClick: y,
                             onDoubleClick: v,
@@ -58,13 +58,13 @@ let E = (0, a.Z)((e) => {
                     onFullscreenParticipant: v,
                     onContextMenuParticipant: O,
                     onSelectParticipant: y,
-                    selectedParticipant: a,
-                    filteredParticipants: k,
+                    selectedParticipant: o,
+                    filteredParticipants: M,
                     participants: t,
                     popoutWindow: D,
                     className: S,
-                    idle: R,
-                    height: w,
+                    idle: P,
+                    height: R,
                     width: C,
                     layout: b,
                     inCall: A,

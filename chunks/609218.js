@@ -1,12 +1,12 @@
 (n.d(t, {
-    Z: () => M,
-    p: () => j
+    Z: () => j,
+    p: () => k
 }),
     n(953529));
 var r = n(255367),
     i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(442837),
     l = n(446673),
     c = n(304789),
@@ -29,28 +29,28 @@ var r = n(255367),
     A = n(474936),
     N = n(981631),
     C = n(388032),
-    w = n(338704),
-    R = n(229191),
-    P = n(946598),
+    R = n(338704),
+    P = n(229191),
+    w = n(946598),
     D = n(428946),
     L = n(42948),
     x = n(109194),
-    k = n(352812),
-    j = (function (e) {
+    M = n(352812),
+    k = (function (e) {
         return ((e[(e.NONE = 0)] = 'NONE'), (e[(e.PARENT_CONTAINER = 1)] = 'PARENT_CONTAINER'), (e[(e.TAB_PARENT_CONTAINER = 2)] = 'TAB_PARENT_CONTAINER'), e);
     })({});
-function M(e) {
-    let { containerContext: t, image: n, title: a, description: j, enableSocialProof: M, analyticsLocationSection: U, upsellViewedTrackingData: G, onClose: B, onDisplay: Z, onLearnMore: F, isEmojiPickerOverlay: V = !1 } = e,
+function j(e) {
+    let { containerContext: t, image: n, title: o, description: k, enableSocialProof: j, analyticsLocationSection: U, upsellViewedTrackingData: G, onClose: B, onDisplay: Z, onLearnMore: F, isEmojiPickerOverlay: V = !1 } = e,
         H = (0, s.e7)([b.Z], () => b.Z.affinities),
         Y = (0, s.e7)([b.Z], () => b.Z.hasFetched);
     (i.useEffect(() => {
-        !Y && M && f.MH();
-    }, [Y, M]),
+        !Y && j && f.MH();
+    }, [Y, j]),
         i.useEffect(() => {
             (m.default.track(N.rMx.PREMIUM_UPSELL_VIEWED, G), null == Z || Z());
         }, [Z, G]));
-    let W = H.length > 1 && M,
-        K = () => (2 === t ? R.hasTabParentContainer : 1 === t ? R.hasParentContainer : R.noParentContainer),
+    let W = H.length > 1 && j,
+        K = () => (2 === t ? P.hasTabParentContainer : 1 === t ? P.hasParentContainer : P.noParentContainer),
         z = () => {
             (m.default.track(N.rMx.PREMIUM_PROMOTION_OPENED, {
                 location_section: U,
@@ -63,15 +63,15 @@ function M(e) {
                 (0, h.uL)(N.Z5c.APPLICATION_STORE));
         },
         q = (0, O.N)(),
-        $ = i.useCallback(() => {
+        X = i.useCallback(() => {
             var e;
             return null != (e = (0, E.fr)(q)) ? e : C.intl.string(C.t.pj0XBA);
         }, [q]),
-        X = (0, y.Z)({ location: 'PremiumUpsellPickerOverlay' }),
-        Q = (0, T.Z)();
-    if (X) {
+        Q = (0, y.Z)({ location: 'PremiumUpsellPickerOverlay' }),
+        J = (0, T.Z)();
+    if (Q) {
         let e;
-        e = V ? ((0, g.rO)() ? D.Z : L.Z) : (0, g.rO)() ? x.Z : k.Z;
+        e = V ? ((0, g.rO)() ? D.Z : L.Z) : (0, g.rO)() ? x.Z : M.Z;
         let t = V ? 'nitro-pink' : 'green';
         return (0, r.jsxs)(r.Fragment, {
             children: [
@@ -81,20 +81,21 @@ function M(e) {
                 }),
                 (0, r.jsxs)(c.$, {
                     color: t,
-                    className: w.container,
+                    className: R.container,
                     children: [
                         (0, r.jsxs)('div', {
-                            className: w.content,
+                            className: R.content,
                             children: [
                                 (0, r.jsx)(d.olH, {
+                                    'data-migration-pending': !0,
                                     onClick: B,
-                                    className: w.closeButton
+                                    className: R.closeButton
                                 }),
                                 (0, r.jsxs)('div', {
-                                    className: w.contentContainer,
+                                    className: R.contentContainer,
                                     children: [
                                         (0, r.jsx)('div', {
-                                            className: P.headerGraphic,
+                                            className: w.headerGraphic,
                                             children: (0, r.jsx)(d.zsu, {
                                                 type: 'video',
                                                 src: e,
@@ -102,27 +103,27 @@ function M(e) {
                                                 loopAt: 5
                                             })
                                         }),
-                                        null != Q && (0, r.jsx)(l.C, { badge: { text: Q } }),
+                                        null != J && (0, r.jsx)(l.C, { badge: { text: J } }),
                                         (0, r.jsx)(d.X6q, {
-                                            className: o()(w.title, { [w.withBadge]: null != Q }),
+                                            className: a()(R.title, { [R.withBadge]: null != J }),
                                             variant: 'heading-xl/bold',
                                             color: 'header-primary',
-                                            children: a
+                                            children: o
                                         }),
                                         (0, r.jsx)(d.Text, {
                                             variant: 'text-md/medium',
                                             color: 'text-secondary',
-                                            className: w.body,
-                                            children: j
+                                            className: R.body,
+                                            children: k
                                         })
                                     ]
                                 })
                             ]
                         }),
                         (0, r.jsx)('div', {
-                            className: w.footer,
+                            className: R.footer,
                             children: (0, r.jsxs)('div', {
-                                className: w.buttonContainer,
+                                className: R.buttonContainer,
                                 children: [
                                     (0, r.jsx)(d.zxk, {
                                         variant: 'secondary',
@@ -139,7 +140,7 @@ function M(e) {
                                         onClick: () => {
                                             B();
                                         },
-                                        defaultTextOverride: $(),
+                                        defaultTextOverride: X(),
                                         fullWidth: !0
                                     })
                                 ]
@@ -157,40 +158,41 @@ function M(e) {
                 isVisible: !0
             }),
             (0, r.jsxs)('div', {
-                className: o()(R.container, K()),
+                className: a()(P.container, K()),
                 children: [
                     (0, r.jsx)(d.olH, {
+                        'data-migration-pending': !0,
                         onClick: B,
-                        className: R.closeButton
+                        className: P.closeButton
                     }),
                     (0, r.jsxs)('div', {
-                        className: R.contentContainer,
+                        className: P.contentContainer,
                         children: [
                             (0, r.jsx)('img', {
-                                className: R.image,
+                                className: P.image,
                                 width: n.width,
                                 height: n.height,
                                 src: n.url,
                                 alt: 'Nitro Perk'
                             }),
                             (0, r.jsx)(d.X6q, {
-                                className: o()(R.title, { [R.titleNoSocialProof]: !W }),
+                                className: a()(P.title, { [P.titleNoSocialProof]: !W }),
                                 variant: 'heading-xl/bold',
-                                children: a
+                                children: o
                             }),
                             W && (0, r.jsx)(S.Z, { affinities: H }),
                             (0, r.jsx)(d.Text, {
                                 variant: 'text-sm/medium',
-                                className: R.body,
-                                children: j
+                                className: P.body,
+                                children: k
                             })
                         ]
                     }),
                     (0, r.jsxs)('div', {
-                        className: R.ctaContainer,
+                        className: P.ctaContainer,
                         children: [
                             (0, r.jsx)(u.zx, {
-                                className: R.secondaryCTA,
+                                className: P.secondaryCTA,
                                 size: u.zx.Sizes.SMALL,
                                 color: u.zx.Colors.CUSTOM,
                                 look: u.zx.Looks.LINK,
@@ -209,7 +211,7 @@ function M(e) {
                                 onClick: () => {
                                     B();
                                 },
-                                textOptions: { textOverride: $() }
+                                textOptions: { textOverride: X() }
                             })
                         ]
                     })

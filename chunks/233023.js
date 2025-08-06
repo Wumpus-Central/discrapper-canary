@@ -2,8 +2,8 @@ n.d(t, { Z: () => m });
 var r = n(255367);
 n(73800);
 var i = n(120356),
-    a = n.n(i),
-    o = n(481060),
+    o = n.n(i),
+    a = n(481060),
     s = n(111028),
     l = n(359588),
     c = n(74340),
@@ -22,39 +22,39 @@ function m(e) {
         A = null == t ? void 0 : t.state,
         N = I ? (0, c.Z)(t) : null,
         C = null != N ? ''.concat((0, u.Z)(N), ': ') : null,
-        w = null != A && '' !== A,
-        R = w || null != N,
-        P = null;
+        R = null != A && '' !== A,
+        P = R || null != N,
+        w = null;
     null != E && T
-        ? (P = (0, r.jsx)(d.Z, {
-              className: a()(i, h.hangStatusIcon),
+        ? (w = (0, r.jsx)(d.Z, {
+              className: o()(i, h.hangStatusIcon),
               hangStatusActivity: E
           }))
         : null == S ||
           O ||
-          (P = (0, r.jsx)(_.Z, {
+          (w = (0, r.jsx)(_.Z, {
               emoji: S,
               animate: y,
               className: i,
-              hideTooltip: v || R
+              hideTooltip: v || P
           }));
-    let D = w && (null != P ? ' '.concat(A) : A),
+    let D = R && (null != w ? ' '.concat(A) : A),
         L = () => {
-            let e = null != S && !O && !w && null == N;
+            let e = null != S && !O && !R && null == N;
             return v || e
                 ? (0, r.jsxs)(r.Fragment, {
-                      children: [C, P, D]
+                      children: [C, w, D]
                   })
                 : (0, r.jsxs)(s.Z, {
                       delay: p.X,
                       tooltipClassName: m,
-                      children: [C, P, D]
+                      children: [C, w, D]
                   });
         };
-    return (0, r.jsx)(o.Text, {
+    return (0, r.jsx)(a.Text, {
         variant: 'text-'.concat(b, '/medium'),
         color: 'none',
-        className: a()(h.truncated, n),
+        className: o()(h.truncated, n),
         children: L()
     });
 }

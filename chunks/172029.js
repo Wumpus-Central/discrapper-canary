@@ -1,8 +1,8 @@
 (n.d(t, { Z: () => b }), n(388685));
 var r = n(442837),
     i = n(570140),
-    a = n(569545),
-    o = n(19780),
+    o = n(569545),
+    a = n(19780),
     s = n(981631);
 function l(e, t, n) {
     return (
@@ -69,20 +69,20 @@ function h(e) {
 }
 function m(e) {
     var t, n;
-    let { channelId: r, sendMessageOptions: i, message: a, optimistic: l } = e;
-    if (r !== o.Z.getChannelId()) return !1;
+    let { channelId: r, sendMessageOptions: i, message: o, optimistic: l } = e;
+    if (r !== a.Z.getChannelId()) return !1;
     if (l) {
         let e = null == i || null == (n = i.activityAction) ? void 0 : n.targetUserId;
-        return null != e && ((f[a.id] = e), !1);
+        return null != e && ((f[o.id] = e), !1);
     }
-    if (null == a.nonce || (null == (t = a.activity) ? void 0 : t.type) !== s.mFx.STREAM_REQUEST) return !1;
-    let u = f[a.nonce];
+    if (null == o.nonce || (null == (t = o.activity) ? void 0 : t.type) !== s.mFx.STREAM_REQUEST) return !1;
+    let u = f[o.nonce];
     if (null == u) return !1;
-    (delete f[a.nonce], (_ = d(c({}, _), { [u]: a.id })));
+    (delete f[o.nonce], (_ = d(c({}, _), { [u]: o.id })));
 }
 function g(e) {
     let { streamKey: t } = e,
-        { ownerId: n } = a.my(t);
+        { ownerId: n } = o.my(t);
     if (null == _[n]) return !1;
     delete _[n];
 }

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => _ });
 var r = n(394821),
     i = n(841784),
-    a = n(833664),
-    o = n(810568),
+    o = n(833664),
+    a = n(810568),
     s = n(168524),
     l = n(103479),
     c = n(553375),
@@ -42,7 +42,7 @@ function _(e) {
             f(
                 {
                     location: t,
-                    source: o.m1.UserProfile,
+                    source: a.m1.UserProfile,
                     trackEntryPointImpression: !0
                 },
                 (0, c.nK)({
@@ -59,7 +59,7 @@ function _(e) {
         b = (0, i.Z)(_);
     return b && null != p
         ? E
-        : !b && (0, a.Z)(_)
+        : !b && (0, o.Z)(_)
           ? g
           : (0, r.Z)(_) && n.id !== d.id
             ? () =>

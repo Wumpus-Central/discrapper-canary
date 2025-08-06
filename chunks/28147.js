@@ -1,8 +1,8 @@
 (n.d(t, { Z: () => B }), n(388685));
 var r = n(255367),
     i = n(73800),
-    a = n(392711),
-    o = n.n(a),
+    o = n(392711),
+    a = n.n(o),
     s = n(209173),
     l = n(110924),
     c = n(367907),
@@ -25,9 +25,9 @@ var r = n(255367),
     A = n(79984),
     N = n(314734),
     C = n(981631),
-    w = n(388032),
-    R = n(946908);
-function P(e, t, n) {
+    R = n(388032),
+    P = n(946908);
+function w(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -51,7 +51,7 @@ function D(e) {
                 })
             )),
             r.forEach(function (t) {
-                P(e, t, n[t]);
+                w(e, t, n[t]);
             }));
     }
     return e;
@@ -79,20 +79,20 @@ function x(e, t) {
         e
     );
 }
-let k = Array(6)
+let M = Array(6)
         .fill(0)
         .map((e, t) => t),
-    j = [, , ,].fill(0).map((e, t) => t),
-    M = [, , , ,].fill(0).map((e, t) => t),
+    k = [, , ,].fill(0).map((e, t) => t),
+    j = [, , , ,].fill(0).map((e, t) => t),
     U = 4,
     G = 5;
 function B(e) {
     return (0, r.jsx)(Z, D({}, e));
 }
 function Z(e) {
-    let { context: t, query: n, entrypoint: a, isScrollCloseToBottom: l } = e,
-        c = a === g._b.TEXT,
-        u = a === g._b.TEXT,
+    let { context: t, query: n, entrypoint: o, isScrollCloseToBottom: l } = e,
+        c = o === g._b.TEXT,
+        u = o === g._b.TEXT,
         {
             loading: d,
             isEmptyState: f,
@@ -115,7 +115,7 @@ function Z(e) {
             context: t,
             fetches: !0,
             pageLimit: G,
-            entrypoint: a
+            entrypoint: o
         });
     i.useEffect(() => {
         l && b === _.M.FETCHED && O();
@@ -134,7 +134,7 @@ function Z(e) {
                 );
             return [
                 ...e,
-                ...o().compact(
+                ...a().compact(
                     y.map((e) =>
                         e.type === s.s.CONNECTION || t.has(e.data.id)
                             ? null
@@ -154,7 +154,7 @@ function Z(e) {
           ? (0, r.jsx)(I.A, {
                 type: g.LG.SEARCH_EMPTY,
                 searchQuery: n,
-                textContent: a === g._b.TEXT ? w.intl.string(w.t.LSNOYW) : w.intl.string(w.t.Clu7Qk)
+                textContent: o === g._b.TEXT ? R.intl.string(R.t.LSNOYW) : R.intl.string(R.t.Clu7Qk)
             })
           : (0, r.jsxs)('div', {
                 children: [
@@ -177,14 +177,14 @@ function Z(e) {
 }
 function F(e) {
     var t, n;
-    let { context: a, commandResults: o, query: s } = e,
-        _ = o.length > U,
-        E = i.useMemo(() => (_ ? o.slice(0, U) : o), [o, _]),
+    let { context: o, commandResults: a, query: s } = e,
+        _ = a.length > U,
+        E = i.useMemo(() => (_ ? a.slice(0, U) : a), [a, _]),
         [b, y] = i.useState(!1),
         v = null != (t = (0, l.Z)(b)) ? t : b,
         I = i.useCallback(() => y((e) => !e), []),
         A = (null != (n = (0, l.Z)(s)) ? n : s)[0] !== s[0],
-        P = b && !A;
+        w = b && !A;
     i.useLayoutEffect(() => y(!1), [A]);
     let {
         ref: D,
@@ -192,7 +192,7 @@ function F(e) {
         onTransitionEnd: x
     } = (0, O.Z)({
         key: s,
-        isExpanded: P,
+        isExpanded: w,
         durationMs: 200,
         maxAnimationHeight: N.K7
     });
@@ -202,25 +202,25 @@ function F(e) {
             (0, c.yw)(C.rMx.APP_LAUNCHER_SECTION_VIEW_MORE, {
                 section_name: g.L3.SEARCH,
                 source: m.Z.entrypoint(),
-                num: o.length
+                num: a.length
             });
-    }, [o.length, v, b]);
-    let k = P || L,
-        j = P ? T.Z.buttonTypes.VIEW_LESS : T.Z.buttonTypes.VIEW_MORE,
-        M = k ? o : E;
+    }, [a.length, v, b]);
+    let M = w || L,
+        k = w ? T.Z.buttonTypes.VIEW_LESS : T.Z.buttonTypes.VIEW_MORE,
+        j = M ? a : E;
     return (0, r.jsxs)('div', {
         children: [
             (0, r.jsx)(T.Z, {
-                title: w.intl.string(w.t['0hKkS0']),
-                buttonType: j,
+                title: R.intl.string(R.t['0hKkS0']),
+                buttonType: k,
                 onClickViewButton: _ ? I : void 0
             }),
             (0, r.jsx)('div', {
-                className: R.sectionContentContainer,
+                className: P.sectionContentContainer,
                 ref: D,
                 onTransitionEnd: x,
-                children: M.map((e, t) => {
-                    let { command: n, application: i, section: o } = e;
+                children: j.map((e, t) => {
+                    let { command: n, application: i, section: a } = e;
                     return (0, r.jsx)(
                         S.Z,
                         {
@@ -236,11 +236,11 @@ function F(e) {
                                         location: d.Vh.APP_LAUNCHER_HOME_SEARCH,
                                         sectionName: g.L3.SEARCH
                                     }),
-                                    'channel' === a.type &&
+                                    'channel' === o.type &&
                                         (u.Po({
-                                            channelId: a.channel.id,
+                                            channelId: o.channel.id,
                                             command: n,
-                                            section: o,
+                                            section: a,
                                             location: d.Vh.APP_LAUNCHER_HOME_SEARCH,
                                             triggerSection: void 0,
                                             queryLength: s.length,
@@ -249,7 +249,7 @@ function F(e) {
                                             searchResultsPosition: t,
                                             source: e
                                         }),
-                                        p.S.dispatch(C.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: a.channel.id })));
+                                        p.S.dispatch(C.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: o.channel.id })));
                             }
                         },
                         n.id
@@ -266,7 +266,7 @@ function V(e) {
         searchResultsPosition: e.resultsPosition
     });
     return (0, r.jsx)('div', {
-        className: R.searchOpenAppDetailAppCard,
+        className: P.searchOpenAppDetailAppCard,
         ref: (e) => {
             t.current = e;
         },
@@ -280,16 +280,16 @@ function V(e) {
     });
 }
 function H(e) {
-    let { context: t, applicationResults: n, includePlaceholder: i, query: a, searchesBots: o } = e;
-    return o
+    let { context: t, applicationResults: n, includePlaceholder: i, query: o, searchesBots: a } = e;
+    return a
         ? (0, r.jsxs)('div', {
               children: [
-                  (0, r.jsx)(T.Z, { title: w.intl.string(w.t.PHjkRE) }),
+                  (0, r.jsx)(T.Z, { title: R.intl.string(R.t.PHjkRE) }),
                   (0, r.jsxs)('div', {
-                      className: R.sectionContentContainer,
+                      className: P.sectionContentContainer,
                       children: [
                           n.map((e, n) => {
-                              let { application: i, installOnDemand: o } = e;
+                              let { application: i, installOnDemand: a } = e;
                               return (0, r.jsx)(
                                   Y,
                                   {
@@ -298,25 +298,25 @@ function H(e) {
                                       location: d.Vh.APP_LAUNCHER_HOME_SEARCH,
                                       sectionName: g.L3.SEARCH,
                                       resultsPosition: n,
-                                      installOnDemand: o,
-                                      query: a
+                                      installOnDemand: a,
+                                      query: o
                                   },
                                   i.id
                               );
                           }),
-                          i && j.map((e) => (0, r.jsx)(A.Z, {}, e))
+                          i && k.map((e) => (0, r.jsx)(A.Z, {}, e))
                       ]
                   })
               ]
           })
         : (0, r.jsxs)('div', {
               children: [
-                  (0, r.jsx)(T.Z, { title: w.intl.string(w.t.shUONj) }),
+                  (0, r.jsx)(T.Z, { title: R.intl.string(R.t.shUONj) }),
                   (0, r.jsxs)('div', {
-                      className: R.sectionActivitiesContentContainer,
+                      className: P.sectionActivitiesContentContainer,
                       children: [
                           n.map((e, n) => {
-                              let { application: i, installOnDemand: o } = e;
+                              let { application: i, installOnDemand: a } = e;
                               return (0, r.jsx)(
                                   V,
                                   {
@@ -326,13 +326,13 @@ function H(e) {
                                       location: d.Vh.APP_LAUNCHER_HOME_SEARCH,
                                       sectionName: g.L3.SEARCH,
                                       resultsPosition: n,
-                                      installOnDemand: o,
-                                      query: a
+                                      installOnDemand: a,
+                                      query: o
                                   },
                                   i.id
                               );
                           }),
-                          i && M.map((e) => (0, r.jsx)(y.Z, { look: b.U4.LARGE_BANNER }, e))
+                          i && j.map((e) => (0, r.jsx)(y.Z, { look: b.U4.LARGE_BANNER }, e))
                       ]
                   })
               ]
@@ -350,15 +350,15 @@ function Y(e) {
 function W() {
     return (0, r.jsxs)('div', {
         children: [
-            (0, r.jsx)(T.Z, { title: w.intl.string(w.t['0hKkS0']) }),
+            (0, r.jsx)(T.Z, { title: R.intl.string(R.t['0hKkS0']) }),
             (0, r.jsx)('div', {
-                className: R.sectionContentContainer,
-                children: k.map((e) => (0, r.jsx)(A.Z, {}, e))
+                className: P.sectionContentContainer,
+                children: M.map((e) => (0, r.jsx)(A.Z, {}, e))
             }),
-            (0, r.jsx)(T.Z, { title: w.intl.string(w.t.PHjkRE) }),
+            (0, r.jsx)(T.Z, { title: R.intl.string(R.t.PHjkRE) }),
             (0, r.jsx)('div', {
-                className: R.sectionContentContainer,
-                children: j.map((e) => (0, r.jsx)(A.Z, {}, e))
+                className: P.sectionContentContainer,
+                children: k.map((e) => (0, r.jsx)(A.Z, {}, e))
             })
         ]
     });

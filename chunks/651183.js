@@ -2,8 +2,8 @@ n.d(t, { Z: () => u });
 var r = n(255367);
 n(73800);
 var i = n(458725),
-    a = n(386146),
-    o = n(475674),
+    o = n(386146),
+    a = n(475674),
     s = n(42326),
     l = n(388032);
 function c(e) {
@@ -24,8 +24,8 @@ function c(e) {
 }
 function u(e) {
     let { participant: t, className: n } = e,
-        i = (0, o.Z)(t),
-        { avErrorUIEnabled: l } = (0, a.JN)({ location: 'StreamWarning' });
+        i = (0, a.Z)(t),
+        { avErrorUIEnabled: l } = (0, o.JN)({ location: 'StreamWarning' });
     if (null == i) return null;
     let u = c(i);
     return null != u

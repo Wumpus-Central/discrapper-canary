@@ -1,8 +1,8 @@
 (n.d(t, { Z: () => x }), n(388685), n(953529));
 var r = n(255367),
     i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(442837),
     l = n(755721),
     c = n(481060),
@@ -25,8 +25,8 @@ var r = n(255367),
     A = n(981631),
     N = n(388032),
     C = n(449549),
-    w = n(73433);
-function R(e, t, n) {
+    R = n(73433);
+function P(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -39,7 +39,7 @@ function R(e, t, n) {
         e
     );
 }
-function P(e) {
+function w(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -50,7 +50,7 @@ function P(e) {
                 })
             )),
             r.forEach(function (t) {
-                R(e, t, n[t]);
+                P(e, t, n[t]);
             }));
     }
     return e;
@@ -58,7 +58,7 @@ function P(e) {
 let D = 1,
     L = 2000;
 function x(e) {
-    let { context: t, application: n, videoUrl: a, imageCoverUrl: l, sectionName: c, hasCommands: d } = e,
+    let { context: t, application: n, videoUrl: o, imageCoverUrl: l, sectionName: c, hasCommands: d } = e,
         _ = i.useMemo(() => {
             var e;
             return null != (e = (0, O.jD)(n)) ? e : '';
@@ -69,7 +69,7 @@ function x(e) {
     i.useEffect(() => {
         h && E(!0);
     }, [h]);
-    let b = null != a;
+    let b = null != o;
     return (0, r.jsxs)('div', {
         className: C.container,
         children: [
@@ -79,11 +79,11 @@ function x(e) {
                       children: [
                           m
                               ? (0, r.jsx)(g.Z, {
-                                    className: o()(C.videoCover, C.video),
+                                    className: a()(C.videoCover, C.video),
                                     loop: !0,
                                     muted: !0,
                                     autoPlay: !0,
-                                    src: a,
+                                    src: o,
                                     poster: l
                                 })
                               : null,
@@ -98,8 +98,8 @@ function x(e) {
             (0, r.jsxs)('div', {
                 className: b ? C.overviewContainerWithVideo : C.overviewContainerNoVideo,
                 children: [
+                    (0, r.jsx)(k, { application: n }),
                     (0, r.jsx)(j, { application: n }),
-                    (0, r.jsx)(M, { application: n }),
                     _.length > 0 ? (0, r.jsx)(B, { description: _ }) : null,
                     p
                         ? (0, r.jsx)('div', {
@@ -119,11 +119,11 @@ function x(e) {
                     })
                 ]
             }),
-            (0, r.jsx)(k, { application: n })
+            (0, r.jsx)(M, { application: n })
         ]
     });
 }
-function k(e) {
+function M(e) {
     let { application: t } = e,
         n = (0, O.Cb)(t),
         i = (0, O.Hu)(t);
@@ -167,11 +167,11 @@ function k(e) {
           })
         : null;
 }
-function j(e) {
+function k(e) {
     var t;
     let { application: n } = e,
         i = (0, O.BQ)(n) ? n.name : null != (t = (0, O.$d)(n)) ? t : '',
-        a = (0, O.vJ)(n);
+        o = (0, O.vJ)(n);
     return (0, r.jsxs)('div', {
         className: C.titleContainer,
         children: [
@@ -180,7 +180,7 @@ function j(e) {
                 lineClamp: 1,
                 children: i
             }),
-            a
+            o
                 ? (0, r.jsx)('div', {
                       className: C.partnerLabelContainer,
                       children: (0, r.jsx)(c.Text, {
@@ -193,7 +193,7 @@ function j(e) {
         ]
     });
 }
-function M(e) {
+function j(e) {
     let { application: t } = e,
         n = i.useMemo(() => {
             var e;
@@ -244,31 +244,31 @@ function U(e) {
 }
 function G(e) {
     var t;
-    let { context: n, application: a, sectionName: o, hasCommands: s, isDeveloperOfThisApp: u } = e,
-        d = (0, h.Fs)(n, a.id),
-        f = (0, m.q)(a.id),
+    let { context: n, application: o, sectionName: a, hasCommands: s, isDeveloperOfThisApp: u } = e,
+        d = (0, h.Fs)(n, o.id),
+        f = (0, m.q)(o.id),
         g = null == f || null == (t = f.bot) ? void 0 : t.id,
         E = (0, p.Z)({
             context: n,
-            application: a,
+            application: o,
             botUserId: g
         }),
         { analyticsLocations: b } = (0, _.ZP)();
     if (
         (i.useEffect(() => {
-            if (!(0, O.BQ)(a) || !(0, O.ye)(a)) return;
+            if (!(0, O.BQ)(o) || !(0, O.ye)(o)) return;
             let e = setTimeout(() => {
                 (null == d || null == g) &&
                     y.default.track(A.rMx.APP_LAUNCHER_PEP_BUTTON_NOT_RENDERED, {
-                        application_id: a.id,
+                        application_id: o.id,
                         is_primary_entry_point_command_non_null: null != d,
                         is_bot_user_id_non_null: null != g,
                         show_try_it_out_button: E
                     });
             }, L);
             return () => clearTimeout(e);
-        }, [a, d, g, E]),
-        !(0, O.BQ)(a) || !(0, O.ye)(a))
+        }, [o, d, g, E]),
+        !(0, O.BQ)(o) || !(0, O.ye)(o))
     )
         return null;
     let v = l.Ph.MAX;
@@ -280,8 +280,8 @@ function G(e) {
                       className: C.entryPointContainerFlexChild,
                       children: (0, r.jsx)(T.Z, {
                           context: n,
-                          application: a,
-                          sectionName: o,
+                          application: o,
+                          sectionName: a,
                           primaryEntryPointCommand: d,
                           buttonSize: v
                       })
@@ -291,7 +291,7 @@ function G(e) {
                             className: C.entryPointContainerFlexChild,
                             children: (0, r.jsx)(S.Z, {
                                 botUserId: g,
-                                applicationId: a.id,
+                                applicationId: o.id,
                                 buttonSize: v,
                                 analyticsLocations: b
                             })
@@ -299,7 +299,7 @@ function G(e) {
                       : null
               ]
           })
-        : u && !s && (0, O.ye)(a)
+        : u && !s && (0, O.ye)(o)
           ? (0, r.jsx)(c.Wn, {
                 className: C.primaryEntryPointWarningMessage,
                 messageType: c.QYI.WARNING,
@@ -309,9 +309,9 @@ function G(e) {
 }
 function B(e) {
     let { description: t } = e,
-        [n, a] = i.useState(!0);
-    i.useLayoutEffect(() => a(!1), []);
-    let o = i.useMemo(() => (0, E.parseBioReact)(t), [t]),
+        [n, o] = i.useState(!0);
+    i.useLayoutEffect(() => o(!1), []);
+    let a = i.useMemo(() => (0, E.parseBioReact)(t), [t]),
         { ref: s, lineHeight: l, lineCount: u } = Z(),
         d = i.useMemo(() => {
             if (null == l || null == u) return { key: 0 };
@@ -322,7 +322,7 @@ function B(e) {
                 maxHeightOverride: e
             };
         }, [u, l]),
-        { ref: f, isTransitioning: _, onTransitionEnd: p } = (0, I.Z)(P({ isExpanded: n }, d)),
+        { ref: f, isTransitioning: _, onTransitionEnd: p } = (0, I.Z)(w({ isExpanded: n }, d)),
         h = n || _;
     return (0, r.jsxs)('div', {
         className: C.descriptionContainer,
@@ -333,17 +333,17 @@ function B(e) {
                 onTransitionEnd: p,
                 children: (0, r.jsx)(c.Text, {
                     ref: s,
-                    className: w.markup,
+                    className: R.markup,
                     variant: 'text-sm/medium',
                     lineClamp: h ? void 0 : D,
                     style: { maxHeight: h ? void 0 : d.minHeightOverride },
-                    children: o
+                    children: a
                 })
             }),
             null != u && u > D
                 ? (0, r.jsxs)(c.P3F, {
                       className: C.expandableDescriptionClickable,
-                      onClick: () => a((e) => !e),
+                      onClick: () => o((e) => !e),
                       children: [
                           (0, r.jsx)(c.Text, {
                               variant: 'text-sm/semibold',
@@ -368,13 +368,13 @@ function B(e) {
 function Z() {
     let e = i.useRef(null),
         [t, n] = i.useState(null),
-        [r, a] = i.useState(null);
+        [r, o] = i.useState(null);
     return (
         i.useLayoutEffect(() => {
             let t = e.current;
             if (null === t || 0 === t.clientHeight) return;
             let r = parseInt(getComputedStyle(t).lineHeight);
-            isNaN(r) || (n(r), a(Math.floor(t.clientHeight / r)));
+            isNaN(r) || (n(r), o(Math.floor(t.clientHeight / r)));
         }, []),
         {
             ref: e,

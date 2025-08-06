@@ -1,8 +1,8 @@
 (n.d(t, { r: () => d }), n(415506), n(388685));
 var r = n(754700),
     i = n(319245),
-    a = n(509212),
-    o = n(502288);
+    o = n(509212),
+    a = n(502288);
 function s(e, t, n) {
     return (
         t in e
@@ -70,10 +70,10 @@ class d {
         return this._defaultRewardV2(this.quest);
     }
     get defaultRewardNameWithArticle() {
-        return (0, a.Bg)(this.quest) ? (0, o.o8)(this.quest) : this.defaultReward.messages.nameWithArticle;
+        return (0, o.Bg)(this.quest) ? (0, a.o8)(this.quest) : this.defaultReward.messages.nameWithArticle;
     }
     get defaultRewardName() {
-        return (0, a.Bg)(this.quest) ? (0, o.o8)(this.quest) : this.defaultReward.messages.name;
+        return (0, o.Bg)(this.quest) ? (0, a.o8)(this.quest) : this.defaultReward.messages.name;
     }
     get defaultRewardRedemptionInstructionsByPlatform() {
         return this._defaultRewardV2(this.quest).messages.redemptionInstructionsByPlatform;
@@ -88,7 +88,7 @@ class d {
         return this.quest.rewardsConfig.platforms;
     }
     get questType() {
-        return (0, a.q8)({ config: this.quest }) ? i.W.VIDEO : i.W.GAMEPLAY;
+        return (0, o.q8)({ config: this.quest }) ? i.W.VIDEO : i.W.GAMEPLAY;
     }
     get defaultInGameTask() {
         var e;

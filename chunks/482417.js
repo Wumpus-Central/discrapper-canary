@@ -1,8 +1,8 @@
 (n.d(t, { Z: () => f }), n(388685));
 var r = n(423875),
     i = n(740605),
-    a = n(206583),
-    o = n(616922),
+    o = n(206583),
+    a = n(616922),
     s = n(388032);
 function l(e, t, n) {
     return (
@@ -64,15 +64,15 @@ function f(e) {
         { title: _, provider: p, image_url: h } = u,
         m = f.name,
         g = {
-            onClick: () => (0, i.o)(o.Hw.TRACK, u.external_id),
+            onClick: () => (0, i.o)(a.Hw.TRACK, u.external_id),
             ariaDescription: s.intl.formatToPlainString(s.t.xTsar6, { itemName: _ })
         },
         E = {
-            onClick: () => (0, i.o)(o.Hw.ARTIST, f.external_id),
+            onClick: () => (0, i.o)(a.Hw.ARTIST, f.external_id),
             ariaDescription: s.intl.formatToPlainString(s.t.xTsar6, { itemName: m })
         };
     return (
-        p === r.p.SPOTIFY && (t = { type: a.kG.SPOTIFY }),
+        p === r.p.SPOTIFY && (t = { type: o.kG.SPOTIFY }),
         d(c({}, l), {
             title: _,
             subtitle: m,

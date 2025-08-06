@@ -2,8 +2,8 @@ n.d(t, { Z: () => E });
 var r = n(255367);
 n(73800);
 var i = n(275726),
-    a = n(442837),
-    o = n(481060),
+    o = n(442837),
+    a = n(481060),
     s = n(739566),
     l = n(942951),
     c = n(834129),
@@ -24,19 +24,19 @@ function h(e) {
         n = null;
     switch (t) {
         case i.u.REPORT_TO_MOD_BAN_USER:
-            n = o.pgN;
+            n = a.pgN;
             break;
         case i.u.REPORT_TO_MOD_KICK_USER:
-            n = o.I9k;
+            n = a.I9k;
             break;
         case i.u.REPORT_TO_MOD_TIMEOUT_USER:
-            n = o.YlB;
+            n = a.YlB;
             break;
         case i.u.REPORT_TO_MOD_DELETED_MESSAGE:
-            n = o.XHJ;
+            n = a.XHJ;
             break;
         case i.u.REPORT_TO_MOD_CLOSED_REPORT:
-            n = o.kmB;
+            n = a.kmB;
     }
     return null != n
         ? (0, r.jsx)(n, {
@@ -47,11 +47,11 @@ function h(e) {
 }
 function m(e) {
     var t;
-    let { message: n, channel: i, compact: o } = e,
+    let { message: n, channel: i, compact: a } = e,
         { author: d, mentions: p, type: m } = n,
         g = (0, s.ZP)(n),
         E = n.getChannelId(),
-        b = (0, a.e7)([u.default], () => u.default.getUser(p[0]), [p]),
+        b = (0, o.e7)([u.default], () => u.default.getUser(p[0]), [p]),
         y = (0, s.JZ)(d, i),
         O = (0, l.l)({
             user: d,
@@ -77,19 +77,19 @@ function m(e) {
     return (0, r.jsx)(c.Z, {
         iconNode: (0, r.jsx)(h, { type: m }),
         timestamp: n.timestamp,
-        compact: o,
+        compact: a,
         children: S
     });
 }
 function g(e) {
     var t;
-    let { message: n, channel: i, compact: a } = e,
-        { author: o, type: u } = n,
+    let { message: n, channel: i, compact: o } = e,
+        { author: a, type: u } = n,
         d = (0, s.ZP)(n),
         _ = n.getChannelId(),
-        m = (0, s.JZ)(o, i),
+        m = (0, s.JZ)(a, i),
         g = (0, l.l)({
-            user: o,
+            user: a,
             channelId: _,
             guildId: i.guild_id,
             messageId: n.id
@@ -103,22 +103,22 @@ function g(e) {
     return (0, r.jsx)(c.Z, {
         iconNode: (0, r.jsx)(h, { type: u }),
         timestamp: n.timestamp,
-        compact: a,
+        compact: o,
         children: b
     });
 }
 function E(e) {
-    let { message: t, channel: n, compact: a } = e,
-        { type: o } = t;
-    return o === i.u.REPORT_TO_MOD_BAN_USER || o === i.u.REPORT_TO_MOD_KICK_USER || o === i.u.REPORT_TO_MOD_TIMEOUT_USER
+    let { message: t, channel: n, compact: o } = e,
+        { type: a } = t;
+    return a === i.u.REPORT_TO_MOD_BAN_USER || a === i.u.REPORT_TO_MOD_KICK_USER || a === i.u.REPORT_TO_MOD_TIMEOUT_USER
         ? (0, r.jsx)(m, {
               message: t,
               channel: n,
-              compact: a
+              compact: o
           })
         : (0, r.jsx)(g, {
               message: t,
               channel: n,
-              compact: a
+              compact: o
           });
 }

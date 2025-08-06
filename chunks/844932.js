@@ -58,7 +58,7 @@ let b = () => {
         let [e, t] = r.useState(p.p9.TIER_0),
             [n, b] = r.useState(l.R.WHAT_YOU_LOSE),
             [_, j] = r.useState(null),
-            [C, E] = r.useState(p.Xh.PREMIUM_MONTH_TIER_0),
+            [E, C] = r.useState(p.Xh.PREMIUM_MONTH_TIER_0),
             [O, v] = r.useState([]),
             [S, T] = r.useState(() => {
                 let e = new Date();
@@ -73,7 +73,7 @@ let b = () => {
         }, []),
             (0, r.useEffect)(() => {
                 let e = new Date();
-                switch (C) {
+                switch (E) {
                     case p.Xh.PREMIUM_MONTH_TIER_0:
                     case p.Xh.PREMIUM_MONTH_TIER_1:
                     case p.Xh.PREMIUM_MONTH_TIER_2:
@@ -85,7 +85,7 @@ let b = () => {
                         e.setFullYear(e.getFullYear() + 1);
                 }
                 T(e);
-            }, [C]),
+            }, [E]),
             (0, r.useEffect)(() => {
                 switch (e) {
                     case p.p9.TIER_0:
@@ -99,7 +99,7 @@ let b = () => {
                                 value: p.Xh.PREMIUM_YEAR_TIER_0
                             }
                         ]),
-                            E(p.Xh.PREMIUM_MONTH_TIER_0));
+                            C(p.Xh.PREMIUM_MONTH_TIER_0));
                         break;
                     case p.p9.TIER_1:
                         (v([
@@ -112,7 +112,7 @@ let b = () => {
                                 value: p.Xh.PREMIUM_YEAR_TIER_1
                             }
                         ]),
-                            E(p.Xh.PREMIUM_MONTH_TIER_1));
+                            C(p.Xh.PREMIUM_MONTH_TIER_1));
                         break;
                     case p.p9.TIER_2:
                         (v([
@@ -125,7 +125,7 @@ let b = () => {
                                 value: p.Xh.PREMIUM_YEAR_TIER_2
                             }
                         ]),
-                            E(p.Xh.PREMIUM_MONTH_TIER_2));
+                            C(p.Xh.PREMIUM_MONTH_TIER_2));
                 }
             }, [e]),
             (0, r.useEffect)(() => {
@@ -138,7 +138,7 @@ let b = () => {
                                 invoiceItems: [
                                     {
                                         id: '',
-                                        subscriptionPlanId: C,
+                                        subscriptionPlanId: E,
                                         subscriptionPlanPrice: 200,
                                         amount: 400,
                                         quantity: 1,
@@ -163,7 +163,7 @@ let b = () => {
                             })
                         ),
                     n !== l.R.PREVIEW && null !== I && N(null));
-            }, [n, _, S, C, I]));
+            }, [n, _, S, E, I]));
         let w = r.useCallback(async () => {
             (Z(!0),
                 await (0, s.ZDy)(
@@ -176,7 +176,7 @@ let b = () => {
                                 },
                                 premiumType: e,
                                 churnDiscount: _,
-                                planId: C,
+                                planId: E,
                                 renewalInvoice: I,
                                 renewalInvoiceDetails: {
                                     intervalType: p.rV.MONTH,
@@ -190,7 +190,7 @@ let b = () => {
                                 activeStep: n,
                                 premiumSubscription: {
                                     id: '',
-                                    planId: C,
+                                    planId: E,
                                     type: g.NY.PREMIUM,
                                     items: [],
                                     createdAt: new Date(),
@@ -213,7 +213,7 @@ let b = () => {
                             })
                         )
                 ));
-        }, [e, _, C, I, y, P, n, S]);
+        }, [e, _, E, I, y, P, n, S]);
         return (
             (0, r.useEffect)(() => {
                 D && w();
@@ -266,9 +266,9 @@ let b = () => {
                                         (0, i.jsx)(s.PhF, {
                                             placeholder: 'Premium Type',
                                             select: (e) => {
-                                                E(e);
+                                                C(e);
                                             },
-                                            isSelected: (e) => C === e,
+                                            isSelected: (e) => E === e,
                                             serialize: (e) => e,
                                             options: O
                                         })

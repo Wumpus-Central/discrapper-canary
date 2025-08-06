@@ -2,8 +2,8 @@ n.d(t, { Z: () => m });
 var r = n(255367);
 n(73800);
 var i = n(913527),
-    a = n.n(i),
-    o = n(481060),
+    o = n.n(i),
+    a = n(481060),
     s = n(925329),
     l = n(388032),
     c = n(965935);
@@ -70,13 +70,13 @@ function p(e) {
             (0, r.jsxs)('div', {
                 className: c.textContainer,
                 children: [
-                    (0, r.jsx)(o.Text, {
+                    (0, r.jsx)(a.Text, {
                         className: c.timestamp,
                         variant: 'text-xs/medium',
                         color: 'text-muted',
-                        children: a()(n).format('LLLL')
+                        children: o()(n).format('LLLL')
                     }),
-                    (0, r.jsx)(o.Text, {
+                    (0, r.jsx)(a.Text, {
                         variant: 'text-md/normal',
                         color: 'interactive-active',
                         children: l.intl.format(l.t.J3s8JC, { applicationName: t.name })
@@ -88,7 +88,7 @@ function p(e) {
 }
 function h(e) {
     let { application: t, timestamp: n, children: i } = e;
-    return (0, r.jsx)(o.ua7, {
+    return (0, r.jsx)(a.ua7, {
         hideOnClick: !0,
         position: 'top',
         'aria-label': l.intl.string(l.t['5nMcv7']),
@@ -98,24 +98,24 @@ function h(e) {
             application: t,
             timestamp: n
         }),
-        children: (e) => (0, r.jsx)(o.P3F, _(d({ tag: 'span' }, e), { children: i }))
+        children: (e) => (0, r.jsx)(a.P3F, _(d({ tag: 'span' }, e), { children: i }))
     });
 }
 function m(e) {
-    let { application: t, timestamp: n, compact: i, children: a } = e;
+    let { application: t, timestamp: n, compact: i, children: o } = e;
     return (0, r.jsxs)(h, {
         application: t,
         timestamp: n,
         children: [
             i
                 ? null
-                : (0, r.jsx)(o.iWm, {
+                : (0, r.jsx)(a.iWm, {
                       className: c.gameIcon,
                       size: 'custom',
                       width: 14,
                       height: 14
                   }),
-            a
+            o
         ]
     });
 }

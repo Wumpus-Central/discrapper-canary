@@ -2,8 +2,8 @@ n.d(t, { W: () => v });
 var r = n(255367);
 n(73800);
 var i = n(120356),
-    a = n.n(i),
-    o = n(772848),
+    o = n.n(i),
+    a = n(772848),
     s = n(755721),
     l = n(481060),
     c = n(626135),
@@ -54,7 +54,7 @@ function O(e) {
                     y(
                         {
                             quest_id: t,
-                            click_id: (0, o.Z)(),
+                            click_id: (0, a.Z)(),
                             cta_name: u.jZ.VIEW_QUESTS,
                             is_targeted: !1
                         },
@@ -81,7 +81,7 @@ function v(e) {
             ref: (e) => {
                 n.current = e;
             },
-            className: a()(g.container, {
+            className: o()(g.container, {
                 [g.wide]: 'lg' === i,
                 [g.tall]: 'lg' !== i
             }),

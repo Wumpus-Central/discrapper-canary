@@ -1,10 +1,10 @@
 n.d(t, {
-    A: () => o,
-    u: () => a
+    A: () => a,
+    u: () => o
 });
 var r = n(818083),
     i = n(987338);
-let a = (0, r.B)({
+let o = (0, r.B)({
     kind: 'user',
     id: '2025-05_change_disconnect_icon_experiment',
     label: 'Change Disconnect Icon',
@@ -32,6 +32,6 @@ let a = (0, r.B)({
         }
     ]
 });
-function o(e) {
-    return a.useExperiment(e, { autoTrackExposure: !1 });
+function a(e) {
+    return o.useExperiment(e, { autoTrackExposure: !1 });
 }

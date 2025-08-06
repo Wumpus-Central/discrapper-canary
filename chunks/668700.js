@@ -5,8 +5,8 @@ n.d(t, {
 var r = n(255367);
 n(73800);
 var i = n(442837),
-    a = n(481060),
-    o = n(287734),
+    o = n(481060),
+    a = n(287734),
     s = n(933557),
     l = n(111028),
     c = n(318374),
@@ -28,16 +28,16 @@ function I(e) {
         { themeType: A } = (0, m.z)(),
         N = (0, p.Z)(I),
         C = (0, s.ZP)(I),
-        { canViewChannel: w, canConnect: R } = (0, i.cj)([_.Z], () => ({
+        { canViewChannel: R, canConnect: P } = (0, i.cj)([_.Z], () => ({
             canViewChannel: _.Z.can(b.Plq.VIEW_CHANNEL, I),
             canConnect: I.isPrivate() || _.Z.can(b.Plq.CONNECT, I)
         }));
-    if (!w) return null;
-    let P = () => {
+    if (!R) return null;
+    let w = () => {
             let e = (e) => {
                 (e.stopPropagation(), (0, f.X)(n.id), null == T || T({ action: 'OPEN_VOICE_GUILD' }), null == S || S());
             };
-            return (0, r.jsx)(a.DY3, {
+            return (0, r.jsx)(o.DY3, {
                 text: n.name,
                 'aria-label': !1,
                 children: (0, r.jsx)(u.Z, {
@@ -49,20 +49,20 @@ function I(e) {
             });
         },
         D = () => {
-            if (!R)
-                return (0, r.jsx)(a.Text, {
+            if (!P)
+                return (0, r.jsx)(o.Text, {
                     variant: 'text-xs/normal',
                     color: 'text-secondary',
                     lineClamp: 1,
                     children: (0, r.jsx)(l.Z, { children: C })
                 });
             let e = (e) => {
-                (e.stopPropagation(), o.default.selectVoiceChannel(I.id), (0, d.Kh)(I.id), null == T || T({ action: 'OPEN_VOICE_CHANNEL' }), null == S || S());
+                (e.stopPropagation(), a.default.selectVoiceChannel(I.id), (0, d.Kh)(I.id), null == T || T({ action: 'OPEN_VOICE_CHANNEL' }), null == S || S());
             };
-            return (0, r.jsx)(a.P3F, {
+            return (0, r.jsx)(o.P3F, {
                 onClick: e,
                 className: O.clickableText,
-                children: (0, r.jsx)(a.Text, {
+                children: (0, r.jsx)(o.Text, {
                     variant: 'text-xs/normal',
                     color: 'text-secondary',
                     lineClamp: 1,
@@ -77,10 +77,10 @@ function I(e) {
             (0, r.jsxs)('div', {
                 className: O.voiceChannel,
                 children: [
-                    P(),
-                    (0, r.jsx)(a.Fbu, {
+                    w(),
+                    (0, r.jsx)(o.Fbu, {
                         size: 'xxs',
-                        color: a.TVs.colors.TEXT_SECONDARY
+                        color: o.TVs.colors.TEXT_SECONDARY
                     }),
                     (0, r.jsxs)('div', {
                         className: O.voiceChannelText,
@@ -88,7 +88,7 @@ function I(e) {
                             (0, r.jsx)(g.Z, {
                                 channel: I,
                                 size: 'xxs',
-                                color: a.TVs.colors.TEXT_SECONDARY,
+                                color: o.TVs.colors.TEXT_SECONDARY,
                                 className: O.voiceIcon
                             }),
                             D()
@@ -99,7 +99,7 @@ function I(e) {
                         guildId: n.id,
                         channelId: I.id,
                         maxUsers: v,
-                        size: a.EFr.SIZE_16,
+                        size: o.EFr.SIZE_16,
                         overflowCountColor: 'text-secondary',
                         overflowCountClassName: O.voiceChannelOverflowCount,
                         onClickOverflow: (e) => {

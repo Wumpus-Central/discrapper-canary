@@ -1,8 +1,8 @@
 (n.d(t, { Z: () => y }), n(704826), n(35282), n(388685));
 var r = n(255367),
     i = n(73800),
-    a = n(793030),
-    o = n(755721),
+    o = n(793030),
+    a = n(755721),
     s = n(481060),
     l = n(596454),
     c = n(962293),
@@ -52,16 +52,16 @@ let y = function (e) {
     i.useEffect(() => {
         !1 === l && I();
     }, [l, I]);
-    let w = i.useCallback(() => {
+    let R = i.useCallback(() => {
             C(!1);
         }, []),
-        R = i.useCallback(
+        P = i.useCallback(
             (e) => {
                 (v(e), C(!1));
             },
             [v]
         ),
-        P = i.useCallback(() => {
+        w = i.useCallback(() => {
             (0, _.s)({
                 channelId: t.id,
                 onRedeem: () => {},
@@ -76,8 +76,8 @@ let y = function (e) {
             (0, r.jsx)(p.Z, {
                 channel: t,
                 shouldShow: N,
-                onRequestClose: w,
-                setEmojiConfetti: R,
+                onRequestClose: R,
+                setEmojiConfetti: P,
                 positionRef: D,
                 position: 'top',
                 align: 'left',
@@ -91,7 +91,7 @@ let y = function (e) {
                                 className: E.emojiIconContainer,
                                 children: (0, r.jsx)(b, { emojiConfetti: null != n ? n : void 0 })
                             }),
-                            (0, r.jsx)(a.xv, {
+                            (0, r.jsx)(o.xv, {
                                 variant: 'text-sm/medium',
                                 children: null == n ? g.intl.string(g.t.mzfiGR) : g.intl.format(g.t.Hcd9OT, { emojiName: T })
                             })
@@ -101,13 +101,13 @@ let y = function (e) {
             (0, r.jsxs)('div', {
                 className: E.end,
                 children: [
-                    (0, r.jsx)(o.zx, {
-                        look: o.zx.Looks.LINK,
-                        size: o.zx.Sizes.SMALL,
-                        onClick: P,
-                        color: o.zx.Colors.TRANSPARENT,
+                    (0, r.jsx)(a.zx, {
+                        look: a.zx.Looks.LINK,
+                        size: a.zx.Sizes.SMALL,
+                        onClick: w,
+                        color: a.zx.Colors.TRANSPARENT,
                         className: E.learnMoreButton,
-                        children: (0, r.jsx)(a.xv, {
+                        children: (0, r.jsx)(o.xv, {
                             variant: 'text-sm/medium',
                             children: A
                         })

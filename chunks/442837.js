@@ -11,8 +11,8 @@ n.d(t, {
 });
 var r = n(250919),
     i = n(613568),
-    a = n(153102),
-    o = n(727438),
+    o = n(153102),
+    a = n(727438),
     s = n(445346),
     l = n(441244),
     c = n(827299),
@@ -21,11 +21,11 @@ function d() {
     s.y.initialize();
 }
 let f = {
-    Emitter: a.Z,
+    Emitter: o.Z,
     Store: s.y,
-    PersistedStore: o.g5,
-    DeviceSettingsStore: o.gc,
-    OfflineCacheStore: o.AT,
+    PersistedStore: a.g5,
+    DeviceSettingsStore: a.gc,
+    OfflineCacheStore: a.AT,
     connectStores: l.Z,
     initialize: d,
     get initialized() {

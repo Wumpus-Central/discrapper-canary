@@ -1,8 +1,8 @@
 (n.d(t, { h: () => p }), n(388685), n(539854), n(642613));
 var r = n(73800),
     i = n(442837),
-    a = n(581364),
-    o = n(675478),
+    o = n(581364),
+    a = n(675478),
     s = n(709054),
     l = n(822245),
     c = n(526761);
@@ -60,7 +60,7 @@ function _(e, t) {
 }
 function p(e, t) {
     r.useEffect(() => {
-        o.DZ.loadIfUncached(c.yP.FRECENCY_AND_FAVORITES_SETTINGS);
+        a.DZ.loadIfUncached(c.yP.FRECENCY_AND_FAVORITES_SETTINGS);
     }, []);
     let n = (0, i.e7)([l.Z], () => l.Z.getApplicationFrecencyWithoutLoadingLatest()),
         u = r.useMemo(
@@ -82,32 +82,32 @@ function p(e, t) {
                     null == n.getEntry(e.application.id) && n.track(e.application.id, t);
                 }),
                 n.compute());
-            let t = null != (e = null == f ? void 0 : f.map((e) => (0, a.X0)(e.application, !0))) ? e : [],
+            let t = null != (e = null == f ? void 0 : f.map((e) => (0, o.X0)(e.application, !0))) ? e : [],
                 r = [...u];
             return (
                 r.push(...t),
                 r.sort((e, t) => {
                     var r, i;
-                    let a = (null != (r = n.getScore(t.id)) ? r : 0) - (null != (i = n.getScore(e.id)) ? i : 0);
-                    return 0 !== a ? a : e.name.localeCompare(t.name);
+                    let o = (null != (r = n.getScore(t.id)) ? r : 0) - (null != (i = n.getScore(e.id)) ? i : 0);
+                    return 0 !== o ? o : e.name.localeCompare(t.name);
                 }),
                 r
             );
         }, [u, n, f]);
     return r.useMemo(() => {
         var e, r;
-        let i, a;
+        let i, o;
         (null == t ||
             t.forEach((e) => {
                 let t = s.default.extractTimestamp(e.id);
-                (null == a || t > a) && ((i = e), (a = t));
+                (null == o || t > o) && ((i = e), (o = t));
             }),
             u.forEach((e) => {
                 var t, r;
-                let o = Math.max(...(null != (r = null == (t = n.getEntry(e.id)) ? void 0 : t.recentUses) ? r : []));
-                (null == a || o > a) && ((i = e), (a = o));
+                let a = Math.max(...(null != (r = null == (t = n.getEntry(e.id)) ? void 0 : t.recentUses) ? r : []));
+                (null == o || a > o) && ((i = e), (o = a));
             }));
-        let o = null != (r = null == i || null == (e = i.application) ? void 0 : e.id) ? r : '';
-        return [...p.filter((e) => e.id === o), ...p.filter((e) => e.id !== o)];
+        let a = null != (r = null == i || null == (e = i.application) ? void 0 : e.id) ? r : '';
+        return [...p.filter((e) => e.id === a), ...p.filter((e) => e.id !== a)];
     }, [p, u, n, t]);
 }

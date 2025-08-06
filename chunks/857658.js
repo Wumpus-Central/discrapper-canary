@@ -1,8 +1,8 @@
 (n.d(t, { U: () => D }), n(388685), n(781311));
 var r = n(255367),
     i = n(73800),
-    a = n(688619),
-    o = n.n(a),
+    o = n(688619),
+    a = n.n(o),
     s = n(120356),
     l = n.n(s),
     c = n(608787),
@@ -83,13 +83,13 @@ let N = (0, c.Un)({
         renderLoader: A
     }),
     C = 5;
-function w(e, t) {
+function R(e, t) {
     return e.length < 1 ? 0 : (t / (e.length - 1)) * 80 + 10;
 }
-function R(e) {
-    let { colors: t, selectedIndex: n, onColorSelect: a } = e,
-        [o, s] = i.useMemo(() => {
-            let e = t.map((e, n) => w(t, n)),
+function P(e) {
+    let { colors: t, selectedIndex: n, onColorSelect: o } = e,
+        [a, s] = i.useMemo(() => {
+            let e = t.map((e, n) => R(t, n)),
                 n = t.map((t, n) => ''.concat(t, ' ').concat(e[n], '%')).join(', ');
             return [e, { background: 'linear-gradient(to right, '.concat(n, ')') }];
         }, [t]);
@@ -97,7 +97,7 @@ function R(e) {
         className: O.gradientBar,
         style: s,
         children: t.map((e, t) => {
-            let s = o[t],
+            let s = a[t],
                 l = t === n;
             return (0, r.jsxs)(
                 i.Fragment,
@@ -109,7 +109,7 @@ function R(e) {
                                 left: ''.concat(s, '%'),
                                 backgroundColor: e
                             },
-                            onClick: () => a(t),
+                            onClick: () => o(t),
                             children: (0, r.jsx)('div', { className: O.colorCircleInner })
                         }),
                         l &&
@@ -124,81 +124,81 @@ function R(e) {
         })
     });
 }
-function P(e) {
+function w(e) {
     if (!(0, u.FX)(e)) return e;
-    let t = o()(e);
+    let t = a()(e);
     return t.set('hsl.h', (t.get('hsl.h') + 15) % 360).hex();
 }
 function D(e) {
-    let { value: t, onChange: n, className: a, colors: o, setColors: s } = e,
+    let { value: t, onChange: n, className: o, colors: a, setColors: s } = e,
         c = (0, h.Z)(),
         [v, T] = i.useState(0),
-        [A, w] = i.useState(t);
+        [A, R] = i.useState(t);
     i.useEffect(() => {
-        if (o.length > 0 && v < o.length) {
-            let e = o[v];
-            (0, u.FX)(e) && (w(e), n(e));
+        if (a.length > 0 && v < a.length) {
+            let e = a[v];
+            (0, u.FX)(e) && (R(e), n(e));
         }
-        v >= o.length && T(0);
-    }, [v, o, n]);
+        v >= a.length && T(0);
+    }, [v, a, n]);
     let D = (e) => {
             let t = e.trim();
             return t.startsWith('#') ? t : t.length > 0 ? '#'.concat(t) : t;
         },
         L = (e) => {
             let t = D(e);
-            if ((w(t), (0, u.FX)(t) && ((0, E.zW)(), n(t), o.length > 0))) {
-                let e = [...o];
+            if ((R(t), (0, u.FX)(t) && ((0, E.zW)(), n(t), a.length > 0))) {
+                let e = [...a];
                 ((e[v] = t), s(e));
             }
         },
         x = i.useCallback((e) => {
-            w(e.hex);
+            R(e.hex);
         }, []),
-        k = (e) => {
-            if (((0, E.P0)(), n(e.hex), o.length > 0)) {
-                let t = [...o];
+        M = (e) => {
+            if (((0, E.P0)(), n(e.hex), a.length > 0)) {
+                let t = [...a];
                 ((t[v] = e.hex), s(t));
             }
         },
-        j = async () => {
+        k = async () => {
             if (null != c)
                 try {
                     let { sRGBHex: e } = await c.open();
                     ((0, E.J4)(), L(e));
                 } catch (e) {}
         },
-        M = () => {
-            if (o.length === C) return;
-            (0 === o.length && (0, g.ft)(), (0, E.gG)());
-            let e = o.length > 0 ? o[o.length - 1] : A,
-                t = o.length > 0 ? P(e) : e,
-                n = [...o, t];
+        j = () => {
+            if (a.length === C) return;
+            (0 === a.length && (0, g.ft)(), (0, E.gG)());
+            let e = a.length > 0 ? a[a.length - 1] : A,
+                t = a.length > 0 ? w(e) : e,
+                n = [...a, t];
             (s(n), T(n.length - 1));
         },
         U = (e) => {
-            if (o.length > 1) {
+            if (a.length > 1) {
                 (0, E.JL)();
-                let t = o.filter((t, n) => n !== e);
+                let t = a.filter((t, n) => n !== e);
                 (s(t), v >= t.length ? T(t.length - 1) : v > e && T(v - 1));
             }
         },
         G = (e) => {
             (T(e), (0, E.w8)());
         },
-        B = o.length > 1;
+        B = a.length > 1;
     return (0, r.jsxs)('div', {
-        className: l()(O.container, a),
+        className: l()(O.container, o),
         children: [
             B &&
-                (0, r.jsx)(R, {
-                    colors: o,
+                (0, r.jsx)(P, {
+                    colors: a,
                     selectedIndex: v,
                     onColorSelect: G
                 }),
             (0, r.jsx)(N, {
                 onChange: x,
-                onChangeComplete: k,
+                onChangeComplete: M,
                 color: A
             }),
             (0, r.jsxs)('div', {
@@ -231,7 +231,7 @@ function D(e) {
                                                     e
                                                 ),
                                                 {
-                                                    onClick: j,
+                                                    onClick: k,
                                                     icon: d.i,
                                                     'aria-label': y.intl.string(b.default['8QXO8v'])
                                                 }
@@ -257,11 +257,11 @@ function D(e) {
                     })
                 ]
             }),
-            o.length < C &&
+            a.length < C &&
                 (0, r.jsx)(f.z, {
                     variant: 'secondary',
                     size: 'md',
-                    onClick: M,
+                    onClick: j,
                     icon: p.BRu,
                     text: y.intl.string(b.default.JUQcdX),
                     fullWidth: !0

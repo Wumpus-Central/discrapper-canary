@@ -17,8 +17,8 @@ var i = n(255367),
     x = n(47280),
     _ = n(105759),
     j = n(736519),
-    C = n(422034),
-    E = n(710220),
+    E = n(422034),
+    C = n(710220),
     O = n(635921),
     v = n(638631),
     S = n(869783),
@@ -60,11 +60,11 @@ let P = r.forwardRef((e, t) => {
                                 children: G
                             }),
                             B
-                                ? (0, i.jsx)(E.Z, { referrer: M })
+                                ? (0, i.jsx)(C.Z, { referrer: M })
                                 : V &&
                                   (0, i.jsx)('div', {
                                       className: I.affinityDescriptionContainer,
-                                      children: (0, i.jsx)(C.Z, {
+                                      children: (0, i.jsx)(E.Z, {
                                           textColor: 'text-default',
                                           smallerText: !1,
                                           isApplicationHome: !0

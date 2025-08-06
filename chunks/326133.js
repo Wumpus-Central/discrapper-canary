@@ -1,8 +1,8 @@
-(n.d(t, { Z: () => k }), n(388685));
+(n.d(t, { Z: () => M }), n(388685));
 var r = n(255367),
     i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(91192),
     l = n(442837),
     c = n(481060),
@@ -76,64 +76,64 @@ function C(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = w(e, t);
+        i = R(e, t);
     if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
-function w(e, t) {
+function R(e, t) {
     if (null == e) return {};
     var n,
         r,
         i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
-let R = 490,
-    P = 490,
+let P = 490,
+    w = 490,
     D = 245,
     L = 200,
     x = 120,
-    k = i.forwardRef(function (e, t) {
-        var n, a, T, A, w, k, j;
-        let { channel: M, type: U, editorHeight: G, onVisibilityChange: B, editorScrollerRef: Z, barsHeight: F } = e,
+    M = i.forwardRef(function (e, t) {
+        var n, o, T, A, R, M, k;
+        let { channel: j, type: U, editorHeight: G, onVisibilityChange: B, editorScrollerRef: Z, barsHeight: F } = e,
             V = (0, h.Dt)(),
             H = (0, l.e7)(
                 [E.Z],
                 () => {
                     var e;
-                    return null != (e = E.Z.getGuild(M.guild_id)) ? e : null;
+                    return null != (e = E.Z.getGuild(j.guild_id)) ? e : null;
                 },
-                [M.guild_id]
+                [j.guild_id]
             ),
             Y = i.useRef(null),
             [W, K, z] = (0, O.Z)(N(S({}, e), { guild: H }), t, Y),
             q = (null == (n = U.autocomplete) ? void 0 : n.forceChatLayer) ? g.ZP : m.ZP,
-            $ = (0, _.DJ)(W.selectedIndex);
-        (0, p.KR)(V, W.isVisible, $);
-        let X = (0, y.Z)({
+            X = (0, _.DJ)(W.selectedIndex);
+        (0, p.KR)(V, W.isVisible, X);
+        let Q = (0, y.Z)({
                 editorHeight: G,
                 type: U,
                 state: W
             }),
-            Q = (0, l.e7)(
+            J = (0, l.e7)(
                 [d.ZP],
                 () => {
-                    let e = d.ZP.getSelfEmbeddedActivityForChannel(M.id),
+                    let e = d.ZP.getSelfEmbeddedActivityForChannel(j.id),
                         t = d.ZP.getActivityPanelMode();
-                    return (0, u.l5)(M) && null != e && (0, f.p)(e.location) === M.id && t === v.Ez.PANEL;
+                    return (0, u.l5)(j) && null != e && (0, f.p)(e.location) === j.id && t === v.Ez.PANEL;
                 },
-                [M]
+                [j]
             ),
-            J = i.useMemo(() => ((null == X ? void 0 : X.top) == null && (null == X ? void 0 : X.left) == null && (null == X ? void 0 : X.bottom) == null && (null == X ? void 0 : X.right) == null ? '' : String(Date.now())), [null == X ? void 0 : X.top, null == X ? void 0 : X.left, null == X ? void 0 : X.bottom, null == X ? void 0 : X.right]);
+            $ = i.useMemo(() => ((null == Q ? void 0 : Q.top) == null && (null == Q ? void 0 : Q.left) == null && (null == Q ? void 0 : Q.bottom) == null && (null == Q ? void 0 : Q.right) == null ? '' : String(Date.now())), [null == Q ? void 0 : Q.top, null == Q ? void 0 : Q.left, null == Q ? void 0 : Q.bottom, null == Q ? void 0 : Q.right]);
         if (
             (i.useEffect(() => {
                 B(W.isVisible);
             }, [B, W.isVisible]),
-            !W.isVisible || null == W.query || void 0 === X)
+            !W.isVisible || null == W.query || void 0 === Q)
         )
             return null;
         let ee =
@@ -141,7 +141,7 @@ let R = 490,
             (T = W.query.typeInfo.renderResults({
                 results: W.query.results,
                 selectedIndex: W.selectedIndex,
-                channel: M,
+                channel: j,
                 guild: H,
                 query: W.query.queryText,
                 options: W.query.options,
@@ -152,19 +152,19 @@ let R = 490,
                 : null;
         if (null == ee) return null;
         let et = {
-                [I.autocompleteAttached]: null == X,
-                [I.autocompletePopout]: null != X,
-                [I.bottom]: null == X && 'bottom' === e.position,
-                [I.autocompleteTop]: Q
+                [I.autocompleteAttached]: null == Q,
+                [I.autocompletePopout]: null != Q,
+                [I.bottom]: null == Q && 'bottom' === e.position,
+                [I.autocompleteTop]: J
             },
-            en = R;
-        null != X && (en = (null == (A = U.autocomplete) ? void 0 : A.small) ? L : (null == (w = W.query) ? void 0 : w.type) === b.eq.EMOJIS_AND_STICKERS ? P : D);
-        let er = Math.max(G, null != (k = null == Z || null == (a = Z.current) ? void 0 : a.clientHeight) ? k : 0),
+            en = P;
+        null != Q && (en = (null == (A = U.autocomplete) ? void 0 : A.small) ? L : (null == (R = W.query) ? void 0 : R.type) === b.eq.EMOJIS_AND_STICKERS ? w : D);
+        let er = Math.max(G, null != (M = null == Z || null == (o = Z.current) ? void 0 : o.clientHeight) ? M : 0),
             ei = Math.min(0.5 * window.innerHeight, er);
         en = Math.min(window.innerHeight - x - ei - (null != F ? F : 0), en);
-        let ea = (0, r.jsx)(_.ZP, {
+        let eo = (0, r.jsx)(_.ZP, {
             id: V,
-            className: o()(I.autocomplete, et),
+            className: a()(I.autocomplete, et),
             innerClassName: I.autocompleteInner,
             onMouseDown: (e) => e.preventDefault(),
             children: (0, r.jsx)(s.bG, {
@@ -199,19 +199,19 @@ let R = 490,
                 })
             })
         });
-        return null != X
+        return null != Q
             ? (0, r.jsx)(q, {
                   children: (0, r.jsx)(c.jRF, {
                       targetRef: e.targetRef,
-                      overrideTargetRect: X,
-                      positionKey: J,
-                      position: null != (j = e.position) ? j : 'top',
+                      overrideTargetRect: Q,
+                      positionKey: $,
+                      position: null != (k = e.position) ? k : 'top',
                       align: 'left',
                       spacing: 8,
                       autoInvert: !0,
                       nudgeAlignIntoViewport: !0,
-                      children: () => ea
+                      children: () => eo
                   })
               })
-            : ea;
+            : eo;
     });

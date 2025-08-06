@@ -1,17 +1,17 @@
 (n.d(t, {
-    $z: () => w,
+    $z: () => R,
     I1: () => b,
     IZ: () => y,
     PJ: () => A,
     Qb: () => E,
     Yc: () => I,
-    bh: () => R,
+    bh: () => P,
     bo: () => T,
     cy: () => O,
     hM: () => p,
     sL: () => h,
     t6: () => g,
-    tA: () => P,
+    tA: () => w,
     tI: () => v,
     z4: () => S,
     zW: () => m
@@ -20,8 +20,8 @@
     n(388685));
 var r = n(367907),
     i = n(710845),
-    a = n(626135),
-    o = n(171900),
+    o = n(626135),
+    a = n(171900),
     s = n(607802),
     l = n(971128),
     c = n(723642),
@@ -36,18 +36,18 @@ function f(e) {
 }
 function _(e) {
     let t = (0, s.WJ)(e);
-    return o.Z.getAnalyticsId(t);
+    return a.Z.getAnalyticsId(t);
 }
 function p(e) {
-    let { searchContext: t, searchRequestAnalyticsId: n, prevSearchRequestAnalyticsId: i, isError: a, limit: o, offset: s, page: c, totalResults: _, pageResults: p, isIndexing: h, pageNumMessages: m, pageNumLinks: g, pageNumEmbeds: E, pageNumAttachments: b, searchQueryString: y, searchQuery: O } = e;
+    let { searchContext: t, searchRequestAnalyticsId: n, prevSearchRequestAnalyticsId: i, isError: o, limit: a, offset: s, page: c, totalResults: _, pageResults: p, isIndexing: h, pageNumMessages: m, pageNumLinks: g, pageNumEmbeds: E, pageNumAttachments: b, searchQueryString: y, searchQuery: O } = e;
     r.ZP.trackWithMetadata(u.rMx.SEARCH_RESULT_VIEWED, {
         search_type: t.type,
         search_id: n,
         prev_search_id: i,
         search_session_id: l.ZP.getSessionId(t),
         search_query_id: l.ZP.getQueryId(t),
-        is_error: a,
-        limit: o,
+        is_error: o,
+        limit: a,
         offset: s,
         page: c,
         total_results: _,
@@ -62,15 +62,15 @@ function p(e) {
     });
 }
 function h(e) {
-    let { searchContext: t, searchRequestAnalyticsId: n, messageId: r, guildId: i, channelId: o, pageResults: s, totalResults: c, page: _, limit: p, offset: h, index: m, searchQueryString: g, searchQuery: E } = e;
-    a.default.track(u.rMx.SEARCH_RESULT_SELECTED, {
+    let { searchContext: t, searchRequestAnalyticsId: n, messageId: r, guildId: i, channelId: a, pageResults: s, totalResults: c, page: _, limit: p, offset: h, index: m, searchQueryString: g, searchQuery: E } = e;
+    o.default.track(u.rMx.SEARCH_RESULT_SELECTED, {
         search_type: t.type,
         search_id: n,
         search_session_id: l.ZP.getSessionId(t),
         search_query_id: l.ZP.getQueryId(t),
         message_id: r,
         guild_id: i,
-        channel_id: o,
+        channel_id: a,
         page_results: s,
         total_results: c,
         page: _,
@@ -102,14 +102,14 @@ function g(e) {
     });
 }
 function E(e) {
-    let { searchContext: t, searchRequestAnalyticsId: n, searchQueryString: i, searchQuery: a } = e;
+    let { searchContext: t, searchRequestAnalyticsId: n, searchQueryString: i, searchQuery: o } = e;
     r.ZP.trackWithMetadata(u.rMx.SEARCH_RESULT_EMPTY, {
         search_id: n,
         search_session_id: l.ZP.getSessionId(t),
         search_query_id: l.ZP.getQueryId(t),
         search_type: t.type,
         search_query_length: d(i),
-        search_query_content_length: f(a)
+        search_query_content_length: f(o)
     });
 }
 function b(e) {
@@ -145,8 +145,8 @@ function O(e) {
 }
 function v(e) {
     let { searchContext: t, query: n, queryString: i } = e,
-        a = Object.keys(n),
-        o = a.reduce((e, t) => {
+        o = Object.keys(n),
+        a = o.reduce((e, t) => {
             let r = n[t];
             return ((e[t] = Array.isArray(r) ? r.length : 1), e);
         }, {}),
@@ -185,8 +185,8 @@ function v(e) {
             search_session_id: l.ZP.getSessionId(t),
             search_query_id: l.ZP.getQueryId(t),
             search_type: t.type,
-            num_modifiers: a.length,
-            modifiers: o
+            num_modifiers: o.length,
+            modifiers: a
         }));
 }
 function I(e) {
@@ -209,7 +209,7 @@ function T(e) {
     });
 }
 function S(e) {
-    let { rating: t, searchContext: n, unsatisfiedQuestionOption: i, unsatisfiedQuestionText: a, describeSearchQuestionOption: o, describeSearchQuestionText: s } = e;
+    let { rating: t, searchContext: n, unsatisfiedQuestionOption: i, unsatisfiedQuestionText: o, describeSearchQuestionOption: a, describeSearchQuestionText: s } = e;
     r.ZP.trackWithMetadata(u.rMx.SEARCH_RESULTS_FEEDBACK_SUBMITTED, {
         search_id: _(n),
         search_type: n.type,
@@ -217,8 +217,8 @@ function S(e) {
         search_query_id: l.ZP.getQueryId(n),
         rating: t,
         unsatisfied_question_option: i,
-        unsatisfied_question_text: a,
-        describe_search_question_option: o,
+        unsatisfied_question_text: o,
+        describe_search_question_option: a,
         describe_search_question_text: s
     });
 }
@@ -258,7 +258,7 @@ let N = new Map([
         [u.rtL.DATES, 'dates'],
         [u.rtL.SEARCH_OPTIONS, 'search_options']
     ]);
-function w(e) {
+function R(e) {
     let { searchContext: t, searchHistoryIndex: n, searchHistoryTotalResults: i } = e;
     r.ZP.trackWithMetadata(u.rMx.SEARCH_HISTORY_CLICKED, {
         search_id: _(t),
@@ -268,9 +268,9 @@ function w(e) {
         search_history_total_results: i
     });
 }
-function R(e) {
+function P(e) {
     var t;
-    let { searchContext: n, searchQuery: i, searchQueryString: a, searchAutocompleteResultIndex: o, searchAutocompleteTotalResults: s, searchTokenType: c, searchAutocompleteGroup: p, isSearchFilterPrefix: h, isSearchFilterAnswer: m, isSearchFilterComplete: g, isInFilterForSelectedChannel: E, searchAutocompleteSelectAction: b } = e;
+    let { searchContext: n, searchQuery: i, searchQueryString: o, searchAutocompleteResultIndex: a, searchAutocompleteTotalResults: s, searchTokenType: c, searchAutocompleteGroup: p, isSearchFilterPrefix: h, isSearchFilterAnswer: m, isSearchFilterComplete: g, isInFilterForSelectedChannel: E, searchAutocompleteSelectAction: b } = e;
     u.rtL.HISTORY;
     let y = null != (t = N.get(p)) ? t : C.get(p),
         O = null != c ? N.get(c) : null;
@@ -279,9 +279,9 @@ function R(e) {
         search_type: n.type,
         search_session_id: l.ZP.getSessionId(n),
         search_query_id: l.ZP.getQueryId(n),
-        search_query_length: d(a),
+        search_query_length: d(o),
         search_query_content_length: f(i),
-        search_autocomplete_result_index: o,
+        search_autocomplete_result_index: a,
         search_autocomplete_total_results: s,
         search_autocomplete_group: y,
         search_autocomplete_filter_type: O,
@@ -292,7 +292,7 @@ function R(e) {
         search_autocomplete_select_action: b
     });
 }
-function P(e) {
+function w(e) {
     let { searchContext: t, searchAutocompleteSelectAction: n } = e;
     r.ZP.trackWithMetadata(u.rMx.SEARCH_MESSAGES_SELECTED_CHANNEL_FILTER_CLICKED, {
         search_id: _(t),

@@ -3,7 +3,7 @@ var r = n(73800);
 function i() {
     let e = (0, r.useRef)(new Map()),
         t = (0, r.useCallback)((t, n, r, i) => {
-            let a = (null == i ? void 0 : i.once)
+            let o = (null == i ? void 0 : i.once)
                 ? (...t) => {
                       (e.current.delete(r), r(...t));
                   }
@@ -11,15 +11,15 @@ function i() {
             (e.current.set(r, {
                 type: n,
                 eventTarget: t,
-                fn: a,
+                fn: o,
                 options: i
             }),
-                t.addEventListener(n, a, i));
+                t.addEventListener(n, o, i));
         }, []),
         n = (0, r.useCallback)((t, n, r, i) => {
-            var a;
-            let o = (null == (a = e.current.get(r)) ? void 0 : a.fn) || r;
-            (t.removeEventListener(n, o, i), e.current.delete(r));
+            var o;
+            let a = (null == (o = e.current.get(r)) ? void 0 : o.fn) || r;
+            (t.removeEventListener(n, a, i), e.current.delete(r));
         }, []),
         i = (0, r.useCallback)(() => {
             e.current.forEach((e, t) => {

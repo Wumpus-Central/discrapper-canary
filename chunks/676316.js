@@ -6,15 +6,15 @@ var r = n(73800),
     s = n(592125),
     o = n(994752),
     c = n(463031);
-let d = '1221458499993600000',
-    u = {
+let u = '1221458499993600000',
+    d = {
         content_type: l.s.LEADERBOARD,
         extra: {
             type: 'leaderboard_extra',
             leaderboard_id: c.z
         },
-        id: d,
-        author_id: d,
+        id: u,
+        author_id: u,
         author_type: i.i.USER,
         participants: [],
         traits: []
@@ -25,7 +25,7 @@ function h(e) {
         l = null == i ? void 0 : i.guild_id,
         c = (0, a.e7)([o.Z], () => null != l && null != o.Z.getLeaderboards(l), [l]);
     return {
-        entriesWithLeaderboard: r.useMemo(() => (c ? [u, ...(null != t ? t : [])] : t), [c, t]),
+        entriesWithLeaderboard: r.useMemo(() => (c ? [d, ...(null != t ? t : [])] : t), [c, t]),
         hasLeaderboardEntry: c
     };
 }

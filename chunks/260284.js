@@ -5,9 +5,9 @@ e.exports = function (e, t) {
     if (n) return n;
     var i = e.getParentKey();
     if (!i) return null;
-    for (var a = t.get(i); a && !a.getNextSiblingKey(); ) {
-        var o = a.getParentKey();
-        a = o ? t.get(o) : null;
+    for (var o = t.get(i); o && !o.getNextSiblingKey(); ) {
+        var a = o.getParentKey();
+        o = a ? t.get(a) : null;
     }
-    return a ? a.getNextSiblingKey() : null;
+    return o ? o.getNextSiblingKey() : null;
 };

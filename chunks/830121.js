@@ -1,8 +1,8 @@
 (n.d(t, {
     FO: () => es,
     Sq: () => et,
-    ZP: () => ea,
-    el: () => eo,
+    ZP: () => eo,
+    el: () => ea,
     oO: () => G,
     wT: () => ei,
     zO: () => el
@@ -16,8 +16,8 @@
     n(539854));
 var r,
     i,
-    a,
     o,
+    a,
     s,
     l,
     c,
@@ -42,20 +42,20 @@ var y = n(807675),
 let A = 10,
     N = /^\/([a-zA-Z0-9-]+)$/,
     C = /^\/channels\/([0-9]+|@me)\/([0-9]+)$/,
-    w = /^\/(invite|template)\/([a-zA-Z0-9-]+)\/?\.?$/,
-    R = RegExp('^/events/(\\d+)(?:/)(\\d+)?((?:/)(\\d+))?'),
-    P = /^\/(application-directory|discovery\/applications)\/([0-9-]+)\/?((about|images|privacy)\/?)?$/,
+    R = /^\/(invite|template)\/([a-zA-Z0-9-]+)\/?\.?$/,
+    P = RegExp('^/events/(\\d+)(?:/)(\\d+)?((?:/)(\\d+))?'),
+    w = /^\/(application-directory|discovery\/applications)\/([0-9-]+)\/?((about|images|privacy)\/?)?$/,
     D = /^\/(application-directory|discovery\/applications)\/([0-9-]+)\/store\/?([0-9-]+)?\/?$/,
     L = /^\/activities\/([0-9-]+)\/?$/,
     x = /^\/channels\/([0-9]+)\/shop\/([0-9]+)$/,
-    k = /^\/channels\/([0-9]+)\/shop$/,
-    j = /^\/quests\/([0-9-]+)\/?$/,
-    M = /^\/oauth2\/authorize/,
+    M = /^\/channels\/([0-9]+)\/shop$/,
+    k = /^\/quests\/([0-9-]+)\/?$/,
+    j = /^\/oauth2\/authorize/,
     U = /^#itemSkuId=([0-9]+)$/,
     G = /dev:\/\/[\w-.~:\/?#\[\]@!$&'()*+,;=%]+/i,
     B = q(window.GLOBAL_ENV.INVITE_HOST),
     Z = q(window.GLOBAL_ENV.GUILD_TEMPLATE_HOST),
-    F = q(null != (o = window.GLOBAL_ENV.WEBAPP_ENDPOINT) ? o : '//canary.'.concat(S.$R1)),
+    F = q(null != (a = window.GLOBAL_ENV.WEBAPP_ENDPOINT) ? a : '//canary.'.concat(S.$R1)),
     V = q('//canary.'.concat(S.$R1)),
     H = q('//ptb.'.concat(S.$R1)),
     Y = q('discordapp.com'),
@@ -80,22 +80,22 @@ function q(e) {
         pathPrefix: null
     };
 }
-let $ = (e) => e.replaceAll(Q, ' $2 '),
-    X = null == (a = h().defaultRules.link) || null == (i = a.match) || null == (r = i.regex) ? void 0 : r.source;
-(_()(X, 'SimpleMarkdown link regex is not set.'), '^' === X[0] && (X = X.substring(1)));
-let Q = RegExp(X, 'g');
-function J(e, t) {
+let X = (e) => e.replaceAll(J, ' $2 '),
+    Q = null == (o = h().defaultRules.link) || null == (i = o.match) || null == (r = i.regex) ? void 0 : r.source;
+(_()(Q, 'SimpleMarkdown link regex is not set.'), '^' === Q[0] && (Q = Q.substring(1)));
+let J = RegExp(Q, 'g');
+function $(e, t) {
     var n;
     return (null == (n = t.host) ? void 0 : n.replace(/^www[.]/i, '')) === e.host;
 }
 function ee(e, t) {
     var n, r;
-    if (!J(e, t)) return null;
+    if (!$(e, t)) return null;
     let i = null != (n = t.pathname) ? n : '',
-        a = null != (r = e.pathPrefix) ? r : '';
-    if (!i.startsWith(a)) return null;
-    let o = i.substring(a.length);
-    return '' === o ? null : o;
+        o = null != (r = e.pathPrefix) ? r : '';
+    if (!i.startsWith(o)) return null;
+    let a = i.substring(o.length);
+    return '' === a ? null : a;
 }
 function et(e) {
     var t, n, r, i;
@@ -103,7 +103,7 @@ function et(e) {
 }
 function en(e) {
     if (null == e) return null;
-    let t = e.match(R);
+    let t = e.match(P);
     return null != t && t.length >= 4
         ? {
               guildId: t[1],
@@ -114,20 +114,20 @@ function en(e) {
 }
 function er(e) {
     var t, n, r, i;
-    let a = es(e);
-    if (null == a || null == a.pathname)
+    let o = es(e);
+    if (null == o || null == o.pathname)
         return {
             url: null,
             inviteHostRemainingPath: null,
             templateHostRemainingPath: null,
             primaryHostRemainingPath: null
         };
-    let o = ee(B, a),
-        s = ee(Z, a),
-        l = null != (i = null != (r = null != (n = null != (t = ee(F, a)) ? t : ee(V, a)) ? n : ee(H, a)) ? r : ee(Y, a)) ? i : ee(W, a);
+    let a = ee(B, o),
+        s = ee(Z, o),
+        l = null != (i = null != (r = null != (n = null != (t = ee(F, o)) ? t : ee(V, o)) ? n : ee(H, o)) ? r : ee(Y, o)) ? i : ee(W, o);
     return {
-        url: a,
-        inviteHostRemainingPath: o,
+        url: o,
+        inviteHostRemainingPath: a,
         templateHostRemainingPath: s,
         primaryHostRemainingPath: l
     };
@@ -136,23 +136,23 @@ function ei(e) {
     if (e.includes('\\')) {
         let r = es(e);
         if (null == r) return !1;
-        if (J(B, r)) return !0;
-        if ([F, V, H, Y, W].some((e) => J(e, r))) {
+        if ($(B, r)) return !0;
+        if ([F, V, H, Y, W].some((e) => $(e, r))) {
             var t, n;
             return null != (n = null == (t = r.pathname) ? void 0 : t.toUpperCase().includes(T.g.INVITE)) && n;
         }
     }
     return !1;
 }
-function ea(e) {
+function eo(e) {
     if (null == e) return [];
     let t = new Set(),
         n = [],
-        r = $((e = e.replace(z, (e, t, n, r) => (null == n ? ''.concat(t, 'http://').concat(r) : e)))).match(I.Z.URL_REGEX),
+        r = X((e = e.replace(z, (e, t, n, r) => (null == n ? ''.concat(t, 'http://').concat(r) : e)))).match(I.Z.URL_REGEX),
         i = e.match(G);
     if (null == (r = (null != r ? r : []).concat(null != i ? i : [])) || 0 === r.length) return [];
     for (let e of r) {
-        var a, o, s;
+        var o, a, s;
         if (n.length >= A) break;
         let { url: r, inviteHostRemainingPath: i, templateHostRemainingPath: l, primaryHostRemainingPath: c } = er(e);
         if (null == r || null == r.pathname) continue;
@@ -171,7 +171,7 @@ function ea(e) {
             u(T.g.INVITE, t);
         }
         (null == l ? void 0 : l.match(N)) != null && u(T.g.TEMPLATE, l.substring(1));
-        let d = null == c ? void 0 : c.match(w);
+        let d = null == c ? void 0 : c.match(R);
         if (null != d) {
             let t = d[1].toUpperCase();
             if (t === T.g.INVITE) {
@@ -182,12 +182,12 @@ function ea(e) {
         }
         (null == c ? void 0 : c.match(C)) != null && u(T.g.CHANNEL_LINK, c.replace('/channels/', ''));
         let f = en(r.pathname);
-        if ((null != f && u(T.g.EVENT, ''.concat(f.guildId, '-').concat(f.guildEventId) + (null != f.recurrenceId ? '-'.concat(f.recurrenceId) : '')), null != (null == c ? void 0 : c.match(M)) && null != r.query)) {
+        if ((null != f && u(T.g.EVENT, ''.concat(f.guildId, '-').concat(f.guildEventId) + (null != f.recurrenceId ? '-'.concat(f.recurrenceId) : '')), null != (null == c ? void 0 : c.match(j)) && null != r.query)) {
             let e = (0, y.y)(r.query),
                 t = e.clientId;
-            null == t || '' === t || (null == (a = e.scopes) ? void 0 : a.some((e) => e !== g.x.APPLICATIONS_COMMANDS)) || u(T.g.APP_OAUTH2_LINK, t);
+            null == t || '' === t || (null == (o = e.scopes) ? void 0 : o.some((e) => e !== g.x.APPLICATIONS_COMMANDS)) || u(T.g.APP_OAUTH2_LINK, t);
         }
-        let _ = null == c ? void 0 : c.match(P);
+        let _ = null == c ? void 0 : c.match(w);
         if (null != _) {
             let e = _[2];
             u(T.g.APP_DIRECTORY_PROFILE, e);
@@ -208,20 +208,20 @@ function ea(e) {
         }
         let m = null == c ? void 0 : c.match(x);
         null != m && u(T.g.GUILD_PRODUCT, ''.concat(m[1], '-').concat(m[2]));
-        let v = null == c ? void 0 : c.match(k);
+        let v = null == c ? void 0 : c.match(M);
         null != v && u(T.g.SERVER_SHOP, v[1]);
-        let I = eo(e);
+        let I = ea(e);
         if ((null != I && u(T.g.QUESTS_EMBED, I), '/shop' === c)) {
-            let e = null == (o = r.hash) ? void 0 : o.match(U);
+            let e = null == (a = r.hash) ? void 0 : a.match(U);
             u(T.g.COLLECTIBLES_SHOP, null != (s = null == e ? void 0 : e[1]) ? s : '');
         }
     }
     return n;
 }
-function eo(e) {
+function ea(e) {
     var t, n;
     let r = er(e),
-        i = null == r || null == (t = r.primaryHostRemainingPath) ? void 0 : t.match(j);
+        i = null == r || null == (t = r.primaryHostRemainingPath) ? void 0 : t.match(k);
     return null != (n = null == i ? void 0 : i[1]) ? n : null;
 }
 function es(e) {
@@ -232,5 +232,5 @@ function es(e) {
     }
 }
 function el(e) {
-    return ea(e)[0];
+    return eo(e)[0];
 }

@@ -9,8 +9,8 @@ var r = n(255367),
     s = n(485267),
     o = n(71585),
     c = n(981631),
-    d = n(388032);
-function u(e) {
+    u = n(388032);
+function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -42,24 +42,24 @@ let h = (e) => {
             onSelect: () => {},
             navId: 'member-list-settings-menu',
             onClose: null != t ? t : c.dG4,
-            'aria-label': d.intl.string(d.t.w2jvOT),
+            'aria-label': u.intl.string(u.t.w2jvOT),
             children: (0, r.jsxs)(a.kSQ, {
                 children: [
                     (0, r.jsx)(a.sNh, {
                         id: 'about',
-                        label: d.intl.string(d.t.pWLGnJ),
+                        label: u.intl.string(u.t.pWLGnJ),
                         icon: a.d3s,
                         action: () => {
                             ((0, a.ZDy)(async () => {
                                 let { default: e } = await n.e('71517').then(n.bind(n, 549505));
-                                return (t) => (0, r.jsx)(e, u({}, t));
+                                return (t) => (0, r.jsx)(e, d({}, t));
                             }),
                                 null == t || t());
                         }
                     }),
                     (0, r.jsx)(a.S89, {
                         id: 'hide',
-                        label: d.intl.string(d.t.AhNYub),
+                        label: u.intl.string(u.t.AhNYub),
                         checked: i,
                         action: () => {
                             ((0, s.lY)(), null == t || t());
@@ -84,7 +84,7 @@ let h = (e) => {
                 var n, i;
                 return (0, r.jsx)(
                     a.P3F,
-                    ((n = u({}, t)),
+                    ((n = d({}, t)),
                     (i = i =
                         {
                             innerRef: e,

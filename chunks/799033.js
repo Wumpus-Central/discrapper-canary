@@ -16,8 +16,8 @@ var r = a(157079),
     R = a(64685),
     d = a(873567),
     N = a(101284),
-    f = a(886115),
-    A = a(370541),
+    A = a(886115),
+    f = a(370541),
     T = a(285883),
     p = a(163162);
 let L = new WeakMap(),
@@ -51,11 +51,11 @@ function P(t, e) {
                         return !1;
                     }
                     let n = r.origin === _;
-                    return e ? (0, f.U0)(r.toString(), e) || (n && (0, f.U0)(r.pathname, e)) : n;
+                    return e ? (0, A.U0)(r.toString(), e) || (n && (0, A.U0)(r.pathname, e)) : n;
                 }
                 {
                     let a = !!t.match(/^\/(?!\/)/);
-                    return e ? (0, f.U0)(t, e) : a;
+                    return e ? (0, A.U0)(t, e) : a;
                 }
             })(t, D),
         y = {};
@@ -105,8 +105,8 @@ function P(t, e) {
                         e && void 0 !== R.status_code && ((0, c.Q0)(e, R.status_code), e.end(), delete _[t]);
                         return;
                     }
-                    let f = C(R.url),
-                        p = f ? (0, d.en)(f).host : void 0,
+                    let A = C(R.url),
+                        p = A ? (0, d.en)(A).host : void 0,
                         L = !!(0, o.HN)(),
                         h =
                             N && L
@@ -115,7 +115,7 @@ function P(t, e) {
                                       attributes: {
                                           type: 'xhr',
                                           'http.method': R.method,
-                                          'http.url': f,
+                                          'http.url': A,
                                           url: R.url,
                                           'server.address': p,
                                           [s.S3]: 'auto.http.browser',
@@ -140,7 +140,7 @@ function P(t, e) {
                                         ...(0, u.aF)().getPropagationContext(),
                                         ...r.getPropagationContext()
                                     },
-                                    s = a && (0, i.z)() ? (0, o.Hb)(a) : (0, A.$p)(_, n, c);
+                                    s = a && (0, i.z)() ? (0, o.Hb)(a) : (0, f.$p)(_, n, c);
                                 var l = t,
                                     R = s,
                                     d = (0, T.IQ)(E || (a ? (0, I.jC)(a) : (0, I._l)(_, e)));

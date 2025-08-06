@@ -1,8 +1,8 @@
 let r, i;
-(n.r(t), n.d(t, { default: () => X }), n(539854), n(388685));
-var a,
-    o = n(392711),
-    s = n.n(o),
+(n.r(t), n.d(t, { default: () => Q }), n(539854), n(388685));
+var o,
+    a = n(392711),
+    s = n.n(a),
     l = n(442837),
     c = n(570140),
     u = n(308063),
@@ -55,14 +55,14 @@ function C(e) {
     if (t !== p.pNK.INTEGRATIONS) return !1;
     if (null == r) {
         let e = _.Z.getGuildId();
-        (null != e && (u.Z.fetchForGuild(e), (v = !0)), R(!1));
+        (null != e && (u.Z.fetchForGuild(e), (v = !0)), P(!1));
     }
 }
-function w(e) {
+function R(e) {
     let { section: t, sectionId: n } = e;
     ((i = t), (N = n));
 }
-function R(e) {
+function P(e) {
     if (null != (r = _.Z.getProps().guild) && d.Z.can(p.Plq.MANAGE_GUILD, r)) {
         let e = _.Z.getProps().integrations;
         (null == e && (I = !0), (g = null != e ? e : []));
@@ -77,11 +77,11 @@ function R(e) {
     }
     ((b = null), (T = p.QZA.OPEN), (S = {}), (A = !1));
 }
-function P() {
+function w() {
     ((r = null), (g = []), (E = []), (b = null), (y = null), (O = null), (T = p.QZA.CLOSED), (A = !1));
 }
 let D = s().debounce(() => {
-    A && (null != y ? s().isEqual(y, K(y.id)) && (A = !1) : null != O && s().isEqual(O, z(O.id)) && (A = !1), A || $.emitChange());
+    A && (null != y ? s().isEqual(y, K(y.id)) && (A = !1) : null != O && s().isEqual(O, z(O.id)) && (A = !1), A || X.emitChange());
 }, 500);
 function L(e) {
     let { settings: t } = e;
@@ -93,15 +93,15 @@ function x(e) {
     if (null == O) return !1;
     ((O = m({}, O)), null != t.name && O.name !== t.name && ((O.name = t.name), (A = !0)), void 0 !== t.avatar && O.avatar !== t.avatar && ((O.avatar = t.avatar), (A = !0)), null != t.channelId && O.channel_id !== t.channelId && ((O.channel_id = t.channelId), (A = !0)), A && D());
 }
-function k() {
+function M() {
     ((T = p.QZA.SUBMITTING), (S = {}));
 }
-function j(e) {
+function k(e) {
     var t;
     if (T !== p.QZA.SUBMITTING) return !1;
     ((T = p.QZA.OPEN), (S = null != (t = e.errors) ? t : {}));
 }
-function M(e) {
+function j(e) {
     let { guildId: t, integrations: n } = e;
     if (null == r || t !== r.id || T === p.QZA.SUBMITTING) return !1;
     for (let e of ((I = !1), n))
@@ -112,8 +112,8 @@ function M(e) {
                 if (n === e.id) return !0;
             })
         ) {
-            var i, a;
-            (g.push(e), e.type === (null == y ? void 0 : y.type) && (null == (i = e.account) ? void 0 : i.id) === (null == (a = y.account) ? void 0 : a.id) && (y = e));
+            var i, o;
+            (g.push(e), e.type === (null == y ? void 0 : y.type) && (null == (i = e.account) ? void 0 : i.id) === (null == (o = y.account) ? void 0 : o.id) && (y = e));
         }
     for (let e = g.length - 1; e >= 0; e--) {
         let t = g[e],
@@ -180,10 +180,10 @@ function H() {
     ((O = null), (S = {}), (A = !1));
 }
 function Y() {
-    return R(!1);
+    return P(!1);
 }
 function W() {
-    return R(!0);
+    return P(!0);
 }
 function K(e) {
     return g.find((t) => {
@@ -197,7 +197,7 @@ function z(e) {
         return n === e;
     });
 }
-class q extends (a = l.ZP.Store) {
+class q extends (o = l.ZP.Store) {
     initialize() {
         this.waitFor(_.Z, f.Z, d.Z);
     }
@@ -258,7 +258,7 @@ class q extends (a = l.ZP.Store) {
     }
 }
 h(q, 'displayName', 'GuildSettingsIntegrationsStore');
-let $ = new q(
+let X = new q(
         c.Z,
         __OVERLAY__
             ? {}
@@ -267,7 +267,7 @@ let $ = new q(
                   INTEGRATION_SETTINGS_SAVE_SUCCESS: W,
                   GUILD_SETTINGS_INIT: C,
                   GUILD_SETTINGS_SET_SECTION: C,
-                  INTEGRATION_SETTINGS_SET_SECTION: w,
+                  INTEGRATION_SETTINGS_SET_SECTION: R,
                   INTEGRATION_SETTINGS_START_EDITING_COMMAND: G,
                   INTEGRATION_SETTINGS_STOP_EDITING_COMMAND: B,
                   INTEGRATION_SETTINGS_START_EDITING_INTEGRATION: Z,
@@ -276,11 +276,11 @@ let $ = new q(
                   INTEGRATION_SETTINGS_UPDATE_WEBHOOK: x,
                   INTEGRATION_SETTINGS_START_EDITING_WEBHOOK: V,
                   INTEGRATION_SETTINGS_STOP_EDITING_WEBHOOK: H,
-                  GUILD_SETTINGS_CLOSE: P,
-                  GUILD_SETTINGS_LOADED_INTEGRATIONS: M,
+                  GUILD_SETTINGS_CLOSE: w,
+                  GUILD_SETTINGS_LOADED_INTEGRATIONS: j,
                   WEBHOOKS_UPDATE: U,
-                  INTEGRATION_SETTINGS_SUBMITTING: k,
-                  INTEGRATION_SETTINGS_SAVE_FAILURE: j
+                  INTEGRATION_SETTINGS_SUBMITTING: M,
+                  INTEGRATION_SETTINGS_SAVE_FAILURE: k
               }
     ),
-    X = $;
+    Q = X;

@@ -1,15 +1,15 @@
 n.d(t, {
     Lk: () => l,
-    jP: () => a,
-    u3: () => o,
+    jP: () => o,
+    u3: () => a,
     v8: () => s
 });
 var r = n(818083),
     i = n(987338),
-    a = (function (e) {
+    o = (function (e) {
         return ((e.POPOUT = 'popout'), (e.SIDEBAR = 'sidebar'), (e.LEGACY = 'legacy'), e);
     })({}),
-    o = (function (e) {
+    a = (function (e) {
         return ((e.SERVER_RAIL_TOP = 'server-rail-top'), (e.SERVER_RAIL_BOTTOM = 'server-rail-bottom'), (e.TITLE_BAR_LEFT = 'title-bar-left'), e);
     })({}),
     s = (function (e) {

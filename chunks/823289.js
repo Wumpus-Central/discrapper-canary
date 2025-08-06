@@ -1,8 +1,8 @@
 n.d(t, { Z: () => d });
 var r = n(286379),
     i = n(797614),
-    a = n(446276),
-    o = n(46140);
+    o = n(446276),
+    a = n(46140);
 function s(e, t, n) {
     return (
         t in e
@@ -20,7 +20,7 @@ let l = 30000,
     c = 0.1;
 class u {
     isEligible() {
-        return (0, a.M)(o.dr.QUESTS_BAR);
+        return (0, o.M)(a.dr.QUESTS_BAR);
     }
     clearTimeoutTimer() {
         null != this.timeoutTimer && (clearTimeout(this.timeoutTimer), (this.timeoutTimer = null));

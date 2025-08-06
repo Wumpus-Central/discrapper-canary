@@ -1,18 +1,18 @@
 (n.d(t, {
-    Vm: () => w,
+    Vm: () => R,
     ZP: () => S,
     eF: () => D,
     gM: () => N,
-    k5: () => R,
+    k5: () => P,
     qY: () => A,
     sz: () => L,
-    u1: () => P
+    u1: () => w
 }),
     n(388685));
 var r = n(73800),
     i = n(442837),
-    a = n(241155),
-    o = n(592125),
+    o = n(241155),
+    a = n(592125),
     s = n(984933),
     l = n(430824),
     c = n(496675),
@@ -81,25 +81,25 @@ let I = [],
     T = 15 * u.Z.Millis.MINUTE;
 function S(e, t) {
     return (0, i.Wu)(
-        [l.Z, a.Z, f.ZP, c.Z, o.Z, s.ZP],
+        [l.Z, o.Z, f.ZP, c.Z, a.Z, s.ZP],
         () => {
             let n = l.Z.getGuild(e);
             if (null == n) return I;
             if (n.features.has(E.oNc.HUB)) {
                 var r, i;
                 let e = null == (r = s.ZP.getDefaultChannel(n.id)) ? void 0 : r.id;
-                return (null != (i = a.Z.getEventDirectoryEntries(e)) ? i : [])
+                return (null != (i = o.Z.getEventDirectoryEntries(e)) ? i : [])
                     .map((e) => {
                         let t = e.scheduledEventId,
                             n = f.ZP.getGuildScheduledEvent(t);
-                        return null != n ? n : a.Z.getCachedGuildScheduledEventById(t);
+                        return null != n ? n : o.Z.getCachedGuildScheduledEventById(t);
                     })
                     .filter(d.lm);
             }
             return f.ZP.getGuildScheduledEventsByIndex(null != t ? t : f.bN.GUILD_EVENT_UPCOMING(n.id)).filter((e) => {
                 let t = e.channel_id;
                 if (null == t) return !0;
-                let n = o.Z.getChannel(t);
+                let n = a.Z.getChannel(t);
                 return c.Z.can(E.Plq.VIEW_CHANNEL, n);
             });
         },
@@ -108,9 +108,9 @@ function S(e, t) {
 }
 function A(e) {
     return (0, i.e7)(
-        [f.ZP, o.Z, c.Z],
+        [f.ZP, a.Z, c.Z],
         () => {
-            let t = o.Z.getChannel(e);
+            let t = a.Z.getChannel(e);
             if (!c.Z.can(E.Plq.VIEW_CHANNEL, t) || null == (null == t ? void 0 : t.guild_id)) return null;
             let n = f.ZP.getGuildScheduledEventsByIndex(f.bN.CHANNEL_EVENT_ACTIVE(e));
             return n.length > 0 ? n[0] : null;
@@ -133,22 +133,22 @@ function N(e) {
 }
 function C(e) {
     return (0, i.Wu)(
-        [f.ZP, o.Z, c.Z],
+        [f.ZP, a.Z, c.Z],
         () =>
             f.ZP.getGuildScheduledEventsByIndex(f.bN.GUILD_EVENT_UPCOMING(e)).filter((e) => {
                 if (e.entity_type === g.WX.NONE || e.status !== g.p1.SCHEDULED) return !1;
                 if (null == e.channel_id) return !0;
-                let t = o.Z.getChannel(e.channel_id);
+                let t = a.Z.getChannel(e.channel_id);
                 return c.Z.can(E.Plq.VIEW_CHANNEL, t);
             }),
         [e]
     );
 }
-function w(e) {
+function R(e) {
     let t = C(e),
         n = (0, i.cj)([p.Z], () => p.Z.getAllEventDismissals()),
         r = (0, i.cj)([p.Z], () => p.Z.getAllUpcomingNoticeSeenTimes()),
-        a = (0, i.cj)(
+        o = (0, i.cj)(
             [f.ZP],
             () =>
                 null == t
@@ -159,16 +159,16 @@ function w(e) {
                       }, {}),
             [t]
         ),
-        o = (0, i.e7)([l.Z], () => l.Z.getGuild(e)),
-        s = null != o && !o.features.has(E.oNc.COMMUNITY) && o.features.has(E.oNc.INTERNAL_EMPLOYEE_ONLY);
-    if (null != t && null != a && s)
+        a = (0, i.e7)([l.Z], () => l.Z.getGuild(e)),
+        s = null != a && !a.features.has(E.oNc.COMMUNITY) && a.features.has(E.oNc.INTERNAL_EMPLOYEE_ONLY);
+    if (null != t && null != o && s)
         for (let e = 0; e < t.length; e++) {
             var c;
             let i = t[e],
-                o = n[i.id],
+                a = n[i.id],
                 s = r[i.id],
-                l = null != (c = a[i.id]) && c,
-                u = (0, _.M)(i, o, s, l);
+                l = null != (c = o[i.id]) && c,
+                u = (0, _.M)(i, a, s, l);
             if (null != u)
                 return {
                     upcomingEvent: i,
@@ -176,28 +176,28 @@ function w(e) {
                 };
         }
 }
-function R(e) {
+function P(e) {
     return (0, i.e7)(
-        [f.ZP, o.Z, c.Z],
+        [f.ZP, a.Z, c.Z],
         () =>
             f.ZP.getGuildScheduledEventsByIndex(f.bN.GUILD_EVENT_ACTIVE(e)).find((e) => {
                 if (e.entity_type === g.WX.NONE || !(0, f.xt)(e)) return !1;
                 if (null == e.channel_id) return !0;
-                let t = o.Z.getChannel(e.channel_id);
+                let t = a.Z.getChannel(e.channel_id);
                 return c.Z.can(E.Plq.VIEW_CHANNEL, t);
             }),
         [e]
     );
 }
-function P(e) {
+function w(e) {
     return (0, i.e7)([f.ZP], () => f.ZP.getGuildScheduledEventsByIndex(f.bN.CHANNEL_EVENT_UPCOMING(e)), [e]);
 }
 function D(e) {
     return (0, i.e7)(
-        [o.Z, f.ZP],
+        [a.Z, f.ZP],
         () => {
-            let t = f.ZP.getGuildScheduledEventsByIndex(f.bN.GUILD_EVENT_ACTIVE(e)).find((e) => null != o.Z.getChannel(e.channel_id));
-            return o.Z.getChannel(null == t ? void 0 : t.channel_id);
+            let t = f.ZP.getGuildScheduledEventsByIndex(f.bN.GUILD_EVENT_ACTIVE(e)).find((e) => null != a.Z.getChannel(e.channel_id));
+            return a.Z.getChannel(null == t ? void 0 : t.channel_id);
         },
         [e]
     );
@@ -210,14 +210,14 @@ function L(e) {
         }, T);
         return () => clearInterval(e);
     }, []);
-    let a = (0, i.e7)([f.ZP], () => (null == e ? [] : f.ZP.getGuildScheduledEventsByIndex(f.bN.CHANNEL_EVENT_UPCOMING(e))), [e, t]);
+    let o = (0, i.e7)([f.ZP], () => (null == e ? [] : f.ZP.getGuildScheduledEventsByIndex(f.bN.CHANNEL_EVENT_UPCOMING(e))), [e, t]);
     return r.useMemo(
         () =>
-            a.filter((e) => {
+            o.filter((e) => {
                 let { startTime: t, endTime: n } = (0, h.Kq)(e),
                     { withinStartWindow: r, diffMinutes: i } = (0, m.ub)(t.toISOString(), null == n ? void 0 : n.toISOString());
                 return e.status !== g.p1.ACTIVE && r && i < 15;
             }),
-        [a]
+        [o]
     );
 }

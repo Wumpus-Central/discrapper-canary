@@ -1,8 +1,8 @@
 n.d(t, { Z: () => b });
 var r = n(255367),
     i = n(481060),
-    a = n(374129),
-    o = n(639351),
+    o = n(374129),
+    a = n(639351),
     s = n(908841),
     l = n(410441),
     c = n(206583),
@@ -65,8 +65,8 @@ function h(e, t) {
         r,
         i = m(e, t);
     if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
@@ -75,15 +75,15 @@ function m(e, t) {
     var n,
         r,
         i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
 let g = {
         [c.kG.SPOTIFY]: s.Z,
         [c.kG.CRUNCHYROLL]: i.omf,
-        [c.kG.XBOX]: o.Z,
-        [c.kG.PLAYSTATION]: a.Z
+        [c.kG.XBOX]: a.Z,
+        [c.kG.PLAYSTATION]: o.Z
     },
     E = {
         [c.kG.SPOTIFY]: () => u.intl.string(u.t['0ZB/XF']),
@@ -94,9 +94,9 @@ let g = {
 function b(e) {
     var t,
         { type: n, 'aria-label': i } = e,
-        a = h(e, ['type', 'aria-label']);
-    let o = g[n];
-    if (null == o) return null;
+        o = h(e, ['type', 'aria-label']);
+    let a = g[n];
+    if (null == a) return null;
     let s = null != i ? i : null == (t = E[n]) ? void 0 : t.call(E);
-    return (0, r.jsx)(l.Z, p(f({ Icon: o }, a), { 'aria-label': s }));
+    return (0, r.jsx)(l.Z, p(f({ Icon: a }, o), { 'aria-label': s }));
 }

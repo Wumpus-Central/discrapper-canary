@@ -1,8 +1,8 @@
 (n.d(t, { Z: () => f }), n(388685));
 var r = n(73800),
     i = n(392711),
-    a = n.n(i),
-    o = n(911969),
+    o = n.n(i),
+    a = n(911969),
     s = n(254711),
     l = n(213459),
     c = n(10718),
@@ -16,7 +16,7 @@ function f(e) {
         { commandsByActiveSection: _, loading: p } = c.wi({
             context: n,
             filters: {
-                commandTypes: [o.yU.CHAT, o.yU.PRIMARY_ENTRY_POINT]
+                commandTypes: [a.yU.CHAT, a.yU.PRIMARY_ENTRY_POINT]
             },
             options: {
                 placeholderCount: 0,
@@ -46,7 +46,7 @@ function f(e) {
     return {
         appsInThisServer: r.useMemo(
             () =>
-                a()
+                o()
                     .compact(
                         g.map((e) => {
                             let { application: t } = e;

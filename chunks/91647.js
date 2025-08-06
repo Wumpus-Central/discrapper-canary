@@ -16,7 +16,7 @@ class E {
             R = (0, c.OC)(o),
             d = (0, c.Ic)(t, u, R, I),
             N = this._buckets.get(d),
-            f = N && t === n.is ? N.metric.weight : 0;
+            A = N && t === n.is ? N.metric.weight : 0;
         N
             ? (N.metric.add(a), N.timestamp < l && (N.timestamp = l))
             : ((N = {
@@ -28,8 +28,8 @@ class E {
                   tags: I
               }),
               this._buckets.set(d, N));
-        let A = 'string' == typeof a ? N.metric.weight - f : a;
-        (0, _.yc)(t, u, A, R, E, d);
+        let f = 'string' == typeof a ? N.metric.weight - A : a;
+        (0, _.yc)(t, u, f, R, E, d);
     }
     flush() {
         if (0 === this._buckets.size) return;

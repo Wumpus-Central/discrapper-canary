@@ -27,10 +27,10 @@ function i(e, t, n) {
         e
     );
 }
-var a = n(878261),
-    o = n(65183),
+var o = n(878261),
+    a = n(65183),
     s = n(581079),
-    l = (0, o.Map)(),
+    l = (0, a.Map)(),
     c = 0;
 function u(e, t) {
     console.warn('WARNING: ' + e + ' will be deprecated soon!\nPlease use "' + t + '" instead.');
@@ -59,7 +59,7 @@ var d = {
     },
     __create: function (e, t, n) {
         return d.__add(
-            new a({
+            new o({
                 type: e,
                 mutability: t,
                 data: n || {}
@@ -77,8 +77,8 @@ var d = {
     __mergeData: function (e, t) {
         var n = d.__get(e),
             i = r({}, n.getData(), t),
-            a = n.set('data', i);
-        return ((l = l.set(e, a)), a);
+            o = n.set('data', i);
+        return ((l = l.set(e, o)), o);
     },
     __replaceData: function (e, t) {
         var n = d.__get(e).set('data', t);

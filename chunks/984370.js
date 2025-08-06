@@ -6,8 +6,8 @@
 var r = n(255367);
 n(73800);
 var i = n(873546),
-    a = n(442837),
-    o = n(475179),
+    o = n(442837),
+    a = n(475179),
     s = n(100527),
     l = n(906732),
     c = n(358221),
@@ -81,8 +81,8 @@ function A(e, t) {
         r,
         i = N(e, t);
     if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
@@ -91,8 +91,8 @@ function N(e, t) {
     var n,
         r,
         i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
 async function C(e) {
@@ -102,16 +102,16 @@ async function C(e) {
         'Minimize' === e ? g.ZP.minimize() : 'Maximize' === e && g.ZP.maximize();
     }
 }
-function w(e) {
-    let { children: t, className: n, channelId: s, channelType: l, guildId: m, innerClassname: g, transparent: v = !1, showToolbar: I = !0, toolbar: T, mobileToolbar: S, 'aria-label': A, 'aria-labelledby': N, scrollable: w, role: R, hideSearch: P, showDivider: D, disableDoubleClick: L } = e,
+function R(e) {
+    let { children: t, className: n, channelId: s, channelType: l, guildId: m, innerClassname: g, transparent: v = !1, showToolbar: I = !0, toolbar: T, mobileToolbar: S, 'aria-label': A, 'aria-labelledby': N, scrollable: R, role: P, hideSearch: w, showDivider: D, disableDoubleClick: L } = e,
         x = null == s || (0, y.AB)(s) ? null : s,
-        k = (0, a.e7)([h.Z], () => h.Z.isInChannel(x) || !1),
-        j = (0, a.e7)([c.Z], () => null != x && c.Z.getParticipantsListOpen(x)),
-        { enabled: M, inInbox: U } = d.Z.useExperiment({ location: 'HeaderBar' }),
+        M = (0, o.e7)([h.Z], () => h.Z.isInChannel(x) || !1),
+        k = (0, o.e7)([c.Z], () => null != x && c.Z.getParticipantsListOpen(x)),
+        { enabled: j, inInbox: U } = d.Z.useExperiment({ location: 'HeaderBar' }),
         { hasParticipantsPanel: G } = (0, u.Z)({ location: 'HeaderBar' });
     function B() {
         if (null == T) return null;
-        let e = null != s && !P;
+        let e = null != s && !w;
         return i.tq
             ? S
             : (0, r.jsxs)(r.Fragment, {
@@ -129,15 +129,15 @@ function w(e) {
                             )
                           : null,
                       D && (0, r.jsx)(E.ZP.Divider, {}),
-                      M && !U ? (0, r.jsx)(f.Z, {}) : null,
+                      j && !U ? (0, r.jsx)(f.Z, {}) : null,
                       G &&
-                          k &&
+                          M &&
                           null != x &&
-                          !j &&
+                          !k &&
                           l === b.d4z.GROUP_DM &&
                           (0, r.jsxs)('div', {
                               className: O.controlButtonWrapper,
-                              children: [(0, r.jsx)(E.ZP.Divider, {}), (0, r.jsx)(p.Z, { onClick: () => o.Z.toggleParticipantsList(x, !j) })]
+                              children: [(0, r.jsx)(E.ZP.Divider, {}), (0, r.jsx)(p.Z, { onClick: () => a.Z.toggleParticipantsList(x, !k) })]
                           })
                   ]
               });
@@ -151,30 +151,30 @@ function w(e) {
         onDoubleClick: () => C(L),
         'aria-label': A,
         'aria-labelledby': N,
-        role: R,
-        scrollable: w,
-        children: t
-    });
-}
-function R(e) {
-    let { children: t, className: n, 'aria-label': i, 'aria-labelledby': a, role: o, disableDoubleClick: s } = e;
-    return (0, r.jsx)(E.ZP, {
-        className: n,
-        onDoubleClick: () => C(s),
-        'aria-label': i,
-        'aria-labelledby': a,
-        role: o,
+        role: P,
+        scrollable: R,
         children: t
     });
 }
 function P(e) {
+    let { children: t, className: n, 'aria-label': i, 'aria-labelledby': o, role: a, disableDoubleClick: s } = e;
+    return (0, r.jsx)(E.ZP, {
+        className: n,
+        onDoubleClick: () => C(s),
+        'aria-label': i,
+        'aria-labelledby': o,
+        role: a,
+        children: t
+    });
+}
+function w(e) {
     var { isAuthenticated: t = !0 } = e,
         n = A(e, ['isAuthenticated']);
     let { analyticsLocations: i } = (0, l.ZP)(s.Z.HEADER_BAR);
     return (0, r.jsx)(l.Gt, {
         value: i,
-        children: t ? (0, r.jsx)(w, S(I({}, n), { className: n.className })) : (0, r.jsx)(R, S(I({}, n), { className: n.className }))
+        children: t ? (0, r.jsx)(R, S(I({}, n), { className: n.className })) : (0, r.jsx)(P, S(I({}, n), { className: n.className }))
     });
 }
-((P.Title = E.ZP.Title), (P.Icon = E.ZP.Icon), (P.ChannelIcon = E.ZP.ChannelIcon), (P.Divider = E.ZP.Divider), (P.Caret = E.ZP.Caret));
-let D = P;
+((w.Title = E.ZP.Title), (w.Icon = E.ZP.Icon), (w.ChannelIcon = E.ZP.ChannelIcon), (w.Divider = E.ZP.Divider), (w.Caret = E.ZP.Caret));
+let D = w;

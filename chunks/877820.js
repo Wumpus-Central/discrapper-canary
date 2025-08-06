@@ -1,8 +1,8 @@
 n.d(t, { Z: () => l });
 var r,
     i = n(442837),
-    a = n(570140);
-function o(e, t, n) {
+    o = n(570140);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -51,7 +51,7 @@ class s extends (r = i.ZP.Store) {
         this._orderId = null;
     }
     constructor() {
-        (super(a.Z, {
+        (super(o.Z, {
             ORDER_CREATE_START: (e) => this.handleOrderCreateStart(e),
             ORDER_CREATE_SUCCESS: (e) => this.handleOrderCreateSuccess(e),
             ORDER_CREATE_FAIL: (e) => this.handleOrderCreateFail(e),
@@ -60,10 +60,10 @@ class s extends (r = i.ZP.Store) {
             ORDER_UPDATE_FAIL: (e) => this.handleOrderUpdateFail(e),
             PAYMENT_MODAL_OPEN: (e) => this.handlePaymentModalOpen(e)
         }),
-            o(this, '_isCreatingOrder', !1),
-            o(this, '_isUpdatingOrder', !1),
-            o(this, '_orderId', null));
+            a(this, '_isCreatingOrder', !1),
+            a(this, '_isUpdatingOrder', !1),
+            a(this, '_orderId', null));
     }
 }
-o(s, 'displayName', 'OrderStore');
+a(s, 'displayName', 'OrderStore');
 let l = new s();

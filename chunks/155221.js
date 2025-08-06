@@ -6,8 +6,8 @@
     n(35282));
 var r = n(255367),
     i = n(73800),
-    a = n(664751),
-    o = n(114858),
+    o = n(664751),
+    a = n(114858),
     s = n(990547),
     l = n(719711),
     c = n(271579),
@@ -30,9 +30,9 @@ var r = n(255367),
     A = n(358085),
     N = n(998502),
     C = n(981631),
-    w = n(188785),
-    R = n(436620);
-function P(e, t, n) {
+    R = n(188785),
+    P = n(436620);
+function w(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -56,7 +56,7 @@ function D(e) {
                 })
             )),
             r.forEach(function (t) {
-                P(e, t, n[t]);
+                w(e, t, n[t]);
             }));
     }
     return e;
@@ -85,17 +85,17 @@ function x(e, t) {
     );
 }
 (n(928518), n(972830), n(704806));
-let k = (0, h.Un)({
+let M = (0, h.Un)({
         createPromise: () => n.e('47620').then(n.bind(n, 576184)),
         webpackId: 576184,
         name: 'UnsupportedBrowser'
     }),
-    j = (0, h.Un)({
+    k = (0, h.Un)({
         createPromise: () => n.e('74023').then(n.bind(n, 431583)),
         webpackId: 431583,
         name: 'DownloadApps'
     }),
-    M = (0, h.Un)({
+    j = (0, h.Un)({
         createPromise: () => n.e('81226').then(n.bind(n, 484097)),
         webpackId: 484097,
         name: 'InviteProxy'
@@ -131,7 +131,7 @@ let k = (0, h.Un)({
         name: 'ActivateDevice'
     }),
     H = (0, h.Un)({
-        createPromise: () => Promise.all([n.e('8895'), n.e('92078'), n.e('35535'), n.e('55204'), n.e('8016'), n.e('49508'), n.e('17938'), n.e('94136'), n.e('25548'), n.e('70205'), n.e('2686'), n.e('76540'), n.e('22646'), n.e('25183'), n.e('3940'), n.e('4192'), n.e('27458'), n.e('37082'), n.e('72762'), n.e('88712'), n.e('30419'), n.e('66317'), n.e('89001'), n.e('18824'), n.e('49049'), n.e('75708'), n.e('62856'), n.e('91689'), n.e('71824'), n.e('46154'), n.e('91315'), n.e('16459'), n.e('49152'), n.e('16745'), n.e('56534'), n.e('22173'), n.e('86383'), n.e('82096'), n.e('24920'), n.e('77803'), n.e('92357'), n.e('88934'), n.e('95468'), n.e('89744'), n.e('29709'), n.e('78223'), n.e('1272')]).then(n.bind(n, 457094)),
+        createPromise: () => Promise.all([n.e('8895'), n.e('66549'), n.e('92078'), n.e('35535'), n.e('55204'), n.e('8016'), n.e('49508'), n.e('17938'), n.e('94136'), n.e('25548'), n.e('70205'), n.e('2686'), n.e('76540'), n.e('22646'), n.e('25183'), n.e('3940'), n.e('4192'), n.e('27458'), n.e('37082'), n.e('72762'), n.e('88712'), n.e('30419'), n.e('66317'), n.e('89001'), n.e('18824'), n.e('49049'), n.e('75708'), n.e('62856'), n.e('91689'), n.e('12097'), n.e('46154'), n.e('91315'), n.e('16459'), n.e('49152'), n.e('16745'), n.e('56534'), n.e('22173'), n.e('86383'), n.e('82096'), n.e('24920'), n.e('77803'), n.e('92357'), n.e('88934'), n.e('95468'), n.e('89744'), n.e('29709'), n.e('78223'), n.e('1272')]).then(n.bind(n, 457094)),
         webpackId: 457094,
         name: 'ViewsWithMainInterface',
         memo: !0,
@@ -158,26 +158,26 @@ let k = (0, h.Un)({
         name: 'MobileWebHandoffFallback'
     }),
     q = (0, h.Un)({
-        createPromise: () => Promise.all([n.e('8895'), n.e('92078'), n.e('35535'), n.e('31077'), n.e('8016'), n.e('49508'), n.e('17938'), n.e('94136'), n.e('25548'), n.e('70205'), n.e('2686'), n.e('76540'), n.e('22646'), n.e('25183'), n.e('3940'), n.e('4192'), n.e('27458'), n.e('37082'), n.e('72762'), n.e('88712'), n.e('30419'), n.e('66317'), n.e('89001'), n.e('18824'), n.e('49049'), n.e('75708'), n.e('62856'), n.e('71824'), n.e('46154'), n.e('91315'), n.e('16459'), n.e('49152'), n.e('16745'), n.e('22173'), n.e('82096'), n.e('24920'), n.e('92357'), n.e('63141')]).then(n.bind(n, 290161)),
+        createPromise: () => Promise.all([n.e('8895'), n.e('66549'), n.e('92078'), n.e('35535'), n.e('31077'), n.e('8016'), n.e('49508'), n.e('17938'), n.e('94136'), n.e('25548'), n.e('70205'), n.e('2686'), n.e('76540'), n.e('22646'), n.e('25183'), n.e('3940'), n.e('4192'), n.e('27458'), n.e('37082'), n.e('72762'), n.e('88712'), n.e('30419'), n.e('66317'), n.e('89001'), n.e('18824'), n.e('49049'), n.e('75708'), n.e('62856'), n.e('12097'), n.e('46154'), n.e('91315'), n.e('16459'), n.e('49152'), n.e('16745'), n.e('22173'), n.e('82096'), n.e('24920'), n.e('92357'), n.e('63141')]).then(n.bind(n, 290161)),
         webpackId: 290161,
         name: 'Overlay'
     }),
-    $ = (0, h.Un)({
+    X = (0, h.Un)({
         createPromise: () => Promise.all([n.e('3940'), n.e('18824'), n.e('75347')]).then(n.bind(n, 430075)),
         webpackId: 430075,
         name: 'SuspendedUserSafetyHubPage'
     }),
-    X = (0, h.Un)({
+    Q = (0, h.Un)({
         createPromise: () => n.e('10125').then(n.bind(n, 630107)),
         webpackId: 630107,
         name: 'QuestsLandingPage'
     }),
-    Q = (0, h.Un)({
+    J = (0, h.Un)({
         createPromise: () => n.e('58131').then(n.bind(n, 531338)),
         webpackId: 531338,
         name: 'ConnectionsAuthorizeContinue'
     }),
-    J = (0, h.Un)({
+    $ = (0, h.Un)({
         createPromise: () => n.e('78449').then(n.bind(n, 684572)),
         webpackId: 684572,
         name: 'ApplicationDirectoryRoutes'
@@ -206,18 +206,18 @@ class ei extends i.Component {
             (e =
                 n === g.P.IN_PROGRESS
                     ? null
-                    : !R.KO || d
-                      ? (0, r.jsx)(o.rs, { children: (0, r.jsx)(p.Z, { component: k }) })
+                    : !P.KO || d
+                      ? (0, r.jsx)(a.rs, { children: (0, r.jsx)(p.Z, { component: M }) })
                       : A.isPlatformEmbedded
-                        ? (0, r.jsxs)(o.rs, {
+                        ? (0, r.jsxs)(a.rs, {
                               children: [
                                   t
                                       ? null
-                                      : (0, r.jsx)(o.AW, {
+                                      : (0, r.jsx)(a.AW, {
                                             path: C.Z5c.ACCOUNT_STANDING,
-                                            component: $
+                                            component: X
                                         }),
-                                  (0, r.jsx)(o.AW, {
+                                  (0, r.jsx)(a.AW, {
                                       exact: !0,
                                       path: C.Z5c.INDEX,
                                       render: () => (0, r.jsx)(_.Z, {})
@@ -225,65 +225,65 @@ class ei extends i.Component {
                                   (0, r.jsx)(p.Z, {
                                       exact: !0,
                                       path: C.Z5c.APPS,
-                                      component: j
+                                      component: k
                                   }),
-                                  (0, r.jsx)(o.AW, {
-                                      path: er([C.Z5c.LOGIN, C.Z5c.REGISTER, C.Z5c.INVITE(':inviteCode'), C.Z5c.INVITE_LOGIN(':inviteCode'), C.Z5c.GIFT_CODE(':giftCode'), C.Z5c.GIFT_CODE_LOGIN(':giftCode'), C.Z5c.RESET], w.a),
+                                  (0, r.jsx)(a.AW, {
+                                      path: er([C.Z5c.LOGIN, C.Z5c.REGISTER, C.Z5c.INVITE(':inviteCode'), C.Z5c.INVITE_LOGIN(':inviteCode'), C.Z5c.GIFT_CODE(':giftCode'), C.Z5c.GIFT_CODE_LOGIN(':giftCode'), C.Z5c.RESET], R.a),
                                       component: Y
                                   }),
                                   (0, r.jsx)(p.Z, {
                                       path: C.Z5c.INVITE_PROXY(O.Hw.channelId()),
-                                      component: M
+                                      component: j
                                   }),
-                                  (0, r.jsx)(o.l_, {
+                                  (0, r.jsx)(a.l_, {
                                       from: C.Z5c.INVITE(''),
                                       to: C.Z5c.LOGIN
                                   }),
-                                  (0, r.jsx)(o.l_, {
+                                  (0, r.jsx)(a.l_, {
                                       from: C.Z5c.GIFT_CODE(''),
                                       to: C.Z5c.LOGIN
                                   }),
-                                  (0, r.jsx)(o.AW, { render: et })
+                                  (0, r.jsx)(a.AW, { render: et })
                               ]
                           })
-                        : (0, r.jsxs)(o.rs, {
+                        : (0, r.jsxs)(a.rs, {
                               children: [
                                   (0, r.jsx)(p.Z, {
                                       exact: !0,
                                       path: C.Z5c.INDEX,
                                       render: () => (0, r.jsx)(_.Z, {})
                                   }),
-                                  (0, r.jsx)(o.AW, {
-                                      path: er([C.Z5c.LOGIN, C.Z5c.LOGIN_HANDOFF, C.Z5c.REGISTER, C.Z5c.BILLING_PREFIX, C.Z5c.BILLING_PROMOTION_REDEMPTION(':code'), C.Z5c.INVITE(':inviteCode'), C.Z5c.INVITE_LOGIN(':inviteCode'), C.Z5c.GIFT_CODE(':giftCode'), C.Z5c.GIFT_CODE_LOGIN(':giftCode'), C.Z5c.GUILD_TEMPLATE(':guildTemplateCode'), C.Z5c.GUILD_TEMPLATE_LOGIN(':guildTemplateCode'), C.Z5c.DISABLE_EMAIL_NOTIFICATIONS, C.Z5c.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS, C.Z5c.RESET, C.Z5c.REPORT, C.Z5c.REPORT_SECOND_LOOK, C.Z5c.ACCOUNT_REVERT(':token')], w.a),
+                                  (0, r.jsx)(a.AW, {
+                                      path: er([C.Z5c.LOGIN, C.Z5c.LOGIN_HANDOFF, C.Z5c.REGISTER, C.Z5c.BILLING_PREFIX, C.Z5c.BILLING_PROMOTION_REDEMPTION(':code'), C.Z5c.INVITE(':inviteCode'), C.Z5c.INVITE_LOGIN(':inviteCode'), C.Z5c.GIFT_CODE(':giftCode'), C.Z5c.GIFT_CODE_LOGIN(':giftCode'), C.Z5c.GUILD_TEMPLATE(':guildTemplateCode'), C.Z5c.GUILD_TEMPLATE_LOGIN(':guildTemplateCode'), C.Z5c.DISABLE_EMAIL_NOTIFICATIONS, C.Z5c.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS, C.Z5c.RESET, C.Z5c.REPORT, C.Z5c.REPORT_SECOND_LOOK, C.Z5c.ACCOUNT_REVERT(':token')], R.a),
                                       component: Y
                                   }),
                                   t
                                       ? null
-                                      : (0, r.jsx)(o.AW, {
+                                      : (0, r.jsx)(a.AW, {
                                             path: C.Z5c.PICK_GUILD_SETTINGS(':section?', ':subsection?'),
                                             component: Y
                                         }),
                                   t
                                       ? null
-                                      : (0, r.jsx)(o.AW, {
+                                      : (0, r.jsx)(a.AW, {
                                             path: C.Z5c.CHANNEL(O.Hw.guildId(), O.Hw.channelId({ optional: !0 }), ':messageId?'),
                                             component: Y
                                         }),
-                                  (0, r.jsx)(o.l_, {
+                                  (0, r.jsx)(a.l_, {
                                       from: C.Z5c.INVITE(''),
                                       to: C.Z5c.LOGIN
                                   }),
                                   (0, r.jsx)(p.Z, {
                                       path: C.Z5c.INVITE_PROXY(O.Hw.channelId()),
-                                      component: M
+                                      component: j
                                   }),
-                                  (0, r.jsx)(o.l_, {
+                                  (0, r.jsx)(a.l_, {
                                       from: C.Z5c.GIFT_CODE(''),
                                       to: C.Z5c.LOGIN
                                   }),
                                   (0, r.jsx)(p.Z, {
                                       path: C.Z5c.QUESTS(':questId'),
-                                      component: X,
+                                      component: Q,
                                       impressionName: s.ImpressionNames.QUESTS_LANDING_PAGE,
                                       impressionProperties: (e) => {
                                           let { computedMatch: t } = e;
@@ -316,7 +316,7 @@ class ei extends i.Component {
                                   }),
                                   (0, r.jsx)(p.Z, {
                                       path: C.Z5c.CONNECTIONS_AUTHORIZE_CONTINUE(':type'),
-                                      component: Q
+                                      component: J
                                   }),
                                   (0, r.jsx)(p.Z, {
                                       path: C.Z5c.CONNECTIONS_SUCCESS(':type'),
@@ -335,8 +335,8 @@ class ei extends i.Component {
                                       render: () => {
                                           var e, t, n;
                                           let r = null == (e = I.default.getSuperProperties()) ? void 0 : e.os,
-                                              i = (0, a.parse)((null != (n = window.location.search) ? n : '').substr(1)),
-                                              o = null == (t = i.referring_location) ? void 0 : t.toString();
+                                              i = (0, o.parse)((null != (n = window.location.search) ? n : '').substr(1)),
+                                              a = null == (t = i.referring_location) ? void 0 : t.toString();
                                           return (
                                               ('iOS' === r || 'Android' === r) &&
                                                   I.default.track(C.rMx.DOWNLOAD_APP, {
@@ -344,10 +344,10 @@ class ei extends i.Component {
                                                       ptb: !1,
                                                       released: !0,
                                                       has_e_mail: 'true' === i.has_e_mail,
-                                                      referring_location: o,
+                                                      referring_location: a,
                                                       qr_code: !0
                                                   }),
-                                              (window.location.href = (0, T.Gn)(null != o && '' !== o ? o : 'qr_code', r)),
+                                              (window.location.href = (0, T.Gn)(null != a && '' !== a ? a : 'qr_code', r)),
                                               null
                                           );
                                       }
@@ -358,7 +358,7 @@ class ei extends i.Component {
                                           var e, t;
                                           let n = null == (e = I.default.getSuperProperties()) ? void 0 : e.os,
                                               i = (0, S.o)(null != (t = window.location.search) ? t : '');
-                                          if ('iOS' !== n && 'Android' !== n) return (0, r.jsx)(o.l_, { to: null != i.desktop ? ''.concat(i.desktop.pathname).concat(i.desktop.search) : C.Z5c.APP });
+                                          if ('iOS' !== n && 'Android' !== n) return (0, r.jsx)(a.l_, { to: null != i.desktop ? ''.concat(i.desktop.pathname).concat(i.desktop.search) : C.Z5c.APP });
                                           {
                                               let e = (0, T.Gn)('app_open_from_email', n, i.mobile),
                                                   t = (0, c.zS)(e);
@@ -373,34 +373,34 @@ class ei extends i.Component {
                                           }
                                       }
                                   }),
-                                  (0, r.jsx)(o.l_, {
+                                  (0, r.jsx)(a.l_, {
                                       from: C.Z5c.CONNECT_AUTHORIZE,
                                       to: x(D({}, location), { pathname: C.Z5c.OAUTH2_AUTHORIZE })
                                   }),
-                                  (0, r.jsx)(o.AW, {
+                                  (0, r.jsx)(a.AW, {
                                       path: [C.Z5c.OAUTH2_AUTHORIZED, C.Z5c.OAUTH2_AUTHORIZE, C.Z5c.OAUTH2_ERROR, C.Z5c.OAUTH2_WHITELIST_ACCEPT],
                                       component: W
                                   }),
                                   t
                                       ? null
-                                      : (0, r.jsx)(o.AW, {
+                                      : (0, r.jsx)(a.AW, {
                                             path: [C.Z5c.ACCOUNT_STANDING],
+                                            component: X
+                                        }),
+                                  t
+                                      ? null
+                                      : (0, r.jsx)(a.AW, {
+                                            path: [C.Z5c.APPLICATION_DIRECTORY],
                                             component: $
                                         }),
                                   t
                                       ? null
-                                      : (0, r.jsx)(o.AW, {
-                                            path: [C.Z5c.APPLICATION_DIRECTORY],
-                                            component: J
-                                        }),
-                                  t
-                                      ? null
-                                      : (0, r.jsx)(o.AW, {
+                                      : (0, r.jsx)(a.AW, {
                                             path: [C.Z5c.GLOBAL_DISCOVERY_APPS],
                                             component: ee
                                         }),
-                                  (0, r.jsx)(o.AW, { render: et }),
-                                  (0, r.jsx)(o.l_, {
+                                  (0, r.jsx)(a.AW, { render: et }),
+                                  (0, r.jsx)(a.l_, {
                                       from: C.Z5c.ACCOUNT_REVERT(''),
                                       to: C.Z5c.LOGIN
                                   })
@@ -413,12 +413,12 @@ class ei extends i.Component {
         );
     }
 }
-function ea() {
-    let { pathname: e } = (0, o.TH)();
-    return null != (0, o.LX)(e, { path: C.Z5c.APPLICATION_DIRECTORY });
+function eo() {
+    let { pathname: e } = (0, a.TH)();
+    return null != (0, a.LX)(e, { path: C.Z5c.APPLICATION_DIRECTORY });
 }
-function eo(e) {
-    let t = ea(),
+function ea(e) {
+    let t = eo(),
         n = (0, b.h)();
     return (0, r.jsx)(
         ei,
@@ -435,4 +435,4 @@ let es = d.ZP.connectStores(
         migrationStatus: g.Z.getMigrationStatus()
     }),
     { forwardRef: !0 }
-)(eo);
+)(ea);

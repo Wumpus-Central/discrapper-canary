@@ -11,7 +11,7 @@ e.exports = function (e) {
             keywords: t,
             relevance: 10
         },
-        a = [
+        o = [
             {
                 className: 'string',
                 begin: '"""',
@@ -36,7 +36,7 @@ e.exports = function (e) {
             }
         ];
     return (
-        (i.contains = a),
+        (i.contains = o),
         {
             name: 'Ceylon',
             keywords: {
@@ -51,7 +51,7 @@ e.exports = function (e) {
                     className: 'meta',
                     begin: '@[a-z]\\w*(?::"[^"]*")?'
                 }
-            ].concat(a)
+            ].concat(o)
         }
     );
 };

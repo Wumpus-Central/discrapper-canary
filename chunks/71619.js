@@ -5,10 +5,10 @@ n.d(t, {
 });
 var r = n(442837),
     i = n(271383),
-    a = n(594174),
-    o = n(69882);
+    o = n(594174),
+    a = n(69882);
 function s(e) {
-    let t = (0, r.e7)([a.default], () => a.default.getCurrentUser());
+    let t = (0, r.e7)([o.default], () => o.default.getCurrentUser());
     return u(null == t ? void 0 : t.id, e);
 }
 function l(e, t, n) {
@@ -16,7 +16,7 @@ function l(e, t, n) {
 }
 function c(e) {
     var t;
-    return [null != (t = null == e ? void 0 : e.communicationDisabledUntil) ? t : null, (0, o.b)(e)];
+    return [null != (t = null == e ? void 0 : e.communicationDisabledUntil) ? t : null, (0, a.b)(e)];
 }
 function u(e, t) {
     return c((0, r.e7)([i.ZP], () => l(e, t, i.ZP), [t, e]));

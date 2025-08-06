@@ -1,8 +1,8 @@
 (n.d(t, { Z: () => b }), n(388685));
 var r = n(570140),
     i = n(147913),
-    a = n(70956),
-    o = n(358085),
+    o = n(70956),
+    a = n(358085),
     s = n(998502),
     l = n(104755),
     c = n(355281),
@@ -23,8 +23,8 @@ function p(e, t, n) {
         e
     );
 }
-let h = 3 * a.Z.Millis.DAY,
-    m = 7 * a.Z.Millis.DAY,
+let h = 3 * o.Z.Millis.DAY,
+    m = 7 * o.Z.Millis.DAY,
     g = {
         joinGameLogPrefix: '[FLog::GameJoinLoadTime] Report game_join_loadtime:',
         joinGameFields: [
@@ -76,7 +76,7 @@ class E extends i.Z {
                     }));
             }),
             p(this, 'handlePostConnectionOpen', () => {
-                !__OVERLAY__ && ((0, o.isWindows)() || (0, o.isMac)()) && s.ZP.setRobloxSubgameDetectionConfig(g, this.handleGetRobloxSubgameInfo);
+                !__OVERLAY__ && ((0, a.isWindows)() || (0, a.isMac)()) && s.ZP.setRobloxSubgameDetectionConfig(g, this.handleGetRobloxSubgameInfo);
             }),
             p(this, 'handleRunningGamesChange', (e) => {
                 if (__OVERLAY__) return;

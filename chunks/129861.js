@@ -2,8 +2,8 @@ n.d(t, { Z: () => I });
 var r = n(255367);
 n(73800);
 var i = n(120356),
-    a = n.n(i),
-    o = n(442837),
+    o = n.n(i),
+    a = n(442837),
     s = n(481060),
     l = n(385499),
     c = n(892567),
@@ -70,8 +70,8 @@ function b(e, t) {
         r,
         i = y(e, t);
     if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
@@ -80,17 +80,17 @@ function y(e, t) {
     var n,
         r,
         i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
 function O(e) {
     return e.isSystemUser() ? u.J.SYSTEM_DM : e.bot ? u.J.BOT : null;
 }
 let v = (e) => {
-        let { primary: t, secondary: n, botType: i, botVerified: o, discriminatorClass: u, className: d, usernameClass: f, botClass: h, showStreamerModeTooltip: g, displayNameStyles: b } = e;
+        let { primary: t, secondary: n, botType: i, botVerified: a, discriminatorClass: u, className: d, usernameClass: f, botClass: h, showStreamerModeTooltip: g, displayNameStyles: b } = e;
         return (0, r.jsxs)('div', {
-            className: a()(p.info, d),
+            className: o()(p.info, d),
             children: [
                 (0, r.jsx)(s.ua7, {
                     text: _.intl.string(_.t.Br1ls7),
@@ -100,7 +100,7 @@ let v = (e) => {
                         (0, r.jsx)(
                             'span',
                             E(m({}, e), {
-                                className: a()(p.__invalid_username, f),
+                                className: o()(p.__invalid_username, f),
                                 children:
                                     null != b
                                         ? (0, r.jsx)(c.Z, {
@@ -113,23 +113,23 @@ let v = (e) => {
                 }),
                 null != n
                     ? (0, r.jsx)('span', {
-                          className: a()(p.infoSpacing, u),
+                          className: o()(p.infoSpacing, u),
                           children: n
                       })
                     : void 0,
                 null != i &&
                     (0, r.jsx)(l.Z, {
                         type: i,
-                        className: a()(p.infoSpacing, h),
-                        verified: o
+                        className: o()(p.infoSpacing, h),
+                        verified: a
                     })
             ]
         });
     },
     I = (e) => {
-        var { user: t, nick: n, forceUsername: i, showAccountIdentifier: a, overrideDiscriminator: s, forcePomelo: l, hideBotTag: c = !1, hideDiscriminator: _ = !1 } = e,
+        var { user: t, nick: n, forceUsername: i, showAccountIdentifier: o, overrideDiscriminator: s, forcePomelo: l, hideBotTag: c = !1, hideDiscriminator: _ = !1 } = e,
             p = b(e, ['user', 'nick', 'forceUsername', 'showAccountIdentifier', 'overrideDiscriminator', 'forcePomelo', 'hideBotTag', 'hideDiscriminator']);
-        let h = (0, o.e7)([d.Z], () => d.Z.hidePersonalInformation),
+        let h = (0, a.e7)([d.Z], () => d.Z.hidePersonalInformation),
             g = h || _ || t.isNonUserBot(),
             E = t.toString(),
             y = c ? null : O(t),
@@ -139,7 +139,7 @@ let v = (e) => {
             A = t.hasUniqueUsername() || l;
         if (A || S !== E) {
             let e = S === E && A && i ? f.ZP.getUserTag(t, { forcePomelo: l }) : S,
-                n = a && e !== '@'.concat(E) ? f.ZP.getUserTag(t) : void 0;
+                n = o && e !== '@'.concat(E) ? f.ZP.getUserTag(t) : void 0;
             return (0, r.jsx)(
                 v,
                 m(

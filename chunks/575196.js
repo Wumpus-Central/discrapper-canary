@@ -7,8 +7,8 @@
     n(388685));
 var r = n(688619),
     i = n.n(r),
-    a = n(691324),
-    o = n(780384),
+    o = n(691324),
+    a = n(780384),
     s = n(629935);
 let l = 'custom-theme-background',
     c = 0.05,
@@ -24,20 +24,20 @@ let l = 'custom-theme-background',
     b = 0.1,
     y = 0.05;
 function O(e, t, n, r) {
-    let a = e.slice();
-    1 === e.length && a.push(e[0]);
+    let o = e.slice();
+    1 === e.length && o.push(e[0]);
     let O = e.map((e) => i()(e).luminance()),
         v = i()(e[O.indexOf(Math.min(...O))]),
         I = i()(e[O.indexOf(Math.max(...O))]),
-        T = 'linear-gradient('.concat(t, 'deg, ').concat(a.join(', '), ')'),
-        S = (0, o.wj)(r),
+        T = 'linear-gradient('.concat(t, 'deg, ').concat(o.join(', '), ')'),
+        S = (0, a.wj)(r),
         A = {
             light: i()(I).set('hsl.s', 1).set('hsl.l', u),
             dark: i()(v).set('hsl.s', 1).set('hsl.l', c)
         },
         N = 100 - n,
         C = '\n      --custom-theme-background: '.concat(T, ';\n      ', '--custom-background-gradient-chat-opacity-base-light', ': 0.95;\n      ', '--custom-background-gradient-highest-opacity-base-light', ': 1.0;\n      ', '--custom-background-gradient-opacity-mix-amount', ': ').concat(((d + f * N) / 100).toFixed(2), ';\n      ', '--custom-theme-border-color-amount', ': 5%;\n      '),
-        w = S
+        R = S
             ? '\n      '
                   .concat(s.Yk.THEME_BASE_MIX_AMOUNT, ': ')
                   .concat(_ + p * N, '%;\n      ')
@@ -48,7 +48,7 @@ function O(e, t, n, r) {
                   .concat(h + m * n, '%;\n      ')
                   .concat(s.Yk.THEME_TEXT_MIX_AMOUNT, ': ')
                   .concat(E, '%;\n    '),
-        R = '\n      '
+        P = '\n      '
             .concat(s.Yk.DARK_THEME_BASE_COLOR, ': ')
             .concat(A.dark.css(), ';\n      ')
             .concat(s.Yk.DARK_THEME_BASE_COLOR_HSL, ': ')
@@ -60,7 +60,7 @@ function O(e, t, n, r) {
                     .css(),
                 ';\n    '
             ),
-        P = '\n      '
+        w = '\n      '
             .concat(s.Yk.LIGHT_THEME_BASE_COLOR, ': ')
             .concat(A.light.css(), ';\n      ')
             .concat(s.Yk.LIGHT_THEME_BASE_COLOR_HSL, ': ')
@@ -72,16 +72,16 @@ function O(e, t, n, r) {
                     .css(),
                 ';\n    '
             );
-    return '.'.concat(l, ' {\n      ').concat(C, '\n      ').concat(w, '\n      ').concat(R, '\n      ').concat(P, '\n      }');
+    return '.'.concat(l, ' {\n      ').concat(C, '\n      ').concat(R, '\n      ').concat(P, '\n      ').concat(w, '\n      }');
 }
 function v(e, t) {
-    let n = a.b[e.colors[0].token].hex,
-        r = a.b[e.colors[e.colors.length - 1].token].hex,
+    let n = o.b[e.colors[0].token].hex,
+        r = o.b[e.colors[e.colors.length - 1].token].hex,
         i = (0, s.W4)({
             enabled: !0,
             primaryColor: n,
             secondaryColor: r,
-            isDarkTheme: (0, o.wj)(e.theme)
+            isDarkTheme: (0, a.wj)(e.theme)
         }),
         c = '\n      '.concat(
             Object.entries(i)

@@ -12,8 +12,8 @@ var n = t(255367),
     p = t(296848),
     _ = t(987209),
     f = t(563132),
-    x = t(107998),
-    m = t(27034),
+    m = t(107998),
+    x = t(27034),
     h = t(400981),
     j = t(435020),
     L = t(698708),
@@ -23,7 +23,7 @@ function g(e) {
         { handleClose: t, planGroup: l, onSubscriptionConfirmation: g, renderPurchaseConfirmation: y, postSuccessGuild: S, followupSKUInfo: E, continueSessionToInitialStep: v } = e,
         { activeSubscription: I, paymentSources: w, paymentSourceId: O, selectedPlan: M, selectedSkuId: P, step: T, updatedSubscription: Z, startingPremiumSubscriptionPlanIdRef: A, startingFractionalPremiumEndsAtRef: R } = (0, f.JL)(),
         { isGift: N, giftRecipient: U, giftCode: k, hasSentMessage: B, isSendingMessage: F, sendGiftMessage: G, claimableRewards: H, selectedGiftingPromotionReward: D } = (0, _.wD)(),
-        { confirmationFooter: W } = (0, x.zb)(),
+        { confirmationFooter: W } = (0, m.zb)(),
         Y = null != W,
         z = (0, d.id)(M, N, H),
         K = (0, C.Z)(),
@@ -73,7 +73,7 @@ function g(e) {
                         })),
         (0, n.jsxs)(n.Fragment, {
             children: [
-                (0, n.jsxs)(m.C3, {
+                (0, n.jsxs)(x.C3, {
                     children: [(0, n.jsx)(L.Z, {}), r]
                 }),
                 null != W && W,

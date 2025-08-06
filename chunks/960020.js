@@ -6,8 +6,8 @@
     n(467055));
 var r,
     i = n(442837),
-    a = n(570140);
-function o(e, t, n) {
+    o = n(570140);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -61,8 +61,8 @@ let l = 5,
     },
     p = (e) => {
         var t, n, r;
-        let { channelId: i, messageId: a, emoji: o, key: s } = e,
-            c = f(a, o);
+        let { channelId: i, messageId: o, emoji: a, key: s } = e,
+            c = f(o, a);
         if (_(s, i) >= l) return;
         let p = null != (t = u[i]) ? t : {},
             h = (null != (n = d[i]) ? n : {})[c],
@@ -72,13 +72,13 @@ let l = 5,
     h = (e) => {
         var t;
         let { channelId: n, messageId: r, emoji: i } = e,
-            a = f(r, i);
-        null == (t = u[n]) || delete t[a];
+            o = f(r, i);
+        null == (t = u[n]) || delete t[o];
     },
     m = (e) => {
         let { channelId: t, messageId: n, emoji: r, animation: i } = e,
-            a = f(n, r);
-        (null == d[t] && (d[t] = {}), (d[t][a] = i));
+            o = f(n, r);
+        (null == d[t] && (d[t] = {}), (d[t][o] = i));
     },
     g = (e) => {
         let { messageId: t, emojiName: n, emojiId: r, startPosition: i } = e;
@@ -113,8 +113,8 @@ class b extends (r = i.ZP.Store) {
         return null == (r = u[e]) ? void 0 : r[i];
     }
 }
-o(b, 'displayName', 'BurstReactionEffectsStore');
-let y = new b(a.Z, {
+a(b, 'displayName', 'BurstReactionEffectsStore');
+let y = new b(o.Z, {
     BURST_REACTION_EFFECT_CLEAR: h,
     BURST_REACTION_EFFECT_PLAY: p,
     BURST_REACTION_ANIMATION_ADD: m,

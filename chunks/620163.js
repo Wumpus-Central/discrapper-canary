@@ -18,8 +18,8 @@ var r = n(990547),
     x = n(163379),
     _ = n(498646),
     j = n(489968),
-    C = n(803038),
-    E = n(703288),
+    E = n(803038),
+    C = n(703288),
     O = n(574755),
     v = n(994714),
     S = n(377171),
@@ -72,8 +72,8 @@ var r = n(990547),
     ex = n(177508),
     e_ = n(956699),
     ej = n(54942),
-    eC = n(293389),
-    eE = n(88624),
+    eE = n(293389),
+    eC = n(88624),
     eO = n(387747),
     ev = n(389650),
     eS = n(649157),
@@ -108,7 +108,7 @@ var r = n(990547),
     e0 = n(539452);
 let e3 = () => {
         let e = [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BADGE];
-        return (C.M.getCurrentConfig({ location: 'getAppearanceDCs' }).enabled && e.push(s.z.CLIENT_THEMES_APPEARANCE_SETTINGS_NEW_BADGE), e);
+        return (E.M.getCurrentConfig({ location: 'getAppearanceDCs' }).enabled && e.push(s.z.CLIENT_THEMES_APPEARANCE_SETTINGS_NEW_BADGE), e);
     },
     e1 = () => {
         let e = e3(),
@@ -126,7 +126,7 @@ let e3 = () => {
     },
     e2 = ew.Z,
     e5 = (e) => {
-        let { unseenGiftCount: t, showPrepaidPaymentPastDueWarning: C, impressionSource: I, numOfPendingFamilyRequests: N, isOverlaySupported: D, isClipsBetaTagShowing: G = !1, shouldMergeGameSettings: e5, isKeywordFilteringEnabled: e4, isStaff: e7, isInappropriateConversationWarningEnabled: e9, isInapproprateConversationsDefaultOn: te, paymentsBlocked: tt, isEligibleForQuests: tn, isStricterMessageRequestsEnabled: ti, hasLibraryApplication: tr, hasTOTPEnabled: ts, developerMode: ta, isAdultUser: tl, hasSecureFramesVerifiedUserIds: to, hypeSquadRemoved: tc, hasIgnoredUsers: td, hasBlockedUsers: tu, useRefreshedVoiceAndVideo: tm, isEligibleForSensitiveContentDefaults: tp, inputMode: tg, activeInputProfile: th, isInputProfileCustom: tf } = e;
+        let { unseenGiftCount: t, showPrepaidPaymentPastDueWarning: E, impressionSource: I, numOfPendingFamilyRequests: N, isOverlaySupported: D, isClipsBetaTagShowing: G = !1, shouldMergeGameSettings: e5, isKeywordFilteringEnabled: e4, isStaff: e7, isInappropriateConversationWarningEnabled: e9, isInapproprateConversationsDefaultOn: te, paymentsBlocked: tt, isEligibleForQuests: tn, isStricterMessageRequestsEnabled: ti, hasLibraryApplication: tr, hasTOTPEnabled: ts, developerMode: ta, isAdultUser: tl, hasSecureFramesVerifiedUserIds: to, hypeSquadRemoved: tc, hasIgnoredUsers: td, hasBlockedUsers: tu, useRefreshedVoiceAndVideo: tm, isEligibleForSensitiveContentDefaults: tp, inputMode: tg, activeInputProfile: th, isInputProfileCustom: tf } = e;
         return Object.freeze({
             [ez.s6.SEARCH_NO_RESULTS]: {
                 section: p.ID.CUSTOM,
@@ -559,7 +559,7 @@ let e3 = () => {
                 searchableTitles: [eX.intl.string(eX.t.z2jK6e)],
                 label: eX.intl.string(eX.t.z2jK6e),
                 ariaLabel: eX.intl.string(eX.t.z2jK6e),
-                icon: G ? (0, i.jsx)(E.Z, {}) : void 0,
+                icon: G ? (0, i.jsx)(C.Z, {}) : void 0,
                 element: O.Z,
                 predicate: () => !e5,
                 url: eY.Z5c.SETTINGS('clips')
@@ -607,7 +607,7 @@ let e3 = () => {
                 searchableTitles: [eX.intl.string(eX.t.trSpHR)],
                 label: eX.intl.string(eX.t.trSpHR),
                 element: k.Z,
-                icon: C
+                icon: E
                     ? (0, i.jsx)(l.Mgn, {
                           size: 'xs',
                           color: a.Z.unsafe_rawColors.YELLOW_300.css
@@ -1548,7 +1548,7 @@ let e3 = () => {
                 section: eY.oAB.REGISTERED_GAMES,
                 searchableTitles: [eX.intl.string(eX.t.AVDyEh)],
                 label: eX.intl.string(eX.t.AVDyEh),
-                element: eC.Z,
+                element: eE.Z,
                 predicate: () => !e5 && (0, eM.Jw)()
             },
             [ez.s6.OVERLAY]: {
@@ -1585,7 +1585,7 @@ let e3 = () => {
                 section: eY.oAB.HYPESQUAD_ONLINE,
                 searchableTitles: [eX.intl.string(eX.t['k0R+4e'])],
                 label: eX.intl.string(eX.t['k0R+4e']),
-                element: eE.Z,
+                element: eC.Z,
                 predicate: () => !tc
             },
             [ez.s6.TOWNHALL]: {

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => C });
 var r = n(255367),
     i = n(73800),
-    a = n(442837),
-    o = n(25209),
+    o = n(442837),
+    a = n(25209),
     s = n(39154),
     l = n(35125),
     c = n(905405),
@@ -73,23 +73,23 @@ function A(e, t) {
 }
 let N = i.memo(function (e) {
     var t;
-    let { baseMessage: n, referencedMessage: I, channel: S, compact: N = !1, referencedUsernameProfile: C, referencedAvatarProfile: w, setPopout: R, isReplySpineClickable: P, showReplySpine: D } = e,
+    let { baseMessage: n, referencedMessage: I, channel: S, compact: N = !1, referencedUsernameProfile: C, referencedAvatarProfile: R, setPopout: P, isReplySpineClickable: w, showReplySpine: D } = e,
         L = I.state === _.Y.LOADED ? I.message : void 0,
         x = (0, g.Uj)(L),
-        k = (0, c.p)(),
-        j = (0, u.A)((null != (t = n.editedTimestamp) ? t : n.timestamp).valueOf()),
-        M = i.useMemo(() => {
+        M = (0, c.p)(),
+        k = (0, u.A)((null != (t = n.editedTimestamp) ? t : n.timestamp).valueOf()),
+        j = i.useMemo(() => {
             if (null == L) return null;
             let e = (0, s.Z)(L);
             if (e.type === O.uaV.USER_JOIN)
-                return (0, o.Rp)(
+                return (0, a.Rp)(
                     v.intl.formatToParts(h.Z.getSystemMessageUserJoin(e.id), {
                         username: null != x ? x.nick : e.author.username,
                         usernameHook: (e) => e
                     })
                 );
             if (e.type === O.uaV.ROLE_SUBSCRIPTION_PURCHASE)
-                return (0, o.Rp)(
+                return (0, a.Rp)(
                     (0, l.PA)({
                         username: null != x ? x.nick : e.author.username,
                         guildId: null == S ? void 0 : S.guild_id,
@@ -97,21 +97,21 @@ let N = i.memo(function (e) {
                     })
                 );
             if (e.type === O.uaV.GUILD_APPLICATION_PREMIUM_SUBSCRIPTION)
-                return (0, o.Rp)(
+                return (0, a.Rp)(
                     (0, d.Y)({
                         application: null == e ? void 0 : e.application,
                         username: null == x ? void 0 : x.nick
                     })
                 );
             if (e.type === O.uaV.PRIVATE_CHANNEL_INTEGRATION_ADDED)
-                return (0, o.Rp)(
+                return (0, a.Rp)(
                     (0, f.B2)({
                         application: null == e ? void 0 : e.application,
                         username: null == x ? void 0 : x.nick
                     })
                 );
             if (e.type === O.uaV.PRIVATE_CHANNEL_INTEGRATION_REMOVED)
-                return (0, o.Rp)(
+                return (0, a.Rp)(
                     (0, f.hj)({
                         application: null == e ? void 0 : e.application,
                         username: null == x ? void 0 : x.nick
@@ -122,7 +122,7 @@ let N = i.memo(function (e) {
                 let t = {
                         formatInline: !0,
                         allowLinks: !0,
-                        shouldFilterKeywords: k
+                        shouldFilterKeywords: M
                     },
                     n = e.isFirstMessageInForumPost(S)
                         ? A(T({}, t), {
@@ -132,14 +132,14 @@ let N = i.memo(function (e) {
                           })
                         : A(T({}, t), {
                               formatInline: !0,
-                              allowHeading: j,
-                              allowList: j
+                              allowHeading: k,
+                              allowList: k
                           });
                 return (0, m.ZP)(e, n).content;
             }
             return null;
-        }, [L, x, S, j, k]),
-        { isReplyAuthorBlocked: U, isReplyAuthorIgnored: G } = (0, a.cj)(
+        }, [L, x, S, k, M]),
+        { isReplyAuthorBlocked: U, isReplyAuthorIgnored: G } = (0, o.cj)(
             [p.Z],
             () => ({
                 isReplyAuthorBlocked: null != L && p.Z.isBlockedForMessage(L),
@@ -149,14 +149,14 @@ let N = i.memo(function (e) {
         ),
         B = (0, y.wq)(null == L ? void 0 : L.author.id, S.id),
         Z = (0, y.$3)(n, L),
-        F = (0, y.Wl)(L, S, C, R),
-        V = (0, y.rY)(w, R),
+        F = (0, y.Wl)(L, S, C, P),
+        V = (0, y.rY)(R, P),
         H = i.useCallback(() => {
-            R({
+            P({
                 referencedUsernameProfile: !1,
                 referencedAvatarProfile: !1
             });
-        }, [R]),
+        }, [P]),
         Y = (0, g.Uj)(n);
     return (0, r.jsx)(E.Z, {
         repliedAuthor: x,
@@ -164,11 +164,11 @@ let N = i.memo(function (e) {
         channel: S,
         baseAuthor: Y,
         referencedMessage: I,
-        content: M,
+        content: j,
         compact: N,
         isReplyAuthorBlocked: U,
         isReplyAuthorIgnored: G,
-        showAvatarPopout: w,
+        showAvatarPopout: R,
         showUsernamePopout: C,
         renderPopout: b.Z,
         onClickAvatar: V,
@@ -176,12 +176,12 @@ let N = i.memo(function (e) {
         onClickReply: Z,
         onContextMenu: B,
         onPopoutRequestClose: H,
-        isReplySpineClickable: P,
+        isReplySpineClickable: w,
         showReplySpine: D
     });
 });
 function C(e) {
-    let { message: t, channel: n, compact: i, setPopout: a, referencedUsernameProfile: o, referencedAvatarProfile: s, replyReference: l, replyMessage: c, isReplySpineClickable: u, showReplySpine: d = !0 } = e;
+    let { message: t, channel: n, compact: i, setPopout: o, referencedUsernameProfile: a, referencedAvatarProfile: s, replyReference: l, replyMessage: c, isReplySpineClickable: u, showReplySpine: d = !0 } = e;
     return (
         null != l &&
         (0, r.jsx)(N, {
@@ -190,8 +190,8 @@ function C(e) {
             referencedMessage: c,
             channel: n,
             compact: i,
-            setPopout: a,
-            referencedUsernameProfile: o,
+            setPopout: o,
+            referencedUsernameProfile: a,
             referencedAvatarProfile: s,
             isReplySpineClickable: u,
             showReplySpine: d

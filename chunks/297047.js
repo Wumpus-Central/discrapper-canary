@@ -6,8 +6,8 @@
 var r = n(255367);
 n(73800);
 var i = n(442837),
-    a = n(481060),
-    o = n(144144),
+    o = n(481060),
+    a = n(144144),
     s = n(592125),
     l = n(496675),
     c = n(944486),
@@ -23,10 +23,10 @@ function p(e, t) {
         plainText: r,
         rawText: i
     }),
-        null != t && o.Z.startTyping(t));
+        null != t && a.Z.startTyping(t));
 }
 function h(e, t, n) {
-    let [o, u] = (0, i.Wu)(
+    let [a, u] = (0, i.Wu)(
             [c.Z, s.Z, l.Z],
             () => {
                 let e = c.Z.getChannelId(t),
@@ -38,9 +38,9 @@ function h(e, t, n) {
         d = n === f.IlC.POPOUT;
     if (!u || d) return null;
     function h() {
-        p(e, o);
+        p(e, a);
     }
-    return (0, r.jsx)(a.sNh, {
+    return (0, r.jsx)(o.sNh, {
         id: 'mention',
         label: _.intl.string(_.t.P8tvKC),
         action: h

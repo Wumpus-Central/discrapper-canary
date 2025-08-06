@@ -1,8 +1,8 @@
 (n.r(t),
     n.d(t, {
         getKrispModel: () => i,
-        setKrispModelOverride: () => o,
-        setKrispSuppressionLevel: () => a
+        setKrispModelOverride: () => a,
+        setKrispSuppressionLevel: () => o
     }));
 var r = n(579806);
 function i() {
@@ -12,13 +12,13 @@ function i() {
         return Promise.resolve(null);
     }
 }
-function a(e) {
+function o(e) {
     try {
         var t, n;
         null == (t = (n = r.Z.nativeModules.requireModule('discord_krisp')).setSuppressionLevel) || t.call(n, e);
     } catch (e) {}
 }
-function o(e) {
+function a(e) {
     try {
         r.Z.nativeModules.requireModule('discord_krisp').setNcModel(e);
     } catch (e) {}

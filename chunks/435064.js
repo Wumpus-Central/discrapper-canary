@@ -1,8 +1,8 @@
-(n.d(t, { Z: () => ea }), n(388685), n(997841));
+(n.d(t, { Z: () => eo }), n(388685), n(997841));
 var r,
     i = n(442837),
-    a = n(570140),
-    o = n(579806),
+    o = n(570140),
+    a = n(579806),
     s = n(594190),
     l = n(569545),
     c = n(314897),
@@ -73,9 +73,9 @@ let O = 'default',
     A = null,
     N = null,
     C = {},
-    w = null,
     R = null,
-    P = {},
+    P = null,
+    w = {},
     D = {
         clipsEnabled: !1,
         storageLocation: O,
@@ -104,18 +104,18 @@ let O = 'default',
         }
     };
 async function x() {
-    if (L.clipsSettings.storageLocation !== O || null == o.Z || null == o.Z.remoteApp) return;
-    let e = await o.Z.remoteApp.getPath('documents');
+    if (L.clipsSettings.storageLocation !== O || null == a.Z || null == a.Z.remoteApp) return;
+    let e = await a.Z.remoteApp.getPath('documents');
     ((L.clipsSettings.storageLocation = e), ei.emitChange());
 }
-function k(e) {
+function M(e) {
     let { classification: t } = e,
         n = L.hardwareClassification;
     ((L.hardwareClassificationVersion = p.WM), (L.hardwareClassification = t), L.hardwareClassification === _.x.MEETS_AUTO_ENABLE && n !== _.x.MEETS_AUTO_ENABLE && (L.clipsSettings.clipsEnabled = !0));
     let r = L.hardwareClassificationForDecoupled;
     ((L.hardwareClassificationForDecoupled = t), L.hardwareClassificationForDecoupled === _.x.MEETS_AUTO_ENABLE && r !== _.x.MEETS_AUTO_ENABLE && L.clipsSettings.clipsEnabled && (L.clipsSettings.decoupledClipsEnabled = !0));
 }
-function j(e) {
+function k(e) {
     let { clip: t } = e;
     for (let [e, n] of I.entries())
         if (n.id === t.id) {
@@ -123,7 +123,7 @@ function j(e) {
             return;
         }
 }
-function M(e) {
+function j(e) {
     let { settings: t } = e;
     L = y(E({}, L), { clipsSettings: E({}, L.clipsSettings, t) });
 }
@@ -132,9 +132,9 @@ function U(e) {
     if (((S += 1), (L.hasTakenDecoupledClip = L.hasTakenDecoupledClip || t === p.X9.DECOUPLED), null != n && null != r)) {
         var i;
         let e = Date.now();
-        ((R = null != R ? R : e),
-            (P[n] = [
-                ...(null != (i = P[n]) ? i : []),
+        ((P = null != P ? P : e),
+            (w[n] = [
+                ...(null != (i = w[n]) ? i : []),
                 {
                     timestamp: e,
                     thumbnail: r
@@ -144,7 +144,7 @@ function U(e) {
 }
 function G(e) {
     let { streamKey: t, timestamp: n } = e;
-    (R === n && (R = null), null == n ? (P[t] = []) : (P[t] = P[t].filter((e) => e.timestamp !== n)));
+    (P === n && (P = null), null == n ? (w[t] = []) : (w[t] = w[t].filter((e) => e.timestamp !== n)));
 }
 function B() {
     S = Math.max(S - 1, 0);
@@ -196,7 +196,7 @@ function Y(e) {
 }
 function W(e) {
     let { applicationName: t } = e;
-    if (((w = null), !L.clipsSettings.clipsEnabled)) return !1;
+    if (((R = null), !L.clipsSettings.clipsEnabled)) return !1;
     N = {
         applicationName: t,
         newClipIds: [],
@@ -205,7 +205,7 @@ function W(e) {
 }
 function K(e) {
     let { errMsg: t } = e;
-    w = t;
+    R = t;
 }
 function z(e) {
     let { sourceName: t, pid: n } = e;
@@ -225,24 +225,24 @@ function z(e) {
 }
 function q(e) {
     let { streamKey: t } = e;
-    if (((R = null), (P[t] = []), null == N || (0, l.my)(t).ownerId !== c.default.getId())) return !1;
+    if (((P = null), (w[t] = []), null == N || (0, l.my)(t).ownerId !== c.default.getId())) return !1;
     N = 0 === N.newClipIds.length ? null : y(E({}, N), { ended: !0 });
 }
-function $(e) {
+function X(e) {
     ((L.hasClips = e.clips.length > 0), (I = e.clips));
 }
-function X(e) {
+function Q(e) {
     0 ===
         (I = I.filter((t) => {
             let { filepath: n } = t;
             return n !== e.filepath;
         })).length && (L.hasClips = !1);
 }
-function Q() {
+function J() {
     if (null == N) return !1;
     N = null;
 }
-function J() {
+function $() {
     L.newClipIds = [];
 }
 function ee(e) {
@@ -260,7 +260,7 @@ function en(e) {
     let { educationType: t } = e;
     switch (t) {
         case p.D5.Error:
-            w = null;
+            R = null;
             break;
         case p.D5.Disabled:
         case p.D5.Enabled:
@@ -290,14 +290,14 @@ class er extends (r = i.ZP.DeviceSettingsStore) {
         return A === e;
     }
     getActiveAnimation() {
-        return R;
+        return P;
     }
     getStreamClipAnimations(e) {
         var t;
-        return null != (t = P[e]) ? t : v;
+        return null != (t = w[e]) ? t : v;
     }
     hasAnyClipAnimations() {
-        return Object.values(P).some((e) => e.length > 0);
+        return Object.values(w).some((e) => e.length > 0);
     }
     getHardwareClassification() {
         return L.hardwareClassification;
@@ -312,7 +312,7 @@ class er extends (r = i.ZP.DeviceSettingsStore) {
         return S >= p.Kw;
     }
     getLastClipsError() {
-        return w;
+        return R;
     }
     isClipsEnabledForUser(e) {
         var t, n;
@@ -403,8 +403,8 @@ class er extends (r = i.ZP.DeviceSettingsStore) {
                 }
             })
     ]));
-let ei = new er(a.Z, {
-        CLIPS_SETTINGS_UPDATE: M,
+let ei = new er(o.Z, {
+        CLIPS_SETTINGS_UPDATE: j,
         CLIPS_SAVE_CLIP: Z,
         CLIPS_SAVE_CLIP_PLACEHOLDER: F,
         CLIPS_SAVE_CLIP_PLACEHOLDER_ERROR: V,
@@ -413,18 +413,18 @@ let ei = new er(a.Z, {
         CLIPS_SAVE_ANIMATION_END: G,
         STREAM_START: z,
         STREAM_STOP: q,
-        CLIPS_CLEAR_CLIPS_SESSION: Q,
-        CLIPS_CLEAR_NEW_CLIP_IDS: J,
-        CLIPS_LOAD_DIRECTORY_SUCCESS: $,
-        CLIPS_DELETE_CLIP: X,
-        CLIPS_UPDATE_METADATA: j,
+        CLIPS_CLEAR_CLIPS_SESSION: J,
+        CLIPS_CLEAR_NEW_CLIP_IDS: $,
+        CLIPS_LOAD_DIRECTORY_SUCCESS: X,
+        CLIPS_DELETE_CLIP: Q,
+        CLIPS_UPDATE_METADATA: k,
         RTC_CONNECTION_FLAGS: ee,
         CLIPS_SHOW_CALL_WARNING: H,
         VOICE_CHANNEL_SELECT: Y,
-        CLIPS_CLASSIFY_HARDWARE: k,
+        CLIPS_CLASSIFY_HARDWARE: M,
         CLIPS_INIT: W,
         CLIPS_INIT_FAILURE: K,
         CLIPS_DISMISS_EDUCATION: en,
         RUNNING_GAMES_CHANGE: et
     }),
-    ea = ei;
+    eo = ei;

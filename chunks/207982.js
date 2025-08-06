@@ -1,8 +1,8 @@
 (n.d(t, { G: () => f }), n(388685), n(73800));
 var r = n(374470),
     i = n(730606),
-    a = n(312097),
-    o = n(52824);
+    o = n(312097),
+    a = n(52824);
 function s(e, t, n) {
     return (
         t in e
@@ -57,29 +57,29 @@ function u(e, t) {
 }
 function d(e, t, n) {
     let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
-        o = arguments.length > 4 ? arguments[4] : void 0;
+        a = arguments.length > 4 ? arguments[4] : void 0;
     (e.preventDefault(),
         (0, r.k)(e.currentTarget) && e.currentTarget.blur(),
-        (0, a.K)(
+        (0, o.K)(
             u(l({}, i), {
                 items: t,
                 startingIndex: n,
-                location: null != o ? o : 'zoomedMediaModalHelper'
+                location: null != a ? a : 'zoomedMediaModalHelper'
             })
         ));
 }
 function f(e, t, n) {
     let r = {},
-        a = {};
+        o = {};
     for (let [s, l] of e.entries()) {
-        let c = (0, o.q)({
+        let c = (0, a.q)({
             proxyURL: l.proxyUrl,
             url: l.url
         });
-        ((r[c] = (r) => d(r, e, s, t, n)), (a[c] = () => (0, i.WG)(l, e.length > 1)));
+        ((r[c] = (r) => d(r, e, s, t, n)), (o[c] = () => (0, i.WG)(l, e.length > 1)));
     }
     return {
         srcToOnClickOverride: r,
-        srcToHandlePreloadImage: a
+        srcToHandlePreloadImage: o
     };
 }

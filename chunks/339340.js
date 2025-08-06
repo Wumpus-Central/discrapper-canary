@@ -1,14 +1,14 @@
 (n.d(t, {
     a: () => C,
-    default: () => R
+    default: () => P
 }),
     n(388685),
     n(704826),
     n(35282));
 var r = n(255367),
     i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(399606),
     l = n(343817),
     c = n(667202),
@@ -31,24 +31,24 @@ var r = n(255367),
     A = n(823150),
     N = n(740353);
 let C = 'VoiceChannelStatusModal',
-    w = 500;
-function R(e) {
-    let { channel: t, transitionState: n, sourceAnalyticsLocations: a, onClose: R } = e,
-        P = b.Z.getCurrentConfig({ location: 'VoiceChannelStatusModal' }, { autoTrackExposure: !0 }).enabled,
+    R = 500;
+function P(e) {
+    let { channel: t, transitionState: n, sourceAnalyticsLocations: o, onClose: P } = e,
+        w = b.Z.getCurrentConfig({ location: 'VoiceChannelStatusModal' }, { autoTrackExposure: !0 }).enabled,
         D = (0, s.e7)([p.Z], () => p.Z.getChannelStatus(t)),
         L = (0, s.e7)([O.Z], () => O.Z.getMediaSessionId()),
-        [x, k] = i.useState(null != D ? D : ''),
-        [j, M] = i.useState(!1),
+        [x, M] = i.useState(null != D ? D : ''),
+        [k, j] = i.useState(!1),
         [U, G] = i.useState(null),
         B = (0, s.e7)([v.default], () => v.default.getCurrentUser()),
-        Z = x.length > w;
+        Z = x.length > R;
     i.useEffect(() => {
         I.default.track(T.rMx.OPEN_MODAL, {
             type: 'Voice Channel Topic Modal',
             guild_id: t.guild_id,
-            location_stack: a
+            location_stack: o
         });
-    }, [t.guild_id, a]);
+    }, [t.guild_id, o]);
     let F = (e) => {
             G(new l.Hx(e, e.status).getAnyErrorMessage());
         },
@@ -56,17 +56,17 @@ function R(e) {
             let { invalidEmojis: n } = e;
             if (null != n && n.length > 0) {
                 let { errorMessage: e } = _.Z.validateMessage(n, B, t.id);
-                return (G(e), M(!1), { hasErrors: !0 });
+                return (G(e), j(!1), { hasErrors: !0 });
             }
             return { hasErrors: !1 };
         },
         H = async (e) => {
-            (x === D && R(), null == e || e.preventDefault(), G(null), M(!0));
+            (x === D && P(), null == e || e.preventDefault(), G(null), j(!0));
             let n = x.length,
                 r = x.replace(/<(a)?:[^:]+:[0-9]+>/g, '--').length,
                 i = y.ZP.parse(t, x),
-                { hasErrors: o } = V(i);
-            if (!o) {
+                { hasErrors: a } = V(i);
+            if (!a) {
                 try {
                     let e = await f.ZP.updateVoiceChannelStatus(t.id, i.content);
                     204 === e.status
@@ -76,29 +76,29 @@ function R(e) {
                               media_session_id: L,
                               raw_length: n,
                               text_length: r,
-                              location_stack: a
+                              location_stack: o
                           }),
-                          R())
+                          P())
                         : F(e);
                 } catch (e) {
                     F(e);
                 }
-                M(!1);
+                j(!1);
             }
         },
         [Y, W] = i.useState((0, m.JM)(x)),
         K = (e, t, n) => {
-            (k(t), W(n));
+            (M(t), W(n));
         },
         z = async () => (
-            Z || j || (await H()),
+            Z || k || (await H()),
             Promise.resolve({
                 shouldClear: !1,
                 shouldRefocus: !0
             })
         ),
         q = (0, r.jsxs)(d.hjN, {
-            className: P ? void 0 : A.inputSection,
+            className: w ? void 0 : A.inputSection,
             title: S.intl.string(S.t.Fq5lwM),
             children: [
                 (0, r.jsx)(g.ZP, {
@@ -115,8 +115,8 @@ function R(e) {
                     canMentionChannels: !1,
                     allowNewLines: !1,
                     parentModalKey: C,
-                    maxCharacterCount: w,
-                    showRemainingCharsAfterCount: w / 2,
+                    maxCharacterCount: R,
+                    showRemainingCharsAfterCount: R / 2,
                     emojiPickerCloseOnModalOuterClick: !0
                 }),
                 null != U
@@ -127,10 +127,10 @@ function R(e) {
                     : null
             ]
         });
-    return P
+    return w
         ? (0, r.jsx)(c.I, {
               transitionState: n,
-              onClose: R,
+              onClose: P,
               graphic: {
                   type: 'image',
                   src: N
@@ -141,11 +141,11 @@ function R(e) {
                   {
                       variant: 'secondary',
                       text: S.intl.string(S.t['ETE/oK']),
-                      onClick: R
+                      onClick: P
                   },
                   {
                       variant: 'primary',
-                      loading: j,
+                      loading: k,
                       disabled: Z,
                       text: S.intl.string(S.t.XqK2Iy),
                       onClick: H
@@ -159,7 +159,7 @@ function R(e) {
               children: (0, r.jsxs)(d.Y0X, {
                   transitionState: n,
                   size: d.CgR.SMALL,
-                  className: o()(A.modal, A.gradientBorder),
+                  className: a()(A.modal, A.gradientBorder),
                   parentComponent: 'VoiceChannelStatusModal',
                   children: [
                       (0, r.jsxs)(d.hzk, {
@@ -172,7 +172,7 @@ function R(e) {
                                   children: [
                                       (0, r.jsx)(d.olH, {
                                           className: A.closeButton,
-                                          onClick: R
+                                          onClick: P
                                       }),
                                       (0, r.jsx)('div', { className: A.headerImage }),
                                       (0, r.jsx)(d.vwX, {
@@ -201,12 +201,12 @@ function R(e) {
                                   children: (0, r.jsx)(d.zxk, {
                                       variant: 'secondary',
                                       text: S.intl.string(S.t['ETE/oK']),
-                                      onClick: R
+                                      onClick: P
                                   })
                               }),
                               (0, r.jsx)(u.zx, {
                                   onClick: H,
-                                  submitting: j,
+                                  submitting: k,
                                   className: A.button,
                                   disabled: Z,
                                   children: S.intl.string(S.t.XqK2Iy)

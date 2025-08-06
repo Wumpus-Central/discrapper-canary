@@ -5,8 +5,8 @@ n.d(t, {
 var r = n(255367);
 n(73800);
 var i = n(120356),
-    a = n.n(i),
-    o = n(481060),
+    o = n.n(i),
+    a = n(481060),
     s = n(686546),
     l = n(442550),
     c = n(264832),
@@ -67,7 +67,7 @@ function h(e, t) {
 let m = {
     none: void 0,
     default: d.aspectRatio,
-    crunchyroll: a()(d.aspectRatio, d.crunchyroll)
+    crunchyroll: o()(d.aspectRatio, d.crunchyroll)
 };
 var g = (function (e) {
     return ((e.SIZE_60 = 'size-60'), (e.SIZE_72 = 'size-72'), (e.SIZE_100 = 'size-100'), e);
@@ -93,7 +93,7 @@ function b(e) {
     let { children: t, onClick: n } = e;
     return null == n
         ? t
-        : (0, r.jsx)(o.P3F, {
+        : (0, r.jsx)(a.P3F, {
               onClick: n,
               className: d.clickable,
               children: t
@@ -108,20 +108,20 @@ function y(e) {
             src: void 0,
             alt: u.intl.string(u.t['2B/phI']),
             size: v,
-            className: a()(d.contentImage, m[null != p ? p : 'default'], O),
+            className: o()(d.contentImage, m[null != p ? p : 'default'], O),
             constrain: 'width'
         });
     let S = (0, r.jsx)(l.f, {
         src: i.src,
         alt: null != (n = null != (t = i.alt) ? t : i.text) ? n : u.intl.string(u.t['2B/phI']),
         size: v,
-        className: a()(d.contentImage, m[null != p ? p : 'default']),
+        className: o()(d.contentImage, m[null != p ? p : 'default']),
         constrain: 'width'
     });
     return (0, r.jsxs)('div', {
-        className: a()(d.imagePosition, O),
+        className: o()(d.imagePosition, O),
         children: [
-            (0, r.jsx)(o.ua7, {
+            (0, r.jsx)(a.ua7, {
                 text: i.text,
                 children: (e) =>
                     (0, r.jsx)(b, {
@@ -151,7 +151,7 @@ function y(e) {
                     })
             }),
             null != f &&
-                (0, r.jsx)(o.ua7, {
+                (0, r.jsx)(a.ua7, {
                     text: f.text,
                     children: (e) => {
                         var t;

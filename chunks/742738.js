@@ -1,8 +1,8 @@
 n.d(t, { Z: () => N });
 var r,
     i = n(348327),
-    a = n.n(i),
-    o = n(442837),
+    o = n.n(i),
+    a = n(442837),
     s = n(570140),
     l = n(592125),
     c = n(430824),
@@ -31,7 +31,7 @@ function y(e, t, n) {
 }
 let O = null;
 function v() {
-    var e, t, n, r, i, a, o;
+    var e, t, n, r, i, o, a;
     let s = d.Z.getVoiceChannelId();
     if (null == s) return null;
     let u = m.Z.getStageInstanceByChannel(s);
@@ -46,25 +46,25 @@ function v() {
         A = S.filter((e) => e.type === p.Ui.STREAM).length,
         N = S.length - A,
         C = _.Z.getParticipantCount(s) - A,
-        w = (null == T || null == (t = T.party) ? void 0 : t.size) != null ? T.party.size[1] : 0;
+        R = (null == T || null == (t = T.party) ? void 0 : t.size) != null ? T.party.size[1] : 0;
     return {
         application_id: E.gD,
         name: null != (i = null != (r = u.topic) ? r : y.topic) ? i : y.name,
         type: (0, g.xJ)(y.id) ? b.IIU.WATCHING : b.IIU.LISTENING,
-        timestamps: { start: null != (a = null == T || null == (n = T.timestamps) ? void 0 : n.start) ? a : new Date().getTime() },
+        timestamps: { start: null != (o = null == T || null == (n = T.timestamps) ? void 0 : n.start) ? o : new Date().getTime() },
         assets: {
-            small_image: null != (o = v.icon) ? o : void 0,
+            small_image: null != (a = v.icon) ? a : void 0,
             small_text: v.name
         },
         party: {
             id: I,
-            size: [N, Math.max(C, w)]
+            size: [N, Math.max(C, R)]
         }
     };
 }
 function I() {
     let e = v();
-    return !a()(e, O) && ((O = e), !0);
+    return !o()(e, O) && ((O = e), !0);
 }
 function T(e) {
     let { voiceStates: t } = e;
@@ -75,10 +75,10 @@ function T(e) {
 function S(e) {
     var t, n, r;
     let { state: i } = e,
-        a = null != (r = null == O || null == (n = O.party) || null == (t = n.size) ? void 0 : t[1]) ? r : 0;
-    return i === b.hes.RTC_CONNECTED && !(a > 0) && I();
+        o = null != (r = null == O || null == (n = O.party) || null == (t = n.size) ? void 0 : t[1]) ? r : 0;
+    return i === b.hes.RTC_CONNECTED && !(o > 0) && I();
 }
-class A extends (r = o.ZP.Store) {
+class A extends (r = a.ZP.Store) {
     initialize() {
         this.waitFor(l.Z, d.Z, m.Z, u.Z);
     }

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => d });
 var r = n(255367),
     i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(442837),
     l = n(481060),
     c = n(607070),
@@ -17,7 +17,7 @@ function d() {
             []
         );
     return (0, r.jsxs)('div', {
-        className: o()(u.container, { [u.noAnimation]: e }),
+        className: a()(u.container, { [u.noAnimation]: e }),
         children: [
             (0, r.jsx)('div', { className: u.iconPlaceholder }),
             (0, r.jsxs)('div', {

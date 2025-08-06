@@ -5,8 +5,8 @@ let r;
 }),
     n(415506));
 var i = n(544891),
-    a = n(570140),
-    o = n(710845),
+    o = n(570140),
+    a = n(710845),
     s = n(893988),
     l = n(314897),
     c = n(417363),
@@ -23,10 +23,10 @@ function h() {
 }
 async function m() {
     if (null == r) {
-        if (!h()) return void new o.Z('CloudSyncUtils').warn('CloudSync is not supported on this platform');
+        if (!h()) return void new a.Z('CloudSyncUtils').warn('CloudSync is not supported on this platform');
         (await f.ZP.ensureModule('discord_cloudsync'),
             (r = new (f.ZP.getCloudSync())()).on('state', (e) =>
-                a.Z.dispatch({
+                o.Z.dispatch({
                     type: 'GAME_CLOUD_SYNC_UPDATE',
                     state: e
                 })
@@ -37,14 +37,14 @@ function g(e, t) {
     var n;
     let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
     if (!c.Z.supportsCloudSync(e, t)) return Promise.resolve({ type: _.QCD.NONE });
-    let a = p(),
-        o = c.Z.getState(e, t);
-    if (null == o) throw Error('No dispatch state for '.concat(e, ':').concat(t));
-    let d = null != (n = o.storage) ? n : {},
+    let o = p(),
+        a = c.Z.getState(e, t);
+    if (null == a) throw Error('No dispatch state for '.concat(e, ':').concat(t));
+    let d = null != (n = a.storage) ? n : {},
         f = (0, u.Tu)(e, t),
         h = l.default.getToken();
     if (null == h) throw Error('Cannot use cloud sync when not authenticated.');
-    let m = null != o.installPath ? (0, s.Z)(o.installPath) : null;
+    let m = null != a.installPath ? (0, s.Z)(a.installPath) : null;
     if (null == m) throw Error('No install path for '.concat(e, ':').concat(t));
     let g = l.default.getId(),
         E = {
@@ -73,5 +73,5 @@ function g(e, t) {
                 BRANCHID: t
             }
         };
-    return a.sync(f, E);
+    return o.sync(f, E);
 }

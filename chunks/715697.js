@@ -2,8 +2,8 @@
 var r = n(255367);
 n(73800);
 var i = n(120356),
-    a = n.n(i),
-    o = n(729594),
+    o = n.n(i),
+    a = n(729594),
     s = n(442837),
     l = n(780384),
     c = n(210887),
@@ -22,7 +22,7 @@ function _(e) {
         m = null,
         g = null;
     try {
-        let e = o.parse(_, !0);
+        let e = a.parse(_, !0);
         ((h = e.host), (m = e.pathname), (g = null != (n = e.query.i) ? n : null), Array.isArray(g) && (g = g[0]));
     } catch (e) {
         return null;
@@ -35,7 +35,7 @@ function _(e) {
     ('song' === b ? (y = 175) : 'music-video' === b && (y = 371), (m = m.substr(1)));
     let O = p ? 'dark' : 'light';
     return (0, r.jsx)('iframe', {
-        className: a()(f.embedAppleMusic, i),
+        className: o()(f.embedAppleMusic, i),
         src: d.P.EMBED(m, O, g),
         style: {
             maxWidth: 660,

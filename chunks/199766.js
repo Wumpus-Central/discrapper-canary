@@ -1,16 +1,16 @@
 n.d(t, {
-    I: () => a,
-    T: () => o
+    I: () => o,
+    T: () => a
 });
 var r = n(673125);
 let i = 20;
-function a(e, t, n, r, a) {
-    (e.save(), e.beginPath(), (e.fillStyle = r), e.arc(t, n, Math.round(i * window.devicePixelRatio) / 2 + a, 0, 2 * Math.PI), e.fill(), e.restore());
+function o(e, t, n, r, o) {
+    (e.save(), e.beginPath(), (e.fillStyle = r), e.arc(t, n, Math.round(i * window.devicePixelRatio) / 2 + o, 0, 2 * Math.PI), e.fill(), e.restore());
 }
-function o(e, t, n, a) {
+function a(e, t, n, o) {
     e.save();
-    let o = r.Z.getAvatarImage(a);
-    if (null == o) return;
+    let a = r.Z.getAvatarImage(o);
+    if (null == a) return;
     let s = i * window.devicePixelRatio;
-    (e.beginPath(), e.arc(t, n, s / 2, 0, 2 * Math.PI), e.clip(), e.drawImage(o, t - s / 2, n - s / 2, s, s), e.restore());
+    (e.beginPath(), e.arc(t, n, s / 2, 0, 2 * Math.PI), e.clip(), e.drawImage(a, t - s / 2, n - s / 2, s, s), e.restore());
 }

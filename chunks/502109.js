@@ -6,8 +6,8 @@
     n(388685));
 var r = n(255367),
     i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(680018),
     l = n(481060),
     c = n(710845),
@@ -54,8 +54,8 @@ function y(e, t) {
         r,
         i = O(e, t);
     if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
@@ -64,8 +64,8 @@ function O(e, t) {
     var n,
         r,
         i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
 let v = new c.Z('PaymentRequest'),
@@ -369,7 +369,7 @@ class A extends T {
                 (0, r.jsx)(u.ZP, {
                     type: u.ZP.Types.APPLE,
                     size: u.Uy.MEDIUM,
-                    className: o()(g.paymentRequestIcon, g.appleConnectorIcon)
+                    className: a()(g.paymentRequestIcon, g.appleConnectorIcon)
                 }),
                 (0, r.jsx)(l.Text, {
                     variant: 'text-md/medium',

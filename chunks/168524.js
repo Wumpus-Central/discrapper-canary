@@ -1,8 +1,8 @@
 n.d(t, { Z: () => _ });
 var r = n(73800),
     i = n(835473),
-    a = n(817788),
-    o = n(492423),
+    o = n(817788),
+    a = n(492423),
     s = n(774073),
     l = n(981631);
 function c(e, t, n) {
@@ -61,13 +61,13 @@ function _(e) {
     let { onOpened: t } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         { applicationId: n } = e,
         c = (0, i.q)(n),
-        d = r.useMemo(() => (null == c ? n : null != c.thirdPartySkus.find((e) => e.distributor === l.GQo.ROBLOX) ? a.eB : n), [c, n]),
+        d = r.useMemo(() => (null == c ? n : null != c.thirdPartySkus.find((e) => e.distributor === l.GQo.ROBLOX) ? o.eB : n), [c, n]),
         _ = (0, s.ZP)(f(u({}, e), { applicationId: d }));
     return _.shouldOpenGameProfile && null != d
         ? (n) => {
               (n.stopPropagation(),
                   n.preventDefault(),
-                  o.Z.openGameProfileModal(
+                  a.Z.openGameProfileModal(
                       f(u({}, e), {
                           applicationId: d,
                           gameProfileModalChecks: _

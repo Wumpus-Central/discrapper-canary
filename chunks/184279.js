@@ -2,8 +2,8 @@ n.d(t, { Z: () => p });
 var r = n(255367);
 n(73800);
 var i = n(481060),
-    a = n(43267),
-    o = n(933557),
+    o = n(43267),
+    a = n(933557),
     s = n(297700),
     l = n(534091),
     c = n(967128),
@@ -22,7 +22,7 @@ let _ = () =>
 function p(e) {
     var t;
     let { channel: n } = e,
-        p = null != (t = (0, o.ZP)(n)) ? t : '';
+        p = null != (t = (0, a.ZP)(n)) ? t : '';
     return (0, r.jsxs)('div', {
         id: (0, l.p)(n.id, n.id),
         className: d.headerContainer,
@@ -42,7 +42,7 @@ function p(e) {
                             (0, r.jsx)(i.qEK, {
                                 'aria-label': p,
                                 size: i.EFr.SIZE_80,
-                                src: (0, a.x)(n, 80, !1)
+                                src: (0, o.x)(n, 80, !1)
                             }),
                             (0, r.jsxs)(c.Ot, {
                                 className: d.emptyMessageHeader,

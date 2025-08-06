@@ -2,9 +2,9 @@ n.d(t, { Z: () => H });
 var r = n(255367);
 n(73800);
 var i = n(120356),
-    a = n.n(i),
-    o = n(512722),
-    s = n.n(o),
+    o = n.n(i),
+    a = n(512722),
+    s = n.n(a),
     l = n(442837),
     c = n(755721),
     u = n(730749),
@@ -26,15 +26,15 @@ var i = n(120356),
     A = n(429589),
     N = n(276149),
     C = n(636245),
-    w = n(697761),
-    R = n(611459),
-    P = n(544671),
+    R = n(697761),
+    P = n(611459),
+    w = n(544671),
     D = n(757182),
     L = n(910424),
     x = n(981631),
-    k = n(477839),
-    j = n(388032),
-    M = n(603571),
+    M = n(477839),
+    k = n(388032),
+    j = n(603571),
     U = n(126485);
 function G(e, t, n) {
     return (
@@ -89,10 +89,10 @@ function F(e, t) {
     );
 }
 let V = (e) => {
-        let { user: t, color: n, look: i, activity: a, onAction: o } = e,
+        let { user: t, color: n, look: i, activity: o, onAction: a } = e,
             s = (0, f.Aq)(),
             l = () => {
-                (s.dispatch(x.CkL.POPOUT_CLOSE), (0, h.closeUserProfileModal)(), null == o || o());
+                (s.dispatch(x.CkL.POPOUT_CLOSE), (0, h.closeUserProfileModal)(), null == a || a());
             };
         return (0, r.jsx)(
             S.Z,
@@ -100,31 +100,31 @@ let V = (e) => {
                 user: t,
                 color: n,
                 look: i,
-                activity: a,
+                activity: o,
                 onAction: l
             },
             'custom-activity-button'
         );
     },
     H = (0, u.Z)((e) => {
-        let { activity: t, embeddedActivity: n, user: i, applicationStream: o, className: u, guildId: f, channelId: h, source: G, color: Z = c.zx.Colors.WHITE, look: H = c.zx.Looks.OUTLINED, type: Y, onAction: W } = e,
+        let { activity: t, embeddedActivity: n, user: i, applicationStream: a, className: u, guildId: f, channelId: h, source: G, color: Z = c.zx.Colors.WHITE, look: H = c.zx.Looks.OUTLINED, type: Y, onAction: W } = e,
             K = (0, l.e7)([g.default], () => {
                 let e = g.default.getCurrentUser();
                 return (s()(null != e, 'UserActivityActions: currentUser cannot be undefined'), e);
             }),
-            z = Y === I.Y.STREAM_PREVIEW || null != o,
+            z = Y === I.Y.STREAM_PREVIEW || null != a,
             q = (0, O.Z)(t),
-            $ = q || z ? _.Z.Direction.HORIZONTAL : _.Z.Direction.VERTICAL,
-            X = (null == t ? void 0 : t.type) === x.IIU.HANG_STATUS,
-            Q = (0, l.e7)([E.Z, m.Z], () => {
+            X = q || z ? _.Z.Direction.HORIZONTAL : _.Z.Direction.VERTICAL,
+            Q = (null == t ? void 0 : t.type) === x.IIU.HANG_STATUS,
+            J = (0, l.e7)([E.Z, m.Z], () => {
                 var e;
-                return X ? m.Z.getChannel(null == (e = E.Z.getVoiceStateForUser(i.id)) ? void 0 : e.channelId) : null;
+                return Q ? m.Z.getChannel(null == (e = E.Z.getVoiceStateForUser(i.id)) ? void 0 : e.channelId) : null;
             });
-        if ((null == t ? void 0 : t.application_id) === k.bO)
+        if ((null == t ? void 0 : t.application_id) === M.bO)
             return (
                 (t = F(B({}, t), {
-                    buttons: [j.intl.string(M.default['Fv/2Oz'])],
-                    metadata: { button_urls: [k.U8] }
+                    buttons: [k.intl.string(j.default['Fv/2Oz'])],
+                    metadata: { button_urls: [M.U8] }
                 })),
                 (0, r.jsx)(V, {
                     user: i,
@@ -134,7 +134,7 @@ let V = (e) => {
                     onAction: W
                 })
             );
-        let J = () => {
+        let $ = () => {
                 if ((0, v.Z)(t))
                     return (0, r.jsx)(
                         T.Z,
@@ -161,7 +161,7 @@ let V = (e) => {
                     );
                 if (q) {
                     let e = (0, r.jsx)(
-                            P.Z,
+                            w.Z,
                             {
                                 activity: t,
                                 user: i,
@@ -175,7 +175,7 @@ let V = (e) => {
                             'spotify-activity-sync-button'
                         ),
                         n = (0, r.jsx)(
-                            R.Z,
+                            P.Z,
                             {
                                 activity: t,
                                 user: i,
@@ -213,18 +213,18 @@ let V = (e) => {
                               isCurrentUser: K.id === i.id,
                               color: Z,
                               look: H,
-                              applicationStream: o,
+                              applicationStream: a,
                               onAction: W
                           },
                           'watch-button'
                       )
-                    : X && null != Q
+                    : Q && null != J
                       ? (0, r.jsx)(
                             N.Z,
                             {
                                 color: Z,
                                 look: H,
-                                hangStatusChannel: Q,
+                                hangStatusChannel: J,
                                 onAction: W
                             },
                             'hang-status-button'
@@ -254,7 +254,7 @@ let V = (e) => {
                                     'join-activity-button'
                                 ),
                                 (0, r.jsx)(
-                                    w.Z,
+                                    R.Z,
                                     {
                                         activity: t,
                                         user: i,
@@ -278,13 +278,13 @@ let V = (e) => {
                             ]
                         });
             },
-            ee = $ === _.Z.Direction.VERTICAL;
+            ee = X === _.Z.Direction.VERTICAL;
         return (0, r.jsx)(_.Z, {
             grow: 0,
             align: _.Z.Align.STRETCH,
-            direction: $,
+            direction: X,
             wrap: ee ? _.Z.Wrap.WRAP : _.Z.Wrap.NO_WRAP,
-            className: a()(u, U.buttonsWrapper, ee ? U.vertical : U.horizontal),
-            children: J()
+            className: o()(u, U.buttonsWrapper, ee ? U.vertical : U.horizontal),
+            children: $()
         });
     });

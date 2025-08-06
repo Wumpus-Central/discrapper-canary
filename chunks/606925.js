@@ -2,17 +2,17 @@ n.d(t, { Z: () => u });
 var r = n(255367);
 n(73800);
 var i = n(442837),
-    a = n(231757),
-    o = n(553795),
+    o = n(231757),
+    a = n(553795),
     s = n(915863),
     l = n(388032),
     c = n(289356);
 function u(e) {
     let { platform: t, color: n, look: u, onAction: d, Icon: f } = e;
-    if ((0, i.e7)([o.Z], () => o.Z.getAccounts().some((e) => e.type === t.type))) return null;
+    if ((0, i.e7)([a.Z], () => a.Z.getAccounts().some((e) => e.type === t.type))) return null;
     let _ = () => {
             (null == d || d(),
-                (0, a.Z)({
+                (0, o.Z)({
                     platformType: t.type,
                     location: 'Activity Action'
                 }));

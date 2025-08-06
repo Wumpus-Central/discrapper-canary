@@ -1,8 +1,8 @@
 (n.d(t, { $: () => m }), n(388685));
 var r = n(255367),
     i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(84735),
     l = n(780900),
     c = n(789304);
@@ -64,8 +64,8 @@ function p(e, t) {
         r,
         i = h(e, t);
     if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
@@ -74,13 +74,13 @@ function h(e, t) {
     var n,
         r,
         i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
 function m(e, t) {
     let n = new Map(),
-        a = new t((e) => {
+        o = new t((e) => {
             e.forEach((e) => {
                 var t;
                 let { target: r } = e;
@@ -93,8 +93,8 @@ function m(e, t) {
         let T = i.useRef(null),
             S = i.useRef(null),
             [A, N] = i.useState(!1),
-            { scrollerRef: C, getScrollerState: w } = (0, l.Ke)(),
-            R = (0, l.t2)(C);
+            { scrollerRef: C, getScrollerState: R } = (0, l.Ke)(),
+            P = (0, l.t2)(C);
         i.useImperativeHandle(
             u,
             () =>
@@ -102,13 +102,13 @@ function m(e, t) {
                     {
                         getScrollerNode: () => C.current,
                         isScrolling: () => null != T.current,
-                        getScrollerState: w
+                        getScrollerState: R
                     },
-                    (0, l.Ue)(C, w, R)
+                    (0, l.Ue)(C, R, P)
                 ),
-            [C, w, R]
+            [C, R, P]
         );
-        let P = i.useCallback(
+        let w = i.useCallback(
             (e) => {
                 (null == T.current ? N(!0) : clearTimeout(T.current),
                     (T.current = setTimeout(() => {
@@ -124,14 +124,14 @@ function m(e, t) {
                 ref: C,
                 key: 'container',
                 onUpdate: m,
-                resizeObserver: a,
+                resizeObserver: o,
                 listenerMap: n
             }),
             (0, l.zn)({
                 ref: S,
                 key: 'content',
                 onUpdate: m,
-                resizeObserver: a,
+                resizeObserver: o,
                 listenerMap: n
             }),
             (0, r.jsx)(
@@ -140,7 +140,7 @@ function m(e, t) {
                     d(
                         {
                             ref: C,
-                            className: o()(h, {
+                            className: a()(h, {
                                 [c.fade]: y,
                                 [c.customTheme]: O,
                                 [e]: !0,
@@ -149,7 +149,7 @@ function m(e, t) {
                             }),
                             style: v,
                             dir: b,
-                            onScroll: P
+                            onScroll: w
                         },
                         I
                     ),
@@ -158,7 +158,7 @@ function m(e, t) {
                             containerRef: S,
                             children: (0, r.jsxs)('div', {
                                 ref: S,
-                                className: o()(g, c.content),
+                                className: a()(g, c.content),
                                 children: [f, A && (0, r.jsx)('div', { className: c.pointerCover })]
                             })
                         })

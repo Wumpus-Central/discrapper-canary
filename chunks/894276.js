@@ -8,8 +8,8 @@
     n(388685));
 var r = n(512722),
     i = n.n(r),
-    a = n(668757);
-function o(e, t, n) {
+    o = n(668757);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -30,7 +30,7 @@ class c {
         return void 0 === e || e.treatmentId <= 0 ? null : ''.concat(this.id, ':').concat(e.treatmentId);
     }
     getCachedConfig() {
-        return (this.cachedConfig === l && ((0, a.X6)() ? (this.cachedConfig = (0, a.Md)().getConfig(this.id)) : (this.cachedConfig = void 0)), this.cachedConfig);
+        return (this.cachedConfig === l && ((0, o.X6)() ? (this.cachedConfig = (0, o.Md)().getConfig(this.id)) : (this.cachedConfig = void 0)), this.cachedConfig);
     }
     setExperiment(e) {
         this.inner = e;
@@ -39,7 +39,7 @@ class c {
         return (i()(null != this.inner, 'experiment must be set before calling getCurrentConfig'), this.inner.getCurrentConfig({ location: 'default' }));
     }
     constructor(e) {
-        (o(this, 'id', void 0), o(this, 'inner', void 0), o(this, 'cachedConfig', void 0), (this.id = e), (this.inner = null), (this.cachedConfig = l), s.push(this));
+        (a(this, 'id', void 0), a(this, 'inner', void 0), a(this, 'cachedConfig', void 0), (this.id = e), (this.inner = null), (this.cachedConfig = l), s.push(this));
     }
 }
 class u extends c {
@@ -79,7 +79,7 @@ class u extends c {
         ];
     }
     constructor(e, t) {
-        (super(e), o(this, 'storeName', void 0), (this.storeName = t));
+        (super(e), a(this, 'storeName', void 0), (this.storeName = t));
     }
 }
 class d extends c {
@@ -127,7 +127,7 @@ class d extends c {
         return 0 !== e && (1 === e || (!(this.emissionsCount >= this.MAX_EMISSIONS_PER_APP_LAUNCH) && Math.random() < e));
     }
     constructor(...e) {
-        (super(...e), o(this, 'MAX_EMISSIONS_PER_APP_LAUNCH', 5), o(this, 'emissionsCount', 0));
+        (super(...e), a(this, 'MAX_EMISSIONS_PER_APP_LAUNCH', 5), a(this, 'emissionsCount', 0));
     }
 }
 let f = new u('2025-05_libdiscore_notestore_v2', 'NoteStore'),

@@ -1,8 +1,8 @@
 (n.d(t, { Z: () => m }), n(853839), n(570086), n(479048));
 var r = n(255367),
     i = n(73800),
-    a = n(70097),
-    o = n(947849),
+    o = n(70097),
+    a = n(947849),
     s = n(981631),
     l = n(388032);
 function c(e, t, n) {
@@ -63,8 +63,8 @@ function _(e, t) {
         r,
         i = p(e, t);
     if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
@@ -73,12 +73,12 @@ function p(e, t) {
     var n,
         r,
         i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
 function h(e) {
-    let { poster: t, src: n, width: o, height: l, naturalWidth: c, naturalHeight: u, play: d = !0, className: f, alt: _, responsive: p } = e,
+    let { poster: t, src: n, width: a, height: l, naturalWidth: c, naturalHeight: u, play: d = !0, className: f, alt: _, responsive: p } = e,
         h = i.useRef(null);
     return (i.useEffect(() => {
         let { current: e } = h;
@@ -90,12 +90,12 @@ function h(e) {
                 : e.pause());
     }, [d]),
     (c <= s.N_j && u <= s.XKF) || (c <= s.XKF && u <= s.N_j))
-        ? (0, r.jsx)(a.Z, {
+        ? (0, r.jsx)(o.Z, {
               ref: h,
               className: f,
               poster: t,
               src: n,
-              width: o,
+              width: a,
               height: l,
               responsive: p,
               muted: !0,
@@ -108,14 +108,14 @@ function h(e) {
         : (0, r.jsx)('img', {
               alt: '',
               src: t,
-              width: o,
+              width: a,
               height: l
           });
 }
 function m(e) {
-    var { src: t, poster: n, naturalWidth: i, naturalHeight: a, responsive: s, autoPlay: c, className: d, playable: p = !0, renderImageComponent: m, alt: g = l.intl.string(l.t.I5gL2N), sourceMetadata: E } = e,
+    var { src: t, poster: n, naturalWidth: i, naturalHeight: o, responsive: s, autoPlay: c, className: d, playable: p = !0, renderImageComponent: m, alt: g = l.intl.string(l.t.I5gL2N), sourceMetadata: E } = e,
         b = _(e, ['src', 'poster', 'naturalWidth', 'naturalHeight', 'responsive', 'autoPlay', 'className', 'playable', 'renderImageComponent', 'alt', 'sourceMetadata']);
-    return (0, r.jsx)(o.h.Consumer, {
+    return (0, r.jsx)(a.h.Consumer, {
         children: (e) =>
             m(
                 f(u({}, b), {
@@ -129,16 +129,16 @@ function m(e) {
                     tabIndex: p ? 0 : -1,
                     dataSafeSrc: t,
                     children(e) {
-                        let { src: n, size: o, animating: l, alt: c } = e;
+                        let { src: n, size: a, animating: l, alt: c } = e;
                         return (0, r.jsx)(h, {
                             alt: c,
                             className: d,
                             poster: n,
                             src: t,
-                            width: o.width,
-                            height: o.height,
+                            width: a.width,
+                            height: a.height,
                             naturalWidth: i,
-                            naturalHeight: a,
+                            naturalHeight: o,
                             responsive: s,
                             play: p && l
                         });

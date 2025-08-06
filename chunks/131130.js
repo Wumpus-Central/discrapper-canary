@@ -2,8 +2,8 @@
 var r = n(255367);
 n(73800);
 var i = n(704215),
-    a = n(481060),
-    o = n(906732),
+    o = n(481060),
+    a = n(906732),
     s = n(963249),
     l = n(286961),
     c = n(644916),
@@ -12,7 +12,7 @@ var i = n(704215),
     f = n(131715);
 let _ = (e) => {
     let { dismissibleContent: t, noticeType: n } = e,
-        { analyticsLocations: _ } = (0, o.ZP)(),
+        { analyticsLocations: _ } = (0, a.ZP)(),
         p = (0, l.Z)();
     return (0, r.jsx)(u.Xf, {
         contentType: t,
@@ -20,17 +20,17 @@ let _ = (e) => {
         groupName: d.R.NOTICE_BAR,
         bypassAutoDismiss: !0,
         children: (e) => {
-            let { visibleContent: t, markAsDismissed: o } = e;
+            let { visibleContent: t, markAsDismissed: a } = e;
             if (t === i.z.GIFTING_PROMOTION_REMINDER) {
                 let e = null == p ? void 0 : p.reminderNagbar;
-                return (0, r.jsxs)(a.qXd, {
-                    color: a.DM8.PREMIUM_TIER_2,
+                return (0, r.jsxs)(o.qXd, {
+                    color: o.DM8.PREMIUM_TIER_2,
                     children: [
-                        (0, r.jsx)(a.RyX, {
-                            onClick: () => o(d.L.USER_DISMISS),
+                        (0, r.jsx)(o.RyX, {
+                            onClick: () => a(d.L.USER_DISMISS),
                             noticeType: n
                         }),
-                        (0, r.jsx)(a.OgN, {
+                        (0, r.jsx)(o.OgN, {
                             size: 'custom',
                             width: 20,
                             height: 20,
@@ -38,7 +38,7 @@ let _ = (e) => {
                             className: f.giftIcon
                         }),
                         null == e ? void 0 : e.description(),
-                        (0, r.jsx)(a.NoS, {
+                        (0, r.jsx)(o.NoS, {
                             onClick: () => {
                                 (0, s.Z)({
                                     isGift: !0,

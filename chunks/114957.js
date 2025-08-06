@@ -1,8 +1,8 @@
 (n.d(t, { Z: () => p }), n(388685));
 var r = n(224706),
     i = n(978085),
-    a = n(147913),
-    o = n(380249),
+    o = n(147913),
+    a = n(380249),
     s = n(627050),
     l = n(77498),
     c = n(283595),
@@ -21,9 +21,9 @@ function f(e, t, n) {
         e
     );
 }
-class _ extends a.Z {
+class _ extends o.Z {
     handlePostConnectionOpen() {
-        ((0, d.isDesktop)() || (0, o.l)() || s.d.getCurrentConfig({ location: 'DetectableGamesManager.handlePostConnectionOpen' }).enabled) && (c.Z.fetched || (0, i.b8)(), r.Z.getDetectableGames(), (this.intervalId = setInterval(r.Z.getDetectableGames, l.Z.detectableGamesTtl + Math.random() * u.Z.Millis.HOUR)));
+        ((0, d.isDesktop)() || (0, a.l)() || s.d.getCurrentConfig({ location: 'DetectableGamesManager.handlePostConnectionOpen' }).enabled) && (c.Z.fetched || (0, i.b8)(), r.Z.getDetectableGames(), (this.intervalId = setInterval(r.Z.getDetectableGames, l.Z.detectableGamesTtl + Math.random() * u.Z.Millis.HOUR)));
     }
     _terminate() {
         null != this.intervalId && (clearInterval(this.intervalId), (this.intervalId = void 0));

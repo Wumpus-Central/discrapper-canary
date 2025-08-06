@@ -2,8 +2,8 @@
 var r = n(255367);
 n(73800);
 var i = n(481060),
-    a = n(296182),
-    o = n(976853),
+    o = n(296182),
+    a = n(976853),
     s = n(902676),
     l = n(626135),
     c = n(49012),
@@ -43,8 +43,8 @@ function m(e) {
 }
 let g = /^(tel|sms|mailto):([^?;]+)/;
 function E(e, t, n, h) {
-    let E = (0, o.Z)(null == n ? void 0 : n.getChannelId());
-    if (!u.isPlatformEmbedded || null == e || '' === e || E || (null == h ? void 0 : h.shouldHideMediaOptions) === !0 || !(0, a.Jj)(e)) return null;
+    let E = (0, a.Z)(null == n ? void 0 : n.getChannelId());
+    if (!u.isPlatformEmbedded || null == e || '' === e || E || (null == h ? void 0 : h.shouldHideMediaOptions) === !0 || !(0, o.Jj)(e)) return null;
     let b = (0, s.F)(e),
         y = (e) => {
             (l.default.track(_.rMx.CONTEXT_MENU_LINK_COPIED, m({ hostname: b }, (0, f.v)())), d.ZP.copy(e), (0, i.showToast)((0, i.createToast)(p.intl.string(p.t['L/PwZW']), i.ToastType.SUCCESS)));

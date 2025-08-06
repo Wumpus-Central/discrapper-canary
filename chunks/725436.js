@@ -1,8 +1,8 @@
 n.d(t, { m: () => f });
 var r = n(454585),
     i = n(551452),
-    a = n(532901);
-function o(e, t, n) {
+    o = n(532901);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -26,7 +26,7 @@ function s(e) {
                 })
             )),
             r.forEach(function (t) {
-                o(e, t, n[t]);
+                a(e, t, n[t]);
             }));
     }
     return e;
@@ -55,7 +55,7 @@ function c(e, t) {
     );
 }
 let u = c(s({}, r.Z.guildEventRules.link), {
-        react: (0, a.Z)({
+        react: (0, o.Z)({
             enableBuildOverrides: !1,
             mustConfirmExternalLink: !0
         }).react

@@ -1,8 +1,8 @@
 n.d(t, { E: () => u });
 var r = n(573654),
     i = n(178163),
-    a = n(63222),
-    o = n(969357),
+    o = n(63222),
+    a = n(969357),
     s = n(528302),
     l = n(509893),
     c = n(23546);
@@ -26,10 +26,10 @@ function u(e, t, n) {
                 createHandler: f,
                 registerHandler: i.w,
                 createConnector: function (e) {
-                    return new a.x(e);
+                    return new o.x(e);
                 },
                 createMonitor: function (e) {
-                    return new o.p(e);
+                    return new a.p(e);
                 },
                 DecoratedComponent: e,
                 getType: d,

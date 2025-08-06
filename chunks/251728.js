@@ -1,8 +1,8 @@
 n.d(t, { Y: () => f });
 var r = n(685816),
     i = n(549616),
-    a = n(472756),
-    o = n(794934),
+    o = n(472756),
+    a = n(794934),
     s = n(885577),
     l = n(198647),
     c = n(690913),
@@ -33,7 +33,7 @@ class f {
                         case r.z.HERO:
                             return l.s.fromServer(e);
                         case r.z.FEATURED:
-                            return o.I.fromServer(e);
+                            return a.I.fromServer(e);
                         case r.z.FEED:
                             return s.K.fromServer(e);
                         case r.z.WIDE_BANNER:
@@ -41,7 +41,7 @@ class f {
                         case r.z.SHELF:
                             return c.O.fromServer(e);
                         case r.z.COUNTDOWN_TIMER:
-                            return a.G.fromServer(e);
+                            return o.G.fromServer(e);
                         default:
                             return;
                     }

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => h });
 var r = n(255367),
     i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(481060),
     l = n(40966),
     c = n(580552),
@@ -12,13 +12,13 @@ var r = n(255367),
     _ = n(388032),
     p = n(73433);
 function h(e) {
-    let { userBio: t, className: n, animateOnHover: a = !1, isHovering: h = !1, lineClamp: m = 6, setLineClamp: g = !0, textColor: E, userId: b } = e,
+    let { userBio: t, className: n, animateOnHover: o = !1, isHovering: h = !1, lineClamp: m = 6, setLineClamp: g = !0, textColor: E, userId: b } = e,
         y = (0, d.Dt)(),
         O = i.useMemo(() => ((0, c.Z)(b) ? (0, r.jsx)(l.Z, {}) : null == t || '' === t ? null : (0, f.parseBioReact)(t)), [b, t]);
     return null == O
         ? null
         : (0, r.jsxs)('section', {
-              className: o()(n, p.markup),
+              className: a()(n, p.markup),
               'aria-labelledby': y,
               children: [
                   (0, r.jsx)(s.nn4, {
@@ -33,7 +33,7 @@ function h(e) {
                       color: void 0 !== E ? E : void 0,
                       children: (0, r.jsx)(u.G.Provider, {
                           value: {
-                              disableAnimations: a && !h,
+                              disableAnimations: o && !h,
                               disableInteractions: !1
                           },
                           children: O

@@ -2,8 +2,8 @@ n.d(t, { Z: () => A });
 var r = n(255367);
 n(73800);
 var i = n(120356),
-    a = n.n(i),
-    o = n(442837),
+    o = n.n(i),
+    a = n(442837),
     s = n(481060),
     l = n(666188),
     c = n(372769),
@@ -71,7 +71,7 @@ function I(e, t) {
 }
 function T(e) {
     let { guild: t, isBannerVisible: n, disableBoostClick: i } = e,
-        a = (0, o.e7)([h.default, p.ZP], () => {
+        o = (0, a.e7)([h.default, p.ZP], () => {
             let e = h.default.getCurrentUser();
             return p.ZP.isMember(t.id, null == e ? void 0 : e.id);
         }),
@@ -80,7 +80,7 @@ function T(e) {
     let u = (e) => {
             (e.stopPropagation(),
                 e.preventDefault(),
-                a &&
+                o &&
                     !i &&
                     (0, d.f)({
                         guildId: t.id,
@@ -125,28 +125,28 @@ function T(e) {
 }
 function S(e) {
     let { guild: t, disableColor: n, disableBoostClick: i } = e,
-        o = (0, l.Z)(t),
+        a = (0, l.Z)(t),
         { entrypoints: d } = (0, _._k)({ location: 'guild_status_badge' });
-    return o
+    return a
         ? (0, r.jsx)('div', {
-              className: a()(b.guildIconV2Container, { [b.invitesRefresh]: d }),
+              className: o()(b.guildIconV2Container, { [b.invitesRefresh]: d }),
               children: (0, r.jsx)(u.Z, {
                   guild: t,
                   size: 18,
                   tooltipPosition: 'bottom',
                   tooltipColor: s.ua7.Colors.PRIMARY,
-                  className: a()(b.guildBadge, { [b.disableColor]: n }),
+                  className: o()(b.guildBadge, { [b.disableColor]: n }),
                   disableBoostClick: i
               })
           })
         : (0, r.jsx)('div', {
-              className: a()(b.guildIconContainer, { [b.invitesRefresh]: d }),
+              className: o()(b.guildIconContainer, { [b.invitesRefresh]: d }),
               children: (0, r.jsx)(c.Z, {
                   guild: t,
                   size: 18,
                   tooltipPosition: 'bottom',
                   tooltipColor: s.ua7.Colors.PRIMARY,
-                  className: a()(b.guildBadge, { [b.disableColor]: n })
+                  className: o()(b.guildBadge, { [b.disableColor]: n })
               })
           });
 }

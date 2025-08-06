@@ -1,8 +1,8 @@
 (n.d(t, { Z: () => N }), n(388685));
 var r = n(255367),
     i = n(73800),
-    a = n(755721),
-    o = n(481060),
+    o = n(755721),
+    a = n(481060),
     s = n(542094),
     l = n(895924),
     c = n(813370),
@@ -75,8 +75,8 @@ function S(e, t) {
         r,
         i = A(e, t);
     if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
@@ -85,20 +85,20 @@ function A(e, t) {
     var n,
         r,
         i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
 function N(e) {
-    let { context: t, application: n, sectionName: O, primaryEntryPointCommand: I, buttonSize: A = a.Ph.MEDIUM } = e,
+    let { context: t, application: n, sectionName: O, primaryEntryPointCommand: I, buttonSize: A = o.Ph.MEDIUM } = e,
         N = i.useId(),
         C = i.useCallback(() => {
             d.yT(_.ti.ACTIVITY);
         }, []),
-        w = i.useCallback(() => {
+        R = i.useCallback(() => {
             f.Z.shouldShowModal() && C();
         }, [C]),
-        { submitting: R, wasSubmitting: P } = (0, m.Z)({
+        { submitting: P, wasSubmitting: w } = (0, m.Z)({
             applicationId: n.id,
             context: t,
             launchingComponentId: N,
@@ -109,28 +109,28 @@ function N(e) {
             applicationId: n.id,
             context: t
         }),
-        k = i.useMemo(() => (0, h.XZ)(I.displayName), [I.displayName]),
+        M = i.useMemo(() => (0, h.XZ)(I.displayName), [I.displayName]),
         {
-            onActivityItemSelected: j,
-            buttonColor: M,
+            onActivityItemSelected: k,
+            buttonColor: j,
             buttonText: U
         } = (0, g.P7)({
             context: t,
             application: n,
             location: l.Vh.APP_LAUNCHER_APPLICATION_VIEW,
             sectionName: O,
-            commandName: k,
+            commandName: M,
             autoDismissOnClick: x === s.JS.LEAVE || (0, c.g)(n),
             launchingComponentId: N,
-            submitting: null != P ? P : R,
-            onConfirmActivityLaunchChecksAlertOpen: w
+            submitting: null != w ? w : P,
+            onConfirmActivityLaunchChecksAlertOpen: R
         }),
         { disabled: G, reason: B } = (0, p.Z)({
             context: t,
             application: n,
             activityAction: x
         });
-    return (0, r.jsx)(o.ua7, {
+    return (0, r.jsx)(a.ua7, {
         shouldShow: null != B,
         tooltipContentClassName: y.tooltipContent,
         text: B,
@@ -138,16 +138,16 @@ function N(e) {
             var { onClick: t } = e,
                 i = S(e, ['onClick']);
             return (0, r.jsx)(
-                a.zx,
+                o.zx,
                 T(v({}, i), {
                     type: 'submit',
                     size: A,
-                    color: M,
+                    color: j,
                     disabled: G,
                     submitting: D,
                     onClick: () => {
                         (L(!0),
-                            j(),
+                            k(),
                             null == t || t(),
                             u.default.track(E.rMx.APP_DETAIL_PAGE_ENTRY_POINT_COMMAND_BUTTON_CLICKED, {
                                 application_id: n.id,

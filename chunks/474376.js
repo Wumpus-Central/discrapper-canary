@@ -1,4 +1,4 @@
-(n.d(t, { g: () => C }), n(539854));
+(n.d(t, { g: () => E }), n(539854));
 var i = n(255367);
 n(73800);
 var r = n(442837),
@@ -18,15 +18,15 @@ var r = n(442837),
     x = n(981631),
     _ = n(388032),
     j = n(965695);
-function C(e) {
+function E(e) {
     let t = (0, r.e7)([u.default], () => u.default.getCurrentUser()),
         n = (0, r.e7)([d.Z], () => d.Z.hidePersonalInformation),
-        C = (0, r.e7)([o.Z], () => (0, s.wj)(o.Z.theme)),
-        { multiAccountUsers: E } = (0, f.L)(),
+        E = (0, r.e7)([o.Z], () => (0, s.wj)(o.Z.theme)),
+        { multiAccountUsers: C } = (0, f.L)(),
         O = (e) => {
             e !== (null == t ? void 0 : t.id) && (m.default.track(x.rMx.MULTI_ACCOUNT_SWITCH_ATTEMPT, { location: { section: x.jXE.USER_PROFILE } }), g.yD(e));
         },
-        v = E.map((r) => {
+        v = C.map((r) => {
             let s = new c.Z(r),
                 o = s.id === (null == t ? void 0 : t.id),
                 d = r.tokenStatus === h.q.INVALID,
@@ -69,13 +69,13 @@ function C(e) {
                                     (0, i.jsx)(a.owK, {
                                         size: 'sm',
                                         color: (0, l.Lq)(t ? x.Ilk.WHITE_500 : x.Ilk.BRAND_500),
-                                        secondaryColor: (0, l.Lq)((t && C) || (t && !C) ? x.Ilk.BRAND_500 : x.Ilk.WHITE_500),
+                                        secondaryColor: (0, l.Lq)((t && E) || (t && !E) ? x.Ilk.BRAND_500 : x.Ilk.WHITE_500),
                                         className: j.activeIcon
                                     }),
                                 d &&
                                     (0, i.jsx)(a.Mgn, {
                                         color: (0, l.Lq)(x.Ilk.RED_400),
-                                        secondaryColor: (0, l.Lq)((t && C) || (t && !C) ? x.Ilk.BRAND_500 : x.Ilk.WHITE_500),
+                                        secondaryColor: (0, l.Lq)((t && E) || (t && !E) ? x.Ilk.BRAND_500 : x.Ilk.WHITE_500),
                                         size: 'xs',
                                         className: j.activeIcon
                                     })

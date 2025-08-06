@@ -1,8 +1,8 @@
-(n.d(t, { Z: () => w }), n(388685), n(410992), n(227481), n(730884), n(20464), n(341884), n(364341), n(629680), n(505025), n(918970), n(121784), n(644351), n(146733));
+(n.d(t, { Z: () => R }), n(388685), n(410992), n(227481), n(730884), n(20464), n(341884), n(364341), n(629680), n(505025), n(918970), n(121784), n(644351), n(146733));
 var r,
     i = n(442837),
-    a = n(46973),
-    o = n(570140),
+    o = n(46973),
+    a = n(570140),
     s = n(569545),
     l = n(314897),
     c = n(19780),
@@ -34,9 +34,9 @@ function y(e) {
     let n = new Uint8Array(t),
         r = _.Z.isKeyVerified(e, n) || f.Z.isKeyVerified(e, n),
         i = (0, d.UB)(e, [c.Z, u.Z]),
-        a = r && !i,
-        o = a !== m.get(e);
-    return (m.set(e, a), o);
+        o = r && !i,
+        a = o !== m.get(e);
+    return (m.set(e, o), a);
 }
 function O() {
     return u.Z.getAllActiveStreamKeys().reduce((e, t) => {
@@ -72,8 +72,8 @@ function T(e) {
         n = l.default.getId(),
         r = t.reduce((e, t) => (n === t ? e : !!I({ userId: t }) || e), !1),
         i = O(),
-        a = v();
-    return r || i || a;
+        o = v();
+    return r || i || o;
 }
 function S() {
     (m.clear(), g.clear(), (E = !1));
@@ -87,10 +87,10 @@ function N(e) {
     let { streamKey: t, state: n, context: r } = e;
     if (n !== p.hes.DISCONNECTED) return !1;
     switch (r) {
-        case a.Yn.STREAM:
+        case o.Yn.STREAM:
             if (null == t) return !1;
             return (g.delete(t), v());
-        case a.Yn.DEFAULT:
+        case o.Yn.DEFAULT:
             S();
     }
 }
@@ -109,7 +109,7 @@ class C extends (r = i.ZP.Store) {
     }
 }
 h(C, 'displayName', 'SecureFramesVerifiedStore');
-let w = new C(o.Z, {
+let R = new C(a.Z, {
     CONNECTION_OPEN: S,
     VOICE_CHANNEL_SELECT: A,
     RTC_CONNECTION_STATE: N,

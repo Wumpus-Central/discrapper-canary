@@ -1,8 +1,8 @@
 n.d(t, { Z: () => v });
 var r = n(255367),
     i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(657707),
     l = n(442837),
     c = n(704215),
@@ -55,7 +55,7 @@ function O() {
 }
 function v(e) {
     var t, n;
-    let { isDisabled: a, onSelect: v } = e,
+    let { isDisabled: o, onSelect: v } = e,
         I = (0, l.e7)([p.Z], () => {
             var e, t;
             return null == (t = p.Z.settings.appearance) || null == (e = t.clientThemeSettings) ? void 0 : e.customUserThemeSettings;
@@ -64,35 +64,35 @@ function v(e) {
         A = (0, _.Nj)(c.z.CUSTOM_THEME_ENTRYPOINT_GRADIENT),
         N = (0, d.ZP)(),
         C = null != I,
-        w = (0, u.wjy)(N) ? y.darkOverlay : y.lightOverlay,
-        R = (null != (n = null == I || null == (t = I.colors) ? void 0 : t.length) ? n : 0) > 1,
-        P = i.useMemo(() => {
+        R = (0, u.wjy)(N) ? y.darkOverlay : y.lightOverlay,
+        P = (null != (n = null == I || null == (t = I.colors) ? void 0 : t.length) ? n : 0) > 1,
+        w = i.useMemo(() => {
             if (null == I || null == I.colors || 0 === I.colors.length) return;
             let e = I.colors[0];
-            if (R) {
+            if (P) {
                 let { colors: t, gradientAngle: n } = I;
                 e = 'linear-gradient('.concat(n, 'deg, ').concat(t.join(', '), ')');
             }
             return { background: 'var(--background-gradient), '.concat(e) };
-        }, [I, R]),
+        }, [I, P]),
         D = (0, f.Sl)(g.Il.WHITE).hex,
         L = (0, f.Sl)(g.Il.RED_430).hex,
         x = C ? D : void 0,
-        k = i.useCallback(() => {
+        M = i.useCallback(() => {
             (T && S(), null == v || v());
         }, [T, S, v]);
     return (0, r.jsxs)('div', {
         className: y.badgeContainer,
         children: [
             (0, r.jsxs)(h.S4, {
-                onSelect: a ? void 0 : k,
+                onSelect: o ? void 0 : M,
                 isSelected: !1,
                 showSelectionCircle: C,
                 name: b.intl.string(E.default.KSBBpK),
-                className: o()(y.container, C && w, a && y.disabled),
+                className: a()(y.container, C && R, o && y.disabled),
                 showBadge: !1,
                 showLockedBadge: !1,
-                style: P,
+                style: w,
                 children: [
                     !A && !C && (0, r.jsx)(O, {}),
                     (0, r.jsx)('div', { className: y.borderOverlay }),

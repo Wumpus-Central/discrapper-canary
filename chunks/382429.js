@@ -1,7 +1,7 @@
 var n = Symbol.for('react.transitional.element');
 function r(e, t, r) {
     var i = null;
-    if ((void 0 !== r && (i = '' + r), void 0 !== t.key && (i = '' + t.key), 'key' in t)) for (var a in ((r = {}), t)) 'key' !== a && (r[a] = t[a]);
+    if ((void 0 !== r && (i = '' + r), void 0 !== t.key && (i = '' + t.key), 'key' in t)) for (var o in ((r = {}), t)) 'key' !== o && (r[o] = t[o]);
     else r = t;
     return {
         $$typeof: n,

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => D });
 var r = n(255367),
     i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(399606),
     l = n(920155),
     c = n(481060),
@@ -52,7 +52,7 @@ function C(e) {
     }
     return e;
 }
-function w(e, t) {
+function R(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -64,37 +64,37 @@ function w(e, t) {
     }
     return n;
 }
-function R(e, t) {
+function P(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : w(Object(t)).forEach(function (n) {
+            : R(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let P = 40,
+let w = 40,
     D = (e) => {
-        let { hangStatusActivity: t, userId: a, channel: N, previewIsOpen: w, targetElementRef: D } = e,
+        let { hangStatusActivity: t, userId: o, channel: N, previewIsOpen: R, targetElementRef: D } = e,
             { enableHangStatus: L } = b.n.useExperiment({
                 guildId: N.guild_id,
                 location: 'HangStatusPopout'
             }),
             x = (0, s.e7)([f.default], () => f.default.getId()),
-            k = (0, s.e7)([m.default], () => m.default.getUser(a)),
-            j = (0, s.e7)([h.Z], () => h.Z.getChannelId() === N.id),
-            M = (0, s.e7)([p.Z], () => p.Z.can(T.Plq.CONNECT, N)),
+            M = (0, s.e7)([m.default], () => m.default.getUser(o)),
+            k = (0, s.e7)([h.Z], () => h.Z.getChannelId() === N.id),
+            j = (0, s.e7)([p.Z], () => p.Z.can(T.Plq.CONNECT, N)),
             U = (null == t ? void 0 : t.emoji) == null || (0, O.K)(t.emoji, N),
-            G = (0, s.e7)([_.ZP], () => (null != N.guild_id && null != k ? _.ZP.getMember(N.guild_id, a) : null)),
-            B = i.useMemo(() => (null != k ? (0, d.SG)(void 0, G, k, { size: P }) : void 0), [G, k]);
+            G = (0, s.e7)([_.ZP], () => (null != N.guild_id && null != M ? _.ZP.getMember(N.guild_id, o) : null)),
+            B = i.useMemo(() => (null != M ? (0, d.SG)(void 0, G, M, { size: w }) : void 0), [G, M]);
         i.useEffect(() => {
             (0, E.UP)();
         }, []);
         let Z = () => {
-            !j &&
-                M &&
+            !k &&
+                j &&
                 (u.default.selectVoiceChannel(N.id),
                 g.default.track(T.rMx.HANG_STATUS_CTA_CLICKED, {
                     source: 'HangStatusPopout',
@@ -106,21 +106,21 @@ let P = 40,
             (i.useEffect(() => {
                 L &&
                     null != t &&
-                    w &&
-                    null != k &&
-                    x !== a &&
+                    R &&
+                    null != M &&
+                    x !== o &&
                     g.default.track(T.rMx.VIEW_HANG_STATUS, {
                         source: 'HangStatusPopout',
                         guild_id: N.guild_id,
                         channel_id: N.id
                     });
-            }, [L, t, w, k, x, a, N]),
-            !L || null == k)
+            }, [L, t, R, M, x, o, N]),
+            !L || null == M)
         )
             return null;
-        if (x === a)
+        if (x === o)
             return (0, r.jsx)('div', {
-                className: o()(A.popoutWrapper, { [A.mounted]: w }),
+                className: a()(A.popoutWrapper, { [A.mounted]: R }),
                 children: (0, r.jsx)(I.v, {
                     currentStatus: t,
                     channel: N
@@ -135,7 +135,7 @@ let P = 40,
                       return (n) =>
                           (0, r.jsx)(
                               e,
-                              R(C({}, n), {
+                              P(C({}, n), {
                                   startingText: t.details,
                                   startingEmoji: t.emoji
                               })
@@ -193,14 +193,14 @@ let P = 40,
                         })
                     ]
                 }),
-                !j && M
+                !k && j
                     ? (0, r.jsx)(c.zxk, {
                           size: 'sm',
                           text: S.intl.string(S.t['B/dHXF']),
                           onClick: Z
                       })
                     : null,
-                j && U
+                k && U
                     ? (0, r.jsx)(c.zxk, {
                           size: 'sm',
                           text: S.intl.string(S.t.xcVcFR),

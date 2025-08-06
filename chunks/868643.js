@@ -5,8 +5,8 @@
     n(997841));
 var r = n(73800),
     i = n(442837),
-    a = n(430198),
-    o = n(592125),
+    o = n(430198),
+    a = n(592125),
     s = n(430824),
     l = n(630388),
     c = n(981631);
@@ -17,17 +17,17 @@ function d(e) {
 function f(e) {
     var t;
     if (!d(e)) return !1;
-    let n = null == (t = o.Z.getChannel(e.channel_id)) ? void 0 : t.guild_id;
-    return !(null != n && a.Z.isChannelOrThreadParentGated(n, e.channel_id));
+    let n = null == (t = a.Z.getChannel(e.channel_id)) ? void 0 : t.guild_id;
+    return !(null != n && o.Z.isChannelOrThreadParentGated(n, e.channel_id));
 }
 function _(e) {
-    let t = (0, i.e7)([s.Z, a.Z, o.Z], () => {
+    let t = (0, i.e7)([s.Z, o.Z, a.Z], () => {
         var t, n, r;
         if (null == e) return !0;
-        let i = null == (t = o.Z.getChannel(e.channel_id)) ? void 0 : t.guild_id;
+        let i = null == (t = a.Z.getChannel(e.channel_id)) ? void 0 : t.guild_id;
         if (null != i && (null == (n = s.Z.getGuild(i)) ? void 0 : n.features.has(c.oNc.FORWARDING_DISABLED))) return !0;
-        let l = null != i && a.Z.isChannelOrThreadParentGated(i, e.channel_id),
-            u = null != e && (null == (r = o.Z.getChannel(e.channel_id)) ? void 0 : r.isModeratorReportChannel());
+        let l = null != i && o.Z.isChannelOrThreadParentGated(i, e.channel_id),
+            u = null != e && (null == (r = a.Z.getChannel(e.channel_id)) ? void 0 : r.isModeratorReportChannel());
         return l || u;
     });
     return r.useMemo(() => !t && null != e && d(e), [t, e]);

@@ -2,8 +2,8 @@
 var r = n(255367);
 n(73800);
 var i = n(442837),
-    a = n(481060),
-    o = n(430824),
+    o = n(481060),
+    a = n(430824),
     s = n(914010),
     l = n(388032),
     c = n(502764);
@@ -11,11 +11,11 @@ let u = () =>
         (0, r.jsx)(r.Fragment, {
             children: l.intl.format(l.t.ymkBtr, {
                 shareIcon: l.intl.string(l.t.VINpSE),
-                shareIconHook: () => (0, r.jsx)(a.ejJ, { className: c.icon }, 'icon')
+                shareIconHook: () => (0, r.jsx)(o.ejJ, { className: c.icon }, 'icon')
             })
         }),
     d = () => {
-        let e = (0, i.e7)([o.Z, s.Z], () => o.Z.getGuild(s.Z.getGuildId()), []),
+        let e = (0, i.e7)([a.Z, s.Z], () => a.Z.getGuild(s.Z.getGuildId()), []),
             t = null == e ? void 0 : e.name;
         return (0, r.jsx)(r.Fragment, { children: l.intl.format(l.t.oQuG3N, { serverName: t }) });
     },

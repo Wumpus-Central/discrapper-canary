@@ -1,4 +1,4 @@
-let r, i, a, o, s;
+let r, i, o, a, s;
 n.d(t, {
     Z: () => A,
     i: () => E
@@ -29,13 +29,13 @@ var E = (function (e) {
     return ((e[(e.IN_FLIGHT = 0)] = 'IN_FLIGHT'), (e[(e.ERRORED = 1)] = 'ERRORED'), (e[(e.SUCCEEDED = 2)] = 'SUCCEEDED'), e);
 })({});
 function b() {
-    return ((r = null), (i = null), (a = null), (o = null), (s = null), !0);
+    return ((r = null), (i = null), (o = null), (a = null), (s = null), !0);
 }
 function y(e) {
     let { messageId: t, nonce: n, data: l } = e;
     switch (l.interactionType) {
         case p.B8.APPLICATION_COMMAND:
-            return ((a = t), (o = l.channelId), (s = n), !1);
+            return ((o = t), (a = l.channelId), (s = n), !1);
         case p.B8.MODAL_SUBMIT:
             return (
                 u()(null == r || 1 === i || 2 === i, 'cannot submit multiple modals at once'),
@@ -52,11 +52,11 @@ function y(e) {
 }
 function O(e) {
     let { nonce: t } = e;
-    return (t === s && (_.Z.deleteMessage(o, a, !0), (a = null), (o = null), (s = null)), !1);
+    return (t === s && (_.Z.deleteMessage(a, o, !0), (o = null), (a = null), (s = null)), !1);
 }
 function v(e) {
     let { nonce: t } = e;
-    return (t === s && (_.Z.deleteMessage(o, a, !0), (a = null), (o = null), (s = null)), !1);
+    return (t === s && (_.Z.deleteMessage(a, o, !0), (o = null), (a = null), (s = null)), !1);
 }
 function I(e) {
     let { nonce: t } = e;

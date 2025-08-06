@@ -1,8 +1,8 @@
 let r;
-n.d(t, { Z: () => P });
+n.d(t, { Z: () => w });
 var i,
-    a = n(442837),
-    o = n(544891),
+    o = n(442837),
+    a = n(544891),
     s = n(570140),
     l = n(333023),
     c = n(384278),
@@ -53,8 +53,8 @@ function O(e) {
     if (null == n || t === l.V) return !1;
     null != r && r.channelId !== t && (null != r.timeout && clearTimeout(r.timeout), (r = null));
     let i = Date.now(),
-        a = 0.8 * m;
-    if (null != r && (null != r.timeout || r.prevSend + a > i)) return !1;
+        o = 0.8 * m;
+    if (null != r && (null != r.timeout || r.prevSend + o > i)) return !1;
     let { delayMs: u } = (0, c.M1)('typing_store'),
         p = setTimeout(
             () => {
@@ -63,8 +63,8 @@ function O(e) {
                     n === d.default.getId() &&
                     null != r.timeout &&
                     ((r.timeout = null),
-                    w(t) > g ||
-                        o.tn
+                    R(t) > g ||
+                        a.tn
                             .post({
                                 url: _.ANM.TYPING(t),
                                 oldFormErrors: !0,
@@ -74,7 +74,7 @@ function O(e) {
                                 if (200 === e.status) {
                                     var n, r;
                                     let i = null != (n = e.body.message_send_cooldown_ms) ? n : 0,
-                                        a = null != (r = e.body.thread_create_cooldown_ms) ? r : 0;
+                                        o = null != (r = e.body.thread_create_cooldown_ms) ? r : 0;
                                     (i > 0 &&
                                         s.Z.dispatch({
                                             type: 'SLOWMODE_SET_COOLDOWN',
@@ -82,17 +82,17 @@ function O(e) {
                                             slowmodeType: f.S.SendMessage,
                                             cooldownMs: i
                                         }),
-                                        a > 0 &&
+                                        o > 0 &&
                                             s.Z.dispatch({
                                                 type: 'SLOWMODE_SET_COOLDOWN',
                                                 channelId: t,
                                                 slowmodeType: f.S.CreateThread,
-                                                cooldownMs: a
+                                                cooldownMs: o
                                             }));
                                 }
                             }));
             },
-            null == r || r.prevSend > i - 2 * a ? u : 0
+            null == r || r.prevSend > i - 2 * o ? u : 0
         );
     return (
         (r = {
@@ -165,11 +165,11 @@ function N(e) {
 function C() {
     E = {};
 }
-function w(e) {
+function R(e) {
     let t = y(e);
     return t === b ? 0 : Object.keys(t).length;
 }
-class R extends (i = a.ZP.Store) {
+class P extends (i = o.ZP.Store) {
     getTypingUsers(e) {
         return y(e);
     }
@@ -177,8 +177,8 @@ class R extends (i = a.ZP.Store) {
         return null != y(e)[t];
     }
 }
-p(R, 'displayName', 'TypingStore');
-let P = new R(s.Z, {
+p(P, 'displayName', 'TypingStore');
+let w = new P(s.Z, {
     TYPING_START: S,
     TYPING_STOP: A,
     TYPING_START_LOCAL: O,

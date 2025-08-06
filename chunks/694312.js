@@ -1,20 +1,20 @@
 (n.d(t, { E: () => f }), n(388685));
 var r = n(73800),
     i = n(442837),
-    a = n(835473),
-    o = n(594174),
+    o = n(835473),
+    a = n(594174),
     s = n(695103),
     l = n(823379),
     c = n(358085),
     u = n(317381),
     d = n(761122);
 function f(e) {
-    let t = (0, i.e7)([o.default], o.default.getCurrentUser),
+    let t = (0, i.e7)([a.default], a.default.getCurrentUser),
         n = (0, i.Wu)([u.ZP], () => u.ZP.getShelfActivities(e)),
         f = (0, i.e7)([s.Z], () => s.Z.testModeEmbeddedApplicationId),
         _ = n.map((e) => e.application_id),
         p = null != f ? [f, ..._] : _,
-        h = (0, a.Z)(p),
+        h = (0, o.Z)(p),
         m = r.useMemo(() => h.filter(l.lm), [h]),
         g = r.useMemo(
             () =>

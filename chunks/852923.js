@@ -2,8 +2,8 @@ n.d(t, { Z: () => g });
 var r = n(255367);
 n(73800);
 var i = n(120356),
-    a = n.n(i),
-    o = n(755721),
+    o = n.n(i),
+    a = n(755721),
     s = n(481060),
     l = n(592125),
     c = n(944486),
@@ -21,21 +21,21 @@ function h(e) {
 function m(e) {
     var t, n;
     let { channelId: i } = e,
-        o = null != (t = (0, f._d)(i)) ? t : 0,
+        a = null != (t = (0, f._d)(i)) ? t : 0,
         s = null != (n = (0, f.K3)(i)) ? n : 0;
-    return o > 0 && s > 0
+    return a > 0 && s > 0
         ? (0, r.jsx)('div', {
               className: p.blocked,
               children: (0, r.jsx)('div', {
-                  className: a()(p.blockedText, p.noIcon),
+                  className: o()(p.blockedText, p.noIcon),
                   children: _.intl.string(_.t.xlJRfn)
               })
           })
-        : o > 0
+        : a > 0
           ? (0, r.jsx)('div', {
                 className: p.blocked,
                 children: (0, r.jsx)('div', {
-                    className: a()(p.blockedText, p.noIcon),
+                    className: o()(p.blockedText, p.noIcon),
                     children: _.intl.string(_.t.WYad9f)
                 })
             })
@@ -43,7 +43,7 @@ function m(e) {
             ? (0, r.jsx)('div', {
                   className: p.blocked,
                   children: (0, r.jsx)('div', {
-                      className: a()(p.blockedText, p.noIcon),
+                      className: o()(p.blockedText, p.noIcon),
                       children: _.intl.string(_.t.eHq2OD)
                   })
               })
@@ -59,10 +59,10 @@ function g() {
               children: [
                   (0, r.jsx)('div', { children: _.intl.string(_.t.Ul1RJS) }),
                   (0, r.jsx)(m, { channelId: e.id }),
-                  (0, r.jsx)(o.zx, {
+                  (0, r.jsx)(a.zx, {
                       className: p.acceptButton,
-                      size: o.zx.Sizes.MIN,
-                      color: o.zx.Colors.WHITE,
+                      size: a.zx.Sizes.MIN,
+                      color: a.zx.Colors.WHITE,
                       onClick: () => h(!1),
                       children: (0, r.jsx)(s.Text, {
                           className: p.acceptText,
@@ -71,11 +71,11 @@ function g() {
                           children: _.intl.string(_.t.MpO0p6)
                       })
                   }),
-                  (0, r.jsx)(o.zx, {
+                  (0, r.jsx)(a.zx, {
                       className: p.declineButton,
-                      look: o.zx.Looks.OUTLINED,
-                      size: o.zx.Sizes.MIN,
-                      color: o.zx.Colors.WHITE,
+                      look: a.zx.Looks.OUTLINED,
+                      size: a.zx.Sizes.MIN,
+                      color: a.zx.Colors.WHITE,
                       onClick: () => h(!0),
                       children: (0, r.jsx)(s.Text, {
                           className: p.declineText,

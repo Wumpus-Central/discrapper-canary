@@ -1,15 +1,15 @@
 n.d(t, { Z: () => f });
 var r = n(255367),
     i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(442837),
     l = n(481060),
     c = n(607070),
     u = n(313201),
     d = n(729894);
 function f(e) {
-    let { children: t, heading: n, headingIcon: a, introText: f, className: _, scrollIntoView: p = !1, headingClassName: h, headingVariant: m = 'text-xs/semibold', headingColor: g = 'header-secondary' } = e,
+    let { children: t, heading: n, headingIcon: o, introText: f, className: _, scrollIntoView: p = !1, headingClassName: h, headingVariant: m = 'text-xs/semibold', headingColor: g = 'header-secondary' } = e,
         E = (0, u.Dt)(),
         b = (0, s.e7)([c.Z], () => c.Z.useReducedMotion),
         y = i.useRef(null);
@@ -24,7 +24,7 @@ function f(e) {
         }, [b]),
         (0, r.jsxs)('section', {
             ref: p ? y : void 0,
-            className: o()(d.section, _),
+            className: a()(d.section, _),
             'aria-labelledby': null != n ? E : void 0,
             children: [
                 null != n &&
@@ -41,7 +41,7 @@ function f(e) {
                                         id: E,
                                         children: n
                                     }),
-                                    a
+                                    o
                                 ]
                             }),
                             null != f &&

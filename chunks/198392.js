@@ -1,7 +1,7 @@
 var r = n(8235),
     i = n(392919),
-    a = n(304611),
-    o = RegExp('\r\n', 'g'),
+    o = n(304611),
+    a = RegExp('\r\n', 'g'),
     s = '\n',
     l = {
         'text/rtf': 1,
@@ -27,7 +27,7 @@ e.exports = (function () {
         }),
         (t.getText = function () {
             var e;
-            return (this.data.getData && (this.types.length ? -1 != this.types.indexOf('text/plain') && (e = this.data.getData('text/plain')) : (e = this.data.getData('Text'))), e ? e.replace(o, s) : null);
+            return (this.data.getData && (this.types.length ? -1 != this.types.indexOf('text/plain') && (e = this.data.getData('text/plain')) : (e = this.data.getData('Text'))), e ? e.replace(a, s) : null);
         }),
         (t.getHTML = function () {
             if (this.data.getData) {
@@ -60,7 +60,7 @@ e.exports = (function () {
             return this.data.hasOwnProperty('items') ? this.data.items.length : this.data.hasOwnProperty('mozItemCount') ? this.data.mozItemCount : this.data.files ? this.data.files.length : null;
         }),
         (t.getFiles = function () {
-            return this.data.items ? Array.prototype.slice.call(this.data.items).map(c).filter(a.thatReturnsArgument) : this.data.files ? Array.prototype.slice.call(this.data.files) : [];
+            return this.data.items ? Array.prototype.slice.call(this.data.items).map(c).filter(o.thatReturnsArgument) : this.data.files ? Array.prototype.slice.call(this.data.files) : [];
         }),
         (t.hasFiles = function () {
             return this.getFiles().length > 0;

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => _ });
 var r = n(255367),
     i = n(73800),
-    a = n(990547),
-    o = n(481060),
+    o = n(990547),
+    a = n(481060),
     s = n(213609),
     l = n(536442),
     c = n(39604),
@@ -21,8 +21,8 @@ function _(e) {
         []
     ),
     (0, s.Z)({
-        type: a.ImpressionTypes.VIEW,
-        name: a.ImpressionNames.HOTSPOT,
+        type: o.ImpressionTypes.VIEW,
+        name: o.ImpressionNames.HOTSPOT,
         properties: { hotspot_location: l.v6.CLIPS_CHANNEL_ATTACH_REMINDER }
     }),
     null == n)
@@ -34,13 +34,13 @@ function _(e) {
                       className: f.thumbnailStackContainer,
                       children: (0, r.jsx)(u.Z, {})
                   }),
-                  (0, r.jsx)(o.X6q, {
+                  (0, r.jsx)(a.X6q, {
                       className: f.header,
                       color: 'header-primary',
                       variant: 'heading-md/extrabold',
                       children: d.intl.format(d.t['+qxkzM'], { count: n.newClipIds.length })
                   }),
-                  (0, r.jsx)(o.Text, {
+                  (0, r.jsx)(a.Text, {
                       color: 'text-default',
                       className: f.__invalid_content,
                       variant: 'text-sm/medium',
@@ -48,14 +48,14 @@ function _(e) {
                   }),
                   (0, r.jsx)('div', {
                       className: f.buttonsContainer,
-                      children: (0, r.jsxs)(o.hE2, {
+                      children: (0, r.jsxs)(a.hE2, {
                           children: [
-                              (0, r.jsx)(o.zxk, {
+                              (0, r.jsx)(a.zxk, {
                                   variant: 'secondary',
                                   text: d.intl.string(d.t['7r5Z19']),
                                   onClick: p
                               }),
-                              (0, r.jsx)(o.zxk, {
+                              (0, r.jsx)(a.zxk, {
                                   variant: 'primary',
                                   text: d.intl.string(d.t.md4qKy),
                                   onClick: t

@@ -2,8 +2,8 @@ function r(e, t) {
     ((e.prototype = Object.create(t.prototype)), (e.prototype.constructor = e), (e.__proto__ = t));
 }
 var i = n(749791),
-    a = n(963956),
-    o = n(152477),
+    o = n(963956),
+    a = n(152477),
     s = n(65183),
     l = n(73800),
     c = n(606166);
@@ -38,10 +38,10 @@ var i = n(749791),
                                     y = b.size - 1,
                                     O = b
                                         .map(function (e, n) {
-                                            var i = o.encode(m, c, n),
+                                            var i = a.encode(m, c, n),
                                                 u = e.get('start'),
                                                 d = e.get('end');
-                                            return l.createElement(a, {
+                                            return l.createElement(o, {
                                                 key: i,
                                                 offsetKey: i,
                                                 block: t,
@@ -74,7 +74,7 @@ var i = n(749791),
                 return l.createElement(
                     'div',
                     {
-                        'data-offset-key': o.encode(m, 0, 0),
+                        'data-offset-key': a.encode(m, 0, 0),
                         className: c({
                             'public/DraftStyleDefault/block': !0,
                             'public/DraftStyleDefault/ltr': 'LTR' === d,

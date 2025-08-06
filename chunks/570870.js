@@ -1,8 +1,8 @@
 n.d(t, { Z: () => y });
 var r = n(255367),
     i = n(73800),
-    a = n(512722),
-    o = n.n(a),
+    o = n(512722),
+    a = n.n(o),
     s = n(442837),
     l = n(481060),
     c = n(10718),
@@ -18,9 +18,9 @@ var r = n(255367),
     b = n(547607);
 let y = (e) => {
     let t,
-        { commandType: n, commandTargetId: a, channel: y, guildId: O, onHeightUpdate: v, context: I } = e,
+        { commandType: n, commandTargetId: o, channel: y, guildId: O, onHeightUpdate: v, context: I } = e,
         T = (0, s.e7)([p.Z], () => p.Z.getGuild(null != O ? O : y.guild_id)),
-        S = (0, s.e7)([h.default], () => h.default.getUser(a)),
+        S = (0, s.e7)([h.default], () => h.default.getUser(o)),
         A = (0, f.Z)({
             user: S,
             guildId: null == T ? void 0 : T.id,
@@ -35,31 +35,31 @@ let y = (e) => {
         ),
         {
             commands: C,
-            sectionDescriptors: w,
-            loading: R
+            sectionDescriptors: R,
+            loading: P
         } = c.wi({
             context: N,
             filters: { commandTypes: [n] },
             options: { limit: g.lr },
             allowFetch: !0
         }),
-        { sections: P } = i.useMemo(() => {
+        { sections: w } = i.useMemo(() => {
             let e = {};
             return (
-                w.forEach((t) => {
+                R.forEach((t) => {
                     e[t.id] = t;
                 }),
                 { sections: e }
             );
-        }, [w]),
-        D = i.useRef(R);
+        }, [R]),
+        D = i.useRef(P);
     i.useEffect(() => {
-        R !== D.current && ((D.current = R), null == v || v());
-    }, [R, v]);
+        P !== D.current && ((D.current = P), null == v || v());
+    }, [P, v]);
     let L = i.useCallback(
         (e) => {
-            o()(null != y, 'menu item should not show if channel is null');
-            let t = P[e.applicationId],
+            a()(null != y, 'menu item should not show if channel is null');
+            let t = w[e.applicationId],
                 n = null != t ? (0, d.ky)(t) : void 0;
             return (0, r.jsx)(
                 l.sNh,
@@ -84,17 +84,17 @@ let y = (e) => {
                                 channel: y,
                                 guild: T
                             },
-                            commandTargetId: a
+                            commandTargetId: o
                         });
                     }
                 },
                 e.id
             );
         },
-        [y, T, a, P]
+        [y, T, o, w]
     );
     if (
-        (R
+        (P
             ? (t = (0, r.jsx)(
                   l.sNh,
                   {

@@ -1,5 +1,5 @@
 (n.d(t, {
-    C: () => w,
+    C: () => R,
     Z: () => C
 }),
     n(388685),
@@ -7,8 +7,8 @@
     n(781311));
 var r = n(255367),
     i = n(73800),
-    a = n(512722),
-    o = n.n(a),
+    o = n(512722),
+    a = n.n(o),
     s = n(442837),
     l = n(481060),
     c = n(131388),
@@ -56,7 +56,7 @@ function N(e) {
         () => {
             var t, n;
             let r = m.default.getCurrentUser();
-            o()(null != r, 'user cannot be null');
+            a()(null != r, 'user cannot be null');
             let i = h.ZP.getMember(e, r.id);
             return {
                 nickname: null != (t = null == i ? void 0 : i.nick) ? t : E.ZP.getName(r),
@@ -69,9 +69,9 @@ function N(e) {
 function C(e) {
     let { coverImageAsset: t, isPreview: n = !1 } = e,
         i = p.QK.useSetting(),
-        a = (0, b.n)() && i,
-        [o, s] = (0, _.Z)(t, a),
-        l = a
+        o = (0, b.n)() && i,
+        [a, s] = (0, _.Z)(t, o),
+        l = o
             ? (0, r.jsx)(d.Z, {
                   autoPlay: !0,
                   loop: !0,
@@ -86,7 +86,7 @@ function C(e) {
                   className: S.coverImage
               });
     return (0, r.jsx)('div', {
-        ref: o,
+        ref: a,
         className: S.coverImageContainer,
         children:
             null == s || n
@@ -98,18 +98,18 @@ function C(e) {
                   })
     });
 }
-function w(e) {
+function R(e) {
     var t, n;
-    let { guild: a, subscriptionsSettings: o } = e,
-        s = a.id,
+    let { guild: o, subscriptionsSettings: a } = e,
+        s = o.id,
         { nickname: d, nickcolor: _ } = N(s),
         { isTruncated: p, ExpandableTextContainer: h } = (0, y.s)(),
         m = () => (0, I.Z)({ guildId: s }),
-        g = (null != (n = null == o || null == (t = o.description) ? void 0 : t.trim().length) ? n : 0) > 0,
+        g = (null != (n = null == a || null == (t = a.description) ? void 0 : t.trim().length) ? n : 0) > 0,
         [E, b] = i.useState(1),
-        w = (0, c.Z)('(max-width: 1439px)'),
-        { selectedTab: R, isPhantomPreview: P } = (0, O.m)(),
-        D = R === v.y.GUILD_PRODUCTS_PREVIEW ? T.intl.string(T.t['LvXy/P']) : T.intl.string(T.t.XyqKh4),
+        R = (0, c.Z)('(max-width: 1439px)'),
+        { selectedTab: P, isPhantomPreview: w } = (0, O.m)(),
+        D = P === v.y.GUILD_PRODUCTS_PREVIEW ? T.intl.string(T.t['LvXy/P']) : T.intl.string(T.t.XyqKh4),
         L = (e) => {
             null != e && e.clientHeight > 30 && b(2);
         };
@@ -123,15 +123,15 @@ function w(e) {
             t
         );
     }
-    let k = g
+    let M = g
         ? (0, r.jsxs)(r.Fragment, {
               children: [
                   (0, r.jsx)(h, {
-                      lineClamp: w || 2 === E ? 2 : 3,
+                      lineClamp: R || 2 === E ? 2 : 3,
                       children: (0, r.jsx)(l.Text, {
                           variant: 'text-sm/normal',
                           color: 'text-default',
-                          children: null == o ? void 0 : o.description
+                          children: null == a ? void 0 : a.description
                       })
                   }),
                   p &&
@@ -143,7 +143,7 @@ function w(e) {
         : (0, r.jsx)(l.Text, {
               variant: 'text-sm/normal',
               color: 'text-default',
-              children: P ? D : T.intl.string(T.t['NY/FIS'])
+              children: w ? D : T.intl.string(T.t['NY/FIS'])
           });
     return (0, r.jsxs)('div', {
         className: S.container,
@@ -153,9 +153,9 @@ function w(e) {
                 children: [
                     (0, r.jsx)('div', {
                         children: (0, r.jsx)(f.Z, {
-                            guild: a,
+                            guild: o,
                             size: f.Z.Sizes.LARGER,
-                            iconSrc: null == a.icon || P ? (0, u.b)('server_products/storefront/default-guild-icon.jpg') : void 0
+                            iconSrc: null == o.icon || w ? (0, u.b)('server_products/storefront/default-guild-icon.jpg') : void 0
                         })
                     }),
                     (0, r.jsx)(l.LZC, {
@@ -170,7 +170,7 @@ function w(e) {
                                     variant: 'heading-xl/semibold',
                                     color: 'header-primary',
                                     lineClamp: 2,
-                                    children: P ? T.intl.string(T.t.rtgp7u) : T.intl.formatToPlainString(T.t.NZeik5, { guildName: a.name })
+                                    children: w ? T.intl.string(T.t.rtgp7u) : T.intl.formatToPlainString(T.t.NZeik5, { guildName: o.name })
                                 })
                             }),
                             (0, r.jsx)(l.LZC, { size: 8 }),
@@ -183,14 +183,14 @@ function w(e) {
                                 })
                             }),
                             (0, r.jsx)(l.LZC, { size: 9 }),
-                            k
+                            M
                         ]
                     })
                 ]
             }),
             (0, r.jsx)(C, {
-                coverImageAsset: null == o ? void 0 : o.cover_image_asset,
-                isPreview: P
+                coverImageAsset: null == a ? void 0 : a.cover_image_asset,
+                isPreview: w
             })
         ]
     });

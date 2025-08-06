@@ -1,8 +1,8 @@
 n.d(t, { Z: () => A });
 var r = n(255367),
     i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(481060),
     l = n(906732),
     c = n(201895),
@@ -69,33 +69,33 @@ function I(e, t) {
     );
 }
 function T(e) {
-    let { channel: t, textVariant: n, textClassName: a, iconClassName: f, hideText: m = !1, hideTooltip: y = !1, canTruncate: v = !0, showChannelName: T = !1 } = e,
+    let { channel: t, textVariant: n, textClassName: o, iconClassName: f, hideText: m = !1, hideTooltip: y = !1, canTruncate: v = !0, showChannelName: T = !1 } = e,
         S = (0, s.vjg)(s.Skl.ONLINE),
         A = (0, u.ZP)(t),
         N = t.isDM() || t.isGroupDM(),
         { enableTopNavButton: C } = (0, d.Cq)({ location: 'VoiceActivityStatus' }),
-        w = !C && T,
-        { analyticsLocations: R } = (0, l.ZP)(),
-        P = i.useCallback(() => {
+        R = !C && T,
+        { analyticsLocations: P } = (0, l.ZP)(),
+        w = i.useCallback(() => {
             (0, p.A)({
-                analyticsLocations: R,
+                analyticsLocations: P,
                 activityType: 'VOICE',
                 voiceChannelId: t.id
             });
-        }, [R, t.id]),
+        }, [P, t.id]),
         D = () =>
             y || N
                 ? (0, r.jsx)(_.Z, {
                       size: 'custom',
                       color: S,
                       channel: t,
-                      className: o()(b.icon, f)
+                      className: a()(b.icon, f)
                   })
                 : (0, r.jsx)(s.ua7, {
                       text: A,
                       'aria-label': (0, c.ZP)({ channel: t }),
                       delay: g.X,
-                      onTooltipShow: P,
+                      onTooltipShow: w,
                       children: (e) =>
                           (0, r.jsx)(
                               _.Z,
@@ -103,7 +103,7 @@ function T(e) {
                                   size: 'custom',
                                   color: S,
                                   channel: t,
-                                  className: o()(b.icon, f)
+                                  className: a()(b.icon, f)
                               })
                           )
                   }),
@@ -114,16 +114,16 @@ function T(e) {
             !m &&
                 (0, r.jsxs)(h.Z, {
                     variant: n,
-                    className: a,
+                    className: o,
                     canTruncate: v,
                     hideTooltip: y,
-                    children: [L(), w && null != A && ' ('.concat(A, ')')]
+                    children: [L(), R && null != A && ' ('.concat(A, ')')]
                 })
         ]
     });
 }
 function S(e) {
-    let { channel: t, textVariant: n, textClassName: i, iconClassName: a, hideText: l = !1, hideTooltip: c = !1, canTruncate: f = !0, showChannelName: p = !1 } = e,
+    let { channel: t, textVariant: n, textClassName: i, iconClassName: o, hideText: l = !1, hideTooltip: c = !1, canTruncate: f = !0, showChannelName: p = !1 } = e,
         h = (0, s.vjg)(s.Skl.ONLINE),
         g = (0, u.ZP)(t),
         y = t.isDM() || t.isGroupDM(),
@@ -136,7 +136,7 @@ function S(e) {
             size: 'custom',
             color: h,
             channel: t,
-            className: o()(b.icon, a)
+            className: a()(b.icon, o)
         }),
         text: T,
         tooltipText: c ? void 0 : I,

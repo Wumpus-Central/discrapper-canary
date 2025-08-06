@@ -105,7 +105,7 @@ function d(t, e, a, r, _) {
 }
 ('undefined' != typeof window && window.Proxy && window.Reflect && (u = new Proxy(u, { get: (t, e, a) => ('map' === e && console.error(l), Reflect.get(t, e, a)) })), /[1-9][0-9]{12}/.test(Date.now().toString()));
 let N = {};
-function f(t) {
+function A(t) {
     let e = N[t];
     if (e) return e;
     let a = window.document,
@@ -119,11 +119,11 @@ function f(t) {
         } catch (t) {}
     return (N[t] = r.bind(window));
 }
-function A(...t) {
-    return f('requestAnimationFrame')(...t);
+function f(...t) {
+    return A('requestAnimationFrame')(...t);
 }
 function T(...t) {
-    return f('setTimeout')(...t);
+    return A('setTimeout')(...t);
 }
 var p = (((n = p || {})[(n['2D'] = 0)] = '2D'), (n[(n.WebGL = 1)] = 'WebGL'), (n[(n.WebGL2 = 2)] = 'WebGL2'), n);
 let L = (t) =>
@@ -482,7 +482,7 @@ class U {
             },
             I = (e) => {
                 if (this.windows.length) {
-                    if (l && e - l < s) return void A(I);
+                    if (l && e - l < s) return void f(I);
                     ((l = e),
                         u(c).forEach((e) => {
                             if (!this.mirror.hasNode(e)) return;
@@ -522,26 +522,26 @@ class U {
                                     });
                             }
                         }),
-                        A(I));
+                        f(I));
                 }
             };
-        return A(I);
+        return f(I);
     }
     startPendingCanvasMutationFlusher() {
-        A(() => this.flushPendingCanvasMutations());
+        f(() => this.flushPendingCanvasMutations());
     }
     startRAFTimestamping() {
         let t = (e) => {
-            ((this.rafStamps.latestId = e), A(t));
+            ((this.rafStamps.latestId = e), f(t));
         };
-        A(t);
+        f(t);
     }
     flushPendingCanvasMutations() {
         (this.pendingCanvasMutations.forEach((t, e) => {
             let a = this.mirror.getId(e);
             this.flushPendingCanvasMutationFor(e, a);
         }),
-            A(() => this.flushPendingCanvasMutations()));
+            f(() => this.flushPendingCanvasMutations()));
     }
     flushPendingCanvasMutationFor(t, e) {
         if (this.frozen || this.locked) return;

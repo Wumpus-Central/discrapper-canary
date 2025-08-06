@@ -2,8 +2,8 @@ n.d(t, { Z: () => u });
 var r = n(255367);
 n(73800);
 var i = n(562129),
-    a = n(871499);
-function o(e, t, n) {
+    o = n(871499);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -27,7 +27,7 @@ function s(e) {
                 })
             )),
             r.forEach(function (t) {
-                o(e, t, n[t]);
+                a(e, t, n[t]);
             }));
     }
     return e;
@@ -38,8 +38,8 @@ function l(e, t) {
         r,
         i = c(e, t);
     if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
@@ -48,16 +48,16 @@ function c(e, t) {
     var n,
         r,
         i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
 function u(e) {
-    var { isActivityActive: t, onMouseEnter: n, onMouseLeave: o, onClick: c } = e,
+    var { isActivityActive: t, onMouseEnter: n, onMouseLeave: a, onClick: c } = e,
         u = l(e, ['isActivityActive', 'onMouseEnter', 'onMouseLeave', 'onClick']);
     let { Component: d, events: f, play: _ } = (0, i.Z)('ActivityButton');
     return (0, r.jsx)(
-        a.d,
+        o.d,
         s(
             {
                 isTrayButton: !0,
@@ -68,7 +68,7 @@ function u(e) {
                     (null == n || n(e), f.onMouseEnter());
                 },
                 onMouseLeave: (e) => {
-                    (null == o || o(e), f.onMouseLeave());
+                    (null == a || a(e), f.onMouseLeave());
                 },
                 onClick: (e) => {
                     (null == c || c(e), _());

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => h });
 var r,
     i = n(913527),
-    a = n.n(i),
-    o = n(442837),
+    o = n.n(i),
+    a = n(442837),
     s = n(570140),
     l = n(255078),
     c = n(594174),
@@ -27,11 +27,11 @@ function _(e) {
         var n;
         let e = l.Z.createFromServer(t);
         if (null == (0, u.Af)(e) || (null == (n = e.metadata) ? void 0 : n.ended_at) == null) return;
-        let r = a()(e.metadata.ended_at);
-        a()().isBetween(r.clone().add(4, 'days'), r.clone().add(11, 'days')) && (f = !0);
+        let r = o()(e.metadata.ended_at);
+        o()().isBetween(r.clone().add(4, 'days'), r.clone().add(11, 'days')) && (f = !0);
     }
 }
-class p extends (r = o.ZP.Store) {
+class p extends (r = a.ZP.Store) {
     shouldShowReactivateNotice() {
         let e = c.default.getCurrentUser();
         return !(0, u.I5)(e) && f;

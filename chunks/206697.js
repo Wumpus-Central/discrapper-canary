@@ -1,8 +1,8 @@
 n.d(t, { w: () => v });
 var r = n(255367),
     i = n(73800),
-    a = n(657707),
-    o = n(793030),
+    o = n(657707),
+    a = n(793030),
     s = n(755721),
     l = n(481060),
     c = n(100527),
@@ -63,7 +63,7 @@ function v() {
                           color: 'text-default',
                           children: m.intl.string(m.t.erEf2t)
                       }),
-                      (0, r.jsx)(o.xv, {
+                      (0, r.jsx)(a.xv, {
                           variant: 'text-md/medium',
                           color: 'text-muted',
                           children: m.intl.string(m.t.NaRCXV)
@@ -88,7 +88,7 @@ function v() {
                               color: 'text-default',
                               children: m.intl.string(m.t.w4DRbW)
                           }),
-                          (0, r.jsx)(o.xv, {
+                          (0, r.jsx)(a.xv, {
                               variant: 'text-md/medium',
                               color: 'text-muted',
                               children: m.intl.string(m.t.F6u3Ex)
@@ -116,11 +116,11 @@ function I() {
     return (0, r.jsxs)('div', {
         className: g.upsellContainer,
         children: [
-            (0, r.jsx)(a.SrA, {
+            (0, r.jsx)(o.SrA, {
                 size: 'md',
                 color: u.JX.PREMIUM_TIER_2
             }),
-            (0, r.jsx)(o.xv, {
+            (0, r.jsx)(a.xv, {
                 variant: 'text-xs/medium',
                 color: 'header-primary',
                 className: g.upsellText,

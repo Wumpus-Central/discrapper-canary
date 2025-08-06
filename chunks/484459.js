@@ -1,8 +1,8 @@
 n.d(t, { Z: () => _ });
 var r = n(570140),
     i = n(232567),
-    a = n(220082),
-    o = n(275759),
+    o = n(220082),
+    a = n(275759),
     s = n(365943),
     l = n(592125),
     c = n(271383),
@@ -17,17 +17,17 @@ function _(e, t) {
         N = Date.now() - (null != (h = null == A ? void 0 : A.fetchEndedAt) ? h : 0) >= f;
     if (((null == A || null == (n = A.fetchError) ? void 0 : n.status) === 404 || (null == A || null == (_ = A.fetchError) ? void 0 : _.status) === 429) && !N) return Promise.resolve();
     let C = u.Z.getGuildMemberProfile(e, v),
-        w = u.Z.getMutualGuilds(e),
-        R = u.Z.getMutualFriends(e),
-        P = u.Z.getMutualFriendsCount(e),
-        D = null == R && b,
-        L = null == P && E,
-        x = (null == w && g) || D || L,
-        k = null == v ? null == A : null == C,
-        j = !k && (N || x);
-    if (!k && !j) return Promise.resolve();
-    ((0, s.t)(), null != t && (0, a.vM)(t));
-    let M = {
+        R = u.Z.getMutualGuilds(e),
+        P = u.Z.getMutualFriends(e),
+        w = u.Z.getMutualFriendsCount(e),
+        D = null == P && b,
+        L = null == w && E,
+        x = (null == R && g) || D || L,
+        M = null == v ? null == A : null == C,
+        k = !M && (N || x);
+    if (!M && !k) return Promise.resolve();
+    ((0, s.t)(), null != t && (0, o.vM)(t));
+    let j = {
         type: m,
         withMutualGuilds: g,
         withMutualFriends: b,
@@ -38,14 +38,14 @@ function _(e, t) {
         connectionsRoleId:
             null == v ||
             null ==
-                (p = (0, o.Ur)({
+                (p = (0, a.Ur)({
                     guildMember: c.ZP.getMember(v, e),
                     channel: l.Z.getChannel(I)
                 }))
                 ? void 0
                 : p.id
     };
-    if (y) return (r.Z.wait(() => (0, i.In)(e, M, d.Z)), Promise.resolve());
-    let U = (0, i.In)(e, M, d.Z);
-    return j && !O ? Promise.resolve() : U;
+    if (y) return (r.Z.wait(() => (0, i.In)(e, j, d.Z)), Promise.resolve());
+    let U = (0, i.In)(e, j, d.Z);
+    return k && !O ? Promise.resolve() : U;
 }

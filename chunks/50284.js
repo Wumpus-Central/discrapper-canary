@@ -1,8 +1,8 @@
 (n.d(t, { Z: () => p }), n(642613), n(583741));
 var r = n(544891),
     i = n(710845),
-    a = n(569471),
-    o = n(346479),
+    o = n(569471),
+    a = n(346479),
     s = n(592125),
     l = n(375954),
     c = n(306680),
@@ -25,7 +25,7 @@ async function p(e, t) {
         d.default.compare(e.id, h) > 0 && (0, c.Ex)(e, n) && m++;
     });
     let g = s.Z.getChannel(e);
-    (null != g && g.isThread() && (g.isArchivedThread() && (await o.Z.unarchiveThread(g, !1)), a.Z.hasJoined(e) || (await o.Z.joinThread(g, 'Mark Unread'))),
+    (null != g && g.isThread() && (g.isArchivedThread() && (await a.Z.unarchiveThread(g, !1)), o.Z.hasJoined(e) || (await a.Z.joinThread(g, 'Mark Unread'))),
         _.log('Marking unread', {
             channelId: e,
             messageId: t

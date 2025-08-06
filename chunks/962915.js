@@ -14,10 +14,10 @@ var i = n(255367),
 let h = (e) => {
         let { transitionState: t, onClose: n, premiumSubscription: l, premiumType: o, churnDiscount: c, planId: d, renewalInvoice: m, renewalInvoiceDetails: p, errorOnCancel: h, errorOnRedeem: b, setActiveStep: x, activeStep: _ } = e,
             { analyticsLocations: j } = (0, a.ZP)(s.Z.USER_SETTINGS),
-            [C, E] = r.useState(f(_));
+            [E, C] = r.useState(f(_));
         return (
             (0, r.useEffect)(() => {
-                E(f(_));
+                C(f(_));
             }, [_]),
             (0, i.jsx)(u.D.Provider, {
                 value: {
@@ -53,7 +53,7 @@ let h = (e) => {
                             }, 1000);
                         })
                 },
-                children: C
+                children: E
             })
         );
     },

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => b });
 var r = n(255367),
     i = n(442837),
-    a = n(914010),
-    o = n(526167),
+    o = n(914010),
+    a = n(526167),
     s = n(403182),
     l = n(63063),
     c = n(7366),
@@ -45,8 +45,8 @@ function m(e, t) {
         r,
         i = g(e, t);
     if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
@@ -55,22 +55,22 @@ function g(e, t) {
     var n,
         r,
         i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
 let E = 2.1,
     b = (e) => {
         var { handleLearnMore: t } = e,
             n = m(e, ['handleLearnMore']);
-        let p = (0, i.e7)([a.Z], () => a.Z.getGuildId()),
+        let p = (0, i.e7)([o.Z], () => o.Z.getGuildId()),
             g = (0, s.iL)({
                 guildId: p,
                 onClick: () => {
                     window.open(l.Z.getArticleURL(u.BhN.NITRO_FAQ), '_blank');
                 }
             }),
-            b = (0, o.rO)() ? f.Z : _.Z;
+            b = (0, a.rO)() ? f.Z : _.Z;
         return (0, r.jsx)(
             c.Z,
             h(

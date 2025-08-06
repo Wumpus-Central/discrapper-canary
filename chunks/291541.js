@@ -1,8 +1,8 @@
 (n.d(t, { y: () => m }), n(388685));
 var r = n(255367),
     i = n(73800),
-    a = n(481060),
-    o = n(907862),
+    o = n(481060),
+    a = n(907862),
     s = n(453707),
     l = n(315416),
     c = n(715720);
@@ -64,8 +64,8 @@ function p(e, t) {
         r,
         i = h(e, t);
     if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
@@ -74,8 +74,8 @@ function h(e, t) {
     var n,
         r,
         i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
 let m = {
@@ -93,7 +93,7 @@ let m = {
                 return (0, r.jsxs)('div', {
                     children: [
                         (0, r.jsx)(
-                            o.J2,
+                            a.J2,
                             _(d({}, m), {
                                 size: h,
                                 targetElementRef: b,
@@ -126,7 +126,7 @@ let m = {
                                     : void 0
                             })
                         ),
-                        (0, r.jsx)(a.zxk, {
+                        (0, r.jsx)(o.zxk, {
                             variant: 'primary',
                             text: 'Toggle Popover',
                             buttonRef: b,
@@ -276,7 +276,7 @@ let m = {
                 return (0, r.jsxs)('div', {
                     children: [
                         (0, r.jsx)(
-                            o.Mb,
+                            a.Mb,
                             _(d({}, e), {
                                 targetElementRef: s,
                                 shouldShow: t,
@@ -291,7 +291,7 @@ let m = {
                                 }
                             })
                         ),
-                        (0, r.jsx)(a.zxk, {
+                        (0, r.jsx)(o.zxk, {
                             variant: 'primary',
                             text: 'Show Video Popover',
                             buttonRef: s,
@@ -373,7 +373,7 @@ let m = {
                     ];
                 return (0, r.jsxs)('div', {
                     children: [
-                        (0, r.jsx)(o.e4, {
+                        (0, r.jsx)(a.e4, {
                             targetElementRef: u,
                             shouldShow: n,
                             onRequestClose: () => l(!1),
@@ -384,7 +384,7 @@ let m = {
                             },
                             onStepChange: () => {}
                         }),
-                        (0, r.jsx)(a.zxk, {
+                        (0, r.jsx)(o.zxk, {
                             variant: 'primary',
                             text: 'Show Multi-Step',
                             buttonRef: u,

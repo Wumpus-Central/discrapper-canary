@@ -1,8 +1,8 @@
 (n.d(t, { e: () => h }), n(388685));
 var r = n(73800),
     i = n(442837),
-    a = n(353926),
-    o = n(335131),
+    o = n(353926),
+    a = n(335131),
     s = n(597688),
     l = n(228624);
 function c(e, t, n) {
@@ -60,7 +60,7 @@ function f(e, t) {
 let _ = 600000,
     p = 600000;
 function h(e, t, n) {
-    let c = (0, i.e7)([a.Z], () => a.Z.hasLoadedExperiments),
+    let c = (0, i.e7)([o.Z], () => o.Z.hasLoadedExperiments),
         d = null == e ? void 0 : e.includeBundles,
         h = (0, l.hv)('useMaybeFetchCollectiblesCategoriesShared'),
         [m, g, E, b, y, O, v] = (0, i.Wu)([s.Z], () => {
@@ -77,9 +77,9 @@ function h(e, t, n) {
                     variantsReturnStyle: h,
                     skipNumCategories: v
                 }),
-                a = !(0, o.oc)(g, i),
+                o = !(0, a.oc)(g, i),
                 s = Date.now() - y < _;
-            (a || !s) && (0, o.F$)(i, t, n);
+            (o || !s) && (0, a.F$)(i, t, n);
         }, [c, m, g, y, e, E, d, b, h, t, n, v]),
         {
             isFetching: m,
@@ -90,7 +90,7 @@ function h(e, t, n) {
                     includeBundles: d,
                     skipNumCategories: v
                 });
-                (0, o.F$)(t, void 0, n);
+                (0, a.F$)(t, void 0, n);
             }, [e, d, n, v])
         }
     );

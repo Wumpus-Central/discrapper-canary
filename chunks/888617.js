@@ -1,8 +1,8 @@
 n.d(t, { Z: () => s });
 var r = n(990547),
     i = n(213609),
-    a = n(541099),
-    o = n(312871);
+    o = n(541099),
+    a = n(312871);
 function s(e) {
     let { sectionName: t, numItems: n, numVisibleItems: s } = e,
         l = () => {
@@ -13,13 +13,13 @@ function s(e) {
                     section_name: t,
                     num_items: n,
                     num_visible_items: s,
-                    source: a.Z.entrypoint()
+                    source: o.Z.entrypoint()
                 }
             });
         },
         c = 1;
     return {
-        trackSectionImpressionRef: (0, o.Z)({
+        trackSectionImpressionRef: (0, a.Z)({
             onVisible: l,
             threshold: c
         })

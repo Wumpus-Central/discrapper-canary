@@ -4,9 +4,9 @@ function i(e, t) {
     let n = e.offsetTop,
         i = e.offsetParent;
     for (; null != i; ) {
-        var a;
+        var o;
         if (i === t || !(0, r.k)(i, HTMLElement)) break;
-        ((n += null != (a = i.offsetTop) ? a : 0), (i = i.offsetParent));
+        ((n += null != (o = i.offsetTop) ? o : 0), (i = i.offsetParent));
     }
     return n;
 }

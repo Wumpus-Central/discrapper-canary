@@ -1,8 +1,8 @@
 n.d(t, { Z: () => l });
 var r = n(91896),
     i = n(699516),
-    a = n(453542);
-function o(e, t, n) {
+    o = n(453542);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -26,7 +26,7 @@ function s(e) {
                 })
             )),
             r.forEach(function (t) {
-                o(e, t, n[t]);
+                a(e, t, n[t]);
             }));
     }
     return e;
@@ -41,6 +41,6 @@ function l() {
             num_game_outgoing_requests: r.Z.getPendingOutgoingCount(),
             num_game_incoming_requests: r.Z.getPendingIncomingCount()
         },
-        (0, a.X)()
+        (0, o.X)()
     );
 }

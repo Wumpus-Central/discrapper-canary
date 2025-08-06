@@ -1,8 +1,8 @@
 n.d(t, { Z: () => A });
 var r = n(255367),
     i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(442837),
     l = n(481060),
     c = n(367907),
@@ -38,14 +38,14 @@ function T(e, t) {
     );
 }
 function S(e) {
-    let { channel: t, message: n, replyChainLength: a } = e;
-    function o() {
+    let { channel: t, message: n, replyChainLength: o } = e;
+    function a() {
         ((0, _.A6)(t.id), (0, m.R6)(t, n, 'Reply Chain Nudge'));
     }
-    let s = i.useRef(a);
+    let s = i.useRef(o);
     return (
         i.useEffect(() => {
-            s.current = a;
+            s.current = o;
         }),
         i.useEffect(() => {
             (0, c.yw)(b.rMx.THREAD_NUDGE_SHOWN, {
@@ -56,7 +56,7 @@ function S(e) {
             });
         }, [t]),
         (0, r.jsxs)(l.P3F, {
-            onClick: o,
+            onClick: a,
             className: O.threadSuggestionBar,
             focusProps: {
                 offset: {
@@ -69,7 +69,7 @@ function S(e) {
                     color: 'header-secondary',
                     className: O.text,
                     variant: 'text-sm/normal',
-                    children: y.intl.format(y.t.B3V0FB, { count: Math.min(I, a + 1) })
+                    children: y.intl.format(y.t.B3V0FB, { count: Math.min(I, o + 1) })
                 }),
                 (0, r.jsx)(l.Text, {
                     color: 'text-link',
@@ -83,18 +83,18 @@ function S(e) {
 }
 function A(e) {
     let { reply: t, chatInputType: n } = e,
-        { channel: i, message: a, shouldMention: s, showMentionToggle: c } = t,
-        { guildId: m, nick: g, colorString: I, colorStrings: A, colorRoleName: N, authorId: C, displayNameStyles: w } = (0, d.ZP)(a),
-        R = (0, f.X7)(m, C, A),
-        P = (0, u.j)({ displayNameStyles: w }),
-        D = T(i, a),
-        L = (0, h.NE)(i, a),
+        { channel: i, message: o, shouldMention: s, showMentionToggle: c } = t,
+        { guildId: m, nick: g, colorString: I, colorStrings: A, colorRoleName: N, authorId: C, displayNameStyles: R } = (0, d.ZP)(o),
+        P = (0, f.X7)(m, C, A),
+        w = (0, u.j)({ displayNameStyles: R }),
+        D = T(i, o),
+        L = (0, h.NE)(i, o),
         x = n.showThreadPromptOnReply && D >= v && L,
-        k = () => (0, p.uL)(b.Z5c.CHANNEL(i.getGuildId(), i.id, a.id));
-    function j(e) {
+        M = () => (0, p.uL)(b.Z5c.CHANNEL(i.getGuildId(), i.id, o.id));
+    function k(e) {
         (e.stopPropagation(), (0, _.qx)(i.id, !s));
     }
-    function M(e) {
+    function j(e) {
         (e.stopPropagation(), (0, _.A6)(i.id));
     }
     return (0, r.jsx)('div', {
@@ -106,7 +106,7 @@ function A(e) {
                     className: O.replyBar,
                     children: [
                         (0, r.jsx)(l.P3F, {
-                            onClick: k,
+                            onClick: M,
                             focusProps: {
                                 offset: {
                                     top: -8,
@@ -117,7 +117,7 @@ function A(e) {
                             },
                             children: (0, r.jsx)(l.Text, {
                                 color: 'header-secondary',
-                                className: o()(O.text, O.replyLabel),
+                                className: a()(O.text, O.replyLabel),
                                 variant: 'text-sm/normal',
                                 children: y.intl.format(y.t['8E4Gxc'], {
                                     userHook: (e, t) =>
@@ -127,9 +127,9 @@ function A(e) {
                                                 className: O.name,
                                                 name: g,
                                                 colorString: I,
-                                                colorStrings: R,
+                                                colorStrings: P,
                                                 roleName: N,
-                                                nameTextClassName: P
+                                                nameTextClassName: w
                                             },
                                             t
                                         )
@@ -145,15 +145,15 @@ function A(e) {
                                             (0, r.jsx)(l.ua7, {
                                                 text: s ? y.intl.string(y.t.DH2o6e) : y.intl.string(y.t.utGGIS),
                                                 children: (e) => {
-                                                    let { onMouseEnter: t, onMouseLeave: n, onFocus: i, onBlur: a } = e;
+                                                    let { onMouseEnter: t, onMouseLeave: n, onFocus: i, onBlur: o } = e;
                                                     return (0, r.jsx)(l.P3F, {
                                                         role: 'switch',
                                                         'aria-checked': s,
-                                                        onClick: j,
+                                                        onClick: k,
                                                         onMouseEnter: t,
                                                         onMouseLeave: n,
                                                         onFocus: i,
-                                                        onBlur: a,
+                                                        onBlur: o,
                                                         children: (0, r.jsxs)(l.Text, {
                                                             variant: 'text-sm/bold',
                                                             color: s ? 'text-link' : 'text-muted',
@@ -177,7 +177,7 @@ function A(e) {
                                             })
                                         ]
                                     }),
-                                (0, r.jsx)(E.B, { onClick: M })
+                                (0, r.jsx)(E.B, { onClick: j })
                             ]
                         })
                     ]
@@ -185,7 +185,7 @@ function A(e) {
                 x &&
                     (0, r.jsx)(S, {
                         channel: i,
-                        message: a,
+                        message: o,
                         replyChainLength: D
                     })
             ]

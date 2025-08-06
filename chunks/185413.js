@@ -1,5 +1,5 @@
 (n.d(t, {
-    U: () => M,
+    U: () => j,
     default: () => B,
     t: () => G
 }),
@@ -12,8 +12,8 @@
     n(539854));
 var r = n(255367),
     i = n(73800),
-    a = n(442837),
-    o = n(755721),
+    o = n(442837),
+    a = n(755721),
     s = n(481060),
     l = n(741361),
     c = n(794433),
@@ -48,7 +48,7 @@ function C(e, t, n) {
         e
     );
 }
-function w(e) {
+function R(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -64,24 +64,24 @@ function w(e) {
     }
     return e;
 }
-function R(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i = P(e, t);
-    if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
-    }
-    return i;
-}
 function P(e, t) {
     if (null == e) return {};
     var n,
         r,
+        i = w(e, t);
+    if (Object.getOwnPropertySymbols) {
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+    }
+    return i;
+}
+function w(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
         i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
 function D(e, t) {
@@ -101,32 +101,32 @@ function L(e) {
 function x(e) {
     return e && 'undefined' != typeof Symbol && e.constructor === Symbol ? 'symbol' : typeof e;
 }
-let k = (0, d.hQ)();
-function j(e, t) {
+let M = (0, d.hQ)();
+function k(e, t) {
     return t ? e.slice(1) : e;
 }
-function M(e) {
+function j(e) {
     let t,
-        { guild: n, channel: o, permission: s, pendingAdditions: l, setPendingAdditions: u, isStageChannel: d = null != o && o.isGuildStageVoice(), description: f } = e,
+        { guild: n, channel: a, permission: s, pendingAdditions: l, setPendingAdditions: u, isStageChannel: d = null != a && a.isGuildStageVoice(), description: f } = e,
         [_, m] = i.useState(!1),
         [g, E] = i.useState(''),
-        T = (0, a.e7)([h.Z], () => h.Z.getSortedRoles(n.id));
+        T = (0, o.e7)([h.Z], () => h.Z.getSortedRoles(n.id));
     function S(e) {
-        let t = j(g.trim(), _);
+        let t = k(g.trim(), _);
         return RegExp(''.concat(y.Z.escape(t)), 'i').test(e);
     }
-    let A = (0, a.Wu)([p.ZP], () => p.ZP.getMemberIds(n.id));
-    _ ? (t = []) : d ? (t = O.Wx(n, T, o, s, S)) : 0 === (t = O.ik(n, T, o, s, S)).length && '' === g.trim() && 1 === T.length && (t = O.aq());
-    let N = O.iI(A, o, n, s, S);
+    let A = (0, o.Wu)([p.ZP], () => p.ZP.getMemberIds(n.id));
+    _ ? (t = []) : d ? (t = O.Wx(n, T, a, s, S)) : 0 === (t = O.ik(n, T, a, s, S)).length && '' === g.trim() && 1 === T.length && (t = O.aq());
+    let N = O.iI(A, a, n, s, S);
     function C(e) {
         let t = e.trim(),
             r = '@' === t.charAt(0);
-        (b.Z.requestMembers(n.id, j(t, r), I.EQ), E(e), m(r));
+        (b.Z.requestMembers(n.id, k(t, r), I.EQ), E(e), m(r));
     }
-    function P(e) {
+    function w(e) {
         let t = (0, v.G)(e);
         u((n) => {
-            let r = w({}, n);
+            let r = R({}, n);
             if (t in r) delete r[t];
             else {
                 let n;
@@ -154,21 +154,21 @@ function M(e) {
     function D(e) {
         u((t) => {
             let { [e]: n } = t;
-            return R(t, [e].map(L));
+            return P(t, [e].map(L));
         });
     }
-    let { placeholderText: x, hintText: k, renderEmptyText: M } = U();
+    let { placeholderText: x, hintText: M, renderEmptyText: j } = U();
     return (0, r.jsx)(G, {
         pendingAdditions: l,
         query: g,
         onQueryChange: C,
-        onClickRow: P,
+        onClickRow: w,
         onRemovePendingAddition: D,
         roles: t,
         members: N,
         placeholderText: x,
-        hintText: k,
-        renderEmptyText: M,
+        hintText: M,
+        renderEmptyText: j,
         isStageChannel: d,
         description: f
     });
@@ -181,7 +181,7 @@ function U() {
     };
 }
 function G(e) {
-    let { listClassName: t, pendingAdditions: n, query: i, onQueryChange: a, onClickRow: o, onRemovePendingAddition: l, roles: c, members: u, placeholderText: d, hintText: f, renderEmptyText: _, isStageChannel: p, focusSearchAfterReady: h, isReady: m, description: g } = e,
+    let { listClassName: t, pendingAdditions: n, query: i, onQueryChange: o, onClickRow: a, onRemovePendingAddition: l, roles: c, members: u, placeholderText: d, hintText: f, renderEmptyText: _, isStageChannel: p, focusSearchAfterReady: h, isReady: m, description: g } = e,
         E = () => {
             let e = g;
             return (null == e && p && (e = A.intl.string(A.t.f7VbhI)), null == e || '' === e)
@@ -201,8 +201,8 @@ function G(e) {
                 listClassName: t,
                 pendingAdditions: n,
                 query: i,
-                onQueryChange: a,
-                onClickRow: o,
+                onQueryChange: o,
+                onClickRow: a,
                 onRemovePendingAddition: l,
                 roles: c,
                 members: u,
@@ -221,8 +221,8 @@ function B(e) {
     let { transitionState: t, onClose: n, channelId: l, newChannel: c, inSettings: d } = e,
         [p, h] = i.useState(!1),
         [E, b] = i.useState({}),
-        y = (0, a.e7)([_.Z], () => _.Z.getChannel(l), [l]),
-        O = (0, a.e7)([m.Z], () => m.Z.getGuild(null == y ? void 0 : y.getGuildId()));
+        y = (0, o.e7)([_.Z], () => _.Z.getChannel(l), [l]),
+        O = (0, o.e7)([m.Z], () => m.Z.getGuild(null == y ? void 0 : y.getGuildId()));
     if (
         (i.useEffect(() => {
             g.default.track(T.rMx.OPEN_MODAL, { type: 'Grant Channel Access' });
@@ -244,7 +244,7 @@ function B(e) {
     return (0, r.jsxs)(s.Y0X, {
         transitionState: t,
         size: s.CgR.SMALL,
-        'aria-labelledby': k,
+        'aria-labelledby': M,
         className: N.modalRoot,
         parentComponent: 'AddMembersModal',
         children: [
@@ -255,7 +255,7 @@ function B(e) {
                 className: N.header,
                 children: [
                     (0, r.jsx)(s.X6q, {
-                        id: k,
+                        id: M,
                         variant: 'heading-xl/semibold',
                         children: A.intl.string(A.t.dMJ3Y2)
                     }),
@@ -274,7 +274,7 @@ function B(e) {
                     })
                 ]
             }),
-            (0, r.jsx)(M, {
+            (0, r.jsx)(j, {
                 guild: O,
                 channel: y,
                 permission: y.accessPermissions,
@@ -297,11 +297,11 @@ function B(e) {
                                         loading: p
                                     })
                                 }),
-                                (0, r.jsx)(o.zx, {
-                                    look: o.zx.Looks.LINK,
-                                    color: o.zx.Colors.TRANSPARENT,
+                                (0, r.jsx)(a.zx, {
+                                    look: a.zx.Looks.LINK,
+                                    color: a.zx.Colors.TRANSPARENT,
                                     onClick: n,
-                                    size: o.zx.Sizes.SMALL,
+                                    size: a.zx.Sizes.SMALL,
                                     children: A.intl.string(A.t['ETE/oK'])
                                 })
                             ]

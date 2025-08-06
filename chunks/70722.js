@@ -1,6 +1,6 @@
 n.d(t, {
-    C7: () => o,
-    Ec: () => a,
+    C7: () => a,
+    Ec: () => o,
     T6: () => c,
     ZM: () => p,
     c5: () => _,
@@ -17,8 +17,8 @@ var r = n(214627),
     i = (function (e) {
         return ((e.BLACK_SCREEN = 'BLACK_SCREEN'), (e.BLURRY = 'BLURRY'), (e.LAGGING = 'LAGGING'), (e.OUT_OF_SYNC = 'OUT_OF_SYNC'), (e.AUDIO_MISSING = 'AUDIO_MISSING'), (e.AUDIO_POOR = 'AUDIO_POOR'), (e.GAME_ISSUE = 'GAME_ISSUE'), (e.STREAM_STOPPED = 'STREAM_STOPPED'), (e.NO_ISSUE = 'NO_ISSUE'), (e.OTHER = 'OTHER'), (e.VIBES_OFF = 'VIBES_OFF'), e);
     })({});
-let a = '>=19.0.0',
-    o = '>=22.0.0',
+let o = '>=19.0.0',
+    a = '>=22.0.0',
     s = '>=22.0.0',
     l = '>=24.0.0',
     c = '>=10.0.17763',

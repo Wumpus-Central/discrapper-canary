@@ -13,12 +13,12 @@ function i(e, t, n) {
         e
     );
 }
-let a = (e) => ('*' === e.charAt(e.length - 1) ? r.dQ.PrefixMatch : r.dQ.ExactMatch);
-class o {
+let o = (e) => ('*' === e.charAt(e.length - 1) ? r.dQ.PrefixMatch : r.dQ.ExactMatch);
+class a {
     _internalAdd(e, t, n) {
         let r = e.charAt(0),
             i = this.suffix[r];
-        (null == i && ((i = new o()), (this.suffix[r] = i), null != n ? (i.value = n.slice(0, n.length - e.length + 1)) : (i.value = r)), e.length > 1 && '*' !== e.charAt(1) ? i._internalAdd(e.substring(1), t, null != n ? n : e) : ((i.strategy = a(t)), (i.isWord = !0)));
+        (null == i && ((i = new a()), (this.suffix[r] = i), null != n ? (i.value = n.slice(0, n.length - e.length + 1)) : (i.value = r)), e.length > 1 && '*' !== e.charAt(1) ? i._internalAdd(e.substring(1), t, null != n ? n : e) : ((i.strategy = o(t)), (i.isWord = !0)));
     }
     add(e) {
         this._internalAdd(e, e);
@@ -36,30 +36,30 @@ class s {
         let t = this.trie,
             n = null,
             i = null,
-            a = {};
+            o = {};
         for (let l = 0; l <= e.length; l++)
             if (((n = e.charAt(l)), (t = null != (i = t.suffix[n]) ? i : null != this.trie.suffix[n] ? this.trie.suffix[n] : this.trie).isWord)) {
-                var o, s;
+                var a, s;
                 let n = t.strategy,
-                    i = l + 1 - (null != (s = null == (o = t.value) ? void 0 : o.length) ? s : 0),
+                    i = l + 1 - (null != (s = null == (a = t.value) ? void 0 : a.length) ? s : 0),
                     c = l;
                 if ((0, r.BD)(e, i, c, n)) {
                     let t = (0, r.jO)(e, i, c, n);
-                    (null == a[t.start] || a[t.start].end < t.end) && (a[t.start] = t);
+                    (null == o[t.start] || o[t.start].end < t.end) && (o[t.start] = t);
                 }
             }
-        return a;
+        return o;
     }
     addWord(e) {
-        (null == this.trie && (this.trie = new o()), this.trie.add(e));
+        (null == this.trie && (this.trie = new a()), this.trie.add(e));
     }
     addWords(e) {
         e.forEach((e) => this.addWord(e));
     }
     clear() {
-        this.trie = new o();
+        this.trie = new a();
     }
     constructor() {
-        (i(this, 'trie', void 0), (this.trie = new o()));
+        (i(this, 'trie', void 0), (this.trie = new a()));
     }
 }

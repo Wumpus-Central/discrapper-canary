@@ -1,8 +1,8 @@
 (n.d(t, { fE: () => y }), n(953529), n(415506));
 var r = n(512722),
     i = n.n(r),
-    a = n(442837),
-    o = n(579092),
+    o = n(442837),
+    a = n(579092),
     s = n(570140),
     l = n(311929),
     c = n(823379),
@@ -21,14 +21,14 @@ function f(e, t, n) {
         e
     );
 }
-let _ = new o.Yd('KvStore'),
+let _ = new a.Yd('KvStore'),
     p = Symbol('setKv'),
     h = Symbol('setMetadata'),
     m = Object.prototype.hasOwnProperty,
     g = Symbol('version'),
     E = h,
     b = p;
-class y extends a.yh {
+class y extends o.yh {
     getMode() {
         return this.mode;
     }
@@ -87,11 +87,11 @@ class y extends a.yh {
                     }
                 };
             for (let i in e) {
-                let a = e[i],
-                    o = (e) => {
-                        if (((t = !1), a(e, r), !t)) return !1;
+                let o = e[i],
+                    a = (e) => {
+                        if (((t = !1), o(e, r), !t)) return !1;
                     };
-                n[i] = o;
+                n[i] = a;
             }
         }
         switch (

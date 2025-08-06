@@ -1,17 +1,17 @@
-(n.d(t, { Z: () => o }), n(388685));
+(n.d(t, { Z: () => a }), n(388685));
 var r = n(73800),
     i = n(81063);
-let a = ['embedded_cover', 'embedded_background'];
-function o(e) {
-    let { applicationId: t, size: n, names: o = a } = e,
+let o = ['embedded_cover', 'embedded_background'];
+function a(e) {
+    let { applicationId: t, size: n, names: a = o } = e,
         [s, l] = r.useState(null),
         [c, u] = r.useState(!0),
         d = (0, i.xF)(t, s, n),
         f = c ? 'loading' : null != d ? 'fetched' : 'not-found',
-        _ = r.useRef(o);
+        _ = r.useRef(a);
     return (
         r.useEffect(() => {
-            _.current = o;
+            _.current = a;
         }),
         r.useEffect(() => {
             let { current: e } = _;

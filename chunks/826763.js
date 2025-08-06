@@ -7,21 +7,21 @@ var i = n(481060),
     s = n(303737),
     o = n(981631),
     c = n(388032),
-    d = n(658447),
-    u = n(497224);
+    u = n(658447),
+    d = n(497224);
 function h(e) {
     let { guildId: t } = e;
     return (0, r.jsx)('div', {
-        className: d.upsellPage,
+        className: u.upsellPage,
         children: (0, r.jsxs)('div', {
-            className: d.upsellContainer,
+            className: u.upsellContainer,
             children: [
                 (0, r.jsx)('img', {
-                    src: u,
+                    src: d,
                     alt: ''
                 }),
                 (0, r.jsxs)('div', {
-                    className: d.upsellContent,
+                    className: u.upsellContent,
                     children: [
                         (0, r.jsx)(i.X6q, {
                             variant: 'heading-xl/semibold',
@@ -29,12 +29,12 @@ function h(e) {
                         }),
                         (0, r.jsx)(i.Text, {
                             variant: 'text-sm/normal',
-                            className: d.bodyText,
+                            className: u.bodyText,
                             children: c.intl.string(c.t.GpOWIi)
                         }),
                         (0, r.jsx)('div', {
                             'data-button-hoisted-classname-wrapper': !0,
-                            className: d.__invalid_button,
+                            className: u.__invalid_button,
                             children: (0, r.jsx)(i.zxk, {
                                 variant: 'primary',
                                 text: c.intl.string(c.t['I/XhUl']),

@@ -5,8 +5,8 @@
     n(35282));
 var r = n(73800),
     i = n(892814),
-    a = n(442837),
-    o = n(895924),
+    o = n(442837),
+    a = n(895924),
     s = n(581364),
     l = n(823379),
     c = n(399654),
@@ -97,7 +97,7 @@ function m(e) {
                 }),
                 Object.keys(t)
                     .map((t) => {
-                        var n, r, i, a, l, c, u, d, _, h, m, g;
+                        var n, r, i, o, l, c, u, d, _, h, m, g;
                         let E,
                             b,
                             y = e.find((e) => {
@@ -129,12 +129,12 @@ function m(e) {
                                     .map((e) => e.charAt(0).toUpperCase() + e.slice(1))
                                     .join(' ')
                             }),
-                            imageOption: null == (l = y.command_metadata) || null == (a = l[t]) ? void 0 : a.imageOption,
+                            imageOption: null == (l = y.command_metadata) || null == (o = l[t]) ? void 0 : o.imageOption,
                             overrideSendCommand: b,
                             overrideSendCommandInfo: null == (u = y.command_metadata) || null == (c = u[t]) ? void 0 : c.overrideSendCommandInfo,
                             onlyAllowEdit: null == (_ = y.command_metadata) || null == (d = _[t]) ? void 0 : d.onlyAllowEdit,
                             section: {
-                                type: o.Qi.APPLICATION,
+                                type: a.Qi.APPLICATION,
                                 id: O.id,
                                 icon: O.icon,
                                 name: null != (g = null == O || null == (h = O.bot) ? void 0 : h.username) ? g : O.name,
@@ -150,7 +150,7 @@ function m(e) {
 function g(e) {
     let { channelId: t } = e,
         n = i.I.CONTEXTUAL_IMAGE,
-        o = r.useMemo(
+        a = r.useMemo(
             () => ({
                 channelId: t,
                 location: n,
@@ -159,11 +159,11 @@ function g(e) {
             [t, n]
         );
     r.useEffect(() => {
-        (0, c.a)(o);
-    }, [o]);
-    let { fetchState: s, recommendationsSections: l } = (0, a.cj)([u.ZP], () => ({
-        fetchState: u.ZP.getFetchState(o),
-        recommendationsSections: u.ZP.getRecommendations(o)
+        (0, c.a)(a);
+    }, [a]);
+    let { fetchState: s, recommendationsSections: l } = (0, o.cj)([u.ZP], () => ({
+        fetchState: u.ZP.getFetchState(a),
+        recommendationsSections: u.ZP.getRecommendations(a)
     }));
     return {
         fetchState: s,

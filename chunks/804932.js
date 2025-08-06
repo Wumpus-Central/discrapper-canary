@@ -10,8 +10,8 @@
     n(388685));
 var r = n(255367),
     i = n(73800),
-    a = n(772848),
-    o = n(442837),
+    o = n(772848),
+    a = n(442837),
     s = n(493773),
     l = n(699682),
     c = n(626135),
@@ -22,7 +22,7 @@ var r = n(255367),
 let p = i.createContext(''),
     h = (e) => {
         let { children: t } = e,
-            [n] = i.useState(() => (0, a.Z)());
+            [n] = i.useState(() => (0, o.Z)());
         return (0, r.jsx)(p.Provider, {
             value: n,
             children: t
@@ -38,14 +38,14 @@ function g(e) {
     });
 }
 function E(e) {
-    let { timeToLoad: t, unreadsCount: n, totalMessagesCount: r, viewId: i, unreadsBadgeMentionCount: a, unreadsBadgeChannelCount: o, unreadMessageItemsCount: s, unreadMentionsCount: l } = e;
+    let { timeToLoad: t, unreadsCount: n, totalMessagesCount: r, viewId: i, unreadsBadgeMentionCount: o, unreadsBadgeChannelCount: a, unreadMessageItemsCount: s, unreadMentionsCount: l } = e;
     c.default.track(_.rMx.NOTIFICATIONS_INBOX_READY, {
         time_to_load: t,
         unreads_count: n,
         total_messages_count: r,
         view_id: i,
-        unreads_badge_mention_count: a,
-        unreads_badge_channel_count: o,
+        unreads_badge_mention_count: o,
+        unreads_badge_channel_count: a,
         unread_message_items_count: s,
         unread_mentions_count: l
     });
@@ -73,34 +73,34 @@ function O(e) {
     });
 }
 function v(e) {
-    let { unreadsCount: t, totalMessagesCount: n, unreadItemsCount: r, totalItemsCount: i, viewId: a } = e;
+    let { unreadsCount: t, totalMessagesCount: n, unreadItemsCount: r, totalItemsCount: i, viewId: o } = e;
     c.default.track(_.rMx.NOTIFICATIONS_INBOX_UNMOUNTED, {
         unreads_count: t,
         total_messages_count: n,
         unread_items_count: r,
         total_items_count: i,
-        view_id: a
+        view_id: o
     });
 }
 function I(e) {
-    let { timeToLoad: t, messagesCount: n, unreadMessagesCount: r, channelsFetched: i, mentionsFetched: a, loadingTrigger: o, viewId: s } = e;
+    let { timeToLoad: t, messagesCount: n, unreadMessagesCount: r, channelsFetched: i, mentionsFetched: o, loadingTrigger: a, viewId: s } = e;
     c.default.track(_.rMx.NOTIFICATIONS_INBOX_DATA_LOADED, {
         time_to_load: t,
         messages_count: n,
         unread_messages_count: r,
         channels_fetched: i,
-        mentions_fetched: a,
-        loading_trigger: null != o ? o : f.X.UNKNOWN,
+        mentions_fetched: o,
+        loading_trigger: null != a ? a : f.X.UNKNOWN,
         view_id: s
     });
 }
 function T(e) {
-    let { notificationCenterVariant: t, entrypoint: n, messages: r, unreadMessages: a, viewId: c, messagesByCategory: _ } = e,
+    let { notificationCenterVariant: t, entrypoint: n, messages: r, unreadMessages: o, viewId: c, messagesByCategory: _ } = e,
         p = i.useRef(null),
         h = i.useRef(!1),
-        m = (0, o.e7)([u.Z], () => u.Z.isLoading),
+        m = (0, a.e7)([u.Z], () => u.Z.isLoading),
         b = (0, l.Z)(m),
-        y = (0, o.e7)([u.Z], () => {
+        y = (0, a.e7)([u.Z], () => {
             var e;
             return null != (e = u.Z.currentRequestAnalyticsPayload) ? e : null;
         }),
@@ -114,12 +114,12 @@ function T(e) {
             (p.current = Date.now()));
     }),
         i.useEffect(() => {
-            if (null != p.current && ((null == r ? void 0 : r.length) > 0 || (null == a ? void 0 : a.length) > 0) && !h.current) {
+            if (null != p.current && ((null == r ? void 0 : r.length) > 0 || (null == o ? void 0 : o.length) > 0) && !h.current) {
                 let e = Date.now() - p.current;
                 ((h.current = !0),
                     E({
                         timeToLoad: e,
-                        unreadsCount: a.length,
+                        unreadsCount: o.length,
                         totalMessagesCount: r.length,
                         unreadsBadgeMentionCount: O,
                         unreadsBadgeChannelCount: T.length,
@@ -128,7 +128,7 @@ function T(e) {
                         viewId: c
                     }));
             }
-        }, [r, a, c, T, O, _]),
+        }, [r, o, c, T, O, _]),
         i.useEffect(() => {
             let e = (null == y ? void 0 : y.loadingTrigger) === f.X.AUTO_LOAD;
             if (null != y && !0 === b && !1 === m && !e) {
@@ -136,18 +136,18 @@ function T(e) {
                 I({
                     timeToLoad: null == y ? void 0 : y.timeToLoad,
                     messagesCount: r.length,
-                    unreadMessagesCount: a.length,
+                    unreadMessagesCount: o.length,
                     loadingTrigger: null != (t = null == y ? void 0 : y.loadingTrigger) ? t : f.X.UNKNOWN,
                     viewId: null == y ? void 0 : y.viewId,
                     channelsFetched: null == y ? void 0 : y.channelsFetched,
                     mentionsFetched: null == y ? void 0 : y.mentionsFetched
                 });
             }
-        }, [m, r, a, c, b, y]),
+        }, [m, r, o, c, b, y]),
         (0, s.zq)(() => {
             var e, t;
             v({
-                unreadsCount: null != (e = null == a ? void 0 : a.length) ? e : 0,
+                unreadsCount: null != (e = null == o ? void 0 : o.length) ? e : 0,
                 totalMessagesCount: null != (t = null == r ? void 0 : r.length) ? t : 0,
                 unreadItemsCount: _.UNREAD.length,
                 totalItemsCount: _.TODAY.length + _.YESTERDAY.length + _.OLDER.length,

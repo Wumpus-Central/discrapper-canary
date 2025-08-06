@@ -1,8 +1,8 @@
 n.d(t, { c: () => g });
 var r = n(481060),
     i = n(933557),
-    a = n(592125),
-    o = n(699516),
+    o = n(592125),
+    a = n(699516),
     s = n(594174),
     l = n(273504),
     c = n(590433),
@@ -60,9 +60,9 @@ let d = (e) => e !== l.jj.QUARANTINE_USER,
             case l.jj.FLAG_TO_CHANNEL: {
                 let e = null == t || null == (n = t.metadata) ? void 0 : n.channelId;
                 if (null == e) return null;
-                let r = a.Z.getChannel(e);
+                let r = o.Z.getChannel(e);
                 if (null == r) return null;
-                let l = (0, i.F6)(r, s.default, o.Z);
+                let l = (0, i.F6)(r, s.default, a.Z);
                 return u.intl.format(u.t.xQXnkJ, { channelName: l });
             }
             case l.jj.USER_COMMUNICATION_DISABLED: {
@@ -86,12 +86,12 @@ let d = (e) => e !== l.jj.QUARANTINE_USER,
         }
     };
 function g(e, t, n) {
-    var i, a, o, s;
+    var i, o, a, s;
     return f(e)
         ? {
               headerText: null != (i = _(e)) ? i : '',
-              descriptionText: null != (a = p(e, n)) ? a : '',
-              helperText: null != (o = h(e, t)) ? o : null,
+              descriptionText: null != (o = p(e, n)) ? o : '',
+              helperText: null != (a = h(e, t)) ? a : null,
               icon: null != (s = m(e)) ? s : r.k$p,
               isEditable: d(e)
           }

@@ -8,8 +8,8 @@
     n(388685));
 var r = n(73800),
     i = n(94171),
-    a = n(362383),
-    o = n(731965),
+    o = n(362383),
+    a = n(731965),
     s = n(881052),
     l = n(36459),
     c = n(866894),
@@ -91,36 +91,36 @@ let b = (e) => {
             t
         );
     },
-    y = (0, a.F)((e, t) => ({
+    y = (0, o.F)((e, t) => ({
         rules: {},
         fetching: !1,
         error: null,
         updateRule: (n) => {
             var r, i;
-            let { guildId: a, id: s, triggerType: l } = n,
+            let { guildId: o, id: s, triggerType: l } = n,
                 { rules: u } = t(),
-                d = null != (r = u[a]) ? r : {},
+                d = null != (r = u[o]) ? r : {},
                 f = null != (i = d[l]) ? i : [],
                 p = f.some((e) => e.id === s),
                 m = f.filter((e) => !(0, c.U)(e.id) || e.triggerType !== l),
                 g = p ? m.map((e) => (e.id === s ? n : e)) : [...m, n];
-            (0, o.j)(() => {
+            (0, a.j)(() => {
                 e({
-                    rules: h(_({}, u), { [a]: h(_({}, d), { [l]: g }) }),
+                    rules: h(_({}, u), { [o]: h(_({}, d), { [l]: g }) }),
                     error: null
                 });
             });
         },
         removeRule: (n, r) => {
             let { rules: i } = t(),
-                a = i[r],
-                s = Object.keys(a).reduce((e, t) => {
+                o = i[r],
+                s = Object.keys(o).reduce((e, t) => {
                     var r;
                     let i = Number(t),
-                        o = null != (r = a[i]) ? r : [];
-                    return ((e[i] = o.filter((e) => e.id !== n)), e);
+                        a = null != (r = o[i]) ? r : [];
+                    return ((e[i] = a.filter((e) => e.id !== n)), e);
                 }, {});
-            (0, o.j)(() => {
+            (0, a.j)(() => {
                 e({
                     rules: h(_({}, i), { [r]: s }),
                     error: null
@@ -133,16 +133,16 @@ let b = (e) => {
                 try {
                     let r = await (0, l.$Y)(n),
                         i = b(r),
-                        a = t().rules;
-                    (0, o.j)(() => {
+                        o = t().rules;
+                    (0, a.j)(() => {
                         e({
-                            rules: h(_({}, a), { [n]: i }),
+                            rules: h(_({}, o), { [n]: i }),
                             error: null
                         });
                     });
                 } catch (n) {
                     let t = new s.Hx(n);
-                    (0, o.j)(() => {
+                    (0, a.j)(() => {
                         e({ error: t });
                     });
                 }
@@ -155,17 +155,17 @@ let b = (e) => {
     };
 function v(e) {
     let [t, n] = r.useState(!1),
-        [a, o] = y((e) => [e.syncRules, e.fetching], i.X);
+        [o, a] = y((e) => [e.syncRules, e.fetching], i.X);
     return [
         t,
         r.useCallback(async () => {
-            if (!o && null != e)
+            if (!a && null != e)
                 try {
-                    (n(!0), await a(e));
+                    (n(!0), await o(e));
                 } finally {
                     n(!1);
                 }
-        }, [e, o, a])
+        }, [e, a, o])
     ];
 }
 function I(e) {

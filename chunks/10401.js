@@ -1,8 +1,8 @@
-(n.d(t, { Z: () => w }), n(388685));
+(n.d(t, { Z: () => R }), n(388685));
 var r,
     i = n(873546),
-    a = n(442837),
-    o = n(570140),
+    o = n(442837),
+    a = n(570140),
     s = n(38618),
     l = n(268967),
     c = n(188785);
@@ -95,7 +95,7 @@ function A() {
 function N(e) {
     return i.tq && ['writing-messages', 'organize-by-topic'].includes(e);
 }
-class C extends (r = a.ZP.Store) {
+class C extends (r = o.ZP.Store) {
     initialize() {
         (y(), this.mustEmitChanges((e) => 'CONNECTION_OPEN' !== e.type), this.waitFor(s.Z));
     }
@@ -117,7 +117,7 @@ class C extends (r = a.ZP.Store) {
     }
 }
 u(C, 'displayName', 'TutorialIndicatorStore');
-let w = new C(o.Z, {
+let R = new C(a.Z, {
     CONNECTION_OPEN: S,
     CONNECTION_CLOSED: A,
     TUTORIAL_INDICATOR_DISMISS: O,

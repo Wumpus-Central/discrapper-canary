@@ -2,7 +2,7 @@ function r(e, t) {
     ((e.prototype = Object.create(t.prototype)), (e.prototype.constructor = e), (e.__proto__ = t));
 }
 var i = n(73800),
-    a = n(606166);
+    o = n(606166);
 e.exports = (function (e) {
     function t() {
         return e.apply(this, arguments) || this;
@@ -14,7 +14,7 @@ e.exports = (function (e) {
             return this.props.text !== e.text || this.props.editorState.getSelection().getHasFocus() !== e.editorState.getSelection().getHasFocus();
         }),
         (n.render = function () {
-            var e = a({
+            var e = o({
                     'public/DraftEditorPlaceholder/root': !0,
                     'public/DraftEditorPlaceholder/hasFocus': this.props.editorState.getSelection().getHasFocus()
                 }),
@@ -25,7 +25,7 @@ e.exports = (function (e) {
                 i.createElement(
                     'div',
                     {
-                        className: a('public/DraftEditorPlaceholder/inner'),
+                        className: o('public/DraftEditorPlaceholder/inner'),
                         id: this.props.accessibilityID,
                         style: t
                     },

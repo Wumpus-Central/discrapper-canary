@@ -1,8 +1,8 @@
 n.d(t, { F: () => m });
 var r = n(255367),
     i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(442837),
     l = n(481060),
     c = n(596454),
@@ -24,14 +24,14 @@ function p(e) {
 }
 function h(e) {
     let { trait: t, ellipsize: n } = e,
-        a = i.useRef(null),
-        c = (0, u.Z)(a),
+        o = i.useRef(null),
+        c = (0, u.Z)(o),
         f = !(0, s.e7)([d.Z], () => d.Z.useReducedMotion) && c;
     return null == t.label || t.label.length <= 0
         ? null
         : (0, r.jsxs)('div', {
-              ref: a,
-              className: o()(_.trait, { [_.ellipsize]: n }),
+              ref: o,
+              className: a()(_.trait, { [_.ellipsize]: n }),
               children: [
                   (0, r.jsx)(p, {
                       emoji: t.emoji,
@@ -55,7 +55,7 @@ function m(e) {
                     ? (0, r.jsx)(
                           'div',
                           {
-                              className: o()(_.trait, { [_.ellipsize]: t.ellipsize }),
+                              className: a()(_.trait, { [_.ellipsize]: t.ellipsize }),
                               children: (0, r.jsx)(l.Text, {
                                   tag: 'span',
                                   variant: 'text-sm/normal',
@@ -75,7 +75,7 @@ function m(e) {
                       ),
             []
         ),
-        a = i.useCallback((e) => n(e, { ellipsize: !0 }), [n]),
+        o = i.useCallback((e) => n(e, { ellipsize: !0 }), [n]),
         s = i.useCallback((e) => n(e, { ellipsize: !1 }), [n]),
         c = i.useCallback(
             (e) =>
@@ -90,7 +90,7 @@ function m(e) {
         : (0, r.jsx)(l.Epb, {
               className: _.container,
               items: t,
-              renderItem: a,
+              renderItem: o,
               renderOverflow: c,
               maxLines: 2,
               itemGapPx: 4

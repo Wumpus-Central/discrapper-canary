@@ -1,8 +1,8 @@
 (n.d(t, { Z: () => C }), n(457542), n(415506), n(388685), n(600040));
 var r = n(512722),
     i = n.n(r),
-    a = n(264344),
-    o = n.n(a),
+    o = n(264344),
+    a = n.n(o),
     s = n(47770),
     l = n(174498),
     c = n.n(l),
@@ -44,7 +44,7 @@ class C extends s.Z {
         (this.interacted || (document.createElement('audio').play(), (this.interacted = !0)), this.eachConnection((e) => e.interact()));
     }
     static supported() {
-        return !__OVERLAY__ && (S.fi && null != window.AudioContext && null != window.RTCPeerConnection ? (n(266370), !0) : (N.info('WebRTC is not supported on', o().name, o().version), !1));
+        return !__OVERLAY__ && (S.fi && null != window.AudioContext && null != window.RTCPeerConnection ? (n(266370), !0) : (N.info('WebRTC is not supported on', a().name, a().version), !1));
     }
     supported() {
         return !0;
@@ -61,7 +61,7 @@ class C extends s.Z {
                 var t;
                 return (null == (t = navigator.mediaDevices) ? void 0 : t.getDisplayMedia) != null;
             case T.AN.VOICE_PROCESSING:
-                return 'Chrome' === o().name;
+                return 'Chrome' === a().name;
             case T.AN.NATIVE_PING:
             case T.AN.DIAGNOSTICS:
                 return S.Fo;
@@ -69,7 +69,7 @@ class C extends s.Z {
             case T.AN.LOOPBACK:
             case T.AN.NOISE_SUPPRESSION:
             case T.AN.AUTOMATIC_GAIN_CONTROL:
-                return 'Safari' !== o().name;
+                return 'Safari' !== a().name;
             case T.AN.NOISE_CANCELLATION:
                 return c()();
             case T.AN.QOS:
@@ -98,7 +98,7 @@ class C extends s.Z {
         return (null == this._audioContext && (this._audioContext = new AudioContext()), this._audioContext);
     }
     connect(e, t, n) {
-        let { ssrc: r, address: i, port: a, modes: o, streamUserId: s, streamParameters: l } = n,
+        let { ssrc: r, address: i, port: o, modes: a, streamUserId: s, streamParameters: l } = n,
             c = {
                 context: e,
                 userId: t,
@@ -134,7 +134,7 @@ class C extends s.Z {
         e.on('permission', this.handleAudioPermission);
         try {
             var t;
-            (await e.enable(), 'Firefox' === o().name && (await this.handleDeviceChange()), (this.enabled = !0), this.eachConnection((e) => e.input.enableAudioInput(), T.Yn.DEFAULT), null == (t = this.voiceActivityInput) || t.enable());
+            (await e.enable(), 'Firefox' === a().name && (await this.handleDeviceChange()), (this.enabled = !0), this.eachConnection((e) => e.input.enableAudioInput(), T.Yn.DEFAULT), null == (t = this.voiceActivityInput) || t.enable());
         } finally {
             e.destroy();
         }

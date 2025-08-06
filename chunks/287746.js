@@ -1,8 +1,8 @@
 (n.d(t, { Z: () => td }), n(388685), n(35282), n(781311), n(997841));
 var r = n(255367),
     i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(512722),
     l = n.n(s),
     c = n(873546),
@@ -25,15 +25,15 @@ var r = n(255367),
     A = n(989573),
     N = n(499254),
     C = n(541099),
-    w = n(827498),
-    R = n(533379),
-    P = n(555573),
+    R = n(827498),
+    P = n(533379),
+    w = n(555573),
     D = n(456007),
     L = n(10718),
     x = n(998698),
-    k = n(895924),
-    j = n(581364),
-    M = n(667204),
+    M = n(895924),
+    k = n(581364),
+    j = n(667204),
     U = n(104919),
     G = n(541716),
     B = n(752305),
@@ -46,17 +46,17 @@ var r = n(255367),
     K = n(680835),
     z = n(436952),
     q = n(131565),
-    $ = n(355888),
-    X = n(680783),
-    Q = n(168551),
-    J = n(28546),
+    X = n(355888),
+    Q = n(680783),
+    J = n(168551),
+    $ = n(28546),
     ee = n(295474),
     et = n(521476),
     en = n(69882),
     er = n(71619),
     ei = n(185145),
-    ea = n(736052),
-    eo = n(146128),
+    eo = n(736052),
+    ea = n(146128),
     es = n(549006),
     el = n(58873),
     ec = n(925975),
@@ -79,15 +79,15 @@ var r = n(255367),
     eA = n(155409),
     eN = n(163612),
     eC = n(314897),
-    ew = n(433355),
-    eR = n(592125),
-    eP = n(703558),
+    eR = n(433355),
+    eP = n(592125),
+    ew = n(703558),
     eD = n(323873),
     eL = n(271383),
     ex = n(375954),
-    ek = n(496675),
-    ej = n(944486),
-    eM = n(117530),
+    eM = n(496675),
+    ek = n(944486),
+    ej = n(117530),
     eU = n(594174),
     eG = n(626135),
     eB = n(934415),
@@ -100,10 +100,10 @@ var r = n(255367),
     eK = n(979956),
     ez = n(413251),
     eq = n(655687),
-    e$ = n(165540),
-    eX = n(583027),
-    eQ = n(25007),
-    eJ = n(685006),
+    eX = n(165540),
+    eQ = n(583027),
+    eJ = n(25007),
+    e$ = n(685006),
     e0 = n(685722),
     e1 = n(199649),
     e2 = n(1397),
@@ -171,8 +171,8 @@ function tr(e, t) {
         r,
         i = ti(e, t);
     if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
@@ -181,14 +181,14 @@ function ti(e, t) {
     var n,
         r,
         i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
-function ta(e) {
+function to(e) {
     e.preventDefault();
 }
-let to = /^\+(?!\w+):?(?!:)(\w+)?:?$/;
+let ta = /^\+(?!\w+):?(?!:)(\w+)?:?$/;
 function ts(e) {
     var { isSidebar: t } = e,
         n = tr(e, ['isSidebar']);
@@ -202,17 +202,17 @@ class tc extends i.PureComponent {
         null == (e = this.editorRef) || e.focus();
     }
     componentDidMount() {
-        eP.Z.addChangeListener(this.draftDidChange);
+        ew.Z.addChangeListener(this.draftDidChange);
     }
     componentWillUnmount() {
-        eP.Z.removeChangeListener(this.draftDidChange);
+        ew.Z.removeChangeListener(this.draftDidChange);
     }
     componentDidUpdate(e, t) {
         let { channel: n } = this.props,
             { textValue: r } = this.state;
         if (e.channel.id !== n.id) return void this.draftDidChange(this.props);
         if (e.hasModalOpen && !this.props.hasModalOpen) {
-            let e = eP.Z.getDraft(n.id, eP.d.ChannelMessage);
+            let e = ew.Z.getDraft(n.id, ew.d.ChannelMessage);
             e !== r && this.setState((0, B.eK)(e));
         }
         t.textValue.length < e5.J6R && r.length >= e5.J6R && eG.default.track(e5.rMx.MESSAGE_LENGTH_LIMIT_REACHED, {});
@@ -224,8 +224,8 @@ class tc extends i.PureComponent {
     handleRecallLastCommand(e) {
         if (null == e.interactionData) return;
         let { channel: t } = this.props,
-            { commandKey: n, interactionOptions: r } = (0, j.XA)(e.interactionData),
-            { command: i, application: a } = L.Xq(
+            { commandKey: n, interactionOptions: r } = (0, k.XA)(e.interactionData),
+            { command: i, application: o } = L.Xq(
                 {
                     channel: t,
                     type: 'channel'
@@ -233,29 +233,29 @@ class tc extends i.PureComponent {
                 n
             );
         if (null != i) {
-            var o, s;
+            var a, s;
             let e =
-                null != a
+                null != o
                     ? {
-                          type: k.Qi.APPLICATION,
-                          id: a.id,
-                          icon: a.icon,
-                          name: null != (s = null == a || null == (o = a.bot) ? void 0 : o.username) ? s : a.name,
-                          application: a
+                          type: M.Qi.APPLICATION,
+                          id: o.id,
+                          icon: o.icon,
+                          name: null != (s = null == o || null == (a = o.bot) ? void 0 : a.username) ? s : o.name,
+                          application: o
                       }
                     : null;
-            P.Po({
+            w.Po({
                 channelId: t.id,
                 command: i,
                 section: e,
-                location: k.Vh.RECALL,
+                location: M.Vh.RECALL,
                 initialValues: (0, D.Dw)(i, null != r ? r : []),
-                commandOrigin: k.bB.CHAT
+                commandOrigin: M.bB.CHAT
             });
         }
     }
     render() {
-        let { channel: e, focused: t, onBlur: n, onFocus: i, onResize: a, highlighted: o, pendingReply: s, chatInputType: c, placeholder: u, accessibilityLabel: d, shakeIntensity: _, poggermodeEnabled: p, onCommandSentinelTyped: h, renderAppLauncherButton: m, renderAppCommandButton: g, pendingScheduledMessage: E, announcementComposerEnabled: y } = this.props,
+        let { channel: e, focused: t, onBlur: n, onFocus: i, onResize: o, highlighted: a, pendingReply: s, chatInputType: c, placeholder: u, accessibilityLabel: d, shakeIntensity: _, poggermodeEnabled: p, onCommandSentinelTyped: h, renderAppLauncherButton: m, renderAppCommandButton: g, pendingScheduledMessage: E, announcementComposerEnabled: y } = this.props,
             { contentWarningProps: O } = this.state,
             v =
                 e.type === e5.d4z.GUILD_ANNOUNCEMENT && y
@@ -271,7 +271,7 @@ class tc extends i.PureComponent {
                           type: G.Ie.CREATE_ANNOUNCEMENT_POST,
                           onChange: this.handleTextareaChange,
                           onSubmit: this.handleSendMessage,
-                          onResize: a,
+                          onResize: o,
                           onFocus: i,
                           onBlur: n,
                           onKeyDown: this.handleKeyDown,
@@ -279,7 +279,7 @@ class tc extends i.PureComponent {
                           renderAppLauncherButton: m,
                           renderApplicationCommandIcon: this.renderApplicationCommandIcon,
                           promptToUpload: eW.d,
-                          highlighted: o,
+                          highlighted: a,
                           setEditorRef: (e) => (this.editorRef = e)
                       })
                     : (0, r.jsx)(H.ZP, {
@@ -295,7 +295,7 @@ class tc extends i.PureComponent {
                           type: c,
                           onChange: this.handleTextareaChange,
                           onSubmit: this.handleSendMessage,
-                          onResize: a,
+                          onResize: o,
                           onFocus: i,
                           onBlur: n,
                           onKeyDown: this.handleKeyDown,
@@ -304,7 +304,7 @@ class tc extends i.PureComponent {
                           renderAppLauncherButton: m,
                           renderAppCommandButton: g,
                           promptToUpload: eW.d,
-                          highlighted: o,
+                          highlighted: a,
                           setEditorRef: (e) => (this.editorRef = e),
                           onCommandSentinelTyped: h,
                           pendingScheduledMessage: E
@@ -338,11 +338,11 @@ class tc extends i.PureComponent {
             (t = this),
             e9(this, 'isFirstChange', !0),
             e9(this, 'editorRef', null),
-            e9(this, 'state', tn(te({}, (0, B.eK)(eP.Z.getDraft(this.props.channel.id, eP.d.ChannelMessage))), { contentWarningProps: null })),
+            e9(this, 'state', tn(te({}, (0, B.eK)(ew.Z.getDraft(this.props.channel.id, ew.d.ChannelMessage))), { contentWarningProps: null })),
             e9(this, 'draftDidChange', function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : t.props,
                     { textValue: n } = t.state,
-                    r = eP.Z.getDraft(e.channel.id, eP.d.ChannelMessage);
+                    r = ew.Z.getDraft(e.channel.id, ew.d.ChannelMessage);
                 n !== r &&
                     ('' === r || '' === n) &&
                     t.setState((0, B.eK)(r), () => {
@@ -355,14 +355,14 @@ class tc extends i.PureComponent {
             e9(this, 'handleKeyDown', (e) => {
                 let { keyboardModeEnabled: t, onKeyDown: n, channel: r } = this.props,
                     i = e.shiftKey || e.altKey || e.ctrlKey || e.metaKey,
-                    a = 0 !== this.state.textValue.length;
+                    o = 0 !== this.state.textValue.length;
                 switch (e.which) {
                     case e5.yXg.DELETE:
                     case e5.yXg.BACKSPACE:
                         return void this.handleIncrementCombo('', 1);
                     case e5.yXg.ARROW_UP:
-                        if (i || a) return;
-                        if ((e.preventDefault(), t)) eM.Z.getUploadCount(r.id, eP.d.ChannelMessage) > 0 ? eF.S.dispatchToLastSubscribed(e5.CkL.FOCUS_ATTACHMENT_AREA) : eF.S.dispatchToLastSubscribed(e5.CkL.FOCUS_MESSAGES, { atEnd: !0 });
+                        if (i || o) return;
+                        if ((e.preventDefault(), t)) ej.Z.getUploadCount(r.id, ew.d.ChannelMessage) > 0 ? eF.S.dispatchToLastSubscribed(e5.CkL.FOCUS_ATTACHMENT_AREA) : eF.S.dispatchToLastSubscribed(e5.CkL.FOCUS_MESSAGES, { atEnd: !0 });
                         else {
                             let { channel: e } = this.props,
                                 t = ex.Z.getLastChatCommandMessage(e.id),
@@ -373,21 +373,21 @@ class tc extends i.PureComponent {
                     case e5.yXg.ESCAPE:
                         if (i || e.target !== e.currentTarget) return;
                         if ((e.preventDefault(), t)) return void (0, O.rf)();
-                        if (eM.Z.getUploadCount(r.id, eP.d.ChannelMessage) > 0) return void m.Z.clearAll(r.id, eP.d.ChannelMessage);
+                        if (ej.Z.getUploadCount(r.id, ew.d.ChannelMessage) > 0) return void m.Z.clearAll(r.id, ew.d.ChannelMessage);
                 }
-                null == n || n(e, a);
+                null == n || n(e, o);
             }),
             e9(this, 'handleIncrementCombo', (e, t) => {
                 var n;
                 if (!this.props.poggermodeEnabled) return;
                 let r = this.props.channel.id,
                     i = eC.default.getId(),
-                    a = eh.ZP.getUserCombo(i, r),
-                    o = (null != (n = null == a ? void 0 : a.value) ? n : 0) + 1;
+                    o = eh.ZP.getUserCombo(i, r),
+                    a = (null != (n = null == o ? void 0 : o.value) ? n : 0) + 1;
                 (0, e_.SE)({
                     channelId: r,
                     userId: i,
-                    value: null != e ? e.length : o,
+                    value: null != e ? e.length : a,
                     multiplier: t
                 });
             }),
@@ -396,20 +396,20 @@ class tc extends i.PureComponent {
                     keyboardModeEnabled: r,
                     channel: { id: i }
                 } = this.props;
-                _.Z.changeDraft(i, t, eP.d.ChannelMessage);
-                let a = '' !== t && n !== this.state.richValue,
-                    o = a && !to.test(t) && !t.startsWith('/') && (!this.isFirstChange || t !== this.state.textValue);
+                _.Z.changeDraft(i, t, ew.d.ChannelMessage);
+                let o = '' !== t && n !== this.state.richValue,
+                    a = o && !ta.test(t) && !t.startsWith('/') && (!this.isFirstChange || t !== this.state.textValue);
                 ((this.isFirstChange = !1),
-                    o && this.state.textValue.length < t.length && this.handleIncrementCombo(),
-                    o ? h.Z.startTyping(i) : '' === t && h.Z.stopTyping(i),
-                    a && r && (0, O.rf)(),
+                    a && this.state.textValue.length < t.length && this.handleIncrementCombo(),
+                    a ? h.Z.startTyping(i) : '' === t && h.Z.stopTyping(i),
+                    o && r && (0, O.rf)(),
                     this.setState({
                         textValue: t,
                         richValue: n
                     }));
             }),
             e9(this, 'handleSendMessage', async (e) => {
-                let { value: t, uploads: n, stickers: r, confettiPotionEmoji: i, command: a, commandOptionValues: o, isGif: s, components: l, announcementSendOptions: c } = e;
+                let { value: t, uploads: n, stickers: r, confettiPotionEmoji: i, command: o, commandOptionValues: a, isGif: s, components: l, announcementSendOptions: c } = e;
                 if (0 === (t = t.trim()).length && (null == r || 0 === r.length) && (null == n || 0 === n.length))
                     return Promise.resolve({
                         shouldClear: !1,
@@ -417,8 +417,8 @@ class tc extends i.PureComponent {
                     });
                 let { guild: u, channel: d, pendingReply: f, chatInputType: h } = this.props,
                     g = !1;
-                if (null != a) {
-                    if (a.inputType === k.iw.BUILT_IN_INTEGRATION)
+                if (null != o) {
+                    if (o.inputType === M.iw.BUILT_IN_INTEGRATION)
                         return (
                             eF.S.dispatch(e5.CkL.SHAKE_APP, {
                                 duration: 200,
@@ -430,25 +430,25 @@ class tc extends i.PureComponent {
                             })
                         );
                     let e = x.Z.getCommandOrigin(d.id);
-                    if (null == e || e === k.bB.CHAT) {
+                    if (null == e || e === M.bB.CHAT) {
                         let { isAuthorized: e } = await (0, U.L)({
-                            applicationId: a.applicationId,
+                            applicationId: o.applicationId,
                             channel: d,
-                            commandIntegrationTypes: a.integration_types
+                            commandIntegrationTypes: o.integration_types
                         });
                         if (!e)
                             return Promise.resolve({
                                 shouldClear: !1,
                                 shouldRefocus: !0
                             });
-                    } else if (e === k.bB.APPLICATION_LAUNCHER || e === k.bB.IMAGE_RECS_MENU || e === k.bB.IMAGE_RECS_SUBMENU) {
+                    } else if (e === M.bB.APPLICATION_LAUNCHER || e === M.bB.IMAGE_RECS_MENU || e === M.bB.IMAGE_RECS_SUBMENU) {
                         var E;
-                        let { location: t, sectionName: n } = null != (E = (0, eX._U)(a)) ? E : {},
-                            r = e === k.bB.APPLICATION_LAUNCHER ? C.Z.lastShownEntrypoint() : w._b.TEXT,
+                        let { location: t, sectionName: n } = null != (E = (0, eQ._U)(o)) ? E : {},
+                            r = e === M.bB.APPLICATION_LAUNCHER ? C.Z.lastShownEntrypoint() : R._b.TEXT,
                             { isAuthorized: i } = await (0, U.L)({
-                                applicationId: a.applicationId,
+                                applicationId: o.applicationId,
                                 channel: d,
-                                commandIntegrationTypes: a.integration_types,
+                                commandIntegrationTypes: o.integration_types,
                                 appLauncherContext: {
                                     location: t,
                                     sectionName: n,
@@ -460,17 +460,17 @@ class tc extends i.PureComponent {
                                 shouldClear: !1,
                                 shouldRefocus: !0
                             });
-                        (0, eX.SC)(a);
+                        (0, eQ.SC)(o);
                     }
-                    let n = await (0, M.Z)({
-                        command: a,
-                        optionValues: null != o ? o : {},
+                    let n = await (0, j.Z)({
+                        command: o,
+                        optionValues: null != a ? a : {},
                         context: {
                             guild: u,
                             channel: d
                         }
                     });
-                    if (a.inputType !== k.iw.BUILT_IN_TEXT)
+                    if (o.inputType !== M.iw.BUILT_IN_TEXT)
                         return Promise.resolve({
                             shouldClear: !0,
                             shouldRefocus: !0
@@ -485,7 +485,7 @@ class tc extends i.PureComponent {
                     uploads: n,
                     channel: d
                 }).then(async (e) => {
-                    var o, E;
+                    var a, E;
                     let { valid: b, failureReason: y } = e;
                     if (!b)
                         if (y === e5.zYc.SLOWMODE_COOLDOWN)
@@ -517,11 +517,11 @@ class tc extends i.PureComponent {
                         channelId: d.id,
                         uploads: n,
                         stickers: r,
-                        command: a,
+                        command: o,
                         isGif: s,
                         pendingReply: f,
                         confettiPotionEmoji: i,
-                        scheduledTimestamp: null == (o = this.props.pendingScheduledMessage) ? void 0 : o.scheduledTimestamp
+                        scheduledTimestamp: null == (a = this.props.pendingScheduledMessage) ? void 0 : a.scheduledTimestamp
                     });
                     if (((I.location = e4.dy.CHAT_INPUT), null != c && (I.announcementSendOptions = c), null != l && (I.flags = (0, eV.pj)(null != (E = I.flags) ? E : 0, e5.iLy.IS_COMPONENTS_V2)), s))
                         return (
@@ -552,15 +552,15 @@ class tc extends i.PureComponent {
                                     code: r,
                                     reason: i
                                 }) &&
-                                    ('' !== t && '' === eP.Z.getDraft(d.id, eP.d.ChannelMessage) && _.Z.saveDraft(d.id, t, eP.d.ChannelMessage),
-                                    0 === eM.Z.getUploadCount(d.id, eP.d.ChannelMessage) &&
+                                    ('' !== t && '' === ew.Z.getDraft(d.id, ew.d.ChannelMessage) && _.Z.saveDraft(d.id, t, ew.d.ChannelMessage),
+                                    0 === ej.Z.getUploadCount(d.id, ew.d.ChannelMessage) &&
                                         m.Z.setUploads({
                                             channelId: d.id,
                                             uploads: n,
-                                            draftType: eP.d.ChannelMessage
+                                            draftType: ew.d.ChannelMessage
                                         }));
                             }),
-                            m.Z.clearAll(d.id, eP.d.ChannelMessage));
+                            m.Z.clearAll(d.id, ew.d.ChannelMessage));
                     }
                     if (null != I.scheduledTimestamp)
                         try {
@@ -609,7 +609,7 @@ class tc extends i.PureComponent {
                 (0, r.jsx)(V.Z, {
                     className: t,
                     channel: this.props.channel,
-                    draftType: eP.d.ChannelMessage,
+                    draftType: ew.d.ChannelMessage,
                     editorTextContent: this.state.textValue,
                     setValue: this.handleSetValue,
                     canOnlyUseTextCommands: e
@@ -631,7 +631,7 @@ class tu extends i.PureComponent {
             { currentChannelId: r } = t;
         return n.id !== r
             ? {
-                  textAreaFocused: null != n && n.type !== e5.d4z.GUILD_ANNOUNCEMENT && !c.tq && ek.Z.can(e5.Plq.SEND_MESSAGES, n),
+                  textAreaFocused: null != n && n.type !== e5.d4z.GUILD_ANNOUNCEMENT && !c.tq && eM.Z.can(e5.Plq.SEND_MESSAGES, n),
                   currentChannelId: n.id
               }
             : null;
@@ -648,8 +648,8 @@ class tu extends i.PureComponent {
     render() {
         var e, t;
         let n,
-            { channel: i, guild: a, keyboardModeEnabled: s, hasModalOpen: l, pendingReply: c, chatInputType: d, placeholder: _, accessibilityLabel: p, showQuarantinedUserBanner: h, filterAfterTimestamp: m, communicationDisabledUntil: b, shakeIntensity: y, poggermodeEnabled: O, isSelectedResourceChannel: v, showAutomodUserProfileChatBlocker: I, showAppLauncherButton: T, showAppDMsUI: S, isInitialLoading: A, pendingScheduledMessage: N, recipientUser: C, voiceChannel: w, theme: R, chatWallpaperState: P, wallpaperColorMix: D, messagesTypingGradient: L, isChatInputBottomAligned: x, showLinkedLobbyApplicationLoadingIndicator: k, announcementComposerEnabled: j } = this.props,
-            { textAreaFocused: M, textAreaHighlighted: U } = this.state,
+            { channel: i, guild: o, keyboardModeEnabled: s, hasModalOpen: l, pendingReply: c, chatInputType: d, placeholder: _, accessibilityLabel: p, showQuarantinedUserBanner: h, filterAfterTimestamp: m, communicationDisabledUntil: b, shakeIntensity: y, poggermodeEnabled: O, isSelectedResourceChannel: v, showAutomodUserProfileChatBlocker: I, showAppLauncherButton: T, showAppDMsUI: S, isInitialLoading: A, pendingScheduledMessage: N, recipientUser: C, voiceChannel: R, theme: P, chatWallpaperState: w, wallpaperColorMix: D, messagesTypingGradient: L, isChatInputBottomAligned: x, showLinkedLobbyApplicationLoadingIndicator: M, announcementComposerEnabled: k } = this.props,
+            { textAreaFocused: j, textAreaHighlighted: U } = this.state,
             B = d === G.Ie.SIDEBAR;
         n = B && i.type === e5.d4z.GUILD_VOICE ? e6.t.pnnyFR : B && i.type === e5.d4z.GUILD_STAGE_VOICE ? e6.t.YInSkp : u.T.THREADS.has(i.type) ? e6.t['OkzL+f'] : e6.t.UbNmGR;
         let Z = (0, r.jsx)('div', {
@@ -667,10 +667,10 @@ class tu extends i.PureComponent {
                         children: (0, r.jsx)(tl, {
                             ref: this.refToChannelTextAreaFormComponent,
                             refInstance: this.containerDomRef,
-                            focused: M,
+                            focused: j,
                             highlighted: U,
                             channel: i,
-                            guild: a,
+                            guild: o,
                             keyboardModeEnabled: s,
                             onFocus: this.handleInputFocus,
                             onBlur: this.handleInputBlur,
@@ -686,30 +686,30 @@ class tu extends i.PureComponent {
                             renderAppLauncherButton: this.renderAppLauncherButton,
                             renderAppCommandButton: this.renderAppCommandButton,
                             pendingScheduledMessage: N,
-                            announcementComposerEnabled: j
+                            announcementComposerEnabled: k
                         })
                     }),
                     this.renderAppCommandButton()
                 ]
             }),
-            V = (S && A) || k,
+            V = (S && A) || M,
             H = V ? Z : F,
-            Y = o()({
+            Y = a()({
                 [e7.barWithAppLauncherButton]: T,
                 [e7.barWithAppsDMsUI]: S
             }),
             { enabled: W } = eN.Z.getCurrentConfig({
-                guildId: null == w ? void 0 : w.guild_id,
+                guildId: null == R ? void 0 : R.guild_id,
                 location: 'ChannelChat'
             }),
             K = z.qM.getCurrentConfig({ location: 'ChannelChat' }).enabled,
-            $ = W && null != C && null != w && null != w.guild_id;
+            X = W && null != C && null != R && null != R.guild_id;
         return (0, r.jsx)(
             E.Z,
             {
                 page: (0, eB.mE)(this.props.channel),
                 children: (0, r.jsx)(es.sW, {
-                    children: (0, r.jsx)(eo.BV, {
+                    children: (0, r.jsx)(ea.BV, {
                         children: (0, r.jsxs)(eZ.I3, {
                             ref: this.dispatchGroupRef,
                             children: [
@@ -731,10 +731,10 @@ class tu extends i.PureComponent {
                                 }),
                                 (0, r.jsxs)(ts, {
                                     isSidebar: B,
-                                    className: o()(e8.chatContent, {
-                                        [e8.hasWallpaper]: null == P ? void 0 : P.isViewable,
-                                        [Q.e3]: K ? (null == P ? void 0 : P.isViewable) : void 0,
-                                        [null != (e = (0, f.QeD)(R)) ? e : '']: K ? (null == P ? void 0 : P.isViewable) : void 0
+                                    className: a()(e8.chatContent, {
+                                        [e8.hasWallpaper]: null == w ? void 0 : w.isViewable,
+                                        [J.e3]: K ? (null == w ? void 0 : w.isViewable) : void 0,
+                                        [null != (e = (0, f.QeD)(P)) ? e : '']: K ? (null == w ? void 0 : w.isViewable) : void 0
                                     }),
                                     'aria-label': e6.intl.formatToPlainString(n, { channelName: i.name }),
                                     onMouseDown: this.handleChatInteract,
@@ -743,14 +743,14 @@ class tu extends i.PureComponent {
                                     style: null != D ? D : {},
                                     children: [
                                         (0, r.jsx)(q.Z, { channel: i }),
-                                        $ &&
+                                        X &&
                                             (0, r.jsx)(e3.Z, {
                                                 recipientUser: C,
-                                                voiceChannel: w
+                                                voiceChannel: R
                                             }),
-                                        (0, r.jsx)(eQ.Z, {
+                                        (0, r.jsx)(eJ.Z, {
                                             channel: i,
-                                            guild: a,
+                                            guild: o,
                                             narrow: B
                                         }),
                                         (0, r.jsxs)(f.y5t, {
@@ -771,15 +771,15 @@ class tu extends i.PureComponent {
                                                         (t = this.renderMessageBanner({
                                                             channel: i,
                                                             showQuarantinedUserBanner: h,
-                                                            guild: a,
+                                                            guild: o,
                                                             communicationDisabledUntil: b,
                                                             showAutomodUserProfileChatBlocker: I
                                                         }))
                                                       ? t
                                                       : (0, r.jsxs)('form', {
                                                             ref: this.inputFormRef,
-                                                            onSubmit: ta,
-                                                            className: o()(e8.form, { [e8.formWithLoadedChatInput]: !V }),
+                                                            onSubmit: to,
+                                                            className: a()(e8.form, { [e8.formWithLoadedChatInput]: !V }),
                                                             children: [
                                                                 O && (0, r.jsx)(em.Z, { channelId: i.id }),
                                                                 i.isPrivate()
@@ -859,19 +859,19 @@ class tu extends i.PureComponent {
                 if (t)
                     switch (e.which) {
                         case e5.yXg.ARROW_LEFT:
-                            n === G.Ie.SIDEBAR && eF.S.dispatch(e5.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: ej.Z.getChannelId() });
+                            n === G.Ie.SIDEBAR && eF.S.dispatch(e5.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: ek.Z.getChannelId() });
                             return;
                         case e5.yXg.ARROW_RIGHT:
-                            n === G.Ie.NORMAL && eF.S.dispatch(e5.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: ew.ZP.getCurrentSidebarChannelId(r.id) });
+                            n === G.Ie.NORMAL && eF.S.dispatch(e5.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: eR.ZP.getCurrentSidebarChannelId(r.id) });
                     }
             }),
             e9(this, 'handleOpenExpressionPicker', (e) => {
                 let { activeView: t } = e;
-                (0, J.PG)(t, this.props.chatInputType);
+                (0, $.PG)(t, this.props.chatInputType);
             }),
             e9(this, 'handleOpenAppLauncher', (e) => {
                 let { applicationId: t } = e;
-                return N.__(w._b.TEXT, this.props.chatInputType, { applicationId: t });
+                return N.__(R._b.TEXT, this.props.chatInputType, { applicationId: t });
             }),
             e9(this, 'handleChatInteract', () => {
                 var e;
@@ -882,23 +882,23 @@ class tu extends i.PureComponent {
                 null == (e = this.appIconAnimateRef.current) || e.animate();
             }),
             e9(this, 'renderMessageBanner', (e) => {
-                let { channel: t, showQuarantinedUserBanner: n, guild: i, communicationDisabledUntil: a, showAutomodUserProfileChatBlocker: o } = e;
+                let { channel: t, showQuarantinedUserBanner: n, guild: i, communicationDisabledUntil: o, showAutomodUserProfileChatBlocker: a } = e;
                 return t.type === e5.d4z.DM && n
                     ? (0, r.jsx)(eE.Z, {})
                     : t.isModeratorReportChannel() && t.isArchivedThread()
                       ? (0, r.jsx)(eO.Z, { channelId: t.id })
-                      : null != a && (0, en.J)(a) && null != i && !ek.Z.can(e5.Plq.ADMINISTRATOR, i)
+                      : null != o && (0, en.J)(o) && null != i && !eM.Z.can(e5.Plq.ADMINISTRATOR, i)
                         ? (0, r.jsx)(ei.T, {
                               guild: i,
-                              disabledUntil: a
+                              disabledUntil: o
                           })
-                        : o
+                        : a
                           ? (0, r.jsx)(et.h, { guild: i })
                           : null;
             }),
             e9(this, 'renderAppLauncherButton', () => {
                 let { channel: e, entryPointCommandButtonRef: t, chatInputType: n } = this.props;
-                return (0, r.jsx)(e$.Z, {
+                return (0, r.jsx)(eX.Z, {
                     channel: e,
                     type: n,
                     animateRef: this.appIconAnimateRef,
@@ -906,18 +906,18 @@ class tu extends i.PureComponent {
                 });
             }),
             e9(this, 'renderAppCommandButton', () => {
-                let { showAppDMsUI: e, isFailedAppDMLoad: t, channel: n, entryPointCommandButtonRef: i, chatInputType: a } = this.props,
-                    o = {
+                let { showAppDMsUI: e, isFailedAppDMLoad: t, channel: n, entryPointCommandButtonRef: i, chatInputType: o } = this.props,
+                    a = {
                         channel: n,
                         type: 'channel'
                     };
                 return e && !t
                     ? (0, r.jsx)('div', {
                           className: e8.entryPointButtonContainer,
-                          children: (0, r.jsx)(eJ.ZP, {
-                              context: o,
+                          children: (0, r.jsx)(e$.ZP, {
+                              context: a,
                               entryPointCommandButtonRef: i,
-                              type: a
+                              type: o
                           })
                       })
                     : null;
@@ -925,7 +925,7 @@ class tu extends i.PureComponent {
     }
 }
 let td = i.memo(function (e) {
-    let { channel: t, guild: n, chatInputType: a, filterAfterTimestamp: o } = e,
+    let { channel: t, guild: n, chatInputType: o, filterAfterTimestamp: a } = e,
         { placeholder: s, accessibilityLabel: l } = (0, eq.Z)({ channel: t }),
         c = (0, eE.S)(eU.default.getCurrentUser(), t),
         [u] = (0, er.AB)(null == n ? void 0 : n.id),
@@ -938,21 +938,21 @@ let td = i.memo(function (e) {
         m = _ && !h,
         E = (0, d.e7)([ep.Z], () => ep.Z.isEnabled()),
         b = (0, eg.Z)(t.id),
-        O = (0, ea.Z)(t.id),
-        I = (0, R.R)({
+        O = (0, eo.Z)(t.id),
+        I = (0, P.R)({
             channel: t,
-            chatInputType: a
+            chatInputType: o
         }),
         N = (0, A.Z)(t),
-        w = (0, eI.k)(t.id),
-        P = (0, y.ZP)(),
-        D = (0, X.Z)(t.id),
-        L = (0, $.Z)(null == D ? void 0 : D.wallpaperId),
+        R = (0, eI.k)(t.id),
+        w = (0, y.ZP)(),
+        D = (0, Q.Z)(t.id),
+        L = (0, X.Z)(null == D ? void 0 : D.wallpaperId),
         {
             isInitialLoading: x,
-            primaryEntryPointCommand: k,
-            isProfileFetching: j,
-            wasProfileFetching: M,
+            primaryEntryPointCommand: M,
+            isProfileFetching: k,
+            wasProfileFetching: j,
             applicationId: U,
             channelId: G,
             commands: B
@@ -963,21 +963,21 @@ let td = i.memo(function (e) {
             }
         });
     (0, S.Z)({
-        isProfileFetching: j,
-        wasProfileFetching: M,
+        isProfileFetching: k,
+        wasProfileFetching: j,
         applicationId: U,
         channelId: G,
         commands: B
     });
     let Z = i.useRef(null),
         F = (0, d.e7)([C.Z], () => C.Z.appDMChannelsWithFailedLoads().has(t.id)),
-        V = (0, d.e7)([ej.Z], () => ej.Z.getVoiceChannelId()),
-        H = (0, d.e7)([eR.Z], () => eR.Z.getChannel(V)),
+        V = (0, d.e7)([ek.Z], () => ek.Z.getVoiceChannelId()),
+        H = (0, d.e7)([eP.Z], () => eP.Z.getChannel(V)),
         Y = (0, d.e7)([eU.default], () => (t.type !== e5.d4z.DM ? null : eU.default.getUser(t.getRecipientId()))),
         z = (0, d.e7)([eh.ZP, eC.default], () => eh.ZP.getUserCombo(eC.default.getId(), t.id)),
         q = (0, g.iD)(t),
-        Q = (0, g.d7)(t),
-        J = q.length > 0 || t.rateLimitPerUser > 0 || null != z || null != Q,
+        J = (0, g.d7)(t),
+        $ = q.length > 0 || t.rateLimitPerUser > 0 || null != z || null != J,
         et = (0, W.Z)('ChannelChat'),
         { showLinkedLobbyApplicationLoadingIndicator: en } = (0, ez.Z)(t.linkedLobby),
         ei = (0, K.Z)('ChannelChat');
@@ -988,10 +988,10 @@ let td = i.memo(function (e) {
         guild: n,
         keyboardModeEnabled: (0, d.e7)([v.Z], () => v.Z.keyboardModeEnabled),
         pendingReply: (0, d.e7)([ey.Z], () => ey.Z.getPendingReply(t.id)),
-        chatInputType: a,
+        chatInputType: o,
         placeholder: s,
         accessibilityLabel: l,
-        filterAfterTimestamp: o,
+        filterAfterTimestamp: a,
         showQuarantinedUserBanner: c,
         communicationDisabledUntil: u,
         shakeIntensity: b,
@@ -1001,16 +1001,16 @@ let td = i.memo(function (e) {
         showAppLauncherButton: I,
         showAppDMsUI: N,
         isInitialLoading: x,
-        showEntryPointAppCommandButton: null != k,
+        showEntryPointAppCommandButton: null != M,
         entryPointCommandButtonRef: Z,
         isFailedAppDMLoad: F,
-        pendingScheduledMessage: w,
+        pendingScheduledMessage: R,
         recipientUser: Y,
         voiceChannel: H,
-        theme: P,
+        theme: w,
         chatWallpaperState: D,
         wallpaperColorMix: L,
-        messagesTypingGradient: et && J,
+        messagesTypingGradient: et && $,
         isChatInputBottomAligned: et,
         showLinkedLobbyApplicationLoadingIndicator: en,
         announcementComposerEnabled: ei

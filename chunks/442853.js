@@ -6,8 +6,8 @@ var r = n(73800),
     s = n(592125),
     o = n(720202),
     c = n(271383),
-    d = n(700785),
-    u = n(231338);
+    u = n(700785),
+    d = n(231338);
 let h = [],
     p = new Set();
 function f(e) {
@@ -25,7 +25,7 @@ function f(e) {
                 o.Z.requestMember(g, e);
             });
     }, [b, g]);
-    let _ = (0, l.Wu)(
+    let y = (0, l.Wu)(
             [c.ZP],
             () => {
                 if (null == g) return h;
@@ -35,17 +35,17 @@ function f(e) {
             },
             [b, g]
         ),
-        y = r.useMemo(() => {
-            if (null == f || 0 === _.length) return p;
+        x = r.useMemo(() => {
+            if (null == f || 0 === y.length) return p;
             let e = new Set();
-            for (let t of _) {
-                let n = d.uB({
+            for (let t of y) {
+                let n = u.uB({
                     user: t,
                     context: f
                 });
-                i.e$(n, u.Pl.VIEW_CHANNEL) && e.add(t);
+                i.e$(n, d.Pl.VIEW_CHANNEL) && e.add(t);
             }
             return e;
-        }, [_, f]);
-    return r.useMemo(() => (null == t ? void 0 : t.filter((e) => y.has(e.author_id))), [t, y]);
+        }, [y, f]);
+    return r.useMemo(() => (null == t ? void 0 : t.filter((e) => x.has(e.author_id))), [t, x]);
 }

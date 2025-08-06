@@ -6,21 +6,21 @@ n.d(t, {
     AS: () => W,
     Av: () => g,
     Dg: () => q,
-    Er: () => P,
-    Gs: () => w,
+    Er: () => w,
+    Gs: () => R,
     H3: () => et,
     JA: () => v,
     Jk: () => I,
     LD: () => L,
-    P8: () => R,
+    P8: () => P,
     QO: () => O,
     QP: () => l,
     Qx: () => d,
-    R$: () => j,
-    Tr: () => $,
+    R$: () => k,
+    Tr: () => X,
     UC: () => U,
     Uc: () => ee,
-    V8: () => J,
+    V8: () => $,
     WA: () => y,
     XR: () => Z,
     YE: () => G,
@@ -34,33 +34,33 @@ n.d(t, {
     ef: () => x,
     fC: () => c,
     fU: () => m,
-    h7: () => a,
+    h7: () => o,
     iA: () => K,
     jg: () => E,
     kS: () => F,
     mC: () => A,
     mN: () => S,
     n4: () => H,
-    pM: () => o,
-    pk: () => M,
-    ru: () => k,
+    pM: () => a,
+    pk: () => j,
+    ru: () => M,
     u$: () => C,
-    uA: () => X,
+    uA: () => Q,
     ux: () => V,
     vA: () => r.vA,
     w5: () => h,
     y7: () => D,
     yf: () => B,
-    ym: () => Q
+    ym: () => J
 });
 var r = n(268146),
     i = (function (e) {
         return ((e.DEFAULT = 'default'), (e.STREAM = 'stream'), e);
     })({}),
-    a = (function (e) {
+    o = (function (e) {
         return ((e.AUDIO_INPUT = 'audioinput'), (e.AUDIO_OUTPUT = 'audiooutput'), (e.VIDEO_INPUT = 'videoinput'), e);
     })({}),
-    o = (function (e) {
+    a = (function (e) {
         return ((e.PUSH_TO_TALK = 'PUSH_TO_TALK'), (e.VOICE_ACTIVITY = 'VOICE_ACTIVITY'), e);
     })({}),
     s = (function (e) {
@@ -93,15 +93,15 @@ let d = 100,
     A = 10000000,
     N = 5000,
     C = 15000,
-    w = 30,
-    R = 20,
-    P = 12,
+    R = 30,
+    P = 20,
+    w = 12,
     D = 100,
     L = 50,
     x = 1280,
-    k = 720,
-    j = 30,
-    M = 1500000,
+    M = 720,
+    k = 30,
+    j = 1500000,
     U = 500000,
     G = 3500000,
     B = 9000000,
@@ -145,16 +145,16 @@ var Y = (function (e) {
     q = (function (e) {
         return ((e[(e.NONE = 0)] = 'NONE'), (e[(e.VOICE = 1)] = 'VOICE'), (e[(e.SOUNDSHARE = 2)] = 'SOUNDSHARE'), (e[(e.PRIORITY = 4)] = 'PRIORITY'), (e[(e.HIDDEN = 8)] = 'HIDDEN'), e);
     })({}),
-    $ = (function (e) {
+    X = (function (e) {
         return ((e.AUDIO = 'audio'), (e.VIDEO = 'video'), (e.SCREEN = 'screen'), (e.TEST = 'test'), e);
     })({}),
-    X = (function (e) {
+    Q = (function (e) {
         return ((e.FIXED = 'fixed'), (e.SOURCE = 'source'), e);
     })({}),
-    Q = (function (e) {
+    J = (function (e) {
         return ((e.REMB = 'remb'), e);
     })({}),
-    J = (function (e) {
+    $ = (function (e) {
         return ((e.VIDEOTOOLBOX_RATE_CONTROL = 'videotoolbox_rate_control'), (e.SIGNAL_AV1 = 'signal_av1'), (e.SIGNAL_AV1_DECODE = 'signal_av1_decode'), (e.SIGNAL_AV1_HARDWARE_DECODE = 'signal_av1_hardware_decode'), (e.STREAMER_CLIP = 'streamer_clip'), (e.VIEWER_CLIP = 'viewer_clip'), (e.MUTE_BEFORE_PROCESSING = 'mute_before_processing'), (e.PTT_BEFORE_PROCESSING = 'ptt_before_processing'), (e.SKIP_ENCODE = 'skip_encode'), (e.RESET_DECODER_ON_ERRORS = 'reset_decoder_on_errors'), (e.SOFTWARE_FALLBACK_ON_ERRORS = 'software_fallback_on_errors'), (e.SOFTWARE_FALLBACK_ON_CONSECUTIVE_ERRORS = 'software_fallback_on_consecutive_errors'), (e.SIGNAL_RED = 'signal_red'), e);
     })({}),
     ee = (function (e) {

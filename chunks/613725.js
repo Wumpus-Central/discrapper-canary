@@ -2,8 +2,8 @@ n.d(t, { Z: () => h });
 var r = n(255367);
 n(73800);
 var i = n(94171),
-    a = n(442837),
-    o = n(481060),
+    o = n(442837),
+    a = n(481060),
     s = n(43267),
     l = n(565138),
     c = n(905423),
@@ -20,15 +20,15 @@ function h() {
                 channelId: n
             };
         }, i.X),
-        n = (0, a.e7)([d.Z], () => d.Z.getGuild(e)),
-        h = (0, a.e7)([u.Z], () => (null == n ? u.Z.getChannel(t) : null)),
-        m = (0, a.e7)([f.default], () => f.default.getCurrentUser()),
+        n = (0, o.e7)([d.Z], () => d.Z.getGuild(e)),
+        h = (0, o.e7)([u.Z], () => (null == n ? u.Z.getChannel(t) : null)),
+        m = (0, o.e7)([f.default], () => f.default.getCurrentUser()),
         g = null != h ? (0, s.x)(h) : null,
         E = null != m ? m.getAvatarURL(e, 80) : _.pK['0'],
-        b = (0, r.jsx)(o.qEK, {
+        b = (0, r.jsx)(a.qEK, {
             src: E,
             'aria-hidden': !0,
-            size: o.EFr.SIZE_80,
+            size: a.EFr.SIZE_80,
             className: p.avatarSizeOverride
         }),
         y = null;
@@ -37,10 +37,10 @@ function h() {
             null != n
                 ? (0, r.jsx)(l.Z, { guild: n })
                 : null != g
-                  ? (0, r.jsx)(o.qEK, {
+                  ? (0, r.jsx)(a.qEK, {
                         'aria-hidden': !0,
                         src: g,
-                        size: o.EFr.SIZE_80,
+                        size: a.EFr.SIZE_80,
                         className: p.avatarSizeOverride
                     })
                   : b),

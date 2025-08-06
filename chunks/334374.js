@@ -1,12 +1,12 @@
 (n.d(t, { Z: () => l }), n(388685), n(35282), n(784620), n(973216));
 var r = n(255367),
     i = n(73800),
-    a = n(414910),
-    o = n(226961),
+    o = n(414910),
+    a = n(226961),
     s = n(422636);
 function l(e) {
     let { currentUserId: t, participant: n } = e,
-        l = (0, a.Z)(n.type),
+        l = (0, o.Z)(n.type),
         [c, u] = i.useState(),
         [d, f] = i.useState(),
         [_, p] = i.useState(),
@@ -20,7 +20,7 @@ function l(e) {
     }
     let b = i.useCallback((e, t, n) => {
         var r;
-        let i = n ? o.ZP.getOutboundStats(t) : o.ZP.getInboundStats(e, t);
+        let i = n ? a.ZP.getOutboundStats(t) : a.ZP.getInboundStats(e, t);
         (u(null != (r = null == i ? void 0 : i.codec) ? r : 'unknown'), f(E(null == i ? void 0 : i.resolution)), p((null == i ? void 0 : i.bitrateEstimate) !== void 0 ? g(i.bitrateEstimate) : 'unknown'));
     }, []);
     return (

@@ -1,12 +1,12 @@
 (n.d(t, { Z: () => l }), n(539854), n(388685), n(642613));
 var r = n(73800),
     i = n(911969),
-    a = n(675478),
-    o = n(358085),
+    o = n(675478),
+    a = n(358085),
     s = n(761122);
 function l(e) {
     return (
-        a.DZ.loadIfNecessary(),
+        o.DZ.loadIfNecessary(),
         r.useMemo(() => {
             let t = [];
             e.forEach((e) => t.push(e.application.id));
@@ -31,8 +31,8 @@ let c = (e, t) => {
             .filter((e) => {
                 var t, n;
                 let [r] = e,
-                    a = null == (n = r.application.embeddedActivityConfig) || null == (t = n.client_platform_config[(0, s.Z)((0, o.getOS)())]) ? void 0 : t.label_type;
-                return !!a && (a === i.ww.NEW || a === i.ww.UPDATED);
+                    o = null == (n = r.application.embeddedActivityConfig) || null == (t = n.client_platform_config[(0, s.Z)((0, a.getOS)())]) ? void 0 : t.label_type;
+                return !!o && (o === i.ww.NEW || o === i.ww.UPDATED);
             })
             .forEach((e) => {
                 let [t, r] = e,

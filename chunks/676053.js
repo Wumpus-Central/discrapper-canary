@@ -1,8 +1,8 @@
 n.d(t, { M: () => O });
 var r = n(255367),
     i = n(73800),
-    a = n(780842),
-    o = n(70097),
+    o = n(780842),
+    a = n(70097),
     s = n(312097),
     l = n(920155),
     c = n(744399),
@@ -69,8 +69,8 @@ function b(e, t) {
         r,
         i = y(e, t);
     if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
@@ -79,8 +79,8 @@ function y(e, t) {
     var n,
         r,
         i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
 function O(e) {
@@ -102,7 +102,7 @@ function O(e) {
         A = b(e, ['title', 'body', 'assetUrl', 'action', 'caretConfig', 'badge', 'textLink', 'onWatchVideo', 'onRequestClose', 'popoverRef']);
     let N = i.useRef(null),
         C = h.endsWith('.gif') || h.endsWith('.webp') || h.endsWith('.png'),
-        w = i.useCallback(
+        R = i.useCallback(
             () => ({
                 type: 'VIDEO',
                 url: h,
@@ -114,15 +114,15 @@ function O(e) {
             }),
             [h, t]
         ),
-        R = i.useCallback(() => {
+        P = i.useCallback(() => {
             (null !== N.current && N.current.pause(), null == T || T());
         }, [T]),
-        P = i.useCallback(() => {
+        w = i.useCallback(() => {
             (null !== N.current && N.current.pause(), null == T || T());
         }, [T]),
         D = i.useCallback(() => {
             null !== N.current && N.current.pause();
-            let e = w();
+            let e = R();
             ((0, s.K)({
                 items: [e],
                 startingIndex: 0,
@@ -131,7 +131,7 @@ function O(e) {
             }),
                 null == T || T(),
                 null == I || I());
-        }, [w, I, T]),
+        }, [R, I, T]),
         L = C
             ? (0, r.jsx)('img', {
                   src: h,
@@ -141,7 +141,7 @@ function O(e) {
               })
             : (0, r.jsxs)(r.Fragment, {
                   children: [
-                      (0, r.jsx)(o.Z, {
+                      (0, r.jsx)(a.Z, {
                           ref: N,
                           src: h,
                           width: 240,
@@ -156,7 +156,7 @@ function O(e) {
                       }),
                       (0, r.jsx)('div', {
                           className: p.playButton,
-                          children: (0, r.jsx)(a.J, {
+                          children: (0, r.jsx)(o.J, {
                               playing: !1,
                               size: 'sm',
                               'aria-label': 'Play video: '.concat(t),
@@ -168,13 +168,13 @@ function O(e) {
     return (0, r.jsx)(
         l.m,
         E(m({}, A), {
-            onRequestClose: R,
+            onRequestClose: P,
             hasVideo: !0,
             children: (0, r.jsxs)('div', {
                 ref: S,
                 children: [
                     (0, r.jsx)(f.u, {
-                        onClick: P,
+                        onClick: w,
                         colorMix: !0
                     }),
                     (0, r.jsx)(u.V, {

@@ -24,8 +24,8 @@
     n(388685));
 var r = n(108131),
     i = n.n(r);
-let a = new (n(710845).Z)('WebP'),
-    o = 102400,
+let o = new (n(710845).Z)('WebP'),
+    a = 102400,
     s = 0.1,
     l = new Uint8Array([137, 80, 78, 71, 13, 10, 26, 10]);
 function c(e) {
@@ -51,10 +51,10 @@ async function u(e) {
     for (t = 8; t < e.size && !(t + 8 > e.size); ) {
         let r = await n(t, 8),
             i = new DataView(r.buffer).getUint32(0),
-            o = String.fromCharCode(r[4], r[5], r[6], r[7]);
-        if (!c(o)) throw Error('Corrupted PNG: invalid chunk type detected');
-        if ('acTL' === o) return (a.verbose('[webp] found acTL chunk - png is animated'), !0);
-        if ('IDAT' === o) break;
+            a = String.fromCharCode(r[4], r[5], r[6], r[7]);
+        if (!c(a)) throw Error('Corrupted PNG: invalid chunk type detected');
+        if ('acTL' === a) return (o.verbose('[webp] found acTL chunk - png is animated'), !0);
+        if ('IDAT' === a) break;
         if (i > e.size || (t += 8 + i + 4) > e.size) throw Error('Corrupted PNG: invalid chunk length detected');
     }
     return !1;
@@ -62,10 +62,10 @@ async function u(e) {
 async function d(e) {
     var t;
     let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-        r = null != (t = n.minFileSizeBytes) ? t : o;
+        r = null != (t = n.minFileSizeBytes) ? t : a;
     if (e.size < r)
         return (
-            a.verbose('[WebP] File too small: '.concat(e.size, ' < ').concat(r)),
+            o.verbose('[WebP] File too small: '.concat(e.size, ' < ').concat(r)),
             {
                 should: !1,
                 reason: 'file_too_small'
@@ -73,7 +73,7 @@ async function d(e) {
         );
     if ('image/webp' === e.type)
         return (
-            a.verbose('[WebP] File already WebP format'),
+            o.verbose('[WebP] File already WebP format'),
             {
                 should: !1,
                 reason: 'already_webp'
@@ -81,7 +81,7 @@ async function d(e) {
         );
     if (!['image/png'].includes(e.type))
         return (
-            a.verbose('[WebP] Unsupported format: '.concat(e.type)),
+            o.verbose('[WebP] Unsupported format: '.concat(e.type)),
             {
                 should: !1,
                 reason: 'unsupported_format'
@@ -90,7 +90,7 @@ async function d(e) {
     try {
         if (await u(e))
             return (
-                a.verbose('[webp] png is animated (apng) - skipping conversion'),
+                o.verbose('[webp] png is animated (apng) - skipping conversion'),
                 {
                     should: !1,
                     reason: 'animated_image'
@@ -99,14 +99,14 @@ async function d(e) {
     } catch (e) {
         if (e instanceof Error && e.message.includes('Corrupted PNG'))
             return (
-                a.warn('[WebP] PNG corruption detected: '.concat(e.message)),
+                o.warn('[WebP] PNG corruption detected: '.concat(e.message)),
                 {
                     should: !1,
                     reason: 'corrupted_file'
                 }
             );
         return (
-            a.warn('[WebP] Unexpected error during PNG analysis:', e),
+            o.warn('[WebP] Unexpected error during PNG analysis:', e),
             {
                 should: !1,
                 reason: 'conversion_failed'
@@ -122,7 +122,7 @@ function f(e) {
 async function _(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
     if (null == e) throw Error('file is null or undefined');
-    a.verbose('[WebP] Starting conversion for: '.concat(e.name));
+    o.verbose('[WebP] Starting conversion for: '.concat(e.name));
     let n = performance.now(),
         r = function (t) {
             let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : e.size;
@@ -137,8 +137,8 @@ async function _(e) {
         };
     try {
         var i;
-        let o = await d(e, t);
-        if (!o.should) return (a.verbose('[WebP] Conversion rejected: '.concat(o.reason)), r(o.reason));
+        let a = await d(e, t);
+        if (!a.should) return (o.verbose('[WebP] Conversion rejected: '.concat(a.reason)), r(a.reason));
         let l = document.createElement('canvas'),
             c = l.getContext('2d');
         if (null == c) throw Error('could not get canvas context');
@@ -163,26 +163,26 @@ async function _(e) {
                 n = await c.getImageData(0, 0, l.width, l.height);
             c.clearRect(0, 0, l.width, l.height);
             let i = new Image(),
-                o = URL.createObjectURL(p);
+                a = URL.createObjectURL(p);
             try {
                 (await new Promise((e, t) => {
-                    ((i.onload = () => e()), (i.onerror = () => t(Error('failed to load image'))), (i.src = o));
+                    ((i.onload = () => e()), (i.onerror = () => t(Error('failed to load image'))), (i.src = a));
                 }),
                     c.drawImage(i, 0, 0));
             } finally {
-                URL.revokeObjectURL(o);
+                URL.revokeObjectURL(a);
             }
             let s = await c.getImageData(0, 0, l.width, l.height),
                 u = f(n),
                 d = f(s),
                 _ = u === d,
                 h = performance.now() - t;
-            if ((a.verbose('[WebP] Pixel hash results: ' + 'fileName='.concat(e.name, ' ') + 'fileLength={'.concat(e.size, '} ') + 'width='.concat(i.width, ' ') + 'height='.concat(i.height, ' ') + 'pixelHash='.concat(u, ' ') + 'mezzanineFileLength={'.concat(p.size, '} ') + 'mezzaninePixelHash='.concat(d, ' ') + 'match='.concat(_, ' ') + 'elapsed_ms='.concat(Math.round(h))), !_)) return r('pixel_hash_mismatch');
+            if ((o.verbose('[WebP] Pixel hash results: ' + 'fileName='.concat(e.name, ' ') + 'fileLength={'.concat(e.size, '} ') + 'width='.concat(i.width, ' ') + 'height='.concat(i.height, ' ') + 'pixelHash='.concat(u, ' ') + 'mezzanineFileLength={'.concat(p.size, '} ') + 'mezzaninePixelHash='.concat(d, ' ') + 'match='.concat(_, ' ') + 'elapsed_ms='.concat(Math.round(h))), !_)) return r('pixel_hash_mismatch');
         }
         let h = e.size > 0 ? p.size / e.size : 1,
             m = 1 - h,
             g = null != (i = t.minSizeReductionPercent) ? i : s;
-        if (m < g) return (a.verbose('[WebP] Insufficient savings: '.concat(Math.round(100 * m), '% < ').concat(100 * g, '%')), r('insufficient_savings', p.size));
+        if (m < g) return (o.verbose('[WebP] Insufficient savings: '.concat(Math.round(100 * m), '% < ').concat(100 * g, '%')), r('insufficient_savings', p.size));
         let E = e.name.lastIndexOf('.'),
             b = -1 === E ? e.name : e.name.substring(0, E),
             y = new File([p], ''.concat(b, '.webp'), {
@@ -191,7 +191,7 @@ async function _(e) {
             }),
             O = performance.now() - n;
         return (
-            a.verbose('[WebP] Conversion successful: '.concat(y.name, ' in ').concat(Math.round(O), 'ms')),
+            o.verbose('[WebP] Conversion successful: '.concat(y.name, ' in ').concat(Math.round(O), 'ms')),
             {
                 success: !0,
                 originalFile: e,
@@ -202,15 +202,15 @@ async function _(e) {
             }
         );
     } catch (t) {
-        return (a.error('[WebP] Conversion failed for '.concat(e.name, ':'), t), r('conversion_failed'));
+        return (o.error('[WebP] Conversion failed for '.concat(e.name, ':'), t), r('conversion_failed'));
     }
 }
 async function p(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-    a.verbose('[WebP] Converting '.concat(e.length, ' files to WebP...'));
+    o.verbose('[WebP] Converting '.concat(e.length, ' files to WebP...'));
     let n = await Promise.all(e.map((e) => _(e, t))),
         r = n.filter((e) => e.success).length;
-    return (a.verbose('[WebP] Batch conversion complete: '.concat(r, '/').concat(e.length, ' successful')), n);
+    return (o.verbose('[WebP] Batch conversion complete: '.concat(r, '/').concat(e.length, ' successful')), n);
 }
 function h(e) {
     return e.success && null != e.convertedFile ? e.convertedFile : e.originalFile;

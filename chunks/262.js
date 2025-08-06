@@ -1,8 +1,8 @@
 (n.d(t, { Z: () => g }), n(35282));
 var r = n(255367),
     i = n(73800),
-    a = n(481060),
-    o = n(857395),
+    o = n(481060),
+    a = n(857395),
     s = n(739566),
     l = n(834129),
     c = n(388032);
@@ -64,8 +64,8 @@ function p(e, t) {
         r,
         i = h(e, t);
     if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
@@ -74,27 +74,27 @@ function h(e, t) {
     var n,
         r,
         i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
 function m(e) {
     let { children: t, messageReference: n, guildName: s } = e,
         l = i.useRef(null);
-    if (null == n) return (0, r.jsx)(a.eee, { children: t });
+    if (null == n) return (0, r.jsx)(o.eee, { children: t });
     let { guild_id: c } = n;
     return null == c
-        ? (0, r.jsx)(a.eee, { children: t })
-        : (0, r.jsx)(o.Z, {
+        ? (0, r.jsx)(o.eee, { children: t })
+        : (0, r.jsx)(a.Z, {
               guildId: c,
               name: s,
               targetElementRef: l,
               children: (e) => {
                   let { 'aria-controls': n, 'aria-expanded': i } = e,
-                      o = p(e, ['aria-controls', 'aria-expanded']);
+                      a = p(e, ['aria-controls', 'aria-expanded']);
                   return (0, r.jsx)(
-                      a.eee,
-                      _(d({}, o), {
+                      o.eee,
+                      _(d({}, a), {
                           ref: l,
                           children: t
                       })
@@ -103,15 +103,15 @@ function m(e) {
           });
 }
 function g(e) {
-    let { usernameHook: t, message: i, compact: a } = e,
-        { content: o, timestamp: u, messageReference: d } = i,
+    let { usernameHook: t, message: i, compact: o } = e,
+        { content: a, timestamp: u, messageReference: d } = i,
         f = (0, s.ZP)(i),
         _ = t(f),
-        p = (null != o ? o : '').split(' ').slice(0, -1).join(' '),
+        p = (null != a ? a : '').split(' ').slice(0, -1).join(' '),
         h = c.intl.format(c.t['47CZc3'], {
             username: f.nick,
             usernameHook: _,
-            webhookName: o,
+            webhookName: a,
             webhookNameHook: (e, t) =>
                 (0, r.jsx)(
                     m,
@@ -126,7 +126,7 @@ function g(e) {
     return (0, r.jsx)(l.Z, {
         icon: n(570111),
         timestamp: u,
-        compact: a,
+        compact: o,
         children: h
     });
 }

@@ -1,8 +1,8 @@
 n.d(t, { r: () => y });
 var r = n(622822),
     i = n(100527),
-    a = n(703656),
-    o = n(6025),
+    o = n(703656),
+    a = n(6025),
     s = n(897473),
     l = n(592125),
     c = n(984933),
@@ -74,11 +74,11 @@ function y(e, t, n) {
         S = null != T ? l.Z.getChannel(T) : null;
     if (n !== h.oC.MEMBER_SAFETY && (null == S || S.getGuildId() !== e)) {
         let t = c.ZP.getDefaultChannel(e);
-        null == t || (0, r.aC)(t) || (0, a.uL)(p.Z5c.CHANNEL(e, t.id));
+        null == t || (0, r.aC)(t) || (0, o.uL)(p.Z5c.CHANNEL(e, t.id));
     }
     return (
         (0, d.q)(e, t, v, I),
-        o.Z.openGuildSidebar({
+        a.Z.openGuildSidebar({
             guildId: e,
             baseChannelId: n,
             sidebarType: s.jL.GUILD_MEMBER_MOD_VIEW,

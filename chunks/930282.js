@@ -5,8 +5,8 @@ n.d(t, {
 });
 var r = n(255367),
     i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(653603),
     l = n.n(s),
     c = n(902704),
@@ -21,30 +21,30 @@ function m(e, t) {
 }
 function g(e) {
     var t;
-    let { className: n, message: a, children: s, content: c, onUpdate: _, contentRef: g, compact: E } = e,
-        b = a.state === f.yb.SEND_FAILED,
-        y = a.state === f.yb.SENDING,
-        O = a.isCommandType(),
-        v = null == (t = a.editedTimestamp) ? void 0 : t.toString(),
+    let { className: n, message: o, children: s, content: c, onUpdate: _, contentRef: g, compact: E } = e,
+        b = o.state === f.yb.SEND_FAILED,
+        y = o.state === f.yb.SENDING,
+        O = o.isCommandType(),
+        v = null == (t = o.editedTimestamp) ? void 0 : t.toString(),
         I = i.useRef(!1);
     return (
         i.useLayoutEffect(() => {
             I.current ? null != _ && _() : (I.current = !0);
-        }, [_, a.content, c, v, s]),
+        }, [_, o.content, c, v, s]),
         (0, r.jsxs)('div', {
-            id: (0, u.ut)(a),
+            id: (0, u.ut)(o),
             ref: g,
-            className: o()(n, h.markup, {
+            className: a()(n, h.markup, {
                 [p.messageContent]: !0,
                 [p.isSending]: y && !O,
-                [p.markupRtl]: 'rtl' === l()(a.content),
+                [p.markupRtl]: 'rtl' === l()(o.content),
                 [p.isFailed]: b,
-                [p.isUnsupported]: a.isUnsupported
+                [p.isUnsupported]: o.isUnsupported
             }),
             children: [
-                null != s ? s : m(a, c),
+                null != s ? s : m(o, c),
                 (0, r.jsx)(d.Z, {
-                    message: a,
+                    message: o,
                     compact: E,
                     location: d.H.WITH_CONTENT
                 })
@@ -55,7 +55,7 @@ function g(e) {
 function E(e, t) {
     var n, r;
     let { message: i } = t,
-        { message: a } = e;
-    return (0, c.Z)(e, t, ['message']) && i.content === a.content && i.state === a.state && (null == (n = i.editedTimestamp) ? void 0 : n.toString()) === (null == (r = a.editedTimestamp) ? void 0 : r.toString());
+        { message: o } = e;
+    return (0, c.Z)(e, t, ['message']) && i.content === o.content && i.state === o.state && (null == (n = i.editedTimestamp) ? void 0 : n.toString()) === (null == (r = o.editedTimestamp) ? void 0 : r.toString());
 }
 let b = i.memo(g, E);

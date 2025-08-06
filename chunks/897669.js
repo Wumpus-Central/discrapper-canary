@@ -2,8 +2,8 @@ n.d(t, { Z: () => f });
 var r = n(255367);
 n(73800);
 var i = n(481060),
-    a = n(665149),
-    o = n(894017),
+    o = n(665149),
+    a = n(894017),
     s = n(79874),
     l = n(854698),
     c = n(390966),
@@ -12,12 +12,12 @@ var i = n(481060),
 function f(e) {
     let { guildEvent: t, recurrenceId: n } = e,
         f = (0, s.ZP)(t, n),
-        _ = (0, o.Z)(n, t.id);
+        _ = (0, a.Z)(n, t.id);
     if (null == t) return null;
     let p = (null == t ? void 0 : t.scheduled_start_time) != null ? (0, l.lh)(_, f.startTime, new Date(null == t ? void 0 : t.scheduled_start_time)) : null;
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(a.ZP.Divider, { className: d.divider }),
+            (0, r.jsx)(o.ZP.Divider, { className: d.divider }),
             (0, r.jsx)(c.z, {
                 startTime: f.startTime.toISOString(),
                 status: null != p ? p : t.status,

@@ -4,8 +4,8 @@ n.d(t, {
 });
 var r = n(255367),
     i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(481060),
     l = n(239091),
     c = n(166081),
@@ -69,7 +69,7 @@ function b(e, t) {
 }
 let y = 600;
 function O(e) {
-    let { showEditProduct: t, showUnpublishProduct: n, showCopyLink: i, showTestDownload: a, showDeleteProduct: o, showReportProduct: l, onEditProduct: c, onUnpublishProduct: u, onDeleteProduct: d, onCopyLink: f, onTestDownload: _, onReportProduct: m, closePopout: g, onSelect: E } = e;
+    let { showEditProduct: t, showUnpublishProduct: n, showCopyLink: i, showTestDownload: o, showDeleteProduct: a, showReportProduct: l, onEditProduct: c, onUnpublishProduct: u, onDeleteProduct: d, onCopyLink: f, onTestDownload: _, onReportProduct: m, closePopout: g, onSelect: E } = e;
     return (0, r.jsx)('div', {
         className: h.menuContainer,
         children: (0, r.jsxs)(s.v2r, {
@@ -93,7 +93,7 @@ function O(e) {
                                 icon: s.xPt,
                                 action: f
                             }),
-                        a &&
+                        o &&
                             (0, r.jsx)(s.sNh, {
                                 id: 'guild-product-test-download',
                                 label: p.intl.string(p.t.aXoI6e),
@@ -110,7 +110,7 @@ function O(e) {
                                 label: p.intl.string(p.t.QrkMlJ),
                                 action: u
                             }),
-                        o &&
+                        a &&
                             (0, r.jsx)(s.sNh, {
                                 id: 'guild-product-delete',
                                 label: p.intl.string(p.t.zWjqvL),
@@ -134,7 +134,7 @@ function O(e) {
     });
 }
 function v(e) {
-    let { product: t, guildId: n, showEditProduct: a, showUnpublishProduct: o, showTestDownload: l, showCopyLink: c, showDeleteProduct: u, showReportProduct: d, onEditProduct: f, onUnpublishProduct: _, onDeleteProduct: m, onCopyProductLink: E, onTestDownload: y, onReportProduct: v } = e,
+    let { product: t, guildId: n, showEditProduct: o, showUnpublishProduct: a, showTestDownload: l, showCopyLink: c, showDeleteProduct: u, showReportProduct: d, onEditProduct: f, onUnpublishProduct: _, onDeleteProduct: m, onCopyProductLink: E, onTestDownload: y, onReportProduct: v } = e,
         I = i.useRef(null),
         T = (e) => {
             e.stopPropagation();
@@ -153,8 +153,8 @@ function v(e) {
                     b(g({}, e), {
                         guildId: n,
                         productId: t.id,
-                        showEditProduct: a,
-                        showUnpublishProduct: o,
+                        showEditProduct: o,
+                        showUnpublishProduct: a,
                         showCopyLink: c,
                         showTestDownload: l,
                         showReportProduct: d,
@@ -190,7 +190,7 @@ function v(e) {
     });
 }
 function I(e) {
-    let { product: t, guildId: n, onEditProduct: i, onUnpublishProduct: a, onDeleteProduct: m, onCopyProductLink: E, onTestDownload: I, disabled: T = !1 } = e,
+    let { product: t, guildId: n, onEditProduct: i, onUnpublishProduct: o, onDeleteProduct: m, onCopyProductLink: E, onTestDownload: I, disabled: T = !1 } = e,
         S = (0, c.U)(t, y),
         A = null !== t.price_tier ? (0, u.T4)(t.price_tier, _.pK.USD) : void 0,
         N = (0, d.C)(t);
@@ -210,7 +210,7 @@ function I(e) {
                         showDeleteProduct: !0,
                         showReportProduct: !1,
                         onEditProduct: i,
-                        onUnpublishProduct: a,
+                        onUnpublishProduct: o,
                         onDeleteProduct: m,
                         onCopyLink: E,
                         onTestDownload: I,
@@ -222,7 +222,7 @@ function I(e) {
     }
     return (0, r.jsxs)(s.kL8, {
         tag: 'article',
-        className: o()(h.productCardClickable, h.productCard, { [h.disabled]: T }),
+        className: a()(h.productCardClickable, h.productCard, { [h.disabled]: T }),
         onClick: T ? void 0 : i,
         onContextMenu: C,
         'aria-label': p.intl.formatToPlainString(p.t['X/yAKi'], { productName: t.name }),
@@ -282,7 +282,7 @@ function I(e) {
                             showDeleteProduct: !0,
                             showReportProduct: !1,
                             onEditProduct: i,
-                            onUnpublishProduct: a,
+                            onUnpublishProduct: o,
                             onDeleteProduct: m,
                             onCopyProductLink: E,
                             onTestDownload: I,

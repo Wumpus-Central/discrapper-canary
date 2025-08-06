@@ -2,8 +2,8 @@ n.d(t, { e: () => f });
 var r = n(255367);
 n(73800);
 var i = n(481060),
-    a = n(240872),
-    o = n(923500),
+    o = n(240872),
+    a = n(923500),
     s = n(247206),
     l = n(774863),
     c = n(388032);
@@ -45,12 +45,12 @@ function f(e, t) {
         }),
         !l.Z.canSubmitFpReport(t))
     ) {
-        (a.Z.show({
+        (o.Z.show({
             title: c.intl.string(c.t['iS/eFB']),
             body: c.intl.string(c.t.YrjcgY),
             confirmText: c.intl.string(c.t.BddRzc)
         }),
-            o.Z.disableFalsePositiveButton(e, t));
+            a.Z.disableFalsePositiveButton(e, t));
         return;
     }
     (0, i.ZDy)(async () => {

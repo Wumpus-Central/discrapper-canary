@@ -11,7 +11,7 @@ function r(e, t, n) {
         e
     );
 }
-(n.d(t, { Z: () => a }), n(388685));
+(n.d(t, { Z: () => o }), n(388685));
 class i extends Map {
     set(e, t) {
         return (this.size >= this.maxSize && this.delete(this.keys().next().value), super.set(e, t));
@@ -20,4 +20,4 @@ class i extends Map {
         (super(), r(this, 'maxSize', void 0), (this.maxSize = e));
     }
 }
-let a = i;
+let o = i;

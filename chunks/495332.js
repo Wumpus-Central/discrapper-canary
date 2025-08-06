@@ -1,8 +1,8 @@
 n.d(t, { Z: () => f });
 var r = n(73800),
     i = n(806966),
-    a = n(697426),
-    o = n(294206),
+    o = n(697426),
+    a = n(294206),
     s = n(280880);
 function l(e, t, n) {
     return (
@@ -62,9 +62,9 @@ function f(e) {
         v = ''.concat(l, '-').concat(u),
         I = f && O.rowIndex === l && O.columnIndex === u;
     switch (t.item.type) {
-        case a.vB.SOUND:
+        case o.vB.SOUND:
             return (0, r.createElement)(
-                o.ZP,
+                a.ZP,
                 d(c({}, p(u), n), {
                     key: v,
                     sound: t.item.sound,
@@ -79,7 +79,7 @@ function f(e) {
                     isSoundmoji: !0 === y
                 })
             );
-        case a.vB.ADD_SOUND:
+        case o.vB.ADD_SOUND:
             return (0, r.createElement)(
                 s.Z,
                 d(c({}, p(u)), {

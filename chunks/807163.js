@@ -546,6 +546,7 @@ let ej = function (e) {
                       onClose: o
                   }),
                   (0, t.jsx)(x.hzk, {
+                      'data-migration-pending': !0,
                       className: K.body,
                       children: (0, t.jsx)(x.$jN, { className: K.spinner })
                   })
@@ -558,6 +559,7 @@ let ej = function (e) {
                       onClose: o
                   }),
                   (0, t.jsxs)(x.hzk, {
+                      'data-migration-pending': !0,
                       className: K.body,
                       children: [
                           (0, t.jsx)(x.X6q, {
@@ -584,7 +586,11 @@ let ej = function (e) {
                           })
                       ]
                   }),
-                  !I && (0, t.jsx)(x.mzw, { children: i }),
+                  !I &&
+                      (0, t.jsx)(x.mzw, {
+                          'data-migration-pending': !0,
+                          children: i
+                      }),
                   I &&
                       (0, t.jsx)(k.Z, {
                           churnUserDiscountOffer: f,

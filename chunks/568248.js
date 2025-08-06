@@ -1,8 +1,8 @@
 (n.d(t, { Z: () => E }), n(953529), n(997841), n(388685));
 var r = n(255367),
     i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(95398),
     l = n(936141),
     c = n(768494),
@@ -15,7 +15,7 @@ var r = n(255367),
     m = n(583760);
 let g = 85;
 function E(e) {
-    let { media: t, spoiler: n, description: a } = e,
+    let { media: t, spoiler: n, description: o } = e,
         E = (0, u.pU)(t),
         b = (0, _.yE)(t.flags, c.hR.IS_ANIMATED),
         { gifAutoPlay: y } = (0, d.c)(),
@@ -33,10 +33,10 @@ function E(e) {
                       hiddenSpoilers: e
                   })
                 : (0, r.jsx)(f.Yi, {
-                      containerClassName: o()(m.imgContainer, { [m.hiddenSpoiler]: e }),
+                      containerClassName: a()(m.imgContainer, { [m.hiddenSpoiler]: e }),
                       imageClassName: m.img,
                       src: t.proxyUrl,
-                      alt: a,
+                      alt: o,
                       original: t.url,
                       placeholder: t.placeholder,
                       placeholderVersion: t.placeholderVersion,

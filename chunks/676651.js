@@ -2,8 +2,8 @@ n.d(t, { h: () => l });
 var r = n(255367);
 n(73800);
 var i = n(481060),
-    a = n(302463);
-function o(e, t, n) {
+    o = n(302463);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -27,7 +27,7 @@ function s(e) {
                 })
             )),
             r.forEach(function (t) {
-                o(e, t, n[t]);
+                a(e, t, n[t]);
             }));
     }
     return e;
@@ -48,6 +48,6 @@ function l(e, t) {
                     )
                 );
         },
-        { modalKey: a.Yz }
+        { modalKey: o.Yz }
     );
 }

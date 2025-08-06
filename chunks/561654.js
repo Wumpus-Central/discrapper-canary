@@ -1,8 +1,8 @@
 (n.d(t, { Z: () => d }), n(388685));
 var r,
     i = n(442837),
-    a = n(570140),
-    o = n(430824);
+    o = n(570140),
+    a = n(430824);
 function s(e, t, n) {
     return (
         t in e
@@ -23,11 +23,11 @@ let l = new Map(),
     };
 class u extends (r = i.ZP.Store) {
     initialize() {
-        this.waitFor(o.Z);
+        this.waitFor(a.Z);
     }
     getGuildRoleConnectionsConfiguration(e) {
         return l.get(e);
     }
 }
 s(u, 'displayName', 'GuildRoleConnectionsConfigurationStore');
-let d = new u(a.Z, { GUILD_ROLE_CONNECTIONS_CONFIGURATIONS_FETCH_SUCCESS: c });
+let d = new u(o.Z, { GUILD_ROLE_CONNECTIONS_CONFIGURATIONS_FETCH_SUCCESS: c });

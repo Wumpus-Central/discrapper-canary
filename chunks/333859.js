@@ -1,4 +1,4 @@
-n.d(t, { c: () => C });
+n.d(t, { c: () => E });
 var i = n(255367);
 n(73800);
 var r = n(442837),
@@ -20,7 +20,7 @@ var r = n(442837),
 let j = () => {
         ((0, p.XO)(p.wh.APP_ICON), (0, l.xf)());
     },
-    C = () => {
+    E = () => {
         let { analyticsLocations: e } = (0, d.ZP)(c.Z.USER_SETTINGS),
             t = (0, r.e7)([u.Z], () => u.Z.isUpsellPreview);
         return (

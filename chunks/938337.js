@@ -1,8 +1,8 @@
 n.d(t, { i: () => _ });
 var r = n(255367),
     i = n(73800),
-    a = n(512100),
-    o = n(906732),
+    o = n(512100),
+    a = n(906732),
     s = n(626135),
     l = n(981631);
 function c(e, t, n) {
@@ -40,8 +40,8 @@ function d(e, t) {
         r,
         i = f(e, t);
     if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
@@ -50,14 +50,14 @@ function f(e, t) {
     var n,
         r,
         i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
 function _(e) {
     var { appId: t, skuId: n } = e,
         c = d(e, ['appId', 'skuId']);
-    let { analyticsLocations: f } = (0, o.ZP)();
+    let { analyticsLocations: f } = (0, a.ZP)();
     return (
         i.useEffect(() => {
             s.default.track(l.rMx.VIEW_PREMIUM_APP_EXPANDED_PRODUCT_CARD, {
@@ -66,6 +66,6 @@ function _(e) {
                 location_stack: f
             });
         }, [f, t, n]),
-        (0, r.jsx)(a.u, u({}, c))
+        (0, r.jsx)(o.u, u({}, c))
     );
 }

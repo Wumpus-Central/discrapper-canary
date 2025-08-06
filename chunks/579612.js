@@ -7,8 +7,8 @@ n.d(t, {
 var r = n(255367);
 n(73800);
 var i = n(120356),
-    a = n.n(i),
-    o = n(481060),
+    o = n.n(i),
+    a = n(481060),
     s = n(933557),
     l = n(471445),
     c = n(266076),
@@ -25,10 +25,10 @@ function m(e) {
             n = _.default.getUser(e);
         if (null == n) return null;
         let i = n.getAvatarURL(null, 20);
-        return (0, r.jsx)(o.qEK, {
+        return (0, r.jsx)(a.qEK, {
             'aria-hidden': !0,
             className: h.searchResultDMChannelIcon,
-            size: o.EFr.SIZE_20,
+            size: a.EFr.SIZE_20,
             src: i
         });
     }
@@ -37,7 +37,7 @@ function m(e) {
             'aria-hidden': !0,
             className: h.searchResultGDMChannelIcon,
             channel: t,
-            size: o.EFr.SIZE_20,
+            size: a.EFr.SIZE_20,
             experimentLocation: 'search_popout'
         });
     let n = (0, l.KS)(t);
@@ -72,15 +72,15 @@ function E(e) {
         });
 }
 function b(e) {
-    let { channel: t, text: n, channelContainerClassName: i, textContainerClassName: o } = e;
+    let { channel: t, text: n, channelContainerClassName: i, textContainerClassName: a } = e;
     return null == t
         ? (0, r.jsx)('strong', { children: n })
         : (0, r.jsxs)('div', {
-              className: a()(h.resultChannel, i),
+              className: o()(h.resultChannel, i),
               children: [
                   (0, r.jsx)(m, { channel: t }),
                   (0, r.jsxs)('div', {
-                      className: o,
+                      className: a,
                       children: [(0, r.jsx)(g, { channel: t }), (0, r.jsx)(E, { channel: t })]
                   })
               ]

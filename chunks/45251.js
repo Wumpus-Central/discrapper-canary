@@ -10,29 +10,29 @@
     n(997841));
 var r = n(544891),
     i = n(570140),
-    a = n(9874),
-    o = n(861990),
+    o = n(9874),
+    a = n(861990),
     s = n(216789),
     l = n(981631);
 async function c(e) {
     if (0 === e.length) return;
-    let t = (0, a.F)(),
+    let t = (0, o.F)(),
         n = await t.uploadFiles(e);
     if (t._aborted) throw Error('Upload aborted');
-    return n.map((e, t) => (0, o.B)(e, t));
+    return n.map((e, t) => (0, a.B)(e, t));
 }
 async function u(e) {
-    let { channelId: t, scheduledTimestamp: n, messageSendData: a, attachments: o, attachmentsToUpload: u } = e;
+    let { channelId: t, scheduledTimestamp: n, messageSendData: o, attachments: a, attachmentsToUpload: u } = e;
     i.Z.dispatch({
         type: 'SCHEDULED_MESSAGES_CREATE_START',
         channelId: t
     });
     try {
         let [e, d] = (0, s.Uo)({
-            content: a.content,
-            flags: a.flags
+            content: o.content,
+            flags: o.flags
         });
-        null != u && (o = await c(u));
+        null != u && (a = await c(u));
         let f = await r.tn.post({
             url: l.ANM.SCHEDULED_MESSAGES,
             body: {
@@ -40,9 +40,9 @@ async function u(e) {
                 content: e,
                 scheduled_timestamp: n,
                 flags: d,
-                message_reference: a.message_reference,
-                allowed_mentions: a.allowed_mentions,
-                attachments: null != o ? o : []
+                message_reference: o.message_reference,
+                allowed_mentions: o.allowed_mentions,
+                attachments: null != a ? a : []
             },
             rejectWithError: !0
         });
@@ -88,10 +88,10 @@ async function d(e) {
             type: 'SCHEDULED_MESSAGES_DELETE_SUCCESS',
             scheduledMessageId: e
         });
-    } catch (a) {
+    } catch (o) {
         var t, n;
-        s.GO.error('Failed to cancel scheduled message', a);
-        let r = null != (n = null == (t = a.body) ? void 0 : t.message) ? n : a.message;
+        s.GO.error('Failed to cancel scheduled message', o);
+        let r = null != (n = null == (t = o.body) ? void 0 : t.message) ? n : o.message;
         throw (
             i.Z.dispatch({
                 type: 'SCHEDULED_MESSAGES_DELETE_FAILURE',

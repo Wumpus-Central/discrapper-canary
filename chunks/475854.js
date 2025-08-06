@@ -10,8 +10,8 @@ e.exports = function (e, t, n) {
         });
     else {
         var i = r.slice(0, n),
-            a = r.slice(n);
-        r = i.concat(t, a).toList();
+            o = r.slice(n);
+        r = i.concat(t, o).toList();
     }
     return r;
 };

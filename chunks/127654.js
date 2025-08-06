@@ -7,8 +7,8 @@
     n(415506));
 var r = n(475179),
     i = n(904245),
-    a = n(166459),
-    o = n(531643),
+    o = n(166459),
+    a = n(531643),
     s = n(141795),
     l = n(476326),
     c = n(367907),
@@ -57,24 +57,24 @@ function T(e, t) {
     let n = _.default.getCurrentUser(),
         r = e.getGuildId(),
         i = h.dg(r),
-        a = [],
+        o = [],
         s = 0,
         l = 0,
         u = 0,
         d = [];
-    for (let e of t) ((u += 1), (s += e.size), a.push(e.size), e.size > l && (l = e.size), null != e.type ? d.push(e.type) : d.push('unknown'));
+    for (let e of t) ((u += 1), (s += e.size), o.push(e.size), e.size > l && (l = e.size), null != e.type ? d.push(e.type) : d.push('unknown'));
     if (l > i) {
         ((0, c.yw)(E.rMx.FILE_SIZE_LIMIT_EXCEEDED, {
             channel_id: e.id,
             guild_id: r,
             user_individual_file_size_limit: i,
-            pre_compression_file_sizes: a,
+            pre_compression_file_sizes: o,
             pre_compression_aggregate_file_size: s,
             num_attachments: u,
             error_type: b.xi.UPLOAD_ATTACHMENT_MAX_SIZE_ERROR,
             attachment_mimetypes: d
         }),
-            (0, o.openUploadError)({
+            (0, a.openUploadError)({
                 title: O.intl.string(O.t['/tGlcn']),
                 help: (0, g.BK)(n, r),
                 showPremiumUpsell: !(0, m.M5)(n, y.p9.TIER_2),
@@ -82,7 +82,7 @@ function T(e, t) {
             }));
         return;
     }
-    (0, o.openUploadError)({
+    (0, a.openUploadError)({
         title: O.intl.string(O.t['/tGlcn']),
         help: O.intl.formatToPlainString(O.t.tUOJdH, { maxSize: h.Ng(h.OC()) })
     });
@@ -94,7 +94,7 @@ function S(e, t, n) {
     let y = t.getGuildId();
     if ((0, g.Bf)(e, y)) return void T(t, e);
     if (f.Z.getUploadCount(t.id, n) + e.length > E.dN1) {
-        ((0, o.openUploadError)({
+        ((0, a.openUploadError)({
             title: O.intl.string(O.t.wOr6hI),
             help: O.intl.formatToPlainString(O.t['qqyp/f'], { limit: E.dN1 })
         }),
@@ -116,7 +116,7 @@ function S(e, t, n) {
                 null == c ? void 0 : c[t]
             )
         );
-        a.Z.addFiles({
+        o.Z.addFiles({
             files: r,
             channelId: t.id,
             showLargeMessageDialog: h,

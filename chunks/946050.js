@@ -2,8 +2,8 @@ n.d(t, { Z: () => d });
 var r = n(255367);
 n(73800);
 var i = n(755721),
-    a = n(481060),
-    o = n(670044),
+    o = n(481060),
+    a = n(670044),
     s = n(28391),
     l = n(526761),
     c = n(388032),
@@ -13,10 +13,10 @@ function d(e) {
     return (0, r.jsxs)('div', {
         className: u.notice,
         children: [
-            (0, r.jsx)(o.Z, { id: t.id }),
+            (0, r.jsx)(a.Z, { id: t.id }),
             (0, r.jsx)('div', {
                 className: u.info,
-                children: (0, r.jsx)(a.Text, {
+                children: (0, r.jsx)(o.Text, {
                     variant: 'text-sm/medium',
                     children: c.intl.format(c.t.P6Y2Nz, {})
                 })
@@ -34,7 +34,7 @@ function d(e) {
                     },
                     children: [
                         c.intl.string(c.t.KyUKhY),
-                        (0, r.jsx)(a.UEU, {
+                        (0, r.jsx)(o.UEU, {
                             size: 'xs',
                             color: 'currentColor',
                             style: { marginLeft: 4 }

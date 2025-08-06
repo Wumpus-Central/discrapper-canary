@@ -2,8 +2,8 @@
 var r = n(255367);
 n(73800);
 var i = n(442837),
-    a = n(481060),
-    o = n(471445),
+    o = n(481060),
+    a = n(471445),
     s = n(456269),
     l = n(660189),
     c = n(257511),
@@ -16,7 +16,7 @@ function _(e) {
         _ = (0, s.eV)(n),
         { firstMessage: p } = (0, i.cj)([l.Z], () => l.Z.getMessage(n.id)),
         h = new Set((0, s.kn)(n, _)),
-        m = null != (t = (0, o.KS)(n)) ? t : a.kBi;
+        m = null != (t = (0, a.KS)(n)) ? t : o.kBi;
     return (0, r.jsxs)(u.ZP, {
         channelId: n.id,
         className: f.container,
@@ -33,7 +33,7 @@ function _(e) {
                 children: n.name
             }),
             null == p &&
-                (0, r.jsx)(a.Text, {
+                (0, r.jsx)(o.Text, {
                     variant: 'text-md/normal',
                     color: 'header-secondary',
                     children: d.intl.string(d.t.mE3KJC)

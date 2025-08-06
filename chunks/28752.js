@@ -1,8 +1,8 @@
 (n.d(t, { Z: () => b }), n(953529), n(388685));
 var r = n(255367),
     i = n(73800),
-    a = n(373793),
-    o = n(481060),
+    o = n(373793),
+    a = n(481060),
     s = n(783097),
     l = n(753972),
     c = n(520315),
@@ -57,15 +57,15 @@ function b(e) {
             () =>
                 [
                     {
-                        type: a.Y.USER_INSTALL,
-                        icon: o.oLu,
+                        type: o.Y.USER_INSTALL,
+                        icon: a.oLu,
                         title: f.intl.string(f.t.aCg60N),
                         subtitle: f.intl.string(f.t.YeiIUV),
                         beta: !1
                     },
                     {
-                        type: a.Y.GUILD_INSTALL,
-                        icon: o.QTo,
+                        type: o.Y.GUILD_INSTALL,
+                        icon: a.QTo,
                         title: f.intl.string(f.t.E64YCw),
                         subtitle: f.intl.string(f.t.bbtoKi),
                         beta: !1
@@ -96,7 +96,7 @@ function b(e) {
                 className: _.rows,
                 children: m.map((e) =>
                     (0, r.jsxs)(
-                        o.P3F,
+                        a.P3F,
                         {
                             tag: 'li',
                             className: _.row,
@@ -113,12 +113,12 @@ function b(e) {
                                         (0, r.jsxs)('div', {
                                             className: _.rowDetails,
                                             children: [
-                                                (0, r.jsx)(o.Text, {
+                                                (0, r.jsx)(a.Text, {
                                                     variant: 'text-md/medium',
                                                     color: 'interactive-active',
                                                     children: e.title
                                                 }),
-                                                (0, r.jsx)(o.Text, {
+                                                (0, r.jsx)(a.Text, {
                                                     variant: 'text-xs/medium',
                                                     color: 'text-muted',
                                                     children: e.subtitle
@@ -126,7 +126,7 @@ function b(e) {
                                             ]
                                         }),
                                         e.beta && (0, r.jsx)(u.Z, {}),
-                                        (0, r.jsx)(o.Fbu, {
+                                        (0, r.jsx)(a.Fbu, {
                                             size: 'md',
                                             color: 'currentColor',
                                             className: _.rightIcon
@@ -162,7 +162,7 @@ function O(e) {
     return (0, r.jsxs)('div', {
         className: _.titleContainer,
         children: [
-            (0, r.jsx)(o.X6q, {
+            (0, r.jsx)(a.X6q, {
                 variant: 'heading-xl/extrabold',
                 lineClamp: 1,
                 children: n
@@ -170,7 +170,7 @@ function O(e) {
             i
                 ? (0, r.jsx)('div', {
                       className: _.partnerLabelContainer,
-                      children: (0, r.jsx)(o.Text, {
+                      children: (0, r.jsx)(a.Text, {
                           variant: 'text-xs/medium',
                           color: 'text-default',
                           children: f.intl.string(f.t.LO4f0N)
@@ -183,7 +183,7 @@ function O(e) {
 let v = 3;
 function I(e) {
     let { description: t } = e,
-        [a, s] = i.useState(!0);
+        [o, s] = i.useState(!0);
     i.useLayoutEffect(() => s(!1), []);
     let l = i.useMemo(() => {
             let { parseBioReact: e } = n(240991);
@@ -199,8 +199,8 @@ function I(e) {
                 maxHeightOverride: e
             };
         }, [h, d]),
-        { ref: E, isTransitioning: b, onTransitionEnd: y } = (0, c.Z)(g({ isExpanded: a }, m)),
-        O = a || b;
+        { ref: E, isTransitioning: b, onTransitionEnd: y } = (0, c.Z)(g({ isExpanded: o }, m)),
+        O = o || b;
     return (0, r.jsxs)('div', {
         className: _.descriptionContainer,
         children: [
@@ -208,7 +208,7 @@ function I(e) {
                 ref: E,
                 className: _.overflowHidden,
                 onTransitionEnd: y,
-                children: (0, r.jsx)(o.Text, {
+                children: (0, r.jsx)(a.Text, {
                     ref: u,
                     className: p.markup,
                     variant: 'text-sm/medium',
@@ -218,23 +218,23 @@ function I(e) {
                 })
             }),
             null != h && h > v
-                ? (0, r.jsxs)(o.P3F, {
+                ? (0, r.jsxs)(a.P3F, {
                       className: _.expandableDescriptionClickable,
                       onClick: () => s((e) => !e),
                       children: [
-                          (0, r.jsx)(o.Text, {
+                          (0, r.jsx)(a.Text, {
                               variant: 'text-sm/semibold',
                               color: 'text-brand',
                               children: O ? f.intl.string(f.t.u4YJ8v) : f.intl.string(f.t['N/tajI'])
                           }),
                           O
-                              ? (0, r.jsx)(o.u04, {
+                              ? (0, r.jsx)(a.u04, {
                                     size: 'sm',
-                                    color: o.TVs.colors.TEXT_BRAND
+                                    color: a.TVs.colors.TEXT_BRAND
                                 })
-                              : (0, r.jsx)(o.CJ0, {
+                              : (0, r.jsx)(a.CJ0, {
                                     size: 'sm',
-                                    color: o.TVs.colors.TEXT_BRAND
+                                    color: a.TVs.colors.TEXT_BRAND
                                 })
                       ]
                   })
@@ -245,13 +245,13 @@ function I(e) {
 function T() {
     let e = i.useRef(null),
         [t, n] = i.useState(null),
-        [r, a] = i.useState(null);
+        [r, o] = i.useState(null);
     return (
         i.useLayoutEffect(() => {
             let t = e.current;
             if (null === t || 0 === t.clientHeight) return;
             let r = parseInt(getComputedStyle(t).lineHeight);
-            isNaN(r) || (n(r), a(Math.floor(t.clientHeight / r)));
+            isNaN(r) || (n(r), o(Math.floor(t.clientHeight / r)));
         }, []),
         {
             ref: e,

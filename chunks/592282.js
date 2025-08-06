@@ -1,8 +1,8 @@
 n.d(t, { S: () => E });
 var r = n(255367),
     i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(1561),
     l = n(761224),
     c = n(670596),
@@ -63,7 +63,7 @@ function g(e, t) {
     );
 }
 function E(e) {
-    let { color: t = 'default', label: n, checked: a, subtext: p, disabled: m, isFocused: E, menuItemProps: b, action: y, className: O, focusedClassName: v } = e,
+    let { color: t = 'default', label: n, checked: o, subtext: p, disabled: m, isFocused: E, menuItemProps: b, action: y, className: O, focusedClassName: v } = e,
         { onInteraction: I } = i.useContext(c.p),
         T = i.useRef(null);
     i.useEffect(() => {
@@ -81,7 +81,7 @@ function E(e) {
             h(
                 {
                     innerRef: T,
-                    className: o()(_.item, _.checkboxContainer, _.labelContainer, f._[t], O, {
+                    className: a()(_.item, _.checkboxContainer, _.labelContainer, f._[t], O, {
                         [_.disabled]: m,
                         [_.focused]: E,
                         [null != v ? v : '']: E
@@ -91,7 +91,7 @@ function E(e) {
                 b
             ),
             {
-                'aria-checked': a,
+                'aria-checked': o,
                 'aria-disabled': m,
                 children: [
                     (0, r.jsxs)('div', {
@@ -110,7 +110,7 @@ function E(e) {
                         children: (0, r.jsx)(d.FZ5, {
                             shape: d.XZJ.Shapes.BOX,
                             size: 20,
-                            value: a,
+                            value: o,
                             disabled: m
                         })
                     })

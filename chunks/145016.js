@@ -1,8 +1,8 @@
 n.d(t, { Z: () => g });
 var r,
     i = n(442837),
-    a = n(570140),
-    o = n(704907),
+    o = n(570140),
+    a = n(704907),
     s = n(131951);
 function l(e, t, n) {
     return (
@@ -20,15 +20,15 @@ function l(e, t, n) {
 let c = {
         afterCompute: () => {},
         computeBonus: () => 100,
-        computeFrecency: o.KX.original,
-        computeWeight: o.M$.original,
+        computeFrecency: a.KX.original,
+        computeWeight: a.M$.original,
         lookupKey: (e) => e,
         maxSamples: 256,
         numFrequentlyItems: 1 / 0
     },
-    u = new o.ZP(c),
-    d = new o.ZP(c),
-    f = new o.ZP(c);
+    u = new a.ZP(c),
+    d = new a.ZP(c),
+    f = new a.ZP(c);
 function _(e) {
     let { id: t } = e;
     u.track(t);
@@ -63,7 +63,7 @@ class m extends (r = i.ZP.PersistedStore) {
     }
 }
 (l(m, 'displayName', 'DeviceFrecencyStore'), l(m, 'persistKey', 'DeviceFrecencyStore'));
-let g = new m(a.Z, {
+let g = new m(o.Z, {
     AUDIO_SET_INPUT_DEVICE: _,
     AUDIO_SET_OUTPUT_DEVICE: p,
     MEDIA_ENGINE_SET_VIDEO_DEVICE: h

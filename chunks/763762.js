@@ -1,11 +1,11 @@
-n.d(t, { Z: () => o });
+n.d(t, { Z: () => a });
 var r = n(442837),
     i = n(621853),
-    a = n(981631);
-function o(e) {
+    o = n(981631);
+function a(e) {
     let t = (0, r.e7)([i.Z], () => {
         var t;
-        return null !== e ? (null == (t = i.Z.getUserProfile(null != e ? e : a.lds)) ? void 0 : t.application) : void 0;
+        return null !== e ? (null == (t = i.Z.getUserProfile(null != e ? e : o.lds)) ? void 0 : t.application) : void 0;
     });
     return null != t ? t : void 0;
 }

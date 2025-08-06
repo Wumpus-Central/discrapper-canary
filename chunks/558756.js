@@ -1,8 +1,8 @@
 n.d(t, { W: () => d });
 var r = n(255367),
     i = n(442837),
-    a = n(755721),
-    o = n(481060),
+    o = n(755721),
+    a = n(481060),
     s = n(9156),
     l = n(388032);
 function c(e, t, n) {
@@ -39,15 +39,15 @@ let d = (e) => {
         f = (0, i.e7)([s.ZP], () => s.ZP.isChannelMuted(null, c.id));
     if (!d.bot) return null;
     function _() {
-        (0, o.ZDy)(async () => {
+        (0, a.ZDy)(async () => {
             let { default: e } = await n.e('83545').then(n.bind(n, 53149));
             return (t) => (0, r.jsx)(e, u({ channelId: c.id }, t));
         });
     }
-    return (0, r.jsx)(a.zx, {
+    return (0, r.jsx)(o.zx, {
         className: t,
-        size: a.Ph.SMALL,
-        color: f ? a.zx.Colors.PRIMARY : a.zx.Colors.RED,
+        size: o.Ph.SMALL,
+        color: f ? o.zx.Colors.PRIMARY : o.zx.Colors.RED,
         onClick: _,
         children: f ? l.intl.string(l.t.YqAjX1) : l.intl.string(l.t['w4m94+'])
     });

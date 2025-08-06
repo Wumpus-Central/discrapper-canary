@@ -1,8 +1,8 @@
 n.d(t, { Z: () => I });
 var r = n(255367),
     i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(97028),
     l = n(481060),
     c = n(686546),
@@ -66,15 +66,15 @@ let E = 10,
     b = 2;
 function y(e) {
     let { game: t, activityLevel: n, hideTooltip: i } = e,
-        a = t.getIconURL(24),
-        o = (0, f.B)(),
+        o = t.getIconURL(24),
+        a = (0, f.B)(),
         p = (0, d.Z)({
             location: 'GuildProfile',
             source: u.m1.GuildProfile,
             trackEntryPointImpression: !0,
             applicationId: t.id
         });
-    if (null == a) return null;
+    if (null == o) return null;
     let m = !i,
         y = (null == n ? void 0 : n.level) === s.m.HIGH,
         O = (0, r.jsx)(l.Text, {
@@ -95,7 +95,7 @@ function y(e) {
                         children: [
                             (0, r.jsx)('img', {
                                 className: _.gameIconImage,
-                                src: a,
+                                src: o,
                                 alt: t.name
                             }),
                             y &&
@@ -118,7 +118,7 @@ function y(e) {
                     })
                 )
         });
-    return o
+    return a
         ? (0, r.jsx)(l.P3F, {
               onClick: p,
               className: _.gameIconWrapper,
@@ -171,17 +171,17 @@ function v(e) {
     });
 }
 function I(e) {
-    let { gamesToDisplay: t, lastGameToDisplay: n, remainingGames: a, activity: s } = e,
+    let { gamesToDisplay: t, lastGameToDisplay: n, remainingGames: o, activity: s } = e,
         c = i.useMemo(() => {
             if (null == n) return null;
             let e = n.getIconURL(24);
             if (null == e) return null;
-            if (0 === a.length)
+            if (0 === o.length)
                 return (0, r.jsx)(y, {
                     game: n,
                     activityLevel: s[n.id]
                 });
-            let t = a;
+            let t = o;
             return (0, r.jsx)(l.ua7, {
                 'aria-label': '',
                 position: 'bottom',
@@ -193,10 +193,10 @@ function I(e) {
                     (0, r.jsxs)(
                         'div',
                         g(h({}, i), {
-                            className: o()(_.gameIcon, _.extraGameItem),
+                            className: a()(_.gameIcon, _.extraGameItem),
                             children: [
                                 (0, r.jsx)('img', {
-                                    className: o()(_.gameIconImage, _.extraGameIconImage),
+                                    className: a()(_.gameIconImage, _.extraGameIconImage),
                                     src: e,
                                     alt: n.name
                                 }),
@@ -213,7 +213,7 @@ function I(e) {
                         })
                     )
             });
-        }, [n, a, s]);
+        }, [n, o, s]);
     return null == t || 0 === t.length
         ? null
         : 1 === t.length

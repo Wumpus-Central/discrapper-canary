@@ -5,8 +5,8 @@ n.d(t, {
 });
 var r = n(544891),
     i = n(570140),
-    a = n(881052),
-    o = n(981631);
+    o = n(881052),
+    a = n(981631);
 function s(e) {
     i.Z.dispatch({
         type: 'DISMISS_MEDIA_POST_SHARE_PROMPT',
@@ -21,7 +21,7 @@ async function l(e) {
     try {
         let t = (
             await r.tn.get({
-                url: o.ANM.MEDIA_POST_RESHARE_GET_PREVIEW(e),
+                url: a.ANM.MEDIA_POST_RESHARE_GET_PREVIEW(e),
                 rejectWithError: !0
             })
         ).body;
@@ -41,12 +41,12 @@ async function c(e) {
     try {
         return (
             await r.tn.post({
-                url: o.ANM.UNFURL_EMBED_URLS,
+                url: a.ANM.UNFURL_EMBED_URLS,
                 body: { urls: e },
                 rejectWithError: !1
             })
         ).body;
     } catch (e) {
-        throw new a.Hx(e);
+        throw new o.Hx(e);
     }
 }

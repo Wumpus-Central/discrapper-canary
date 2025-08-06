@@ -1,8 +1,8 @@
 n.d(t, { Z: () => p });
 var r = n(255367),
     i = n(73800),
-    a = n(481060),
-    o = n(946273),
+    o = n(481060),
+    a = n(946273),
     s = n(441110),
     l = n(388032),
     c = n(374701);
@@ -61,10 +61,10 @@ function _(e, t) {
 function p(e) {
     let { guild: t, message: n } = e,
         u = i.useRef(null);
-    return (0, o.vV)(t.id, n.author.id)
-        ? (0, r.jsx)(a.yRy, {
+    return (0, a.vV)(t.id, n.author.id)
+        ? (0, r.jsx)(o.yRy, {
               targetElementRef: u,
-              animation: a.yRy.Animation.TRANSLATE,
+              animation: o.yRy.Animation.TRANSLATE,
               align: 'center',
               autoInvert: !0,
               nudgeAlignIntoViewport: !0,
@@ -79,17 +79,17 @@ function p(e) {
               },
               children: (e) => {
                   let { onClick: t } = e;
-                  return (0, r.jsx)(a.P3F, {
+                  return (0, r.jsx)(o.P3F, {
                       onClick: t,
                       tag: 'span',
                       innerRef: u,
-                      children: (0, r.jsx)(a.ua7, {
+                      children: (0, r.jsx)(o.ua7, {
                           text: l.intl.string(l.t['v/OYd3']),
                           children: (e) =>
                               (0, r.jsx)(
                                   'div',
                                   _(d({ className: c.newMemberBadge }, e), {
-                                      children: (0, r.jsx)(a.hg2, {
+                                      children: (0, r.jsx)(o.hg2, {
                                           size: 'custom',
                                           color: 'currentColor',
                                           width: 20,

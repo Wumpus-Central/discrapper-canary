@@ -1,8 +1,8 @@
 (n.d(t, { Z: () => b }), n(704826), n(35282), n(388685));
 var r = n(255367),
     i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(442837),
     l = n(481060),
     c = n(771340),
@@ -40,7 +40,7 @@ class g extends i.PureComponent {
         let { region: e, selected: t } = this.props;
         return (0, r.jsxs)(u.Z, {
             align: u.Z.Align.CENTER,
-            className: o()({ selected: t }),
+            className: a()({ selected: t }),
             children: [
                 (0, r.jsx)(m, {
                     region: e,

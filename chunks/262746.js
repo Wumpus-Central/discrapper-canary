@@ -1,8 +1,8 @@
 (n.d(t, { Z: () => y }), n(388685), n(457542));
 var r = n(255367),
     i = n(73800),
-    a = n(442837),
-    o = n(755721),
+    o = n(442837),
+    a = n(755721),
     s = n(481060),
     l = n(749210),
     c = n(493773),
@@ -66,10 +66,10 @@ function b(e, t) {
 }
 function y(e) {
     let { channel: t, user: m, guild: E } = e,
-        y = (0, a.e7)([f.Z], () => null != m && f.Z.isUserBanned(m.id)),
+        y = (0, o.e7)([f.Z], () => null != m && f.Z.isUserBanned(m.id)),
         O = null != m && null == y,
         [v, I] = i.useState(O),
-        T = (0, a.e7)([d.Z], () => null != m && null != E && (0, u.lD)(m, E, [d.Z]));
+        T = (0, o.e7)([d.Z], () => null != m && null != E && (0, u.lD)(m, E, [d.Z]));
     if (
         ((0, c.ZP)(() => {
             O && l.Z.searchGuildBans(t.guild_id, void 0, [null == m ? void 0 : m.id]).finally(() => I(!1));
@@ -102,7 +102,7 @@ function y(e) {
             onClick: S,
             disabled: !0 === y || v,
             submitting: v,
-            color: o.zx.Colors.RED
+            color: a.zx.Colors.RED
         },
         N
     );

@@ -2,8 +2,8 @@ function r(e, t) {
     ((e.prototype = Object.create(t.prototype)), (e.prototype.constructor = e), (e.__proto__ = t));
 }
 var i = n(512972),
-    a = n(359282),
-    o = n(879154),
+    o = n(359282),
+    a = n(879154),
     s = n(214788),
     l = n(493428),
     c = n(116514),
@@ -112,13 +112,13 @@ e.exports = (function (e) {
         }),
         (t.createFromBlockArray = function (e, n) {
             var r = Array.isArray(e) ? e : e.contentBlocks,
-                a = i.createFromArray(r),
-                o = a.isEmpty() ? new c() : c.createEmpty(a.first().getKey());
+                o = i.createFromArray(r),
+                a = o.isEmpty() ? new c() : c.createEmpty(o.first().getKey());
             return new t({
-                blockMap: a,
+                blockMap: o,
                 entityMap: n || l,
-                selectionBefore: o,
-                selectionAfter: o
+                selectionBefore: a,
+                selectionAfter: a
             });
         }),
         (t.createFromText = function (e) {
@@ -126,11 +126,11 @@ e.exports = (function (e) {
                 r = e.split(n).map(function (e) {
                     return (
                         (e = _(e)),
-                        new (d('draft_tree_data_support') ? s : o)({
+                        new (d('draft_tree_data_support') ? s : a)({
                             key: u(),
                             text: e,
                             type: 'unstyled',
-                            characterList: p(m(a.EMPTY, e.length))
+                            characterList: p(m(o.EMPTY, e.length))
                         })
                     );
                 });

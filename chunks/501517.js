@@ -1,7 +1,7 @@
-n.d(t, { Z: () => a });
+n.d(t, { Z: () => o });
 var r = n(544891),
     i = n(981631);
-let a = {
+let o = {
     resolveFlag: (e) =>
         r.tn.post({
             url: i.ANM.MODERATOR_REPORT_CLOSE(e),

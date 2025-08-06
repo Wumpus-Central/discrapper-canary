@@ -6,8 +6,8 @@ var r = n(255367),
     s = n(466721),
     o = n(375954),
     c = n(981631),
-    d = n(388032);
-async function u(e) {
+    u = n(388032);
+async function d(e) {
     try {
         var t, n;
         let r = await l.tn.post({
@@ -26,7 +26,7 @@ function h(e) {
         [p, f] = i.useState(!1),
         [g, m] = i.useState(!1),
         { enableAIFeatures: b } = s.C.useExperiment({ location: 'CreateThreadSidebar' }),
-        _ = i.useCallback(async () => {
+        y = i.useCallback(async () => {
             if (b) {
                 f(!0);
                 try {
@@ -37,7 +37,7 @@ function h(e) {
                         r = null != (e = null == i ? void 0 : i.content) ? e : null;
                     } else h.textValue.trim().length >= 10 && (r = h.textValue);
                     if (null != r) {
-                        let e = await u(r);
+                        let e = await d(r);
                         null != e && '' !== e.trim() && l({ name: e });
                     }
                 } finally {
@@ -49,14 +49,14 @@ function h(e) {
         (m(!1), f(!1), l({ name: '' }));
     }, [n, l]),
         i.useEffect(() => {
-            (null == c.name || '' === c.name.trim()) && !g && b && null != n && (m(!0), _());
-        }, [t.id, n, l, c.name, g, b, _]));
-    let y = i.useCallback(
+            (null == c.name || '' === c.name.trim()) && !g && b && null != n && (m(!0), y());
+        }, [t.id, n, l, c.name, g, b, y]));
+    let x = i.useCallback(
         function () {
             let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
             return b
                 ? (0, r.jsx)(a.ua7, {
-                      text: d.intl.string(d.t.ZF2oBg),
+                      text: u.intl.string(u.t.ZF2oBg),
                       children: (t) => {
                           var i, l;
                           return (0, r.jsx)(
@@ -91,8 +91,8 @@ function h(e) {
                                       icon: a.$2U,
                                       variant: 'secondary',
                                       size: 'sm',
-                                      'aria-label': d.intl.string(d.t.ZF2oBg),
-                                      onClick: _,
+                                      'aria-label': u.intl.string(u.t.ZF2oBg),
+                                      onClick: y,
                                       disabled: e || p || (null == n && h.textValue.trim().length < 10),
                                       loading: p,
                                       type: 'button'
@@ -115,12 +115,12 @@ function h(e) {
                   })
                 : null;
         },
-        [b, p, n, h.textValue, _]
+        [b, p, n, h.textValue, y]
     );
     return {
         isGeneratingAI: p,
-        generateAIName: _,
+        generateAIName: y,
         enableAIFeatures: b,
-        renderAiGenerateButton: y
+        renderAiGenerateButton: x
     };
 }

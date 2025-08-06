@@ -27,14 +27,14 @@ function i(e, t, n) {
         e
     );
 }
-var a = n(551558),
-    o = n(581079),
+var o = n(551558),
+    a = n(581079),
     s = function (e, t) {
         for (var n = [].concat(e).reverse(); n.length; ) {
             var r = n.pop();
             t(r);
             var i = r.children;
-            (Array.isArray(i) || o(!1), (n = n.concat([].concat(i.reverse()))));
+            (Array.isArray(i) || a(!1), (n = n.concat([].concat(i.reverse()))));
         }
     },
     l = function (e) {
@@ -52,7 +52,7 @@ e.exports = {
     fromRawTreeStateToRawState: function (e) {
         var t = e.blocks,
             n = [];
-        return (Array.isArray(t) || o(!1), Array.isArray(t) && t.length)
+        return (Array.isArray(t) || a(!1), Array.isArray(t) && t.length)
             ? (s(t, function (e) {
                   var t = r({}, e);
                   (l(e) && ((t.depth = t.depth || 0), c(e), null != e.children && e.children.length > 0)) || (delete t.children, n.push(t));
@@ -67,26 +67,26 @@ e.exports = {
         return (
             e.blocks.forEach(function (e) {
                 var i = l(e),
-                    o = e.depth || 0,
+                    a = e.depth || 0,
                     s = r({}, e, { children: [] });
                 if (!i) return void t.push(s);
                 var c = n[0];
-                if (null == c && 0 === o) t.push(s);
-                else if (null == c || c.depth < o - 1) {
+                if (null == c && 0 === a) t.push(s);
+                else if (null == c || c.depth < a - 1) {
                     var u = {
-                        key: a(),
+                        key: o(),
                         text: '',
-                        depth: o - 1,
+                        depth: a - 1,
                         type: e.type,
                         children: [],
                         entityRanges: [],
                         inlineStyleRanges: []
                     };
-                    (n.unshift(u), 1 === o ? t.push(u) : null != c && c.children.push(u), u.children.push(s));
-                } else if (c.depth === o - 1) c.children.push(s);
+                    (n.unshift(u), 1 === a ? t.push(u) : null != c && c.children.push(u), u.children.push(s));
+                } else if (c.depth === a - 1) c.children.push(s);
                 else {
-                    for (; null != c && c.depth >= o; ) (n.shift(), (c = n[0]));
-                    o > 0 ? c.children.push(s) : t.push(s);
+                    for (; null != c && c.depth >= a; ) (n.shift(), (c = n[0]));
+                    a > 0 ? c.children.push(s) : t.push(s);
                 }
             }),
             r({}, e, { blocks: t })

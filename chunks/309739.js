@@ -17,8 +17,8 @@ var i = n(255367),
     x = n(116841),
     _ = n(335082),
     j = n(921801),
-    C = n(553795),
-    E = n(430824),
+    E = n(553795),
+    C = n(430824),
     O = n(63063),
     v = n(358085),
     S = n(362352),
@@ -31,7 +31,7 @@ var i = n(255367),
     R = n(20493);
 function D(e) {
     let t = () => {
-        I.SE.updateSetting(e ? E.Z.getGuildIds() : []);
+        I.SE.updateSetting(e ? C.Z.getGuildIds() : []);
     };
     (0, p.h7j)((e) => {
         var n, r;
@@ -267,7 +267,7 @@ function M(e) {
     });
 }
 function B() {
-    let e = (0, c.e7)([C.Z], () => C.Z.getAccounts()),
+    let e = (0, c.e7)([E.Z], () => E.Z.getAccounts()),
         t = r.useMemo(() => e.filter((e) => f.Z.isSupported(e.type) && y.vbS.has(e.type)), [e]),
         [n, s] = r.useState(''),
         a = r.useMemo(() => {

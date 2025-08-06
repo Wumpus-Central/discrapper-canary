@@ -40,6 +40,7 @@ let f = (e) => {
             f();
     }
     return (0, a.jsx)(s.Y0X, {
+        'data-migration-pending': !0,
         transitionState: r,
         parentComponent: 'ReferralProgramShareModal',
         children: t

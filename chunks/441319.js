@@ -1,13 +1,13 @@
 (n.d(t, {
     M9: () => C,
     aW: () => D,
-    wu: () => P
+    wu: () => w
 }),
     n(388685));
 var r = n(997945),
     i = n(388032),
-    a = n(105797),
-    o = n(63725),
+    o = n(105797),
+    a = n(63725),
     s = n(924997),
     l = n(861498),
     c = n(749834),
@@ -30,15 +30,15 @@ var r = n(997945),
     A = n(473974),
     N = n(563856);
 let C = 60;
-function w() {
+function R() {
     return {
         id: r.aH.DEFAULT,
-        iconSource: o,
+        iconSource: a,
         name: i.intl.string(i.t.ANxkLy),
         isPremium: !1
     };
 }
-function R() {
+function P() {
     return [
         {
             id: r.Ru.BRAND_DARK,
@@ -138,7 +138,7 @@ function R() {
         },
         {
             id: r.Ru.ANGRY,
-            iconSource: a,
+            iconSource: o,
             isPremium: !0,
             name: i.intl.string(i.t['9PUXpK'])
         },
@@ -174,9 +174,9 @@ function R() {
         }
     ];
 }
-function P() {
-    return [w(), ...R()];
+function w() {
+    return [R(), ...P()];
 }
 function D(e) {
-    return P().find((t) => t.id === e);
+    return w().find((t) => t.id === e);
 }

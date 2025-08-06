@@ -5,8 +5,8 @@ n.d(t, {
 var r = n(255367);
 n(73800);
 var i = n(120356),
-    a = n.n(i),
-    o = n(442837),
+    o = n.n(i),
+    a = n(442837),
     s = n(215569),
     l = n(481060),
     c = n(600164),
@@ -53,8 +53,8 @@ function y(e, t) {
         r,
         i = O(e, t);
     if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
@@ -63,18 +63,18 @@ function O(e, t) {
     var n,
         r,
         i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
 function v(e) {
-    let { title: t, onJumpToChannel: n, onHide: i, idle: a, preventIdleComponent: s } = e,
-        c = (0, o.e7)([f.Z], () => f.Z.getChannelId()),
+    let { title: t, onJumpToChannel: n, onHide: i, idle: o, preventIdleComponent: s } = e,
+        c = (0, a.e7)([f.Z], () => f.Z.getChannelId()),
         d =
             null != c
                 ? (0, r.jsx)(_.Z, {
                       voiceChannelId: c,
-                      idle: a
+                      idle: o
                   })
                 : null,
         { enabled: p } = u.Z.useExperiment({ location: 'PictureInPicturePlayer' });
@@ -112,13 +112,13 @@ function v(e) {
     });
 }
 function I(e) {
-    var { children: t, idle: n, onJumpToChannel: i, onHide: o, backgroundKey: l, onActive: u, onForceIdle: f, renderBottomLeftControls: _, renderBottomRightControls: h, screenMessage: m, hideControls: E = !1, className: O, innerClassName: I, videoControlsClassName: T } = e,
+    var { children: t, idle: n, onJumpToChannel: i, onHide: a, backgroundKey: l, onActive: u, onForceIdle: f, renderBottomLeftControls: _, renderBottomRightControls: h, screenMessage: m, hideControls: E = !1, className: O, innerClassName: I, videoControlsClassName: T } = e,
         S = y(e, ['children', 'idle', 'onJumpToChannel', 'onHide', 'backgroundKey', 'onActive', 'onForceIdle', 'renderBottomLeftControls', 'renderBottomRightControls', 'screenMessage', 'hideControls', 'className', 'innerClassName', 'videoControlsClassName']);
     return (0, r.jsxs)('div', {
         onMouseMove: u,
         onMouseDown: u,
         onMouseLeave: f,
-        className: a()(g.pictureInPictureVideo, { [g.idle]: n }, O),
+        className: o()(g.pictureInPictureVideo, { [g.idle]: n }, O),
         onDoubleClick: i,
         children: [
             (0, r.jsx)(s.W, {
@@ -134,7 +134,7 @@ function I(e) {
             null != m ? (0, r.jsx)(p.Z, b({ size: 'small' }, m)) : null,
             !E &&
                 (0, r.jsxs)('div', {
-                    className: a()(g.videoControls, T, 'theme-dark'),
+                    className: o()(g.videoControls, T, 'theme-dark'),
                     children: [
                         (0, r.jsx)('div', {
                             className: g.topControls,
@@ -144,7 +144,7 @@ function I(e) {
                                     {
                                         idle: n,
                                         onJumpToChannel: i,
-                                        onHide: o
+                                        onHide: a
                                     },
                                     S
                                 )

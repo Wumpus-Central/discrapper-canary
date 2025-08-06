@@ -5,8 +5,8 @@ n.d(t, {
 });
 var r = n(255367),
     i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(481060),
     l = n(377171),
     c = n(951394),
@@ -71,8 +71,8 @@ function g(e, t) {
         r,
         i = E(e, t);
     if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
@@ -81,18 +81,18 @@ function E(e, t) {
     var n,
         r,
         i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
 let b = i.forwardRef(function (e, t) {
-    var { label: n, ariaLabel: i, tooltipText: a, tooltipColor: _, icon: h, iconProps: E, onClick: b, onTooltipShow: y, onTooltipHide: O, disabled: v, dangerous: I, separator: T, sparkle: S, showNewBadge: A, buttonClassName: N, children: C } = e,
-        w = g(e, ['label', 'ariaLabel', 'tooltipText', 'tooltipColor', 'icon', 'iconProps', 'onClick', 'onTooltipShow', 'onTooltipHide', 'disabled', 'dangerous', 'separator', 'sparkle', 'showNewBadge', 'buttonClassName', 'children']);
-    let { canShowReactionsOnMessageHover: R } = u.ZP.useExperiment({ location: 'HoverBarButton' }, { autoTrackExposure: !0 });
+    var { label: n, ariaLabel: i, tooltipText: o, tooltipColor: _, icon: h, iconProps: E, onClick: b, onTooltipShow: y, onTooltipHide: O, disabled: v, dangerous: I, separator: T, sparkle: S, showNewBadge: A, buttonClassName: N, children: C } = e,
+        R = g(e, ['label', 'ariaLabel', 'tooltipText', 'tooltipColor', 'icon', 'iconProps', 'onClick', 'onTooltipShow', 'onTooltipHide', 'disabled', 'dangerous', 'separator', 'sparkle', 'showNewBadge', 'buttonClassName', 'children']);
+    let { canShowReactionsOnMessageHover: P } = u.ZP.useExperiment({ location: 'HoverBarButton' }, { autoTrackExposure: !0 });
     return (
         u.Xb.useExperiment({ location: 'HoverBarButton' }, { autoTrackExposure: !0 }),
         (0, r.jsx)(s.ua7, {
-            text: null != a ? a : n,
+            text: null != o ? o : n,
             color: null != _ ? _ : s.FGA.PRIMARY,
             'aria-label': n,
             onTooltipShow: y,
@@ -100,7 +100,7 @@ let b = i.forwardRef(function (e, t) {
             hideOnClick: !0,
             tooltipClassName: f.tooltip,
             children: (e) => {
-                let { onMouseEnter: a, onMouseLeave: u, onClick: _ } = e;
+                let { onMouseEnter: o, onMouseLeave: u, onClick: _ } = e;
                 return (0, r.jsxs)(r.Fragment, {
                     children: [
                         (0, r.jsxs)(
@@ -109,8 +109,8 @@ let b = i.forwardRef(function (e, t) {
                                 p(
                                     {
                                         ref: t,
-                                        className: o()(N, { [f.hoverBarButton]: R }),
-                                        onMouseEnter: a,
+                                        className: a()(N, { [f.hoverBarButton]: P }),
+                                        onMouseEnter: o,
                                         onMouseLeave: u,
                                         onClick: (e) => {
                                             (null == _ || _(), b(e));
@@ -119,7 +119,7 @@ let b = i.forwardRef(function (e, t) {
                                         disabled: v,
                                         dangerous: I
                                     },
-                                    w
+                                    R
                                 ),
                                 {
                                     children: [
@@ -137,7 +137,7 @@ let b = i.forwardRef(function (e, t) {
                                             : null,
                                         null != C
                                             ? (0, r.jsx)('div', {
-                                                  className: o()(f.icon, f.buttonContent),
+                                                  className: a()(f.icon, f.buttonContent),
                                                   children: C
                                               })
                                             : null,
@@ -161,7 +161,7 @@ let b = i.forwardRef(function (e, t) {
 });
 function y(e) {
     let { className: t } = e;
-    return (0, r.jsx)('div', { className: o()(f.separator, t) });
+    return (0, r.jsx)('div', { className: a()(f.separator, t) });
 }
 function O(e) {
     var { children: t } = e,
@@ -170,7 +170,7 @@ function O(e) {
     return (
         u.Xb.useExperiment({ location: 'HoverBar' }, { autoTrackExposure: !0 }),
         (0, r.jsx)(c.ZP, {
-            className: o()(n.className, f.popover, { [f.popoverReactionHoverBar]: i }),
+            className: a()(n.className, f.popover, { [f.popoverReactionHoverBar]: i }),
             children: t
         })
     );

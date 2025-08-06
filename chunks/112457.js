@@ -10,18 +10,18 @@ function i(e, t) {
         y: e.y - t.y
     };
 }
-function a(e) {
+function o(e) {
     var t = e.clientOffset,
         n = e.initialClientOffset,
-        a = e.initialSourceClientOffset;
-    return t && n && a ? i(r(t, a), n) : null;
+        o = e.initialSourceClientOffset;
+    return t && n && o ? i(r(t, o), n) : null;
 }
-function o(e) {
+function a(e) {
     var t = e.clientOffset,
         n = e.initialClientOffset;
     return t && n ? i(t, n) : null;
 }
 n.d(t, {
-    YY: () => a,
-    ar: () => o
+    YY: () => o,
+    ar: () => a
 });

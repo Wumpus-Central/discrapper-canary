@@ -1,8 +1,8 @@
 n.d(t, { Z: () => p });
 var r,
     i = n(442837),
-    a = n(570140),
-    o = n(131704),
+    o = n(570140),
+    a = n(131704),
     s = n(592125);
 function l(e, t, n) {
     return (
@@ -31,7 +31,7 @@ function f(e) {
             let t = r.find((t) => t.name === e.name);
             if (void 0 !== t) e.id = t.id;
             else if (!(e.id in u)) {
-                let t = (0, o.kt)(e);
+                let t = (0, a.kt)(e);
                 u[e.id] = t;
             }
         });
@@ -50,7 +50,7 @@ class _ extends (r = i.ZP.Store) {
     }
 }
 l(_, 'displayName', 'GuildRoleSubscriptionTierTemplatesStore');
-let p = new _(a.Z, {
+let p = new _(o.Z, {
     GUILD_ROLE_SUBSCRIPTIONS_STASH_TEMPLATE_CHANNELS: f,
     GUILD_ROLE_SUBSCRIPTIONS_FETCH_TEMPLATES: d
 });

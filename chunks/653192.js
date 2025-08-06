@@ -7,12 +7,12 @@ e.exports = function (e, t) {
             function (e) {
                 return !!e.getEntity();
             },
-            function (a, o) {
+            function (o, a) {
                 var s = e.getText(),
-                    l = e.getEntityAt(a);
+                    l = e.getEntityAt(o);
                 n.push({
-                    offset: i(s.slice(0, a)),
-                    length: i(s.slice(a, o)),
+                    offset: i(s.slice(0, o)),
+                    length: i(s.slice(o, a)),
                     key: Number(t[r.stringify(l)])
                 });
             }

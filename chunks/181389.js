@@ -7,11 +7,11 @@
 var r = n(395041);
 n(349033);
 var i = n(607802),
-    a = n(532428);
+    o = n(532428);
 (n(72006), n(981631));
-let o = {
-    [a.Qe.FILTER]: r.w,
-    [a.Qe.ANSWER]: r.O
+let a = {
+    [o.Qe.FILTER]: r.w,
+    [o.Qe.ANSWER]: r.O
 };
 function s(e, t, n, r) {
     t.findEntityRanges((t) => {
@@ -27,7 +27,7 @@ function l() {
             let r = e[n];
             t.push({
                 strategy: (e, t, r) => s(r, e, t, n),
-                component: o[r.componentType]
+                component: a[r.componentType]
             });
         }),
         t

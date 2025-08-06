@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => d }), n(388685));
+(n.d(t, { Z: () => u }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -6,8 +6,8 @@ var r = n(255367),
     s = n(481060),
     o = n(785717),
     c = n(507710);
-function d(e) {
-    let { section: t, header: n, items: l, listClassName: d, onExpand: u } = e,
+function u(e) {
+    let { section: t, header: n, items: l, listClassName: u, onExpand: d } = e,
         { trackUserProfileAction: h } = (0, o.KZ)(),
         p = i.useId(),
         [f, g] = i.useState(!1),
@@ -26,7 +26,7 @@ function d(e) {
                                 action: 'PRESS_SECTION',
                                 section: t
                             }),
-                            null == u || u()));
+                            null == d || d()));
                 },
                 children: [
                     (0, r.jsxs)(s.X6q, {
@@ -41,7 +41,7 @@ function d(e) {
                 (0, r.jsx)('ul', {
                     id: p,
                     hidden: !f,
-                    className: a()(c.list, d),
+                    className: a()(c.list, u),
                     children: l
                 })
         ]

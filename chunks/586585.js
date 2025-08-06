@@ -5,8 +5,8 @@ n.d(t, {
 var r = n(255367);
 n(73800);
 var i = n(793030),
-    a = n(179538),
-    o = n(159691),
+    o = n(179538),
+    a = n(159691),
     s = n(755721),
     l = n(481060),
     c = n(600164),
@@ -70,7 +70,7 @@ var E = (function (e) {
     return ((e[(e.CONTINUE = 0)] = 'CONTINUE'), (e[(e.UPGRADE = 1)] = 'UPGRADE'), (e[(e.PURCHASE = 2)] = 'PURCHASE'), e);
 })({});
 let b = (e) => {
-        let { primaryIcon: t, primaryCTA: n, primaryType: i, primaryText: a, primaryDisabled: c, primarySubmitting: u, onPrimary: d, tooltipProps: f } = e,
+        let { primaryIcon: t, primaryCTA: n, primaryType: i, primaryText: o, primaryDisabled: c, primarySubmitting: u, onPrimary: d, tooltipProps: f } = e,
             p = {
                 type: i,
                 disabled: c,
@@ -99,10 +99,10 @@ let b = (e) => {
                   )
               )
             : (0, r.jsx)(
-                  o.zx,
+                  a.zx,
                   h(
                       g(h({}, p), {
-                          text: a,
+                          text: o,
                           loading: u,
                           variant: 0 === n ? 'primary' : 'active',
                           icon:
@@ -119,12 +119,12 @@ let b = (e) => {
               );
     },
     y = (e) => {
-        let { onBack: t, backText: n, primaryIcon: o, primaryCTA: s, primaryType: _, primaryText: p, primaryTooltip: m, primaryDisabled: E, primarySubmitting: y, onPrimary: O } = e,
+        let { onBack: t, backText: n, primaryIcon: a, primaryCTA: s, primaryType: _, primaryText: p, primaryTooltip: m, primaryDisabled: E, primarySubmitting: y, onPrimary: O } = e,
             { premiumBrandRefreshBackgroundClassName: v } = (0, u.JL)(),
             I = () => {
                 if (null == s || null == p) return null;
                 let e = {
-                    primaryIcon: o,
+                    primaryIcon: a,
                     primaryCTA: s,
                     primaryType: _,
                     primaryText: p,
@@ -142,7 +142,7 @@ let b = (e) => {
             T = () =>
                 null == t
                     ? null
-                    : (0, r.jsx)(a.A, {
+                    : (0, r.jsx)(o.A, {
                           text: null != n ? n : f.intl.string(f.t['13/7kZ']),
                           onClick: t,
                           variant: 'secondary'

@@ -1,8 +1,8 @@
 n.d(t, { J: () => v });
 var r = n(73800),
     i = n(399606),
-    a = n(430198),
-    o = n(754688),
+    o = n(430198),
+    a = n(754688),
     s = n(314897),
     l = n(592125),
     c = n(271383),
@@ -77,7 +77,7 @@ function v(e, t) {
             },
             [E]
         ),
-        v = (0, i.e7)([a.Z], () => null != E && (null == E ? void 0 : E.channelId) != null && a.Z.isChannelGated(E.guildId, E.channelId), [E]),
+        v = (0, i.e7)([o.Z], () => null != E && (null == E ? void 0 : E.channelId) != null && o.Z.isChannelGated(E.guildId, E.channelId), [E]),
         I = t.hasFlag(g.iLy.IS_CROSSPOST),
         {
             rawMediaPostEmbedData: T,
@@ -85,7 +85,7 @@ function v(e, t) {
             parentChannel: A,
             user: N,
             selectedGuildId: C,
-            canAccess: w
+            canAccess: R
         } = (0, i.cj)(
             [h.Z, u.Z, l.Z, f.default, d.Z],
             () => {
@@ -94,30 +94,30 @@ function v(e, t) {
                     n = u.Z.getGuild(null == E ? void 0 : E.guildId),
                     r = l.Z.getChannel(null == E ? void 0 : E.channelId),
                     i = f.default.getUser(null == t ? void 0 : t.author_id),
-                    a = d.Z.getGuildId(),
-                    s = null != r && (0, o.YO)(r);
+                    o = d.Z.getGuildId(),
+                    s = null != r && (0, a.YO)(r);
                 return {
                     rawMediaPostEmbedData: t,
                     guild: n,
                     parentChannel: r,
                     user: i,
-                    selectedGuildId: a,
+                    selectedGuildId: o,
                     canAccess: s
                 };
             },
             [E]
         ),
-        R = r.useMemo(() => {
+        P = r.useMemo(() => {
             let e = (0, m.ku)({
                 mediaPostEmbedData: T,
                 guild: S,
                 parentChannel: A,
                 user: N,
                 selectedGuildId: C,
-                canAccess: w
+                canAccess: R
             });
             return null == e ? null : O(b({}, e), { user: N });
-        }, [T, S, A, N, C, w]);
+        }, [T, S, A, N, C, R]);
     return (
         r.useEffect(() => {
             if ((null == E ? void 0 : E.threadId) != null) {
@@ -125,6 +125,6 @@ function v(e, t) {
                 !0 !== n || e !== h.M.NOT_FETCHED || (y && !1 === v) || (!y && I) || (0, _.xP)(null == E ? void 0 : E.threadId);
             }
         }, [E, n, y, v, I]),
-        R
+        P
     );
 }

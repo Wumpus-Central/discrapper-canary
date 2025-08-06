@@ -3,16 +3,16 @@ e.exports = function (e) {
         n = t.getAnchorKey(),
         r = e.getBlockTree(n),
         i = t.getStartOffset(),
-        a = !1;
+        o = !1;
     return (
         r.some(function (e) {
             return i === e.get('start')
-                ? ((a = !0), !0)
+                ? ((o = !0), !0)
                 : i < e.get('end') &&
                       e.get('leaves').some(function (e) {
-                          return i === e.get('start') && ((a = !0), !0);
+                          return i === e.get('start') && ((o = !0), !0);
                       });
         }),
-        a
+        o
     );
 };

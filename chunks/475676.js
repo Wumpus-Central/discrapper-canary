@@ -1,8 +1,8 @@
 (n.d(t, { Z: () => S }), n(388685));
 var r = n(255367),
     i = n(73800),
-    a = n(442837),
-    o = n(481060),
+    o = n(442837),
+    a = n(481060),
     s = n(835473),
     l = n(297781),
     c = n(443487),
@@ -35,7 +35,7 @@ function I(e) {
         className: v.gameTitleContainer,
         children: [
             i,
-            (0, r.jsx)(o.Text, {
+            (0, r.jsx)(a.Text, {
                 variant: 'text-sm/medium',
                 className: v.gameTitle,
                 children: t.name
@@ -59,61 +59,61 @@ function S(e) {
     let y,
         { selected: v, channel: S, entry: N } = e,
         C = S.guild_id,
-        w = (0, p.Z)({
+        R = (0, p.Z)({
             guildId: C,
             leaderboardId: N.extra.leaderboard_id,
             intervalOffset: 0
         }),
-        { rankChanges: R } = (0, h.Z)({
+        { rankChanges: P } = (0, h.Z)({
             guildId: C,
             leaderboardId: N.extra.leaderboard_id,
-            intervalStart: null != (E = null == w ? void 0 : w.interval_start) ? E : ''
+            intervalStart: null != (E = null == R ? void 0 : R.interval_start) ? E : ''
         }),
-        P = (0, a.e7)([u.default], () => u.default.getId()),
+        w = (0, o.e7)([u.default], () => u.default.getId()),
         [D, L] = i.useMemo(() => {
-            let e = R.find((e) => e.userId === P),
-                t = R[0],
+            let e = P.find((e) => e.userId === w),
+                t = P[0],
                 n = null != e ? e : t,
-                r = null == w ? void 0 : w.users.find((e) => e.user_id === (null == n ? void 0 : n.userId));
+                r = null == R ? void 0 : R.users.find((e) => e.user_id === (null == n ? void 0 : n.userId));
             return [n, r];
-        }, [w, R, P]),
-        x = (0, a.e7)([d.default], () => d.default.getUser(null == D ? void 0 : D.userId)),
-        k = _.ZP.getName(C, void 0, x);
+        }, [R, P, w]),
+        x = (0, o.e7)([d.default], () => d.default.getUser(null == D ? void 0 : D.userId)),
+        M = _.ZP.getName(C, void 0, x);
     T({
-        leaderboard: w,
+        leaderboard: R,
         guildId: C
     });
-    let j = (0, s.q)(null == w || null == (t = w.settings) ? void 0 : t.application_id);
-    if (null == w || null == j) return null;
-    if (0 === w.users.length || null == D || null == x)
+    let k = (0, s.q)(null == R || null == (t = R.settings) ? void 0 : t.application_id);
+    if (null == R || null == k) return null;
+    if (0 === R.users.length || null == D || null == x)
         return (0, r.jsx)(A, {
-            application: j,
+            application: k,
             selected: v
         });
-    let { sort_by_statistic_id: M } = w.guild_settings,
-        U = null != (b = null == L || null == (f = L.statistics) || null == (n = f[M]) ? void 0 : n.value) ? b : 0,
+    let { sort_by_statistic_id: j } = R.guild_settings,
+        U = null != (b = null == L || null == (f = L.statistics) || null == (n = f[j]) ? void 0 : n.value) ? b : 0,
         { currentRank: G } = D;
     return (
         (y =
-            D.userId === P
+            D.userId === w
                 ? O.intl.formatToPlainString(O.t['eU+JxM'], { rank: G })
                 : O.intl.formatToPlainString(O.t['8BLSQ0'], {
                       rank: G,
-                      username: k
+                      username: M
                   })),
         (0, r.jsxs)(c.Zb, {
             selected: v,
             children: [
                 (0, r.jsxs)(c.e$, {
                     children: [
-                        (0, r.jsx)(I, { application: j }),
-                        (0, r.jsx)(o.LZC, { size: 2 }),
+                        (0, r.jsx)(I, { application: k }),
+                        (0, r.jsx)(a.LZC, { size: 2 }),
                         (0, r.jsx)(c.ll, { children: y }),
                         (0, r.jsx)(l.Gk, {
                             location: l.Gt.CARD,
                             children: (0, r.jsx)(m.DC, {
                                 value: U,
-                                statisticId: M
+                                statisticId: j
                             })
                         })
                     ]
@@ -134,7 +134,7 @@ function A(e) {
             (0, r.jsxs)(c.e$, {
                 children: [
                     (0, r.jsx)(I, { application: n }),
-                    (0, r.jsx)(o.LZC, { size: 2 }),
+                    (0, r.jsx)(a.LZC, { size: 2 }),
                     (0, r.jsx)(c.ll, { children: O.intl.string(O.t['t+b0DA']) }),
                     (0, r.jsx)(l.Gk, {
                         location: l.Gt.CARD,

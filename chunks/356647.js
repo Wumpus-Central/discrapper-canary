@@ -1,8 +1,8 @@
 (n.d(t, { f: () => _ }), n(388685), n(997841));
 var r = n(602715),
     i = n(258732),
-    a = n(314897),
-    o = n(630388),
+    o = n(314897),
+    a = n(630388),
     s = n(786761),
     l = n(3148),
     c = n(981631);
@@ -22,10 +22,10 @@ function d(e, t) {
 function f(e, t) {
     var n, s;
     if (u.get(t.id) === e.id) return d(e, t.id);
-    if (null == e.applicationId || !(0, o.yE)(e.flags, c.iLy.SENT_BY_SOCIAL_LAYER_INTEGRATION) || !t.isDM() || e.author.id === a.default.getId() || (0, o.yE)(null != (n = t.recipientFlags) ? n : 0, r.V.DISMISSED_IN_GAME_MESSAGE_NUX) || u.has(t.id)) return null;
+    if (null == e.applicationId || !(0, a.yE)(e.flags, c.iLy.SENT_BY_SOCIAL_LAYER_INTEGRATION) || !t.isDM() || e.author.id === o.default.getId() || (0, a.yE)(null != (n = t.recipientFlags) ? n : 0, r.V.DISMISSED_IN_GAME_MESSAGE_NUX) || u.has(t.id)) return null;
     let l = d(e, t.id);
     u.set(t.id, e.id);
-    let f = (0, o.mB)(null != (s = t.recipientFlags) ? s : 0, r.V.DISMISSED_IN_GAME_MESSAGE_NUX, !0);
+    let f = (0, a.mB)(null != (s = t.recipientFlags) ? s : 0, r.V.DISMISSED_IN_GAME_MESSAGE_NUX, !0);
     return (i.Z.updatePrivateChannelRecipientFlags(t.id, f), l);
 }
 function _(e, t) {

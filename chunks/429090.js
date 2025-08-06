@@ -13,7 +13,7 @@ function i(e, t, n) {
         e
     );
 }
-function a(e) {
+function o(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -29,7 +29,7 @@ function a(e) {
     }
     return e;
 }
-function o(e, t) {
+function a(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -46,7 +46,7 @@ function s(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : o(Object(t)).forEach(function (n) {
+            : a(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -67,11 +67,11 @@ let l = (0, n(818083).B)({
 });
 function c(e, t) {
     var n, i;
-    let o = (0, r.Ig)(e),
+    let a = (0, r.Ig)(e),
         { enabled: c } = l.useExperiment(
             { location: e },
-            s(a({}, t), {
-                disable: o || (null != (n = null == t ? void 0 : t.disable) && n),
+            s(o({}, t), {
+                disable: a || (null != (n = null == t ? void 0 : t.disable) && n),
                 autoTrackExposure: null == (i = null == t ? void 0 : t.autoTrackExposure) || i
             })
         );

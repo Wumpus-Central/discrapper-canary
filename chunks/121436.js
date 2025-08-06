@@ -1,12 +1,12 @@
 n.d(t, { default: () => O });
 var l = n(255367);
 n(73800);
-var r = n(120356),
-    a = n.n(r),
+var a = n(120356),
+    r = n.n(a),
     i = n(793030),
     u = n(755721),
-    s = n(481060),
-    d = n(100527),
+    d = n(481060),
+    s = n(100527),
     c = n(906732),
     o = n(313201),
     m = n(703656),
@@ -23,8 +23,8 @@ var r = n(120356),
     j = n(840052);
 let O = (e) => {
     var t, n;
-    let { transitionState: r, onClose: O, displayProfile: h } = e,
-        { analyticsLocations: S } = (0, c.ZP)(d.Z.TIERED_TENURE_BADGES_MODAL),
+    let { transitionState: a, onClose: O, displayProfile: h } = e,
+        { analyticsLocations: S } = (0, c.ZP)(s.Z.TIERED_TENURE_BADGES_MODAL),
         M = (0, o.Dt)(),
         P = Object.values(x.vK),
         R = (0, p.SI)(null == h ? void 0 : h.userId),
@@ -33,10 +33,10 @@ let O = (e) => {
         I = null != (n = (0, p.a1)(null != (t = null == h ? void 0 : h.userId) ? t : null == y ? void 0 : y.id)) ? n : new Date(),
         B = (0, b.yd)(null == y ? void 0 : y.premiumType, x.p9.TIER_2),
         D = P.map((e) => {
-            let { id: t, nameUnformatted: n, tenureReqNumMonths: r } = e,
+            let { id: t, nameUnformatted: n, tenureReqNumMonths: a } = e,
                 u = T.intl.string(n),
-                s = (0, E.J)(t),
-                d = (0, _.q)(t, r),
+                d = (0, E.J)(t),
+                s = (0, _.q)(t, a),
                 c = null == h,
                 o = c && (null == U ? void 0 : U.id) === t,
                 m = !c && (null == R ? void 0 : R.id) === t,
@@ -46,10 +46,10 @@ let O = (e) => {
             return (0, l.jsxs)(
                 'div',
                 {
-                    className: a()(j.badge, { [j.earnedBadge]: v || b }),
+                    className: r()(j.badge, { [j.earnedBadge]: v || b }),
                     children: [
                         (0, l.jsx)('img', {
-                            src: s,
+                            src: d,
                             alt: u,
                             className: j.badgeImage
                         }),
@@ -63,7 +63,7 @@ let O = (e) => {
                                 }),
                                 (0, l.jsx)(i.xv, {
                                     variant: 'text-xs/normal',
-                                    children: d
+                                    children: s
                                 }),
                                 v &&
                                     (0, l.jsx)(i.xv, {
@@ -88,23 +88,26 @@ let O = (e) => {
         }),
         w = () => {
             ((0, m.uL)(N.Z5c.APPLICATION_STORE, {
-                source: d.Z.TIERED_TENURE_BADGES_MODAL,
+                source: s.Z.TIERED_TENURE_BADGES_MODAL,
                 sourceLocationStack: S
             }),
                 null == O || O());
         },
         { enabled: C } = f.$.useExperiment({ location: 'evolving_tenure_badge_modal_web' }, { autoTrackExposure: !1 });
-    return (0, l.jsxs)(s.Y0X, {
-        transitionState: r,
+    return (0, l.jsxs)(d.Y0X, {
+        'data-migration-pending': !0,
+        transitionState: a,
         'aria-labelledby': M,
-        className: a()(j.container, 'theme-dark'),
+        className: r()(j.container, 'theme-dark'),
         parentComponent: 'EvolvingTenureBadgeModal',
         children: [
-            (0, l.jsx)(s.olH, {
+            (0, l.jsx)(d.olH, {
+                'data-migration-pending': !0,
                 onClick: O,
                 className: j.closeButton
             }),
-            (0, l.jsxs)(s.hzk, {
+            (0, l.jsxs)(d.hzk, {
+                'data-migration-pending': !0,
                 className: j.content,
                 children: [
                     B
@@ -126,7 +129,7 @@ let O = (e) => {
                                   }),
                                   null != h &&
                                       h.userId !== (null == y ? void 0 : y.id) &&
-                                      (0, l.jsx)(s.gtL, {
+                                      (0, l.jsx)(d.gtL, {
                                           className: j.learnMoreButton,
                                           onClick: w,
                                           children: T.intl.string(T.t.hvVgAQ)

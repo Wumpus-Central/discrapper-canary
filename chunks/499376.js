@@ -8,8 +8,8 @@
     n(35282));
 var r = n(630388),
     i = n(406432),
-    a = n(828061),
-    o = n(981631);
+    o = n(828061),
+    a = n(981631);
 let s = /\.(mp3|m4a|ogg|opus|wav|flac)$/i,
     l = (e) => 'IMAGE' === e || 'VIDEO' === e || 'CLIP' === e || 'VISUAL_PLACEHOLDER' === e,
     c = (e) => 'IMAGE' === e || 'VIDEO' === e || 'VISUAL_PLACEHOLDER' === e;
@@ -20,9 +20,9 @@ function u(e, t) {
         else {
             var u;
             if (!(0, i.NU)(n) || null == e.proxy_url) return 'INVALID';
-            return (0, r.yE)(null != (u = e.flags) ? u : 0, o.J0y.IS_CLIP) ? 'CLIP' : 'VIDEO';
+            return (0, r.yE)(null != (u = e.flags) ? u : 0, a.J0y.IS_CLIP) ? 'CLIP' : 'VIDEO';
         }
-    return null != t && s.test(n) && null != e.url ? 'AUDIO' : null != e.url && (0, a.O)(n) ? 'PLAINTEXT_PREVIEW' : 'OTHER';
+    return null != t && s.test(n) && null != e.url ? 'AUDIO' : null != e.url && (0, o.O)(n) ? 'PLAINTEXT_PREVIEW' : 'OTHER';
 }
 function d(e) {
     let { contentType: t, width: n, height: r } = e;

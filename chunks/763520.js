@@ -5,8 +5,8 @@
     n(388685));
 var r = n(379649),
     i = n(710845),
-    a = n(314897),
-    o = n(592125),
+    o = n(314897),
+    a = n(592125),
     s = n(866960),
     l = n(19780),
     c = n(979651),
@@ -54,8 +54,8 @@ class g {
         if (((this.spinnerVisibleStart = null), f < 0)) return void this.logger.warn('spinner duration is negative: '.concat(f, ' ms\n        [').concat(e, ', count for stream: ').concat(i, ']'));
         this.logger.info('spinner visible for '.concat(f, ' ms\n      [').concat(e, ', count for stream: ').concat(i, ']'));
         let _ = l.Z.getGuildId(),
-            p = c.Z.getUserVoiceChannelId(_, a.default.getId()),
-            g = m(o.Z.getChannel(p));
+            p = c.Z.getUserVoiceChannelId(_, o.default.getId()),
+            g = m(a.Z.getChannel(p));
         u.default.track(d.rMx.VIDEO_SPINNER_SHOWN_V2, {
             video_spinner_context: e,
             duration_video_spinner_visible_ms: f,

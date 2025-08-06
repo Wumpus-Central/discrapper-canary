@@ -1,8 +1,8 @@
 (n.d(t, { Z: () => A }), n(539854));
 var r = n(255367),
     i = n(73800),
-    a = n(990547),
-    o = n(731965),
+    o = n(990547),
+    a = n(731965),
     s = n(442837),
     l = n(704215),
     c = n(40851),
@@ -23,21 +23,21 @@ var r = n(255367),
     T = n(981631),
     S = n(600295);
 function A(e) {
-    let { participants: t, onClick: n, onDoubleClick: A, onContextMenu: N, channel: C, className: w, inCall: R, totalNumberOfParticipants: P } = e,
+    let { participants: t, onClick: n, onDoubleClick: A, onContextMenu: N, channel: C, className: R, inCall: P, totalNumberOfParticipants: w } = e,
         D = (0, c.bp)() === T.IlC.POPOUT,
         L = (0, s.e7)([E.Z], () => E.Z.getGuild(C.guild_id), [C.guild_id]),
         { dismissedActivityEntryPointTileChannel: x } = (0, v.d)(),
-        k = (0, s.e7)([_.Z], () => _.Z.getUserParticipantCount(C.id), [C]),
-        j = (0, g.bt)(C.id, t),
-        M = i.useCallback(() => {
-            (0, o.j)(() => {
+        M = (0, s.e7)([_.Z], () => _.Z.getUserParticipantCount(C.id), [C]),
+        k = (0, g.bt)(C.id, t),
+        j = i.useCallback(() => {
+            (0, a.j)(() => {
                 v.d.setState({ dismissedActivityEntryPointTileChannel: C.id });
             });
         }, [C.id]);
     i.useEffect(() => {
         null != x &&
             C.id !== x &&
-            (0, o.j)(() => {
+            (0, a.j)(() => {
                 v.d.setState({ dismissedActivityEntryPointTileChannel: null });
             });
     }, [C.id, x]);
@@ -48,7 +48,7 @@ function A(e) {
         F = (0, p.Nj)(l.z.VC_TILE_ACTIVITIES_ENTRY_POINT),
         V = (0, d.KF)(C.id) !== d.jy.CAN_LAUNCH,
         H = null != x && x === C.id,
-        Y = j.map(
+        Y = k.map(
             (e) => (t) =>
                 (0, r.jsx)(
                     O.ZP,
@@ -59,7 +59,7 @@ function A(e) {
                         onClick: n,
                         onDoubleClick: A,
                         onContextMenu: N,
-                        inCall: R,
+                        inCall: P,
                         width: t,
                         inPopout: D
                     },
@@ -68,10 +68,10 @@ function A(e) {
         );
     ((0, f.Z)(
         {
-            type: a.ImpressionTypes.VIEW,
-            name: a.ImpressionNames.CHANNEL_CALL_VIDEO_GRID_VIEW,
+            type: o.ImpressionTypes.VIEW,
+            name: o.ImpressionNames.CHANNEL_CALL_VIDEO_GRID_VIEW,
             properties: {
-                total_participants: P,
+                total_participants: w,
                 can_invite: U,
                 is_afk_channel: G,
                 channel_user_limit: C.userLimit
@@ -82,9 +82,9 @@ function A(e) {
     ),
         null != L &&
             !G &&
-            (!(k >= 2) || !Z || V || F || H
+            (!(M >= 2) || !Z || V || F || H
                 ? B &&
-                  1 === k &&
+                  1 === M &&
                   U &&
                   (Z && !V
                       ? Y.push((e) =>
@@ -93,8 +93,8 @@ function A(e) {
                                 guild: L,
                                 width: e,
                                 inPopout: D,
-                                handleClose: M,
-                                userParticipantCount: k
+                                handleClose: j,
+                                userParticipantCount: M
                             })
                         )
                       : Y.push((e) =>
@@ -111,19 +111,19 @@ function A(e) {
                           guild: L,
                           width: e,
                           inPopout: D,
-                          handleClose: M,
-                          userParticipantCount: k
+                          handleClose: j,
+                          userParticipantCount: M
                       })
                   )));
     let W = i.useCallback(
         (e) => {
             var t, n;
-            return null != (n = null == (t = j[e]) ? void 0 : t.id) ? n : 'empty-tile';
+            return null != (n = null == (t = k[e]) ? void 0 : t.id) ? n : 'empty-tile';
         },
-        [j]
+        [k]
     );
     return (0, r.jsx)(m.Z, {
-        className: w,
+        className: R,
         keyExtractor: W,
         paddingTop: 64,
         paddingBottom: 64,

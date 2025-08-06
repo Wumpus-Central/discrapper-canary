@@ -1,7 +1,7 @@
 var r = n(127849),
     i = n(35760),
-    a = n(621523),
-    o = n(896471),
+    o = n(621523),
+    a = n(896471),
     s = n(992914),
     l = n(840475),
     c = n(358932),
@@ -15,16 +15,16 @@ var r = n(127849),
     g =
         !!m &&
         !(
-            a(function () {
+            o(function () {
                 m(new h(2), null);
             }) &&
-            a(function () {
+            o(function () {
                 m(new h(2), {});
             })
         ),
     E =
         !!m &&
-        !a(function () {
+        !o(function () {
             if (d) return d < 74;
             if (c) return c < 67;
             if (u) return !0;
@@ -52,7 +52,7 @@ var r = n(127849),
 p(
     'sort',
     function (e) {
-        return (void 0 !== e && o(e), E) ? m(this, e) : s(_(this), b(e));
+        return (void 0 !== e && a(e), E) ? m(this, e) : s(_(this), b(e));
     },
     !E || g
 );

@@ -2,8 +2,8 @@ n.d(t, { Z: () => v });
 var r = n(255367);
 n(73800);
 var i = n(442837),
-    a = n(481060),
-    o = n(665149),
+    o = n(481060),
+    a = n(665149),
     s = n(892001),
     l = n(650774),
     c = n(430824),
@@ -87,9 +87,9 @@ function v(e) {
         }),
         A = (0, i.e7)([l.Z], () => (null != T ? l.Z.getMemberCount(T) : 0)),
         N = null != S && (null != A ? A : 0) >= S,
-        { approveRequest: C, rejectRequest: w, submitting: R } = (0, p.s)(null == v ? void 0 : v.guildId, null == v ? void 0 : v.userId, null == v ? void 0 : v.joinRequestId);
+        { approveRequest: C, rejectRequest: R, submitting: P } = (0, p.s)(null == v ? void 0 : v.guildId, null == v ? void 0 : v.userId, null == v ? void 0 : v.joinRequestId);
     if (null == v || v.applicationStatus !== _.wB.SUBMITTED || !I) return null;
-    let P = () => {
+    let w = () => {
         (0, s.openUserProfileModal)({
             userId: v.userId,
             guildId: v.guildId
@@ -98,12 +98,12 @@ function v(e) {
     return (0, r.jsxs)('div', {
         className: g.buttons,
         children: [
-            (0, r.jsx)(a.ua7, {
+            (0, r.jsx)(o.ua7, {
                 text: m.intl.string(m.t.cdPGbG),
                 shouldShow: N,
                 children: (e) =>
                     (0, r.jsx)(
-                        a.zxk,
+                        o.zxk,
                         O(
                             b(
                                 {
@@ -114,28 +114,28 @@ function v(e) {
                                 e
                             ),
                             {
-                                loading: R,
+                                loading: P,
                                 onClick: C,
                                 disabled: N
                             }
                         )
                     )
             }),
-            (0, r.jsx)(a.zxk, {
+            (0, r.jsx)(o.zxk, {
                 variant: 'critical-primary',
                 size: 'sm',
                 text: m.intl.string(m.t.hDtbs7),
-                onClick: w,
-                disabled: R || v.applicationStatus !== _.wB.SUBMITTED
+                onClick: R,
+                disabled: P || v.applicationStatus !== _.wB.SUBMITTED
             }),
             n &&
-                (0, r.jsx)(a.zxk, {
-                    onClick: P,
+                (0, r.jsx)(o.zxk, {
+                    onClick: w,
                     variant: 'secondary',
                     size: 'sm',
                     text: m.intl.string(m.t.iXAna2)
                 }),
-            E && (0, r.jsx)(o.ZP.Divider, {})
+            E && (0, r.jsx)(a.ZP.Divider, {})
         ]
     });
 }

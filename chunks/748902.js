@@ -1,8 +1,8 @@
 (n.d(t, { Z: () => C }), n(388685));
 var r,
     i = n(442837),
-    a = n(570140),
-    o = n(786761),
+    o = n(570140),
+    a = n(786761),
     s = n(594174),
     l = n(355298),
     c = n(333984);
@@ -69,7 +69,7 @@ function g(e) {
 function E(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     if (!g(e) || (null != t && e !== (null == t ? void 0 : t.channel_id))) return;
-    let r = null == t ? null : (0, o.e5)(t);
+    let r = null == t ? null : (0, a.e5)(t);
     p[e] = {
         loaded: !0,
         error: n,
@@ -97,7 +97,7 @@ function I(e) {
     if (null == t) return !1;
     let n = p[t];
     if (null == n || null == n.message) return !1;
-    p[t] = _(d({}, n), { message: (0, o.wi)(n.message, e.message) });
+    p[t] = _(d({}, n), { message: (0, a.wi)(n.message, e.message) });
 }
 function T(e) {
     if (!g(e.channelId)) return !1;
@@ -142,7 +142,7 @@ class N extends (r = i.ZP.Store) {
     }
 }
 u(N, 'displayName', 'MessageRequestPreviewStore');
-let C = new N(a.Z, {
+let C = new N(o.Z, {
     CONNECTION_OPEN: m,
     CHANNEL_CREATE: y,
     CHANNEL_UPDATES: O,

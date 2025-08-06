@@ -1,30 +1,30 @@
 (n.d(t, { N: () => d }), n(388685), n(35282), n(642613));
 var r = n(626135),
     i = n(960048),
-    a = n(592204),
-    o = n(803141),
+    o = n(592204),
+    a = n(803141),
     s = n(603158),
     l = n(981631);
 function c(e, t, n) {
     let r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
         i = Math.max(t, 0),
-        a = Math.min(n, e.length - 1),
-        o = r ? '\\*' : '*',
-        s = [...e.substring(i, a + 1)].map((e) => (' ' === e ? ' ' : o)).join('');
+        o = Math.min(n, e.length - 1),
+        a = r ? '\\*' : '*',
+        s = [...e.substring(i, o + 1)].map((e) => (' ' === e ? ' ' : a)).join('');
     return ''
         .concat(e.substring(0, i))
         .concat(s)
-        .concat(e.substring(a + 1));
+        .concat(e.substring(o + 1));
 }
 function u(e) {
     var t;
-    let n = o.Z.getKeywordTrie();
+    let n = a.Z.getKeywordTrie();
     if ('' === e) return [];
     let r = (0, s.F)(e).toLowerCase();
     return Object.values(null != (t = null == n ? void 0 : n.search(r)) ? t : {});
 }
 function d(e, t) {
-    (0, a.pB)({ location: 'keyword_substituted_content' });
+    (0, o.pB)({ location: 'keyword_substituted_content' });
     try {
         let n = u(e);
         if (0 === n.length) return e;

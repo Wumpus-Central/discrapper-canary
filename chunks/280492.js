@@ -1,6 +1,6 @@
 n.d(t, {
     iN: () => i,
-    oV: () => a
+    oV: () => o
 });
 var r = n(846027);
 let i = {
@@ -14,7 +14,7 @@ let i = {
             !1
         )
     },
-    a = {
+    o = {
         binds: ['mod+shift+d'],
         comboKeysBindGlobal: !0,
         action: () => (

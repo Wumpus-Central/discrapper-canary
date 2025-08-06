@@ -7,8 +7,8 @@
     n(539854));
 var r = n(255367),
     i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(392711),
     l = n.n(s),
     c = n(91192),
@@ -31,7 +31,7 @@ var r = n(255367),
     A = n(981631),
     N = n(388032),
     C = n(555565);
-function w(e, t, n) {
+function R(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -44,7 +44,7 @@ function w(e, t, n) {
         e
     );
 }
-function R(e) {
+function P(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -55,12 +55,12 @@ function R(e) {
                 })
             )),
             r.forEach(function (t) {
-                w(e, t, n[t]);
+                R(e, t, n[t]);
             }));
     }
     return e;
 }
-function P(e, t) {
+function w(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -77,7 +77,7 @@ function D(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : P(Object(t)).forEach(function (n) {
+            : w(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -89,8 +89,8 @@ function L(e, t) {
         r,
         i = x(e, t);
     if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
@@ -99,21 +99,21 @@ function x(e, t) {
     var n,
         r,
         i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
-let k = 43,
-    j = 25,
-    M = 40,
+let M = 43,
+    k = 25,
+    j = 40,
     U = 250;
 function G(e) {
     e.stopPropagation();
 }
 let B = (e) => {
-        let { title: t, icon: n, children: i, className: a } = e;
+        let { title: t, icon: n, children: i, className: o } = e;
         return (0, r.jsxs)('div', {
-            className: o()(a, C.header),
+            className: a()(o, C.header),
             children: [
                 (0, r.jsxs)('div', {
                     className: C.titleContainer,
@@ -156,12 +156,12 @@ class F extends i.PureComponent {
             onClick: this.handleClickJump,
             children: [
                 (0, r.jsx)('div', {
-                    className: o()(C.__invalid_text, { hidden: e }),
+                    className: a()(C.__invalid_text, { hidden: e }),
                     children: N.intl.string(N.t.k5WiPT)
                 }),
                 (0, r.jsx)(f.$jN, {
                     type: f.$jN.Type.PULSING_ELLIPSIS,
-                    className: o()(C.loading, { [C.visible]: e })
+                    className: a()(C.loading, { [C.visible]: e })
                 })
             ]
         });
@@ -189,11 +189,11 @@ class F extends i.PureComponent {
     }
     constructor(...e) {
         (super(...e),
-            w(this, 'handleClickJump', (e) => {
+            R(this, 'handleClickJump', (e) => {
                 let { jumpTo: t, message: n } = this.props;
                 t(n, e);
             }),
-            w(this, 'handleClickClose', (e) => {
+            R(this, 'handleClickClose', (e) => {
                 let { onCloseMessage: t, message: n } = this.props;
                 null != t && t(n, e);
             }));
@@ -204,9 +204,9 @@ let V = u.ZP.connectStores([O.Z], (e) => {
     return { canManageMessages: null != t && O.Z.can(A.Plq.MANAGE_MESSAGES, t) };
 })(F);
 function H(e) {
-    let { analyticsName: t, items: n, hasMore: a, loading: s, loadMore: _, renderHeader: m, renderEmptyState: g, renderItem: E, getProTip: b, scrollerClassName: y, className: O, listName: w } = e,
-        P = i.useRef(null),
-        x = (0, p.Z)(w, P),
+    let { analyticsName: t, items: n, hasMore: o, loading: s, loadMore: _, renderHeader: m, renderEmptyState: g, renderItem: E, getProTip: b, scrollerClassName: y, className: O, listName: R } = e,
+        w = i.useRef(null),
+        x = (0, p.Z)(R, w),
         B = (0, u.e7)([v.ZP], () => v.ZP.hasNotice()),
         Z = (0, u.e7)([I.Z], () => I.Z.windowSize());
     (i.useEffect(() => {
@@ -215,11 +215,11 @@ function H(e) {
         i.useEffect(() => {
             function e() {
                 var e;
-                null == (e = P.current) || e.scrollPageUp({ animate: !0 });
+                null == (e = w.current) || e.scrollPageUp({ animate: !0 });
             }
             function t() {
                 var e;
-                null == (e = P.current) || e.scrollPageDown({ animate: !0 });
+                null == (e = w.current) || e.scrollPageDown({ animate: !0 });
             }
             return (
                 S.S.subscribe(A.CkL.SCROLL_PAGE_DOWN, t),
@@ -231,9 +231,9 @@ function H(e) {
         }, []));
     let F = i.useCallback(() => {
             var e;
-            let t = null == (e = P.current) ? void 0 : e.getScrollerState();
-            null != t && t.scrollHeight - t.scrollTop - t.offsetHeight < U && a && !s && (null == _ || _());
-        }, [a, _, s]),
+            let t = null == (e = w.current) ? void 0 : e.getScrollerState();
+            null != t && t.scrollHeight - t.scrollTop - t.offsetHeight < U && o && !s && (null == _ || _());
+        }, [o, _, s]),
         V = [],
         H = !0;
     null == n || (s && 0 === n.length)
@@ -241,7 +241,7 @@ function H(e) {
               (0, r.jsx)(
                   'div',
                   {
-                      className: o()(C.emptyPlaceholder, C.loadingPlaceholder),
+                      className: a()(C.emptyPlaceholder, C.loadingPlaceholder),
                       children: (0, r.jsx)(f.$jN, {})
                   },
                   'spinner'
@@ -267,7 +267,7 @@ function H(e) {
                   },
                   'loading-more-after'
               )
-            : a
+            : o
               ? (0, r.jsx)('div', {
                     className: C.hasMore,
                     children: (0, r.jsx)(d.zx, {
@@ -297,11 +297,11 @@ function H(e) {
                       })
                   })
                 : null,
-        z = { maxHeight: Z.height - k - j - 48 };
-    B && (z.maxHeight -= M);
-    let q = null != _ && a;
+        z = { maxHeight: Z.height - M - k - 48 };
+    B && (z.maxHeight -= j);
+    let q = null != _ && o;
     return (0, r.jsx)('div', {
-        className: o()(O, C.messagesPopoutWrap),
+        className: a()(O, C.messagesPopoutWrap),
         style: z,
         onClick: G,
         onDoubleClick: G,
@@ -310,9 +310,9 @@ function H(e) {
             component: m(),
             children: [
                 (0, r.jsxs)(f.Den, {
-                    className: o()(C.messagesPopout, y),
+                    className: a()(C.messagesPopout, y),
                     onScroll: q ? F : void 0,
-                    ref: P,
+                    ref: w,
                     children: [
                         (0, r.jsx)(c.bG, {
                             navigator: x,
@@ -320,7 +320,7 @@ function H(e) {
                                 children: (e) => {
                                     var { ref: t } = e,
                                         n = L(e, ['ref']);
-                                    return (0, r.jsx)('div', D(R({ ref: t }, n), { children: V }));
+                                    return (0, r.jsx)('div', D(P({ ref: t }, n), { children: V }));
                                 }
                             })
                         }),
@@ -333,22 +333,22 @@ function H(e) {
     });
 }
 function Y(e) {
-    let { analyticsName: t, onFetch: n, channel: a, messages: o, hasMore: s, loading: l, loadMore: c, onJump: d, canCloseAllMessages: f = !1, renderHeader: p, renderEmptyState: h, renderMessage: O, getProTip: v, scrollerClassName: I, className: T, onCloseMessage: S, listName: N } = e,
-        w = (0, u.e7)([y.Z], () => {
-            let e = null != a ? y.Z.getMessages(a.id) : null;
+    let { analyticsName: t, onFetch: n, channel: o, messages: a, hasMore: s, loading: l, loadMore: c, onJump: d, canCloseAllMessages: f = !1, renderHeader: p, renderEmptyState: h, renderMessage: O, getProTip: v, scrollerClassName: I, className: T, onCloseMessage: S, listName: N } = e,
+        R = (0, u.e7)([y.Z], () => {
+            let e = null != o ? y.Z.getMessages(o.id) : null;
             return null != e && null != e.jumpTargetId && e.loadingMore && null == e.get(e.jumpTargetId);
         });
-    function R(e, n) {
-        if ((0, m.Z)(e) && !w) {
+    function P(e, n) {
+        if ((0, m.Z)(e) && !R) {
             let { id: r, channel_id: i } = e,
-                a = b.Z.getChannel(i);
-            (null != a && (_.Z.trackJump(i, r, t), (0, E.uL)(A.Z5c.CHANNEL(a.getGuildId(), i, r))), null == d || d(n));
+                o = b.Z.getChannel(i);
+            (null != o && (_.Z.trackJump(i, r, t), (0, E.uL)(A.Z5c.CHANNEL(o.getGuildId(), i, r))), null == d || d(n));
         }
     }
-    function P(e) {
+    function w(e) {
         let { message: t, channel: n } = e;
         if (null == t) return [];
-        if (null != O) return O(t, (e) => R(t, e));
+        if (null != O) return O(t, (e) => P(t, e));
         let i = [];
         return null == n
             ? []
@@ -364,11 +364,11 @@ function Y(e) {
                                   channel: n
                               }),
                               (0, r.jsx)(V, {
-                                  channel: a,
+                                  channel: o,
                                   message: t,
-                                  jumping: w,
+                                  jumping: R,
                                   canCloseAllMessages: f,
-                                  jumpTo: R,
+                                  jumpTo: P,
                                   onCloseMessage: S
                               })
                           ]
@@ -379,17 +379,17 @@ function Y(e) {
               i);
     }
     i.useEffect(() => {
-        n(a);
-    }, [a, n]);
+        n(o);
+    }, [o, n]);
     let D = i.useMemo(
         () =>
-            null == o
+            null == a
                 ? void 0
-                : o.map((e) => ({
+                : a.map((e) => ({
                       message: e,
-                      channel: a
+                      channel: o
                   })),
-        [o, a]
+        [a, o]
     );
     return (0, r.jsx)(H, {
         className: T,
@@ -402,7 +402,7 @@ function Y(e) {
         hasMore: s,
         loadMore: c,
         getProTip: v,
-        renderItem: P,
+        renderItem: w,
         listName: N,
         'aria-label': e['aria-label']
     });

@@ -2,8 +2,8 @@ n.d(t, { Z: () => d });
 var r = n(255367);
 n(73800);
 var i = n(442837),
-    a = n(481060),
-    o = n(846027),
+    o = n(481060),
+    a = n(846027),
     s = n(131951),
     l = n(358085),
     c = n(981631),
@@ -13,13 +13,13 @@ function d(e) {
         n = (0, i.e7)([s.Z], () => s.Z.getMode()),
         d = (t, i) =>
             (0, r.jsx)(
-                a.k5B,
+                o.k5B,
                 {
                     id: t,
                     group: 'input-modes',
                     label: i,
                     checked: n === t,
-                    action: () => o.Z.setMode(t, void 0, void 0, { analyticsLocations: e })
+                    action: () => a.Z.setMode(t, void 0, void 0, { analyticsLocations: e })
                 },
                 t
             );

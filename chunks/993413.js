@@ -1,8 +1,8 @@
 (n.d(t, { Z: () => b }), n(704826), n(35282), n(953529));
 var r = n(255367),
     i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(442837),
     l = n(755721),
     c = n(481060),
@@ -37,17 +37,17 @@ function E(e) {
     });
 }
 let b = i.forwardRef(function (e, t) {
-    let { title: n, titleIcon: i, titleId: a, description: f, children: g, className: b, errors: y, disabled: O = !1, hideDivider: v = !1, showBorder: I = !1, borderType: T, hasBackground: S = !1, forcedDivider: A = !1, showPremiumIcon: N = !1, showViewFullProfileButton: C = !1 } = e,
-        w = (0, s.e7)([d.default], () => d.default.getCurrentUser()),
-        R = () => {
-            null != w &&
+    let { title: n, titleIcon: i, titleId: o, description: f, children: g, className: b, errors: y, disabled: O = !1, hideDivider: v = !1, showBorder: I = !1, borderType: T, hasBackground: S = !1, forcedDivider: A = !1, showPremiumIcon: N = !1, showViewFullProfileButton: C = !1 } = e,
+        R = (0, s.e7)([d.default], () => d.default.getCurrentUser()),
+        P = () => {
+            null != R &&
                 (0, u.openUserProfileModal)({
-                    userId: w.id,
+                    userId: R.id,
                     disableActionsForPreview: !0
                 });
         };
     return (0, r.jsx)('div', {
-        className: o()(m.customizationSection, b, {
+        className: a()(m.customizationSection, b, {
             [m.disabled]: O,
             [m.hideDivider]: v,
             [m.showBorder]: I,
@@ -63,19 +63,19 @@ let b = i.forwardRef(function (e, t) {
             children: [
                 (0, r.jsxs)(c.vwX, {
                     className: m.title,
-                    id: a,
+                    id: o,
                     children: [
                         n,
                         N && (0, r.jsx)(_.Z, {}),
                         i,
                         C &&
-                            null != w &&
+                            null != R &&
                             (0, r.jsx)(l.zx, {
                                 look: l.zx.Looks.LINK,
                                 color: l.zx.Colors.TRANSPARENT,
                                 size: l.zx.Sizes.TINY,
                                 className: m.viewFullProfileButton,
-                                onClick: R,
+                                onClick: P,
                                 children: (0, r.jsx)(c.Text, {
                                     variant: 'text-xs/normal',
                                     children: h.intl.string(h.t['+Xp3ho'])

@@ -10,10 +10,10 @@ function i() {
             return e;
         }).apply(this, arguments);
 }
-function a(e, t) {
+function o(e, t) {
     ((e.prototype = Object.create(t.prototype)), (e.prototype.constructor = e), (e.__proto__ = t));
 }
-var o = n(152477),
+var a = n(152477),
     s = n(73800),
     l = n(746117),
     c = n(856084);
@@ -22,22 +22,22 @@ e.exports = (function (e) {
         return e.apply(this, arguments) || this;
     }
     return (
-        a(t, e),
+        o(t, e),
         (t.prototype.render = function () {
             var e = this.props,
                 t = e.block,
                 n = e.children,
                 r = e.contentState,
-                a = e.decorator,
+                o = e.decorator,
                 u = e.decoratorKey,
                 d = e.direction,
                 f = e.leafSet,
                 _ = e.text,
                 p = t.getKey(),
                 h = f.get('leaves'),
-                m = a.getComponentForKey(u),
-                g = a.getPropsForKey(u),
-                E = o.encode(p, parseInt(u, 10), 0),
+                m = o.getComponentForKey(u),
+                g = o.getPropsForKey(u),
+                E = a.encode(p, parseInt(u, 10), 0),
                 b = _.slice(h.first().get('start'), h.last().get('end')),
                 y = c.getHTMLDirIfDifferent(l.getDirection(b), d);
             return s.createElement(

@@ -23,8 +23,8 @@ var i = n(255367),
     x = n(17894),
     _ = n(975298),
     j = n(600164),
-    C = n(925329),
-    E = n(963249),
+    E = n(925329),
+    C = n(963249),
     O = n(301766),
     v = n(594174),
     S = n(626135),
@@ -175,7 +175,7 @@ function G(e) {
                     children: L.intl.format(L.t['0nbf/P'], {
                         daysPastDue: t,
                         paymentModalRedirect: () => {
-                            (0, E.Z)({
+                            (0, C.Z)({
                                 initialPlanId: n.planIdFromItems,
                                 openInvoiceId: s,
                                 analyticsLocations: a
@@ -219,9 +219,9 @@ function H() {
                 children: (0, i.jsxs)(j.Z, {
                     align: j.Z.Align.CENTER,
                     children: [
-                        (0, i.jsx)(C.Z, {
+                        (0, i.jsx)(E.Z, {
                             game: null,
-                            size: C.Z.Sizes.SMALL,
+                            size: E.Z.Sizes.SMALL,
                             className: M.noItemsIcon
                         }),
                         (0, i.jsx)('span', {
@@ -258,10 +258,10 @@ function z(e) {
                       analyticsLocations: p,
                       analyticsLocation: n
                   },
-        [C] = (0, y.ED)(j);
-    C = null != u ? u : C;
-    let E = (0, _.Z)();
-    return null == x || null == C
+        [E] = (0, y.ED)(j);
+    E = null != u ? u : E;
+    let C = (0, _.Z)();
+    return null == x || null == E
         ? (0, i.jsx)(g.$jN, {})
         : (0, i.jsxs)(i.Fragment, {
               children: [
@@ -280,7 +280,7 @@ function z(e) {
                               renewalInvoicePreview: x,
                               fromStandaloneBillingPage: l,
                               className: M.guildSubscriptionRow,
-                              fractionalPremiumInfo: E
+                              fractionalPremiumInfo: C
                           })
                       ]
                   }),
@@ -295,9 +295,9 @@ function z(e) {
                               children: [
                                   (0, i.jsx)(F, {
                                       subscription: t,
-                                      renewalInvoicePreview: C,
+                                      renewalInvoicePreview: E,
                                       className: M.detailsBlock,
-                                      fractionalPremiumInfo: E,
+                                      fractionalPremiumInfo: C,
                                       openInvoice: m
                                   }),
                                   (0, i.jsxs)('div', {
@@ -374,10 +374,10 @@ function K(e) {
             var e;
             return null == (e = v.default.getCurrentUser()) ? void 0 : e.hasFreePremium();
         }),
-        C = d()(r.currentPeriodEnd),
-        E = null != r.paymentSourceId,
+        E = d()(r.currentPeriodEnd),
+        C = null != r.paymentSourceId,
         S = null != (t = null == x ? void 0 : x.total) ? t : 0,
-        T = !E && S > 0 && (7 >= C.diff(d()(), 'days') || r.status === w.O0b.PAST_DUE) && !j && !r.isPurchasedExternally,
+        T = !C && S > 0 && (7 >= E.diff(d()(), 'days') || r.status === w.O0b.PAST_DUE) && !j && !r.isPurchasedExternally,
         I = _ && r.status === w.O0b.PAST_DUE && !j && !r.isPurchasedExternally,
         N = (0, A.U)(),
         P = !j && N,

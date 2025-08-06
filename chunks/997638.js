@@ -6,9 +6,9 @@
     n(388685));
 var r,
     i = n(255367),
-    a = n(73800),
-    o = n(120356),
-    s = n.n(o),
+    o = n(73800),
+    a = n(120356),
+    s = n.n(a),
     l = n(780384),
     c = n(755721),
     u = n(481060),
@@ -75,8 +75,8 @@ function y(e, t) {
         r,
         i = O(e, t);
     if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
@@ -85,8 +85,8 @@ function O(e, t) {
     var n,
         r,
         i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
 var v = (function (e) {
@@ -95,7 +95,7 @@ var v = (function (e) {
     I = (function (e) {
         return ((e.TOP = 'top'), (e.MIDDLE = 'middle'), e);
     })({});
-class T extends a.PureComponent {
+class T extends o.PureComponent {
     componentDidMount() {
         let { uniqueId: e } = this.props;
         d.default.track(_.rMx.SHOW_TUTORIAL, { tutorial: e });
@@ -107,12 +107,12 @@ class T extends a.PureComponent {
         });
     }
     render() {
-        let { renderMedia: e, textAlign: t, isLongText: n, title: r, body: a, className: o, forceTheme: d, onClickSkipAll: _ } = this.props,
-            m = 'string' == typeof a ? 'p' : 'div',
+        let { renderMedia: e, textAlign: t, isLongText: n, title: r, body: o, className: a, forceTheme: d, onClickSkipAll: _ } = this.props,
+            m = 'string' == typeof o ? 'p' : 'div',
             g = 'left' === t || n,
             E = 'center' === t || !g;
         return (0, i.jsxs)(u.VqE, {
-            className: s()(h.popoutRoot, o),
+            className: s()(h.popoutRoot, a),
             children: [
                 null != e &&
                     (0, i.jsx)(f.Z, {
@@ -132,7 +132,7 @@ class T extends a.PureComponent {
                         [h.bodyCenter]: E,
                         [h.bodyLeft]: g
                     }),
-                    children: a
+                    children: o
                 }),
                 (0, i.jsxs)(f.Z, {
                     className: h.buttonContainer,
@@ -166,10 +166,10 @@ class T extends a.PureComponent {
             }));
     }
 }
-class S extends (r = a.PureComponent) {
+class S extends (r = o.PureComponent) {
     render() {
         let e = this.props,
-            { renderMedia: t, textAlign: n, onComplete: r, onSkipAll: a, isLongText: o, title: s, body: l, children: c, spacing: d, forceTheme: f, innerRef: _ } = e,
+            { renderMedia: t, textAlign: n, onComplete: r, onSkipAll: o, isLongText: a, title: s, body: l, children: c, spacing: d, forceTheme: f, innerRef: _ } = e,
             p = y(e, ['renderMedia', 'textAlign', 'onComplete', 'onSkipAll', 'isLongText', 'title', 'body', 'children', 'spacing', 'forceTheme', 'innerRef']),
             h = 'top' === p.position || 'bottom' === p.position ? 'center' : 'top';
         return (0, i.jsx)(
@@ -194,7 +194,7 @@ class S extends (r = a.PureComponent) {
             }),
             m(this, 'renderPopoutContent', (e) => {
                 let { closePopout: t, position: n } = e,
-                    { forceTheme: r, isLongText: a, arrowAlignment: o, renderMedia: l } = this.props,
+                    { forceTheme: r, isLongText: o, arrowAlignment: a, renderMedia: l } = this.props,
                     c = null != l;
                 return (0, i.jsx)(u.f6W, {
                     theme: r,
@@ -205,15 +205,15 @@ class S extends (r = a.PureComponent) {
                                 className: s()(
                                     {
                                         [h.bottom]: 'bottom' === n,
-                                        [h.contentNarrowNoMedia]: !a && !c,
-                                        [h.contentNarrowWithMedia]: !a && c,
-                                        [h.contentWideNoMedia]: a && !c,
-                                        [h.contentWideWithMedia]: a && c,
+                                        [h.contentNarrowNoMedia]: !o && !c,
+                                        [h.contentNarrowWithMedia]: !o && c,
+                                        [h.contentWideNoMedia]: o && !c,
+                                        [h.contentWideWithMedia]: o && c,
                                         [h.right]: 'right' === n,
                                         [h.top]: 'top' === n,
                                         [h.left]: 'left' === n,
-                                        [h.arrowAlignmentTop]: 'top' === o,
-                                        [h.arrowAlignmentMiddle]: 'middle' === o,
+                                        [h.arrowAlignmentTop]: 'top' === a,
+                                        [h.arrowAlignmentMiddle]: 'middle' === a,
                                         'force-theme': null != r
                                     },
                                     e

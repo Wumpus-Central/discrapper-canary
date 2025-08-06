@@ -1,4 +1,4 @@
-n.d(t, { Z: () => d });
+n.d(t, { Z: () => u });
 var r = n(255367),
     i = n(73800),
     l = n(481060),
@@ -6,9 +6,9 @@ var r = n(255367),
     s = n(981631),
     o = n(388032),
     c = n(334814);
-let d = (e) => {
-    let { guild: t, onAddGuild: d } = e,
-        u = i.useCallback(() => {
+let u = (e) => {
+    let { guild: t, onAddGuild: u } = e,
+        d = i.useCallback(() => {
             (0, l.ZDy)(async () => {
                 let { default: e } = await Promise.all([n.e('7654'), n.e('39725')]).then(n.bind(n, 560114));
                 return (n) => {
@@ -81,13 +81,13 @@ let d = (e) => {
                 className: c.emptySubtitle,
                 children: o.intl.string(o.t.WypE0t)
             }),
-            null != d
+            null != u
                 ? (0, r.jsx)(a.i, {
                       className: c.emptyCTA,
                       iconUrl: n(362827),
                       header: o.intl.string(o.t.hyK15u),
                       completed: !1,
-                      onClick: d
+                      onClick: u
                   })
                 : null,
             (0, r.jsx)(a.i, {
@@ -95,7 +95,7 @@ let d = (e) => {
                 iconUrl: n(538548),
                 header: o.intl.string(o.t.L4bwJy),
                 completed: !1,
-                onClick: u
+                onClick: d
             })
         ]
     });

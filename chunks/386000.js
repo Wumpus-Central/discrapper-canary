@@ -1,8 +1,8 @@
 n.d(t, { Z: () => p });
 var r = n(255367),
     i = n(73800),
-    a = n(906732),
-    o = n(628581),
+    o = n(906732),
+    a = n(628581),
     s = n(522651),
     l = n(8404),
     c = n(871499);
@@ -41,8 +41,8 @@ function f(e, t) {
         r,
         i = _(e, t);
     if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
@@ -51,17 +51,17 @@ function _(e, t) {
     var n,
         r,
         i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
 function p(e) {
     var { selfMute: t, serverMute: n, suppress: u, centerButton: _ = !1, awaitingRemote: p, onMouseEnter: h, onMouseLeave: m, onClick: g } = e,
         E = f(e, ['selfMute', 'serverMute', 'suppress', 'centerButton', 'awaitingRemote', 'onMouseEnter', 'onMouseLeave', 'onClick']);
-    let { parentAnalyticsLocation: b } = (0, a.ZP)(),
+    let { parentAnalyticsLocation: b } = (0, o.ZP)(),
         y = t || n || u,
         O = _ ? c.d : c.Z,
-        v = (0, o.Z)(t, n, u, p),
+        v = (0, a.Z)(t, n, u, p),
         { events: I, play: T, Component: S } = (0, l.b)(y);
     return (
         i.useEffect(() => () => T(), [T, y]),

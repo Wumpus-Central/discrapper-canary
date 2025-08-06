@@ -1,16 +1,16 @@
 var r = n(581079),
     i = /\.textClipping$/,
-    a = {
+    o = {
         'text/plain': !0,
         'text/html': !0,
         'text/rtf': !0
     },
-    o = 5000;
+    a = 5000;
 function s(e, t) {
-    if (!n.g.FileReader || (e.type && !(e.type in a))) return void t('');
+    if (!n.g.FileReader || (e.type && !(e.type in o))) return void t('');
     if ('' === e.type) {
-        var o = '';
-        (i.test(e.name) && (o = e.name.replace(i, '')), t(o));
+        var a = '';
+        (i.test(e.name) && (a = e.name.replace(i, '')), t(a));
         return;
     }
     var s = new FileReader();
@@ -28,7 +28,7 @@ e.exports = function (e, t) {
         r = [];
     e.forEach(function (i) {
         s(i, function (i) {
-            (n++, i && r.push(i.slice(0, o)), n == e.length && t(r.join('\r')));
+            (n++, i && r.push(i.slice(0, a)), n == e.length && t(r.join('\r')));
         });
     });
 };

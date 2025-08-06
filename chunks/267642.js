@@ -1,9 +1,9 @@
 (n.d(t, {
     A3: () => A,
     FZ: () => S,
-    Hl: () => J,
-    Je: () => w,
-    Jh: () => k,
+    Hl: () => $,
+    Je: () => R,
+    Jh: () => M,
     KK: () => z,
     Oe: () => T,
     Qi: () => H,
@@ -11,16 +11,16 @@
     _k: () => Z,
     _p: () => L,
     aq: () => G,
-    cP: () => R,
+    cP: () => P,
     e9: () => D,
-    ee: () => $,
-    f2: () => M,
+    ee: () => X,
+    f2: () => j,
     gZ: () => V,
     ge: () => x,
     ig: () => N,
     nL: () => W,
-    nW: () => P,
-    tb: () => j,
+    nW: () => w,
+    tb: () => k,
     tl: () => q,
     vx: () => U,
     y4: () => K,
@@ -34,8 +34,8 @@
 var r = n(392711),
     i = n.n(r);
 n(913527);
-var a = n(278074),
-    o = n(274136),
+var o = n(278074),
+    a = n(274136),
     s = n(179360),
     l = n(317169),
     c = n(151494),
@@ -71,15 +71,15 @@ let I = [E.Eu4.NONE, E.Eu4.TIER_1, E.Eu4.TIER_2, E.Eu4.TIER_3],
         var t;
         return e === E.Eu4.NONE ? E.Eu4.TIER_1 : null == (t = F.find((t) => t.tier === e)) ? void 0 : t.nextTier;
     },
-    A = (e, t) => (null != t && t.features.has(E.oNc.MORE_STICKERS) && e === E.Eu4.TIER_3 ? o.D.MAX_STICKER_SLOTS : y.$8[e]),
+    A = (e, t) => (null != t && t.features.has(E.oNc.MORE_STICKERS) && e === E.Eu4.TIER_3 ? a.D.MAX_STICKER_SLOTS : y.$8[e]),
     N = (e) => y.pH[e],
     C = (e, t) => (null != t && t.features.has(E.oNc.MORE_SOUNDBOARD) ? y.w1 : y._k[e]),
-    w = (e) => {
+    R = (e) => {
         if (e === E.Eu4.NONE) return y._k[e];
         let t = I[I.indexOf(e) - 1];
         return y._k[e] - y._k[t];
     },
-    R = (e) => [
+    P = (e) => [
         {
             tier: E.Eu4.TIER_1,
             title: O.intl.string(O.t['lK+WOT']),
@@ -102,7 +102,7 @@ let I = [E.Eu4.NONE, E.Eu4.TIER_1, E.Eu4.TIER_2, E.Eu4.TIER_3],
                 },
                 {
                     title: O.intl.formatToPlainString(O.t.NRuk5u, {
-                        soundCount: w(E.Eu4.TIER_1),
+                        soundCount: R(E.Eu4.TIER_1),
                         totalSoundCount: C(E.Eu4.TIER_1)
                     }),
                     description: O.intl.string(O.t.Oq7OVl),
@@ -152,7 +152,7 @@ let I = [E.Eu4.NONE, E.Eu4.TIER_1, E.Eu4.TIER_2, E.Eu4.TIER_3],
                 },
                 {
                     title: O.intl.formatToPlainString(O.t.NRuk5u, {
-                        soundCount: w(E.Eu4.TIER_2),
+                        soundCount: R(E.Eu4.TIER_2),
                         totalSoundCount: C(E.Eu4.TIER_2)
                     }),
                     description: O.intl.string(O.t.pEYlPT),
@@ -214,7 +214,7 @@ let I = [E.Eu4.NONE, E.Eu4.TIER_1, E.Eu4.TIER_2, E.Eu4.TIER_3],
                 },
                 {
                     title: O.intl.formatToPlainString(O.t.NRuk5u, {
-                        soundCount: w(E.Eu4.TIER_3),
+                        soundCount: R(E.Eu4.TIER_3),
                         totalSoundCount: C(E.Eu4.TIER_3)
                     }),
                     description: O.intl.string(O.t['8omJSU']),
@@ -250,7 +250,7 @@ let I = [E.Eu4.NONE, E.Eu4.TIER_1, E.Eu4.TIER_2, E.Eu4.TIER_3],
             ].filter(p.lm)
         }
     ];
-function P(e) {
+function w(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         { useLevels: n = !0 } = t;
     switch (e) {
@@ -282,16 +282,16 @@ function D(e) {
 }
 let L = i().memoize((e) => (y.HO[E.Eu4.TIER_1].features.includes(e) ? E.Eu4.TIER_1 : y.HO[E.Eu4.TIER_2].features.includes(e) ? E.Eu4.TIER_2 : y.HO[E.Eu4.TIER_3].features.includes(e) ? E.Eu4.TIER_3 : null)),
     x = (e) => (e === E.Eu4.NONE ? E.Qqv.NONE : e === E.Eu4.TIER_1 ? E.Qqv.TIER_1 : e === E.Eu4.TIER_2 ? E.Qqv.TIER_2 : e === E.Eu4.TIER_3 ? E.Qqv.TIER_3 : null);
-function k(e) {
+function M(e) {
     var t;
     let n = null == (t = u.Z.getGuild(e)) ? void 0 : t.premiumTier;
     return null != n ? n : E.Eu4.NONE;
 }
-function j(e, t) {
+function k(e, t) {
     return null == t || (null != e && e >= t);
 }
-function M(e, t) {
-    return j(e.premiumTier, t);
+function j(e, t) {
+    return k(e.premiumTier, t);
 }
 function U(e) {
     return i()
@@ -304,12 +304,12 @@ function G(e) {
     d.Z.hasFetched || d.Z.isFetching || (0, s.X8)();
     let r = U(d.Z.boostSlots),
         i = null == n ? void 0 : n.isPausedOrPausePending,
-        o = r.length > 0,
+        a = r.length > 0,
         l = O.intl.format(O.t.kJ1AZG, { helpCenterLink: h.Z.getArticleURL(E.BhN.FRACTIONAL_PREMIUM_ABOUT) }),
-        c = (0, a.EQ)({
+        c = (0, o.EQ)({
             isPausedOrPausePending: i,
             isBoostManagementDisabledForFractionalPremium: t,
-            canApplyBoosts: o
+            canApplyBoosts: a
         })
             .with(
                 {
@@ -360,10 +360,10 @@ function B(e) {
 function Z(e, t) {
     var n;
     if ((null == (n = u.Z.getGuild(t)) ? void 0 : n.features.has(E.oNc.PREMIUM_TIER_3_OVERRIDE)) === !0) return 0;
-    let r = k(t),
+    let r = M(t),
         i = E.oCV[r],
-        a = e.filter((e) => null != e.endsAt);
-    return i - (e.length - a.length);
+        o = e.filter((e) => null != e.endsAt);
+    return i - (e.length - o.length);
 }
 let F = [
     {
@@ -393,12 +393,12 @@ function V(e, t) {
                 message: 'Negative index while checking grace period ending date.',
                 data: {
                     subscriptionLength: e.length,
-                    subscriptionsNeededForPremiumTier: E.oCV[k(t)],
+                    subscriptionsNeededForPremiumTier: E.oCV[M(t)],
                     endingSubscriptionLength: r.length
                 }
             });
-        let a = r[Math.max(i, 0)];
-        return null == a ? void 0 : a.endsAt;
+        let o = r[Math.max(i, 0)];
+        return null == o ? void 0 : o.endsAt;
     }
     return null;
 }
@@ -407,9 +407,9 @@ function H(e, t) {
         r = I.indexOf(t);
     if (-1 === r) return 0;
     let i = I[r - 1],
-        a = null != i ? A(i) : 0,
-        o = A(t);
-    return Math.max(0, n - e.slice(a, o).length);
+        o = null != i ? A(i) : 0,
+        a = A(t);
+    return Math.max(0, n - e.slice(o, a).length);
 }
 function Y(e, t, n) {
     return -1 === I.indexOf(n) ? 0 : Math.max(0, W(e) - t.length);
@@ -432,30 +432,30 @@ function q(e) {
     var t;
     return (null == (t = e.subscription) ? void 0 : t.status) === E.O0b.CANCELED || e.canceled;
 }
-function $(e) {
+function X(e) {
     var t;
     return null != (t = T.find((t) => e >= E.oCV[t])) ? t : E.Eu4.NONE;
 }
-function X(e) {
+function Q(e) {
     var t;
     return null != (t = I.find((t) => e < E.oCV[t])) ? t : E.Eu4.TIER_3;
 }
-let Q = {
+let J = {
     [E.Eu4.NONE]: 0,
     [E.Eu4.TIER_1]: 1 / 3,
     [E.Eu4.TIER_2]: 2 / 3,
     [E.Eu4.TIER_3]: 1
 };
-function J(e) {
+function $(e) {
     let t = (0, c.I)(e.id),
-        n = $(t),
-        r = X(t),
+        n = X(t),
+        r = Q(t),
         i = E.oCV[n],
-        a = (t - i) / (E.oCV[r] - i),
-        o = Q[n],
-        s = Q[r];
+        o = (t - i) / (E.oCV[r] - i),
+        a = J[n],
+        s = J[r];
     return {
-        fillFactor: n === E.Eu4.TIER_3 ? 1 : a * (s - o) + o,
+        fillFactor: n === E.Eu4.TIER_3 ? 1 : o * (s - a) + a,
         totalAvailableBoostsCount: t
     };
 }

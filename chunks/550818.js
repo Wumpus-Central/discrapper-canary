@@ -6,19 +6,19 @@ var r = n(255367),
     s = n(481060),
     o = n(410030),
     c = n(100527),
-    d = n(906732),
-    u = n(699516),
+    u = n(906732),
+    d = n(699516),
     h = n(5192),
     p = n(785717),
     f = n(221292),
     g = n(687158),
     m = n(316027),
     b = n(502762),
-    _ = n(848780),
-    y = n(907179),
+    y = n(848780),
+    x = n(907179),
     j = n(228168),
-    O = n(388032),
-    x = n(443773),
+    _ = n(388032),
+    O = n(443773),
     v = n(268293);
 function C(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -47,67 +47,67 @@ function C(e) {
 }
 function E(e) {
     let { user: t, channel: n, onHide: E } = e,
-        Z = (0, g.ZP)(t.id),
-        I = (0, o.ZP)(),
-        S = (0, a.e7)([u.Z], () => u.Z.isBlocked(t.id)),
-        { analyticsLocations: P } = (0, d.ZP)(S ? c.Z.BLOCKED_PROFILE_PANEL : c.Z.IGNORED_PROFILE_PANEL),
+        S = (0, g.ZP)(t.id),
+        Z = (0, o.ZP)(),
+        I = (0, a.e7)([d.Z], () => d.Z.isBlocked(t.id)),
+        { analyticsLocations: P } = (0, u.ZP)(I ? c.Z.BLOCKED_PROFILE_PANEL : c.Z.IGNORED_PROFILE_PANEL),
         T = (0, p.ZB)({
             layout: 'SIDEBAR',
             userId: t.id,
             channelId: n.id
         }),
         N = i.useRef(null);
-    return (0, r.jsx)(d.Gt, {
+    return (0, r.jsx)(u.Gt, {
         value: P,
         children: (0, r.jsx)(p.Mt, {
             value: T,
-            fetchStartedAt: null == Z ? void 0 : Z.fetchStartedAt,
-            fetchEndedAt: null == Z ? void 0 : Z.fetchEndedAt,
-            isLoaded: null == Z ? void 0 : Z.isLoaded,
+            fetchStartedAt: null == S ? void 0 : S.fetchStartedAt,
+            fetchEndedAt: null == S ? void 0 : S.fetchEndedAt,
+            isLoaded: null == S ? void 0 : S.isLoaded,
             children: (0, r.jsx)(b.Z, {
                 ref: N,
                 user: t,
-                displayProfile: Z,
+                displayProfile: S,
                 themeType: j.lY.SIDEBAR,
-                themeOverride: I,
+                themeOverride: Z,
                 children: (0, r.jsx)(l.u2, {
                     children: (0, r.jsxs)('div', {
-                        className: x.container,
+                        className: O.container,
                         children: [
                             (0, r.jsx)('img', {
                                 alt: '',
                                 src: v,
-                                className: x.preview,
+                                className: O.preview,
                                 'aria-hidden': !0
                             }),
                             (0, r.jsxs)('div', {
-                                className: x.body,
+                                className: O.body,
                                 children: [
                                     (0, r.jsxs)('div', {
-                                        className: x.headerContainer,
+                                        className: O.headerContainer,
                                         children: [
                                             (0, r.jsx)(m.Z, { user: t }),
                                             (0, r.jsx)(s.X6q, {
                                                 variant: 'heading-lg/bold',
-                                                children: O.intl.string(O.t.b33pLC)
+                                                children: _.intl.string(_.t.b33pLC)
                                             }),
                                             (0, r.jsx)(s.Text, {
                                                 variant: 'text-sm/medium',
-                                                children: O.intl.format(S ? O.t['8F+WNz'] : O.t['/cZp5u'], { username: h.ZP.getName(n.guild_id, n.id, t) })
+                                                children: _.intl.format(I ? _.t['8F+WNz'] : _.t['/cZp5u'], { username: h.ZP.getName(n.guild_id, n.id, t) })
                                             })
                                         ]
                                     }),
                                     (0, r.jsxs)(s.Kqy, {
                                         align: 'center',
                                         children: [
-                                            (0, r.jsx)(y.Z, {
-                                                isBlocked: S,
+                                            (0, r.jsx)(x.Z, {
+                                                isBlocked: I,
                                                 onClick: () => {
                                                     (E(),
                                                         (0, f.pQ)(
                                                             C(
                                                                 {
-                                                                    action: S ? 'VIEW_BLOCKED_PROFILE' : 'VIEW_IGNORED_PROFILE',
+                                                                    action: I ? 'VIEW_BLOCKED_PROFILE' : 'VIEW_IGNORED_PROFILE',
                                                                     analyticsLocations: P
                                                                 },
                                                                 T
@@ -115,7 +115,7 @@ function E(e) {
                                                         ));
                                                 }
                                             }),
-                                            (0, r.jsx)(_.Z, {
+                                            (0, r.jsx)(y.Z, {
                                                 userId: t.id,
                                                 onClick: () => {
                                                     (E(),

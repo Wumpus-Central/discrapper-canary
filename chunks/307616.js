@@ -1,5 +1,5 @@
 (n.d(t, {
-    n: () => R,
+    n: () => P,
     v: () => N
 }),
     n(388685),
@@ -8,8 +8,8 @@
     n(482853));
 var r = n(255367),
     i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(392711),
     l = n.n(s),
     c = n(215569),
@@ -80,12 +80,12 @@ let S = [p.ZP, h.ZP];
 class A extends i.PureComponent {
     render() {
         let { render: e, LayerComponent: t, isTopModal: n, instant: i } = this.props,
-            a = i ? E.Dv.ENTERED : this.state.transitionState;
+            o = i ? E.Dv.ENTERED : this.state.transitionState;
         return (0, r.jsx)(t, {
             children: (0, r.jsx)('div', {
-                className: o()(y.layer, !n && y.inactive),
+                className: a()(y.layer, !n && y.inactive),
                 children: e({
-                    transitionState: a,
+                    transitionState: o,
                     onClose: this.close
                 })
             })
@@ -141,28 +141,28 @@ function C(e) {
         n = !1;
     for (let i = e.length - 1; i >= 0; i--) {
         var r;
-        let a = e[i],
-            o = null == (r = e[i + 1]) ? void 0 : r.stackingBehavior,
-            s = n || 'replace' === o;
-        (t.unshift(T(v({}, a), { isVisible: !s })), 'replaceAll' === a.stackingBehavior && (n = !0));
+        let o = e[i],
+            a = null == (r = e[i + 1]) ? void 0 : r.stackingBehavior,
+            s = n || 'replace' === a;
+        (t.unshift(T(v({}, o), { isVisible: !s })), 'replaceAll' === o.stackingBehavior && (n = !0));
     }
     return t;
 }
-let w = [];
-function R() {
+let R = [];
+function P() {
     let e = N(),
-        t = (0, g.s9)((t) => (void 0 !== t[e] ? t[e] : w)),
+        t = (0, g.s9)((t) => (void 0 !== t[e] ? t[e] : R)),
         n = i.useMemo(() => C(t), [t]),
-        a = (0, _.q)('Modals'),
-        o = i.useRef(void 0);
+        o = (0, _.q)('Modals'),
+        a = i.useRef(void 0);
     i.useLayoutEffect(() => {
-        o.current = t[t.length - 1];
+        a.current = t[t.length - 1];
     }, [t]);
     let s = t.length > 0;
     i.useLayoutEffect(() => {
         if (!s) return;
         let e = () => {
-            let e = o.current;
+            let e = a.current;
             null != e && null != e.onCloseRequest && e.onCloseRequest();
         };
         return (
@@ -187,15 +187,15 @@ function R() {
         children: [
             S.map((e, n) => {
                 var i;
-                let o = l().findLast(t, (t) => t.Layer === e || (null == t.Layer && e === p.ZP)),
-                    s = null != (i = null == o ? void 0 : o.backdropStyle) ? i : d.fCB.DARK;
-                return a && (0, d.OLG)(s)
+                let a = l().findLast(t, (t) => t.Layer === e || (null == t.Layer && e === p.ZP)),
+                    s = null != (i = null == a ? void 0 : a.backdropStyle) ? i : d.fCB.DARK;
+                return o && (0, d.OLG)(s)
                     ? (0, r.jsx)(
                           e,
                           {
                               children: (0, r.jsx)(d.ZMr, {
                                   variant: s === d.fCB.LIGHTBOX || s === d.fCB.IMMERSIVE ? 'lightbox' : 'default',
-                                  animationVariant: (null == o ? void 0 : o.instant) ? 'instant' : 'default',
+                                  animationVariant: (null == a ? void 0 : a.instant) ? 'instant' : 'default',
                                   isVisible: E[n],
                                   onClick: f
                               })
@@ -209,21 +209,21 @@ function R() {
                               backdropStyle: s,
                               onClose: f,
                               LayerComponent: e,
-                              backdropInstant: null == o ? void 0 : o.instant
+                              backdropInstant: null == a ? void 0 : a.instant
                           },
                           'layer-'.concat(n)
                       );
             }),
             n.map((e, t) => {
-                let { key: i, Layer: a, render: o, instant: s, isVisible: l } = e;
+                let { key: i, Layer: o, render: a, instant: s, isVisible: l } = e;
                 return (0, r.jsx)(
                     A,
                     {
                         modalKey: i,
-                        LayerComponent: null != a ? a : p.ZP,
+                        LayerComponent: null != o ? o : p.ZP,
                         isVisible: l,
                         isTopModal: t === n.length - 1,
-                        render: o,
+                        render: a,
                         closeModal: h,
                         instant: s
                     },

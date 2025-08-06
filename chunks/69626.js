@@ -1,12 +1,12 @@
 n.d(t, {
-    Wf: () => w,
-    ZP: () => P,
-    wz: () => R
+    Wf: () => R,
+    ZP: () => w,
+    wz: () => P
 });
 var r = n(255367),
     i = n(73800),
-    a = n(442837),
-    o = n(755721),
+    o = n(442837),
+    a = n(755721),
     s = n(481060),
     l = n(555573),
     c = n(10718),
@@ -76,20 +76,20 @@ function N(e, t) {
         e
     );
 }
-function C(e, t, n, i, a) {
+function C(e, t, n, i, o) {
     if (null == e) return;
     let d = () => {
         let r = p.Z.getChannel(e);
         if (null == r) return;
-        let { command: o, application: s } = c.Xq(
+        let { command: a, application: s } = c.Xq(
             {
                 channel: r,
                 type: 'channel'
             },
             n,
-            a
+            o
         );
-        if (null != o && o.untranslatedName === t) {
+        if (null != a && a.untranslatedName === t) {
             var d, f;
             E.S.dispatch(b.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: e });
             let t =
@@ -109,7 +109,7 @@ function C(e, t, n, i, a) {
             }),
                 l.Po({
                     channelId: e,
-                    command: o,
+                    command: a,
                     section: t,
                     location: i
                 }));
@@ -126,7 +126,7 @@ function C(e, t, n, i, a) {
                               confirmText: v.intl.string(v.t.VkKicX),
                               cancelText: v.intl.string(v.t['ETE/oK']),
                               onConfirm: () => d(),
-                              confirmButtonColor: o.zx.Colors.BRAND,
+                              confirmButtonColor: a.zx.Colors.BRAND,
                               onCloseCallback: () => {
                                   E.S.dispatch(b.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: e });
                               }
@@ -144,10 +144,10 @@ function C(e, t, n, i, a) {
           )
         : d();
 }
-function w(e) {
+function R(e) {
     var t;
-    let { node: n, stateKey: o, children: s } = e,
-        l = (0, a.e7)(
+    let { node: n, stateKey: a, children: s } = e,
+        l = (0, o.e7)(
             [p.Z, g.Z],
             () => {
                 var e;
@@ -155,7 +155,7 @@ function w(e) {
             },
             [n.channelId]
         ),
-        { hasSendMessagePerm: h, hasUseAppCommandsPerm: E } = (0, a.cj)([m.Z], () => ({
+        { hasSendMessagePerm: h, hasUseAppCommandsPerm: E } = (0, o.cj)([m.Z], () => ({
             hasSendMessagePerm: m.Z.can(b.Plq.SEND_MESSAGES, l),
             hasUseAppCommandsPerm: m.Z.can(b.Plq.USE_APPLICATION_COMMANDS, l)
         })),
@@ -189,15 +189,15 @@ function w(e) {
                   onClick: A,
                   children: [O.GI, s]
               },
-              o
+              a
           )
         : (0, r.jsxs)('span', {
               children: [O.GI, s]
           });
 }
-function R(e) {
+function P(e) {
     let { commandId: t, commandName: n, commandDescription: i, applicationId: l, onClick: c } = e,
-        d = (0, a.e7)([g.Z], () => g.Z.getChannelId()),
+        d = (0, o.e7)([g.Z], () => g.Z.getChannelId()),
         f = (e) => {
             (null == e || e.stopPropagation(), C(d, n, t, u.Vh.POPULAR_COMMANDS, l), null == c || c(t));
         };
@@ -207,9 +207,9 @@ function R(e) {
         tooltipContentClassName: I.tooltip,
         children: (e) => {
             let { onMouseEnter: t, onMouseLeave: i } = e;
-            return (0, r.jsxs)(o.zx, {
-                color: o.Tt.PRIMARY,
-                size: o.Ph.ICON,
+            return (0, r.jsxs)(a.zx, {
+                color: a.Tt.PRIMARY,
+                size: a.Ph.ICON,
                 onClick: f,
                 onMouseEnter: t,
                 onMouseLeave: i,
@@ -218,10 +218,10 @@ function R(e) {
         }
     });
 }
-function P(e) {
+function w(e) {
     return {
         react: (e, t, n) =>
-            (0, r.jsx)(w, {
+            (0, r.jsx)(R, {
                 node: e,
                 stateKey: n.key,
                 children: t(e.content, n)

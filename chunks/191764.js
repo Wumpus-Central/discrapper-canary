@@ -2,8 +2,8 @@ n.d(t, { Z: () => p });
 var r = n(255367);
 n(73800);
 var i = n(442837),
-    a = n(287734),
-    o = n(906732),
+    o = n(287734),
+    a = n(906732),
     s = n(592125),
     l = n(19780),
     c = n(979651),
@@ -13,7 +13,7 @@ var i = n(442837),
     _ = n(388032);
 function p(e) {
     let { user: t, activity: n, onAction: p, onClose: h } = e,
-        { newestAnalyticsLocation: m } = (0, o.ZP)(),
+        { newestAnalyticsLocation: m } = (0, a.ZP)(),
         g = (0, i.e7)([c.Z, s.Z], () => {
             var e;
             return s.Z.getChannel(null == (e = c.Z.getVoiceStateForUser(t.id)) ? void 0 : e.channelId);
@@ -28,7 +28,7 @@ function p(e) {
               onClick: (e) => {
                   (e.stopPropagation(),
                       null == p || p({ action: 'PRESS_HANG_STATUS_BUTTON' }),
-                      a.default.selectVoiceChannel(g.id),
+                      o.default.selectVoiceChannel(g.id),
                       u.default.track(f.rMx.HANG_STATUS_CTA_CLICKED, {
                           channel_id: g.id,
                           guild_id: g.guild_id,

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => C });
 var r = n(255367),
     i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(442837),
     l = n(481060),
     c = n(239091),
@@ -71,7 +71,7 @@ function S(e, t) {
     );
 }
 function A(e) {
-    var t, a, f;
+    var t, o, f;
     let { userId: E, channel: b } = e,
         y = i.useRef(null),
         { analyticsLocations: v } = (0, d.ZP)(u.Z.USERNAME),
@@ -93,12 +93,12 @@ function A(e) {
                 );
         });
     }
-    let w = null != (f = null != (a = null == A ? void 0 : A.nick) ? a : g.ZP.getName(T)) ? f : '???',
-        R = null == A ? void 0 : A.colorString;
+    let R = null != (f = null != (o = null == A ? void 0 : A.nick) ? o : g.ZP.getName(T)) ? f : '???',
+        P = null == A ? void 0 : A.colorString;
     return null == T
         ? (0, r.jsx)('span', {
-              className: o()(O.threadCreatorName, O.unknownCreatorName),
-              children: w
+              className: a()(O.threadCreatorName, O.unknownCreatorName),
+              children: R
           })
         : (0, r.jsx)(d.Gt, {
               value: v,
@@ -118,8 +118,8 @@ function A(e) {
                               className: O.threadCreatorName,
                               onContextMenu: C,
                               children: (0, r.jsx)(l.PUh, {
-                                  name: w,
-                                  colorString: null != R ? R : null,
+                                  name: R,
+                                  colorString: null != P ? P : null,
                                   colorStrings: N
                               })
                           })

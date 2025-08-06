@@ -1,8 +1,8 @@
 n.d(t, { Z: () => f });
 var r,
     i = n(442837),
-    a = n(570140);
-function o(e, t, n) {
+    o = n(570140);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -51,8 +51,8 @@ class d extends (r = i.ZP.Store) {
         return s[e];
     }
 }
-o(d, 'displayName', 'ChannelFollowerStatsStore');
-let f = new d(a.Z, {
+a(d, 'displayName', 'ChannelFollowerStatsStore');
+let f = new d(o.Z, {
     CONNECTION_OPEN: l,
     CHANNEL_FOLLOWER_STATS_FETCH_SUCCESS: c,
     CHANNEL_FOLLOWER_STATS_FETCH_FAILURE: u

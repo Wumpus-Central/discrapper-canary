@@ -5,8 +5,8 @@
     n(388685));
 var r = n(255367),
     i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(793030),
     l = n(446673),
     c = n(146187),
@@ -52,7 +52,7 @@ function m(e) {
     });
 }
 function g(e) {
-    let { leading: t, trailing: n, hasGradient: i, children: a } = e;
+    let { leading: t, trailing: n, hasGradient: i, children: o } = e;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             null != t &&
@@ -60,7 +60,7 @@ function g(e) {
                     className: _.headerLeading,
                     children: t
                 }),
-            a,
+            o,
             (0, r.jsxs)('div', {
                 className: _.headerTrailing,
                 children: [null != n && n, (0, r.jsx)(m, { shouldColorMix: i })]
@@ -69,7 +69,7 @@ function g(e) {
     });
 }
 function E(e) {
-    let { leading: t, trailing: n, hasGradient: a, children: s } = e,
+    let { leading: t, trailing: n, hasGradient: o, children: s } = e,
         [l, c] = i.useState(24),
         [u, d] = i.useState(24),
         f = i.useRef(null),
@@ -95,7 +95,7 @@ function E(e) {
             children: [
                 (0, r.jsx)('div', {
                     ref: f,
-                    className: o()(_.headerLeading, _.headerLeadingAbsolute),
+                    className: a()(_.headerLeading, _.headerLeadingAbsolute),
                     children: t
                 }),
                 (0, r.jsx)('div', {
@@ -115,15 +115,15 @@ function E(e) {
                 }),
                 (0, r.jsxs)('div', {
                     ref: p,
-                    className: o()(_.headerTrailing, _.headerTrailingAbsolute),
-                    children: [null != n && n, (0, r.jsx)(m, { shouldColorMix: a })]
+                    className: a()(_.headerTrailing, _.headerTrailingAbsolute),
+                    children: [null != n && n, (0, r.jsx)(m, { shouldColorMix: o })]
                 })
             ]
         })
     );
 }
 function b(e) {
-    let { gradientColor: t, graphic: n, badge: i, title: a, titleTextVariant: c, subtitle: p, alignCenter: m = !1, leading: b, trailing: y } = e,
+    let { gradientColor: t, graphic: n, badge: i, title: o, titleTextVariant: c, subtitle: p, alignCenter: m = !1, leading: b, trailing: y } = e,
         { headingId: O } = (0, f.v)(),
         v = null != t,
         I = m ? E : g,
@@ -137,7 +137,7 @@ function b(e) {
             id: O,
             variant: null != c ? c : 'heading-lg/semibold',
             color: 'text-primary',
-            children: a
+            children: o
         }),
         A = (0, r.jsx)(s.xv, {
             variant: 'text-md/normal',
@@ -145,7 +145,7 @@ function b(e) {
             children: p
         }),
         N = (0, r.jsx)('header', {
-            className: o()(_.section, _.header, { [_.headerCentered]: m }),
+            className: a()(_.section, _.header, { [_.headerCentered]: m }),
             children: (0, r.jsxs)(s.Kq, {
                 gap: 8,
                 children: [
@@ -158,12 +158,12 @@ function b(e) {
                             children: (0, r.jsxs)(s.Kq, {
                                 gap: 8,
                                 className: _.headerMain,
-                                children: [T, null == n && null != a && S]
+                                children: [T, null == n && null != o && S]
                             })
                         })
                     }),
                     null != i && (0, r.jsx)(l.C, { badge: i }),
-                    null != n && null != a && S,
+                    null != n && null != o && S,
                     null != p && A
                 ]
             })

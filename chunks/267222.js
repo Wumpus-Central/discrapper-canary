@@ -27,8 +27,8 @@ function i(e, t, n) {
         e
     );
 }
-var a = n(879154),
-    o = n(214788),
+var o = n(879154),
+    a = n(214788),
     s = n(370260),
     l = n(653192),
     c = n(330296),
@@ -45,8 +45,8 @@ var a = n(879154),
         };
     },
     f = function (e, t, n, i) {
-        if (e instanceof a) return void n.push(d(e, t));
-        e instanceof o || u(!1);
+        if (e instanceof o) return void n.push(d(e, t));
+        e instanceof a || u(!1);
         var s = e.getParentKey(),
             l = (i[e.getKey()] = r({}, d(e, t), { children: [] }));
         if (s) return void i[s].children.push(l);
@@ -56,8 +56,8 @@ var a = n(879154),
         var n = t.entityMap,
             r = [],
             i = {},
-            a = {},
-            o = 0;
+            o = {},
+            a = 0;
         return (
             e.getBlockMap().forEach(function (e) {
                 (e.findEntityRanges(
@@ -67,7 +67,7 @@ var a = n(879154),
                     function (t) {
                         var r = e.getEntityAt(t),
                             i = s.stringify(r);
-                        !a[i] && ((a[i] = r), (n[i] = ''.concat(o)), o++);
+                        !o[i] && ((o[i] = r), (n[i] = ''.concat(a)), a++);
                     }
                 ),
                     f(e, n, r, i));

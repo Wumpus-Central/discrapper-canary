@@ -1,8 +1,8 @@
 (n.d(t, { q: () => S }), n(388685));
 var r = n(255367),
     i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(481060),
     l = n(987209),
     c = n(321051),
@@ -73,8 +73,8 @@ function I(e, t) {
         r,
         i = T(e, t);
     if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
@@ -83,33 +83,33 @@ function T(e, t) {
     var n,
         r,
         i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
 let S = (e) => {
-    let { isShopGift: t, className: n, optionsContainerClassName: a } = e,
+    let { isShopGift: t, className: n, optionsContainerClassName: o } = e,
         { giftRecipient: b, selectedGiftStyle: O, setSelectedGiftStyle: T, emojiConfetti: S, soundEffect: A, setEmojiConfetti: N, setSoundEffect: C } = (0, l.wD)(),
-        [w, R] = i.useState(!1),
-        P = i.useRef(null),
+        [R, P] = i.useState(!1),
+        w = i.useRef(null),
         D = (0, s.arW)({ orientation: 'horizontal' }),
         { ref: L } = D,
         x = I(D, ['ref']),
-        k = (0, u.MY)(b, t),
-        j = k === u.xr.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD,
-        M = k !== u.xr.DEFAULT,
+        M = (0, u.MY)(b, t),
+        k = M === u.xr.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD,
+        j = M !== u.xr.DEFAULT,
         U = (0, f.rK)(),
         { enabled: G } = f.ZP.useExperiment({ location: 'premiumGiftSelect_GiftAnimationOptions' }, { autoTrackExposure: U }),
         B = null;
-    M && (B = U && G ? m.kJ : m.QI);
+    j && (B = U && G ? m.kJ : m.QI);
     let Z = (e) => {
         null != C && C(null == e ? void 0 : e);
     };
     return (0, r.jsxs)('div', {
         children: [
-            M &&
+            j &&
                 (0, r.jsxs)('div', {
-                    className: o()(E.giftMainAnimation, n),
+                    className: a()(E.giftMainAnimation, n),
                     children: [
                         null != O
                             ? (0, r.jsx)(_.Z, {
@@ -120,7 +120,7 @@ let S = (e) => {
                                   className: E.animation
                               })
                             : (0, r.jsx)(s.$jN, { className: E.spinner }),
-                        j &&
+                        k &&
                             (0, r.jsxs)('div', {
                                 className: E.soundEmojiContainer,
                                 children: [
@@ -147,12 +147,12 @@ let S = (e) => {
                 v(
                     y(
                         {
-                            tabIndex: null != O || w ? void 0 : 0,
+                            tabIndex: null != O || R ? void 0 : 0,
                             onFocus: (e) => {
                                 var t;
-                                e.target === e.currentTarget && (null == (t = P.current) || t.focus());
+                                e.target === e.currentTarget && (null == (t = w.current) || t.focus());
                             },
-                            className: o()(E.giftBoxOptionContainer, a),
+                            className: a()(E.giftBoxOptionContainer, o),
                             'aria-label': g.intl.string(g.t.v54NrK),
                             ref: L
                         },
@@ -168,9 +168,9 @@ let S = (e) => {
                                         isSelected: O === e,
                                         giftStyle: e,
                                         setSelectedGiftStyle: T,
-                                        ref: 0 === t ? P : null,
-                                        onFocus: () => R(!0),
-                                        onBlur: () => R(!1)
+                                        ref: 0 === t ? w : null,
+                                        onFocus: () => P(!0),
+                                        onBlur: () => P(!1)
                                     },
                                     e
                                 )

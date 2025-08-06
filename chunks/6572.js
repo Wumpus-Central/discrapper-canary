@@ -2,8 +2,8 @@
 var r = n(255367);
 n(73800);
 var i = n(120356),
-    a = n.n(i),
-    o = n(442837),
+    o = n.n(i),
+    a = n(442837),
     s = n(963838),
     l = n(37091),
     c = n(388032),
@@ -11,7 +11,7 @@ var i = n(120356),
 function d(e) {
     let t,
         { channelId: n, userId: i } = e,
-        [d, f] = (0, o.Wu)([l.Z], () => [l.Z.getWaitingHighFive(n, i), l.Z.getCompletedHighFive(n, i)]);
+        [d, f] = (0, a.Wu)([l.Z], () => [l.Z.getWaitingHighFive(n, i), l.Z.getCompletedHighFive(n, i)]);
     if (null != f)
         t = (0, r.jsxs)(r.Fragment, {
             children: [
@@ -22,7 +22,7 @@ function d(e) {
                         id: null,
                         animated: !1
                     }),
-                    className: a()(u.completeLeft, u.highFive)
+                    className: o()(u.completeLeft, u.highFive)
                 }),
                 (0, r.jsx)('img', {
                     alt: c.intl.string(c.t.W6HwU1),
@@ -31,7 +31,7 @@ function d(e) {
                         id: null,
                         animated: !1
                     }),
-                    className: a()(u.completeRight, u.highFive)
+                    className: o()(u.completeRight, u.highFive)
                 })
             ]
         });
@@ -44,7 +44,7 @@ function d(e) {
                 id: null,
                 animated: !1
             }),
-            className: a()(u.waiting, u.highFive)
+            className: o()(u.waiting, u.highFive)
         });
     }
     return (0, r.jsx)('div', {

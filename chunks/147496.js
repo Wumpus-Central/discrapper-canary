@@ -2,8 +2,8 @@
 var r = n(255367);
 n(73800);
 var i = n(752843),
-    a = n(442837),
-    o = n(481060),
+    o = n(442837),
+    a = n(481060),
     s = n(55563),
     l = n(551428),
     c = n(73346),
@@ -17,15 +17,15 @@ var i = n(752843),
 function g(e) {
     var t, n, g, E;
     let { onClose: b, transitionState: y, skuId: O, appId: v, onHeaderTitleClick: I } = e,
-        T = (0, a.e7)([l.Z], () => l.Z.getForSKU(O), [O]),
-        S = (0, a.e7)([s.Z], () => s.Z.get(O), [O]),
+        T = (0, o.e7)([l.Z], () => l.Z.getForSKU(O), [O]),
+        S = (0, o.e7)([s.Z], () => s.Z.get(O), [O]),
         A = (0, d.M)(O);
     if (null == S) return null;
     let N = null != (n = S.name) ? n : '',
         C = null != (g = null == T || null == (t = T.description) ? void 0 : t.trim()) ? g : void 0,
-        w = (null == T ? void 0 : T.headerBackground) != null && null != (E = u.Z.toURLSafe((0, c._W)(v, T.headerBackground, 256))) ? E : void 0,
-        R = S.type === h.epS.DURABLE && A,
-        P = S.type === h.epS.DURABLE ? (R ? m.intl.string(m.t.bm82mp) : m.intl.string(m.t['6gprwc'])) : void 0,
+        R = (null == T ? void 0 : T.headerBackground) != null && null != (E = u.Z.toURLSafe((0, c._W)(v, T.headerBackground, 256))) ? E : void 0,
+        P = S.type === h.epS.DURABLE && A,
+        w = S.type === h.epS.DURABLE ? (P ? m.intl.string(m.t.bm82mp) : m.intl.string(m.t['6gprwc'])) : void 0,
         { price: D } = S;
     return null == D
         ? null
@@ -44,9 +44,9 @@ function g(e) {
                   skuId: S.id,
                   title: N,
                   description: C,
-                  imgSrc: w,
-                  tag: null != P ? (0, r.jsx)(i.V, { text: P }) : void 0,
-                  FallbackIcon: o.Prq
+                  imgSrc: R,
+                  tag: null != w ? (0, r.jsx)(i.V, { text: w }) : void 0,
+                  FallbackIcon: a.Prq
               })
           });
 }

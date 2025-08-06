@@ -2,8 +2,8 @@ n.d(t, { Z: () => m });
 var r = n(255367);
 n(73800);
 var i = n(755721),
-    a = n(481060),
-    o = n(620662),
+    o = n(481060),
+    a = n(620662),
     s = n(503438),
     l = n(829820),
     c = n(395361),
@@ -19,7 +19,7 @@ function m(e) {
         { themeType: O } = (0, u.z)(),
         v = (0, l.Ih)(b, E),
         I = (0, l.Fe)(b, E);
-    if (!(0, s.Z)(b) || (!(0, o.Z)(b, _.xjy.PLAY) && !(0, o.Z)(b, _.xjy.SYNC))) return null;
+    if (!(0, s.Z)(b) || (!(0, a.Z)(b, _.xjy.PLAY) && !(0, a.Z)(b, _.xjy.SYNC))) return null;
     let T = (e) => {
             (null == e || e.stopPropagation(), null == y || y({ action: 'PRESS_PLAY_ON_SPOTIFY_BUTTON' }), v.onClick());
         },
@@ -29,7 +29,7 @@ function m(e) {
     return O === f.lY.MODAL_V2
         ? (0, r.jsxs)(r.Fragment, {
               children: [
-                  (0, r.jsx)(a.DY3, {
+                  (0, r.jsx)(o.DY3, {
                       text: I.tooltip,
                       children: (0, r.jsx)(d.tG, {
                           text: null != (t = I.label) ? t : p.intl.string(p.t.eU3inJ),
@@ -40,7 +40,7 @@ function m(e) {
                           onClick: S
                       })
                   }),
-                  (0, r.jsx)(a.DY3, {
+                  (0, r.jsx)(o.DY3, {
                       text: v.tooltip,
                       children: (0, r.jsx)(d.tG, {
                           text: null != (n = v.label) ? n : p.intl.string(p.t.rRffNz),
@@ -55,7 +55,7 @@ function m(e) {
           })
         : (0, r.jsxs)(r.Fragment, {
               children: [
-                  (0, r.jsx)(a.DY3, {
+                  (0, r.jsx)(o.DY3, {
                       text: v.tooltip,
                       className: h.primaryButton,
                       children: (0, r.jsx)(d.tG, {
@@ -70,7 +70,7 @@ function m(e) {
                       })
                   }),
                   (0, r.jsx)(d.ef, {
-                      icon: a.iOO,
+                      icon: o.iOO,
                       tooltipText: null != (g = I.tooltip) ? g : p.intl.string(p.t.eU3inJ),
                       disabled: I.disabled,
                       submitting: I.loading,

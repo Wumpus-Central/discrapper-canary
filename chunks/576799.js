@@ -1,8 +1,8 @@
 n.d(t, { Z: () => p });
 var r = n(255367),
     i = n(73800),
-    a = n(442837),
-    o = n(616780),
+    o = n(442837),
+    a = n(616780),
     s = n(905405),
     l = n(937889),
     c = n(267128),
@@ -12,7 +12,7 @@ var r = n(255367),
     _ = n(848697);
 function p(e) {
     let { message: t, channel: n } = e,
-        { isBlocked: c, isIgnored: f } = (0, a.cj)(
+        { isBlocked: c, isIgnored: f } = (0, o.cj)(
             [d.Z],
             () => ({
                 isBlocked: d.Z.isBlockedForMessage(t),
@@ -22,7 +22,7 @@ function p(e) {
         ),
         p = (0, s.p)(),
         m = i.useMemo(() => ({ [n.guild_id]: [t.author.id] }), [n.guild_id, t.author.id]);
-    (0, o.$)(m);
+    (0, a.$)(m);
     let g = i.useMemo(
         () =>
             null != t.content && '' !== t.content
@@ -55,8 +55,8 @@ function p(e) {
 }
 function h(e, t, n, i) {
     let {
-        contentPlaceholder: a,
-        renderedContent: o,
+        contentPlaceholder: o,
+        renderedContent: a,
         leadingIcon: s,
         trailingIcon: l
     } = (0, c.f)(e, t, n, i, _.threadMessageAccessoryContent, {
@@ -67,11 +67,11 @@ function h(e, t, n, i) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             s,
-            null != o
-                ? o
+            null != a
+                ? a
                 : (0, r.jsx)('span', {
                       className: _.threadMessageAccessoryPlaceholder,
-                      children: a
+                      children: o
                   }),
             l
         ]

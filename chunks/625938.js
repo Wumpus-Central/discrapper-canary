@@ -1,8 +1,8 @@
 (n.d(t, { v: () => D }), n(388685), n(539854));
 var r = n(255367),
     i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(392711),
     l = n.n(s),
     c = n(442837),
@@ -52,7 +52,7 @@ function C(e) {
     }
     return e;
 }
-function w(e, t) {
+function R(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -64,60 +64,60 @@ function w(e, t) {
     }
     return n;
 }
-function R(e, t) {
+function P(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : w(Object(t)).forEach(function (n) {
+            : R(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let P = (e) => {
-        let { style: t, className: n, name: i, icon: a } = e;
+let w = (e) => {
+        let { style: t, className: n, name: i, icon: o } = e;
         return (0, r.jsx)(d.ua7, {
             text: i,
             children: (e) =>
                 (0, r.jsx)(
                     'div',
-                    R(
+                    P(
                         C(
                             {
-                                className: o()(n, A.iconWidget),
+                                className: a()(n, A.iconWidget),
                                 style: t
                             },
                             e
                         ),
-                        { children: null != a && a }
+                        { children: null != o && o }
                     )
                 )
         });
     },
     D = (e) => {
-        let { currentStatus: t, channel: a } = e,
+        let { currentStatus: t, channel: o } = e,
             s = i.useRef(E.Z.getRecentCustomStatuses()),
-            [N, w] = i.useState(!1),
-            R = (0, b.V)(),
+            [N, R] = i.useState(!1),
+            P = (0, b.V)(),
             [D, L] = i.useState(null != t ? t : null),
             x = (0, c.e7)([h.default], () => h.default.getCurrentUser()),
-            k = i.useMemo(() => [], []),
-            j = i.useRef(null).current;
+            M = i.useMemo(() => [], []),
+            k = i.useRef(null).current;
         i.useEffect(
             () => (
-                N || k.push(u.z.HANG_STATUS_NEW_BADGE),
+                N || M.push(u.z.HANG_STATUS_NEW_BADGE),
                 () => {
-                    N && (null == j || j(I.L.PRIMARY));
+                    N && (null == k || k(I.L.PRIMARY));
                 }
             ),
-            [N, k, j]
+            [N, M, k]
         );
-        let M = (e, t) => {
-                (e.stopPropagation(), (0, g.Zx)(t, !0), w(!0));
+        let j = (e, t) => {
+                (e.stopPropagation(), (0, g.Zx)(t, !0), R(!0));
             },
             U = (e, t) => {
-                (e.stopPropagation(), (0, g._s)(t.status, t.emoji, !0), w(!0));
+                (e.stopPropagation(), (0, g._s)(t.status, t.emoji, !0), R(!0));
             },
             G = i.useCallback((e) => {
                 (e.stopPropagation(), (0, g.Sc)(!0));
@@ -128,7 +128,7 @@ let P = (e) => {
                         let { default: e } = await n.e('1631').then(n.bind(n, 333541));
                         return (t) => (0, r.jsx)(e, C({}, t));
                     }),
-                    w(!0));
+                    R(!0));
             },
             Z = i.useCallback((e) => {
                 L({
@@ -147,11 +147,11 @@ let P = (e) => {
                 });
             }, []);
         return (0, r.jsx)(p.ZP, {
-            contentTypes: k,
+            contentTypes: M,
             children: (e) => {
                 let { visibleContent: n, markAsDismissed: i } = e;
                 return (
-                    (j = i),
+                    (k = i),
                     (0, r.jsxs)('div', {
                         className: A.container,
                         children: [
@@ -209,16 +209,16 @@ let P = (e) => {
                                     (0, r.jsxs)('div', {
                                         className: A.iconsContainer,
                                         children: [
-                                            Object.entries(R).map((e) => {
+                                            Object.entries(P).map((e) => {
                                                 let [n, i] = e;
                                                 return (0, r.jsx)(
                                                     d.P3F,
                                                     {
                                                         'aria-label': i.title,
                                                         onMouseEnter: () => Z(n),
-                                                        onClick: (e) => M(e, n),
-                                                        children: (0, r.jsx)(P, {
-                                                            className: o()(A.iconWidget, { [A.selectedWidget]: n === (null == t ? void 0 : t.state) }),
+                                                        onClick: (e) => j(e, n),
+                                                        children: (0, r.jsx)(w, {
+                                                            className: a()(A.iconWidget, { [A.selectedWidget]: n === (null == t ? void 0 : t.state) }),
                                                             name: i.title,
                                                             icon: (0, r.jsx)('img', {
                                                                 src: i.icon,
@@ -235,7 +235,7 @@ let P = (e) => {
                                                 'aria-label': S.intl.string(S.t.S90Fub),
                                                 onClick: G,
                                                 onMouseEnter: () => L(null),
-                                                children: (0, r.jsx)(P, {
+                                                children: (0, r.jsx)(w, {
                                                     className: A.optionButton,
                                                     name: S.intl.string(S.t.S90Fub),
                                                     icon: (0, r.jsx)(d.t6m, {
@@ -254,7 +254,7 @@ let P = (e) => {
                                         children: [
                                             s.current.map((e, n) => {
                                                 let i = e.status === (null == t ? void 0 : t.details) && l().isEqual(e.emoji, null == t ? void 0 : t.emoji),
-                                                    s = null != e.emoji && !(0, y.K)(e.emoji, a);
+                                                    s = null != e.emoji && !(0, y.K)(e.emoji, o);
                                                 return (0, r.jsxs)(
                                                     d.P3F,
                                                     {
@@ -263,8 +263,8 @@ let P = (e) => {
                                                         onClick: s ? void 0 : (t) => U(t, e),
                                                         className: A.statusOptionContainer,
                                                         children: [
-                                                            (0, r.jsx)(P, {
-                                                                className: o()(A.iconWidget, { [A.selectedWidget]: i }),
+                                                            (0, r.jsx)(w, {
+                                                                className: a()(A.iconWidget, { [A.selectedWidget]: i }),
                                                                 name: e.status,
                                                                 icon:
                                                                     null != e.emoji
@@ -297,7 +297,7 @@ let P = (e) => {
                                                       {
                                                           'aria-label': null != t ? S.intl.string(S.t.IN2LTk) : S.intl.string(S.t.UDg0qK),
                                                           onClick: B,
-                                                          children: (0, r.jsx)(P, {
+                                                          children: (0, r.jsx)(w, {
                                                               className: A.optionButton,
                                                               name: null != t ? S.intl.string(S.t.IN2LTk) : S.intl.string(S.t.UDg0qK),
                                                               icon: (0, r.jsx)(d.vdY, {

@@ -2,8 +2,8 @@ n.d(t, { Z: () => d });
 var r = n(255367);
 n(73800);
 var i = n(481060),
-    a = n(79390),
-    o = n(388032);
+    o = n(79390),
+    a = n(388032);
 function s(e, t, n) {
     return (
         t in e
@@ -57,11 +57,11 @@ function u(e, t) {
     );
 }
 function d(e) {
-    return null == e.reactions || 0 === e.reactions.length || (e.isPoll() && !(0, a.eQ)(e))
+    return null == e.reactions || 0 === e.reactions.length || (e.isPoll() && !(0, o.eQ)(e))
         ? null
         : (0, r.jsx)(i.sNh, {
               id: 'reactions',
-              label: o.intl.string(o.t.wikODg),
+              label: a.intl.string(a.t.wikODg),
               icon: i.EO4,
               action: () =>
                   (0, i.ZDy)(async () => {

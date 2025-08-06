@@ -1,8 +1,8 @@
 n.d(t, { J: () => g });
 var r = n(255367),
     i = n(73800),
-    a = n(920155),
-    o = n(744399),
+    o = n(920155),
+    a = n(744399),
     s = n(454028),
     l = n(966902),
     c = n(237872),
@@ -65,8 +65,8 @@ function h(e, t) {
         r,
         i = m(e, t);
     if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
@@ -75,8 +75,8 @@ function m(e, t) {
     var n,
         r,
         i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
 function g(e) {
@@ -104,7 +104,7 @@ function g(e) {
             null == O || O();
         }, [O]);
     return (0, r.jsx)(
-        a.m,
+        o.m,
         p(f({}, I), {
             onRequestClose: T,
             gradientColor: y,
@@ -129,7 +129,7 @@ function g(e) {
                         textLink: b,
                         hasBottomMargin: null != E
                     }),
-                    null != E && E.length > 0 ? (0, r.jsx)(o.k, { actions: E }) : null,
+                    null != E && E.length > 0 ? (0, r.jsx)(a.k, { actions: E }) : null,
                     (0, r.jsx)(l.$, { caretConfig: d })
                 ]
             })

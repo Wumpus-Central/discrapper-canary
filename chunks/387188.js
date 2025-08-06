@@ -6,8 +6,8 @@
     n(388685));
 var r = n(255367),
     i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(657707),
     l = n(481060),
     c = n(596454),
@@ -79,8 +79,8 @@ function T(e, t) {
         r,
         i = S(e, t);
     if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
@@ -89,8 +89,8 @@ function S(e, t) {
     var n,
         r,
         i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
 function A(e) {
@@ -109,7 +109,7 @@ function A(e) {
 }
 function N(e) {
     let { message: t, className: n } = e,
-        [a, s] = i.useState(!1),
+        [o, s] = i.useState(!1),
         u = t.getChannelId(),
         d = (0, m.xE)(t.content),
         f = i.useCallback(() => {
@@ -143,7 +143,7 @@ function N(e) {
                   return (0, r.jsx)(
                       l.P3F,
                       I(O({}, p), {
-                          className: o()(n, b.ctaReactionButton),
+                          className: a()(n, b.ctaReactionButton),
                           onClick: f,
                           onMouseEnter: () => {
                               (s(!0), null == i || i());
@@ -161,7 +161,7 @@ function N(e) {
                                       size: 'default',
                                       emojiId: d.id,
                                       animated: d.animated,
-                                      isInteracting: a,
+                                      isInteracting: o,
                                       channelId: u,
                                       messageId: t.id,
                                       className: b.ctaEmoji
@@ -175,11 +175,11 @@ function N(e) {
 }
 function C(e) {
     var t;
-    let { message: n, compact: a, usernameHook: o } = e,
+    let { message: n, compact: o, usernameHook: a } = e,
         c = n.content,
         [_, y] = i.useState(!1),
         O = (0, u.ZP)(n),
-        v = o(O),
+        v = a(O),
         I = (0, m.xE)(c),
         T = i.useCallback(() => {
             null != I &&
@@ -211,7 +211,7 @@ function C(e) {
         }),
         iconContainerClassName: b.iconContainer,
         timestamp: n.timestamp,
-        compact: a,
+        compact: o,
         contentClassName: b.content,
         children: (0, r.jsx)('span', {
             children:

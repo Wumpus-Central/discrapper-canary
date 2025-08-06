@@ -1,5 +1,5 @@
 n.d(t, {
-    D: () => a,
+    D: () => o,
     m: () => i
 });
 var r = n(818083);
@@ -16,7 +16,7 @@ let i = (0, r.B)({
             }
         ]
     }),
-    a = (0, r.B)({
+    o = (0, r.B)({
         kind: 'user',
         id: '2025-08_roblox_subgames_rollout',
         label: 'Roblox subgames fetch rollout',

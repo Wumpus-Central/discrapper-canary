@@ -21,12 +21,12 @@ e.exports = function (e) {
                 ]
             })
         ]),
-        a = {
+        o = {
             className: 'regexp',
             begin: /~?\/[^\/\n]+\//,
             contains: [e.BACKSLASH_ESCAPE]
         },
-        o = t([e.BINARY_NUMBER_MODE, e.C_NUMBER_MODE]),
+        a = t([e.BINARY_NUMBER_MODE, e.C_NUMBER_MODE]),
         s = t(
             [
                 {
@@ -69,8 +69,8 @@ e.exports = function (e) {
             }),
             i,
             s,
-            a,
             o,
+            a,
             l,
             {
                 className: 'meta',
@@ -86,7 +86,7 @@ e.exports = function (e) {
                 begin: /\?/,
                 end: /:/,
                 relevance: 0,
-                contains: [i, s, a, o, 'self']
+                contains: [i, s, o, a, 'self']
             },
             {
                 className: 'symbol',

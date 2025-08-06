@@ -1,8 +1,8 @@
 n.d(t, { Z: () => T });
 var r = n(255367),
     i = n(73800),
-    a = n(442837),
-    o = n(680018),
+    o = n(442837),
+    a = n(680018),
     s = n(481060),
     l = n(410030),
     c = n(739566),
@@ -25,42 +25,42 @@ function T(e) {
     let A,
         N,
         C,
-        { message: w, channel: R, compact: P } = e,
-        D = null == (t = w.chatWallpaperInfo) ? void 0 : t.wallpaperId,
+        { message: R, channel: P, compact: w } = e,
+        D = null == (t = R.chatWallpaperInfo) ? void 0 : t.wallpaperId,
         { enabled: L } = (0, p.sX)({ location: 'ChatWallpaperSetSystemMessage' }),
         x = p.qM.useExperiment({ location: 'ChatWallpaperSetSystemMessage' }).lightMode,
-        k = (0, c.ZP)(w),
-        j = (0, s.wjy)((0, l.ZP)()),
+        M = (0, c.ZP)(R),
+        k = (0, s.wjy)((0, l.ZP)()),
         {
-            chatWallpaper: M,
+            chatWallpaper: j,
             isUpdatingChatWallpaperFlag: U,
             lastSetMessageId: G
-        } = (0, a.cj)([h.Z], () => ({
+        } = (0, o.cj)([h.Z], () => ({
             chatWallpaper: h.Z.getWallpaperById(D),
-            isUpdatingChatWallpaperFlag: h.Z.isUpdatingChatWallpaperFlagForChannel(R.id),
-            lastSetMessageId: h.Z.getLastSetWallpaperMessageIdForChannel(R.id)
+            isUpdatingChatWallpaperFlag: h.Z.isUpdatingChatWallpaperFlagForChannel(P.id),
+            lastSetMessageId: h.Z.getLastSetWallpaperMessageIdForChannel(P.id)
         })),
-        B = (0, E.Z)(R.id),
-        Z = G === w.id,
-        F = (0, a.e7)([f.default], () => f.default.getCurrentUser()),
-        V = (null == F ? void 0 : F.id) === w.author.id,
+        B = (0, E.Z)(P.id),
+        Z = G === R.id,
+        F = (0, o.e7)([f.default], () => f.default.getCurrentUser()),
+        V = (null == F ? void 0 : F.id) === R.author.id,
         H = (0, u.m)(O.p9.TIER_2),
-        Y = m.t(R);
+        Y = m.t(P);
     return (i.useEffect(() => {
-        null == M && h.Z.shouldFetchWallpapers && g.k9();
-    }, [M]),
+        null == j && h.Z.shouldFetchWallpapers && g.k9();
+    }, [j]),
     null == D)
         ? null
         : ((A = V
-              ? v.intl.format(v.t.z847Tk, { wallpaper_name: null != (n = null == M ? void 0 : M.label) ? n : v.intl.string(v.t['UQMV/P']) })
+              ? v.intl.format(v.t.z847Tk, { wallpaper_name: null != (n = null == j ? void 0 : j.label) ? n : v.intl.string(v.t['UQMV/P']) })
               : v.intl.format(v.t['+lKndX'], {
-                    username: null == k ? void 0 : k.nick,
-                    wallpaper_name: null != (T = null == M ? void 0 : M.label) ? T : v.intl.string(v.t['UQMV/P'])
+                    username: null == M ? void 0 : M.nick,
+                    wallpaper_name: null != (T = null == j ? void 0 : j.label) ? T : v.intl.string(v.t['UQMV/P'])
                 })),
           L
-              ? j || x
+              ? k || x
                   ? Y && Z
-                      ? (N = v.intl.formatToPlainString(v.t.PzTpVV, { wallpaperName: null != (S = null == M ? void 0 : M.label) ? S : v.intl.string(v.t['UQMV/P']) }))
+                      ? (N = v.intl.formatToPlainString(v.t.PzTpVV, { wallpaperName: null != (S = null == j ? void 0 : j.label) ? S : v.intl.string(v.t['UQMV/P']) }))
                       : V ||
                         H ||
                         !Z ||
@@ -76,12 +76,12 @@ function T(e) {
               !V &&
               (C = (0, r.jsx)('div', {
                   className: I.action,
-                  children: (0, r.jsx)(o.z, {
+                  children: (0, r.jsx)(a.z, {
                       variant: 'primary',
                       text: v.intl.string(Y ? v.t.o6850d : v.t['/ubFp6']),
                       loading: U,
                       onClick: () => {
-                          g.X(R, D, {
+                          g.X(P, D, {
                               shouldClear: !Y,
                               onError: () => {
                                   (0, s.showToast)((0, s.createToast)(v.intl.string(v.t.F8FvU1), s.ToastType.FAILURE));
@@ -91,11 +91,11 @@ function T(e) {
                   })
               })),
           (0, r.jsx)(b.Z, {
-              channel: R,
+              channel: P,
               content: A,
               subtitle: N,
               action: C,
-              compact: P,
-              message: w
+              compact: w,
+              message: R
           }));
 }

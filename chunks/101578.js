@@ -1,8 +1,8 @@
 n.d(t, { Z: () => f });
 var r = n(255367),
     i = n(627861),
-    a = n(100527),
-    o = n(906732),
+    o = n(100527),
+    a = n(906732),
     s = n(728345),
     l = n(973616),
     c = n(789407),
@@ -13,7 +13,7 @@ function d(e) {
 let f = (e) => {
     var t;
     let { channel: n, message: l, hideParty: c } = e,
-        { analyticsLocations: u } = (0, o.ZP)(a.Z.INVITE_EMBED),
+        { analyticsLocations: u } = (0, a.ZP)(o.Z.INVITE_EMBED),
         f = d(l),
         { data: _ } = (0, s.IX)(null == (t = l.application) ? void 0 : t.id),
         p = null != _ ? _ : f;

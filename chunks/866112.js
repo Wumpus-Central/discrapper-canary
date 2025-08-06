@@ -50,13 +50,13 @@ function c(e, t) {
         e
     );
 }
-let d = [],
-    u = {},
+let u = [],
+    d = {},
     h = {};
 class p extends (r = i.ZP.Store) {
     getSearchState(e) {
         var t;
-        return null != (t = u[e])
+        return null != (t = d[e])
             ? t
             : {
                   mostRecentQuery: '',
@@ -65,7 +65,7 @@ class p extends (r = i.ZP.Store) {
     }
     getSearchResults(e, t) {
         var n, r, i;
-        return null != (i = null == (r = h[e]) || null == (n = r[t]) ? void 0 : n.results) ? i : d;
+        return null != (i = null == (r = h[e]) || null == (n = r[t]) ? void 0 : n.results) ? i : u;
     }
     shouldFetch(e, t) {
         var n, r;
@@ -77,14 +77,14 @@ s(p, 'displayName', 'GuildDirectorySearchStore');
 let f = new p(l.Z, {
     GUILD_DIRECTORY_SEARCH_START: function (e) {
         let { channelId: t, query: n } = e;
-        u[t] = {
+        d[t] = {
             fetching: !0,
             mostRecentQuery: n
         };
     },
     GUILD_DIRECTORY_SEARCH_SUCCESS: function (e) {
         let { channelId: t, query: n, results: r } = e;
-        u[t] = c(o({}, u[t]), { fetching: !1 });
+        d[t] = c(o({}, d[t]), { fetching: !1 });
         let i = [];
         (r.forEach((e) => {
             let t = (0, a.MQ)(e);
@@ -99,18 +99,18 @@ let f = new p(l.Z, {
     },
     GUILD_DIRECTORY_SEARCH_FAILURE: function (e) {
         let { channelId: t } = e;
-        u[t] = c(o({}, u[t]), { fetching: !1 });
+        d[t] = c(o({}, d[t]), { fetching: !1 });
     },
     GUILD_DIRECTORY_SEARCH_CLEAR: function (e) {
         let { channelId: t } = e;
-        u[t] = {
+        d[t] = {
             fetching: !1,
             mostRecentQuery: ''
         };
     },
     GUILD_DIRECTORY_CACHED_SEARCH: function (e) {
         let { channelId: t, query: n } = e;
-        u[t] = {
+        d[t] = {
             fetching: !1,
             mostRecentQuery: n
         };
@@ -118,11 +118,11 @@ let f = new p(l.Z, {
     GUILD_DIRECTORY_ENTRY_DELETE: function (e) {
         var t;
         let { channelId: n, guildId: r } = e,
-            i = null == (t = u[n]) ? void 0 : t.mostRecentQuery;
+            i = null == (t = d[n]) ? void 0 : t.mostRecentQuery;
         if (null == i) return;
         let l = h[n][i];
         if (null == l) return;
         let a = l.results.filter((e) => e.guildId !== r);
-        h[n] = c(o({}, h[n]), { [u[n].mostRecentQuery]: c(o({}, l), { results: a }) });
+        h[n] = c(o({}, h[n]), { [d[n].mostRecentQuery]: c(o({}, l), { results: a }) });
     }
 });

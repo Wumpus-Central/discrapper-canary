@@ -1,8 +1,8 @@
 (n.d(t, { Z: () => E }), n(388685), n(467055));
 var r,
     i = n(442837),
-    a = n(570140),
-    o = n(914010);
+    o = n(570140),
+    a = n(914010);
 function s(e, t, n) {
     return (
         t in e
@@ -24,7 +24,7 @@ function d(e) {
     (null == u.reportedMessages[t] && (u.reportedMessages[t] = new Set()), u.reportedMessages[t].add(n));
 }
 function f() {
-    let e = o.Z.getLastSelectedGuildId();
+    let e = a.Z.getLastSelectedGuildId();
     e !== l && ((c = null), (l = null != e ? e : null));
 }
 function _(e) {
@@ -44,12 +44,12 @@ function h(e) {
                 return null == (t = e.user) ? void 0 : t.id;
             })
         ),
-        a = Array.from(new Set(null != r ? r : [])).filter((e) => !i.has(e));
+        o = Array.from(new Set(null != r ? r : [])).filter((e) => !i.has(e));
     (null == c && (c = new Map()),
         i.forEach((e) => {
             null == c || c.set(e, !0);
         }),
-        a.forEach((e) => {
+        o.forEach((e) => {
             null == c || c.set(e, !1);
         }));
 }
@@ -65,7 +65,7 @@ class g extends (r = i.ZP.PersistedStore) {
                     return [t, new Set(n)];
                 })
             )),
-            this.syncWith([o.Z], f));
+            this.syncWith([a.Z], f));
     }
     getState() {
         return u;
@@ -90,7 +90,7 @@ class g extends (r = i.ZP.PersistedStore) {
             return { reportedMessages: null != (t = null == e ? void 0 : e.reportedMessages) ? t : {} };
         }
     ]));
-let E = new g(a.Z, {
+let E = new g(o.Z, {
     REPORT_TO_MOD_REPORT_MESSAGE_SUCCESS: d,
     GUILD_BAN_ADD: _,
     GUILD_BAN_REMOVE: p,

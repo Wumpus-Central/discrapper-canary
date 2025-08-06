@@ -1,5 +1,5 @@
 n.d(t, {
-    Tq: () => a,
+    Tq: () => o,
     W: () => i
 });
 let r = (0, n(818083).B)({
@@ -24,7 +24,7 @@ function i(e, t) {
         { autoTrackExposure: !0 }
     ).enabled;
 }
-function a(e, t) {
+function o(e, t) {
     return r.getCurrentConfig(
         {
             guildId: e,

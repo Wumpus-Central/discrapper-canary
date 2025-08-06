@@ -5,15 +5,15 @@
     n(388685));
 var r = n(442837),
     i = n(314897),
-    a = n(271383),
-    o = n(485386),
+    o = n(271383),
+    a = n(485386),
     s = n(430824),
     l = n(981631);
 function c(e, t) {
-    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null == e ? null : a.ZP.getMember(e, i.default.getId()),
+    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null == e ? null : o.ZP.getMember(e, i.default.getId()),
         [r] = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : [s.Z],
-        o = r.getGuild(e);
-    if (null == o || null == n || !o.features.has(l.oNc.ROLE_SUBSCRIPTIONS_ENABLED)) return !1;
+        a = r.getGuild(e);
+    if (null == a || null == n || !a.features.has(l.oNc.ROLE_SUBSCRIPTIONS_ENABLED)) return !1;
     for (let e of n.roles) {
         var c;
         let n = null == t ? void 0 : t[e];
@@ -22,6 +22,6 @@ function c(e, t) {
     return !1;
 }
 function u(e) {
-    let t = (0, r.e7)([i.default, a.ZP], () => (null == e ? null : a.ZP.getMember(e, i.default.getId())));
-    return (0, r.e7)([s.Z, o.Z], () => c(e, null != e ? o.Z.getRolesSnapshot(e) : void 0, t, [s.Z]), [e, t]);
+    let t = (0, r.e7)([i.default, o.ZP], () => (null == e ? null : o.ZP.getMember(e, i.default.getId())));
+    return (0, r.e7)([s.Z, a.Z], () => c(e, null != e ? a.Z.getRolesSnapshot(e) : void 0, t, [s.Z]), [e, t]);
 }

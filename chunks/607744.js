@@ -1,8 +1,8 @@
-(n.d(t, { Z: () => w }), n(388685), n(997841), n(539854));
+(n.d(t, { Z: () => R }), n(388685), n(997841), n(539854));
 var r,
     i = n(442837),
-    a = n(570140),
-    o = n(601964),
+    o = n(570140),
+    a = n(601964),
     s = n(630388),
     l = n(709054),
     c = n(271383),
@@ -39,7 +39,7 @@ function b(e) {
     (y(e), g.add(e));
     let n = d.Z.getGuild(e),
         r = f.default.getCurrentUser();
-    if (null == n || n.verificationLevel === _.sFg.NONE || null == r || (0, o.eM)(n, r) || r.isPhoneVerified()) return;
+    if (null == n || n.verificationLevel === _.sFg.NONE || null == r || (0, a.eM)(n, r) || r.isPhoneVerified()) return;
     let i = c.ZP.getMember(n.id, r.id);
     if (null != i) {
         var l;
@@ -67,7 +67,7 @@ function b(e) {
         S.length > 0 &&
             (t = setTimeout(
                 () =>
-                    a.Z.dispatch({
+                    o.Z.dispatch({
                         type: 'GUILD_VERIFICATION_CHECK',
                         guildId: e
                     }),
@@ -128,7 +128,7 @@ class C extends (r = i.ZP.Store) {
     }
 }
 h(C, 'displayName', 'GuildVerificationStore');
-let w = new C(a.Z, {
+let R = new C(o.Z, {
     CONNECTION_OPEN: O,
     CONNECTION_CLOSED: v,
     CURRENT_USER_UPDATE: A,

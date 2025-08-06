@@ -14,14 +14,14 @@ e.exports = function (e, n, r, i) {
     return ((n = n || '&'), (r = r || '='), null === e && (e = void 0), 'object' == typeof e)
         ? Object.keys(e)
               .map(function (i) {
-                  var a = encodeURIComponent(t(i)) + r;
+                  var o = encodeURIComponent(t(i)) + r;
                   return Array.isArray(e[i])
                       ? e[i]
                             .map(function (e) {
-                                return a + encodeURIComponent(t(e));
+                                return o + encodeURIComponent(t(e));
                             })
                             .join(n)
-                      : a + encodeURIComponent(t(e[i]));
+                      : o + encodeURIComponent(t(e[i]));
               })
               .filter(Boolean)
               .join(n)

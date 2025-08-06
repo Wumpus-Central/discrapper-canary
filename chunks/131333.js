@@ -1,8 +1,8 @@
-(n.d(t, { t: () => M }), n(388685), n(35282), n(413496), n(433524));
+(n.d(t, { t: () => j }), n(388685), n(35282), n(413496), n(433524));
 var r = n(255367),
     i = n(73800),
-    a = n(505266),
-    o = n(481060),
+    o = n(505266),
+    a = n(481060),
     s = n(40851),
     l = n(745510),
     c = n(661637),
@@ -73,9 +73,9 @@ let b = [],
     A = 20,
     N = 12,
     C = 48,
-    w = 0.01,
-    R = new Set(['jack_o_lantern', 'nose']),
-    P = {
+    R = 0.01,
+    P = new Set(['jack_o_lantern', 'nose']),
+    w = {
         jack_o_lantern: {
             sprites: (0, c.Z)(['chocolate_bar', 'lollipop', 'candy'])
         },
@@ -83,7 +83,7 @@ let b = [],
     };
 function D(e) {
     if (null == e) return null;
-    for (let t of R) if (null != e.match(new RegExp(':'.concat(t, '(_tone[1-9])?')))) return t;
+    for (let t of P) if (null != e.match(new RegExp(':'.concat(t, '(_tone[1-9])?')))) return t;
     return null;
 }
 let L = {
@@ -109,7 +109,7 @@ function x() {
             return t;
         });
 }
-function k(e) {
+function M(e) {
     if (null == e) return 'enter';
     switch (e) {
         case 'enter':
@@ -120,11 +120,11 @@ function k(e) {
             return 'enter';
     }
 }
-let j = i.forwardRef(function (e, t) {
+let k = i.forwardRef(function (e, t) {
     let { sprites: n } = e,
-        [o, s] = i.useState(null),
+        [a, s] = i.useState(null),
         { confettiCanvas: c } = i.useContext(l.h),
-        u = (0, a.uR)(c, o);
+        u = (0, o.uR)(c, a);
     return (
         i.useImperativeHandle(
             t,
@@ -157,7 +157,7 @@ let j = i.forwardRef(function (e, t) {
                             },
                             dragCoefficient: {
                                 type: 'static',
-                                value: w
+                                value: R
                             }
                         }),
                         A
@@ -166,7 +166,7 @@ let j = i.forwardRef(function (e, t) {
             }),
             [u]
         ),
-        (0, r.jsx)(a.Ji, {
+        (0, r.jsx)(o.Ji, {
             ref: s,
             colors: b,
             sprites: n,
@@ -175,11 +175,11 @@ let j = i.forwardRef(function (e, t) {
         })
     );
 });
-function M(e) {
+function j(e) {
     let { children: t } = e,
         n = i.useRef({}),
-        [a, l] = i.useState(null),
-        c = k(a),
+        [o, l] = i.useState(null),
+        c = M(o),
         _ = i.useRef(null),
         [h, m] = i.useState(!1),
         g = i.useRef('jack_o_lantern'),
@@ -210,7 +210,7 @@ function M(e) {
             _.current = e;
         }, []);
     return (i.useEffect(() => {
-        if ('confetti' === a) {
+        if ('confetti' === o) {
             if (null == _.current) return;
             let e = _.current.getBoundingClientRect(),
                 t = e.left - T,
@@ -218,17 +218,17 @@ function M(e) {
                 i = n.current[g.current];
             null == i || i.fireConfetti(t, r);
         }
-    }, [a]),
+    }, [o]),
     E !== f.IlC.APP)
         ? t
         : (0, r.jsxs)(d.Rm.Provider, {
               value: y,
               children: [
                   t,
-                  Object.keys(P).map((e) => {
-                      let t = P[e];
+                  Object.keys(w).map((e) => {
+                      let t = w[e];
                       return (0, r.jsx)(
-                          j,
+                          k,
                           {
                               ref: (t) => {
                                   null != t ? (n.current[e] = t) : delete n.current[e];
@@ -242,7 +242,7 @@ function M(e) {
                       ? (0, r.jsx)(u.ZP, {
                             children: (0, r.jsx)('div', {
                                 className: p.animationWrapper,
-                                children: (0, r.jsx)(o.kci, {
+                                children: (0, r.jsx)(a.kci, {
                                     animationRef: I,
                                     className: p.lottieAnimation,
                                     nextScene: c,

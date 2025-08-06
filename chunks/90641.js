@@ -1,8 +1,8 @@
 n.d(t, { Z: () => g });
 var r = n(570140),
     i = n(668781),
-    a = n(287734),
-    o = n(881052),
+    o = n(287734),
+    a = n(881052),
     s = n(314897),
     l = n(592125),
     c = n(979651),
@@ -26,7 +26,7 @@ async function m(e, t) {
             (await (0, d.om)(f.GB), null == t || t());
         } catch (t) {
             var n;
-            let e = new o.Hx(t);
+            let e = new a.Hx(t);
             (r.Z.dispatch({
                 type: 'SECURE_FRAMES_SETTINGS_UPDATE',
                 persistentCodesEnabled: !1
@@ -56,7 +56,7 @@ let g = {
                   confirmText: p.intl.string(p.t.aTuFYW),
                   onConfirm: async () => {
                       await m(e, () => {
-                          (a.default.disconnect(), a.default.selectVoiceChannel(t));
+                          (o.default.disconnect(), o.default.selectVoiceChannel(t));
                       });
                   }
               })

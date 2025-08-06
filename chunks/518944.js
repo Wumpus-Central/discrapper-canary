@@ -1,8 +1,8 @@
-n.d(t, { Z: () => R });
+n.d(t, { Z: () => P });
 var r,
     i = n(442837),
-    a = n(570140),
-    o = n(353926),
+    o = n(570140),
+    a = n(353926),
     s = n(592125),
     l = n(430824),
     c = n(945577),
@@ -91,12 +91,12 @@ function N(e) {
 }
 function C(e) {
     let { searchId: t, queryString: n, query: r, offset: i } = e,
-        a = h(t);
-    ((a.searchResultsQueryString = n), (a.searchResultsQuery = r), (a.searchResultsOffset = null != i ? i : 0));
+        o = h(t);
+    ((o.searchResultsQueryString = n), (o.searchResultsQuery = r), (o.searchResultsOffset = null != i ? i : 0));
 }
-class w extends (r = i.ZP.Store) {
+class R extends (r = i.ZP.Store) {
     initialize() {
-        this.waitFor(l.Z, s.Z, o.Z);
+        this.waitFor(l.Z, s.Z, a.Z);
     }
     getCurrentSearchId() {
         return E;
@@ -125,8 +125,8 @@ class w extends (r = i.ZP.Store) {
         return null != e && null != p[e];
     }
 }
-f(w, 'displayName', 'SearchStore');
-let R = new w(a.Z, {
+f(R, 'displayName', 'SearchStore');
+let P = new R(o.Z, {
     CONNECTION_OPEN: I,
     SEARCH_RESULTS_QUERY_UPDATE: C,
     SEARCH_EDITOR_STATE_CLEAR: O,

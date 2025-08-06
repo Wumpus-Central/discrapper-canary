@@ -1,8 +1,8 @@
 n.d(t, { Z: () => y });
 var r = n(255367),
     i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(481060),
     l = n(318374),
     c = n(5192),
@@ -65,13 +65,13 @@ function b(e, t) {
     );
 }
 function y(e) {
-    let { entry: t, channel: n, className: a } = e,
+    let { entry: t, channel: n, className: o } = e,
         m = i.useRef(null),
         E = i.useRef(null),
         { displayParticipants: y, participant1: O, participant2: v, numOtherParticipants: I, orderedParticipants: T } = (0, u.Z)(t),
         S = [O, v];
     return (0, r.jsxs)('div', {
-        className: o()(h.container, a),
+        className: a()(h.container, o),
         children: [
             y.length > 0
                 ? (0, r.jsxs)(r.Fragment, {
@@ -113,7 +113,7 @@ function y(e) {
             (0, r.jsx)(s.X6q, {
                 variant: 'text-sm/semibold',
                 color: 'text-secondary',
-                className: o()(h.truncatedText, h.usersHeader),
+                className: a()(h.truncatedText, h.usersHeader),
                 scaleFontToUserSetting: !0,
                 children: p.intl.format(p.t.rH95Gh, {
                     user0: c.ZP.getName(n.guild_id, n.id, S[0]),

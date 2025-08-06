@@ -1,8 +1,8 @@
-(n.d(t, { Z: () => M }), n(388685));
+(n.d(t, { Z: () => j }), n(388685));
 var r = n(392711),
     i = n(846519),
-    a = n(570140),
-    o = n(872810),
+    o = n(570140),
+    a = n(872810),
     s = n(147913),
     l = n(458725),
     c = n(442741),
@@ -48,13 +48,13 @@ function T(e) {
     }
     return e;
 }
-let S = (0, r.debounce)(o.xc, 1000),
+let S = (0, r.debounce)(a.xc, 1000),
     A = {},
     N = {},
     C = 3 * b.Z.Millis.MINUTE,
-    w = 5 * b.Z.Millis.SECOND,
-    R = 12 * b.Z.Millis.SECOND,
-    P = null;
+    R = 5 * b.Z.Millis.SECOND,
+    P = 12 * b.Z.Millis.SECOND,
+    w = null;
 function D(e) {
     var t;
     (null == (t = A[e]) || t.stop(), delete A[e]);
@@ -70,43 +70,43 @@ function x(e, t) {
     let r = d.Z.getStreamForUser(t, n.getGuildId());
     if (null == r) return !1;
     let i = (0, y.V9)(r);
-    return i !== P && ((P = i), (0, o.rn)(r, { noFocus: !0 }), !0);
+    return i !== w && ((w = i), (0, a.rn)(r, { noFocus: !0 }), !0);
+}
+function M(e, t) {
+    let n = null != t ? t : h.Z.getPreferredRegion();
+    null != n && n !== h.Z.getRegion(g.Z.getHostname(e)) && (0, a.dV)(e, n);
 }
 function k(e, t) {
-    let n = null != t ? t : h.Z.getPreferredRegion();
-    null != n && n !== h.Z.getRegion(g.Z.getHostname(e)) && (0, o.dV)(e, n);
-}
-function j(e, t) {
     var n;
     if (g.Z.getAllActiveStreamKeys().includes(e)) return;
     let r = null != (n = N[e]) ? n : new i.V7();
     ((N[e] = r),
-        r.start(t ? R : w, () => {
-            a.Z.dispatch({
+        r.start(t ? P : R, () => {
+            o.Z.dispatch({
                 type: 'STREAM_TIMED_OUT',
                 streamKey: e
             });
         }));
 }
-class M extends s.Z {
+class j extends s.Z {
     constructor(...e) {
         (super(...e),
             I(this, 'handleStreamWatch', (e) => {
                 let { streamKey: t, allowMultiple: n } = e,
                     { channelId: r } = (0, y.my)(t),
                     i = _.Z.getChannel(r);
-                (j(t, null == i ? void 0 : i.isGuildStageVoice()),
+                (k(t, null == i ? void 0 : i.isGuildStageVoice()),
                     D(t),
                     n ||
                         d.Z.getAllActiveStreams().forEach((e) => {
                             let n = (0, y.V9)(e);
-                            e.ownerId !== f.default.getId() && n !== t && (0, o.g)(n, !1);
+                            e.ownerId !== f.default.getId() && n !== t && (0, a.g)(n, !1);
                         }));
             }),
             I(this, 'handleStreamStart', (e) => {
                 let { channelId: t, streamType: n, guildId: r } = e,
                     i = _.Z.getChannel(t);
-                (j(
+                (k(
                     (0, y.V9)({
                         streamType: n,
                         guildId: r,
@@ -123,8 +123,8 @@ class M extends s.Z {
                 L(n);
                 let { ownerId: r, guildId: i } = (0, y.my)(n);
                 if (null == i || null == r || r !== (null == (t = E.default.getCurrentUser()) ? void 0 : t.id)) return;
-                let a = p.Z.getMemberCount(i);
-                null == a || a < 2 || a > O.tB || (u.eo.getSetting() && S(n));
+                let o = p.Z.getMemberCount(i);
+                null == o || o < 2 || o > O.tB || (u.eo.getSetting() && S(n));
             }),
             I(this, 'handleStreamUpdate', (e) => {
                 let { streamKey: t } = e;
@@ -132,7 +132,7 @@ class M extends s.Z {
             }),
             I(this, 'handleStreamDelete', (e) => {
                 let { reason: t, streamKey: n } = e;
-                (L(n), t === v.si2.STREAM_FULL && ((0, l.kr)(T({ type: l.u.STREAM_FULL }, (0, c.rT)(n))), (0, o.aP)(n, !1), this.platformShowStreamFull()));
+                (L(n), t === v.si2.STREAM_FULL && ((0, l.kr)(T({ type: l.u.STREAM_FULL }, (0, c.rT)(n))), (0, a.aP)(n, !1), this.platformShowStreamFull()));
             }),
             I(this, 'handleStreamClose', (e) => {
                 let { streamKey: t } = e;
@@ -141,7 +141,7 @@ class M extends s.Z {
             I(this, 'handleVoiceChannelSelect', (e) => {
                 let { channelId: t } = e;
                 if (null == t) return;
-                P = null;
+                w = null;
                 let n = d.Z.getAllApplicationStreamsForChannel(t).filter((e) => {
                     let { ownerId: t } = e;
                     return t !== f.default.getId();
@@ -151,22 +151,22 @@ class M extends s.Z {
             I(this, 'handleVoiceStateUpdates', (e) => {
                 let { voiceStates: t } = e;
                 t.forEach((e) => {
-                    let { userId: t, channelId: n, guildId: r, selfStream: a } = e;
+                    let { userId: t, channelId: n, guildId: r, selfStream: o } = e;
                     if ((this.platformHandleVoiceStateUpdate(e), t !== f.default.getId() && null != n)) {
-                        if (a && x(n, t)) return;
+                        if (o && x(n, t)) return;
                         let e = d.Z.getActiveStreamForUser(t, r);
                         if (null != e && e.channelId === n) {
-                            if (!a && e.state !== v.jm8.ENDED) {
+                            if (!o && e.state !== v.jm8.ENDED) {
                                 var s;
                                 let t = (0, y.V9)(e),
                                     n = null != (s = A[t]) ? s : new i.V7();
-                                (n.start(C, () => (0, o.aP)(t, !1)), (A[t] = n));
+                                (n.start(C, () => (0, a.aP)(t, !1)), (A[t] = n));
                             }
-                            if (a && e.state === v.jm8.ENDED) {
+                            if (o && e.state === v.jm8.ENDED) {
                                 D((0, y.V9)(e));
                                 let n = d.Z.getStreamForUser(t, r);
                                 if (null == n) return;
-                                (0, o.rn)(n);
+                                (0, a.rn)(n);
                             }
                         }
                     }
@@ -175,19 +175,19 @@ class M extends s.Z {
             I(this, 'handleCallUpdate', (e) => {
                 let { channelId: t, region: n } = e,
                     r = d.Z.getCurrentUserActiveStream();
-                (null == r ? void 0 : r.channelId) === t && k((0, y.V9)(r), n);
+                (null == r ? void 0 : r.channelId) === t && M((0, y.V9)(r), n);
             }),
             I(this, 'handleChannelUpdates', (e) => {
                 let { channels: t } = e,
                     n = d.Z.getCurrentUserActiveStream();
-                if (null != n) for (let e of t) n.channelId === e.id && k((0, y.V9)(n), e.rtcRegion);
+                if (null != n) for (let e of t) n.channelId === e.id && M((0, y.V9)(n), e.rtcRegion);
             }),
             I(this, 'handleMediaEngineVideoStateChanged', (e) => {
                 let { videoState: t } = e,
                     n = d.Z.getCurrentUserActiveStream();
                 if (null != n) {
                     let e = t === v.FQ1.PAUSED;
-                    (0, o.tK)(n, e);
+                    (0, a.tK)(n, e);
                 }
             }),
             I(this, 'actions', {

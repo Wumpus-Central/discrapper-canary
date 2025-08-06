@@ -5,8 +5,8 @@
     n(539854));
 var r = n(481060),
     i = n(620662),
-    a = n(933557),
-    o = n(377171),
+    o = n(933557),
+    a = n(377171),
     s = n(699516),
     l = n(594174),
     c = n(981631),
@@ -37,7 +37,7 @@ function f(e) {
                 icon: r.AlX,
                 display: u.intl.string(u.t.o034cn),
                 badgeVal: m,
-                badgeColor: o.Z.BG_BRAND
+                badgeColor: a.Z.BG_BRAND
             }),
         n &&
             O.push({
@@ -72,7 +72,7 @@ function f(e) {
                         type: 'INVITE_TO_GAME',
                         icon: r.xoD,
                         display: u.intl.formatToPlainString(u.t['KHLo+P'], {
-                            channel: (0, a.F6)(p, l.default, s.Z, !0),
+                            channel: (0, o.F6)(p, l.default, s.Z, !0),
                             game: null != e ? e.name : ''
                         }),
                         activity: e
@@ -83,7 +83,7 @@ function f(e) {
                         type: 'INVITE_TO_LISTEN',
                         icon: r.iOO,
                         display: u.intl.formatToPlainString(u.t.I479p6, {
-                            channel: (0, a.F6)(p, l.default, s.Z, !0),
+                            channel: (0, o.F6)(p, l.default, s.Z, !0),
                             name: null != e ? e.name : ''
                         }),
                         activity: e
@@ -94,7 +94,7 @@ function f(e) {
                         type: 'INVITE_TO_WATCH',
                         icon: r.tEF,
                         display: u.intl.formatToPlainString(u.t['EvCP/v'], {
-                            channel: (0, a.F6)(p, l.default, s.Z, !0),
+                            channel: (0, o.F6)(p, l.default, s.Z, !0),
                             name: null != e ? e.name : ''
                         }),
                         activity: e

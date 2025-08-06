@@ -2,8 +2,8 @@
 var r = n(392711),
     i = n.n(r);
 n(724522);
-var a = n(442837),
-    o = n(570140),
+var o = n(442837),
+    a = n(570140),
     s = n(749210),
     l = n(821849),
     c = n(232567),
@@ -26,9 +26,9 @@ var a = n(442837),
     A = n(509545),
     N = n(78839),
     C = n(936101),
-    w = n(868158),
-    R = n(483012),
-    P = n(955132);
+    R = n(868158),
+    P = n(483012),
+    w = n(955132);
 function D(e, t, n) {
     return (
         t in e
@@ -70,7 +70,7 @@ function x(e, t) {
     }
     return n;
 }
-function k(e, t) {
+function M(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -81,29 +81,29 @@ function k(e, t) {
         e
     );
 }
+function k(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = j(e, t);
+    if (Object.getOwnPropertySymbols) {
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+    }
+    return i;
+}
 function j(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = M(e, t);
-    if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
-    }
-    return i;
-}
-function M(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
         i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
 let U = new d.Z('ConnectionStore'),
-    G = new R.Z(
-        P.Wb,
+    G = new P.Z(
+        w.Wb,
         (e, t) => {
             var n;
             e =
@@ -115,21 +115,21 @@ let U = new d.Z('ConnectionStore'),
                       };
             let r = (0, E.q_)(t),
                 i = O.Z.getChannel(t.id),
-                a =
+                o =
                     null == i
                         ? void 0
                         : i.merge(
-                              k(L({}, r), {
+                              M(L({}, r), {
                                   recipients: i.recipients,
                                   bitrate: null != (n = r.bitrate) ? n : i.bitrate
                               })
                           );
-            return (e.channels.push(null != a ? a : r), e);
+            return (e.channels.push(null != o ? o : r), e);
         },
         (e) => 'CHANNEL_UPDATE' !== e
     ),
-    B = new R.Z(
-        P.Wb,
+    B = new P.Z(
+        w.Wb,
         (e, t) => (
             (e =
                 null == e
@@ -154,8 +154,8 @@ let U = new d.Z('ConnectionStore'),
         ),
         (e) => 'SOUNDBOARD_SOUNDS' !== e
     ),
-    Z = new R.Z(
-        P.Wb,
+    Z = new P.Z(
+        w.Wb,
         (e, t) => (
             (e =
                 null != e
@@ -168,8 +168,8 @@ let U = new d.Z('ConnectionStore'),
         ),
         (e) => 'GUILD_MEMBERS_CHUNK' !== e
     ),
-    F = new R.Z(
-        P.Wb,
+    F = new P.Z(
+        w.Wb,
         (e, t) => (
             (e =
                 null == e
@@ -228,23 +228,23 @@ function K(e) {
     });
 }
 function z(e) {
-    o.Z.dispatch(e).catch((t) =>
-        P.Wb.resetSocketOnDispatchError({
+    a.Z.dispatch(e).catch((t) =>
+        w.Wb.resetSocketOnDispatchError({
             error: t,
             action: e.type
         })
     );
 }
 function q(e, t, n) {
-    var r, a;
-    let { roles: o, nick: s, avatar: l, avatar_decoration_data: c, flags: d, premium_since: f, pending: _, joined_at: p, communication_disabled_until: h, unusual_dm_activity_until: m } = n,
+    var r, o;
+    let { roles: a, nick: s, avatar: l, avatar_decoration_data: c, flags: d, premium_since: f, pending: _, joined_at: p, communication_disabled_until: h, unusual_dm_activity_until: m } = n,
         g = v.ZP.getMember(e, t.id);
-    (null != g && g.nick === s && g.avatar === l && i().isEqual(g.roles, o) && (0, u.sr)(null != (r = g.avatarDecoration) ? r : null, null != c ? c : null) && g.premiumSince === f && g.isPending === _ && g.joinedAt === p && g.communicationDisabledUntil === h && g.flags === d && (null != (a = g.unusualDMActivityUntil) ? a : null) === (null != m ? m : null)) ||
+    (null != g && g.nick === s && g.avatar === l && i().isEqual(g.roles, a) && (0, u.sr)(null != (r = g.avatarDecoration) ? r : null, null != c ? c : null) && g.premiumSince === f && g.isPending === _ && g.joinedAt === p && g.communicationDisabledUntil === h && g.flags === d && (null != (o = g.unusualDMActivityUntil) ? o : null) === (null != m ? m : null)) ||
         z({
             type: 'GUILD_MEMBER_ADD',
             guildId: e,
             user: t,
-            roles: o,
+            roles: a,
             nick: s,
             avatar: l,
             avatarDecoration: c,
@@ -256,7 +256,7 @@ function q(e, t, n) {
             flags: d
         });
 }
-function $(e) {
+function X(e) {
     let { member: t, mentions: n, author: r, guild_id: i } = e;
     (null != t && null != i && q(i, r, t),
         null != n &&
@@ -267,7 +267,7 @@ function $(e) {
                 }
             }));
 }
-function X(e) {
+function Q(e) {
     return e.map((e) => {
         var t;
         return {
@@ -281,15 +281,15 @@ function X(e) {
         };
     });
 }
-function Q(e) {
-    let { guildId: t, user: n, status: r, activities: i, hiddenActivities: a, clientStatus: o, processedAtTimestamp: s } = e;
+function J(e) {
+    let { guildId: t, user: n, status: r, activities: i, hiddenActivities: o, clientStatus: a, processedAtTimestamp: s } = e;
     F.add({
         guildId: t,
         user: n,
         status: r,
-        clientStatus: o,
+        clientStatus: a,
         activities: i,
-        hiddenActivities: a,
+        hiddenActivities: o,
         processedAtTimestamp: s
     });
 }
@@ -298,8 +298,8 @@ function Q(e) {
     (e) => ('full' === e.data_mode ? null : O.o.loadGuildIds([e.id])),
     (e) => {
         m.Z.initialGuild.measure(() => {
-            a.ZP.Emitter.batched(() => {
-                let t = w.Fx(e, P.Wb.identifyStartTime);
+            o.ZP.Emitter.batched(() => {
+                let t = R.Fx(e, w.Wb.identifyStartTime);
                 null != T.default.getCurrentUser() &&
                     (z({
                         type: 'GUILD_CREATE',
@@ -333,9 +333,9 @@ function Q(e) {
 ),
     H(['READY_SUPPLEMENTAL'], (e) => {
         (m.Z.readySupplemental.measure(() => {
-            a.ZP.Emitter.batched(() => {
+            o.ZP.Emitter.batched(() => {
                 var t, n;
-                e = m.Z.hydrateReadySupplemental.measure(() => w.r$(e, P.Wb.identifyStartTime));
+                e = m.Z.hydrateReadySupplemental.measure(() => R.r$(e, w.Wb.identifyStartTime));
                 let r = (e) =>
                         e.map((e) => ({
                             user: e.user,
@@ -349,16 +349,16 @@ function Q(e) {
                 i.forEach((e) => {
                     e.presences = r(e.presences || []);
                 });
-                let a = e.presences ? r(e.presences) : [],
-                    o = (null != (t = e.lazy_private_channels) ? t : []).map((e) => (0, E.q_)(e)),
+                let o = e.presences ? r(e.presences) : [],
+                    a = (null != (t = e.lazy_private_channels) ? t : []).map((e) => (0, E.q_)(e)),
                     s = null != (n = e.game_invites) ? n : [];
                 m.Z.dispatchReadySupplemental.measure(() => {
                     var t;
                     z({
                         type: 'CONNECTION_OPEN_SUPPLEMENTAL',
                         guilds: i,
-                        presences: a,
-                        lazyPrivateChannels: o,
+                        presences: o,
+                        lazyPrivateChannels: a,
                         gameInvites: s,
                         userActivities: null != (t = e.user_activities) ? t : void 0
                     });
@@ -389,7 +389,7 @@ function Q(e) {
                         voiceStates: l,
                         initial: !0
                     }),
-                    P.GC.update());
+                    w.GC.update());
             });
         }),
             setTimeout(() => z({ type: 'POST_CONNECTION_OPEN' }), 2000));
@@ -398,7 +398,7 @@ function Q(e) {
         ['READY'],
         (e) => {
             var t;
-            let n = w.Eb(),
+            let n = R.Eb(),
                 r = e.guilds
                     .filter((e) => {
                         var t, n;
@@ -413,15 +413,15 @@ function Q(e) {
         (e, t, n) => {
             if (e.user.bot) return void z({ type: 'LOGOUT' });
             m.Z.ready.measure(() => {
-                a.ZP.Emitter.batched(() => {
-                    let t = (e = m.Z.hydrateReady.measure(() => w.IM(e, P.Wb.identifyStartTime, n))).private_channels.map((e) => (0, E.q_)(e)),
+                o.ZP.Emitter.batched(() => {
+                    let t = (e = m.Z.hydrateReady.measure(() => R.IM(e, w.Wb.identifyStartTime, n))).private_channels.map((e) => (0, E.q_)(e)),
                         r = e.guilds.filter((e) => !0 === e.unavailable && !0 !== e.geo_restricted).map((e) => e.id),
                         i = e.guilds.filter((e) => !0 !== e.unavailable),
-                        a = e.guilds.filter((e) => !0 === e.geo_restricted);
+                        o = e.guilds.filter((e) => !0 === e.geo_restricted);
                     i.forEach((e) => {
                         e.presences = [];
                     });
-                    let o = null == e.user_settings_proto ? void 0 : (0, g.ac)(e.user_settings_proto);
+                    let a = null == e.user_settings_proto ? void 0 : (0, g.ac)(e.user_settings_proto);
                     (m.Z.dispatchReady.measure(() => {
                         var n, s;
                         z({
@@ -448,15 +448,15 @@ function Q(e) {
                             apexExperiments: null != (n = e.apex_experiments) ? n : void 0,
                             requiredAction: e.required_action,
                             consents: e.consents,
-                            sessions: X(e.sessions || []),
+                            sessions: Q(e.sessions || []),
                             pendingPayments: e.pending_payments,
                             countryCode: null != (s = e.country_code) ? s : void 0,
                             guildJoinRequests: e.guild_join_requests || [],
-                            userSettingsProto: o,
+                            userSettingsProto: a,
                             apiCodeVersion: e.api_code_version,
                             auth: e.auth,
                             notificationSettings: { flags: e.notification_settings.flags },
-                            geoRestrictedGuilds: a,
+                            geoRestrictedGuilds: o,
                             explicitContentScanVersion: e.explicit_content_scan_version,
                             failedStates: e.failed_states
                         });
@@ -467,8 +467,8 @@ function Q(e) {
                                 token: e.auth_token,
                                 userId: e.user.id
                             }),
-                        P.RR.update(),
-                        P.GC.update());
+                        w.RR.update(),
+                        w.GC.update());
                 });
             });
         }
@@ -482,7 +482,7 @@ function Q(e) {
         });
     }),
     H(['RESUMED'], () => {
-        (P.RR.forceUpdate(), P.GC.forceUpdate(), z({ type: 'CONNECTION_RESUMED' }));
+        (w.RR.forceUpdate(), w.GC.forceUpdate(), z({ type: 'CONNECTION_RESUMED' }));
     }),
     H(['TYPING_START'], (e) => {
         (null != e.member && q(e.guild_id, e.member.user, e.member),
@@ -529,7 +529,7 @@ function Q(e) {
         ['MESSAGE_CREATE'],
         (e) => O.o.loadGuildIds([e.guild_id]),
         (e) => {
-            ($(e),
+            (X(e),
                 null != e.author &&
                     z({
                         type: 'MESSAGE_CREATE',
@@ -545,7 +545,7 @@ function Q(e) {
         ['MESSAGE_UPDATE'],
         (e) => O.o.loadGuildIds([e.guild_id]),
         (e) => {
-            ($(e),
+            (X(e),
                 z({
                     type: 'MESSAGE_UPDATE',
                     guildId: e.guild_id,
@@ -675,7 +675,7 @@ function Q(e) {
         (e) => O.o.loadGuildIds([e.guild_id]),
         (e, t) => {
             let { newly_created: n } = e,
-                r = j(e, ['newly_created']);
+                r = k(e, ['newly_created']);
             z({
                 type: t,
                 isNewlyCreated: n,
@@ -768,7 +768,7 @@ function Q(e) {
                     guildId: e.id
                 });
             else {
-                let t = w.J2(e);
+                let t = R.J2(e);
                 (s.Z.createGuild(t),
                     z({
                         type: 'VOICE_STATE_UPDATES',
@@ -824,7 +824,7 @@ function Q(e) {
                   }));
     }),
     H(['GUILD_MEMBERS_CHUNK'], (e) => {
-        a.ZP.Emitter.batched(() => {
+        o.ZP.Emitter.batched(() => {
             (Z.add({
                 guildId: e.guild_id,
                 members: e.members,
@@ -832,22 +832,22 @@ function Q(e) {
             }),
                 null != e.presences &&
                     e.presences.forEach((t) => {
-                        let { user: n, status: r, client_status: i, activities: a, hidden_activities: o, processed_at_timestamp: s } = t;
-                        return Q({
+                        let { user: n, status: r, client_status: i, activities: o, hidden_activities: a, processed_at_timestamp: s } = t;
+                        return J({
                             guildId: e.guild_id,
                             user: n,
                             status: r,
-                            activities: a,
-                            hiddenActivities: o,
+                            activities: o,
+                            hiddenActivities: a,
                             clientStatus: i,
                             processedAtTimestamp: s
                         });
                     }),
-                R.Z.flush('GUILD_MEMBERS_CHUNK'));
+                P.Z.flush('GUILD_MEMBERS_CHUNK'));
         });
     }),
     H(['THREAD_MEMBER_LIST_UPDATE'], (e) => {
-        a.ZP.Emitter.batched(() => {
+        o.ZP.Emitter.batched(() => {
             (z({
                 type: 'THREAD_MEMBER_LIST_UPDATE',
                 guildId: e.guild_id,
@@ -856,18 +856,18 @@ function Q(e) {
             }),
                 null != e.presences &&
                     e.presences.forEach((t) => {
-                        let { user: n, status: r, client_status: i, activities: a, hidden_activities: o, processed_at_timestamp: s } = t;
-                        return Q({
+                        let { user: n, status: r, client_status: i, activities: o, hidden_activities: a, processed_at_timestamp: s } = t;
+                        return J({
                             guildId: e.guild_id,
                             user: n,
                             status: r,
-                            activities: a,
-                            hiddenActivities: o,
+                            activities: o,
+                            hiddenActivities: a,
                             clientStatus: i,
                             processedAtTimestamp: s
                         });
                     }),
-                R.Z.flush());
+                P.Z.flush());
         });
     }),
     H(['GUILD_BAN_ADD', 'GUILD_BAN_REMOVE', 'GUILD_MEMBER_ADD', 'GUILD_MEMBER_UPDATE', 'GUILD_MEMBER_REMOVE'], (e, t) => {
@@ -1051,7 +1051,7 @@ function Q(e) {
         });
     }),
     H(['PRESENCE_UPDATE'], (e) => {
-        Q({
+        J({
             guildId: e.guild_id,
             user: e.user,
             status: e.status,
@@ -1070,7 +1070,7 @@ function Q(e) {
     H(['SESSIONS_REPLACE'], (e) => {
         z({
             type: 'SESSIONS_REPLACE',
-            sessions: X(e)
+            sessions: Q(e)
         });
     }),
     H(['VOICE_STATE_UPDATE'], (e) => {
@@ -1225,7 +1225,7 @@ function Q(e) {
             channelId: e.channel_id,
             messageId: e.message_id,
             reactions: e.votes.map((e) =>
-                k(L({}, e), {
+                M(L({}, e), {
                     emoji: {
                         id: e.answer_id,
                         name: ''
@@ -1317,13 +1317,13 @@ function Q(e) {
         });
     }),
     H(['GUILD_MEMBER_LIST_UPDATE'], (e) => {
-        a.ZP.Emitter.batched(() => {
+        o.ZP.Emitter.batched(() => {
             let t = (t) => {
                 if (null == t.member) return;
                 let { member: n } = t;
                 if ((q(e.guild_id, n.user, n), null == n.presence)) return;
                 let { presence: r } = n;
-                Q({
+                J({
                     guildId: e.guild_id,
                     user: r.user,
                     status: r.status,
@@ -1344,7 +1344,7 @@ function Q(e) {
                         t(i);
                 }
             }),
-                R.Z.flush(),
+                P.Z.flush(),
                 z({
                     type: 'GUILD_MEMBER_LIST_UPDATE',
                     guildId: e.guild_id,

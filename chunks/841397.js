@@ -1,12 +1,12 @@
 n.d(t, { Z: () => l });
 var r = n(255367),
     i = n(998502),
-    a = n(15594);
-function o() {
+    o = n(15594);
+function a() {
     return (0, r.jsx)('div', {
         children: (0, r.jsxs)('div', {
-            className: a.gradientBackground,
-            children: [(0, r.jsx)('div', { className: a.leftDarkEllipse }), (0, r.jsx)('div', { className: a.leftLightEllipse }), (0, r.jsx)('div', { className: a.rightDarkEllipse }), (0, r.jsx)('div', { className: a.rightLightEllipse }), (0, r.jsx)('div', { className: a.centerEllipse })]
+            className: o.gradientBackground,
+            children: [(0, r.jsx)('div', { className: o.leftDarkEllipse }), (0, r.jsx)('div', { className: o.leftLightEllipse }), (0, r.jsx)('div', { className: o.rightDarkEllipse }), (0, r.jsx)('div', { className: o.rightLightEllipse }), (0, r.jsx)('div', { className: o.centerEllipse })]
         })
     });
 }
@@ -106,4 +106,4 @@ function s() {
         ]
     });
 }
-let l = i.ZP.getEnableHardwareAcceleration() ? o : s;
+let l = i.ZP.getEnableHardwareAcceleration() ? a : s;

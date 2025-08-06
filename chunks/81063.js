@@ -1,7 +1,7 @@
 (n.d(t, {
     Vh: () => S,
     f: () => I,
-    hR: () => w,
+    hR: () => R,
     xF: () => T
 }),
     n(35282),
@@ -14,8 +14,8 @@
     n(388685));
 var r = n(512722),
     i = n.n(r),
-    a = n(544891),
-    o = n(570140),
+    o = n(544891),
+    a = n(570140),
     s = n(430449),
     l = n(710845),
     c = n(134432),
@@ -52,8 +52,8 @@ let d = 'mp',
                 let t = new URL(e, location.protocol + window.GLOBAL_ENV.MEDIA_PROXY_ENDPOINT),
                     n = e.toLowerCase().endsWith('.gif'),
                     r = e.toLowerCase().endsWith('.webp'),
-                    a = e.toLowerCase().endsWith('.avif');
-                return (n && t.searchParams.set('format', 'webp'), (n || r || a) && t.searchParams.set('animated', 'true'), t.toString());
+                    o = e.toLowerCase().endsWith('.avif');
+                return (n && t.searchParams.set('format', 'webp'), (n || r || o) && t.searchParams.set('animated', 'true'), t.toString());
             },
             serialize: (e) => e
         }
@@ -63,13 +63,13 @@ function y(e) {
     return Date.now() - e > f;
 }
 async function O(e) {
-    let { body: t } = await a.tn.get({
+    let { body: t } = await o.tn.get({
         url: u.ANM.APPLICATION_ASSETS(e),
         oldFormErrors: !0,
         rejectWithError: !1
     });
     return (
-        o.Z.dispatch({
+        a.Z.dispatch({
             type: 'APPLICATION_ASSETS_UPDATE',
             applicationId: e,
             assets: t
@@ -96,7 +96,7 @@ function T(e, t, n) {
     return null != window.GLOBAL_ENV.CDN_HOST
         ? ''.concat(location.protocol, '//').concat(window.GLOBAL_ENV.CDN_HOST, '/app-assets/').concat(e, '/').concat(t, '.png').concat(i)
         : ''
-              .concat((0, a.K0)(), '/applications/')
+              .concat((0, o.K0)(), '/applications/')
               .concat(e, '/app-assets/')
               .concat(t, '.png')
               .concat(i);
@@ -108,7 +108,7 @@ async function S(e) {
 async function A(e, t) {
     let n = t.filter((e) => null != e && !Object.prototype.hasOwnProperty.call(b, e) && null == b[e]);
     if (0 === n.length) return;
-    let { body: r } = await a.tn.post({
+    let { body: r } = await o.tn.post({
         url: u.ANM.APPLICATION_EXTERNAL_ASSETS(e),
         body: { urls: n },
         oldFormErrors: !0,
@@ -122,31 +122,31 @@ function N(e, t) {
         for (let r = 0; r < e.length; r++) {
             let i = e[r];
             if (null == i) continue;
-            let a = Object.prototype.hasOwnProperty.call(b, i) ? b[i] : void 0;
-            null != a && ((t[r] = I(d, a)), n++);
+            let o = Object.prototype.hasOwnProperty.call(b, i) ? b[i] : void 0;
+            null != o && ((t[r] = I(d, o)), n++);
         }
     return n === e.length;
 }
 function C(e, t, n, r) {
     let i = !1;
-    for (let a = 0; a < e.length; a++) {
-        let o = e[a];
-        if (null == o || null != t[a]) continue;
-        let s = Object.prototype.hasOwnProperty.call(n, o) && n[o];
+    for (let o = 0; o < e.length; o++) {
+        let a = e[o];
+        if (null == a || null != t[o]) continue;
+        let s = Object.prototype.hasOwnProperty.call(n, a) && n[a];
         if (!s) {
             if (null == r || r <= 0) {
-                t[a] = null;
+                t[o] = null;
                 continue;
             }
             i = !0;
         }
-        t[a] = s.id;
+        t[o] = s.id;
     }
     return i;
 }
-async function w(e, t) {
+async function R(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
-    o.Z.dispatch({
+    a.Z.dispatch({
         type: 'APPLICATION_ASSETS_FETCH',
         applicationId: e
     });
@@ -154,21 +154,21 @@ async function w(e, t) {
         i = t.filter((e) => (null == e ? void 0 : e.startsWith('http:')) || (null == e ? void 0 : e.startsWith('https:')));
     if ((i.length > 0 && (await A(e, i)), N(t, r)))
         return (
-            o.Z.dispatch({
+            a.Z.dispatch({
                 type: 'APPLICATION_ASSETS_FETCH_SUCCESS',
                 applicationId: e
             }),
             r
         );
-    let a = await S(e);
-    return (o.Z.dispatch({
+    let o = await S(e);
+    return (a.Z.dispatch({
         type: 'APPLICATION_ASSETS_UPDATE',
         applicationId: e,
-        assets: a
+        assets: o
     }),
-    C(t, r, a, n))
-        ? O(e).then(() => w(e, t, n - 1))
-        : (o.Z.dispatch({
+    C(t, r, o, n))
+        ? O(e).then(() => R(e, t, n - 1))
+        : (a.Z.dispatch({
               type: 'APPLICATION_ASSETS_FETCH_SUCCESS',
               applicationId: e
           }),

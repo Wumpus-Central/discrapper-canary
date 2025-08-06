@@ -17,8 +17,8 @@ var c = a(622916),
     R = a(428983),
     d = a(622574),
     N = a(288570);
-let f = {},
-    A = {};
+let A = {},
+    f = {};
 function T(t, e = !1) {
     return S('cls', t, D, r, e);
 }
@@ -37,7 +37,7 @@ function O(t) {
 function P(t, e) {
     return (
         U(t, e),
-        A[t] ||
+        f[t] ||
             ((function (t) {
                 let e = {};
                 ('event' === t && (e.durationThreshold = 0),
@@ -49,12 +49,12 @@ function P(t, e) {
                         e
                     ));
             })(t),
-            (A[t] = !0)),
+            (f[t] = !0)),
         b(t, e)
     );
 }
 function g(t, e) {
-    let a = f[t];
+    let a = A[t];
     if (a && a.length)
         for (let r of a)
             try {
@@ -103,15 +103,15 @@ function y() {
 }
 function S(t, e, a, r, _ = !1) {
     let n;
-    return (U(t, e), A[t] || ((n = a()), (A[t] = !0)), r && e({ metric: r }), b(t, e, _ ? n : void 0));
+    return (U(t, e), f[t] || ((n = a()), (f[t] = !0)), r && e({ metric: r }), b(t, e, _ ? n : void 0));
 }
 function U(t, e) {
-    ((f[t] = f[t] || []), f[t].push(e));
+    ((A[t] = A[t] || []), A[t].push(e));
 }
 function b(t, e, a) {
     return () => {
         a && a();
-        let r = f[t];
+        let r = A[t];
         if (!r) return;
         let _ = r.indexOf(e);
         -1 !== _ && r.splice(_, 1);

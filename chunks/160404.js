@@ -1,8 +1,8 @@
 (n.d(t, { Z: () => A }), n(388685), n(997841));
 var r,
     i = n(442837),
-    a = n(570140),
-    o = n(485386),
+    o = n(570140),
+    a = n(485386),
     s = n(430824),
     l = n(630388),
     c = n(251625),
@@ -83,25 +83,25 @@ function v(e) {
     if (null == n || null == E[n]) return !1;
     let i = E[n];
     if (null == i || i.type !== d.z.NEW_MEMBER) return !1;
-    let a = null != (t = i.optInChannels) ? t : new Set();
+    let o = null != (t = i.optInChannels) ? t : new Set();
     return (
         u.default.keys(r).forEach((e) => {
             var t;
             let n = r[e];
-            l.yE(null != (t = n.flags) ? t : 0, _.ic.OPT_IN_ENABLED) ? a.add(e) : a.delete(e);
+            l.yE(null != (t = n.flags) ? t : 0, _.ic.OPT_IN_ENABLED) ? o.add(e) : o.delete(e);
         }),
-        (i.optInChannels = a),
+        (i.optInChannels = o),
         !0
     );
 }
 function I(e) {
     var t;
-    let { guildId: n, optionId: r, selected: i, removedOptionIds: a } = e;
+    let { guildId: n, optionId: r, selected: i, removedOptionIds: o } = e;
     if (null == n || null == E[n]) return !1;
-    let o = E[n];
-    if (null == o || o.type !== d.z.NEW_MEMBER) return !1;
-    let s = null != (t = o.onboardingResponses) ? t : new Set();
-    return (null != a && a.length > 0 && a.forEach((e) => s.delete(e)), i ? s.add(r) : s.delete(r), (o.onboardingResponses = s), !0);
+    let a = E[n];
+    if (null == a || a.type !== d.z.NEW_MEMBER) return !1;
+    let s = null != (t = a.onboardingResponses) ? t : new Set();
+    return (null != o && o.length > 0 && o.forEach((e) => s.delete(e)), i ? s.add(r) : s.delete(r), (a.onboardingResponses = s), !0);
 }
 function T(e) {
     let { guildId: t, roles: n, flags: r } = e;
@@ -111,7 +111,7 @@ function T(e) {
         null != i &&
         (null != n &&
             (i.roles = n.reduce((e, n) => {
-                let r = o.Z.getRole(t, n);
+                let r = a.Z.getRole(t, n);
                 return (null != r && (e[n] = r), e);
             }, {})),
         null != r && i.type === d.z.NEW_MEMBER && (i.memberOptions.flags = r),
@@ -120,7 +120,7 @@ function T(e) {
 }
 class S extends (r = i.ZP.Store) {
     initialize() {
-        this.waitFor(s.Z, o.Z);
+        this.waitFor(s.Z, a.Z);
     }
     hasViewingRoles() {
         return !(0, c.ld)(E);
@@ -192,7 +192,7 @@ class S extends (r = i.ZP.Store) {
     }
 }
 p(S, 'displayName', 'ImpersonateStore');
-let A = new S(a.Z, {
+let A = new S(o.Z, {
     IMPERSONATE_UPDATE: b,
     IMPERSONATE_STOP: y,
     GUILD_ROLE_DELETE: O,

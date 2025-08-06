@@ -2,22 +2,22 @@
 var r = n(255367);
 n(73800);
 var i = n(120356),
-    a = n.n(i),
-    o = n(481060),
+    o = n.n(i),
+    a = n(481060),
     s = n(360044);
 let l = (e) => {
     let { renderTitle: t, renderTagline: n, renderActions: i, renderMedia: l, className: c, isHorizontal: u = !1 } = e;
     return (0, r.jsxs)('div', {
-        className: a()(s.tile, { [s.tileHorizontal]: u }, c),
+        className: o()(s.tile, { [s.tileHorizontal]: u }, c),
         children: [
             (0, r.jsx)('div', {
-                className: a()(s.media, { [s.mediaHorizontal]: u }),
+                className: o()(s.media, { [s.mediaHorizontal]: u }),
                 children: null == l ? void 0 : l()
             }),
             (0, r.jsxs)('div', {
                 className: s.description,
                 children: [
-                    (0, r.jsx)(o.H, {
+                    (0, r.jsx)(a.H, {
                         className: s.title,
                         children: null == t ? void 0 : t()
                     }),

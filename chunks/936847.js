@@ -1,8 +1,8 @@
 n.d(t, { Z: () => f });
 var r = n(255367),
     i = n(73800),
-    a = n(576125),
-    o = n(465858),
+    o = n(576125),
+    a = n(465858),
     s = n(112843),
     l = n(524484);
 function c(e, t, n) {
@@ -37,16 +37,16 @@ function u(e) {
 function d(e) {
     let { callTileRef: t, isFiring: n } = e,
         r = (0, s.Z)(),
-        a = (0, o.Z)(t);
+        o = (0, a.Z)(t);
     return (
         i.useEffect(() => {
-            n && null != a && null != t && r.fire(a.x + t.clientWidth / 2, a.y + t.clientHeight / 2, { countMultiplier: 4 });
-        }, [t, r, n, a]),
+            n && null != o && null != t && r.fire(o.x + t.clientWidth / 2, o.y + t.clientHeight / 2, { countMultiplier: 4 });
+        }, [t, r, n, o]),
         null
     );
 }
 function f(e) {
-    return (0, r.jsx)(a.Z, {
+    return (0, r.jsx)(o.Z, {
         confettiLocation: l.Hn.CALL_TILE,
         children: (0, r.jsx)(d, u({}, e))
     });

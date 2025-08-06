@@ -8,8 +8,8 @@
     n(35282));
 var r = n(570140),
     i = n(566620),
-    a = n(728345),
-    o = n(812206),
+    o = n(728345),
+    a = n(812206),
     s = n(973616),
     l = n(630388),
     c = n(591759),
@@ -22,8 +22,8 @@ async function f(e, t) {
     });
     try {
         if (!(await (0, i.W5)(e))) throw Error('Do not have access!');
-        let n = o.Z.getApplication(e);
-        null == n && (n = s.ZP.createFromServer(await a.ZP.fetchApplication(e)));
+        let n = a.Z.getApplication(e);
+        null == n && (n = s.ZP.createFromServer(await o.ZP.fetchApplication(e)));
         let f = (0, l.yE)(n.flags, d.udG.EMBEDDED);
         if (f && (null == t || !c.Z.URL_REGEX.test(t))) throw Error('Invalid Origin URL for embedded application');
         return (

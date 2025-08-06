@@ -1,8 +1,8 @@
 (n.d(t, { Z: () => l }), n(997841));
 var r = n(81825),
     i = n(397047),
-    a = n(630388),
-    o = n(474936);
+    o = n(630388),
+    a = n(474936);
 function s(e, t, n) {
     return (
         t in e
@@ -18,7 +18,7 @@ function s(e, t, n) {
 }
 class l extends r.Z {
     static createFromServer(e) {
-        var t, n, r, i, a, o, s, c;
+        var t, n, r, i, o, a, s, c;
         return new l({
             id: e.id,
             trialId: e.trial_id,
@@ -29,8 +29,8 @@ class l extends r.Z {
             inboundBodyText: null != (n = e.inbound_body_text) ? n : '',
             inboundHelpCenterLink: null != (r = e.inbound_help_center_link) ? r : '',
             outboundTitle: null != (i = e.outbound_title) ? i : '',
-            outboundRedemptionModalBody: null != (a = e.outbound_redemption_modal_body) ? a : '',
-            outboundTermsAndConditions: null != (o = e.outbound_terms_and_conditions) ? o : '',
+            outboundRedemptionModalBody: null != (o = e.outbound_redemption_modal_body) ? o : '',
+            outboundTermsAndConditions: null != (a = e.outbound_terms_and_conditions) ? a : '',
             outboundRedemptionPageLink: null != (s = e.outbound_redemption_page_link) ? s : '',
             outboundRedemptionUrlFormat: null != (c = e.outbound_redemption_url_format) ? c : '',
             flags: e.flags,
@@ -49,7 +49,7 @@ class l extends r.Z {
         return this.promotionType === i.$.MARKETING_MOMENT;
     }
     hasFlag(e) {
-        return (0, a.yE)(this.flags, e);
+        return (0, o.yE)(this.flags, e);
     }
     isCountryRestricted(e) {
         switch (this.promotionType) {
@@ -62,7 +62,7 @@ class l extends r.Z {
         }
     }
     isRedeemableByTrialUsers() {
-        return this.hasFlag(o.TD.IS_OUTBOUND_REDEEMABLE_BY_TRIAL_USERS);
+        return this.hasFlag(a.TD.IS_OUTBOUND_REDEEMABLE_BY_TRIAL_USERS);
     }
     constructor(e) {
         var t, n, r;

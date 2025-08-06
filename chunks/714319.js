@@ -1,22 +1,10 @@
 n.d(t, {
-    G: () => l,
-    Z: () => h
+    G: () => a,
+    Z: () => o
 });
-var r = n(536895);
-function i(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0
-              })
-            : (e[t] = n),
-        e
-    );
-}
-function a(e) {
+var r,
+    l = n(536895);
+function s(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -27,75 +15,59 @@ function a(e) {
                 })
             )),
             r.forEach(function (t) {
-                i(e, t, n[t]);
+                var r;
+                ((r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = r));
             }));
     }
     return e;
 }
-function o(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        (t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r));
-    }
-    return n;
-}
-function s(e, t) {
+function i(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : o(Object(t)).forEach(function (n) {
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-var l = (function (e) {
-    return ((e.UPDATE_ITEM_COUNT = 'UPDATE_ITEM_COUNT'), (e.SET_FOCUSED_INDEX = 'SET_FOCUSED_INDEX'), e);
-})({});
-function c(e, t) {
-    let { itemCount: n } = t;
-    return s(a({}, e), {
-        itemCount: n,
-        focusedIndex: Math.min(n - 1, e.focusedIndex)
-    });
-}
-function u(e, t) {
-    let { index: n } = t;
-    return s(a({}, e), { focusedIndex: Math.max(0, Math.min(n, e.itemCount - 1)) });
-}
-function d(e, t) {
-    return s(a({}, e), { focusedIndex: Math.max(0, e.focusedIndex - 1) });
-}
-function f(e, t) {
-    return s(a({}, e), { focusedIndex: Math.min(e.focusedIndex + 1, e.itemCount - 1) });
-}
-function _(e, t) {
-    return s(a({}, e), { focusedIndex: 0 });
-}
-function p(e, t) {
-    return s(a({}, e), { focusedIndex: e.itemCount - 1 });
-}
-function h(e, t) {
+var a = (((r = {}).UPDATE_ITEM_COUNT = 'UPDATE_ITEM_COUNT'), (r.SET_FOCUSED_INDEX = 'SET_FOCUSED_INDEX'), r);
+function o(e, t) {
     switch (t.type) {
-        case r.Us.NAVIGATE_UP:
-            return d(e, t);
-        case r.Us.NAVIGATE_DOWN:
-            return f(e, t);
-        case r.Us.NAVIGATE_START:
-            return _(e, t);
-        case r.Us.NAVIGATE_END:
-            return p(e, t);
+        case l.Us.NAVIGATE_UP:
+            return i(s({}, e), { focusedIndex: Math.max(0, e.focusedIndex - 1) });
+        case l.Us.NAVIGATE_DOWN:
+            return i(s({}, e), { focusedIndex: Math.min(e.focusedIndex + 1, e.itemCount - 1) });
+        case l.Us.NAVIGATE_START:
+            return i(s({}, e), { focusedIndex: 0 });
+        case l.Us.NAVIGATE_END:
+            return i(s({}, e), { focusedIndex: e.itemCount - 1 });
         case 'UPDATE_ITEM_COUNT':
-            return c(e, t);
+            let { itemCount: n } = t;
+            return i(s({}, e), {
+                itemCount: n,
+                focusedIndex: Math.min(n - 1, e.focusedIndex)
+            });
         case 'SET_FOCUSED_INDEX':
-            return u(e, t);
-        case r.Us.SELECT_FOCUSED_ITEM:
+            let { index: r } = t;
+            return i(s({}, e), { focusedIndex: Math.max(0, Math.min(r, e.itemCount - 1)) });
+        case l.Us.SELECT_FOCUSED_ITEM:
             break;
         default:
             console.warn('Listbox navigator was given an unhandled action '.concat(t.type));

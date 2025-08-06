@@ -1,8 +1,8 @@
 (n.d(t, { K: () => m }), n(388685));
 var r = n(255367),
     i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(530892),
     l = n.n(s),
     c = n(265381);
@@ -64,8 +64,8 @@ function p(e, t) {
         r,
         i = h(e, t);
     if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
@@ -74,12 +74,12 @@ function h(e, t) {
     var n,
         r,
         i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
 let m = i.forwardRef(function (e, t) {
-        var { as: n = 'div', gap: i = 8, direction: a = 'vertical', align: s = 'stretch', justify: l = 'start', wrap: u = !1, padding: f = 0, style: h, className: m, children: b } = e,
+        var { as: n = 'div', gap: i = 8, direction: o = 'vertical', align: s = 'stretch', justify: l = 'start', wrap: u = !1, padding: f = 0, style: h, className: m, children: b } = e,
             y = p(e, ['as', 'gap', 'direction', 'align', 'justify', 'wrap', 'padding', 'style', 'className', 'children']);
         return (0, r.jsx)(
             n,
@@ -89,9 +89,9 @@ let m = i.forwardRef(function (e, t) {
                         ref: t,
                         'data-align': s,
                         'data-justify': l,
-                        'data-direction': a,
+                        'data-direction': o,
                         'data-wrap': u,
-                        className: o()(c.stack, m),
+                        className: a()(c.stack, m),
                         style: d(_(d({}, h), { gap: g(i) }), E(f))
                     },
                     y

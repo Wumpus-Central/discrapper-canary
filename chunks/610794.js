@@ -17,14 +17,14 @@ var i = n(255367),
     x = n(981631),
     _ = n(856651),
     j = n(388032),
-    C = n(6318);
-function E(e) {
+    E = n(6318);
+function C(e) {
     var t;
     let { account: n, refreshed: a, handleRefresh: c } = e,
         [d, u] = r.useState(!1),
         p = null != (t = n.metadata) ? t : {},
         f = (0, s.e7)([h.default], () => h.default.locale),
-        E = r.useCallback(async () => {
+        C = r.useCallback(async () => {
             u(!0);
             try {
                 await c(n);
@@ -35,22 +35,22 @@ function E(e) {
         O = null;
     switch (n.type) {
         case x.ABu.REDDIT:
-            O = (0, g.oP)(p, C.metadataItem);
+            O = (0, g.oP)(p, E.metadataItem);
             break;
         case x.ABu.STEAM:
-            O = (0, g.Dq)(p, C.metadataItem);
+            O = (0, g.Dq)(p, E.metadataItem);
             break;
         case x.ABu.TWITTER:
-            O = (0, g.rJ)(p, C.metadataItem);
+            O = (0, g.rJ)(p, E.metadataItem);
             break;
         case x.ABu.EBAY:
-            O = (0, g.ul)(p, C.metadataItem);
+            O = (0, g.ul)(p, E.metadataItem);
             break;
         case x.ABu.PAYPAL:
-            O = (0, g.li)(p, C.metadataItem);
+            O = (0, g.li)(p, E.metadataItem);
             break;
         case x.ABu.TIKTOK:
-            O = (0, g.hf)(p, C.metadataItem);
+            O = (0, g.hf)(p, E.metadataItem);
     }
     let v = (0, m.FI)(p[_.PC.CREATED_AT], f),
         S = null,
@@ -70,17 +70,17 @@ function E(e) {
             (T = j.intl.string(j.t['LVh3//']))),
         a && (T = j.intl.string(j.t.i4jeWV)),
         (0, i.jsxs)('div', {
-            className: C.metadataContainer,
+            className: E.metadataContainer,
             children: [
                 S,
                 null == O
                     ? void 0
                     : O.map((e, t) =>
                           (0, i.jsxs)(i.Fragment, {
-                              children: [e, t < O.length - 1 ? (0, i.jsx)('span', { className: C.dot }) : null]
+                              children: [e, t < O.length - 1 ? (0, i.jsx)('span', { className: E.dot }) : null]
                           })
                       ),
-                null != O && O.length > 0 && null != v ? (0, i.jsx)('div', { className: C.dot }) : null,
+                null != O && O.length > 0 && null != v ? (0, i.jsx)('div', { className: E.dot }) : null,
                 null != v
                     ? (0, i.jsx)(
                           o.Text,
@@ -95,14 +95,14 @@ function E(e) {
                 (0, i.jsx)(
                     l.zx,
                     {
-                        className: C.metadataRefreshButton,
+                        className: E.metadataRefreshButton,
                         look: l.zx.Looks.OUTLINED,
                         color: a ? l.zx.Colors.GREEN : l.zx.Colors.PRIMARY,
                         size: l.zx.Sizes.MIN,
                         submitting: d,
                         disabled: a,
                         'aria-label': j.intl.string(j.t.sCkLYG),
-                        onClick: a ? void 0 : E,
+                        onClick: a ? void 0 : C,
                         children: T
                     },
                     'refresh-button'
@@ -124,18 +124,18 @@ function O(e) {
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsxs)('div', {
-                className: C.activityRow,
+                className: E.activityRow,
                 children: [
                     (0, i.jsx)('img', {
                         alt: b.name,
-                        className: C.connectionIcon,
+                        className: E.connectionIcon,
                         src: (0, a.wj)(f) ? b.icon.darkSVG : b.icon.lightSVG
                     }),
                     (0, i.jsxs)('div', {
-                        className: C.activitySettings,
+                        className: E.activitySettings,
                         children: [
                             (0, i.jsxs)(o.j7V, {
-                                className: C.visibilitySwitch,
+                                className: E.visibilitySwitch,
                                 hideBorder: !0,
                                 value: 1 === l,
                                 onChange: function (e) {
@@ -158,7 +158,7 @@ function O(e) {
                                         children: b.name
                                     }),
                                     x &&
-                                        (0, i.jsx)(E, {
+                                        (0, i.jsx)(C, {
                                             account: t,
                                             refreshed: s.includes(t.id),
                                             handleRefresh: n
@@ -167,7 +167,7 @@ function O(e) {
                             }),
                             x &&
                                 (0, i.jsx)(o.j7V, {
-                                    className: C.additionalDetailsSwitch,
+                                    className: E.additionalDetailsSwitch,
                                     hideBorder: !0,
                                     disabled: 1 !== l || null == t.metadata,
                                     value: 1 === g,
@@ -194,7 +194,7 @@ function O(e) {
                     })
                 ]
             }),
-            (0, i.jsx)('div', { className: C.divider })
+            (0, i.jsx)('div', { className: E.divider })
         ]
     });
 }
@@ -212,11 +212,11 @@ function v() {
     return 0 === t.length
         ? null
         : (0, i.jsxs)(o.hjN, {
-              className: C.container,
+              className: E.container,
               children: [
                   (0, i.jsx)(o.vwX, {
                       tag: o.RB0.H5,
-                      className: C.title,
+                      className: E.title,
                       children: j.intl.string(j.t.aw0GVV)
                   }),
                   t.map((e) =>

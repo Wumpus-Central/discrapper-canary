@@ -1,8 +1,8 @@
 (n.d(t, { Z: () => b }), n(415506), n(997841));
 var r = n(149765),
     i = n(81825),
-    a = n(864106),
-    o = n(131016),
+    o = n(864106),
+    a = n(131016),
     s = n(602210),
     l = n(4242),
     c = n(768581),
@@ -187,19 +187,19 @@ class b extends i.Z {
         return this.avatarDecorationData;
     }
     set avatarDecoration(e) {
-        this.avatarDecorationData = (0, a.FG)(e);
+        this.avatarDecorationData = (0, o.FG)(e);
     }
     get nameplate() {
         var e;
         return (0, l.Pb)(null == (e = this.collectibles) ? void 0 : e.nameplate);
     }
     constructor(e) {
-        var t, n, i, a, l, c, u, d, f, p, m, g, E, b, y, O, v, I, T, S, A, N, C, w, R, P, D, L, x, k, j, M, U;
+        var t, n, i, o, l, c, u, d, f, p, m, g, E, b, y, O, v, I, T, S, A, N, C, R, P, w, D, L, x, M, k, j, U;
         (super(), h(this, 'id', void 0), h(this, 'username', void 0), h(this, 'discriminator', void 0), h(this, 'avatar', void 0), h(this, 'avatarDecorationData', void 0), h(this, 'banner', void 0), h(this, 'email', void 0), h(this, 'verified', void 0), h(this, 'bot', void 0), h(this, 'system', void 0), h(this, 'mfaEnabled', void 0), h(this, 'mobile', void 0), h(this, 'desktop', void 0), h(this, 'premiumType', void 0), h(this, 'flags', void 0), h(this, 'publicFlags', void 0), h(this, 'purchasedFlags', void 0), h(this, 'premiumUsageFlags', void 0), h(this, 'phone', void 0), h(this, 'nsfwAllowed', void 0), h(this, 'ageVerificationStatus', void 0), h(this, 'guildMemberAvatars', void 0), h(this, 'hasBouncedEmail', void 0), h(this, 'personalConnectionId', void 0), h(this, 'globalName', void 0), h(this, 'primaryGuild', void 0), h(this, 'collectibles', void 0), h(this, 'displayNameStyles', void 0), h(this, 'hasFlag', (e) => !1), h(this, 'isStaff', () => !1), h(this, 'isStaffPersonal', () => !1), h(this, 'hasAnyStaffLevel', () => !1));
         let G = null != (n = e.premium_type) ? n : e.premiumType;
         ((this.id = e.id),
             (this.username = null != (i = e.username) ? i : ''),
-            (this.discriminator = null != (a = e.discriminator) ? a : _.fo$),
+            (this.discriminator = null != (o = e.discriminator) ? o : _.fo$),
             (this.avatar = null != (l = e.avatar) ? l : null),
             (this.avatarDecoration = null != (c = e.avatar_decoration_data) ? c : e.avatarDecorationData),
             (this.email = null != (u = e.email) ? u : null),
@@ -216,15 +216,15 @@ class b extends i.Z {
             (this.premiumUsageFlags = null != (A = null != (S = e.premium_usage_flags) ? S : e.premiumUsageFlags) ? A : 0),
             (this.phone = null != (N = e.phone) ? N : null),
             (this.nsfwAllowed = null != (C = e.nsfw_allowed) ? C : e.nsfwAllowed),
-            (this.ageVerificationStatus = null != (w = e.age_verification_status) ? w : e.ageVerificationStatus),
-            (this.guildMemberAvatars = null != (R = e.guildMemberAvatars) ? R : {}),
-            (this.hasBouncedEmail = null != (D = null != (P = e.has_bounced_email) ? P : e.hasBouncedEmail) && D),
+            (this.ageVerificationStatus = null != (R = e.age_verification_status) ? R : e.ageVerificationStatus),
+            (this.guildMemberAvatars = null != (P = e.guildMemberAvatars) ? P : {}),
+            (this.hasBouncedEmail = null != (D = null != (w = e.has_bounced_email) ? w : e.hasBouncedEmail) && D),
             (this.personalConnectionId = null != (x = null != (L = e.personal_connection_id) ? L : e.personalConnectionId) ? x : null),
-            (this.globalName = null != (k = e.global_name) ? k : e.globalName),
+            (this.globalName = null != (M = e.global_name) ? M : e.globalName),
             (this.banner = e.banner),
-            (this.primaryGuild = (0, s.l)(null != (M = null != (j = e.primary_guild) ? j : e.primaryGuild) ? M : null)),
+            (this.primaryGuild = (0, s.l)(null != (j = null != (k = e.primary_guild) ? k : e.primaryGuild) ? j : null)),
             (this.collectibles = e.collectibles),
-            (this.displayNameStyles = null != (U = e.displayNameStyles) ? U : (0, o.bN)(e.display_name_styles)),
+            (this.displayNameStyles = null != (U = e.displayNameStyles) ? U : (0, a.bN)(e.display_name_styles)),
             Object.defineProperties(this, {
                 hasFlag: {
                     writable: !1,

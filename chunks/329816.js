@@ -1,8 +1,8 @@
-n.d(t, { Z: () => J });
+n.d(t, { Z: () => $ });
 var r = n(255367),
     i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(670481),
     l = n(873546),
     c = n(442837),
@@ -25,15 +25,15 @@ var r = n(255367),
     A = n(260035),
     N = n(482215),
     C = n(366841),
-    w = n(947519),
-    R = n(859678),
-    P = n(314910),
+    R = n(947519),
+    P = n(859678),
+    w = n(314910),
     D = n(84615),
     L = n(429142),
     x = n(813744),
-    k = n(746106),
-    j = n(526665),
-    M = n(314897),
+    M = n(746106),
+    k = n(526665),
+    j = n(314897),
     U = n(819640),
     G = n(358085),
     B = n(663993),
@@ -61,37 +61,37 @@ var r = n(255367),
         createPromise: () => Promise.all([n.e('50448'), n.e('80451'), n.e('30634'), n.e('58493')]).then(n.bind(n, 80753)),
         webpackId: 80753
     }));
-let $ = (0, B.Un)({
+let X = (0, B.Un)({
         createPromise: () => n.e('67110').then(n.bind(n, 177741)),
         webpackId: 177741
     }),
-    X = (0, B.Un)({
+    Q = (0, B.Un)({
         createPromise: () => n.e('13474').then(n.bind(n, 420541)),
         webpackId: 420541
     }),
-    Q = i.memo(function () {
+    J = i.memo(function () {
         let e = (0, c.e7)([U.Z], () => U.Z.hasLayers()),
-            t = (0, j.wy)('AppSkeleton'),
+            t = (0, k.wy)('AppSkeleton'),
             n = (0, c.e7)([U.Z], () => U.Z.getLayers().includes(z.S9g.USER_SETTINGS)),
             i = (0, d.s9z)(d.$sL);
         if (!n || !t)
             return (0, r.jsx)(K.Dg, {
                 fixed: !0,
-                show: e || i || !M.default.isAuthenticated()
+                show: e || i || !j.default.isAuthenticated()
             });
     }),
-    J = function (e) {
+    $ = function (e) {
         let { children: t, skipsSettingDefaultPageTitle: n } = e,
-            a = (0, G.getPlatform)(),
+            o = (0, G.getPlatform)(),
             u = l.tq || l.Em,
             m = (0, c.e7)([E.Z], () => (E.Z.useForcedColors ? 'yes' : 'no')),
-            j = i.useRef(document.body),
-            M = ''.concat(m);
+            k = i.useRef(document.body),
+            j = ''.concat(m);
         return (
             (0, C.G)(),
-            (0, R.G)('AppSkeleton'),
+            (0, P.G)('AppSkeleton'),
             (0, r.jsx)(
-                k.w,
+                M.w,
                 {
                     children: (0, r.jsxs)(b.Z, {
                         children: [
@@ -99,7 +99,7 @@ let $ = (0, B.Un)({
                             (0, r.jsx)(h.T, {
                                 children: (0, r.jsx)(H.Z, {
                                     children: (0, r.jsxs)(d.JcV, {
-                                        containerRef: j,
+                                        containerRef: k,
                                         children: [
                                             (0, r.jsx)(W.Co, {}),
                                             (0, r.jsx)(Y.ZP, {}),
@@ -107,11 +107,11 @@ let $ = (0, B.Un)({
                                             (0, r.jsx)(g.Wu, {
                                                 appContext: z.IlC.APP,
                                                 renderWindow: window,
-                                                children: (0, r.jsxs)(P.yP, {
+                                                children: (0, r.jsxs)(w.yP, {
                                                     children: [
-                                                        null != a ? (0, r.jsx)(Q, {}) : null,
+                                                        null != o ? (0, r.jsx)(J, {}) : null,
                                                         (0, r.jsxs)('div', {
-                                                            className: o()(q.appAsidePanelWrapper, u && q.mobileAppAsidePanelWrapper),
+                                                            className: a()(q.appAsidePanelWrapper, u && q.mobileAppAsidePanelWrapper),
                                                             children: [
                                                                 (0, r.jsx)(N.K, {}),
                                                                 (0, r.jsx)('div', {
@@ -124,7 +124,7 @@ let $ = (0, B.Un)({
                                                                                 children: (0, r.jsxs)(S.p, {
                                                                                     children: [
                                                                                         (0, r.jsx)('div', {
-                                                                                            className: o()(u ? q.mobileApp : q.app),
+                                                                                            className: a()(u ? q.mobileApp : q.app),
                                                                                             children: t
                                                                                         }),
                                                                                         (0, r.jsx)(f.Z, {}),
@@ -133,13 +133,13 @@ let $ = (0, B.Un)({
                                                                                         (0, r.jsx)(d.nKe, {}),
                                                                                         (0, r.jsx)(p.Z, {}),
                                                                                         (0, r.jsx)(D.Ox, {}),
-                                                                                        (0, r.jsx)(P.Un, {}),
+                                                                                        (0, r.jsx)(w.Un, {}),
                                                                                         (0, r.jsx)(L.ot, {}),
                                                                                         (0, r.jsx)(d.Ixi, {}),
                                                                                         (0, r.jsx)(v.Z, {}),
                                                                                         (0, r.jsx)(x.Z, {}),
-                                                                                        (0, r.jsx)($, {}),
-                                                                                        (0, r.jsx)(X, {})
+                                                                                        (0, r.jsx)(X, {}),
+                                                                                        (0, r.jsx)(Q, {})
                                                                                     ]
                                                                                 })
                                                                             })
@@ -149,7 +149,7 @@ let $ = (0, B.Un)({
                                                                 (0, r.jsx)(T.Z, {}),
                                                                 (0, r.jsx)(V.Z, {}),
                                                                 (0, r.jsx)(Z.Z, {}),
-                                                                (0, r.jsx)(w.Z, { mobile: u })
+                                                                (0, r.jsx)(R.Z, { mobile: u })
                                                             ]
                                                         }),
                                                         !1
@@ -164,7 +164,7 @@ let $ = (0, B.Un)({
                         ]
                     })
                 },
-                M
+                j
             )
         );
     };

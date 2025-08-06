@@ -1,5 +1,5 @@
 (n.d(t, {
-    U4: () => X,
+    U4: () => Q,
     cG: () => el,
     kA: () => ec,
     qR: () => eu
@@ -10,8 +10,8 @@
     n(415506));
 var r = n(255367),
     i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(442837),
     l = n(755721),
     c = n(481060),
@@ -34,15 +34,15 @@ var r = n(255367),
     A = n(594174),
     N = n(695103),
     C = n(880448),
-    w = n(768581),
-    R = n(541099),
-    P = n(783097),
+    R = n(768581),
+    P = n(541099),
+    w = n(783097),
     D = n(695676),
     L = n(176412),
     x = n(226026),
-    k = n(570949),
-    j = n(753972),
-    M = n(981631),
+    M = n(570949),
+    k = n(753972),
+    j = n(981631),
     U = n(217702),
     G = n(388032),
     B = n(860901),
@@ -119,32 +119,32 @@ function q(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = $(e, t);
+        i = X(e, t);
     if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
-function $(e, t) {
+function X(e, t) {
     if (null == e) return {};
     var n,
         r,
         i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
-var X = (function (e) {
+var Q = (function (e) {
     return ((e.ICON = 'icon'), (e.ROW = 'row'), (e.NO_BANNER = 'no_banner'), (e.MEDIUM_BANNER = 'medium_banner'), (e.LARGE_BANNER = 'large_banner'), e);
 })({});
-function Q(e) {
+function J(e) {
     var t;
-    let { application: n, look: i = 'large_banner', onClick: a, imageStyle: o, enableVideoBanner: s = !0, children: l, sectionName: c, resultsPosition: u, sectionOverallPosition: d, tracksImpression: _ = !0, disabled: p = !1, overrideImageUrl: h, showsPromoted: m } = e,
+    let { application: n, look: i = 'large_banner', onClick: o, imageStyle: a, enableVideoBanner: s = !0, children: l, sectionName: c, resultsPosition: u, sectionOverallPosition: d, tracksImpression: _ = !0, disabled: p = !1, overrideImageUrl: h, showsPromoted: m } = e,
         g = null != (t = (0, f.Z)(p)) ? t : p;
-    return (0, r.jsx)(J, {
+    return (0, r.jsx)($, {
         application: n,
-        onClick: a,
+        onClick: o,
         sectionName: c,
         resultsPosition: u,
         disabled: p,
@@ -155,13 +155,13 @@ function Q(e) {
             'icon' === i
                 ? (0, r.jsx)(ee, {
                       application: n,
-                      imageStyle: o,
+                      imageStyle: a,
                       children: l
                   })
                 : (0, r.jsx)(et, {
                       application: n,
                       look: i,
-                      imageStyle: o,
+                      imageStyle: a,
                       enableVideoBanner: s,
                       disableBannerFadeIn: g !== p,
                       overrideImageUrl: h,
@@ -170,29 +170,29 @@ function Q(e) {
                   })
     });
 }
-function J(e) {
-    let { application: t, onClick: n, children: a, sectionName: s, resultsPosition: l, sectionOverallPosition: d, tracksImpression: f, disabled: _, containerStyle: p, look: h } = e,
+function $(e) {
+    let { application: t, onClick: n, children: o, sectionName: s, resultsPosition: l, sectionOverallPosition: d, tracksImpression: f, disabled: _, containerStyle: p, look: h } = e,
         m = i.useCallback(
             (e) => {
-                if ((0, P.BQ)(t)) {
+                if ((0, w.BQ)(t)) {
                     let n = t instanceof S.ZP ? t : S.ZP.createFromServer(t);
-                    (0, u.vq)(e, (e) => (0, r.jsx)(k.Z, W({ application: n }, e)));
+                    (0, u.vq)(e, (e) => (0, r.jsx)(M.Z, W({ application: n }, e)));
                 }
             },
             [t]
         ),
-        { name: g, description: E } = i.useMemo(() => (0, P.sl)(t, { fakeAppIconURL: Z }), [t]),
+        { name: g, description: E } = i.useMemo(() => (0, w.sl)(t, { fakeAppIconURL: Z }), [t]),
         { trackItemImpressionRef: b } = (0, x.Z)({
             applicationId: t.id,
-            applicationFlags: (0, P.BQ)(t) ? t.flags : void 0,
+            applicationFlags: (0, w.BQ)(t) ? t.flags : void 0,
             sectionName: s,
             sectionPosition: l,
             sectionOverallPosition: d,
-            promotionalLabel: (0, P.dF)(t)
+            promotionalLabel: (0, w.dF)(t)
         }),
         y = i.useMemo(() => {
             let e = _ ? B.containerDisabled : B.container;
-            return o()(
+            return a()(
                 e,
                 {
                     [B.containerBorderRadius]: 'row' !== h,
@@ -206,7 +206,7 @@ function J(e) {
         ? (0, r.jsx)('div', {
               ref: f ? b : void 0,
               className: y,
-              children: a
+              children: o
           })
         : (0, r.jsx)(c.P3F, {
               innerRef: f ? b : void 0,
@@ -217,12 +217,12 @@ function J(e) {
                   applicationName: g,
                   applicationDescription: E
               }),
-              children: (0, r.jsx)(c.Rny, { children: a })
+              children: (0, r.jsx)(c.Rny, { children: o })
           });
 }
 function ee(e) {
-    let { application: t, imageStyle: n, children: a } = e,
-        { name: s, iconURL: l } = i.useMemo(() => (0, P.sl)(t, { fakeAppIconURL: Z }), [t]);
+    let { application: t, imageStyle: n, children: o } = e,
+        { name: s, iconURL: l } = i.useMemo(() => (0, w.sl)(t, { fakeAppIconURL: Z }), [t]);
     return (0, r.jsx)(c.ua7, {
         tooltipContentClassName: B.tooltipContent,
         text: s,
@@ -230,15 +230,15 @@ function ee(e) {
             var t = H({}, Y(e));
             return (0, r.jsxs)(
                 'div',
-                z(W({ className: o()(B.iconContainer, n) }, t), {
+                z(W({ className: a()(B.iconContainer, n) }, t), {
                     children: [
-                        (0, r.jsx)(j.Z, {
+                        (0, r.jsx)(k.Z, {
                             src: l,
                             className: B.iconCard,
                             'aria-hidden': !0,
                             rendersPlaceholder: !0
                         }),
-                        a
+                        o
                     ]
                 })
             );
@@ -246,34 +246,34 @@ function ee(e) {
     });
 }
 function et(e) {
-    let { application: t, look: n, imageStyle: a, enableVideoBanner: l, disableBannerFadeIn: u, children: f, overrideImageUrl: _, showsPromoted: h } = e,
-        { iconURL: m, name: g, description: E } = i.useMemo(() => (0, P.sl)(t, { fakeAppIconURL: Z }), [t]),
+    let { application: t, look: n, imageStyle: o, enableVideoBanner: l, disableBannerFadeIn: u, children: f, overrideImageUrl: _, showsPromoted: h } = e,
+        { iconURL: m, name: g, description: E } = i.useMemo(() => (0, w.sl)(t, { fakeAppIconURL: Z }), [t]),
         b = i.useMemo(() => (null == E ? null : (0, L.ae)(E)), [E]),
         y = (0, I.ZP)(m, ''),
         [v, T] = i.useState(!1),
         S = i.useCallback(() => {
             !0 === l && T(!0);
         }, [l]),
-        A = h || (0, P.lf)(t),
+        A = h || (0, w.lf)(t),
         C = 'large_banner' === n || 'medium_banner' === n,
-        w = i.useCallback(() => T(!1), []),
-        R = (0, s.e7)([p.Z, N.Z], () => p.Z.inDevModeForApplication(t.id) || N.Z.inTestModeForApplication(t.id), [t.id]),
-        D = (0, P.WA)(t);
+        R = i.useCallback(() => T(!1), []),
+        P = (0, s.e7)([p.Z, N.Z], () => p.Z.inDevModeForApplication(t.id) || N.Z.inTestModeForApplication(t.id), [t.id]),
+        D = (0, w.WA)(t);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             C
                 ? (0, r.jsxs)('div', {
                       onMouseEnter: S,
                       onFocus: S,
-                      onMouseLeave: w,
-                      onBlur: w,
-                      className: o()(B.bannerImageContainer, {
+                      onMouseLeave: R,
+                      onBlur: R,
+                      className: a()(B.bannerImageContainer, {
                           [B.mediumBanner]: 'medium_banner' === n,
                           [B.largeBanner]: 'large_banner' === n
                       }),
                       children: [
                           (0, r.jsx)('span', {
-                              className: a,
+                              className: o,
                               children: (0, r.jsx)(ei, {
                                   application: t,
                                   fallbackColor: y,
@@ -282,7 +282,7 @@ function et(e) {
                                   overrideImageUrl: _
                               })
                           }),
-                          R || A || D !== d.ww.NONE
+                          P || A || D !== d.ww.NONE
                               ? (0, r.jsxs)('div', {
                                     className: B.bannerUpperRightContainer,
                                     children: [
@@ -295,7 +295,7 @@ function et(e) {
                                                     children: G.intl.string(G.t['/eVltr'])
                                                 })
                                             }),
-                                        R && (0, r.jsx)(en, {}),
+                                        P && (0, r.jsx)(en, {}),
                                         D !== d.ww.NONE && (0, r.jsx)(O.Z, { labelType: D })
                                     ]
                                 })
@@ -308,11 +308,11 @@ function et(e) {
                   })
                 : null,
             (0, r.jsxs)('div', {
-                className: o()(B.appDetailsContainer, { [B.appDetailsRowContainer]: 'row' === n }),
+                className: a()(B.appDetailsContainer, { [B.appDetailsRowContainer]: 'row' === n }),
                 children: [
-                    (0, r.jsx)(j.Z, {
+                    (0, r.jsx)(k.Z, {
                         src: m,
-                        className: o()(B.icon, { [B.rowIcon]: 'row' === n }),
+                        className: a()(B.icon, { [B.rowIcon]: 'row' === n }),
                         'aria-hidden': !0,
                         rendersPlaceholder: !0
                     }),
@@ -365,20 +365,20 @@ function er(e) {
     let { application: t } = e,
         n = A.default.getCurrentUser();
     if (!(null == n ? void 0 : n.isStaff()) && !(null == n ? void 0 : n.isStaffPersonal())) return null;
-    let i = (0, P.yJ)(t);
-    if (null == i || !(0, P.BQ)(t)) return null;
-    let a = (0, E.fD)(t, i);
-    return null == a
+    let i = (0, w.yJ)(t);
+    if (null == i || !(0, w.BQ)(t)) return null;
+    let o = (0, E.fD)(t, i);
+    return null == o
         ? null
         : (0, r.jsx)(c.ua7, {
-              text: a,
+              text: o,
               children: (e) =>
                   (0, r.jsx)(
                       'img',
                       W(
                           {
                               className: B.staffBadge,
-                              alt: a,
+                              alt: o,
                               src: F
                           },
                           e
@@ -387,55 +387,55 @@ function er(e) {
           });
 }
 function ei(e) {
-    let { application: t, fallbackColor: n, showVideo: i, disableFadeIn: a, overrideImageUrl: s } = e;
+    let { application: t, fallbackColor: n, showVideo: i, disableFadeIn: o, overrideImageUrl: s } = e;
     if (null != s)
         return (0, r.jsx)('img', {
             src: s,
-            alt: (0, P.BQ)(t) ? t.name : '',
-            className: o()(B.bannerImage, { [B.disableFadeIn]: a })
+            alt: (0, w.BQ)(t) ? t.name : '',
+            className: a()(B.bannerImage, { [B.disableFadeIn]: o })
         });
-    if ((0, P.BQ)(t)) {
-        if ((0, P.ye)(t))
-            return (0, r.jsx)(ea, {
+    if ((0, w.BQ)(t)) {
+        if ((0, w.ye)(t))
+            return (0, r.jsx)(eo, {
                 application: t,
                 showVideo: i,
-                disableFadeIn: a
+                disableFadeIn: o
             });
         if (null != t.bot)
-            return (0, r.jsx)(eo, {
+            return (0, r.jsx)(ea, {
                 bot: t.bot,
                 fallbackColor: n,
-                disableFadeIn: a
+                disableFadeIn: o
             });
     }
     return (0, r.jsx)(es, {
         fallbackColor: n,
-        disableFadeIn: a
+        disableFadeIn: o
     });
 }
-function ea(e) {
-    let { application: t, showVideo: n, disableFadeIn: a } = e,
+function eo(e) {
+    let { application: t, showVideo: n, disableFadeIn: o } = e,
         s = (0, b.Z)({
             applicationId: t.id,
             size: 600,
             names: ['embedded_cover']
         }),
         l = i.useMemo(() => {
-            let e = (0, P.yJ)(t);
+            let e = (0, w.yJ)(t);
             return null != e && null != e.activity_preview_video_asset_id ? (0, g.Z)(t.id, e.activity_preview_video_asset_id) : null;
         }, [t]),
         [c, u] = i.useState(n);
     i.useEffect(() => {
         n && u(!0);
     }, [n]);
-    let d = o()(B.bannerImage, { [B.disableFadeIn]: a });
+    let d = a()(B.bannerImage, { [B.disableFadeIn]: o });
     return (0, r.jsxs)(r.Fragment, {
         children: [
             null != l && c
                 ? (0, r.jsx)('div', {
                       className: B.activityVideoContainer,
                       children: (0, r.jsx)('div', {
-                          className: o()(B.activityVideo, { [B.videoFadeOut]: !n }),
+                          className: a()(B.activityVideo, { [B.videoFadeOut]: !n }),
                           onAnimationEnd: () => (n ? null : u(!1)),
                           children: (0, r.jsx)(T.Z, {
                               src: l,
@@ -456,13 +456,13 @@ function ea(e) {
         ]
     });
 }
-function eo(e) {
+function ea(e) {
     let { bot: t, fallbackColor: n, disableFadeIn: i } = e,
-        a = (0, s.e7)([_.Z], () => _.Z.useReducedMotion),
-        l = (0, w.aN)({
+        o = (0, s.e7)([_.Z], () => _.Z.useReducedMotion),
+        l = (0, R.aN)({
             id: t.id,
             banner: t.banner,
-            canAnimate: !a,
+            canAnimate: !o,
             size: 600
         });
     return null == l
@@ -473,53 +473,53 @@ function eo(e) {
         : (0, r.jsx)('img', {
               src: l,
               alt: '',
-              className: o()(B.bannerImage, { [B.disableFadeIn]: i })
+              className: a()(B.bannerImage, { [B.disableFadeIn]: i })
           });
 }
 function es(e) {
     let { fallbackColor: t, disableFadeIn: n } = e;
     return (0, r.jsx)('div', {
-        className: o()(B.bannerImage, { [B.disableFadeIn]: n }),
+        className: a()(B.bannerImage, { [B.disableFadeIn]: n }),
         style: { backgroundColor: t }
     });
 }
 function el(e) {
-    let { application: t, sectionName: n, resultsPosition: r, query: a, installOnDemand: o, location: s } = e,
+    let { application: t, sectionName: n, resultsPosition: r, query: o, installOnDemand: a, location: s } = e,
         { pushHistory: l } = (0, D.hH)(),
         { friends: c } = (0, m.Z)(t);
     return {
         onClickAppCard: i.useCallback(
             (e) => {
                 (e.stopPropagation(),
-                    (0, v.yw)(M.rMx.APPLICATION_COMMAND_SECTION_SELECTED, {
+                    (0, v.yw)(j.rMx.APPLICATION_COMMAND_SECTION_SELECTED, {
                         application_id: t.id,
                         section_name: n,
                         search_results_position: r,
-                        source: R.Z.entrypoint(),
-                        promotional_label: (0, P.dF)(t),
+                        source: P.Z.entrypoint(),
+                        promotional_label: (0, w.dF)(t),
                         location: s,
-                        query: a,
+                        query: o,
                         num_friends_who_play: c.length
                     }),
                     l({
                         type: D.gc.APPLICATION,
                         application: t,
-                        installOnDemand: o,
+                        installOnDemand: a,
                         sectionName: n
                     }));
             },
-            [t, o, s, l, a, r, n, c]
+            [t, a, s, l, o, r, n, c]
         )
     };
 }
 function ec(e) {
     let { onClickAppCard: t } = el(e);
-    return (0, r.jsx)(Q, z(W({}, e), { onClick: t }));
+    return (0, r.jsx)(J, z(W({}, e), { onClick: t }));
 }
 function eu(e) {
-    var { context: t, application: n, location: a, sectionName: o, isOneClickCTA: u, fetchesApplication: d = !0 } = e,
+    var { context: t, application: n, location: o, sectionName: a, isOneClickCTA: u, fetchesApplication: d = !0 } = e,
         f = q(e, ['context', 'application', 'location', 'sectionName', 'isOneClickCTA', 'fetchesApplication']);
-    if (!(0, P.BQ)(n)) throw Error('PerformActivityActionAppCard was passed the Built-in App, which is not supported.');
+    if (!(0, w.BQ)(n)) throw Error('PerformActivityActionAppCard was passed the Built-in App, which is not supported.');
     let _ = i.useId(),
         [p, m] = (0, s.Wu)([h.ZP], () => [h.ZP.isLaunchingActivity(), h.ZP.getLaunchState(n.id, 'channel' === t.type ? t.channel.id : void 0)]),
         g = null != m && m.isLaunching && m.componentId === _,
@@ -531,17 +531,17 @@ function eu(e) {
         } = (0, L.P7)({
             context: t,
             application: n,
-            location: a,
-            sectionName: o,
+            location: o,
+            sectionName: a,
             launchingComponentId: _,
             fetchesApplication: d
         });
     return y === E.JS.START || y === E.JS.JOIN
         ? u
             ? (0, r.jsx)(
-                  Q,
+                  J,
                   z(W({}, f), {
-                      sectionName: o,
+                      sectionName: a,
                       application: n,
                       onClick: b,
                       disabled: p,
@@ -558,15 +558,15 @@ function eu(e) {
                   ec,
                   z(W({}, f), {
                       context: t,
-                      sectionName: o,
+                      sectionName: a,
                       application: n,
-                      location: a
+                      location: o
                   })
               )
         : (0, r.jsx)(
-              Q,
+              J,
               z(W({}, f), {
-                  sectionName: o,
+                  sectionName: a,
                   application: n,
                   onClick: (e) => {
                       e.stopPropagation();

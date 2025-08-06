@@ -1,4 +1,4 @@
-let r, i, a, o, s, l, c, u, d, f, _, p, h, m, g, E, b;
+let r, i, o, a, s, l, c, u, d, f, _, p, h, m, g, E, b;
 n.d(t, { Z: () => ec });
 var y,
     O = n(979554),
@@ -23,13 +23,13 @@ let A = T.QZA.CLOSED,
 function C() {
     ((A = T.QZA.OPEN), (N = {}));
 }
-function w() {
+function R() {
     ((A = T.QZA.CLOSED), (N = {}));
 }
-function R() {
+function P() {
     ((A = T.QZA.SUBMITTING), (N = {}));
 }
-function P(e) {
+function w(e) {
     var t;
     if (A !== T.QZA.SUBMITTING) return !1;
     ((A = T.QZA.OPEN), (N = null != (t = e.errors) ? t : {}));
@@ -46,21 +46,21 @@ function x(e) {
     let { globalName: t } = e;
     i = t;
 }
-function k(e) {
+function M(e) {
     let { legacyUsernameDisabled: t } = e;
     _ = t;
 }
-function j(e) {
+function k(e) {
     let { avatarDecoration: t } = e;
-    a = t;
+    o = t;
 }
-function M(e) {
+function j(e) {
     let { nameplate: t } = e;
     s = t;
 }
 function U(e) {
     let { profileEffectId: t } = e;
-    o = t;
+    a = t;
 }
 function G(e) {
     let { item: t } = e;
@@ -106,43 +106,43 @@ function q(e) {
     let { profileEffectId: t } = e;
     E = t;
 }
-function $(e) {
+function X(e) {
     let { banner: t } = e;
     b = t;
 }
-function X(e) {
+function Q(e) {
     let { banner: t, themeColors: n, avatarDecoration: r } = e;
     ((b = t), (h = n), (g = r));
 }
-function Q() {
+function J() {
     r = void 0;
 }
-function J() {
+function $() {
     N = {};
 }
 function ee() {
-    (et(), en(), ea(), eo(), (N = {}));
+    (et(), en(), eo(), ea(), (N = {}));
 }
 function et() {
-    ((r = void 0), (i = void 0), (a = void 0), (o = void 0), (s = void 0));
+    ((r = void 0), (i = void 0), (o = void 0), (a = void 0), (s = void 0));
 }
 function en() {
-    ((l = void 0), (c = void 0), (u = void 0), (d = void 0), (f = void 0), (o = void 0));
+    ((l = void 0), (c = void 0), (u = void 0), (d = void 0), (f = void 0), (a = void 0));
 }
 function er() {
     ((m = void 0), (g = void 0), (E = void 0), (b = void 0), (h = void 0));
 }
 function ei() {
-    a = void 0;
-}
-function ea() {
-    _ = void 0;
+    o = void 0;
 }
 function eo() {
+    _ = void 0;
+}
+function ea() {
     p = void 0;
 }
 function es() {
-    (ee(), er(), w());
+    (ee(), er(), R());
 }
 class el extends (y = v.ZP.Store) {
     getFormState() {
@@ -152,7 +152,7 @@ class el extends (y = v.ZP.Store) {
         return N;
     }
     showNotice() {
-        return void 0 !== r || void 0 !== l || void 0 !== c || void 0 !== u || void 0 !== d || void 0 !== f || void 0 !== a || void 0 !== o || void 0 !== i || void 0 !== s || void 0 !== _ || void 0 !== p;
+        return void 0 !== r || void 0 !== l || void 0 !== c || void 0 !== u || void 0 !== d || void 0 !== f || void 0 !== o || void 0 !== a || void 0 !== i || void 0 !== s || void 0 !== _ || void 0 !== p;
     }
     getIsSubmitDisabled() {
         return void 0 !== c && c.length > T.tPV;
@@ -179,13 +179,13 @@ class el extends (y = v.ZP.Store) {
         return f;
     }
     getPendingAvatarDecoration() {
-        return a;
+        return o;
     }
     getPendingNameplate() {
         return s;
     }
     getPendingProfileEffectId() {
-        return o;
+        return a;
     }
     getAllPending() {
         return {
@@ -195,8 +195,8 @@ class el extends (y = v.ZP.Store) {
             pendingPronouns: u,
             pendingAccentColor: d,
             pendingThemeColors: f,
-            pendingAvatarDecoration: a,
-            pendingProfileEffectId: o,
+            pendingAvatarDecoration: o,
+            pendingProfileEffectId: a,
             pendingGlobalName: i,
             pendingNameplate: s,
             pendingLegacyUsernameDisabled: _,
@@ -234,15 +234,15 @@ let ec = new el(I.Z, {
     USER_SETTINGS_MODAL_INIT: C,
     USER_SETTINGS_ACCOUNT_SUBMIT_SUCCESS: C,
     USER_SETTINGS_MODAL_SET_SECTION: D,
-    USER_SETTINGS_ACCOUNT_CLOSE: w,
+    USER_SETTINGS_ACCOUNT_CLOSE: R,
     USER_SETTINGS_ACCOUNT_RESET_AND_CLOSE_FORM: es,
-    USER_SETTINGS_ACCOUNT_SUBMIT: R,
-    USER_SETTINGS_ACCOUNT_SUBMIT_FAILURE: P,
+    USER_SETTINGS_ACCOUNT_SUBMIT: P,
+    USER_SETTINGS_ACCOUNT_SUBMIT_FAILURE: w,
     USER_SETTINGS_ACCOUNT_SET_PENDING_AVATAR: L,
     USER_SETTINGS_ACCOUNT_SET_PENDING_GLOBAL_NAME: x,
-    USER_SETTINGS_ACCOUNT_SET_PENDING_LEGACY_USERNAME_DISABLED: k,
-    USER_SETTINGS_ACCOUNT_SET_PENDING_AVATAR_DECORATION: j,
-    USER_SETTINGS_ACCOUNT_SET_PENDING_NAMEPLATE: M,
+    USER_SETTINGS_ACCOUNT_SET_PENDING_LEGACY_USERNAME_DISABLED: M,
+    USER_SETTINGS_ACCOUNT_SET_PENDING_AVATAR_DECORATION: k,
+    USER_SETTINGS_ACCOUNT_SET_PENDING_NAMEPLATE: j,
     USER_SETTINGS_ACCOUNT_SET_SINGLE_TRY_IT_OUT_COLLECTIBLES_ITEM: G,
     USER_SETTINGS_ACCOUNT_SET_PENDING_PROFILE_EFFECT_ID: U,
     USER_SETTINGS_ACCOUNT_SET_PENDING_BANNER: B,
@@ -253,17 +253,17 @@ let ec = new el(I.Z, {
     USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_AVATAR: K,
     USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_AVATAR_DECORATION: z,
     USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_PROFILE_EFFECT_ID: q,
-    USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_BANNER: $,
+    USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_BANNER: X,
     USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_THEME_COLORS: W,
-    USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_PRESET: X,
+    USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_PRESET: Q,
     USER_SETTINGS_SET_PENDING_PRIMARY_GUILD_ID: Y,
-    USER_SETTINGS_CLEAR_ERRORS: J,
+    USER_SETTINGS_CLEAR_ERRORS: $,
     USER_SETTINGS_RESET_PENDING_ACCOUNT_CHANGES: et,
     USER_SETTINGS_RESET_PENDING_PROFILE_CHANGES: en,
     USER_SETTINGS_RESET_ALL_PENDING: ee,
     USER_SETTINGS_RESET_ALL_TRY_IT_OUT: er,
     USER_SETTINGS_RESET_PENDING_AVATAR_DECORATION: ei,
-    USER_SETTINGS_ACCOUNT_RESET_PENDING_LEGACY_USERNAME_DISABLED: ea,
-    USER_SETTINGS_RESET_PENDING_PRIMARY_GUILD_CHANGES: eo,
-    LOGOUT: Q
+    USER_SETTINGS_ACCOUNT_RESET_PENDING_LEGACY_USERNAME_DISABLED: eo,
+    USER_SETTINGS_RESET_PENDING_PRIMARY_GUILD_CHANGES: ea,
+    LOGOUT: J
 });

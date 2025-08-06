@@ -1,8 +1,8 @@
 (n.d(t, { m: () => V }), n(997841), n(953529));
 var r = n(255367),
     i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(772848),
     l = n(535655),
     c = n(973693),
@@ -25,15 +25,15 @@ var r = n(255367),
     A = n(626135),
     N = n(456100),
     C = n(566620),
-    w = n(127255),
-    R = n(5200),
-    P = n(558317),
+    R = n(127255),
+    P = n(5200),
+    w = n(558317),
     D = n(981631),
     L = n(388032),
     x = n(210408);
-let k = 5,
-    j = 12,
-    M = 1000,
+let M = 5,
+    k = 12,
+    j = 1000,
     U = c.Y.APP_LAUNCHER_IN_VOICE_BANNER,
     G = 584,
     B = 'vc-activities-'.concat((0, s.Z)());
@@ -65,7 +65,7 @@ function Z() {
 function F(e) {
     var t;
     let n,
-        { channel: a, openInPopout: o, onClick: s } = e,
+        { channel: o, openInPopout: a, onClick: s } = e,
         { fetchState: l, voiceBannerCollection: c } = Z(),
         d = l === v.M.FETCHING,
         _ = i.useMemo(() => {
@@ -97,9 +97,9 @@ function F(e) {
                       (0, b.Z)({
                           context: {
                               type: 'channel',
-                              channel: a
+                              channel: o
                           },
-                          openInPopout: o,
+                          openInPopout: a,
                           analyticsLocation: h.Z.APP_LAUNCHER_IN_VOICE_BANNER,
                           initialState: { applicationId: _.application.id }
                       }));
@@ -115,7 +115,7 @@ function F(e) {
           }));
 }
 let V = i.forwardRef(function (e, t) {
-    let { channel: n, isHovered: a, closePopout: s, onMouseEnter: l, onMouseLeave: c, onClick: u, className: g } = e,
+    let { channel: n, isHovered: o, closePopout: s, onMouseEnter: l, onMouseLeave: c, onClick: u, className: g } = e,
         E = (0, d.e7)([p.Z], () => p.Z.useReducedMotion),
         { id: O, guild_id: v } = n;
     (i.useEffect(() => {
@@ -125,14 +125,14 @@ let V = i.forwardRef(function (e, t) {
         });
     }, [O, v]),
         i.useEffect(() => {
-            a || s();
-        }, [s, a]));
+            o || s();
+        }, [s, o]));
     let I = (0, _.bp)(),
-        { analyticsLocations: S, newestAnalyticsLocation: w } = (0, m.ZP)(h.Z.ACTIVITIES_MINI_SHELF),
-        k = I === D.IlC.POPOUT,
+        { analyticsLocations: S, newestAnalyticsLocation: R } = (0, m.ZP)(h.Z.ACTIVITIES_MINI_SHELF),
+        M = I === D.IlC.POPOUT,
         U = H(n.getGuildId());
     i.useEffect(() => {
-        let e = setTimeout(() => C.ux(), M);
+        let e = setTimeout(() => C.ux(), j);
         return () => clearTimeout(e);
     }, []);
     let { enabled: G } = N.c.useExperiment({ location: 'ActivitiesMiniShelf' }, { autoTrackExposure: !0 }),
@@ -145,12 +145,12 @@ let V = i.forwardRef(function (e, t) {
                               channel: n
                           }
                         : { type: 'contextless' },
-                openInPopout: k,
-                analyticsLocation: w
+                openInPopout: M,
+                analyticsLocation: R
             }),
                 c(),
                 u());
-        }, [n, w, u, c, k]),
+        }, [n, R, u, c, M]),
         V = i.useCallback(
             (e) => {
                 (l(),
@@ -211,8 +211,8 @@ let V = i.forwardRef(function (e, t) {
                                             }),
                                             (0, r.jsx)(f.Fbu, {
                                                 size: 'custom',
-                                                width: j,
-                                                height: j,
+                                                width: k,
+                                                height: k,
                                                 color: 'var(--interactive-active)',
                                                 className: x.titleRightIcon
                                             })
@@ -221,7 +221,7 @@ let V = i.forwardRef(function (e, t) {
                                 ]
                             }),
                             (0, r.jsx)(F, {
-                                openInPopout: k,
+                                openInPopout: M,
                                 channel: n,
                                 onClick: () => {
                                     (u(), s());
@@ -232,7 +232,7 @@ let V = i.forwardRef(function (e, t) {
                                 children: [
                                     U.map((e) =>
                                         (0, r.jsx)(
-                                            R.Y,
+                                            P.Y,
                                             {
                                                 context: {
                                                     channel: n,
@@ -242,7 +242,7 @@ let V = i.forwardRef(function (e, t) {
                                                 onClick: () => {
                                                     (s(), u());
                                                 },
-                                                aspectRatio: R.Y.AspectRatio.THIRTEEN_BY_ELEVEN,
+                                                aspectRatio: P.Y.AspectRatio.THIRTEEN_BY_ELEVEN,
                                                 animatedDivClass: x.activitySuggestion,
                                                 commandOrigin: y.bB.MINI_SHELF
                                             },
@@ -250,10 +250,10 @@ let V = i.forwardRef(function (e, t) {
                                         )
                                     ),
                                     (0, r.jsx)('div', {
-                                        className: o()(x.wumpusRocketOuterContainer, { [x.wumpusReducedMotion]: E }),
+                                        className: a()(x.wumpusRocketOuterContainer, { [x.wumpusReducedMotion]: E }),
                                         children: (0, r.jsx)('div', {
                                             className: x.wumpusRocketInnerContainer,
-                                            children: (0, r.jsx)(P.Z, { className: x.wumpusRocket })
+                                            children: (0, r.jsx)(w.Z, { className: x.wumpusRocket })
                                         })
                                     })
                                 ]
@@ -266,5 +266,5 @@ let V = i.forwardRef(function (e, t) {
     });
 });
 function H(e) {
-    return (0, w.Z)({ guildId: e }).slice(0, k);
+    return (0, R.Z)({ guildId: e }).slice(0, M);
 }

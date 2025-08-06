@@ -1,8 +1,8 @@
 n.d(t, { Z: () => O });
 var r,
     i = n(442837),
-    a = n(570140),
-    o = n(314897),
+    o = n(570140),
+    a = n(314897),
     s = n(924301),
     l = n(658041),
     c = n(765305);
@@ -58,7 +58,7 @@ function g(e) {
 }
 function E(e) {
     let { userId: t, guildEventId: n } = e;
-    if (t !== o.default.getId()) return;
+    if (t !== a.default.getId()) return;
     let r = s.ZP.getGuildScheduledEvent(n);
     if (null == r || r.status !== c.p1.SCHEDULED || null != f[n]) return;
     let i = _[n];
@@ -99,7 +99,7 @@ class y extends (r = i.ZP.PersistedStore) {
     }
 }
 (u(y, 'displayName', 'UpcomingEventNoticesStore'), u(y, 'persistKey', 'UpcomingEventNotices'));
-let O = new y(a.Z, {
+let O = new y(o.Z, {
     UPCOMING_GUILD_EVENT_NOTICE_HIDE: h,
     GUILD_SCHEDULED_EVENT_UPDATE: m,
     GUILD_SCHEDULED_EVENT_DELETE: g,

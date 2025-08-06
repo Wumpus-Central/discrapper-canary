@@ -1,7 +1,7 @@
 n.d(t, { G: () => d });
 var r = n(70466),
     i = n(864218);
-function a(e, t, n) {
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -14,7 +14,7 @@ function a(e, t, n) {
         e
     );
 }
-function o(e) {
+function a(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -25,7 +25,7 @@ function o(e) {
                 })
             )),
             r.forEach(function (t) {
-                a(e, t, n[t]);
+                o(e, t, n[t]);
             }));
     }
     return e;
@@ -59,8 +59,8 @@ function c(e, t) {
         r,
         i = u(e, t);
     if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
@@ -69,22 +69,22 @@ function u(e, t) {
     var n,
         r,
         i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
 let d = (e) => {
-    var { subscriptionTier: t = null, hasActivePromotion: n = !1, useShorterCTA: a = !1, isPersistentCTA: s = !1 } = e,
+    var { subscriptionTier: t = null, hasActivePromotion: n = !1, useShorterCTA: o = !1, isPersistentCTA: s = !1 } = e,
         u = c(e, ['subscriptionTier', 'hasActivePromotion', 'useShorterCTA', 'isPersistentCTA']);
     let d = {
             subscriptionTier: t,
             hasActivePromotion: n,
-            useShorterCTA: a,
+            useShorterCTA: o,
             isPersistentCTA: s
         },
         { buttonText: f, marketingSubscriptionTierSkuId: _ } = (0, r.G)(d),
         { subscribeButtonProps: p } = (0, i.F)(
-            l(o({}, u), {
+            l(a({}, u), {
                 subscriptionTier: _,
                 buttonTextOverride: f
             })

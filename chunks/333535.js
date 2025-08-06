@@ -1,8 +1,8 @@
 n.d(t, { Z: () => g });
 var r = n(255367),
     i = n(73800),
-    a = n(399606),
-    o = n(481060),
+    o = n(399606),
+    a = n(481060),
     s = n(367907),
     l = n(592125),
     c = n(934415),
@@ -15,8 +15,8 @@ var r = n(255367),
     m = n(684885);
 function g(e) {
     let { threadId: t } = e,
-        n = (0, a.e7)([l.Z], () => l.Z.getChannel(t)),
-        g = (0, a.e7)([l.Z], () => l.Z.getChannel(null == n ? void 0 : n.parent_id)),
+        n = (0, o.e7)([l.Z], () => l.Z.getChannel(t)),
+        g = (0, o.e7)([l.Z], () => l.Z.getChannel(null == n ? void 0 : n.parent_id)),
         E = i.useCallback(() => {
             null != n && null != g && ((0, s.yw)(p.rMx.MEDIA_POST_SHARE_PROMPT_CLICKED, { media_post_id: n.id }), (0, u.JG)((0, c.EO)(n, g)));
         }, [n, g]),
@@ -30,30 +30,30 @@ function g(e) {
             (0, r.jsxs)('div', {
                 className: m.sharePromptContent,
                 children: [
-                    (0, r.jsx)(o.Text, {
+                    (0, r.jsx)(a.Text, {
                         variant: 'text-md/semibold',
                         color: 'header-primary',
                         children: h.intl.string(h.t['5uAO7e'])
                     }),
-                    (0, r.jsx)(o.Text, {
+                    (0, r.jsx)(a.Text, {
                         variant: 'text-sm/medium',
                         color: 'text-default',
                         children: h.intl.format(h.t.WnfPV1, { helpArticleUrl: d.Z.getCreatorSupportArticleURL(p.BhN.MEDIA_CHANNEL) })
                     }),
-                    (0, r.jsx)(o.LZC, { size: 4 }),
-                    (0, r.jsx)(o.zxk, {
+                    (0, r.jsx)(a.LZC, { size: 4 }),
+                    (0, r.jsx)(a.zxk, {
                         text: h.intl.string(h.t.C5UQCw),
                         variant: 'primary',
-                        icon: o.xPt,
+                        icon: a.xPt,
                         onClick: E
                     })
                 ]
             }),
-            (0, r.jsx)(o.P3F, {
+            (0, r.jsx)(a.P3F, {
                 className: m.closeButton,
                 onClick: b,
                 'aria-label': h.intl.string(h.t['0+xZHx']),
-                children: (0, r.jsx)(o.Dio, {
+                children: (0, r.jsx)(a.Dio, {
                     color: 'currentColor',
                     size: 'xs'
                 })

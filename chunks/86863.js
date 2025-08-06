@@ -1,8 +1,8 @@
 n.d(t, { n: () => g });
 var r = n(255367),
     i = n(442837),
-    a = n(755721),
-    o = n(481060),
+    o = n(755721),
+    a = n(481060),
     s = n(384275),
     l = n(468026),
     c = n(317381),
@@ -41,7 +41,7 @@ function h(e) {
 }
 function m(e, t, n) {
     let i = _.intl.formatToPlainString(_.t.QWGvxM, { applicationName: e.name });
-    ((0, o.h7j)((e) =>
+    ((0, a.h7j)((e) =>
         (0, r.jsx)(
             l.default,
             h(
@@ -49,7 +49,7 @@ function m(e, t, n) {
                     title: _.intl.string(_.t.DT39Aw),
                     body: i,
                     confirmText: _.intl.string(_.t.xUqheH),
-                    confirmColor: a.Tt.RED,
+                    confirmColor: o.Tt.RED,
                     cancelText: _.intl.string(_.t['ETE/oK']),
                     onConfirm: t
                 },
@@ -64,9 +64,9 @@ function m(e, t, n) {
         }));
 }
 let g = (e) => {
-    let { className: t, channel: n, user: o, application: l, oauth2Token: d } = e,
+    let { className: t, channel: n, user: a, application: l, oauth2Token: d } = e,
         f = (0, i.e7)([c.ZP], () => c.ZP.getSelfEmbeddedActivities());
-    if (!o.bot || null == l) return null;
+    if (!a.bot || null == l) return null;
     function p() {
         s.Z.delete(d.id);
         let e = f.get(l.id);
@@ -76,10 +76,10 @@ let g = (e) => {
                 applicationId: l.id
             });
     }
-    return (0, r.jsx)(a.zx, {
+    return (0, r.jsx)(o.zx, {
         className: t,
-        size: a.Ph.SMALL,
-        color: a.zx.Colors.PRIMARY,
+        size: o.Ph.SMALL,
+        color: o.zx.Colors.PRIMARY,
         onClick: () => m(l, p, n),
         children: _.intl.string(_.t['5S3sQE'])
     });

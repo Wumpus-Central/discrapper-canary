@@ -6,13 +6,13 @@
     bX: () => d,
     bY: () => u,
     iG: () => f,
-    ut: () => o
+    ut: () => a
 }),
     n(781311));
 var r = n(446108),
     i = n(901461),
-    a = n(981631);
-function o(e) {
+    o = n(981631);
+function a(e) {
     return 'message-content-'.concat(e.id);
 }
 function s(e) {
@@ -32,16 +32,16 @@ function d(e) {
     return 'message-accessories-'.concat(e.id);
 }
 function f(e, t, n) {
-    let u = e.type === a.uaV.REPLY && null != e.messageReference,
+    let u = e.type === o.uaV.REPLY && null != e.messageReference,
         f = e.embeds.length > 0,
         _ = e.attachments.length > 0,
         p = e.stickerItems.length > 0,
         h = e.codedLinks.length > 0,
         m = e.components.length > 0,
-        g = e.hasFlag(a.iLy.HAS_THREAD),
-        E = f || _ || p || h || g || m || e.type === a.uaV.THREAD_CREATED,
-        b = f && e.content === e.embeds[0].url && e.embeds[0].type === a.hBH.GIFV,
-        y = e.type !== a.uaV.DEFAULT || (!b && '' !== e.content),
+        g = e.hasFlag(o.iLy.HAS_THREAD),
+        E = f || _ || p || h || g || m || e.type === o.uaV.THREAD_CREATED,
+        b = f && e.content === e.embeds[0].url && e.embeds[0].type === o.hBH.GIFV,
+        y = e.type !== o.uaV.DEFAULT || (!b && '' !== e.content),
         O = (0, i.Z)(e),
         v = !O && (null == n ? void 0 : n.hasTimestamp) !== !1,
         I = !O,
@@ -50,7 +50,7 @@ function f(e, t, n) {
         A = u ? S : T,
         N = I ? ''.concat(A, ' ').concat(r.Z0) : '';
     if (y) {
-        let t = o(e);
+        let t = a(e);
         N += ' '.concat(t);
     }
     if (E) {

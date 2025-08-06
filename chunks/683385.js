@@ -1,7 +1,7 @@
 var r = n(48657),
     i = n(580983),
-    a = n(179122),
-    o = n(449285),
+    o = n(179122),
+    a = n(449285),
     s = n(760725),
     l = n(914331),
     c = n(568033),
@@ -27,25 +27,25 @@ e.exports = function (e, t, n) {
         A = !!(n && n.IS_ITERATOR),
         N = !!(n && n.INTERRUPTED),
         C = r(t, I),
-        w = function (e) {
+        R = function (e) {
             return (m && f(m, 'normal', e), new p(!0, e));
         },
-        R = function (e) {
-            return T ? (a(e), N ? C(e[0], e[1], w) : C(e[0], e[1])) : N ? C(e, w) : C(e);
+        P = function (e) {
+            return T ? (o(e), N ? C(e[0], e[1], R) : C(e[0], e[1])) : N ? C(e, R) : C(e);
         };
     if (S) m = e.iterator;
     else if (A) m = e;
     else {
-        if (!(g = d(e))) throw new _(o(e) + ' is not iterable');
+        if (!(g = d(e))) throw new _(a(e) + ' is not iterable');
         if (s(g)) {
-            for (E = 0, b = l(e); b > E; E++) if ((y = R(e[E])) && c(h, y)) return y;
+            for (E = 0, b = l(e); b > E; E++) if ((y = P(e[E])) && c(h, y)) return y;
             return new p(!1);
         }
         m = u(e, g);
     }
     for (O = S ? e.next : m.next; !(v = i(O, m)).done; ) {
         try {
-            y = R(v.value);
+            y = P(v.value);
         } catch (e) {
             f(m, 'throw', e);
         }

@@ -2,8 +2,8 @@ n.d(t, { Z: () => l });
 var r = n(255367);
 n(73800);
 var i = n(763472),
-    a = n(49012),
-    o = n(591759),
+    o = n(49012),
+    a = n(591759),
     s = n(915863);
 function l(e) {
     let { activity: t, color: n, user: l, look: c, onAction: u } = e;
@@ -14,10 +14,10 @@ function l(e) {
             if (r.button_urls.length <= n) return;
             let s = r.button_urls[n];
             if ('string' != typeof s) return;
-            let l = o.Z.safeParseWithQuery(s);
+            let l = a.Z.safeParseWithQuery(s);
             if (null == l || null == l.protocol || null == l.hostname) return;
-            (0, a.q)({
-                href: o.Z.format(l),
+            (0, o.q)({
+                href: a.Z.format(l),
                 trusted: !1
             });
         } catch (e) {}

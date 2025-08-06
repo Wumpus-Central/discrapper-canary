@@ -2,14 +2,14 @@ function r(e) {
     return function (t) {
         var n,
             r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-            o = r.width,
-            s = (o && e.matchPatterns[o]) || e.matchPatterns[e.defaultMatchWidth],
+            a = r.width,
+            s = (a && e.matchPatterns[a]) || e.matchPatterns[e.defaultMatchWidth],
             l = t.match(s);
         if (!l) return null;
         var c = l[0],
-            u = (o && e.parsePatterns[o]) || e.parsePatterns[e.defaultParseWidth],
+            u = (a && e.parsePatterns[a]) || e.parsePatterns[e.defaultParseWidth],
             d = Array.isArray(u)
-                ? a(u, function (e) {
+                ? o(u, function (e) {
                       return e.test(c);
                   })
                 : i(u, function (e) {
@@ -27,7 +27,7 @@ function r(e) {
 function i(e, t) {
     for (var n in e) if (e.hasOwnProperty(n) && t(e[n])) return n;
 }
-function a(e, t) {
+function o(e, t) {
     for (var n = 0; n < e.length; n++) if (t(e[n])) return n;
 }
 n.d(t, { Z: () => r });

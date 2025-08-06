@@ -1,12 +1,12 @@
 var r = n(621796),
     i = n(152477),
-    a = n(172367),
-    o = n(169774),
+    o = n(172367),
+    a = n(169774),
     s = n(94553).notEmptyKey,
     l = n(630685),
     c = n(803068),
     u = n(467159),
-    d = o.isEngine('Gecko'),
+    d = a.isEngine('Gecko'),
     f = '\n\n';
 function _(e, t) {
     return 'deleteContentBackward' === e ? c(t) : t;
@@ -14,7 +14,7 @@ function _(e, t) {
 e.exports = function (e, t) {
     void 0 !== e._pendingStateFromBeforeInput && (e.update(e._pendingStateFromBeforeInput), (e._pendingStateFromBeforeInput = void 0));
     var n,
-        o,
+        a,
         c,
         p,
         h = e.editor.ownerDocument.defaultView.getSelection(),
@@ -35,10 +35,10 @@ e.exports = function (e, t) {
             A = I.leafKey,
             N = O.getBlockTree(T).getIn([S, 'leaves', A]),
             C = N.start,
-            w = N.end,
-            R = O.getCurrentContent(),
-            P = R.getBlockForKey(T),
-            D = P.getText().slice(C, w);
+            R = N.end,
+            P = O.getCurrentContent(),
+            w = P.getBlockForKey(T),
+            D = w.getText().slice(C, R);
         if ((y.endsWith(f) && (y = y.slice(0, -1)), y === D)) {
             var L = t.nativeEvent.inputType;
             if (L) {
@@ -47,30 +47,30 @@ e.exports = function (e, t) {
             }
             return;
         }
-        var k = O.getSelection(),
-            j = k.merge({
+        var M = O.getSelection(),
+            k = M.merge({
                 anchorOffset: C,
-                focusOffset: w,
+                focusOffset: R,
                 isBackward: !1
             }),
-            M = P.getEntityAt(C),
-            U = s(M) ? R.getEntity(M) : null,
+            j = w.getEntityAt(C),
+            U = s(j) ? P.getEntity(j) : null,
             G = null != U ? U.getMutability() : null,
             B = 'MUTABLE' === G,
             Z = B ? 'spellcheck-change' : 'apply-entity',
-            F = r.replaceText(R, j, y, P.getInlineStyleAt(C), B ? P.getEntityAt(C) : null);
-        if (d) ((n = h.anchorOffset), (p = (c = C + Math.min(n, (o = h.focusOffset))) + Math.abs(n - o)), (n = c), (o = p));
+            F = r.replaceText(P, k, y, w.getInlineStyleAt(C), B ? w.getEntityAt(C) : null);
+        if (d) ((n = h.anchorOffset), (p = (c = C + Math.min(n, (a = h.focusOffset))) + Math.abs(n - a)), (n = c), (a = p));
         else {
             var V = y.length - D.length;
-            ((c = k.getStartOffset()), (p = k.getEndOffset()), (n = g ? p + V : c), (o = p + V));
+            ((c = M.getStartOffset()), (p = M.getEndOffset()), (n = g ? p + V : c), (a = p + V));
         }
         var H = F.merge({
-            selectionBefore: R.getSelectionAfter(),
-            selectionAfter: k.merge({
+            selectionBefore: P.getSelectionAfter(),
+            selectionAfter: M.merge({
                 anchorOffset: n,
-                focusOffset: o
+                focusOffset: a
             })
         });
-        e.update(a.push(O, H, Z));
+        e.update(o.push(O, H, Z));
     }
 };

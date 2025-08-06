@@ -2,8 +2,8 @@ n.d(t, { Z: () => m });
 var r = n(255367);
 n(73800);
 var i = n(100527),
-    a = n(906732),
-    o = n(779618),
+    o = n(906732),
+    a = n(779618),
     s = n(446226),
     l = n(441167),
     c = n(822183),
@@ -15,18 +15,18 @@ var i = n(100527),
     h = n(531675);
 function m(e) {
     let { channel: t, hasActiveStream: n, showRightDivider: m = !1 } = e,
-        { analyticsLocations: g } = (0, a.ZP)(i.Z.VOICE_CONTROL_TRAY),
+        { analyticsLocations: g } = (0, o.ZP)(i.Z.VOICE_CONTROL_TRAY),
         E = null != (0, s.Z)(),
         { isSharedCanvasEnabled: b } = c.Z.useExperiment({
             guildId: null == t ? void 0 : t.guild_id,
             location: 'b7309a_1'
         }),
         { enableViewerClipping: y } = l.Z.useExperiment({ location: 'VoiceEffectsActionBar' }, { autoTrackExposure: !1 }),
-        O = (0, o.Z)(u.Z);
+        O = (0, a.Z)(u.Z);
     if (null == t || E) return null;
     let v = y && O,
         I = b && n;
-    return (0, r.jsxs)(a.Gt, {
+    return (0, r.jsxs)(o.Gt, {
         value: g,
         children: [
             (0, r.jsxs)('div', {

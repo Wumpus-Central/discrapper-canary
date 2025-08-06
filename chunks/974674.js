@@ -2,14 +2,14 @@
     Vq: () => D,
     Xo: () => V,
     qE: () => U,
-    qe: () => M
+    qe: () => j
 }),
     n(415506),
     n(388685));
 var r = n(255367),
     i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(66546),
     l = n(1561),
     c = n(438784),
@@ -81,8 +81,8 @@ function T(e, t) {
         r,
         i = S(e, t);
     if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
@@ -91,8 +91,8 @@ function S(e, t) {
     var n,
         r,
         i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
 let A = {
@@ -104,13 +104,13 @@ function N() {
 }
 function C(e) {
     var { size: t, isMobile: n, isTyping: i } = e,
-        a = T(e, ['size', 'isMobile', 'isTyping']);
-    let o = (0, h.UC)(t),
-        s = o.status * (n && !i ? h.EW : 1),
-        l = o.status * (i ? h.D6 : 1),
-        c = i ? (o.status * h.D6 - o.status) / 2 : 0,
-        u = o.size - o.status - c - o.offset,
-        d = o.size - s - o.offset;
+        o = T(e, ['size', 'isMobile', 'isTyping']);
+    let a = (0, h.UC)(t),
+        s = a.status * (n && !i ? h.EW : 1),
+        l = a.status * (i ? h.D6 : 1),
+        c = i ? (a.status * h.D6 - a.status) / 2 : 0,
+        u = a.size - a.status - c - a.offset,
+        d = a.size - s - a.offset;
     return (0, r.jsx)(
         'rect',
         O(
@@ -122,11 +122,11 @@ function C(e) {
                 fill: 'transparent',
                 'aria-hidden': !0
             },
-            a
+            o
         )
     );
 }
-function w(e, t) {
+function R(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     return null != t
         ? E.intl.formatToPlainString(E.t['/6mw19'], {
@@ -135,7 +135,7 @@ function w(e, t) {
           })
         : e;
 }
-function R(e, t, n, r) {
+function P(e, t, n, r) {
     if (null == e) return null;
     if (r)
         switch (t) {
@@ -207,7 +207,7 @@ function R(e, t, n, r) {
     }
     return null;
 }
-function P(e, t, n, r) {
+function w(e, t, n, r) {
     if (null == e) return _.QS.AVATAR_DEFAULT;
     if (r)
         switch (t) {
@@ -287,80 +287,80 @@ function P(e, t, n, r) {
 function D(e, t, n) {
     let r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
         i = (0, u.W5)(e.status, t, n, r),
-        a = (r ? e.size - (i.width / 2 + e.status / 2) : e.size - i.width) - e.offset;
+        o = (r ? e.size - (i.width / 2 + e.status / 2) : e.size - i.width) - e.offset;
     return I(O({}, i), {
-        x: a,
+        x: o,
         y: e.size - i.height - e.offset
     });
 }
 function L(e, t, n) {
-    let { size: r, status: i, stroke: a, offset: o } = e,
+    let { size: r, status: i, stroke: o, offset: a } = e,
         s = n ? i * h.D6 : i,
         l = (s - i) / 2,
         c = t ? i * h.EW : i;
     return {
-        avatarCutoutX: r - s + l - a - o,
-        avatarCutoutY: r - c - a - o,
-        avatarCutoutWidth: s + 2 * a,
-        avatarCutoutHeight: c + 2 * a,
-        avatarCutoutRadius: t ? (c + 2 * a) * h.ZC : (i + 2 * a) / 2
+        avatarCutoutX: r - s + l - o - a,
+        avatarCutoutY: r - c - o - a,
+        avatarCutoutWidth: s + 2 * o,
+        avatarCutoutHeight: c + 2 * o,
+        avatarCutoutRadius: t ? (c + 2 * o) * h.ZC : (i + 2 * o) / 2
     };
 }
 function x(e, t, n, i) {
-    let a = D(n, i, t, !1),
-        o = (0, u.lm)(i, e);
+    let o = D(n, i, t, !1),
+        a = (0, u.lm)(i, e);
     if (!t) {
-        let t = a.height / 2 + n.stroke,
-            i = a.x + n.status / 2;
+        let t = o.height / 2 + n.stroke,
+            i = o.x + n.status / 2;
         return (0, r.jsx)('circle', {
-            style: { opacity: o },
+            style: { opacity: a },
             fill: e,
             r: t,
             cx: i,
             cy: i
         });
     }
-    let s = a.height + 2 * n.stroke,
-        l = a.width + 2 * n.stroke,
-        c = a.x - n.stroke,
-        d = a.y - n.stroke;
+    let s = o.height + 2 * n.stroke,
+        l = o.width + 2 * n.stroke,
+        c = o.x - n.stroke,
+        d = o.y - n.stroke;
     return (0, r.jsx)('rect', {
         fill: e,
         height: s,
         width: l,
-        style: { opacity: o },
+        style: { opacity: a },
         x: c,
         y: d,
         rx: n.stroke
     });
 }
-function k(e) {
+function M(e) {
     let { status: t, isMobile: n, isTyping: r, size: i } = e,
-        a = n && !r && t === m.Skl.ONLINE,
-        o = (0, h.UC)(i);
+        o = n && !r && t === m.Skl.ONLINE,
+        a = (0, h.UC)(i);
     return O(
         {},
-        L(o, a, r),
+        L(a, o, r),
         (0, u.Dk)({
             status: t,
-            size: o.status,
-            isMobile: a,
+            size: a.status,
+            isMobile: o,
             isTyping: r,
             topOffset: 2,
             leftOffset: 6
         })
     );
 }
-function j(e) {
-    let { children: t, size: n, onClick: i, onMouseDown: a, onKeyDown: s, onContextMenu: c, onMouseEnter: u, onMouseLeave: d, className: f, tabIndex: _, ariaLabel: p, ariaHidden: m, status: E, isMobile: y = !1, isTyping: O = !1, avatarDecoration: v, typingOffset: I, specs: T } = e,
+function k(e) {
+    let { children: t, size: n, onClick: i, onMouseDown: o, onKeyDown: s, onContextMenu: c, onMouseEnter: u, onMouseLeave: d, className: f, tabIndex: _, ariaLabel: p, ariaHidden: m, status: E, isMobile: y = !1, isTyping: O = !1, avatarDecoration: v, typingOffset: I, specs: T } = e,
         S = {
             width: (0, h.px)(n),
             height: (0, h.px)(n)
         },
-        A = null == p || m ? void 0 : w(p, E, y),
+        A = null == p || m ? void 0 : R(p, E, y),
         N = T.size * g.hs,
-        C = R(E, n, y, O),
-        P =
+        C = P(E, n, y, O),
+        w =
             null != v &&
             (0, r.jsx)('svg', {
                 width: N + I,
@@ -385,23 +385,23 @@ function j(e) {
                     })
                 })
             });
-    return null != i || null != a
+    return null != i || null != o
         ? (0, r.jsxs)(l.P, {
-              className: o()(b.wrapper, b.pointer, f),
+              className: a()(b.wrapper, b.pointer, f),
               style: S,
               onClick: i,
               tabIndex: _,
               onContextMenu: c,
-              onMouseDown: a,
+              onMouseDown: o,
               onKeyDown: s,
               onMouseEnter: null != u ? u : void 0,
               onMouseLeave: null != d ? d : void 0,
               'aria-label': A,
               'aria-hidden': m,
-              children: [t, P]
+              children: [t, w]
           })
         : (0, r.jsxs)('div', {
-              className: o()(b.wrapper, f),
+              className: a()(b.wrapper, f),
               style: S,
               onContextMenu: null != c ? c : void 0,
               onMouseEnter: null != u ? u : void 0,
@@ -409,16 +409,16 @@ function j(e) {
               role: 'img',
               'aria-label': A,
               'aria-hidden': m,
-              children: [t, P]
+              children: [t, w]
           });
 }
-let M = i.forwardRef((e, t) => {
-    let { src: n, isSpeaking: i, className: a } = e;
+let j = i.forwardRef((e, t) => {
+    let { src: n, isSpeaking: i, className: o } = e;
     return (0, r.jsxs)(
         'div',
         {
             ref: t,
-            className: o()(b.avatarStack, a),
+            className: a()(b.avatarStack, o),
             children: [
                 (0, r.jsx)('img', {
                     src: null != n ? n : void 0,
@@ -433,56 +433,56 @@ let M = i.forwardRef((e, t) => {
     );
 });
 function U(e) {
-    let { src: t, status: n, size: i, statusColor: a, isMobile: s = !1, isTyping: l = !1, typingIndicatorRef: f, avatarContentRef: _, isSpeaking: g = !1, statusTooltip: E = !1, statusTooltipDelay: y, statusBackdropColor: v, 'aria-hidden': T = !1, 'aria-label': S, imageClassName: A, ref: N } = e,
+    let { src: t, status: n, size: i, statusColor: o, isMobile: s = !1, isTyping: l = !1, typingIndicatorRef: f, avatarContentRef: _, isSpeaking: g = !1, statusTooltip: E = !1, statusTooltipDelay: y, statusBackdropColor: v, 'aria-hidden': T = !1, 'aria-label': S, imageClassName: A, ref: N } = e,
         C = n !== m.Skl.UNKNOWN ? n : null,
-        w = (0, h.UC)(i),
-        R = null != C ? Math.ceil((w.status * h.D6 - w.status) / 2) : 0,
-        L = w.size + R,
-        k = (0, u.vj)(C, a);
+        R = (0, h.UC)(i),
+        P = null != C ? Math.ceil((R.status * h.D6 - R.status) / 2) : 0,
+        L = R.size + P,
+        M = (0, u.vj)(C, o);
     return (0, r.jsx)(
-        j,
+        k,
         I(O({}, e), {
             ariaLabel: S,
             ariaHidden: T,
             status: C,
-            specs: w,
-            typingOffset: R,
+            specs: R,
+            typingOffset: P,
             children: (0, r.jsxs)('svg', {
                 ref: N,
                 width: L,
                 height: L,
                 viewBox: '0 0 '.concat(L, ' ').concat(L),
-                className: o()(b.mask, b.svg),
+                className: a()(b.mask, b.svg),
                 'aria-hidden': !0,
                 children: [
                     (0, r.jsx)('foreignObject', {
                         x: 0,
                         y: 0,
-                        width: w.size,
-                        height: w.size,
-                        mask: 'url(#'.concat(P(C, i, s, l), ')'),
-                        children: (0, r.jsx)(M, {
+                        width: R.size,
+                        height: R.size,
+                        mask: 'url(#'.concat(w(C, i, s, l), ')'),
+                        children: (0, r.jsx)(j, {
                             ref: _,
                             src: t,
                             isSpeaking: g,
                             className: A
                         })
                     }),
-                    null != C && null != v ? x(v, s, w, C) : null,
+                    null != C && null != v ? x(v, s, R, C) : null,
                     null != C
                         ? (0, r.jsx)(d.u, {
                               text: E ? (0, p.u5)(C) : null,
                               'aria-label': !1,
                               position: 'top',
-                              spacing: 5 + 1.5 * w.stroke,
+                              spacing: 5 + 1.5 * R.stroke,
                               delay: y,
                               children: (e) =>
                                   (0, r.jsxs)(r.Fragment, {
                                       children: [
                                           (0, r.jsx)(
                                               'rect',
-                                              I(O({}, e, D(w, C, s, l)), {
-                                                  fill: k,
+                                              I(O({}, e, D(R, C, s, l)), {
+                                                  fill: M,
                                                   mask: 'url(#'.concat((0, u.rs)(C, s, l), ')'),
                                                   className: b.pointerEvents
                                               })
@@ -490,9 +490,9 @@ function U(e) {
                                           l
                                               ? (0, r.jsx)(c.b, {
                                                     ref: f,
-                                                    dotRadius: w.status / 4,
-                                                    x: w.size - 1.375 * w.status - w.offset,
-                                                    y: w.size - w.status / 1.333 - w.offset
+                                                    dotRadius: R.status / 4,
+                                                    x: R.size - 1.375 * R.status - R.offset,
+                                                    y: R.size - R.status / 1.333 - R.offset
                                                 })
                                               : null
                                       ]
@@ -511,22 +511,22 @@ function G(e, t, n) {
 function B(e, t, n) {
     let r = e.status * t,
         i = null != n ? (r * h.D6 - r) / 2 : 0,
-        a = (e.status - r) / 2,
-        o = e.size - r - i - e.offset - a,
-        s = e.size - r * h.EW - e.offset - a,
-        l = Math.round((o / t) * 100) / 100,
+        o = (e.status - r) / 2,
+        a = e.size - r - i - e.offset - o,
+        s = e.size - r * h.EW - e.offset - o,
+        l = Math.round((a / t) * 100) / 100,
         c = Math.round((s / t) * 100) / 100;
     return 'translate('.concat(l, ', ').concat(c, ')');
 }
 function Z(e) {
-    let { fromIsMobile: t = !0, fromStatus: n, fromColor: a, isMobile: l = !1, isTyping: _ = !1, typingIndicatorRef: m, isSpeaking: g = !1, size: E, src: y, status: v, statusColor: S, statusTooltip: w = !1, statusTooltipDelay: R, statusBackdropColor: P, 'aria-hidden': D = !1, 'aria-label': L, imageClassName: U, pulseStatusIcon: Z } = e,
+    let { fromIsMobile: t = !0, fromStatus: n, fromColor: o, isMobile: l = !1, isTyping: _ = !1, typingIndicatorRef: m, isSpeaking: g = !1, size: E, src: y, status: v, statusColor: S, statusTooltip: R = !1, statusTooltipDelay: P, statusBackdropColor: w, 'aria-hidden': D = !1, 'aria-label': L, imageClassName: U, pulseStatusIcon: Z } = e,
         F = (0, u.vj)(v, S),
         V = i.useId(),
         H = i.useId(),
         [Y] = i.useState(() =>
             O(
-                { fill: a },
-                k({
+                { fill: o },
+                M({
                     size: E,
                     status: n,
                     isMobile: t,
@@ -538,7 +538,7 @@ function Z(e) {
             () =>
                 O(
                     { fill: F },
-                    k({
+                    M({
                         size: E,
                         status: v,
                         isMobile: l,
@@ -555,14 +555,14 @@ function Z(e) {
             },
             N() ? 'animate-always' : 'animate-never'
         ),
-        { avatarCutoutX: z, avatarCutoutY: q, avatarCutoutWidth: $, avatarCutoutHeight: X, avatarCutoutRadius: Q, fill: J } = K,
+        { avatarCutoutX: z, avatarCutoutY: q, avatarCutoutWidth: X, avatarCutoutHeight: Q, avatarCutoutRadius: J, fill: $ } = K,
         ee = T(K, ['avatarCutoutX', 'avatarCutoutY', 'avatarCutoutWidth', 'avatarCutoutHeight', 'avatarCutoutRadius', 'fill']),
         et = (0, h.px)(E),
         en = (0, h.UC)(E),
         er = en.status * h.D6,
         ei = en.status * h.EW,
-        ea = null != v ? (en.status * h.D6 - en.status) / 2 : 0,
-        eo = en.size + Math.ceil(ea),
+        eo = null != v ? (en.status * h.D6 - en.status) / 2 : 0,
+        ea = en.size + Math.ceil(eo),
         [es, el, ec] = (0, f.q_F)(
             {
                 config: {
@@ -577,17 +577,17 @@ function Z(e) {
             [Z, v]
         );
     return (0, r.jsx)(
-        j,
+        k,
         I(O({}, e), {
             ariaLabel: L,
             ariaHidden: D,
-            typingOffset: ea,
+            typingOffset: eo,
             specs: en,
             children: (0, r.jsxs)('svg', {
-                width: eo,
-                height: eo,
-                viewBox: '0 0 '.concat(eo, ' ').concat(eo),
-                className: o()(b.mask, b.svg),
+                width: ea,
+                height: ea,
+                viewBox: '0 0 '.concat(ea, ' ').concat(ea),
+                className: a()(b.mask, b.svg),
                 'aria-hidden': !0,
                 children: [
                     (0, r.jsxs)('mask', {
@@ -605,10 +605,10 @@ function Z(e) {
                                 color: 'black',
                                 x: z,
                                 y: q,
-                                width: $,
-                                height: X,
-                                rx: Q,
-                                ry: Q
+                                width: X,
+                                height: Q,
+                                rx: J,
+                                ry: J
                             })
                         ]
                     }),
@@ -619,19 +619,19 @@ function Z(e) {
                         width: et,
                         height: et,
                         mask: 'url(#'.concat(V, ')'),
-                        children: (0, r.jsx)(M, {
+                        children: (0, r.jsx)(j, {
                             src: y,
                             isSpeaking: g,
                             className: U
                         })
                     }),
-                    null != P && x(P, l, en, v),
+                    null != w && x(w, l, en, v),
                     (0, r.jsx)(d.u, {
-                        text: w ? (0, p.u5)(v) : null,
+                        text: R ? (0, p.u5)(v) : null,
                         'aria-label': !1,
                         position: 'top',
                         spacing: G(en.status, en.stroke, l, _),
-                        delay: R,
+                        delay: P,
                         children: (e) =>
                             (0, r.jsxs)(s.animated.g, {
                                 transform: es.scale.to((e) => 'scale('.concat(e, ') ').concat(B(en, e, v))),
@@ -640,11 +640,11 @@ function Z(e) {
                                         width: er,
                                         height: ei,
                                         viewBox: '0 0 '.concat(er, ' ').concat(ei),
-                                        className: w ? b.cursorDefault : void 0,
+                                        className: R ? b.cursorDefault : void 0,
                                         children: [
                                             (0, u.vP)(ee, en.status, H),
                                             (0, r.jsx)(s.animated.rect, {
-                                                fill: J,
+                                                fill: $,
                                                 width: er,
                                                 height: ei,
                                                 mask: 'url(#'.concat(H, ')')
@@ -681,25 +681,25 @@ function Z(e) {
 function F(e, t, n, r, i) {
     return null != n && null != t && (!!e || t !== n || (t === m.Skl.ONLINE && r !== i));
 }
-M.displayName = 'AvatarImg';
+j.displayName = 'AvatarImg';
 let V = i.memo(function (e) {
     var { statusColor: t, status: n } = e,
-        a = T(e, ['statusColor', 'status']);
-    let { isMobile: o = !1, isTyping: s = !1 } = a,
+        o = T(e, ['statusColor', 'status']);
+    let { isMobile: a = !1, isTyping: s = !1 } = o,
         l = i.useRef(n),
-        c = i.useRef(o),
+        c = i.useRef(a),
         d = (0, u.vj)(n, t),
         f = i.useRef(d),
         _ = i.useRef(!1),
-        p = _.current || F(s, n, l.current, o, c.current);
+        p = _.current || F(s, n, l.current, a, c.current);
     return (
         i.useLayoutEffect(() => {
-            ((_.current = p), (l.current = n), (c.current = o), (f.current = d));
-        }, [n, o, d, p]),
+            ((_.current = p), (l.current = n), (c.current = a), (f.current = d));
+        }, [n, a, d, p]),
         null != n && null != l.current && p
             ? (0, r.jsx)(
                   Z,
-                  I(O({}, a), {
+                  I(O({}, o), {
                       status: n,
                       statusColor: d,
                       fromStatus: l.current,
@@ -709,7 +709,7 @@ let V = i.memo(function (e) {
               )
             : (0, r.jsx)(
                   U,
-                  I(O({}, a), {
+                  I(O({}, o), {
                       status: n,
                       statusColor: d
                   })

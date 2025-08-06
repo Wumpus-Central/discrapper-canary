@@ -1,8 +1,8 @@
 (n.d(t, { f: () => g }), n(388685), n(539854));
 var r = n(73800),
     i = n(243814),
-    a = n(442837),
-    o = n(384275),
+    o = n(442837),
+    a = n(384275),
     s = n(911969),
     l = n(10718),
     c = n(812236),
@@ -22,16 +22,16 @@ let h = {
     };
 function g(e) {
     let { context: t, onlyActivityApps: n, allowCommandFetch: r, includeAuthorizedAppsAndFetch: i } = e,
-        { sectionDescriptors: a, loading: o } = l.wi({
+        { sectionDescriptors: o, loading: a } = l.wi({
             context: t,
             filters: h,
             options: m,
             allowFetch: r
         });
     return {
-        loading: o,
+        loading: a,
         frecentApps: E({
-            sectionDescriptors: a,
+            sectionDescriptors: o,
             context: t,
             onlyActivityApps: n,
             includeAuthorizedAppsAndFetch: i
@@ -40,11 +40,11 @@ function g(e) {
 }
 function E(e) {
     let { sectionDescriptors: t, context: n, onlyActivityApps: s, includeAuthorizedAppsAndFetch: l } = e,
-        h = (0, a.e7)([d.Z], () => d.Z.getFetchState());
+        h = (0, o.e7)([d.Z], () => d.Z.getFetchState());
     r.useEffect(() => {
-        l && h === d.M.NOT_FETCHED && o.Z.fetch();
+        l && h === d.M.NOT_FETCHED && a.Z.fetch();
     }, [l, h]);
-    let m = (0, a.Wu)([d.Z], () => (l ? d.Z.getNewestTokens().filter((e) => e.scopes.includes(i.x.APPLICATIONS_COMMANDS)) : [])),
+    let m = (0, o.Wu)([d.Z], () => (l ? d.Z.getNewestTokens().filter((e) => e.scopes.includes(i.x.APPLICATIONS_COMMANDS)) : [])),
         g = t.filter((e) => e.id !== p.bi.FRECENCY && e.id !== p.bi.BUILT_IN),
         E = 'contextless' === n.type,
         b = r.useMemo(() => {

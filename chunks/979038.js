@@ -2,8 +2,8 @@ n.d(t, { Z: () => S });
 var r = n(255367);
 n(73800);
 var i = n(620662),
-    a = n(841784),
-    o = n(834353),
+    o = n(841784),
+    a = n(834353),
     s = n(802856),
     l = n(420660),
     c = n(206074),
@@ -25,14 +25,14 @@ var i = n(620662),
 function S(e) {
     let { user: t, activity: n, onAction: S, onClose: A, application: N } = e,
         C = (0, c.q)(N, 'UserProfileActivityButtons'),
-        w = (0, u.L)(null != n ? n : void 0, void 0);
+        R = (0, u.L)(null != n ? n : void 0, void 0);
     if ((0, s.Z)(n))
         return (0, r.jsx)(E.Z, {
             platformType: I.ABu.XBOX,
             icon: () => (0, r.jsx)(_.Z, {}),
             onAction: S
         });
-    if ((0, o.Z)(n))
+    if ((0, a.Z)(n))
         return (0, r.jsx)(E.Z, {
             platformType: I.ABu.PLAYSTATION,
             icon: () => (0, r.jsx)(f.Z, {}),
@@ -43,15 +43,15 @@ function S(e) {
             activity: n,
             onAction: S
         });
-    let R = (0, i.Z)(n, I.xjy.JOIN) || (0, a.Z)(n),
-        P = (null == n ? void 0 : n.application_id) != null;
-    return !w && C && null != N
+    let P = (0, i.Z)(n, I.xjy.JOIN) || (0, o.Z)(n),
+        w = (null == n ? void 0 : n.application_id) != null;
+    return !R && C && null != N
         ? (0, r.jsx)(v.Z, {
               application: N,
               onAction: S,
               onClose: A
           })
-        : R && P
+        : P && w
           ? (0, r.jsxs)('div', {
                 className: T.buttonContainer,
                 children: [
@@ -67,7 +67,7 @@ function S(e) {
                     })
                 ]
             })
-          : R
+          : P
             ? (0, r.jsx)(m.Z, {
                   user: t,
                   activity: n,
@@ -87,7 +87,7 @@ function S(e) {
                       activity: n,
                       onAction: S
                   })
-                : P
+                : w
                   ? (0, r.jsx)(y.Z, {
                         activity: n,
                         onAction: S

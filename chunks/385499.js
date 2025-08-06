@@ -2,8 +2,8 @@ n.d(t, { Z: () => m });
 var r = n(255367);
 n(73800);
 var i = n(120356),
-    a = n.n(i),
-    o = n(981729),
+    o = n.n(i),
+    a = n(981729),
     s = n(481060),
     l = n(674563),
     c = n(388032),
@@ -93,7 +93,7 @@ let h = (e) => {
         O = n === l.Hb.REMIX,
         v = null;
     d &&
-        (v = (0, r.jsx)(o.u, {
+        (v = (0, r.jsx)(a.u, {
             text: E,
             align: 'center',
             position: 'top',
@@ -110,7 +110,7 @@ let h = (e) => {
         (0, r.jsxs)(
             'span',
             p(f({}, e), {
-                className: a()(i, b, h ? u.rem : u.px, {
+                className: o()(i, b, h ? u.rem : u.px, {
                     [u.botTagOP]: y,
                     [u.botTagRemix]: O
                 }),
@@ -126,13 +126,13 @@ let h = (e) => {
         );
     switch (n) {
         case l.Hb.REMIX:
-            return (0, r.jsx)(o.u, {
+            return (0, r.jsx)(a.u, {
                 text: c.intl.string(c.t.xb0str),
                 position: 'top',
                 children: (e) => I(e)
             });
         case l.Hb.ORIGINAL_POSTER:
-            return (0, r.jsx)(o.u, {
+            return (0, r.jsx)(a.u, {
                 text: c.intl.string(c.t.uN6Emp),
                 position: 'top',
                 children: (e) => I(e)

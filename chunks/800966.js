@@ -2,8 +2,8 @@ n.d(t, { h: () => v });
 var r = n(255367);
 n(73800);
 var i = n(120356),
-    a = n.n(i),
-    o = n(990547),
+    o = n.n(i),
+    a = n(990547),
     s = n(755721),
     l = n(481060),
     c = n(213609),
@@ -84,14 +84,14 @@ function O(e) {
     return (
         (0, c.Z)(
             {
-                type: o.ImpressionTypes.VIEW,
-                name: o.ImpressionNames.HD_STREAMING_POPOUT
+                type: a.ImpressionTypes.VIEW,
+                name: a.ImpressionNames.HD_STREAMING_POPOUT
             },
             { disableTrack: t },
             [t]
         ),
         (0, r.jsxs)('div', {
-            className: a()(p.popoutContainer, { [p.hidden]: t }),
+            className: o()(p.popoutContainer, { [p.hidden]: t }),
             children: [
                 (0, r.jsx)('img', {
                     className: p.image,

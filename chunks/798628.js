@@ -5,8 +5,8 @@ n.d(t, {
 });
 var r = n(362383),
     i = n(731965),
-    a = n(902704);
-function o(e, t, n) {
+    o = n(902704);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -30,7 +30,7 @@ function s(e) {
                 })
             )),
             r.forEach(function (t) {
-                o(e, t, n[t]);
+                a(e, t, n[t]);
             }));
     }
     return e;
@@ -74,7 +74,7 @@ function f(e) {
     return d((t) => {
         var n;
         return null != (n = t.polls[e]) ? n : u;
-    }, a.Z);
+    }, o.Z);
 }
 function _(e, t, n) {
     d.getState().updatePollState(e, t, n);

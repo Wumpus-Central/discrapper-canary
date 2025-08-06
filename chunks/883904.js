@@ -1,8 +1,8 @@
 n.d(t, {
-    EG: () => o,
+    EG: () => a,
     KC: () => l,
     Nj: () => s,
-    Vr: () => a,
+    Vr: () => o,
     cm: () => i,
     pR: () => c
 });
@@ -14,13 +14,13 @@ let i = (e, t) => {
             guildId: t
         });
     },
-    a = (e) => {
+    o = (e) => {
         r.Z.dispatch({
             type: 'DCF_HANDLE_DC_DISMISSED',
             dismissibleContent: e
         });
     },
-    o = () => {
+    a = () => {
         r.Z.dispatch({ type: 'DCF_RESET' });
     },
     s = (e) => {

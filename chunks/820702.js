@@ -7,38 +7,38 @@
         return e > 1 && e < 5;
     }
     function i(e, t, n, i) {
-        var a = e + ' ';
+        var o = e + ' ';
         switch (n) {
             case 's':
                 return t || i ? 'pár sekúnd' : 'pár sekundami';
             case 'ss':
-                if (t || i) return a + (r(e) ? 'sekundy' : 'sekúnd');
-                return a + 'sekundami';
+                if (t || i) return o + (r(e) ? 'sekundy' : 'sekúnd');
+                return o + 'sekundami';
             case 'm':
                 return t ? 'minúta' : i ? 'minútu' : 'minútou';
             case 'mm':
-                if (t || i) return a + (r(e) ? 'minúty' : 'minút');
-                return a + 'minútami';
+                if (t || i) return o + (r(e) ? 'minúty' : 'minút');
+                return o + 'minútami';
             case 'h':
                 return t ? 'hodina' : i ? 'hodinu' : 'hodinou';
             case 'hh':
-                if (t || i) return a + (r(e) ? 'hodiny' : 'hodín');
-                return a + 'hodinami';
+                if (t || i) return o + (r(e) ? 'hodiny' : 'hodín');
+                return o + 'hodinami';
             case 'd':
                 return t || i ? 'deň' : 'dňom';
             case 'dd':
-                if (t || i) return a + (r(e) ? 'dni' : 'dní');
-                return a + 'dňami';
+                if (t || i) return o + (r(e) ? 'dni' : 'dní');
+                return o + 'dňami';
             case 'M':
                 return t || i ? 'mesiac' : 'mesiacom';
             case 'MM':
-                if (t || i) return a + (r(e) ? 'mesiace' : 'mesiacov');
-                return a + 'mesiacmi';
+                if (t || i) return o + (r(e) ? 'mesiace' : 'mesiacov');
+                return o + 'mesiacmi';
             case 'y':
                 return t || i ? 'rok' : 'rokom';
             case 'yy':
-                if (t || i) return a + (r(e) ? 'roky' : 'rokov');
-                return a + 'rokmi';
+                if (t || i) return o + (r(e) ? 'roky' : 'rokov');
+                return o + 'rokmi';
         }
     }
     return e.defineLocale('sk', {

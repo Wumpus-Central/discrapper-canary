@@ -11,10 +11,10 @@ var r = n(73800),
     s = n(358221),
     o = n(136015),
     c = n(565799),
-    d = n(431328),
-    u = n(501655);
+    u = n(431328),
+    d = n(501655);
 function h(e) {
-    let t = (0, d.Rk)(e, u.pV.AUDIENCE),
+    let t = (0, u.Rk)(e, d.pV.AUDIENCE),
         [n, i] = r.useState(!1);
     return (
         r.useEffect(() => {
@@ -24,39 +24,39 @@ function h(e) {
     );
 }
 function p(e, t, n) {
-    let d = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+    let u = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
         h = (function (e, t, n) {
             let a = (0, l.e7)([c.Z], () => [e, c.Z.getParticipantsVersion(e)], [e], o.Q),
-                d = (0, l.e7)([s.Z], () => s.Z.getSelectedParticipantId(e), [e]);
+                u = (0, l.e7)([s.Z], () => s.Z.getSelectedParticipantId(e), [e]);
             return r.useMemo(() => {
                 let r = [],
                     l = [],
                     s = -1,
                     o = [];
                 if (n)
-                    for (let t of c.Z.getMutableParticipants(e, u.pV.SPEAKER))
-                        if (t.type === u.Ui.STREAM) (t.id !== d && o.push(t), s++);
+                    for (let t of c.Z.getMutableParticipants(e, d.pV.SPEAKER))
+                        if (t.type === d.Ui.STREAM) (t.id !== u && o.push(t), s++);
                         else break;
                 let h = (e, t, n) => {
-                        let a = n ? e.filter((e, t) => e.id !== d && t > s) : e,
+                        let a = n ? e.filter((e, t) => e.id !== u && t > s) : e,
                             o = (0, i.chunk)(a, t);
                         (l.push(o), r.push(o.length));
                     },
-                    p = null != d ? c.Z.getParticipant(e, d) : null;
+                    p = null != u ? c.Z.getParticipant(e, u) : null;
                 return (
                     (null == p ? void 0 : p.speaker) ? h([p], 1, !1) : h([], 1, !1),
-                    [u.pV.SPEAKER, u.pV.AUDIENCE].forEach((e) => {
-                        h(c.Z.getMutableParticipants(a[0], e), t[e], e === u.pV.SPEAKER);
+                    [d.pV.SPEAKER, d.pV.AUDIENCE].forEach((e) => {
+                        h(c.Z.getMutableParticipants(a[0], e), t[e], e === d.pV.SPEAKER);
                     }),
                     h(o, 1, !1),
                     [r, l]
                 );
-            }, [a, t, d, n, e]);
-        })(e, t, d),
+            }, [a, t, u, n, e]);
+        })(e, t, u),
         [p, f] = h,
-        [g, m] = (0, a.T)(h, n, [t[u.pV.AUDIENCE]]);
+        [g, m] = (0, a.T)(h, n, [t[d.pV.AUDIENCE]]);
     return [
-        [p[3 * !!d], p[1], g[2]],
-        [f[3 * !!d], f[1], m[2]]
+        [p[3 * !!u], p[1], g[2]],
+        [f[3 * !!u], f[1], m[2]]
     ];
 }

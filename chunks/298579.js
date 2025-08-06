@@ -1,8 +1,8 @@
 (n.d(t, { Z: () => l }), n(388685));
 var r = n(147913),
     i = n(592125),
-    a = n(851268);
-function o(e, t, n) {
+    o = n(851268);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -20,10 +20,10 @@ class s extends r.Z {
         let { channelId: t, guildId: n } = e;
         if (null == t || null == n) return;
         let r = i.Z.getChannel(t);
-        null != r && r.isGuildVoice() && a.y(t);
+        null != r && r.isGuildVoice() && o.y(t);
     }
     constructor(...e) {
-        (super(...e), o(this, 'actions', { VOICE_CHANNEL_SELECT: this.handleVoiceChannelSelect }));
+        (super(...e), a(this, 'actions', { VOICE_CHANNEL_SELECT: this.handleVoiceChannelSelect }));
     }
 }
 let l = new s();

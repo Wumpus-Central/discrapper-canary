@@ -2,8 +2,8 @@ n.d(t, { L: () => f });
 var r = n(255367);
 n(73800);
 var i = n(481060),
-    a = n(51025),
-    o = n(850840),
+    o = n(51025),
+    a = n(850840),
     s = n(391690);
 function l(e, t, n) {
     return (
@@ -59,7 +59,7 @@ function d(e, t) {
 }
 function f(e, t, l, u, f) {
     let _ = s.Z.getInstallationPath(e.id, t),
-        p = null != e.eulaId && !o.Z.hasAcceptedEULA(e.eulaId);
+        p = null != e.eulaId && !a.Z.hasAcceptedEULA(e.eulaId);
     null == _ || p
         ? (0, i.ZDy)(async () => {
               let { default: i } = await n.e('226').then(n.bind(n, 472064));
@@ -73,7 +73,7 @@ function f(e, t, l, u, f) {
                       })
                   );
           })
-        : (0, a.LO)({
+        : (0, o.LO)({
               application: e,
               branchId: t,
               buildId: l,

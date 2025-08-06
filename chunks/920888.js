@@ -1,8 +1,8 @@
 (n.d(t, { Z: () => S }), n(388685), n(539854));
 var r = n(255367),
     i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(215569),
     l = n(481060),
     c = n(566006),
@@ -85,15 +85,15 @@ class T extends i.PureComponent {
               : null;
     }
     render() {
-        let { message: e, disableReactionCreates: t, disableReactionUpdates: n, isLurking: i, isGuest: a, isPendingMember: g, isForumToolbar: E, channel: b, className: y, forceAddReactions: O, reactionClassName: v, useChatFontScaling: I, forceHideReactionCreates: T, remainingReactions: S, combinedReactions: A, visibleReactionsCount: N } = this.props,
+        let { message: e, disableReactionCreates: t, disableReactionUpdates: n, isLurking: i, isGuest: o, isPendingMember: g, isForumToolbar: E, channel: b, className: y, forceAddReactions: O, reactionClassName: v, useChatFontScaling: I, forceHideReactionCreates: T, remainingReactions: S, combinedReactions: A, visibleReactionsCount: N } = this.props,
             { disableTransitionAppear: C } = this.state,
-            w = I ? m : h,
-            R = N > 0;
-        if (!R && !O) return null;
-        let P = O || R;
+            R = I ? m : h,
+            P = N > 0;
+        if (!P && !O) return null;
+        let w = O || P;
         return (0, r.jsxs)(s.W, {
             component: 'div',
-            className: o()(w.reactions, y),
+            className: a()(R.reactions, y),
             transitionAppear: !C,
             role: 'group',
             transitionLeave: !1,
@@ -106,7 +106,7 @@ class T extends i.PureComponent {
                     message: e,
                     readOnly: n,
                     isLurking: i,
-                    isGuest: a,
+                    isGuest: o,
                     isPendingMember: g,
                     isForumToolbar: E,
                     useChatFontScaling: I,
@@ -117,10 +117,10 @@ class T extends i.PureComponent {
                         onClick: (t) => {
                             (t.stopPropagation(), (0, _.op)(b, e));
                         },
-                        className: o()(w.reaction, v, w.remainingReactions),
+                        className: a()(R.reaction, v, R.remainingReactions),
                         'aria-label': p.intl.string(p.t.lfIHs7),
                         children: (0, r.jsxs)(l.Text, {
-                            className: w.reactionInner,
+                            className: R.reactionInner,
                             variant: 'text-sm/normal',
                             children: ['+', S]
                         })
@@ -128,13 +128,13 @@ class T extends i.PureComponent {
                 !t &&
                     !T &&
                     (0, r.jsx)(u.X, {
-                        tabIndex: P || this.state.isHovered ? 0 : -1,
+                        tabIndex: w || this.state.isHovered ? 0 : -1,
                         type: c.O.NORMAL,
                         message: e,
                         channel: b,
                         useChatFontScaling: I,
                         isHovered: this.state.isHovered,
-                        className: o()({ [w.forceShow]: P })
+                        className: a()({ [R.forceShow]: w })
                     })
             ]
         });
@@ -149,16 +149,16 @@ class T extends i.PureComponent {
     }
 }
 let S = (e) => {
-    let { message: t, maxReactions: n, hoistReaction: a } = e,
+    let { message: t, maxReactions: n, hoistReaction: o } = e,
         {
-            combinedReactions: o,
+            combinedReactions: a,
             remainingReactions: s,
             visibleReactionsCount: l
         } = i.useMemo(() => {
             let e = [],
-                r = I(t.reactions, a),
+                r = I(t.reactions, o),
                 i = null != n && n < r.length ? r.slice(0, n) : r,
-                o = r.length - i.length,
+                a = r.length - i.length,
                 s = r.length;
             return (
                 i.forEach((t) => {
@@ -167,15 +167,15 @@ let S = (e) => {
                 {
                     combinedReactions: e,
                     visibleReactionsCount: s,
-                    remainingReactions: o
+                    remainingReactions: a
                 }
             );
-        }, [a, n, t.reactions]);
+        }, [o, n, t.reactions]);
     return (0, r.jsx)(
         T,
         y(E({}, e), {
             visibleReactionsCount: l,
-            combinedReactions: o,
+            combinedReactions: a,
             remainingReactions: s
         })
     );

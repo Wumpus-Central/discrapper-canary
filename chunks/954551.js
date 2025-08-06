@@ -2,8 +2,8 @@ n.d(t, { Z: () => _ });
 var r = n(255367);
 n(73800);
 var i = n(481060),
-    a = n(665149),
-    o = n(388035),
+    o = n(665149),
+    a = n(388035),
     s = n(453473),
     l = n(388032);
 function c(e, t, n) {
@@ -66,11 +66,11 @@ function _(e) {
         popoutPosition: 'bottom',
         popoutAlign: 'right',
         children: (e, t, n, s, d) =>
-            (0, r.jsx)(o.U, {
+            (0, r.jsx)(a.U, {
                 location: 'bookmarks-button',
                 targetElementRef: d,
                 children: (0, r.jsx)(
-                    a.JO,
+                    o.JO,
                     f(u({}, n), {
                         ref: d,
                         className: c,

@@ -1,4 +1,4 @@
-(n.d(t, { S: () => a }), n(388685));
+(n.d(t, { S: () => o }), n(388685));
 var r = n(73800);
 function i(e, t, n) {
     return (
@@ -13,7 +13,7 @@ function i(e, t, n) {
         e
     );
 }
-class a extends r.PureComponent {
+class o extends r.PureComponent {
     static getDerivedStateFromError(e) {
         return { error: e };
     }

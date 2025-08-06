@@ -6,7 +6,7 @@
     $VG: () => g.$V,
     $Y6: () => ty,
     $pe: () => tu,
-    A2N: () => rR,
+    A2N: () => rP,
     ABu: () => t0,
     ADE: () => nE,
     AEg: () => nA,
@@ -20,19 +20,19 @@
     B9o: () => t_,
     BFP: () => t3,
     BRd: () => g.BR,
-    BVn: () => rJ,
+    BVn: () => r$,
     BZL: () => g.BZ,
     BhN: () => nW,
-    BiE: () => eQ,
+    BiE: () => eJ,
     Bjg: () => nK,
     BmY: () => es,
     BpS: () => ed,
     CgE: () => rI,
-    CkL: () => tX,
-    CoT: () => w,
+    CkL: () => tQ,
+    CoT: () => R,
     Cyb: () => g.Cy,
     DJE: () => rt,
-    DJj: () => ej,
+    DJj: () => ek,
     DZw: () => eD,
     E07: () => tA,
     EKQ: () => g.EK,
@@ -43,11 +43,11 @@
     Etm: () => g.Et,
     Eu4: () => ns,
     FD8: () => eG,
-    FQ1: () => rM,
+    FQ1: () => rj,
     Fc: () => ti,
-    FoC: () => X,
+    FoC: () => Q,
     FsG: () => E.Fs,
-    GI0: () => eX,
+    GI0: () => eQ,
     GNZ: () => nG,
     GOo: () => e9,
     GQo: () => n0,
@@ -67,24 +67,24 @@
     IlC: () => n9,
     Ilk: () => g.Il,
     IyS: () => rG,
-    J0y: () => $,
+    J0y: () => X,
     J6R: () => eB,
     JjL: () => g.Jj,
     JkL: () => tv,
-    Jn9: () => r$,
+    Jn9: () => rX,
     JuI: () => eq,
     JwP: () => np,
-    K3D: () => rj,
-    KA4: () => tR,
+    K3D: () => rk,
+    KA4: () => tP,
     KFR: () => nL,
     KJ3: () => rD,
     KsC: () => C,
     L4X: () => eH,
     LAt: () => tc,
     LCk: () => r3,
-    LPv: () => tQ,
+    LPv: () => tJ,
     LYt: () => tE,
-    Lg6: () => rP,
+    Lg6: () => rw,
     M7m: () => t1,
     MAM: () => g.MA,
     ME: () => eg,
@@ -103,22 +103,22 @@
     OGo: () => e_,
     OL7: () => g.OL,
     OMz: () => g.OM,
-    OSm: () => e$,
+    OSm: () => eX,
     OYC: () => ee,
     OcF: () => te,
     Odu: () => et,
     PEY: () => e5,
-    PNu: () => eM,
+    PNu: () => ej,
     POd: () => rp,
     PRK: () => e1,
     PUi: () => nU,
     Pbq: () => t8,
     Plq: () => g.Pl,
-    PrB: () => k,
+    PrB: () => M,
     PrS: () => tb,
     PsQ: () => tK,
     PyE: () => g.Py,
-    QCD: () => nJ,
+    QCD: () => n$,
     QIO: () => tL,
     QKv: () => H,
     QL: () => g.QL,
@@ -133,7 +133,7 @@
     RK: () => g.RK,
     RYY: () => t2,
     RcX: () => th,
-    Rg9: () => nk,
+    Rg9: () => nM,
     S7T: () => g.S7,
     S9g: () => nC,
     SOq: () => n4,
@@ -141,19 +141,19 @@
     STv: () => eb,
     SaU: () => tF,
     Sap: () => ni,
-    Sbl: () => tk,
+    Sbl: () => tM,
     Sc2: () => eT,
     Skl: () => g.Sk,
-    T23: () => rQ,
+    T23: () => rJ,
     TC2: () => g.TC,
-    TNx: () => tw,
-    TPd: () => o.T,
+    TNx: () => tR,
+    TPd: () => a.T,
     TU7: () => tf,
     TaA: () => rs,
-    TzF: () => nQ,
+    TzF: () => nJ,
     U66: () => g.U6,
     U9i: () => g.U9,
-    ULH: () => P,
+    ULH: () => w,
     Ucd: () => rz,
     Uk1: () => g.Uk,
     UkZ: () => rZ,
@@ -164,7 +164,7 @@
     V7H: () => ts,
     VD2: () => nF,
     VKK: () => eY,
-    V_K: () => t$,
+    V_K: () => tX,
     VqG: () => g.Vq,
     Vzj: () => g.Vz,
     WND: () => nu,
@@ -178,49 +178,49 @@
     XmY: () => e2,
     Xyh: () => e4,
     YeM: () => eu,
-    Ypu: () => eo,
-    Z5c: () => ew,
-    Z8P: () => ek,
+    Ypu: () => ea,
+    Z5c: () => eR,
+    Z8P: () => eM,
     Z9p: () => nm,
     ZUi: () => Y,
-    ZY5: () => tM,
-    ZfP: () => R,
+    ZY5: () => tj,
+    ZfP: () => P,
     Zuq: () => g.Zu,
     _1z: () => ei,
     _8R: () => rW,
     _s_: () => A,
-    _vf: () => ea,
+    _vf: () => eo,
     a5g: () => tq,
     aIL: () => eI,
     aIt: () => ru,
     aO5: () => g.aO,
-    aZC: () => tJ,
+    aZC: () => t$,
     aib: () => tD,
-    ane: () => nM,
+    ane: () => nj,
     apO: () => ri,
-    b2L: () => na,
+    b2L: () => no,
     b4C: () => rV,
     b8q: () => tU,
-    bL: () => eP,
-    c2C: () => nj,
-    d4z: () => o.d,
+    bL: () => ew,
+    c2C: () => nk,
+    d4z: () => a.d,
     dAT: () => tz,
     dCx: () => nn,
     dG4: () => g.dG,
     dGM: () => tn,
     dGm: () => g.yA,
-    dN1: () => eJ,
-    dYL: () => tP,
+    dN1: () => e$,
+    dYL: () => tw,
     e3s: () => re,
     eBq: () => n7,
-    eHb: () => nX,
+    eHb: () => nQ,
     eRX: () => nt,
-    eWB: () => to,
+    eWB: () => ta,
     ecB: () => nD,
     eez: () => tp,
     en1: () => eZ,
     epS: () => rd,
-    epw: () => ta,
+    epw: () => to,
     evJ: () => tx,
     f07: () => rn,
     fK7: () => g.fK,
@@ -228,7 +228,7 @@
     fo$: () => tl,
     frH: () => g.fr,
     fzT: () => t4,
-    gLR: () => rX,
+    gLR: () => rQ,
     gg$: () => g.gg,
     gkr: () => rm,
     hBH: () => s.h,
@@ -239,7 +239,7 @@
     hiG: () => r2,
     i$l: () => g.i$,
     iC$: () => rv,
-    iEv: () => ra,
+    iEv: () => ro,
     iLy: () => q,
     ihW: () => E.ih,
     ipw: () => er,
@@ -249,11 +249,11 @@
     jXE: () => tG,
     jm8: () => rx,
     jsM: () => rg,
-    jwA: () => nP,
+    jwA: () => nw,
     kEZ: () => G,
     kGb: () => rf,
     kNB: () => rc,
-    kVF: () => M,
+    kVF: () => j,
     kg4: () => T,
     kod: () => ev,
     l$U: () => eK,
@@ -277,12 +277,12 @@
     pAY: () => tm,
     pJs: () => D,
     pKx: () => g.pK,
-    pM4: () => j,
+    pM4: () => k,
     pNK: () => N,
     pTL: () => rq,
     pjP: () => n5,
     pmI: () => t7,
-    q5t: () => tj,
+    q5t: () => tk,
     q9n: () => nH,
     qAy: () => tB,
     qWG: () => rH,
@@ -293,14 +293,14 @@
     r2o: () => U,
     rMx: () => nb,
     rnv: () => tN,
-    rsA: () => nw,
+    rsA: () => nR,
     rtL: () => nr,
     rxP: () => g.rx,
     s9s: () => rS,
     sFg: () => ec,
-    sHY: () => ro,
+    sHY: () => ra,
     scU: () => tI,
-    si2: () => rk,
+    si2: () => rM,
     t4x: () => tW,
     tG9: () => eF,
     tHP: () => eL,
@@ -313,26 +313,26 @@
     uRl: () => tY,
     uaV: () => c.u,
     udG: () => nv,
-    vB8: () => nR,
+    vB8: () => nP,
     vID: () => nI,
-    vTt: () => no,
+    vTt: () => na,
     vbS: () => t5,
     vpv: () => tC,
     vtS: () => tH,
     vuo: () => eW,
     vxO: () => rr,
-    w2V: () => rw,
-    wC$: () => J,
+    w2V: () => rR,
+    wC$: () => $,
     wI2: () => rC,
     wZ8: () => ep,
     wli: () => rB,
-    x0X: () => n$,
+    x0X: () => nX,
     x8Z: () => rN,
     xAR: () => rY,
     xGv: () => td,
-    xPJ: () => Q,
+    xPJ: () => J,
     xW$: () => nO,
-    xjy: () => eR,
+    xjy: () => eP,
     xmn: () => Z,
     xr4: () => g.xr,
     yXg: () => nZ,
@@ -352,9 +352,9 @@
     n(743606));
 var r = n(512722),
     i = n.n(r),
-    a = n(674746);
+    o = n(674746);
 n(722770);
-var o = n(106351),
+var a = n(106351),
     s = n(470167),
     l = n(388123),
     c = n(275726),
@@ -420,13 +420,13 @@ var O = (function (e) {
     C = (function (e) {
         return ((e.DISPLAY = 'DISPLAY'), (e.INVITE = 'INVITE'), (e.DEFAULT_NOTIFICATIONS = 'DEFAULT_NOTIFICATIONS'), (e.ROLE_SUBSCRIPTION_TIERS = 'ROLE_SUBSCRIPTION_TIERS'), (e.ROLE_SUBSCRIPTION_EMOJI = 'ROLE_SUBSCRIPTION_EMOJI'), (e.ROLE_SUBSCRIPTION_TIER_TEMPLATE = 'ROLE_SUBSCRIPTION_TIER_TEMPLATE'), (e.AUTOMOD_MENTION_SPAM = 'AUTOMOD_MENTION_SPAM'), (e.SERVER_GUIDE = 'SERVER_GUIDE'), (e.SAFETY_OVERVIEW = 'SAFETY_OVERVIEW'), (e.SAFETY_AUTOMOD = 'SAFETY_AUTOMOD'), (e.SAFETY_DM_AND_SPAM_PROTECTION = 'SAFETY_DM_AND_SPAM_PROTECTION'), (e.SAFETY_CAPTCHA_AND_RAID_PROTECTION = 'SAFETY_CAPTCHA_AND_RAID_PROTECTION'), (e.SAFETY_PERMISSIONS = 'SAFETY_PERMISSIONS'), (e.ACCESS_DISCOVERABLE = 'ACCESS_DISCOVERABLE'), (e.PROFILE_VISIBILITY = 'PROFILE_VISIBILITY'), (e.BOOST_PERKS_VANITY_URL = 'BOOST_PERKS_VANITY_URL'), e);
     })({}),
-    w = (function (e) {
+    R = (function (e) {
         return ((e.OVERVIEW = 'OVERVIEW'), (e.PERMISSIONS = 'PERMISSIONS'), (e.INSTANT_INVITES = 'INSTANT_INVITES'), (e.INTEGRATIONS = 'INTEGRATIONS'), (e.DELETE = 'DELETE'), (e.DEFAULT_FORUM_LAYOUT = 'DEFAULT_FORUM_LAYOUT'), (e.NOTIFICATIONS = 'NOTIFICATIONS'), (e.PINNED_MESSAGES = 'PINNED_MESSAGES'), (e.INSTANT_INVITES_MANAGEMENT = 'INSTANT_INVITES_MANAGEMENT'), (e.PINNED_CHAT = 'PINNED_CHAT'), (e.NEW_PERMISSION = 'NEW_PERMISSION'), (e.PERMISSION_OVERRIDES = 'PERMISSION_OVERRIDES'), (e.CHANGE_CATEGORY = 'CHANGE_CATEGORY'), (e.WEBHOOKS = 'WEBHOOKS'), (e.EDIT_LINKED_LOBBY = 'EDIT_LINKED_LOBBY'), (e.CHANNELS_FOLLOWED = 'CHANNELS_FOLLOWED'), (e.EDIT_WEBHOOK = 'EDIT_WEBHOOK'), (e.CHANGE_RTC_REGION = 'CHANGE_RTC_REGION'), (e.EDIT_FORUM_TAG = 'EDIT_FORUM_TAG'), e);
     })({}),
-    R = (function (e) {
+    P = (function (e) {
         return ((e.TOPIC = 'TOPIC'), e);
     })({}),
-    P = (function (e) {
+    w = (function (e) {
         return ((e.NONE = 'NONE'), (e.MEMBERS = 'MEMBERS'), (e.SEARCH = 'SEARCH'), (e.SIDEBAR_CHAT = 'SIDEBAR_CHAT'), (e.PROFILE = 'PROFILE'), (e.SUMMARIES = 'SUMMARIES'), e);
     })({}),
     D = (function (e) {
@@ -438,13 +438,13 @@ var O = (function (e) {
     x = (function (e) {
         return ((e.NEVER = 'NEVER'), (e.ENABLED = 'ENABLED'), (e.BLOCKED = 'BLOCKED'), e);
     })({}),
-    k = (function (e) {
+    M = (function (e) {
         return ((e.NEVER = 'NEVER'), (e.ALL_CHANNELS = 'ALL_CHANNELS'), (e.SELECTED_CHANNEL = 'SELECTED_CHANNEL'), e);
     })({}),
-    j = (function (e) {
+    k = (function (e) {
         return ((e.PUSH_TO_TALK = 'PUSH_TO_TALK'), (e.VOICE_ACTIVITY = 'VOICE_ACTIVITY'), e);
     })({}),
-    M = (function (e) {
+    j = (function (e) {
         return ((e.GENERIC = 'GENERIC'), (e.LAUNCH_GAME_FAILURE = 'LAUNCH_GAME_FAILURE'), (e.UNCLAIMED_ACCOUNT = 'UNCLAIMED_ACCOUNT'), (e.UNVERIFIED_ACCOUNT = 'UNVERIFIED_ACCOUNT'), (e.PENDING_MEMBER = 'PENDING_MEMBER'), (e.DOWNLOAD_NAG = 'DOWNLOAD_NAG'), (e.VOICE_DISABLED = 'VOICE_DISABLED'), (e.SCHEDULED_MAINTENANCE = 'SCHEDULED_MAINTENANCE'), (e.NO_INPUT_DETECTED = 'NO_INPUT_DETECTED'), (e.NO_INPUT_DEVICES_DETECTED = 'NO_INPUT_DEVICES_DETECTED'), (e.H264_DISABLED = 'H264_DISABLED'), (e.STREAMER_MODE = 'STREAMER_MODE'), (e.SURVEY = 'SURVEY'), (e.CORRUPT_INSTALLATION = 'CORRUPT_INSTALLATION'), (e.VIDEO_UNSUPPORTED_BROWSER = 'VIDEO_UNSUPPORTED_BROWSER'), (e.CONNECT_SPOTIFY = 'CONNECT_SPOTIFY'), (e.SPOTIFY_AUTO_PAUSED = 'SPOTIFY_AUTO_PAUSED'), (e.PREMIUM_PROMO = 'PREMIUM_PROMO'), (e.MFA_SMS_BACKUP = 'MFA_SMS_BACKUP'), (e.HARDWARE_MUTE = 'HARDWARE_MUTE'), (e.DISPATCH_ERROR = 'DISPATCH_ERROR'), (e.DISPATCH_INSTALL_SCRIPT_PROGRESS = 'DISPATCH_INSTALL_SCRIPT_PROGRESS'), (e.APPLICATION_TEST_MODE = 'APPLICATION_TEST_MODE'), (e.DETECTED_OFF_PLATFORM_PREMIUM_PERK = 'DETECTED_OFF_PLATFORM_PREMIUM_PERK'), (e.DETECTED_OFF_PLATFORM_PREMIUM_PERK_UPSELL = 'DETECTED_OFF_PLATFORM_PREMIUM_PERK_UPSELL'), (e.PREMIUM_TIER_2_TRIAL_ENDING = 'PREMIUM_TIER_2_TRIAL_ENDING'), (e.PREMIUM_TIER_0_TRIAL_ENDING = 'PREMIUM_TIER_0_TRIAL_ENDING'), (e.PREMIUM_TIER_2_DISCOUNT_ENDING = 'PREMIUM_TIER_2_DISCOUNT_ENDING'), (e.LURKING_GUILD = 'LURKING_GUILD'), (e.VIEWING_ROLES = 'VIEWING_ROLES'), (e.INVITED_TO_SPEAK = 'INVITED_TO_SPEAK'), (e.OUTBOUND_PROMOTION = 'OUTBOUND_PROMOTION'), (e.PREMIUM_UNCANCEL = 'PREMIUM_UNCANCEL'), (e.PREMIUM_MISSING_PAYMENT = 'PREMIUM_MISSING_PAYMENT'), (e.PREMIUM_PAST_DUE_MISSING_PAYMENT = 'PREMIUM_PAST_DUE_MISSING_PAYMENT'), (e.PREMIUM_PAST_DUE_INVALID_PAYMENT = 'PREMIUM_PAST_DUE_INVALID_PAYMENT'), (e.PREMIUM_REACTIVATE = 'PREMIUM_REACTIVATE'), (e.CONNECT_PLAYSTATION = 'CONNECT_PLAYSTATION'), (e.LOCALIZED_PRICING = 'LOCALIZED_PRICING'), (e.BACK_TO_PREVIOUS_SCREEN = 'BACK_TO_PREVIOUS_SCREEN'), (e.QUARANTINED = 'QUARANTINED'), (e.PREMIUM_TIER_0 = 'PREMIUM_TIER_0'), (e.PREMIUM_PAST_DUE_ONE_TIME_PAYMENT = 'PREMIUM_PAST_DUE_ONE_TIME_PAYMENT'), (e.BOUNCED_EMAIL_DETECTED = 'BOUNCED_EMAIL_DETECTED'), (e.AUTO_MODERATION_MENTION_RAID_DETECTION = 'AUTO_MODERATION_MENTION_RAID_DETECTION'), (e.ACTIVATE_SERVER_SUBSCRIPTION = 'ACTIVATE_SERVER_SUBSCRIPTION'), (e.AUTOMOD_QUARANTINED_USER_PROFILE = 'AUTOMOD_QUARANTINED_USER_PROFILE'), (e.POMELO_ELIGIBLE = 'POMELO_ELIGIBLE'), (e.GUILD_RAID_NOTIFICATION = 'GUILD_RAID_NOTIFICATION'), (e.SAFETY_USER_SENTIMENT_NAGBAR = 'SAFETY_USER_SENTIMENT_NAGBAR'), (e.WIN32_DEPRECATED_MESSAGE = 'WIN32_DEPRECATED_MESSAGE'), (e.BLOCKED_BY_PROXY = 'BLOCKED_BY_PROXY'), (e.VOICE_CONNECTED_LAST_SESSION = 'VOICE_CONNECTED_LAST_SESSION'), (e.HABITUAL_DND = 'HABITUAL_DND'), (e.WIN7_8_DEPRECATED_MESSAGE = 'WIN7_8_DEPRECATED_MESSAGE'), (e.QUESTS_PROGRESS_INTERRUPTION = 'QUESTS_PROGRESS_INTERRUPTION'), (e.CHECKOUT_RECOVERY_NAGBAR = 'CHECKOUT_RECOVERY_NAGBAR'), (e.BLOCK_USER_FEEDBACK_NAGBAR = 'BLOCK_USER_FEEDBACK_NAGBAR'), (e.IGNORE_USER_FEEDBACK_NAGBAR = 'IGNORE_USER_FEEDBACK_NAGBAR'), (e.GIFTING_PROMOTION_REMINDER = 'GIFTING_PROMOTION_REMINDER'), (e.LOGIN = 'LOGIN'), (e.REGISTER = 'REGISTER'), (e.MACOS_19_DEPRECATED_MESSAGE = 'MACOS_19_DEPRECATED_MESSAGE'), (e.REPORT_TO_MOD_SURVEY = 'REPORT_TO_MOD_SURVEY'), e);
     })({}),
     U = (function (e) {
@@ -574,16 +574,16 @@ let z = new Set([c.u.REPLY, c.u.THREAD_STARTER_MESSAGE, c.u.CONTEXT_MENU_COMMAND
 var q = (function (e) {
         return ((e[(e.CROSSPOSTED = 1)] = 'CROSSPOSTED'), (e[(e.IS_CROSSPOST = 2)] = 'IS_CROSSPOST'), (e[(e.SUPPRESS_EMBEDS = 4)] = 'SUPPRESS_EMBEDS'), (e[(e.SOURCE_MESSAGE_DELETED = 8)] = 'SOURCE_MESSAGE_DELETED'), (e[(e.URGENT = 16)] = 'URGENT'), (e[(e.HAS_THREAD = 32)] = 'HAS_THREAD'), (e[(e.EPHEMERAL = 64)] = 'EPHEMERAL'), (e[(e.LOADING = 128)] = 'LOADING'), (e[(e.FAILED_TO_MENTION_SOME_ROLES_IN_THREAD = 256)] = 'FAILED_TO_MENTION_SOME_ROLES_IN_THREAD'), (e[(e.GUILD_FEED_HIDDEN = 512)] = 'GUILD_FEED_HIDDEN'), (e[(e.SHOULD_SHOW_LINK_NOT_DISCORD_WARNING = 1024)] = 'SHOULD_SHOW_LINK_NOT_DISCORD_WARNING'), (e[(e.SUPPRESS_NOTIFICATIONS = 4096)] = 'SUPPRESS_NOTIFICATIONS'), (e[(e.IS_VOICE_MESSAGE = 8192)] = 'IS_VOICE_MESSAGE'), (e[(e.HAS_SNAPSHOT = 16384)] = 'HAS_SNAPSHOT'), (e[(e.IS_COMPONENTS_V2 = 32768)] = 'IS_COMPONENTS_V2'), (e[(e.SENT_BY_SOCIAL_LAYER_INTEGRATION = 65536)] = 'SENT_BY_SOCIAL_LAYER_INTEGRATION'), e);
     })({}),
-    $ = (function (e) {
+    X = (function (e) {
         return ((e[(e.IS_CLIP = 1)] = 'IS_CLIP'), (e[(e.IS_THUMBNAIL = 2)] = 'IS_THUMBNAIL'), (e[(e.IS_REMIX = 4)] = 'IS_REMIX'), (e[(e.IS_SPOILER = 8)] = 'IS_SPOILER'), (e[(e.CONTAINS_EXPLICIT_MEDIA = 16)] = 'CONTAINS_EXPLICIT_MEDIA'), (e[(e.IS_ANIMATED = 32)] = 'IS_ANIMATED'), (e[(e.CONTAINS_GORE_CONTENT = 64)] = 'CONTAINS_GORE_CONTENT'), e);
     })({}),
-    X = (function (e) {
+    Q = (function (e) {
         return ((e[(e.IS_ANIMATED = 32)] = 'IS_ANIMATED'), e);
     })({}),
-    Q = (function (e) {
+    J = (function (e) {
         return ((e[(e.CONTAINS_EXPLICIT_MEDIA = 16)] = 'CONTAINS_EXPLICIT_MEDIA'), (e[(e.IS_CONTENT_INVENTORY_ENTRY = 32)] = 'IS_CONTENT_INVENTORY_ENTRY'), (e[(e.CONTAINS_GORE_CONTENT = 64)] = 'CONTAINS_GORE_CONTENT'), e);
     })({}),
-    J = (function (e) {
+    $ = (function (e) {
         return ((e.ALWAYS = 'ALWAYS'), (e.NEVER = 'NEVER'), (e.ONLY_WHILE_SPEAKING = 'ONLY_WHILE_SPEAKING'), e);
     })({}),
     ee = (function (e) {
@@ -601,10 +601,10 @@ var q = (function (e) {
     ei = (function (e) {
         return ((e[(e.ACTIVE = 0)] = 'ACTIVE'), (e[(e.TIMED_OUT = 1)] = 'TIMED_OUT'), (e[(e.DISMISSED = 2)] = 'DISMISSED'), (e[(e.FOCUSED = 3)] = 'FOCUSED'), e);
     })({}),
-    ea = (function (e) {
+    eo = (function (e) {
         return ((e.TOP_LEFT = 'topLeft'), (e.TOP_RIGHT = 'topRight'), (e.BOTTOM_LEFT = 'bottomLeft'), (e.BOTTOM_RIGHT = 'bottomRight'), (e.DISABLED = 'disabled'), e);
     })({}),
-    eo = (function (e) {
+    ea = (function (e) {
         return ((e.ENABLED = 'ENABLED'), (e.DISABLED = 'DISABLED'), e);
     })({}),
     es = (function (e) {
@@ -1579,19 +1579,19 @@ let eg = '@me',
         POWERUP_STORE: (e) => '/channels/'.concat(e, '/boosts')
     }),
     eC = (0, d.Ft)(eA),
-    ew = (0, d.Ft)(eN, [':', '?', '@']);
-var eR = (function (e) {
+    eR = (0, d.Ft)(eN, [':', '?', '@']);
+var eP = (function (e) {
         return ((e[(e.INSTANCE = 1)] = 'INSTANCE'), (e[(e.JOIN = 2)] = 'JOIN'), (e[(e.SYNC = 16)] = 'SYNC'), (e[(e.PLAY = 32)] = 'PLAY'), (e[(e.PARTY_PRIVACY_FRIENDS = 64)] = 'PARTY_PRIVACY_FRIENDS'), (e[(e.PARTY_PRIVACY_VOICE_CHANNEL = 128)] = 'PARTY_PRIVACY_VOICE_CHANNEL'), (e[(e.EMBEDDED = 256)] = 'EMBEDDED'), (e[(e.CONTEXTLESS = 512)] = 'CONTEXTLESS'), e);
     })({}),
-    eP = (function (e) {
+    ew = (function (e) {
         return ((e[(e.ALL_MESSAGES = 0)] = 'ALL_MESSAGES'), (e[(e.ONLY_MENTIONS = 1)] = 'ONLY_MENTIONS'), (e[(e.NO_MESSAGES = 2)] = 'NO_MESSAGES'), (e[(e.NULL = 3)] = 'NULL'), e);
     })({});
 let eD = 100,
     eL = 200,
     ex = 50,
-    ek = 50,
-    ej = 25,
-    eM = 200,
+    eM = 50,
+    ek = 25,
+    ej = 200,
     eU = 100,
     eG = 250,
     eB = 2000,
@@ -1604,10 +1604,10 @@ let eD = 100,
     eK = 32,
     ez = 190,
     eq = 32,
-    e$ = 600000,
-    eX = 6 * f.Z.Seconds.HOUR,
-    eQ = [0, 5, 10, 15, 30, f.Z.Seconds.MINUTE, 2 * f.Z.Seconds.MINUTE, 5 * f.Z.Seconds.MINUTE, 10 * f.Z.Seconds.MINUTE, 15 * f.Z.Seconds.MINUTE, 30 * f.Z.Seconds.MINUTE, +f.Z.Seconds.HOUR, 2 * f.Z.Seconds.HOUR, eX],
-    eJ = 10,
+    eX = 600000,
+    eQ = 6 * f.Z.Seconds.HOUR,
+    eJ = [0, 5, 10, 15, 30, f.Z.Seconds.MINUTE, 2 * f.Z.Seconds.MINUTE, 5 * f.Z.Seconds.MINUTE, 10 * f.Z.Seconds.MINUTE, 15 * f.Z.Seconds.MINUTE, 30 * f.Z.Seconds.MINUTE, +f.Z.Seconds.HOUR, 2 * f.Z.Seconds.HOUR, eQ],
+    e$ = 10,
     e0 = 10485760,
     e1 = 524288000,
     e2 = (e) => '||'.concat(e, '||'),
@@ -1633,8 +1633,8 @@ let tt = 128,
     tn = 1024,
     tr = 2000,
     ti = 8000,
-    ta = 64000,
-    to = 96000,
+    to = 64000,
+    ta = 96000,
     ts = 1000,
     tl = '0000',
     tc = '1',
@@ -1698,9 +1698,9 @@ let tt = 128,
     }),
     tN = 10,
     tC = 25,
-    tw = /^FILTER_/,
-    tR = /^ANSWER_/,
-    tP = 32;
+    tR = /^FILTER_/,
+    tP = /^ANSWER_/,
+    tw = 32;
 var tD = (function (e) {
         return ((e.GUILD = 'GUILD'), (e.FAVORITES = 'FAVORITES'), (e.CHANNEL = 'CHANNEL'), (e.GUILD_CHANNEL = 'GUILD_CHANNEL'), (e.CHAT_SIDEBAR = 'CHAT_SIDEBAR'), (e.GIF = 'GIF'), (e.GUILD_DISCOVERY = 'GUILD_DISCOVERY'), (e.GUILD_DISCOVERY_TAG = 'GUILD_DISCOVERY_TAG'), (e.GUILD_DISCOVERY_TOPIC = 'GUILD_DISCOVERY_TOPIC'), (e.STICKER = 'STICKER'), (e.STICKER_SHOP = 'STICKER_SHOP'), (e.INSTANT_INVITE = 'INSTANT_INVITE'), (e.EMOJI = 'EMOJI'), (e.EMOJI_REACTION = 'EMOJI_REACTION'), (e.EMOJI_AUTO_SUGGESTION = 'EMOJI_AUTO_SUGGESTION'), (e.DMS = 'DMS'), (e.THREAD = 'THREAD'), (e.SOUNDBOARD = 'SOUNDBOARD'), e);
     })({}),
@@ -1890,7 +1890,7 @@ var tD = (function (e) {
             e
         );
     })({}),
-    tk = (function (e) {
+    tM = (function (e) {
         return (
             (e.GUILD_CREATE_INVITE_SUGGESTION = 'Guild Create Invite Suggestion'),
             (e.ADD_FRIENDS_TO_DM = 'Add Friends to DM'),
@@ -1973,10 +1973,10 @@ var tD = (function (e) {
             e
         );
     })({}),
-    tj = (function (e) {
+    tk = (function (e) {
         return ((e.JOIN = 'join'), (e.ASK_TO_JOIN = 'ask to join'), (e.LAUNCH = 'launch'), (e.SPECTATE = 'spectate'), e);
     })({}),
-    tM = (function (e) {
+    tj = (function (e) {
         return (
             (e.AUTH = 'Auth'),
             (e.STORE_LISTING = 'Store Listing'),
@@ -2756,10 +2756,10 @@ var tH = (function (e) {
     tq = (function (e) {
         return ((e.DIRECT_MESSAGE = 'Direct Message'), (e.SMS = 'SMS'), (e.EMAIL = 'Email'), e);
     })({}),
-    t$ = (function (e) {
+    tX = (function (e) {
         return ((e[(e.DEFAULT = 0)] = 'DEFAULT'), (e[(e.EXPLICIT = 1)] = 'EXPLICIT'), (e[(e.SAFE = 2)] = 'SAFE'), (e[(e.AGE_RESTRICTED = 3)] = 'AGE_RESTRICTED'), e);
     })({}),
-    tX = (function (e) {
+    tQ = (function (e) {
         return (
             (e.IFRAME_MOUNT = 'IFRAME_MOUNT'),
             (e.IFRAME_UNMOUNT = 'IFRAME_UNMOUNT'),
@@ -2860,10 +2860,10 @@ var tH = (function (e) {
             e
         );
     })({}),
-    tQ = (function (e) {
+    tJ = (function (e) {
         return ((e.TOGGLE_REACTION_POPOUT = 'TOGGLE_REACTION_POPOUT'), (e.ANIMATE_CHAT_AVATAR = 'ANIMATE_CHAT_AVATAR'), (e.VOICE_MESSAGE_SEND = 'VOICE_MESSAGE_SEND'), e);
     })({});
-let tJ = 50;
+let t$ = 50;
 var t0 = (function (e) {
         return ((e.TWITCH = 'twitch'), (e.YOUTUBE = 'youtube'), (e.SKYPE = 'skype'), (e.STEAM = 'steam'), (e.LEAGUE_OF_LEGENDS = 'leagueoflegends'), (e.BATTLENET = 'battlenet'), (e.BLUESKY = 'bluesky'), (e.BUNGIE = 'bungie'), (e.REDDIT = 'reddit'), (e.TWITTER = 'twitter'), (e.TWITTER_LEGACY = 'twitter_legacy'), (e.SPOTIFY = 'spotify'), (e.FACEBOOK = 'facebook'), (e.XBOX = 'xbox'), (e.SAMSUNG = 'samsung'), (e.CONTACTS = 'contacts'), (e.INSTAGRAM = 'instagram'), (e.MASTODON = 'mastodon'), (e.SOUNDCLOUD = 'soundcloud'), (e.GITHUB = 'github'), (e.PLAYSTATION = 'playstation'), (e.PLAYSTATION_STAGING = 'playstation-stg'), (e.EPIC_GAMES = 'epicgames'), (e.RIOT_GAMES = 'riotgames'), (e.ROBLOX = 'roblox'), (e.PAYPAL = 'paypal'), (e.EBAY = 'ebay'), (e.TIKTOK = 'tiktok'), (e.CRUNCHYROLL = 'crunchyroll'), (e.DOMAIN = 'domain'), (e.AMAZON_MUSIC = 'amazon-music'), e);
     })({}),
@@ -2888,14 +2888,14 @@ let t3 = new Set(['facebook', 'contacts']),
     t6 = 10070709,
     t8 = (0, u.Rf)(t6),
     t7 = [1752220, 3066993, 3447003, 10181046, 15277667, 15844367, 15105570, 15158332, 9807270, 6323595, 1146986, 2067276, 2123412, 7419530, 11342935, 12745742, 11027200, 10038562, 9936031, 5533306],
-    t9 = (0, u._i)(a.Z.BRAND_500);
+    t9 = (0, u._i)(o.Z.BRAND_500);
 i()(null != t9, 'Brand color could not be parsed');
 let ne = t9;
 var nt = (function (e) {
         return ((e.VOICE_LEGACY_SUBSYSTEM = 'voice_legacy_subsystem'), (e.DEBUG_LOGGING = 'debug_logging'), (e.POPOUT_WINDOWS = 'popout_windows'), (e.ELEVATED_HOOK = 'elevated_hook'), (e.CREATE_HOST_ON_ATTACH = 'create_host_on_attach'), (e.USER_DATA_CACHE = 'user_data_cache'), (e.WEBAUTHN = 'webauthn'), e);
     })({}),
     nn = (function (e) {
-        return ((e.FILTER_FROM = 'FILTER_FROM'), (e.FILTER_MENTIONS = 'FILTER_MENTIONS'), (e.ANSWER_USERNAME_FROM = 'ANSWER_USERNAME_FROM'), (e.ANSWER_USERNAME_MENTIONS = 'ANSWER_USERNAME_MENTIONS'), (e.FILTER_HAS = 'FILTER_HAS'), (e.ANSWER_HAS = 'ANSWER_HAS'), (e.FILTER_FILE_TYPE = 'FILTER_FILE_TYPE'), (e.ANSWER_FILE_TYPE = 'ANSWER_FILE_TYPE'), (e.FILTER_FILE_NAME = 'FILTER_FILE_NAME'), (e.ANSWER_FILE_NAME = 'ANSWER_FILE_NAME'), (e.FILTER_BEFORE = 'FILTER_BEFORE'), (e.ANSWER_BEFORE = 'ANSWER_BEFORE'), (e.FILTER_AFTER = 'FILTER_AFTER'), (e.ANSWER_AFTER = 'ANSWER_AFTER'), (e.FILTER_ON = 'FILTER_ON'), (e.ANSWER_ON = 'ANSWER_ON'), (e.FILTER_IN = 'FILTER_IN'), (e.ANSWER_IN = 'ANSWER_IN'), (e.FILTER_PINNED = 'FILTER_PINNED'), (e.ANSWER_PINNED = 'ANSWER_PINNED'), e);
+        return ((e.FILTER_FROM = 'FILTER_FROM'), (e.FILTER_MENTIONS = 'FILTER_MENTIONS'), (e.ANSWER_USERNAME_FROM = 'ANSWER_USERNAME_FROM'), (e.ANSWER_USERNAME_MENTIONS = 'ANSWER_USERNAME_MENTIONS'), (e.FILTER_HAS = 'FILTER_HAS'), (e.ANSWER_HAS = 'ANSWER_HAS'), (e.FILTER_FILE_TYPE = 'FILTER_FILE_TYPE'), (e.ANSWER_FILE_TYPE = 'ANSWER_FILE_TYPE'), (e.FILTER_FILE_NAME = 'FILTER_FILE_NAME'), (e.ANSWER_FILE_NAME = 'ANSWER_FILE_NAME'), (e.FILTER_BEFORE = 'FILTER_BEFORE'), (e.ANSWER_BEFORE = 'ANSWER_BEFORE'), (e.FILTER_AFTER = 'FILTER_AFTER'), (e.ANSWER_AFTER = 'ANSWER_AFTER'), (e.FILTER_ON = 'FILTER_ON'), (e.ANSWER_ON = 'ANSWER_ON'), (e.FILTER_IN = 'FILTER_IN'), (e.ANSWER_IN = 'ANSWER_IN'), (e.FILTER_PINNED = 'FILTER_PINNED'), (e.ANSWER_PINNED = 'ANSWER_PINNED'), (e.FILTER_AUTHOR_TYPE = 'FILTER_AUTHOR_TYPE'), (e.ANSWER_AUTHOR_TYPE = 'ANSWER_AUTHOR_TYPE'), e);
     })({}),
     nr = (function (e) {
         return ((e.HISTORY = 'HISTORY'), (e.SEARCH_OPTIONS = 'SEARCH_OPTIONS'), (e.DATES = 'DATES'), e);
@@ -2903,8 +2903,8 @@ var nt = (function (e) {
     ni = (function (e) {
         return ((e.EMPTY = 'EMPTY'), (e.FILTER = 'FILTER'), (e.FILTER_ALL = 'FILTER_ALL'), e);
     })({});
-let na = 'YYYY-MM-DD',
-    no = 'PrivateChannelRecipientsInvitePopout';
+let no = 'YYYY-MM-DD',
+    na = 'PrivateChannelRecipientsInvitePopout';
 var ns = (function (e) {
     return ((e[(e.NONE = 0)] = 'NONE'), (e[(e.TIER_1 = 1)] = 'TIER_1'), (e[(e.TIER_2 = 2)] = 'TIER_2'), (e[(e.TIER_3 = 3)] = 'TIER_3'), e);
 })({});
@@ -4269,6 +4269,15 @@ var nE = (function (e) {
             (e.CHAT_WALLPAPER_WALLPAPER_OPTION_SELECTED = 'chat_wallpaper_wallpaper_option_selected'),
             (e.CHAT_WALLPAPER_DOWNLOADED = 'chat_wallpaper_downloaded'),
             (e.CHAT_WALLPAPER_PICKER_COACHMARK_NOT_SHOW_REASON = 'chat_wallpaper_picker_coachmark_not_show_reason'),
+            (e.DISPLAY_NAME_STYLES_FROM_SETTINGS = 'display_name_styles_from_settings'),
+            (e.DISPLAY_NAME_STYLES_APPLIED = 'display_name_styles_applied'),
+            (e.DISPLAY_NAME_STYLES_CLOSED = 'display_name_styles_closed'),
+            (e.DISPLAY_NAME_STYLES_REMOVED = 'display_name_styles_removed'),
+            (e.DISPLAY_NAME_STYLES_COLOR_SELECTED = 'display_name_styles_color_selected'),
+            (e.DISPLAY_NAME_STYLES_SURPRISE_ME = 'display_name_styles_surprise_me'),
+            (e.DISPLAY_NAME_STYLES_THEME_TOGGLE = 'display_name_styles_theme_toggle'),
+            (e.DISPLAY_NAME_STYLES_ACCESSIBILITY_TOGGLE = 'display_name_styles_accessibility_toggle'),
+            (e.DISPLAY_NAME_STYLES_NITRO_CLICKED = 'display_name_styles_nitro_clicked'),
             (e.RING_TO_GUILD_VC_BANNER_SHOWN = 'impression_ring_to_guild_vc_banner_shown'),
             (e.RING_TO_GUILD_VC_MENU_ITEM_SHOWN = 'impression_ring_to_guild_vc_menu_item_shown'),
             (e.RING_CALL_DECLINED = 'ring_call_declined'),
@@ -4329,7 +4338,7 @@ var nA = (function (e) {
     nC = (function (e) {
         return ((e.USER_SETTINGS = 'USER_SETTINGS'), (e.CHANNEL_SETTINGS = 'CHANNEL_SETTINGS'), (e.GUILD_SETTINGS = 'GUILD_SETTINGS'), (e.RTC_DEBUG = 'RTC_DEBUG'), (e.COLLECTIBLES_SHOP = 'COLLECTIBLES_SHOP'), (e.MANA_PLAYGROUND = 'MANA_PLAYGROUND'), e);
     })({});
-let nw = Object.freeze({
+let nR = Object.freeze({
     ALL: null,
     GUILD_UPDATE: 1,
     CHANNEL_CREATE: 10,
@@ -4410,10 +4419,10 @@ let nw = Object.freeze({
     GUILD_PROFILE_UPDATE: 211,
     GUILD_MIGRATE_PIN_PERMISSION: 212
 });
-var nR = (function (e) {
+var nP = (function (e) {
         return ((e.ALL = 'ALL'), (e.CREATE = 'CREATE'), (e.UPDATE = 'UPDATE'), (e.DELETE = 'DELETE'), e);
     })({}),
-    nP = (function (e) {
+    nw = (function (e) {
         return ((e.USER = '1'), (e.ROLE = '0'), e);
     })({}),
     nD = (function (e) {
@@ -4563,11 +4572,11 @@ var nR = (function (e) {
             e
         );
     })({});
-let nk = 50;
-var nj = (function (e) {
+let nM = 50;
+var nk = (function (e) {
         return ((e.AGREEMENTS = 'AGREEMENTS'), (e.REQUIRE_CAPTCHA = 'REQUIRE_CAPTCHA'), (e.REQUIRE_VERIFIED_EMAIL = 'REQUIRE_VERIFIED_EMAIL'), (e.REQUIRE_VERIFIED_PHONE = 'REQUIRE_VERIFIED_PHONE'), (e.REQUIRE_REVERIFIED_EMAIL = 'REQUIRE_REVERIFIED_EMAIL'), (e.REQUIRE_REVERIFIED_PHONE = 'REQUIRE_REVERIFIED_PHONE'), (e.REQUIRE_VERIFIED_EMAIL_OR_VERIFIED_PHONE = 'REQUIRE_VERIFIED_EMAIL_OR_VERIFIED_PHONE'), (e.REQUIRE_REVERIFIED_EMAIL_OR_VERIFIED_PHONE = 'REQUIRE_REVERIFIED_EMAIL_OR_VERIFIED_PHONE'), (e.REQUIRE_VERIFIED_EMAIL_OR_REVERIFIED_PHONE = 'REQUIRE_VERIFIED_EMAIL_OR_REVERIFIED_PHONE'), (e.REQUIRE_REVERIFIED_EMAIL_OR_REVERIFIED_PHONE = 'REQUIRE_REVERIFIED_EMAIL_OR_REVERIFIED_PHONE'), (e.REQUIRE_SAFETY_FLOWS = 'REQUIRE_SAFETY_FLOWS'), e);
     })({}),
-    nM = (function (e) {
+    nj = (function (e) {
         return ((e.UPDATE_PASSWORD = 'update_password'), e);
     })({}),
     nU = (function (e) {
@@ -4796,14 +4805,14 @@ var nW = (function (e) {
     })({});
 let nz = (e) => 'https://www.youtube.com/embed/'.concat(e),
     nq = (e) => 'https://img.youtube.com/vi/'.concat(e, '/maxresdefault.jpg'),
-    n$ = 'https://discordapp.com/mweb-handoff';
-var nX = (function (e) {
+    nX = 'https://discordapp.com/mweb-handoff';
+var nQ = (function (e) {
         return ((e[(e.HIDDEN = 1)] = 'HIDDEN'), (e[(e.PRIVATE = 2)] = 'PRIVATE'), (e[(e.OVERLAY_DISABLED = 4)] = 'OVERLAY_DISABLED'), (e[(e.ENTITLED = 8)] = 'ENTITLED'), (e[(e.PREMIUM = 16)] = 'PREMIUM'), (e[(e.OVERLAY_V3_DISABLED = 32)] = 'OVERLAY_V3_DISABLED'), e);
     })({}),
-    nQ = (function (e) {
+    nJ = (function (e) {
         return ((e.DONE = 'DONE'), (e.PLANNING = 'PLANNING'), (e.PREPARING = 'PREPARING'), (e.PUSHING = 'PUSHING'), (e.PULLING = 'PULLING'), (e.CONFLICT = 'CONFLICT'), (e.ERROR = 'ERROR'), e);
     })({}),
-    nJ = (function (e) {
+    n$ = (function (e) {
         return ((e.PULL = 'PULL'), (e.PUSH = 'PUSH'), (e.CONFLICT = 'CONFLICT'), (e.NONE = 'NONE'), e);
     })({}),
     n0 = (function (e) {
@@ -4848,10 +4857,10 @@ var rt = (function (e) {
     ri = (function (e) {
         return ((e.PLAY = 'play'), (e.INSTALL = 'install'), (e.UPDATE = 'update'), (e.PAUSE = 'pause'), (e.MOVE_UP = 'move_up'), (e.RESUME = 'resume'), e);
     })({}),
-    ra = (function (e) {
+    ro = (function (e) {
         return ((e.NAME = 'name'), (e.PLATFORM = 'platform'), (e.ACTIONS = 'actions'), (e.LAST_PLAYED = 'last_played'), e);
     })({}),
-    ro = (function (e) {
+    ra = (function (e) {
         return ((e.ASCENDING = 'asc'), (e.DESCENDING = 'desc'), e);
     })({}),
     rs = (function (e) {
@@ -5278,11 +5287,11 @@ var rI = (function (e) {
     rC = (function (e) {
         return ((e.TRENDING_GIFS = 'Trending'), (e.FAVORITES = 'Favorites'), (e.TRENDING_CATEGORY = 'Category'), (e.SEARCH = 'Search'), (e.SEARCH_SUGGESTION = 'Search Suggestion'), e);
     })({});
-let rw = new Set([g.pK.USD, g.pK.CAD, g.pK.EUR, g.pK.AUD, g.pK.GBP, g.pK.PHP, g.pK.MYR, g.pK.VND, g.pK.KRW, g.pK.IDR]);
-var rR = (function (e) {
+let rR = new Set([g.pK.USD, g.pK.CAD, g.pK.EUR, g.pK.AUD, g.pK.GBP, g.pK.PHP, g.pK.MYR, g.pK.VND, g.pK.KRW, g.pK.IDR]);
+var rP = (function (e) {
     return ((e.ALWAYS = 'ALWAYS'), (e.ON_CLICK = 'ON_CLICK'), (e.IF_MODERATOR = 'IF_MODERATOR'), e);
 })({});
-let rP = [];
+let rw = [];
 var rD = (function (e) {
         return ((e.CHANNEL_CALL_POPOUT = 'DISCORD_CHANNEL_CALL_POPOUT'), (e.SOUNDBOARD = 'DISCORD_SOUNDBOARD'), (e.RTC_DEBUG_POPOUT = 'DISCORD_RTC_DEBUG_POPOUT'), (e.CHANNEL_POPOUT = 'DISCORD_CHANNEL_POPOUT'), (e.ACTIVITY_POPOUT = 'DISCORD_ACTIVITY_POPOUT'), (e.OVERLAY_POPOUT = 'DISCORD_OVERLAY_POPOUT'), (e.CLICKER_GAME = 'DISCORD_CLICKER_GAME'), (e.DEVTOOLS_POPOUT = 'DISCORD_DEVTOOLS_POPOUT'), e);
     })({}),
@@ -5292,13 +5301,13 @@ var rD = (function (e) {
     rx = (function (e) {
         return ((e.CONNECTING = 'CONNECTING'), (e.ACTIVE = 'ACTIVE'), (e.RECONNECTING = 'RECONNECTING'), (e.ENDED = 'ENDED'), (e.PAUSED = 'PAUSED'), (e.FAILED = 'FAILED'), e);
     })({}),
-    rk = (function (e) {
+    rM = (function (e) {
         return ((e.USER_REQUESTED = 'user_requested'), (e.STREAM_FULL = 'stream_full'), (e.UNAUTHORIZED = 'unauthorized'), (e.SAFETY_GUILD_RATE_LIMITED = 'safety_guild_rate_limited'), e);
     })({}),
-    rj = (function (e) {
+    rk = (function (e) {
         return ((e.SOUND = 'SOUND'), (e.VIDEO = 'VIDEO'), e);
     })({}),
-    rM = (function (e) {
+    rj = (function (e) {
         return ((e.PLAYING = 'playing'), (e.PAUSED = 'paused'), e);
     })({}),
     rU = (function (e) {
@@ -5327,12 +5336,12 @@ var rK = (function (e) {
         return ((e[(e.AUTO = 1)] = 'AUTO'), (e[(e.FULL = 2)] = 'FULL'), e);
     })({});
 let rq = 100,
-    r$ = /(mfa\.[a-z0-9_-]{20,})|([a-z0-9_-]{23,28}\.[a-z0-9_-]{6,7}\.[a-z0-9_-]{27})/i;
-var rX = (function (e) {
+    rX = /(mfa\.[a-z0-9_-]{20,})|([a-z0-9_-]{23,28}\.[a-z0-9_-]{6,7}\.[a-z0-9_-]{27})/i;
+var rQ = (function (e) {
     return ((e[(e.NULL = 0)] = 'NULL'), (e[(e.DISABLED = 1)] = 'DISABLED'), (e[(e.ENABLED = 2)] = 'ENABLED'), e);
 })({});
-let rQ = 'https://creator-support.discord.com/hc/en-us/articles/12653663868823';
-var rJ = (function (e) {
+let rJ = 'https://creator-support.discord.com/hc/en-us/articles/12653663868823';
+var r$ = (function (e) {
         return ((e[(e.CLIPS_ENABLED = 1)] = 'CLIPS_ENABLED'), (e[(e.ALLOW_VOICE_RECORDING = 2)] = 'ALLOW_VOICE_RECORDING'), (e[(e.ALLOW_ANY_VIEWER_CLIPS = 4)] = 'ALLOW_ANY_VIEWER_CLIPS'), e);
     })({}),
     r0 = (function (e) {

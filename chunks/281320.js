@@ -5,8 +5,8 @@
     n(388685));
 var r,
     i = n(442837),
-    a = n(570140);
-function o(e, t, n) {
+    o = n(570140);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -49,8 +49,8 @@ class p extends (r = i.ZP.Store) {
         return null == (n = s.get(e)) ? void 0 : n.get(t);
     }
 }
-o(p, 'displayName', 'CreatorMonetizationStore');
-let h = new p(a.Z, {
+a(p, 'displayName', 'CreatorMonetizationStore');
+let h = new p(o.Z, {
     CONNECTION_OPEN: u,
     CREATOR_MONETIZATION_PRICE_TIERS_FETCH: d,
     CREATOR_MONETIZATION_PRICE_TIERS_FETCH_SUCCESS: f,

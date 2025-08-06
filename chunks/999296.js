@@ -1,7 +1,7 @@
 var r = n(359282),
     i = n(720379),
-    a = n(581079);
-function o(e, t, n) {
+    o = n(581079);
+function a(e, t, n) {
     var r;
     return (
         i(
@@ -21,18 +21,18 @@ function o(e, t, n) {
                     });
             }
         ),
-        'object' != typeof r && a(!1),
+        'object' != typeof r && o(!1),
         r
     );
 }
 function s(e, t, n) {
     var i = t.getCharacterList(),
-        a = n > 0 ? i.get(n - 1) : void 0,
+        o = n > 0 ? i.get(n - 1) : void 0,
         s = n < i.count() ? i.get(n) : void 0,
-        l = a ? a.getEntity() : void 0,
+        l = o ? o.getEntity() : void 0,
         c = s ? s.getEntity() : void 0;
     if (c && c === l && 'MUTABLE' !== e.__get(c).getMutability()) {
-        for (var u, d = o(i, c, n), f = d.start, _ = d.end; f < _; ) ((u = i.get(f)), (i = i.set(f, r.applyEntity(u, null))), f++);
+        for (var u, d = a(i, c, n), f = d.start, _ = d.end; f < _; ) ((u = i.get(f)), (i = i.set(f, r.applyEntity(u, null))), f++);
         return t.set('characterList', i);
     }
     return t;
@@ -41,15 +41,15 @@ e.exports = function (e, t) {
     var n = e.getBlockMap(),
         r = e.getEntityMap(),
         i = {},
-        a = t.getStartKey(),
-        o = t.getStartOffset(),
-        l = n.get(a),
-        c = s(r, l, o);
-    c !== l && (i[a] = c);
+        o = t.getStartKey(),
+        a = t.getStartOffset(),
+        l = n.get(o),
+        c = s(r, l, a);
+    c !== l && (i[o] = c);
     var u = t.getEndKey(),
         d = t.getEndOffset(),
         f = n.get(u);
-    a === u && (f = c);
+    o === u && (f = c);
     var _ = s(r, f, d);
     return (_ !== f && (i[u] = _), Object.keys(i).length)
         ? e.merge({

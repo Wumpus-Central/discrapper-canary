@@ -9,8 +9,8 @@ n.d(t, {
 });
 var r = n(255367),
     i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(481060),
     l = n(911969),
     c = n(937615),
@@ -23,7 +23,7 @@ function p(e) {
     return (0, r.jsx)(f.Provider, {
         value: { isPremiumRebrand: i },
         children: (0, r.jsx)('div', {
-            className: o()(d.table, { [d.premiumRebrand]: i }, n),
+            className: a()(d.table, { [d.premiumRebrand]: i }, n),
             children: t
         })
     });
@@ -34,7 +34,7 @@ function h(e) {
         ? (0, r.jsx)(s.X6q, {
               variant: 'heading-md/semibold',
               color: 'text-primary',
-              className: o()(d.header, d.premiumRebrand),
+              className: a()(d.header, d.premiumRebrand),
               children: t
           })
         : (0, r.jsx)('div', {
@@ -46,7 +46,7 @@ function m(e) {
     let { label: t, value: n, className: i } = e;
     return _()
         ? (0, r.jsxs)('div', {
-              className: o()(d.row, i),
+              className: a()(d.row, i),
               children: [
                   (0, r.jsx)(s.Text, {
                       variant: 'text-sm/medium',
@@ -62,7 +62,7 @@ function m(e) {
               ]
           })
         : (0, r.jsxs)('div', {
-              className: o()(d.row, i),
+              className: a()(d.row, i),
               children: [
                   (0, r.jsx)('div', {
                       className: d.rowLabel,
@@ -76,12 +76,12 @@ function m(e) {
           });
 }
 function g(e) {
-    let { label: t, value: n, discounts: i, originalAmount: a, interval: o, currency: f, className: _, intervalCount: p, inTrialPeriod: h } = e,
+    let { label: t, value: n, discounts: i, originalAmount: o, interval: a, currency: f, className: _, intervalCount: p, inTrialPeriod: h } = e,
         g = (e) => (null != i ? i.find((t) => t.type === e) : null),
         E = g(l.eW.SUBSCRIPTION_PLAN),
         b = g(l.eW.ENTITLEMENT),
-        y = null != E ? Math.floor((E.amount / a) * 100) : null,
-        O = (0, c.T4)(a, f);
+        y = null != E ? Math.floor((E.amount / o) * 100) : null,
+        O = (0, c.T4)(o, f);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(m, {
@@ -108,7 +108,7 @@ function g(e) {
             null != y
                 ? (0, r.jsxs)('div', {
                       className: d.rowDiscountOriginalPrice,
-                      children: ['(', null != o && null != p ? (0, c.og)(O, o, p) : O, ')']
+                      children: ['(', null != a && null != p ? (0, c.og)(O, a, p) : O, ')']
                   })
                 : null,
             null != b
@@ -123,7 +123,7 @@ function g(e) {
 function E(e) {
     let { extended: t = !1, negativeMarginTop: n = !1, negativeMarginBottom: i = !1 } = e;
     return (0, r.jsx)('div', {
-        className: o()(d.divider, {
+        className: a()(d.divider, {
             [d.dividerExtended]: t,
             [d.negativeMarginTop]: n,
             [d.negativeMarginBottom]: i
@@ -133,7 +133,7 @@ function E(e) {
 function b(e) {
     let { label: t, value: n, className: i } = e;
     return (0, r.jsxs)('div', {
-        className: o()(d.totalRow, i),
+        className: a()(d.totalRow, i),
         children: [
             (0, r.jsx)('div', {
                 className: d.totalLabel,
@@ -149,7 +149,7 @@ function b(e) {
 function y(e) {
     let { children: t, className: n } = e;
     return (0, r.jsx)('div', {
-        className: o()(d.finePrint, n),
+        className: a()(d.finePrint, n),
         children: t
     });
 }

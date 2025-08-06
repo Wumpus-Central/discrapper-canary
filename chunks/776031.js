@@ -1,8 +1,8 @@
 n.d(t, { Z: () => S });
 var r = n(255367),
     i = n(73800),
-    a = n(442837),
-    o = n(481060),
+    o = n(442837),
+    a = n(481060),
     s = n(846027),
     l = n(2052),
     c = n(451467),
@@ -69,25 +69,25 @@ function I(e, t) {
     );
 }
 function T(e, t) {
-    (0, o.ZDy)(
+    (0, a.ZDy)(
         async () => {
             let { default: e } = await n.e('28479').then(n.bind(n, 78865));
             return (n) => (0, r.jsx)(e, I(O({}, n), { analyticsSource: t }));
         },
-        { contextKey: e === m.IlC.POPOUT ? o.u1M : o.z1l }
+        { contextKey: e === m.IlC.POPOUT ? a.u1M : a.z1l }
     );
 }
 function S(e, t) {
-    let { preset: n, resolution: y, fps: v } = (0, a.cj)([u.Z], () => u.Z.getState()),
-        S = (0, a.e7)([_.Z], () => _.Z.getGoLiveSource()),
-        A = (0, a.e7)([h.default], () => h.default.getCurrentUser()),
-        N = (0, a.e7)([f.Z], () => {
+    let { preset: n, resolution: y, fps: v } = (0, o.cj)([u.Z], () => u.Z.getState()),
+        S = (0, o.e7)([_.Z], () => _.Z.getGoLiveSource()),
+        A = (0, o.e7)([h.default], () => h.default.getCurrentUser()),
+        N = (0, o.e7)([f.Z], () => {
             var t;
             return null == (t = f.Z.getGuild(null == e ? void 0 : e.guildId)) ? void 0 : t.premiumTier;
         }),
         { location: C } = (0, l.O)(),
-        w = (0, a.e7)([p.Z, d.Z], () => d.Z.getChannel(p.Z.getVoiceChannelId())),
-        R = i.useCallback(
+        R = (0, o.e7)([p.Z, d.Z], () => d.Z.getChannel(p.Z.getVoiceChannelId())),
+        P = i.useCallback(
             (e, n, r, i) => {
                 if (e) {
                     if (null != S) {
@@ -123,44 +123,44 @@ function S(e, t) {
             [t, C, S]
         );
     if (null == e) return null;
-    let P = n === g.tI.PRESET_DOCUMENTS ? g.ws.FPS_30 : v,
+    let w = n === g.tI.PRESET_DOCUMENTS ? g.ws.FPS_30 : v,
         D = g.af.map((e) => {
             let { value: t, label: n } = e,
-                i = (0, c.Z)(g.tI.PRESET_CUSTOM, y, t, A, N, w);
+                i = (0, c.Z)(g.tI.PRESET_CUSTOM, y, t, A, N, R);
             return (0, r.jsx)(
-                o.k5B,
+                a.k5B,
                 {
                     group: 'stream-settings-fps',
                     id: 'stream-settings-fps-'.concat(t),
                     label: n,
                     checked: t === v,
-                    action: () => R(i, y, t, m.Qqv.RESOLUTION)
+                    action: () => P(i, y, t, m.Qqv.RESOLUTION)
                 },
                 'stream-settings-fps-'.concat(t)
             );
         }),
         L = g.km.map((e) => {
             let { value: t, label: n } = e,
-                i = (0, c.Z)(g.tI.PRESET_CUSTOM, t, P, A, N, w);
+                i = (0, c.Z)(g.tI.PRESET_CUSTOM, t, w, A, N, R);
             return (0, r.jsx)(
-                o.k5B,
+                a.k5B,
                 {
                     group: 'stream-settings-resolution',
                     id: 'stream-settings-resolution-'.concat(t),
                     label: n,
                     checked: t === y,
-                    action: () => R(i, t, P, m.Qqv.RESOLUTION)
+                    action: () => P(i, t, w, m.Qqv.RESOLUTION)
                 },
                 'stream-settings-resolution-'.concat(t)
             );
         });
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(o.kSQ, {
+            (0, r.jsx)(a.kSQ, {
                 label: b.intl.string(b.t.SkkeIi),
                 children: D
             }),
-            (0, r.jsx)(o.kSQ, {
+            (0, r.jsx)(a.kSQ, {
                 label: b.intl.string(b.t.rHyPXl),
                 children: L
             })

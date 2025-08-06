@@ -1,9 +1,9 @@
-n.d(t, { _: () => o });
+n.d(t, { _: () => a });
 var r = n(442837),
     i = n(897473),
-    a = n(433355);
-function o() {
-    let e = (0, r.e7)([a.ZP], () => a.ZP.getSidebarState(a.uZ)),
+    o = n(433355);
+function a() {
+    let e = (0, r.e7)([o.ZP], () => o.ZP.getSidebarState(o.uZ)),
         t = (null == e ? void 0 : e.type) === i.tI.VIEW_MESSAGE_REQUEST ? e : null;
     return {
         channelId: null == t ? void 0 : t.channelId,

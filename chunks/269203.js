@@ -2,8 +2,8 @@ n.d(t, { Z: () => h });
 var r = n(255367);
 n(73800);
 var i = n(442837),
-    a = n(481060),
-    o = n(565138),
+    o = n(481060),
+    a = n(565138),
     s = n(246364),
     l = n(602606),
     c = n(705563),
@@ -25,13 +25,13 @@ function p(e) {
                         (0, r.jsxs)('div', {
                             className: _.summaryHeaderClanInfo,
                             children: [
-                                (0, r.jsx)(o.Z, {
+                                (0, r.jsx)(a.Z, {
                                     guild: l,
                                     active: !0,
-                                    size: o.Z.Sizes.SMOL,
+                                    size: a.Z.Sizes.SMOL,
                                     className: _.guildIcon
                                 }),
-                                (0, r.jsx)(a.X6q, {
+                                (0, r.jsx)(o.X6q, {
                                     variant: 'heading-sm/semibold',
                                     color: 'header-primary',
                                     children: l.name
@@ -39,7 +39,7 @@ function p(e) {
                             ]
                         }),
                     null != c &&
-                        (0, r.jsx)(a.X6q, {
+                        (0, r.jsx)(o.X6q, {
                             variant: 'heading-xl/semibold',
                             color: 'header-primary',
                             children: f.intl.format(f.t.jDV3i4, { username: c.globalName })
@@ -58,12 +58,12 @@ function p(e) {
                                   (0, r.jsxs)('div', {
                                       className: _.formResponseContainer,
                                       children: [
-                                          (0, r.jsx)(a.Text, {
+                                          (0, r.jsx)(o.Text, {
                                               variant: 'text-xs/semibold',
                                               color: 'text-muted',
                                               children: e.label
                                           }),
-                                          (0, r.jsx)(a.Text, {
+                                          (0, r.jsx)(o.Text, {
                                               variant: 'text-md/medium',
                                               color: 'text-primary',
                                               children: t
@@ -78,7 +78,7 @@ function p(e) {
 }
 function h(e) {
     let { channel: t } = e,
-        { loading: n, joinRequest: i, joinRequestGuild: o } = (0, l.Z)(t.id);
+        { loading: n, joinRequest: i, joinRequestGuild: a } = (0, l.Z)(t.id);
     return (0, r.jsx)(d.ZP, {
         channelId: t.id,
         className: _.container,
@@ -89,7 +89,7 @@ function h(e) {
                       children: [
                           (0, r.jsx)('div', {
                               children: (0, r.jsx)(p, {
-                                  guild: o,
+                                  guild: a,
                                   joinRequest: i
                               })
                           }),
@@ -100,7 +100,7 @@ function h(e) {
                       ]
                   })
                 : n
-                  ? (0, r.jsx)(a.$jN, {})
+                  ? (0, r.jsx)(o.$jN, {})
                   : null
     });
 }

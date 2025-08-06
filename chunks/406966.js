@@ -1,8 +1,8 @@
 (n.d(t, { Z: () => u }), n(467055), n(388685));
 var r = n(710845),
     i = n(430824),
-    a = n(823379),
-    o = n(287328);
+    o = n(823379),
+    a = n(287328);
 function s(e, t, n) {
     return (
         t in e
@@ -20,7 +20,7 @@ let l = new r.Z('GuildVersions');
 class c {
     async getCommittedVersions() {
         try {
-            let e = o.Z.guildVersions();
+            let e = a.Z.guildVersions();
             if (null == e) return {};
             let t = (await e.getMany()).map((e) => [e.id, e.version]);
             return Object.fromEntries(null != t ? t : []);
@@ -49,7 +49,7 @@ class c {
                 case 'update':
                     return e.writes;
                 default:
-                    (0, a.vE)(e);
+                    (0, o.vE)(e);
             }
         }
         (this.updateWith(r, [n]), this.updateWith(r, i(n.emojis)), this.updateWith(r, i(n.stickers)), this.updateWith(r, i(n.channels)), this.updateWith(r, Array.isArray(n.roles) ? n.roles : Object.values(n.roles)), this.commit(t));
@@ -97,8 +97,8 @@ class c {
         var n, r;
         if (0 === t.length) return;
         let i = Math.max(null != (n = this.committed.get(e)) ? n : 0, null != (r = this.pending.get(e)) ? r : 0),
-            a = this.computeLatestVersion(i, t);
-        a > i && this.pending.set(e, a);
+            o = this.computeLatestVersion(i, t);
+        o > i && this.pending.set(e, o);
     }
     computeLatestVersion(e, t) {
         let n = e;
@@ -110,7 +110,7 @@ class c {
     }
     commit(e) {
         if (this.pending.size > 0) {
-            let t = o.Z.guildVersionsTransaction(e);
+            let t = a.Z.guildVersionsTransaction(e);
             for (let [e, n] of this.pending)
                 null != n
                     ? (t.put({

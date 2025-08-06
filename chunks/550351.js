@@ -1,8 +1,8 @@
 n.d(t, { Z: () => h });
 var r = n(594190),
     i = n(569545),
-    a = n(199902),
-    o = n(314897),
+    o = n(199902),
+    a = n(314897),
     s = n(158776),
     l = n(19780),
     c = n(979651),
@@ -14,7 +14,7 @@ function p(e) {
     var t, n;
     if (null != e) {
         let { ownerId: t } = i.my(e);
-        if (t !== o.default.getId()) {
+        if (t !== a.default.getId()) {
             let e = s.Z.getActivities(t).find((e) => e.type === f.IIU.PLAYING);
             return {
                 sourceName: null == e ? void 0 : e.name,
@@ -22,7 +22,7 @@ function p(e) {
             };
         }
     }
-    let l = a.Z.getStreamerActiveStreamMetadata(),
+    let l = o.Z.getStreamerActiveStreamMetadata(),
         c = null == l ? void 0 : l.pid,
         u = null != l ? (null != c ? r.ZP.getGameForPID(c) : null) : r.ZP.getVisibleGame();
     return {
@@ -33,7 +33,7 @@ function p(e) {
 function h(e) {
     let { sourceName: t, sourceApplicationId: n } = p(e),
         r = l.Z.getChannelId(),
-        i = [o.default.getId()];
+        i = [a.default.getId()];
     return (
         null != r && (i = Object.keys(c.Z.getVoiceStatesForChannel(r))),
         {

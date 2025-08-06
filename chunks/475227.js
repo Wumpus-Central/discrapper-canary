@@ -1,6 +1,6 @@
 var r = n(657398),
     i = n(389109),
-    a = '[object Arguments]';
+    o = '[object Arguments]';
 e.exports = function (e) {
-    return i(e) && r(e) == a;
+    return i(e) && r(e) == o;
 };

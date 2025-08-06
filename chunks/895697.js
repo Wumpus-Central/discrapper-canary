@@ -1,9 +1,9 @@
-n.d(t, { Z: () => w });
+n.d(t, { Z: () => R });
 var r = n(255367);
 n(73800);
 var i = n(442837),
-    a = n(481060),
-    o = n(592125),
+    o = n(481060),
+    a = n(592125),
     s = n(944486),
     l = n(246946),
     c = n(5192),
@@ -26,27 +26,27 @@ var i = n(442837),
     A = n(388032),
     N = n(773714),
     C = n(200669);
-function w(e) {
-    let { user: t, currentUser: n, displayProfile: w, guild: R, isHovering: P, onOpenProfile: D, channelId: L, onClose: x } = e,
-        k = c.ZP.getName(null == R ? void 0 : R.id, L, t),
-        j = (0, i.e7)([u.Z], () => {
+function R(e) {
+    let { user: t, currentUser: n, displayProfile: R, guild: P, isHovering: w, onOpenProfile: D, channelId: L, onClose: x } = e,
+        M = c.ZP.getName(null == P ? void 0 : P.id, L, t),
+        k = (0, i.e7)([u.Z], () => {
             var e;
             return null == (e = u.Z.getUserProfile(t.id)) ? void 0 : e.application;
         }),
-        M = (0, i.e7)([o.Z, s.Z], () => o.Z.getChannel(s.Z.getChannelId())),
+        j = (0, i.e7)([a.Z, s.Z], () => a.Z.getChannel(s.Z.getChannelId())),
         U = (0, i.e7)([l.Z], () => l.Z.hidePersonalInformation),
         G = (0, d.b)({ location: 'BotUserProfilePopoutBody' });
-    return (0, r.jsxs)(a.Ttm, {
+    return (0, r.jsxs)(o.Ttm, {
         fade: !0,
         className: C.body,
         children: [
             (0, r.jsx)(E.Z, {
                 user: t,
                 onOpenProfile: D,
-                nickname: k,
-                pronouns: null == w ? void 0 : w.pronouns,
+                nickname: M,
+                pronouns: null == R ? void 0 : R.pronouns,
                 tags: (0, r.jsx)(_.Z, {
-                    displayProfile: w,
+                    displayProfile: R,
                     themeType: S.lY.POPOUT,
                     onClose: x
                 }),
@@ -56,7 +56,7 @@ function w(e) {
                         !U &&
                             (0, r.jsx)(O.Z, {
                                 userId: t.id,
-                                isHovering: P,
+                                isHovering: w,
                                 onOpenProfile: D
                             })
                     ]
@@ -76,14 +76,14 @@ function w(e) {
                     }),
                     (0, r.jsx)(y.Z, {
                         user: t,
-                        guildId: null == R ? void 0 : R.id,
+                        guildId: null == P ? void 0 : P.id,
                         className: N.button
                     })
                 ]
             }),
             (0, r.jsx)(v.Z, {
                 user: t,
-                bio: null == w ? void 0 : w.bio,
+                bio: null == R ? void 0 : R.bio,
                 hidePersonalInformation: U,
                 onClose: x
             }),
@@ -91,34 +91,34 @@ function w(e) {
                 ? (0, r.jsx)(g.Z, {
                       user: t,
                       currentUser: n,
-                      displayProfile: w,
-                      guildId: null == R ? void 0 : R.id,
+                      displayProfile: R,
+                      guildId: null == P ? void 0 : P.id,
                       onOpenUserProfileModal: D,
                       onClose: x
                   })
                 : (0, r.jsx)(p.Z, {
                       user: t,
                       currentUser: n,
-                      displayProfile: w,
-                      guildId: null == R ? void 0 : R.id,
+                      displayProfile: R,
+                      guildId: null == P ? void 0 : P.id,
                       onClose: x
                   }),
-            (null == j ? void 0 : j.popularApplicationCommandIds) != null &&
-                null != M &&
+            (null == k ? void 0 : k.popularApplicationCommandIds) != null &&
+                null != j &&
                 (0, r.jsx)(f.Z, {
-                    applicationId: j.id,
-                    commandIds: j.popularApplicationCommandIds,
-                    channel: M,
-                    guildId: null == R ? void 0 : R.id,
+                    applicationId: k.id,
+                    commandIds: k.popularApplicationCommandIds,
+                    channel: j,
+                    guildId: null == P ? void 0 : P.id,
                     onClick: x
                 }),
-            null != R &&
+            null != P &&
                 (0, r.jsx)(m.Z, {
                     heading: A.intl.string(A.t.LPJmLy),
                     children: (0, r.jsx)(I.Z, {
                         user: t,
                         currentUser: n,
-                        guild: R
+                        guild: P
                     })
                 })
         ]

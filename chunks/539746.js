@@ -1,11 +1,11 @@
 n.d(t, {
-    J$: () => a,
-    _J: () => o,
+    J$: () => o,
+    _J: () => a,
     xG: () => s
 });
 var r = n(818083),
     i = n(987338);
-let a = (0, r.B)({
+let o = (0, r.B)({
     kind: 'user',
     id: '2024-06_game_profile_experiment',
     label: 'Enables the Game Profile',
@@ -19,13 +19,13 @@ let a = (0, r.B)({
         }
     ]
 });
-function o(e) {
+function a(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-        { enabled: n } = a.getCurrentConfig({ location: e }, { autoTrackExposure: t });
+        { enabled: n } = o.getCurrentConfig({ location: e }, { autoTrackExposure: t });
     return n;
 }
 function s(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-        { enabled: n } = a.useExperiment({ location: e }, { autoTrackExposure: t });
+        { enabled: n } = o.useExperiment({ location: e }, { autoTrackExposure: t });
     return n;
 }

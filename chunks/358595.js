@@ -1,10 +1,10 @@
-n.d(t, { Z: () => o });
+n.d(t, { Z: () => a });
 var r = n(255367);
 n(73800);
 var i = n(955415),
-    a = n(388032);
-function o() {
+    o = n(388032);
+function a() {
     return (0, r.jsxs)(i.Z, {
-        children: [(0, r.jsx)(i.Z.Header, { text: a.intl.string(a.t['N/g9Z2']) }), (0, r.jsx)(i.Z.Body, { resolving: !0 })]
+        children: [(0, r.jsx)(i.Z.Header, { text: o.intl.string(o.t['N/g9Z2']) }), (0, r.jsx)(i.Z.Body, { resolving: !0 })]
     });
 }

@@ -5,8 +5,8 @@
     n(539854));
 var r = n(255367),
     i = n(73800),
-    a = n(481060),
-    o = n(239091),
+    o = n(481060),
+    a = n(239091),
     s = n(324701),
     l = n(550727),
     c = n(388032);
@@ -64,8 +64,8 @@ function _(e, t) {
 }
 function p(e) {
     let { createReminder: t } = e,
-        o = i.useCallback(() => {
-            (0, a.ZDy)(async () => {
+        a = i.useCallback(() => {
+            (0, o.ZDy)(async () => {
                 let { default: e } = await n.e('43866').then(n.bind(n, 423639));
                 return (n) => (0, r.jsx)(e, _(d({}, n), { createReminder: t }));
             });
@@ -74,7 +74,7 @@ function p(e) {
         let e = l.B.map((e) => {
             let { getDueAt: n, getLabel: i } = e;
             return (0, r.jsx)(
-                a.sNh,
+                o.sNh,
                 {
                     id: 'create-reminder-'.concat(i()),
                     label: i(),
@@ -86,18 +86,18 @@ function p(e) {
         return (
             e.push(
                 (0, r.jsx)(
-                    a.sNh,
+                    o.sNh,
                     {
                         id: 'create-reminder-custom',
                         label: c.intl.string(c.t.OLA8Zm),
-                        action: o
+                        action: a
                     },
                     'custom'
                 )
             ),
             e
         );
-    }, [t, o]);
+    }, [t, a]);
 }
 function h(e) {
     let { message: t, label: n } = e,
@@ -109,12 +109,12 @@ function h(e) {
                     dueAt: e
                 })
         });
-    return (0, r.jsx)(a.v2r, {
+    return (0, r.jsx)(o.v2r, {
         navId: 'message-reminder-create',
-        onClose: o.Zy,
+        onClose: a.Zy,
         'aria-label': c.intl.string(c.t.mJ3P0N),
         onSelect: () => null,
-        children: (0, r.jsx)(a.kSQ, {
+        children: (0, r.jsx)(o.kSQ, {
             label: n,
             children: i
         })

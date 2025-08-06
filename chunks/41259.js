@@ -1,8 +1,8 @@
 n.d(t, { Z: () => b });
 var r = n(255367),
     i = n(73800),
-    a = n(793030),
-    o = n(974674),
+    o = n(793030),
+    a = n(974674),
     s = n(1561),
     l = n(993365),
     c = n(385499),
@@ -33,7 +33,7 @@ function b(e) {
                                   color: 'header-secondary',
                                   children: g.intl.string(g.t.uT1CPT)
                               }),
-                              (0, r.jsx)(a.X6, {
+                              (0, r.jsx)(o.X6, {
                                   variant: 'heading-xxl/bold',
                                   color: 'header-primary',
                                   children: n.name
@@ -77,7 +77,7 @@ function b(e) {
             (0, r.jsxs)('div', {
                 className: E.headerIcons,
                 children: [
-                    (0, r.jsx)(o.qE, {
+                    (0, r.jsx)(a.qE, {
                         className: E.avatar,
                         src: S,
                         size: m.EF.SIZE_80,
@@ -87,7 +87,7 @@ function b(e) {
                         className: E.ellipseGroup,
                         children: [(0, r.jsx)('div', { className: E.ellipse }), (0, r.jsx)('div', { className: E.ellipse }), (0, r.jsx)('div', { className: E.ellipse })]
                     }),
-                    (0, r.jsx)(o.qE, {
+                    (0, r.jsx)(a.qE, {
                         className: E.avatar,
                         src: A,
                         size: m.EF.SIZE_80,

@@ -13,17 +13,17 @@ let p = (e) => {
     let { children: r, isConfirmationStep: t, isWowMomentConfirmationEligible: l } = e,
         [p, _] = (0, i.useState)('entry'),
         f = (0, i.useRef)(null),
-        x = (0, i.useRef)(null),
-        m = () => {
-            if ((_('exit'), null != x.current)) {
+        m = (0, i.useRef)(null),
+        x = () => {
+            if ((_('exit'), null != m.current)) {
                 var e;
-                null == (e = x.current) || e.play();
+                null == (e = m.current) || e.play();
             }
         },
         { mediaUrls: h, isSuccess: j } = (0, C.Z)(l);
     (0, i.useEffect)(() => {
         function e() {
-            m();
+            x();
         }
         return (
             d.S.subscribe(c.CkL.PREMIUM_PAYMENT_MODAL_CLOSED, e),
@@ -80,7 +80,7 @@ let p = (e) => {
                               children: (0, n.jsx)('source', { src: h.modalGlowIdle })
                           }),
                           (0, n.jsx)(s.Z, {
-                              ref: x,
+                              ref: m,
                               playsInline: !0,
                               muted: !0,
                               className: o()(u.video, 'exit' === p ? u.visible : u.hidden),

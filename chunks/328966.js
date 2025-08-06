@@ -5,8 +5,8 @@ n.d(t, {
 var r = n(255367);
 n(73800);
 var i = n(318713),
-    a = n(388032),
-    o = n(848697),
+    o = n(388032),
+    a = n(848697),
     s = (function (e) {
         return ((e[(e.WITH_CONTENT = 0)] = 'WITH_CONTENT'), (e[(e.AFTER_ACCESSORIES = 1)] = 'AFTER_ACCESSORIES'), e);
     })({});
@@ -24,8 +24,8 @@ function c(e) {
                       isEdited: !0,
                       isInline: !1,
                       children: (0, r.jsxs)('span', {
-                          className: o.edited,
-                          children: ['(', a.intl.string(a.t.C8sXIC), ')']
+                          className: a.edited,
+                          children: ['(', o.intl.string(o.t.C8sXIC), ')']
                       })
                   })
               ]

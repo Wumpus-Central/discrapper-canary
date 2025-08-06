@@ -1,8 +1,8 @@
 (n.d(t, { W: () => h }), n(388685));
 var r = n(255367),
     i = n(73800),
-    a = n(704215),
-    o = n(535278),
+    o = n(704215),
+    a = n(535278),
     s = n(246965),
     l = n(431),
     c = n(74538),
@@ -28,14 +28,14 @@ let p = (e) =>
             i = p(n),
             [l, c] = (0, u.Tt)(t, i, d.R.NOTICE_BAR);
         if (null == l) return null;
-        if (l === a.z.NAGBAR_NOTICE_OFFER_EXPIRING) {
+        if (l === o.z.NAGBAR_NOTICE_OFFER_EXPIRING) {
             if (n === f.kVF.PREMIUM_TIER_2_TRIAL_ENDING)
                 return (0, r.jsx)(s.Z, {
                     dismissCurrentNotice: () => c(d.L.USER_DISMISS),
                     subscriptionTier: _.Si.TIER_2
                 });
             if (n === f.kVF.PREMIUM_TIER_2_DISCOUNT_ENDING)
-                return (0, r.jsx)(o.Z, {
+                return (0, r.jsx)(a.Z, {
                     dismissCurrentNotice: () => c(d.L.USER_DISMISS),
                     subscriptionTier: _.Si.TIER_2
                 });

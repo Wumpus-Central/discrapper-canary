@@ -33,17 +33,17 @@
     n(415506));
 var r = n(512722),
     i = n.n(r),
-    a = n(392711),
-    o = n.n(a),
+    o = n(392711),
+    a = n.n(o),
     s = n(950200),
     l = n.n(s);
 function c(e) {
-    let { width: t, height: n, maxWidth: r, maxHeight: i, minWidth: a = 0, minHeight: o = 0 } = e;
+    let { width: t, height: n, maxWidth: r, maxHeight: i, minWidth: o = 0, minHeight: a = 0 } = e;
     if (t !== r || n !== i) {
         let e = t > r ? r / t : 1;
-        t = Math.max(Math.round(t * e), a);
-        let s = (n = Math.max(Math.round(n * e), o)) > i ? i / n : 1;
-        ((t = Math.max(Math.round(t * s), a)), (n = Math.max(Math.round(n * s), o)));
+        t = Math.max(Math.round(t * e), o);
+        let s = (n = Math.max(Math.round(n * e), a)) > i ? i / n : 1;
+        ((t = Math.max(Math.round(t * s), o)), (n = Math.max(Math.round(n * s), a)));
     }
     return {
         width: t,
@@ -64,10 +64,10 @@ function d(e, t) {
 }
 function f(e) {
     let { width: t, height: n, maxWidth: r, maxHeight: i } = e,
-        a = 1;
-    (t > r && (a = r / t), (t = Math.round(t * a)));
-    let o = 1;
-    return ((n = Math.round(n * a)) > i && (o = i / n), Math.min(a * o, 1));
+        o = 1;
+    (t > r && (o = r / t), (t = Math.round(t * o)));
+    let a = 1;
+    return ((n = Math.round(n * o)) > i && (a = i / n), Math.min(o * a, 1));
 }
 function _(e) {
     let { width: t, height: n, maxWidth: r, maxHeight: i } = e;
@@ -82,7 +82,7 @@ function h(e) {
 }
 function m(e, t, n) {
     let r = [];
-    for (let i = 0, a, o, s, l, c; i < t; i += n) ((o = e[(a = 4 * i) + 0]), (s = e[a + 1]), (l = e[a + 2]), (void 0 === (c = e[a + 3]) || c >= 125) && !(o > 250 && s > 250 && l > 250) && r.push([o, s, l]));
+    for (let i = 0, o, a, s, l, c; i < t; i += n) ((a = e[(o = 4 * i) + 0]), (s = e[o + 1]), (l = e[o + 2]), (void 0 === (c = e[o + 3]) || c >= 125) && !(a > 250 && s > 250 && l > 250) && r.push([a, s, l]));
     return r;
 }
 let g = [[0, 0, 0]],
@@ -91,15 +91,15 @@ function b(e, t, n) {
     let r = document.createElement('canvas'),
         i = r.getContext('2d');
     if (null == i) return g;
-    let a = (r.width = 0 === e.width ? E : e.width),
-        o = (r.height = 0 === e.height ? E : e.height);
-    i.drawImage(e, 0, 0, a, o);
-    let s = m(i.getImageData(0, 0, a, o).data, a * o, n),
+    let o = (r.width = 0 === e.width ? E : e.width),
+        a = (r.height = 0 === e.height ? E : e.height);
+    i.drawImage(e, 0, 0, o, a);
+    let s = m(i.getImageData(0, 0, o, a).data, o * a, n),
         c = l()(s, t);
     return 'boolean' == typeof c ? g : c.palette();
 }
 let y = (e) => ('number' == typeof e ? null : O(e)),
-    O = o().memoize(
+    O = a().memoize(
         (e) =>
             new Promise((t, n) => {
                 let r = new Image();

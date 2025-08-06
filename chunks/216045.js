@@ -17,8 +17,8 @@ var i = n(255367),
     x = n(22267),
     _ = n(266454),
     j = n(243778),
-    C = n(957730),
-    E = n(53691),
+    E = n(957730),
+    C = n(53691),
     O = n(267717),
     v = n(296810),
     S = n(678135),
@@ -72,7 +72,7 @@ function F() {
             image: z
         }),
         q = (0, l.e7)([P.Z], () => P.Z.showNotice()),
-        X = k.dN.useSetting() && null != H ? C.ZP.parse(void 0, H).content : H,
+        X = k.dN.useSetting() && null != H ? E.ZP.parse(void 0, H).content : H,
         J = Z.ZP.canUsePremiumProfileCustomization(n),
         { analyticsLocations: Q, newestAnalyticsLocation: $ } = (0, f.ZP)(h.Z.USER_SETTINGS_USER_PROFILE),
         ee = (0, y.T)({ location: 'UserSettingsProfileCustomization' }),
@@ -175,7 +175,7 @@ function F() {
                   }),
                   ec &&
                       !q &&
-                      (0, i.jsx)(E.p, {
+                      (0, i.jsx)(C.p, {
                           className: G.floatingNitroUpsell,
                           showUpsell: ec && !ea,
                           text: V.intl.format(V.t.TmfgIy, { onClick: () => (0, O.y)({ analyticsSource: $ }) }),

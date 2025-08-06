@@ -1,11 +1,11 @@
-n.d(t, { i: () => o });
+n.d(t, { i: () => a });
 var r = n(544891),
     i = n(881052),
-    a = n(981631);
-async function o(e, t) {
+    o = n(981631);
+async function a(e, t) {
     try {
         await r.tn.patch({
-            url: a.ANM.MY_CONTENT_INVENTORY_APPLICATION(e),
+            url: o.ANM.MY_CONTENT_INVENTORY_APPLICATION(e),
             body: t,
             rejectWithError: !1
         });

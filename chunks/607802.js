@@ -4,7 +4,7 @@
     BU: () => U,
     Fr: () => H,
     Fz: () => V,
-    Ko: () => w,
+    Ko: () => R,
     Pe: () => Y,
     R6: () => W,
     Tm: () => v,
@@ -16,10 +16,10 @@
     b7: () => S,
     cl: () => G,
     g9: () => x,
-    i3: () => M,
+    i3: () => j,
     jW: () => D,
     kG: () => Z,
-    qc: () => k,
+    qc: () => M,
     s5: () => T,
     zH: () => N
 }),
@@ -33,8 +33,8 @@
 var r = n(392711),
     i = n.n(r);
 n(913527);
-var a = n(349033),
-    o = n(933557),
+var o = n(349033),
+    a = n(933557),
     s = n(592125),
     l = n(984933),
     c = n(731290),
@@ -159,7 +159,7 @@ function N(e) {
 function C(e) {
     return null == e.sort_by || null == e.sort_order ? E.QIO.NEWEST : 'relevance' === e.sort_by ? E.QIO.MOST_RELEVANT : 'asc' === e.sort_order ? E.QIO.OLDEST : E.QIO.NEWEST;
 }
-function w(e) {
+function R(e) {
     switch (e) {
         case E.dCx.FILTER_FROM:
             return b.intl.string(b.t.E466pK);
@@ -179,14 +179,16 @@ function w(e) {
             return b.intl.string(b.t.uAbFDA);
         case E.dCx.FILTER_PINNED:
             return b.intl.string(b.t.UJxL3d);
+        case E.dCx.FILTER_AUTHOR_TYPE:
+            return b.intl.string(b.t.qCQzBg);
     }
 }
-let R = {
+let P = {
     [E.dCx.FILTER_BEFORE]: !0,
     [E.dCx.FILTER_AFTER]: !0,
     [E.dCx.FILTER_ON]: !0
 };
-function P(e) {
+function w(e) {
     let t = g.ZP[e],
         n = null != t ? t.queryKey : null;
     return (null == n && (n = 'content'), n);
@@ -211,30 +213,30 @@ function L(e) {
                 (r && (t.min_id = _.default.fromTimestamp(r)), i && (t.max_id = _.default.fromTimestamp(i)));
                 return;
         }
-        let a = P(n);
-        null == t[a] && (t[a] = new Set());
-        let o = t[a];
+        let o = w(n);
+        null == t[o] && (t[o] = new Set());
+        let a = t[o];
         switch (n) {
             case E.dCx.ANSWER_USERNAME_FROM:
             case E.dCx.ANSWER_USERNAME_MENTIONS:
-                o.add(e.getData('userId'));
+                a.add(e.getData('userId'));
                 break;
             case E.dCx.ANSWER_FILE_TYPE:
             case E.dCx.ANSWER_FILE_NAME:
-                o.add(e.getMatch(1));
+                a.add(e.getMatch(1));
                 break;
             case E.dCx.ANSWER_IN:
                 var s;
-                for (let t of null != (s = e.getData('channels')) ? s : []) o.add(t.id);
+                for (let t of null != (s = e.getData('channels')) ? s : []) a.add(t.id);
                 break;
             case E.dCx.ANSWER_HAS:
-                o.add(e.getData('has'));
+                a.add(e.getData('has'));
                 break;
             case E.dCx.ANSWER_PINNED:
-                o.add(e.getData('pinned'));
+                a.add(e.getData('pinned'));
                 break;
             default:
-                o.add(e.getFullMatch().trim());
+                a.add(e.getFullMatch().trim());
         }
     }),
     Object.entries(t)))
@@ -244,20 +246,20 @@ function L(e) {
 function x(e, t, n) {
     let r,
         i,
-        a = e.find((a, o) => (t >= a.start && t <= a.end && n >= a.start && n <= a.end ? (null != e[o + 1] && (i = e[o + 1]), !0) : ((r = a), !1)));
-    return null == a
+        o = e.find((o, a) => (t >= o.start && t <= o.end && n >= o.start && n <= o.end ? (null != e[a + 1] && (i = e[a + 1]), !0) : ((r = o), !1)));
+    return null == o
         ? null
         : {
               previousToken: r,
-              currentToken: a,
+              currentToken: o,
               nextToken: i,
               focusOffset: t,
               anchorOffset: n
           };
 }
-function k(e, t) {
+function M(e, t) {
     let n,
-        { currentToken: r, nextToken: i, previousToken: o } = (e = null != e ? e : {});
+        { currentToken: r, nextToken: i, previousToken: a } = (e = null != e ? e : {});
     if (0 === t.length)
         return {
             type: E.Sap.EMPTY,
@@ -271,7 +273,7 @@ function k(e, t) {
             token: null
         };
     if ((0, g._m)(r.type)) {
-        if (null == i || i.type === a.ZP.NON_TOKEN_TYPE)
+        if (null == i || i.type === o.ZP.NON_TOKEN_TYPE)
             return {
                 type: E.Sap.FILTER,
                 filter: r.type,
@@ -284,27 +286,27 @@ function k(e, t) {
                 token: null
             };
     }
-    return r.type === a.ZP.NON_TOKEN_TYPE && null != o && (0, g._m)(o.type)
+    return r.type === o.ZP.NON_TOKEN_TYPE && null != a && (0, g._m)(a.type)
         ? {
               type: E.Sap.FILTER,
-              filter: o.type,
+              filter: a.type,
               token: r
           }
-        : (r.type === a.ZP.NON_TOKEN_TYPE && (n = r),
+        : (r.type === o.ZP.NON_TOKEN_TYPE && (n = r),
           {
               type: E.Sap.FILTER_ALL,
               filter: null,
               token: n
           });
 }
-function j(e) {
+function k(e) {
     if (null == e.match(/([\\" ])/g)) return e;
     {
         let t = e.replaceAll(/([\\"])/g, (e, t) => '\\'.concat(t));
         return '"'.concat(t, '"');
     }
 }
-function M(e, t) {
+function j(e, t) {
     let n = [];
     return (
         i()(e).forEach((e) => {
@@ -313,9 +315,9 @@ function M(e, t) {
             n = n.concat(
                 e.results.map((n) => {
                     let i = n.text;
-                    if ((null != n.channel && (i = j(i)), t.type === E.Sap.FILTER_ALL)) {
-                        var a;
-                        r = null != (a = n.group) ? a : r;
+                    if ((null != n.channel && (i = k(i)), t.type === E.Sap.FILTER_ALL)) {
+                        var o;
+                        r = null != (o = n.group) ? o : r;
                         let e = g.ZP[r];
                         (null == e ? void 0 : e.key) != null && (null == e ? void 0 : e.key) !== '' && (i = ''.concat(e.key, ' ').concat(i));
                     }
@@ -339,7 +341,7 @@ function U(e) {
 function G(e) {
     return null == e ? '' : e.map((e) => e.getFullMatch()).join('');
 }
-let B = new a.ZP();
+let B = new o.ZP();
 function Z(e) {
     return B.tokenize(e);
 }
@@ -347,7 +349,7 @@ function F() {
     return B.clearCache();
 }
 function V(e) {
-    return null != e ? R[e] : null;
+    return null != e ? P[e] : null;
 }
 function H(e, t) {
     let n = E.TNx.test(e.type);
@@ -368,7 +370,7 @@ function W(e) {
 function K(e) {
     let t = e.name,
         n = !1;
-    if (e.isGroupDM()) t = (0, o.F6)(e, f.default, u.Z);
+    if (e.isGroupDM()) t = (0, a.F6)(e, f.default, u.Z);
     else if (e.isDM()) {
         let n = e.getRecipientId(),
             r = f.default.getUser(n),
@@ -380,7 +382,7 @@ function K(e) {
         let r = l.ZP.getTextChannelNameDisambiguations(e.getGuildId())[e.id];
         (null == r ? void 0 : r.name) != null && (t = r.name);
     }
-    return ((t = j(t)), n) ? '#'.concat(t) : t;
+    return ((t = k(t)), n) ? '#'.concat(t) : t;
 }
 function z() {
     var e, t;

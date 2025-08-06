@@ -1,26 +1,49 @@
-n.d(t, { Z: () => f });
+n.d(t, { Z: () => h });
 var r = n(255367),
-    o = n(522942),
-    l = n(793030),
+    o = n(73800),
+    l = n(522942),
+    a = n(793030),
     i = n(481060),
     s = n(797967),
-    a = n(660662),
-    c = n(698282),
-    d = n(388032),
-    u = n(235421),
-    p = n(397419);
-function f(e) {
+    c = n(626135),
+    d = n(660662),
+    u = n(981631),
+    p = n(698282),
+    f = n(388032),
+    m = n(235421),
+    g = n(397419);
+function h(e) {
     var t;
-    let { selectedColors: n, setSelectedColors: f, defaultColor: m, selectedEffectId: g, className: h } = e,
-        b = g === o.m.GRADIENT;
+    let { selectedColors: n, setSelectedColors: h, defaultColor: b, selectedEffectId: x, className: j } = e,
+        S = x === l.m.GRADIENT,
+        _ = (0, o.useCallback)(
+            (e) => {
+                (h([e]),
+                    c.default.track(u.rMx.DISPLAY_NAME_STYLES_COLOR_SELECTED, {
+                        default: e === b,
+                        colors: [e]
+                    }));
+            },
+            [h, b]
+        ),
+        O = (0, o.useCallback)(
+            (e) => {
+                (h(e),
+                    c.default.track(u.rMx.DISPLAY_NAME_STYLES_COLOR_SELECTED, {
+                        default: !1,
+                        colors: e
+                    }));
+            },
+            [h]
+        );
     return (0, r.jsxs)('div', {
-        className: h,
+        className: j,
         children: [
-            (0, r.jsxs)(l.X6, {
+            (0, r.jsxs)(a.X6, {
                 variant: 'heading-md/semibold',
-                className: p.selectorHeading,
+                className: g.selectorHeading,
                 children: [
-                    d.intl.string(c.default['JOpi7+']),
+                    f.intl.string(p.default['JOpi7+']),
                     (0, r.jsx)(i.SrA, {
                         size: 'xs',
                         color: i.TVs.colors.TEXT_DEFAULT
@@ -28,15 +51,15 @@ function f(e) {
                 ]
             }),
             (0, r.jsx)(s.default, {
-                className: u.colorPicker,
-                colorContainerClassName: u.colorPickerContainer,
-                defaultColor: m,
-                colors: b ? a.vK : a.gD,
+                className: m.colorPicker,
+                colorContainerClassName: m.colorPickerContainer,
+                defaultColor: b,
+                colors: S ? d.vK : d.gD,
                 value: n[0],
                 secondaryValue: null != (t = n[1]) ? t : void 0,
-                onChange: (e) => f([e]),
-                onChangeGradientColors: (e) => f(e),
-                isGradient: b
+                onChange: _,
+                onChangeGradientColors: O,
+                isGradient: S
             })
         ]
     });

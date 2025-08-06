@@ -1,8 +1,8 @@
 (n.d(t, { Z: () => x }), n(388685));
 var r = n(255367),
     i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(66546),
     l = n(481060),
     c = n(110924),
@@ -73,54 +73,54 @@ function N(e, t) {
     );
 }
 let C = 16 / 9,
-    w = 8,
-    R = 8 + b.cF,
-    P = 72,
+    R = 8,
+    P = 8 + b.cF,
+    w = 72,
     D = 32,
     L = 100;
 function x(e) {
     var t;
     let n,
-        { onSelectParticipant: a, onContextMenuParticipant: T, onFullscreenParticipant: A, participants: x, filteredParticipants: k, popoutWindow: j, inCall: M, channel: U, selectedParticipant: G, showParticipants: B = !0, className: Z, width: F, height: V, layout: H, idle: Y } = e,
-        W = null != j,
+        { onSelectParticipant: o, onContextMenuParticipant: T, onFullscreenParticipant: A, participants: x, filteredParticipants: M, popoutWindow: k, inCall: j, channel: U, selectedParticipant: G, showParticipants: B = !0, className: Z, width: F, height: V, layout: H, idle: Y } = e,
+        W = null != k,
         K = _.Z.getVideoComponent(),
         z = f.default.getId(),
-        [q, $] = i.useState(null),
-        X = (0, c.Z)(q),
-        [Q, J] = i.useState(!0),
+        [q, X] = i.useState(null),
+        Q = (0, c.Z)(q),
+        [J, $] = i.useState(!0),
         [ee, et] = i.useState(!1),
         en = G.type === O.fO.ACTIVITY,
         er = (0, u.Z)(en ? G.applicationId : void 0),
         ei = !en && null != G.streamId,
-        ea = V <= 2 * R + 2 * P,
-        eo = B && !ea,
-        es = (0, c.Z)(eo),
+        eo = V <= 2 * P + 2 * w,
+        ea = B && !eo,
+        es = (0, c.Z)(ea),
         el = H === y.AEg.MINIMUM || H === y.AEg.NORMAL,
-        ec = !ea && (!el || en),
+        ec = !eo && (!el || en),
         eu = (0, h.Z)(ec, L),
         ed = (null != (t = (0, c.Z)(G.id)) ? t : G.id) !== G.id,
         ef = 0;
-    ((en || eo) && (ef += P), en && !eo && (ec ? (ef += D + 2 * w) : (ef += w)), eo && (ef += 0.5 * R + w));
+    ((en || ea) && (ef += w), en && !ea && (ec ? (ef += D + 2 * R) : (ef += R)), ea && (ef += 0.5 * P + R));
     let e_ = i.useMemo(() => (en && er ? F / (V - 2 * ef) : ei && null != q && q.width > 0 && q.height > 0 ? q.width / q.height : C), [ei, q, en, F, V, ef, er]),
         ep = V - 2 * ef,
         eh = en && er ? F : ep * e_,
         em = Math.floor(Math.min(F, eh) / e_),
-        eg = V > F / e_ + P + R + w;
-    ((n = eo || en ? (eo ? -16 : -w) : D + w + Math.max(0, P - (V - em) / 2)),
+        eg = V > F / e_ + w + P + R;
+    ((n = ea || en ? (ea ? -16 : -R) : D + R + Math.max(0, w - (V - em) / 2)),
         i.useEffect(() => {
             let e = setTimeout(() => {
-                J(!1);
+                $(!1);
             }, 250);
             return () => {
                 clearTimeout(e);
             };
         }, []));
-    let eE = Q || null == X,
+    let eE = J || null == Q,
         eb = eE ? 'animate-never' : 'animate-always',
         ey = (0, l.q_F)(
             {
-                value: +!!eo,
-                delay: eg || !eo ? 0 : 100,
+                value: +!!ea,
+                delay: eg || !ea ? 0 : 100,
                 config: N(S({}, s.config.stiff), { clamp: !0 }),
                 onStart: () => et(!0),
                 onChange: () => p.S.dispatch(y.CkL.REMEASURE_TARGET),
@@ -132,7 +132,7 @@ function x(e) {
         ),
         eO = (0, l.q_F)(
             {
-                value: +!!eo,
+                value: +!!ea,
                 config: N(S({}, s.config.stiff), { clamp: !0 })
             },
             eb
@@ -142,7 +142,7 @@ function x(e) {
                 value: eh,
                 config: N(S({}, s.config.stiff), { clamp: !0 })
             },
-            (es === eo && eO.value.idle && !eu) || ed || eE ? 'animate-never' : 'animate-always'
+            (es === ea && eO.value.idle && !eu) || ed || eE ? 'animate-never' : 'animate-always'
         ),
         eI = (0, l.q_F)(
             {
@@ -164,20 +164,20 @@ function x(e) {
             eb
         ),
         eS = i.useCallback((e) => {
-            ($(e), J(!1));
+            (X(e), $(!1));
         }, []),
-        eA = eo ? [] : (0, E.n3)(x, G, z),
-        { visibleParticipants: eN, participantTileWidth: eC } = (0, b.ZB)(F, k);
+        eA = ea ? [] : (0, E.n3)(x, G, z),
+        { visibleParticipants: eN, participantTileWidth: eC } = (0, b.ZB)(F, M);
     return (0, r.jsxs)('div', {
-        className: o()(I.root, v.flexCenter, Z),
+        className: a()(I.root, v.flexCenter, Z),
         children: [
             (0, r.jsxs)('div', {
                 className: I.tileWrapper,
-                style: { opacity: ei && Q ? 0 : 1 },
+                style: { opacity: ei && J ? 0 : 1 },
                 children: [
                     (0, r.jsxs)(s.animated.div, {
                         className: I.videoFrame,
-                        style: { top: eO.value.to((e) => (-e * R) / 2) },
+                        style: { top: eO.value.to((e) => (-e * P) / 2) },
                         children: [
                             (0, r.jsx)(s.animated.div, {
                                 style: { width: ev.value },
@@ -201,11 +201,11 @@ function x(e) {
                                                           videoComponent: K,
                                                           width: F,
                                                           participant: t,
-                                                          onClick: a,
+                                                          onClick: o,
                                                           onDoubleClick: A,
                                                           onContextMenu: T,
                                                           onVideoResize: eS,
-                                                          inCall: M,
+                                                          inCall: j,
                                                           inPopout: W
                                                       })
                                                   },
@@ -217,7 +217,7 @@ function x(e) {
                             }),
                             ec
                                 ? (0, r.jsx)(s.animated.div, {
-                                      className: o()(I.actionRow, { [I.idle]: Y }),
+                                      className: a()(I.actionRow, { [I.idle]: Y }),
                                       style: { bottom: eI.value },
                                       children: (0, r.jsx)(d.Z, {
                                           channelId: U.id,
@@ -231,20 +231,20 @@ function x(e) {
                     (0, r.jsx)(s.animated.div, {
                         className: I.participantsWrapperAnimated,
                         style: {
-                            translateY: ey.value.to((e) => (e * R) / 2),
+                            translateY: ey.value.to((e) => (e * P) / 2),
                             opacity: ey.value,
                             visibility: ey.value.to((e) => (0 === e ? 'hidden' : 'visible'))
                         },
                         children: (0, r.jsx)(b.ZP, {
                             channel: U,
-                            onClick: a,
+                            onClick: o,
                             onContextMenu: T,
                             onDoubleClick: A,
                             participants: eN,
                             participantTileWidth: eC,
                             selectedParticipantId: G.id,
-                            inCall: M,
-                            popoutWindow: j,
+                            inCall: j,
+                            popoutWindow: k,
                             paused: ee || !B
                         })
                     })
@@ -257,7 +257,7 @@ function x(e) {
                       height: V,
                       channel: U,
                       participants: eA,
-                      onSelectParticipant: a
+                      onSelectParticipant: o
                   })
                 : null
         ]

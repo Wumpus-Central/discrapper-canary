@@ -1,8 +1,8 @@
 (n.d(t, { Z: () => E }), n(388685));
 var r = n(255367),
     i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(393903),
     l = n(448986),
     c = n(731722),
@@ -66,8 +66,8 @@ function m(e, t) {
         r,
         i = g(e, t);
     if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
@@ -76,29 +76,29 @@ function g(e, t) {
     var n,
         r,
         i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
 let E = i.memo(function (e) {
-    var { children: t, isOverlay: n, contextGuildId: a } = e,
+    var { children: t, isOverlay: n, contextGuildId: o } = e,
         f = m(e, ['children', 'isOverlay', 'contextGuildId']);
     let [p, g] = i.useState({ maskImage: 'none' }),
         E = i.useRef(null),
         b = (0, l.Z)(() => {
             var e, t, r, i;
-            let a = null != (r = null == (e = y.current) ? void 0 : e.getBoundingClientRect()) ? r : null,
-                o = null != (i = null == (t = E.current) ? void 0 : t.getBoundingClientRect()) ? i : null;
-            if (n || null == a || null == o) return void g({ maskImage: 'none' });
-            let s = o.right - a.right,
-                l = o.width - s;
-            if (l > o.width) return void g({ maskImage: 'none' });
+            let o = null != (r = null == (e = y.current) ? void 0 : e.getBoundingClientRect()) ? r : null,
+                a = null != (i = null == (t = E.current) ? void 0 : t.getBoundingClientRect()) ? i : null;
+            if (n || null == o || null == a) return void g({ maskImage: 'none' });
+            let s = a.right - o.right,
+                l = a.width - s;
+            if (l > a.width) return void g({ maskImage: 'none' });
             g({ maskImage: 'linear-gradient(to right, rgba(0, 0, 0, 1) 0, rgba(0, 0, 0, 0) '.concat(l, 'px)') });
         }),
         y = (0, s.y)(b),
-        O = (0, c.yF)(f.userId, a);
+        O = (0, c.yF)(f.userId, o);
     return (0, r.jsxs)('div', {
-        className: o()(d.container, n && d.isOverlayContainer),
+        className: a()(d.container, n && d.isOverlayContainer),
         ref: y,
         children: [
             (0, r.jsx)('div', {
@@ -108,14 +108,14 @@ let E = i.memo(function (e) {
             (0, r.jsx)('div', {
                 className: d.chipletParent,
                 children: (0, r.jsx)('span', {
-                    className: o()(d.chipletContainer, !O && n && d.noPadding),
+                    className: a()(d.chipletContainer, !O && n && d.noPadding),
                     ref: E,
                     style: p,
                     children: (0, r.jsx)(
                         u.ZP,
                         h(_({}, f), {
-                            contextGuildId: a,
-                            className: o()(f.className, n && d.isOverlayTag),
+                            contextGuildId: o,
+                            className: a()(f.className, n && d.isOverlayTag),
                             disableGuildProfile: !0
                         })
                     )

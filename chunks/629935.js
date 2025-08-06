@@ -1,21 +1,21 @@
 (n.d(t, {
     W4: () => c,
-    Yk: () => a,
+    Yk: () => o,
     dw: () => u
 }),
     n(388685));
 var r = n(688619),
     i = n.n(r),
-    a = (function (e) {
+    o = (function (e) {
         return ((e.THEME_BASE_MIX_AMOUNT = '--custom-theme-base-color-amount'), (e.THEME_TEXT_MIX_AMOUNT = '--custom-theme-text-color-amount'), (e.THEME_BASE_COLOR = '--custom-theme-base-color'), (e.THEME_TEXT_COLOR = '--custom-theme-text-color'), (e.THEME_BASE_COLOR_HSL = '--custom-theme-base-color-hsl'), (e.LIGHT_THEME_BASE_COLOR = '--custom-theme-base-color-light'), (e.LIGHT_THEME_TEXT_COLOR = '--custom-theme-text-color-light'), (e.LIGHT_THEME_BASE_COLOR_HSL = '--custom-theme-base-color-light-hsl'), (e.DARK_THEME_BASE_COLOR = '--custom-theme-base-color-dark'), (e.DARK_THEME_TEXT_COLOR = '--custom-theme-text-color-dark'), (e.DARK_THEME_BASE_COLOR_HSL = '--custom-theme-base-color-dark-hsl'), e);
     })({});
-let o = 50,
+let a = 50,
     s = 38;
 function l(e) {
     let { primaryColor: t, secondaryColor: n, isDarkTheme: r } = e,
-        a = i()(t),
-        o = i()(n),
-        [s, l] = a.luminance() > o.luminance() ? [a, o] : [o, a],
+        o = i()(t),
+        a = i()(n),
+        [s, l] = o.luminance() > a.luminance() ? [o, a] : [a, o],
         c = l.get('hsl.h');
     (0 === c || Number.isNaN(c)) && (l = s);
     let u = r ? s.set('hsl.s', 1) : l.set('hsl.s', 1),
@@ -30,7 +30,7 @@ function l(e) {
     );
 }
 function c(e) {
-    let { enabled: t, primaryColor: n, secondaryColor: r, baseMixAmount: i = o, textMixAmount: a = s } = e,
+    let { enabled: t, primaryColor: n, secondaryColor: r, baseMixAmount: i = a, textMixAmount: o = s } = e,
         { base: c, text: d } = l({
             primaryColor: n,
             secondaryColor: r,
@@ -43,7 +43,7 @@ function c(e) {
         });
     return {
         '--custom-theme-base-color-amount': ''.concat(t ? i : 0, '%'),
-        '--custom-theme-text-color-amount': ''.concat(t ? a : 0, '%'),
+        '--custom-theme-text-color-amount': ''.concat(t ? o : 0, '%'),
         '--custom-theme-base-color-light-hsl': u(f),
         '--custom-theme-base-color-light': f.css(),
         '--custom-theme-text-color-light': _.css(),

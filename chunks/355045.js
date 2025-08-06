@@ -1,8 +1,8 @@
 n.d(t, { Z: () => A });
 var r = n(255367),
     i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(442837),
     l = n(622535),
     c = n(755721),
@@ -23,13 +23,13 @@ var r = n(255367),
     T = n(388032),
     S = n(491503);
 let A = function (e) {
-    let { closeLayer: t, guild: n, onCtaVisibilityChange: a } = e,
+    let { closeLayer: t, guild: n, onCtaVisibilityChange: o } = e,
         A = i.useRef(null),
         N = (0, s.e7)([g.default], () => g.default.getCurrentUser()),
         C = (0, s.e7)([E.Z], () => E.Z.boostSlots),
-        { analyticsLocations: w } = (0, d.ZP)(),
-        { fractionalState: R } = (0, f.Z)({ forceFetch: !1 }),
-        P = i.useMemo(
+        { analyticsLocations: R } = (0, d.ZP)(),
+        { fractionalState: P } = (0, f.Z)({ forceFetch: !1 }),
+        w = i.useMemo(
             () =>
                 Object.keys(C).filter((e) => {
                     let t = C[e];
@@ -43,7 +43,7 @@ let A = function (e) {
         (0, p.Z)({
             initialPlanId: null,
             subscriptionTier: I.Si.TIER_2,
-            analyticsLocations: w,
+            analyticsLocations: R,
             analyticsObject: {
                 page: v.ZY5.PREMIUM_GUILD_USER_MODAL,
                 section: v.jXE.PREMIUM_GUILD_USER_MODAL_CTA_BAR,
@@ -53,12 +53,12 @@ let A = function (e) {
             onClose: (e) => e && t()
         });
     }
-    function k() {
+    function M() {
         (0, p.Z)({
             initialPlanId: null,
             subscriptionTier: I.Si.TIER_2,
             isGift: !0,
-            analyticsLocations: w,
+            analyticsLocations: R,
             analyticsObject: {
                 page: v.ZY5.PREMIUM_GUILD_USER_MODAL,
                 section: v.jXE.PREMIUM_GUILD_USER_MODAL_CTA_BAR,
@@ -90,7 +90,7 @@ let A = function (e) {
                         children: [
                             (0, r.jsx)(u.$Eu, {
                                 color: L > 0 ? u.TVs.unsafe_rawColors.GUILD_BOOSTING_PINK : 'currentColor',
-                                className: o()(S.guildBoostBadge, { [S.guildBoostBadgeWithBoosts]: L > 0 })
+                                className: a()(S.guildBoostBadge, { [S.guildBoostBadgeWithBoosts]: L > 0 })
                             }),
                             (0, r.jsx)(u.Text, {
                                 className: S.guildStatusCopy,
@@ -99,11 +99,11 @@ let A = function (e) {
                             })
                         ]
                     }),
-                    P > 0
+                    w > 0
                         ? (0, r.jsx)(u.Text, {
                               className: S.guildBoostCountCurrentUser,
                               variant: 'text-sm/normal',
-                              children: T.intl.format(T.t.Jeto2t, { numSubscriptions: P })
+                              children: T.intl.format(T.t.Jeto2t, { numSubscriptions: w })
                           })
                         : null
                 ]
@@ -117,14 +117,14 @@ let A = function (e) {
                 children: [
                     (0, r.jsx)(l.$, {
                         innerRef: A,
-                        onChange: a,
+                        onChange: o,
                         threshold: 0.9,
                         children: (0, r.jsx)('div', {
                             ref: A,
-                            className: o()(S.guildBoostCta, S.guildBoostCtaBoostWrapper),
+                            className: a()(S.guildBoostCta, S.guildBoostCtaBoostWrapper),
                             children: (0, r.jsx)(O.Z, {
                                 className: S.guildBoostCtaBoost,
-                                innerClassName: o()(S.__invalid_guildBoostCtaContent, S.guildBoostCtaBoostContent),
+                                innerClassName: a()(S.__invalid_guildBoostCtaContent, S.guildBoostCtaBoostContent),
                                 buttonShineClassName: S.guildBoostCtaBoostShine,
                                 guild: n,
                                 analyticsLocation: {
@@ -140,13 +140,13 @@ let A = function (e) {
                             })
                         })
                     }),
-                    y.ZP.hasFreeBoosts(N, R) || y.ZP.isPremium(N, I.p9.TIER_2)
+                    y.ZP.hasFreeBoosts(N, P) || y.ZP.isPremium(N, I.p9.TIER_2)
                         ? (0, r.jsxs)(c.zx, {
-                              className: o()(S.guildBoostCta, S.guildBoostCtaSecondary),
-                              innerClassName: o()(S.__invalid_guildBoostCtaContent, S.guildBoostCtaGiftContent),
+                              className: a()(S.guildBoostCta, S.guildBoostCtaSecondary),
+                              innerClassName: a()(S.__invalid_guildBoostCtaContent, S.guildBoostCtaGiftContent),
                               look: c.zx.Looks.OUTLINED,
                               color: c.zx.Colors.WHITE,
-                              onClick: k,
+                              onClick: M,
                               size: c.zx.Sizes.LARGE,
                               children: [
                                   (0, r.jsx)(u.OgN, {
@@ -158,8 +158,8 @@ let A = function (e) {
                               ]
                           })
                         : (0, r.jsx)(c.zx, {
-                              className: o()(S.guildBoostCta, S.guildBoostCtaSecondary),
-                              innerClassName: o()(S.__invalid_guildBoostCtaContent, S.__invalid_guildBoostCtaSubscribeContent),
+                              className: a()(S.guildBoostCta, S.guildBoostCtaSecondary),
+                              innerClassName: a()(S.__invalid_guildBoostCtaContent, S.__invalid_guildBoostCtaSubscribeContent),
                               look: c.zx.Looks.OUTLINED,
                               color: c.zx.Colors.WHITE,
                               onClick: x,

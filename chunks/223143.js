@@ -5,8 +5,8 @@
     n(388685));
 var r = n(73800),
     i = n(399606),
-    a = n(335131),
-    o = n(1870),
+    o = n(335131),
+    a = n(1870),
     s = n(228624),
     l = n(267097);
 function c(e, t, n) {
@@ -38,19 +38,19 @@ function d() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
         t = arguments.length > 1 ? arguments[1] : void 0,
         n = (0, s.hv)('useFetchPurchases'),
-        [l, c, u, d, f, _] = (0, i.Wu)([o.Z], () => [o.Z.isFetching, o.Z.isClaiming, o.Z.fetchError, o.Z.claimError, o.Z.purchases, o.Z.hasPreviouslyFetched]),
-        p = (0, r.useRef)(o.Z.hasPreviouslyFetched);
+        [l, c, u, d, f, _] = (0, i.Wu)([a.Z], () => [a.Z.isFetching, a.Z.isClaiming, a.Z.fetchError, a.Z.claimError, a.Z.purchases, a.Z.hasPreviouslyFetched]),
+        p = (0, r.useRef)(a.Z.hasPreviouslyFetched);
     (0, r.useEffect)(() => {
         p.current = _;
     }, [_]);
-    let h = (0, r.useRef)(o.Z.fetchError);
+    let h = (0, r.useRef)(a.Z.fetchError);
     return (
         (0, r.useEffect)(() => {
             h.current = u;
         }, [u]),
         (0, r.useEffect)(() => {
             (!0 === e && p.current && null == h.current) ||
-                (0, a.qg)({
+                (0, o.qg)({
                     variantsReturnStyle: n,
                     location: t
                 });
@@ -70,8 +70,8 @@ function f(e, t) {
         {
             isFetching: r,
             categories: i,
-            fetchCategoriesError: a,
-            refreshCategories: o
+            fetchCategoriesError: o,
+            refreshCategories: a
         } = (0, l.Z)(
             {
                 paymentGateway: n,
@@ -89,10 +89,10 @@ function f(e, t) {
         isClaiming: s,
         categories: i,
         purchases: _,
-        fetchCategoriesError: a,
+        fetchCategoriesError: o,
         fetchPurchasesError: c,
         claimError: u,
-        refreshCategories: o,
+        refreshCategories: a,
         hasPreviouslyFetched: p
     };
 }

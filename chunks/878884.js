@@ -1,8 +1,8 @@
 (n.d(t, { Z: () => D }), n(388685));
 var r,
     i = n(442837),
-    a = n(46973),
-    o = n(570140),
+    o = n(46973),
+    a = n(570140),
     s = n(642047),
     l = n(541638),
     c = n(189786),
@@ -37,7 +37,7 @@ function v(e, t, n) {
         }),
         i = (0, h.PH)(r, null != t ? t : m.ME, e.id);
     b.set(e.id, i);
-    let a = {
+    let o = {
         type: g.fO.USER,
         user: e,
         id: e.id,
@@ -52,7 +52,7 @@ function v(e, t, n) {
         userAvatarDecoration: (0, l.o)(e, t),
         localVideoDisabled: !1
     };
-    y.set(e.id, a);
+    y.set(e.id, o);
 }
 function I(e) {
     let t = b.delete(e),
@@ -83,7 +83,7 @@ function A() {
 }
 function N(e) {
     let { state: t, context: n } = e;
-    if (n !== a.Yn.DEFAULT || t !== m.hes.DISCONNECTED) return !1;
+    if (n !== o.Yn.DEFAULT || t !== m.hes.DISCONNECTED) return !1;
     S();
 }
 function C(e) {
@@ -97,10 +97,10 @@ function C(e) {
         }, !1)
     );
 }
-function w(e) {
+function R(e) {
     let { userIds: t, guildId: n, channelId: r, context: i } = e;
     return (
-        i === a.Yn.DEFAULT &&
+        i === o.Yn.DEFAULT &&
         t.reduce((e, t) => {
             if (null != p.Z.getVoiceStateForChannel(r, t)) return e;
             let i = _.default.getUser(t);
@@ -108,11 +108,11 @@ function w(e) {
         }, !1)
     );
 }
-function R(e) {
+function P(e) {
     let { userId: t, context: n } = e;
-    return n === a.Yn.DEFAULT && I(t);
+    return n === o.Yn.DEFAULT && I(t);
 }
-class P extends (r = i.ZP.Store) {
+class w extends (r = i.ZP.Store) {
     initialize() {
         (this.waitFor(p.Z, _.default, d.Z, f.Z), this.syncWith([_.default], T));
     }
@@ -129,12 +129,12 @@ class P extends (r = i.ZP.Store) {
         return y.values();
     }
 }
-E(P, 'displayName', 'RTCConnectionDesyncStore');
-let D = new P(o.Z, {
+E(w, 'displayName', 'RTCConnectionDesyncStore');
+let D = new w(a.Z, {
     CONNECTION_OPEN: A,
     VOICE_CHANNEL_SELECT: S,
     RTC_CONNECTION_STATE: N,
     VOICE_STATE_UPDATES: C,
-    RTC_CONNECTION_CLIENT_CONNECT: w,
-    RTC_CONNECTION_CLIENT_DISCONNECT: R
+    RTC_CONNECTION_CLIENT_CONNECT: R,
+    RTC_CONNECTION_CLIENT_DISCONNECT: P
 });

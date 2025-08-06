@@ -1,16 +1,16 @@
 n.d(t, {
     k: () => s,
-    m: () => o
+    m: () => a
 });
 var r = n(818083),
     i = n(984134),
-    a = n(987338);
-let o = (0, r.B)({
+    o = n(987338);
+let a = (0, r.B)({
     kind: 'user',
     id: '2025-06_golive_tile_resolution_gating',
     label: 'GoLive Tile Resolution Gating',
     defaultConfig: { enabled: !1 },
-    commonTriggerPoint: a.$P.CONNECTION_OPEN,
+    commonTriggerPoint: o.$P.CONNECTION_OPEN,
     treatments: [
         {
             id: 0,
@@ -37,7 +37,7 @@ let o = (0, r.B)({
 function s(e) {
     let { location: t, autoTrackExposure: n = !0 } = e,
         { isInHoldout: r } = i.Y.getCurrentConfig({ location: t }, { autoTrackExposure: n });
-    return o.getCurrentConfig(
+    return a.getCurrentConfig(
         { location: t },
         {
             disable: r,

@@ -1,8 +1,8 @@
 n.d(t, { $: () => s });
 var r = n(73800),
     i = n(774078),
-    a = n(202107);
-let o = 1000;
+    o = n(202107);
+let a = 1000;
 function s(e) {
     let { communicationDisabledUntil: t, userId: n, guildId: s } = null != e ? e : {},
         l = (0, i.Z)(null != t ? Date.parse(t) : Date.now()),
@@ -16,8 +16,8 @@ function s(e) {
                     : (c <= 0 &&
                           null == u.current &&
                           (u.current = setTimeout(() => {
-                              a.Z.clearGuildMemberTimeout(s, n);
-                          }, o)),
+                              o.Z.clearGuildMemberTimeout(s, n);
+                          }, a)),
                       () => {
                           null != u.current && (clearTimeout(u.current), (u.current = null));
                       }),

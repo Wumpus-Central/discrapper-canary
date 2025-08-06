@@ -1,8 +1,8 @@
 n.d(t, { Z: () => A });
 var r = n(255367),
     i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(653603),
     l = n.n(s),
     c = n(442837),
@@ -21,11 +21,11 @@ var r = n(255367),
     v = n(848697),
     I = n(73433);
 let T = i.memo(function (e) {
-    let { message: t, notice: n, compact: i = !1, onDismiss: a } = e;
+    let { message: t, notice: n, compact: i = !1, onDismiss: o } = e;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsxs)('div', {
-                className: o()(O.blockedNoticeContainer, { [O.compact]: i }),
+                className: a()(O.blockedNoticeContainer, { [O.compact]: i }),
                 children: [
                     (0, r.jsx)('div', {
                         className: O.blockedNoticeIcon,
@@ -46,10 +46,10 @@ let T = i.memo(function (e) {
                 ]
             }),
             (0, r.jsx)('div', {
-                className: o()(O.ephemeralAccessories, { [O.compact]: i }),
+                className: a()(O.ephemeralAccessories, { [O.compact]: i }),
                 children: (0, r.jsx)(h.Z, {
                     message: t,
-                    onDeleteMessage: a,
+                    onDeleteMessage: o,
                     children: (0, r.jsx)(u.Text, {
                         variant: 'text-xs/normal',
                         color: 'interactive-normal',
@@ -64,7 +64,7 @@ let T = i.memo(function (e) {
 });
 function S(e) {
     var t, n;
-    let { className: a, compact: s, message: u, children: p, content: h, onUpdate: b } = e,
+    let { className: o, compact: s, message: u, children: p, content: h, onUpdate: b } = e,
         S = null == (t = u.editedTimestamp) ? void 0 : t.toString(),
         A = i.useRef(!1),
         N = (0, c.e7)([_.Z], () => _.Z.getMessage(u.id), [u.id]),
@@ -77,7 +77,7 @@ function S(e) {
         }, [b, u.content, h, S, p]),
         (0, r.jsxs)('div', {
             id: (0, m.ut)(u),
-            className: o()(a, I.markup, {
+            className: a()(o, I.markup, {
                 [v.messageContent]: !0,
                 [v.markupRtl]: 'rtl' === l()(u.content),
                 [O.blockedEdit]: null == N ? void 0 : N.isBlockedEdit,

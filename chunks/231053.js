@@ -6,8 +6,8 @@
     n(953529));
 var r = n(843991),
     i = n(544891),
-    a = n(81825),
-    o = n(768581),
+    o = n(81825),
+    a = n(768581),
     s = n(411198),
     l = n(981631);
 function c(e, t, n) {
@@ -89,10 +89,10 @@ let p = async (e) => {
     } catch (e) {}
     return t;
 };
-class h extends a.Z {
+class h extends o.Z {
     getIconURL(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        return o.ZP.getGuildIconURL({
+        return a.ZP.getGuildIconURL({
             id: this.id,
             size: e,
             icon: this.icon,
@@ -101,8 +101,8 @@ class h extends a.Z {
     }
     getIconSource(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        return o.ZP.getAnimatableSourceWithFallback(t, (t) =>
-            o.ZP.getGuildIconSource({
+        return a.ZP.getAnimatableSourceWithFallback(t, (t) =>
+            a.ZP.getGuildIconSource({
                 id: this.id,
                 size: e,
                 icon: this.icon,
@@ -169,7 +169,7 @@ class h extends a.Z {
         (super(), c(this, 'id', void 0), c(this, 'name', void 0), c(this, 'icon', void 0), c(this, 'description', void 0), c(this, 'features', void 0), c(this, 'premiumTier', void 0), c(this, 'premiumSubscriberCount', void 0), c(this, 'presenceCount', void 0), c(this, 'memberCount', void 0), c(this, 'emojis', void 0), (this.id = e.id), (this.name = e.name), (this.icon = e.icon), (this.description = e.description), (this.features = e.features), (this.premiumTier = e.premiumTier), (this.premiumSubscriberCount = e.premiumSubscriberCount), (this.presenceCount = e.presenceCount), (this.memberCount = e.memberCount), (this.emojis = e.emojis));
     }
 }
-class m extends a.Z {
+class m extends o.Z {
     static createFromServer(e) {
         return new m({
             id: e.id,

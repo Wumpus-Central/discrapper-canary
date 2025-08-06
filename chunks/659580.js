@@ -2,8 +2,8 @@ n.d(t, { default: () => S });
 var r = n(255367);
 n(73800);
 var i = n(990547),
-    a = n(442837),
-    o = n(46973),
+    o = n(442837),
+    a = n(46973),
     s = n(481060),
     l = n(846027),
     c = n(410575),
@@ -23,32 +23,32 @@ var i = n(990547),
     I = n(388032),
     T = n(292538);
 function S(e) {
-    let { onClose: t, renderOutputDevices: n = !1, renderInputDevices: S = !1, renderInputProfiles: A = !1, renderInputModes: N = !1, renderInputVolume: C = !1, renderOutputVolume: w = !1, renderDeafen: R = !1, minimal: P = !1, onSelect: D, appContext: L, onInteraction: x } = e,
-        { analyticsLocations: k } = (0, u.ZP)();
+    let { onClose: t, renderOutputDevices: n = !1, renderInputDevices: S = !1, renderInputProfiles: A = !1, renderInputModes: N = !1, renderInputVolume: C = !1, renderOutputVolume: R = !1, renderDeafen: P = !1, minimal: w = !1, onSelect: D, appContext: L, onInteraction: x } = e,
+        { analyticsLocations: M } = (0, u.ZP)();
     (0, d.Z)({
         type: i.ImpressionTypes.MENU,
         name: i.ImpressionNames.AUDIO_DEVICE_MENU,
-        properties: { location_stack: k }
+        properties: { location_stack: M }
     });
-    let j = (0, b.Z)(L),
-        M = (0, f.M)({
+    let k = (0, b.Z)(L),
+        j = (0, f.M)({
             deviceType: v.h7.AUDIO_INPUT,
-            analyticsLocations: k,
-            asSubmenu: P
+            analyticsLocations: M,
+            asSubmenu: w
         }),
         U = (0, f.M)({
             deviceType: v.h7.AUDIO_OUTPUT,
-            analyticsLocations: k,
-            asSubmenu: P
+            analyticsLocations: M,
+            asSubmenu: w
         }),
-        G = (0, a.e7)([g.Z], () => g.Z.getActiveInputProfile()),
-        B = (0, h.Z)(k),
-        Z = (0, _.Z)(k),
-        F = (0, p.Z)(k),
-        V = (0, m.Z)(k),
-        H = o.Yn.DEFAULT,
+        G = (0, o.e7)([g.Z], () => g.Z.getActiveInputProfile()),
+        B = (0, h.Z)(M),
+        Z = (0, _.Z)(M),
+        F = (0, p.Z)(M),
+        V = (0, m.Z)(M),
+        H = a.Yn.DEFAULT,
         Y = g.Z.isSelfDeaf(H),
-        W = (0, a.e7)([g.Z], () => g.Z.getMode()),
+        W = (0, o.e7)([g.Z], () => g.Z.getMode()),
         K = W === y.pM4.VOICE_ACTIVITY ? y.pM4.PUSH_TO_TALK : y.pM4.VOICE_ACTIVITY;
     return (0, r.jsx)(c.Z, {
         object: y.qAy.CONTEXT_MENU,
@@ -60,10 +60,10 @@ function S(e) {
             navId: 'audio-device-context',
             'aria-label': I.intl.string(I.t.ZR1Ss7),
             children: [
-                S && M,
+                S && j,
                 n && U,
                 A && B,
-                !P && N && G !== O._.STUDIO
+                !w && N && G !== O._.STUDIO
                     ? (0, r.jsx)(s.kSQ, {
                           label: I.intl.string(I.t['pS+K2N']),
                           children: Z
@@ -72,9 +72,9 @@ function S(e) {
                 (0, r.jsxs)(s.kSQ, {
                     children: [
                         C ? F : null,
-                        w ? V : null,
-                        P ? (0, r.jsx)(s.Clw, {}) : null,
-                        P && R
+                        R ? V : null,
+                        w ? (0, r.jsx)(s.Clw, {}) : null,
+                        w && P
                             ? (0, r.jsx)(
                                   s.S89,
                                   {
@@ -90,16 +90,16 @@ function S(e) {
                                   'self-deafen'
                               )
                             : null,
-                        P && S && E.isPlatformEmbedded
+                        w && S && E.isPlatformEmbedded
                             ? (0, r.jsx)(s.S89, {
                                   checked: W === y.pM4.PUSH_TO_TALK,
                                   id: 'input-mode',
                                   label: I.intl.string(I.t.Q8gkVF),
-                                  action: () => l.Z.setMode(K, void 0, void 0, { analyticsLocations: k }),
+                                  action: () => l.Z.setMode(K, void 0, void 0, { analyticsLocations: M }),
                                   disabled: G === O._.STUDIO
                               })
                             : null,
-                        j
+                        k
                     ]
                 })
             ]

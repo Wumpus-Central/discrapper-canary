@@ -5,8 +5,8 @@
     n(388685));
 var r = n(255367),
     i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(95398),
     l = n(936141),
     c = n(197653),
@@ -26,14 +26,14 @@ function h() {
     return e;
 }
 function m(e) {
-    let { components: t, accentColor: n, spoiler: a, renderComponents: d } = e,
-        [f, _] = i.useState(a),
+    let { components: t, accentColor: n, spoiler: o, renderComponents: d } = e,
+        [f, _] = i.useState(o),
         h = (e) =>
             (0, r.jsx)(c.am.AutoMeasuredNestedContainer, {
                 children: (i) =>
                     (0, r.jsx)('div', {
                         ref: i,
-                        className: o()(u.container, {
+                        className: a()(u.container, {
                             [u.isHidden]: e,
                             [u.withAccentColor]: null != n
                         }),
@@ -43,7 +43,7 @@ function m(e) {
             });
     return null == t || 0 === t.length
         ? null
-        : a
+        : o
           ? (0, r.jsx)(s.ZP, {
                 type: s.ZP.Types.ATTACHMENT,
                 reason: l.wk.SPOILER,

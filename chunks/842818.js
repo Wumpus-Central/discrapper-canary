@@ -27,8 +27,8 @@ function i(e, t, n) {
         e
     );
 }
-var a = n(879154),
-    o = n(214788),
+var o = n(879154),
+    a = n(214788),
     s = n(449168),
     l = n(493428),
     c = n(402350);
@@ -61,13 +61,13 @@ var u = n(116514),
     I = function (e, t) {
         var n = e.text,
             i = e.entityRanges,
-            a = e.inlineStyleRanges,
-            o = i || [];
+            o = e.inlineStyleRanges,
+            a = i || [];
         return d(
-            _(n, a || []),
+            _(n, o || []),
             f(
                 n,
-                o
+                a
                     .filter(function (e) {
                         return t.hasOwnProperty(e.key);
                     })
@@ -87,13 +87,13 @@ var u = n(116514),
         return e.concat(i.reverse());
     },
     A = function (e, t) {
-        return e.map(T).reduce(function (n, i, a) {
+        return e.map(T).reduce(function (n, i, o) {
             Array.isArray(i.children) || g(!1);
             var s = i.children.map(T),
-                l = new o(
+                l = new a(
                     r({}, v(i, t), {
-                        prevSibling: 0 === a ? null : e[a - 1].key,
-                        nextSibling: a === e.length - 1 ? null : e[a + 1].key,
+                        prevSibling: 0 === o ? null : e[o - 1].key,
+                        nextSibling: o === e.length - 1 ? null : e[o + 1].key,
                         children: b(
                             s.map(function (e) {
                                 return e.key;
@@ -113,7 +113,7 @@ var u = n(116514),
                     break;
                 }
                 var h = u.children.map(T),
-                    m = new o(
+                    m = new a(
                         r({}, v(u, t), {
                             parent: d.getKey(),
                             children: b(
@@ -133,7 +133,7 @@ var u = n(116514),
     N = function (e, t) {
         return O(
             e.map(function (e) {
-                var n = new a(v(e, t));
+                var n = new o(v(e, t));
                 return [n.getKey(), n];
             })
         );
@@ -145,23 +145,23 @@ var u = n(116514),
             r = E && !n ? c.fromRawStateToRawTreeState(e).blocks : e.blocks;
         return E ? A(r, t) : N(n ? c.fromRawTreeStateToRawState(e).blocks : r, t);
     },
-    w = function (e) {
+    R = function (e) {
         var t = e.entityMap,
             n = {};
         return (
             Object.keys(t).forEach(function (e) {
                 var r = t[e],
                     i = r.type,
-                    a = r.mutability,
-                    o = r.data;
-                n[e] = l.__create(i, a, o || {});
+                    o = r.mutability,
+                    a = r.data;
+                n[e] = l.__create(i, o, a || {});
             }),
             n
         );
     };
 e.exports = function (e) {
     Array.isArray(e.blocks) || g(!1);
-    var t = w(e),
+    var t = R(e),
         n = C(e, t),
         r = n.isEmpty() ? new u() : u.createEmpty(n.first().getKey());
     return new s({

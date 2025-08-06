@@ -2,8 +2,8 @@ n.d(t, { Z: () => d });
 var r = n(255367);
 n(73800);
 var i = n(120356),
-    a = n.n(i),
-    o = n(755721),
+    o = n.n(i),
+    a = n(755721),
     s = n(481060),
     l = n(5192),
     c = n(829820),
@@ -18,9 +18,9 @@ function d(e) {
         text: E,
         children: (e) => {
             let { onMouseEnter: n, onMouseLeave: i } = e;
-            return (0, r.jsx)(o.zx, {
+            return (0, r.jsx)(a.zx, {
                 size: _,
-                className: a()(u.syncButton, m),
+                className: o()(u.syncButton, m),
                 innerClassName: u.syncButtonInner,
                 look: p,
                 color: h,

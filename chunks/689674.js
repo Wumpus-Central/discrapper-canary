@@ -1,8 +1,8 @@
 n.d(t, { Z: () => f });
 var r = n(73800),
     i = n(106351),
-    a = n(442837),
-    o = n(434650),
+    o = n(442837),
+    a = n(434650),
     s = n(430824),
     l = n(63205),
     c = n(529726),
@@ -11,7 +11,7 @@ let d = 0;
 function f(e) {
     var t, n;
     let { message: f, channel: _, enabled: p = !0 } = e,
-        h = (0, a.e7)(
+        h = (0, o.e7)(
             [s.Z],
             () => {
                 var e;
@@ -47,7 +47,7 @@ function f(e) {
                 autoTrackExposure: !0
             }
         ).enabled,
-        T = (0, o.O)(v, d, I);
+        T = (0, a.O)(v, d, I);
     return (
         r.useEffect(
             () => () => {

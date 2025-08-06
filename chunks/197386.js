@@ -1,8 +1,8 @@
 n.d(t, { Z: () => h });
 var r = n(475179),
     i = n(812206),
-    a = n(413523),
-    o = n(776862),
+    o = n(413523),
+    a = n(776862),
     s = n(703656),
     l = n(566620),
     c = n(317381),
@@ -20,13 +20,13 @@ function h(e, t) {
             application: h,
             channelId: m
         });
-    if (null != g) return void (0, o.Z)(g);
+    if (null != g) return void (0, a.Z)(g);
     null != m &&
         ((0, s.uL)(p.Z5c.CHANNEL(e, m)),
         (0, f.Z)(m)
             ? (r.Z.selectParticipant(
                   m,
-                  (0, a.gN)({
+                  (0, o.gN)({
                       applicationId: n.applicationId,
                       instanceId: null == n ? void 0 : n.compositeInstanceId
                   })

@@ -6,17 +6,17 @@ var r = n(442837),
     s = n(431328),
     o = n(501655),
     c = n(146085),
-    d = n(368442),
-    u = n(981631);
+    u = n(368442),
+    d = n(981631);
 function h(e) {
     var t;
     let n = (0, r.e7)([i.Z], () => i.Z.getStageVideoLimitBoostUpsellDismissed(e.id), [e.id]),
         h = (0, s.Io)(e.id),
         p = (0, s.Rk)(e.id, o.pV.AUDIENCE),
-        f = (0, d.PK)(e.id),
+        f = (0, u.PK)(e.id),
         g = (0, r.e7)([l.Z], () => l.Z.getGuild(e.guild_id), [e.guild_id]),
         m = (0, r.e7)([a.Z], () => a.Z.can(c.yP, e), [e]),
         b = null != (t = null == g ? void 0 : g.maxStageVideoChannelUsers) ? t : 0,
-        _ = !(null != g && g.features.has(u.oNc.COMMUNITY)) && b > u.RcX;
-    return f && !n && m && !_ && h + p >= b;
+        y = !(null != g && g.features.has(d.oNc.COMMUNITY)) && b > d.RcX;
+    return f && !n && m && !y && h + p >= b;
 }

@@ -1,8 +1,8 @@
 (n.d(t, { Z: () => E }), n(388685), n(35282));
 var r = n(255367),
     i = n(73800),
-    a = n(442837),
-    o = n(305325),
+    o = n(442837),
+    a = n(305325),
     s = n(281956),
     l = n(922482),
     c = n(592125),
@@ -22,24 +22,24 @@ function E(e) {
             guild: O,
             channel: v,
             isMember: I
-        } = (0, a.cj)(
+        } = (0, o.cj)(
             [p.ZP, d.Z, c.Z, u.ZP, f.default],
             () => {
                 var e, t;
                 let r = null != (t = p.ZP.getGuildScheduledEvent(E)) ? t : void 0,
                     i = d.Z.getGuild(n),
-                    a = c.Z.getChannel(null == r ? void 0 : r.channel_id);
+                    o = c.Z.getChannel(null == r ? void 0 : r.channel_id);
                 return {
                     guildScheduledEvent: r,
                     guild: i,
-                    channel: a,
+                    channel: o,
                     isMember: u.ZP.isMember(n, null == (e = f.default.getCurrentUser()) ? void 0 : e.id)
                 };
             },
             [n, E]
         );
     function T() {
-        if ((0, s.n)(n)) return void (0, o.hk)(n);
+        if ((0, s.n)(n)) return void (0, a.hk)(n);
         (null == v ? void 0 : v.isGuildStageVoice()) ? (0, l.Cq)(v) : (null == v ? void 0 : v.isGuildVoice()) && h.Z.joinVoiceEvent(v.guild_id, v.id);
     }
     return (

@@ -1,8 +1,8 @@
-(n.d(t, { Z: () => j }), n(35282));
+(n.d(t, { Z: () => k }), n(35282));
 var r = n(255367),
     i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(481060),
     l = n(503438),
     c = n(100527),
@@ -25,9 +25,9 @@ var r = n(255367),
     A = n(336383),
     N = n(194811),
     C = n(373826),
-    w = n(262210),
-    R = n(666984),
-    P = n(386019),
+    R = n(262210),
+    P = n(666984),
+    w = n(386019),
     D = n(228168),
     L = n(227832);
 function x(e, t, n) {
@@ -43,7 +43,7 @@ function x(e, t, n) {
         e
     );
 }
-function k(e) {
+function M(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -59,9 +59,9 @@ function k(e) {
     }
     return e;
 }
-function j(e) {
+function k(e) {
     var t;
-    let { user: n, currentUser: a, activity: x, profileGuildId: j, className: M, onClose: U } = e,
+    let { user: n, currentUser: o, activity: x, profileGuildId: k, className: j, onClose: U } = e,
         G = (0, p.Dt)(),
         B = (0, p.Dt)(),
         Z = i.useRef(null),
@@ -75,43 +75,43 @@ function j(e) {
         K = null != W.text && '' !== W.text,
         { largeImage: z } = (0, d.FO)(x),
         { analyticsLocations: q } = (0, u.ZP)(c.Z.USER_PROFILE_LIVE_ACTIVITY_CARD),
-        $ = (0, m.Z)({
+        X = (0, m.Z)({
             display: 'live',
             user: n,
             activity: x,
             entry: Y,
             analyticsLocations: q
         }),
-        X = (0, g.Z)({
+        Q = (0, g.Z)({
             userId: n.id,
-            onAction: $
+            onAction: X
         });
     if (!(0, l.Z)(x)) return null;
-    let Q = () => {
+    let J = () => {
             var e, t;
-            let a = null != (t = null == (e = x.state) ? void 0 : e.split(';')) ? t : [];
-            return 0 === a.length
+            let o = null != (t = null == (e = x.state) ? void 0 : e.split(';')) ? t : [];
+            return 0 === o.length
                 ? null
                 : null == x.sync_id
                   ? (0, r.jsx)(C.Z, {
                         variant: 'text-xs/normal',
-                        text: a.join(', ')
+                        text: o.join(', ')
                     })
                   : (0, r.jsx)(C.Z, {
                         variant: 'text-xs/normal',
-                        text: a.map((e, t) =>
+                        text: o.map((e, t) =>
                             (0, r.jsxs)(
                                 i.Fragment,
                                 {
                                     children: [
                                         (0, r.jsx)(s.P3F, {
-                                            className: o()(L.clickableText, L.inline),
+                                            className: a()(L.clickableText, L.inline),
                                             onClick: (e) => {
-                                                (e.stopPropagation(), $({ action: 'OPEN_SPOTIFY_ARTIST' }), (0, h.d$)(x, n.id, t));
+                                                (e.stopPropagation(), X({ action: 'OPEN_SPOTIFY_ARTIST' }), (0, h.d$)(x, n.id, t));
                                             },
                                             children: e
                                         }),
-                                        t < a.length - 1 ? ', ' : ''
+                                        t < o.length - 1 ? ', ' : ''
                                     ]
                                 },
                                 t
@@ -119,26 +119,26 @@ function j(e) {
                         )
                     });
         },
-        J = () => {
+        $ = () => {
             let { timestamps: e } = x;
             if (null == e) return null;
             let { start: t, end: n } = e;
             return null == t || null == n
                 ? null
-                : (0, r.jsx)(w.Z, {
+                : (0, r.jsx)(R.Z, {
                       start: t,
                       end: n
                   });
         },
         ee = () =>
-            n.id === a.id
+            n.id === o.id
                 ? null
                 : (0, r.jsx)('div', {
                       className: L.actions,
-                      children: (0, r.jsx)(R.Z, {
+                      children: (0, r.jsx)(P.Z, {
                           user: n,
                           activity: x,
-                          onAction: $
+                          onAction: X
                       })
                   });
     if (null === F) return null;
@@ -152,13 +152,13 @@ function j(e) {
             user: n,
             children: (0, r.jsx)(O.Z, {
                 user: n,
-                guildId: j,
+                guildId: k,
                 themeType: F,
                 sourceId: et,
                 sourceDetails: null == Y ? (0, b.Z)(x) : null,
                 entry: Y,
                 sourceType: D.n_.ACTIVITY,
-                onAction: $,
+                onAction: X,
                 children: () =>
                     (0, r.jsx)(v.Z, {
                         ref: Z,
@@ -166,10 +166,10 @@ function j(e) {
                         className: L.toolbarContainer,
                         sourceType: D.n_.ACTIVITY,
                         interactionSourceId: et,
-                        onAction: $,
-                        onShowToolbar: () => $({ action: 'HOVER_ACTIVITY_CARD' }),
+                        onAction: X,
+                        onShowToolbar: () => X({ action: 'HOVER_ACTIVITY_CARD' }),
                         renderMoreButtonPopout: (e) =>
-                            (0, r.jsx)(P.Z, {
+                            (0, r.jsx)(w.Z, {
                                 display: 'live',
                                 user: n,
                                 activity: x,
@@ -178,13 +178,13 @@ function j(e) {
                                 children: e
                             }),
                         children: (0, r.jsxs)(A.Z, {
-                            ref: X,
-                            className: o()(M, { [L.hoisted]: en }),
-                            onAction: $,
+                            ref: Q,
+                            className: a()(j, { [L.hoisted]: en }),
+                            onAction: X,
                             onClose: U,
                             'aria-labelledby': K ? ''.concat(B, ' ').concat(G) : G,
                             children: [
-                                (0, r.jsx)(N.Z, k({ textId: B }, W)),
+                                (0, r.jsx)(N.Z, M({ textId: B }, W)),
                                 (0, r.jsx)('div', {
                                     className: L.body,
                                     children: (0, r.jsxs)('div', {
@@ -195,7 +195,7 @@ function j(e) {
                                                 size: F === D.lY.MODAL_V2 ? f.J.SIZE_100 : f.J.SIZE_60,
                                                 className: L.clickableImage,
                                                 onClick: (e) => {
-                                                    (e.stopPropagation(), $({ action: 'OPEN_SPOTIFY_ALBUM' }), (0, h.Z5)(x, n.id));
+                                                    (e.stopPropagation(), X({ action: 'OPEN_SPOTIFY_ALBUM' }), (0, h.Z5)(x, n.id));
                                                 }
                                             }),
                                             (0, r.jsxs)('div', {
@@ -207,11 +207,11 @@ function j(e) {
                                                                 variant: 'heading-sm/semibold',
                                                                 text: x.details,
                                                                 onClick: () => {
-                                                                    ($({ action: 'OPEN_SPOTIFY_TRACK' }), (0, h.aG)(x));
+                                                                    (X({ action: 'OPEN_SPOTIFY_TRACK' }), (0, h.aG)(x));
                                                                 },
                                                                 id: G
                                                             }),
-                                                            Q()
+                                                            J()
                                                         ]
                                                     }),
                                                     (0, r.jsx)(S.Z, {
@@ -219,7 +219,7 @@ function j(e) {
                                                         activity: x,
                                                         className: L.badges
                                                     }),
-                                                    J(),
+                                                    $(),
                                                     F === D.lY.MODAL_V2 && ee()
                                                 ]
                                             }),

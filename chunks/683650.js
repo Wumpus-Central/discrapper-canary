@@ -5,8 +5,8 @@ n.d(t, {
 var r = n(255367);
 n(73800);
 var i = n(120356),
-    a = n.n(i),
-    o = n(755721),
+    o = n.n(i),
+    a = n(755721),
     s = n(481060),
     l = n(617136),
     c = n(497505),
@@ -22,9 +22,9 @@ function m() {
     };
     return (0, r.jsx)('div', {
         className: p.buttonContainer,
-        children: (0, r.jsx)(o.zx, {
+        children: (0, r.jsx)(a.zx, {
             className: p.button,
-            color: o.Tt.BRAND,
+            color: a.Tt.BRAND,
             onClick: e,
             children: _.intl.string(_.t.GURBQk)
         })
@@ -35,28 +35,28 @@ var g = (function (e) {
 })({});
 function E(e) {
     let { questId: t, reason: n = 'not_found' } = e,
-        { containerRef: i, size: o } = (0, d.h)();
+        { containerRef: i, size: a } = (0, d.h)();
     return (
         (0, l.Zk)(f.V_.UNKNOWN_QUEST, t),
         (0, r.jsxs)('div', {
             ref: (e) => {
                 i.current = e;
             },
-            className: a()(p.container, {
-                [p.wide]: 'lg' === o,
-                [p.tall]: 'lg' !== o
+            className: o()(p.container, {
+                [p.wide]: 'lg' === a,
+                [p.tall]: 'lg' !== a
             }),
             children: [
                 (0, r.jsxs)('div', {
                     className: p.contentContainer,
                     children: [
                         (0, r.jsx)(s.X6q, {
-                            variant: 'lg' === o ? 'heading-xl/bold' : 'heading-lg/bold',
+                            variant: 'lg' === a ? 'heading-xl/bold' : 'heading-lg/bold',
                             color: 'header-primary',
                             children: _.intl.string(_.t.vnP31d)
                         }),
                         (0, r.jsx)(s.Text, {
-                            variant: 'lg' === o ? 'text-sm/medium' : 'text-xs/medium',
+                            variant: 'lg' === a ? 'text-sm/medium' : 'text-xs/medium',
                             color: 'text-default',
                             className: p.__invalid_mobileWebCopy,
                             children: _.intl.string('mobile_only' === n ? _.t.Pag1gY : _.t.CTn0yc)

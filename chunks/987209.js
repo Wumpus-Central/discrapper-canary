@@ -6,8 +6,8 @@
     n(388685));
 var r = n(255367),
     i = n(73800),
-    a = n(442837),
-    o = n(597688),
+    o = n(442837),
+    a = n(597688),
     s = n(479446),
     l = n(646476),
     c = n(717401),
@@ -27,13 +27,13 @@ function O(e) {
         [T, S] = i.useState(),
         [A, N] = i.useState(!1),
         C = (0, d.pO)(v),
-        w = (0, l.TX)(),
-        R = g;
-    C && (R = w ? p.Cj.SEASONAL_STANDARD_BOX : null != _ ? _ : m);
-    let [P, D] = i.useState(R),
+        R = (0, l.TX)(),
+        P = g;
+    C && (P = R ? p.Cj.SEASONAL_STANDARD_BOX : null != _ ? _ : m);
+    let [w, D] = i.useState(P),
         L = (0, c.iE)(),
-        [x, k] = i.useState(),
-        [j, M] = i.useState(t && (0, d.MY)(v) === d.xr.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD && null == u ? h.intl.string(h.t.ZkOo1d) : u),
+        [x, M] = i.useState(),
+        [k, j] = i.useState(t && (0, d.MY)(v) === d.xr.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD && null == u ? h.intl.string(h.t.ZkOo1d) : u),
         [U, G] = i.useState(void 0),
         [B, Z] = i.useState(void 0),
         F = (0, d.E5)(O, t),
@@ -56,7 +56,7 @@ function O(e) {
             },
             [v, F, W, H, z]
         ),
-        $ = (0, a.Wu)([o.Z], () => o.Z.recommendedGiftSkuIds);
+        X = (0, o.Wu)([a.Z], () => a.Z.recommendedGiftSkuIds);
     return (0, r.jsx)(E.Provider, {
         value: {
             isGift: t,
@@ -72,19 +72,19 @@ function O(e) {
             setSoundEffect: G,
             emojiConfetti: B,
             setEmojiConfetti: Z,
-            customGiftMessage: j,
-            setCustomGiftMessage: M,
-            selectedGiftStyle: P,
+            customGiftMessage: k,
+            setCustomGiftMessage: j,
+            selectedGiftStyle: w,
             setSelectedGiftStyle: D,
             sendGiftMessage: q,
             hasSentMessage: V,
             isSendingMessage: Y,
             giftMessageError: K,
-            recommendedGiftSkuIds: $,
+            recommendedGiftSkuIds: X,
             giftingOrigin: b,
             claimableRewards: L,
             selectedGiftingPromotionReward: x,
-            setSelectedGiftingPromotionReward: k
+            setSelectedGiftingPromotionReward: M
         },
         children: y
     });

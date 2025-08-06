@@ -1,8 +1,8 @@
 n.d(t, { Z: () => h });
 var r = n(255367),
     i = n(73800),
-    a = n(442837),
-    o = n(82659),
+    o = n(442837),
+    a = n(82659),
     s = n(481060),
     l = n(846027),
     c = n(468026),
@@ -39,7 +39,7 @@ function p(e) {
     return e;
 }
 let h = () => {
-    let e = (0, a.e7)([d.Z], () => d.Z.isInteractionRequired(), []),
+    let e = (0, o.e7)([d.Z], () => d.Z.isInteractionRequired(), []),
         t = i.useRef(null);
     function n() {
         null !== t.current && ((0, s.Mr3)(t.current), (t.current = null));
@@ -54,7 +54,7 @@ let h = () => {
                 t.current = (0, s.h7j)((t) =>
                     e
                         ? (0, r.jsx)(
-                              o.Modal,
+                              a.Modal,
                               p(
                                   {
                                       title: f.intl.string(f.t.dLLxCw),

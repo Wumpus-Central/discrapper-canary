@@ -1,11 +1,11 @@
 n.d(t, {
-    Cq: () => o,
-    Ht: () => a,
+    Cq: () => a,
+    Ht: () => o,
     XU: () => s
 });
 var r = n(818083),
     i = n(987338);
-let a = (0, r.B)({
+let o = (0, r.B)({
     kind: 'user',
     id: '2025-03_friends_popout',
     label: 'Friends Popout',
@@ -33,11 +33,11 @@ let a = (0, r.B)({
         }
     ]
 });
-function o(e) {
+function a(e) {
     let { location: t } = e;
-    return a.useExperiment({ location: t }, { autoTrackExposure: !0 });
+    return o.useExperiment({ location: t }, { autoTrackExposure: !0 });
 }
 function s(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-    return a.getCurrentConfig({ location: e }, { autoTrackExposure: t });
+    return o.getCurrentConfig({ location: e }, { autoTrackExposure: t });
 }

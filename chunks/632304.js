@@ -2,8 +2,8 @@ n.d(t, { Z: () => h });
 var r = n(255367);
 n(73800);
 var i = n(442837),
-    a = n(481060),
-    o = n(846027),
+    o = n(481060),
+    a = n(846027),
     s = n(131951),
     l = n(36703),
     c = n(358085),
@@ -62,17 +62,17 @@ function p(e, t) {
 }
 function h(e) {
     let t = (0, i.e7)([s.Z], () => (0, l.P)(s.Z.getOutputVolume()));
-    return (0, r.jsx)(a.II_, {
+    return (0, r.jsx)(o.II_, {
         id: 'output',
         label: u.intl.string(u.t.eATD2N),
         control: (n, i) =>
             (0, r.jsx)(
-                a._wy,
+                o._wy,
                 p(f({}, n), {
                     ref: i,
                     value: t,
                     maxValue: c.isPlatformEmbedded ? 200 : 100,
-                    onChange: (t) => o.Z.setOutputVolume((0, l.A)(t), { analyticsLocations: e }),
+                    onChange: (t) => a.Z.setOutputVolume((0, l.A)(t), { analyticsLocations: e }),
                     'aria-label': u.intl.string(u.t.eATD2N)
                 })
             )

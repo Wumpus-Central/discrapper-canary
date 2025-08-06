@@ -1,8 +1,8 @@
 n.d(t, { Z: () => l });
 var r = n(73800),
     i = n(902704),
-    a = n(232567),
-    o = n(720202),
+    o = n(232567),
+    a = n(720202),
     s = n(594174);
 function l(e) {
     let { entry: t, channel: n } = e,
@@ -14,7 +14,7 @@ function l(e) {
                 t.participants
                     .filter((e) => null == s.default.getUser(e))
                     .forEach((e) => {
-                        null == n.guild_id ? (0, a.PR)(e) : o.Z.requestMember(n.guild_id, e);
+                        null == n.guild_id ? (0, o.PR)(e) : a.Z.requestMember(n.guild_id, e);
                     }));
         }, [t, n.guild_id]),
         {}

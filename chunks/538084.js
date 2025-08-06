@@ -5,8 +5,8 @@
     n(388685));
 var r = n(255367),
     i = n(73800),
-    a = n(913527),
-    o = n.n(a),
+    o = n(913527),
+    a = n.n(o),
     s = n(481060),
     l = n(45251),
     c = n(388032),
@@ -14,10 +14,10 @@ var r = n(255367),
 let d = 365,
     f = 'SCHEDULED_MESSAGE_CREATE_MODAL_KEY';
 function _(e) {
-    let { channel: t, transitionState: n, onClose: a, prefilledTime: _ } = e,
-        p = o()(),
-        h = o()().add(d, 'days'),
-        [m, g] = i.useState(null != _ ? o()(_.substring(0, 200)) : p),
+    let { channel: t, transitionState: n, onClose: o, prefilledTime: _ } = e,
+        p = a()(),
+        h = a()().add(d, 'days'),
+        [m, g] = i.useState(null != _ ? a()(_.substring(0, 200)) : p),
         E = (e) => {
             g(e);
         },
@@ -38,7 +38,7 @@ function _(e) {
         parentComponent: 'ScheduledMessageCreateModal',
         children: [
             (0, r.jsx)(s.olH, {
-                onClick: a,
+                onClick: o,
                 className: u.closeButton
             }),
             (0, r.jsx)(s.xBx, {
@@ -92,7 +92,7 @@ function _(e) {
                         children: (0, r.jsx)(s.zxk, {
                             variant: 'secondary',
                             text: c.intl.string(c.t['ETE/oK']),
-                            onClick: a
+                            onClick: o
                         })
                     }),
                     (0, r.jsx)(s.zxk, {
