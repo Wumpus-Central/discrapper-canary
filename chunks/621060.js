@@ -16,14 +16,14 @@ var n,
     u = a(393238),
     m = a(424625),
     x = a(823379),
-    p = a(246992),
-    h = a(616257),
+    h = a(246992),
+    p = a(616257),
     f = (((n = {}).NONE = ''), (n.EXPERIMENTS = 'Experiments'), (n.EVENTS = 'Events'), (n.PREMIUM = 'Premium'), (n.BILLING = 'Billing'), (n.USERS = 'Users'), (n.GUILDS = 'Guilds'), (n.UI = 'UI'), (n.GAMES = 'Games'), (n.AUDIO_VIDEO = 'Audio / Video'), (n.DEVELOPMENT = 'Development'), n);
 let b = ['Experiments', 'Events', 'Premium', 'Billing', 'Users', 'Guilds', 'UI', 'Games', 'Audio / Video', 'Development'],
     v = l.forwardRef(function (e, t) {
         let { id: a, selected: n, onClick: l, children: i } = e;
         return (0, r.jsx)(d.P3F, {
-            className: s()(h.tabItem, { [h.selected]: n }),
+            className: s()(p.tabItem, { [p.selected]: n }),
             'data-tab-id': a,
             innerRef: t,
             onClick: l,
@@ -103,10 +103,10 @@ function j(e) {
         [t, n]
     );
     return (0, r.jsxs)('div', {
-        className: h.tabBarContainer,
+        className: p.tabBarContainer,
         children: [
             (0, r.jsxs)('div', {
-                className: h.tabBar,
+                className: p.tabBar,
                 ref: j,
                 children: [
                     t
@@ -126,7 +126,7 @@ function j(e) {
                         })
                         .filter(x.lm),
                     (0, r.jsx)('div', {
-                        className: h.tabMeasurer,
+                        className: p.tabMeasurer,
                         children: t.map((e) => {
                             let { id: t, name: l } = e;
                             return (0, r.jsx)(
@@ -147,12 +147,12 @@ function j(e) {
                 ]
             }),
             (0, r.jsx)('div', {
-                className: h.menu,
+                className: p.menu,
                 children:
                     s.size > 0 &&
                     (0, r.jsx)(d.yRy, {
                         targetElementRef: _,
-                        layerContext: p.O$,
+                        layerContext: h.O$,
                         renderPopout: y,
                         position: 'bottom',
                         align: 'right',
@@ -189,11 +189,11 @@ function j(e) {
                                 (a = a =
                                     {
                                         buttonRef: _,
-                                        className: h.overflowChevron,
+                                        className: p.overflowChevron,
                                         size: c.zx.Sizes.ICON,
                                         look: c.zx.Looks.BLANK,
                                         children: (0, r.jsx)(m.Z, {
-                                            className: h.__invalid_overflowIcon,
+                                            className: p.__invalid_overflowIcon,
                                             width: 16,
                                             height: 16
                                         })

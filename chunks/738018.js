@@ -55,7 +55,7 @@ function N(e) {
 }
 function C(e) {
     let { searchContext: t, query: n, mode: r, tokens: i, cursorScope: o, autocompletes: s } = e,
-        l = (0, m.WJ)(t),
+        l = (0, m.Tm)(t),
         c = I[l];
     return (
         null == c &&
@@ -82,13 +82,13 @@ function C(e) {
     );
 }
 function R(e) {
-    let { searchId: t } = e,
+    let { id: t } = e,
         n = I[t];
     (null != n && (n.context.destroy(), (n.results = []), delete I[t]), delete v[t], (O = null));
 }
 function P(e, t) {
     let { results: n } = t,
-        r = (0, m.WJ)(e),
+        r = (0, m.Tm)(e),
         i = I[r],
         o = v[r];
     if (null == i || null == o) return;
@@ -136,7 +136,7 @@ function L(e) {
     O = r;
     let a = (0, m.cl)(i),
         s = (0, m.qc)(o, i),
-        l = (0, m.WJ)(r),
+        l = (0, m.Tm)(r),
         c = null != (t = v[l]) ? t : {},
         u = I[l],
         d = !0;
@@ -172,7 +172,7 @@ function x(e) {
     let i,
         { filter: o, token: a, searchContext: s, maxResults: l = T, tokens: c } = e;
     if (null == o) return null;
-    let d = (0, m.WJ)(s),
+    let d = (0, m.Tm)(s),
         p = null != (n = null == a || null == (t = a.getFullMatch()) ? void 0 : t.trim()) ? n : '',
         g = o === b.dCx.FILTER_FROM || o === b.dCx.FILTER_MENTIONS;
     if ((0, m.b7)(s) && g) {
@@ -305,7 +305,7 @@ function U(e) {
     if (d.Z.hidePersonalInformation) return null;
     {
         let t = n(741995).Z,
-            r = (0, m.WJ)(e),
+            r = (0, m.Tm)(e),
             i = t.getHistory(r);
         return null == i
             ? null
@@ -351,14 +351,14 @@ function Z(e) {
     });
 }
 function F(e) {
-    let { searchId: t } = e;
-    null != t ? Z(t) : Object.keys(v).forEach(Z);
+    let { id: t } = e;
+    Z(t);
 }
 function V() {
     Object.keys(v).forEach(Z);
 }
 function H(e) {
-    let t = (0, m.WJ)(e);
+    let t = (0, m.Tm)(e);
     if (null == v[t]) return !1;
     let { query: n, mode: r, tokens: i, cursorScope: o } = v[t];
     v[t] = C({
@@ -379,7 +379,7 @@ function W(e) {
     if (O.type === b.aib.DMS && (0, m.R6)(O)) {
         let e = s.Z.getChannel(t);
         if (null == e || !e.isPrivate()) return !1;
-        let n = v[(0, m.WJ)(O)];
+        let n = v[(0, m.Tm)(O)];
         if (null == n) return !1;
         let { type: r, filter: i } = n.mode;
         return r === b.Sap.FILTER && i === b.dCx.FILTER_IN && H(O);
@@ -392,14 +392,14 @@ class K extends (r = i.ZP.Store) {
     }
     getState(e) {
         var t;
-        return null != (t = v[(0, m.WJ)(e)]) ? t : C({ searchContext: e });
+        return null != (t = v[(0, m.Tm)(e)]) ? t : C({ searchContext: e });
     }
     getSelectedSearchContext() {
         return O;
     }
     getFilterResults(e, t, n) {
         var r, i, o;
-        let { tokens: a } = null != (r = v[(0, m.WJ)(e)]) ? r : {},
+        let { tokens: a } = null != (r = v[(0, m.Tm)(e)]) ? r : {},
             s = [];
         switch (t) {
             case b.dCx.FILTER_FROM:

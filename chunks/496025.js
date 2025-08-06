@@ -10,8 +10,8 @@ var n = a(255367),
     u = a(43267),
     m = a(933557),
     x = a(258732),
-    p = a(592125),
-    h = a(699516),
+    h = a(592125),
+    p = a(699516),
     f = a(594174),
     b = a(55589),
     v = a(630388),
@@ -20,18 +20,18 @@ var n = a(255367),
     _ = a(246992),
     y = a(894257),
     C = a(750540),
-    O = a(616257);
-function N() {
+    N = a(616257);
+function O() {
     var e;
     let t = (0, o.Wu)([b.Z], () => b.Z.getSortedChannels()[1]),
         [a, l] = r.useState(t.length > 0 ? t[0].channelId : void 0),
-        { selectedChannel: i, options: d } = (0, o.cj)([p.Z, f.default, h.Z], () => ({
-            selectedChannel: p.Z.getChannel(a),
+        { selectedChannel: i, options: d } = (0, o.cj)([h.Z, f.default, p.Z], () => ({
+            selectedChannel: h.Z.getChannel(a),
             options: t.map((e) => {
-                let t = p.Z.getChannel(e.channelId);
+                let t = h.Z.getChannel(e.channelId);
                 return {
                     value: e.channelId,
-                    label: null != t ? (0, m.F6)(t, f.default, h.Z) : e.channelId
+                    label: null != t ? (0, m.F6)(t, f.default, p.Z) : e.channelId
                 };
             })
         })),
@@ -59,7 +59,7 @@ function N() {
                         onChange: l,
                         renderOptionPrefix: (e) => {
                             if (null == e) return null;
-                            let t = p.Z.getChannel(e.value);
+                            let t = h.Z.getChannel(e.value);
                             return null == t
                                 ? null
                                 : (0, n.jsx)(c.qEK, {
@@ -109,7 +109,7 @@ function T() {
         );
     });
     return (0, n.jsxs)('div', {
-        className: i()(O.panel, C.panel),
-        children: [e, (0, n.jsx)('div', { className: C.divider }), (0, n.jsx)(N, {}), (0, n.jsx)('div', { className: C.divider }), (0, n.jsx)(E, {})]
+        className: i()(N.panel, C.panel),
+        children: [e, (0, n.jsx)('div', { className: C.divider }), (0, n.jsx)(O, {}), (0, n.jsx)('div', { className: C.divider }), (0, n.jsx)(E, {})]
     });
 }

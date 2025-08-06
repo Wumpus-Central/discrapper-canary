@@ -64,12 +64,12 @@ function g(e, t) {
 }
 function E(e) {
     let { searchContext: t, searchQueryString: n, searchQuery: r, offset: i } = e,
-        a = (0, l.WJ)(t);
-    (o.Z.clearSearchMessages(a), o.Z.setShowNoResultsAlt(a), o.Z.setShowBlockedResults(a, !1), o.Z.updateSearchResultsQuery(a, n, r, i), o.Z.addWebSearchHistoryItem(a, n));
+        a = (0, l.Tm)(t);
+    (o.Z.clearSearchMessages(a), o.Z.setShowNoResultsAlt(t), o.Z.setShowBlockedResults(t, !1), o.Z.updateSearchResultsQuery(t, n, r, i), o.Z.addWebSearchHistoryItem(t, n));
 }
 function b(e) {
     let { searchContext: t, selectedPageIndex: n, queryString: r, searchMode: i } = e,
-        a = (0, l.WJ)(t);
+        a = (0, l.Tm)(t);
     o.Z.fetchTabMessages({
         searchContext: t,
         searchTabs: [f.sR.MESSAGES],
@@ -106,7 +106,7 @@ function y(e) {
         }));
 }
 function O(e, t) {
-    let n = (0, l.WJ)(e),
+    let n = (0, l.Tm)(e),
         c = s.Z.getEditorState(n),
         u = s.Z.getSearchResultsQueryString(n),
         f = a.Z.getIsFetching(n);
@@ -116,7 +116,7 @@ function O(e, t) {
     h = i.Hl(h, 512);
     let m = (0, l.kG)(p),
         g = m.filter((e) => e.type !== r.ZP.NON_TOKEN_TYPE);
-    ((h = i.lv(g, h, d.ZP)), (h = i.iK(0 + p.length, h)), o.Z.setSearchState(n, h));
+    ((h = i.lv(g, h, d.ZP)), (h = i.iK(0 + p.length, h)), o.Z.setSearchState(e, h));
     let E = (0, l.$G)(m);
     e.type === _.aib.DMS
         ? b({
@@ -134,13 +134,13 @@ function O(e, t) {
 let v = {
     fetchCrossDMMessages: b,
     cleanUpSearchState: function (e) {
-        let t = (0, l.WJ)(e);
-        (o.Z.clearSearchState(t), o.Z.clearSearchMessages(t), c.Z.cleanUp(t), u.Z.cleanUp(t));
+        let t = (0, l.Tm)(e);
+        (o.Z.clearSearchState(e), o.Z.clearSearchMessages(t), c.Z.cleanUp(t), u.Z.cleanUp(t));
     },
     fetchMessages: y,
     appendTextToSearchInput: O,
     getSearchInputText: function (e) {
-        let t = (0, l.WJ)(e),
+        let t = (0, l.Tm)(e),
             n = null != t ? s.Z.getEditorState(t) : null;
         return null != n ? i.Sq(n) : null;
     }

@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => f }), n(388685), n(539854));
+(n.d(t, { Z: () => g }), n(388685), n(539854));
 var r = n(442837),
     i = n(963374),
     l = n(735020),
@@ -8,24 +8,27 @@ var r = n(442837),
     c = n(23750),
     u = n(699516),
     d = n(171900),
-    h = n(518944);
-let p = [];
-function f(e) {
-    let t = (0, s.p)(),
-        n = a.d.useExperiment({ location: 'useMessageRenderedContent' }).enabled,
-        f = (0, r.e7)(
+    h = n(518944),
+    p = n(607802);
+let f = [];
+function g(e) {
+    let { searchContext: t } = e,
+        n = (0, s.p)(),
+        g = a.d.useExperiment({ location: 'useMessageRenderedContent' }).enabled,
+        m = (0, r.e7)(
             [h.Z, d.Z, l.Z],
             () => {
-                var r;
-                let a = h.Z.getSearchResultsQuery(e),
-                    s = d.Z.getMessages(e);
-                if (null == a || null == s || 0 === s.length) return p;
-                let u = (0, i.nC)(null != (r = a.content) ? r : ''),
-                    f = [];
+                var e;
+                let r = (0, p.Tm)(t),
+                    a = h.Z.getSearchResultsQuery(r),
+                    s = d.Z.getMessages(r);
+                if (null == a || null == s || 0 === s.length) return f;
+                let u = (0, i.nC)(null != (e = a.content) ? e : ''),
+                    m = [];
                 return (
                     s.forEach((e) => {
-                        let r = new c.ZP(e),
-                            i = (r = (function (e, t) {
+                        let t = new c.ZP(e),
+                            r = (t = (function (e, t) {
                                 let [n] = t,
                                     r = n.getMessage(e.id, e.channel_id);
                                 return (
@@ -36,24 +39,24 @@ function f(e) {
                                         })),
                                     e
                                 );
-                            })(r, [l.Z])).isSearchHit
-                                ? r.set(
+                            })(t, [l.Z])).isSearchHit
+                                ? t.set(
                                       'customRenderedContent',
-                                      (0, o.ZP)(r, {
+                                      (0, o.ZP)(t, {
                                           postProcessor: u,
                                           allowHeading: !0,
                                           allowList: !0,
-                                          allowGameMentions: n,
-                                          shouldFilterKeywords: t
+                                          allowGameMentions: g,
+                                          shouldFilterKeywords: n
                                       })
                                   )
-                                : r;
-                        f.push([i]);
+                                : t;
+                        m.push([r]);
                     }),
-                    f
+                    m
                 );
             },
-            [n, e, t],
+            [g, t, n],
             r.pF
         );
     return (0, r.e7)(
@@ -62,7 +65,7 @@ function f(e) {
             let e = 0,
                 t = 0;
             return {
-                searchResults: f.map((n) =>
+                searchResults: m.map((n) =>
                     n.filter((n) => {
                         let r = u.Z.isBlockedForMessage(n),
                             i = u.Z.isIgnoredForMessage(n);
@@ -73,7 +76,7 @@ function f(e) {
                 ignoreCount: t
             };
         },
-        [f],
+        [m],
         r.pF
     );
 }

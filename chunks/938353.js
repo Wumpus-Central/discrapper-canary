@@ -758,21 +758,19 @@ class tt extends (r = o.Component) {
             e$(this, 'renderEmbed', (e, t, n, r) => {
                 var o, a, s;
                 let { gifAutoPlay: l, inlineEmbedMedia: c, canSuppressEmbeds: u, hasSpoilerEmbeds: d, enabledContentHarmTypeFlags: f, isSearchResult: _, shouldAgeVerify: p } = this.props,
-                    h = r.channel_id,
-                    m = r.id,
-                    g = (0, eT.BP)(e, h, m, d, f);
+                    h = (0, eT.BP)(e, r, d, f);
                 if (e.type === ez.hBH.GIFT) return null;
-                let E = e6.includes(e.type) ? e.url : null != (s = null == (o = e.image) ? void 0 : o.url) ? s : null == (a = e.video) ? void 0 : a.url;
+                let m = e6.includes(e.type) ? e.url : null != (s = null == (o = e.image) ? void 0 : o.url) ? s : null == (a = e.video) ? void 0 : a.url;
                 return (0, i.jsx)(
                     D.h.Provider,
                     {
-                        value: (0, eW.P)(E, e.image, e.video),
+                        value: (0, eW.P)(m, e.image, e.video),
                         children: (0, i.jsx)(
                             I.ZP,
                             e0(
                                 {
                                     embed: e,
-                                    obscureReason: null != g ? g : void 0,
+                                    obscureReason: null != h ? h : void 0,
                                     autoPlayGif: l,
                                     hideMedia: !c,
                                     allowFullScreen: !this.props.disableComponentInteractivity,

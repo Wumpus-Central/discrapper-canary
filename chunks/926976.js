@@ -10,8 +10,8 @@ var n = a(255367),
     u = a(481060),
     m = a(129861),
     x = a(665149),
-    p = a(886118),
-    h = a(301801),
+    h = a(886118),
+    p = a(301801),
     f = a(594174),
     b = a(572004),
     v = a(55935),
@@ -20,8 +20,8 @@ var n = a(255367),
     _ = a(257785),
     y = a(484036),
     C = a(681619),
-    O = a(621060),
-    N = a(388032),
+    N = a(621060),
+    O = a(388032),
     E = a(459100),
     T = a(616257);
 let S = [
@@ -108,7 +108,7 @@ let I = new Set(['client_performance_cpu', 'client_performance_memory']),
         {
             id: 'details',
             name: 'Details',
-            group: O.v0.NONE,
+            group: N.v0.NONE,
             render: (e) => {
                 let {
                         loggedEvent: { event: t, properties: a, timestamp: r, fingerprint: l },
@@ -116,7 +116,7 @@ let I = new Set(['client_performance_cpu', 'client_performance_memory']),
                         filteredEvents: c
                     } = e,
                     d = f.default.getUser(l),
-                    p = o()(r);
+                    h = o()(r);
                 return (0, n.jsxs)('div', {
                     'data-mtctest-ignore': 'true',
                     children: [
@@ -202,8 +202,8 @@ let I = new Set(['client_performance_cpu', 'client_performance_memory']),
                                     copyValue: r.toISOString(),
                                     children: (0, n.jsxs)('time', {
                                         dateTime: r.toISOString(),
-                                        title: (0, v.vc)(p, 'LLLL'),
-                                        children: ['(', o().locale(), ') ', (0, v.Y4)(p)]
+                                        title: (0, v.vc)(h, 'LLLL'),
+                                        children: ['(', o().locale(), ') ', (0, v.Y4)(h)]
                                     })
                                 }),
                                 null != d &&
@@ -295,7 +295,7 @@ let I = new Set(['client_performance_cpu', 'client_performance_memory']),
         }
     },
     Z = {
-        searchType: p.S.REGEX,
+        searchType: h.S.REGEX,
         searchStringGenerator: (e) => {
             let { event: t, properties: a } = e;
             return null != a.location ? [t, a.location] : t;
@@ -308,17 +308,17 @@ function D() {
         l = (0, c.e7)([j.Z], () => j.Z.loggedEventsVersion),
         [s, o] = r.useState(() => Object.keys(A)),
         [m, x] = r.useState(j.Z.loggedEvents),
-        p = r.useCallback((e) => {
+        h = r.useCallback((e) => {
             x(e);
         }, []);
-    (0, h.BO)(t, j.Z.loggedEvents, p, Z, [l]);
+    (0, p.BO)(t, j.Z.loggedEvents, h, Z, [l]);
     let f = m.filter((e) => {
             for (let t of s) if (A[t].filter(e)) return !0;
             return !1;
         }),
         [b, v] = r.useState(void 0),
         _ = f.find((e) => e.key === b),
-        { TabBar: P, renderSelectedTab: w } = (0, O.ZP)({ tabs: k }, []);
+        { TabBar: P, renderSelectedTab: w } = (0, N.ZP)({ tabs: k }, []);
     return (0, n.jsxs)('div', {
         ref: e,
         className: i()(T.panel, E.panel),
@@ -332,11 +332,11 @@ function D() {
                         size: d.zx.Sizes.ICON,
                         onClick: g.Zw,
                         children: (0, n.jsx)('span', {
-                            title: N.intl.string(N.t.VkKicX),
+                            title: O.intl.string(O.t.VkKicX),
                             children: (0, n.jsx)(u.XHJ, {
                                 size: 'md',
                                 color: 'currentColor',
-                                'aria-label': N.intl.string(N.t.VkKicX)
+                                'aria-label': O.intl.string(O.t.VkKicX)
                             })
                         })
                     }),

@@ -44,8 +44,8 @@ let G = R.u8.SIZE_32,
     };
 function B(e) {
     var t, n, l;
-    let { maxHeight: B, connectedLocation: z, renderExternalHeader: W } = e,
-        V = (0, T.Z)(),
+    let { maxHeight: B, connectedLocation: z, renderExternalHeader: V } = e,
+        W = (0, T.Z)(),
         Y = (0, s.Wu)([S.ZP], () => S.ZP.getEmbeddedActivitiesForLocation(z), [z]),
         q = (0, P.p)(z),
         K = (0, s.e7)([x.Z], () => x.Z.getChannel(q)),
@@ -80,13 +80,13 @@ function B(e) {
     let eo = ea.width / Math.max(ea.height, 1) < k.I0,
         ec = 0,
         eu = 0,
-        ed = (0, I.Z)(null == V ? void 0 : V.id);
+        ed = (0, I.Z)(null == W ? void 0 : W.id);
     if (!ed) {
         let e = ea.width,
             t = ea.height;
         eo ? ((t = ea.width / k.I0) > ea.height && (e = (t = ea.height) * k.I0), (eu = (ea.height - t) / 2)) : ((e = Math.min(ea.height * k.I0)) > ea.width && (t = (e = ea.width) / k.I0), (ec = (ea.width - e) / 2));
     }
-    let eh = X.get(null != (l = null == V ? void 0 : V.id) ? l : ''),
+    let eh = X.get(null != (l = null == W ? void 0 : W.id) ? l : ''),
         ep = (0, s.e7)([_.Z], () => _.Z.getChannelId()),
         ef = (0, s.Wu)(
             [j.ZP],
@@ -173,7 +173,7 @@ function B(e) {
             }, [o, e, n, t]);
         })(et, en, B),
         eb = (0, D.y)({ location: 'Activity Panel' });
-    if (null == V) return null;
+    if (null == W) return null;
     let ey = [];
     null != eh &&
         (ey = Array.from(eh.embeddedActivity.userIds)
@@ -210,7 +210,7 @@ function B(e) {
                 ref: $,
                 style: em,
                 children: [
-                    null == W ? void 0 : W(),
+                    null == V ? void 0 : V(),
                     (0, r.jsxs)('div', {
                         className: H.activityPanelContainer,
                         children: [
@@ -222,7 +222,7 @@ function B(e) {
                                           color: 'header-primary',
                                           variant: 'text-md/semibold',
                                           className: H.headerTitle,
-                                          children: null == V ? void 0 : V.name
+                                          children: null == W ? void 0 : W.name
                                       })
                                   }),
                             (0, r.jsx)('div', {
@@ -236,7 +236,7 @@ function B(e) {
                                 ref: el,
                                 children: (0, r.jsx)(N.Z, {
                                     className: H.iframe,
-                                    embedId: (0, A.Z)(z.id, V.id)
+                                    embedId: (0, A.Z)(z.id, W.id)
                                 })
                             }),
                             null != ep
@@ -269,7 +269,7 @@ function B(e) {
                                                   (0, r.jsx)('div', {
                                                       className: H.leaveButtonContainer,
                                                       children: (0, r.jsx)(b.Z, {
-                                                          applicationId: V.id,
+                                                          applicationId: W.id,
                                                           location: z,
                                                           centerButton: !0,
                                                           color: 'disconnect',

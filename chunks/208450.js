@@ -148,7 +148,7 @@ class Z extends i.PureComponent {
                                         })
                                     ]
                                 },
-                                (0, T.WJ)(e)
+                                (0, T.Tm)(e)
                             )
                         })
                     })
@@ -301,9 +301,8 @@ class Z extends i.PureComponent {
                 return ((e = null != e ? e.replace(/\n/g, '') : ''), (t = b.x0(e, t)), (t = b.Hl(t, U)), (t = this.tokenize(t)), n || this.setState({ focused: !0 }), this.setEditorState(t), 'handled');
             }),
             j(this, 'setEditorState', (e) => {
-                let { searchContext: t } = this.props,
-                    n = (0, T.WJ)(t);
-                O.Z.setSearchState(n, e);
+                let { searchContext: t } = this.props;
+                O.Z.setSearchState(t, e);
             }),
             j(this, 'handleKeyBind', (e) => {
                 let { key: t, metaKey: n, shiftKey: r } = e,
@@ -311,9 +310,8 @@ class Z extends i.PureComponent {
                 if ((e.stopPropagation(), 'Escape' === t)) {
                     if ((e.preventDefault(), b.xb(i))) this.blurEditor();
                     else {
-                        let e = b.FZ(i),
-                            t = (0, T.WJ)(o);
-                        (O.Z.setSearchState(t, e), this.setState({ focused: !0 }));
+                        let e = b.FZ(i);
+                        (O.Z.setSearchState(o, e), this.setState({ focused: !0 }));
                     }
                     return !0;
                 }
@@ -356,7 +354,7 @@ function V(e) {
             isSearchActive: l,
             hasResults: c
         } = (0, u.cj)([v.Z], () => {
-            let e = (0, T.WJ)(t),
+            let e = (0, T.Tm)(t),
                 n = v.Z.getTotalCount(e);
             return {
                 hasResults: null != n && n > 0,
@@ -404,7 +402,7 @@ function H(e) {
             isSearchActive: l,
             hasResults: c
         } = (0, u.cj)([v.Z], () => {
-            let e = (0, T.WJ)(t),
+            let e = (0, T.Tm)(t),
                 n = v.Z.getTotalCount(e);
             return {
                 hasResults: null != n && n > 0,
@@ -449,7 +447,7 @@ function H(e) {
 }
 function Y(e) {
     let { className: t, searchContext: n } = e,
-        o = (0, T.WJ)(n),
+        o = (0, T.Tm)(n),
         a = (0, u.e7)([p.Z], () => p.Z.keyboardModeEnabled),
         s = (0, u.e7)([I.Z], () => (null != o ? I.Z.getEditorState(o) : null)),
         l = i.useMemo(() => (null != s ? s : b.nR(y.Jl(C.ZP))), [s]);

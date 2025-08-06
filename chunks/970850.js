@@ -5,9 +5,12 @@ var r = n(73800),
     a = n(607802),
     s = n(981631);
 function o(e) {
-    let { searchId: t } = e,
+    let { searchContext: t } = e,
         [n, o] = r.useState(s.QIO.NEWEST),
-        c = (0, i.e7)([l.Z], () => l.Z.getSearchResultsQuery(t)),
+        c = (0, i.e7)([l.Z], () => {
+            let e = (0, a.Tm)(t);
+            return l.Z.getSearchResultsQuery(e);
+        }),
         u = r.useRef(null);
     return (
         r.useEffect(() => {

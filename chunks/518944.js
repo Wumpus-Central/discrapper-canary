@@ -47,15 +47,15 @@ function m(e, t) {
 let g = !1,
     E = null;
 function b(e) {
-    let { searchId: t, editorState: n } = e;
+    let { id: t, editorState: n } = e;
     h(t).editorState = n;
 }
 function y(e) {
-    let { searchId: t } = e;
-    null != t && h(t);
+    let { id: t } = e;
+    h(t);
 }
 function O(e) {
-    let { searchId: t } = e;
+    let { id: t } = e;
     if (null == p[t]) return !1;
     delete p[t];
 }
@@ -78,19 +78,19 @@ function T(e) {
           : v(n);
 }
 function S(e) {
-    let { searchId: t } = e;
+    let { id: t } = e;
     v(t);
 }
 function A(e) {
-    let { searchId: t, showBlocked: n } = e;
+    let { id: t, showBlocked: n } = e;
     h(t).showBlockedResults = n;
 }
 function N(e) {
-    let { searchId: t } = e;
+    let { id: t } = e;
     h(t).showNoResultsAlt = Math.random() < _;
 }
 function C(e) {
-    let { searchId: t, queryString: n, query: r, offset: i } = e,
+    let { id: t, queryString: n, query: r, offset: i } = e,
         o = h(t);
     ((o.searchResultsQueryString = n), (o.searchResultsQuery = r), (o.searchResultsOffset = null != i ? i : 0));
 }

@@ -1,29 +1,31 @@
 (n.d(t, {
+    Ad: () => L,
     BH: () => A,
     Cs: () => R,
     G1: () => E,
-    IC: () => F,
-    OT: () => H,
+    IC: () => V,
+    OT: () => Y,
     Vw: () => y,
-    WW: () => W,
+    WW: () => K,
     XM: () => O,
     XS: () => j,
-    Yq: () => Y,
+    Yq: () => W,
     bl: () => G,
-    eu: () => z,
+    eu: () => q,
     f_: () => S,
     gc: () => v,
     iC: () => M,
-    jm: () => $,
-    mO: () => B,
-    ne: () => J,
+    jT: () => B,
+    jm: () => ee,
+    mO: () => Z,
+    ne: () => $,
     qS: () => b,
     ql: () => T,
     rN: () => N,
     uV: () => D,
-    x0: () => q,
-    x6: () => K,
-    yV: () => Q,
+    x0: () => X,
+    x6: () => z,
+    yV: () => J,
     yn: () => U
 }),
     n(539854),
@@ -208,49 +210,50 @@ let E = (e) => (null == e ? void 0 : e.premiumType) != null,
             shopPreviews: r
         };
     },
-    B = (e) => e.applicationId === _.XAJ,
-    Z = 3.8,
-    F = (e) => Z * e,
-    V = 86400000,
-    H = (e) => {
+    B = (e) => P(e, i.Z.NAMEPLATE),
+    Z = (e) => e.applicationId === _.XAJ,
+    F = 3.8,
+    V = (e) => F * e,
+    H = 86400000,
+    Y = (e) => {
         let t = new Date(),
             n = Date.UTC(t.getFullYear(), t.getMonth(), t.getDate());
-        return Math.floor((Date.UTC(e.getFullYear(), e.getMonth(), e.getDate()) - n) / V);
+        return Math.floor((Date.UTC(e.getFullYear(), e.getMonth(), e.getDate()) - n) / H);
     },
-    Y = (e) => {
+    W = (e) => {
         let t = f.yf[e];
         return null != t && new Date().getTime() < t;
     },
-    W = (e) => {
+    K = (e) => {
         let t = f.i0[e];
         return null != t && new Date().getTime() < t;
     },
-    K = (e) => (null == e ? void 0 : e.type) === i.Z.BUNDLE,
-    z = (e, t, n) => {
-        if (K(e)) return I(e);
+    z = (e) => (null == e ? void 0 : e.type) === i.Z.BUNDLE,
+    q = (e, t, n) => {
+        if (z(e)) return I(e);
         let r = T(e, t ? (n ? _.tuJ.MOBILE : _.tuJ.DEFAULT) : n ? _.tuJ.MOBILE_PREMIUM_TIER_2 : _.tuJ.PREMIUM_TIER_2);
         return null == r ? void 0 : r.amount;
     },
-    q = (e, t) => {
+    X = (e, t) => {
         let n = [];
         for (let r of e) {
             let e = r.heroRanking;
             if (null != e)
                 for (let r of e) {
                     let e = t.get(r);
-                    if (null != e && !K(e) && (n.push(r), n.length >= f.K8)) return n;
+                    if (null != e && !z(e) && (n.push(r), n.length >= f.K8)) return n;
                 }
         }
-        return X(n);
+        return Q(n);
     },
-    X = (e) => {
+    Q = (e) => {
         if (e.length < f.K8) {
             let t = f.HU.slice(0, f.K8 - e.length);
             return e.concat(t);
         }
         return e;
     },
-    Q = (e) => {
+    J = (e) => {
         let { categories: t, purchases: n, isFetchingCategories: r, isFetchingPurchases: o } = (0, l.ZP)({ location: e }),
             a = w(t, i.Z.NAMEPLATE),
             s = P(n, i.Z.NAMEPLATE),
@@ -262,11 +265,11 @@ let E = (e) => (null == e ? void 0 : e.premiumType) != null,
             isFetchingPurchases: o
         };
     },
-    J = (e) => {
+    $ = (e) => {
         let { product: t, isPartiallyOwnedBundle: n, isPurchased: r } = e;
         return !n && !(f.Vt.ORB_PROFILE_BADGE === (null == t ? void 0 : t.skuId) && r);
     },
-    $ = (e, t) => {
+    ee = (e, t) => {
         switch (e) {
             case i.Z.AVATAR_DECORATION:
                 return 'avatar decoration';

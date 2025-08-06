@@ -21,7 +21,7 @@ class l {
         ((this._channelIds = new Set(e)), (this._messages = this._messages.filter((e) => e.kind !== a.fL.ALL_MESSAGES_CHANNEL || this._channelIds.has(e.channelId))));
     }
     addMessage(e) {
-        ((this._messages = [e, ...this._messages]), this.maybeTruncate());
+        ((this._messages = [...this._messages, e]), this.maybeTruncate());
     }
     addChannelMessages(e) {
         let { channel: t, channelMessages: n, userId: r } = e;

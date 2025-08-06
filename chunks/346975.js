@@ -535,8 +535,8 @@ function eN(e) {
             getItemKey: e8,
             renderGridSection: e9,
             renderGridItem: e4,
-            getGridSectionHeight: e5,
-            getSectionProps: e2,
+            getGridSectionHeight: e2,
+            getSectionProps: e5,
             handleGridFocus: e7
         } = (function (e) {
             let { masonryListScrollerRef: t, threadIdsBySection: n, goToThread: l, renderSectionOrItem: s, hasActiveThreads: o, isShowingSearchResult: c, canSearchForumPosts: d, canViewArchivedPosts: u, observePostVisibilityAnalytics: m, focusedThreadId: h, headerHeight: g } = e,
@@ -772,11 +772,11 @@ function eN(e) {
                                               columns: ek,
                                               sections: eH,
                                               getItemKey: e8,
-                                              getSectionHeight: e5,
+                                              getSectionHeight: e2,
                                               getItemHeight: eO,
                                               renderSection: e9,
                                               renderItem: e4,
-                                              getSectionProps: e2,
+                                              getSectionProps: e5,
                                               onScroll: j ? te : void 0,
                                               chunkSize: 350
                                           },

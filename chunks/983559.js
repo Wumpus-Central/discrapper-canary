@@ -1,7 +1,7 @@
 n.d(t, { Z: () => A });
 var r = n(255367),
     i = n(73800),
-    l = n(66546),
+    l = n(126663),
     a = n(597312),
     s = n(755721),
     o = n(481060),
@@ -73,7 +73,7 @@ function A(e) {
             opacity: +(null != B.interactionType),
             config: { duration: 150 }
         }),
-        W = (e) => {
+        V = (e) => {
             (0, y.openUserProfileModal)(
                 w(
                     {
@@ -144,7 +144,7 @@ function A(e) {
                                             displayProfile: L,
                                             channelId: A.id,
                                             themeType: T.lY.SIDEBAR,
-                                            onOpenProfile: D ? void 0 : W
+                                            onOpenProfile: D ? void 0 : V
                                         }),
                                         (0, r.jsx)(Z.Z, {
                                             location: 'UserProfileSidebar',
@@ -161,7 +161,7 @@ function A(e) {
                                     displayProfile: L,
                                     channel: A,
                                     isHovering: null == B.interactionType && F,
-                                    onOpenProfile: D ? void 0 : W
+                                    onOpenProfile: D ? void 0 : V
                                 }),
                                 (0, r.jsx)(P.Z, {
                                     user: t,
@@ -178,7 +178,7 @@ function A(e) {
                                     look: s.zx.Looks.BLANK,
                                     color: R.footerButtonColor,
                                     onClick: () => {
-                                        (W(),
+                                        (V(),
                                             (0, g.pQ)(
                                                 w(
                                                     {

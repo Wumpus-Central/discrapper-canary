@@ -10,8 +10,8 @@ var n = a(255367),
     u = a(765250),
     m = a(13245),
     x = a(593472),
-    p = a(594190),
-    h = a(837268),
+    h = a(594190),
+    p = a(837268),
     f = a(371651),
     b = a(829907),
     v = a(610394),
@@ -20,8 +20,8 @@ var n = a(255367),
     _ = a(449224),
     y = a(808506),
     C = a(572004),
-    O = a(70956),
-    N = a(145597),
+    N = a(70956),
+    O = a(145597),
     E = a(246992),
     T = a(981631),
     S = a(757744),
@@ -146,9 +146,9 @@ function L(e) {
 }
 let M = r.memo(function (e) {
         let { trackedGame: t } = e,
-            a = (0, o.e7)([p.ZP], () => p.ZP.getGameForPID(t.pid)),
+            a = (0, o.e7)([h.ZP], () => h.ZP.getGameForPID(t.pid)),
             r = (0, o.e7)([_.Z], () => _.Z.getGameForPID(t.pid)),
-            l = (0, o.e7)([p.ZP], () => (null == a ? null : p.ZP.getGameOverlayStatus(a)));
+            l = (0, o.e7)([h.ZP], () => (null == a ? null : h.ZP.getGameOverlayStatus(a)));
         return (0, n.jsxs)('div', {
             className: w.panelGroup,
             children: [
@@ -358,7 +358,7 @@ let M = r.memo(function (e) {
             ]
         });
     });
-function F(e) {
+function U(e) {
     let t = D(Object.values((0, o.Wu)([g.Z], () => g.Z.getWidgetsForLayout(S.$S))), e);
     return [
         t,
@@ -373,7 +373,7 @@ function F(e) {
         }
     ];
 }
-function U(e) {
+function F(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     return t ? ''.concat(e.toFixed(2), 'ms') : new Date(e).toLocaleTimeString();
 }
@@ -418,10 +418,10 @@ let z = r.memo(function (e) {
     );
 });
 function G() {
-    let e = (0, o.e7)([v.ZP], () => v.ZP.hasRenderDebugMode(h.GO.TrackFocusPIDs)),
+    let e = (0, o.e7)([v.ZP], () => v.ZP.hasRenderDebugMode(p.GO.TrackFocusPIDs)),
         t = (0, o.Wu)([f.default], () => f.default.getDevToolsFocusedPidsWithTimestamp(), []),
         a = () => {
-            m.Z.setRenderDebugMode(!v.ZP.hasRenderDebugMode(h.GO.TrackFocusPIDs), h.GO.TrackFocusPIDs);
+            m.Z.setRenderDebugMode(!v.ZP.hasRenderDebugMode(p.GO.TrackFocusPIDs), p.GO.TrackFocusPIDs);
         };
     return (0, n.jsxs)('div', {
         className: w.panelGroup,
@@ -468,7 +468,7 @@ function G() {
                             {
                                 children: (0, n.jsx)(d.ua7, {
                                     position: 'left',
-                                    text: l === h.d5.TRACK_FOCUS ? 'Tracked Focus Event' : 'Clear Focus Event',
+                                    text: l === p.d5.TRACK_FOCUS ? 'Tracked Focus Event' : 'Clear Focus Event',
                                     children: (e) => {
                                         var r;
                                         return (0, n.jsx)(
@@ -476,7 +476,7 @@ function G() {
                                             k(R({}, e), {
                                                 children: (0, n.jsxs)(d.Text, {
                                                     variant: 'text-sm/medium',
-                                                    color: l === h.d5.TRACK_FOCUS ? 'text-default' : 'text-danger',
+                                                    color: l === p.d5.TRACK_FOCUS ? 'text-default' : 'text-danger',
                                                     children: [
                                                         (0, n.jsx)(z, {
                                                             pid: a,
@@ -485,7 +485,7 @@ function G() {
                                                         ' - ',
                                                         null != (r = null == a ? void 0 : a.toString()) ? r : 'null',
                                                         ' @ ',
-                                                        U(t, !0)
+                                                        F(t, !0)
                                                     ]
                                                 })
                                             })
@@ -504,12 +504,12 @@ function G() {
 let V = r.memo(function (e) {
         let { pid: t } = e,
             a = (0, o.e7)(
-                [f.default, p.ZP],
+                [f.default, h.ZP],
                 () => {
                     var e, a, n;
                     if (null == t) return null;
                     let r = null == (e = f.default.getTrackedGameByPid(t)) ? void 0 : e.fullscreenType;
-                    return null != r ? r : null != (n = null == (a = p.ZP.getGameForPID(t)) ? void 0 : a.fullscreenType) ? n : x.Jx.UNKNOWN;
+                    return null != r ? r : null != (n = null == (a = h.ZP.getGameForPID(t)) ? void 0 : a.fullscreenType) ? n : x.Jx.UNKNOWN;
                 },
                 [t]
             );
@@ -528,7 +528,7 @@ let V = r.memo(function (e) {
             r.useEffect(
                 () => (
                     (l.current = setInterval(async () => {
-                        let e = p.ZP.getRunningGames(),
+                        let e = h.ZP.getRunningGames(),
                             t = [],
                             n = Date.now();
                         for (let a of e) t.push((0, b.hj)(a.pid, 0).then((e) => [a.pid, e, n]));
@@ -557,7 +557,7 @@ let V = r.memo(function (e) {
                                 R({}, e)
                             )
                         );
-                    }, +O.Z.Millis.SECOND)),
+                    }, +N.Z.Millis.SECOND)),
                     () => clearInterval(l.current)
                 ),
                 []
@@ -599,7 +599,7 @@ let V = r.memo(function (e) {
                                                                     children: ''
                                                                         .concat(a, ':')
                                                                         .concat((0, b.sS)(a), ' @ ')
-                                                                        .concat(U(r))
+                                                                        .concat(F(r))
                                                                 },
                                                                 ''.concat(e.pid, '-').concat(a, '-').concat(r)
                                                             );
@@ -619,7 +619,7 @@ let V = r.memo(function (e) {
     W = r.memo(function () {
         var e, t;
         let a = (0, o.cj)([f.default], () => f.default.getTrackedGames()),
-            r = (0, N.getPID)(),
+            r = (0, O.getPID)(),
             l = (0, o.e7)([f.default], () => f.default.isOverlayOOPEnabledForPid(r), [r]),
             [i, s] = (0, o.Wu)([j.Z], () => [j.Z.enabled, j.Z.keepOpen]),
             c = (0, o.e7)([y.default], () => y.default.getFocusedPID()),
@@ -672,26 +672,26 @@ let V = r.memo(function (e) {
         });
     }),
     K = r.memo(function () {
-        let [e, t] = F(T.Odu.CLICK_ZONE_DEBUG),
-            [a, r] = F(T.Odu.PERFORMANCE_DEBUG),
-            l = (0, o.e7)([v.ZP], () => v.ZP.hasRenderDebugMode(h.GO.ClickZones)),
-            i = (0, o.e7)([v.ZP], () => v.ZP.hasRenderDebugMode(h.GO.WidgetAreas)),
-            s = (0, o.e7)([v.ZP], () => v.ZP.hasRenderDebugMode(h.GO.DisabledGPUBoost)),
-            c = (0, o.e7)([v.ZP], () => v.ZP.hasRenderDebugMode(h.GO.ForceGPUBoost)),
+        let [e, t] = U(T.Odu.CLICK_ZONE_DEBUG),
+            [a, r] = U(T.Odu.PERFORMANCE_DEBUG),
+            l = (0, o.e7)([v.ZP], () => v.ZP.hasRenderDebugMode(p.GO.ClickZones)),
+            i = (0, o.e7)([v.ZP], () => v.ZP.hasRenderDebugMode(p.GO.WidgetAreas)),
+            s = (0, o.e7)([v.ZP], () => v.ZP.hasRenderDebugMode(p.GO.DisabledGPUBoost)),
+            c = (0, o.e7)([v.ZP], () => v.ZP.hasRenderDebugMode(p.GO.ForceGPUBoost)),
             u = (e) => {
                 m.Z.setRenderDebugMode(!v.ZP.hasRenderDebugMode(e), e);
             },
             x = () => {
-                u(h.GO.ClickZones);
+                u(p.GO.ClickZones);
             },
-            p = () => {
-                u(h.GO.WidgetAreas);
+            h = () => {
+                u(p.GO.WidgetAreas);
             },
             f = () => {
-                u(h.GO.DisabledGPUBoost);
+                u(p.GO.DisabledGPUBoost);
             },
             b = () => {
-                u(h.GO.ForceGPUBoost);
+                u(p.GO.ForceGPUBoost);
             };
         return (0, n.jsxs)('div', {
             className: w.panelGroup,
@@ -728,7 +728,7 @@ let V = r.memo(function (e) {
                             k(R({}, e), {
                                 children: (0, n.jsx)(d.XZJ, {
                                     value: i,
-                                    onChange: () => p(),
+                                    onChange: () => h(),
                                     size: 18,
                                     type: d.XZJ.Types.INVERTED,
                                     shape: d.XZJ.Shapes.BOX,
@@ -840,7 +840,7 @@ let V = r.memo(function (e) {
     }),
     X = r.memo(function () {
         let e = (0, o.cj)([f.default], () => f.default.getTrackedGames()),
-            t = (0, o.e7)([p.ZP], () => p.ZP.getRunningGames()).filter((t) => null == e[t.pid]);
+            t = (0, o.e7)([h.ZP], () => h.ZP.getRunningGames()).filter((t) => null == e[t.pid]);
         return (0, n.jsxs)(n.Fragment, {
             children: [
                 t.length > 0 &&
@@ -913,20 +913,20 @@ let V = r.memo(function (e) {
             },
             i = [
                 {
-                    label: h.R5.UNSET,
-                    value: h.R5.UNSET
+                    label: p.R5.UNSET,
+                    value: p.R5.UNSET
                 },
                 {
-                    label: h.R5.IN_PROCESS_V2,
-                    value: h.R5.IN_PROCESS_V2
+                    label: p.R5.IN_PROCESS_V2,
+                    value: p.R5.IN_PROCESS_V2
                 },
                 {
-                    label: h.R5.OUT_OF_PROCESS_V3,
-                    value: h.R5.OUT_OF_PROCESS_V3
+                    label: p.R5.OUT_OF_PROCESS_V3,
+                    value: p.R5.OUT_OF_PROCESS_V3
                 },
                 {
-                    label: h.R5.OUT_OF_PROCESS_V3_LIMITED_INTERACTION,
-                    value: h.R5.OUT_OF_PROCESS_V3_LIMITED_INTERACTION
+                    label: p.R5.OUT_OF_PROCESS_V3_LIMITED_INTERACTION,
+                    value: p.R5.OUT_OF_PROCESS_V3_LIMITED_INTERACTION
                 }
             ].map((t) => k(R({}, t), { label: ''.concat(t.label, ' ').concat(e === t.value ? '(current)' : '') }));
         return (0, n.jsx)(d.ua7, {

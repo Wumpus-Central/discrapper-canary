@@ -41,8 +41,8 @@ var r = n(255367),
     F = n(594174),
     B = n(881824),
     z = n(471253),
-    W = n(922482),
-    V = n(200498),
+    V = n(922482),
+    W = n(200498),
     Y = n(146085),
     q = n(88751),
     K = n(427679),
@@ -115,7 +115,7 @@ function ed(e) {
         _ = M.default.getId(),
         [v] = (0, er.Z)(t),
         C = q.ZP.isModerator(_, t.id),
-        S = (0, V.B)(t.id),
+        S = (0, W.B)(t.id),
         Z = f(m),
         { parentAnalyticsLocation: I } = (0, p.ZP)(),
         T = i.useRef(null);
@@ -125,7 +125,7 @@ function ed(e) {
             color: o.zx.Colors.GREEN,
             className: a()(es.buttonSpacing, es.buttonWithTextButton),
             onClick: () => {
-                ((0, y.v)(I, y.d.JOIN_STAGE), (0, W.TM)(t));
+                ((0, y.v)(I, y.d.JOIN_STAGE), (0, V.TM)(t));
             },
             children: (0, r.jsxs)('div', {
                 className: es.buttonWithTextInnerContainer,
@@ -244,7 +244,7 @@ let ef = i.memo(function (e) {
     let { channel: t } = e,
         { parentAnalyticsLocation: n } = (0, p.ZP)(),
         { suppress: l, selfMute: a, mute: o } = (0, P.Z)(t),
-        u = (0, V.B)(t.id),
+        u = (0, W.B)(t.id),
         d = (0, s.e7)([j.Z], () => null != j.Z.getAwaitingRemoteSessionInfo()),
         { cameraUnavailable: h, enabled: y } = (0, S.Z)(),
         O = (0, I.Z)(t),
@@ -256,7 +256,7 @@ let ef = i.memo(function (e) {
         H = (0, Q.PK)(t.id),
         B = v > 0,
         z = (C && !H) || (null != M && M.user.id !== (null == E ? void 0 : E.id)),
-        W = (0, x.u)('AudioDeviceMenu', n, { entrypoint: el.A5.CARET }),
+        V = (0, x.u)('AudioDeviceMenu', n, { entrypoint: el.A5.CARET }),
         Y = i.useRef(null),
         q = i.useRef(null);
     if (null == E) return null;
@@ -315,7 +315,7 @@ let ef = i.memo(function (e) {
                                           renderOutputVolume: !0,
                                           renderDeafen: !0,
                                           minimal: !0,
-                                          onInteraction: W
+                                          onInteraction: V
                                       })
                                   });
                               },
@@ -383,7 +383,7 @@ function eg(e) {
 let em = i.memo(function (e) {
     let { channel: t, isOnStartStageScreen: n } = e,
         i = (0, et.Z)(t.id),
-        l = (0, V.B)(t.id),
+        l = (0, W.B)(t.id),
         a = (0, s.e7)([H.Z], () => H.Z.can(Y.yP, t), [t]),
         o = (0, en.Z)(t.id),
         c = (0, s.e7)([f.Z], () => (null != t ? f.Z.getSelectedParticipant(t.id) : null)),

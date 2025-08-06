@@ -10,8 +10,8 @@ var n = a(255367),
     u = a(246992),
     m = a(546147),
     x = a(959532),
-    p = a(616257);
-let h = [
+    h = a(616257);
+let p = [
         {
             label: '3DS and Failed Cards',
             value: '',
@@ -723,14 +723,14 @@ function v() {
                 }),
                 await (0, o.tZ)());
         },
-        O = async () => {
+        N = async () => {
             (await i.tn.del({
                 url: '/debug/payment-source',
                 rejectWithError: !1
             }),
                 await (0, o.tZ)());
         },
-        N = async () => {
+        O = async () => {
             (await i.tn.del({
                 url: '/debug/rate-limits',
                 rejectWithError: !1
@@ -742,7 +742,7 @@ function v() {
             (0, o.tZ)();
         }, []),
         (0, n.jsx)(s.zJl, {
-            className: p.panel,
+            className: h.panel,
             children: (0, n.jsxs)('div', {
                 className: m.panelInner,
                 children: [
@@ -761,7 +761,7 @@ function v() {
                             (0, n.jsx)(s.PhF, {
                                 serialize: (e) => e,
                                 isSelected: (t) => t === e,
-                                options: h,
+                                options: p,
                                 select: (e) => {
                                     (t(e), c(f[e][0].value), g(1 === f[e].length));
                                 },
@@ -790,13 +790,13 @@ function v() {
                                     variant: 'primary',
                                     size: 'sm',
                                     text: 'Delete All Payment Sources',
-                                    onClick: O
+                                    onClick: N
                                 }),
                             (0, n.jsx)(s.zxk, {
                                 variant: 'primary',
                                 size: 'sm',
                                 text: 'Reset API Rate limits and reload app',
-                                onClick: N
+                                onClick: O
                             })
                         ]
                     }),

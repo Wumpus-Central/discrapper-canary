@@ -23,18 +23,18 @@ let c = s.OA,
     f = {};
 function _(e) {
     var t;
-    let { searchId: n, query: r } = e;
+    let { id: n, query: r } = e;
     if ('string' != typeof r || '' === (r = r.trim())) return;
     let i = (f[n] = null != (t = f[n]) ? t : []),
         a = i.indexOf(r);
     (-1 !== a ? (i.splice(a, 1), i.unshift(r)) : null != i[0] && '' !== i[0] && r.startsWith(i[0]) ? (i[0] = r) : a < 0 && i.unshift(r), i.length > 5 && i.splice(5, i.length), o.K.set(s.OA, { history: f }));
 }
 function p(e) {
-    let { searchId: t } = e;
-    null == t ? (o.K.remove(s.OA), (f = {})) : (delete f[t], o.K.set(s.OA, { history: f }));
+    let { id: t } = e;
+    (delete f[t], o.K.set(s.OA, { history: f }));
 }
 function h(e) {
-    let { searchId: t, query: n } = e;
+    let { id: t, query: n } = e;
     null != f[t] && ((f[t] = f[t].filter((e) => e !== n)), o.K.set(s.OA, { history: f }));
 }
 function m(e) {

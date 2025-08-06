@@ -47,5 +47,15 @@ function s(e) {
             powerup: r
         });
     }
-    return t;
+    return (function (e) {
+        let t = e.findIndex((e) => 'singlePerk' === e.type && e.powerup.skuId === o.IN),
+            n = e.findIndex((e) => 'multiPerk' === e.type && 'guildTagsBadgePacks' === e.group);
+        if (-1 !== t && -1 !== n && n !== t + 1) {
+            let t = [...e],
+                [r] = t.splice(n, 1),
+                i = t.findIndex((e) => 'singlePerk' === e.type && e.powerup.skuId === o.IN);
+            return (t.splice(i + 1, 0, r), t);
+        }
+        return e;
+    })(t);
 }

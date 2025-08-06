@@ -1,27 +1,26 @@
 (n.d(t, {
-    $G: () => L,
-    AH: () => A,
-    BU: () => U,
-    Fr: () => H,
-    Fz: () => V,
-    Ko: () => R,
-    Pe: () => Y,
-    R6: () => W,
+    $G: () => D,
+    AH: () => S,
+    BU: () => j,
+    Fr: () => V,
+    Fz: () => F,
+    Ko: () => C,
+    Pe: () => H,
+    R6: () => Y,
     Tm: () => v,
-    Vj: () => C,
-    WJ: () => I,
-    WU: () => F,
-    X$: () => z,
-    X3: () => K,
-    b7: () => S,
-    cl: () => G,
-    g9: () => x,
-    i3: () => j,
-    jW: () => D,
-    kG: () => Z,
-    qc: () => M,
-    s5: () => T,
-    zH: () => N
+    Vj: () => N,
+    WU: () => Z,
+    X$: () => K,
+    X3: () => W,
+    b7: () => T,
+    cl: () => U,
+    g9: () => L,
+    i3: () => k,
+    jW: () => w,
+    kG: () => B,
+    qc: () => x,
+    s5: () => I,
+    zH: () => A
 }),
     n(539854),
     n(997841),
@@ -95,20 +94,6 @@ function v(e) {
 }
 function I(e) {
     switch (e.type) {
-        case E.aib.GUILD:
-        case E.aib.GUILD_CHANNEL:
-        case E.aib.THREAD:
-            return e.guildId;
-        case E.aib.CHANNEL:
-            return e.channelId;
-        case E.aib.DMS:
-            return e.type;
-        case E.aib.FAVORITES:
-            return E.I_8;
-    }
-}
-function T(e) {
-    switch (e.type) {
         case E.aib.GUILD_CHANNEL:
         case E.aib.GUILD:
         case E.aib.THREAD:
@@ -123,10 +108,10 @@ function T(e) {
             return null;
     }
 }
-function S(e) {
+function T(e) {
     return e.type === E.aib.GUILD || e.type === E.aib.GUILD_CHANNEL || e.type === E.aib.THREAD;
 }
-function A(e) {
+function S(e) {
     switch (e.type) {
         case E.aib.GUILD_CHANNEL:
         case E.aib.CHANNEL:
@@ -136,7 +121,7 @@ function A(e) {
             return null;
     }
 }
-function N(e) {
+function A(e) {
     switch (e) {
         case E.QIO.MOST_RELEVANT:
             return {
@@ -156,10 +141,10 @@ function N(e) {
             };
     }
 }
-function C(e) {
+function N(e) {
     return null == e.sort_by || null == e.sort_order ? E.QIO.NEWEST : 'relevance' === e.sort_by ? E.QIO.MOST_RELEVANT : 'asc' === e.sort_order ? E.QIO.OLDEST : E.QIO.NEWEST;
 }
-function R(e) {
+function C(e) {
     switch (e) {
         case E.dCx.FILTER_FROM:
             return b.intl.string(b.t.E466pK);
@@ -183,23 +168,23 @@ function R(e) {
             return b.intl.string(b.t.qCQzBg);
     }
 }
-let P = {
+let R = {
     [E.dCx.FILTER_BEFORE]: !0,
     [E.dCx.FILTER_AFTER]: !0,
     [E.dCx.FILTER_ON]: !0
 };
-function w(e) {
+function P(e) {
     let t = g.ZP[e],
         n = null != t ? t.queryKey : null;
     return (null == n && (n = 'content'), n);
 }
-function D(e, t) {
+function w(e, t) {
     if (c.Z.didAgree(t)) {
         let t = f.default.getCurrentUser();
         null != t && (e.include_nsfw = null == t.nsfwAllowed || t.nsfwAllowed);
     }
 }
-function L(e) {
+function D(e) {
     let t = {};
     for (let [n, r] of (e.forEach((e) => {
         let { type: n } = e;
@@ -213,7 +198,7 @@ function L(e) {
                 (r && (t.min_id = _.default.fromTimestamp(r)), i && (t.max_id = _.default.fromTimestamp(i)));
                 return;
         }
-        let o = w(n);
+        let o = P(n);
         null == t[o] && (t[o] = new Set());
         let a = t[o];
         switch (n) {
@@ -243,7 +228,7 @@ function L(e) {
         r instanceof Set && (t[n] = Array.from(r));
     return (t.content && ((t.content = t.content.join(' ').trim()), t.content || delete t.content), t);
 }
-function x(e, t, n) {
+function L(e, t, n) {
     let r,
         i,
         o = e.find((o, a) => (t >= o.start && t <= o.end && n >= o.start && n <= o.end ? (null != e[a + 1] && (i = e[a + 1]), !0) : ((r = o), !1)));
@@ -257,7 +242,7 @@ function x(e, t, n) {
               anchorOffset: n
           };
 }
-function M(e, t) {
+function x(e, t) {
     let n,
         { currentToken: r, nextToken: i, previousToken: a } = (e = null != e ? e : {});
     if (0 === t.length)
@@ -299,14 +284,14 @@ function M(e, t) {
               token: n
           });
 }
-function k(e) {
+function M(e) {
     if (null == e.match(/([\\" ])/g)) return e;
     {
         let t = e.replaceAll(/([\\"])/g, (e, t) => '\\'.concat(t));
         return '"'.concat(t, '"');
     }
 }
-function j(e, t) {
+function k(e, t) {
     let n = [];
     return (
         i()(e).forEach((e) => {
@@ -315,7 +300,7 @@ function j(e, t) {
             n = n.concat(
                 e.results.map((n) => {
                     let i = n.text;
-                    if ((null != n.channel && (i = k(i)), t.type === E.Sap.FILTER_ALL)) {
+                    if ((null != n.channel && (i = M(i)), t.type === E.Sap.FILTER_ALL)) {
                         var o;
                         r = null != (o = n.group) ? o : r;
                         let e = g.ZP[r];
@@ -335,31 +320,31 @@ function j(e, t) {
         })
     );
 }
-function U(e) {
+function j(e) {
     return e.reduce((e, t) => (null == t ? e : t.results.length + e), 0);
 }
-function G(e) {
+function U(e) {
     return null == e ? '' : e.map((e) => e.getFullMatch()).join('');
 }
-let B = new o.ZP();
-function Z(e) {
-    return B.tokenize(e);
+let G = new o.ZP();
+function B(e) {
+    return G.tokenize(e);
 }
-function F() {
-    return B.clearCache();
+function Z() {
+    return G.clearCache();
 }
-function V(e) {
-    return null != e ? P[e] : null;
+function F(e) {
+    return null != e ? R[e] : null;
 }
-function H(e, t) {
+function V(e, t) {
     let n = E.TNx.test(e.type);
     return (null != t || !n) && (null == t || !n || !!E.KA4.test(t.type));
 }
-function Y() {
-    ((0, g.WK)(), B.reset(), i()(g.ZP).forOwn((e, t) => B.addRule(O({ type: t }, e))));
+function H() {
+    ((0, g.WK)(), G.reset(), i()(g.ZP).forOwn((e, t) => G.addRule(O({ type: t }, e))));
 }
-function W(e) {
-    if (S(e)) return !0;
+function Y(e) {
+    if (T(e)) return !0;
     {
         let t = (0, h.a)({ location: 'isChannelFilterSupported' }),
             n = (0, m.J)({ location: 'isChannelFilterSupported' }),
@@ -367,7 +352,7 @@ function W(e) {
         return e.type === E.aib.DMS && r && !d.Z.hidePersonalInformation;
     }
 }
-function K(e) {
+function W(e) {
     let t = e.name,
         n = !1;
     if (e.isGroupDM()) t = (0, a.F6)(e, f.default, u.Z);
@@ -382,9 +367,9 @@ function K(e) {
         let r = l.ZP.getTextChannelNameDisambiguations(e.getGuildId())[e.id];
         (null == r ? void 0 : r.name) != null && (t = r.name);
     }
-    return ((t = k(t)), n) ? '#'.concat(t) : t;
+    return ((t = M(t)), n) ? '#'.concat(t) : t;
 }
-function z() {
+function K() {
     var e, t;
     return null != (t = null == (e = f.default.getCurrentUser()) ? void 0 : e.isStaff()) && t;
 }

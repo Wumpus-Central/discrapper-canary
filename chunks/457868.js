@@ -41,7 +41,7 @@ var r = n(255367),
     F = n(388032),
     B = n(688826),
     z = n(11847);
-function W(e) {
+function V(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -66,7 +66,7 @@ function W(e) {
     }
     return e;
 }
-let V = U.ZP.getEnableHardwareAcceleration(),
+let W = U.ZP.getEnableHardwareAcceleration(),
     Y = 44 + H.x,
     q = i.memo(function (e) {
         let { channel: t, sectionId: l, userId: a, guildOwnerId: s } = e,
@@ -100,7 +100,7 @@ let V = U.ZP.getEnableHardwareAcceleration(),
                                 var i, l;
                                 return (0, r.jsx)(
                                     e,
-                                    ((i = W({}, n)),
+                                    ((i = V({}, n)),
                                     (l = l =
                                         {
                                             user: b,
@@ -191,11 +191,11 @@ let V = U.ZP.getEnableHardwareAcceleration(),
                     })(e, ['onClick', 'onMouseDown']);
                 return (0, r.jsx)(
                     H.Z,
-                    W(
+                    V(
                         {
                             ref: o,
                             onContextMenu: B,
-                            shouldAnimateStatus: V,
+                            shouldAnimateStatus: W,
                             user: b,
                             currentUser: y,
                             nick: null == p ? void 0 : p.nick,
@@ -248,7 +248,7 @@ let V = U.ZP.getEnableHardwareAcceleration(),
                       count: i
                   }),
                   children: [
-                      null != a ? (0, r.jsx)(j.Z, W({ className: z.roleIcon }, a)) : null,
+                      null != a ? (0, r.jsx)(j.Z, V({ className: z.roleIcon }, a)) : null,
                       (0, r.jsxs)('span', {
                           'aria-hidden': !0,
                           children: [n, ' \u2014 ', i]
@@ -372,7 +372,7 @@ function X(e) {
                         className: a()(z.membersWrap, z.hiddenMembers, B.container),
                         children: (0, r.jsx)(
                             p.aVo,
-                            W(
+                            V(
                                 {
                                     ref: x,
                                     className: z.members,

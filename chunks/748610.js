@@ -130,7 +130,7 @@ let m = {
         let { searchContext: t, query: n, searchEverywhere: r } = e,
             i = (0, s.s5)(t);
         (null != i && (0, s.jW)(n, i), r && (n.search_everywhere = !0));
-        let c = (0, s.WJ)(t),
+        let c = (0, s.Tm)(t),
             u = l.Z.create({
                 id: c,
                 searchType: t.type,
@@ -216,78 +216,86 @@ let m = {
         });
     },
     addWebSearchHistoryItem: function (e, t) {
-        h() &&
-            o.Z.dispatch({
-                type: 'SEARCH_HISTORY_WEB_ADD_ITEM',
-                searchId: e,
-                query: t
-            });
+        if (!h()) return;
+        let n = (0, s.Tm)(e);
+        o.Z.dispatch({
+            type: 'SEARCH_HISTORY_WEB_ADD_ITEM',
+            id: n,
+            query: t
+        });
     },
     removeWebSearchHistoryItem: function (e, t) {
-        h() &&
-            o.Z.dispatch({
-                type: 'SEARCH_HISTORY_WEB_REMOVE_ITEM',
-                searchId: e,
-                query: t
-            });
+        if (!h()) return;
+        let n = (0, s.Tm)(e);
+        o.Z.dispatch({
+            type: 'SEARCH_HISTORY_WEB_REMOVE_ITEM',
+            id: n,
+            query: t
+        });
     },
     clearWebSearchHistory: function (e) {
-        h() &&
-            o.Z.dispatch({
-                type: 'SEARCH_HISTORY_WEB_CLEAR_ITEMS',
-                searchId: e
-            });
+        if (!h()) return;
+        let t = (0, s.Tm)(e);
+        o.Z.dispatch({
+            type: 'SEARCH_HISTORY_WEB_CLEAR_ITEMS',
+            id: t
+        });
     },
     openSearchScreen: function (e) {
         o.Z.dispatch({
             type: 'SEARCH_SCREEN_OPEN',
             searchContext: e,
-            searchId: (0, s.WJ)(e)
+            id: (0, s.Tm)(e)
         });
     },
     setShowBlockedResults: function (e, t) {
+        let n = (0, s.Tm)(e);
         o.Z.dispatch({
             type: 'SEARCH_SET_SHOW_BLOCKED_RESULTS',
-            searchId: e,
+            id: n,
             showBlocked: t
         });
     },
     setShowNoResultsAlt: function (e) {
+        let t = (0, s.Tm)(e);
         o.Z.dispatch({
             type: 'SEARCH_SET_SHOW_NO_RESULTS_ALT',
-            searchId: e
+            id: t
         });
     },
     updateSearchResultsQuery: function (e, t, n, r) {
+        let i = (0, s.Tm)(e);
         o.Z.dispatch({
             type: 'SEARCH_RESULTS_QUERY_UPDATE',
-            searchId: e,
+            id: i,
             queryString: t,
             query: n,
             offset: r
         });
     },
     ensureSearchState: function (e) {
+        let t = (0, s.Tm)(e);
         o.Z.wait(() =>
             o.Z.dispatch({
                 type: 'SEARCH_ENSURE_SEARCH_STATE',
-                searchId: e
+                id: t
             })
         );
     },
     setSearchState: function (e, t) {
-        null != e &&
-            o.Z.dispatch({
-                type: 'SEARCH_EDITOR_STATE_CHANGE',
-                searchId: e,
-                editorState: t
-            });
+        let n = (0, s.Tm)(e);
+        o.Z.dispatch({
+            type: 'SEARCH_EDITOR_STATE_CHANGE',
+            id: n,
+            editorState: t
+        });
     },
     clearSearchState: function (e) {
+        let t = (0, s.Tm)(e);
         o.Z.wait(() =>
             o.Z.dispatch({
                 type: 'SEARCH_EDITOR_STATE_CLEAR',
-                searchId: e
+                id: t
             })
         );
     },

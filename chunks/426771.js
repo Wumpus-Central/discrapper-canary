@@ -22,8 +22,8 @@ function x(e) {
         I = (0, u.Z)(b, v);
     if (void 0 === I || j.length <= 0) return null;
     let y = C.some((e) => e.type !== p.A3.INACTIVE),
-        w = (0, d.d)(y),
-        N = C.reduce(
+        P = (0, d.d)(y),
+        w = C.reduce(
             (e, t) => {
                 let { sourceEntitlement: n } = t,
                     r = null == n ? void 0 : n.ends_at;
@@ -31,17 +31,17 @@ function x(e) {
             },
             void 0
         );
-    void 0 !== N
+    void 0 !== w
         ? (_ = {
               type: 'expiring',
-              expiringAt: N
+              expiringAt: w
           })
         : y &&
           (_ = {
               type: 'active',
               statusText: m.intl.string(f.default.FFLkm5)
           });
-    let P = C.reduce((e, t) => {
+    let N = C.reduce((e, t) => {
             let { type: n, powerup: r } = t;
             return n === p.A3.POWERUP_ACTIVATED ? e + r.cost : e;
         }, 0),
@@ -58,7 +58,7 @@ function x(e) {
             let { powerup: r } = t;
             return e + (null != (n = null == r ? void 0 : r.cost) ? n : 0);
         }, 0),
-        T = y ? P : Z,
+        T = y ? N : Z,
         A = !y && S > T ? '+' : void 0,
         R = !O && h ? I.image.animatedUrl : I.image.staticUrl;
     return (0, r.jsxs)(c.aB, {
@@ -76,7 +76,7 @@ function x(e) {
             }),
             (0, r.jsx)(c.Q9, {
                 title: I.title,
-                textColor: w,
+                textColor: P,
                 footer: (0, r.jsx)(c.uf, {
                     status: _,
                     cost: T,
@@ -84,7 +84,7 @@ function x(e) {
                 }),
                 children: (0, r.jsx)(l.Text, {
                     className: g.description,
-                    color: w,
+                    color: P,
                     variant: 'text-sm/medium',
                     children: I.description
                 })

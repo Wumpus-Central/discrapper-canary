@@ -1,4 +1,4 @@
-(a.d(t, { L: () => p }), a(388685));
+(a.d(t, { L: () => h }), a(388685));
 var n = a(255367),
     r = a(73800),
     l = a(120356),
@@ -54,19 +54,19 @@ let m = () => {
     x = (e) => {
         (e.stopPropagation(), e.preventDefault());
     },
-    p = (e) => {
+    h = (e) => {
         let { className: t, onDrop: a } = e,
-            [l, p] = r.useState(!1),
-            h = r.useRef(null),
+            [l, h] = r.useState(!1),
+            p = r.useRef(null),
             f = r.useCallback((e) => {
-                (x(e), p(!0), (0, s.Mr3)(c.A));
+                (x(e), h(!0), (0, s.Mr3)(c.A));
             }, []),
             b = r.useCallback((e) => {
-                (x(e), p(!1));
+                (x(e), h(!1));
             }, []),
             v = r.useCallback(
                 async (e) => {
-                    (x(e), p(!1));
+                    (x(e), h(!1));
                     let t = e.dataTransfer;
                     if (null == t) return void m();
                     let n = await Promise.all(
@@ -80,7 +80,7 @@ let m = () => {
                 [a]
             );
         return (0, n.jsx)('div', {
-            ref: h,
+            ref: p,
             className: i()(t, u.uploadArea),
             onDragEnter: f,
             onDragLeave: b,
