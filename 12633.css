@@ -79834,6 +79834,44 @@ html.disable-forced-colors * {
     fill: var(--icon-primary)
 }
 
+.controlLabelContainer__5a2df {
+    display: flex;
+    justify-content: space-between;
+    white-space: nowrap
+}
+
+.controlLabelInput__5a2df {
+    background: none;
+    border: 1px solid transparent;
+    border-radius: var(--radius-xs);
+    color: var(--text-default);
+    flex: 0 0 auto;
+    font-family: var(--font-primary);
+    font-size: 16px;
+    font-weight: var(--font-weight-medium);
+    height: 20px;
+    line-height: 20px;
+    outline: none;
+    padding: 0 12px;
+    text-align: right;
+    transition: border-color .15s ease;
+    width: 40px
+}
+
+.controlLabelInput__5a2df:focus {
+    background: var(--input-background);
+    border-color: var(--control-background-primary-default);
+    box-shadow: 0 0 0 1px var(--control-background-primary-default)
+}
+
+.controlLabelInput__5a2df::-moz-placeholder {
+    color: var(--input-placeholder-text)
+}
+
+.controlLabelInput__5a2df::placeholder {
+    color: var(--input-placeholder-text)
+}
+
 .appAsidePanelWrapper_a3002d {
     display: flex;
     flex: 1 1 auto;
