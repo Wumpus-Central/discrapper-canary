@@ -74846,6 +74846,16 @@ strong {
     width: 244px
 }
 
+.keybind__97492 {
+    display: inline-block;
+    margin-left: 4px
+}
+
+.shortcut__97492 {
+    font-size: 12px;
+    line-height: 16px
+}
+
 .enable-forced-colors .focused__97492,
 .enable-forced-colors .open__97492 {
     border-color: Highlight;
