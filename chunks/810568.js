@@ -43,6 +43,8 @@ var r = n(772848),
             (e.RtcPanel = "rtc_panel"),
             (e.FriendsActivityFeed = "friends_activity_feed"),
             (e.GuildProfile = "guild_profile"),
+            (e.MiniGameProfile = "mini_game_profile"),
+            (e.GameMention = "game_mention"),
             e
         );
     })({});

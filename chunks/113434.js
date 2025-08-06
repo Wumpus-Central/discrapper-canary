@@ -77,7 +77,13 @@ var r = n(73800),
 let U = -1,
     G = 1;
 function B() {
-    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : { fetchPolicy: "cache-only" },
+    let e =
+            arguments.length > 0 && void 0 !== arguments[0]
+                ? arguments[0]
+                : {
+                      fetchPolicy: "cache-only",
+                      callerSource: "unknown",
+                  },
         [t, n] = r.useState(!1),
         i = (0, u.Wu)([C.Z], () => [...C.Z.quests.values()]),
         o = (0, u.Wu)([C.Z], () => [...C.Z.excludedQuests.values()]),
@@ -93,8 +99,10 @@ function B() {
                     !l ||
                     t ||
                     a ||
-                    (n(!0), (0, N.xw)(), (0, N.w)(R.Ok.DESKTOP_ACCOUNT_PANEL_AREA)));
-        }, [e.fetchPolicy, l, t, a, s]),
+                    (n(!0),
+                    (0, N.xw)(),
+                    (0, N.w)(R.Ok.DESKTOP_ACCOUNT_PANEL_AREA, "use_quests_".concat(e.callerSource))));
+        }, [e.fetchPolicy, l, t, a, s, e.callerSource]),
         {
             quests: i,
             excludedQuests: o,
@@ -178,7 +186,10 @@ var Y = (function (e) {
     return (e.ALL = "all"), (e.CLAIMED = "claimed"), e;
 })({});
 function W(e) {
-    let { quests: t, isFetchingCurrentQuests: n } = B({ fetchPolicy: "cache-and-network" }),
+    let { quests: t, isFetchingCurrentQuests: n } = B({
+            fetchPolicy: "cache-and-network",
+            callerSource: "use_filtered_quests",
+        }),
         r = new Map(t.map((e) => [e.id, e])),
         i = V(t),
         o = H(t),
@@ -332,7 +343,10 @@ function ea(e, t, n, r) {
     );
 }
 function es() {
-    let { quests: e, isFetchingCurrentQuests: t } = B({ fetchPolicy: "cache-or-network" }),
+    let { quests: e, isFetchingCurrentQuests: t } = B({
+            fetchPolicy: "cache-or-network",
+            callerSource: "settings_badge",
+        }),
         n = z();
     return r.useMemo(() => {
         let r = [];

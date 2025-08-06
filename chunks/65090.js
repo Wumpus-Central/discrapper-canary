@@ -92,6 +92,7 @@ let E = {
                         text: e.text,
                         description: m.hideMentionDescription ? null : e.description,
                         "aria-label": e.text,
+                        badge: "@game" === e.text ? "new" : void 0,
                     },
                     e.text,
                 ),

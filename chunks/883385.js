@@ -1,37 +1,37 @@
-n.d(t, { Z: () => i });
-var r = n(255367);
+n.d(t, { Z: () => l });
+var i = n(255367);
 n(73800);
-var o = n(410575);
-function i(e, t) {
+var r = n(410575);
+function l(e, t) {
     return function (n) {
-        return (0, r.jsx)(o.Z, {
+        return (0, i.jsx)(r.Z, {
             page: t.page,
             section: t.section,
             object: t.object,
             objectType: t.objectType,
-            children: (0, r.jsx)(
+            children: (0, i.jsx)(
                 e,
                 (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
-                            r = Object.keys(n);
+                            i = Object.keys(n);
                         "function" == typeof Object.getOwnPropertySymbols &&
-                            (r = r.concat(
+                            (i = i.concat(
                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                 }),
                             )),
-                            r.forEach(function (t) {
-                                var r;
-                                (r = n[t]),
+                            i.forEach(function (t) {
+                                var i;
+                                (i = n[t]),
                                     t in e
                                         ? Object.defineProperty(e, t, {
-                                              value: r,
+                                              value: i,
                                               enumerable: !0,
                                               configurable: !0,
                                               writable: !0,
                                           })
-                                        : (e[t] = r);
+                                        : (e[t] = i);
                             });
                     }
                     return e;

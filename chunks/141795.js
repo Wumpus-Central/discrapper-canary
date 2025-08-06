@@ -571,6 +571,7 @@ class x extends y.ZP {
                 let e = t[0];
                 (this.item.file = (0, v.ub)(e)),
                     (this.currentSize = this.item.file.size),
+                    (this.uploadAnalytics.convertedMimeType = "image/webp"),
                     C.log(
                         "webp conversion worked for "
                             .concat(this.id, ": ")
@@ -680,7 +681,9 @@ class x extends y.ZP {
             converted_mime_type: null != (r = this.uploadAnalytics.convertedMimeType) ? r : "unknown",
             image_compression_quality: null != (i = this.uploadAnalytics.imageCompressionQuality) ? i : 0,
             video_compression_quality: null != (o = this.uploadAnalytics.videoCompressionQuality) ? o : "unknown",
-            was_converted: this.mimeType !== this.uploadAnalytics.convertedMimeType,
+            was_converted:
+                null != this.uploadAnalytics.convertedMimeType &&
+                this.mimeType !== this.uploadAnalytics.convertedMimeType,
             was_compressed: this.currentSize < this.preCompressionSize,
             source_media_width: this.uploadAnalytics.sourceMediaWidth,
             source_media_height: this.uploadAnalytics.sourceMediaHeight,

@@ -63,26 +63,30 @@ function _(e) {
         n = (0, i.d)();
     a.default.track(
         s.rMx.QUEST_DECISION_ROUNDTRIP,
-        c(
-            d(c({}, (0, r.Z)()), {
-                endpoint: e.endpoint,
-                was_successful: e.wasSuccessful,
-                api_latency_ms: t,
-                mobile_network_type: o.Z.getType(),
-            }),
-            null != n && { mobile_signal_strength_level: n },
+        d(
+            c(
+                d(c({}, (0, r.Z)()), {
+                    endpoint: e.endpoint,
+                    was_successful: e.wasSuccessful,
+                    api_latency_ms: t,
+                    mobile_network_type: o.Z.getType(),
+                }),
+                null != n && { mobile_signal_strength_level: n },
+            ),
+            { caller_source: e.callerSource },
         ),
     );
 }
 class p {
-    recordQuestRequestAttempt(e) {
-        let t = {
+    recordQuestRequestAttempt(e, t) {
+        let n = {
             initialSendTimestamp: Date.now(),
             endpoint: e,
             apiResponseTimestamp: null,
             wasSuccessful: !1,
+            callerSource: t,
         };
-        this.pendingRequests.set(e, t),
+        this.pendingRequests.set(e, n),
             setTimeout(() => {
                 let t = this.pendingRequests.get(e);
                 null != t && (_(t), this.pendingRequests.delete(e));

@@ -11,7 +11,14 @@ var r = n(255367),
     f = n(626314);
 function _(e) {
     let { questId: t } = e,
-        { quests: n, excludedQuests: _, isFetchingCurrentQuests: p } = (0, s.J2)({ fetchPolicy: "cache-or-network" }),
+        {
+            quests: n,
+            excludedQuests: _,
+            isFetchingCurrentQuests: p,
+        } = (0, s.J2)({
+            fetchPolicy: "cache-or-network",
+            callerSource: "embed",
+        }),
         h = i.useMemo(() => n.find((e) => e.id === t), [t, n]),
         m = i.useMemo(() => _.find((e) => e.id === t), [t, _]);
     return p

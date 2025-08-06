@@ -12,6 +12,7 @@ var r = (function (e) {
         (e[(e.PIXELIFY = 8)] = "PIXELIFY"),
         (e[(e.RIBES = 9)] = "RIBES"),
         (e[(e.SINISTRE = 10)] = "SINISTRE"),
+        (e[(e.ZILLA_SLAB = 12)] = "ZILLA_SLAB"),
         e
     );
 })({});

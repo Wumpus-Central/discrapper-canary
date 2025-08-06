@@ -41,6 +41,10 @@ let l = {
             name: a.default.jV9DNz,
             className: s.sinistre,
         },
+        [r.C.ZILLA_SLAB]: {
+            name: a.default["91ufEx"],
+            className: s.bioRhyme,
+        },
         [r.C.BANGERS]: l,
         [r.C.COMPAGNON]: l,
         [r.C.RIBES]: l,

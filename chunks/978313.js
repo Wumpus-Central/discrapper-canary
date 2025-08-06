@@ -19,11 +19,11 @@ function j(e) {
         [v, h] = a.useState(!0),
         [b, O] = a.useState(!1),
         y = a.useRef(null),
-        { width: _, height: w } = (0, u.Z)();
+        { width: _, height: I } = (0, u.Z)();
     return (a.useEffect(() => {
         let e = y.current;
         null != e && O(e.scrollHeight - e.clientHeight > 1 || !v);
-    }, [y, _, w, v]),
+    }, [y, _, I, v]),
     null == t.summary)
         ? null
         : (0, n.jsxs)("div", {

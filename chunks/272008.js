@@ -159,7 +159,7 @@ async function D() {
 async function L() {
     if (!g.Z.isFetchingCurrentQuests) {
         o.Z.dispatch({ type: "QUESTS_FETCH_CURRENT_QUESTS_BEGIN" }),
-            h.Z.recordQuestRequestAttempt(I.ANM.QUESTS_CURRENT_QUESTS);
+            h.Z.recordQuestRequestAttempt(I.ANM.QUESTS_CURRENT_QUESTS, "fetch_quests");
         try {
             let e = await i.tn.get({
                     url: I.ANM.QUESTS_CURRENT_QUESTS,
@@ -476,59 +476,66 @@ function K(e) {
         questId: e,
     });
 }
-async function z(e) {
-    var t, n, r, u, f, _, g;
+async function z(e, t) {
+    var n, r, u, f, _, g, b;
     o.Z.dispatch({
         type: "QUESTS_FETCH_QUEST_TO_DELIVER_BEGIN",
         placement: e,
     }),
-        h.Z.recordQuestRequestAttempt("/quests/decision");
+        h.Z.recordQuestRequestAttempt("/quests/decision", t);
     try {
         let a = await (0, l.Gg)(),
-            g = await (0, s.Gy)(),
-            b = (
+            b = await (0, s.Gy)(),
+            y = (
                 await i.tn.get({
-                    url: I.ANM.QUEST_FETCH_QUEST_TO_DELIVER(e, null == a ? void 0 : a.uuid, g.uuid),
+                    url: I.ANM.QUEST_FETCH_QUEST_TO_DELIVER(e, null == a ? void 0 : a.uuid, b.uuid),
                     rejectWithError: !1,
                 })
             ).body,
-            y = b.quest,
-            O = null != y ? (0, m.q6)(y) : void 0;
+            O = y.quest,
+            v = null != O ? (0, m.q6)(O) : void 0;
         if (
             (o.Z.dispatch({
                 type: "QUESTS_FETCH_QUEST_TO_DELIVER_SUCCESS",
-                quest: O,
+                quest: v,
                 adDecisionData: {
-                    ad_id: null == (t = b.ad_identifiers) ? void 0 : t.ad_id,
-                    adset_id: null == (n = b.ad_identifiers) ? void 0 : n.adset_id,
-                    ad_set_id: null == (r = b.ad_identifiers) ? void 0 : r.ad_set_id,
-                    campaign_id: null == (u = b.ad_identifiers) ? void 0 : u.campaign_id,
-                    creative_id: null == (f = b.ad_identifiers) ? void 0 : f.creative_id,
-                    creative_type: null == (_ = b.ad_identifiers) ? void 0 : _.creative_type,
-                    decision_id: b.request_id,
-                    is_targeted: null != b.ad_identifiers,
+                    ad_id: null == (n = y.ad_identifiers) ? void 0 : n.ad_id,
+                    adset_id: null == (r = y.ad_identifiers) ? void 0 : r.adset_id,
+                    ad_set_id: null == (u = y.ad_identifiers) ? void 0 : u.ad_set_id,
+                    campaign_id: null == (f = y.ad_identifiers) ? void 0 : f.campaign_id,
+                    creative_id: null == (_ = y.ad_identifiers) ? void 0 : _.creative_id,
+                    creative_type: null == (g = y.ad_identifiers) ? void 0 : g.creative_type,
+                    decision_id: y.request_id,
+                    is_targeted: null != y.ad_identifiers,
                 },
-                adContext: b.ad_context,
+                adContext: y.ad_context,
                 placement: e,
             }),
             h.Z.recordQuestRequestApiResponse("/quests/decision", { wasSuccessful: !0 }),
-            null == O)
+            null == v)
         )
             return;
-        e === E.Ok.DESKTOP_ACCOUNT_PANEL_AREA && p.Z.startTracking(O.id),
-            d.default.track(I.rMx.QUEST_DECISION_RECEIVED, C(A({}, (0, c.Z)()), { quest_id: O.id }));
-    } catch (t) {
+        e === E.Ok.DESKTOP_ACCOUNT_PANEL_AREA && p.Z.startTracking(v.id),
+            d.default.track(
+                I.rMx.QUEST_DECISION_RECEIVED,
+                C(A({}, (0, c.Z)()), {
+                    quest_id: v.id,
+                    caller_source: t,
+                }),
+            );
+    } catch (n) {
         h.Z.recordQuestRequestApiResponse("/quests/decision", { wasSuccessful: !1 }),
             d.default.track(
                 I.rMx.QUEST_DECISION_ROUNDTRIP_ERROR,
                 C(A({}, (0, c.Z)()), {
-                    reason: null != (g = null == t ? void 0 : t.message) ? g : null,
-                    api_error: new a.Z(t).getAnyErrorMessage(),
+                    reason: null != (b = null == n ? void 0 : n.message) ? b : null,
+                    api_error: new a.Z(n).getAnyErrorMessage(),
+                    caller_source: t,
                 }),
             ),
             o.Z.dispatch({
                 type: "QUESTS_FETCH_QUEST_TO_DELIVER_FAILURE",
-                error: new a.Z(t),
+                error: new a.Z(n),
                 placement: e,
             });
     }

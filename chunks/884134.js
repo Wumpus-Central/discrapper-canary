@@ -1,4 +1,4 @@
-n.d(t, { Z: () => ee }), n(388685);
+n.d(t, { Z: () => et }), n(388685), n(704826), n(35282), n(781311);
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -87,7 +87,8 @@ function F(e, t) {
         e
     );
 }
-function V(e) {
+let V = 0;
+function H(e) {
     let [t, n] = i.useState(0),
         [r, o] = i.useState(!1),
         a = i.useRef(e);
@@ -101,7 +102,7 @@ function V(e) {
         }
     );
 }
-function H(e) {
+function Y(e) {
     let { markAsDismissed: t } = e;
     return (0, r.jsx)("div", {
         className: U.closeButton,
@@ -113,7 +114,7 @@ function H(e) {
         }),
     });
 }
-function Y() {
+function W() {
     return (0, r.jsxs)("div", {
         className: U.headerContainer,
         children: [
@@ -137,19 +138,19 @@ function Y() {
                         ),
                     ),
             }),
-            (0, r.jsx)(H, {}),
+            (0, r.jsx)(Y, {}),
         ],
     });
 }
-function W(e) {
+function K(e) {
     let { markAsDismissed: t, isCoachmark: n } = e;
     return (0, y.Nj)(l.z.CUSTOM_THEME_COACHMARK)
         ? n
-            ? (0, r.jsx)(K, { markAsDismissed: t })
-            : (0, r.jsx)(Y, {})
-        : (0, r.jsx)(K, { markAsDismissed: () => (0, y.Q3)(l.z.CUSTOM_THEME_COACHMARK) });
+            ? (0, r.jsx)(z, { markAsDismissed: t })
+            : (0, r.jsx)(W, {})
+        : (0, r.jsx)(z, { markAsDismissed: () => (0, y.Q3)(l.z.CUSTOM_THEME_COACHMARK) });
 }
-function K(e) {
+function z(e) {
     let { markAsDismissed: t } = e,
         n = (0, I.m)(M.p9.TIER_2);
     return (0, r.jsxs)("div", {
@@ -159,7 +160,7 @@ function K(e) {
                 className: U.badgeAndCloseRow,
                 children: [
                     (0, r.jsx)(_.lBU, { text: j.intl.string(j.t.oW0eUV) }),
-                    (0, r.jsx)(H, { markAsDismissed: t }),
+                    (0, r.jsx)(Y, { markAsDismissed: t }),
                 ],
             }),
             (0, r.jsxs)("div", {
@@ -180,15 +181,39 @@ function K(e) {
         ],
     });
 }
-function z(e) {
+function q(e) {
     let { gradientAngle: t, setGradientAngle: n } = e,
-        { key: i, handleInternalChange: o } = V(t);
+        { key: o, handleInternalChange: s } = H(t),
+        [l, c] = i.useState("".concat(Math.round(t), "\xB0"));
+    i.useEffect(() => {
+        c("".concat(Math.round(t), "\xB0"));
+    }, [t]);
+    let u = (e) => {
+        let t = e.replace(/°/g, "").trim();
+        if ("" === t) return void c("");
+        let r = parseInt(t, 10);
+        if (isNaN(r)) return;
+        let i = Math.max(0, Math.min(360, r));
+        c("".concat(i, "\xB0")), (0, P.fR)(), n(i);
+    };
     return (0, r.jsxs)("div", {
         className: a()(U.sliderContainer, U.gradientDirectionSliderContainer),
         children: [
-            (0, r.jsx)(_.Text, {
-                variant: "text-sm/medium",
-                children: j.intl.string(k.default.dZkwg4),
+            (0, r.jsxs)("div", {
+                className: U.controlLabelContainer,
+                children: [
+                    (0, r.jsx)(_.Text, {
+                        variant: "text-sm/medium",
+                        children: j.intl.string(k.default.dZkwg4),
+                    }),
+                    (0, r.jsx)("input", {
+                        type: "text",
+                        value: l,
+                        onChange: (e) => u(e.target.value),
+                        placeholder: "".concat(V, "\xB0"),
+                        className: U.controlLabelInput,
+                    }),
+                ],
             }),
             (0, r.jsx)(
                 _.iRW,
@@ -198,25 +223,49 @@ function z(e) {
                     minValue: 0,
                     maxValue: 360,
                     onValueChange: (e) => {
-                        (0, P.fR)(), o(e), n(e);
+                        (0, P.fR)(), s(e), n(e);
                     },
-                    onValueRender: (e) => "".concat(Math.round(e), "\xB0"),
+                    onValueRender: () => null,
                     keyboardStep: 1,
                 },
-                i,
+                o,
             ),
         ],
     });
 }
-function q(e) {
+function X(e) {
     let { chassisMixAmount: t, setChassisMixAmount: n } = e,
-        { key: i, handleInternalChange: o } = V(t);
+        { key: o, handleInternalChange: a } = H(t),
+        [s, l] = i.useState("".concat(Math.round(t), "%"));
+    i.useEffect(() => {
+        l("".concat(Math.round(t), "%"));
+    }, [t]);
+    let c = (e) => {
+        let t = e.replace(/%/g, "").trim();
+        if ("" === t) return void l("");
+        let r = parseInt(t, 10);
+        if (isNaN(r)) return;
+        let i = Math.max(0, Math.min(100, r));
+        l("".concat(i, "%")), (0, P.z3)(), n(i);
+    };
     return (0, r.jsxs)("div", {
         className: U.sliderContainer,
         children: [
-            (0, r.jsx)(_.Text, {
-                variant: "text-sm/medium",
-                children: j.intl.string(k.default.xlXkaG),
+            (0, r.jsxs)("div", {
+                className: U.controlLabelContainer,
+                children: [
+                    (0, r.jsx)(_.Text, {
+                        variant: "text-sm/medium",
+                        children: j.intl.string(k.default.xlXkaG),
+                    }),
+                    (0, r.jsx)("input", {
+                        type: "text",
+                        value: s,
+                        onChange: (e) => c(e.target.value),
+                        placeholder: "".concat(A.BH, "%"),
+                        className: U.controlLabelInput,
+                    }),
+                ],
             }),
             (0, r.jsx)(
                 _.iRW,
@@ -226,16 +275,17 @@ function q(e) {
                     minValue: 0,
                     maxValue: 100,
                     onValueChange: (e) => {
-                        (0, P.z3)(), o(e), n(e);
+                        (0, P.z3)(), a(e), n(e);
                     },
+                    onValueRender: () => null,
                     keyboardStep: 1,
                 },
-                i,
+                o,
             ),
         ],
     });
 }
-function X() {
+function Q() {
     let e = i.useCallback(() => {
         var e;
         (0, P.Om)();
@@ -261,7 +311,7 @@ function X() {
             ),
     });
 }
-function Q(e) {
+function J(e) {
     let { onApply: t, disabled: n, fullWidth: i } = e;
     return (0, r.jsx)(_.ua7, {
         text: j.intl.string(k.default.SFyHIC),
@@ -279,7 +329,7 @@ function Q(e) {
             ),
     });
 }
-function J(e) {
+function $(e) {
     let { onSaveTheme: t, canApply: n } = e,
         i = (0, I.m)(M.p9.TIER_2);
     return (
@@ -287,7 +337,7 @@ function J(e) {
         (0, r.jsx)("div", {
             className: U.coachmarkFooterContainer,
             children: i
-                ? (0, r.jsx)(Q, {
+                ? (0, r.jsx)(J, {
                       disabled: !n,
                       onApply: t,
                       fullWidth: !0,
@@ -305,7 +355,7 @@ function J(e) {
         })
     );
 }
-function $(e) {
+function ee(e) {
     let { onSaveTheme: t, canApply: n, metadata: i } = e,
         o = (0, I.m)(M.p9.TIER_2);
     (0, P.hf)(o, g.Z.CUSTOM_THEMES_EDITOR);
@@ -327,7 +377,7 @@ function $(e) {
                 text: j.intl.string(j.t["13/7kZ"]),
             }),
             o
-                ? (0, r.jsx)(Q, {
+                ? (0, r.jsx)(J, {
                       disabled: !n,
                       onApply: t,
                   })
@@ -345,7 +395,7 @@ function $(e) {
         ],
     });
 }
-function ee(e) {
+function et(e) {
     var t;
     let { metadata: n, markAsDismissed: o, isCoachmark: a } = e,
         u = R.M.useExperiment({ location: "ClientThemeColorPickerTools" }).enabled,
@@ -394,97 +444,94 @@ function ee(e) {
         a || (0, C.lT)(h, M, I);
     }),
     u)
-        ? (0, r.jsx)("div", {
+        ? (0, r.jsxs)("div", {
               className: U.container,
               "data-app-right-panel": !0,
-              children: (0, r.jsxs)("div", {
-                  className: U.containerInner,
-                  children: [
-                      (0, r.jsx)(_.Ttm, {
-                          children: (0, r.jsxs)("div", {
-                              className: U.editorBody,
-                              children: [
-                                  (0, r.jsx)(W, {
-                                      markAsDismissed: o,
-                                      isCoachmark: a,
-                                  }),
-                                  (0, r.jsxs)("div", {
-                                      className: U.section,
-                                      children: [
-                                          (0, r.jsx)(_.Text, {
-                                              variant: "text-sm/semibold",
-                                              color: "text-secondary",
-                                              children: j.intl.string(k.default.o2NfLC),
-                                          }),
-                                          (0, r.jsx)(D.o, {}),
-                                      ],
-                                  }),
-                                  (0, r.jsxs)("div", {
-                                      className: U.section,
-                                      children: [
-                                          (0, r.jsx)(_.Text, {
-                                              variant: "text-sm/semibold",
-                                              color: "text-secondary",
-                                              children: j.intl.string(k.default.uSL2Gx),
-                                          }),
-                                          (0, r.jsx)(w.U, {
-                                              onChange: (e) => {
-                                                  G(e), 0 === h.length && (0, C.lT)(h, e, I);
-                                              },
-                                              value: M,
-                                              colors: h,
-                                              setColors: I,
-                                          }),
-                                      ],
-                                  }),
-                                  (0, r.jsxs)("div", {
-                                      className: U.section,
-                                      children: [
-                                          (0, r.jsx)(_.Text, {
-                                              variant: "text-sm/semibold",
-                                              color: "text-secondary",
-                                              children: j.intl.string(k.default.F1t0c3),
-                                          }),
-                                          h.length > 1 &&
-                                              (0, r.jsx)(z, {
-                                                  gradientAngle: v,
-                                                  setGradientAngle: L,
-                                              }),
+              children: [
+                  (0, r.jsx)(_.Ttm, {
+                      children: (0, r.jsxs)("div", {
+                          className: U.editorBody,
+                          children: [
+                              (0, r.jsx)(K, {
+                                  markAsDismissed: o,
+                                  isCoachmark: a,
+                              }),
+                              (0, r.jsxs)("div", {
+                                  className: U.section,
+                                  children: [
+                                      (0, r.jsx)(_.Text, {
+                                          variant: "text-sm/semibold",
+                                          color: "text-secondary",
+                                          children: j.intl.string(k.default.o2NfLC),
+                                      }),
+                                      (0, r.jsx)(D.o, {}),
+                                  ],
+                              }),
+                              (0, r.jsxs)("div", {
+                                  className: U.section,
+                                  children: [
+                                      (0, r.jsx)(_.Text, {
+                                          variant: "text-sm/semibold",
+                                          color: "text-secondary",
+                                          children: j.intl.string(k.default.uSL2Gx),
+                                      }),
+                                      (0, r.jsx)(w.U, {
+                                          onChange: (e) => {
+                                              G(e), 0 === h.length && (0, C.lT)(h, e, I);
+                                          },
+                                          value: M,
+                                          colors: h,
+                                          setColors: I,
+                                      }),
+                                  ],
+                              }),
+                              (0, r.jsxs)("div", {
+                                  className: U.section,
+                                  children: [
+                                      (0, r.jsx)(_.Text, {
+                                          variant: "text-sm/semibold",
+                                          color: "text-secondary",
+                                          children: j.intl.string(k.default.F1t0c3),
+                                      }),
+                                      h.length > 1 &&
                                           (0, r.jsx)(q, {
-                                              chassisMixAmount: O,
-                                              setChassisMixAmount: (e) => {
-                                                  N(e), 0 === h.length && (0, C.lT)(h, M, I);
-                                              },
+                                              gradientAngle: v,
+                                              setGradientAngle: L,
                                           }),
-                                      ],
-                                  }),
-                                  (0, r.jsxs)("div", {
-                                      className: U.resetButton,
-                                      children: [
-                                          (0, r.jsx)(X, {}),
-                                          (0, r.jsx)(c.z, {
-                                              variant: "secondary",
-                                              onClick: H,
-                                              text: j.intl.string(j.t.yBZMsb),
-                                              fullWidth: !0,
-                                          }),
-                                      ],
-                                  }),
-                              ],
-                          }),
+                                      (0, r.jsx)(X, {
+                                          chassisMixAmount: O,
+                                          setChassisMixAmount: (e) => {
+                                              N(e), 0 === h.length && (0, C.lT)(h, M, I);
+                                          },
+                                      }),
+                                  ],
+                              }),
+                              (0, r.jsxs)("div", {
+                                  className: U.resetButton,
+                                  children: [
+                                      (0, r.jsx)(Q, {}),
+                                      (0, r.jsx)(c.z, {
+                                          variant: "secondary",
+                                          onClick: H,
+                                          text: j.intl.string(j.t.yBZMsb),
+                                          fullWidth: !0,
+                                      }),
+                                  ],
+                              }),
+                          ],
                       }),
-                      a
-                          ? (0, r.jsx)(J, {
-                                onSaveTheme: V,
-                                canApply: Y,
-                            })
-                          : (0, r.jsx)($, {
-                                onSaveTheme: V,
-                                canApply: Y,
-                                metadata: n,
-                            }),
-                  ],
-              }),
+                  }),
+                  a
+                      ? (0, r.jsx)($, {
+                            onSaveTheme: V,
+                            canApply: Y,
+                        })
+                      : (0, r.jsx)(ee, {
+                            onSaveTheme: V,
+                            canApply: Y,
+                            metadata: n,
+                        }),
+              ],
           })
         : null;
 }

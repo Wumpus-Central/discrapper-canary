@@ -26,20 +26,20 @@ let h = (e) => {
             popoutClassname: y,
             popoutPosition: _ = "right",
         } = e,
-        w = a.useRef(null),
-        I = (0, o.e7)([d.Z, c.Z], () => c.Z.getChannel(d.Z.getChannelId())),
+        I = a.useRef(null),
+        w = (0, o.e7)([d.Z, c.Z], () => c.Z.getChannel(d.Z.getChannelId())),
         P = (0, o.e7)([u.default], () => u.default.getUser(t.author_id)),
-        { nick: E, avatar: S } = a.useMemo(() => {
-            let e = null == P ? void 0 : P.getAvatarURL(null == I ? void 0 : I.guild_id, 48, !1);
+        { nick: E, avatar: N } = a.useMemo(() => {
+            let e = null == P ? void 0 : P.getAvatarURL(null == w ? void 0 : w.guild_id, 48, !1);
             return {
-                nick: m.ZP.getName(null == I ? void 0 : I.guild_id, null == I ? void 0 : I.id, P),
+                nick: m.ZP.getName(null == w ? void 0 : w.guild_id, null == w ? void 0 : w.id, P),
                 avatar: e,
             };
-        }, [P, I]);
+        }, [P, w]);
     return null == P
         ? null
         : (0, n.jsx)(s.yRy, {
-              targetElementRef: w,
+              targetElementRef: I,
               position: _,
               renderPopout: (e) => {
                   let { closePopout: a, updatePosition: l } = e;
@@ -90,7 +90,7 @@ let h = (e) => {
                                   });
                           }
                           return e;
-                      })({ innerRef: w }, e)),
+                      })({ innerRef: I }, e)),
                       (a = a =
                           {
                               className: j.profileEntryCard,
@@ -105,7 +105,7 @@ let h = (e) => {
                                       children: [
                                           (0, n.jsx)("img", {
                                               className: j.avatar,
-                                              src: S,
+                                              src: N,
                                               alt: x.intl.formatToPlainString(x.t.IzVXxc, { userName: E }),
                                           }),
                                           (0, n.jsx)("div", {

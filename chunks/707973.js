@@ -40,8 +40,8 @@ let p = {
                     e.id,
                 ),
             ),
-            _ = d.t.rPNimp,
-            p = "Games";
+            _ = d.t["/U2VW1"],
+            p = d.intl.string(d.t.URyqtL);
         return (0, r.jsxs)(
             i.Fragment,
             {

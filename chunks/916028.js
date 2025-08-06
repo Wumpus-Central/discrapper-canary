@@ -5,7 +5,10 @@ var s = n(481060),
     o = n(113434);
 let a = function (e) {
     let { onSelect: t, quest: n } = e,
-        { quests: a } = (0, o.J2)({ fetchPolicy: "cache-and-network" }),
+        { quests: a } = (0, o.J2)({
+            fetchPolicy: "cache-and-network",
+            callerSource: "prefill_selector",
+        }),
         i = [
             {
                 label: "NONE",

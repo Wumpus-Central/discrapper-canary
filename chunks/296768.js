@@ -1,4 +1,4 @@
-r.d(t, { Z: () => w }), r(388685);
+r.d(t, { Z: () => I }), r(388685);
 var n = r(255367),
     a = r(73800),
     i = r(120356),
@@ -99,7 +99,7 @@ let _ = (e) => {
         },
     });
 };
-function w(e) {
+function I(e) {
     let { applicationId: t, onClose: r, trackAction: i, similarGames: o, similarGamesError: m } = e,
         p = (0, c.e7)([f.Z, g.Z], () => {
             let e = void 0 === f.Z.getSimilarGames(t) && null == f.Z.getSimilarGamesError(t),

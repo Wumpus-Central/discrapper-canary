@@ -885,23 +885,20 @@ let e4 = (0, J.oH)((e, t, n) => {
                 }
             }
             let O = [];
+            !n.isPrivate() &&
+                r &&
+                c &&
+                (g < _ && o()(b, eG().test) && (O.push(eG()), (g += 1)),
+                i && g < _ && o()(b, eB().test) && (O.push(eB()), (g += 1)));
+            let v = E.N.getCurrentConfig(
+                {
+                    guildId: n.guild_id,
+                    location: "mention autocomplete",
+                },
+                { autoTrackExposure: !0 },
+            ).enabled;
             return (
-                !n.isPrivate() &&
-                    r &&
-                    c &&
-                    (g < _ && o()(b, eG().test) && (O.push(eG()), (g += 1)),
-                    i && g < _ && o()(b, eB().test) && (O.push(eB()), (g += 1))),
-                E.N.getCurrentConfig(
-                    {
-                        guildId: n.guild_id,
-                        location: "mention autocomplete",
-                    },
-                    { autoTrackExposure: !0 },
-                ).enabled &&
-                    null != eZ &&
-                    g < _ &&
-                    o()(b, eZ().test) &&
-                    (O.push(eZ()), (g += 1)),
+                r && v && null != eZ && g < _ && o()(b, eZ().test) && (O.push(eZ()), (g += 1)),
                 {
                     users: m,
                     globals: O,

@@ -1,6 +1,5 @@
 e.exports = {
     container: "container__5a2df",
-    containerInner: "containerInner__5a2df",
     editorBody: "editorBody__5a2df",
     section: "section__5a2df",
     resetButton: "resetButton__5a2df",
@@ -16,4 +15,6 @@ e.exports = {
     subtitle: "subtitle__5a2df",
     coachmarkFooterContainer: "coachmarkFooterContainer__5a2df",
     nitroIcon: "nitroIcon__5a2df",
+    controlLabelContainer: "controlLabelContainer__5a2df",
+    controlLabelInput: "controlLabelInput__5a2df",
 };

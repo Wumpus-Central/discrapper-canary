@@ -26,10 +26,10 @@ let f = i.Z.Millis.DAY,
     h = 5 * i.Z.Millis.MINUTE,
     m = 12 * i.Z.Millis.HOUR;
 class g extends r.Z {
-    _fetch() {
+    _fetch(e) {
         (0, c.cB)({ location: u.dr.QUESTS_MANAGER }) &&
             !a.Z.isFetchingCurrentQuests &&
-            ((0, o.xw)(), (0, o.w)(s.Ok.DESKTOP_ACCOUNT_PANEL_AREA));
+            ((0, o.xw)(), (0, o.w)(s.Ok.DESKTOP_ACCOUNT_PANEL_AREA, e));
     }
     constructor(...e) {
         super(...e),
@@ -46,17 +46,19 @@ class g extends r.Z {
                 window.clearTimeout(this.initialFetchTimerId),
                     window.clearTimeout(this.recurringFetchTimerId),
                     (this.recurringFetchTimerId = window.setInterval(() => {
-                        Date.now() - this.lastFetchAttemptedAt > f && this._fetch();
+                        Date.now() - this.lastFetchAttemptedAt > f && this._fetch("post_connect_recurring");
                     }, _));
                 let t = Math.floor(Math.random() * p);
                 this.initialFetchTimerId = window.setTimeout(() => {
                     !(Date.now() - t < a.Z.lastFetchedCurrentQuests) &&
                         (e || 0 === a.Z.lastFetchedCurrentQuests) &&
-                        this._fetch();
+                        this._fetch("post_connect_initial");
                 }, t);
             }),
             d(this, "handleRunningGamesChange", () => {
-                this.instantiatedAt + m > Date.now() || a.Z.lastFetchedCurrentQuests + m > Date.now() || this._fetch();
+                this.instantiatedAt + m > Date.now() ||
+                    a.Z.lastFetchedCurrentQuests + m > Date.now() ||
+                    this._fetch("running_games");
             }),
             d(this, "handleUserSettingsProtoUpdate", (e) => {
                 let { partial: t, settings: n, wasSaved: r } = e;
@@ -64,7 +66,7 @@ class g extends r.Z {
                     !t ||
                     r ||
                     Date.now() - this.lastFetchedQuestForLocaleChangeAt <= h ||
-                    ((this.lastFetchedQuestForLocaleChangeAt = Date.now()), this._fetch());
+                    ((this.lastFetchedQuestForLocaleChangeAt = Date.now()), this._fetch("user_settings"));
             }),
             d(this, "handleLogout", () => {
                 window.clearTimeout(this.initialFetchTimerId),
