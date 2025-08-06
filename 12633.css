@@ -62471,6 +62471,11 @@ html .progress__61462 {
     width: 400px
 }
 
+.inModal_b08511 {
+    max-width: 100%;
+    width: 100%
+}
+
 .selectOption_b08511 {
     padding: 8px
 }
@@ -62616,7 +62621,6 @@ html .progress__61462 {
 }
 
 .formItem__1b11b {
-    margin-bottom: 1em;
     width: 100%
 }
 
@@ -63108,6 +63112,10 @@ html .progress__61462 {
 
 .error__1647d {
     margin: 4px 0
+}
+
+.description_cd2e37 {
+    margin-bottom: var(--space-8)
 }
 
 .section_c3d3d9 {
