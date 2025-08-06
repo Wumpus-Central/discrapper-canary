@@ -49831,26 +49831,6 @@ img.thumbnail__0f2e8 {
     gap: 8px
 }
 
-.button__43a4b {
-    height: 24px;
-    min-height: 24px;
-    padding: 2px 8px
-}
-
-.custom-user-profile-theme .color__43a4b {
-    background: var(--profile-gradient-button-color);
-    color: var(--white-500);
-    transition: opacity .2s ease-in-out
-}
-
-.custom-user-profile-theme .color__43a4b:hover {
-    background: color-mix(in srgb, var(--profile-gradient-button-color) 80%, transparent)
-}
-
-.custom-user-profile-theme .color__43a4b:active {
-    background: color-mix(in srgb, var(--profile-gradient-button-color) 90%, transparent)
-}
-
 .gameIcon__43a4b {
     vertical-align: bottom
 }
@@ -79635,7 +79615,7 @@ html.disable-forced-colors * {
     display: flex;
     height: 32px;
     margin: 0 1px;
-    padding: 4px 12px;
+    padding: 4px 8px;
     position: relative;
     transition: border-color .15s ease
 }
@@ -79693,6 +79673,15 @@ html.disable-forced-colors * {
     align-items: center;
     display: flex;
     gap: 8px
+}
+
+.hexColorPreview__247cf {
+    border: 1px solid var(--border-subtle);
+    border-radius: 4px;
+    flex-shrink: 0;
+    height: 24px;
+    margin-right: 8px;
+    width: 24px
 }
 
 .colorPreview__247cf {
