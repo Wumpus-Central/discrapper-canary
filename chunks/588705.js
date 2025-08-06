@@ -1,6 +1,6 @@
 n.d(t, {
     R: () => O,
-    Z: () => S,
+    Z: () => N,
 }),
     n(415506);
 var r = n(255367),
@@ -39,7 +39,7 @@ let O = () =>
                 }),
             ],
         }),
-    N = (e) => {
+    S = (e) => {
         let { guild: t, user: n, application: i, compact: l } = e;
         return null != i
             ? (0, r.jsx)(c.Z, {
@@ -67,7 +67,7 @@ let O = () =>
                   })
                 : null;
     },
-    S = (e) => {
+    N = (e) => {
         var t;
         let n,
             i,
@@ -75,7 +75,7 @@ let O = () =>
             {
                 invite: c,
                 disableUser: O = !1,
-                error: S,
+                error: N,
                 flatActivityCount: C = !1,
                 isRegister: y = !1,
                 inUnclaimedFlow: A = !1,
@@ -159,7 +159,7 @@ let O = () =>
             (i = j.intl.formatToPlainString(j.t["4aF92d"], { username: e })),
                 (B = !0),
                 (a =
-                    null != S
+                    null != N
                         ? null
                         : (0, r.jsx)(o.DK, {
                               className: I.directInviteSubTitle,
@@ -171,17 +171,17 @@ let O = () =>
         return (0, r.jsxs)("div", {
             className: I.container,
             children: [
-                (0, r.jsx)(N, {
+                (0, r.jsx)(S, {
                     application: w,
                     guild: Z,
                     user: D ? L : null,
                     compact: B,
                 }),
-                null != S
+                null != N
                     ? (0, r.jsxs)(r.Fragment, {
                           children: [
                               (0, r.jsx)(o.DK, { children: j.intl.string(j.t.mDFGFh) }),
-                              (0, r.jsx)(o.Dx, { children: S }),
+                              (0, r.jsx)(o.Dx, { children: N }),
                           ],
                       })
                     : (0, r.jsxs)(r.Fragment, {

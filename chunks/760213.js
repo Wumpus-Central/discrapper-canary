@@ -1,6 +1,6 @@
 n.d(t, {
     W: () => O,
-    Z: () => S,
+    Z: () => N,
 }),
     n(457542);
 var r,
@@ -29,7 +29,7 @@ var r,
         (r[(r.SWITCHED = 1)] = "SWITCHED"),
         (r[(r.REMOVED = 2)] = "REMOVED"),
         r);
-function N(e) {
+function S(e) {
     let { actionText: t, user: n, onAction: r } = e,
         {
             currentUser: l,
@@ -41,19 +41,19 @@ function N(e) {
             isAuthenticated: p.default.isAuthenticated(),
         })),
         O = new h.Z(n),
-        N = E && (null == l ? void 0 : l.id) === O.id,
-        S = n.tokenStatus === b.q.INVALID,
+        S = E && (null == l ? void 0 : l.id) === O.id,
+        N = n.tokenStatus === b.q.INVALID,
         C = s || O.hasUniqueUsername() ? null : "#".concat(O.discriminator),
         y = null;
     return (
-        N
+        S
             ? (y = (0, i.jsx)(c.Text, {
                   variant: "text-sm/semibold",
                   className: I.hintText,
                   color: "text-feedback-positive",
                   children: j.intl.string(j.t.seV8ys),
               }))
-            : S &&
+            : N &&
               (y = (0, i.jsx)(c.Text, {
                   variant: "text-sm/semibold",
                   className: I.hintText,
@@ -71,7 +71,7 @@ function N(e) {
                         "aria-label": n.username,
                     }),
                     (0, i.jsxs)("div", {
-                        className: o()(I.usernameSection, { [I.hasActionMaxWidth]: !N }),
+                        className: o()(I.usernameSection, { [I.hasActionMaxWidth]: !S }),
                         children: [
                             (0, i.jsxs)("div", {
                                 className: I.username,
@@ -98,12 +98,12 @@ function N(e) {
                     (0, i.jsxs)("div", {
                         className: I.userActions,
                         children: [
-                            !N &&
+                            !S &&
                                 (0, i.jsx)(c.zxk, {
                                     variant: "secondary",
-                                    text: S ? j.intl.string(j.t["DSN+h4"]) : t,
+                                    text: N ? j.intl.string(j.t["DSN+h4"]) : t,
                                     onClick: function () {
-                                        if (S) return void r(0, n.id);
+                                        if (N) return void r(0, n.id);
                                         g.default.track(v.rMx.MULTI_ACCOUNT_SWITCH_ATTEMPT, {
                                             location: { section: v.jXE.MANAGE_ACCOUNTS_MODAL },
                                         }),
@@ -153,7 +153,7 @@ function N(e) {
         })
     );
 }
-function S(e) {
+function N(e) {
     let { actionText: t, onAction: n } = e,
         { isLoading: r, multiAccountUsers: s } = (0, E.L)();
     return (0, i.jsx)("div", {
@@ -166,7 +166,7 @@ function S(e) {
                       {
                           children: [
                               (0, i.jsx)(
-                                  N,
+                                  S,
                                   {
                                       user: e,
                                       actionText: t,

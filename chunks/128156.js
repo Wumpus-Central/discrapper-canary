@@ -15,21 +15,21 @@ var l = n(442837),
     g = n(151545),
     b = n(744802),
     j = n(493043),
-    h = n(864141),
-    y = n(264481),
+    y = n(864141),
+    h = n(264481),
     v = n(693408),
     O = n(228168),
     x = n(981631),
     _ = n(388032),
     I = n(514656);
 function P(e) {
-    let { user: t, currentUser: n, displayProfile: P, guildId: Z, channelId: E, subsection: N, onClose: T } = e,
+    let { user: t, currentUser: n, displayProfile: P, guildId: E, channelId: Z, subsection: N, onClose: T } = e,
         { voiceActivityStatusEnabled: A } = (0, i.U)({ location: "UserProfileModalV2Activity" }),
         S = (0, f.b)({ location: "UserProfileModalV2Activity" }),
         { live: w, recent: C, stream: G } = (0, p.Z)(t.id),
-        { voiceChannel: L, voiceActivity: M } = (0, m.Z)({
+        { voiceChannel: M, voiceActivity: L } = (0, m.Z)({
             userId: t.id,
-            guildId: Z,
+            guildId: E,
         }),
         R = (0, l.e7)([a.Z], () => a.Z.isFetchingUserOutbox(t.id)),
         D = t.id === n.id,
@@ -38,7 +38,7 @@ function P(e) {
             return e === o.Skl.OFFLINE || e === o.Skl.INVISIBLE;
         }),
         U = w.length > 0 || null != G,
-        B = A && null == G && null == M && null != L,
+        B = A && null == G && null == L && null != M,
         F = !k && (U || B),
         V = C.length > 0;
     if (!F && !V && R)
@@ -67,11 +67,11 @@ function P(e) {
     if (!F && !V && !R) {
         var Y;
         return D
-            ? (0, r.jsx)(y.Uf, { onClose: T })
-            : (0, r.jsx)(y.P9, {
+            ? (0, r.jsx)(h.Uf, { onClose: T })
+            : (0, r.jsx)(h.P9, {
                   user: t,
                   guildId: null != (Y = null == P ? void 0 : P.guildId) ? Y : void 0,
-                  channelId: E,
+                  channelId: Z,
                   onClose: T,
               });
     }
@@ -88,10 +88,10 @@ function P(e) {
                               !S &&
                                   B &&
                                   (0, r.jsx)("li", {
-                                      children: (0, r.jsx)(h.Z, {
+                                      children: (0, r.jsx)(y.Z, {
                                           user: t,
                                           currentUser: n,
-                                          voiceChannel: L,
+                                          voiceChannel: M,
                                           onClose: T,
                                       }),
                                   }),
@@ -124,10 +124,10 @@ function P(e) {
                               S &&
                                   B &&
                                   (0, r.jsx)("li", {
-                                      children: (0, r.jsx)(h.Z, {
+                                      children: (0, r.jsx)(y.Z, {
                                           user: t,
                                           currentUser: n,
-                                          voiceChannel: L,
+                                          voiceChannel: M,
                                           onClose: T,
                                       }),
                                   }),

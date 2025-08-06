@@ -1,129 +1,101 @@
-s.d(t, { default: () => m }), s(388685);
-var a = s(255367),
-    l = s(73800),
-    n = s(990547),
-    r = s(755721),
-    i = s(481060),
-    o = s(479531),
-    c = s(213609),
-    d = s(388032),
-    h = s(472319),
-    u = s(800010);
-function m(e) {
+n.d(e, { default: () => p }), n(388685);
+var s = n(255367),
+    a = n(73800),
+    i = n(990547),
+    r = n(667202),
+    l = n(481060),
+    o = n(479531),
+    c = n(388032),
+    u = n(800010);
+function p(t) {
     let {
-            transitionState: t,
-            onFormSubmit: s,
-            onResend: m,
-            onSuccess: x,
-            onClose: p,
-            headerText: g,
-            confirmButtonText: y,
-            confirmButtonColor: j,
-            impressionName: _,
-        } = e,
-        [f, C] = l.useState(!1),
-        [T, S] = l.useState(""),
-        [w, b] = l.useState(!1),
-        [k, z] = l.useState(null),
-        E = l.useRef(null);
-    (0, c.Z)({
-        type: n.ImpressionTypes.MODAL,
-        name: _,
-    });
-    let v = async (e) => {
-            e.preventDefault(), z(null), C(!0);
+            transitionState: e,
+            onFormSubmit: n,
+            onResend: p,
+            onSuccess: y,
+            onClose: d,
+            headerText: h,
+            confirmButtonText: g,
+            confirmButtonVariant: T = "primary",
+            impression: f,
+        } = t,
+        [m, x] = a.useState(!1),
+        [S, w] = a.useState(""),
+        [k, C] = a.useState(!1),
+        [b, j] = a.useState(null),
+        v = a.useRef(null),
+        E = async (t) => {
+            t.preventDefault(), j(null), x(!0);
             try {
-                let e = await s(T);
-                null != x && x(e), p();
-            } catch (e) {
-                z(new o.Z(e).getAnyErrorMessage());
+                let t = await n(S);
+                null != y && y(t), d();
+            } catch (t) {
+                j(new o.Z(t).getAnyErrorMessage());
             } finally {
-                C(!1);
+                x(!1);
             }
         },
-        N = async () => {
-            if (!w) {
-                b(!0);
+        A = async () => {
+            if (!k) {
+                C(!0);
                 try {
-                    await m(), (0, i.showToast)((0, i.createToast)(d.intl.string(d.t["84yeo6"]), i.ToastType.SUCCESS));
-                } catch (t) {
-                    let e = new o.Z(t).getAnyErrorMessage();
-                    null != e && (0, i.showToast)((0, i.createToast)(e, i.ToastType.FAILURE));
+                    await p(), (0, l.showToast)((0, l.createToast)(c.intl.string(c.t["84yeo6"]), l.ToastType.SUCCESS));
+                } catch (e) {
+                    let t = new o.Z(e).getAnyErrorMessage();
+                    null != t && (0, l.showToast)((0, l.createToast)(t, l.ToastType.FAILURE));
                 } finally {
-                    b(!1);
+                    C(!1);
                 }
             }
-        };
-    return (0, a.jsx)(i.Y0X, {
-        transitionState: t,
-        parentComponent: "EmailPincodeModal",
-        children: (0, a.jsxs)("form", {
-            onSubmit: v,
-            children: [
-                (0, a.jsx)("img", {
-                    alt: "",
-                    className: h.headerImage,
-                    src: u,
-                }),
-                (0, a.jsxs)(i.xBx, {
-                    separator: !1,
-                    className: h.header,
-                    children: [
-                        (0, a.jsx)(i.X6q, {
-                            variant: "heading-lg/semibold",
-                            className: h.title,
-                            children: g,
-                        }),
-                        (0, a.jsx)(i.Text, {
-                            color: "header-secondary",
-                            variant: "text-md/normal",
-                            className: h.subtitle,
-                            children: d.intl.string(d.t.SZJow8),
-                        }),
-                        (0, a.jsx)(i.olH, {
-                            onClick: p,
-                            className: h.modalCloseButton,
-                        }),
-                    ],
-                }),
-                (0, a.jsxs)(i.hzk, {
-                    children: [
-                        (0, a.jsx)(i.xJW, {
-                            title: d.intl.string(d.t["8mZX6O"]),
-                            error: k,
-                            children: (0, a.jsx)(i.oil, {
-                                value: T,
-                                onChange: S,
-                                inputRef: E,
-                            }),
-                        }),
-                        (0, a.jsx)(i.Text, {
-                            className: h.help,
-                            variant: "text-sm/normal",
-                            children: d.intl.format(d.t.P0sak5, { onResend: N }),
-                        }),
-                    ],
-                }),
-                (0, a.jsx)(i.mzw, {
-                    children: (0, a.jsxs)(i.hE2, {
-                        direction: "horizontal-reverse",
-                        children: [
-                            (0, a.jsx)(r.zx, {
-                                type: "submit",
-                                color: null != j ? j : r.zx.Colors.BRAND,
-                                size: r.zx.Sizes.MEDIUM,
-                                submitting: f,
-                                children: y,
-                            }),
-                            (0, a.jsx)(i.zxk, {
-                                variant: "secondary",
-                                text: d.intl.string(d.t["ETE/oK"]),
-                                onClick: p,
-                            }),
-                        ],
-                    }),
-                }),
+        },
+        R = m || k;
+    return (0, s.jsx)("form", {
+        onSubmit: E,
+        children: (0, s.jsx)(r.I, {
+            transitionState: e,
+            trackingProps: {
+                impression: f,
+                impressionType: i.ImpressionTypes.MODAL,
+            },
+            graphic: {
+                src: u,
+                type: "image",
+            },
+            title: h,
+            subtitle: c.intl.string(c.t.SZJow8),
+            actions: [
+                {
+                    text: c.intl.string(c.t["ETE/oK"]),
+                    onClick: d,
+                    variant: "secondary",
+                    disabled: R,
+                },
+                {
+                    text: g,
+                    variant: T,
+                    loading: R,
+                    type: "submit",
+                },
             ],
+            onClose: d,
+            children: (0, s.jsxs)(l.Kqy, {
+                gap: 8,
+                children: [
+                    (0, s.jsx)(l.xJW, {
+                        title: c.intl.string(c.t["8mZX6O"]),
+                        error: b,
+                        children: (0, s.jsx)(l.oil, {
+                            value: S,
+                            onChange: w,
+                            inputRef: v,
+                        }),
+                    }),
+                    (0, s.jsx)(l.Text, {
+                        variant: "text-sm/normal",
+                        children: c.intl.format(c.t.P0sak5, { onResend: A }),
+                    }),
+                ],
+            }),
         }),
     });
 }

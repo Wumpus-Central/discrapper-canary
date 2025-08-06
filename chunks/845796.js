@@ -69,7 +69,7 @@ let h = () => {
                 })[e],
             [],
         ),
-        C = l.useCallback(
+        O = l.useCallback(
             (e) => {
                 let r = m(v(e));
                 s.default.track(p.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
@@ -85,13 +85,13 @@ let h = () => {
             },
             [h, m, v, t],
         ),
-        O = m(e);
+        C = m(e);
     return (0, n.jsx)(o.PhF, {
         look: o.qQH.CUSTOM,
         className: f.custom,
         options: _.map(m),
-        select: C,
-        isSelected: (e) => e === O.value,
+        select: O,
+        isSelected: (e) => e === C.value,
         serialize: (e) => e,
         popoutWidth: 224,
     });

@@ -56,6 +56,6 @@ function u(e, t) {
     );
 }
 function d(e, t, n) {
-    let s = null != n ? { search: (0, r.stringify)({ powerupSkuId: n }) } : void 0;
+    let s = null != n ? { search: (0, r.stringify)({ powerupId: n }) } : void 0;
     (0, i.uL)(o.Z5c.CHANNEL(e, a.oC.GUILD_BOOSTS), u(l({}, s), { source: t }));
 }

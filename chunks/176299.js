@@ -210,9 +210,10 @@ let ex = (0, u.Un)({
                 case eN.oC.MEMBER_SAFETY:
                     return (0, r.jsx)(eD, { guildId: l });
                 case eN.oC.GUILD_BOOSTS:
+                    var g;
                     return (0, r.jsx)(eU, {
                         guildId: l,
-                        powerupSkuId: n.get("powerupSkuId"),
+                        powerupListingId: null != (g = n.get("powerupId")) ? g : n.get("powerupSkuId"),
                     });
                 case eN.oC.REPORT_TO_MOD:
                     return (0, r.jsx)(S.Z, {});

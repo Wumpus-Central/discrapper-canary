@@ -1,3 +1,3 @@
-var n = e(809290)("span").classList,
-    o = n && n.constructor && n.constructor.prototype;
-t.exports = o === Object.prototype ? void 0 : o;
+var r = n(809290)("span").classList,
+    i = r && r.constructor && r.constructor.prototype;
+e.exports = i === Object.prototype ? void 0 : i;

@@ -66,7 +66,7 @@ function x(e) {
             isSearching: O,
             documentsIndexed: v,
         } = e,
-        C = (0, h.U)({ location: "SearchHeader" }),
+        C = (0, h.UX)({ location: "SearchHeader" }),
         E = (0, p.xd)({
             isXDMSearch: t.type === f.aib.DMS,
             location: "SearchHeader",

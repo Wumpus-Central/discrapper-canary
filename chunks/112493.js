@@ -1,29 +1,29 @@
-var n,
-    o,
+var r,
     i,
-    a = e(621523),
-    s = e(880181),
-    u = e(434431),
-    c = e(713411),
-    f = e(961050),
-    l = e(556585),
-    p = e(751736),
-    v = e(511696),
-    h = p("iterator"),
-    d = !1;
-[].keys && ("next" in (i = [].keys()) ? (o = f(f(i))) !== Object.prototype && (n = o) : (d = !0)),
-    !u(n) ||
+    o,
+    a = n(621523),
+    s = n(880181),
+    l = n(434431),
+    c = n(713411),
+    u = n(961050),
+    d = n(556585),
+    f = n(751736),
+    _ = n(511696),
+    p = f("iterator"),
+    h = !1;
+[].keys && ("next" in (o = [].keys()) ? (i = u(u(o))) !== Object.prototype && (r = i) : (h = !0)),
+    !l(r) ||
     a(function () {
-        var t = {};
-        return n[h].call(t) !== t;
+        var e = {};
+        return r[p].call(e) !== e;
     })
-        ? (n = {})
-        : v && (n = c(n)),
-    s(n[h]) ||
-        l(n, h, function () {
+        ? (r = {})
+        : _ && (r = c(r)),
+    s(r[p]) ||
+        d(r, p, function () {
             return this;
         }),
-    (t.exports = {
-        IteratorPrototype: n,
-        BUGGY_SAFARI_ITERATORS: d,
+    (e.exports = {
+        IteratorPrototype: r,
+        BUGGY_SAFARI_ITERATORS: h,
     });

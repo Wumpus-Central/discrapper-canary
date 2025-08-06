@@ -1,4 +1,4 @@
-n.d(t, { Z: () => k }), n(388685);
+n.d(t, { Z: () => L }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -112,9 +112,9 @@ let w = i.memo(function (e) {
                 null == A ? void 0 : A.userId,
                 null != (t = null == A ? void 0 : A.colorStrings) ? t : null,
             ),
-            L = i.useMemo(() => ({ [Z]: [s.user.id] }), [Z, s.user.id]);
-        (0, g.$)(L);
-        let k = s.rtsState === E.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
+            k = i.useMemo(() => ({ [Z]: [s.user.id] }), [Z, s.user.id]);
+        (0, g.$)(k);
+        let L = s.rtsState === E.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
         function M() {
             (0, O.DT)(l, s.user.id, !1);
         }
@@ -199,7 +199,7 @@ let w = i.memo(function (e) {
                     },
                 }),
                 (0, r.jsx)(d.ua7, {
-                    text: k ? P.intl.string(P.t.h9rsTU) : P.intl.string(P.t.f0T7hI),
+                    text: L ? P.intl.string(P.t.h9rsTU) : P.intl.string(P.t.f0T7hI),
                     children: (e) =>
                         (0, r.jsx)(
                             u.zx,
@@ -208,7 +208,7 @@ let w = i.memo(function (e) {
                                 look: u.zx.Looks.BLANK,
                                 size: u.zx.Sizes.NONE,
                                 onClick: M,
-                                disabled: k || v,
+                                disabled: L || v,
                                 children: (0, r.jsx)(d.Lrb, {
                                     size: "xs",
                                     color: "currentColor",
@@ -246,7 +246,7 @@ let w = i.memo(function (e) {
             children: P.intl.string(P.t.GYCh0d),
         });
     }),
-    L = i.memo(function () {
+    k = i.memo(function () {
         return (0, r.jsxs)("div", {
             className: T.emptyStateContainer,
             children: [
@@ -266,7 +266,7 @@ let w = i.memo(function (e) {
             ],
         });
     });
-function k(e) {
+function L(e) {
     let { channel: t, toggleRequestToSpeakSidebar: n, chatOpen: i } = e,
         l = (0, v.Fd)(t.id),
         s = [
@@ -302,7 +302,7 @@ function k(e) {
                         case 0:
                             return (0, r.jsx)(D, { channel: t }, "rts-toggle");
                         case 1: {
-                            if (0 === l.length) return (0, r.jsx)(L, {}, "participants-empty");
+                            if (0 === l.length) return (0, r.jsx)(k, {}, "participants-empty");
                             let e = l[i];
                             return (0, r.jsx)(
                                 A,

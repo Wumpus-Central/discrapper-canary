@@ -18,9 +18,9 @@ function x(e) {
         { guildId: v, group: b, powerups: j } = e,
         [h, E] = o.useState(!1),
         C = (0, a.G)(v, j),
-        O = (0, i.e7)([s.Z], () => s.Z.useReducedMotion),
-        I = (0, u.Z)(b, v);
-    if (void 0 === I || j.length <= 0) return null;
+        I = (0, i.e7)([s.Z], () => s.Z.useReducedMotion),
+        O = (0, u.Z)(b, v);
+    if (void 0 === O || j.length <= 0) return null;
     let y = C.some((e) => e.type !== p.A3.INACTIVE),
         P = (0, d.d)(y),
         w = C.reduce(
@@ -64,12 +64,12 @@ function x(e) {
         }, 0),
         T = y ? N : Z,
         A = !y && S > T ? "+" : void 0,
-        R = !O && h ? I.image.animatedUrl : I.image.staticUrl;
+        R = !I && h ? O.image.animatedUrl : O.image.staticUrl;
     return (0, r.jsxs)(c.aB, {
-        label: I.title,
+        label: O.title,
         isActive: y,
-        badge: I.badge,
-        onClick: () => I.openModal(j),
+        badge: O.badge,
+        onClick: () => O.openModal(j),
         onMouseOver: () => E(!0),
         onMouseLeave: () => E(!1),
         children: [
@@ -79,7 +79,7 @@ function x(e) {
                 className: g.image,
             }),
             (0, r.jsx)(c.Q9, {
-                title: I.title,
+                title: O.title,
                 textColor: P,
                 footer: (0, r.jsx)(c.uf, {
                     status: _,
@@ -90,7 +90,7 @@ function x(e) {
                     className: g.description,
                     color: P,
                     variant: "text-sm/medium",
-                    children: I.description,
+                    children: O.description,
                 }),
             }),
             (0, r.jsx)(c.N4, {

@@ -1,4 +1,4 @@
-n.d(e, { Z: () => h });
+n.d(e, { Z: () => p });
 var l = n(255367),
     a = n(120356),
     r = n.n(a),
@@ -30,7 +30,7 @@ function f(t) {
         }),
     });
 }
-function h(t) {
+function p(t) {
     let { currentValue: e, onChange: n } = t;
     return (0, l.jsx)("div", {
         className: m.customStatusLabelSelector,

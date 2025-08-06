@@ -1,21 +1,21 @@
-var n = r(621523),
-    i = r(127849).RegExp,
-    s = n(function () {
-        var t = i("a", "y");
-        return (t.lastIndex = 2), null !== t.exec("abcd");
+var r = n(621523),
+    i = n(127849).RegExp,
+    o = r(function () {
+        var e = i("a", "y");
+        return (e.lastIndex = 2), null !== e.exec("abcd");
     }),
     a =
-        s ||
-        n(function () {
+        o ||
+        r(function () {
             return !i("a", "y").sticky;
         });
-t.exports = {
+e.exports = {
     BROKEN_CARET:
-        s ||
-        n(function () {
-            var t = i("^r", "gy");
-            return (t.lastIndex = 2), null !== t.exec("str");
+        o ||
+        r(function () {
+            var e = i("^r", "gy");
+            return (e.lastIndex = 2), null !== e.exec("str");
         }),
     MISSED_STICKY: a,
-    UNSUPPORTED_Y: s,
+    UNSUPPORTED_Y: o,
 };

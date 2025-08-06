@@ -20,7 +20,7 @@ function b(e) {
         (0, o.ZP)(() => {
             a(p.M4.SETTINGS_UPSELLS_VIEWED);
         }),
-        (0, r.jsx)(d.ZP, {
+        (0, r.jsx)(d.JZ, {
             title: t,
             description: n,
             buttonText: s ? x.intl.string(x.t["h+WsPT"]) : x.intl.string(x.t.A8t4NT),

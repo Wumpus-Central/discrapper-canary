@@ -1,12 +1,12 @@
-s.d(e, {
-    T: () => o,
-    X: () => r,
+n.d(t, {
+    T: () => a,
+    X: () => o,
 });
-var i = s(899517),
-    n = s(307854);
-function r() {
-    return (0, i.Y)("defaultCurrentScope", () => new n.s());
-}
+var r = n(899517),
+    i = n(307854);
 function o() {
-    return (0, i.Y)("defaultIsolationScope", () => new n.s());
+    return (0, r.Y)("defaultCurrentScope", () => new i.s());
+}
+function a() {
+    return (0, r.Y)("defaultIsolationScope", () => new i.s());
 }

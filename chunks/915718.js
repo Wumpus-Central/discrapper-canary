@@ -1,4 +1,4 @@
-n.d(t, { Z: () => L }), n(388685), n(539854);
+n.d(t, { Z: () => k }), n(388685), n(539854);
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -205,7 +205,7 @@ class D extends i.PureComponent {
             });
     }
 }
-function L(e) {
+function k(e) {
     var t;
     let { channel: n } = e,
         s = (0, m.Z)(),

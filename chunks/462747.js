@@ -8,15 +8,15 @@ var l = t(255367),
     a = t(239091),
     u = t(129861),
     d = t(939863),
-    _ = t(670188),
-    f = t(314897),
+    f = t(670188),
+    g = t(314897),
     h = t(158776),
-    g = t(885110),
-    m = t(594174),
-    v = t(376108),
-    p = t(765305),
-    x = t(388032),
-    j = t(960689);
+    _ = t(885110),
+    v = t(594174),
+    m = t(376108),
+    x = t(765305),
+    j = t(388032),
+    p = t(960689);
 function b(e) {
     for (var n = 1; n < arguments.length; n++) {
         var t = null != arguments[n] ? arguments[n] : {},
@@ -63,17 +63,17 @@ function Z(e, n) {
 function y(e) {
     let { children: n } = e;
     return (0, l.jsxs)("div", {
-        className: j.emptyContainer,
+        className: p.emptyContainer,
         children: [
             (0, l.jsx)(d.Z, {
                 children: (0, l.jsx)("div", {
-                    className: j.circle,
+                    className: p.circle,
                     children: (0, l.jsx)(s.BFJ, {
                         size: "custom",
                         color: "currentColor",
                         height: 40,
                         width: 40,
-                        className: j.icon,
+                        className: p.icon,
                     }),
                 }),
             }),
@@ -86,8 +86,8 @@ function P() {
         children: (0, l.jsx)(s.X6q, {
             color: "header-primary",
             variant: "heading-xl/semibold",
-            className: j.title,
-            children: x.intl.string(x.t.hW0mBQ),
+            className: p.title,
+            children: j.intl.string(j.t.hW0mBQ),
         }),
     });
 }
@@ -96,46 +96,46 @@ function C() {
         children: (0, l.jsx)(s.X6q, {
             color: "header-secondary",
             variant: "heading-md/semibold",
-            className: j.errorTitle,
-            children: x.intl.string(x.t.obChXl),
+            className: p.errorTitle,
+            children: j.intl.string(j.t.obChXl),
         }),
     });
 }
-function I(e) {
+function N(e) {
     let { count: n } = e;
     return (0, l.jsxs)("div", {
-        className: j.listRow,
+        className: p.listRow,
         children: [
             (0, l.jsx)("div", {
-                className: o()(j.listRowCircle, j.listAvatar),
+                className: o()(p.listRowCircle, p.listAvatar),
                 children: (0, l.jsx)(s.BFJ, {
                     size: "custom",
                     color: "currentColor",
                     height: 14,
                     width: 14,
-                    className: j.icon,
+                    className: p.icon,
                 }),
             }),
             (0, l.jsx)(s.Text, {
                 color: "text-default",
                 variant: "text-md/normal",
-                children: x.intl.format(x.t.BdQTfX, { userRemainCount: n }),
+                children: j.intl.format(j.t.BdQTfX, { userRemainCount: n }),
             }),
         ],
     });
 }
-function N(e) {
+function E(e) {
     let { eventUser: n, guildId: t, onContextMenu: r } = e,
         a = i.useRef(null),
-        d = (0, c.e7)([m.default], () => m.default.getUser(n.user_id)),
-        v = (0, c.e7)(
-            [g.Z, h.Z, f.default],
-            () => (n.user_id === f.default.getId() ? g.Z.getStatus() : h.Z.getStatus(n.user_id, t)),
+        d = (0, c.e7)([v.default], () => v.default.getUser(n.user_id)),
+        m = (0, c.e7)(
+            [_.Z, h.Z, g.default],
+            () => (n.user_id === g.default.getId() ? _.Z.getStatus() : h.Z.getStatus(n.user_id, t)),
             [n.user_id, t],
         );
     return null == d
         ? null
-        : (0, l.jsx)(_.Z, {
+        : (0, l.jsx)(f.Z, {
               targetElementRef: a,
               userId: n.user_id,
               guildId: t,
@@ -143,14 +143,14 @@ function N(e) {
               spacing: 16,
               children: (e, i) => {
                   var c;
-                  let { isShown: _ } = i;
+                  let { isShown: f } = i;
                   return (0, l.jsxs)(
                       s.P3F,
                       Z(
                           b(
                               {
                                   innerRef: a,
-                                  className: o()(j.listRow, j.interactiveRow, { [j.selected]: _ }),
+                                  className: o()(p.listRow, p.interactiveRow, { [p.selected]: f }),
                                   onContextMenu: (e) => r(e, d),
                               },
                               e,
@@ -161,13 +161,13 @@ function N(e) {
                                       src: d.getAvatarURL(t, 24),
                                       "aria-label": d.username,
                                       size: s.EFr.SIZE_24,
-                                      className: j.listAvatar,
-                                      status: v,
+                                      className: p.listAvatar,
+                                      status: m,
                                   }),
                                   (0, l.jsx)(u.Z, {
                                       user: d,
-                                      className: j.listName,
-                                      discriminatorClass: j.listDiscriminator,
+                                      className: p.listName,
+                                      discriminatorClass: p.listDiscriminator,
                                       nick: null == (c = n.member) ? void 0 : c.nick,
                                   }),
                               ],
@@ -177,14 +177,14 @@ function N(e) {
               },
           });
 }
-function E(e) {
+function I(e) {
     let { eventUsers: n, guildId: t, usersNotShownCount: i = 0, onContextMenu: r } = e;
     return (0, l.jsxs)(s.zJl, {
-        className: j.listScroller,
+        className: p.listScroller,
         children: [
             n.map((e) =>
                 (0, l.jsx)(
-                    N,
+                    E,
                     {
                         guildId: t,
                         eventUser: e,
@@ -193,14 +193,14 @@ function E(e) {
                     e.user_id,
                 ),
             ),
-            i > 0 && (0, l.jsx)(I, { count: i }),
+            i > 0 && (0, l.jsx)(N, { count: i }),
         ],
     });
 }
 function O(e) {
     let { children: n, style: t } = e;
     return (0, l.jsx)("div", {
-        className: j.container,
+        className: p.container,
         style: null != t ? t : {},
         children: n,
     });
@@ -214,13 +214,13 @@ function S(e) {
 }
 function T(e) {
     let { guildEvent: n, recurrenceId: i, eventUsers: r, loading: o, error: c, containerHeight: u } = e,
-        d = (0, v.Z)(n.guild_id, n.id, i);
+        d = (0, m.Z)(n.guild_id, n.id, i);
     if (o && 0 === r.length)
         return (0, l.jsx)(S, {
             height: u,
             children: (0, l.jsx)(s.$jN, {
                 type: s.$jN.Type.SPINNING_CIRCLE,
-                className: j.spinner,
+                className: p.spinner,
             }),
         });
     if (null != c && 0 === r.length)
@@ -228,16 +228,16 @@ function T(e) {
             height: u,
             children: (0, l.jsx)(C, {}),
         });
-    let _ = 0;
+    let f = 0;
     return (
-        r.length >= p.rC && d > p.rC && (_ = Math.max(d - r.length, 0)),
+        r.length >= x.rC && d > x.rC && (f = Math.max(d - r.length, 0)),
         0 === r.length
             ? (0, l.jsx)(S, {
                   height: u,
                   children: (0, l.jsx)(P, {}),
               })
             : (0, l.jsx)(O, {
-                  children: (0, l.jsx)(E, {
+                  children: (0, l.jsx)(I, {
                       eventUsers: r,
                       guildId: n.guild_id,
                       onContextMenu: function (e, n) {
@@ -248,7 +248,7 @@ function T(e) {
                               return (t) => (0, l.jsx)(e, Z(b({}, t), { user: n }));
                           });
                       },
-                      usersNotShownCount: _,
+                      usersNotShownCount: f,
                   }),
               })
     );

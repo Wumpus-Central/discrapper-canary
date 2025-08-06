@@ -14,8 +14,8 @@ var r = n(255367),
 function g(e) {
     let { user: t, guildId: n, channelId: g, onClose: b } = e,
         { mutualFriends: j } = (0, s.Z)(t),
-        { analyticsLocations: h } = (0, a.ZP)(),
-        { context: y, trackUserProfileAction: v } = (0, c.KZ)(),
+        { analyticsLocations: y } = (0, a.ZP)(),
+        { context: h, trackUserProfileAction: v } = (0, c.KZ)(),
         O = (0, i.Z)();
     l.useEffect(() => {
         (0, d.Z)(t.id, O);
@@ -47,11 +47,11 @@ function g(e) {
                         });
                 }
                 return e;
-            })({}, y)),
+            })({}, h)),
             (n = n =
                 {
                     userId: e,
-                    sourceAnalyticsLocations: h,
+                    sourceAnalyticsLocations: y,
                 }),
             Object.getOwnPropertyDescriptors
                 ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))

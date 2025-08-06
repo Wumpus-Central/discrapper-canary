@@ -180,13 +180,12 @@ function E(t) {
                                 children: [
                                     (0, r.jsx)(d.rT, {
                                         title: x.intl.string(x.t["1v01go"]),
-                                        children: (0, r.jsx)(d.ZP, {
+                                        children: (0, r.jsx)(d.JZ, {
                                             title: x.intl.string(x.t.bwxY39),
                                             description: x.intl.string(x.t.NTnf1d),
                                             titleVariant: "text-md/medium",
                                             descriptionVariant: "text-xs/medium",
                                             buttonText: x.intl.string(x.t.QdfUHB),
-                                            buttonColor: l.Tt.PRIMARY,
                                             onButtonPress: () => {
                                                 u.default.track(p.rMx.USER_REMEDIATION_ACTION, {
                                                     action: j.l.GOTO_BLOCK,

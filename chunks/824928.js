@@ -1,4 +1,4 @@
-var n = r(98405),
-    i = r(127849),
-    s = r(25124);
-n({ global: !0 }, { Reflect: {} }), s(i.Reflect, "Reflect", !0);
+var r = n(98405),
+    i = n(127849),
+    o = n(25124);
+r({ global: !0 }, { Reflect: {} }), o(i.Reflect, "Reflect", !0);

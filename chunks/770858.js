@@ -155,7 +155,7 @@ function x() {
         n = E(),
         l = (0, b.mv)();
     return t === g.jP.SIDEBAR
-        ? (0, r.jsx)(S, {})
+        ? (0, r.jsx)(S, { onClick: l })
         : t === g.jP.POPOUT
           ? (0, r.jsx)(O.Z, {
                 targetElementRef: e,

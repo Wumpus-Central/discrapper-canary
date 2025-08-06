@@ -90,9 +90,14 @@ let N = function (e) {
         L = null == D || null == (t = D.discount) ? void 0 : t.amount,
         x = P ? T : I,
         M = P ? p.Z : _.Z,
-        { step: k, breadcrumbs: j, startedPaymentFlowWithPaymentSourcesRef: U } = (0, c.JL)();
+        {
+            step: k,
+            breadcrumbs: j,
+            startedPaymentFlowWithPaymentSourcesRef: U,
+            isEligibleForPremiumBrandRefreshWowMomentConfirmation: G,
+        } = (0, c.JL)();
     if (null == j || 0 === j.length) return null;
-    let G = j.flatMap((e) => {
+    let B = j.flatMap((e) => {
         let t = e.useBreadcrumbLabel(v),
             n = e.sectionHeaderText;
         return null != t
@@ -103,62 +108,71 @@ let N = function (e) {
               }
             : [];
     });
-    if (0 === G.length) return null;
-    let B = (G = G.filter((e) => {
+    if (0 === B.length) return null;
+    let Z = (B = B.filter((e) => {
             let t = e.id !== u.h8.ADD_PAYMENT_STEPS,
                 n = e.id === u.h8.ADD_PAYMENT_STEPS && !U.current;
             return !v || (v && (t || n));
         })).find((e) => e.id === k),
-        Z =
-            null != (i = null == B || null == (n = B.sectionHeaderText) ? void 0 : n.call(B))
+        F =
+            null != (i = null == Z || null == (n = Z.sectionHeaderText) ? void 0 : n.call(Z))
                 ? i
-                : null == B
+                : null == Z
                   ? void 0
-                  : B.label,
-        F = null != Z && null != k,
-        V = w && F && k === u.h8.REVIEW;
-    return (0, r.jsxs)("div", {
-        className: E.container,
-        children: [
-            (0, r.jsxs)(a.$, {
-                color: P ? "nitro-pink" : "nitro-green",
-                className: o()(E.headerContainer, { [E.containerBottomPadding]: !F }),
-                children: [
-                    (0, r.jsx)(A, { isTier2: P }),
-                    !f &&
-                        (0, r.jsx)(s.olH, {
-                            "data-migration-pending": !0,
-                            hideOnFullscreen: b,
-                            onClick: y,
-                            className: E.closeButtonPosition,
-                        }),
-                    (0, r.jsx)("img", {
-                        src: x,
-                        alt: "",
-                        className: V ? E.bigWumpus : E.wumpus,
-                    }),
-                    (0, r.jsx)("div", {
-                        className: E.textContainer,
-                        children: (0, r.jsx)(M, {
-                            color: R ? "black" : "white",
-                            className: E.wordmark,
-                        }),
-                    }),
-                ],
-            }),
-            (N || C) && (0, r.jsx)(m.Z, { discountAmount: L }),
-            F &&
-                (0, r.jsx)(S, {
-                    isOneStepCheckout: w,
-                    headerText: Z,
-                    step: k,
-                    filteredBreadcrumbs: G,
-                }),
-            V &&
-                (0, r.jsx)("div", {
-                    className: E.bodyGradientContainer,
-                    children: (0, r.jsx)("div", { className: E.bodyGradient }),
-                }),
-        ],
-    });
+                  : Z.label,
+        V = null != F && null != k,
+        H = w && V && k === u.h8.REVIEW,
+        Y = P ? "nitro-pink" : "nitro-green";
+    return G && k === u.h8.CONFIRM
+        ? (0, r.jsx)("div", {
+              className: E.container,
+              children: (0, r.jsx)(a.$, {
+                  color: Y,
+                  className: E.headerContainer,
+              }),
+          })
+        : (0, r.jsxs)("div", {
+              className: E.container,
+              children: [
+                  (0, r.jsxs)(a.$, {
+                      color: Y,
+                      className: o()(E.headerContainer, { [E.containerBottomPadding]: !V }),
+                      children: [
+                          (0, r.jsx)(A, { isTier2: P }),
+                          !f &&
+                              (0, r.jsx)(s.olH, {
+                                  "data-migration-pending": !0,
+                                  hideOnFullscreen: b,
+                                  onClick: y,
+                                  className: E.closeButtonPosition,
+                              }),
+                          (0, r.jsx)("img", {
+                              src: x,
+                              alt: "",
+                              className: H ? E.bigWumpus : E.wumpus,
+                          }),
+                          (0, r.jsx)("div", {
+                              className: E.textContainer,
+                              children: (0, r.jsx)(M, {
+                                  color: R ? "black" : "white",
+                                  className: E.wordmark,
+                              }),
+                          }),
+                      ],
+                  }),
+                  (N || C) && (0, r.jsx)(m.Z, { discountAmount: L }),
+                  V &&
+                      (0, r.jsx)(S, {
+                          isOneStepCheckout: w,
+                          headerText: F,
+                          step: k,
+                          filteredBreadcrumbs: B,
+                      }),
+                  H &&
+                      (0, r.jsx)("div", {
+                          className: E.bodyGradientContainer,
+                          children: (0, r.jsx)("div", { className: E.bodyGradient }),
+                      }),
+              ],
+          });
 };

@@ -1,6 +1,6 @@
 n.d(t, {
-    Z: () => C,
-    p: () => E,
+    Z: () => v,
+    p: () => S,
 }),
     n(539854),
     n(388685),
@@ -16,10 +16,11 @@ var r = n(255367),
     u = n(804932),
     d = n(725739),
     h = n(370774),
-    p = n(982183),
-    f = n(388032),
-    g = n(381231);
-function m(e) {
+    p = n(334426),
+    f = n(982183),
+    g = n(388032),
+    m = n(381231);
+function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -44,7 +45,7 @@ function m(e) {
     }
     return e;
 }
-function b(e, t) {
+function O(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -62,7 +63,7 @@ function b(e, t) {
         e
     );
 }
-function O(e, t) {
+function _(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -82,45 +83,45 @@ function O(e, t) {
     }
     return i;
 }
-let _ = () => {
+let y = () => {
         let e = (0, h.ux)();
         return (0, i.useMemo)(() => {
-            let t = [p.V5.ALL, p.V5.MENTIONS];
-            return e && t.push(p.V5.BOOKMARKS), t.push(p.V5.ANNOUNCEMENTS), t;
+            let t = [f.V5.ALL, f.V5.MENTIONS];
+            return e && t.push(f.V5.BOOKMARKS), t.push(f.V5.ANNOUNCEMENTS), t;
         }, [e]);
     },
-    y = {
-        [p.V5.ALL]: !1,
-        [p.V5.BOOKMARKS]: !1,
-        [p.V5.MENTIONS]: !1,
-        [p.V5.ANNOUNCEMENTS]: !1,
+    C = {
+        [f.V5.ALL]: !1,
+        [f.V5.BOOKMARKS]: !1,
+        [f.V5.MENTIONS]: !1,
+        [f.V5.ANNOUNCEMENTS]: !1,
     };
-function C() {
-    let e = p.by,
-        t = _(),
-        [n, l] = (0, i.useState)(y),
+function v() {
+    let e = (0, f.NV)(),
+        t = y(),
+        [n, l] = (0, i.useState)(C),
         a = t.filter((e) => !n[e]),
         { selectedFilter: c, setSelectedFilter: u } = (0, d.Z)();
     return (0, r.jsxs)("div", {
-        className: g.filters,
+        className: m.filters,
         children: [
             (0, r.jsx)(s.njP, {
                 look: "grey",
                 orientation: "horizontal",
                 onItemSelect: u,
                 selectedItem: c,
-                className: g.tabBar,
+                className: m.tabBar,
                 children: t.flatMap((t) =>
                     (0, r.jsx)(
                         s.njP.Item,
                         {
                             id: t,
                             "aria-label": t,
-                            className: o()(g.filterButton, { [g.selected]: c === t }),
+                            className: o()(m.filterButton, { [m.selected]: c === t }),
                             disableItemStyles: !0,
-                            children: (0, r.jsx)(v, {
+                            children: (0, r.jsx)(j, {
                                 setIsVisible: (e) => {
-                                    l((n) => b(m({}, n), { [t]: e }));
+                                    l((n) => O(b({}, n), { [t]: e }));
                                 },
                                 children: e[t],
                             }),
@@ -129,11 +130,11 @@ function C() {
                     ),
                 ),
             }),
-            (0, r.jsx)(j, { hiddenFilters: a }),
+            (0, r.jsx)(E, { hiddenFilters: a }),
         ],
     });
 }
-function v(e) {
+function j(e) {
     let { children: t, setIsVisible: n } = e,
         i = (0, a.O)(n);
     return (0, r.jsx)("span", {
@@ -141,13 +142,13 @@ function v(e) {
         children: t,
     });
 }
-function j(e) {
+function E(e) {
     let { hiddenFilters: t } = e,
         n = (0, u.fJ)(),
         l = (0, i.useRef)(null),
         [o, a] = (0, i.useState)(!1),
-        [h, f] = (0, i.useState)(!1),
-        _ = p.by,
+        [h, p] = (0, i.useState)(!1),
+        g = (0, f.NV)(),
         { selectedFilter: y, setSelectedFilter: C } = (0, d.Z)();
     return 0 === t.length
         ? null
@@ -160,11 +161,11 @@ function j(e) {
               onRequestOpen: () => a(!0),
               renderPopout: (e) => {
                   var { closePopout: i } = e,
-                      l = O(e, ["closePopout"]);
+                      l = _(e, ["closePopout"]);
                   return (0, r.jsx)(
                       s.v2r,
-                      b(
-                          m(
+                      O(
+                          b(
                               {
                                   onSelect: () => {},
                                   navId: "notifications-sidebar-filters",
@@ -180,17 +181,17 @@ function j(e) {
                                       {
                                           id: e,
                                           action: () => {
-                                              C(y === e ? p.V5.ALL : e),
+                                              C(y === e ? f.V5.ALL : e),
                                                   (0, u.RZ)({
                                                       section: e,
                                                       enabled: !0,
                                                       viewId: n,
                                                   });
                                           },
-                                          label: _[e],
+                                          label: g[e],
                                           dontCloseOnAction: !0,
-                                          className: g.filterMenuItem,
-                                          icon: e === y ? (0, r.jsx)(S, {}) : void 0,
+                                          className: m.filterMenuItem,
+                                          icon: e === y ? (0, r.jsx)(x, {}) : void 0,
                                       },
                                       e,
                                   ),
@@ -202,13 +203,13 @@ function j(e) {
               children: (e) =>
                   (0, r.jsx)(
                       s.P3F,
-                      b(m({}, e), {
-                          className: g.filterButton,
+                      O(b({}, e), {
+                          className: m.filterButton,
                           innerRef: l,
-                          onMouseEnter: () => f(!0),
-                          onMouseLeave: () => f(!1),
+                          onMouseEnter: () => p(!0),
+                          onMouseLeave: () => p(!1),
                           children: (0, r.jsx)(s.xhG, {
-                              className: g.moreButtonIcon,
+                              className: m.moreButtonIcon,
                               size: "xxs",
                               color: h || o ? c.Z.INTERACTIVE_HOVER : c.Z.INTERACTIVE_NORMAL,
                           }),
@@ -216,15 +217,16 @@ function j(e) {
                   ),
           });
 }
-function E(e) {
+function S(e) {
     let { className: t } = e,
         n = (0, u.fJ)(),
-        l = _(),
+        l = y(),
         a = (0, i.useRef)(null),
-        [h, y] = (0, i.useState)(!1),
-        [C, v] = (0, i.useState)(!1),
-        j = p.by,
-        { selectedFilter: E, setSelectedFilter: x } = (0, d.Z)();
+        [h, C] = (0, i.useState)(!1),
+        [v, j] = (0, i.useState)(!1),
+        E = (0, f.NV)(),
+        { selectedFilter: S, setSelectedFilter: I } = (0, d.Z)(),
+        P = (0, p.d)((e) => e.setInboxReadState);
     return 0 === l.length
         ? null
         : (0, r.jsx)(s.yRy, {
@@ -232,20 +234,20 @@ function E(e) {
               align: "left",
               shouldShow: h,
               targetElementRef: a,
-              onRequestClose: () => y(!1),
-              onRequestOpen: () => y(!0),
+              onRequestClose: () => C(!1),
+              onRequestOpen: () => C(!0),
               autoInvert: !1,
               renderPopout: (e) => {
                   var { closePopout: t } = e,
-                      i = O(e, ["closePopout"]);
+                      i = _(e, ["closePopout"]);
                   return (0, r.jsx)(
                       s.v2r,
-                      b(
-                          m(
+                      O(
+                          b(
                               {
                                   onSelect: () => {},
                                   navId: "notifications-sidebar-filters",
-                                  "aria-label": f.intl.string(f.t.UdhTtr),
+                                  "aria-label": g.intl.string(g.t.UdhTtr),
                               },
                               i,
                           ),
@@ -257,17 +259,19 @@ function E(e) {
                                       {
                                           id: e,
                                           action: () => {
-                                              x(E === e ? p.V5.ALL : e),
+                                              (e === S || e === f.V5.ALL) && S !== f.V5.ALL
+                                                  ? (I(f.V5.ALL), P(!1))
+                                                  : I(e),
                                                   (0, u.RZ)({
                                                       section: e,
-                                                      enabled: E !== e,
+                                                      enabled: S !== e,
                                                       viewId: n,
                                                   });
                                           },
-                                          label: j[e],
+                                          label: E[e],
                                           dontCloseOnAction: !0,
-                                          className: g.filterMenuItem,
-                                          icon: e === E ? (0, r.jsx)(S, {}) : void 0,
+                                          className: m.filterMenuItem,
+                                          icon: e === S ? (0, r.jsx)(x, {}) : void 0,
                                       },
                                       e,
                                   ),
@@ -279,36 +283,36 @@ function E(e) {
               children: (e) =>
                   (0, r.jsx)(s.ua7, {
                       position: "bottom",
-                      forceOpen: C,
-                      shouldShow: C && !h,
-                      text: f.intl.string(f.t.UdhTtr),
+                      forceOpen: v,
+                      shouldShow: v && !h,
+                      text: g.intl.string(g.t.UdhTtr),
                       children: () =>
                           (0, r.jsx)(
                               s.P3F,
-                              b(m({}, e), {
-                                  className: o()(t, g.headerButton),
+                              O(b({}, e), {
+                                  className: o()(t, m.headerButton),
                                   innerRef: a,
-                                  "aria-label": f.intl.string(f.t.UdhTtr),
+                                  "aria-label": g.intl.string(g.t.UdhTtr),
                                   onClick: (t) => {
                                       e.onClick(t);
                                   },
                                   onMouseEnter: () => {
                                       var t;
-                                      v(!0), null == (t = e.onMouseEnter) || t.call(e);
+                                      j(!0), null == (t = e.onMouseEnter) || t.call(e);
                                   },
                                   onMouseLeave: () => {
-                                      v(!1);
+                                      j(!1);
                                   },
                                   children: (0, r.jsx)(s.gXV, {
                                       size: "xs",
-                                      color: C || h ? c.Z.INTERACTIVE_HOVER : c.Z.INTERACTIVE_NORMAL,
+                                      color: v || h ? c.Z.INTERACTIVE_HOVER : c.Z.INTERACTIVE_NORMAL,
                                   }),
                               }),
                           ),
                   }),
           });
 }
-let S = () =>
+let x = () =>
     (0, r.jsx)(s.owK, {
         size: "refresh_sm",
         color: "".concat(c.Z.BG_BRAND, " !important"),

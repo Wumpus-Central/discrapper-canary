@@ -1,4 +1,4 @@
-n.d(t, { Z: () => D }), n(784620), n(973216);
+n.d(t, { Z: () => Q }), n(784620), n(973216);
 var r = n(255367),
     s = n(73800),
     o = n(120356),
@@ -10,24 +10,24 @@ var r = n(255367),
     d = n(393238),
     p = n(410030),
     m = n(44315),
-    f = n(617136),
-    g = n(509212),
+    g = n(617136),
+    f = n(509212),
     x = n(272008),
     h = n(113434),
-    b = n(497505),
-    j = n(974390),
-    _ = n(475595),
+    j = n(497505),
+    _ = n(974390),
+    b = n(475595),
     v = n(18578),
     C = n(623249),
     y = n(685613),
     O = n(110560),
     E = n(670638),
     S = n(251360),
-    w = n(19148),
-    T = n(46140),
+    T = n(19148),
+    w = n(46140),
     P = n(642145),
-    A = n(981631),
-    N = n(388032),
+    N = n(981631),
+    A = n(388032),
     R = n(508936);
 function B(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -75,12 +75,12 @@ function k(e, t) {
 function I(e) {
     var t;
     let { quest: n, errorHints: o, warningHints: a, isDarkTheme: l, sourceQuestContent: p } = e,
-        { ref: f, height: g = 0 } = (0, d.ZP)([o]),
+        { ref: g, height: f = 0 } = (0, d.ZP)([o]),
         x = (null == (t = n.userStatus) ? void 0 : t.completedAt) != null,
-        b = (0, h.z)(n),
-        { type: j, hints: _ } = s.useMemo(
+        j = (0, h.z)(n),
+        { type: _, hints: b } = s.useMemo(
             () =>
-                x || b
+                x || j
                     ? {
                           type: 2,
                           hints: [],
@@ -99,21 +99,21 @@ function I(e) {
                               type: 2,
                               hints: [],
                           },
-            [o, x, b, a],
+            [o, x, j, a],
         ),
-        v = 2 !== j,
+        v = 2 !== _,
         y = (0, u.q_F)({
             opacity: +!!v,
-            height: v ? g : 0,
+            height: v ? f : 0,
             config: P.Y,
         }),
-        O = 0 === j ? u.Mgn : u.d3s,
-        E = (0, m.Lq)(A.Ilk.RED_345),
-        S = 0 === j ? E : l ? u.TVs.colors.TEXT_DEFAULT : u.TVs.colors.WHITE;
+        O = 0 === _ ? u.Mgn : u.d3s,
+        E = (0, m.Lq)(N.Ilk.RED_345),
+        S = 0 === _ ? E : l ? u.TVs.colors.TEXT_DEFAULT : u.TVs.colors.WHITE;
     return (0, r.jsx)(i.animated.div, {
         style: y,
         children: (0, r.jsxs)("div", {
-            ref: f,
+            ref: g,
             className: R.hints,
             children: [
                 (0, r.jsxs)("div", {
@@ -126,11 +126,11 @@ function I(e) {
                         (0, r.jsx)(u.Text, {
                             variant: "text-xs/medium",
                             color: l ? "text-muted" : "always-white",
-                            children: _.at(0),
+                            children: b.at(0),
                         }),
                     ],
                 }),
-                0 === j &&
+                0 === _ &&
                     (0, r.jsx)(c.zx, {
                         onClick: () =>
                             (0, C.y)({
@@ -141,7 +141,7 @@ function I(e) {
                         size: c.Ph.MIN,
                         look: c.iL.LINK,
                         color: c.Tt.CUSTOM,
-                        style: { color: (0, m.Lq)(A.Ilk.BLUE_345) },
+                        style: { color: (0, m.Lq)(N.Ilk.BLUE_345) },
                         children: "See Details",
                     }),
             ],
@@ -150,9 +150,9 @@ function I(e) {
 }
 function q(e) {
     let { quest: t, isHovering: n, showAssets: o } = e,
-        a = s.useMemo(() => (0, _.fh)(t, _.eC.HERO_IMAGE), [t]),
-        i = s.useMemo(() => (0, _.fh)(t, _.eC.HERO_VIDEO), [t]),
-        l = (0, j.h)(t, T.dr.QUEST_HOME_DESKTOP),
+        a = s.useMemo(() => (0, b.fh)(t, b.eC.HERO_IMAGE), [t]),
+        i = s.useMemo(() => (0, b.fh)(t, b.eC.HERO_VIDEO), [t]),
+        l = (0, _.h)(t, w.dr.QUEST_HOME_DESKTOP),
         { onAssetLoadComplete: c } = s.useContext(S.k);
     return (0, r.jsx)("div", {
         className: R.heroAssetCont,
@@ -164,7 +164,7 @@ function q(e) {
                         ? {
                               asset: a,
                               assetId: "QuestTileBanner",
-                              alt: N.intl.string(N.t.jnijW1),
+                              alt: A.intl.string(A.t.jnijW1),
                               className: R.heroAsset,
                           }
                         : void 0,
@@ -185,22 +185,22 @@ function q(e) {
             }),
     });
 }
-function D(e) {
+function Q(e) {
     var t, n, o, i, c;
     let {
             quest: d,
             isHovering: m,
-            errorHints: j,
-            warningHints: _,
+            errorHints: _,
+            warningHints: b,
             isVisibleInViewport: v,
             onCtxMenuClose: C,
-            onCtxMenuOpen: T,
+            onCtxMenuOpen: w,
             onCtxMenuSelect: P,
-            sourceQuestContent: D,
+            sourceQuestContent: Q,
         } = e,
-        Q = (0, g.PB)(d),
+        D = (0, f.PB)(d),
         V = (0, p.ZP)(),
-        L = ((0, l.wj)(V) ? A.BRd.DARK : A.BRd.LIGHT) === A.BRd.DARK,
+        L = ((0, l.wj)(V) ? N.BRd.DARK : N.BRd.LIGHT) === N.BRd.DARK,
         M = (0, h.tP)(d),
         Z = (null == (t = d.userStatus) ? void 0 : t.claimedAt) != null,
         W = (0, h.B6)(d.config.expiresAt, {
@@ -211,21 +211,21 @@ function D(e) {
         H = (null == (o = d.userStatus) ? void 0 : o.completedAt) != null,
         { onAssetLoadComplete: z } = s.useContext(S.k),
         F = s.useCallback(() => {
-            Q &&
-                ((0, g.zi)(d) ||
+            D &&
+                ((0, f.zi)(d) ||
                     U ||
                     (0, x.AH)(d.id, {
-                        questContent: b.jn.QUEST_HOME_DESKTOP,
-                        questContentCTA: f.jZ.ACCEPT_QUEST,
-                        sourceQuestContent: D,
+                        questContent: j.jn.QUEST_HOME_DESKTOP,
+                        questContentCTA: g.jZ.ACCEPT_QUEST,
+                        sourceQuestContent: Q,
                     }),
                 (0, O.openVideoQuestModal)({
                     quest: d,
-                    questContent: b.jn.QUEST_HOME_DESKTOP,
-                    sourceQuestContent: D,
-                    sourceQuestContentCTA: f.jZ.QUEST_HOME_TILE_HEADER_WATCH_VIDEO,
+                    questContent: j.jn.QUEST_HOME_DESKTOP,
+                    sourceQuestContent: Q,
+                    sourceQuestContentCTA: g.jZ.QUEST_HOME_TILE_HEADER_WATCH_VIDEO,
                 }));
-        }, [Q, d, U, D]);
+        }, [D, d, U, Q]);
     return (0, r.jsxs)("div", {
         className: R.container,
         children: [
@@ -259,24 +259,24 @@ function D(e) {
                                                 variant: "eyebrow",
                                                 color: "always-white",
                                                 className: R.eyebrowText,
-                                                children: N.intl.string(N.t.SKNnqq),
+                                                children: A.intl.string(A.t.SKNnqq),
                                             }),
                                         }),
-                                    Q &&
+                                    D &&
                                         (0, r.jsx)(u.ua7, {
                                             text: H
-                                                ? N.intl.string(N.t.YsCuyM)
+                                                ? A.intl.string(A.t.YsCuyM)
                                                 : U
-                                                  ? N.intl.string(N.t["74Kqra"])
-                                                  : (0, g.zi)(d)
-                                                    ? N.intl.string(N.t["I6JG4+"])
-                                                    : N.intl.string(N.t.umdNio),
+                                                  ? A.intl.string(A.t["74Kqra"])
+                                                  : (0, f.zi)(d)
+                                                    ? A.intl.string(A.t["I6JG4+"])
+                                                    : A.intl.string(A.t.umdNio),
                                             children: (e) =>
                                                 (0, r.jsx)(
                                                     u.P3F,
                                                     k(B({}, e), {
                                                         className: R.utilButtonWrapper,
-                                                        "aria-label": N.intl.string(N.t.RscU7O),
+                                                        "aria-label": A.intl.string(A.t.RscU7O),
                                                         onClick: F,
                                                         children: (0, r.jsx)(u.o1U, {
                                                             color: "currentColor",
@@ -286,21 +286,21 @@ function D(e) {
                                                 ),
                                         }),
                                     (0, r.jsx)(E.r, {
-                                        onOpen: T,
+                                        onOpen: w,
                                         onClose: C,
                                         onSelect: P,
-                                        questContent: b.jn.QUEST_HOME_DESKTOP,
+                                        questContent: j.jn.QUEST_HOME_DESKTOP,
                                         quest: d,
                                         hideLearnMore: !0,
                                         shouldShowDisclosure: !0,
                                         showShareLink: !0,
-                                        sourceQuestContent: D,
+                                        sourceQuestContent: Q,
                                         children: (e) =>
                                             (0, r.jsx)(
                                                 u.P3F,
                                                 k(B({}, e), {
                                                     className: R.utilButtonWrapper,
-                                                    "aria-label": N.intl.string(N.t.DEoVWV),
+                                                    "aria-label": A.intl.string(A.t.DEoVWV),
                                                     children: (0, r.jsx)(u.xhG, {
                                                         size: "md",
                                                         color: "currentColor",
@@ -311,7 +311,7 @@ function D(e) {
                                     }),
                                 ],
                             }),
-                            (0, r.jsx)(w.E, {
+                            (0, r.jsx)(T.E, {
                                 showPlaceholder: !v,
                                 width: 100,
                                 height: 30,
@@ -331,7 +331,7 @@ function D(e) {
                                     (0, r.jsx)(u.Text, {
                                         variant: "text-sm/medium",
                                         color: L ? "text-muted" : "always-white",
-                                        children: N.intl.format(N.t.buEvBw, {
+                                        children: A.intl.format(A.t.buEvBw, {
                                             brandName:
                                                 null != (c = null == (i = d.config.cosponsorMetadata) ? void 0 : i.name)
                                                     ? c
@@ -343,7 +343,7 @@ function D(e) {
                                         : (0, r.jsx)(u.Text, {
                                               variant: "text-sm/medium",
                                               color: L ? "text-muted" : "always-white",
-                                              children: N.intl.format(N.t["7D8r4O"], { expiryDate: W }),
+                                              children: A.intl.format(A.t["7D8r4O"], { expiryDate: W }),
                                           }),
                                 ],
                             }),
@@ -351,10 +351,10 @@ function D(e) {
                     }),
                     (0, r.jsx)(I, {
                         quest: d,
-                        errorHints: j,
-                        warningHints: _,
+                        errorHints: _,
+                        warningHints: b,
                         isDarkTheme: L,
-                        sourceQuestContent: D,
+                        sourceQuestContent: Q,
                     }),
                 ],
             }),

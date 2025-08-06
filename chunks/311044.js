@@ -14,8 +14,8 @@ var r = n(255367),
     g = n(714905);
 function b(e) {
     let { user: t, guildId: n, channelId: b, onClose: j } = e,
-        { analyticsLocations: h } = (0, a.ZP)(),
-        { context: y, trackUserProfileAction: v } = (0, s.KZ)(),
+        { analyticsLocations: y } = (0, a.ZP)(),
+        { context: h, trackUserProfileAction: v } = (0, s.KZ)(),
         { mutualFriends: O, mutualFriendsCount: x } = (0, d.Z)(t),
         _ = (0, i.Z)();
     return (
@@ -87,11 +87,11 @@ function b(e) {
                                                             });
                                                     }
                                                     return e;
-                                                })({}, y)),
+                                                })({}, h)),
                                                 (t = t =
                                                     {
                                                         userId: l.id,
-                                                        sourceAnalyticsLocations: h,
+                                                        sourceAnalyticsLocations: y,
                                                     }),
                                                 Object.getOwnPropertyDescriptors
                                                     ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))

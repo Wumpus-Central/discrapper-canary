@@ -3,17 +3,17 @@ var i = t(442837),
     r = t(431328),
     l = t(501655),
     o = t(427679),
-    a = t(592125),
-    c = t(430824);
+    c = t(592125),
+    a = t(430824);
 function s(e) {
     let {
             id: n,
             data: { guild: t, instance: s, speakers: u, participantCount: d },
             context: g,
         } = e,
-        p = (0, i.e7)([c.Z, a.Z], () => {
+        p = (0, i.e7)([a.Z, c.Z], () => {
             var e;
-            return c.Z.getGuild(null == (e = a.Z.getChannel(n)) ? void 0 : e.getGuildId());
+            return a.Z.getGuild(null == (e = c.Z.getChannel(n)) ? void 0 : e.getGuildId());
         }, [n]),
         f = (0, i.e7)([o.Z], () => o.Z.getStageInstanceByChannel(n), [n]),
         h = (0, r.w8)(n, l.pV.SPEAKER),

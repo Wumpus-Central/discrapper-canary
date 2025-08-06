@@ -34,11 +34,11 @@ function E(e) {
         }),
         E = (0, u.Z)(t),
         C = E.length > 0,
-        { shouldShow: O, notificationConfig: I } = (0, g._)(t, "GuildPowerupNotificationContainer"),
+        { shouldShow: I, notificationConfig: O } = (0, g._)(t, "GuildPowerupNotificationContainer"),
         y = [];
-    O && y.push(l.z.VANITY_URL_POWERUP_ROLLBACK_NOTIFICATION);
+    I && y.push(l.z.VANITY_URL_POWERUP_ROLLBACK_NOTIFICATION);
     let [P, w] = (0, s.ZT)(y, t),
-        N = null != P && null != I,
+        N = null != P && null != O,
         Z = (0, c.W)(t, "GuildPowerupNotificationContainer"),
         S = [];
     N ||
@@ -65,7 +65,7 @@ function E(e) {
                         (0, r.jsx)(
                             f.Z,
                             {
-                                notificationConfig: I,
+                                notificationConfig: O,
                                 markAsDismissed: (e) => {
                                     w(e);
                                 },

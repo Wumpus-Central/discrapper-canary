@@ -1,16 +1,17 @@
-s.d(e, {
-    aF: () => r,
-    s3: () => o,
+n.d(t, {
+    aF: () => a,
+    s3: () => s,
 });
-var i = s(833873),
-    n = s(356442);
-function r() {
-    let t = (0, n.c)();
-    return (0, i.G)(t).getIsolationScope();
-}
+var r = n(833873),
+    i = n(356442);
 function o() {
-    return (function () {
-        let t = (0, n.c)();
-        return (0, i.G)(t).getCurrentScope();
-    })().getClient();
+    let e = (0, i.c)();
+    return (0, r.G)(e).getCurrentScope();
+}
+function a() {
+    let e = (0, i.c)();
+    return (0, r.G)(e).getIsolationScope();
+}
+function s() {
+    return o().getClient();
 }

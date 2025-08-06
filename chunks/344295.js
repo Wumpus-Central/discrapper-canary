@@ -21,8 +21,8 @@ var r = n(255367),
     j = n(703656),
     I = n(108427),
     O = n(314897),
-    N = n(896797),
-    S = n(701190),
+    S = n(896797),
+    N = n(701190),
     C = n(626135),
     y = n(630388),
     A = n(63063),
@@ -370,14 +370,14 @@ class H extends i.PureComponent {
             });
     }
 }
-let K = c.ZP.connectStores([S.Z, N.Z, O.default, x.Z, p.Z], (e) => {
+let K = c.ZP.connectStores([N.Z, S.Z, O.default, x.Z, p.Z], (e) => {
     var t;
     let { inviteKey: n } = e;
     return {
-        invite: null != (t = S.Z.getInvite(n)) ? t : {},
+        invite: null != (t = N.Z.getInvite(n)) ? t : {},
         nativeAppState: x.Z.getState(n),
         authenticated: O.default.isAuthenticated(),
-        defaultRoute: N.Z.defaultRoute,
+        defaultRoute: S.Z.defaultRoute,
         isUnderage: p.Z.isUnderageAnonymous(),
     };
 })(H);

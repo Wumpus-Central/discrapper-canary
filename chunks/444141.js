@@ -53,9 +53,9 @@ function f(e, t) {
 function p(e) {
     let { user: t, guildId: n, channelId: p, displayProfile: m, onClose: g } = e,
         { analyticsLocations: b, sourceAnalyticsLocations: j } = (0, o.ZP)(),
-        { context: h, trackUserProfileAction: y } = (0, a.KZ)(),
+        { context: y, trackUserProfileAction: h } = (0, a.KZ)(),
         v = (0, s.ZP)(t.id, n);
-    return (null == v ? void 0 : v.guildId) == null || null == h
+    return (null == v ? void 0 : v.guildId) == null || null == y
         ? null
         : (null == m ? void 0 : m.guildId) != null
           ? (0, r.jsx)(l.sNh, {
@@ -65,18 +65,18 @@ function p(e) {
                 action: () => {
                     null == g || g(),
                         (0, c.openUserProfileModal)(
-                            f(u({}, h), {
+                            f(u({}, y), {
                                 showGuildProfile: !1,
                                 sourceAnalyticsLocations: j,
                             }),
                         ),
-                        y(
+                        h(
                             u(
                                 {
                                     action: "PRESS_VIEW_MAIN_PROFILE",
                                     analyticsLocations: b,
                                 },
-                                h,
+                                y,
                             ),
                         );
                 },
@@ -88,18 +88,18 @@ function p(e) {
                 action: () => {
                     null == g || g(),
                         (0, c.openUserProfileModal)(
-                            f(u({}, h), {
+                            f(u({}, y), {
                                 showGuildProfile: !0,
                                 sourceAnalyticsLocations: j,
                             }),
                         ),
-                        y(
+                        h(
                             u(
                                 {
                                     action: "PRESS_VIEW_SERVER_PROFILE",
                                     analyticsLocations: b,
                                 },
-                                h,
+                                y,
                             ),
                         );
                 },

@@ -1,15 +1,15 @@
-var n = r(580983),
-    i = r(179122),
-    s = r(880181),
-    a = r(796138),
-    o = r(16721),
-    u = TypeError;
-t.exports = function (t, e) {
-    var r = t.exec;
-    if (s(r)) {
-        var h = n(r, t, e);
-        return null !== h && i(h), h;
+var r = n(580983),
+    i = n(179122),
+    o = n(880181),
+    a = n(796138),
+    s = n(16721),
+    l = TypeError;
+e.exports = function (e, t) {
+    var n = e.exec;
+    if (o(n)) {
+        var c = r(n, e, t);
+        return null !== c && i(c), c;
     }
-    if ("RegExp" === a(t)) return n(o, t, e);
-    throw new u("RegExp#exec called on incompatible receiver");
+    if ("RegExp" === a(e)) return r(s, e, t);
+    throw new l("RegExp#exec called on incompatible receiver");
 };

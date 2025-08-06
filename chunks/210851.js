@@ -7,12 +7,12 @@ var r = n(255367),
 let l = function (e) {
     var t, n;
     let { assetKey: l, filters: c, initialValue: u, onFileChange: d, title: p } = e,
-        [m, f] = s.useState(null),
-        g = s.useRef(null);
+        [m, g] = s.useState(null),
+        f = s.useRef(null);
     return (
         s.useEffect(
             () => () => {
-                null != g.current && URL.revokeObjectURL(g.current);
+                null != f.current && URL.revokeObjectURL(f.current);
             },
             [],
         ),
@@ -70,9 +70,9 @@ let l = function (e) {
                     buttonText: "Browse",
                     placeholder: "Select an asset",
                     onFileSelect: function (e) {
-                        if ((f(null != e ? e : null), null == e)) return;
+                        if ((g(null != e ? e : null), null == e)) return;
                         let t = URL.createObjectURL(e);
-                        g.current = t;
+                        f.current = t;
                         let n = new URL(t);
                         n.searchParams.append("mimetype", e.type),
                             n.searchParams.append("name", e.name),

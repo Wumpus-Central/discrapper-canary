@@ -1,4 +1,4 @@
-n.d(t, { U: () => D }), n(388685), n(781311);
+n.d(t, { U: () => x }), n(388685), n(781311);
 var r = n(255367),
     i = n(73800),
     o = n(688619),
@@ -82,14 +82,15 @@ let N = (0, c.Un)({
         name: "CustomThemeColorPickerControl",
         renderLoader: A,
     }),
-    C = 5;
-function R(e, t) {
+    C = 5,
+    R = "#000000";
+function P(e, t) {
     return e.length < 1 ? 0 : (t / (e.length - 1)) * 80 + 10;
 }
-function P(e) {
+function w(e) {
     let { colors: t, selectedIndex: n, onColorSelect: o } = e,
         [a, s] = i.useMemo(() => {
-            let e = t.map((e, n) => R(t, n)),
+            let e = t.map((e, n) => P(t, n)),
                 n = t.map((t, n) => "".concat(t, " ").concat(e[n], "%")).join(", ");
             return [e, { background: "linear-gradient(to right, ".concat(n, ")") }];
         }, [t]);
@@ -124,12 +125,21 @@ function P(e) {
         }),
     });
 }
-function w(e) {
+function D(e) {
+    let { color: t } = e,
+        n = i.useMemo(() => ({ backgroundColor: (0, u.FX)(t) ? t : R }), [t]);
+    return (0, r.jsx)("div", {
+        className: O.hexColorPreview,
+        style: n,
+        "aria-label": "Color preview",
+    });
+}
+function L(e) {
     if (!(0, u.FX)(e)) return e;
     let t = a()(e);
     return t.set("hsl.h", (t.get("hsl.h") + 15) % 360).hex();
 }
-function D(e) {
+function x(e) {
     let { value: t, onChange: n, className: o, colors: a, setColors: s } = e,
         c = (0, h.Z)(),
         [v, T] = i.useState(0),
@@ -141,73 +151,74 @@ function D(e) {
         }
         v >= a.length && T(0);
     }, [v, a, n]);
-    let D = (e) => {
+    let P = (e) => {
             let t = e.trim();
             return t.startsWith("#") ? t : t.length > 0 ? "#".concat(t) : t;
         },
-        L = (e) => {
-            let t = D(e);
+        x = (e) => {
+            let t = P(e);
             if ((R(t), (0, u.FX)(t) && ((0, E.zW)(), n(t), a.length > 0))) {
                 let e = [...a];
                 (e[v] = t), s(e);
             }
         },
-        x = i.useCallback((e) => {
+        M = i.useCallback((e) => {
             R(e.hex);
         }, []),
-        M = (e) => {
+        k = (e) => {
             if (((0, E.P0)(), n(e.hex), a.length > 0)) {
                 let t = [...a];
                 (t[v] = e.hex), s(t);
             }
         },
-        k = async () => {
+        j = async () => {
             if (null != c)
                 try {
                     let { sRGBHex: e } = await c.open();
-                    (0, E.J4)(), L(e);
+                    (0, E.J4)(), x(e);
                 } catch (e) {}
         },
-        j = () => {
+        U = () => {
             if (a.length === C) return;
             0 === a.length && (0, g.ft)(), (0, E.gG)();
             let e = a.length > 0 ? a[a.length - 1] : A,
-                t = a.length > 0 ? w(e) : e,
+                t = a.length > 0 ? L(e) : e,
                 n = [...a, t];
             s(n), T(n.length - 1);
         },
-        U = (e) => {
+        G = (e) => {
             if (a.length > 1) {
                 (0, E.JL)();
                 let t = a.filter((t, n) => n !== e);
                 s(t), v >= t.length ? T(t.length - 1) : v > e && T(v - 1);
             }
         },
-        G = (e) => {
+        B = (e) => {
             T(e), (0, E.w8)();
         },
-        B = a.length > 1;
+        Z = a.length > 1;
     return (0, r.jsxs)("div", {
         className: l()(O.container, o),
         children: [
-            B &&
-                (0, r.jsx)(P, {
+            Z &&
+                (0, r.jsx)(w, {
                     colors: a,
                     selectedIndex: v,
-                    onColorSelect: G,
+                    onColorSelect: B,
                 }),
             (0, r.jsx)(N, {
-                onChange: x,
-                onChangeComplete: M,
+                onChange: M,
+                onChangeComplete: k,
                 color: A,
             }),
             (0, r.jsxs)("div", {
                 className: O.hexInputContainer,
                 children: [
+                    (0, r.jsx)(D, { color: A }),
                     (0, r.jsx)("input", {
                         className: O.hexInput,
                         value: A.toUpperCase(),
-                        onChange: (e) => L(e.target.value),
+                        onChange: (e) => x(e.target.value),
                         maxLength: 7,
                         placeholder: m.Dp,
                         type: "text",
@@ -231,14 +242,14 @@ function D(e) {
                                                     e,
                                                 ),
                                                 {
-                                                    onClick: k,
+                                                    onClick: j,
                                                     icon: d.i,
                                                     "aria-label": y.intl.string(b.default["8QXO8v"]),
                                                 },
                                             ),
                                         ),
                                 }),
-                            B &&
+                            Z &&
                                 (0, r.jsx)(p.ua7, {
                                     text: y.intl.string(b.default["rTik5+"]),
                                     children: (e) =>
@@ -247,7 +258,7 @@ function D(e) {
                                             S(I({}, e), {
                                                 variant: "icon-only",
                                                 size: "sm",
-                                                onClick: () => U(v),
+                                                onClick: () => G(v),
                                                 icon: p.V_R,
                                                 "aria-label": y.intl.string(b.default["rTik5+"]),
                                             }),
@@ -261,7 +272,7 @@ function D(e) {
                 (0, r.jsx)(f.z, {
                     variant: "secondary",
                     size: "md",
-                    onClick: j,
+                    onClick: U,
                     icon: p.BRu,
                     text: y.intl.string(b.default.JUQcdX),
                     fullWidth: !0,

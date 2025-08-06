@@ -8,8 +8,8 @@ var l = n(120356),
     c = n(318374),
     s = n(448968);
 function d(e) {
-    var { label: t, visuallyHideLabel: n = !1, className: l } = e,
-        d = (function (e, t) {
+    var { label: t, visuallyHideLabel: n = !1, className: l, size: d = i.EFr.SIZE_16, maxUsers: u = 4 } = e,
+        f = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -29,8 +29,8 @@ function d(e) {
                         !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]);
             }
             return l;
-        })(e, ["label", "visuallyHideLabel", "className"]);
-    let u = (0, a.Dt)();
+        })(e, ["label", "visuallyHideLabel", "className", "size", "maxUsers"]);
+    let p = (0, a.Dt)();
     return (0, r.jsxs)("div", {
         className: o()(l, s.container),
         children: [
@@ -62,21 +62,23 @@ function d(e) {
                     return e;
                 })(
                     {
-                        "aria-labelledby": u,
+                        "aria-labelledby": p,
                         overflowCountClassName: s.overflowButton,
+                        size: d,
+                        maxUsers: u,
                     },
-                    d,
+                    f,
                 ),
             ),
             n
                 ? (0, r.jsx)(i.nn4, {
-                      id: u,
+                      id: p,
                       children: t,
                   })
                 : (0, r.jsx)(i.Text, {
                       variant: "text-xs/normal",
                       color: "text-secondary",
-                      id: u,
+                      id: p,
                       children: t,
                   }),
         ],

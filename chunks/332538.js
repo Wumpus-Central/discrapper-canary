@@ -3,7 +3,9 @@ n.d(t, {
     ZP: () => N,
 }),
     n(539854),
-    n(388685);
+    n(388685),
+    n(361932),
+    n(187205);
 var r = n(255367),
     i = n(73800),
     l = n(494497),
@@ -129,15 +131,24 @@ function N(e) {
                     let r = (function (e, t, n) {
                         var r, i;
                         let l = null != (i = null == (r = p.Z.getGuild(e)) ? void 0 : r.premiumTier) ? i : I.Eu4.NONE,
-                            o = Array.from(x.KW.values())
-                                .map((r) => {
-                                    if (null != t.unlockedPowerups[r]) return;
-                                    let i = t.allPowerups[r];
-                                    if (null == i || n < i.cost || (0, v.e)(e, i, "maybeGetPerkPurchaseablePopoutDCF"))
-                                        return;
-                                    let o = x.Rx[r];
-                                    if (null == o || !(l >= o)) return t.allPowerups[r];
-                                })
+                            o = Array.from(x.Tg.values())
+                                .flatMap((r) =>
+                                    r.length <= 0 ||
+                                    r.some((e) => {
+                                        if (null != t.unlockedPowerups[e]) return !0;
+                                        let n = x.Rx[e];
+                                        return null != n && !!(l >= n);
+                                    })
+                                        ? []
+                                        : r.map((r) => {
+                                              let i = t.allPowerups[r];
+                                              return null == i ||
+                                                  n < i.cost ||
+                                                  (0, v.e)(e, i, "maybeGetPerkPurchaseablePopoutDCF")
+                                                  ? null
+                                                  : i;
+                                          }),
+                                )
                                 .filter(f.lm);
                         if (0 !== o.length) {
                             if (1 === o.length && !(0, h.OY)(s.C.GUILD_POWERUP_SINGLE_SKU_PURCHASE_COACHMARK, e))

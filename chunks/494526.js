@@ -21,8 +21,8 @@ var r = n(255367),
     j = n(51144),
     I = n(998502),
     O = n(981631),
-    N = n(231338),
-    S = n(388032),
+    S = n(231338),
+    N = n(388032),
     C = n(84879),
     y = n(20493);
 let A = n(515695),
@@ -36,7 +36,7 @@ function P(e) {
             (e.src = A), (e.onload = () => l(!0)), (e.onerror = () => l(!0));
         }, [A]),
         i.useEffect(() => {
-            n && u.uvj.announce(S.intl.string(S.t.j2p129));
+            n && u.uvj.announce(N.intl.string(N.t.j2p129));
         }, [n]),
         (0, r.jsx)("div", {
             className: C.qrCodeContainer,
@@ -60,7 +60,7 @@ function P(e) {
                       })
                     : (0, r.jsx)("div", {
                           className: C.qrCodeOverlay,
-                          "aria-label": S.intl.string(S.t.BUGkVF),
+                          "aria-label": N.intl.string(N.t.BUGkVF),
                           "aria-busy": !0,
                           children: (0, r.jsx)(u.$jN, {
                               className: C.qrCode,
@@ -90,11 +90,11 @@ function R(e) {
                     (0, r.jsx)(P, { text: 1 === t.step ? "https://discord.com/ra/".concat(t.fingerprint) : "" }),
                     (0, r.jsx)(f.Dx, {
                         className: y.marginBottom8,
-                        children: S.intl.string(S.t.UPiHaG),
+                        children: N.intl.string(N.t.UPiHaG),
                     }),
                     null != i
                         ? (0, r.jsx)(Z, { children: i })
-                        : (0, r.jsx)(f.DK, { children: S.intl.format(S.t["Qq+A6u"], {}) }),
+                        : (0, r.jsx)(f.DK, { children: N.intl.format(N.t["Qq+A6u"], {}) }),
                     (0, r.jsx)(c.zx, {
                         size: c.Ph.LARGE,
                         look: c.iL.LINK,
@@ -114,7 +114,7 @@ function R(e) {
                                     conditionalMediationAbortController: e,
                                 }).catch(() => {});
                             })(s),
-                        children: S.intl.string(S.t["/kpMDg"]),
+                        children: N.intl.string(N.t["/kpMDg"]),
                     }),
                 ],
             });
@@ -128,14 +128,14 @@ function R(e) {
                         user: e,
                         size: u.EFr.SIZE_120,
                         isMobile: !0,
-                        status: N.Sk.ONLINE,
+                        status: S.Sk.ONLINE,
                     }),
                     (0, r.jsx)(f.Dx, {
                         className: y.marginBottom8,
-                        children: S.intl.string(S.t.apGCUV),
+                        children: N.intl.string(N.t.apGCUV),
                     }),
                     (0, r.jsx)(f.DK, {
-                        children: S.intl.format(S.t.Cbl5JC, { username: "".concat(j.ZP.getUserTag(e)) }),
+                        children: N.intl.format(N.t.Cbl5JC, { username: "".concat(j.ZP.getUserTag(e)) }),
                     }),
                     (0, r.jsx)(c.zx, {
                         look: c.zx.Looks.BLANK,
@@ -143,7 +143,7 @@ function R(e) {
                         size: c.zx.Sizes.MIN,
                         onClick: n,
                         className: C.startOverButton,
-                        children: S.intl.string(S.t.nOOhws),
+                        children: N.intl.string(N.t.nOOhws),
                     }),
                 ],
             });

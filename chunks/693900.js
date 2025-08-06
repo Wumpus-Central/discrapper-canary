@@ -32,29 +32,29 @@ function m(e) {
     var t;
     let { children: n } = e,
         { springConfig: p, isExpanded: m } = s.useContext(d),
-        f = (0, a.e7)([u.Z], () => u.Z.useReducedMotion),
-        { ref: g, height: x = null } = (0, l.ZP)(),
+        g = (0, a.e7)([u.Z], () => u.Z.useReducedMotion),
+        { ref: f, height: x = null } = (0, l.ZP)(),
         h = null != (t = (0, c.Z)(x)) ? t : null,
-        [{ height: b }, j] = (0, i.q_F)(() => ({
+        [{ height: j }, _] = (0, i.q_F)(() => ({
             from: { height: 0 },
             config: p,
         }));
     return (
         s.useLayoutEffect(() => {
             null !== x &&
-                j({
+                _({
                     height: x,
-                    immediate: !m || f || null === h,
+                    immediate: !m || g || null === h,
                 });
-        }, [x, j, m, f, h]),
+        }, [x, _, m, g, h]),
         (0, r.jsx)(o.animated.div, {
             style: {
-                height: null === h ? "auto" : b,
+                height: null === h ? "auto" : j,
                 overflow: "hidden",
             },
             children: (0, r.jsx)("div", {
                 style: { overflow: "hidden" },
-                ref: g,
+                ref: f,
                 children: n,
             }),
         })

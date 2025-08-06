@@ -73,7 +73,7 @@ function v(e) {
                         ),
                         actionRows: [
                             (0, r.jsx)(
-                                d.ZP,
+                                d.JZ,
                                 {
                                     title: O.intl.string(O.t.ftIK2N),
                                     description: O.intl.string(O.t.w2ve0t),

@@ -36,7 +36,7 @@ function O(e) {
         w = (0, i.e7)([o.Z], () => o.Z.getGuild(v), [v]),
         A = (0, p.E)(w),
         D = null != A && A && (null == R ? void 0 : R.isForumChannel()) === !1,
-        [L, k, M, U] = r.useMemo(() => {
+        [k, L, M, U] = r.useMemo(() => {
             let e;
             if (null == Z || 0 === Z.length || null == S || !D) return [t, n, _];
             let r = C ? Z.length : P ? 4 : 3,
@@ -126,8 +126,8 @@ function O(e) {
             [S, O, v, T, N, D],
         ),
         {
-            groups: L,
-            rows: k,
+            groups: k,
+            rows: L,
             version: M,
             updateMaxRowSeen: z,
         }

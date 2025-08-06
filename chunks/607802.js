@@ -10,7 +10,7 @@ n.d(t, {
     Tm: () => v,
     Vj: () => N,
     WU: () => Z,
-    X$: () => K,
+    X$: () => z,
     X3: () => W,
     b7: () => T,
     cl: () => U,
@@ -18,6 +18,7 @@ n.d(t, {
     i3: () => k,
     jW: () => w,
     kG: () => B,
+    nl: () => K,
     qc: () => x,
     s5: () => I,
     zH: () => A,
@@ -358,7 +359,7 @@ function H() {
 function Y(e) {
     if (T(e)) return !0;
     {
-        let t = (0, h.a)({ location: "isChannelFilterSupported" }),
+        let t = (0, h.ad)({ location: "isChannelFilterSupported" }),
             n = (0, m.J)({ location: "isChannelFilterSupported" }),
             r = t || n;
         return e.type === E.aib.DMS && r && !d.Z.hidePersonalInformation;
@@ -381,7 +382,18 @@ function W(e) {
     }
     return ((t = M(t)), n) ? "#".concat(t) : t;
 }
-function K() {
+function K(e) {
+    var t;
+    if (e.isGroupDM()) return (0, a.F6)(e, f.default, u.Z);
+    if (e.isDM()) {
+        let t = e.getRecipientId(),
+            n = f.default.getUser(t);
+        return p.ZP.getUserTag(n);
+    }
+    let n = l.ZP.getTextChannelNameDisambiguations(e.getGuildId())[e.id];
+    return null != (t = null == n ? void 0 : n.name) ? t : e.name;
+}
+function z() {
     var e, t;
     return null != (t = null == (e = f.default.getCurrentUser()) ? void 0 : e.isStaff()) && t;
 }

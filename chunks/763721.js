@@ -1,9 +1,10 @@
-n.d(t, { z: () => _ }), n(388685);
+n.d(t, { z: () => p }), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(481060),
-    a = n(377089);
-function s(e, t, n) {
+    a = n(377089),
+    s = n(231338);
+function l(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -16,7 +17,7 @@ function s(e, t, n) {
         e
     );
 }
-function l(e) {
+function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -27,12 +28,12 @@ function l(e) {
                 }),
             )),
             r.forEach(function (t) {
-                s(e, t, n[t]);
+                l(e, t, n[t]);
             });
     }
     return e;
 }
-function c(e, t) {
+function u(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -44,22 +45,22 @@ function c(e, t) {
     }
     return n;
 }
-function u(e, t) {
+function d(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : c(Object(t)).forEach(function (n) {
+            : u(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function d(e, t) {
+function f(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = f(e, t);
+        i = _(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
         for (r = 0; r < o.length; r++)
@@ -67,7 +68,7 @@ function d(e, t) {
     }
     return i;
 }
-function f(e, t) {
+function _(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -76,53 +77,29 @@ function f(e, t) {
     for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let _ = {
+let p = {
     title: "Input Components",
     stories: [
         {
             name: "TextInput",
             component: function (e) {
                 var { leading: t, trailing: n } = e,
-                    s = d(e, ["leading", "trailing"]);
-                let [c, f] = i.useState(""),
+                    s = f(e, ["leading", "trailing"]);
+                let [l, u] = i.useState(""),
                     _ = (0, a.U)("UserSettingsDesignSystems");
                 return (0, r.jsx)(
                     o.oil,
-                    u(l({}, s), {
-                        value: c,
-                        onChange: f,
-                        leading: _ && t ? (0, r.jsx)(o.qJs, { size: "sm" }) : void 0,
-                        trailing: _ && n ? (0, r.jsx)(o.lOy, { size: "sm" }) : void 0,
+                    d(c({}, s), {
+                        value: l,
+                        onChange: u,
+                        leading: _ && t ? o.qJs : void 0,
+                        trailing: _ && n ? o.lOy : void 0,
+                        maxLength: 500,
                     }),
                 );
             },
             id: "text-input",
             controls: {
-                placeholder: {
-                    label: "Placeholder",
-                    type: "text",
-                    defaultValue: "Enter some text...",
-                },
-                disabled: {
-                    label: "Disabled",
-                    type: "boolean",
-                    defaultValue: !1,
-                },
-                editable: {
-                    label: "Editable",
-                    type: "boolean",
-                    defaultValue: !0,
-                },
-                error: {
-                    label: "Has Error",
-                    type: "text",
-                    defaultValue: "",
-                },
-                minLength: {
-                    label: "Min Length",
-                    type: "number",
-                    defaultValue: 0,
-                },
                 type: {
                     label: "Input Type",
                     type: "select",
@@ -146,6 +123,46 @@ let _ = {
                         },
                     ],
                 },
+                placeholder: {
+                    label: "Placeholder",
+                    type: "text",
+                    defaultValue: "Enter some text...",
+                },
+                error: {
+                    label: "Error Message",
+                    type: "text",
+                    defaultValue: void 0,
+                },
+                helperText: {
+                    label: "Helper Text",
+                    type: "text",
+                    defaultValue: void 0,
+                },
+                minLength: {
+                    label: "Min Length",
+                    type: "number",
+                    defaultValue: 0,
+                },
+                showCharacterCount: {
+                    label: "Show Character Count",
+                    type: "boolean",
+                    defaultValue: !1,
+                },
+                clearable: {
+                    label: "Clearable",
+                    type: "boolean",
+                    defaultValue: !1,
+                },
+                disabled: {
+                    label: "Disabled",
+                    type: "boolean",
+                    defaultValue: !1,
+                },
+                readOnly: {
+                    label: "Read Only",
+                    type: "boolean",
+                    defaultValue: !1,
+                },
                 leading: {
                     label: "Leading",
                     type: "boolean",
@@ -164,10 +181,10 @@ let _ = {
                 let [t, n] = i.useState("");
                 return (0, r.jsx)(
                     o.E1j,
-                    u(l({}, e), {
+                    d(c({}, e), {
                         query: t,
                         onChange: n,
-                        onClear: () => n(""),
+                        onClear: e.clearable ? () => n("") : void 0,
                     }),
                 );
             },
@@ -193,6 +210,11 @@ let _ = {
                         },
                     ],
                 },
+                clearable: {
+                    label: "Clearable",
+                    type: "boolean",
+                    defaultValue: !1,
+                },
                 isLoading: {
                     label: "Is Loading",
                     type: "boolean",
@@ -212,7 +234,7 @@ let _ = {
                 let [t, n] = i.useState("");
                 return (0, r.jsx)(
                     o.Kx8,
-                    u(l({}, e), {
+                    d(c({}, e), {
                         value: t,
                         onChange: n,
                     }),
@@ -224,18 +246,8 @@ let _ = {
                     type: "text",
                     defaultValue: "Enter your message...",
                 },
-                showCharacterCount: {
-                    label: "Show Character Count",
-                    type: "boolean",
-                    defaultValue: !1,
-                },
-                disabled: {
-                    label: "Disabled",
-                    type: "boolean",
-                    defaultValue: !1,
-                },
                 error: {
-                    label: "Error",
+                    label: "Error Message",
                     type: "text",
                     defaultValue: void 0,
                 },
@@ -248,6 +260,175 @@ let _ = {
                     label: "Max Length",
                     type: "number",
                     defaultValue: 1000,
+                },
+                showCharacterCount: {
+                    label: "Show Character Count",
+                    type: "boolean",
+                    defaultValue: !1,
+                },
+                disabled: {
+                    label: "Disabled",
+                    type: "boolean",
+                    defaultValue: !1,
+                },
+            },
+        },
+        {
+            name: "Input Collection",
+            id: "input-collection",
+            component: function (e) {
+                let {
+                        error: t,
+                        disabled: n,
+                        placeholder: i,
+                        value: l = "",
+                        readOnly: u,
+                        helperText: f,
+                        successMessage: _,
+                        showCharacterCount: p,
+                    } = e,
+                    h = (0, a.U)("UserSettingsDesignSystems"),
+                    m = {
+                        value: l,
+                        error: t,
+                        disabled: n,
+                        placeholder: i,
+                        readOnly: u,
+                        helperText: f,
+                        showCharacterCount: p,
+                        successMessage: _,
+                    };
+                return (0, r.jsxs)(o.Kqy, {
+                    children: [
+                        (0, r.jsxs)(o.Kqy, {
+                            children: [
+                                (0, r.jsx)(o.xJW, {
+                                    title: "Text Input",
+                                    children: (0, r.jsxs)(o.Kqy, {
+                                        children: [
+                                            (0, r.jsx)(o.oil, c({}, m)),
+                                            (0, r.jsx)(o.oil, d(c({}, m), { clearable: !0 })),
+                                            h &&
+                                                (0, r.jsxs)(r.Fragment, {
+                                                    children: [
+                                                        (0, r.jsx)(o.xJW, {
+                                                            title: "Leading Icons",
+                                                            children: (0, r.jsxs)(o.Kqy, {
+                                                                children: [
+                                                                    (0, r.jsx)(
+                                                                        o.oil,
+                                                                        d(c({}, m), {
+                                                                            leading: {
+                                                                                icon: o.lOy,
+                                                                                onClick: s.dG,
+                                                                                "aria-label": "At",
+                                                                            },
+                                                                        }),
+                                                                    ),
+                                                                    (0, r.jsx)(o.oil, d(c({}, m), { leading: o.lOy })),
+                                                                    (0, r.jsx)(
+                                                                        o.oil,
+                                                                        d(c({}, m), { leading: "https://discord.gg/" }),
+                                                                    ),
+                                                                ],
+                                                            }),
+                                                        }),
+                                                        (0, r.jsx)(o.xJW, {
+                                                            title: "Trailing Icons",
+                                                            children: (0, r.jsxs)(o.Kqy, {
+                                                                children: [
+                                                                    (0, r.jsx)(
+                                                                        o.oil,
+                                                                        d(c({}, m), {
+                                                                            trailing: {
+                                                                                icon: o.lOy,
+                                                                                onClick: s.dG,
+                                                                                "aria-label": "At",
+                                                                            },
+                                                                        }),
+                                                                    ),
+                                                                    (0, r.jsx)(o.oil, d(c({}, m), { trailing: o.lOy })),
+                                                                ],
+                                                            }),
+                                                        }),
+                                                    ],
+                                                }),
+                                        ],
+                                    }),
+                                }),
+                                (0, r.jsx)(o.xJW, {
+                                    title: "Text Input (Legacy)",
+                                    children: (0, r.jsx)(o.GSy, c({}, m)),
+                                }),
+                            ],
+                        }),
+                        (0, r.jsx)(o.xJW, {
+                            title: "Search Bar",
+                            children: (0, r.jsxs)(o.Kqy, {
+                                children: [
+                                    (0, r.jsx)(o.E1j, {
+                                        query: l,
+                                        onChange: s.dG,
+                                        disabled: n,
+                                        placeholder: i,
+                                    }),
+                                    (0, r.jsx)(o.E1j, {
+                                        query: l,
+                                        onChange: s.dG,
+                                        size: "sm",
+                                        disabled: n,
+                                        placeholder: i,
+                                    }),
+                                ],
+                            }),
+                        }),
+                        (0, r.jsx)(o.xJW, {
+                            title: "Text Area",
+                            children: (0, r.jsx)(o.Kx8, c({}, m)),
+                        }),
+                    ],
+                });
+            },
+            controls: {
+                value: {
+                    label: "Value",
+                    type: "text",
+                    defaultValue: "",
+                },
+                placeholder: {
+                    label: "Placeholder",
+                    type: "text",
+                    defaultValue: "Enter some text...",
+                },
+                error: {
+                    label: "Error Message",
+                    type: "text",
+                    defaultValue: void 0,
+                },
+                successMessage: {
+                    label: "Success Message",
+                    type: "text",
+                    defaultValue: void 0,
+                },
+                helperText: {
+                    label: "Helper Text",
+                    type: "text",
+                    defaultValue: void 0,
+                },
+                showCharacterCount: {
+                    label: "Show Character Count",
+                    type: "boolean",
+                    defaultValue: !1,
+                },
+                disabled: {
+                    label: "Disabled",
+                    type: "boolean",
+                    defaultValue: !1,
+                },
+                readOnly: {
+                    label: "Read Only",
+                    type: "boolean",
+                    defaultValue: !1,
                 },
             },
         },

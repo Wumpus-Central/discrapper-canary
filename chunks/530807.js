@@ -1,9 +1,9 @@
-var n = r(938373).PROPER,
-    i = r(621523),
-    s = r(868984),
+var r = n(938373).PROPER,
+    i = n(621523),
+    o = n(868984),
     a = "\u200B\x85\u180E";
-t.exports = function (t) {
+e.exports = function (e) {
     return i(function () {
-        return !!s[t]() || a[t]() !== a || (n && s[t].name !== t);
+        return !!o[e]() || a[e]() !== a || (r && o[e].name !== e);
     });
 };

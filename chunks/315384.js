@@ -15,8 +15,8 @@ let u = "/users/@me/debug/consumables/",
 function x() {
     let e,
         [t, a] = (0, r.useState)([]),
-        [x, h] = (0, r.useState)(null),
-        [p, f] = (0, r.useState)(!1);
+        [x, p] = (0, r.useState)(null),
+        [h, f] = (0, r.useState)(!1);
     return (
         (0, r.useEffect)(
             () => (
@@ -25,11 +25,11 @@ function x() {
                         let e = (await l.tn.get(u)).body.entitlements.map((e) => c.Z.createFromServer(e));
                         a(e);
                     } catch (e) {
-                        h("Failed to fetch entitlements");
+                        p("Failed to fetch entitlements");
                     }
                 })(),
                 () => {
-                    a([]), h(null);
+                    a([]), p(null);
                 }
             ),
             [],
@@ -63,7 +63,7 @@ function x() {
                                                     r = new c.Z(n.body.entitlement);
                                                 a([...t, r]);
                                             } catch (e) {
-                                                h("Failed to create entitlement");
+                                                p("Failed to create entitlement");
                                             } finally {
                                                 f(!1);
                                             }
@@ -73,7 +73,7 @@ function x() {
                                     color: i.Tt.PRIMARY,
                                     children: "Create Confetti Entitlement",
                                 }),
-                                p && (0, n.jsx)(s.$jN, {}),
+                                h && (0, n.jsx)(s.$jN, {}),
                             ],
                         })
                       : (0, n.jsxs)(n.Fragment, {

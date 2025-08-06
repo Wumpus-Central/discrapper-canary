@@ -1,28 +1,43 @@
-n.d(t, { Z: () => c }), n(415506);
+n.d(t, { Z: () => f }), n(415506);
 var i = n(255367),
     o = n(73800),
     l = n(770102),
-    a = n(28682),
-    r = n(36361),
+    r = n(28682),
+    a = n(36361),
     s = n(49354);
-let c = o.memo(function (e) {
+function c(e) {
     let { node: t } = e,
-        n = t.render;
-    if (null != n) return (0, i.jsx)(n, {});
-    if (t.layout.some((e) => e.type === a.J.PANE)) throw Error("Panes should only be defined for custom panels.");
+        n = t.layout.filter((e) => e.type === r.J.PANE);
+    if (n.length > 1) throw Error("Panels with multiple nested panes must implement a custom render function.");
+    if (1 === n.length) {
+        let e = n[0];
+        return null != e && null != e.render ? (0, i.jsx)(e.render, {}) : (0, i.jsx)(d, { layout: e.layout });
+    }
+    return (0, i.jsx)(d, { layout: t.layout });
+}
+function u(e) {
+    let { node: t } = e;
+    return null != t.render ? (0, i.jsx)(t.render, {}) : (0, i.jsx)(d, { layout: t.layout });
+}
+function d(e) {
+    let { layout: t } = e;
     return (0, i.jsx)("div", {
         className: s.pane,
-        children: t.layout.map((e, n) =>
+        children: t.map((e, n) =>
             (0, i.jsxs)(
                 o.Fragment,
                 {
                     children: [
-                        (0, i.jsx)(r.Z, { node: e }),
-                        n !== t.layout.length - 1 && (0, i.jsx)(l.$, { className: s.divider }),
+                        (0, i.jsx)(a.Z, { node: e }),
+                        n !== t.length - 1 && (0, i.jsx)(l.$, { className: s.divider }),
                     ],
                 },
                 e.key,
             ),
         ),
     });
+}
+let f = o.memo(function (e) {
+    let { node: t } = e;
+    return t.type === r.J.PANEL ? (0, i.jsx)(c, { node: t }) : (0, i.jsx)(u, { node: t });
 });

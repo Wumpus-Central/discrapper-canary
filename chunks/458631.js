@@ -1,24 +1,24 @@
-var n = r(98405),
-    i = r(46015),
-    s = r(201390),
+var r = n(98405),
+    i = n(46015),
+    o = n(201390),
     a = RangeError,
-    o = String.fromCharCode,
-    u = String.fromCodePoint,
-    h = i([].join);
-n(
+    s = String.fromCharCode,
+    l = String.fromCodePoint,
+    c = i([].join);
+r(
     {
         target: "String",
         stat: !0,
         arity: 1,
-        forced: !!u && 1 !== u.length,
+        forced: !!l && 1 !== l.length,
     },
     {
-        fromCodePoint: function (t) {
-            for (var e, r = [], n = arguments.length, i = 0; n > i; ) {
-                if (((e = +arguments[i++]), s(e, 1114111) !== e)) throw new a(e + " is not a valid code point");
-                r[i] = e < 65536 ? o(e) : o(((e -= 65536) >> 10) + 55296, (e % 1024) + 56320);
+        fromCodePoint: function (e) {
+            for (var t, n = [], r = arguments.length, i = 0; r > i; ) {
+                if (((t = +arguments[i++]), o(t, 1114111) !== t)) throw new a(t + " is not a valid code point");
+                n[i] = t < 65536 ? s(t) : s(((t -= 65536) >> 10) + 55296, (t % 1024) + 56320);
             }
-            return h(r, "");
+            return c(n, "");
         },
     },
 );

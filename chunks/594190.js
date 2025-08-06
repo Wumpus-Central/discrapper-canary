@@ -254,6 +254,7 @@ function eE(e) {
         e.add && (t.add = !0),
         e.block && (t.block = !0),
         null != e.distributor && (t.distributor = e.distributor),
+        null != e.gameName && (t.gameName = e.gameName),
         eb(t, e),
         t
     );
@@ -502,7 +503,12 @@ function eM(e) {
                             let n = ei.gameOverrides[eI(e)];
                             null != n && (n.lastFocused = e.lastFocused);
                         }
-                        return t.distributor !== e.distributor && (t.distributor = e.distributor), eb(t, e), !0;
+                        return (
+                            t.distributor !== e.distributor && (t.distributor = e.distributor),
+                            t.gameName !== e.gameName && (t.gameName = e.gameName),
+                            eb(t, e),
+                            !0
+                        );
                     }
                     return !1;
                 })
@@ -660,8 +666,8 @@ function e$(e) {
             ($.forEach((e) => {
                 t === eI(e) && (e.hidden = !0);
             }),
-            delete er[t],
-            ev()),
+            delete er[t]),
+        $.some((e) => eI(e) === t) && ev(),
         ex(),
         eP();
 }

@@ -21,8 +21,8 @@ var r,
     j = n(481230),
     I = n(388905),
     O = n(853268),
-    N = n(639946),
-    S = n(616952),
+    S = n(639946),
+    N = n(616952),
     C = n(792766),
     y = n(692483),
     A = n(100159),
@@ -333,7 +333,7 @@ class eu extends (r = l.PureComponent) {
                   guild: e.guild,
               })
             : (null == e ? void 0 : e.guild_scheduled_event) != null
-              ? (0, i.jsx)(N.r, {
+              ? (0, i.jsx)(S.r, {
                     channel: e.channel,
                     guildScheduledEvent: e.guild_scheduled_event,
                 })
@@ -501,10 +501,10 @@ class eu extends (r = l.PureComponent) {
                 registering: _,
                 apiErrors: { email: b, username: E, global_name: v, password: j, date_of_birth: O } = {},
             } = this.state,
-            { consentRequired: N, authBoxClassName: C, hasLoggedInAccounts: y } = this.props,
+            { consentRequired: S, authBoxClassName: C, hasLoggedInAccounts: y } = this.props,
             A = this.renderErrorMessage(),
             T = (0, i.jsx)(p.ua7, {
-                text: !c && N ? en.intl.string(en.t.AY4IVF) : null,
+                text: !c && S ? en.intl.string(en.t.AY4IVF) : null,
                 children: (e) =>
                     (0, i.jsx)(
                         "div",
@@ -640,7 +640,7 @@ class eu extends (r = l.PureComponent) {
                         onFocus: this.trackInputFocus,
                         onBlur: this.trackInputBlur,
                     }),
-                    (0, i.jsx)(S.Z, {}),
+                    (0, i.jsx)(N.Z, {}),
                     this.renderConsentComponent(),
                     T,
                     A,

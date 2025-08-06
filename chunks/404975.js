@@ -2,8 +2,8 @@ n.d(t, { P: () => f }), n(35282);
 var i = n(255367),
     o = n(120356),
     l = n.n(o),
-    a = n(873546),
-    r = n(481060),
+    r = n(873546),
+    a = n(481060),
     s = n(59662),
     c = n(829210),
     u = n(388032),
@@ -13,18 +13,18 @@ function f(e) {
         { showNavigationMobile: f } = (0, s.t)();
     return (0, i.jsxs)("div", {
         className: l()(d.sidebar, {
-            [d.mobile]: a.tq,
+            [d.mobile]: r.tq,
             [d.mobileNavigationOpen]: f,
         }),
         children: [
             null != n && (0, i.jsx)(n, {}),
-            (0, i.jsx)(r.E1j, {
+            (0, i.jsx)(a.E1j, {
                 placeholder: u.intl.string(u.t["5h0QOD"]),
                 query: "",
                 onChange: () => {},
                 className: d.search,
             }),
-            (0, i.jsx)(r.zJl, {
+            (0, i.jsx)(a.zJl, {
                 className: d.navScroller,
                 fade: !0,
                 children: (0, i.jsx)("nav", {

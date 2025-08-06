@@ -15,8 +15,8 @@ var l = n(120356),
     g = n(49012),
     b = n(981631),
     j = n(856651),
-    h = n(388032),
-    y = n(738873);
+    y = n(388032),
+    h = n(738873);
 function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -67,7 +67,7 @@ function x(e) {
         m = (0, u.FI)(i[j.PC.CREATED_AT], l),
         x = c.Z.get((0, d.rR)(n.type));
     return (0, r.jsxs)("li", {
-        className: y.connection,
+        className: h.connection,
         children: [
             (0, r.jsx)(a.ua7, {
                 text: null == x ? void 0 : x.name,
@@ -75,17 +75,17 @@ function x(e) {
                     (0, r.jsx)(
                         "div",
                         O(v({}, e), {
-                            className: y.platformIconContainer,
+                            className: h.platformIconContainer,
                             children: (0, r.jsx)("img", {
-                                alt: h.intl.formatToPlainString(h.t.rtm15O, { name: null == x ? void 0 : x.name }),
-                                className: y.platformIcon,
+                                alt: y.intl.formatToPlainString(y.t.rtm15O, { name: null == x ? void 0 : x.name }),
+                                className: h.platformIcon,
                                 src: null == x ? void 0 : x.icon.lightPNG,
                             }),
                         }),
                     ),
             }),
             (0, r.jsxs)("div", {
-                className: y.connectionInfo,
+                className: h.connectionInfo,
                 children: [
                     (0, r.jsxs)("div", {
                         children: [
@@ -101,22 +101,22 @@ function x(e) {
                                                   a.Text,
                                                   O(v({}, e), {
                                                       variant: "text-sm/normal",
-                                                      className: y.accountNameText,
+                                                      className: h.accountNameText,
                                                       children: n.name,
                                                   }),
                                               ),
                                       })
                                     : (0, r.jsx)(a.eee, {
                                           href: t,
-                                          className: y.platformUrlAnchor,
+                                          className: h.platformUrlAnchor,
                                           useDefaultUnderlineStyles: !1,
                                           "aria-label":
                                               (null == x ? void 0 : x.name) != null
                                                   ? ""
                                                         .concat(x.name, ", ")
                                                         .concat(n.name, ", ")
-                                                        .concat(h.intl.string(h.t.q5jLJC))
-                                                  : "".concat(n.name, ", ").concat(h.intl.string(h.t.q5jLJC)),
+                                                        .concat(y.intl.string(y.t.q5jLJC))
+                                                  : "".concat(n.name, ", ").concat(y.intl.string(y.t.q5jLJC)),
                                           onClick: (e) => {
                                               (0, s.yw)(b.rMx.CONNECTED_ACCOUNT_VIEWED, {
                                                   platform_type: n.type,
@@ -131,7 +131,7 @@ function x(e) {
                                                   );
                                           },
                                           children: (0, r.jsxs)("div", {
-                                              className: y.accountName,
+                                              className: h.accountName,
                                               children: [
                                                   (0, r.jsx)(a.ua7, {
                                                       overflowOnly: !0,
@@ -141,13 +141,13 @@ function x(e) {
                                                               a.Text,
                                                               O(v({}, e), {
                                                                   variant: "text-sm/normal",
-                                                                  className: y.accountNameText,
+                                                                  className: h.accountNameText,
                                                                   children: n.name,
                                                               }),
                                                           ),
                                                   }),
                                                   (0, r.jsx)(p.Z, {
-                                                      className: y.platformUrlIcon,
+                                                      className: h.platformUrlIcon,
                                                       direction: p.Z.Directions.RIGHT,
                                                   }),
                                               ],
@@ -157,12 +157,12 @@ function x(e) {
                             null != m &&
                                 (0, r.jsx)(a.Text, {
                                     variant: "text-xs/normal",
-                                    children: h.intl.format(h.t["9rfonp"], { date: m }),
+                                    children: y.intl.format(y.t["9rfonp"], { date: m }),
                                 }),
                         ],
                     }),
                     (0, r.jsx)("div", {
-                        className: y.metadata,
+                        className: h.metadata,
                         children:
                             n.type === b.ABu.REDDIT
                                 ? (0, f.oP)(i)
@@ -189,7 +189,7 @@ function _(e) {
     return 0 === t.length
         ? null
         : (0, r.jsx)("ul", {
-              className: o()(y.container, l),
+              className: o()(h.container, l),
               children: t.map((e) =>
                   (0, r.jsx)(
                       x,

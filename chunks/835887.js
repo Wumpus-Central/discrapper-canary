@@ -19,7 +19,7 @@ function p(e) {
             [n],
         ),
         f = i.useCallback(() => {
-            (0, o.Z)(n, a.Z.GUILD_POWERUPS_GUILD_SETTINGS_TAGS), c.Z.close();
+            (0, o.Z)(n, a.Z.GUILD_POWERUPS_GUILD_SETTINGS_TAGS, "guildTagsBadgePacks"), c.Z.close();
         }, [n]),
         x = (0, s.Z)();
     return (0, r.jsxs)("div", {

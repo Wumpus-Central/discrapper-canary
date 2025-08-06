@@ -14,7 +14,7 @@ var o = n(990547),
     m = n(504392),
     g = n(981631);
 function x(e) {
-    let { guildId: t, powerupSkuId: n } = e,
+    let { guildId: t, powerupListingId: n } = e,
         x = (0, i.e7)([d.Z], () => d.Z.getGuild(t)),
         _ = (0, i.e7)([a.Z], () => a.Z.hasLoadedExperiments),
         v = (0, f.Z)(t),
@@ -35,7 +35,7 @@ function x(e) {
         : v || j
           ? (0, r.jsx)(m.Z, {
                 guildId: t,
-                powerupSkuId: n,
+                powerupListingId: n,
             })
           : (0, r.jsx)(c.Z, {
                 analyticsLocation: {

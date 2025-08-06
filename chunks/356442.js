@@ -1,13 +1,13 @@
-s.d(e, {
-    c: () => r,
-    q: () => o,
+n.d(t, {
+    c: () => o,
+    q: () => a,
 });
-var i = s(899517),
-    n = s(452896);
-function r() {
-    return o(i.n), i.n;
+var r = n(899517),
+    i = n(452896);
+function o() {
+    return a(r.n), r.n;
 }
-function o(t) {
-    let e = (t.__SENTRY__ = t.__SENTRY__ || {});
-    return (e.version = e.version || n.J), (e[n.J] = e[n.J] || {});
+function a(e) {
+    let t = (e.__SENTRY__ = e.__SENTRY__ || {});
+    return (t.version = t.version || i.J), (t[i.J] = t[i.J] || {});
 }

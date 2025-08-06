@@ -1,218 +1,138 @@
 n.d(e, {
-    S0: () => b,
-    ZP: () => j,
-    ku: () => g,
+    Ns: () => o,
+    Zs: () => d,
+    b5: () => h,
 }),
-    n(388685);
-var r = n(255367),
-    l = n(73800),
-    i = n(846519),
+    n(388685),
+    n(539854);
+var l = n(255367),
+    i = n(73800),
+    r = n(846519),
     s = n(481060),
-    c = n(493773),
-    o = n(765305),
-    a = n(388032),
-    u = n(933747);
-function d(t) {
-    for (var e = 1; e < arguments.length; e++) {
-        var n = null != arguments[e] ? arguments[e] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (t) {
-                    return Object.getOwnPropertyDescriptor(n, t).enumerable;
-                }),
-            )),
-            r.forEach(function (e) {
-                var r;
-                (r = n[e]),
-                    e in t
-                        ? Object.defineProperty(t, e, {
-                              value: r,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0,
-                          })
-                        : (t[e] = r);
-            });
-    }
-    return t;
-}
-function p(t, e) {
-    return (
-        (e = null != e ? e : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(e))
-            : (function (t, e) {
-                  var n = Object.keys(t);
-                  if (Object.getOwnPropertySymbols) {
-                      var r = Object.getOwnPropertySymbols(t);
-                      n.push.apply(n, r);
-                  }
-                  return n;
-              })(Object(e)).forEach(function (n) {
-                  Object.defineProperty(t, n, Object.getOwnPropertyDescriptor(e, n));
-              }),
-        t
-    );
-}
-function g(t) {
-    let { onInviteClick: e, canInvite: n, isChannelPublic: o } = t,
-        g = new i.V7(),
-        [b, f] = l.useState(!1);
-    (0, c.ZP)(() => () => {
-        g.stop();
-    });
-    let j = (t) => {
-        null != e && e(t), f(!0), g.start(1000, () => f(!1));
-    };
-    return null == e
+    a = n(493773),
+    u = n(765305),
+    c = n(388032);
+function o(t) {
+    let { onInviteClick: e, canInvite: n, isChannelPublic: l } = t,
+        u = new r.V7(),
+        [o, d] = i.useState(!1);
+    return ((0, a.ZP)(() => () => {
+        u.stop();
+    }),
+    null == e)
         ? null
-        : (0, r.jsx)(s.ua7, {
-              text: m(n, o),
-              position: "top",
-              tooltipClassName: u.tooltips,
-              "aria-label": a.intl.string(a.t.Ej3B3d),
-              children: (t) =>
-                  n && o
-                      ? (0, r.jsx)(
-                            s.zxk,
-                            p(d({}, t), {
-                                variant: "secondary",
-                                icon: s.aAc,
-                                size: "sm",
-                                onClick: e,
-                                text: a.intl.string(a.t.RDE0SU),
-                            }),
-                        )
-                      : (0, r.jsx)(
-                            s.zxk,
-                            p(d({}, t), {
-                                variant: "secondary",
-                                icon: b ? s.dz2 : s.xPt,
-                                size: "sm",
-                                onClick: j,
-                                disabled: b,
-                                text: b ? a.intl.string(a.t["t5VZ8/"]) : a.intl.string(a.t.RDE0SU),
-                            }),
-                        ),
-          });
+        : n && l
+          ? {
+                variant: "secondary",
+                icon: s.aAc,
+                onClick: e,
+                text: c.intl.string(c.t.RDE0SU),
+                "aria-label": c.intl.string(c.t.Ej3B3d),
+            }
+          : {
+                variant: "secondary",
+                icon: o ? s.dz2 : s.xPt,
+                onClick: (t) => {
+                    null != e && e(t), d(!0), u.start(1000, () => d(!1));
+                },
+                disabled: o,
+                text: o ? c.intl.string(c.t["t5VZ8/"]) : c.intl.string(c.t.RDE0SU),
+                "aria-label": c.intl.string(c.t.Ej3B3d),
+            };
 }
-function b(t) {
-    let { isUserRsvped: e, isUserLurking: n, onRsvpClick: l } = t,
-        i = e && !n;
-    return (0, r.jsx)(s.zxk, {
-        variant: i ? "active" : "secondary",
-        size: "sm",
-        icon: i ? s.dz2 : s.Dkj,
-        text: a.intl.string(a.t.DlcqlZ),
-        onClick: l,
-        disabled: n,
-    });
-}
-let f = (t) => null == t || t,
-    m = (t, e) => (f(t) ? a.intl.string(a.t.vk5Xw8) : f(e) ? a.intl.string(a.t.FFLWGR) : a.intl.string(a.t.k9KGYm));
-function j(t) {
+function d(t) {
     let {
             isActive: e,
             isUserLurking: n,
             rsvped: l,
             canInvite: i,
-            isChannelPublic: c = !0,
-            entityType: f,
-            onContextMenu: m,
-            onJoinClick: j,
-            onRsvpClick: v,
-            onStartClick: O,
-            onInviteClick: h,
-            onEndClick: y,
-            onJoinGuildClick: x,
-            isJoined: P = !1,
+            isChannelPublic: r = !0,
+            entityType: a,
+            onJoinClick: d,
+            onRsvpClick: h,
+            onStartClick: g,
+            onInviteClick: m,
+            onEndClick: p,
+            onJoinGuildClick: v,
+            isJoined: f = !1,
         } = t,
-        k = void 0 !== j;
-    return (0, r.jsxs)("div", {
-        className: u.container,
-        children: [
-            null != m
-                ? (0, r.jsx)(s.ua7, {
-                      text: a.intl.string(a.t.UKOtz8),
-                      position: "top",
-                      "aria-label": a.intl.string(a.t.bt75u7),
-                      children: (t) =>
-                          (0, r.jsx)(
-                              s.P3F,
-                              p(d({}, t), {
-                                  onClick: m,
-                                  className: u.iconButton,
-                                  children: (0, r.jsx)(s.xhG, {
-                                      size: "custom",
-                                      color: "currentColor",
-                                      width: 20,
-                                      height: 20,
-                                      className: u.icon,
-                                  }),
-                              }),
-                          ),
-                  })
-                : null,
-            (0, r.jsx)(g, {
-                onInviteClick: h,
-                canInvite: i,
-                isChannelPublic: c,
+        b = void 0 !== d,
+        j = o({
+            onInviteClick: m,
+            canInvite: i,
+            isChannelPublic: r,
+        }),
+        x = [];
+    if (
+        (null != j && x.push(j),
+        e &&
+            a !== u.WX.EXTERNAL &&
+            x.push({
+                variant: "active",
+                size: "sm",
+                onClick: d,
+                text: (function (t) {
+                    let { isJoined: e, canJoin: n, isVoiceChannel: l } = t;
+                    return n
+                        ? e
+                            ? c.intl.string(c.t.aW2YlJ)
+                            : l
+                              ? c.intl.string(c.t.nxUtoa)
+                              : c.intl.string(c.t.ZYO5OD)
+                        : c.intl.string(c.t.TVBCKS);
+                })({
+                    isJoined: f,
+                    canJoin: b,
+                    isVoiceChannel: a === u.WX.VOICE,
+                }),
+                disabled: !b,
             }),
-            e && f !== o.WX.EXTERNAL
-                ? (0, r.jsx)(s.zxk, {
-                      variant: "active",
-                      size: "sm",
-                      text: (function (t) {
-                          let { isJoined: e, canJoin: n, isVoiceChannel: r } = t;
-                          return n
-                              ? e
-                                  ? a.intl.string(a.t.aW2YlJ)
-                                  : r
-                                    ? a.intl.string(a.t.nxUtoa)
-                                    : a.intl.string(a.t.ZYO5OD)
-                              : a.intl.string(a.t.TVBCKS);
-                      })({
-                          isJoined: P,
-                          canJoin: k,
-                          isVoiceChannel: f === o.WX.VOICE,
-                      }),
-                      onClick: j,
-                      disabled: !k,
-                  })
-                : null,
-            n &&
-                null != x &&
-                (0, r.jsx)(s.zxk, {
-                    variant: "active",
-                    size: "sm",
-                    text: a.intl.string(a.t["2BP08P"]),
-                    onClick: x,
-                }),
-            !n &&
-                !e &&
-                null != v &&
-                (0, r.jsx)(b, {
-                    isUserRsvped: l,
-                    isUserLurking: n,
-                    onRsvpClick: v,
-                }),
-            e || null == O
-                ? null
-                : (0, r.jsx)(s.zxk, {
-                      variant: "primary",
-                      size: "sm",
-                      onClick: O,
-                      text: a.intl.string(a.t.I0v0Qk),
-                  }),
-            e && null != y
-                ? (0, r.jsx)(s.zxk, {
-                      variant: "secondary",
-                      size: "sm",
-                      onClick: y,
-                      text: a.intl.string(a.t.qaYzPD),
-                  })
-                : null,
-        ],
+        n &&
+            null != v &&
+            x.push({
+                variant: "active",
+                size: "sm",
+                text: c.intl.string(c.t["2BP08P"]),
+                onClick: v,
+            }),
+        !n && !e && null != h)
+    ) {
+        let t = l && !n;
+        x.push({
+            variant: t ? "active" : "secondary",
+            size: "sm",
+            icon: t ? s.dz2 : s.Dkj,
+            text: c.intl.string(c.t.DlcqlZ),
+            onClick: h,
+            disabled: n,
+        });
+    }
+    return (
+        e ||
+            null == g ||
+            x.push({
+                variant: "primary",
+                size: "sm",
+                onClick: g,
+                text: c.intl.string(c.t.I0v0Qk),
+            }),
+        e &&
+            null != p &&
+            x.push({
+                variant: "secondary",
+                size: "sm",
+                onClick: p,
+                text: c.intl.string(c.t.qaYzPD),
+            }),
+        x
+    );
+}
+function h(t) {
+    let { onClick: e } = t;
+    return (0, l.jsx)(s.hU, {
+        icon: s.xhG,
+        variant: "secondary",
+        "aria-label": c.intl.string(c.t.bt75u7),
+        onClick: e,
     });
 }

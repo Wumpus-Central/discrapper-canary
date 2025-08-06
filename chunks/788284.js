@@ -10,8 +10,8 @@ var r = n(255367),
     d = n(451478),
     p = n(302221),
     m = n(464121);
-let f = [0, 0.5, 1],
-    g = {
+let g = [0, 0.5, 1],
+    f = {
         "layers[1].shapes[1].g.k.k": [0, 0.522, 0.278, 0.776, 0.5, 0.522, 0.278, 0.776, 1, 0.522, 0.278, 0.776],
         "layers[2].shapes[1].g.k.k": [0, 0.714, 0.271, 0.757, 0.5, 0.714, 0.271, 0.757, 1, 0.714, 0.271, 0.757],
     };
@@ -28,17 +28,17 @@ async function x(e, t) {
                 });
                 l().set(e, r, s);
             }
-        })(r, g, t),
+        })(r, f, t),
         r
     );
 }
 function h(e) {
     var t;
     let { animationClassName: n, className: o, quest: i, useReducedMotion: l } = e,
-        g = (0, c.e7)([d.Z], () => d.Z.isFocused()),
+        f = (0, c.e7)([d.Z], () => d.Z.isFocused()),
         h = s.useRef(null),
-        [b, j] = s.useState(!1),
-        _ = s.useMemo(() => {
+        [j, _] = s.useState(!1),
+        b = s.useMemo(() => {
             if (null == i) return null;
             let e = (0, p.oo)(i.config.colors.primary),
                 t = {
@@ -46,21 +46,21 @@ function h(e) {
                     g: e.g / 255,
                     b: e.b / 255,
                 },
-                n = f.reduce((e, n) => [...e, n, t.r, t.g, t.b], []);
+                n = g.reduce((e, n) => [...e, n, t.r, t.g, t.b], []);
             return x(i.id, n);
         }, [i]),
         v = (null == (t = i.userStatus) ? void 0 : t.enrolledAt) != null,
-        C = !l && g;
+        C = !l && f;
     s.useEffect(() => {
         var e, t, n, r;
-        g
+        f
             ? C && (null == (r = h.current) || null == (n = r.animation) || n.play())
             : null == (t = h.current) || null == (e = t.animation) || e.goToAndStop(0, !0);
-    }, [C, g]);
+    }, [C, f]);
     let y = s.useCallback(() => {
-        j(!0);
+        _(!0);
     }, []);
-    return null == _ || v
+    return null == b || v
         ? (0, r.jsx)("div", {
               className: m.backgroundFallback,
               style: {
@@ -76,8 +76,8 @@ function h(e) {
                   {
                       ref: h,
                       onComplete: y,
-                      importData: () => _,
-                      shouldAnimate: !b && C,
+                      importData: () => b,
+                      shouldAnimate: !j && C,
                       className: a()(m.lottieAnimation, m.lottieAnimationBackground, n),
                       loop: 0,
                       rendererSettings: { preserveAspectRatio: "none" },

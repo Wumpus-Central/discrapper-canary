@@ -10,8 +10,8 @@ var n = a(255367),
     u = a(787879),
     m = a(370774),
     x = a(94091),
-    h = a(616257);
-let p = [
+    p = a(616257);
+let h = [
         {
             key: "channelName",
             cellClassName: l()(x.cell, x.channelName),
@@ -105,9 +105,9 @@ function b() {
             }, {}),
         ),
         C = (0, i.e7)([u.Z], () => u.Z.getInboxMessages()),
-        N = (0, i.e7)([u.Z], () => u.Z.getDevOverrides().navOnClick);
+        O = (0, i.e7)([u.Z], () => u.Z.getDevOverrides().navOnClick);
     return (0, n.jsx)("div", {
-        className: h.panel,
+        className: p.panel,
         children: (0, n.jsxs)(s.zJl, {
             className: x.content,
             children: [
@@ -138,7 +138,7 @@ function b() {
                             children: [
                                 (0, n.jsx)("div", { children: "Nav On Click" }),
                                 (0, n.jsx)(s.XZJ, {
-                                    value: N,
+                                    value: O,
                                     onChange: (e) => {
                                         o.Z.dispatch({
                                             type: "NOTIFICATIONS_INBOX_SET_DEV_OVERRIDES",
@@ -164,7 +164,7 @@ function b() {
                             children: ["Unread Channel Count: ", t.length],
                         }),
                         (0, n.jsx)(c.Z, {
-                            columns: p,
+                            columns: h,
                             data: Object.entries(y).map((e) => {
                                 var t;
                                 let [a, n] = e;

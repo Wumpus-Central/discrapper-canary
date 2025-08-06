@@ -1,12 +1,12 @@
-s.d(e, {
-    D: () => r,
-    Y: () => o,
+n.d(t, {
+    D: () => o,
+    Y: () => a,
 });
-var i = s(370336);
-let n = "_sentrySpan";
-function r(t, e) {
-    e ? (0, i.xp)(t, n, e) : delete t[n];
+var r = n(370336);
+let i = "_sentrySpan";
+function o(e, t) {
+    t ? (0, r.xp)(e, i, t) : delete e[i];
 }
-function o(t) {
-    return t[n];
+function a(e) {
+    return e[i];
 }

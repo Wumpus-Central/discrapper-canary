@@ -18,8 +18,8 @@ function x(e) {
     let { setOriginalEmail: t, setSlide: l, ready: x, token: b } = e,
         [E, v] = i.useState(!1),
         [j, I] = i.useState(null),
-        [O, N] = i.useState(null),
-        [S, C] = i.useState(""),
+        [O, S] = i.useState(null),
+        [N, C] = i.useState(""),
         y = i.useRef(null);
     return (
         i.useEffect(() => {
@@ -51,7 +51,7 @@ function x(e) {
                             label: f.intl.string(f.t["8dM4FB"]),
                             setRef: y,
                             className: _.marginBottom20,
-                            value: S,
+                            value: N,
                             onChange: C,
                             error: j,
                             autoComplete: "new-password",
@@ -62,12 +62,12 @@ function x(e) {
                             className: _.marginTop8,
                             onClick: () => {
                                 if (!E) {
-                                    if (0 === S.length) {
+                                    if (0 === N.length) {
                                         I(f.intl.string(f.t.R98xDw)), d.S.dispatch(m.CkL.WAVE_EMPHASIZE);
                                         return;
                                     }
                                     return (
-                                        null != O && N(null),
+                                        null != O && S(null),
                                         null != j && I(null),
                                         t(""),
                                         v(!0),
@@ -75,7 +75,7 @@ function x(e) {
                                             url: m.ANM.ACCOUNT_REVERT,
                                             body: {
                                                 token: b,
-                                                password: S,
+                                                password: N,
                                             },
                                             trackedActionData: { event: o.NetworkActionNames.ACCOUNT_REVERT },
                                             rejectWithError: !1,
@@ -88,7 +88,7 @@ function x(e) {
                                             })
                                             .catch((e) => {
                                                 if (e instanceof Error)
-                                                    N(
+                                                    S(
                                                         f.intl.formatToPlainString(f.t.aTVNen, {
                                                             statusPageURL: m.yXt.STATUS,
                                                         }),
@@ -97,7 +97,7 @@ function x(e) {
                                                     let t = new c.Z(e);
                                                     t.hasFieldErrors()
                                                         ? I(t.getAnyErrorMessage())
-                                                        : N(
+                                                        : S(
                                                               (function (e) {
                                                                   switch (e) {
                                                                       case m.evJ.ACCOUNT_REVERT_INVALID_TOKEN:

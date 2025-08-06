@@ -69,7 +69,7 @@ function O(e) {
         C = (0, i.e7)([d.ZP], () => d.ZP.isMuteScheduledEventsEnabled(t.id));
     async function v() {
         await (0, o.ZDy)(async () => {
-            let { default: e } = await Promise.all([n.e("22347"), n.e("56236"), n.e("79010")]).then(n.bind(n, 17671));
+            let { default: e } = await Promise.all([n.e("22347"), n.e("56236"), n.e("80650")]).then(n.bind(n, 17671));
             return (n) => (0, r.jsx)(e, b(m({}, n), { guildId: t.id }));
         }),
             (0, a.Q3)(l.z.GUILD_HEADER_EVENT_UPSELL);

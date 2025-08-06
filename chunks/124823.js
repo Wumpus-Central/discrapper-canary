@@ -2,7 +2,7 @@ n.d(t, { Z: () => w });
 var r = n(255367),
     i = n(73800),
     l = n(597312),
-    a = n(755721),
+    a = n(481060),
     s = n(727637),
     o = n(410030),
     c = n(100527),
@@ -58,8 +58,8 @@ function w(e) {
         w = __OVERLAY__ || !(0, d.Z)(t.id),
         A = (0, m.ZP)(t.id),
         D = (0, o.ZP)(),
-        L = i.useRef(Date.now()),
-        { analyticsLocations: k } = (0, u.ZP)(c.Z.USER_PROFILE_SIDEBAR),
+        k = i.useRef(Date.now()),
+        { analyticsLocations: L } = (0, u.ZP)(c.Z.USER_PROFILE_SIDEBAR),
         M = (0, f.ZB)({
             layout: "SIDEBAR",
             userId: t.id,
@@ -71,7 +71,7 @@ function w(e) {
             (0, b.openUserProfileModal)(
                 R(
                     {
-                        sourceAnalyticsLocations: k,
+                        sourceAnalyticsLocations: L,
                         hideRestrictedProfile: !0,
                     },
                     M,
@@ -80,10 +80,10 @@ function w(e) {
             );
         };
     return (0, r.jsx)(u.Gt, {
-        value: k,
+        value: L,
         children: (0, r.jsx)(f.Mt, {
             value: M,
-            openedAt: L.current,
+            openedAt: k.current,
             fetchStartedAt: null == A ? void 0 : A.fetchStartedAt,
             fetchEndedAt: null == A ? void 0 : A.fetchEndedAt,
             isLoaded: null == A ? void 0 : A.isLoaded,
@@ -155,23 +155,20 @@ function w(e) {
                     !w &&
                         (0, r.jsx)("div", {
                             className: T.footer,
-                            children: (0, r.jsx)(a.zx, {
-                                fullWidth: !0,
-                                size: a.zx.Sizes.LARGE,
-                                look: a.zx.Looks.BLANK,
-                                color: T.footerButtonColor,
+                            children: (0, r.jsx)(a.P3F, {
                                 onClick: () => {
                                     G(),
                                         (0, g.pQ)(
                                             R(
                                                 {
                                                     action: "PRESS_VIEW_PROFILE",
-                                                    analyticsLocations: k,
+                                                    analyticsLocations: L,
                                                 },
                                                 M,
                                             ),
                                         );
                                 },
+                                className: T.footerButton,
                                 children: P.intl.string(P.t["+Xp3ho"]),
                             }),
                         }),

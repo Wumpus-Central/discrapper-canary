@@ -1,19 +1,19 @@
-e.exports = function (e, t, i, r, n, a, s, o) {
+e.exports = function (e, t, n, r, i, o, a, s) {
     if (!e) {
-        var h;
+        var l;
         if (void 0 === t)
-            h = Error(
+            l = Error(
                 "Minified exception occurred; use the non-minified dev environment for the full error message and additional helpful warnings.",
             );
         else {
-            var l = [i, r, n, a, s, o],
+            var c = [n, r, i, o, a, s],
                 u = 0;
-            (h = Error(
+            (l = Error(
                 t.replace(/%s/g, function () {
-                    return l[u++];
+                    return c[u++];
                 }),
             )).name = "Invariant Violation";
         }
-        throw ((h.framesToPop = 1), h);
+        throw ((l.framesToPop = 1), l);
     }
 };

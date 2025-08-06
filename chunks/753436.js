@@ -1,31 +1,38 @@
-n.d(t, { S: () => c });
+n.d(t, { S: () => d });
 var r = n(255367);
 n(73800);
-var l = n(817053),
-    o = n(919498),
-    i = n(467514),
-    a = n(987278);
-function c(e) {
-    let { game: t, userId: n, guildId: c, channelId: s, loading: d = !1, disableInteraction: u = !1 } = e;
-    return d
-        ? (0, r.jsx)("div", { className: i.gameCover })
+var l = n(971082),
+    o = n(817053),
+    i = n(853072),
+    a = n(388032),
+    c = n(467514),
+    s = n(987278);
+function d(e) {
+    let { game: t, userId: n, guildId: d, channelId: u, loading: f = !1, disableInteraction: p = !1 } = e,
+        m = (0, i.Z)(t.applicationId),
+        g = m.length > 0;
+    return f
+        ? (0, r.jsx)("div", { className: c.gameCover })
         : (0, r.jsxs)("div", {
-              className: a.container,
+              className: s.container,
               children: [
-                  (0, r.jsx)(l.Z, {
+                  (0, r.jsx)(o.Z, {
                       imageSrc: t.imageSrc,
                       gameName: t.gameName,
                       applicationId: t.applicationId,
                       userId: n,
-                      disableInteraction: u,
+                      disableInteraction: p,
+                      className: g ? s.socialProofBackdrop : void 0,
                   }),
-                  (0, r.jsx)(o.Z, {
-                      applicationId: t.applicationId,
-                      className: a.socialProof,
-                      hideLabel: !0,
-                      guildId: c,
-                      channelId: s,
-                  }),
+                  g &&
+                      (0, r.jsx)(l.Z, {
+                          label: a.intl.formatToPlainString(a.t.ujhJdH, { numFriends: m.length }),
+                          className: s.socialProof,
+                          users: m,
+                          guildId: d,
+                          channelId: u,
+                          visuallyHideLabel: !0,
+                      }),
               ],
           });
 }

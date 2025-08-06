@@ -32,8 +32,8 @@ var r = n(255367),
     w = n(570096),
     A = n(850020),
     D = n(155409),
-    L = n(670188),
-    k = n(706454),
+    k = n(670188),
+    L = n(706454),
     M = n(439170),
     U = n(485386),
     H = n(944486),
@@ -218,7 +218,7 @@ let et = Y.ZP.getEnableHardwareAcceleration(),
                 },
                 [j],
             );
-        return (0, r.jsx)(L.Z, {
+        return (0, r.jsx)(k.Z, {
             targetElementRef: S,
             user: u,
             guildId: j,
@@ -307,7 +307,7 @@ let et = Y.ZP.getEnableHardwareAcceleration(),
                 guildId: l,
                 size: 16,
             }),
-            s = (0, p.e7)([k.default], () => new Intl.NumberFormat(k.default.locale).format(i), [i]);
+            s = (0, p.e7)([L.default], () => new Intl.NumberFormat(L.default.locale).format(i), [i]);
         return t === q.Skl.UNKNOWN
             ? (0, r.jsx)("div", {
                   className: Q.membersGroup,

@@ -13,14 +13,14 @@ var l = n(755721),
     p = n(562831),
     m = n(981631);
 function g(e) {
-    let { user: t, currentUser: n, guildId: g, channelId: b, displayProfile: j, relationshipType: h, onClose: y } = e,
+    let { user: t, currentUser: n, guildId: g, channelId: b, displayProfile: j, relationshipType: y, onClose: h } = e,
         { newestAnalyticsLocation: v } = (0, i.ZP)(),
         O = (0, a.Z)({
             user: t,
             guildId: g,
             channelId: b,
             displayProfile: j,
-            onClose: y,
+            onClose: h,
         }),
         {
             gameFriends: x,
@@ -28,7 +28,7 @@ function g(e) {
             hasIncomingPendingGameFriends: I,
         } = (0, p.H)({ userId: t.id }),
         P = x.length > 0 || _ || I;
-    return h === m.OGo.BLOCKED
+    return y === m.OGo.BLOCKED
         ? null
         : t.id === n.id
           ? (0, r.jsxs)(r.Fragment, {
@@ -36,9 +36,9 @@ function g(e) {
                     (0, r.jsx)(c.Z, {
                         user: t,
                         guildId: g,
-                        onClose: y,
+                        onClose: h,
                     }),
-                    (0, r.jsx)(u.Z, { onClose: y }),
+                    (0, r.jsx)(u.Z, { onClose: h }),
                     (0, r.jsx)(d.Z, {
                         type: "icon",
                         user: t,
@@ -66,7 +66,7 @@ function g(e) {
                       }),
                   ],
               })
-            : h === m.OGo.PENDING_INCOMING
+            : y === m.OGo.PENDING_INCOMING
               ? (0, r.jsxs)(r.Fragment, {
                     children: [
                         (0, r.jsx)(s.Z, {
@@ -84,7 +84,7 @@ function g(e) {
                         }),
                     ],
                 })
-              : h === m.OGo.FRIEND || h === m.OGo.PENDING_OUTGOING
+              : y === m.OGo.FRIEND || y === m.OGo.PENDING_OUTGOING
                 ? (0, r.jsxs)(r.Fragment, {
                       children: [
                           (0, r.jsx)(s.Z, {
@@ -97,7 +97,7 @@ function g(e) {
                           (0, r.jsx)(f.g, {
                               type: "icon",
                               user: t,
-                              relationshipType: h,
+                              relationshipType: y,
                               shouldShowTooltip: !0,
                               themeColor: "secondary",
                               analyticsLocation: v,
@@ -111,7 +111,7 @@ function g(e) {
                           }),
                       ],
                   })
-                : h === m.OGo.NONE && P
+                : y === m.OGo.NONE && P
                   ? (0, r.jsxs)(r.Fragment, {
                         children: [
                             (0, r.jsx)(s.Z, {

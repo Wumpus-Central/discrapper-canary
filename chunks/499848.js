@@ -1,4 +1,4 @@
-r.d(t, { Z: () => y }), r(415506);
+r.d(t, { Z: () => f }), r(415506);
 var n = r(255367),
     a = r(73800),
     i = r(442837),
@@ -16,19 +16,19 @@ class h extends a.PureComponent {
         if (null == r || null == e || 0 === e.length) return (0, n.jsx)(l.$jN, { type: l.$jN.Type.SPINNING_CIRCLE });
         let c = s.Z.getGuildId(),
             h = d.default.getUser(r),
-            y = o.ZP.getNick(c, r),
-            f =
+            f = o.ZP.getNick(c, r),
+            y =
                 null == h
                     ? p.intl.string(p.t.SJmZam)
-                    : "".concat(p.intl.string(p.t.SJmZam), " \u2014 ").concat(null != y ? y : u.ZP.getName(h));
+                    : "".concat(p.intl.string(p.t.SJmZam), " \u2014 ").concat(null != f ? f : u.ZP.getName(h));
         return (0, n.jsx)(l.hjN, {
             tag: l.RB0.H2,
-            title: f,
+            title: y,
             children: (0, m.V)(e, t, a, r, i),
         });
     }
 }
-let y = i.ZP.connectStores([c.ZP], (e) => {
+let f = i.ZP.connectStores([c.ZP], (e) => {
     let { context: t, index: r, videoStreams: n } = e,
         a = c.ZP.getAllStats(t)[r],
         { section: i } = (0, c.fZ)(c.ZP.getSection());

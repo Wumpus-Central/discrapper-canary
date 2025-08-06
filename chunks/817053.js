@@ -1,12 +1,14 @@
-n.d(t, { Z: () => p }), n(388685);
+n.d(t, { Z: () => g }), n(388685);
 var r = n(255367),
     l = n(73800),
-    o = n(481060),
-    i = n(810568),
-    a = n(168524),
-    c = n(388032),
-    s = n(467514);
-function d(e) {
+    o = n(120356),
+    i = n.n(o),
+    a = n(481060),
+    c = n(810568),
+    s = n(168524),
+    d = n(388032),
+    u = n(467514);
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -31,58 +33,61 @@ function d(e) {
     }
     return e;
 }
-function u(e) {
+function p(e) {
     let { imageSrc: t, gameName: n } = e,
-        [i, a] = l.useState(!1),
-        d = null != n ? n : c.intl.string(c.t.GIWFlJ);
-    return i || null == t
+        [o, i] = l.useState(!1),
+        c = null != n ? n : d.intl.string(d.t.GIWFlJ);
+    return o || null == t
         ? (0, r.jsx)("div", {
               role: "img",
-              "aria-label": d,
-              className: s.fallback,
-              children: (0, r.jsx)(o.Text, {
+              "aria-label": c,
+              className: u.fallback,
+              children: (0, r.jsx)(a.Text, {
                   variant: "text-xxs/medium",
                   lineClamp: 3,
                   "aria-hidden": !0,
-                  children: d,
+                  children: c,
               }),
           })
         : (0, r.jsx)("img", {
               src: t,
-              alt: d,
-              className: s.gameCoverImage,
-              onError: () => a(!0),
-              onLoad: () => a(!1),
+              alt: c,
+              className: u.gameCoverImage,
+              onError: () => i(!0),
+              onLoad: () => i(!1),
           });
 }
-function f(e) {
-    let { imageSrc: t, gameName: n, applicationId: l, userId: d } = e,
-        f = (0, a.Z)({
+function m(e) {
+    let { imageSrc: t, gameName: n, applicationId: l, userId: o, className: f } = e,
+        m = (0, s.Z)({
             location: "GameCover",
             applicationId: l,
-            source: i.m1.UserProfile,
-            sourceUserId: d,
+            source: c.m1.UserProfile,
+            sourceUserId: o,
             trackEntryPointImpression: !0,
         });
-    if (null == f)
-        return (0, r.jsx)(u, {
-            imageSrc: t,
-            gameName: n,
+    if (null == m)
+        return (0, r.jsx)("div", {
+            className: f,
+            children: (0, r.jsx)(p, {
+                imageSrc: t,
+                gameName: n,
+            }),
         });
-    let p = c.intl.formatToPlainString(c.t["8QLQBw"], { gameName: null != n ? n : c.intl.string(c.t.GIWFlJ) });
-    return (0, r.jsx)(o.P3F, {
-        onClick: f,
-        "aria-label": p,
-        className: s.clickable,
-        children: (0, r.jsx)(u, {
+    let g = d.intl.formatToPlainString(d.t["8QLQBw"], { gameName: null != n ? n : d.intl.string(d.t.GIWFlJ) });
+    return (0, r.jsx)(a.P3F, {
+        onClick: m,
+        "aria-label": g,
+        className: i()(u.clickable, f),
+        children: (0, r.jsx)(p, {
             imageSrc: t,
             gameName: n,
         }),
     });
 }
-function p(e) {
-    var { applicationId: t, userId: n, disableInteraction: l = !1 } = e,
-        o = (function (e, t) {
+function g(e) {
+    var { applicationId: t, userId: n, className: l, disableInteraction: o = !1 } = e,
+        a = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -102,17 +107,22 @@ function p(e) {
                         !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]);
             }
             return l;
-        })(e, ["applicationId", "userId", "disableInteraction"]);
-    return l
-        ? (0, r.jsx)(u, d({}, o))
+        })(e, ["applicationId", "userId", "className", "disableInteraction"]);
+    let c = i()(u.coverContainer, l);
+    return o
+        ? (0, r.jsx)("div", {
+              className: c,
+              children: (0, r.jsx)(p, f({}, a)),
+          })
         : (0, r.jsx)(
-              f,
-              d(
+              m,
+              f(
                   {
+                      className: c,
                       applicationId: t,
                       userId: n,
                   },
-                  o,
+                  a,
               ),
           );
 }

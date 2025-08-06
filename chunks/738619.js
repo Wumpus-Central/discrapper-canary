@@ -174,7 +174,7 @@ function G(e) {
         [O, v] = i.useState(!1);
     if (
         (i.useLayoutEffect(() => {
-            if (null != b.current && null != y.current) {
+            if (null != b.current && null != y.current && p) {
                 let e = () => {
                     if (null != b.current && null != y.current) {
                         let e = b.current.getBoundingClientRect();
@@ -193,7 +193,7 @@ function G(e) {
                     }
                 );
             }
-        }, []),
+        }, [p]),
         0 === o.length && !E && !_)
     )
         return null != t
@@ -218,7 +218,7 @@ function G(e) {
                   c: S,
               }))
             : o.length > 3 && (A = R.intl.format(R.t.Q8lUnJ, {}));
-    let N = O && o.length > 0 ? R.intl.format(R.t.Q8lUnJ, {}) : A;
+    let N = O && o.length > 0 && o.length <= 3 ? R.intl.format(R.t["qD/0qa"], {}) : A;
     return (0, r.jsxs)("div", {
         className: a()(
             P.typing,

@@ -131,7 +131,7 @@ function A(e) {
                 n.e("17938"),
                 n.e("94136"),
                 n.e("84992"),
-                n.e("24329"),
+                n.e("31505"),
             ]).then(n.bind(n, 7305));
             return (n) => {
                 var { onClose: o } = n,
@@ -182,6 +182,7 @@ function A(e) {
                         returnRef: V,
                         subscription: H,
                         skipConfirm: !!Y,
+                        wasTier2Premium: q,
                     }),
                 );
             };

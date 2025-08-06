@@ -1,95 +1,106 @@
-t.d(r, { Z: () => p }), t(388685);
+t.d(r, { Z: () => _ }), t(388685);
 var n = t(255367),
     i = t(73800),
-    l = t(120356),
-    o = t.n(l),
-    a = t(570140),
-    s = t(70097),
-    d = t(585483),
-    C = t(402426),
-    c = t(981631),
-    u = t(794503);
-let p = (e) => {
-    let { children: r, isConfirmationStep: t, isWowMomentConfirmationEligible: l } = e,
-        [p, _] = (0, i.useState)("entry"),
-        f = (0, i.useRef)(null),
+    o = t(120356),
+    l = t.n(o),
+    a = t(481060),
+    s = t(570140),
+    d = t(70097),
+    C = t(585483),
+    c = t(402426),
+    u = t(981631),
+    p = t(794503);
+let _ = (e) => {
+    let { children: r, isConfirmationStep: t, isWowMomentConfirmationEligible: o } = e,
+        [_, f] = (0, i.useState)("entry"),
         m = (0, i.useRef)(null),
-        x = () => {
-            if ((_("exit"), null != m.current)) {
+        x = (0, i.useRef)(null),
+        h = () => {
+            if ((f("exit"), null != x.current)) {
                 var e;
-                null == (e = m.current) || e.play();
+                null == (e = x.current) || e.play();
             }
         },
-        { mediaUrls: h, isSuccess: j } = (0, C.Z)(l);
+        { mediaUrls: j, isSuccess: L } = (0, c.Z)(o),
+        b = (0, i.useRef)(null),
+        [g, y] = (0, i.useState)(!1);
     (0, i.useEffect)(() => {
         function e() {
-            x();
+            y(!0), h();
         }
         return (
-            d.S.subscribe(c.CkL.PREMIUM_PAYMENT_MODAL_CLOSED, e),
+            C.S.subscribe(u.CkL.PREMIUM_PAYMENT_MODAL_CLOSED, e),
             () => {
-                d.S.unsubscribe(c.CkL.PREMIUM_PAYMENT_MODAL_CLOSED, e);
+                C.S.unsubscribe(u.CkL.PREMIUM_PAYMENT_MODAL_CLOSED, e);
             }
         );
     }, []);
-    let L = l && t && j;
+    let S = o && t && L;
     return ((0, i.useEffect)(() => {
-        L &&
-            a.Z.dispatch({
+        S &&
+            s.Z.dispatch({
                 type: "WOW_MOMENT_CONFIRMATION_SET_IS_DISPLAYING_WOW_MOMENT_CONFIRMATION",
-                value: L,
+                value: S,
             });
-    }, [L]),
+    }, [S]),
     (0, i.useEffect)(
         () => () => {
-            a.Z.dispatch({
+            s.Z.dispatch({
                 type: "WOW_MOMENT_CONFIRMATION_SET_IS_DISPLAYING_WOW_MOMENT_CONFIRMATION",
                 value: !1,
             });
         },
         [],
     ),
-    L)
+    S)
         ? (0, n.jsxs)("div", {
               children: [
                   (0, n.jsxs)("div", {
-                      className: u.videoContainer,
+                      className: p.videoContainer,
                       children: [
                           (0, n.jsx)("div", {
-                              className: u.entryAnimationContainer,
-                              children: (0, n.jsx)(s.Z, {
+                              className: p.entryAnimationContainer,
+                              children: (0, n.jsx)(d.Z, {
                                   playsInline: !0,
                                   muted: !0,
                                   autoPlay: !0,
                                   onEnded: () => {
-                                      if ((_("idle"), null != f.current)) {
+                                      if ((f("idle"), null != m.current)) {
                                           var e;
-                                          null == (e = f.current) || e.play();
+                                          null == (e = m.current) || e.play();
                                       }
                                   },
-                                  className: o()(u.video, "entry" === p ? u.visible : u.hidden),
-                                  children: (0, n.jsx)("source", { src: h.modalGlowEntry }),
+                                  className: l()(p.video, "entry" === _ ? p.visible : p.hidden),
+                                  children: (0, n.jsx)("source", { src: j.modalGlowEntry }),
                               }),
                           }),
-                          (0, n.jsx)(s.Z, {
-                              ref: f,
-                              playsInline: !0,
-                              muted: !0,
-                              loop: !0,
-                              className: o()(u.video, "idle" === p ? u.visible : u.hidden),
-                              children: (0, n.jsx)("source", { src: h.modalGlowIdle }),
-                          }),
-                          (0, n.jsx)(s.Z, {
+                          (0, n.jsx)(d.Z, {
                               ref: m,
                               playsInline: !0,
                               muted: !0,
-                              className: o()(u.video, "exit" === p ? u.visible : u.hidden),
-                              children: (0, n.jsx)("source", { src: h.modalGlowExit }),
+                              loop: !0,
+                              className: l()(p.video, "idle" === _ ? p.visible : p.hidden),
+                              children: (0, n.jsx)("source", { src: j.modalGlowIdle }),
+                          }),
+                          (0, n.jsx)(d.Z, {
+                              ref: x,
+                              playsInline: !0,
+                              muted: !0,
+                              className: l()(p.video, "exit" === _ ? p.visible : p.hidden),
+                              children: (0, n.jsx)("source", { src: j.modalGlowExit }),
                           }),
                       ],
                   }),
                   (0, n.jsx)("div", {
-                      className: u.entryAnimationContainer,
+                      className: p.wowAnimation,
+                      children: (0, n.jsx)(a._dj, {
+                          fit: "layout",
+                          ref: b,
+                          dataBinding: { ExitTrigger: g },
+                      }),
+                  }),
+                  (0, n.jsx)("div", {
+                      className: p.entryAnimationContainer,
                       children: r,
                   }),
               ],

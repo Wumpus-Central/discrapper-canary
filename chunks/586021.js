@@ -1,31 +1,54 @@
-n.d(r, { D5: () => l }), n(415506);
-var t = n(579092);
-n(436620);
-let a = new t.Yd("LibDaveManager"),
-    o = null,
-    i = {
+n.d(t, {
+    D5: () => f,
+    Ft: () => d,
+    IT: () => u,
+    Yk: () => _,
+}),
+    n(415506);
+var r = n(579092),
+    i = n(436620);
+let o = new r.Yd("LibDaveManager"),
+    a = null,
+    s = null,
+    l = null,
+    c = {
         onRuntimeInitialized: () => {
-            a.info("DAVE loaded");
+            o.info("DAVE loaded");
         },
     };
-function l() {
-    return null != o
-        ? o
-        : (o = new Promise((e, r) => {
+function u() {
+    return (
+        "Firefox" !== platform.name &&
+        i.WS &&
+        "function" == typeof RTCRtpSender &&
+        ("transform" in RTCRtpSender.prototype || "createEncodedStreams" in RTCRtpSender.prototype)
+    );
+}
+function d() {
+    return "object" == typeof WebAssembly;
+}
+function f() {
+    return null != a
+        ? a
+        : (a = new Promise((e, t) => {
               Promise.all([n.e("69418"), n.e("13263")])
                   .then(n.bind(n, 129487))
                   .then((n) => {
-                      let { DaveModuleFactory: t } = n;
-                      t(i)
-                          .then((r) => {
-                              a.info("Successfully initialized DAVE"), e(r);
+                      let { DaveModuleFactory: r } = n;
+                      r(c)
+                          .then((t) => {
+                              o.info("Successfully initialized DAVE"), (s = t), e(t);
                           })
                           .catch((e) => {
-                              a.error("Failed to initialize DAVE", e), r(e);
+                              o.error("Failed to initialize DAVE", e), t(e);
                           });
                   })
                   .catch((e) => {
-                      a.error("Failed to load DAVE module", e), r(e);
+                      o.error("Failed to load DAVE module", e), t(e);
                   });
           }));
+}
+function _() {
+    if (null == s) throw Error("DAVE module not loaded");
+    return null == l && (l = new s.TransientKeys()), l;
 }

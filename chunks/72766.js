@@ -1,3 +1,3 @@
-r.d(t, { X: () => s });
+r.d(t, { X: () => i });
 var n,
-    s = (((n = {}).MFA = "mfa"), (n.SMS = "sms"), (n.EMAIL = "email"), n);
+    i = (((n = {}).MFA = "mfa"), (n.SMS = "sms"), (n.EMAIL = "email"), n);

@@ -1,6 +1,7 @@
 e.exports = {
     container: "container_b08511",
     select: "select_b08511",
+    inModal: "inModal_b08511",
     selectOption: "selectOption_b08511",
     disabled: "disabled_b08511",
     emoji: "emoji_b08511",

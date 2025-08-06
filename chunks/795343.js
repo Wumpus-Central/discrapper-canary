@@ -16,8 +16,8 @@ var n = r(255367),
     _ = r(38900),
     m = r(709999),
     v = r(81136),
-    C = r(501638),
-    O = r(981631),
+    O = r(501638),
+    C = r(981631),
     E = r(538314);
 function S(e) {
     var t;
@@ -66,7 +66,7 @@ function S(e) {
     }, [M]);
     let q = l.useCallback(
         (e) => {
-            u.default.track(O.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+            u.default.track(C.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                 collectibles_shop_session_id: null == x ? void 0 : x.sessionId,
                 page_section: null == x ? void 0 : x.pageSection,
                 page_category: null == x ? void 0 : x.pageCategory,
@@ -84,7 +84,7 @@ function S(e) {
             (0, n.jsxs)("div", {
                 className: i()({ [E.productsEmpty]: G }),
                 children: [
-                    G && (0, n.jsx)(C.Z, {}),
+                    G && (0, n.jsx)(O.Z, {}),
                     (0, n.jsxs)("div", {
                         className: i()(E.products, { [E.loadIn]: V }),
                         ref: F,

@@ -15,11 +15,11 @@ function u(e) {
         g = (0, r.k)({ location: "useUserProfileModalV2TabBarItems" }),
         b = (0, i.Z)(),
         j = [],
-        h = t.id === (null == n ? void 0 : n.id),
-        y = b.length > 0;
+        y = t.id === (null == n ? void 0 : n.id),
+        h = b.length > 0;
     return (
         g &&
-            (y || h) &&
+            (h || y) &&
             j.push({
                 text: d.intl.string(d.t.laViw8),
                 section: s.oh.WIDGETS,

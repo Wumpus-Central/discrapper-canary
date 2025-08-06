@@ -1,9 +1,9 @@
-n.d(t, { Z: () => v });
+n.d(t, { Z: () => g });
 var i = n(255367),
     o = n(73800),
     l = n(120356),
-    a = n.n(l),
-    r = n(873546),
+    r = n.n(l),
+    a = n(873546),
     s = n(755721),
     c = n(481060),
     u = n(59662),
@@ -20,7 +20,7 @@ function m(e) {
         children: (0, i.jsx)(t, { size: "sm" }),
     });
 }
-function b(e) {
+function x(e) {
     let { title: t, onClose: n, setShowNavigationMobile: o } = e;
     return (0, i.jsxs)("div", {
         className: f.contentHeader,
@@ -28,7 +28,7 @@ function b(e) {
             (0, i.jsxs)("div", {
                 className: f.contentHeaderLeft,
                 children: [
-                    r.tq &&
+                    a.tq &&
                         (0, i.jsx)(m, {
                             icon: c.yFM,
                             onClick: () => o(!0),
@@ -40,7 +40,7 @@ function b(e) {
                     }),
                 ],
             }),
-            !r.tq &&
+            !a.tq &&
                 (0, i.jsx)(m, {
                     icon: c.Uz9,
                     onClick: n,
@@ -48,17 +48,17 @@ function b(e) {
         ],
     });
 }
-let v = o.memo(function (e) {
+let g = o.memo(function (e) {
     let { onClose: t, setShowNavigationMobile: n, setting: o } = e,
         l = o.useTitle(),
         { showNavigationMobile: s } = (0, u.t)();
     return (0, i.jsxs)("div", {
-        className: a()(f.content, {
-            [f.mobile]: r.tq,
+        className: r()(f.content, {
+            [f.mobile]: a.tq,
             [f.mobileNavigationOpen]: s,
         }),
         children: [
-            (0, i.jsx)(b, {
+            (0, i.jsx)(x, {
                 title: l,
                 onClose: t,
                 setShowNavigationMobile: n,

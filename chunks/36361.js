@@ -2,8 +2,8 @@ n.d(t, { Z: () => m }), n(415506);
 var i = n(255367),
     o = n(73800),
     l = n(28682),
-    a = n(558731),
-    r = n(401250),
+    r = n(558731),
+    a = n(401250),
     s = n(867694),
     c = n(4794),
     u = n(142118),
@@ -25,9 +25,9 @@ let m = o.memo(function (e) {
         case l.J.TOGGLE:
             return (0, i.jsx)(s.I, { node: t });
         case l.J.BUTTON:
-            return (0, i.jsx)(a.I, { node: t });
+            return (0, i.jsx)(r.I, { node: t });
         case l.J.CUSTOM:
         default:
-            return (0, i.jsx)(r.W, { node: t });
+            return (0, i.jsx)(a.W, { node: t });
     }
 });

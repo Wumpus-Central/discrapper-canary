@@ -8,5 +8,6 @@ e.exports = {
     hexInputContainer: "hexInputContainer__247cf",
     hexInput: "hexInput__247cf",
     trailingIcons: "trailingIcons__247cf",
+    hexColorPreview: "hexColorPreview__247cf",
     eyeDropperTooltip: "eyeDropperTooltip__247cf",
 };

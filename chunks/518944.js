@@ -67,14 +67,14 @@ function I() {
     (g = !0),
         null != E &&
             (0, u.g)(E) === d.aib.CHANNEL &&
-            (0, c.a)({ location: "SearchStore_handleConnectionOpen" }) &&
+            (0, c.ad)({ location: "SearchStore_handleConnectionOpen" }) &&
             v(d.aib.DMS);
 }
 function T(e) {
     let { guildId: t, channelId: n } = e;
     null != t
         ? v(t)
-        : (0, c.a)({
+        : (0, c.ad)({
                 location: "SearchStore_handleChannelSelect",
                 autoTrackExposure: g,
             })

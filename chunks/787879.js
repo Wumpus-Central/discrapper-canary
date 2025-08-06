@@ -1,4 +1,4 @@
-n.d(t, { Z: () => ec }), n(361932), n(187205), n(539854), n(388685), n(642613), n(387201);
+n.d(t, { Z: () => eg }), n(361932), n(187205), n(539854), n(388685), n(642613), n(387201);
 var r,
     i = n(512722),
     o = n.n(i),
@@ -145,34 +145,54 @@ function Y() {
     D.updateChannelIds(P), H();
 }
 function W() {
-    for (let n of ((R = {}),
-    (P = null),
-    (w = []),
-    (D = new T.Z()),
-    (L = !1),
-    (x = !1),
-    (M = !1),
-    (j = O.default.fromTimestamp(Date.now())),
-    (U = !0),
-    (k = !1),
-    (B = null),
-    (G = null),
-    Y(),
-    null != P ? P : [])) {
-        var e, t;
+    (R = {}),
+        (P = null),
+        (w = []),
+        (D = new T.Z()),
+        (L = !1),
+        (x = !1),
+        (M = !1),
+        (j = O.default.fromTimestamp(Date.now())),
+        (U = !0),
+        (k = !1),
+        (B = null),
+        (G = null);
+}
+function K() {
+    var e, t, n;
+    for (let n of (Y(), null != P ? P : [])) {
         let r = V(n);
         null != r &&
             ((R[n].loadState = S.a7.LOADED),
             (R[n].mostRecentMessageId = null != (t = null == (e = r.last()) ? void 0 : e.id) ? t : null),
             H());
     }
+    let r = null != (n = c.ZP.getSettingsFilteredMentions()) ? n : [];
+    D.addMessages(
+        r.map((e) => {
+            var t;
+            return {
+                id: e.id,
+                channelId: e.channel_id,
+                guildId: null == (t = p.Z.getBasicChannel(e.channel_id)) ? void 0 : t.guild_id,
+                kind: S.fL.MENTION,
+                message: e,
+            };
+        }),
+    );
 }
-function K(e) {
+function z() {
+    W(), K();
+}
+function q() {
+    W();
+}
+function X(e) {
     if (e instanceof _.ZP) return e;
     let t = m.Z.getMessage(e.channel_id, e.id);
     return null != t ? t : (0, l.e5)(e);
 }
-function z(e) {
+function Q(e) {
     var t, n, r;
     let { channelId: i, message: o } = e;
     if (
@@ -181,7 +201,7 @@ function z(e) {
     )
         return !1;
     let a = P.includes(i),
-        s = K(o),
+        s = X(o),
         l = s.mentioned;
     if (!a && !l) {
         if (!w.includes(i)) return !1;
@@ -196,7 +216,7 @@ function z(e) {
         message: s,
     });
 }
-function q(e) {
+function J(e) {
     let { channelId: t } = e;
     if (!(null == P ? void 0 : P.includes(t))) return !1;
     let n = V(t);
@@ -204,7 +224,7 @@ function q(e) {
     let r = n.length >= S.AQ || (n.hasFetched && !n.hasMoreBefore);
     R[t].loadState !== S.a7.LOADED && (R[t].loadState = r ? S.a7.LOADED : S.a7.LOADED_UNREAD), H();
 }
-function X(e) {
+function $(e) {
     let { messages: t } = e;
     if (0 === t.length) return !1;
     let n = c.ZP.getSettingsFilteredMentions();
@@ -222,22 +242,22 @@ function X(e) {
         }),
     );
 }
-function Q(e) {
+function ee(e) {
     let { id: t } = e;
     return D.deleteMessages([t]);
 }
-function J(e) {
+function et(e) {
     let { ids: t } = e;
     return D.deleteMessages(t);
 }
-function $() {
+function en() {
     L = !0;
 }
-function ee(e) {
+function er(e) {
     let { preload: t, finished: n, analyticsPayload: r } = e;
     (L = !1), t ? (k = !0) : ((U = !0 !== n), (M = !0)), (B = null != r ? r : null);
 }
-function et(e) {
+function ei(e) {
     var t;
     let { preload: n } = e;
     return (
@@ -252,10 +272,10 @@ function et(e) {
         U
     );
 }
-function en() {
+function eo() {
     (L = !1), (B = null), (x = !0);
 }
-function er(e) {
+function ea(e) {
     let { messageId: t, channelId: n, isUnread: r } = e,
         i = v.Lk.getCurrentConfig({ location: "handleInboxItemClick" }).notificationCenterVariant;
     G =
@@ -266,7 +286,7 @@ function er(e) {
               }
             : null;
 }
-function ei(e) {
+function es(e) {
     let { channelId: t, messageId: n } = e;
     (0, I.Tj)(
         {
@@ -276,23 +296,55 @@ function ei(e) {
         G,
     ) && (G = null);
 }
-function eo() {
+function el() {
     x = !1;
 }
-function ea() {
+function ec() {
     G = null;
 }
-function es(e) {
+function eu(e) {
+    let { channel: t } = e;
+    if (b.ZP.allowNoMessages(t)) return !1;
+    z();
+}
+function ed(e) {
+    var t;
+    let { userId: n } = e;
+    if (n !== (null == (t = y.default.getCurrentUser()) ? void 0 : t.id)) return !1;
+    z();
+}
+function ef(e) {
+    var t;
+    let { id: n, addedMembers: r, removedMemberIds: i } = e,
+        o = null == (t = y.default.getCurrentUser()) ? void 0 : t.id;
+    if (null == o) return !1;
+    if (null == r ? void 0 : r.some((e) => e.userId === o)) {
+        let e = p.Z.getBasicChannel(n);
+        return null != e && (0, f.J)(e, d.Z, b.ZP, p.Z) !== N.iN.NO_MESSAGES && void z();
+    }
+    return null != i && !!i.includes(o) && void z();
+}
+function e_(e) {
+    let { channel: t } = e;
+    if (!D.getMessages().some((e) => e.channelId === t.id)) return !1;
+    z();
+}
+function ep(e) {
+    let { guild: t } = e;
+    if (!D.getMessages().some((e) => e.guildId === t.id)) return !1;
+    z();
+}
+function eh(e) {
     let { navOnClick: t } = e;
     Z = null == t || t;
 }
-class el extends (r = a.ZP.Store) {
+class em extends (r = a.ZP.Store) {
     initialize() {
         this.waitFor(E.ZP, h.ZP, p.Z, g.ZP, u.Z, d.Z, b.ZP, m.Z, c.ZP);
     }
     canLoadMore(e) {
         let { preload: t } = e;
-        return et({ preload: t });
+        return ei({ preload: t });
     }
     getInboxMessages() {
         return D.getMessages();
@@ -331,28 +383,33 @@ class el extends (r = a.ZP.Store) {
         return { navOnClick: Z };
     }
 }
-C(el, "displayName", "NotificationsInboxStore");
-let ec = new el(s.Z, {
-    LOAD_RECENT_MENTIONS_SUCCESS: X,
-    LOAD_MESSAGES_SUCCESS: q,
-    MESSAGE_CREATE: z,
-    MESSAGE_DELETE: Q,
-    RECENT_MENTION_DELETE: Q,
-    MESSAGE_DELETE_BULK: J,
-    CONNECTION_OPEN: W,
-    GUILD_CREATE: Y,
-    GUILD_DELETE: Y,
-    USER_GUILD_SETTINGS_FULL_UPDATE: Y,
-    THREAD_CREATE: Y,
-    CHANNEL_CREATE: Y,
-    THREAD_DELETE: Y,
-    CHANNEL_DELETE: Y,
-    NOTIFICATIONS_INBOX_OPEN: eo,
-    NOTIFICATIONS_INBOX_LOAD_MORE_INBOX_START: $,
-    NOTIFICATIONS_INBOX_LOAD_MORE_INBOX_SUCCESS: ee,
-    NOTIFICATIONS_INBOX_LOAD_MORE_INBOX_FAILURE: en,
-    NOTIFICATIONS_INBOX_ITEM_CLICK: er,
-    NOTIFICATIONS_INBOX_ITEM_ACK: ei,
-    NOTIFICATIONS_INBOX_CLOSE: ea,
-    NOTIFICATIONS_INBOX_SET_DEV_OVERRIDES: es,
+C(em, "displayName", "NotificationsInboxStore");
+let eg = new em(s.Z, {
+    LOAD_RECENT_MENTIONS_SUCCESS: $,
+    LOAD_MESSAGES_SUCCESS: J,
+    MESSAGE_CREATE: Q,
+    MESSAGE_DELETE: ee,
+    RECENT_MENTION_DELETE: ee,
+    MESSAGE_DELETE_BULK: et,
+    CONNECTION_OPEN: z,
+    LOGOUT: q,
+    USER_GUILD_SETTINGS_CHANNEL_UPDATE_BULK: z,
+    USER_GUILD_SETTINGS_GUILD_AND_CHANNELS_UPDATE: z,
+    GUILD_CREATE: z,
+    USER_GUILD_SETTINGS_GUILD_UPDATE: z,
+    USER_GUILD_SETTINGS_CHANNEL_UPDATE: z,
+    CHANNEL_CREATE: eu,
+    GUILD_DELETE: ep,
+    THREAD_DELETE: e_,
+    CHANNEL_DELETE: e_,
+    THREAD_MEMBER_UPDATE: ed,
+    THREAD_MEMBERS_UPDATE: ef,
+    NOTIFICATIONS_INBOX_OPEN: el,
+    NOTIFICATIONS_INBOX_LOAD_MORE_INBOX_START: en,
+    NOTIFICATIONS_INBOX_LOAD_MORE_INBOX_SUCCESS: er,
+    NOTIFICATIONS_INBOX_LOAD_MORE_INBOX_FAILURE: eo,
+    NOTIFICATIONS_INBOX_ITEM_CLICK: ea,
+    NOTIFICATIONS_INBOX_ITEM_ACK: es,
+    NOTIFICATIONS_INBOX_CLOSE: ec,
+    NOTIFICATIONS_INBOX_SET_DEV_OVERRIDES: eh,
 });

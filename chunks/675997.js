@@ -1,6 +1,6 @@
 r.d(t, { Z: () => n });
 let n = (0, r(427164).le)({
-    name: "2025-10_collectibles_shop_take_over",
+    name: "2025-08-collectibles-shop-takeover",
     kind: "user",
     defaultConfig: { enableShopTakeOver: !1 },
     variations: {

@@ -1,39 +1,38 @@
-n.d(t, { Z: () => p }), n(388685);
+n.d(t, { Z: () => m }), n(388685);
 var r = n(255367),
     l = n(73800),
-    i = n(755721),
-    a = n(904245),
-    s = n(367907),
-    o = n(138201),
-    c = n(592125),
-    d = n(496675),
-    u = n(981631),
-    m = n(388032);
-let p = (e) => {
+    i = n(904245),
+    a = n(367907),
+    s = n(138201),
+    o = n(592125),
+    c = n(496675),
+    d = n(981631),
+    u = n(388032);
+let m = (e) => {
     let { message: t, reportId: n } = e,
-        [p, g] = l.useState(!1),
-        x = l.useCallback(() => {
-            g(!0),
-                s.ZP.trackWithMetadata(u.rMx.IAR_DELETE_MESSAGE_BUTTON_CLICKED, { report_id: n }),
-                a.Z.deleteMessage(t.getChannelId(), t.id);
+        [m, p] = l.useState(!1),
+        g = l.useCallback(() => {
+            p(!0),
+                a.ZP.trackWithMetadata(d.rMx.IAR_DELETE_MESSAGE_BUTTON_CLICKED, { report_id: n }),
+                i.Z.deleteMessage(t.getChannelId(), t.id);
         }, [t, n]),
-        _ = l.useMemo(() => {
-            let e = c.Z.getChannel(t.getChannelId());
+        x = l.useMemo(() => {
+            let e = o.Z.getChannel(t.getChannelId());
             return (
                 null != e &&
-                e.type !== u.d4z.DM &&
-                e.type !== u.d4z.GROUP_DM &&
-                d.Z.canWithPartialContext(u.Plq.MANAGE_MESSAGES, { channelId: e.id })
+                e.type !== d.d4z.DM &&
+                e.type !== d.d4z.GROUP_DM &&
+                c.Z.canWithPartialContext(d.Plq.MANAGE_MESSAGES, { channelId: e.id })
             );
         }, [t]);
-    return null != t && _
-        ? (0, r.jsx)(o.ZP, {
-              title: m.intl.string(m.t.c9BHLy),
-              description: m.intl.string(m.t.dK8S09),
-              buttonText: p ? m.intl.string(m.t.f3pnLC) : m.intl.string(m.t.ch2xbm),
-              buttonDisabled: p,
-              buttonColor: i.zx.Colors.RED,
-              onButtonPress: x,
+    return null != t && x
+        ? (0, r.jsx)(s.JZ, {
+              title: u.intl.string(u.t.c9BHLy),
+              description: u.intl.string(u.t.dK8S09),
+              buttonText: m ? u.intl.string(u.t.f3pnLC) : u.intl.string(u.t.ch2xbm),
+              buttonDisabled: m,
+              buttonVariant: "critical-primary",
+              onButtonPress: g,
           })
         : null;
 };

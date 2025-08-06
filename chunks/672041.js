@@ -1,5 +1,7 @@
-n.d(t, { t: () => i });
-let r = (0, n(818083).B)({
+n.d(t, { t: () => a });
+var r = n(818083),
+    i = n(154579);
+let l = (0, r.B)({
     kind: "user",
     id: "2025-07_search_desktop_pagination_limits",
     label: "Search Desktop Pagination Limits",
@@ -12,8 +14,18 @@ let r = (0, n(818083).B)({
         },
     ],
 });
-function i(e) {
+function a(e) {
     let { location: t, autoTrackExposure: n = !0 } = e,
-        { enabled: i } = r.useExperiment({ location: t }, { autoTrackExposure: n });
-    return i;
+        r = (0, i.ro)({
+            location: t,
+            autoTrackExposure: n,
+        }),
+        { enabled: a } = l.useExperiment(
+            { location: t },
+            {
+                autoTrackExposure: n,
+                disable: r,
+            },
+        );
+    return a;
 }

@@ -346,7 +346,7 @@ async function U(e, t) {
         try {
             let n = await i.tn.post({
                 url: I.ANM.QUESTS_DISMISS_CONTENT(e, t),
-                body: {},
+                body: A({}, (0, m.qe)(e, t)),
                 rejectWithError: !1,
             });
             o.Z.dispatch({

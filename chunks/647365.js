@@ -15,7 +15,7 @@ let i = function (e) {
         onCtxMenuClosed: d,
         onCtxMenuSelection: p,
         quest: m,
-        useReducedMotion: f,
+        useReducedMotion: g,
     } = e;
     return (0, r.jsx)(o.Z, {
         expansionSpring: i,
@@ -27,7 +27,7 @@ let i = function (e) {
         isExpanded: l,
         isExpansionAnimationComplete: c,
         quest: m,
-        useReducedMotion: f,
+        useReducedMotion: g,
         ref: n,
         children: (0, r.jsx)(s.Z, {
             className: a.content,
@@ -35,7 +35,7 @@ let i = function (e) {
             isExpanded: l,
             isExpansionAnimationComplete: c,
             quest: m,
-            useReducedMotion: f,
+            useReducedMotion: g,
         }),
     });
 };

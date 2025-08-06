@@ -32,7 +32,7 @@ let b = [
         () => m.intl.string(m.t.BIHl1t),
         () => m.intl.string(m.t.jhBm09),
     ],
-    h = [
+    y = [
         () => m.intl.string(m.t.AyMGXF),
         () => m.intl.string(m.t.aAFW7e),
         (e) => m.intl.formatToPlainString(m.t.h2g0cH, { name: e }),
@@ -50,7 +50,7 @@ let b = [
         () => m.intl.string(m.t.HQPAVV),
         () => m.intl.string(m.t.YolGh4),
     ],
-    y = [
+    h = [
         p.ABu.STEAM,
         p.ABu.PLAYSTATION,
         p.ABu.XBOX,
@@ -117,7 +117,7 @@ function _(e) {
         p = m.intl.formatToPlainString(m.t.sjSitL, { name: d }),
         [b] = l.useState(() => {
             var e;
-            return (null != (e = (0, o.sample)(h)) ? e : h[0])(d);
+            return (null != (e = (0, o.sample)(y)) ? e : y[0])(d);
         }),
         j = l.useCallback(() => {
             a.Z.openPrivateChannel({ recipientIds: t.id }), null == s || s();
@@ -140,7 +140,7 @@ function I() {
     let e = (0, s.ZP)();
     return (0, r.jsx)("div", {
         className: g.connectionPlatforms,
-        children: y.map((t, n) => {
+        children: h.map((t, n) => {
             let l = d.Z.get(t);
             if (null == l) return null;
             let o = (0, i.wjy)(e) ? l.icon.darkPNG : l.icon.lightPNG;

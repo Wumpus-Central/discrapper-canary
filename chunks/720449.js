@@ -15,8 +15,8 @@ function d(t) {
             analyticsContext: d,
             createdAtMs: m,
             prompt: f,
-            customStatusLabel: h,
-            analyticsLocations: p,
+            customStatusLabel: p,
+            analyticsLocations: h,
         } = t,
         b = e.trim();
     if (!(b.length > 0) && null == n) return i.Ok.updateSetting(void 0);
@@ -35,7 +35,7 @@ function d(t) {
             emojiId: null != n && null != n.id ? n.id : "0",
             emojiName: null != n ? n.name : "",
             createdAtMs: String(null != m ? m : a()().toDate().getTime()),
-            label: null != h ? r.Gm.create({ value: h }) : void 0,
+            label: null != p ? r.Gm.create({ value: p }) : void 0,
         });
         return (
             o.default.track(c.rMx.CUSTOM_STATUS_UPDATED, {
@@ -44,8 +44,8 @@ function d(t) {
                 text_len: b.length,
                 clear_after: null != l ? "".concat(l) : null,
                 prompt_type: null == f ? void 0 : f.value,
-                label: null != h ? h : null,
-                location_stack: p,
+                label: null != p ? p : null,
+                location_stack: h,
             }),
             t
         );

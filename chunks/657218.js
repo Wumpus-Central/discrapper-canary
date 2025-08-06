@@ -32,8 +32,8 @@ var r = n(255367),
     w = n(117530),
     A = n(459273),
     D = n(838440),
-    L = n(127654),
-    k = n(241309),
+    k = n(127654),
+    L = n(241309),
     M = n(928477),
     U = n(456077),
     H = n(488131),
@@ -269,7 +269,7 @@ function X(e) {
                         let m = null != (c = r.name) ? c : "",
                             b = (o || null == n) && 0 === m.length,
                             y = "" === e && (null == i || 0 === i.length) && 0 === l.length;
-                        if ((u(b ? (0, k.V_)() : null), h(y ? (0, k.T4)() : null), b || y))
+                        if ((u(b ? (0, L.V_)() : null), h(y ? (0, L.T4)() : null), b || y))
                             return (
                                 f(!1),
                                 {
@@ -299,7 +299,7 @@ function X(e) {
                         } catch (e) {
                             return (
                                 (null == (d = e.body) ? void 0 : d.code) === B.evJ.AUTOMOD_TITLE_BLOCKED &&
-                                    u((0, k.Gx)(e.body, t)),
+                                    u((0, L.Gx)(e.body, t)),
                                 f(!1),
                                 {
                                     shouldClear: !1,
@@ -460,7 +460,7 @@ function $(e) {
             renderAiGenerateButton: g,
         } = e,
         m = null != (t = l.name) ? t : "",
-        b = (0, k.Op)(u, { content: m }),
+        b = (0, L.Op)(u, { content: m }),
         y = (0, M.Od)(n, i),
         x = null != i && !f,
         j = (0, O.Dt)(),
@@ -530,7 +530,7 @@ function ee(e) {
             handler: m,
         });
     let x = (0, s.e7)([R.Z], () => R.Z.can(B.Plq.ATTACH_FILES, t)),
-        O = (0, k.Op)(h, { content: n.textValue });
+        O = (0, L.Op)(h, { content: n.textValue });
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(_.Z, {
@@ -555,7 +555,7 @@ function ee(e) {
                 onBlur: m,
                 onChange: b,
                 onSubmit: y,
-                promptToUpload: L.d,
+                promptToUpload: k.d,
             }),
         ],
     });

@@ -6,4 +6,5 @@ e.exports = {
     entryAnimationContainer: "entryAnimationContainer__1bd8a",
     wowMomentScaleIn: "wowMomentScaleIn__1bd8a",
     wowMomentScaleSettle: "wowMomentScaleSettle__1bd8a",
+    wowAnimation: "wowAnimation__1bd8a",
 };

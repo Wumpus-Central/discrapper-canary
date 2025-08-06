@@ -32,8 +32,8 @@ var r = n(255367),
     w = n(594174),
     A = n(499033),
     D = n(626135),
-    L = n(585483),
-    k = n(700785),
+    k = n(585483),
+    L = n(700785),
     M = n(51144),
     U = n(998502),
     H = n(276264),
@@ -89,7 +89,7 @@ let W = U.ZP.getEnableHardwareAcceleration(),
             C = (0, h.e7)([T.Z, N.Z], () => (x ? N.Z.getActivities() : T.Z.getActivities(a, t.guild_id))),
             A = (0, h.e7)([Z.Z], () => Z.Z.getAnyStreamForUser(a)),
             D = (0, c.JA)(a),
-            k = (0, h.e7)([E.Z], () => E.Z.canUserViewChannel(t.id, l, a)),
+            L = (0, h.e7)([E.Z], () => E.Z.canUserViewChannel(t.id, l, a)),
             U = (null == b ? void 0 : b.id) != null && b.id === s,
             B = i.useCallback(
                 (e) => {
@@ -132,8 +132,8 @@ let W = U.ZP.getEnableHardwareAcceleration(),
                 if (null == b) return;
                 let e = "@".concat(M.ZP.getUserTag(b, { decoration: "never" })),
                     n = "<@".concat(b.id, ">");
-                L.S.dispatch(G.CkL.TEXTAREA_FOCUS, { channelId: t.id }),
-                    L.S.dispatchToLastSubscribed(G.CkL.INSERT_TEXT, {
+                k.S.dispatch(G.CkL.TEXTAREA_FOCUS, { channelId: t.id }),
+                    k.S.dispatchToLastSubscribed(G.CkL.INSERT_TEXT, {
                         plainText: e,
                         rawText: n,
                     }),
@@ -219,7 +219,7 @@ let W = U.ZP.getEnableHardwareAcceleration(),
                             premiumSince: null == X ? null : new Date(X),
                             onClickPremiumGuildIcon: Y,
                             itemProps: D,
-                            lostPermissionTooltipText: k ? void 0 : F.intl.string(F.t["/QcoT0"]),
+                            lostPermissionTooltipText: L ? void 0 : F.intl.string(F.t["/QcoT0"]),
                             isOwner: U,
                             nameplate: q,
                             onClick: (e) => {
@@ -369,7 +369,7 @@ function X(e) {
     )
         return (0, r.jsx)(J, { channel: t });
     let _ = o().omit(g.containerProps, ["ref"]),
-        O = k.iJ(n);
+        O = L.iJ(n);
     return (0, r.jsx)(y.Gt, {
         value: s,
         children: (0, r.jsx)(c.bG, {

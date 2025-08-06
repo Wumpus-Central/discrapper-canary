@@ -143,13 +143,13 @@ function j(e) {
             }
             return o;
         })(e, ["guildId", "powerup", "compact", "iconSize", "onError"]);
-    let { onActivate: C, isLoading: O, error: I, onShowDeactivate: y } = (0, d.ZP)(t, n),
+    let { onActivate: C, isLoading: I, error: O, onShowDeactivate: y } = (0, d.ZP)(t, n),
         P = (0, u.Z)(t, n).type !== p.A3.INACTIVE,
         { disabled: w, reason: N } = (0, c.Z)(t, n, P);
     return (
         o.useEffect(() => {
-            null == h || h(I);
-        }, [I, h]),
+            null == h || h(O);
+        }, [O, h]),
         (0, r.jsx)(a.ua7, {
             delay: 100,
             "aria-label": null != N ? N : P ? m.intl.string(f.default.TZsu1d) : void 0,
@@ -175,7 +175,7 @@ function j(e) {
                                 "aria-label": m.intl.string(P ? f.default.TZsu1d : f.default.gSxlHR),
                                 disabled: w,
                                 onClick: P ? y : C,
-                                submitting: O,
+                                submitting: I,
                             }),
                             E,
                         ),

@@ -207,7 +207,7 @@ function D(e) {
             );
         }, [t, n]),
         q = 0 === t.length && 0 === n.length && B,
-        X = 0 === t.length && 0 === n.length && !B,
+        X = 0 === t.length && 0 === n.length && !V && G,
         Q = i.useMemo(() => {
             let e = [];
             return (
@@ -244,33 +244,12 @@ function D(e) {
             );
         }, [t, n, s, H, z, Y, N, d, q, X, D]),
         J = Q[Q.length - 1],
-        $ = i.isValidElement(J) && J.type === T;
+        $ = i.isValidElement(J) && J.type === T,
+        ee = (0, E.d)((e) => e.setInboxReadState);
     i.useEffect(() => {
-        var e, t, n, r, i, l, o;
-        if (X) return;
-        let s = 0 === Y.UNREAD.length,
-            a =
-                null !=
-                (o =
-                    null !=
-                    (l =
-                        null != (i = null == (t = (e = Y).TODAY[0]) ? void 0 : t[0])
-                            ? i
-                            : null == (n = e.YESTERDAY[0])
-                              ? void 0
-                              : n[0])
-                        ? l
-                        : null == (r = e.OLDER[0])
-                          ? void 0
-                          : r[0])
-                    ? o
-                    : null;
-        E.Z.setInboxReadState(
-            s,
-            (null == a ? void 0 : a.id) != null ? O.default.extractTimestamp(null == a ? void 0 : a.id) : null,
-        );
-    }, [Y, X]);
-    let ee = (t.length > 0 || n.length > 0) && null != l && G;
+        X || ee(0 === Y.UNREAD.length);
+    }, [Y, X, ee]);
+    let et = (t.length > 0 || n.length > 0) && null != l && G;
     !(function (e) {
         let { loadingInitial: t, messagesByCategory: n } = e,
             r = i.useRef(!1),
@@ -283,22 +262,22 @@ function D(e) {
         messagesByCategory: Y,
         loadingInitial: F,
     });
-    let et = i.useCallback(() => {
+    let en = i.useCallback(() => {
         var e;
         let t = A.filter((e) => H[e]).reduce((e, t) => e + Y[t].length, 0),
             n = null == (e = L.current) ? void 0 : e.getScrollerState();
         return null == n ? 0 : Math.max(0, Math.ceil(n.offsetHeight / 64) - t);
     }, [H, Y]);
     i.useEffect(() => {
-        X || G || 0 >= et() || ((!$ || W) && (null == l || l(x.X.FILL_SCROLLER)));
-    }, [et, l, X, G, $, W]);
-    let en = i.useMemo(() => {
-        let e = Math.min(Math.max(2, et()), 20);
+        X || G || 0 >= en() || ((!$ || W) && (null == l || l(x.X.FILL_SCROLLER)));
+    }, [en, l, X, G, $, W]);
+    let er = i.useMemo(() => {
+        let e = Math.min(Math.max(2, en()), 20);
         return (0, r.jsx)(S.Z, {
             withHeader: !1,
             size: e,
         });
-    }, [et]);
+    }, [en]);
     return (
         (0, y.vU)({
             notificationCenterVariant: U,
@@ -385,7 +364,7 @@ function D(e) {
                             )),
                             (n = n =
                                 {
-                                    children: [Q, ee && !$ ? en : null],
+                                    children: [Q, et && !$ ? er : null],
                                 }),
                             Object.getOwnPropertyDescriptors
                                 ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))

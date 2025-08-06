@@ -16,8 +16,8 @@ var n = r(255367),
     _ = r(38900),
     m = r(709999),
     v = r(81136),
-    C = r(215023),
-    O = r(981631),
+    O = r(215023),
+    C = r(981631),
     E = r(388032),
     S = r(484920),
     y = r(558513),
@@ -45,13 +45,13 @@ function N(e) {
         z = (0, o.ap)(U),
         [G, q, K] = l.useMemo(() => {
             switch (w) {
-                case C.AW.AVATAR_DECORATIONS:
+                case O.AW.AVATAR_DECORATIONS:
                     return [E.intl.string(E.t.dRZYND), z ? P.Z : j.Z, a.Z.AVATAR_DECORATION];
-                case C.AW.PROFILE_EFFECTS:
+                case O.AW.PROFILE_EFFECTS:
                     return [E.intl.string(E.t["1cNjt7"]), z ? k.Z : I.Z, a.Z.PROFILE_EFFECT];
-                case C.AW.NAMEPLATES:
+                case O.AW.NAMEPLATES:
                     return [E.intl.string(E.t.V68Fq6), z ? L.Z : T.Z, a.Z.NAMEPLATE];
-                case C.AW.BUNDLES:
+                case O.AW.BUNDLES:
                     return [E.intl.string(E.t.FYFppq), z ? x.Z : y.Z, a.Z.BUNDLE];
             }
         }, [w, z]),
@@ -138,7 +138,7 @@ function N(e) {
                                   totalCount: J.length,
                                   pageSize: 40,
                                   onPageChange: (e) => {
-                                      d.default.track(O.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                                      d.default.track(C.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                                           collectibles_shop_session_id: null == B ? void 0 : B.sessionId,
                                           page_section: null == B ? void 0 : B.pageSection,
                                           page_category: null == B ? void 0 : B.pageCategory,

@@ -1,5 +1,5 @@
 n.d(t, {
-    $x: () => a,
+    $x: () => l,
     GV: () => s,
     S$: () => g,
     Vn: () => o,
@@ -7,8 +7,8 @@ n.d(t, {
 });
 var r = n(73800),
     i = n(31775),
-    l = n.n(i);
-let a = 0,
+    a = n.n(i);
+let l = 0,
     s = 4,
     o = 4,
     c = "absolute",
@@ -105,7 +105,7 @@ let a = 0,
             ];
         }
     },
-    u = new (l())({ max: 100 });
+    u = new (a())({ max: 100 });
 function m(e) {
     let { numAttachments: t, containerWidth: n, containerHeight: i } = e;
     return r.useMemo(
@@ -113,8 +113,8 @@ function m(e) {
             (function (e) {
                 let { numAttachments: t, containerWidth: n, containerHeight: r } = e,
                     i = "".concat(t, "-").concat(n, "-").concat(r),
-                    l = u.get(i);
-                if (null != l) return l;
+                    a = u.get(i);
+                if (null != a) return a;
                 {
                     let e = d(n, r, t, 4);
                     return u.set(i, e), e;
@@ -137,10 +137,10 @@ function h(e) {
 }
 function g(e) {
     let { imageContainerStyles: t, containerWidth: n, containerHeight: i } = e,
-        l = r.useRef(h(t)),
-        a = r.useRef(n),
+        a = r.useRef(h(t)),
+        l = r.useRef(n),
         s = r.useRef(i),
-        o = n > a.current + 100,
+        o = n > l.current + 100,
         c = i > s.current + 100;
-    return (o || c) && (l.current = h(t)), l.current;
+    return (o || c) && (a.current = h(t)), a.current;
 }

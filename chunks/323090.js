@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y });
+n.d(t, { Z: () => h });
 var r = n(255367);
 n(73800);
 var l = n(442837),
@@ -15,9 +15,9 @@ var l = n(442837),
     g = n(179828),
     b = n(228168),
     j = n(388032),
-    h = n(349966);
-function y(e) {
-    let { user: t, currentUser: n, displayProfile: y, guildId: v, subsection: O, onClose: x } = e,
+    y = n(349966);
+function h(e) {
+    let { user: t, currentUser: n, displayProfile: h, guildId: v, subsection: O, onClose: x } = e,
         { trackUserProfileAction: _ } = (0, s.KZ)(),
         I = (0, l.e7)([d.Z], () => {
             var e;
@@ -26,12 +26,12 @@ function y(e) {
         P = (0, l.e7)([a.Z, c.Z], () => a.Z.getChannel(c.Z.getChannelId()));
     return (0, r.jsxs)(o.zJl, {
         fade: !0,
-        className: h.scroller,
+        className: y.scroller,
         children: [
-            (null == y ? void 0 : y.bio) != null &&
-                (null == y ? void 0 : y.bio) !== "" &&
+            (null == h ? void 0 : h.bio) != null &&
+                (null == h ? void 0 : h.bio) !== "" &&
                 (0, r.jsx)(f.Z, {
-                    userBio: y.bio,
+                    userBio: h.bio,
                     setLineClamp: !1,
                 }),
             (null == I ? void 0 : I.popularApplicationCommandIds) != null &&
@@ -43,11 +43,11 @@ function y(e) {
                     guildId: v,
                     onClick: x,
                 }),
-            (null == y ? void 0 : y.guildId) != null &&
+            (null == h ? void 0 : h.guildId) != null &&
                 (0, r.jsx)(g.Z, {
                     user: t,
                     currentUser: n,
-                    guildId: y.guildId,
+                    guildId: h.guildId,
                     scrollIntoView: O === b.Tb.ROLES,
                 }),
             (0, r.jsx)(m.Z, {
@@ -63,7 +63,7 @@ function y(e) {
                 scrollIntoView: O === b.Tb.NOTE,
                 children: (0, r.jsx)(i.Z, {
                     userId: t.id,
-                    className: h.note,
+                    className: y.note,
                     autoFocus: O === b.Tb.NOTE,
                     onUpdate: () => _({ action: "SET_NOTE" }),
                 }),

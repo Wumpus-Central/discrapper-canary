@@ -1,13 +1,15 @@
 n.r(t),
     n.d(t, {
-        AVSurveyFacesRive: () => s.m,
-        GlowButtonRive: () => a.Q,
-        PerfTestRive: () => o.t,
-        PulseGradientRive: () => i.z,
-        WandAndSparklesRive: () => r.x,
+        AVSurveyFacesRive: () => l.m,
+        GlowButtonRive: () => s.Q,
+        PerfTestRive: () => a.t,
+        PulseGradientRive: () => o.z,
+        WandAndSparklesRive: () => i.x,
+        WowMomentConfirmationWumpusRive: () => r._,
     });
-var r = n(827596),
-    i = n(327705),
-    o = n(587825),
-    a = n(573365),
-    s = n(550851);
+var r = n(684082),
+    i = n(827596),
+    o = n(327705),
+    a = n(587825),
+    s = n(573365),
+    l = n(550851);

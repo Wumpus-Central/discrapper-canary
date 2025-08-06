@@ -1,88 +1,88 @@
-var n = e(98405),
-    o = e(580983),
-    i = e(511696),
-    a = e(938373),
-    s = e(880181),
-    u = e(280481),
-    c = e(961050),
-    f = e(769827),
-    l = e(25124),
-    p = e(436207),
-    v = e(556585),
-    h = e(751736),
-    d = e(933121),
-    y = e(112493),
+var r = n(98405),
+    i = n(580983),
+    o = n(511696),
+    a = n(938373),
+    s = n(880181),
+    l = n(280481),
+    c = n(961050),
+    u = n(769827),
+    d = n(25124),
+    f = n(436207),
+    _ = n(556585),
+    p = n(751736),
+    h = n(933121),
+    m = n(112493),
     g = a.PROPER,
-    L = a.CONFIGURABLE,
-    m = y.IteratorPrototype,
-    x = y.BUGGY_SAFARI_ITERATORS,
-    S = h("iterator"),
-    b = "keys",
-    k = "values",
-    M = "entries",
-    T = function () {
+    E = a.CONFIGURABLE,
+    b = m.IteratorPrototype,
+    y = m.BUGGY_SAFARI_ITERATORS,
+    O = p("iterator"),
+    v = "keys",
+    I = "values",
+    T = "entries",
+    S = function () {
         return this;
     };
-t.exports = function (t, r, e, a, h, y, A) {
-    u(e, r, a);
-    var O,
-        w,
+e.exports = function (e, t, n, a, p, m, A) {
+    l(n, t, a);
+    var N,
         C,
-        I = function (t) {
-            if (t === h && E) return E;
-            if (!x && t && t in G) return G[t];
-            switch (t) {
-                case b:
-                case k:
-                case M:
+        R,
+        P = function (e) {
+            if (e === p && M) return M;
+            if (!y && e && e in L) return L[e];
+            switch (e) {
+                case v:
+                case I:
+                case T:
                     return function () {
-                        return new e(this, t);
+                        return new n(this, e);
                     };
             }
             return function () {
-                return new e(this);
+                return new n(this);
             };
         },
-        P = r + " Iterator",
-        R = !1,
-        G = t.prototype,
-        j = G[S] || G["@@iterator"] || (h && G[h]),
-        E = (!x && j) || I(h),
-        D = ("Array" === r && G.entries) || j;
+        w = t + " Iterator",
+        D = !1,
+        L = e.prototype,
+        x = L[O] || L["@@iterator"] || (p && L[p]),
+        M = (!y && x) || P(p),
+        k = ("Array" === t && L.entries) || x;
     if (
-        (D &&
-            (O = c(D.call(new t()))) !== Object.prototype &&
-            O.next &&
-            (!i && c(O) !== m && (f ? f(O, m) : s(O[S]) || v(O, S, T)), l(O, P, !0, !0), i && (d[P] = T)),
+        (k &&
+            (N = c(k.call(new e()))) !== Object.prototype &&
+            N.next &&
+            (!o && c(N) !== b && (u ? u(N, b) : s(N[O]) || _(N, O, S)), d(N, w, !0, !0), o && (h[w] = S)),
         g &&
-            h === k &&
-            j &&
-            j.name !== k &&
-            (!i && L
-                ? p(G, "name", k)
-                : ((R = !0),
-                  (E = function () {
-                      return o(j, this);
+            p === I &&
+            x &&
+            x.name !== I &&
+            (!o && E
+                ? f(L, "name", I)
+                : ((D = !0),
+                  (M = function () {
+                      return i(x, this);
                   }))),
-        h)
+        p)
     )
         if (
-            ((w = {
-                values: I(k),
-                keys: y ? E : I(b),
-                entries: I(M),
+            ((C = {
+                values: P(I),
+                keys: m ? M : P(v),
+                entries: P(T),
             }),
             A)
         )
-            for (C in w) (!x && !R && C in G) || v(G, C, w[C]);
+            for (R in C) (!y && !D && R in L) || _(L, R, C[R]);
         else
-            n(
+            r(
                 {
-                    target: r,
+                    target: t,
                     proto: !0,
-                    forced: x || R,
+                    forced: y || D,
                 },
-                w,
+                C,
             );
-    return (!i || A) && G[S] !== E && v(G, S, E, { name: h }), (d[r] = E), w;
+    return (!o || A) && L[O] !== M && _(L, O, M, { name: p }), (h[t] = M), C;
 };

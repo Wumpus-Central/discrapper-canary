@@ -1,8 +1,8 @@
 n.d(t, { Z: () => eg }), n(539854), n(388685), n(953529);
 var r = n(255367),
     i = n(73800),
-    l = n(120356),
-    a = n.n(l),
+    a = n(120356),
+    l = n.n(a),
     s = n(913527),
     o = n.n(s),
     c = n(126663),
@@ -37,8 +37,8 @@ var r = n(255367),
     F = n(470623),
     D = n(710352),
     z = n(981631),
-    B = n(388032),
-    H = n(354094);
+    H = n(388032),
+    B = n(354094);
 function U(e, t, n) {
     return (
         t in e
@@ -115,8 +115,8 @@ class K {
 let J = (e) => {
         let t = null != e.topic && e.topic.length > 0;
         return {
-            name: B.intl.string(B.t.UgJu1d),
-            description: B.intl.string(B.t["3C6/Gx"]),
+            name: H.intl.string(H.t.UgJu1d),
+            description: H.intl.string(H.t["3C6/Gx"]),
             clickHandler: () => {
                 X(D.ZI.GUIDELINES), f.ZP.open(e.id, void 0, z.ZfP.TOPIC);
             },
@@ -126,8 +126,8 @@ let J = (e) => {
     Y = (e) => {
         let t = null != e.availableTags && e.availableTags.length > 0;
         return {
-            name: B.intl.string(B.t.xiBFCg),
-            description: B.intl.string(B.t.wCv4Oz),
+            name: H.intl.string(H.t.xiBFCg),
+            description: H.intl.string(H.t.wCv4Oz),
             clickHandler: () => {
                 X(D.ZI.TAGS),
                     f.ZP.open(e.id),
@@ -149,8 +149,8 @@ let J = (e) => {
     Q = (e) => {
         let t = null != e.defaultReactionEmoji;
         return {
-            name: B.intl.string(B.t.QlyC9v),
-            description: B.intl.string(B.t["+50LJi"]),
+            name: H.intl.string(H.t.QlyC9v),
+            description: H.intl.string(H.t["+50LJi"]),
             clickHandler: () => {
                 X(D.ZI.DEFAULT_REACTION),
                     (0, g.ZDy)(async () => {
@@ -162,10 +162,10 @@ let J = (e) => {
         };
     },
     $ = (e, t, i) => ({
-        name: B.intl.string(B.t["6A0O6+"]),
+        name: H.intl.string(H.t["6A0O6+"]),
         description: t
-            ? B.intl.string(B.t["8hI5vr"])
-            : B.intl.format(B.t.ysxcAw, {
+            ? H.intl.string(H.t["8hI5vr"])
+            : H.intl.format(H.t.ysxcAw, {
                   onClick: (e) => {
                       null != i &&
                           (e.preventDefault(),
@@ -193,15 +193,15 @@ let J = (e) => {
         }, [e, n, t]);
     },
     er = (e, t, n, r) => {
-        let l = i.useRef(0);
+        let a = i.useRef(0);
         i.useEffect(
             () => (
                 n || !e || t
-                    ? clearTimeout(l.current)
-                    : (l.current = setTimeout(() => {
+                    ? clearTimeout(a.current)
+                    : (a.current = setTimeout(() => {
                           r();
                       }, 60 * T.Z.Millis.SECOND)),
-                () => clearTimeout(l.current)
+                () => clearTimeout(a.current)
             ),
             [e, t, r, n],
         );
@@ -211,17 +211,17 @@ let J = (e) => {
             e && t && n();
         });
     },
-    el = (e) => {
-        let { isAllDone: t, isVisible: n, canManageChannel: r, guildId: l, channel: a } = e,
-            s = (0, h.e7)([O.Z], () => (null != l ? O.Z.partitionVersion(l) : void 0)),
+    ea = (e) => {
+        let { isAllDone: t, isVisible: n, canManageChannel: r, guildId: a, channel: l } = e,
+            s = (0, h.e7)([O.Z], () => (null != a ? O.Z.partitionVersion(a) : void 0)),
             o = i.useCallback(() => {
                 S.S.dispatch(z.CkL.REMEASURE_TARGET);
             }, []);
         i.useEffect(() => {
             o();
-        }, [o, t, n, r, s, a.id, a.permissionOverwrites]);
+        }, [o, t, n, r, s, l.id, l.permissionOverwrites]);
     },
-    ea = () => {
+    el = () => {
         let [e, t] = i.useState(!0);
         return {
             transitions: (0, g.Yzy)(e, {
@@ -245,8 +245,8 @@ let J = (e) => {
     eo = (e) => {
         let { guild: t, roles: n } = e;
         return (0, r.jsx)("div", {
-            className: H.rolesList,
-            "aria-label": B.intl.formatToPlainString(B.t.PCs0oq, { numRoles: n.length }),
+            className: B.rolesList,
+            "aria-label": H.intl.formatToPlainString(H.t.PCs0oq, { numRoles: n.length }),
             children: n.map((e) =>
                 (0, r.jsx)(
                     x.UB,
@@ -255,7 +255,7 @@ let J = (e) => {
                         canRemove: !1,
                         onRemove: z.VqG,
                         guildId: t.id,
-                        className: H.rolePill,
+                        className: B.rolePill,
                     },
                     e.id,
                 ),
@@ -269,11 +269,11 @@ let J = (e) => {
         clamp: !0,
     },
     ed = (e) => {
-        let { guild: t, channel: l, hasAnyThread: a, handleHide: s } = e,
+        let { guild: t, channel: a, hasAnyThread: l, handleHide: s } = e,
             [o, c] = i.useState(!1),
-            d = (0, A.c)(l.id),
-            u = (0, h.e7)([I.Z], () => I.Z.hasHidden(l.id)),
-            f = (function (e, t, l, a) {
+            d = (0, A.c)(a.id),
+            u = (0, h.e7)([I.Z], () => I.Z.hasHidden(a.id)),
+            f = (function (e, t, a, l) {
                 let s = null == e ? void 0 : e.id,
                     o = (0, h.e7)([O.Z], () => (null != s ? O.Z.getSortedRoles(s) : void 0));
                 return i.useMemo(() => {
@@ -285,13 +285,13 @@ let J = (e) => {
                             s ||
                             null == o ||
                             i.addStep(
-                                (function (e, t, i, l) {
-                                    let a = (0, b.Z)(i)
+                                (function (e, t, i, a) {
+                                    let l = (0, b.Z)(i)
                                             ? m.$e(z.Plq.VIEW_CHANNEL, z.Plq.SEND_MESSAGES)
                                             : z.Plq.SEND_MESSAGES,
                                         s =
                                             null != e
-                                                ? (0, R.E)(t, i, a).filter(
+                                                ? (0, R.E)(t, i, l).filter(
                                                       (e) =>
                                                           i.permissionOverwrites.hasOwnProperty(e.id) || (0, y.fI)(e),
                                                   )
@@ -299,8 +299,8 @@ let J = (e) => {
                                         o = s.length > 0,
                                         c = s.some((e) => (0, y.fI)(e));
                                     return {
-                                        name: B.intl.string(B.t["/Ax2go"]),
-                                        description: B.intl.string(B.t.gAIOfn),
+                                        name: H.intl.string(H.t["/Ax2go"]),
+                                        description: H.intl.string(H.t.gAIOfn),
                                         isDone: o && c,
                                         shouldWarn: o && !c,
                                         children: o
@@ -315,14 +315,14 @@ let J = (e) => {
                                                     async () => {
                                                         let { default: t } = await n.e("78704").then(n.bind(n, 560602));
                                                         return (
-                                                            l(!0),
+                                                            a(!0),
                                                             (n) =>
                                                                 (0, r.jsx)(
                                                                     t,
                                                                     G(V({}, n), {
                                                                         channel: i,
                                                                         guild: e,
-                                                                        permission: a,
+                                                                        permission: l,
                                                                         currentSelectedRoles: s,
                                                                     }),
                                                                 )
@@ -331,24 +331,24 @@ let J = (e) => {
                                                     {
                                                         modalKey: "SEND_MESSAGE_ROLE_PERMISSION_FIX_MODAL_KEY",
                                                         onCloseRequest: z.VqG,
-                                                        onCloseCallback: () => l(!1),
+                                                        onCloseCallback: () => a(!1),
                                                     },
                                                 );
                                         },
                                     };
-                                })(e, o, t, a),
+                                })(e, o, t, l),
                             ),
                         s || i.addStep(J(t)),
                         i.addStep(Y(t)),
                         i.addStep(Q(t)),
-                        i.addStep($(l, s, null == e ? void 0 : e.id)),
+                        i.addStep($(a, s, null == e ? void 0 : e.id)),
                         i
                     );
-                }, [t, e, o, l, a]);
-            })(t, l, a, c),
+                }, [t, e, o, a, l]);
+            })(t, a, l, c),
             x = f.isAllDone();
         return (
-            er(x, d || u || !et(l.id), o, s),
+            er(x, d || u || !et(a.id), o, s),
             {
                 onboardingSteps: f,
                 isHidden: u,
@@ -366,12 +366,12 @@ let J = (e) => {
         let { handleHide: t } = e;
         return (0, r.jsx)(g.P3F, {
             onClick: t,
-            className: H.closeButton,
-            "aria-label": B.intl.string(B.t.WAI6xs),
+            className: B.closeButton,
+            "aria-label": H.intl.string(H.t.WAI6xs),
             children: (0, r.jsx)(g.Dio, {
                 size: "md",
                 color: "currentColor",
-                className: H.closeIcon,
+                className: B.closeIcon,
             }),
         });
     },
@@ -379,32 +379,32 @@ let J = (e) => {
         let { expanded: t, onClick: n } = e;
         return (0, r.jsx)(g.P3F, {
             onClick: n,
-            className: H.closeButton,
-            "aria-label": t ? B.intl.string(B.t.iTcumZ) : B.intl.string(B.t.dcl9MT),
+            className: B.closeButton,
+            "aria-label": t ? H.intl.string(H.t.iTcumZ) : H.intl.string(H.t.dcl9MT),
             children: t
                 ? (0, r.jsx)(g.dOc, {
                       size: "xs",
                       color: "currentColor",
-                      className: H.closeIcon,
+                      className: B.closeIcon,
                   })
                 : (0, r.jsx)(g.bJT, {
                       size: "xs",
                       color: "currentColor",
-                      className: H.closeIcon,
+                      className: B.closeIcon,
                   }),
         });
     },
     eg = (e) => {
         let { hasAnyThread: t, hasActiveThreads: n, channel: i } = e,
-            { onboardingExpanded: l } = (0, F.xH)((e) => {
+            { onboardingExpanded: a } = (0, F.xH)((e) => {
                 let { onboardingExpanded: t } = e;
                 return { onboardingExpanded: t };
             }, d.X),
             { tagFilter: s } = (0, M.H)(i.id),
             o = (0, h.e7)([w.Z], () => w.Z.getGuild(i.getGuildId())),
             m = (0, Z.r_)(i),
-            { transitions: f, setVisible: x } = ea(),
-            b = es(l),
+            { transitions: f, setVisible: x } = el(),
+            b = es(a),
             y = eu(),
             O = ee(i.id, x),
             {
@@ -423,7 +423,7 @@ let J = (e) => {
             k = i.isMediaChannel(),
             A = (e) => R.getState().setOnboardingExpanded(e);
         return (ei(I, E, O),
-        el({
+        ea({
             isAllDone: I,
             isVisible: E,
             canManageChannel: m,
@@ -454,41 +454,41 @@ let J = (e) => {
                               t
                                   ? (0, r.jsx)(c.animated.div, {
                                         style: e,
-                                        className: H.container,
+                                        className: B.container,
                                         children: (0, r.jsxs)("div", {
-                                            className: H.wrapper,
+                                            className: B.wrapper,
                                             children: [
                                                 (0, r.jsx)("div", {
-                                                    className: H.headerRow,
+                                                    className: B.headerRow,
                                                     children: (0, r.jsxs)(g.y5t, {
                                                         component: (0, r.jsx)(g.X6q, {
                                                             variant: "heading-md/semibold",
-                                                            children: B.intl.string(B.t.LhlgY2),
+                                                            children: H.intl.string(H.t.LhlgY2),
                                                         }),
                                                         children: [
                                                             (0, r.jsx)(g.X6q, {
                                                                 variant: "heading-md/medium",
-                                                                className: H.header,
-                                                                children: B.intl.format(B.t["9L+8b2"], {
+                                                                className: B.header,
+                                                                children: H.intl.format(H.t["9L+8b2"], {
                                                                     numCompleted: S.completedSteps.toString(),
                                                                     numSteps: S.steps.length.toString(),
                                                                 }),
                                                             }),
                                                             (0, r.jsxs)(g.Text, {
                                                                 variant: "text-xs/normal",
-                                                                className: H.visibilityInfo,
+                                                                className: B.visibilityInfo,
                                                                 children: [
                                                                     (0, r.jsx)(g.d3s, {
                                                                         size: "xxs",
                                                                         color: "currentColor",
-                                                                        className: H.icon,
+                                                                        className: B.icon,
                                                                     }),
-                                                                    B.intl.string(B.t.znhX2d),
+                                                                    H.intl.string(H.t.znhX2d),
                                                                 ],
                                                             }),
                                                             (0, r.jsx)(eh, {
-                                                                expanded: l,
-                                                                onClick: () => A(!l),
+                                                                expanded: a,
+                                                                onClick: () => A(!a),
                                                             }),
                                                             (0, r.jsx)(em, { handleHide: O }),
                                                         ],
@@ -498,9 +498,9 @@ let J = (e) => {
                                                     t
                                                         ? (0, r.jsx)(c.animated.div, {
                                                               style: e,
-                                                              className: H.listContainer,
+                                                              className: B.listContainer,
                                                               children: (0, r.jsx)("ol", {
-                                                                  className: H.checklist,
+                                                                  className: B.checklist,
                                                                   children: S.getSteps().map((e) =>
                                                                       (0, r.jsxs)(
                                                                           g.P3F,
@@ -508,8 +508,8 @@ let J = (e) => {
                                                                               tag: "li",
                                                                               "aria-label": e.name,
                                                                               onClick: () => y(e),
-                                                                              className: a()(H.stepContainer, {
-                                                                                  [H.completed]: e.isDone,
+                                                                              className: l()(B.stepContainer, {
+                                                                                  [B.completed]: e.isDone,
                                                                               }),
                                                                               children: [
                                                                                   e.shouldWarn
@@ -518,7 +518,7 @@ let J = (e) => {
                                                                                             width: 20,
                                                                                             height: 20,
                                                                                             color: u.Z.STATUS_DANGER,
-                                                                                            className: H.stepStatus,
+                                                                                            className: B.stepStatus,
                                                                                         })
                                                                                       : e.isDone
                                                                                         ? (0, r.jsx)(g.G2e, {
@@ -526,33 +526,33 @@ let J = (e) => {
                                                                                                   .STATUS_POSITIVE_BACKGROUND,
                                                                                               icon: g.dz2,
                                                                                               style: W,
-                                                                                              className: H.stepStatus,
+                                                                                              className: B.stepStatus,
                                                                                           })
                                                                                         : (0, r.jsx)(g.G2e, {
                                                                                               disableColor: !0,
                                                                                               icon: (0, g.GSL)(P.Z),
                                                                                               style: q,
-                                                                                              className: a()(
-                                                                                                  H.stepStatus,
-                                                                                                  H.completed,
+                                                                                              className: l()(
+                                                                                                  B.stepStatus,
+                                                                                                  B.completed,
                                                                                               ),
                                                                                           }),
                                                                                   (0, r.jsxs)("div", {
-                                                                                      className: H.step,
+                                                                                      className: B.step,
                                                                                       children: [
                                                                                           (0, r.jsx)(g.Text, {
                                                                                               variant: "text-md/medium",
                                                                                               color: e.isDone
                                                                                                   ? "header-secondary"
                                                                                                   : "header-primary",
-                                                                                              className: H.stepName,
+                                                                                              className: B.stepName,
                                                                                               children: e.name,
                                                                                           }),
                                                                                           (0, r.jsx)(g.Text, {
                                                                                               variant: "text-sm/normal",
                                                                                               color: "header-secondary",
                                                                                               className:
-                                                                                                  H.stepDescription,
+                                                                                                  B.stepDescription,
                                                                                               children: e.description,
                                                                                           }),
                                                                                           e.children,
@@ -562,7 +562,7 @@ let J = (e) => {
                                                                                       size: "custom",
                                                                                       color: "currentColor",
                                                                                       width: 12,
-                                                                                      className: H.stepStatus,
+                                                                                      className: B.stepStatus,
                                                                                   }),
                                                                               ],
                                                                           },

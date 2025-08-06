@@ -1,43 +1,43 @@
-var n = e(146063),
-    o = e(967333),
-    i = e(933121),
-    a = e(199838),
-    s = e(117895).f,
-    u = e(130006),
-    c = e(682564),
-    f = e(511696),
-    l = e(507604),
-    p = "Array Iterator",
-    v = a.set,
-    h = a.getterFor(p);
-t.exports = u(
+var r = n(146063),
+    i = n(967333),
+    o = n(933121),
+    a = n(199838),
+    s = n(117895).f,
+    l = n(130006),
+    c = n(682564),
+    u = n(511696),
+    d = n(507604),
+    f = "Array Iterator",
+    _ = a.set,
+    p = a.getterFor(f);
+e.exports = l(
     Array,
     "Array",
-    function (t, r) {
-        v(this, {
-            type: p,
-            target: n(t),
+    function (e, t) {
+        _(this, {
+            type: f,
+            target: r(e),
             index: 0,
-            kind: r,
+            kind: t,
         });
     },
     function () {
-        var t = h(this),
-            r = t.target,
-            e = t.index++;
-        if (!r || e >= r.length) return (t.target = null), c(void 0, !0);
-        switch (t.kind) {
+        var e = p(this),
+            t = e.target,
+            n = e.index++;
+        if (!t || n >= t.length) return (e.target = null), c(void 0, !0);
+        switch (e.kind) {
             case "keys":
-                return c(e, !1);
+                return c(n, !1);
             case "values":
-                return c(r[e], !1);
+                return c(t[n], !1);
         }
-        return c([e, r[e]], !1);
+        return c([n, t[n]], !1);
     },
     "values",
 );
-var d = (i.Arguments = i.Array);
-if ((o("keys"), o("values"), o("entries"), !f && l && "values" !== d.name))
+var h = (o.Arguments = o.Array);
+if ((i("keys"), i("values"), i("entries"), !u && d && "values" !== h.name))
     try {
-        s(d, "name", { value: "values" });
-    } catch (t) {}
+        s(h, "name", { value: "values" });
+    } catch (e) {}

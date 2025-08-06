@@ -11,8 +11,8 @@ var n = r(255367),
     m = r(914010),
     p = r(959457),
     h = r(246946),
-    y = r(594174),
-    f = r(5192),
+    f = r(594174),
+    y = r(5192),
     g = r(476221),
     v = r(481250),
     D = r(206314),
@@ -79,9 +79,9 @@ class R extends a.PureComponent {
             }),
             p = l().map(d.receiverReports, (e) => {
                 let t = Array.isArray(e.bitrate) ? (null == (n = e.bitrate.at(-1)) ? void 0 : n.value) : e.bitrate,
-                    r = y.default.getUser(e.id);
+                    r = f.default.getUser(e.id);
                 var n,
-                    a = f.ZP.getNickname(m.Z.getGuildId(), void 0, r);
+                    a = y.ZP.getNickname(m.Z.getGuildId(), void 0, r);
                 return (
                     null == a && (a = null != r ? r.username : e.id),
                     {

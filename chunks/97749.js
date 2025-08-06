@@ -1,18 +1,18 @@
-var n = r(507604),
-    i = r(46015),
-    s = r(573078),
+var r = n(507604),
+    i = n(46015),
+    o = n(573078),
     a = URLSearchParams.prototype,
-    o = i(a.forEach);
-!n ||
+    s = i(a.forEach);
+!r ||
     "size" in a ||
-    s(a, "size", {
+    o(a, "size", {
         get: function () {
-            var t = 0;
+            var e = 0;
             return (
-                o(this, function () {
-                    t++;
+                s(this, function () {
+                    e++;
                 }),
-                t
+                e
             );
         },
         configurable: !0,

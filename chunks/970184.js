@@ -1,7 +1,8 @@
 n.d(t, {
-    CJ: () => x,
-    Ee: () => L,
-    Il: () => D,
+    CJ: () => U,
+    Ee: () => j,
+    Il: () => k,
+    h4: () => G,
 }),
     n(388685),
     n(997841);
@@ -26,7 +27,59 @@ var r = n(255367),
     O = n(280501),
     v = n(892902),
     I = n(359232);
-let T = (e) => {
+function T(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0,
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function S(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        "function" == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                }),
+            )),
+            r.forEach(function (t) {
+                T(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function A(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function N(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : A(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+let C = (e) => {
         switch (e.type) {
             case c.re.BUTTON:
                 return e.style !== c.ZJ.LINK;
@@ -42,7 +95,7 @@ let T = (e) => {
                 return !1;
         }
     },
-    S = function (e, t) {
+    R = function (e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
             r = O.gH.NORMAL;
         return (
@@ -50,12 +103,12 @@ let T = (e) => {
                 e.state !== _.F.FAILED &&
                 (e.data.interactionType === c.B8.MESSAGE_COMPONENT && e.data.componentId === t.id
                     ? (r = O.gH.LOADING)
-                    : T(t) && (r = O.gH.DISABLED)),
-            n && T(t) && (r = O.gH.DISABLED),
+                    : C(t) && (r = O.gH.DISABLED)),
+            n && C(t) && (r = O.gH.DISABLED),
             r
         );
     },
-    A = (e) => {
+    P = (e) => {
         let t = g.Z.getChannel(e),
             n = (0, s.e7)([b.Z], () => (null == t ? void 0 : t.guild_id) == null || b.Z.canChatInGuild(t.guild_id), [
                 t,
@@ -86,40 +139,41 @@ let T = (e) => {
             ) || !!o
         );
     };
-function N(e, t) {
-    let n = i.useContext(w),
-        [r, o] = i.useState(null),
+function w(e, t) {
+    var n, r;
+    let o = i.useContext(M),
         a = i.useCallback(
             (t) => {
-                let n = (0, I.Z)(e, t);
-                return o(n), null == n;
+                var n;
+                let r = (0, I.Z)(e, t, null != o.modal ? "modal" : "message");
+                return null == (n = o.setValidationErrors) || n.call(o, (t) => N(S({}, t), { [e.id]: r })), null == r;
             },
-            [e],
+            [e, o],
         );
     return (
         i.useEffect(() => {
             var e;
-            let r = () => a(t);
+            let n = () => a(t);
             return (
-                null == (e = n.validators) || e.add(r),
+                null == (e = o.validators) || e.add(n),
                 () => {
                     var e;
-                    null == (e = n.validators) || e.delete(r);
+                    null == (e = o.validators) || e.delete(n);
                 }
             );
-        }, [n.validators, a, t]),
+        }, [o.validators, a, t, e.id]),
         {
-            error: r,
+            error: null != (r = null == (n = o.validationErrors) ? void 0 : n[e.id]) ? r : null,
             validate: a,
         }
     );
 }
-function C(e, t, n, r) {
+function D(e, t, n, r) {
     var o;
     let a = (0, s.e7)([v.Z], () => v.Z.getInteractionComponentState(e.id, n.id)),
         l = (0, s.e7)([f.ZP], () => f.ZP.getInteraction(e), [e]),
-        c = A(e.channel_id) || t,
-        { error: u, validate: d } = N(n, a),
+        c = P(e.channel_id) || t,
+        { error: u, validate: d } = w(n, a),
         _ = null != (o = e.applicationId) ? o : e.author.id;
     return {
         state: a,
@@ -146,12 +200,12 @@ function C(e, t, n, r) {
             },
             [e.channel_id, e.flags, e.id, n.customId, n.type, n.id, _, d],
         ),
-        isDisabled: c && T(n),
-        visualState: S(l, n, c),
+        isDisabled: c && C(n),
+        visualState: R(l, n, c),
         error: u,
     };
 }
-function R(e, t, n) {
+function L(e, t, n) {
     l.Z.dispatch({
         type: "SET_INTERACTION_COMPONENT_STATE",
         rootContainerId: e,
@@ -159,10 +213,10 @@ function R(e, t, n) {
         state: n,
     });
 }
-function P(e, t, n) {
+function x(e, t, n) {
     let r = (0, s.e7)([v.Z], () => v.Z.getInteractionComponentState(e.customId, t.id)),
-        { error: o, validate: a } = N(t, r),
-        l = i.useCallback((n) => null == n || (R(e.customId, t.id, n), !!a(n)), [e.customId, t.id, a]);
+        { error: o, validate: a } = w(t, r),
+        l = i.useCallback((n) => null == n || (L(e.customId, t.id, n), !!a(n)), [e.customId, t.id, a]);
     return (
         (0, u.ZP)(() => {
             l(n);
@@ -176,35 +230,49 @@ function P(e, t, n) {
         }
     );
 }
-let w = i.createContext(null);
-function D(e) {
-    let { children: t, message: n, modal: o, validators: s, shouldDisableInteractiveComponents: l = !1 } = e,
-        c = i.useMemo(
+let M = i.createContext(null);
+function k(e) {
+    let {
+            children: t,
+            message: n,
+            modal: o,
+            validators: s,
+            validationErrors: l,
+            setValidationErrors: c,
+            shouldDisableInteractiveComponents: u = !1,
+        } = e,
+        d = i.useMemo(
             () =>
                 null != n
                     ? {
-                          useComponentState: C.bind(null, n, l),
+                          useComponentState: D.bind(null, n, u),
                           channelId: n.channel_id,
                           message: n,
                           validators: s,
                       }
                     : (a()(null != o, "modal is present if message is not"),
                       {
-                          useComponentState: P.bind(null, o),
+                          useComponentState: x.bind(null, o),
                           channelId: o.channelId,
                           modal: o,
                           validators: s,
+                          validationErrors: l,
+                          setValidationErrors: c,
                       }),
-            [n, o, s, l],
+            [n, o, s, l, c, u],
         );
-    return (0, r.jsx)(w.Provider, {
-        value: c,
+    return (0, r.jsx)(M.Provider, {
+        value: d,
         children: t,
     });
 }
-function L(e, t) {
-    return i.useContext(w).useComponentState(e, t);
+function j(e, t) {
+    return i.useContext(M).useComponentState(e, t);
 }
-function x() {
-    return i.useContext(w);
+function U() {
+    return i.useContext(M);
+}
+function G(e) {
+    var t, n;
+    return null != (n = null == (t = i.useContext(M).validationErrors) ? void 0 : t[e.id]) ? n : null;
 }

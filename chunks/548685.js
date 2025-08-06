@@ -16,8 +16,8 @@ var n = r(255367),
     _ = r(597688),
     m = r(243126),
     v = r(38900),
-    C = r(709999),
-    O = r(328626),
+    O = r(709999),
+    C = r(328626),
     E = r(619899),
     S = r(981631),
     y = r(388032),
@@ -39,7 +39,7 @@ let j = (e) => {
         F = (0, o.e7)([u.Z], () => u.Z.useReducedMotion),
         M = (0, o.e7)([p.Z], () => p.Z.isFocused()),
         H = !F && M,
-        { animationPhase: W, startAnimation: V } = (0, O.y)(),
+        { animationPhase: W, startAnimation: V } = (0, C.y)(),
         U = (0, b.sp)(),
         z = null != (t = null == U ? void 0 : U.sessionId) ? t : "",
         G = l.useRef(null),
@@ -166,7 +166,7 @@ let j = (e) => {
                                                         page_session_id: z,
                                                     });
                                             },
-                                            disabled: W !== O.g.MOUNTED && W !== O.g.FINISHED,
+                                            disabled: W !== C.g.MOUNTED && W !== C.g.FINISHED,
                                         }),
                                     ],
                                 })
@@ -184,18 +184,18 @@ let j = (e) => {
                                     l = _.Z.getCategoryForProduct(e.skuId);
                                 if (null == e || null == l) return null;
                                 if (H)
-                                    if (W === O.g.SHUFFLE_OUT)
+                                    if (W === C.g.SHUFFLE_OUT)
                                         return (0, n.jsx)(
                                             "div",
                                             { className: x.shuffleOutro },
                                             "".concat(e.skuId, "-").concat(t),
                                         );
                                     else
-                                        W === O.g.SORT_OUT
+                                        W === C.g.SORT_OUT
                                             ? (r = x.sortChangedOutro)
-                                            : W === O.g.SHUFFLE_IN
+                                            : W === C.g.SHUFFLE_IN
                                               ? (r = x.shuffleIntro)
-                                              : W === O.g.SORT_IN && (r = x.sortChangedIntro);
+                                              : W === C.g.SORT_IN && (r = x.sortChangedIntro);
                                 return (0, n.jsx)(
                                     b.k0,
                                     {
@@ -204,7 +204,7 @@ let j = (e) => {
                                             pageSection: "popular picks",
                                             categoryPosition: 2,
                                         },
-                                        children: (0, n.jsx)(C.Z, {
+                                        children: (0, n.jsx)(O.Z, {
                                             product: e,
                                             category: l,
                                             user: I,

@@ -14,8 +14,8 @@ var r = n(255367),
     g = n(428927),
     b = n(228168),
     j = n(388032),
-    h = n(301150),
-    y = n(923243);
+    y = n(301150),
+    h = n(923243);
 function v(e) {
     let {
         section: t,
@@ -80,7 +80,7 @@ function O(e) {
         } = e,
         { trackUserProfileAction: I } = (0, s.KZ)(),
         P = (0, o.e7)([c.Z], () => c.Z.hidePersonalInformation),
-        [{ section: Z, subsection: E }, N] = l.useState({
+        [{ section: E, subsection: Z }, N] = l.useState({
             section:
                 null !=
                 (d =
@@ -98,12 +98,12 @@ function O(e) {
             subsection: x,
         });
     l.useEffect(() => {
-        null == g.find((e) => e.section === Z) &&
+        null == g.find((e) => e.section === E) &&
             N({
                 section: g[0].section,
                 subsection: void 0,
             });
-    }, [g, Z]);
+    }, [g, E]);
     let T = l.useCallback(
         (e) => {
             I({
@@ -119,32 +119,32 @@ function O(e) {
     );
     return P
         ? (0, r.jsx)("div", {
-              className: y.container,
+              className: h.container,
               children: (0, r.jsxs)("div", {
-                  className: h.empty,
+                  className: y.empty,
                   children: [
-                      (0, r.jsx)("div", { className: h.emptyIconStreamerMode }),
+                      (0, r.jsx)("div", { className: y.emptyIconStreamerMode }),
                       (0, r.jsx)("div", {
-                          className: h.emptyText,
+                          className: y.emptyText,
                           children: j.intl.string(j.t.Br1ls7),
                       }),
                   ],
               }),
           })
         : (0, r.jsxs)("div", {
-              className: y.container,
+              className: h.container,
               children: [
                   (0, r.jsx)(i.n, {
-                      className: y.tabBar,
+                      className: h.tabBar,
                       type: "top",
-                      selectedItem: Z,
+                      selectedItem: E,
                       onItemSelect: T,
                       children: g.map((e) => {
                           let { section: t, text: n } = e;
                           return (0, r.jsx)(
                               i.n.Item,
                               {
-                                  className: y.tabBarItem,
+                                  className: h.tabBarItem,
                                   id: t,
                                   "aria-label": n,
                                   children: (0, r.jsx)(a.Text, {
@@ -158,8 +158,8 @@ function O(e) {
                   }),
                   (0, r.jsx)(v, {
                       items: g,
-                      section: Z,
-                      subsection: E,
+                      section: E,
+                      subsection: Z,
                       user: u,
                       currentUser: f,
                       displayProfile: p,

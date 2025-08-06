@@ -70,29 +70,32 @@ function R(e, t) {
         s = (0, d.Z)(),
         [c, f] = r.useState(null),
         [_, p] = r.useState(null),
-        h = (0, a.e7)([v.Z], () => v.Z.getModalState(_), [_]),
-        m = (0, u.Z)(() => new Set()),
-        g = r.useCallback(() => {
-            f(null), p(null), A(m) && p(D(e, s));
-        }, [s, e, m]);
+        [h, m] = r.useState({}),
+        g = (0, a.e7)([v.Z], () => v.Z.getModalState(_), [_]),
+        E = (0, u.Z)(() => new Set()),
+        b = r.useCallback(() => {
+            f(null), p(null), A(E) && p(D(e, s));
+        }, [s, e, E]);
     r.useEffect(() => {
-        h === v.i.SUCCEEDED &&
+        g === v.i.SUCCEEDED &&
             (l.Z.dispatch({
                 type: "CLEAR_INTERACTION_MODAL_STATE",
                 customId: i,
             }),
             t()),
-            h === v.i.ERRORED && f(S.intl.string(S.t.uJgdEh));
-    }, [_, h, t, i]);
-    let { applicationIconURL: E, applicationName: b } = C(n);
+            g === v.i.ERRORED && f(S.intl.string(S.t.uJgdEh));
+    }, [_, g, t, i]);
+    let { applicationIconURL: y, applicationName: O } = C(n);
     return {
         components: o,
-        applicationIconURL: E,
-        applicationName: b,
-        submissionState: h,
+        applicationIconURL: y,
+        applicationName: O,
+        submissionState: g,
         error: c,
-        validators: m,
-        onSubmit: g,
+        validators: E,
+        validationErrors: h,
+        setValidationErrors: m,
+        onSubmit: b,
     };
 }
 function P(e) {
@@ -142,6 +145,11 @@ let w = (e, t) =>
                     values: (null == n ? void 0 : n.type) === t.type ? n.values : null,
                 };
             }
+            case c.re.LABEL:
+                return {
+                    type: t.type,
+                    component: w(e, [t.component])[0],
+                };
             default:
                 o()(!1, "unreachable");
         }

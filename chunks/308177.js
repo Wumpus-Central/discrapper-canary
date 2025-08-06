@@ -57,13 +57,13 @@ let C = (0, a.Z)((e) => {
         w = null != N.find((e) => e.type === u.Ui.STREAM),
         A = O(x),
         D = _(x, Z),
-        L = {
+        k = {
             [u.pV.SPEAKER]: D,
             [u.pV.AUDIENCE]: A,
             [u.pV.SELECTED]: 1,
         },
-        k = (0, d.Dx)(a.id),
-        [M, U] = (0, d.aP)(a.id, L, k),
+        L = (0, d.Dx)(a.id),
+        [M, U] = (0, d.aP)(a.id, k, L),
         H = [Math.max(null != (t = M[0]) ? t : 1, 1), Math.max(null != (n = M[1]) ? n : 1, 1), M[2]],
         { speakerTileWidth: G, speakerTileHeight: F } = j(x, D),
         B = S ? x - 32 : Math.min(x - 64, 3 * G + 8),

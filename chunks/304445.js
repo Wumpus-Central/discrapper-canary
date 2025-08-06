@@ -1,11 +1,11 @@
-n.d(t, { Z: () => c }), n(388685), n(415506);
-var i = n(572299),
-    r = n(38618),
-    l = n(905423),
-    o = n(622143),
+n.d(t, { Z: () => f }), n(388685), n(415506);
+var r = n(572299),
+    i = n(38618),
+    o = n(905423),
+    a = n(622143),
     s = n(703656),
-    a = n(981631);
-function u(e, t, n) {
+    l = n(981631);
+function c(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -18,29 +18,30 @@ function u(e, t, n) {
         e
     );
 }
-let c = new (class {
+let u = 10;
+class d {
     initialize() {
         this.cleanup(), (this.unlistenHistory = (0, s.s1)().listen(this.handleRouteChange));
         let { pathname: e } = (0, s.s1)().location;
-        l.Z.getState().resetPath(e),
-            (this.unlistenKeyboardChange = l.Z.subscribe(this.handleKeybindRouteChange)),
-            r.Z.addChangeListener(this.handleConnectionChange);
+        o.Z.getState().resetPath(e),
+            (this.unlistenKeyboardChange = o.Z.subscribe(this.handleKeybindRouteChange)),
+            i.Z.addChangeListener(this.handleConnectionChange);
     }
     executeRouteRewrites(e, t) {
-        if (((this.routeChangeCount += 1), this.routeChangeCount < 10))
+        if (((this.routeChangeCount += 1), this.routeChangeCount < u))
             for (let n of this.rewrites) {
-                let r = (0, s.s1)().location.pathname,
-                    l = n(e, t);
-                if (null != l)
+                let i = (0, s.s1)().location.pathname,
+                    o = n(e, t);
+                if (null != o)
                     return (
-                        (0, i.n)({
+                        (0, r.n)({
                             message: "RouteManager.handleRouteChange: A route rewrite is replacing the current route",
                             data: {
-                                replacePath: l.path,
-                                previousPath: r,
+                                replacePath: o.path,
+                                previousPath: i,
                             },
                         }),
-                        (0, s.dL)(l.path, l.state),
+                        (0, s.dL)(o.path, o.state),
                         !0
                     );
             }
@@ -48,12 +49,12 @@ let c = new (class {
         return !1;
     }
     cleanup() {
-        var e, t;
-        null == (e = this.unlistenHistory) || e.call(this),
+        var e, t, n, r;
+        null == (e = (t = this).unlistenHistory) || e.call(t),
             (this.unlistenHistory = void 0),
-            null == (t = this.unlistenKeyboardChange) || t.call(this),
+            null == (n = (r = this).unlistenKeyboardChange) || n.call(r),
             (this.unlistenKeyboardChange = void 0),
-            r.Z.removeChangeListener(this.handleConnectionChange);
+            i.Z.removeChangeListener(this.handleConnectionChange);
     }
     addRouteChangeListener(e) {
         return (
@@ -79,40 +80,41 @@ let c = new (class {
         return (0, s.s1)();
     }
     constructor() {
-        u(this, "unlistenHistory", void 0),
-            u(this, "unlistenKeyboardChange", void 0),
-            u(this, "rewrites", new Set()),
-            u(this, "listeners", new Set()),
-            u(this, "routeChangeCount", 0),
-            u(this, "timer", -1),
-            u(this, "connected", !1),
-            u(this, "handleConnectionChange", () => {
-                let e = r.Z.isConnected(),
+        c(this, "unlistenHistory", void 0),
+            c(this, "unlistenKeyboardChange", void 0),
+            c(this, "rewrites", new Set()),
+            c(this, "listeners", new Set()),
+            c(this, "routeChangeCount", 0),
+            c(this, "timer", -1),
+            c(this, "connected", !1),
+            c(this, "handleConnectionChange", () => {
+                let e = i.Z.isConnected(),
                     t = e && !this.connected;
                 (this.connected = e),
                     t && ((this.routeChangeCount = 0), this.executeRouteRewrites((0, s.s1)().location, "REPLACE"));
             }),
-            u(this, "handleRouteChange", (e, t) => {
+            c(this, "handleRouteChange", (e, t) => {
                 if (this.executeRouteRewrites(e, t)) return;
-                if (!(0, o.r)(e)) return void (0, s.dL)(a.Z5c.ME);
-                let n = l.Z.getState();
-                for (let i of (n.basePath !== e.pathname && n.resetPath(e.pathname), this.listeners))
+                if (!(0, a.r)(e)) return void (0, s.dL)(l.Z5c.ME);
+                let n = o.Z.getState();
+                for (let r of (n.basePath !== e.pathname && n.resetPath(e.pathname), this.listeners))
                     try {
-                        i(e, t);
+                        r(e, t);
                     } catch (e) {
                         console.warn("RouteManager.listen: A route listener has caused an error", e.message);
                     }
                 this.routeChangeCount = 0;
             }),
-            u(this, "handleKeybindRouteChange", (e) => {
+            c(this, "handleKeybindRouteChange", (e) => {
                 let { path: t } = e;
                 -1 !== this.timer && clearTimeout(this.timer),
                     null != t && (this.timer = setTimeout(this.flushRoute, 200));
             }),
-            u(this, "flushRoute", () => {
+            c(this, "flushRoute", () => {
                 clearTimeout(this.timer);
-                let e = l.Z.getState();
+                let e = o.Z.getState();
                 null != e.path && (0, s.uL)(e.path);
             });
     }
-})();
+}
+let f = new d();

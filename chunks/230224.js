@@ -1,6 +1,6 @@
 n.d(t, {
     GB: () => C,
-    JI: () => N,
+    JI: () => S,
     UM: () => T,
     V6: () => y,
     WT: () => v,
@@ -45,11 +45,11 @@ let x = 100,
         return (null != (t = null == n ? void 0 : n.memberCount) ? t : 0) > x;
     },
     O = (e) => e.state === m.r2o.ACCEPTED,
-    N = (e) => {
+    S = (e) => {
         let { guild_scheduled_event: t } = e;
         return null != t;
     },
-    S = (e) => !N(e) && (!!j(e) || (null != e.inviter && !O(e) && !I(e))),
+    N = (e) => !S(e) && (!!j(e) || (null != e.inviter && !O(e) && !I(e))),
     C = (e) => {
         let { guild: t, user: n, application: i } = e;
         return null != i
@@ -77,7 +77,7 @@ function y(e) {
     var t;
     let { invite: n, textClassName: i, className: l } = e,
         o = b(n);
-    return null == o || S(n) || (null == n || null == (t = n.guild) ? void 0 : t.id) === f.fQ
+    return null == o || N(n) || (null == n || null == (t = n.guild) ? void 0 : t.id) === f.fQ
         ? null
         : (0, r.jsx)(a.EJ, {
               className: s()(_.activityCount, l),
@@ -95,7 +95,7 @@ function A(e) {
                     ? null
                     : E(t) && null != t.target_user
                       ? d.ZP.getUserAvatarURL(t.target_user)
-                      : S(t) && null != t.inviter
+                      : N(t) && null != t.inviter
                         ? d.ZP.getUserAvatarURL(t.inviter)
                         : null,
             [t, n],
@@ -113,7 +113,7 @@ function A(e) {
             ? (s = g.intl.formatToPlainString(g.t.x2L32d, { username: t.target_user.username }))
             : O(t)
               ? (s = g.intl.string(g.t["FDsl+P"]))
-              : S(t) &&
+              : N(t) &&
                 null != t.inviter &&
                 (s = g.intl.format(g.t.spU2mJ, { username: h.ZP.getFormattedName(t.inviter) }));
     return (0, r.jsxs)("div", {

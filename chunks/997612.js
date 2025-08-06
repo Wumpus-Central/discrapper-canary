@@ -1,17 +1,22 @@
 n.d(t, {
-    $: () => m,
-    X: () => g,
+    $: () => O,
+    X: () => T,
 });
 var r = n(255367),
     i = n(73800),
     o = n(481060),
     a = n(972959),
     s = n(665149),
-    l = n(572004),
-    c = n(561134),
-    u = n(988587),
-    d = n(142489);
-function f(e, t, n) {
+    l = n(606669),
+    c = n(53432),
+    u = n(74869),
+    d = n(572004),
+    f = n(561134),
+    _ = n(988587),
+    p = n(231338),
+    h = n(388032),
+    m = n(142489);
+function g(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -24,7 +29,7 @@ function f(e, t, n) {
         e
     );
 }
-function _(e) {
+function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -35,12 +40,12 @@ function _(e) {
                 }),
             )),
             r.forEach(function (t) {
-                f(e, t, n[t]);
+                g(e, t, n[t]);
             });
     }
     return e;
 }
-function p(e, t) {
+function b(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -52,23 +57,78 @@ function p(e, t) {
     }
     return n;
 }
-function h(e, t) {
+function y(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : p(Object(t)).forEach(function (n) {
+            : b(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let m = (0, a.H)(() => ({ selected: null }));
-function g(e) {
+let O = (0, a.H)(() => ({ selected: null }));
+function v() {
+    let e = (0, c.Z)(),
+        t = (0, l.Z)(),
+        n = (0, u.Z)();
+    return (0, r.jsxs)(o.v2r, {
+        onSelect: p.dG,
+        navId: "playground-settings-menu",
+        onClose: p.dG,
+        "aria-label": "Playground Settings",
+        children: [
+            (0, r.jsx)(o.sNh, {
+                id: "appearance",
+                label: h.intl.string(h.t["iHH+k5"]),
+                children: e.filter((e) => null != e),
+            }),
+            (0, r.jsx)(o.sNh, {
+                id: "accessibility",
+                label: h.intl.string(h.t.G0neg4),
+                children: t.filter((e) => null != e),
+            }),
+            (0, r.jsx)(o.sNh, {
+                id: "experiments",
+                label: "Experiments",
+                children: n.filter((e) => null != e),
+            }),
+        ],
+    });
+}
+function I() {
+    let e = i.useRef(null);
+    return (0, r.jsx)(o.yRy, {
+        targetElementRef: e,
+        renderPopout: () => (0, r.jsx)(v, {}),
+        position: "bottom",
+        align: "center",
+        animation: o.yRy.Animation.SCALE,
+        onRequestClose: () => {},
+        children: (t) =>
+            (0, r.jsx)(
+                o.hU,
+                y(
+                    E(
+                        {
+                            size: "sm",
+                            icon: o.ewm,
+                            "aria-label": "Settings",
+                            variant: "icon-only",
+                        },
+                        t,
+                    ),
+                    { buttonRef: e },
+                ),
+            ),
+    });
+}
+function T(e) {
     var t;
     let { config: n } = e,
-        a = m.useField("selected"),
-        { group: f, story: p } = i.useMemo(() => {
+        a = O.useField("selected"),
+        { group: l, story: c } = i.useMemo(() => {
             var e;
             let t = n.groups.find((e) => e.stories.some((e) => e.id === a)),
                 r = null != (e = null == t ? void 0 : t.stories.find((e) => e.id === a)) ? e : null;
@@ -77,14 +137,14 @@ function g(e) {
                 story: r,
             };
         }, [a, n.groups]),
-        g = (e) => {
-            m.setState({ selected: e });
+        u = (e) => {
+            O.setState({ selected: e });
         },
-        E = null != (t = null == f ? void 0 : f.title) ? t : "Mana",
-        b = null == p ? void 0 : p.name,
-        y = () => {
-            let e = "dev://mana/".concat(null == p ? void 0 : p.id);
-            (0, l.JG)(e, () =>
+        p = null != (t = null == l ? void 0 : l.title) ? t : "Mana",
+        h = null == c ? void 0 : c.name,
+        g = () => {
+            let e = "dev://mana/".concat(null == c ? void 0 : c.id);
+            (0, d.JG)(e, () =>
                 (0, o.showToast)({
                     id: "playground-link-copied",
                     message: "Copied playground link",
@@ -93,10 +153,10 @@ function g(e) {
             );
         };
     return (0, r.jsxs)("div", {
-        className: d.root,
+        className: m.root,
         children: [
             (0, r.jsx)("div", {
-                className: d.group,
+                className: m.group,
                 children: (0, r.jsx)(o.aRk, {
                     children: (0, r.jsx)(o.ua7, {
                         position: "right",
@@ -104,7 +164,7 @@ function g(e) {
                         children: (e) =>
                             (0, r.jsx)(
                                 o.LYs,
-                                h(_({}, e), {
+                                y(E({}, e), {
                                     name: "Mana",
                                     selected: !0,
                                 }),
@@ -113,62 +173,66 @@ function g(e) {
                 }),
             }),
             (0, r.jsxs)("div", {
-                className: d.content,
+                className: m.content,
                 children: [
                     (0, r.jsxs)(s.ZP, {
-                        className: d.header,
+                        className: m.header,
                         children: [
-                            null != E ? (0, r.jsx)(s.ZP.Title, { children: E }) : null,
-                            null != b
+                            null != p ? (0, r.jsx)(s.ZP.Title, { children: p }) : null,
+                            null != h
                                 ? (0, r.jsxs)(r.Fragment, {
                                       children: [
-                                          null != E ? (0, r.jsx)(s.ZP.Caret, { className: d.headerDivider }) : null,
-                                          (0, r.jsx)(s.ZP.Title, { children: b }),
+                                          null != p ? (0, r.jsx)(s.ZP.Caret, { className: m.headerDivider }) : null,
+                                          (0, r.jsx)(s.ZP.Title, { children: h }),
                                       ],
                                   })
                                 : null,
-                            (null == p ? void 0 : p.docs) != null
+                            (null == c ? void 0 : c.docs) != null
                                 ? (0, r.jsxs)(r.Fragment, {
                                       children: [
-                                          (0, r.jsx)(s.ZP.Divider, { className: d.headerDivider }),
+                                          (0, r.jsx)(s.ZP.Divider, { className: m.headerDivider }),
                                           (0, r.jsx)(s.ZP.Title, {
                                               children: (0, r.jsx)(o.eee, {
-                                                  href: p.docs,
+                                                  href: c.docs,
                                                   children: "Docs",
                                               }),
                                           }),
                                       ],
                                   })
                                 : null,
-                            null != p
+                            null != c
                                 ? (0, r.jsx)(o.hU, {
                                       size: "sm",
                                       "aria-label": "Copy Link",
                                       variant: "icon-only",
                                       icon: o.TIy,
-                                      onClick: y,
+                                      onClick: g,
                                   })
                                 : null,
+                            (0, r.jsx)("div", {
+                                className: m.headerRight,
+                                children: (0, r.jsx)(I, {}),
+                            }),
                         ],
                     }),
                     (0, r.jsxs)("div", {
-                        className: d.page,
+                        className: m.page,
                         children: [
                             (0, r.jsx)("div", {
-                                className: d.sidebar,
-                                children: (0, r.jsx)(c.N, {
+                                className: m.sidebar,
+                                children: (0, r.jsx)(f.N, {
                                     groups: n.groups,
                                     selectedStory: a,
-                                    onStorySelect: g,
+                                    onStorySelect: u,
                                 }),
                             }),
                             (0, r.jsx)("div", {
-                                className: d.content,
+                                className: m.content,
                                 children:
-                                    null != p && null != f
-                                        ? (0, r.jsx)(u.b, {
-                                              story: p,
-                                              groupTitle: f.title,
+                                    null != c && null != l
+                                        ? (0, r.jsx)(_.b, {
+                                              story: c,
+                                              groupTitle: l.title,
                                           })
                                         : null,
                             }),

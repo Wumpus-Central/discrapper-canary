@@ -11,8 +11,8 @@ var n = r(255367),
     m = r(600164),
     p = r(984802),
     h = r(210887),
-    y = r(592125),
-    f = r(271383),
+    f = r(592125),
+    y = r(271383),
     g = r(19780),
     v = r(226961),
     D = r(594174),
@@ -111,7 +111,7 @@ function B(e, t, r, n, a) {
         let t = [];
         Object.keys(s).forEach((i) => {
             let l = D.default.getUser(i),
-                o = f.ZP.getNick(a, i),
+                o = y.ZP.getNick(a, i),
                 d = (0, v.J$)(e, i, r);
             null != s[i] &&
                 s[i].length > 0 &&
@@ -150,9 +150,9 @@ function A() {
             [],
             o.pF,
         ),
-        l = (0, o.e7)([g.Z, y.Z], () => y.Z.getChannel(g.Z.getChannelId())),
+        l = (0, o.e7)([g.Z, f.Z], () => f.Z.getChannel(g.Z.getChannelId())),
         m = null == (e = r.concat(i).find((e) => null != e.screenshare)) ? void 0 : e.screenshare,
-        f = null == (t = i.find((e) => null != e.clips)) ? void 0 : t.clips,
+        y = null == (t = i.find((e) => null != e.clips)) ? void 0 : t.clips,
         D = (0, o.e7)([h.Z], () => h.Z.theme),
         b = (0, p.Ll)(),
         C = (0, o.e7)([v.ZP], () => v.ZP.getSection()),
@@ -170,10 +170,10 @@ function A() {
                 m = r.flatMap((e, t) => B(x.Yn.STREAM, e, t, a, null == o ? void 0 : o.getGuildId())),
                 p = [],
                 h = [],
-                y = { section: u.ID.DIVIDER };
+                f = { section: u.ID.DIVIDER };
             return (
                 null != i &&
-                    (p.push(y),
+                    (p.push(f),
                     p.push({
                         section: N._s_.SCREENSHARE,
                         label: F.intl.string(F.t["gWbr/f"]),
@@ -181,14 +181,14 @@ function A() {
                         elementProps: { screenshare: i },
                     })),
                 null != l &&
-                    (h.push(y),
+                    (h.push(f),
                     h.push({
                         section: N._s_.CLIPS,
                         label: F.intl.string(F.t.MKrFKC),
                         element: E.Z,
                         elementProps: { clips: l },
                     })),
-                m.length > 0 && m.unshift(y),
+                m.length > 0 && m.unshift(f),
                 [
                     ...(null != o
                         ? [
@@ -225,7 +225,7 @@ function A() {
             streamStats: i,
             videoStreams: (0, o.e7)([v.ZP], () => v.ZP.getVideoStreams()),
             screenshare: m,
-            clips: f,
+            clips: y,
             channel: l,
             connectionState: (0, o.e7)([g.Z], () => g.Z.getState()),
         });

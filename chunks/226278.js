@@ -64,8 +64,8 @@ function x(e) {
         h = (null == (t = b.sourceEntitlement) ? void 0 : t.ends_at) != null,
         E = (0, l.Z)(n, f, "GuildPowerupCard"),
         C = o.useRef(null),
-        { onShowMore: O } = (0, d.ZP)(n, f),
-        [I, y] = o.useState(!1),
+        { onShowMore: I } = (0, d.ZP)(n, f),
+        [O, y] = o.useState(!1),
         P = (0, i.O)(y, 1);
     return (0, r.jsxs)(r.Fragment, {
         children: [
@@ -75,7 +75,7 @@ function x(e) {
                 isWarning: h,
                 badge: m,
                 canRollback: E,
-                onClick: O,
+                onClick: I,
                 onMouseOver: () => (null == x ? void 0 : x(!0)),
                 onMouseLeave: () => (null == x ? void 0 : x(!1)),
                 className: g,
@@ -89,7 +89,7 @@ function x(e) {
                 (0, r.jsx)(u.Z, {
                     powerup: f,
                     targetRef: C,
-                    isCardVisible: I,
+                    isCardVisible: O,
                 }),
         ],
     });

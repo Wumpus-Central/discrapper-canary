@@ -1,6 +1,6 @@
-var n = r(98405),
-    i = r(580983);
-n(
+var r = n(98405),
+    i = n(580983);
+r(
     {
         target: "URL",
         proto: !0,

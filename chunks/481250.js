@@ -18,8 +18,8 @@ var a = r(120356),
     m = r(226961),
     p = r(513547),
     h = r(65154),
-    y = r(442122),
-    f = r(20493);
+    f = r(442122),
+    y = r(20493);
 let g = {
     [h.Z.NO_OVERRIDE]: "None",
     [h.Z.LOW]: "Low Quality Stream",
@@ -97,9 +97,9 @@ function b(e, t, r, a, b) {
         return (0, n.jsxs)(
             l.hjN,
             {
-                className: f.marginBottom40,
+                className: y.marginBottom40,
                 title: C.type,
-                titleClassName: y.sectionHeader,
+                titleClassName: f.sectionHeader,
                 children: [
                     "video" === C.type &&
                         null != r &&
@@ -109,7 +109,7 @@ function b(e, t, r, a, b) {
                             let l = a.get(t, r, e.ssrc);
                             return null != l
                                 ? (0, n.jsx)("div", {
-                                      className: i()(y.videoWrapper, f.marginBottom40),
+                                      className: i()(f.videoWrapper, y.marginBottom40),
                                       children: (0, n.jsx)(d.Z, {
                                           streamId: l,
                                           videoComponent: u.Z.getMediaEngine().Video,
@@ -127,13 +127,13 @@ function b(e, t, r, a, b) {
                         null != a &&
                         null != b &&
                         (0, n.jsx)(c.Z, {
-                            className: f.marginBottom20,
+                            className: y.marginBottom20,
                             children: (0, n.jsxs)(c.Z.Child, {
                                 basis: "100%",
                                 children: [
                                     (0, n.jsx)(l.vwX, {
                                         tag: l.RB0.H5,
-                                        className: f.marginBottom8,
+                                        className: y.marginBottom8,
                                         children: "Simulcast Override",
                                     }),
                                     (0, n.jsx)(l.q4e, {

@@ -11,8 +11,8 @@ var s = n(120356),
     d = n(340100),
     p = n(644646),
     m = n(788284),
-    f = n(46140),
-    g = n(388032),
+    g = n(46140),
+    f = n(388032),
     x = n(192214);
 let h = function (e) {
     var t;
@@ -20,16 +20,16 @@ let h = function (e) {
             className: n,
             expansionSpring: s,
             isExpanded: h,
-            isExpansionAnimationComplete: b,
-            quest: j,
-            useReducedMotion: _,
+            isExpansionAnimationComplete: j,
+            quest: _,
+            useReducedMotion: b,
         } = e,
-        v = (null == (t = j.userStatus) ? void 0 : t.enrolledAt) != null,
-        { percentComplete: C } = (0, l.Rf)(j),
-        y = (0, l.Jf)(j),
+        v = (null == (t = _.userStatus) ? void 0 : t.enrolledAt) != null,
+        { percentComplete: C } = (0, l.Rf)(_),
+        y = (0, l.Jf)(_),
         O = null != y ? y.percentComplete > 0 : C > 0;
     return (0, r.jsxs)(a.animated.div, {
-        "aria-hidden": h && b,
+        "aria-hidden": h && j,
         className: o()(n, x.contentCollapsed, {
             [x.contentCollapsedExpanded]: h,
             [x.contentCollapsedAccepted]: v,
@@ -42,8 +42,8 @@ let h = function (e) {
         },
         children: [
             (0, r.jsx)(m.Z, {
-                quest: j,
-                useReducedMotion: _,
+                quest: _,
+                useReducedMotion: b,
             }),
             (0, r.jsx)("div", {
                 className: x.contentCollapsedWrapper,
@@ -53,22 +53,22 @@ let h = function (e) {
                           children: [
                               (0, r.jsx)(p.Z, {
                                   className: x.questProgressRewardTile,
-                                  quest: j,
+                                  quest: _,
                                   questContent: c.jn.QUEST_BAR,
                                   autoplay: !1,
-                                  location: f.dr.QUESTS_BAR,
+                                  location: g.dr.QUESTS_BAR,
                                   sourceQuestContent: c.jn.QUEST_BAR,
                               }),
                               O
                                   ? (0, r.jsx)(d.Z, {
                                         className: x.questProgressBar,
-                                        quest: j,
+                                        quest: _,
                                     })
                                   : (0, r.jsx)(i.Text, {
                                         className: x.questProgressHint,
                                         color: "always-white",
                                         variant: "text-sm/semibold",
-                                        children: g.intl.string(g.t["7e5k7O"]),
+                                        children: f.intl.string(f.t["7e5k7O"]),
                                     }),
                           ],
                       })
@@ -77,13 +77,13 @@ let h = function (e) {
                           children: [
                               (0, r.jsx)(u.ZP, {
                                   className: x.partnerBranding,
-                                  quest: j,
+                                  quest: _,
                               }),
                               (0, r.jsx)(i.X6q, {
                                   color: "always-white",
                                   variant: "heading-sm/medium",
                                   className: x.questName,
-                                  children: g.intl.format(g.t.EAYZAg, { questName: j.config.messages.questName }),
+                                  children: f.intl.format(f.t.EAYZAg, { questName: _.config.messages.questName }),
                               }),
                           ],
                       }),

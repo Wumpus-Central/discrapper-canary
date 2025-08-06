@@ -1,12 +1,11 @@
-n.d(t, { Z: () => a });
+n.d(t, { Z: () => i });
 var r = n(255367);
 n(73800);
 var l = n(750312),
-    o = n(232083),
-    i = n(388032);
-function a(e) {
+    o = n(232083);
+function i(e) {
     var { user: t, widget: n } = e,
-        a = (function (e, t) {
+        i = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -28,8 +27,8 @@ function a(e) {
             return l;
         })(e, ["user", "widget"]);
     return (0, r.jsx)(l.Z, {
-        title: i.intl.string(i.t.SqNnur),
-        subtitle: i.intl.format(i.t["zR1+09"], { numGames: 3 }),
+        userId: t.id,
+        widgetType: n.type,
         children: (0, r.jsx)(
             o.Z,
             (function (e) {
@@ -61,7 +60,7 @@ function a(e) {
                     games: n.games,
                     user: t,
                 },
-                a,
+                i,
             ),
         ),
     });

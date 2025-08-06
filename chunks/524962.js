@@ -1,6 +1,21 @@
-n.d(t, { H: () => a });
+n.d(t, { H: () => c });
 var r = n(573654);
-function i(e, t, n) {
+function i(e, t) {
+    if (!(e instanceof t)) throw TypeError("Cannot call a class as a function");
+}
+function o(e, t) {
+    for (var n = 0; n < t.length; n++) {
+        var r = t[n];
+        (r.enumerable = r.enumerable || !1),
+            (r.configurable = !0),
+            "value" in r && (r.writable = !0),
+            Object.defineProperty(e, r.key, r);
+    }
+}
+function a(e, t, n) {
+    return t && o(e.prototype, t), n && o(e, n), e;
+}
+function s(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -13,15 +28,16 @@ function i(e, t, n) {
         e
     );
 }
-var o = !1,
-    a = (function () {
-        var e;
-        function t(e) {
-            if (!(this instanceof t)) throw TypeError("Cannot call a class as a function");
-            i(this, "internalMonitor", void 0), i(this, "targetId", null), (this.internalMonitor = e.getMonitor());
+var l = !1,
+    c = (function () {
+        function e(t) {
+            i(this, e),
+                s(this, "internalMonitor", void 0),
+                s(this, "targetId", null),
+                (this.internalMonitor = t.getMonitor());
         }
         return (
-            (e = [
+            a(e, [
                 {
                     key: "receiveHandlerId",
                     value: function (e) {
@@ -45,13 +61,13 @@ var o = !1,
                     value: function () {
                         if (!this.targetId) return !1;
                         (0, r.k)(
-                            !o,
+                            !l,
                             "You may not call monitor.canDrop() inside your canDrop() implementation. Read more: http://react-dnd.github.io/react-dnd/docs/api/drop-target-monitor",
                         );
                         try {
-                            return (o = !0), this.internalMonitor.canDropOnTarget(this.targetId);
+                            return (l = !0), this.internalMonitor.canDropOnTarget(this.targetId);
                         } finally {
-                            o = !1;
+                            l = !1;
                         }
                     },
                 },
@@ -116,15 +132,6 @@ var o = !1,
                     },
                 },
             ]),
-            (function (e, t) {
-                for (var n = 0; n < t.length; n++) {
-                    var r = t[n];
-                    (r.enumerable = r.enumerable || !1),
-                        (r.configurable = !0),
-                        "value" in r && (r.writable = !0),
-                        Object.defineProperty(e, r.key, r);
-                }
-            })(t.prototype, e),
-            t
+            e
         );
     })();

@@ -1,4 +1,4 @@
-a.d(t, { g: () => O }), a(388685), a(35282);
+a.d(t, { g: () => N }), a(388685), a(35282);
 var n = a(73800),
     r = a(281598);
 function l(e) {
@@ -74,7 +74,7 @@ let s = new Set([
         max: 250000,
         warn: 50000,
     },
-    h = {
+    p = {
         [r.aB.PROFILE_EFFECT]: c,
         [r.aB.AVATAR_DECORATION]: d,
         [r.jE.HERO_BANNER_ANIMATED]: c,
@@ -95,7 +95,7 @@ let s = new Set([
         [r.jE.PDP_LOGO]: x,
         [r.jE.COACHTIP_AVATAR]: x,
     },
-    p = async (e) => {
+    h = async (e) => {
         let t = Object.values(r.CM),
             a = new Set(),
             n = e.createReader();
@@ -127,13 +127,13 @@ let s = new Set([
         } else r > e.warn && n("Files are a tad chonky - are you sure they're optimized?", ["".concat(i)]);
     },
     j = (e, t, a, n) => {
-        let r = h[e];
+        let r = p[e];
         if (null != r) for (let e of t) e.name.endsWith(".txt") || v(r, e, a, n);
     },
     g = (e, t, a) => {
         for (let n of e) {
             let e = (0, r.BU)(n),
-                l = null != e ? h[e] : null;
+                l = null != e ? p[e] : null;
             null != l && v(l, n, t, a);
         }
     },
@@ -192,7 +192,7 @@ let s = new Set([
         }),
             j(r.aB.AVATAR_DECORATION, t.avatarDecorationFiles, a, n);
     },
-    N = (e, t, a) => {
+    O = (e, t, a) => {
         _({
             files: e,
             addError: a,
@@ -214,7 +214,7 @@ let s = new Set([
                 addWarning: t,
             });
     },
-    O = () => {
+    N = () => {
         let [e, t] = n.useState(!1),
             [a, s] = n.useState({}),
             [o, c] = n.useState({}),
@@ -252,10 +252,10 @@ let s = new Set([
                         if (e.length > 1) return void d("Uploaded multiple files. Expected 1 directory.");
                         let t = e[0];
                         if (!t.isDirectory) return void d("Uploaded a file. Expected a directory.");
-                        let a = await p(t);
+                        let a = await h(t);
                         if (a.length > 0) return void d("Missing required directories", a);
                         let n = await (0, r.LY)([t]);
-                        N(n, u, d);
+                        O(n, u, d);
                     } finally {
                         t(!0);
                     }

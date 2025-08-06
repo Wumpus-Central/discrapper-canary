@@ -77,7 +77,7 @@ function O(e) {
     function T(e) {
         v(e)
             ? (0, a.ZDy)(async () => {
-                  let { default: t } = await Promise.all([n.e("22347"), n.e("84722"), n.e("30057")]).then(
+                  let { default: t } = await Promise.all([n.e("22347"), n.e("84722"), n.e("12744")]).then(
                       n.bind(n, 296864),
                   );
                   return (n) => (0, r.jsx)(t, b(g({}, n), { event: e }));

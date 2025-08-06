@@ -35,7 +35,7 @@ var r = n(255367),
     w = n(981631),
     A = n(354459),
     D = n(820573);
-function L(e) {
+function k(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -60,7 +60,7 @@ function L(e) {
     }
     return e;
 }
-function k(e, t) {
+function L(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -103,8 +103,8 @@ let M = 16 / 9,
             children: (e) =>
                 (0, r.jsx)(
                     c.P3F,
-                    k(
-                        L(
+                    L(
+                        k(
                             {
                                 innerRef: p,
                                 onContextMenu: (e) => d(n, e),
@@ -225,7 +225,7 @@ let M = 16 / 9,
                                     return (n) =>
                                         (0, r.jsx)(
                                             t,
-                                            k(L({}, n), {
+                                            L(k({}, n), {
                                                 stream: e.stream,
                                                 appContext: h,
                                                 exitFullscreen: () => {},
@@ -266,7 +266,7 @@ let M = 16 / 9,
                                 return (t) =>
                                     (0, r.jsx)(
                                         e,
-                                        k(L({}, t), {
+                                        L(k({}, t), {
                                             user: _,
                                             guildId: x,
                                             channel: l,

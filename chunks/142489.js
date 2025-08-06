@@ -3,6 +3,7 @@ e.exports = {
     group: "group_f09870",
     header: "header_f09870",
     headerDivider: "headerDivider_f09870",
+    headerRight: "headerRight_f09870",
     sidebar: "sidebar_f09870",
     page: "page_f09870",
     content: "content_f09870",

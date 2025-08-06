@@ -221,7 +221,8 @@ function U(e) {
         });
     let { filterStyle: Q } = v.Lk.useExperiment({ location: "NotificationsInboxSidebar" }),
         { entrypoints: J } = (0, g._k)({ location: "NotificationsInboxSidebar" }),
-        $ = Q === v.v8.DROPDOWN && p !== A.V5.ALL;
+        $ = Q === v.v8.DROPDOWN && p !== A.V5.ALL,
+        ee = (0, A.H_)();
     return (0, r.jsx)("nav", {
         className: o()(L.container, { [L.panelSpacing]: l }),
         children: (0, r.jsxs)(c.y5t, {
@@ -231,7 +232,7 @@ function U(e) {
                 ((t = M(
                     {
                         hasSubheader: !0,
-                        guild: A.F7,
+                        guild: ee,
                     },
                     k,
                 )),
@@ -314,7 +315,7 @@ function F(e, t) {
 }
 function H(e) {
     let { hideBanner: t } = e,
-        n = (0, a.e7)([P.Z], () => P.Z.shouldHide);
+        n = (0, P.d)((e) => e.shouldHide());
     return (0, r.jsx)("div", {
         className: o()(L.caughtUpContainer, { [L.hide]: n || t }),
         children: (0, r.jsxs)("div", {
@@ -335,14 +336,15 @@ function H(e) {
     });
 }
 function z(e) {
-    let { filter: t } = e;
+    let { filter: t } = e,
+        n = (0, A.NV)();
     return (0, r.jsx)(
         c.X6q,
         {
             color: "text-primary",
             variant: "text-sm/semibold",
             className: L.filterHeaderWrap,
-            children: A.by[t],
+            children: n[t],
         },
         "filter-header",
     );

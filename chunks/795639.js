@@ -1,8 +1,8 @@
 n.d(t, { _: () => I }), n(781311), n(953529);
 var r = n(255367),
     i = n(73800),
-    l = n(120356),
-    a = n.n(l),
+    a = n(120356),
+    l = n.n(a),
     s = n(512722),
     o = n.n(s),
     c = n(94171),
@@ -32,7 +32,7 @@ let S = [
     T = (0, b.hQ)();
 function N(e) {
     let { mediaAttachments: t, containerWidth: n, containerHeight: i } = e,
-        l = (0, _.tu)({
+        a = (0, _.tu)({
             numAttachments: t.length,
             containerWidth: n,
             containerHeight: i,
@@ -43,7 +43,7 @@ function N(e) {
             return (0, r.jsx)(
                 "div",
                 {
-                    style: l[t],
+                    style: a[t],
                     children:
                         !0 === e.isVideo
                             ? (0, r.jsx)(j.Z, {
@@ -65,13 +65,13 @@ function N(e) {
 }
 let I = (e) => {
     var t;
-    let { parentChannel: l } = e,
+    let { parentChannel: a } = e,
         { textAreaState: s } = (0, C.xH)((e) => {
             let { textAreaState: t } = e;
             return { textAreaState: t };
         }, c.X),
         b = (0, d.e7)([g.Z], () => g.Z.keyboardModeEnabled),
-        j = (0, O.Z)(l, null == (t = s.textValue) ? void 0 : t.trim()),
+        j = (0, O.Z)(a, null == (t = s.textValue) ? void 0 : t.trim()),
         _ = i.useMemo(() => j.find((e) => e.isThumbnail), [j]),
         I = null != j && j.length > 0,
         E = i.useMemo(() => {
@@ -83,15 +83,15 @@ let I = (e) => {
         }, [j]),
         R = i.useCallback(
             (e) => {
-                null != _ && h.Z.remove(l.id, _.id, f.Ie.CREATE_FORUM_POST.drafts.type),
-                    (0, y.d)(e.currentTarget.files, l, f.Ie.CREATE_FORUM_POST.drafts.type, {
+                null != _ && h.Z.remove(a.id, _.id, f.Ie.CREATE_FORUM_POST.drafts.type),
+                    (0, y.d)(e.currentTarget.files, a, f.Ie.CREATE_FORUM_POST.drafts.type, {
                         requireConfirm: !0,
                         isThumbnail: !0,
                         origin: "file_picker",
                     }),
                     (e.currentTarget.value = null);
             },
-            [l, _],
+            [a, _],
         ),
         M = (e) => {
             e.stopPropagation(),
@@ -101,7 +101,7 @@ let I = (e) => {
                         o()(null != e, "upload should not be null");
                         let { default: t } = await Promise.resolve().then(n.bind(n, 95152));
                         return (n) => {
-                            var i, a;
+                            var i, l;
                             return (0, r.jsx)(
                                 t,
                                 ((i = (function (e) {
@@ -129,14 +129,14 @@ let I = (e) => {
                                     }
                                     return e;
                                 })({}, n)),
-                                (a = a =
+                                (l = l =
                                     {
                                         upload: e,
-                                        channelId: l.id,
+                                        channelId: a.id,
                                         draftType: f.Ie.CREATE_FORUM_POST.drafts.type,
                                         onSubmit: (t) => {
                                             let { name: n, description: r, spoiler: i } = t;
-                                            h.Z.update(l.id, e.id, f.Ie.CREATE_FORUM_POST.drafts.type, {
+                                            h.Z.update(a.id, e.id, f.Ie.CREATE_FORUM_POST.drafts.type, {
                                                 filename: n,
                                                 description: r,
                                                 spoiler: i,
@@ -145,7 +145,7 @@ let I = (e) => {
                                         disableSpoiler: !0,
                                     }),
                                 Object.getOwnPropertyDescriptors
-                                    ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(a))
+                                    ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(l))
                                     : (function (e, t) {
                                           var n = Object.keys(e);
                                           if (Object.getOwnPropertySymbols) {
@@ -153,8 +153,8 @@ let I = (e) => {
                                               n.push.apply(n, r);
                                           }
                                           return n;
-                                      })(Object(a)).forEach(function (e) {
-                                          Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(a, e));
+                                      })(Object(l)).forEach(function (e) {
+                                          Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(l, e));
                                       }),
                                 i),
                             );
@@ -180,7 +180,7 @@ let I = (e) => {
                               containerHeight: E.height,
                           }),
                           (0, r.jsxs)("div", {
-                              className: a()(P.changeThumbnailLabelContainer, {
+                              className: l()(P.changeThumbnailLabelContainer, {
                                   [P.changeThumbnailLabelOverflow]: (null == j ? void 0 : j.length) > 2,
                               }),
                               children: [
@@ -236,7 +236,7 @@ let I = (e) => {
                               (0, r.jsx)(x.Z, {
                                   className: P.action,
                                   tooltip: w.intl.string(w.t.vN7REx),
-                                  onClick: () => h.Z.remove(l.id, _.id, f.Ie.CREATE_FORUM_POST.drafts.type),
+                                  onClick: () => h.Z.remove(a.id, _.id, f.Ie.CREATE_FORUM_POST.drafts.type),
                                   dangerous: !0,
                                   children: (0, r.jsx)(m.XHJ, {
                                       size: "md",
@@ -247,7 +247,7 @@ let I = (e) => {
                       }),
                       draftType: f.Ie.CREATE_FORUM_POST.drafts.type,
                       id: _.id,
-                      channelId: l.id,
+                      channelId: a.id,
                       handleEditModal: M,
                       keyboardModeEnabled: b,
                       size: p.q.SMALL,

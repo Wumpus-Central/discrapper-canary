@@ -8,31 +8,31 @@ var l = t(255367),
     a = t(447543),
     u = t(906732),
     d = t(565138),
-    _ = t(372769),
-    f = t(884902),
+    f = t(372769),
+    g = t(884902),
     h = t(892001),
-    g = t(271383),
-    m = t(430824),
-    v = t(51144),
-    p = t(897285),
-    x = t(978227),
-    j = t(894017),
+    _ = t(271383),
+    v = t(430824),
+    m = t(51144),
+    x = t(897285),
+    j = t(978227),
+    p = t(894017),
     b = t(79874),
     Z = t(376108),
     y = t(236373),
     P = t(854698),
     C = t(391174),
-    I = t(810561),
-    N = t(390966),
-    E = t(390072),
+    N = t(810561),
+    E = t(390966),
+    I = t(390072),
     O = t(388032),
     S = t(244231);
 function T(e) {
     var n, t;
     let { creator: i, guildId: r, channelId: o } = e,
         { analyticsLocations: a } = (0, u.ZP)(),
-        d = (0, c.e7)([g.ZP], () => g.ZP.getMember(r, i.id), [i, r]),
-        _ = (0, f.X7)(
+        d = (0, c.e7)([_.ZP], () => _.ZP.getMember(r, i.id), [i, r]),
+        f = (0, g.X7)(
             null == d ? void 0 : d.guildId,
             null == d ? void 0 : d.userId,
             null != (n = null == d ? void 0 : d.colorStrings) ? n : null,
@@ -43,7 +43,7 @@ function T(e) {
             (0, l.jsx)(s.qEK, {
                 size: s.EFr.SIZE_20,
                 src: i.getAvatarURL(r, 20),
-                "aria-label": null != (t = null == d ? void 0 : d.nick) ? t : v.ZP.getName(i),
+                "aria-label": null != (t = null == d ? void 0 : d.nick) ? t : m.ZP.getName(i),
                 className: S.icon,
             }),
             (0, l.jsx)(s.Text, {
@@ -67,9 +67,9 @@ function T(e) {
                                 tag: "span",
                                 role: "link",
                                 children: (0, l.jsx)(s.PUh, {
-                                    name: null != (e = null == d ? void 0 : d.nick) ? e : v.ZP.getName(i),
+                                    name: null != (e = null == d ? void 0 : d.nick) ? e : m.ZP.getName(i),
                                     colorString: null != (n = null == d ? void 0 : d.colorString) ? n : null,
-                                    colorStrings: _,
+                                    colorStrings: f,
                                 }),
                             },
                             "open-user-profile",
@@ -80,7 +80,7 @@ function T(e) {
         ],
     });
 }
-function k(e) {
+function w(e) {
     let { guild: n, onClick: t, onClose: r } = e,
         c = i.useCallback(
             (e) => {
@@ -96,7 +96,7 @@ function k(e) {
                     active: !0,
                     className: o()(S.guildIcon, S.icon),
                 }),
-                (0, l.jsx)(_.Z, {
+                (0, l.jsx)(f.Z, {
                     guild: n,
                     tooltipPosition: "top",
                     tooltipColor: s.ua7.Colors.PRIMARY,
@@ -124,7 +124,7 @@ function k(e) {
                 : a,
     });
 }
-function w(e) {
+function k(e) {
     let { userCount: n, onClick: t } = e;
     return (0, l.jsxs)("div", {
         className: S.row,
@@ -156,40 +156,40 @@ function R(e) {
             headerId: o,
             onClose: u,
             onClickInterestedCount: d,
-            isHub: _ = !1,
-            containerRef: f,
+            isHub: f = !1,
+            containerRef: g,
             recurrenceId: h,
-            setRecurrenceId: g,
+            setRecurrenceId: _,
         } = e,
-        v = (0, c.e7)([m.Z], () => null != m.Z.getGuild(t.id), [t.id]),
+        m = (0, c.e7)([v.Z], () => null != v.Z.getGuild(t.id), [t.id]),
         { startTime: O, endTime: R } = (0, b.ZP)(n, h),
         L = (0, Z.Z)(n.guild_id, n.id, h),
-        B = i.useCallback(
+        D = i.useCallback(
             (e) => {
                 e.stopPropagation(), null != n && (0, a.Bk)(n);
             },
             [n],
         ),
-        D = (0, j.Z)(h, n.id),
-        G = (0, x.Z)(n);
+        G = (0, p.Z)(h, n.id),
+        B = (0, j.Z)(n);
     i.useEffect(() => {
-        p.Z.getGuildEventUserCounts(t.id, n.id, null != h ? [h] : []), p.Z.getGuildEventsForCurrentUser(t.id);
+        x.Z.getGuildEventUserCounts(t.id, n.id, null != h ? [h] : []), x.Z.getGuildEventsForCurrentUser(t.id);
     }, [t.id, n.id, h]);
     let M = (0, y.KV)(n.recurrence_rule),
-        U =
+        A =
             (null == n ? void 0 : n.scheduled_start_time) != null
-                ? (0, P.lh)(D, O, new Date(null == n ? void 0 : n.scheduled_start_time))
+                ? (0, P.lh)(G, O, new Date(null == n ? void 0 : n.scheduled_start_time))
                 : null;
     return (0, l.jsxs)("div", {
-        ref: f,
+        ref: g,
         children: [
             (0, l.jsxs)("div", {
                 className: S.header,
                 children: [
-                    (0, l.jsx)(N.z, {
+                    (0, l.jsx)(E.z, {
                         startTime: O.toISOString(),
                         endTime: null == R ? void 0 : R.toISOString(),
-                        status: null != U ? U : n.status,
+                        status: null != A ? A : n.status,
                         eventType: n.entity_type,
                         guildEventId: n.id,
                         recurrenceId: h,
@@ -206,31 +206,31 @@ function R(e) {
             (0, l.jsxs)("div", {
                 className: S.body,
                 children: [
-                    (0, l.jsx)(k, {
+                    (0, l.jsx)(w, {
                         guild: t,
-                        onClick: v ? B : void 0,
+                        onClick: m ? D : void 0,
                         onClose: u,
                     }),
-                    (0, l.jsx)(E.Z, {
+                    (0, l.jsx)(I.Z, {
                         guildScheduledEvent: n,
                         channel: r,
                         onClose: u,
                     }),
                     null != L &&
-                        (0, l.jsx)(w, {
+                        (0, l.jsx)(k, {
                             userCount: L,
                             onClick: d,
                         }),
-                    !_ &&
-                        null != G &&
+                    !f &&
+                        null != B &&
                         (0, l.jsx)(
                             T,
                             {
-                                creator: G,
+                                creator: B,
                                 guildId: t.id,
                                 channelId: null == r ? void 0 : r.id,
                             },
-                            G.id,
+                            B.id,
                         ),
                     null != n.description &&
                         (0, l.jsx)("div", {
@@ -245,11 +245,11 @@ function R(e) {
             }),
             null != M && (0, l.jsx)("hr", { className: S.divider }),
             null != M &&
-                (0, l.jsx)(I.Z, {
+                (0, l.jsx)(N.Z, {
                     guildId: t.id,
                     recurrenceRule: M,
                     guildEventId: n.id,
-                    onRecurrenceClick: g,
+                    onRecurrenceClick: _,
                     hideScroller: !0,
                     activeRecurrenceId: h,
                 }),

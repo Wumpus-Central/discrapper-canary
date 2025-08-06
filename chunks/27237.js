@@ -1,4 +1,4 @@
-n.d(t, { ZP: () => O }), n(388685);
+n.d(t, { ZP: () => I }), n(388685);
 var r = n(255367),
     o = n(73800),
     i = n(120356),
@@ -88,7 +88,7 @@ function C(e) {
         ],
     });
 }
-function O(e) {
+function I(e) {
     let { guildId: t, index: n, powerup: i, nextPowerup: l } = e,
         s = (0, u.Z)(t, i),
         a = (0, u.Z)(t, l),
@@ -97,7 +97,7 @@ function O(e) {
         v = s.type === x.A3.TIER_OVERRIDE_ACTIVATED,
         [b, j] = o.useState(void 0);
     (0, m.KT)(b);
-    let O = (0, g.d)(c);
+    let I = (0, g.d)(c);
     return (0, r.jsxs)(f.Z, {
         guildId: t,
         powerup: i,
@@ -110,7 +110,7 @@ function O(e) {
             }),
             (0, r.jsx)(d.Q9, {
                 title: i.title,
-                textColor: O,
+                textColor: I,
                 footer:
                     !v &&
                     (0, r.jsx)(f.g, {

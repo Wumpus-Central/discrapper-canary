@@ -1,7 +1,7 @@
 t.r(e),
     t.d(e, {
         default: () => f,
-        openInteractionModal: () => j,
+        openInteractionModal: () => h,
     });
 var i = t(255367);
 t(73800);
@@ -11,25 +11,27 @@ var r = t(257465),
     o = t(37148),
     l = t(481060),
     c = t(970184),
-    u = t(471073),
-    d = t(293979),
+    d = t(471073),
+    u = t(293979),
     p = t(954654),
-    b = t(388032),
-    m = t(994186);
+    m = t(388032),
+    b = t(994186);
 function f(n) {
     let { title: e, onClose: t, transitionState: f } = n,
         {
-            components: j,
-            applicationIconURL: x,
-            applicationName: g,
-            submissionState: h,
+            components: h,
+            applicationIconURL: j,
+            applicationName: x,
+            submissionState: g,
             error: y,
             validators: I,
-            onSubmit: v,
-        } = (0, d.X9)(n, t);
+            validationErrors: v,
+            setValidationErrors: E,
+            onSubmit: O,
+        } = (0, u.X9)(n, t);
     return (0, i.jsx)("form", {
         onSubmit: (n) => {
-            n.preventDefault(), v();
+            n.preventDefault(), O();
         },
         children: (0, i.jsxs)(r.I, {
             transitionState: f,
@@ -37,10 +39,10 @@ function f(n) {
             children: [
                 (0, i.jsx)(o.x, {
                     leading: (0, i.jsx)(l.qEK, {
-                        src: x,
+                        src: j,
                         size: l.EFr.SIZE_24,
-                        "aria-label": g,
-                        className: m.applicationIcon,
+                        "aria-label": x,
+                        className: b.applicationIcon,
                     }),
                     title: e,
                     titleTextVariant: "heading-xl/semibold",
@@ -50,20 +52,23 @@ function f(n) {
                         null != y && "" !== y
                             ? (0, i.jsx)(l.Wn, {
                                   messageType: l.QYI.ERROR,
-                                  className: m.submissionWarning,
+                                  className: b.submissionWarning,
                                   children: y,
                               })
                             : null,
                         (0, i.jsx)(l.Wn, {
                             messageType: l.QYI.WARNING,
-                            className: m.submissionWarning,
-                            children: b.intl.format(b.t["dSTy//"], { applicationName: g }),
+                            className: b.submissionWarning,
+                            children: m.intl.format(m.t["dSTy//"], { applicationName: x }),
                         }),
                         (0, i.jsx)(l.hjN, {
+                            className: b.components,
                             children: (0, i.jsx)(c.Il, {
                                 modal: n,
                                 validators: I,
-                                children: (0, p.xX)(j),
+                                validationErrors: v,
+                                setValidationErrors: E,
+                                children: (0, p.xX)(h),
                             }),
                         }),
                     ],
@@ -72,22 +77,23 @@ function f(n) {
                     actions: [
                         {
                             variant: "secondary",
-                            text: b.intl.string(b.t["ETE/oK"]),
+                            text: m.intl.string(m.t["ETE/oK"]),
                             onClick: t,
                         },
                         {
                             variant: "primary",
-                            text: b.intl.string(b.t.geKm7u),
-                            loading: h === u.i.IN_FLIGHT,
-                            onClick: v,
+                            text: m.intl.string(m.t.geKm7u),
+                            loading: g === d.i.IN_FLIGHT,
+                            onClick: O,
                         },
                     ],
+                    actionsFullWidth: !0,
                 }),
             ],
         }),
     });
 }
-function j(n) {
+function h(n) {
     (0, l.h7j)((e) =>
         (0, i.jsx)(
             f,

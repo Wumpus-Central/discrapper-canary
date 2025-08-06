@@ -119,6 +119,7 @@ var r = (function (e) {
             (e[(e.SEPARATOR = 14)] = "SEPARATOR"),
             (e[(e.CONTENT_INVENTORY_ENTRY = 16)] = "CONTENT_INVENTORY_ENTRY"),
             (e[(e.CONTAINER = 17)] = "CONTAINER"),
+            (e[(e.LABEL = 18)] = "LABEL"),
             e
         );
     })({}),

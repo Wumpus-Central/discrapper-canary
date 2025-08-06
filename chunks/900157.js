@@ -74,21 +74,21 @@ function N(e) {
         w = (0, s.e7)([O.Z], () => O.Z.getGuild(null == R ? void 0 : R.getGuildId())),
         A = (0, f.ZP)(R);
     var D = R;
-    let L = (0, s.e7)([v.Z], () => null != D && !a().isEmpty(v.Z.getVoiceStatesForChannel(D.id)));
+    let k = (0, s.e7)([v.Z], () => null != D && !a().isEmpty(v.Z.getVoiceStatesForChannel(D.id)));
     i.useEffect(() => {
-        L &&
+        k &&
             null != D &&
             (o.Z.dispatch({
                 type: "SIDEBAR_CLOSE",
                 baseChannelId: D.parent_id,
             }),
             (0, x.ad)(D, { source: E.on.VOICE_AUTO_OPEN }));
-    }, [L, D]);
-    let k = i.useRef(!1);
+    }, [k, D]);
+    let L = i.useRef(!1);
     if (
         (i.useEffect(() => {
-            if (null == R || k.current) return;
-            k.current = !0;
+            if (null == R || L.current) return;
+            L.current = !0;
             let e = (0, h.K)(j.Z.getChannel(R.id), !0);
             (0, d.yw)(S.rMx.CHANNEL_OPENED, T(P({}, e, (0, d.$H)(R.id)), { channel_view: N })),
                 (0, p.a)(S.rMx.CHANNEL_OPENED_CLICKSTREAM, { channelId: R.id });

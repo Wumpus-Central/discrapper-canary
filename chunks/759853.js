@@ -1,4 +1,4 @@
-n.d(t, { Z: () => j }), n(388685);
+n.d(t, { Z: () => _ }), n(388685);
 var r = n(255367),
     s = n(73800),
     o = n(120356),
@@ -10,22 +10,22 @@ var r = n(255367),
     d = n(110924),
     p = n(607070),
     m = n(819640),
-    f = n(569379),
-    g = n(675654),
+    g = n(569379),
+    f = n(675654),
     x = n(513940),
     h = n(197857);
-let b = ["#51BC9D"],
-    j = (e) => {
+let j = ["#51BC9D"],
+    _ = (e) => {
         var t;
-        let { expansionSpring: n, overlayRef: o, quest: j, progressBarRef: _, isExpanded: v } = e,
-            { completionSpring: C, startCompletionAnimation: y } = (0, f.G)(),
-            O = (null == (t = j.userStatus) ? void 0 : t.completedAt) != null,
+        let { expansionSpring: n, overlayRef: o, quest: _, progressBarRef: b, isExpanded: v } = e,
+            { completionSpring: C, startCompletionAnimation: y } = (0, g.G)(),
+            O = (null == (t = _.userStatus) ? void 0 : t.completedAt) != null,
             E = s.useRef(!1),
             S = (0, u.e7)([p.Z], () => p.Z.useReducedMotion),
-            w = s.useRef(null),
-            T = (0, u.e7)([m.Z], () => m.Z.hasLayers()),
-            P = (0, d.Z)(T),
-            [A, N] = s.useState(null),
+            T = s.useRef(null),
+            w = (0, u.e7)([m.Z], () => m.Z.hasLayers()),
+            P = (0, d.Z)(w),
+            [N, A] = s.useState(null),
             [R, B] = s.useState(null),
             k = s.useRef(
                 new i.qA({
@@ -33,11 +33,11 @@ let b = ["#51BC9D"],
                     wind: 0,
                 }),
             ),
-            I = (0, i.uR)(A, R),
+            I = (0, i.uR)(N, R),
             q = s.useCallback(() => {
                 if (S) return;
-                let e = _.current,
-                    t = w.current;
+                let e = b.current,
+                    t = T.current;
                 if (null != t && null != e && I.isReady) {
                     var n, r, s, o, a, i;
                     let { x: l, y: c } = e.getBoundingClientRect(),
@@ -71,7 +71,7 @@ let b = ["#51BC9D"],
                                     });
                             }
                             return e;
-                        })({}, g.We)),
+                        })({}, f.We)),
                         (i = i =
                             {
                                 position: {
@@ -127,19 +127,19 @@ let b = ["#51BC9D"],
                         100,
                     );
                 }
-            }, [_, w, I, S]),
-            D = (0, d.Z)(v);
+            }, [b, T, I, S]),
+            Q = (0, d.Z)(v);
         return (s.useEffect(() => {
-            O && v && !D && (y(), q());
-        }, [v, O, y, q, D]),
+            O && v && !Q && (y(), q());
+        }, [v, O, y, q, Q]),
         s.useEffect(() => {
             O &&
-                !T &&
+                !w &&
                 P &&
                 setTimeout(() => {
                     y(), q();
                 }, 200);
-        }, [O, P, T, y, q]),
+        }, [O, P, w, y, q]),
         s.useEffect(() => {
             I.isReady && (!E.current && O && (y(), q()), (E.current = O));
         }, [O, E, q, y, I]),
@@ -148,7 +148,7 @@ let b = ["#51BC9D"],
             : (0, r.jsxs)("div", {
                   className: x.wrapper,
                   "aria-hidden": "true",
-                  ref: w,
+                  ref: T,
                   children: [
                       (0, r.jsx)(c.animated.div, {
                           className: x.background,
@@ -170,16 +170,16 @@ let b = ["#51BC9D"],
                           },
                           children: [
                               (0, r.jsx)(i.O_, {
-                                  ref: N,
+                                  ref: A,
                                   className: x.confetti,
                                   environment: k.current,
                               }),
                               (0, r.jsx)(i.Ji, {
                                   ref: B,
                                   sprites: [h],
-                                  colors: b,
-                                  spriteWidth: g.Ko,
-                                  spriteHeight: g.Ko,
+                                  colors: j,
+                                  spriteWidth: f.Ko,
+                                  spriteHeight: f.Ko,
                               }),
                               null != o.current &&
                                   (0, l.createPortal)(

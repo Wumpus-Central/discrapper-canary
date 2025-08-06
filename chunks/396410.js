@@ -1,109 +1,83 @@
-n.d(t, { default: () => x }), n(413496), n(433524), n(35282), n(388685);
-var l = n(255367),
+n.d(e, { default: () => c }), n(413496), n(433524), n(35282), n(388685);
+var i = n(255367),
     s = n(73800),
-    i = n(990547),
-    r = n(755721),
+    r = n(990547),
+    l = n(82659),
     a = n(481060),
     o = n(479531),
-    u = n(213609),
-    c = n(388032),
-    d = n(675833);
-let h = RegExp(
+    u = n(388032);
+let p = RegExp(
     "(^[-!#$%&'*+/=?^_`{}|~0-9A-Z]+(\\.[-!#$%&'*+/=?^_`{}|~0-9A-Z]+)*|^\"([\\001-\\010\\013\\014\\016-\\037!#-\\[\\]-\\177]|\\\\[\\001-011\\013\\014\\016-\\177])*\")@(?:[A-Z0-9](?:[A-Z0-9-]{0,2000}[A-Z0-9])?\\.)+[A-Z]{2,63}\\.?$",
     "i",
 );
-function x(e) {
+function c(t) {
     let {
-            transitionState: t,
+            transitionState: e,
             onFormSubmit: n,
-            onSuccess: x,
-            onClose: p,
-            headerText: m,
-            confirmButtonText: j,
-            confirmButtonColor: f,
-            impressionName: g,
-        } = e,
-        [C, _] = s.useState(!1),
-        [z, A] = s.useState(""),
-        [k, v] = s.useState(null),
-        y = s.useRef(null);
-    (0, u.Z)({
-        type: i.ImpressionTypes.MODAL,
-        name: g,
-    });
-    let E = async (e) => {
-        if ((e.preventDefault(), v(null), _(!0), !1 === h.test(z))) {
-            v(c.intl.string(c.t.hML7Gx)), _(!1);
-            return;
-        }
-        try {
-            let e = null != n ? await n(z) : void 0;
-            null != x &&
-                (null != e
-                    ? x({
-                          response: e,
-                          email: z,
-                      })
-                    : x(z)),
-                p();
-        } catch (e) {
-            v(new o.Z(e).getAnyErrorMessage());
-        } finally {
-            _(!1);
-        }
-    };
-    return (0, l.jsx)(a.Y0X, {
-        transitionState: t,
-        parentComponent: "EmailEnterModal",
-        children: (0, l.jsxs)("form", {
-            onSubmit: E,
-            children: [
-                (0, l.jsxs)(a.xBx, {
-                    separator: !1,
-                    className: d.header,
-                    children: [
-                        (0, l.jsx)(a.X6q, {
-                            variant: "heading-lg/semibold",
-                            className: d.title,
-                            children: m,
-                        }),
-                        (0, l.jsx)(a.olH, {
-                            onClick: p,
-                            className: d.modalCloseButton,
-                        }),
-                    ],
-                }),
-                (0, l.jsx)(a.hzk, {
-                    children: (0, l.jsx)(a.xJW, {
-                        title: c.intl.string(c.t.hvOfmJ),
-                        error: k,
-                        children: (0, l.jsx)(a.oil, {
-                            value: z,
-                            onChange: A,
-                            inputRef: y,
-                        }),
-                    }),
-                }),
-                (0, l.jsx)(a.mzw, {
-                    children: (0, l.jsxs)(a.hE2, {
-                        direction: "horizontal-reverse",
-                        children: [
-                            (0, l.jsx)(r.zx, {
-                                type: "submit",
-                                color: null != f ? f : r.zx.Colors.BRAND,
-                                size: r.zx.Sizes.MEDIUM,
-                                submitting: C,
-                                children: j,
-                            }),
-                            (0, l.jsx)(a.zxk, {
-                                variant: "secondary",
-                                text: c.intl.string(c.t["ETE/oK"]),
-                                onClick: p,
-                            }),
-                        ],
-                    }),
-                }),
+            onSuccess: c,
+            onClose: d,
+            headerText: h,
+            confirmButtonText: m,
+            confirmButtonVariant: f = "primary",
+        } = t,
+        [x, y] = s.useState(!1),
+        [A, g] = s.useState(""),
+        [v, E] = s.useState(null),
+        Z = s.useRef(null),
+        k = async (t) => {
+            if ((t.preventDefault(), E(null), y(!0), !1 === p.test(A))) {
+                E(u.intl.string(u.t.hML7Gx)), y(!1);
+                return;
+            }
+            try {
+                let t = null != n ? await n(A) : void 0;
+                null != c &&
+                    (null != t
+                        ? c({
+                              response: t,
+                              email: A,
+                          })
+                        : c(A)),
+                    d();
+            } catch (t) {
+                E(new o.Z(t).getAnyErrorMessage());
+            } finally {
+                y(!1);
+            }
+        };
+    return (0, i.jsx)("form", {
+        onSubmit: k,
+        children: (0, i.jsx)(l.Modal, {
+            transitionState: e,
+            trackingProps: {
+                impression: { impressionName: r.ImpressionNames.URF_ENTER_EMAIL },
+                impressionType: r.ImpressionTypes.MODAL,
+            },
+            title: h,
+            actions: [
+                {
+                    text: u.intl.string(u.t["ETE/oK"]),
+                    onClick: d,
+                    variant: "secondary",
+                    disabled: x,
+                },
+                {
+                    text: m,
+                    variant: f,
+                    loading: x,
+                    type: "submit",
+                },
             ],
+            onClose: d,
+            children: (0, i.jsx)(a.xJW, {
+                title: u.intl.string(u.t.hvOfmJ),
+                error: v,
+                children: (0, i.jsx)(a.oil, {
+                    value: A,
+                    onChange: g,
+                    inputRef: Z,
+                }),
+            }),
         }),
     });
 }

@@ -26,7 +26,7 @@ function u(e, t, n, r, i, o) {
 let d = (0, s.oH)(u);
 function f(e) {
     let { guildId: t, channelId: n } = e,
-        s = (0, l.U)({ location: "useDesktopSearchContext" });
+        s = (0, l.UX)({ location: "useDesktopSearchContext" });
     return (0, r.e7)([o.Z, i.Z, a.Z], () => {
         let e = o.Z.getGuild(t),
             r = i.Z.getChannel(n);

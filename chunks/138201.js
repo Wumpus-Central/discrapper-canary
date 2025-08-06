@@ -75,44 +75,47 @@ function d(e) {
                   })
                 : void 0;
     return (0, r.jsxs)("div", {
-        className: l.row,
+        className: o()(l.row, l.rowMana),
         children: [
-            "numbered" === y && null != O
-                ? (0, r.jsx)(s.X6q, {
-                      variant: "heading-md/semibold",
-                      color: "text-brand",
-                      className: l.number,
-                      children: O + 1,
-                  })
-                : null != t &&
-                  (0, r.jsx)("div", {
-                      className: l.iconContainer,
-                      children: (0, r.jsx)(t, {
-                          color: null != d ? d : "currentColor",
-                          className: o()(l.icon, u),
-                      }),
-                  }),
-            (0, r.jsxs)("div", {
-                className: l.textContainer,
+            (0, r.jsxs)(s.Kqy, {
+                direction: "horizontal",
+                gap: 16,
+                align: "center",
                 children: [
-                    (0, r.jsx)(s.Text, {
-                        variant: i,
-                        color: "header-primary",
-                        children: n,
+                    "numbered" === y && null != O
+                        ? (0, r.jsx)(s.X6q, {
+                              variant: "heading-md/semibold",
+                              color: "text-brand",
+                              className: l.number,
+                              children: O + 1,
+                          })
+                        : null != t &&
+                          (0, r.jsx)("div", {
+                              className: l.iconContainer,
+                              children: (0, r.jsx)(t, {
+                                  color: null != d ? d : "currentColor",
+                                  className: o()(l.icon, u),
+                              }),
+                          }),
+                    (0, r.jsxs)("div", {
+                        className: l.textContainer,
+                        children: [
+                            (0, r.jsx)(s.Text, {
+                                variant: i,
+                                color: "header-primary",
+                                children: n,
+                            }),
+                            null != a &&
+                                (0, r.jsx)(s.Text, {
+                                    variant: c,
+                                    color: "text-secondary",
+                                    children: a,
+                                }),
+                        ],
                     }),
-                    null != a &&
-                        (0, r.jsx)(s.Text, {
-                            variant: c,
-                            color: "text-secondary",
-                            children: a,
-                        }),
                 ],
             }),
-            null != v &&
-                (0, r.jsx)("div", {
-                    className: l.button,
-                    children: v,
-                }),
+            v,
         ],
     });
 }

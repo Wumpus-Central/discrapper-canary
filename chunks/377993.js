@@ -104,7 +104,7 @@ function w(e) {
                 c.Z.startTyping(s.id);
         },
         A = (0, g.K)({ user: t }),
-        [D, L] = i.useState(!1);
+        [D, k] = i.useState(!1);
     return (0, r.jsx)(m.Z, {
         targetElementRef: P,
         user: t,
@@ -113,7 +113,7 @@ function w(e) {
         spacing: 16,
         onShiftClick: w,
         shouldShow: D,
-        onRequestClose: () => L(!1),
+        onRequestClose: () => k(!1),
         children: (e) => {
             var { onClick: n, onMouseDown: i } = e,
                 l = (function (e, t) {
@@ -160,7 +160,7 @@ function w(e) {
                         nick: v,
                         nameplate: A,
                         onClick: (e) => {
-                            e.shiftKey ? null == w || w() : L((e) => !e);
+                            e.shiftKey ? null == w || w() : k((e) => !e);
                         },
                         onMouseDown: (e) => {
                             D ? e.stopPropagation() : null == i || i(e);

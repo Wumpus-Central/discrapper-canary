@@ -1,11 +1,12 @@
 n.d(t, {
-    CB: () => u,
-    Em: () => m,
-    ax: () => d,
-    k4: () => c,
-    qs: () => f,
-    so: () => r,
+    CB: () => d,
+    Em: () => x,
+    ax: () => f,
+    k4: () => u,
+    qs: () => m,
+    so: () => a,
     wf: () => s,
+    x1: () => c,
 }),
     n(388685),
     n(415506);
@@ -53,58 +54,65 @@ function l(e, t) {
         e
     );
 }
-function a(e) {
+function r(e) {
     for (let t of e.layout) t.parent = e;
 }
-function r(e) {
+function a(e) {
     let t = l(o({}, e), {
         key: "$Root",
         type: i.J.ROOT,
     });
-    a(t);
+    r(t);
     let n = new Map(),
-        r = (e) => {
+        a = (e) => {
             let t = n.get(e.key);
             if (null != t && !Object.is(t, e))
                 throw Error("Duplicate key '".concat(e.key, "' is defined twice in this settings graph"));
-            if ((n.set(e.key, e), "layout" in e)) for (let t of e.layout) r(t);
+            if ((n.set(e.key, e), "layout" in e)) for (let t of e.layout) a(t);
         };
-    return r(t), t;
+    return a(t), t;
 }
 function s(e, t) {
     let n = l(o({}, t), {
         key: e,
         type: i.J.PANEL,
     });
-    return a(n), n;
+    return r(n), n;
 }
 function c(e, t) {
     let n = l(o({}, t), {
         key: e,
-        type: i.J.CATEGORY,
+        type: i.J.PANE,
     });
-    return a(n), n;
+    return r(n), n;
 }
 function u(e, t) {
     let n = l(o({}, t), {
         key: e,
-        type: i.J.ACCORDION,
+        type: i.J.CATEGORY,
     });
-    return a(n), n;
+    return r(n), n;
 }
 function d(e, t) {
+    let n = l(o({}, t), {
+        key: e,
+        type: i.J.ACCORDION,
+    });
+    return r(n), n;
+}
+function f(e, t) {
     return l(o({}, t), {
         key: e,
         type: i.J.BUTTON,
     });
 }
-function f(e, t) {
+function m(e, t) {
     return l(o({}, t), {
         key: e,
         type: i.J.TOGGLE,
     });
 }
-function m(e, t) {
+function x(e, t) {
     return l(o({}, t), {
         key: e,
         type: i.J.SELECT,

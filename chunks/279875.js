@@ -127,7 +127,7 @@ function m(e) {
                         text: u.intl.string(u.t["cY+Ooa"]),
                         disabled: null == j,
                         onClick: function () {
-                            null != j && p(j);
+                            null != j && (p(j), n());
                         },
                     }),
                 ],

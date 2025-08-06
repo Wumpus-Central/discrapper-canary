@@ -74,7 +74,7 @@ function u(e) {
                       return (0, r.jsxs)(
                           i.xJW,
                           {
-                              title: a.label,
+                              title: "boolean" === a.type ? void 0 : a.label,
                               children: [
                                   "select" === a.type &&
                                       null != a.options &&

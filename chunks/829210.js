@@ -2,8 +2,8 @@ n.d(t, { Z: () => m }), n(361932), n(187205), n(388685);
 var i = n(255367),
     o = n(73800),
     l = n(120356),
-    a = n.n(l),
-    r = n(126663),
+    r = n.n(l),
+    a = n(126663),
     s = n(481060),
     c = n(59662),
     u = n(28682),
@@ -11,8 +11,8 @@ var i = n(255367),
     f = n(610844);
 function m(e) {
     let { node: t } = e,
-        { history: n, activeIndex: l, pushPanel: a } = (0, c.t)(),
-        r = t.useTitle(),
+        { history: n, activeIndex: l, pushPanel: r } = (0, c.t)(),
+        a = t.useTitle(),
         s = o.useMemo(
             () => t.layout.flatMap((e) => (e.type === u.J.CATEGORY ? [e] : e.type === u.J.PANE ? e.layout : [])),
             [t],
@@ -22,15 +22,15 @@ function m(e) {
         children: [
             (0, i.jsx)(d.Z, {
                 icon: t.icon,
-                title: r,
+                title: a,
                 active: f,
-                onClick: () => a(t),
+                onClick: () => r(t),
             }),
-            f && s.length > 1 && (0, i.jsx)(b, { categories: s }),
+            f && s.length > 1 && (0, i.jsx)(x, { categories: s }),
         ],
     });
 }
-function b(e) {
+function x(e) {
     let { categories: t } = e,
         [n, l] = o.useState(0),
         [c, u] = (0, s.q_F)(() => ({
@@ -62,14 +62,14 @@ function b(e) {
         children: [
             (0, i.jsx)("div", {
                 className: f.track,
-                children: (0, i.jsx)(r.animated.div, {
+                children: (0, i.jsx)(a.animated.div, {
                     className: f.thumb,
                     style: c,
                 }),
             }),
             (0, i.jsx)("ul", {
                 children: d.map((e, t) => {
-                    let { title: o, key: r } = e;
+                    let { title: o, key: a } = e;
                     return (0, i.jsx)(
                         s.P3F,
                         {
@@ -77,10 +77,10 @@ function b(e) {
                                 l(t), u({ y: 40 * t });
                             },
                             tag: "li",
-                            className: a()({ [f.active]: t === n }),
+                            className: r()({ [f.active]: t === n }),
                             children: o,
                         },
-                        r,
+                        a,
                     );
                 }),
             }),

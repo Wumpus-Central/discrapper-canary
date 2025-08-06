@@ -1,8 +1,8 @@
 n.d(t, { Z: () => I });
 var r = n(255367),
     i = n(73800),
-    l = n(120356),
-    a = n.n(l),
+    a = n(120356),
+    l = n.n(a),
     s = n(126663),
     o = n(442837),
     c = n(780384),
@@ -38,9 +38,9 @@ function T(e) {
     });
 }
 function N(e) {
-    let { username: t, title: n, videoSrc: i, messageCount: l, reaction: s, reactionCount: o, classname: c } = e;
+    let { username: t, title: n, videoSrc: i, messageCount: a, reaction: s, reactionCount: o, classname: c } = e;
     return (0, r.jsxs)("div", {
-        className: a()(y.videoPreview, c),
+        className: l()(y.videoPreview, c),
         children: [
             (0, r.jsx)("div", {
                 className: y.authorRow,
@@ -96,7 +96,7 @@ function N(e) {
                                 (0, r.jsx)(d.Text, {
                                     variant: "text-xs/normal",
                                     color: "interactive-normal",
-                                    children: l,
+                                    children: a,
                                 }),
                             ],
                         }),
@@ -123,22 +123,22 @@ function N(e) {
 }
 let I = (e) => {
     var t, n;
-    let { channel: l } = e,
+    let { channel: a } = e,
         m = (0, u.ZP)(),
         I = (0, c.wj)(m),
-        E = (0, o.e7)([b.Z], () => b.Z.getGuild(l.guild_id)),
-        R = (0, o.e7)([h.Z], () => h.Z.hasHidden(l.id)),
+        E = (0, o.e7)([b.Z], () => b.Z.getGuild(a.guild_id)),
+        R = (0, o.e7)([h.Z], () => h.Z.hasHidden(a.id)),
         M = (0, x.C)({
-            guildId: l.guild_id,
-            channelId: l.id,
+            guildId: a.guild_id,
+            channelId: a.id,
         }),
         { transitions: Z, setVisible: k } = (0, v.H)(),
         A = i.useCallback(() => {
-            k(!1), g.Z.hideAdminOnboarding(l.id, !0);
-        }, [l, k]);
+            k(!1), g.Z.hideAdminOnboarding(a.id, !0);
+        }, [a, k]);
     i.useEffect(() => {
-        (0, f.c)(l.id) || k(!R);
-    }, [l, k, R]);
+        (0, f.c)(a.id) || k(!R);
+    }, [a, k, R]);
     let L = i.useMemo(
             () => [
                 _.intl.string(_.t["8pEGAw"]),
@@ -158,19 +158,19 @@ let I = (e) => {
             [],
         ),
         D = () => {
-            p.Z.open(l.guild_id, C.pNK.ROLE_SUBSCRIPTIONS);
+            p.Z.open(a.guild_id, C.pNK.ROLE_SUBSCRIPTIONS);
         },
         z =
             null != (t = null == E ? void 0 : E.features.has(C.oNc.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE)) && t
                 ? _.intl.string(_.t.n0q7sL)
                 : _.intl.string(_.t.QoYdiY),
-        B =
+        H =
             null !=
                 (n =
                     (null == E ? void 0 : E.features.has(C.oNc.CREATOR_MONETIZABLE)) ||
                     (null == E ? void 0 : E.features.has(C.oNc.CREATOR_MONETIZABLE_PROVISIONAL))) && n,
-        H = B ? _.intl.string(_.t["G/7ciY"]) : _.intl.string(_.t.IFOiio),
-        U = B ? _.intl.string(_.t.GjgQOz) : _.intl.string(_.t.E7AO6u);
+        B = H ? _.intl.string(_.t["G/7ciY"]) : _.intl.string(_.t.IFOiio),
+        U = H ? _.intl.string(_.t.GjgQOz) : _.intl.string(_.t.E7AO6u);
     return (0, r.jsx)(r.Fragment, {
         children: Z((e, t) =>
             t
@@ -200,7 +200,7 @@ let I = (e) => {
                               className: y.contentContainer,
                               children: [
                                   (0, r.jsxs)("div", {
-                                      className: a()(y.contentRow, B && y.contentRowOne),
+                                      className: l()(y.contentRow, H && y.contentRowOne),
                                       children: [
                                           (0, r.jsx)("div", {
                                               className: y.contentMediaContainer,
@@ -246,7 +246,7 @@ let I = (e) => {
                                                   (0, r.jsx)(d.X6q, {
                                                       variant: "heading-lg/semibold",
                                                       color: "header-primary",
-                                                      children: H,
+                                                      children: B,
                                                   }),
                                                   (0, r.jsx)(d.LZC, { size: 8 }),
                                                   (0, r.jsx)(d.Text, {
@@ -292,9 +292,9 @@ let I = (e) => {
                                           }),
                                       ],
                                   }),
-                                  B &&
+                                  H &&
                                       (0, r.jsxs)("div", {
-                                          className: a()(y.contentRow, y.contentRowTwo),
+                                          className: l()(y.contentRow, y.contentRowTwo),
                                           children: [
                                               (0, r.jsx)("div", {
                                                   className: y.contentMediaContainer,

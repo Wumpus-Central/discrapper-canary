@@ -1,8 +1,8 @@
 n.d(t, { Z: () => b }), n(388685);
 var r = n(255367),
     i = n(73800),
-    l = n(120356),
-    a = n.n(l),
+    a = n(120356),
+    l = n.n(a),
     s = n(126663),
     o = n(94171),
     c = n(481060),
@@ -15,7 +15,7 @@ var r = n(255367),
     x = n(761852),
     p = n(73433);
 let b = i.memo(function (e) {
-    let { channel: t, onChange: l } = e,
+    let { channel: t, onChange: a } = e,
         b = (0, h.AF)(),
         { guidelinesOpen: j } = (0, h.xH)((e) => {
             let { guidelinesOpen: t } = e;
@@ -32,8 +32,8 @@ let b = i.memo(function (e) {
             [C],
         );
     i.useLayoutEffect(() => {
-        setTimeout(l, 350);
-    }, [j, l]);
+        setTimeout(a, 350);
+    }, [j, a]);
     let [O, w] = i.useState(!j),
         P = (0, c.q_F)({
             opacity: +!!j,
@@ -97,7 +97,7 @@ let b = i.memo(function (e) {
                                   variant: "text-sm/normal",
                                   color: "header-secondary",
                                   style: { maxHeight: 220 },
-                                  className: a()(x.guidelines, p.markup),
+                                  className: l()(x.guidelines, p.markup),
                                   children: (0, r.jsx)("div", {
                                       ref: y,
                                       children: u.Z.parseForumPostGuidelines(t.topic, !0, {
@@ -122,7 +122,7 @@ let b = i.memo(function (e) {
                                                               .e("78712")
                                                               .then(n.bind(n, 223164));
                                                           return (n) => {
-                                                              var i, l;
+                                                              var i, a;
                                                               return (0, r.jsx)(
                                                                   e,
                                                                   ((i = (function (e) {
@@ -163,11 +163,11 @@ let b = i.memo(function (e) {
                                                                       }
                                                                       return e;
                                                                   })({}, n)),
-                                                                  (l = l = { channel: t }),
+                                                                  (a = a = { channel: t }),
                                                                   Object.getOwnPropertyDescriptors
                                                                       ? Object.defineProperties(
                                                                             i,
-                                                                            Object.getOwnPropertyDescriptors(l),
+                                                                            Object.getOwnPropertyDescriptors(a),
                                                                         )
                                                                       : (function (e, t) {
                                                                             var n = Object.keys(e);
@@ -176,11 +176,11 @@ let b = i.memo(function (e) {
                                                                                 n.push.apply(n, r);
                                                                             }
                                                                             return n;
-                                                                        })(Object(l)).forEach(function (e) {
+                                                                        })(Object(a)).forEach(function (e) {
                                                                             Object.defineProperty(
                                                                                 i,
                                                                                 e,
-                                                                                Object.getOwnPropertyDescriptor(l, e),
+                                                                                Object.getOwnPropertyDescriptor(a, e),
                                                                             );
                                                                         }),
                                                                   i),

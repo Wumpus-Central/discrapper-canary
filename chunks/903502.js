@@ -1,4 +1,4 @@
-a.d(t, { Z: () => p }), a(388685);
+a.d(t, { Z: () => h }), a(388685);
 var n = a(255367),
     r = a(73800),
     l = a(442837),
@@ -10,7 +10,7 @@ var n = a(255367),
     u = a(246992),
     m = a(531578),
     x = a(521981);
-let h = [
+let p = [
     {
         label: "second(s)",
         value: 1000,
@@ -28,9 +28,9 @@ let h = [
         value: 86400000,
     },
 ];
-function p() {
+function h() {
     let [e, t] = r.useState(null),
-        [a, p] = r.useState(0),
+        [a, h] = r.useState(0),
         [f, b] = r.useState(1000),
         [v, j] = r.useState(0),
         g = (0, l.e7)([c.Z], () => {
@@ -111,10 +111,10 @@ function p() {
                                 value: a.toString(),
                                 type: "number",
                                 placeholder: "Duration length",
-                                onChange: (e) => p(parseFloat(e)),
+                                onChange: (e) => h(parseFloat(e)),
                             }),
                             (0, n.jsx)(i.q4e, {
-                                options: h,
+                                options: p,
                                 value: f,
                                 onChange: (e) => {
                                     b(e);

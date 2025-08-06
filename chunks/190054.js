@@ -2,9 +2,9 @@ n.d(t, { H: () => d }), n(388685);
 var r = n(255367),
     l = n(73800),
     i = n(120356),
-    s = n.n(i),
-    a = n(481060),
-    o = n(572004),
+    o = n.n(i),
+    s = n(481060),
+    a = n(572004),
     c = n(388032),
     u = n(798665);
 function d(e) {
@@ -30,23 +30,23 @@ function d(e) {
             }
             return l;
         })(e, ["chunks", "className", "onCopy"]);
-    let h = l.useMemo(() => (null == t ? void 0 : t.join(" ")), [t]),
-        [f, g] = l.useState(!1),
+    let f = l.useMemo(() => (null == t ? void 0 : t.join(" ")), [t]),
+        [h, g] = l.useState(!1),
         p = l.useCallback(() => {
-            (0, o.JG)(h, () => {
+            (0, a.JG)(f, () => {
                 g(!0), null == i || i();
             });
-        }, [i, h]),
-        N = f ? a.owK : a.TIy;
-    return (0, r.jsx)(a.P3F, {
-        className: s()(u.container, n),
+        }, [i, f]),
+        O = h ? s.owK : s.TIy;
+    return (0, r.jsx)(s.P3F, {
+        className: o()(u.container, n),
         onClick: p,
-        children: (0, r.jsx)(a.ua7, {
-            text: f ? c.intl.string(c.t["t5VZ8/"]) : c.intl.string(c.t.OpuAlJ),
+        children: (0, r.jsx)(s.ua7, {
+            text: h ? c.intl.string(c.t["t5VZ8/"]) : c.intl.string(c.t.OpuAlJ),
             children: (e) => {
                 var t, n;
                 return (0, r.jsx)(
-                    N,
+                    O,
                     ((t = (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
@@ -75,7 +75,7 @@ function d(e) {
                     (n = n =
                         {
                             size: "xxs",
-                            color: f ? a.TVs.colors.TEXT_FEEDBACK_POSITIVE : a.TVs.colors.INTERACTIVE_NORMAL,
+                            color: h ? s.TVs.colors.TEXT_FEEDBACK_POSITIVE : s.TVs.colors.INTERACTIVE_NORMAL,
                         }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))

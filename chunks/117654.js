@@ -1,29 +1,29 @@
-s.d(e, { O: () => p });
-var i = s(573736),
-    n = s(592014),
-    r = s(307854),
-    o = s(356442);
-class a {
-    constructor(t, e) {
-        let s, i;
-        (s = t || new r.s()), (i = e || new r.s()), (this._stack = [{ scope: s }]), (this._isolationScope = i);
+n.d(t, { O: () => f });
+var r = n(573736),
+    i = n(592014),
+    o = n(307854),
+    a = n(356442);
+class s {
+    constructor(e, t) {
+        let n, r;
+        (n = e || new o.s()), (r = t || new o.s()), (this._stack = [{ scope: n }]), (this._isolationScope = r);
     }
-    withScope(t) {
-        let e,
-            s = this._pushScope();
+    withScope(e) {
+        let t,
+            n = this._pushScope();
         try {
-            e = t(s);
-        } catch (t) {
-            throw (this._popScope(), t);
+            t = e(n);
+        } catch (e) {
+            throw (this._popScope(), e);
         }
-        return (0, i.J8)(e)
-            ? e.then(
-                  (t) => (this._popScope(), t),
-                  (t) => {
-                      throw (this._popScope(), t);
+        return (0, r.J8)(t)
+            ? t.then(
+                  (e) => (this._popScope(), e),
+                  (e) => {
+                      throw (this._popScope(), e);
                   },
               )
-            : (this._popScope(), e);
+            : (this._popScope(), t);
     }
     getClient() {
         return this.getStackTop().client;
@@ -38,41 +38,41 @@ class a {
         return this._stack[this._stack.length - 1];
     }
     _pushScope() {
-        let t = this.getScope().clone();
+        let e = this.getScope().clone();
         return (
             this._stack.push({
                 client: this.getClient(),
-                scope: t,
+                scope: e,
             }),
-            t
+            e
         );
     }
     _popScope() {
         return !(this._stack.length <= 1) && !!this._stack.pop();
     }
 }
-function c() {
-    let t = (0, o.c)(),
-        e = (0, o.q)(t);
-    return (e.stack = e.stack || new a((0, n.X)(), (0, n.T)()));
+function l() {
+    let e = (0, a.c)(),
+        t = (0, a.q)(e);
+    return (t.stack = t.stack || new s((0, i.X)(), (0, i.T)()));
 }
-function h(t) {
-    return c().withScope(t);
+function c(e) {
+    return l().withScope(e);
 }
-function u(t, e) {
-    let s = c();
-    return s.withScope(() => ((s.getStackTop().scope = t), e(t)));
+function u(e, t) {
+    let n = l();
+    return n.withScope(() => ((n.getStackTop().scope = e), t(e)));
 }
-function _(t) {
-    return c().withScope(() => t(c().getIsolationScope()));
+function d(e) {
+    return l().withScope(() => e(l().getIsolationScope()));
 }
-function p() {
+function f() {
     return {
-        withIsolationScope: _,
-        withScope: h,
+        withIsolationScope: d,
+        withScope: c,
         withSetScope: u,
-        withSetIsolationScope: (t, e) => _(e),
-        getCurrentScope: () => c().getScope(),
-        getIsolationScope: () => c().getIsolationScope(),
+        withSetIsolationScope: (e, t) => d(t),
+        getCurrentScope: () => l().getScope(),
+        getIsolationScope: () => l().getIsolationScope(),
     };
 }

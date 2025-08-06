@@ -1,4 +1,4 @@
-a.r(t), a.d(t, { default: () => ep }), a(539854), a(388685);
+a.r(t), a.d(t, { default: () => eh }), a(539854), a(388685);
 var n = a(255367),
     r = a(73800),
     l = a(120356),
@@ -10,8 +10,8 @@ var n = a(255367),
     u = a(213609),
     m = a(213713),
     x = a(665149),
-    h = a(611565),
-    p = a(238246),
+    p = a(611565),
+    h = a(238246),
     f = a(788983),
     b = a(906467),
     v = a(259580),
@@ -21,8 +21,8 @@ var n = a(255367),
     y = a(176038);
 a(381996);
 var C = a(392750),
-    N = a(926976),
-    O = a(789654),
+    O = a(926976),
+    N = a(789654),
     E = a(719672),
     T = a(691867),
     S = a(916790),
@@ -39,8 +39,8 @@ var C = a(392750),
     B = a(484662),
     U = a(496025),
     F = a(442954),
-    z = a(925124),
-    G = a(633001),
+    G = a(925124),
+    z = a(633001),
     V = a(702904),
     H = a(178821),
     W = a(891401),
@@ -87,7 +87,7 @@ function em(e) {
                     id: "analytics",
                     name: "Analytics",
                     group: el.v0.EXPERIMENTS,
-                    render: () => (0, n.jsx)(N.Z, {}),
+                    render: () => (0, n.jsx)(O.Z, {}),
                 },
                 {
                     id: "triggers",
@@ -144,7 +144,7 @@ function em(e) {
                         id: "overlay",
                         name: "Overlay v3",
                         group: el.v0.GAMES,
-                        render: () => (0, n.jsx)(G.Z, {}),
+                        render: () => (0, n.jsx)(z.Z, {}),
                     }),
                     e.push({
                         id: "slayer_sdk",
@@ -168,7 +168,7 @@ function em(e) {
                     id: "colors",
                     name: "Colors",
                     group: el.v0.UI,
-                    render: () => (0, n.jsx)(O.Z, {}),
+                    render: () => (0, n.jsx)(N.Z, {}),
                 }),
                 e.push({
                     id: "design_toggles",
@@ -241,7 +241,7 @@ function em(e) {
                         id: "notifications_inbox",
                         name: "Notifications Inbox",
                         group: el.v0.USERS,
-                        render: () => (0, n.jsx)(h.Z, {}),
+                        render: () => (0, n.jsx)(p.Z, {}),
                     })),
                 e.push({
                     id: "dcf",
@@ -266,7 +266,7 @@ function em(e) {
                         id: "offers",
                         name: "Offers",
                         group: el.v0.PREMIUM,
-                        render: () => (0, n.jsx)(z.Z, {}),
+                        render: () => (0, n.jsx)(G.Z, {}),
                     }),
                     e.push({
                         id: "payments",
@@ -355,11 +355,11 @@ function em(e) {
                                           (0, f.bA)(
                                               ei.KJ3.DEVTOOLS_POPOUT,
                                               () =>
-                                                  (0, n.jsx)(p.Z, {
+                                                  (0, n.jsx)(h.Z, {
                                                       windowKey: ei.KJ3.DEVTOOLS_POPOUT,
                                                       title: "DevTools",
                                                       withTitleBar: !0,
-                                                      children: (0, n.jsx)(ep, {
+                                                      children: (0, n.jsx)(eh, {
                                                           mobile: !1,
                                                           isPopout: !0,
                                                       }),
@@ -425,7 +425,7 @@ function ex() {
               ],
           });
 }
-function eh() {
+function ep() {
     return (0, o.e7)([g.Z], () => g.Z.displayTools)
         ? (0, n.jsx)("div", {
               className: i()(eo.container, eo.mobileContainerExpanded),
@@ -452,10 +452,10 @@ function eh() {
               }),
           });
 }
-function ep(e) {
+function eh(e) {
     let { mobile: t, isPopout: a = !1 } = e;
     return t
-        ? (0, n.jsx)(eh, {})
+        ? (0, n.jsx)(ep, {})
         : a
           ? (0, n.jsx)("div", {
                 className: eo.popoutContainer,

@@ -5,8 +5,8 @@ n.d(t, {
     n(388685);
 var r = n(255367),
     i = n(73800),
-    l = n(512722),
-    a = n.n(l),
+    a = n(512722),
+    l = n.n(a),
     s = n(126663),
     o = n(442837),
     c = n(481060),
@@ -40,11 +40,11 @@ let y = {
         friction: 52,
     };
 function S(e) {
-    let { channelId: t, onClick: n, onClose: l, onMouseEnter: s } = e,
+    let { channelId: t, onClick: n, onClose: a, onMouseEnter: s } = e,
         u = i.useRef(null),
         m = (0, o.e7)([f.Z], () => f.Z.getChannel(t), [t]);
     return (
-        a()(null != m, "Forum Channel is null"),
+        l()(null != m, "Forum Channel is null"),
         (0, r.jsxs)(c.P3F, {
             className: _.uploadInput,
             onMouseEnter: s,
@@ -62,7 +62,7 @@ function S(e) {
                     className: _.fileInput,
                     ref: u,
                     onChange: (e) => {
-                        null == l || l(),
+                        null == a || a(),
                             (0, j.d)(e.currentTarget.files, m, x.d.FirstThreadMessage, {
                                 requireConfirm: !0,
                                 origin: "file_picker",
@@ -87,7 +87,7 @@ function S(e) {
 }
 function T(e) {
     let { channelId: t, closePopout: n } = e,
-        [l, a] = i.useState(!1),
+        [a, l] = i.useState(!1),
         { reducedMotion: d } = i.useContext(c.Sfi),
         f = (0, c.q_F)(
             {
@@ -102,7 +102,7 @@ function T(e) {
     return (0, r.jsx)(s.animated.div, {
         className: _.popoutContainer,
         onMouseLeave: () => {
-            l || n();
+            a || n();
         },
         style: f,
         children: (0, r.jsxs)(c.zJl, {
@@ -114,10 +114,10 @@ function T(e) {
                 (0, r.jsx)(S, {
                     channelId: t,
                     onClick: () => {
-                        a(!0);
+                        l(!0);
                     },
                     onClose: () => {
-                        a(!1), n();
+                        l(!1), n();
                     },
                 }),
                 (0, r.jsx)("div", {
@@ -143,15 +143,15 @@ function T(e) {
 }
 function N(e) {
     let { channelId: t } = e,
-        [n, l] = i.useState(!1),
-        a = (0, o.e7)([p.Z], () => p.Z.getUploads(t, m.Ie.CREATE_FORUM_POST.drafts.type)),
-        s = a.length,
+        [n, a] = i.useState(!1),
+        l = (0, o.e7)([p.Z], () => p.Z.getUploads(t, m.Ie.CREATE_FORUM_POST.drafts.type)),
+        s = l.length,
         c = s > 0;
     i.useEffect(() => {
-        n && !c && l(!1);
+        n && !c && a(!1);
     }, [n, c]);
     let d = () => {
-        c && l(!0);
+        c && a(!0);
     };
     return (0, r.jsxs)("div", {
         className: _.container,
@@ -160,7 +160,7 @@ function N(e) {
                 ? (0, r.jsxs)(r.Fragment, {
                       children: [
                           (0, r.jsx)(g.r, {
-                              upload: a[0],
+                              upload: l[0],
                               size: h.q.SMALL,
                               onMouseEnter: d,
                           }),
@@ -179,7 +179,7 @@ function N(e) {
                 (0, r.jsx)(T, {
                     channelId: t,
                     closePopout: () => {
-                        l(!1);
+                        a(!1);
                     },
                 }),
         ],

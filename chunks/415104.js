@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ }), n(388685);
+n.d(t, { Z: () => b }), n(388685);
 var r = n(255367),
     s = n(73800),
     o = n(120356),
@@ -10,28 +10,28 @@ var r = n(255367),
     d = n(602667),
     p = n(110560),
     m = n(672188),
-    f = n(466962),
-    g = n(439826),
+    g = n(466962),
+    f = n(439826),
     x = n(43779),
     h = n(981631),
-    b = n(168989);
-function j(e) {
+    j = n(168989);
+function _(e) {
     var t, n;
     let {
             quest: o,
             className: u,
             questContent: d,
-            contentPosition: j,
-            rowIndex: _,
+            contentPosition: _,
+            rowIndex: b,
             impressionRef: v,
             sourceQuestContent: C,
         } = e,
         [y, O] = s.useState(!1),
         [E, S] = s.useState([]),
-        w = (0, c.qb)(o),
-        T = s.useMemo(() => (0, l.q8)(o), [o]),
+        T = (0, c.qb)(o),
+        w = s.useMemo(() => (0, l.q8)(o), [o]),
         P = (0, i._F)(),
-        A = s.useCallback(() => {
+        N = s.useCallback(() => {
             O(!0),
                 P({
                     questId: o.id,
@@ -42,9 +42,9 @@ function j(e) {
                     },
                     sourceQuestContent: C,
                 }),
-                T && (0, p.loadVideoQuestModal)();
-        }, [P, o.id, d, T, C]),
-        N = s.useCallback(() => {
+                w && (0, p.loadVideoQuestModal)();
+        }, [P, o.id, d, w, C]),
+        A = s.useCallback(() => {
             O(!1),
                 P({
                     questId: o.id,
@@ -56,7 +56,7 @@ function j(e) {
                     sourceQuestContent: C,
                 });
         }, [P, o.id, d, C]),
-        R = s.useContext(f.t),
+        R = s.useContext(g.t),
         { visibilityElementRef: B, almostVisibleInViewport: k } = (function (e) {
             let [t, n] = s.useState(!1),
                 r = s.useCallback((e) => {
@@ -80,17 +80,17 @@ function j(e) {
         ref: (e) => {
             (v.current = e), (B.current = e);
         },
-        className: a()(b.container, u),
-        onMouseEnter: A,
-        onMouseLeave: N,
-        onFocus: A,
-        onBlur: N,
+        className: a()(j.container, u),
+        onMouseEnter: N,
+        onMouseLeave: A,
+        onFocus: N,
+        onBlur: A,
         children: [
-            (0, r.jsx)(g.Z, {
+            (0, r.jsx)(f.Z, {
                 quest: o,
                 isHovering: y,
                 errorHints: E,
-                warningHints: w,
+                warningHints: T,
                 isVisibleInViewport: k,
                 sourceQuestContent: C,
             }),
@@ -98,8 +98,8 @@ function j(e) {
                 quest: o,
                 questContent: d,
                 isHovering: y,
-                contentPosition: j,
-                rowIndex: _,
+                contentPosition: _,
+                rowIndex: b,
                 onReceiveErrorHints: S,
                 isVisibleInViewport: k,
                 sourceQuestContent: C,
@@ -107,7 +107,7 @@ function j(e) {
         ],
     });
 }
-function _(e) {
+function b(e) {
     return (0, r.jsx)(d.A, {
         questOrQuests: e.quest,
         questContent: e.questContent,
@@ -118,7 +118,7 @@ function _(e) {
         children: (t) => {
             var n, s;
             return (0, r.jsx)(
-                j,
+                _,
                 ((n = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},

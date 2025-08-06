@@ -15,7 +15,7 @@ a.d(t, {
     h9: () => es,
     iw: () => ea,
     jC: () => V,
-    jQ: () => z,
+    jQ: () => G,
     lT: () => X,
     rd: () => ed,
     t4: () => ec,
@@ -37,8 +37,8 @@ var n,
     u = a(855930),
     m = a(385787),
     x = a(566162),
-    h = a(567027),
-    p = a(461195),
+    p = a(567027),
+    h = a(461195),
     f = a(857702),
     b = a(20450),
     v = a(312976),
@@ -47,8 +47,8 @@ var n,
     _ = a(940172),
     y = a(81011),
     C = a(981613),
-    N = a(762399),
-    O = a(232112),
+    O = a(762399),
+    N = a(232112),
     E = a(53796),
     T = a(723757),
     S = a(375924),
@@ -114,8 +114,8 @@ let F = {
         HSL: u.Z,
         HSLuv: m.Z,
         HSV: x.Z,
-        HWB: h.Z,
-        ICTCP: p.Z,
+        HWB: p.Z,
+        ICTCP: h.Z,
         JzCzHz: f.Z,
         Jzazbz: b.Z,
         LCH: v.Z,
@@ -124,8 +124,8 @@ let F = {
         Lab_D65: _.Z,
         Luv: y.Z,
         OKLCH: C.Z,
-        OKLab: N.Z,
-        P3: O.Z,
+        OKLab: O.Z,
+        P3: N.Z,
         ProPhoto: E.Z,
         REC_2020: T.Z,
         REC_2100_HLG: S.Z,
@@ -133,10 +133,10 @@ let F = {
         XYZ_D50: w.Z,
         XYZ_D65: I.Z,
     },
-    z = Object.fromEntries(Object.keys(F).map((e) => [e, e]));
+    G = Object.fromEntries(Object.keys(F).map((e) => [e, e]));
 Object.values(F).forEach((e) => R.Z.register(e));
-let { SemanticColors: G } = L.V,
-    V = G,
+let { SemanticColors: z } = L.V,
+    V = z,
     H = CSS.supports("color", "color(display-p3 1 0 0)") && CSS.supports("color", "color(display-p3 1 0 0 / 1)");
 function W(e, t) {
     let [a, n] = l.useState(() => {
@@ -252,13 +252,13 @@ function er(e) {
         }),
         m = Math.floor(n / 2),
         x = n - m,
-        h = (0, Z.w6)(d, c, {
+        p = (0, Z.w6)(d, c, {
             steps: m,
             outputSpace: o,
             space: o,
             progression: (e) => e ** s,
         }),
-        p = (0, Z.w6)(u, c, {
+        h = (0, Z.w6)(u, c, {
             steps: x,
             outputSpace: o,
             space: o,
@@ -266,12 +266,12 @@ function er(e) {
         }),
         f = [];
     for (let e = 0; e < m; e++) {
-        let t = h(e / m);
+        let t = p(e / m);
         f.push(t);
     }
     f.push(c);
     for (let e = 1; e < x; e++) {
-        let t = p(1 - e / x);
+        let t = h(1 - e / x);
         f.push(t);
     }
     return Object.fromEntries(f.map((e, a) => ["".concat(t, "-").concat(a), e]));

@@ -1,4 +1,4 @@
-t.exports = {
+e.exports = {
     CSSRuleList: 0,
     CSSStyleDeclaration: 0,
     CSSValueList: 0,

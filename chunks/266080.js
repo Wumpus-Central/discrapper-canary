@@ -1,43 +1,42 @@
-n.d(t, { Z: () => p }), n(388685);
+n.d(t, { Z: () => m }), n(388685);
 var r = n(255367),
     l = n(73800),
-    i = n(755721),
-    a = n(481060),
-    s = n(367907),
-    o = n(434404),
-    c = n(138201),
-    d = n(430824),
-    u = n(981631),
-    m = n(388032);
-let p = (e) => {
+    i = n(481060),
+    a = n(367907),
+    s = n(434404),
+    o = n(138201),
+    c = n(430824),
+    d = n(981631),
+    u = n(388032);
+let m = (e) => {
     let { guildId: t, reportId: n } = e,
-        [p, g] = l.useState(!1),
-        x = d.Z.getGuild(t),
-        _ = null != x;
+        [m, p] = l.useState(!1),
+        g = c.Z.getGuild(t),
+        x = null != g;
     l.useEffect(() => {
-        g(!_);
-    }, [_]);
-    let b = l.useCallback(() => {
-        g(!0),
-            s.ZP.trackWithMetadata(u.rMx.IAR_LEAVE_GUILD_BUTTON_CLICKED, {
+        p(!x);
+    }, [x]);
+    let _ = l.useCallback(() => {
+        p(!0),
+            a.ZP.trackWithMetadata(d.rMx.IAR_LEAVE_GUILD_BUTTON_CLICKED, {
                 guild_id: t,
                 report_id: n,
             }),
-            o.Z.leaveGuild(t);
+            s.Z.leaveGuild(t);
     }, [t, n]);
-    return null == x
+    return null == g
         ? null
-        : (0, r.jsx)(c.ZP, {
-              title: m.intl.string(m.t.cU96io),
-              description: m.intl.formatToPlainString(m.t["26mR6+"], { guildName: null == x ? void 0 : x.name }),
-              buttonText: p ? m.intl.string(m.t["9Ak99v"]) : m.intl.string(m.t.F3qExs),
-              buttonDisabled: p,
-              buttonColor: i.zx.Colors.RED,
+        : (0, r.jsx)(o.JZ, {
+              title: u.intl.string(u.t.cU96io),
+              description: u.intl.formatToPlainString(u.t["26mR6+"], { guildName: null == g ? void 0 : g.name }),
+              buttonText: m ? u.intl.string(u.t["9Ak99v"]) : u.intl.string(u.t.F3qExs),
+              buttonDisabled: m,
+              buttonVariant: "critical-primary",
               onButtonPress: () => {
-                  (0, a.h7j)((e) => {
+                  (0, i.h7j)((e) => {
                       var t, n;
                       return (0, r.jsx)(
-                          a.ConfirmModal,
+                          i.ConfirmModal,
                           ((t = (function (e) {
                               for (var t = 1; t < arguments.length; t++) {
                                   var n = null != arguments[t] ? arguments[t] : {},
@@ -64,18 +63,18 @@ let p = (e) => {
                               return e;
                           })(
                               {
-                                  header: m.intl.formatToPlainString(m.t["1GX6Pz"], { name: x.name }),
-                                  confirmText: m.intl.string(m.t.J2TBi4),
-                                  cancelText: m.intl.string(m.t["ETE/oK"]),
-                                  onConfirm: b,
+                                  header: u.intl.formatToPlainString(u.t["1GX6Pz"], { name: g.name }),
+                                  confirmText: u.intl.string(u.t.J2TBi4),
+                                  cancelText: u.intl.string(u.t["ETE/oK"]),
+                                  onConfirm: _,
                               },
                               e,
                           )),
                           (n = n =
                               {
-                                  children: (0, r.jsx)(a.Text, {
+                                  children: (0, r.jsx)(i.Text, {
                                       variant: "text-md/normal",
-                                      children: m.intl.format(m.t.ZEXC0t, { name: x.name }),
+                                      children: u.intl.format(u.t.ZEXC0t, { name: g.name }),
                                   }),
                               }),
                           Object.getOwnPropertyDescriptors

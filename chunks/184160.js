@@ -2,8 +2,8 @@ t.d(r, { x: () => x });
 var n = t(255367);
 t(73800);
 var i = t(512722),
-    l = t.n(i),
-    o = t(780384),
+    o = t.n(i),
+    l = t(780384),
     a = t(755721),
     s = t(410030),
     d = t(807163),
@@ -34,7 +34,7 @@ function x(e) {
             startedPaymentFlowWithPaymentSources: L.current,
         });
     return (
-        l()(null != S, "Expected premium type"),
+        o()(null != S, "Expected premium type"),
         (0, n.jsx)(d.Z, {
             premiumType: S,
             titleText: f.intl.string(f.t["7VcWW1"]),
@@ -50,7 +50,7 @@ function x(e) {
                     }),
                     (0, n.jsx)(a.zx, {
                         look: a.zx.Looks.LINK,
-                        color: (0, o.wj)(i) ? a.zx.Colors.WHITE : a.zx.Colors.PRIMARY,
+                        color: (0, l.wj)(i) ? a.zx.Colors.WHITE : a.zx.Colors.PRIMARY,
                         onClick: t,
                         children: f.intl.string(f.t.h9tkAA),
                     }),

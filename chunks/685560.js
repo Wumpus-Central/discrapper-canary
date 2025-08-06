@@ -23,8 +23,8 @@ var n = a(255367),
     u = a(621628),
     m = a(667815),
     x = a(645041),
-    h = a(713081),
-    p = a(675478),
+    p = a(713081),
+    h = a(675478),
     f = a(581883),
     b = a(899667),
     v = a(430824),
@@ -45,8 +45,8 @@ let y = [
         o.C.GUILD_POWERUP_SINGLE_SKU_PURCHASE_COACHMARK,
         o.C.GUILD_POWERUP_CHOICE_SKU_PURCHASE_COACHMARK,
     ],
-    N = [o.C.ADOPT_CLAN_IDENTITY_NOTICE],
-    O = [
+    O = [o.C.ADOPT_CLAN_IDENTITY_NOTICE],
+    N = [
         o.z.VANITY_URL_POWERUP_ROLLBACK_NOTIFICATION,
         o.z.VANITY_URL_POWERUP_ROLLBACK_MODAL,
         o.z.VANITY_URL_POWERUP_EDUCATIONAL_POPOVER,
@@ -78,7 +78,7 @@ async function T(e, t, a) {
         ),
     ),
         (0, d.C0)(e),
-        (0, h.Fm)(e, !0);
+        (0, p.Fm)(e, !0);
 }
 async function S(e) {
     await s.tn.post({
@@ -93,7 +93,7 @@ function P() {
             var e;
             return null == (e = v.Z.getGuild(t)) ? void 0 : e.name;
         }),
-        r = (0, i.Wu)([f.Z], () => [...C, ...N].filter((e) => null != t && (0, x.OY)(e, t))),
+        r = (0, i.Wu)([f.Z], () => [...C, ...O].filter((e) => null != t && (0, x.OY)(e, t))),
         l =
             null !=
             (e = (0, i.e7)([f.Z], () => {
@@ -129,7 +129,7 @@ function P() {
                             variant: "primary",
                             text: "Reset",
                             onClick: () => {
-                                (0, h.Qh)();
+                                (0, p.Qh)();
                             },
                         }),
                     ],
@@ -214,7 +214,7 @@ function P() {
                                     onChange: (a) => {
                                         a
                                             ? (0, x.Qd)(e, t, !1)
-                                            : ((0, p.Z1)(o.z.GUILD_POWERUP_NOTIFICATION), (0, x.c7)(e, t));
+                                            : ((0, h.Z1)(o.z.GUILD_POWERUP_NOTIFICATION), (0, x.c7)(e, t));
                                     },
                                     value: r.includes(e),
                                     children: (0, n.jsx)(c.Text, {
@@ -234,7 +234,7 @@ function P() {
                             variant: "eyebrow",
                             children: "Reset Server Tag Guild Level DCs",
                         }),
-                        N.map((e) =>
+                        O.map((e) =>
                             (0, n.jsx)(
                                 c.j7V,
                                 {
@@ -242,7 +242,7 @@ function P() {
                                     onChange: (a) => {
                                         a
                                             ? (0, x.Qd)(e, t, !1)
-                                            : ((0, p.Z1)(o.z.GUILD_POWERUP_NOTIFICATION), (0, x.c7)(e, t));
+                                            : ((0, h.Z1)(o.z.GUILD_POWERUP_NOTIFICATION), (0, x.c7)(e, t));
                                     },
                                     value: r.includes(e),
                                     children: (0, n.jsx)(c.Text, {
@@ -263,7 +263,7 @@ function P() {
                             className: _.header,
                             children: "Reset Powerup Rollback DCs",
                         }),
-                        O.map((e) =>
+                        N.map((e) =>
                             (0, n.jsx)(
                                 u.u,
                                 {

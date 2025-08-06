@@ -14,8 +14,8 @@ var r = n(255367),
     g = n(316027),
     b = n(502762),
     j = n(848780),
-    h = n(907179),
-    y = n(228168),
+    y = n(907179),
+    h = n(228168),
     v = n(981631),
     O = n(388032),
     x = n(247787);
@@ -50,8 +50,8 @@ function I(e) {
             guildId: n,
             channelId: I,
             messageId: P,
-            roleId: Z,
-            transitionState: E,
+            roleId: E,
+            transitionState: Z,
             openedAt: N,
             onHide: T,
             sourceAnalyticsLocations: A = [],
@@ -66,9 +66,9 @@ function I(e) {
             guildId: S,
             channelId: I,
             messageId: P,
-            roleId: Z,
+            roleId: E,
         }),
-        L = [
+        M = [
             {
                 icon: i.owK,
                 description: O.intl.string(O.t.kcuWvb),
@@ -78,26 +78,26 @@ function I(e) {
                 description: O.intl.string(w ? O.t.QxrDY2 : O.t.W6fjkZ),
             },
         ],
-        M = (0, m.ZP)(t.id, S),
-        R = u.ZP.getName(null == M ? void 0 : M.guildId, I, t),
+        L = (0, m.ZP)(t.id, S),
+        R = u.ZP.getName(null == L ? void 0 : L.guildId, I, t),
         D = O.intl.formatToPlainString(O.t.KRe1Fh, { name: R });
     return (0, r.jsx)(c.Gt, {
         value: C,
         children: (0, r.jsx)(f.Mt, {
             value: G,
             openedAt: N,
-            fetchStartedAt: null == M ? void 0 : M.fetchStartedAt,
-            fetchEndedAt: null == M ? void 0 : M.fetchEndedAt,
-            isLoaded: null == M ? void 0 : M.isLoaded,
+            fetchStartedAt: null == L ? void 0 : L.fetchStartedAt,
+            fetchEndedAt: null == L ? void 0 : L.fetchEndedAt,
+            isLoaded: null == L ? void 0 : L.isLoaded,
             children: (0, r.jsx)(i.Y0X, {
-                transitionState: E,
+                transitionState: Z,
                 className: x.root,
                 "aria-label": D,
                 parentComponent: "RestrictedUserProfileModalV2",
                 children: (0, r.jsxs)(b.Z, {
                     user: t,
-                    displayProfile: M,
-                    themeType: y.lY.MODAL_V2,
+                    displayProfile: L,
+                    themeType: h.lY.MODAL_V2,
                     children: [
                         (0, r.jsx)("div", { className: x.background }),
                         (0, r.jsxs)("div", {
@@ -125,7 +125,7 @@ function I(e) {
                                 }),
                                 (0, r.jsx)("div", {
                                     className: x.safetyTable,
-                                    children: L.map((e, t) => {
+                                    children: M.map((e, t) => {
                                         let { icon: n, description: l } = e;
                                         return (0, r.jsx)(
                                             s.JZ,
@@ -142,7 +142,7 @@ function I(e) {
                                 (0, r.jsxs)(i.Kqy, {
                                     align: "center",
                                     children: [
-                                        (0, r.jsx)(h.Z, {
+                                        (0, r.jsx)(y.Z, {
                                             size: o.Ph.MEDIUM,
                                             isBlocked: w,
                                             onClick: () => {

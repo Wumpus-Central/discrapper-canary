@@ -3,6 +3,7 @@ n.d(t, {
     Jc: () => g,
     LK: () => m,
     ON: () => _,
+    le: () => E,
     sD: () => h,
     x3: () => d,
     yA: () => f,
@@ -57,38 +58,41 @@ function f(e, t) {
 }
 function _(e, t) {
     var n, r, i;
-    let c = u({}, e),
-        d = t.subgameInfo,
-        f = t.application,
-        _ = Number(null == (n = e.gameMetadata) ? void 0 : n[a.wF.ROBLOX_TIME_STARTED]);
-    if (((isNaN(_) || 0 === _) && (_ = null != (r = e.start) ? r : Date.now()), null == d))
-        c.id !== a.eB && ((c.id = a.eB), (c.name = s.EOG[s.GQo.ROBLOX])),
-            (c.gameMetadata = void 0),
-            (c.sku = void 0),
-            (c.start = _);
+    let l = u({}, e),
+        c = t.subgameInfo,
+        d = t.application,
+        f = Number(null == (n = e.gameMetadata) ? void 0 : n[a.wF.ROBLOX_TIME_STARTED]);
+    if (((isNaN(f) || 0 === f) && (f = null != (r = e.start) ? r : Date.now()), null == c))
+        E(e) && ((l.id = a.eB), (l.name = s.EOG[s.GQo.ROBLOX])),
+            (l.gameMetadata = void 0),
+            (l.sku = void 0),
+            (l.start = f),
+            (l.lastFocused = Math.floor(f / 1000));
     else {
-        let t = {},
-            n = null != f ? l.intl.formatToPlainString(l.t.G6BGd3, { subgameName: f.name }) : null;
-        null != f &&
-        null != n &&
+        let t = {};
+        null != d &&
         (0, o.ik)({
             exePath: e.exePath,
-            name: n,
+            name: d.id,
         }) &&
         (0, o.ik)({
             exePath: e.exePath,
             name: s.EOG[s.GQo.ROBLOX],
         })
-            ? ((c.id = f.id), (c.name = n), (c.start = Date.now()))
-            : ((c.id = a.eB), (c.name = s.EOG[s.GQo.ROBLOX]), (c.start = _)),
-            (t[a.wF.ROBLOX_TIME_STARTED] = _.toString()),
-            (c.sku = null != (i = d.universeId) ? i : void 0),
-            null != d.placeId && (t[a.wF.PLACE_ID] = d.placeId),
-            null != d.jobId && (t[a.wF.JOB_ID] = d.jobId),
-            null != d.robloxUserId && (t[a.wF.ROBLOX_USER_ID] = d.robloxUserId),
-            (c.gameMetadata = Object.keys(t).length > 0 ? t : void 0);
+            ? ((l.id = d.id),
+              (l.name = d.id),
+              (l.gameName = d.name),
+              (l.start = Date.now()),
+              (l.lastFocused = Math.floor(Date.now() / 1000)))
+            : ((l.id = a.eB), (l.name = s.EOG[s.GQo.ROBLOX]), (l.start = f)),
+            (t[a.wF.ROBLOX_TIME_STARTED] = f.toString()),
+            (l.sku = null != (i = c.universeId) ? i : void 0),
+            null != c.placeId && (t[a.wF.PLACE_ID] = c.placeId),
+            null != c.jobId && (t[a.wF.JOB_ID] = c.jobId),
+            null != c.robloxUserId && (t[a.wF.ROBLOX_USER_ID] = c.robloxUserId),
+            (l.gameMetadata = Object.keys(t).length > 0 ? t : void 0);
     }
-    return c;
+    return l;
 }
 function p(e) {
     return null == e[a.SQ.UNIVERSE_ID] || null == e[a.SQ.PLACE_ID] || null == e[a.SQ.JOB_ID] || null == e[a.SQ.USER_ID]
@@ -109,9 +113,13 @@ function m(e) {
     return e.distributor !== s.GQo.ROBLOX ||
         null == e.gameMetadata ||
         null == e.gameMetadata[a.wF.ROBLOX_TIME_STARTED] ||
-        e.id === a.eB
+        e.id === a.eB ||
+        null == e.gameName
         ? {}
-        : { sync_id: e.gameMetadata[a.wF.ROBLOX_TIME_STARTED] };
+        : {
+              name: l.intl.formatToPlainString(l.t.G6BGd3, { subgameName: e.gameName }),
+              sync_id: e.gameMetadata[a.wF.ROBLOX_TIME_STARTED],
+          };
 }
 function g(e) {
     var t;
@@ -124,4 +132,7 @@ function g(e) {
     let n = Number(e.sync_id),
         r = u({}, e);
     return (r.application_id = a.eB), (r.name = s.EOG[s.GQo.ROBLOX]), isNaN(n) || (r.timestamps = { start: n }), r;
+}
+function E(e) {
+    return e.distributor === s.GQo.ROBLOX && e.id !== a.eB;
 }

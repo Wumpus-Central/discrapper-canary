@@ -1,5 +1,5 @@
-r(492189)("Uint8", function (t) {
-    return function (n, r, e) {
-        return t(this, n, r, e);
+n(492189)("Uint8", function (e) {
+    return function (t, n, r) {
+        return e(this, t, n, r);
     };
 });

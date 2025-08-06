@@ -1,143 +1,47 @@
-n.d(t, { Z: () => b }), n(953529);
+n.d(t, { Z: () => d }), n(953529);
 var r = n(255367),
     i = n(73800),
     o = n(442837),
-    a = n(780384),
-    s = n(755721),
-    l = n(481060),
-    c = n(410030),
-    u = n(607070),
-    d = n(921944),
-    f = n(388032),
-    _ = n(671821);
-function p(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-function h(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                p(e, t, n[t]);
-            });
-    }
-    return e;
-}
-function m(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-function g(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : m(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-function E(e) {
-    let { onComplete: t, onCheckItOutClick: n, config: i } = e,
-        d = (0, o.e7)([u.Z], () => u.Z.useReducedMotion),
-        p = (0, c.ZP)();
-    return (0, r.jsxs)("div", {
-        className: _.container,
+    a = n(907862),
+    s = n(780384),
+    l = n(410030),
+    c = n(607070),
+    u = n(921944);
+function d(e) {
+    let { onComplete: t, onCheckItOutClick: n, markAsDismissed: d, config: f, children: _ } = e,
+        p = (0, o.e7)([c.Z], () => c.Z.useReducedMotion),
+        h = (0, l.ZP)(),
+        m = i.useRef(null),
+        g = {
+            text: f.cta(),
+            onClick: () => {
+                n(), t(), d(u.L.TAKE_ACTION);
+            },
+        },
+        E = () => {
+            t(), d(u.L.USER_DISMISS);
+        };
+    return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)("img", {
-                alt: f.intl.string(f.t.X4IxWF),
-                src: i.getImageUrl((0, a.wj)(p), d),
-                className: _.coachmark,
-            }),
-            (0, r.jsxs)("div", {
-                className: _.body,
-                children: [
-                    (0, r.jsx)(l.X6q, {
-                        className: _.text,
-                        variant: "heading-md/extrabold",
-                        children: i.title(),
-                    }),
-                    (0, r.jsx)(l.Text, {
-                        className: _.text,
-                        variant: "text-sm/normal",
-                        children: i.description(),
-                    }),
-                ],
-            }),
-            (0, r.jsx)(s.zx, {
-                className: _.button,
-                color: s.zx.Colors.BRAND_INVERTED,
-                onClick: () => n(),
-                children: i.cta(),
-            }),
-            (0, r.jsx)(l.P3F, {
-                onClick: t,
-                className: _.closeButton,
-                "aria-label": f.intl.string(f.t.cpT0Cg),
-                children: (0, r.jsx)(l.Dio, {
-                    size: "md",
-                    color: "currentColor",
-                    className: _.closeIcon,
-                }),
-            }),
-            (0, r.jsx)("div", { className: _.pointer }),
-        ],
-    });
-}
-function b(e) {
-    let { onComplete: t, onCheckItOutClick: n, markAsDismissed: o, config: a, children: s } = e,
-        c = i.useRef(null);
-    return (0, r.jsx)(l.yRy, {
-        targetElementRef: c,
-        spacing: 16,
-        shouldShow: !0,
-        position: "top",
-        align: "center",
-        renderPopout: (e) =>
-            (0, r.jsx)(
-                E,
-                g(h({}, e), {
-                    onComplete: () => {
-                        t(), o(d.L.USER_DISMISS);
-                    },
-                    onCheckItOutClick: () => {
-                        n(), t(), o(d.L.TAKE_ACTION);
-                    },
-                    config: a,
-                }),
-            ),
-        onRequestClose: () => void 0,
-        closeOnScroll: !1,
-        ignoreModalClicks: !0,
-        children: () =>
             (0, r.jsx)("div", {
-                ref: c,
-                children: s,
+                ref: m,
+                children: _,
             }),
+            (0, r.jsx)(a.Mb, {
+                targetElementRef: m,
+                shouldShow: !0,
+                position: "top",
+                align: "center",
+                title: f.title(),
+                body: f.description(),
+                assetUrl: f.getImageUrl((0, s.wj)(h), p),
+                action: g,
+                caretConfig: {
+                    position: "bottom",
+                    align: "center",
+                },
+                onRequestClose: E,
+            }),
+        ],
     });
 }

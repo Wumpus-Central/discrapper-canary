@@ -1,37 +1,37 @@
-r.d(t, { Z: () => f }), r(539854), r(388685);
-var l = r(512722),
-    n = r.n(l),
-    i = r(90757),
-    o = r.n(i),
-    s = r(65154);
-let a = [s.vA.WINDOW, s.vA.SCREEN];
-function f(e, t, r) {
-    var l;
-    let i = window.DiscordNative;
-    n()(null != i, "Can't get desktop sources outside of native app"),
-        (t = null != (l = null == t ? void 0 : t.filter((e) => a.includes(e))) ? l : a),
-        (r =
-            null != r
-                ? r
+n.d(t, { Z: () => c }), n(539854), n(388685);
+var r = n(512722),
+    i = n.n(r),
+    o = n(90757),
+    a = n.n(o),
+    s = n(65154);
+let l = [s.vA.WINDOW, s.vA.SCREEN];
+function c(e, t, n) {
+    var r;
+    let o = window.DiscordNative;
+    i()(null != o, "Can't get desktop sources outside of native app"),
+        (t = null != (r = null == t ? void 0 : t.filter((e) => l.includes(e))) ? r : l),
+        (n =
+            null != n
+                ? n
                 : {
                       width: 150,
                       height: 150,
                   });
-    let f = [];
+    let c = [];
     return (
         t.includes(s.vA.SCREEN) &&
             e.supports(s.AN.SCREEN_PREVIEWS) &&
-            (f.push(e.getScreenPreviews(r.width, r.height)), (t = t.filter((e) => e !== s.vA.SCREEN))),
+            (c.push(e.getScreenPreviews(n.width, n.height)), (t = t.filter((e) => e !== s.vA.SCREEN))),
         t.includes(s.vA.WINDOW) &&
             e.supports(s.AN.WINDOW_PREVIEWS) &&
-            (f.push(e.getWindowPreviews(r.width, r.height)), (t = t.filter((e) => e !== s.vA.WINDOW))),
+            (c.push(e.getWindowPreviews(n.width, n.height)), (t = t.filter((e) => e !== s.vA.WINDOW))),
         0 !== t.length &&
-            f.push(
-                i.desktopCapture.getDesktopCaptureSources({
+            c.push(
+                o.desktopCapture.getDesktopCaptureSources({
                     types: t,
-                    thumbnailSize: r,
+                    thumbnailSize: n,
                 }),
             ),
-        Promise.all(f).then((e) => o()(e))
+        Promise.all(c).then((e) => a()(e))
     );
 }

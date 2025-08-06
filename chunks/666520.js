@@ -13,10 +13,10 @@ function p(e) {
     let { autoFocus: t = !1, className: n, userId: p, onUpdate: m } = e,
         g = (0, o.e7)([s.Z], () => s.Z.hidePersonalInformation),
         { loading: b, note: j } = (0, c.Z)(p),
-        h = l.useRef(null);
+        y = l.useRef(null);
     return (l.useEffect(() => {
         if (!t || g) return;
-        let e = h.current;
+        let e = y.current;
         (null == e ? void 0 : e.selectionStart) != null && (e.focus(), e.setSelection(e.value.length, e.value.length));
     }, [t, g]),
     g)
@@ -24,7 +24,7 @@ function p(e) {
         : (0, r.jsx)("div", {
               className: n,
               children: (0, r.jsx)(i.lcI, {
-                  ref: h,
+                  ref: y,
                   className: f.textarea,
                   disabled: b,
                   placeholder: b ? u.intl.string(u.t["WLKx//"]) : u.intl.string(u.t.VBhOe3),

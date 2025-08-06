@@ -28,17 +28,20 @@ async function p(e) {
         { promise: b, resolve: y } = Promise.withResolvers();
     if ((0, d.KK)(a.flags) && !1 === E) {
         let { promise: e, resolve: t } = Promise.withResolvers();
-        (0, i.ZDy)(async () => {
-            let { GuildSubscriptionSelectionModal: e } = await n.e("43889").then(n.bind(n, 279875));
-            return (n) =>
-                (0, r.jsx)(e, {
-                    transitionState: n.transitionState,
-                    onClose: n.onClose,
-                    sku: a,
-                    onSelect: t,
-                    currentGuildId: h,
-                });
-        }),
+        (0, i.ZDy)(
+            async () => {
+                let { GuildSubscriptionSelectionModal: e } = await n.e("43889").then(n.bind(n, 279875));
+                return (n) =>
+                    (0, r.jsx)(e, {
+                        transitionState: n.transitionState,
+                        onClose: n.onClose,
+                        sku: a,
+                        onSelect: t,
+                        currentGuildId: h,
+                    });
+            },
+            { stackingBehavior: "stack" },
+        ),
             (h = await e);
     }
     let O = c.Z.getParentSKU(a.id),

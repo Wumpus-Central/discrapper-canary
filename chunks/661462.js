@@ -61,9 +61,9 @@ function m(e) {
             items: g,
             initialSection: b,
             initialSubsection: j,
-            onClose: h,
+            onClose: y,
         } = e,
-        { trackUserProfileAction: y } = (0, i.KZ)(),
+        { trackUserProfileAction: h } = (0, i.KZ)(),
         [{ section: v, subsection: O, text: x }, _] = l.useState(
             ((n = (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
@@ -127,7 +127,7 @@ function m(e) {
                     look: "custom",
                     selectedItem: v,
                     onItemSelect: (e) => {
-                        y({
+                        h({
                             action: "PRESS_SECTION",
                             section: e,
                         }),
@@ -162,7 +162,7 @@ function m(e) {
                     channelId: m,
                     section: v,
                     subsection: O,
-                    onClose: h,
+                    onClose: y,
                 }),
             }),
         ],

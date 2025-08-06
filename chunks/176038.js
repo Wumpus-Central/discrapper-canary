@@ -10,17 +10,17 @@ var n = a(73800),
     u = a(675478),
     m = a(25990),
     x = a(594174),
-    h = a(74538),
-    p = a(981631),
+    p = a(74538),
+    h = a(981631),
     f = a(469115);
-let b = [p.BRd.DARK, p.BRd.LIGHT, p.BRd.DARKER, p.BRd.MIDNIGHT];
+let b = [h.BRd.DARK, h.BRd.LIGHT, h.BRd.DARKER, h.BRd.MIDNIGHT];
 function v(e) {
     return e[Math.floor(Math.random() * e.length)];
 }
 async function j() {
     let e = (function () {
             let e = x.default.getCurrentUser();
-            return h.ZP.canUseClientThemes(e) ? Object.keys(f.qt).map((e) => Number(e)) : [];
+            return p.ZP.canUseClientThemes(e) ? Object.keys(f.qt).map((e) => Number(e)) : [];
         })(),
         t = e.length > 0 && Math.random() > 0.7;
     try {
@@ -31,8 +31,8 @@ async function j() {
             if (null != r) {
                 var a;
                 let e = f.qt[r];
-                t = null != (a = null == e ? void 0 : e.theme) ? a : p.BRd.DARK;
-            } else t = v([p.BRd.DARK, p.BRd.DARKER, p.BRd.MIDNIGHT]);
+                t = null != (a = null == e ? void 0 : e.theme) ? a : h.BRd.DARK;
+            } else t = v([h.BRd.DARK, h.BRd.DARKER, h.BRd.MIDNIGHT]);
             await i.ZI(
                 {
                     theme: t,
