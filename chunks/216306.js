@@ -13,8 +13,8 @@ var r = e(73800),
     n = e(913527),
     f = e.n(n),
     B = e(442837),
-    l = e(704215),
-    h = e(45114),
+    h = e(704215),
+    l = e(45114),
     i = e(740504),
     o = e(266454),
     C = e(931261),
@@ -83,7 +83,7 @@ function u(A) {
 function I(A, t) {
     let e = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
     (0, w.n)(A, t),
-        (0, h.y5)(
+        (0, l.y5)(
             t.map((A) => ({
                 channelId: A,
                 readStateType: b.W.CHANNEL,
@@ -93,7 +93,7 @@ function I(A, t) {
         null != e && (0, s.uL)(M.Z5c.CHANNEL(A, e));
 }
 function j(A, t, e, r) {
-    let g = (0, o.Nj)(l.z.CHANNEL_BROWSER_NUX),
+    let g = (0, o.Nj)(h.z.CHANNEL_BROWSER_NUX),
         v = (0, B.cj)([Q.Z], () => {
             let t = {},
                 e = Q.Z.getMutableGuildChannelsForGuild(A);

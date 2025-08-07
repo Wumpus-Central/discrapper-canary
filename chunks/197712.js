@@ -42,8 +42,8 @@ async function a(e) {
         {
             sourceX: m,
             sourceY: h,
-            sourceWidth: f,
-            sourceHeight: g,
+            sourceWidth: g,
+            sourceHeight: f,
         } = (0, l.GS)({
             image: r,
             cropDimensions: a,
@@ -82,8 +82,8 @@ async function a(e) {
             gif: new Uint8Array(x),
             x: 0 | m,
             y: 0 | h,
-            width: 0 | f,
-            height: 0 | g,
+            width: 0 | g,
+            height: 0 | f,
             imageRotation: 0 | u,
             resizeWidth: c,
             resizeHeight: d,

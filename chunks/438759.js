@@ -9,8 +9,8 @@ var o = n(120356),
     c = n(892567),
     d = n(660662),
     u = n(698282),
-    p = n(388032),
-    f = n(397419),
+    f = n(388032),
+    p = n(397419),
     m = n(395921);
 function g(e) {
     let { selectedEffectId: t, setSelectedEffectId: n, configs: o, className: g } = e;
@@ -19,9 +19,9 @@ function g(e) {
         children: [
             (0, r.jsxs)(a.X6, {
                 variant: "heading-md/semibold",
-                className: f.selectorHeading,
+                className: p.selectorHeading,
                 children: [
-                    p.intl.string(u.default["1wilMz"]),
+                    f.intl.string(u.default["1wilMz"]),
                     (0, r.jsx)(i.SrA, {
                         size: "xs",
                         color: i.TVs.colors.TEXT_DEFAULT,
@@ -47,6 +47,7 @@ function g(e) {
                                 effectDisplayType: s.F.STATIC,
                                 displayNameStyles: u,
                                 textClassName: m.effectText,
+                                inProfile: !0,
                             }),
                         },
                         e,

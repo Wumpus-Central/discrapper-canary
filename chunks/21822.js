@@ -6,7 +6,7 @@ var g = e(331595),
 let n = ["#705224", "#F6A830"],
     f = ["#FFE880"],
     B = [0.05, 0.4],
-    l = [
+    h = [
         {
             base: 5,
             tint: 1,
@@ -16,7 +16,7 @@ let n = ["#705224", "#F6A830"],
             tint: 1,
         },
     ],
-    h = [0.8],
+    l = [0.8],
     i = [
         {
             base: 6,
@@ -52,10 +52,10 @@ let n = ["#705224", "#F6A830"],
             primaryBaseColors: n,
             primaryTintColor: a,
             primaryTintLuminances: B,
-            primaryLuminanceWeights: l,
+            primaryLuminanceWeights: h,
             secondaryBaseColors: f,
             secondaryTintColor: w,
-            secondaryTintLuminances: h,
+            secondaryTintLuminances: l,
             secondaryLuminanceWeights: i,
         });
         return (0, r.jsxs)(

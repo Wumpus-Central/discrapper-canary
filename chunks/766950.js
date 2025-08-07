@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(902704),
     d = n(481060),
     u = n(100527),
-    p = n(906732),
-    f = n(213609),
+    f = n(906732),
+    p = n(213609),
     m = n(98278),
     g = n(740594),
     h = n(612659),
@@ -158,8 +158,8 @@ function L(e) {
     });
 }
 function I(e) {
-    var t, n, m, g, h, N, w, I, A, R, M;
-    let { transitionState: B, analyticsLocations: Z, guild: Y, onClose: G } = e,
+    var t, n, m, g, h, N, w, I, A, R, B;
+    let { transitionState: M, analyticsLocations: Z, guild: Y, onClose: G } = e,
         H = (0, s.e7)([b.default], () => b.default.getCurrentUser()),
         F = (0, v.J)(),
         [z, U] = o.useState(
@@ -176,14 +176,14 @@ function I(e) {
                     : h.colors
                 : F[X].defaultColors,
         );
-    (0, f.Z)(
+    (0, p.Z)(
         {
             type: l.ImpressionTypes.POPOUT,
             name: l.ImpressionNames.DISPLAY_NAME_STYLES_MODAL,
         },
         { trackOnInitialLoad: !0 },
     );
-    let { analyticsLocations: W } = (0, p.ZP)(Z, u.Z.EDIT_DISPLAY_NAME_STYLES_MODAL),
+    let { analyticsLocations: W } = (0, f.ZP)(Z, u.Z.EDIT_DISPLAY_NAME_STYLES_MODAL),
         { handleApplyDisplayNameStyles: J, isApplying: $ } = (0, _.Z)({
             onSuccess: () => {
                 G();
@@ -193,16 +193,16 @@ function I(e) {
         Q =
             z !== (null == H || null == (N = H.displayNameStyles) ? void 0 : N.fontId) ||
             X !== (null == H || null == (w = H.displayNameStyles) ? void 0 : w.effectId) ||
-            !(0, c.E)(V, null != (M = null == H || null == (I = H.displayNameStyles) ? void 0 : I.colors) ? M : []);
+            !(0, c.E)(V, null != (B = null == H || null == (I = H.displayNameStyles) ? void 0 : I.colors) ? B : []);
     return (o.useEffect(() => {}, [W]), null == H)
         ? null
-        : (0, r.jsx)(p.Gt, {
+        : (0, r.jsx)(f.Gt, {
               value: W,
               children: (0, r.jsx)(j.k.Provider, {
                   value: { overrideSettings: !0 },
                   children: (0, r.jsxs)(d.Y0X, {
                       "data-migration-pending": !0,
-                      transitionState: B,
+                      transitionState: M,
                       size: d.CgR.LARGE,
                       parentComponent: "DisplayNameStylesModal",
                       className: D.modalRoot,

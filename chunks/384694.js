@@ -10,8 +10,8 @@ var r = n(255367),
     d = n(496675),
     m = n(771845),
     h = n(823379),
-    f = n(267642),
-    g = n(598117),
+    g = n(267642),
+    f = n(598117),
     x = n(981631),
     p = n(388032),
     _ = n(588687);
@@ -46,7 +46,7 @@ let b = (e) => ({
                                             (t = r.filter((e) => e.animated === l && !(0, u.Kt)(e, n.id)).length)
                                                 ? t
                                                 : 0;
-                                    return (0, f.y4)(n) - i;
+                                    return (0, g.y4)(n) - i;
                                 })({
                                     guild: n,
                                     emojis: o.ZP.getGuildEmoji(t),
@@ -124,7 +124,7 @@ let b = (e) => ({
             l.useEffect(() => {
                 var e;
                 I.length < 1
-                    ? d(g.ze.NO_PERMISSIONS)
+                    ? d(f.ze.NO_PERMISSIONS)
                     : null != n && (null != (e = null == E ? void 0 : E[n]) ? e : 0) < 1
                       ? d(x.evJ.TOO_MANY_EMOJI)
                       : d(null);

@@ -16,14 +16,14 @@ function n(A) {
             secondaryBaseColors: n,
             secondaryTintColor: f,
             secondaryTintLuminances: B,
-            secondaryLuminanceWeights: l,
+            secondaryLuminanceWeights: h,
         } = A,
-        h = null != e ? v(r, e, g) : t,
+        l = null != e ? v(r, e, g) : t,
         i = [];
     return (
-        null != n && null != B && null != l && (i = null != f ? v(B, f, l) : n),
+        null != n && null != B && null != h && (i = null != f ? v(B, f, h) : n),
         {
-            primaryColorsTransformed: h,
+            primaryColorsTransformed: l,
             secondaryColorsTransformed: i,
         }
     );

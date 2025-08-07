@@ -15,8 +15,8 @@ let n = ["#008456", "#6BE473"],
             tint: 1,
         },
     ],
-    l = ["#FFB84B", "#FFE361"],
-    h = [0.4, 0.8],
+    h = ["#FFB84B", "#FFE361"],
+    l = [0.4, 0.8],
     i = [
         {
             base: 5,
@@ -57,9 +57,9 @@ let n = ["#008456", "#6BE473"],
             primaryTintColor: a,
             primaryTintLuminances: f,
             primaryLuminanceWeights: B,
-            secondaryBaseColors: l,
+            secondaryBaseColors: h,
             secondaryTintColor: w,
-            secondaryTintLuminances: h,
+            secondaryTintLuminances: l,
             secondaryLuminanceWeights: i,
         });
         return (0, r.jsxs)(

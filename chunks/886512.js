@@ -1,4 +1,4 @@
-e.d(t, { V: () => l });
+e.d(t, { V: () => h });
 var r = e(255367);
 e(73800);
 var g = e(331595),
@@ -15,10 +15,10 @@ let n = ["#87553B", "#B88166"],
             tint: 1,
         },
     ],
-    l = (A) => {
+    h = (A) => {
         var t,
             e,
-            { width: l = 24, height: h = 24, primaryTintColor: i } = A,
+            { width: h = 24, height: l = 24, primaryTintColor: i } = A,
             o = (function (A, t) {
                 if (null == A) return {};
                 var e,
@@ -75,8 +75,8 @@ let n = ["#87553B", "#B88166"],
             })({}, (0, g.Z)(o))),
             (e = e =
                 {
-                    width: l,
-                    height: h,
+                    width: h,
+                    height: l,
                     viewBox: "0 0 16 16",
                     fill: "none",
                     xmlns: "http://www.w3.org/2000/svg",

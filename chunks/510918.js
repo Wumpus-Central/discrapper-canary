@@ -6,8 +6,8 @@ var g = e(397110),
     n = e(25960),
     f = e(706484),
     B = e(819837),
-    l = e(165440),
-    h = e(21822),
+    h = e(165440),
+    l = e(21822),
     i = e(285916),
     o = e(168646),
     C = e(470831),
@@ -254,7 +254,7 @@ let m = (A) => {
             return (0, r.jsx)(g.K, X({ primaryTintColor: e }, G));
         case L.x_.DOG:
             return (0, r.jsx)(
-                h.h,
+                l.h,
                 X(
                     {
                         primaryTintColor: e,
@@ -279,7 +279,7 @@ let m = (A) => {
         case L.x_.CAT:
             return (0, r.jsx)(v.W, X({ primaryTintColor: e }, G));
         case L.x_.DIAMOND:
-            return (0, r.jsx)(l.T, X({ primaryTintColor: e }, G));
+            return (0, r.jsx)(h.T, X({ primaryTintColor: e }, G));
         case L.x_.CROWN:
             return (0, r.jsx)(
                 B.O,

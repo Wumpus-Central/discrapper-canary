@@ -27,12 +27,12 @@ function f() {
     h();
 }
 function _(e) {
-    let { message: t, code: n } = e;
-    l = new a.HF(t, n);
+    let { message: t } = e;
+    l = new a.HF(t);
 }
 function p(e) {
-    let { message: t, code: n } = e;
-    l = new a.HF(t, n);
+    let { message: t } = e;
+    l = new a.HF(t);
 }
 function h() {
     l = null;

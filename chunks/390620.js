@@ -11,8 +11,8 @@ var l = n(120356),
     d = n(388032),
     m = n(882714),
     h = n(986449);
-let f = 6 * c.Z.Millis.SECOND;
-function g(e) {
+let g = 6 * c.Z.Millis.SECOND;
+function f(e) {
     let { emoji: t, guildId: n } = e,
         l = (0, a.e7)([u.Z], () => {
             var e;
@@ -63,11 +63,11 @@ function x(e) {
     (0, o.showToast)(
         (0, o.createToast)("", o.ToastType.CUSTOM, {
             position: o.ToastPosition.TOP,
-            component: (0, r.jsx)(g, {
+            component: (0, r.jsx)(f, {
                 emoji: t,
                 guildId: n,
             }),
-            duration: f,
+            duration: g,
         }),
     );
 }
