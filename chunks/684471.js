@@ -1,7 +1,7 @@
 n.d(e, { Z: () => h });
-var r = n(255367);
+var i = n(255367);
 n(73800);
-var i = n(481060),
+var r = n(481060),
     s = n(442837),
     a = n(594174),
     o = n(51144),
@@ -13,19 +13,19 @@ var i = n(481060),
     p = n(282668);
 function h(t) {
     let { senderId: e, trackAnalyticsEvent: n, onNavigate: h } = t,
-        f = (0, s.e7)([a.default], () => {
+        g = (0, s.e7)([a.default], () => {
             let t = a.default.getUser(e);
             return o.ZP.getName(t);
         });
-    return (0, r.jsx)(d.Z, {
+    return (0, i.jsx)(d.Z, {
         header: u.intl.string(u.t.sSMgCw),
-        description: u.intl.formatToPlainString(u.t.q2QrTU, { username: f }),
+        description: u.intl.formatToPlainString(u.t.q2QrTU, { username: g }),
         heroImageSrc: p,
         heroImageAlt: u.intl.string(u.t["3QhxXF"]),
-        children: (0, r.jsxs)("div", {
+        children: (0, i.jsxs)("div", {
             className: x.buttonContainer,
             children: [
-                (0, r.jsx)(i.zxk, {
+                (0, i.jsx)(r.zxk, {
                     text: u.intl.string(u.t["+o4Q7e"]),
                     variant: "primary",
                     fullWidth: !0,
@@ -33,7 +33,7 @@ function h(t) {
                         h(l.x.TAKE_ACTION), n(c.NM.USER_TAKEOVER_MODAL_TAKE_ACTION);
                     },
                 }),
-                (0, r.jsx)(i.zxk, {
+                (0, i.jsx)(r.zxk, {
                     text: u.intl.string(u.t.xLkGzM),
                     variant: "secondary",
                     fullWidth: !0,

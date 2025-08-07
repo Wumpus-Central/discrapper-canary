@@ -10,10 +10,18 @@ let i = (0, n(818083).B)({
     treatments: [
         {
             id: 1,
-            label: "Context Menu Instead of Close Button",
+            label: "Replace DM Close Button with Right-Click menu",
             config: {
                 dotsInsteadOfCloseButton: !0,
                 rearrangeContextMenu: !1,
+            },
+        },
+        {
+            id: 2,
+            label: "Replace DM Close Button with a focused menu",
+            config: {
+                dotsInsteadOfCloseButton: !0,
+                rearrangeContextMenu: !0,
             },
         },
     ],

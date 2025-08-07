@@ -1,13 +1,15 @@
 n.d(t, {
-    D: () => o,
-    m: () => i,
+    D: () => a,
+    m: () => o,
 });
-var r = n(818083);
-let i = (0, r.B)({
+var r = n(818083),
+    i = n(987338);
+let o = (0, r.B)({
         kind: "user",
         id: "2025-08-view-roblox-subgames-in-rich-presence",
         label: "View Roblox subgames in rich presence",
         defaultConfig: { enabled: !1 },
+        commonTriggerPoint: i.$P.CONNECTION_OPEN,
         treatments: [
             {
                 id: 1,
@@ -16,7 +18,7 @@ let i = (0, r.B)({
             },
         ],
     }),
-    o = (0, r.B)({
+    a = (0, r.B)({
         kind: "user",
         id: "2025-08_roblox_subgames_rollout",
         label: "Roblox subgames fetch rollout",

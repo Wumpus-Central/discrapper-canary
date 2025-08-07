@@ -4,20 +4,20 @@ t(73800);
 var i = t(442837),
     r = t(481060),
     a = t(493683),
-    o = t(40851),
-    u = t(740492),
+    u = t(40851),
+    o = t(740492),
     s = t(314897),
-    c = t(592125),
-    d = t(699516),
+    d = t(592125),
+    c = t(699516),
     g = t(944486),
     Z = t(981631),
     f = t(388032);
 function b(e) {
     let { user: n, context: b, label: O, joinCallVideo: p, id: m, onCall: h } = e,
-        j = (0, o.Aq)(),
+        j = (0, u.Aq)(),
         P = (0, i.e7)([s.default], () => s.default.getId() === n.id),
-        v = (0, i.e7)([d.Z], () => d.Z.isBlocked(n.id)),
-        x = (0, i.e7)([g.Z, c.Z], () => g.Z.getVoiceChannelId() === c.Z.getDMFromUserId(n.id));
+        v = (0, i.e7)([c.Z], () => c.Z.isBlocked(n.id)),
+        x = (0, i.e7)([g.Z, d.Z], () => g.Z.getVoiceChannelId() === d.Z.getDMFromUserId(n.id));
     if (P || b === Z.IlC.POPOUT || x || n.bot || n.isProvisional) return null;
     let y = () => {
             null == h || h(),
@@ -29,7 +29,7 @@ function b(e) {
                 j.dispatch(Z.CkL.POPOUT_CLOSE),
                 (0, r.pTH)();
         },
-        N = !u.ZP.disableCallUserConfirmationPrompt;
+        N = !o.ZP.disableCallUserConfirmationPrompt;
     return (0, l.jsx)(r.sNh, {
         id: null != m ? m : "call",
         label: null != O ? O : f.intl.string(f.t.JJogjo),

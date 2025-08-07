@@ -1,12 +1,5 @@
 e.exports = {
-    modal: "modal__506b8",
-    header: "header__506b8",
     search: "search__506b8",
-    titleLine: "titleLine__506b8",
-    title: "title__506b8",
-    closeButton: "closeButton__506b8",
-    footerWithMessage: "footerWithMessage__506b8",
-    footerButtons: "footerButtons__506b8",
     destinationRow: "destinationRow__506b8",
     disabled: "disabled__506b8",
     identity: "identity__506b8",
@@ -18,8 +11,6 @@ e.exports = {
     iconWrapper: "iconWrapper__506b8",
     subLabel: "subLabel__506b8",
     checkbox: "checkbox__506b8",
-    noResults: "noResults__506b8",
     noResultsImg: "noResultsImg__506b8",
-    sendWithMessage: "sendWithMessage__506b8",
     spinnerContainer: "spinnerContainer__506b8",
 };

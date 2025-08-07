@@ -1,4 +1,4 @@
-n.d(t, { D: () => h });
+n.d(t, { D: () => p });
 var r = n(255367),
     i = n(73800),
     l = n(990547),
@@ -11,31 +11,31 @@ var r = n(255367),
     f = n(54480),
     O = n(981631),
     b = n(388032),
-    p = n(837229);
-function h(e) {
+    _ = n(837229);
+function p(e) {
     let { openPickerForChannel: t } = (0, d.B)(),
         n = (0, i.useCallback)(() => {
             o.default.selectPrivateChannel(e.id),
                 t(e.id),
                 u.default.track(O.rMx.CHAT_WALLPAPER_DM_CONTEXT_MENU_ENTRY_POINT_CLICKED, { channel_id: e.id });
         }, [e.id, t]),
-        { canAccessPicker: h } = (0, f.m)({
+        { canAccessPicker: p } = (0, f.m)({
             location: "useChannelWallpaperItem",
             channelId: e.id,
         }),
-        _ = e.isPrivate() && h;
+        h = e.isPrivate() && p;
     return ((0, c.Z)(
         {
             type: l.ImpressionTypes.MENU,
             name: l.ImpressionNames.CHAT_WALLPAPER_DM_CONTEXT_MENU_ENTRY_POINT,
         },
-        { disableTrack: !_ },
+        { disableTrack: !h },
     ),
-    _)
+    h)
         ? (0, r.jsx)(a.sNh, {
               id: "set-wallpaper",
               label: (0, r.jsxs)("div", {
-                  className: p.label,
+                  className: _.label,
                   children: [
                       b.intl.string(b.t.GixvUl),
                       (0, r.jsx)(a.IGR, {
@@ -46,7 +46,7 @@ function h(e) {
               }),
               icon: () =>
                   (0, r.jsx)("div", {
-                      className: p.iconWrapper,
+                      className: _.iconWrapper,
                       children: (0, r.jsx)(a.SrA, { size: "xs" }),
                   }),
               action: n,

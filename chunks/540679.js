@@ -6,25 +6,25 @@ var l = e(442837),
     s = e(87051),
     u = e(776568),
     d = e(9156),
-    c = e(621600),
-    r = e(388032),
+    r = e(621600),
+    c = e(388032),
     o = e(908023);
 let g = (t) => {
     let { onClose: n, channelId: e, applicationId: g, transitionState: p } = t,
-        _ = (0, l.e7)([d.ZP], () => d.ZP.getChannelMuteConfig(null, e)),
-        h = (t) => {
-            s.Z.updateAppDMOverrideSettings(null, e, g, (0, u.u9)(t), c.ZB.Muted);
+        h = (0, l.e7)([d.ZP], () => d.ZP.getChannelMuteConfig(null, e)),
+        _ = (t) => {
+            s.Z.updateAppDMOverrideSettings(null, e, g, (0, u.u9)(t), r.ZB.Muted);
         };
     return (0, i.jsxs)(a.Y0X, {
         transitionState: p,
         size: a.CgR.SMALL,
-        "aria-label": r.intl.string(r.t.uAmAiI),
+        "aria-label": c.intl.string(c.t.uAmAiI),
         parentComponent: "MuteAppNotificationsModalV2",
         children: [
             (0, i.jsx)(a.hzk, {
                 className: o.content,
                 children: (0, i.jsx)(a.xJW, {
-                    title: r.intl.string(r.t.NkwaBg),
+                    title: c.intl.string(c.t.NkwaBg),
                     tag: "h1",
                     children: (0, i.jsx)(a.FXm, {
                         options: (0, u.k)().map((t) => {
@@ -34,8 +34,8 @@ let g = (t) => {
                                 value: e,
                             };
                         }),
-                        onChange: (t) => h(t.value),
-                        value: null == _ ? void 0 : _.selected_time_window,
+                        onChange: (t) => _(t.value),
+                        value: null == h ? void 0 : h.selected_time_window,
                     }),
                 }),
             }),
@@ -46,7 +46,7 @@ let g = (t) => {
             (0, i.jsx)(a.mzw, {
                 children: (0, i.jsx)(a.zxk, {
                     variant: "secondary",
-                    text: r.intl.string(r.t.cpT0Cg),
+                    text: c.intl.string(c.t.cpT0Cg),
                     type: "button",
                     onClick: n,
                 }),

@@ -3,11 +3,11 @@ var l = t(255367),
     i = t(73800),
     r = t(442837),
     a = t(481060),
-    o = t(616780),
-    u = t(438536),
+    u = t(616780),
+    o = t(438536),
     s = t(946273),
-    c = t(346479),
-    d = t(665906),
+    d = t(346479),
+    c = t(665906),
     g = t(592125),
     Z = t(430824),
     f = t(496675),
@@ -58,12 +58,12 @@ function m(e, n) {
 }
 function h(e, n, h) {
     let j = i.useMemo(() => ({ [n]: [e.id] }), [n, e.id]);
-    (0, o.$)(j), (0, r.e7)([f.Z], () => f.Z.getGuildVersion(n), [n]);
+    (0, u.$)(j), (0, r.e7)([f.Z], () => f.Z.getGuildVersion(n), [n]);
     let P = (0, r.e7)([g.Z], () => g.Z.getChannel(h)),
         v = (0, r.e7)([Z.Z], () => Z.Z.getGuild(n), [n]),
         x = (0, r.e7)([b.default], () => b.default.getCurrentUser()),
-        y = (0, u.Z)(P, "Context Menu"),
-        N = (0, d.yw)(null == P ? void 0 : P.id);
+        y = (0, o.Z)(P, "Context Menu"),
+        N = (0, c.yw)(null == P ? void 0 : P.id);
     return (null == x ? void 0 : x.id) === e.id
         ? [y]
         : null == v || null == P || null == x
@@ -76,7 +76,7 @@ function h(e, n, h) {
                               ? O.intl.formatToPlainString(O.t.v2KNNz, { user: e.username })
                               : O.intl.formatToPlainString(O.t["27xWaW"], { user: e.username }),
                           color: "danger",
-                          action: () => c.Z.removeMember(P.id, e.id, "Context Menu"),
+                          action: () => d.Z.removeMember(P.id, e.id, "Context Menu"),
                       })
                     : null,
                 (0, s.BK)(e, v)

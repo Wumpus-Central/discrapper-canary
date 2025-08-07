@@ -125,7 +125,7 @@ function I(e) {
                                 (0, a.jW)(
                                     e,
                                     () =>
-                                        Promise.all([n.e("79695"), n.e("70205"), n.e("53912"), n.e("55370")])
+                                        Promise.all([n.e("79695"), n.e("70205"), n.e("57789"), n.e("55370")])
                                             .then(n.bind(n, 354741))
                                             .then((e) => {
                                                 let { default: n } = e;

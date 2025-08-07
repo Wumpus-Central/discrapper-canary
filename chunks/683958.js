@@ -1,120 +1,58 @@
-n.d(t, { ApplicationCommandShareModal: () => C }), n(388685), n(35282);
-var r = n(255367),
-    l = n(73800),
-    a = n(755721),
-    i = n(481060),
+n.d(t, { ApplicationCommandShareModal: () => _ }), n(388685), n(35282);
+var l = n(255367),
+    r = n(73800),
+    i = n(82659),
+    a = n(481060),
     s = n(911969),
     o = n(835473),
     u = n(987509),
     c = n(72214),
     d = n(592125),
     f = n(430824),
-    b = n(823379),
-    h = n(213459),
-    m = n(667204),
-    p = n(739980),
+    p = n(823379),
+    b = n(213459),
+    h = n(667204),
+    m = n(739980),
     g = n(617266),
     y = n(333861),
     v = n(388032),
     x = n(120575),
     j = n(621054);
-function O(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                var r;
-                (r = n[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: r,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0,
-                          })
-                        : (e[t] = r);
-            });
-    }
-    return e;
-}
-function _(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : (function (e, t) {
-                  var n = Object.keys(e);
-                  if (Object.getOwnPropertySymbols) {
-                      var r = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, r);
-                  }
-                  return n;
-              })(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
 let S = [s.yU.CHAT],
-    P = () => {
-        (0, i.Mr3)(y.s);
+    C = () => {
+        (0, a.Mr3)(y.s);
     };
-function w(e) {
-    let { sendLabel: t, canSend: n, isSending: s, onSend: o } = e,
-        u = l.useCallback(() => {
-            o();
-        }, [o]);
-    return (0, r.jsx)(i.mzw, {
-        className: x.footerWithMessage,
-        children: (0, r.jsx)("div", {
-            className: x.footerButtons,
-            children: (0, r.jsx)(a.zx, {
-                className: x.sendWithMessage,
-                submitting: s,
-                disabled: !n,
-                onClick: u,
-                children: t,
-            }),
-        }),
-    });
-}
-function C(e) {
+function _(e) {
     var t,
         {
             applicationId: n,
-            channel: a,
-            command: s,
-            onClose: y,
-            requireLaunchChannel: C,
+            channel: s,
+            command: y,
+            onClose: _,
+            requireLaunchChannel: O,
             onShareResult: E,
-            previewMessage: N,
+            previewMessage: P,
         } = e,
-        Z = (function (e, t) {
+        w = (function (e, t) {
             if (null == e) return {};
             var n,
-                r,
-                l = (function (e, t) {
+                l,
+                r = (function (e, t) {
                     if (null == e) return {};
                     var n,
-                        r,
-                        l = {},
-                        a = Object.keys(e);
-                    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (l[n] = e[n]);
-                    return l;
+                        l,
+                        r = {},
+                        i = Object.keys(e);
+                    for (l = 0; l < i.length; l++) (n = i[l]), t.indexOf(n) >= 0 || (r[n] = e[n]);
+                    return r;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var a = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < a.length; r++)
-                    (n = a[r]),
-                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]);
+                var i = Object.getOwnPropertySymbols(e);
+                for (l = 0; l < i.length; l++)
+                    (n = i[l]),
+                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]);
             }
-            return l;
+            return r;
         })(e, [
             "applicationId",
             "channel",
@@ -124,20 +62,20 @@ function C(e) {
             "onShareResult",
             "previewMessage",
         ]);
-    let L = l.useMemo(() => (null == a ? null : (0, u.dL)(a.id)), [a]),
-        [M, D] = l.useState(!1),
-        { commands: T, loading: k } =
-            ((t = l.useMemo(
+    let Z = r.useMemo(() => (null == s ? null : (0, u.dL)(s.id)), [s]),
+        [L, N] = r.useState(!1),
+        { commands: T, loading: D } =
+            ((t = r.useMemo(
                 () =>
-                    null == a
+                    null == s
                         ? { type: "contextless" }
                         : {
                               type: "channel",
-                              channel: a,
+                              channel: s,
                           },
-                [a],
+                [s],
             )),
-            (0, h.v1)(
+            (0, b.v1)(
                 t,
                 { commandTypes: S },
                 {
@@ -146,70 +84,68 @@ function C(e) {
                     allowApplicationState: !0,
                 },
             )),
-        A = l.useRef(0),
-        [R, I] = l.useState(C && null != L ? [L] : []),
-        F = R.length,
-        q = F >= 5,
-        [U, z] = l.useState(""),
-        { results: H, updateSearchText: W } = (0, c.s)({
-            selectedDestinations: R,
-            originDestination: null != L ? L : void 0,
+        M = r.useRef(0),
+        [A, k] = r.useState(O && null != Z ? [Z] : []),
+        I = A.length,
+        R = I >= 5,
+        [F, U] = r.useState(""),
+        { results: q, updateSearchText: H } = (0, c.s)({
+            selectedDestinations: A,
+            originDestination: null != Z ? Z : void 0,
             includeMissingDMs: !0,
         }),
-        G = l.useCallback(
+        z = r.useCallback(
             (e) => {
-                z(e), W(e);
+                U(e), H(e);
             },
-            [W],
+            [H],
         ),
-        X = l.useCallback(() => {
-            E(!1), y();
-        }, [E, y]),
-        [B] = (0, o.Z)([n]),
-        V = l.useCallback(() => {
-            z("");
-        }, [z]),
-        Y = l.useRef(null);
-    l.useEffect(() => {
-        if ("" === U) {
+        G = r.useCallback(() => (E(!1), _()), [E, _]),
+        [W] = (0, o.Z)([n]),
+        V = r.useCallback(() => {
+            U("");
+        }, [U]),
+        X = r.useRef(null);
+    r.useEffect(() => {
+        if ("" === F) {
             var e;
-            null == (e = Y.current) || e.focus();
+            null == (e = X.current) || e.focus();
         }
-    }, [U]);
-    let J = l.useCallback(
+    }, [F]);
+    let J = r.useCallback(
             (e) => {
-                I((t) => {
+                k((t) => {
                     let n = t.findIndex((t) => {
-                        let { type: n, id: r } = t;
-                        return n === e.type && r === e.id;
+                        let { type: n, id: l } = t;
+                        return n === e.type && l === e.id;
                     });
-                    if (-1 === n) return q ? t : (z(""), W(""), (A.current += 1), [e, ...t]);
-                    let r = [...t];
-                    return r.splice(n, 1), (A.current += 1), r;
+                    if (-1 === n) return R ? t : (U(""), H(""), (M.current += 1), [e, ...t]);
+                    let l = [...t];
+                    return l.splice(n, 1), (M.current += 1), l;
                 });
             },
-            [q, W],
+            [R, H],
         ),
-        [Q, K] = l.useMemo(() => {
-            if (k) return [null, !1];
-            let e = T.find((e) => e.untranslatedName === s.name);
+        [Y, B] = r.useMemo(() => {
+            if (D) return [null, !1];
+            let e = T.find((e) => e.untranslatedName === y.name);
             return void 0 !== e ? [e, !1] : [null, !0];
-        }, [s, T, k]),
-        $ = l.useCallback(
+        }, [y, T, D]),
+        Q = r.useCallback(
             async function (e) {
                 let { closeAfterSend: t } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-                if (null === Q) return;
-                D(!0);
-                let n = (await Promise.all(e.map(u.qx))).filter(b.lm);
-                t && (E(!0), P()),
+                if (null === Y) return;
+                N(!0);
+                let n = (await Promise.all(e.map(u.qx))).filter(p.lm);
+                t && (E(!0), C()),
                     n.forEach(async (e) => {
                         var t, n;
-                        let r = d.Z.getChannel(e);
-                        if (null == r) return;
-                        let l =
+                        let l = d.Z.getChannel(e);
+                        if (null == l) return;
+                        let r =
                                 null !=
                                 (n =
-                                    null == (t = s.options)
+                                    null == (t = y.options)
                                         ? void 0
                                         : t.reduce(
                                               (e, t) => (
@@ -225,156 +161,112 @@ function C(e) {
                                           ))
                                     ? n
                                     : {},
-                            a = f.Z.getGuild(null == r ? void 0 : r.guild_id);
+                            i = f.Z.getGuild(null == l ? void 0 : l.guild_id);
                         null !=
-                            (await (0, m.Z)({
-                                command: Q,
-                                optionValues: l,
+                            (await (0, h.Z)({
+                                command: Y,
+                                optionValues: r,
                                 context: {
-                                    channel: r,
-                                    guild: a,
+                                    channel: l,
+                                    guild: i,
                                 },
                             })) &&
-                            (0, i.showToast)((0, i.createToast)(v.intl.string(v.t["5WjJcn"]), i.ToastType.MESSAGE));
+                            (0, a.showToast)((0, a.createToast)(v.intl.string(v.t["5WjJcn"]), a.ToastType.MESSAGE));
                     }),
                     E(!0),
-                    P();
+                    C();
             },
-            [E, Q, s.options],
+            [E, Y, y.options],
         ),
-        ee = l.useCallback(() => {
-            $(R, { closeAfterSend: !0 });
-        }, [$, R]);
-    if (k)
-        return (0, r.jsx)(
-            i.Y0X,
-            _(
-                O(
-                    {
-                        className: x.modal,
-                        "aria-label": v.intl.string(v.t.fuFvw8),
-                    },
-                    Z,
-                ),
+        K = r.useCallback(() => {
+            Q(A, { closeAfterSend: !0 });
+        }, [Q, A]);
+    if (D)
+        return (0, l.jsx)(i.Modal, {
+            title: v.intl.string(v.t.fuFvw8),
+            "aria-label": v.intl.string(v.t.fuFvw8),
+            transitionState: w.transitionState,
+            onClose: _,
+            actions: [],
+            children: (0, l.jsx)(a.$jN, { className: x.spinnerContainer }),
+        });
+    if (B)
+        return (0, l.jsx)(i.Modal, {
+            title: v.intl.string(v.t.fuFvw8),
+            "aria-label": v.intl.string(v.t.fuFvw8),
+            transitionState: w.transitionState,
+            onClose: _,
+            actions: [
                 {
-                    parentComponent: "ApplicationCommandShareModal",
-                    children: (0, r.jsx)(i.$jN, { className: x.spinnerContainer }),
+                    text: v.intl.string(v.t.cpT0Cg),
+                    onClick: _,
+                    variant: "primary",
                 },
-            ),
-        );
-    if (K)
-        return (0, r.jsx)(
-            i.Y0X,
-            _(
-                O(
-                    {
-                        className: x.modal,
-                        "aria-label": v.intl.string(v.t.fuFvw8),
-                    },
-                    Z,
-                ),
+            ],
+            children: v.intl.string(v.t.yAk8ZW),
+        });
+    let $ =
+            q.length > 0
+                ? (0, l.jsx)(g.F, {
+                      paddingBottom: 16,
+                      paddingTop: 16,
+                      rowData: q,
+                      handleToggleDestination: J,
+                      selectedDestinations: A,
+                      disableSelection: R,
+                      originDestination: Z,
+                  })
+                : (0, l.jsxs)(l.Fragment, {
+                      children: [
+                          (0, l.jsx)("img", {
+                              className: x.noResultsImg,
+                              src: j,
+                              alt: "",
+                          }),
+                          (0, l.jsx)(a.Text, {
+                              variant: "text-md/normal",
+                              color: "text-muted",
+                              children: v.intl.string(v.t.V6nAfH),
+                          }),
+                      ],
+                  }),
+        ee = v.intl.format(v.t.hajTk5, { appName: null == W ? void 0 : W.name });
+    null == W && (ee = v.intl.string(v.t.fuFvw8));
+    let et = v.intl.format(v.t["DF+q2t"], { appName: null == W ? void 0 : W.name });
+    return (
+        R && (et = v.intl.format(v.t["/KhyPT"], { count: 5 })),
+        (0, l.jsx)(i.Modal, {
+            title: ee.toString(),
+            subtitle: et,
+            "aria-label": ee.toString(),
+            transitionState: w.transitionState,
+            onClose: G,
+            size: "md",
+            actions: [
                 {
-                    parentComponent: "ApplicationCommandShareModal",
-                    children: (0, r.jsx)(i.hzk, { children: v.intl.string(v.t.yAk8ZW) }),
+                    text: v.intl.string(v.t.cpT0Cg),
+                    onClick: G,
+                    variant: "secondary",
                 },
-            ),
-        );
-    let et =
-        H.length > 0
-            ? (0, r.jsx)(g.F, {
-                  paddingBottom: 16,
-                  paddingTop: 16,
-                  rowData: H,
-                  handleToggleDestination: J,
-                  selectedDestinations: R,
-                  disableSelection: q,
-                  originDestination: L,
-              })
-            : (0, r.jsxs)(i.hzk, {
-                  className: x.noResults,
-                  children: [
-                      (0, r.jsx)("img", {
-                          className: x.noResultsImg,
-                          src: j,
-                          alt: "",
-                      }),
-                      (0, r.jsx)(i.Text, {
-                          variant: "text-md/normal",
-                          color: "text-muted",
-                          children: v.intl.string(v.t.V6nAfH),
-                      }),
-                  ],
-              });
-    return (0, r.jsxs)(
-        i.Y0X,
-        _(
-            O(
                 {
-                    className: x.modal,
-                    "aria-label": v.intl.string(v.t.fuFvw8),
+                    text: v.intl.string(v.t.TXNS7e),
+                    onClick: K,
+                    disabled: 0 === I || L,
+                    variant: "primary",
                 },
-                Z,
-            ),
-            {
-                parentComponent: "ApplicationCommandShareModal",
-                children: [
-                    (0, r.jsxs)(i.xBx, {
-                        className: x.header,
-                        children: [
-                            (0, r.jsxs)("div", {
-                                className: x.titleLine,
-                                children: [
-                                    (0, r.jsx)("div", {
-                                        className: x.title,
-                                        children: (0, r.jsxs)(i.y5t, {
-                                            component: (0, r.jsxs)(i.X6q, {
-                                                variant: "heading-lg/semibold",
-                                                children: ["Share from ", null == B ? void 0 : B.name, "?"],
-                                            }),
-                                            children: [
-                                                q
-                                                    ? (0, r.jsx)(i.Text, {
-                                                          variant: "text-sm/normal",
-                                                          color: "text-feedback-warning",
-                                                          children: v.intl.format(v.t["/KhyPT"], { count: 5 }),
-                                                      })
-                                                    : null,
-                                                (0, r.jsx)(i.X6q, {
-                                                    variant: "heading-sm/normal",
-                                                    color: "header-muted",
-                                                    children: v.intl.string(v.t["DF+q2t"]),
-                                                }),
-                                            ],
-                                        }),
-                                    }),
-                                    (0, r.jsx)(i.olH, {
-                                        className: x.closeButton,
-                                        onClick: X,
-                                    }),
-                                ],
-                            }),
-                            void 0 !== N ? (0, r.jsx)(p.z, { previewMessage: N }) : null,
-                            (0, r.jsx)(i.E1j, {
-                                className: x.search,
-                                ref: Y,
-                                query: U,
-                                onChange: G,
-                                onClear: V,
-                                placeholder: v.intl.string(v.t["5h0QOD"]),
-                                "aria-label": v.intl.string(v.t["5h0QOD"]),
-                                autoFocus: !0,
-                            }),
-                        ],
-                    }),
-                    et,
-                    (0, r.jsx)(w, {
-                        sendLabel: v.intl.string(v.t.TXNS7e),
-                        canSend: F > 0,
-                        isSending: M,
-                        onSend: ee,
-                    }),
-                ],
-            },
-        ),
+            ],
+            preview: void 0 !== P ? (0, l.jsx)(m.z, { previewMessage: P }) : null,
+            input: (0, l.jsx)(a.E1j, {
+                className: x.search,
+                ref: X,
+                query: F,
+                onChange: z,
+                onClear: V,
+                placeholder: v.intl.string(v.t["5h0QOD"]),
+                "aria-label": v.intl.string(v.t["5h0QOD"]),
+                autoFocus: !0,
+            }),
+            children: $,
+        })
     );
 }

@@ -17,7 +17,7 @@ let _ = function (t) {
         O = r.useCallback(() => {
             l.Z.open(d.oAB.CONTENT_AND_SOCIAL, null, { scrollPosition: T.FY.DM_SAFETY_ALERTS_V2 }), e();
         }, [e]),
-        E = r.useCallback(() => {
+        g = r.useCallback(() => {
             _ ||
                 (b(!0),
                 (0, o.Uj)(n)
@@ -58,7 +58,7 @@ let _ = function (t) {
                                     {
                                         className: x.reportFalsePositiveButton,
                                         tag: "span",
-                                        onClick: E,
+                                        onClick: g,
                                         children: t,
                                     },
                                     e,

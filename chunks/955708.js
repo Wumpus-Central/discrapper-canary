@@ -1,10 +1,10 @@
 n.d(e, {
-    default: () => g,
+    default: () => f,
     x: () => m,
 }),
     n(388685);
-var r,
-    i = n(255367),
+var i,
+    r = n(255367),
     s = n(73800),
     a = n(481060),
     o = n(378298),
@@ -17,29 +17,29 @@ var r,
 function h(t) {
     for (var e = 1; e < arguments.length; e++) {
         var n = null != arguments[e] ? arguments[e] : {},
-            r = Object.keys(n);
+            i = Object.keys(n);
         "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
+            (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (t) {
                     return Object.getOwnPropertyDescriptor(n, t).enumerable;
                 }),
             )),
-            r.forEach(function (e) {
-                var r;
-                (r = n[e]),
+            i.forEach(function (e) {
+                var i;
+                (i = n[e]),
                     e in t
                         ? Object.defineProperty(t, e, {
-                              value: r,
+                              value: i,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0,
                           })
-                        : (t[e] = r);
+                        : (t[e] = i);
             });
     }
     return t;
 }
-function f(t, e) {
+function g(t, e) {
     return (
         (e = null != e ? e : {}),
         Object.getOwnPropertyDescriptors
@@ -47,8 +47,8 @@ function f(t, e) {
             : (function (t, e) {
                   var n = Object.keys(t);
                   if (Object.getOwnPropertySymbols) {
-                      var r = Object.getOwnPropertySymbols(t);
-                      n.push.apply(n, r);
+                      var i = Object.getOwnPropertySymbols(t);
+                      n.push.apply(n, i);
                   }
                   return n;
               })(Object(e)).forEach(function (n) {
@@ -58,29 +58,29 @@ function f(t, e) {
     );
 }
 var m =
-    (((r = {})[(r.INTRO = 0)] = "INTRO"),
-    (r[(r.SAFETY_TIPS = 1)] = "SAFETY_TIPS"),
-    (r[(r.TAKE_ACTION = 2)] = "TAKE_ACTION"),
-    r);
-let g = (t) => {
-    let { warningId: e, warningType: n, senderId: r, modalProps: m, channelId: g } = t,
+    (((i = {})[(i.INTRO = 0)] = "INTRO"),
+    (i[(i.SAFETY_TIPS = 1)] = "SAFETY_TIPS"),
+    (i[(i.TAKE_ACTION = 2)] = "TAKE_ACTION"),
+    i);
+let f = (t) => {
+    let { warningId: e, warningType: n, senderId: i, modalProps: m, channelId: f } = t,
         [_, b] = s.useState(0),
         O = s.useMemo(
             () => ({
-                channelId: g,
-                senderId: r,
+                channelId: f,
+                senderId: i,
                 warningId: e,
                 warningType: n,
                 isNudgeWarning: !1,
             }),
-            [g, r, e, n],
+            [f, i, e, n],
         );
     s.useEffect(() => {
-        (0, c.KQ)(f(h({}, O), { viewName: c.pb.SAFETY_TAKEOVER_MODAL }));
+        (0, c.KQ)(g(h({}, O), { viewName: c.pb.SAFETY_TAKEOVER_MODAL }));
     }, [O]);
     let v = s.useCallback(
             (t) => {
-                (0, c.qc)(f(h({}, O), { cta: t }));
+                (0, c.qc)(g(h({}, O), { cta: t }));
             },
             [O],
         ),
@@ -88,43 +88,44 @@ let g = (t) => {
     function E(t) {
         b(t);
     }
-    return (0, i.jsxs)(a.Y0X, {
+    return (0, r.jsxs)(a.Y0X, {
+        "data-migration-pending": !0,
         transitionState: m.transitionState,
         parentComponent: "InappropriateConversationModal",
         children: [
-            (0, i.jsx)("div", {
+            (0, r.jsx)("div", {
                 className: p.container,
-                children: (0, i.jsxs)(a.MyZ, {
+                children: (0, r.jsxs)(a.MyZ, {
                     width: 440,
                     activeSlide: _,
                     centered: !1,
                     overflow: "visible",
                     contentDisplay: "flex",
                     children: [
-                        (0, i.jsx)(a.Mi4, {
+                        (0, r.jsx)(a.Mi4, {
                             id: 0,
-                            children: (0, i.jsx)(l.Z, {
+                            children: (0, r.jsx)(l.Z, {
                                 warningId: e,
-                                senderId: r,
+                                senderId: i,
                                 trackAnalyticsEvent: v,
                                 onNavigate: E,
                             }),
                         }),
-                        (0, i.jsx)(a.Mi4, {
+                        (0, r.jsx)(a.Mi4, {
                             id: 1,
-                            children: (0, i.jsx)(d.Z, {
+                            children: (0, r.jsx)(d.Z, {
                                 warningId: e,
-                                senderId: r,
+                                senderId: i,
                                 trackAnalyticsEvent: v,
                             }),
                         }),
-                        (0, i.jsx)(a.Mi4, {
+                        (0, r.jsx)(a.Mi4, {
                             id: 2,
-                            children: (0, i.jsx)(u.Z, {
+                            children: (0, r.jsx)(u.Z, {
                                 warningId: e,
-                                senderId: r,
+                                senderId: i,
                                 trackAnalyticsEvent: v,
-                                channelId: g,
+                                channelId: f,
                                 hasReported: j,
                                 onReport: function () {
                                     T(!0);
@@ -134,20 +135,21 @@ let g = (t) => {
                     ],
                 }),
             }),
-            (0, i.jsxs)(a.mzw, {
+            (0, r.jsxs)(a.mzw, {
+                "data-migration-pending": !0,
                 className: p.footer,
                 children: [
-                    (0, i.jsx)(a.Avr, {
+                    (0, r.jsx)(a.Avr, {
                         variant: "secondary",
                         size: "sm",
                         text: x.intl.string(x.t.cpT0Cg),
                         onClick: function () {
-                            m.onClose(), (0, o.T)(g, [e]), v(c.NM.USER_TAKEOVER_MODAL_DISMISS);
+                            m.onClose(), (0, o.T)(f, [e]), v(c.NM.USER_TAKEOVER_MODAL_DISMISS);
                         },
                         textVariant: "text-sm/normal",
                     }),
                     0 !== _ &&
-                        (0, i.jsx)(a.Avr, {
+                        (0, r.jsx)(a.Avr, {
                             variant: "secondary",
                             size: "sm",
                             text: x.intl.string(x.t["13/7kZ"]),

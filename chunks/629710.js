@@ -1,19 +1,19 @@
 n.d(t, {
-    AT: () => m,
-    DQ: () => T,
-    Hz: () => R,
-    LD: () => S,
-    MD: () => I,
-    SI: () => C,
-    UJ: () => N,
-    X6: () => O,
-    aQ: () => k,
-    g4: () => A,
-    hi: () => w,
-    kC: () => y,
-    kh: () => b,
-    px: () => j,
-    rb: () => g,
+    AT: () => E,
+    DQ: () => A,
+    Hz: () => w,
+    LD: () => N,
+    MD: () => S,
+    SI: () => P,
+    UJ: () => R,
+    X6: () => I,
+    aQ: () => U,
+    g4: () => C,
+    hi: () => L,
+    kC: () => v,
+    kh: () => O,
+    px: () => G,
+    rb: () => b,
 }),
     n(388685),
     n(361932),
@@ -23,52 +23,54 @@ n.d(t, {
 var r = n(524437),
     i = n(911969),
     o = n(432877),
-    a = n(768494),
-    s = n(592125),
-    l = n(699516),
-    c = n(594174),
-    u = n(630388),
-    d = n(823379),
-    f = n(991621),
-    _ = n(774863),
-    p = n(294509);
-let h = -1,
-    m = () =>
-        Object.values(p.Fj).filter((e) => {
+    a = n(978003),
+    s = n(768494),
+    l = n(592125),
+    c = n(375954),
+    u = n(699516),
+    d = n(594174),
+    f = n(630388),
+    _ = n(823379),
+    p = n(991621),
+    h = n(774863),
+    m = n(294509);
+let g = -1,
+    E = () =>
+        Object.values(m.Fj).filter((e) => {
             var t;
             return null == e.isEligible || (null == (t = e.isEligible) ? void 0 : t.call(e));
         }),
-    g = (e) => {
-        let { channelId: t, authorId: n } = j(e);
-        return null == t || null == e ? p.qn.NONE : E(t, n);
-    },
-    E = (e, t) => {
-        let n = c.default.getCurrentUser();
-        if (null == n || t === n.id) return p.qn.NONE;
-        let r = w(e, t, [s.Z, l.Z]);
-        return null == r ? p.qn.NONE : b(r);
-    },
     b = (e) => {
-        let t = m();
+        let { channelId: t, authorId: n } = G(e);
+        return null == t || null == e ? m.qn.NONE : y(t, n);
+    },
+    y = (e, t) => {
+        let n = d.default.getCurrentUser();
+        if (null == n || t === n.id) return m.qn.NONE;
+        let r = L(e, t, [l.Z, u.Z]);
+        return null == r ? m.qn.NONE : O(r);
+    },
+    O = (e) => {
+        let t = E();
         return null == e
-            ? p.qn.NONE
-            : R(t.map((t) => (k(t.getUserSettingsWithDefaults()[e]) ? t.harmType : null)).filter(d.lm));
+            ? m.qn.NONE
+            : w(t.map((t) => (U(t.getUserSettingsWithDefaults()[e]) ? t.harmType : null)).filter(_.lm));
     };
-function y(e) {
-    let t = g(e);
-    return O(e, t);
+function v(e) {
+    let t = b(e);
+    return I(e, t);
 }
-function O(e, t) {
+function I(e, t) {
     var n, r;
-    if (t === p.qn.NONE || null == e) return !1;
+    if (t === m.qn.NONE || null == e) return !1;
     if (
         (null == (n = e.attachments)
             ? void 0
             : n.some(
                   (e) =>
-                      S(
+                      N(
                           {
-                              type: f.l.Attachment,
+                              type: p.l.Attachment,
                               media: e,
                           },
                           t,
@@ -78,9 +80,9 @@ function O(e, t) {
             ? void 0
             : r.some(
                   (e) =>
-                      S(
+                      N(
                           {
-                              type: f.l.Embed,
+                              type: p.l.Embed,
                               media: e,
                           },
                           t,
@@ -94,10 +96,10 @@ function O(e, t) {
         null == i || 0 === i.length)
     )
         return !1;
-    for (let e of i) if (O(e.message, t)) return !0;
+    for (let e of i) if (I(e.message, t)) return !0;
     return !1;
 }
-function v(e) {
+function T(e) {
     return (Array.isArray(e) ? e : [e])
         .flatMap((e) => {
             switch (e.type) {
@@ -109,24 +111,24 @@ function v(e) {
                     return e.file;
                 case i.re.SECTION:
                 case i.re.ACTION_ROW:
-                    return e.components.flatMap(v);
+                    return e.components.flatMap(T);
                 default:
                     return [];
             }
         })
-        .map((e) => ("proxy_url" in e ? (0, a.ym)(e) : e));
+        .map((e) => ("proxy_url" in e ? (0, s.ym)(e) : e));
 }
-function I(e, t) {
+function S(e, t) {
     var n, r;
-    let i = null != t ? t : g(e);
-    if (i === p.qn.NONE) return !1;
+    let i = null != t ? t : b(e);
+    if (i === m.qn.NONE) return !1;
     if (
         (null == (n = e.attachments)
             ? void 0
             : n.some((e) =>
-                  N(
+                  R(
                       {
-                          type: f.l.Attachment,
+                          type: p.l.Attachment,
                           media: e,
                       },
                       i,
@@ -135,19 +137,19 @@ function I(e, t) {
         (null == (r = e.embeds)
             ? void 0
             : r.some((e) =>
-                  N(
+                  R(
                       {
-                          type: f.l.Embed,
+                          type: p.l.Embed,
                           media: e,
                       },
                       i,
                   ),
               )) ||
         (null != e.components &&
-            v(e.components).some((e) =>
-                N(
+            T(e.components).some((e) =>
+                R(
                     {
-                        type: f.l.GenericMedia,
+                        type: p.l.GenericMedia,
                         media: e,
                     },
                     i,
@@ -161,13 +163,13 @@ function I(e, t) {
         null == o || 0 === o.length)
     )
         return !1;
-    for (let e of o) if (I(e.message, i)) return !0;
+    for (let e of o) if (S(e.message, i)) return !0;
     return !1;
 }
-function T(e) {
+function A(e) {
     var t, n, r, i;
-    let o = g(e);
-    if (o === p.qn.NONE)
+    let o = b(e);
+    if (o === m.qn.NONE)
         return {
             attachmentIds: [],
             embedIds: [],
@@ -176,9 +178,9 @@ function T(e) {
             null == (t = e.attachments)
                 ? void 0
                 : t.filter((e) =>
-                      N(
+                      R(
                           {
-                              type: f.l.Attachment,
+                              type: p.l.Attachment,
                               media: e,
                           },
                           o,
@@ -188,9 +190,9 @@ function T(e) {
             null == (n = e.embeds)
                 ? void 0
                 : n.filter((e) =>
-                      N(
+                      R(
                           {
-                              type: f.l.Embed,
+                              type: p.l.Embed,
                               media: e,
                           },
                           o,
@@ -201,43 +203,43 @@ function T(e) {
         embedIds: null != (i = null == s ? void 0 : s.map((e, t) => "embed_".concat(t)).filter(Boolean)) ? i : [],
     };
 }
-function S(e, t) {
-    if (t === p.qn.NONE) return [];
-    let n = P(t);
-    return 0 === n.length ? [] : n.filter((t) => C(t, e)).map((e) => p.Fj[e].obscureReason);
-}
-function A(e, t) {
-    if (t === p.qn.NONE) return !1;
-    let n = P(t);
-    return 0 !== n.length && n.filter((t) => C(t, e)).length > 0;
-}
 function N(e, t) {
-    if (t === p.qn.NONE || o.ZP.get("explicit_media_redaction_ignore_pending_scan")) return !1;
-    let n = P(t);
+    if (t === m.qn.NONE) return [];
+    let n = D(t);
+    return 0 === n.length ? [] : n.filter((t) => P(t, e)).map((e) => m.Fj[e].obscureReason);
+}
+function C(e, t) {
+    if (t === m.qn.NONE) return !1;
+    let n = D(t);
+    return 0 !== n.length && n.filter((t) => P(t, e)).length > 0;
+}
+function R(e, t) {
+    if (t === m.qn.NONE || o.ZP.get("explicit_media_redaction_ignore_pending_scan")) return !1;
+    let n = D(t);
     if (0 === n.length) return !1;
     switch (e.type) {
-        case f.l.Embed:
-            return D(e.media, n);
-        case f.l.Attachment:
-            return L(e.media, n);
-        case f.l.GenericMedia:
+        case p.l.Embed:
             return x(e.media, n);
+        case p.l.Attachment:
+            return M(e.media, n);
+        case p.l.GenericMedia:
+            return k(e.media, n);
         default:
             return !1;
     }
 }
-function C(e, t) {
+function P(e, t) {
     var n, r, i, a;
     if (null == e) return !1;
-    let s = p.Fj[e];
+    let s = m.Fj[e];
     if (null != s.devSettingKey && o.ZP.get(s.devSettingKey)) return !0;
     switch (t.type) {
-        case f.l.Embed:
-            return (0, u.yE)(null != (n = t.media.flags) ? n : 0, s.embedFlag);
-        case f.l.Attachment:
-            return (0, u.yE)(null != (r = t.media.flags) ? r : 0, s.attachmentFlag);
-        case f.l.GenericMedia:
-            return (0, u.yE)(
+        case p.l.Embed:
+            return (0, f.yE)(null != (n = t.media.flags) ? n : 0, s.embedFlag);
+        case p.l.Attachment:
+            return (0, f.yE)(null != (r = t.media.flags) ? r : 0, s.attachmentFlag);
+        case p.l.GenericMedia:
+            return (0, f.yE)(
                 null != (a = null == (i = t.media.contentScanMetadata) ? void 0 : i.flags) ? a : 0,
                 s.genericMediaFlag,
             );
@@ -245,38 +247,38 @@ function C(e, t) {
             return !1;
     }
 }
-function R(e) {
-    let t = p.qn.NONE;
+function w(e) {
+    let t = m.qn.NONE;
     for (let n of e)
         switch (n) {
-            case p._.EXPLICIT:
-                t |= p.qn.EXPLICIT;
+            case m._.EXPLICIT:
+                t |= m.qn.EXPLICIT;
                 break;
-            case p._.GORE:
-                t |= p.qn.GORE;
+            case m._.GORE:
+                t |= m.qn.GORE;
         }
     return t;
 }
-function P(e) {
-    if (e === p.qn.NONE) return [];
+function D(e) {
+    if (e === m.qn.NONE) return [];
     let t = [];
-    for (let n of m()) (e & n.bitmask) > 0 && t.push(n.harmType);
+    for (let n of E()) (e & n.bitmask) > 0 && t.push(n.harmType);
     return t;
 }
-function w(e, t) {
-    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [s.Z, l.Z],
+function L(e, t) {
+    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [l.Z, u.Z],
         [r, i] = n,
         o = r.getChannel(e),
-        a = c.default.getCurrentUser();
+        a = d.default.getCurrentUser();
     return null == a || t === a.id || null == o
         ? null
         : o.isDM() || o.isGroupDM()
           ? null != t && i.getFriendIDs().includes(t)
-              ? f.n.FRIEND_DM
-              : f.n.NON_FRIEND_DM
-          : f.n.GUILD;
+              ? p.n.FRIEND_DM
+              : p.n.NON_FRIEND_DM
+          : p.n.GUILD;
 }
-function D(e, t) {
+function x(e, t) {
     var n, r, i, o, a, s, l;
     return (
         !(
@@ -285,8 +287,8 @@ function D(e, t) {
             0 ===
                 t.filter(
                     (t) =>
-                        !C(t, {
-                            type: f.l.Embed,
+                        !P(t, {
+                            type: p.l.Embed,
                             media: e,
                         }),
                 ).length ||
@@ -304,64 +306,67 @@ function D(e, t) {
                 (null == (s = e.image) ? void 0 : s.height) === 0) ||
             ("images" in e &&
                 (null == (l = e.images) ? void 0 : l.some((e) => null != e && 0 === e.width && 0 === e.height)))
-        ) && M(U(e), t)
-    );
-}
-function L(e, t) {
-    var n;
-    return (
-        0 !== t.length &&
-        0 !==
-            t.filter(
-                (t) =>
-                    !C(t, {
-                        type: f.l.Attachment,
-                        media: e,
-                    }),
-            ).length &&
-        M(null != (n = e.content_scan_version) ? n : e.contentScanVersion, t)
-    );
-}
-function x(e, t) {
-    var n;
-    return (
-        0 !== t.length &&
-        0 !==
-            t.filter(
-                (t) =>
-                    !C(t, {
-                        type: f.l.GenericMedia,
-                        media: e,
-                    }),
-            ).length &&
-        M(null == (n = e.contentScanMetadata) ? void 0 : n.version, t)
+        ) && j(B(e), t)
     );
 }
 function M(e, t) {
-    let n = _.Z.validContentScanVersion;
-    return e !== h && (t.includes(p._.GORE) ? null == e || e < n : null == e);
+    var n;
+    return (
+        0 !== t.length &&
+        0 !==
+            t.filter(
+                (t) =>
+                    !P(t, {
+                        type: p.l.Attachment,
+                        media: e,
+                    }),
+            ).length &&
+        j(null != (n = e.content_scan_version) ? n : e.contentScanVersion, t)
+    );
 }
-function k(e) {
-    return null != e && [r.Q4.BLOCK, r.Q4.BLUR].includes(e);
+function k(e, t) {
+    var n;
+    return (
+        0 !== t.length &&
+        0 !==
+            t.filter(
+                (t) =>
+                    !P(t, {
+                        type: p.l.GenericMedia,
+                        media: e,
+                    }),
+            ).length &&
+        j(null == (n = e.contentScanMetadata) ? void 0 : n.version, t)
+    );
 }
-function j(e) {
-    let t = null,
-        n = null;
-    if (null == e)
-        return {
-            channelId: t,
-            authorId: n,
-        };
-    if (("channel_id" in e && (t = e.channel_id), "author" in e)) {
-        var r;
-        n = null == (r = e.author) ? void 0 : r.id;
-    } else "author_id" in e && (n = e.author_id);
-    return {
-        channelId: t,
-        authorId: n,
-    };
+function j(e, t) {
+    let n = h.Z.validContentScanVersion;
+    return e !== g && (t.includes(m._.GORE) ? null == e || e < n : null == e);
 }
 function U(e) {
+    return null != e && [r.Q4.BLOCK, r.Q4.BLUR].includes(e);
+}
+function G(e) {
+    var t, n;
+    let r = null,
+        i = null;
+    if (null == e)
+        return {
+            channelId: r,
+            authorId: i,
+        };
+    if (
+        ("channel_id" in e && (r = e.channel_id), "messageReference" in e && (0, a.Z)(e) && null != e.messageReference)
+    ) {
+        let n = c.Z.getMessage(e.messageReference.channel_id, e.messageReference.message_id);
+        null != n && (i = null == (t = n.author) ? void 0 : t.id);
+    } else "author" in e ? (i = null == (n = e.author) ? void 0 : n.id) : "author_id" in e && (i = e.author_id);
+    return {
+        channelId: r,
+        authorId: i,
+    };
+}
+function B(e) {
     return null != e.content_scan_version
         ? e.content_scan_version
         : null != e.contentScanVersion || null != e.contentScanVersion

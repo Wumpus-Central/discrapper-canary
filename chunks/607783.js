@@ -1,6 +1,6 @@
 n.d(t, { B: () => f });
-var i = n(255367),
-    l = n(73800),
+var l = n(255367),
+    i = n(73800),
     r = n(442837),
     a = n(481060),
     o = n(40851),
@@ -14,7 +14,7 @@ function f(e) {
         Z = (0, d.J)({ channelId: n }),
         m = (0, r.e7)([c.default], () => c.default.getId() === t),
         v = (0, o.bp)(),
-        p = l.useCallback(() => {
+        p = i.useCallback(() => {
             s.Z.openSecureFramesUserVerificationModal(
                 t,
                 n,
@@ -29,7 +29,7 @@ function f(e) {
         }, [v, n, f, t]);
     return !Z || m
         ? null
-        : (0, i.jsx)(a.sNh, {
+        : (0, l.jsx)(a.sNh, {
               id: "secure-frames-user-verification",
               label: g.intl.string(g.t["8ErYvb"]),
               action: p,

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p }), n(388685);
+n.d(t, { Z: () => _ }), n(388685);
 var r = n(255367);
 n(73800);
 var i = n(442837),
@@ -12,7 +12,7 @@ var i = n(442837),
     f = n(306680),
     O = n(981631),
     b = n(388032);
-function p(e) {
+function _(e) {
     let t = (function (e) {
         let t = (0, o.n2)(e.guild_id, e.id),
             n = (0, i.e7)([f.ZP, d.Z, c.Z, s.Z], () => {

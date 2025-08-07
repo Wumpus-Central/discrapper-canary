@@ -1,6 +1,6 @@
 n.d(e, { Z: () => O }), n(388685);
-var r = n(255367),
-    i = n(73800),
+var i = n(255367),
+    r = n(73800),
     s = n(481060),
     a = n(442837),
     o = n(194359),
@@ -11,20 +11,20 @@ var r = n(255367),
     x = n(699516),
     p = n(473092),
     h = n(991981),
-    f = n(850165),
+    g = n(850165),
     m = n(134612),
-    g = n(388032),
+    f = n(388032),
     _ = n(948582),
     b = n(149355);
 function O(t) {
     let { senderId: e, channelId: n, hasReported: O, onReport: v, trackAnalyticsEvent: j } = t,
         T = (0, a.e7)([x.Z], () => x.Z.isBlocked(e)),
-        [E, y] = i.useState(T),
+        [E, y] = r.useState(T),
         S = (0, d.o)(),
         A = (0, d.Q)(),
-        [N, C] = i.useState(!1),
+        [N, C] = r.useState(!1),
         k = (0, h.q)(n),
-        I = i.useMemo(() => (S ? 0 : A ? 2 : 1), [S, A]),
+        I = r.useMemo(() => (S ? 0 : A ? 2 : 1), [S, A]),
         M = () => {
             y(!0),
                 j(p.NM.USER_TAKEOVER_MODAL_BLOCK),
@@ -60,26 +60,26 @@ function O(t) {
                   ? ((0, c.Z)(m.$l), j(p.NM.USER_TAKEOVER_MODAL_THROUGHLINE))
                   : ((0, c.Z)(m.n4), j(p.NM.USER_TAKEOVER_MODAL_NO_FILTR));
         },
-        L = i.useMemo(() => {
+        L = r.useMemo(() => {
             switch (I) {
                 case 0:
-                    return g.intl.string(g.t.sZf6c3);
+                    return f.intl.string(f.t.sZf6c3);
                 case 2:
-                    return g.intl.string(g.t.HQ2nKi);
+                    return f.intl.string(f.t.HQ2nKi);
                 default:
-                    return g.intl.string(g.t["65XQam"]);
+                    return f.intl.string(f.t["65XQam"]);
             }
         }, [I]);
-    return (0, r.jsx)(f.Z, {
+    return (0, i.jsx)(g.Z, {
         heroImageSrc: b,
-        heroImageAlt: g.intl.string(g.t.RVyYCA),
-        header: g.intl.string(g.t["mWO+ys"]),
-        description: g.intl.string(g.t.S0XtKC),
-        children: (0, r.jsxs)("div", {
+        heroImageAlt: f.intl.string(f.t.RVyYCA),
+        header: f.intl.string(f.t["mWO+ys"]),
+        description: f.intl.string(f.t.S0XtKC),
+        children: (0, i.jsxs)("div", {
             className: _.buttonContainer,
             children: [
-                (0, r.jsx)(s.zxk, {
-                    text: E ? g.intl.string(g.t.XyHpKC) : g.intl.string(g.t.l4EmaW),
+                (0, i.jsx)(s.zxk, {
+                    text: E ? f.intl.string(f.t.XyHpKC) : f.intl.string(f.t.l4EmaW),
                     variant: "primary",
                     fullWidth: !0,
                     icon: s.k$p,
@@ -87,8 +87,8 @@ function O(t) {
                         E ? R() : M();
                     },
                 }),
-                (0, r.jsx)(s.zxk, {
-                    text: O ? g.intl.string(g.t.QvwOJy) : g.intl.string(g.t["7fHyEx"]),
+                (0, i.jsx)(s.zxk, {
+                    text: O ? f.intl.string(f.t.QvwOJy) : f.intl.string(f.t["7fHyEx"]),
                     variant: "secondary",
                     fullWidth: !0,
                     icon: s.U65,
@@ -96,7 +96,7 @@ function O(t) {
                     loading: N,
                     disabled: O,
                 }),
-                (0, r.jsx)(s.zxk, {
+                (0, i.jsx)(s.zxk, {
                     text: L,
                     variant: "secondary",
                     fullWidth: !0,
