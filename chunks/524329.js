@@ -1,5 +1,5 @@
 n.d(t, {
-    Es: () => E,
+    Es: () => d,
     RM: () => a,
     VP: () => c,
     Xb: () => o,
@@ -50,7 +50,7 @@ let i = function (e) {
             settings: e,
         });
     },
-    E = async (e, t) => {
+    d = async (e, t) => {
         l.Z.dispatch({ type: "WELCOME_SCREEN_SUBMIT" });
         try {
             let n = await r.tn.patch({

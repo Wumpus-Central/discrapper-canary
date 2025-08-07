@@ -46,8 +46,8 @@ var r = n(255367),
     Y = n(592125),
     K = n(796974),
     q = n(486472),
-    X = n(984933),
-    Q = n(650774),
+    Q = n(984933),
+    X = n(650774),
     J = n(430824),
     $ = n(819640),
     ee = n(496675),
@@ -331,7 +331,7 @@ class eC extends i.PureComponent {
                     className: eb.hubContainer,
                     children: (0, r.jsx)(L.Z, {
                         guild: n,
-                        channel: null != i ? i : X.ZP.getDefaultChannel(n.id),
+                        channel: null != i ? i : Q.ZP.getDefaultChannel(n.id),
                     }),
                 });
             let e = n.id === eg._ ? eo.j : eo.E;
@@ -559,7 +559,7 @@ function eS(e) {
         G = (0, d.e7)([W.Z], () => (null != R ? R : W.Z.theme)),
         { enableStudyGroup: B } = (0, w.s)(o),
         z = (0, C.ZP)((e) => e.currentlyShown.has(p.z.NAGBAR_NOTICE_CONNECT_PLAYSTATION)),
-        [X, ea] = i.useState(!z),
+        [Q, ea] = i.useState(!z),
         eo = (0, O.Z)(n),
         { analyticsLocations: es } = (0, y.ZP)(E.Z.GUILD_HEADER);
     i.useEffect(() => {
@@ -577,7 +577,7 @@ function eS(e) {
         em = (0, d.e7)([$.Z], () => $.Z.hasLayers()),
         eb = (0, d.e7)([F.Z], () => F.Z.shouldShow(ev)),
         e_ = m && (null == o ? void 0 : o.premiumProgressBarEnabled) === !1 && !el.s.isDisallowPopupsSet(),
-        eO = (0, d.e7)([Q.Z], () => Q.Z.getMemberCount(n)),
+        eO = (0, d.e7)([X.Z], () => X.Z.getMemberCount(n)),
         eE =
             m &&
             null != eO &&
@@ -598,7 +598,7 @@ function eS(e) {
         eZ = null != (t = null == o ? void 0 : o.features.has(ep.oNc.COMMUNITY)) && t,
         ex = (0, d.e7)([H.Z], () => !s().isEmpty(H.Z.getThreadsForGuild(n))),
         ew = ei.ZP.isNewUser(L),
-        eL = X && !ew;
+        eL = Q && !ew;
     (0, P.Z)(o);
     let eR = (0, S.Nj)(p.z.PREMIUM_TUTORIAL_SERVER_MENU_TOOLTIP),
         eD = (0, D.Z)(n),
@@ -639,7 +639,7 @@ function eS(e) {
         isHeaderPopoutOpen: eA,
         enableStudyGroup: B,
         isGuildHeaderDismissibleTooltipShown: eu,
-        canShowCoachMarkAtBottom: X,
+        canShowCoachMarkAtBottom: Q,
         headerAnalyticsLocations: es,
         isTutorialHighlightDismissed: eR,
         shouldRenderBurstCoachmark: eL,

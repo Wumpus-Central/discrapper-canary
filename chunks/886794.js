@@ -1,4 +1,4 @@
-n.d(t, { Z: () => A }), n(388685);
+n.d(t, { Z: () => S }), n(388685);
 var r = n(255367),
     l = n(73800),
     o = n(481060),
@@ -17,8 +17,8 @@ var r = n(255367),
     h = n(900927),
     y = n(678738),
     x = n(502762),
-    v = n(530),
-    O = n(679332),
+    O = n(530),
+    v = n(679332),
     _ = n(544989),
     I = n(228168),
     P = n(981631),
@@ -26,12 +26,12 @@ var r = n(255367),
     Z = n(405666),
     N = n(349966),
     T = n(923243);
-function A(e) {
+function S(e) {
     let {
             user: t,
             guildId: n,
-            channelId: A,
-            messageId: S,
+            channelId: S,
+            messageId: A,
             roleId: w,
             sessionId: C,
             transitionState: G,
@@ -41,7 +41,7 @@ function A(e) {
         } = e,
         D = n === P.ME ? void 0 : n,
         k = (0, p.ZP)(t.id, D),
-        B = u.ZP.getName(D, A, t),
+        B = u.ZP.getName(D, S, t),
         U = (0, s.Dt)(),
         { analyticsLocations: F } = (0, c.ZP)([...M, a.Z.USER_PROFILE_MODAL]),
         V = (0, f.ZB)({
@@ -49,8 +49,8 @@ function A(e) {
             userId: t.id,
             sourceSessionId: C,
             guildId: D,
-            channelId: A,
-            messageId: S,
+            channelId: S,
+            messageId: A,
             roleId: w,
         }),
         Y = l.useRef(null),
@@ -84,7 +84,7 @@ function A(e) {
                             themeType: I.lY.MODAL,
                             ref: (null == k ? void 0 : k.profileEffectId) != null ? Y : void 0,
                             children: [
-                                (0, r.jsx)(_.Z, { children: (0, r.jsx)(O.Z, { user: t }) }),
+                                (0, r.jsx)(_.Z, { children: (0, r.jsx)(v.Z, { user: t }) }),
                                 (0, r.jsxs)("div", {
                                     children: [
                                         (0, r.jsx)(b.Z, {
@@ -98,7 +98,7 @@ function A(e) {
                                                 user: t,
                                                 displayProfile: k,
                                                 guildId: D,
-                                                channelId: A,
+                                                channelId: S,
                                                 themeType: I.lY.MODAL,
                                             }),
                                         }),
@@ -107,7 +107,7 @@ function A(e) {
                                 (0, r.jsxs)("div", {
                                     className: Z.body,
                                     children: [
-                                        (0, r.jsx)(v.Z, {
+                                        (0, r.jsx)(O.Z, {
                                             className: Z.username,
                                             user: t,
                                             nickname: B,

@@ -237,7 +237,7 @@ function J(e) {
         eE = (null == (t = z.gifs) ? void 0 : t.allowSending) && !c.tq && null != V,
         eb = (null == (n = z.stickers) ? void 0 : n.allowSending) && null != Y,
         ey = !(null == (o = z.expressionPicker) ? void 0 : o.onlyEmojis) && (eE || eb),
-        { showExpressionPickerButton: eO } = (0, v.qt)({
+        eO = (0, v.qt)({
             location: "expression_picker",
             autoTrackExposure: !0,
             disable: !ey || ec !== M.X1.EMOJI,
@@ -462,7 +462,7 @@ function J(e) {
                                                     },
                                                     shouldShowSoundmojiInEmojiPicker:
                                                         (null == (t = z.soundmoji) ? void 0 : t.allowSending) === !0,
-                                                    showAddEmojiButton: eO,
+                                                    showAddEmojiButton: eO.isEntrypointEnabled && null != K.guild_id,
                                                 })
                                               : null,
                                           ec === M.X1.SOUNDBOARD

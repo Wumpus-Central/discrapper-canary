@@ -217,17 +217,17 @@ let w = (e, t) =>
                     q = z ? Math.min(5 - ((U.length + 0) % 5), K) : 0,
                     X = [];
                 for (let e = 0; e < q; e++) X.push((0, r.jsx)(D, {}, "placeholder-".concat(e)));
-                let J = t.premiumTier < m.tier && j >= I.oCV[m.tier],
-                    Q = S.intl.string(S.t.dtFw5e),
+                let Q = t.premiumTier < m.tier && j >= I.oCV[m.tier],
+                    J = S.intl.string(S.t.dtFw5e),
                     $ = () => M(Math.max(1, I.oCV[m.tier] - j), m.tier),
                     ee = !1;
-                J &&
+                Q &&
                     (L
                         ? (($ = () => {
                               let e = E.Cp[m.tier];
                               null != e && (0, f.H6)(t.id, e);
                           }),
-                          (Q = S.intl.string(S.t.g7lkra)),
+                          (J = S.intl.string(S.t.g7lkra)),
                           t.premiumTier + 1 !== m.tier && ((ee = !0), (i = S.intl.string(S.t.mTMkY2))))
                         : ((ee = !0), (i = S.intl.string(S.t.hwPEJS))));
                 let et = H === x + 1 && H > Z,
@@ -323,7 +323,7 @@ let w = (e, t) =>
                                                         ((t = P(
                                                             {
                                                                 variant: "active",
-                                                                text: Q,
+                                                                text: J,
                                                             },
                                                             e,
                                                         )),

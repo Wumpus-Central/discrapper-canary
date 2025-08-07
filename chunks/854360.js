@@ -1,18 +1,19 @@
-n.d(t, { default: () => b }), n(388685);
+n.d(t, { default: () => m }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(442837),
-    a = n(481060),
-    o = n(749210),
-    c = n(910693),
+    a = n(82659),
+    o = n(481060),
+    c = n(749210),
+    u = n(910693),
     s = n(501517),
-    u = n(592125),
-    d = n(51144),
-    _ = n(981631),
-    f = n(388032),
-    g = n(130883),
+    d = n(592125),
+    _ = n(51144),
+    f = n(981631),
+    g = n(388032),
+    O = n(130883),
     p = n(373283);
-function m(e) {
+function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -37,7 +38,7 @@ function m(e) {
     }
     return e;
 }
-function O(e, t) {
+function E(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -55,9 +56,9 @@ function O(e, t) {
         e
     );
 }
-function b(e) {
-    var { guildId: t, user: n, location: b, modReportId: E } = e,
-        y = (function (e, t) {
+function m(e) {
+    var { guildId: t, user: n, location: m, modReportId: y } = e,
+        j = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -78,125 +79,96 @@ function b(e) {
             }
             return i;
         })(e, ["guildId", "user", "location", "modReportId"]);
-    let [j, h] = i.useState(""),
-        [x, v] = i.useState(!1),
-        C = (0, c.sE)(t, {
-            location: b,
+    let [v, h] = i.useState(""),
+        [M, C] = i.useState(!1),
+        A = (0, u.sE)(t, {
+            location: m,
             targetUserId: n.id,
         }),
-        { isModReportClosed: M, isModReport: A } = (0, l.cj)([u.Z], () => {
-            let e = u.Z.getChannel(E);
+        { isModReportClosed: S, isModReport: P } = (0, l.cj)([d.Z], () => {
+            let e = d.Z.getChannel(y);
             return {
                 isModReportClosed: null == e ? void 0 : e.isArchivedThread(),
                 isModReport: null == e ? void 0 : e.isModeratorReportChannel(),
             };
         }),
-        S = i.useCallback(() => {
+        T = i.useCallback(() => {
             if (
-                (o.Z.kickUser(t, n.id, j, E).then(() => {
-                    x && null != E && s.Z.resolveFlag(E);
+                (c.Z.kickUser(t, n.id, v, y).then(() => {
+                    M && null != y && s.Z.resolveFlag(y);
                 }),
-                C(c.jQ.KICK),
-                null != E)
+                A(u.jQ.KICK),
+                null != y)
             ) {
                 var e;
-                null == (e = y.onClose) || e.call(y);
+                null == (e = j.onClose) || e.call(j);
             }
-        }, [t, n.id, j, C, E, x, y]),
-        T = i.useCallback((e) => {
+        }, [t, n.id, v, A, y, M, j]),
+        x = i.useCallback((e) => {
             h(e);
         }, []);
-    return null != E && A
-        ? (0, r.jsxs)(
-              a.Y0X,
-              O(m({}, y), {
-                  parentComponent: "KickConfirm",
-                  children: [
-                      (0, r.jsx)(a.xBx, {
-                          separator: !1,
-                          children: (0, r.jsxs)(a.Kqy, {
-                              direction: "vertical",
-                              justify: "space-between",
-                              children: [
-                                  (0, r.jsx)(a.olH, {
-                                      className: p.closeButton,
-                                      onClick: y.onClose,
-                                  }),
-                                  (0, r.jsx)(a.X6q, {
-                                      variant: "heading-lg/semibold",
-                                      children: f.intl.formatToPlainString(f.t["1Ie87u"], { user: n.username }),
-                                  }),
-                              ],
-                          }),
-                      }),
-                      (0, r.jsxs)(a.hzk, {
-                          children: [
-                              (0, r.jsx)(a.Text, {
-                                  variant: "text-md/normal",
-                                  className: p.spacing,
-                                  children: f.intl.format(f.t["/yH0UV"], { user: "@".concat(d.ZP.getName(n)) }),
-                              }),
-                              (0, r.jsx)(a.xJW, {
-                                  titleClassName: p.title,
-                                  title: f.intl.string(null != E ? f.t.hmKy8P : f.t["+2QEPj"]),
-                                  className: p.spacing,
-                                  children: (0, r.jsx)(a.Kx8, {
-                                      maxLength: _.GNZ,
-                                      onChange: T,
-                                      value: j,
-                                      rows: 2,
-                                  }),
-                              }),
-                          ],
-                      }),
-                      (0, r.jsxs)(a.mzw, {
-                          children: [
-                              (0, r.jsx)(a.zxk, {
-                                  variant: "critical-primary",
-                                  size: "sm",
-                                  text: f.intl.string(f.t["3glT6e"]),
-                                  type: "submit",
-                                  onClick: S,
-                              }),
-                              !M &&
-                                  (0, r.jsx)(a.XZJ, {
-                                      value: x,
-                                      onChange: (e, t) => {
-                                          v(t);
-                                      },
-                                      children: f.intl.string(g.default["8yIKen"]),
-                                  }),
-                          ],
-                      }),
+    return null != y && P
+        ? (0, r.jsx)(
+              a.Modal,
+              E(b({}, j), {
+                  title: g.intl.formatToPlainString(g.t["1Ie87u"], { user: n.username }),
+                  subtitle: g.intl.format(g.t["/yH0UV"], { user: "@".concat(_.ZP.getName(n)) }),
+                  actions: [
+                      {
+                          text: g.intl.string(g.t["3glT6e"]),
+                          onClick: T,
+                          size: "sm",
+                          variant: "critical-primary",
+                      },
                   ],
+                  actionBarInput: S
+                      ? void 0
+                      : (0, r.jsx)(o.XZJ, {
+                            value: M,
+                            onChange: (e, t) => {
+                                C(t);
+                            },
+                            children: g.intl.string(O.default["8yIKen"]),
+                        }),
+                  children: (0, r.jsx)(o.xJW, {
+                      titleClassName: p.title,
+                      title: g.intl.string(null != y ? g.t.hmKy8P : g.t["+2QEPj"]),
+                      className: p.spacing,
+                      children: (0, r.jsx)(o.Kx8, {
+                          maxLength: f.GNZ,
+                          onChange: x,
+                          value: v,
+                          rows: 2,
+                      }),
+                  }),
               }),
           )
         : (0, r.jsxs)(
-              a.ConfirmModal,
-              O(
-                  m(
+              o.ConfirmModal,
+              E(
+                  b(
                       {
-                          header: f.intl.formatToPlainString(f.t["1Ie87u"], { user: n.username }),
-                          confirmText: f.intl.string(f.t["3glT6e"]),
-                          cancelText: f.intl.string(f.t["ETE/oK"]),
-                          onConfirm: S,
+                          header: g.intl.formatToPlainString(g.t["1Ie87u"], { user: n.username }),
+                          confirmText: g.intl.string(g.t["3glT6e"]),
+                          cancelText: g.intl.string(g.t["ETE/oK"]),
+                          onConfirm: T,
                       },
-                      y,
+                      j,
                   ),
                   {
                       children: [
-                          (0, r.jsx)(a.Text, {
+                          (0, r.jsx)(o.Text, {
                               variant: "text-md/normal",
                               className: p.spacing,
-                              children: f.intl.format(f.t["/yH0UV"], { user: "@".concat(d.ZP.getName(n)) }),
+                              children: g.intl.format(g.t["/yH0UV"], { user: "@".concat(_.ZP.getName(n)) }),
                           }),
-                          (0, r.jsx)(a.xJW, {
-                              title: f.intl.string(f.t["+2QEPj"]),
+                          (0, r.jsx)(o.xJW, {
+                              title: g.intl.string(g.t["+2QEPj"]),
                               className: p.spacing,
-                              children: (0, r.jsx)(a.Kx8, {
-                                  maxLength: _.GNZ,
-                                  onChange: T,
-                                  value: j,
+                              children: (0, r.jsx)(o.Kx8, {
+                                  maxLength: f.GNZ,
+                                  onChange: x,
+                                  value: v,
                                   rows: 2,
                               }),
                           }),

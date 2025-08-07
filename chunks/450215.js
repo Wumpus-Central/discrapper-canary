@@ -49,9 +49,9 @@ function C(e) {
         V = "" !== F ? F : O.intl.string(O.t.QWhe9P),
         Y = "" !== F && null != W && "" !== z && null != H && !B,
         K = b.rU(P),
-        { loading: q, error: X, handleCreateOrUpdateFromEditState: J } = b.Xo(),
-        { submitting: Q, error: $, publishSubscriptionListing: ee } = (0, p.HQ)(),
-        et = q || Q;
+        { loading: q, error: X, handleCreateOrUpdateFromEditState: Q } = b.Xo(),
+        { submitting: J, error: $, publishSubscriptionListing: ee } = (0, p.HQ)(),
+        et = q || J;
     return (0, r.jsxs)("div", {
         className: y.container,
         children: [
@@ -126,7 +126,7 @@ function C(e) {
                                   (0, r.jsx)(d.zxk, {
                                       variant: "primary",
                                       onClick: () =>
-                                          J({
+                                          Q({
                                               guildId: l,
                                               editStateId: P,
                                               groupListingId: E,

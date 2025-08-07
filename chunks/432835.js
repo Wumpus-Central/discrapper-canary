@@ -16,7 +16,7 @@ function a(e, t, n) {
     );
 }
 let s = "Note";
-class l extends o.fE {
+class l extends o.f {
     getNote(e) {
         return this.get(e);
     }
@@ -45,5 +45,5 @@ let c = new l(
             );
         },
     },
-    i.IZ.getCachedKvStoreMode(),
+    i.IZ.getCachedBridgedStoreMode(),
 );

@@ -1,8 +1,8 @@
 n.d(t, {
     P9: () => _,
     Uf: () => P,
-    b0: () => O,
-    s_: () => v,
+    b0: () => v,
+    s_: () => O,
 }),
     n(388685);
 var r = n(255367),
@@ -89,7 +89,7 @@ function x(e) {
         ],
     });
 }
-function v() {
+function O() {
     let e = m.intl.string(m.t.RnD2yc),
         [t] = l.useState(() => {
             var e;
@@ -100,7 +100,7 @@ function v() {
         bodyText: t,
     });
 }
-function O() {
+function v() {
     let e = m.intl.string(m.t.bFgqYG),
         [t] = l.useState(() => {
             var e;

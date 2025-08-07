@@ -223,7 +223,7 @@ function X() {
         children: U.intl.string(B.default["+/IHLi"]),
     });
 }
-function J(e) {
+function Q(e) {
     var t, n;
     let { role: i, disabled: l, currentStyle: a, hasEnhancedRoleColors: s } = e;
     return (0, r.jsxs)(g.xJW, {
@@ -274,7 +274,7 @@ function J(e) {
         ],
     });
 }
-function Q(e) {
+function J(e) {
     let { role: t, guildId: n, selectedStyle: i, disableInteraction: l } = e,
         s = (0, P.F)(U.intl.string(U.t.Mi9KbW)),
         o = {
@@ -407,7 +407,7 @@ function ee(e) {
                     }),
                 u !== T.g.HOLOGRAPHIC &&
                     null != u &&
-                    (0, r.jsx)(J, {
+                    (0, r.jsx)(Q, {
                         role: n,
                         disabled: p,
                         currentStyle: u,
@@ -426,7 +426,7 @@ function ee(e) {
                     disabled: p,
                     role: n,
                 }),
-                (0, r.jsx)(Q, {
+                (0, r.jsx)(J, {
                     role: n,
                     guildId: t.id,
                     selectedStyle: u,

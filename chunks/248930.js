@@ -17,7 +17,7 @@ var r = n(255367),
     h = n(228168),
     y = n(227832);
 function x(e) {
-    let { user: t, entry: n, profileGuildId: o, className: x, onClose: v, hideContextMenu: O = !1 } = e,
+    let { user: t, entry: n, profileGuildId: o, className: x, onClose: O, hideContextMenu: v = !1 } = e,
         _ = l.useRef(null),
         { analyticsLocations: I } = (0, c.ZP)(a.Z.USER_PROFILE_RECENT_ACTIVITY_CARD),
         { themeType: P } = (0, m.z)(),
@@ -52,20 +52,20 @@ function x(e) {
                               sourceType: h.n_.ACTIVITY,
                               onAction: N,
                               onShowToolbar: () => N({ action: "HOVER_ACTIVITY_CARD" }),
-                              renderMoreButtonPopout: O
+                              renderMoreButtonPopout: v
                                   ? void 0
                                   : (e) =>
                                         (0, r.jsx)(j.Z, {
                                             display: "recent",
                                             entry: n,
                                             user: t,
-                                            onClose: v,
+                                            onClose: O,
                                             children: e,
                                         }),
                               children: (0, r.jsx)(b.Z, {
                                   entry: n,
                                   user: t,
-                                  onClose: v,
+                                  onClose: O,
                                   className: i()(x, { [y.hoisted]: E === h.n_.ACTIVITY && Z === n.id }),
                               }),
                           }),

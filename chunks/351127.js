@@ -16,36 +16,36 @@ var r = n(149765),
     o = n(485386),
     u = n(430824),
     c = n(594174),
-    E = n(700785),
-    d = n(981631),
+    d = n(700785),
+    E = n(981631),
     _ = n(135899);
-let A = Object.keys(d.Plq),
+let A = Object.keys(E.Plq),
     T = Array.from(
         new Set([
             ..._.$X,
-            ...d.yYS,
-            d.Plq.ADMINISTRATOR,
-            d.Plq.KICK_MEMBERS,
-            d.Plq.BAN_MEMBERS,
-            d.Plq.MANAGE_GUILD,
-            d.Plq.MANAGE_CHANNELS,
-            d.Plq.MANAGE_ROLES,
-            d.Plq.MANAGE_MESSAGES,
-            d.Plq.MANAGE_THREADS,
-            d.Plq.MANAGE_GUILD_EXPRESSIONS,
-            d.Plq.CREATE_GUILD_EXPRESSIONS,
-            d.Plq.MANAGE_EVENTS,
-            d.Plq.CREATE_EVENTS,
-            d.Plq.MODERATE_MEMBERS,
-            d.Plq.MENTION_EVERYONE,
-            d.Plq.MANAGE_WEBHOOKS,
+            ...E.yYS,
+            E.Plq.ADMINISTRATOR,
+            E.Plq.KICK_MEMBERS,
+            E.Plq.BAN_MEMBERS,
+            E.Plq.MANAGE_GUILD,
+            E.Plq.MANAGE_CHANNELS,
+            E.Plq.MANAGE_ROLES,
+            E.Plq.MANAGE_MESSAGES,
+            E.Plq.MANAGE_THREADS,
+            E.Plq.MANAGE_GUILD_EXPRESSIONS,
+            E.Plq.CREATE_GUILD_EXPRESSIONS,
+            E.Plq.MANAGE_EVENTS,
+            E.Plq.CREATE_EVENTS,
+            E.Plq.MODERATE_MEMBERS,
+            E.Plq.MENTION_EVERYONE,
+            E.Plq.MANAGE_WEBHOOKS,
         ]),
     ).map((e) => {
-        let t = A.find((t) => d.Plq[t] === e);
+        let t = A.find((t) => E.Plq[t] === e);
         if (null == t) throw Error("Permission ".concat(e, " not found in Permissions"));
         return t;
     }),
-    m = new Set(d.yYS);
+    m = new Set(E.yYS);
 function I(e, t) {
     return e === t;
 }
@@ -57,18 +57,18 @@ function g(e, t, n) {
             A = c.default.getUser(e);
         if (null == _ || null == u || null == A) return l;
         let T = o.Z.getEveryoneRole(_),
-            m = E.uB({
+            m = d.uB({
                 user: A,
                 context: _,
             });
         for (let e of n) {
-            let t = d.Plq[e];
+            let t = E.Plq[e];
             if (r.e$(m, t)) {
                 for (let n of ((l[e] = []), u.roles)) {
                     let r = o.Z.getRole(_.id, n);
-                    null != r && ((0, i.Fs)(r, d.Plq.ADMINISTRATOR) || (0, i._N)(r, t)) && l[e].push(r.id);
+                    null != r && ((0, i.Fs)(r, E.Plq.ADMINISTRATOR) || (0, i._N)(r, t)) && l[e].push(r.id);
                 }
-                ((0, i.Fs)(T, d.Plq.ADMINISTRATOR) || (0, i._N)(T, t)) && l[e].push(T.id),
+                ((0, i.Fs)(T, E.Plq.ADMINISTRATOR) || (0, i._N)(T, t)) && l[e].push(T.id),
                     (0, s.eM)(_, A) && l[e].push(A.id);
             }
         }

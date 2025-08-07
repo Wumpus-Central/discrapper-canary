@@ -46,8 +46,8 @@ var r = n(255367),
     Y = n(480874),
     K = n(687683),
     q = n(981631),
-    X = n(921944),
-    Q = n(526761),
+    Q = n(921944),
+    X = n(526761),
     J = n(388032),
     $ = n(596576),
     ee = n(100658);
@@ -261,7 +261,7 @@ let el = (e) => {
                               align: "center",
                           },
                           shouldShow: !0,
-                          onRequestClose: () => l(X.L.USER_DISMISS),
+                          onRequestClose: () => l(Q.L.USER_DISMISS),
                           targetElementRef: e.targetElementRef,
                       };
                   return i === u.z.MESSAGE_REQUEST_SETTINGS_COACH_MARK
@@ -277,7 +277,7 @@ let el = (e) => {
                                               actions: [
                                                   {
                                                       text: J.intl.string(J.t.LNoAQU),
-                                                      onClick: () => l(X.L.TAKE_ACTION),
+                                                      onClick: () => l(Q.L.TAKE_ACTION),
                                                   },
                                               ],
                                           }),
@@ -293,14 +293,14 @@ let el = (e) => {
                                                       onClick: (e) => {
                                                           e.stopPropagation(),
                                                               f.Z.open(q.oAB.CONTENT_AND_SOCIAL, null, {
-                                                                  scrollPosition: Q.FY.MESSAGE_REQUESTS_V2,
+                                                                  scrollPosition: X.FY.MESSAGE_REQUESTS_V2,
                                                               }),
-                                                              l(X.L.TAKE_ACTION);
+                                                              l(Q.L.TAKE_ACTION);
                                                       },
                                                   },
                                                   {
                                                       text: J.intl.string(J.t.LNoAQU),
-                                                      onClick: () => l(X.L.USER_DISMISS),
+                                                      onClick: () => l(Q.L.USER_DISMISS),
                                                       variant: "secondary",
                                                   },
                                               ],

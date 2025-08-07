@@ -83,8 +83,8 @@ let U = (e) => {
         let W = (0, a.e7)([g.default], () => g.default.getCurrentUser()),
             Y = (0, a.e7)([m.Z], () => m.Z.getPremiumTypeSubscription()),
             K = (0, _.Qo)(W, Y),
-            { enabled: q, variant: X } = v.p1.useExperiment({ location: "NitroTabButton" }),
-            { enabled: Q } = v.pd.useExperiment({ location: "NitroTabButton" });
+            { enabled: q, variant: Q } = v.p1.useExperiment({ location: "NitroTabButton" }),
+            { enabled: X } = v.pd.useExperiment({ location: "NitroTabButton" });
         v.VL.useConfig({ location: "NitroTabButton" }), v.CF.useConfig({ location: "NitroTabButton" });
         let J = (0, l.JA)("nitro"),
             $ = (0, N.N)(),
@@ -173,14 +173,14 @@ let U = (e) => {
                           })),
                           (O = 4));
         let em = M.intl.string(M.t.Ipxkoq);
-        K && Q && (em = M.intl.string(M.t["4gwVVl"])),
+        K && X && (em = M.intl.string(M.t["4gwVVl"])),
             !K &&
                 q &&
-                (X === v.Rx.TRY_NITRO && null != $
+                (Q === v.Rx.TRY_NITRO && null != $
                     ? (em = M.intl.string(M.t["3O6A4e"]))
-                    : X === v.Rx.JOIN_NITRO
+                    : Q === v.Rx.JOIN_NITRO
                       ? (em = M.intl.string(M.t.brBiOz))
-                      : X === v.Rx.GET_NITRO && (em = M.intl.string(M.t.GayC1t)));
+                      : Q === v.Rx.GET_NITRO && (em = M.intl.string(M.t.GayC1t)));
         let eb = (0, r.jsx)(
             c.Qj,
             ((G = (function (e) {

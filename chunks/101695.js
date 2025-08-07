@@ -6,7 +6,7 @@ var r = n(255367),
 function a(e) {
     let { onPageChange: t, offset: n, totalCount: a, pageSize: o, renderPageWrapper: u } = e,
         c = Math.floor(n / o) + 1,
-        E = l.useCallback(
+        d = l.useCallback(
             (e) => {
                 t(e - 1);
             },
@@ -18,7 +18,7 @@ function a(e) {
             currentPage: c,
             totalCount: a,
             pageSize: o,
-            onPageChange: E,
+            onPageChange: d,
             maxVisiblePages: 5,
             renderPageWrapper: u,
         }),

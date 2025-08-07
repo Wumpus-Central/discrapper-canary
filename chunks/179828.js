@@ -17,8 +17,8 @@ var r = n(255367),
     h = n(256226),
     y = n(678738),
     x = n(314172),
-    v = n(981631),
-    O = n(388032),
+    O = n(981631),
+    v = n(388032),
     _ = n(217919);
 function I(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -101,13 +101,13 @@ function Z(e) {
         Z = (0, i.ZP)({
             id: y,
             isEnabled: !0,
-            scrollToStart: v.Cyb,
-            scrollToEnd: v.Cyb,
+            scrollToStart: O.Cyb,
+            scrollToEnd: O.Cyb,
             wrap: !0,
         }),
         N = d.length,
-        T = 0 === N ? O.intl.string(O.t["vR7M+/"]) : O.intl.formatToPlainString(O.t.PCs0oq, { numRoles: N }),
-        A = d.map((e) => {
+        T = 0 === N ? v.intl.string(v.t["vR7M+/"]) : v.intl.formatToPlainString(v.t.PCs0oq, { numRoles: N }),
+        S = d.map((e) => {
             var l;
             return (0, r.jsx)(
                 h.Z,
@@ -143,7 +143,7 @@ function Z(e) {
                         ),
                         {
                             children: [
-                                A,
+                                S,
                                 b &&
                                     (0, r.jsx)(x.Z, {
                                         buttonRef: j,
@@ -169,8 +169,8 @@ function N(e) {
         x = (0, c.e7)([u.ZP], () => u.ZP.getMember(o, t.id)),
         _ = null == x ? void 0 : x.roles,
         N = (0, c.Wu)([f.Z], () => f.Z.getManyRoles(o, null != _ ? _ : []).sort(j.Z), [_, o]),
-        [T] = (0, c.Wu)([m.Z], () => [m.Z.can(v.Plq.MANAGE_ROLES, h), m.Z.getGuildVersion(o)]),
-        A = l.useCallback(
+        [T] = (0, c.Wu)([m.Z], () => [m.Z.can(O.Plq.MANAGE_ROLES, h), m.Z.getGuildVersion(o)]),
+        S = l.useCallback(
             (e) => {
                 var n, r;
                 a({ action: "REMOVE_ROLE" });
@@ -181,7 +181,7 @@ function N(e) {
             },
             [_, o, t.id, a],
         ),
-        S = l.useCallback(
+        A = l.useCallback(
             (e) => {
                 a({ action: "ADD_ROLE" });
                 let n = null != _ ? _ : [];
@@ -194,7 +194,7 @@ function N(e) {
     return 0 !== N.length || w
         ? (0, r.jsx)(
               y.Z,
-              P(I({ heading: O.intl.string(O.t.LPJmLy) }, i), {
+              P(I({ heading: v.intl.string(v.t.LPJmLy) }, i), {
                   children: (0, r.jsx)(Z, {
                       user: t,
                       currentUser: n,
@@ -203,8 +203,8 @@ function N(e) {
                       roles: N,
                       highestRole: g.e9(h, n.id),
                       canManageRoles: T,
-                      onAddRole: S,
-                      onRemoveRole: A,
+                      onAddRole: A,
+                      onRemoveRole: S,
                   }),
               }),
           )

@@ -18,14 +18,14 @@ var l = n(442837),
     h = n(864141),
     y = n(264481),
     x = n(693408),
-    v = n(228168),
-    O = n(981631),
+    O = n(228168),
+    v = n(981631),
     _ = n(388032),
     I = n(514656);
 function P(e) {
     let { user: t, currentUser: n, displayProfile: P, guildId: E, channelId: Z, subsection: N, onClose: T } = e,
-        { voiceActivityStatusEnabled: A } = (0, i.U)({ location: "UserProfileModalV2Activity" }),
-        S = (0, f.b)({ location: "UserProfileModalV2Activity" }),
+        { voiceActivityStatusEnabled: S } = (0, i.U)({ location: "UserProfileModalV2Activity" }),
+        A = (0, f.b)({ location: "UserProfileModalV2Activity" }),
         { live: w, recent: C, stream: G } = (0, p.Z)(t.id),
         { voiceChannel: L, voiceActivity: R } = (0, m.Z)({
             userId: t.id,
@@ -38,7 +38,7 @@ function P(e) {
             return e === o.Skl.OFFLINE || e === o.Skl.INVISIBLE;
         }),
         B = w.length > 0 || null != G,
-        U = A && null == G && null == R && null != L,
+        U = S && null == G && null == R && null != L,
         F = !k && (B || U),
         V = C.length > 0;
     if (!F && !V && M)
@@ -85,7 +85,7 @@ function P(e) {
                       children: (0, r.jsxs)("ul", {
                           className: I.cards,
                           children: [
-                              !S &&
+                              !A &&
                                   U &&
                                   (0, r.jsx)("li", {
                                       children: (0, r.jsx)(h.Z, {
@@ -121,7 +121,7 @@ function P(e) {
                                       "live-".concat(l),
                                   ),
                               ),
-                              S &&
+                              A &&
                                   U &&
                                   (0, r.jsx)("li", {
                                       children: (0, r.jsx)(h.Z, {
@@ -144,14 +144,14 @@ function P(e) {
                                     (0, r.jsx)(
                                         o.eee,
                                         {
-                                            href: u.Z.getArticleURL(O.BhN.ACTIVITY_STATUS_SETTINGS),
+                                            href: u.Z.getArticleURL(v.BhN.ACTIVITY_STATUS_SETTINGS),
                                             children: e,
                                         },
                                         t,
                                     ),
                             })
                           : void 0,
-                      scrollIntoView: N === v.Tb.RECENT_ACTIVITY,
+                      scrollIntoView: N === O.Tb.RECENT_ACTIVITY,
                       children: (0, r.jsx)("ul", {
                           className: I.cards,
                           children: C.map((e) =>

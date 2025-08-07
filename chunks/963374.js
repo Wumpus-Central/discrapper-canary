@@ -1,9 +1,10 @@
-n.d(t, { nC: () => d }), n(388685), n(704826), n(35282), n(539854);
+n.d(t, { nC: () => _ }), n(388685), n(704826), n(35282), n(539854);
 var r = n(392711),
     l = n.n(r),
     s = n(697741),
-    i = n(193995);
-let a = new Set([
+    i = n(619864),
+    a = n(193995);
+let o = new Set([
     "a",
     "an",
     "and",
@@ -38,25 +39,26 @@ let a = new Set([
     "will",
     "with",
 ]);
-function o(e) {
+function u(e) {
     return e.replace(/('|\u2019|\uFF07)(s|S)$/, "");
 }
-function u(e) {
+function c(e) {
     return e.toLowerCase();
 }
-function c(e) {
-    return a.has(e);
+function d(e) {
+    return o.has(e);
 }
 function E(e) {
     return 0 === e.length;
 }
-function d(e) {
+function _(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-        n = new Set(
+        n = e.length >= i.zV && e.length <= i.y_ && t,
+        r = new Set(
             (function (e) {
                 let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : s.$;
-                return l()(e.split(/\W+/)).map(o).reject(E).map(u).reject(c).map(t).value();
-            })(e, t ? i.a : s.$),
+                return l()(e.split(/\W+/)).map(u).reject(E).map(c).reject(d).map(t).value();
+            })(e, n ? a.a : s.$),
         );
     return (e) =>
         (function e(t, n, r) {
@@ -67,7 +69,7 @@ function d(e) {
                 t.content.split(/(\W+)/g).forEach((t) => {
                     !(function (e, t) {
                         let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-                        if (E((e = u(o(e)))) || c(e)) return !1;
+                        if (E((e = c(u(e)))) || d(e)) return !1;
                         if (n) {
                             for (let n of t.values()) if (e.includes(n)) return !0;
                             return !1;
@@ -102,5 +104,5 @@ function d(e) {
                               ]));
             } else null != t.content && e(t.content, n, r);
             return t;
-        })(e, n, t);
+        })(e, r, n);
 }

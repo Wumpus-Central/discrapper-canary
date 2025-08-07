@@ -46,7 +46,7 @@ var r = n(255367),
     Y = n(630388),
     K = n(823379),
     q = n(981631);
-function X(e, t, n) {
+function Q(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -59,7 +59,7 @@ function X(e, t, n) {
         e
     );
 }
-function Q(e) {
+function X(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -70,7 +70,7 @@ function Q(e) {
                 }),
             )),
             r.forEach(function (t) {
-                X(e, t, n[t]);
+                Q(e, t, n[t]);
             });
     }
     return e;
@@ -98,7 +98,7 @@ class J extends i.PureComponent {
                 i = E.ZP.getActiveEventByChannel(e.voiceChannelId);
             W.default.track(
                 q.rMx.LEAVE_VOICE_CHANNEL,
-                Q(
+                X(
                     {
                         channel_id: e.voiceChannelId,
                         channel_type: e.voiceChannelType,
@@ -124,7 +124,7 @@ class J extends i.PureComponent {
                 t = null != e ? e.name : "",
                 n = j.Z.getStageInstanceByChannel(u),
                 r = E.ZP.getActiveEventByChannel(u);
-            (0, c.yw)(q.rMx.CHANNEL_OPENED, Q({}, (0, c.$H)(u))),
+            (0, c.yw)(q.rMx.CHANNEL_OPENED, X({}, (0, c.$H)(u))),
                 (0, d.a)(q.rMx.CHANNEL_OPENED_CLICKSTREAM, { channelId: u });
             let i = null,
                 l = z.default.getFocusedPID();
@@ -136,7 +136,7 @@ class J extends i.PureComponent {
                       (i = z.default.isPinned(q.Odu.TEXT) ? q.ADE.OVERLAY_UNLOCKED_PINNED : q.ADE.OVERLAY_UNLOCKED)),
                 W.default.track(
                     q.rMx.JOIN_VOICE_CHANNEL,
-                    Q(
+                    X(
                         {
                             location: i,
                             channel_id: u,
@@ -233,7 +233,7 @@ class J extends i.PureComponent {
             v ? ((e = "screen"), (n = (0, h.t)())) : y && (e = "camera"),
                 W.default.track(
                     q.rMx.VIDEO_INPUT_TOGGLED,
-                    Q(
+                    X(
                         {
                             video_input_type: e,
                             video_toggle_source: __OVERLAY__ ? "overlay" : "app",
@@ -264,7 +264,7 @@ class J extends i.PureComponent {
                         });
                 W.default.track(
                     q.rMx.ACK_COMMUNITY_MESSAGES,
-                    Q(
+                    X(
                         {
                             last_message_id: null == i ? void 0 : i.id,
                             last_message_reference_message_id:
@@ -290,7 +290,7 @@ class J extends i.PureComponent {
         return null;
     }
     constructor(...e) {
-        super(...e), X(this, "isMessageRequestsInitialized", !1);
+        super(...e), Q(this, "isMessageRequestsInitialized", !1);
     }
 }
 function $() {
@@ -351,7 +351,7 @@ function $() {
     let {
         connected: Y,
         friendsTabSection: K,
-        homeLink: X,
+        homeLink: Q,
         isMemberPending: $,
         selectedChannelId: ee,
         selectedGuildId: et,
@@ -359,20 +359,20 @@ function $() {
     i.useEffect(() => {
         if (Y && null != ee) {
             let e = (0, u.K)(Z.Z.getChannel(ee), !0);
-            (0, c.yw)(q.rMx.CHANNEL_OPENED, Q({}, e, (0, c.$H)(ee))),
+            (0, c.yw)(q.rMx.CHANNEL_OPENED, X({}, e, (0, c.$H)(ee))),
                 (0, d.a)(q.rMx.CHANNEL_OPENED_CLICKSTREAM, { channelId: ee }),
                 z.current.isTextInVoice &&
                     (0, c.yw)(q.rMx.TEXT_IN_VOICE_OPENED, { channel_is_nsfw: z.current.isNSFWChannel });
         }
     }, [Y, ee]),
         i.useEffect(() => {
-            Y && null == et && X === q.Z5c.FRIENDS && (0, p.Z)({ tab_opened: K });
-        }, [Y, K, X, et]),
+            Y && null == et && Q === q.Z5c.FRIENDS && (0, p.Z)({ tab_opened: K });
+        }, [Y, K, Q, et]),
         i.useEffect(() => {
             if (Y && null != et) {
                 var e, t, n, r;
                 let i =
-                    ((n = Q(
+                    ((n = X(
                         {},
                         $
                             ? {
@@ -414,13 +414,13 @@ function $() {
         i.useEffect(() => {
             Y &&
                 null == et &&
-                X === q.Z5c.MESSAGE_REQUESTS &&
+                Q === q.Z5c.MESSAGE_REQUESTS &&
                 !en.current &&
                 ((en.current = !0),
                 W.default.track(q.rMx.MESSAGE_REQUESTS_INITIALIZED, {
                     num_message_requests: z.current.numMessageRequests,
                 }));
-        }, [Y, et, X]),
-        (0, r.jsx)(J, Q({}, k))
+        }, [Y, et, Q]),
+        (0, r.jsx)(J, X({}, k))
     );
 }

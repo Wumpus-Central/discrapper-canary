@@ -18,14 +18,14 @@ var l = n(442837),
     h = n(864141),
     y = n(228168),
     x = n(981631),
-    v = n(388032),
-    O = n(316879),
+    O = n(388032),
+    v = n(316879),
     _ = n(301150);
 function I(e) {
     let { user: t, currentUser: n, displayProfile: I, guildId: P, subsection: E, onClose: Z } = e,
         { voiceActivityStatusEnabled: N } = (0, i.U)({ location: "UserProfileModalActivity" }),
         T = (0, u.b)({ location: "UserProfileModalActivity" }),
-        { live: A, recent: S, stream: w } = (0, f.Z)(t.id),
+        { live: S, recent: A, stream: w } = (0, f.Z)(t.id),
         { voiceChannel: C, voiceActivity: G } = (0, p.Z)({
             userId: t.id,
             guildId: P,
@@ -36,20 +36,20 @@ function I(e) {
             let e = R ? s.Z.getStatus() : c.Z.getStatus(t.id);
             return e === o.Skl.OFFLINE || e === o.Skl.INVISIBLE;
         }),
-        D = A.length > 0 || null != w,
+        D = S.length > 0 || null != w,
         k = N && null == w && null == G && null != C,
         B = !M && (D || k),
-        U = S.length > 0;
+        U = A.length > 0;
     return B || U || !L
         ? (0, r.jsxs)(o.zJl, {
-              className: O.scroller,
+              className: v.scroller,
               fade: !0,
               children: [
                   B
                       ? (0, r.jsx)(m.Z, {
-                            "aria-label": v.intl.string(v.t.J6STd3),
+                            "aria-label": O.intl.string(O.t.J6STd3),
                             children: (0, r.jsxs)("ul", {
-                                className: O.activityList,
+                                className: v.activityList,
                                 children: [
                                     !T &&
                                         k &&
@@ -72,7 +72,7 @@ function I(e) {
                                                 profileGuildId: null == I ? void 0 : I.guildId,
                                             }),
                                         }),
-                                    A.map((e, l) =>
+                                    S.map((e, l) =>
                                         (0, r.jsx)(
                                             "li",
                                             {
@@ -93,9 +93,9 @@ function I(e) {
                       : null,
                   U
                       ? (0, r.jsx)(m.Z, {
-                            heading: v.intl.string(v.t.M0zgnZ),
+                            heading: O.intl.string(O.t.M0zgnZ),
                             introText: R
-                                ? v.intl.format(v.t["4bk9Ag"], {
+                                ? O.intl.format(O.t["4bk9Ag"], {
                                       learnMoreHook: (e, t) =>
                                           (0, r.jsx)(
                                               o.eee,
@@ -109,8 +109,8 @@ function I(e) {
                                 : void 0,
                             scrollIntoView: E === y.Tb.RECENT_ACTIVITY,
                             children: (0, r.jsx)("ul", {
-                                className: O.activityList,
-                                children: S.map((e) =>
+                                className: v.activityList,
+                                children: A.map((e) =>
                                     (0, r.jsx)(
                                         "li",
                                         {

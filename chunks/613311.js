@@ -46,8 +46,8 @@ var r = n(255367),
     Y = n(15470),
     K = n(506648),
     q = n(449275),
-    X = n(445986),
-    Q = n(119520),
+    Q = n(445986),
+    X = n(119520),
     J = n(450233),
     $ = n(726581),
     ee = n(74153),
@@ -445,7 +445,7 @@ class ep extends i.PureComponent {
                     (0, r.jsx)(S.yY, { location: e.name }),
                     this.renderJsonLD(),
                     this.renderHeader(e, t),
-                    (0, r.jsx)(Q.Z, { game: e }),
+                    (0, r.jsx)(X.Z, { game: e }),
                     n,
                 ],
             });
@@ -630,7 +630,7 @@ class ep extends i.PureComponent {
                 let { pageSize: n, isFocused: i } = this.props;
                 return (0, r.jsx)(m.Z, {
                     section: el.jXE.HERO,
-                    children: (0, r.jsx)(X.Z, {
+                    children: (0, r.jsx)(Q.Z, {
                         pageSize: n,
                         items: t.carouselItems.map((n) => this.parseMediaItems(e, n, t.assets)),
                         autoplayInterval: 8000,

@@ -1,7 +1,8 @@
 n.d(t, {
     A7: () => A,
-    hQ: () => R,
-    lo: () => w,
+    hQ: () => P,
+    lo: () => D,
+    yn: () => N,
 }),
     n(388685);
 var r = n(255367),
@@ -110,15 +111,24 @@ function A(e) {
     ];
 }
 function N(e) {
+    let [t, n] = i.useState(() => new Set(null != e ? [e] : void 0));
+    return [
+        t,
+        i.useCallback((e) => {
+            n(new Set([e]));
+        }, []),
+    ];
+}
+function C(e) {
     return String(e);
 }
-let C = i.createContext({
+let R = i.createContext({
     activeDescendant: null,
     selected: new Set(),
     setSelected: () => null,
-    itemToString: N,
+    itemToString: C,
 });
-function R(e) {
+function P(e) {
     let {
             placeholder: t,
             children: n,
@@ -130,7 +140,7 @@ function R(e) {
             multiSelect: v = !1,
             autoFocus: S = !1,
             maxVisibleItems: A = 5,
-            itemToString: R = N,
+            itemToString: N = C,
             showScrollbar: P = !1,
         } = e,
         [w, D] = i.useState(""),
@@ -232,12 +242,12 @@ function R(e) {
                                               }),
                                           ],
                                       })
-                                    : (0, r.jsx)(C.Provider, {
+                                    : (0, r.jsx)(R.Provider, {
                                           value: {
                                               activeDescendant: x,
                                               selected: o,
                                               setSelected: c,
-                                              itemToString: R,
+                                              itemToString: N,
                                           },
                                           children: (0, r.jsx)(
                                               Y,
@@ -265,12 +275,12 @@ function R(e) {
         }),
     });
 }
-let P = i.createContext(null);
-function w(e) {
+let w = i.createContext(null);
+function D(e) {
     var t,
         { value: n, children: o, disabled: s = !1, selectedColor: c = S.STANDARD } = e,
         d = O(e, ["value", "children", "disabled", "selectedColor"]);
-    let { activeDescendant: f, selected: _, setSelected: p, itemToString: h } = i.useContext(C),
+    let { activeDescendant: f, selected: _, setSelected: p, itemToString: h } = i.useContext(R),
         g = h(n),
         b = f === g,
         v = null != (t = null == d ? void 0 : d.selected) ? t : _.has(n),
@@ -296,7 +306,7 @@ function w(e) {
                 role: "option",
                 "aria-selected": v,
                 "aria-disabled": s,
-                children: (0, r.jsx)(P.Provider, {
+                children: (0, r.jsx)(w.Provider, {
                     value: n,
                     children: o,
                 }),
@@ -304,25 +314,25 @@ function w(e) {
         ),
     );
 }
-(w.Colors = S),
-    (w.Label = function (e) {
+(D.Colors = S),
+    (D.Label = function (e) {
         let { children: t } = e;
         return (0, r.jsx)("span", {
             className: m.itemLabel,
             children: t,
         });
     }),
-    (w.Icon = function (e) {
+    (D.Icon = function (e) {
         let { children: t } = e;
         return (0, r.jsx)("span", {
             className: m.itemCheckbox,
             children: t,
         });
     }),
-    (w.Checkbox = function (e) {
+    (D.Checkbox = function (e) {
         let { checked: t } = e,
-            { selected: n } = i.useContext(C),
-            o = i.useContext(P);
+            { selected: n } = i.useContext(R),
+            o = i.useContext(w);
         return (0, r.jsx)("span", {
             className: m.itemCheckbox,
             children: (0, r.jsx)(c.X, {
@@ -333,9 +343,9 @@ function w(e) {
             }),
         });
     }),
-    (w.Checkmark = function () {
-        let { selected: e } = i.useContext(C),
-            t = i.useContext(P);
+    (D.Checkmark = function () {
+        let { selected: e } = i.useContext(R),
+            t = i.useContext(w);
         return e.has(t)
             ? (0, r.jsx)("span", {
                   className: m.itemCheckbox,

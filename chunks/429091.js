@@ -1,8 +1,13 @@
-n.d(t, { d: () => p }), n(953529), n(388685), n(539854);
-var r = n(442837),
-    i = n(570140),
-    o = n(311929);
-function a(e, t, n) {
+n.d(t, { d: () => b }), n(953529), n(388685), n(539854), n(415506);
+var r = n(512722),
+    i = n.n(r),
+    o = n(442837),
+    a = n(780935),
+    s = n(579092),
+    l = n(570140),
+    c = n(311929),
+    u = n(823379);
+function d(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -15,31 +20,31 @@ function a(e, t, n) {
         e
     );
 }
-let s = Symbol("version"),
-    l = Symbol.for("Kkv.PartitionDerivedData"),
-    c = Symbol("boxedPartition"),
-    u = Object.freeze({}),
-    d = Object.freeze({
-        current: u,
+let f = new s.Yd("KkvStore"),
+    _ = Symbol("version"),
+    p = Symbol("boxedPartition"),
+    h = Object.freeze({}),
+    m = Object.freeze({
+        current: h,
         length: 0,
         version: -1,
     }),
-    f = Object.hasOwnProperty;
-function _(e, t) {
+    g = Object.hasOwnProperty;
+function E(e, t) {
     if (e === t) return !0;
     let n = Object.keys(e),
         r = Object.keys(t);
     if (n.length !== r.length) return !1;
     for (let r of n) {
         let n = r;
-        if (!f.call(t, r) || !(0, o.$E)(e[n], t[n])) return !1;
+        if (!g.call(t, r) || !(0, c.$E)(e[n], t[n])) return !1;
     }
     return !0;
 }
-class p extends r.yh {
+class b extends o.yh {
     _derivedVersion(e) {
-        let t = e[s];
-        return null == t && (e[s] = t = this.nextVersion++), t;
+        let t = e[_];
+        return null == t && (e[_] = t = this.nextVersion++), t;
     }
     mapPartitions(e) {
         let t = [];
@@ -53,12 +58,53 @@ class p extends r.yh {
     getMode() {
         return this.mode;
     }
+    registerWithLibdiscore(e) {
+        let t;
+        switch (this.mode) {
+            case "typescript-libdiscore-dual-read":
+                (this.shadowState = {
+                    root: {},
+                    derived: {
+                        length: 0,
+                        numPartitions: 0,
+                        memoized: {},
+                    },
+                }),
+                    (t = (e, t) => {
+                        i()(
+                            null != this.shadowState,
+                            "Shadow state must be set in dual-read mode before setting derived data.",
+                        ),
+                            (this.shadowState = {
+                                root: e,
+                                derived: t,
+                            });
+                    }),
+                    this.addChangeListener(() => {
+                        i()(
+                            null != this.shadowState,
+                            "Shadow state must be set in dual-read mode before running validation.",
+                        );
+                    });
+                break;
+            case "libdiscore":
+                t = this.setKkvRoot.bind(this);
+                break;
+            case "typescript":
+                throw Error("This method should not be called in TypeScript mode.");
+            default:
+                (0, u.vE)(this.mode);
+        }
+        return e.registerKkvStore(this.getName(), (e, n) => {
+            t(e, n);
+        });
+    }
     version() {
         return this._derivedVersion(this.derived.memoized);
     }
     partitionVersion(e) {
         let t = this.root[e];
-        return null == t ? null : this._derivedVersion(t[l].memoized);
+        return null == t ? null : this._derivedVersion(t[a.V].memoized);
     }
     getRecord(e, t) {
         var n;
@@ -76,19 +122,19 @@ class p extends r.yh {
     }
     getPartition(e) {
         let t = this.root[e];
-        return null != t ? t.root : u;
+        return null != t ? t.root : h;
     }
     getBoxedPartition(e) {
         let t = this.root[e];
-        if (null == t) return d;
+        if (null == t) return m;
         let {
                 root: n,
-                [l]: { memoized: r, length: i },
+                [a.V]: { memoized: r, length: i },
             } = t,
-            o = r[c];
+            o = r[p];
         return (
             null == o &&
-                (r[c] = o =
+                (r[p] = o =
                     {
                         current: n,
                         version: this._derivedVersion(r),
@@ -99,7 +145,7 @@ class p extends r.yh {
     }
     partitionLength(e) {
         let t = this.root[e];
-        return null == t ? 0 : t[l].length;
+        return null == t ? 0 : t[a.V].length;
     }
     length() {
         return this.derived.length;
@@ -119,10 +165,10 @@ class p extends r.yh {
             if (null == i) return n;
             let {
                     root: o,
-                    [l]: { memoized: a },
+                    [a.V]: { memoized: s },
                 } = i,
-                s = a[t];
-            return f.call(a, t) || ((s = e(o)), (a[t] = s)), s;
+                l = s[t];
+            return g.call(s, t) || ((l = e(o)), (s[t] = l)), l;
         };
     }
     memoized(e) {
@@ -130,7 +176,7 @@ class p extends r.yh {
         return () => {
             let { memoized: n } = this.derived,
                 r = n[t];
-            return f.call(n, t) || ((r = e(this.root)), (n[t] = r)), r;
+            return g.call(n, t) || ((r = e(this.root)), (n[t] = r)), r;
         };
     }
     setKkvRoot(e, t) {
@@ -138,7 +184,7 @@ class p extends r.yh {
     }
     constructor(e, t = "typescript") {
         let n = {};
-        if ("typescript" === t) {
+        if ("typescript" === t || "typescript-libdiscore-dual-read" === t) {
             let t = !1,
                 r = {
                     reset: (e) => {
@@ -153,7 +199,7 @@ class p extends r.yh {
                                 (o += t),
                                 (r[e] = {
                                     root: n[e],
-                                    [l]: {
+                                    [a.V]: {
                                         length: t,
                                         memoized: {},
                                     },
@@ -174,7 +220,7 @@ class p extends r.yh {
                                 (r = "function" == typeof r ? r(void 0) : r),
                                 (this.root[e] = {
                                     root: { [n]: r },
-                                    [l]: {
+                                    [a.V]: {
                                         length: 1,
                                         memoized: {},
                                     },
@@ -184,13 +230,13 @@ class p extends r.yh {
                                 (t = !0),
                                 !0
                             );
-                        let a = i.root[n];
+                        let o = i.root[n];
                         return (
-                            "function" == typeof r && (r = r(a)),
-                            !(void 0 !== a && (0, o.$E)(a, r)) &&
+                            "function" == typeof r && (r = r(o)),
+                            !(void 0 !== o && (0, c.$E)(o, r)) &&
                                 ((i.root[n] = r),
-                                void 0 === a && (i[l].length++, this.derived.length++),
-                                (i[l].memoized = {}),
+                                void 0 === o && (i[a.V].length++, this.derived.length++),
+                                (i[a.V].memoized = {}),
                                 (t = !0),
                                 !0)
                         );
@@ -204,7 +250,7 @@ class p extends r.yh {
                                 0 !== r &&
                                 ((this.root[e] = {
                                     root: n,
-                                    [l]: {
+                                    [a.V]: {
                                         length: r,
                                         memoized: {},
                                     },
@@ -215,16 +261,16 @@ class p extends r.yh {
                                 !0)
                             );
                         }
-                        if (("function" == typeof n && (n = n(r.root)), _(r.root, n))) return !1;
+                        if (("function" == typeof n && (n = n(r.root)), E(r.root, n))) return !1;
                         let i = Object.keys(n).length,
-                            o = r[l].length;
+                            o = r[a.V].length;
                         return (
                             (this.derived.length -= o),
                             0 === i
                                 ? (delete this.root[e], this.derived.numPartitions--)
                                 : ((this.root[e] = {
                                       root: n,
-                                      [l]: {
+                                      [a.V]: {
                                           length: i,
                                           memoized: {},
                                       },
@@ -248,10 +294,10 @@ class p extends r.yh {
                             null != r &&
                             void 0 !== r.root[n] &&
                             (delete r.root[n],
-                            r[l].length--,
-                            0 === r[l].length
+                            r[a.V].length--,
+                            0 === r[a.V].length
                                 ? (delete this.root[e], this.derived.numPartitions--)
-                                : (r[l].memoized = {}),
+                                : (r[a.V].memoized = {}),
                             this.derived.length--,
                             (t = !0),
                             !0)
@@ -260,7 +306,7 @@ class p extends r.yh {
                     removePartition: (e) => {
                         let n = this.root[e];
                         if (null == n) return !1;
-                        let r = n[l].length;
+                        let r = n[a.V].length;
                         return (
                             delete this.root[e], this.derived.numPartitions--, (this.derived.length -= r), (t = !0), !0
                         );
@@ -275,18 +321,21 @@ class p extends r.yh {
                 n[i] = a;
             }
         }
-        super(i.Z, n),
-            a(this, "mode", void 0),
-            a(this, "root", void 0),
-            a(this, "derived", void 0),
-            a(this, "nextVersion", void 0),
+        super(l.Z, n),
+            d(this, "mode", void 0),
+            d(this, "root", void 0),
+            d(this, "shadowState", void 0),
+            d(this, "derived", void 0),
+            d(this, "nextVersion", void 0),
             (this.mode = t),
             (this.root = {}),
+            (this.shadowState = null),
             (this.derived = {
                 numPartitions: 0,
                 memoized: {},
                 length: 0,
             }),
-            (this.nextVersion = 0);
+            (this.nextVersion = 0),
+            f.info("".concat(this.getName(), " initialized in mode: ").concat(this.mode));
     }
 }

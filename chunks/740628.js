@@ -1,4 +1,4 @@
-n.d(t, { Z: () => v }), n(388685);
+n.d(t, { Z: () => O }), n(388685);
 var r = n(255367),
     l = n(73800),
     o = n(442837),
@@ -66,7 +66,7 @@ function x(e) {
                       onClose: s,
                   });
 }
-function v(e) {
+function O(e) {
     var t, n, d;
     let {
             user: u,
@@ -74,8 +74,8 @@ function v(e) {
             displayProfile: p,
             guildId: m,
             items: g,
-            initialSection: v = b.oh.USER_INFO,
-            initialSubsection: O,
+            initialSection: O = b.oh.USER_INFO,
+            initialSubsection: v,
             onClose: _,
         } = e,
         { trackUserProfileAction: I } = (0, s.KZ)(),
@@ -87,7 +87,7 @@ function v(e) {
                     null ==
                     (t = g.find((e) => {
                         let { section: t } = e;
-                        return t === v;
+                        return t === O;
                     }))
                         ? void 0
                         : t.section)
@@ -95,7 +95,7 @@ function v(e) {
                     : null == (n = g[0])
                       ? void 0
                       : n.section,
-            subsection: O,
+            subsection: v,
         });
     l.useEffect(() => {
         null == g.find((e) => e.section === E) &&

@@ -7,8 +7,8 @@ var r = n(255367),
     o = n(481060),
     u = n(904245),
     c = n(963374),
-    E = n(607070),
-    d = n(933557),
+    d = n(607070),
+    E = n(933557),
     _ = n(471445),
     A = n(95398),
     T = n(905405),
@@ -113,7 +113,7 @@ function w(e) {
             results: a,
             highlighter: u,
             startIndex: c,
-            resultRefs: E,
+            resultRefs: d,
             totalResults: g,
             scrollTo: f,
             renderEmbeds: O,
@@ -129,7 +129,7 @@ function w(e) {
             let t = p.Z.getChannel(e);
             null != t && (S.Z.can(x.Plq.VIEW_CHANNEL, t) || t.isPrivate()) && (0, N.Kh)(t.id);
         }, []),
-        Z = null != i ? (0, d.F6)(i, D.default, C.Z, !1) : "???",
+        Z = null != i ? (0, E.F6)(i, D.default, C.Z, !1) : "???",
         B = G && null != i.guild_id ? (null == (t = R.Z.getGuild(i.guild_id)) ? void 0 : t.name) : null,
         V = (null == i ? void 0 : i.parent_id) != null ? p.Z.getChannel(i.parent_id) : null,
         H = null != (n = null == V ? void 0 : V.name) ? n : null,
@@ -195,7 +195,7 @@ function w(e) {
                         L.Z,
                         {
                             ref: (e) => {
-                                E.current[n] = e;
+                                d.current[n] = e;
                             },
                             totalResults: g,
                             scrollTo: f,
@@ -220,7 +220,7 @@ let G = l.memo(function (e) {
             search: n,
             renderEmbeds: s,
             scrollTo: i,
-            searchResults: d,
+            searchResults: E,
             blockCount: _,
             ignoreCount: A,
             onPageChange: T,
@@ -246,9 +246,9 @@ let G = l.memo(function (e) {
         ),
         k = l.useMemo(() => {
             let e;
-            if (null == d) return [];
+            if (null == E) return [];
             let t = 0;
-            return d.reduce((n, r) => {
+            return E.reduce((n, r) => {
                 let l = r.find((e) => e.isSearchHit);
                 if (!y && null != l && (C.Z.isBlockedForMessage(l) || C.Z.isIgnoredForMessage(l))) return n;
                 let s = p.Z.getChannel(r[0].channel_id);
@@ -266,12 +266,12 @@ let G = l.memo(function (e) {
                     n
                 );
             }, []);
-        }, [d, y]),
+        }, [E, y]),
         F = l.useRef([]),
         z = k.reduce((e, t) => e + 1 + t.results.length, 0),
         Z = l.useCallback(
             (e, t) => {
-                if (!E.Z.keyboardModeEnabled) return;
+                if (!d.Z.keyboardModeEnabled) return;
                 let n = F.current,
                     r = null != t ? n[t] : void 0;
                 if (null == r || null == r.hitRef.current) return;
@@ -321,7 +321,7 @@ let G = l.memo(function (e) {
     l.useLayoutEffect(() => {
         var e;
         null == (e = W.current) || e.focus();
-    }, [d]);
+    }, [E]);
     let q = (0, o.mFp)();
     return (0, r.jsxs)(r.Fragment, {
         children: [

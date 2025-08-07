@@ -200,7 +200,7 @@ let P = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
                     U(i.every((e) => !0 === e)),
                     (0, p.t$)(u.id, n);
             },
-            J = (e, t) => {
+            Q = (e, t) => {
                 let n = [...A.socialLinks],
                     r = n[t],
                     i = e;
@@ -208,7 +208,7 @@ let P = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
                     /\.(zip|exe|pdf|dmg|msi|apk|rar|7z|tar|gz|iso|docx?|xlsx?|pptx?|mp4|mp3)$/i.test(i) ||
                         ((n[t] = i), (0, p.t$)(u.id, n));
             },
-            Q = (e) => {
+            J = (e) => {
                 let t = [...B];
                 t.splice(e, 1), F(t);
                 let n = [...L];
@@ -580,7 +580,7 @@ let P = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
                                                                             className: A.isPublished
                                                                                 ? T.socialLinksMax
                                                                                 : T.socialLinksMin,
-                                                                            onChange: (e) => J(e, t),
+                                                                            onChange: (e) => Q(e, t),
                                                                             placeholder: S.intl.string(S.t.Q6o4pK),
                                                                             maxLength: 150,
                                                                             disabled: !Z,
@@ -627,7 +627,7 @@ let P = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
                                                                                     : A.isPublished
                                                                                       ? T.deleteButtonHiddenMax
                                                                                       : T.deleteButtonHiddenMin,
-                                                                                onClick: () => Q(t),
+                                                                                onClick: () => J(t),
                                                                             },
                                                                             "delete-button-" + t,
                                                                         ),

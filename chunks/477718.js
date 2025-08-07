@@ -7,8 +7,8 @@ var r = n(255367),
     o = n.n(a),
     u = n(399606),
     c = n(481060),
-    E = n(480137),
-    d = n(906732),
+    d = n(480137),
+    E = n(906732),
     _ = n(376923),
     A = n(472596),
     T = n(987707),
@@ -26,8 +26,8 @@ var r = n(255367),
     v = n(12740);
 function D(e) {
     var t, n;
-    let { log: s, member: a, guild: E } = e,
-        { analyticsLocations: T } = (0, d.ZP)(),
+    let { log: s, member: a, guild: d } = e,
+        { analyticsLocations: T } = (0, E.ZP)(),
         N = m.nm(s),
         O = m.QM(s),
         v = null == (t = m.V$(p.zUn.REASON, s)) ? void 0 : t.newValue,
@@ -158,7 +158,7 @@ function D(e) {
                             tag: "span",
                             children: (0, r.jsx)(I.tP, {
                                 log: s,
-                                guild: E,
+                                guild: d,
                                 onContentClick: () => {},
                                 className: S.auditLogExpandedChangeDetails,
                             }),
@@ -177,7 +177,7 @@ function b(e) {
         }, [n]);
     return (l.useEffect(() => {
         !(async function (e, t) {
-            await E.gV(t, e);
+            await d.gV(t, e);
         })(t.guildId, t.userId);
     }, [t.guildId, t.userId]),
     null == n || 0 === s.length)

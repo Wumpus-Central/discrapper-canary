@@ -17,8 +17,8 @@ var r = n(255367),
     h = n(907179),
     y = n(228168),
     x = n(981631),
-    v = n(388032),
-    O = n(247787);
+    O = n(388032),
+    v = n(247787);
 function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -54,16 +54,16 @@ function I(e) {
             transitionState: Z,
             openedAt: N,
             onHide: T,
-            sourceAnalyticsLocations: A = [],
+            sourceAnalyticsLocations: S = [],
         } = e,
-        S = n === x.ME ? void 0 : n,
+        A = n === x.ME ? void 0 : n,
         w = (0, l.e7)([d.Z], () => d.Z.isBlocked(t.id)),
-        { analyticsLocations: C } = (0, c.ZP)([...A, w ? a.Z.BLOCKED_PROFILE_MODAL : a.Z.IGNORED_PROFILE_MODAL]),
+        { analyticsLocations: C } = (0, c.ZP)([...S, w ? a.Z.BLOCKED_PROFILE_MODAL : a.Z.IGNORED_PROFILE_MODAL]),
         G = (0, f.ZB)({
             layout: "MODAL_V2",
             userId: t.id,
             showGuildProfile: !0,
-            guildId: S,
+            guildId: A,
             channelId: I,
             messageId: P,
             roleId: E,
@@ -71,16 +71,16 @@ function I(e) {
         L = [
             {
                 icon: i.owK,
-                description: v.intl.string(v.t.kcuWvb),
+                description: O.intl.string(O.t.kcuWvb),
             },
             {
                 icon: i.owK,
-                description: v.intl.string(w ? v.t.QxrDY2 : v.t.W6fjkZ),
+                description: O.intl.string(w ? O.t.QxrDY2 : O.t.W6fjkZ),
             },
         ],
-        R = (0, m.ZP)(t.id, S),
+        R = (0, m.ZP)(t.id, A),
         M = u.ZP.getName(null == R ? void 0 : R.guildId, I, t),
-        D = v.intl.formatToPlainString(v.t.KRe1Fh, { name: M });
+        D = O.intl.formatToPlainString(O.t.KRe1Fh, { name: M });
     return (0, r.jsx)(c.Gt, {
         value: C,
         children: (0, r.jsx)(f.Mt, {
@@ -92,7 +92,7 @@ function I(e) {
             children: (0, r.jsx)(i.Y0X, {
                 "data-migration-pending": !0,
                 transitionState: Z,
-                className: O.root,
+                className: v.root,
                 "aria-label": D,
                 parentComponent: "RestrictedUserProfileModalV2",
                 children: (0, r.jsxs)(b.Z, {
@@ -100,32 +100,32 @@ function I(e) {
                     displayProfile: R,
                     themeType: y.lY.MODAL_V2,
                     children: [
-                        (0, r.jsx)("div", { className: O.background }),
+                        (0, r.jsx)("div", { className: v.background }),
                         (0, r.jsxs)("div", {
-                            className: O.content,
+                            className: v.content,
                             children: [
                                 (0, r.jsx)(g.Z, {
                                     user: t,
-                                    guildId: S,
+                                    guildId: A,
                                     iconColor: i.TVs.colors.TEXT_DEFAULT,
                                 }),
                                 (0, r.jsxs)("div", {
-                                    className: O.textContainer,
+                                    className: v.textContainer,
                                     children: [
                                         (0, r.jsx)(i.X6q, {
                                             variant: "heading-xl/bold",
                                             color: "text-default",
-                                            children: v.intl.string(v.t.b33pLC),
+                                            children: O.intl.string(O.t.b33pLC),
                                         }),
                                         (0, r.jsx)(i.Text, {
                                             variant: "text-md/medium",
                                             color: "text-default",
-                                            children: v.intl.format(w ? v.t.T7QiLi : v.t.MnEow8, { username: M }),
+                                            children: O.intl.format(w ? O.t.T7QiLi : O.t.MnEow8, { username: M }),
                                         }),
                                     ],
                                 }),
                                 (0, r.jsx)("div", {
-                                    className: O.safetyTable,
+                                    className: v.safetyTable,
                                     children: L.map((e, t) => {
                                         let { icon: n, description: l } = e;
                                         return (0, r.jsx)(

@@ -60,8 +60,8 @@ function D(e) {
         title: Y,
         location: K,
         locationIcon: q,
-        canListenIn: X,
-        buttonText: Q,
+        canListenIn: Q,
+        buttonText: X,
         users: J,
         overflowUsers: $,
         onClose: ee,
@@ -359,16 +359,16 @@ function D(e) {
                           }),
                       ],
                   }),
-                  X || 1 === W
+                  Q || 1 === W
                       ? (0, r.jsx)("div", {
                             "data-button-hoisted-classname-wrapper": !0,
                             className: R.button,
                             children: (0, r.jsx)(c.zxk, {
                                 variant: "active",
                                 size: "sm",
-                                text: Q,
+                                text: X,
                                 onClick: () => {
-                                    if (X)
+                                    if (Q)
                                         null != l &&
                                             null != l.getGuildId() &&
                                             ((0, I.Cq)(l), (0, v.XU)(l.getGuildId(), l.id));

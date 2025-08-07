@@ -1,15 +1,17 @@
 n.d(t, {
-    IZ: () => f,
-    Re: () => s,
-    j_: () => _,
+    IZ: () => _,
+    Ng: () => h,
+    Re: () => l,
+    j_: () => p,
 }),
     n(953529),
     n(539854),
     n(388685);
 var r = n(512722),
     i = n.n(r),
-    o = n(668757);
-function a(e, t, n) {
+    o = n(668757),
+    a = n(750179);
+function s(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -22,16 +24,16 @@ function a(e, t, n) {
         e
     );
 }
-let s = [],
-    l = Symbol("unknown");
-class c {
+let l = [],
+    c = Symbol("unknown");
+class u {
     getEnabledFeatureName() {
         let e = this.getCachedConfig();
         return void 0 === e || e.treatmentId <= 0 ? null : "".concat(this.id, ":").concat(e.treatmentId);
     }
     getCachedConfig() {
         return (
-            this.cachedConfig === l &&
+            this.cachedConfig === c &&
                 ((0, o.X6)() ? (this.cachedConfig = (0, o.Md)().getConfig(this.id)) : (this.cachedConfig = void 0)),
             this.cachedConfig
         );
@@ -46,34 +48,37 @@ class c {
         );
     }
     constructor(e) {
-        a(this, "id", void 0),
-            a(this, "inner", void 0),
-            a(this, "cachedConfig", void 0),
+        s(this, "id", void 0),
+            s(this, "inner", void 0),
+            s(this, "cachedConfig", void 0),
             (this.id = e),
             (this.inner = null),
-            (this.cachedConfig = l),
-            s.push(this);
+            (this.cachedConfig = c),
+            l.push(this);
     }
 }
-class u extends c {
-    getCachedKvStoreMode() {
-        var e;
-        let t = this.getCachedConfig();
-        switch (null != (e = null == t ? void 0 : t.treatmentId) ? e : -1) {
-            case 1:
-                return "typescript-libdiscore-dual-read";
-            case 2:
-                return "libdiscore";
-            default:
-                return "typescript";
-        }
+class d extends u {
+    getCachedBridgedStoreMode() {
+        let e = this.getCachedConfig(),
+            t = (() => {
+                var t;
+                switch (null != (t = null == e ? void 0 : e.treatmentId) ? t : -1) {
+                    case 1:
+                        return "typescript-libdiscore-dual-read";
+                    case 2:
+                        return "libdiscore";
+                    default:
+                        return "typescript";
+                }
+            })();
+        return (0, a.k)(t);
     }
     getEnabledFeatureName() {
-        let e = this.getCachedKvStoreMode();
-        return "typescript" === e ? null : "KvStore[".concat(this.storeName, ",").concat(e, "]");
+        let e = this.getCachedBridgedStoreMode();
+        return "typescript" === e ? null : "".concat(this.type, "Store[").concat(this.storeName, ",").concat(e, "]");
     }
     getLabel() {
-        return "libdiscore KVStore[".concat(this.storeName, "] Migration");
+        return "libdiscore '".concat(this.storeName, "' Migration");
     }
     getTreatments() {
         return [
@@ -91,11 +96,11 @@ class u extends c {
             },
         ];
     }
-    constructor(e, t) {
-        super(e), a(this, "storeName", void 0), (this.storeName = t);
+    constructor(e, t, n = "Kv") {
+        super(e), s(this, "storeName", void 0), s(this, "type", void 0), (this.storeName = t), (this.type = n);
     }
 }
-class d extends c {
+class f extends u {
     getLabel() {
         return "libdiscore Telemetry";
     }
@@ -142,9 +147,10 @@ class d extends c {
         );
     }
     constructor(...e) {
-        super(...e), a(this, "MAX_EMISSIONS_PER_APP_LAUNCH", 5), a(this, "emissionsCount", 0);
+        super(...e), s(this, "MAX_EMISSIONS_PER_APP_LAUNCH", 5), s(this, "emissionsCount", 0);
     }
 }
-let f = new u("2025-05_libdiscore_notestore_v2", "NoteStore"),
-    _ = new u("2025-07_libdiscore_guildstore_v2", "GuildStore");
-new d("2025-07_libdiscore_telemetry");
+let _ = new d("2025-05_libdiscore_notestore_v2", "NoteStore"),
+    p = new d("2025-07_libdiscore_guildstore_v2", "GuildStore"),
+    h = new d("2025-08_libdiscore_guildrolestore", "GuildRoleStore", "Kkv");
+new f("2025-07_libdiscore_telemetry");

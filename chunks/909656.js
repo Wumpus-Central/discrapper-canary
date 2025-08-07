@@ -149,10 +149,10 @@ function L(e) {
         K = (0, b.Dt)(),
         q = (0, b.Dt)(),
         X = (0, b.Dt)();
-    function J(e, t) {
+    function Q(e, t) {
         o()(null != e, "Null value not allowed"), null != t && Y(t.name), L(e);
     }
-    let Q = i.useMemo(() => {
+    let J = i.useMemo(() => {
             var e;
             return (
                 (null != x && x !== (null != (e = null == s ? void 0 : s.description) ? e : "")) ||
@@ -277,13 +277,13 @@ function L(e) {
                         iconWrapperClassName: w.coverImageUploaderIconWrapper,
                         imageClassName: w.coverImageUploaderInner,
                         iconClassName: w.coverImageUploaderIcon,
-                        onChange: J,
+                        onChange: Q,
                         "aria-label": V,
                         disabled: ee,
                     }),
                     (0, r.jsx)(p.LZC, { size: 16 }),
                     (0, r.jsx)(j.Z, {
-                        onChange: J,
+                        onChange: Q,
                         buttonCTA: W,
                         "aria-label": V,
                         disabled: ee,
@@ -347,7 +347,7 @@ function L(e) {
                 component: "div",
                 className: w.contentRegion,
                 children:
-                    Q &&
+                    J &&
                     (0, r.jsx)(p.oXn, {
                         children: (0, r.jsx)(h.Z, {
                             submitting: F,

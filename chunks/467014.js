@@ -7,29 +7,29 @@ var r = n(255367),
     o = n(189432),
     u = n(356778),
     c = n(776767),
-    E = n(50493),
-    d = n(388032),
+    d = n(50493),
+    E = n(388032),
     _ = n(12740);
 function A(e) {
     let { userId: t, guildId: n } = e,
         A = (0, s.e7)([a.ZP], () => a.ZP.getGuildSidebarState(n), [n]),
         { messagesCount: T, linksCount: m, mediaCount: I } = (0, u.P2)(t, n),
-        g = new Intl.NumberFormat(d.intl.currentLocale).format(T),
-        f = new Intl.NumberFormat(d.intl.currentLocale).format(m),
-        N = new Intl.NumberFormat(d.intl.currentLocale).format(I),
+        g = new Intl.NumberFormat(E.intl.currentLocale).format(T),
+        f = new Intl.NumberFormat(E.intl.currentLocale).format(m),
+        N = new Intl.NumberFormat(E.intl.currentLocale).format(I),
         h = l.useCallback(
             async (e) => {
                 if (null == A) return;
                 let r = (0, u.Ow)(t, e, { include_nsfw: !0 });
                 await (0, o.r)(n, t, A.baseChannelId, {
-                    modViewPanel: E.k.MESSAGE_HISTORY,
+                    modViewPanel: d.k.MESSAGE_HISTORY,
                     additionalSearchQuery: r,
                 });
             },
             [n, A, t],
         );
     return (0, r.jsx)(i.xJW, {
-        title: d.intl.string(d.t.vCn2Tk),
+        title: E.intl.string(E.t.vCn2Tk),
         titleClassName: _.infoTitle,
         children: (0, r.jsxs)(c.WM, {
             children: [
@@ -43,7 +43,7 @@ function A(e) {
                     name: (0, r.jsx)(i.Text, {
                         variant: "text-sm/semibold",
                         color: "text-default",
-                        children: d.intl.string(d.t.OIgYlZ),
+                        children: E.intl.string(E.t.OIgYlZ),
                     }),
                     description:
                         T === u.II
@@ -67,7 +67,7 @@ function A(e) {
                     name: (0, r.jsx)(i.Text, {
                         variant: "text-sm/semibold",
                         color: "text-default",
-                        children: d.intl.string(d.t.DFSvTk),
+                        children: E.intl.string(E.t.DFSvTk),
                     }),
                     description:
                         m === u.II
@@ -91,7 +91,7 @@ function A(e) {
                     name: (0, r.jsx)(i.Text, {
                         variant: "text-sm/semibold",
                         color: "text-default",
-                        children: d.intl.string(d.t["Aw9+/P"]),
+                        children: E.intl.string(E.t["Aw9+/P"]),
                     }),
                     description:
                         I === u.II

@@ -438,7 +438,7 @@ let Y = () =>
             onClick: () => m.A1(t.applicationId, t.branchId),
         });
     },
-    X = (e) => {
+    Q = (e) => {
         let { item: t } = e;
         return (0, r.jsx)(V, {
             icon: h.Dio,
@@ -446,7 +446,7 @@ let Y = () =>
             onClick: () => m.al(t.applicationId, t.branchId),
         });
     },
-    Q = [
+    X = [
         {
             key: "name",
             cellClassName: k.nameCell,
@@ -501,8 +501,8 @@ let Y = () =>
                                     : null != t && t.paused
                                       ? (0, r.jsx)(Y, {})
                                       : (0, r.jsx)(K, { item: e })),
-                            (i = (0, r.jsx)(X, { item: e })))
-                          : (i = (0, r.jsx)(X, { item: e })),
+                            (i = (0, r.jsx)(Q, { item: e })))
+                          : (i = (0, r.jsx)(Q, { item: e })),
                     (0, r.jsxs)(v.Z, {
                         justify: v.Z.Justify.END,
                         children: [n, i],
@@ -557,7 +557,7 @@ class J extends i.PureComponent {
                       }),
                       (0, r.jsx)(I.Z, {
                           hasHeader: !1,
-                          columns: Q,
+                          columns: X,
                           data: e,
                           className: k.table,
                           rowClassName: k.row,

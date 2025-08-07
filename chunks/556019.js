@@ -1,4 +1,4 @@
-n.d(t, { qt: () => s });
+n.d(t, { qt: () => l });
 var r = n(931084),
     i = n(818083);
 let o = (0, i.B)({
@@ -26,6 +26,14 @@ let o = (0, i.B)({
                     showExpressionPickerButton: !0,
                 },
             },
+            {
+                id: 3,
+                label: "Enabled - New Entrypoint Only",
+                config: {
+                    enabled: !1,
+                    showExpressionPickerButton: !0,
+                },
+            },
         ],
     }),
     a = (0, i.B)({
@@ -40,27 +48,48 @@ let o = (0, i.B)({
                 config: { enabled: !0 },
             },
         ],
+    }),
+    s = (0, i.B)({
+        kind: "user",
+        id: "2025-08_emoji_studio_entrypoint",
+        label: "Emoji Studio Entrypoint",
+        defaultConfig: { enabled: !1 },
+        treatments: [
+            {
+                id: 1,
+                label: "Enabled",
+                config: { enabled: !0 },
+            },
+        ],
     });
-function s(e) {
+function l(e) {
     let { location: t, autoTrackExposure: n, disable: i = !1 } = e,
-        s = (0, r.$u)(t),
-        { enabled: l, showExpressionPickerButton: c } = o.getCurrentConfig(
+        l = (0, r.$u)(t),
+        { enabled: c, showExpressionPickerButton: u } = o.useExperiment(
             { location: t },
             {
                 autoTrackExposure: n,
-                disable: s || i,
+                disable: l || i,
             },
         ),
-        { enabled: u } = a.getCurrentConfig(
+        { enabled: d } = a.useExperiment(
             { location: t },
             {
                 autoTrackExposure: n,
-                disable: s || i,
+                disable: l || i,
+            },
+        ),
+        { enabled: f } = s.useExperiment(
+            { location: t },
+            {
+                autoTrackExposure: n,
+                disable: l || i,
             },
         );
     return {
-        enabled: l,
-        isMobileEnabled: u,
-        showExpressionPickerButton: c,
+        enabled: c,
+        isMobileEnabled: d,
+        isEntrypointEnabled: f || u,
+        isEntrypointExperimentEnabled: f,
     };
 }

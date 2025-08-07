@@ -7,8 +7,8 @@ var r = n(255367),
     o = n(481060),
     u = n(285173),
     c = n(422559),
-    E = n(485386),
-    d = n(430824),
+    d = n(485386),
+    E = n(430824),
     _ = n(233608),
     A = n(776767),
     T = n(351127),
@@ -18,11 +18,11 @@ var r = n(255367),
     f = n(514983);
 function N(e) {
     var t, n;
-    let { permission: l, roleIds: s, guild: d, specMap: _ } = e,
+    let { permission: l, roleIds: s, guild: E, specMap: _ } = e,
         A = I.Plq[l],
         m = null != (n = null == (t = _[A.toString()]) ? void 0 : t.title) ? n : (0, c.wt)(A),
         N = T._o.has(A),
-        h = (0, a.Wu)([E.Z], () => E.Z.getManyRoles(d.id, s), [d.id, s]);
+        h = (0, a.Wu)([d.Z], () => d.Z.getManyRoles(E.id, s), [E.id, s]);
     return (0, r.jsx)(o.ua7, {
         "aria-label": g.intl.string(g.t["0g8Xd3"]),
         tooltipClassName: f.roleTooltipContainer,
@@ -41,7 +41,7 @@ function N(e) {
                             className: f.roleTooltipItem,
                             children: (0, r.jsx)(u.Z, {
                                 role: e,
-                                guildId: d.id,
+                                guildId: E.id,
                             }),
                         },
                         e.id,
@@ -75,16 +75,16 @@ function N(e) {
 }
 let h = l.memo(function (e) {
     let { member: t, onNavigate: n } = e,
-        s = (0, a.e7)([d.Z], () => d.Z.getGuild(t.guildId), [t.guildId]),
+        s = (0, a.e7)([E.Z], () => E.Z.getGuild(t.guildId), [t.guildId]),
         u = (0, T.B2)(t.userId, t.guildId, T.Qn),
         c = (0, T.B2)(t.userId, t.guildId, T.pd),
-        E = Object.keys(u).length,
+        d = Object.keys(u).length,
         h = Object.keys(c).length,
         O = l.useMemo(() => (null != s ? _.Z.getGuildPermissionSpecMap(s) : null), [s]),
         p = l.useMemo(() => (null != s ? _.Z.generateGuildPermissionSpec(s) : null), [s]),
         R = l.useMemo(() => {
             if (null == s || null == O) return null;
-            if (0 === E)
+            if (0 === d)
                 return (0, r.jsx)("div", {
                     className: i()(f.permissionChiplet, f.noModPerms),
                     children: (0, r.jsx)(o.Text, {
@@ -119,7 +119,7 @@ let h = l.memo(function (e) {
                     }),
                 e
             );
-        }, [s, E, u, p, O]);
+        }, [s, d, u, p, O]);
     return null == s
         ? null
         : (0, r.jsx)(o.xJW, {

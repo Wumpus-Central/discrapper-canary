@@ -1,74 +1,74 @@
-t.d(n, { Z: () => b });
-var l = t(255367);
-t(73800);
-var i = t(442837),
-    r = t(481060),
-    a = t(493683),
-    u = t(40851),
-    o = t(740492),
-    s = t(314897),
-    d = t(592125),
-    c = t(699516),
-    g = t(944486),
-    Z = t(981631),
-    f = t(388032);
-function b(e) {
-    let { user: n, context: b, label: O, joinCallVideo: p, id: m, onCall: h } = e,
-        j = (0, u.Aq)(),
-        P = (0, i.e7)([s.default], () => s.default.getId() === n.id),
-        v = (0, i.e7)([c.Z], () => c.Z.isBlocked(n.id)),
-        x = (0, i.e7)([g.Z, d.Z], () => g.Z.getVoiceChannelId() === d.Z.getDMFromUserId(n.id));
-    if (P || b === Z.IlC.POPOUT || x || n.bot || n.isProvisional) return null;
+n.d(t, { Z: () => Z });
+var l = n(255367);
+n(73800);
+var i = n(442837),
+    r = n(481060),
+    a = n(493683),
+    o = n(40851),
+    s = n(740492),
+    u = n(314897),
+    d = n(592125),
+    c = n(699516),
+    g = n(944486),
+    f = n(981631),
+    b = n(388032);
+function Z(e) {
+    let { user: t, context: Z, label: m, joinCallVideo: v, id: p, onCall: O } = e,
+        h = (0, o.Aq)(),
+        j = (0, i.e7)([u.default], () => u.default.getId() === t.id),
+        x = (0, i.e7)([c.Z], () => c.Z.isBlocked(t.id)),
+        _ = (0, i.e7)([g.Z, d.Z], () => g.Z.getVoiceChannelId() === d.Z.getDMFromUserId(t.id));
+    if (j || Z === f.IlC.POPOUT || _ || t.bot || t.isProvisional) return null;
     let y = () => {
-            null == h || h(),
+            null == O || O(),
                 a.Z.openPrivateChannel({
-                    recipientIds: n.id,
+                    recipientIds: t.id,
                     joinCall: !0,
-                    joinCallVideo: p,
+                    joinCallVideo: v,
                 }),
-                j.dispatch(Z.CkL.POPOUT_CLOSE),
+                h.dispatch(f.CkL.POPOUT_CLOSE),
                 (0, r.pTH)();
         },
-        N = !o.ZP.disableCallUserConfirmationPrompt;
+        N = !s.ZP.disableCallUserConfirmationPrompt;
     return (0, l.jsx)(r.sNh, {
-        id: null != m ? m : "call",
-        label: null != O ? O : f.intl.string(f.t.JJogjo),
+        id: null != p ? p : "call",
+        label: null != m ? m : b.intl.string(b.t.JJogjo),
         action: N
             ? () => {
                   (0, r.ZDy)(async () => {
-                      let { default: e } = await t.e("27157").then(t.bind(t, 736454));
-                      return (n) =>
+                      let { default: e } = await n.e("27157").then(n.bind(n, 736454));
+                      return (t) =>
                           (0, l.jsx)(
                               e,
                               (function (e) {
-                                  for (var n = 1; n < arguments.length; n++) {
-                                      var t = null != arguments[n] ? arguments[n] : {},
-                                          l = Object.keys(t);
+                                  for (var t = 1; t < arguments.length; t++) {
+                                      var n = null != arguments[t] ? arguments[t] : {},
+                                          l = Object.keys(n);
                                       "function" == typeof Object.getOwnPropertySymbols &&
                                           (l = l.concat(
-                                              Object.getOwnPropertySymbols(t).filter(function (e) {
-                                                  return Object.getOwnPropertyDescriptor(t, e).enumerable;
+                                              Object.getOwnPropertySymbols(n).filter(function (e) {
+                                                  return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                               }),
                                           )),
-                                          l.forEach(function (n) {
+                                          l.forEach(function (t) {
                                               var l;
-                                              (l = t[n]),
-                                                  n in e
-                                                      ? Object.defineProperty(e, n, {
+                                              (l = n[t]),
+                                                  t in e
+                                                      ? Object.defineProperty(e, t, {
                                                             value: l,
                                                             enumerable: !0,
                                                             configurable: !0,
                                                             writable: !0,
                                                         })
-                                                      : (e[n] = l);
+                                                      : (e[t] = l);
                                           });
                                   }
                                   return e;
-                              })({ onSubmit: y }, n),
+                              })({ onSubmit: y }, t),
                           );
                   });
               }
             : y,
-        disabled: v,
+        disabled: x,
     });
 }

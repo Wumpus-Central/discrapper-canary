@@ -17,11 +17,11 @@ var s = i(255367),
     v = i(403182),
     C = i(709054),
     S = i(861990),
-    T = i(127654),
-    _ = i(979956),
-    F = i(228392),
-    w = i(404616),
-    y = i(470623),
+    _ = i(127654),
+    T = i(979956),
+    y = i(228392),
+    F = i(404616),
+    w = i(470623),
     x = i(981631),
     O = i(231338),
     I = i(388032),
@@ -31,21 +31,21 @@ async function Z(t) {
     let n,
         { thread: a, attachments: r, setIsUploading: l, guild: g, onClose: p } = t,
         m = C.default.castChannelIdAsMessageId(a.id),
-        F = new u.Z();
-    F.on("progress", (t) => {
+        y = new u.Z();
+    y.on("progress", (t) => {
         let e = (0, v.dg)(g.id);
-        t.currentSize > e && (F.cancel(), l(!1), p(), (0, T.G)(a, (0, _.KZ)(r)));
+        t.currentSize > e && (y.cancel(), l(!1), p(), (0, _.G)(a, (0, T.KZ)(r)));
     });
-    let w = b.Z.getMessage(a.id, m),
-        y = null != w ? w.attachments : [];
+    let F = b.Z.getMessage(a.id, m),
+        w = null != F ? F.attachments : [];
     l(!0);
     try {
-        n = await F.uploadFiles(r);
+        n = await y.uploadFiles(r);
     } catch (t) {
         l(!1);
         return;
     }
-    let O = [...y, ...(null != (e = n.map((t, e) => (0, S.B)(t, e))) ? e : [])];
+    let O = [...w, ...(null != (e = n.map((t, e) => (0, S.B)(t, e))) ? e : [])];
     try {
         await o.tn.patch({
             url: x.ANM.MESSAGE(a.id, m),
@@ -77,24 +77,24 @@ function A(t) {
     n.useEffect(() => {
         null != v && (0, g.Fq)(v.file, (t, e) => S(t), O.dG);
     }, [v]);
-    let T =
+    let _ =
             null != v && null != C
                 ? {
                       src: C,
-                      width: w.TJ,
-                      height: w.Lp,
+                      width: F.TJ,
+                      height: F.Lp,
                       spoiler: o[0].spoiler,
                       alt: o[0].description,
                   }
                 : null,
-        [_, x] = n.useState(!1),
+        [T, x] = n.useState(!1),
         A = n.useCallback(() => {
-            (0, F.xI)({ added: !1 }), h(), u();
+            (0, y.xI)({ added: !1 }), h(), u();
         }, [h, u]),
         M = n.useCallback(() => {
             null != c &&
                 null != f &&
-                ((0, F.xI)({ added: !0 }),
+                ((0, y.xI)({ added: !0 }),
                 Z({
                     thread: c,
                     attachments: o,
@@ -112,7 +112,7 @@ function A(t) {
               onClose: u,
               actionBarInput: (0, s.jsx)(r.A, {
                   variant: "secondary",
-                  disabled: _,
+                  disabled: T,
                   onClick: u,
                   text: I.intl.string(I.t["ETE/oK"]),
               }),
@@ -120,23 +120,23 @@ function A(t) {
                   {
                       variant: "secondary",
                       text: I.intl.string(I.t["8rKVHB"]),
-                      disabled: _,
+                      disabled: T,
                       onClick: A,
                   },
                   {
                       variant: "primary",
                       text: I.intl.string(I.t.d611xM),
-                      loading: _,
+                      loading: T,
                       onClick: M,
                       autoFocus: !0,
                   },
               ],
-              children: (0, s.jsx)(y.oL, {
+              children: (0, s.jsx)(w.oL, {
                   channel: b,
-                  children: (0, s.jsx)(w.ZP, {
+                  children: (0, s.jsx)(F.ZP, {
                       threadId: i,
                       goToThread: O.dG,
-                      overrideMedia: T,
+                      overrideMedia: _,
                       className: E.forumPost,
                   }),
               }),

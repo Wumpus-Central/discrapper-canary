@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p }), n(35282);
+n.d(t, { Z: () => h });
 var r = n(255367);
 n(73800);
 var i = n(481060),
@@ -8,13 +8,13 @@ var i = n(481060),
     s = n(981631),
     c = n(921944),
     u = n(388032),
-    d = n(932478);
-let p = (e) => {
-    let t = l.$.binds["0"]
-        .split("+")
-        .map((e) => (null != i.cXz[e] ? i.cXz[e]() : e))
-        .join(" + ")
-        .toUpperCase();
+    d = n(29504),
+    p = n(932478);
+let h = (e) => {
+    let t = (0, r.jsx)(i.M2$, {
+        shortcut: l.$.binds["0"],
+        keyClassName: d.key,
+    });
     return (0, r.jsx)(o.Z, {
         guild: e.guild,
         onDismissed: () => e.markAsDismissed(c.L.UNKNOWN),
@@ -23,7 +23,7 @@ let p = (e) => {
         cta: t,
         trackingSource: s.PsQ.QUICK_SWITCHER_NOTICE,
         type: s.vID.QUICKSWITCHER,
-        image: d,
+        image: p,
         imageMarginX: 50,
     });
 };

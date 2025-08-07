@@ -7,8 +7,8 @@ var r = n(255367),
     o = n(69882),
     u = n(815790),
     c = n(893966),
-    E = n(776767),
-    d = n(388032),
+    d = n(776767),
+    E = n(388032),
     _ = n(12740);
 function A(e) {
     let { member: t } = e,
@@ -29,22 +29,22 @@ function A(e) {
         );
     return null != m || f
         ? (0, r.jsx)(i.xJW, {
-              title: d.intl.string(d.t["7V375+"]),
+              title: E.intl.string(E.t["7V375+"]),
               titleClassName: _.infoTitle,
-              children: (0, r.jsxs)(E.WM, {
+              children: (0, r.jsxs)(d.WM, {
                   children: [
                       null != m &&
-                          (0, r.jsx)(E._2, {
+                          (0, r.jsx)(d._2, {
                               icon: (0, r.jsx)(i.b6m, {
                                   size: "custom",
                                   color: "currentColor",
-                                  width: E.Mn,
-                                  height: E.Mn,
+                                  width: d.Mn,
+                                  height: d.Mn,
                               }),
                               name: (0, r.jsx)(i.Text, {
                                   variant: "text-sm/semibold",
                                   color: "text-default",
-                                  children: d.intl.string(d.t.ZRnONz),
+                                  children: E.intl.string(E.t.ZRnONz),
                               }),
                               description: (0, r.jsx)(i.Text, {
                                   variant: "text-sm/semibold",
@@ -54,17 +54,17 @@ function A(e) {
                           }),
                       f &&
                           null != N &&
-                          (0, r.jsx)(E._2, {
+                          (0, r.jsx)(d._2, {
                               icon: (0, r.jsx)(i.YlB, {
                                   size: "custom",
                                   color: "currentColor",
-                                  width: E.Mn,
-                                  height: E.Mn,
+                                  width: d.Mn,
+                                  height: d.Mn,
                               }),
                               name: (0, r.jsx)(i.Text, {
                                   variant: "text-sm/semibold",
                                   color: "text-default",
-                                  children: d.intl.string(d.t["TJ8/tL"]),
+                                  children: E.intl.string(E.t["TJ8/tL"]),
                               }),
                               description: (0, r.jsx)(i.Text, {
                                   variant: "text-sm/semibold",

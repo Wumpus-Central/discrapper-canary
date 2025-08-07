@@ -8,8 +8,8 @@ var l = n(120356),
     o = n(493683),
     u = n(906732),
     c = n(69882),
-    E = n(251794),
-    d = n(386696),
+    d = n(251794),
+    E = n(386696),
     _ = n(946273),
     A = n(910693),
     T = n(172751),
@@ -195,7 +195,7 @@ function j(e) {
             () => ({
                 canKickUser: (0, _.BK)(t, T),
                 canBanUser: (0, _.mm)(t, T),
-                canModerateMembers: null != T && (0, d.F)(T.id, t.id, [R.default, f.Z, N.Z]),
+                canModerateMembers: null != T && (0, E.F)(T.id, t.id, [R.default, f.Z, N.Z]),
             }),
             [t, T],
         ),
@@ -284,12 +284,12 @@ function j(e) {
                 text: C ? b.intl.string(b.t.N86XcH) : b.intl.string(b.t.kTlLr6),
                 onClick: () => {
                     C
-                        ? (0, E.q)({
+                        ? (0, d.q)({
                               guildId: l.guildId,
                               userId: l.userId,
                               anaylticsLocations: v,
                           })
-                        : (0, E.z)({
+                        : (0, d.z)({
                               guildId: l.guildId,
                               userId: l.userId,
                               anaylticsLocations: v,
