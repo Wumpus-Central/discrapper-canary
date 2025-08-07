@@ -89074,13 +89074,6 @@ html.disable-forced-colors * {
 }
 
 @font-face {
-    font-family: Bangers;
-    font-style: normal;
-    font-weight: 400;
-    src: url(/assets/97a5dab060f60792.woff2) format("woff2")
-}
-
-@font-face {
     font-family: BioRhyme;
     font-style: normal;
     font-weight: 400;
@@ -89092,13 +89085,6 @@ html.disable-forced-colors * {
     font-style: normal;
     font-weight: 400;
     src: url(/assets/c064d4440a5d10c4.woff2) format("woff2")
-}
-
-@font-face {
-    font-family: Compagnon;
-    font-style: normal;
-    font-weight: 700;
-    src: url(/assets/3f3231f943ecd459.woff2) format("woff2")
 }
 
 @font-face {
@@ -89123,13 +89109,6 @@ html.disable-forced-colors * {
 }
 
 @font-face {
-    font-family: Ribes;
-    font-style: normal;
-    font-weight: 800;
-    src: url(/assets/0640a78957378fbd.woff2) format("woff2")
-}
-
-@font-face {
     font-family: Pixelify Sans;
     font-style: normal;
     font-weight: 400;
@@ -89141,6 +89120,13 @@ html.disable-forced-colors * {
     font-style: normal;
     font-weight: 400;
     src: url(/assets/bccdc9cd3d272519.woff2) format("woff2")
+}
+
+@font-face {
+    font-family: Zilla Slab;
+    font-style: normal;
+    font-weight: 600;
+    src: url(/assets/4f94f359293a357d.woff2) format("woff2")
 }
 
 :root {
