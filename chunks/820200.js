@@ -1,0 +1,33 @@
+n.d(t, { k: () => o });
+var r = n(685816);
+function i(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0,
+              })
+            : (e[t] = n),
+        e
+    );
+}
+class o {
+    static fromServer(e) {
+        return new o(e);
+    }
+    constructor(e) {
+        i(this, "bannerAsset", void 0),
+            i(this, "title", void 0),
+            i(this, "body", void 0),
+            i(this, "textColor", void 0),
+            i(this, "endTime", void 0),
+            (this.type = r.z.IMMERSIVE_BANNER),
+            (this.bannerAsset = e.banner_asset),
+            (this.title = e.title),
+            (this.body = e.body),
+            (this.textColor = e.text_color),
+            (this.endTime = null != e.end_time ? new Date(e.end_time) : void 0);
+    }
+}
