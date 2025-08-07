@@ -1,6 +1,6 @@
 r.d(t, {
     Kp: () => S,
-    u9: () => C,
+    u9: () => O,
     xV: () => y,
 }),
     r(413496),
@@ -18,20 +18,20 @@ var n = r(73800),
     u = r(597688),
     d = r(328347),
     p = r(429368),
-    g = r(410127),
-    f = r(237031),
-    h = r(258939),
-    b = r(956472),
-    _ = r(981631);
-let m = "".concat("#").concat("itemSkuId", "="),
-    v = new RegExp("^".concat(m, "(\\d+)$")),
-    O = [_.Z5c.COLLECTIBLES_SHOP, _.Z5c.COLLECTIBLES_SHOP_FULLSCREEN],
-    C = (e) => {
+    f = r(410127),
+    g = r(237031),
+    b = r(258939),
+    h = r(956472),
+    m = r(981631);
+let _ = "".concat("#").concat("itemSkuId", "="),
+    v = new RegExp("^".concat(_, "(\\d+)$")),
+    C = [m.Z5c.COLLECTIBLES_SHOP, m.Z5c.COLLECTIBLES_SHOP_FULLSCREEN],
+    O = (e) => {
         let t = (0, l.TH)();
         n.useEffect(() => {
-            if (null != e && O.includes(t.pathname))
+            if (null != e && C.includes(t.pathname))
                 return () => {
-                    window.location.hash.startsWith(m) && window.location.replace("#");
+                    window.location.hash.startsWith(_) && window.location.replace("#");
                 };
         }, [e, t.pathname]);
     },
@@ -41,7 +41,7 @@ let m = "".concat("#").concat("itemSkuId", "="),
             i = u.Z.getCategoryForProduct(t);
         if (null != a && null != i) {
             let e = a,
-                s = (0, b.oQ)({ product: a }),
+                s = (0, h.oQ)({ product: a }),
                 c = document.getElementById("shop-item-".concat(e.skuId));
             if ((c !== document.activeElement && (null == c || c.focus()), null != a.variantGroupStoreListingId)) {
                 let r = u.Z.getProductByStoreListingId(a.variantGroupStoreListingId);
@@ -52,7 +52,7 @@ let m = "".concat("#").concat("itemSkuId", "="),
                     null != n && n > -1 && (0, p.$)(r, n);
                 }
             }
-            (0, f.T)({
+            (0, g.T)({
                 product: e,
                 category: i,
                 analyticsSource: n,
@@ -63,39 +63,39 @@ let m = "".concat("#").concat("itemSkuId", "="),
         }
     },
     S = () => {
-        let e = (0, a.e7)([c.Z], () => c.Z.getLayers().includes(_.S9g.COLLECTIBLES_SHOP)),
-            t = (0, h.R)(),
+        let e = (0, a.e7)([c.Z], () => c.Z.getLayers().includes(m.S9g.COLLECTIBLES_SHOP)),
+            t = (0, b.R)(),
             r = n.useRef(null),
             i = (0, l.TH)(),
             u =
-                i.pathname === _.Z5c.COLLECTIBLES_SHOP
+                i.pathname === m.Z5c.COLLECTIBLES_SHOP
                     ? o.Z.HOME_PAGE_SHOP_TAB
-                    : i.pathname === _.Z5c.COLLECTIBLES_SHOP_FULLSCREEN
+                    : i.pathname === m.Z5c.COLLECTIBLES_SHOP_FULLSCREEN
                       ? o.Z.COLLECTIBLES_SHOP_FULLSCREEN
                       : o.Z.COLLECTIBLES_SHOP,
             { analyticsLocations: p } = (0, s.ZP)(u),
-            f = (0, g.Z)();
+            g = (0, f.Z)();
         n.useEffect(() => {
             if (e) return;
             let t = v.exec(i.hash);
             null != t ? (r.current = t[1]) : (r.current = null);
-        }, [f, e, i.hash]);
-        let b = (0, a.e7)([d.Z], () => d.Z.initialProductSkuId);
+        }, [g, e, i.hash]);
+        let h = (0, a.e7)([d.Z], () => d.Z.initialProductSkuId);
         n.useEffect(() => {
             if (t) return;
             let n = null;
-            if (null != (n = e ? b : r.current)) {
+            if (null != (n = e ? h : r.current)) {
                 let e = setTimeout(() => {
                     E({
                         productSkuId: n,
                         analyticsLocations: p,
                         analyticsSource: u,
-                        tab: f,
+                        tab: g,
                     });
                 }, 250);
                 return () => clearTimeout(e);
             }
-        }, [e, p, u, t, b, f]);
+        }, [e, p, u, t, h, g]);
     },
     y = (e) => {
         let t = n.useRef({}),

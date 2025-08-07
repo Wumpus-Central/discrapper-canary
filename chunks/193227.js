@@ -1,4 +1,4 @@
-r.d(t, { Z: () => P }), r(388685);
+r.d(t, { Z: () => T }), r(388685);
 var n = r(255367),
     l = r(73800),
     a = r(120356),
@@ -9,21 +9,21 @@ var n = r(255367),
     u = r(594174),
     d = r(381585),
     p = r(870289),
-    g = r(370039),
-    f = r(937510),
-    h = r(303952),
-    b = r(823941),
-    _ = r(38900),
-    m = r(709999),
+    f = r(370039),
+    g = r(937510),
+    b = r(303952),
+    h = r(823941),
+    m = r(38900),
+    _ = r(709999),
     v = r(258939),
-    O = r(81136),
-    C = r(619899),
+    C = r(81136),
+    O = r(619899),
     E = r(215023),
     S = r(484920);
 function y(e) {
     let { products: t, header: r, category: l } = e,
         a = (0, o.e7)([u.default], () => u.default.getCurrentUser()),
-        i = (0, C.St)(t);
+        i = (0, O.St)(t);
     return null == a || 0 === t.length
         ? null
         : (0, n.jsxs)("div", {
@@ -44,7 +44,7 @@ function y(e) {
                               {
                                   newValue: { tilePosition: t },
                                   children: (0, n.jsx)(
-                                      m.Z,
+                                      _.Z,
                                       {
                                           category: l,
                                           product: e,
@@ -63,8 +63,8 @@ function y(e) {
 }
 function x(e) {
     let { category: t } = e,
-        r = (0, f.l)(t.products),
-        l = (0, g.a)()(r);
+        r = (0, g.l)(t.products),
+        l = (0, f.a)()(r);
     return (0, n.jsx)(y, {
         products: l,
         category: t,
@@ -83,7 +83,7 @@ function j(e) {
         className: S.categoryWrapper,
         ref: o,
         children: [
-            (0, n.jsx)(b.Z, {
+            (0, n.jsx)(h.Z, {
                 category: t,
                 hideLimitedTimeBadge: !1,
             }),
@@ -91,13 +91,13 @@ function j(e) {
         ],
     });
 }
-function P(e) {
+function T(e) {
     var t;
     let { sortedCategories: r, setCategoryRef: a, isFullScreen: o, currentPage: c, handlePageChange: u } = e,
-        g = (0, d.sp)(),
-        f = (0, v.R)(),
-        b = null != (t = null == g ? void 0 : g.sessionId) ? t : "",
-        { noCache: m, includeUnpublished: C } = (0, O.Z)(),
+        f = (0, d.sp)(),
+        g = (0, v.R)(),
+        h = null != (t = null == f ? void 0 : f.sessionId) ? t : "",
+        { noCache: _, includeUnpublished: O } = (0, C.Z)(),
         y = l.useMemo(
             () =>
                 r
@@ -113,32 +113,32 @@ function P(e) {
             return y.slice(e, e + E.kN);
         }, [y, c]);
     l.useEffect(() => {
-        (0, h.n)({
-            sessionId: b,
-            checkpoint: h.a.SHOP_MOUNTED,
+        (0, b.n)({
+            sessionId: h,
+            checkpoint: b.a.SHOP_MOUNTED,
             tab: E.AW.CATALOG,
             isFullScreen: o,
-            unpublishedCategoriesShown: C,
-            cacheDisabled: m,
+            unpublishedCategoriesShown: O,
+            cacheDisabled: _,
         });
     }, []),
         l.useEffect(() => {
-            f ||
+            g ||
                 0 === x.length ||
-                (0, h.n)({
-                    sessionId: b,
-                    checkpoint: h.a.SHOP_RENDERED,
+                (0, b.n)({
+                    sessionId: h,
+                    checkpoint: b.a.SHOP_RENDERED,
                     tab: E.AW.CATALOG,
                     isFullScreen: o,
-                    unpublishedCategoriesShown: C,
-                    cacheDisabled: m,
+                    unpublishedCategoriesShown: O,
+                    cacheDisabled: _,
                 });
-        }, [b, o, C, m, f, x.length]);
-    let P = (0, p.FF)("CollectiblesBrowse");
-    return f
-        ? (0, n.jsx)(_.Z, {})
+        }, [h, o, O, _, g, x.length]);
+    let T = (0, p.FF)("CollectiblesBrowse");
+    return g
+        ? (0, n.jsx)(m.Z, {})
         : (0, n.jsxs)("div", {
-              className: i()(S.categories, { [S.categoriesNoFilter]: !P }),
+              className: i()(S.categories, { [S.categoriesNoFilter]: !T }),
               children: [
                   x.map((e, t) =>
                       (0, n.jsx)(

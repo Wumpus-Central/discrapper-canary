@@ -1,6 +1,6 @@
 r.d(t, {
     K: () => p,
-    Z: () => g,
+    Z: () => f,
 });
 var n = r(255367);
 r(73800);
@@ -25,7 +25,7 @@ let u = () => 4 * Math.random() + 8,
                 ],
             }),
         }),
-    g = () =>
+    f = () =>
         (0, n.jsx)("div", {
             className: i.skeletons,
             children: d.map((e) =>

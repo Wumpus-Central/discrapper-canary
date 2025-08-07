@@ -147,7 +147,7 @@ let I = (e) => {
         let { analyticsLocations: t } = e;
         g.default.track(E.rMx.REFERRAL_PROGRAM_SHARE_MODAL_CTA_CLICKED, { location_stack: t }),
             (0, c.ZDy)(async () => {
-                let { default: e } = await n.e("47435").then(n.bind(n, 204387));
+                let { default: e } = await Promise.all([n.e("83667"), n.e("715")]).then(n.bind(n, 204387));
                 return (n) => (0, i.jsx)(e, T(S({}, n), { sourceAnalyticsLocations: t }));
             });
     },

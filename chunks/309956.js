@@ -1,4 +1,4 @@
-r.d(t, { B: () => g }), r(388685), r(539854);
+r.d(t, { B: () => f }), r(388685), r(539854);
 var n = r(73800),
     l = r(114858),
     a = r(335818),
@@ -14,41 +14,41 @@ let p = {
         [u.AW.NAMEPLATES]: a.G.NAMEPLATE,
         [u.AW.BUNDLES]: a.G.BUNDLE,
     },
-    g = (e, t) => {
+    f = (e, t) => {
         let { enabled: r } = (0, i.WX)({ location: "useShopViewTransition" }),
             a = (0, o.FF)("CollectiblesBrowse"),
-            { setItemTypeFilter: g, reset: f, setCurrentTab: h } = (0, s.S)(),
-            b = n.useMemo(() => (e !== u.AW.ORBS || r ? ((0, u.RE)(e) && a ? u.AW.CATALOG : e) : u.AW.HOME), [e, r, a]),
-            [_, m] = n.useState(b),
-            [v, O] = n.useState(u.f7.VISIBLE);
+            { setItemTypeFilter: f, reset: g, setCurrentTab: b } = (0, s.S)(),
+            h = n.useMemo(() => (e !== u.AW.ORBS || r ? ((0, u.RE)(e) && a ? u.AW.CATALOG : e) : u.AW.HOME), [e, r, a]),
+            [m, _] = n.useState(h),
+            [v, C] = n.useState(u.f7.VISIBLE);
         n.useEffect(() => {
-            h(_);
-        }, [_, h]),
+            b(m);
+        }, [m, b]),
             n.useEffect(() => {
-                m(b);
-            }, [b]);
-        let C = (e) => new Promise((t) => setTimeout(t, e)),
+                _(h);
+            }, [h]);
+        let O = (e) => new Promise((t) => setTimeout(t, e)),
             { clearError: E } = (0, c.a)(),
             S = (0, l.k6)(),
             y = n.useCallback(
                 async (e, r) => {
-                    if ((E(), e === u.AW.CATALOG)) f();
-                    else if ((0, u.RE)(e) && e !== _) {
+                    if ((E(), e === u.AW.CATALOG)) g();
+                    else if ((0, u.RE)(e) && e !== m) {
                         let t = p[e];
-                        null != t ? g(t) : f();
+                        null != t ? f(t) : g();
                     }
-                    if (_ === e) return;
-                    r && (O(u.f7.OUT), await C(1.1 * u.lb));
+                    if (m === e) return;
+                    r && (C(u.f7.OUT), await O(1.1 * u.lb));
                     let n = a && ![u.AW.HOME, u.AW.ORBS].includes(e) ? u.AW.CATALOG : e;
-                    m(n),
-                        r && O(u.f7.IN),
+                    _(n),
+                        r && C(u.f7.IN),
                         t || S.push(d.Z5c.COLLECTIBLES_SHOP_WITH_TAB(n), { shallow: !0 }),
-                        O(u.f7.VISIBLE);
+                        C(u.f7.VISIBLE);
                 },
-                [S, t, a, g, f, _, E],
+                [S, t, a, f, g, m, E],
             );
         return {
-            selectedTab: _,
+            selectedTab: m,
             transitionState: v,
             transitionToTab: y,
         };

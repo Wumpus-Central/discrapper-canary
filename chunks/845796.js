@@ -1,4 +1,4 @@
-r.d(t, { Z: () => h }), r(642613);
+r.d(t, { Z: () => b }), r(642613);
 var n = r(255367),
     l = r(73800),
     a = r(497598),
@@ -9,37 +9,37 @@ var n = r(255367),
     u = r(501431),
     d = r(215023),
     p = r(981631),
-    g = r(388032),
-    f = r(970387);
-let h = () => {
+    f = r(388032),
+    g = r(970387);
+let b = () => {
     let { sort: e, onSetSort: t, hasRelevanceFilters: r } = (0, u.S)(),
-        h = (0, c.sp)(),
-        b = r(),
-        _ = l.useMemo(() => d.aP.filter((e) => e.sortType !== i.E.RELEVANCE || b), [b]),
-        m = l.useCallback((e) => {
+        b = (0, c.sp)(),
+        h = r(),
+        m = l.useMemo(() => d.aP.filter((e) => e.sortType !== i.E.RELEVANCE || h), [h]),
+        _ = l.useCallback((e) => {
             let { sortType: t, sortDirection: r } = e;
             return t === i.E.RECENCY
                 ? {
-                      label: g.intl.string(g.t["51Bhi4"]),
+                      label: f.intl.string(f.t["51Bhi4"]),
                       value: "recent",
                   }
                 : t === i.E.PRICE
                   ? r === a.F.ASC
                       ? {
-                            label: g.intl.string(g.t.m8RVU1),
+                            label: f.intl.string(f.t.m8RVU1),
                             value: "price-asc",
                         }
                       : {
-                            label: g.intl.string(g.t.zBwQJC),
+                            label: f.intl.string(f.t.zBwQJC),
                             value: "price-desc",
                         }
                   : t === i.E.RELEVANCE
                     ? {
-                          label: g.intl.string(g.t["XoeT//"]),
+                          label: f.intl.string(f.t["XoeT//"]),
                           value: "relevance",
                       }
                     : {
-                          label: g.intl.string(g.t.Y68e5u),
+                          label: f.intl.string(f.t.Y68e5u),
                           value: "popularity",
                       };
         }, []),
@@ -69,29 +69,29 @@ let h = () => {
                 })[e],
             [],
         ),
-        O = l.useCallback(
+        C = l.useCallback(
             (e) => {
-                let r = m(v(e));
+                let r = _(v(e));
                 s.default.track(p.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
-                    collectibles_shop_session_id: null == h ? void 0 : h.sessionId,
-                    page_section: null == h ? void 0 : h.pageSection,
-                    page_category: null == h ? void 0 : h.pageCategory,
-                    page_index: null == h ? void 0 : h.pageIndex,
-                    page_size: null == h ? void 0 : h.pageSize,
+                    collectibles_shop_session_id: null == b ? void 0 : b.sessionId,
+                    page_section: null == b ? void 0 : b.pageSection,
+                    page_category: null == b ? void 0 : b.pageCategory,
+                    page_index: null == b ? void 0 : b.pageIndex,
+                    page_size: null == b ? void 0 : b.pageSize,
                     cta_name: "sort by ".concat(r.label.toLowerCase()),
                     page_type: "catalog",
                 }),
                     t(v(e));
             },
-            [h, m, v, t],
+            [b, _, v, t],
         ),
-        C = m(e);
+        O = _(e);
     return (0, n.jsx)(o.PhF, {
         look: o.qQH.CUSTOM,
-        className: f.custom,
-        options: _.map(m),
-        select: O,
-        isSelected: (e) => e === C.value,
+        className: g.custom,
+        options: m.map(_),
+        select: C,
+        isSelected: (e) => e === O.value,
         serialize: (e) => e,
         popoutWidth: 224,
     });

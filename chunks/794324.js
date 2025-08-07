@@ -21,9 +21,9 @@ let d = (e) => {
         return l.useMemo(() => {
             var l, a, u, i, s, d;
             let g = (0, c.ZS)(e.categorySkuId),
-                b = null != r || null != t;
+                b = null != r || null != t,
+                m = null != r && null == t;
             return {
-                isPreviewingStaticBanner: null != r && null == t,
                 bannerOverrides: g,
                 bannerStyleOverrides: b ? void 0 : null != (i = e.bannerConfig) ? i : o,
                 logoStyleOverrides: b ? void 0 : e.logoConfig,
@@ -32,12 +32,13 @@ let d = (e) => {
                     null != (s = null != r ? r : null == (l = e.bannerAsset) ? void 0 : l.static)
                         ? s
                         : e.fallbackBannerUrl,
-                heroBannerAnimated:
-                    null != (d = null != t ? t : null == g || null == (a = g.heroBanner) ? void 0 : a.animationSource)
-                        ? d
-                        : null == (u = e.bannerAsset)
-                          ? void 0
-                          : u.animated,
+                heroBannerAnimated: m
+                    ? void 0
+                    : null != (d = null != t ? t : null == g || null == (a = g.heroBanner) ? void 0 : a.animationSource)
+                      ? d
+                      : null == (u = e.bannerAsset)
+                        ? void 0
+                        : u.animated,
             };
         }, [n, r, t, e, o]);
     },

@@ -9,25 +9,25 @@ var n = r(255367),
     u = r(594174),
     d = r(626135),
     p = r(381585),
-    g = r(597688),
-    f = r(370039),
-    h = r(937510),
-    b = r(303952),
-    _ = r(38900),
-    m = r(709999),
+    f = r(597688),
+    g = r(370039),
+    b = r(937510),
+    h = r(303952),
+    m = r(38900),
+    _ = r(709999),
     v = r(81136),
-    O = r(215023),
-    C = r(981631),
+    C = r(215023),
+    O = r(981631),
     E = r(388032),
     S = r(484920),
     y = r(558513),
     x = r(662128),
     j = r(676790),
-    P = r(665195),
-    T = r(42742),
+    T = r(665195),
+    P = r(42742),
     L = r(283727),
-    I = r(266058),
-    k = r(719138);
+    k = r(266058),
+    I = r(719138);
 function N(e) {
     var t;
     let { isFetchingCategories: r, isFullScreen: N, scrollerRef: A, tab: w } = e,
@@ -35,7 +35,7 @@ function N(e) {
         R = null != (t = null == B ? void 0 : B.sessionId) ? t : "",
         { noCache: Z, includeUnpublished: D } = (0, v.Z)(),
         F = (0, i.e7)([u.default], () => u.default.getCurrentUser()),
-        M = (0, i.e7)([g.Z], () => g.Z.productsWithVariantsAsGroup),
+        M = (0, i.e7)([f.Z], () => f.Z.productsWithVariantsAsGroup),
         [H, W] = l.useState(1),
         V = () => {
             var e;
@@ -45,17 +45,17 @@ function N(e) {
         z = (0, o.ap)(U),
         [G, q, K] = l.useMemo(() => {
             switch (w) {
-                case O.AW.AVATAR_DECORATIONS:
-                    return [E.intl.string(E.t.dRZYND), z ? P.Z : j.Z, a.Z.AVATAR_DECORATION];
-                case O.AW.PROFILE_EFFECTS:
-                    return [E.intl.string(E.t["1cNjt7"]), z ? k.Z : I.Z, a.Z.PROFILE_EFFECT];
-                case O.AW.NAMEPLATES:
-                    return [E.intl.string(E.t.V68Fq6), z ? L.Z : T.Z, a.Z.NAMEPLATE];
-                case O.AW.BUNDLES:
+                case C.AW.AVATAR_DECORATIONS:
+                    return [E.intl.string(E.t.dRZYND), z ? T.Z : j.Z, a.Z.AVATAR_DECORATION];
+                case C.AW.PROFILE_EFFECTS:
+                    return [E.intl.string(E.t["1cNjt7"]), z ? I.Z : k.Z, a.Z.PROFILE_EFFECT];
+                case C.AW.NAMEPLATES:
+                    return [E.intl.string(E.t.V68Fq6), z ? L.Z : P.Z, a.Z.NAMEPLATE];
+                case C.AW.BUNDLES:
                     return [E.intl.string(E.t.FYFppq), z ? x.Z : y.Z, a.Z.BUNDLE];
             }
         }, [w, z]),
-        Y = (0, f.a)(),
+        Y = (0, g.a)(),
         X = l.useMemo(
             () =>
                 Y(
@@ -70,11 +70,11 @@ function N(e) {
                 ),
             [M, K, Y],
         ),
-        J = (0, h.l)(X);
+        J = (0, b.l)(X);
     return (l.useEffect(() => {
-        (0, b.n)({
+        (0, h.n)({
             sessionId: R,
-            checkpoint: b.a.SHOP_MOUNTED,
+            checkpoint: h.a.SHOP_MOUNTED,
             tab: w,
             isFullScreen: N,
             unpublishedCategoriesShown: D,
@@ -83,9 +83,9 @@ function N(e) {
     }, []),
     l.useEffect(() => {
         r ||
-            (0, b.n)({
+            (0, h.n)({
                 sessionId: R,
-                checkpoint: b.a.SHOP_RENDERED,
+                checkpoint: h.a.SHOP_RENDERED,
                 tab: w,
                 isFullScreen: N,
                 unpublishedCategoriesShown: D,
@@ -93,7 +93,7 @@ function N(e) {
             });
     }, [R, N, D, Z, r, w]),
     r || null == F)
-        ? (0, n.jsx)(_.Z, {})
+        ? (0, n.jsx)(m.Z, {})
         : (0, n.jsxs)(n.Fragment, {
               children: [
                   (0, n.jsx)("div", {
@@ -107,7 +107,7 @@ function N(e) {
                   (0, n.jsx)("div", {
                       className: S.products,
                       children: J.slice(40 * (H - 1), 40 * H).map((e, t) => {
-                          let r = g.Z.getCategory(e.categorySkuId);
+                          let r = f.Z.getCategory(e.categorySkuId);
                           return null == r
                               ? null
                               : (0, n.jsx)(
@@ -115,7 +115,7 @@ function N(e) {
                                     {
                                         newValue: { tilePosition: t },
                                         children: (0, n.jsx)(
-                                            m.Z,
+                                            _.Z,
                                             {
                                                 product: e,
                                                 user: F,
@@ -138,7 +138,7 @@ function N(e) {
                                   totalCount: J.length,
                                   pageSize: 40,
                                   onPageChange: (e) => {
-                                      d.default.track(C.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                                      d.default.track(O.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                                           collectibles_shop_session_id: null == B ? void 0 : B.sessionId,
                                           page_section: null == B ? void 0 : B.pageSection,
                                           page_category: null == B ? void 0 : B.pageCategory,

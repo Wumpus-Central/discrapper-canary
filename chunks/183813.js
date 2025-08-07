@@ -1,24 +1,24 @@
-t.d(r, { S: () => b });
-var n = t(255367),
-    i = t(73800),
-    o = t(512722),
-    l = t.n(o),
-    a = t(442837),
-    s = t(481060),
-    d = t(204418),
-    C = t(628952),
-    c = t(314404),
-    u = t(594174),
-    p = t(626135),
-    _ = t(987209),
-    f = t(563132),
-    m = t(409813),
-    x = t(27034),
-    h = t(981631),
-    j = t(388032),
-    L = t(529190);
+r.d(t, { S: () => b });
+var n = r(255367),
+    i = r(73800),
+    o = r(512722),
+    l = r.n(o),
+    a = r(442837),
+    s = r(481060),
+    d = r(204418),
+    C = r(628952),
+    c = r(314404),
+    u = r(594174),
+    p = r(626135),
+    _ = r(987209),
+    f = r(563132),
+    m = r(409813),
+    x = r(27034),
+    h = r(981631),
+    j = r(388032),
+    L = r(529190);
 function b(e) {
-    let { handleStepChange: r, handleClose: t } = e,
+    let { handleStepChange: t, handleClose: r } = e,
         { selectedPlan: o, selectedSkuId: b, step: g } = (0, f.JL)(),
         { setSelectedGiftingPromotionReward: y, selectedGiftingPromotionReward: S, claimableRewards: E } = (0, _.wD)(),
         v = (0, a.e7)([u.default], () => u.default.getCurrentUser());
@@ -27,17 +27,17 @@ function b(e) {
         null == S && e && y(E[0]);
     }, [E, S, y]);
     let I = (e) => {
-        let r = e.skuId;
+        let t = e.skuId;
         return (0, n.jsx)(
             C.Z,
             {
-                skuId: r,
+                skuId: t,
                 price: j.intl.string(j.t.QQsaCQ),
-                isSelected: r === (null == S ? void 0 : S.skuId),
+                isSelected: t === (null == S ? void 0 : S.skuId),
                 onSelect: () => y(e),
                 className: L.giftSelectItem,
             },
-            r,
+            t,
         );
     };
     l()(null != o, "Expected plan to selected"),
@@ -64,9 +64,9 @@ function b(e) {
                                 user_id: v.id,
                                 reward_sku_id: S.skuId,
                             }),
-                            r(e);
+                            t(e);
                     },
-                    onBackClick: () => r(m.h8.PLAN_SELECT),
+                    onBackClick: () => t(m.h8.PLAN_SELECT),
                     shouldRenderUpdatedPaymentModal: !0,
                     showBackButton: !0,
                     planOptions: [o.id],
@@ -87,7 +87,7 @@ function b(e) {
                     direction: "horizontal",
                     justify: "space-between",
                     align: "center",
-                    children: [M, (0, n.jsx)(s.olH, { onClick: t })],
+                    children: [M, (0, n.jsx)(s.olH, { onClick: r })],
                 }),
             }),
             (0, n.jsx)(s.hzk, {

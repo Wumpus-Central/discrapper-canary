@@ -11,13 +11,13 @@ var n = r(73800),
 function p(e, t) {
     let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "product",
         p = (0, o.sp)(),
-        g = (0, l.e7)([s.Z], () => s.Z.getProduct(e)),
-        f = (0, u.x)(),
-        h = i.ZP.canUseCollectibles(f),
-        b = n.useRef(null),
-        _ = n.useCallback(() => {
-            let n = null != g ? (0, c.Vw)(g, h, !1) : null,
-                l = null != g ? (0, c.eu)(g, h, !1) : void 0;
+        f = (0, l.e7)([s.Z], () => s.Z.getProduct(e)),
+        g = (0, u.x)(),
+        b = i.ZP.canUseCollectibles(g),
+        h = n.useRef(null),
+        m = n.useCallback(() => {
+            let n = null != f ? (0, c.Vw)(f, b, !1) : null,
+                l = null != f ? (0, c.eu)(f, b, !1) : void 0;
             a.default.track(d.rMx.COLLECTIBLES_TILE_IMPRESSION, {
                 collectibles_shop_session_id: null == p ? void 0 : p.sessionId,
                 sku_id: e,
@@ -37,30 +37,30 @@ function p(e, t) {
             null == p ? void 0 : p.pageCategory,
             null == p ? void 0 : p.pageSection,
             null == p ? void 0 : p.tilePosition,
-            h,
+            b,
             t,
-            g,
+            f,
             e,
             r,
         ]),
-        m = n.useCallback(
+        _ = n.useCallback(
             (e) => {
                 e
-                    ? null === b.current &&
-                      (b.current = setTimeout(() => {
-                          _(), (b.current = null);
+                    ? null === h.current &&
+                      (h.current = setTimeout(() => {
+                          m(), (h.current = null);
                       }, 1000))
-                    : null !== b.current && (clearTimeout(b.current), (b.current = null));
+                    : null !== h.current && (clearTimeout(h.current), (h.current = null));
             },
-            [_],
+            [m],
         );
     return (
         n.useEffect(
             () => () => {
-                null !== b.current && (clearTimeout(b.current), (b.current = null));
+                null !== h.current && (clearTimeout(h.current), (h.current = null));
             },
             [],
         ),
-        { handleCardVisibilityChange: m }
+        { handleCardVisibilityChange: _ }
     );
 }

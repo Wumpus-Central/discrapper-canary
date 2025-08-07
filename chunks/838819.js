@@ -9,25 +9,25 @@ var n = r(255367),
     u = r(481060),
     d = r(150063),
     p = r(211266),
-    g = r(906732),
-    f = r(977395),
-    h = r(214852),
-    b = r(238359),
-    _ = r(511050),
-    m = r(819640),
+    f = r(906732),
+    g = r(977395),
+    b = r(214852),
+    h = r(238359),
+    m = r(511050),
+    _ = r(819640),
     v = r(594174),
-    O = r(381585),
-    C = r(597688),
+    C = r(381585),
+    O = r(597688),
     E = r(780475),
     S = r(223143),
     y = r(298228),
     x = r(309956),
     j = r(501431),
-    P = r(98535),
-    T = r(426171),
+    T = r(98535),
+    P = r(426171),
     L = r(963102),
-    I = r(508498),
-    k = r(991589),
+    k = r(508498),
+    I = r(991589),
     N = r(681435),
     A = r(215023),
     w = r(981631),
@@ -49,17 +49,17 @@ let Z = (e) => {
     },
     D = function (e) {
         let { isFullScreen: t = !0, tab: r = A.AW.HOME } = e;
-        (0, h.z)(f.f);
+        (0, b.z)(g.f);
         let a = (0, p.Z)((0, o.Z)()),
             c = (0, s.e7)([v.default], () => v.default.getCurrentUser()),
-            { closeIntroToOrbsClaimedCoachmark: B } = (0, _.Z)({ location: "CollectiblesShop" });
+            { closeIntroToOrbsClaimedCoachmark: B } = (0, m.Z)({ location: "CollectiblesShop" });
         l.useEffect(
             () => () => {
                 B();
             },
             [a, B],
         );
-        let { onClose: D } = (0, I.Db)(),
+        let { onClose: D } = (0, k.Db)(),
             { currentTab: F, hasFilters: M } = (0, j.S)(),
             H = l.useMemo(() => (r === A.AW.HOME && F && M() ? F : r), [r, F, M]),
             { categories: W, refreshCategories: V } = (0, S.ZP)(
@@ -73,15 +73,15 @@ let Z = (e) => {
                     isFullScreen: t,
                 },
             );
-        (0, b.D)();
+        (0, h.D)();
         let U = (0, y.O)(W),
             [z, G] = l.useState(),
-            q = (0, s.e7)([C.Z], () => {
+            q = (0, s.e7)([O.Z], () => {
                 var e;
-                return null == (e = C.Z.getCategory(z)) ? void 0 : e.name;
+                return null == (e = O.Z.getCategory(z)) ? void 0 : e.name;
             }),
             [K, Y] = l.useState();
-        (0, T.Kp)();
+        (0, P.Kp)();
         let X = l.useCallback((e, t) => {
                 Y(e), G(t);
             }, []),
@@ -94,7 +94,7 @@ let Z = (e) => {
             l.useEffect(() => {
                 t || (0, d.Y)(w.Z5c.COLLECTIBLES_SHOP);
             }, [t]);
-        let et = (0, s.e7)([m.Z], () => m.Z.getLayers().includes(w.S9g.COLLECTIBLES_SHOP)),
+        let et = (0, s.e7)([_.Z], () => _.Z.getLayers().includes(w.S9g.COLLECTIBLES_SHOP)),
             er = l.useRef(null),
             en = l.useRef(null);
         (0, u.Tbt)(er);
@@ -109,10 +109,10 @@ let Z = (e) => {
         let { analyticsLocations: ei } = (0, E.MV)(J);
         return ea && !t
             ? null
-            : (0, n.jsx)(k.r, {
-                  children: (0, n.jsx)(g.Gt, {
+            : (0, n.jsx)(I.r, {
+                  children: (0, n.jsx)(f.Gt, {
                       value: ei,
-                      children: (0, n.jsx)(O.k0, {
+                      children: (0, n.jsx)(C.k0, {
                           newValue: {
                               sessionId: a,
                               pageCategory: q,
@@ -139,7 +139,7 @@ let Z = (e) => {
                                               [R.in]: Q === A.f7.IN,
                                               [R.out]: Q === A.f7.OUT,
                                           }),
-                                          children: (0, n.jsx)(P.Z, {
+                                          children: (0, n.jsx)(T.Z, {
                                               tab: J,
                                               isFullScreen: t,
                                               refreshCategories: V,

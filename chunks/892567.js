@@ -15,72 +15,76 @@ var r = n(255367),
     m = n(821795),
     g = n(760692),
     E = n(7284),
-    b = n(482695);
-let y = 3,
-    O = i.memo(function (e) {
-        let {
-                userName: t,
-                displayNameStyles: n,
-                effectDisplayType: o = m.F.STATIC,
-                inProfile: s = !1,
-                textClassName: O,
-                loop: I = !1,
-            } = e,
-            T = (0, E.j)({
-                displayNameStyles: n,
-                inProfile: s,
-            }),
-            {
-                useReducedMotion: S,
-                saturation: A,
-                desaturateUserColors: N,
-            } = (0, u.cj)([f.Z], () => ({
-                useReducedMotion: f.Z.useReducedMotion,
-                saturation: f.Z.saturation,
-                desaturateUserColors: f.Z.desaturateUserColors,
-            })),
-            { includeNonProfile: C } = p.f.useExperiment({ location: "useDisplayNameStylesFont" }),
-            R = (0, h.Y)({ location: "UserNameWithEffects" }),
-            P = (0, d.dQu)(d.TVs.colors.BACKGROUND_BASE_LOW).hex(),
-            w = i.useMemo(
-                () =>
-                    null != n && R
-                        ? n.colors.map((e) => {
-                              let t = a()(e);
-                              return (
-                                  N && (t = t.desaturate(1 - A)),
-                                  (0, _.aP)(t.hex(), n.effectId === c.m.TOON ? "#333" : P, y)
-                              );
-                          })
-                        : [],
-                [n, R, N, A, P],
-            );
-        if (!R || (!s && !C) || null == n) return t;
-        let D = (0, g.K)(n.effectId, w),
-            L = v(n.effectId);
-        return (0, r.jsx)("div", {
-            className: l()(b.container, L, T, O, {
-                [b.showEffect]: o !== m.F.PLAIN,
-                [b.animated]: o === m.F.ANIMATED && !S,
-                [b.loop]: I,
-            }),
-            style: D,
-            "data-username-with-effects": (0, d.qgQ)(t),
-            children: t,
-        });
+    b = n(660662),
+    y = n(482695);
+let O = i.memo(function (e) {
+    let {
+            userName: t,
+            displayNameStyles: n,
+            effectDisplayType: o = m.F.STATIC,
+            inProfile: s = !1,
+            textClassName: O,
+            loop: I = !1,
+        } = e,
+        T = (0, E.j)({
+            displayNameStyles: n,
+            inProfile: s,
+        }),
+        {
+            useReducedMotion: S,
+            saturation: A,
+            desaturateUserColors: N,
+        } = (0, u.cj)([f.Z], () => ({
+            useReducedMotion: f.Z.useReducedMotion,
+            saturation: f.Z.saturation,
+            desaturateUserColors: f.Z.desaturateUserColors,
+        })),
+        { includeNonProfile: C } = p.f.useExperiment({ location: "useDisplayNameStylesFont" }),
+        R = (0, h.Y)({ location: "UserNameWithEffects" }),
+        P = (0, d.dQu)(d.TVs.colors.BACKGROUND_BASE_LOW).hex(),
+        w = i.useMemo(
+            () =>
+                null != n && R
+                    ? n.colors.map((e) => {
+                          let t = a()(e);
+                          return (
+                              N && (t = t.desaturate(1 - A)),
+                              (0, _.aP)(
+                                  t.hex(),
+                                  n.effectId === c.m.TOON ? "#333" : P,
+                                  b.sS[n.effectId].minContrastRatio,
+                              )
+                          );
+                      })
+                    : [],
+            [n, R, N, A, P],
+        );
+    if (!R || (!s && !C) || null == n) return t;
+    let D = (0, g.K)(n.effectId, w),
+        L = v(n.effectId);
+    return (0, r.jsx)("div", {
+        className: l()(y.container, L, T, O, {
+            [y.showEffect]: o !== m.F.PLAIN,
+            [y.animated]: o === m.F.ANIMATED && !S,
+            [y.loop]: I,
+        }),
+        style: D,
+        "data-username-with-effects": (0, d.qgQ)(t),
+        children: t,
     });
+});
 function v(e) {
     switch (e) {
         case c.m.GRADIENT:
-            return b.gradient;
+            return y.gradient;
         case c.m.NEON:
-            return b.neon;
+            return y.neon;
         case c.m.TOON:
-            return b.toon;
+            return y.toon;
         case c.m.POP:
-            return b.pop;
+            return y.pop;
         case c.m.SOLID:
-            return b.solid;
+            return y.solid;
         default:
             return "";
     }

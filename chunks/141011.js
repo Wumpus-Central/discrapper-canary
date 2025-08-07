@@ -57,8 +57,8 @@ let O = (e) => null != e && /^http/i.test(e),
     p = (e) => null != e && /^blob:https?:\/\/[^\/]+\//i.test(e),
     f = (e) => {
         let { asset: n, size: r = g.yV, className: o, style: f, children: y, categoryBannerOverride: j } = e,
-            B = (0, u.e7)([s.Z], () => s.Z.saturation),
-            h = t.useMemo(() => {
+            h = (0, u.e7)([s.Z], () => s.Z.saturation),
+            B = t.useMemo(() => {
                 if (null == n) return f;
                 let e =
                         O(n) || p(n)
@@ -73,7 +73,7 @@ let O = (e) => null != e && /^http/i.test(e),
                               transform: "scale(1.02)",
                           }
                         : {};
-                if (1 === B)
+                if (1 === h)
                     return m(
                         v(m({}, f), {
                             backgroundImage: (null == j ? void 0 : j.addGradient)
@@ -88,7 +88,7 @@ let O = (e) => null != e && /^http/i.test(e),
                         }),
                         l,
                     );
-                let t = (0, c.aD)(i.Z.unsafe_rawColors.BLACK_500.resolve().hex(), 1 - B);
+                let t = (0, c.aD)(i.Z.unsafe_rawColors.BLACK_500.resolve().hex(), 1 - h);
                 return m(
                     v(m({}, f), {
                         backgroundImage: "linear-gradient(".concat(t, ", ").concat(t, "), url(").concat(e, ")"),
@@ -98,10 +98,10 @@ let O = (e) => null != e && /^http/i.test(e),
                     }),
                     l,
                 );
-            }, [n, r, B, f, null == j ? void 0 : j.blur, null == j ? void 0 : j.addGradient]);
+            }, [n, r, h, f, null == j ? void 0 : j.blur, null == j ? void 0 : j.addGradient]);
         return (0, l.jsx)("div", {
             className: a()(b.banner, o),
-            style: h,
+            style: B,
             children: y,
         });
     };

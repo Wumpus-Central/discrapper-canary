@@ -1,7 +1,7 @@
 r.d(t, {
-    EB: () => b,
-    MV: () => f,
-    q3: () => h,
+    EB: () => h,
+    MV: () => g,
+    q3: () => b,
 }),
     r(388685);
 var n = r(73800),
@@ -14,7 +14,7 @@ var n = r(73800),
     u = r(215023),
     d = r(981631),
     p = r(474936);
-let g = (e) => {
+let f = (e) => {
         switch (e) {
             case u.AW.ORBS:
                 return a.Z.COLLECTIBLES_SHOP_ORBS_TAB;
@@ -32,9 +32,9 @@ let g = (e) => {
                 return a.Z.COLLECTIBLES_SHOP_FULLSCREEN;
         }
     },
-    f = (e) => {
+    g = (e) => {
         let { analyticsSource: t, analyticsLocations: r } = (0, l.cj)([c.Z], () => c.Z.getAnalytics()),
-            n = g(e),
+            n = f(e),
             { analyticsLocations: o, newestAnalyticsLocation: s } = (0, i.ZP)([...r, a.Z.COLLECTIBLES_SHOP, n]);
         return {
             analyticsSource: t,
@@ -43,8 +43,8 @@ let g = (e) => {
             currentTabLocation: n,
         };
     },
-    h = (e, t, r, l, a) => {
-        let { analyticsLocations: i, analyticsSource: s, currentTabLocation: c, newestAnalyticsLocation: p } = f(t);
+    b = (e, t, r, l, a) => {
+        let { analyticsLocations: i, analyticsSource: s, currentTabLocation: c, newestAnalyticsLocation: p } = g(t);
         n.useEffect(() => {
             if (l !== u.f7.VISIBLE || p !== c) return;
             let n = t === u.AW.CATALOG ? a : s;
@@ -57,8 +57,8 @@ let g = (e) => {
             });
         }, [i, e, t, r, c, l, a, s, p]);
     },
-    b = (e, t) => {
-        let { analyticsLocations: r } = f(e);
+    h = (e, t) => {
+        let { analyticsLocations: r } = g(e);
         n.useEffect(() => {
             null == t ||
                 s.ZP.canUseCollectibles(t) ||

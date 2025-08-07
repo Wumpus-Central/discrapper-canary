@@ -8,9 +8,9 @@ var n = r(73800),
     c = r(388032);
 let u = (e) => {
     let { product: t, onSuccess: u, onError: d } = e,
-        [p, g] = n.useState(!1),
-        { firstAvatarDecoration: f, firstProfileEffect: h } = (0, s.Rj)(t),
-        b = (0, o.x6)(t)
+        [p, f] = n.useState(!1),
+        { firstAvatarDecoration: g, firstProfileEffect: b } = (0, s.Rj)(t),
+        h = (0, o.x6)(t)
             ? c.intl.string(c.t.tf1ZZ2)
             : t.type === l.Z.AVATAR_DECORATION
               ? c.intl.string(c.t.zOA4a2)
@@ -19,10 +19,10 @@ let u = (e) => {
                 : c.intl.string(c.t.SWm2am);
     return {
         handleUseNow: n.useCallback(async () => {
-            g(!0);
+            f(!0);
             try {
-                if ((null != f && (await (0, a.Mn)({ avatarDecoration: f })), null != h)) {
-                    let e = { profile_effect_id: h.id };
+                if ((null != g && (await (0, a.Mn)({ avatarDecoration: g })), null != b)) {
+                    let e = { profile_effect_id: b.id };
                     await (0, i.Z)(e);
                 }
                 if (t.type === l.Z.NAMEPLATE) {
@@ -39,7 +39,7 @@ let u = (e) => {
                     } = await Promise.resolve().then(r.bind(r, 481060));
                     l(),
                         a(
-                            n(b, t.MESSAGE, {
+                            n(h, t.MESSAGE, {
                                 duration: 6000,
                                 position: e.TOP,
                             }),
@@ -49,9 +49,9 @@ let u = (e) => {
             } catch (e) {
                 null == d || d(e);
             } finally {
-                g(!1);
+                f(!1);
             }
-        }, [f, h, t, u, b, d]),
+        }, [g, b, t, u, h, d]),
         isApplying: p,
     };
 };

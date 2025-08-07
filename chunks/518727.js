@@ -1,17 +1,17 @@
-t.d(r, { Z: () => _ }), t(388685);
-var n = t(255367),
-    i = t(73800),
-    o = t(120356),
-    l = t.n(o),
-    a = t(481060),
-    s = t(570140),
-    d = t(70097),
-    C = t(585483),
-    c = t(402426),
-    u = t(981631),
-    p = t(794503);
+r.d(t, { Z: () => _ }), r(388685);
+var n = r(255367),
+    i = r(73800),
+    o = r(120356),
+    l = r.n(o),
+    a = r(481060),
+    s = r(570140),
+    d = r(70097),
+    C = r(585483),
+    c = r(402426),
+    u = r(981631),
+    p = r(794503);
 let _ = (e) => {
-    let { children: r, isConfirmationStep: t, isWowMomentConfirmationEligible: o } = e,
+    let { children: t, isConfirmationStep: r, isWowMomentConfirmationEligible: o } = e,
         [_, f] = (0, i.useState)("entry"),
         m = (0, i.useRef)(null),
         x = (0, i.useRef)(null),
@@ -35,7 +35,7 @@ let _ = (e) => {
             }
         );
     }, []);
-    let S = o && t && L;
+    let S = o && r && L;
     return ((0, i.useEffect)(() => {
         S &&
             s.Z.dispatch({
@@ -101,9 +101,9 @@ let _ = (e) => {
                   }),
                   (0, n.jsx)("div", {
                       className: p.entryAnimationContainer,
-                      children: r,
+                      children: t,
                   }),
               ],
           })
-        : r;
+        : t;
 };

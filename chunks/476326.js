@@ -83,7 +83,8 @@ class _ extends r.EventEmitter {
                 (this.isImage = "image" === this.classification),
                 (this.isVideo = "video" === this.classification),
                 (this.filename = e.file.name),
-                (this.mimeType = e.file.type);
+                (this.mimeType = e.file.type),
+                (this.origin = e.origin);
         (this.isThumbnail = e.isThumbnail),
             (this.clip = e.clip),
             (this.uniqueId = (0, a.Z)()),

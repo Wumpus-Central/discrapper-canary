@@ -1,4 +1,4 @@
-r.d(t, { Z: () => f });
+r.d(t, { Z: () => g });
 var n = r(255367);
 r(73800);
 var l = r(120356),
@@ -10,17 +10,17 @@ var l = r(120356),
     u = r(597688),
     d = r(709999),
     p = r(388032),
-    g = r(806734);
-let f = (e) => {
+    f = r(806734);
+let g = (e) => {
     let { shelf: t, handleTransition: r, tab: l } = e,
-        f = (0, i.e7)([s.default], () => s.default.getCurrentUser());
-    return null == f
+        g = (0, i.e7)([s.default], () => s.default.getCurrentUser());
+    return null == g
         ? null
         : (0, n.jsxs)("div", {
-              className: a()(g.shelfBlockContainer, g.centeredSection),
+              className: a()(f.shelfBlockContainer, f.centeredSection),
               children: [
                   (0, n.jsxs)("div", {
-                      className: g.blockHeader,
+                      className: f.blockHeader,
                       children: [
                           (0, n.jsx)(o.X6q, {
                               variant: "heading-lg/semibold",
@@ -34,7 +34,7 @@ let f = (e) => {
                       ],
                   }),
                   (0, n.jsx)("div", {
-                      className: g.feed,
+                      className: f.feed,
                       children: (0, n.jsx)(n.Fragment, {
                           children: t.rankedSkuIds.map((e, r) => {
                               let a = u.Z.getCategoryForProduct(e),
@@ -54,7 +54,7 @@ let f = (e) => {
                                                 {
                                                     product: i,
                                                     category: a,
-                                                    user: f,
+                                                    user: g,
                                                     tab: l,
                                                 },
                                                 e,
