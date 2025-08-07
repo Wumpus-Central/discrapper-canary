@@ -1,4 +1,4 @@
-n.d(t, { Z: () => E }), n(388685);
+n.d(t, { Z: () => d }), n(388685);
 var r = n(255367),
     l = n(73800),
     s = n(525654),
@@ -28,7 +28,7 @@ function c(e) {
         transform: [{ translateX: t(e.x) }, { translateY: t(e.y) }],
     };
 }
-class d extends l.Component {
+class E extends l.Component {
     componentDidMount() {
         this._isMounted = !0;
         let { x: e, y: t } = this.state;
@@ -473,4 +473,4 @@ class d extends l.Component {
             u(this, "shouldLoop", () => this._isMounted);
     }
 }
-let E = d;
+let d = E;

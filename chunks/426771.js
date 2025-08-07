@@ -64,7 +64,8 @@ function x(e) {
         }, 0),
         T = y ? N : Z,
         A = !y && S > T ? "+" : void 0,
-        R = !I && h ? O.image.animatedUrl : O.image.staticUrl;
+        R = !I && h ? O.image.animatedUrl : O.image.staticUrl,
+        k = null != O.viewCta && "" !== O.viewCta ? O.viewCta : m.intl.string(f.default["27GkOj"]);
     return (0, r.jsxs)(c.aB, {
         label: O.title,
         isActive: y,
@@ -95,7 +96,7 @@ function x(e) {
             }),
             (0, r.jsx)(c.N4, {
                 children: (0, r.jsx)(l.zxk, {
-                    text: m.intl.string(f.default["27GkOj"]),
+                    text: k,
                     fullWidth: !0,
                 }),
             }),

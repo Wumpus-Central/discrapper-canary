@@ -468,11 +468,11 @@ function tZ() {
         ) {
             let { simulcastEnabled: t, lqStreamBitrate: n } = Z.Z.getConfig();
             e.configureGoLiveSimulcast(t, n);
-            let r = (0, F.k)({
+            let { enabled: r, adjustResolution: i } = (0, F.k)({
                 location: "setupMediaEngine",
                 autoTrackExposure: !0,
-            }).enabled;
-            e.setGoLiveUsePixelCounts(r);
+            });
+            e.setGoLiveUsePixelCounts(r, i);
         }
         (0, ea.isWindows)()
             ? (null == tA ? void 0 : tA.startsWith("NVIDIA")) || (null == tA ? void 0 : tA.startsWith("AMD"))

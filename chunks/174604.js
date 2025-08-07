@@ -1,19 +1,17 @@
-n.d(t, { Z: () => v }), n(388685), n(583741), n(953529);
+n.d(t, { Z: () => y }), n(388685), n(583741), n(953529);
 var r = n(255367),
     i = n(73800),
     o = n(120356),
     a = n.n(o),
     s = n(126663),
     l = n(793030),
-    c = n(442837),
-    u = n(755721),
-    d = n(481060),
-    f = n(905128),
-    _ = n(535396),
-    p = n(93841),
-    h = n(388032),
-    m = n(698323);
-function g(e, t, n) {
+    c = n(755721),
+    u = n(481060),
+    d = n(70300),
+    f = n(93841),
+    _ = n(388032),
+    p = n(698323);
+function h(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -26,7 +24,7 @@ function g(e, t, n) {
         e
     );
 }
-function E(e) {
+function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -37,12 +35,12 @@ function E(e) {
                 }),
             )),
             r.forEach(function (t) {
-                g(e, t, n[t]);
+                h(e, t, n[t]);
             });
     }
     return e;
 }
-function b(e, t) {
+function g(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -54,34 +52,31 @@ function b(e, t) {
     }
     return n;
 }
-function y(e, t) {
+function E(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : b(Object(t)).forEach(function (n) {
+            : g(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function O(e) {
+function b(e) {
     let { powerup: t } = e;
     return (0, r.jsx)(l.xv, {
         tag: "span",
         variant: "text-md/semibold",
-        className: m.highlight,
+        className: p.highlight,
         children: t.title,
     });
 }
-function v(e) {
+function y(e) {
     let { guild: t, themeResponsive: n = !0, onButtonClick: o } = e,
-        g = (0, c.e7)([f.Z], () => {
-            var e, n;
-            return null == (n = f.Z.getStateForGuild(t.id)) || null == (e = n.powerupCatalog) ? void 0 : e[_.Us.PERK];
-        }),
-        [b, v] = i.useState(!1),
-        [I, T] = (0, d.q_F)(() => ({
+        h = (0, d.Z)(t.id),
+        [g, y] = i.useState(!1),
+        [O, v] = (0, u.q_F)(() => ({
             scale: 0.8,
             config: {
                 tension: 500,
@@ -90,47 +85,47 @@ function v(e) {
         }));
     i.useEffect(() => {
         let e = setTimeout(() => {
-            T({ scale: 1 }), v(!0);
+            v({ scale: 1 }), y(!0);
         }, 300);
         return () => clearTimeout(e);
-    }, [T]);
-    let S = i.useMemo(() => {
+    }, [v]);
+    let I = i.useMemo(() => {
         let e;
-        if (null == g || 0 === g.length) return "";
-        if (1 === g.length) e = (0, r.jsx)(O, { powerup: g[0] });
-        else if (2 === g.length)
-            e = h.intl.format(p.default.MNO3sL, {
-                perk1: (0, r.jsx)(O, { powerup: g[0] }),
-                perk2: (0, r.jsx)(O, { powerup: g[1] }),
+        if (null == h || 0 === h.length) return "";
+        if (1 === h.length) e = (0, r.jsx)(b, { powerup: h[0] });
+        else if (2 === h.length)
+            e = _.intl.format(f.default.MNO3sL, {
+                perk1: (0, r.jsx)(b, { powerup: h[0] }),
+                perk2: (0, r.jsx)(b, { powerup: h[1] }),
             });
         else {
-            let t = Array.from(g).reverse();
-            e = h.intl.format(p.default.GmN3VV, {
-                perk1: (0, r.jsx)(O, { powerup: t[0] }),
-                perk2: (0, r.jsx)(O, { powerup: t[1] }),
+            let t = Array.from(h).reverse();
+            e = _.intl.format(f.default.GmN3VV, {
+                perk1: (0, r.jsx)(b, { powerup: t[0] }),
+                perk2: (0, r.jsx)(b, { powerup: t[1] }),
             });
         }
-        return h.intl.format(p.default["/6GgQk"], { perks: e });
-    }, [g]);
-    return null == g || 0 === g.length
+        return _.intl.format(f.default["/6GgQk"], { perks: e });
+    }, [h]);
+    return null == h || 0 === h.length
         ? null
         : (0, r.jsxs)(s.animated.div, {
-              className: a()(m.container, { [m.themeResponsiveContainer]: n }),
-              style: y(E({}, I), { opacity: +!!b }),
+              className: a()(p.container, { [p.themeResponsiveContainer]: n }),
+              style: E(m({}, O), { opacity: +!!g }),
               children: [
                   (0, r.jsx)(l.xv, {
                       tag: "span",
                       variant: "text-md/semibold",
-                      className: a()(m.description, {
-                          [m.text]: !n,
-                          [m.responsiveText]: n,
+                      className: a()(p.description, {
+                          [p.text]: !n,
+                          [p.responsiveText]: n,
                       }),
-                      children: S,
+                      children: I,
                   }),
-                  (0, r.jsx)(u.zx, {
-                      className: m.button,
+                  (0, r.jsx)(c.zx, {
+                      className: p.button,
                       onClick: o,
-                      children: h.intl.string(p.default.E5V5KC),
+                      children: _.intl.string(f.default.E5V5KC),
                   }),
               ],
           });

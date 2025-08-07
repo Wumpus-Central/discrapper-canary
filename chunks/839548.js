@@ -121,8 +121,8 @@ class d extends o.Z {
     configureGoLiveSimulcast(e, t) {
         this.videoQualityManager.configGoLiveSimulcast(e, t);
     }
-    setGoLiveUsePixelCounts(e) {
-        this.videoQualityManager.setGoLiveUsePixelCounts(e);
+    setGoLiveUsePixelCounts(e, t) {
+        this.videoQualityManager.setGoLiveUsePixelCounts(e, t);
     }
     applyQualityConstraints() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},

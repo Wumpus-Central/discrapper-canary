@@ -14,6 +14,7 @@ let l = i.forwardRef((e, t) => {
         subText: u,
         avatarClassName: d,
         innerClassName: f,
+        withDisplayNameStyles: _ = !1,
     } = e;
     return (0, r.jsxs)("div", {
         ref: t,
@@ -27,7 +28,7 @@ let l = i.forwardRef((e, t) => {
                 children: o,
             }),
             (0, r.jsxs)("div", {
-                className: s.content,
+                className: a()(s.content, { [s.withDisplayNameStyles]: _ }),
                 children: [
                     (0, r.jsxs)("div", {
                         className: s.nameAndDecorators,

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => I });
+n.d(t, { Z: () => T });
 var r = n(255367);
 n(73800);
 var i = n(120356),
@@ -6,13 +6,14 @@ var i = n(120356),
     a = n(442837),
     s = n(481060),
     l = n(385499),
-    c = n(892567),
-    u = n(813549),
-    d = n(246946),
-    f = n(51144),
-    _ = n(388032),
-    p = n(350651);
-function h(e, t, n) {
+    c = n(181430),
+    u = n(892567),
+    d = n(813549),
+    f = n(246946),
+    _ = n(51144),
+    p = n(388032),
+    h = n(350651);
+function m(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -25,7 +26,7 @@ function h(e, t, n) {
         e
     );
 }
-function m(e) {
+function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -36,12 +37,12 @@ function m(e) {
                 }),
             )),
             r.forEach(function (t) {
-                h(e, t, n[t]);
+                m(e, t, n[t]);
             });
     }
     return e;
 }
-function g(e, t) {
+function E(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -53,22 +54,22 @@ function g(e, t) {
     }
     return n;
 }
-function E(e, t) {
+function b(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : g(Object(t)).forEach(function (n) {
+            : E(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function b(e, t) {
+function y(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = y(e, t);
+        i = O(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
         for (r = 0; r < o.length; r++)
@@ -76,7 +77,7 @@ function b(e, t) {
     }
     return i;
 }
-function y(e, t) {
+function O(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -85,39 +86,40 @@ function y(e, t) {
     for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function O(e) {
-    return e.isSystemUser() ? u.J.SYSTEM_DM : e.bot ? u.J.BOT : null;
+function v(e) {
+    return e.isSystemUser() ? d.J.SYSTEM_DM : e.bot ? d.J.BOT : null;
 }
-let v = (e) => {
+let I = (e) => {
         let {
-            primary: t,
-            secondary: n,
-            botType: i,
-            botVerified: a,
-            discriminatorClass: u,
-            className: d,
-            usernameClass: f,
-            botClass: h,
-            showStreamerModeTooltip: g,
-            displayNameStyles: b,
-        } = e;
+                primary: t,
+                secondary: n,
+                botType: i,
+                botVerified: a,
+                discriminatorClass: d,
+                className: f,
+                usernameClass: _,
+                botClass: m,
+                showStreamerModeTooltip: E,
+                displayNameStyles: y,
+            } = e,
+            O = (0, c.Y)({ location: "DiscordTag" });
         return (0, r.jsxs)("div", {
-            className: o()(p.info, d),
+            className: o()(h.info, { [h.withDisplayNameStyles]: O && null != y }, f),
             children: [
                 (0, r.jsx)(s.ua7, {
-                    text: _.intl.string(_.t.Br1ls7),
-                    shouldShow: g,
-                    "aria-label": !!g && void 0,
+                    text: p.intl.string(p.t.Br1ls7),
+                    shouldShow: E,
+                    "aria-label": !!E && void 0,
                     children: (e) =>
                         (0, r.jsx)(
                             "span",
-                            E(m({}, e), {
-                                className: o()(p.__invalid_username, f),
+                            b(g({}, e), {
+                                className: o()(h.__invalid_username, _),
                                 children:
-                                    null != b
-                                        ? (0, r.jsx)(c.Z, {
+                                    null != y
+                                        ? (0, r.jsx)(u.Z, {
                                               userName: t,
-                                              displayNameStyles: b,
+                                              displayNameStyles: y,
                                           })
                                         : t,
                             }),
@@ -125,20 +127,20 @@ let v = (e) => {
                 }),
                 null != n
                     ? (0, r.jsx)("span", {
-                          className: o()(p.infoSpacing, u),
+                          className: o()(h.infoSpacing, d),
                           children: n,
                       })
                     : void 0,
                 null != i &&
                     (0, r.jsx)(l.Z, {
                         type: i,
-                        className: o()(p.infoSpacing, h),
+                        className: o()(h.infoSpacing, m),
                         verified: a,
                     }),
             ],
         });
     },
-    I = (e) => {
+    T = (e) => {
         var {
                 user: t,
                 nick: n,
@@ -147,9 +149,9 @@ let v = (e) => {
                 overrideDiscriminator: s,
                 forcePomelo: l,
                 hideBotTag: c = !1,
-                hideDiscriminator: _ = !1,
+                hideDiscriminator: u = !1,
             } = e,
-            p = b(e, [
+            p = y(e, [
                 "user",
                 "nick",
                 "forceUsername",
@@ -159,26 +161,26 @@ let v = (e) => {
                 "hideBotTag",
                 "hideDiscriminator",
             ]);
-        let h = (0, a.e7)([d.Z], () => d.Z.hidePersonalInformation),
-            g = h || _ || t.isNonUserBot(),
+        let h = (0, a.e7)([f.Z], () => f.Z.hidePersonalInformation),
+            m = h || u || t.isNonUserBot(),
             E = t.toString(),
-            y = c ? null : O(t),
-            I = t.isVerifiedBot(),
-            T = f.ZP.getName(t),
+            b = c ? null : v(t),
+            O = t.isVerifiedBot(),
+            T = _.ZP.getName(t),
             S = i ? E : null != n ? n : T,
             A = t.hasUniqueUsername() || l;
         if (A || S !== E) {
-            let e = S === E && A && i ? f.ZP.getUserTag(t, { forcePomelo: l }) : S,
-                n = o && e !== "@".concat(E) ? f.ZP.getUserTag(t) : void 0;
+            let e = S === E && A && i ? _.ZP.getUserTag(t, { forcePomelo: l }) : S,
+                n = o && e !== "@".concat(E) ? _.ZP.getUserTag(t) : void 0;
             return (0, r.jsx)(
-                v,
-                m(
+                I,
+                g(
                     {
                         primary: e,
                         secondary: n,
-                        botType: y,
-                        botVerified: I,
-                        showStreamerModeTooltip: h && f.ZP.isNameConcealed(e),
+                        botType: b,
+                        botVerified: O,
+                        showStreamerModeTooltip: h && _.ZP.isNameConcealed(e),
                         displayNameStyles: S !== E ? t.displayNameStyles : null,
                     },
                     p,
@@ -186,13 +188,13 @@ let v = (e) => {
             );
         }
         return (0, r.jsx)(
-            u.Z,
-            m(
+            d.Z,
+            g(
                 {
                     name: S,
-                    botType: y,
-                    botVerified: I,
-                    discriminator: g || S !== E ? null : null != s ? s : t.discriminator,
+                    botType: b,
+                    botVerified: O,
+                    discriminator: m || S !== E ? null : null != s ? s : t.discriminator,
                 },
                 p,
             ),

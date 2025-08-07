@@ -9,28 +9,59 @@ let a = (0, r.B)({
     kind: "user",
     id: "2025-06_golive_tile_resolution_gating",
     label: "GoLive Tile Resolution Gating",
-    defaultConfig: { enabled: !1 },
+    defaultConfig: {
+        enabled: !1,
+        adjustResolution: !1,
+    },
     commonTriggerPoint: o.$P.CONNECTION_OPEN,
     treatments: [
         {
             id: 0,
             label: "Non-Nitro control",
-            config: { enabled: !1 },
+            config: {
+                enabled: !1,
+                adjustResolution: !1,
+            },
         },
         {
             id: 1,
             label: "Tile size based wants enabled only for non-nitro users",
-            config: { enabled: !0 },
+            config: {
+                enabled: !0,
+                adjustResolution: !0,
+            },
         },
         {
             id: 2,
             label: "Nitro control",
-            config: { enabled: !1 },
+            config: {
+                enabled: !1,
+                adjustResolution: !1,
+            },
         },
         {
             id: 3,
             label: "Tile size based wants enabled only for Nitro subscribers",
-            config: { enabled: !0 },
+            config: {
+                enabled: !0,
+                adjustResolution: !0,
+            },
+        },
+        {
+            id: 4,
+            label: "Tile size based bitrate adjustments for non-nitro users",
+            config: {
+                enabled: !0,
+                adjustResolution: !1,
+            },
+        },
+        {
+            id: 5,
+            label: "Tile size based bitrate adjustments for Nitro users",
+            config: {
+                enabled: !0,
+                adjustResolution: !1,
+            },
         },
     ],
 });

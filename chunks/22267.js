@@ -1,4 +1,4 @@
-n.d(t, { Z: () => N });
+n.d(t, { Z: () => C });
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -8,122 +8,125 @@ var r = n(255367),
     c = n(481060),
     u = n(570908),
     d = n(204418),
-    f = n(821795),
-    _ = n(892567),
-    p = n(172751),
-    h = n(359135),
-    m = n(516817),
-    g = n(654904),
-    E = n(210887),
-    b = n(271383),
-    y = n(158776),
-    O = n(579407),
-    v = n(388032),
-    I = n(538566),
-    T = n(460400),
-    S = n(943549);
-let A = {
+    f = n(181430),
+    _ = n(821795),
+    p = n(892567),
+    h = n(172751),
+    m = n(359135),
+    g = n(516817),
+    E = n(654904),
+    b = n(210887),
+    y = n(271383),
+    O = n(158776),
+    v = n(579407),
+    I = n(388032),
+    T = n(538566),
+    S = n(460400),
+    A = n(943549);
+let N = {
         xlarge: c.EFr.SIZE_48,
         large: c.EFr.SIZE_40,
         default: c.EFr.SIZE_32,
     },
-    N = (e) => {
+    C = (e) => {
         let {
                 user: t,
                 guildId: n,
                 nameplate: o,
-                nameplateData: N,
-                className: C,
-                innerClassName: R,
-                isHighlighted: P,
-                showStatus: w,
-                showPlaceholderUser: D,
-                pendingGlobalName: L,
-                nameplatePreviewSize: x = "default",
-                isPurchased: M = !1,
+                nameplateData: C,
+                className: R,
+                innerClassName: P,
+                isHighlighted: w,
+                showStatus: D,
+                showPlaceholderUser: L,
+                pendingGlobalName: x,
+                nameplatePreviewSize: M = "default",
+                isPurchased: k = !1,
             } = e,
-            k = (0, s.e7)([E.Z], () => (0, l.wj)(E.Z.theme)),
-            j = null != o ? (0, O.EU)(o) : N,
-            U = (0, s.e7)([y.Z], () => (null != t ? y.Z.getStatus(t.id) : c.Skl.ONLINE)),
-            G = k ? "#706F74" : "#aaaab2",
-            B = i.useRef(null),
-            Z = (0, s.e7)([b.ZP], () => (null != n && null != t ? b.ZP.getMember(n, t.id) : null)),
-            F =
+            j = (0, s.e7)([b.Z], () => (0, l.wj)(b.Z.theme)),
+            U = null != o ? (0, v.EU)(o) : C,
+            G = (0, s.e7)([O.Z], () => (null != t ? O.Z.getStatus(t.id) : c.Skl.ONLINE)),
+            B = j ? "#706F74" : "#aaaab2",
+            Z = i.useRef(null),
+            F = (0, s.e7)([y.ZP], () => (null != n && null != t ? y.ZP.getMember(n, t.id) : null)),
+            V =
                 null != t
-                    ? (0, g.Ly)({
+                    ? (0, E.Ly)({
                           pendingNickname: void 0,
-                          pendingGlobalName: L,
+                          pendingGlobalName: x,
                           user: t,
-                          guildMember: Z,
+                          guildMember: F,
                       })
                     : void 0,
-            V = A[x];
+            H = N[M],
+            Y = (0, f.Y)({ location: "NameplatePreview" });
         return (0, r.jsx)("div", {
             role: "img",
-            "aria-label": v.intl.string(v.t.SZeUdX),
+            "aria-label": I.intl.string(I.t.SZeUdX),
             style: {
-                color: k ? "white" : "black",
+                color: j ? "white" : "black",
                 width: "100%",
             },
             children: (0, r.jsxs)(c.Rny, {
-                className: a()(C, I.nameplatePreview, {
-                    [I.nameplatePurchased]: M && !P,
-                    [I.large]: "large" === x,
-                    [I.xlarge]: "xlarge" === x,
+                className: a()(R, T.nameplatePreview, {
+                    [T.nameplatePurchased]: k && !w,
+                    [T.large]: "large" === M,
+                    [T.xlarge]: "xlarge" === M,
                 }),
                 children: [
-                    null != j &&
+                    null != U &&
                         (0, r.jsx)(
-                            m.Z,
+                            g.Z,
                             {
-                                nameplate: j,
-                                hovered: P,
-                                placement: h.i.PREVIEW,
-                                content: D ? void 0 : B,
+                                nameplate: U,
+                                hovered: w,
+                                placement: m.i.PREVIEW,
+                                content: L ? void 0 : Z,
                             },
                             null == o ? void 0 : o.id,
                         ),
                     (0, r.jsxs)("div", {
-                        className: I.overlayContainer,
+                        className: T.overlayContainer,
                         children: [
                             null != t
                                 ? (0, r.jsx)("div", {
-                                      className: a()(I.avatarContainer, !D && I.avatarVisible),
+                                      className: a()(T.avatarContainer, !L && T.avatarVisible),
                                       children: (0, r.jsx)(u.Z, {
-                                          ref: B,
+                                          ref: Z,
                                           avatar: (0, r.jsx)(d.Z, {
                                               user: t,
                                               guildId: n,
-                                              avatarSize: V,
-                                              status: w ? U : void 0,
+                                              avatarSize: H,
+                                              status: D ? G : void 0,
                                               "aria-hidden": !0,
                                           }),
-                                          decorators: (0, r.jsx)(p.ZP, {
+                                          decorators: (0, r.jsx)(h.ZP, {
                                               userId: t.id,
                                               contextGuildId: n,
-                                              className: I.tagChiplet,
+                                              className: T.tagChiplet,
                                           }),
-                                          name: (0, r.jsx)(_.Z, {
-                                              userName: F,
+                                          name: (0, r.jsx)(p.Z, {
+                                              userName: V,
                                               displayNameStyles: t.displayNameStyles,
-                                              effectDisplayType: f.F.ANIMATED,
+                                              effectDisplayType: _.F.ANIMATED,
                                           }),
-                                          innerClassName: R,
+                                          innerClassName: P,
+                                          withDisplayNameStyles: Y && null != t.displayNameStyles,
                                       }),
                                   })
                                 : null,
                             (0, r.jsxs)("div", {
-                                className: a()(I.avatarContainer, D && I.avatarVisible),
+                                className: a()(T.avatarContainer, L && T.avatarVisible),
                                 children: [
                                     (0, r.jsx)(c.qEK, {
-                                        src: k ? T : S,
-                                        size: V,
+                                        src: j ? S : A,
+                                        size: H,
                                         "aria-hidden": !0,
                                         status: c.Skl.ONLINE,
-                                        statusColor: G,
-                                        className: I.avatar,
+                                        statusColor: B,
+                                        className: T.avatar,
                                     }),
-                                    (0, r.jsx)("div", { className: I.placeholderUsername }),
+                                    (0, r.jsx)("div", { className: T.placeholderUsername }),
                                 ],
                             }),
                         ],

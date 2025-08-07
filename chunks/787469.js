@@ -7,8 +7,8 @@ var r = n(255367),
     o = n(481060),
     u = n(893966),
     c = n(472596),
-    d = n(285173),
-    E = n(485386),
+    E = n(285173),
+    d = n(485386),
     _ = n(430824),
     A = n(496675),
     T = n(776767),
@@ -18,7 +18,7 @@ var r = n(255367),
 function f(e) {
     let { member: t } = e,
         n = (0, a.e7)([_.Z], () => _.Z.getGuild(t.guildId)),
-        s = (0, a.e7)([E.Z], () => E.Z.getSortedRoles(t.guildId)),
+        s = (0, a.e7)([d.Z], () => d.Z.getSortedRoles(t.guildId)),
         f = l.useMemo(
             () => s.filter((e) => e.id !== t.highestRoleId && t.roles.includes(e.id)),
             [t.roles, t.highestRoleId, s],
@@ -48,7 +48,7 @@ function f(e) {
                                                 return (0, r.jsx)(o.P3F, {
                                                     onMouseEnter: n,
                                                     onMouseLeave: l,
-                                                    children: (0, r.jsx)(d.Z, {
+                                                    children: (0, r.jsx)(E.Z, {
                                                         className: i()(g.roleTooltipItem, g.highestRole),
                                                         role: h,
                                                         guildId: t.guildId,
@@ -58,7 +58,7 @@ function f(e) {
                                         }),
                                         f.map((e) =>
                                             (0, r.jsx)(
-                                                d.Z,
+                                                E.Z,
                                                 {
                                                     className: g.roleTooltipItem,
                                                     role: e,

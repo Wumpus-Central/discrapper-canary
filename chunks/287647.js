@@ -1,58 +1,68 @@
-n.d(t, { e: () => _ });
+n.d(t, { e: () => E });
 var i = n(255367),
     r = n(73800),
     s = n(793030),
     a = n(920155),
     l = n(744399),
-    o = n(966902),
-    c = n(237872),
-    d = n(562618),
-    u = n(230711),
-    m = n(906732),
-    p = n(829716),
-    g = n(981631),
-    h = n(921944),
-    f = n(698282),
-    b = n(388032),
-    x = n(481916);
-function _(e) {
-    let { markAsDismissed: t, targetElementRef: n, children: _ } = e,
-        { analyticsLocations: j } = (0, m.ZP)(),
-        E = (0, r.useCallback)(() => {
-            t(h.L.TAKE_ACTION),
-                u.Z.open(g.oAB.PROFILE_CUSTOMIZATION, null, { analyticsLocations: j }),
-                (0, p.I)({ analyticsLocations: j });
-        }, [t, j]),
-        C = (0, r.useCallback)(() => {
-            t(h.L.USER_DISMISS);
+    o = n(454028),
+    c = n(966902),
+    d = n(237872),
+    u = n(562618),
+    m = n(230711),
+    p = n(906732),
+    g = n(829716),
+    h = n(981631),
+    f = n(921944),
+    b = n(698282),
+    x = n(388032),
+    _ = n(481916),
+    j = n(401948);
+function E(e) {
+    let { markAsDismissed: t, targetElementRef: n, children: E } = e,
+        { analyticsLocations: C } = (0, p.ZP)(),
+        O = (0, r.useCallback)(() => {
+            t(f.L.TAKE_ACTION),
+                m.Z.open(h.oAB.PROFILE_CUSTOMIZATION, null, { analyticsLocations: C }),
+                (0, g.I)({ analyticsLocations: C });
+        }, [t, C]),
+        v = (0, r.useCallback)(() => {
+            t(f.L.USER_DISMISS);
         }, [t]);
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            _,
+            E,
             (0, i.jsxs)(a.m, {
                 targetElementRef: n,
                 shouldShow: !0,
                 align: "right",
                 position: "top",
                 children: [
-                    (0, i.jsx)(c.u, { onClick: C }),
-                    (0, i.jsx)(d.Y, { title: b.intl.string(f.default["1AE46+"]) }),
+                    (0, i.jsx)(d.u, { onClick: v }),
+                    (0, i.jsx)(o.V, {
+                        asset: (0, i.jsx)("img", {
+                            src: j.Z,
+                            alt: "",
+                        }),
+                        size: "md",
+                        className: _.asset,
+                    }),
+                    (0, i.jsx)(u.Y, { title: x.intl.string(b.default["1AE46+"]) }),
                     (0, i.jsxs)(s.xv, {
                         variant: "text-sm/normal",
                         color: "text-secondary",
-                        className: x.subtitle,
-                        children: [b.intl.string(f.default.cNc1g4), (0, i.jsx)("br", {}), b.intl.string(b.t["4JNXHB"])],
+                        className: _.subtitle,
+                        children: [x.intl.string(b.default.cNc1g4), (0, i.jsx)("br", {}), x.intl.string(x.t["4JNXHB"])],
                     }),
                     (0, i.jsx)(l.k, {
                         actions: [
                             {
-                                text: b.intl.string(b.t.uw9zIy),
+                                text: x.intl.string(x.t.uw9zIy),
                                 variant: "primary",
-                                onClick: E,
+                                onClick: O,
                             },
                         ],
                     }),
-                    (0, i.jsx)(o.$, {
+                    (0, i.jsx)(c.$, {
                         caretConfig: {
                             position: "bottom",
                             align: "center",

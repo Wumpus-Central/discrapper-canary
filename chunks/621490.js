@@ -222,6 +222,7 @@ let j = (e) => {
         let { orbPriceAmount: t, orbBalance: r, isSubmitting: l, onClickCheckout: o } = e;
         return (0, n.jsxs)(i.mzw, {
             align: c.Z.Align.CENTER,
+            "data-migration-pending": !0,
             children: [
                 (0, n.jsx)(P, {
                     orbBalance: r,

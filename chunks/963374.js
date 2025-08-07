@@ -45,10 +45,10 @@ function u(e) {
 function c(e) {
     return e.toLowerCase();
 }
-function d(e) {
+function E(e) {
     return o.has(e);
 }
-function E(e) {
+function d(e) {
     return 0 === e.length;
 }
 function _(e) {
@@ -57,7 +57,7 @@ function _(e) {
         r = new Set(
             (function (e) {
                 let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : s.$;
-                return l()(e.split(/\W+/)).map(u).reject(E).map(c).reject(d).map(t).value();
+                return l()(e.split(/\W+/)).map(u).reject(d).map(c).reject(E).map(t).value();
             })(e, n ? a.a : s.$),
         );
     return (e) =>
@@ -69,7 +69,7 @@ function _(e) {
                 t.content.split(/(\W+)/g).forEach((t) => {
                     !(function (e, t) {
                         let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-                        if (E((e = c(u(e)))) || d(e)) return !1;
+                        if (d((e = c(u(e)))) || E(e)) return !1;
                         if (n) {
                             for (let n of t.values()) if (e.includes(n)) return !0;
                             return !1;

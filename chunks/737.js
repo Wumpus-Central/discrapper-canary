@@ -23,7 +23,7 @@ function g(e) {
                     a = h.Z.getSearchResultsQuery(r),
                     s = d.Z.getMessages(r);
                 if (null == a || null == s || 0 === s.length) return f;
-                let u = (0, i.nC)(null != (e = a.content) ? e : ""),
+                let u = (0, i.nC)(null != (e = (0, p.UP)(a)) ? e : ""),
                     m = [];
                 return (
                     s.forEach((e) => {

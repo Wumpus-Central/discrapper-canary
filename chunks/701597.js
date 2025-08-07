@@ -194,8 +194,8 @@ class f {
     shouldEnableGoliveSimulcastForHqQuality(e) {
         return !!this.goliveSimulcastEnabled && ((0 === e.width && 0 === e.height) || e.width * e.height > i.ef * i.ru);
     }
-    setGoLiveUsePixelCounts(e) {
-        this.goliveUsePixelCounts = e;
+    setGoLiveUsePixelCounts(e, t) {
+        (this.goliveUsePixelCounts = e), (this.goliveAdjustResolution = t);
     }
     getVideoQuality(e) {
         let t = this.ladder.getResolution(e),
@@ -218,13 +218,16 @@ class f {
         if (this.goliveSimulcastEnabled && e < 100) return this.getGoliveLQQuality();
         let n = t / (null != (s = null == (a = this.goliveMaxQuality.encode) ? void 0 : a.pixelCount) ? s : 1);
         if (n >= 1 || n <= 0 || !this.goliveUsePixelCounts) return this.goliveMaxQuality;
-        let r = this.goliveMaxQuality.bitrateMin * n,
-            i = this.goliveMaxQuality.bitrateMax * n,
-            o = null != this.goliveMaxQuality.bitrateTarget ? this.goliveMaxQuality.bitrateTarget * n : void 0;
+        let r = Math.ceil(this.goliveMaxQuality.bitrateMin * n),
+            i = Math.ceil(this.goliveMaxQuality.bitrateMax * n),
+            o =
+                null != this.goliveMaxQuality.bitrateTarget
+                    ? Math.ceil(this.goliveMaxQuality.bitrateTarget * n)
+                    : void 0;
         var a,
             s,
             l = void 0;
-        if (null != this.goliveMaxQuality.encode) {
+        if (null != this.goliveMaxQuality.encode && this.goliveAdjustResolution) {
             let e = Math.ceil(this.goliveMaxQuality.encode.width * Math.sqrt(n)),
                 t = Math.ceil(this.goliveMaxQuality.encode.height * Math.sqrt(n));
             l = new d({
@@ -233,7 +236,7 @@ class f {
                 framerate: this.goliveMaxQuality.encode.framerate,
                 pixelCount: e * t,
             });
-        }
+        } else l = this.goliveMaxQuality.encode;
         return new u({
             encode: l,
             capture: this.goliveMaxQuality.capture,
@@ -304,6 +307,7 @@ class f {
             o(this, "goliveSimulcastLQBitrateMax", void 0),
             o(this, "goliveSimulcastLQBitrateTarget", void 0),
             o(this, "goliveUsePixelCounts", void 0),
+            o(this, "goliveAdjustResolution", void 0),
             o(this, "isStreamContext", void 0),
             o(this, "ladder", void 0),
             o(this, "lastGoLivePixelCount", void 0),
@@ -316,6 +320,7 @@ class f {
             (this.goliveMaxQuality = this.getDefaultGoliveQuality()),
             (this.goliveSimulcastEnabled = !1),
             (this.goliveUsePixelCounts = !1),
+            (this.goliveAdjustResolution = !1),
             (this.goliveSimulcastLQBitrateMax = i.pk),
             (this.goliveSimulcastLQBitrateTarget = i.pk),
             (this.lastGoLivePixelCount = {});

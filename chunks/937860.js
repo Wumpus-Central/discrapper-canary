@@ -32,7 +32,7 @@ let o = (e) => {
                     });
             }
             return e;
-        })({}, e)),
+        })({ "data-migration-pending": !0 }, e)),
         (n = n =
             {
                 "aria-label": a.intl.string(a.t.cpT0Cg),

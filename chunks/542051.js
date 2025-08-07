@@ -77,7 +77,7 @@ let g = (e) => {
             var e, n, r;
             let i = (0, c.kG)(t),
                 o = (0, c.$G)(i),
-                a = null != (n = o.content) ? n : "";
+                a = null != (n = (0, c.UP)(o)) ? n : "";
             return {
                 filterCount: null != (r = null == (e = o.channel_id) ? void 0 : e.length) ? r : 0,
                 isQueryEmpty: 0 === a.length,

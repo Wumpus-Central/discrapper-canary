@@ -82,6 +82,7 @@ function m(e, t) {
                             animatedUrl: p.Z,
                         },
                         skuIds: a.z[e],
+                        viewCta: d.intl.string(u.default["/egwJC"]),
                     };
                 }
             },

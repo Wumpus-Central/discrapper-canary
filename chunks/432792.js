@@ -103,6 +103,7 @@ let j = () => (0, g.Lk)(document.body.style.getPropertyValue("--custom-app-panel
             align: h = "bottom",
         } = e;
         return (0, r.jsx)(f.Z, {
+            "data-migration-pending": !0,
             dismissibleContent: o.z.COLLECTIBLES_NAMEPLATE_SHOP_COACHMARK,
             inlineArt: !0,
             tryItText: i,
