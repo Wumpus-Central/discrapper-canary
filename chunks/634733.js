@@ -1,11 +1,12 @@
-a.d(t, { w6: () => x }), a(388685), a(642613), a(539854);
+a.d(t, { w6: () => p }), a(388685), a(642613), a(539854);
 var n = a(296009),
     r = a(224706),
-    l = a(187162),
-    i = a(958521),
-    s = a(570911),
-    o = a(247397);
-function c(e) {
+    l = a(592183),
+    i = a(224724),
+    s = a(958521),
+    o = a(570911),
+    c = a(247397);
+function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var a = null != arguments[t] ? arguments[t] : {},
             n = Object.keys(a);
@@ -30,7 +31,7 @@ function c(e) {
     }
     return e;
 }
-function d(e, t) {
+function u(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -48,63 +49,63 @@ function d(e, t) {
         e
     );
 }
-function u(e) {
+function m(e) {
     return e[Math.floor(Math.random() * e.length)];
 }
-function m() {
+function x() {
     var e, t;
     let a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : new Set(),
-        n = s.J6.filter((e) => !a.has(e));
+        n = o.J6.filter((e) => !a.has(e));
     return {
-        applicationId: u(n.length > 0 ? n : s.J6),
-        comment: Math.random() > 0.5 ? u(i.x) : void 0,
+        applicationId: m(n.length > 0 ? n : o.J6),
+        comment: Math.random() > 0.5 ? m(s.x) : void 0,
         tags:
             Math.random() > 0.3
-                ? ((e = i.T),
+                ? ((e = s.T),
                   (t = Math.floor(3 * Math.random()) + 1),
                   [...e].sort(() => 0.5 - Math.random()).slice(0, t))
                 : void 0,
     };
 }
-function x(e) {
+function p(e) {
     var t;
     let a,
-        i = null != (t = l.Z.getOverrideWidgets()) ? t : [];
+        s = null != (t = i.Z.getOverrideWidgets()) ? t : [];
     a =
         e === n.l.FAVORITE_GAMES
-            ? m()
+            ? x()
             : (function (e, t) {
                   let a = Math.floor(Math.random() * e) + 1,
                       n = new Set();
                   return Array.from({ length: a }, () => {
-                      let e = m(n);
+                      let e = x(n);
                       return n.add(e.applicationId), e;
                   });
-              })(o.Xe[e]);
-    let s = (function (e, t) {
+              })(c.Xe[e]);
+    let o = (function (e, t) {
         let a = e.filter((e) => e.type !== t.type);
-        return [t, ...a].sort((e, t) => o.rR.indexOf(e.type) - o.rR.indexOf(t.type));
+        return [t, ...a].sort((e, t) => c.rR.indexOf(e.type) - c.rR.indexOf(t.type));
     })(
-        i,
+        s,
         (function (e, t) {
             let a = { id: e };
             return e === n.l.FAVORITE_GAMES
-                ? d(c({}, a), {
+                ? u(d({}, a), {
                       type: n.l.FAVORITE_GAMES,
                       game: t,
                   })
-                : d(c({}, a), {
+                : u(d({}, a), {
                       type: e,
                       games: t,
                   });
         })(e, a),
     );
-    l.Z.setOverrideWidgets(s);
-    let u = [];
+    l.Z.setOverrideWidgets(o);
+    let m = [];
     e === n.l.FAVORITE_GAMES
-        ? u.push(a.applicationId)
+        ? m.push(a.applicationId)
         : a.forEach((e) => {
-              u.push(e.applicationId);
+              m.push(e.applicationId);
           }),
-        r.Z.getDetectableGamesSupplemental(u);
+        r.Z.getDetectableGamesSupplemental(m);
 }

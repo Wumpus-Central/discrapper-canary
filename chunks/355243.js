@@ -9,10 +9,10 @@ var r = n(255367),
     u = n(604162),
     d = n(420212),
     m = n(650762);
-function f(e, t, n) {
+function p(e, t, n) {
     return n * (Math.max(e - t.left, 0) / t.width);
 }
-function p(e, t, n) {
+function f(e, t, n) {
     return n.left + (e / t) * n.width;
 }
 function v(e) {
@@ -37,7 +37,7 @@ function v(e) {
             (R.current = e), _(e);
         };
     l.useEffect(() => {
-        null != h && (null == O ? T(null) : T(p(O, g, h)));
+        null != h && (null == O ? T(null) : T(f(O, g, h)));
     }, [h, O, g]);
     let I = (0, c.Z)((e) => {
             N(e.contentRect);
@@ -64,11 +64,11 @@ function v(e) {
             },
             [C, S],
         ),
-        L = null != j && null != h ? f(j, h, g) : 0,
+        L = null != j && null != h ? p(j, h, g) : 0,
         M = (0, u.yv)(L),
-        V = null != h ? h.right - p((t / 100) * g, g, h) : null,
+        V = null != h ? h.right - f((t / 100) * g, g, h) : null,
         B = null != j && null != h ? h.right - j : null,
-        F = null != x && null != h ? h.right - x : null;
+        Z = null != x && null != h ? h.right - x : null;
     return (0, r.jsxs)("div", {
         className: m.cont,
         ref: k,
@@ -77,7 +77,7 @@ function v(e) {
                 className: i()(m.hitboxArea, { [m.interactionEnabled]: o }),
                 ignoreKeyPress: !0,
                 onClick: (e) => {
-                    o && null != b && b(f(e.clientX, e.currentTarget.getBoundingClientRect(), g));
+                    o && null != b && b(p(e.clientX, e.currentTarget.getBoundingClientRect(), g));
                 },
                 onMouseEnter: (e) => {
                     o && (null != k.current && N(k.current.getBoundingClientRect()), P(!0), A(e));
@@ -113,13 +113,13 @@ function v(e) {
                               ),
                           ),
                     !o &&
-                        null != F &&
-                        F > 0 &&
+                        null != Z &&
+                        Z > 0 &&
                         (0, r.jsx)("div", {
                             className: m.seekableBar,
                             style: {
-                                right: null != F ? "".concat(F, "px") : "auto",
-                                opacity: +(null != F),
+                                right: null != Z ? "".concat(Z, "px") : "auto",
+                                opacity: +(null != Z),
                             },
                         }),
                     (0, r.jsx)(a.Exd, {

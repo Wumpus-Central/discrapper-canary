@@ -17,8 +17,8 @@ var l = n(442837),
     j = n(78806),
     h = n(900927),
     y = n(678738),
-    x = n(179828),
-    O = n(228168),
+    O = n(179828),
+    x = n(228168),
     v = n(388032),
     _ = n(349966);
 function I(e) {
@@ -42,11 +42,11 @@ function I(e) {
                     setLineClamp: !1,
                 }),
             (null == I ? void 0 : I.guildId) != null &&
-                (0, r.jsx)(x.Z, {
+                (0, r.jsx)(O.Z, {
                     user: t,
                     currentUser: n,
                     guildId: I.guildId,
-                    scrollIntoView: P === O.Tb.ROLES,
+                    scrollIntoView: P === x.Tb.ROLES,
                 }),
             t.isProvisional &&
                 (0, r.jsx)(y.Z, {
@@ -68,13 +68,13 @@ function I(e) {
                 children: (0, r.jsx)(h.Z, {
                     userId: t.id,
                     guildId: null == I ? void 0 : I.guildId,
-                    tooltipDelay: O.vB,
+                    tooltipDelay: x.vB,
                 }),
             }),
             w.length > 0 &&
                 (0, r.jsx)(y.Z, {
                     heading: v.intl.string(v.t["3fe7U1"]),
-                    scrollIntoView: P === O.Tb.CONNECTIONS,
+                    scrollIntoView: P === x.Tb.CONNECTIONS,
                     children: (0, r.jsx)(b.ZP, {
                         connectedAccounts: w,
                         className: _.connections,
@@ -103,11 +103,11 @@ function I(e) {
                 }),
             (0, r.jsx)(y.Z, {
                 heading: v.intl.string(v.t["mQKv+v"]),
-                scrollIntoView: P === O.Tb.NOTE,
+                scrollIntoView: P === x.Tb.NOTE,
                 children: (0, r.jsx)(i.Z, {
                     userId: t.id,
                     className: _.note,
-                    autoFocus: P === O.Tb.NOTE,
+                    autoFocus: P === x.Tb.NOTE,
                     onUpdate: () => Z({ action: "SET_NOTE" }),
                 }),
             }),

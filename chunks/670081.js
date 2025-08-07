@@ -21,6 +21,7 @@ var r = (function (e) {
         (e[(e.EXPERIMENTAL_TARGETING_TRAITS = 20)] = "EXPERIMENTAL_TARGETING_TRAITS"),
         (e[(e.DO_NOT_DISPLAY = 21)] = "DO_NOT_DISPLAY"),
         (e[(e.EXTERNAL_DIALOG = 22)] = "EXTERNAL_DIALOG"),
+        (e[(e.MOBILE_ONLY_QUEST_PUSH_TO_MOBILE = 23)] = "MOBILE_ONLY_QUEST_PUSH_TO_MOBILE"),
         e
     );
 })({});

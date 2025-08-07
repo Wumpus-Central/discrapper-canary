@@ -60,8 +60,10 @@ function O(e) {
                 modalType: h.it.NSFW_CHANNEL_UNDERAGE,
                 onAgree: C,
                 onDisagree: v,
-                title: _.intl.string(_.t.NEabBQ),
-                description: _.intl.format(_.t["2kHZen"], { helpURL: b.Z.getArticleURL(y.BhN.NSFW_AGE_GATING) }),
+                title: _.intl.string(S ? _.t["H0SG/v"] : _.t.NEabBQ),
+                description: _.intl.format(S ? _.t["6++3cX"] : _.t["2kHZen"], {
+                    helpURL: b.Z.getArticleURL(y.BhN.NSFW_AGE_GATING),
+                }),
                 agreement: null,
                 disagreement: _.intl.string(_.t["/g10LC"]),
                 imageClassName: j.ageGatedImage,

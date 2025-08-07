@@ -1,21 +1,21 @@
-t.d(r, { x: () => x });
-var n = t(255367);
-t(73800);
-var i = t(512722),
-    o = t.n(i),
-    a = t(780384),
-    l = t(755721),
-    s = t(410030),
-    d = t(807163),
-    C = t(74538),
-    c = t(987209),
-    u = t(563132),
-    p = t(409813),
-    _ = t(614223),
-    f = t(388032),
-    m = t(959803);
+r.d(t, { x: () => x });
+var n = r(255367);
+r(73800);
+var i = r(512722),
+    o = r.n(i),
+    a = r(780384),
+    l = r(755721),
+    s = r(410030),
+    d = r(807163),
+    C = r(74538),
+    c = r(987209),
+    u = r(563132),
+    p = r(409813),
+    _ = r(614223),
+    f = r(388032),
+    m = r(959803);
 function x(e) {
-    let { handleStepChange: r, handleClose: t } = e,
+    let { handleStepChange: t, handleClose: r } = e,
         i = (0, s.ZP)(),
         {
             activeSubscription: x,
@@ -44,19 +44,19 @@ function x(e) {
                 children: [
                     (0, n.jsx)(l.zx, {
                         onClick: () => {
-                            E ? (j((0, _.nA)(h, x)), r(p.h8.REVIEW)) : r(p.h8.PLAN_SELECT);
+                            E ? (j((0, _.nA)(h, x)), t(p.h8.REVIEW)) : t(p.h8.PLAN_SELECT);
                         },
                         children: f.intl.string(f.t["3PatS0"]),
                     }),
                     (0, n.jsx)(l.zx, {
                         look: l.zx.Looks.LINK,
                         color: (0, a.wj)(i) ? l.zx.Colors.WHITE : l.zx.Colors.PRIMARY,
-                        onClick: t,
+                        onClick: r,
                         children: f.intl.string(f.t.h9tkAA),
                     }),
                 ],
             }),
-            onClose: t,
+            onClose: r,
             isDowngrade: !0,
         })
     );

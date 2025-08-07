@@ -2,7 +2,7 @@ n.d(t, { Z: () => c });
 var r = n(379405),
     l = n(296009),
     o = n(442837),
-    i = n(187162),
+    i = n(224724),
     a = n(570911);
 function c() {
     let e = (0, o.e7)([i.Z], () => i.Z.getOverrideWidgets());

@@ -1,9 +1,9 @@
-a.d(t, { Z: () => i });
-var n = a(951516),
-    r = a(780603);
-function i(e, t, a) {
-    (0, n.Z)(2, arguments);
-    var i = (0, r.Z)(e, a),
-        o = (0, r.Z)(t, a);
-    return i.getTime() === o.getTime();
+n.d(i, { Z: () => a });
+var o = n(951516),
+    t = n(780603);
+function a(e, i, n) {
+    (0, o.Z)(2, arguments);
+    var a = (0, t.Z)(e, n),
+        r = (0, t.Z)(i, n);
+    return a.getTime() === r.getTime();
 }

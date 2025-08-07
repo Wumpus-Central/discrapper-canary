@@ -17,8 +17,8 @@ var l = n(481060),
     j = n(530),
     h = n(871604),
     y = n(952124),
-    x = n(53558),
-    O = n(544989),
+    O = n(53558),
+    x = n(544989),
     v = n(30556),
     _ = n(4517),
     I = n(740628),
@@ -35,9 +35,9 @@ function S(e) {
             channelId: A,
             messageId: w,
             roleId: C,
-            sessionId: G,
-            initialSection: L,
-            initialSubsection: R,
+            sessionId: R,
+            initialSection: G,
+            initialSubsection: L,
             transitionState: M,
             openedAt: D,
             onClose: k,
@@ -51,7 +51,7 @@ function S(e) {
         J = (0, d.ZB)({
             layout: "MODAL",
             userId: t.id,
-            sourceSessionId: G,
+            sourceSessionId: R,
             guildId: U,
             channelId: A,
             messageId: w,
@@ -85,7 +85,7 @@ function S(e) {
                         displayProfile: F,
                         themeType: E.lY.MODAL,
                         children: [
-                            (0, r.jsx)(O.Z, {
+                            (0, r.jsx)(x.Z, {
                                 children: (0, r.jsx)(y.Z, {
                                     user: t,
                                     guildId: U,
@@ -132,7 +132,7 @@ function S(e) {
                                                         onClose: o.Z.popAll,
                                                         tooltipContainerClassName: T.messageIconButton,
                                                     }),
-                                                    (0, r.jsx)(x.Z, {
+                                                    (0, r.jsx)(O.Z, {
                                                         user: t,
                                                         guildId: U,
                                                     }),
@@ -168,8 +168,8 @@ function S(e) {
                                         displayProfile: F,
                                         guildId: U,
                                         items: H,
-                                        initialSection: null != L ? L : E.oh.BOT_INFO,
-                                        initialSubsection: R,
+                                        initialSection: null != G ? G : E.oh.BOT_INFO,
+                                        initialSubsection: L,
                                         onClose: k,
                                     }),
                                 ],

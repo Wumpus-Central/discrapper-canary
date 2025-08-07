@@ -15,11 +15,11 @@ function g(e) {
     let { user: t, guildId: n, channelId: g, onClose: b } = e,
         { mutualFriends: j } = (0, s.Z)(t),
         { analyticsLocations: h } = (0, a.ZP)(),
-        { context: y, trackUserProfileAction: x } = (0, c.KZ)(),
-        O = (0, i.Z)();
+        { context: y, trackUserProfileAction: O } = (0, c.KZ)(),
+        x = (0, i.Z)();
     l.useEffect(() => {
-        (0, d.Z)(t.id, O);
-    }, [t.id, O]);
+        (0, d.Z)(t.id, x);
+    }, [t.id, x]);
     let v = (e) => {
         var t, n;
         (0, u.openUserProfileModal)(
@@ -98,7 +98,7 @@ function g(e) {
                                 guildId: n,
                                 channelId: g,
                                 onSelect: () => {
-                                    null == b || b(), x({ action: "PRESS_MUTUAL_FRIEND" }), v(l.id);
+                                    null == b || b(), O({ action: "PRESS_MUTUAL_FRIEND" }), v(l.id);
                                 },
                             },
                             t,

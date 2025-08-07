@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => g });
 var r = n(255367);
 n(73800);
 var i = n(120356),
@@ -7,113 +7,122 @@ var i = n(120356),
     s = n(129861),
     l = n(406943),
     c = n(385499),
-    u = n(821795),
-    d = n(892567),
-    f = n(172751),
-    _ = n(228168),
-    p = n(388032),
-    h = n(438361);
-function m(e) {
+    u = n(181430),
+    d = n(821795),
+    f = n(892567),
+    _ = n(172751),
+    p = n(228168),
+    h = n(388032),
+    m = n(438361);
+function g(e) {
     let {
             user: t,
             usernameIcon: n,
             tags: i,
-            nickname: m,
-            nicknameIcons: g,
-            pronouns: E,
-            className: b,
-            tagClassName: y,
-            isTryItOut: O,
-            onOpenProfile: v,
-            onClose: I,
-            nicknameVariant: T = "heading-lg/bold",
+            nickname: g,
+            nicknameIcons: E,
+            pronouns: b,
+            className: y,
+            tagClassName: O,
+            isTryItOut: v,
+            onOpenProfile: I,
+            onClose: T,
+            nicknameVariant: S = "heading-lg/bold",
         } = e,
-        S = (e) =>
-            null == v
+        A = (e) =>
+            null == I
                 ? e
                 : (0, r.jsx)(a.kL8, {
-                      onClick: v,
-                      className: h.clickableUsername,
-                      "aria-label": p.intl.string(p.t["+Xp3ho"]),
+                      onClick: I,
+                      className: m.clickableUsername,
+                      "aria-label": h.intl.string(h.t["+Xp3ho"]),
                       children: e,
                   }),
-        A = null != E && E.length > 0,
-        N = (0, l.D)(t);
+        N = null != b && b.length > 0,
+        C = (0, l.D)(t),
+        R = (0, u.Y)({ location: "UserProfileUsername" }) && null != t.displayNameStyles;
     return (0, r.jsxs)("div", {
-        className: o()(h.container, { [h.bot]: null != N }, b),
+        className: o()(m.container, { [m.bot]: null != C }, y),
         children: [
             (0, r.jsxs)("div", {
-                className: h.usernameRow,
+                className: m.usernameRow,
                 children: [
-                    S(
-                        (0, r.jsx)(a.Text, {
-                            className: h.nickname,
-                            variant: T,
-                            children: (0, r.jsx)(d.Z, {
-                                userName: m,
-                                displayNameStyles: t.displayNameStyles,
-                                effectDisplayType: u.F.ANIMATED,
-                                loop: !0,
-                                inProfile: !0,
-                            }),
-                        }),
+                    A(
+                        R
+                            ? (0, r.jsx)(a.Text, {
+                                  variant: S,
+                                  children: (0, r.jsx)(f.Z, {
+                                      userName: g,
+                                      displayNameStyles: t.displayNameStyles,
+                                      effectDisplayType: d.F.ANIMATED,
+                                      textClassName: m.nicknameWithDisplayNameStyles,
+                                      shouldWrap: !0,
+                                      loop: !0,
+                                      inProfile: !0,
+                                  }),
+                              })
+                            : (0, r.jsx)(a.Text, {
+                                  className: m.nickname,
+                                  variant: S,
+                                  children: g,
+                              }),
                     ),
-                    null != N &&
+                    null != C &&
                         (0, r.jsx)(c.Z, {
-                            type: N,
+                            type: C,
                             verified: t.isVerifiedBot(),
                         }),
-                    null != g &&
+                    null != E &&
                         (0, r.jsx)("div", {
-                            className: h.nicknameIcons,
-                            children: g,
+                            className: m.nicknameIcons,
+                            children: E,
                         }),
                 ],
             }),
             (0, r.jsxs)("div", {
-                className: o()(h.tags, {
-                    [h.pronouns]: A,
-                    [h.bot]: null != N,
+                className: o()(m.tags, {
+                    [m.pronouns]: N,
+                    [m.bot]: null != C,
                 }),
                 children: [
                     !t.isProvisional &&
-                        S(
+                        A(
                             (0, r.jsx)(s.Z, {
                                 user: t,
                                 usernameIcon: n,
                                 forceUsername: !0,
-                                forcePomelo: O,
-                                className: o()(h.userTag, y),
-                                usernameClass: h.userTagUsername,
-                                discriminatorClass: h.userTagDiscriminator,
+                                forcePomelo: v,
+                                className: o()(m.userTag, O),
+                                usernameClass: m.userTagUsername,
+                                discriminatorClass: m.userTagDiscriminator,
                                 hideBotTag: !0,
                             }),
                         ),
-                    A &&
+                    N &&
                         (0, r.jsxs)(r.Fragment, {
                             children: [
                                 (0, r.jsx)("div", {
                                     "aria-hidden": "true",
-                                    className: h.dotSpacer,
+                                    className: m.dotSpacer,
                                 }),
                                 (0, r.jsx)(a.DY3, {
-                                    className: h.pronounsTooltip,
-                                    text: p.intl.string(p.t.GI2A8P),
-                                    delay: _.vB,
+                                    className: m.pronounsTooltip,
+                                    text: h.intl.string(h.t.GI2A8P),
+                                    delay: p.vB,
                                     children: (0, r.jsx)(a.Text, {
-                                        className: o()(h.pronounsText, y),
+                                        className: o()(m.pronounsText, O),
                                         variant: "text-sm/medium",
                                         color: "header-primary",
-                                        children: E,
+                                        children: b,
                                     }),
                                 }),
                             ],
                         }),
-                    (0, r.jsx)(f.ZP, {
+                    (0, r.jsx)(_.ZP, {
                         userId: t.id,
-                        onClose: I,
-                        containerClassName: h.guildTagContainer,
-                        className: h.guildTag,
+                        onClose: T,
+                        containerClassName: m.guildTagContainer,
+                        className: m.guildTag,
                     }),
                     i,
                 ],

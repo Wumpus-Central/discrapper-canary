@@ -54,8 +54,8 @@ function p(e) {
     let { user: t, guildId: n, channelId: p, displayProfile: m, onClose: g } = e,
         { analyticsLocations: b, sourceAnalyticsLocations: j } = (0, o.ZP)(),
         { context: h, trackUserProfileAction: y } = (0, a.KZ)(),
-        x = (0, s.ZP)(t.id, n);
-    return (null == x ? void 0 : x.guildId) == null || null == h
+        O = (0, s.ZP)(t.id, n);
+    return (null == O ? void 0 : O.guildId) == null || null == h
         ? null
         : (null == m ? void 0 : m.guildId) != null
           ? (0, r.jsx)(l.sNh, {

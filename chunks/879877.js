@@ -38,16 +38,16 @@ function f(e) {
         [m, g] = l.useState([]),
         [b, j] = l.useState(296),
         [h, y] = l.useState(!1),
-        x = l.useRef(null),
-        O = l.useRef(0);
+        O = l.useRef(null),
+        x = l.useRef(0);
     l.useLayoutEffect(() => {
-        O.current = 0;
+        x.current = 0;
     }, [JSON.stringify(t)]);
     let v = l.useRef(null);
     l.useLayoutEffect(() => {
         if (h || null == v.current) return;
         let e = new ResizeObserver(() => {
-            let e = u(x.current),
+            let e = u(O.current),
                 t = [],
                 r = 296 - e;
             for (let e = 0; e < 2; e++) {
@@ -56,7 +56,7 @@ function f(e) {
                     let o = p[r],
                         i = n.current[o.tag];
                     if (null == i) {
-                        0 === O.current && t.push(o);
+                        0 === x.current && t.push(o);
                         continue;
                     }
                     let a = Math.min(i.getBoundingClientRect().width, l);
@@ -64,7 +64,7 @@ function f(e) {
                     (e += a + 4), t.push(o);
                 }
             }
-            g(t.length === m.length ? m : t), j(r), O.current++;
+            g(t.length === m.length ? m : t), j(r), x.current++;
         });
         return (
             e.observe(v.current),
@@ -131,7 +131,7 @@ function f(e) {
                           className: d.buttonContainer,
                           text: s.intl.string(s.t.mriLXF),
                           children: (0, r.jsx)(o.P3F, {
-                              innerRef: x,
+                              innerRef: O,
                               onClick: I,
                               className: d.expandButton,
                               children: (0, r.jsx)(o.Text, {

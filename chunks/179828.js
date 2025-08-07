@@ -16,8 +16,8 @@ var r = n(255367),
     j = n(635042),
     h = n(256226),
     y = n(678738),
-    x = n(314172),
-    O = n(981631),
+    O = n(314172),
+    x = n(981631),
     v = n(388032),
     _ = n(217919);
 function I(e) {
@@ -101,8 +101,8 @@ function Z(e) {
         Z = (0, i.ZP)({
             id: y,
             isEnabled: !0,
-            scrollToStart: O.Cyb,
-            scrollToEnd: O.Cyb,
+            scrollToStart: x.Cyb,
+            scrollToEnd: x.Cyb,
             wrap: !0,
         }),
         N = d.length,
@@ -145,7 +145,7 @@ function Z(e) {
                             children: [
                                 S,
                                 b &&
-                                    (0, r.jsx)(x.Z, {
+                                    (0, r.jsx)(O.Z, {
                                         buttonRef: j,
                                         guild: c,
                                         guildMember: s,
@@ -166,10 +166,10 @@ function N(e) {
         i = E(e, ["user", "currentUser", "guildId"]);
     let { trackUserProfileAction: a } = (0, b.KZ)(),
         h = (0, c.e7)([p.Z], () => p.Z.getGuild(o)),
-        x = (0, c.e7)([u.ZP], () => u.ZP.getMember(o, t.id)),
-        _ = null == x ? void 0 : x.roles,
+        O = (0, c.e7)([u.ZP], () => u.ZP.getMember(o, t.id)),
+        _ = null == O ? void 0 : O.roles,
         N = (0, c.Wu)([f.Z], () => f.Z.getManyRoles(o, null != _ ? _ : []).sort(j.Z), [_, o]),
-        [T] = (0, c.Wu)([m.Z], () => [m.Z.can(O.Plq.MANAGE_ROLES, h), m.Z.getGuildVersion(o)]),
+        [T] = (0, c.Wu)([m.Z], () => [m.Z.can(x.Plq.MANAGE_ROLES, h), m.Z.getGuildVersion(o)]),
         S = l.useCallback(
             (e) => {
                 var n, r;
@@ -190,7 +190,7 @@ function N(e) {
             [_, o, t.id, a],
         );
     if (null == h) return null;
-    let w = T && null != x;
+    let w = T && null != O;
     return 0 !== N.length || w
         ? (0, r.jsx)(
               y.Z,
@@ -199,7 +199,7 @@ function N(e) {
                       user: t,
                       currentUser: n,
                       guild: h,
-                      guildMember: x,
+                      guildMember: O,
                       roles: N,
                       highestRole: g.e9(h, n.id),
                       canManageRoles: T,

@@ -1,4 +1,4 @@
-n.d(e, { default: () => z }), n(388685);
+n.d(e, { default: () => C }), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(512722),
@@ -10,89 +10,89 @@ var r = n(255367),
     f = n(755721),
     d = n(481060),
     m = n(749210),
-    y = n(168107),
-    b = n(480916),
-    h = n(600164),
-    p = n(313201),
-    x = n(592125),
-    _ = n(944486),
-    E = n(594174),
+    E = n(168107),
+    y = n(480916),
+    b = n(600164),
+    h = n(313201),
+    _ = n(592125),
+    p = n(944486),
+    x = n(594174),
     g = n(626135),
     v = n(63063),
-    j = n(771308),
-    A = n(758119),
-    Z = n(622822),
-    N = n(13430),
-    S = n(723359),
-    C = n(981631),
-    R = n(388032),
+    N = n(771308),
+    S = n(758119),
+    A = n(622822),
+    R = n(13430),
+    j = n(723359),
+    Z = n(981631),
+    L = n(388032),
     T = n(951408);
-function z(t) {
+function C(t) {
     let { transitionState: e, source: o } = t,
-        l = (0, u.e7)([E.default], () => E.default.getCurrentUser()),
-        z = (0, u.e7)([_.Z, x.Z], () => x.Z.getChannel(_.Z.getChannelId())),
-        [w, L] = i.useState(null),
-        [k, I] = i.useState(null),
-        [O, M] = i.useState(!1),
-        [G, P] = i.useState(0),
-        F = i.useRef(null),
-        U = i.useRef(null),
-        Y = (0, p.Dt)(),
-        D = (0, Z.Kt)() && o !== S.L0.FAMILY_CENTER,
-        { verifyAgreementButtonText: V, verifyGateDescription: B } = (0, Z.a1)(o),
-        q = o === S.L0.NSFW_SERVER || o === S.L0.NSFW_SERVER_INVITE || o === S.L0.NSFW_SERVER_INVITE_EMBED,
-        W = null != w ? s()().diff(w, "years") : null;
+        l = (0, u.e7)([x.default], () => x.default.getCurrentUser()),
+        C = (0, u.e7)([p.Z, _.Z], () => _.Z.getChannel(p.Z.getChannelId())),
+        [I, z] = i.useState(null),
+        [w, k] = i.useState(null),
+        [M, G] = i.useState(!1),
+        [O, F] = i.useState(0),
+        V = i.useRef(null),
+        P = i.useRef(null),
+        U = (0, h.Dt)(),
+        D = (0, A.Kt)() && o !== j.L0.FAMILY_CENTER,
+        { verifyAgreementButtonText: Y, verifyGateDescription: W } = (0, A.a1)(o),
+        B = o === j.L0.NSFW_SERVER || o === j.L0.NSFW_SERVER_INVITE || o === j.L0.NSFW_SERVER_INVITE_EMBED,
+        q = null != I ? s()().diff(I, "years") : null;
     function K() {
-        if (o === S.L0.NSFW_SERVER_INVITE_EMBED) return void (0, A.qV)(o);
-        let t = null == z ? void 0 : z.getGuildId();
-        m.Z.nsfwReturnToSafety(t), (0, A.qV)(o);
+        if (o === j.L0.NSFW_SERVER_INVITE_EMBED) return void (0, S.qV)(o);
+        let t = null == C ? void 0 : C.getGuildId();
+        m.Z.nsfwReturnToSafety(t), (0, S.qV)(o);
     }
     async function X() {
-        a()(null != w, "Cannot submit null birthday.");
+        a()(null != I, "Cannot submit null birthday.");
         try {
-            return I(null), M(!0), await (0, j.Av)(w, o);
+            return k(null), G(!0), await (0, N.Av)(I, o);
         } catch (e) {
-            if (null != e.body && null != e.body.date_of_birth) (0, A.C8)(o, e.body.date_of_birth);
+            if (null != e.body && null != e.body.date_of_birth) (0, S.C8)(o, e.body.date_of_birth);
             else {
                 var t;
                 (null == e || null == (t = e.body) ? void 0 : t.username) != null
-                    ? I(R.intl.string(R.t["TGg/2t"]))
-                    : I(null == e ? void 0 : e.body.message),
-                    M(!1);
+                    ? k(L.intl.string(L.t["TGg/2t"]))
+                    : k(null == e ? void 0 : e.body.message),
+                    G(!1);
             }
         }
     }
-    async function Q() {
-        if ((a()(null != W, "Cannot submit if we haven't been able to calculate age."), W < 18)) return void P(1);
+    async function J() {
+        if ((a()(null != q, "Cannot submit if we haven't been able to calculate age."), q < 18)) return void F(1);
         await X();
     }
-    async function J(t) {
-        t.preventDefault(), O || null == w || (await Q());
+    async function Q(t) {
+        t.preventDefault(), M || null == I || (await J());
     }
     async function $() {
-        null == (await X()) && P(0);
+        null == (await X()) && F(0);
     }
     i.useEffect(() => {
-        null == l || null == l.nsfwAllowed || D || (0, A.qq)(o);
+        null == l || null == l.nsfwAllowed || D || (0, S.qq)(o);
     }),
         i.useEffect(() => {
-            g.default.track(C.rMx.AGE_GATE_ACTION, {
+            g.default.track(Z.rMx.AGE_GATE_ACTION, {
                 source: o,
-                action: S.Al.AGE_GATE_OPEN,
+                action: j.Al.AGE_GATE_OPEN,
             });
         }, [o]);
     let H = i.useCallback(
             (t) => {
-                L(t);
+                z(t);
             },
-            [L],
+            [z],
         ),
         tt = i.useCallback(() => {
             var t;
-            null == (t = U.current) || t.focus();
-        }, [U]),
+            null == (t = P.current) || t.focus();
+        }, [P]),
         te = i.useCallback(() => {
-            y.Z.showAgeVerificationGetStartedModal(b.cU.NSFW_AGE_GATE);
+            E.Z.showAgeVerificationGetStartedModal(y.cU.NSFW_AGE_GATE);
         }, []);
     return D
         ? (0, r.jsxs)(d.Y0X, {
@@ -113,23 +113,23 @@ function z(t) {
                               (0, r.jsx)(d.X6q, {
                                   variant: "heading-xl/semibold",
                                   className: T.title,
-                                  children: q ? R.intl.string(R.t.xi46lp) : R.intl.string(R.t.ZmwvDQ),
+                                  children: B ? L.intl.string(L.t.xi46lp) : L.intl.string(L.t.ZmwvDQ),
                               }),
                               (0, r.jsx)(d.Text, {
                                   color: "header-secondary",
                                   variant: "text-sm/normal",
-                                  children: B,
+                                  children: W,
                               }),
                           ],
                       }),
                   }),
                   (0, r.jsxs)(d.mzw, {
-                      justify: h.Z.Justify.BETWEEN,
+                      justify: b.Z.Justify.BETWEEN,
                       children: [
                           (0, r.jsx)(d.zxk, {
                               variant: "primary",
                               size: "sm",
-                              text: V,
+                              text: Y,
                               onClick: te,
                           }),
                           (0, r.jsx)(f.zx, {
@@ -137,29 +137,44 @@ function z(t) {
                               size: f.zx.Sizes.NONE,
                               color: f.zx.Colors.PRIMARY,
                               onClick: K,
-                              children: R.intl.string(R.t.f3Pet7),
+                              children: L.intl.string(L.t.f3Pet7),
                           }),
                       ],
                   }),
               ],
           })
-        : 0 === G
+        : 0 === O
           ? (function () {
-                let t = o === S.L0.FAMILY_CENTER ? R.intl.string(R.t.M7mt7u) : R.intl.string(R.t.F8otRk),
+                let t = (() => {
+                        switch (o) {
+                            case j.L0.NSFW_SERVER:
+                            case j.L0.NSFW_SERVER_INVITE:
+                            case j.L0.NSFW_SERVER_INVITE_EMBED:
+                                return L.intl.string(L.t.vAymlJ);
+                            case j.L0.FAMILY_CENTER:
+                                return L.intl.string(L.t.M7mt7u);
+                            default:
+                                return L.intl.string(L.t.F8otRk);
+                        }
+                    })(),
                     i = (() => {
                         switch (o) {
-                            case S.L0.FAMILY_CENTER:
-                                return R.intl.string(R.t.mhUrKS);
-                            case S.L0.DEEP_LINK_PROMPT:
-                                return R.intl.format(R.t.iyhg2t, { helpURL: v.Z.getArticleURL(C.BhN.AGE_GATE) });
+                            case j.L0.NSFW_SERVER:
+                            case j.L0.NSFW_SERVER_INVITE:
+                            case j.L0.NSFW_SERVER_INVITE_EMBED:
+                                return L.intl.format(L.t["6ejLER"], { helpURL: v.Z.getArticleURL(Z.BhN.AGE_GATE) });
+                            case j.L0.FAMILY_CENTER:
+                                return L.intl.string(L.t.mhUrKS);
+                            case j.L0.DEEP_LINK_PROMPT:
+                                return L.intl.format(L.t.iyhg2t, { helpURL: v.Z.getArticleURL(Z.BhN.AGE_GATE) });
                             default:
-                                return R.intl.format(R.t.n3QjDA, { helpURL: v.Z.getArticleURL(C.BhN.AGE_GATE) });
+                                return L.intl.format(L.t.n3QjDA, { helpURL: v.Z.getArticleURL(Z.BhN.AGE_GATE) });
                         }
                     })();
                 return (0, r.jsxs)(d.Y0X, {
                     transitionState: e,
                     size: d.CgR.SMALL,
-                    "aria-labelledby": Y,
+                    "aria-labelledby": U,
                     parentComponent: "ExistingUserAgeGatePrompt",
                     children: [
                         (0, r.jsxs)(d.hzk, {
@@ -175,7 +190,7 @@ function z(t) {
                                         (0, r.jsx)(d.X6q, {
                                             variant: "heading-xl/semibold",
                                             className: T.title,
-                                            id: Y,
+                                            id: U,
                                             children: t,
                                         }),
                                         (0, r.jsx)(d.Text, {
@@ -186,39 +201,39 @@ function z(t) {
                                     ],
                                 }),
                                 (0, r.jsx)("form", {
-                                    onSubmit: J,
-                                    children: (0, r.jsx)(N.Z, {
-                                        label: R.intl.string(R.t.rhBeKS),
+                                    onSubmit: Q,
+                                    children: (0, r.jsx)(R.Z, {
+                                        label: L.intl.string(L.t.rhBeKS),
                                         wrapperClassName: T.birthday,
                                         name: "date_of_birth",
                                         onChange: H,
                                         onPopulated: tt,
-                                        error: k,
-                                        value: w,
-                                        ref: F,
+                                        error: w,
+                                        value: I,
+                                        ref: V,
                                         autoFocus: !0,
                                     }),
                                 }),
                             ],
                         }),
                         (0, r.jsxs)(d.mzw, {
-                            justify: h.Z.Justify.BETWEEN,
+                            justify: b.Z.Justify.BETWEEN,
                             children: [
                                 (0, r.jsx)(d.zxk, {
                                     variant: "primary",
                                     size: "sm",
-                                    text: R.intl.string(R.t.uBFuoq),
-                                    buttonRef: U,
-                                    loading: O,
-                                    disabled: null == w,
-                                    onClick: Q,
+                                    text: L.intl.string(L.t.uBFuoq),
+                                    buttonRef: P,
+                                    loading: M,
+                                    disabled: null == I,
+                                    onClick: J,
                                 }),
                                 (0, r.jsx)(f.zx, {
                                     look: f.zx.Looks.LINK,
                                     size: f.zx.Sizes.NONE,
                                     color: f.zx.Colors.PRIMARY,
                                     onClick: K,
-                                    children: R.intl.string(R.t["1MrpWF"]),
+                                    children: L.intl.string(L.t["1MrpWF"]),
                                 }),
                             ],
                         }),
@@ -228,7 +243,7 @@ function z(t) {
           : (0, r.jsxs)(d.Y0X, {
                 transitionState: d.Dvm.ENTERED,
                 size: d.CgR.SMALL,
-                "aria-labelledby": Y,
+                "aria-labelledby": U,
                 parentComponent: "ExistingUserAgeGatePrompt",
                 children: [
                     (0, r.jsx)(d.hzk, {
@@ -238,13 +253,13 @@ function z(t) {
                                 (0, r.jsx)(d.X6q, {
                                     variant: "heading-xl/semibold",
                                     className: T.confirmTitle,
-                                    id: Y,
-                                    children: R.intl.format(R.t.wumolZ, { age: W }),
+                                    id: U,
+                                    children: L.intl.format(L.t.wumolZ, { age: q }),
                                 }),
                                 (0, r.jsx)(d.Text, {
                                     color: "header-secondary",
                                     variant: "text-sm/normal",
-                                    children: R.intl.format(R.t.n3QjDA, { helpURL: v.Z.getArticleURL(C.BhN.AGE_GATE) }),
+                                    children: L.intl.format(L.t.n3QjDA, { helpURL: v.Z.getArticleURL(Z.BhN.AGE_GATE) }),
                                 }),
                             ],
                         }),
@@ -256,12 +271,12 @@ function z(t) {
                                 look: f.zx.Looks.LINK,
                                 size: f.zx.Sizes.NONE,
                                 color: f.zx.Colors.PRIMARY,
-                                onClick: () => P(0),
-                                children: R.intl.string(R.t.cfYCra),
+                                onClick: () => F(0),
+                                children: L.intl.string(L.t.cfYCra),
                             }),
                             (0, r.jsx)(d.zxk, {
                                 variant: "primary",
-                                text: R.intl.string(R.t["6tahio"]),
+                                text: L.intl.string(L.t["6tahio"]),
                                 onClick: $,
                             }),
                         ],

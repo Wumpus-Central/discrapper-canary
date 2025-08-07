@@ -1,120 +1,123 @@
-t.d(r, { Z: () => h }), t(388685);
-var n = t(255367),
-    i = t(73800),
-    o = t(120356),
-    a = t.n(o),
-    l = t(481060),
-    s = t(570140),
-    d = t(70097),
-    C = t(164275),
-    c = t(585483),
-    u = t(987209),
-    p = t(563132),
-    _ = t(45572),
-    f = t(402426),
-    m = t(981631),
-    x = t(794503);
-let h = (e) => {
-    let { children: r, isConfirmationStep: t } = e,
-        [o, h] = (0, i.useState)("entry"),
-        j = (0, i.useRef)(null),
-        L = (0, i.useRef)(null),
-        b = () => {
-            if ((h("exit"), null != L.current)) {
+r.d(t, { Z: () => L }), r(388685);
+var n = r(255367),
+    i = r(73800),
+    o = r(120356),
+    a = r.n(o),
+    l = r(442837),
+    s = r(481060),
+    d = r(570140),
+    C = r(607070),
+    c = r(70097),
+    u = r(164275),
+    p = r(585483),
+    _ = r(987209),
+    f = r(563132),
+    m = r(45572),
+    x = r(402426),
+    h = r(981631),
+    j = r(794503);
+let L = (e) => {
+    let { children: t, isConfirmationStep: r } = e,
+        o = (0, l.e7)([C.Z], () => C.Z.useReducedMotion),
+        [L, b] = (0, i.useState)("entry"),
+        g = (0, i.useRef)(null),
+        y = (0, i.useRef)(null),
+        S = () => {
+            if ((b("exit"), null != y.current)) {
                 var e;
-                null == (e = L.current) || e.play();
+                null == (e = y.current) || e.play();
             }
         },
-        { isGift: g } = (0, u.wD)(),
-        { wasTier2PremiumBeforePurchase: y, selectedSkuId: S, purchaseState: E } = (0, p.JL)(),
-        [v, I] = (0, i.useState)(!1);
+        { isGift: E } = (0, _.wD)(),
+        { wasTier2PremiumBeforePurchase: v, selectedSkuId: I, purchaseState: w } = (0, f.JL)(),
+        [O, P] = (0, i.useState)(!1);
     (0, i.useEffect)(() => {
-        E === _.A.PURCHASING && I(!0);
-    }, [E]);
-    let w = (0, C.P)(g, !!y, S),
-        { mediaUrls: O, isSuccess: P } = (0, f.Z)(w && v),
-        M = (0, i.useRef)(null),
-        [T, Z] = (0, i.useState)(!1);
+        w === m.A.PURCHASING && P(!0);
+    }, [w]);
+    let M = (0, u.P)(E, !!v, I),
+        { mediaUrls: T, isSuccess: Z } = (0, x.Z)(!o && M && O),
+        A = (0, i.useRef)(null),
+        [R, N] = (0, i.useState)(!1);
     (0, i.useEffect)(() => {
         function e() {
-            Z(!0), b();
+            N(!0), S();
         }
         return (
-            c.S.subscribe(m.CkL.PREMIUM_PAYMENT_MODAL_CLOSED, e),
+            p.S.subscribe(h.CkL.PREMIUM_PAYMENT_MODAL_CLOSED, e),
             () => {
-                c.S.unsubscribe(m.CkL.PREMIUM_PAYMENT_MODAL_CLOSED, e);
+                p.S.unsubscribe(h.CkL.PREMIUM_PAYMENT_MODAL_CLOSED, e);
             }
         );
     }, []);
-    let A = w && t && P;
+    let U = !o && M && r && Z;
     return ((0, i.useEffect)(() => {
-        A &&
-            s.Z.dispatch({
+        U &&
+            d.Z.dispatch({
                 type: "WOW_MOMENT_CONFIRMATION_SET_IS_DISPLAYING_WOW_MOMENT_CONFIRMATION",
-                value: A,
+                value: U,
             });
-    }, [A]),
+    }, [U]),
     (0, i.useEffect)(
         () => () => {
-            s.Z.dispatch({
+            d.Z.dispatch({
                 type: "WOW_MOMENT_CONFIRMATION_SET_IS_DISPLAYING_WOW_MOMENT_CONFIRMATION",
                 value: !1,
             });
         },
         [],
     ),
-    A)
+    U)
         ? (0, n.jsxs)("div", {
               children: [
                   (0, n.jsxs)("div", {
-                      className: x.videoContainer,
+                      className: j.videoContainer,
                       children: [
                           (0, n.jsx)("div", {
-                              className: x.entryAnimationContainer,
-                              children: (0, n.jsx)(d.Z, {
+                              className: j.entryAnimationContainer,
+                              children: (0, n.jsx)(c.Z, {
                                   playsInline: !0,
                                   muted: !0,
                                   autoPlay: !0,
                                   onEnded: () => {
-                                      if ((h("idle"), null != j.current)) {
+                                      if ((b("idle"), null != g.current)) {
                                           var e;
-                                          null == (e = j.current) || e.play();
+                                          null == (e = g.current) || e.play();
                                       }
                                   },
-                                  className: a()(x.video, "entry" === o ? x.visible : x.hidden),
-                                  children: (0, n.jsx)("source", { src: O.modalGlowEntry }),
+                                  className: a()(j.video, "entry" === L ? j.visible : j.hidden),
+                                  children: (0, n.jsx)("source", { src: T.modalGlowEntry }),
                               }),
                           }),
-                          (0, n.jsx)(d.Z, {
-                              ref: j,
+                          (0, n.jsx)(c.Z, {
+                              ref: g,
                               playsInline: !0,
                               muted: !0,
                               loop: !0,
-                              className: a()(x.video, "idle" === o ? x.visible : x.hidden),
-                              children: (0, n.jsx)("source", { src: O.modalGlowIdle }),
+                              className: a()(j.video, "idle" === L ? j.visible : j.hidden),
+                              children: (0, n.jsx)("source", { src: T.modalGlowIdle }),
                           }),
-                          (0, n.jsx)(d.Z, {
-                              ref: L,
+                          (0, n.jsx)(c.Z, {
+                              ref: y,
                               playsInline: !0,
                               muted: !0,
-                              className: a()(x.video, "exit" === o ? x.visible : x.hidden),
-                              children: (0, n.jsx)("source", { src: O.modalGlowExit }),
+                              className: a()(j.video, "exit" === L ? j.visible : j.hidden),
+                              children: (0, n.jsx)("source", { src: T.modalGlowExit }),
                           }),
                       ],
                   }),
                   (0, n.jsx)("div", {
-                      className: x.wowAnimation,
-                      children: (0, n.jsx)(l._dj, {
+                      className: j.wowAnimation,
+                      children: (0, n.jsx)(s._dj, {
                           fit: "layout",
-                          ref: M,
-                          dataBinding: { ExitTrigger: T },
+                          ref: A,
+                          dataBinding: { ExitTrigger: R },
                       }),
                   }),
                   (0, n.jsx)("div", {
-                      className: x.entryAnimationContainer,
-                      children: r,
+                      className: j.entryAnimationContainer,
+                      children: t,
                   }),
               ],
           })
-        : r;
+        : t;
 };

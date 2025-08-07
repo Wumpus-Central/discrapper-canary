@@ -16,8 +16,8 @@ var r = n(255367),
     j = n(848780),
     h = n(907179),
     y = n(228168),
-    x = n(981631),
-    O = n(388032),
+    O = n(981631),
+    x = n(388032),
     v = n(247787);
 function _(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -56,10 +56,10 @@ function I(e) {
             onHide: T,
             sourceAnalyticsLocations: S = [],
         } = e,
-        A = n === x.ME ? void 0 : n,
+        A = n === O.ME ? void 0 : n,
         w = (0, l.e7)([d.Z], () => d.Z.isBlocked(t.id)),
         { analyticsLocations: C } = (0, c.ZP)([...S, w ? a.Z.BLOCKED_PROFILE_MODAL : a.Z.IGNORED_PROFILE_MODAL]),
-        G = (0, f.ZB)({
+        R = (0, f.ZB)({
             layout: "MODAL_V2",
             userId: t.id,
             showGuildProfile: !0,
@@ -68,27 +68,27 @@ function I(e) {
             messageId: P,
             roleId: E,
         }),
-        L = [
+        G = [
             {
                 icon: i.owK,
-                description: O.intl.string(O.t.kcuWvb),
+                description: x.intl.string(x.t.kcuWvb),
             },
             {
                 icon: i.owK,
-                description: O.intl.string(w ? O.t.QxrDY2 : O.t.W6fjkZ),
+                description: x.intl.string(w ? x.t.QxrDY2 : x.t.W6fjkZ),
             },
         ],
-        R = (0, m.ZP)(t.id, A),
-        M = u.ZP.getName(null == R ? void 0 : R.guildId, I, t),
-        D = O.intl.formatToPlainString(O.t.KRe1Fh, { name: M });
+        L = (0, m.ZP)(t.id, A),
+        M = u.ZP.getName(null == L ? void 0 : L.guildId, I, t),
+        D = x.intl.formatToPlainString(x.t.KRe1Fh, { name: M });
     return (0, r.jsx)(c.Gt, {
         value: C,
         children: (0, r.jsx)(f.Mt, {
-            value: G,
+            value: R,
             openedAt: N,
-            fetchStartedAt: null == R ? void 0 : R.fetchStartedAt,
-            fetchEndedAt: null == R ? void 0 : R.fetchEndedAt,
-            isLoaded: null == R ? void 0 : R.isLoaded,
+            fetchStartedAt: null == L ? void 0 : L.fetchStartedAt,
+            fetchEndedAt: null == L ? void 0 : L.fetchEndedAt,
+            isLoaded: null == L ? void 0 : L.isLoaded,
             children: (0, r.jsx)(i.Y0X, {
                 "data-migration-pending": !0,
                 transitionState: Z,
@@ -97,7 +97,7 @@ function I(e) {
                 parentComponent: "RestrictedUserProfileModalV2",
                 children: (0, r.jsxs)(b.Z, {
                     user: t,
-                    displayProfile: R,
+                    displayProfile: L,
                     themeType: y.lY.MODAL_V2,
                     children: [
                         (0, r.jsx)("div", { className: v.background }),
@@ -115,18 +115,18 @@ function I(e) {
                                         (0, r.jsx)(i.X6q, {
                                             variant: "heading-xl/bold",
                                             color: "text-default",
-                                            children: O.intl.string(O.t.b33pLC),
+                                            children: x.intl.string(x.t.b33pLC),
                                         }),
                                         (0, r.jsx)(i.Text, {
                                             variant: "text-md/medium",
                                             color: "text-default",
-                                            children: O.intl.format(w ? O.t.T7QiLi : O.t.MnEow8, { username: M }),
+                                            children: x.intl.format(w ? x.t.T7QiLi : x.t.MnEow8, { username: M }),
                                         }),
                                     ],
                                 }),
                                 (0, r.jsx)("div", {
                                     className: v.safetyTable,
-                                    children: L.map((e, t) => {
+                                    children: G.map((e, t) => {
                                         let { icon: n, description: l } = e;
                                         return (0, r.jsx)(
                                             s.JZ,
@@ -156,7 +156,7 @@ function I(e) {
                                                                     : "VIEW_IGNORED_PROFILE",
                                                                 analyticsLocations: C,
                                                             },
-                                                            G,
+                                                            R,
                                                         ),
                                                     );
                                             },
@@ -171,7 +171,7 @@ function I(e) {
                                                                 action: "DONT_SHOW_AGAIN_IGNORED_PROFILE",
                                                                 analyticsLocations: C,
                                                             },
-                                                            G,
+                                                            R,
                                                         ),
                                                     );
                                             },

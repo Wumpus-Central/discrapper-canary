@@ -115,10 +115,10 @@ function _() {
         j = (0, s.e7)([p.Z], () => p.Z.getKrispSuppressionLevel()),
         [_, y] = r.useState(null),
         C = r.useRef(null),
-        N = r.useRef(null),
-        [O, T] = r.useState(0.5),
+        O = r.useRef(null),
+        [N, E] = r.useState(0.5),
         {
-            krispModels: E,
+            krispModels: T,
             krispModelOverride: S,
             inputMode: P,
             echoCancellation: w,
@@ -127,8 +127,8 @@ function _() {
             vadKrispActivationThreshold: k,
             noiseCancellation: Z,
             noiseSuppression: A,
-            noiseSuppressionSupported: L,
-            noiseCancellationSupported: D,
+            noiseSuppressionSupported: D,
+            noiseCancellationSupported: L,
             noiseCancellationEnableStats: B,
         } = (0, s.cj)([p.Z], () => ({
             krispModels: p.Z.getKrispModels(),
@@ -157,10 +157,10 @@ function _() {
         if ((t && G(), U(), null == F)) return;
         let a = F.createBufferSource();
         (a.buffer = e.audioBuffer),
-            (N.current = F.createGain()),
-            (N.current.gain.value = O),
-            a.connect(N.current),
-            N.current.connect(F.destination),
+            (O.current = F.createGain()),
+            (O.current.gain.value = N),
+            a.connect(O.current),
+            O.current.connect(F.destination),
             (a.loop = !0),
             a.start(),
             (C.current = a),
@@ -171,12 +171,12 @@ function _() {
     }, [U]);
     let V = [];
     return (
-        D &&
+        L &&
             V.push({
                 label: "Krisp",
                 value: "KRISP",
             }),
-        L &&
+        D &&
             V.push({
                 label: "Standard",
                 value: "STANDARD",
@@ -236,7 +236,7 @@ function _() {
                                             d.Z.setKrispModelOverride("");
                                         },
                                         isSelected: (e) => e === S,
-                                        options: E.map((e) => ({
+                                        options: T.map((e) => ({
                                             label: e,
                                             value: e,
                                         })),
@@ -355,9 +355,9 @@ function _() {
                         title: "Volume",
                         tag: c.RB0.H3,
                         children: (0, n.jsx)(c.iRW, {
-                            initialValue: O,
+                            initialValue: N,
                             asValueChanges: function (e) {
-                                null != N.current && ((N.current.gain.value = e), T(e));
+                                null != O.current && ((O.current.gain.value = e), E(e));
                             },
                             minValue: 0,
                             maxValue: 1,

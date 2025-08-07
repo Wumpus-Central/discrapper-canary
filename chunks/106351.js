@@ -52,7 +52,7 @@ let i = {
     GUILD_SYSTEM_CHANNEL: new Set([0, 5]),
     GUILD_PARENTABLE: new Set([0, 2, 5, 10, 11, 12, 13, 14, 15, 16]),
     GUILD_AUTO_MODERATED: new Set([0, 2, 5, 10, 11, 12, 13, 15, 16]),
-    GUILD_BASIC: new Set([0, 2, 4]),
+    GUILD_BASIC: new Set([0, 2, 4, 15]),
     CREATEABLE_GUILD_CHANNELS: new Set([0, 2, 4, 5, 6, 13, 14, 15, 16]),
     MULTI_USER_DMS: new Set([3]),
     ALL_DMS: new Set([1, 3]),

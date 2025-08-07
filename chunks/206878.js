@@ -1,4 +1,4 @@
-a.d(t, { g: () => O }), a(388685), a(35282);
+a.d(t, { g: () => N }), a(388685), a(35282);
 var n = a(73800),
     r = a(281598);
 function l(e) {
@@ -192,7 +192,7 @@ let s = new Set([
         }),
             j(r.aB.AVATAR_DECORATION, t.avatarDecorationFiles, a, n);
     },
-    N = (e, t, a) => {
+    O = (e, t, a) => {
         _({
             files: e,
             addError: a,
@@ -214,7 +214,7 @@ let s = new Set([
                 addWarning: t,
             });
     },
-    O = () => {
+    N = () => {
         let [e, t] = n.useState(!1),
             [a, s] = n.useState({}),
             [o, c] = n.useState({}),
@@ -255,7 +255,7 @@ let s = new Set([
                         let a = await h(t);
                         if (a.length > 0) return void d("Missing required directories", a);
                         let n = await (0, r.LY)([t]);
-                        N(n, u, d);
+                        O(n, u, d);
                     } finally {
                         t(!0);
                     }

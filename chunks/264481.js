@@ -2,7 +2,7 @@ n.d(t, {
     P9: () => _,
     Uf: () => P,
     b0: () => v,
-    s_: () => O,
+    s_: () => x,
 }),
     n(388685);
 var r = n(255367),
@@ -65,7 +65,7 @@ let b = [
         p.ABu.CRUNCHYROLL,
         p.ABu.BUNGIE,
     ];
-function x(e) {
+function O(e) {
     let { heading: t, bodyText: n, children: l } = e;
     return (0, r.jsxs)("div", {
         className: g.empty,
@@ -89,13 +89,13 @@ function x(e) {
         ],
     });
 }
-function O() {
+function x() {
     let e = m.intl.string(m.t.RnD2yc),
         [t] = l.useState(() => {
             var e;
             return (null != (e = (0, o.sample)(b)) ? e : b[0])();
         });
-    return (0, r.jsx)(x, {
+    return (0, r.jsx)(O, {
         heading: e,
         bodyText: t,
     });
@@ -106,7 +106,7 @@ function v() {
             var e;
             return (null != (e = (0, o.sample)(j)) ? e : j[0])();
         });
-    return (0, r.jsx)(x, {
+    return (0, r.jsx)(O, {
         heading: e,
         bodyText: t,
     });
@@ -122,7 +122,7 @@ function _(e) {
         j = l.useCallback(() => {
             a.Z.openPrivateChannel({ recipientIds: t.id }), null == s || s();
         }, [t.id, s]);
-    return (0, r.jsx)(x, {
+    return (0, r.jsx)(O, {
         heading: p,
         bodyText: b,
         children: (0, r.jsx)("div", {
@@ -164,7 +164,7 @@ function P(e) {
         o = l.useCallback(() => {
             null == t || t(), c.Z.open(p.oAB.CONTENT_AND_SOCIAL, "CONNECTED_GAMES");
         }, [t]);
-    return (0, r.jsxs)(x, {
+    return (0, r.jsxs)(O, {
         heading: m.intl.string(m.t.VB6LWV),
         bodyText: m.intl.string(m.t.KpjsU1),
         children: [

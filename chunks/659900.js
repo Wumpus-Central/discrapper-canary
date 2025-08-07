@@ -1,4 +1,4 @@
-n.d(t, { Z: () => M }), n(388685), n(583741);
+n.d(t, { Z: () => b }), n(388685), n(583741);
 var i = n(255367),
     r = n(73800),
     s = n(120356),
@@ -12,42 +12,44 @@ var i = n(255367),
     m = n(37234),
     L = n(232567),
     h = n(820160),
-    x = n(884902),
-    f = n(345162),
-    g = n(594174),
-    p = n(259580),
-    v = n(539600),
-    j = n(350566),
-    N = n(837748),
-    H = n(971401),
-    E = n(306453),
-    Z = n(981631),
-    T = n(388032),
-    _ = n(697698);
-function M(e) {
+    x = n(471445),
+    f = n(884902),
+    g = n(131704),
+    p = n(345162),
+    v = n(594174),
+    j = n(259580),
+    N = n(539600),
+    H = n(350566),
+    E = n(837748),
+    Z = n(971401),
+    T = n(306453),
+    _ = n(981631),
+    M = n(388032),
+    S = n(697698);
+function b(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
         [n, s] = r.useState(""),
         [l, a] = r.useState(null),
         [c, d] = r.useState(null),
-        u = (0, N.Z)(e.code);
+        u = (0, E.Z)(e.code);
     r.useEffect(() => {
         !(async function () {
-            let e = g.default.getCurrentUser();
+            let e = v.default.getCurrentUser();
             if (null == e)
                 try {
                     e = await (0, L.k)();
                 } catch (e) {
                     C.Z.verifySSOToken("accept_guild_template", null);
                 }
-            null != e && s(T.intl.formatToPlainString(u.defaultName, { username: e.username }));
+            null != e && s(M.intl.formatToPlainString(u.defaultName, { username: e.username }));
         })();
     }, [u.defaultName]),
-        (0, H.Z)(e);
+        (0, Z.Z)(e);
     let x = (0, i.jsxs)(i.Fragment, {
             children: [
-                t ? (0, i.jsx)(E.Z, { guildTemplate: e }) : null,
+                t ? (0, i.jsx)(T.Z, { guildTemplate: e }) : null,
                 (0, i.jsx)("div", {
-                    className: _.icon,
+                    className: S.icon,
                     children: (0, i.jsx)(h.Z, {
                         icon: l,
                         onChange: a,
@@ -66,51 +68,51 @@ function M(e) {
                 (0, i.jsx)(o.Text, {
                     variant: "text-xs/normal",
                     color: "text-muted",
-                    className: _.guidelines,
-                    children: T.intl.format(u.terms, { guidelinesURL: Z.EYA.GUIDELINES }),
+                    className: S.guidelines,
+                    children: M.intl.format(u.terms, { guidelinesURL: _.EYA.GUIDELINES }),
                 }),
             ],
         }),
-        p = e.serializedSourceGuild.roles.map((t) => v.wD(e.serializedSourceGuild.id, t)).filter((e) => !(0, f.fI)(e));
+        f = e.serializedSourceGuild.roles.map((t) => N.wD(e.serializedSourceGuild.id, t)).filter((e) => !(0, p.fI)(e));
     return {
         form: x,
         preview: (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, i.jsx)("div", { className: _.divider }),
+                (0, i.jsx)("div", { className: S.divider }),
                 (0, i.jsxs)(o.xJW, {
-                    className: _.previewSection,
-                    title: T.intl.string(T.t.Zxk1OD),
+                    className: S.previewSection,
+                    title: M.intl.string(M.t.Zxk1OD),
                     children: [
-                        (0, i.jsx)(b, { channels: e.serializedSourceGuild.channels }),
+                        (0, i.jsx)(G, { channels: e.serializedSourceGuild.channels }),
                         (0, i.jsxs)(o.Text, {
                             variant: "text-xs/normal",
                             color: "header-secondary",
-                            className: _.protip,
+                            className: S.protip,
                             children: [
                                 (0, i.jsxs)("span", {
-                                    className: _.protipText,
-                                    children: [T.intl.string(T.t["8tvIiI"]), ":"],
+                                    className: S.protipText,
+                                    children: [M.intl.string(M.t["8tvIiI"]), ":"],
                                 }),
                                 " ",
-                                T.intl.string(T.t.de7DpK),
+                                M.intl.string(M.t.de7DpK),
                             ],
                         }),
                     ],
                 }),
-                p.length > 0
+                f.length > 0
                     ? (0, i.jsx)(o.xJW, {
-                          className: _.previewSection,
-                          title: T.intl.string(T.t["RJ1e/v"]),
-                          children: (0, i.jsx)(S, {
+                          className: S.previewSection,
+                          title: M.intl.string(M.t["RJ1e/v"]),
+                          children: (0, i.jsx)(I, {
                               guildId: e.serializedSourceGuild.id,
-                              roles: p,
+                              roles: f,
                           }),
                       })
                     : null,
             ],
         }),
         handleSubmit: () => {
-            j.Z.acceptGuildTemplate(e.code, n, l)
+            H.Z.acceptGuildTemplate(e.code, n, l)
                 .then(() => {
                     (0, o.pTH)(), (0, m.Ou)();
                 })
@@ -118,23 +120,21 @@ function M(e) {
         },
     };
 }
-function b(e) {
+function G(e) {
     let { channels: t } = e,
         n = c()(t)
             .sortBy((e) => (null == e.parent_id ? 10000 * Number(e.id) : 10000 * Number(e.parent_id) + e.id))
             .map((e) => {
-                let t = (function (e) {
-                    let { type: t } = e;
-                    return t === Z.d4z.GUILD_VOICE ? o.gj8 : t === Z.d4z.GUILD_CATEGORY ? p.Z : o.VL1;
-                })(e);
+                var t;
+                let n = (t = e).type === _.d4z.GUILD_CATEGORY ? j.Z : (0, x.KS)((0, g.q_)(t));
                 return (0, i.jsxs)(
                     "div",
                     {
-                        className: l()(_.channel, { [_.category]: e.type === Z.d4z.GUILD_CATEGORY }),
+                        className: l()(S.channel, { [S.category]: e.type === _.d4z.GUILD_CATEGORY }),
                         children: [
-                            (0, i.jsx)(t, { className: _.channelIcon }),
+                            null != n ? (0, i.jsx)(n, { className: S.channelIcon }) : null,
                             (0, i.jsx)(o.Text, {
-                                className: _.channelText,
+                                className: S.channelText,
                                 variant: "text-sm/normal",
                                 children: e.name,
                             }),
@@ -145,18 +145,18 @@ function b(e) {
             })
             .value();
     return (0, i.jsx)("div", {
-        className: _.channelsWrapper,
+        className: S.channelsWrapper,
         children: n,
     });
 }
-function S(e) {
+function I(e) {
     let { guildId: t, roles: n } = e,
         r = n
             .slice()
             .reverse()
             .map((e) =>
                 (0, i.jsx)(
-                    G,
+                    R,
                     {
                         guildId: t,
                         role: e,
@@ -165,25 +165,25 @@ function S(e) {
                 ),
             );
     return (0, i.jsx)("ul", {
-        className: _.rolesWrapper,
+        className: S.rolesWrapper,
         children: r,
     });
 }
-function G(e) {
+function R(e) {
     var t, n;
     let { guildId: r, role: s } = e,
         l = (0, o.dQu)(u.Z.colors.BORDER_SUBTLE).hex(),
         a = null == s.color ? l : (0, d.Rf)(s.color),
-        c = (0, x._f)(r, s, s.colorStrings);
+        c = (0, f._f)(r, s, s.colorStrings);
     return (0, i.jsxs)("li", {
-        className: _.role,
+        className: S.role,
         style: {
             borderColor: null != (t = (0, d.wK)(a, 0.6)) ? t : void 0,
             backgroundColor: null != (n = (0, d.wK)(a, 0.075)) ? n : void 0,
         },
         children: [
             (0, i.jsx)(o.xko, {
-                className: _.roleCircle,
+                className: S.roleCircle,
                 color: a,
                 colors: c,
             }),

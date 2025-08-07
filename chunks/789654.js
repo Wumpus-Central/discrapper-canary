@@ -1,6 +1,6 @@
 a.d(t, {
-    Z: () => E,
-    q: () => T,
+    Z: () => T,
+    q: () => E,
 }),
     a(804061),
     a(704826),
@@ -89,13 +89,13 @@ function y(e, t) {
     );
 }
 let { SemanticColors: C } = d.V;
-function N(e) {
+function O(e) {
     return e.replaceAll(/_|\./g, "-").toLowerCase();
 }
-function O(e) {
+function N(e) {
     return e.replaceAll(/_|-/g, ".").toLowerCase();
 }
-function T(e, t) {
+function E(e, t) {
     let a = new Blob([t], { type: "application/json" }),
         n = URL.createObjectURL(a),
         r = document.createElement("a"),
@@ -110,19 +110,19 @@ function T(e, t) {
             URL.revokeObjectURL(n);
     });
 }
-function E() {
+function T() {
     let e = (0, p.Fg)(),
         [t, a, l, s, d, u] = (0, j.zn)(),
-        { semanticColorOverrides: v, rawColorOverrides: C, tab: O, scales: E } = t,
+        { semanticColorOverrides: v, rawColorOverrides: C, tab: N, scales: T } = t,
         P = r.useMemo(() => {
             let t = Object.entries(v).map((t) => {
                     let [a, n] = t,
                         { colors: r, highlight: l } = n,
                         i = r[e];
                     if (null == i) return "";
-                    let s = N(a);
+                    let s = O(a);
                     if (l) return "--".concat(s, ": magenta !important;");
-                    let o = N(i.color),
+                    let o = O(i.color),
                         c = i.opacity,
                         d = c < 1 ? "hsl(var(--".concat(o, "-hsl) / ").concat(c, ")") : "var(--".concat(o, ")");
                     return "--"
@@ -158,7 +158,7 @@ function E() {
                         "--".concat(l, ": hsl(var(--").concat(l, "-hsl)) !important;"),
                     ];
                 }),
-                n = E.reduce((e, t) => {
+                n = T.reduce((e, t) => {
                     let { name: a } = t,
                         n = (0, j.XM)(t),
                         r = (0, j.W6)(n, a);
@@ -177,7 +177,7 @@ function E() {
                 .concat(e, " {\n        ")
                 .concat(t.join("\n"), "\n      }\n\n      html {\n        ")
                 .concat(a.join("\n"), "\n      }\n    ");
-        }, [C, E, v, e]);
+        }, [C, T, v, e]);
     return (0, n.jsxs)("div", {
         className: g.panel,
         children: [
@@ -192,7 +192,7 @@ function E() {
                         className: g.tabBar,
                         type: "top",
                         look: "brand",
-                        selectedItem: O,
+                        selectedItem: N,
                         onItemSelect: (e) => {
                             a((t) => y(_({}, t), { tab: e }));
                         },
@@ -267,7 +267,7 @@ function E() {
                                 color: m.zx.Colors.TRANSPARENT,
                                 look: m.zx.Looks.BLANK,
                                 onClick: () => {
-                                    T("color-overrides", JSON.stringify(_({}, t), null, 2));
+                                    E("color-overrides", JSON.stringify(_({}, t), null, 2));
                                 },
                                 children: (0, n.jsx)(x._8t, {}),
                             }),
@@ -277,7 +277,7 @@ function E() {
             }),
             (0, n.jsx)("div", {
                 className: g.tab,
-                hidden: O !== j.H8.TOKENS,
+                hidden: N !== j.H8.TOKENS,
                 children: (0, n.jsx)(S, {
                     state: t,
                     setState: a,
@@ -285,7 +285,7 @@ function E() {
             }),
             (0, n.jsx)("div", {
                 className: g.tab,
-                hidden: O !== j.H8.PALETTES,
+                hidden: N !== j.H8.PALETTES,
                 children: (0, n.jsx)(f.P, {
                     state: t,
                     setState: a,
@@ -371,7 +371,7 @@ function S(e) {
         ),
         b = Object.keys(C).map((e) => ({
             value: e,
-            label: N(e),
+            label: O(e),
         })),
         f = Object.keys(u.b).map((e) => ({
             value: e,
@@ -404,15 +404,15 @@ function S(e) {
                     let [t, r] = e,
                         i = r.colors[l];
                     if (null == i) return null;
-                    let s = O(i.color),
+                    let s = N(i.color),
                         c = i.opacity,
                         d = j.jC[t][l];
                     return (0, n.jsx)(
                         P,
                         {
-                            title: N(t),
+                            title: O(t),
                             subtitle:
-                                1 === d.opacity ? O(d.raw) : "".concat(O(d.raw), " @ ").concat(100 * d.opacity, "%"),
+                                1 === d.opacity ? N(d.raw) : "".concat(N(d.raw), " @ ").concat(100 * d.opacity, "%"),
                             highlight: r.highlight,
                             onReset: () => {
                                 a((e) => {

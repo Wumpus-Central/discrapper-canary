@@ -147,10 +147,10 @@ function g(e) {
             colorSpace: g,
             easingStrength: _ = 1,
             useP3ColorSpace: C,
-            steps: N = 26,
+            steps: O = 26,
         } = t,
-        O = (0, x.XM)(t),
-        T = (0, x.W6)(O, c);
+        N = (0, x.XM)(t),
+        E = (0, x.W6)(N, c);
     return (0, n.jsxs)(d.hjN, {
         className: p.paletteSettings,
         children: [
@@ -168,7 +168,7 @@ function g(e) {
                     }),
                     (0, n.jsx)(d.P3F, {
                         onClick: function () {
-                            let e = Object.entries(O).reduce((e, t) => {
+                            let e = Object.entries(N).reduce((e, t) => {
                                 let [a, n] = t;
                                 return (
                                     (e[a] = {
@@ -308,10 +308,10 @@ function g(e) {
                         }),
                     }),
                     (0, n.jsx)(d.xJW, {
-                        title: "Steps (".concat(N, ")"),
+                        title: "Steps (".concat(O, ")"),
                         children: (0, n.jsx)(d.iRW, {
                             onValueRender: () => null,
-                            initialValue: N,
+                            initialValue: O,
                             minValue: (0, x.A0)(c).length,
                             maxValue: 100,
                             onValueChange: (e) => (0, x.YC)(c, Math.round(e), a),
@@ -323,11 +323,11 @@ function g(e) {
                         children: (0, n.jsx)("div", {
                             className: p.paletteOverrides,
                             "data-columnar": j,
-                            children: Object.entries(O).map((e, a) => {
+                            children: Object.entries(N).map((e, a) => {
                                 let [r, c] = e,
                                     u = (0, x.HI)(c),
                                     m = (0, s.Z)((0, o.Z)("black"), c) > 4.5 ? "black" : "white",
-                                    p = T[r];
+                                    p = E[r];
                                 return (0, n.jsxs)(
                                     "div",
                                     {

@@ -45,13 +45,13 @@ let y = [
         o.C.GUILD_POWERUP_SINGLE_SKU_PURCHASE_COACHMARK,
         o.C.GUILD_POWERUP_CHOICE_SKU_PURCHASE_COACHMARK,
     ],
-    N = [o.C.ADOPT_CLAN_IDENTITY_NOTICE],
-    O = [
+    O = [o.C.ADOPT_CLAN_IDENTITY_NOTICE],
+    N = [
         o.z.VANITY_URL_POWERUP_ROLLBACK_NOTIFICATION,
         o.z.VANITY_URL_POWERUP_ROLLBACK_MODAL,
         o.z.VANITY_URL_POWERUP_EDUCATIONAL_POPOVER,
     ];
-function T(e) {
+function E(e) {
     switch (e) {
         case o.C.GUILD_POWERUP_LEVEL_1_COACHMARK:
             return "GUILD_POWERUP_LEVEL_1_COACHMARK";
@@ -67,7 +67,7 @@ function T(e) {
             return "ADOPT_CLAN_IDENTITY_NOTICE";
     }
 }
-async function E(e, t, a) {
+async function T(e, t, a) {
     await Promise.all(
         t.map((e) =>
             s.tn.patch({
@@ -93,7 +93,7 @@ function P() {
             var e;
             return null == (e = v.Z.getGuild(t)) ? void 0 : e.name;
         }),
-        r = (0, i.Wu)([b.Z], () => [...C, ...N].filter((e) => null != t && (0, x.OY)(e, t))),
+        r = (0, i.Wu)([b.Z], () => [...C, ...O].filter((e) => null != t && (0, x.OY)(e, t))),
         l =
             null !=
             (e = (0, i.e7)([b.Z], () => {
@@ -162,14 +162,14 @@ function P() {
                                     variant: "primary",
                                     text: "Set Half Boosts expiring in 1 day",
                                     onClick: () => {
-                                        E(t, s.slice(Math.floor(s.length / 2)), !1);
+                                        T(t, s.slice(Math.floor(s.length / 2)), !1);
                                     },
                                 }),
                                 (0, n.jsx)(c.zxk, {
                                     variant: "primary",
                                     text: "Reset End Date",
                                     onClick: () => {
-                                        E(t, s, !0);
+                                        T(t, s, !0);
                                     },
                                 }),
                             ],
@@ -219,7 +219,7 @@ function P() {
                                     value: r.includes(e),
                                     children: (0, n.jsx)(c.Text, {
                                         variant: "text-sm/normal",
-                                        children: T(e),
+                                        children: E(e),
                                     }),
                                 },
                                 e,
@@ -234,7 +234,7 @@ function P() {
                             variant: "eyebrow",
                             children: "Reset Server Tag Guild Level DCs",
                         }),
-                        N.map((e) =>
+                        O.map((e) =>
                             (0, n.jsx)(
                                 c.j7V,
                                 {
@@ -247,7 +247,7 @@ function P() {
                                     value: r.includes(e),
                                     children: (0, n.jsx)(c.Text, {
                                         variant: "text-sm/normal",
-                                        children: T(e),
+                                        children: E(e),
                                     }),
                                 },
                                 e,
@@ -263,7 +263,7 @@ function P() {
                             className: _.header,
                             children: "Reset Powerup Rollback DCs",
                         }),
-                        O.map((e) =>
+                        N.map((e) =>
                             (0, n.jsx)(
                                 u.u,
                                 {

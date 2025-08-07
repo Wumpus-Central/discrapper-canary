@@ -99,10 +99,10 @@ function _() {
         [_, y] = r.useState([]),
         {
             refreshEntitlementList: C,
-            grantFractionalPremium: N,
-            deleteFractionalPremium: O,
-            triggerNextEntitlementFulfillment: T,
-            entitlements: E,
+            grantFractionalPremium: O,
+            deleteFractionalPremium: N,
+            triggerNextEntitlementFulfillment: E,
+            entitlements: T,
             loading: S,
         } = (0, x.m)();
     r.useEffect(() => {
@@ -112,8 +112,8 @@ function _() {
         w = (e) => e.filter((e) => Object.values(s.a).includes(e.skuId) && null == e.startsAt);
     return (
         r.useEffect(() => {
-            v(P(E)), y(w(E));
-        }, [E]),
+            v(P(T)), y(w(T));
+        }, [T]),
         (0, n.jsx)(c.zJl, {
             className: f.panel,
             children: (0, n.jsxs)("div", {
@@ -181,7 +181,7 @@ function _() {
                             (0, n.jsx)(c.zxk, {
                                 variant: "primary",
                                 text: "Grant Fractional Nitro",
-                                onClick: () => N(a),
+                                onClick: () => O(a),
                             }),
                         ],
                     }),
@@ -205,7 +205,7 @@ function _() {
                                                 size: o.zx.Sizes.TINY,
                                                 color: o.zx.Colors.PRIMARY,
                                                 look: o.zx.Looks.OUTLINED,
-                                                onClick: () => T(),
+                                                onClick: () => E(),
                                                 children: "Run fulfillment",
                                             }),
                                             (0, n.jsx)(o.zx, {
@@ -213,7 +213,7 @@ function _() {
                                                 size: o.zx.Sizes.TINY,
                                                 color: o.zx.Colors.RED,
                                                 look: o.zx.Looks.OUTLINED,
-                                                onClick: () => O(),
+                                                onClick: () => N(),
                                                 children: "Delete all",
                                             }),
                                             (0, n.jsx)(o.zx, {
@@ -248,7 +248,7 @@ function _() {
                                                     {
                                                         entitlement: e,
                                                         active: !0,
-                                                        onDelete: () => O(e.id),
+                                                        onDelete: () => N(e.id),
                                                     },
                                                     e.id,
                                                 ),

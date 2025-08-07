@@ -17,7 +17,7 @@ var l = n(120356),
     j = n(856651),
     h = n(388032),
     y = n(738873);
-function x(e) {
+function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -42,7 +42,7 @@ function x(e) {
     }
     return e;
 }
-function O(e, t) {
+function x(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -74,7 +74,7 @@ function v(e) {
                 children: (e) =>
                     (0, r.jsx)(
                         "div",
-                        O(x({}, e), {
+                        x(O({}, e), {
                             className: y.platformIconContainer,
                             children: (0, r.jsx)("img", {
                                 alt: h.intl.formatToPlainString(h.t.rtm15O, { name: null == v ? void 0 : v.name }),
@@ -99,7 +99,7 @@ function v(e) {
                                           children: (e) =>
                                               (0, r.jsx)(
                                                   a.Text,
-                                                  O(x({}, e), {
+                                                  x(O({}, e), {
                                                       variant: "text-sm/normal",
                                                       className: y.accountNameText,
                                                       children: n.name,
@@ -139,7 +139,7 @@ function v(e) {
                                                       children: (e) =>
                                                           (0, r.jsx)(
                                                               a.Text,
-                                                              O(x({}, e), {
+                                                              x(O({}, e), {
                                                                   variant: "text-sm/normal",
                                                                   className: y.accountNameText,
                                                                   children: n.name,

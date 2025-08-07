@@ -3,13 +3,13 @@ var n = a(255367);
 a(73800);
 var r = a(296009),
     l = a(481060),
-    i = a(447448),
-    s = a(187162),
+    i = a(592183),
+    s = a(447448),
     o = a(484036),
     c = a(634733),
     d = a(148444);
 function u() {
-    return (0, i.k)({
+    return (0, s.k)({
         location: "DevToolsWidgetsPanel",
         autoTrackExposure: !1,
     })
@@ -50,14 +50,14 @@ function u() {
                                       variant: "active",
                                       text: "Show Empty State",
                                       onClick: () => {
-                                          s.Z.setOverrideWidgets([]);
+                                          i.Z.setOverrideWidgets([]);
                                       },
                                   }),
                                   (0, n.jsx)(l.zxk, {
                                       variant: "critical-primary",
                                       text: "Clear Local Overrides",
                                       onClick: () => {
-                                          s.Z.clearOverrides();
+                                          i.Z.clearOverrideWidgets();
                                       },
                                   }),
                               ],

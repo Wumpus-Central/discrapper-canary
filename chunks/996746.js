@@ -1,13 +1,15 @@
-n.d(t, { Z: () => o });
+n.d(t, { Z: () => c });
 var i = n(255367),
     r = n(442837),
     s = n(696826),
-    a = n(720734),
-    l = n(594174);
-function o(e) {
+    a = n(181430),
+    l = n(720734),
+    o = n(594174);
+function c(e) {
     let { nameplate: t } = e,
-        n = (0, r.e7)([l.default], () => l.default.getCurrentUser());
-    return (0, i.jsx)(a.m, {
+        n = (0, r.e7)([o.default], () => o.default.getCurrentUser()),
+        c = (0, a.Y)({ location: "AccountPreview" });
+    return (0, i.jsx)(l.m, {
         selfMute: !1,
         selfDeaf: !1,
         serverMute: !1,
@@ -35,5 +37,6 @@ function o(e) {
         voiceActivityStatusEnabled: !1,
         isQuestBarEmpty: !0,
         isListenAlongVisible: !1,
+        isDisplayNameStylesEnabled: c,
     });
 }
