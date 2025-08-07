@@ -8470,6 +8470,10 @@ html.decorate-links .lowSaturationUnderline__41f68 {
     border-color: GrayText
 }
 
+.highlight-void-toggleables [data-toggleable-component=switch] {
+    box-shadow: 0 0 6px 2px var(--blue-360), 0 0 8px 4px var(--opacity-blue-60)
+}
+
 .container__0d850 {
     display: flex;
     flex-direction: column;
@@ -10246,6 +10250,10 @@ svg.radioIcon_c1e9c4 {
 
 .enable-forced-colors .radioIndicatorDisabled__001a7 .refreshIconFill__001a7 {
     fill: Canvas
+}
+
+.highlight-void-toggleables [data-toggleable-component=radiogroup] {
+    box-shadow: 0 0 6px 2px var(--yellow-360), 0 0 8px 4px var(--opacity-yellow-60)
 }
 
 .twoColorGradient_e5de78 {
@@ -15259,6 +15267,10 @@ svg.radioIcon_c1e9c4 {
 .enable-forced-colors .labelDisabled_f525d3,
 .enable-forced-colors .labelDisabled_f525d3>div {
     color: GrayText
+}
+
+.highlight-void-toggleables [data-toggleable-component=checkbox] {
+    box-shadow: 0 0 6px 2px var(--green-360), 0 0 8px 4px var(--opacity-green-60)
 }
 
 .badge_dca3ba {
