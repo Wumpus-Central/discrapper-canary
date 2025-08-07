@@ -42561,6 +42561,18 @@ body .headerAnimation_b54a5b {
     height: 38px
 }
 
+.withDisplayNameStyles__20a53 {
+    overflow: visible
+}
+
+.withDisplayNameStyles__20a53 .name__20a53 {
+    flex: 1 1 0;
+    min-width: 0;
+    overflow: visible;
+    text-overflow: clip;
+    white-space: normal
+}
+
 .nameplatePreview_fdeafc {
     align-items: center;
     border-radius: var(--radius-sm);
@@ -43240,6 +43252,10 @@ body .headerAnimation_b54a5b {
     justify-content: flex-start;
     overflow: hidden;
     white-space: nowrap
+}
+
+.info_f4bc97.withDisplayNameStyles_f4bc97 {
+    overflow: visible
 }
 
 .infoSpacing_f4bc97 {
