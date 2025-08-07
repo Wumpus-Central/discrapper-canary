@@ -18,18 +18,18 @@ function g(e) {
         g = (0, i.e7)([a.Z], () => a.Z.hasHidden(t.id)),
         m = (0, d.c)(t.id),
         { sortOrder: b, tagFilter: y, tagSetting: x } = (0, c.H)(t.id),
-        j = (0, i.e7)(
+        _ = (0, i.e7)(
             [o.Z, h.Z],
             () => !!(o.Z.getThreadIds(t.id, b, y, x).length > 0) || !!(h.Z.getThreads(t.id, b, y, x).length > 0),
             [t.id, b, y, x],
         ),
-        _ = t.isMediaChannel();
-    if (!n || m || (_ && j)) return null;
+        j = t.isMediaChannel();
+    if (!n || m || (j && _)) return null;
     let O = g
-        ? _
+        ? j
             ? f.intl.string(f.t["WP/IEx"])
             : f.intl.string(f.t.zfq9V1)
-        : _
+        : j
           ? f.intl.string(f.t.p60yFx)
           : f.intl.string(f.t.SNOqYG);
     return (0, r.jsx)(p.JO, {

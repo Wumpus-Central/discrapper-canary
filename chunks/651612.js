@@ -38,12 +38,12 @@ function x(e) {
             }
             return i;
         })(e, ["channelId", "className"]);
-    let j = i.useRef(null),
-        _ = (0, a.e7)([f.ZP], () => f.ZP.getFocusedLayout() === g.MI.RESIZABLE),
+    let _ = i.useRef(null),
+        j = (0, a.e7)([f.ZP], () => f.ZP.getFocusedLayout() === g.MI.RESIZABLE),
         O = i.useCallback(() => {
-            let e = _ ? g.MI.NO_CHAT : g.MI.RESIZABLE;
+            let e = j ? g.MI.NO_CHAT : g.MI.RESIZABLE;
             (0, p.gC)(e);
-        }, [_]),
+        }, [j]),
         { unreadCount: v, mentionCount: C } = (function (e) {
             let t = (0, a.e7)([d.Z], () => !(0, l.isEmpty)(d.Z.getTypingUsers(e)), [e]),
                 { unreadCount: n, mentionCount: r } = (0, a.cj)(
@@ -62,17 +62,17 @@ function x(e) {
         })(t),
         E = i.useCallback(() => {
             var e;
-            null == (e = j.current) || e.focus();
+            null == (e = _.current) || e.focus();
         }, []);
     (0, h.yp)({
         event: m.CkL.FOCUS_CHAT_BUTTON,
         handler: E,
     });
-    let S = _ ? b.intl.string(b.t["5MstTk"]) : b.intl.string(b.t.kkKapK),
-        Z = [S];
-    C > 0 && Z.push(b.intl.formatToPlainString(b.t["3l1GOz"], { mentionCount: C })),
-        v > 0 && Z.push(b.intl.string(b.t.x5zAGR));
-    let I = (0, a.e7)([f.ZP], () => f.ZP.getFocusedLayout()),
+    let S = j ? b.intl.string(b.t["5MstTk"]) : b.intl.string(b.t.kkKapK),
+        I = [S];
+    C > 0 && I.push(b.intl.formatToPlainString(b.t["3l1GOz"], { mentionCount: C })),
+        v > 0 && I.push(b.intl.string(b.t.x5zAGR));
+    let Z = (0, a.e7)([f.ZP], () => f.ZP.getFocusedLayout()),
         P = C > 0 ? C : v,
         T = P > 0;
     return (0, r.jsxs)("div", {
@@ -107,12 +107,12 @@ function x(e) {
                 })(
                     {
                         isTrayButton: !0,
-                        buttonRef: j,
+                        buttonRef: _,
                         onClick: O,
                         label: S,
-                        "aria-label": Z.join(", "),
+                        "aria-label": I.join(", "),
                         tooltipPosition: "top",
-                        iconComponent: I === g.MI.NO_CHAT ? s.sXD : s.hic,
+                        iconComponent: Z === g.MI.NO_CHAT ? s.sXD : s.hic,
                         themeable: !0,
                         className: n,
                     },

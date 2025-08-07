@@ -16,15 +16,15 @@ var r = n(255367),
     b = n(892001),
     y = n(899007),
     x = n(648052),
-    j = n(867176),
-    _ = n(280885),
+    _ = n(867176),
+    j = n(280885),
     O = n(900927),
     v = n(678738),
     C = n(502762),
     E = n(530),
     S = n(679332),
-    Z = n(544989),
-    I = n(228168),
+    I = n(544989),
+    Z = n(228168),
     P = n(388032),
     T = n(638414),
     N = n(283189);
@@ -66,8 +66,8 @@ function w(e) {
             channelId: n.id,
         }),
         U = i.useRef(null),
-        H = (0, s.Z)(U),
-        G = (e) => {
+        F = (0, s.Z)(U),
+        H = (e) => {
             (0, b.openUserProfileModal)(
                 R(
                     {
@@ -91,27 +91,27 @@ function w(e) {
                 ref: U,
                 user: t,
                 displayProfile: A,
-                themeType: I.lY.SIDEBAR,
+                themeType: Z.lY.SIDEBAR,
                 themeOverride: D,
                 children: [
                     (0, r.jsxs)(l.u2, {
                         children: [
-                            (0, r.jsx)(Z.Z, { children: (0, r.jsx)(S.Z, { user: t }) }),
+                            (0, r.jsx)(I.Z, { children: (0, r.jsx)(S.Z, { user: t }) }),
                             (0, r.jsxs)("div", {
                                 className: T.header,
                                 children: [
-                                    (0, r.jsx)(j.Z, {
+                                    (0, r.jsx)(_.Z, {
                                         user: t,
                                         displayProfile: A,
-                                        themeType: I.lY.SIDEBAR,
-                                        animateOnHover: !H,
+                                        themeType: Z.lY.SIDEBAR,
+                                        animateOnHover: !F,
                                     }),
                                     (0, r.jsx)(y.Z, {
                                         user: t,
                                         displayProfile: A,
                                         channelId: n.id,
-                                        themeType: I.lY.SIDEBAR,
-                                        onOpenProfile: w ? void 0 : G,
+                                        themeType: Z.lY.SIDEBAR,
+                                        onOpenProfile: w ? void 0 : H,
                                     }),
                                 ],
                             }),
@@ -122,10 +122,10 @@ function w(e) {
                                         user: t,
                                         nickname: p.ZP.getName(null, n.id, t),
                                         pronouns: null == A ? void 0 : A.pronouns,
-                                        onOpenProfile: w ? void 0 : G,
+                                        onOpenProfile: w ? void 0 : H,
                                         tags: (0, r.jsx)(x.Z, {
                                             displayProfile: A,
-                                            themeType: I.lY.SIDEBAR,
+                                            themeType: Z.lY.SIDEBAR,
                                         }),
                                     }),
                                     (0, r.jsxs)(C.Z.Overlay, {
@@ -134,11 +134,11 @@ function w(e) {
                                             (0, r.jsx)(v.Z, {
                                                 heading: P.intl.string(P.t["61W33d"]),
                                                 headingColor: "header-primary",
-                                                children: (0, r.jsx)(_.Z, {
+                                                children: (0, r.jsx)(j.Z, {
                                                     userBio: null == A ? void 0 : A.bio,
                                                     userId: t.id,
                                                     animateOnHover: !0,
-                                                    isHovering: H,
+                                                    isHovering: F,
                                                 }),
                                             }),
                                             (0, r.jsx)(v.Z, {
@@ -157,7 +157,7 @@ function w(e) {
                             className: T.footer,
                             children: (0, r.jsx)(a.P3F, {
                                 onClick: () => {
-                                    G(),
+                                    H(),
                                         (0, g.pQ)(
                                             R(
                                                 {
@@ -175,7 +175,7 @@ function w(e) {
                     (null == A ? void 0 : A.profileEffectId) != null &&
                         (0, r.jsx)(h.Z, {
                             profileEffectId: null == A ? void 0 : A.profileEffectId,
-                            isHovering: H,
+                            isHovering: F,
                         }),
                 ],
             }),

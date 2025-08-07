@@ -128,7 +128,7 @@ function j(e) {
 }
 function h(e) {
     let { className: t, guildId: n, powerup: o, onError: l } = e,
-        a = (0, c.Z)(n, o).type !== f.A3.INACTIVE,
+        a = (0, c.ZP)(n, o).type !== f.A3.INACTIVE,
         d = (0, s.Z)(n, o, "GuildPowerupCardFooterAdmin"),
         p = a || !d,
         m = !a;

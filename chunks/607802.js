@@ -1,25 +1,26 @@
 n.d(t, {
     $G: () => D,
     AH: () => S,
-    BU: () => j,
-    Fr: () => V,
-    Fz: () => F,
+    BU: () => U,
+    Fr: () => H,
+    Fz: () => V,
     Ko: () => C,
-    Pe: () => H,
-    R6: () => Y,
+    Pe: () => Y,
+    R6: () => W,
     Tm: () => v,
     Vj: () => N,
-    WU: () => Z,
-    X$: () => z,
-    X3: () => W,
+    WU: () => F,
+    X$: () => q,
+    X3: () => K,
     b7: () => T,
-    cl: () => U,
-    g9: () => L,
-    i3: () => k,
+    cl: () => G,
+    g9: () => x,
+    i3: () => j,
     jW: () => w,
-    kG: () => B,
-    nl: () => K,
-    qc: () => x,
+    kG: () => Z,
+    nI: () => L,
+    nl: () => z,
+    qc: () => M,
     s5: () => I,
     zH: () => A,
 }),
@@ -235,7 +236,13 @@ function D(e) {
         r instanceof Set && (t[n] = Array.from(r));
     return t.content && ((t.content = t.content.join(" ").trim()), t.content || delete t.content), t;
 }
-function L(e, t, n) {
+function L(e) {
+    return e
+        .map((e) => (e.type === o.ZP.NON_TOKEN_TYPE ? e.getFullMatch() : ""))
+        .join(" ")
+        .trim();
+}
+function x(e, t, n) {
     let r,
         i,
         o = e.find((o, a) =>
@@ -253,7 +260,7 @@ function L(e, t, n) {
               anchorOffset: n,
           };
 }
-function x(e, t) {
+function M(e, t) {
     let n,
         { currentToken: r, nextToken: i, previousToken: a } = (e = null != e ? e : {});
     if (0 === t.length)
@@ -295,14 +302,14 @@ function x(e, t) {
               token: n,
           });
 }
-function M(e) {
+function k(e) {
     if (null == e.match(/([\\" ])/g)) return e;
     {
         let t = e.replaceAll(/([\\"])/g, (e, t) => "\\".concat(t));
         return '"'.concat(t, '"');
     }
 }
-function k(e, t) {
+function j(e, t) {
     let n = [];
     return (
         i()(e).forEach((e) => {
@@ -311,7 +318,7 @@ function k(e, t) {
             n = n.concat(
                 e.results.map((n) => {
                     let i = n.text;
-                    if ((null != n.channel && (i = M(i)), t.type === E.Sap.FILTER_ALL)) {
+                    if ((null != n.channel && (i = k(i)), t.type === E.Sap.FILTER_ALL)) {
                         var o;
                         r = null != (o = n.group) ? o : r;
                         let e = g.ZP[r];
@@ -333,30 +340,30 @@ function k(e, t) {
         })
     );
 }
-function j(e) {
+function U(e) {
     return e.reduce((e, t) => (null == t ? e : t.results.length + e), 0);
 }
-function U(e) {
+function G(e) {
     return null == e ? "" : e.map((e) => e.getFullMatch()).join("");
 }
-let G = new o.ZP();
-function B(e) {
-    return G.tokenize(e);
+let B = new o.ZP();
+function Z(e) {
+    return B.tokenize(e);
 }
-function Z() {
-    return G.clearCache();
+function F() {
+    return B.clearCache();
 }
-function F(e) {
+function V(e) {
     return null != e ? R[e] : null;
 }
-function V(e, t) {
+function H(e, t) {
     let n = E.TNx.test(e.type);
     return (null != t || !n) && (null == t || !n || !!E.KA4.test(t.type));
 }
-function H() {
-    (0, g.WK)(), G.reset(), i()(g.ZP).forOwn((e, t) => G.addRule(O({ type: t }, e)));
+function Y() {
+    (0, g.WK)(), B.reset(), i()(g.ZP).forOwn((e, t) => B.addRule(O({ type: t }, e)));
 }
-function Y(e) {
+function W(e) {
     if (T(e)) return !0;
     {
         let t = (0, h.ad)({ location: "isChannelFilterSupported" }),
@@ -365,7 +372,7 @@ function Y(e) {
         return e.type === E.aib.DMS && r && !d.Z.hidePersonalInformation;
     }
 }
-function W(e) {
+function K(e) {
     let t = e.name,
         n = !1;
     if (e.isGroupDM()) t = (0, a.F6)(e, f.default, u.Z);
@@ -380,9 +387,9 @@ function W(e) {
         let r = l.ZP.getTextChannelNameDisambiguations(e.getGuildId())[e.id];
         (null == r ? void 0 : r.name) != null && (t = r.name);
     }
-    return ((t = M(t)), n) ? "#".concat(t) : t;
+    return ((t = k(t)), n) ? "#".concat(t) : t;
 }
-function K(e) {
+function z(e) {
     var t;
     if (e.isGroupDM()) return (0, a.F6)(e, f.default, u.Z);
     if (e.isDM()) {
@@ -393,7 +400,7 @@ function K(e) {
     let n = l.ZP.getTextChannelNameDisambiguations(e.getGuildId())[e.id];
     return null != (t = null == n ? void 0 : n.name) ? t : e.name;
 }
-function z() {
+function q() {
     var e, t;
     return null != (t = null == (e = f.default.getCurrentUser()) ? void 0 : e.isStaff()) && t;
 }

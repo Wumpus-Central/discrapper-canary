@@ -31,7 +31,7 @@ async function h(e) {
             r.endsAt.getTime() < Date.now() - p
         ) &&
             r.sourceType === _.kNB.REVERSE_TRIAL &&
-            (null == e && (await (0, d.T)()), null != l.Z.getUserTrialOffer(f.Rt))) ||
+            (null == e && (await (0, d.Tf)()), null != l.Z.getUserTrialOffer(f.Rt))) ||
         !1
     );
 }

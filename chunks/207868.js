@@ -20,17 +20,17 @@ let x = i.memo(function (e) {
         n = (0, u.Z)(),
         l = (0, s.e7)([f.Z], () => f.Z.isInChannel(t.id)),
         x = (0, s.e7)([f.Z], () => !a().isEmpty(f.Z.getVoiceStatesForChannel(t.id))),
-        j = (0, s.e7)([p.Z], () => p.Z.can(b.Plq.CONNECT, t)),
-        { needSubscriptionToAccess: _ } = (0, d.Z)(t.id),
+        _ = (0, s.e7)([p.Z], () => p.Z.can(b.Plq.CONNECT, t)),
+        { needSubscriptionToAccess: j } = (0, d.Z)(t.id),
         O = (0, h.$R)(t),
         v = i.useCallback(() => {
             c.Z.handleVoiceConnect({
                 channel: t,
                 connected: l,
-                needSubscriptionToAccess: _,
+                needSubscriptionToAccess: j,
                 locked: !1,
             });
-        }, [t, l, _]);
+        }, [t, l, j]);
     return (i.useEffect(
         () => (
             g.S.subscribe(b.CkL.CALL_START, v),
@@ -49,7 +49,7 @@ let x = i.memo(function (e) {
     ).enabled &&
         !n &&
         !l &&
-        j &&
+        _ &&
         O &&
         t.isVocalThread())
         ? (0, r.jsx)(m.ZP.Icon, {

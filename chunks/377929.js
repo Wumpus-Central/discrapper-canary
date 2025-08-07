@@ -1,4 +1,4 @@
-n.d(t, { Z: () => Z }), n(388685);
+n.d(t, { Z: () => I }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(392711),
@@ -16,8 +16,8 @@ var r = n(255367),
     b = n(732393),
     y = n(137591),
     x = n(299206),
-    j = n(665149),
-    _ = n(695346),
+    _ = n(665149),
+    j = n(695346),
     O = n(979651),
     v = n(488131),
     C = n(388032);
@@ -64,7 +64,7 @@ function S(e, t) {
         e
     );
 }
-function Z(e) {
+function I(e) {
     let { channel: t } = e,
         [n, l] = i.useState(!1),
         a = i.useRef(null);
@@ -81,12 +81,12 @@ function Z(e) {
         autoInvert: !1,
         onRequestClose: () => l(!1),
         renderPopout: function (e) {
-            return (0, r.jsx)(I, S(E({}, e), { channel: t }));
+            return (0, r.jsx)(Z, S(E({}, e), { channel: t }));
         },
         children: (e, t) => {
             let { isShown: n } = t;
             return (0, r.jsx)(
-                j.ZP.Icon,
+                _.ZP.Icon,
                 S(E({}, e), {
                     ref: a,
                     onClick: s,
@@ -99,23 +99,23 @@ function Z(e) {
         },
     });
 }
-function I(e) {
+function Z(e) {
     let { channel: t, closePopout: n, onSelect: i } = e,
         l = (0, c.Z)(t),
-        j = (0, f.Z)(t),
+        _ = (0, f.Z)(t),
         E = (0, b.Z)(t.id),
         S = (0, m.Z)(t),
-        Z = (0, x.Z)({
+        I = (0, x.Z)({
             id: t.id,
             label: C.intl.string(C.t.DQ797u),
         }),
-        I = (0, u.Z)(t),
+        Z = (0, u.Z)(t),
         P = (0, d.Z)(t),
         T = (0, h.Z)(t, "Toolbar Overflow"),
         N = (0, g.Z)(t),
         R = (0, p.Z)(t),
         w = (0, y.Z)(t),
-        A = _.vF.useSetting(),
+        A = j.vF.useSetting(),
         D = (0, s.e7)([O.Z], () => !a().isEmpty(O.Z.getVoiceStatesForChannel(t.id)));
     return (0, r.jsxs)(o.v2r, {
         navId: "thread-context",
@@ -143,10 +143,10 @@ function I(e) {
                 ],
             }),
             (0, r.jsxs)(o.kSQ, {
-                children: [w, l, j, P],
+                children: [w, l, _, P],
             }),
             (0, r.jsxs)(o.kSQ, {
-                children: [I, Z],
+                children: [Z, I],
             }),
         ],
     });

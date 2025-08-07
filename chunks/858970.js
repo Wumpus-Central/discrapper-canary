@@ -90,6 +90,7 @@ function I(e) {
             fetchEndedAt: null == L ? void 0 : L.fetchEndedAt,
             isLoaded: null == L ? void 0 : L.isLoaded,
             children: (0, r.jsx)(i.Y0X, {
+                "data-migration-pending": !0,
                 transitionState: Z,
                 className: x.root,
                 "aria-label": D,

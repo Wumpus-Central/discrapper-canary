@@ -16,15 +16,15 @@ var r = n(255367),
     b = n(575175),
     y = n(522651),
     x = n(795318),
-    j = n(258609),
-    _ = n(74299),
+    _ = n(258609),
+    j = n(74299),
     O = n(924301),
     v = n(459502),
     C = n(856691),
     E = n(357156),
     S = n(923973),
-    Z = n(829750),
-    I = n(189771),
+    I = n(829750),
+    Z = n(189771),
     P = n(294629),
     T = n(793319),
     N = n(987329),
@@ -36,13 +36,13 @@ var r = n(255367),
     L = n(25827),
     M = n(314897),
     U = n(131951),
-    H = n(496675),
-    G = n(944486),
-    F = n(594174),
+    F = n(496675),
+    H = n(944486),
+    G = n(594174),
     B = n(881824),
     z = n(471253),
-    V = n(922482),
-    W = n(200498),
+    W = n(922482),
+    V = n(200498),
     Y = n(146085),
     q = n(88751),
     K = n(427679),
@@ -63,7 +63,7 @@ function eo(e) {
         { parentAnalyticsLocation: n } = (0, p.ZP)(),
         i = (0, et.Z)(t.id),
         [l, a] = (0, er.Z)(t),
-        o = (0, s.e7)([H.Z], () => H.Z.can(ei.Plq.REQUEST_TO_SPEAK, t));
+        o = (0, s.e7)([F.Z], () => F.Z.can(ei.Plq.REQUEST_TO_SPEAK, t));
     return i
         ? null
         : (0, r.jsx)(A.d, {
@@ -80,7 +80,7 @@ function eo(e) {
 }
 let ec = i.memo(function (e) {
     let { channel: t } = e,
-        n = (0, s.e7)([G.Z], () => G.Z.getVoiceChannelId() === t.id, [t.id]);
+        n = (0, s.e7)([H.Z], () => H.Z.getVoiceChannelId() === t.id, [t.id]);
     return (0, r.jsxs)("div", {
         className: es.container,
         children: [
@@ -114,14 +114,14 @@ function ed(e) {
         { canManageGuildEvent: f } = (0, E.XJ)(t),
         g = (0, s.e7)([K.Z], () => K.Z.getStageInstanceByChannel(t.id), [t.id]),
         m = (0, s.e7)([O.ZP], () => O.ZP.getGuildScheduledEvent(null == g ? void 0 : g.guild_scheduled_event_id)),
-        b = (0, s.e7)([G.Z], () => G.Z.getVoiceChannelId() === t.id, [t.id]),
-        { suppress: j } = (0, P.Z)(t),
-        _ = M.default.getId(),
+        b = (0, s.e7)([H.Z], () => H.Z.getVoiceChannelId() === t.id, [t.id]),
+        { suppress: _ } = (0, P.Z)(t),
+        j = M.default.getId(),
         [v] = (0, er.Z)(t),
-        C = q.ZP.isModerator(_, t.id),
-        S = (0, W.B)(t.id),
-        Z = f(m),
-        { parentAnalyticsLocation: I } = (0, p.ZP)(),
+        C = q.ZP.isModerator(j, t.id),
+        S = (0, V.B)(t.id),
+        I = f(m),
+        { parentAnalyticsLocation: Z } = (0, p.ZP)(),
         T = i.useRef(null);
     if (!b)
         return (0, r.jsx)(o.zx, {
@@ -129,7 +129,7 @@ function ed(e) {
             color: o.zx.Colors.GREEN,
             className: a()(es.buttonSpacing, es.buttonWithTextButton),
             onClick: () => {
-                (0, y.v)(I, y.d.JOIN_STAGE), (0, V.TM)(t);
+                (0, y.v)(Z, y.d.JOIN_STAGE), (0, W.TM)(t);
             },
             children: (0, r.jsxs)("div", {
                 className: es.buttonWithTextInnerContainer,
@@ -156,7 +156,7 @@ function ed(e) {
             channel: t,
             appContext: l,
         });
-    return (C || Z) && null != g
+    return (C || I) && null != g
         ? (0, r.jsx)(c.yRy, {
               targetElementRef: T,
               renderPopout: (e) => {
@@ -167,7 +167,7 @@ function ed(e) {
                           "aria-label": ea.intl.string(ea.t["3Uj+2t"]),
                           onClose: i,
                           onSelect: n,
-                          onInteraction: (0, x.u)("End Stage", I, { entrypoint: el.A5.CARET }),
+                          onInteraction: (0, x.u)("End Stage", Z, { entrypoint: el.A5.CARET }),
                           children: (0, r.jsx)(c.sNh, {
                               id: "end-stage",
                               color: "danger",
@@ -194,7 +194,7 @@ function ed(e) {
                   });
               },
           })
-        : (j && !S) || v
+        : (_ && !S) || v
           ? (0, r.jsx)(D.Z, {
                 label: ea.intl.string(ea.t.SMKyio),
                 onClick: N,
@@ -248,19 +248,19 @@ let ef = i.memo(function (e) {
     let { channel: t } = e,
         { parentAnalyticsLocation: n } = (0, p.ZP)(),
         { suppress: l, selfMute: a, mute: o } = (0, P.Z)(t),
-        u = (0, W.B)(t.id),
-        d = (0, s.e7)([j.Z], () => null != j.Z.getAwaitingRemoteSessionInfo()),
+        u = (0, V.B)(t.id),
+        d = (0, s.e7)([_.Z], () => null != _.Z.getAwaitingRemoteSessionInfo()),
         { cameraUnavailable: h, enabled: y } = (0, S.Z)(),
-        O = (0, I.Z)(t),
-        { limit: v, reachedLimit: C } = (0, Z.Z)(t),
-        E = (0, s.e7)([F.default], () => F.default.getCurrentUser()),
-        A = (0, s.e7)([U.Z], () => (0, _.Z)(U.Z)),
-        D = (0, s.e7)([G.Z], () => G.Z.getVoiceChannelId() === t.id, [t.id]),
+        O = (0, Z.Z)(t),
+        { limit: v, reachedLimit: C } = (0, I.Z)(t),
+        E = (0, s.e7)([G.default], () => G.default.getCurrentUser()),
+        A = (0, s.e7)([U.Z], () => (0, j.Z)(U.Z)),
+        D = (0, s.e7)([H.Z], () => H.Z.getVoiceChannelId() === t.id, [t.id]),
         M = (0, s.e7)([f.Z], () => f.Z.getStreamParticipants(t.id)[0], [t.id]),
-        H = (0, Q.PK)(t.id),
+        F = (0, Q.PK)(t.id),
         B = v > 0,
-        z = (C && !H) || (null != M && M.user.id !== (null == E ? void 0 : E.id)),
-        V = (0, x.u)("AudioDeviceMenu", n, { entrypoint: el.A5.CARET }),
+        z = (C && !F) || (null != M && M.user.id !== (null == E ? void 0 : E.id)),
+        W = (0, x.u)("AudioDeviceMenu", n, { entrypoint: el.A5.CARET }),
         Y = i.useRef(null),
         q = i.useRef(null);
     if (null == E) return null;
@@ -319,7 +319,7 @@ let ef = i.memo(function (e) {
                                           renderOutputVolume: !0,
                                           renderDeafen: !0,
                                           minimal: !0,
-                                          onInteraction: V,
+                                          onInteraction: W,
                                       }),
                                   });
                               },
@@ -387,8 +387,8 @@ function eg(e) {
 let em = i.memo(function (e) {
     let { channel: t, isOnStartStageScreen: n } = e,
         i = (0, et.Z)(t.id),
-        l = (0, W.B)(t.id),
-        a = (0, s.e7)([H.Z], () => H.Z.can(Y.yP, t), [t]),
+        l = (0, V.B)(t.id),
+        a = (0, s.e7)([F.Z], () => F.Z.can(Y.yP, t), [t]),
         o = (0, en.Z)(t.id),
         c = (0, s.e7)([f.Z], () => (null != t ? f.Z.getSelectedParticipant(t.id) : null)),
         u = !o && null == c;

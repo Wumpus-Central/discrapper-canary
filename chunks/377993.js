@@ -16,15 +16,15 @@ var r = n(255367),
     b = n(158776),
     y = n(699516),
     x = n(111583),
-    j = n(594174),
-    _ = n(626135),
+    _ = n(594174),
+    j = n(626135),
     O = n(585483),
     v = n(233870),
     C = n(51144),
     E = n(998502),
     S = n(276264),
-    Z = n(981631),
-    I = n(388032),
+    I = n(981631),
+    Z = n(388032),
     P = n(11847);
 function T(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -56,8 +56,8 @@ let N = [],
 function w(e) {
     let { user: t, channel: s, status: u, activities: d } = e,
         h = (0, a.e7)([x.Z], () => null != x.Z.getTypingUsers(s.id)[t.id]),
-        f = (0, a.e7)([j.default], () => j.default.getCurrentUser()),
-        _ = (0, a.e7)([b.Z], () => b.Z.isMobileOnline(t.id)),
+        f = (0, a.e7)([_.default], () => _.default.getCurrentUser()),
+        j = (0, a.e7)([b.Z], () => b.Z.isMobileOnline(t.id)),
         v = (0, a.e7)([y.Z], () => y.Z.getNickname(t.id)),
         E = (0, p.Z)(t.id),
         P = i.useRef(null),
@@ -96,8 +96,8 @@ function w(e) {
         w = () => {
             let e = "@".concat(C.ZP.getUserTag(t, { decoration: "never" })),
                 n = "<@".concat(t.id, ">");
-            O.S.dispatch(Z.CkL.TEXTAREA_FOCUS, { channelId: s.id }),
-                O.S.dispatchToLastSubscribed(Z.CkL.INSERT_TEXT, {
+            O.S.dispatch(I.CkL.TEXTAREA_FOCUS, { channelId: s.id }),
+                O.S.dispatchToLastSubscribed(I.CkL.INSERT_TEXT, {
                     plainText: e,
                     rawText: n,
                 }),
@@ -147,7 +147,7 @@ function w(e) {
                         user: t,
                         currentUser: f,
                         isOwner: t.id === s.ownerId,
-                        ownerTooltipText: I.intl.string(I.t["MRXZ+/"]),
+                        ownerTooltipText: Z.intl.string(Z.t["MRXZ+/"]),
                         shouldAnimateStatus: R,
                         isTyping: h,
                         status: u,
@@ -156,7 +156,7 @@ function w(e) {
                         channel: s,
                         onContextMenu: N,
                         selected: D,
-                        isMobile: _,
+                        isMobile: j,
                         nick: v,
                         nameplate: A,
                         onClick: (e) => {
@@ -184,23 +184,23 @@ function A(e, t) {
 }
 function D(e) {
     let { channel: t } = e,
-        n = j.default.getCurrentUser(),
+        n = _.default.getCurrentUser(),
         l = null == n ? void 0 : n.isStaff(),
         { analyticsLocations: o } = (0, d.ZP)(u.Z.MEMBER_LIST),
         { listItems: c } = (0, a.e7)(
-            [y.Z, j.default, b.Z],
+            [y.Z, _.default, b.Z],
             () => {
-                let e = (0, v.T)(t.recipients, j.default),
+                let e = (0, v.T)(t.recipients, _.default),
                     n = {};
                 for (let t of e) {
                     var r, i, l;
-                    y.Z.isFriend(t.id) || t.id === (null == (r = j.default.getCurrentUser()) ? void 0 : r.id)
+                    y.Z.isFriend(t.id) || t.id === (null == (r = _.default.getCurrentUser()) ? void 0 : r.id)
                         ? (n[t.id] = {
-                              status: null != (i = b.Z.getStatus(t.id)) ? i : Z.Skl.OFFLINE,
+                              status: null != (i = b.Z.getStatus(t.id)) ? i : I.Skl.OFFLINE,
                               activities: null != (l = b.Z.getActivities(t.id)) ? l : N,
                           })
                         : (n[t.id] = {
-                              status: Z.Skl.OFFLINE,
+                              status: I.Skl.OFFLINE,
                               activities: N,
                           });
                 }
@@ -219,7 +219,7 @@ function D(e) {
             A,
         );
     i.useEffect(() => {
-        _.default.track(Z.rMx.MEMBER_LIST_VIEWED, {
+        j.default.track(I.rMx.MEMBER_LIST_VIEWED, {
             channel_id: t.id,
             channel_type: t.type,
             guild_id: t.guild_id,
@@ -239,7 +239,7 @@ function D(e) {
                         (0, r.jsxs)(f.Z, {
                             className: P.membersGroup,
                             children: [
-                                "".concat(I.intl.string(I.t["9Oq93t"]), "\u2014").concat(c.length, " "),
+                                "".concat(Z.intl.string(Z.t["9Oq93t"]), "\u2014").concat(c.length, " "),
                                 p && (0, r.jsx)(h.Z, { type: h.Z.Types.STAFF_ONLY_DM }),
                             ],
                         }),

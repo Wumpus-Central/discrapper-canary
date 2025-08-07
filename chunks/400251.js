@@ -21,14 +21,14 @@ var r = n(255367),
     b = n(769654),
     y = n(430824),
     x = n(768581),
-    j = n(411198),
-    _ = n(683818),
+    _ = n(411198),
+    j = n(683818),
     O = n(16853),
     v = n(981631),
     C = n(388032),
     E = n(901593),
     S = n(883760);
-function Z(e) {
+function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -53,7 +53,7 @@ function Z(e) {
     }
     return e;
 }
-function I(e, t) {
+function Z(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -114,7 +114,7 @@ function N(e) {
     let { entry: t } = e,
         [l, s] = i.useState(!1),
         o = i.useRef(null),
-        { canEdit: u } = (0, _.Z)(t);
+        { canEdit: u } = (0, j.Z)(t);
     return (0, r.jsx)("div", {
         className: a()(E.actionButtonsContainer, { [E.forceButtonsShow]: l }),
         children: (0, r.jsxs)(p.ZP, {
@@ -128,12 +128,12 @@ function N(e) {
                                   l = P(e, ["onClick"]);
                               return (0, r.jsx)(
                                   p.zx,
-                                  I(Z({}, l), {
+                                  Z(I({}, l), {
                                       onClick: () => {
                                           null == i || i(),
                                               (0, c.ZDy)(async () => {
                                                   let { default: e } = await n.e("34191").then(n.bind(n, 303647));
-                                                  return (n) => (0, r.jsx)(e, I(Z({}, n), { entry: t }));
+                                                  return (n) => (0, r.jsx)(e, Z(I({}, n), { entry: t }));
                                               });
                                       },
                                       "aria-label": C.intl.string(C.t.XnuOvL),
@@ -164,7 +164,7 @@ function N(e) {
                                     l = P(e, ["onClick"]);
                                 return (0, r.jsx)(
                                     p.zx,
-                                    I(Z({}, n, l), {
+                                    Z(I({}, n, l), {
                                         ref: o,
                                         onClick: (e) => {
                                             null == i || i(), t(e);
@@ -189,11 +189,11 @@ let R = (e) => {
     var t;
     let { entry: l } = e,
         [a, p] = i.useState(!1),
-        _ = null != (0, s.e7)([y.Z], () => y.Z.getGuild(l.guildId)),
+        j = null != (0, s.e7)([y.Z], () => y.Z.getGuild(l.guildId)),
         O = async () => {
             p(!0);
             try {
-                _ ? (0, b.X)(l.guildId) : await d.Z.joinGuild(l.guildId, { source: v.vtS.DIRECTORY_ENTRY });
+                j ? (0, b.X)(l.guildId) : await d.Z.joinGuild(l.guildId, { source: v.vtS.DIRECTORY_ENTRY });
             } finally {
                 p(!1);
             }
@@ -214,13 +214,13 @@ let R = (e) => {
                 : void 0,
         T = C.intl.string(C.t.VJlc0d);
     return (
-        _ && (T = C.intl.string(C.t.cqWE2d)),
+        j && (T = C.intl.string(C.t.cqWE2d)),
         (0, r.jsxs)("div", {
             className: E.card,
             onContextMenu: (e) => {
                 (0, u.jW)(e, async () => {
                     let { default: e } = await Promise.resolve().then(n.bind(n, 643560));
-                    return (t) => (0, r.jsx)(e, I(Z({}, t), { entry: l }));
+                    return (t) => (0, r.jsx)(e, Z(I({}, t), { entry: l }));
                 });
             },
             children: [
@@ -248,7 +248,7 @@ let R = (e) => {
                                     children: (0, r.jsx)(f.Z, {
                                         className: E.icon,
                                         iconSrc: P,
-                                        guild: (0, j.e)(l),
+                                        guild: (0, _.e)(l),
                                         size: f.Z.Sizes.MEDIUM,
                                         active: !0,
                                     }),
@@ -318,7 +318,7 @@ let R = (e) => {
                         (0, r.jsx)(o.zx, {
                             submitting: a,
                             className: E.joinButton,
-                            color: _ ? o.zx.Colors.PRIMARY : o.zx.Colors.GREEN,
+                            color: j ? o.zx.Colors.PRIMARY : o.zx.Colors.GREEN,
                             onClick: O,
                             children: T,
                         }),

@@ -83,7 +83,7 @@ function v(e) {
 }
 function b(e) {
     let { guildId: t, powerup: n } = e,
-        o = (0, u.Z)(t, n);
+        o = (0, u.ZP)(t, n);
     if (o.type === p.A3.LEVEL_ACTIVATED) {
         var i, l;
         return (0, r.jsxs)("div", {
@@ -144,7 +144,7 @@ function j(e) {
             return o;
         })(e, ["guildId", "powerup", "compact", "iconSize", "onError"]);
     let { onActivate: C, isLoading: I, error: O, onShowDeactivate: y } = (0, d.ZP)(t, n),
-        P = (0, u.Z)(t, n).type !== p.A3.INACTIVE,
+        P = (0, u.ZP)(t, n).type !== p.A3.INACTIVE,
         { disabled: w, reason: N } = (0, c.Z)(t, n, P);
     return (
         o.useEffect(() => {

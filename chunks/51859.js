@@ -18,7 +18,7 @@ function _(e) {
         [_, v] = o.useState(void 0);
     (0, f.KT)(_);
     let [b, j] = o.useState(!1),
-        h = (0, a.Z)(t, n).type !== g.A3.INACTIVE,
+        h = (0, a.ZP)(t, n).type !== g.A3.INACTIVE,
         E = (0, m.d)(h),
         C = (0, s.g1)(t, "GuildPowerupPerkCard"),
         I = n.skuId === i.A$;

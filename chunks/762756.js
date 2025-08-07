@@ -1,20 +1,18 @@
-n.d(t, { Z: () => j }), n(388685);
+n.d(t, { Z: () => v }), n(388685);
 var r,
     i = n(255367),
     a = n(73800),
     l = n(120356),
-    o = n.n(l),
-    c = n(873546),
-    s = n(755721),
+    c = n.n(l),
+    o = n(873546),
+    s = n(481060),
     u = n(599857),
-    d = n(600164),
-    f = n(63063),
-    p = n(1964),
-    m = n(981631),
-    g = n(388032),
-    y = n(816676),
-    h = n(20493);
-function b(e, t, n) {
+    d = n(63063),
+    f = n(1964),
+    p = n(981631),
+    y = n(388032),
+    m = n(816676);
+function g(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -27,13 +25,13 @@ function b(e, t, n) {
         e
     );
 }
-let E = f.Z.getArticleURL(m.BhN.VERIFICATION_FAQ);
-class v extends (r = a.PureComponent) {
+let h = d.Z.getArticleURL(p.BhN.VERIFICATION_FAQ);
+class b extends (r = a.PureComponent) {
     renderFields() {
         let { types: e, captchaKey: t, theme: n, onCaptchaVerify: r } = this.props;
         return (0, i.jsx)(i.Fragment, {
             children: e.map((e) =>
-                e === m.PUi.CAPTCHA
+                e === p.PUi.CAPTCHA
                     ? (0, i.jsx)(
                           u.Z,
                           {
@@ -43,11 +41,10 @@ class v extends (r = a.PureComponent) {
                           t,
                       )
                     : (0, i.jsx)(
-                          s.zx,
+                          s.zxk,
                           {
-                              className: h.marginBottom20,
                               onClick: () => this.handleClick(e),
-                              children: p.Z.getButtonTitle(e),
+                              text: f.Z.getButtonTitle(e),
                           },
                           e,
                       ),
@@ -55,53 +52,87 @@ class v extends (r = a.PureComponent) {
         });
     }
     render() {
-        return (0, i.jsxs)(d.Z, {
-            className: y.verification,
-            align: d.Z.Align.CENTER,
-            direction: d.Z.Direction.VERTICAL,
+        return (0, i.jsxs)(s.Kqy, {
+            gap: 16,
+            className: m.verification,
+            align: "center",
+            direction: "vertical",
+            justify: "center",
             children: [
-                (0, i.jsxs)(d.Z, {
-                    className: o()(y.container, { [y.isMobile]: c.tq }),
-                    direction: d.Z.Direction.VERTICAL,
-                    align: d.Z.Align.CENTER,
-                    justify: d.Z.Justify.CENTER,
+                (0, i.jsxs)(s.Kqy, {
+                    gap: 16,
+                    className: c()(m.container, { [m.isMobile]: o.tq }),
+                    align: "center",
+                    direction: "vertical",
+                    justify: "center",
                     children: [
-                        (0, i.jsx)("div", { className: y.image }),
-                        (0, i.jsx)("div", {
-                            className: o()(y.title, h.marginTop20),
-                            children: g.intl.string(g.t.Iz0kDg),
+                        (0, i.jsxs)(s.Kqy, {
+                            align: "center",
+                            direction: "vertical",
+                            justify: "center",
+                            gap: 16,
+                            children: [
+                                (0, i.jsx)("div", { className: m.image }),
+                                (0, i.jsxs)(s.Kqy, {
+                                    className: m.textContainer,
+                                    gap: 4,
+                                    align: "center",
+                                    direction: "vertical",
+                                    justify: "center",
+                                    children: [
+                                        (0, i.jsx)(s.X6q, {
+                                            variant: "heading-xl/normal",
+                                            children: y.intl.string(y.t.Iz0kDg),
+                                        }),
+                                        (0, i.jsx)(s.Text, {
+                                            variant: "text-md/normal",
+                                            children: y.intl.format(y.t["0rqMV1"], { helpCenterURL: h }),
+                                        }),
+                                    ],
+                                }),
+                            ],
                         }),
-                        (0, i.jsx)("div", {
-                            className: o()(y.body, h.marginTop4, h.marginBottom20),
-                            children: g.intl.format(g.t["0rqMV1"], { helpCenterURL: E }),
-                        }),
-                        (0, i.jsx)(d.Z, {
-                            grow: 0,
-                            direction: d.Z.Direction.VERTICAL,
-                            justify: d.Z.Justify.CENTER,
+                        (0, i.jsx)(s.Kqy, {
+                            gap: 16,
+                            direction: "vertical",
+                            justify: "center",
+                            align: "center",
                             children: this.renderFields(),
                         }),
                     ],
                 }),
-                (0, i.jsx)("div", {
-                    className: o()(y.footer, h.marginTop20),
-                    children: g.intl.string(g.t.qqYun5),
-                }),
-                (0, i.jsxs)(d.Z, {
-                    className: o()(h.marginTop4, h.marginBottom20),
-                    grow: 0,
+                (0, i.jsxs)(s.Kqy, {
+                    gap: 8,
+                    align: "center",
+                    direction: "vertical",
+                    justify: "center",
                     children: [
-                        (0, i.jsx)("div", {
-                            className: o()(y.footer, y.footerAction),
-                            children: g.intl.format(g.t.WL51ZW, { supportURL: f.Z.getSubmitRequestURL() }),
+                        (0, i.jsx)(s.Text, {
+                            variant: "text-sm/normal",
+                            className: m.footer,
+                            children: y.intl.string(y.t.qqYun5),
                         }),
-                        (0, i.jsx)("div", {
-                            className: o()(y.footer, y.footerBullet),
-                            children: "\u2022",
-                        }),
-                        (0, i.jsx)("div", {
-                            className: o()(y.footer, y.footerAction),
-                            children: g.intl.format(g.t.Hv7ztb, { logoutOnClick: this.props.onLogout }),
+                        (0, i.jsxs)(s.Kqy, {
+                            gap: 8,
+                            align: "center",
+                            direction: "horizontal",
+                            justify: "center",
+                            children: [
+                                (0, i.jsx)(s.Text, {
+                                    variant: "text-sm/semibold",
+                                    className: m.footer,
+                                    children: y.intl.format(y.t.WL51ZW, { supportURL: d.Z.getSubmitRequestURL() }),
+                                }),
+                                (0, i.jsx)("div", {
+                                    className: c()(m.footer, m.footerBullet),
+                                    children: "\u2022",
+                                }),
+                                (0, i.jsx)(s.Text, {
+                                    variant: "text-sm/semibold",
+                                    className: m.footer,
+                                    children: y.intl.format(y.t.Hv7ztb, { logoutOnClick: this.props.onLogout }),
+                                }),
+                            ],
                         }),
                     ],
                 }),
@@ -110,15 +141,15 @@ class v extends (r = a.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            b(this, "handleClick", (e) => {
+            g(this, "handleClick", (e) => {
                 let { onClick: t } = this.props;
                 null == t || t(e);
             });
     }
 }
-b(v, "defaultProps", {
-    types: [m.PUi.CAPTCHA],
-    onCaptchaVerify: m.dG4,
-    onLogout: m.dG4,
+g(b, "defaultProps", {
+    types: [p.PUi.CAPTCHA],
+    onCaptchaVerify: p.dG4,
+    onLogout: p.dG4,
 });
-let j = v;
+let v = b;

@@ -11,7 +11,7 @@ var r = n(255367),
     p = n(737174);
 function f(e) {
     let { className: t, guildId: n, powerup: o, onError: f, onClose: b } = e,
-        m = (0, c.Z)(n, o),
+        m = (0, c.ZP)(n, o),
         O = m.type === u.A3.TIER_OVERRIDE_ACTIVATED,
         j = (0, s.Z)(n),
         x = null == m.sourceEntitlement || !j;

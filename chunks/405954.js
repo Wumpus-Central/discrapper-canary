@@ -16,12 +16,12 @@ var r = n(255367),
 let b = function (e) {
     let { channel: t } = e,
         { activePickerChannelId: n, openPickerForChannel: b, closePicker: y } = (0, o.B)(),
-        { canAccessPicker: x, entryPoint: j } = (0, c.m)({
+        { canAccessPicker: x, entryPoint: _ } = (0, c.m)({
             location: "channel_header_toolbar",
             channelId: t.id,
         }),
-        _ = (0, u.Nj)(l.z.CHAT_WALLPAPERS_PICKER_COACHMARK),
-        O = x && j === s.FN.TOOLBAR && _,
+        j = (0, u.Nj)(l.z.CHAT_WALLPAPERS_PICKER_COACHMARK),
+        O = x && _ === s.FN.TOOLBAR && j,
         [v, C] = (0, d.US)(O ? [l.z.CHAT_WALLPAPERS_TOOLBAR_ENTRYPOINT_BADGE] : []),
         E = v === l.z.CHAT_WALLPAPERS_TOOLBAR_ENTRYPOINT_BADGE,
         S = i.useCallback(() => {

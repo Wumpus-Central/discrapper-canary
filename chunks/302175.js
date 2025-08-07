@@ -87,7 +87,7 @@ function U(e) {
         { analyticsLocations: u } = (0, m.ZP)(),
         d = (0, I.g1)(t, "GuildPowerupMarketingPowerupCard"),
         y = n.skuId === c.A$,
-        O = (0, A.Z)(t, n).type !== C.A3.INACTIVE,
+        O = (0, A.ZP)(t, n).type !== C.A3.INACTIVE,
         v = (0, S.Z)(t),
         [x, k] = i.useState(!1),
         [U, G] = i.useState(!1),

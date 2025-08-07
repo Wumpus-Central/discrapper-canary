@@ -16,15 +16,15 @@ var r = n(255367),
     b = n(933557),
     y = n(236091),
     x = n(623624),
-    j = n(665149),
-    _ = n(984370),
+    _ = n(665149),
+    j = n(984370),
     O = n(616286),
     v = n(975146),
     C = n(430824),
     E = n(496675),
     S = n(626135),
-    Z = n(431328),
-    I = n(501655),
+    I = n(431328),
+    Z = n(501655),
     P = n(200498),
     T = n(146085),
     N = n(427679),
@@ -46,9 +46,9 @@ function M(e) {
             [t.id],
         ),
         b = (0, P.B)(t.id),
-        x = (0, Z.Rk)(t.id, I.pV.REQUESTED_TO_SPEAK_ONLY),
-        { hasParticipantsPanel: j } = (0, g.Z)({ location: "StageChannelCallHeader" }),
-        _ = j && u;
+        x = (0, I.Rk)(t.id, Z.pV.REQUESTED_TO_SPEAK_ONLY),
+        { hasParticipantsPanel: _ } = (0, g.Z)({ location: "StageChannelCallHeader" }),
+        j = _ && u;
     return (0, r.jsxs)(p.Gt, {
         value: l,
         children: [
@@ -69,7 +69,7 @@ function M(e) {
                   })
                 : null,
             !u &&
-                j &&
+                _ &&
                 (0, r.jsx)(
                     v.Z,
                     {
@@ -82,7 +82,7 @@ function M(e) {
                 ),
             !c &&
                 (0, r.jsx)("div", {
-                    className: a()(L.button, { [L.sidebarOpen]: _ || i }),
+                    className: a()(L.button, { [L.sidebarOpen]: j || i }),
                     children: (0, r.jsx)(O.T, {
                         channelId: t.id,
                         showRequestToSpeakSidebar: i,
@@ -98,8 +98,8 @@ function U(e) {
     let { channel: n, toggleRequestToSpeakSidebar: l, showRequestToSpeakSidebar: h } = e,
         p = (0, b.ZP)(n),
         f = (0, s.e7)([N.Z], () => N.Z.getStageInstanceByChannel(n.id)),
-        g = (0, Z.Io)(n.id),
-        m = (0, Z.Rk)(n.id, I.pV.AUDIENCE),
+        g = (0, I.Io)(n.id),
+        m = (0, I.Rk)(n.id, Z.pV.AUDIENCE),
         y = (0, s.e7)([C.Z], () => C.Z.getGuild(n.guild_id), [n.guild_id]),
         O = null != (t = null == y ? void 0 : y.maxStageVideoChannelUsers) ? t : 0,
         v =
@@ -117,18 +117,18 @@ function U(e) {
                     action: D.T7.DISMISS,
                 });
         },
-        G = {
+        H = {
             canModerate: R,
             audienceCount: m,
             channel: n,
             speakerCount: g,
         },
-        F = i.useRef(G);
+        G = i.useRef(H);
     i.useEffect(() => {
-        F.current = G;
+        G.current = H;
     }),
         i.useEffect(() => {
-            let { canModerate: e, audienceCount: t, channel: n, speakerCount: r } = F.current;
+            let { canModerate: e, audienceCount: t, channel: n, speakerCount: r } = G.current;
             P &&
                 S.default.track(A.rMx.BOOSTING_UPSELL_VIEWED, {
                     guild_id: n.guild_id,
@@ -141,30 +141,30 @@ function U(e) {
         theme: A.BRd.DARK,
         children: (e) => {
             var t;
-            return (0, r.jsxs)(j.ZP, {
+            return (0, r.jsxs)(_.ZP, {
                 toolbar: (0, r.jsx)(M, {
                     toggleRequestToSpeakSidebar: l,
                     showRequestToSpeakSidebar: h,
                     channel: n,
                 }),
-                onDoubleClick: _.O,
+                onDoubleClick: j.O,
                 transparent: !0,
                 className: a()(e, L.participants),
                 children: [
-                    (0, r.jsx)(j.ZP.Icon, {
+                    (0, r.jsx)(_.ZP.Icon, {
                         icon: u.ewx,
                         disabled: !0,
                         "aria-label": k.intl.string(k.t.EErMzM),
                         className: L.icon,
                         color: null != f ? o.Z.colors.HEADER_MUTED.css : void 0,
                     }),
-                    (0, r.jsx)(j.ZP.Title, {
+                    (0, r.jsx)(_.ZP.Title, {
                         className: L.channelName,
                         wrapperClassName: L.channelNameWrapper,
                         children: null != (t = null == f ? void 0 : f.topic) ? t : p,
                     }),
-                    (0, r.jsx)(j.ZP.Divider, { className: L.divider }),
-                    (0, r.jsxs)(j.ZP.Title, {
+                    (0, r.jsx)(_.ZP.Divider, { className: L.divider }),
+                    (0, r.jsxs)(_.ZP.Title, {
                         children: [
                             (0, r.jsx)(u.S6n, {
                                 size: "xs",
@@ -200,7 +200,7 @@ function U(e) {
                   (0, r.jsxs)("div", {
                       className: L.boostUpsell,
                       children: [
-                          (0, r.jsx)(H, {}),
+                          (0, r.jsx)(F, {}),
                           (0, r.jsxs)("div", {
                               className: L.text,
                               children: [
@@ -261,7 +261,7 @@ function U(e) {
           })
         : B;
 }
-function H() {
+function F() {
     return (0, r.jsxs)("svg", {
         width: "36",
         height: "36",

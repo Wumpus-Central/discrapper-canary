@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => j });
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -16,11 +16,11 @@ var r = n(255367),
     b = n(358085),
     y = n(228488),
     x = n(981631);
-let j = () => {
+let _ = () => {
     a.Z.wait(() => h.xv(x.KJ3.CHANNEL_CALL_POPOUT));
 };
-function _(e) {
-    let { channel: t, appContext: n, popoutOpen: a, popoutWindow: h, currentWindow: _ } = e,
+function j(e) {
+    let { channel: t, appContext: n, popoutOpen: a, popoutWindow: h, currentWindow: j } = e,
         { parentAnalyticsLocation: O } = (0, c.ZP)(),
         v = n === x.IlC.POPOUT,
         C = i.useRef(null),
@@ -37,22 +37,22 @@ function _(e) {
                 }
             );
         }, [t, n]),
-        Z = (0, l.e7)([f.Z], () => f.Z.getVoiceChannelId() === t.id, [t.id]);
+        I = (0, l.e7)([f.Z], () => f.Z.getVoiceChannelId() === t.id, [t.id]);
     i.useEffect(() => {
         C.current = S;
     });
-    let I = i.useRef(E),
+    let Z = i.useRef(E),
         { currentDocument: P, rootNode: T } = i.useMemo(() => {
             let e = null != h && v ? h.document : document,
-                t = _.document.getElementById("app-mount");
+                t = j.document.getElementById("app-mount");
             return {
-                currentWindow: _,
+                currentWindow: j,
                 currentDocument: e,
                 rootNode: t,
             };
-        }, [h, v, _]),
+        }, [h, v, j]),
         N = a && !v,
-        R = S === x.WtW.VIDEO && Z && !N,
+        R = S === x.WtW.VIDEO && I && !N,
         w = i.useCallback(
             (e, r) => {
                 r !== e &&
@@ -65,9 +65,9 @@ function _(e) {
             (e) => {
                 null != T &&
                     e === x.AEg.FULL_SCREEN &&
-                    (w(e, I.current),
+                    (w(e, Z.current),
                     (0, y.Pr)((e) => {
-                        I.current = e;
+                        Z.current = e;
                     }, P));
             },
             [P, w, T],
@@ -76,7 +76,7 @@ function _(e) {
             (e) => () => {
                 null != T &&
                     ((0, d.v)(O, d.d.FULL_SCREEN, e !== x.AEg.FULL_SCREEN),
-                    e !== x.AEg.FULL_SCREEN ? ((I.current = e), w(e, x.AEg.FULL_SCREEN), (0, y.Dj)(T)) : A(e));
+                    e !== x.AEg.FULL_SCREEN ? ((Z.current = e), w(e, x.AEg.FULL_SCREEN), (0, y.Dj)(T)) : A(e));
             },
             [w, A, T, O],
         );
@@ -139,8 +139,8 @@ function _(e) {
         null != T && C.current === x.WtW.VIDEO && S === x.WtW.VOICE && (0, y.Pr)(T, P);
     }, [P, S, C, T]),
     i.useEffect(() => {
-        !Z && v && j();
-    }, [Z, v]),
+        !I && v && _();
+    }, [I, v]),
     R)
         ? (0, r.jsx)(p.Z, {
               themeable: !1,

@@ -16,8 +16,8 @@ var r = n(255367),
     b = n(502762),
     y = n(848780),
     x = n(907179),
-    j = n(228168),
-    _ = n(388032),
+    _ = n(228168),
+    j = n(388032),
     O = n(443773),
     v = n(268293);
 function C(e) {
@@ -48,9 +48,9 @@ function C(e) {
 function E(e) {
     let { user: t, channel: n, onHide: E } = e,
         S = (0, g.ZP)(t.id),
-        Z = (0, o.ZP)(),
-        I = (0, a.e7)([d.Z], () => d.Z.isBlocked(t.id)),
-        { analyticsLocations: P } = (0, u.ZP)(I ? c.Z.BLOCKED_PROFILE_PANEL : c.Z.IGNORED_PROFILE_PANEL),
+        I = (0, o.ZP)(),
+        Z = (0, a.e7)([d.Z], () => d.Z.isBlocked(t.id)),
+        { analyticsLocations: P } = (0, u.ZP)(Z ? c.Z.BLOCKED_PROFILE_PANEL : c.Z.IGNORED_PROFILE_PANEL),
         T = (0, p.ZB)({
             layout: "SIDEBAR",
             userId: t.id,
@@ -68,8 +68,8 @@ function E(e) {
                 ref: N,
                 user: t,
                 displayProfile: S,
-                themeType: j.lY.SIDEBAR,
-                themeOverride: Z,
+                themeType: _.lY.SIDEBAR,
+                themeOverride: I,
                 children: (0, r.jsx)(l.u2, {
                     children: (0, r.jsxs)("div", {
                         className: O.container,
@@ -89,11 +89,11 @@ function E(e) {
                                             (0, r.jsx)(m.Z, { user: t }),
                                             (0, r.jsx)(s.X6q, {
                                                 variant: "heading-lg/bold",
-                                                children: _.intl.string(_.t.b33pLC),
+                                                children: j.intl.string(j.t.b33pLC),
                                             }),
                                             (0, r.jsx)(s.Text, {
                                                 variant: "text-sm/medium",
-                                                children: _.intl.format(I ? _.t["8F+WNz"] : _.t["/cZp5u"], {
+                                                children: j.intl.format(Z ? j.t["8F+WNz"] : j.t["/cZp5u"], {
                                                     username: h.ZP.getName(n.guild_id, n.id, t),
                                                 }),
                                             }),
@@ -103,13 +103,13 @@ function E(e) {
                                         align: "center",
                                         children: [
                                             (0, r.jsx)(x.Z, {
-                                                isBlocked: I,
+                                                isBlocked: Z,
                                                 onClick: () => {
                                                     E(),
                                                         (0, f.pQ)(
                                                             C(
                                                                 {
-                                                                    action: I
+                                                                    action: Z
                                                                         ? "VIEW_BLOCKED_PROFILE"
                                                                         : "VIEW_IGNORED_PROFILE",
                                                                     analyticsLocations: P,

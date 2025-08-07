@@ -62,12 +62,12 @@ let x = function (e) {
             let e = h.default.getCurrentUser();
             return null == e || ((0, c.aC)(t) && (!e.nsfwAllowed || !u.Z.didAgree(t.getGuildId())));
         }, [t]),
-        [x, j] = i.useState(!1),
-        _ = (0, l.e7)([d.ZP], () => d.ZP.hasUnreadPins(t.id), [t]),
+        [x, _] = i.useState(!1),
+        j = (0, l.e7)([d.ZP], () => d.ZP.hasUnreadPins(t.id), [t]),
         O = (0, o.Aq)(),
         v = i.useRef(null),
         C = i.useCallback(() => {
-            n || j((e) => !e);
+            n || _((e) => !e);
         }, [n]);
     function E(e) {
         (null == e ? void 0 : e.shiftKey) || O.dispatch(g.CkL.POPOUT_CLOSE);
@@ -90,7 +90,7 @@ let x = function (e) {
             align: "right",
             autoInvert: !1,
             ignoreModalClicks: !0,
-            onRequestClose: () => j(!1),
+            onRequestClose: () => _(!1),
             renderPopout: function (e) {
                 return (0, r.jsx)(
                     s.Z,
@@ -113,7 +113,7 @@ let x = function (e) {
                         iconSize: 20,
                         "aria-label": m.intl.string(m.t["mp1N//"]),
                         disabled: n,
-                        showBadge: _,
+                        showBadge: j,
                         selected: i,
                     }),
                 );

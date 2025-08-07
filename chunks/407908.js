@@ -18,9 +18,9 @@ function b(e) {
     let { channel: b } = e,
         y = i.useContext(h.AnalyticsContext),
         x = (0, a.Aq)(),
-        j = g.intl.string(m.default["Beo/7u"]),
-        { firstMessage: _ } = (0, o.cl)(b),
-        O = null == _ || null == (t = _.messageSnapshots) ? void 0 : t[0],
+        _ = g.intl.string(m.default["Beo/7u"]),
+        { firstMessage: j } = (0, o.cl)(b),
+        O = null == j || null == (t = j.messageSnapshots) ? void 0 : t[0],
         v = null == O || null == (n = O.moderatorReport) ? void 0 : n.reported_user_id;
     return b.isModeratorReportChannel() && null != v
         ? (0, r.jsx)(u.ZP.Icon, {
@@ -33,9 +33,9 @@ function b(e) {
                       }),
                       x.dispatch(p.CkL.POPOUT_CLOSE);
               },
-              tooltip: j,
+              tooltip: _,
               icon: l.HI3,
-              "aria-label": j,
+              "aria-label": _,
           })
         : null;
 }

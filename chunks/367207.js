@@ -135,7 +135,7 @@ class C extends o.Z {
                 let e = u.default.getCurrentUser();
                 if (null != e && e.verified) {
                     let t = (d.Z.canFractionalPremiumUserUseOffer() || !(0, h.I5)(e)) && !d.Z.isFetchingOffer();
-                    await (0, g.T)("PremiumManager", t);
+                    await (0, g.Tf)("PremiumManager", t);
                 }
                 l.Z.dispatch({ type: "PREMIUM_MARKETING_DATA_READY" });
             }),

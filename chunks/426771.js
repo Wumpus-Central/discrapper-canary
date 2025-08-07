@@ -17,7 +17,7 @@ function x(e) {
     let _,
         { guildId: v, group: b, powerups: j } = e,
         [h, E] = o.useState(!1),
-        C = (0, a.G)(v, j),
+        C = (0, a.Gv)(v, j),
         I = (0, i.e7)([s.Z], () => s.Z.useReducedMotion),
         O = (0, u.Z)(b, v);
     if (void 0 === O || j.length <= 0) return null;

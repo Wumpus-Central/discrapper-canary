@@ -123,7 +123,7 @@ function R() {
 }
 function P() {
     let e = c.default.getCurrentUser();
-    !(0, d.I5)(e) && Object.keys(y.userDiscountOffers).length > 0 && (0, s.T)("UserOfferStore", !0);
+    !(0, d.I5)(e) && Object.keys(y.userDiscountOffers).length > 0 && (0, s.Tf)("UserOfferStore", !0);
 }
 function w() {
     var e;

@@ -22,8 +22,8 @@ function b(e) {
 let y = i.memo(function (e) {
     let t,
         { title: h, onToggleExpand: b, expanded: y, expandedCount: x } = e,
-        j = (0, l.e7)([u.Z], () => u.Z.hidden),
-        _ = i.useCallback((e) => {
+        _ = (0, l.e7)([u.Z], () => u.Z.hidden),
+        j = i.useCallback((e) => {
             (0, s.jW)(e, async () => {
                 let { MemberListContentSettingsMenu: e } = await Promise.resolve().then(n.bind(n, 703180));
                 return () => (0, r.jsx)(e, { closePopout: s.Zy });
@@ -41,9 +41,9 @@ let y = i.memo(function (e) {
             (0, r.jsxs)(a.P3F, {
                 onClick: (e) => {
                     if (e.currentTarget === e.target || e.currentTarget.contains(e.target))
-                        return j ? (0, c.lY)() : x > 3 ? b() : (0, p.dG4)();
+                        return _ ? (0, c.lY)() : x > 3 ? b() : (0, p.dG4)();
                 },
-                onContextMenu: _,
+                onContextMenu: j,
                 tag: "span",
                 "aria-hidden": !0,
                 className: g.headerContainer,
@@ -57,9 +57,9 @@ let y = i.memo(function (e) {
                             (0, r.jsx)(d.Z, {}),
                         ],
                     }),
-                    x <= 3 && !j
+                    x <= 3 && !_
                         ? null
-                        : ((t = j
+                        : ((t = _
                               ? (0, r.jsx)(a.u04, { className: g.toggleExpandIcon })
                               : y
                                 ? (0, r.jsx)(a.CJ0, { className: g.toggleExpandIcon })

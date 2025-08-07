@@ -19,7 +19,7 @@ var r = n(73800),
 function b(e, t) {
     let n = (0, l.e7)([a.Z], () => a.Z.getStateForGuild(e)),
         r = null == n ? void 0 : n.allPowerups[i.A$],
-        o = (0, d.Z)(e, r),
+        o = (0, d.ZP)(e, r),
         s = (0, c.q8)(e, t),
         u = null == r ? void 0 : r.storeRemovalDate,
         p = s && null != u && o.type !== f.A3.INACTIVE,

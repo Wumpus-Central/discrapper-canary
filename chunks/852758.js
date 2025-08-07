@@ -1,27 +1,27 @@
-n.d(t, { Z: () => P }), n(388685);
+n.d(t, { Z: () => A }), n(388685);
 var r = n(255367),
     i = n(73800),
     a = n(990547),
     l = n(442837),
-    o = n(544891),
-    c = n(481060),
+    c = n(544891),
+    o = n(481060),
     s = n(893776),
     u = n(37234),
     d = n(809206),
     f = n(110924),
     p = n(714338),
-    m = n(213609),
-    g = n(429142),
-    y = n(144114),
+    y = n(213609),
+    m = n(429142),
+    g = n(144114),
     h = n(210887),
     b = n(23434),
-    E = n(1964),
-    v = n(762756),
-    j = n(308569),
-    O = n(981631),
-    w = n(815660),
-    x = n(388032);
-function A(e) {
+    v = n(1964),
+    j = n(762756),
+    O = n(308569),
+    x = n(981631),
+    E = n(815660),
+    w = n(388032);
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -46,7 +46,7 @@ function A(e) {
     }
     return e;
 }
-function _(e, t) {
+function P(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -64,48 +64,48 @@ function _(e, t) {
         e
     );
 }
-function P() {
+function A() {
     let { action: e, theme: t } = (0, l.cj)([b.Z, h.Z], () => ({
             action: b.Z.getAction(),
             theme: h.Z.theme,
         })),
-        P = E.Z.getVerificationTypes(e),
-        [N, R] = i.useState(0),
-        S = (0, f.Z)(P);
-    (0, m.Z)(
+        A = v.Z.getVerificationTypes(e),
+        [S, N] = i.useState(0),
+        k = (0, f.Z)(A);
+    (0, y.Z)(
         {
             type: a.ImpressionTypes.MODAL,
             name: a.ImpressionNames.USER_ACTION_REQUIRED,
             properties: {
-                verification_type: P[0],
-                verification_types: P,
+                verification_type: A[0],
+                verification_types: A,
             },
         },
         {},
-        [P.toString()],
+        [A.toString()],
     );
-    let C = () => {
+    let R = () => {
             (0, d.FD)(),
-                (0, c.ZDy)(
+                (0, o.ZDy)(
                     async () => {
                         let { default: e } = await n.e("35401").then(n.bind(n, 284549));
-                        return (t) => (0, r.jsx)(e, A({}, t));
+                        return (t) => (0, r.jsx)(e, _({}, t));
                     },
                     {
-                        modalKey: j.F0,
-                        Layer: g.ZP,
+                        modalKey: O.F0,
+                        Layer: m.ZP,
                     },
                 );
         },
         I = () => {
-            (0, c.ZDy)(
+            (0, o.ZDy)(
                 async () => {
                     let { default: e } = await Promise.resolve().then(n.bind(n, 607018));
-                    return (t) => (0, r.jsx)(e, A({ reason: y.L.USER_ACTION_REQUIRED }, t));
+                    return (t) => (0, r.jsx)(e, _({ reason: g.L.USER_ACTION_REQUIRED }, t));
                 },
                 {
-                    modalKey: w.M,
-                    Layer: g.ZP,
+                    modalKey: E.M,
+                    Layer: m.ZP,
                 },
             );
         };
@@ -120,60 +120,60 @@ function P() {
             [],
         ),
         i.useEffect(() => {
-            (null == S ? void 0 : S[0]) === O.PUi.PHONE &&
-                (null == P ? void 0 : P[0]) === O.PUi.EMAIL &&
-                (0, c.ZDy)(
+            (null == k ? void 0 : k[0]) === x.PUi.PHONE &&
+                (null == A ? void 0 : A[0]) === x.PUi.EMAIL &&
+                (0, o.ZDy)(
                     async () => {
                         let { default: e } = await Promise.resolve().then(n.bind(n, 468026));
                         return (t) =>
                             (0, r.jsx)(
                                 e,
-                                _(A({}, t), {
-                                    title: x.intl.string(x.t.KLnLIC),
-                                    body: x.intl.string(x.t.XGbCq6),
-                                    confirmText: x.intl.string(x.t["3oK4q6"]),
+                                P(_({}, t), {
+                                    title: w.intl.string(w.t.KLnLIC),
+                                    body: w.intl.string(w.t.XGbCq6),
+                                    confirmText: w.intl.string(w.t["3oK4q6"]),
                                 }),
                             );
                     },
                     {
-                        modalKey: j.HR,
-                        Layer: g.ZP,
-                        onCloseCallback: C,
+                        modalKey: O.HR,
+                        Layer: m.ZP,
+                        onCloseCallback: R,
                     },
                 );
-        }, [P, S]),
-        (0, r.jsx)(v.Z, {
-            types: P,
-            captchaKey: N,
+        }, [A, k]),
+        (0, r.jsx)(j.Z, {
+            types: A,
+            captchaKey: S,
             onCaptchaVerify: (e) => {
-                o.tn
+                c.tn
                     .post({
-                        url: O.ANM.CAPTCHA,
+                        url: x.ANM.CAPTCHA,
                         body: { captcha_key: e },
                         oldFormErrors: !0,
                         rejectWithError: !0,
                     })
                     .then(u.xf, () => {
-                        R((e) => e + 1);
+                        N((e) => e + 1);
                     });
             },
             theme: t,
             onClick: (e) => {
-                e === O.PUi.EMAIL_OR_PHONE || e === O.PUi.EMAIL || e === O.PUi.REVERIFY_EMAIL ? C() : I();
+                e === x.PUi.EMAIL_OR_PHONE || e === x.PUi.EMAIL || e === x.PUi.REVERIFY_EMAIL ? R() : I();
             },
             onLogout: () => {
-                (0, c.ZDy)(
+                (0, o.ZDy)(
                     async () => {
                         let { ConfirmModal: e, Text: t } = await Promise.resolve().then(n.bind(n, 481060));
                         return (n) =>
                             (0, r.jsx)(
                                 e,
-                                _(
-                                    A(
+                                P(
+                                    _(
                                         {
-                                            header: x.intl.string(x.t["2jxGen"]),
-                                            confirmText: x.intl.string(x.t["2jxGen"]),
-                                            cancelText: x.intl.string(x.t["ETE/oK"]),
+                                            header: w.intl.string(w.t["2jxGen"]),
+                                            confirmText: w.intl.string(w.t["2jxGen"]),
+                                            cancelText: w.intl.string(w.t["ETE/oK"]),
                                             onConfirm: () => s.Z.logout("verification"),
                                         },
                                         n,
@@ -181,13 +181,13 @@ function P() {
                                     {
                                         children: (0, r.jsx)(t, {
                                             variant: "text-md/normal",
-                                            children: x.intl.string(x.t.SUnWBA),
+                                            children: w.intl.string(w.t.SUnWBA),
                                         }),
                                     },
                                 ),
                             );
                     },
-                    { Layer: g.ZP },
+                    { Layer: m.ZP },
                 );
             },
         })

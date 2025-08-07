@@ -566,6 +566,7 @@ class er extends i.PureComponent {
                     anchor: o,
                     focus: a,
                     performSearch: n,
+                    replace: !1,
                 }),
                     t.setSelectedIndex(-1);
             }),

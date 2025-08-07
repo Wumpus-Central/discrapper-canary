@@ -16,15 +16,15 @@ var r = n(255367),
     b = n(665149),
     y = n(910611),
     x = n(359110),
-    j = n(592125),
-    _ = n(703558),
+    _ = n(592125),
+    j = n(703558),
     O = n(430824),
     v = n(979651),
     C = n(664342),
     E = n(124368),
     S = n(981631),
-    Z = n(388032),
-    I = n(591837);
+    I = n(388032),
+    Z = n(591837);
 function P(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -70,7 +70,7 @@ function T(e, t) {
 }
 function N(e) {
     let { channelId: t, baseChannelId: l, channelViewSource: N = "Split View" } = e,
-        R = (0, s.e7)([j.Z], () => j.Z.getChannel(t)),
+        R = (0, s.e7)([_.Z], () => _.Z.getChannel(t)),
         w = (0, s.e7)([O.Z], () => O.Z.getGuild(null == R ? void 0 : R.getGuildId())),
         A = (0, f.ZP)(R);
     var D = R;
@@ -89,7 +89,7 @@ function N(e) {
         (i.useEffect(() => {
             if (null == R || L.current) return;
             L.current = !0;
-            let e = (0, h.K)(j.Z.getChannel(R.id), !0);
+            let e = (0, h.K)(_.Z.getChannel(R.id), !0);
             (0, d.yw)(S.rMx.CHANNEL_OPENED, T(P({}, e, (0, d.$H)(R.id)), { channel_view: N })),
                 (0, p.a)(S.rMx.CHANNEL_OPENED_CLICKSTREAM, { channelId: R.id });
         }, [R, N]),
@@ -104,11 +104,11 @@ function N(e) {
         children: [
             (0, r.jsx)(u.Z, {
                 channel: R,
-                draftType: _.d.ChannelMessage,
+                draftType: j.d.ChannelMessage,
             }),
             (0, r.jsx)(b.ZP, {
                 toolbar: M,
-                "aria-label": Z.intl.string(Z.t.Pwe8tL),
+                "aria-label": I.intl.string(I.t.Pwe8tL),
                 children: (0, y.ud)({
                     channel: R,
                     channelName: A,
@@ -126,7 +126,7 @@ function N(e) {
                 }),
             }),
             (0, r.jsx)("div", {
-                className: I.chat,
+                className: Z.chat,
                 children: (0, r.jsx)(
                     g.Z,
                     {

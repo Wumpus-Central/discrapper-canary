@@ -1,22 +1,22 @@
-l.d(t, { default: () => O }), l(539854);
+l.d(t, { default: () => v }), l(388685), l(539854);
 var n = l(255367),
     r = l(73800),
     a = l(913527),
     i = l.n(a),
-    u = l(442837),
-    s = l(82659),
-    o = l(481060),
-    c = l(471445),
+    s = l(442837),
+    o = l(82659),
+    c = l(481060),
+    u = l(471445),
     d = l(313201),
     h = l(592125),
-    f = l(944486),
+    x = l(944486),
     g = l(585483),
-    b = l(833103),
-    p = l(607802),
-    m = l(981631),
-    x = l(388032),
-    y = l(325507);
-function C(e) {
+    p = l(833103),
+    m = l(607802),
+    C = l(981631),
+    b = l(388032),
+    S = l(325507);
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var l = null != arguments[t] ? arguments[t] : {},
             n = Object.keys(l);
@@ -41,15 +41,15 @@ function C(e) {
     }
     return e;
 }
-function S(e) {
-    let { index: t, query: l, handleQuerySelect: r, handleDateSelect: a, options: u, handleRemoveDateFilter: s } = e,
-        c = i()(),
+function y(e) {
+    let { index: t, query: l, handleQuerySelect: r, handleDateSelect: a, options: s, handleRemoveDateFilter: o } = e,
+        u = i()(),
         d = i()("2015-05-15");
     return (0, n.jsxs)("div", {
-        className: y.dateFilter,
+        className: S.dateFilter,
         children: [
-            (0, n.jsx)(o.q4e, {
-                options: u,
+            (0, n.jsx)(c.q4e, {
+                options: s,
                 value: l.query,
                 onChange: (e) => {
                     r({
@@ -57,9 +57,9 @@ function S(e) {
                         index: t,
                     });
                 },
-                className: y.dateFilterSelect,
+                className: S.dateFilterSelect,
             }),
-            (0, n.jsx)(o.Wrb, {
+            (0, n.jsx)(c.Wrb, {
                 value: l.date,
                 onSelect: (e) => {
                     a({
@@ -68,159 +68,169 @@ function S(e) {
                     });
                 },
                 minDate: d,
-                maxDate: c,
+                maxDate: u,
             }),
-            (0, n.jsx)(o.P3F, {
+            (0, n.jsx)(c.P3F, {
                 onClick: () => {
-                    s(t);
+                    o(t);
                 },
-                className: y.removeDateFilterButton,
-                "aria-label": x.intl.formatToPlainString(x.t["2LwBlJ"], { filterNumber: t + 1 }),
-                children: (0, n.jsx)(o.XHJ, {
+                className: S.removeDateFilterButton,
+                "aria-label": b.intl.formatToPlainString(b.t["2LwBlJ"], { filterNumber: t + 1 }),
+                children: (0, n.jsx)(c.XHJ, {
                     size: "md",
                     color: "currentColor",
-                    className: y.trashIcon,
+                    className: S.trashIcon,
                     "aria-hidden": !0,
                 }),
             }),
         ],
     });
 }
-function v(e) {
+function F(e) {
     let {
             options: t,
             dates: l,
             handleDateQueryChange: r,
             handleDateChange: a,
             handleAddDateFilter: i,
-            handleRemoveDateFilter: u,
+            handleRemoveDateFilter: s,
         } = e,
-        s = l.length < 4;
+        o = l.length < 4;
     return (0, n.jsxs)("div", {
-        className: y.filterSection,
+        className: S.filterSection,
         children: [
-            (0, n.jsx)(o.Text, {
+            (0, n.jsx)(c.Text, {
                 variant: "text-md/medium",
                 color: "text-primary",
-                className: y.label,
-                children: x.intl.string(x.t.oesnws),
+                className: S.label,
+                children: b.intl.string(b.t.oesnws),
             }),
-            (0, n.jsx)(o.Text, {
+            (0, n.jsx)(c.Text, {
                 variant: "text-sm/medium",
                 color: "text-secondary",
-                className: y.sublabel,
-                children: x.intl.string(x.t.A2DY6O),
+                className: S.sublabel,
+                children: b.intl.string(b.t.A2DY6O),
             }),
             l.map((e, l) =>
                 (0, n.jsx)(
-                    S,
+                    y,
                     {
                         options: t,
                         index: l,
                         query: e,
                         handleQuerySelect: r,
                         handleDateSelect: a,
-                        handleRemoveDateFilter: u,
+                        handleRemoveDateFilter: s,
                     },
                     e.id,
                 ),
             ),
-            s &&
-                (0, n.jsx)(o.zxk, {
+            o &&
+                (0, n.jsx)(c.zxk, {
                     variant: "secondary",
                     fullWidth: !0,
-                    text: x.intl.string(x.t.iP9YpK),
-                    icon: o.BRu,
+                    text: b.intl.string(b.t.iP9YpK),
+                    icon: c.BRu,
                     onClick: i,
                 }),
         ],
     });
 }
-function j(e) {
+function _(e) {
     let {
         label: t,
         sublabel: l,
         textPlaceholder: r,
         value: a,
         onChange: i,
-        options: u,
-        filter: s,
-        closeOnSelect: c,
+        options: s,
+        filter: o,
+        closeOnSelect: u,
         containerClassName: d,
         onSearchChange: h,
-        renderOptionPrefix: f,
+        renderOptionPrefix: x,
         renderOptionSuffix: g,
     } = e;
     return (0, n.jsxs)("div", {
         className: d,
         children: [
-            (0, n.jsx)(o.Text, {
+            (0, n.jsx)(c.Text, {
                 variant: "text-md/medium",
                 color: "text-primary",
-                className: y.label,
+                className: S.label,
                 children: t,
             }),
-            (0, n.jsx)(o.Text, {
+            (0, n.jsx)(c.Text, {
                 variant: "text-sm/medium",
                 color: "text-secondary",
-                className: y.sublabel,
+                className: S.sublabel,
                 children: l,
             }),
-            (0, n.jsx)(o.VcW, {
+            (0, n.jsx)(c.VcW, {
                 multi: !0,
-                options: u,
+                options: s,
                 placeholder: r,
                 value: a,
                 onChange: i,
                 onSearchChange: h,
-                closeOnSelect: c,
-                filter: s,
-                renderOptionPrefix: f,
+                closeOnSelect: u,
+                filter: o,
+                renderOptionPrefix: x,
                 renderOptionSuffix: g,
             }),
         ],
     });
 }
-function O(e) {
+function v(e) {
     let { transitionState: t, onClose: l, searchContext: a } = e,
         i = (0, d.Dt)(),
-        S = r.useMemo(() => (0, p.s5)(a), [a]),
-        O = (0, u.e7)([h.Z, f.Z], () => {
-            let e = h.Z.getChannel(f.Z.getChannelId());
-            return null != e ? (0, p.nl)(e) : "general";
+        y = r.useMemo(() => (0, m.s5)(a), [a]),
+        v = (0, s.e7)([h.Z, x.Z], () => {
+            let e = h.Z.getChannel(x.Z.getChannelId());
+            return null != e ? (0, m.nl)(e) : "general";
         }),
+        j = (0, p.gI)(a),
+        { searchFilters: E } = (0, p.hE)(j),
+        T = r.useMemo(() => (0, m.nI)(j), [j]),
+        R = r.useMemo(() => [...E[C.dCx.FILTER_BEFORE], ...E[C.dCx.FILTER_AFTER], ...E[C.dCx.FILTER_ON]], [E]),
         {
-            options: k,
-            query: F,
-            setQuery: E,
-            setQueryString: P,
-            handleClearFilter: _,
-            getApplyQueryString: R,
-        } = (0, b.HJ)(a, m.dCx.FILTER_FROM),
+            options: I,
+            query: O,
+            setQuery: N,
+            setQueryString: k,
+            handleClearFilter: L,
+            getApplyQueryString: P,
+        } = (0, p.HJ)(a, C.dCx.FILTER_FROM, E[C.dCx.FILTER_FROM]),
         {
-            options: T,
-            query: N,
-            setQuery: Z,
-            setQueryString: I,
-            handleClearFilter: D,
+            options: Q,
+            query: D,
+            setQuery: q,
+            setQueryString: M,
+            handleClearFilter: A,
             getApplyQueryString: w,
-        } = (0, b.HJ)(a, m.dCx.FILTER_MENTIONS),
-        L = (0, b.Zc)(S),
-        M = (0, p.R6)(a),
-        { options: Q, query: q, setQuery: A, handleClearFilter: B, getApplyQueryString: H } = (0, b.Z2)(a),
+        } = (0, p.HJ)(a, C.dCx.FILTER_MENTIONS, E[C.dCx.FILTER_MENTIONS]),
+        B = (0, p.Zc)(y),
+        H = (0, m.R6)(a),
         {
-            options: U,
+            options: Z,
             query: z,
             setQuery: J,
-            setQueryString: K,
             handleClearFilter: W,
             getApplyQueryString: Y,
-        } = (0, b.ur)(a),
-        V = r.useCallback((e) => {
+        } = (0, p.Z2)(a, E[C.dCx.FILTER_HAS]),
+        {
+            options: K,
+            query: U,
+            setQuery: V,
+            setQueryString: X,
+            handleClearFilter: G,
+            getApplyQueryString: $,
+        } = (0, p.ur)(a, E[C.dCx.FILTER_IN]),
+        ee = r.useCallback((e) => {
             if (null == e) return;
             let t = h.Z.getChannel(e.value);
             if (null == t) return;
-            let l = (0, c.KS)(t);
+            let l = (0, u.KS)(t);
             return null != l
                 ? (0, n.jsx)(l, {
                       size: "xs",
@@ -229,142 +239,144 @@ function O(e) {
                 : null;
         }, []),
         {
-            options: X,
-            dates: G,
-            validDates: $,
-            handleDateQueryChange: ee,
-            handleDateChange: et,
-            handleAddDateFilter: el,
-            handleRemoveDateFilter: en,
-            handleClearDateFilter: er,
-            getDateQueryString: ea,
-        } = (0, b.fI)(),
-        ei = r.useMemo(() => F.length + N.length + q.length + z.length + $.length, [F, N, q, z, $]),
-        eu = r.useCallback(() => {
-            if (0 === ei) return void l();
-            let e = R(m.dCx.FILTER_FROM),
-                t = w(m.dCx.FILTER_MENTIONS),
-                n = H(m.dCx.FILTER_HAS),
-                r = Y(m.dCx.FILTER_IN),
-                a = ea(),
+            options: et,
+            dates: el,
+            validDates: en,
+            handleDateQueryChange: er,
+            handleDateChange: ea,
+            handleAddDateFilter: ei,
+            handleRemoveDateFilter: es,
+            handleClearDateFilter: eo,
+            getDateQueryString: ec,
+        } = (0, p.fI)(R),
+        eu = r.useMemo(() => O.length + D.length + z.length + U.length + en.length, [O, D, z, U, en]),
+        ed = r.useCallback(() => {
+            if (0 === eu && 0 === T.length) return void l();
+            let e = P(C.dCx.FILTER_FROM),
+                t = w(C.dCx.FILTER_MENTIONS),
+                n = Y(C.dCx.FILTER_HAS),
+                r = $(C.dCx.FILTER_IN),
+                a = ec(),
                 i = [];
             null != e && i.push(e),
                 null != t && i.push(t),
                 null != n && i.push(n),
                 null != r && i.push(r),
                 null != a && i.push(a);
-            let u = i.join(" ");
-            g.S.dispatch(m.CkL.SET_SEARCH_QUERY, {
-                query: u,
+            let s = [...i, T].join(" ");
+            g.S.dispatch(C.CkL.SET_SEARCH_QUERY, {
+                query: s,
                 anchor: 0,
                 focus: 0,
                 performSearch: !0,
+                replace: !0,
             }),
                 l();
-        }, [ea, R, H, Y, w, ei, l]),
-        es = r.useCallback(() => {
-            _(),
-                D(),
-                B(),
+        }, [ec, P, Y, $, w, T, eu, l]),
+        eh = r.useCallback(() => {
+            L(),
+                A(),
                 W(),
-                er(),
-                g.S.dispatch(m.CkL.SET_SEARCH_QUERY, {
-                    query: "",
+                G(),
+                eo(),
+                g.S.dispatch(C.CkL.SET_SEARCH_QUERY, {
+                    query: T,
                     anchor: 0,
                     focus: 0,
                     performSearch: !1,
+                    replace: !0,
                 });
-        }, [er, _, B, W, D]);
-    return (0, n.jsxs)(s.Modal, {
+        }, [L, A, W, G, eo, T]);
+    return (0, n.jsxs)(o.Modal, {
         transitionState: t,
         onClose: l,
         "aria-labelledby": i,
-        title: x.intl.string(x.t.F8a0W1),
+        title: b.intl.string(b.t.F8a0W1),
         actions: [
             {
                 variant: "secondary",
-                text: x.intl.string(x.t["ETE/oK"]),
+                text: b.intl.string(b.t["ETE/oK"]),
                 onClick: l,
             },
             {
                 variant: "primary",
-                text: x.intl.string(x.t.qDzapq),
-                onClick: eu,
+                text: b.intl.string(b.t.qDzapq),
+                onClick: ed,
             },
         ],
-        actionBarInput: (0, n.jsx)(o.P3F, {
-            onClick: es,
-            className: y.clearFilters,
-            children: (0, n.jsxs)(o.Text, {
+        actionBarInput: (0, n.jsx)(c.P3F, {
+            onClick: eh,
+            className: S.clearFilters,
+            children: (0, n.jsxs)(c.Text, {
                 variant: "text-sm/medium",
-                color: ei > 0 ? "text-brand" : "text-tertiary",
-                children: [x.intl.string(x.t.YfwFu7), " ", ei > 0 && "(".concat(ei, ")")],
+                color: eu > 0 ? "text-brand" : "text-tertiary",
+                children: [b.intl.string(b.t.YfwFu7), " ", eu > 0 && "(".concat(eu, ")")],
             }),
         }),
         children: [
             (0, n.jsx)(
-                j,
-                C(
+                _,
+                f(
                     {
-                        label: x.intl.string(x.t.Qz6eOT),
-                        sublabel: x.intl.string(x.t["2JyXnJ"]),
-                        textPlaceholder: x.intl.string(x.t.V4WMj4),
-                        value: F,
-                        onChange: E,
-                        onSearchChange: P,
-                        options: k,
+                        label: b.intl.string(b.t.Qz6eOT),
+                        sublabel: b.intl.string(b.t["2JyXnJ"]),
+                        textPlaceholder: b.intl.string(b.t.V4WMj4),
+                        value: O,
+                        onChange: N,
+                        onSearchChange: k,
+                        options: I,
                     },
-                    L,
+                    B,
                 ),
             ),
-            M &&
-                (0, n.jsx)(j, {
-                    label: x.intl.string(x.t["kLrM/v"]),
-                    sublabel: x.intl.string(x.t.x8cC09),
-                    textPlaceholder: x.intl.formatToPlainString(x.t.K4l509, { channelName: O }),
-                    value: z,
-                    onChange: J,
-                    onSearchChange: K,
-                    options: U,
-                    containerClassName: y.filterSection,
+            H &&
+                (0, n.jsx)(_, {
+                    label: b.intl.string(b.t["kLrM/v"]),
+                    sublabel: b.intl.string(b.t.x8cC09),
+                    textPlaceholder: b.intl.formatToPlainString(b.t.K4l509, { channelName: v }),
+                    value: U,
+                    onChange: V,
+                    onSearchChange: X,
+                    options: K,
+                    containerClassName: S.filterSection,
                     filter: !1,
                     closeOnSelect: !1,
-                    renderOptionPrefix: V,
+                    renderOptionPrefix: ee,
                 }),
             (0, n.jsx)(
-                j,
-                C(
+                _,
+                f(
                     {
-                        label: x.intl.string(x.t.HEBnRU),
-                        sublabel: x.intl.string(x.t.PdfTqa),
-                        textPlaceholder: x.intl.string(x.t.zka3aG),
-                        value: N,
-                        onChange: Z,
-                        onSearchChange: I,
-                        options: T,
-                        containerClassName: y.filterSection,
+                        label: b.intl.string(b.t.HEBnRU),
+                        sublabel: b.intl.string(b.t.PdfTqa),
+                        textPlaceholder: b.intl.string(b.t.zka3aG),
+                        value: D,
+                        onChange: q,
+                        onSearchChange: M,
+                        options: Q,
+                        containerClassName: S.filterSection,
                     },
-                    L,
+                    B,
                 ),
             ),
-            (0, n.jsx)(j, {
-                label: x.intl.string(x.t["892qg4"]),
-                sublabel: x.intl.string(x.t["Oa//IC"]),
-                textPlaceholder: x.intl.string(x.t.tROvHB),
-                value: q,
-                onChange: A,
-                options: Q,
-                containerClassName: y.filterSection,
+            (0, n.jsx)(_, {
+                label: b.intl.string(b.t["892qg4"]),
+                sublabel: b.intl.string(b.t["Oa//IC"]),
+                textPlaceholder: b.intl.string(b.t.tROvHB),
+                value: z,
+                onChange: J,
+                options: Z,
+                containerClassName: S.filterSection,
                 filter: !0,
                 closeOnSelect: !1,
             }),
-            (0, n.jsx)(v, {
-                options: X,
-                dates: G,
-                handleDateQueryChange: ee,
-                handleDateChange: et,
-                handleAddDateFilter: el,
-                handleRemoveDateFilter: en,
+            (0, n.jsx)(F, {
+                options: et,
+                dates: el,
+                handleDateQueryChange: er,
+                handleDateChange: ea,
+                handleAddDateFilter: ei,
+                handleRemoveDateFilter: es,
             }),
         ],
     });

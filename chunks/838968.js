@@ -1,8 +1,11 @@
 n.d(t, {
-    N4: () => x,
-    Q9: () => _,
-    aB: () => v,
-    uf: () => g,
+    N4: () => v,
+    P2: () => m,
+    Q9: () => b,
+    aB: () => j,
+    c: () => x,
+    rL: () => g,
+    uf: () => _,
 });
 var r = n(255367),
     o = n(73800),
@@ -16,6 +19,23 @@ var r = n(255367),
     p = n(388032),
     f = n(246499);
 function m(e) {
+    let { text: t } = e;
+    return (0, r.jsxs)("div", {
+        className: f.inline,
+        children: [
+            (0, r.jsx)(s.owK, {
+                size: "xs",
+                color: s.TVs.colors.STATUS_POSITIVE,
+            }),
+            (0, r.jsx)(s.Text, {
+                color: "text-feedback-positive",
+                variant: "text-sm/bold",
+                children: t,
+            }),
+        ],
+    });
+}
+function g(e) {
     let { dateString: t } = e;
     return (0, r.jsxs)("div", {
         className: f.inline,
@@ -32,7 +52,24 @@ function m(e) {
         ],
     });
 }
-function g(e) {
+function x(e) {
+    let { removingAt: t } = e;
+    return (0, r.jsxs)("div", {
+        className: f.rollbackInline,
+        children: [
+            (0, r.jsx)(s.Mgn, {
+                size: "xs",
+                color: s.TVs.colors.STATUS_WARNING,
+            }),
+            (0, r.jsx)(s.Text, {
+                color: "status-warning",
+                variant: "text-sm/bold",
+                children: p.intl.formatToPlainString(d.default["6e2ry8"], { dateString: (0, u.Z)(t) }),
+            }),
+        ],
+    });
+}
+function _(e) {
     let { cost: t, costDecorator: n, status: o, className: i } = e,
         a = void 0 !== t ? f.labelContainer : f.labelContainerEnd;
     return (0, r.jsxs)("div", {
@@ -58,50 +95,20 @@ function g(e) {
                         }),
                     ],
                 }),
-            (null == o ? void 0 : o.type) === "expiring" && (0, r.jsx)(m, { dateString: o.expiringAt }),
-            (null == o ? void 0 : o.type) === "removing" &&
-                (0, r.jsxs)("div", {
-                    className: f.rollbackInline,
-                    children: [
-                        (0, r.jsx)(s.Mgn, {
-                            size: "xs",
-                            color: s.TVs.colors.STATUS_WARNING,
-                        }),
-                        (0, r.jsx)(s.Text, {
-                            color: "status-warning",
-                            variant: "text-sm/bold",
-                            children: p.intl.formatToPlainString(d.default["6e2ry8"], {
-                                dateString: (0, u.Z)(o.removingAt),
-                            }),
-                        }),
-                    ],
-                }),
-            (null == o ? void 0 : o.type) === "active" &&
-                (0, r.jsxs)("div", {
-                    className: f.inline,
-                    children: [
-                        (0, r.jsx)(s.owK, {
-                            size: "xs",
-                            color: s.TVs.colors.STATUS_POSITIVE,
-                        }),
-                        (0, r.jsx)(s.Text, {
-                            color: "text-feedback-positive",
-                            variant: "text-sm/bold",
-                            children: o.statusText,
-                        }),
-                    ],
-                }),
+            (null == o ? void 0 : o.type) === "expiring" && (0, r.jsx)(g, { dateString: o.expiringAt }),
+            (null == o ? void 0 : o.type) === "removing" && (0, r.jsx)(x, { removingAt: o.removingAt }),
+            (null == o ? void 0 : o.type) === "active" && (0, r.jsx)(m, { text: o.statusText }),
         ],
     });
 }
-function x(e) {
+function v(e) {
     let { children: t } = e;
     return (0, r.jsx)("div", {
         className: f.buttonContainer,
         children: t,
     });
 }
-function _(e) {
+function b(e) {
     let { title: t, textColor: n, children: o, footer: i } = e;
     return (0, r.jsxs)("div", {
         className: f.contentContainer,
@@ -123,7 +130,7 @@ function _(e) {
         ],
     });
 }
-let v = o.forwardRef(function (e, t) {
+let j = o.forwardRef(function (e, t) {
     let {
         className: n,
         label: o,
