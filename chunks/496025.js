@@ -1,4 +1,4 @@
-a.d(t, { Z: () => T }), a(388685), a(35282);
+a.d(t, { Z: () => E }), a(388685), a(35282);
 var n = a(255367),
     r = a(73800),
     l = a(120356),
@@ -12,26 +12,26 @@ var n = a(255367),
     x = a(258732),
     p = a(592125),
     h = a(699516),
-    f = a(594174),
-    b = a(55589),
+    b = a(594174),
+    f = a(55589),
     v = a(630388),
     j = a(98357),
     g = a(432877),
     _ = a(246992),
     y = a(894257),
     C = a(750540),
-    O = a(616257);
-function N() {
+    N = a(616257);
+function O() {
     var e;
-    let t = (0, o.Wu)([b.Z], () => b.Z.getSortedChannels()[1]),
+    let t = (0, o.Wu)([f.Z], () => f.Z.getSortedChannels()[1]),
         [a, l] = r.useState(t.length > 0 ? t[0].channelId : void 0),
-        { selectedChannel: i, options: d } = (0, o.cj)([p.Z, f.default, h.Z], () => ({
+        { selectedChannel: i, options: d } = (0, o.cj)([p.Z, b.default, h.Z], () => ({
             selectedChannel: p.Z.getChannel(a),
             options: t.map((e) => {
                 let t = p.Z.getChannel(e.channelId);
                 return {
                     value: e.channelId,
-                    label: null != t ? (0, m.F6)(t, f.default, h.Z) : e.channelId,
+                    label: null != t ? (0, m.F6)(t, b.default, h.Z) : e.channelId,
                 };
             }),
         })),
@@ -85,7 +85,7 @@ function N() {
         ],
     });
 }
-function E() {
+function T() {
     let e = r.useCallback(() => {
         d.Z.openPrivateChannel({ recipientIds: [y.I] });
     }, []);
@@ -96,7 +96,7 @@ function E() {
         onClick: e,
     });
 }
-function T() {
+function E() {
     let e = g.ZP.allByCategory(g.zU.MESSAGING).map((e) => {
         let [t, a, { label: r }] = e;
         return (0, n.jsx)(
@@ -112,13 +112,13 @@ function T() {
         );
     });
     return (0, n.jsxs)("div", {
-        className: i()(O.panel, C.panel),
+        className: i()(N.panel, C.panel),
         children: [
             e,
             (0, n.jsx)("div", { className: C.divider }),
-            (0, n.jsx)(N, {}),
+            (0, n.jsx)(O, {}),
             (0, n.jsx)("div", { className: C.divider }),
-            (0, n.jsx)(E, {}),
+            (0, n.jsx)(T, {}),
         ],
     });
 }

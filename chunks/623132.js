@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y });
+n.d(t, { Z: () => h });
 var r = n(255367),
     l = n(73800),
     o = n(481060),
@@ -60,18 +60,18 @@ function j(e) {
         ],
     });
 }
-function y(e) {
+function h(e) {
     let { user: t, guildId: n, channelId: l, game: i, loading: a = !1, disableInteraction: c = !1 } = e,
-        { gameName: y, imageSrc: h, applicationId: v, comment: O, tags: x } = i,
+        { gameName: h, imageSrc: y, applicationId: x, comment: v, tags: O } = i,
         _ = (0, f.Z)(i.applicationId),
         I = _.length > 0,
         P = () =>
             (0, r.jsxs)(r.Fragment, {
                 children: [
                     (0, r.jsx)(d.Z, {
-                        imageSrc: h,
-                        gameName: y,
-                        applicationId: v,
+                        imageSrc: y,
+                        gameName: h,
+                        applicationId: x,
                         userId: t.id,
                         disableInteraction: !0,
                     }),
@@ -81,16 +81,16 @@ function y(e) {
                             (0, r.jsx)(o.X6q, {
                                 variant: "text-md/normal",
                                 color: "text-default",
-                                children: y,
+                                children: h,
                             }),
-                            null != O &&
+                            null != v &&
                                 (0, r.jsx)(b, {
-                                    text: O,
+                                    text: v,
                                     user: t,
                                     guildId: n,
                                     channelId: l,
                                 }),
-                            (0, r.jsx)(u.Z, { tags: x }),
+                            (0, r.jsx)(u.Z, { tags: O }),
                             I &&
                                 (0, r.jsx)(s.Z, {
                                     label: p.intl.formatToPlainString(p.t.ujhJdH, { numFriends: _.length }),
@@ -114,9 +114,9 @@ function y(e) {
                 children: P(),
             })
           : (0, r.jsx)(j, {
-                applicationId: v,
+                applicationId: x,
                 userId: t.id,
-                gameName: y,
+                gameName: h,
                 className: g.card,
                 children: P(),
             });

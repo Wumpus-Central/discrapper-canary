@@ -15,11 +15,11 @@ var l = n(442837),
     g = n(151545),
     b = n(744802),
     j = n(493043),
-    y = n(864141),
-    h = n(264481),
-    v = n(693408),
-    O = n(228168),
-    x = n(981631),
+    h = n(864141),
+    y = n(264481),
+    x = n(693408),
+    v = n(228168),
+    O = n(981631),
     _ = n(388032),
     I = n(514656);
 function P(e) {
@@ -27,21 +27,21 @@ function P(e) {
         { voiceActivityStatusEnabled: A } = (0, i.U)({ location: "UserProfileModalV2Activity" }),
         S = (0, f.b)({ location: "UserProfileModalV2Activity" }),
         { live: w, recent: C, stream: G } = (0, p.Z)(t.id),
-        { voiceChannel: M, voiceActivity: L } = (0, m.Z)({
+        { voiceChannel: L, voiceActivity: R } = (0, m.Z)({
             userId: t.id,
             guildId: E,
         }),
-        R = (0, l.e7)([a.Z], () => a.Z.isFetchingUserOutbox(t.id)),
+        M = (0, l.e7)([a.Z], () => a.Z.isFetchingUserOutbox(t.id)),
         D = t.id === n.id,
         k = (0, l.e7)([d.Z, s.Z], () => {
             let e = D ? d.Z.getStatus() : s.Z.getStatus(t.id);
             return e === o.Skl.OFFLINE || e === o.Skl.INVISIBLE;
         }),
-        U = w.length > 0 || null != G,
-        B = A && null == G && null == L && null != M,
-        F = !k && (U || B),
+        B = w.length > 0 || null != G,
+        U = A && null == G && null == R && null != L,
+        F = !k && (B || U),
         V = C.length > 0;
-    if (!F && !V && R)
+    if (!F && !V && M)
         return (0, r.jsx)("div", {
             className: I.cards,
             children: Array.from({ length: 8 }).map((e, t) =>
@@ -64,11 +64,11 @@ function P(e) {
                 ),
             ),
         });
-    if (!F && !V && !R) {
+    if (!F && !V && !M) {
         var Y;
         return D
-            ? (0, r.jsx)(h.Uf, { onClose: T })
-            : (0, r.jsx)(h.P9, {
+            ? (0, r.jsx)(y.Uf, { onClose: T })
+            : (0, r.jsx)(y.P9, {
                   user: t,
                   guildId: null != (Y = null == P ? void 0 : P.guildId) ? Y : void 0,
                   channelId: Z,
@@ -80,18 +80,18 @@ function P(e) {
         fade: !0,
         children: [
             F
-                ? (0, r.jsx)(v.Z, {
+                ? (0, r.jsx)(x.Z, {
                       heading: _.intl.string(_.t.J6STd3),
                       children: (0, r.jsxs)("ul", {
                           className: I.cards,
                           children: [
                               !S &&
-                                  B &&
+                                  U &&
                                   (0, r.jsx)("li", {
-                                      children: (0, r.jsx)(y.Z, {
+                                      children: (0, r.jsx)(h.Z, {
                                           user: t,
                                           currentUser: n,
-                                          voiceChannel: M,
+                                          voiceChannel: L,
                                           onClose: T,
                                       }),
                                   }),
@@ -122,12 +122,12 @@ function P(e) {
                                   ),
                               ),
                               S &&
-                                  B &&
+                                  U &&
                                   (0, r.jsx)("li", {
-                                      children: (0, r.jsx)(y.Z, {
+                                      children: (0, r.jsx)(h.Z, {
                                           user: t,
                                           currentUser: n,
-                                          voiceChannel: M,
+                                          voiceChannel: L,
                                           onClose: T,
                                       }),
                                   }),
@@ -136,7 +136,7 @@ function P(e) {
                   })
                 : null,
             V
-                ? (0, r.jsx)(v.Z, {
+                ? (0, r.jsx)(x.Z, {
                       heading: _.intl.string(_.t.jzgEoK),
                       introText: D
                           ? _.intl.format(_.t["4bk9Ag"], {
@@ -144,14 +144,14 @@ function P(e) {
                                     (0, r.jsx)(
                                         o.eee,
                                         {
-                                            href: u.Z.getArticleURL(x.BhN.ACTIVITY_STATUS_SETTINGS),
+                                            href: u.Z.getArticleURL(O.BhN.ACTIVITY_STATUS_SETTINGS),
                                             children: e,
                                         },
                                         t,
                                     ),
                             })
                           : void 0,
-                      scrollIntoView: N === O.Tb.RECENT_ACTIVITY,
+                      scrollIntoView: N === v.Tb.RECENT_ACTIVITY,
                       children: (0, r.jsx)("ul", {
                           className: I.cards,
                           children: C.map((e) =>

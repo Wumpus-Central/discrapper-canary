@@ -16,17 +16,17 @@ var n = s(255367),
     g = s(248910);
 function N(e) {
     let { transitionState: t, onClose: s } = e,
-        { currentUser: N, multiAccountUsers: v } = (0, r.cj)([d.default, u.Z], () => ({
+        { currentUser: N, multiAccountUsers: T } = (0, r.cj)([d.default, u.Z], () => ({
             currentUser: d.default.getCurrentUser(),
             multiAccountUsers: u.Z.getUsers(),
         })),
-        [T, A] = i.useState(!1),
-        [C, E] = i.useState(_.lds),
-        [p, b] = i.useState(null);
+        [C, p] = i.useState(!1),
+        [A, E] = i.useState(_.lds),
+        [v, j] = i.useState(null);
     return (
         i.useEffect(() => {
-            if (T)
-                b(
+            if (C)
+                j(
                     (0, n.jsx)(c.Wn, {
                         messageType: c.QYI.ERROR,
                         className: g.infoMessage,
@@ -34,22 +34,22 @@ function N(e) {
                     }),
                 ),
                     E(_.lds);
-            else if (null != C) {
-                let e = d.default.getUser(C);
+            else if (null != A) {
+                let e = d.default.getUser(A);
                 null != e &&
-                    b(
+                    j(
                         (0, n.jsx)(c.Wn, {
                             messageType: c.QYI.POSITIVE,
                             className: g.infoMessage,
                             children: f.intl.format(f.t["09qidX"], { username: e.username }),
                         }),
                     ),
-                    A(!1);
+                    p(!1);
             }
-        }, [C, T]),
+        }, [A, C]),
         i.useEffect(() => {
-            v.length < h.$H && A(!1);
-        }, [v]),
+            T.length < h.$H && p(!1);
+        }, [T]),
         (0, o.Z)({
             type: a.ImpressionTypes.MODAL,
             name: a.ImpressionNames.MULTI_ACCOUNT_SWITCH_LANDING,
@@ -66,13 +66,13 @@ function N(e) {
                     text: f.intl.string(f.t["9g2mqa"]),
                     variant: "secondary",
                     onClick: () => {
-                        if (v.length >= h.$H) return void A(!0);
+                        if (T.length >= h.$H) return void p(!0);
                         s(), (0, x.y)();
                     },
                 },
             ],
             children: [
-                p,
+                v,
                 (0, n.jsx)(m.Z, {
                     actionText: f.intl.string(f.t.Wf421N),
                     onAction: (e, t) => {

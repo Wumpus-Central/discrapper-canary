@@ -14,13 +14,13 @@ var r = n(255367),
 function g(e) {
     let { user: t, guildId: n, channelId: g, onClose: b } = e,
         { mutualFriends: j } = (0, s.Z)(t),
-        { analyticsLocations: y } = (0, a.ZP)(),
-        { context: h, trackUserProfileAction: v } = (0, c.KZ)(),
-        O = (0, i.Z)();
+        { analyticsLocations: h } = (0, a.ZP)(),
+        { context: y, trackUserProfileAction: x } = (0, c.KZ)(),
+        v = (0, i.Z)();
     l.useEffect(() => {
-        (0, d.Z)(t.id, O);
-    }, [t.id, O]);
-    let x = (e) => {
+        (0, d.Z)(t.id, v);
+    }, [t.id, v]);
+    let O = (e) => {
         var t, n;
         (0, u.openUserProfileModal)(
             ((t = (function (e) {
@@ -47,11 +47,11 @@ function g(e) {
                         });
                 }
                 return e;
-            })({}, h)),
+            })({}, y)),
             (n = n =
                 {
                     userId: e,
-                    sourceAnalyticsLocations: y,
+                    sourceAnalyticsLocations: h,
                 }),
             Object.getOwnPropertyDescriptors
                 ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
@@ -98,7 +98,7 @@ function g(e) {
                                 guildId: n,
                                 channelId: g,
                                 onSelect: () => {
-                                    null == b || b(), v({ action: "PRESS_MUTUAL_FRIEND" }), x(l.id);
+                                    null == b || b(), x({ action: "PRESS_MUTUAL_FRIEND" }), O(l.id);
                                 },
                             },
                             t,

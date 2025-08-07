@@ -1,268 +1,268 @@
-n.d(t, { default: () => k }), n(388685);
-var i = n(255367),
-    r = n(73800),
-    a = n(512722),
-    l = n.n(a),
-    s = n(913527),
-    o = n.n(s),
+n.d(e, { default: () => z }), n(388685);
+var r = n(255367),
+    i = n(73800),
+    o = n(512722),
+    a = n.n(o),
+    l = n(913527),
+    s = n.n(l),
     c = n(990547),
-    d = n(442837),
-    u = n(755721),
-    f = n(481060),
+    u = n(442837),
+    f = n(755721),
+    d = n(481060),
     m = n(749210),
-    x = n(168107),
-    h = n(480916),
-    _ = n(600164),
-    E = n(313201),
-    g = n(592125),
-    b = n(944486),
-    N = n(594174),
-    A = n(626135),
-    p = n(63063),
-    y = n(771308),
-    C = n(758119),
-    R = n(622822),
-    j = n(13430),
-    z = n(723359),
-    L = n(981631),
-    S = n(388032),
+    y = n(168107),
+    b = n(480916),
+    h = n(600164),
+    p = n(313201),
+    x = n(592125),
+    _ = n(944486),
+    E = n(594174),
+    g = n(626135),
+    v = n(63063),
+    j = n(771308),
+    A = n(758119),
+    Z = n(622822),
+    N = n(13430),
+    S = n(723359),
+    C = n(981631),
+    R = n(388032),
     T = n(951408);
-function k(e) {
-    let { transitionState: t, source: a } = e,
-        s = (0, d.e7)([N.default], () => N.default.getCurrentUser()),
-        k = (0, d.e7)([b.Z, g.Z], () => g.Z.getChannel(b.Z.getChannelId())),
-        [v, G] = r.useState(null),
-        [I, M] = r.useState(null),
-        [w, F] = r.useState(!1),
-        [Y, Z] = r.useState(0),
-        U = r.useRef(null),
-        D = r.useRef(null),
-        P = (0, E.Dt)(),
-        V = (0, R.Kt)() && a !== z.L0.FAMILY_CENTER,
-        { verifyAgreementButtonText: B, verifyGateDescription: q } = (0, R.a1)(a),
-        W = a === z.L0.NSFW_SERVER || a === z.L0.NSFW_SERVER_INVITE || a === z.L0.NSFW_SERVER_INVITE_EMBED,
-        K = null != v ? o()().diff(v, "years") : null;
-    function O() {
-        if (a === z.L0.NSFW_SERVER_INVITE_EMBED) return void (0, C.qV)(a);
-        let e = null == k ? void 0 : k.getGuildId();
-        m.Z.nsfwReturnToSafety(e), (0, C.qV)(a);
+function z(t) {
+    let { transitionState: e, source: o } = t,
+        l = (0, u.e7)([E.default], () => E.default.getCurrentUser()),
+        z = (0, u.e7)([_.Z, x.Z], () => x.Z.getChannel(_.Z.getChannelId())),
+        [w, L] = i.useState(null),
+        [k, I] = i.useState(null),
+        [O, M] = i.useState(!1),
+        [G, P] = i.useState(0),
+        F = i.useRef(null),
+        U = i.useRef(null),
+        Y = (0, p.Dt)(),
+        D = (0, Z.Kt)() && o !== S.L0.FAMILY_CENTER,
+        { verifyAgreementButtonText: V, verifyGateDescription: B } = (0, Z.a1)(o),
+        q = o === S.L0.NSFW_SERVER || o === S.L0.NSFW_SERVER_INVITE || o === S.L0.NSFW_SERVER_INVITE_EMBED,
+        W = null != w ? s()().diff(w, "years") : null;
+    function K() {
+        if (o === S.L0.NSFW_SERVER_INVITE_EMBED) return void (0, A.qV)(o);
+        let t = null == z ? void 0 : z.getGuildId();
+        m.Z.nsfwReturnToSafety(t), (0, A.qV)(o);
     }
     async function X() {
-        l()(null != v, "Cannot submit null birthday.");
+        a()(null != w, "Cannot submit null birthday.");
         try {
-            return M(null), F(!0), await (0, y.Av)(v, a);
-        } catch (t) {
-            if (null != t.body && null != t.body.date_of_birth) (0, C.C8)(a, t.body.date_of_birth);
+            return I(null), M(!0), await (0, j.Av)(w, o);
+        } catch (e) {
+            if (null != e.body && null != e.body.date_of_birth) (0, A.C8)(o, e.body.date_of_birth);
             else {
-                var e;
-                (null == t || null == (e = t.body) ? void 0 : e.username) != null
-                    ? M(S.intl.string(S.t["TGg/2t"]))
-                    : M(null == t ? void 0 : t.body.message),
-                    F(!1);
+                var t;
+                (null == e || null == (t = e.body) ? void 0 : t.username) != null
+                    ? I(R.intl.string(R.t["TGg/2t"]))
+                    : I(null == e ? void 0 : e.body.message),
+                    M(!1);
             }
         }
     }
     async function Q() {
-        if ((l()(null != K, "Cannot submit if we haven't been able to calculate age."), K < 18)) return void Z(1);
+        if ((a()(null != W, "Cannot submit if we haven't been able to calculate age."), W < 18)) return void P(1);
         await X();
     }
-    async function J(e) {
-        e.preventDefault(), w || null == v || (await Q());
+    async function J(t) {
+        t.preventDefault(), O || null == w || (await Q());
     }
-    async function H() {
-        null == (await X()) && Z(0);
+    async function $() {
+        null == (await X()) && P(0);
     }
-    r.useEffect(() => {
-        null == s || null == s.nsfwAllowed || V || (0, C.qq)(a);
+    i.useEffect(() => {
+        null == l || null == l.nsfwAllowed || D || (0, A.qq)(o);
     }),
-        r.useEffect(() => {
-            A.default.track(L.rMx.AGE_GATE_ACTION, {
-                source: a,
-                action: z.Al.AGE_GATE_OPEN,
+        i.useEffect(() => {
+            g.default.track(C.rMx.AGE_GATE_ACTION, {
+                source: o,
+                action: S.Al.AGE_GATE_OPEN,
             });
-        }, [a]);
-    let $ = r.useCallback(
-            (e) => {
-                G(e);
+        }, [o]);
+    let H = i.useCallback(
+            (t) => {
+                L(t);
             },
-            [G],
+            [L],
         ),
-        ee = r.useCallback(() => {
-            var e;
-            null == (e = D.current) || e.focus();
-        }, [D]),
-        et = r.useCallback(() => {
-            x.Z.showAgeVerificationGetStartedModal(h.cU.NSFW_AGE_GATE);
+        tt = i.useCallback(() => {
+            var t;
+            null == (t = U.current) || t.focus();
+        }, [U]),
+        te = i.useCallback(() => {
+            y.Z.showAgeVerificationGetStartedModal(b.cU.NSFW_AGE_GATE);
         }, []);
-    return V
-        ? (0, i.jsxs)(f.Y0X, {
+    return D
+        ? (0, r.jsxs)(d.Y0X, {
               impression: { impressionName: c.ImpressionNames.USER_AGE_GATE_VERIFY },
-              transitionState: t,
-              size: f.CgR.SMALL,
+              transitionState: e,
+              size: d.CgR.SMALL,
               parentComponent: "ExistingUserAgeGatePrompt",
               children: [
-                  (0, i.jsx)(f.hzk, {
-                      children: (0, i.jsxs)("div", {
+                  (0, r.jsx)(d.hzk, {
+                      children: (0, r.jsxs)("div", {
                           className: T.container,
                           children: [
-                              (0, i.jsx)("img", {
+                              (0, r.jsx)("img", {
                                   alt: "",
                                   src: n(559325),
                                   className: T.img,
                               }),
-                              (0, i.jsx)(f.X6q, {
+                              (0, r.jsx)(d.X6q, {
                                   variant: "heading-xl/semibold",
                                   className: T.title,
-                                  children: W ? S.intl.string(S.t.xi46lp) : S.intl.string(S.t.ZmwvDQ),
+                                  children: q ? R.intl.string(R.t.xi46lp) : R.intl.string(R.t.ZmwvDQ),
                               }),
-                              (0, i.jsx)(f.Text, {
+                              (0, r.jsx)(d.Text, {
                                   color: "header-secondary",
                                   variant: "text-sm/normal",
-                                  children: q,
+                                  children: B,
                               }),
                           ],
                       }),
                   }),
-                  (0, i.jsxs)(f.mzw, {
-                      justify: _.Z.Justify.BETWEEN,
+                  (0, r.jsxs)(d.mzw, {
+                      justify: h.Z.Justify.BETWEEN,
                       children: [
-                          (0, i.jsx)(f.zxk, {
+                          (0, r.jsx)(d.zxk, {
                               variant: "primary",
                               size: "sm",
-                              text: B,
-                              onClick: et,
+                              text: V,
+                              onClick: te,
                           }),
-                          (0, i.jsx)(u.zx, {
-                              look: u.zx.Looks.LINK,
-                              size: u.zx.Sizes.NONE,
-                              color: u.zx.Colors.PRIMARY,
-                              onClick: O,
-                              children: S.intl.string(S.t.f3Pet7),
+                          (0, r.jsx)(f.zx, {
+                              look: f.zx.Looks.LINK,
+                              size: f.zx.Sizes.NONE,
+                              color: f.zx.Colors.PRIMARY,
+                              onClick: K,
+                              children: R.intl.string(R.t.f3Pet7),
                           }),
                       ],
                   }),
               ],
           })
-        : 0 === Y
+        : 0 === G
           ? (function () {
-                let e = a === z.L0.FAMILY_CENTER ? S.intl.string(S.t.M7mt7u) : S.intl.string(S.t.F8otRk),
-                    r = (() => {
-                        switch (a) {
-                            case z.L0.FAMILY_CENTER:
-                                return S.intl.string(S.t.mhUrKS);
-                            case z.L0.DEEP_LINK_PROMPT:
-                                return S.intl.format(S.t.iyhg2t, { helpURL: p.Z.getArticleURL(L.BhN.AGE_GATE) });
+                let t = o === S.L0.FAMILY_CENTER ? R.intl.string(R.t.M7mt7u) : R.intl.string(R.t.F8otRk),
+                    i = (() => {
+                        switch (o) {
+                            case S.L0.FAMILY_CENTER:
+                                return R.intl.string(R.t.mhUrKS);
+                            case S.L0.DEEP_LINK_PROMPT:
+                                return R.intl.format(R.t.iyhg2t, { helpURL: v.Z.getArticleURL(C.BhN.AGE_GATE) });
                             default:
-                                return S.intl.format(S.t.n3QjDA, { helpURL: p.Z.getArticleURL(L.BhN.AGE_GATE) });
+                                return R.intl.format(R.t.n3QjDA, { helpURL: v.Z.getArticleURL(C.BhN.AGE_GATE) });
                         }
                     })();
-                return (0, i.jsxs)(f.Y0X, {
-                    transitionState: t,
-                    size: f.CgR.SMALL,
-                    "aria-labelledby": P,
+                return (0, r.jsxs)(d.Y0X, {
+                    transitionState: e,
+                    size: d.CgR.SMALL,
+                    "aria-labelledby": Y,
                     parentComponent: "ExistingUserAgeGatePrompt",
                     children: [
-                        (0, i.jsxs)(f.hzk, {
+                        (0, r.jsxs)(d.hzk, {
                             children: [
-                                (0, i.jsxs)("div", {
+                                (0, r.jsxs)("div", {
                                     className: T.container,
                                     children: [
-                                        (0, i.jsx)("img", {
+                                        (0, r.jsx)("img", {
                                             alt: "",
                                             src: n(559325),
                                             className: T.img,
                                         }),
-                                        (0, i.jsx)(f.X6q, {
+                                        (0, r.jsx)(d.X6q, {
                                             variant: "heading-xl/semibold",
                                             className: T.title,
-                                            id: P,
-                                            children: e,
+                                            id: Y,
+                                            children: t,
                                         }),
-                                        (0, i.jsx)(f.Text, {
+                                        (0, r.jsx)(d.Text, {
                                             color: "header-secondary",
                                             variant: "text-sm/normal",
-                                            children: r,
+                                            children: i,
                                         }),
                                     ],
                                 }),
-                                (0, i.jsx)("form", {
+                                (0, r.jsx)("form", {
                                     onSubmit: J,
-                                    children: (0, i.jsx)(j.Z, {
-                                        label: S.intl.string(S.t.rhBeKS),
+                                    children: (0, r.jsx)(N.Z, {
+                                        label: R.intl.string(R.t.rhBeKS),
                                         wrapperClassName: T.birthday,
                                         name: "date_of_birth",
-                                        onChange: $,
-                                        onPopulated: ee,
-                                        error: I,
-                                        value: v,
-                                        ref: U,
+                                        onChange: H,
+                                        onPopulated: tt,
+                                        error: k,
+                                        value: w,
+                                        ref: F,
                                         autoFocus: !0,
                                     }),
                                 }),
                             ],
                         }),
-                        (0, i.jsxs)(f.mzw, {
-                            justify: _.Z.Justify.BETWEEN,
+                        (0, r.jsxs)(d.mzw, {
+                            justify: h.Z.Justify.BETWEEN,
                             children: [
-                                (0, i.jsx)(f.zxk, {
+                                (0, r.jsx)(d.zxk, {
                                     variant: "primary",
                                     size: "sm",
-                                    text: S.intl.string(S.t.uBFuoq),
-                                    buttonRef: D,
-                                    loading: w,
-                                    disabled: null == v,
+                                    text: R.intl.string(R.t.uBFuoq),
+                                    buttonRef: U,
+                                    loading: O,
+                                    disabled: null == w,
                                     onClick: Q,
                                 }),
-                                (0, i.jsx)(u.zx, {
-                                    look: u.zx.Looks.LINK,
-                                    size: u.zx.Sizes.NONE,
-                                    color: u.zx.Colors.PRIMARY,
-                                    onClick: O,
-                                    children: S.intl.string(S.t["1MrpWF"]),
+                                (0, r.jsx)(f.zx, {
+                                    look: f.zx.Looks.LINK,
+                                    size: f.zx.Sizes.NONE,
+                                    color: f.zx.Colors.PRIMARY,
+                                    onClick: K,
+                                    children: R.intl.string(R.t["1MrpWF"]),
                                 }),
                             ],
                         }),
                     ],
                 });
             })()
-          : (0, i.jsxs)(f.Y0X, {
-                transitionState: f.Dvm.ENTERED,
-                size: f.CgR.SMALL,
-                "aria-labelledby": P,
+          : (0, r.jsxs)(d.Y0X, {
+                transitionState: d.Dvm.ENTERED,
+                size: d.CgR.SMALL,
+                "aria-labelledby": Y,
                 parentComponent: "ExistingUserAgeGatePrompt",
                 children: [
-                    (0, i.jsx)(f.hzk, {
-                        children: (0, i.jsxs)("div", {
+                    (0, r.jsx)(d.hzk, {
+                        children: (0, r.jsxs)("div", {
                             className: T.confirmContainer,
                             children: [
-                                (0, i.jsx)(f.X6q, {
+                                (0, r.jsx)(d.X6q, {
                                     variant: "heading-xl/semibold",
                                     className: T.confirmTitle,
-                                    id: P,
-                                    children: S.intl.format(S.t.wumolZ, { age: K }),
+                                    id: Y,
+                                    children: R.intl.format(R.t.wumolZ, { age: W }),
                                 }),
-                                (0, i.jsx)(f.Text, {
+                                (0, r.jsx)(d.Text, {
                                     color: "header-secondary",
                                     variant: "text-sm/normal",
-                                    children: S.intl.format(S.t.n3QjDA, { helpURL: p.Z.getArticleURL(L.BhN.AGE_GATE) }),
+                                    children: R.intl.format(R.t.n3QjDA, { helpURL: v.Z.getArticleURL(C.BhN.AGE_GATE) }),
                                 }),
                             ],
                         }),
                     }),
-                    (0, i.jsxs)(f.mzw, {
+                    (0, r.jsxs)(d.mzw, {
                         className: T.confirmFooter,
                         children: [
-                            (0, i.jsx)(u.zx, {
-                                look: u.zx.Looks.LINK,
-                                size: u.zx.Sizes.NONE,
-                                color: u.zx.Colors.PRIMARY,
-                                onClick: () => Z(0),
-                                children: S.intl.string(S.t.cfYCra),
+                            (0, r.jsx)(f.zx, {
+                                look: f.zx.Looks.LINK,
+                                size: f.zx.Sizes.NONE,
+                                color: f.zx.Colors.PRIMARY,
+                                onClick: () => P(0),
+                                children: R.intl.string(R.t.cfYCra),
                             }),
-                            (0, i.jsx)(f.zxk, {
+                            (0, r.jsx)(d.zxk, {
                                 variant: "primary",
-                                text: S.intl.string(S.t["6tahio"]),
-                                onClick: H,
+                                text: R.intl.string(R.t["6tahio"]),
+                                onClick: $,
                             }),
                         ],
                     }),

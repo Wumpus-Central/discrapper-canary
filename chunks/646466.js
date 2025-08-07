@@ -1,4 +1,4 @@
-a.d(t, { O: () => N }), a(388685);
+a.d(t, { O: () => O }), a(388685);
 var n = a(255367),
     r = a(73800),
     l = a(481060),
@@ -48,11 +48,11 @@ let p = [
         label: "[none selected]",
         value: null,
     },
-    f = {
+    b = {
         label: "[preview all]",
         value: null,
     },
-    b = () => {
+    f = () => {
         (0, l.nfh)(s.g)
             ? (0, l.Mr3)(s.g)
             : (0, l.ZDy)(
@@ -127,7 +127,7 @@ let p = [
             { avatarDecorationAssets: a } = (0, o.xq)(),
             i = r.useMemo(
                 () => [
-                    f,
+                    b,
                     ...a.map((e) => ({
                         label: e.name,
                         value: e.name,
@@ -394,7 +394,7 @@ let p = [
             ],
         });
     },
-    O = () => {
+    N = () => {
         let { previewEnabled: e, setPreviewEnabled: t, clearAssets: a } = (0, o.N9)(),
             { ignoredFilenames: i, clearAssets: s, clearIgnoredFilenames: u, processAndUpsertAssets: x } = (0, d.hm)(),
             p = r.useCallback(
@@ -424,7 +424,7 @@ let p = [
                         (0, n.jsx)(l.hU, {
                             variant: "icon-only",
                             size: "sm",
-                            onClick: b,
+                            onClick: f,
                             icon: l.idN,
                             "aria-label": "Open preview instructions",
                         }),
@@ -443,7 +443,7 @@ let p = [
             ],
         });
     },
-    N = () => {
+    O = () => {
         let [e, t] = r.useState("preview");
         return (0, n.jsxs)("div", {
             className: m.container,
@@ -459,7 +459,7 @@ let p = [
                     optionClassName: m.panelModeControlOption,
                 }),
                 (0, n.jsx)(l.LZC, { size: 8 }),
-                "preview" === e && (0, n.jsx)(O, {}),
+                "preview" === e && (0, n.jsx)(N, {}),
                 "validate" === e && (0, n.jsx)(C, {}),
                 (0, n.jsx)(l.LZC, { size: 16 }),
             ],

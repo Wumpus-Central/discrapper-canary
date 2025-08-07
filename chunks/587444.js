@@ -1,36 +1,36 @@
 n.d(t, {
     Z: () => g,
-    u: () => f,
+    u: () => m,
 });
 var r = n(255367);
 n(73800);
 var i = n(120356),
     l = n.n(i),
-    s = n(692547),
-    o = n(481060),
+    o = n(692547),
+    s = n(481060),
     a = n(388905),
     c = n(600164),
     u = n(981631),
     d = n(388032),
     h = n(359487),
     p = n(893354),
-    m = n(20493);
-function f(e) {
+    f = n(20493);
+function m(e) {
     let { text: t, buttonCta: i, onClick: u } = e;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(a.Ee, { src: n(689411) }),
             (0, r.jsx)(a.Dx, {
-                className: l()(m.marginTop20, m.marginBottom8, p.flexCenter),
+                className: l()(f.marginTop20, f.marginBottom8, p.flexCenter),
                 children: d.intl.string(d.t.eL5z0t),
             }),
             (0, r.jsx)(a.DK, {
-                className: m.marginBottom40,
+                className: f.marginBottom40,
                 children: d.intl.string(d.t["poAv6+"]),
             }),
-            (0, r.jsxs)(o.Zbd, {
+            (0, r.jsxs)(s.Zbd, {
                 className: h.card,
-                type: o.Zbd.Types.CUSTOM,
+                type: s.Zbd.Types.CUSTOM,
                 children: [
                     (0, r.jsx)("img", {
                         alt: "",
@@ -48,11 +48,11 @@ function f(e) {
                         align: c.Z.Align.STRETCH,
                         grow: 0,
                         children: [
-                            (0, r.jsx)(o.Text, {
+                            (0, r.jsx)(s.Text, {
                                 tag: "strong",
                                 className: h.buttonTitle,
                                 variant: "text-md/normal",
-                                style: { color: s.Z.unsafe_rawColors.PRIMARY_300.css },
+                                style: { color: o.Z.unsafe_rawColors.PRIMARY_300.css },
                                 children: t,
                             }),
                             (0, r.jsx)(a.zx, {
@@ -71,7 +71,7 @@ function g(e) {
     let { text: t, buttonCta: n, theme: i = u.BRd.DARK, onClick: l } = e;
     return (0, r.jsx)(a.ZP, {
         theme: i,
-        children: (0, r.jsx)(f, {
+        children: (0, r.jsx)(m, {
             text: t,
             buttonCta: n,
             onClick: l,

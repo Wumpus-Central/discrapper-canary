@@ -33,7 +33,7 @@ function T(e) {
             purchaseType: R,
             selectedSku: P,
             enablePremiumBrandRefresh: w,
-            isEligibleForPremiumBrandRefreshWowMomentConfirmation: D,
+            isDisplayingWowMomentConfirmation: D,
         } = (0, g.JL)(),
         { isGift: L, selectedGiftStyle: x, giftRecipient: M } = (0, m.wD)(),
         k =
@@ -94,7 +94,7 @@ function T(e) {
                           useWinterTheme: K,
                           isEligibleForTrial: Z,
                           enablePremiumBrandRefresh: w,
-                          isEligibleForPremiumBrandRefreshWowMomentConfirmation: D,
+                          isDisplayingWowMomentConfirmation: D,
                       }))),
             e
         );

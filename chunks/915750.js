@@ -196,6 +196,7 @@ class x {
                         let r = L(e.id, n);
                         (t = !D.has(r) && (0, y.VB)(this.questContent)) && D.add(r);
                     }
+                    let r = (0, y.jY)(this.questContent);
                     (0, u.S)().then((n) => {
                         (0, b.dA)({
                             questId: e.id,
@@ -208,6 +209,7 @@ class x {
                                     triggered_by_status_change: this.triggeredByStatusChange,
                                     apple_advertising_id: null != n && (0, E.isIOS)() ? n.advertisingId : null,
                                     android_advertising_id: null != n && (0, E.isAndroid)() ? n.advertisingId : null,
+                                    metadata_raw: null != r ? r : null,
                                 },
                                 (0, d.Z)(),
                                 this.commonProperties(e),

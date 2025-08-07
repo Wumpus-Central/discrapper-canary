@@ -97,7 +97,7 @@ function _(t) {
             paymentSourceType: P,
             startingFractionalPremiumEndsAt: U,
         } = t,
-        { enablePremiumBrandRefresh: b, isEligibleForPremiumBrandRefreshWowMomentConfirmation: k } = (0, u.JL)(),
+        { enablePremiumBrandRefresh: b, isDisplayingWowMomentConfirmation: k } = (0, u.JL)(),
         { theme: w } = (0, C.TCT)(),
         A = (0, r.e7)([M.Z], () => (null != _ ? M.Z.get(_.id) : null)),
         O = (0, Z.qH)(U);

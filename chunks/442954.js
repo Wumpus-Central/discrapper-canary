@@ -1,4 +1,4 @@
-a.d(t, { Z: () => b }), a(642613), a(388685);
+a.d(t, { Z: () => v }), a(642613), a(388685);
 var n = a(255367),
     r = a(73800),
     l = a(990547),
@@ -7,10 +7,11 @@ var n = a(255367),
     o = a(585483),
     c = a(246992),
     d = a(981631),
-    u = a(388032),
-    m = a(546147),
-    x = a(616257);
-function p(e) {
+    u = a(723359),
+    m = a(388032),
+    x = a(546147),
+    p = a(616257);
+function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var a = null != arguments[t] ? arguments[t] : {},
             n = Object.keys(a);
@@ -35,7 +36,7 @@ function p(e) {
     }
     return e;
 }
-function h(e, t) {
+function b(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -56,16 +57,16 @@ function h(e, t) {
 let f = {
     CollectiblesExpiryModal: async () => {
         let { default: e } = await a.e("77370").then(a.bind(a, 83950));
-        return (t) => (0, n.jsx)(e, p({}, t));
+        return (t) => (0, n.jsx)(e, h({}, t));
     },
     EmailEnterModal: async () => {
         let { default: e } = await a.e("93288").then(a.bind(a, 396410));
         return (t) =>
             (0, n.jsx)(
                 e,
-                h(p({}, t), {
-                    headerText: u.intl.string(u.t.ZLRYGR),
-                    confirmButtonText: u.intl.string(u.t.PDTjLC),
+                b(h({}, t), {
+                    headerText: m.intl.string(m.t.ZLRYGR),
+                    confirmButtonText: m.intl.string(m.t.PDTjLC),
                     confirmButtonVariant: "primary",
                 }),
             );
@@ -75,18 +76,22 @@ let f = {
         return (t) =>
             (0, n.jsx)(
                 e,
-                h(p({}, t), {
-                    headerText: u.intl.string(u.t.H3Q7U1),
+                b(h({}, t), {
+                    headerText: m.intl.string(m.t.H3Q7U1),
                     onFormSubmit: () => {},
                     onResend: () => {},
                     onSuccess: () => {},
-                    confirmButtonText: u.intl.string(u.t["13ofGh"]),
+                    confirmButtonText: m.intl.string(m.t["13ofGh"]),
                     impression: { impressionName: l.ImpressionNames.URF_CONFIRM_EMAIL_CODE },
                 }),
             );
     },
+    ExistingUserAgeGatePrompt: async () => {
+        let { default: e } = await Promise.all([a.e("6583"), a.e("1337"), a.e("33312")]).then(a.bind(a, 746882));
+        return (t) => (0, n.jsx)(e, b(h({}, t), { source: u.L0.NSFW_SERVER }));
+    },
 };
-function b() {
+function v() {
     let e = r.useMemo(
             () =>
                 Object.keys(f)
@@ -99,22 +104,22 @@ function b() {
         ),
         [t, a] = r.useState(e[0].value);
     return (0, n.jsx)(i.zJl, {
-        className: x.panel,
+        className: p.panel,
         children: (0, n.jsxs)("div", {
-            className: m.panelInner,
+            className: x.panelInner,
             children: [
                 (0, n.jsxs)("section", {
-                    className: m.section,
+                    className: x.section,
                     children: [
                         (0, n.jsx)(i.X6q, {
                             variant: "heading-md/semibold",
                             children: "Open a Modal",
                         }),
                         (0, n.jsxs)("div", {
-                            className: m.inputRow,
+                            className: x.inputRow,
                             children: [
                                 (0, n.jsx)(i.PhF, {
-                                    className: m.input,
+                                    className: x.input,
                                     options: e,
                                     isSelected: (e) => t === e,
                                     serialize: (e) => e,
@@ -131,14 +136,14 @@ function b() {
                     ],
                 }),
                 (0, n.jsxs)("section", {
-                    className: m.section,
+                    className: x.section,
                     children: [
                         (0, n.jsx)(i.X6q, {
                             variant: "heading-md/semibold",
                             children: "Wow moment",
                         }),
                         (0, n.jsx)("div", {
-                            className: m.inputRow,
+                            className: x.inputRow,
                             children: (0, n.jsx)(i.zxk, {
                                 variant: "primary",
                                 text: "Open",

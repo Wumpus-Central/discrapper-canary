@@ -5,16 +5,16 @@ n.d(t, {
 var r = n(913527),
     i = n.n(r),
     l = n(990547),
-    s = n(570140),
-    o = n(479531),
+    o = n(570140),
+    s = n(479531),
     a = n(771308),
     c = n(353250),
     u = n(314897),
     d = n(626135),
     h = n(573261),
     p = n(959776),
-    m = n(981631),
-    f = n(723359);
+    f = n(981631),
+    m = n(723359);
 function g(e) {
     var t,
         n,
@@ -103,20 +103,20 @@ function _(e) {
         promoEmailConsent: I = null,
         usedUsernameSuggestion: O = null,
     } = e;
-    if ((s.Z.dispatch({ type: "REGISTER" }), null != E)) {
-        (0, p.Z)(E, m.jXE.REGISTER),
-            d.default.track(m.rMx.AGE_GATE_ACTION, {
-                source: f.L0.REGISTER,
-                action: f.Al.AGE_GATE_SUBMITTED,
+    if ((o.Z.dispatch({ type: "REGISTER" }), null != E)) {
+        (0, p.Z)(E, f.jXE.REGISTER),
+            d.default.track(f.rMx.AGE_GATE_ACTION, {
+                source: m.L0.REGISTER,
+                action: m.Al.AGE_GATE_SUBMITTED,
             });
         let e = i()().diff(E, "years");
         e < 13 ||
-            d.default.track(m.rMx.USER_AGE_SUBMITTED, {
+            d.default.track(f.rMx.USER_AGE_SUBMITTED, {
                 age_bucket: e >= 13 && e <= 17 ? "13-17" : e >= 18 && e <= 22 ? "18-22" : "23+",
             });
     }
     return h.Z.post({
-        url: m.ANM.REGISTER,
+        url: f.ANM.REGISTER,
         body: {
             fingerprint: u.default.getFingerprint(),
             email: t,
@@ -144,21 +144,21 @@ function _(e) {
         rejectWithError: !1,
     }).then(
         (e) => {
-            s.Z.dispatch({
+            o.Z.dispatch({
                 type: "REGISTER_SUCCESS",
                 token: e.body.token,
             }),
-                d.default.track(m.rMx.AGE_GATE_ACTION, {
-                    source: f.L0.REGISTER,
-                    action: f.Al.AGE_GATE_SUCCESS,
+                d.default.track(f.rMx.AGE_GATE_ACTION, {
+                    source: m.L0.REGISTER,
+                    action: m.Al.AGE_GATE_SUCCESS,
                 });
         },
         (e) => {
             if (e instanceof c.CaptchaCancelError) throw e;
-            let t = new o.Z(e);
+            let t = new s.Z(e);
             throw (
-                (null != t.getFieldErrors("date_of_birth") && a.wE(f.L0.REGISTER),
-                d.default.track(m.rMx.REGISTER_SUBMIT_ERRORED, {
+                (null != t.getFieldErrors("date_of_birth") && a.wE(m.L0.REGISTER),
+                d.default.track(f.rMx.REGISTER_SUBMIT_ERRORED, {
                     is_unique_username_registration: !0,
                     email_error_reason: t.getFirstFieldErrorMessage("email"),
                     phone_error_reason: t.getFirstFieldErrorMessage("phone_token"),

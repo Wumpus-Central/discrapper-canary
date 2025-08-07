@@ -1,14 +1,14 @@
-r.d(t, { Z: () => s });
-var a = r(947704);
-function n(e, t) {
-    for (var r = 0; r < t.length; r++) {
-        var n = t[r];
-        (n.enumerable = n.enumerable || !1),
-            (n.configurable = !0),
-            "value" in n && (n.writable = !0),
-            Object.defineProperty(e, (0, a.Z)(n.key), n);
+n.d(t, { Z: () => l });
+var r = n(947704);
+function i(e, t) {
+    for (var n = 0; n < t.length; n++) {
+        var i = t[n];
+        (i.enumerable = i.enumerable || !1),
+            (i.configurable = !0),
+            "value" in i && (i.writable = !0),
+            Object.defineProperty(e, (0, r.Z)(i.key), i);
     }
 }
-function s(e, t, r) {
-    return t && n(e.prototype, t), r && n(e, r), Object.defineProperty(e, "prototype", { writable: !1 }), e;
+function l(e, t, n) {
+    return t && i(e.prototype, t), n && i(e, n), Object.defineProperty(e, "prototype", { writable: !1 }), e;
 }

@@ -15,11 +15,11 @@ var l = n(442837),
     g = n(280885),
     b = n(819602),
     j = n(78806),
-    y = n(900927),
-    h = n(678738),
-    v = n(179828),
-    O = n(228168),
-    x = n(388032),
+    h = n(900927),
+    y = n(678738),
+    x = n(179828),
+    v = n(228168),
+    O = n(388032),
     _ = n(349966);
 function I(e) {
     let { user: t, currentUser: n, displayProfile: I, subsection: P, onClose: E } = e,
@@ -42,15 +42,15 @@ function I(e) {
                     setLineClamp: !1,
                 }),
             (null == I ? void 0 : I.guildId) != null &&
-                (0, r.jsx)(v.Z, {
+                (0, r.jsx)(x.Z, {
                     user: t,
                     currentUser: n,
                     guildId: I.guildId,
-                    scrollIntoView: P === O.Tb.ROLES,
+                    scrollIntoView: P === v.Tb.ROLES,
                 }),
             t.isProvisional &&
-                (0, r.jsx)(h.Z, {
-                    heading: x.intl.string(x.t.Iyka0d),
+                (0, r.jsx)(y.Z, {
+                    heading: O.intl.string(O.t.Iyka0d),
                     headingIcon: (0, r.jsx)(o.Mgn, {
                         size: "xxs",
                         color: o.TVs.colors.HEADER_PRIMARY,
@@ -59,22 +59,22 @@ function I(e) {
                     children: (0, r.jsx)(c.n, { userId: t.id }),
                 }),
             T.length > 0 &&
-                (0, r.jsx)(h.Z, {
-                    heading: x.intl.string(x.t["Uv/eT0"]),
+                (0, r.jsx)(y.Z, {
+                    heading: O.intl.string(O.t["Uv/eT0"]),
                     children: (0, r.jsx)(j.Z, { applicationIds: T }),
                 }),
-            (0, r.jsx)(h.Z, {
-                heading: x.intl.string(x.t.a6XYDw),
-                children: (0, r.jsx)(y.Z, {
+            (0, r.jsx)(y.Z, {
+                heading: O.intl.string(O.t.a6XYDw),
+                children: (0, r.jsx)(h.Z, {
                     userId: t.id,
                     guildId: null == I ? void 0 : I.guildId,
-                    tooltipDelay: O.vB,
+                    tooltipDelay: v.vB,
                 }),
             }),
             w.length > 0 &&
-                (0, r.jsx)(h.Z, {
-                    heading: x.intl.string(x.t["3fe7U1"]),
-                    scrollIntoView: P === O.Tb.CONNECTIONS,
+                (0, r.jsx)(y.Z, {
+                    heading: O.intl.string(O.t["3fe7U1"]),
+                    scrollIntoView: P === v.Tb.CONNECTIONS,
                     children: (0, r.jsx)(b.ZP, {
                         connectedAccounts: w,
                         className: _.connections,
@@ -83,8 +83,8 @@ function I(e) {
                     }),
                 }),
             C.length > 0 &&
-                (0, r.jsx)(h.Z, {
-                    heading: x.intl.string(x.t.PHjkRE),
+                (0, r.jsx)(y.Z, {
+                    heading: O.intl.string(O.t.PHjkRE),
                     children: C.map((e) =>
                         (0, r.jsx)(
                             b.tH,
@@ -101,13 +101,13 @@ function I(e) {
                         ),
                     ),
                 }),
-            (0, r.jsx)(h.Z, {
-                heading: x.intl.string(x.t["mQKv+v"]),
-                scrollIntoView: P === O.Tb.NOTE,
+            (0, r.jsx)(y.Z, {
+                heading: O.intl.string(O.t["mQKv+v"]),
+                scrollIntoView: P === v.Tb.NOTE,
                 children: (0, r.jsx)(i.Z, {
                     userId: t.id,
                     className: _.note,
-                    autoFocus: P === O.Tb.NOTE,
+                    autoFocus: P === v.Tb.NOTE,
                     onUpdate: () => Z({ action: "SET_NOTE" }),
                 }),
             }),

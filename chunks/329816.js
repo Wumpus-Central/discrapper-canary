@@ -1,4 +1,4 @@
-n.d(t, { Z: () => $ });
+n.d(t, { Z: () => ee });
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -32,65 +32,66 @@ var r = n(255367),
     L = n(429142),
     x = n(813744),
     M = n(746106),
-    k = n(526665),
-    j = n(314897),
-    U = n(819640),
-    G = n(358085),
-    B = n(663993),
-    Z = n(766127),
-    F = n(823453),
-    V = n(744048),
-    H = n(628123),
-    Y = n(436774),
-    W = n(686546),
-    K = n(950796),
-    z = n(981631),
-    q = n(325162);
+    k = n(384166),
+    j = n(526665),
+    U = n(314897),
+    G = n(819640),
+    B = n(358085),
+    Z = n(663993),
+    F = n(766127),
+    V = n(823453),
+    H = n(744048),
+    Y = n(628123),
+    W = n(436774),
+    K = n(686546),
+    z = n(950796),
+    q = n(981631),
+    X = n(325162);
 n(167666),
     Promise.resolve()
         .then(n.bind(n, 62883))
         .then((e) => {
-            G.isPlatformEmbedded
+            B.isPlatformEmbedded
                 ? window.addEventListener("contextmenu", e.contextMenuCallbackNative, !1)
                 : window.addEventListener("contextmenu", e.contextMenuCallbackWeb, !1);
         }),
     (0, u.E)({ getDefaultLinkInterceptor: m.default }),
-    (0, B.Un)({
+    (0, Z.Un)({
         createPromise: () =>
             Promise.all([n.e("50448"), n.e("80451"), n.e("30634"), n.e("33551")]).then(n.bind(n, 849493)),
         webpackId: 849493,
     }),
-    (0, B.Un)({
+    (0, Z.Un)({
         createPromise: () =>
             Promise.all([n.e("50448"), n.e("80451"), n.e("30634"), n.e("58493")]).then(n.bind(n, 80753)),
         webpackId: 80753,
     });
-let X = (0, B.Un)({
+let Q = (0, Z.Un)({
         createPromise: () => n.e("67110").then(n.bind(n, 177741)),
         webpackId: 177741,
     }),
-    Q = (0, B.Un)({
+    J = (0, Z.Un)({
         createPromise: () => n.e("13474").then(n.bind(n, 420541)),
         webpackId: 420541,
     }),
-    J = i.memo(function () {
-        let e = (0, c.e7)([U.Z], () => U.Z.hasLayers()),
-            t = (0, k.wy)("AppSkeleton"),
-            n = (0, c.e7)([U.Z], () => U.Z.getLayers().includes(z.S9g.USER_SETTINGS)),
+    $ = i.memo(function () {
+        let e = (0, c.e7)([G.Z], () => G.Z.hasLayers()),
+            t = (0, j.wy)("AppSkeleton"),
+            n = (0, c.e7)([G.Z], () => G.Z.getLayers().includes(q.S9g.USER_SETTINGS)),
             i = (0, d.s9z)(d.$sL);
         if (!n || !t)
-            return (0, r.jsx)(K.Dg, {
+            return (0, r.jsx)(z.Dg, {
                 fixed: !0,
-                show: e || i || !j.default.isAuthenticated(),
+                show: e || i || !U.default.isAuthenticated(),
             });
     }),
-    $ = function (e) {
+    ee = function (e) {
         let { children: t, skipsSettingDefaultPageTitle: n } = e,
-            o = (0, G.getPlatform)(),
+            o = (0, B.getPlatform)(),
             u = l.tq || l.Em,
             m = (0, c.e7)([E.Z], () => (E.Z.useForcedColors ? "yes" : "no")),
-            k = i.useRef(document.body),
-            j = "".concat(m);
+            j = i.useRef(document.body),
+            U = "".concat(m);
         return (
             (0, C.G)(),
             (0, P.G)("AppSkeleton"),
@@ -99,30 +100,30 @@ let X = (0, B.Un)({
                 {
                     children: (0, r.jsxs)(b.Z, {
                         children: [
-                            (0, r.jsx)(F.Z, { skipsSettingDefaultPageTitle: n }),
+                            (0, r.jsx)(V.Z, { skipsSettingDefaultPageTitle: n }),
                             (0, r.jsx)(h.T, {
-                                children: (0, r.jsx)(H.Z, {
+                                children: (0, r.jsx)(Y.Z, {
                                     children: (0, r.jsxs)(d.JcV, {
-                                        containerRef: k,
+                                        containerRef: j,
                                         children: [
-                                            (0, r.jsx)(W.Co, {}),
-                                            (0, r.jsx)(Y.ZP, {}),
+                                            (0, r.jsx)(K.Co, {}),
+                                            (0, r.jsx)(W.ZP, {}),
                                             (0, r.jsx)(s.OU, {}),
                                             (0, r.jsx)(g.Wu, {
-                                                appContext: z.IlC.APP,
+                                                appContext: q.IlC.APP,
                                                 renderWindow: window,
                                                 children: (0, r.jsxs)(w.yP, {
                                                     children: [
-                                                        null != o ? (0, r.jsx)(J, {}) : null,
+                                                        null != o ? (0, r.jsx)($, {}) : null,
                                                         (0, r.jsxs)("div", {
                                                             className: a()(
-                                                                q.appAsidePanelWrapper,
-                                                                u && q.mobileAppAsidePanelWrapper,
+                                                                X.appAsidePanelWrapper,
+                                                                u && X.mobileAppAsidePanelWrapper,
                                                             ),
                                                             children: [
                                                                 (0, r.jsx)(N.K, {}),
                                                                 (0, r.jsx)("div", {
-                                                                    className: q.notAppAsidePanel,
+                                                                    className: X.notAppAsidePanel,
                                                                     "data-app-not-dev-tools": !0,
                                                                     children: (0, r.jsx)(A.m, {
                                                                         children: (0, r.jsx)(L.OR, {
@@ -132,7 +133,7 @@ let X = (0, B.Un)({
                                                                                     children: [
                                                                                         (0, r.jsx)("div", {
                                                                                             className: a()(
-                                                                                                u ? q.mobileApp : q.app,
+                                                                                                u ? X.mobileApp : X.app,
                                                                                             ),
                                                                                             children: t,
                                                                                         }),
@@ -147,8 +148,9 @@ let X = (0, B.Un)({
                                                                                         (0, r.jsx)(d.Ixi, {}),
                                                                                         (0, r.jsx)(v.Z, {}),
                                                                                         (0, r.jsx)(x.Z, {}),
-                                                                                        (0, r.jsx)(X, {}),
                                                                                         (0, r.jsx)(Q, {}),
+                                                                                        (0, r.jsx)(J, {}),
+                                                                                        (0, r.jsx)(k.Z, {}),
                                                                                     ],
                                                                                 }),
                                                                             }),
@@ -156,8 +158,8 @@ let X = (0, B.Un)({
                                                                     }),
                                                                 }),
                                                                 (0, r.jsx)(T.Z, {}),
-                                                                (0, r.jsx)(V.Z, {}),
-                                                                (0, r.jsx)(Z.Z, {}),
+                                                                (0, r.jsx)(H.Z, {}),
+                                                                (0, r.jsx)(F.Z, {}),
                                                                 (0, r.jsx)(R.Z, { mobile: u }),
                                                             ],
                                                         }),
@@ -173,7 +175,7 @@ let X = (0, B.Un)({
                         ],
                     }),
                 },
-                j,
+                U,
             )
         );
     };

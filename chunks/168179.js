@@ -15,6 +15,10 @@ function o() {
                 className: i.caretFill,
                 d: "M14.0535 9.39127C12.4557 11.2796 9.54425 11.2796 7.94646 9.39127L1 1Q0 0 1 0L21 0Q22 0 21 1L14.0535 9.39127Z",
             }),
+            (0, r.jsx)("path", {
+                className: i.caretGradient,
+                d: "M14.0535 9.39127C12.4557 11.2796 9.54425 11.2796 7.94646 9.39127L1 1Q0 0 1 0L21 0Q22 0 21 1L14.0535 9.39127Z",
+            }),
             (0, r.jsx)("mask", {
                 id: "mask0_caret",
                 style: { maskType: "alpha" },

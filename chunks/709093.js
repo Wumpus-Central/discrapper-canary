@@ -94,7 +94,7 @@ let N = function (e) {
             step: k,
             breadcrumbs: j,
             startedPaymentFlowWithPaymentSourcesRef: U,
-            isEligibleForPremiumBrandRefreshWowMomentConfirmation: G,
+            isDisplayingWowMomentConfirmation: G,
         } = (0, c.JL)();
     if (null == j || 0 === j.length) return null;
     let B = j.flatMap((e) => {
@@ -123,7 +123,7 @@ let N = function (e) {
         V = null != F && null != k,
         H = w && V && k === u.h8.REVIEW,
         Y = P ? "nitro-pink" : "nitro-green";
-    return G && k === u.h8.CONFIRM
+    return G
         ? (0, r.jsx)("div", {
               className: E.container,
               children: (0, r.jsx)(a.$, {

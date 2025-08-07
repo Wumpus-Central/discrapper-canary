@@ -1,14 +1,13 @@
-n.d(e, { default: () => d });
+n.d(e, { default: () => b });
 var r = n(255367);
 n(73800);
 var o = n(755721),
     l = n(481060),
     i = n(313201),
-    c = n(77880),
-    a = n(388032),
+    c = n(388032),
     s = n(344785),
-    u = n(298860);
-let b = (t) => {
+    a = n(298860);
+let u = (t) => {
     let { text: e, icon: n, foreground: o } = t;
     return (0, r.jsxs)("div", {
         className: s.bulletContainer,
@@ -32,11 +31,11 @@ let b = (t) => {
         ],
     });
 };
-function d(t) {
+function b(t) {
     var e,
         n,
-        { transitionState: d, onClose: p } = t,
-        f = (function (t, e) {
+        { transitionState: b, onClose: d } = t,
+        p = (function (t, e) {
             if (null == t) return {};
             var n,
                 r,
@@ -57,8 +56,7 @@ function d(t) {
             }
             return o;
         })(t, ["transitionState", "onClose"]);
-    let g = (0, i.Dt)(),
-        { changeLeaveCallAndActivityIcons: j } = (0, c.A)({ location: "StageChannelWelcomeModal" });
+    let f = (0, i.Dt)();
     return (0, r.jsx)(
         l.Y0X,
         ((e = (function (t) {
@@ -87,10 +85,10 @@ function d(t) {
             return t;
         })(
             {
-                transitionState: d,
-                "aria-labelledby": g,
+                transitionState: b,
+                "aria-labelledby": f,
             },
-            f,
+            p,
         )),
         (n = n =
             {
@@ -100,35 +98,35 @@ function d(t) {
                     className: s.content,
                     children: [
                         (0, r.jsx)("img", {
-                            src: u,
-                            alt: a.intl.string(a.t["5DRw+/"]),
+                            src: a,
+                            alt: c.intl.string(c.t["5DRw+/"]),
                             className: s.illustration,
                         }),
                         (0, r.jsx)(l.X6q, {
-                            id: g,
+                            id: f,
                             variant: "heading-xl/semibold",
                             color: "header-primary",
                             className: s.headerTitle,
-                            children: a.intl.string(a.t.UVuXCg),
+                            children: c.intl.string(c.t.UVuXCg),
                         }),
-                        (0, r.jsx)(b, {
-                            text: a.intl.string(a.t.sBDfo6),
+                        (0, r.jsx)(u, {
+                            text: c.intl.string(c.t.sBDfo6),
                             icon: l.nRN,
                             foreground: s.red,
                         }),
-                        (0, r.jsx)(b, {
-                            text: a.intl.string(a.t.x58YtL),
-                            icon: j ? l.PBZ : l.gkL,
+                        (0, r.jsx)(u, {
+                            text: c.intl.string(c.t.x58YtL),
+                            icon: l.gkL,
                         }),
-                        (0, r.jsx)(b, {
-                            text: a.intl.string(a.t.XtVqlZ),
+                        (0, r.jsx)(u, {
+                            text: c.intl.string(c.t.XtVqlZ),
                             icon: l.V9,
                         }),
                         (0, r.jsx)(o.zx, {
                             color: o.zx.Colors.BRAND,
                             className: s.button,
-                            onClick: p,
-                            children: a.intl.string(a.t.obLqZ2),
+                            onClick: d,
+                            children: c.intl.string(c.t.obLqZ2),
                         }),
                     ],
                 }),

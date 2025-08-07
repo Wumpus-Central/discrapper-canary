@@ -6,16 +6,16 @@ n.d(t, {
 var r,
     i = n(255367),
     l = n(73800),
-    s = n(120356),
-    o = n.n(s),
+    o = n(120356),
+    s = n.n(o),
     a = n(442837),
     c = n(481060),
     u = n(893776),
     d = n(239091),
     h = n(598077),
     p = n(314897),
-    m = n(246946),
-    f = n(594174),
+    f = n(246946),
+    m = n(594174),
     g = n(626135),
     _ = n(51144),
     x = n(480387),
@@ -33,28 +33,28 @@ function S(e) {
     let { actionText: t, user: n, onAction: r } = e,
         {
             currentUser: l,
-            hidePrivateData: s,
+            hidePrivateData: o,
             isAuthenticated: E,
-        } = (0, a.cj)([f.default, m.Z, p.default], () => ({
-            currentUser: f.default.getCurrentUser(),
-            hidePrivateData: m.Z.hidePersonalInformation,
+        } = (0, a.cj)([m.default, f.Z, p.default], () => ({
+            currentUser: m.default.getCurrentUser(),
+            hidePrivateData: f.Z.hidePersonalInformation,
             isAuthenticated: p.default.isAuthenticated(),
         })),
         O = new h.Z(n),
         S = E && (null == l ? void 0 : l.id) === O.id,
         N = n.tokenStatus === b.q.INVALID,
-        C = s || O.hasUniqueUsername() ? null : "#".concat(O.discriminator),
-        y = null;
+        y = o || O.hasUniqueUsername() ? null : "#".concat(O.discriminator),
+        C = null;
     return (
         S
-            ? (y = (0, i.jsx)(c.Text, {
+            ? (C = (0, i.jsx)(c.Text, {
                   variant: "text-sm/semibold",
                   className: I.hintText,
                   color: "text-feedback-positive",
                   children: j.intl.string(j.t.seV8ys),
               }))
             : N &&
-              (y = (0, i.jsx)(c.Text, {
+              (C = (0, i.jsx)(c.Text, {
                   variant: "text-sm/semibold",
                   className: I.hintText,
                   color: "text-danger",
@@ -71,7 +71,7 @@ function S(e) {
                         "aria-label": n.username,
                     }),
                     (0, i.jsxs)("div", {
-                        className: o()(I.usernameSection, { [I.hasActionMaxWidth]: !S }),
+                        className: s()(I.usernameSection, { [I.hasActionMaxWidth]: !S }),
                         children: [
                             (0, i.jsxs)("div", {
                                 className: I.username,
@@ -79,20 +79,20 @@ function S(e) {
                                     (0, i.jsx)(c.Text, {
                                         variant: "text-md/semibold",
                                         color: "header-primary",
-                                        className: I.textOverflow,
+                                        lineClamp: 1,
                                         children: _.ZP.getUserTag(O, {
                                             mode: "username",
-                                            identifiable: s ? "never" : "always",
+                                            identifiable: o ? "never" : "always",
                                         }),
                                     }),
                                     (0, i.jsx)(c.Text, {
                                         color: "header-secondary",
                                         variant: "text-sm/normal",
-                                        children: C,
+                                        children: y,
                                     }),
                                 ],
                             }),
-                            y,
+                            C,
                         ],
                     }),
                     (0, i.jsxs)("div", {
@@ -155,12 +155,12 @@ function S(e) {
 }
 function N(e) {
     let { actionText: t, onAction: n } = e,
-        { isLoading: r, multiAccountUsers: s } = (0, E.L)();
+        { isLoading: r, multiAccountUsers: o } = (0, E.L)();
     return (0, i.jsx)("div", {
         className: I.list,
         children: r
             ? (0, i.jsx)(c.$jN, { className: I.spinner })
-            : s.map((e, r) =>
+            : o.map((e, r) =>
                   (0, i.jsxs)(
                       l.Fragment,
                       {
@@ -174,7 +174,7 @@ function N(e) {
                                   },
                                   e.id,
                               ),
-                              s.length - 1 !== r &&
+                              o.length - 1 !== r &&
                                   (0, i.jsx)("div", {
                                       role: "separator",
                                       className: I.separator,

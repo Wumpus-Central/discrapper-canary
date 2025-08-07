@@ -56,44 +56,46 @@ function E(e) {
             setReadySlideId: S,
             premiumBrandRefreshBackgroundClassName: A,
             selectedSkuId: N,
+            isDisplayingWowMomentConfirmation: C,
         } = (0, d.JL)(),
-        C = null != N && N in _.y7,
-        R = O.find((e) => e.key === y);
+        R = null != N && N in _.y7,
+        P = O.find((e) => e.key === y);
     i.useEffect(() => {
         T(null);
     }, [y, T]),
-        l()(null != R, "Unknown step for current payment flow.");
-    let P = null != (c = null == R || null == (t = R.options) ? void 0 : t.hideSlider) && c,
-        w = null == R || null == (n = R.options) ? void 0 : n.bodyClassName,
-        D = null == R || null == (o = R.options) ? void 0 : o.sliderBodyClassName;
+        l()(null != P, "Unknown step for current payment flow.");
+    let w = null != (c = null == P || null == (t = P.options) ? void 0 : t.hideSlider) && c,
+        D = null == P || null == (n = P.options) ? void 0 : n.bodyClassName,
+        L = null == P || null == (o = P.options) ? void 0 : o.sliderBodyClassName;
     return (
-        void 0 !== E && E && (D = p.sliderBodyLarge),
+        void 0 !== E && E && (L = p.sliderBodyLarge),
         (0, r.jsxs)(r.Fragment, {
             children: [
-                null == (h = null == R || null == (s = R.options) ? void 0 : s.renderHeader) || h ? m : null,
-                R.renderStep(b),
-                null == y || P
+                null == (h = null == P || null == (s = P.options) ? void 0 : s.renderHeader) || h ? m : null,
+                P.renderStep(b),
+                null == y || w
                     ? null
                     : (0, r.jsxs)(r.Fragment, {
                           children: [
                               (0, r.jsx)(u.hzk, {
                                   "data-migration-pending": !0,
-                                  className: a()(w, p.body, A, {
+                                  className: a()(D, p.body, A, {
                                       [p.reviewStep]: y === f.h8.REVIEW,
-                                      [p.addPaymentStepForPremium]: y === f.h8.ADD_PAYMENT_STEPS && C,
+                                      [p.addPaymentStepForPremium]: y === f.h8.ADD_PAYMENT_STEPS && R,
                                   }),
                                   children: (0, r.jsx)(u.MyZ, {
                                       activeSlide: y,
                                       centered: !1,
                                       onSlideReady: (e) => S(e),
                                       width: y === f.h8.ADD_PAYMENT_STEPS ? 408 : y === f.h8.REVIEW ? 392 : void 0,
+                                      overflow: C ? "visible" : void 0,
                                       children: O.filter((e) => null != e.key).map((e) =>
                                           (0, r.jsx)(
                                               u.Mi4,
                                               {
                                                   id: e.key,
                                                   children: (0, r.jsx)("form", {
-                                                      className: a()(p.sliderBody, D),
+                                                      className: a()(p.sliderBody, L),
                                                       ref: (e) => {
                                                           v(e);
                                                       },

@@ -1,14 +1,13 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => m });
 var r = n(255367);
 n(73800);
 var i = n(481060),
     o = n(513202),
     a = n(906732),
     s = n(522651),
-    l = n(77880),
-    c = n(871499),
-    u = n(388032);
-function d(e, t, n) {
+    l = n(871499),
+    c = n(388032);
+function u(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -21,7 +20,7 @@ function d(e, t, n) {
         e
     );
 }
-function f(e) {
+function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -32,12 +31,12 @@ function f(e) {
                 }),
             )),
             r.forEach(function (t) {
-                d(e, t, n[t]);
+                u(e, t, n[t]);
             });
     }
     return e;
 }
-function _(e, t) {
+function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -49,22 +48,22 @@ function _(e, t) {
     }
     return n;
 }
-function p(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : _(Object(t)).forEach(function (n) {
+            : f(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function h(e, t) {
+function p(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = m(e, t);
+        i = h(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
         for (r = 0; r < o.length; r++)
@@ -72,7 +71,7 @@ function h(e, t) {
     }
     return i;
 }
-function m(e, t) {
+function h(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -81,14 +80,13 @@ function m(e, t) {
     for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function g(e) {
-    var { location: t, applicationId: n, centerButton: d = !1 } = e,
-        _ = h(e, ["location", "applicationId", "centerButton"]);
-    let { parentAnalyticsLocation: m } = (0, a.ZP)(),
-        { changeLeaveCallAndActivityIcons: g } = (0, l.A)({ location: "LeaveActivityButton" }),
-        E = d ? c.d : c.Z,
-        b = () => {
-            (0, s.v)(m, s.d.LEAVE_ACTIVITY),
+function m(e) {
+    var { location: t, applicationId: n, centerButton: u = !1 } = e,
+        f = p(e, ["location", "applicationId", "centerButton"]);
+    let { parentAnalyticsLocation: h } = (0, a.ZP)(),
+        m = u ? l.d : l.Z,
+        g = () => {
+            (0, s.v)(h, s.d.LEAVE_ACTIVITY),
                 o.Z.leaveActivity({
                     location: t,
                     applicationId: n,
@@ -96,12 +94,12 @@ function g(e) {
                 });
         };
     return (0, r.jsx)(
-        E,
-        p(f({}, _), {
+        m,
+        _(d({}, f), {
             isTrayButton: !1,
-            onClick: b,
-            iconComponent: g ? i.Dio : i.PBZ,
-            label: u.intl.string(u.t["R/FK4O"]),
+            onClick: g,
+            iconComponent: i.PBZ,
+            label: c.intl.string(c.t["R/FK4O"]),
         }),
     );
 }

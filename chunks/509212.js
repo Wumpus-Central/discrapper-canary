@@ -22,8 +22,8 @@ n.d(t, {
     KM: () => ew,
     Kr: () => eh,
     LM: () => eO,
-    MM: () => tA,
-    Mo: () => tN,
+    MM: () => tN,
+    Mo: () => tC,
     Nj: () => eN,
     OG: () => tn,
     PB: () => e1,
@@ -49,10 +49,11 @@ n.d(t, {
     f2: () => eM,
     fY: () => e9,
     gI: () => te,
-    hF: () => tT,
+    hF: () => tS,
     hQ: () => et,
     iQ: () => K,
     il: () => eY,
+    jY: () => tI,
     lQ: () => Y,
     nc: () => ex,
     o9: () => eL,
@@ -63,7 +64,7 @@ n.d(t, {
     qe: () => tv,
     t2: () => ec,
     u7: () => tf,
-    uN: () => tI,
+    uN: () => tT,
     vQ: () => eb,
     vR: () => ev,
     xN: () => eg,
@@ -923,28 +924,33 @@ function tv(e, t) {
 }
 function tI(e) {
     var t;
-    let { adContext: n } = null != (t = T.Z.questToDeliverForPlacement.get(th(e))) ? t : {};
+    let { metadataRaw: n } = null != (t = T.Z.questToDeliverForPlacement.get(th(e))) ? t : {};
     return n;
 }
 function tT(e) {
+    var t;
+    let { adContext: n } = null != (t = T.Z.questToDeliverForPlacement.get(th(e))) ? t : {};
+    return n;
+}
+function tS(e) {
     var t, n;
     let r = null != (n = null == (t = e.userStatus) ? void 0 : t.claimedTier) ? n : 0;
     return "rewardsConfig" in e.config ? e.config.rewardsConfig.rewards[r] : e.config.rewards[r];
 }
-function tS(e) {
+function tA(e) {
     return new Set(Object.keys(e.config.taskConfigV2.tasks));
 }
-function tA(e, t) {
+function tN(e, t) {
     let n = new Map();
     for (let [r, i] of e)
-        for (let e of tS(i))
+        for (let e of tA(i))
             if (t.has(e)) {
                 n.set(r, i);
                 break;
             }
     return n;
 }
-function tN(e) {
+function tC(e) {
     var t, n;
     let { questId: r, sourceQuestContent: i, videoSessionId: o } = e,
         a = A.ZP.getState().getVideoProgress(r);

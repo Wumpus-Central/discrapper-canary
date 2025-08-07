@@ -1846,6 +1846,12 @@ let e3 = () => {
                 parent: ez.s6.DEVELOPER_OPTIONS_DESIGN_TOOLS_TAB,
                 predicate: () => e7 && z.Z.isDeveloper,
             },
+            [ez.s6.DEVELOPER_OPTIONS_HIGHLIGHT_VOID_TOGGLEABLES]: {
+                section: eY.oAB.DEVELOPER_OPTIONS,
+                searchableTitles: ["Highlight Toggleable Components"],
+                parent: ez.s6.DEVELOPER_OPTIONS_DESIGN_TOOLS_TAB,
+                predicate: () => e7 && z.Z.isDeveloper,
+            },
             [ez.s6.DEVELOPER_OPTIONS_LAYOUT_DEBUGGING]: {
                 section: eY.oAB.DEVELOPER_OPTIONS,
                 searchableTitles: ["Layout Debugging"],

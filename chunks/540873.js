@@ -31,14 +31,14 @@ function u(e) {
         b = (0, r.Z)(g, 2),
         y = b[0],
         O = b[1],
-        w = (0, a.useState)(void 0 !== c ? c : void 0 !== n && n),
-        x = (0, r.Z)(w, 2),
-        Z = x[0],
-        C = x[1],
-        S = (0, a.useState)(void 0 !== v ? v : void 0 === u ? null : u),
-        M = (0, r.Z)(S, 2),
-        I = M[0],
-        E = M[1],
+        x = (0, a.useState)(void 0 !== c ? c : void 0 !== n && n),
+        w = (0, r.Z)(x, 2),
+        C = w[0],
+        M = w[1],
+        Z = (0, a.useState)(void 0 !== v ? v : void 0 === u ? null : u),
+        S = (0, r.Z)(Z, 2),
+        I = S[0],
+        E = S[1],
         k = (0, a.useCallback)(
             function (e, t) {
                 "function" == typeof d && d(e, t), E(e);
@@ -54,28 +54,28 @@ function u(e) {
         ),
         R = (0, a.useCallback)(
             function () {
-                "function" == typeof h && h(), C(!0);
+                "function" == typeof h && h(), M(!0);
             },
             [h],
         ),
-        P = (0, a.useCallback)(
+        D = (0, a.useCallback)(
             function () {
-                "function" == typeof f && f(), C(!1);
+                "function" == typeof f && f(), M(!1);
             },
             [f],
         ),
-        D = void 0 !== l ? l : y,
-        F = void 0 !== c ? c : Z,
+        F = void 0 !== l ? l : y,
+        P = void 0 !== c ? c : C,
         L = void 0 !== v ? v : I;
     return (0, o.Z)(
         (0, o.Z)({}, m),
         {},
         {
-            inputValue: D,
-            menuIsOpen: F,
+            inputValue: F,
+            menuIsOpen: P,
             onChange: k,
             onInputChange: V,
-            onMenuClose: P,
+            onMenuClose: D,
             onMenuOpen: R,
             value: L,
         },

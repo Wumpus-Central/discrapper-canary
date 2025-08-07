@@ -14,11 +14,11 @@ var r = n(255367),
     g = n(648052),
     b = n(867176),
     j = n(280885),
-    y = n(900927),
-    h = n(678738),
-    v = n(502762),
-    O = n(530),
-    x = n(679332),
+    h = n(900927),
+    y = n(678738),
+    x = n(502762),
+    v = n(530),
+    O = n(679332),
     _ = n(544989),
     I = n(228168),
     P = n(981631),
@@ -35,15 +35,15 @@ function A(e) {
             roleId: w,
             sessionId: C,
             transitionState: G,
-            openedAt: M,
-            onClose: L,
-            sourceAnalyticsLocations: R = [],
+            openedAt: L,
+            onClose: R,
+            sourceAnalyticsLocations: M = [],
         } = e,
         D = n === P.ME ? void 0 : n,
         k = (0, p.ZP)(t.id, D),
-        U = u.ZP.getName(D, A, t),
-        B = (0, s.Dt)(),
-        { analyticsLocations: F } = (0, c.ZP)([...R, a.Z.USER_PROFILE_MODAL]),
+        B = u.ZP.getName(D, A, t),
+        U = (0, s.Dt)(),
+        { analyticsLocations: F } = (0, c.ZP)([...M, a.Z.USER_PROFILE_MODAL]),
         V = (0, f.ZB)({
             layout: "MODAL",
             userId: t.id,
@@ -59,7 +59,7 @@ function A(e) {
         value: F,
         children: (0, r.jsx)(f.Mt, {
             value: V,
-            openedAt: M,
+            openedAt: L,
             fetchStartedAt: null == k ? void 0 : k.fetchStartedAt,
             fetchEndedAt: null == k ? void 0 : k.fetchEndedAt,
             isLoaded: null == k ? void 0 : k.isLoaded,
@@ -68,23 +68,23 @@ function A(e) {
                 transitionState: G,
                 className: Z.root,
                 hideShadow: !0,
-                "aria-labelledby": B,
+                "aria-labelledby": U,
                 parentComponent: "NonUserBotProfileModal",
                 children: [
                     (0, r.jsx)(o.y5t, {
                         component: (0, r.jsx)(o.nn4, {
                             children: (0, r.jsx)(o.H, {
-                                id: B,
-                                children: E.intl.format(E.t.KRe1Fh, { name: U }),
+                                id: U,
+                                children: E.intl.format(E.t.KRe1Fh, { name: B }),
                             }),
                         }),
-                        children: (0, r.jsxs)(v.Z, {
+                        children: (0, r.jsxs)(x.Z, {
                             user: t,
                             displayProfile: k,
                             themeType: I.lY.MODAL,
                             ref: (null == k ? void 0 : k.profileEffectId) != null ? Y : void 0,
                             children: [
-                                (0, r.jsx)(_.Z, { children: (0, r.jsx)(x.Z, { user: t }) }),
+                                (0, r.jsx)(_.Z, { children: (0, r.jsx)(O.Z, { user: t }) }),
                                 (0, r.jsxs)("div", {
                                     children: [
                                         (0, r.jsx)(b.Z, {
@@ -107,16 +107,16 @@ function A(e) {
                                 (0, r.jsxs)("div", {
                                     className: Z.body,
                                     children: [
-                                        (0, r.jsx)(O.Z, {
+                                        (0, r.jsx)(v.Z, {
                                             className: Z.username,
                                             user: t,
-                                            nickname: U,
+                                            nickname: B,
                                             pronouns: null == k ? void 0 : k.pronouns,
                                             nicknameVariant: "heading-xl/bold",
                                             tags: (0, r.jsx)(g.Z, {
                                                 displayProfile: k,
                                                 themeType: I.lY.MODAL,
-                                                onClose: L,
+                                                onClose: R,
                                             }),
                                         }),
                                         (0, r.jsxs)("div", {
@@ -150,9 +150,9 @@ function A(e) {
                                                             userBio: null == k ? void 0 : k.bio,
                                                             setLineClamp: !1,
                                                         }),
-                                                        (0, r.jsx)(h.Z, {
+                                                        (0, r.jsx)(y.Z, {
                                                             heading: E.intl.string(E.t["A//N4u"]),
-                                                            children: (0, r.jsx)(y.Z, {
+                                                            children: (0, r.jsx)(h.Z, {
                                                                 userId: t.id,
                                                                 guildId: D,
                                                                 tooltipDelay: I.vB,

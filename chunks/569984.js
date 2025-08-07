@@ -311,7 +311,7 @@ function eN(e) {
     G.has(t) && G.delete(t), D.ZP.getState().resetQuest(t);
 }
 function eC(e) {
-    let { quest: t, placement: n, adDecisionData: r, adContext: o } = e;
+    let { quest: t, placement: n, adDecisionData: r, adContext: o, metadataRaw: a } = e;
     (u = Date.now()),
         (i = !1),
         null == t
@@ -320,6 +320,7 @@ function eC(e) {
                   quest: t,
                   adDecisionData: r,
                   adContext: o,
+                  metadataRaw: a,
               });
 }
 function eR(e) {

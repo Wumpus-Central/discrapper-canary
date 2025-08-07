@@ -12,15 +12,15 @@ var n = a(73800),
     x = a(594174),
     p = a(74538),
     h = a(981631),
-    f = a(469115);
-let b = [h.BRd.DARK, h.BRd.LIGHT, h.BRd.DARKER, h.BRd.MIDNIGHT];
+    b = a(469115);
+let f = [h.BRd.DARK, h.BRd.LIGHT, h.BRd.DARKER, h.BRd.MIDNIGHT];
 function v(e) {
     return e[Math.floor(Math.random() * e.length)];
 }
 async function j() {
     let e = (function () {
             let e = x.default.getCurrentUser();
-            return p.ZP.canUseClientThemes(e) ? Object.keys(f.qt).map((e) => Number(e)) : [];
+            return p.ZP.canUseClientThemes(e) ? Object.keys(b.qt).map((e) => Number(e)) : [];
         })(),
         t = e.length > 0 && Math.random() > 0.7;
     try {
@@ -30,7 +30,7 @@ async function j() {
                 r = v(n);
             if (null != r) {
                 var a;
-                let e = f.qt[r];
+                let e = b.qt[r];
                 t = null != (a = null == e ? void 0 : e.theme) ? a : h.BRd.DARK;
             } else t = v([h.BRd.DARK, h.BRd.DARKER, h.BRd.MIDNIGHT]);
             await i.ZI(
@@ -42,7 +42,7 @@ async function j() {
                 u.fy.INFREQUENT_USER_ACTION,
             );
         } else {
-            let e = v(b);
+            let e = v(f);
             await i.ZI(
                 {
                     theme: e,

@@ -1,4 +1,4 @@
-a.d(t, { Z: () => b }), a(388685);
+a.d(t, { Z: () => f }), a(388685);
 var n = a(255367),
     r = a(120356),
     l = a.n(r),
@@ -35,7 +35,7 @@ let h = [
             },
         },
     ],
-    f = [
+    b = [
         {
             key: "channelName",
             cellClassName: l()(x.cell, x.channelName),
@@ -70,13 +70,13 @@ let h = [
             },
         },
     ];
-function b() {
+function f() {
     let { unreadRecentMentionsCount: e, unreadChannelIds: t } = (0, m.O4)(),
         {
             isLoading: a,
             hasLoadedEver: r,
             hasPreloaded: l,
-            hasMoreToLoad: b,
+            hasMoreToLoad: f,
             isLoadingComplete: v,
         } = (0, i.cj)([u.Z], () => ({
             isLoading: u.Z.isLoading,
@@ -105,7 +105,7 @@ function b() {
             }, {}),
         ),
         C = (0, i.e7)([u.Z], () => u.Z.getInboxMessages()),
-        O = (0, i.e7)([u.Z], () => u.Z.getDevOverrides().navOnClick);
+        N = (0, i.e7)([u.Z], () => u.Z.getDevOverrides().navOnClick);
     return (0, n.jsx)("div", {
         className: p.panel,
         children: (0, n.jsxs)(s.zJl, {
@@ -138,7 +138,7 @@ function b() {
                             children: [
                                 (0, n.jsx)("div", { children: "Nav On Click" }),
                                 (0, n.jsx)(s.XZJ, {
-                                    value: O,
+                                    value: N,
                                     onChange: (e) => {
                                         o.Z.dispatch({
                                             type: "NOTIFICATIONS_INBOX_SET_DEV_OVERRIDES",
@@ -193,7 +193,7 @@ function b() {
                             children: ["Has Loaded Ever: ", r ? "\u2705" : "\u274C"],
                         }),
                         (0, n.jsxs)("div", {
-                            children: ["Has More To Load: ", b ? "\u2705" : "\u274C"],
+                            children: ["Has More To Load: ", f ? "\u2705" : "\u274C"],
                         }),
                         (0, n.jsxs)("div", {
                             children: ["Is Loading Complete: ", v ? "\u2705" : "\u274C"],
@@ -213,7 +213,7 @@ function b() {
                             children: ["Total Channels: ", Object.keys(g).length],
                         }),
                         (0, n.jsx)(c.Z, {
-                            columns: f,
+                            columns: b,
                             data: Object.entries(g).map((e) => {
                                 var t, a;
                                 let [n, r] = e;

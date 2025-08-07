@@ -1,6 +1,6 @@
 a.d(t, {
     ZP: () => g,
-    v0: () => f,
+    v0: () => b,
 }),
     a(388685),
     a(539854),
@@ -18,7 +18,7 @@ var n,
     x = a(823379),
     p = a(246992),
     h = a(616257),
-    f =
+    b =
         (((n = {}).NONE = ""),
         (n.EXPERIMENTS = "Experiments"),
         (n.EVENTS = "Events"),
@@ -31,7 +31,7 @@ var n,
         (n.AUDIO_VIDEO = "Audio / Video"),
         (n.DEVELOPMENT = "Development"),
         n);
-let b = [
+let f = [
         "Experiments",
         "Events",
         "Premium",
@@ -56,7 +56,7 @@ let b = [
 function j(e) {
     let { tabs: t, selectedTabId: a, onSelectTab: n } = e,
         i = l.useRef(new Map()),
-        [s, f] = l.useState(() => new Set()),
+        [s, b] = l.useState(() => new Set()),
         { ref: j, width: g } = (0, u.ZP)(),
         _ = l.useRef(null);
     l.useEffect(() => {
@@ -73,7 +73,7 @@ function j(e) {
                         ? l
                         : 0) < 0 &&
                 s.add(c.id);
-        f(s);
+        b(s);
     }, [t, g, j, a]);
     let y = l.useCallback(
         (e) => {
@@ -82,7 +82,7 @@ function j(e) {
                 c = t.filter((e) => null == e.group),
                 u = {};
             for (let e of t) null != e.group && (null != u[(a = e.group)] || (u[a] = []), u[e.group].push(e));
-            for (let e of b)
+            for (let e of f)
                 null == (i = u[e]) ||
                     i.sort((e, t) => {
                         var a, n;
@@ -109,7 +109,7 @@ function j(e) {
                             t,
                         );
                     }),
-                    b.map((e) =>
+                    f.map((e) =>
                         (0, r.jsx)(
                             d.kSQ,
                             {

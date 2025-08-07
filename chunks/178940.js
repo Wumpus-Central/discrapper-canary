@@ -92,6 +92,7 @@ class v extends (r = o.PureComponent) {
             b = d ? "span" : "label",
             y = this.props.disabled ? h.inputDisabled : this.props.readOnly ? h.inputReadonly : h.inputDefault;
         return (0, i.jsxs)(b, {
+            "data-toggleable-component": "checkbox",
             className: s()(e ? h.checkboxWrapperDisabled : h.checkboxWrapper, O[r], o, {
                 [h.row]: "row" === _,
                 [h.checked]: n,

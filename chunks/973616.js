@@ -207,6 +207,7 @@ class m extends h {
                 isDiscoverable: e.is_discoverable,
                 directoryEntry: e.directory_entry,
                 categories: e.categories,
+                linkedGames: e.linked_games,
             }),
         );
     }
@@ -252,7 +253,8 @@ class m extends h {
             Z,
             F,
             V,
-            H;
+            H,
+            Y;
         return new m({
             id: null != (t = e.id) ? t : this.id,
             name: null != (n = e.name) ? n : this.name,
@@ -302,6 +304,7 @@ class m extends h {
             isDiscoverable: null != (F = e.isDiscoverable) ? F : this.isDiscoverable,
             directoryEntry: null != (V = e.directoryEntry) ? V : this.directoryEntry,
             categories: null != (H = e.categories) ? H : this.categories,
+            linkedGames: null != (Y = e.linkedGames) ? Y : this.linkedGames,
         });
     }
     getMaxParticipants() {
@@ -324,7 +327,7 @@ class m extends h {
         return null != e && (e & t) === t;
     }
     constructor(e) {
-        var t, n, i, o, a, s, l, u, d, f, _, h, m, g, E, b, y;
+        var t, n, i, o, a, s, l, u, d, f, _, h, m, g, E, b, y, O;
         super(e),
             c(this, "overlay", void 0),
             c(this, "overlayWarn", void 0),
@@ -355,6 +358,7 @@ class m extends h {
             c(this, "installParams", void 0),
             c(this, "directoryEntry", void 0),
             c(this, "categories", void 0),
+            c(this, "linkedGames", void 0),
             (this.overlay = null != (t = e.overlay) && t),
             (this.overlayWarn = null != (n = e.overlayWarn) && n),
             (this.overlayCompatibilityHook = null != (i = e.overlayCompatibilityHook) && i),
@@ -383,6 +387,7 @@ class m extends h {
             (this.customInstallUrl = null != (E = e.custom_install_url) ? E : e.customInstallUrl),
             (this.installParams = null != (b = e.install_params) ? b : e.installParams),
             (this.directoryEntry = null != (y = e.directory_entry) ? y : e.directoryEntry),
-            (this.categories = e.categories);
+            (this.categories = e.categories),
+            (this.linkedGames = null != (O = e.linked_games) ? O : e.linkedGames);
     }
 }

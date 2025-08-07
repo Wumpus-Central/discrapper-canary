@@ -1,4 +1,4 @@
-a.d(t, { Z: () => b }), a(388685);
+a.d(t, { Z: () => f }), a(388685);
 var n = a(255367),
     r = a(73800),
     l = a(515149),
@@ -12,12 +12,12 @@ var n = a(255367),
     x = a(706454),
     p = a(428530),
     h = a(257785),
-    f = a(388032);
-function b() {
+    b = a(388032);
+function f() {
     let e = (0, c.e7)([x.default], () => x.default.locale),
         [t, a] = r.useState(),
         i = (0, l.runtimeHashMessageKey)(null != t ? t : ""),
-        b = r.useMemo(() => f.t[i], [i]);
+        f = r.useMemo(() => b.t[i], [i]);
     return (0, n.jsxs)("div", {
         children: [
             (0, n.jsxs)(m.ZP, {
@@ -41,11 +41,11 @@ function b() {
                     }),
                     (0, n.jsx)(h.Z9, {
                         name: "System",
-                        children: f.systemLocale,
+                        children: b.systemLocale,
                     }),
                     (0, n.jsx)(h.Z9, {
                         name: "@discord/intl",
-                        children: f.intl.currentLocale,
+                        children: b.intl.currentLocale,
                     }),
                     (0, n.jsx)(h.Z9, {
                         name: "common i18n",
@@ -69,7 +69,7 @@ function b() {
             (0, n.jsx)(h.E, {
                 children: (0, n.jsx)(h.Z9, {
                     name: "Unique Rendered Main Messages",
-                    children: Object.keys(f.t).length,
+                    children: Object.keys(b.t).length,
                 }),
             }),
             (0, n.jsx)(d.Is, {
@@ -88,11 +88,11 @@ function b() {
                     }),
                     (0, n.jsx)(h.Z9, {
                         name: "Exists?",
-                        children: null != b ? "yes" : "no",
+                        children: null != f ? "yes" : "no",
                     }),
                 ],
             }),
-            (0, n.jsx)(p.Z, { data: null == b ? void 0 : b(e) }),
+            (0, n.jsx)(p.Z, { data: null == f ? void 0 : f(e) }),
         ],
     });
 }

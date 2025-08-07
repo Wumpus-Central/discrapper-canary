@@ -1,4 +1,4 @@
-a.d(t, { Z: () => O }), a(49124);
+a.d(t, { Z: () => N }), a(49124);
 var n = a(255367),
     r = a(73800),
     l = a(120356),
@@ -12,8 +12,8 @@ var n = a(255367),
     x = a(411149),
     p = a(151480),
     h = a(461762),
-    f = a(680783),
-    b = a(605236),
+    b = a(680783),
+    f = a(605236),
     v = a(675478),
     j = a(944486),
     g = a(388032),
@@ -61,19 +61,19 @@ function C(e, t) {
         e
     );
 }
-function O() {
+function N() {
     return (0, n.jsxs)(m.Ttm, {
         className: _.container,
-        children: [(0, n.jsx)(N, {}), (0, n.jsx)(E, {})],
+        children: [(0, n.jsx)(O, {}), (0, n.jsx)(T, {})],
     });
 }
-function N() {
+function O() {
     var e, t;
     let a = (0, c.e7)([j.Z], () => j.Z.getChannelId()),
-        l = (0, f.Z)(a),
+        l = (0, b.Z)(a),
         s = null == l ? void 0 : l.wallpaperId,
         d = (0, h.Z)(s),
-        b = r.useCallback(
+        f = r.useCallback(
             (e) => {
                 null != s && (0, p.i)(s, { opacity: e });
             },
@@ -81,23 +81,23 @@ function N() {
         ),
         v = r.useCallback(
             (e) => {
-                T(null == l ? void 0 : l.wallpaperId, e.target.value);
-            },
-            [null == l ? void 0 : l.wallpaperId],
-        ),
-        O = r.useCallback(
-            (e) => {
-                P(null == l ? void 0 : l.wallpaperId, e.target.value);
+                E(null == l ? void 0 : l.wallpaperId, e.target.value);
             },
             [null == l ? void 0 : l.wallpaperId],
         ),
         N = r.useCallback(
             (e) => {
+                P(null == l ? void 0 : l.wallpaperId, e.target.value);
+            },
+            [null == l ? void 0 : l.wallpaperId],
+        ),
+        O = r.useCallback(
+            (e) => {
                 S(null == l ? void 0 : l.wallpaperId, e.target.value);
             },
             [null == l ? void 0 : l.wallpaperId],
         ),
-        E = r.useCallback(() => T(null == l ? void 0 : l.wallpaperId, void 0), [null == l ? void 0 : l.wallpaperId]),
+        T = r.useCallback(() => E(null == l ? void 0 : l.wallpaperId, void 0), [null == l ? void 0 : l.wallpaperId]),
         w = r.useCallback(() => P(null == l ? void 0 : l.wallpaperId, void 0), [null == l ? void 0 : l.wallpaperId]),
         I = r.useCallback(() => S(null == l ? void 0 : l.wallpaperId, void 0), [null == l ? void 0 : l.wallpaperId]),
         R = r.useCallback(
@@ -109,8 +109,8 @@ function N() {
         k = r.useCallback(() => {
             null != s && (0, p.i)(s, null);
         }, [s]),
-        A = null != (e = null == d ? void 0 : d.opacity) ? e : 1,
-        Z = null != (t = null == d ? void 0 : d.token_mix_amount) ? t : 100;
+        Z = null != (e = null == d ? void 0 : d.opacity) ? e : 1,
+        A = null != (t = null == d ? void 0 : d.token_mix_amount) ? t : 100;
     return (0, n.jsxs)("div", {
         children: [
             (0, n.jsx)(o.X6, {
@@ -156,13 +156,13 @@ function N() {
                             m.iRW,
                             {
                                 className: _.slider,
-                                initialValue: A,
+                                initialValue: Z,
                                 defaultValue: 1,
                                 minValue: 0,
                                 maxValue: 1,
-                                onValueChange: b,
+                                onValueChange: f,
                             },
-                            "opacity-".concat(A),
+                            "opacity-".concat(Z),
                         ),
                         (0, n.jsx)(m.ua7, {
                             text: "The most prominent color in the wallpaper. This will be used to adjust the color tokens.",
@@ -200,7 +200,7 @@ function N() {
                                         size: "xs",
                                         color: "currentColor",
                                     }),
-                                    onClick: E,
+                                    onClick: T,
                                     className: _.removeButton,
                                 }),
                             ],
@@ -230,7 +230,7 @@ function N() {
                                     {
                                         type: "color",
                                         value: d.secondary_color,
-                                        onChange: O,
+                                        onChange: N,
                                     },
                                     "secondaryColor-".concat(d.secondary_color),
                                 ),
@@ -267,13 +267,13 @@ function N() {
                             m.iRW,
                             {
                                 className: _.slider,
-                                initialValue: Z,
+                                initialValue: A,
                                 defaultValue: 100,
                                 minValue: 0,
                                 maxValue: 100,
                                 onValueChange: R,
                             },
-                            "tokenMixAmount-".concat(Z),
+                            "tokenMixAmount-".concat(A),
                         ),
                         (0, n.jsx)(m.ua7, {
                             text: "The color used for hyperlinks.",
@@ -300,7 +300,7 @@ function N() {
                                     {
                                         type: "color",
                                         value: d.link_color,
-                                        onChange: N,
+                                        onChange: O,
                                     },
                                     "linkColor-".concat(d.link_color),
                                 ),
@@ -326,11 +326,11 @@ function N() {
         ],
     });
 }
-function E() {
+function T() {
     let e = r.useCallback(() => {
             (0, v.Z1)(d.z.NITRO_TENURE_BADGE_LEVEL_UP);
         }, []),
-        { lastDismissedAtMs: t } = (0, b.Fo)(d.z.NITRO_TENURE_BADGE_LEVEL_UP),
+        { lastDismissedAtMs: t } = (0, f.Fo)(d.z.NITRO_TENURE_BADGE_LEVEL_UP),
         a = null != t ? new Date(t) : null;
     return (0, n.jsxs)(n.Fragment, {
         children: [
@@ -360,7 +360,7 @@ function E() {
         ],
     });
 }
-let T = (0, s.debounce)(function (e, t) {
+let E = (0, s.debounce)(function (e, t) {
         null != e && (0, p.i)(e, { primary_color: t });
     }, 200),
     S = (0, s.debounce)(function (e, t) {

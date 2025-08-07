@@ -1,4 +1,4 @@
-n.d(t, { Z: () => O }), n(388685);
+n.d(t, { Z: () => v }), n(388685);
 var r = n(255367),
     l = n(73800),
     o = n(442837),
@@ -14,9 +14,9 @@ var r = n(255367),
     g = n(428927),
     b = n(228168),
     j = n(388032),
-    y = n(301150),
-    h = n(923243);
-function v(e) {
+    h = n(301150),
+    y = n(923243);
+function x(e) {
     let {
         section: t,
         subsection: n,
@@ -66,7 +66,7 @@ function v(e) {
                       onClose: s,
                   });
 }
-function O(e) {
+function v(e) {
     var t, n, d;
     let {
             user: u,
@@ -74,8 +74,8 @@ function O(e) {
             displayProfile: p,
             guildId: m,
             items: g,
-            initialSection: O = b.oh.USER_INFO,
-            initialSubsection: x,
+            initialSection: v = b.oh.USER_INFO,
+            initialSubsection: O,
             onClose: _,
         } = e,
         { trackUserProfileAction: I } = (0, s.KZ)(),
@@ -87,7 +87,7 @@ function O(e) {
                     null ==
                     (t = g.find((e) => {
                         let { section: t } = e;
-                        return t === O;
+                        return t === v;
                     }))
                         ? void 0
                         : t.section)
@@ -95,7 +95,7 @@ function O(e) {
                     : null == (n = g[0])
                       ? void 0
                       : n.section,
-            subsection: x,
+            subsection: O,
         });
     l.useEffect(() => {
         null == g.find((e) => e.section === E) &&
@@ -119,23 +119,23 @@ function O(e) {
     );
     return P
         ? (0, r.jsx)("div", {
-              className: h.container,
+              className: y.container,
               children: (0, r.jsxs)("div", {
-                  className: y.empty,
+                  className: h.empty,
                   children: [
-                      (0, r.jsx)("div", { className: y.emptyIconStreamerMode }),
+                      (0, r.jsx)("div", { className: h.emptyIconStreamerMode }),
                       (0, r.jsx)("div", {
-                          className: y.emptyText,
+                          className: h.emptyText,
                           children: j.intl.string(j.t.Br1ls7),
                       }),
                   ],
               }),
           })
         : (0, r.jsxs)("div", {
-              className: h.container,
+              className: y.container,
               children: [
                   (0, r.jsx)(i.n, {
-                      className: h.tabBar,
+                      className: y.tabBar,
                       type: "top",
                       selectedItem: E,
                       onItemSelect: T,
@@ -144,7 +144,7 @@ function O(e) {
                           return (0, r.jsx)(
                               i.n.Item,
                               {
-                                  className: h.tabBarItem,
+                                  className: y.tabBarItem,
                                   id: t,
                                   "aria-label": n,
                                   children: (0, r.jsx)(a.Text, {
@@ -156,7 +156,7 @@ function O(e) {
                           );
                       }),
                   }),
-                  (0, r.jsx)(v, {
+                  (0, r.jsx)(x, {
                       items: g,
                       section: E,
                       subsection: Z,

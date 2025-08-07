@@ -170,6 +170,7 @@ function T(e) {
             icon: b,
         });
     return (0, i.jsx)(c.P, {
+        "data-toggleable-component": "radiogroup",
         role: "radio",
         "aria-checked": r,
         onClick: n ? void 0 : l,

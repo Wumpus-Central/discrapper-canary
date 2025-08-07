@@ -1,13 +1,13 @@
 n.d(t, {
     ZP: () => b,
     c2: () => x,
-    cK: () => m,
+    cK: () => f,
 });
 var r,
     i,
     l,
-    s = n(255367),
-    o = n(73800),
+    o = n(255367),
+    s = n(73800),
     a = n(120356),
     c = n.n(a),
     u = n(353515),
@@ -41,13 +41,13 @@ function p(e) {
     }
     return e;
 }
-var m = (((r = {}).SIZE_40 = "SIZE_40"), (r.SIZE_60 = "SIZE_60"), r);
-let f = Object.freeze({
+var f = (((r = {}).SIZE_40 = "SIZE_40"), (r.SIZE_60 = "SIZE_60"), r);
+let m = Object.freeze({
         SIZE_40: "size-40",
         SIZE_60: "size-60",
     }),
     g = n(515695);
-class _ extends (i = o.PureComponent) {
+class _ extends (i = s.PureComponent) {
     render() {
         let e = this.props,
             { className: t, text: n } = e,
@@ -72,14 +72,14 @@ class _ extends (i = o.PureComponent) {
                 }
                 return i;
             })(e, ["className", "text"]);
-        return (0, s.jsx)("div", {
+        return (0, o.jsx)("div", {
             style: {
                 width: r.size,
                 height: r.size,
                 backgroundColor: r.bgColor,
             },
             className: c()(d.qrCodeContainer, t),
-            children: (0, s.jsx)(
+            children: (0, o.jsx)(
                 u.default,
                 p(
                     {
@@ -97,17 +97,17 @@ h(_, "defaultProps", {
     bgColor: "#ffffff",
     fgColor: "#000000",
 });
-class x extends (l = o.PureComponent) {
+class x extends (l = s.PureComponent) {
     render() {
         let { overlaySize: e } = this.props,
-            t = f[null != e ? e : "SIZE_40"];
-        return (0, s.jsxs)("div", {
+            t = m[null != e ? e : "SIZE_40"];
+        return (0, o.jsxs)("div", {
             className: d.qrCodeOverlayContainer,
             children: [
-                (0, s.jsx)(_, p({}, this.props)),
-                (0, s.jsx)("div", {
+                (0, o.jsx)(_, p({}, this.props)),
+                (0, o.jsx)("div", {
                     className: d.qrCodeOverlay,
-                    children: (0, s.jsx)("img", {
+                    children: (0, o.jsx)("img", {
                         className: d[t],
                         src: g,
                         alt: "",

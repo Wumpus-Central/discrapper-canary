@@ -28,6 +28,7 @@ var r = {
     multistepActionLayout: "multistepActionLayout_d6f39b",
     caretIcon: "caretIcon_d6f39b",
     caretFill: "caretFill_d6f39b",
+    caretGradient: "caretGradient_d6f39b",
     caretStroke: "caretStroke_d6f39b",
 };
 n.r((e.exports = r));

@@ -2,16 +2,16 @@ n.d(t, { Z: () => b }), n(35282), n(388685);
 var r,
     i = n(255367),
     l = n(73800),
-    s = n(593473),
-    o = n(442837),
+    o = n(593473),
+    s = n(442837),
     a = n(544891),
     c = n(108427),
     u = n(896797),
     d = n(411198),
     h = n(129293),
     p = n(388905),
-    m = n(981631),
-    f = n(388032),
+    f = n(981631),
+    m = n(388032),
     g = n(20493);
 function _(e, t, n) {
     return (
@@ -26,14 +26,14 @@ function _(e, t, n) {
         e
     );
 }
-o.ZP.initialize();
+s.ZP.initialize();
 class x extends (r = l.PureComponent) {
     componentDidMount() {
         let e = (0, h.Z)(this.props.location),
-            t = (0, s.parse)(this.props.location.search);
+            t = (0, o.parse)(this.props.location.search);
         a.tn
             .post({
-                url: m.ANM.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS,
+                url: f.ANM.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS,
                 body: {
                     token: e,
                     pixel_uuid: t.hash,
@@ -72,22 +72,22 @@ class x extends (r = l.PureComponent) {
             children: [
                 (0, i.jsx)(p.Dx, {
                     className: g.marginBottom8,
-                    children: f.intl.string(f.t.Z33eiI),
+                    children: m.intl.string(m.t.Z33eiI),
                 }),
-                (0, i.jsx)(p.DK, { children: f.intl.format(f.t.NRWtfH, { guildName: n.name }) }),
+                (0, i.jsx)(p.DK, { children: m.intl.format(m.t.NRWtfH, { guildName: n.name }) }),
                 (0, i.jsx)(p.zx, {
                     className: g.marginTop40,
                     onClick: () => t(e),
-                    children: f.intl.string(f.t.fIv16O),
+                    children: m.intl.string(m.t.fIv16O),
                 }),
                 (0, i.jsx)(p.zx, {
                     className: g.marginTop8,
                     color: p.zx.Colors.LINK,
                     look: p.zx.Looks.LINK,
                     onClick: () => {
-                        t(m.Z5c.USER_GUILD_NOTIFICATION_SETTINGS(n.id));
+                        t(f.Z5c.USER_GUILD_NOTIFICATION_SETTINGS(n.id));
                     },
-                    children: f.intl.string(f.t["cGmT/P"]),
+                    children: m.intl.string(m.t["cGmT/P"]),
                 }),
             ],
         });
@@ -102,13 +102,13 @@ class x extends (r = l.PureComponent) {
                 }),
                 (0, i.jsx)(p.Dx, {
                     className: g.marginBottom8,
-                    children: f.intl.string(f.t.ox9hIS),
+                    children: m.intl.string(m.t.ox9hIS),
                 }),
-                (0, i.jsx)(p.DK, { children: f.intl.string(f.t["/dcuR0"]) }),
+                (0, i.jsx)(p.DK, { children: m.intl.string(m.t["/dcuR0"]) }),
                 (0, i.jsx)(p.zx, {
                     className: g.marginTop40,
                     onClick: () => t(e),
-                    children: f.intl.string(f.t.fIv16O),
+                    children: m.intl.string(m.t.fIv16O),
                 }),
             ],
         });
@@ -127,4 +127,4 @@ class x extends (r = l.PureComponent) {
     }
 }
 _(x, "defaultProps", { transitionTo: (e) => n.g.location.assign(e) });
-let b = o.ZP.connectStores([u.Z], () => ({ defaultRoute: u.Z.defaultRoute }))(x);
+let b = s.ZP.connectStores([u.Z], () => ({ defaultRoute: u.Z.defaultRoute }))(x);

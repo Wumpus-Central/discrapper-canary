@@ -31,7 +31,7 @@ let p = [
 function h() {
     let [e, t] = r.useState(null),
         [a, h] = r.useState(0),
-        [f, b] = r.useState(1000),
+        [b, f] = r.useState(1000),
         [v, j] = r.useState(0),
         g = (0, l.e7)([c.Z], () => {
             var t;
@@ -115,9 +115,9 @@ function h() {
                             }),
                             (0, n.jsx)(i.q4e, {
                                 options: p,
-                                value: f,
+                                value: b,
                                 onChange: (e) => {
-                                    b(e);
+                                    f(e);
                                 },
                                 popoutLayerContext: u.O$,
                             }),
@@ -183,7 +183,7 @@ function h() {
                                 s.Z.dispatch({
                                     type: "FEEDBACK_OVERRIDE_SET",
                                     feedbackType: g.feedbackType,
-                                    cooldown: a * f,
+                                    cooldown: a * b,
                                     chance: v / 100,
                                 })
                             ),

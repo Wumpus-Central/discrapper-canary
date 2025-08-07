@@ -237,6 +237,12 @@ let O = new a.Z("OverlayActionCreators"),
                 status: t,
             });
         },
+        setModuleLogging(e) {
+            i.Z.dispatch({
+                type: "OVERLAY_SET_MODULE_LOGGING",
+                enabled: e,
+            });
+        },
         notificationEvent(e, t) {
             var n, r;
             let o = d.Z.getGame();

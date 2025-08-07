@@ -18,6 +18,7 @@ function a(e, t, n) {
 let s = {
         highlight_mana_buttons: "Highlight mana buttons",
         highlight_mana_components: "Highlight mana components",
+        highlight_void_toggleables: "Highlight toggleable components (Checkbox, RadioGroup, Switch)",
         highlight_void_buttons: "Highlight void buttons",
         use_topic_dividers_in_chat: "Use summary topics as divider content in chat instead of string formatted dates.",
         highlight_redesigned_icons: "Highlight redesigned icons",

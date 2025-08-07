@@ -2,8 +2,8 @@ n.d(t, { Z: () => p }), n(35282), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
-    s = n.n(l),
-    o = n(536285),
+    o = n.n(l),
+    s = n(536285),
     a = n(857458),
     c = n(388905),
     u = n(703656),
@@ -11,25 +11,25 @@ var r = n(255367),
     h = n(20493);
 let p = function (e) {
     let { match: t, location: n, attemptDeepLink: l } = e,
-        [p, m] = i.useState(0);
+        [p, f] = i.useState(0);
     i.useEffect(() => {
-        o.default.once("connected", () => {
-            m(1);
+        s.default.once("connected", () => {
+            f(1);
         }),
-            o.default.once("disconnected", () => {
+            s.default.once("disconnected", () => {
                 (0, u.uL)((0, a.M)());
             }),
-            o.default.connect();
+            s.default.connect();
     }, []),
         i.useEffect(() => {
             if (0 !== p) return;
             let e = setTimeout(() => (0, u.uL)((0, a.M)()), 3000);
             return () => clearTimeout(e);
         }, [p]);
-    let f = i.useCallback(
+    let m = i.useCallback(
         async (e, t) => {
             try {
-                m(2), await l(e, t), m(3);
+                f(2), await l(e, t), f(3);
             } catch (e) {
                 console.error("Error opening deeplink", e);
             }
@@ -48,11 +48,11 @@ let p = function (e) {
                     (0, r.jsx)(c.DK, { children: d.intl.string(d.t.SXCxyc) }),
                     (0, r.jsx)(c.zx, {
                         className: h.marginTop40,
-                        onClick: () => f(t, n),
+                        onClick: () => m(t, n),
                         children: d.intl.string(d.t.UQvCf3),
                     }),
                     (0, r.jsx)(c.zx, {
-                        className: s()(h.marginTop8, h.marginCenterHorz),
+                        className: o()(h.marginTop8, h.marginCenterHorz),
                         color: c.zx.Colors.LINK,
                         look: c.zx.Looks.LINK,
                         onClick: () => (0, u.uL)((0, a.M)()),

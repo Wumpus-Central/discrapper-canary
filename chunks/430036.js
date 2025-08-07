@@ -41,8 +41,8 @@ var i = n(255367),
     U = n(594174),
     B = n(556296),
     G = n(237997),
-    H = n(585483),
-    F = n(838440),
+    F = n(585483),
+    H = n(838440),
     Y = n(13140),
     K = n(519591),
     X = n(906037),
@@ -128,8 +128,8 @@ class es extends r.Component {
     }
     componentWillUnmount() {
         A.Z.removeChangeListener(this.draftDidChange),
-            H.S.unsubscribe($.CkL.TEXTAREA_FOCUS, this.focusInput),
-            H.S.unsubscribe($.CkL.TEXTAREA_BLUR, this.blurInput);
+            F.S.unsubscribe($.CkL.TEXTAREA_FOCUS, this.focusInput),
+            F.S.unsubscribe($.CkL.TEXTAREA_BLUR, this.blurInput);
     }
     render() {
         let e = this.props,
@@ -237,7 +237,7 @@ class es extends r.Component {
                           shouldClear: !1,
                           shouldRefocus: !0,
                       })
-                    : (0, F.v)({
+                    : (0, H.v)({
                           openWarningPopout: (e) => this.setState({ contentWarningProps: e }),
                           type: C.Ie.OVERLAY,
                           content: t,
@@ -246,7 +246,7 @@ class es extends r.Component {
                           let { valid: o, failureReason: l } = e;
                           if (!o)
                               return l === $.zYc.SLOWMODE_COOLDOWN
-                                  ? (H.S.dispatch($.CkL.EMPHASIZE_SLOWMODE_COOLDOWN),
+                                  ? (F.S.dispatch($.CkL.EMPHASIZE_SLOWMODE_COOLDOWN),
                                     {
                                         shouldClear: !1,
                                         shouldRefocus: !0,
@@ -293,8 +293,8 @@ class es extends r.Component {
             focused: !1,
             contentWarningProps: null,
         })),
-            H.S.subscribe($.CkL.TEXTAREA_FOCUS, this.focusInput),
-            H.S.subscribe($.CkL.TEXTAREA_BLUR, this.blurInput);
+            F.S.subscribe($.CkL.TEXTAREA_FOCUS, this.focusInput),
+            F.S.subscribe($.CkL.TEXTAREA_BLUR, this.blurInput);
     }
 }
 class ea extends r.PureComponent {

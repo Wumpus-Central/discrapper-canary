@@ -27,7 +27,7 @@ function h(e) {
             giftRecipient: I,
             isEligibleForTrial: T,
             enablePremiumBrandRefresh: S,
-            isEligibleForPremiumBrandRefreshWowMomentConfirmation: A,
+            isDisplayingWowMomentConfirmation: A,
         } = e,
         N = (0, i.e7)([a.Z], () => a.Z.useReducedMotion),
         C = g ? f.nL.WINTER : f.nL.DEFAULT,
@@ -61,7 +61,7 @@ function h(e) {
                   }),
               ],
           })
-        : S || (A && t === s.h8.CONFIRM)
+        : S || A
           ? (0, r.jsx)(c.Z, {
                 hideCloseOnFullScreen: !0,
                 hideCloseButton: b,

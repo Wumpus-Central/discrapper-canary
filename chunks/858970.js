@@ -14,11 +14,11 @@ var r = n(255367),
     g = n(316027),
     b = n(502762),
     j = n(848780),
-    y = n(907179),
-    h = n(228168),
-    v = n(981631),
-    O = n(388032),
-    x = n(247787);
+    h = n(907179),
+    y = n(228168),
+    x = n(981631),
+    v = n(388032),
+    O = n(247787);
 function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -56,7 +56,7 @@ function I(e) {
             onHide: T,
             sourceAnalyticsLocations: A = [],
         } = e,
-        S = n === v.ME ? void 0 : n,
+        S = n === x.ME ? void 0 : n,
         w = (0, l.e7)([d.Z], () => d.Z.isBlocked(t.id)),
         { analyticsLocations: C } = (0, c.ZP)([...A, w ? a.Z.BLOCKED_PROFILE_MODAL : a.Z.IGNORED_PROFILE_MODAL]),
         G = (0, f.ZB)({
@@ -68,41 +68,41 @@ function I(e) {
             messageId: P,
             roleId: E,
         }),
-        M = [
+        L = [
             {
                 icon: i.owK,
-                description: O.intl.string(O.t.kcuWvb),
+                description: v.intl.string(v.t.kcuWvb),
             },
             {
                 icon: i.owK,
-                description: O.intl.string(w ? O.t.QxrDY2 : O.t.W6fjkZ),
+                description: v.intl.string(w ? v.t.QxrDY2 : v.t.W6fjkZ),
             },
         ],
-        L = (0, m.ZP)(t.id, S),
-        R = u.ZP.getName(null == L ? void 0 : L.guildId, I, t),
-        D = O.intl.formatToPlainString(O.t.KRe1Fh, { name: R });
+        R = (0, m.ZP)(t.id, S),
+        M = u.ZP.getName(null == R ? void 0 : R.guildId, I, t),
+        D = v.intl.formatToPlainString(v.t.KRe1Fh, { name: M });
     return (0, r.jsx)(c.Gt, {
         value: C,
         children: (0, r.jsx)(f.Mt, {
             value: G,
             openedAt: N,
-            fetchStartedAt: null == L ? void 0 : L.fetchStartedAt,
-            fetchEndedAt: null == L ? void 0 : L.fetchEndedAt,
-            isLoaded: null == L ? void 0 : L.isLoaded,
+            fetchStartedAt: null == R ? void 0 : R.fetchStartedAt,
+            fetchEndedAt: null == R ? void 0 : R.fetchEndedAt,
+            isLoaded: null == R ? void 0 : R.isLoaded,
             children: (0, r.jsx)(i.Y0X, {
                 "data-migration-pending": !0,
                 transitionState: Z,
-                className: x.root,
+                className: O.root,
                 "aria-label": D,
                 parentComponent: "RestrictedUserProfileModalV2",
                 children: (0, r.jsxs)(b.Z, {
                     user: t,
-                    displayProfile: L,
-                    themeType: h.lY.MODAL_V2,
+                    displayProfile: R,
+                    themeType: y.lY.MODAL_V2,
                     children: [
-                        (0, r.jsx)("div", { className: x.background }),
+                        (0, r.jsx)("div", { className: O.background }),
                         (0, r.jsxs)("div", {
-                            className: x.content,
+                            className: O.content,
                             children: [
                                 (0, r.jsx)(g.Z, {
                                     user: t,
@@ -110,23 +110,23 @@ function I(e) {
                                     iconColor: i.TVs.colors.TEXT_DEFAULT,
                                 }),
                                 (0, r.jsxs)("div", {
-                                    className: x.textContainer,
+                                    className: O.textContainer,
                                     children: [
                                         (0, r.jsx)(i.X6q, {
                                             variant: "heading-xl/bold",
                                             color: "text-default",
-                                            children: O.intl.string(O.t.b33pLC),
+                                            children: v.intl.string(v.t.b33pLC),
                                         }),
                                         (0, r.jsx)(i.Text, {
                                             variant: "text-md/medium",
                                             color: "text-default",
-                                            children: O.intl.format(w ? O.t.T7QiLi : O.t.MnEow8, { username: R }),
+                                            children: v.intl.format(w ? v.t.T7QiLi : v.t.MnEow8, { username: M }),
                                         }),
                                     ],
                                 }),
                                 (0, r.jsx)("div", {
-                                    className: x.safetyTable,
-                                    children: M.map((e, t) => {
+                                    className: O.safetyTable,
+                                    children: L.map((e, t) => {
                                         let { icon: n, description: l } = e;
                                         return (0, r.jsx)(
                                             s.JZ,
@@ -143,7 +143,7 @@ function I(e) {
                                 (0, r.jsxs)(i.Kqy, {
                                     align: "center",
                                     children: [
-                                        (0, r.jsx)(y.Z, {
+                                        (0, r.jsx)(h.Z, {
                                             size: o.Ph.MEDIUM,
                                             isBlocked: w,
                                             onClick: () => {

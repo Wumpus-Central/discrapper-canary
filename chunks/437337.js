@@ -140,6 +140,7 @@ let O = function (e) {
             within: !0,
             offset: -2,
             children: (0, r.jsxs)(s.animated.div, {
+                "data-toggleable-component": "switch",
                 className: a()(_.container, m, {
                     [_.checked]: o,
                     [_.disabled]: p,

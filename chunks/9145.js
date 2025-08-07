@@ -275,7 +275,6 @@ function B(e) {
                                                           location: z,
                                                           centerButton: !0,
                                                           color: "disconnect",
-                                                          isActivityInCall: !1,
                                                       }),
                                                   }),
                                               ],

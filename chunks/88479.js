@@ -1,11 +1,9 @@
-n.d(t, { Z: () => f });
+n.d(t, { Z: () => u });
 var r = n(255367);
 n(73800);
 var i = n(685072),
-    o = n(481060),
-    a = n(77880),
-    s = n(871499);
-function l(e, t, n) {
+    o = n(871499);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -18,7 +16,7 @@ function l(e, t, n) {
         e
     );
 }
-function c(e) {
+function s(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -29,16 +27,16 @@ function c(e) {
                 }),
             )),
             r.forEach(function (t) {
-                l(e, t, n[t]);
+                a(e, t, n[t]);
             });
     }
     return e;
 }
-function u(e, t) {
+function l(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = d(e, t);
+        i = c(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
         for (r = 0; r < o.length; r++)
@@ -46,7 +44,7 @@ function u(e, t) {
     }
     return i;
 }
-function d(e, t) {
+function c(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -55,23 +53,19 @@ function d(e, t) {
     for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let f = function (e) {
+let u = function (e) {
     var { iconComponent: t } = e,
-        n = u(e, ["iconComponent"]);
-    let { changeLeaveCallAndActivityIcons: l } = (0, a.A)({ location: "DisconnectButton" }),
-        { Component: d, events: f } = (0, i.K)();
-    function _() {
-        return null != t ? t : l ? o.PBZ : d;
-    }
+        n = l(e, ["iconComponent"]);
+    let { Component: a, events: c } = (0, i.K)();
     return (0, r.jsx)(
-        s.d,
-        c(
+        o.d,
+        s(
             {
                 isTrayButton: !1,
                 color: "disconnect",
-                iconComponent: _(),
+                iconComponent: null != t ? t : a,
             },
-            f,
+            c,
             n,
         ),
     );

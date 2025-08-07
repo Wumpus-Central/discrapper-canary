@@ -12,8 +12,8 @@ var n = a(255367),
     x = a(709054),
     p = a(246992),
     h = a(981631),
-    f = a(474936);
-let b = [
+    b = a(474936);
+let f = [
     {
         label: "1 Week",
         value: 0,
@@ -57,7 +57,7 @@ function v() {
         j = (0, l.e7)([u.default], () => u.default.getCurrentUser()),
         g = (0, d.kG)(),
         _ = (0, l.e7)([m.Z], () => m.Z.getPremiumTypeSubscription()),
-        y = null != g && null != (t = null == (e = f.vK[g]) ? void 0 : e.tenureReqNumMonths) ? t : 0,
+        y = null != g && null != (t = null == (e = b.vK[g]) ? void 0 : e.tenureReqNumMonths) ? t : 0,
         C = r.useCallback(
             async (e) => {
                 let t = new Date();
@@ -84,7 +84,7 @@ function v() {
             isDisabled: a,
             serialize: (e) => "".concat(e),
             isSelected: (e) => e === y,
-            options: b,
+            options: f,
             select: C,
             popoutLayerContext: p.O$,
             popoutWidth: 200,

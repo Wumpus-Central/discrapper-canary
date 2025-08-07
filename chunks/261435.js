@@ -41,7 +41,7 @@ var i,
     U = n(981631),
     B = n(987650),
     G = n(388032);
-function H(e, t, n) {
+function F(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -54,7 +54,7 @@ function H(e, t, n) {
         e
     );
 }
-function F(e) {
+function H(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -65,7 +65,7 @@ function F(e) {
                 }),
             )),
             i.forEach(function (t) {
-                H(e, t, n[t]);
+                F(e, t, n[t]);
             });
     }
     return e;
@@ -108,7 +108,7 @@ function ee(e) {
     let n = q.findIndex((t) => t.id === e);
     if (-1 === n) return !1;
     let i = q[n];
-    clearTimeout(i.timerId), (q = [...q]), t === U._1z.DISMISSED ? q.splice(n, 1) : (q[n] = Y(F({}, i), { status: t }));
+    clearTimeout(i.timerId), (q = [...q]), t === U._1z.DISMISSED ? q.splice(n, 1) : (q[n] = Y(H({}, i), { status: t }));
 }
 function et(e) {
     let t = q.length;
@@ -119,10 +119,10 @@ function en(e) {
     return null != t ? t.id : null;
 }
 function ei(e, t) {
-    let n = F({}, Q, t);
+    let n = H({}, Q, t);
     if (2 !== n.priority && !L.default.isInstanceFocused()) return null;
     let i = (0, l.Z)(),
-        r = F(
+        r = H(
             {
                 id: i,
                 status: U._1z.ACTIVE,
@@ -169,7 +169,7 @@ class eo extends (i = s.ZP.Store) {
         return q;
     }
 }
-H(eo, "displayName", "OverlayNotificationsStore");
+F(eo, "displayName", "OverlayNotificationsStore");
 let el = new eo(
     a.Z,
     !__OVERLAY__
@@ -209,7 +209,7 @@ let el = new eo(
                   if (t) return !1;
                   q = q.map((e) =>
                       e.status === U._1z.ACTIVE
-                          ? (clearTimeout(e.timerId), Y(F({}, e), { timerId: $(e.id, e.expirationExternallyManaged) }))
+                          ? (clearTimeout(e.timerId), Y(H({}, e), { timerId: $(e.id, e.expirationExternallyManaged) }))
                           : e,
                   );
               },

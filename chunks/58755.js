@@ -36,7 +36,7 @@ function h(e) {
     }
     return e;
 }
-function f(e, t) {
+function b(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -54,7 +54,7 @@ function f(e, t) {
         e
     );
 }
-let b = Object.keys(x.jQ).map((e) => ({
+let f = Object.keys(x.jQ).map((e) => ({
         value: e,
         label: e,
     })),
@@ -96,7 +96,7 @@ function j(e) {
                                 steps: 26,
                             }),
                             a(
-                                f(h({}, t), {
+                                b(h({}, t), {
                                     scales: [...t.scales, n],
                                 }),
                             ));
@@ -115,7 +115,7 @@ function j(e) {
                                     children: (0, n.jsx)(_, {
                                         scale: e,
                                         onRemove: () =>
-                                            a(f(h({}, t), { scales: t.scales.filter((t) => t.name !== e.name) })),
+                                            a(b(h({}, t), { scales: t.scales.filter((t) => t.name !== e.name) })),
                                     }),
                                 }),
                             },
@@ -126,7 +126,7 @@ function j(e) {
             ],
         }),
         u = l.find((e) => e.name === i),
-        b =
+        f =
             null != u
                 ? (0, n.jsx)(g, {
                       onClose: () => s(null),
@@ -134,23 +134,23 @@ function j(e) {
                       setState: a,
                   })
                 : o;
-    return (0, n.jsx)("div", { children: b });
+    return (0, n.jsx)("div", { children: f });
 }
 function g(e) {
     let { scale: t, setState: a, onClose: r } = e,
         {
             name: c,
             base: h,
-            darkness: f,
+            darkness: b,
             lightness: v,
             showColumnarPalettePreview: j,
             colorSpace: g,
             easingStrength: _ = 1,
             useP3ColorSpace: C,
-            steps: O = 26,
+            steps: N = 26,
         } = t,
-        N = (0, x.XM)(t),
-        E = (0, x.W6)(N, c);
+        O = (0, x.XM)(t),
+        T = (0, x.W6)(O, c);
     return (0, n.jsxs)(d.hjN, {
         className: p.paletteSettings,
         children: [
@@ -168,7 +168,7 @@ function g(e) {
                     }),
                     (0, n.jsx)(d.P3F, {
                         onClick: function () {
-                            let e = Object.entries(N).reduce((e, t) => {
+                            let e = Object.entries(O).reduce((e, t) => {
                                 let [a, n] = t;
                                 return (
                                     (e[a] = {
@@ -214,7 +214,7 @@ function g(e) {
                             "The color space used to generate the palette. Different color spaces will produce different results.",
                     }),
                     (0, n.jsx)(d.q4e, {
-                        options: b,
+                        options: f,
                         value: g,
                         onChange: (e) => (0, x.t4)(c, e, a),
                         popoutLayerContext: m.O$,
@@ -246,7 +246,7 @@ function g(e) {
                         ],
                     }),
                     (0, n.jsxs)(d.xJW, {
-                        title: "Darken (".concat((100 * f).toFixed(), "%)"),
+                        title: "Darken (".concat((100 * b).toFixed(), "%)"),
                         children: [
                             (0, n.jsx)(d.R94, {
                                 type: d.geA.DESCRIPTION,
@@ -308,10 +308,10 @@ function g(e) {
                         }),
                     }),
                     (0, n.jsx)(d.xJW, {
-                        title: "Steps (".concat(O, ")"),
+                        title: "Steps (".concat(N, ")"),
                         children: (0, n.jsx)(d.iRW, {
                             onValueRender: () => null,
-                            initialValue: O,
+                            initialValue: N,
                             minValue: (0, x.A0)(c).length,
                             maxValue: 100,
                             onValueChange: (e) => (0, x.YC)(c, Math.round(e), a),
@@ -323,11 +323,11 @@ function g(e) {
                         children: (0, n.jsx)("div", {
                             className: p.paletteOverrides,
                             "data-columnar": j,
-                            children: Object.entries(N).map((e, a) => {
+                            children: Object.entries(O).map((e, a) => {
                                 let [r, c] = e,
                                     u = (0, x.HI)(c),
                                     m = (0, s.Z)((0, o.Z)("black"), c) > 4.5 ? "black" : "white",
-                                    p = E[r];
+                                    p = T[r];
                                 return (0, n.jsxs)(
                                     "div",
                                     {
