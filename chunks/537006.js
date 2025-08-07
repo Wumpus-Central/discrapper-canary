@@ -18,7 +18,7 @@ var r = n(255367),
     b = n(914010),
     y = n(785717),
     O = n(652853),
-    v = n(475413),
+    v = n(732380),
     I = n(228168),
     T = n(981631),
     S = n(921944),
@@ -48,26 +48,16 @@ function P(e) {
             (0, r.jsx)("div", {
                 className: C.upsellButtonWrapper,
                 children: n
-                    ? (0, r.jsxs)(u.gtL, {
-                          onlyShineOnHover: !0,
-                          size: t ? c.zx.Sizes.TINY : c.zx.Sizes.SMALL,
-                          look: c.zx.Looks.FILLED,
-                          color: c.zx.Colors.PRIMARY,
-                          className: C.upsellButton,
-                          innerClassName: C.viewPremiumPerksButtonInner,
-                          buttonShineClassName: C.viewPremiumPerksButtonShine,
+                    ? (0, r.jsx)(v.O1, {
+                          action: I.yM.VIEW_PREMIUM_PERKS,
+                          fullWidth: !0,
+                          size: "sm",
+                          variant: "secondary",
+                          icon: u.SrA,
+                          text: N.intl.string(N.t["0Q61kJ"]),
                           onClick: () => {
-                              s({ action: I.yM.VIEW_PREMIUM_PERKS }),
-                                  (0, E.uL)(T.Z5c.APPLICATION_STORE),
-                                  null == i || i();
+                              (0, E.uL)(T.Z5c.APPLICATION_STORE), null == i || i();
                           },
-                          children: [
-                              (0, r.jsx)(u.SrA, {
-                                  size: "xs",
-                                  color: "currentColor",
-                              }),
-                              N.intl.string(N.t["0Q61kJ"]),
-                          ],
                       })
                     : (0, r.jsx)(g.Z, {
                           onClick: () => {
@@ -76,24 +66,23 @@ function P(e) {
                           textOptions: { textOverride: N.intl.string(N.t.x6rkDg) },
                           subscriptionTier: A.Si.TIER_2,
                           premiumModalAnalyticsLocation: { section: T.jXE.USER_PROFILE },
-                          className: C.upsellButton,
+                          className: C.matchManaColors,
                           size: t ? c.zx.Sizes.TINY : c.zx.Sizes.SMALL,
                           look: c.zx.Looks.FILLED,
                           color: c.zx.Colors.PRIMARY,
                           onlyShineOnHover: !0,
+                          fullWidth: !0,
                       }),
             }),
             (0, r.jsx)("div", {
                 className: C.upsellButtonWrapper,
-                children: (0, r.jsx)(v.tG, {
-                    icon: u.EOn,
+                children: (0, r.jsx)(v.O1, {
                     action: I.yM.VISIT_SHOP,
+                    fullWidth: !0,
+                    icon: u.EOn,
                     text: N.intl.string(N.t.b2d0Nz),
-                    look: c.zx.Looks.FILLED,
-                    color: c.zx.Colors.PRIMARY,
-                    themeColor: "none",
-                    size: t ? c.zx.Sizes.TINY : c.zx.Sizes.SMALL,
-                    className: C.upsellButton,
+                    size: "sm",
+                    variant: "secondary",
                     onClick: () => {
                         (0, f.mK)({
                             analyticsLocations: o,

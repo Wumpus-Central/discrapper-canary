@@ -115,17 +115,18 @@ function w(e) {
             "aria-label": h,
             gradientStart: g,
             gradientEnd: b,
+            gradientDegrees: O = 180,
         } = e,
-        O = (0, s.JA)("color-".concat(t)),
-        I = {};
+        I = (0, s.JA)("color-".concat(t)),
+        S = {};
     if (_ && null != g && null != b) {
         let e = (0, c.Rf)(g),
             t = (0, c.Rf)(b);
-        I = { background: "linear-gradient(to bottom, ".concat(e, ", ").concat(t, ")") };
-    } else I = { backgroundColor: null != t ? (0, c.Rf)(t) : u.backgroundColor };
-    let S = _ ? g : t,
-        A = !1;
-    function N() {
+        S = { background: "linear-gradient(".concat(O, "deg, ").concat(e, ", ").concat(t, ")") };
+    } else S = { backgroundColor: null != t ? (0, c.Rf)(t) : u.backgroundColor };
+    let A = _ ? g : t,
+        N = !1;
+    function C() {
         let e = 16,
             t = 16;
         if (((i || n) && ((e = 32), (t = 24)), o))
@@ -133,11 +134,11 @@ function w(e) {
                 size: "custom",
                 width: e,
                 height: t,
-                color: (0, m.Lq)(A ? E.Ilk.WHITE_500 : E.Ilk.BLACK_500),
+                color: (0, m.Lq)(N ? E.Ilk.WHITE_500 : E.Ilk.BLACK_500),
             });
     }
     return (
-        i && !o ? (A = !0) : (i || o) && (A = (0, c.Bd)(null != S ? S : E.p6O) > 0.1),
+        i && !o ? (N = !0) : (i || o) && (N = (0, c.Bd)(null != A ? A : E.p6O) > 0.1),
         (0, r.jsx)(f.t, {
             offset: -2,
             children: (0, r.jsxs)(
@@ -165,10 +166,10 @@ function w(e) {
                                                 }
                                               : t,
                                       ),
-                            style: v({}, u, I),
-                            "aria-label": null != h ? h : _ ? "Gradient ".concat(g, "-").concat(b) : I.backgroundColor,
+                            style: v({}, u, S),
+                            "aria-label": null != h ? h : _ ? "Gradient ".concat(g, "-").concat(b) : S.backgroundColor,
                         },
-                        O,
+                        I,
                     ),
                     {
                         children: [
@@ -179,10 +180,10 @@ function w(e) {
                                       colorClass: y.colorPickerDropperFg,
                                       width: 14,
                                       height: 14,
-                                      color: (0, m.Lq)(A ? E.Ilk.WHITE_500 : E.Ilk.BLACK_500),
+                                      color: (0, m.Lq)(N ? E.Ilk.WHITE_500 : E.Ilk.BLACK_500),
                                   })
                                 : null,
-                            N(),
+                            C(),
                         ],
                     },
                 ),
@@ -368,8 +369,9 @@ function k(e) {
             colorContainerClassName: h,
             isGradient: m,
             renderGradientCustomButton: g,
+            gradientDegrees: E,
         } = e,
-        E = (e) =>
+        b = (e) =>
             (0, r.jsx)("div", {
                 className: y.colorPickerRow,
                 children: m
@@ -385,6 +387,7 @@ function k(e) {
                                   disabled: d,
                                   isGradient: !0,
                                   "aria-label": e.name,
+                                  gradientDegrees: E,
                               },
                               "".concat(e.start, "-").concat(e.end),
                           ),
@@ -403,16 +406,16 @@ function k(e) {
                           ),
                       ),
             }),
-        b = o.slice(0, o.length / 2),
-        O = o.slice(o.length / 2, o.length),
-        I = (0, l.ZP)({
+        O = o.slice(0, o.length / 2),
+        I = o.slice(o.length / 2, o.length),
+        A = (0, l.ZP)({
             id: "color-picker",
             isEnabled: !0,
             scrollToStart: R,
             scrollToEnd: R,
         });
     return (0, r.jsx)(s.bG, {
-        navigator: I,
+        navigator: A,
         children: (0, r.jsx)(s.SJ, {
             children: (e) => {
                 var { ref: o } = e,
@@ -462,7 +465,7 @@ function k(e) {
                                         }),
                                     }),
                                 (0, r.jsxs)("div", {
-                                    children: [E(b), E(O)],
+                                    children: [b(O), b(I)],
                                 }),
                             ],
                         },

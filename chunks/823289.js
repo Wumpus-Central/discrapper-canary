@@ -1,9 +1,11 @@
-n.d(t, { Z: () => d });
+n.d(t, { Z: () => _ });
 var r = n(286379),
     i = n(797614),
-    o = n(446276),
-    a = n(46140);
-function s(e, t, n) {
+    o = n(626135),
+    a = n(446276),
+    s = n(46140),
+    l = n(981631);
+function c(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -16,24 +18,29 @@ function s(e, t, n) {
         e
     );
 }
-let l = 30000,
-    c = 0.1;
-class u {
+let u = 30000,
+    d = 0.1;
+class f {
     isEligible() {
-        return (0, o.M)(a.dr.QUESTS_BAR);
+        return (0, a.M)(s.dr.QUESTS_BAR);
     }
     clearTimeoutTimer() {
         null != this.timeoutTimer && (clearTimeout(this.timeoutTimer), (this.timeoutTimer = null));
     }
     sendMetric(e, t, n) {
-        Math.random() > c ||
-            i.Z.distribution(
+        Math.random() > d ||
+            (i.Z.distribution(
                 {
                     name: r.V.QUEST_BAR_RENDER_DELAY,
                     tags: ["quest_id:".concat(e), "timeout:".concat(t)],
                 },
                 n,
-            );
+            ),
+            o.default.track(l.rMx.QUEST_BAR_RENDER_DELAY, {
+                quest_id: e,
+                timeout: t,
+                duration: n,
+            }));
     }
     startTracking(e) {
         this.isEligible() &&
@@ -42,19 +49,19 @@ class u {
             (this.questId = e),
             (this.timeoutTimer = setTimeout(() => {
                 this.stopTracking(e, !0);
-            }, l)));
+            }, u)));
     }
     stopTracking(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
         if (!this.isEligible() || null === this.startTime || this.questId !== e) return;
-        let n = t ? l : Math.round(performance.now() - this.startTime);
+        let n = t ? u : Math.round(performance.now() - this.startTime);
         this.clearTracking(), this.sendMetric(e, t, n);
     }
     clearTracking() {
         this.clearTimeoutTimer(), (this.startTime = null), (this.questId = null);
     }
     constructor() {
-        s(this, "startTime", null), s(this, "questId", null), s(this, "timeoutTimer", null);
+        c(this, "startTime", null), c(this, "questId", null), c(this, "timeoutTimer", null);
     }
 }
-let d = new u();
+let _ = new f();

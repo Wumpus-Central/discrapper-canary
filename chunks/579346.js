@@ -61,6 +61,7 @@ function h(e) {
                 onChangeGradientColors: O,
                 isGradient: S,
                 gradientButtonClassName: m.gradientPicker,
+                gradientDegrees: 90,
             }),
         ],
     });

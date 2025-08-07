@@ -1,20 +1,20 @@
-n.d(t, { Z: () => s });
+n.d(t, { Z: () => u });
 var i = n(255367),
     r = n(73800),
     a = n(481060),
     l = n(493683),
     o = n(699516),
-    d = n(594174),
-    u = n(933557),
-    c = n(388032);
-function s(e, t) {
-    let s = r.useCallback(() => {
-        let r = (0, u.F6)(e, d.default, o.Z),
-            s = c.intl.formatToPlainString(c.t.hJ5Ap6, { name: r }),
-            f = c.intl.format(c.t.SSIVOj, { name: r });
+    c = n(594174),
+    d = n(933557),
+    s = n(388032);
+function u(e, t) {
+    let u = r.useCallback(() => {
+        let r = (0, d.F6)(e, c.default, o.Z),
+            u = s.intl.formatToPlainString(s.t.hJ5Ap6, { name: r }),
+            f = s.intl.format(s.t.SSIVOj, { name: r });
         e.isManaged() &&
-            ((s = c.intl.formatToPlainString(c.t.hVGjER, { name: r })), (f = c.intl.format(c.t.IK1Qvr, { name: r })));
-        let b = function (n) {
+            ((u = s.intl.formatToPlainString(s.t.hVGjER, { name: r })), (f = s.intl.format(s.t.IK1Qvr, { name: r })));
+        let p = function (n) {
             let i = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
             l.Z.closePrivateChannel(e.id, t, i);
         };
@@ -49,9 +49,9 @@ function s(e, t) {
                         return e;
                     })(
                         {
-                            header: s,
+                            header: u,
                             body: f,
-                            onSubmit: b,
+                            onSubmit: p,
                         },
                         t,
                     ),
@@ -60,8 +60,8 @@ function s(e, t) {
     }, [e, t]);
     return (0, i.jsx)(a.sNh, {
         id: "leave-channel",
-        label: c.intl.string(c.t["26C4oq"]),
-        action: s,
+        label: s.intl.string(s.t["26C4oq"]),
+        action: u,
         color: "danger",
     });
 }

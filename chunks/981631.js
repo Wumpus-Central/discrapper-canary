@@ -4188,6 +4188,7 @@ var nE = (function (e) {
             (e.QUEST_EMBED_FALLBACK_VIEWED = "quest_embed_fallback_viewed"),
             (e.QUEST_THIRD_PARTY_LINK_CLICKED = "quest_third_party_link_clicked"),
             (e.DISCOVERY_QUEST_TAB_CLICKED = "discovery_quest_tab_clicked"),
+            (e.QUEST_BAR_RENDER_DELAY = "quest_bar_render_delay"),
             (e.QUEST_VIDEO_APP_FOCUSED = "quest_video_app_focused"),
             (e.QUEST_VIDEO_APP_UNFOCUSED = "quest_video_app_unfocused"),
             (e.QUEST_VIDEO_BUFFERING_ENDED = "quest_video_buffering_ended"),
