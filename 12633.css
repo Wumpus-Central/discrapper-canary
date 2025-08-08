@@ -27780,7 +27780,6 @@ div.modalHeader_c28af8 {
     flex-shrink: 0;
     height: 14px;
     position: relative;
-    top: 1px;
     width: 14px
 }
 
@@ -27794,7 +27793,8 @@ div.modalHeader_c28af8 {
 }
 
 .premiumIcon__5d473 {
-    margin-left: 3px
+    margin-left: 3px;
+    top: 1px
 }
 
 .placeholder__5d473 {
