@@ -9,8 +9,8 @@ function l(e) {
         r,
         {
             guildId: l,
-            title: c,
-            description: d,
+            title: d,
+            description: c,
             powerups: u,
             footerInfoText: p,
             footerButtonText: f,
@@ -46,9 +46,9 @@ function l(e) {
             "footerButtonOnClick",
         ]);
     let j = null != p && p.length > 0,
-        C = null != f && f.length > 0 && null != x,
-        g = j || C,
-        v = (0, a.Z)(l);
+        v = null != f && f.length > 0 && null != x,
+        C = j || v,
+        g = (0, a.Z)(l);
     return (0, n.jsxs)(
         o.Y0X,
         ((t = (function (e) {
@@ -86,12 +86,12 @@ function l(e) {
                         children: [
                             (0, n.jsx)(o.X6q, {
                                 variant: "heading-lg/semibold",
-                                children: c,
+                                children: d,
                             }),
                             (0, n.jsx)(o.Text, {
                                 variant: "text-sm/medium",
                                 color: "text-secondary",
-                                children: d,
+                                children: c,
                             }),
                             (0, n.jsx)("div", {
                                 className: s.perkCardsContainer,
@@ -101,7 +101,7 @@ function l(e) {
                                         {
                                             guildId: l,
                                             powerup: e,
-                                            canUseBoosts: null != v && v,
+                                            canUseBoosts: null != g && g,
                                         },
                                         e.skuId,
                                     ),
@@ -109,7 +109,7 @@ function l(e) {
                             }),
                         ],
                     }),
-                    g &&
+                    C &&
                         (0, n.jsx)(o.mzw, {
                             children: (0, n.jsxs)("div", {
                                 className: s.footerContainer,
@@ -126,7 +126,7 @@ function l(e) {
                                                 }),
                                             ],
                                         }),
-                                    C &&
+                                    v &&
                                         (0, n.jsx)("div", {
                                             children: (0, n.jsx)(o.zxk, {
                                                 variant: "secondary",

@@ -187,14 +187,6 @@ class j extends s.Z {
                     n = d.Z.getCurrentUserActiveStream();
                 if (null != n) for (let e of t) n.channelId === e.id && M((0, y.V9)(n), e.rtcRegion);
             }),
-            I(this, "handleMediaEngineVideoStateChanged", (e) => {
-                let { videoState: t } = e,
-                    n = d.Z.getCurrentUserActiveStream();
-                if (null != n) {
-                    let e = t === v.FQ1.PAUSED;
-                    (0, a.tK)(n, e);
-                }
-            }),
             I(this, "actions", {
                 STREAM_WATCH: this.handleStreamWatch,
                 STREAM_START: this.handleStreamStart,
@@ -206,7 +198,6 @@ class j extends s.Z {
                 CHANNEL_UPDATES: this.handleChannelUpdates,
                 VOICE_CHANNEL_SELECT: this.handleVoiceChannelSelect,
                 VOICE_STATE_UPDATES: this.handleVoiceStateUpdates,
-                MEDIA_ENGINE_VIDEO_STATE_CHANGED: this.handleMediaEngineVideoStateChanged,
             });
     }
 }

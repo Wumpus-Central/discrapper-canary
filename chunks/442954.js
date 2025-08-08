@@ -90,6 +90,10 @@ let f = {
         let { default: e } = await Promise.all([a.e("6583"), a.e("1337"), a.e("33312")]).then(a.bind(a, 746882));
         return (t) => (0, n.jsx)(e, b(h({}, t), { source: u.L0.NSFW_SERVER }));
     },
+    AutomatedUnderageAppealModal: async () => {
+        let { default: e } = await a.e("75435").then(a.bind(a, 751744));
+        return (t) => (0, n.jsx)(e, b(h({}, t), { classificationId: "123" }));
+    },
 };
 function v() {
     let e = r.useMemo(

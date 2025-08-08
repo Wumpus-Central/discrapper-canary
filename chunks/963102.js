@@ -26,7 +26,7 @@ var r = n(255367),
     T = n(981631),
     P = n(388032),
     L = n(774457);
-function I(e) {
+function k(e) {
     let { tab: t, displayText: n, selected: l, handleTransition: a } = e;
     return (0, r.jsx)(b.Z.Title, {
         onClick: () => a(t),
@@ -35,7 +35,7 @@ function I(e) {
         children: n,
     });
 }
-function k(e) {
+function I(e) {
     let { tab: t, selected: n, displayText: a, handleTransition: o } = e,
         [s, u] = l.useState(!1),
         d = l.useRef(null),
@@ -202,7 +202,7 @@ function N(e) {
                             let { tab: t, displayText: n } = e;
                             return t === j.AW.CATALOG
                                 ? (0, r.jsx)(
-                                      k,
+                                      I,
                                       {
                                           tab: t,
                                           selected: (0, j.RE)(g) || g === t,
@@ -212,7 +212,7 @@ function N(e) {
                                       t,
                                   )
                                 : (0, r.jsx)(
-                                      I,
+                                      k,
                                       {
                                           tab: t,
                                           displayText: n,

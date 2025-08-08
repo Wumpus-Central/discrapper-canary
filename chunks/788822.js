@@ -29,8 +29,8 @@ let _ = (e) => {
         T = l.useRef(null),
         P = y === o.T.NAMEPLATES_V3,
         L = P ? "NAMEPLATES VOL.3" : null,
-        I = null == O ? void 0 : O.bodyText,
-        k = (0, d.sp)();
+        k = null == O ? void 0 : O.bodyText,
+        I = (0, d.sp)();
     return (0, r.jsx)(s.$, {
         innerRef: T,
         onChange: x,
@@ -42,13 +42,13 @@ let _ = (e) => {
             onClick: () => {
                 S("shop marketing tile", y),
                     u.default.track(b.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
-                        collectibles_shop_session_id: null == k ? void 0 : k.sessionId,
+                        collectibles_shop_session_id: null == I ? void 0 : I.sessionId,
                         sku_id: y,
                         page_type: "home",
-                        page_section: null == k ? void 0 : k.pageSection,
-                        page_category: null == k ? void 0 : k.pageCategory,
+                        page_section: null == I ? void 0 : I.pageSection,
+                        page_category: null == I ? void 0 : I.pageCategory,
                         tile_type: "FEATURED_BLOCK",
-                        tile_position: String(null == k ? void 0 : k.tilePosition),
+                        tile_position: String(null == I ? void 0 : I.tilePosition),
                         cta_name: null,
                     });
             },
@@ -70,13 +70,13 @@ let _ = (e) => {
                                 variant: "heading-xl/semibold",
                                 children: L,
                             }),
-                        null != I &&
+                        null != k &&
                             (0, r.jsx)(c.X6q, {
                                 lineClamp: null != L ? 2 : 4,
                                 className: m.featuredBlockBodyText,
                                 style: { color: null != (_ = null == O ? void 0 : O.bannerTextColor) ? _ : "white" },
                                 variant: "heading-md/medium",
-                                children: I,
+                                children: k,
                             }),
                     ],
                 }),
@@ -89,13 +89,13 @@ let _ = (e) => {
                             S("shop marketing take me there button", y),
                                 e.stopPropagation(),
                                 u.default.track(b.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
-                                    collectibles_shop_session_id: null == k ? void 0 : k.sessionId,
+                                    collectibles_shop_session_id: null == I ? void 0 : I.sessionId,
                                     sku_id: y,
                                     page_type: "home",
-                                    page_section: null == k ? void 0 : k.pageSection,
-                                    page_category: null == k ? void 0 : k.pageCategory,
+                                    page_section: null == I ? void 0 : I.pageSection,
+                                    page_category: null == I ? void 0 : I.pageCategory,
                                     tile_type: "FEATURED_BLOCK",
-                                    tile_position: String(null == k ? void 0 : k.tilePosition),
+                                    tile_position: String(null == I ? void 0 : I.tilePosition),
                                     cta_name: "Take me there button",
                                 });
                         },

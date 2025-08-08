@@ -1,8 +1,8 @@
-t.d(n, { Z: () => h });
+t.d(n, { Z: () => _ });
 var i = t(255367);
 t(73800);
-var s = t(120356),
-    a = t.n(s),
+var a = t(120356),
+    s = t.n(a),
     l = t(481060),
     r = t(600164),
     o = t(548647),
@@ -10,46 +10,48 @@ var s = t(120356),
     d = t(800530),
     x = t(388032),
     m = t(395494),
-    u = t(91463),
-    _ = t(160557);
-function h(e) {
-    let { className: n, onNext: t, onClose: s } = e,
-        h = (0, o.n)();
+    p = t(91463),
+    u = t(160557);
+function _(e) {
+    let { className: n, onNext: t, onClose: a } = e,
+        _ = (0, o.n)();
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsxs)(l.xBx, {
+                "data-migration-pending": !0,
                 direction: r.Z.Direction.VERTICAL,
-                className: u.header,
+                className: p.header,
                 separator: !1,
                 children: [
                     (0, i.jsx)("div", {
                         className: m.iconContainer,
                         children: (0, i.jsx)("img", {
-                            src: _,
+                            src: u,
                             alt: "",
                             className: m.icon,
                         }),
                     }),
                     (0, i.jsx)(l.X6q, {
-                        className: u.title,
+                        className: p.title,
                         variant: "heading-xl/semibold",
                         children: x.intl.string(x.t.QMbTSk),
                     }),
                     (0, i.jsx)(l.X6q, {
-                        className: u.subtitle,
+                        className: p.subtitle,
                         color: "header-secondary",
                         variant: "text-md/normal",
                         children: x.intl.string(x.t.Qdx8AA),
                     }),
-                    null != s &&
+                    null != a &&
                         (0, i.jsx)(l.olH, {
-                            className: u.closeButton,
-                            onClick: s,
+                            className: p.closeButton,
+                            onClick: a,
                         }),
                 ],
             }),
             (0, i.jsxs)(l.hzk, {
-                className: a()(m.modalContent, n),
+                "data-migration-pending": !0,
+                className: s()(m.modalContent, n),
                 paddingFix: !1,
                 children: [
                     (0, i.jsx)(l.X6q, {
@@ -61,16 +63,17 @@ function h(e) {
                     (0, i.jsx)(c.Z, {
                         text: x.intl.string(x.t.PxL38P),
                         url: d.sQ.COMMUNITY_GUIDELINES,
-                        onClick: () => h(d.n0.ClickCommunityGuidelinesLink),
+                        onClick: () => _(d.n0.ClickCommunityGuidelinesLink),
                     }),
                     (0, i.jsx)(c.Z, {
                         text: x.intl.string(x.t.qC3XKS),
                         url: d.sQ.WARNING_SYSTEM_HELPCENTER_LINK,
-                        onClick: () => h(d.n0.ClickWarningSystemHelpcenterLink),
+                        onClick: () => _(d.n0.ClickWarningSystemHelpcenterLink),
                     }),
                 ],
             }),
             (0, i.jsx)(l.mzw, {
+                "data-migration-pending": !0,
                 children: (0, i.jsx)(l.zxk, {
                     variant: "primary",
                     text: x.intl.string(x.t.i4jeWV),

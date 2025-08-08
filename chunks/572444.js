@@ -125,8 +125,8 @@ function _() {
             autoThreshold: I,
             vadUseKrisp: R,
             vadKrispActivationThreshold: k,
-            noiseCancellation: Z,
-            noiseSuppression: A,
+            noiseCancellation: A,
+            noiseSuppression: Z,
             noiseSuppressionSupported: D,
             noiseCancellationSupported: L,
             noiseCancellationEnableStats: B,
@@ -144,7 +144,7 @@ function _() {
             noiseCancellationSupported: p.Z.isNoiseCancellationSupported(),
             noiseCancellationEnableStats: p.Z.getKrispEnableStats(),
         })),
-        M = Z ? "KRISP" : A ? "STANDARD" : "NONE",
+        M = A ? "KRISP" : Z ? "STANDARD" : "NONE",
         F = (0, u.N)(),
         U = r.useCallback(() => {
             var e;

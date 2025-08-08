@@ -708,7 +708,6 @@ let i = {
             "CHANNEL_UPDATES",
             "VOICE_CHANNEL_SELECT",
             "VOICE_STATE_UPDATES",
-            "MEDIA_ENGINE_VIDEO_STATE_CHANGED",
         ],
         inlineRequire: () => n(981283).Z,
         neverLoadBeforeConnectionOpen: !0,

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => k }), n(388685);
+n.d(t, { Z: () => I }), n(388685);
 var r = n(255367),
     l = n(73800),
     a = n(120356),
@@ -26,16 +26,16 @@ var r = n(255367),
     T = n(981631),
     P = n(388032),
     L = n(806734);
-let I = (e) => {
+let k = (e) => {
         var t;
         let { handleTransition: n, numVisibleItems: a, isFetchingCategories: s, tab: c, isFullScreen: u } = e,
             { noCache: p, includeUnpublished: h } = (0, m.Z)(),
             [y, T] = l.useState(!1),
-            I = (0, d.sp)(),
-            k = null != (t = null == I ? void 0 : I.sessionId) ? t : "";
+            k = (0, d.sp)(),
+            I = null != (t = null == k ? void 0 : k.sessionId) ? t : "";
         l.useEffect(() => {
             (0, f.n)({
-                sessionId: k,
+                sessionId: I,
                 checkpoint: f.a.SHOP_MOUNTED,
                 tab: c,
                 isFullScreen: u,
@@ -57,7 +57,7 @@ let I = (e) => {
                     logPerf: !0,
                 },
                 {
-                    sessionId: k,
+                    sessionId: I,
                     tab: c,
                     isFullScreen: u,
                 },
@@ -71,14 +71,14 @@ let I = (e) => {
                     N ||
                     0 === w.length ||
                     (0, f.n)({
-                        sessionId: k,
+                        sessionId: I,
                         checkpoint: f.a.SHOP_RENDERED,
                         tab: c,
                         isFullScreen: u,
                         unpublishedCategoriesShown: h,
                         cacheDisabled: p,
                     });
-            }, [A, N, w.length, h, p, k, c, u]),
+            }, [A, N, w.length, h, p, I, c, u]),
             null != A)
         )
             return (0, r.jsx)(b.Z, {
@@ -210,7 +210,7 @@ let I = (e) => {
         };
         return (0, r.jsx)(r.Fragment, { children: w.map((e, t) => Z(e, t)) });
     },
-    k = (e) => {
+    I = (e) => {
         let { isFullScreen: t, handleTransition: n, tab: a, transitionState: i } = e,
             o = l.useRef(null),
             { handleScroll: g } = (0, c.z)(o, a),
@@ -246,7 +246,7 @@ let I = (e) => {
                         (0, r.jsxs)("div", {
                             className: L.mainContent,
                             children: [
-                                (0, r.jsx)(I, {
+                                (0, r.jsx)(k, {
                                     handleTransition: n,
                                     numVisibleItems: _,
                                     isFetchingCategories: b,

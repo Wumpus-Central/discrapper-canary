@@ -77,9 +77,9 @@ function A() {
     });
 }
 let N = (0, c.Un)({
-        createPromise: () => Promise.all([n.e("21153"), n.e("24530")]).then(n.bind(n, 932329)),
-        webpackId: 932329,
-        name: "CustomThemeColorPickerControl",
+        createPromise: () => Promise.all([n.e("21153"), n.e("35855")]).then(n.bind(n, 164267)),
+        webpackId: 164267,
+        name: "CustomThemeColorPickerControlV2",
         renderLoader: A,
     }),
     C = 5,

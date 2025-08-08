@@ -26,8 +26,8 @@ var r = n(255367),
     T = n(665195),
     P = n(42742),
     L = n(283727),
-    I = n(266058),
-    k = n(719138);
+    k = n(266058),
+    I = n(719138);
 function N(e) {
     var t;
     let { isFetchingCategories: n, isFullScreen: N, scrollerRef: A, tab: w } = e,
@@ -48,7 +48,7 @@ function N(e) {
                 case C.AW.AVATAR_DECORATIONS:
                     return [E.intl.string(E.t.dRZYND), z ? T.Z : j.Z, a.Z.AVATAR_DECORATION];
                 case C.AW.PROFILE_EFFECTS:
-                    return [E.intl.string(E.t["1cNjt7"]), z ? k.Z : I.Z, a.Z.PROFILE_EFFECT];
+                    return [E.intl.string(E.t["1cNjt7"]), z ? I.Z : k.Z, a.Z.PROFILE_EFFECT];
                 case C.AW.NAMEPLATES:
                     return [E.intl.string(E.t.V68Fq6), z ? L.Z : P.Z, a.Z.NAMEPLATE];
                 case C.AW.BUNDLES:

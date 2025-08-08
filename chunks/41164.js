@@ -49,7 +49,6 @@ let m = (e) => {
             (0, i.jsx)(a.mzw, {
                 children: (0, i.jsx)("div", {
                     "data-button-hoisted-classname-wrapper": !0,
-                    className: u.__invalid_button,
                     children: (0, i.jsx)(a.zxk, {
                         variant: "primary",
                         text: d.intl.string(d.t.elrEjI),

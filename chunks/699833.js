@@ -1,88 +1,85 @@
-n.d(t, { i: () => _ });
+n.d(t, { i: () => f });
 var r = n(255367);
 n(73800);
 var i = n(913527),
     o = n.n(i),
     a = n(692547),
-    s = n(755721),
-    l = n(481060),
-    c = n(800530),
-    u = n(388032),
-    d = n(524438);
-let f = (e) => o()().diff(o().unix(e), "days");
-function _(e) {
-    var t, i, o, _, p;
+    s = n(481060),
+    l = n(800530),
+    c = n(388032),
+    u = n(524438);
+let d = (e) => o()().diff(o().unix(e), "days");
+function f(e) {
+    var t, i, o, f, _;
     if (null == e.message.embeds || null == e.message.embeds[0].fields) return null;
-    let h = e.message.embeds[0],
-        m =
-            null != (o = null == (t = h.fields) ? void 0 : t.find((e) => e.rawName === c.Cg.CLASSIFICATION_ID))
+    let p = e.message.embeds[0],
+        h =
+            null != (o = null == (t = p.fields) ? void 0 : t.find((e) => e.rawName === l.Cg.CLASSIFICATION_ID))
                 ? o
                 : void 0,
-        g = null != (_ = null == m ? void 0 : m.rawValue) ? _ : void 0,
-        E =
-            null != (p = null == (i = h.fields) ? void 0 : i.find((e) => e.rawName === c.Cg.INCIDENT_TIMESTAMP))
-                ? p
+        m = null != (f = null == h ? void 0 : h.rawValue) ? f : void 0,
+        g =
+            null != (_ = null == (i = p.fields) ? void 0 : i.find((e) => e.rawName === l.Cg.INCIDENT_TIMESTAMP))
+                ? _
                 : void 0,
-        b = null == E || null == E.rawValue ? void 0 : parseFloat(E.rawValue);
-    if (null == g || null == b) return null;
-    let y = () => {
-        (0, l.ZDy)(async () => {
+        E = null == g || null == g.rawValue ? void 0 : parseFloat(g.rawValue);
+    if (null == m || null == E) return null;
+    let b = () => {
+        (0, s.ZDy)(async () => {
             let { default: e } = await Promise.all([n.e("25183"), n.e("3940"), n.e("18831"), n.e("68464")]).then(
                 n.bind(n, 41164),
             );
             return (t) =>
                 (0, r.jsx)(e, {
-                    classificationId: g,
-                    source: c.s.SystemDM,
+                    classificationId: m,
+                    source: l.s.SystemDM,
                     transitionState: t.transitionState,
                     onClose: t.onClose,
                 });
         });
     };
-    return (0, r.jsxs)(l.P3F, {
-        onClick: y,
-        className: d.safetyPolicyNoticeContainer,
+    return (0, r.jsxs)(s.P3F, {
+        onClick: b,
+        className: u.safetyPolicyNoticeContainer,
         children: [
             (0, r.jsxs)("div", {
-                className: d.noticeContent,
+                className: u.noticeContent,
                 children: [
                     (0, r.jsxs)("div", {
-                        className: d.headerRow,
+                        className: u.headerRow,
                         children: [
-                            (0, r.jsx)(l.aNP, {
-                                className: d.warningIcon,
+                            (0, r.jsx)(s.aNP, {
+                                className: u.warningIcon,
                                 color: a.Z.colors.STATUS_DANGER,
                             }),
-                            (0, r.jsx)(l.Text, {
+                            (0, r.jsx)(s.Text, {
                                 variant: "text-md/semibold",
-                                children: u.intl.string(u.t["4CxGXl"]),
+                                children: c.intl.string(c.t["4CxGXl"]),
                             }),
                         ],
                     }),
                     (0, r.jsx)("div", {
-                        className: d.incidentTiming,
-                        children: (0, r.jsx)(l.Text, {
+                        className: u.incidentTiming,
+                        children: (0, r.jsx)(s.Text, {
                             variant: "text-xs/medium",
-                            children: u.intl.format(u.t.eevFb2, { daysAgo: f(b) }),
+                            children: c.intl.format(c.t.eevFb2, { daysAgo: d(E) }),
                         }),
                     }),
                     (0, r.jsx)("div", {
-                        className: d.noticeBody,
-                        children: (0, r.jsx)(l.Text, {
+                        className: u.noticeBody,
+                        children: (0, r.jsx)(s.Text, {
                             variant: "text-md/normal",
                             color: "text-muted",
-                            children: u.intl.string(u.t["5CLb0N"]),
+                            children: c.intl.string(c.t["5CLb0N"]),
                         }),
                     }),
                 ],
             }),
             (0, r.jsx)("div", {
-                className: d.footerContainer,
-                children: (0, r.jsx)(s.zx, {
-                    look: s.zx.Looks.BLANK,
-                    className: d.detailsButton,
-                    color: s.zx.Colors.WHITE,
-                    children: u.intl.string(u.t.zKnzws),
+                className: u.footerContainer,
+                children: (0, r.jsx)(s.Avr, {
+                    text: c.intl.string(c.t.zKnzws),
+                    variant: "secondary",
                 }),
             }),
         ],

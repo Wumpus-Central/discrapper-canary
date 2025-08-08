@@ -26,8 +26,8 @@ var r = n(255367),
     T = n(38900),
     P = n(709999),
     L = n(794324),
-    I = n(619899),
-    k = n(859788),
+    k = n(619899),
+    I = n(859788),
     N = n(215023),
     A = n(981631),
     w = n(388032),
@@ -119,7 +119,7 @@ let R = {
             et = l.useMemo(() => W(z.rankedSkuIds), [n, W, z.rankedSkuIds]),
             en = (0, y.a)()(et),
             er = (0, x.l)(en).slice(0, 4),
-            el = (0, I.St)(er),
+            el = (0, k.St)(er),
             ea =
                 j === N.AW.ORBS
                     ? w.intl.string(w.t["1CdL8f"])
@@ -134,7 +134,7 @@ let R = {
                           className: B.banner,
                           style: null != ee ? { background: ee } : void 0,
                           children: [
-                              (0, r.jsx)(k.Z, {
+                              (0, r.jsx)(I.Z, {
                                   bannerStatic: X,
                                   bannerAnimated: J,
                                   isResponsive: $,

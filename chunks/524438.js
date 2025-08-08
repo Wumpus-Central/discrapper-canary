@@ -5,6 +5,5 @@ e.exports = {
     warningIcon: "warningIcon_e80b85",
     incidentTiming: "incidentTiming_e80b85",
     noticeBody: "noticeBody_e80b85",
-    detailsButton: "detailsButton_e80b85",
     footerContainer: "footerContainer_e80b85",
 };

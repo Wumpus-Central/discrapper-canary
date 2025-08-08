@@ -30,8 +30,8 @@ var n = a(255367),
     I = a(55935),
     R = a(70956),
     k = a(136015),
-    Z = a(145597),
-    A = a(246992),
+    A = a(145597),
+    Z = a(246992),
     D = a(257785),
     L = a(484036),
     B = a(681619),
@@ -642,7 +642,7 @@ let en = r.memo(function (e) {
     el = r.memo(function () {
         var e, t;
         let a = (0, d.cj)([_.default], () => _.default.getTrackedGames()),
-            r = (0, Z.getPID)(),
+            r = (0, A.getPID)(),
             l = (0, d.e7)([_.default], () => _.default.isOverlayOOPEnabledForPid(r), [r]),
             [i, s] = (0, d.Wu)([E.Z], () => [E.Z.enabled, E.Z.keepOpen]),
             o = (0, d.e7)([P.default], () => P.default.getFocusedPID()),
@@ -968,7 +968,7 @@ let en = r.memo(function (e) {
                             isSelected: (e) => e === t,
                             options: i,
                             select: l,
-                            popoutLayerContext: A.O$,
+                            popoutLayerContext: Z.O$,
                         }),
                     }),
                 ),
@@ -1271,19 +1271,19 @@ function ev() {
         };
     }, []);
     let [I, R] = r.useState(!1),
-        Z = r.useRef(null),
-        A = r.useCallback(() => {
+        A = r.useRef(null),
+        Z = r.useCallback(() => {
             (0, w.JG)(JSON.stringify(e)), R(!0);
         }, [e]);
     return (
         r.useEffect(() => {
             if (I)
                 return (
-                    (Z.current = setTimeout(() => {
+                    (A.current = setTimeout(() => {
                         R(!1);
                     }, 4000)),
                     () => {
-                        null != Z.current && clearTimeout(Z.current);
+                        null != A.current && clearTimeout(A.current);
                     }
                 );
         }, [I]),
@@ -1330,7 +1330,7 @@ function ev() {
                                 }),
                                 (0, n.jsxs)(m.P3F, {
                                     className: z.copyAll,
-                                    onClick: A,
+                                    onClick: Z,
                                     children: [
                                         (0, n.jsx)(m.Text, {
                                             variant: "text-sm/normal",

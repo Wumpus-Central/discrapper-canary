@@ -1,144 +1,114 @@
-n.d(e, { default: () => u }), n(953529);
-var i = n(255367),
+n.d(i, { default: () => k }), n(953529);
+var e = n(255367),
     s = n(73800),
     r = n(442837),
-    o = n(755721),
-    a = n(481060),
-    l = n(168107),
-    c = n(138201),
-    d = n(331692),
-    f = n(103879),
-    h = n(236289),
-    m = n(800530),
-    x = n(388032),
-    p = n(822566);
-let g = [
+    l = n(82659),
+    c = n(481060),
+    o = n(168107),
+    a = n(819557),
+    d = n(138201),
+    g = n(331692),
+    p = n(103879),
+    u = n(236289),
+    x = n(800530),
+    h = n(388032);
+let b = [
         {
-            title: x.intl.string(x.t["1+E7LC"]),
-            description: x.intl.string(x.t.BXiat7),
+            title: h.intl.string(h.t["1+E7LC"]),
+            description: h.intl.string(h.t.BXiat7),
         },
         {
-            title: x.intl.string(x.t.iMQXtL),
-            description: x.intl.string(x.t.oQ0vws),
+            title: h.intl.string(h.t.iMQXtL),
+            description: h.intl.string(h.t.oQ0vws),
         },
         {
-            title: x.intl.string(x.t["oY/z1d"]),
-            description: x.intl.string(x.t.wtj02d),
+            title: h.intl.string(h.t["oY/z1d"]),
+            description: h.intl.string(h.t.wtj02d),
         },
     ],
-    u = function (t) {
-        let { onClose: e, transitionState: n, classificationId: u } = t,
-            N = (0, r.e7)([h.Z], () => h.Z.getAgeVerificationWebviewUrl()),
-            _ = (0, r.e7)([h.Z], () => h.Z.getIsLoadingAgeVerification()),
-            b = s.useCallback(() => {
-                e(), d.Z.close();
-            }, [e]),
+    k = function (t) {
+        let { onClose: i, transitionState: n, classificationId: k } = t,
+            _ = (0, r.e7)([u.Z], () => u.Z.getAgeVerificationWebviewUrl()),
+            f = (0, r.e7)([u.Z], () => u.Z.getIsLoadingAgeVerification()),
             j = s.useCallback(() => {
-                d.Z.success(), b(), d.Z.start_verification_check();
-            }, [b]);
+                i(), g.Z.close();
+            }, [i]),
+            m = s.useCallback(() => {
+                g.Z.success(), j(), g.Z.start_verification_check();
+            }, [j]);
         return (
             s.useEffect(() => {
-                "" !== N &&
-                    l.Z.showAgeVerification({
-                        webviewUrl: N,
-                        onComplete: j,
+                "" !== _ &&
+                    o.Z.showAgeVerification({
+                        webviewUrl: _,
+                        onComplete: m,
                         useV1: !0,
                     });
-            }, [N, j]),
-            (0, i.jsxs)(a.Y0X, {
+            }, [_, m]),
+            (0, e.jsx)(l.Modal, {
+                onClose: i,
                 transitionState: n,
-                className: p.root,
-                parentComponent: "AutomatedUnderageAppealModal",
-                children: [
-                    (0, i.jsxs)(a.hzk, {
-                        className: p.content,
-                        children: [
-                            (0, i.jsxs)("div", {
-                                className: p.header,
-                                children: [
-                                    (0, i.jsx)(a.X6q, {
-                                        variant: "heading-xl/bold",
-                                        children: x.intl.string(x.t["9SDLnp"]),
-                                    }),
-                                    (0, i.jsx)(a.X6q, {
-                                        variant: "heading-md/normal",
-                                        color: "header-secondary",
-                                        children: x.intl.string(x.t["yvx///"]),
-                                    }),
-                                ],
+                title: h.intl.string(h.t["9SDLnp"]),
+                subtitle: h.intl.string(h.t["yvx///"]),
+                actions: [
+                    {
+                        text: h.intl.string(h.t.dKacJy),
+                        onClick: j,
+                        variant: "secondary",
+                    },
+                    {
+                        text: h.intl.string(h.t["54b8V1"]),
+                        onClick: () => (0, p.FN)(k),
+                        loading: f,
+                    },
+                ],
+                children: (0, e.jsxs)(c.Kqy, {
+                    gap: 8,
+                    direction: "vertical",
+                    children: [
+                        (0, e.jsx)(a.z, {
+                            children: b.map((t, i) => {
+                                let { title: n, description: s } = t;
+                                return (0, e.jsx)(
+                                    a.q,
+                                    {
+                                        title: n,
+                                        description: s,
+                                        index: i,
+                                        listType: "numbered",
+                                    },
+                                    i,
+                                );
                             }),
-                            (0, i.jsx)("div", {
-                                className: p.listContent,
-                                children: (0, i.jsx)("div", {
-                                    className: p.table,
-                                    children: g.map((t, e) => {
-                                        let { title: n, description: s } = t;
-                                        return (0, i.jsx)(
-                                            c.JZ,
-                                            {
-                                                title: n,
-                                                description: s,
-                                                index: e,
-                                                listType: "numbered",
-                                                titleVariant: "text-md/medium",
-                                            },
-                                            e,
-                                        );
+                        }),
+                        (0, e.jsxs)(c.Kqy, {
+                            gap: 8,
+                            direction: "vertical",
+                            children: [
+                                (0, e.jsx)(d.rT, {
+                                    title: h.intl.string(h.t.WPwp1d),
+                                    children: (0, e.jsx)(d.JZ, {
+                                        title: h.intl.string(h.t.N9WJMD),
+                                        description: h.intl.string(h.t["NHq38/"]),
+                                        buttonText: h.intl.string(h.t["9iy4lJ"]),
+                                        titleVariant: "text-md/medium",
+                                        onButtonPress: () => window.open(x.sQ.AGE_VERIFICATION_LINK, "_blank"),
                                     }),
                                 }),
-                            }),
-                            (0, i.jsxs)("div", {
-                                className: p.anotherOption,
-                                children: [
-                                    (0, i.jsx)(a.Text, {
-                                        variant: "text-sm/semibold",
-                                        className: p.optionEyebrow,
-                                        color: "header-secondary",
-                                        children: x.intl.string(x.t.WPwp1d),
-                                    }),
-                                    (0, i.jsx)("div", {
-                                        className: p.table,
-                                        children: (0, i.jsx)(c.JZ, {
-                                            title: x.intl.string(x.t.N9WJMD),
-                                            description: x.intl.string(x.t["NHq38/"]),
-                                            buttonText: x.intl.string(x.t["9iy4lJ"]),
-                                            titleVariant: "text-md/medium",
-                                            onButtonPress: () => window.open(m.sQ.AGE_VERIFICATION_LINK, "_blank"),
+                                (0, e.jsx)(c.Kqy, {
+                                    align: "center",
+                                    children: (0, e.jsx)(c.Text, {
+                                        variant: "text-sm/medium",
+                                        color: "text-secondary",
+                                        children: h.intl.format(h.t.ZbWsOD, {
+                                            learnMoreLink: x.sQ.LEARN_MORE_UU_APPEAL_LINK,
                                         }),
                                     }),
-                                    (0, i.jsx)("div", {
-                                        className: p.learnMore,
-                                        children: (0, i.jsx)(a.X6q, {
-                                            variant: "heading-sm/medium",
-                                            color: "text-secondary",
-                                            children: x.intl.format(x.t.ZbWsOD, {
-                                                learnMoreLink: m.sQ.LEARN_MORE_UU_APPEAL_LINK,
-                                            }),
-                                        }),
-                                    }),
-                                ],
-                            }),
-                        ],
-                    }),
-                    (0, i.jsxs)(a.mzw, {
-                        className: p.footer,
-                        children: [
-                            (0, i.jsx)(a.zxk, {
-                                variant: "primary",
-                                text: x.intl.string(x.t["54b8V1"]),
-                                onClick: () => (0, f.FN)(u),
-                                loading: _,
-                            }),
-                            (0, i.jsx)(o.zx, {
-                                color: o.zx.Colors.TRANSPARENT,
-                                look: o.zx.Looks.BLANK,
-                                onClick: b,
-                                className: p.cancelButton,
-                                children: x.intl.string(x.t.dKacJy),
-                            }),
-                        ],
-                    }),
-                ],
+                                }),
+                            ],
+                        }),
+                    ],
+                }),
             })
         );
     };

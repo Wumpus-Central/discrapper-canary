@@ -94,8 +94,8 @@ let j = (e) => {
         } = e,
         P = (0, d.FF)("CollectiblesBrowse"),
         L = l.useRef(null),
-        I = (0, p.S)((e) => e.hasDefaultFilters()),
-        k = (0, u.sp)(),
+        k = (0, p.S)((e) => e.hasDefaultFilters()),
+        I = (0, u.sp)(),
         { handlePageChange: N, currentPage: A } = (0, _.h)({
             scrollerRef: x,
             sortedCategories: j,
@@ -103,17 +103,17 @@ let j = (e) => {
         w = l.useCallback(
             (e) => {
                 c.default.track(E.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
-                    collectibles_shop_session_id: null == k ? void 0 : k.sessionId,
-                    page_section: null == k ? void 0 : k.pageSection,
-                    page_category: null == k ? void 0 : k.pageCategory,
+                    collectibles_shop_session_id: null == I ? void 0 : I.sessionId,
+                    page_section: null == I ? void 0 : I.pageSection,
+                    page_category: null == I ? void 0 : I.pageCategory,
                     page_index: e,
-                    page_size: null == k ? void 0 : k.pageSize,
+                    page_size: null == I ? void 0 : I.pageSize,
                     cta_name: "catalog page ".concat(e),
                     page_type: "catalog",
                 }),
                     N(e);
             },
-            [k, N],
+            [I, N],
         ),
         B = l.useRef(null);
     return (
@@ -126,18 +126,18 @@ let j = (e) => {
                     L.current.contains(t) ||
                     B.current.contains(t) ||
                     (c.default.track(E.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
-                        collectibles_shop_session_id: null == k ? void 0 : k.sessionId,
-                        page_section: null == k ? void 0 : k.pageSection,
-                        page_category: null == k ? void 0 : k.pageCategory,
-                        page_index: null == k ? void 0 : k.pageIndex,
-                        page_size: null == k ? void 0 : k.pageSize,
+                        collectibles_shop_session_id: null == I ? void 0 : I.sessionId,
+                        page_section: null == I ? void 0 : I.pageSection,
+                        page_category: null == I ? void 0 : I.pageCategory,
+                        page_index: null == I ? void 0 : I.pageIndex,
+                        page_size: null == I ? void 0 : I.pageSize,
                         cta_name: "filter bar hide outside click",
                         page_type: "catalog",
                     }),
                     s(!1));
             };
             return document.addEventListener("mousedown", e), () => document.removeEventListener("mousedown", e);
-        }, [n, a, s, k]),
+        }, [n, a, s, I]),
         (0, r.jsx)("div", {
             className: y.inventoryWrapper,
             children: (0, r.jsxs)("div", {
@@ -173,11 +173,11 @@ let j = (e) => {
                                                 onClick: () => {
                                                     let e = !a;
                                                     c.default.track(E.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
-                                                        collectibles_shop_session_id: null == k ? void 0 : k.sessionId,
-                                                        page_section: null == k ? void 0 : k.pageSection,
-                                                        page_category: null == k ? void 0 : k.pageCategory,
-                                                        page_index: null == k ? void 0 : k.pageIndex,
-                                                        page_size: null == k ? void 0 : k.pageSize,
+                                                        collectibles_shop_session_id: null == I ? void 0 : I.sessionId,
+                                                        page_section: null == I ? void 0 : I.pageSection,
+                                                        page_category: null == I ? void 0 : I.pageCategory,
+                                                        page_index: null == I ? void 0 : I.pageIndex,
+                                                        page_size: null == I ? void 0 : I.pageSize,
                                                         cta_name: "filter bar ".concat(e ? "show" : "hide"),
                                                         page_type: "catalog",
                                                     }),
@@ -203,7 +203,7 @@ let j = (e) => {
                                     }),
                             ],
                         }),
-                    P && !I
+                    P && !k
                         ? (0, r.jsx)(
                               v.Z,
                               {

@@ -85,22 +85,22 @@ function p(e, t, n) {
         };
     }, [e, t, n]);
 }
-function h(e) {
+function h(e, t) {
     return i.useMemo(() => {
-        let t;
+        let n;
         if (null == e) return e;
-        let n = new RegExp(d),
-            i = [],
-            o = 0;
-        for (; null !== (t = n.exec(e)); )
-            t.index > o && i.push(e.slice(o, t.index)),
-                i.push(
+        let i = new RegExp(d),
+            o = [],
+            s = 0;
+        for (; null !== (n = i.exec(e)); )
+            n.index > s && o.push(e.slice(s, n.index)),
+                o.push(
                     (0, r.jsx)("span", {
-                        className: u.emoji,
-                        children: t[0],
+                        className: a()(u.emoji, t),
+                        children: n[0],
                     }),
                 ),
-                (o = n.lastIndex);
-        return o < e.length && i.push(e.slice(o)), i;
-    }, [e]);
+                (s = i.lastIndex);
+        return s < e.length && o.push(e.slice(s)), o;
+    }, [e, t]);
 }

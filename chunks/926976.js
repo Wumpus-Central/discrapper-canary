@@ -267,11 +267,11 @@ let I = new Set(["client_performance_cpu", "client_performance_memory"]),
             },
         },
     ],
-    Z = {
+    A = {
         events: {
             label: "Events",
             filter: (e) =>
-                Object.entries(Z)
+                Object.entries(A)
                     .filter((e) => {
                         let [t] = e;
                         return "events" !== t;
@@ -295,7 +295,7 @@ let I = new Set(["client_performance_cpu", "client_performance_memory"]),
             filter: (e) => e.event.startsWith("network_action"),
         },
     },
-    A = {
+    Z = {
         searchType: p.S.REGEX,
         searchStringGenerator: (e) => {
             let { event: t, properties: a } = e;
@@ -307,14 +307,14 @@ function D() {
     let e = r.useRef(null),
         [t, a] = r.useState(""),
         l = (0, c.e7)([g.Z], () => g.Z.loggedEventsVersion),
-        [s, o] = r.useState(() => Object.keys(Z)),
+        [s, o] = r.useState(() => Object.keys(A)),
         [m, x] = r.useState(g.Z.loggedEvents),
         p = r.useCallback((e) => {
             x(e);
         }, []);
-    (0, h.BO)(t, g.Z.loggedEvents, p, A, [l]);
+    (0, h.BO)(t, g.Z.loggedEvents, p, Z, [l]);
     let b = m.filter((e) => {
-            for (let t of s) if (Z[t].filter(e)) return !0;
+            for (let t of s) if (A[t].filter(e)) return !0;
             return !1;
         }),
         [f, v] = r.useState(void 0),
@@ -344,7 +344,7 @@ function D() {
                     (0, n.jsx)("div", { className: E.toolbarDivider }),
                     (0, n.jsx)("div", {
                         className: E.filters,
-                        children: Object.entries(Z).map((e) => {
+                        children: Object.entries(A).map((e) => {
                             let [t, a] = e;
                             return (0, n.jsx)(
                                 u.P3F,
