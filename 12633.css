@@ -80072,9 +80072,7 @@ html.disable-forced-colors * {
 .container__5a2df {
     background: var(--background-base-low);
     border: 1px solid var(--border-faint);
-    padding-left: var(--space-12);
-    padding-right: calc(var(--space-12) - 8px);
-    width: 272px
+    width: 288px
 }
 
 .container__5a2df,
@@ -80085,7 +80083,9 @@ html.disable-forced-colors * {
 
 .editorBody__5a2df {
     gap: 25px;
-    margin-top: 16px
+    margin-top: 16px;
+    padding-left: var(--space-12);
+    padding-right: calc(var(--space-12) - 8px)
 }
 
 .section__5a2df {
