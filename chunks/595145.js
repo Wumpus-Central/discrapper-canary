@@ -43,8 +43,8 @@ var r = n(255367),
     Y = n(179828),
     W = n(993160),
     H = n(574887),
-    K = n(693408),
-    z = n(661462),
+    z = n(693408),
+    K = n(661462),
     J = n(768111),
     X = n(228168),
     q = n(981631),
@@ -306,7 +306,7 @@ function ee(e) {
                                                             n.isProvisional &&
                                                                 (0, r.jsx)(U.Z.Overlay, {
                                                                     className: $.profileOverlay,
-                                                                    children: (0, r.jsx)(K.Z, {
+                                                                    children: (0, r.jsx)(z.Z, {
                                                                         heading: Q.intl.string(Q.t.Iyka0d),
                                                                         headingVariant: "text-md/semibold",
                                                                         headingIcon: (0, r.jsx)(a.Mgn, {
@@ -349,11 +349,11 @@ function ee(e) {
                                                                     setLineClamp: !1,
                                                                 }),
                                                             eC.length > 0 &&
-                                                                (0, r.jsx)(K.Z, {
+                                                                (0, r.jsx)(z.Z, {
                                                                     heading: Q.intl.string(Q.t["Uv/eT0"]),
                                                                     children: (0, r.jsx)(M.Z, { applicationIds: eC }),
                                                                 }),
-                                                            (0, r.jsx)(K.Z, {
+                                                            (0, r.jsx)(z.Z, {
                                                                 heading: Q.intl.string(Q.t.a6XYDw),
                                                                 children: (0, r.jsx)(k.Z, {
                                                                     userId: n.id,
@@ -372,7 +372,7 @@ function ee(e) {
                                                                     scrollIntoView: ea === X.Tb.ROLES,
                                                                 }),
                                                             eL.length > 0 &&
-                                                                (0, r.jsx)(K.Z, {
+                                                                (0, r.jsx)(z.Z, {
                                                                     heading: Q.intl.string(Q.t["3fe7U1"]),
                                                                     scrollIntoView: ea === X.Tb.CONNECTIONS,
                                                                     children: (0, r.jsx)(H.Z, {
@@ -381,7 +381,7 @@ function ee(e) {
                                                                         className: $.profileAppConnections,
                                                                     }),
                                                                 }),
-                                                            (0, r.jsx)(K.Z, {
+                                                            (0, r.jsx)(z.Z, {
                                                                 heading: Q.intl.string(Q.t["mQKv+v"]),
                                                                 scrollIntoView: ea === X.Tb.NOTE,
                                                                 children: (0, r.jsx)(c.Z, {
@@ -447,7 +447,7 @@ function ee(e) {
                                                         }),
                                                 ],
                                             }),
-                                            (0, r.jsx)(z.Z, {
+                                            (0, r.jsx)(K.Z, {
                                                 user: n,
                                                 currentUser: ee,
                                                 displayProfile: eI,

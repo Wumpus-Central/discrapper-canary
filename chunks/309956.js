@@ -20,14 +20,14 @@ let p = {
             { setItemTypeFilter: g, reset: f, setCurrentTab: b } = (0, s.S)(),
             h = r.useMemo(() => (e !== u.AW.ORBS || n ? ((0, u.RE)(e) && a ? u.AW.CATALOG : e) : u.AW.HOME), [e, n, a]),
             [m, _] = r.useState(h),
-            [v, C] = r.useState(u.f7.VISIBLE);
+            [v, O] = r.useState(u.f7.VISIBLE);
         r.useEffect(() => {
             b(m);
         }, [m, b]),
             r.useEffect(() => {
                 _(h);
             }, [h]);
-        let O = (e) => new Promise((t) => setTimeout(t, e)),
+        let C = (e) => new Promise((t) => setTimeout(t, e)),
             { clearError: E } = (0, c.a)(),
             S = (0, l.k6)(),
             y = r.useCallback(
@@ -38,12 +38,12 @@ let p = {
                         null != t ? g(t) : f();
                     }
                     if (m === e) return;
-                    n && (C(u.f7.OUT), await O(1.1 * u.lb));
+                    n && (O(u.f7.OUT), await C(1.1 * u.lb));
                     let r = a && ![u.AW.HOME, u.AW.ORBS].includes(e) ? u.AW.CATALOG : e;
                     _(r),
-                        n && C(u.f7.IN),
+                        n && O(u.f7.IN),
                         t || S.push(d.Z5c.COLLECTIBLES_SHOP_WITH_TAB(r), { shallow: !0 }),
-                        C(u.f7.VISIBLE);
+                        O(u.f7.VISIBLE);
                 },
                 [S, t, a, g, f, m, E],
             );

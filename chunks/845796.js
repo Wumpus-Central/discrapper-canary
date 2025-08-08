@@ -14,13 +14,13 @@ var r = n(255367),
     b = n(981631),
     h = n(388032),
     m = n(970387),
-    _ = n(247992);
+    _ = n(306414);
 let v = () => {
     let { sort: e, onSetSort: t, hasRelevanceFilters: n } = (0, g.S)(),
         a = (0, d.sp)(),
         { enableShopTakeOver: v } = p.Z.useConfig({ location: "CollectiblesSortSelect" }),
-        C = n(),
-        O = l.useMemo(() => f.aP.filter((e) => e.sortType !== s.E.RELEVANCE || C), [C]),
+        O = n(),
+        C = l.useMemo(() => f.aP.filter((e) => e.sortType !== s.E.RELEVANCE || O), [O]),
         E = l.useCallback((e) => {
             let { sortType: t, sortDirection: n } = e;
             return t === s.E.RECENCY
@@ -96,7 +96,7 @@ let v = () => {
         children: (0, r.jsx)(c.PhF, {
             look: c.qQH.CUSTOM,
             className: m.custom,
-            options: O.map(E),
+            options: C.map(E),
             select: y,
             isSelected: (e) => e === x.value,
             serialize: (e) => e,

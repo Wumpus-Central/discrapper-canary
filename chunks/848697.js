@@ -49,6 +49,7 @@ e.exports = {
     messageContent: "messageContent_c19a55",
     gradient: "gradient_c19a55",
     header: "header_c19a55",
+    withDisplayNameStyles: "withDisplayNameStyles_c19a55",
     buttonContainer: "buttonContainer_c19a55",
     avatar: "avatar_c19a55",
     avatarDecoration: "avatarDecoration_c19a55",

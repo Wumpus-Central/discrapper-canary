@@ -7,7 +7,7 @@ var r = n(255367),
     s = n(675997),
     c = n(215023),
     u = n(388032),
-    d = n(247992);
+    d = n(306414);
 function p(e) {
     let { handleTransition: t, onClose: n } = e,
         { enableShopTakeOver: a } = s.Z.useConfig({ location: "CollectiblesIndexPageContextMenu" }),

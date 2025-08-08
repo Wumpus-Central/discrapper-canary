@@ -16,20 +16,20 @@ var r = n(255367),
     m = n(597688),
     _ = n(675997),
     v = n(243126),
-    C = n(38900),
-    O = n(709999),
+    O = n(38900),
+    C = n(709999),
     E = n(328626),
     S = n(619899),
     y = n(981631),
     x = n(388032),
-    j = n(247992),
+    j = n(306414),
     T = n(806734);
 let P = (e) => {
     var t;
     let { isLoading: n, title: a, sortedSkuIds: P, numVisibleItems: L, hasSorting: k, tab: I } = e,
         N = (0, o.e7)([d.default], () => d.default.getCurrentUser()),
-        A = b.ZP.canUseCollectibles(N),
-        { enableShopTakeOver: w } = _.Z.useConfig({ location: "FeedBlock" }),
+        w = b.ZP.canUseCollectibles(N),
+        { enableShopTakeOver: A } = _.Z.useConfig({ location: "FeedBlock" }),
         {
             sortType: B,
             setSortType: R,
@@ -37,7 +37,7 @@ let P = (e) => {
             sortOptions: D,
             shuffleProducts: F,
             showRecommendationOption: M,
-        } = (0, v.N)(P, A),
+        } = (0, v.N)(P, w),
         H = (0, S.St)(Z),
         W = (0, o.e7)([u.Z], () => u.Z.useReducedMotion),
         V = (0, o.e7)([p.Z], () => p.Z.isFocused()),
@@ -142,7 +142,7 @@ let P = (e) => {
                           }),
                           k
                               ? (0, r.jsxs)("div", {
-                                    className: i()(T.headerRight, { [j.shopTakeOver]: w }),
+                                    className: i()(T.headerRight, { [j.shopTakeOver]: A }),
                                     children: [
                                         (0, r.jsx)(s.Text, {
                                             variant: "text-md/medium",
@@ -154,7 +154,7 @@ let P = (e) => {
                                             select: X,
                                             isSelected: (e) => e === B,
                                             serialize: (e) => e,
-                                            popoutClassName: i()({ [j.shopTakeOver]: w }),
+                                            popoutClassName: i()({ [j.shopTakeOver]: A }),
                                         }),
                                         (0, r.jsx)(s.zxk, {
                                             variant: "secondary",
@@ -181,7 +181,7 @@ let P = (e) => {
                       className: T.feed,
                       children: n
                           ? (0, r.jsx)(r.Fragment, {
-                                children: [...Array(12)].map((e, t) => (0, r.jsx)(C.K, {}, t + 1)),
+                                children: [...Array(12)].map((e, t) => (0, r.jsx)(O.K, {}, t + 1)),
                             })
                           : H.slice(0, L).map((e, t) => {
                                 let n,
@@ -208,7 +208,7 @@ let P = (e) => {
                                             pageSection: "popular picks",
                                             categoryPosition: 2,
                                         },
-                                        children: (0, r.jsx)(O.Z, {
+                                        children: (0, r.jsx)(C.Z, {
                                             product: e,
                                             category: l,
                                             user: N,

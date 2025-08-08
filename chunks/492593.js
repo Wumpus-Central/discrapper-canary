@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y }), n(388685);
+n.d(t, { Z: () => O }), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -6,11 +6,12 @@ var r = n(255367),
     s = n(442837),
     l = n(573385),
     c = n(481060),
-    u = n(606318),
-    d = n(402235),
-    f = n(485386),
-    _ = n(848697);
-function p(e, t, n) {
+    u = n(181430),
+    d = n(606318),
+    f = n(402235),
+    _ = n(485386),
+    p = n(848697);
+function h(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -23,7 +24,7 @@ function p(e, t, n) {
         e
     );
 }
-function h(e) {
+function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -34,12 +35,12 @@ function h(e) {
                 }),
             )),
             r.forEach(function (t) {
-                p(e, t, n[t]);
+                h(e, t, n[t]);
             });
     }
     return e;
 }
-function m(e, t) {
+function g(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -51,22 +52,22 @@ function m(e, t) {
     }
     return n;
 }
-function g(e, t) {
+function E(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : m(Object(t)).forEach(function (n) {
+            : g(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function E(e, t) {
+function b(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = b(e, t);
+        i = y(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
         for (r = 0; r < o.length; r++)
@@ -74,7 +75,7 @@ function E(e, t) {
     }
     return i;
 }
-function b(e, t) {
+function y(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -83,36 +84,36 @@ function b(e, t) {
     for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let y = function (e) {
+let O = function (e) {
     var {
             className: t,
             compact: n = !1,
             contentOnly: o = !1,
-            zalgo: p = !0,
-            preview: m = !1,
-            disableInteraction: b = !1,
-            childrenRepliedMessage: y,
-            childrenExecutedCommand: O,
-            childrenHeader: v,
-            childrenSystemMessage: I,
-            childrenButtons: T,
-            childrenMessageContent: S,
-            childrenAccessories: A,
-            messageRef: N,
-            focusProps: C = {
+            zalgo: h = !0,
+            preview: g = !1,
+            disableInteraction: y = !1,
+            childrenRepliedMessage: O,
+            childrenExecutedCommand: v,
+            childrenHeader: I,
+            childrenSystemMessage: T,
+            childrenButtons: S,
+            childrenMessageContent: A,
+            childrenAccessories: N,
+            messageRef: C,
+            focusProps: R = {
                 offset: {
                     left: 4,
                     right: 4,
                 },
             },
-            hasThread: R,
-            isSystemMessage: P,
-            hasReply: w,
-            author: D,
-            onMouseEnter: L,
-            onMouseLeave: x,
+            hasThread: P,
+            isSystemMessage: w,
+            hasReply: D,
+            author: L,
+            onMouseEnter: x,
+            onMouseLeave: M,
         } = e,
-        M = E(e, [
+        k = b(e, [
             "className",
             "compact",
             "contentOnly",
@@ -135,70 +136,73 @@ let y = function (e) {
             "onMouseEnter",
             "onMouseLeave",
         ]);
-    let k = (0, s.e7)([f.Z], () =>
-            (null == D ? void 0 : D.guildId) == null || (null == D ? void 0 : D.colorRoleId) == null
+    let j = (0, s.e7)([_.Z], () =>
+            (null == L ? void 0 : L.guildId) == null || (null == L ? void 0 : L.colorRoleId) == null
                 ? null
-                : f.Z.getRole(D.guildId, D.colorRoleId),
+                : _.Z.getRole(L.guildId, L.colorRoleId),
         ),
-        j = (0, d.yH)(null == D ? void 0 : D.guildId, k) && (0, u.S2)(D),
-        [U, G] = i.useState(!1),
-        B = i.useCallback(
-            (e) => {
-                G(!0), null == L || L(e);
-            },
-            [L],
-        ),
+        U = (0, f.yH)(null == L ? void 0 : L.guildId, j) && (0, d.S2)(L),
+        [G, B] = i.useState(!1),
         Z = i.useCallback(
             (e) => {
-                G(!1), null == x || x(e);
+                B(!0), null == x || x(e);
             },
             [x],
         ),
-        F = (0, r.jsx)(l.d.Provider, {
+        F = i.useCallback(
+            (e) => {
+                B(!1), null == M || M(e);
+            },
+            [M],
+        ),
+        V = (0, u.Y)({ location: "BaseMessage" }),
+        H = (0, r.jsx)(l.d.Provider, {
             value: {
-                animate: U,
-                setAnimate: G,
+                animate: G,
+                setAnimate: B,
             },
             children: (0, r.jsx)(
                 c.tEY,
-                g(h({}, C), {
+                E(m({}, R), {
                     children: (0, r.jsxs)(
                         "div",
-                        g(
-                            h(
+                        E(
+                            m(
                                 {
                                     className: a()(t, {
-                                        [_.gradient]: j,
-                                        [_.wrapper]: !0,
-                                        [_.contentOnly]: o,
-                                        [_.compact]: n,
-                                        [_.preview]: m,
-                                        [_.cozy]: !n,
-                                        [_.zalgo]: p,
-                                        [_.hasThread]: R,
-                                        [_.isSystemMessage]: P,
-                                        [_.hasReply]: w,
+                                        [p.gradient]: U,
+                                        [p.withDisplayNameStyles]:
+                                            V && (null == L ? void 0 : L.displayNameStyles) != null,
+                                        [p.wrapper]: !0,
+                                        [p.contentOnly]: o,
+                                        [p.compact]: n,
+                                        [p.preview]: g,
+                                        [p.cozy]: !n,
+                                        [p.zalgo]: h,
+                                        [p.hasThread]: P,
+                                        [p.isSystemMessage]: w,
+                                        [p.hasReply]: D,
                                     }),
-                                    ref: N,
+                                    ref: C,
                                 },
-                                M,
+                                k,
                             ),
                             {
                                 role: "article",
-                                onMouseEnter: B,
-                                onMouseLeave: Z,
+                                onMouseEnter: Z,
+                                onMouseLeave: F,
                                 children: [
-                                    y,
                                     O,
+                                    v,
                                     (0, r.jsxs)("div", {
-                                        className: _.contents,
-                                        children: [I, v, null == I && S],
+                                        className: p.contents,
+                                        children: [T, I, null == T && A],
                                     }),
-                                    A,
-                                    null != T
+                                    N,
+                                    null != S
                                         ? (0, r.jsx)("div", {
-                                              className: _.buttonContainer,
-                                              children: T,
+                                              className: p.buttonContainer,
+                                              children: S,
                                           })
                                         : null,
                                 ],
@@ -208,5 +212,5 @@ let y = function (e) {
                 }),
             ),
         });
-    return b ? (0, r.jsx)(c.Rny, { children: F }) : F;
+    return y ? (0, r.jsx)(c.Rny, { children: H }) : H;
 };

@@ -68,7 +68,7 @@ function x() {
         tags:
             Math.random() > 0.3
                 ? ((e = o.T),
-                  (t = Math.floor(3 * Math.random()) + 1),
+                  (t = Math.floor(Math.random() * o.T.length) + 1),
                   [...e].sort(() => 0.5 - Math.random()).slice(0, t))
                 : void 0,
     };

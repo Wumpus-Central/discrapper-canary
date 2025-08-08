@@ -19,80 +19,87 @@ var r = n(255367),
     y = n(7284),
     O = n(482695);
 let v = i.memo(function (e) {
+    var t;
     let {
-            userName: t,
-            displayNameStyles: n,
-            effectDisplayType: o = g.F.STATIC,
-            inProfile: s = !1,
-            textClassName: v,
-            loop: T = !1,
-            shouldWrap: S = !1,
+            userName: n,
+            displayNameStyles: o,
+            effectDisplayType: s = g.F.STATIC,
+            inProfile: v = !1,
+            textClassName: T,
+            loop: S = !1,
+            shouldWrap: A = !1,
         } = e,
-        A = (0, y.j)({
-            displayNameStyles: n,
-            inProfile: s,
+        N = (0, y.j)({
+            displayNameStyles: o,
+            inProfile: v,
         }),
         {
-            useReducedMotion: N,
-            saturation: C,
-            desaturateUserColors: R,
+            useReducedMotion: C,
+            saturation: R,
+            desaturateUserColors: P,
         } = (0, u.cj)([_.Z], () => ({
             useReducedMotion: _.Z.useReducedMotion,
             saturation: _.Z.saturation,
             desaturateUserColors: _.Z.desaturateUserColors,
         })),
-        { includeNonProfile: P } = h.f.useExperiment({ location: "useDisplayNameStylesFont" }),
-        w = (0, m.Y)({ location: "UserNameWithEffects" }),
-        D = (0, f.dQu)(f.TVs.colors.BACKGROUND_BASE_LOW).hex(),
-        L = (0, b.J)(),
-        x = (0, f.qgQ)(t),
-        M = (0, d.EJ)(x, (null == n ? void 0 : n.effectId) === c.m.TOON ? O.emoji : void 0),
-        k = i.useMemo(
+        { includeNonProfile: w } = h.f.useExperiment({ location: "useDisplayNameStylesFont" }),
+        D = (0, m.Y)({ location: "UserNameWithEffects" }),
+        L = (0, f.dQu)(f.TVs.colors.BACKGROUND_BASE_LOW).hex(),
+        x = null != (t = null == o ? void 0 : o.effectId) ? t : c.m.SOLID,
+        M = (0, b.J)(),
+        k = (0, f.qgQ)(n),
+        j = (0, d.EJ)(k, x === c.m.TOON ? O.emoji : void 0),
+        U = i.useMemo(
             () =>
-                null != n && w
-                    ? n.colors.map((e) => {
-                          let t = a()(e);
+                null != o && D
+                    ? o.colors.map((e) => {
+                          var t, n;
+                          let r = a()(e);
                           return (
-                              R && (t = t.desaturate(1 - C)),
-                              (0, p.aP)(t.hex(), n.effectId === c.m.TOON ? "#333" : D, L[n.effectId].minContrastRatio)
+                              P && (r = r.desaturate(1 - R)),
+                              (0, p.aP)(
+                                  r.hex(),
+                                  x === c.m.TOON ? "#333" : L,
+                                  null != (n = null == (t = M[x]) ? void 0 : t.minContrastRatio) ? n : 3,
+                              )
                           );
                       })
                     : [],
-            [n, w, R, C, D, L],
+            [o, x, D, P, R, L, M],
         );
-    if (!w || (!s && !P) || null == n) return t;
-    let j = (0, E.K)(n.effectId, k, { shouldWrap: S }),
-        U = I(n.effectId, o);
+    if (!D || (!v && !w) || null == o) return n;
+    let G = (0, E.K)(x, U, { shouldWrap: A }),
+        B = I(x);
     return (0, r.jsxs)("div", {
-        className: l()(O.container, A, v, {
-            [O.showEffect]: o !== g.F.PLAIN,
-            [O.animated]: o === g.F.ANIMATED && !N,
-            [O.loop]: T,
+        className: l()(O.container, N, T, {
+            [O.showEffect]: s !== g.F.PLAIN,
+            [O.animated]: s === g.F.ANIMATED && !C,
+            [O.loop]: S,
         }),
-        style: j,
+        style: G,
         children: [
             (0, r.jsx)("span", {
-                "data-username-with-effects": x,
-                className: l()(O.innerContainer, null == U ? void 0 : U.effectClassName),
-                children: M,
+                "data-username-with-effects": k,
+                className: l()(O.innerContainer, null == B ? void 0 : B.effectClassName),
+                children: j,
             }),
-            (null == U ? void 0 : U.glowClassName) != null &&
+            (null == B ? void 0 : B.glowClassName) != null &&
                 (0, r.jsx)("span", {
-                    className: l()(O.glowContainer, O.innerContainer, U.glowClassName),
+                    className: l()(O.glowContainer, O.innerContainer, B.glowClassName),
                     "aria-hidden": !0,
-                    children: x,
+                    children: k,
                 }),
         ],
     });
 });
-function I(e, t) {
+function I(e) {
     switch (e) {
         case c.m.GRADIENT:
             return { effectClassName: O.gradient };
         case c.m.NEON:
             return {
                 effectClassName: O.neon,
-                glowClassName: t !== g.F.PLAIN ? O.neonGlow : void 0,
+                glowClassName: O.neonGlow,
             };
         case c.m.TOON:
             return { effectClassName: O.toon };

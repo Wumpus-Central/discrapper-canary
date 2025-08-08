@@ -57,7 +57,7 @@ function v(e, t) {
         e
     );
 }
-function C(e, t) {
+function O(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -77,7 +77,7 @@ function C(e, t) {
     }
     return l;
 }
-let O = s()((e) => {
+let C = s()((e) => {
         let t = !1;
         if (null != e && (0, d.FX)(e)) {
             let n = (0, d._i)(e);
@@ -99,7 +99,7 @@ let O = s()((e) => {
             { isPurchased: S } = (0, b.L)(n),
             y = (0, c.JA)("shop-variants-group-".concat(t.storeListingId, "-").concat(a)),
             { onFocus: x } = y,
-            j = C(y, ["onFocus"]),
+            j = O(y, ["onFocus"]),
             T = l.useCallback(
                 (e) => {
                     e.preventDefault(), e.stopPropagation(), (0, f.$)(t, a), x();
@@ -148,7 +148,7 @@ let O = s()((e) => {
                             children: S
                                 ? (0, r.jsx)(p.kSu, {
                                       className: m.purchasedIndicator,
-                                      color: O(n.variantValue),
+                                      color: C(n.variantValue),
                                   })
                                 : null,
                         }),
@@ -167,9 +167,9 @@ let O = s()((e) => {
                 selectedVariantIndex: f,
                 alternativeBackgroundColor: b,
             } = e,
-            O = o.previewingVariantIndex,
+            C = o.previewingVariantIndex,
             S = null == (t = l.variants) ? void 0 : t[f],
-            y = null !== O ? (null == (n = l.variants) ? void 0 : n[O]) : void 0,
+            y = null !== C ? (null == (n = l.variants) ? void 0 : n[C]) : void 0,
             x = (0, g.Z)("shop-variants-group-".concat(l.storeListingId), u.hy.HORIZONTAL);
         if (null == S) return null;
         let j = null != y ? y.variantLabel : null == S ? void 0 : S.variantLabel;
@@ -179,7 +179,7 @@ let O = s()((e) => {
                 children: (e) => {
                     var t,
                         { ref: n } = e,
-                        c = C(e, ["ref"]);
+                        c = O(e, ["ref"]);
                     return (0, r.jsxs)(
                         "div",
                         v(_({ ref: n }, c), {

@@ -22,21 +22,21 @@ let h = (e) => {
             forCollectedModal: m,
             containerClassName: _,
             profileEffectClassName: v,
-            avatarDecorationClassName: C,
+            avatarDecorationClassName: O,
         } = e,
-        { firstProfileEffect: O, firstAvatarDecoration: E } = (0, u.Rj)(t),
+        { firstProfileEffect: C, firstAvatarDecoration: E } = (0, u.Rj)(t),
         S = (0, d.O1)(E),
         y = (0, s.ZP)(),
         x = (0, i.ap)(y);
     return (0, r.jsxs)("div", {
         className: a()(g.container, _),
         children: [
-            null != O
+            null != C
                 ? (0, r.jsx)("div", {
                       className: a()(g.profileEffectShopPreview, v),
                       children: (0, r.jsx)(c.Z, {
                           isHovering: l,
-                          profileEffectId: O.id,
+                          profileEffectId: C.id,
                           isPurchased: n,
                           forCollectedModal: m,
                           removeSetHeight: !0,
@@ -45,7 +45,7 @@ let h = (e) => {
                 : null,
             null != S
                 ? (0, r.jsx)("div", {
-                      className: a()(g.avatarDecorationPreview, C),
+                      className: a()(g.avatarDecorationPreview, O),
                       children: (0, r.jsx)(p.R, {
                           item: S,
                           user: h,

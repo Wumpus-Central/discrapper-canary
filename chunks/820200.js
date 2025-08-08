@@ -21,12 +21,14 @@ class o {
         i(this, "bannerAsset", void 0),
             i(this, "title", void 0),
             i(this, "body", void 0),
+            i(this, "help_center_url", void 0),
             i(this, "textColor", void 0),
             i(this, "endTime", void 0),
             (this.type = r.z.IMMERSIVE_BANNER),
             (this.bannerAsset = e.banner_asset),
             (this.title = e.title),
             (this.body = e.body),
+            (this.help_center_url = e.help_center_url),
             (this.textColor = e.text_color),
             (this.endTime = null != e.end_time ? new Date(e.end_time) : void 0);
     }

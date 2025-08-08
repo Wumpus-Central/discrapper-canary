@@ -1,19 +1,21 @@
-n.d(t, { Z: () => d }), n(388685), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749);
+n.d(t, { Z: () => _ }), n(388685), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749);
 var r = n(73800),
     i = n(647000),
     o = n(544891),
     a = n(396704),
-    s = n(279421),
-    l = n(410401),
-    c = n(701262);
-let u = (e) => {
+    s = n(626135),
+    l = n(981631),
+    c = n(279421),
+    u = n(410401),
+    d = n(701262);
+let f = (e) => {
         let [t, n] = (0, r.useState)({
                 modalGlowEntry: void 0,
                 modalGlowIdle: void 0,
                 modalGlowExit: void 0,
             }),
             [i, a] = (0, r.useState)(!1),
-            [u, d] = (0, r.useState)(!1),
+            [s, l] = (0, r.useState)(!1),
             [f, _] = (0, r.useState)(!1),
             p = (0, r.useRef)(!0);
         (0, r.useEffect)(
@@ -31,21 +33,21 @@ let u = (e) => {
             ),
             m = (0, r.useCallback)(async () => {
                 if (!h() && !f) {
-                    _(!0), d(!1), a(!1);
+                    _(!0), l(!1), a(!1);
                     try {
                         let [e, t, r] = await Promise.all([
                             o.tn.get({
-                                url: s.Z,
-                                binary: !0,
-                                rejectWithError: !0,
-                            }),
-                            o.tn.get({
-                                url: l.Z,
-                                binary: !0,
-                                rejectWithError: !0,
-                            }),
-                            o.tn.get({
                                 url: c.Z,
+                                binary: !0,
+                                rejectWithError: !0,
+                            }),
+                            o.tn.get({
+                                url: u.Z,
+                                binary: !0,
+                                rejectWithError: !0,
+                            }),
+                            o.tn.get({
+                                url: d.Z,
                                 binary: !0,
                                 rejectWithError: !0,
                             }),
@@ -58,7 +60,7 @@ let u = (e) => {
                             }),
                             a(!0));
                     } catch (e) {
-                        p.current && d(!0);
+                        p.current && l(!0);
                     } finally {
                         p.current && _(!1);
                     }
@@ -79,17 +81,20 @@ let u = (e) => {
             {
                 mediaUrls: t,
                 isSuccess: i,
-                isFailure: u,
+                isFailure: s,
                 isLoading: f,
             }
         );
     },
-    d = (e) => {
-        let { mediaUrls: t, isSuccess: n, isLoading: r } = u(e),
-            { status: o } = (0, a.VG)(e ? i.Z : null);
+    _ = (e) => {
+        (0, r.useEffect)(() => {
+            e && s.default.track(l.rMx.PREMIUM_BRAND_REFRESH_WOW_MOMENT_ASSETS_PREFETCHING);
+        }, [e]);
+        let { mediaUrls: t, isSuccess: n, isLoading: o } = f(e),
+            { status: c } = (0, a.VG)(e ? i.Z : null);
         return {
             mediaUrls: t,
-            isSuccess: n && o === a.Jt.Loaded,
-            isLoading: r || o === a.Jt.Loading,
+            isSuccess: n && c === a.Jt.Loaded,
+            isLoading: o || c === a.Jt.Loading,
         };
     };

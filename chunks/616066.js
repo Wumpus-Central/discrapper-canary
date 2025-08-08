@@ -24,8 +24,8 @@ let g = u.ZP.getEnableHardwareAcceleration() ? o.Xo$ : o.qEK,
             _ = (0, s.y9)(h),
             {
                 avatarDecorationSrc: v,
-                eventHandlers: C,
-                avatarPlaceholderSrc: O,
+                eventHandlers: O,
+                avatarPlaceholderSrc: C,
             } = (0, c.Z)({
                 user: u,
                 avatarDecorationOverride: (null == l ? void 0 : l.type) === i.Z.AVATAR_DECORATION ? l : void 0,
@@ -59,11 +59,11 @@ let g = u.ZP.getEnableHardwareAcceleration() ? o.Xo$ : o.qEK,
                         });
                 }
                 return e;
-            })({}, C)),
+            })({}, O)),
             (n = n =
                 {
                     avatarDecoration: v,
-                    src: f ? (null == u ? void 0 : u.getAvatarURL(void 0, 152, !0)) : null != m ? m : O,
+                    src: f ? (null == u ? void 0 : u.getAvatarURL(void 0, 152, !0)) : null != m ? m : C,
                     imageClassName: f ? p.fadeInAvatarImg : void 0,
                     className: a()(p.avatar, { [p.avatarPurchased]: b && !f }),
                     size: h,

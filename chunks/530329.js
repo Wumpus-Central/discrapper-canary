@@ -1,89 +1,89 @@
-n.d(t, { Z: () => p });
-var r = n(255367),
-    a = n(73800),
-    l = n(120356),
-    i = n.n(l),
-    s = n(53691),
-    o = n(378879),
-    c = n(981631),
+n.d(e, { Z: () => f });
+var o = n(255367),
+    r = n(73800),
+    i = n(120356),
+    a = n.n(i),
+    l = n(53691),
+    c = n(378879),
+    s = n(981631),
     u = n(486324),
-    d = n(388032),
-    f = n(826756);
-function p(e) {
-    var { uploadType: t, analyticsSource: n, className: l } = e,
-        p = (function (e, t) {
-            if (null == e) return {};
+    _ = n(388032),
+    d = n(826756);
+function f(t) {
+    var { uploadType: e, analyticsSource: n, className: i } = t,
+        f = (function (t, e) {
+            if (null == t) return {};
             var n,
-                r,
-                a = (function (e, t) {
-                    if (null == e) return {};
+                o,
+                r = (function (t, e) {
+                    if (null == t) return {};
                     var n,
-                        r,
-                        a = {},
-                        l = Object.keys(e);
-                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (a[n] = e[n]);
-                    return a;
-                })(e, t);
+                        o,
+                        r = {},
+                        i = Object.keys(t);
+                    for (o = 0; o < i.length; o++) (n = i[o]), e.indexOf(n) >= 0 || (r[n] = t[n]);
+                    return r;
+                })(t, e);
             if (Object.getOwnPropertySymbols) {
-                var l = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < l.length; r++)
-                    (n = l[r]),
-                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (a[n] = e[n]);
+                var i = Object.getOwnPropertySymbols(t);
+                for (o = 0; o < i.length; o++)
+                    (n = i[o]),
+                        !(e.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(t, n) && (r[n] = t[n]);
             }
-            return a;
-        })(e, ["uploadType", "analyticsSource", "className"]);
-    let g = a.useCallback(() => {
-            (0, o.s)({
-                uploadType: t,
+            return r;
+        })(t, ["uploadType", "analyticsSource", "className"]);
+    let m = r.useCallback(() => {
+            (0, c.s)({
+                uploadType: e,
                 analyticsSource: n,
             });
-        }, [t, n]),
-        m = a.useMemo(() => {
-            switch (t) {
+        }, [e, n]),
+        p = r.useMemo(() => {
+            switch (e) {
                 case u.pC.AVATAR:
-                    return d.intl.format(d.t["pvw/HB"], { onClick: g });
+                    return _.intl.format(_.t["pvw/HB"], { onClick: m });
                 case u.pC.BANNER:
-                    return d.intl.format(d.t.aCrz1d, { onClick: g });
+                    return _.intl.format(_.t.aCrz1d, { onClick: m });
                 default:
                     return "";
             }
-        }, [t, g]);
-    return t !== u.pC.AVATAR && t !== u.pC.BANNER
+        }, [e, m]);
+    return e !== u.pC.AVATAR && e !== u.pC.BANNER
         ? null
-        : (0, r.jsx)(
-              s.p,
-              (function (e) {
-                  for (var t = 1; t < arguments.length; t++) {
-                      var n = null != arguments[t] ? arguments[t] : {},
-                          r = Object.keys(n);
+        : (0, o.jsx)(
+              l.p,
+              (function (t) {
+                  for (var e = 1; e < arguments.length; e++) {
+                      var n = null != arguments[e] ? arguments[e] : {},
+                          o = Object.keys(n);
                       "function" == typeof Object.getOwnPropertySymbols &&
-                          (r = r.concat(
-                              Object.getOwnPropertySymbols(n).filter(function (e) {
-                                  return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                          (o = o.concat(
+                              Object.getOwnPropertySymbols(n).filter(function (t) {
+                                  return Object.getOwnPropertyDescriptor(n, t).enumerable;
                               }),
                           )),
-                          r.forEach(function (t) {
-                              var r;
-                              (r = n[t]),
-                                  t in e
-                                      ? Object.defineProperty(e, t, {
-                                            value: r,
+                          o.forEach(function (e) {
+                              var o;
+                              (o = n[e]),
+                                  e in t
+                                      ? Object.defineProperty(t, e, {
+                                            value: o,
                                             enumerable: !0,
                                             configurable: !0,
                                             writable: !0,
                                         })
-                                      : (e[t] = r);
+                                      : (t[e] = o);
                           });
                   }
-                  return e;
+                  return t;
               })(
                   {
-                      text: m,
-                      button: d.intl.string(d.t.BmJkbW),
-                      buttonAnalyticsObject: { section: c.jXE.USER_PROFILE },
-                      className: i()(f.container, l),
+                      text: p,
+                      button: _.intl.string(_.t.BmJkbW),
+                      buttonAnalyticsObject: { section: s.jXE.USER_PROFILE },
+                      className: a()(d.container, i),
                   },
-                  p,
+                  f,
               ),
           );
 }

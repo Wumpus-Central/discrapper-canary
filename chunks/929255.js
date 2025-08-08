@@ -16,8 +16,8 @@ var r = n(255367),
     m = n(841875),
     _ = n(312030),
     v = n(795343),
-    C = n(763891),
-    O = n(215023),
+    O = n(763891),
+    C = n(215023),
     E = n(981631),
     S = n(388032),
     y = n(95368);
@@ -28,7 +28,7 @@ function x(e) {
         f = l.useRef(null),
         { handleScroll: h } = (0, s.z)(f, n),
         { setCategoryRef: _, handleScrollToCategory: v } = (0, b.xV)(f.current),
-        [C, O] = l.useState(g),
+        [O, C] = l.useState(g),
         [E, S] = l.useState(!1);
     return (
         l.useEffect(() => {
@@ -47,8 +47,8 @@ function x(e) {
             return e(), window.addEventListener("resize", e), () => window.removeEventListener("resize", e);
         }, []),
         l.useEffect(() => {
-            g || O(!1);
-        }, [g, O]),
+            g || C(!1);
+        }, [g, C]),
         (0, r.jsx)("div", {
             className: i()(y.pageWrapper, { [y.pageWrapperFilter]: g }),
             children: (0, r.jsxs)("main", {
@@ -61,16 +61,16 @@ function x(e) {
                         children: (0, r.jsx)(j, {
                             isFullScreen: t,
                             isSmallScreen: E,
-                            filterBarOpen: C,
-                            setFilterBarOpen: O,
+                            filterBarOpen: O,
+                            setFilterBarOpen: C,
                             tab: n,
                             scrollerRef: f,
                             sortedCategories: a,
                             setCategoryRef: _,
                         }),
                     }),
-                    C && !E && (0, r.jsx)("div", { className: y.divider }),
-                    C &&
+                    O && !E && (0, r.jsx)("div", { className: y.divider }),
+                    O &&
                         !E &&
                         (0, r.jsx)(o.Ttm, {
                             className: y.filterBar,
@@ -96,11 +96,11 @@ let j = (e) => {
         L = l.useRef(null),
         k = (0, p.S)((e) => e.hasDefaultFilters()),
         I = (0, u.sp)(),
-        { handlePageChange: N, currentPage: A } = (0, _.h)({
+        { handlePageChange: N, currentPage: w } = (0, _.h)({
             scrollerRef: x,
             sortedCategories: j,
         }),
-        w = l.useCallback(
+        A = l.useCallback(
             (e) => {
                 c.default.track(E.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                     collectibles_shop_session_id: null == I ? void 0 : I.sessionId,
@@ -213,9 +213,9 @@ let j = (e) => {
                               },
                               b,
                           )
-                        : (0, O.RE)(b)
+                        : (0, C.RE)(b)
                           ? (0, r.jsx)(
-                                C.Z,
+                                O.Z,
                                 {
                                     isFullScreen: t,
                                     scrollerRef: x,
@@ -224,13 +224,13 @@ let j = (e) => {
                                 b,
                             )
                           : (0, r.jsx)(u.k0, {
-                                newValue: { pageIndex: A },
+                                newValue: { pageIndex: w },
                                 children: (0, r.jsx)(f.Z, {
                                     isFullScreen: t,
                                     sortedCategories: j,
                                     setCategoryRef: T,
-                                    currentPage: A,
-                                    handlePageChange: w,
+                                    currentPage: w,
+                                    handlePageChange: A,
                                 }),
                             }),
                 ],

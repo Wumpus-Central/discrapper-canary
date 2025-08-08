@@ -15,7 +15,7 @@ var r = n(255367),
     h = n(474936),
     m = n(388032);
 let _ = (e) => {
-    let { product: t, primary: n, selectedVariantIndex: _, returnRef: v, onSuccess: C, tooltipDelay: O } = e,
+    let { product: t, primary: n, selectedVariantIndex: _, returnRef: v, onSuccess: O, tooltipDelay: C } = e,
         { analyticsLocations: E } = (0, o.ZP)(),
         S = l.useRef(null),
         y = (0, p.hv)("CollectiblesShopGiftButton"),
@@ -25,7 +25,7 @@ let _ = (e) => {
         ? null
         : (0, r.jsx)(i.ua7, {
               text: m.intl.string(m.t["JCFN//"]),
-              delay: O,
+              delay: C,
               children: (e) => {
                   var l, o;
                   return (0, r.jsx)(
@@ -85,9 +85,9 @@ let _ = (e) => {
                                           returnRef: v,
                                           variantsReturnStyle: y,
                                           onClose:
-                                              null != C
+                                              null != O
                                                   ? (e) => {
-                                                        e && C();
+                                                        e && O();
                                                     }
                                                   : void 0,
                                       });

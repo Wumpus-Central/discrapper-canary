@@ -4840,6 +4840,11 @@ var nE = (function (e) {
             (e.DM_PROFILE_TOGGLED = "dm_profile_toggled"),
             (e.PREMIUM_WOW_MOMENT_VIEWED = "premium_wow_moment_viewed"),
             (e.PREMIUM_WOW_MOMENT_MEDIA_PREFETCH_TRIGGER = "premium_wow_moment_media_prefetch_trigger"),
+            (e.PREMIUM_BRAND_REFRESH_WOW_MOMENT_VIEWED = "premium_brand_refresh_wow_moment_viewed"),
+            (e.PREMIUM_BRAND_REFRESH_WOW_MOMENT_ASSETS_PREFETCHING =
+                "premium_brand_refresh_wow_moment_assets_prefetching"),
+            (e.PREMIUM_BRAND_REFRESH_WOW_MOMENT_ASSETS_NOT_LOADED_ON_CONFIRMATION =
+                "premium_brand_refresh_wow_moment_assets_not_loaded_on_confirmation"),
             (e.PREMIUM_FEATURE_HELPER_ACTIONS = "premium_feature_helper_actions"),
             (e.PREMIUM_FEATURE_TUTORIAL_STEPS = "premium_feature_tutorial_steps"),
             (e.PREMIUM_FEATURE_TUTORIAL_STEPS_NEXT = "premium_feature_tutorial_steps_next"),

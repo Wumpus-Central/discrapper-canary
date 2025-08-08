@@ -16,8 +16,8 @@ var r = n(255367),
     m = n(507808),
     _ = n(822857),
     v = n(775451),
-    C = n(594174),
-    O = n(471731),
+    O = n(594174),
+    C = n(471731),
     E = n(335131),
     S = n(870289),
     y = n(304742),
@@ -148,9 +148,9 @@ function I(e) {
 function N(e) {
     let { isFullScreen: t, isLayer: n, onClose: a, selectedTab: g, handleTransition: f } = e,
         y = (0, p.ZP)(),
-        N = (0, s.e7)([C.default], () => C.default.getCurrentUser()),
-        A = (null == N ? void 0 : N.isStaff()) || (null == N ? void 0 : N.isStaffPersonal()) || !1,
-        { enabled: w } = (0, _.WX)({ location: "collectibles_shop_header_bar" }),
+        N = (0, s.e7)([O.default], () => O.default.getCurrentUser()),
+        w = (null == N ? void 0 : N.isStaff()) || (null == N ? void 0 : N.isStaffPersonal()) || !1,
+        { enabled: A } = (0, _.WX)({ location: "collectibles_shop_header_bar" }),
         B = [
             {
                 tab: j.AW.HOME,
@@ -161,7 +161,7 @@ function N(e) {
                 displayText: P.intl.string(P.t.Ah5sJi),
             },
         ];
-    w &&
+    A &&
         B.push({
             tab: j.AW.ORBS,
             displayText: P.intl.string(P.t.EBYkzs),
@@ -184,15 +184,15 @@ function N(e) {
             (0, r.jsxs)(b.Z, {
                 disableDoubleClick: !0,
                 className: i()(e, L.headerBar, { [L.fullscreenHeaderBar]: t }),
-                innerClassname: w ? L.headerBarInner : void 0,
-                toolbar: t || !A ? null : (0, r.jsx)(l.Fragment, {}),
+                innerClassname: A ? L.headerBarInner : void 0,
+                toolbar: t || !w ? null : (0, r.jsx)(l.Fragment, {}),
                 children: [
                     (0, r.jsxs)(c.P3F, {
                         className: L.shopHomeLink,
                         onClick: () => f(j.AW.HOME),
                         "aria-label": P.intl.string(P.t.pWG4zc) + " home",
                         children: [
-                            (0, r.jsx)(O.Z, { className: L.discordLogo }),
+                            (0, r.jsx)(C.Z, { className: L.discordLogo }),
                             (0, r.jsx)(b.Z.Title, { children: P.intl.string(P.t.pWG4zc) }),
                         ],
                     }),
@@ -223,7 +223,7 @@ function N(e) {
                                   );
                         }),
                     }),
-                    (w || t || F) &&
+                    (A || t || F) &&
                         (0, r.jsxs)("div", {
                             className: L.alignedRightContent,
                             children: [
@@ -232,7 +232,7 @@ function N(e) {
                                         handleTransition: f,
                                         selectedTab: g,
                                     }),
-                                w &&
+                                A &&
                                     (0, r.jsx)(v.V9, {
                                         anchorPillType: t ? "SHOP_FULLSCREEN" : "SHOP",
                                         analyticsPage: Z,

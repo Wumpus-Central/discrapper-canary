@@ -24,7 +24,7 @@ let h = (e, t) => {
         }, [e]),
         m = l.length > 0 && n,
         [_, v] = r.useState(m ? i.m.RECOMMENDED : i.m.POPULAR),
-        [C, O] = r.useState(0),
+        [O, C] = r.useState(0),
         E = (0, d.u)(),
         S = (0, o.e7)([c.Z], () => c.Z.productsWithVariantsAsGroup),
         y = (0, p.a)(),
@@ -48,9 +48,9 @@ let h = (e, t) => {
                           : _ === i.m.RANDOM && (e = a().shuffle(S)),
                 y(e)
             );
-        }, [_, y, S, t, E, l, h, C]),
+        }, [_, y, S, t, E, l, h, O]),
         j = r.useCallback(() => {
-            O((e) => e + 1), v(i.m.RANDOM);
+            C((e) => e + 1), v(i.m.RANDOM);
         }, []);
     return {
         sortType: _,
