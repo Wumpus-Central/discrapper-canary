@@ -1,53 +1,53 @@
-r.d(t, { Z: () => x });
-var n = r(255367);
-r(73800);
-var i = r(442837),
-    o = r(159691),
-    a = r(481060),
-    l = r(607070),
-    s = r(906732),
-    d = r(821982),
-    C = r(832149),
-    c = r(600164),
-    u = r(286961),
-    p = r(594174),
-    _ = r(27034),
-    f = r(215023),
-    m = r(317112);
-function x(e) {
-    let { onClose: t, selectedPromotionalDecoPurchaseRecord: r, selectedGiftingPromotionReward: x } = e,
-        h = (0, i.e7)([p.default], () => p.default.getCurrentUser()),
+n.d(r, { Z: () => m });
+var t = n(255367);
+n(73800);
+var i = n(442837),
+    o = n(159691),
+    a = n(481060),
+    l = n(607070),
+    s = n(906732),
+    C = n(821982),
+    d = n(832149),
+    c = n(600164),
+    p = n(286961),
+    u = n(594174),
+    _ = n(27034),
+    x = n(215023),
+    f = n(317112);
+function m(e) {
+    let { onClose: r, selectedPromotionalDecoPurchaseRecord: n, selectedGiftingPromotionReward: m } = e,
+        h = (0, i.e7)([u.default], () => u.default.getCurrentUser()),
         j = (0, i.e7)([l.Z], () => l.Z.useReducedMotion),
         { analyticsLocations: L } = (0, s.ZP)(),
-        b = a.EFr.SIZE_32,
-        g = (0, d.Z)(null == x ? void 0 : x.assetId, b, !j),
-        y = (0, u.Z)(),
+        g = a.EFr.SIZE_32,
+        b = (0, C.Z)(null == m ? void 0 : m.assetId, g, !j),
+        y = (0, p.Z)(),
         S = null == y ? void 0 : y.giftPurchaseConfirmation;
-    return null == r || null == S
+    return null == n || null == S
         ? null
-        : (0, n.jsx)(_.O3, {
-              children: (0, n.jsx)(a.mzw, {
+        : (0, t.jsx)(_.O3, {
+              children: (0, t.jsx)(a.mzw, {
                   align: c.Z.Align.CENTER,
                   "data-migration-pending": !0,
-                  children: (0, n.jsxs)("div", {
-                      className: m.promotionalFooter,
+                  children: (0, t.jsxs)("div", {
+                      className: f.promotionalFooter,
                       children: [
-                          (0, n.jsx)(a.Xo$, {
+                          (0, t.jsx)(a.Xo$, {
                               "aria-label": null == h ? void 0 : h.username,
-                              size: b,
-                              src: null == h ? void 0 : h.getAvatarURL(void 0, (0, a.pxk)(b), !j),
-                              avatarDecoration: g,
+                              size: g,
+                              src: null == h ? void 0 : h.getAvatarURL(void 0, (0, a.pxk)(g), !j),
+                              avatarDecoration: b,
                           }),
-                          (0, n.jsx)(o.zx, {
+                          (0, t.jsx)(o.zx, {
                               variant: "primary",
                               text: S.collectRewardButtonText(),
                               onClick: () => {
-                                  t(),
-                                      (0, C.Z)({
-                                          product: r,
+                                  r(),
+                                      (0, d.Z)({
+                                          product: n,
                                           shouldShowPromotionalExperience: !0,
                                           analyticsLocations: L,
-                                          purchaseType: f.o8.PROMOTIONAL,
+                                          purchaseType: x.o8.PROMOTIONAL,
                                       });
                               },
                           }),

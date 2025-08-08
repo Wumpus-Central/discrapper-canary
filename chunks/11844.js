@@ -1,20 +1,17 @@
-n.d(t, { Z: () => j });
+n.d(t, { Z: () => b });
 var i = n(255367),
     r = n(73800),
-    s = n(399606),
-    a = n(755721),
-    l = n(481060),
-    o = n(906732),
-    c = n(975298),
-    d = n(125529),
-    u = n(879892),
-    m = n(124570),
-    p = n(594174),
-    g = n(267642),
-    h = n(981631),
-    f = n(388032),
-    b = n(122039);
-function x(e) {
+    s = n(755721),
+    a = n(481060),
+    l = n(906732),
+    o = n(975298),
+    c = n(125529),
+    d = n(879892),
+    u = n(267642),
+    m = n(981631),
+    p = n(388032),
+    g = n(122039);
+function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -39,7 +36,7 @@ function x(e) {
     }
     return e;
 }
-function _(e, t) {
+function f(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -57,72 +54,70 @@ function _(e, t) {
         e
     );
 }
-let j = function () {
+let b = function () {
     let e = r.useRef(null),
-        { analyticsLocations: t } = (0, o.ZP)(),
-        j = (0, s.e7)([p.default], () => p.default.getCurrentUser()),
-        { fractionalState: E } = (0, c.Z)(),
-        C = (0, m.y)("guild_boosting_boost_cta", j, E);
-    function O(n) {
-        null != e.current && (0, l.Mr3)(e.current),
-            (0, u.u)({
+        { analyticsLocations: t } = (0, l.ZP)(),
+        { fractionalState: b } = (0, o.Z)();
+    function x(n) {
+        null != e.current && (0, a.Mr3)(e.current),
+            (0, d.u)({
                 analyticsLocation: {
-                    page: h.ZY5.GUILD_BOOSTING_USER_SETTINGS,
-                    section: h.jXE.GUILD_BOOSTING_BOOST_ANY_GUILD_CTA,
-                    object: h.qAy.BUTTON_CTA,
-                    objectType: h.Qqv.BUY,
+                    page: m.ZY5.GUILD_BOOSTING_USER_SETTINGS,
+                    section: m.jXE.GUILD_BOOSTING_BOOST_ANY_GUILD_CTA,
+                    object: m.qAy.BUTTON_CTA,
+                    objectType: m.Qqv.BUY,
                 },
                 analyticsLocations: t,
                 guild: n,
             });
     }
-    async function v() {
-        e.current = await (0, l.ZDy)(
+    async function _() {
+        e.current = await (0, a.ZDy)(
             async () => {
                 let { default: e } = await Promise.resolve().then(n.bind(n, 719228));
-                return (t) => (0, i.jsx)(e, _(x({}, t), { onSelectGuild: O }));
+                return (t) => (0, i.jsx)(e, f(h({}, t), { onSelectGuild: x }));
             },
             {
                 onCloseRequest: () => {
-                    null != e.current && (0, l.Mr3)(e.current);
+                    null != e.current && (0, a.Mr3)(e.current);
                 },
             },
         );
     }
-    let S = (0, g.aq)({ isBoostManagementDisabledForFractionalPremium: C });
+    let j = (0, u.aq)({ fractionalState: b });
     return (0, i.jsxs)("div", {
-        className: b.wrapper,
+        className: g.wrapper,
         children: [
-            (0, i.jsx)(l.$Eu, {
-                color: l.TVs.unsafe_rawColors.GUILD_BOOSTING_PINK,
-                className: b.boostIcon,
+            (0, i.jsx)(a.$Eu, {
+                color: a.TVs.unsafe_rawColors.GUILD_BOOSTING_PINK,
+                className: g.boostIcon,
             }),
-            (0, i.jsx)(l.Text, {
-                className: b.copy,
+            (0, i.jsx)(a.Text, {
+                className: g.copy,
                 color: "header-secondary",
                 variant: "text-sm/medium",
-                children: f.intl.format(f.t.kqC5vr, {
+                children: p.intl.format(p.t.kqC5vr, {
                     boostAnyGuildHook: (e, t) => {
-                        let n = null != S,
+                        let n = null != j,
                             r = (0, i.jsx)(
-                                a.zx,
+                                s.zx,
                                 {
-                                    className: b.cta,
+                                    className: g.cta,
                                     disabled: n,
-                                    color: a.zx.Colors.LINK,
-                                    look: a.zx.Looks.LINK,
-                                    onClick: n ? void 0 : v,
+                                    color: s.zx.Colors.LINK,
+                                    look: s.zx.Looks.LINK,
+                                    onClick: n ? void 0 : _,
                                     children: e,
                                 },
                                 t,
                             );
                         return n
                             ? (0, i.jsx)(
-                                  d.Z,
+                                  c.Z,
                                   {
-                                      text: S,
-                                      "aria-label": S.toString(),
-                                      children: (e) => (0, i.jsx)("span", _(x({}, e), { children: r })),
+                                      text: j,
+                                      "aria-label": j.toString(),
+                                      children: (e) => (0, i.jsx)("span", f(h({}, e), { children: r })),
                                   },
                                   t,
                               )

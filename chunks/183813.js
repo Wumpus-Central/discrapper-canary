@@ -1,72 +1,72 @@
-r.d(t, { S: () => b });
-var n = r(255367),
-    i = r(73800),
-    o = r(512722),
-    a = r.n(o),
-    l = r(442837),
-    s = r(481060),
-    d = r(204418),
-    C = r(628952),
-    c = r(314404),
-    u = r(594174),
-    p = r(626135),
-    _ = r(987209),
-    f = r(563132),
-    m = r(409813),
-    x = r(27034),
-    h = r(981631),
-    j = r(388032),
-    L = r(529190);
-function b(e) {
-    let { handleStepChange: t, handleClose: r } = e,
-        { selectedPlan: o, selectedSkuId: b, step: g } = (0, f.JL)(),
-        { setSelectedGiftingPromotionReward: y, selectedGiftingPromotionReward: S, claimableRewards: E } = (0, _.wD)(),
-        v = (0, l.e7)([u.default], () => u.default.getCurrentUser());
+n.d(r, { S: () => g });
+var t = n(255367),
+    i = n(73800),
+    o = n(512722),
+    a = n.n(o),
+    l = n(442837),
+    s = n(481060),
+    C = n(204418),
+    d = n(628952),
+    c = n(314404),
+    p = n(594174),
+    u = n(626135),
+    _ = n(987209),
+    x = n(563132),
+    f = n(409813),
+    m = n(27034),
+    h = n(981631),
+    j = n(388032),
+    L = n(529190);
+function g(e) {
+    let { handleStepChange: r, handleClose: n } = e,
+        { selectedPlan: o, selectedSkuId: g, step: b } = (0, x.JL)(),
+        { setSelectedGiftingPromotionReward: y, selectedGiftingPromotionReward: S, claimableRewards: v } = (0, _.wD)(),
+        E = (0, l.e7)([p.default], () => p.default.getCurrentUser());
     i.useEffect(() => {
-        let e = null != E && E.length > 0;
-        null == S && e && y(E[0]);
-    }, [E, S, y]);
+        let e = null != v && v.length > 0;
+        null == S && e && y(v[0]);
+    }, [v, S, y]);
     let I = (e) => {
-        let t = e.skuId;
-        return (0, n.jsx)(
-            C.Z,
+        let r = e.skuId;
+        return (0, t.jsx)(
+            d.Z,
             {
-                skuId: t,
+                skuId: r,
                 price: j.intl.string(j.t.QQsaCQ),
-                isSelected: t === (null == S ? void 0 : S.skuId),
+                isSelected: r === (null == S ? void 0 : S.skuId),
                 onSelect: () => y(e),
                 className: L.giftSelectItem,
             },
-            t,
+            r,
         );
     };
     a()(null != o, "Expected plan to selected"),
-        a()(null != b, "Expected selectedSkuId"),
-        a()(null != g, "Step should be set");
-    let w = null == E ? void 0 : E.map((e) => I(e)),
-        O =
-            null != S && null != v
-                ? (0, n.jsx)(d.Z, {
+        a()(null != g, "Expected selectedSkuId"),
+        a()(null != b, "Step should be set");
+    let P = null == v ? void 0 : v.map((e) => I(e)),
+        T =
+            null != S && null != E
+                ? (0, t.jsx)(C.Z, {
                       avatarDecorationOverride: { asset: S.assetId },
-                      user: v,
+                      user: E,
                       guildId: null,
                       avatarSize: s.EFr.SIZE_152,
                   })
                 : null,
-        P = (0, n.jsx)(x.O3, {
-            children: (0, n.jsx)(s.mzw, {
+        O = (0, t.jsx)(m.O3, {
+            children: (0, t.jsx)(s.mzw, {
                 className: L.modalFooter,
-                children: (0, n.jsx)(c.y, {
+                children: (0, t.jsx)(c.y, {
                     onStepChange: (e) => {
-                        null != v &&
+                        null != E &&
                             null != S &&
-                            p.default.track(h.rMx.GIFT_PROMOTION_REWARD_SELECTED, {
-                                user_id: v.id,
+                            u.default.track(h.rMx.GIFT_PROMOTION_REWARD_SELECTED, {
+                                user_id: E.id,
                                 reward_sku_id: S.skuId,
                             }),
-                            t(e);
+                            r(e);
                     },
-                    onBackClick: () => t(m.h8.PLAN_SELECT),
+                    onBackClick: () => r(f.h8.PLAN_SELECT),
                     shouldRenderUpdatedPaymentModal: !0,
                     showBackButton: !0,
                     planOptions: [o.id],
@@ -74,38 +74,38 @@ function b(e) {
                 }),
             }),
         }),
-        M = (0, n.jsx)(s.X6q, {
+        w = (0, t.jsx)(s.X6q, {
             variant: "heading-lg/bold",
             color: "header-primary",
             children: j.intl.string(j.t["Rp0+ZG"]),
         });
-    return (0, n.jsxs)("div", {
+    return (0, t.jsxs)("div", {
         className: L.container,
         children: [
-            (0, n.jsx)(s.xBx, {
-                children: (0, n.jsxs)(s.Kqy, {
+            (0, t.jsx)(s.xBx, {
+                children: (0, t.jsxs)(s.Kqy, {
                     direction: "horizontal",
                     justify: "space-between",
                     align: "center",
-                    children: [M, (0, n.jsx)(s.olH, { onClick: r })],
+                    children: [w, (0, t.jsx)(s.olH, { onClick: n })],
                 }),
             }),
-            (0, n.jsx)(s.hzk, {
-                children: (0, n.jsxs)(s.Kqy, {
+            (0, t.jsx)(s.hzk, {
+                children: (0, t.jsxs)(s.Kqy, {
                     gap: 24,
                     align: "center",
                     padding: { top: 24 },
                     children: [
-                        O,
-                        (0, n.jsx)(s.Kqy, {
+                        T,
+                        (0, t.jsx)(s.Kqy, {
                             gap: 8,
                             padding: { top: 12 },
-                            children: w,
+                            children: P,
                         }),
                     ],
                 }),
             }),
-            P,
+            O,
         ],
     });
 }

@@ -86,23 +86,24 @@ function O(e, t) {
         [a, s] = i.useState(n),
         [o, c] = i.useState(""),
         u = i.useMemo(() => {
-            let i = p.Z.getFilterResults(e, t, o);
-            if (0 === i.length) return [];
-            let s = [],
-                c = new Set();
-            if (
-                (i.forEach((e) => {
-                    let t = e.user,
-                        n = j({
-                            user: t,
-                            guildId: r,
-                            channelId: l,
-                        });
-                    c.add(t.id), s.push(n);
-                }),
+            let n = p.Z.getFilterResults(e, t, o);
+            if (0 === n.length && 0 === a.length) return [];
+            let i = [],
+                s = new Set();
+            return (
+                n.length > 0 &&
+                    n.forEach((e) => {
+                        let t = e.user,
+                            n = j({
+                                user: t,
+                                guildId: r,
+                                channelId: l,
+                            });
+                        s.add(t.id), i.push(n);
+                    }),
                 a.length > 0 &&
                     a.forEach((e) => {
-                        if (c.has(e)) return;
+                        if (s.has(e)) return;
                         let t = d.default.getUser(e);
                         if (null == t) return;
                         let n = j({
@@ -110,27 +111,11 @@ function O(e, t) {
                             guildId: r,
                             channelId: l,
                         });
-                        s.unshift(n);
+                        s.add(e), i.unshift(n);
                     }),
-                n.length > 0)
-            ) {
-                let e = [];
-                n.forEach((t) => {
-                    if (c.has(t)) return;
-                    let n = d.default.getUser(t);
-                    if (null == n) return;
-                    c.add(t);
-                    let i = j({
-                        user: n,
-                        guildId: r,
-                        channelId: l,
-                    });
-                    e.push(i);
-                }),
-                    s.push(...e);
-            }
-            return s;
-        }, [e, t, o, n, a, r, l]),
+                i
+            );
+        }, [e, t, o, a, r, l]),
         h = i.useCallback(() => {
             s([]), c("");
         }, []),
@@ -195,42 +180,33 @@ function C(e) {
         key: t.id,
     };
 }
-function E(e, t) {
-    let [n, r] = i.useState(t),
+function E(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [],
+        [n, r] = i.useState(t),
         [l, a] = i.useState(""),
         s = i.useMemo(() => {
-            let r = p.Z.getFilterResults(e, b.dCx.FILTER_IN, l);
-            if (0 === r.length) return [];
-            let i = [],
-                a = new Set();
-            if (
-                (r.forEach((e) => {
-                    let t = e.channel,
-                        n = C({ channel: t });
-                    a.add(t.id), i.push(n);
-                }),
+            let t = p.Z.getFilterResults(e, b.dCx.FILTER_IN, l);
+            if (0 === t.length && 0 === n.length) return [];
+            let r = [],
+                i = new Set();
+            return (
+                t.length > 0 &&
+                    t.forEach((e) => {
+                        let t = e.channel,
+                            n = C({ channel: t });
+                        i.add(t.id), r.push(n);
+                    }),
                 n.length > 0 &&
                     n.forEach((e) => {
-                        if (a.has(e)) return;
+                        if (i.has(e)) return;
                         let t = u.Z.getChannel(e);
                         if (null == t) return;
                         let n = C({ channel: t });
-                        i.unshift(n);
+                        i.add(e), r.unshift(n);
                     }),
-                t.length > 0)
-            ) {
-                let e = [];
-                t.forEach((t) => {
-                    if (a.has(t)) return;
-                    let n = u.Z.getChannel(t);
-                    if (null == n) return;
-                    let r = C({ channel: n });
-                    e.push(r);
-                }),
-                    i.push(...e);
-            }
-            return i;
-        }, [e, l, t, n]),
+                r
+            );
+        }, [e, l, n]),
         o = i.useCallback(() => {
             r([]), a("");
         }, []),

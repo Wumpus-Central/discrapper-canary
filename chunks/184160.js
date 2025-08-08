@@ -1,62 +1,62 @@
-r.d(t, { x: () => x });
-var n = r(255367);
-r(73800);
-var i = r(512722),
-    o = r.n(i),
-    a = r(780384),
-    l = r(755721),
-    s = r(410030),
-    d = r(807163),
-    C = r(74538),
-    c = r(987209),
-    u = r(563132),
-    p = r(409813),
-    _ = r(614223),
-    f = r(388032),
-    m = r(959803);
-function x(e) {
-    let { handleStepChange: t, handleClose: r } = e,
+n.d(r, { x: () => m });
+var t = n(255367);
+n(73800);
+var i = n(512722),
+    o = n.n(i),
+    a = n(780384),
+    l = n(755721),
+    s = n(410030),
+    C = n(807163),
+    d = n(74538),
+    c = n(987209),
+    p = n(563132),
+    u = n(409813),
+    _ = n(614223),
+    x = n(388032),
+    f = n(959803);
+function m(e) {
+    let { handleStepChange: r, handleClose: n } = e,
         i = (0, s.ZP)(),
         {
-            activeSubscription: x,
+            activeSubscription: m,
             selectedSkuId: h,
             setSelectedPlanId: j,
             startedPaymentFlowWithPaymentSourcesRef: L,
-        } = (0, u.JL)(),
-        { isGift: b } = (0, c.wD)(),
-        g = null != x ? (0, C.Af)(x) : null,
-        y = null != g ? (0, C.gq)(g.planId) : null,
-        S = null != g ? (0, C.Rd)(g.planId) : null,
-        E = (0, _.Kp)({
+        } = (0, p.JL)(),
+        { isGift: g } = (0, c.wD)(),
+        b = null != m ? (0, d.Af)(m) : null,
+        y = null != b ? (0, d.gq)(b.planId) : null,
+        S = null != b ? (0, d.Rd)(b.planId) : null,
+        v = (0, _.Kp)({
             isTrial: !1,
-            isGift: b,
+            isGift: g,
             selectedSkuId: h,
             startedPaymentFlowWithPaymentSources: L.current,
         });
     return (
         o()(null != S, "Expected premium type"),
-        (0, n.jsx)(d.Z, {
+        (0, t.jsx)(C.Z, {
             premiumType: S,
-            titleText: f.intl.string(f.t["7VcWW1"]),
-            subtitleText: f.intl.format(f.t.Qk34Ii, { subscriptionName: y }),
-            footer: (0, n.jsxs)("div", {
-                className: m.whatYouLoseButtonContainer,
+            titleText: x.intl.string(x.t["7VcWW1"]),
+            subtitleText: x.intl.format(x.t.Qk34Ii, { subscriptionName: y }),
+            footer: (0, t.jsxs)("div", {
+                className: f.whatYouLoseButtonContainer,
                 children: [
-                    (0, n.jsx)(l.zx, {
+                    (0, t.jsx)(l.zx, {
                         onClick: () => {
-                            E ? (j((0, _.nA)(h, x)), t(p.h8.REVIEW)) : t(p.h8.PLAN_SELECT);
+                            v ? (j((0, _.nA)(h, m)), r(u.h8.REVIEW)) : r(u.h8.PLAN_SELECT);
                         },
-                        children: f.intl.string(f.t["3PatS0"]),
+                        children: x.intl.string(x.t["3PatS0"]),
                     }),
-                    (0, n.jsx)(l.zx, {
+                    (0, t.jsx)(l.zx, {
                         look: l.zx.Looks.LINK,
                         color: (0, a.wj)(i) ? l.zx.Colors.WHITE : l.zx.Colors.PRIMARY,
-                        onClick: r,
-                        children: f.intl.string(f.t.h9tkAA),
+                        onClick: n,
+                        children: x.intl.string(x.t.h9tkAA),
                     }),
                 ],
             }),
-            onClose: r,
+            onClose: n,
             isDowngrade: !0,
         })
     );

@@ -1,65 +1,62 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => f });
 var r = n(442837),
-    i = n(975298),
-    o = n(301766),
-    a = n(594174),
-    s = n(78839),
-    l = n(74538),
-    c = n(502087),
-    u = n(404380),
-    d = n(474936),
-    f = n(981631),
-    _ = n(388032);
-function p(e) {
-    let { subscriptionTier: t, buttonTextOverride: n, defaultTextOverride: p } = e,
-        m = (0, r.e7)([a.default], () => a.default.getCurrentUser()),
-        g = (0, r.e7)([s.Z], () => s.Z.getPremiumTypeSubscription()),
-        { fractionalState: E } = (0, i.Z)({ forceFetch: !1 }),
-        b = (0, r.e7)([c.Z], () => c.Z.getPremiumTypeOverride()),
-        y = null != p ? p : _.intl.string(_.t["2pG5GR"]),
-        O = null != g ? (0, l.Af)(g) : null,
-        v = void 0 !== b ? b : null != O ? (0, l.Rd)(O.planId) : null == m ? void 0 : m.premiumType,
-        I = t === d.Si.TIER_2 && null != v && [d.p9.TIER_0, d.p9.TIER_1].includes(v);
-    I && (y = _.intl.string(_.t.IJI7ys));
-    let T = (null != g && (0, l.m3)(g)) || (null != g && (0, u.o)("PremiumSubscribeButton", m, E));
-    if (!((null != g && g.status !== f.O0b.ACCOUNT_HOLD && !(0, o.Q0)(g.planId) && !I && void 0 === b) || T))
-        return { buttonText: null != n ? n : y };
+    i = n(301766),
+    o = n(594174),
+    a = n(78839),
+    s = n(74538),
+    l = n(502087),
+    c = n(474936),
+    u = n(981631),
+    d = n(388032);
+function f(e) {
+    let { subscriptionTier: t, buttonTextOverride: n, defaultTextOverride: f } = e,
+        p = (0, r.e7)([o.default], () => o.default.getCurrentUser()),
+        h = (0, r.e7)([a.Z], () => a.Z.getPremiumTypeSubscription()),
+        m = (0, r.e7)([l.Z], () => l.Z.getPremiumTypeOverride()),
+        g = null != f ? f : d.intl.string(d.t["2pG5GR"]),
+        E = null != h ? (0, s.Af)(h) : null,
+        b = void 0 !== m ? m : null != E ? (0, s.Rd)(E.planId) : null == p ? void 0 : p.premiumType,
+        y = t === c.Si.TIER_2 && null != b && [c.p9.TIER_0, c.p9.TIER_1].includes(b);
+    y && (g = d.intl.string(d.t.IJI7ys));
+    let O = null != h && (0, s.m3)(h);
+    if (!((null != h && h.status !== u.O0b.ACCOUNT_HOLD && !(0, i.Q0)(h.planId) && !y && void 0 === m) || O))
+        return { buttonText: null != n ? n : g };
     {
-        var S, A;
-        let e = h({
+        var v, I;
+        let e = _({
             ctaSubscriptionSkuId: t,
-            currentPremiumType: v,
-            isSwitchingDisabled: T,
-            subscription: g,
+            currentPremiumType: b,
+            isSwitchingDisabled: O,
+            subscription: h,
         });
         return {
-            buttonText: null != (A = null != (S = e.disabledButtonText) ? S : n) ? A : y,
+            buttonText: null != (I = null != (v = e.disabledButtonText) ? v : n) ? I : g,
             buttonTooltipText: e.disabledButtonTooltipText,
             disabled: !0,
         };
     }
 }
-function h(e) {
+function _(e) {
     let t,
         n,
         { ctaSubscriptionSkuId: r, currentPremiumType: i, isSwitchingDisabled: o, subscription: a } = e;
-    if (null != r && r !== d.Si.LEGACY && r !== d.Si.TIER_0 && r !== d.Si.TIER_1 && r !== d.Si.TIER_2)
+    if (null != r && r !== c.Si.LEGACY && r !== c.Si.TIER_0 && r !== c.Si.TIER_1 && r !== c.Si.TIER_2)
         return {
             disabledButtonText: t,
             disabledButtonTooltipText: n,
         };
-    let s = null != r ? d.y7[(0, l.Wz)(r)] : null,
-        c = null != s ? d.$e[s] : null,
-        u = null != i ? d.$e[i] : null;
+    let l = null != r ? c.y7[(0, s.Wz)(r)] : null,
+        u = null != l ? c.$e[l] : null,
+        f = null != i ? c.$e[i] : null;
     if (o) {
-        var f;
-        n = null != (f = (0, l.nd)(a)) ? f : void 0;
+        var _;
+        n = null != (_ = (0, s.nd)(a)) ? _ : void 0;
     } else
-        null != u && null != c && c < u
-            ? ((t = _.intl.string(_.t["2pG5GR"])), (n = _.intl.string(_.t.jXaaRk)))
-            : null != s && null != i && s === i
-              ? ((t = _.intl.string(_.t.ymSxh4)), (n = _.intl.string(_.t.jXaaRk)))
-              : null == s && null != i && i === d.p9.TIER_2 && (n = _.intl.string(_.t.jXaaRk));
+        null != f && null != u && u < f
+            ? ((t = d.intl.string(d.t["2pG5GR"])), (n = d.intl.string(d.t.jXaaRk)))
+            : null != l && null != i && l === i
+              ? ((t = d.intl.string(d.t.ymSxh4)), (n = d.intl.string(d.t.jXaaRk)))
+              : null == l && null != i && i === c.p9.TIER_2 && (n = d.intl.string(d.t.jXaaRk));
     return {
         disabledButtonText: t,
         disabledButtonTooltipText: n,

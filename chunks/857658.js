@@ -99,23 +99,23 @@ function w(e) {
         style: s,
         children: t.map((e, t) => {
             let s = a[t],
-                l = t === n;
+                c = t === n;
             return (0, r.jsxs)(
                 i.Fragment,
                 {
                     children: [
                         (0, r.jsx)(p.P3F, {
-                            className: O.colorCircle,
+                            className: l()(O.colorSquare, { [O.selected]: c }),
                             style: {
                                 left: "".concat(s, "%"),
                                 backgroundColor: e,
                             },
                             onClick: () => o(t),
-                            children: (0, r.jsx)("div", { className: O.colorCircleInner }),
+                            children: (0, r.jsx)("div", { className: O.colorSquareInner }),
                         }),
-                        l &&
+                        c &&
                             (0, r.jsx)("div", {
-                                className: O.colorCircleSelectedTriangle,
+                                className: O.colorSquareSelectedTriangle,
                                 style: { left: "".concat(s, "%") },
                             }),
                     ],

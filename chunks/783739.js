@@ -1,4 +1,4 @@
-n.d(t, { Z: () => I });
+n.d(t, { Z: () => S });
 var i = n(255367),
     r = n(73800),
     s = n(442837),
@@ -7,86 +7,79 @@ var i = n(255367),
     o = n(724884),
     c = n(290799),
     d = n(362948),
-    u = n(124570),
-    m = n(899667),
-    p = n(165630),
-    g = n(771845),
-    h = n(594174),
-    f = n(314884),
-    b = n(74538),
-    x = n(199778),
-    _ = n(296533),
-    j = n(901750),
-    E = n(112863),
-    C = n(701157),
-    O = n(912152),
-    v = n(615603),
-    S = n(474936),
-    T = n(551084);
-function I(e) {
+    u = n(899667),
+    m = n(165630),
+    p = n(771845),
+    g = n(594174),
+    h = n(314884),
+    f = n(74538),
+    b = n(296533),
+    x = n(901750),
+    _ = n(112863),
+    j = n(701157),
+    E = n(912152),
+    C = n(615603),
+    O = n(474936),
+    v = n(551084);
+function S(e) {
     let { premiumSubscription: t } = e,
-        n = (0, s.e7)([f.Z], () => f.Z.boostSlots),
-        I = r.useMemo(() => Object.values(n), [n]),
-        N = (0, s.e7)([h.default], () => h.default.getCurrentUser()),
-        y = b.ZP.isPremium(N, S.p9.TIER_2),
-        A = (0, s.e7)([p.Z], () => p.Z.affinities),
-        P = (0, s.e7)([g.ZP], () => g.ZP.getFlattenedGuildIds()),
-        R = A.length > 0 || P.length > 0,
-        D = I.length > 0,
-        Z = r.useMemo(() => I.filter((e) => null != e.premiumGuildSubscription), [I]),
-        w = Z.length > 0,
-        k = I.length > Z.length,
-        L = (0, s.e7)([m.Z], () => m.Z.getCurrentUserAppliedBoosts()),
-        { fractionalState: M } = (0, a.Z)({ forceFetch: !0 }),
-        B = (null == t ? void 0 : t.isPausedOrPausePending) === !0 && M === S.a$.NONE,
-        U = (null == t ? void 0 : t.isPausedOrPausePending) !== !0 && M === S.a$.NONE,
-        V = y && M === S.a$.FP_SUB_PAUSED;
+        n = (0, s.e7)([h.Z], () => h.Z.boostSlots),
+        S = r.useMemo(() => Object.values(n), [n]),
+        T = (0, s.e7)([g.default], () => g.default.getCurrentUser()),
+        I = f.ZP.isPremium(T, O.p9.TIER_2),
+        N = (0, s.e7)([m.Z], () => m.Z.affinities),
+        y = (0, s.e7)([p.ZP], () => p.ZP.getFlattenedGuildIds()),
+        A = N.length > 0 || y.length > 0,
+        P = S.length > 0,
+        R = r.useMemo(() => S.filter((e) => null != e.premiumGuildSubscription), [S]),
+        D = R.length > 0,
+        Z = S.length > R.length,
+        w = (0, s.e7)([u.Z], () => u.Z.getCurrentUserAppliedBoosts()),
+        { fractionalState: k } = (0, a.Z)({ forceFetch: !0 }),
+        L = (null == t ? void 0 : t.isPausedOrPausePending) === !0 && k === O.a$.NONE,
+        M = (null == t ? void 0 : t.isPausedOrPausePending) !== !0 && k === O.a$.NONE,
+        B = I && k === O.a$.FP_SUB_PAUSED;
     return (0, i.jsxs)("div", {
         children: [
-            (0, i.jsx)(l.oQ, { className: T.blockedPaymentsWarning }),
-            (0, i.jsx)(j.Z, {
-                hasGuildBoostSlots: D,
-                hasAppliedGuildBoosts: w,
-                hasBoostPerk: V,
-                canAddBoosts: U,
-            }),
-            !(0, u.y)("guild_boosting_settings", N, M) &&
-                (0, i.jsx)(O.Z, {
-                    hasAppliedGuildBoosts: w,
-                    hasBoostPerk: V,
-                    hasGuildAffinitiesOrInGuild: R,
-                    subscriptionIsPausedOrPausePending: B,
-                }),
+            (0, i.jsx)(l.oQ, { className: v.blockedPaymentsWarning }),
             (0, i.jsx)(x.Z, {
-                hide: k,
-                containerClassName: T.FPContainer,
-                pillClassName: T.FPPill,
+                hasGuildBoostSlots: P,
+                hasAppliedGuildBoosts: D,
+                hasBoostPerk: B,
+                canAddBoosts: M,
             }),
-            !R && (0, i.jsx)(E.Z, {}),
-            (null == t ? void 0 : t.isPaused) && M !== S.a$.FP_SUB_PAUSED
-                ? (0, i.jsx)(_.r, {
-                      appliedGuildBoosts: L,
+            k === O.a$.NONE &&
+                (0, i.jsx)(E.Z, {
+                    hasAppliedGuildBoosts: D,
+                    hasBoostPerk: B,
+                    hasGuildAffinitiesOrInGuild: A,
+                    subscriptionIsPausedOrPausePending: L,
+                }),
+            !A && (0, i.jsx)(_.Z, {}),
+            (null == t ? void 0 : t.isPaused) && k !== O.a$.FP_SUB_PAUSED
+                ? (0, i.jsx)(b.r, {
+                      appliedGuildBoosts: w,
                       premiumSubscription: t,
                   })
-                : (0, i.jsx)(_.Z, {
+                : (0, i.jsx)(b.Z, {
                       guildBoostSlots: n,
                       premiumSubscription: t,
                   }),
-            (0, i.jsx)(v.Z, {
-                guildBoostSlots: I,
-                fractionalPremiumState: M,
-            }),
             (0, i.jsx)(C.Z, {
-                canAddBoosts: w && U,
-                canApplyBoosts: k,
+                guildBoostSlots: S,
+                fractionalPremiumState: k,
+            }),
+            (0, i.jsx)(j.Z, {
+                canAddBoosts: D && M,
+                canApplyBoosts: Z,
             }),
             (0, i.jsx)(d.Z, {
-                className: T.tierComparisonTable,
+                className: v.tierComparisonTable,
                 hideHeading: !0,
                 hideTier0: !0,
             }),
-            (0, i.jsx)(o.Z, { cardClassName: T.boosterRecognitionCard }),
-            (0, i.jsx)(c.Z, { className: T.faq }),
+            (0, i.jsx)(o.Z, { cardClassName: v.boosterRecognitionCard }),
+            (0, i.jsx)(c.Z, { className: v.faq }),
         ],
     });
 }
