@@ -27,6 +27,7 @@ var r = {
     headerTitle: "headerTitle__53cea",
     headerBadge: "headerBadge__53cea",
     body: "body__53cea",
+    bodyList: "bodyList__53cea",
     bodySpacerTop: "bodySpacerTop__53cea",
     bodySpacerTopBorder: "bodySpacerTopBorder__53cea",
     bodySpacerBottom: "bodySpacerBottom__53cea",

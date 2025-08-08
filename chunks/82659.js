@@ -80,13 +80,33 @@ function p(e, t) {
     return i;
 }
 function h(e) {
-    var { size: t, title: n, subtitle: c, input: d, preview: p, actions: h, actionBarInput: m, children: g } = e,
-        E = _(e, ["size", "title", "subtitle", "input", "preview", "actions", "actionBarInput", "children"]);
-    let b = null != t ? t : null != d || null != g ? "md" : "sm";
+    var {
+            size: t,
+            title: n,
+            subtitle: c,
+            input: d,
+            preview: p,
+            actions: h,
+            actionBarInput: m,
+            listProps: g,
+            children: E,
+        } = e,
+        b = _(e, [
+            "size",
+            "title",
+            "subtitle",
+            "input",
+            "preview",
+            "actions",
+            "actionBarInput",
+            "listProps",
+            "children",
+        ]);
+    let y = null != t ? t : null != d || null != E || null != g ? "md" : "sm";
     return (0, r.jsxs)(
         i.I,
-        f(u({}, E), {
-            size: b,
+        f(u({}, b), {
+            size: y,
             children: [
                 (0, r.jsx)(l.x, {
                     title: n,
@@ -94,7 +114,8 @@ function h(e) {
                 }),
                 (0, r.jsx)(a.f, {
                     controls: d,
-                    children: g,
+                    listProps: g,
+                    children: E,
                 }),
                 (0, r.jsx)(s.m, { children: p }),
                 (0, r.jsx)(o.G, {

@@ -75,6 +75,7 @@ let v = i.memo(function (e) {
             [O.showEffect]: s !== g.F.PLAIN,
             [O.animated]: s === g.F.ANIMATED && !C,
             [O.loop]: S,
+            [O.inProfile]: v,
         }),
         style: G,
         children: [
