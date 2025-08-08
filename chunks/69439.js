@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y }), n(388685);
+n.d(t, { Z: () => O }), n(388685);
 var r = n(255367),
     s = n(73800),
     o = n(442837),
@@ -11,323 +11,336 @@ var r = n(255367),
     p = n(113434),
     m = n(569984),
     g = n(497505),
-    f = n(110560),
-    x = n(667105),
-    h = n(46140),
-    j = n(388032),
-    _ = n(142468);
-let b = [
+    f = n(530691),
+    x = n(110560),
+    h = n(667105),
+    j = n(46140),
+    _ = n(388032),
+    b = n(142468);
+let v = [
     {
-        value: h.cd.DESKTOP,
+        value: j.cd.DESKTOP,
         get label() {
-            return j.intl.string(j.t.QXc019);
+            return _.intl.string(_.t.QXc019);
         },
     },
     {
-        value: h.cd.CONSOLE,
+        value: j.cd.CONSOLE,
         get label() {
-            return j.intl.string(j.t["8lAfuL"]);
+            return _.intl.string(_.t["8lAfuL"]);
         },
     },
 ];
-function v(e) {
+function C(e) {
     let t,
         n,
         { value: s } = e;
     switch (s) {
-        case h.cd.DESKTOP:
-            (n = (0, r.jsx)(i.pzj, {})), (t = j.intl.string(j.t.QXc019));
+        case j.cd.DESKTOP:
+            (n = (0, r.jsx)(i.pzj, {})), (t = _.intl.string(_.t.QXc019));
             break;
-        case h.cd.CONSOLE:
-            (n = (0, r.jsx)(i.iWm, {})), (t = j.intl.string(j.t["8lAfuL"]));
+        case j.cd.CONSOLE:
+            (n = (0, r.jsx)(i.iWm, {})), (t = _.intl.string(_.t["8lAfuL"]));
             break;
         default:
             return null;
     }
     return (0, r.jsxs)("div", {
-        className: _.platformSelectorPrimaryLabel,
+        className: b.platformSelectorPrimaryLabel,
         children: [n, t],
     });
 }
-function C(e) {
+function y(e) {
     if (0 === e.length) return null;
     switch (e[0].value) {
-        case h.cd.DESKTOP:
+        case j.cd.DESKTOP:
             return (0, r.jsxs)("span", {
-                className: _.platformSelectorPrimaryLabel,
-                children: [(0, r.jsx)(i.pzj, {}), j.intl.string(j.t["g6Dr4+"])],
+                className: b.platformSelectorPrimaryLabel,
+                children: [(0, r.jsx)(i.pzj, {}), _.intl.string(_.t["g6Dr4+"])],
             });
-        case h.cd.CONSOLE:
+        case j.cd.CONSOLE:
             return (0, r.jsxs)("span", {
-                className: _.platformSelectorPrimaryLabel,
-                children: [(0, r.jsx)(i.iWm, {}), j.intl.string(j.t.iyNbj4)],
+                className: b.platformSelectorPrimaryLabel,
+                children: [(0, r.jsx)(i.iWm, {}), _.intl.string(_.t.iyNbj4)],
             });
         default:
             return (0, c.vE)(e[0].value);
     }
 }
-function y(e) {
-    var t, n, y, O;
+function O(e) {
+    var t, n, O, E;
     let {
-            quest: E,
-            questContent: S,
-            onReceiveErrorHints: T,
-            contentPosition: w,
-            rowIndex: P,
-            sourceQuestContent: N,
+            quest: S,
+            questContent: T,
+            onReceiveErrorHints: w,
+            contentPosition: P,
+            rowIndex: N,
+            sourceQuestContent: A,
         } = e,
-        A = (0, o.e7)([l.Z], () => l.Z.useReducedMotion),
-        R = (0, x.g2)({ useReducedMotion: A }),
-        B = (0, u.O5)(),
-        k = (0, p._s)({ quest: E }),
-        I = (0, p.z)(E),
-        q = (0, p.B6)(E.config.expiresAt, {
+        R = (0, o.e7)([l.Z], () => l.Z.useReducedMotion),
+        B = (0, h.g2)({ useReducedMotion: R }),
+        k = (0, u.O5)(),
+        I = (0, p._s)({ quest: S }),
+        q = (0, p.z)(S),
+        D = (0, p.B6)(S.config.expiresAt, {
             month: "numeric",
             day: "numeric",
         }),
         {
             isClaiming: Q,
-            isEnrolling: D,
-            isQuestEnrollmentBlocked: V,
+            isEnrolling: V,
+            isQuestEnrollmentBlocked: L,
         } = (0, o.cj)([m.Z], () => ({
-            isClaiming: m.Z.isClaimingReward(E.id) || m.Z.isFetchingRewardCode(E.id),
-            isEnrolling: m.Z.isEnrolling(E.id),
+            isClaiming: m.Z.isClaimingReward(S.id) || m.Z.isFetchingRewardCode(S.id),
+            isEnrolling: m.Z.isEnrolling(S.id),
             isQuestEnrollmentBlocked: null != m.Z.questEnrollmentBlockedUntil,
         })),
-        L = (null == (t = E.userStatus) ? void 0 : t.enrolledAt) != null,
-        M = (null == (n = E.userStatus) ? void 0 : n.completedAt) != null,
-        Z = M && (null == (y = E.userStatus) ? void 0 : y.claimedAt) == null,
-        W = (0, d.iQ)(E),
-        U = !(0, d.zi)(E),
-        H = (0, p._Q)(E),
-        z = (0, d.Xv)(E.config),
-        F = (0, d.PB)(E),
-        X = (0, d.HJ)(E),
-        K = (0, d.Vl)(E),
-        Y = (0, p.Rf)(E),
-        [G, J, $] = (0, p.me)(E, Y),
-        ee = U && H === p.OH.ACCEPTED,
-        et = ee && G === g.LI.SELECT,
-        en = ee && !et && J.length > 1,
-        er = s.useCallback(
+        M = (null == (t = S.userStatus) ? void 0 : t.enrolledAt) != null,
+        Z = (null == (n = S.userStatus) ? void 0 : n.completedAt) != null,
+        W = Z && (null == (O = S.userStatus) ? void 0 : O.claimedAt) == null,
+        U = (0, d.iQ)(S),
+        H = !(0, d.zi)(S),
+        z = (0, p._Q)(S),
+        F = (0, d.Xv)(S.config),
+        X = (0, d.PB)(S),
+        K = (0, d.HJ)(S),
+        Y = (0, d.Vl)(S),
+        G = (0, p.Rf)(S),
+        [J, $, ee] = (0, p.me)(S, G),
+        et = H && z === p.OH.ACCEPTED,
+        en = et && J === g.LI.SELECT,
+        er = et && !en && $.length > 1,
+        es = s.useCallback(
             (e) => {
-                $(e), e === h.cd.DESKTOP && T([]);
+                ee(e), e === j.cd.DESKTOP && w([]);
             },
-            [$, T],
+            [ee, w],
         ),
-        { text: es, onClick: eo } = (0, x.Ks)({
-            progressState: H,
-            quest: E,
-            questContent: S,
-            isCollectibleQuest: z,
-            questContentPosition: w,
-            questContentRowIndex: P,
+        { text: eo, onClick: ea } = (0, h.Ks)({
+            progressState: z,
+            quest: S,
+            questContent: T,
+            isCollectibleQuest: F,
+            questContentPosition: P,
+            questContentRowIndex: N,
             inGiftInventory: !0,
-            isVideoQuest: F,
-            inGameQuest: K,
-            sourceQuestContent: N,
+            isVideoQuest: X,
+            inGameQuest: Y,
+            sourceQuestContent: A,
         }),
-        { startingConsoleQuest: ea, startConsoleQuest: ei } = (0, p.GI)({
-            questId: E.id,
+        { startingConsoleQuest: ei, startConsoleQuest: el } = (0, p.GI)({
+            questId: S.id,
             beforeRequest: () => {
-                R.startAnimation(),
-                    B({
-                        questId: E.id,
-                        questContent: S,
+                B.startAnimation(),
+                    k({
+                        questId: S.id,
+                        questContent: T,
                         questContentCTA: u.jZ.DEFIBRILLATOR,
-                        questContentPosition: w,
-                        questContentRowIndex: P,
-                        sourceQuestContent: N,
+                        questContentPosition: P,
+                        questContentRowIndex: N,
+                        sourceQuestContent: A,
                     });
             },
             afterRequest: (e) => {
-                R.stopAnimation(), T(e);
+                B.stopAnimation(), w(e);
             },
         }),
-        el = (null == (O = E.userStatus) ? void 0 : O.claimedAt) != null,
-        ec = null;
-    return (W && Z
-        ? (ec = (0, r.jsx)(a.zx, {
+        ec = (0, f.f)({
+            location: j.dr.QUEST_HOME_DESKTOP,
+            questFeatures: S.config.features,
+        }),
+        eu = (null == (E = S.userStatus) ? void 0 : E.claimedAt) != null,
+        ed = null;
+    return (U && W
+        ? (ed = (0, r.jsx)(a.zx, {
               color: a.Tt.BRAND,
               submitting: Q,
-              onClick: null != eo ? eo : void 0,
-              className: _.button,
-              children: es,
+              onClick: null != ea ? ea : void 0,
+              className: b.button,
+              children: eo,
           }))
-        : M
-          ? (ec = F
+        : Z
+          ? (ed = X
                 ? (0, r.jsxs)(r.Fragment, {
                       children: [
                           (0, r.jsx)(a.zx, {
                               color: a.Tt.PRIMARY,
-                              className: _.button,
+                              className: b.button,
                               style: { flex: 1 },
                               onClick: () => {
-                                  (0, f.openVideoQuestModal)({
-                                      quest: E,
-                                      questContent: S,
-                                      sourceQuestContent: N,
+                                  (0, x.openVideoQuestModal)({
+                                      quest: S,
+                                      questContent: T,
+                                      sourceQuestContent: A,
                                       sourceQuestContentCTA: u.jZ.WATCH_VIDEO,
                                       skipEnrollmentCheck: !0,
                                   });
                               },
                               children: (0, r.jsxs)("div", {
-                                  className: _.ctaInner,
+                                  className: b.ctaInner,
                                   children: [
-                                      (0, r.jsx)(i.Oe7, { className: _.videoQuestPlayIcon }),
-                                      (0, r.jsx)("span", { children: j.intl.string(j.t.YsCuyM) }),
+                                      (0, r.jsx)(i.Oe7, { className: b.videoQuestPlayIcon }),
+                                      (0, r.jsx)("span", { children: _.intl.string(_.t.YsCuyM) }),
                                   ],
                               }),
                           }),
                           (0, r.jsx)(a.zx, {
                               color: a.Tt.BRAND,
-                              className: _.button,
-                              onClick: null != eo ? eo : void 0,
-                              children: es,
+                              className: b.button,
+                              onClick: null != ea ? ea : void 0,
+                              children: eo,
                           }),
                       ],
                   })
                 : (0, r.jsx)(a.zx, {
                       color: a.Tt.BRAND,
-                      className: _.button,
-                      onClick: null != eo ? eo : void 0,
-                      children: es,
+                      className: b.button,
+                      onClick: null != ea ? ea : void 0,
+                      children: eo,
                   }))
-          : U
-            ? U && Z
-                ? (ec = (0, r.jsx)(a.zx, {
+          : H
+            ? H && W
+                ? (ed = (0, r.jsx)(a.zx, {
                       color: a.Tt.BRAND,
                       submitting: Q,
-                      onClick: null != eo ? eo : void 0,
-                      className: _.button,
-                      children: es,
+                      onClick: null != ea ? ea : void 0,
+                      className: b.button,
+                      children: eo,
                   }))
-                : X
-                  ? (ec = (0, r.jsx)(a.zx, {
-                        color: a.Tt.PRIMARY,
-                        disabled: !0,
-                        className: _.button,
-                        children: j.intl.string(j.t.BkZhUF),
-                    }))
-                  : U && L && !el
-                    ? (ec = et
+                : K
+                  ? (ed = ec
+                        ? (0, r.jsx)(a.zx, {
+                              color: a.Tt.BRAND,
+                              submitting: V,
+                              onClick: null != ea ? ea : void 0,
+                              className: b.button,
+                              children: eo,
+                          })
+                        : (0, r.jsx)(a.zx, {
+                              color: a.Tt.PRIMARY,
+                              disabled: !0,
+                              className: b.button,
+                              children: _.intl.string(_.t.BkZhUF),
+                          }))
+                  : H && M && !eu
+                    ? (ed = en
                           ? (0, r.jsx)(i.PhF, {
-                                className: _.platformSelectorPrimary,
+                                className: b.platformSelectorPrimary,
                                 isSelected: () => !1,
-                                options: b,
-                                placeholder: j.intl.string(j.t.drVw4e),
-                                renderOptionLabel: v,
-                                renderOptionValue: C,
-                                select: er,
+                                options: v,
+                                placeholder: _.intl.string(_.t.drVw4e),
+                                renderOptionLabel: C,
+                                renderOptionValue: y,
+                                select: es,
                                 serialize: (e) => {
                                     switch (e) {
-                                        case h.cd.DESKTOP:
-                                            return j.intl.string(j.t.QXc019);
-                                        case h.cd.CONSOLE:
-                                            return j.intl.string(j.t["8lAfuL"]);
+                                        case j.cd.DESKTOP:
+                                            return _.intl.string(_.t.QXc019);
+                                        case j.cd.CONSOLE:
+                                            return _.intl.string(_.t["8lAfuL"]);
                                         default:
                                             return (0, c.vE)(e);
                                     }
                                 },
                             })
-                          : (0, d.$J)(E) && !I && G !== g.LI.DESKTOP
-                            ? k
+                          : (0, d.$J)(S) && !q && J !== g.LI.DESKTOP
+                            ? I
                                 ? (0, r.jsx)(a.zx, {
                                       color: a.Tt.PRIMARY,
-                                      className: _.button,
-                                      onClick: null != eo ? eo : void 0,
-                                      children: es,
+                                      className: b.button,
+                                      onClick: null != ea ? ea : void 0,
+                                      children: eo,
                                   })
                                 : (0, r.jsx)(a.zx, {
                                       color: a.Tt.PRIMARY,
-                                      onClick: ei,
-                                      disabled: ea,
-                                      className: _.button,
+                                      onClick: el,
+                                      disabled: ei,
+                                      className: b.button,
                                       children: (0, r.jsxs)("div", {
-                                          className: _.ctaInner,
-                                          children: [R.render(), j.intl.string(j.t.nPThNT)],
+                                          className: b.ctaInner,
+                                          children: [B.render(), _.intl.string(_.t.nPThNT)],
                                       }),
                                   })
-                            : F || (K && E.config.features.includes(h.S7.START_QUEST_CTA))
+                            : X || (Y && S.config.features.includes(j.S7.START_QUEST_CTA))
                               ? (0, r.jsx)(a.zx, {
                                     color: a.Tt.BRAND,
-                                    onClick: null != eo ? eo : void 0,
-                                    className: _.button,
-                                    children: es,
+                                    onClick: null != ea ? ea : void 0,
+                                    className: b.button,
+                                    children: eo,
                                 })
                               : (0, r.jsx)(a.zx, {
                                     color: a.Tt.PRIMARY,
                                     disabled: !0,
-                                    className: _.button,
-                                    children: j.intl.string(j.t["9KoPyM"]),
+                                    className: b.button,
+                                    children: _.intl.string(_.t["9KoPyM"]),
                                 }))
-                    : U &&
-                      !L &&
-                      (ec = V
+                    : H &&
+                      !M &&
+                      (ed = L
                           ? (0, r.jsxs)(r.Fragment, {
                                 children: [
                                     (0, r.jsx)(a.zx, {
                                         color: a.Tt.PRIMARY,
-                                        className: _.button,
+                                        className: b.button,
                                         disabled: !0,
-                                        children: j.intl.string(j.t.V293qq),
+                                        children: _.intl.string(_.t.V293qq),
                                     }),
                                     (0, r.jsx)(a.zx, {
                                         color: a.Tt.BRAND,
-                                        className: _.button,
-                                        onClick: () => (0, f.openQuestMinorEnrollmentBlockModal)(E, S, N),
-                                        children: j.intl.string(j.t.vY9GgI),
+                                        className: b.button,
+                                        onClick: () => (0, x.openQuestMinorEnrollmentBlockModal)(S, T, A),
+                                        children: _.intl.string(_.t.vY9GgI),
                                     }),
                                 ],
                             })
                           : (0, r.jsx)(a.zx, {
-                                submitting: D,
+                                submitting: V,
                                 color: a.Tt.BRAND,
-                                onClick: null != eo ? eo : void 0,
-                                className: _.button,
-                                children: es,
+                                onClick: null != ea ? ea : void 0,
+                                className: b.button,
+                                children: eo,
                             }))
-            : (ec = (0, r.jsx)(a.zx, {
+            : (ed = (0, r.jsx)(a.zx, {
                   color: a.Tt.PRIMARY,
                   disabled: !0,
-                  className: _.button,
-                  children: j.intl.format(j.t["14o6QU"], { expiryDate: q }),
+                  className: b.button,
+                  children: _.intl.format(_.t["14o6QU"], { expiryDate: D }),
               })),
-    null == ec)
+    null == ed)
         ? null
         : (0, r.jsxs)("div", {
-              className: _.container,
+              className: b.container,
               children: [
                   (0, r.jsx)("div", {
-                      className: _.ctaItem,
-                      children: ec,
+                      className: b.ctaItem,
+                      children: ed,
                   }),
-                  en &&
+                  er &&
                       (0, r.jsx)("div", {
-                          className: _.ctaItem,
+                          className: b.ctaItem,
                           children: (0, r.jsx)(i.PhF, {
-                              className: _.platformSelectorSecondary,
+                              className: b.platformSelectorSecondary,
                               isSelected: (e) => {
-                                  switch (G) {
+                                  switch (J) {
                                       case g.LI.DESKTOP:
-                                          return e === h.cd.DESKTOP;
+                                          return e === j.cd.DESKTOP;
                                       case g.LI.CONSOLE:
-                                          return e === h.cd.CONSOLE;
+                                          return e === j.cd.CONSOLE;
                                       default:
                                           return !1;
                                   }
                               },
-                              options: b,
-                              placeholder: j.intl.string(j.t.drVw4e),
-                              renderOptionLabel: v,
-                              renderOptionValue: C,
-                              select: er,
+                              options: v,
+                              placeholder: _.intl.string(_.t.drVw4e),
+                              renderOptionLabel: C,
+                              renderOptionValue: y,
+                              select: es,
                               serialize: (e) => {
                                   switch (e) {
-                                      case h.cd.DESKTOP:
-                                          return j.intl.string(j.t.QXc019);
-                                      case h.cd.CONSOLE:
-                                          return j.intl.string(j.t["8lAfuL"]);
+                                      case j.cd.DESKTOP:
+                                          return _.intl.string(_.t.QXc019);
+                                      case j.cd.CONSOLE:
+                                          return _.intl.string(_.t["8lAfuL"]);
                                   }
                               },
                           }),

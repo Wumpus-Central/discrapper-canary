@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p }), n(290780);
+n.d(t, { Z: () => g }), n(290780);
 var r = n(255367);
 n(73800);
 var i = n(442837),
@@ -6,8 +6,11 @@ var i = n(442837),
     a = n(857595),
     s = n(607070),
     l = n(299363),
-    c = n(388032);
-function u(e, t, n) {
+    c = n(626135),
+    u = n(981631),
+    d = n(388032),
+    f = n(698282);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -20,7 +23,7 @@ function u(e, t, n) {
         e
     );
 }
-function d(e) {
+function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -31,12 +34,12 @@ function d(e) {
                 }),
             )),
             r.forEach(function (t) {
-                u(e, t, n[t]);
+                _(e, t, n[t]);
             });
     }
     return e;
 }
-function f(e, t) {
+function h(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -48,118 +51,134 @@ function f(e, t) {
     }
     return n;
 }
-function _(e, t) {
+function m(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : f(Object(t)).forEach(function (n) {
+            : h(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function p() {
+function g() {
     let {
             saturation: e,
             useReducedMotion: t,
             roleStyle: n,
-            highContrastMode: u,
+            highContrastMode: _,
         } = (0, i.cj)([s.Z], () => ({
             saturation: s.Z.saturation,
             useReducedMotion: s.Z.useReducedMotion,
             roleStyle: s.Z.roleStyle,
             highContrastMode: s.Z.isHighContrastModeEnabled,
         })),
-        f = l.U.useExperiment({ location: "useAccessibilityItems" }, { autoTrackExposure: !0 }).enabled,
-        p = [
+        h = (0, i.e7)([s.Z], () => s.Z.displayNameStylesEnabled),
+        g = l.U.useExperiment({ location: "useAccessibilityItems" }, { autoTrackExposure: !0 }).enabled,
+        E = [
             {
-                name: c.intl.string(c.t.YEOEi4),
+                name: d.intl.string(d.t.YEOEi4),
                 value: "username",
             },
             {
-                name: c.intl.string(c.t.mQaro6),
+                name: d.intl.string(d.t.mQaro6),
                 value: "dot",
             },
             {
-                name: c.intl.string(c.t.Ji2EVF),
+                name: d.intl.string(d.t.Ji2EVF),
                 value: "hidden",
             },
-        ],
-        h = [
-            (0, r.jsx)(
-                o.kSQ,
-                {
-                    children: (0, r.jsx)(o.S89, {
-                        id: "reduced-motion",
-                        label: c.intl.string(c.t.b3XBzs),
-                        checked: t,
-                        action: () => (0, a.Zt)(t ? "no-preference" : "reduce"),
-                    }),
-                },
-                "reduced-motion",
-            ),
-            (0, r.jsx)(
-                o.kSQ,
-                {
-                    children: (0, r.jsx)(o.II_, {
-                        id: "input",
-                        label: c.intl.string(c.t["5PWWCQ"]),
-                        control: (t, n) =>
-                            (0, r.jsx)(
-                                o._wy,
-                                _(d({}, t), {
-                                    ref: n,
-                                    value: 100 * e,
-                                    onChange: (e) => (0, a.o2)(e / 100),
-                                    "aria-label": c.intl.string(c.t["5PWWCQ"]),
-                                }),
-                            ),
-                    }),
-                },
-                "input",
-            ),
-            (0, r.jsx)(
-                o.kSQ,
-                {
-                    children: (0, r.jsx)(o.sNh, {
-                        id: "role-colors",
-                        label: c.intl.string(c.t.uSOPWl),
-                        children: p.map((e) => {
-                            let { name: t, value: i } = e;
-                            return (0, r.jsx)(
-                                o.k5B,
-                                {
-                                    id: i,
-                                    group: "role-colors",
-                                    checked: i === n,
-                                    label: t,
-                                    action: () => (0, a.u1)(i),
-                                },
-                                i,
-                            );
-                        }),
-                    }),
-                },
-                "role-colors",
-            ),
         ];
+    function b() {
+        c.default.track(u.rMx.DISPLAY_NAME_STYLES_ACCESSIBILITY_TOGGLE, { enabled: !h }), (0, a.X2)(!h);
+    }
+    let y = [
+        (0, r.jsx)(
+            o.kSQ,
+            {
+                children: (0, r.jsx)(o.S89, {
+                    id: "reduced-motion",
+                    label: d.intl.string(d.t.b3XBzs),
+                    checked: t,
+                    action: () => (0, a.Zt)(t ? "no-preference" : "reduce"),
+                }),
+            },
+            "reduced-motion",
+        ),
+        (0, r.jsx)(
+            o.kSQ,
+            {
+                children: (0, r.jsx)(o.II_, {
+                    id: "input",
+                    label: d.intl.string(d.t["5PWWCQ"]),
+                    control: (t, n) =>
+                        (0, r.jsx)(
+                            o._wy,
+                            m(p({}, t), {
+                                ref: n,
+                                value: 100 * e,
+                                onChange: (e) => (0, a.o2)(e / 100),
+                                "aria-label": d.intl.string(d.t["5PWWCQ"]),
+                            }),
+                        ),
+                }),
+            },
+            "input",
+        ),
+        (0, r.jsx)(
+            o.kSQ,
+            {
+                children: (0, r.jsx)(o.sNh, {
+                    id: "role-colors",
+                    label: d.intl.string(d.t.uSOPWl),
+                    children: E.map((e) => {
+                        let { name: t, value: i } = e;
+                        return (0, r.jsx)(
+                            o.k5B,
+                            {
+                                id: i,
+                                group: "role-colors",
+                                checked: i === n,
+                                label: t,
+                                action: () => (0, a.u1)(i),
+                            },
+                            i,
+                        );
+                    }),
+                }),
+            },
+            "role-colors",
+        ),
+        (0, r.jsx)(
+            o.kSQ,
+            {
+                children: (0, r.jsx)(o.S89, {
+                    id: "display-name-styles",
+                    label: d.intl.string(f.default["2gFUEx"]),
+                    checked: h,
+                    action: b,
+                }),
+            },
+            "display-name-styles",
+        ),
+    ];
     return (
-        f &&
-            h.unshift(
+        g &&
+            y.unshift(
                 (0, r.jsx)(
                     o.kSQ,
                     {
                         children: (0, r.jsx)(o.S89, {
                             id: "high-contrast",
                             label: "Enable High Contrast Mode",
-                            checked: u,
-                            action: () => (0, a.vW)(u ? s.X.DEFAULT : s.X.HIGH),
+                            checked: _,
+                            action: () => (0, a.vW)(_ ? s.X.DEFAULT : s.X.HIGH),
                         }),
                     },
                     "high-contrast",
                 ),
             ),
-        h
+        y
     );
 }

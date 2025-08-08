@@ -44,9 +44,9 @@ var r = n(255367),
     H = n(998502),
     G = n(922482),
     B = n(431328),
-    z = n(501655),
-    W = n(427679),
-    V = n(513449),
+    W = n(501655),
+    V = n(427679),
+    z = n(513449),
     Y = n(153349),
     q = n(901434),
     K = n(302270),
@@ -161,7 +161,7 @@ function ed(e) {
         n = (0, g.bp)(),
         i = (0, o.e7)([M.Z], () => M.Z.can(et.Plq.CREATE_INSTANT_INVITE, t)),
         l = (0, o.e7)([L.Z], () => L.Z.getGuild(t.guild_id)),
-        a = (0, o.e7)([W.Z], () => W.Z.getStageInstanceByChannel(t.id)),
+        a = (0, o.e7)([V.Z], () => V.Z.getStageInstanceByChannel(t.id)),
         s = i || (null == a ? void 0 : a.invite_code) != null;
     return null != l && s
         ? (0, r.jsx)(Z.Z, {
@@ -191,12 +191,12 @@ function eh(e) {
         v = (0, g.bp)(),
         C = (0, o.e7)([U.Z], () => U.Z.getVoiceChannelId() === c.id, [c.id]),
         E = (0, o.e7)([M.Z], () => M.Z.can(et.Plq.CONNECT, c)),
-        S = (0, B.w8)(c.id, z.pV.SPEAKER),
+        S = (0, B.w8)(c.id, W.pV.SPEAKER),
         I = (0, o.e7)([y.Z], () => y.Z.getSelectedParticipant(c.id)),
         Z = f && v !== et.IlC.POPOUT,
         [P, R] = i.useState(0),
-        { isOnStartStageScreen: w } = (0, V.ZP)();
-    (0, V.MV)(c);
+        { isOnStartStageScreen: w } = (0, z.ZP)();
+    (0, z.MV)(c);
     let A = (0, o.e7)([k.Z], () => k.Z.getToastsEnabled(c.id)),
         D = (0, ee.Z)(c) ? (null != I ? "84px" : "124px") : null != I ? "0px" : "48px";
     return (
@@ -205,7 +205,7 @@ function eh(e) {
             ? (0, r.jsx)(J.Z, {
                   channel: c,
                   onContinueClick: () => {
-                      (0, V.Ku)(!1), C || (0, G.TM)(c);
+                      (0, z.Ku)(!1), C || (0, G.TM)(c);
                   },
               })
             : C

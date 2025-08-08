@@ -57,8 +57,8 @@ function B(e) {
             quest: o,
             location: P.dr.QUESTS_BAR,
         }),
-        Q = (0, l.e7)([d.Z], () => d.Z.useReducedMotion),
-        D = (0, l.e7)([p.Z], () => p.Z.hasLayers()),
+        D = (0, l.e7)([d.Z], () => d.Z.useReducedMotion),
+        Q = (0, l.e7)([p.Z], () => p.Z.hasLayers()),
         V = s.useRef(null),
         L = s.useMemo(() => (0, f.q8)(o), [o]),
         M = (null == (t = o.userStatus) ? void 0 : t.enrolledAt) != null,
@@ -168,9 +168,9 @@ function B(e) {
     s.useEffect(() => {
         eC({
             expansionSpring: +!!ee,
-            immediate: Q,
+            immediate: D,
         });
-    }, [ee, eC, Q]);
+    }, [ee, eC, D]);
     let { visibilitySpring: ey } = (0, c.q_F)({
         from: { visibilitySpring: 0 },
         to: { visibilitySpring: +!!F },
@@ -246,7 +246,7 @@ function B(e) {
         ? (0, r.jsx)(C.A, {
               questOrQuests: o,
               questContent: K.trackingCtx.content,
-              overrideVisibility: !D && F,
+              overrideVisibility: !Q && F,
               sourceQuestContent: K.trackingCtx.content,
               children: (e, t) => {
                   let n = K.component;
@@ -299,7 +299,7 @@ function B(e) {
                                               onCtxMenuOpened: ep,
                                               onCtxMenuSelection: eg,
                                               quest: o,
-                                              useReducedMotion: Q,
+                                              useReducedMotion: D,
                                               collapsedHeight: 70,
                                           }),
                                       }),

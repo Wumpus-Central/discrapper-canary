@@ -9,8 +9,6 @@ e.exports = {
     button: "button__4783a",
     sidebarOpen: "sidebarOpen__4783a",
     boostUpsell: "boostUpsell__4783a",
-    boostButton: "boostButton__4783a",
-    notNowButton: "notNowButton__4783a",
     text: "text__4783a",
     buttons: "buttons__4783a",
 };

@@ -129,7 +129,7 @@ function B(e) {
           })
         : null;
 }
-function z(e) {
+function W(e) {
     let {
             searchResults: t,
             blockCount: n,
@@ -200,8 +200,8 @@ function z(e) {
         ],
     });
 }
-let W = [],
-    V = i.memo(function (e) {
+let V = [],
+    z = i.memo(function (e) {
         let {
                 searchContext: t,
                 search: n,
@@ -258,7 +258,7 @@ let W = [],
                 totalResults: n.totalResults,
                 isSearching: n.isSearching,
             }),
-            V = i.useCallback(
+            z = i.useCallback(
                 (e, t) => {
                     let n = H + 1;
                     if (!G || e.targetPage !== n) return t;
@@ -367,9 +367,9 @@ let W = [],
             J = H + 1,
             $ = (0, j.C)({ location: "SearchResults" }),
             ee = (0, c.Wu)([x.Z], () => {
-                if (0 !== n.offset || !$) return W;
+                if (0 !== n.offset || !$) return V;
                 let e = s.length;
-                if (e < 10) return W;
+                if (e < 10) return V;
                 let r = 0;
                 if (
                     (s.forEach((e) => {
@@ -379,11 +379,11 @@ let W = [],
                     }),
                     r / e < 0.75)
                 )
-                    return W;
+                    return V;
                 let i = (0, _.Tm)(t),
                     l = x.Z.getSearchResultsQueryString(i);
                 return (0, _.kG)(null != l ? l : "").some((e) => e.type === k.dCx.FILTER_AUTHOR_TYPE)
-                    ? W
+                    ? V
                     : [u.z.SEARCH_AUTHOR_TYPE_SEARCH_RESULTS_HINT];
             }),
             [et, en] = (0, h.US)(ee),
@@ -422,7 +422,7 @@ let W = [],
                                 messageType: d.QYI.INFO,
                                 children: M.intl.format(M.t["gQeg/f"], { handleClick: ei }),
                             }),
-                        (0, r.jsx)(z, {
+                        (0, r.jsx)(W, {
                             searchResults: s,
                             blockCount: o,
                             ignoreCount: p,
@@ -433,7 +433,7 @@ let W = [],
                             onScrollTo: w,
                             onPageChange: K,
                             paginationTotalCount: G ? L : void 0,
-                            renderPageWrapper: V,
+                            renderPageWrapper: z,
                             onBlockedResultsClick: C,
                             searchRequestAnalyticsId: a,
                             searchResultsQuery: E,
@@ -560,7 +560,7 @@ function Y(e) {
         D = i.useDeferredValue(u);
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(V, {
+            (0, r.jsx)(z, {
                 searchContext: t,
                 search: A,
                 searchRequestAnalyticsId: D,

@@ -33,8 +33,8 @@ var r = n(255367),
     k = n(205511),
     I = n(694802),
     q = n(95985),
-    Q = n(50476),
-    D = n(46140),
+    D = n(50476),
+    Q = n(46140),
     V = n(743294),
     L = n(388032),
     M = n(921183);
@@ -106,7 +106,7 @@ function W(e) {
         learnMoreStyle: "text",
         quest: t,
         questContent: v.jn.QUEST_BAR_V2,
-        location: D.dr.QUESTS_BAR,
+        location: Q.dr.QUESTS_BAR,
         sourceQuestContent: v.jn.QUEST_BAR_V2,
     });
 }
@@ -116,7 +116,7 @@ function U(e) {
         variant: "text-xs/normal",
         children: (0, O.DD)({
             quest: e.quest,
-            location: D.dr.QUESTS_BAR,
+            location: Q.dr.QUESTS_BAR,
             questContent: v.jn.QUEST_BAR_V2,
             taskDetails: e.taskDetails,
             sourceQuestContent: v.jn.QUEST_BAR_V2,
@@ -138,7 +138,7 @@ function H(e) {
         j = s.useMemo(() => (0, E.fh)(t, E.eC.QUEST_BAR_HERO), [t]),
         _ = (0, O.CR)({ quest: t }),
         v = (0, y.h)({
-            location: D.dr.QUESTS_BAR,
+            location: Q.dr.QUESTS_BAR,
             questConfig: t.config,
         }),
         C = s.useMemo(() => (0, E.fh)(t, E.eC.HERO_IMAGE), [t]),
@@ -418,9 +418,9 @@ function F(e) {
                             !(0, h.Gd)(n) &&
                             (0, l.EQ)(E)
                                 .with(v.LI.SELECT, () =>
-                                    (0, r.jsx)(Q.Z, {
-                                        onConsole: () => T(D.cd.CONSOLE),
-                                        onDesktop: () => T(D.cd.DESKTOP),
+                                    (0, r.jsx)(D.Z, {
+                                        onConsole: () => T(Q.cd.CONSOLE),
+                                        onDesktop: () => T(Q.cd.DESKTOP),
                                     }),
                                 )
                                 .with(v.LI.DESKTOP, () => (0, r.jsx)(I.Z, { quest: n }))
@@ -486,7 +486,7 @@ let X = s.forwardRef(function (e, t) {
         S = (0, h.Vl)(C),
         { launchInGameActivity: T } = (0, _.zB)(C),
         P = s.useCallback(() => {
-            let e = C.config.features.includes(D.S7.START_QUEST_CTA),
+            let e = C.config.features.includes(Q.S7.START_QUEST_CTA),
                 t = e ? x.jZ.START_QUEST : x.jZ.ACCEPT_QUEST;
             (0, j.AH)(C.id, {
                 questContent: v.jn.QUEST_BAR_V2,

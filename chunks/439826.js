@@ -1,4 +1,4 @@
-n.d(t, { Z: () => Q }), n(784620), n(973216);
+n.d(t, { Z: () => D }), n(784620), n(973216);
 var r = n(255367),
     s = n(73800),
     o = n(120356),
@@ -185,7 +185,7 @@ function q(e) {
             }),
     });
 }
-function Q(e) {
+function D(e) {
     var t, n, o, i, c;
     let {
             quest: d,
@@ -196,9 +196,9 @@ function Q(e) {
             onCtxMenuClose: C,
             onCtxMenuOpen: w,
             onCtxMenuSelect: P,
-            sourceQuestContent: Q,
+            sourceQuestContent: D,
         } = e,
-        D = (0, f.PB)(d),
+        Q = (0, f.PB)(d),
         V = (0, p.ZP)(),
         L = ((0, l.wj)(V) ? N.BRd.DARK : N.BRd.LIGHT) === N.BRd.DARK,
         M = (0, h.tP)(d),
@@ -211,21 +211,21 @@ function Q(e) {
         H = (null == (o = d.userStatus) ? void 0 : o.completedAt) != null,
         { onAssetLoadComplete: z } = s.useContext(S.k),
         F = s.useCallback(() => {
-            D &&
+            Q &&
                 ((0, f.zi)(d) ||
                     U ||
                     (0, x.AH)(d.id, {
                         questContent: j.jn.QUEST_HOME_DESKTOP,
                         questContentCTA: g.jZ.ACCEPT_QUEST,
-                        sourceQuestContent: Q,
+                        sourceQuestContent: D,
                     }),
                 (0, O.openVideoQuestModal)({
                     quest: d,
                     questContent: j.jn.QUEST_HOME_DESKTOP,
-                    sourceQuestContent: Q,
+                    sourceQuestContent: D,
                     sourceQuestContentCTA: g.jZ.QUEST_HOME_TILE_HEADER_WATCH_VIDEO,
                 }));
-        }, [D, d, U, Q]);
+        }, [Q, d, U, D]);
     return (0, r.jsxs)("div", {
         className: R.container,
         children: [
@@ -262,7 +262,7 @@ function Q(e) {
                                                 children: A.intl.string(A.t.SKNnqq),
                                             }),
                                         }),
-                                    D &&
+                                    Q &&
                                         (0, r.jsx)(u.ua7, {
                                             text: H
                                                 ? A.intl.string(A.t.YsCuyM)
@@ -294,7 +294,7 @@ function Q(e) {
                                         hideLearnMore: !0,
                                         shouldShowDisclosure: !0,
                                         showShareLink: !0,
-                                        sourceQuestContent: Q,
+                                        sourceQuestContent: D,
                                         children: (e) =>
                                             (0, r.jsx)(
                                                 u.P3F,
@@ -354,7 +354,7 @@ function Q(e) {
                         errorHints: _,
                         warningHints: b,
                         isDarkTheme: L,
-                        sourceQuestContent: Q,
+                        sourceQuestContent: D,
                     }),
                 ],
             }),

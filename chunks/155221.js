@@ -190,8 +190,8 @@ let M = (0, h.Un)({
     Y = (0, h.Un)({
         createPromise: () =>
             Promise.all([
-                n.e("8895"),
                 n.e("68214"),
+                n.e("8895"),
                 n.e("6583"),
                 n.e("84605"),
                 n.e("8016"),

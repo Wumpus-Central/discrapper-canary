@@ -67,8 +67,8 @@ let C = (0, a.Z)((e) => {
         F = [Math.max(null != (t = M[0]) ? t : 1, 1), Math.max(null != (n = M[1]) ? n : 1, 1), M[2]],
         { speakerTileWidth: H, speakerTileHeight: G } = _(x, D),
         B = S ? x - 32 : Math.min(x - 64, 3 * H + 8),
-        z = (e) => e === M.length - 1 || (0 === P && 1 === e),
-        [W, V] = i.useState(!1),
+        W = (e) => e === M.length - 1 || (0 === P && 1 === e),
+        [V, z] = i.useState(!1),
         [Y, q] = i.useState(!1);
     return (0, r.jsx)(p.Z, {
         sections: F,
@@ -83,8 +83,8 @@ let C = (0, a.Z)((e) => {
                               participantCount: Z,
                               label: b.intl.string(b.t.CduOk5),
                               className: y.header,
-                              onClick: () => V(!W),
-                              collapsed: W,
+                              onClick: () => z(!V),
+                              collapsed: V,
                               speakers: R,
                               channel: a,
                               isStreamLive: w,
@@ -129,7 +129,7 @@ let C = (0, a.Z)((e) => {
                         "selected-participant",
                     );
                 case 1:
-                    if (W) return null;
+                    if (V) return null;
                     return (0, r.jsx)(
                         i.Fragment,
                         {
@@ -157,12 +157,12 @@ let C = (0, a.Z)((e) => {
                     return null;
             }
         },
-        rowHeight: (e) => (null == U[e][0] ? 0 : 0 === e ? B / m.Q + 8 : 1 === e ? (W ? 0 : G) : 98 * !Y),
+        rowHeight: (e) => (null == U[e][0] ? 0 : 0 === e ? B / m.Q + 8 : 1 === e ? (V ? 0 : G) : 98 * !Y),
         renderFooter: (e) => {
             let { section: t } = e;
-            return z(t) ? (0, r.jsx)("div", { className: y.spacer }, "bottom-spacer") : null;
+            return W(t) ? (0, r.jsx)("div", { className: y.spacer }, "bottom-spacer") : null;
         },
-        footerHeight: (e) => (1 === e ? 8 : 0 === e ? 12 : 88 * !!z(e)),
+        footerHeight: (e) => (1 === e ? 8 : 0 === e ? 12 : 88 * !!W(e)),
         className: y.scroller,
         chunkSize: 60,
         onScroll: C,

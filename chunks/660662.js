@@ -10,7 +10,7 @@ var r = n(522942),
 let o = [r.m.SOLID, r.m.GRADIENT, r.m.NEON, r.m.TOON, r.m.POP],
     a = [
         i.C.DEFAULT,
-        i.C.BIO_RHYME,
+        i.C.ZILLA_SLAB,
         i.C.CHERRY_BOMB,
         i.C.CHICLE,
         i.C.MUSEO_MODERNO,

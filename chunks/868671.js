@@ -78,7 +78,7 @@ function O(e) {
         H = r.useRef(I),
         G = r.useRef(void 0),
         B = r.useRef({ impressionCappedEntryIds: Z }),
-        z = r.useCallback(
+        W = r.useCallback(
             (e) => {
                 var t;
                 let n = Math.floor(e / m.YN),
@@ -129,7 +129,7 @@ function O(e) {
             groups: k,
             rows: L,
             version: M,
-            updateMaxRowSeen: z,
+            updateMaxRowSeen: W,
         }
     );
 }

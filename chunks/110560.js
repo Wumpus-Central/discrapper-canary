@@ -5,6 +5,7 @@ n.r(t),
         navigateToQuestHome: () => F,
         openAppWithQuest: () => K,
         openDisclosureModal: () => Z,
+        openPushToPhoneModal: () => z,
         openQuestInGameRewardModal: () => U,
         openQuestMinorEnrollmentBlockModal: () => B,
         openQuestOrbsRewardModal: () => G,
@@ -315,4 +316,17 @@ function K(e) {
                     hash: e,
                 });
         });
+}
+function z(e) {
+    (0, s.ZDy)(async () => {
+        let { default: t } = await Promise.all([n.e("68214"), n.e("33628")]).then(n.bind(n, 570387));
+        return (n) =>
+            (0, r.jsx)(
+                t,
+                L(w({}, n), {
+                    questId: e.id,
+                    questName: e.config.messages.questName,
+                }),
+            );
+    });
 }

@@ -82,8 +82,8 @@ function I(e, t) {
     );
 }
 let q = ["png", "gif", "webp"],
-    Q = [...q, "jpg", "jpeg"],
-    D = Array.from(new Set([...Q, "gif", "mp4", "webm"]));
+    D = [...q, "jpg", "jpeg"],
+    Q = Array.from(new Set([...D, "gif", "mp4", "webm"]));
 function V(e) {
     var t, n;
     return {
@@ -447,35 +447,35 @@ function W() {
                         title: "Hero",
                         assetKey: "hero",
                         onFileChange: en,
-                        filters: D,
+                        filters: Q,
                         initialValue: U.config.assets.hero,
                     }),
                     (0, r.jsx)(S.Z, {
                         title: "Hero Video (optional)",
                         assetKey: "heroVideo",
                         onFileChange: en,
-                        filters: D,
+                        filters: Q,
                         initialValue: null != (V = U.config.assets.heroVideo) ? V : void 0,
                     }),
                     (0, r.jsx)(S.Z, {
                         title: "Quest Bar Hero",
                         assetKey: "questBarHero",
                         onFileChange: en,
-                        filters: D,
+                        filters: Q,
                         initialValue: U.config.assets.questBarHero,
                     }),
                     (0, r.jsx)(S.Z, {
                         title: "Quest Bar Hero Video (optional)",
                         assetKey: "questBarHeroVideo",
                         onFileChange: en,
-                        filters: D,
+                        filters: Q,
                         initialValue: null != (M = U.config.assets.questBarHeroVideo) ? M : void 0,
                     }),
                     (0, r.jsx)(S.Z, {
                         title: "Game Tile",
                         assetKey: "gameTile",
                         onFileChange: en,
-                        filters: [...Q, "svg"],
+                        filters: [...D, "svg"],
                         initialValue: U.config.assets.gameTile,
                     }),
                     (0, r.jsx)(S.Z, {
@@ -492,28 +492,28 @@ function W() {
                                     title: "Quest Video",
                                     assetKey: "videoPlayerVideo",
                                     onFileChange: er,
-                                    filters: D,
+                                    filters: Q,
                                     initialValue: null == ep ? void 0 : ep.assets.video.url,
                                 }),
                                 (0, r.jsx)(S.Z, {
                                     title: "Quest Video (Low Resolution)",
                                     assetKey: "videoPlayerVideoLowRes",
                                     onFileChange: er,
-                                    filters: D,
+                                    filters: Q,
                                     initialValue: null == ep || null == (e = ep.assets.videoLowRes) ? void 0 : e.url,
                                 }),
                                 (0, r.jsx)(S.Z, {
                                     title: "Video Player Thumbnail (optional)",
                                     assetKey: "videoPlayerThumbnail",
                                     onFileChange: er,
-                                    filters: Q,
+                                    filters: D,
                                     initialValue: null == ep ? void 0 : ep.assets.video.thumbnail,
                                 }),
                                 (0, r.jsx)(S.Z, {
                                     title: "Quest Bar Preview Video (optional)",
                                     assetKey: "questBarPreviewVideo",
                                     onFileChange: es,
-                                    filters: D,
+                                    filters: Q,
                                     initialValue:
                                         null == (t = U.config.videoMetadata) ? void 0 : t.assets.questBarPreviewVideo,
                                 }),
@@ -521,7 +521,7 @@ function W() {
                                     title: "Quest Home Video (optional)",
                                     assetKey: "questHomeVideo",
                                     onFileChange: es,
-                                    filters: D,
+                                    filters: Q,
                                     initialValue:
                                         null == (o = U.config.videoMetadata) ? void 0 : o.assets.questHomeVideo,
                                 }),
@@ -591,7 +591,7 @@ function W() {
                                                         );
                                                     }
                                                 })(e, n, t),
-                                            filters: D,
+                                            filters: Q,
                                             initialValue: e.asset,
                                         }),
                                     (0, r.jsxs)(d.xJW, {

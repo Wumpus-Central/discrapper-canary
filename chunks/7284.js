@@ -13,10 +13,6 @@ let l = {
     },
     c = {
         [r.C.DEFAULT]: l,
-        [r.C.BIO_RHYME]: {
-            name: a.default["91ufEx"],
-            className: s.bioRhyme,
-        },
         [r.C.CHERRY_BOMB]: {
             name: a.default.rN7cub,
             className: s.cherryBomb,
@@ -42,9 +38,10 @@ let l = {
             className: s.sinistre,
         },
         [r.C.ZILLA_SLAB]: {
-            name: a.default["91ufEx"],
-            className: s.bioRhyme,
+            name: a.default.KMR8ra,
+            className: s.zillaSlab,
         },
+        [r.C.BIO_RHYME]: l,
         [r.C.BANGERS]: l,
         [r.C.COMPAGNON]: l,
         [r.C.RIBES]: l,

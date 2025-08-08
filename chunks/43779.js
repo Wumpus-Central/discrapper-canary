@@ -34,9 +34,9 @@ function S(e) {
             onReceiveErrorHints: I,
             sourceQuestContent: q,
         } = e,
-        Q = s.useMemo(() => f.r.build(P.config), [P.config]),
-        D = Q.defaultRewardName,
-        V = Q.defaultRewardNameWithArticle,
+        D = s.useMemo(() => f.r.build(P.config), [P.config]),
+        Q = D.defaultRewardName,
+        V = D.defaultRewardNameWithArticle,
         L = (null == (t = P.userStatus) ? void 0 : t.enrolledAt) != null,
         { ref: M, scrollHeight: Z } = (0, u.kE)(),
         W = 104 !== Z,
@@ -109,7 +109,7 @@ function S(e) {
                     : F
                       ? (0, r.jsx)(T, {
                             questId: P.id,
-                            children: D,
+                            children: Q,
                         })
                       : X
                         ? y.intl.format(y.t.ro1szc, {
@@ -132,7 +132,7 @@ function S(e) {
                                       children: V,
                                   }),
                           }),
-            [D, F, V, P.id, K, X],
+            [Q, F, V, P.id, K, X],
         ),
         ee = s.useMemo(() => {
             if (null != J)

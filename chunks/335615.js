@@ -40,9 +40,9 @@ var r = n(255367),
     H = n(111583),
     G = n(594174),
     B = n(979651),
-    z = n(585483),
-    W = n(823379),
-    V = n(51144),
+    W = n(585483),
+    V = n(823379),
+    z = n(51144),
     Y = n(998502),
     q = n(981631),
     K = n(388032),
@@ -195,10 +195,10 @@ let et = Y.ZP.getEnableHardwareAcceleration(),
                 [u, _, x],
             ),
             R = i.useCallback(() => {
-                let e = "@".concat(V.ZP.getUserTag(u, { decoration: "never" })),
+                let e = "@".concat(z.ZP.getUserTag(u, { decoration: "never" })),
                     t = "<@".concat(u.id, ">");
-                z.S.dispatch(q.CkL.TEXTAREA_FOCUS, { channelId: x.id }),
-                    z.S.dispatchToLastSubscribed(q.CkL.INSERT_TEXT, {
+                W.S.dispatch(q.CkL.TEXTAREA_FOCUS, { channelId: x.id }),
+                    W.S.dispatchToLastSubscribed(q.CkL.INSERT_TEXT, {
                         plainText: e,
                         rawText: t,
                     }),
@@ -614,7 +614,7 @@ class es extends i.Component {
                 let r = t
                     .map((e) => this.getRowProps(e))
                     .slice(0, n + 1)
-                    .filter(W.lm);
+                    .filter(V.lm);
                 if (0 === r.length) return;
                 let i = r.reduce(
                     (e, t) => {
