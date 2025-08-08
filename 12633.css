@@ -79976,8 +79976,8 @@ html.disable-forced-colors * {
 }
 
 .hexInputContainer__247cf:focus-within {
-    border-color: var(--focus-primary);
-    box-shadow: 0 0 0 1px var(--focus-primary)
+    border-color: var(--control-background-primary-default);
+    box-shadow: 0 0 0 1px var(--control-background-primary-default)
 }
 
 .hexInput__247cf {
