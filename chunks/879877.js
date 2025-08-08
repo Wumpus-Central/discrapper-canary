@@ -13,28 +13,28 @@ function u(e) {
         i = (0, l.useRef)(new Map()),
         o = (0, l.useRef)(null),
         [s, u] = (0, l.useState)(0),
-        [b, h] = (0, l.useState)(!1),
-        { trackUserProfileAction: j } = (0, a.KZ)(),
-        y = g(o, n, i, u);
+        [b, j] = (0, l.useState)(!1),
+        { trackUserProfileAction: h } = (0, a.KZ)(),
+        x = g(o, n, i, u);
     if (
         ((0, l.useEffect)(
             () => (
-                y(),
-                window.addEventListener("resize", y),
+                x(),
+                window.addEventListener("resize", x),
                 () => {
-                    window.removeEventListener("resize", y);
+                    window.removeEventListener("resize", x);
                 }
             ),
-            [y, null == n ? void 0 : n.join("")],
+            [x, null == n ? void 0 : n.join("")],
         ),
         null == n || 0 === n.length)
     )
         return null;
-    let x = b ? n : n.slice(0, n.length - s);
+    let y = b ? n : n.slice(0, n.length - s);
     return (0, r.jsxs)("div", {
         className: d.tagListContainer,
         children: [
-            x.map((e) =>
+            y.map((e) =>
                 (0, r.jsx)(
                     f,
                     {
@@ -48,15 +48,15 @@ function u(e) {
             ),
             s > 0 &&
                 (b
-                    ? (0, r.jsx)(m, {
+                    ? (0, r.jsx)(p, {
                           onClick: () => {
-                              h(!1), j({ action: "COLLAPSE_GAME_TAGS" });
+                              j(!1), h({ action: "COLLAPSE_GAME_TAGS" });
                           },
                       })
-                    : (0, r.jsx)(p, {
+                    : (0, r.jsx)(m, {
                           numHidden: s,
                           onClick: () => {
-                              h(!0), j({ action: "EXPAND_GAME_TAGS" });
+                              j(!0), h({ action: "EXPAND_GAME_TAGS" });
                           },
                           ref: o,
                       })),
@@ -81,7 +81,7 @@ let f = (e) => {
             ],
         });
     },
-    p = (e) => {
+    m = (e) => {
         let { numHidden: t, onClick: n, ref: l } = e;
         return (0, r.jsx)(i.DY3, {
             className: d.buttonContainer,
@@ -98,7 +98,7 @@ let f = (e) => {
             }),
         });
     },
-    m = (e) => {
+    p = (e) => {
         let { onClick: t } = e;
         return (0, r.jsx)(i.DY3, {
             className: d.buttonContainer,

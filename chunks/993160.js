@@ -10,25 +10,25 @@ var l = n(755721),
     d = n(664794),
     u = n(522182),
     f = n(821706),
-    p = n(562831),
-    m = n(981631);
+    m = n(562831),
+    p = n(981631);
 function g(e) {
-    let { user: t, currentUser: n, guildId: g, channelId: b, displayProfile: h, relationshipType: j, onClose: y } = e,
-        { newestAnalyticsLocation: x } = (0, o.ZP)(),
+    let { user: t, currentUser: n, guildId: g, channelId: b, displayProfile: j, relationshipType: h, onClose: x } = e,
+        { newestAnalyticsLocation: y } = (0, o.ZP)(),
         v = (0, a.Z)({
             user: t,
             guildId: g,
             channelId: b,
-            displayProfile: h,
-            onClose: y,
+            displayProfile: j,
+            onClose: x,
         }),
         {
             gameFriends: O,
-            hasOutgoingPendingGameFriends: _,
-            hasIncomingPendingGameFriends: I,
-        } = (0, p.H)({ userId: t.id }),
-        P = O.length > 0 || _ || I;
-    return j === m.OGo.BLOCKED
+            hasOutgoingPendingGameFriends: I,
+            hasIncomingPendingGameFriends: _,
+        } = (0, m.H)({ userId: t.id }),
+        P = O.length > 0 || I || _;
+    return h === p.OGo.BLOCKED
         ? null
         : t.id === n.id
           ? (0, r.jsxs)(r.Fragment, {
@@ -36,9 +36,9 @@ function g(e) {
                     (0, r.jsx)(c.Z, {
                         user: t,
                         guildId: g,
-                        onClose: y,
+                        onClose: x,
                     }),
-                    (0, r.jsx)(u.Z, { onClose: y }),
+                    (0, r.jsx)(u.Z, { onClose: x }),
                     (0, r.jsx)(d.Z, {
                         type: "icon",
                         user: t,
@@ -66,7 +66,7 @@ function g(e) {
                       }),
                   ],
               })
-            : j === m.OGo.PENDING_INCOMING
+            : h === p.OGo.PENDING_INCOMING
               ? (0, r.jsxs)(r.Fragment, {
                     children: [
                         (0, r.jsx)(s.Z, {
@@ -84,7 +84,7 @@ function g(e) {
                         }),
                     ],
                 })
-              : j === m.OGo.FRIEND || j === m.OGo.PENDING_OUTGOING
+              : h === p.OGo.FRIEND || h === p.OGo.PENDING_OUTGOING
                 ? (0, r.jsxs)(r.Fragment, {
                       children: [
                           (0, r.jsx)(s.Z, {
@@ -97,10 +97,10 @@ function g(e) {
                           (0, r.jsx)(f.g, {
                               type: "icon",
                               user: t,
-                              relationshipType: j,
+                              relationshipType: h,
                               shouldShowTooltip: !0,
                               themeColor: "secondary",
-                              analyticsLocation: x,
+                              analyticsLocation: y,
                           }),
                           (0, r.jsx)(d.Z, {
                               type: "icon",
@@ -111,7 +111,7 @@ function g(e) {
                           }),
                       ],
                   })
-                : j === m.OGo.NONE && P
+                : h === p.OGo.NONE && P
                   ? (0, r.jsxs)(r.Fragment, {
                         children: [
                             (0, r.jsx)(s.Z, {
@@ -123,14 +123,14 @@ function g(e) {
                             (0, r.jsx)(f.k9, {
                                 type: "icon",
                                 user: t,
-                                analyticsLocation: x,
+                                analyticsLocation: y,
                                 themeColor: "secondary",
                                 gameFriends: O,
                                 tooltipPosition: "top",
                                 tooltipAlign: "center",
                                 shouldShowTooltip: !0,
-                                hasIncomingPendingGameFriends: I,
-                                hasOutgoingPendingGameFriends: _,
+                                hasIncomingPendingGameFriends: _,
+                                hasOutgoingPendingGameFriends: I,
                             }),
                             (0, r.jsx)(d.Z, {
                                 type: "icon",
@@ -146,7 +146,7 @@ function g(e) {
                             (0, r.jsx)(f.Z7, {
                                 type: "text",
                                 userId: t.id,
-                                analyticsLocation: x,
+                                analyticsLocation: y,
                                 color: l.zx.Colors.BRAND,
                                 autoFocus: !0,
                             }),

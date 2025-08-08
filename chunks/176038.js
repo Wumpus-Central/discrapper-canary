@@ -10,17 +10,17 @@ var n = a(73800),
     u = a(675478),
     m = a(25990),
     x = a(594174),
-    p = a(74538),
-    h = a(981631),
+    h = a(74538),
+    p = a(981631),
     b = a(469115);
-let f = [h.BRd.DARK, h.BRd.LIGHT, h.BRd.DARKER, h.BRd.MIDNIGHT];
+let f = [p.BRd.DARK, p.BRd.LIGHT, p.BRd.DARKER, p.BRd.MIDNIGHT];
 function v(e) {
     return e[Math.floor(Math.random() * e.length)];
 }
-async function g() {
+async function j() {
     let e = (function () {
             let e = x.default.getCurrentUser();
-            return p.ZP.canUseClientThemes(e) ? Object.keys(b.qt).map((e) => Number(e)) : [];
+            return h.ZP.canUseClientThemes(e) ? Object.keys(b.qt).map((e) => Number(e)) : [];
         })(),
         t = e.length > 0 && Math.random() > 0.7;
     try {
@@ -31,8 +31,8 @@ async function g() {
             if (null != r) {
                 var a;
                 let e = b.qt[r];
-                t = null != (a = null == e ? void 0 : e.theme) ? a : h.BRd.DARK;
-            } else t = v([h.BRd.DARK, h.BRd.DARKER, h.BRd.MIDNIGHT]);
+                t = null != (a = null == e ? void 0 : e.theme) ? a : p.BRd.DARK;
+            } else t = v([p.BRd.DARK, p.BRd.DARKER, p.BRd.MIDNIGHT]);
             await i.ZI(
                 {
                     theme: t,
@@ -54,7 +54,7 @@ async function g() {
         }
     } catch (e) {}
 }
-async function j(e, t) {
+async function g(e, t) {
     let a = e.length > 0,
         n = t.length > 0;
     if (a || n)
@@ -79,7 +79,7 @@ function _() {
             return [(0, o.Ad)(e), (0, o.jT)(e)];
         }),
         a = n.useCallback(() => {
-            g(), j(e, t);
+            j(), g(e, t);
         }, [e, t]);
     n.useEffect(() => {
         let e = setInterval(() => {

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y });
+n.d(t, { Z: () => x });
 var r = n(255367),
     l = n(73800),
     i = n(481060),
@@ -9,11 +9,11 @@ var r = n(255367),
     d = n(817053),
     u = n(879877),
     f = n(853072),
-    p = n(388032),
-    m = n(436860),
+    m = n(388032),
+    p = n(436860),
     g = n(467514),
     b = n(418718);
-function h(e) {
+function j(e) {
     let { text: t, user: n, guildId: l, channelId: o } = e;
     return (0, r.jsxs)("div", {
         children: [
@@ -22,7 +22,7 @@ function h(e) {
                 color: i.TVs.colors.ICON_TERTIARY,
                 className: b.icon,
             }),
-            (0, r.jsx)(i.nn4, { children: p.intl.format(p.t.TM0XDQ, { name: c.ZP.getName(l, o, n) }) }),
+            (0, r.jsx)(i.nn4, { children: m.intl.format(m.t.TM0XDQ, { name: c.ZP.getName(l, o, n) }) }),
             (0, r.jsx)(i.Text, {
                 variant: "text-sm/normal",
                 color: "text-tertiary",
@@ -31,7 +31,7 @@ function h(e) {
         ],
     });
 }
-function j(e) {
+function h(e) {
     let { applicationId: t, userId: n, gameName: c, className: s, children: d } = e,
         u = (0, a.Z)({
             location: "UserProfileWidgetGameDetailsCard",
@@ -46,7 +46,7 @@ function j(e) {
             },
             [u],
         ),
-        m = null != c ? c : p.intl.string(p.t.GIWFlJ),
+        p = null != c ? c : m.intl.string(m.t.GIWFlJ),
         g = null != u;
     return (0, r.jsxs)("div", {
         className: s,
@@ -54,24 +54,24 @@ function j(e) {
             g &&
                 (0, r.jsx)(i.P3F, {
                     className: b.clickableCard,
-                    "aria-label": p.intl.formatToPlainString(p.t["8QLQBw"], { gameName: m }),
+                    "aria-label": m.intl.formatToPlainString(m.t["8QLQBw"], { gameName: p }),
                     onClick: f,
                 }),
             d,
         ],
     });
 }
-function y(e) {
+function x(e) {
     let { user: t, guildId: n, channelId: l, game: o, loading: a = !1, disableInteraction: c = !1 } = e,
-        { gameName: y, imageSrc: x, applicationId: v, comment: O, tags: _ } = o,
-        I = (0, f.Z)(o.applicationId),
-        P = I.length > 0,
-        E = () =>
+        { gameName: x, imageSrc: y, applicationId: v, comment: O, tags: I } = o,
+        _ = (0, f.Z)(o.applicationId),
+        P = _.length > 0,
+        Z = () =>
             (0, r.jsxs)(r.Fragment, {
                 children: [
                     (0, r.jsx)(d.Z, {
-                        imageSrc: x,
-                        gameName: y,
+                        imageSrc: y,
+                        gameName: x,
                         applicationId: v,
                         userId: t.id,
                         disableInteraction: !0,
@@ -82,21 +82,21 @@ function y(e) {
                             (0, r.jsx)(i.X6q, {
                                 variant: "text-md/normal",
                                 color: "text-default",
-                                children: y,
+                                children: x,
                             }),
                             null != O &&
-                                (0, r.jsx)(h, {
+                                (0, r.jsx)(j, {
                                     text: O,
                                     user: t,
                                     guildId: n,
                                     channelId: l,
                                 }),
-                            (0, r.jsx)(u.Z, { tags: _ }),
+                            (0, r.jsx)(u.Z, { tags: I }),
                             P &&
                                 (0, r.jsx)(s.Z, {
-                                    label: p.intl.formatToPlainString(p.t.ujhJdH, { numFriends: I.length }),
+                                    label: m.intl.formatToPlainString(m.t.ujhJdH, { numFriends: _.length }),
                                     className: b.socialProof,
-                                    users: I,
+                                    users: _,
                                     guildId: n,
                                     channelId: l,
                                 }),
@@ -112,10 +112,10 @@ function y(e) {
                   (0, r.jsx)("div", {
                       className: b.details,
                       children: (0, r.jsxs)("div", {
-                          className: m.placeholderText,
+                          className: p.placeholderText,
                           children: [
-                              (0, r.jsx)("div", { className: m.placeholderBar }),
-                              (0, r.jsx)("div", { className: m.placeholderBar }),
+                              (0, r.jsx)("div", { className: p.placeholderBar }),
+                              (0, r.jsx)("div", { className: p.placeholderBar }),
                           ],
                       }),
                   }),
@@ -124,13 +124,13 @@ function y(e) {
         : c
           ? (0, r.jsx)("div", {
                 className: b.card,
-                children: E(),
+                children: Z(),
             })
-          : (0, r.jsx)(j, {
+          : (0, r.jsx)(h, {
                 applicationId: v,
                 userId: t.id,
-                gameName: y,
+                gameName: x,
                 className: b.card,
-                children: E(),
+                children: Z(),
             });
 }

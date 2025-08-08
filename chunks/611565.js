@@ -10,8 +10,8 @@ var n = a(255367),
     u = a(787879),
     m = a(370774),
     x = a(94091),
-    p = a(616257);
-let h = [
+    h = a(616257);
+let p = [
         {
             key: "channelName",
             cellClassName: l()(x.cell, x.channelName),
@@ -85,12 +85,12 @@ function f() {
             hasMoreToLoad: u.Z.hasMoreToLoad,
             isLoadingComplete: u.Z.isLoadingComplete,
         })),
-        g = (0, i.e7)([u.Z], () => u.Z.currentRequestAnalyticsPayload),
-        j = (0, i.cj)([u.Z], () => u.Z.getChannelInfoMap()),
+        j = (0, i.e7)([u.Z], () => u.Z.currentRequestAnalyticsPayload),
+        g = (0, i.cj)([u.Z], () => u.Z.getChannelInfoMap()),
         _ = (0, i.cj)([d.Z], () => {
             let e = {};
             return (
-                Object.entries(j).forEach((t) => {
+                Object.entries(g).forEach((t) => {
                     let [a] = t,
                         n = d.Z.getChannel(a);
                     e[a] = null != n ? n : null;
@@ -107,7 +107,7 @@ function f() {
         C = (0, i.e7)([u.Z], () => u.Z.getInboxMessages()),
         N = (0, i.e7)([u.Z], () => u.Z.getDevOverrides().navOnClick);
     return (0, n.jsx)("div", {
-        className: p.panel,
+        className: h.panel,
         children: (0, n.jsxs)(s.zJl, {
             className: x.content,
             children: [
@@ -164,7 +164,7 @@ function f() {
                             children: ["Unread Channel Count: ", t.length],
                         }),
                         (0, n.jsx)(c.Z, {
-                            columns: h,
+                            columns: p,
                             data: Object.entries(y).map((e) => {
                                 var t;
                                 let [a, n] = e;
@@ -199,7 +199,7 @@ function f() {
                             children: ["Is Loading Complete: ", v ? "\u2705" : "\u274C"],
                         }),
                         (0, n.jsxs)("div", {
-                            children: ["Last Loading Trigger: ", null == g ? void 0 : g.loadingTrigger],
+                            children: ["Last Loading Trigger: ", null == j ? void 0 : j.loadingTrigger],
                         }),
                     ],
                 }),
@@ -210,11 +210,11 @@ function f() {
                             children: "Channel Info Map",
                         }),
                         (0, n.jsxs)("div", {
-                            children: ["Total Channels: ", Object.keys(j).length],
+                            children: ["Total Channels: ", Object.keys(g).length],
                         }),
                         (0, n.jsx)(c.Z, {
                             columns: b,
-                            data: Object.entries(j).map((e) => {
+                            data: Object.entries(g).map((e) => {
                                 var t, a;
                                 let [n, r] = e;
                                 return {

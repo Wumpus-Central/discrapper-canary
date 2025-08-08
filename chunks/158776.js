@@ -82,9 +82,7 @@ function x(e, t) {
             visible: e,
             hidden: [],
         };
-    let n = _.m.getCurrentConfig({ location: "presence_filtering" }, { autoTrackExposure: !1 }).enabled
-            ? e
-            : e.map((e) => (0, p.Jc)(e)),
+    let n = _.m.getConfig({ location: "presence_filtering" }).enabled ? e : e.map((e) => (0, p.Jc)(e)),
         r = f.R.getCurrentConfig({ location: "presence_filtering" }, { autoTrackExposure: !1 });
     if (!r.filterGamePresence && !r.filterRichPresence)
         return {

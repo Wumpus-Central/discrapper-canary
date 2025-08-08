@@ -12,7 +12,7 @@ var l = n(481060),
 function f(e) {
     let { user: t, onClose: n } = e,
         { trackUserProfileAction: f } = (0, a.KZ)(),
-        { mutualGuilds: p, isFetching: m } = (0, c.Z)(t),
+        { mutualGuilds: m, isFetching: p } = (0, c.Z)(t),
         g = (e) => {
             (0, o.X)(e), n(), (0, i.xf)();
         };
@@ -20,15 +20,15 @@ function f(e) {
         className: u.listScroller,
         fade: !0,
         children:
-            null == p && m
+            null == m && p
                 ? (0, r.jsx)("div", {
                       className: u.empty,
                       children: (0, r.jsx)(l.$jN, {}),
                   })
-                : (null != p || m) && (null == p ? void 0 : p.length) !== 0
-                  ? null == p
+                : (null != m || p) && (null == m ? void 0 : m.length) !== 0
+                  ? null == m
                       ? void 0
-                      : p.map((e) => {
+                      : m.map((e) => {
                             let { guild: n, nick: l } = e;
                             return (0, r.jsx)(
                                 s.Z,

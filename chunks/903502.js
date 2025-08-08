@@ -1,4 +1,4 @@
-a.d(t, { Z: () => h }), a(388685);
+a.d(t, { Z: () => p }), a(388685);
 var n = a(255367),
     r = a(73800),
     l = a(442837),
@@ -10,7 +10,7 @@ var n = a(255367),
     u = a(246992),
     m = a(531578),
     x = a(521981);
-let p = [
+let h = [
     {
         label: "second(s)",
         value: 1000,
@@ -28,12 +28,12 @@ let p = [
         value: 86400000,
     },
 ];
-function h() {
+function p() {
     let [e, t] = r.useState(null),
-        [a, h] = r.useState(0),
+        [a, p] = r.useState(0),
         [b, f] = r.useState(1000),
-        [v, g] = r.useState(0),
-        j = (0, l.e7)([c.Z], () => {
+        [v, j] = r.useState(0),
+        g = (0, l.e7)([c.Z], () => {
             var t;
             return null === e ? null : null != (t = c.Z.getFeedbackConfig(m.nw[e])) ? t : o.R[m.nw[e]];
         }),
@@ -68,7 +68,7 @@ function h() {
                 className: x.formElement,
                 tag: i.RB0.H3,
                 children: [
-                    null != j &&
+                    null != g &&
                         (0, n.jsxs)(n.Fragment, {
                             children: [
                                 (0, n.jsx)(d.Z, {
@@ -80,19 +80,19 @@ function h() {
                                 }),
                                 (0, n.jsx)(i.Text, {
                                     variant: "text-sm/normal",
-                                    children: "".concat(j.cooldown / 1000, " second(s) or"),
+                                    children: "".concat(g.cooldown / 1000, " second(s) or"),
                                 }),
                                 (0, n.jsx)(i.Text, {
                                     variant: "text-sm/normal",
-                                    children: "".concat(j.cooldown / 60000, " minute(s) or"),
+                                    children: "".concat(g.cooldown / 60000, " minute(s) or"),
                                 }),
                                 (0, n.jsx)(i.Text, {
                                     variant: "text-sm/normal",
-                                    children: "".concat(j.cooldown / 3600000, " hour(s) or"),
+                                    children: "".concat(g.cooldown / 3600000, " hour(s) or"),
                                 }),
                                 (0, n.jsx)(i.Text, {
                                     variant: "text-sm/normal",
-                                    children: "".concat(j.cooldown / 86400000, " day(s)"),
+                                    children: "".concat(g.cooldown / 86400000, " day(s)"),
                                 }),
                             ],
                         }),
@@ -111,10 +111,10 @@ function h() {
                                 value: a.toString(),
                                 type: "number",
                                 placeholder: "Duration length",
-                                onChange: (e) => h(parseFloat(e)),
+                                onChange: (e) => p(parseFloat(e)),
                             }),
                             (0, n.jsx)(i.q4e, {
-                                options: p,
+                                options: h,
                                 value: b,
                                 onChange: (e) => {
                                     f(e);
@@ -130,7 +130,7 @@ function h() {
                 className: x.formElement,
                 tag: i.RB0.H3,
                 children: [
-                    null != j &&
+                    null != g &&
                         (0, n.jsxs)(n.Fragment, {
                             children: [
                                 (0, n.jsx)(d.Z, {
@@ -142,7 +142,7 @@ function h() {
                                 }),
                                 (0, n.jsx)(i.Text, {
                                     variant: "text-sm/normal",
-                                    children: "".concat(100 * j.chance, "%"),
+                                    children: "".concat(100 * g.chance, "%"),
                                 }),
                             ],
                         }),
@@ -161,7 +161,7 @@ function h() {
                                 max: 100,
                                 value: v.toString(),
                                 type: "number",
-                                onChange: (e) => g(parseFloat(e)),
+                                onChange: (e) => j(parseFloat(e)),
                             }),
                             (0, n.jsx)(i.Text, {
                                 variant: "text-md/normal",
@@ -179,10 +179,10 @@ function h() {
                         text: "Update",
                         onClick: () =>
                             void (
-                                null != j &&
+                                null != g &&
                                 s.Z.dispatch({
                                     type: "FEEDBACK_OVERRIDE_SET",
-                                    feedbackType: j.feedbackType,
+                                    feedbackType: g.feedbackType,
                                     cooldown: a * b,
                                     chance: v / 100,
                                 })
@@ -194,10 +194,10 @@ function h() {
                         text: "Clear Override",
                         onClick: () =>
                             void (
-                                null != j &&
+                                null != g &&
                                 s.Z.dispatch({
                                     type: "FEEDBACK_OVERRIDE_CLEAR",
-                                    feedbackType: j.feedbackType,
+                                    feedbackType: g.feedbackType,
                                 })
                             ),
                         disabled: !C,

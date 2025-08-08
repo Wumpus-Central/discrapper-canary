@@ -9,14 +9,14 @@ var r = n(255367),
     d = n(786366),
     u = n(323090),
     f = n(116906),
-    p = n(384816),
-    m = n(389190),
+    m = n(384816),
+    p = n(389190),
     g = n(428927),
     b = n(228168),
-    h = n(388032),
-    j = n(301150),
-    y = n(923243);
-function x(e) {
+    j = n(388032),
+    h = n(301150),
+    x = n(923243);
+function y(e) {
     let {
         section: t,
         subsection: n,
@@ -36,7 +36,7 @@ function x(e) {
               onClose: s,
           })
         : t === b.oh.MUTUAL_FRIENDS
-          ? (0, r.jsx)(m.Z, {
+          ? (0, r.jsx)(p.Z, {
                 user: l,
                 guildId: a,
                 channelId: c,
@@ -58,7 +58,7 @@ function x(e) {
                       subsection: n,
                       onClose: s,
                   })
-                : (0, r.jsx)(p.Z, {
+                : (0, r.jsx)(m.Z, {
                       user: l,
                       currentUser: i,
                       displayProfile: o,
@@ -71,16 +71,16 @@ function v(e) {
     let {
             user: u,
             currentUser: f,
-            displayProfile: p,
-            guildId: m,
+            displayProfile: m,
+            guildId: p,
             items: g,
             initialSection: v = b.oh.USER_INFO,
             initialSubsection: O,
-            onClose: _,
+            onClose: I,
         } = e,
-        { trackUserProfileAction: I } = (0, s.KZ)(),
+        { trackUserProfileAction: _ } = (0, s.KZ)(),
         P = (0, i.e7)([c.Z], () => c.Z.hidePersonalInformation),
-        [{ section: E, subsection: Z }, N] = l.useState({
+        [{ section: Z, subsection: N }, E] = l.useState({
             section:
                 null !=
                 (d =
@@ -98,53 +98,53 @@ function v(e) {
             subsection: O,
         });
     l.useEffect(() => {
-        null == g.find((e) => e.section === E) &&
-            N({
+        null == g.find((e) => e.section === Z) &&
+            E({
                 section: g[0].section,
                 subsection: void 0,
             });
-    }, [g, E]);
+    }, [g, Z]);
     let S = l.useCallback(
         (e) => {
-            I({
+            _({
                 action: "PRESS_SECTION",
                 section: e,
             }),
-                N({
+                E({
                     section: e,
                     subsection: void 0,
                 });
         },
-        [I, N],
+        [_, E],
     );
     return P
         ? (0, r.jsx)("div", {
-              className: y.container,
+              className: x.container,
               children: (0, r.jsxs)("div", {
-                  className: j.empty,
+                  className: h.empty,
                   children: [
-                      (0, r.jsx)("div", { className: j.emptyIconStreamerMode }),
+                      (0, r.jsx)("div", { className: h.emptyIconStreamerMode }),
                       (0, r.jsx)("div", {
-                          className: j.emptyText,
-                          children: h.intl.string(h.t.Br1ls7),
+                          className: h.emptyText,
+                          children: j.intl.string(j.t.Br1ls7),
                       }),
                   ],
               }),
           })
         : (0, r.jsxs)("div", {
-              className: y.container,
+              className: x.container,
               children: [
                   (0, r.jsx)(o.n, {
-                      className: y.tabBar,
+                      className: x.tabBar,
                       type: "top",
-                      selectedItem: E,
+                      selectedItem: Z,
                       onItemSelect: S,
                       children: g.map((e) => {
                           let { section: t, text: n } = e;
                           return (0, r.jsx)(
                               o.n.Item,
                               {
-                                  className: y.tabBarItem,
+                                  className: x.tabBarItem,
                                   id: t,
                                   "aria-label": n,
                                   children: (0, r.jsx)(a.Text, {
@@ -156,15 +156,15 @@ function v(e) {
                           );
                       }),
                   }),
-                  (0, r.jsx)(x, {
+                  (0, r.jsx)(y, {
                       items: g,
-                      section: E,
-                      subsection: Z,
+                      section: Z,
+                      subsection: N,
                       user: u,
                       currentUser: f,
-                      displayProfile: p,
-                      guildId: m,
-                      onClose: _,
+                      displayProfile: m,
+                      guildId: p,
+                      onClose: I,
                   }),
               ],
           });

@@ -47,13 +47,13 @@ function c(e) {
                 ),
             [t],
         ),
-        p = [a.length];
+        h = [a.length];
     return (0, n.jsx)("div", {
         className: o.tableContainer,
         children: (0, n.jsx)(s.Tvr, {
             className: l,
             innerClassName: o.table,
-            sections: p,
+            sections: h,
             sectionHeight: 40,
             renderSection: (e) => {
                 let { section: t } = e,
@@ -89,14 +89,14 @@ function c(e) {
                 let { rowIndex: t } = e,
                     r = a[t],
                     l = r.key,
-                    p = i()(o.tableRow, {
+                    h = i()(o.tableRow, {
                         [o.selectedTableRow]: l === u,
                         rowClassName: c,
                     });
                 return (0, n.jsx)(
                     s.P3F,
                     {
-                        className: p,
+                        className: h,
                         onClick: () => (null == d ? void 0 : d(r)),
                         children: x.map((e) => {
                             var a, l;

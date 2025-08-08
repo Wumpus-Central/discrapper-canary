@@ -9,19 +9,19 @@ var r = n(255367),
     d = n(806729),
     u = n(857302),
     f = n(892001),
-    p = n(252417),
-    m = n(264481),
+    m = n(252417),
+    p = n(264481),
     g = n(714905);
 function b(e) {
-    let { user: t, guildId: n, channelId: b, onClose: h } = e,
-        { analyticsLocations: j } = (0, a.ZP)(),
-        { context: y, trackUserProfileAction: x } = (0, s.KZ)(),
+    let { user: t, guildId: n, channelId: b, onClose: j } = e,
+        { analyticsLocations: h } = (0, a.ZP)(),
+        { context: x, trackUserProfileAction: y } = (0, s.KZ)(),
         { mutualFriends: v, mutualFriendsCount: O } = (0, d.Z)(t),
-        _ = (0, o.Z)();
+        I = (0, o.Z)();
     return (
         l.useEffect(() => {
-            (0, u.Z)(t.id, _);
-        }, [t.id, _]),
+            (0, u.Z)(t.id, I);
+        }, [t.id, I]),
         (0, r.jsx)(i.Ttm, {
             className: g.scroller,
             fade: !0,
@@ -47,11 +47,11 @@ function b(e) {
                           ),
                       )
                     : 0 === v.length
-                      ? (0, r.jsx)(m.s_, {})
+                      ? (0, r.jsx)(p.s_, {})
                       : v.map((e) => {
                             let { key: t, user: l, status: i } = e;
                             return (0, r.jsx)(
-                                p.Z,
+                                m.Z,
                                 {
                                     user: l,
                                     status: i,
@@ -59,8 +59,8 @@ function b(e) {
                                     channelId: b,
                                     onSelect: () => {
                                         var e, t;
-                                        null == h || h(),
-                                            x({ action: "PRESS_MUTUAL_FRIEND" }),
+                                        null == j || j(),
+                                            y({ action: "PRESS_MUTUAL_FRIEND" }),
                                             (0, f.openUserProfileModal)(
                                                 ((e = (function (e) {
                                                     for (var t = 1; t < arguments.length; t++) {
@@ -87,11 +87,11 @@ function b(e) {
                                                             });
                                                     }
                                                     return e;
-                                                })({}, y)),
+                                                })({}, x)),
                                                 (t = t =
                                                     {
                                                         userId: l.id,
-                                                        sourceAnalyticsLocations: j,
+                                                        sourceAnalyticsLocations: h,
                                                     }),
                                                 Object.getOwnPropertyDescriptors
                                                     ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))

@@ -10,13 +10,13 @@ var n = a(255367),
     u = a(755721),
     m = a(481060),
     x = a(411149),
-    p = a(151480),
-    h = a(461762),
+    h = a(151480),
+    p = a(461762),
     b = a(680783),
     f = a(605236),
     v = a(675478),
-    g = a(944486),
-    j = a(388032),
+    j = a(944486),
+    g = a(388032),
     _ = a(145634);
 function y(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -64,24 +64,24 @@ function C(e, t) {
 function N() {
     return (0, n.jsxs)(m.Ttm, {
         className: _.container,
-        children: [(0, n.jsx)(O, {}), (0, n.jsx)(E, {})],
+        children: [(0, n.jsx)(O, {}), (0, n.jsx)(T, {})],
     });
 }
 function O() {
     var e, t;
-    let a = (0, c.e7)([g.Z], () => g.Z.getChannelId()),
+    let a = (0, c.e7)([j.Z], () => j.Z.getChannelId()),
         l = (0, b.Z)(a),
         s = null == l ? void 0 : l.wallpaperId,
-        d = (0, h.Z)(s),
+        d = (0, p.Z)(s),
         f = r.useCallback(
             (e) => {
-                null != s && (0, p.i)(s, { opacity: e });
+                null != s && (0, h.i)(s, { opacity: e });
             },
             [s],
         ),
         v = r.useCallback(
             (e) => {
-                T(null == l ? void 0 : l.wallpaperId, e.target.value);
+                E(null == l ? void 0 : l.wallpaperId, e.target.value);
             },
             [null == l ? void 0 : l.wallpaperId],
         ),
@@ -97,20 +97,20 @@ function O() {
             },
             [null == l ? void 0 : l.wallpaperId],
         ),
-        E = r.useCallback(() => T(null == l ? void 0 : l.wallpaperId, void 0), [null == l ? void 0 : l.wallpaperId]),
+        T = r.useCallback(() => E(null == l ? void 0 : l.wallpaperId, void 0), [null == l ? void 0 : l.wallpaperId]),
         w = r.useCallback(() => P(null == l ? void 0 : l.wallpaperId, void 0), [null == l ? void 0 : l.wallpaperId]),
         I = r.useCallback(() => S(null == l ? void 0 : l.wallpaperId, void 0), [null == l ? void 0 : l.wallpaperId]),
-        R = r.useCallback(
+        k = r.useCallback(
             (e) => {
-                null != s && (0, p.i)(s, { token_mix_amount: Math.round(e) });
+                null != s && (0, h.i)(s, { token_mix_amount: Math.round(e) });
             },
             [s],
         ),
-        k = r.useCallback(() => {
-            null != s && (0, p.i)(s, null);
+        R = r.useCallback(() => {
+            null != s && (0, h.i)(s, null);
         }, [s]),
-        A = null != (e = null == d ? void 0 : d.opacity) ? e : 1,
-        Z = null != (t = null == d ? void 0 : d.token_mix_amount) ? t : 100;
+        Z = null != (e = null == d ? void 0 : d.opacity) ? e : 1,
+        A = null != (t = null == d ? void 0 : d.token_mix_amount) ? t : 100;
     return (0, n.jsxs)("div", {
         children: [
             (0, n.jsx)(o.X6, {
@@ -156,13 +156,13 @@ function O() {
                             m.iRW,
                             {
                                 className: _.slider,
-                                initialValue: A,
+                                initialValue: Z,
                                 defaultValue: 1,
                                 minValue: 0,
                                 maxValue: 1,
                                 onValueChange: f,
                             },
-                            "opacity-".concat(A),
+                            "opacity-".concat(Z),
                         ),
                         (0, n.jsx)(m.ua7, {
                             text: "The most prominent color in the wallpaper. This will be used to adjust the color tokens.",
@@ -195,12 +195,12 @@ function O() {
                                 ),
                                 (0, n.jsx)(m.M0o, {
                                     color: "currentColor",
-                                    tooltip: j.intl.string(j.t.N86XcH),
+                                    tooltip: g.intl.string(g.t.N86XcH),
                                     icon: (0, n.jsx)(m.P$X, {
                                         size: "xs",
                                         color: "currentColor",
                                     }),
-                                    onClick: E,
+                                    onClick: T,
                                     className: _.removeButton,
                                 }),
                             ],
@@ -236,7 +236,7 @@ function O() {
                                 ),
                                 (0, n.jsx)(m.M0o, {
                                     color: "currentColor",
-                                    tooltip: j.intl.string(j.t.N86XcH),
+                                    tooltip: g.intl.string(g.t.N86XcH),
                                     icon: (0, n.jsx)(m.P$X, {
                                         size: "xs",
                                         color: "currentColor",
@@ -267,13 +267,13 @@ function O() {
                             m.iRW,
                             {
                                 className: _.slider,
-                                initialValue: Z,
+                                initialValue: A,
                                 defaultValue: 100,
                                 minValue: 0,
                                 maxValue: 100,
-                                onValueChange: R,
+                                onValueChange: k,
                             },
-                            "tokenMixAmount-".concat(Z),
+                            "tokenMixAmount-".concat(A),
                         ),
                         (0, n.jsx)(m.ua7, {
                             text: "The color used for hyperlinks.",
@@ -306,7 +306,7 @@ function O() {
                                 ),
                                 (0, n.jsx)(m.M0o, {
                                     color: "currentColor",
-                                    tooltip: j.intl.string(j.t.N86XcH),
+                                    tooltip: g.intl.string(g.t.N86XcH),
                                     icon: (0, n.jsx)(m.P$X, {
                                         size: "xs",
                                         color: "currentColor",
@@ -318,7 +318,7 @@ function O() {
                         }),
                         (0, n.jsx)(u.zx, {
                             className: _.resetButton,
-                            onClick: k,
+                            onClick: R,
                             children: "Reset",
                         }),
                     ],
@@ -326,7 +326,7 @@ function O() {
         ],
     });
 }
-function E() {
+function T() {
     let e = r.useCallback(() => {
             (0, v.Z1)(d.z.NITRO_TENURE_BADGE_LEVEL_UP);
         }, []),
@@ -360,12 +360,12 @@ function E() {
         ],
     });
 }
-let T = (0, s.debounce)(function (e, t) {
-        null != e && (0, p.i)(e, { primary_color: t });
+let E = (0, s.debounce)(function (e, t) {
+        null != e && (0, h.i)(e, { primary_color: t });
     }, 200),
     S = (0, s.debounce)(function (e, t) {
-        null != e && (0, p.i)(e, { link_color: t });
+        null != e && (0, h.i)(e, { link_color: t });
     }, 200),
     P = (0, s.debounce)(function (e, t) {
-        null != e && (0, p.i)(e, { secondary_color: t });
+        null != e && (0, h.i)(e, { secondary_color: t });
     }, 200);

@@ -46,8 +46,8 @@ function f(e) {
         }),
         {
             hasMessageContent: f,
-            hasGuildPresences: p,
-            hasGuildMembers: m,
+            hasGuildPresences: m,
+            hasGuildMembers: p,
         } = (0, a.w)({ flags: null == n ? void 0 : n.flags });
     return (0, r.jsxs)(l.zJ, {
         fade: !0,
@@ -59,13 +59,13 @@ function f(e) {
                     title: s.intl.string(s.t["7Tmhfn"]),
                     description: s.intl.string(s.t["eu5x7+"]),
                 }),
-            p &&
+            m &&
                 (0, r.jsx)(u, {
                     icon: o.iWm,
                     title: s.intl.string(s.t.awYSsL),
                     description: s.intl.string(s.t.TpsXoK),
                 }),
-            m &&
+            p &&
                 (0, r.jsx)(u, {
                     icon: o.BFJ,
                     title: s.intl.string(s.t.WuKeSE),

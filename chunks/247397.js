@@ -1,20 +1,20 @@
-a.d(t, {
+n.d(t, {
     NP: () => s,
-    Xe: () => l,
-    rR: () => i,
+    Xe: () => o,
+    rR: () => a,
 });
-var n = a(296009),
-    r = a(388032);
-let l = {
-        [n.l.FAVORITE_GAMES]: 1,
-        [n.l.CURRENT_GAMES]: 3,
-        [n.l.WANT_TO_PLAY_GAMES]: 8,
-        [n.l.PLAYED_GAMES]: 8,
+var r = n(296009),
+    i = n(388032);
+let o = {
+        [r.l.FAVORITE_GAMES]: 1,
+        [r.l.CURRENT_GAMES]: 3,
+        [r.l.WANT_TO_PLAY_GAMES]: 8,
+        [r.l.PLAYED_GAMES]: 8,
     },
-    i = [n.l.FAVORITE_GAMES, n.l.CURRENT_GAMES, n.l.WANT_TO_PLAY_GAMES, n.l.PLAYED_GAMES],
+    a = [r.l.FAVORITE_GAMES, r.l.CURRENT_GAMES, r.l.WANT_TO_PLAY_GAMES, r.l.PLAYED_GAMES],
     s = {
-        [n.l.FAVORITE_GAMES]: r.t.sUQar6,
-        [n.l.CURRENT_GAMES]: r.t.SqNnur,
-        [n.l.WANT_TO_PLAY_GAMES]: r.t.bWSQwc,
-        [n.l.PLAYED_GAMES]: r.t.scOKER,
+        [r.l.FAVORITE_GAMES]: i.t.sUQar6,
+        [r.l.CURRENT_GAMES]: i.t.SqNnur,
+        [r.l.WANT_TO_PLAY_GAMES]: i.t.bWSQwc,
+        [r.l.PLAYED_GAMES]: i.t.scOKER,
     };

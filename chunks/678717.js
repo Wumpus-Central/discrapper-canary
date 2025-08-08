@@ -1,4 +1,4 @@
-a.r(t), a.d(t, { default: () => eh }), a(539854), a(388685);
+a.r(t), a.d(t, { default: () => ep }), a(539854), a(388685);
 var n = a(255367),
     r = a(73800),
     l = a(120356),
@@ -10,37 +10,37 @@ var n = a(255367),
     u = a(213609),
     m = a(213713),
     x = a(665149),
-    p = a(611565),
-    h = a(238246),
+    h = a(611565),
+    p = a(238246),
     b = a(788983),
     f = a(906467),
     v = a(259580),
-    g = a(31336),
-    j = a(19759),
+    j = a(31336),
+    g = a(19759),
     _ = a(432877),
     y = a(176038);
 a(381996);
 var C = a(392750),
     N = a(926976),
     O = a(789654),
-    E = a(719672),
-    T = a(691867),
+    T = a(719672),
+    E = a(691867),
     S = a(916790),
     P = a(645973),
     w = a(903502),
     I = a(604776),
-    R = a(912072),
-    k = a(272193),
-    A = a(685560),
-    Z = a(735959),
+    k = a(912072),
+    R = a(272193),
+    Z = a(685560),
+    A = a(735959),
     D = a(572444),
     L = a(636500),
     B = a(246992),
     M = a(484662),
     F = a(496025),
     U = a(442954),
-    G = a(925124),
-    z = a(633001),
+    z = a(925124),
+    G = a(633001),
     V = a(702904),
     H = a(178821),
     W = a(891401),
@@ -64,7 +64,7 @@ var C = a(392750),
 function ed(e) {
     let { resizableNode: t, onResize: a, onResizeEnd: r } = e,
         l = (0, d.Z)({
-            minDimension: j.h,
+            minDimension: g.h,
             resizableDomNodeRef: t,
             onElementResize: a,
             onElementResizeEnd: r,
@@ -144,7 +144,7 @@ function em(e) {
                         id: "overlay",
                         name: "Overlay v3",
                         group: el.v0.GAMES,
-                        render: () => (0, n.jsx)(z.Z, {}),
+                        render: () => (0, n.jsx)(G.Z, {}),
                     }),
                     e.push({
                         id: "slayer_sdk",
@@ -162,7 +162,7 @@ function em(e) {
                     id: "intl",
                     name: "Intl",
                     group: el.v0.UI,
-                    render: () => (0, n.jsx)(Z.Z, {}),
+                    render: () => (0, n.jsx)(A.Z, {}),
                 }),
                 e.push({
                     id: "colors",
@@ -174,7 +174,7 @@ function em(e) {
                     id: "design_toggles",
                     name: "Design Toggles",
                     group: el.v0.UI,
-                    render: () => (0, n.jsx)(T.Z, {}),
+                    render: () => (0, n.jsx)(E.Z, {}),
                 }),
                 e.push({
                     id: "premium_feature_randomizer",
@@ -186,7 +186,7 @@ function em(e) {
                     id: "overlays",
                     name: "Dev Overlays",
                     group: el.v0.DEVELOPMENT,
-                    render: () => (0, n.jsx)(R.Z, { devSettingsCategory: _.zU.OVERLAYS }),
+                    render: () => (0, n.jsx)(k.Z, { devSettingsCategory: _.zU.OVERLAYS }),
                 }),
                 e.push({
                     id: "messaging",
@@ -198,7 +198,7 @@ function em(e) {
                     id: "reporting",
                     name: "Reporting",
                     group: el.v0.EXPERIMENTS,
-                    render: () => (0, n.jsx)(R.Z, { devSettingsCategory: _.zU.REPORTING }),
+                    render: () => (0, n.jsx)(k.Z, { devSettingsCategory: _.zU.REPORTING }),
                 }),
                 e.push({
                     id: "permissions",
@@ -241,13 +241,13 @@ function em(e) {
                         id: "notifications_inbox",
                         name: "Notifications Inbox",
                         group: el.v0.USERS,
-                        render: () => (0, n.jsx)(p.Z, {}),
+                        render: () => (0, n.jsx)(h.Z, {}),
                     })),
                 e.push({
                     id: "dcf",
                     name: "DCF",
                     group: el.v0.EXPERIMENTS,
-                    render: () => (0, n.jsx)(E.Z, {}),
+                    render: () => (0, n.jsx)(T.Z, {}),
                 }),
                 e.push({
                     id: "perks",
@@ -266,7 +266,7 @@ function em(e) {
                         id: "offers",
                         name: "Offers",
                         group: el.v0.PREMIUM,
-                        render: () => (0, n.jsx)(G.Z, {}),
+                        render: () => (0, n.jsx)(z.Z, {}),
                     }),
                     e.push({
                         id: "payments",
@@ -290,7 +290,7 @@ function em(e) {
                     id: "gifting_intent",
                     name: "Gifting Intent",
                     group: el.v0.PREMIUM,
-                    render: () => (0, n.jsx)(k.Z, {}),
+                    render: () => (0, n.jsx)(R.Z, {}),
                 }),
                 e.push({
                     id: "voice_filters",
@@ -308,7 +308,7 @@ function em(e) {
                     id: "skill_trees",
                     name: "Skill Trees",
                     group: el.v0.GUILDS,
-                    render: () => (0, n.jsx)(A.Z, {}),
+                    render: () => (0, n.jsx)(Z.Z, {}),
                 }),
                 e.push({
                     id: "language",
@@ -326,14 +326,14 @@ function em(e) {
         } = (0, el.ZP)(
             {
                 tabs: l,
-                initialSelectedTabId: null != (t = j.Z.lastOpenTabId) ? t : void 0,
+                initialSelectedTabId: null != (t = g.Z.lastOpenTabId) ? t : void 0,
                 onChangeTab: (e) => {
-                    (0, g.Qh)({ lastOpenTabId: e });
+                    (0, j.Qh)({ lastOpenTabId: e });
                 },
             },
             [l],
         ),
-        y = (0, o.e7)([j.Z], () => j.Z.isRandomlyChangingPremiumOptions);
+        y = (0, o.e7)([g.Z], () => g.Z.isRandomlyChangingPremiumOptions);
     return (
         (0, u.Z)({
             type: s.ImpressionTypes.PANE,
@@ -355,11 +355,11 @@ function em(e) {
                                           (0, b.bA)(
                                               ei.KJ3.DEVTOOLS_POPOUT,
                                               () =>
-                                                  (0, n.jsx)(h.Z, {
+                                                  (0, n.jsx)(p.Z, {
                                                       windowKey: ei.KJ3.DEVTOOLS_POPOUT,
                                                       title: "DevTools",
                                                       withTitleBar: !0,
-                                                      children: (0, n.jsx)(eh, {
+                                                      children: (0, n.jsx)(ep, {
                                                           mobile: !1,
                                                           isPopout: !0,
                                                       }),
@@ -374,7 +374,7 @@ function em(e) {
                                   (0, n.jsx)(x.ZP.Icon, {
                                       icon: c.Dio,
                                       tooltip: es.intl.string(es.t.cpT0Cg),
-                                      onClick: g.SO,
+                                      onClick: j.SO,
                                   }),
                               ],
                           }),
@@ -396,9 +396,9 @@ function em(e) {
 }
 function ex() {
     let e = r.useRef(null),
-        t = (0, o.e7)([j.Z], () => j.Z.sidebarWidth),
+        t = (0, o.e7)([g.Z], () => g.Z.sidebarWidth),
         [a, l] = r.useState(null),
-        i = r.useCallback((e) => (0, g.Qh)({ sidebarWidth: e }), []);
+        i = r.useCallback((e) => (0, j.Qh)({ sidebarWidth: e }), []);
     return (r.useEffect(() => {
         null === a && null !== t && l(t);
     }, [t, a]),
@@ -408,7 +408,7 @@ function ex() {
               ref: e,
               className: eo.container,
               style: {
-                  minWidth: j.h,
+                  minWidth: g.h,
                   width: a,
               },
               "data-app-right-panel": !0,
@@ -425,8 +425,8 @@ function ex() {
               ],
           });
 }
-function ep() {
-    return (0, o.e7)([j.Z], () => j.Z.displayTools)
+function eh() {
+    return (0, o.e7)([g.Z], () => g.Z.displayTools)
         ? (0, n.jsx)("div", {
               className: i()(eo.container, eo.mobileContainerExpanded),
               children: (0, n.jsx)("div", {
@@ -437,7 +437,7 @@ function ep() {
         : (0, n.jsx)("div", {
               className: eo.container,
               children: (0, n.jsx)(c.P3F, {
-                  onClick: g.SO,
+                  onClick: j.SO,
                   children: (0, n.jsxs)(x.ZP, {
                       className: i()(ec.headerBar, eo.mobileHeaderCollapsed),
                       toolbar: (0, n.jsx)(v.Z, { direction: v.Z.Directions.UP }),
@@ -452,10 +452,10 @@ function ep() {
               }),
           });
 }
-function eh(e) {
+function ep(e) {
     let { mobile: t, isPopout: a = !1 } = e;
     return t
-        ? (0, n.jsx)(ep, {})
+        ? (0, n.jsx)(eh, {})
         : a
           ? (0, n.jsx)("div", {
                 className: eo.popoutContainer,

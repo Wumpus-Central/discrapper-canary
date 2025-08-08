@@ -1,4 +1,4 @@
-a.d(t, { Z: () => g });
+a.d(t, { Z: () => j });
 var n = a(255367);
 a(73800);
 var r = a(120356),
@@ -11,8 +11,8 @@ var r = a(120356),
     u = a(110478),
     m = a(423932),
     x = a(695346),
-    p = a(306052),
-    h = a(594174),
+    h = a(306052),
+    p = a(594174),
     b = a(994331),
     f = a(20493);
 let v = () => {
@@ -41,15 +41,15 @@ let v = () => {
             );
         });
 };
-function g() {
-    let e = h.default.getCurrentUser(),
+function j() {
+    let e = p.default.getCurrentUser(),
         t = null == e ? void 0 : e.isStaff(),
         a = x.Rt.useSetting();
     return (0, n.jsxs)(n.Fragment, {
         children: [
             (0, n.jsx)("div", {
                 className: l()(b.buttonsContainer, f.marginBottom20),
-                children: (0, n.jsx)(p.g, { isDevTools: !0 }),
+                children: (0, n.jsx)(h.g, { isDevTools: !0 }),
             }),
             (0, n.jsx)("div", {
                 className: l()(b.buttonsContainer, f.marginBottom20),

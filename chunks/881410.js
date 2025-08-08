@@ -35,15 +35,15 @@ function u(e) {
 function f(e) {
     let { disabled: t, widgetType: n } = e,
         [f] = (0, o.ynZ)(),
-        p = l.useRef(null),
-        m = l.useCallback(
+        m = l.useRef(null),
+        p = l.useCallback(
             (e) => {
                 (0, c.ES)(n, e);
             },
             [n],
         ),
         { options: g, matchSorterOptions: b } = (0, a.h)(),
-        h = l.useCallback(
+        j = l.useCallback(
             (e) => {
                 var t, n;
                 return "" === e.trim()
@@ -71,7 +71,7 @@ function f(e) {
             [g, b],
         );
     return (0, r.jsx)(o.yRy, {
-        targetElementRef: p,
+        targetElementRef: m,
         position: "bottom",
         align: "center",
         renderPopout: (e) => {
@@ -82,14 +82,14 @@ function f(e) {
                 autoFocus: !0,
                 value: f,
                 onChange: (e) => {
-                    m(e), t();
+                    p(e), t();
                 },
                 onClose: t,
                 multiSelect: !1,
                 showScrollbar: !0,
                 maxVisibleItems: 7,
                 children: (e) =>
-                    h(e).map((e) =>
+                    j(e).map((e) =>
                         (0, r.jsx)(
                             o.lo1,
                             {
@@ -109,7 +109,7 @@ function f(e) {
         },
         children: (e) =>
             (0, r.jsx)("div", {
-                ref: p,
+                ref: m,
                 children: (0, r.jsx)(
                     o.zxk,
                     u(

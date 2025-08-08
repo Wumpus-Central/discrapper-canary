@@ -1,37 +1,37 @@
-r.d(e, { Z: () => s }), r(953529), r(388685);
+r.d(e, { Z: () => u }), r(953529), r(388685);
 var n = r(255367),
     a = r(73800),
     i = r(82659),
     o = r(481060),
-    c = r(388032),
-    l = r(98847);
-function s(t) {
-    let { errorText: e, title: r, description: s, transitionState: d, onCancel: u, onConfirm: p, children: b } = t,
-        [g, y] = a.useState(!1),
-        f = a.useCallback(async () => {
-            y(!0);
+    l = r(388032),
+    c = r(98847);
+function u(t) {
+    let { errorText: e, title: r, description: u, transitionState: s, onCancel: d, onConfirm: p, children: b } = t,
+        [g, _] = a.useState(!1),
+        y = a.useCallback(async () => {
+            _(!0);
             try {
                 await p();
             } catch (t) {
                 throw t;
             } finally {
-                y(!1);
+                _(!1);
             }
         }, [p]);
     return (0, n.jsxs)(i.Modal, {
-        transitionState: d,
-        onClose: u,
+        transitionState: s,
+        onClose: d,
         title: r,
-        subtitle: s,
+        subtitle: u,
         actions: [
             {
-                text: c.intl.string(c.t["ETE/oK"]),
+                text: l.intl.string(l.t["ETE/oK"]),
                 variant: "secondary",
-                onClick: u,
+                onClick: d,
             },
             {
-                text: c.intl.string(c.t.R3BPHx),
-                onClick: f,
+                text: l.intl.string(l.t.R3BPHx),
+                onClick: y,
                 variant: "primary",
                 loading: g,
             },
@@ -40,7 +40,7 @@ function s(t) {
             b,
             null != e && "" !== e
                 ? (0, n.jsx)(o.Text, {
-                      className: l.errorText,
+                      className: c.errorText,
                       variant: "text-xs/normal",
                       color: "text-danger",
                       children: e,

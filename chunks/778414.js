@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => j });
 var r = n(255367);
 n(73800);
 var l = n(296009),
@@ -10,8 +10,8 @@ var l = n(296009),
     d = n(173951),
     u = n(455731),
     f = n(795990),
-    p = n(19043);
-function m(e) {
+    m = n(19043);
+function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -61,20 +61,20 @@ function g(e) {
         })(e, ["widget"]);
     switch (t.type) {
         case l.l.FAVORITE_GAMES:
-            return (0, r.jsx)(s.Z, m({ widget: t }, n));
+            return (0, r.jsx)(s.Z, p({ widget: t }, n));
         case l.l.CURRENT_GAMES:
-            return (0, r.jsx)(c.Z, m({ widget: t }, n));
+            return (0, r.jsx)(c.Z, p({ widget: t }, n));
         case l.l.WANT_TO_PLAY_GAMES:
-            return (0, r.jsx)(u.Z, m({ widget: t }, n));
+            return (0, r.jsx)(u.Z, p({ widget: t }, n));
         case l.l.PLAYED_GAMES:
-            return (0, r.jsx)(d.Z, m({ widget: t }, n));
+            return (0, r.jsx)(d.Z, p({ widget: t }, n));
         default:
             return null;
     }
 }
 function b(e) {
     let { user: t, guildId: n, channelId: l } = e,
-        i = (0, a.Z)(),
+        i = (0, a.Z)(t.id),
         { widgets: c, isGameFetching: s } = (0, o.Z)(i);
     return 0 === c.length
         ? (0, r.jsx)(f.Z, {})
@@ -94,10 +94,10 @@ function b(e) {
               ),
           });
 }
-function h(e) {
+function j(e) {
     return (0, r.jsx)(i.Ttm, {
-        className: p.scroller,
+        className: m.scroller,
         fade: !0,
-        children: (0, r.jsx)(b, m({}, e)),
+        children: (0, r.jsx)(b, p({}, e)),
     });
 }
