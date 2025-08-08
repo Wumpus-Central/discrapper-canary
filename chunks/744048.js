@@ -24,7 +24,7 @@ let v = function () {
         t = (0, i.e7)([g.default], () => E.ZP.canUseClientThemes(g.default.getCurrentUser())),
         n = (0, i.e7)([s.Z], () => s.Z.isCoachmark),
         v = (0, c.g)(),
-        { v2EditorEnabled: I } = l.M.useExperiment({ location: "AppRightSidePanel" }),
+        { v2EditorEnabled: I } = l.Mc.useExperiment({ location: "AppRightSidePanel" }),
         { activePanel: T, metadata: S } = (0, b.oq)(),
         A = [];
     !e && null == T && (n && !t && A.push(o.z.CLIENT_THEMES_COACHMARK), v && A.push(o.z.CUSTOM_THEME_COACHMARK));

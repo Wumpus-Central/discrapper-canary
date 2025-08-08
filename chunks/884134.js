@@ -398,7 +398,7 @@ function ee(e) {
 function et(e) {
     var t;
     let { metadata: n, markAsDismissed: o, isCoachmark: a } = e,
-        u = R.M.useExperiment({ location: "ClientThemeColorPickerTools" }).enabled,
+        u = R.Mc.useExperiment({ location: "ClientThemeColorPickerTools" }).enabled,
         d = (0, C.jJ)(),
         f = i.useRef(!1),
         {

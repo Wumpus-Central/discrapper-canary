@@ -368,7 +368,7 @@ function ee(e) {
 function et(e) {
     var t;
     let { metadata: n, markAsDismissed: o, isCoachmark: a } = e,
-        u = P.M.useExperiment({ location: "ClientThemeColorPickerTools" }).enabled,
+        u = P.Mc.useExperiment({ location: "ClientThemeColorPickerTools" }).enabled,
         d = (0, R.jJ)(),
         f = i.useRef(!1),
         {

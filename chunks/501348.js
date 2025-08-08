@@ -715,7 +715,7 @@ function ei() {
         s = Z.L1.useSetting(),
         a = Z.hg.useSetting(),
         c = Z.YC.useSetting(),
-        d = j.M.useExperiment({ location: "UserSettingsAppearance" }).enabled;
+        d = j.Mc.useExperiment({ location: "UserSettingsAppearance" }).enabled;
     (0, g.ZP)(() => {
         en(o.z.CLIENT_THEMES_SETTINGS_BADGE),
             en(o.z.DEKSTOP_CUSTOM_APP_ICON_BADGE),

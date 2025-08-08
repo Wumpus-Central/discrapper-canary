@@ -1,4 +1,4 @@
-n.d(t, { default: () => I }), n(953529), n(388685);
+n.d(t, { default: () => A }), n(953529), n(388685);
 var r = n(255367),
     o = n(73800),
     l = n(990547),
@@ -8,23 +8,23 @@ var r = n(255367),
     c = n(902704),
     d = n(481060),
     u = n(100527),
-    f = n(906732),
-    p = n(213609),
+    p = n(906732),
+    f = n(213609),
     m = n(98278),
     g = n(740594),
     h = n(612659),
     b = n(594174),
     x = n(626135),
     j = n(364747),
-    S = n(131016),
-    _ = n(922626),
-    O = n(579346),
-    C = n(438759),
-    y = n(512070),
+    _ = n(131016),
+    S = n(922626),
+    C = n(579346),
+    y = n(438759),
+    O = n(512070),
     P = n(305813),
     v = n(203872),
-    E = n(981631),
-    k = n(474936),
+    k = n(981631),
+    E = n(474936),
     N = n(698282),
     T = n(388032),
     D = n(584794);
@@ -53,9 +53,9 @@ function w(e) {
     }
     return e;
 }
-function L(e) {
+function I(e) {
     let { onApply: t, onSurpriseMe: n, onClose: o, canApply: l, isApplying: a } = e,
-        i = (0, h.m)(k.p9.TIER_2),
+        i = (0, h.m)(E.p9.TIER_2),
         s = (0, r.jsx)(d.zxk, {
             variant: "secondary",
             size: "md",
@@ -130,7 +130,7 @@ function L(e) {
                             className: D.description,
                             children: T.intl.format(N.default.PWf0xc, {
                                 onClickNitro: () => {
-                                    x.default.track(E.rMx.DISPLAY_NAME_STYLES_NITRO_CLICKED), (0, m.$)(o);
+                                    x.default.track(k.rMx.DISPLAY_NAME_STYLES_NITRO_CLICKED), (0, m.$)(o);
                                 },
                             }),
                         }),
@@ -142,10 +142,10 @@ function L(e) {
                         s,
                         (0, r.jsx)(g.Z, {
                             premiumModalAnalyticsLocation: {
-                                section: E.jXE.DISPLAY_NAME_STYLES_MODAL_FOOTER,
-                                object: E.qAy.PREMIUM_UPSELL_BUTTON,
+                                section: k.jXE.DISPLAY_NAME_STYLES_MODAL_FOOTER,
+                                object: k.qAy.PREMIUM_UPSELL_BUTTON,
                             },
-                            subscriptionTier: k.Si.TIER_2,
+                            subscriptionTier: E.Si.TIER_2,
                         }),
                     ],
                 }),
@@ -157,52 +157,48 @@ function L(e) {
         children: i ? c : u,
     });
 }
-function I(e) {
-    var t, n, m, g, h, k, w, I, A, R, B;
-    let { transitionState: M, analyticsLocations: Z, guild: Y, onClose: G } = e,
-        H = (0, s.e7)([b.default], () => b.default.getCurrentUser()),
-        F = (0, v.J)(),
-        [z, U] = o.useState(
-            null != (A = null == H || null == (t = H.displayNameStyles) ? void 0 : t.fontId) ? A : i.C.DEFAULT,
+function A(e) {
+    var t, n, m, g, h, E, w, A, L, R;
+    let { transitionState: B, analyticsLocations: M, guild: Z, onClose: Y } = e,
+        G = (0, s.e7)([b.default], () => b.default.getCurrentUser()),
+        H = null != (w = null == G || null == (t = G.displayNameStyles) ? void 0 : t.colors) ? w : [],
+        z = (0, v.J)(),
+        [F, U] = o.useState(
+            null != (A = null == G || null == (n = G.displayNameStyles) ? void 0 : n.fontId) ? A : i.C.DEFAULT,
         ),
         [X, K] = o.useState(
-            null != (R = null == H || null == (n = H.displayNameStyles) ? void 0 : n.effectId) ? R : a.m.SOLID,
+            null != (L = null == G || null == (m = G.displayNameStyles) ? void 0 : m.effectId) ? L : a.m.SOLID,
         ),
-        [V, q] = o.useState(
-            (null == H || null == (m = H.displayNameStyles) ? void 0 : m.colors) != null &&
-                (null == H || null == (g = H.displayNameStyles) ? void 0 : g.colors.length) > 0
-                ? null == H || null == (h = H.displayNameStyles)
-                    ? void 0
-                    : h.colors
-                : F[X].defaultColors,
-        );
-    (0, p.Z)(
+        [q, V] = o.useState(H.length > 0 && X !== a.m.GRADIENT ? H[0] : z[X].defaultColors[0]),
+        [W, $] = o.useState(H.length > 0 && X === a.m.GRADIENT ? H : z[a.m.GRADIENT].defaultColors);
+    (0, f.Z)(
         {
             type: l.ImpressionTypes.POPOUT,
             name: l.ImpressionNames.DISPLAY_NAME_STYLES_MODAL,
         },
         { trackOnInitialLoad: !0 },
     );
-    let { analyticsLocations: W } = (0, f.ZP)(Z, u.Z.EDIT_DISPLAY_NAME_STYLES_MODAL),
-        { handleApplyDisplayNameStyles: J, isApplying: $ } = (0, _.Z)({
+    let { analyticsLocations: J } = (0, p.ZP)(M, u.Z.EDIT_DISPLAY_NAME_STYLES_MODAL),
+        { handleApplyDisplayNameStyles: Q, isApplying: ee } = (0, S.Z)({
             onSuccess: () => {
-                G();
+                Y();
             },
             onError: (e) => {},
         }),
-        Q =
-            z !== (null == H || null == (k = H.displayNameStyles) ? void 0 : k.fontId) ||
-            X !== (null == H || null == (w = H.displayNameStyles) ? void 0 : w.effectId) ||
-            !(0, c.E)(V, null != (B = null == H || null == (I = H.displayNameStyles) ? void 0 : I.colors) ? B : []);
-    return (o.useEffect(() => {}, [W]), null == H)
+        et = X === a.m.GRADIENT ? W : [q],
+        en =
+            F !== (null == G || null == (g = G.displayNameStyles) ? void 0 : g.fontId) ||
+            X !== (null == G || null == (h = G.displayNameStyles) ? void 0 : h.effectId) ||
+            !(0, c.E)(et, null != (R = null == G || null == (E = G.displayNameStyles) ? void 0 : E.colors) ? R : []);
+    return (o.useEffect(() => {}, [J]), null == G)
         ? null
-        : (0, r.jsx)(f.Gt, {
-              value: W,
+        : (0, r.jsx)(p.Gt, {
+              value: J,
               children: (0, r.jsx)(j.k.Provider, {
                   value: { overrideSettings: !0 },
                   children: (0, r.jsxs)(d.Y0X, {
                       "data-migration-pending": !0,
-                      transitionState: M,
+                      transitionState: B,
                       size: d.CgR.LARGE,
                       parentComponent: "DisplayNameStylesModal",
                       className: D.modalRoot,
@@ -224,69 +220,68 @@ function I(e) {
                                                   children: T.intl.string(N.default.ZPMAlZ),
                                               }),
                                           }),
-                                          (0, r.jsx)(y.Z, {
-                                              selectedFontId: z,
+                                          (0, r.jsx)(O.Z, {
+                                              selectedFontId: F,
                                               setSelectedFontId: U,
                                               className: D.selectionSubSection,
                                           }),
-                                          (0, r.jsx)(C.Z, {
+                                          (0, r.jsx)(y.Z, {
                                               selectedEffectId: X,
                                               setSelectedEffectId: (e) => {
-                                                  e === a.m.GRADIENT && 1 === V.length
-                                                      ? q(V.concat(E.p6O))
-                                                      : (0 === V.length || (0, c.E)(V, F[X].defaultColors)) &&
-                                                        q(F[e].defaultColors),
-                                                      K(e);
+                                                  K(e);
                                               },
                                               className: D.selectionSubSection,
-                                              configs: F,
+                                              configs: z,
                                           }),
-                                          (0, r.jsx)(O.Z, {
-                                              selectedColors: V,
-                                              setSelectedColors: q,
+                                          (0, r.jsx)(C.Z, {
+                                              selectedColors: et,
+                                              setSelectedColors: (e) => {
+                                                  X === a.m.GRADIENT ? $(e) : V(e[0]);
+                                              },
                                               selectedEffectId: X,
                                               className: D.selectionSubSection,
-                                              defaultColor: F[X].defaultColors[0],
+                                              defaultColor: z[X].defaultColors[0],
                                           }),
                                       ],
                                   }),
                                   (0, r.jsx)(P.Z, {
-                                      user: H,
-                                      selectedFontId: z,
+                                      user: G,
+                                      selectedFontId: F,
                                       selectedEffectId: X,
-                                      selectedColors: X === a.m.SOLID && (0, c.E)(V, F[X].defaultColors) ? [] : V,
-                                      onClose: G,
+                                      selectedColors: X === a.m.SOLID && (0, c.E)(et, z[X].defaultColors) ? [] : et,
+                                      onClose: Y,
                                   }),
                               ],
                           }),
-                          (0, r.jsx)(L, {
-                              isApplying: $,
+                          (0, r.jsx)(I, {
+                              isApplying: ee,
                               onApply: () => {
-                                  if (Q) {
-                                      let e = V;
-                                      X === a.m.SOLID && V.length > 0 && V[0] === F[X].defaultColors[0] && (e = []),
-                                          J({
-                                              fontId: z,
+                                  if (en) {
+                                      let e = et;
+                                      X === a.m.SOLID && et.length > 0 && et[0] === z[X].defaultColors[0] && (e = []),
+                                          Q({
+                                              fontId: F,
                                               effectId: X,
                                               colors: e,
                                           }),
-                                          x.default.track(E.rMx.DISPLAY_NAME_STYLES_APPLIED, {
-                                              font_name: i.C[z],
+                                          x.default.track(k.rMx.DISPLAY_NAME_STYLES_APPLIED, {
+                                              font_name: i.C[F],
                                               effect_name: a.m[X],
-                                              colors: V,
+                                              colors: et,
                                           });
                                   }
                               },
                               onSurpriseMe: () => {
-                                  let e = (0, S.aY)();
+                                  let e = (0, _.aY)();
                                   U(e.fontId),
                                       K(e.effectId),
-                                      q(e.colors),
-                                      x.default.track(E.rMx.DISPLAY_NAME_STYLES_SURPRISE_ME);
+                                      V(e.colors[0]),
+                                      $(e.colors),
+                                      x.default.track(k.rMx.DISPLAY_NAME_STYLES_SURPRISE_ME);
                               },
-                              onClose: G,
-                              canApply: Q,
-                              analyticsLocations: W,
+                              onClose: Y,
+                              canApply: en,
+                              analyticsLocations: J,
                           }),
                       ],
                   }),

@@ -67,7 +67,7 @@ function I(e) {
         V = (0, p.Ml)("RootThemeContextProvider"),
         H = (0, p.CL)("RootThemeContextProvider"),
         Y = (0, p.VM)("RootThemeContextProvider"),
-        W = f.M.useExperiment({ location: "RootThemeContextProvider" }).enabled,
+        W = f.Mc.useExperiment({ location: "RootThemeContextProvider" }).enabled,
         K = (0, d.Z)("RootThemeContextProvider");
     return (0, r.jsx)(l.wMY, {
         theme: S,

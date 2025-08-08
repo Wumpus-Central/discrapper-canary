@@ -1488,6 +1488,10 @@ Y(
             message: e.message,
             emoji: e.emoji,
             reactorUserId: e.reactor_user_id,
+            title: e.title,
+            body: e.body,
+            trackingType: e.tracking_type,
+            icon: e.icon,
         });
     }),
     H(["NOTIFICATION_CENTER_ITEM_CREATE"], (e) => {

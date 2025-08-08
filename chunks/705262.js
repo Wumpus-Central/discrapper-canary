@@ -251,7 +251,7 @@ let W = Object.freeze({
             [b, y] = i.useState(!1),
             [O, v] = i.useState(-1),
             I = (0, l.e7)([_.Z], () => _.Z.useReducedMotion),
-            T = C.M.useExperiment({ location: "GradientSelectors" }).enabled;
+            T = C.Mc.useExperiment({ location: "GradientSelectors" }).enabled;
         i.useEffect(() => {
             ((O === w.XV.length - 2 && "EDITOR" === o) || E === c.Us.EASTER_EGG) && y(!0);
         }, [O, o, E]);

@@ -22,7 +22,7 @@ let f = "data-client-themes",
         }, [e]);
     };
 function p() {
-    let e = d.M.useExperiment({ location: "RootThemeContextProvider" }).enabled,
+    let e = d.Mc.useExperiment({ location: "RootThemeContextProvider" }).enabled,
         t = (0, o.e7)([a.Z], () => a.Z.theme),
         { colors: n, chassisMixAmount: u, gradientAngle: f, setAll: _ } = (0, c.Ig)(),
         p = (0, o.e7)([s.Z], () => {

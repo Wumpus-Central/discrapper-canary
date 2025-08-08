@@ -109,7 +109,7 @@ var r = n(990547),
 let e3 = () => {
         let e = [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BADGE];
         return (
-            E.M.getCurrentConfig({ location: "getAppearanceDCs" }).enabled &&
+            E.Mc.getCurrentConfig({ location: "getAppearanceDCs" }).enabled &&
                 e.push(s.z.CLIENT_THEMES_APPEARANCE_SETTINGS_NEW_BADGE),
             e
         );
