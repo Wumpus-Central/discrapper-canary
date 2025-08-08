@@ -1,4 +1,4 @@
-n.d(t, { Z: () => O }), n(388685);
+n.d(t, { Z: () => v }), n(388685);
 var r = n(255367),
     l = n(73800),
     i = n(442837),
@@ -66,7 +66,7 @@ function x(e) {
                       onClose: s,
                   });
 }
-function O(e) {
+function v(e) {
     var t, n, d;
     let {
             user: u,
@@ -74,8 +74,8 @@ function O(e) {
             displayProfile: p,
             guildId: m,
             items: g,
-            initialSection: O = b.oh.USER_INFO,
-            initialSubsection: v,
+            initialSection: v = b.oh.USER_INFO,
+            initialSubsection: O,
             onClose: _,
         } = e,
         { trackUserProfileAction: I } = (0, s.KZ)(),
@@ -87,7 +87,7 @@ function O(e) {
                     null ==
                     (t = g.find((e) => {
                         let { section: t } = e;
-                        return t === O;
+                        return t === v;
                     }))
                         ? void 0
                         : t.section)
@@ -95,7 +95,7 @@ function O(e) {
                     : null == (n = g[0])
                       ? void 0
                       : n.section,
-            subsection: v,
+            subsection: O,
         });
     l.useEffect(() => {
         null == g.find((e) => e.section === E) &&
@@ -104,7 +104,7 @@ function O(e) {
                 subsection: void 0,
             });
     }, [g, E]);
-    let T = l.useCallback(
+    let S = l.useCallback(
         (e) => {
             I({
                 action: "PRESS_SECTION",
@@ -138,7 +138,7 @@ function O(e) {
                       className: y.tabBar,
                       type: "top",
                       selectedItem: E,
-                      onItemSelect: T,
+                      onItemSelect: S,
                       children: g.map((e) => {
                           let { section: t, text: n } = e;
                           return (0, r.jsx)(

@@ -6,26 +6,26 @@ var l = n(481060),
     i = n(388032),
     o = n(940326);
 let s = (e) => {
-    let { endDate: t } = e,
-        { days: n, hours: s, minutes: c } = (0, a.Z)(t),
-        u = (function (e, t, n) {
+    let { endDate: t, size: n = "md" } = e,
+        { days: s, hours: c, minutes: u } = (0, a.Z)(t),
+        d = (function (e, t, n) {
             let r = (e) => "".concat(e.toString().padStart(2, "0"));
             return [r(e), r(t), r(n)].join(":");
-        })(n, s, c);
+        })(s, c, u);
     return (0, r.jsxs)("div", {
         className: o.container,
         role: "timer",
         children: [
-            u.split("").map((e, t) =>
+            d.split("").map((e, t) =>
                 ":" === e
                     ? (0, r.jsx)(
                           l.Text,
                           {
+                              color: "none",
+                              variant: "md" === n ? "heading-lg/extrabold" : "heading-xxl/extrabold",
+                              className: o.delineator,
                               "aria-hidden": !0,
                               tag: "div",
-                              color: "none",
-                              variant: "heading-lg/extrabold",
-                              className: o.delineator,
                               children: e,
                           },
                           t,
@@ -33,11 +33,11 @@ let s = (e) => {
                     : (0, r.jsx)(
                           l.Text,
                           {
+                              color: "always-white",
+                              variant: "md" === n ? "heading-md/bold" : "heading-xl/bold",
+                              className: o.number,
                               "aria-hidden": !0,
                               tag: "div",
-                              color: "always-white",
-                              variant: "heading-md/medium",
-                              className: o.number,
                               children: e,
                           },
                           t,
@@ -45,9 +45,9 @@ let s = (e) => {
             ),
             (0, r.jsx)(l.nn4, {
                 children: i.intl.format(i.t.j6IyVV, {
-                    days: n,
-                    hours: s,
-                    minutes: c,
+                    days: s,
+                    hours: c,
+                    minutes: u,
                 }),
             }),
         ],

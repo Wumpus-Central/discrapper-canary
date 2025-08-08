@@ -15,13 +15,13 @@ var n = a(255367),
     b = a(594174),
     f = a(572004),
     v = a(55935),
-    j = a(120816),
-    g = a(31336),
+    g = a(120816),
+    j = a(31336),
     _ = a(257785),
     y = a(484036),
     C = a(681619),
-    O = a(621060),
-    N = a(388032),
+    N = a(621060),
+    O = a(388032),
     E = a(459100),
     T = a(616257);
 let S = [
@@ -108,7 +108,7 @@ let I = new Set(["client_performance_cpu", "client_performance_memory"]),
         {
             id: "details",
             name: "Details",
-            group: O.v0.NONE,
+            group: N.v0.NONE,
             render: (e) => {
                 let {
                         loggedEvent: { event: t, properties: a, timestamp: r, fingerprint: l },
@@ -306,20 +306,20 @@ let I = new Set(["client_performance_cpu", "client_performance_memory"]),
 function D() {
     let e = r.useRef(null),
         [t, a] = r.useState(""),
-        l = (0, c.e7)([j.Z], () => j.Z.loggedEventsVersion),
+        l = (0, c.e7)([g.Z], () => g.Z.loggedEventsVersion),
         [s, o] = r.useState(() => Object.keys(Z)),
-        [m, x] = r.useState(j.Z.loggedEvents),
+        [m, x] = r.useState(g.Z.loggedEvents),
         p = r.useCallback((e) => {
             x(e);
         }, []);
-    (0, h.BO)(t, j.Z.loggedEvents, p, A, [l]);
+    (0, h.BO)(t, g.Z.loggedEvents, p, A, [l]);
     let b = m.filter((e) => {
             for (let t of s) if (Z[t].filter(e)) return !0;
             return !1;
         }),
         [f, v] = r.useState(void 0),
         _ = b.find((e) => e.key === f),
-        { TabBar: P, renderSelectedTab: w } = (0, O.ZP)({ tabs: k }, []);
+        { TabBar: P, renderSelectedTab: w } = (0, N.ZP)({ tabs: k }, []);
     return (0, n.jsxs)("div", {
         ref: e,
         className: i()(T.panel, E.panel),
@@ -331,13 +331,13 @@ function D() {
                         className: E.toolbarButton,
                         look: d.zx.Looks.BLANK,
                         size: d.zx.Sizes.ICON,
-                        onClick: g.Zw,
+                        onClick: j.Zw,
                         children: (0, n.jsx)("span", {
-                            title: N.intl.string(N.t.VkKicX),
+                            title: O.intl.string(O.t.VkKicX),
                             children: (0, n.jsx)(u.XHJ, {
                                 size: "md",
                                 color: "currentColor",
-                                "aria-label": N.intl.string(N.t.VkKicX),
+                                "aria-label": O.intl.string(O.t.VkKicX),
                             }),
                         }),
                     }),

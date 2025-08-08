@@ -1,12 +1,13 @@
-n.d(t, { Z: () => u }), n(388685), n(781311);
+n.d(t, { Z: () => f }), n(388685), n(781311);
 var r = n(255367),
     l = n(73800),
     i = n(423802),
     o = n(481060),
     a = n(510231),
-    c = n(388032),
-    s = n(591334);
-function d(e) {
+    c = n(86419),
+    s = n(388032),
+    d = n(591334);
+function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -31,20 +32,26 @@ function d(e) {
     }
     return e;
 }
-function u() {
-    let [e] = (0, o.ynZ)(),
-        t = l.useRef(null),
-        n = l.useCallback((e) => {}, []),
-        { options: u, matchSorterOptions: f } = (0, a.h)(),
-        p = l.useCallback(
+function f(e) {
+    let { disabled: t, widgetType: n } = e,
+        [f] = (0, o.ynZ)(),
+        p = l.useRef(null),
+        m = l.useCallback(
+            (e) => {
+                (0, c.ES)(n, e);
+            },
+            [n],
+        ),
+        { options: g, matchSorterOptions: b } = (0, a.h)(),
+        h = l.useCallback(
             (e) => {
                 var t, n;
                 return "" === e.trim()
-                    ? u
+                    ? g
                     : (0, i.Lu)(
-                          u,
+                          g,
                           e,
-                          ((t = d({}, f)),
+                          ((t = u({}, b)),
                           (n = n = { threshold: i.Lu.rankings.CONTAINS }),
                           Object.getOwnPropertyDescriptors
                               ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
@@ -61,28 +68,28 @@ function u() {
                           t),
                       );
             },
-            [u, f],
+            [g, b],
         );
     return (0, r.jsx)(o.yRy, {
-        targetElementRef: t,
+        targetElementRef: p,
         position: "bottom",
         align: "center",
-        renderPopout: (t) => {
-            let { closePopout: l } = t;
+        renderPopout: (e) => {
+            let { closePopout: t } = e;
             return (0, r.jsx)(o.DBG, {
-                className: s.gameSearchCombobox,
-                placeholder: c.intl.string(c.t["5h0QOD"]),
+                className: d.gameSearchCombobox,
+                placeholder: s.intl.string(s.t["5h0QOD"]),
                 autoFocus: !0,
-                value: e,
+                value: f,
                 onChange: (e) => {
-                    n(e), l();
+                    m(e), t();
                 },
-                onClose: l,
+                onClose: t,
                 multiSelect: !1,
                 showScrollbar: !0,
                 maxVisibleItems: 7,
                 children: (e) =>
-                    p(e).map((e) =>
+                    h(e).map((e) =>
                         (0, r.jsx)(
                             o.lo1,
                             {
@@ -102,15 +109,15 @@ function u() {
         },
         children: (e) =>
             (0, r.jsx)("div", {
-                ref: t,
+                ref: p,
                 children: (0, r.jsx)(
                     o.zxk,
-                    d(
+                    u(
                         {
                             variant: "primary",
                             size: "sm",
-                            text: c.intl.string(c.t.uqw8wM),
-                            "aria-haspopup": "listbox",
+                            text: s.intl.string(s.t.uqw8wM),
+                            disabled: t,
                         },
                         e,
                     ),

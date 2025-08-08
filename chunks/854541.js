@@ -193,11 +193,11 @@ function w(e) {
 }
 class D extends i.PureComponent {
     render() {
-        let { color: e, onChange: t, value: n, disabled: i } = this.props;
+        let { color: e, onChange: t, value: n, disabled: i, allowBlackCustomColor: o } = this.props;
         return (0, r.jsx)(w, {
             isDefault: !0,
             color: e,
-            isSelected: e === n || 0 === n,
+            isSelected: e === n || (0 === n && !o),
             onClick: t,
             disabled: i,
         });
@@ -370,8 +370,9 @@ function k(e) {
             isGradient: m,
             renderGradientCustomButton: g,
             gradientDegrees: E,
+            allowBlackCustomColor: b,
         } = e,
-        b = (e) =>
+        O = (e) =>
             (0, r.jsx)("div", {
                 className: y.colorPickerRow,
                 children: m
@@ -406,16 +407,16 @@ function k(e) {
                           ),
                       ),
             }),
-        O = o.slice(0, o.length / 2),
-        I = o.slice(o.length / 2, o.length),
-        A = (0, l.ZP)({
+        I = o.slice(0, o.length / 2),
+        A = o.slice(o.length / 2, o.length),
+        N = (0, l.ZP)({
             id: "color-picker",
             isEnabled: !0,
             scrollToStart: R,
             scrollToEnd: R,
         });
     return (0, r.jsx)(s.bG, {
-        navigator: A,
+        navigator: N,
         children: (0, r.jsx)(s.SJ, {
             children: (e) => {
                 var { ref: o } = e,
@@ -442,6 +443,7 @@ function k(e) {
                                                     color: n,
                                                     onChange: f,
                                                     disabled: d,
+                                                    allowBlackCustomColor: b,
                                                 }),
                                             }),
                                             (0, r.jsx)("div", {
@@ -465,7 +467,7 @@ function k(e) {
                                         }),
                                     }),
                                 (0, r.jsxs)("div", {
-                                    children: [b(O), b(I)],
+                                    children: [O(I), O(A)],
                                 }),
                             ],
                         },

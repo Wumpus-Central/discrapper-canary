@@ -63,7 +63,7 @@ function j(e) {
 }
 function y(e) {
     let { user: t, guildId: n, channelId: l, game: o, loading: a = !1, disableInteraction: c = !1 } = e,
-        { gameName: y, imageSrc: x, applicationId: O, comment: v, tags: _ } = o,
+        { gameName: y, imageSrc: x, applicationId: v, comment: O, tags: _ } = o,
         I = (0, f.Z)(o.applicationId),
         P = I.length > 0,
         E = () =>
@@ -72,7 +72,7 @@ function y(e) {
                     (0, r.jsx)(d.Z, {
                         imageSrc: x,
                         gameName: y,
-                        applicationId: O,
+                        applicationId: v,
                         userId: t.id,
                         disableInteraction: !0,
                     }),
@@ -84,9 +84,9 @@ function y(e) {
                                 color: "text-default",
                                 children: y,
                             }),
-                            null != v &&
+                            null != O &&
                                 (0, r.jsx)(h, {
-                                    text: v,
+                                    text: O,
                                     user: t,
                                     guildId: n,
                                     channelId: l,
@@ -127,7 +127,7 @@ function y(e) {
                 children: E(),
             })
           : (0, r.jsx)(j, {
-                applicationId: O,
+                applicationId: v,
                 userId: t.id,
                 gameName: y,
                 className: b.card,

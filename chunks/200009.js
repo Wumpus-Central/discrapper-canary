@@ -1,1 +1,3 @@
-p.exports = JSON.parse('{"5+172d":"Streamen"}');
+e.exports = JSON.parse(
+    '{"o/An3t":[[1,"username"]," hat dich gebeten, ",[1,"applicationName"]," zu streamen"],"DKHheX":"Anfrage zum Streamen","8qq+Hx":["Anfrage zum Streamen von ",[1,"applicationName"]],"s7bMT0":[[1,"username"]," bittet dich, ",[1,"applicationName"]," zu streamen"],"7pndSk":["Du hast jemanden gebeten, ",[1,"applicationName"]," zu streamen"],"P0wwmJ":"Bereits am Streamen","u4QmWl":"Anfrage abgelaufen","qRXatr":"Nicht im Sprachkanal","43zohI":"Spiel wird nicht ausgeführt","8HU1Mz":"Antrag ausstehend","5+172d":"Streamen","jTbTAA":[[8,"$b",[[1,"username"]]]," möchte dir beim Spielen von ",[8,"$b",[[1,"game"]]]," zuschauen. Live gehen?"]}',
+);

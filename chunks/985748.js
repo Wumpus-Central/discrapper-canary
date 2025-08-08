@@ -1,11 +1,12 @@
-n.d(t, { Z: () => o });
+n.d(t, { Z: () => a });
 var r = n(255367);
 n(73800);
-var l = n(750312),
-    i = n(232083);
-function o(e) {
-    var { user: t, widget: n, isGameFetching: o } = e,
-        a = (function (e, t) {
+var l = n(624238),
+    i = n(750312),
+    o = n(232083);
+function a(e) {
+    var { user: t, widget: n, isGameFetching: a } = e,
+        c = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -26,11 +27,13 @@ function o(e) {
             }
             return l;
         })(e, ["user", "widget", "isGameFetching"]);
-    return (0, r.jsx)(l.Z, {
+    let s = n.games.length >= l.k.current_games;
+    return (0, r.jsx)(i.Z, {
         userId: t.id,
         widgetType: n.type,
+        reachedMaxGamesLimit: s,
         children: (0, r.jsx)(
-            i.Z,
+            o.Z,
             (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
@@ -59,9 +62,9 @@ function o(e) {
                 {
                     games: n.games,
                     user: t,
-                    isGameFetching: o,
+                    isGameFetching: a,
                 },
-                a,
+                c,
             ),
         ),
     });

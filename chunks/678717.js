@@ -15,14 +15,14 @@ var n = a(255367),
     b = a(788983),
     f = a(906467),
     v = a(259580),
-    j = a(31336),
-    g = a(19759),
+    g = a(31336),
+    j = a(19759),
     _ = a(432877),
     y = a(176038);
 a(381996);
 var C = a(392750),
-    O = a(926976),
-    N = a(789654),
+    N = a(926976),
+    O = a(789654),
     E = a(719672),
     T = a(691867),
     S = a(916790),
@@ -64,7 +64,7 @@ var C = a(392750),
 function ed(e) {
     let { resizableNode: t, onResize: a, onResizeEnd: r } = e,
         l = (0, d.Z)({
-            minDimension: g.h,
+            minDimension: j.h,
             resizableDomNodeRef: t,
             onElementResize: a,
             onElementResizeEnd: r,
@@ -87,7 +87,7 @@ function em(e) {
                     id: "analytics",
                     name: "Analytics",
                     group: el.v0.EXPERIMENTS,
-                    render: () => (0, n.jsx)(O.Z, {}),
+                    render: () => (0, n.jsx)(N.Z, {}),
                 },
                 {
                     id: "triggers",
@@ -168,7 +168,7 @@ function em(e) {
                     id: "colors",
                     name: "Colors",
                     group: el.v0.UI,
-                    render: () => (0, n.jsx)(N.Z, {}),
+                    render: () => (0, n.jsx)(O.Z, {}),
                 }),
                 e.push({
                     id: "design_toggles",
@@ -326,14 +326,14 @@ function em(e) {
         } = (0, el.ZP)(
             {
                 tabs: l,
-                initialSelectedTabId: null != (t = g.Z.lastOpenTabId) ? t : void 0,
+                initialSelectedTabId: null != (t = j.Z.lastOpenTabId) ? t : void 0,
                 onChangeTab: (e) => {
-                    (0, j.Qh)({ lastOpenTabId: e });
+                    (0, g.Qh)({ lastOpenTabId: e });
                 },
             },
             [l],
         ),
-        y = (0, o.e7)([g.Z], () => g.Z.isRandomlyChangingPremiumOptions);
+        y = (0, o.e7)([j.Z], () => j.Z.isRandomlyChangingPremiumOptions);
     return (
         (0, u.Z)({
             type: s.ImpressionTypes.PANE,
@@ -374,7 +374,7 @@ function em(e) {
                                   (0, n.jsx)(x.ZP.Icon, {
                                       icon: c.Dio,
                                       tooltip: es.intl.string(es.t.cpT0Cg),
-                                      onClick: j.SO,
+                                      onClick: g.SO,
                                   }),
                               ],
                           }),
@@ -396,9 +396,9 @@ function em(e) {
 }
 function ex() {
     let e = r.useRef(null),
-        t = (0, o.e7)([g.Z], () => g.Z.sidebarWidth),
+        t = (0, o.e7)([j.Z], () => j.Z.sidebarWidth),
         [a, l] = r.useState(null),
-        i = r.useCallback((e) => (0, j.Qh)({ sidebarWidth: e }), []);
+        i = r.useCallback((e) => (0, g.Qh)({ sidebarWidth: e }), []);
     return (r.useEffect(() => {
         null === a && null !== t && l(t);
     }, [t, a]),
@@ -408,7 +408,7 @@ function ex() {
               ref: e,
               className: eo.container,
               style: {
-                  minWidth: g.h,
+                  minWidth: j.h,
                   width: a,
               },
               "data-app-right-panel": !0,
@@ -426,7 +426,7 @@ function ex() {
           });
 }
 function ep() {
-    return (0, o.e7)([g.Z], () => g.Z.displayTools)
+    return (0, o.e7)([j.Z], () => j.Z.displayTools)
         ? (0, n.jsx)("div", {
               className: i()(eo.container, eo.mobileContainerExpanded),
               children: (0, n.jsx)("div", {
@@ -437,7 +437,7 @@ function ep() {
         : (0, n.jsx)("div", {
               className: eo.container,
               children: (0, n.jsx)(c.P3F, {
-                  onClick: j.SO,
+                  onClick: g.SO,
                   children: (0, n.jsxs)(x.ZP, {
                       className: i()(ec.headerBar, eo.mobileHeaderCollapsed),
                       toolbar: (0, n.jsx)(v.Z, { direction: v.Z.Directions.UP }),

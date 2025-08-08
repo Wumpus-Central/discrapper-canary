@@ -1,5 +1,5 @@
 a.d(t, {
-    ZP: () => g,
+    ZP: () => j,
     v0: () => b,
 }),
     a(388685),
@@ -53,17 +53,17 @@ let f = [
             children: i,
         });
     });
-function j(e) {
+function g(e) {
     let { tabs: t, selectedTabId: a, onSelectTab: n } = e,
         i = l.useRef(new Map()),
         [s, b] = l.useState(() => new Set()),
-        { ref: j, width: g } = (0, u.ZP)(),
+        { ref: g, width: j } = (0, u.ZP)(),
         _ = l.useRef(null);
     l.useEffect(() => {
         var e, n, r, l;
-        if (null == g) return;
+        if (null == j) return;
         let s = new Set(),
-            o = null != g ? g : 0;
+            o = null != j ? j : 0;
         for (let c of ((o -=
             null != (n = null == (e = i.current.get(a)) ? void 0 : e.getBoundingClientRect().width) ? n : 0),
         t))
@@ -74,7 +74,7 @@ function j(e) {
                         : 0) < 0 &&
                 s.add(c.id);
         b(s);
-    }, [t, g, j, a]);
+    }, [t, j, g, a]);
     let y = l.useCallback(
         (e) => {
             var a, l, i;
@@ -140,7 +140,7 @@ function j(e) {
         children: [
             (0, r.jsxs)("div", {
                 className: h.tabBar,
-                ref: j,
+                ref: g,
                 children: [
                     t
                         .map((e) => {
@@ -251,14 +251,14 @@ function j(e) {
         ],
     });
 }
-function g(e, t) {
+function j(e, t) {
     var a, n, i;
     let { tabs: s, initialSelectedTabId: o, onChangeTab: c } = e,
         [d, u] = l.useState(null != o ? o : null == (a = s[0]) ? void 0 : a.id);
     return {
         TabBar: l.useCallback(
             () =>
-                (0, r.jsx)(j, {
+                (0, r.jsx)(g, {
                     tabs: s,
                     selectedTabId: d,
                     onSelectTab: (e) => {

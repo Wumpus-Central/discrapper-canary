@@ -1,4 +1,4 @@
-a.d(t, { g: () => N }), a(388685), a(35282);
+a.d(t, { g: () => O }), a(388685), a(35282);
 var n = a(73800),
     r = a(281598);
 function l(e) {
@@ -126,11 +126,11 @@ let s = new Set([
             ]);
         } else r > e.warn && n("Files are a tad chonky - are you sure they're optimized?", ["".concat(i)]);
     },
-    j = (e, t, a, n) => {
+    g = (e, t, a, n) => {
         let r = p[e];
         if (null != r) for (let e of t) e.name.endsWith(".txt") || v(r, e, a, n);
     },
-    g = (e, t, a) => {
+    j = (e, t, a) => {
         for (let n of e) {
             let e = (0, r.BU)(n),
                 l = null != e ? p[e] : null;
@@ -139,7 +139,7 @@ let s = new Set([
     },
     _ = (e) => {
         let { files: t, addError: a, addWarning: n } = e;
-        g(t.collectionFiles, a, n),
+        j(t.collectionFiles, a, n),
             f({
                 names: t.collectionFiles.map((e) => e.name),
                 addError: a,
@@ -168,7 +168,7 @@ let s = new Set([
                     }),
                     addError: a,
                 }),
-                    j(r.aB.PROFILE_EFFECT, l, a, n);
+                    g(r.aB.PROFILE_EFFECT, l, a, n);
                 let s = o
                     .filter((e) => !i.some((t) => t.startsWith(e) && t.endsWith(".png")))
                     .map((e) => "".concat(t, "/").concat(e));
@@ -190,9 +190,9 @@ let s = new Set([
             names: t.avatarDecorationFiles.map((e) => e.name),
             addError: a,
         }),
-            j(r.aB.AVATAR_DECORATION, t.avatarDecorationFiles, a, n);
+            g(r.aB.AVATAR_DECORATION, t.avatarDecorationFiles, a, n);
     },
-    O = (e, t, a) => {
+    N = (e, t, a) => {
         _({
             files: e,
             addError: a,
@@ -214,7 +214,7 @@ let s = new Set([
                 addWarning: t,
             });
     },
-    N = () => {
+    O = () => {
         let [e, t] = n.useState(!1),
             [a, s] = n.useState({}),
             [o, c] = n.useState({}),
@@ -255,7 +255,7 @@ let s = new Set([
                         let a = await h(t);
                         if (a.length > 0) return void d("Missing required directories", a);
                         let n = await (0, r.LY)([t]);
-                        O(n, u, d);
+                        N(n, u, d);
                     } finally {
                         t(!0);
                     }

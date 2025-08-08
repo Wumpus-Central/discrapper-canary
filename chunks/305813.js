@@ -1,4 +1,4 @@
-n.d(t, { Z: () => N }), n(388685);
+n.d(t, { Z: () => k }), n(388685);
 var r = n(255367),
     o = n(73800),
     l = n(120356),
@@ -19,8 +19,8 @@ var r = n(255367),
     S = n(63063),
     _ = n(981631),
     O = n(228168),
-    y = n(698282),
-    C = n(388032),
+    C = n(698282),
+    y = n(388032),
     P = n(454507);
 function v(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -65,14 +65,14 @@ function E(e, t) {
         e
     );
 }
-function N(e) {
-    let { user: t, selectedFontId: n, selectedEffectId: l, selectedColors: N, onClose: T } = e,
+function k(e) {
+    let { user: t, selectedFontId: n, selectedEffectId: l, selectedColors: k, onClose: T } = e,
         D = new x.Z(
             E(v({}, t), {
                 displayNameStyles: {
                     fontId: n,
                     effectId: l,
-                    colors: N,
+                    colors: k,
                 },
             }),
         ),
@@ -144,7 +144,7 @@ function N(e) {
                                             {},
                                             (0, u.ZP)({
                                                 channelId: "1337",
-                                                content: C.intl.string(y.default.h5Cuen),
+                                                content: y.intl.string(C.default.h5Cuen),
                                             }),
                                         ),
                                         {
@@ -173,11 +173,11 @@ function N(e) {
                     (0, r.jsx)(i.Text, {
                         variant: "text-xs/normal",
                         color: "text-muted",
-                        children: C.intl.format(y.default.prQba2, {
+                        children: y.intl.format(C.default.prQba2, {
                             helpArticleLink: S.Z.getArticleURL(_.BhN.DISPLAY_NAME_STYLES),
                         }),
                     }),
-                    (0, r.jsx)(k, {
+                    (0, r.jsx)(N, {
                         darkPreview: I,
                         onToggleTheme: Y,
                     }),
@@ -186,7 +186,7 @@ function N(e) {
         ],
     });
 }
-function k(e) {
+function N(e) {
     let { darkPreview: t, onToggleTheme: n } = e;
     return (0, r.jsx)(i.sY7, {
         className: P.themeToggleControl,
@@ -194,13 +194,13 @@ function k(e) {
         options: [
             {
                 name: "",
-                tooltip: C.intl.string(C.t.b8Cei4),
+                tooltip: y.intl.string(y.t.b8Cei4),
                 value: _.BRd.DARK,
                 icon: i.Z6G,
             },
             {
                 name: "",
-                tooltip: C.intl.string(C.t.K2sFfn),
+                tooltip: y.intl.string(y.t.K2sFfn),
                 value: _.BRd.LIGHT,
                 icon: i.chG,
             },

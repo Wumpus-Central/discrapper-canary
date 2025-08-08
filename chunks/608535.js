@@ -1,1 +1,3 @@
-p.exports = { "5+172d": "Stream" };
+e.exports = JSON.parse(
+    '{"o/An3t":[[1,"username"]," bad dig om at streame ",[1,"applicationName"]],"DKHheX":"Anmod om at streame","8qq+Hx":["Anmod om at streame ",[1,"applicationName"]],"s7bMT0":[[1,"username"]," beder dig om at streame ",[1,"applicationName"]],"7pndSk":["Du bad nogen om at streame ",[1,"applicationName"]],"P0wwmJ":"Streamer allerede","u4QmWl":"Anmodning udløbet","qRXatr":"Ikke i stemmekanal","43zohI":"Spiller ikke spillet","8HU1Mz":"Anmodning afventer","5+172d":"Stream","jTbTAA":[[8,"$b",[[1,"username"]]]," ønsker at se dig spille ",[8,"$b",[[1,"game"]]],". Gå live?"]}',
+);

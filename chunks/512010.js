@@ -1,1 +1,3 @@
-s.exports = JSON.parse('{"5+172d":"Transmitir"}');
+e.exports = JSON.parse(
+    '{"o/An3t":[[1,"username"]," te pidió que transmitas ",[1,"applicationName"]],"DKHheX":"Solicitar transmitir","8qq+Hx":["Solicitar transmitir ",[1,"applicationName"]],"s7bMT0":[[1,"username"]," te está pidiendo que transmitas ",[1,"applicationName"]],"7pndSk":["Le pediste a alguien que transmitiera ",[1,"applicationName"]],"P0wwmJ":"Ya se está transmitiendo","u4QmWl":"Solicitud caducada","qRXatr":"No estás en el canal de voz","43zohI":"No hay juegos en curso","8HU1Mz":"Solicitud pendiente","5+172d":"Transmitir","jTbTAA":[[8,"$b",[[1,"username"]]]," quiere ver cómo juegas a ",[8,"$b",[[1,"game"]]],". \xBFDeseas transmitir en vivo?"]}',
+);

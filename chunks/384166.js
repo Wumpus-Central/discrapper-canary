@@ -1,62 +1,71 @@
-n.d(t, { Z: () => f }), n(388685);
+n.d(t, { Z: () => h }), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(120356),
     a = n.n(o),
-    s = n(481060),
-    l = n(585483),
-    c = n(981631),
-    u = n(388032),
-    d = n(900365);
-function f() {
+    s = n(442837),
+    l = n(481060),
+    c = n(585483),
+    u = n(592183),
+    d = n(224724),
+    f = n(981631),
+    _ = n(388032),
+    p = n(900365);
+function h() {
     let [e, t] = i.useState(!1),
-        [n] = i.useState(!1);
-    return (
-        i.useEffect(() => {
-            let e = null;
-            function n() {
-                t(!0), (e = setTimeout(() => t(!1), 500));
+        n = (0, s.e7)([d.Z], () => d.Z.hasPendingChanges());
+    i.useEffect(() => {
+        let e = null;
+        function n() {
+            t(!0), (e = setTimeout(() => t(!1), 500));
+        }
+        return (
+            c.S.subscribe(f.CkL.EMPHASIZE_NOTICE, n),
+            () => {
+                c.S.unsubscribe(f.CkL.EMPHASIZE_NOTICE, n), null !== e && clearTimeout(e);
             }
-            return (
-                l.S.subscribe(c.CkL.EMPHASIZE_NOTICE, n),
-                () => {
-                    l.S.unsubscribe(c.CkL.EMPHASIZE_NOTICE, n), null !== e && clearTimeout(e);
-                }
-            );
+        );
+    }, []);
+    let o = i.useCallback(() => {
+            u.Z.savePendingWidgets();
         }, []),
-        (0, r.jsx)("div", {
-            className: a()(d.container, { [d.visible]: n }),
-            role: "status",
-            children: (0, r.jsxs)("div", {
-                className: a()(d.content, { [d.emphasized]: e }),
-                children: [
-                    (0, r.jsx)("div", {
-                        className: d.message,
-                        children: (0, r.jsx)(s.Text, {
-                            variant: "text-md/medium",
-                            color: "text-primary",
-                            children: u.intl.string(u.t["/lQiX1"]),
-                        }),
-                    }),
-                    (0, r.jsxs)("div", {
-                        className: d.actions,
-                        children: [
-                            (0, r.jsx)(s.zxk, {
-                                size: "sm",
-                                variant: "secondary",
-                                text: u.intl.string(u.t.yBZMsb),
-                                onClick: () => {},
-                            }),
-                            (0, r.jsx)(s.zxk, {
-                                size: "sm",
-                                variant: "primary",
-                                text: u.intl.string(u.t.R3BPHx),
-                                onClick: () => {},
-                            }),
-                        ],
-                    }),
-                ],
-            }),
-        })
-    );
+        h = i.useCallback(() => {
+            u.Z.clearPendingWidgets();
+        }, []);
+    return n
+        ? (0, r.jsx)("div", {
+              className: a()(p.container, { [p.visible]: n }),
+              role: "status",
+              children: (0, r.jsxs)("div", {
+                  className: a()(p.content, { [p.emphasized]: e }),
+                  children: [
+                      (0, r.jsx)("div", {
+                          className: p.message,
+                          children: (0, r.jsx)(l.Text, {
+                              variant: "text-md/medium",
+                              color: "text-primary",
+                              children: _.intl.string(_.t["/lQiX1"]),
+                          }),
+                      }),
+                      (0, r.jsxs)("div", {
+                          className: p.actions,
+                          children: [
+                              (0, r.jsx)(l.zxk, {
+                                  size: "sm",
+                                  variant: "secondary",
+                                  text: _.intl.string(_.t.yBZMsb),
+                                  onClick: h,
+                              }),
+                              (0, r.jsx)(l.zxk, {
+                                  size: "sm",
+                                  variant: "primary",
+                                  text: _.intl.string(_.t.R3BPHx),
+                                  onClick: o,
+                              }),
+                          ],
+                      }),
+                  ],
+              }),
+          })
+        : null;
 }

@@ -17,7 +17,7 @@ let f = [h.BRd.DARK, h.BRd.LIGHT, h.BRd.DARKER, h.BRd.MIDNIGHT];
 function v(e) {
     return e[Math.floor(Math.random() * e.length)];
 }
-async function j() {
+async function g() {
     let e = (function () {
             let e = x.default.getCurrentUser();
             return p.ZP.canUseClientThemes(e) ? Object.keys(b.qt).map((e) => Number(e)) : [];
@@ -54,7 +54,7 @@ async function j() {
         }
     } catch (e) {}
 }
-async function g(e, t) {
+async function j(e, t) {
     let a = e.length > 0,
         n = t.length > 0;
     if (a || n)
@@ -79,7 +79,7 @@ function _() {
             return [(0, o.Ad)(e), (0, o.jT)(e)];
         }),
         a = n.useCallback(() => {
-            j(), g(e, t);
+            g(), j(e, t);
         }, [e, t]);
     n.useEffect(() => {
         let e = setInterval(() => {

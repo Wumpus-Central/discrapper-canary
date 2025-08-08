@@ -1,1 +1,3 @@
-p.exports = JSON.parse('{"5+172d":"Yayın yap"}');
+a.exports = JSON.parse(
+    '{"o/An3t":[[1,"username"],", ",[1,"applicationName"]," yayını yapmanı istedi"],"DKHheX":"Yayın Talebinde Bulun","8qq+Hx":[[1,"applicationName"]," Yayını Talebinde Bulun"],"s7bMT0":[[1,"username"],", ",[1,"applicationName"]," yayını yapmanı istiyor"],"7pndSk":["Birinden ",[1,"applicationName"]," yayın yapmasını istedin"],"P0wwmJ":"Zaten yayın yapıyorsun","u4QmWl":"Talebin süresi doldu","qRXatr":"Ses kanalında değil","43zohI":"Oyun çalışmıyor","8HU1Mz":"Talep beklemede","5+172d":"Yayın yap","jTbTAA":[[8,"$b",[[1,"username"]]]," senin ",[8,"$b",[[1,"game"]]]," oynamanı izlemek istiyor. Canlı yayına geçilsin mi?"]}',
+);

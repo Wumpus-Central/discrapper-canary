@@ -1,4 +1,4 @@
-n.d(t, { Z: () => S }), n(388685);
+n.d(t, { Z: () => T }), n(388685);
 var r = n(255367),
     l = n(73800),
     i = n(481060),
@@ -17,39 +17,39 @@ var r = n(255367),
     j = n(900927),
     y = n(678738),
     x = n(502762),
-    O = n(530),
-    v = n(679332),
+    v = n(530),
+    O = n(679332),
     _ = n(544989),
     I = n(228168),
     P = n(981631),
     E = n(388032),
     Z = n(405666),
     N = n(349966),
-    T = n(923243);
-function S(e) {
+    S = n(923243);
+function T(e) {
     let {
             user: t,
             guildId: n,
-            channelId: S,
+            channelId: T,
             messageId: A,
             roleId: w,
             sessionId: C,
             transitionState: G,
-            openedAt: R,
-            onClose: L,
-            sourceAnalyticsLocations: M = [],
+            openedAt: L,
+            onClose: M,
+            sourceAnalyticsLocations: R = [],
         } = e,
         D = n === P.ME ? void 0 : n,
         k = (0, p.ZP)(t.id, D),
-        B = u.ZP.getName(D, S, t),
+        B = u.ZP.getName(D, T, t),
         U = (0, s.Dt)(),
-        { analyticsLocations: F } = (0, c.ZP)([...M, a.Z.USER_PROFILE_MODAL]),
+        { analyticsLocations: F } = (0, c.ZP)([...R, a.Z.USER_PROFILE_MODAL]),
         V = (0, f.ZB)({
             layout: "MODAL",
             userId: t.id,
             sourceSessionId: C,
             guildId: D,
-            channelId: S,
+            channelId: T,
             messageId: A,
             roleId: w,
         }),
@@ -59,7 +59,7 @@ function S(e) {
         value: F,
         children: (0, r.jsx)(f.Mt, {
             value: V,
-            openedAt: R,
+            openedAt: L,
             fetchStartedAt: null == k ? void 0 : k.fetchStartedAt,
             fetchEndedAt: null == k ? void 0 : k.fetchEndedAt,
             isLoaded: null == k ? void 0 : k.isLoaded,
@@ -84,7 +84,7 @@ function S(e) {
                             themeType: I.lY.MODAL,
                             ref: (null == k ? void 0 : k.profileEffectId) != null ? Y : void 0,
                             children: [
-                                (0, r.jsx)(_.Z, { children: (0, r.jsx)(v.Z, { user: t }) }),
+                                (0, r.jsx)(_.Z, { children: (0, r.jsx)(O.Z, { user: t }) }),
                                 (0, r.jsxs)("div", {
                                     children: [
                                         (0, r.jsx)(b.Z, {
@@ -98,7 +98,7 @@ function S(e) {
                                                 user: t,
                                                 displayProfile: k,
                                                 guildId: D,
-                                                channelId: S,
+                                                channelId: T,
                                                 themeType: I.lY.MODAL,
                                             }),
                                         }),
@@ -107,7 +107,7 @@ function S(e) {
                                 (0, r.jsxs)("div", {
                                     className: Z.body,
                                     children: [
-                                        (0, r.jsx)(O.Z, {
+                                        (0, r.jsx)(v.Z, {
                                             className: Z.username,
                                             user: t,
                                             nickname: B,
@@ -116,21 +116,21 @@ function S(e) {
                                             tags: (0, r.jsx)(g.Z, {
                                                 displayProfile: k,
                                                 themeType: I.lY.MODAL,
-                                                onClose: L,
+                                                onClose: M,
                                             }),
                                         }),
                                         (0, r.jsxs)("div", {
-                                            className: T.container,
+                                            className: S.container,
                                             children: [
                                                 (0, r.jsx)(i.njP, {
-                                                    className: T.tabBar,
+                                                    className: S.tabBar,
                                                     type: "top",
                                                     selectedItem: I.oh.BOT_INFO,
                                                     onItemSelect: P.dG4,
                                                     children: (0, r.jsx)(
                                                         i.njP.Item,
                                                         {
-                                                            className: T.tabBarItem,
+                                                            className: S.tabBarItem,
                                                             id: I.oh.BOT_INFO,
                                                             "aria-label": E.intl.string(E.t.jGoPJS),
                                                             children: (0, r.jsx)(i.Text, {

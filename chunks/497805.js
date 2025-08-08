@@ -1,6 +1,6 @@
 n.d(t, {
-    Z: () => b,
-    z: () => h,
+    Z: () => O,
+    z: () => g,
 });
 var r = n(255367);
 n(73800);
@@ -9,8 +9,10 @@ var i = n(481060),
     a = n(317770),
     s = n(40851),
     l = n(594174),
-    c = n(981631);
-function u(e, t, n) {
+    c = n(585483),
+    u = n(224724),
+    d = n(981631);
+function f(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -23,7 +25,7 @@ function u(e, t, n) {
         e
     );
 }
-function d(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -34,16 +36,16 @@ function d(e) {
                 }),
             )),
             r.forEach(function (t) {
-                u(e, t, n[t]);
+                f(e, t, n[t]);
             });
     }
     return e;
 }
-function f(e, t) {
+function p(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = _(e, t);
+        i = h(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
         for (r = 0; r < o.length; r++)
@@ -51,7 +53,7 @@ function f(e, t) {
     }
     return i;
 }
-function _(e, t) {
+function h(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -60,24 +62,24 @@ function _(e, t) {
     for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let p = null;
-function h(e, t) {
+let m = null;
+function g(e, t) {
     return "USER_PROFILE_MODAL_KEY:".concat(e, ":").concat(null == t ? "" : t);
 }
-async function m(e) {
+async function E(e) {
     var t,
         {
             userId: o,
             section: a,
-            subsection: u,
-            guildId: _,
-            channelId: m,
-            showGuildProfile: g = !0,
-            appContext: E,
-            customStatusPrompt: b,
-            disableActionsForPreview: y = !1,
+            subsection: f,
+            guildId: h,
+            channelId: E,
+            showGuildProfile: y = !0,
+            appContext: O,
+            customStatusPrompt: v,
+            disableActionsForPreview: I = !1,
         } = e,
-        O = f(e, [
+        T = p(e, [
             "userId",
             "section",
             "subsection",
@@ -88,11 +90,11 @@ async function m(e) {
             "customStatusPrompt",
             "disableActionsForPreview",
         ]);
-    let v = l.default.getUser(o);
-    if (null == v) return;
-    let I = l.default.getCurrentUser();
-    null != I &&
-        (p = await (0, i.ZDy)(
+    let S = l.default.getUser(o);
+    if (null == S) return;
+    let A = l.default.getCurrentUser();
+    null != A &&
+        (m = await (0, i.ZDy)(
             async () => {
                 let e = (
                     await Promise.all([n.e("16459"), n.e("82412"), n.e("62880"), n.e("11776")]).then(n.bind(n, 866035))
@@ -100,38 +102,45 @@ async function m(e) {
                 return (t) =>
                     (0, r.jsx)(
                         e,
-                        d(
+                        _(
                             {
-                                user: v,
-                                currentUser: I,
-                                guildId: _,
+                                user: S,
+                                currentUser: A,
+                                guildId: h,
                                 initialSection: a,
-                                initialSubsection: u,
-                                channelId: m,
-                                showGuildProfile: g,
-                                customStatusPrompt: b,
-                                disableActionsForPreview: y,
+                                initialSubsection: f,
+                                channelId: E,
+                                showGuildProfile: y,
+                                customStatusPrompt: v,
+                                disableActionsForPreview: I,
                             },
                             t,
-                            O,
+                            T,
                         ),
                     );
             },
             {
-                modalKey: h(o, g ? _ : void 0),
-                contextKey: (0, i.VnL)(null != (t = null != E ? E : (0, s.GB)()) ? t : c.IlC.APP),
+                modalKey: g(o, y ? h : void 0),
+                contextKey: (0, i.VnL)(null != (t = null != O ? O : (0, s.GB)()) ? t : d.IlC.APP),
+                onCloseRequest: () => {
+                    if (u.Z.hasPendingChanges()) {
+                        c.S.dispatch(d.CkL.SHAKE_PROFILE_MODAL), c.S.dispatch(d.CkL.EMPHASIZE_NOTICE);
+                        return;
+                    }
+                    b();
+                },
             },
         ));
 }
-function g() {
-    null != p && (0, i.Mr3)(p), (p = null);
+function b() {
+    null != m && (0, i.Mr3)(m), (m = null);
 }
-class E extends a.Z {
+class y extends a.Z {
     _initialize() {
-        o.Z.subscribe("USER_PROFILE_MODAL_OPEN", m), o.Z.subscribe("USER_PROFILE_MODAL_CLOSE", g);
+        o.Z.subscribe("USER_PROFILE_MODAL_OPEN", E), o.Z.subscribe("USER_PROFILE_MODAL_CLOSE", b);
     }
     _terminate() {
-        o.Z.unsubscribe("USER_PROFILE_MODAL_OPEN", m), o.Z.unsubscribe("USER_PROFILE_MODAL_CLOSE", g);
+        o.Z.unsubscribe("USER_PROFILE_MODAL_OPEN", E), o.Z.unsubscribe("USER_PROFILE_MODAL_CLOSE", b);
     }
 }
-let b = new E();
+let O = new y();

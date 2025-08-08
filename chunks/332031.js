@@ -1,21 +1,21 @@
-t.d(n, { Z: () => d });
-var l = t(255367);
-t(73800);
-var i = t(442837),
-    r = t(481060),
-    a = t(655922),
-    u = t(158776),
-    o = t(981631),
-    s = t(388032);
-function d(e, n) {
-    let t = (0, i.e7)([u.Z], () => (0, a.Z)(u.Z.findActivity(e, (e) => e.type === o.IIU.STREAMING)), [e]);
-    return null == t
+n.d(t, { Z: () => u });
+var i = n(255367);
+n(73800);
+var l = n(442837),
+    r = n(481060),
+    o = n(655922),
+    a = n(158776),
+    s = n(981631),
+    d = n(388032);
+function u(e, t) {
+    let n = (0, l.e7)([a.Z], () => (0, o.Z)(a.Z.findActivity(e, (e) => e.type === s.IIU.STREAMING)), [e]);
+    return null == n
         ? null
-        : (0, l.jsx)(r.sNh, {
+        : (0, i.jsx)(r.sNh, {
               id: "watch-stream",
-              label: s.intl.string(s.t["7Xq/nZ"]),
+              label: d.intl.string(d.t["7Xq/nZ"]),
               action: () => {
-                  null == n || n(), window.open(t, "_blank");
+                  null == t || t(), window.open(n, "_blank");
               },
           });
 }

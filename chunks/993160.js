@@ -15,7 +15,7 @@ var l = n(755721),
 function g(e) {
     let { user: t, currentUser: n, guildId: g, channelId: b, displayProfile: h, relationshipType: j, onClose: y } = e,
         { newestAnalyticsLocation: x } = (0, o.ZP)(),
-        O = (0, a.Z)({
+        v = (0, a.Z)({
             user: t,
             guildId: g,
             channelId: b,
@@ -23,11 +23,11 @@ function g(e) {
             onClose: y,
         }),
         {
-            gameFriends: v,
+            gameFriends: O,
             hasOutgoingPendingGameFriends: _,
             hasIncomingPendingGameFriends: I,
         } = (0, p.H)({ userId: t.id }),
-        P = v.length > 0 || _ || I;
+        P = O.length > 0 || _ || I;
     return j === m.OGo.BLOCKED
         ? null
         : t.id === n.id
@@ -43,7 +43,7 @@ function g(e) {
                         type: "icon",
                         user: t,
                         guildId: g,
-                        viewProfileItem: O,
+                        viewProfileItem: v,
                         themeColor: "secondary",
                     }),
                 ],
@@ -61,7 +61,7 @@ function g(e) {
                           type: "icon",
                           user: t,
                           guildId: g,
-                          viewProfileItem: O,
+                          viewProfileItem: v,
                           themeColor: "secondary",
                       }),
                   ],
@@ -106,7 +106,7 @@ function g(e) {
                               type: "icon",
                               user: t,
                               guildId: g,
-                              viewProfileItem: O,
+                              viewProfileItem: v,
                               themeColor: "secondary",
                           }),
                       ],
@@ -125,7 +125,7 @@ function g(e) {
                                 user: t,
                                 analyticsLocation: x,
                                 themeColor: "secondary",
-                                gameFriends: v,
+                                gameFriends: O,
                                 tooltipPosition: "top",
                                 tooltipAlign: "center",
                                 shouldShowTooltip: !0,
@@ -136,7 +136,7 @@ function g(e) {
                                 type: "icon",
                                 user: t,
                                 guildId: g,
-                                viewProfileItem: O,
+                                viewProfileItem: v,
                                 themeColor: "secondary",
                             }),
                         ],
@@ -160,7 +160,7 @@ function g(e) {
                                 type: "icon",
                                 user: t,
                                 guildId: g,
-                                viewProfileItem: O,
+                                viewProfileItem: v,
                                 themeColor: "secondary",
                             }),
                         ],

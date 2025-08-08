@@ -1,5 +1,5 @@
 a.d(t, {
-    D: () => j,
+    D: () => g,
     Z: () => _,
 }),
     a(388685);
@@ -25,7 +25,7 @@ let v = {
         [p.kNB.REVERSE_TRIAL]: "Reverse Trial",
         [p.kNB.FRACTIONAL_PREMIUM_GIVEBACK]: "Giveback",
     },
-    j = (e) => {
+    g = (e) => {
         var t;
         let { entitlement: a, active: r, onDelete: l } = e,
             s = (e) => (null != e ? (0, u.vc)(e, "LLL") : "---");
@@ -39,7 +39,7 @@ let v = {
                 !r &&
                     (0, n.jsxs)(c.Text, {
                         variant: "text-md/normal",
-                        children: ["SKU: ", null == (t = g.find((e) => e.value === a.skuId)) ? void 0 : t.label],
+                        children: ["SKU: ", null == (t = j.find((e) => e.value === a.skuId)) ? void 0 : t.label],
                     }),
                 null != a.startsAt &&
                     null != a.endsAt &&
@@ -78,7 +78,7 @@ let v = {
             ],
         });
     },
-    g = [
+    j = [
         {
             label: "1 hour",
             value: s.a.PREMIUM_TIER_2_1_HOUR,
@@ -99,8 +99,8 @@ function _() {
         [_, y] = r.useState([]),
         {
             refreshEntitlementList: C,
-            grantFractionalPremium: O,
-            deleteFractionalPremium: N,
+            grantFractionalPremium: N,
+            deleteFractionalPremium: O,
             triggerNextEntitlementFulfillment: E,
             entitlements: T,
             loading: S,
@@ -174,14 +174,14 @@ function _() {
                             (0, n.jsx)(c.PhF, {
                                 serialize: (e) => e,
                                 isSelected: (e) => e === a,
-                                options: g,
+                                options: j,
                                 select: l,
                                 popoutLayerContext: m.O$,
                             }),
                             (0, n.jsx)(c.zxk, {
                                 variant: "primary",
                                 text: "Grant Fractional Nitro",
-                                onClick: () => O(a),
+                                onClick: () => N(a),
                             }),
                         ],
                     }),
@@ -213,7 +213,7 @@ function _() {
                                                 size: o.zx.Sizes.TINY,
                                                 color: o.zx.Colors.RED,
                                                 look: o.zx.Looks.OUTLINED,
-                                                onClick: () => N(),
+                                                onClick: () => O(),
                                                 children: "Delete all",
                                             }),
                                             (0, n.jsx)(o.zx, {
@@ -244,11 +244,11 @@ function _() {
                                         (0, n.jsx)("div", {
                                             children: u.map((e) =>
                                                 (0, n.jsx)(
-                                                    j,
+                                                    g,
                                                     {
                                                         entitlement: e,
                                                         active: !0,
-                                                        onDelete: () => N(e.id),
+                                                        onDelete: () => O(e.id),
                                                     },
                                                     e.id,
                                                 ),
@@ -265,7 +265,7 @@ function _() {
                                             children: "Unconsumed Fractional Premium",
                                         }),
                                         (0, n.jsx)("div", {
-                                            children: _.map((e) => (0, n.jsx)(j, { entitlement: e }, e.id)),
+                                            children: _.map((e) => (0, n.jsx)(g, { entitlement: e }, e.id)),
                                         }),
                                     ],
                                 }),

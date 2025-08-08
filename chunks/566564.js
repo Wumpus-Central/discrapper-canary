@@ -192,7 +192,6 @@ let I = (e) => {
                         {
                             immersiveBannerBlock: e,
                             onVisibilityChange: (e) => T(!e),
-                            handleTransition: n,
                         },
                         t,
                     );

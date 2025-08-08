@@ -1,4 +1,4 @@
-a.d(t, { Z: () => eg }), a(388685), a(583741), a(539854), a(49124), a(35282), a(781311);
+a.d(t, { Z: () => ej }), a(388685), a(583741), a(539854), a(49124), a(35282), a(781311);
 var n = a(255367),
     r = a(73800),
     l = a(120356),
@@ -15,13 +15,13 @@ var n = a(255367),
     b = a(393238),
     f = a(594190),
     v = a(984370),
-    j = a(427860),
-    g = a(837268),
+    g = a(427860),
+    j = a(837268),
     _ = a(371651),
     y = a(829907),
     C = a(610394),
-    O = a(886118),
-    N = a(301801),
+    N = a(886118),
+    O = a(301801),
     E = a(352527),
     T = a(355863),
     S = a(449224),
@@ -441,10 +441,10 @@ let et = r.memo(function (e) {
     );
 });
 function ea() {
-    let e = (0, d.e7)([C.ZP], () => C.ZP.hasRenderDebugMode(g.GO.TrackFocusPIDs)),
+    let e = (0, d.e7)([C.ZP], () => C.ZP.hasRenderDebugMode(j.GO.TrackFocusPIDs)),
         t = (0, d.Wu)([_.default], () => _.default.getDevToolsFocusedPidsWithTimestamp(), []),
         a = () => {
-            p.Z.setRenderDebugMode(!C.ZP.hasRenderDebugMode(g.GO.TrackFocusPIDs), g.GO.TrackFocusPIDs);
+            p.Z.setRenderDebugMode(!C.ZP.hasRenderDebugMode(j.GO.TrackFocusPIDs), j.GO.TrackFocusPIDs);
         };
     return (0, n.jsxs)("div", {
         className: z.panelGroup,
@@ -491,7 +491,7 @@ function ea() {
                             {
                                 children: (0, n.jsx)(m.ua7, {
                                     position: "left",
-                                    text: l === g.d5.TRACK_FOCUS ? "Tracked Focus Event" : "Clear Focus Event",
+                                    text: l === j.d5.TRACK_FOCUS ? "Tracked Focus Event" : "Clear Focus Event",
                                     children: (e) => {
                                         var r;
                                         return (0, n.jsx)(
@@ -499,7 +499,7 @@ function ea() {
                                             W(H({}, e), {
                                                 children: (0, n.jsxs)(m.Text, {
                                                     variant: "text-sm/medium",
-                                                    color: l === g.d5.TRACK_FOCUS ? "text-default" : "text-danger",
+                                                    color: l === j.d5.TRACK_FOCUS ? "text-default" : "text-danger",
                                                     children: [
                                                         (0, n.jsx)(et, {
                                                             pid: a,
@@ -697,24 +697,24 @@ let en = r.memo(function (e) {
     ei = r.memo(function () {
         let [e, t] = Q(F.Odu.CLICK_ZONE_DEBUG),
             [a, r] = Q(F.Odu.PERFORMANCE_DEBUG),
-            l = (0, d.e7)([C.ZP], () => C.ZP.hasRenderDebugMode(g.GO.ClickZones)),
-            i = (0, d.e7)([C.ZP], () => C.ZP.hasRenderDebugMode(g.GO.WidgetAreas)),
-            s = (0, d.e7)([C.ZP], () => C.ZP.hasRenderDebugMode(g.GO.DisabledGPUBoost)),
-            o = (0, d.e7)([C.ZP], () => C.ZP.hasRenderDebugMode(g.GO.ForceGPUBoost)),
+            l = (0, d.e7)([C.ZP], () => C.ZP.hasRenderDebugMode(j.GO.ClickZones)),
+            i = (0, d.e7)([C.ZP], () => C.ZP.hasRenderDebugMode(j.GO.WidgetAreas)),
+            s = (0, d.e7)([C.ZP], () => C.ZP.hasRenderDebugMode(j.GO.DisabledGPUBoost)),
+            o = (0, d.e7)([C.ZP], () => C.ZP.hasRenderDebugMode(j.GO.ForceGPUBoost)),
             c = (e) => {
                 p.Z.setRenderDebugMode(!C.ZP.hasRenderDebugMode(e), e);
             },
             u = () => {
-                c(g.GO.ClickZones);
+                c(j.GO.ClickZones);
             },
             x = () => {
-                c(g.GO.WidgetAreas);
+                c(j.GO.WidgetAreas);
             },
             h = () => {
-                c(g.GO.DisabledGPUBoost);
+                c(j.GO.DisabledGPUBoost);
             },
             b = () => {
-                c(g.GO.ForceGPUBoost);
+                c(j.GO.ForceGPUBoost);
             };
         return (0, n.jsxs)("div", {
             className: z.panelGroup,
@@ -939,20 +939,20 @@ let en = r.memo(function (e) {
             },
             i = [
                 {
-                    label: g.R5.UNSET,
-                    value: g.R5.UNSET,
+                    label: j.R5.UNSET,
+                    value: j.R5.UNSET,
                 },
                 {
-                    label: g.R5.IN_PROCESS_V2,
-                    value: g.R5.IN_PROCESS_V2,
+                    label: j.R5.IN_PROCESS_V2,
+                    value: j.R5.IN_PROCESS_V2,
                 },
                 {
-                    label: g.R5.OUT_OF_PROCESS_V3,
-                    value: g.R5.OUT_OF_PROCESS_V3,
+                    label: j.R5.OUT_OF_PROCESS_V3,
+                    value: j.R5.OUT_OF_PROCESS_V3,
                 },
                 {
-                    label: g.R5.OUT_OF_PROCESS_V3_LIMITED_INTERACTION,
-                    value: g.R5.OUT_OF_PROCESS_V3_LIMITED_INTERACTION,
+                    label: j.R5.OUT_OF_PROCESS_V3_LIMITED_INTERACTION,
+                    value: j.R5.OUT_OF_PROCESS_V3_LIMITED_INTERACTION,
                 },
             ].map((t) => W(H({}, t), { label: "".concat(t.label, " ").concat(e === t.value ? "(current)" : "") }));
         return (0, n.jsx)(m.ua7, {
@@ -977,30 +977,30 @@ let en = r.memo(function (e) {
     ec = {
         native: {
             label: "Native",
-            filter: (e) => e.type === j.C7.NativeLegacy || e.type === j.C7.NativeOOP,
+            filter: (e) => e.type === g.C7.NativeLegacy || e.type === g.C7.NativeOOP,
         },
         render: {
             label: "Render",
-            filter: (e) => e.type === j.C7.Renderer,
+            filter: (e) => e.type === g.C7.Renderer,
         },
         client: {
             label: "Client",
-            filter: (e) => e.type === j.C7.OOPModule || e.type === j.C7.LegacyModule,
+            filter: (e) => e.type === g.C7.OOPModule || e.type === g.C7.LegacyModule,
         },
     };
 function ed(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : j.l6.Info;
-    if (t === j.l6.Error) return "var(--text-danger)";
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : g.l6.Info;
+    if (t === g.l6.Error) return "var(--text-danger)";
     switch (e) {
-        case j.C7.NativeLegacy:
+        case g.C7.NativeLegacy:
             return "var(--yellow-500)";
-        case j.C7.NativeOOP:
+        case g.C7.NativeOOP:
             return "var(--green-500)";
-        case j.C7.Renderer:
+        case g.C7.Renderer:
             return "var(--brand-500)";
-        case j.C7.LegacyModule:
+        case g.C7.LegacyModule:
             return "var(--yellow-300)";
-        case j.C7.OOPModule:
+        case g.C7.OOPModule:
             return "var(--green-300)";
         default:
             return "var(--gray-400)";
@@ -1035,11 +1035,11 @@ let eu = [
                         variant: "text-md/normal",
                         color: (function (e) {
                             switch (e) {
-                                case j.l6.Info:
+                                case g.l6.Info:
                                     return "text-primary";
-                                case j.l6.Warning:
+                                case g.l6.Warning:
                                     return "text-feedback-warning";
-                                case j.l6.Error:
+                                case g.l6.Error:
                                     return "text-danger";
                                 default:
                                     return "text-secondary";
@@ -1067,15 +1067,15 @@ let eu = [
 ];
 function em(e) {
     switch (e) {
-        case j.C7.NativeLegacy:
+        case g.C7.NativeLegacy:
             return m.GON;
-        case j.C7.NativeOOP:
+        case g.C7.NativeOOP:
             return m.ljO;
-        case j.C7.Renderer:
+        case g.C7.Renderer:
             return m.n6r;
-        case j.C7.LegacyModule:
+        case g.C7.LegacyModule:
             return m.pzj;
-        case j.C7.OOPModule:
+        case g.C7.OOPModule:
             return m.m3e;
         default:
             return m.pzj;
@@ -1220,7 +1220,7 @@ let ep = ["__webpack_require__", "fn"],
         },
     ],
     ef = {
-        searchType: O.S.REGEX,
+        searchType: N.S.REGEX,
         searchStringGenerator: (e) => {
             let { name: t, type: a, stack: n, data: r } = e;
             return [t, a, n, JSON.stringify(r)];
@@ -1237,7 +1237,7 @@ function ev() {
             x((t) => (t.includes(e) ? t.filter((t) => t !== e) : [...t, e]));
         },
         [f, v] = r.useState(""),
-        j = r.useMemo(
+        g = r.useMemo(
             () =>
                 0 === t
                     ? []
@@ -1250,14 +1250,14 @@ function ev() {
                       }),
             [e, u, t],
         ),
-        [g, _] = r.useState(j),
-        [y, O] = r.useState(null),
+        [j, _] = r.useState(g),
+        [y, N] = r.useState(null),
         E = r.useMemo(() => e.find((e) => e.key === y), [e, y]),
         T = r.useCallback((e) => {
             _(e);
         }, []),
         { renderSelectedTab: S } = (0, M.ZP)({ tabs: eb }, []);
-    (0, N.BO)(f, j, T, ef, [e]);
+    (0, O.BO)(f, g, T, ef, [e]);
     let P = r.useCallback((e) => {
         c(e), p.Z.setModuleLogging(e);
     }, []);
@@ -1366,9 +1366,9 @@ function ev() {
                     className: i()(z.panelGroup, z.tableContainer),
                     children: (0, n.jsx)(B.Z, {
                         columns: eu,
-                        data: g,
+                        data: j,
                         selectedRowKey: null != y ? y : void 0,
-                        onClickRow: (e) => O(e.key),
+                        onClickRow: (e) => N(e.key),
                     }),
                 }),
                 null != E &&
@@ -1378,14 +1378,14 @@ function ev() {
                         initialHeight: null != l ? l / 3 : 300,
                         children: S({
                             breadcrumb: E,
-                            onClose: () => O(null),
+                            onClose: () => N(null),
                         }),
                     }),
             ],
         })
     );
 }
-function ej() {
+function eg() {
     return (0, n.jsx)(m.w0Z, {
         children: (0, n.jsxs)("div", {
             className: i()(V.panel, z.subPanel),
@@ -1400,7 +1400,7 @@ function ej() {
         }),
     });
 }
-function eg() {
+function ej() {
     let [e, t] = r.useState("state");
     return (0, n.jsxs)("div", {
         className: i()(V.panel, z.panel),
@@ -1428,7 +1428,7 @@ function eg() {
                     }),
                 ],
             }),
-            "state" === e && (0, n.jsx)(ej, {}),
+            "state" === e && (0, n.jsx)(eg, {}),
             "logging" === e && (0, n.jsx)(ev, {}),
         ],
     });

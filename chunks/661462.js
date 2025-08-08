@@ -64,7 +64,7 @@ function m(e) {
             onClose: j,
         } = e,
         { trackUserProfileAction: y } = (0, o.KZ)(),
-        [{ section: x, subsection: O, text: v }, _] = l.useState(
+        [{ section: x, subsection: v, text: O }, _] = l.useState(
             ((n = (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
@@ -152,7 +152,7 @@ function m(e) {
             }),
             (0, r.jsx)(i.njP.Panel, {
                 id: x,
-                "aria-label": v,
+                "aria-label": O,
                 className: f.tabBarPanel,
                 children: (0, r.jsx)(p, {
                     user: c,
@@ -161,7 +161,7 @@ function m(e) {
                     guildId: u,
                     channelId: m,
                     section: x,
-                    subsection: O,
+                    subsection: v,
                     onClose: j,
                 }),
             }),

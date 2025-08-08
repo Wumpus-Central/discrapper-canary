@@ -15,13 +15,13 @@ var n = a(255367),
     b = a(812206),
     f = a(835473),
     v = a(246992),
-    j = a(681619),
-    g = a(810568),
+    g = a(681619),
+    j = a(810568),
     _ = a(168524),
     y = a(77498),
     C = a(823379),
-    O = a(550532),
-    N = a(71585),
+    N = a(550532),
+    O = a(71585),
     E = a(146282),
     T = a(780106),
     S = a(650613),
@@ -87,7 +87,7 @@ function A() {
     var e, t;
     let a = (0, u.e7)([E.Z], () => E.Z.getFeed(w.YN.GLOBAL_FEED)),
         l = (0, u.e7)([E.Z], () => E.Z.getDebugImpressionCappingDisabled()),
-        i = (0, u.e7)([N.Z], () => N.Z.getDebugFastImpressionCappingEnabled()),
+        i = (0, u.e7)([O.Z], () => O.Z.getDebugFastImpressionCappingEnabled()),
         s = (function (e) {
             let t = o().groupBy(e, (e) => e.content_type);
             return Object.keys(t).map((e) => {
@@ -117,7 +117,7 @@ function A() {
         B = (0, _.Z)({
             applicationId: L,
             location: "DevToolsContentInventory",
-            source: g.m1.DevTools,
+            source: j.m1.DevTools,
         }),
         M = Object.entries(null != (t = m.K.get("GameProfileModal")) ? t : {})
             .filter((e) => {
@@ -129,7 +129,7 @@ function A() {
                 return t;
             }),
         F = (0, f.Z)(M).filter(C.lm),
-        U = (0, u.e7)([O.Z], () => O.Z.getFakeGameToShow());
+        U = (0, u.e7)([N.Z], () => N.Z.getFakeGameToShow());
     return (0, n.jsx)("div", {
         className: R.panel,
         children: (0, n.jsxs)(p.zJl, {
@@ -139,7 +139,7 @@ function A() {
                     children: [
                         (0, n.jsx)(p.vwX, { children: "Inventory" }),
                         s.length > 0 &&
-                            (0, n.jsx)(j.Z, {
+                            (0, n.jsx)(g.Z, {
                                 columns: k,
                                 data: s,
                             }),
@@ -262,7 +262,7 @@ let D = (e) => {
         a = (0, _.Z)({
             applicationId: t.id,
             location: "DevToolsContentInventory",
-            source: g.m1.DevTools,
+            source: j.m1.DevTools,
         });
     return (0, n.jsx)(p.P3F, {
         onClick: a,

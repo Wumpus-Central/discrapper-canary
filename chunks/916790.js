@@ -15,13 +15,13 @@ var n = a(255367),
     b = a(4912),
     f = a(572004),
     v = a(55935),
-    j = a(428530),
-    g = a(257785),
+    g = a(428530),
+    j = a(257785),
     _ = a(484036),
     y = a(681619),
     C = a(621060),
-    O = a(981631),
-    N = a(248520),
+    N = a(981631),
+    O = a(248520),
     E = a(616257);
 function T(e) {
     return parseFloat(e.toFixed(3));
@@ -29,7 +29,7 @@ function T(e) {
 let S = [
     {
         key: "store",
-        cellClassName: N.actionColumn,
+        cellClassName: O.actionColumn,
         render(e) {
             let { trace: t } = e;
             return t.name;
@@ -37,7 +37,7 @@ let S = [
     },
     {
         key: "time",
-        cellClassName: N.totalTimeColumn,
+        cellClassName: O.totalTimeColumn,
         render(e) {
             let { trace: t } = e;
             return "".concat(T(t.time), " ms");
@@ -72,10 +72,10 @@ let w = [
                 r = c()(a.createdAt);
             return (0, n.jsxs)(n.Fragment, {
                 children: [
-                    (0, n.jsxs)(g.E, {
-                        className: N.actionProperties,
+                    (0, n.jsxs)(j.E, {
+                        className: O.actionProperties,
                         children: [
-                            (0, n.jsx)(g.Z9, {
+                            (0, n.jsx)(j.Z9, {
                                 name: "Created at",
                                 children: (0, n.jsx)("time", {
                                     dateTime: null == (t = a.createdAt) ? void 0 : t.toISOString(),
@@ -83,15 +83,15 @@ let w = [
                                     children: (0, v.Y4)(r),
                                 }),
                             }),
-                            (0, n.jsxs)(g.Z9, {
+                            (0, n.jsxs)(j.Z9, {
                                 name: "Total Time",
                                 children: [T(a.totalTime), " ms"],
                             }),
                         ],
                     }),
                     (0, n.jsx)(u.zJl, {
-                        className: N.inspectorContainer,
-                        children: (0, n.jsx)(j.Z, { data: a.action }),
+                        className: O.inspectorContainer,
+                        children: (0, n.jsx)(g.Z, { data: a.action }),
                     }),
                 ],
             });
@@ -117,7 +117,7 @@ function I(e) {
                           {
                               id: "error",
                               name: (0, n.jsxs)(n.Fragment, {
-                                  children: [(0, n.jsx)(b.Z, { className: N.errorIcon }), "Error"],
+                                  children: [(0, n.jsx)(b.Z, { className: O.errorIcon }), "Error"],
                               }),
                               group: C.v0.NONE,
                               render(e) {
@@ -125,7 +125,7 @@ function I(e) {
                                   return (0, n.jsxs)(n.Fragment, {
                                       children: [
                                           (0, n.jsx)("div", {
-                                              className: i()(N.errorToolbar, E.toolbar),
+                                              className: i()(O.errorToolbar, E.toolbar),
                                               children: (0, n.jsx)("div", {
                                                   className: E.toolbarGroup,
                                                   children: (0, n.jsx)(d.zx, {
@@ -137,8 +137,8 @@ function I(e) {
                                               }),
                                           }),
                                           (0, n.jsx)(u.zJl, {
-                                              className: N.inspectorContainer,
-                                              children: (0, n.jsx)(j.Z, { data: t.error }),
+                                              className: O.inspectorContainer,
+                                              children: (0, n.jsx)(g.Z, { data: t.error }),
                                           }),
                                       ],
                                   });
@@ -150,13 +150,13 @@ function I(e) {
         ),
         { TabBar: s, renderSelectedTab: o } = (0, C.ZP)({ tabs: l }, [l]);
     return (0, n.jsxs)(_.Z, {
-        className: N.subPanel,
+        className: O.subPanel,
         minHeight: 100,
         initialHeight: a,
         children: [
             (0, n.jsx)(s, {}),
             (0, n.jsxs)(x.ZP, {
-                className: i()(E.headerBar, N.subPanelHeaderBar),
+                className: i()(E.headerBar, O.subPanelHeaderBar),
                 children: [
                     (0, n.jsx)(x.ZP.Icon, {
                         icon: u.xVZ,
@@ -175,7 +175,7 @@ function I(e) {
                             let a = JSON.stringify(
                                 Object.keys((e = t.action)).reduce((t, a) => {
                                     var n;
-                                    return (t[a] = ((n = e[a]), O.Jn9.test(n) ? "REDACTED" : n)), t;
+                                    return (t[a] = ((n = e[a]), N.Jn9.test(n) ? "REDACTED" : n)), t;
                                 }, {}),
                                 null,
                                 2,
@@ -198,17 +198,17 @@ function I(e) {
 let R = [
         {
             key: "action",
-            cellClassName: N.actionColumn,
+            cellClassName: O.actionColumn,
             render(e) {
                 let { actionLog: t } = e;
                 return (0, n.jsxs)(n.Fragment, {
-                    children: [t.error && (0, n.jsx)(b.Z, { className: N.errorIcon }), t.name],
+                    children: [t.error && (0, n.jsx)(b.Z, { className: O.errorIcon }), t.name],
                 });
             },
         },
         {
             key: "total time",
-            cellClassName: N.totalTimeColumn,
+            cellClassName: O.totalTimeColumn,
             render(e) {
                 let { actionLog: t } = e;
                 return "".concat(T(t.totalTime), " ms");
@@ -216,7 +216,7 @@ let R = [
         },
         {
             key: "timestamp",
-            cellClassName: N.totalTimeColumn,
+            cellClassName: O.totalTimeColumn,
             render(e) {
                 let { actionLog: t } = e;
                 return c()(t.createdAt).format("HH:mm:ss.SSS");
@@ -267,11 +267,11 @@ function Z() {
         [c, d] = r.useState(o),
         [x, p] = r.useState(o),
         [b, f] = r.useState(!1),
-        [v, j] = r.useState(),
-        g = r.useCallback((e) => {
+        [v, g] = r.useState(),
+        j = r.useCallback((e) => {
             p(e);
         }, []);
-    (0, h.BO)(t, b ? c : o, g, k);
+    (0, h.BO)(t, b ? c : o, j, k);
     let _ = r.useCallback(
             (e) => {
                 d(o), f(e);
@@ -279,17 +279,17 @@ function Z() {
             [o],
         ),
         C = t.trim().length > 0,
-        O = r.useMemo(() => (C ? x : b ? c : o), [o, x, C, b, c]);
+        N = r.useMemo(() => (C ? x : b ? c : o), [o, x, C, b, c]);
     return (0, n.jsxs)("div", {
         ref: e,
-        className: i()(E.panel, N.panel),
+        className: i()(E.panel, O.panel),
         children: [
             (0, n.jsxs)("div", {
-                className: N.toolbar,
+                className: O.toolbar,
                 children: [
                     (0, n.jsx)("div", {
                         title: "Toggles the flow of Actions",
-                        className: N.pausedEvents,
+                        className: O.pausedEvents,
                         children: (0, n.jsx)(u.rsf, {
                             checked: !b,
                             onChange: (e) => _(!e),
@@ -297,7 +297,7 @@ function Z() {
                     }),
                     (0, n.jsx)(u.E1j, {
                         size: "sm",
-                        className: N.searchBar,
+                        className: O.searchBar,
                         query: t,
                         onChange: a,
                         onClear: () => a(""),
@@ -307,9 +307,9 @@ function Z() {
             }),
             (0, n.jsx)(y.Z, {
                 columns: R,
-                data: O,
+                data: N,
                 selectedRowKey: null == v ? void 0 : v.id.toString(),
-                onClickRow: (e) => j(e.actionLog),
+                onClickRow: (e) => g(e.actionLog),
             }),
             null != v &&
                 (0, n.jsx)(I, {

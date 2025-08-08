@@ -4,16 +4,16 @@ a(73800);
 var r = a(296009),
     l = a(481060),
     i = a(592183),
-    s = a(447448),
-    o = a(484036),
-    c = a(634733),
+    s = a(86419),
+    o = a(447448),
+    c = a(484036),
     d = a(148444);
 function u() {
-    return (0, s.k)({
+    return (0, o.k)({
         location: "DevToolsWidgetsPanel",
         autoTrackExposure: !1,
     })
-        ? (0, n.jsx)(o.Z, {
+        ? (0, n.jsx)(c.Z, {
               initialHeight: 400,
               children: (0, n.jsx)("div", {
                   className: d.container,
@@ -29,22 +29,22 @@ function u() {
                                   (0, n.jsx)(l.zxk, {
                                       variant: "primary",
                                       text: "Favorite Game Widget",
-                                      onClick: () => (0, c.w6)(r.l.FAVORITE_GAMES),
+                                      onClick: () => (0, s.qH)(r.l.FAVORITE_GAMES),
                                   }),
                                   (0, n.jsx)(l.zxk, {
                                       variant: "primary",
                                       text: "Current Game Widget",
-                                      onClick: () => (0, c.w6)(r.l.CURRENT_GAMES),
+                                      onClick: () => (0, s.qH)(r.l.CURRENT_GAMES),
                                   }),
                                   (0, n.jsx)(l.zxk, {
                                       variant: "primary",
                                       text: "Want to Play Game Widget",
-                                      onClick: () => (0, c.w6)(r.l.WANT_TO_PLAY_GAMES),
+                                      onClick: () => (0, s.qH)(r.l.WANT_TO_PLAY_GAMES),
                                   }),
                                   (0, n.jsx)(l.zxk, {
                                       variant: "primary",
                                       text: "Played Game Widget",
-                                      onClick: () => (0, c.w6)(r.l.PLAYED_GAMES),
+                                      onClick: () => (0, s.qH)(r.l.PLAYED_GAMES),
                                   }),
                                   (0, n.jsx)(l.zxk, {
                                       variant: "active",

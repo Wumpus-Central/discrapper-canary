@@ -26,9 +26,11 @@ function o(e) {
             }
             return l;
         })(e, ["user", "widget", "isGameFetching"]);
+    let c = null != n.game;
     return (0, r.jsx)(l.Z, {
         userId: t.id,
         widgetType: n.type,
+        reachedMaxGamesLimit: c,
         children: (0, r.jsx)(
             i.Z,
             (function (e) {

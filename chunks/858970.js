@@ -17,8 +17,8 @@ var r = n(255367),
     j = n(907179),
     y = n(228168),
     x = n(981631),
-    O = n(388032),
-    v = n(247787);
+    v = n(388032),
+    O = n(247787);
 function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -53,12 +53,12 @@ function I(e) {
             roleId: E,
             transitionState: Z,
             openedAt: N,
-            onHide: T,
-            sourceAnalyticsLocations: S = [],
+            onHide: S,
+            sourceAnalyticsLocations: T = [],
         } = e,
         A = n === x.ME ? void 0 : n,
         w = (0, l.e7)([d.Z], () => d.Z.isBlocked(t.id)),
-        { analyticsLocations: C } = (0, c.ZP)([...S, w ? a.Z.BLOCKED_PROFILE_MODAL : a.Z.IGNORED_PROFILE_MODAL]),
+        { analyticsLocations: C } = (0, c.ZP)([...T, w ? a.Z.BLOCKED_PROFILE_MODAL : a.Z.IGNORED_PROFILE_MODAL]),
         G = (0, f.ZB)({
             layout: "MODAL_V2",
             userId: t.id,
@@ -68,41 +68,41 @@ function I(e) {
             messageId: P,
             roleId: E,
         }),
-        R = [
+        L = [
             {
                 icon: o.owK,
-                description: O.intl.string(O.t.kcuWvb),
+                description: v.intl.string(v.t.kcuWvb),
             },
             {
                 icon: o.owK,
-                description: O.intl.string(w ? O.t.QxrDY2 : O.t.W6fjkZ),
+                description: v.intl.string(w ? v.t.QxrDY2 : v.t.W6fjkZ),
             },
         ],
-        L = (0, m.ZP)(t.id, A),
-        M = u.ZP.getName(null == L ? void 0 : L.guildId, I, t),
-        D = O.intl.formatToPlainString(O.t.KRe1Fh, { name: M });
+        M = (0, m.ZP)(t.id, A),
+        R = u.ZP.getName(null == M ? void 0 : M.guildId, I, t),
+        D = v.intl.formatToPlainString(v.t.KRe1Fh, { name: R });
     return (0, r.jsx)(c.Gt, {
         value: C,
         children: (0, r.jsx)(f.Mt, {
             value: G,
             openedAt: N,
-            fetchStartedAt: null == L ? void 0 : L.fetchStartedAt,
-            fetchEndedAt: null == L ? void 0 : L.fetchEndedAt,
-            isLoaded: null == L ? void 0 : L.isLoaded,
+            fetchStartedAt: null == M ? void 0 : M.fetchStartedAt,
+            fetchEndedAt: null == M ? void 0 : M.fetchEndedAt,
+            isLoaded: null == M ? void 0 : M.isLoaded,
             children: (0, r.jsx)(o.Y0X, {
                 "data-migration-pending": !0,
                 transitionState: Z,
-                className: v.root,
+                className: O.root,
                 "aria-label": D,
                 parentComponent: "RestrictedUserProfileModalV2",
                 children: (0, r.jsxs)(b.Z, {
                     user: t,
-                    displayProfile: L,
+                    displayProfile: M,
                     themeType: y.lY.MODAL_V2,
                     children: [
-                        (0, r.jsx)("div", { className: v.background }),
+                        (0, r.jsx)("div", { className: O.background }),
                         (0, r.jsxs)("div", {
-                            className: v.content,
+                            className: O.content,
                             children: [
                                 (0, r.jsx)(g.Z, {
                                     user: t,
@@ -110,23 +110,23 @@ function I(e) {
                                     iconColor: o.TVs.colors.TEXT_DEFAULT,
                                 }),
                                 (0, r.jsxs)("div", {
-                                    className: v.textContainer,
+                                    className: O.textContainer,
                                     children: [
                                         (0, r.jsx)(o.X6q, {
                                             variant: "heading-xl/bold",
                                             color: "text-default",
-                                            children: O.intl.string(O.t.b33pLC),
+                                            children: v.intl.string(v.t.b33pLC),
                                         }),
                                         (0, r.jsx)(o.Text, {
                                             variant: "text-md/medium",
                                             color: "text-default",
-                                            children: O.intl.format(w ? O.t.T7QiLi : O.t.MnEow8, { username: M }),
+                                            children: v.intl.format(w ? v.t.T7QiLi : v.t.MnEow8, { username: R }),
                                         }),
                                     ],
                                 }),
                                 (0, r.jsx)("div", {
-                                    className: v.safetyTable,
-                                    children: R.map((e, t) => {
+                                    className: O.safetyTable,
+                                    children: L.map((e, t) => {
                                         let { icon: n, description: l } = e;
                                         return (0, r.jsx)(
                                             s.JZ,
@@ -147,7 +147,7 @@ function I(e) {
                                             size: i.Ph.MEDIUM,
                                             isBlocked: w,
                                             onClick: () => {
-                                                T(),
+                                                S(),
                                                     (0, p.pQ)(
                                                         _(
                                                             {
@@ -164,7 +164,7 @@ function I(e) {
                                         (0, r.jsx)(h.Z, {
                                             userId: t.id,
                                             onClick: () => {
-                                                T(),
+                                                S(),
                                                     (0, p.pQ)(
                                                         _(
                                                             {

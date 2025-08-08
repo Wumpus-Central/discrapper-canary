@@ -42,7 +42,7 @@ function x(e) {
     }
     return e;
 }
-function O(e, t) {
+function v(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -60,26 +60,26 @@ function O(e, t) {
         e
     );
 }
-function v(e) {
+function O(e) {
     var t;
     let { account: n, locale: l, userId: i } = e,
         o = null != (t = n.metadata) ? t : {},
         m = (0, u.FI)(o[h.PC.CREATED_AT], l),
-        v = c.Z.get((0, d.rR)(n.type));
+        O = c.Z.get((0, d.rR)(n.type));
     return (0, r.jsxs)("li", {
         className: y.connection,
         children: [
             (0, r.jsx)(a.ua7, {
-                text: null == v ? void 0 : v.name,
+                text: null == O ? void 0 : O.name,
                 children: (e) =>
                     (0, r.jsx)(
                         "div",
-                        O(x({}, e), {
+                        v(x({}, e), {
                             className: y.platformIconContainer,
                             children: (0, r.jsx)("img", {
-                                alt: j.intl.formatToPlainString(j.t.rtm15O, { name: null == v ? void 0 : v.name }),
+                                alt: j.intl.formatToPlainString(j.t.rtm15O, { name: null == O ? void 0 : O.name }),
                                 className: y.platformIcon,
-                                src: null == v ? void 0 : v.icon.lightPNG,
+                                src: null == O ? void 0 : O.icon.lightPNG,
                             }),
                         }),
                     ),
@@ -91,7 +91,7 @@ function v(e) {
                         children: [
                             (() => {
                                 var e;
-                                let t = null == v || null == (e = v.getPlatformUserUrl) ? void 0 : e.call(v, n);
+                                let t = null == O || null == (e = O.getPlatformUserUrl) ? void 0 : e.call(O, n);
                                 return null == t
                                     ? (0, r.jsx)(a.ua7, {
                                           overflowOnly: !0,
@@ -99,7 +99,7 @@ function v(e) {
                                           children: (e) =>
                                               (0, r.jsx)(
                                                   a.Text,
-                                                  O(x({}, e), {
+                                                  v(x({}, e), {
                                                       variant: "text-sm/normal",
                                                       className: y.accountNameText,
                                                       children: n.name,
@@ -111,9 +111,9 @@ function v(e) {
                                           className: y.platformUrlAnchor,
                                           useDefaultUnderlineStyles: !1,
                                           "aria-label":
-                                              (null == v ? void 0 : v.name) != null
+                                              (null == O ? void 0 : O.name) != null
                                                   ? ""
-                                                        .concat(v.name, ", ")
+                                                        .concat(O.name, ", ")
                                                         .concat(n.name, ", ")
                                                         .concat(j.intl.string(j.t.q5jLJC))
                                                   : "".concat(n.name, ", ").concat(j.intl.string(j.t.q5jLJC)),
@@ -125,7 +125,7 @@ function v(e) {
                                                   (0, g.q)(
                                                       {
                                                           href: t,
-                                                          trusted: (null == v ? void 0 : v.type) !== b.ABu.DOMAIN,
+                                                          trusted: (null == O ? void 0 : O.type) !== b.ABu.DOMAIN,
                                                       },
                                                       e,
                                                   );
@@ -139,7 +139,7 @@ function v(e) {
                                                       children: (e) =>
                                                           (0, r.jsx)(
                                                               a.Text,
-                                                              O(x({}, e), {
+                                                              v(x({}, e), {
                                                                   variant: "text-sm/normal",
                                                                   className: y.accountNameText,
                                                                   children: n.name,
@@ -192,7 +192,7 @@ function _(e) {
               className: i()(y.container, l),
               children: t.map((e) =>
                   (0, r.jsx)(
-                      v,
+                      O,
                       {
                           account: e,
                           userId: n,
