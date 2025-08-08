@@ -23905,12 +23905,13 @@ img.inlineAsset__9c640 {
     margin-right: calc(-2px - .04em);
     padding-bottom: calc(2px + .04em);
     padding-left: calc(2px + .04em);
-    padding-right: calc(2px + .04em)
+    padding-right: calc(2px + .04em);
+    transition: color 266ms cubic-bezier(.43, .21, .27, .78)
 }
 
 .forceAnimate_dfb989 .container_dfb989 .toon_dfb989:before,
 .showEffect_dfb989 .toon_dfb989:before {
-    background: linear-gradient(180deg, var(--white-500) 0, var(--white-500) 3%, var(--custom-display-name-styles-light-2-color) 12%, var(--custom-display-name-styles-main-color) 25%, var(--custom-display-name-styles-light-2-color) 50%, var(--white-500) 75%, var(--white-500) 78%, var(--custom-display-name-styles-light-2-color) 87%, var(--custom-display-name-styles-main-color) 100%);
+    background: linear-gradient(180deg, var(--white-500) 0, var(--custom-display-name-styles-light-2-color) 8%, var(--custom-display-name-styles-light-1-color) 15%, var(--custom-display-name-styles-main-color) 25%, var(--custom-display-name-styles-light-2-color) 45%, var(--custom-display-name-styles-main-color) 55%, var(--white-500) 75%, var(--custom-display-name-styles-light-2-color) 83%, var(--custom-display-name-styles-light-1-color) 90%, var(--custom-display-name-styles-main-color) 100%);
     background-clip: text;
     -webkit-background-clip: text;
     background-size: 100% 400%;
@@ -23925,6 +23926,7 @@ img.inlineAsset__9c640 {
     -webkit-text-stroke-color: transparent;
     overflow: hidden;
     text-overflow: ellipsis;
+    transition: opacity 266ms cubic-bezier(.43, .21, .27, .78);
     white-space: var(--custom-display-name-styles-wrap)
 }
 
@@ -23990,25 +23992,11 @@ img.inlineAsset__9c640 {
     animation-fill-mode: forwards
 }
 
-.animated_dfb989 .toon_dfb989,
-.forceAnimate_dfb989 .container_dfb989 .toon_dfb989 {
-    transition: color 266ms cubic-bezier(.43, .21, .27, .78)
-}
-
 .animated_dfb989 .toon_dfb989:before,
 .forceAnimate_dfb989 .container_dfb989 .toon_dfb989:before {
-    background: linear-gradient(180deg, var(--white-500) 0, var(--custom-display-name-styles-light-2-color) 8%, var(--custom-display-name-styles-light-1-color) 15%, var(--custom-display-name-styles-main-color) 25%, var(--custom-display-name-styles-light-2-color) 45%, var(--custom-display-name-styles-main-color) 55%, var(--white-500) 75%, var(--custom-display-name-styles-light-2-color) 83%, var(--custom-display-name-styles-light-1-color) 90%, var(--custom-display-name-styles-main-color) 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    background-size: 100% 400%;
-    -webkit-text-fill-color: transparent;
     animation: toon-animation_dfb989 4s cubic-bezier(.44, .29, .48, 1);
     animation-direction: normal;
-    animation-fill-mode: forwards;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    transition: opacity 266ms cubic-bezier(.43, .21, .27, .78);
-    white-space: var(--custom-display-name-styles-wrap)
+    animation-fill-mode: forwards
 }
 
 .animated_dfb989 .pop_dfb989,
@@ -24023,6 +24011,12 @@ img.inlineAsset__9c640 {
     animation: pop-animation-shadow_dfb989 4s cubic-bezier(.44, .29, .48, 1);
     animation-direction: normal;
     animation-fill-mode: forwards
+}
+
+.container_dfb989:not(.animated_dfb989),
+.container_dfb989:not(.animated_dfb989):before {
+    animation-play-state: paused !important;
+    transition: none !important
 }
 
 @keyframes pop-animation-main_dfb989 {
