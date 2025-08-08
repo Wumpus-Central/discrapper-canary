@@ -13,8 +13,8 @@ var r = n(255367),
     p = n(981631),
     h = n(190378),
     f = n(388032),
-    x = n(239721),
-    b = n(438825),
+    b = n(239721),
+    x = n(438825),
     j = n(236140),
     v = n(37069),
     _ = n(518513),
@@ -57,7 +57,7 @@ let E = () => [
                     (0, r.jsx)(
                         "strong",
                         {
-                            className: x.featuredText,
+                            className: b.featuredText,
                             children: e,
                         },
                         t,
@@ -80,7 +80,7 @@ let E = () => [
                                     {
                                         size: "xs",
                                         color: "currentColor",
-                                        className: x.infoIcon,
+                                        className: b.infoIcon,
                                     },
                                     e,
                                 ),
@@ -90,7 +90,7 @@ let E = () => [
                     (0, r.jsx)(
                         "strong",
                         {
-                            className: x.featuredText,
+                            className: b.featuredText,
                             children: e,
                         },
                         t,
@@ -145,10 +145,10 @@ let E = () => [
     T = (e) => {
         let { icon: t, color: n, size: i = 24, header: l, body: a } = e;
         return (0, r.jsxs)("div", {
-            className: x.featureCard,
+            className: b.featureCard,
             children: [
                 (0, r.jsx)("div", {
-                    className: x.featureIcon,
+                    className: b.featureIcon,
                     children: (0, r.jsx)(t, {
                         color: null != n ? n : "currentColor",
                         width: i,
@@ -158,7 +158,7 @@ let E = () => [
                 }),
                 (0, r.jsx)(c.X6q, {
                     variant: "heading-md/semibold",
-                    className: x.featureHeader,
+                    className: b.featureHeader,
                     children: l,
                 }),
                 (0, r.jsx)(c.Text, {
@@ -176,11 +176,11 @@ let E = () => [
                 top: o[1] + i[1],
             };
         return (0, r.jsxs)("div", {
-            className: a()(x.guildDetails, { [x.faded]: l }),
+            className: a()(b.guildDetails, { [b.faded]: l }),
             style: d,
             children: [
                 (0, r.jsx)("div", {
-                    className: x.guildIcon,
+                    className: b.guildIcon,
                     children: (0, r.jsx)("img", {
                         alt: "",
                         src: t,
@@ -213,10 +213,10 @@ let E = () => [
             u.Z.open();
         };
         return (0, r.jsxs)("div", {
-            className: x.container,
+            className: b.container,
             children: [
                 (0, r.jsxs)("div", {
-                    className: x.banner,
+                    className: b.banner,
                     ref: (e) => _(e),
                     children: [
                         S.map((e) => {
@@ -246,14 +246,14 @@ let E = () => [
                         }),
                         (0, r.jsx)("img", {
                             alt: "",
-                            src: b,
-                            className: x.image,
+                            src: x,
+                            className: b.image,
                             width: 256,
                         }),
                         (0, r.jsx)("img", {
                             alt: "",
                             src: j,
-                            className: x.sparkles,
+                            className: b.sparkles,
                         }),
                     ],
                 }),
@@ -264,7 +264,7 @@ let E = () => [
                 (0, r.jsx)(c.Text, {
                     color: "header-secondary",
                     variant: "text-md/normal",
-                    className: x.body,
+                    className: b.body,
                     children: f.intl.format(f.t["52EgsL"], {
                         helpdeskArticle: g.Z.getArticleURL(p.BhN.FRIEND_COMMUNITY_DISCOVERABLE_GUILD_TYPES),
                     }),
@@ -275,7 +275,7 @@ let E = () => [
                     children: (e) =>
                         (0, r.jsx)("div", {
                             "data-button-hoisted-classname-wrapper": !0,
-                            className: x.button,
+                            className: b.button,
                             children: (0, r.jsx)(
                                 c.zxk,
                                 I(
@@ -290,7 +290,7 @@ let E = () => [
                             ),
                         }),
                 }),
-                (0, r.jsx)("hr", { className: x.separator }),
+                (0, r.jsx)("hr", { className: b.separator }),
                 (0, r.jsx)(c.Text, {
                     color: "header-secondary",
                     variant: "text-sm/normal",
@@ -298,14 +298,14 @@ let E = () => [
                 }),
                 (0, r.jsx)(c.Text, {
                     color: "header-secondary",
-                    className: x.body,
+                    className: b.body,
                     variant: "text-sm/normal",
                     children: f.intl.format(f.t.rjhrqK, {
                         helpdeskArticle: g.Z.getArticleURL(p.BhN.GUILD_COMMUNITY_FEATURE),
                     }),
                 }),
                 (0, r.jsx)("div", {
-                    className: x.features,
+                    className: b.features,
                     children: E().map((e, t) => (0, r.jsx)(T, I({}, e), t)),
                 }),
             ],

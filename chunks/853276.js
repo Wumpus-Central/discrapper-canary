@@ -55,7 +55,7 @@ function p(e, t) {
 let h = i.forwardRef(function (e, t) {
     var n, l;
     let { value: s, isSelected: c, isEditing: d, forceShowErrorTooltip: u = !1, error: h } = e,
-        [f, x, b] = i.useMemo(() => {
+        [f, b, x] = i.useMemo(() => {
             if (null == h) return [];
             let { erroringCharacterOffset: e = 0, erroringCharacterLength: t = s.length } = null != h ? h : {},
                 n = s.slice(0, e);
@@ -71,7 +71,7 @@ let h = i.forwardRef(function (e, t) {
               children: s,
           })
         : (null != (n = null == f ? void 0 : f.length) ? n : 0) +
-                (null != (l = null == x ? void 0 : x.length) ? l : 0) >
+                (null != (l = null == b ? void 0 : b.length) ? l : 0) >
             70
           ? (0, r.jsx)(o.ua7, {
                 "aria-label": h.message,
@@ -83,7 +83,7 @@ let h = i.forwardRef(function (e, t) {
                             " ",
                             (0, r.jsx)("span", {
                                 className: m.errorOverflowValue,
-                                children: x,
+                                children: b,
                             }),
                         ],
                     }),
@@ -111,9 +111,9 @@ let h = i.forwardRef(function (e, t) {
                                     (0, r.jsx)("span", { children: f }),
                                     (0, r.jsx)("span", {
                                         className: m.errorValue,
-                                        children: x,
+                                        children: b,
                                     }),
-                                    (0, r.jsx)("span", { children: b }),
+                                    (0, r.jsx)("span", { children: x }),
                                 ],
                             },
                         ),
@@ -137,11 +137,11 @@ let h = i.forwardRef(function (e, t) {
                                 "span",
                                 p(g({}, e), {
                                     className: m.errorValue,
-                                    children: x,
+                                    children: b,
                                 }),
                             ),
                     }),
-                    (0, r.jsx)("span", { children: b }),
+                    (0, r.jsx)("span", { children: x }),
                 ],
             });
 });
@@ -153,8 +153,8 @@ function f(e) {
             onFocus: g,
             onRemove: p,
             isSelected: f,
-            isSelecting: x,
-            error: b,
+            isSelecting: b,
+            error: x,
             forceShowErrorTooltip: j,
         } = e,
         v = i.useRef(null),
@@ -231,8 +231,8 @@ function f(e) {
                 [m.isEditing]: O,
                 [m.smallBlink]: !O && !S,
                 [m.isSelected]: f,
-                [m.isSelecting]: x,
-                [m.isError]: null != b && !O,
+                [m.isSelecting]: b,
+                [m.isError]: null != x && !O,
             }),
             children: [
                 (0, r.jsxs)(o.P3F, {
@@ -243,7 +243,7 @@ function f(e) {
                     onMouseEnter: () => P(!0),
                     onMouseLeave: () => P(!1),
                     className: a()(m.chipletContainerInner, {
-                        [m.isSelecting]: x,
+                        [m.isSelecting]: b,
                         [m.isEditing]: O,
                     }),
                     ref: _,
@@ -251,7 +251,7 @@ function f(e) {
                         (0, r.jsx)("input", {
                             className: a()(m.chipletInput, {
                                 [m.isEditing]: O,
-                                [m.isSelecting]: x,
+                                [m.isSelecting]: b,
                             }),
                             ref: v,
                             onChange: Z,
@@ -264,7 +264,7 @@ function f(e) {
                             value: t,
                             isEditing: O,
                             isSelected: f,
-                            error: b,
+                            error: x,
                             forceShowErrorTooltip: T || O,
                         }),
                     ],

@@ -15,7 +15,7 @@ function h(e) {
     let { activeType: t, onTypePicked: n, guild: l } = e,
         h = l.features.has(m.oNc.COMMUNITY),
         f = (0, s.e7)([c.Z], () => c.Z.can(m.Plq.ADMINISTRATOR, l)),
-        x = i.useMemo(() => {
+        b = i.useMemo(() => {
             let e = t === u.A.DISCOVERABLE && !f,
                 n = h && (t === u.A.DISCOVERABLE || f);
             return [
@@ -65,7 +65,7 @@ function h(e) {
                 onItemSelect: n,
                 orientation: "horizontal",
                 className: p.joinOptions,
-                children: x.map((e) => {
+                children: b.map((e) => {
                     let n = e.id === t;
                     return (0, r.jsx)(
                         o.njP.Item,

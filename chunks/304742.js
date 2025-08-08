@@ -1,11 +1,11 @@
-r.d(t, { Z: () => s });
-var n = r(255367),
-    l = r(73800),
-    a = r(481060),
-    i = r(215023),
-    o = r(388032);
+n.d(t, { Z: () => s });
+var r = n(255367),
+    l = n(73800),
+    a = n(481060),
+    i = n(215023),
+    o = n(388032);
 function s(e) {
-    let { handleTransition: t, onClose: r } = e,
+    let { handleTransition: t, onClose: n } = e,
         s = l.useMemo(
             () => [
                 {
@@ -31,13 +31,13 @@ function s(e) {
             ],
             [],
         );
-    return (0, n.jsx)(a.v2r, {
+    return (0, r.jsx)(a.v2r, {
         navId: "collectibles-index-page-menu",
-        onClose: r,
+        onClose: n,
         "aria-label": o.intl.string(o.t.xFcotb),
         onSelect: () => {},
         children: s.map((e) =>
-            (0, n.jsx)(
+            (0, r.jsx)(
                 a.sNh,
                 {
                     id: e.value,

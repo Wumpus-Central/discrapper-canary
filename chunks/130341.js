@@ -1,10 +1,10 @@
 n.d(t, {
     UT: () => O,
     _4: () => f,
-    cm: () => x,
+    cm: () => b,
     e: () => j,
     eg: () => _,
-    lJ: () => b,
+    lJ: () => x,
     rY: () => v,
     uo: () => y,
 }),
@@ -25,8 +25,8 @@ var r = n(73800),
     p = n(203377),
     h = n(981631);
 let f = 50,
-    x = 1000;
-function b(e, t) {
+    b = 1000;
+function x(e, t) {
     let n = (0, a.Wu)([s.ZP], () => {
             let n = s.ZP.getMembers(e);
             return null == t ? n : n.filter(t);
@@ -71,7 +71,7 @@ function j(e, t, n) {
         r.useEffect(() => {
             (0, g.H)(e, t).catch(i.current);
         }, [e, t]),
-        b(
+        x(
             e,
             r.useCallback((e) => e.roles.includes(t), [t]),
         )

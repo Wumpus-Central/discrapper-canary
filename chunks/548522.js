@@ -14,15 +14,15 @@ var r = n(255367),
 function h(e) {
     var t;
     let { guild: n, formFields: c } = e,
-        [h, x] = i.useState(c);
-    i.useEffect(() => x(c), [c]);
-    let b = null != (t = (0, s.A)({ guildId: n.id })) ? t : 0,
+        [h, b] = i.useState(c);
+    i.useEffect(() => b(c), [c]);
+    let x = null != (t = (0, s.A)({ guildId: n.id })) ? t : 0,
         [j, v] = i.useState(null),
         _ = i.useMemo(() => (null == h ? void 0 : h.some((e) => (0, a.J)(e))), [h]),
         O = i.useMemo(() => h.length === m.nx, [h]),
         y = i.useCallback(
             (e) => {
-                u.Z.setPendingMemberVerificationRules(n.id, e), x(e), null != j && v(null);
+                u.Z.setPendingMemberVerificationRules(n.id, e), b(e), null != j && v(null);
             },
             [j, n.id],
         ),
@@ -50,7 +50,7 @@ function h(e) {
             (e, t, n) => {
                 let r = h.indexOf(e),
                     i = [...h];
-                null != t && t !== r && (i.splice(r, 1), i.splice(t, 0, e), x(i)),
+                null != t && t !== r && (i.splice(r, 1), i.splice(t, 0, e), b(i)),
                     n ? (y(i), null !== j && v(null)) : j !== t && v(t);
             },
             [j, h, y],
@@ -73,7 +73,7 @@ function h(e) {
                     guild: n,
                     index: h.indexOf(e),
                     isDragEnabled: h.length > 1,
-                    submittedGuildJoinRequestsCount: b,
+                    submittedGuildJoinRequestsCount: x,
                     removeFormField: N,
                     updateFormField: I,
                     updateFormFieldOrder: E,

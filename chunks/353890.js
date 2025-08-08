@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x });
+n.d(t, { Z: () => b });
 var r = n(255367);
 n(73800);
 var i = n(120356),
@@ -14,7 +14,7 @@ var i = n(120356),
     p = n(838324),
     h = n(388032),
     f = n(281310);
-function x(e) {
+function b(e) {
     let { guild: t, scrollToQuestions: n } = e,
         i = (0, a.e7)([g.Z], () => g.Z.editedDefaultChannelIds),
         l = (0, u.b)(t.id, i).filter((e) => e.isCategory() || (0, c.s)(e.guild_id, e.id));
@@ -30,12 +30,12 @@ function x(e) {
             }),
             (0, r.jsxs)("div", {
                 className: f.channelList,
-                children: [(0, r.jsx)(v, {}), 0 === l.length && (0, r.jsx)(b, {}), (0, r.jsx)(j, { channels: l })],
+                children: [(0, r.jsx)(v, {}), 0 === l.length && (0, r.jsx)(x, {}), (0, r.jsx)(j, { channels: l })],
             }),
         ],
     });
 }
-function b() {
+function x() {
     return (0, r.jsxs)("div", {
         className: f.emptyState,
         children: [

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => m });
 var r,
     l,
-    o = n(255367),
-    i = n(73800),
+    i = n(255367),
+    o = n(73800),
     a = n(120356),
     c = n.n(a),
     s = n(481060),
@@ -19,10 +19,10 @@ let u = {
         [u.DOWN]: d.down,
         [u.LEFT]: d.left,
     };
-class p extends (l = i.PureComponent) {
+class p extends (l = o.PureComponent) {
     render() {
         let { direction: e, className: t } = this.props;
-        return (0, o.jsx)(s.wj7, {
+        return (0, i.jsx)(s.wj7, {
             size: "md",
             color: "currentColor",
             className: c()(t, { [f[e]]: !0 }),

@@ -6,7 +6,7 @@ var r = n(255367),
     s = n(375613);
 function a(e) {
     let { children: t } = e,
-        { notificationCenterVariant: n } = l.Lk.useExperiment({ location: "NotificationsInboxTooltip" }),
+        { notificationCenterVariant: n } = (0, l.pN)({ location: "NotificationsInboxTooltip" }),
         a = n === l.jP.LEGACY ? o.intl.string(o.t.GSmTKC) : o.intl.string(o.t.HcoRu7);
     return (0, r.jsx)(i.ua7, {
         hideOnClick: !0,

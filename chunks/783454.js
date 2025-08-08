@@ -13,7 +13,7 @@ function g(e) {
     let { intiallyExpanded: t = !1, title: n, description: l, children: g } = e,
         [p, h] = i.useState(t),
         f = () => h((e) => !e),
-        x = (0, o.Dt)();
+        b = (0, o.Dt)();
     return (0, r.jsxs)("div", {
         className: m.container,
         children: [
@@ -31,7 +31,7 @@ function g(e) {
                             (0, r.jsx)(s.P3F, {
                                 onClick: i(f),
                                 "aria-label": u.intl.string(u.t.e5eQOz),
-                                "aria-controls": x,
+                                "aria-controls": b,
                                 "aria-expanded": p,
                                 focusProps: { ringTarget: t },
                                 children: (0, r.jsx)(c.Z, {
@@ -45,7 +45,7 @@ function g(e) {
             }),
             p &&
                 (0, r.jsxs)("div", {
-                    id: x,
+                    id: b,
                     children: [
                         null != l &&
                             (0, r.jsx)(s.R94, {

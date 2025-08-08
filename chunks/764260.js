@@ -1,5 +1,5 @@
 n.d(t, {
-    Gf: () => x,
+    Gf: () => b,
     Jf: () => g,
     OW: () => u,
     S1: () => s,
@@ -92,7 +92,7 @@ function f(e, t) {
         roleConnectionConfigurations: t,
     });
 }
-async function x(e, t, n, a, s) {
+async function b(e, t, n, a, s) {
     var o, c, d, u;
     r.Z.dispatch({ type: "GUILD_SETTINGS_ROLES_SUBMITTING" });
     try {

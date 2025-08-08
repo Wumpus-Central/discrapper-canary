@@ -19,27 +19,27 @@ function h(e, t) {
                 var i, a, m, h;
                 let f;
                 if (!t.managed) return null;
-                let x = null == (i = t.tags) ? void 0 : i.bot_id,
-                    b = null == (a = t.tags) ? void 0 : a.integration_id,
+                let b = null == (i = t.tags) ? void 0 : i.bot_id,
+                    x = null == (a = t.tags) ? void 0 : a.integration_id,
                     j = (null == (m = t.tags) ? void 0 : m.premium_subscriber) !== void 0,
                     v = (null == (h = t.tags) ? void 0 : h.guild_connections) !== void 0;
                 if (
-                    (null != x
+                    (null != b
                         ? (f =
                               null == n
                                   ? void 0
                                   : n.find((e) => {
                                         var t;
                                         let { application: n } = e;
-                                        return (null == n || null == (t = n.bot) ? void 0 : t.id) === x;
+                                        return (null == n || null == (t = n.bot) ? void 0 : t.id) === b;
                                     }))
-                        : null != b &&
+                        : null != x &&
                           (f =
                               null == n
                                   ? void 0
                                   : n.find((e) => {
                                         let { id: t } = e;
-                                        return t === b;
+                                        return t === x;
                                     })),
                     null != f && null != f.application && null != f.name)
                 ) {

@@ -13,8 +13,8 @@ var r = n(255367),
     p = n(190263),
     h = n(494620),
     f = n(496675),
-    x = n(55935),
-    b = n(63063),
+    b = n(55935),
+    x = n(63063),
     j = n(434404),
     v = n(714939),
     _ = n(494831),
@@ -79,7 +79,7 @@ function S(e) {
             forceTrack: !0,
         });
     }, [t]);
-    let n = (0, x.vc)(o()(O.LCk), "LL"),
+    let n = (0, b.vc)(o()(O.LCk), "LL"),
         l = t.features.has(O.oNc.PIN_PERMISSION_MIGRATION_COMPLETE)
             ? (0, r.jsx)(d.Text, {
                   variant: "text-sm/normal",
@@ -130,7 +130,7 @@ function T(e) {
                 className: I.helpText,
                 color: "header-secondary",
                 variant: "text-sm/normal",
-                children: N.intl.format(N.t.xkC3YW, { articleURL: b.Z.getArticleURL(O.BhN.PERMISSIONS_TUTORIAL) }),
+                children: N.intl.format(N.t.xkC3YW, { articleURL: x.Z.getArticleURL(O.BhN.PERMISSIONS_TUTORIAL) }),
             }),
             (0, r.jsx)("div", {
                 className: I.rolesTable,

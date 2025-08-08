@@ -225,6 +225,23 @@ function D(e) {
                             {
                                 user: k,
                                 guild: W,
+                                titleIcon: (0, i.jsx)(l.ua7, {
+                                    text: y.intl.string(y.t["5AFxuL"]),
+                                    children: (e) =>
+                                        (0, i.jsx)(
+                                            l.SrA,
+                                            R(
+                                                P(
+                                                    {
+                                                        size: "md",
+                                                        color: "currentColor",
+                                                    },
+                                                    e,
+                                                ),
+                                                { className: A.nitroWheel },
+                                            ),
+                                        ),
+                                }),
                             },
                             "nameplate",
                         ),

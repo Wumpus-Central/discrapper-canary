@@ -57,15 +57,15 @@ function h(e) {
     let { guild: t } = e,
         h = (0, i.e7)([a.Z], () => a.Z.isUploadingEmoji()),
         f = (0, u.Z)(t.id),
-        x = (0, d.Z)(t) - f.length,
-        b = (0, c.mY)();
+        b = (0, d.Z)(t) - f.length,
+        x = (0, c.mY)();
     return (0, r.jsxs)(l.hjN, {
         title: m.intl.string(m.t.LDT0Q0),
-        disabled: b,
+        disabled: x,
         children: [
             (0, r.jsx)(l.R94, {
                 type: l.R94.Types.DESCRIPTION,
-                disabled: b,
+                disabled: x,
                 children: m.intl.format(m.t.H9Jxp6, { maxSlots: (0, d.Z)(t) }),
             }),
             (0, r.jsx)(l.LZC, { size: 16 }),
@@ -88,7 +88,7 @@ function h(e) {
                 },
                 buttonCTA: m.intl.string(m.t.AuPtoq),
                 submitting: h,
-                disabled: b || h || 0 === x,
+                disabled: x || h || 0 === b,
             }),
             (0, r.jsx)(l.LZC, { size: 24 }),
             (0, r.jsx)(s.L3, {
@@ -112,7 +112,7 @@ function h(e) {
                             );
                     });
                 },
-                editingDisabled: b,
+                editingDisabled: x,
             }),
         ],
     });

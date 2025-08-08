@@ -19,8 +19,8 @@ var r = n(255367),
     p = n(907040),
     h = n(339085),
     f = n(633302),
-    x = n(984933),
-    b = n(691886),
+    b = n(984933),
+    x = n(691886),
     j = n(185923),
     v = n(388032),
     _ = n(656147);
@@ -71,13 +71,13 @@ function C(e) {
     let { guildId: t, emojiData: n, "aria-labelledby": l, onSelectEmoji: a } = e,
         o = i.useRef(null),
         m = (0, s.e7)([h.ZP], () => (null != n.id ? h.ZP.getCustomEmojiById(n.id) : void 0)),
-        b = (0, s.e7)([x.ZP], () => x.ZP.getDefaultChannel(t)),
+        x = (0, s.e7)([b.ZP], () => b.ZP.getDefaultChannel(t)),
         C = i.useCallback(
             (e) => {
                 let { closePopout: t } = e;
                 return (0, r.jsx)(p.Z, {
                     pickerIntention: j.Hz.GUILD_ROLE_BENEFIT_EMOJI,
-                    channel: b,
+                    channel: x,
                     closePopout: t,
                     onNavigateAway: t,
                     onSelectEmoji: (e) => {
@@ -98,7 +98,7 @@ function C(e) {
                     },
                 });
             },
-            [a, b],
+            [a, x],
         ),
         N = i.useMemo(
             () =>
@@ -170,8 +170,8 @@ function N(e) {
             transitionState: h,
             onClose: f,
         } = e,
-        x = (0, m.Dt)(),
         b = (0, m.Dt)(),
+        x = (0, m.Dt)(),
         [j, _] = i.useState(null != (t = null == l ? void 0 : l.description) ? t : ""),
         [O, y] = i.useState(() => ({
             id: null == l ? void 0 : l.emoji_id,
@@ -224,24 +224,24 @@ function N(e) {
                         a,
                         (0, r.jsx)(d.hjN, {
                             title: v.intl.string(v.t["1Ts7QE"]),
-                            titleId: x,
+                            titleId: b,
                             children: (0, r.jsx)(c.iS, {
                                 placeholder: s,
                                 value: j,
                                 rows: 1,
                                 autosize: !0,
                                 onChange: _,
-                                "aria-labelledby": x,
+                                "aria-labelledby": b,
                             }),
                         }),
                         (0, r.jsx)(d.hjN, {
                             title: v.intl.string(v.t.sMOuub),
-                            titleId: b,
+                            titleId: x,
                             children: (0, r.jsx)(C, {
                                 guildId: n,
                                 emojiData: O,
                                 onSelectEmoji: y,
-                                "aria-labelledby": b,
+                                "aria-labelledby": x,
                             }),
                         }),
                     ],
@@ -264,7 +264,7 @@ function I(e) {
                 (0, r.jsx)(d.hjN, {
                     title: v.intl.string(v.t.GK18KC),
                     titleId: h,
-                    children: (0, r.jsx)(b.Z, {
+                    children: (0, r.jsx)(x.Z, {
                         guildId: t,
                         value: g,
                         initialChannelId: null == l ? void 0 : l.ref_id,
@@ -296,7 +296,7 @@ function E(e) {
     let { initialData: n, onSave: l, transitionState: s, onClose: o, onDelete: u, guildId: g } = e,
         [p, h] = i.useState(null != (t = null == n ? void 0 : n.name) ? t : ""),
         f = (0, m.Dt)(),
-        x = (0, r.jsx)(d.hjN, {
+        b = (0, r.jsx)(d.hjN, {
             title: v.intl.string(v.t.NPOJra),
             titleId: f,
             children: (0, r.jsx)(c.iS, {
@@ -312,7 +312,7 @@ function E(e) {
     return (0, r.jsx)(N, {
         guildId: g,
         initialData: n,
-        benefitTypeInput: x,
+        benefitTypeInput: b,
         descriptionPlaceholder: v.intl.string(v.t.ucP4Tk),
         canSubmit: "" !== p,
         onSave: function (e) {

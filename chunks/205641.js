@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b }), n(388685);
+n.d(t, { Z: () => x }), n(388685);
 var r,
     i,
     l = n(255367),
@@ -71,7 +71,7 @@ function f(e, t, n, r) {
         ),
     );
 }
-class x extends (r = a.Component) {
+class b extends (r = a.Component) {
     componentDidMount() {
         this.startAnimation();
     }
@@ -242,5 +242,5 @@ class x extends (r = a.Component) {
             g(this, "isUnmounted", !1);
     }
 }
-g(x, "Stages", p);
-let b = x;
+g(b, "Stages", p);
+let x = b;

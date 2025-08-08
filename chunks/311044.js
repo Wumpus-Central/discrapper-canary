@@ -1,8 +1,8 @@
 n.d(t, { Z: () => b });
 var r = n(255367),
     l = n(73800),
-    o = n(481060),
-    i = n(81897),
+    i = n(481060),
+    o = n(81897),
     a = n(906732),
     c = n(566898),
     s = n(785717),
@@ -13,20 +13,20 @@ var r = n(255367),
     m = n(264481),
     g = n(714905);
 function b(e) {
-    let { user: t, guildId: n, channelId: b, onClose: j } = e,
-        { analyticsLocations: h } = (0, a.ZP)(),
-        { context: y, trackUserProfileAction: O } = (0, s.KZ)(),
-        { mutualFriends: x, mutualFriendsCount: v } = (0, d.Z)(t),
-        _ = (0, i.Z)();
+    let { user: t, guildId: n, channelId: b, onClose: h } = e,
+        { analyticsLocations: j } = (0, a.ZP)(),
+        { context: y, trackUserProfileAction: x } = (0, s.KZ)(),
+        { mutualFriends: O, mutualFriendsCount: v } = (0, d.Z)(t),
+        _ = (0, o.Z)();
     return (
         l.useEffect(() => {
             (0, u.Z)(t.id, _);
         }, [t.id, _]),
-        (0, r.jsx)(o.Ttm, {
+        (0, r.jsx)(i.Ttm, {
             className: g.scroller,
             fade: !0,
             children:
-                null == x
+                null == O
                     ? Array.from({ length: null != v ? v : 10 }).map((e, t) =>
                           (0, r.jsxs)(
                               "div",
@@ -46,21 +46,21 @@ function b(e) {
                               t,
                           ),
                       )
-                    : 0 === x.length
+                    : 0 === O.length
                       ? (0, r.jsx)(m.s_, {})
-                      : x.map((e) => {
-                            let { key: t, user: l, status: o } = e;
+                      : O.map((e) => {
+                            let { key: t, user: l, status: i } = e;
                             return (0, r.jsx)(
                                 p.Z,
                                 {
                                     user: l,
-                                    status: o,
+                                    status: i,
                                     guildId: n,
                                     channelId: b,
                                     onSelect: () => {
                                         var e, t;
-                                        null == j || j(),
-                                            O({ action: "PRESS_MUTUAL_FRIEND" }),
+                                        null == h || h(),
+                                            x({ action: "PRESS_MUTUAL_FRIEND" }),
                                             (0, f.openUserProfileModal)(
                                                 ((e = (function (e) {
                                                     for (var t = 1; t < arguments.length; t++) {
@@ -91,7 +91,7 @@ function b(e) {
                                                 (t = t =
                                                     {
                                                         userId: l.id,
-                                                        sourceAnalyticsLocations: h,
+                                                        sourceAnalyticsLocations: j,
                                                     }),
                                                 Object.getOwnPropertyDescriptors
                                                     ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))

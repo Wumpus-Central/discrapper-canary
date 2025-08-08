@@ -1,11 +1,11 @@
-r.d(t, {
+n.d(t, {
     FF: () => i,
     KS: () => a,
     eN: () => o,
 });
-var n = r(818083),
-    l = r(987338);
-let a = (0, n.B)({
+var r = n(818083),
+    l = n(987338);
+let a = (0, r.B)({
         kind: "user",
         id: "2025-06_collectibles_browse",
         label: "Collectibles Browse Experiment",

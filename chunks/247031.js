@@ -13,8 +13,8 @@ var r = n(255367),
     p = n(210887),
     h = n(246946),
     f = n(594174),
-    x = n(251625),
-    b = n(226951),
+    b = n(251625),
+    x = n(226951),
     j = n(51144),
     v = n(434404),
     _ = n(372454),
@@ -217,7 +217,7 @@ class A extends i.PureComponent {
     makeFilter(e) {
         if (null == e || 0 === e.length) return (e) => null != e;
         {
-            let t = RegExp("^".concat(b.Z.escape(e)), "i");
+            let t = RegExp("^".concat(x.Z.escape(e)), "i");
             return (n) => null != n && (n.id === e || t.test(n.username));
         }
     }
@@ -247,7 +247,7 @@ class A extends i.PureComponent {
             P(
                 this,
                 "getSortedBans",
-                (0, x.oH)((e, t) => {
+                (0, b.oH)((e, t) => {
                     if (null == e) return [];
                     let n = this.makeFilter(t),
                         r = [];

@@ -1,15 +1,15 @@
-n.r(t), n.d(t, { default: () => b }), n(388685);
+n.r(t), n.d(t, { default: () => h }), n(388685);
 var r = n(255367),
     o = n(73800),
     l = n(120356),
     a = n.n(l),
-    i = n(866442),
-    s = n(481060),
+    s = n(866442),
+    i = n(481060),
     c = n(981631),
-    d = n(388032),
-    u = n(93841),
-    f = n(675602);
-function p(e) {
+    u = n(388032),
+    d = n(93841),
+    p = n(675602);
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -52,7 +52,7 @@ function m(e, t) {
         e
     );
 }
-let g = (e) => {
+let b = (e) => {
         var { position: t, color: n, disabled: o } = e,
             l = (function (e, t) {
                 if (null == e) return {};
@@ -75,21 +75,21 @@ let g = (e) => {
                 }
                 return o;
             })(e, ["position", "color", "disabled"]);
-        let d = (0, i.Bd)(null != n ? n : c.p6O) > 0.1;
+        let u = (0, s.Bd)(null != n ? n : c.p6O) > 0.1;
         return (0, r.jsx)(
             "div",
-            m(p({}, l), {
+            m(f({}, l), {
                 className: a()(
-                    "left" === t ? f.colorPickerDropperLeft : f.colorPickerDropperRight,
-                    d ? f.lightRing : f.darkRing,
-                    { [f.disabled]: o },
+                    "left" === t ? p.colorPickerDropperLeft : p.colorPickerDropperRight,
+                    u ? p.lightRing : p.darkRing,
+                    { [p.disabled]: o },
                 ),
                 children: (0, r.jsx)("div", {
-                    className: f.colorPickerDropperInner,
-                    style: { background: (0, i.Rf)(n) },
-                    children: (0, r.jsx)(s.ilE, {
+                    className: p.colorPickerDropperInner,
+                    style: { background: (0, s.Rf)(n) },
+                    children: (0, r.jsx)(i.ilE, {
                         size: "custom",
-                        colorClass: d ? f.colorPickerDropperLight : f.colorPickerDropperDark,
+                        colorClass: u ? p.colorPickerDropperLight : p.colorPickerDropperDark,
                         width: 14,
                         height: 14,
                     }),
@@ -97,49 +97,49 @@ let g = (e) => {
             }),
         );
     },
-    h = (e) => {
+    g = (e) => {
         let {
             isStart: t,
             buttonRef: n,
             color: o,
             showPopout: l,
             position: a,
-            onRequestClose: i,
+            onRequestClose: s,
             onShowPopout: c,
-            onColorChange: h,
-            disabled: b,
+            onColorChange: g,
+            disabled: h,
         } = e;
-        return (0, r.jsx)(s.tEY, {
-            children: (0, r.jsx)(s.yRy, {
+        return (0, r.jsx)(i.tEY, {
+            children: (0, r.jsx)(i.yRy, {
                 targetElementRef: n,
                 renderPopout: () =>
-                    (0, r.jsx)(s.Z$W, {
-                        onChange: (e) => h(e, t),
+                    (0, r.jsx)(i.Z$W, {
+                        onChange: (e) => g(e, t),
                         value: o,
                     }),
                 position: a,
                 shouldShow: l,
-                onRequestClose: i,
+                onRequestClose: s,
                 children: (e) =>
                     (0, r.jsx)("div", {
                         ref: n,
                         children: (0, r.jsx)(
-                            s.P3F,
-                            m(p({}, e), {
-                                className: f.colorSelectorPopoutContainer,
+                            i.P3F,
+                            m(f({}, e), {
+                                className: p.colorSelectorPopoutContainer,
                                 onClick: c,
                                 "data-position": t ? "left" : "right",
-                                "aria-label": d.intl.string(t ? u.default.apbXbG : u.default.JaVq1d),
-                                children: (0, r.jsx)(s.ua7, {
-                                    text: d.intl.string(t ? u.default.apbXbG : u.default.JaVq1d),
+                                "aria-label": u.intl.string(t ? d.default.apbXbG : d.default.JaVq1d),
+                                children: (0, r.jsx)(i.ua7, {
+                                    text: u.intl.string(t ? d.default.apbXbG : d.default.JaVq1d),
                                     position: "bottom",
                                     children: (e) =>
                                         (0, r.jsx)(
-                                            g,
-                                            m(p({}, e), {
+                                            b,
+                                            m(f({}, e), {
                                                 position: t ? "left" : "right",
                                                 color: null != o ? o : 0,
-                                                disabled: b,
+                                                disabled: h,
                                             }),
                                         ),
                                 }),
@@ -149,177 +149,177 @@ let g = (e) => {
             }),
         });
     };
-function b(e) {
+function h(e) {
     let {
             defaultColor: t,
             colors: n,
             value: l,
-            onChange: u,
-            disabled: b = !1,
-            customPickerPosition: x = "bottom",
+            onChange: d,
+            disabled: h = !1,
+            customPickerPosition: _ = "bottom",
             secondaryValue: j,
-            onChangeGradientColors: S,
-            isGradient: _ = !1,
-            gradientButtonClassName: O,
+            onChangeGradientColors: x,
+            isGradient: v = !1,
+            gradientButtonClassName: y,
         } = e,
-        y = o.useCallback((e) => 0 !== e && e !== t && !n.some((t) => t === e), [n, t]),
+        O = o.useCallback((e) => 0 !== e && e !== t && !n.some((t) => t === e), [n, t]),
+        k = o.useRef(null),
         C = o.useRef(null),
         P = o.useRef(null),
-        v = o.useRef(null),
-        [E, N] = o.useState(() => (y(l) ? l : null)),
-        [k, T] = o.useState({
+        [w, S] = o.useState(() => (O(l) ? l : null)),
+        [I, E] = o.useState({
             start: l,
             end: null != j ? j : c.p6O,
         }),
-        [D, w] = o.useState({
+        [N, B] = o.useState({
             showStart: !1,
             showEnd: !1,
         });
     o.useEffect(() => {
-        N(y(l) ? l : null),
-            T({
+        S(O(l) ? l : null),
+            E({
                 start: l,
                 end: null != j ? j : c.p6O,
             });
-    }, [l, y, j]);
-    let L = o.useCallback(
+    }, [l, O, j]);
+    let R = o.useCallback(
             (e) => {
-                null == u || u(e), N(null);
+                null == d || d(e), S(null);
             },
-            [u, N],
+            [d, S],
         ),
-        I = o.useCallback(
+        D = o.useCallback(
             (e) => {
-                null == u || u(e), N(e);
+                null == d || d(e), S(e);
             },
-            [u, N],
+            [d, S],
         ),
         A = o.useCallback(
             (e, t) => {
-                T({
+                E({
                     start: e,
                     end: t,
                 }),
-                    null == S || S([e, t]);
+                    null == x || x([e, t]);
             },
-            [S],
+            [x],
         ),
-        R = o.useCallback((e, t) => {
-            w((n) => m(p({}, n), { [e]: t }));
+        T = o.useCallback((e, t) => {
+            B((n) => m(f({}, n), { [e]: t }));
         }, []),
-        B = o.useCallback(() => {
+        Z = o.useCallback(() => {
             var e, t, n, o, l;
-            let s = {
+            let i = {
                     background: "linear-gradient(90deg, "
-                        .concat((0, i.Rf)(null != (e = k.start) ? e : c.p6O), " 0%, ")
-                        .concat((0, i.Rf)(k.end), " 100%)"),
+                        .concat((0, s.Rf)(null != (e = I.start) ? e : c.p6O), " 0%, ")
+                        .concat((0, s.Rf)(I.end), " 100%)"),
                 },
-                d = (0, r.jsxs)("div", {
-                    className: f.gradientButtonContainer,
+                u = (0, r.jsxs)("div", {
+                    className: p.gradientButtonContainer,
                     children: [
                         (0, r.jsx)("div", {
-                            className: f.gradientSwatch,
-                            style: s,
+                            className: p.gradientSwatch,
+                            style: i,
                         }),
-                        (0, r.jsx)(g, {
+                        (0, r.jsx)(b, {
                             position: "left",
-                            color: null != (t = k.start) ? t : c.p6O,
-                            disabled: b,
+                            color: null != (t = I.start) ? t : c.p6O,
+                            disabled: h,
                         }),
-                        (0, r.jsx)(g, {
+                        (0, r.jsx)(b, {
                             position: "right",
-                            color: null != (n = k.end) ? n : 0,
-                            disabled: b,
+                            color: null != (n = I.end) ? n : 0,
+                            disabled: h,
                         }),
                     ],
                 });
-            return b
-                ? d
+            return h
+                ? u
                 : (0, r.jsxs)("div", {
-                      className: a()(f.gradientButtonContainer, O),
+                      className: a()(p.gradientButtonContainer, y),
                       children: [
                           (0, r.jsx)("div", {
-                              className: f.gradientSwatch,
-                              style: s,
+                              className: p.gradientSwatch,
+                              style: i,
                           }),
-                          (0, r.jsx)(h, {
+                          (0, r.jsx)(g, {
                               isStart: !0,
-                              buttonRef: P,
-                              color: null != (o = k.start) ? o : c.p6O,
-                              showPopout: D.showStart,
-                              position: x,
-                              onRequestClose: () => R("showStart", !1),
-                              onShowPopout: () => R("showStart", !0),
-                              onColorChange: (e) => A(e, k.end),
-                              disabled: b,
+                              buttonRef: C,
+                              color: null != (o = I.start) ? o : c.p6O,
+                              showPopout: N.showStart,
+                              position: _,
+                              onRequestClose: () => T("showStart", !1),
+                              onShowPopout: () => T("showStart", !0),
+                              onColorChange: (e) => A(e, I.end),
+                              disabled: h,
                           }),
-                          (0, r.jsx)(h, {
+                          (0, r.jsx)(g, {
                               isStart: !1,
-                              buttonRef: v,
-                              color: null != (l = k.end) ? l : 0,
-                              showPopout: D.showEnd,
-                              position: x,
-                              onRequestClose: () => R("showEnd", !1),
-                              onShowPopout: () => R("showEnd", !0),
+                              buttonRef: P,
+                              color: null != (l = I.end) ? l : 0,
+                              showPopout: N.showEnd,
+                              position: _,
+                              onRequestClose: () => T("showEnd", !1),
+                              onShowPopout: () => T("showEnd", !0),
                               onColorChange: (e) => {
                                   var t;
-                                  return A(null != (t = k.start) ? t : c.p6O, e);
+                                  return A(null != (t = I.start) ? t : c.p6O, e);
                               },
-                              disabled: b,
+                              disabled: h,
                           }),
                       ],
                   });
-        }, [x, b, k, D, A, R, O]),
-        M = o.useCallback(
+        }, [_, h, I, N, A, T, y]),
+        L = o.useCallback(
             () =>
-                (0, r.jsx)(s.Z$W, {
-                    onChange: I,
-                    value: E,
+                (0, r.jsx)(i.Z$W, {
+                    onChange: D,
+                    value: w,
                 }),
-            [I, E],
+            [D, w],
         ),
-        Z = o.useCallback(
+        U = o.useCallback(
             (e) => {
-                let t = (0, r.jsx)(s.jHW, m(p({}, e), { "aria-label": d.intl.string(d.t["FHBa//"]) }));
-                return b
+                let t = (0, r.jsx)(i.jHW, m(f({}, e), { "aria-label": u.intl.string(u.t["FHBa//"]) }));
+                return h
                     ? t
-                    : (0, r.jsx)(s.yRy, {
-                          targetElementRef: C,
-                          renderPopout: M,
-                          position: x,
+                    : (0, r.jsx)(i.yRy, {
+                          targetElementRef: k,
+                          renderPopout: L,
+                          position: _,
                           children: (e) =>
-                              (0, r.jsx)(s.ua7, {
-                                  targetElementRef: C,
-                                  text: d.intl.string(d.t["FHBa//"]),
+                              (0, r.jsx)(i.ua7, {
+                                  targetElementRef: k,
+                                  text: u.intl.string(u.t["FHBa//"]),
                                   position: "bottom",
-                                  children: (n) => (0, r.jsx)("div", m(p({ ref: C }, n, e), { children: t })),
+                                  children: (n) => (0, r.jsx)("div", m(f({ ref: k }, n, e), { children: t })),
                               }),
                       });
             },
-            [x, b, M],
+            [_, h, L],
         ),
-        Y = o.useCallback(
+        G = o.useCallback(
             (e) => {
-                let t = (0, r.jsx)(s.AGO, p({}, e));
-                return b
+                let t = (0, r.jsx)(i.AGO, f({}, e));
+                return h
                     ? t
-                    : (0, r.jsx)(s.ua7, {
-                          text: d.intl.string(d.t.bBvAEB),
+                    : (0, r.jsx)(i.ua7, {
+                          text: u.intl.string(u.t.bBvAEB),
                           position: "bottom",
-                          children: (e) => (0, r.jsx)("div", m(p({}, e), { children: t })),
+                          children: (e) => (0, r.jsx)("div", m(f({}, e), { children: t })),
                       });
             },
-            [b],
+            [h],
         );
     return (0, r.jsx)(
-        s.zH8,
-        m(p({}, e), {
-            renderDefaultButton: Y,
-            renderCustomButton: Z,
-            renderGradientCustomButton: B,
-            isGradient: _,
-            customColor: E,
-            onChange: _ ? A : L,
+        i.zH8,
+        m(f({}, e), {
+            renderDefaultButton: G,
+            renderCustomButton: U,
+            renderGradientCustomButton: Z,
+            isGradient: v,
+            customColor: w,
+            onChange: v ? A : R,
         }),
     );
 }

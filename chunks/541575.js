@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b }), n(953529);
+n.d(t, { Z: () => x }), n(953529);
 var r = n(255367);
 n(73800);
 var i = n(481060),
@@ -38,7 +38,7 @@ function f(e) {
     }
     return e;
 }
-function x(e, t) {
+function b(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -56,8 +56,8 @@ function x(e, t) {
         e
     );
 }
-let b = function (e) {
-    let { guild: t, disabled: b, role: j } = e,
+let x = function (e) {
+    let { guild: t, disabled: x, role: j } = e,
         v = (0, c.oC)(t.id, j),
         { analyticsLocations: _ } = (0, a.ZP)(),
         O = () => {
@@ -66,7 +66,7 @@ let b = function (e) {
                 return (n) =>
                     (0, r.jsx)(
                         e,
-                        x(f({}, n), {
+                        b(f({}, n), {
                             guildId: t.id,
                             onUploadIcon: (e) => (0, u._l)(j.id, e, null),
                             onSelectUnicodeEmoji: (e) => (0, u._l)(j.id, null, e),
@@ -78,7 +78,7 @@ let b = function (e) {
         C = (e) => {
             y ||
                 ((0, l.yw)(m.rMx.PREMIUM_GUILD_PROMOTION_OPENED, {
-                    location: x(f({}, e), { section: m.jXE.CUSTOM_ROLE_ICONS_TOOLTIP }),
+                    location: b(f({}, e), { section: m.jXE.CUSTOM_ROLE_ICONS_TOOLTIP }),
                     guild_id: null == t ? void 0 : t.id,
                     location_stack: _,
                 }),
@@ -125,7 +125,7 @@ let b = function (e) {
                             null != v
                                 ? (0, r.jsx)(
                                       s.Z,
-                                      x(f({}, v), {
+                                      b(f({}, v), {
                                           className: h.roleIconPreview,
                                           enableTooltip: !1,
                                       }),
@@ -141,7 +141,7 @@ let b = function (e) {
                     (0, r.jsx)(i.zxk, {
                         onClick: () => (t.features.has(m.oNc.ROLE_ICONS) ? O() : C({ object: m.qAy.UPLOAD_IMAGE })),
                         variant: "primary",
-                        disabled: b,
+                        disabled: x,
                         text: p.intl.string(p.t.mD1oGB),
                     }),
                     null != v
@@ -150,7 +150,7 @@ let b = function (e) {
                                   (0, u._l)(j.id, null, null);
                               },
                               variant: "critical-secondary",
-                              disabled: b,
+                              disabled: x,
                               text: p.intl.string(p.t["uY+Nk5"]),
                           })
                         : null,

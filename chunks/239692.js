@@ -25,4 +25,6 @@ e.exports = {
     containerRtcOpened: "containerRtcOpened__37e49",
     iconForeground: "iconForeground__37e49",
     plated: "plated__37e49",
+    accountButtonsTooltip: "accountButtonsTooltip__37e49",
+    accountButtonsTooltipContent: "accountButtonsTooltipContent__37e49",
 };

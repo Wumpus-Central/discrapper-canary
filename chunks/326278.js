@@ -4,7 +4,4 @@ e.exports = {
     mobileWrapper: "mobileWrapper__46b37",
     countdownLabel: "countdownLabel__46b37",
     countdownBody: "countdownBody__46b37",
-    timerNumContainer: "timerNumContainer__46b37",
-    timerNum: "timerNum__46b37",
-    timerDelineator: "timerDelineator__46b37",
 };

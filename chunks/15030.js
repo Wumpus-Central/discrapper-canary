@@ -13,12 +13,12 @@ var r = n(255367),
     p = n(500395),
     h = n(975464),
     f = n(981631),
-    x = n(674563),
-    b = n(94072);
+    b = n(674563),
+    x = n(94072);
 function j() {
     let e,
         t = (0, l.e7)([d.Z], () => d.Z.getGuild()),
-        { application: n, loading: j } = (0, o.Z)(null == t ? void 0 : t.id, x.wW.GUILD_ROLE_SUBSCRIPTIONS),
+        { application: n, loading: j } = (0, o.Z)(null == t ? void 0 : t.id, b.wW.GUILD_ROLE_SUBSCRIPTIONS),
         v = i.useRef(null),
         _ = (0, u.Z)(null != t ? t : void 0);
     i.useEffect(() => {
@@ -43,14 +43,14 @@ function j() {
                           application: n,
                       })),
         (0, r.jsx)("div", {
-            className: b.settingsColumn,
+            className: x.settingsColumn,
             children: (0, r.jsx)("div", {
-                className: b.settingsContainer,
+                className: x.settingsContainer,
                 children: (0, r.jsx)(s.w0Z, {
-                    className: b.settingsScroller,
+                    className: x.settingsScroller,
                     children: (0, r.jsx)("main", {
                         ref: v,
-                        className: b.settingsContent,
+                        className: x.settingsContent,
                         children: (0, r.jsx)(s.JcV, {
                             containerRef: v,
                             children: e,

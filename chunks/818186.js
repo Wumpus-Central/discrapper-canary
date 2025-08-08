@@ -16,6 +16,7 @@ function p(e) {
     return (0, r.jsx)(i.DY3, {
         text: d.intl.string(d.t["lMR96+"]),
         children: (0, r.jsxs)(i.P3F, {
+            "aria-label": "".concat(d.intl.string(d.t["lMR96+"]), ", ").concat(n),
             className: h.friendRequestsButton,
             onClick: () => {
                 c.default.track(u.rMx.NOTIFICATION_CENTER_ACTION, { action_type: s.ud.FRIEND_REQUESTS_BUTTON_CLICK }),

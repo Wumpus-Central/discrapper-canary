@@ -2,8 +2,8 @@ n.d(t, { Z: () => c });
 var r = n(255367);
 n(73800);
 var l = n(81570),
-    o = n(527790),
-    i = n(248930);
+    i = n(527790),
+    o = n(248930);
 function a(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -40,19 +40,19 @@ function c(e) {
                     var n,
                         r,
                         l = {},
-                        o = Object.keys(e);
-                    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (l[n] = e[n]);
+                        i = Object.keys(e);
+                    for (r = 0; r < i.length; r++) (n = i[r]), t.indexOf(n) >= 0 || (l[n] = e[n]);
                     return l;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var o = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < o.length; r++)
-                    (n = o[r]),
+                var i = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < i.length; r++)
+                    (n = i[r]),
                         !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]);
             }
             return l;
         })(e, ["location", "user", "currentUser"]);
     return (0, l.T)({ location: t }) && n.id !== c.id && !n.bot
-        ? (0, r.jsx)(i.Z, a({ user: n }, s))
-        : (0, r.jsx)(o.Z, a({ user: n }, s));
+        ? (0, r.jsx)(o.Z, a({ user: n }, s))
+        : (0, r.jsx)(i.Z, a({ user: n }, s));
 }

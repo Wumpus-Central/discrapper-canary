@@ -15,7 +15,7 @@ function m(e) {
         p = (0, c.qi)(t, { includeSoftDeleted: !0 }),
         h = (0, s.ue)(t, { publishedOnly: !1 }),
         { allowSelfRemoveMonetization: f } = (0, a.gX)(t),
-        x = m.filter((e) => {
+        b = m.filter((e) => {
             var t;
             let n = Object.values(null != (t = e.ppgs) ? t : {})[0];
             return (
@@ -23,9 +23,9 @@ function m(e) {
                 (null == n ? void 0 : n.status) === d.x_.PAYOUT_DEFERRED
             );
         }),
-        b = p.length > 0,
+        x = p.length > 0,
         j = h.length > 0,
-        v = x.length > 0;
+        v = b.length > 0;
     return null == g
         ? null
         : (0, r.jsxs)("div", {
@@ -38,7 +38,7 @@ function m(e) {
                   (0, r.jsx)(l.zxk, {
                       variant: "critical-primary",
                       text: u.intl.string(u.t.FrOFSk),
-                      disabled: !f || b || j || v,
+                      disabled: !f || x || j || v,
                       onClick: () => {
                           (0, l.ZDy)(async () => {
                               let { default: e } = await n.e("35282").then(n.bind(n, 157429));

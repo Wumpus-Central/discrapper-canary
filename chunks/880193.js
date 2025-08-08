@@ -13,8 +13,8 @@ var r = n(255367),
     p = n(727843),
     h = n(290348),
     f = n(927954),
-    x = n(783454),
-    b = n(981631),
+    b = n(783454),
+    x = n(981631),
     j = n(388032),
     v = n(301849),
     _ = n(320744);
@@ -38,7 +38,7 @@ function O(e) {
                         ? void 0
                         : t.map((e) => ({
                               value: e,
-                              label: (0, u.T4)(e, b.pKx.USD),
+                              label: (0, u.T4)(e, x.pKx.USD),
                           })))
                 ? e
                 : [];
@@ -50,7 +50,7 @@ function O(e) {
         L = (0, o.Dt)(),
         M = (0, o.Dt)(),
         G = (0, o.Dt)();
-    return (0, r.jsxs)(x.Z, {
+    return (0, r.jsxs)(b.Z, {
         title: j.intl.string(j.t.iHU439),
         intiallyExpanded: !0,
         children: [

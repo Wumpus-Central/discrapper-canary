@@ -13,8 +13,8 @@ var r = n(255367),
     p = n(434404),
     h = n(981631),
     f = n(570911),
-    x = n(388032),
-    b = n(364313);
+    b = n(388032),
+    x = n(364313);
 function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -67,19 +67,19 @@ function _(e) {
             forceDefaultColor: !1,
         });
     return (0, r.jsx)(o.ua7, {
-        text: x.intl.string(x.t.W4Nd7e),
+        text: b.intl.string(b.t.W4Nd7e),
         children: (e) =>
             (0, r.jsx)(
                 o.P3F,
                 v(j({}, e), {
                     "aria-disabled": !n,
                     tabIndex: n ? 0 : -1,
-                    "aria-label": x.intl.string(x.t.W4Nd7e),
+                    "aria-label": b.intl.string(b.t.W4Nd7e),
                     onClick: n ? i : void 0,
                     style: { background: (0, c.dG)(d) },
-                    className: a()(b.itemContainer, { [b.disabled]: !n }),
+                    className: a()(x.itemContainer, { [x.disabled]: !n }),
                     children: (0, r.jsx)("div", {
-                        className: a()({ [b.itemSelected]: !l && null == t.brandColorPrimary }),
+                        className: a()({ [x.itemSelected]: !l && null == t.brandColorPrimary }),
                     }),
                 }),
             ),
@@ -103,26 +103,26 @@ function O(e) {
     let p =
         null != u
             ? (0, r.jsx)("img", {
-                  className: b.uploadedImage,
+                  className: x.uploadedImage,
                   src: u,
                   alt: "",
                   "aria-hidden": !0,
               })
             : (0, r.jsx)(o.dZu, { size: "md" });
     return (0, r.jsx)("div", {
-        className: b.uploadItemContainer,
+        className: x.uploadItemContainer,
         children: (0, r.jsx)(o.tEY, {
             within: !0,
             children: (0, r.jsx)("div", {
-                className: a()(b.uploadItemWrapper, { [b.uploadItemSelected]: c }),
+                className: a()(x.uploadItemWrapper, { [x.uploadItemSelected]: c }),
                 children: (0, r.jsxs)("div", {
-                    className: a()(b.uploadItem, { [b.disabled]: !s }),
+                    className: a()(x.uploadItem, { [x.disabled]: !s }),
                     children: [
                         p,
-                        (0, r.jsx)("div", { className: b.overlay }),
+                        (0, r.jsx)("div", { className: x.overlay }),
                         (0, r.jsx)(o.vdY, {
                             size: "custom",
-                            className: b.overlayIcon,
+                            className: x.overlayIcon,
                             width: 20,
                             height: 20,
                             color: "white",
@@ -156,9 +156,9 @@ function y(e) {
         ),
         N = i.useCallback((e) => (!g || null == n.customBanner) && e === n.brandColorPrimary, [n, g]);
     return (0, r.jsx)(o.hjN, {
-        title: x.intl.string(x.t.BSVog4),
+        title: b.intl.string(b.t.BSVog4),
         children: (0, r.jsxs)("div", {
-            className: b.grid,
+            className: x.grid,
             children: [
                 (0, r.jsx)(_, {
                     profile: n,
@@ -181,8 +181,8 @@ function y(e) {
                                         "aria-label": t,
                                         onClick: d ? C(n) : void 0,
                                         style: { background: (0, c.dG)(n) },
-                                        className: a()(b.itemContainer, { [b.disabled]: !d }),
-                                        children: (0, r.jsx)("div", { className: a()({ [b.itemSelected]: N(n) }) }),
+                                        className: a()(x.itemContainer, { [x.disabled]: !d }),
+                                        children: (0, r.jsx)("div", { className: a()({ [x.itemSelected]: N(n) }) }),
                                     }),
                                 ),
                         },

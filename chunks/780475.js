@@ -1,20 +1,20 @@
-r.d(t, {
+n.d(t, {
     EB: () => h,
-    MV: () => g,
+    MV: () => f,
     q3: () => b,
 }),
-    r(388685);
-var n = r(73800),
-    l = r(442837),
-    a = r(100527),
-    i = r(906732),
-    o = r(626135),
-    s = r(74538),
-    c = r(328347),
-    u = r(215023),
-    d = r(981631),
-    p = r(474936);
-let f = (e) => {
+    n(388685);
+var r = n(73800),
+    l = n(442837),
+    a = n(100527),
+    i = n(906732),
+    o = n(626135),
+    s = n(74538),
+    c = n(328347),
+    u = n(215023),
+    d = n(981631),
+    p = n(474936);
+let g = (e) => {
         switch (e) {
             case u.AW.ORBS:
                 return a.Z.COLLECTIBLES_SHOP_ORBS_TAB;
@@ -32,39 +32,39 @@ let f = (e) => {
                 return a.Z.COLLECTIBLES_SHOP_FULLSCREEN;
         }
     },
-    g = (e) => {
-        let { analyticsSource: t, analyticsLocations: r } = (0, l.cj)([c.Z], () => c.Z.getAnalytics()),
-            n = f(e),
-            { analyticsLocations: o, newestAnalyticsLocation: s } = (0, i.ZP)([...r, a.Z.COLLECTIBLES_SHOP, n]);
+    f = (e) => {
+        let { analyticsSource: t, analyticsLocations: n } = (0, l.cj)([c.Z], () => c.Z.getAnalytics()),
+            r = g(e),
+            { analyticsLocations: o, newestAnalyticsLocation: s } = (0, i.ZP)([...n, a.Z.COLLECTIBLES_SHOP, r]);
         return {
             analyticsSource: t,
             analyticsLocations: o,
             newestAnalyticsLocation: s,
-            currentTabLocation: n,
+            currentTabLocation: r,
         };
     },
-    b = (e, t, r, l, a) => {
-        let { analyticsLocations: i, analyticsSource: s, currentTabLocation: c, newestAnalyticsLocation: p } = g(t);
-        n.useEffect(() => {
+    b = (e, t, n, l, a) => {
+        let { analyticsLocations: i, analyticsSource: s, currentTabLocation: c, newestAnalyticsLocation: p } = f(t);
+        r.useEffect(() => {
             if (l !== u.f7.VISIBLE || p !== c) return;
-            let n = t === u.AW.CATALOG ? a : s;
+            let r = t === u.AW.CATALOG ? a : s;
             o.default.track(d.rMx.COLLECTIBLES_SHOP_VIEWED, {
                 location_stack: i,
-                source: n,
+                source: r,
                 page_session_id: e,
                 page_type: t === u.AW.CATALOG ? "full" : t,
-                category: t === u.AW.HOME ? void 0 : r,
+                category: t === u.AW.HOME ? void 0 : n,
             });
-        }, [i, e, t, r, c, l, a, s, p]);
+        }, [i, e, t, n, c, l, a, s, p]);
     },
     h = (e, t) => {
-        let { analyticsLocations: r } = g(e);
-        n.useEffect(() => {
+        let { analyticsLocations: n } = f(e);
+        r.useEffect(() => {
             null == t ||
                 s.ZP.canUseCollectibles(t) ||
                 o.default.track(d.rMx.PREMIUM_UPSELL_VIEWED, {
                     type: p.cd.COLLECTIBLES_SHOP,
-                    location_stack: r,
+                    location_stack: n,
                 });
-        }, [r, t]);
+        }, [n, t]);
     };

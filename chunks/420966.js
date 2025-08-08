@@ -25,12 +25,12 @@ function h() {
     };
 }
 function f(e) {
-    let { guild: t, role: h, selectedSection: f, setSelectedSection: x } = e,
-        b = i.useCallback(
+    let { guild: t, role: h, selectedSection: f, setSelectedSection: b } = e,
+        x = i.useCallback(
             (e) => {
-                x(e);
+                b(e);
             },
-            [x],
+            [b],
         ),
         j = (0, l.e7)([d.Z], () => {
             var e;
@@ -39,8 +39,8 @@ function f(e) {
         v = (0, c.fI)(h),
         _ = (0, u.Z)(t.id, h);
     i.useEffect(() => {
-        v && x(m.ZI.PERMISSIONS);
-    }, [v, x]);
+        v && b(m.ZI.PERMISSIONS);
+    }, [v, b]);
     let O = (0, o.e)(t, h);
     return (0, r.jsxs)(r.Fragment, {
         children: [
@@ -136,7 +136,7 @@ function f(e) {
                 selectedItem: f,
                 type: "top",
                 look: "brand",
-                onItemSelect: b,
+                onItemSelect: x,
                 children: [
                     (0, r.jsx)(a.njP.Item, {
                         className: p.tabBarItem,

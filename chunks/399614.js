@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x });
+n.d(t, { Z: () => b });
 var r = n(255367),
     i = n(73800),
     l = n(399606),
@@ -54,14 +54,14 @@ function h(e, t) {
     );
 }
 let f = [],
-    x = function (e) {
+    b = function (e) {
         let { guildId: t } = e,
-            x = (0, l.Wu)([d.Z], () => {
+            b = (0, l.Wu)([d.Z], () => {
                 var e;
                 return null != (e = d.Z.getSettings().resourceChannels) ? e : f;
             }),
-            b = i.useMemo(() => x.map((e) => h(p({}, e), { id: e.channelId })), [x]),
-            { handleDragStart: j, handleDragReset: v, handleDragComplete: _ } = (0, s.Z)(b, c.lq),
+            x = i.useMemo(() => b.map((e) => h(p({}, e), { id: e.channelId })), [b]),
+            { handleDragStart: j, handleDragReset: v, handleDragComplete: _ } = (0, s.Z)(x, c.lq),
             O = i.useCallback(
                 (e, n) => {
                     let r = d.Z.getSettings();
@@ -91,7 +91,7 @@ let f = [],
         return (0, r.jsxs)("div", {
             className: g.editResources,
             children: [
-                x.map((e, n) =>
+                b.map((e, n) =>
                     (0, r.jsx)(
                         u.Z,
                         {
@@ -105,7 +105,7 @@ let f = [],
                         e.channelId,
                     ),
                 ),
-                x.length < o.x3 &&
+                b.length < o.x3 &&
                     (0, r.jsxs)(a.P3F, {
                         className: g.addActionItem,
                         onClick: y,

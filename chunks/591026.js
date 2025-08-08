@@ -55,8 +55,8 @@ function h(e, t) {
 }
 function f(e) {
     var t, n;
-    let { rule: f, onChangeRule: x } = e,
-        [b, j] = i.useState(null == (t = f.triggerMetadata) ? void 0 : t.mentionTotalLimit),
+    let { rule: f, onChangeRule: b } = e,
+        [x, j] = i.useState(null == (t = f.triggerMetadata) ? void 0 : t.mentionTotalLimit),
         v = (0, a.a)(f.guildId, !1);
     return (0, r.jsxs)("div", {
         className: g.cardContentsContainer,
@@ -94,10 +94,10 @@ function f(e) {
                             (0, r.jsx)("div", {
                                 className: g.stepperContainer,
                                 children: (0, r.jsx)(l.FiK, {
-                                    value: b,
+                                    value: x,
                                     onChange: (e) => {
                                         j(e),
-                                            x(
+                                            b(
                                                 h(p({}, f), {
                                                     triggerMetadata: h(p({}, f.triggerMetadata), {
                                                         mentionTotalLimit: e,
@@ -145,7 +145,7 @@ function f(e) {
                                           value:
                                               null == (n = f.triggerMetadata) ? void 0 : n.mentionRaidProtectionEnabled,
                                           onChange: (e, t) => {
-                                              x(
+                                              b(
                                                   h(p({}, f), {
                                                       triggerMetadata: h(p({}, f.triggerMetadata), {
                                                           mentionRaidProtectionEnabled: t,
@@ -167,7 +167,7 @@ function f(e) {
                 header: m.intl.string(m.t["18TOiY"]),
                 children: (0, r.jsx)(s.Z, {
                     rule: f,
-                    onChangeRule: x,
+                    onChangeRule: b,
                 }),
             }),
             (0, r.jsx)(d.Z, { type: d.Z.Type.CROSS }),
@@ -176,7 +176,7 @@ function f(e) {
                 header: m.intl.string(m.t.eq3gjo),
                 children: (0, r.jsx)(o.Z, {
                     rule: f,
-                    onChangeRule: x,
+                    onChangeRule: b,
                 }),
             }),
         ],

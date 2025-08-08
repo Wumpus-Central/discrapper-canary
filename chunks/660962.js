@@ -13,8 +13,8 @@ var r = n(255367),
     p = n(37234),
     h = n(410030),
     f = n(607070),
-    x = n(100527),
-    b = n(663993),
+    b = n(100527),
+    x = n(663993),
     j = n(243778),
     v = n(518738),
     _ = n(753206),
@@ -42,7 +42,7 @@ var r = n(255367),
     H = n(877248),
     z = n(179517),
     W = n(79829);
-let V = (0, b.Un)({
+let V = (0, x.Un)({
         createPromise: () => n.e("4848").then(n.bind(n, 797967)),
         webpackId: 797967,
     }),
@@ -74,7 +74,7 @@ function q(e) {
         o = (e) => l || (s && [T.g.HOLOGRAPHIC, T.g.GRADIENT].includes(e)),
         d = (0, P.F)(U.intl.string(U.t.Mi9KbW)),
         f = (0, h.ZP)(),
-        b = (0, v.oC)(n, t),
+        x = (0, v.oC)(n, t),
         y = {
             dark: {
                 src: z,
@@ -134,7 +134,7 @@ function q(e) {
                                             },
                                             message: d,
                                             preview: !0,
-                                            roleIcon: null != b ? b : (0, m.ap)(f) ? y.light : y.dark,
+                                            roleIcon: null != x ? x : (0, m.ap)(f) ? y.light : y.dark,
                                             isGroupStart: !0,
                                             disableInteraction: !0,
                                             previewGuildId: n,
@@ -172,7 +172,7 @@ function q(e) {
                         }),
                         (0, r.jsx)(g.zxk, {
                             onClick: function () {
-                                (0, C.Z)(n, x.Z.GUILD_POWERUPS_GUILD_SETTINGS_ROLE_EDIT), (0, p.xf)();
+                                (0, C.Z)(n, b.Z.GUILD_POWERUPS_GUILD_SETTINGS_ROLE_EDIT), (0, p.xf)();
                             },
                             variant: "expressive",
                             icon: g.$Eu,
@@ -368,8 +368,8 @@ function ee(e) {
         m = (0, I.fI)(n),
         p = i || m,
         h = (0, d.e7)([E.Z], () => E.Z.canImpersonateRole(t, n)),
-        { headerHeight: f, headerRef: x } = (0, w.Z)(0),
-        { scrolledToTop: b, handleScroll: j } = (0, Z.V)();
+        { headerHeight: f, headerRef: b } = (0, w.Z)(0),
+        { scrolledToTop: x, handleScroll: j } = (0, Z.V)();
     return (0, r.jsx)(g.yWw, {
         className: F.scroller,
         style: { scrollPaddingTop: f },
@@ -378,8 +378,8 @@ function ee(e) {
             className: H.contentWidth,
             children: [
                 (0, r.jsx)("div", {
-                    className: a()(H.header, H.stickyHeader, { [H.stickyHeaderElevated]: !b }),
-                    ref: x,
+                    className: a()(H.header, H.stickyHeader, { [H.stickyHeaderElevated]: !x }),
+                    ref: b,
                     children: (0, r.jsx)(Z.Z, {
                         guild: t,
                         role: n,

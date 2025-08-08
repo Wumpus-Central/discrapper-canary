@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b }), n(388685);
+n.d(t, { Z: () => x }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -78,7 +78,7 @@ function f(e) {
         ],
     });
 }
-function x() {
+function b() {
     let e = i.useMemo(
             () => [
                 {
@@ -216,7 +216,7 @@ function x() {
         })
     );
 }
-function b(e) {
+function x(e) {
     let { guild: t, everyoneRole: n, setEditRoleId: l } = e,
         [a, d] = i.useState(!1),
         m = async () => {
@@ -234,7 +234,7 @@ function b(e) {
                 (0, r.jsxs)("div", {
                     className: p.container,
                     children: [
-                        (0, r.jsx)(x, {}),
+                        (0, r.jsx)(b, {}),
                         (0, r.jsx)(s.X6q, {
                             variant: "heading-xl/semibold",
                             children: g.intl.string(g.t.ALlnbm),

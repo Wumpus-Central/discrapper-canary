@@ -10,7 +10,7 @@ var r = n(255367),
 function u(e) {
     let { onChangeText: t, maxWordCount: n, className: l, textAreaClassName: u, subtitleText: m, initialValue: g } = e,
         p = i.useMemo(() => (null != g ? g : []), [g]),
-        { value: h, onChange: f, errorMessage: x } = (0, o.Z)(t, g, n);
+        { value: h, onChange: f, errorMessage: b } = (0, o.Z)(t, g, n);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsxs)("div", {
@@ -30,12 +30,12 @@ function u(e) {
                     }),
                 ],
             }),
-            null != x
+            null != b
                 ? (0, r.jsx)(s.Text, {
                       className: a()(d.paddingTop, d.errorText),
                       variant: "text-xs/medium",
                       color: "text-danger",
-                      children: x,
+                      children: b,
                   })
                 : (0, r.jsx)(s.Text, {
                       className: d.paddingTop,

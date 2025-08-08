@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x }), n(388685), n(539854);
+n.d(t, { Z: () => b }), n(388685), n(539854);
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -19,8 +19,8 @@ let f = (e) => {
                 emoji_name: u,
                 onSetReason: p,
                 onSelectEmoji: f,
-                onClearPressed: x,
-                reasonMinLength: b,
+                onClearPressed: b,
+                reasonMinLength: x,
                 reasonMaxLength: j,
                 placeholder: v,
                 position: _,
@@ -81,7 +81,7 @@ let f = (e) => {
                                 inputClassName: h.reason,
                                 placeholder: v,
                                 value: n,
-                                minLength: b,
+                                minLength: x,
                                 maxLength: j,
                                 onChange: (e) => {
                                     p(e);
@@ -93,7 +93,7 @@ let f = (e) => {
                         (null != (t = null == n ? void 0 : n.length) ? t : 0) > 0 || null != u
                             ? (0, r.jsx)(a.zx, {
                                   className: h.clearStatusButton,
-                                  onClick: x,
+                                  onClick: b,
                                   look: a.zx.Looks.BLANK,
                                   size: a.zx.Sizes.NONE,
                                   tabIndex: -1,
@@ -110,7 +110,7 @@ let f = (e) => {
             ],
         });
     },
-    x = (e) => {
+    b = (e) => {
         let { reasonMinLength: t, reasonMaxLength: n, guildId: i, reasons: l } = e,
             a = [
                 p.intl.string(p.t["9dhBGh"]),

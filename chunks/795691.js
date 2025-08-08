@@ -17,7 +17,7 @@ function d(e) {
                 f(!1);
             });
     }, [t, g]);
-    let x = i.useMemo(
+    let b = i.useMemo(
             () =>
                 null == p
                     ? []
@@ -26,7 +26,7 @@ function d(e) {
                           .sort((e, t) => p[t].score - p[e].score),
             [p, n],
         ),
-        b = i.useCallback(
+        x = i.useCallback(
             (e) => {
                 n.includes(e) ? d(n.filter((t) => t !== e)) : d([...n, e]);
             },
@@ -34,7 +34,7 @@ function d(e) {
         );
     return h && null == p
         ? (0, r.jsx)(l.$jN, {})
-        : null == x || 0 === x.length
+        : null == b || 0 === b.length
           ? null
           : (0, r.jsxs)(r.Fragment, {
                 children: [
@@ -49,13 +49,13 @@ function d(e) {
                             }),
                             (0, r.jsx)("div", {
                                 className: c.gamesList,
-                                children: x.map((e) =>
+                                children: b.map((e) =>
                                     (0, r.jsx)(
                                         s.Z,
                                         {
                                             applicationId: e,
                                             selected: !1,
-                                            onClick: b,
+                                            onClick: x,
                                             disabled: u,
                                         },
                                         e,

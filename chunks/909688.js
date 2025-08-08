@@ -1,7 +1,7 @@
-r.d(t, { j: () => a });
-var n = r(818083),
-    l = r(987338);
-let a = (0, n.B)({
+n.d(t, { j: () => a });
+var r = n(818083),
+    l = n(987338);
+let a = (0, r.B)({
     kind: "user",
     id: "2025-01_mobile_shop_adaptive_back_button_color",
     label: "mobile shop adaptive back button color",

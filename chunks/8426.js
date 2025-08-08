@@ -1,12 +1,12 @@
 n.d(t, {
-    Hr: () => b,
+    Hr: () => x,
     Hz: () => y,
     To: () => E,
     XG: () => O,
     _N: () => h,
     ad: () => v,
     bj: () => P,
-    el: () => x,
+    el: () => b,
     hS: () => j,
     lq: () => C,
     mM: () => N,
@@ -41,14 +41,14 @@ function f(e) {
         action: e,
     });
 }
-function x(e, t) {
+function b(e, t) {
     a.Z.dispatch({
         type: "GUILD_SETTINGS_ONBOARDING_UPDATE_NEW_MEMBER_ACTION",
         channelId: e,
         action: t,
     });
 }
-function b(e) {
+function x(e) {
     a.Z.dispatch({
         type: "GUILD_SETTINGS_ONBOARDING_DELETE_NEW_MEMBER_ACTION",
         channelId: e,
@@ -212,7 +212,7 @@ function E(e, t) {
           ));
 }
 async function S(e, t) {
-    var n, r, o, u, m, h, f, x, b;
+    var n, r, o, u, m, h, f, b, x;
     a.Z.dispatch({ type: "GUILD_HOME_SETTINGS_UPDATE_START" });
     try {
         let i = await l.tn.put({
@@ -245,7 +245,7 @@ async function S(e, t) {
                 member_action_channel_actions: (null != (f = null == s ? void 0 : s.newMemberActions) ? f : []).map(
                     (e) => e.actionType,
                 ),
-                resource_channel_ids: (null != (x = null == s ? void 0 : s.resourceChannels) ? x : []).map(
+                resource_channel_ids: (null != (b = null == s ? void 0 : s.resourceChannels) ? b : []).map(
                     (e) => e.channelId,
                 ),
                 enabled: null == s ? void 0 : s.enabled,
@@ -253,7 +253,7 @@ async function S(e, t) {
             i.body
         );
     } catch (t) {
-        let e = i().flatMap(null != (b = t.body) ? b : {}, (e) => e);
+        let e = i().flatMap(null != (x = t.body) ? x : {}, (e) => e);
         a.Z.dispatch({ type: "GUILD_HOME_SETTINGS_UPDATE_FAIL" }),
             s.Z.show({
                 title: p.intl.string(p.t["6nCZyM"]),

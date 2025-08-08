@@ -55,12 +55,12 @@ function h(e, t) {
 }
 function f(e) {
     var t, n, f;
-    let { rule: x, onChangeRule: b } = e,
+    let { rule: b, onChangeRule: x } = e,
         j = i.useCallback(
             (e) => {
-                b(h(p({}, x), { triggerMetadata: h(p({}, x.triggerMetadata), { allowList: e }) }));
+                x(h(p({}, b), { triggerMetadata: h(p({}, b.triggerMetadata), { allowList: e }) }));
             },
-            [b, x],
+            [x, b],
         );
     return (0, r.jsxs)("div", {
         className: g.cardContentsContainer,
@@ -70,16 +70,16 @@ function f(e) {
                 header: m.intl.string(m.t.CX5YfX),
                 children: [
                     (0, r.jsx)(a.Z, {
-                        rule: x,
-                        onChangeRule: b,
+                        rule: b,
+                        onChangeRule: x,
                     }),
                     (0, r.jsx)(l.Z, {
                         onChange: j,
-                        initialValue: null == (t = x.triggerMetadata) ? void 0 : t.allowList,
+                        initialValue: null == (t = b.triggerMetadata) ? void 0 : t.allowList,
                         maxWordCount: u.I3,
                         collapsed:
-                            (null == (n = x.triggerMetadata) ? void 0 : n.allowList) == null ||
-                            (null == (f = x.triggerMetadata) ? void 0 : f.allowList.length) === 0,
+                            (null == (n = b.triggerMetadata) ? void 0 : n.allowList) == null ||
+                            (null == (f = b.triggerMetadata) ? void 0 : f.allowList.length) === 0,
                     }),
                 ],
             }),
@@ -88,8 +88,8 @@ function f(e) {
                 step: 2,
                 header: m.intl.string(m.t["18TOiY"]),
                 children: (0, r.jsx)(s.Z, {
-                    rule: x,
-                    onChangeRule: b,
+                    rule: b,
+                    onChangeRule: x,
                 }),
             }),
             (0, r.jsx)(d.Z, { type: d.Z.Type.CROSS }),
@@ -97,8 +97,8 @@ function f(e) {
                 step: 3,
                 header: m.intl.string(m.t.eq3gjo),
                 children: (0, r.jsx)(o.Z, {
-                    rule: x,
-                    onChangeRule: b,
+                    rule: b,
+                    onChangeRule: x,
                 }),
             }),
         ],

@@ -51,10 +51,10 @@ function b(e) {
                   }),
               ],
           })
-        : (0, r.jsxs)("div", {
+        : (0, r.jsx)("div", {
               className: m.container,
-              children: [
-                  (0, r.jsx)(p.Z, {
+              children: (0, r.jsx)(c.y5t, {
+                  component: (0, r.jsx)(p.Z, {
                       tab: a.X.GAME_INVITES,
                       setTab: t,
                       badgeState: l,
@@ -121,7 +121,7 @@ function b(e) {
                           },
                       }),
                   }),
-                  (0, r.jsx)(c.h21, {
+                  children: (0, r.jsx)(c.h21, {
                       children: (0, r.jsxs)("div", {
                           className: m.invitesContainer,
                           children: [
@@ -164,7 +164,7 @@ function b(e) {
                           ],
                       }),
                   }),
-              ],
+              }),
           });
 }
 function O(e) {

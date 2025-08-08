@@ -13,15 +13,15 @@ var r,
     p = n(969632),
     h = n(208665),
     f = n(84658),
-    x = n(142961),
-    b = n(981631);
+    b = n(142961),
+    x = n(981631);
 let j = new Set(),
     v = f.PG.LANDING,
     _ = null;
 function O(e) {
     let { subsection: t } = e;
     if (d.Z.getGuildId() === _) return !1;
-    (v = t === b.KsC.SERVER_GUIDE ? f.PG.HOME_SETTINGS : f.PG.LANDING), (_ = d.Z.getGuildId());
+    (v = t === x.KsC.SERVER_GUIDE ? f.PG.HOME_SETTINGS : f.PG.LANDING), (_ = d.Z.getGuildId());
 }
 class y extends (r = a.ZP.Store) {
     initialize() {
@@ -57,12 +57,12 @@ class y extends (r = a.ZP.Store) {
     }
     showNotice() {
         if (null == _) return !1;
-        if ((0, x.C)(_)) return this.hasChanges();
+        if ((0, b.C)(_)) return this.hasChanges();
         let e = u.Z.getCurrentPage();
         return (v !== f.PG.SAFETY_CHECK || e === m.u.OVERVIEW) && null != v && v !== f.PG.LANDING;
     }
     canCloseEarly() {
-        return null == _ || (!this.hasErrors() && (!(0, x.C)(_) || !this.hasChanges()));
+        return null == _ || (!this.hasErrors() && (!(0, b.C)(_) || !this.hasChanges()));
     }
 }
 (l = "GuildSettingsOnboardingStore"),

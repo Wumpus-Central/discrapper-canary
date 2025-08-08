@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x }), n(388685), n(953529);
+n.d(t, { Z: () => b }), n(388685), n(953529);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -31,13 +31,13 @@ function f(e) {
               children: n,
           });
 }
-function x(e) {
+function b(e) {
     var t, n;
     let { rule: l, onChangeText: s, className: o } = e,
         {
             patterns: m,
-            valueError: x,
-            errors: b,
+            valueError: b,
+            errors: x,
             validatePatternsChanged: j,
             validateEditingValueChanged: v,
         } = (0, d.Z)(l, s),
@@ -49,7 +49,7 @@ function x(e) {
         })),
         O = i.useMemo(
             () =>
-                b.reduce((e, t) => {
+                x.reduce((e, t) => {
                     let {
                         pattern: n,
                         message: r,
@@ -68,7 +68,7 @@ function x(e) {
                         e
                     );
                 }, {}),
-            [b, m],
+            [x, m],
         ),
         y = i.useCallback(
             (e) => {
@@ -95,21 +95,21 @@ function x(e) {
             }),
             (0, r.jsx)(f, {
                 text: g.intl.format(g.t["PGC/AA"], { helpArticle: h }),
-                hasErrors: b.length > 0 || null != x,
+                hasErrors: x.length > 0 || null != b,
                 errorText:
                     null !=
                     (n =
                         null ==
-                        (t = b.find((e) => {
+                        (t = x.find((e) => {
                             let { pattern: t } = e;
                             return t === d.r;
                         }))
                             ? void 0
                             : t.message)
                         ? n
-                        : null == x
+                        : null == b
                           ? void 0
-                          : x.message,
+                          : b.message,
             }),
         ],
     });

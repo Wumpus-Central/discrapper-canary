@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b }), n(953529);
+n.d(t, { Z: () => x }), n(953529);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -37,7 +37,7 @@ function f(e) {
     }
     return e;
 }
-function x(e, t) {
+function b(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -55,8 +55,8 @@ function x(e, t) {
         e
     );
 }
-let b = function (e) {
-    let { guildId: t, resourceChannel: l, index: b, onDragComplete: j, onDragStart: v, onDragReset: _ } = e,
+let x = function (e) {
+    let { guildId: t, resourceChannel: l, index: x, onDragComplete: j, onDragStart: v, onDragReset: _ } = e,
         { title: O, channelId: y, description: C } = l,
         N = d.Z.getChannel(y),
         I = null;
@@ -74,7 +74,7 @@ let b = function (e) {
         } = (0, o.Z)({
             type: "RESOURCE_CHANNEL",
             optionId: l.channelId,
-            index: b,
+            index: x,
             onDragStart: v,
             onDragComplete: j,
             onDragReset: _,
@@ -103,7 +103,7 @@ let b = function (e) {
                     return (n) =>
                         (0, r.jsx)(
                             e,
-                            x(f({}, n), {
+                            b(f({}, n), {
                                 guildId: t,
                                 resourceChannel: l,
                                 onSave: Z,
@@ -121,8 +121,8 @@ let b = function (e) {
               children: [
                   (0, r.jsxs)("div", {
                       className: a()(h.resourceChannel, {
-                          [h.dropIndicatorBefore]: null != P && b < P,
-                          [h.dropIndicatorAfter]: null != P && b > P,
+                          [h.dropIndicatorBefore]: null != P && x < P,
+                          [h.dropIndicatorAfter]: null != P && x > P,
                           [h.resourceChannelError]: null != I,
                       }),
                       ref: (e) => {
@@ -175,7 +175,7 @@ let b = function (e) {
                               children: (e) =>
                                   (0, r.jsx)(
                                       s.hU,
-                                      x(f({}, e), {
+                                      b(f({}, e), {
                                           icon: s.vdY,
                                           size: "sm",
                                           variant: "primary",

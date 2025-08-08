@@ -39,16 +39,16 @@ function T(e) {
         i.useEffect(() => {
             (0, m.kg)();
         }, []),
-        (0, r.jsxs)("div", {
+        (0, r.jsx)("div", {
             className: o()(w.container, w.widerInbox),
-            children: [
-                (0, r.jsx)(I.Z, {
+            children: (0, r.jsx)(h.y5t, {
+                component: (0, r.jsx)(I.Z, {
                     tab: d.X.SCHEDULED,
                     setTab: t,
                     closePopout: n,
                 }),
-                (0, r.jsx)(A, {}),
-            ],
+                children: (0, r.jsx)(A, {}),
+            }),
         })
     );
 }

@@ -13,8 +13,8 @@ var r = n(255367),
     p = n(484614),
     h = n(852860),
     f = n(782568),
-    x = n(367907),
-    b = n(674180),
+    b = n(367907),
+    x = n(674180),
     j = n(999382),
     v = n(626135),
     _ = n(730647),
@@ -87,12 +87,12 @@ let I = [
                                             });
                                     }
                                     return e;
-                                })({ enabled: T }, (0, x.hH)(l.id)),
+                                })({ enabled: T }, (0, b.hH)(l.id)),
                             ));
             },
             B = y.EYA.ROLE_SUBSCRIPTION_STORE_PAGE(M),
             F = null != Z && Z === (null == c ? void 0 : c.store_page_trailer_url),
-            { shouldRestrictUpdatingCreatorMonetizationSettings: H } = (0, b.gX)(l.id),
+            { shouldRestrictUpdatingCreatorMonetizationSettings: H } = (0, x.gX)(l.id),
             z = H || !A;
         return (0, r.jsxs)("div", {
             children: [

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b }), n(388685);
+n.d(t, { Z: () => x }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(512722),
@@ -13,12 +13,12 @@ var r = n(255367),
     p = n(22902),
     h = n(783454),
     f = n(388032),
-    x = n(301849);
-function b() {
+    b = n(301849);
+function x() {
     var e;
     let { editStateId: t } = (0, u.N)(),
         [n, l] = m.TT(t),
-        [b, j] = m.F2(t),
+        [x, j] = m.F2(t),
         v = (0, c.oC)(t),
         { options: _ } = (0, p.Z)(null != (e = null == v ? void 0 : v.active_trial) ? e : null),
         O = (0, g.Z)(),
@@ -51,7 +51,7 @@ function b() {
                 children: [
                     (0, r.jsx)(s.R94, {
                         type: s.R94.Types.DESCRIPTION,
-                        className: x.formDescription,
+                        className: b.formDescription,
                         disabled: !y || N,
                         children: f.intl.string(f.t.NB9NLC),
                     }),
@@ -59,7 +59,7 @@ function b() {
                     (0, r.jsx)(s.q4e, {
                         "aria-labelledby": I,
                         options: _,
-                        className: x.formInput,
+                        className: b.formInput,
                         placeholder: f.intl.string(f.t.WZG1BQ),
                         value: n,
                         onChange: l,
@@ -77,15 +77,15 @@ function b() {
                 children: [
                     (0, r.jsx)(s.R94, {
                         type: s.R94.Types.DESCRIPTION,
-                        className: x.formDescription,
+                        className: b.formDescription,
                         disabled: !y || N,
                         children: f.intl.string(f.t.Cg5eBg),
                     }),
                     (0, r.jsx)(s.q4e, {
                         "aria-labelledby": E,
                         options: O,
-                        className: x.formInput,
-                        value: b,
+                        className: b.formInput,
+                        value: x,
                         onChange: j,
                         maxVisibleItems: 5,
                         isDisabled: !y || N,

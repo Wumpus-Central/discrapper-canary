@@ -15,7 +15,7 @@ function g(e) {
         g = (0, l.e7)([o.Z], () => null != t && o.Z.can(d.Plq.MANAGE_GUILD, t), [t]),
         p = t.features.has(d.oNc.COMMUNITY),
         [h, f] = i.useState(t.features.has(d.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY)),
-        x = i.useCallback(
+        b = i.useCallback(
             async (e) => {
                 f(e), await (0, s.fp)(t, e);
             },
@@ -50,7 +50,7 @@ function g(e) {
                       children: (0, r.jsx)(a.rsf, {
                           id: n,
                           checked: h,
-                          onChange: x,
+                          onChange: b,
                           disabled: !g,
                       }),
                   }),

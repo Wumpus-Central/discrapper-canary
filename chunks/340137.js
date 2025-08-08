@@ -138,7 +138,7 @@ function E(e) {
 function y() {
     let { focusSectionProps: e } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
         t = i.useRef(null),
-        { notificationCenterVariant: n } = h.Lk.useExperiment({ location: "NotificationsInboxButton" }),
+        { notificationCenterVariant: n } = (0, h.pN)({ location: "NotificationsInboxButton" }),
         l = (0, s.e7)([d.Z], () => d.Z.getChannelId()),
         a = i.useMemo(() => b.Z5c.CHANNEL(b.STv, null != l ? l : void 0), [l]),
         c = (0, g.mv)();

@@ -14,8 +14,8 @@ var i = n(399606),
     p = n(999382),
     h = n(267101),
     f = n(287576),
-    x = n(894610),
-    b = n(388032);
+    b = n(894610),
+    x = n(388032);
 function j(e) {
     let { listingId: t } = e,
         n = (0, h.r)(t);
@@ -36,17 +36,17 @@ function v(e) {
                     (0, r.jsx)(c.Z, {
                         revenue: v.metrics.revenue,
                         revenueTrend: v.metrics.revenuePctChange,
-                        summaryMetricLabel: b.intl.string(b.t.R3PCmZ),
+                        summaryMetricLabel: x.intl.string(x.t.R3PCmZ),
                         summaryMetricValue: null != (n = v.metrics.paymentsCount) ? n : "-",
                         summaryMetricTrend: null != (s = v.metrics.paymentsCountChange) ? s : 0,
                         summaryMetricTrendIsPercent: !1,
-                        children: (0, r.jsx)(x.Z, {
+                        children: (0, r.jsx)(b.Z, {
                             guildId: h,
                             earningsData: v,
                         }),
                     }),
                     (0, r.jsx)(l.hjN, {
-                        title: b.intl.string(b.t["+5Rmho"]),
+                        title: x.intl.string(x.t["+5Rmho"]),
                         children: (0, r.jsx)(o.Z, {
                             ListingIdLabel: j,
                             payoutsByPeriod: v.payoutsByPeriod,
@@ -54,7 +54,7 @@ function v(e) {
                         }),
                     }),
                     (0, r.jsx)(l.hjN, {
-                        title: b.intl.string(b.t.O8cDAA),
+                        title: x.intl.string(x.t.O8cDAA),
                         disabled: _,
                         children: (0, r.jsx)(m.Z, {
                             guildId: h,
@@ -62,7 +62,7 @@ function v(e) {
                         }),
                     }),
                     (0, r.jsx)(l.hjN, {
-                        title: b.intl.string(b.t["0n7R2d"]),
+                        title: x.intl.string(x.t["0n7R2d"]),
                         children: (0, r.jsx)(g.Z, {
                             guildId: h,
                             allPeriods: v.payoutsByPeriod,

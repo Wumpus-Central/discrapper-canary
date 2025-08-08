@@ -17,8 +17,8 @@ var r = n(255367),
     p = n(958832),
     h = n(324067),
     f = n(984933),
-    x = n(259580),
-    b = n(999382),
+    b = n(259580),
+    x = n(999382),
     j = n(743475),
     v = n(889369),
     _ = n(570961),
@@ -36,8 +36,8 @@ function w(e) {
         s = (0, l.e7)([d.Z], () => d.Z.getEnabled(t.id)),
         h = (0, l.e7)([p.Z], () => p.Z.hasFetched(t.id)),
         f = (0, y.Z)(t),
-        x = (0, l.e7)([v.Z], () => v.Z.editedDefaultChannelIds),
-        b = f.filter((e) => !x.has(e.id)),
+        b = (0, l.e7)([v.Z], () => v.Z.editedDefaultChannelIds),
+        x = f.filter((e) => !b.has(e.id)),
         [_, O] = i.useState(!1);
     i.useEffect(() => {
         h || s || (0, g.S)(t.id);
@@ -96,7 +96,7 @@ function w(e) {
             };
         });
     };
-    return _ || 0 === b.length
+    return _ || 0 === x.length
         ? null
         : (0, r.jsxs)("div", {
               className: T.recommendations,
@@ -135,7 +135,7 @@ function w(e) {
                   }),
                   (0, r.jsx)("div", {
                       className: T.recommendedChannels,
-                      children: b.map((e, n) =>
+                      children: x.map((e, n) =>
                           (0, r.jsxs)(r.Fragment, {
                               children: [
                                   (0, r.jsxs)("div", {
@@ -198,7 +198,7 @@ function w(e) {
                                                 }),
                                       ],
                                   }),
-                                  n < b.length - 1 ? (0, r.jsx)("div", { className: T.separator }) : null,
+                                  n < x.length - 1 ? (0, r.jsx)("div", { className: T.separator }) : null,
                               ],
                           }),
                       ),
@@ -209,7 +209,7 @@ function w(e) {
 }
 function R(e) {
     let { saveOnClose: t = !1 } = e,
-        n = (0, l.e7)([b.Z], () => b.Z.getGuild()),
+        n = (0, l.e7)([x.Z], () => x.Z.getGuild()),
         s = (0, l.e7)([d.Z], () => d.Z.isLoading()),
         o = (0, l.e7)([f.ZP], () => f.ZP.getChannels(null == n ? void 0 : n.id)),
         c = (0, l.e7)([h.Z], () => h.Z.getCategories(null == n ? void 0 : n.id)),
@@ -246,8 +246,8 @@ function R(e) {
                             (0, r.jsx)(a.P3F, {
                                 className: T.collapseButton,
                                 onClick: () => p((e) => !e),
-                                children: (0, r.jsx)(x.Z, {
-                                    direction: g ? x.Z.Directions.DOWN : x.Z.Directions.UP,
+                                children: (0, r.jsx)(b.Z, {
+                                    direction: g ? b.Z.Directions.DOWN : b.Z.Directions.UP,
                                     height: 16,
                                     width: 16,
                                 }),
@@ -319,7 +319,7 @@ function R(e) {
             });
 }
 function Z() {
-    let e = (0, l.e7)([b.Z], () => b.Z.getProps().guild),
+    let e = (0, l.e7)([x.Z], () => x.Z.getProps().guild),
         t = (0, l.e7)([v.Z], () => v.Z.submitting),
         n = (0, l.e7)([O.Z], () => O.Z.advancedMode);
     return null == e

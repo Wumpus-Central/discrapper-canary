@@ -15,9 +15,9 @@ let h = (0, m.Mg)(s.Z.ROLE_ICON_UPLOADER_ICON_SIZE);
 function f(e) {
     let { role: t, "aria-label": n = g.intl.string(g.t["MsUY/f"]), className: l, onClick: s, disabled: m = !1 } = e,
         f = i.useRef(null),
-        x = i.useMemo(() => (0, d.Kz)(t, h), [t]),
-        b =
-            null != x
+        b = i.useMemo(() => (0, d.Kz)(t, h), [t]),
+        x =
+            null != b
                 ? (0, r.jsx)(
                       c.Z,
                       (function (e) {
@@ -49,7 +49,7 @@ function f(e) {
                               enableTooltip: !1,
                               className: p.icon,
                           },
-                          x,
+                          b,
                       ),
                   )
                 : (0, r.jsx)(o.FmF, {
@@ -68,9 +68,9 @@ function f(e) {
                 (0, r.jsx)("div", {
                     ref: f,
                     className: p.preview,
-                    children: b,
+                    children: x,
                 }),
-                null != x ? (0, r.jsx)(u.S, { className: p.uploaderIcon }) : null,
+                null != b ? (0, r.jsx)(u.S, { className: p.uploaderIcon }) : null,
             ],
         }),
     });

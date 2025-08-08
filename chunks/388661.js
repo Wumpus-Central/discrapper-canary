@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b });
+n.d(t, { Z: () => x });
 var r = n(255367),
     i = n(120356),
     l = n.n(i),
@@ -13,31 +13,31 @@ var r = n(255367),
     p = n(981631),
     h = n(195196),
     f = n(388032),
-    x = n(602268);
-let b = function (e) {
-    let { className: t, guildId: n, tag: i, badge: b, primaryColor: j, secondaryColor: v, isDisabled: _ = !1 } = e,
+    b = n(602268);
+let x = function (e) {
+    let { className: t, guildId: n, tag: i, badge: x, primaryColor: j, secondaryColor: v, isDisabled: _ = !1 } = e,
         O = (0, a.e7)([g.Z], () => g.Z.getProps().originalProfile),
         y = null != O && O.tag !== i;
     return (0, r.jsxs)("div", {
         className: t,
         children: [
             (0, r.jsx)(o.vwX, {
-                className: x.sectionTitle,
+                className: b.sectionTitle,
                 children: f.intl.string(h.default["tN+8pK"]),
             }),
             (0, r.jsxs)("div", {
-                className: x.tagContainer,
+                className: b.tagContainer,
                 children: [
                     (0, r.jsx)("div", {
-                        className: x.tagInputContainer,
+                        className: b.tagInputContainer,
                         children: (0, r.jsx)(s.Is, {
-                            className: x.tagInputWrapper,
-                            inputClassName: l()(x.tagInput, "heading-sm/semibold"),
+                            className: b.tagInputWrapper,
+                            inputClassName: l()(b.tagInput, "heading-sm/semibold"),
                             maxLength: 4,
                             autoFocus: !0,
                             placeholder: "WUMP",
                             prefixElement: (0, r.jsx)(c.v, {
-                                badge: b,
+                                badge: x,
                                 width: 40,
                                 height: 40,
                                 primaryTintColor: j,
@@ -51,7 +51,7 @@ let b = function (e) {
                         }),
                     }),
                     (0, r.jsx)("div", {
-                        className: x.tagTooltip,
+                        className: b.tagTooltip,
                         children: (0, r.jsx)(o.Text, {
                             variant: "text-xs/medium",
                             color: "text-muted",
@@ -62,7 +62,7 @@ let b = function (e) {
             }),
             y &&
                 (0, r.jsx)(d.Z, {
-                    className: x.tagChangeInfoBox,
+                    className: b.tagChangeInfoBox,
                     children: (0, r.jsx)(o.Text, {
                         variant: "text-xs/medium",
                         children: f.intl.format(h.default["4ZKDXl"], {

@@ -13,8 +13,8 @@ var r = n(255367),
     p = n(999382),
     h = n(548522),
     f = n(651390),
-    x = n(981631),
-    b = n(388032),
+    b = n(981631),
+    x = n(388032),
     j = n(870751);
 let v = {
     id: "0",
@@ -57,7 +57,7 @@ function _(e) {
                     : g.Z.updateGuildProfile(n.id, { visibility: l.k.PUBLIC_WITH_RECRUITMENT }));
         }, [null == n ? void 0 : n.id, I]),
         T = i.useCallback(() => {
-            g.Z.setSection(x.pNK.PROFILE);
+            g.Z.setSection(b.pNK.PROFILE);
         }, []);
     if (null == n) return null;
     let P = null != t ? t : null == y ? void 0 : y.formFields;
@@ -66,14 +66,14 @@ function _(e) {
             (0, r.jsx)(a.X6, {
                 variant: "heading-md/semibold",
                 color: "header-primary",
-                children: b.intl.string(b.t.AHJddH),
+                children: x.intl.string(x.t.AHJddH),
             }),
             (0, r.jsx)(a.xv, {
                 tag: "p",
                 variant: "text-sm/medium",
                 color: "text-secondary",
                 className: j.applicationBody,
-                children: b.intl.string(b.t.Z7TCtb),
+                children: x.intl.string(x.t.Z7TCtb),
             }),
             (0, r.jsx)(f.c, { guildId: n.id }),
             (0, r.jsx)("div", {
@@ -98,18 +98,18 @@ function _(e) {
                                 value: I,
                                 hideBorder: !0,
                                 disabled: N,
-                                children: b.intl.string(b.t["N/0239"]),
+                                children: x.intl.string(x.t["N/0239"]),
                             }),
                             (0, r.jsx)(a.xv, {
                                 variant: "text-sm/normal",
                                 color: "text-secondary",
-                                children: b.intl.string(b.t["3TSZYG"]),
+                                children: x.intl.string(x.t["3TSZYG"]),
                             }),
                             N &&
                                 (0, r.jsx)(a.xv, {
                                     variant: "text-xs/normal",
                                     color: "text-muted",
-                                    children: b.intl.format(b.t.Bk0VOj, {
+                                    children: x.intl.format(x.t.Bk0VOj, {
                                         profileLink: (e, t) =>
                                             (0, r.jsx)(
                                                 c.eee,
@@ -136,7 +136,7 @@ function _(e) {
                                         className: j.previewButton,
                                         size: o.zx.Sizes.SMALL,
                                         fullWidth: !0,
-                                        children: b.intl.string(b.t["7XdMW1"]),
+                                        children: x.intl.string(x.t["7XdMW1"]),
                                     }),
                                     disableGuildNameClick: !0,
                                 }),

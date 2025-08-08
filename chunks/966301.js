@@ -17,8 +17,8 @@ var r = n(255367),
     p = n(570961),
     h = n(208665),
     f = n(974513),
-    x = n(716130),
-    b = n(981631),
+    b = n(716130),
+    x = n(981631),
     j = n(290511),
     v = n(388032),
     _ = n(795808);
@@ -30,14 +30,14 @@ function O(e) {
         p = c.length + u.length,
         h = (g / p) * 100,
         f = Math.max(Math.ceil((85 * p) / 100) - g, 0),
-        [x, b] = i.useState(!1),
-        j = x ? a.CJ0 : a.u04;
+        [b, x] = i.useState(!1),
+        j = b ? a.CJ0 : a.u04;
     return (0, r.jsxs)("div", {
         className: _.channelCoverage,
         children: [
             (0, r.jsxs)(a.P3F, {
                 className: _.coverageHeader,
-                onClick: () => b(!x),
+                onClick: () => x(!b),
                 children: [
                     (0, r.jsxs)("div", {
                         className: _.warningTextContainer,
@@ -73,7 +73,7 @@ function O(e) {
                     }),
                 ],
             }),
-            x
+            b
                 ? (0, r.jsxs)("div", {
                       className: _.channelCoverageDetails,
                       children: [
@@ -192,7 +192,7 @@ function C(e) {
                 children: [
                     (0, r.jsx)(a.eee, {
                         target: "_blank",
-                        href: b.EYA.GUILD_ONBOARDING_EXAMPLES,
+                        href: x.EYA.GUILD_ONBOARDING_EXAMPLES,
                         children: (0, r.jsx)(a.Text, {
                             variant: "text-sm/medium",
                             color: "text-link",
@@ -220,7 +220,7 @@ function C(e) {
                 className: _.prompts,
                 children: s
                     ? (0, r.jsx)(a.$jN, {})
-                    : (0, r.jsx)(x.Z, {
+                    : (0, r.jsx)(b.Z, {
                           postjoinOnly: d,
                           guildId: t.id,
                       }),

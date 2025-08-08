@@ -2,25 +2,25 @@ n.d(t, { Z: () => p });
 var r = n(255367);
 n(73800);
 var l = n(624238),
-    o = n(296009),
-    i = n(442837),
+    i = n(296009),
+    o = n(442837),
     a = n(481060),
     c = n(314897),
     s = n(881410),
     d = n(388032),
     u = n(196880);
 let f = {
-    [o.l.FAVORITE_GAMES]: () => d.intl.string(d.t.sUQar6),
-    [o.l.CURRENT_GAMES]: () => d.intl.string(d.t.SqNnur),
-    [o.l.WANT_TO_PLAY_GAMES]: () => d.intl.string(d.t.bWSQwc),
-    [o.l.PLAYED_GAMES]: () => d.intl.string(d.t.scOKER),
+    [i.l.FAVORITE_GAMES]: () => d.intl.string(d.t.sUQar6),
+    [i.l.CURRENT_GAMES]: () => d.intl.string(d.t.SqNnur),
+    [i.l.WANT_TO_PLAY_GAMES]: () => d.intl.string(d.t.bWSQwc),
+    [i.l.PLAYED_GAMES]: () => d.intl.string(d.t.scOKER),
 };
 function p(e) {
     let { userId: t, widgetType: n, headingId: p } = e,
-        m = (0, i.e7)([c.default], () => c.default.getId() === t),
+        m = (0, o.e7)([c.default], () => c.default.getId() === t),
         g = f[n](),
         b = m
-            ? n === o.l.FAVORITE_GAMES
+            ? n === i.l.FAVORITE_GAMES
                 ? d.intl.string(d.t.wiXdER)
                 : d.intl.format(d.t["zR1+09"], { numGames: l.k[n] })
             : void 0;

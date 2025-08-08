@@ -81,7 +81,7 @@ function ee(e) {
             ec,
             (0, Z.isWindows)() && null != a && ee ? "confirm" : "source_select",
         ),
-        [ef, em] = (0, b.L)(X.h7.AUDIO_INPUT, { location: "GoLiveModalV2" }),
+        [ef, em] = (0, b.Ls)(X.h7.AUDIO_INPUT, { location: "GoLiveModalV2" }),
         eh = ef.concat(em);
     (0, Y.Z)(es, eu, "confirm" === ed.modalStep);
     let ep = !w.ZP.canStreamQuality(w.ZP.StreamQuality.HIGH, ea),

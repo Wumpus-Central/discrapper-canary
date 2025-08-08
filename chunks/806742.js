@@ -13,7 +13,7 @@ var r = n(255367),
     p = n(535907),
     h = n(388032),
     f = n(773100);
-function x(e) {
+function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -38,7 +38,7 @@ function x(e) {
     }
     return e;
 }
-function b(e, t) {
+function x(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -69,7 +69,7 @@ let j = function (e) {
                     return (n) =>
                         (0, r.jsx)(
                             e,
-                            b(x({}, n), {
+                            x(b({}, n), {
                                 guildId: t,
                                 welcomeMessage: l,
                                 onSave: (e) => (0, m._N)(e),
@@ -102,7 +102,7 @@ let j = function (e) {
                       children: (e) =>
                           (0, r.jsxs)(
                               "div",
-                              b(x({}, e), {
+                              x(b({}, e), {
                                   className: a()(f.actionItemEditButton, f.editWelcomeButton),
                                   children: [
                                       (0, r.jsx)(o.vdY, {

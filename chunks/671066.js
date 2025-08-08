@@ -14,14 +14,14 @@ function g(e) {
     var t;
     let { action: n, triggerType: g, toggled: p, onToggleAction: h } = e,
         f = (e) => () => h(e),
-        x = (0, d.c)(n.type, n, g),
-        b = null == (t = n.metadata) ? void 0 : t.channelId,
+        b = (0, d.c)(n.type, n, g),
+        x = null == (t = n.metadata) ? void 0 : t.channelId,
         j = (0, i.e7)([c.default, o.Z, s.Z], () => {
-            let e = s.Z.getChannel(b);
+            let e = s.Z.getChannel(x);
             return null == e ? null : (0, a.F6)(e, c.default, o.Z);
-        }, [b]);
-    if (null == x) return null;
-    let { headerText: v, descriptionText: _, icon: O } = x;
+        }, [x]);
+    if (null == b) return null;
+    let { headerText: v, descriptionText: _, icon: O } = b;
     return (0, r.jsxs)("div", {
         className: m.actionContainer,
         children: [

@@ -13,8 +13,8 @@ var r = n(255367),
     p = n(185923),
     h = n(388032),
     f = n(186667),
-    x = n(381109);
-function b(e) {
+    b = n(381109);
+function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -80,7 +80,7 @@ function v(e) {
                   let { isShown: l } = t;
                   return (0, r.jsx)(
                       d.Z,
-                      ((n = b({}, e)),
+                      ((n = x({}, e)),
                       (i = i =
                           {
                               ref: a,
@@ -122,8 +122,8 @@ function _(e) {
         ),
         [g, p] = i.useState(!1),
         h = i.useCallback(() => p(!0), []),
-        x = i.useCallback(() => p(!1), []),
-        b = i.useCallback(
+        b = i.useCallback(() => p(!1), []),
+        x = i.useCallback(
             (e) => {
                 c(t, l, { label: e });
             },
@@ -138,7 +138,7 @@ function _(e) {
                 "aria-disabled": d,
                 disabled: d,
                 value: n.label,
-                onChange: b,
+                onChange: x,
                 maxLength: 24,
                 prefixElement: (0, r.jsx)(v, {
                     emoji: j,
@@ -148,7 +148,7 @@ function _(e) {
                 className: a()(f.traitContainer, { [f.traitContainerFocused]: g }),
                 inputClassName: f.traitInput,
                 onFocus: h,
-                onBlur: x,
+                onBlur: b,
             }),
             _ &&
                 (0, r.jsx)(o.P3F, {
@@ -169,15 +169,15 @@ function y(e) {
         a = i.useCallback(
             (e, t, n) => {
                 let r = [...l];
-                (r[t] = b({}, l[t], n)), g.Z.updateGuildProfile(e, { traits: r });
+                (r[t] = x({}, l[t], n)), g.Z.updateGuildProfile(e, { traits: r });
             },
             [l],
         );
     return (0, r.jsxs)(o.hjN, {
-        className: x.section,
+        className: b.section,
         children: [
             (0, r.jsxs)("div", {
-                className: x.sectionHeader,
+                className: b.sectionHeader,
                 children: [
                     (0, r.jsx)(o.vwX, { children: h.intl.string(h.t.S6JNrq) }),
                     (0, r.jsx)(o.R94, {

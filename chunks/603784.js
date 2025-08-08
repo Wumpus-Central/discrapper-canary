@@ -13,8 +13,8 @@ var r = n(255367),
     p = n(670188),
     h = n(210887),
     f = n(598077),
-    x = n(699516),
-    b = n(594174),
+    b = n(699516),
+    x = n(594174),
     j = n(259580),
     v = n(411198),
     _ = n(51144),
@@ -268,7 +268,7 @@ let w = i.forwardRef((e, t) => {
                                                                   channel:
                                                                       null == i.channel || "string" == typeof i.channel
                                                                           ? i.channel
-                                                                          : (0, g.F6)(i.channel, b.default, x.Z, !0),
+                                                                          : (0, g.F6)(i.channel, x.default, b.Z, !0),
                                                                   channelHook: (e, t) =>
                                                                       (0, r.jsx)(
                                                                           "span",

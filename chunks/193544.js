@@ -13,7 +13,7 @@ var r = n(255367),
     p = n(184520);
 function h(e) {
     var t, n, l;
-    let { changeTitle: h, value: f, options: x, className: b, onChange: j } = e,
+    let { changeTitle: h, value: f, options: b, className: x, onChange: j } = e,
         [v, _] = i.useState(f),
         [O, y] = i.useState(!1),
         [C, N] = i.useState(!1),
@@ -27,7 +27,7 @@ function h(e) {
             },
             [],
         );
-    let E = x.find((e) => e.value === v),
+    let E = b.find((e) => e.value === v),
         S = (e) => {
             e.disabled ||
                 e.value === v ||
@@ -53,8 +53,8 @@ function h(e) {
             children: g.intl.string(g.t.GEgsAw),
         }),
         loading: C,
-        className: b,
-        children: x.map((e, t) =>
+        className: x,
+        children: b.map((e, t) =>
             (0, r.jsx)(
                 m.Z,
                 {

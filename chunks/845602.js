@@ -6,54 +6,54 @@ n.d(t, {
 var r = n(255367),
     o = n(73800),
     l = n(120356),
-    s = n.n(l),
-    a = n(481060),
+    a = n.n(l),
+    s = n(481060),
     i = n(957537),
     c = n(839008),
-    d = n(797967),
-    u = n(755641),
+    u = n(797967),
+    d = n(755641),
     p = n(742409),
-    m = n(369509),
-    f = n(101017),
-    g = n(606318),
-    b = n(141006),
-    _ = n(981631),
-    h = n(131085),
-    x = n(388032),
-    j = n(606217),
+    f = n(369509),
+    m = n(101017),
+    b = n(606318),
+    g = n(141006),
+    h = n(981631),
+    _ = n(131085),
+    j = n(388032),
+    x = n(606217),
     v = n(183375);
 function y() {
     var e;
     let [t, n] = o.useState(() => {
-            let e = Math.floor(Math.random() * b.tl.length);
+            let e = Math.floor(Math.random() * g.tl.length);
             return {
-                primary_color: b.tl[e].start,
-                secondary_color: b.tl[e].end,
+                primary_color: g.tl[e].start,
+                secondary_color: g.tl[e].end,
                 tertiary_color: null,
             };
         }),
-        { gradientStyle: l, gradientClassname: c } = (0, a.Icv)({
-            colorStrings: (0, g.DX)(t),
+        { gradientStyle: l, gradientClassname: c } = (0, s.Icv)({
+            colorStrings: (0, b.DX)(t),
             roleStyle: "username",
             includeConvenienceGlow: !0,
             animateGradient: !0,
         });
     return (0, r.jsxs)("div", {
-        className: j.container,
+        className: x.container,
         children: [
             (0, r.jsx)("div", {
-                className: j.messageContainer,
+                className: x.messageContainer,
                 children: (0, r.jsx)(p.l, {
                     avatar: i.Z,
                     username: "Cherry",
                     usernameStyle: l,
-                    usernameClassName: s()(c, v.animateGradient),
-                    message: x.intl.string(x.t["6OSasb"]),
+                    usernameClassName: a()(c, v.animateGradient),
+                    message: j.intl.string(j.t["6OSasb"]),
                 }),
             }),
-            (0, r.jsx)(d.default, {
-                defaultColor: _.p6O,
-                colors: b.tl,
+            (0, r.jsx)(u.default, {
+                defaultColor: h.p6O,
+                colors: g.tl,
                 value: t.primary_color,
                 secondaryValue: null != (e = t.secondary_color) ? e : void 0,
                 onChange: (e) => {
@@ -113,36 +113,36 @@ function y() {
 }
 function O(e) {
     let { guildId: t } = e,
-        [n, l] = o.useState(h.x_.HEART),
-        s = (0, f.Z)(),
-        a = o.useMemo(
+        [n, l] = o.useState(_.x_.HEART),
+        a = (0, m.Z)(),
+        s = o.useMemo(
             () => ({
-                unlockedBadges: s.unlockedBadges.slice(0, 10),
+                unlockedBadges: a.unlockedBadges.slice(0, 10),
                 lockedBadges: [],
             }),
-            [s],
+            [a],
         );
     return (0, r.jsxs)("div", {
-        className: j.container,
+        className: x.container,
         children: [
             (0, r.jsx)("div", {
-                className: j.messageContainer,
+                className: x.messageContainer,
                 children: (0, r.jsx)(p.l, {
                     avatar: c.Z,
                     username: "Roka",
                     usernameStyle: { color: "var(--brand-400)" },
-                    message: x.intl.string(x.t["6OSasb"]),
-                    decorations: (0, r.jsx)(m.S, {
+                    message: j.intl.string(j.t["6OSasb"]),
+                    decorations: (0, r.jsx)(f.S, {
                         guildId: t,
                         tag: "GGEZ",
                         badge: n,
                     }),
                 }),
             }),
-            (0, r.jsx)(u.g, {
+            (0, r.jsx)(d.g, {
                 selectedBadge: n,
                 onBadgeClicked: l,
-                badgeCollection: a,
+                badgeCollection: s,
             }),
         ],
     });

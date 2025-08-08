@@ -13,8 +13,8 @@ var r = n(255367),
     p = n(63063),
     h = n(243730),
     f = n(764260),
-    x = n(946724),
-    b = n(95242),
+    b = n(946724),
+    x = n(95242),
     j = n(530198),
     v = n(420966),
     _ = n(203377),
@@ -86,15 +86,15 @@ function P(e) {
 }
 function w(e) {
     let { guild: t, role: n, locked: l, setSelectedSection: s, integrations: o } = e,
-        { headerHeight: g, headerRef: w } = (0, b.Z)(0),
+        { headerHeight: g, headerRef: w } = (0, x.Z)(0),
         { scrolledToTop: R, handleScroll: Z } = (0, v.V)(),
         D = (0, c.e7)([h.Z], () => {
             var e;
             return null == (e = h.Z.getRoleMemberCount(t.id)) ? void 0 : e[n.id];
         }, [n.id, t.id]),
-        A = (0, c.Wu)([x.Z], () => {
+        A = (0, c.Wu)([b.Z], () => {
             var e;
-            return null != (e = x.Z.getEditedRoleConnectionConfigurationsMap().get(n.id)) ? e : [];
+            return null != (e = b.Z.getEditedRoleConnectionConfigurationsMap().get(n.id)) ? e : [];
         }),
         k = A.length > 1 ? m.O1.OR : m.O1.AND,
         L = i.useMemo(() => (k === m.O1.OR ? A.flat() : null != A && A.length > 0 ? A[0] : []), [k, A]),

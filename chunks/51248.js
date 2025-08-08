@@ -17,24 +17,24 @@ function m(e) {
             hasChanges: p,
             editingRule: h,
             errorMessage: f,
-            saveEditingRule: x,
+            saveEditingRule: b,
         } = (0, c.w)(),
-        { updateRule: b } = (0, o.pH)(t),
+        { updateRule: x } = (0, o.pH)(t),
         j = null != h,
         v = j && !(0, s.Vb)(h),
         _ = j || p || v,
         O = async () => {
             if (!p && !v) return m();
-            null == h || v || b(h);
+            null == h || v || x(h);
             let e = n.find((e) => {
                 let { id: t } = e;
                 return t === (null == h ? void 0 : h.id);
             });
             try {
-                let e = await x(n);
-                null != e && b(e);
+                let e = await b(n);
+                null != e && x(e);
             } catch (t) {
-                null != e && b(e);
+                null != e && x(e);
             }
         },
         y = d.intl.string(d.t["ETE/oK"]),

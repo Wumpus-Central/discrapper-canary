@@ -18,7 +18,7 @@ let o = function (e) {
             actionsLocation: p,
             fieldStyle: h,
         } = e,
-        { label: f, placeholder: x } = t;
+        { label: f, placeholder: b } = t;
     return (0, r.jsx)(l.Z, {
         field: t,
         index: n,
@@ -33,7 +33,7 @@ let o = function (e) {
         fieldStyle: h,
         children: (0, r.jsx)(i.Q8, {
             className: s.fieldBackground,
-            placeholder: null != x ? x : a.intl.string(a.t["Sqn+Wl"]),
+            placeholder: null != b ? b : a.intl.string(a.t["Sqn+Wl"]),
             disabled: !0,
         }),
     });

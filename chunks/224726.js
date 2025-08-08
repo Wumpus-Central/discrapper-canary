@@ -13,8 +13,8 @@ var r = n(255367),
     p = n(434404),
     h = n(999382),
     f = n(12078),
-    x = n(934638),
-    b = n(566036),
+    b = n(934638),
+    x = n(566036),
     j = n(979664),
     v = n(343397),
     _ = n(509798),
@@ -105,12 +105,12 @@ let E = function () {
                                       canManageGuild: P,
                                   }),
                                   (0, r.jsx)("div", { className: I.divider }),
-                                  (0, r.jsx)(x.Z, {
+                                  (0, r.jsx)(b.Z, {
                                       profile: T,
                                       canManageGuild: P,
                                   }),
                                   (0, r.jsx)("div", { className: I.divider }),
-                                  (0, r.jsx)(b.Z, {
+                                  (0, r.jsx)(x.Z, {
                                       profile: T,
                                       canManageGuild: P,
                                   }),

@@ -20,8 +20,8 @@ function g() {
             errorDetails: d.Z.errorDetails,
         })),
         { guild: g, submitting: p, errors: h, hasChanges: f } = (0, l.cj)([o.Z], () => o.Z.getProps()),
-        x = i.useMemo(() => (null != n ? (0, u.i)(null == n ? void 0 : n.code) : (0, m.LG)(h)), [h, n]),
-        b = i.useCallback(async () => {
+        b = i.useMemo(() => (null != n ? (0, u.i)(null == n ? void 0 : n.code) : (0, m.LG)(h)), [h, n]),
+        x = i.useCallback(async () => {
             if (null != g && (t && (await (0, c.en)(g.id, e, { throwErr: !0 })), f)) {
                 let e = {
                     premiumProgressBarEnabled: g.premiumProgressBarEnabled,
@@ -36,8 +36,8 @@ function g() {
         }, [g]);
     return (0, r.jsx)(a.Z, {
         submitting: p,
-        errorMessage: x,
-        onSave: b,
+        errorMessage: b,
+        onSave: x,
         onReset: j,
     });
 }

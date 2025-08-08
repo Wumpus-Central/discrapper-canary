@@ -35,8 +35,9 @@ let E = (0, l.Z)(
                 }),
                 Z = (0, c.Z)(t),
                 S = (0, f.l)(t),
-                U = (0, u.D)(t),
-                P = E
+                U = (0, f.P)(t),
+                P = (0, u.D)(t),
+                j = E
                     ? (0, i.jsx)(r.sNh, {
                           id: "instant-invites",
                           label: A.intl.string(A.t.ngRFjY),
@@ -88,21 +89,21 @@ let E = (0, l.Z)(
                           }),
                           (0, i.jsxs)(r.kSQ, {
                               children: [
-                                  !T && P,
+                                  !T && j,
                                   (0, i.jsx)(r.sNh, {
                                       id: "edit-gdm",
                                       label: A.intl.string(A.t["5Q9+/P"]),
                                       action: () => (0, b.B)(t.id, s.Z.GROUP_DM_CONTEXT_MENU),
                                       subtext: T ? A.intl.string(A.t.pPwcQU) : void 0,
                                   }),
-                                  U,
-                                  T && P,
+                                  P,
+                                  T && j,
                               ],
                           }),
                           (0, i.jsx)(r.kSQ, { children: Z }),
                           (0, i.jsx)(r.kSQ, { children: !T && m }),
                           (0, i.jsxs)(r.kSQ, {
-                              children: [T && m, I],
+                              children: [T && m, U, I],
                           }),
                           (0, i.jsx)(r.kSQ, { children: R }),
                       ],

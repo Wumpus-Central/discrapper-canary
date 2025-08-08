@@ -1,14 +1,16 @@
 n.d(t, {
-    Ct: () => f,
-    ER: () => a,
-    Ek: () => o,
-    Gg: () => s,
-    QV: () => c,
-    oC: () => l,
-    x_: () => i,
+    AC: () => p,
+    Ct: () => _,
+    ER: () => s,
+    Ek: () => a,
+    Gg: () => l,
+    QV: () => u,
+    oC: () => c,
+    x_: () => o,
 });
-var r = n(981631),
-    i = (function (e) {
+var r = n(494497),
+    i = n(981631),
+    o = (function (e) {
         return (
             (e[(e.SWORD = 0)] = "SWORD"),
             (e[(e.WATER_DROP = 1)] = "WATER_DROP"),
@@ -44,7 +46,7 @@ var r = n(981631),
             e
         );
     })({});
-let o = [
+let a = [
     {
         primary: "#ff1c90",
         secondary: "#ff7fc0",
@@ -98,8 +100,8 @@ let o = [
         secondary: "#cccccc",
     },
 ];
-o[0].primary, o[0].secondary;
-let a = {
+a[0].primary, a[0].secondary;
+let s = {
     0: 2,
     1: 1,
     2: 1,
@@ -132,7 +134,7 @@ let a = {
     29: 1,
     30: 1,
 };
-var s = (function (e) {
+var l = (function (e) {
     return (
         (e[(e.SIZE_12 = 12)] = "SIZE_12"),
         (e[(e.SIZE_16 = 16)] = "SIZE_16"),
@@ -142,17 +144,21 @@ var s = (function (e) {
         e
     );
 })({});
-let l = {
+let c = {
         12: 16,
         16: 16,
         24: 24,
         32: 32,
         36: 40,
     },
-    c = [6, 0, 7, 8, 1, 2, 4, 5, 9, 3],
-    u = [21, 22, 23, 24, 25],
-    d = [26, 27, 28, 29, 30],
-    f = {
-        [r.oNc.GUILD_TAGS_BADGE_PACK_PETS]: u,
-        [r.oNc.GUILD_TAGS_BADGE_PACK_FLEX]: d,
+    u = [6, 0, 7, 8, 1, 2, 4, 5, 9, 3],
+    d = [21, 22, 23, 24, 25],
+    f = [26, 27, 28, 29, 30],
+    _ = {
+        [i.oNc.GUILD_TAGS_BADGE_PACK_PETS]: d,
+        [i.oNc.GUILD_TAGS_BADGE_PACK_FLEX]: f,
+    },
+    p = {
+        [i.oNc.GUILD_TAGS_BADGE_PACK_PETS]: r.MB,
+        [i.oNc.GUILD_TAGS_BADGE_PACK_FLEX]: r.Vk,
     };

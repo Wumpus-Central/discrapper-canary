@@ -14,9 +14,9 @@ var r = n(255367),
     h = n(388032);
 function f(e) {
     let { guild: t, canManageGuild: n, buttonClassName: f } = e,
-        { analyticsLocations: x } = (0, a.ZP)(),
-        b = t.features.has(m.oNc.INVITE_SPLASH),
-        j = n && b,
+        { analyticsLocations: b } = (0, a.ZP)(),
+        x = t.features.has(m.oNc.INVITE_SPLASH),
+        j = n && x,
         v = i.useCallback((e) => {
             c.Z.updateGuild({ splash: e });
         }, []),
@@ -26,15 +26,15 @@ function f(e) {
                     e.stopPropagation(),
                     (0, u.E6)({
                         guild: t,
-                        analyticsLocations: x,
+                        analyticsLocations: b,
                         analyticsSection: m.jXE.GUILD_INVITE_BACKGROUND,
                         analyticsObject: m.qAy.BUTTON_CTA,
                         perks: (0, g.o9)(),
                     });
             },
-            [x, t],
+            [b, t],
         );
-    return b
+    return x
         ? (0, r.jsxs)(l.zx, {
               disabled: !j,
               color: l.Tt.BRAND,

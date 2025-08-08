@@ -1,8 +1,8 @@
 n.d(t, { Z: () => p }), n(35282);
 var r = n(255367),
     l = n(73800),
-    o = n(442837),
-    i = n(481060),
+    i = n(442837),
+    o = n(481060),
     a = n(34854),
     c = n(531301),
     s = n(246946),
@@ -11,27 +11,27 @@ var r = n(255367),
     f = n(343074);
 function p(e) {
     let { autoFocus: t = !1, className: n, userId: p, onUpdate: m } = e,
-        g = (0, o.e7)([s.Z], () => s.Z.hidePersonalInformation),
-        { loading: b, note: j } = (0, c.Z)(p),
-        h = l.useRef(null);
+        g = (0, i.e7)([s.Z], () => s.Z.hidePersonalInformation),
+        { loading: b, note: h } = (0, c.Z)(p),
+        j = l.useRef(null);
     return (l.useEffect(() => {
         if (!t || g) return;
-        let e = h.current;
+        let e = j.current;
         (null == e ? void 0 : e.selectionStart) != null && (e.focus(), e.setSelection(e.value.length, e.value.length));
     }, [t, g]),
     g)
         ? null
         : (0, r.jsx)("div", {
               className: n,
-              children: (0, r.jsx)(i.lcI, {
-                  ref: h,
+              children: (0, r.jsx)(o.lcI, {
+                  ref: j,
                   className: f.textarea,
                   disabled: b,
                   placeholder: b ? u.intl.string(u.t["WLKx//"]) : u.intl.string(u.t.VBhOe3),
                   "aria-label": u.intl.string(u.t.PbMNh4),
                   onBlur: (e) => {
                       let t = e.currentTarget.value;
-                      (null != j ? j : "") !== t && (null == m || m(), a.Z.updateNote(p, t));
+                      (null != h ? h : "") !== t && (null == m || m(), a.Z.updateNote(p, t));
                   },
                   onKeyPress: (e) => {
                       if (13 === e.which)
@@ -42,7 +42,7 @@ function p(e) {
                           } else e.preventDefault(), e.currentTarget.blur();
                       else e.which === d.yXg.SPACE && e.stopPropagation();
                   },
-                  defaultValue: null != j ? j : void 0,
+                  defaultValue: null != h ? h : void 0,
                   maxLength: d.vuo,
               }),
           });

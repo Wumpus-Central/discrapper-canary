@@ -13,31 +13,31 @@ var r = n(255367),
     p = n(594174),
     h = n(303737),
     f = n(981631),
-    x = n(388032),
-    b = n(621885);
+    b = n(388032),
+    x = n(621885);
 function j(e) {
     return String(e);
 }
 function v(e) {
     let { icon: t, title: n, subtitle: i, className: l } = e;
     return (0, r.jsxs)("div", {
-        className: a()(b.label, l),
+        className: a()(x.label, l),
         children: [
             t,
             (0, r.jsxs)("div", {
-                className: b.labelText,
+                className: x.labelText,
                 children: [
                     (0, r.jsx)(o.Text, {
                         variant: "text-md/normal",
                         color: "none",
-                        className: b.labelTitle,
+                        className: x.labelTitle,
                         children: n,
                     }),
                     null != i && "" !== i
                         ? (0, r.jsx)(o.Text, {
                               variant: "text-xs/semibold",
                               color: "text-muted",
-                              className: b.labelSubtitle,
+                              className: x.labelSubtitle,
                               children: i,
                           })
                         : null,
@@ -51,10 +51,10 @@ function _() {
         icon: (0, r.jsx)(o.qJs, {
             size: "md",
             color: "currentColor",
-            className: b.labelIcon,
+            className: x.labelIcon,
         }),
-        title: x.intl.string(x.t.d7YJMD),
-        className: b.createLabel,
+        title: b.intl.string(b.t.d7YJMD),
+        className: x.createLabel,
     });
 }
 function O(e) {
@@ -67,7 +67,7 @@ function O(e) {
         s = (0, c.F6)(i, p.default, g.Z),
         o = null != l ? (0, c.F6)(l, p.default, g.Z) : void 0;
     return (0, r.jsx)(v, {
-        icon: null != a && (0, r.jsx)(a, { className: b.labelIcon }),
+        icon: null != a && (0, r.jsx)(a, { className: x.labelIcon }),
         title: s,
         subtitle: o,
     });
@@ -77,8 +77,8 @@ function y(e) {
     return null != t ? (0, r.jsx)(O, { channelId: t }) : (0, r.jsx)(_, {});
 }
 function C(e) {
-    let { guildId: t, value: l, initialChannelId: a, omitChannelIds: d, "aria-labelledby": b, onChange: v } = e,
-        _ = x.intl.string(x.t.d7YJMD),
+    let { guildId: t, value: l, initialChannelId: a, omitChannelIds: d, "aria-labelledby": x, onChange: v } = e,
+        _ = b.intl.string(b.t.d7YJMD),
         O = (0, s.e7)([m.Z], () => m.Z.getCategories(t), [t]),
         C = (0, h.m7)(null != l ? l : f.lds),
         N = i.useMemo(() => {
@@ -110,7 +110,7 @@ function C(e) {
             );
         }, [_, l, C, O, d, a]);
     return (0, r.jsx)(o.PhF, {
-        placeholder: x.intl.string(x.t.r2pts7),
+        placeholder: b.intl.string(b.t.r2pts7),
         options: N,
         select: function (e) {
             null == e
@@ -175,6 +175,6 @@ function C(e) {
             let [t] = e;
             return y(t);
         },
-        "aria-labelledby": b,
+        "aria-labelledby": x,
     });
 }

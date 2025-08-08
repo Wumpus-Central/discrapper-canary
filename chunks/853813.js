@@ -13,8 +13,8 @@ var r = n(255367),
     p = n(823379),
     h = n(243730),
     f = n(946724),
-    x = n(999382),
-    b = n(130341),
+    b = n(999382),
+    x = n(130341),
     j = n(981975),
     v = n(660962),
     _ = n(442182),
@@ -42,7 +42,7 @@ function E(e) {
     let R = (0, s.e7)([m.Z], () => m.Z.getHighestRole(T), [T]),
         Z = (0, s.e7)([m.Z], () => !m.Z.isRoleHigher(T, R, P)),
         D = i.useRef(null),
-        A = (0, s.e7)([x.Z], () => x.Z.getProps().integrations),
+        A = (0, s.e7)([b.Z], () => b.Z.getProps().integrations),
         k = {
             role: P,
             editRoleId: n,
@@ -55,7 +55,7 @@ function E(e) {
         i.useEffect(() => {
             var e, t;
             let { role: n, editRoleId: r } = L.current,
-                i = (0, b.UT)(E),
+                i = (0, x.UT)(E),
                 l = null != (t = null == (e = h.Z.getRoleMemberCount(T.id)) ? void 0 : e[r]) ? t : 0;
             g.default.track(
                 N.rMx.ROLE_PAGE_VIEWED,

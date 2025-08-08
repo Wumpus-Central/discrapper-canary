@@ -68,7 +68,7 @@ function O(e) {
                 [n, e.width],
             );
         })(),
-        { entrypoint: p } = u.Lk.useExperiment({ location: "useInboxBadgeInfo" });
+        { entrypoint: p } = (0, u.pN)({ location: "useInboxBadgeInfo" });
     return i.useMemo(() => {
         if (n > 0) return d;
         let e = l.length;

@@ -13,8 +13,8 @@ var r = n(255367),
     p = n(6025),
     h = n(892001),
     f = n(433355),
-    x = n(430824),
-    b = n(893966),
+    b = n(430824),
+    x = n(893966),
     j = n(527379),
     v = n(305473),
     _ = n(113679),
@@ -30,7 +30,7 @@ var r = n(255367),
     w = n(319586);
 function R(e) {
     let { guildId: t } = e,
-        n = (0, s.e7)([x.Z], () => x.Z.getGuild(t)),
+        n = (0, s.e7)([b.Z], () => b.Z.getGuild(t)),
         { analyticsLocations: l } = (0, d.ZP)(c.Z.GUILD_SETTINGS_MEMBERS_PAGE),
         R = (0, u.m)(t),
         Z = (0, s.e7)([f.ZP], () => f.ZP.getGuildSidebarState(t), [t]),
@@ -38,7 +38,7 @@ function R(e) {
             p.Z.closeGuildSidebar(t);
         }, [t]),
         A = !1 == !!(null == n ? void 0 : n.features.has(S.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY)),
-        k = (0, s.e7)([b.Z], () => b.Z.getEstimatedMemberSearchCountByGuildId(t), [t]),
+        k = (0, s.e7)([x.Z], () => x.Z.getEstimatedMemberSearchCountByGuildId(t), [t]),
         L = i.useCallback(
             (e) => {
                 null != e &&

@@ -1,11 +1,11 @@
-n.d(t, { Z: () => i });
+n.d(t, { Z: () => o });
 var r = n(255367);
 n(73800);
 var l = n(623132),
-    o = n(15322);
-function i(e) {
-    var { games: t } = e,
-        n = (function (e, t) {
+    i = n(15322);
+function o(e) {
+    var { games: t, isGameFetching: n } = e,
+        o = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -14,20 +14,20 @@ function i(e) {
                     var n,
                         r,
                         l = {},
-                        o = Object.keys(e);
-                    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (l[n] = e[n]);
+                        i = Object.keys(e);
+                    for (r = 0; r < i.length; r++) (n = i[r]), t.indexOf(n) >= 0 || (l[n] = e[n]);
                     return l;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var o = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < o.length; r++)
-                    (n = o[r]),
+                var i = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < i.length; r++)
+                    (n = i[r]),
                         !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]);
             }
             return l;
-        })(e, ["games"]);
+        })(e, ["games", "isGameFetching"]);
     return (0, r.jsx)("ul", {
-        className: o.cardList,
+        className: i.cardList,
         children: t.map((e, t) =>
             (0, r.jsx)(
                 "li",
@@ -58,7 +58,13 @@ function i(e) {
                                     });
                             }
                             return e;
-                        })({ game: e }, n),
+                        })(
+                            {
+                                game: e,
+                                loading: n(e.applicationId),
+                            },
+                            o,
+                        ),
                     ),
                 },
                 "".concat(e.applicationId, "-").concat(t),

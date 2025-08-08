@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x }), n(472816), n(794429);
+n.d(t, { Z: () => b }), n(472816), n(794429);
 var r = n(255367),
     i = n(73800),
     l = n(481060),
@@ -50,21 +50,21 @@ function f(e) {
         ],
     });
 }
-function x(e) {
+function b(e) {
     let { guild: t } = e;
     (0, a.RD)(t.id);
     let u = (0, s.Z6)(t.id),
-        { rulesByTriggerType: x } = (0, a.pH)(t.id),
-        { numEnabledRules: b, numRules: j } = i.useMemo(() => {
+        { rulesByTriggerType: b } = (0, a.pH)(t.id),
+        { numEnabledRules: x, numRules: j } = i.useMemo(() => {
             let e = 0,
                 t = 0;
             return (
-                null == x ||
+                null == b ||
                     Object.values(u)
                         .flat()
                         .forEach((n) => {
                             var r;
-                            let i = null == (r = x[n]) ? void 0 : r.filter(c.lm);
+                            let i = null == (r = b[n]) ? void 0 : r.filter(c.lm);
                             if (null == i || 0 === i.length) return void t++;
                             i.forEach((n) => {
                                 n.enabled && e++, t++;
@@ -75,7 +75,7 @@ function x(e) {
                     numRules: t,
                 }
             );
-        }, [u, x]),
+        }, [u, b]),
         v = (0, g.Q)(t),
         _ = v[m.u.CAPTCHA_AND_RAID_PROTECTION],
         O = v[m.u.DM_AND_SPAM_PROTECTION],
@@ -120,7 +120,7 @@ function x(e) {
                                     icon: n(145136),
                                     title: p.intl.string(p.t.uRelg4),
                                     subtitle: p.intl.formatToPlainString(p.t.TG7NYG, {
-                                        enabled: b,
+                                        enabled: x,
                                         total: j,
                                     }),
                                     page: m.u.AUTOMOD,

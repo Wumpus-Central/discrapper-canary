@@ -18,8 +18,8 @@ let m = (e) => {
             onRemoveTag: p,
             onAddTag: h,
             onAddTagError: f,
-            maxTaxLength: x,
-            maxTags: b,
+            maxTaxLength: b,
+            maxTags: x,
             disabled: j,
             placeholder: v,
         } = e,
@@ -81,13 +81,13 @@ let m = (e) => {
         N = i.useCallback(() => {
             let e = O.trim();
             if (0 !== e.length) {
-                if (null != b && m.length >= b) {
+                if (null != x && m.length >= x) {
                     null == f || f(d.intl.string(d.t.Xx7XeH));
                     return;
                 }
                 h(e), y("");
             }
-        }, [O, b, h, f, m.length]),
+        }, [O, x, h, f, m.length]),
         I = i.useCallback(
             (e) => {
                 switch (e.keyCode) {
@@ -144,7 +144,7 @@ let m = (e) => {
                         value: O,
                         onKeyDown: I,
                         onChange: y,
-                        maxLength: x,
+                        maxLength: b,
                         disabled: j,
                         onBlur: N,
                         placeholder: v,

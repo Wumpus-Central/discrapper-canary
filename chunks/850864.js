@@ -13,8 +13,8 @@ var r = n(255367),
     p = n(340189),
     h = n(507317),
     f = n(399614),
-    x = n(387960),
-    b = n(806742),
+    b = n(387960),
+    x = n(806742),
     j = n(388032),
     v = n(773100),
     _ = n(91716),
@@ -67,7 +67,7 @@ function N(e) {
                     }),
                     (0, r.jsx)("div", {
                         className: v.section,
-                        children: (0, r.jsx)(b.Z, { guildId: t.id }),
+                        children: (0, r.jsx)(x.Z, { guildId: t.id }),
                     }),
                     (0, r.jsx)("div", { className: v.sectionSeparator }),
                     (0, r.jsx)(s.X6q, {
@@ -135,7 +135,7 @@ function N(e) {
                     }),
                     (0, r.jsxs)("div", {
                         className: v.section,
-                        children: [(0, r.jsx)(x.Z, { guildId: t.id }), (0, r.jsx)(f.Z, { guildId: t.id })],
+                        children: [(0, r.jsx)(b.Z, { guildId: t.id }), (0, r.jsx)(f.Z, { guildId: t.id })],
                     }),
                     (0, r.jsx)("div", { className: v.sectionSeparator }),
                     (0, r.jsx)(h.Z, { guild: t }),

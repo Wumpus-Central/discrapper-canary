@@ -14,14 +14,14 @@ function p(e) {
     let { guild: t, canManageGuild: n, buttonClassName: p } = e,
         { analyticsLocations: h } = (0, a.ZP)(),
         f = t.features.has(c.oNc.BANNER),
-        x = i.useCallback(
+        b = i.useCallback(
             (e) => {
                 let { imageUri: n, file: r } = e;
                 (0, o.f4)(t, h, n, r);
             },
             [h, t],
         ),
-        b = i.useCallback(
+        x = i.useCallback(
             (e) => {
                 e.preventDefault(),
                     e.stopPropagation(),
@@ -44,7 +44,7 @@ function p(e) {
                   (0, o.mw)({
                       uploadType: u.pC.GUILD_BANNER,
                       maxFileSizeBytes: m.B,
-                      onComplete: x,
+                      onComplete: b,
                       analyticsLocation: {
                           page: c.ZY5.GUILD_SETTINGS,
                           section: c.jXE.GUILD_BANNER,
@@ -55,6 +55,6 @@ function p(e) {
           })
         : (0, r.jsx)(s.P, {
               className: p,
-              onClick: b,
+              onClick: x,
           });
 }

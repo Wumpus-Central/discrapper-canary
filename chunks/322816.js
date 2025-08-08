@@ -13,8 +13,8 @@ var r = n(255367),
     p = n(626135),
     h = n(233608),
     f = n(700785),
-    x = n(764260),
-    b = n(631969),
+    b = n(764260),
+    x = n(631969),
     j = n(95242),
     v = n(420966),
     _ = n(275296),
@@ -101,7 +101,7 @@ function T(e) {
                 children: (0, r.jsx)(c.Avr, {
                     variant: "primary",
                     textVariant: "text-sm/semibold",
-                    onClick: () => (0, x.TY)(n.id),
+                    onClick: () => (0, b.TY)(n.id),
                     disabled: s.fS(n.permissions, f.Hn) || p || l,
                     text: C.intl.string(C.t["UYq7+P"]),
                 }),
@@ -119,7 +119,7 @@ function P(e) {
         return (0, r.jsxs)("div", {
             className: N.noResultsContainer,
             children: [
-                (0, r.jsx)(b.Z, { className: N.noResults }),
+                (0, r.jsx)(x.Z, { className: N.noResults }),
                 (0, r.jsx)(c.Text, {
                     variant: "text-sm/normal",
                     children: C.intl.string(C.t.DEBGqK),
@@ -150,7 +150,7 @@ function P(e) {
                         locked: l,
                         onChange: (e, t) => {
                             if ("string" == typeof t) throw Error("Unexpected string `allow`");
-                            (0, x.lO)(n.id, e, t);
+                            (0, b.lO)(n.id, e, t);
                         },
                         permissionRender: o,
                         inPinPermissionExperiment: a,
@@ -179,7 +179,7 @@ function w(e) {
             )
             .filter((e) => e.permissions.length > 0),
         { headerHeight: g, headerRef: f } = (0, j.Z)(0),
-        { scrolledToTop: x, handleScroll: b } = (0, v.V)(),
+        { scrolledToTop: b, handleScroll: x } = (0, v.V)(),
         T = i.useRef(!1);
     return (
         i.useEffect(() => {
@@ -190,12 +190,12 @@ function w(e) {
         (0, r.jsx)(c.yWw, {
             className: N.scroller,
             style: { scrollPaddingTop: g },
-            onScroll: b,
+            onScroll: x,
             children: (0, r.jsxs)("div", {
                 className: I.contentWidth,
                 children: [
                     (0, r.jsxs)("div", {
-                        className: a()(I.header, I.stickyHeader, { [I.stickyHeaderElevated]: !x }),
+                        className: a()(I.header, I.stickyHeader, { [I.stickyHeaderElevated]: !b }),
                         ref: f,
                         children: [
                             (0, r.jsx)(v.Z, {

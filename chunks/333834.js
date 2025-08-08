@@ -107,9 +107,7 @@ function D(e) {
         D = (0, y.fJ)(),
         L = i.useRef(null),
         M = (0, p.Z)(P, L),
-        { entrypoint: k, notificationCenterVariant: U } = _.Lk.useExperiment({
-            location: "NotificationsInboxSidebarList",
-        }),
+        { entrypoint: k, notificationCenterVariant: U } = (0, _.pN)({ location: "NotificationsInboxSidebarList" }),
         {
             isLoading: G,
             isLoadingComplete: B,

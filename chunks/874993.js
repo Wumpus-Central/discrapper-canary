@@ -13,8 +13,8 @@ var r = n(255367),
     p = n(85960),
     h = n(577330),
     f = n(65912),
-    x = n(51248),
-    b = n(546513),
+    b = n(51248),
+    x = n(546513),
     j = n(572456),
     v = n(273504),
     _ = n(981631),
@@ -88,7 +88,7 @@ function C(e) {
                 children: e.map((e) => {
                     var t;
                     return (0, r.jsx)(
-                        b.Z,
+                        x.Z,
                         {
                             guildId: P,
                             triggerType: e,
@@ -188,7 +188,7 @@ function C(e) {
                     withDivider: !1,
                     className: y.explicitContentFilterSection,
                 }),
-            (0, r.jsx)(x.Z, {
+            (0, r.jsx)(b.Z, {
                 guildId: P,
                 existingRules: A,
             }),

@@ -13,8 +13,8 @@ var r = n(255367),
     p = n(441536),
     h = n(494620),
     f = n(434404),
-    x = n(999382),
-    b = n(70086),
+    b = n(999382),
+    x = n(70086),
     j = n(835887),
     v = n(388661),
     _ = n(500230),
@@ -29,8 +29,8 @@ var r = n(255367),
 let P = function () {
     var e, t, n, P;
     (0, S.useSyncMessages)(E.messagesLoader);
-    let w = (0, a.e7)([x.Z], () => x.Z.getGuild()),
-        R = (0, a.e7)([x.Z], () => x.Z.getGuildProfile()),
+    let w = (0, a.e7)([b.Z], () => b.Z.getGuild()),
+        R = (0, a.e7)([b.Z], () => b.Z.getGuildProfile()),
         { fetchGuildProfile: Z, fetchStatus: D } = (0, m.u)(null == w ? void 0 : w.id);
     if (
         (i.useEffect(() => {
@@ -149,7 +149,7 @@ let P = function () {
                                   })
                                 : (0, r.jsx)("div", {
                                       className: T.boostingLinkContainer,
-                                      children: (0, r.jsx)(b.P, {
+                                      children: (0, r.jsx)(x.P, {
                                           onClick: () => {
                                               (0, p.Z)(w.id, c.Z.GUILD_POWERUPS_GUILD_SETTINGS_TAGS), f.Z.close();
                                           },

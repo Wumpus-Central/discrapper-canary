@@ -13,8 +13,8 @@ var r = n(255367),
     p = n(650774),
     h = n(430824),
     f = n(246946),
-    x = n(626135),
-    b = n(146596),
+    b = n(626135),
+    x = n(146596),
     j = n(559368),
     v = n(999382),
     _ = n(981631),
@@ -89,7 +89,7 @@ let I = function (e, t, n) {
                 onClick: () => {
                     t(!0),
                         (function (e) {
-                            x.default.track(_.rMx.GUILD_INSIGHTS_SETTINGS_CTA_CLICKED, { guild_id: e });
+                            b.default.track(_.rMx.GUILD_INSIGHTS_SETTINGS_CTA_CLICKED, { guild_id: e });
                             let t = null == e ? _.E07.DEVELOPER_PORTAL : _.E07.DEVELOPER_PORTAL_GUILD_ANALYTICS(e),
                                 n = (0, l.Z)();
                             return o.tn
@@ -125,7 +125,7 @@ let I = function (e, t, n) {
                 analytics: null != e ? j.Z.getOverviewAnalytics(e) : null,
                 errorCode: j.Z.getError(),
             })),
-            x = (0, s.e7)([f.Z], () => f.Z.getSettings().enabled),
+            b = (0, s.e7)([f.Z], () => f.Z.getSettings().enabled),
             T =
                 null == t ||
                 null == n ||
@@ -135,7 +135,7 @@ let I = function (e, t, n) {
                     !n.features.has(_.oNc.PARTNERED) &&
                     !n.features.has(_.oNc.VERIFIED));
         i.useEffect(() => {
-            null == e || T || ((0, b.Vk)(e), (0, b.SR)(e), (0, b.xl)(e));
+            null == e || T || ((0, x.Vk)(e), (0, x.SR)(e), (0, x.xl)(e));
         }, [e, T]),
             i.useEffect(() => {
                 (0, m.Kw)(O.v.GUILD_ANALYTICS_GUILD_SETTINGS_MENU);
@@ -206,7 +206,7 @@ let I = function (e, t, n) {
                         (0, r.jsx)(S, {}),
                     ],
                 }),
-                x
+                b
                     ? (0, r.jsx)("div", {
                           className: C.streamerMode,
                           children: (0, r.jsx)(d.Z, {}),

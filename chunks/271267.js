@@ -1,6 +1,6 @@
 n.d(t, {
     Q: () => g,
-    Z: () => x,
+    Z: () => b,
 }),
     n(388685);
 var r = n(255367),
@@ -143,7 +143,7 @@ function f(e) {
               refreshEligibility: a,
           });
 }
-function x(e) {
+function b(e) {
     let { guild: t, monetizationEligibility: n } = e;
     return (0, r.jsxs)("div", {
         className: d.ctaContainer,

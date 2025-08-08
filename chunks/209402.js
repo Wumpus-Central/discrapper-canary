@@ -34,13 +34,13 @@ function g() {
             };
             (0, s.pV)(e.id, t);
         }, [e, g]),
-        x = i.useCallback(() => {
+        b = i.useCallback(() => {
             null != t && c.Z.init(t);
         }, [t]);
     return (0, r.jsx)(a.Z, {
         submitting: p,
         errorMessage: h,
         onSave: f,
-        onReset: x,
+        onReset: b,
     });
 }

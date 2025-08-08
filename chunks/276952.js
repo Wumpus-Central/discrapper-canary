@@ -38,7 +38,7 @@ function _(e) {
             },
             n || document.hasFocus() ? "animate-always" : "animate-never",
         ),
-        g = l.Lk.useExperiment({ location: "AnimatedHalfPill" }),
+        g = (0, l.pN)({ location: "AnimatedHalfPill" }),
         E =
             (0, c.Z)((e) => e.isOpen) &&
             g.notificationCenterVariant === l.jP.POPOUT &&

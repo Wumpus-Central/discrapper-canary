@@ -60,8 +60,8 @@ function p(e) {
             dropHoveredIndex: t,
             formField: p,
             guild: h,
-            index: x,
-            isDragEnabled: b,
+            index: b,
+            isDragEnabled: x,
             submittedGuildJoinRequestsCount: j,
             removeFormField: v,
             updateFormField: _,
@@ -71,20 +71,20 @@ function p(e) {
             fieldStyle: N,
         } = e,
         I = async () => {
-            await v(x);
+            await v(b);
         },
         E = async (e) => {
-            await _(x, e);
+            await _(b, e);
         },
         S = async (e, t, n) => {
             await O(e, t, n);
         },
         T = (0, i.uniqueId)(),
-        P = t === x,
+        P = t === b,
         w = {
             key: T,
-            index: x,
-            isDragEnabled: b,
+            index: b,
+            isDragEnabled: x,
             isDropHovered: P,
             onEdit: () => {
                 0 === j

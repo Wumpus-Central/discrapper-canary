@@ -14,14 +14,14 @@ var i = n(793030),
     p = n(997698),
     h = n(354031),
     f = n(335438),
-    x = n(166805),
-    b = n(981631),
+    b = n(166805),
+    x = n(981631),
     j = n(388032),
     v = n(515636);
 let _ = function () {
     let { analyticsLocations: e } = (0, o.ZP)(s.Z.GUILD_SETTINGS_ENGAGEMENT_PAGE),
         t = (0, l.e7)([u.Z], () => u.Z.getProps().guild, []),
-        n = (0, l.e7)([d.Z], () => null != t && d.Z.can(b.Plq.MANAGE_GUILD, t)),
+        n = (0, l.e7)([d.Z], () => null != t && d.Z.can(x.Plq.MANAGE_GUILD, t)),
         _ = (0, c.E)(t),
         O = (0, a.l9)(null != t ? t : void 0);
     return null == t
@@ -87,7 +87,7 @@ let _ = function () {
                           (0, r.jsxs)(r.Fragment, {
                               children: [
                                   (0, r.jsx)("div", { className: v.divider }),
-                                  (0, r.jsx)(x.P, { guildId: t.id }),
+                                  (0, r.jsx)(b.P, { guildId: t.id }),
                               ],
                           }),
                   ],

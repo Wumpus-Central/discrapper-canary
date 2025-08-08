@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x });
+n.d(t, { Z: () => b });
 var r = n(255367),
     i = n(73800),
     l = n(536982),
@@ -54,8 +54,8 @@ function f(e, t) {
         e
     );
 }
-function x(e) {
-    var t, n, x, b, j, v;
+function b(e) {
+    var t, n, b, x, j, v;
     let { rule: _, onChangeRule: O } = e,
         y = i.useCallback(
             (e) => {
@@ -86,11 +86,11 @@ function x(e) {
                         onChangeRule: O,
                         collapsed:
                             (null == _ || null == (n = _.triggerMetadata) ? void 0 : n.regexPatterns) == null ||
-                            (null == _ || null == (x = _.triggerMetadata) ? void 0 : x.regexPatterns.length) === 0,
+                            (null == _ || null == (b = _.triggerMetadata) ? void 0 : b.regexPatterns.length) === 0,
                     }),
                     (0, r.jsx)(l.Z, {
                         onChange: C,
-                        initialValue: null == (b = _.triggerMetadata) ? void 0 : b.allowList,
+                        initialValue: null == (x = _.triggerMetadata) ? void 0 : x.allowList,
                         maxWordCount: m.n4,
                         collapsed:
                             (null == (j = _.triggerMetadata) ? void 0 : j.allowList) == null ||

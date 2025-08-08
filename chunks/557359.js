@@ -16,14 +16,14 @@ function f(e) {
     let { requireTerms: t, rules: n } = e,
         l = (0, o.e7)([u.Z], () => u.Z.getProps().guild),
         f = null == l ? void 0 : l.id,
-        x = i.useCallback(
+        b = i.useCallback(
             (e) => {
                 if (null == f || null == n) return null;
                 m.Z.setPendingInviteRules(f, e, [...n]);
             },
             [f, n],
         ),
-        b = i.useCallback(
+        x = i.useCallback(
             (e) => {
                 if (null == f) return null;
                 m.Z.setPendingInviteRules(f, t, e);
@@ -57,7 +57,7 @@ function f(e) {
                                 ],
                             }),
                             (0, r.jsx)(c.rsf, {
-                                onChange: x,
+                                onChange: b,
                                 checked: t,
                             }),
                         ],
@@ -77,7 +77,7 @@ function f(e) {
                                 (0, r.jsx)(d.k, {
                                     guild: l,
                                     rules: n,
-                                    setRules: b,
+                                    setRules: x,
                                     disabled: !t,
                                 }),
                             ],

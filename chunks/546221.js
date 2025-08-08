@@ -14,24 +14,24 @@ var i = n(481060),
     p = n(791382),
     h = n(277369),
     f = n(215124),
-    x = n(981631),
-    b = n(388032),
+    b = n(981631),
+    x = n(388032),
     j = n(264054);
 function v(e) {
     let { payoutsByPeriod: t, team: n } = e,
         l = (0, c.mY)()
             ? null
-            : b.intl.format(b.t.d1sCiY, { url: null != n ? x.EYA.DEVELOPER_PORTAL_PAYOUT_SETTINGS(n.id) : null });
+            : x.intl.format(x.t.d1sCiY, { url: null != n ? b.EYA.DEVELOPER_PORTAL_PAYOUT_SETTINGS(n.id) : null });
     return 0 === t.length
         ? (0, r.jsxs)(i.R94, {
               type: i.R94.Types.DESCRIPTION,
-              children: [b.intl.string(b.t.RrtXu7), " ", l],
+              children: [x.intl.string(x.t.RrtXu7), " ", l],
           })
         : (0, r.jsxs)(r.Fragment, {
               children: [
                   (0, r.jsxs)(i.R94, {
                       type: i.R94.Types.DESCRIPTION,
-                      children: [b.intl.string(b.t["9Ub4KS"]), " ", l],
+                      children: [x.intl.string(x.t["9Ub4KS"]), " ", l],
                   }),
                   (0, r.jsx)(i.LZC, { size: 16 }),
                   (0, r.jsx)(g.ZP, { payoutsByPeriod: t }),
@@ -63,15 +63,15 @@ let O = (e) => {
                       (0, r.jsxs)(r.Fragment, {
                           children: [
                               (0, r.jsx)(l.Z, {
-                                  children: b.intl.format(b.t["2raBCQ"], {
-                                      insightsURL: x.EYA.DEVELOPER_PORTAL_GUILD_ANALYTICS_ROLE_SUBSCRIPTION(s),
+                                  children: x.intl.format(x.t["2raBCQ"], {
+                                      insightsURL: b.EYA.DEVELOPER_PORTAL_GUILD_ANALYTICS_ROLE_SUBSCRIPTION(s),
                                   }),
                               }),
                               (0, r.jsx)(i.LZC, { size: 32 }),
                           ],
                       }),
                   (0, r.jsxs)(i.hjN, {
-                      title: b.intl.string(b.t.ofmOzc),
+                      title: x.intl.string(x.t.ofmOzc),
                       className: j.formSection,
                       children: [
                           (0, r.jsx)(i.LZC, { size: 8 }),
@@ -79,15 +79,15 @@ let O = (e) => {
                               className: j.metricsContainer,
                               children: [
                                   (0, r.jsx)(p.Z, {
-                                      label: b.intl.string(b.t.iY1jW1),
-                                      value: (0, a.T4)(null != (t = C.revenue) ? t : 0, x.pKx.USD),
+                                      label: x.intl.string(x.t.iY1jW1),
+                                      value: (0, a.T4)(null != (t = C.revenue) ? t : 0, b.pKx.USD),
                                       additionalContent: (0, r.jsx)(p.H, {
                                           value: C.revenuePctChange,
                                           isPercent: !0,
                                       }),
                                   }),
                                   (0, r.jsx)(p.Z, {
-                                      label: b.intl.string(b.t.cXyw29),
+                                      label: x.intl.string(x.t.cXyw29),
                                       value: (0, r.jsxs)(r.Fragment, {
                                           children: [
                                               null != (n = C.subscribers) ? n : "-",
@@ -111,7 +111,7 @@ let O = (e) => {
                       ],
                   }),
                   (0, r.jsx)(i.hjN, {
-                      title: b.intl.string(b.t["+5Rmho"]),
+                      title: x.intl.string(x.t["+5Rmho"]),
                       className: j.formSection,
                       children: (0, r.jsx)(v, {
                           payoutsByPeriod: y,
@@ -119,7 +119,7 @@ let O = (e) => {
                       }),
                   }),
                   (0, r.jsx)(i.hjN, {
-                      title: b.intl.string(b.t.O8cDAA),
+                      title: x.intl.string(x.t.O8cDAA),
                       disabled: I,
                       className: j.formSection,
                       children: (0, r.jsx)(h.Z, {
@@ -128,7 +128,7 @@ let O = (e) => {
                       }),
                   }),
                   (0, r.jsx)(i.hjN, {
-                      title: b.intl.string(b.t["0n7R2d"]),
+                      title: x.intl.string(x.t["0n7R2d"]),
                       className: j.formSection,
                       children: (0, r.jsx)(f.Z, {
                           guildId: s,

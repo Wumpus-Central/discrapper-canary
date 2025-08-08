@@ -97,16 +97,16 @@ function P(e) {
         W = (0, m.Us)({ location: "Unreads" }),
         K = (0, g.Z)("unreads", k);
     if (0 === V.length) {
-        return (0, r.jsxs)("div", {
+        return (0, r.jsx)("div", {
             className: o()(I.container, { [I.widerInbox]: W }),
-            children: [
-                (0, r.jsx)(v.Z, {
+            children: (0, r.jsx)(h.y5t, {
+                component: (0, r.jsx)(v.Z, {
                     tab: d.X.UNREADS,
                     setTab: T,
                     badgeState: M,
                     closePopout: L,
                 }),
-                (0, r.jsx)(C.Z, {
+                children: (0, r.jsx)(C.Z, {
                     Icon: h.xx7,
                     header: x.intl.string(x.t["6XMM+P"]),
                     tip:
@@ -114,14 +114,14 @@ function P(e) {
                             ? x.intl.string(x.t.w9uDOT)
                             : x.intl.string(x.t.BiUJCw),
                 }),
-            ],
+            }),
         });
     }
-    return (0, r.jsxs)("div", {
+    return (0, r.jsx)("div", {
         className: o()(I.container, "group-spacing-".concat(z), { [I.widerInbox]: W }),
         "aria-label": x.intl.string(x.t.sRUdBw),
-        children: [
-            (0, r.jsx)(v.Z, {
+        children: (0, r.jsx)(h.y5t, {
+            component: (0, r.jsx)(v.Z, {
                 tab: d.X.UNREADS,
                 setTab: T,
                 badgeState: M,
@@ -131,7 +131,7 @@ function P(e) {
                     onClick: H,
                 }),
             }),
-            (0, r.jsx)(c.bG, {
+            children: (0, r.jsx)(c.bG, {
                 navigator: K,
                 children: (0, r.jsx)(c.SJ, {
                     children: (e) => {
@@ -225,7 +225,7 @@ function P(e) {
                     },
                 }),
             }),
-        ],
+        }),
     });
 }
 function N(e) {
@@ -269,21 +269,21 @@ function N(e) {
 }
 function w(e) {
     let { setTab: t, badgeState: n, closePopout: i } = e;
-    return (0, r.jsxs)("div", {
+    return (0, r.jsx)("div", {
         className: I.container,
-        children: [
-            (0, r.jsx)(v.Z, {
+        children: (0, r.jsx)(h.y5t, {
+            component: (0, r.jsx)(v.Z, {
                 tab: d.X.UNREADS,
                 setTab: t,
                 badgeState: n,
                 closePopout: i,
             }),
-            (0, r.jsx)(C.Z, {
+            children: (0, r.jsx)(C.Z, {
                 Icon: h.xx7,
                 disableStars: !0,
                 header: x.intl.string(x.t["KG/ynZ"]),
                 tip: x.intl.string(x.t.cvcKzc),
             }),
-        ],
+        }),
     });
 }

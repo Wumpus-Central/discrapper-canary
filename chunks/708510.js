@@ -13,8 +13,8 @@ var r = n(255367),
     p = n(209054),
     h = n(96788),
     f = n(217472),
-    x = n(202905),
-    b = n(44867),
+    b = n(202905),
+    x = n(44867),
     j = n(557359),
     v = n(658666),
     _ = n(307375),
@@ -43,9 +43,9 @@ function I(e) {
                 rules: t.termRules,
             });
         case O.A.APPLY:
-            return (0, r.jsx)(x.r, { pendingFields: t.pendingVerificationFields });
+            return (0, r.jsx)(b.r, { pendingFields: t.pendingVerificationFields });
         case O.A.DISCOVERABLE:
-            return (0, r.jsx)(b.c, {
+            return (0, r.jsx)(x.c, {
                 fetchDiscoveryData: l,
                 settingsView: t.settingsView,
                 requireTerms: t.requireTerms,

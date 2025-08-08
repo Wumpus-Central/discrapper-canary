@@ -13,8 +13,8 @@ var r = n(255367),
     p = n(999382),
     h = n(905128),
     f = n(151494),
-    x = n(733683),
-    b = n(237583),
+    b = n(733683),
+    x = n(237583),
     j = n(899667),
     v = n(271383),
     _ = n(430824),
@@ -91,7 +91,7 @@ class R extends i.Component {
         let a = {
                 numRequired: 0,
                 y: 0,
-                key: x.x,
+                key: b.x,
             },
             s = e.map((e) => {
                 var n;
@@ -102,7 +102,7 @@ class R extends i.Component {
                     key: e.tier,
                 };
             });
-        return (0, r.jsx)(x.Z, {
+        return (0, r.jsx)(b.Z, {
             currentTier: l,
             className: i > 0 ? E.progressWithSubscriptions : E.progress,
             progress: i,
@@ -134,7 +134,7 @@ class R extends i.Component {
             ref: this.defaultTierRef,
             className: E.subscribers,
             children: [
-                (0, r.jsx)(b.Z, {
+                (0, r.jsx)(x.Z, {
                     guildId: null != n ? n : void 0,
                     users: e,
                     renderUser: this.renderSubscriber,

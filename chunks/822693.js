@@ -13,8 +13,8 @@ var r = n(255367),
     p = n(800223),
     h = n(981631),
     f = n(388032);
-let x = "NO_CHANNEL",
-    b = l.$e(h.Plq.VIEW_CHANNEL, h.Plq.CREATE_INSTANT_INVITE);
+let b = "NO_CHANNEL",
+    x = l.$e(h.Plq.VIEW_CHANNEL, h.Plq.CREATE_INSTANT_INVITE);
 function j(e) {
     let { guildId: t, widgetEnabled: n, widgetChannelId: l, className: h, enableLocalUpdate: j } = e,
         v = (0, a.e7)([c.ZP], () => c.ZP.getChannels(t)),
@@ -26,7 +26,7 @@ function j(e) {
                 })
                 .filter((e) => {
                     let { channel: t } = e;
-                    return t.id === l || d.Z.can(b, t);
+                    return t.id === l || d.Z.can(x, t);
                 })
                 .map((e) => {
                     let { channel: t } = e;
@@ -37,7 +37,7 @@ function j(e) {
                 });
             return (
                 e.unshift({
-                    value: x,
+                    value: b,
                     label: f.intl.string(f.t.u197b2),
                 }),
                 e
@@ -45,7 +45,7 @@ function j(e) {
         }, [v, t, l]),
         O = i.useCallback(
             (e) => {
-                j ? (0, p.c)(t, n, e !== x ? e : null) : g.Z.updateEmbed(t, n, e !== x ? e : null);
+                j ? (0, p.c)(t, n, e !== b ? e : null) : g.Z.updateEmbed(t, n, e !== b ? e : null);
             },
             [t, n, j],
         );

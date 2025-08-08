@@ -1,11 +1,11 @@
-n.d(t, { Z: () => i });
+n.d(t, { Z: () => o });
 var r = n(255367);
 n(73800);
 var l = n(750312),
-    o = n(623132);
-function i(e) {
-    var { user: t, widget: n } = e,
-        i = (function (e, t) {
+    i = n(623132);
+function o(e) {
+    var { user: t, widget: n, isGameFetching: o } = e,
+        a = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -14,23 +14,23 @@ function i(e) {
                     var n,
                         r,
                         l = {},
-                        o = Object.keys(e);
-                    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (l[n] = e[n]);
+                        i = Object.keys(e);
+                    for (r = 0; r < i.length; r++) (n = i[r]), t.indexOf(n) >= 0 || (l[n] = e[n]);
                     return l;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var o = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < o.length; r++)
-                    (n = o[r]),
+                var i = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < i.length; r++)
+                    (n = i[r]),
                         !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]);
             }
             return l;
-        })(e, ["user", "widget"]);
+        })(e, ["user", "widget", "isGameFetching"]);
     return (0, r.jsx)(l.Z, {
         userId: t.id,
         widgetType: n.type,
         children: (0, r.jsx)(
-            o.Z,
+            i.Z,
             (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
@@ -59,8 +59,9 @@ function i(e) {
                 {
                     game: n.game,
                     user: t,
+                    loading: o(n.game.applicationId),
                 },
-                i,
+                a,
             ),
         ),
     });

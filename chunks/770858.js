@@ -34,13 +34,13 @@ function S(e) {
         [S, x] = i.useState(!1),
         I = (0, m.D)(),
         P = h || I,
-        { notificationCenterVariant: N } = g.Lk.useExperiment({ location: "NotificationsInboxButtonInner" }),
+        { notificationCenterVariant: N } = (0, g.pN)({ location: "NotificationsInboxButtonInner" }),
         {
             badge: w,
             badgeDimensions: Z,
             unreadChannelsCount: T,
         } = (function (e) {
-            let { notificationCenterVariant: t } = g.Lk.useExperiment({ location: "NotificationsInboxButtonInner" }),
+            let { notificationCenterVariant: t } = (0, g.pN)({ location: "NotificationsInboxButtonInner" }),
                 { unreadChannelIds: n } = (0, m.O4)(),
                 i = E(),
                 { badge: l, dimensions: o } = (0, b.h6)({ isSelected: e });
@@ -151,7 +151,7 @@ function S(e) {
 }
 function x() {
     let e = i.useRef(null),
-        { notificationCenterVariant: t } = g.Lk.useExperiment({ location: "NotificationsInboxButton" }),
+        { notificationCenterVariant: t } = (0, g.pN)({ location: "NotificationsInboxButton" }),
         n = E(),
         l = (0, b.mv)();
     return t === g.jP.SIDEBAR

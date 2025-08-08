@@ -4,4 +4,5 @@ e.exports = {
     clickable: "clickable__1a3d6",
     gameCoverImage: "gameCoverImage__1a3d6 gameCover__1a3d6",
     fallback: "fallback__1a3d6 gameCover__1a3d6",
+    loadingCover: "loadingCover__1a3d6 gameCover__1a3d6",
 };

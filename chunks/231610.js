@@ -15,8 +15,8 @@ var i = n(481060),
 function h() {
     let { editStateId: e, guildId: t } = (0, a.N)(),
         [, h] = s.p9(e, t),
-        [f, x] = s.Ek(e, t),
-        b = s.qs(e, t);
+        [f, b] = s.Ek(e, t),
+        x = s.qs(e, t);
     function j() {
         (0, i.ZDy)(async () => {
             let { default: e } = await n.e("22942").then(n.bind(n, 660727));
@@ -93,7 +93,7 @@ function h() {
                     disabled: v,
                     children: (0, r.jsx)(d.Z, {
                         value: f,
-                        onChange: x,
+                        onChange: b,
                         disabled: v,
                     }),
                 }),
@@ -112,7 +112,7 @@ function h() {
                             gap: 16,
                             children: [
                                 (0, r.jsx)(u.Z, {
-                                    role: b,
+                                    role: x,
                                     "aria-label": m.intl.string(m.t.mD1oGB),
                                     onClick: j,
                                     disabled: v,
@@ -134,13 +134,13 @@ function h() {
                         children: [
                             (0, r.jsx)(c.Z, {
                                 guildId: t,
-                                role: b,
+                                role: x,
                                 className: p.messageContainer,
                                 theme: "light",
                             }),
                             (0, r.jsx)(c.Z, {
                                 guildId: t,
-                                role: b,
+                                role: x,
                                 className: p.messageContainer,
                                 theme: "dark",
                             }),

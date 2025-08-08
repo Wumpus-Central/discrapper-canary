@@ -63,9 +63,9 @@ function f(e) {
             tagErrors: u = {},
             placeholder: p,
             className: f,
-            maxTags: x,
+            maxTags: b,
         } = e,
-        b = i.useRef(null),
+        x = i.useRef(null),
         j = i.useRef(null),
         v = i.useRef(null),
         _ = (0, m.V)(n),
@@ -82,7 +82,7 @@ function f(e) {
             handleInputBlurEvent: w,
         } = (0, m.Q)(_, {
             scrollerRef: v,
-            mainInputRef: b,
+            mainInputRef: x,
             mainContainerRef: j,
         }),
         {
@@ -92,7 +92,7 @@ function f(e) {
         [L, M] = i.useState(!1),
         G = i.useCallback(() => {
             var e;
-            M(!1), P(), null == (e = b.current) || e.focus({ preventScroll: !0 });
+            M(!1), P(), null == (e = x.current) || e.focus({ preventScroll: !0 });
         }, [P]);
     i.useEffect(() => {
         k !== Z && l(Z);
@@ -112,13 +112,13 @@ function f(e) {
                 if (t) {
                     var n;
                     let t = D.includes(Z[e]);
-                    null == (n = b.current) || n.focus(),
+                    null == (n = x.current) || n.focus(),
                         t
                             ? T(e)
                             : (S(e),
                               setImmediate(() => {
                                   var e;
-                                  null == (e = b.current) || e.blur(),
+                                  null == (e = x.current) || e.blur(),
                                       setTimeout(() => {
                                           var e;
                                           return null == (e = j.current) ? void 0 : e.focus();
@@ -157,7 +157,7 @@ function f(e) {
                     ),
                     (0, r.jsx)("input", {
                         className: a()(g.mainTextInput, { [g.isEditingOtherNodes]: L }),
-                        ref: b,
+                        ref: x,
                         onChange: y,
                         onKeyDownCapture: C,
                         onPaste: O,
@@ -167,12 +167,12 @@ function f(e) {
                     }),
                 ],
             }),
-            null != x &&
+            null != b &&
                 (0, r.jsxs)(s.Text, {
                     variant: "text-xs/normal",
                     color: "text-muted",
                     className: g.maxTags,
-                    children: [null != (t = null == Z ? void 0 : Z.length) ? t : 0, "/", x],
+                    children: [null != (t = null == Z ? void 0 : Z.length) ? t : 0, "/", b],
                 }),
         ],
     });

@@ -20,8 +20,8 @@ var r = n(255367),
     p = n(289393),
     h = n(264451),
     f = n(759178),
-    x = n(462087),
-    b = n(685201),
+    b = n(462087),
+    x = n(685201),
     j = n(981631),
     v = n(198139),
     _ = n(388032),
@@ -61,7 +61,7 @@ let C = (e, t, n, i) => {
                         null != a
                             ? _.intl.formatToPlainString(_.t.I6YOjY, { payoutDate: a })
                             : _.intl.string(_.t.G5ATX1),
-                        (0, r.jsx)(x.Z, { className: O.statusScheduledIcon }),
+                        (0, r.jsx)(b.Z, { className: O.statusScheduledIcon }),
                     ],
                 });
             case v.x_.CANCELED:
@@ -88,7 +88,7 @@ let C = (e, t, n, i) => {
                         ],
                     });
                 return (0, r.jsxs)(r.Fragment, {
-                    children: [_.intl.string(_.t.OtZ5k5), (0, r.jsx)(b.Z, { className: O.statusDeferredIcon })],
+                    children: [_.intl.string(_.t.OtZ5k5), (0, r.jsx)(x.Z, { className: O.statusDeferredIcon })],
                 });
         }
         switch (t) {
@@ -105,7 +105,7 @@ let C = (e, t, n, i) => {
                         null != a
                             ? _.intl.formatToPlainString(_.t.I6YOjY, { payoutDate: a })
                             : _.intl.string(_.t.ubdQTk),
-                        (0, r.jsx)(x.Z, { className: O.statusScheduledIcon }),
+                        (0, r.jsx)(b.Z, { className: O.statusScheduledIcon }),
                     ],
                 });
             case v.jw.PAID:

@@ -13,8 +13,8 @@ var r = n(255367),
     p = n(84613),
     h = n(392885),
     f = n(740903),
-    x = n(464610),
-    b = n(733629),
+    b = n(464610),
+    x = n(733629),
     j = n(598622),
     v = n(921944),
     _ = n(388032),
@@ -34,16 +34,16 @@ function y() {
     let C = (0, j.Q)(n);
     switch (y) {
         case f.u.OVERVIEW:
-            e = (0, r.jsx)(x.Z, { guild: n });
+            e = (0, r.jsx)(b.Z, { guild: n });
             break;
         case f.u.CAPTCHA_AND_RAID_PROTECTION:
-            e = (0, r.jsx)(b.Z, {
+            e = (0, r.jsx)(x.Z, {
                 title: _.intl.string(_.t["53eF5u"]),
                 settings: C[f.u.CAPTCHA_AND_RAID_PROTECTION],
             });
             break;
         case f.u.DM_AND_SPAM_PROTECTION:
-            e = (0, r.jsx)(b.Z, {
+            e = (0, r.jsx)(x.Z, {
                 title: _.intl.string(_.t.O0SfFx),
                 settings: C[f.u.DM_AND_SPAM_PROTECTION],
             });
@@ -52,7 +52,7 @@ function y() {
             e = (0, r.jsx)(d.Z, { guildId: n.id });
             break;
         case f.u.PERMISSIONS:
-            e = (0, r.jsx)(b.Z, {
+            e = (0, r.jsx)(x.Z, {
                 title: _.intl.string(_.t.BXoNiY),
                 settings: C[f.u.PERMISSIONS],
             });

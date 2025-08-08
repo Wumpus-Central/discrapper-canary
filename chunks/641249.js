@@ -14,7 +14,7 @@ var i = n(442837),
     p = n(798680),
     h = n(388032),
     f = n(301849);
-function x(e) {
+function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -39,7 +39,7 @@ function x(e) {
     }
     return e;
 }
-function b(e, t) {
+function x(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -98,7 +98,7 @@ function j() {
                               return (n) =>
                                   (0, r.jsx)(
                                       t,
-                                      b(x({}, n), {
+                                      x(b({}, n), {
                                           onConfirmDelete: () => {
                                               E(e.id), n.onClose();
                                           },
@@ -115,7 +115,7 @@ function j() {
                         return (n) =>
                             (0, r.jsx)(
                                 e,
-                                b(x({}, n), {
+                                x(b({}, n), {
                                     guildId: t,
                                     initialTierEmojiIds: j,
                                     onSubmit: I,

@@ -16,8 +16,8 @@ function f(e) {
     let t,
         n = (0, c.Ob)(e),
         f = null == e ? void 0 : e.features.has(p.oNc.CREATOR_MONETIZABLE_PROVISIONAL),
-        x = null == e ? void 0 : e.features.has(p.oNc.CREATOR_MONETIZABLE),
-        b = (0, i.e7)([s.default], () => {
+        b = null == e ? void 0 : e.features.has(p.oNc.CREATOR_MONETIZABLE),
+        x = (0, i.e7)([s.default], () => {
             let t = s.default.getCurrentUser();
             return null != e && (0, a.eM)(e, t);
         }),
@@ -42,10 +42,10 @@ function f(e) {
               requestCooldownDuration: S,
               creatorRevenuePolicyUrl: o.Z.getArticleURL(p.BhN.CREATOR_POLICY),
           }));
-    let D = n && b && !1 === x,
+    let D = n && x && !1 === b,
         A = n && !1 === f,
         k = (0, g.f)(),
-        L = E && R && b ? h.intl.format(h.t.wbVIUF, {}) : void 0;
+        L = E && R && x ? h.intl.format(h.t.wbVIUF, {}) : void 0;
     return (
         r.useEffect(() => {
             D && N();
@@ -53,7 +53,7 @@ function f(e) {
         {
             resubmittingEnableRequest: v,
             resubmissionError: j,
-            isGuildOwner: b,
+            isGuildOwner: x,
             createEnableRequest: _,
             resubmittedRequest: O,
             eligibilityLoading: y,

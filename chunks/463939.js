@@ -13,8 +13,8 @@ var r,
     p = n(462087),
     h = n(685201),
     f = n(766434),
-    x = n(755930),
-    b = n(334820),
+    b = n(755930),
+    x = n(334820),
     j = n(198139),
     v = n(388032),
     _ = n(282427);
@@ -134,7 +134,7 @@ function C(e) {
     }
     return null;
 }
-let N = (0, x.i$)({
+let N = (0, b.i$)({
         key: "AMOUNT ",
         cellClassName: _.amountColumn,
         renderHeader() {
@@ -153,18 +153,18 @@ let N = (0, x.i$)({
                         ),
                     ),
             });
-            return (0, l.jsxs)(x.qN, {
+            return (0, l.jsxs)(b.qN, {
                 children: [v.intl.string(v.t.VodAGR), e],
             });
         },
         getAmount: (e) => e.amount,
     }),
-    I = (0, b.rM)(
+    I = (0, x.rM)(
         [
-            (0, b.Fd)({
+            (0, x.Fd)({
                 key: "PERIOD",
                 cellClassName: _.periodColumn,
-                renderHeader: () => (0, l.jsx)(x.qN, { children: v.intl.string(v.t.fThnXV) }),
+                renderHeader: () => (0, l.jsx)(b.qN, { children: v.intl.string(v.t.fThnXV) }),
                 renderContent: (e) => (0, l.jsx)(y, { dateUtc: e.periodStartingAt }),
                 renderExpandedContent(e, t) {
                     o()(null != t, "CellProps should always be provided");
@@ -172,7 +172,7 @@ let N = (0, x.i$)({
                     return (0, l.jsx)(n, { listingId: e.listingId });
                 },
             }),
-            (0, b.Fd)(
+            (0, x.Fd)(
                 ((r = O({}, N)),
                 (i = i =
                     {
@@ -193,7 +193,7 @@ let N = (0, x.i$)({
                       }),
                 r),
             ),
-            (0, x.wy)({
+            (0, b.wy)({
                 key: "STATUS ",
                 cellClassName: _.statusColumn,
                 renderHeader() {
@@ -212,12 +212,12 @@ let N = (0, x.i$)({
                                 ),
                             ),
                     });
-                    return (0, l.jsxs)(x.qN, {
+                    return (0, l.jsxs)(b.qN, {
                         children: [v.intl.string(v.t.oypxx8), e],
                     });
                 },
                 renderContent: (e) =>
-                    (0, l.jsx)(x.bL, {
+                    (0, l.jsx)(b.bL, {
                         className: _.statusCell,
                         children: (0, l.jsx)(C, { item: e }),
                     }),
@@ -227,7 +227,7 @@ let N = (0, x.i$)({
     );
 function E(e) {
     let { ListingIdLabel: t, payoutsByPeriod: n } = e,
-        { cellProps: r, data: i } = (0, b.GN)(n, {
+        { cellProps: r, data: i } = (0, x.GN)(n, {
             generateExpandedRows: (e) =>
                 Object.keys(e.ppgs).map((t) => {
                     var n;
@@ -239,7 +239,7 @@ function E(e) {
                 }),
         }),
         s = a.useMemo(() => O({ ListingIdLabel: t }, r), [r, t]);
-    return (0, l.jsx)(x.ZP, {
+    return (0, l.jsx)(b.ZP, {
         columns: I,
         data: i,
         cellProps: s,

@@ -15,8 +15,8 @@ var r = n(255367),
 function f(e) {
     let { guild: t, canManageGuild: n } = e,
         f = t.features.has(d.oNc.BANNER),
-        x = t.features.has(d.oNc.ANIMATED_BANNER),
-        b = f && n,
+        b = t.features.has(d.oNc.ANIMATED_BANNER),
+        x = f && n,
         { analyticsLocations: j } = (0, a.ZP)(),
         v = i.useCallback(
             (e, n) => {
@@ -47,10 +47,10 @@ function f(e) {
                               id: t.id,
                               banner: e,
                           },
-                          x,
+                          b,
                       )
                     : null,
-            disabled: !b,
+            disabled: !x,
             onChange: v,
             hint: p.intl.string(p.t.uPvxqK),
             onOpenImageSelectModal: () =>
@@ -67,7 +67,7 @@ function f(e) {
                     },
                     analyticsLocations: j,
                 }),
-            enabled: b,
+            enabled: x,
         });
     return f
         ? O

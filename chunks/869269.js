@@ -13,8 +13,8 @@ var r = n(255367),
     p = n(975331),
     h = n(231610),
     f = n(388032),
-    x = n(301849),
-    b = n(948695);
+    b = n(301849),
+    x = n(948695);
 function j(e) {
     var t, n;
     let {
@@ -41,20 +41,20 @@ function j(e) {
         P = null != (t = null == I ? void 0 : I.published) && t,
         w = null != (n = null == I ? void 0 : I.archived) && n;
     return (0, r.jsxs)("div", {
-        className: b.body,
+        className: x.body,
         children: [
             null != O && (0, r.jsx)(d.Z, { children: O.getAnyErrorMessage() }),
             !P &&
                 !E &&
                 !w &&
                 (0, r.jsxs)("div", {
-                    className: b.publishListing,
+                    className: x.publishListing,
                     children: [
                         (0, r.jsxs)("div", {
                             children: [
                                 (0, r.jsx)(a.X6q, {
                                     variant: "heading-md/semibold",
-                                    className: b.publishListingInfoHeader,
+                                    className: x.publishListingInfoHeader,
                                     children: f.intl.string(f.t.WOlcS0),
                                 }),
                                 (0, r.jsx)(a.R94, {
@@ -65,7 +65,7 @@ function j(e) {
                         }),
                         (0, r.jsx)(a.ua7, {
                             shouldShow: T,
-                            tooltipClassName: x.autoWidth,
+                            tooltipClassName: b.autoWidth,
                             text: f.intl.string(f.t.v7lRIi),
                             children: (e) => {
                                 var t, n;

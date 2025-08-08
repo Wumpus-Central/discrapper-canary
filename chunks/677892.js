@@ -1,5 +1,5 @@
 n.d(t, {
-    $$: () => b,
+    $$: () => x,
     P_: () => _,
     ap: () => v,
     ku: () => j,
@@ -128,14 +128,14 @@ function f(e) {
         ],
     });
 }
-function x(e) {
+function b(e) {
     let t = (0, l.e7)([s.Z], () => s.Z.getDefaultChannelIds(e)),
         n = i.useMemo(() => new Set(t), [t]),
         [r, a] = (0, o.VF)(e, n);
     return a.length >= g.md && r.length >= g.X;
 }
-function b(e) {
-    let t = x(e),
+function x(e) {
+    let t = b(e),
         n = (0, m.O4)(e);
     return t || n;
 }
@@ -143,10 +143,10 @@ function j(e) {
     let { guildId: t, onEdit: n, disableGoodStatus: c } = e,
         d = (0, l.Wu)([s.Z], () => s.Z.getDefaultChannelIds(t)),
         u = (0, l.e7)([s.Z], () => (0, o.kl)(t, s.Z.getDefaultChannelIds(t), s.Z.getOnboardingPrompts(t)).length),
-        b = i.useMemo(() => new Set(d), [d]),
-        [, j] = (0, o.VF)(t, b),
+        x = i.useMemo(() => new Set(d), [d]),
+        [, j] = (0, o.VF)(t, x),
         v = j.length,
-        _ = x(t),
+        _ = b(t),
         O = (0, m.O4)(t),
         y = (0, l.e7)([s.Z], () => s.Z.isAdvancedMode(t)),
         C = y
@@ -179,9 +179,9 @@ function v(e) {
         d = (0, l.Wu)([s.Z], () => s.Z.getOnboardingPrompts(t)),
         u = d.length,
         [m, g] = (0, o.dF)(t, d, c),
-        x = m.length,
-        b = m.length + g.length,
-        j = (x / b) * 100,
+        b = m.length,
+        x = m.length + g.length,
+        j = (b / x) * 100,
         v = (0, l.e7)([s.Z], () => s.Z.isAdvancedMode(t)),
         _ = u > 0,
         O = "none";
@@ -190,8 +190,8 @@ function v(e) {
         (0, r.jsx)(f, {
             title: v ? p.intl.string(p.t.AGjtFh) : p.intl.string(p.t.dqCzoa),
             description: p.intl.format(p.t.iuNisr, {
-                numChannels: x,
-                numTotalChannels: b,
+                numChannels: b,
+                numTotalChannels: x,
                 channelsHook: (e, t) =>
                     (0, r.jsx)(
                         "span",
@@ -217,25 +217,25 @@ function _(e) {
     let { guildId: t, onEdit: n, disableGoodStatus: o } = e,
         m = (0, l.e7)([u.Z], () => u.Z.getSettings()),
         g = (0, l.e7)([s.Z], () => s.Z.getEnabled(t)),
-        x = (0, c.uo)(m),
-        b = m.enabled,
+        b = (0, c.uo)(m),
+        x = m.enabled,
         j = i.useCallback(() => {
-            (0, d.To)(t, !b);
-        }, [t, b]),
+            (0, d.To)(t, !x);
+        }, [t, x]),
         v = !(0, c.av)(m),
         _ = "none";
-    v && (x && !o ? (_ = "good") : x || (_ = "required"));
+    v && (b && !o ? (_ = "good") : b || (_ = "required"));
     let O = p.intl.string(p.t.GMOwOD);
-    x ? v || (O = p.intl.string(p.t.wHOoyM)) : (O = p.intl.string(p.t.wXFbgY));
+    b ? v || (O = p.intl.string(p.t.wHOoyM)) : (O = p.intl.string(p.t.wXFbgY));
     let y = null;
     return (
         v &&
             g &&
             (y = (0, r.jsx)(a.rsf, {
                 className: h.inlineSwitch,
-                checked: b,
+                checked: x,
                 onChange: j,
-                disabled: !x,
+                disabled: !b,
             })),
         (0, r.jsx)(f, {
             title: p.intl.string(p.t.mRHqsr),

@@ -167,7 +167,7 @@ let W = i.memo(function () {
     }, []);
     let e = (0, h.T)("AppTitleBar"),
         t = F((e) => e.isOpen),
-        { notificationCenterVariant: n, entrypoint: l } = y.Lk.useExperiment({ location: "AppTitleBar" }),
+        { notificationCenterVariant: n, entrypoint: l } = (0, y.pN)({ location: "AppTitleBar" }),
         { hasBugReporterAccess: a } = d.Z.useExperiment({ location: "HeaderBar" }, { autoTrackExposure: !1 }),
         u = !t && e,
         f = null !== n && l === y.u3.TITLE_BAR_LEFT,

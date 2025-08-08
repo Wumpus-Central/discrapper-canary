@@ -240,7 +240,7 @@ let ex = (0, u.Un)({
     },
     eV = i.memo(function () {
         let { guildId: e, channelId: t } = (0, ei.Z)(),
-            { notificationCenterVariant: n } = Q.Lk.useExperiment({ location: "Sidebar" }),
+            { notificationCenterVariant: n } = (0, Q.pN)({ location: "Sidebar" }),
             i = (0, p.e7)([eh.Z], () => (null != t ? t : eh.Z.getChannelId(e)));
         return window.location.pathname.startsWith(eS.Z5c.CHANNEL(eS.STv))
             ? ("sidebar" !== n && (0, eo.dL)(eu.Z.defaultRoute), (0, r.jsx)(J.Z, { includePanelSpacing: !0 }))
@@ -566,7 +566,7 @@ function e4() {
             );
         })(),
         h = (0, p.e7)([q.Z], () => q.Z.getIsOpen()),
-        { notificationCenterVariant: f } = Q.Lk.useExperiment({ location: "Sidebar" }),
+        { notificationCenterVariant: f } = (0, Q.pN)({ location: "Sidebar" }),
         g = (0, s.$B)([
             eS.Z5c.CHANNEL(eS.ME, ea.Hw.channelId()),
             eS.Z5c.CHANNEL(ea.Hw.guildId(), ea.Hw.channelId({ optional: !0 }), ":messageId?"),

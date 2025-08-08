@@ -2,8 +2,8 @@ n.d(t, { Z: () => c });
 var r = n(255367);
 n(73800);
 var l = n(793030),
-    o = n(313201),
-    i = n(840367),
+    i = n(313201),
+    o = n(840367),
     a = n(347694);
 function c(e) {
     var { children: t } = e,
@@ -16,25 +16,25 @@ function c(e) {
                     var n,
                         r,
                         l = {},
-                        o = Object.keys(e);
-                    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (l[n] = e[n]);
+                        i = Object.keys(e);
+                    for (r = 0; r < i.length; r++) (n = i[r]), t.indexOf(n) >= 0 || (l[n] = e[n]);
                     return l;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var o = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < o.length; r++)
-                    (n = o[r]),
+                var i = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < i.length; r++)
+                    (n = i[r]),
                         !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]);
             }
             return l;
         })(e, ["children"]);
-    let c = (0, o.Dt)();
+    let c = (0, i.Dt)();
     return (0, r.jsx)("section", {
         className: a.container,
         "aria-labelledby": c,
         children: (0, r.jsx)(l.y5, {
             component: (0, r.jsx)(
-                i.Z,
+                o.Z,
                 (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},

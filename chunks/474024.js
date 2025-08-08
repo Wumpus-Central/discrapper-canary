@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b });
+n.d(t, { Z: () => x });
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -13,33 +13,33 @@ var r = n(255367),
     p = n(436879),
     h = n(981631),
     f = n(388032),
-    x = n(951767);
-function b(e) {
+    b = n(951767);
+function x(e) {
     var t;
     let { profile: n, canManageGuild: l } = e,
-        b = n.id,
+        x = n.id,
         j = s.Y.VISIBLE.has(n.visibility),
         v = (0, o.e7)([d.Z], () => {
             var e;
-            return (null == (e = d.Z.getProfile(b)) ? void 0 : e.visibility) === u.k.PUBLIC_WITH_RECRUITMENT;
-        }, [b]),
+            return (null == (e = d.Z.getProfile(x)) ? void 0 : e.visibility) === u.k.PUBLIC_WITH_RECRUITMENT;
+        }, [x]),
         _ = i.useRef(null);
     (0, p.Z)(_, h.KsC.PROFILE_VISIBILITY);
     let O = i.useCallback(() => {
             j
-                ? g.Z.updateGuildProfile(b, { visibility: u.k.RESTRICTED })
-                : g.Z.updateGuildProfile(b, { visibility: v ? u.k.PUBLIC_WITH_RECRUITMENT : u.k.PUBLIC });
-        }, [b, v, j]),
+                ? g.Z.updateGuildProfile(x, { visibility: u.k.RESTRICTED })
+                : g.Z.updateGuildProfile(x, { visibility: v ? u.k.PUBLIC_WITH_RECRUITMENT : u.k.PUBLIC });
+        }, [x, v, j]),
         y = i.useCallback(() => {
             g.Z.setSection(h.pNK.ACCESS, h.KsC.ACCESS_DISCOVERABLE);
         }, []),
         C = null == (t = n.features) ? void 0 : t.includes(h.oNc.DISCOVERABLE);
     return (0, r.jsxs)(c.hjN, {
-        className: x.twoColumnContainer,
+        className: b.twoColumnContainer,
         ref: _,
         children: [
             (0, r.jsxs)("div", {
-                className: x.column,
+                className: b.column,
                 children: [
                     (0, r.jsx)(c.j7V, {
                         onChange: O,
@@ -72,9 +72,9 @@ function b(e) {
                 ],
             }),
             (0, r.jsx)("div", {
-                className: a()(x.column, { [x.profileViewDisabled]: j }),
+                className: a()(b.column, { [b.profileViewDisabled]: j }),
                 children: (0, r.jsx)(m.Z, {
-                    guildId: b,
+                    guildId: x,
                     name: null,
                 }),
             }),

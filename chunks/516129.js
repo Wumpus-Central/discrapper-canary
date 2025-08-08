@@ -61,11 +61,11 @@ function f(e) {
             return i;
         })(e, ["enabled", "imageClassName", "iconWrapperClassName"]);
     let f = (0, o.ZP)(),
-        x = (0, a.wj)(f) ? p : h,
-        b = {
+        b = (0, a.wj)(f) ? p : h,
+        x = {
             height: 18,
             width: 18,
-            color: (0, c.Lq)(x),
+            color: (0, c.Lq)(b),
         };
     return (0, r.jsx)(
         d.Z,
@@ -78,8 +78,8 @@ function f(e) {
                 imageClassName: l()(n, m.avatarUploaderInnerSquare, { [m.avatarUploaderInnerSquareDisabled]: !t }),
                 icon:
                     null != u.image && "" !== u.image
-                        ? (0, r.jsx)(s.vdY, g({ size: "custom" }, b))
-                        : (0, r.jsx)(s.FmF, g({ size: "custom" }, b)),
+                        ? (0, r.jsx)(s.vdY, g({ size: "custom" }, x))
+                        : (0, r.jsx)(s.FmF, g({ size: "custom" }, x)),
                 iconClassName: l()(m.avatarUploadIcon, m.hideDefaultIcon),
                 iconWrapperClassName: i,
                 showIcon: !0,

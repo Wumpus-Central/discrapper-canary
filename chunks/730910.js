@@ -13,8 +13,8 @@ var r = n(255367),
     p = n(585483),
     h = n(999382),
     f = n(743475),
-    x = n(983135),
-    b = n(8426),
+    b = n(983135),
+    x = n(8426),
     j = n(969632),
     v = n(570961),
     _ = n(208665),
@@ -139,7 +139,7 @@ function A(e) {
                     else if (D === y.PG.CUSTOMIZATION_QUESTIONS) await (0, v.rS)(t, { ignoreDefaultPrompt: !0 });
                     else if (D === y.PG.HOME_SETTINGS) {
                         let e = j.Z.getSettings();
-                        await (0, b.oo)(t.id, e);
+                        await (0, x.oo)(t.id, e);
                     }
                 } catch (e) {
                     return !1;
@@ -155,8 +155,8 @@ function A(e) {
                     skip: !k,
                 }),
             ),
-                (0, x.Nb)((0, y.lg)(D)),
-                (await q()) && (0, x.IG)(h, D);
+                (0, b.Nb)((0, y.lg)(D)),
+                (await q()) && (0, b.IG)(h, D);
         },
         Q = async () => {
             g.default.track(
@@ -167,7 +167,7 @@ function A(e) {
                     skip: !1,
                 }),
             ),
-                (await q()) && (0, x.Wy)(h, D);
+                (await q()) && (0, b.Wy)(h, D);
         },
         J = null;
     G &&

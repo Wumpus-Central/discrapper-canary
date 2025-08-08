@@ -21,7 +21,7 @@ function p(e) {
         f = i.useCallback(() => {
             (0, o.Z)(n, a.Z.GUILD_POWERUPS_GUILD_SETTINGS_TAGS, "guildTagsBadgePacks"), c.Z.close();
         }, [n]),
-        x = (0, s.Z)();
+        b = (0, s.Z)();
     return (0, r.jsxs)("div", {
         className: t,
         children: [
@@ -30,7 +30,7 @@ function p(e) {
                 children: m.intl.string(u.default.pb7lpK),
             }),
             (0, r.jsx)(d.g, {
-                badgeCollection: x,
+                badgeCollection: b,
                 handleBoostUpsellClick: f,
                 onBadgeClicked: h,
                 selectedBadge: p,

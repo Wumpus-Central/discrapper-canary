@@ -11,8 +11,8 @@ var r = n(255367),
 let m = i.memo(function (e) {
     let { rule: t, persistEdit: n = !1, initWithEdit: m = !1 } = e,
         { hasChanges: g, editingRule: p, createNewEditingRule: h, setEditingRule: f } = (0, s.V)(),
-        { isLoading: x } = (0, s.w)(),
-        [b] = i.useState(() => !(0, l.Vb)(t)),
+        { isLoading: b } = (0, s.w)(),
+        [x] = i.useState(() => !(0, l.Vb)(t)),
         j = (null == p ? void 0 : p.id) === t.id || n,
         v = (0, a.U)(null == t ? void 0 : t.id),
         _ = j && null != p ? p : t,
@@ -22,9 +22,9 @@ let m = i.memo(function (e) {
         }, [t.guildId, t.triggerType, h]),
         C = i.useCallback(
             (e) => {
-                x || f(e, !0);
+                b || f(e, !0);
             },
-            [x, f],
+            [b, f],
         );
     i.useEffect(() => {
         m && f(t, !0);
@@ -41,7 +41,7 @@ let m = i.memo(function (e) {
     return (0, r.jsx)(d.Z, {
         renderHeader: (0, r.jsx)(u.Z, {
             rule: _,
-            forceSetup: b && !j && !v,
+            forceSetup: x && !j && !v,
             triggerType: t.triggerType,
             isEditMode: j,
             isDefaultRule: v,
@@ -55,7 +55,7 @@ let m = i.memo(function (e) {
             j &&
             (0, r.jsx)(c.Z, {
                 rule: _,
-                isLoading: x,
+                isLoading: b,
                 onChangeRule: C,
             }),
     });

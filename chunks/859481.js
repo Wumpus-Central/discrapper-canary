@@ -13,8 +13,8 @@ var r = n(255367),
     p = n(621319),
     h = n(770270),
     f = n(70086),
-    x = n(949640),
-    b = n(927160),
+    b = n(949640),
+    x = n(927160),
     j = n(981631),
     v = n(30513),
     _ = n(388032),
@@ -74,7 +74,7 @@ function C(e) {
                               : null,
                       ],
                   }),
-                  (0, r.jsx)(b.Z, {
+                  (0, r.jsx)(x.Z, {
                       value: n,
                       onChange: m,
                       error: c,
@@ -96,14 +96,14 @@ function C(e) {
 function N(e) {
     let { guild: t, vanityURLCode: n, vanityURLUses: a, originalVanityURLCode: s, errorDetails: d } = e,
         { analyticsLocations: p } = (0, c.ZP)(),
-        b = (0, u.g1)(t.id, "GuildSettingsBoostPerks"),
+        x = (0, u.g1)(t.id, "GuildSettingsBoostPerks"),
         _ = i.useCallback(
             (e) => {
                 e.preventDefault(),
                     e.stopPropagation(),
-                    b
+                    x
                         ? (g.Z.close(), (0, m.Z)(t.id, o.Z.GUILD_POWERUPS_GUILD_SETTINGS_VANITY_URL, l.A$))
-                        : (0, x.E6)({
+                        : (0, b.E6)({
                               guild: t,
                               analyticsLocations: p,
                               analyticsSection: j.jXE.GUILD_SETTINGS_VANITY_URL,
@@ -112,7 +112,7 @@ function N(e) {
                               targetPremiumGuildTier: j.Eu4.TIER_3,
                           });
             },
-            [p, t, b],
+            [p, t, x],
         );
     return (0, r.jsxs)(r.Fragment, {
         children: [

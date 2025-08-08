@@ -172,7 +172,7 @@ function U(e) {
     (0, h.ZP)(() => {
         var e;
         u.Z.dispatch({ type: "NOTIFICATIONS_INBOX_OPEN" });
-        let t = v.Lk.getCurrentConfig({ location: "NotificationsInboxSidebar" }).notificationCenterVariant,
+        let t = (0, v.Ag)({ location: "NotificationsInboxSidebar" }).notificationCenterVariant,
             n = null == (e = x.Z.getDevOverrides().navOnClick) || e;
         if (t !== v.jP.SIDEBAR || !1 === n) return;
         let { message: r, isUnread: i } = (function (e, t) {
@@ -219,7 +219,7 @@ function U(e) {
         (0, h.zq)(() => {
             u.Z.dispatch({ type: "NOTIFICATIONS_INBOX_CLOSE" });
         });
-    let { filterStyle: Q } = v.Lk.useExperiment({ location: "NotificationsInboxSidebar" }),
+    let { filterStyle: Q } = (0, v.pN)({ location: "NotificationsInboxSidebar" }),
         { entrypoints: J } = (0, g._k)({ location: "NotificationsInboxSidebar" }),
         $ = Q === v.v8.DROPDOWN && p !== A.V5.ALL,
         ee = (0, A.H_)();

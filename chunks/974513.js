@@ -1,7 +1,7 @@
 n.d(t, {
-    O4: () => x,
+    O4: () => b,
     OA: () => f,
-    Wu: () => b,
+    Wu: () => x,
 }),
     n(388685);
 var r = n(255367),
@@ -62,7 +62,7 @@ function f(e, t) {
     let n = (0, l.Wu)([u.Z], () => (0, c.kl)(e, t, u.Z.editedOnboardingPrompts));
     return [(0, l.Wu)([u.Z], () => (0, c.kl)(e, t, u.Z.editedOnboardingPrompts, c.V7)), n];
 }
-function x(e) {
+function b(e) {
     let t = (0, l.e7)([o.Z], () => o.Z.isAdvancedMode(e)),
         [n, r] = (function (e) {
             let t = (0, l.Wu)([o.Z], () => (0, c.kl)(e, o.Z.getDefaultChannelIds(e), o.Z.getOnboardingPrompts(e)));
@@ -73,7 +73,7 @@ function x(e) {
         })(e);
     return !!t && r.length >= m.md && n.length >= m.X;
 }
-function b(e) {
+function x(e) {
     let { guildId: t, className: n } = e,
         c = (0, l.e7)([o.Z], () => o.Z.isAdvancedMode(t)),
         u = i.useCallback(() => {

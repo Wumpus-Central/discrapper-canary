@@ -13,8 +13,8 @@ var r = n(255367),
     p = n(824990),
     h = n(981631),
     f = n(388032),
-    x = n(773100);
-let b = [],
+    b = n(773100);
+let x = [],
     j = function (e) {
         let { guildId: t } = e,
             n = (0, a.e7)([d.Z], () => d.Z.getGuild(t)),
@@ -23,7 +23,7 @@ let b = [],
                 return null !=
                     (t = null == (e = g.Z.getSettings().resourceChannels) ? void 0 : e.map((e) => e.channelId))
                     ? t
-                    : b;
+                    : x;
             }),
             v = (0, a.Wu)([g.Z], () => g.Z.getDismissedSuggestedChannelIds(t)),
             _ = (0, a.e7)([c.ZP], () => c.ZP.getSelectableChannels(t)),
@@ -52,14 +52,14 @@ let b = [],
             : (0, r.jsxs)(r.Fragment, {
                   children: [
                       (0, r.jsxs)("div", {
-                          className: x.suggestedChannelsSection,
+                          className: b.suggestedChannelsSection,
                           children: [
                               (0, r.jsx)(s.Text, {
                                   variant: "text-md/semibold",
                                   children: f.intl.string(f.t.WThgAQ),
                               }),
                               (0, r.jsxs)("div", {
-                                  className: x.suggestedChannelsHeader,
+                                  className: b.suggestedChannelsHeader,
                                   children: [
                                       (0, r.jsx)(s.Text, {
                                           variant: "text-xs/medium",
@@ -67,13 +67,13 @@ let b = [],
                                           children: f.intl.string(f.t.YtNI8P),
                                       }),
                                       (0, r.jsxs)(s.P3F, {
-                                          className: x.suggestedChannelsDismiss,
+                                          className: b.suggestedChannelsDismiss,
                                           onClick: y,
                                           children: [
                                               (0, r.jsx)(s.dz2, {
                                                   size: "md",
                                                   color: "currentColor",
-                                                  className: x.suggestedChannelsDismissCheck,
+                                                  className: b.suggestedChannelsDismissCheck,
                                               }),
                                               (0, r.jsx)(s.Text, {
                                                   variant: "text-xs/semibold",
@@ -85,7 +85,7 @@ let b = [],
                                   ],
                               }),
                               (0, r.jsx)("div", {
-                                  className: x.suggestedChannels,
+                                  className: b.suggestedChannels,
                                   children: O.map((e, t) =>
                                       (0, r.jsx)(
                                           p.Z,
@@ -99,7 +99,7 @@ let b = [],
                               }),
                           ],
                       }),
-                      (0, r.jsx)("div", { className: x.sectionSeparator }),
+                      (0, r.jsx)("div", { className: b.sectionSeparator }),
                   ],
               });
     };

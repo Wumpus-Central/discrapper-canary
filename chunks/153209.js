@@ -35,33 +35,33 @@ function E(e) {
 }
 function S(e) {
     let { setTab: t, badgeState: n, closePopout: l } = e,
-        { initialized: c, items: C, loading: j, loadMore: S } = (0, p.y6)(),
-        x = (0, s.e7)([u.Z], () => u.Z.localItems),
-        I = (0, g.Us)({ location: "ForYou" }),
-        P = i.useMemo(() => [...[...C, ...x].sort((e, t) => -1 * O.default.compare(e.id, t.id))], [C, x]),
-        N = C.length > 0 ? C[0] : null,
-        w = m.d$.useSetting(),
-        Z = i.useMemo(() => {
-            if (null != N && 0 >= O.default.compare(N.id, w)) return !1;
-            for (let e of P) {
-                if (0 >= O.default.compare(e.id, w)) break;
-                if (!(0, h.r)(e, w)) return !0;
+        { initialized: C, items: j, loading: S, loadMore: x } = (0, p.y6)(),
+        I = (0, s.e7)([u.Z], () => u.Z.localItems),
+        P = (0, g.Us)({ location: "ForYou" }),
+        N = i.useMemo(() => [...[...j, ...I].sort((e, t) => -1 * O.default.compare(e.id, t.id))], [j, I]),
+        w = j.length > 0 ? j[0] : null,
+        Z = m.d$.useSetting(),
+        T = i.useMemo(() => {
+            if (null != w && 0 >= O.default.compare(w.id, Z)) return !1;
+            for (let e of N) {
+                if (0 >= O.default.compare(e.id, Z)) break;
+                if (!(0, h.r)(e, Z)) return !0;
             }
             return !1;
-        }, [N, w, P]);
-    return (0, r.jsxs)("div", {
-        className: o()(v.container, { [v.widerInbox]: I }),
-        children: [
-            (0, r.jsx)(_.Z, {
+        }, [w, Z, N]);
+    return (0, r.jsx)("div", {
+        className: o()(v.container, { [v.widerInbox]: P }),
+        children: (0, r.jsx)(c.y5t, {
+            component: (0, r.jsx)(_.Z, {
                 tab: a.X.FOR_YOU,
                 setTab: t,
                 badgeState: n,
                 closePopout: l,
-                children: Z
+                children: T
                     ? (0, r.jsx)(E, {
                           onClick: () => {
-                              null != N &&
-                                  (m.d$.updateSetting(N.id),
+                              null != w &&
+                                  (m.d$.updateSetting(w.id),
                                   b.default.track(y.rMx.NOTIFICATION_CENTER_ACTION, {
                                       action_type: d.ud.MARK_ALL_READ,
                                   }));
@@ -69,12 +69,12 @@ function S(e) {
                       })
                     : null,
             }),
-            (0, r.jsx)(f.Z, {
-                initialized: c,
-                items: P,
-                loading: j,
-                loadMore: S,
+            children: (0, r.jsx)(f.Z, {
+                initialized: C,
+                items: N,
+                loading: S,
+                loadMore: x,
             }),
-        ],
+        }),
     });
 }

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x });
+n.d(t, { Z: () => b });
 var r = n(255367);
 n(73800);
 var i = n(120356),
@@ -32,9 +32,9 @@ function f(e) {
         ),
     });
 }
-function x(e) {
+function b(e) {
     let { guildId: t, showCTA: n, responsive: i = !0 } = e,
-        x = [
+        b = [
             [p.intl.string(p.t["73h51N"]), p.intl.string(p.t["gbjs//"])],
             [p.intl.string(p.t.mCoH0d), p.intl.string(p.t["l/BuSE"])],
             [p.intl.string(p.t.psQktr), p.intl.string(p.t.nMhIZW)],
@@ -50,7 +50,7 @@ function x(e) {
                     children: [
                         (0, r.jsx)("div", {
                             className: h.pillContainer,
-                            children: x.map((e, t) => (0, r.jsx)(f, { pills: e }, "pill-row-".concat(t))),
+                            children: b.map((e, t) => (0, r.jsx)(f, { pills: e }, "pill-row-".concat(t))),
                         }),
                         (0, r.jsxs)("div", {
                             className: h.ctaContent,

@@ -2,13 +2,13 @@ n.d(t, { Z: () => d });
 var r = n(255367);
 n(73800);
 var l = n(120356),
-    o = n.n(l),
-    i = n(481060),
+    i = n.n(l),
+    o = n(481060),
     a = n(313201),
     c = n(318374),
     s = n(448968);
 function d(e) {
-    var { label: t, visuallyHideLabel: n = !1, className: l, size: d = i.EFr.SIZE_16, maxUsers: u = 4 } = e,
+    var { label: t, visuallyHideLabel: n = !1, className: l, size: d = o.EFr.SIZE_16, maxUsers: u = 4 } = e,
         f = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -18,21 +18,21 @@ function d(e) {
                     var n,
                         r,
                         l = {},
-                        o = Object.keys(e);
-                    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (l[n] = e[n]);
+                        i = Object.keys(e);
+                    for (r = 0; r < i.length; r++) (n = i[r]), t.indexOf(n) >= 0 || (l[n] = e[n]);
                     return l;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var o = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < o.length; r++)
-                    (n = o[r]),
+                var i = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < i.length; r++)
+                    (n = i[r]),
                         !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]);
             }
             return l;
         })(e, ["label", "visuallyHideLabel", "className", "size", "maxUsers"]);
     let p = (0, a.Dt)();
     return (0, r.jsxs)("div", {
-        className: o()(l, s.container),
+        className: i()(l, s.container),
         children: [
             (0, r.jsx)(
                 c.Z,
@@ -71,11 +71,11 @@ function d(e) {
                 ),
             ),
             n
-                ? (0, r.jsx)(i.nn4, {
+                ? (0, r.jsx)(o.nn4, {
                       id: p,
                       children: t,
                   })
-                : (0, r.jsx)(i.Text, {
+                : (0, r.jsx)(o.Text, {
                       variant: "text-xs/normal",
                       color: "text-secondary",
                       id: p,

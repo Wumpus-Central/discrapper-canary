@@ -1,8 +1,8 @@
 n.d(t, { Z: () => m }), n(388685);
 var r = n(255367),
     l = n(73800),
-    o = n(481060),
-    i = n(785717),
+    i = n(481060),
+    o = n(785717),
     a = n(128156),
     c = n(311044),
     s = n(408986),
@@ -14,8 +14,8 @@ function p(e) {
         user: t,
         currentUser: n,
         section: l,
-        subsection: o,
-        displayProfile: i,
+        subsection: i,
+        displayProfile: o,
         guildId: f,
         channelId: p,
         onClose: m,
@@ -24,10 +24,10 @@ function p(e) {
         ? (0, r.jsx)(a.Z, {
               user: t,
               currentUser: n,
-              displayProfile: i,
+              displayProfile: o,
               guildId: f,
               channelId: p,
-              subsection: o,
+              subsection: i,
               onClose: m,
           })
         : l === u.oh.MUTUAL_FRIENDS
@@ -60,11 +60,11 @@ function m(e) {
             channelId: m,
             items: g,
             initialSection: b,
-            initialSubsection: j,
-            onClose: h,
+            initialSubsection: h,
+            onClose: j,
         } = e,
-        { trackUserProfileAction: y } = (0, i.KZ)(),
-        [{ section: O, subsection: x, text: v }, _] = l.useState(
+        { trackUserProfileAction: y } = (0, o.KZ)(),
+        [{ section: x, subsection: O, text: v }, _] = l.useState(
             ((n = (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
@@ -99,7 +99,7 @@ function m(e) {
                     ? t
                     : g[0],
             )),
-            (a = a = { subsection: j }),
+            (a = a = { subsection: h }),
             Object.getOwnPropertyDescriptors
                 ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(a))
                 : (function (e, t) {
@@ -117,15 +117,15 @@ function m(e) {
     return (0, r.jsxs)("div", {
         className: f.container,
         children: [
-            (0, r.jsx)(o.Ttm, {
+            (0, r.jsx)(i.Ttm, {
                 orientation: "horizontal",
                 className: f.scroller,
                 fade: !0,
                 paddingFix: !1,
-                children: (0, r.jsx)(o.njP, {
+                children: (0, r.jsx)(i.njP, {
                     type: "top",
                     look: "custom",
-                    selectedItem: O,
+                    selectedItem: x,
                     onItemSelect: (e) => {
                         y({
                             action: "PRESS_SECTION",
@@ -138,7 +138,7 @@ function m(e) {
                     },
                     children: g.map((e) =>
                         (0, r.jsx)(
-                            o.njP.Item,
+                            i.njP.Item,
                             {
                                 className: f.tabBarItem,
                                 id: e.section,
@@ -150,8 +150,8 @@ function m(e) {
                     ),
                 }),
             }),
-            (0, r.jsx)(o.njP.Panel, {
-                id: O,
+            (0, r.jsx)(i.njP.Panel, {
+                id: x,
                 "aria-label": v,
                 className: f.tabBarPanel,
                 children: (0, r.jsx)(p, {
@@ -160,9 +160,9 @@ function m(e) {
                     displayProfile: d,
                     guildId: u,
                     channelId: m,
-                    section: O,
-                    subsection: x,
-                    onClose: h,
+                    section: x,
+                    subsection: O,
+                    onClose: j,
                 }),
             }),
         ],

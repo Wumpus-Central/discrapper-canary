@@ -1,9 +1,9 @@
-n.d(t, { Z: () => j });
+n.d(t, { Z: () => h });
 var r = n(255367);
 n(73800);
 var l = n(296009),
-    o = n(481060),
-    i = n(747101),
+    i = n(481060),
+    o = n(747101),
     a = n(517157),
     c = n(985748),
     s = n(566007),
@@ -47,14 +47,14 @@ function g(e) {
                     var n,
                         r,
                         l = {},
-                        o = Object.keys(e);
-                    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (l[n] = e[n]);
+                        i = Object.keys(e);
+                    for (r = 0; r < i.length; r++) (n = i[r]), t.indexOf(n) >= 0 || (l[n] = e[n]);
                     return l;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var o = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < o.length; r++)
-                    (n = o[r]),
+                var i = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < i.length; r++)
+                    (n = i[r]),
                         !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]);
             }
             return l;
@@ -74,8 +74,8 @@ function g(e) {
 }
 function b(e) {
     let { user: t, guildId: n, channelId: l } = e,
-        o = (0, a.Z)(),
-        { widgets: c, isFetching: s } = (0, i.Z)(o);
+        i = (0, a.Z)(),
+        { widgets: c, isGameFetching: s } = (0, o.Z)(i);
     return 0 === c.length
         ? (0, r.jsx)(f.Z, {})
         : (0, r.jsx)(r.Fragment, {
@@ -87,15 +87,15 @@ function b(e) {
                           user: t,
                           guildId: n,
                           channelId: l,
-                          loading: s,
+                          isGameFetching: s,
                       },
                       e.id,
                   ),
               ),
           });
 }
-function j(e) {
-    return (0, r.jsx)(o.Ttm, {
+function h(e) {
+    return (0, r.jsx)(i.Ttm, {
         className: p.scroller,
         fade: !0,
         children: (0, r.jsx)(b, m({}, e)),

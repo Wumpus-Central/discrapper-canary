@@ -237,45 +237,48 @@ function z(e) {
     );
 }
 function q(e, t, n) {
-    var r, o;
+    var r, o, a;
     let {
-            roles: a,
-            nick: s,
-            avatar: l,
-            avatar_decoration_data: c,
-            flags: d,
-            premium_since: f,
-            pending: _,
-            joined_at: p,
-            communication_disabled_until: h,
-            unusual_dm_activity_until: m,
+            roles: s,
+            nick: l,
+            avatar: c,
+            avatar_decoration_data: d,
+            flags: f,
+            premium_since: _,
+            pending: p,
+            joined_at: h,
+            communication_disabled_until: m,
+            unusual_dm_activity_until: g,
+            collectibles: E,
         } = n,
-        g = v.ZP.getMember(e, t.id);
-    (null != g &&
-        g.nick === s &&
-        g.avatar === l &&
-        i().isEqual(g.roles, a) &&
-        (0, u.sr)(null != (r = g.avatarDecoration) ? r : null, null != c ? c : null) &&
-        g.premiumSince === f &&
-        g.isPending === _ &&
-        g.joinedAt === p &&
-        g.communicationDisabledUntil === h &&
-        g.flags === d &&
-        (null != (o = g.unusualDMActivityUntil) ? o : null) === (null != m ? m : null)) ||
+        b = v.ZP.getMember(e, t.id);
+    (null != b &&
+        b.nick === l &&
+        b.avatar === c &&
+        i().isEqual(b.roles, s) &&
+        (0, u.sr)(null != (r = b.avatarDecoration) ? r : null, null != d ? d : null) &&
+        b.premiumSince === _ &&
+        b.isPending === p &&
+        b.joinedAt === h &&
+        b.communicationDisabledUntil === m &&
+        b.flags === f &&
+        (null != (o = b.unusualDMActivityUntil) ? o : null) === (null != g ? g : null) &&
+        i().isEqual(null != (a = b.collectibles) ? a : null, null != E ? E : null)) ||
         z({
             type: "GUILD_MEMBER_ADD",
             guildId: e,
             user: t,
-            roles: a,
-            nick: s,
-            avatar: l,
-            avatarDecoration: c,
-            premiumSince: f,
-            isPending: _,
-            joinedAt: p,
-            communicationDisabledUntil: h,
-            unusualDMActivityUntil: m,
-            flags: d,
+            roles: s,
+            nick: l,
+            avatar: c,
+            avatarDecoration: d,
+            premiumSince: _,
+            isPending: p,
+            joinedAt: h,
+            communicationDisabledUntil: m,
+            unusualDMActivityUntil: g,
+            flags: f,
+            collectibles: E,
         });
 }
 function X(e) {
@@ -939,6 +942,7 @@ Y(
                 communicationDisabledUntil: e.communication_disabled_until,
                 unusualDMActivityUntil: e.unusual_dm_activity_until,
                 flags: e.flags,
+                collectibles: e.collectibles,
             });
         },
     ),

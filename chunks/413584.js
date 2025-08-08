@@ -13,8 +13,8 @@ var r = n(255367),
     p = n(239091),
     h = n(596454),
     f = n(493773),
-    x = n(607070),
-    b = n(933557),
+    b = n(607070),
+    x = n(933557),
     j = n(471445),
     v = n(339085),
     _ = n(565138),
@@ -80,14 +80,14 @@ let G = "WELCOME_CHANNEL",
     U = (e) => {
         var t;
         let l,
-            { guildId: s, welcomeChannel: o, onEdit: m, onChannelReorder: f, isDropHovered: x, index: _ } = e,
+            { guildId: s, welcomeChannel: o, onEdit: m, onChannelReorder: f, isDropHovered: b, index: _ } = e,
             [O, y] = i.useState(!1),
             C = i.useRef(null),
             N = (0, u.e7)([E.Z], () => E.Z.getChannel(o.channel_id)),
             T = (0, u.e7)([v.ZP], () => (null != o.emoji_id ? v.ZP.getUsableCustomEmojiById(o.emoji_id) : null)),
             w = null != N && P.Uu(Z.Plq.VIEW_CHANNEL, N),
             R = null != (t = (0, j.KS)(N)) ? t : g.VL1,
-            U = (0, b.ZP)(N, !1),
+            U = (0, x.ZP)(N, !1),
             [, B] = (0, c.c)({
                 type: G,
                 item: {
@@ -135,7 +135,7 @@ let G = "WELCOME_CHANNEL",
                       className: k.warningIcon,
                   })),
             (0, r.jsxs)("div", {
-                className: a()(k.welcomeChannel, { [k.dragging]: x }),
+                className: a()(k.welcomeChannel, { [k.dragging]: b }),
                 ref: C,
                 "data-dnd-name": o.description,
                 onContextMenu: (e) => {
@@ -215,21 +215,21 @@ let G = "WELCOME_CHANNEL",
     B = (e) => {
         let { guild: t, showCreateModal: l } = e,
             { welcomeSettings: a, originalWelcomeSettings: s } = (0, u.e7)([N.Z], () => N.Z.getSettingsProps()),
-            c = (0, u.e7)([x.Z], () => x.Z.useReducedMotion),
+            c = (0, u.e7)([b.Z], () => b.Z.useReducedMotion),
             [d, p] = i.useState(null),
-            [h, b] = i.useState(!1),
+            [h, x] = i.useState(!1),
             [j, v] = i.useState(!1),
             { description: I, channels: E, enabled: P } = a,
             G = () => {
                 null != t &&
                     I !== s.description &&
-                    ((0, C.Es)(t.id, { description: null == I ? void 0 : I.trim() }), b(!0));
+                    ((0, C.Es)(t.id, { description: null == I ? void 0 : I.trim() }), x(!0));
             },
             B = (e) => {
-                null != t && (o()(e, s.channels) || ((0, C.Es)(t.id, { channels: e }), b(!0)));
+                null != t && (o()(e, s.channels) || ((0, C.Es)(t.id, { channels: e }), x(!0)));
             },
             F = (e) => {
-                null != t && e !== s.enabled && ((0, C.Es)(t.id, { enabled: e }), v(!c), b(!0));
+                null != t && e !== s.enabled && ((0, C.Es)(t.id, { enabled: e }), v(!c), x(!0));
             },
             H = (e) => {
                 if (null == e) return;

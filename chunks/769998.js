@@ -13,8 +13,8 @@ var i = n(442837),
     g = n(467397);
 function p(e) {
     var t;
-    let { action: n, triggerType: p, guildId: h, toggled: f, onToggleAction: x } = e,
-        b = (e) => () => x(e),
+    let { action: n, triggerType: p, guildId: h, toggled: f, onToggleAction: b } = e,
+        x = (e) => () => b(e),
         j = (0, o.c)(n.type, n, p),
         v = null == (t = n.metadata) ? void 0 : t.durationSeconds,
         _ = null != v ? (0, u.L9)(v) : null,
@@ -56,7 +56,7 @@ function p(e) {
                                       : m.intl.format(m.t.mvHxzc, { friendlyDurationString: _ }),
                                 O &&
                                     (0, r.jsx)(l.P3F, {
-                                        onClick: b(!0),
+                                        onClick: x(!0),
                                         className: g.editChannel,
                                         tag: "span",
                                         role: "link",
@@ -104,7 +104,7 @@ function p(e) {
                                 children: (0, r.jsx)(l.XZJ, {
                                     type: l.XZJ.Types.INVERTED,
                                     value: f,
-                                    onChange: b(!1),
+                                    onChange: x(!1),
                                     disabled: !O,
                                     className: g.__invalid_actionCheckbox,
                                 }),

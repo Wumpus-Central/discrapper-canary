@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b });
+n.d(t, { Z: () => x });
 var r = n(255367);
 n(73800);
 var i = n(120356),
@@ -14,12 +14,12 @@ var i = n(120356),
     p = n(937615),
     h = n(474936),
     f = n(388032),
-    x = n(67949);
-let b = (e) => {
+    b = n(67949);
+let x = (e) => {
     var t;
     let { className: n } = e,
         i = (0, a.e7)([c.default], () => c.default.getCurrentUser()),
-        b = (0, a.e7)([o.default], () => o.default.locale),
+        x = (0, a.e7)([o.default], () => o.default.locale),
         j = (0, a.e7)([u.Z], () => u.Z.getPremiumTypeSubscription()),
         v = (0, a.e7)([d.Z], () => (null != j ? d.Z.get(j.planId) : void 0)),
         _ =
@@ -30,10 +30,10 @@ let b = (e) => {
                 ? t
                 : h.GP[h.Xh.PREMIUM_MONTH_GUILD];
     return (0, r.jsxs)("div", {
-        className: l()(x.wrapper, n),
+        className: l()(b.wrapper, n),
         children: [
             (0, r.jsx)(s.X6q, {
-                className: x.heading,
+                className: b.heading,
                 variant: "heading-xl/semibold",
                 children: f.intl.string(f.t["3x1PFB"]),
             }),
@@ -53,7 +53,7 @@ let b = (e) => {
                                   (0, r.jsx)(
                                       "span",
                                       {
-                                          className: x.originalPrice,
+                                          className: b.originalPrice,
                                           children: e,
                                       },
                                       t,
@@ -69,7 +69,7 @@ let b = (e) => {
                                     (0, r.jsx)(
                                         "span",
                                         {
-                                            className: x.originalPrice,
+                                            className: b.originalPrice,
                                             children: e,
                                         },
                                         t,
@@ -79,7 +79,7 @@ let b = (e) => {
                           : f.intl.format(f.t.Mmf63N, { price: c });
                 })({
                     currentUser: i,
-                    locale: b,
+                    locale: x,
                     guildBoostingPlanId: _.id,
                     interval: _.interval,
                     intervalCount: _.intervalCount,

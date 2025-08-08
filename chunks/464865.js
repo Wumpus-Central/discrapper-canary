@@ -13,8 +13,8 @@ var r = n(255367),
     p = n(586382),
     h = n(859481),
     f = n(981631),
-    x = n(388032),
-    b = n(50986);
+    b = n(388032),
+    x = n(50986);
 function j(e) {
     let { guild: t } = e,
         n = i.useRef(null),
@@ -46,18 +46,18 @@ function j(e) {
                 ref: n,
                 children: [
                     (0, r.jsxs)(a.vwX, {
-                        className: b.title,
-                        children: [x.intl.string(x.t["5XZKy8"]), (0, r.jsx)(p.xl, { guild: t })],
+                        className: x.title,
+                        children: [b.intl.string(b.t["5XZKy8"]), (0, r.jsx)(p.xl, { guild: t })],
                     }),
                     (0, r.jsx)(a.Text, {
                         variant: "text-sm/medium",
                         color: "text-secondary",
-                        className: b.description,
+                        className: x.description,
                         children: j
-                            ? x.intl.format(x.t["J/v84O"], {
+                            ? b.intl.format(b.t["J/v84O"], {
                                   helpCenterArticle: d.Z.getArticleURL(f.BhN.GUILD_VANITY_URL),
                               })
-                            : x.intl.format(x.t.koklFB, {
+                            : b.intl.format(b.t.koklFB, {
                                   helpCenterArticle: d.Z.getArticleURL(f.BhN.GUILD_VANITY_URL),
                               }),
                     }),

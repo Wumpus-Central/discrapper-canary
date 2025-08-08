@@ -12,7 +12,7 @@ var i = n(392711),
     d = n(585483),
     u = n(981631);
 let m = () => {
-        let { notificationCenterVariant: e } = a.Lk.getCurrentConfig({ location: "TOGGLE_INBOX" });
+        let { notificationCenterVariant: e } = (0, a.Ag)({ location: "TOGGLE_INBOX" });
         if ("sidebar" !== e) return;
         let t = c.Z.getChannelId(),
             n = l.Z.getChannel(t);

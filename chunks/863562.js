@@ -13,7 +13,7 @@ var r = n(255367),
     p = n(646084);
 let h = (e) => {
     let { className: t, isDisabled: l, sticker: h, canManageSticker: f } = e,
-        [x, b] = i.useState(!1),
+        [b, x] = i.useState(!1),
         [j, v] = (0, c.Z)(null, 4000),
         _ = () => {
             (0, s.ZDy)(async () => {
@@ -56,11 +56,11 @@ let h = (e) => {
             });
         },
         O = async () => {
-            v(null), b(!0);
+            v(null), x(!0);
             try {
                 await (0, u.Um)(h);
             } catch (e) {
-                v(e.body.message), b(!1);
+                v(e.body.message), x(!1);
             }
         },
         y = d.ZP.useUserTag(h.user);
@@ -73,7 +73,7 @@ let h = (e) => {
                 className: a()(p.wrapper, t, { [p.wrapperDisabled]: l }),
                 children: [
                     (0, r.jsxs)("div", {
-                        className: a()(p.content, { [p.contentRemoving]: x }),
+                        className: a()(p.content, { [p.contentRemoving]: b }),
                         children: [
                             (0, r.jsx)(m.Z, {
                                 className: p.sticker,
@@ -135,7 +135,7 @@ let h = (e) => {
                                 : null,
                         ],
                     }),
-                    x && (0, r.jsx)(s.$jN, { className: p.spinner }),
+                    b && (0, r.jsx)(s.$jN, { className: p.spinner }),
                 ],
             }),
     });

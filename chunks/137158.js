@@ -13,7 +13,7 @@ var r = n(255367),
     p = n(246364),
     h = n(388032),
     f = n(664305);
-function x(e) {
+function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -38,7 +38,7 @@ function x(e) {
     }
     return e;
 }
-function b(e) {
+function x(e) {
     let { type: t } = e,
         n = i.useMemo(() => {
             switch (t) {
@@ -108,7 +108,7 @@ function j(e) {
                               className: f.compactTitle,
                               children: t,
                           }),
-                          (0, r.jsx)(b, { type: l.field_type }),
+                          (0, r.jsx)(x, { type: l.field_type }),
                       ],
                   }),
     });
@@ -119,7 +119,7 @@ function _(e) {
         h = (0, s.debounce)(async (e, t, n) => {
             await d(e, t, n);
         }),
-        b = i.useRef(null),
+        x = i.useRef(null),
         [, _] = (0, o.c)({
             type: v,
             item: {
@@ -135,7 +135,7 @@ function _(e) {
             hover: (e, n) => {
                 var r;
                 let { index: i } = e,
-                    l = null == (r = b.current) ? void 0 : r.getBoundingClientRect(),
+                    l = null == (r = x.current) ? void 0 : r.getBoundingClientRect(),
                     a = n.getClientOffset();
                 if (null == l || null == a) return;
                 let s = (l.bottom - l.top) / 2,
@@ -149,7 +149,7 @@ function _(e) {
     return (
         i.useLayoutEffect(
             () => (
-                _(O(b)),
+                _(O(x)),
                 () => {
                     O(null), _(null);
                 }
@@ -157,7 +157,7 @@ function _(e) {
             [_, O],
         ),
         (0, r.jsxs)("div", {
-            ref: b,
+            ref: x,
             "data-dnd-name": "field-".concat(t),
             className: a()(f.dragContainer, { [f.dropHovered]: l }),
             children: [
@@ -169,7 +169,7 @@ function _(e) {
                         color: u.Z.unsafe_rawColors.PRIMARY_400.css,
                     }),
                 }),
-                (0, r.jsx)(j, x({}, e)),
+                (0, r.jsx)(j, b({}, e)),
             ],
         })
     );
@@ -180,7 +180,7 @@ function O(e) {
         children: [
             (0, r.jsx)("div", {
                 className: f.spacingContainer,
-                children: e.isDragEnabled ? (0, r.jsx)(_, x({}, e)) : (0, r.jsx)(j, x({}, e)),
+                children: e.isDragEnabled ? (0, r.jsx)(_, b({}, e)) : (0, r.jsx)(j, b({}, e)),
             }),
             "side" === e.actionsLocation &&
                 (0, r.jsxs)("div", {

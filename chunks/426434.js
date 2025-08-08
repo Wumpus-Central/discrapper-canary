@@ -17,10 +17,10 @@ function f(e) {
     let t,
         { guild: n } = e,
         f = n.mfaLevel,
-        x = (0, l.e7)([c.Z], () => null != n && c.Z.can(g.Plq.MANAGE_GUILD, n), [n]),
-        b = (0, l.e7)([d.default], () => d.default.getCurrentUser()),
-        j = (0, o.eM)(n, b),
-        v = null == b ? void 0 : b.mfaEnabled,
+        b = (0, l.e7)([c.Z], () => null != n && c.Z.can(g.Plq.MANAGE_GUILD, n), [n]),
+        x = (0, l.e7)([d.default], () => d.default.getCurrentUser()),
+        j = (0, o.eM)(n, x),
+        v = null == x ? void 0 : x.mfaEnabled,
         _ = f === g.BpS.ELEVATED,
         O = j && v,
         y = (0, i.throttle)(async (e) => {
@@ -31,7 +31,7 @@ function f(e) {
                     isEnabled: !e,
                 }));
         }, 1000);
-    if (!x) return null;
+    if (!b) return null;
     O ||
         (t = j
             ? p.intl.format(p.t.nFwNyc, { settingsHook: () => s.Z.open(g.oAB.ACCOUNT) })

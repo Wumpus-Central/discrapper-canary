@@ -1,5 +1,5 @@
 n.d(t, {
-    C: () => b,
+    C: () => x,
     Z: () => j,
 });
 var r = n(255367);
@@ -17,13 +17,13 @@ var i = n(990547),
     p = n(662379),
     h = n(60533),
     f = n(581050),
-    x = n(551131);
-function b(e) {
+    b = n(551131);
+function x(e) {
     let { onboardingMarketing: t, onboardingMarketingError: n } = e,
         i = (e) => {
             let { children: t } = e;
             return (0, r.jsxs)(r.Fragment, {
-                children: [(0, r.jsx)(l.$i$, { className: x.sectionDivider }), t],
+                children: [(0, r.jsx)(l.$i$, { className: b.sectionDivider }), t],
             });
         },
         a = (0, r.jsx)(i, { children: (0, r.jsx)(p.Z, {}) }, f.q.HOW_IT_WORKS),
@@ -75,13 +75,13 @@ function j(e) {
           : null != g
             ? (0, r.jsx)(d.Z, { children: g.message })
             : (0, r.jsxs)("div", {
-                  className: x.container,
+                  className: b.container,
                   children: [
                       (0, r.jsx)(u.Z, {
                           guild: t,
                           monetizationEligibility: n,
                       }),
-                      (0, r.jsx)(b, {
+                      (0, r.jsx)(x, {
                           onboardingMarketing: _,
                           onboardingMarketingError: v,
                       }),

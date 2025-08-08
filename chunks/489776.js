@@ -56,12 +56,12 @@ function h(e, t) {
 function f(e) {
     let { guildId: t, triggerType: n } = e,
         f = i.useMemo(() => () => (0, o.ep)(t, n), [t, n]),
-        [x] = i.useState(f),
-        [b, j] = i.useState(!1),
+        [b] = i.useState(f),
+        [x, j] = i.useState(!1),
         { editingRule: v, createNewEditingRule: _ } = (0, d.V)(),
         { getDefaultRuleName: O } = c.I6[n],
         y = !(0, o.Vb)(v) && (null == v ? void 0 : v.triggerType) === n,
-        [C, N] = i.useState(y ? v : x),
+        [C, N] = i.useState(y ? v : b),
         I = (0, s.q_F)({
             opacity: +!y,
             pointerEvents: y ? "none" : "all",
@@ -72,10 +72,10 @@ function f(e) {
             pointerEvents: y ? "all" : "none",
             config: h(p({}, l.config.stiff), { clamp: !0 }),
             onStart: () => {
-                N(y ? v : x);
+                N(y ? v : b);
             },
             onRest: () => {
-                N(y ? v : x), j(y);
+                N(y ? v : b), j(y);
             },
         });
     return null == v || y
@@ -88,7 +88,7 @@ function f(e) {
                       style: E,
                       children: (0, r.jsx)(u.Z, {
                           rule: C,
-                          persistEdit: b,
+                          persistEdit: x,
                       }),
                   }),
                   (0, r.jsx)(l.animated.div, {

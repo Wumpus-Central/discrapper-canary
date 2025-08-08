@@ -1,4 +1,4 @@
-n.d(t, { Z: () => eb });
+n.d(t, { Z: () => ex });
 var r = n(255367),
     i = n(990547),
     l = n(704215),
@@ -13,8 +13,8 @@ var r = n(255367),
     p = n(352981),
     h = n(610403),
     f = n(923726),
-    x = n(303737),
-    b = n(15030),
+    b = n(303737),
+    x = n(15030),
     j = n(220685),
     v = n(536442),
     _ = n(575258),
@@ -91,7 +91,7 @@ function ef(e) {
     }
     return e;
 }
-function ex(e, t) {
+function eb(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -109,14 +109,14 @@ function ex(e, t) {
         e
     );
 }
-let eb = {
+let ex = {
     getSectionDefinition: function (e, t) {
-        let eb = (0, p.p)(t.guild.id, "guild_settings"),
+        let ex = (0, p.p)(t.guild.id, "guild_settings"),
             ej =
                 !1 === t.guild.features.has(em.oNc.CREATOR_MONETIZABLE) &&
                 !1 === t.guild.features.has(em.oNc.CREATOR_MONETIZABLE_PROVISIONAL),
             ev =
-                eb && ej
+                ex && ej
                     ? {
                           label: (0, r.jsx)("div", {
                               className: eh.roleSubLabel,
@@ -431,12 +431,12 @@ let eb = {
                         !t.guild.features.has(em.oNc.GUILD_SERVER_GUIDE),
                 };
             case em.pNK.ROLE_SUBSCRIPTIONS:
-                return ex(ef({}, ev), {
+                return eb(ef({}, ev), {
                     section: em.pNK.ROLE_SUBSCRIPTIONS,
-                    element: b.Z,
+                    element: x.Z,
                     type: o.bT.CUSTOM,
                     predicate: t.monetizationPredicate,
-                    newIndicatorDismissibleContentTypes: (0, x.sO)(t.guild)
+                    newIndicatorDismissibleContentTypes: (0, b.sO)(t.guild)
                         ? [l.z.SERVER_SUBSCRIPTION_SETTINGS_NEW_BADGE_TIER_TEMPLATE]
                         : null,
                 });
@@ -507,7 +507,7 @@ let eb = {
                             ? (0, a.h7j)((e) =>
                                   (0, r.jsx)(
                                       a.ConfirmModal,
-                                      ex(ef({}, e, l), {
+                                      eb(ef({}, e, l), {
                                           children: (0, r.jsx)(a.Text, {
                                               variant: "text-md/normal",
                                               children: ep.intl.format(ep.t["Zuo+VV"], { name: i }),
@@ -520,7 +520,7 @@ let eb = {
                                   return (t) =>
                                       (0, r.jsx)(
                                           e,
-                                          ex(ef({}, t, l), {
+                                          eb(ef({}, t, l), {
                                               validationText: i,
                                               instructionText: ep.intl.string(ep.t.abprOD),
                                               errorText: ep.intl.string(ep.t["c2/DS0"]),

@@ -18,8 +18,8 @@ var r = n(255367),
     p = n(601964),
     h = n(496675),
     f = n(246946),
-    x = n(594174),
-    b = n(63063),
+    b = n(594174),
+    x = n(63063),
     j = n(78451),
     v = n(434404),
     _ = n(999382),
@@ -161,7 +161,7 @@ function w(e) {
                                 color: "header-secondary",
                                 variant: "text-sm/normal",
                                 children: I.intl.format(I.t.BI4ukJ, {
-                                    helpdeskArticle: b.Z.getArticleURL(N.BhN.SAFE_DIRECT_MESSAGING),
+                                    helpdeskArticle: x.Z.getArticleURL(N.BhN.SAFE_DIRECT_MESSAGING),
                                 }),
                             }),
                         ],
@@ -246,7 +246,7 @@ function Z(e) {
 function D(e) {
     let { guild: t, mfaLevel: n } = e,
         l = (0, o.e7)([h.Z], () => null != t && h.Z.can(N.Plq.MANAGE_GUILD, t), [t]),
-        a = (0, o.e7)([x.default], () => x.default.getCurrentUser()),
+        a = (0, o.e7)([b.default], () => b.default.getCurrentUser()),
         { isGuildOwnerWithMFA: u, showMFAUserTooltip: m } = i.useMemo(
             () =>
                 null == a

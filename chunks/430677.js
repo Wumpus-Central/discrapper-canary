@@ -13,8 +13,8 @@ var r = n(255367),
     p = n(592125),
     h = n(430824),
     f = n(768581),
-    x = n(388032),
-    b = n(773100);
+    b = n(388032),
+    x = n(773100);
 function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -82,7 +82,7 @@ let _ = function (e) {
             icon: N.icon,
         }),
         M = null;
-    null != R && (0, m.kb)(R) ? k || (M = x.intl.string(x.t.wAkIZW)) : (M = x.intl.string(x.t.CbTEKC));
+    null != R && (0, m.kb)(R) ? k || (M = b.intl.string(b.t.wAkIZW)) : (M = b.intl.string(b.t.CbTEKC));
     let {
             drag: G,
             dragSourcePosition: U,
@@ -115,34 +115,34 @@ let _ = function (e) {
     if (null == R || null == Z) return null;
     let z = null != (y = (0, c.KS)(R)) ? y : o.VL1;
     return (0, r.jsxs)("div", {
-        className: b.actionItemContainer,
+        className: x.actionItemContainer,
         children: [
             (0, r.jsxs)("div", {
-                className: a()(b.actionItem, {
-                    [b.dropIndicatorBefore]: null != U && I < U,
-                    [b.dropIndicatorAfter]: null != U && I > U,
-                    [b.actionItemError]: null != M,
+                className: a()(x.actionItem, {
+                    [x.dropIndicatorBefore]: null != U && I < U,
+                    [x.dropIndicatorAfter]: null != U && I > U,
+                    [x.actionItemError]: null != M,
                 }),
                 ref: (e) => {
                     G(B(e));
                 },
                 children: [
                     (0, r.jsx)("div", {
-                        className: b.dragContainer,
+                        className: x.dragContainer,
                         onMouseEnter: () => F(!0),
                         onMouseLeave: () => F(!1),
                         children: (0, r.jsx)(o.Vni, {
                             size: "xs",
                             color: "currentColor",
-                            className: b.dragIcon,
+                            className: x.dragIcon,
                         }),
                     }),
                     null != L
                         ? (0, r.jsx)("div", {
-                              className: b.iconWrapper,
+                              className: x.iconWrapper,
                               children: (0, r.jsx)("img", {
                                   src: L,
-                                  className: b.icon,
+                                  className: x.icon,
                                   width: 48,
                                   height: 48,
                                   alt: "",
@@ -150,7 +150,7 @@ let _ = function (e) {
                               }),
                           })
                         : (0, r.jsx)("div", {
-                              className: b.actionItemEmojiWrapper,
+                              className: x.actionItemEmojiWrapper,
                               children: (0, r.jsx)(g.Z, {
                                   emojiId: null == (_ = N.emoji) ? void 0 : _.id,
                                   emojiName: null == (O = N.emoji) ? void 0 : O.name,
@@ -159,7 +159,7 @@ let _ = function (e) {
                               }),
                           }),
                     (0, r.jsxs)("div", {
-                        className: b.actionItemText,
+                        className: x.actionItemText,
                         children: [
                             (0, r.jsx)(o.Text, {
                                 variant: "text-md/semibold",
@@ -169,12 +169,12 @@ let _ = function (e) {
                             (0, r.jsx)(o.Text, {
                                 variant: "text-xs/medium",
                                 color: "header-secondary",
-                                children: x.intl.format(x.t.Ngk8Nj, { channelName: R.name }),
+                                children: b.intl.format(b.t.Ngk8Nj, { channelName: R.name }),
                             }),
                         ],
                     }),
                     (0, r.jsx)(o.ua7, {
-                        text: x.intl.string(x.t.bt75u7),
+                        text: b.intl.string(b.t.bt75u7),
                         children: (e) =>
                             (0, r.jsx)(
                                 o.hU,
@@ -183,7 +183,7 @@ let _ = function (e) {
                                     size: "sm",
                                     variant: "primary",
                                     onClick: H,
-                                    "aria-label": x.intl.string(x.t.bt75u7),
+                                    "aria-label": b.intl.string(b.t.bt75u7),
                                 }),
                             ),
                     }),

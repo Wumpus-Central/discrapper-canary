@@ -63,7 +63,7 @@ function Z(e) {
             location: "go_live_modal_refresh",
             autoTrackExposure: !1,
         }),
-        [A, M] = (0, u.L)(b.h7.AUDIO_INPUT, { location: "StreamSettingsSummary" }),
+        [A, M] = (0, u.Ls)(b.h7.AUDIO_INPUT, { location: "StreamSettingsSummary" }),
         k = A.concat(M),
         [L, D] = null != (i = (0, v.Z)(g)) ? i : [Z, w],
         B = (0, p.L)(g),

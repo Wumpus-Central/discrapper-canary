@@ -32,7 +32,7 @@ function b(e) {
             () => (u.S.subscribe(f.CkL.TOGGLE_INBOX, v), () => void u.S.unsubscribe(f.CkL.TOGGLE_INBOX, v)),
             [v],
         );
-    let { entrypoint: j } = d.Lk.useExperiment({ location: "NotificationsInboxPopout" });
+    let { entrypoint: j } = (0, d.pN)({ location: "NotificationsInboxPopout" });
     return (0, r.jsx)(s.yRy, {
         targetElementRef: p,
         shouldShow: _,

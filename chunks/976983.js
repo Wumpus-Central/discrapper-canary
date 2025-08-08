@@ -19,7 +19,7 @@ var i = n(120356),
     p = n(290511),
     h = n(388032),
     f = n(311400);
-function x(e) {
+function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -44,7 +44,7 @@ function x(e) {
     }
     return e;
 }
-function b(e, t) {
+function x(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -109,7 +109,7 @@ function j(e) {
                     return (t) =>
                         (0, r.jsx)(
                             e,
-                            b(x({}, t), {
+                            x(b({}, t), {
                                 guild: j,
                                 prompt: v,
                                 option: y,
@@ -186,7 +186,7 @@ function v(e) {
                 return (n) =>
                     (0, r.jsx)(
                         e,
-                        b(x({}, n), {
+                        x(b({}, n), {
                             guild: t,
                             prompt: i,
                             onSave: (e) =>

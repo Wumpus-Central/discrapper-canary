@@ -138,7 +138,7 @@ let b = i.forwardRef(function (e, t) {
             hideOnClick: !0,
             tooltipClassName: f.tooltip,
             children: (e) => {
-                let { onMouseEnter: o, onMouseLeave: u, onClick: _ } = e;
+                let { onMouseEnter: o, onMouseLeave: u, onFocus: _, onBlur: g, onClick: y } = e;
                 return (0, r.jsxs)(r.Fragment, {
                     children: [
                         (0, r.jsxs)(
@@ -150,8 +150,10 @@ let b = i.forwardRef(function (e, t) {
                                         className: a()(N, { [f.hoverBarButton]: P }),
                                         onMouseEnter: o,
                                         onMouseLeave: u,
+                                        onFocus: _,
+                                        onBlur: g,
                                         onClick: (e) => {
-                                            null == _ || _(), b(e);
+                                            null == y || y(), b(e);
                                         },
                                         "aria-label": null != i ? i : n,
                                         disabled: v,

@@ -18,8 +18,8 @@ let g = function (e) {
             renderItem: p,
         } = e,
         h = i.useMemo(() => new s.Xp(), []),
-        [f, x] = i.useState(d.n.LEFT),
-        [b, j] = i.useState(0),
+        [f, b] = i.useState(d.n.LEFT),
+        [x, j] = i.useState(0),
         [v, _] = i.useState(!1),
         [O, y] = i.useState(!1),
         C = i.useCallback(
@@ -49,7 +49,7 @@ let g = function (e) {
                 (0, r.jsx)(o.P3F, {
                     className: a()(m.carouselCaret, l),
                     onClick: I,
-                    onMouseEnter: () => x(d.n.RIGHT),
+                    onMouseEnter: () => b(d.n.RIGHT),
                     ignoreKeyPress: O,
                     children: (0, r.jsx)(c.Z, {
                         direction: c.Z.Directions.LEFT,
@@ -59,17 +59,17 @@ let g = function (e) {
                     }),
                 }),
                 (0, r.jsx)(d.Z, {
-                    step: b,
+                    step: x,
                     direction: f,
                     onAnimationStart: () => y(!0),
                     onAnimationEnd: () => y(!1),
                     className: a()(m.carousel, n),
-                    children: p(t[b]),
+                    children: p(t[x]),
                 }),
                 (0, r.jsx)(o.P3F, {
                     className: a()(m.carouselCaret, l),
                     onClick: N,
-                    onMouseEnter: () => x(d.n.LEFT),
+                    onMouseEnter: () => b(d.n.LEFT),
                     ignoreKeyPress: O,
                     children: (0, r.jsx)(c.Z, {
                         direction: c.Z.Directions.RIGHT,

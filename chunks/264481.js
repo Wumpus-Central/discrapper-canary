@@ -2,13 +2,13 @@ n.d(t, {
     P9: () => _,
     Uf: () => P,
     b0: () => v,
-    s_: () => x,
+    s_: () => O,
 }),
     n(388685);
 var r = n(255367),
     l = n(73800),
-    o = n(392711),
-    i = n(481060),
+    i = n(392711),
+    o = n(481060),
     a = n(493683),
     c = n(230711),
     s = n(410030),
@@ -25,14 +25,14 @@ let b = [
         () => m.intl.string(m.t.laSR8v),
         () => m.intl.string(m.t.DnsJEx),
     ],
-    j = [
+    h = [
         () => m.intl.string(m.t.nFSbeH),
         () => m.intl.string(m.t.gTcxOz),
         () => m.intl.string(m.t["8T0wYm"]),
         () => m.intl.string(m.t.BIHl1t),
         () => m.intl.string(m.t.jhBm09),
     ],
-    h = [
+    j = [
         () => m.intl.string(m.t.AyMGXF),
         () => m.intl.string(m.t.aAFW7e),
         (e) => m.intl.formatToPlainString(m.t.h2g0cH, { name: e }),
@@ -65,7 +65,7 @@ let b = [
         p.ABu.CRUNCHYROLL,
         p.ABu.BUNGIE,
     ];
-function O(e) {
+function x(e) {
     let { heading: t, bodyText: n, children: l } = e;
     return (0, r.jsxs)("div", {
         className: g.empty,
@@ -73,12 +73,12 @@ function O(e) {
             (0, r.jsxs)("div", {
                 className: g.textContainer,
                 children: [
-                    (0, r.jsx)(i.X6q, {
+                    (0, r.jsx)(o.X6q, {
                         variant: "heading-md/medium",
                         color: "header-primary",
                         children: t,
                     }),
-                    (0, r.jsx)(i.Text, {
+                    (0, r.jsx)(o.Text, {
                         variant: "text-sm/normal",
                         color: "header-secondary",
                         children: n,
@@ -89,13 +89,13 @@ function O(e) {
         ],
     });
 }
-function x() {
+function O() {
     let e = m.intl.string(m.t.RnD2yc),
         [t] = l.useState(() => {
             var e;
-            return (null != (e = (0, o.sample)(b)) ? e : b[0])();
+            return (null != (e = (0, i.sample)(b)) ? e : b[0])();
         });
-    return (0, r.jsx)(O, {
+    return (0, r.jsx)(x, {
         heading: e,
         bodyText: t,
     });
@@ -104,9 +104,9 @@ function v() {
     let e = m.intl.string(m.t.bFgqYG),
         [t] = l.useState(() => {
             var e;
-            return (null != (e = (0, o.sample)(j)) ? e : j[0])();
+            return (null != (e = (0, i.sample)(h)) ? e : h[0])();
         });
-    return (0, r.jsx)(O, {
+    return (0, r.jsx)(x, {
         heading: e,
         bodyText: t,
     });
@@ -117,20 +117,20 @@ function _(e) {
         p = m.intl.formatToPlainString(m.t.sjSitL, { name: d }),
         [b] = l.useState(() => {
             var e;
-            return (null != (e = (0, o.sample)(h)) ? e : h[0])(d);
+            return (null != (e = (0, i.sample)(j)) ? e : j[0])(d);
         }),
-        j = l.useCallback(() => {
+        h = l.useCallback(() => {
             a.Z.openPrivateChannel({ recipientIds: t.id }), null == s || s();
         }, [t.id, s]);
-    return (0, r.jsx)(O, {
+    return (0, r.jsx)(x, {
         heading: p,
         bodyText: b,
         children: (0, r.jsx)("div", {
             className: g.buttonRow,
             children: (0, r.jsx)(f.tG, {
-                icon: i.kBi,
+                icon: o.kBi,
                 text: m.intl.string(m.t["g33r/P"]),
-                onClick: j,
+                onClick: h,
                 themeColor: "secondary",
             }),
         }),
@@ -143,11 +143,11 @@ function I() {
         children: y.map((t, n) => {
             let l = d.Z.get(t);
             if (null == l) return null;
-            let o = (0, i.wjy)(e) ? l.icon.darkPNG : l.icon.lightPNG;
+            let i = (0, o.wjy)(e) ? l.icon.darkPNG : l.icon.lightPNG;
             return (0, r.jsx)(
                 "img",
                 {
-                    src: o,
+                    src: i,
                     alt: l.name,
                     className: g.connectionIcon,
                 },
@@ -161,10 +161,10 @@ function P(e) {
         n = l.useCallback(() => {
             null == t || t(), c.Z.open(p.oAB.CONNECTIONS);
         }, [t]),
-        o = l.useCallback(() => {
+        i = l.useCallback(() => {
             null == t || t(), c.Z.open(p.oAB.CONTENT_AND_SOCIAL, "CONNECTED_GAMES");
         }, [t]);
-    return (0, r.jsxs)(O, {
+    return (0, r.jsxs)(x, {
         heading: m.intl.string(m.t.VB6LWV),
         bodyText: m.intl.string(m.t.KpjsU1),
         children: [
@@ -179,7 +179,7 @@ function P(e) {
                     }),
                     (0, r.jsx)(f.tG, {
                         text: m.intl.string(m.t.GTCx0t),
-                        onClick: o,
+                        onClick: i,
                         themeColor: "secondary",
                     }),
                 ],

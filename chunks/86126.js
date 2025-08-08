@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b });
+n.d(t, { Z: () => x });
 var r = n(255367),
     i = n(73800),
     l = n(512722),
@@ -13,12 +13,12 @@ var r = n(255367),
     p = n(783454),
     h = n(388032),
     f = n(301849),
-    x = n(522659);
-function b(e) {
+    b = n(522659);
+function x(e) {
     var t;
     let { onDeleteEditState: l } = e,
-        { editStateId: b, guildId: j, groupListingId: v } = (0, m.N)(),
-        _ = (0, s.e7)([u.Z], () => u.Z.getSubscriptionListing(b)),
+        { editStateId: x, guildId: j, groupListingId: v } = (0, m.N)(),
+        _ = (0, s.e7)([u.Z], () => u.Z.getSubscriptionListing(x)),
         O = null == _ ? void 0 : _.id,
         y = (0, g.Z)(j),
         C = i.useMemo(() => {
@@ -65,7 +65,7 @@ function b(e) {
                                             !N &&
                                                 (0, r.jsx)(o.Text, {
                                                     variant: "text-sm/normal",
-                                                    className: x.warning,
+                                                    className: b.warning,
                                                     children: h.intl.formatToPlainString(h.t.ABeonZ, {
                                                         listingMemberCount: C,
                                                     }),

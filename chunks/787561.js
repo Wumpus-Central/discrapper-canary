@@ -19,8 +19,8 @@ var r = n(255367),
     p = n(933557),
     h = n(769654),
     f = n(984933),
-    x = n(650774),
-    b = n(430824),
+    b = n(650774),
+    x = n(430824),
     j = n(496675),
     v = n(699516),
     _ = n(594174),
@@ -114,9 +114,9 @@ let R = "dismissedCommunityFeaturesUpsell",
     D = (e) => {
         let { discoveryEnabled: t, onboardingEnabled: n, guild: l } = e,
             [a, m] = i.useState(!0 === c.K.get(R)),
-            p = (0, s.e7)([x.Z], () => {
+            p = (0, s.e7)([b.Z], () => {
                 var e;
-                return null != (e = x.Z.getMemberCount(l.id)) ? e : 0;
+                return null != (e = b.Z.getMemberCount(l.id)) ? e : 0;
             }),
             [f, j] = i.useState(!1);
         (0, g.ZP)(() => {
@@ -130,7 +130,7 @@ let R = "dismissedCommunityFeaturesUpsell",
                 })
                 .catch(() => j(!1));
         });
-        let v = (0, s.e7)([b.Z], () => b.Z.getGuild("942897714956472401")),
+        let v = (0, s.e7)([x.Z], () => x.Z.getGuild("942897714956472401")),
             _ = l.features.has(I.oNc.COMMUNITY) && p >= 1000 && f && null == v;
         if (t && n && !_) return null;
         let y = async () => {
@@ -279,7 +279,7 @@ let R = "dismissedCommunityFeaturesUpsell",
             h = (e) => {
                 O.Z.updateGuild({ description: e });
             },
-            x = () => {
+            b = () => {
                 e.features.has(I.oNc.DISCOVERABLE) && e.features.has(I.oNc.PARTNERED)
                     ? (0, u.h7j)((e) =>
                           (0, r.jsx)(
@@ -518,7 +518,7 @@ let R = "dismissedCommunityFeaturesUpsell",
                                             variant: "critical-primary",
                                             size: "sm",
                                             text: E.intl.string(E.t.c1BmbG),
-                                            onClick: x,
+                                            onClick: b,
                                             disabled: !n,
                                         },
                                         e,

@@ -1,6 +1,6 @@
 n.d(t, {
     BG: () => h,
-    DO: () => x,
+    DO: () => b,
     pt: () => f,
 }),
     n(388685);
@@ -25,15 +25,15 @@ function f(e) {
         channelId: e,
     });
 }
-async function x(e) {
+async function b(e) {
     let t = Array.from(d.Z.editedDefaultChannelIds).filter((e) => null != o.Z.getChannel(e)),
         n = m.Z.advancedMode,
         [h, f] = (0, s.d9)(e.id, [...t]),
-        x = (0, s.kl)(e.id, t, m.Z.editedOnboardingPrompts),
-        b = (0, s.kl)(e.id, t, m.Z.editedOnboardingPrompts, s.V7);
+        b = (0, s.kl)(e.id, t, m.Z.editedOnboardingPrompts),
+        x = (0, s.kl)(e.id, t, m.Z.editedOnboardingPrompts, s.V7);
     if (
         a.Z.getEnabled(e.id) &&
-        ((!n && (f.length < g.md || h.length < g.X)) || (n && (x.length < g.md || b.length < g.X)))
+        ((!n && (f.length < g.md || h.length < g.X)) || (n && (b.length < g.md || x.length < g.X)))
     )
         return void i.Z.show({
             title: p.intl.string(p.t.iLdiqa),

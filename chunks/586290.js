@@ -34,7 +34,7 @@ function S(e) {
     let { selectedSource: t, onChangeVideoDeviceSource: n, onChangeAudioDevice: l } = e;
     s()(null != t, "Camera capture device cannot be null");
     let o = (0, p.Z)(),
-        [a, c] = (0, m.L)(x.h7.AUDIO_INPUT, { location: "CaptureDeviceConfig" }),
+        [a, c] = (0, m.Ls)(x.h7.AUDIO_INPUT, { location: "CaptureDeviceConfig" }),
         S = a.concat(c),
         [C, y] = i.useState(b(t.id, o, S));
     return (

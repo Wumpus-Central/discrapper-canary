@@ -94,9 +94,9 @@ function g(e) {
         { setDevice: y, getLabel: O, getLocation: v } = m(t),
         [I, T] = i.useState(f),
         S = v(n[n.length - 1]),
-        [A, N] = (0, l.L)(t, { location: S }),
+        [A, N] = (0, l.Ls)(t, { location: S }),
         C = I ? A.concat(N) : A,
-        { id: R, name: P } = (0, l.p)(t),
+        { id: R, name: P } = (0, l.p6)(t),
         w = null != p ? p : R,
         D = C.map((e) => {
             let { id: i, disabled: a, name: s } = e;

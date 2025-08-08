@@ -13,13 +13,13 @@ let m = (e) => {
     let t,
         n,
         i,
-        { guildFeature: m, guild: g, className: p, hideTooltip: h = !1, tooltipPosition: f = "left", onClick: x } = e,
-        b = g.features.has(m),
+        { guildFeature: m, guild: g, className: p, hideTooltip: h = !1, tooltipPosition: f = "left", onClick: b } = e,
+        x = g.features.has(m),
         j = (0, s.AR)(g.id, "GuildSettingsBoostPerks"),
         v = (0, o._p)(m);
-    return !b && m === c.oNc.VANITY_URL && j
+    return !x && m === c.oNc.VANITY_URL && j
         ? null
-        : (b
+        : (x
                 ? (null != v && (i = d.intl.string(d.t.hUgjyM)),
                   (t = (0, r.jsxs)(r.Fragment, {
                       children: [
@@ -107,10 +107,10 @@ let m = (e) => {
                               );
                           },
                       })),
-            null == x || b)
+            null == b || x)
           ? n
           : (0, r.jsx)(a.P3F, {
-                onClick: x,
+                onClick: b,
                 className: u.clickable,
                 children: n,
             });

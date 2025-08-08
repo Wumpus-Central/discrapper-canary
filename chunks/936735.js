@@ -73,7 +73,7 @@ function m(e) {
                 e),
             );
         }, [n, t, g, p]),
-        x = i.useMemo(() => {
+        b = i.useMemo(() => {
             var e;
             let t = null == f || null == (e = f.emojis) ? void 0 : e[0];
             return null != t
@@ -90,7 +90,7 @@ function m(e) {
               sourceType: o.w6.GUILD,
               expressionSourceApplication: null,
               expressionSourceGuild: f,
-              node: x,
+              node: b,
               closePopout: u.dG,
               nonce: h.current,
               demoMode: !0,

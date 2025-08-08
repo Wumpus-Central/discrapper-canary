@@ -1,8 +1,8 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => y });
 var r = n(255367),
     l = n(73800),
-    o = n(481060),
-    i = n(810568),
+    i = n(481060),
+    o = n(810568),
     a = n(168524),
     c = n(5192),
     s = n(971082),
@@ -10,19 +10,20 @@ var r = n(255367),
     u = n(879877),
     f = n(853072),
     p = n(388032),
-    m = n(467514),
-    g = n(418718);
-function b(e) {
-    let { text: t, user: n, guildId: l, channelId: i } = e;
+    m = n(436860),
+    g = n(467514),
+    b = n(418718);
+function h(e) {
+    let { text: t, user: n, guildId: l, channelId: o } = e;
     return (0, r.jsxs)("div", {
         children: [
-            (0, r.jsx)(o.PEf, {
+            (0, r.jsx)(i.PEf, {
                 size: "xxs",
-                color: o.TVs.colors.ICON_TERTIARY,
-                className: g.icon,
+                color: i.TVs.colors.ICON_TERTIARY,
+                className: b.icon,
             }),
-            (0, r.jsx)(o.nn4, { children: p.intl.format(p.t.TM0XDQ, { name: c.ZP.getName(l, i, n) }) }),
-            (0, r.jsx)(o.Text, {
+            (0, r.jsx)(i.nn4, { children: p.intl.format(p.t.TM0XDQ, { name: c.ZP.getName(l, o, n) }) }),
+            (0, r.jsx)(i.Text, {
                 variant: "text-sm/normal",
                 color: "text-tertiary",
                 children: t,
@@ -35,7 +36,7 @@ function j(e) {
         u = (0, a.Z)({
             location: "UserProfileWidgetGameDetailsCard",
             applicationId: t,
-            source: i.m1.UserProfile,
+            source: o.m1.UserProfile,
             sourceUserId: n,
             trackEntryPointImpression: !0,
         }),
@@ -46,13 +47,13 @@ function j(e) {
             [u],
         ),
         m = null != c ? c : p.intl.string(p.t.GIWFlJ),
-        b = null != u;
+        g = null != u;
     return (0, r.jsxs)("div", {
         className: s,
         children: [
-            b &&
-                (0, r.jsx)(o.P3F, {
-                    className: g.clickableCard,
+            g &&
+                (0, r.jsx)(i.P3F, {
+                    className: b.clickableCard,
                     "aria-label": p.intl.formatToPlainString(p.t["8QLQBw"], { gameName: m }),
                     onClick: f,
                 }),
@@ -60,42 +61,42 @@ function j(e) {
         ],
     });
 }
-function h(e) {
-    let { user: t, guildId: n, channelId: l, game: i, loading: a = !1, disableInteraction: c = !1 } = e,
-        { gameName: h, imageSrc: y, applicationId: O, comment: x, tags: v } = i,
-        _ = (0, f.Z)(i.applicationId),
-        I = _.length > 0,
-        P = () =>
+function y(e) {
+    let { user: t, guildId: n, channelId: l, game: o, loading: a = !1, disableInteraction: c = !1 } = e,
+        { gameName: y, imageSrc: x, applicationId: O, comment: v, tags: _ } = o,
+        I = (0, f.Z)(o.applicationId),
+        P = I.length > 0,
+        E = () =>
             (0, r.jsxs)(r.Fragment, {
                 children: [
                     (0, r.jsx)(d.Z, {
-                        imageSrc: y,
-                        gameName: h,
+                        imageSrc: x,
+                        gameName: y,
                         applicationId: O,
                         userId: t.id,
                         disableInteraction: !0,
                     }),
                     (0, r.jsxs)("div", {
-                        className: g.details,
+                        className: b.details,
                         children: [
-                            (0, r.jsx)(o.X6q, {
+                            (0, r.jsx)(i.X6q, {
                                 variant: "text-md/normal",
                                 color: "text-default",
-                                children: h,
+                                children: y,
                             }),
-                            null != x &&
-                                (0, r.jsx)(b, {
-                                    text: x,
+                            null != v &&
+                                (0, r.jsx)(h, {
+                                    text: v,
                                     user: t,
                                     guildId: n,
                                     channelId: l,
                                 }),
-                            (0, r.jsx)(u.Z, { tags: v }),
-                            I &&
+                            (0, r.jsx)(u.Z, { tags: _ }),
+                            P &&
                                 (0, r.jsx)(s.Z, {
-                                    label: p.intl.formatToPlainString(p.t.ujhJdH, { numFriends: _.length }),
-                                    className: g.socialProof,
-                                    users: _,
+                                    label: p.intl.formatToPlainString(p.t.ujhJdH, { numFriends: I.length }),
+                                    className: b.socialProof,
+                                    users: I,
                                     guildId: n,
                                     channelId: l,
                                 }),
@@ -105,19 +106,31 @@ function h(e) {
             });
     return a
         ? (0, r.jsxs)("div", {
-              className: g.card,
-              children: [(0, r.jsx)("div", { className: m.gameCover }), (0, r.jsx)("div", { className: g.details })],
+              className: b.card,
+              children: [
+                  (0, r.jsx)("div", { className: g.loadingCover }),
+                  (0, r.jsx)("div", {
+                      className: b.details,
+                      children: (0, r.jsxs)("div", {
+                          className: m.placeholderText,
+                          children: [
+                              (0, r.jsx)("div", { className: m.placeholderBar }),
+                              (0, r.jsx)("div", { className: m.placeholderBar }),
+                          ],
+                      }),
+                  }),
+              ],
           })
         : c
           ? (0, r.jsx)("div", {
-                className: g.card,
-                children: P(),
+                className: b.card,
+                children: E(),
             })
           : (0, r.jsx)(j, {
                 applicationId: O,
                 userId: t.id,
-                gameName: h,
-                className: g.card,
-                children: P(),
+                gameName: y,
+                className: b.card,
+                children: E(),
             });
 }

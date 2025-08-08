@@ -24,8 +24,8 @@ function p(e) {
             canManageGuild: p,
             canViewAuditLog: h,
             canManageRoles: f,
-            canManageBans: x,
-            canAccessMembersPage: b,
+            canManageBans: b,
+            canAccessMembersPage: x,
             canViewGuildAnalytics: j,
             isOwner: v,
             isGuildAdmin: _,
@@ -100,7 +100,7 @@ function p(e) {
             N.push(m(d.pNK.EMOJI, C)),
             N.push(m(d.pNK.STICKERS, C)),
             N.push(m(d.pNK.SOUNDBOARD, C))),
-        (p || f || b || _) &&
+        (p || f || x || _) &&
             (N.push({ section: g.DIVIDER }),
             N.push({
                 section: g.HEADER,
@@ -118,7 +118,7 @@ function p(e) {
         N.push(m(d.pNK.INTEGRATIONS, C)),
         N.push(m(d.pNK.APP_DIRECTORY, C));
     let I = !c.features.has(d.oNc.COMMUNITY) && ((0, l.Nb)(c.id) || (0, l.ze)(c.id));
-    (p || h || x || I) &&
+    (p || h || b || I) &&
         (N.push({ section: g.DIVIDER }),
         N.push({
             section: g.HEADER,

@@ -32,14 +32,17 @@ function b(e) {
                         color: "currentColor",
                         className: m.inboxIcon,
                     }),
-                    (0, r.jsx)(o.Text, {
+                    (0, r.jsx)(o.X6q, {
                         className: m.inboxTitle,
                         variant: "text-lg/semibold",
                         color: "interactive-active",
                         children: g.intl.string(g.t.GSmTKC),
                     }),
-                    (0, r.jsxs)("div", {
+                    (0, r.jsxs)(o.kL8, {
                         className: m.controls,
+                        onClick: (e) => e.stopPropagation(),
+                        focusProps: { enabled: !1 },
+                        "aria-label": g.intl.string(g.t["8k+6QU"]),
                         children: [b, (0, r.jsx)(f.Z, { closePopout: _ })],
                     }),
                 ],

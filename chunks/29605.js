@@ -19,8 +19,8 @@ var r = n(255367),
     p = n(481060),
     h = n(668781),
     f = n(80932),
-    x = n(225433),
-    b = n(599059),
+    b = n(225433),
+    x = n(599059),
     j = n(327802),
     v = n(110924),
     _ = n(200876),
@@ -119,7 +119,7 @@ let W = d().throttle(f.OQ, 1000),
                     className: F.column,
                     children: (0, r.jsx)("div", {
                         className: F.emojiAliasInputContainer,
-                        children: (0, r.jsx)(b.Z, {
+                        children: (0, r.jsx)(x.Z, {
                             className: a()({ [F.emojiAliasInputDisabled]: s }),
                             disabled: s,
                             minLen: 1,
@@ -172,7 +172,7 @@ let W = d().throttle(f.OQ, 1000),
                         }),
                     }),
                 !s &&
-                    (0, r.jsx)(x.Z, {
+                    (0, r.jsx)(b.Z, {
                         className: F.emojiRemove,
                         onClick: () => {
                             (0, f.RE)(t, n.id).catch((e) => {
@@ -382,8 +382,8 @@ let W = d().throttle(f.OQ, 1000),
                 emojis: k.Z.getEmojis(t.id),
                 autoOpen: k.Z.getEmojiFileInputAutoOpen(),
             })),
-            x = (0, v.Z)(d),
-            [b, I] = i.useState(!1),
+            b = (0, v.Z)(d),
+            [x, I] = i.useState(!1),
             [w, R] = i.useState(!1),
             Z = i.useRef(null),
             {
@@ -400,8 +400,8 @@ let W = d().throttle(f.OQ, 1000),
             }),
             $ = w || 0 === U || !c;
         i.useEffect(() => {
-            b && er();
-        }, [b]),
+            x && er();
+        }, [x]),
             i.useEffect(() => {
                 if (f) {
                     if (!$) {
@@ -415,8 +415,8 @@ let W = d().throttle(f.OQ, 1000),
                 W(t.id);
             }, [t.id]),
             i.useEffect(() => {
-                null != x && x < d && W(t.id);
-            }, [d, x, t.id]);
+                null != b && b < d && W(t.id);
+            }, [d, b, t.id]);
         let ee = i.useCallback(
                 () =>
                     (0, y.i)({

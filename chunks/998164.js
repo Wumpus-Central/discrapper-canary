@@ -54,7 +54,7 @@ function h(e, t) {
     );
 }
 let f = [];
-function x() {
+function b() {
     return (0, r.jsx)("div", {
         className: g.actionItemContainer,
         children: (0, r.jsxs)("div", {
@@ -81,7 +81,7 @@ function x() {
         }),
     });
 }
-function b(e) {
+function x(e) {
     let { guildId: t, onAddAction: l } = e,
         s = i.useCallback(() => {
             if (null != t)
@@ -185,9 +185,9 @@ let j = function (e) {
                     e.channelId,
                 ),
             ),
-            (0, r.jsx)(x, {}),
+            (0, r.jsx)(b, {}),
             n.length < o.O9 &&
-                (0, r.jsx)(b, {
+                (0, r.jsx)(x, {
                     guildId: t,
                     onAddAction: a,
                 }),
