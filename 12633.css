@@ -23834,6 +23834,7 @@ img.inlineAsset__9c640 {
 }
 
 .glowContainer_dfb989 {
+    color: transparent;
     height: 100%;
     inset: 0;
     position: absolute;
@@ -56258,6 +56259,7 @@ screen and (max-width:485px) {
 
 .gradient_c19a55.compact_c19a55 .header_c19a55,
 .gradient_c19a55.cozy_c19a55 .header_c19a55,
+.withDisplayNameStyles_c19a55.withDisplayNameStyles_c19a55.withDisplayNameStyles_c19a55 .header_c19a55,
 .zalgo_c19a55.gradient_c19a55.compact_c19a55 .header_c19a55,
 .zalgo_c19a55.gradient_c19a55.cozy_c19a55 .header_c19a55 {
     overflow: visible;
