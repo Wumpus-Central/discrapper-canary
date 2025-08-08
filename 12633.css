@@ -65122,18 +65122,14 @@ html .progress__61462 {
     margin-top: var(--space-8)
 }
 
-.detailsButton_e80b85 {
-    padding: var(--space-8) 0
-}
-
 .footerContainer_e80b85 {
     align-items: flex-start;
     background-color: var(--button-danger-background);
     border-radius: 0 0 var(--radius-sm) var(--radius-sm);
-    color: var(--white);
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: var(--space-8) var(--space-12);
     width: 100%
 }
 
