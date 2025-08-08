@@ -23791,11 +23791,6 @@ img.inlineAsset__9c640 {
     margin-left: 8px
 }
 
-.bioRhyme__89a31 {
-    font-family: BioRhyme, gg sans, Arial, sans-serif;
-    letter-spacing: .03em
-}
-
 .cherryBomb__89a31 {
     font-family: Cherry Bomb One, gg sans, Arial, sans-serif;
     transform: translateY(-1px)
@@ -23829,6 +23824,11 @@ img.inlineAsset__9c640 {
 .sinistre__89a31 {
     font-family: Sinistre, gg sans, Arial, sans-serif;
     letter-spacing: .01em
+}
+
+.zillaSlab__89a31 {
+    font-family: Zilla Slab, gg sans, Arial, sans-serif;
+    letter-spacing: .03em
 }
 
 .container_dfb989 {
