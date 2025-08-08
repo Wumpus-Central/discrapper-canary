@@ -23840,6 +23840,11 @@ img.inlineAsset__9c640 {
     width: 100%
 }
 
+.emoji_dfb989 {
+    position: relative;
+    z-index: 1
+}
+
 .forceAnimate_dfb989 .container_dfb989 .solid_dfb989,
 .showEffect_dfb989 .solid_dfb989 {
     color: var(--custom-display-name-styles-main-color, var(--text-default))
