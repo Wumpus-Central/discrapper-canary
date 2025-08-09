@@ -1,34 +1,42 @@
 n.d(t, {
-    o: () => u,
-    w: () => d,
+    o: () => m,
+    w: () => u,
 });
 var i,
     r = n(255367);
 n(73800);
 var s = n(793030),
-    a = n(594135),
-    l = n(388032),
-    o = n(930280),
-    c = n(947866),
-    d = (((i = {}).NONE = "none"), (i.CONFIRMING = "confirming"), (i.APPLIED = "applied"), i);
-let u = (e) => {
-        let { userDiscountOffer: t, offerState: n = "none" } = e;
+    a = n(74538),
+    l = n(594135),
+    o = n(388032),
+    c = n(930280),
+    d = n(947866),
+    u = (((i = {}).NONE = "none"), (i.CONFIRMING = "confirming"), (i.APPLIED = "applied"), i);
+let m = (e) => {
+        let { userDiscountOffer: t, offerState: n = "none" } = e,
+            { discountedPrice: i, premiumSubscription: a } = (0, l.a)();
         return (0, r.jsxs)("div", {
-            className: o.discountOfferContainer,
+            className: c.discountOfferContainer,
             children: [
                 (0, r.jsx)("img", {
                     alt: "",
-                    src: c,
-                    className: o.nitroIcon,
+                    src: d,
+                    className: c.nitroIcon,
                 }),
                 (0, r.jsxs)("div", {
-                    className: o.discountOfferContent,
+                    className: c.discountOfferContent,
                     children: [
                         (0, r.jsx)(s.xv, {
                             variant: "text-md/semibold",
-                            children: l.intl.format(l.t.tQvNlp, { numMonths: t.discount.user_usage_limit }),
+                            children:
+                                null != a.canceledAt
+                                    ? o.intl.format(o.t["DC+nPD"], {
+                                          numMonths: t.discount.user_usage_limit,
+                                          discountedPrice: i,
+                                      })
+                                    : o.intl.format(o.t.tQvNlp, { numMonths: t.discount.user_usage_limit }),
                         }),
-                        (0, r.jsx)(m, {
+                        (0, r.jsx)(p, {
                             userDiscountOffer: t,
                             offerState: n,
                         }),
@@ -37,35 +45,55 @@ let u = (e) => {
             ],
         });
     },
-    m = (e) => {
+    p = (e) => {
         let { userDiscountOffer: t, offerState: n } = e,
-            { discountedPrice: i, fullPrice: o } = (0, a.a)();
+            { discountedPrice: i, fullPrice: c, premiumSubscription: d } = (0, l.a)();
         switch (n) {
             case "applied":
+                if (null != d.canceledAt)
+                    return (0, r.jsx)(s.xv, {
+                        variant: "text-md/normal",
+                        color: "text-secondary",
+                        children: o.intl.formatToPlainString(o.t.h2g1IS, {
+                            billingPeriod: (0, a.JP)(t.discount.user_usage_limit_interval),
+                            numMonths: t.discount.user_usage_limit,
+                            fullPrice: c,
+                        }),
+                    });
                 return (0, r.jsx)(s.xv, {
                     variant: "text-md/normal",
                     color: "text-secondary",
-                    children: l.intl.formatToPlainString(l.t.gPzMHR, {
+                    children: o.intl.formatToPlainString(o.t.gPzMHR, {
                         numMonths: t.discount.user_usage_limit,
                         discountedPrice: i,
-                        regularPrice: o,
+                        regularPrice: c,
                     }),
                 });
             case "confirming":
+                if (null != d.canceledAt)
+                    return (0, r.jsx)(s.xv, {
+                        variant: "text-md/normal",
+                        color: "text-secondary",
+                        children: o.intl.formatToPlainString(o.t.iDFk3t, {
+                            billingPeriod: (0, a.JP)(t.discount.user_usage_limit_interval),
+                            numMonths: t.discount.user_usage_limit,
+                            fullPrice: c,
+                        }),
+                    });
                 return (0, r.jsx)(s.xv, {
                     variant: "text-md/normal",
                     color: "text-secondary",
-                    children: l.intl.formatToPlainString(l.t.Eq1RHB, {
+                    children: o.intl.formatToPlainString(o.t.Eq1RHB, {
                         percent: t.discount.amount,
                         numMonths: t.discount.user_usage_limit,
-                        price: o,
+                        price: c,
                     }),
                 });
             default:
                 return (0, r.jsx)(s.xv, {
                     variant: "text-md/normal",
                     color: "text-secondary",
-                    children: l.intl.formatToPlainString(l.t["2gem09"], {
+                    children: o.intl.formatToPlainString(o.t["2gem09"], {
                         percent: t.discount.amount,
                         numMonths: t.discount.user_usage_limit,
                     }),

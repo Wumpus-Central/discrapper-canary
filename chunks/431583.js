@@ -9,8 +9,8 @@ var r = n(255367),
     u = n(213919),
     d = n(442837),
     p = n(755721),
-    h = n(481060),
-    f = n(391650),
+    f = n(481060),
+    h = n(391650),
     g = n(313201),
     m = n(314897),
     b = n(594174),
@@ -65,7 +65,7 @@ let I = [
     S = (e) => {
         let { url: t, text: n, onClick: i } = e,
             l = (0, p.nY)({ grow: !0 });
-        return (0, r.jsx)(h.eee, {
+        return (0, r.jsx)(f.eee, {
             useDefaultUnderlineStyles: !1,
             href: t,
             className: a()(l, v.refreshDownloadButton),
@@ -77,7 +77,7 @@ let I = [
         let t,
             { platform: n, onClick: i, onMouseEnter: l, isActive: o, claimed: s } = e,
             { getOs: c, icon: u, url: d, platformKey: p } = n,
-            f = c(),
+            h = c(),
             g = a()(v.icon, u);
         if (Array.isArray(d))
             t = d.map((e, t) => {
@@ -86,7 +86,7 @@ let I = [
                     S,
                     {
                         url: n,
-                        onClick: () => i(f),
+                        onClick: () => i(h),
                         text: e.getText(),
                     },
                     "".concat(n, "-").concat(t),
@@ -96,7 +96,7 @@ let I = [
             let e = s ? d() : void 0;
             t = (0, r.jsx)(S, {
                 url: e,
-                onClick: () => i(f),
+                onClick: () => i(h),
                 text: y.intl.string(y.t["1WjMbG"]),
             });
         }
@@ -115,10 +115,10 @@ let I = [
                     }),
                     (0, r.jsxs)("div", {
                         children: [
-                            (0, r.jsx)(h.X6q, {
+                            (0, r.jsx)(f.X6q, {
                                 className: v.platformName,
                                 variant: "heading-lg/semibold",
-                                children: f,
+                                children: h,
                             }),
                             (0, r.jsx)("div", {
                                 className: a()(v.downloadButtons, { [v.list]: Array.isArray(t) }),
@@ -169,7 +169,7 @@ function T(e) {
                 referring_location: t,
                 qr_code: !1,
             }),
-            p || (n(), f.j());
+            p || (n(), h.j());
     }
     function P(e) {
         S(e);
@@ -181,21 +181,21 @@ function T(e) {
         });
     }, [t]);
     let j = (0, g.Dt)();
-    return (0, r.jsxs)(h.Y0X, {
+    return (0, r.jsxs)(f.Y0X, {
         className: v.downloadApps,
         transitionState: l,
         "aria-labelledby": j,
         parentComponent: "DownloadAppsModal",
         children: [
-            (0, r.jsx)(h.olH, {
+            (0, r.jsx)(f.olH, {
                 onClick: n,
                 className: v.modalCloseButton,
             }),
-            (0, r.jsxs)(h.hzk, {
+            (0, r.jsxs)(f.hzk, {
                 className: v.inner,
                 children: [
-                    (0, r.jsx)(h.nn4, {
-                        children: (0, r.jsx)(h.H, {
+                    (0, r.jsx)(f.nn4, {
+                        children: (0, r.jsx)(f.H, {
                             id: j,
                             children: y.intl.string(y.t.BK8LKy),
                         }),
@@ -204,7 +204,7 @@ function T(e) {
                         (0, r.jsxs)("div", {
                             className: v.platformsWrap,
                             children: [
-                                (0, r.jsx)(h.X6q, {
+                                (0, r.jsx)(f.X6q, {
                                     variant: "heading-lg/semibold",
                                     className: v.header,
                                     children: y.intl.string(y.t["0KK0bG"]),
@@ -231,7 +231,7 @@ function T(e) {
                         className: v.platformsWrap,
                         children: [
                             !c.tq &&
-                                (0, r.jsx)(h.X6q, {
+                                (0, r.jsx)(f.X6q, {
                                     variant: "heading-lg/semibold",
                                     className: v.header,
                                     children: y.intl.string(y.t.RdSNWV),
@@ -256,9 +256,9 @@ function T(e) {
                     }),
                 ],
             }),
-            (0, r.jsx)(h.mzw, {
+            (0, r.jsx)(f.mzw, {
                 className: v.footer,
-                children: (0, r.jsx)(h.Text, {
+                children: (0, r.jsx)(f.Text, {
                     variant: "text-sm/normal",
                     children: y.intl.format(y.t["RJS+1N"], {}),
                 }),

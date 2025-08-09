@@ -9,8 +9,8 @@ var r = n(255367),
     u = n(184107),
     d = n(410575),
     p = n(613311),
-    h = n(601564),
-    f = n(981631),
+    f = n(601564),
+    h = n(981631),
     g = n(681205);
 function m(e, t, n) {
     return (
@@ -32,7 +32,7 @@ class b extends i.Component {
     render() {
         return null != this.props.skuId
             ? (0, r.jsx)(d.Z, {
-                  page: f.ZY5.CHANNEL_STORE_LISTING,
+                  page: h.ZY5.CHANNEL_STORE_LISTING,
                   root: !0,
                   children: (0, r.jsx)("div", {
                       className: g.applicationStore,
@@ -62,7 +62,7 @@ class b extends i.Component {
                     inputSkuId: i,
                     fetchStoreListing: this.fetchStoreListing,
                     location: t,
-                    pageSize: (0, h.getPageSize)(l),
+                    pageSize: (0, f.getPageSize)(l),
                 });
             });
     }

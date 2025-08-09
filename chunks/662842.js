@@ -9,8 +9,8 @@ var r = n(255367),
     u = n(232567),
     d = n(100527),
     p = n(471445),
-    h = n(15274),
-    f = n(924301),
+    f = n(15274),
+    h = n(924301),
     g = n(504160),
     m = n(151864),
     b = n(725436),
@@ -26,9 +26,9 @@ var r = n(255367),
     T = n(448206),
     P = n(670188),
     j = n(496675),
-    A = n(594174),
-    Z = n(662868),
-    x = n(981631),
+    x = n(594174),
+    A = n(662868),
+    Z = n(981631),
     w = n(765305),
     L = n(388032),
     R = n(29504);
@@ -48,10 +48,10 @@ function D(e) {
         U = null == l ? void 0 : l.id,
         G = (0, o.Wu)([C.Z], () => [...new Set(C.Z.getMutableParticipants(U, S.pV.SPEAKER).map((e) => e.user))], [U]),
         V = (0, o.e7)([C.Z], () => (null != U ? C.Z.getParticipantCount(U, S.pV.AUDIENCE) : 0), [U]),
-        H = (0, o.e7)([j.Z], () => j.Z.can(x.Plq.CONNECT, l)),
+        H = (0, o.e7)([j.Z], () => j.Z.can(Z.Plq.CONNECT, l)),
         B = (0, T.Z)(null == l ? void 0 : l.id),
         F = null == d ? void 0 : d.creator_id,
-        z = (0, o.e7)([A.default], () => A.default.getUser(F), [F]);
+        z = (0, o.e7)([x.default], () => x.default.getUser(F), [F]);
     i.useEffect(() => {
         null != F && (0, u.PR)(F);
     }, [F]);
@@ -60,8 +60,8 @@ function D(e) {
         title: Y,
         location: K,
         locationIcon: q,
-        canListenIn: Q,
-        buttonText: X,
+        canListenIn: X,
+        buttonText: Q,
         users: J,
         overflowUsers: $,
         onClose: ee,
@@ -78,10 +78,10 @@ function D(e) {
                         speakers: s,
                         listenerCount: u,
                         isEventNoticeHidden: d,
-                        isStageNoticeHidden: h,
+                        isStageNoticeHidden: f,
                         isStudyRoomNotice: m,
                     } = e,
-                    _ = null != n && null != i && !h,
+                    _ = null != n && null != i && !f,
                     O = null != t ? (0, y.DK)(t) : null;
                 if (m && null != i) {
                     let e = (0, p.KS)(i);
@@ -196,7 +196,7 @@ function D(e) {
                 } else if (t.entity_type === w.WX.EXTERNAL) {
                     let e = (0, E.cS)(t);
                     if (null == e) return { noticeType: null };
-                    let n = f.ZP.getUserCount(t.id, O);
+                    let n = h.ZP.getUserCount(t.id, O);
                     return {
                         noticeType: 1,
                         title: t.name,
@@ -236,7 +236,7 @@ function D(e) {
                     };
                 } else if (t.entity_type === w.WX.VOICE && null != i) {
                     let e = (0, p.KS)(i),
-                        n = f.ZP.getUserCount(t.id, O);
+                        n = h.ZP.getUserCount(t.id, O);
                     return {
                         noticeType: 2,
                         title: t.name,
@@ -312,7 +312,7 @@ function D(e) {
                   (0, r.jsxs)("div", {
                       className: R.header,
                       children: [
-                          (0, r.jsx)(Z.Z, {
+                          (0, r.jsx)(A.Z, {
                               color: s.Z.unsafe_rawColors.GREEN_230.css,
                               width: 16,
                               height: 16,
@@ -359,22 +359,22 @@ function D(e) {
                           }),
                       ],
                   }),
-                  Q || 1 === W
+                  X || 1 === W
                       ? (0, r.jsx)("div", {
                             "data-button-hoisted-classname-wrapper": !0,
                             className: R.button,
                             children: (0, r.jsx)(c.zxk, {
                                 variant: "active",
                                 size: "sm",
-                                text: X,
+                                text: Q,
                                 onClick: () => {
-                                    if (Q)
+                                    if (X)
                                         null != l &&
                                             null != l.getGuildId() &&
                                             ((0, I.Cq)(l), (0, v.XU)(l.getGuildId(), l.id));
                                     else {
                                         if (null == d) return;
-                                        (0, h.bO)({ eventId: d.id });
+                                        (0, f.bO)({ eventId: d.id });
                                     }
                                 },
                                 fullWidth: !0,

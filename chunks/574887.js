@@ -1,4 +1,4 @@
-n.d(t, { Z: () => I });
+n.d(t, { Z: () => _ });
 var r = n(255367);
 n(73800);
 var l = n(120356),
@@ -183,7 +183,7 @@ function O(e) {
         ],
     });
 }
-function I(e) {
+function _(e) {
     let { connections: t, userId: n, className: l } = e,
         a = (0, o.e7)([p.default], () => p.default.locale);
     return 0 === t.length

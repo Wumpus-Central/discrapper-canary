@@ -12,13 +12,13 @@ let p = {
     init() {
         (s.Z[d.yP.PRELOADED_USER_SETTINGS] = o.Z),
             (s.Z[d.yP.FRECENCY_AND_FAVORITES_SETTINGS] = a.Z),
-            l.Z.subscribe("CONNECTION_OPEN", h),
-            l.Z.subscribe("USER_SETTINGS_PROTO_ENQUEUE_UPDATE", f),
+            l.Z.subscribe("CONNECTION_OPEN", f),
+            l.Z.subscribe("USER_SETTINGS_PROTO_ENQUEUE_UPDATE", h),
             l.Z.subscribe("USER_SETTINGS_PROTO_LOAD_IF_NECESSARY", g),
             l.Z.subscribe("APP_STATE_UPDATE", m);
     },
 };
-function h() {
+function f() {
     let e = u.Z.getFullState(),
         t = e[d.yP.PRELOADED_USER_SETTINGS];
     t.editInfo.triggeredMigrations && c.hW.markDirtyFromMigration(t.proto, t.editInfo.cleanupFuncs),
@@ -29,7 +29,7 @@ function h() {
                 t.scheduleSaveFromOfflineEdit();
         });
 }
-function f(e) {
+function h(e) {
     let {
         settings: { proto: t, type: n },
         delaySeconds: r,

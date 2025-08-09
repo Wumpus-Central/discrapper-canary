@@ -9,8 +9,8 @@ var r = n(255367),
     u = n(446411),
     d = n(468846),
     p = n(313201),
-    h = n(70097),
-    f = n(266454),
+    f = n(70097),
+    h = n(266454),
     g = n(605236),
     m = n(524444),
     b = n(626135),
@@ -111,9 +111,9 @@ function P(e) {
             heroArtClassName: N,
             modalDismissibleContent: P,
             modalTopExtra: j,
-            header: A,
-            headerClassName: Z,
-            subHeader: x,
+            header: x,
+            headerClassName: A,
+            subHeader: Z,
             subHeaderExtra: w,
             featureCards: L,
             changeLogId: R,
@@ -127,13 +127,13 @@ function P(e) {
         [B, F] = i.useState(Date.now()),
         [z, W] = i.useState(0),
         [Y, K] = i.useState(0),
-        [q, Q] = i.useState(!1),
-        [X, J] = i.useState(!0),
+        [q, X] = i.useState(!1),
+        [Q, J] = i.useState(!0),
         $ = i.useRef(B),
         ee = i.useRef(z),
         et = i.useRef(Y),
         en = i.useRef(q),
-        er = i.useRef(X),
+        er = i.useRef(Q),
         [ei, el] = i.useState(S),
         ea = i.useRef(!1);
     function eo() {
@@ -177,8 +177,8 @@ function P(e) {
             [ei],
         ),
         i.useEffect(() => {
-            ($.current = B), (ee.current = z), (et.current = Y), (en.current = q), (er.current = X);
-        }, [B, z, Y, q, X]),
+            ($.current = B), (ee.current = z), (et.current = Y), (en.current = q), (er.current = Q);
+        }, [B, z, Y, q, Q]),
         i.useEffect(
             () => () => {
                 if ("video" === l.type || "embed" === l.type) {
@@ -205,7 +205,7 @@ function P(e) {
                         change_log_id: R,
                         seconds_open: Math.round((Date.now() - e) / 1000),
                     }),
-                        null != P && (0, f.Q3)(P, { dismissAction: E.L.DISMISS });
+                        null != P && (0, h.Q3)(P, { dismissAction: E.L.DISMISS });
                 }
             );
         }, [P, R]),
@@ -228,11 +228,11 @@ function P(e) {
                     children: [
                         (0, r.jsx)(s.X6q, {
                             variant: "display-md",
-                            className: a()(v.headerText, Z),
-                            children: A,
+                            className: a()(v.headerText, A),
+                            children: x,
                         }),
                         "video" === l.type
-                            ? (0, r.jsx)(h.Z, {
+                            ? (0, r.jsx)(f.Z, {
                                   className: a()(v.video, N),
                                   autoPlay: !H,
                                   loop: !0,
@@ -244,17 +244,17 @@ function P(e) {
                                   onPlay: (e) => {
                                       b.default.track(O.rMx.CHANGE_LOG_VIDEO_INTERACTED, { change_log_id: R }),
                                           F(Date.now()),
-                                          Q(!0),
+                                          X(!0),
                                           J(e.currentTarget.muted);
                                   },
                                   onEnded: (e) => {
-                                      eo(), J(e.currentTarget.muted), Q(!1);
+                                      eo(), J(e.currentTarget.muted), X(!1);
                                   },
                                   onVolumeChange: (e) => {
                                       eo(), J(e.currentTarget.muted);
                                   },
                                   onPause: (e) => {
-                                      eo(), J(e.currentTarget.muted), Q(!1);
+                                      eo(), J(e.currentTarget.muted), X(!1);
                                   },
                                   disablePictureInPicture: !0,
                                   children:
@@ -305,7 +305,7 @@ function P(e) {
                             variant: "text-md/normal",
                             color: "text-secondary",
                             className: v.subHeader,
-                            children: [x, null == w ? void 0 : w()],
+                            children: [Z, null == w ? void 0 : w()],
                         }),
                         null != k &&
                             (0, r.jsx)(s.X6q, {

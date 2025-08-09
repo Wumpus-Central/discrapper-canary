@@ -1,6 +1,6 @@
 n.d(t, {
-    default: () => f,
-    r: () => h,
+    default: () => h,
+    r: () => f,
 }),
     n(388685);
 var r = n(255367),
@@ -13,21 +13,21 @@ var r = n(255367),
     u = n(998502),
     d = n(981631),
     p = n(388032);
-let h = "Activity Encourages Hardware Acceleration";
-function f(e) {
+let f = "Activity Encourages Hardware Acceleration";
+function h(e) {
     var t;
-    let { applicationId: n, transitionState: f, onClose: g } = e,
+    let { applicationId: n, transitionState: h, onClose: g } = e,
         [m, b] = i.useState(!1),
         [_] = (0, s.Z)([n]),
         O = null != (t = null == _ ? void 0 : _.name) ? t : "This Activity";
     i.useEffect(() => {
-        c.default.track(d.rMx.OPEN_MODAL, { type: h });
+        c.default.track(d.rMx.OPEN_MODAL, { type: f });
     }, []);
     let E = async () => {
             let e = "temporary";
             m && ((e = "permanent"), o.ZP.updatedUnsyncedSettings({ disableActivityHardwareAccelerationPrompt: !0 })),
                 c.default.track(d.rMx.MODAL_DISMISSED, {
-                    type: h,
+                    type: f,
                     dismiss_type: e,
                 }),
                 await g();
@@ -39,7 +39,7 @@ function f(e) {
         };
     return (0, r.jsx)(l.Modal, {
         size: "md",
-        transitionState: f,
+        transitionState: h,
         onClose: E,
         "aria-label": p.intl.string(p.t.NQkK4u),
         title: p.intl.string(p.t.NQkK4u),

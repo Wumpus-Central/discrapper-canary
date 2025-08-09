@@ -9,8 +9,8 @@ var r = n(255367),
     u = n(393903),
     d = n(626135),
     p = n(823379),
-    h = n(900849),
-    f = n(356164),
+    f = n(900849),
+    h = n(356164),
     g = n(164991),
     m = n(726115),
     b = n(28494),
@@ -38,15 +38,15 @@ let S = Object.freeze({
         object: I.qAy.CARD,
         section: I.jXE.DISCOVER_SEARCH,
     },
-    P = s().throttle(h.c6, 1000, {
+    P = s().throttle(f.c6, 1000, {
         leading: !1,
         trailing: !0,
     });
 function j(e) {
     let { loadId: t, onGuildCardSeen: n, onGuildCardClick: l } = e,
-        { guildIds: s, loading: h, searchResultsQuery: I, loadMore: j, searchCategoryId: A } = (0, b.f)({ loadId: t }),
-        Z = 0 === s.length && !h,
-        x = i.useContext(d.AnalyticsContext),
+        { guildIds: s, loading: f, searchResultsQuery: I, loadMore: j, searchCategoryId: x } = (0, b.f)({ loadId: t }),
+        A = 0 === s.length && !f,
+        Z = i.useContext(d.AnalyticsContext),
         [w, L] = i.useState((0, m.PM)()),
         [R, D] = i.useState(!0),
         k = i.useRef(R),
@@ -55,9 +55,9 @@ function j(e) {
         V = i.useRef(null),
         H = i.useCallback(
             (e) => {
-                if (null != e && !Z && !h) 336 * (s.length / M) <= e.height && j();
+                if (null != e && !A && !f) 336 * (s.length / M) <= e.height && j();
             },
-            [Z, h, s.length, M, j],
+            [A, f, s.length, M, j],
         ),
         B = i.useCallback(
             (e) => {
@@ -80,13 +80,13 @@ function j(e) {
                 loadId: t,
                 searchId: w,
                 query: I,
-                guildResults: s.map(f.Z.getGuild).filter(p.lm),
-                analyticsContext: x,
-                categoryId: A,
+                guildResults: s.map(h.Z.getGuild).filter(p.lm),
+                analyticsContext: Z,
+                categoryId: x,
             });
-        }, [x, s, t, A, w, I]);
-    let z = i.useCallback((e) => n(e, A), [n, A]),
-        W = i.useMemo(() => (h ? [s.length, 0] : [s.length]), [s.length, h]),
+        }, [Z, s, t, x, w, I]);
+    let z = i.useCallback((e) => n(e, x), [n, x]),
+        W = i.useMemo(() => (f ? [s.length, 0] : [s.length]), [s.length, f]),
         Y = i.useCallback(
             (e, n, i) => {
                 switch (e) {
@@ -105,7 +105,7 @@ function j(e) {
                                             className: C.headingFilters,
                                             children: [(0, r.jsx)(O.Z, { loadId: t }), (0, r.jsx)(y.Z, { loadId: t })],
                                         }),
-                                    Z && (0, r.jsx)(E.Z, { loadId: t }),
+                                    A && (0, r.jsx)(E.Z, { loadId: t }),
                                 ],
                             },
                             i,
@@ -114,21 +114,21 @@ function j(e) {
                         return (0, r.jsx)(c.$jN, { className: a()(C.spinner, { [C.spinnerWithSidebar]: R }) }, i);
                 }
             },
-            [Z, R, t],
+            [A, R, t],
         ),
         K = i.useCallback(
             (e) => {
                 switch (e) {
                     case 0:
                         let t = R ? 16 : 50;
-                        return Z ? t + 448 : t;
+                        return A ? t + 448 : t;
                     case 1:
                         return 120;
                     default:
                         throw Error("[getSectionHeight] Failed for section: ".concat(e));
                 }
             },
-            [Z, R],
+            [A, R],
         ),
         q = i.useCallback(
             (e, t) => {
@@ -143,7 +143,7 @@ function j(e) {
             },
             [s],
         ),
-        Q = i.useCallback((e) => {
+        X = i.useCallback((e) => {
             switch (e) {
                 case 0:
                     return 320;
@@ -153,7 +153,7 @@ function j(e) {
                     throw Error("[getItemHeight] Failed for section: ".concat(e));
             }
         }, []),
-        X = i.useCallback(
+        Q = i.useCallback(
             async (e, t, n, r) => {
                 var i, a;
                 await l(e, t, n, r);
@@ -173,7 +173,7 @@ function j(e) {
                             style: n,
                             children: (0, r.jsx)(v.ZP, {
                                 guildId: e,
-                                onClick: async (e) => await X(e, t, A, T),
+                                onClick: async (e) => await Q(e, t, x, T),
                                 onView: (e) => z(e),
                             }),
                         },
@@ -181,7 +181,7 @@ function j(e) {
                     );
                 }
             },
-            [s, X, z, A],
+            [s, Q, z, x],
         );
     i.useEffect(() => {
         let e = V.current;
@@ -236,7 +236,7 @@ function j(e) {
             renderSection: Y,
             getSectionHeight: K,
             getItemKey: q,
-            getItemHeight: Q,
+            getItemHeight: X,
             chunkSize: 24,
             onScroll: $,
             renderAccessory: (e) =>

@@ -1,6 +1,6 @@
 n.d(t, {
-    default: () => x,
-    g: () => Z,
+    default: () => Z,
+    g: () => A,
 }),
     n(388685),
     n(472816),
@@ -16,8 +16,8 @@ var r = n(255367),
     u = n(481060),
     d = n(239091),
     p = n(749210),
-    h = n(410030),
-    f = n(726542),
+    f = n(410030),
+    h = n(726542),
     g = n(884338),
     m = n(367907),
     b = n(313201),
@@ -33,7 +33,7 @@ var r = n(255367),
     T = n(388032),
     P = n(739587),
     j = n(472840);
-function A(e) {
+function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -58,13 +58,13 @@ function A(e) {
     }
     return e;
 }
-function Z(e, t) {
+function A(e, t) {
     (0, u.ZDy)(async () => {
         let { default: i } = await Promise.all([n.e("82412"), n.e("38804")]).then(n.bind(n, 107807));
         return (n) =>
             (0, r.jsx)(
                 i,
-                A(
+                x(
                     {
                         role: e,
                         guildId: t,
@@ -74,20 +74,20 @@ function Z(e, t) {
             );
     });
 }
-let x = function (e) {
-    let { guildId: t, transitionState: l, onClose: x } = e,
+let Z = function (e) {
+    let { guildId: t, transitionState: l, onClose: Z } = e,
         w = (0, s.e7)([y.Z], () => y.Z.getSortedRoles(t)),
         L = (0, s.e7)([O.default], () => O.default.getId()),
         R = (0, s.e7)([E.ZP], () => E.ZP.getMember(t, L)),
         [D, k] = i.useState([]),
-        M = (0, h.ZP)(),
+        M = (0, f.ZP)(),
         U = (0, b.Dt)();
     if (
         (i.useEffect(() => {
             0 !== D.length &&
                 v.default.track(
                     N.rMx.PASSPORT_ENTRY_VIEWED,
-                    A(
+                    x(
                         {
                             role_ids: D.map((e) => {
                                 let { role_id: t } = e;
@@ -128,7 +128,7 @@ let x = function (e) {
                             }),
                         ],
                     }),
-                    (0, r.jsx)(u.olH, { onClick: x }),
+                    (0, r.jsx)(u.olH, { onClick: Z }),
                 ],
             }),
             (0, r.jsxs)(u.hzk, {
@@ -165,7 +165,7 @@ let x = function (e) {
                                                       })
                                                     : null;
                                         } else {
-                                            let t = f.Z.get(e.connection_type);
+                                            let t = h.Z.get(e.connection_type);
                                             o = (0, r.jsx)("img", {
                                                 src: (0, c.ap)(M) ? t.icon.lightSVG : t.icon.darkSVG,
                                                 alt: "",
@@ -181,7 +181,7 @@ let x = function (e) {
                                 u.P3F,
                                 {
                                     className: a()(P.verifiedRole, l ? P.verifiedRoleHasRole : null),
-                                    onClick: l ? void 0 : () => Z(e, t),
+                                    onClick: l ? void 0 : () => A(e, t),
                                     onContextMenu: l
                                         ? (i) => {
                                               var l;
@@ -193,7 +193,7 @@ let x = function (e) {
                                                           var i, a;
                                                           return (0, r.jsx)(
                                                               e,
-                                                              ((i = A({}, n)),
+                                                              ((i = x({}, n)),
                                                               (a = a =
                                                                   {
                                                                       roleId: l,

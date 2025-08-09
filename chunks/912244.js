@@ -1,7 +1,7 @@
-n.d(t, { N: () => i });
-function i(e) {
+function r(e) {
     return {
         enabled: !0,
         eligibleToFetch: !0,
     };
 }
+n.d(t, { N: () => r });

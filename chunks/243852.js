@@ -9,8 +9,8 @@ var r,
     u = n(570140),
     d = n(278323),
     p = n(581567),
-    h = n(594190),
-    f = n(581883),
+    f = n(594190),
+    h = n(581883),
     g = n(70956),
     m = n(780570),
     b = n(314897),
@@ -27,11 +27,11 @@ let I = "ActivityTrackingStore",
     P = !1;
 function j(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-    t && A(e, !0);
+    t && x(e, !0);
     let n = T[e.applicationId];
     null != n && (n.stop(), delete T[e.applicationId]), delete N[e.applicationId], s.K.set(I, N);
 }
-function A(e) {
+function x(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         n = Date.now(),
         r = null != e.updatedAt ? n - e.updatedAt : 0;
@@ -54,19 +54,19 @@ function A(e) {
     }),
         (e.updatedAt = n);
     let u = T[e.applicationId];
-    null == u && (u = T[e.applicationId] = new c.Xp()).start(C, () => A(e)),
+    null == u && (u = T[e.applicationId] = new c.Xp()).start(C, () => x(e)),
         t || ((N[e.applicationId] = e), s.K.set(I, N));
 }
-function Z() {
+function A() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
-        t = h.ZP.getVisibleRunningGames(),
+        t = f.ZP.getVisibleRunningGames(),
         n = new Set();
     for (let { name: e, distributor: r, exePath: i } of t) {
         let t = _.Z.getGameByName(e);
         null != t &&
             (n.add(t.id),
             t.id in N ||
-                A({
+                x({
                     applicationId: t.id,
                     updatedAt: Date.now(),
                     distributor: r,
@@ -75,13 +75,13 @@ function Z() {
     }
     for (let t of Object.keys(N)) n.has(t) || j(N[t], e);
 }
-function x() {
+function Z() {
     for (let e of Object.keys(N)) j(N[e]);
     P = !1;
 }
 class w extends (i = o.ZP.Store) {
     initialize() {
-        this.waitFor(h.ZP, f.Z, O.Z), this.syncWith([f.Z], Z);
+        this.waitFor(f.ZP, h.Z, O.Z), this.syncWith([h.Z], A);
     }
     getActivities() {
         return N;
@@ -97,17 +97,17 @@ class w extends (i = o.ZP.Store) {
           })
         : (w[l] = a),
     new w(u.Z, {
-        RUNNING_GAMES_CHANGE: () => Z(),
+        RUNNING_GAMES_CHANGE: () => A(),
         CONNECTION_OPEN: function () {
             if (P) return !1;
-            for (let e of Object.keys(N)) A(N[e]);
-            Z(!1), (P = !0);
+            for (let e of Object.keys(N)) x(N[e]);
+            A(!1), (P = !0);
         },
         CONNECTION_CLOSED: function (e) {
             let { code: t } = e;
-            4004 === t && x();
+            4004 === t && Z();
         },
-        LOGOUT: x,
+        LOGOUT: Z,
         ACTIVITY_UPDATE_SUCCESS: function (e) {
             let { applicationId: t, token: n } = e,
                 r = N[t];

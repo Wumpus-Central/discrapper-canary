@@ -76,11 +76,11 @@ function v(e) {
             items: g,
             initialSection: v = b.oh.USER_INFO,
             initialSubsection: O,
-            onClose: I,
+            onClose: _,
         } = e,
-        { trackUserProfileAction: _ } = (0, s.KZ)(),
+        { trackUserProfileAction: I } = (0, s.KZ)(),
         P = (0, i.e7)([c.Z], () => c.Z.hidePersonalInformation),
-        [{ section: Z, subsection: N }, E] = l.useState({
+        [{ section: Z, subsection: T }, N] = l.useState({
             section:
                 null !=
                 (d =
@@ -99,23 +99,23 @@ function v(e) {
         });
     l.useEffect(() => {
         null == g.find((e) => e.section === Z) &&
-            E({
+            N({
                 section: g[0].section,
                 subsection: void 0,
             });
     }, [g, Z]);
-    let S = l.useCallback(
+    let E = l.useCallback(
         (e) => {
-            _({
+            I({
                 action: "PRESS_SECTION",
                 section: e,
             }),
-                E({
+                N({
                     section: e,
                     subsection: void 0,
                 });
         },
-        [_, E],
+        [I, N],
     );
     return P
         ? (0, r.jsx)("div", {
@@ -138,7 +138,7 @@ function v(e) {
                       className: x.tabBar,
                       type: "top",
                       selectedItem: Z,
-                      onItemSelect: S,
+                      onItemSelect: E,
                       children: g.map((e) => {
                           let { section: t, text: n } = e;
                           return (0, r.jsx)(
@@ -159,12 +159,12 @@ function v(e) {
                   (0, r.jsx)(y, {
                       items: g,
                       section: Z,
-                      subsection: N,
+                      subsection: T,
                       user: u,
                       currentUser: f,
                       displayProfile: m,
                       guildId: p,
-                      onClose: I,
+                      onClose: _,
                   }),
               ],
           });

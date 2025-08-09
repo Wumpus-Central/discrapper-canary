@@ -15,7 +15,7 @@ function c(e) {
         c = a.Z.getChannel(null == (t = n[0]) ? void 0 : t.id),
         u = (0, r.e7)([i.Z], () => i.Z.getStageInstanceByChannel(null == c ? void 0 : c.id), [c]),
         d = (0, s.k5)(e),
-        { isStageNoticeHidden: p, isEventNoticeHidden: h } = (0, r.cj)(
+        { isStageNoticeHidden: p, isEventNoticeHidden: f } = (0, r.cj)(
             [o.Z],
             () => ({
                 isStageNoticeHidden: o.Z.isLiveChannelNoticeHidden({ stageId: null == u ? void 0 : u.id }),
@@ -25,7 +25,7 @@ function c(e) {
         );
     if (null != d)
         if (null != u) return !p;
-        else return !h;
+        else return !f;
     return null != u && !p;
 }
 n(765305), n(231338);

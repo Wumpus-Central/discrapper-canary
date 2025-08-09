@@ -9,19 +9,19 @@ var r = n(255367),
     u = n(424218),
     d = n(823379),
     p = n(358085),
-    h = n(843445),
-    f = n(981631),
+    f = n(843445),
+    h = n(981631),
     g = n(388032),
     m = n(208039);
 let b = {
-    [f.TaA.WINDOWS]: p.PlatformTypes.WINDOWS,
-    [f.TaA.MACOS]: p.PlatformTypes.OSX,
-    [f.TaA.LINUX]: p.PlatformTypes.LINUX,
+    [h.TaA.WINDOWS]: p.PlatformTypes.WINDOWS,
+    [h.TaA.MACOS]: p.PlatformTypes.OSX,
+    [h.TaA.LINUX]: p.PlatformTypes.LINUX,
 };
 class _ extends i.PureComponent {
     render() {
         let { active: e, children: t, pageSize: n, onClick: i } = this.props,
-            l = n === h.b.LARGE;
+            l = n === f.b.LARGE;
         return (0, r.jsx)(o.zx, {
             size: l ? o.zx.Sizes.MIN : o.zx.Sizes.LARGE,
             fullWidth: !l,
@@ -100,11 +100,11 @@ class E extends i.PureComponent {
                                   pageSize: e,
                                   children: (function (e) {
                                       switch (e) {
-                                          case f.TaA.WINDOWS:
+                                          case h.TaA.WINDOWS:
                                               return g.intl.string(g.t["0/xHFB"]);
-                                          case f.TaA.MACOS:
+                                          case h.TaA.MACOS:
                                               return g.intl.string(g.t.E4u4n5);
-                                          case f.TaA.LINUX:
+                                          case h.TaA.LINUX:
                                               return g.intl.string(g.t.tcawo6);
                                       }
                                   })(t),

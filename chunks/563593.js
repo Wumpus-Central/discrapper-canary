@@ -72,10 +72,10 @@ function c(e) {
             }
             return i;
         })(e, ["width", "height", "color", "foreground", "gradientConfig"]);
-    let h = null;
+    let f = null;
     return (
         null != d &&
-            (h = (0, r.jsx)(
+            (f = (0, r.jsx)(
                 i.Z,
                 o(a({}, d), {
                     color: c,
@@ -89,7 +89,7 @@ function c(e) {
                 height: n,
                 viewBox: "0 0 24 24",
                 children: [
-                    (0, r.jsx)("defs", { children: h }),
+                    (0, r.jsx)("defs", { children: f }),
                     (0, r.jsx)("path", {
                         d: "M0 0h24v24H0z",
                         fill: "none",

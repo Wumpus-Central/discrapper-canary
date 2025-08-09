@@ -1,10 +1,9 @@
-n.d(t, { M: () => c });
-var r = n(266661),
-    i = n(163612),
-    o = n(483942),
-    a = n(91641),
-    s = n(895536),
-    l = n(987338);
-let c = new a.E([s.NR, s.ZI, s.Ob, s.uc, s.m1, o.Pv, o.ur, o.Qj, o.Eo, o.I1, o.lE, i.Z, r.M], l.$P.VOICE_CALL, {
+n.d(t, { M: () => l });
+var r = n(163612),
+    i = n(483942),
+    o = n(91641),
+    a = n(895536),
+    s = n(987338);
+let l = new o.E([a.NR, a.ZI, a.Ob, a.uc, a.m1, i.Pv, i.ur, i.Qj, i.Eo, i.I1, i.lE, r.Z], s.$P.VOICE_CALL, {
     location: "voice call initiated",
 });

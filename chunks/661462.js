@@ -64,7 +64,7 @@ function p(e) {
             onClose: h,
         } = e,
         { trackUserProfileAction: x } = (0, o.KZ)(),
-        [{ section: y, subsection: v, text: O }, I] = l.useState(
+        [{ section: y, subsection: v, text: O }, _] = l.useState(
             ((n = (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
@@ -131,7 +131,7 @@ function p(e) {
                             action: "PRESS_SECTION",
                             section: e,
                         }),
-                            I((t) => {
+                            _((t) => {
                                 var n;
                                 return null != (n = g.find((t) => t.section === e)) ? n : t;
                             });

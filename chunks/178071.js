@@ -1,5 +1,5 @@
 n.d(t, {
-    Z: () => f,
+    Z: () => h,
     y: () => p,
 }),
     n(388685);
@@ -30,7 +30,7 @@ let p = {
     Colors: s.Z.Colors,
     Looks: s.Z.Looks,
 };
-class h extends i.PureComponent {
+class f extends i.PureComponent {
     render() {
         var e, t;
         let n = this.props,
@@ -62,8 +62,8 @@ class h extends i.PureComponent {
                 }
                 return i;
             })(n, ["storeListings", "primaryStoreListing", "skuId", "onStoreListingSelect", "currentStoreListingId"]),
-            h = +(null != l);
-        return (h += i.length) < 2
+            f = +(null != l);
+        return (f += i.length) < 2
             ? null
             : (0, r.jsx)(
                   s.Z,
@@ -139,10 +139,10 @@ class h extends i.PureComponent {
             });
     }
 }
-let f = l.ZP.connectStores([c.Z], (e) => {
+let h = l.ZP.connectStores([c.Z], (e) => {
     let { skuId: t } = e;
     return {
         storeListings: c.Z.getUnpublishedForSKU(t),
         primaryStoreListing: c.Z.getForSKU(t),
     };
-})(h);
+})(f);

@@ -13,8 +13,8 @@ var r,
     u = n(131951),
     d = n(358085),
     p = n(533583),
-    h = n(65154);
-function f(e, t, n) {
+    f = n(65154);
+function h(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -88,9 +88,9 @@ class N extends (r = a.ZP.DeviceSettingsStore) {
         return v;
     }
 }
-f(N, "displayName", "ConnectedDeviceStore"),
-    f(N, "persistKey", "ConnectedDeviceStore"),
-    f(N, "migrations", [
+h(N, "displayName", "ConnectedDeviceStore"),
+    h(N, "persistKey", "ConnectedDeviceStore"),
+    h(N, "migrations", [
         (e) => {
             if (null == e.ignoredDevices) {
                 var t, n;
@@ -106,7 +106,7 @@ f(N, "displayName", "ConnectedDeviceStore"),
                                     }),
                                 )),
                                 r.forEach(function (t) {
-                                    f(e, t, n[t]);
+                                    h(e, t, n[t]);
                                 });
                         }
                         return e;
@@ -136,7 +136,7 @@ let T = new N(o.Z, {
             r = {};
         (y.justChanged = !1),
             t.forEach((e) => {
-                if (((r[C(e)] = e.id), e.id === h.w5)) {
+                if (((r[C(e)] = e.id), e.id === f.w5)) {
                     var t;
                     let n = null != (t = e.originalId) ? t : e.originalName;
                     n !== y.id && (y.justChanged = !0), (y.id = n);
@@ -146,7 +146,7 @@ let T = new N(o.Z, {
         if (
             ((v.justChanged = !1),
             n.forEach((e) => {
-                if (((i[C(e)] = e.id), e.id === h.w5)) {
+                if (((i[C(e)] = e.id), e.id === f.w5)) {
                     var t;
                     let n = null != (t = e.originalId) ? t : e.originalName;
                     n !== v.id && (v.justChanged = !0), (v.id = n);

@@ -11,27 +11,27 @@ function d() {
     (c = new Map()), (u = new Map());
 }
 let p = [],
-    h = [];
-class f extends (r = a.ZP.Store) {
+    f = [];
+class h extends (r = a.ZP.Store) {
     getRecentMessageAuthorIds(e) {
         var t;
         return null != (t = c.get(e)) ? t : p;
     }
     getRecentMessageChannelIds(e) {
         var t;
-        return null != (t = u.get(e)) ? t : h;
+        return null != (t = u.get(e)) ? t : f;
     }
 }
 (l = "SearchRecentMessageStore"),
-    (i = "displayName") in f
-        ? Object.defineProperty(f, i, {
+    (i = "displayName") in h
+        ? Object.defineProperty(h, i, {
               value: l,
               enumerable: !0,
               configurable: !0,
               writable: !0,
           })
-        : (f[i] = l),
-    new f(o.Z, {
+        : (h[i] = l),
+    new h(o.Z, {
         SEARCH_MESSAGES_SUCCESS: function (e) {
             var t, n;
             let { guildId: r, data: i } = e;
@@ -41,16 +41,16 @@ class f extends (r = a.ZP.Store) {
                 o = [...(null != (t = c.get(r)) ? t : [])],
                 d = new Set(o),
                 p = [...(null != (n = u.get(r)) ? n : [])],
-                h = new Set(p);
+                f = new Set(p);
             return (
                 i.forEach((e) => {
                     e.messages.forEach((e) => {
                         let [t] = e,
                             n = (0, s.e5)(t);
                         !d.has(n.author.id) && d.size < 15 && (d.add(n.author.id), o.push(n.author.id), (l = !0)),
-                            !h.has(n.channel_id) &&
-                                h.size < 15 &&
-                                (h.add(n.channel_id), p.push(n.channel_id), (a = !0));
+                            !f.has(n.channel_id) &&
+                                f.size < 15 &&
+                                (f.add(n.channel_id), p.push(n.channel_id), (a = !0));
                     });
                 }),
                 l && c.set(r, o),

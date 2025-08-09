@@ -14,8 +14,8 @@ var i = n(581282),
     u = n(906732),
     d = n(266454),
     p = n(960048),
-    h = n(276792),
-    f = n(290347);
+    f = n(276792),
+    h = n(290347);
 function g(e) {
     let { content: t, isPreview: n } = e,
         r = l.t.fromBinary((0, i.c)(t));
@@ -33,7 +33,7 @@ function m(e) {
         d = (0, s.ZP)(),
         g = (0, a.apv)(d);
     if ("announcementModalVariant1" === n.properties.oneofKind) {
-        let e = (0, h.N)({
+        let e = (0, f.N)({
             content: n.properties.announcementModalVariant1,
             renderModalProps: t,
             analyticsLocations: l,
@@ -41,7 +41,7 @@ function m(e) {
             isLightTheme: g,
         });
         return (0, r.jsx)(
-            f.Z,
+            h.Z,
             (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},

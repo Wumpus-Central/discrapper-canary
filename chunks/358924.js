@@ -9,8 +9,8 @@ var r,
     u = n(481060),
     d = n(287734),
     p = n(438139),
-    h = n(2052),
-    f = n(726542),
+    f = n(2052),
+    h = n(726542),
     g = n(638880),
     m = n(655922),
     b = n(122810),
@@ -26,9 +26,9 @@ var r,
     T = n(548816),
     P = n(925329),
     j = n(102172),
-    A = n(871118),
-    Z = n(707409),
-    x = n(359110),
+    x = n(871118),
+    A = n(707409),
+    Z = n(359110),
     w = n(769654),
     L = n(849171),
     R = n(601964),
@@ -49,7 +49,7 @@ let K = {
         LARGE: 160,
     },
     q = [14, 14, 12, 12, 10, 8, 6],
-    Q = function (e) {
+    X = function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
         return (0, i.jsx)(u.Text, {
             className: o()(Y.textContent, t),
@@ -57,7 +57,7 @@ let K = {
             children: e,
         });
     },
-    X = function (e) {
+    Q = function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
         return (0, i.jsx)(u.Text, {
             className: o()(Y.textContent, t),
@@ -86,13 +86,13 @@ class ee extends l.Component {
             { timestamps: n } = t;
         return null == n || !(0, _.Z)(t) || (0, O.Z)(t)
             ? null
-            : X(
+            : Q(
                   (0, b.Z)(t)
                       ? (0, i.jsx)(J, { timestamps: n })
-                      : (0, i.jsx)(Z.ZP, {
+                      : (0, i.jsx)(A.ZP, {
                             start: n.start,
                             end: n.end,
-                            location: Z.ZP.Locations.USER_ACTIVITY,
+                            location: A.ZP.Locations.USER_ACTIVITY,
                             className: Y.__invalid_playTime,
                         }),
               );
@@ -135,8 +135,8 @@ class ee extends l.Component {
                           }),
                     (0, i.jsxs)("div", {
                         children: [
-                            Q(null != l && "" !== l ? l : W.intl.string(W.t["2TbM/P"])),
-                            null != a ? X(a) : null,
+                            X(null != l && "" !== l ? l : W.intl.string(W.t["2TbM/P"])),
+                            null != a ? Q(a) : null,
                             this.renderTimePlayed(),
                         ],
                     }),
@@ -339,8 +339,8 @@ let ei = (e) => {
         var t;
         let { guild: n, channel: r, partySize: a, members: s, onChannelContextMenu: c } = e,
             p = l.useRef(null),
-            h = (0, C.ZP)(r, !0),
-            f = (0, R.EB)(n, 32),
+            f = (0, C.ZP)(r, !0),
+            h = (0, R.EB)(n, 32),
             g = (0, R.gM)(n);
         return (0, i.jsx)($, {
             children: (0, i.jsxs)("div", {
@@ -355,10 +355,10 @@ let ei = (e) => {
                         children: (0, i.jsxs)("div", {
                             className: Y.voiceSectionAssets,
                             children: [
-                                null != f
+                                null != h
                                     ? (0, i.jsx)("img", {
                                           alt: "",
-                                          src: f,
+                                          src: h,
                                           className: o()(Y.voiceSectionGuildImage, Y.largeImageMask),
                                       })
                                     : (0, i.jsx)("div", {
@@ -382,12 +382,12 @@ let ei = (e) => {
                     }),
                     (0, i.jsx)(u.P3F, {
                         onClick: () => {
-                            d.default.selectVoiceChannel(r.id), (0, x.Kh)(r.id);
+                            d.default.selectVoiceChannel(r.id), (0, Z.Kh)(r.id);
                         },
                         focusProps: { ringTarget: p },
                         children: (0, i.jsxs)("div", {
                             className: Y.voiceSectionDetails,
-                            children: [Q(n.name, Y.voiceSectionText), X(h, Y.voiceSectionText)],
+                            children: [X(n.name, Y.voiceSectionText), Q(f, Y.voiceSectionText)],
                         }),
                     }),
                     (0, i.jsx)(F.Z, {
@@ -413,7 +413,7 @@ let ei = (e) => {
                           })
                         : null,
                     (0, i.jsxs)("div", {
-                        children: [Q(n), X(W.intl.formatToPlainString(W.t.C4WXvb, { memberCount: r.totalSize }))],
+                        children: [X(n), Q(W.intl.formatToPlainString(W.t.C4WXvb, { memberCount: r.totalSize }))],
                     }),
                     (0, i.jsx)(F.Z, {
                         partySize: r,
@@ -433,7 +433,7 @@ let ei = (e) => {
                     (0, i.jsx)(G.Z, { className: Y.xboxSectionIcon }),
                     (0, i.jsxs)("div", {
                         className: Y.__invalid_xboxSectionDetails,
-                        children: [Q(t), X(W.intl.string(W.t["JG9r+/"]))],
+                        children: [X(t), Q(W.intl.string(W.t["JG9r+/"]))],
                     }),
                 ],
             }),
@@ -473,7 +473,7 @@ let ei = (e) => {
                           })
                         : (0, i.jsx)("div", {}),
                     (0, i.jsxs)("div", {
-                        children: [null != r ? Q(r) : null, null != l ? X(l) : null],
+                        children: [null != r ? X(r) : null, null != l ? Q(l) : null],
                     }),
                     (0, i.jsx)(F.Z, {
                         minAvatarsShown: d ? 2 : 1,
@@ -487,7 +487,7 @@ let ei = (e) => {
     (ei.TwitchSection = (e) => {
         let t,
             { activity: r, user: l, getAssetImage: a, guildId: s } = e,
-            { name: c, details: d, assets: p, application_id: h } = r;
+            { name: c, details: d, assets: p, application_id: f } = r;
         if (null != p && (0, E.Z)(r)) {
             var g;
             t = (0, i.jsx)(N.Z, {
@@ -500,7 +500,7 @@ let ei = (e) => {
                     children: [
                         (0, i.jsx)("img", {
                             alt: null != (g = p.large_text) ? g : "",
-                            src: a(h, p.large_image, [900, 500]),
+                            src: a(f, p.large_image, [900, 500]),
                             className: Y.twitchSectionPreview,
                         }),
                         (0, i.jsx)("img", {
@@ -522,11 +522,11 @@ let ei = (e) => {
                     children: [
                         (0, i.jsx)("img", {
                             alt: "",
-                            src: f.Z.get(z.ABu.TWITCH).icon.lightSVG,
+                            src: h.Z.get(z.ABu.TWITCH).icon.lightSVG,
                             className: Y.twitchSectionIcon,
                         }),
                         (0, i.jsxs)("div", {
-                            children: [Q(c), null != d ? X(d) : null],
+                            children: [X(c), null != d ? Q(d) : null],
                         }),
                         null != l
                             ? (0, i.jsx)(u.qEK, {
@@ -546,12 +546,12 @@ let ei = (e) => {
         var t, n;
         let { activity: r, user: l, applicationStream: a, onPreviewClick: o, guildId: c } = e,
             d = (0, s.e7)([k.Z], () => k.Z.getChannel(a.channelId)),
-            [p, h] = (0, j.wq)(d),
-            f = (0, i.jsxs)(u.P3F, {
+            [p, f] = (0, j.wq)(d),
+            h = (0, i.jsxs)(u.P3F, {
                 onClick: p ? o : void 0,
                 className: Y.applicationStreamingPreviewWrapper,
                 children: [
-                    (0, i.jsx)(A.Z, {
+                    (0, i.jsx)(x.Z, {
                         stream: a,
                         className: Y.applicationStreamingPreviewSize,
                     }),
@@ -559,7 +559,7 @@ let ei = (e) => {
                         className: Y.applicationStreamingHoverText,
                         variant: "text-sm/medium",
                         color: "always-white",
-                        children: (0, j.P9)(h),
+                        children: (0, j.P9)(f),
                     }),
                 ],
             }),
@@ -576,12 +576,12 @@ let ei = (e) => {
                             className: Y.applicationStreamingAvatar,
                         }),
                         (0, i.jsxs)("div", {
-                            children: [Q(B.ZP.getName(l)), X(g)],
+                            children: [X(B.ZP.getName(l)), Q(g)],
                         }),
                         (0, i.jsx)(S.ZP, { size: S.ZP.Sizes.SMALL }),
                     ],
                 }),
-                f,
+                h,
             ],
         });
     }),
@@ -601,7 +601,7 @@ let ei = (e) => {
                     .map((e) => (D.default.getId() === e ? null : M.default.getUser(e)))
                     .filter(H.lm),
             ),
-            f = (0, h.O)(),
+            h = (0, f.O)(),
             { analyticsLocations: m } = (0, v.ZP)();
         if (null == d) return null;
         let b = I.Z.getApplication(d);
@@ -666,7 +666,7 @@ let ei = (e) => {
                                                 (0, g.Z)({
                                                     applicationId: d,
                                                     activityChannelId: n.id,
-                                                    locationObject: f.location,
+                                                    locationObject: h.location,
                                                     analyticsLocations: m,
                                                 });
                                         },

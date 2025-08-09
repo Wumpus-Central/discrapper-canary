@@ -9,8 +9,8 @@ var r = n(255367),
     u = n(943094),
     d = n(749210),
     p = n(287734),
-    h = n(401430),
-    f = n(230711),
+    f = n(401430),
+    h = n(230711),
     g = n(773244),
     m = n(951752),
     b = n(607070),
@@ -26,9 +26,9 @@ var r = n(255367),
     T = n(77987),
     P = n(679891),
     j = n(491575),
-    A = n(954709),
-    Z = n(644679),
-    x = n(403763),
+    x = n(954709),
+    A = n(644679),
+    Z = n(403763),
     w = n(314533),
     L = n(9029),
     R = n(935347),
@@ -46,8 +46,8 @@ var r = n(255367),
     Y = n(306721),
     K = n(531551),
     q = n(38618),
-    Q = n(972830),
-    X = n(684572),
+    X = n(972830),
+    Q = n(684572),
     J = n(584233),
     $ = n(15274),
     ee = n(434404),
@@ -63,8 +63,8 @@ var r = n(255367),
     eu = n(122333),
     ed = n(960275),
     ep = n(818765),
-    eh = n(678492),
-    ef = n(269089),
+    ef = n(678492),
+    eh = n(269089),
     eg = n(380570),
     em = n(837689),
     eb = n(367207),
@@ -80,9 +80,9 @@ var r = n(255367),
     eT = n(377368),
     eP = n(262702),
     ej = n(639033),
-    eA = n(479313),
-    eZ = n(911560),
-    ex = n(703016),
+    ex = n(479313),
+    eA = n(911560),
+    eZ = n(703016),
     ew = n(892001),
     eL = n(497805),
     eR = n(332754),
@@ -100,8 +100,8 @@ var r = n(255367),
     eY = n(944486),
     eK = n(914010),
     eq = n(695103),
-    eQ = n(241890),
-    eX = n(417363),
+    eX = n(241890),
+    eQ = n(417363),
     eJ = n(900974),
     e$ = n(358085),
     e0 = n(998502),
@@ -167,7 +167,7 @@ let e6 = !1;
     eI.Z.loadServer(),
     e$.isPlatformEmbedded &&
         (e0.ZP.on("USER_SETTINGS_OPEN", (e, t) => {
-            ez.Z.getLayers().includes(e3.S9g.USER_SETTINGS) || f.Z.open(null != t ? t : e3.oAB.ACCOUNT);
+            ez.Z.getLayers().includes(e3.S9g.USER_SETTINGS) || h.Z.open(null != t ? t : e3.oAB.ACCOUNT);
         }),
         e0.ZP.on("LAUNCH_APPLICATION", (e, t) => {
             let n = eW.Z.getActiveLibraryApplication(t);
@@ -185,8 +185,8 @@ let e9 = (0, m.l)((e) => {
             n = (0, ek.default)(t.pathname);
         return (
             null != n &&
-                (0, Q.h)(() =>
-                    f.Z.open(n.section, n.subsection, {
+                (0, X.h)(() =>
+                    h.Z.open(n.section, n.subsection, {
                         openWithoutBackstack: !1,
                         impressionSource: n.source,
                     }),
@@ -234,7 +234,7 @@ let e9 = (0, m.l)((e) => {
         },
     ),
     tt = (0, m.l)((0, T.e)(j.Z, null, { passProps: !1 })),
-    tn = (0, T.e)(X.default, null, { passProps: !1 }),
+    tn = (0, T.e)(Q.default, null, { passProps: !1 }),
     tr = [
         e3.Z5c.GUILD_BOOSTING_MARKETING(ey.Hw.guildId()),
         ...Array.from(e8.Vg).map((e) => e3.Z5c.CHANNEL(ey.Hw.guildId(), e)),
@@ -268,7 +268,7 @@ let tl = [
             let { match: t } = e,
                 { id: n } = t.params;
             return (
-                (0, Q.h)(() =>
+                (0, X.h)(() =>
                     (0, ew.openUserProfileModal)({
                         userId: n,
                         sourceAnalyticsLocations: [N.Z.URI_SCHEME],
@@ -284,7 +284,7 @@ let tl = [
             let { match: t } = e,
                 { gameId: n, action: i } = t.params;
             return (
-                eX.Z.whenInitialized(() => {
+                eQ.Z.whenInitialized(() => {
                     eW.Z.whenInitialized(() => {
                         switch (i) {
                             case "launch": {
@@ -301,7 +301,7 @@ let tl = [
                                 break;
                             }
                             case "test-mode":
-                                eq.Z.whenInitialized(() => h.Wt(n));
+                                eq.Z.whenInitialized(() => f.Wt(n));
                                 break;
                             case "uninstall": {
                                 let e = eW.Z.getActiveLibraryApplication(n);
@@ -319,7 +319,7 @@ let tl = [
         path: [e3.Z5c.GUILD_CREATE],
         render: function () {
             return (
-                (0, Q.h)(() => D.Z.openCreateGuildModal({ location: "External link" })),
+                (0, X.h)(() => D.Z.openCreateGuildModal({ location: "External link" })),
                 (0, r.jsx)(a.l_, { to: eB.Z.defaultRoute })
             );
         },
@@ -331,7 +331,7 @@ let tl = [
                 { section: n, subsection: i } = t.params,
                 o = (0, l.parse)(location.search).feature;
             return (
-                (0, Q.h)(() =>
+                (0, X.h)(() =>
                     en.v({
                         section: (0, et.Z)(e3.pNK, n),
                         subsection: (0, et.Z)(e3.KsC, i),
@@ -354,7 +354,7 @@ let tl = [
             let { match: t } = e,
                 { guildId: i } = t.params;
             return (
-                (0, Q.h)(() => {
+                (0, X.h)(() => {
                     (0, s.ZDy)(async () => {
                         let { default: e } = await Promise.all([n.e("5863"), n.e("95626")]).then(n.bind(n, 751212));
                         return (t) => {
@@ -388,7 +388,7 @@ let tl = [
     {
         path: [e3.Z5c.APPLICATION_LIBRARY_INVENTORY],
         render: function () {
-            return (0, Q.h)(() => f.Z.open(e3.oAB.INVENTORY)), (0, r.jsx)(a.l_, { to: eB.Z.defaultRoute });
+            return (0, X.h)(() => h.Z.open(e3.oAB.INVENTORY)), (0, r.jsx)(a.l_, { to: eB.Z.defaultRoute });
         },
         isSessionRequired: !0,
     },
@@ -409,7 +409,7 @@ let tl = [
             let { match: t } = e,
                 { guildId: n, guildEventId: i } = t.params;
             return (
-                (0, Q.h)(() => {
+                (0, X.h)(() => {
                     (0, $.bO)({ eventId: i });
                 }),
                 (0, r.jsx)(a.l_, { to: e3.Z5c.CHANNEL(n) })
@@ -423,7 +423,7 @@ let tl = [
             let { match: t } = e,
                 { guildId: n, section: i, subsection: l } = t.params;
             return (
-                (0, Q.h)(() => {
+                (0, X.h)(() => {
                     ee.Z.open(n, (0, et.Z)(e3.pNK, i), void 0, (0, et.Z)(e3.KsC, l));
                 }),
                 (0, r.jsx)(a.l_, { to: e3.Z5c.CHANNEL(n) })
@@ -502,14 +502,14 @@ class ts extends i.PureComponent {
             v.ZP.initialize(),
             H.ZP.initialize(),
             eM.Z.initialize(),
-            ef.Z.initialize(),
+            eh.Z.initialize(),
             y.Z.initialize(),
             er.Z.init(),
-            x.Z.init(),
+            Z.Z.init(),
             eJ.Z.init(),
             E.Z.initialize(),
-            ex.Z.init(),
-            eQ.Z.init(),
+            eZ.Z.init(),
+            eX.Z.init(),
             eR.Z.init(),
             eP.Z.initialize(),
             ej.Z.initialize(),
@@ -521,7 +521,7 @@ class ts extends i.PureComponent {
             eT.Z.initialize(),
             ep.Z.initialize(),
             ed.Z.initialize(),
-            eh.Z.initialize(),
+            ef.Z.initialize(),
             w.Z.initialize(),
             L.Z.initialize(),
             F.Z.initialize(),
@@ -538,8 +538,8 @@ class ts extends i.PureComponent {
             eO.Z.initialize(),
             em.Z.initialize(),
             k.Z.initialize(),
+            x.Z.initialize(),
             A.Z.initialize(),
-            Z.Z.initialize(),
             C.Z.initialize(),
             (this.rewriterUnlisten = eE.Z.addRouteRewriter(this.ensureChannelMatchesGuild)),
             (this.historyUnlisten = eE.Z.addRouteChangeListener(this.handleHistoryChange));
@@ -555,7 +555,7 @@ class ts extends i.PureComponent {
             eM.Z.terminate(),
             y.Z.terminate(),
             e_.Z.terminate(),
-            ef.Z.terminate(),
+            eh.Z.terminate(),
             eL.Z.terminate(),
             E.Z.terminate(),
             G.Z.terminate(),
@@ -566,14 +566,14 @@ class ts extends i.PureComponent {
             eT.Z.terminate(),
             ep.Z.terminate(),
             ed.Z.terminate(),
-            eh.Z.terminate(),
+            ef.Z.terminate(),
             w.Z.terminate(),
             L.Z.terminate(),
             em.Z.terminate(),
             k.Z.terminate(),
             B.Z.terminate(),
+            x.Z.terminate(),
             A.Z.terminate(),
-            Z.Z.terminate(),
             C.Z.terminate(),
             F.Z.terminate(),
             this.historyUnlisten(),
@@ -602,11 +602,11 @@ class ts extends i.PureComponent {
                 let { guildId: r, channelId: i, messageId: o, threadId: s } = ti(n),
                     c = (0, ey.Ss)(r),
                     u = (0, ey.cq)(i),
-                    h = (0, ey.cq)(s),
-                    f = eK.Z.getGuildId(),
-                    g = f !== r;
+                    f = (0, ey.cq)(s),
+                    h = eK.Z.getGuildId(),
+                    g = h !== r;
                 if ((c && g && d.Z.selectGuild(r), c && u)) {
-                    let n = eY.Z.getChannelId(f),
+                    let n = eY.Z.getChannelId(h),
                         a = n !== i;
                     if (!e6 || g || a || null != o) {
                         (e6 = !0),
@@ -616,9 +616,9 @@ class ts extends i.PureComponent {
                                 messageId: o,
                             });
                         let { summaryId: e } = (0, l.parse)(t);
-                        null != e && eA.ZP.setSelectedSummary(i, e);
+                        null != e && ex.ZP.setSelectedSummary(i, e);
                     }
-                    if (null != s && h) {
+                    if (null != s && f) {
                         let e = eV.ZP.getCurrentSidebarChannelId(n) !== s,
                             t = null != eV.ZP.getGuildSidebarState(r);
                         if (null != i && null != s && e)
@@ -637,7 +637,7 @@ class ts extends i.PureComponent {
                     let c = es.Z.getIsOpen();
                     if (i === e8.oC.ROLE_SUBSCRIPTIONS) eo.Z.closeSidebar();
                     else if (g && c) {
-                        let t = null == f && r === e3.ME,
+                        let t = null == h && r === e3.ME,
                             n = e === e3.Z5c.GUILD_DISCOVERY;
                         t || n ? eo.Z.closeSidebar() : eo.Z.openSidebar();
                     } else ((a && c) || (!g && !a)) && eo.Z.closeSidebar();
@@ -658,7 +658,7 @@ class ts extends i.PureComponent {
         if (null != i && (0, ey.cq)(i) && !(0, e8.AB)(i) && a) {
             let n = eH.Z.getChannel(i);
             if (null == n)
-                eZ.Z.loadThread(i).then(() =>
+                eA.Z.loadThread(i).then(() =>
                     to({
                         channelId: i,
                         guildId: r,
@@ -674,7 +674,7 @@ class ts extends i.PureComponent {
                 if (!((0, ey.cq)(l) && !(0, e8.AB)(i))) return null;
                 let n = eH.Z.getChannel(l);
                 if (null == n)
-                    eZ.Z.loadThread(l).then(() =>
+                    eA.Z.loadThread(l).then(() =>
                         to({
                             channelId: l,
                             guildId: r,

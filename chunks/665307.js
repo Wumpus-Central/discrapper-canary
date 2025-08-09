@@ -9,8 +9,8 @@ var r,
     u = n(846519),
     d = n(477690),
     p = n(755721),
-    h = n(481060),
-    f = n(570140),
+    f = n(481060),
+    h = n(570140),
     g = n(239091),
     m = n(287259),
     b = n(785547),
@@ -26,8 +26,8 @@ var r,
     T = n(645818),
     P = n(981631),
     j = n(388032),
-    A = n(833972);
-function Z(e, t, n) {
+    x = n(833972);
+function A(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -40,7 +40,7 @@ function Z(e, t, n) {
         e
     );
 }
-function x(e) {
+function Z(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -51,7 +51,7 @@ function x(e) {
                 }),
             )),
             r.forEach(function (t) {
-                Z(e, t, n[t]);
+                A(e, t, n[t]);
             });
     }
     return e;
@@ -84,9 +84,9 @@ let L = (0, N.Mg)(d.Z.GAME_LIST_ROW_MIN_HEIGHT),
     k = (e) => {
         let { flag: t, icon: n, item: r, tooltip: l } = e,
             a = r.libraryApplication.hasFlag(t);
-        return (0, i.jsx)(h.ua7, {
+        return (0, i.jsx)(f.ua7, {
             text: l,
-            children: (e) => (0, i.jsx)(n, x({ className: o()(A.settingIcon, { [A.hidden]: !a }) }, e)),
+            children: (e) => (0, i.jsx)(n, Z({ className: o()(x.settingIcon, { [x.hidden]: !a }) }, e)),
         });
     },
     M = [
@@ -94,8 +94,8 @@ let L = (0, N.Mg)(d.Z.GAME_LIST_ROW_MIN_HEIGHT),
             key: P.iEv.NAME,
             renderHeader: () => j.intl.string(j.t.dBfWfX),
             sort: !0,
-            cellClassName: A.nameCell,
-            bodyCellClassName: A.nameBodyCell,
+            cellClassName: x.nameCell,
+            bodyCellClassName: x.nameBodyCell,
             render: (e) =>
                 (0, i.jsxs)(_.Z, {
                     align: _.Z.Align.CENTER,
@@ -103,26 +103,26 @@ let L = (0, N.Mg)(d.Z.GAME_LIST_ROW_MIN_HEIGHT),
                         (0, i.jsx)(E.Z, {
                             game: e.application,
                             size: E.Z.Sizes.SMALL,
-                            className: A.gameIcon,
+                            className: x.gameIcon,
                         }),
                         (0, i.jsxs)("div", {
-                            className: A.nameCellInfo,
+                            className: x.nameCellInfo,
                             children: [
                                 (0, i.jsx)("div", {
-                                    className: A.nameCellText,
+                                    className: x.nameCellText,
                                     children: e.libraryApplication.getBranchedName(e.application),
                                 }),
                                 e.libraryApplication.hasFlag(P.eHb.PREMIUM)
-                                    ? (0, i.jsx)(h.ua7, {
+                                    ? (0, i.jsx)(f.ua7, {
                                           text: j.intl.string(j.t.tG2SzM),
                                           children: (e) =>
                                               (0, i.jsx)(
-                                                  h.SrA,
-                                                  x(
+                                                  f.SrA,
+                                                  Z(
                                                       {
                                                           size: "md",
                                                           color: "currentColor",
-                                                          className: A.nitroIcon,
+                                                          className: x.nitroIcon,
                                                       },
                                                       e,
                                                   ),
@@ -138,8 +138,8 @@ let L = (0, N.Mg)(d.Z.GAME_LIST_ROW_MIN_HEIGHT),
             key: P.iEv.PLATFORM,
             renderHeader: () => j.intl.string(j.t.YR4cHB),
             sort: !0,
-            cellClassName: A.platformCell,
-            bodyCellClassName: A.textCell,
+            cellClassName: x.platformCell,
+            bodyCellClassName: x.textCell,
             render(e) {
                 let t = e.libraryApplication.getDistributor();
                 return (0, i.jsx)(_.Z, {
@@ -152,8 +152,8 @@ let L = (0, N.Mg)(d.Z.GAME_LIST_ROW_MIN_HEIGHT),
             key: P.iEv.LAST_PLAYED,
             renderHeader: () => j.intl.string(j.t.FDDyjY),
             sort: !0,
-            cellClassName: A.lastPlayedCell,
-            bodyCellClassName: A.textCell,
+            cellClassName: x.lastPlayedCell,
+            bodyCellClassName: x.textCell,
             render(e) {
                 let t;
                 return (
@@ -169,7 +169,7 @@ let L = (0, N.Mg)(d.Z.GAME_LIST_ROW_MIN_HEIGHT),
                             : j.intl.string(j.t.EoWLrq)),
                     (0, i.jsx)(_.Z, {
                         align: _.Z.Align.CENTER,
-                        className: o()({ [A.lastPlayedCellNew]: e.isNew }),
+                        className: o()({ [x.lastPlayedCellNew]: e.isNew }),
                         children: t,
                     })
                 );
@@ -178,7 +178,7 @@ let L = (0, N.Mg)(d.Z.GAME_LIST_ROW_MIN_HEIGHT),
         {
             key: P.iEv.ACTIONS,
             renderHeader: () => null,
-            cellClassName: A.actionsCell,
+            cellClassName: x.actionsCell,
             render(e, t, n) {
                 var r, a;
                 if (null == t) throw Error("No cell props defined.");
@@ -186,22 +186,22 @@ let L = (0, N.Mg)(d.Z.GAME_LIST_ROW_MIN_HEIGHT),
                 return (0, i.jsxs)(l.Fragment, {
                     children: [
                         (0, i.jsxs)("div", {
-                            className: A.settingIcons,
+                            className: x.settingIcons,
                             children: [
                                 (0, i.jsx)(k, {
                                     flag: P.eHb.PRIVATE,
                                     item: e,
-                                    icon: h.kZF,
+                                    icon: f.kZF,
                                     tooltip: j.intl.string(j.t.NozAoq),
                                 }),
                                 (0, i.jsx)(k, {
                                     flag: P.eHb.OVERLAY_DISABLED,
                                     item: e,
-                                    icon: h.o8v,
+                                    icon: f.o8v,
                                     tooltip: j.intl.string(j.t.Az9eqq),
                                 }),
                                 (0, i.jsx)(T.Z, {
-                                    className: o()(A.settingIcon, { [A.hidden]: !e.supportsCloudSync }),
+                                    className: o()(x.settingIcon, { [x.hidden]: !e.supportsCloudSync }),
                                     libraryApplication: e.libraryApplication,
                                 }),
                             ],
@@ -217,7 +217,7 @@ let L = (0, N.Mg)(d.Z.GAME_LIST_ROW_MIN_HEIGHT),
                                   libraryApplication: e.libraryApplication,
                                   color: s ? p.zx.Colors.GREEN : p.zx.Colors.PRIMARY,
                                   isPlayShiny: s && e.defaultAction === P.apO.PLAY,
-                                  size: A.actionButtonSize,
+                                  size: x.actionButtonSize,
                                   hideProgress: null != e.defaultAction,
                                   onDropdownOpen: () => null != t && t.setActiveRowKey(e),
                                   onDropdownClose: () => null != t && t.clearActiveRowKey(),
@@ -271,10 +271,10 @@ let L = (0, N.Mg)(d.Z.GAME_LIST_ROW_MIN_HEIGHT),
             p = t.key === r;
         return (0, i.jsx)("div", {
             className: o()({
-                [A.rowWrapperActive]: d && !p,
-                [A.rowWrapperGlow]: p,
-                [A.rowWrapper]: !d && !p,
-                [A.rowWrapperDim]: !d && !t.isLaunchable,
+                [x.rowWrapperActive]: d && !p,
+                [x.rowWrapperGlow]: p,
+                [x.rowWrapper]: !d && !p,
+                [x.rowWrapperDim]: !d && !t.isLaunchable,
             }),
             ref: (e) => {
                 c(e, t.key);
@@ -282,7 +282,7 @@ let L = (0, N.Mg)(d.Z.GAME_LIST_ROW_MIN_HEIGHT),
             onMouseEnter: () => l(t),
             onMouseLeave: a,
             onContextMenu: (e) => s(e, t),
-            children: (0, i.jsx)("div", x({}, u)),
+            children: (0, i.jsx)("div", Z({}, u)),
         });
     };
 class G extends (r = l.PureComponent) {
@@ -298,7 +298,7 @@ class G extends (r = l.PureComponent) {
         let t = this.props.activeRowKey;
         if (null != t && e.activeRowKey !== t && this.props.isNavigatingByKeyboard) {
             let e = this._rowRefs[t];
-            null != e && (f.Z.wait(g.Zy), this.props.scrollToRow(e, L));
+            null != e && (h.Z.wait(g.Zy), this.props.scrollToRow(e, L));
         }
     }
     handleHighlightedApplicationKey() {
@@ -351,7 +351,7 @@ class G extends (r = l.PureComponent) {
             }
             e.num_applications_total++;
         }
-        C.default.track(P.rMx.LIBRARY_VIEWED, w(x({}, e), { load_id: t.loadId }));
+        C.default.track(P.rMx.LIBRARY_VIEWED, w(Z({}, e), { load_id: t.loadId }));
     }
     handleSort(e, t) {
         m.fS(e, t);
@@ -364,22 +364,22 @@ class G extends (r = l.PureComponent) {
             ? null
             : ((e = "" !== n ? j.intl.format(j.t["4Q1TAg"], { query: n }) : j.intl.string(j.t["0Y+0PT"])),
               (0, i.jsxs)("div", {
-                  className: r ? A.emptyStateSmall : A.emptyStateLarge,
+                  className: r ? x.emptyStateSmall : x.emptyStateLarge,
                   children: [
-                      (0, i.jsx)("div", { className: A.emptyWumpus }),
+                      (0, i.jsx)("div", { className: x.emptyWumpus }),
                       (0, i.jsx)(_.Z, {
                           grow: 0,
                           shrink: +!!r,
                           direction: _.Z.Direction.VERTICAL,
                           children: (0, i.jsxs)("div", {
-                              className: A.emptyStateText,
+                              className: x.emptyStateText,
                               children: [
                                   (0, i.jsx)("div", {
-                                      className: A.emptyStateHeader,
+                                      className: x.emptyStateHeader,
                                       children: j.intl.string(j.t.Lw8X2t),
                                   }),
                                   (0, i.jsx)("div", {
-                                      className: A.emptyStateDescription,
+                                      className: x.emptyStateDescription,
                                       children: e,
                                   }),
                               ],
@@ -399,12 +399,12 @@ class G extends (r = l.PureComponent) {
                           data: n,
                           sortData: !1,
                           rowComponent: U,
-                          className: A.table,
-                          headerClassName: a ? A.stickyHeader : A.header,
-                          headerCellClassName: A.headerCell,
-                          sortedHeaderCellClassName: A.headerCellSorted,
-                          bodyCellClassName: A.bodyCell,
-                          rowClassName: A.row,
+                          className: x.table,
+                          headerClassName: a ? x.stickyHeader : x.header,
+                          headerCellClassName: x.headerCell,
+                          sortedHeaderCellClassName: x.headerCellSorted,
+                          bodyCellClassName: x.bodyCell,
+                          rowClassName: x.row,
                           sortKey: e,
                           sortDirection: t,
                           stickyHeader: a,
@@ -433,29 +433,29 @@ class G extends (r = l.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            Z(this, "_didUnmount", !1),
-            Z(this, "_rowRefs", {}),
-            Z(this, "state", {
+            A(this, "_didUnmount", !1),
+            A(this, "_rowRefs", {}),
+            A(this, "state", {
                 overflowMenuRowKey: null,
                 highlightedApplicationKey:
                     null != this.props.location.state ? this.props.location.state.applicationId : null,
             }),
-            Z(this, "setActiveRowKey", (e) => {
+            A(this, "setActiveRowKey", (e) => {
                 this.setState({ overflowMenuRowKey: e.key });
             }),
-            Z(this, "clearActiveRowKey", () => {
+            A(this, "clearActiveRowKey", () => {
                 this._didUnmount || this.setState({ overflowMenuRowKey: null });
             }),
-            Z(this, "handleRowMouseEnter", (e) => {
+            A(this, "handleRowMouseEnter", (e) => {
                 this.props.isNavigatingByKeyboard || m.wX(e.key);
             }),
-            Z(this, "handleRowMouseLeave", () => {
+            A(this, "handleRowMouseLeave", () => {
                 this.props.isNavigatingByKeyboard || m.wX(null);
             }),
-            Z(this, "setRowRef", (e, t) => {
+            A(this, "setRowRef", (e, t) => {
                 this._rowRefs[t] = e;
             }),
-            Z(this, "handleApplicationContextMenu", (e, t) => {
+            A(this, "handleApplicationContextMenu", (e, t) => {
                 this.setActiveRowKey(t);
                 let { analyticsContext: r } = this.props;
                 (0, g.jW)(
@@ -465,7 +465,7 @@ class G extends (r = l.PureComponent) {
                         return (n) =>
                             (0, i.jsx)(
                                 e,
-                                w(x({}, n), {
+                                w(Z({}, n), {
                                     applicationId: t.libraryApplication.id,
                                     branchId: t.libraryApplication.branchId,
                                     analyticsContext: r,
@@ -493,7 +493,7 @@ function V(e) {
             sortKey: u,
             sortDirection: d,
             activeRowKey: p,
-            isNavigatingByKeyboard: h,
+            isNavigatingByKeyboard: f,
         } = (0, c.cj)([I.Z], () => ({
             sortKey: I.Z.sortKey,
             sortDirection: I.Z.sortDirection,
@@ -502,7 +502,7 @@ function V(e) {
         }));
     return (0, i.jsx)(
         G,
-        w(x({}, e), {
+        w(Z({}, e), {
             analyticsContext: t,
             location: n,
             applicationViewItems: r,
@@ -511,8 +511,8 @@ function V(e) {
             sortKey: u,
             sortDirection: d,
             activeRowKey: p,
-            isNavigatingByKeyboard: h,
+            isNavigatingByKeyboard: f,
         }),
     );
 }
-Z(G, "defaultProps", { stickyHeader: !1 });
+A(G, "defaultProps", { stickyHeader: !1 });

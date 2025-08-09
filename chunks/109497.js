@@ -21,10 +21,10 @@ function u(e, t, n) {
 }
 let d = [],
     p = !1;
-function h() {
+function f() {
     return d.length >= 4 && d.some((e) => e < Date.now() - 3 * s.Z.Millis.DAY);
 }
-class f extends (r = i.ZP.PersistedStore) {
+class h extends (r = i.ZP.PersistedStore) {
     initialize(e) {
         null != e && Array.isArray(e.sessionStartsWithDND) && (d = e.sessionStartsWithDND);
     }
@@ -38,20 +38,20 @@ class f extends (r = i.ZP.PersistedStore) {
         return { x: a.Cr.getSetting() };
     }
 }
-u(f, "displayName", "HabitualDNDStore"),
-    u(f, "persistKey", "habitualDND"),
-    new f(l.Z, {
+u(h, "displayName", "HabitualDNDStore"),
+    u(h, "persistKey", "habitualDND"),
+    new h(l.Z, {
         POST_CONNECTION_OPEN: function () {
             o.Z.getStatus() === c.Skl.DND && "0" === a.Cr.getSetting()
                 ? (d.push(Date.now()),
                   (d = d.filter((e) => e > Date.now() - 5 * s.Z.Millis.DAY)),
-                  h() &&
+                  f() &&
                       setTimeout(() => {
                           l.Z.dispatch({ type: "HABITUAL_DND_CLEAR" });
                       }, 15 * s.Z.Millis.SECOND))
                 : (d = []);
         },
         HABITUAL_DND_CLEAR: function () {
-            (p = !!h()), (d = []);
+            (p = !!f()), (d = []);
         },
     });

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => eh }), n(415506), n(953529), n(539854), n(290780), n(388685), n(997841);
+n.d(t, { Z: () => ef }), n(415506), n(953529), n(539854), n(290780), n(388685), n(997841);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -9,8 +9,8 @@ var r = n(255367),
     u = n(755721),
     d = n(481060),
     p = n(570140),
-    h = n(659429),
-    f = n(496929),
+    f = n(659429),
+    h = n(496929),
     g = n(558381),
     m = n(410575),
     b = n(224336),
@@ -26,9 +26,9 @@ var r = n(255367),
     T = n(646288),
     P = n(984370),
     j = n(706454),
-    A = n(210887),
-    Z = n(430824),
-    x = n(496675),
+    x = n(210887),
+    A = n(430824),
+    Z = n(496675),
     w = n(525395),
     L = n(558314),
     R = n(580130),
@@ -46,8 +46,8 @@ var r = n(255367),
     Y = n(15470),
     K = n(506648),
     q = n(449275),
-    Q = n(445986),
-    X = n(119520),
+    X = n(445986),
+    Q = n(119520),
     J = n(450233),
     $ = n(726581),
     ee = n(74153),
@@ -125,7 +125,7 @@ class ep extends i.PureComponent {
             (this._analyticsSource = e), (this._extraAnalyticsProperties = t);
         } else this._analyticsSource = el.SaU;
         (null == t || t.isSlimDirectoryVersion()) && a(),
-            null != e && (n || i || (0, f.yD)(e.applicationId), r && p.Z.wait(() => (0, h.$)(e.applicationId))),
+            null != e && (n || i || (0, h.yD)(e.applicationId), r && p.Z.wait(() => (0, f.$)(e.applicationId))),
             this.trackViewed(),
             this.replaceUrlWithSlug();
     }
@@ -151,7 +151,7 @@ class ep extends i.PureComponent {
             r && !e.shouldFetchStatistics)
         ) {
             if (null == n) throw Error("Unexpected missing sku");
-            p.Z.wait(() => (0, h.$)(n.applicationId));
+            p.Z.wait(() => (0, f.$)(n.applicationId));
         }
         (i !== e.skuId || l !== e.storeListingId) && (this._trackedViewed = !1),
             this.trackViewed(),
@@ -445,7 +445,7 @@ class ep extends i.PureComponent {
                     (0, r.jsx)(S.yY, { location: e.name }),
                     this.renderJsonLD(),
                     this.renderHeader(e, t),
-                    (0, r.jsx)(X.Z, { game: e }),
+                    (0, r.jsx)(Q.Z, { game: e }),
                     n,
                 ],
             });
@@ -527,7 +527,7 @@ class ep extends i.PureComponent {
             }),
             ec(this, "renderInviteLink", () => {
                 let { channel: e, guild: t } = this.props;
-                return null != e && null != t && (x.Z.can(el.Plq.CREATE_INSTANT_INVITE, t) || null != t.vanityURLCode)
+                return null != e && null != t && (Z.Z.can(el.Plq.CREATE_INSTANT_INVITE, t) || null != t.vanityURLCode)
                     ? (0, r.jsx)(u.zx, {
                           "aria-label": eo.intl.string(eo.t.zJrgTE),
                           look: u.zx.Looks.BLANK,
@@ -630,7 +630,7 @@ class ep extends i.PureComponent {
                 let { pageSize: n, isFocused: i } = this.props;
                 return (0, r.jsx)(m.Z, {
                     section: el.jXE.HERO,
-                    children: (0, r.jsx)(Q.Z, {
+                    children: (0, r.jsx)(X.Z, {
                         pageSize: n,
                         items: t.carouselItems.map((n) => this.parseMediaItems(e, n, t.assets)),
                         autoplayInterval: 8000,
@@ -653,9 +653,9 @@ class ep extends i.PureComponent {
             });
     }
 }
-let eh = (0, _.Z)(
+let ef = (0, _.Z)(
     (0, O.Z)(
-        o.ZP.connectStores([L.Z, A.Z, j.default, U.Z, k.Z, D.Z, M.Z, E.Z, y.Z, w.Z, Z.Z, R.Z], (e) => {
+        o.ZP.connectStores([L.Z, x.Z, j.default, U.Z, k.Z, D.Z, M.Z, E.Z, y.Z, w.Z, A.Z, R.Z], (e) => {
             let t,
                 n,
                 r,
@@ -685,9 +685,9 @@ let eh = (0, _.Z)(
                 }),
                 isInTestMode: null != l && c,
                 matureAgree: L.Z.didMatureAgree,
-                theme: A.Z.theme,
+                theme: x.Z.theme,
                 locale: j.default.locale,
-                guild: null != s ? Z.Z.getGuild(s.getGuildId()) : null,
+                guild: null != s ? A.Z.getGuild(s.getGuildId()) : null,
             };
         })(ep),
     ),

@@ -9,8 +9,8 @@ var r = n(255367),
     u = n(692547),
     d = n(780384),
     p = n(755721),
-    h = n(481060),
-    f = n(570140),
+    f = n(481060),
+    h = n(570140),
     g = n(239091),
     m = n(51025),
     b = n(785547),
@@ -26,9 +26,9 @@ var r = n(255367),
     T = n(283595),
     P = n(417363),
     j = n(941128),
-    A = n(451478),
-    Z = n(424218),
-    x = n(780570),
+    x = n(451478),
+    A = n(424218),
+    Z = n(780570),
     w = n(353042),
     L = n(86826),
     R = n(981631),
@@ -58,7 +58,7 @@ let U = (e) => {
     G = [u.Z.unsafe_rawColors.BLUE_345.css, u.Z.colors.INTERACTIVE_NORMAL.css],
     V = (e) => {
         let { tooltip: t, onClick: n, icon: i } = e;
-        return (0, r.jsx)(h.ua7, {
+        return (0, r.jsx)(f.ua7, {
             text: t,
             children: (e) => {
                 let { onMouseEnter: l, onMouseLeave: a } = e;
@@ -84,7 +84,7 @@ function H(e, t) {
         case R.f07.ALLOCATING_DISK:
             return "".concat(e);
         default:
-            return (0, Z.BU)(e, { useKibibytes: !0 });
+            return (0, A.BU)(e, { useKibibytes: !0 });
     }
 }
 let B = {
@@ -244,9 +244,9 @@ class W extends i.PureComponent {
         return (0, r.jsxs)(v.Z, {
             direction: v.Z.Direction.VERTICAL,
             children: [
-                (0, r.jsx)(h.Exd, {
+                (0, r.jsx)(f.Exd, {
                     percent: t,
-                    size: h.Exd.Sizes.SMALL,
+                    size: f.Exd.Sizes.SMALL,
                     foregroundColor: (0, y.Lq)(n),
                     foregroundGradientColor: null != i ? [(0, y.Lq)(i[0]), (0, y.Lq)(i[1])] : void 0,
                     animate: this.isFocused,
@@ -263,9 +263,9 @@ class W extends i.PureComponent {
         return (0, r.jsxs)(v.Z, {
             direction: v.Z.Direction.VERTICAL,
             children: [
-                (0, r.jsx)(h.yGy, {
+                (0, r.jsx)(f.yGy, {
                     percents: t,
-                    size: h.yGy.Sizes.SMALL,
+                    size: f.yGy.Sizes.SMALL,
                     foregroundColors: G,
                     animate: this.isFocused,
                 }),
@@ -295,7 +295,7 @@ class W extends i.PureComponent {
             if (null != r && null != i) {
                 let n = H(i, l),
                     a = H(r, l),
-                    o = Math.floor((t = x.xI(r, i)));
+                    o = Math.floor((t = Z.xI(r, i)));
                 e =
                     l === R.f07.PAUSING
                         ? D.intl.formatToPlainString(D.t.vjxhWl, {
@@ -326,15 +326,15 @@ class W extends i.PureComponent {
         if (null == e) return null;
         let { progress: n, total: r } = e;
         if (null == n || null == r) return null;
-        let i = x.xI(n, r),
+        let i = Z.xI(n, r),
             l = Math.floor(i),
             a =
                 0 === n && 1 === r
                     ? D.intl.string(D.t["+pfsFR"])
                     : D.intl.formatToPlainString(D.t["+feX8f"], {
                           percent: l,
-                          progress: (0, Z.BU)(n),
-                          total: (0, Z.BU)(r),
+                          progress: (0, A.BU)(n),
+                          total: (0, A.BU)(r),
                       });
         return this.renderBody({
             message: a,
@@ -354,7 +354,7 @@ class W extends i.PureComponent {
         if (null == e) return null;
         let { total: t, progress: n, stage: r, type: i } = e;
         if (null == t || null == n || null == r) return null;
-        let l = x.xI(n, t),
+        let l = Z.xI(n, t),
             a = Math.floor(l);
         return this.renderBody({
             percent: l,
@@ -399,8 +399,8 @@ class W extends i.PureComponent {
                 if (null == n) return null;
                 let { stage: r, progress: i, total: l, type: a, readerProgress: o } = n;
                 if (null == i || null == l || null == r) return null;
-                let s = x.xI(i, l),
-                    c = x.xI(null != o ? o : 0, l),
+                let s = Z.xI(i, l),
+                    c = Z.xI(null != o ? o : 0, l),
                     u = (e[e.length - 1] / t) * 1000,
                     d = l - i,
                     p = z({
@@ -420,33 +420,33 @@ class W extends i.PureComponent {
 }
 let Y = () =>
         (0, r.jsx)(V, {
-            icon: h.o1U,
+            icon: f.o1U,
             tooltip: D.intl.string(D.t.YGm6SU),
             onClick: () => m.v4(),
         }),
     K = () =>
         (0, r.jsx)(V, {
-            icon: h.fpf,
+            icon: f.fpf,
             tooltip: D.intl.string(D.t.TVAd5O),
             onClick: () => m.wO(),
         }),
     q = (e) => {
         let { item: t } = e;
         return (0, r.jsx)(V, {
-            icon: h.wj7,
+            icon: f.wj7,
             tooltip: D.intl.string(D.t["Eqb+LC"]),
             onClick: () => m.A1(t.applicationId, t.branchId),
         });
     },
-    Q = (e) => {
+    X = (e) => {
         let { item: t } = e;
         return (0, r.jsx)(V, {
-            icon: h.Dio,
+            icon: f.Dio,
             tooltip: D.intl.string(D.t["0lFmCw"]),
             onClick: () => m.al(t.applicationId, t.branchId),
         });
     },
-    X = [
+    Q = [
         {
             key: "name",
             cellClassName: k.nameCell,
@@ -501,8 +501,8 @@ let Y = () =>
                                     : null != t && t.paused
                                       ? (0, r.jsx)(Y, {})
                                       : (0, r.jsx)(K, { item: e })),
-                            (i = (0, r.jsx)(Q, { item: e })))
-                          : (i = (0, r.jsx)(Q, { item: e })),
+                            (i = (0, r.jsx)(X, { item: e })))
+                          : (i = (0, r.jsx)(X, { item: e })),
                     (0, r.jsxs)(v.Z, {
                         justify: v.Z.Justify.END,
                         children: [n, i],
@@ -522,7 +522,7 @@ class J extends i.PureComponent {
         let { applications: e } = this.props;
         e.forEach((e) => {
             e.finished &&
-                f.Z.wait(() => {
+                h.Z.wait(() => {
                     m.wi(e.applicationId, e.branchId);
                 });
         }),
@@ -557,7 +557,7 @@ class J extends i.PureComponent {
                       }),
                       (0, r.jsx)(I.Z, {
                           hasHeader: !1,
-                          columns: X,
+                          columns: Q,
                           data: e,
                           className: k.table,
                           rowClassName: k.row,
@@ -663,10 +663,10 @@ function $(e, t, n, r) {
     }, []);
 }
 let ee = (0, O.Z)(
-    c.ZP.connectStores([E.Z, P.Z, j.Z, N.Z, A.Z], () => ({
+    c.ZP.connectStores([E.Z, P.Z, j.Z, N.Z, x.Z], () => ({
         applications: [...$(j.Z.activeItems, !1, E.Z, P.Z), ...$(j.Z.finishedItems, !0, E.Z, P.Z)],
         paused: j.Z.paused,
-        isFocused: A.Z.isFocused(),
+        isFocused: x.Z.isFocused(),
         theme: N.Z.theme,
     }))((0, _.Z)(J)),
 );

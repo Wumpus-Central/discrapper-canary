@@ -1,5 +1,5 @@
 let r, i, l;
-n.d(t, { Z: () => h }), n(388685);
+n.d(t, { Z: () => f }), n(388685);
 var a,
     o,
     s,
@@ -27,7 +27,7 @@ class p extends (a = c.ZP.Store) {
               writable: !0,
           })
         : (p[o] = s);
-let h = new p(u.Z, {
+let f = new p(u.Z, {
     APPLICATION_ACTIVITY_STATISTICS_FETCH_START: function (e) {
         let { applicationId: t } = e;
         l.add(t);

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => Q });
+n.d(t, { Z: () => X });
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -9,8 +9,8 @@ var r = n(255367),
     u = n(481060),
     d = n(607070),
     p = n(100527),
-    h = n(213609),
-    f = n(335131),
+    f = n(213609),
+    h = n(335131),
     g = n(252618),
     m = n(70097),
     b = n(114851),
@@ -26,9 +26,9 @@ var r = n(255367),
     T = n(775451),
     P = n(451478),
     j = n(526167),
-    A = n(63063),
-    Z = n(113434),
-    x = n(833435),
+    x = n(63063),
+    A = n(113434),
+    Z = n(833435),
     w = n(150560),
     L = n(672188),
     R = n(558652),
@@ -86,11 +86,11 @@ function q(e) {
         onLoad: t,
     });
 }
-let Q = function () {
+let X = function () {
     let { selectedTab: e, onSelectTab: t, tabs: n } = (0, G.z)(),
         { onScroll: l, scrollPosition: s } = (0, b.M)(),
         d = w.Z.getState().getUtmCurrentContext(),
-        m = (0, x._)({ location: V.dr.QUEST_HOME_DESKTOP }) ? D.Z : D.j,
+        m = (0, Z._)({ location: V.dr.QUEST_HOME_DESKTOP }) ? D.Z : D.j,
         P = (0, k.z)((e) => e.registerAssetLoad),
         j = i.useRef(d);
     i.useEffect(() => {
@@ -98,7 +98,7 @@ let Q = function () {
     }),
         i.useEffect(() => {
             let { current: t } = j;
-            (0, h.h)({
+            (0, f.h)({
                 name: o.ImpressionNames.QUEST_HOME,
                 type: o.ImpressionTypes.VIEW,
                 properties: {
@@ -114,19 +114,19 @@ let Q = function () {
         { showBetaTag: W } = S.Z.useExperiment({ location: V.dr.QUEST_HOME_DESKTOP }),
         Y = i.useCallback(() => {
             if (L) return void window.open(H.EYA.PAID_TERMS_ORBS);
-            window.open(A.Z.getArticleURL(H.BhN.QUESTS_LEARN_MORE));
+            window.open(x.Z.getArticleURL(H.BhN.QUESTS_LEARN_MORE));
         }, [L]);
     (0, g.Tt)({ location: F.intl.string(F.t.JALI2N) });
     let K = L ? F.intl.format(F.t.BCBIlp, {}) : F.intl.format(F.t.lmMBf3, {}),
-        Q = L ? F.intl.format(F.t.U9FY0N, {}) : F.intl.string(F.t.oWCrBg),
-        X = i.useRef(null),
+        X = L ? F.intl.format(F.t.U9FY0N, {}) : F.intl.string(F.t.oWCrBg),
+        Q = i.useRef(null),
         J = i.useCallback(() => {
             (0, C.Y)({
                 pageType: H.ZY5.GLOBAL_DISCOVERY_QUESTS,
                 sectionType: H.jXE.ORBS_BALANCE_MENU,
                 ctaObject: H.qAy.CTA_TO_ORBS_SHOP,
             }),
-                (0, f.mK)({
+                (0, h.mK)({
                     openInLayer: !1,
                     tab: B.AW.ORBS,
                     analyticsLocations: [],
@@ -139,10 +139,10 @@ let Q = function () {
             className: z.container,
             children: L
                 ? (0, r.jsx)(U.t.Provider, {
-                      value: X,
+                      value: Q,
                       children: (0, r.jsxs)(I.Z, {
                           onScroll: l,
-                          ref: X,
+                          ref: Q,
                           children: [
                               (0, r.jsx)(v.a, {
                                   selectedTabId: e,
@@ -158,7 +158,7 @@ let Q = function () {
                               }),
                               (0, r.jsxs)(_.Z, {
                                   title: K,
-                                  description: Q,
+                                  description: X,
                                   betaTag: L && W,
                                   button: L
                                       ? (0, r.jsxs)(r.Fragment, {
@@ -167,7 +167,7 @@ let Q = function () {
                                                     variant: "overlay-primary",
                                                     text: F.intl.string(F.t["1Wm129"]),
                                                     onClick: () =>
-                                                        (0, f.mK)({
+                                                        (0, h.mK)({
                                                             openInLayer: !1,
                                                             tab: B.AW.ORBS,
                                                             analyticsLocations: [],
@@ -198,7 +198,7 @@ let Q = function () {
                               }),
                               (0, r.jsx)(O.Z, {
                                   children:
-                                      e === Z.e5.CLAIMED ? (0, r.jsx)(m, { onSelectTab: t }) : (0, r.jsx)(R.Z, {}),
+                                      e === A.e5.CLAIMED ? (0, r.jsx)(m, { onSelectTab: t }) : (0, r.jsx)(R.Z, {}),
                               }),
                           ],
                       }),
@@ -214,14 +214,14 @@ let Q = function () {
                               ],
                           }),
                           (0, r.jsx)(U.t.Provider, {
-                              value: X,
+                              value: Q,
                               children: (0, r.jsxs)(I.Z, {
                                   onScroll: l,
-                                  ref: X,
+                                  ref: Q,
                                   children: [
                                       (0, r.jsxs)(_.Z, {
                                           title: K,
-                                          description: Q,
+                                          description: X,
                                           button: (0, r.jsx)(u.zxk, {
                                               variant: "overlay-primary",
                                               text: F.intl.string(F.t.hvVgAQ),
@@ -247,7 +247,7 @@ let Q = function () {
                                                       onTabSelect: t,
                                                   }),
                                               }),
-                                              e === Z.e5.CLAIMED
+                                              e === A.e5.CLAIMED
                                                   ? (0, r.jsx)(m, { onSelectTab: t })
                                                   : (0, r.jsx)(R.Z, {}),
                                           ],

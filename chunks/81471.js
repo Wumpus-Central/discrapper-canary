@@ -9,8 +9,8 @@ var r = n(255367),
     u = n(905405),
     d = n(255269),
     p = n(937889),
-    h = n(267128),
-    f = n(695346),
+    f = n(267128),
+    h = n(695346),
     g = n(496675),
     m = n(699516),
     b = n(868807),
@@ -32,7 +32,7 @@ let I = i.memo(function (e) {
             [I],
         ),
         T = (0, o.e7)([g.Z], () => g.Z.can(_.Plq.MANAGE_MESSAGES, t)),
-        P = f.cC.useSetting(),
+        P = h.cC.useSetting(),
         { content: j } = i.useMemo(
             () =>
                 (null == I ? void 0 : I.content) != null && "" !== I.content
@@ -44,9 +44,9 @@ let I = i.memo(function (e) {
                     : { content: null },
             [I, C],
         ),
-        A = null;
+        x = null;
     if (l)
-        A = (0, r.jsx)(s.Text, {
+        x = (0, r.jsx)(s.Text, {
             className: y.messageReplacement,
             variant: "text-sm/normal",
             color: "text-muted",
@@ -54,21 +54,21 @@ let I = i.memo(function (e) {
         });
     else if (n)
         if (null != I && S)
-            A = (0, r.jsx)(s.Text, {
+            x = (0, r.jsx)(s.Text, {
                 className: y.messageReplacement,
                 variant: "text-sm/normal",
                 color: "text-muted",
                 children: E.intl.string(E.t["WPe+xM"]),
             });
         else if (null != I && N)
-            A = (0, r.jsx)(s.Text, {
+            x = (0, r.jsx)(s.Text, {
                 className: y.messageReplacement,
                 variant: "text-sm/normal",
                 color: "text-muted",
                 children: E.intl.string(E.t.uxrh1N),
             });
         else if (null != I) {
-            let { contentPlaceholder: e, renderedContent: t } = (0, h.f)(
+            let { contentPlaceholder: e, renderedContent: t } = (0, f.f)(
                 I,
                 j,
                 S,
@@ -80,7 +80,7 @@ let I = i.memo(function (e) {
                     iconSize: O.WW,
                 },
             );
-            A =
+            x =
                 null != t
                     ? (0, r.jsx)(s.Text, {
                           variant: "text-sm/normal",
@@ -96,18 +96,18 @@ let I = i.memo(function (e) {
                           children: e,
                       });
         } else
-            A = (0, r.jsx)(s.Text, {
+            x = (0, r.jsx)(s.Text, {
                 className: y.messageReplacement,
                 variant: "text-sm/normal",
                 color: "text-muted",
                 children: E.intl.string(E.t["0KfDxM"]),
             });
-    else A = null;
+    else x = null;
     return (0, r.jsx)(c.aQ.Provider, {
         value: (0, d.Z)(P, T),
         children: (0, r.jsx)(s.Rny, {
             className: y.messageFocusBlock,
-            children: A,
+            children: x,
         }),
     });
 });

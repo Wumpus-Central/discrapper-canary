@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f }), n(388685);
+n.d(t, { Z: () => h }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -9,7 +9,7 @@ var r = n(255367),
     u = n(566840),
     d = n(921944),
     p = n(648106);
-let h = i.memo(function (e) {
+let f = i.memo(function (e) {
     let { state: t, markAsDismissed: n } = e,
         { name: l, guildId: o, boundingRect: s } = t,
         c = i.useMemo(() => null, [l, o, n]);
@@ -27,7 +27,7 @@ let h = i.memo(function (e) {
               children: c,
           });
 });
-function f() {
+function h() {
     let e = (0, o.e7)([c.Z], () => c.Z.getGuildId()),
         t = (0, u.Eg)(e),
         [n, i] = (0, s.US)(
@@ -48,7 +48,7 @@ function f() {
         ? null
         : (0, r.jsx)("div", {
               className: p.container,
-              children: (0, r.jsx)(h, {
+              children: (0, r.jsx)(f, {
                   state: l,
                   markAsDismissed: i,
               }),

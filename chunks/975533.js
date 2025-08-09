@@ -9,8 +9,8 @@ var r = n(570140),
     u = n(317770),
     d = n(924557),
     p = n(39604),
-    h = n(569545),
-    f = n(722835),
+    f = n(569545),
+    h = n(722835),
     g = n(703656),
     m = n(352527),
     b = n(641015),
@@ -26,13 +26,13 @@ var r = n(570140),
     T = n(554174),
     P = n(577153),
     j = n(981631),
-    A = n(345655),
-    Z = n(65154);
-let x = new Map();
+    x = n(345655),
+    A = n(65154);
+let Z = new Map();
 function w(e, t, n) {
     var r;
     let i = performance.now(),
-        l = null != (r = n.context) ? r : Z.Yn.DEFAULT;
+        l = null != (r = n.context) ? r : A.Yn.DEFAULT;
     if (!0 !== n.latched && e) n.pressedTime = i;
     else if (
         null != n.pressedTime &&
@@ -41,7 +41,7 @@ function w(e, t, n) {
             autoTrackExposure: !1,
         }).enableLatching
     ) {
-        let e = A._M,
+        let e = x._M,
             { pttLatchingEnabled: t = !1 } = y.Z.getModeOptions(l);
         if (!0 === t && i < n.pressedTime + e) {
             n.latched = !0;
@@ -49,8 +49,8 @@ function w(e, t, n) {
         }
         n.latched = !1;
     }
-    let a = x.get(l);
-    null == a && ((a = new Map()), x.set(l, a));
+    let a = Z.get(l);
+    null == a && ((a = new Map()), Z.set(l, a));
     let o = a.get(t);
     null == o && ((o = new Set()), a.set(t, o)), e ? o.add(n.id) : o.delete(n.id);
     let s = o.size > 0;
@@ -185,8 +185,8 @@ let L = {
         [j.kg4.TOGGLE_GO_LIVE_STREAMING]: {
             onTrigger() {
                 let e = E.Z.getCurrentUserActiveStream();
-                if (null != e) return (0, o.g)((0, h.V9)(e));
-                (0, f.Z)();
+                if (null != e) return (0, o.g)((0, f.V9)(e));
+                (0, h.Z)();
             },
             keyEvents: {
                 keyup: !0,
@@ -288,10 +288,10 @@ let L = {
     },
     R = null;
 function D() {
-    x.clear(),
+    Z.clear(),
         y.Z.getMediaEngine().eachConnection((e) => {
             e.setForceAudioInput(!1, !1), e.setForceAudioInput(!1, !0);
-        }, Z.Yn.DEFAULT);
+        }, A.Yn.DEFAULT);
 }
 class k extends u.Z {
     _initialize() {

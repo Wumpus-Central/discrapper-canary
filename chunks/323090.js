@@ -18,8 +18,8 @@ var l = n(442837),
     h = n(349966);
 function x(e) {
     let { user: t, currentUser: n, displayProfile: x, guildId: y, subsection: v, onClose: O } = e,
-        { trackUserProfileAction: I } = (0, s.KZ)(),
-        _ = (0, l.e7)([d.Z], () => {
+        { trackUserProfileAction: _ } = (0, s.KZ)(),
+        I = (0, l.e7)([d.Z], () => {
             var e;
             return null == (e = d.Z.getUserProfile(t.id)) ? void 0 : e.application;
         }),
@@ -34,11 +34,11 @@ function x(e) {
                     userBio: x.bio,
                     setLineClamp: !1,
                 }),
-            (null == _ ? void 0 : _.popularApplicationCommandIds) != null &&
+            (null == I ? void 0 : I.popularApplicationCommandIds) != null &&
                 null != P &&
                 (0, r.jsx)(u.Z, {
-                    applicationId: _.id,
-                    commandIds: _.popularApplicationCommandIds,
+                    applicationId: I.id,
+                    commandIds: I.popularApplicationCommandIds,
                     channel: P,
                     guildId: y,
                     onClick: O,
@@ -65,7 +65,7 @@ function x(e) {
                     userId: t.id,
                     className: h.note,
                     autoFocus: v === b.Tb.NOTE,
-                    onUpdate: () => I({ action: "SET_NOTE" }),
+                    onUpdate: () => _({ action: "SET_NOTE" }),
                 }),
             }),
         ],

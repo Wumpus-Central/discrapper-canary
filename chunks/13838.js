@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x }), n(388685);
+n.d(t, { Z: () => Z }), n(388685);
 var r = n(392711),
     i = n.n(r),
     l = n(243814),
@@ -9,8 +9,8 @@ var r = n(392711),
     u = n(601964),
     d = n(199902),
     p = n(592125),
-    h = n(271383),
-    f = n(430824),
+    f = n(271383),
+    h = n(430824),
     g = n(131951),
     m = n(19780),
     b = n(594174),
@@ -37,15 +37,15 @@ function j(e) {
     if ((0, o.aC)(i) && (null == (t = b.default.getCurrentUser()) ? void 0 : t.nsfwAllowed) !== !0)
         throw new O.Z({ errorCode: T.lTL.INVALID_CHANNEL }, "Invalid nsfw channel id: ".concat(i.id));
 }
-let A = (e) => (0, v.Z)(e).keys({ channel_id: e.string().allow(null) });
-function Z(e) {
+let x = (e) => (0, v.Z)(e).keys({ channel_id: e.string().allow(null) });
+function A(e) {
     let {
         args: { channel_id: t },
     } = e;
     if (null != t && null == p.Z.getChannel(t))
         throw new O.Z({ errorCode: T.lTL.INVALID_CHANNEL }, "Invalid channel id: ".concat(t));
 }
-let x = {
+let Z = {
     [T.zMe.GUILD_STATUS]: {
         scope: l.x.RPC,
         validation: (e) => (0, v.Z)(e).required().keys({ guild_id: e.string().required() }),
@@ -53,12 +53,12 @@ let x = {
             let {
                 args: { guild_id: t },
             } = e;
-            if (null == f.Z.getGuild(t))
+            if (null == h.Z.getGuild(t))
                 throw new O.Z({ errorCode: T.lTL.INVALID_GUILD }, "Invalid guild id: ".concat(t));
             return (e) => {
                 var n;
                 let { prevState: r, dispatch: l } = e,
-                    a = f.Z.getGuild(t);
+                    a = h.Z.getGuild(t);
                 if (null == a) return;
                 let o = {
                     guild: {
@@ -192,15 +192,15 @@ let x = {
         scope: {
             [N.Gp.ANY]: [l.x.RPC, l.x.RPC_VOICE_READ, N.lH],
         },
-        validation: A,
-        handler: Z,
+        validation: x,
+        handler: A,
     },
     [T.zMe.SPEAKING_STOP]: {
         scope: {
             [N.Gp.ANY]: [l.x.RPC, l.x.RPC_VOICE_READ, N.lH],
         },
-        validation: A,
-        handler: Z,
+        validation: x,
+        handler: A,
     },
     [T.zMe.GUILD_CREATE]: {
         scope: l.x.RPC,
@@ -297,7 +297,7 @@ let x = {
             } = e;
             return (e) => {
                 let { prevState: n, dispatch: r } = e,
-                    i = { currentGuildMember: h.ZP.getSelfMember(t) };
+                    i = { currentGuildMember: f.ZP.getSelfMember(t) };
                 return (
                     null == i.currentGuildMember || (null != n && (0, a.Z)(i, n)) || r((0, C.Z)(i.currentGuildMember)),
                     i
@@ -329,12 +329,12 @@ let x = {
                 o = (null == a ? void 0 : a.id) != null ? s.Z.getApplication(a.id) : null,
                 u = null != o ? (0, I.Z)(o) : null,
                 p = null == l ? void 0 : l.sourceName,
-                h = {
+                f = {
                     active: null != l,
                     pid: null != (t = null == l ? void 0 : l.pid) ? t : null,
                     application: null != u ? { name: p } : null,
                 };
-            return i().isEqual(h, n) || r(h), h;
+            return i().isEqual(f, n) || r(f), f;
         },
     },
     [T.zMe.VIDEO_STATE_UPDATE]: {

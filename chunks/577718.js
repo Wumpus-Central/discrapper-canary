@@ -9,8 +9,8 @@ var r = n(255367),
     u = n(26323),
     d = n(433280),
     p = n(34131),
-    h = n(434404),
-    f = n(567458),
+    f = n(434404),
+    h = n(567458),
     g = n(782959),
     m = n(538445),
     b = n(933104),
@@ -26,16 +26,16 @@ var r = n(255367),
     T = n(388032),
     P = n(540835),
     j = n(519254),
-    A = n(741160),
-    Z = n(829972),
-    x = n(31932);
+    x = n(741160),
+    A = n(829972),
+    Z = n(31932);
 function w(e) {
-    null != e && h.Z.open(e.id, I.pNK.BOOST_PERKS, { section: I.jXE.PREMIUM_GUILD_PROGRESS_BAR });
+    null != e && f.Z.open(e.id, I.pNK.BOOST_PERKS, { section: I.jXE.PREMIUM_GUILD_PROGRESS_BAR });
 }
 function L(e, t) {
     null != t &&
         ((0, y.f2)(t, I.Eu4.TIER_1)
-            ? h.Z.open(t.id, I.pNK.BOOST_PERKS, { section: I.jXE.PREMIUM_GUILD_INVITE_SPLASH })
+            ? f.Z.open(t.id, I.pNK.BOOST_PERKS, { section: I.jXE.PREMIUM_GUILD_INVITE_SPLASH })
             : (0, u.Z)({
                   analyticsLocations: e,
                   analyticsSourceLocation: I.jXE.PREMIUM_GUILD_INVITE_SPLASH,
@@ -67,7 +67,7 @@ function R(e) {
 let D = i.memo(function (e) {
     let { contentTypes: t, theme: n, guild: i, renderGuildHeaderDropdownButton: o } = e,
         { analyticsLocations: u } = (0, s.ZP)(),
-        h = () => {
+        f = () => {
             E.default.track(I.rMx.TOOLTIP_VIEWED, {
                 type: N.cd.PREMIUM_PROGRESS_BAR,
                 location: { page: I.ZY5.GUILD_CHANNEL },
@@ -80,7 +80,7 @@ let D = i.memo(function (e) {
                 location_stack: u,
             });
         },
-        D = (0, a.wj)(n) ? Z : x,
+        D = (0, a.wj)(n) ? A : Z,
         [k, M] = (0, c.US)(t, C.R.GUILD_HEADER_TOOLTIPS);
     return (0, r.jsx)(r.Fragment, {
         children: (() => {
@@ -112,7 +112,7 @@ let D = i.memo(function (e) {
                 case l.z.GUILD_HEADER_PREMIUM_GUILD_PROGRESS:
                     return (0, r.jsx)(R, {
                         renderPopout: (0, r.jsx)(O.ZP, {
-                            onComponentMount: h,
+                            onComponentMount: f,
                             header: T.intl.string(T.t.nxtaFx),
                             asset: (0, r.jsx)("img", {
                                 alt: "",
@@ -131,7 +131,7 @@ let D = i.memo(function (e) {
                 case l.z.GUILD_HEADER_PROGRESS_BAR_SIZE_COACH_MARK:
                     return (0, r.jsx)(R, {
                         renderPopout: (0, r.jsx)(O.ZP, {
-                            onComponentMount: h,
+                            onComponentMount: f,
                             header: T.intl.string(T.t.KAsfPT),
                             asset: (0, r.jsx)("img", {
                                 alt: "",
@@ -174,7 +174,7 @@ let D = i.memo(function (e) {
                             header: T.intl.string(T.t["36wK8/"]),
                             asset: (0, r.jsx)("img", {
                                 alt: "",
-                                src: A,
+                                src: x,
                                 className: j.fullWidthImage,
                             }),
                             content: e,
@@ -188,7 +188,7 @@ let D = i.memo(function (e) {
                     });
                 case l.z.STUDENT_HUB_PRIVACY_SETTINGS_TOOLTIP:
                     return (0, r.jsx)(R, {
-                        renderPopout: (0, r.jsx)(f.Z, { markAsDismissed: M }),
+                        renderPopout: (0, r.jsx)(h.Z, { markAsDismissed: M }),
                         renderGuildHeaderDropdownButton: o,
                     });
                 case l.z.GUILD_HEADER_ACTIVE_THREADS_NOTICE:

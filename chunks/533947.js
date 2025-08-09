@@ -1,5 +1,5 @@
 let r, i, l;
-n.d(t, { Z: () => Z }), n(539854), n(388685);
+n.d(t, { Z: () => A }), n(539854), n(388685);
 var a,
     o = n(392711),
     s = n.n(o),
@@ -7,8 +7,8 @@ var a,
     u = n(570140),
     d = n(308063),
     p = n(388610),
-    h = n(430824),
-    f = n(496675),
+    f = n(430824),
+    h = n(496675),
     g = n(855674),
     m = n(981631);
 function b(e, t, n) {
@@ -49,8 +49,8 @@ let O = [],
     S = null;
 function N() {
     if (
-        ((r = null != (i = p.Z.getChannel()) ? h.Z.getGuild(i.guild_id) : null),
-        (O = null != i && null != r && f.Z.can(m.Plq.MANAGE_WEBHOOKS, i) ? g.Z.getWebhooksForChannel(r.id, i.id) : []),
+        ((r = null != (i = p.Z.getChannel()) ? f.Z.getGuild(i.guild_id) : null),
+        (O = null != i && null != r && h.Z.can(m.Plq.MANAGE_WEBHOOKS, i) ? g.Z.getWebhooksForChannel(r.id, i.id) : []),
         null != E)
     ) {
         let e = P(E.id);
@@ -59,7 +59,7 @@ function N() {
     (v = m.QZA.OPEN), (I = {}), (C = !1);
 }
 let T = s().debounce(() => {
-    C && ((null == E || s().isEqual(E, P(E.id))) && (C = !1), C || A.emitChange());
+    C && ((null == E || s().isEqual(E, P(E.id))) && (C = !1), C || x.emitChange());
 }, 500);
 function P(e) {
     return O.find((t) => {
@@ -69,7 +69,7 @@ function P(e) {
 }
 class j extends (a = c.ZP.Store) {
     initialize() {
-        this.waitFor(p.Z, h.Z, g.Z, f.Z);
+        this.waitFor(p.Z, f.Z, g.Z, h.Z);
     }
     hasChanges() {
         return C;
@@ -103,7 +103,7 @@ class j extends (a = c.ZP.Store) {
     }
 }
 b(j, "displayName", "ChannelSettingsIntegrationsStore");
-let A = new j(
+let x = new j(
         u.Z,
         __OVERLAY__
             ? {}
@@ -183,4 +183,4 @@ let A = new j(
                   },
               },
     ),
-    Z = A;
+    A = x;

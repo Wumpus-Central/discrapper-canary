@@ -9,8 +9,8 @@ var r = n(73800),
     u = n(874703),
     d = n(794324),
     p = n(302800),
-    h = n(921944);
-let f = (e, t) => {
+    f = n(921944);
+let h = (e, t) => {
         var n, r, i, a, o, s, c, u;
         if ((null == t ? void 0 : t.type) === l.Z.COACHTIP || e.hasPreviewAssets) {
             let i =
@@ -104,9 +104,9 @@ let f = (e, t) => {
                 !0,
             ),
             g = (0, d.mB)(t),
-            m = null != l ? f(g, t) : null,
+            m = null != l ? h(g, t) : null,
             b = r.useCallback(() => {
-                null != m && p(h.L.AUTO);
+                null != m && p(f.L.AUTO);
             }, [m, p]);
         return {
             shopButtonDisplayOptions: m,

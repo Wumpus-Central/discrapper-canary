@@ -63,9 +63,9 @@ function h(e) {
 }
 function x(e) {
     let { user: t, guildId: n, channelId: l, game: o, loading: a = !1, disableInteraction: c = !1 } = e,
-        { gameName: x, imageSrc: y, applicationId: v, comment: O, tags: I } = o,
-        _ = (0, f.Z)(o.applicationId),
-        P = _.length > 0,
+        { gameName: x, imageSrc: y, applicationId: v, comment: O, tags: _ } = o,
+        I = (0, f.Z)(o.applicationId),
+        P = I.length > 0,
         Z = () =>
             (0, r.jsxs)(r.Fragment, {
                 children: [
@@ -91,12 +91,12 @@ function x(e) {
                                     guildId: n,
                                     channelId: l,
                                 }),
-                            (0, r.jsx)(u.Z, { tags: I }),
+                            (0, r.jsx)(u.Z, { tags: _ }),
                             P &&
                                 (0, r.jsx)(s.Z, {
-                                    label: m.intl.formatToPlainString(m.t.ujhJdH, { numFriends: _.length }),
+                                    label: m.intl.formatToPlainString(m.t.ujhJdH, { numFriends: I.length }),
                                     className: b.socialProof,
-                                    users: _,
+                                    users: I,
                                     guildId: n,
                                     channelId: l,
                                 }),

@@ -17,11 +17,11 @@ function b(e) {
         { analyticsLocations: h } = (0, a.ZP)(),
         { context: x, trackUserProfileAction: y } = (0, s.KZ)(),
         { mutualFriends: v, mutualFriendsCount: O } = (0, d.Z)(t),
-        I = (0, o.Z)();
+        _ = (0, o.Z)();
     return (
         l.useEffect(() => {
-            (0, u.Z)(t.id, I);
-        }, [t.id, I]),
+            (0, u.Z)(t.id, _);
+        }, [t.id, _]),
         (0, r.jsx)(i.Ttm, {
             className: g.scroller,
             fade: !0,
