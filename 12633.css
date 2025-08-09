@@ -23877,7 +23877,7 @@ img.inlineAsset__9c640 {
 
 .forceAnimate_dfb989 .container_dfb989 .gradient_dfb989,
 .showEffect_dfb989 .gradient_dfb989 {
-    background: linear-gradient(90deg, var(--custom-display-name-styles-gradient-start-color), var(--custom-display-name-styles-gradient-end-color));
+    background: linear-gradient(to bottom right, var(--custom-display-name-styles-gradient-start-color) 10%, var(--custom-display-name-styles-gradient-end-color) 90%);
     background-clip: text;
     -webkit-background-clip: text;
     background-size: 100% auto;
