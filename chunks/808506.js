@@ -727,7 +727,7 @@ function eM(e) {
     let { port: t } = e;
     $ = btoa(String.fromCharCode(...crypto.getRandomValues(new Uint8Array(8))));
     let n = new URLSearchParams();
-    n.append("build_id", "50d42ed5abc872f1274d0dd6cc550e06cfd455b3"),
+    n.append("build_id", "bdd6986fe2defcea034f29df5c60bf67751da02a"),
         n.append("rpc", String(t)),
         n.append("rpc_auth_token", $),
         (r = "".concat(location.protocol, "//").concat(location.host, "/overlay?").concat(n.toString()));

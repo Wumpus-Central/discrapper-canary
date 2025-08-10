@@ -13,8 +13,8 @@ var i = t(255367),
     m = t(405613),
     x = t(460838),
     g = t(765305),
-    p = t(388032),
-    j = t(817576);
+    j = t(388032),
+    p = t(817576);
 function C(e) {
     var n;
     let { transitionState: t, event: C, onSuccess: f, onClose: y } = e,
@@ -28,7 +28,7 @@ function C(e) {
         [Z, T] = l.useState(S),
         [_, { loading: G, error: P }] = (0, v.Z)();
     if (!I) return null;
-    let A = k === g.j8.PUBLIC ? p.intl.string(p.t.HhlaLC) : p.intl.string(p.t.GI3xXV),
+    let A = k === g.j8.PUBLIC ? j.intl.string(j.t.HhlaLC) : j.intl.string(j.t.GI3xXV),
         L = () => {
             null == f || f(), y(), (0, u.Ku)(!1);
         },
@@ -39,7 +39,7 @@ function C(e) {
         transitionState: t,
         onClose: y,
         title: C.name,
-        subtitle: p.intl.format(p.t.UMajoq, {
+        subtitle: j.intl.format(j.t.UMajoq, {
             privacyLevel: A,
             privacyLevelHook: (e, n) =>
                 k !== g.j8.PUBLIC
@@ -47,12 +47,12 @@ function C(e) {
                     : (0, i.jsxs)(
                           "div",
                           {
-                              className: j.privacyLevel,
+                              className: p.privacyLevel,
                               children: [
                                   (0, i.jsx)(s.enf, {
                                       size: "xs",
                                       color: "currentColor",
-                                      className: j.publicIcon,
+                                      className: p.publicIcon,
                                   }),
                                   (0, i.jsx)(s.Text, {
                                       variant: "text-md/normal",
@@ -66,14 +66,14 @@ function C(e) {
         actions: [
             {
                 variant: "secondary",
-                text: p.intl.string(p.t.CZGqeX),
+                text: j.intl.string(j.t.CZGqeX),
                 onClick: () => {
                     y();
                 },
             },
             {
                 variant: "active",
-                text: p.intl.string(p.t.cK1GGR),
+                text: j.intl.string(j.t.cK1GGR),
                 onClick: X,
                 loading: G,
             },
@@ -94,7 +94,7 @@ function C(e) {
             }),
             S &&
                 (0, i.jsx)(s.XZJ, {
-                    className: j.verticalSpacing,
+                    className: p.verticalSpacing,
                     type: s.XZJ.Types.INVERTED,
                     value: Z,
                     onChange: (e) => {
@@ -103,14 +103,14 @@ function C(e) {
                     },
                     children: (0, i.jsx)(s.Text, {
                         variant: "text-sm/normal",
-                        children: p.intl.string(p.t.dGNtgI),
+                        children: j.intl.string(j.t.dGNtgI),
                     }),
                 }),
             null != P && null != P.getAnyErrorMessage()
                 ? (0, i.jsx)(s.Text, {
                       color: "text-danger",
                       variant: "text-sm/normal",
-                      className: j.errorMessage,
+                      className: p.errorMessage,
                       children: P.getAnyErrorMessage(),
                   })
                 : null,

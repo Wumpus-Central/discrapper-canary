@@ -572,6 +572,7 @@ class x extends y.ZP {
                 (this.item.file = (0, v.ub)(e)),
                     (this.currentSize = this.item.file.size),
                     (this.uploadAnalytics.convertedMimeType = "image/webp"),
+                    null != e.hashTimeMs && (this.uploadAnalytics.timing.hashTimeMs = e.hashTimeMs),
                     C.log(
                         "webp conversion worked for "
                             .concat(this.id, ": ")

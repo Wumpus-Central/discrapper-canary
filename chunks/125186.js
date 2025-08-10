@@ -122,11 +122,12 @@ function f(e) {
     return i()(t).toString(16);
 }
 async function _(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+    let t,
+        n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
     if (null == e) throw Error("file is null or undefined");
     o.verbose("[WebP] Starting conversion for: ".concat(e.name));
-    let n = performance.now(),
-        r = function (t) {
+    let r = performance.now(),
+        i = function (t) {
             let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : e.size;
             return {
                 success: !1,
@@ -138,92 +139,93 @@ async function _(e) {
             };
         };
     try {
-        var i;
-        let a = await d(e, t);
-        if (!a.should) return o.verbose("[WebP] Conversion rejected: ".concat(a.reason)), r(a.reason);
-        let l = document.createElement("canvas"),
-            c = l.getContext("2d");
-        if (null == c) throw Error("could not get canvas context");
-        let u = new Image(),
-            _ = URL.createObjectURL(e);
+        var a;
+        let l = await d(e, n);
+        if (!l.should) return o.verbose("[WebP] Conversion rejected: ".concat(l.reason)), i(l.reason);
+        let c = document.createElement("canvas"),
+            u = c.getContext("2d");
+        if (null == u) throw Error("could not get canvas context");
+        let _ = new Image(),
+            p = URL.createObjectURL(e);
         try {
             await new Promise((e, t) => {
-                (u.onload = () => e()), (u.onerror = () => t(Error("failed to load image"))), (u.src = _);
+                (_.onload = () => e()), (_.onerror = () => t(Error("failed to load image"))), (_.src = p);
             }),
-                (l.width = u.width),
-                (l.height = u.height),
-                c.drawImage(u, 0, 0);
+                (c.width = _.width),
+                (c.height = _.height),
+                u.drawImage(_, 0, 0);
         } finally {
-            URL.revokeObjectURL(_);
+            URL.revokeObjectURL(p);
         }
-        let p = await new Promise((e) => {
-            l.toBlob(e, "image/webp", 1);
+        let h = await new Promise((e) => {
+            c.toBlob(e, "image/webp", 1);
         });
-        if (null == p) throw Error("failed to convert to webp");
+        if (null == h) throw Error("failed to convert to webp");
         {
-            let t = performance.now(),
-                n = await c.getImageData(0, 0, l.width, l.height);
-            c.clearRect(0, 0, l.width, l.height);
-            let i = new Image(),
-                a = URL.createObjectURL(p);
+            let n = performance.now(),
+                r = await u.getImageData(0, 0, c.width, c.height);
+            u.clearRect(0, 0, c.width, c.height);
+            let a = new Image(),
+                s = URL.createObjectURL(h);
             try {
                 await new Promise((e, t) => {
-                    (i.onload = () => e()), (i.onerror = () => t(Error("failed to load image"))), (i.src = a);
+                    (a.onload = () => e()), (a.onerror = () => t(Error("failed to load image"))), (a.src = s);
                 }),
-                    c.drawImage(i, 0, 0);
+                    u.drawImage(a, 0, 0);
             } finally {
-                URL.revokeObjectURL(a);
+                URL.revokeObjectURL(s);
             }
-            let s = await c.getImageData(0, 0, l.width, l.height),
-                u = f(n),
-                d = f(s),
-                _ = u === d,
-                h = performance.now() - t;
+            let l = await u.getImageData(0, 0, c.width, c.height),
+                d = f(r),
+                _ = f(l),
+                p = d === _;
             if (
-                (o.verbose(
+                ((t = performance.now() - n),
+                o.verbose(
                     "[WebP] Pixel hash results: " +
                         "fileName=".concat(e.name, " ") +
                         "fileLength={".concat(e.size, "} ") +
-                        "width=".concat(i.width, " ") +
-                        "height=".concat(i.height, " ") +
-                        "pixelHash=".concat(u, " ") +
-                        "mezzanineFileLength={".concat(p.size, "} ") +
-                        "mezzaninePixelHash=".concat(d, " ") +
-                        "match=".concat(_, " ") +
-                        "elapsed_ms=".concat(Math.round(h)),
+                        "width=".concat(a.width, " ") +
+                        "height=".concat(a.height, " ") +
+                        "pixelHash=".concat(d, " ") +
+                        "mezzanineFileLength={".concat(h.size, "} ") +
+                        "mezzaninePixelHash=".concat(_, " ") +
+                        "match=".concat(p, " ") +
+                        "elapsed_ms=".concat(Math.round(t)),
                 ),
-                !_)
+                !p)
             )
-                return r("pixel_hash_mismatch");
+                return i("pixel_hash_mismatch");
         }
-        let h = e.size > 0 ? p.size / e.size : 1,
-            m = 1 - h,
-            g = null != (i = t.minSizeReductionPercent) ? i : s;
-        if (m < g)
+        let m = e.size > 0 ? h.size / e.size : 1,
+            g = 1 - m,
+            E = null != (a = n.minSizeReductionPercent) ? a : s;
+        if (g < E)
             return (
-                o.verbose("[WebP] Insufficient savings: ".concat(Math.round(100 * m), "% < ").concat(100 * g, "%")),
-                r("insufficient_savings", p.size)
+                o.verbose("[WebP] Insufficient savings: ".concat(Math.round(100 * g), "% < ").concat(100 * E, "%")),
+                i("insufficient_savings", h.size)
             );
-        let E = e.name.lastIndexOf("."),
-            b = -1 === E ? e.name : e.name.substring(0, E),
-            y = new File([p], "".concat(b, ".webp"), {
+        let b = e.name.lastIndexOf("."),
+            y = -1 === b ? e.name : e.name.substring(0, b),
+            O = new File([h], "".concat(y, ".webp"), {
                 type: "image/webp",
                 lastModified: e.lastModified,
             }),
-            O = performance.now() - n;
+            v = performance.now() - r;
         return (
-            o.verbose("[WebP] Conversion successful: ".concat(y.name, " in ").concat(Math.round(O), "ms")),
+            o.verbose("[WebP] Conversion successful: ".concat(O.name, " in ").concat(Math.round(v), "ms")),
             {
                 success: !0,
                 originalFile: e,
-                convertedFile: y,
+                convertedFile: O,
                 sizeBefore: e.size,
-                sizeAfter: p.size,
-                compressionRatio: h,
+                sizeAfter: h.size,
+                compressionRatio: m,
+                hashTimeMs: t,
             }
         );
     } catch (t) {
-        return o.error("[WebP] Conversion failed for ".concat(e.name, ":"), t), r("conversion_failed");
+        return o.error("[WebP] Conversion failed for ".concat(e.name, ":"), t), i("conversion_failed");
     }
 }
 async function p(e) {
