@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f });
+n.d(t, { Z: () => h });
 var r = n(255367),
     i = n(73800),
     l = n(924826),
@@ -9,8 +9,8 @@ var r = n(255367),
     u = n(607070),
     d = n(981631),
     p = n(222001);
-let f = function (e) {
-    let { rows: t, renderRow: n, renderSection: f, hasSearchQuery: h, sectionFilter: g, footer: m } = e,
+let h = function (e) {
+    let { rows: t, renderRow: n, renderSection: h, hasSearchQuery: f, sectionFilter: g, footer: m } = e,
         b = (0, o.e7)([u.Z], () => u.Z.keyboardModeEnabled),
         _ = (0, o.e7)([u.Z], () => u.Z.useReducedMotion),
         O = (0, l.ZP)({
@@ -20,7 +20,7 @@ let f = function (e) {
             async scrollToEnd() {},
         }),
         E = g !== d.pJs.ONLINE && g !== d.pJs.ALL,
-        y = _ || h || E,
+        y = _ || f || E,
         v = i.useMemo(
             () =>
                 t.map((e, t) =>
@@ -30,7 +30,7 @@ let f = function (e) {
                           ? (0, r.jsxs)(
                                 "div",
                                 {
-                                    children: [f(t), e.map(n)],
+                                    children: [h(t), e.map(n)],
                                 },
                                 t,
                             )
@@ -39,12 +39,12 @@ let f = function (e) {
                                 {
                                     transitionAppear: !1,
                                     component: "div",
-                                    children: [f(t), e.map(n)],
+                                    children: [h(t), e.map(n)],
                                 },
                                 t,
                             ),
                 ),
-            [n, f, t, y],
+            [n, h, t, y],
         );
     return (0, r.jsx)(a.bG, {
         navigator: O,

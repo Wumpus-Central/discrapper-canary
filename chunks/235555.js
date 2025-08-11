@@ -9,8 +9,8 @@ var r = n(255367),
     u = n(524331),
     d = n(768419),
     p = n(831506),
-    f = n(699516),
-    h = n(594174),
+    h = n(699516),
+    f = n(594174),
     g = n(823379),
     m = n(824138),
     b = n(388032);
@@ -99,24 +99,24 @@ class O extends i.PureComponent {
             });
     }
 }
-let E = o.ZP.connectStores([d.Z, h.default, f.Z, p.Z], () => {
+let E = o.ZP.connectStores([d.Z, f.default, h.Z, p.Z], () => {
     let e,
         t,
         n = d.Z.getSyncingWith(),
         r = d.Z.getActivity(),
-        i = h.default.getCurrentUser(),
+        i = f.default.getCurrentUser(),
         l = [];
     if (
         (null != n
-            ? ((e = h.default.getUser(n.userId)), (t = n.partyId))
+            ? ((e = f.default.getUser(n.userId)), (t = n.partyId))
             : null != r && null != r.party && null != r.party.id && ((e = i), (t = r.party.id)),
         null != t)
     ) {
         var o;
         l = a()(Array.from(null != (o = p.Z.getParty(t)) ? o : []))
-            .map((e) => h.default.getUser(e))
+            .map((e) => f.default.getUser(e))
             .filter(g.lm)
-            .orderBy([(t) => null == e || e.id === t.id, (e) => f.Z.isFriend(e.id)], ["desc", "desc"])
+            .orderBy([(t) => null == e || e.id === t.id, (e) => h.Z.isFriend(e.id)], ["desc", "desc"])
             .value();
     }
     return {

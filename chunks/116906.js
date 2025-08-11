@@ -36,16 +36,16 @@ function I(e) {
             let e = D ? s.Z.getStatus() : c.Z.getStatus(t.id);
             return e === i.Skl.OFFLINE || e === i.Skl.INVISIBLE;
         }),
-        R = S.length > 0 || null != w,
+        B = S.length > 0 || null != w,
         M = N && null == w && null == L && null != C,
-        B = !G && (R || M),
+        R = !G && (B || M),
         U = A.length > 0;
-    return B || U || !k
+    return R || U || !k
         ? (0, r.jsxs)(i.zJl, {
               className: O.scroller,
               fade: !0,
               children: [
-                  B
+                  R
                       ? (0, r.jsx)(p.Z, {
                             "aria-label": v.intl.string(v.t.J6STd3),
                             children: (0, r.jsxs)("ul", {

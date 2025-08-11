@@ -1,6 +1,6 @@
 n.d(t, {
     F: () => K,
-    G: () => H,
+    G: () => G,
 }),
     n(388685);
 var l,
@@ -29,16 +29,16 @@ var l,
     P = n(306680),
     w = n(699516),
     Z = n(594174),
-    j = n(626135),
-    N = n(55935),
+    N = n(626135),
+    j = n(55935),
     I = n(823379),
     T = n(51144),
     L = n(784384),
     R = n(981631),
     A = n(490897),
-    M = n(388032),
-    k = n(691176);
-function D(e) {
+    D = n(388032),
+    M = n(691176);
+function k(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             l = Object.keys(n);
@@ -101,8 +101,8 @@ function W(e, t) {
     }
     return r;
 }
-var H = (((l = {}).TOGGLE = "toggle"), (l.SEND = "send"), l);
-function G(e) {
+var G = (((l = {}).TOGGLE = "toggle"), (l.SEND = "send"), l);
+function F(e) {
     let {
             message: t,
             destination: n,
@@ -127,7 +127,7 @@ function G(e) {
             null == _ || _(n);
         }, [l, _, n]),
         S = a.useCallback(() => {
-            j.default.track(R.rMx.FORWARD_ONE_TAP_VIEW, {
+            N.default.track(R.rMx.FORWARD_ONE_TAP_VIEW, {
                 channel_id: t.channel_id,
                 message_id: t.id,
             }),
@@ -141,7 +141,7 @@ function G(e) {
         O = a.useCallback(() => {
             x(!1),
                 (E.current = !1),
-                j.default.track(R.rMx.FORWARD_ONE_TAP_UNDO, {
+                N.default.track(R.rMx.FORWARD_ONE_TAP_UNDO, {
                     channel_id: t.channel_id,
                     message_id: t.id,
                 });
@@ -159,9 +159,9 @@ function G(e) {
         (0, r.jsxs)(
             f.P3F,
             U(
-                D(
+                k(
                     {
-                        className: s()(k.destinationRow, { [k.disabled]: m }),
+                        className: s()(M.destinationRow, { [M.disabled]: m }),
                         onClick: m || v ? void 0 : C,
                         "aria-selected": d,
                         "aria-setsize": p,
@@ -172,24 +172,24 @@ function G(e) {
                 {
                     children: [
                         (0, r.jsxs)("div", {
-                            className: k.identity,
+                            className: M.identity,
                             children: [
                                 (0, r.jsx)("div", {
-                                    className: k.iconWrapper,
+                                    className: M.iconWrapper,
                                     children: i,
                                 }),
                                 (0, r.jsxs)("div", {
-                                    className: k.labels,
+                                    className: M.labels,
                                     children: [
                                         (0, r.jsx)(f.Text, {
                                             tag: "strong",
-                                            className: k.label,
+                                            className: M.label,
                                             variant: "text-md/semibold",
                                             lineClamp: 1,
                                             children: o,
                                         }),
                                         (0, r.jsx)(f.Text, {
-                                            className: k.subLabel,
+                                            className: M.subLabel,
                                             variant: "text-xs/normal",
                                             color: "text-muted",
                                             children: c,
@@ -205,18 +205,18 @@ function G(e) {
                                 size: 24,
                                 value: d,
                                 disabled: m,
-                                className: k.checkbox,
+                                className: M.checkbox,
                             }),
                         "send" === l &&
                             !m &&
                             (0, r.jsxs)("div", {
-                                className: k.actions,
+                                className: M.actions,
                                 children: [
                                     v
                                         ? (0, r.jsx)(f.zxk, {
                                               variant: "secondary",
                                               size: "sm",
-                                              text: M.intl.string(M.t["HO/oXl"]),
+                                              text: D.intl.string(D.t["HO/oXl"]),
                                               onClick: S,
                                           })
                                         : (0, r.jsx)("div", {
@@ -225,9 +225,9 @@ function G(e) {
                                                       size: h.zx.Sizes.SMALL,
                                                       color: h.zx.Colors.BRAND,
                                                   }),
-                                                  k.fauxButton,
+                                                  M.fauxButton,
                                               ),
-                                              children: M.intl.string(M.t.TXNS7e),
+                                              children: D.intl.string(D.t.TXNS7e),
                                           }),
                                     v &&
                                         (0, r.jsx)(h.zx, {
@@ -235,7 +235,7 @@ function G(e) {
                                             color: h.zx.Colors.BRAND,
                                             look: h.zx.Looks.OUTLINED,
                                             onClick: O,
-                                            children: M.intl.string(M.t.KyUKhY),
+                                            children: D.intl.string(D.t.KyUKhY),
                                         }),
                                 ],
                             }),
@@ -245,7 +245,7 @@ function G(e) {
         )
     );
 }
-function F(e) {
+function H(e) {
     var { user: t, subLabel: n } = e,
         l = W(e, ["user", "subLabel"]);
     let a = T.ZP.useName(t),
@@ -253,8 +253,8 @@ function F(e) {
         s = (0, d.e7)([w.Z], () => w.Z.getNickname(t.id)),
         o = (0, d.e7)([O.Z], () => O.Z.getStatus(t.id));
     return (0, r.jsx)(
-        G,
-        U(D({}, l), {
+        F,
+        U(k({}, l), {
             icon: (0, r.jsx)(m.Z, {
                 "aria-hidden": !0,
                 size: f.EFr.SIZE_32,
@@ -272,8 +272,8 @@ function V(e) {
     let a = (0, b.ZP)(t),
         i = (0, x._)(t);
     return (0, r.jsx)(
-        G,
-        U(D({}, l), {
+        F,
+        U(k({}, l), {
             icon: (0, r.jsx)(y.Z, {
                 "aria-hidden": !0,
                 size: f.EFr.SIZE_32,
@@ -299,11 +299,11 @@ function z(e) {
     if (t.isThread() || t.isForumPost()) {
         let e = t.isForumPost() ? f.Mmi : f.VL1;
         u = (0, r.jsxs)("div", {
-            className: k.threadSubLabel,
+            className: M.threadSubLabel,
             children: [
                 (0, r.jsx)(e, {
                     color: f.TVs.colors.TEXT_SECONDARY,
-                    className: k.subLabelIcon,
+                    className: M.subLabelIcon,
                 }),
                 (0, r.jsx)(f.Text, {
                     variant: "text-xs/medium",
@@ -315,7 +315,7 @@ function z(e) {
                     ? (0, r.jsxs)(r.Fragment, {
                           children: [
                               (0, r.jsx)(f.Text, {
-                                  className: k.subLabelSeparator,
+                                  className: M.subLabelSeparator,
                                   variant: "text-xs/medium",
                                   color: "text-secondary",
                                   children: "\u2022",
@@ -323,7 +323,7 @@ function z(e) {
                               (0, r.jsx)(f.Text, {
                                   variant: "text-xs/medium",
                                   color: "text-secondary",
-                                  children: (0, N.Xf)(c()(o)),
+                                  children: (0, j.Xf)(c()(o)),
                               }),
                           ],
                       })
@@ -332,8 +332,8 @@ function z(e) {
         });
     }
     return (0, r.jsx)(
-        G,
-        U(D({}, l), {
+        F,
+        U(k({}, l), {
             icon: (0, r.jsx)(v.Z, {
                 size: v.E.SMALL_32,
                 guild: a,
@@ -401,11 +401,11 @@ function K(e) {
                         "aria-setsize": t.length,
                     };
                 return u === p.h8.USER
-                    ? (0, r.jsx)(F, D({ user: d }, b))
+                    ? (0, r.jsx)(H, k({ user: d }, b))
                     : u === p.h8.GROUP_DM
-                      ? (0, r.jsx)(V, D({ channel: d }, b))
+                      ? (0, r.jsx)(V, k({ channel: d }, b))
                       : u === p.h8.TEXT_CHANNEL || u === p.h8.VOICE_CHANNEL
-                        ? (0, r.jsx)(z, D({ channel: d }, b))
+                        ? (0, r.jsx)(z, k({ channel: d }, b))
                         : void (0, I.vE)(u);
             },
             [c, o, l, i, t, n, g],
@@ -421,7 +421,7 @@ function K(e) {
                 return (0, r.jsx)(
                     f.YAO,
                     U(
-                        D(
+                        k(
                             {
                                 scrollerRef: (e) => {
                                     var n;

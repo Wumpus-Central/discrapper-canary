@@ -9,8 +9,8 @@ var r = n(255367),
     u = n(877604),
     d = n(998730),
     p = n(546247),
-    f = n(430824),
-    h = n(768581),
+    h = n(430824),
+    f = n(768581),
     g = n(302221),
     m = n(745752),
     b = n(17181),
@@ -29,12 +29,12 @@ function y(e) {
                     returnChannelId: n,
                 }));
         }, [t, n]),
-        C = (0, o.e7)([f.Z], () => f.Z.getGuild(t)),
+        C = (0, o.e7)([h.Z], () => h.Z.getGuild(t)),
         S = i.useMemo(
             () =>
                 null == C
                     ? null
-                    : h.ZP.getGuildSplashURL({
+                    : f.ZP.getGuildSplashURL({
                           id: C.id,
                           splash: C.splash,
                       }),

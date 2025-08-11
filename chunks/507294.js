@@ -16,8 +16,8 @@ var r = n(255367),
     u = n(481060),
     d = n(239091),
     p = n(749210),
-    f = n(410030),
-    h = n(726542),
+    h = n(410030),
+    f = n(726542),
     g = n(884338),
     m = n(367907),
     b = n(313201),
@@ -80,7 +80,7 @@ let Z = function (e) {
         L = (0, s.e7)([O.default], () => O.default.getId()),
         R = (0, s.e7)([E.ZP], () => E.ZP.getMember(t, L)),
         [D, k] = i.useState([]),
-        M = (0, f.ZP)(),
+        M = (0, h.ZP)(),
         U = (0, b.Dt)();
     if (
         (i.useEffect(() => {
@@ -165,7 +165,7 @@ let Z = function (e) {
                                                       })
                                                     : null;
                                         } else {
-                                            let t = h.Z.get(e.connection_type);
+                                            let t = f.Z.get(e.connection_type);
                                             o = (0, r.jsx)("img", {
                                                 src: (0, c.ap)(M) ? t.icon.lightSVG : t.icon.darkSVG,
                                                 alt: "",

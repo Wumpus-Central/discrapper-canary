@@ -9,8 +9,8 @@ var r = n(255367),
     u = n(393903),
     d = n(626135),
     p = n(823379),
-    f = n(900849),
-    h = n(356164),
+    h = n(900849),
+    f = n(356164),
     g = n(164991),
     m = n(726115),
     b = n(28494),
@@ -38,14 +38,14 @@ let S = Object.freeze({
         object: I.qAy.CARD,
         section: I.jXE.DISCOVER_SEARCH,
     },
-    P = s().throttle(f.c6, 1000, {
+    P = s().throttle(h.c6, 1000, {
         leading: !1,
         trailing: !0,
     });
 function j(e) {
     let { loadId: t, onGuildCardSeen: n, onGuildCardClick: l } = e,
-        { guildIds: s, loading: f, searchResultsQuery: I, loadMore: j, searchCategoryId: x } = (0, b.f)({ loadId: t }),
-        A = 0 === s.length && !f,
+        { guildIds: s, loading: h, searchResultsQuery: I, loadMore: j, searchCategoryId: x } = (0, b.f)({ loadId: t }),
+        A = 0 === s.length && !h,
         Z = i.useContext(d.AnalyticsContext),
         [w, L] = i.useState((0, m.PM)()),
         [R, D] = i.useState(!0),
@@ -55,9 +55,9 @@ function j(e) {
         V = i.useRef(null),
         H = i.useCallback(
             (e) => {
-                if (null != e && !A && !f) 336 * (s.length / M) <= e.height && j();
+                if (null != e && !A && !h) 336 * (s.length / M) <= e.height && j();
             },
-            [A, f, s.length, M, j],
+            [A, h, s.length, M, j],
         ),
         B = i.useCallback(
             (e) => {
@@ -80,13 +80,13 @@ function j(e) {
                 loadId: t,
                 searchId: w,
                 query: I,
-                guildResults: s.map(h.Z.getGuild).filter(p.lm),
+                guildResults: s.map(f.Z.getGuild).filter(p.lm),
                 analyticsContext: Z,
                 categoryId: x,
             });
         }, [Z, s, t, x, w, I]);
     let z = i.useCallback((e) => n(e, x), [n, x]),
-        W = i.useMemo(() => (f ? [s.length, 0] : [s.length]), [s.length, f]),
+        W = i.useMemo(() => (h ? [s.length, 0] : [s.length]), [s.length, h]),
         Y = i.useCallback(
             (e, n, i) => {
                 switch (e) {

@@ -10,8 +10,8 @@ var l = n(481060),
     u = n(305325),
     d = n(983736),
     p = n(341298),
-    f = n(390885),
-    h = n(524329),
+    h = n(390885),
+    f = n(524329),
     g = n(995532),
     m = n(486472),
     b = n(430824),
@@ -86,19 +86,19 @@ class Z extends o.Z {
         if (null == a) return;
         switch (a) {
             case C.M5.INVITE_UNCLAIMED:
-                f.Z.flowStart(P.MK.INVITE, P.EW.NUF_STARTED);
+                h.Z.flowStart(P.MK.INVITE, P.EW.NUF_STARTED);
                 break;
             case C.M5.ORGANIC_REGISTERED:
-                f.Z.flowStart(P.MK.ORGANIC, P.EW.NUF_STARTED);
+                h.Z.flowStart(P.MK.ORGANIC, P.EW.NUF_STARTED);
                 break;
             case C.M5.MARKETING_UNCLAIMED:
-                f.Z.flowStart(P.MK.ORGANIC_MARKETING, P.EW.NUF_STARTED);
+                h.Z.flowStart(P.MK.ORGANIC_MARKETING, P.EW.NUF_STARTED);
         }
         let o = !1,
             A = _.Z.getGuildId();
         if (a === C.M5.INVITE_UNCLAIMED) {
             let e = b.Z.getGuild(A);
-            null != e && (0, d.Dc)(e) && ((o = !0), (0, h.RM)(e.id));
+            null != e && (0, d.Dc)(e) && ((o = !0), (0, f.RM)(e.id));
         }
         let Z = () => 0 === m.Z.totalGuilds && !y.isPlatformEmbedded,
             w = s.bN();
@@ -109,25 +109,25 @@ class Z extends o.Z {
                     let t = (e) => {
                         switch (e) {
                             case S.F.AGE_GATE:
-                                f.Z.flowStep(P.MK.ANY, P.EW.AGE_GATE);
+                                h.Z.flowStep(P.MK.ANY, P.EW.AGE_GATE);
                                 break;
                             case S.F.CHOOSE_TEMPLATE:
-                                f.Z.flowStep(P.MK.ANY, P.X2.GUILD_TEMPLATES);
+                                h.Z.flowStep(P.MK.ANY, P.X2.GUILD_TEMPLATES);
                                 break;
                             case S.F.CUSTOMIZE_GUILD:
-                                f.Z.flowStep(P.MK.ANY, P.X2.GUILD_CREATE);
+                                h.Z.flowStep(P.MK.ANY, P.X2.GUILD_CREATE);
                                 break;
                             case S.F.CHANNEL_PROMPT:
-                                f.Z.flowStep(P.MK.ANY, P.X2.CHANNEL_PROMPT);
+                                h.Z.flowStep(P.MK.ANY, P.X2.CHANNEL_PROMPT);
                                 break;
                             case S.F.JOIN_GUILD:
-                                f.Z.flowStep(P.MK.ANY, P.X2.JOIN_GUILD);
+                                h.Z.flowStep(P.MK.ANY, P.X2.JOIN_GUILD);
                                 break;
                             case S.F.CREATION_INTENT:
-                                f.Z.flowStep(P.MK.ANY, P.X2.CREATION_INTENT);
+                                h.Z.flowStep(P.MK.ANY, P.X2.CREATION_INTENT);
                                 break;
                             case S.F.COMPLETE:
-                                f.Z.flowStep(P.MK.ANY, P.X2.SUCCESS);
+                                h.Z.flowStep(P.MK.ANY, P.X2.SUCCESS);
                                 break;
                             case null:
                                 break;
@@ -195,7 +195,7 @@ class Z extends o.Z {
             },
         ]),
             (t = () => {
-                v.H(), f.Z.flowStep(P.MK.ANY, P.EW.NUF_COMPLETE, !0);
+                v.H(), h.Z.flowStep(P.MK.ANY, P.EW.NUF_COMPLETE, !0);
             }),
             [...e].reverse().forEach((e) => {
                 let n = t;

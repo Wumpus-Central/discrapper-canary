@@ -9,8 +9,8 @@ var r = n(255367),
     u = n(388035),
     d = n(306680),
     p = n(594174),
-    f = n(178088),
-    h = n(222940),
+    h = n(178088),
+    f = n(222940),
     g = n(490897),
     m = n(388032),
     b = n(264634);
@@ -26,7 +26,7 @@ function _(e) {
         { enabled: C } = s.Z.useExperiment({ location: "RecentsButton" }, { autoTrackExposure: !1 }),
         S = (0, l.e7)([o.Z], () => C && o.Z.getUnseenInviteCount() > 0),
         N = (0, a.dQu)(a.TVs.modules.chat.INPUT_ICON_SIZE);
-    return (0, r.jsx)(f.k, {
+    return (0, r.jsx)(h.k, {
         targetElementRef: v,
         onOpen: t,
         onClose: n,
@@ -40,7 +40,7 @@ function _(e) {
                 className: b.recentsIcon,
                 children: [
                     C &&
-                        (0, r.jsx)(h.Z, {
+                        (0, r.jsx)(f.Z, {
                             inboxIconRef: v,
                             recentsPopoutShown: t,
                         }),

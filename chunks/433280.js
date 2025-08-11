@@ -10,8 +10,8 @@ var i = n(990547),
     u = n(430824),
     d = n(594174),
     p = n(981631),
-    f = n(388032),
-    h = n(644909),
+    h = n(388032),
+    f = n(644909),
     g = n(217110);
 function m(e) {
     let { guildId: t, markAsDismissed: n } = e,
@@ -30,23 +30,23 @@ function m(e) {
             },
         }),
         (0, r.jsx)("div", {
-            className: h.container,
+            className: f.container,
             children: (0, r.jsx)(s.ZP, {
-                header: f.intl.string(f.t.C0m4ra),
-                content: f.intl.string(f.t.zOHfER),
+                header: h.intl.string(h.t.C0m4ra),
+                content: h.intl.string(h.t.zOHfER),
                 asset: (0, r.jsx)("div", {
-                    className: h.image,
+                    className: f.image,
                     children: (0, r.jsx)("img", {
-                        alt: f.intl.string(f.t.xad4wc),
+                        alt: h.intl.string(h.t.xad4wc),
                         src: g,
-                        className: h.image,
+                        className: f.image,
                     }),
                 }),
-                buttonCTA: f.intl.string(f.t.OgQQbG),
+                buttonCTA: h.intl.string(h.t.OgQQbG),
                 onClick: () => {
                     o.Z.open(t, p.pNK.ROLE_SUBSCRIPTIONS);
                 },
-                secondaryButtonCTA: f.intl.string(f.t.WAI6xs),
+                secondaryButtonCTA: h.intl.string(h.t.WAI6xs),
                 markAsDismissed: n,
             }),
         })

@@ -564,21 +564,26 @@ class tc extends i.PureComponent {
                     null != O && (null != O.content && (t = O.content), null != O.tts && (g = O.tts));
                     let v = eu.ZP.parse(d, t);
                     (v.tts = v.tts || g), null != l && ((v.content = ""), (v.components = l));
-                    let I = p.Z.getSendMessageOptions({
-                        content: t,
-                        channelId: d.id,
-                        uploads: n,
-                        stickers: r,
-                        command: o,
-                        isGif: s,
-                        pendingReply: f,
-                        confettiPotionEmoji: i,
-                        scheduledTimestamp:
-                            null == (a = this.props.pendingScheduledMessage) ? void 0 : a.scheduledTimestamp,
-                    });
+                    let I = tn(
+                        te(
+                            {},
+                            p.Z.getSendMessageOptions({
+                                content: t,
+                                channelId: d.id,
+                                uploads: n,
+                                stickers: r,
+                                command: o,
+                                isGif: s,
+                                pendingReply: f,
+                                confettiPotionEmoji: i,
+                                scheduledTimestamp:
+                                    null == (a = this.props.pendingScheduledMessage) ? void 0 : a.scheduledTimestamp,
+                            }),
+                        ),
+                        { location: e4.dy.CHAT_INPUT },
+                    );
                     if (
-                        ((I.location = e4.dy.CHAT_INPUT),
-                        null != c && (I.announcementSendOptions = c),
+                        (null != c && (I.announcementSendOptions = c),
                         null != l && (I.flags = (0, eV.pj)(null != (E = I.flags) ? E : 0, e5.iLy.IS_COMPONENTS_V2)),
                         s)
                     )

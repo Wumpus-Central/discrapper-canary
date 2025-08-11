@@ -10,8 +10,8 @@ var i = n(704215),
     u = n(626135),
     d = n(63063),
     p = n(382791),
-    f = n(474936),
-    h = n(981631),
+    h = n(474936),
+    f = n(981631),
     g = n(388032),
     m = n(892012),
     b = n(74316);
@@ -72,17 +72,17 @@ function E(e) {
     switch (null == (E = I.button) ? void 0 : E.buttonAction) {
         case l.Wc.OPEN_MARKETING_PAGE:
             v = () => {
-                (0, c.uL)(h.Z5c.APPLICATION_STORE), j();
+                (0, c.uL)(f.Z5c.APPLICATION_STORE), j();
             };
             break;
         case l.Wc.OPEN_TIER_1_PAYMENT_MODAL:
             v = () =>
                 (0, s.Z)({
-                    subscriptionTier: f.Si.TIER_1,
+                    subscriptionTier: h.Si.TIER_1,
                     analyticsLocations: S,
                     analyticsObject: O(_({}, N), {
-                        object: h.qAy.BUTTON_CTA,
-                        objectType: h.Qqv.TIER_1,
+                        object: f.qAy.BUTTON_CTA,
+                        objectType: f.Qqv.TIER_1,
                     }),
                     onClose: (e) => {
                         e && j();
@@ -94,11 +94,11 @@ function E(e) {
         default:
             v = () =>
                 (0, s.Z)({
-                    subscriptionTier: f.Si.TIER_2,
+                    subscriptionTier: h.Si.TIER_2,
                     analyticsLocations: S,
                     analyticsObject: O(_({}, N), {
-                        object: h.qAy.BUTTON_CTA,
-                        objectType: h.Qqv.TIER_2,
+                        object: f.qAy.BUTTON_CTA,
+                        objectType: f.Qqv.TIER_2,
                     }),
                     onClose: (e) => {
                         e && j();
@@ -165,7 +165,7 @@ function E(e) {
                 wrapperClassName: m.tier2Gradient,
                 size: a.zx.Sizes.SMALL,
                 onClick: () => {
-                    u.default.track(h.rMx.CHANGE_LOG_CTA_CLICKED, {
+                    u.default.track(f.rMx.CHANGE_LOG_CTA_CLICKED, {
                         change_log_id: P,
                         cta_type: A,
                         seconds_open: Math.round((Date.now() - e) / 1000),

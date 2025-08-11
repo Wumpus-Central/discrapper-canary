@@ -39,22 +39,22 @@ function S(e) {
             onClose: D,
             sourceAnalyticsLocations: G = [],
         } = e,
-        R = n === P.ME ? void 0 : n,
-        M = (0, m.ZP)(t.id, R),
-        B = u.ZP.getName(R, S, t),
+        B = n === P.ME ? void 0 : n,
+        M = (0, m.ZP)(t.id, B),
+        R = u.ZP.getName(B, S, t),
         U = (0, s.Dt)(),
         { analyticsLocations: F } = (0, c.ZP)([...G, a.Z.USER_PROFILE_MODAL]),
         V = (0, f.ZB)({
             layout: "MODAL",
             userId: t.id,
             sourceSessionId: C,
-            guildId: R,
+            guildId: B,
             channelId: S,
             messageId: A,
             roleId: w,
         }),
         Y = l.useRef(null),
-        W = (0, o.Z)(Y);
+        H = (0, o.Z)(Y);
     return (0, r.jsx)(c.Gt, {
         value: F,
         children: (0, r.jsx)(f.Mt, {
@@ -75,7 +75,7 @@ function S(e) {
                         component: (0, r.jsx)(i.nn4, {
                             children: (0, r.jsx)(i.H, {
                                 id: U,
-                                children: Z.intl.format(Z.t.KRe1Fh, { name: B }),
+                                children: Z.intl.format(Z.t.KRe1Fh, { name: R }),
                             }),
                         }),
                         children: (0, r.jsxs)(y.Z, {
@@ -97,7 +97,7 @@ function S(e) {
                                             children: (0, r.jsx)(p.Z, {
                                                 user: t,
                                                 displayProfile: M,
-                                                guildId: R,
+                                                guildId: B,
                                                 channelId: S,
                                                 themeType: I.lY.MODAL,
                                             }),
@@ -110,7 +110,7 @@ function S(e) {
                                         (0, r.jsx)(v.Z, {
                                             className: T.username,
                                             user: t,
-                                            nickname: B,
+                                            nickname: R,
                                             pronouns: null == M ? void 0 : M.pronouns,
                                             nicknameVariant: "heading-xl/bold",
                                             tags: (0, r.jsx)(g.Z, {
@@ -154,7 +154,7 @@ function S(e) {
                                                             heading: Z.intl.string(Z.t["A//N4u"]),
                                                             children: (0, r.jsx)(h.Z, {
                                                                 userId: t.id,
-                                                                guildId: R,
+                                                                guildId: B,
                                                                 tooltipDelay: I.vB,
                                                             }),
                                                         }),
@@ -170,7 +170,7 @@ function S(e) {
                     (null == M ? void 0 : M.profileEffectId) != null &&
                         (0, r.jsx)(d.Z, {
                             profileEffectId: null == M ? void 0 : M.profileEffectId,
-                            isHovering: W,
+                            isHovering: H,
                         }),
                 ],
             }),

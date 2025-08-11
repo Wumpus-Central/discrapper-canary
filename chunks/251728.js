@@ -1,14 +1,15 @@
-n.d(t, { Y: () => _ });
+n.d(t, { Y: () => p });
 var r = n(685816),
     i = n(549616),
-    o = n(472756),
-    a = n(794934),
-    s = n(885577),
-    l = n(198647),
-    c = n(820200),
-    u = n(690913),
-    d = n(608413);
-function f(e, t, n) {
+    o = n(863611),
+    a = n(472756),
+    s = n(794934),
+    l = n(885577),
+    c = n(198647),
+    u = n(820200),
+    d = n(690913),
+    f = n(608413);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -21,35 +22,38 @@ function f(e, t, n) {
         e
     );
 }
-class _ {
+class p {
     static fromServer(e) {
-        return new _(e);
+        return new p(e);
     }
     constructor(e) {
-        f(this, "shopBlocks", void 0),
-            f(this, "categories", void 0),
+        var t;
+        _(this, "shopBlocks", void 0),
+            _(this, "categories", void 0),
+            _(this, "user_discounts", void 0),
             (this.shopBlocks = e.shop_blocks
                 .map((e) => {
                     switch (e.type) {
                         case r.z.HERO:
-                            return l.s.fromServer(e);
+                            return c.s.fromServer(e);
                         case r.z.FEATURED:
-                            return a.I.fromServer(e);
+                            return s.I.fromServer(e);
                         case r.z.FEED:
-                            return s.K.fromServer(e);
+                            return l.K.fromServer(e);
                         case r.z.WIDE_BANNER:
-                            return d.j.fromServer(e);
+                            return f.j.fromServer(e);
                         case r.z.SHELF:
-                            return u.O.fromServer(e);
+                            return d.O.fromServer(e);
                         case r.z.COUNTDOWN_TIMER:
-                            return o.G.fromServer(e);
+                            return a.G.fromServer(e);
                         case r.z.IMMERSIVE_BANNER:
-                            return c.k.fromServer(e);
+                            return u.k.fromServer(e);
                         default:
                             return;
                     }
                 })
                 .filter((e) => void 0 !== e)),
-            (this.categories = e.categories.map((e) => i.Z.fromServer(e)));
+            (this.categories = e.categories.map((e) => i.Z.fromServer(e))),
+            (this.user_discounts = null == (t = e.user_discounts) ? void 0 : t.map((e) => o.h.fromServer(e)));
     }
 }

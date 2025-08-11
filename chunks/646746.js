@@ -46,9 +46,9 @@ function b(e) {
         P = null,
         w = null;
     if (S > 0 || v.length > 0) {
-        var Z, j, N, I;
+        var Z, N, j, I;
         let e = (0, s.countBy)(y, (e) => (0, d.aw)(e, !0)),
-            t = null != (N = e.IMAGE) ? N : 0,
+            t = null != (j = e.IMAGE) ? j : 0,
             n = null != (I = e.VIDEO) ? I : 0;
         t > 0 && n > 0
             ? ((O = _.intl.formatToPlainString(_.t.Lr0Toq, {
@@ -87,7 +87,7 @@ function b(e) {
                             height: 56,
                         }),
                     }))
-                  : (null == (j = v[0]) || null == (Z = j.thumbnail) ? void 0 : Z.proxyURL) != null &&
+                  : (null == (N = v[0]) || null == (Z = N.thumbnail) ? void 0 : Z.proxyURL) != null &&
                     (w = (0, l.jsx)("div", {
                         className: p.attachmentPreview,
                         children: (0, l.jsx)(u.ZP, {

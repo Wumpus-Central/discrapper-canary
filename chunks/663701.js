@@ -9,8 +9,8 @@ var r = n(255367),
     u = n(873546),
     d = n(442837),
     p = n(704215),
-    f = n(952265),
-    h = n(755721),
+    h = n(952265),
+    f = n(755721),
     g = n(481060),
     m = n(493683),
     b = n(529103),
@@ -126,16 +126,16 @@ let es = (e) => {
             o = (0, d.e7)([w.Z], () => w.Z.canShowFriendsTabBadge()),
             u = (0, d.e7)([_.Z], () => _.Z.useReducedMotion),
             { enabled: p } = x.w.useExperiment({ location: "Friends Tab" }, { autoTrackExposure: !1 }),
-            f = o && p;
+            h = o && p;
         i.useEffect(() => {
-            f &&
+            h &&
                 (0, E.h)({
                     name: s.ImpressionNames.GIFT_INTENT_BADGE,
                     type: s.ImpressionTypes.VIEW,
                     properties: { gift_intent_type: et.hX.FRIEND_ANNIVERSARY },
                 });
-        }, [f]);
-        let [h, m] = i.useState(!1);
+        }, [h]);
+        let [f, m] = i.useState(!1);
         return (0, r.jsxs)("div", {
             className: ei.friendsButtonContainer,
             children: [
@@ -146,7 +146,7 @@ let es = (e) => {
                             {
                                 onClick: () => {
                                     let e;
-                                    f
+                                    h
                                         ? (K.default.track($.rMx.GIFT_INTENT_BADGE_CLICKED, {
                                               gift_intent_type: et.hX.FRIEND_ANNIVERSARY,
                                           }),
@@ -156,7 +156,7 @@ let es = (e) => {
                                         : (e = Y.ZP.getState().section),
                                         (0, O.Z)({ tab_opened: e });
                                 },
-                                interactiveClassName: f ? ei.friendsBadge : void 0,
+                                interactiveClassName: h ? ei.friendsBadge : void 0,
                                 selected: t,
                                 route: $.Z5c.FRIENDS,
                                 icon: g.iFz,
@@ -174,14 +174,14 @@ let es = (e) => {
                         { children: a > 0 ? (0, r.jsx)(g.mAB, { count: a }) : null },
                     ),
                 ),
-                f &&
+                h &&
                     !u &&
                     (0, r.jsx)(k.Z, {
                         className: ei.confetti,
                         wind: 0,
                         sprites: ee.CA,
                         spriteColors: ee.Br,
-                        firing: h,
+                        firing: f,
                         confettiConfig: {
                             opacity: {
                                 type: "static",
@@ -275,43 +275,49 @@ let es = (e) => {
                     },
                     l,
                 ),
-                { children: (0, r.jsx)(ef, { isParentHovered: a }) },
+                { children: (0, r.jsx)(eh, { isParentHovered: a }) },
             ),
         );
     },
-    ef = (e) => {
+    eh = (e) => {
         let { isParentHovered: t } = e,
             i = (0, P.gU)();
         return t
-            ? (0, r.jsx)(X.bU, {
-                  onClick: () => {
-                      (0, f.ZD)(async () => {
-                          let { default: e } = await n.e("44153").then(n.bind(n, 760949));
-                          return (t) => (0, r.jsx)(e, el({}, t));
-                      });
-                  },
-                  "aria-label": en.intl.string(en.t.cpT0Cg),
-                  icon: g.Dio,
+            ? (0, r.jsx)("div", {
+                  className: ei.familyCenterButtonContainer,
+                  children: (0, r.jsx)(X.bU, {
+                      onClick: () => {
+                          (0, h.ZD)(async () => {
+                              let { default: e } = await n.e("44153").then(n.bind(n, 760949));
+                              return (t) => (0, r.jsx)(e, el({}, t));
+                          });
+                      },
+                      "aria-label": en.intl.string(en.t.cpT0Cg),
+                      icon: g.Dio,
+                  }),
               })
             : i > 0
               ? (0, r.jsx)("div", {
-                    className: ei.familyCenterPendingBadge,
+                    className: a()(ei.familyCenterButtonContainer, ei.withPadding),
                     children: (0, r.jsx)(g.mAB, { count: i }),
                 })
-              : (0, r.jsx)(I.ZP, {
-                    contentTypes: [p.z.FAMILY_CENTER_NEW_BADGE],
-                    children: (e) => {
-                        let { visibleContent: t } = e;
-                        return t === p.z.FAMILY_CENTER_NEW_BADGE
-                            ? (0, r.jsx)(g.IGR, {
-                                  text: en.intl.string(en.t.y2b7CA),
-                                  color: v.Z.BG_BRAND,
-                              })
-                            : null;
-                    },
+              : (0, r.jsx)("div", {
+                    className: ei.familyCenterButtonContainer,
+                    children: (0, r.jsx)(I.ZP, {
+                        contentTypes: [p.z.FAMILY_CENTER_NEW_BADGE],
+                        children: (e) => {
+                            let { visibleContent: t } = e;
+                            return t === p.z.FAMILY_CENTER_NEW_BADGE
+                                ? (0, r.jsx)(g.IGR, {
+                                      text: en.intl.string(en.t.y2b7CA),
+                                      color: v.Z.BG_BRAND,
+                                  })
+                                : null;
+                        },
+                    }),
                 });
     },
-    eh = () => (0, M.$Z)("DM_SEARCH");
+    ef = () => (0, M.$Z)("DM_SEARCH");
 function eg(e) {
     switch (e) {
         case $.Z5c.APPLICATION_LIBRARY:
@@ -339,7 +345,7 @@ let em = i.memo(function (e) {
             isReferralProgramPopoverShowable: c,
             shouldShowMessageRequestsRow: d,
             shouldShowFamilyCenterRow: p,
-            selectedChannelId: f,
+            selectedChannelId: h,
             path: g,
         } = e,
         m = i.useRef(null),
@@ -359,12 +365,12 @@ let em = i.memo(function (e) {
                 children: (0, r.jsx)("div", {
                     ref: m,
                     className: a()(ei.searchBar, { [ei.themedHeaderMobile]: u.tq }),
-                    children: (0, r.jsx)(h.zx, {
+                    children: (0, r.jsx)(f.zx, {
                         grow: !0,
-                        color: h.zx.Colors.PRIMARY,
-                        size: h.zx.Sizes.SMALL,
+                        color: f.zx.Colors.PRIMARY,
+                        size: f.zx.Sizes.SMALL,
                         fullWidth: !0,
-                        onClick: eh,
+                        onClick: ef,
                         children: en.intl.string(en.t.LzcpeX),
                     }),
                 }),
@@ -373,7 +379,7 @@ let em = i.memo(function (e) {
                 Q.Z,
                 ea(el({}, e), {
                     version: g,
-                    selectedChannelId: f,
+                    selectedChannelId: h,
                     showDMHeader: !0,
                     listScrollerRef: _,
                     children: [
@@ -486,8 +492,8 @@ function e_() {
         }, o.X),
         u = (0, D.i)({ selected: null == c ? t : c.startsWith($.Z5c.APPLICATION_STORE) }),
         p = (0, L.eW)(),
-        f = (0, N.a)(),
-        h = (function () {
+        h = (0, N.a)(),
+        f = (function () {
             let e = H.Ex.useSetting(),
                 t = (0, T.Z)();
             return !0 === e && !0 === t;
@@ -501,8 +507,8 @@ function e_() {
         premiumTabSelected: t,
         shouldShowNitroTab: u,
         isReferralProgramPopoverShowable: p,
-        shouldShowMessageRequestsRow: f,
-        shouldShowFamilyCenterRow: h,
+        shouldShowMessageRequestsRow: h,
+        shouldShowFamilyCenterRow: f,
         selectedChannelId: s,
         path: c,
     });

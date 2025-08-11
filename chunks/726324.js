@@ -9,9 +9,9 @@ var i = n(481060),
     c = n(76014);
 function u(e) {
     let { coverImageAsset: t, title: n, guild: u, description: d, children: p } = e,
-        f = a.QK.useSetting(),
-        h = (0, o.n)(),
-        [g, m] = (0, s.Z)(t, h && f);
+        h = a.QK.useSetting(),
+        f = (0, o.n)(),
+        [g, m] = (0, s.Z)(t, f && h);
     return (0, r.jsxs)("div", {
         className: c.container,
         children: [

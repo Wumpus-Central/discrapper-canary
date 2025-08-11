@@ -80,7 +80,7 @@ function I(e) {
         ],
         D = (0, p.ZP)(t.id, A),
         G = u.ZP.getName(null == D ? void 0 : D.guildId, I, t),
-        R = v.intl.formatToPlainString(v.t.KRe1Fh, { name: G });
+        B = v.intl.formatToPlainString(v.t.KRe1Fh, { name: G });
     return (0, r.jsx)(c.Gt, {
         value: C,
         children: (0, r.jsx)(f.Mt, {
@@ -93,7 +93,7 @@ function I(e) {
                 "data-migration-pending": !0,
                 transitionState: T,
                 className: O.root,
-                "aria-label": R,
+                "aria-label": B,
                 parentComponent: "RestrictedUserProfileModalV2",
                 children: (0, r.jsxs)(b.Z, {
                     user: t,

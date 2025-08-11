@@ -1,4 +1,4 @@
-n.d(t, { Z: () => ef }), n(415506), n(953529), n(539854), n(290780), n(388685), n(997841);
+n.d(t, { Z: () => eh }), n(415506), n(953529), n(539854), n(290780), n(388685), n(997841);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -9,8 +9,8 @@ var r = n(255367),
     u = n(755721),
     d = n(481060),
     p = n(570140),
-    f = n(659429),
-    h = n(496929),
+    h = n(659429),
+    f = n(496929),
     g = n(558381),
     m = n(410575),
     b = n(224336),
@@ -125,7 +125,7 @@ class ep extends i.PureComponent {
             (this._analyticsSource = e), (this._extraAnalyticsProperties = t);
         } else this._analyticsSource = el.SaU;
         (null == t || t.isSlimDirectoryVersion()) && a(),
-            null != e && (n || i || (0, h.yD)(e.applicationId), r && p.Z.wait(() => (0, f.$)(e.applicationId))),
+            null != e && (n || i || (0, f.yD)(e.applicationId), r && p.Z.wait(() => (0, h.$)(e.applicationId))),
             this.trackViewed(),
             this.replaceUrlWithSlug();
     }
@@ -151,7 +151,7 @@ class ep extends i.PureComponent {
             r && !e.shouldFetchStatistics)
         ) {
             if (null == n) throw Error("Unexpected missing sku");
-            p.Z.wait(() => (0, f.$)(n.applicationId));
+            p.Z.wait(() => (0, h.$)(n.applicationId));
         }
         (i !== e.skuId || l !== e.storeListingId) && (this._trackedViewed = !1),
             this.trackViewed(),
@@ -653,7 +653,7 @@ class ep extends i.PureComponent {
             });
     }
 }
-let ef = (0, _.Z)(
+let eh = (0, _.Z)(
     (0, O.Z)(
         o.ZP.connectStores([L.Z, x.Z, j.default, U.Z, k.Z, D.Z, M.Z, E.Z, y.Z, w.Z, A.Z, R.Z], (e) => {
             let t,

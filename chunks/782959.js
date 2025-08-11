@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => f });
 var r = n(255367),
     i = n(73800),
     l = n(907862),
@@ -9,7 +9,7 @@ var r = n(255367),
     u = n(981631),
     d = n(921944),
     p = n(388032);
-function f(e) {
+function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -34,20 +34,20 @@ function f(e) {
     }
     return e;
 }
-function h(e) {
-    let { guildId: t, markAsDismissed: h, renderTargetElement: g } = e,
+function f(e) {
+    let { guildId: t, markAsDismissed: f, renderTargetElement: g } = e,
         m = {
             text: p.intl.string(p.t.JzJpg4),
             onClick: () => {
-                s.default.track(u.rMx.MEDIA_CHANNEL_UPSELL_CLICKED, f({}, (0, o.hH)(t))),
-                    h(d.L.PRIMARY),
+                s.default.track(u.rMx.MEDIA_CHANNEL_UPSELL_CLICKED, h({}, (0, o.hH)(t))),
+                    f(d.L.PRIMARY),
                     (0, a.ZDy)(async () => {
                         let { default: e } = await Promise.all([n.e("45094"), n.e("45822")]).then(n.bind(n, 218613));
                         return (n) => {
                             var i, l;
                             return (0, r.jsx)(
                                 e,
-                                ((i = f({}, n)),
+                                ((i = h({}, n)),
                                 (l = l =
                                     {
                                         channelType: u.d4z.GUILD_MEDIA,
@@ -93,7 +93,7 @@ function h(e) {
                     text: p.intl.string(p.t.w4DutL),
                 },
                 targetElementRef: b,
-                onRequestClose: () => h(d.L.DISMISS),
+                onRequestClose: () => f(d.L.DISMISS),
             }),
         ],
     });

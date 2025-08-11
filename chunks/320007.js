@@ -9,14 +9,14 @@ var r = n(255367),
     u = n(131951),
     d = n(924557),
     p = n(435064),
-    f = n(779618),
-    h = n(175470),
+    h = n(779618),
+    f = n(175470),
     g = n(203259),
     m = n(356659),
     b = n(388032);
 function _(e) {
     let { canShowReminder: t = !1, className: _ } = e,
-        O = (0, f.Z)(u.Z),
+        O = (0, h.Z)(u.Z),
         { showClipsHeaderEntrypoint: E } = d.NV.useExperiment({ location: "ClipsButton" }, { autoTrackExposure: !1 }),
         {
             hasClips: y,
@@ -32,8 +32,8 @@ function _(e) {
             hasAnyClipAnimations: p.Z.hasAnyClipAnimations(),
         })),
         N = null != I && I.newClipIds.length > 0,
-        T = (0, h.n)((e) => e.clipsButtonRef),
-        P = (0, h.n)((e) => e.setClipsButtonRef),
+        T = (0, f.n)((e) => e.clipsButtonRef),
+        P = (0, f.n)((e) => e.setClipsButtonRef),
         j = (0, l.e7)([c.Z], () => c.Z.hasLayers()),
         { preventIdle: x, allowIdle: A } = (0, s.Y)("animation");
     function Z() {

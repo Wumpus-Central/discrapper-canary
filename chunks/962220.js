@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => f });
 var r,
     i,
     l = n(39612),
@@ -9,8 +9,8 @@ var r,
     u = n(954824),
     d = n(751189),
     p = n(981631);
-let f = "template",
-    h =
+let h = "template",
+    f =
         ((r = (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
@@ -46,14 +46,14 @@ let f = "template",
                     let n = null != e ? (0, l.Oh)(e) : (0, l.Gk)(),
                         r = (0, a.WS)(),
                         i = (0, a.ZP)(n, {
-                            utmSource: f,
+                            utmSource: h,
                             fingerprint: t,
                             attemptId: r,
                         });
                     c.default.track(p.rMx.DEEP_LINK_CLICKED, {
                         fingerprint: (0, o.K)(t),
                         attempt_id: r,
-                        source: f,
+                        source: h,
                         guild_template_code: e,
                     }),
                         u.Z.launch(i, () => {});

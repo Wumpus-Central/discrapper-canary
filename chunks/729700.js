@@ -9,8 +9,8 @@ var r = n(255367),
     u = n(703656),
     d = n(335131),
     p = n(981631),
-    f = n(388032),
-    h = n(20080);
+    h = n(388032),
+    f = n(20080);
 let g = (e) => {
     let { displayOptions: t, targetElementRef: n, onRequestClose: g, onClick: m } = e,
         { analyticsLocations: b } = (0, c.ZP)(s.Z.HOME_PAGE_SHOP_TAB),
@@ -38,13 +38,13 @@ let g = (e) => {
             title: t.title(),
             body: t.body(),
             asset: (0, r.jsx)("img", {
-                className: h.art,
+                className: f.art,
                 src: O,
                 alt: "",
             }),
             actions: [
                 {
-                    text: f.intl.string(f.t.fYfGgI),
+                    text: h.intl.string(h.t.fYfGgI),
                     variant: "primary",
                     onClick: () => {
                         null == m || m(),

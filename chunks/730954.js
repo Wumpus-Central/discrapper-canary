@@ -1,7 +1,8 @@
-n.d(t, { Z: () => s }), n(997841);
+n.d(t, { Z: () => u }), n(997841);
 var r = n(904245),
-    i = n(667204);
-function o(e, t, n) {
+    i = n(667204),
+    o = n(959517);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -14,7 +15,7 @@ function o(e, t, n) {
         e
     );
 }
-function a(e) {
+function s(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -25,34 +26,60 @@ function a(e) {
                 }),
             )),
             r.forEach(function (t) {
-                o(e, t, n[t]);
+                a(e, t, n[t]);
             });
     }
     return e;
 }
-function s(e, t, n) {
-    let o = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+function l(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function c(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : l(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function u(e, t, n) {
+    let a = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
     if ((r.Z.deleteMessage(e.id, t.id, !0), t.isCommandType())) {
-        null != t.interactionData && null != o.applicationId && (0, i.d)(t, e, o);
+        null != t.interactionData && null != a.applicationId && (0, i.d)(t, e, a);
         return;
     }
-    let { content: s, tts: l, messageReference: c, flags: u, nonce: d } = t;
+    let { content: l, tts: u, messageReference: d, flags: f, nonce: _ } = t;
     r.Z.sendMessage(
         e.id,
         {
-            content: s,
-            tts: l,
+            content: l,
+            tts: u,
             invalidEmojis: [],
             validNonShortcutEmojis: [],
         },
         void 0,
-        a(
-            {
-                nonce: d,
-                flags: u,
-                messageReference: null != c ? c : void 0,
-            },
-            o,
+        c(
+            s(
+                {
+                    nonce: _,
+                    flags: f,
+                    messageReference: null != d ? d : void 0,
+                },
+                a,
+            ),
+            { location: o.dy.RETRY },
         ),
     );
 }

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f }), n(415506);
+n.d(t, { Z: () => m }), n(415506);
 var l = n(991637),
     r = n.n(l),
     a = n(388123),
@@ -7,17 +7,18 @@ var l = n(991637),
     o = n(957730),
     c = n(592125),
     u = n(496675),
-    d = n(784384);
-let h = {
+    d = n(784384),
+    h = n(959517);
+let f = {
         async sendForward(e, t, n) {
             let l = c.Z.getChannel(t),
                 r = c.Z.getChannel(e.channel_id),
-                h = (null == n ? void 0 : n.isICYMIGameContentForwarding) ? s.KF : null == r ? void 0 : r.guild_id;
-            if (null == r && null == h) throw Error("Unable to find original channel for message");
+                f = (null == n ? void 0 : n.isICYMIGameContentForwarding) ? s.KF : null == r ? void 0 : r.guild_id;
+            if (null == r && null == f) throw Error("Unable to find original channel for message");
             if (null == l) throw Error("Unable to find destination channel for message");
-            let f = o.ZP.parse(l, ""),
-                m = {
-                    guild_id: h,
+            let m = o.ZP.parse(l, ""),
+                g = {
+                    guild_id: f,
                     channel_id: e.channel_id,
                     message_id: e.id,
                     type: a.U.FORWARD,
@@ -30,14 +31,15 @@ let h = {
                               }
                             : void 0,
                 };
-            await i.Z.sendMessage(l.id, f, !1, {
-                messageReference: m,
+            await i.Z.sendMessage(l.id, m, !1, {
+                messageReference: g,
+                location: h.dy.FORWARDING,
                 eagerDispatch: !1,
             }),
                 (null == n ? void 0 : n.withMessage) == null ||
                     (0, d.pU)(l, u.Z) ||
-                    (await i.Z.sendMessage(l.id, o.ZP.parse(l, n.withMessage), !1));
+                    (await i.Z.sendMessage(l.id, o.ZP.parse(l, n.withMessage), !1, { location: h.dy.FORWARDING }));
         },
-        sendForwards: (e, t, n) => r()(t.map((t) => h.sendForward(e, t, n))),
+        sendForwards: (e, t, n) => r()(t.map((t) => f.sendForward(e, t, n))),
     },
-    f = h;
+    m = f;

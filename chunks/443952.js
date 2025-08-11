@@ -10,8 +10,8 @@ var i = n(243814),
     u = n(45114),
     d = n(479531),
     p = n(40851),
-    f = n(636449),
-    h = n(566620),
+    h = n(636449),
+    f = n(566620),
     g = n(531826),
     m = n(596223),
     b = n(838195),
@@ -263,7 +263,7 @@ let G = {
             return new Promise((e, t) => {
                 !(function (e, t) {
                     let n;
-                    if ((0, f.R)()) n = O.Z.getWindow(k.KJ3.ACTIVITY_POPOUT);
+                    if ((0, h.R)()) n = O.Z.getWindow(k.KJ3.ACTIVITY_POPOUT);
                     else {
                         var r;
                         let e = C.Z.getLastFocusedWindowId();
@@ -292,7 +292,7 @@ let G = {
                         i.click();
                 })(
                     async (n) => {
-                        let l = await (0, h.kv)(r, i, n);
+                        let l = await (0, f.kv)(r, i, n);
                         (0, N.lm)(l) && (0, N.lm)(l.url) && !(l instanceof d.Z) ? e({ image_url: l.url }) : t(l);
                     },
                     () => t(Error("Upload canceled")),
@@ -353,8 +353,8 @@ let G = {
             if (!M.Cr.includes(p)) throw new x.Z({ errorCode: k.lTL.INVALID_COMMAND }, "Unsupported application.");
             if (!(0, S.yE)(null != (t = r.application.flags) ? t : 0, k.udG.EMBEDDED))
                 throw new x.Z({ errorCode: k.lTL.INVALID_COMMAND }, "This application cannot access this API");
-            let f = (0, w.Z)();
-            if (null == f && s) throw new x.Z({ errorCode: k.lTL.INVALID_COMMAND }, "No channel found");
+            let h = (0, w.Z)();
+            if (null == h && s) throw new x.Z({ errorCode: k.lTL.INVALID_COMMAND }, "No channel found");
             if (null !== l || null !== o || null !== c) {
                 let e = [];
                 void 0 !== l &&
@@ -384,7 +384,7 @@ let G = {
                 (O.Z.getWindowOpen(k.KJ3.ACTIVITY_POPOUT) || r.context === k.IlC.POPOUT) && (l = a.u1M),
                     (0, _.M)({
                         applicationId: p,
-                        channel: f,
+                        channel: h,
                         command: {
                             name: i,
                             options: u,

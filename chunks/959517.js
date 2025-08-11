@@ -59,6 +59,30 @@ let m = 209715200,
     };
 var E = (function (e) {
     return (
-        (e.PUSH_NOTIFICATION = "push_notification"), (e.CHAT_INPUT = "chat_input"), (e.SHARE_MODAL = "share_modal"), e
+        (e.PUSH_NOTIFICATION = "push_notification"),
+        (e.CHAT_INPUT = "chat_input"),
+        (e.SHARE_MODAL = "share_modal"),
+        (e.VOICE_MESSAGE = "voice_message"),
+        (e.THREAD_CREATION = "thread_creation"),
+        (e.FORWARDING = "forwarding"),
+        (e.USER_PROFILE = "user_profile"),
+        (e.RETRY = "explicit_retry"),
+        (e.OVERLAY = "overlay"),
+        (e.ACTIVITY_SHARE = "activity_share"),
+        (e.ICYMI = "icymi"),
+        (e.INSTANT_UPLOAD = "instant_upload"),
+        (e.APP_COMMAND = "app_command"),
+        (e.PRIVATE_MESSAGE_COMMAND = "private_message_command"),
+        (e.POLL_CREATION = "poll_creation"),
+        (e.CHANNEL_PROMPT = "channel_prompt"),
+        (e.GIF_REPLY = "gif_reply"),
+        (e.STICKER_REPLY = "sticker_reply"),
+        (e.REMIXING = "remixing"),
+        (e.SEND_WAVE = "send_wave"),
+        (e.GIFTING = "gifting"),
+        (e.CONTENT_INVENTORY_MEMBERLIST = "content_inventory_memberlist"),
+        (e.GREET = "greet"),
+        (e.OTHER = "other"),
+        e
     );
 })({});

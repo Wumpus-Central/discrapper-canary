@@ -5,9 +5,10 @@ e.exports = {
     sectionDivider: "sectionDivider__35e86",
     searchBar: "searchBar__35e86",
     familyCenterLinkButton: "familyCenterLinkButton__35e86",
-    familyCenterPendingBadge: "familyCenterPendingBadge__35e86",
     friendsButtonContainer: "friendsButtonContainer__35e86",
     friendsBadge: "friendsBadge__35e86",
     confetti: "confetti__35e86",
     themedHeaderMobile: "themedHeaderMobile__35e86",
+    familyCenterButtonContainer: "familyCenterButtonContainer__35e86",
+    withPadding: "withPadding__35e86",
 };

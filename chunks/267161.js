@@ -13,8 +13,8 @@ var r = n(255367),
     u = n(812206),
     d = n(174556),
     p = n(320007),
-    f = n(540059),
-    h = n(916069),
+    h = n(540059),
+    f = n(916069),
     g = n(591472),
     m = n(111666),
     b = n(565138),
@@ -94,8 +94,8 @@ function z() {
         a = (0, o.e7)([T.Z], () => T.Z.getChannel(n), [n]),
         c = null != i ? i : null == a ? void 0 : a.guild_id,
         d = (0, o.e7)([P.Z], () => P.Z.getGuild(c), [c]),
-        p = (0, h.Z)(),
-        f = (0, v.D)(),
+        p = (0, f.Z)(),
+        h = (0, v.D)(),
         { application: m, isFrameInFocusedMode: _ } = (0, o.cj)([u.Z, g.Z], () => {
             let e = g.Z.getConnectedFrame();
             return {
@@ -122,7 +122,7 @@ function z() {
                   "aria-hidden": !0,
                   draggable: !1,
               })))
-            : f
+            : h
               ? ((e = U.intl.string(U.t.HcoRu7)), (E = (0, r.jsx)(s.Dkj, { size: "xs" })))
               : null != d
                 ? ((E = p
@@ -165,12 +165,12 @@ let W = i.memo(function () {
     i.useLayoutEffect(() => {
         w.ZP.setMinimumSize(k.J, k.N);
     }, []);
-    let e = (0, f.T)("AppTitleBar"),
+    let e = (0, h.T)("AppTitleBar"),
         t = F((e) => e.isOpen),
         { notificationCenterVariant: n, entrypoint: l } = (0, y.pN)({ location: "AppTitleBar" }),
         { hasBugReporterAccess: a } = d.Z.useExperiment({ location: "HeaderBar" }, { autoTrackExposure: !1 }),
         u = !t && e,
-        h = null !== n && l === y.u3.TITLE_BAR_LEFT,
+        f = null !== n && l === y.u3.TITLE_BAR_LEFT,
         g = null === n;
     i.useLayoutEffect(() => {
         w.ZP.setMinimumSize(k.J, k.N);
@@ -182,7 +182,7 @@ let W = i.memo(function () {
             return i.useMemo(() => (t ? "SIDEBAR" : n ? "NOTIFICATIONS_INBOX" : r ? "RECENTS" : "HELP"), [t, n, r]);
         })({
             showCollapsedSidebarIcons: u,
-            showNotificationsInbox: h,
+            showNotificationsInbox: f,
             showRecentsButton: g,
         });
     return v
@@ -221,7 +221,7 @@ let W = i.memo(function () {
                                                   }),
                                               ],
                                           }),
-                                      h &&
+                                      f &&
                                           (0, r.jsx)(I.Z, {
                                               focusSectionProps: "NOTIFICATIONS_INBOX" === T ? e : void 0,
                                           }),

@@ -228,6 +228,7 @@ var w = (function (e) {
         return (
             (e.PAYPAL_POPUP_CLOSED = "PAYPAL_POPUP_CLOSED"),
             (e.VENMO_APP_CANCELED = "VENMO_APP_CANCELED"),
+            (e.VENMO_DESKTOP_CANCELED = "VENMO_DESKTOP_CANCELED"),
             (e.VENMO_CANCELED = "VENMO_CANCELED"),
             e
         );

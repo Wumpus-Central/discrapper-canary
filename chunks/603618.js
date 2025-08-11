@@ -1,7 +1,7 @@
 n.d(t, {
-    ZP: () => ei,
-    lE: () => en,
-    lX: () => et,
+    ZP: () => er,
+    lE: () => ei,
+    lX: () => en,
 }),
     n(388685),
     n(539854),
@@ -48,9 +48,10 @@ var i = n(255367),
     W = n(444295),
     F = n(388627),
     G = n(981631),
-    B = n(388032),
-    H = n(800621);
-function Y(e) {
+    B = n(959517),
+    H = n(388032),
+    Y = n(800621);
+function Q(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -75,7 +76,7 @@ function Y(e) {
     }
     return e;
 }
-function Q(e, t) {
+function K(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -93,7 +94,7 @@ function Q(e, t) {
         e
     );
 }
-function K(e) {
+function X(e) {
     let { entry: t, currentUserActivity: n, idx: o } = e,
         a = (0, u.e7)([R.default], () => R.default.getUser(t.author_id)),
         [s, c] = r.useState("unsent"),
@@ -126,14 +127,18 @@ function K(e) {
                             "fake_inventory_item" in t.extra && !0 === t.extra.fake_inventory_item
                                 ? await (0, S.k)({
                                       channel: n,
-                                      content: B.intl.formatToPlainString(B.t.UVBA9v, { gameName: t.extra.game_name }),
+                                      content: H.intl.formatToPlainString(H.t.UVBA9v, { gameName: t.extra.game_name }),
                                       whenReady: !0,
+                                      doNotNotifyOnError: !1,
+                                      location: B.dy.OVERLAY,
                                   })
                                 : await (0, S.p)({
                                       channel: n,
-                                      content: B.intl.string(B.t.DwAcMz),
+                                      content: H.intl.string(H.t.DwAcMz),
                                       entry: t,
                                       whenReady: !0,
+                                      doNotNotifyOnError: !1,
+                                      location: B.dy.OVERLAY,
                                   });
                     }
                     g.Z.track(G.rMx.OVERLAY_GAME_INVITE_SENT, {
@@ -166,7 +171,7 @@ function K(e) {
                     userId: a.id,
                 });
         },
-        x = O ? B.intl.string(B.t["3fRyS0"]) : B.intl.string(B.t.XHxDIS),
+        x = O ? H.intl.string(H.t["3fRyS0"]) : H.intl.string(H.t.XHxDIS),
         I = O
             ? (0, i.jsx)(p.ejJ, {
                   color: "currentColor",
@@ -182,12 +187,12 @@ function K(e) {
         children: (e) =>
             (0, i.jsx)(
                 d.zx,
-                Q(Y({}, e), {
+                K(Q({}, e), {
                     submitting: "sending" === s,
                     onClick: h ? _ : E,
-                    className: H.inviteButton,
-                    wrapperClassName: H.inviteButtonWrapper,
-                    innerClassName: H.inviteButtonInner,
+                    className: Y.inviteButton,
+                    wrapperClassName: Y.inviteButtonWrapper,
+                    innerClassName: Y.inviteButtonInner,
                     color: d.Tt.TRANSPARENT,
                     look: d.iL.FILLED,
                     size: d.Ph.ICON,
@@ -208,7 +213,7 @@ function K(e) {
             ),
     });
 }
-function X(e) {
+function J(e) {
     var t;
     let { entry: n, currentUserActivity: o } = e,
         l = (0, u.e7)([R.default], () => R.default.getUser(n.author_id)),
@@ -238,19 +243,19 @@ function X(e) {
                 }
             }
         },
-        g = B.intl.string(B.t.OKsSCQ);
+        g = H.intl.string(H.t.OKsSCQ);
     return (0, i.jsx)(p.ua7, {
         text: g,
         "aria-label": g,
         children: (e) =>
             (0, i.jsx)(
                 d.zx,
-                Q(Y({}, e), {
+                K(Q({}, e), {
                     submitting: "sending" === c,
                     onClick: m,
-                    className: H.inviteButton,
-                    wrapperClassName: H.inviteButtonWrapper,
-                    innerClassName: H.inviteButtonInner,
+                    className: Y.inviteButton,
+                    wrapperClassName: Y.inviteButtonWrapper,
+                    innerClassName: Y.inviteButtonInner,
                     color: d.Tt.TRANSPARENT,
                     look: d.iL.FILLED,
                     size: d.Ph.ICON,
@@ -269,7 +274,7 @@ function X(e) {
             ),
     });
 }
-function J(e) {
+function q(e) {
     let { entry: t, currentUserActivity: n, idx: r } = e,
         o = (0, u.e7)([R.default], () => R.default.getUser(t.author_id)),
         l = (0, u.e7)([P.Z], () => (null != o ? P.Z.getAnyStreamForUser(o.id) : null), [o]),
@@ -290,44 +295,44 @@ function J(e) {
     return null == o
         ? null
         : (0, i.jsxs)("div", {
-              className: H.row,
+              className: Y.row,
               children: [
                   (0, i.jsx)(y.Z, {
-                      className: H.avatar,
+                      className: Y.avatar,
                       user: o,
                       isMobile: a,
                       status: s,
                   }),
                   (0, i.jsxs)("div", {
-                      className: H.details,
+                      className: Y.details,
                       children: [
                           (0, i.jsxs)("div", {
-                              className: H.usernameWrapper,
+                              className: Y.usernameWrapper,
                               children: [
                                   (0, i.jsx)(p.Text, {
-                                      className: H.username,
+                                      className: Y.username,
                                       variant: "text-md/medium",
                                       color: "header-primary",
                                       children: U.ZP.getName(void 0, void 0, o),
                                   }),
-                                  null != l && (0, i.jsx)(_.ZP, { className: H.liveIndicator }),
+                                  null != l && (0, i.jsx)(_.ZP, { className: Y.liveIndicator }),
                               ],
                           }),
                           (0, i.jsx)(x.Gk, {
                               location: x.Gt.OVERLAY,
-                              className: H.badgesContainer,
+                              className: Y.badgesContainer,
                               children: [x.OV, x.wO, x.f, x.v1, x.pQ].map((e, n) =>
                                   (0, i.jsx)(e, { entry: t }, "entry-".concat(n)),
                               ),
                           }),
                       ],
                   }),
-                  (0, i.jsx)(X, {
+                  (0, i.jsx)(J, {
                       entry: t,
                       currentUserActivity: n,
                       idx: r,
                   }),
-                  (0, i.jsx)(K, {
+                  (0, i.jsx)(X, {
                       entry: t,
                       currentUserActivity: n,
                       idx: r,
@@ -335,16 +340,16 @@ function J(e) {
               ],
           });
 }
-function q(e) {
+function $(e) {
     return new Set(e.map((e) => e.author_id));
 }
-function $(e) {
+function ee(e) {
     let { entries: t, currentUserActivity: n, className: o, hideHeader: l = !1 } = e,
-        a = (0, W.ee)(() => q(t), [t]),
+        a = (0, W.ee)(() => $(t), [t]),
         s = (0, W.ee)(
             () =>
                 new Set(
-                    Array.from(q(t)).filter((e) => {
+                    Array.from($(t)).filter((e) => {
                         let n = t.find((t) => {
                             let { author_id: n } = t;
                             return e === n;
@@ -376,17 +381,17 @@ function $(e) {
               children: [
                   !l &&
                       (0, i.jsx)("div", {
-                          className: H.contentInventoryHeader,
+                          className: Y.contentInventoryHeader,
                           children: (0, i.jsx)(p.Text, {
                               variant: "text-xs/medium",
                               color: "header-secondary",
                               tag: "div",
-                              children: B.intl.string(B.t.y9eo7e),
+                              children: H.intl.string(H.t.y9eo7e),
                           }),
                       }),
                   t.map((e, t) =>
                       (0, i.jsx)(
-                          J,
+                          q,
                           {
                               idx: t,
                               entry: e,
@@ -398,7 +403,7 @@ function $(e) {
               ],
           });
 }
-function ee(e) {
+function et(e) {
     let { gamingId: t, maxUserShowCount: n, userAffinityThresholdV2: i = 0.0029 } = e,
         o = (0, I.Z)(t, "useLiveActivityRows");
     (0, O.ZP)(() => {
@@ -488,11 +493,11 @@ function ee(e) {
         }
     );
 }
-function et(e) {
-    let t = ee(e);
-    return (0, i.jsx)($, Q(Y({}, t), { className: e.className }));
-}
 function en(e) {
+    let t = et(e);
+    return (0, i.jsx)(ee, K(Q({}, t), { className: e.className }));
+}
+function ei(e) {
     let { activity: t, currentUser: n, showInviteButton: r = !0 } = e,
         o = null != t && (0, v.Z)(t, G.xjy.JOIN),
         l = (0, E.q)(null == t ? void 0 : t.application_id),
@@ -502,7 +507,7 @@ function en(e) {
         : (0, i.jsxs)(i.Fragment, {
               children: [
                   (0, i.jsx)(Z.Z, {
-                      className: H.activityCard,
+                      className: Y.activityCard,
                       activity: t,
                       user: n,
                       currentUser: n,
@@ -510,7 +515,7 @@ function en(e) {
                   }),
                   o && !a && r
                       ? (0, i.jsx)(d.zx, {
-                            className: H.inviteFriendsButton,
+                            className: Y.inviteFriendsButton,
                             onClick: () => {
                                 (0, h.h7)(t, !1, G.IlC.POPOUT),
                                     (0, W.Ws)(G.Odu.ACTIVITY, {
@@ -520,13 +525,13 @@ function en(e) {
                             },
                             size: d.Ph.SMALL,
                             color: d.Tt.PRIMARY,
-                            children: B.intl.string(B.t["6Qgren"]),
+                            children: H.intl.string(H.t["6Qgren"]),
                         })
                       : null,
               ],
           });
 }
-function ei(e) {
+function er(e) {
     let { locked: t } = e,
         n = (0, F.II)(),
         r = null == n ? void 0 : n.id,
@@ -536,7 +541,7 @@ function ei(e) {
         s = null != o ? o : r,
         c = (0, u.e7)([A.Z], () => (null == s ? null : A.Z.getApplicationActivity(s)), [s]);
     (0, O.ZP)(() => (j.L(), () => j.v()));
-    let d = ee({
+    let d = et({
         gamingId: s,
         userAffinityThresholdV2: 0.00145,
         maxUserShowCount: 12,
@@ -544,16 +549,16 @@ function ei(e) {
     return t || (0 === l.length && null == c)
         ? null
         : (0, i.jsxs)("div", {
-              className: H.container,
+              className: Y.container,
               children: [
-                  (0, i.jsx)(en, {
+                  (0, i.jsx)(ei, {
                       activity: c,
                       currentUser: a,
                   }),
                   (0, i.jsx)(
-                      $,
-                      Q(Y({}, d), {
-                          className: H.contentInventoryContainer,
+                      ee,
+                      K(Q({}, d), {
+                          className: Y.contentInventoryContainer,
                           hideHeader: !0,
                       }),
                   ),

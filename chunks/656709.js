@@ -5,16 +5,20 @@ n.d(t, {
 var r = n(904245),
     i = n(957730);
 function o(e) {
-    let { channel: t, content: n, entry: o, whenReady: a, doNotNotifyOnError: s } = e,
-        l = i.ZP.parse(t, n),
-        c = { unverified_content: o };
-    return r.Z.sendMessage(t.id, l, a, {
-        contentInventoryEntry: c,
+    let { channel: t, content: n, entry: o, whenReady: a, doNotNotifyOnError: s, location: l } = e,
+        c = i.ZP.parse(t, n),
+        u = { unverified_content: o };
+    return r.Z.sendMessage(t.id, c, a, {
+        contentInventoryEntry: u,
         doNotNotifyOnError: s,
+        location: l,
     });
 }
 function a(e) {
-    let { channel: t, content: n, whenReady: o, doNotNotifyOnError: a } = e,
-        s = i.ZP.parse(t, n);
-    return r.Z.sendMessage(t.id, s, o, { doNotNotifyOnError: a });
+    let { channel: t, content: n, whenReady: o, doNotNotifyOnError: a, location: s } = e,
+        l = i.ZP.parse(t, n);
+    return r.Z.sendMessage(t.id, l, o, {
+        doNotNotifyOnError: a,
+        location: s,
+    });
 }

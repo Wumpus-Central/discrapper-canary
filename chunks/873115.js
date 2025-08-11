@@ -159,7 +159,7 @@ function E() {
             })
             .catch((e) => {
                 let { message: t, code: n, details: r } = e;
-                n === u.U66.VENMO_APP_CANCELED || n === u.U66.VENMO_CANCELED
+                [u.U66.VENMO_APP_CANCELED, u.U66.VENMO_DESKTOP_CANCELED, u.U66.VENMO_CANCELED].includes(n)
                     ? i.Z.dispatch({ type: "BRAINTREE_TOKENIZE_VENMO_FAIL_CANCELED" })
                     : (i.Z.dispatch({
                           type: "BRAINTREE_TOKENIZE_VENMO_FAIL",

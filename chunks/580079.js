@@ -10,8 +10,8 @@ var r,
     d = n(592125);
 n(914010);
 var p = n(709054),
-    f = n(176505);
-let h = {},
+    h = n(176505);
+let f = {},
     g = {},
     m = {},
     b = {};
@@ -28,7 +28,7 @@ function _(e) {
     m[e] = Date.now();
 }
 function O(e, t, n, r) {
-    h[e].add(t);
+    f[e].add(t);
     let i = m[t];
     (null == i || i + 300000 > Date.now()) && _(t),
         null == g[t] && (g[t] = []),
@@ -46,14 +46,14 @@ class y extends (a = c.ZP.Store) {
         return b[e];
     }
     getActiveChannelIds(e) {
-        return h[e];
+        return f[e];
     }
     getChannelMessageData(e) {
         return g[e];
     }
     shouldFetch(e) {
         var t;
-        return null == h[e] && !(null == (t = b[e]) ? void 0 : t.loading);
+        return null == f[e] && !(null == (t = b[e]) ? void 0 : t.loading);
     }
 }
 (l = "ActiveChannelsStore"),
@@ -68,8 +68,8 @@ class y extends (a = c.ZP.Store) {
     new y(u.Z, {
         CHANNEL_SELECT: function (e) {
             let { channelId: t, guildId: n } = e;
-            if (!(0, f.ME)(t) || null == n) return !1;
-            let r = h[n];
+            if (!(0, h.ME)(t) || null == n) return !1;
+            let r = f[n];
             if (null == r) return !1;
             r.forEach((e) => {
                 var t;
@@ -83,7 +83,7 @@ class y extends (a = c.ZP.Store) {
                     return -(null != (n = null == (t = g[e]) ? void 0 : t.length) ? n : 0);
                 })
                 .value();
-            h[n] = new Set(i);
+            f[n] = new Set(i);
         },
         MESSAGE_CREATE: function (e) {
             var t;
@@ -92,12 +92,12 @@ class y extends (a = c.ZP.Store) {
             let a = d.Z.getChannel(n);
             if (null == a) return !1;
             let o = a.guild_id;
-            if (null == o || null == h[o]) return !1;
+            if (null == o || null == f[o]) return !1;
             O(o, n, r.id, null == (t = r.author) ? void 0 : t.id);
         },
         GUILD_DELETE: function (e) {
             let { guild: t } = e;
-            delete h[t.id];
+            delete f[t.id];
         },
         CHANNEL_DELETE: E,
         THREAD_DELETE: E,
@@ -116,7 +116,7 @@ class y extends (a = c.ZP.Store) {
                 error: null,
                 fetchedAt: Date.now(),
             }),
-                (h[t] = new Set()),
+                (f[t] = new Set()),
                 n.forEach((e) => {
                     let { channel_id: n, messages: r } = e;
                     r.forEach((e) => {

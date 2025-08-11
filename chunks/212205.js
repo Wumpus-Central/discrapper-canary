@@ -1,73 +1,73 @@
-e.d(n, { Z: () => o });
-var i = e(255367);
-e(73800);
-var r = e(442837),
-    l = e(481060),
-    s = e(914010),
-    a = e(362658),
-    d = e(981631),
-    u = e(388032);
-function o(t) {
-    let n = (0, r.e7)([s.Z], () => s.Z.getGuildId()),
-        o = t.type === d.d4z.GUILD_CATEGORY,
-        { isFavoritesPerk: c } = (0, a.z)("useChannelFavoriteSetNickname");
-    return __OVERLAY__ || n !== d.I_8
+n.d(t, { Z: () => u });
+var r = n(255367);
+n(73800);
+var i = n(442837),
+    l = n(481060),
+    o = n(914010),
+    c = n(362658),
+    a = n(981631),
+    s = n(388032);
+function u(e) {
+    let t = (0, i.e7)([o.Z], () => o.Z.getGuildId()),
+        u = e.type === a.d4z.GUILD_CATEGORY,
+        { isFavoritesPerk: d } = (0, c.z)("useChannelFavoriteSetNickname");
+    return __OVERLAY__ || t !== a.I_8
         ? null
-        : (0, i.jsx)(l.sNh, {
+        : (0, r.jsx)(l.sNh, {
               id: "set-channel-nickname",
-              label: c && o ? u.intl.string(u.t.xXYKiI) : u.intl.string(u.t.dilOFx),
+              label: d && u ? s.intl.string(s.t.xXYKiI) : s.intl.string(s.t.dilOFx),
               action: function () {
                   (0, l.ZDy)(async () => {
-                      let { default: n } = await e.e("46161").then(e.bind(e, 238716));
-                      return (e) => {
-                          var r, l;
-                          return (0, i.jsx)(
-                              n,
-                              ((r = (function (t) {
-                                  for (var n = 1; n < arguments.length; n++) {
-                                      var e = null != arguments[n] ? arguments[n] : {},
-                                          i = Object.keys(e);
+                      let { default: t } = await n.e("46161").then(n.bind(n, 238716));
+                      return (n) => {
+                          var i, l;
+                          return (0, r.jsx)(
+                              t,
+                              ((i = (function (e) {
+                                  for (var t = 1; t < arguments.length; t++) {
+                                      var n = null != arguments[t] ? arguments[t] : {},
+                                          r = Object.keys(n);
                                       "function" == typeof Object.getOwnPropertySymbols &&
-                                          (i = i.concat(
-                                              Object.getOwnPropertySymbols(e).filter(function (t) {
-                                                  return Object.getOwnPropertyDescriptor(e, t).enumerable;
+                                          (r = r.concat(
+                                              Object.getOwnPropertySymbols(n).filter(function (e) {
+                                                  return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                               }),
                                           )),
-                                          i.forEach(function (n) {
-                                              var i;
-                                              (i = e[n]),
-                                                  n in t
-                                                      ? Object.defineProperty(t, n, {
-                                                            value: i,
+                                          r.forEach(function (t) {
+                                              var r;
+                                              (r = n[t]),
+                                                  t in e
+                                                      ? Object.defineProperty(e, t, {
+                                                            value: r,
                                                             enumerable: !0,
                                                             configurable: !0,
                                                             writable: !0,
                                                         })
-                                                      : (t[n] = i);
+                                                      : (e[t] = r);
                                           });
                                   }
-                                  return t;
-                              })({}, e)),
+                                  return e;
+                              })({}, n)),
                               (l = l =
                                   {
-                                      channelId: t.id,
-                                      heading: c && o ? u.intl.string(u.t.xXYKiI) : u.intl.string(u.t.dilOFx),
-                                      formTitle: c && o ? u.intl.string(u.t.OCAkGB) : u.intl.string(u.t["621LJC"]),
-                                      allowReset: !(c && o),
+                                      channelId: e.id,
+                                      heading: d && u ? s.intl.string(s.t.xXYKiI) : s.intl.string(s.t.dilOFx),
+                                      formTitle: d && u ? s.intl.string(s.t.OCAkGB) : s.intl.string(s.t["621LJC"]),
+                                      allowReset: !(d && u),
                                   }),
                               Object.getOwnPropertyDescriptors
-                                  ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(l))
-                                  : (function (t, n) {
-                                        var e = Object.keys(t);
+                                  ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(l))
+                                  : (function (e, t) {
+                                        var n = Object.keys(e);
                                         if (Object.getOwnPropertySymbols) {
-                                            var i = Object.getOwnPropertySymbols(t);
-                                            e.push.apply(e, i);
+                                            var r = Object.getOwnPropertySymbols(e);
+                                            n.push.apply(n, r);
                                         }
-                                        return e;
-                                    })(Object(l)).forEach(function (t) {
-                                        Object.defineProperty(r, t, Object.getOwnPropertyDescriptor(l, t));
+                                        return n;
+                                    })(Object(l)).forEach(function (e) {
+                                        Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(l, e));
                                     }),
-                              r),
+                              i),
                           );
                       };
                   });

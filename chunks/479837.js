@@ -9,8 +9,8 @@ var r = n(846027),
     u = n(173507),
     d = n(592125),
     p = n(131951),
-    f = n(19780),
-    h = n(594174),
+    h = n(19780),
+    f = n(594174),
     g = n(981631),
     m = n(65154);
 function b() {
@@ -20,8 +20,8 @@ function b() {
         b = Object.values(p.Z.getVideoDevices())[0],
         _ = !1 === (null == (t = null == b ? void 0 : b.disabled) || t),
         O = p.Z.supportsInApp(m.AN.VIDEO) && p.Z.supportsInApp(m.AN.DESKTOP_CAPTURE),
-        E = d.Z.getChannel(f.Z.getChannelId()),
-        y = null == (e = h.default.getCurrentUser()) ? void 0 : e.id;
+        E = d.Z.getChannel(h.Z.getChannelId()),
+        y = null == (e = f.default.getCurrentUser()) ? void 0 : e.id;
     if (null == E || null == y) return;
     let { reachedLimit: v } = (0, s.t)(E);
     if (!v) {

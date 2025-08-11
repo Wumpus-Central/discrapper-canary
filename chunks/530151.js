@@ -9,8 +9,8 @@ var r = n(255367),
     u = n(692547),
     d = n(780384),
     p = n(755721),
-    f = n(481060),
-    h = n(570140),
+    h = n(481060),
+    f = n(570140),
     g = n(239091),
     m = n(51025),
     b = n(785547),
@@ -58,7 +58,7 @@ let U = (e) => {
     G = [u.Z.unsafe_rawColors.BLUE_345.css, u.Z.colors.INTERACTIVE_NORMAL.css],
     V = (e) => {
         let { tooltip: t, onClick: n, icon: i } = e;
-        return (0, r.jsx)(f.ua7, {
+        return (0, r.jsx)(h.ua7, {
             text: t,
             children: (e) => {
                 let { onMouseEnter: l, onMouseLeave: a } = e;
@@ -244,9 +244,9 @@ class W extends i.PureComponent {
         return (0, r.jsxs)(v.Z, {
             direction: v.Z.Direction.VERTICAL,
             children: [
-                (0, r.jsx)(f.Exd, {
+                (0, r.jsx)(h.Exd, {
                     percent: t,
-                    size: f.Exd.Sizes.SMALL,
+                    size: h.Exd.Sizes.SMALL,
                     foregroundColor: (0, y.Lq)(n),
                     foregroundGradientColor: null != i ? [(0, y.Lq)(i[0]), (0, y.Lq)(i[1])] : void 0,
                     animate: this.isFocused,
@@ -263,9 +263,9 @@ class W extends i.PureComponent {
         return (0, r.jsxs)(v.Z, {
             direction: v.Z.Direction.VERTICAL,
             children: [
-                (0, r.jsx)(f.yGy, {
+                (0, r.jsx)(h.yGy, {
                     percents: t,
-                    size: f.yGy.Sizes.SMALL,
+                    size: h.yGy.Sizes.SMALL,
                     foregroundColors: G,
                     animate: this.isFocused,
                 }),
@@ -420,20 +420,20 @@ class W extends i.PureComponent {
 }
 let Y = () =>
         (0, r.jsx)(V, {
-            icon: f.o1U,
+            icon: h.o1U,
             tooltip: D.intl.string(D.t.YGm6SU),
             onClick: () => m.v4(),
         }),
     K = () =>
         (0, r.jsx)(V, {
-            icon: f.fpf,
+            icon: h.fpf,
             tooltip: D.intl.string(D.t.TVAd5O),
             onClick: () => m.wO(),
         }),
     q = (e) => {
         let { item: t } = e;
         return (0, r.jsx)(V, {
-            icon: f.wj7,
+            icon: h.wj7,
             tooltip: D.intl.string(D.t["Eqb+LC"]),
             onClick: () => m.A1(t.applicationId, t.branchId),
         });
@@ -441,7 +441,7 @@ let Y = () =>
     X = (e) => {
         let { item: t } = e;
         return (0, r.jsx)(V, {
-            icon: f.Dio,
+            icon: h.Dio,
             tooltip: D.intl.string(D.t["0lFmCw"]),
             onClick: () => m.al(t.applicationId, t.branchId),
         });
@@ -522,7 +522,7 @@ class J extends i.PureComponent {
         let { applications: e } = this.props;
         e.forEach((e) => {
             e.finished &&
-                h.Z.wait(() => {
+                f.Z.wait(() => {
                     m.wi(e.applicationId, e.branchId);
                 });
         }),

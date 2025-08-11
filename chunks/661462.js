@@ -43,7 +43,7 @@ function m(e) {
                   onClose: p,
               })
             : l === u.oh.WIDGETS
-              ? (0, r.jsx)(d.Z, {
+              ? (0, r.jsx)(d.C, {
                     user: t,
                     guildId: f,
                     channelId: m,

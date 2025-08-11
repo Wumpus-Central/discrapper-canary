@@ -6,8 +6,8 @@ var l = n(793030),
     o = n(840367),
     a = n(347694);
 function c(e) {
-    var { children: t } = e,
-        n = (function (e, t) {
+    var { children: t, showHeaderActionButtons: n = !0, reachedMaxGamesLimit: c } = e,
+        s = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -27,11 +27,11 @@ function c(e) {
                         !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]);
             }
             return l;
-        })(e, ["children"]);
-    let c = (0, i.Dt)();
+        })(e, ["children", "showHeaderActionButtons", "reachedMaxGamesLimit"]);
+    let d = (0, i.Dt)();
     return (0, r.jsx)("section", {
         className: a.container,
-        "aria-labelledby": c,
+        "aria-labelledby": d,
         children: (0, r.jsx)(l.y5, {
             component: (0, r.jsx)(
                 o.Z,
@@ -59,7 +59,14 @@ function c(e) {
                             });
                     }
                     return e;
-                })({ headingId: c }, n),
+                })(
+                    {
+                        headingId: d,
+                        reachedMaxGamesLimit: c,
+                        showHeaderActionButtons: n,
+                    },
+                    s,
+                ),
             ),
             children: t,
         }),

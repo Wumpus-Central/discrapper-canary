@@ -838,7 +838,7 @@ let eG = {
         async sendMessage(e, t) {
             var n;
             let r = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
-                i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+                i = arguments.length > 3 ? arguments[3] : void 0;
             if (t.reaction) return Promise.resolve();
             let o = await (0, X.Z)(e);
             if (null != o) return eB.sendMessage(o, t, r, i);
@@ -936,7 +936,7 @@ let eG = {
             ),
         sendStickers(e, t) {
             let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "",
-                r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
+                r = arguments.length > 3 ? arguments[3] : void 0,
                 i = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
             return eB._sendMessage(
                 e,
@@ -962,6 +962,7 @@ let eG = {
                     },
                     oldFormErrors: !0,
                     rejectWithError: !1,
+                    context: { location: eI.dy.GREET },
                 })
                 .then(
                     (n) => (
@@ -997,7 +998,10 @@ let eG = {
                     validNonShortcutEmojis: [],
                     invalidEmojis: [],
                 },
-                eC(eA({}, n), { poll: t }),
+                eC(eA({}, n), {
+                    poll: t,
+                    location: eI.dy.POLL_CREATION,
+                }),
             );
         },
         validateMessage(e, t, n) {

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h }), n(388685), n(539854), n(35282);
+n.d(t, { Z: () => f }), n(388685), n(539854), n(35282);
 var r = n(392711),
     i = n.n(r),
     l = n(442837),
@@ -9,7 +9,7 @@ var r = n(392711),
     u = n(526761),
     d = n(981631);
 let p = "selectedChannelGuildFrecency";
-function f(e) {
+function h(e) {
     let { state: t } = l.ZP.PersistedStore.migrateAndReadStoreState("GIFFavoritesStore", [
         (e) =>
             null == e
@@ -48,11 +48,11 @@ function f(e) {
               );
           });
 }
-let h = [
+let f = [
     {
         version: 2,
         run(e) {
-            let t = f(1);
+            let t = h(1);
             if (0 === t.length) return !1;
             for (let { url: n, favorite: r } of (null == e.favoriteGifs && (e.favoriteGifs = a.wK.create()),
             (e.favoriteGifs.gifs = {}),
@@ -124,7 +124,7 @@ let h = [
         run(e) {
             null == e.favoriteGifs && (e.favoriteGifs = a.wK.create()),
                 null == e.favoriteGifs.gifs && (e.favoriteGifs.gifs = {});
-            let t = f(1);
+            let t = h(1);
             if (0 === t.length) return !1;
             i()(e.favoriteGifs.gifs)
                 .values()

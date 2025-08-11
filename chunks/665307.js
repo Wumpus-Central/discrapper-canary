@@ -9,8 +9,8 @@ var r,
     u = n(846519),
     d = n(477690),
     p = n(755721),
-    f = n(481060),
-    h = n(570140),
+    h = n(481060),
+    f = n(570140),
     g = n(239091),
     m = n(287259),
     b = n(785547),
@@ -84,7 +84,7 @@ let L = (0, N.Mg)(d.Z.GAME_LIST_ROW_MIN_HEIGHT),
     k = (e) => {
         let { flag: t, icon: n, item: r, tooltip: l } = e,
             a = r.libraryApplication.hasFlag(t);
-        return (0, i.jsx)(f.ua7, {
+        return (0, i.jsx)(h.ua7, {
             text: l,
             children: (e) => (0, i.jsx)(n, Z({ className: o()(x.settingIcon, { [x.hidden]: !a }) }, e)),
         });
@@ -113,11 +113,11 @@ let L = (0, N.Mg)(d.Z.GAME_LIST_ROW_MIN_HEIGHT),
                                     children: e.libraryApplication.getBranchedName(e.application),
                                 }),
                                 e.libraryApplication.hasFlag(P.eHb.PREMIUM)
-                                    ? (0, i.jsx)(f.ua7, {
+                                    ? (0, i.jsx)(h.ua7, {
                                           text: j.intl.string(j.t.tG2SzM),
                                           children: (e) =>
                                               (0, i.jsx)(
-                                                  f.SrA,
+                                                  h.SrA,
                                                   Z(
                                                       {
                                                           size: "md",
@@ -191,13 +191,13 @@ let L = (0, N.Mg)(d.Z.GAME_LIST_ROW_MIN_HEIGHT),
                                 (0, i.jsx)(k, {
                                     flag: P.eHb.PRIVATE,
                                     item: e,
-                                    icon: f.kZF,
+                                    icon: h.kZF,
                                     tooltip: j.intl.string(j.t.NozAoq),
                                 }),
                                 (0, i.jsx)(k, {
                                     flag: P.eHb.OVERLAY_DISABLED,
                                     item: e,
-                                    icon: f.o8v,
+                                    icon: h.o8v,
                                     tooltip: j.intl.string(j.t.Az9eqq),
                                 }),
                                 (0, i.jsx)(T.Z, {
@@ -298,7 +298,7 @@ class G extends (r = l.PureComponent) {
         let t = this.props.activeRowKey;
         if (null != t && e.activeRowKey !== t && this.props.isNavigatingByKeyboard) {
             let e = this._rowRefs[t];
-            null != e && (h.Z.wait(g.Zy), this.props.scrollToRow(e, L));
+            null != e && (f.Z.wait(g.Zy), this.props.scrollToRow(e, L));
         }
     }
     handleHighlightedApplicationKey() {
@@ -493,7 +493,7 @@ function V(e) {
             sortKey: u,
             sortDirection: d,
             activeRowKey: p,
-            isNavigatingByKeyboard: f,
+            isNavigatingByKeyboard: h,
         } = (0, c.cj)([I.Z], () => ({
             sortKey: I.Z.sortKey,
             sortDirection: I.Z.sortDirection,
@@ -511,7 +511,7 @@ function V(e) {
             sortKey: u,
             sortDirection: d,
             activeRowKey: p,
-            isNavigatingByKeyboard: f,
+            isNavigatingByKeyboard: h,
         }),
     );
 }

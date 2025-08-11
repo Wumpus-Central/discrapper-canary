@@ -34,15 +34,15 @@ var r = n(255367),
     k = n(681837),
     D = n(78806),
     G = n(91433),
-    R = n(451834),
+    B = n(451834),
     M = n(900927),
-    B = n(944043),
+    R = n(944043),
     U = n(502762),
     F = n(530),
     V = n(4517),
     Y = n(179828),
-    W = n(993160),
-    H = n(574887),
+    H = n(993160),
+    W = n(574887),
     z = n(693408),
     K = n(661462),
     J = n(768111),
@@ -216,7 +216,7 @@ function ee(e) {
                                                                 displayProfile: eI,
                                                                 themeType: X.lY.MODAL_V2,
                                                             }),
-                                                            (0, r.jsx)(R.Z, {
+                                                            (0, r.jsx)(B.Z, {
                                                                 userId: n.id,
                                                                 onClose: eu,
                                                                 className: $.toast,
@@ -325,13 +325,13 @@ function ee(e) {
                                                                     isPremiumUser: (0, I.I5)(ee),
                                                                     onInteraction: eu,
                                                                 }),
-                                                            (0, r.jsx)(B.Z, {
+                                                            (0, r.jsx)(R.Z, {
                                                                 user: n,
                                                                 className: $.profileBanner,
                                                             }),
                                                             (0, r.jsx)("div", {
                                                                 className: $.profileButtons,
-                                                                children: (0, r.jsx)(W.Z, {
+                                                                children: (0, r.jsx)(H.Z, {
                                                                     user: n,
                                                                     currentUser: ee,
                                                                     guildId: et,
@@ -375,7 +375,7 @@ function ee(e) {
                                                                 (0, r.jsx)(z.Z, {
                                                                     heading: Q.intl.string(Q.t["3fe7U1"]),
                                                                     scrollIntoView: ea === X.Tb.CONNECTIONS,
-                                                                    children: (0, r.jsx)(H.Z, {
+                                                                    children: (0, r.jsx)(W.Z, {
                                                                         connections: ek,
                                                                         userId: n.id,
                                                                         className: $.profileAppConnections,

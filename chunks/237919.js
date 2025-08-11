@@ -9,8 +9,8 @@ var r = n(255367),
     u = n(287259),
     d = n(819640),
     p = n(490983),
-    f = n(799777),
-    h = n(5967),
+    h = n(799777),
+    f = n(5967),
     g = n(346329),
     m = n(981631),
     b = n(388032),
@@ -86,8 +86,8 @@ class E extends i.Component {
                 let { activeRowKey: n, hasModalOpen: r, applicationViewItems: i } = this.props,
                     { searchBarRef: l } = this;
                 if (r || e.ctrlKey || e.altKey || e.metaKey || null == l) return;
-                let a = null == (t = (0, h.uB)(e)) ? void 0 : t.activeElement;
-                if (!(a !== l.inputRef.current && (0, h.VG)(a)))
+                let a = null == (t = (0, f.uB)(e)) ? void 0 : t.activeElement;
+                if (!(a !== l.inputRef.current && (0, f.VG)(a)))
                     switch (e.which) {
                         case m.yXg.ESCAPE:
                             e.target !== l.inputRef.current ? this.reset() : null != l.inputRef.current && l.blur();
@@ -126,7 +126,7 @@ function y() {
     let e = (0, o.e7)([d.Z], () => d.Z.hasLayers()),
         t = (0, s.s9z)(s.JQI);
     return (0, r.jsx)(E, {
-        activeRowKey: (0, o.e7)([f.Z], () => f.Z.activeRowKey),
+        activeRowKey: (0, o.e7)([h.Z], () => h.Z.activeRowKey),
         hasModalOpen: t || e,
         filterQuery: (0, o.e7)([p.Z], () => p.Z.applicationFilterQuery),
         applicationViewItems: (0, o.e7)([p.Z], () => p.Z.sortedFilteredLibraryApplicationViewItems),

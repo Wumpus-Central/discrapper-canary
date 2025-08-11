@@ -16,10 +16,10 @@ let f = {
     [i.l.PLAYED_GAMES]: () => d.intl.string(d.t.scOKER),
 };
 function m(e) {
-    let { userId: t, widgetType: n, headingId: m, reachedMaxGamesLimit: p } = e,
-        g = (0, o.e7)([c.default], () => c.default.getId() === t),
-        b = f[n](),
-        j = g
+    let { userId: t, widgetType: n, headingId: m, reachedMaxGamesLimit: p, showHeaderActionButtons: g } = e,
+        b = (0, o.e7)([c.default], () => c.default.getId() === t),
+        j = f[n](),
+        h = b
             ? n === i.l.FAVORITE_GAMES
                 ? d.intl.string(d.t.wiXdER)
                 : d.intl.format(d.t["zR1+09"], { numGames: l.k[n] })
@@ -34,17 +34,18 @@ function m(e) {
                         variant: "heading-sm/medium",
                         color: "text-default",
                         id: m,
-                        children: b,
+                        children: j,
                     }),
-                    null != j &&
+                    null != h &&
                         (0, r.jsx)(a.Text, {
                             variant: "text-xs/normal",
                             color: "text-secondary",
-                            children: j,
+                            children: h,
                         }),
                 ],
             }),
-            g &&
+            b &&
+                g &&
                 (0, r.jsxs)("div", {
                     className: u.actions,
                     children: [

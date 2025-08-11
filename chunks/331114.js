@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f }), n(388685);
+n.d(t, { Z: () => h }), n(388685);
 var r,
     i = n(442837),
     l = n(570140),
@@ -55,7 +55,7 @@ class p extends (r = i.ZP.Store) {
     }
 }
 o(p, "displayName", "GlobalDiscoveryServersSearchCountStore");
-let f = new p(l.Z, {
+let h = new p(l.Z, {
     CONNECTION_OPEN: function () {
         s.clear();
     },

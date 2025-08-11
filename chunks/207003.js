@@ -2,9 +2,9 @@ n.d(t, { Q: () => z });
 var r = n(255367),
     l = n(73800),
     a = n(120356),
-    s = n.n(a),
-    i = n(913527),
-    u = n.n(i),
+    i = n.n(a),
+    s = n(913527),
+    u = n.n(s),
     o = n(91192),
     c = n(442837),
     d = n(742746),
@@ -100,7 +100,7 @@ function U(e) {
             destination: t,
             icon: n,
             label: a,
-            subLabel: i,
+            subLabel: s,
             selected: u,
             disabled: c,
             onPressDestination: d,
@@ -116,7 +116,7 @@ function U(e) {
         A(
             k(
                 {
-                    className: s()(M.destinationRow, { [M.disabled]: c }),
+                    className: i()(M.destinationRow, { [M.disabled]: c }),
                     onClick: m,
                     "aria-selected": u,
                     "aria-setsize": b,
@@ -147,7 +147,7 @@ function U(e) {
                                         className: M.subLabel,
                                         variant: "text-xs/normal",
                                         color: "text-muted",
-                                        children: i,
+                                        children: s,
                                     }),
                                 ],
                             }),
@@ -169,8 +169,8 @@ function H(e) {
     var { user: t, subLabel: n } = e,
         l = I(e, ["user", "subLabel"]);
     let a = N.ZP.useName(t),
-        s = N.ZP.useUserTag(t, { decoration: "never" }),
-        i = (0, c.e7)([P.Z], () => P.Z.getNickname(t.id)),
+        i = N.ZP.useUserTag(t, { decoration: "never" }),
+        s = (0, c.e7)([P.Z], () => P.Z.getNickname(t.id)),
         u = (0, c.e7)([O.Z], () => O.Z.getStatus(t.id));
     return (0, r.jsx)(
         U,
@@ -181,8 +181,8 @@ function H(e) {
                 user: t,
                 status: u,
             }),
-            label: null != i ? i : a,
-            subLabel: null != n ? n : s,
+            label: null != s ? s : a,
+            subLabel: null != n ? n : i,
         }),
     );
 }
@@ -190,7 +190,7 @@ function F(e) {
     var { channel: t, subLabel: n } = e,
         l = I(e, ["channel", "subLabel"]);
     let a = (0, m.ZP)(t),
-        s = (0, x._)(t);
+        i = (0, x._)(t);
     return (0, r.jsx)(
         U,
         A(k({}, l), {
@@ -201,7 +201,7 @@ function F(e) {
                 experimentLocation: "application-command-modal",
             }),
             label: a,
-            subLabel: null != n ? n : s,
+            subLabel: null != n ? n : i,
         }),
     );
 }
@@ -209,8 +209,8 @@ function q(e) {
     var { channel: t, subLabel: n } = e,
         l = I(e, ["channel", "subLabel"]);
     let a = (0, c.e7)([j.Z], () => j.Z.getGuild(null == t ? void 0 : t.guild_id)),
-        s = (0, m.ZP)(t),
-        i = (0, c.e7)([E.Z, C.default, P.Z], () => {
+        i = (0, m.ZP)(t),
+        s = (0, c.e7)([E.Z, C.default, P.Z], () => {
             let e = E.Z.getChannel(t.parent_id);
             return null == e ? null : (0, m.F6)(e, C.default, P.Z, !1);
         }),
@@ -229,7 +229,7 @@ function q(e) {
                     variant: "text-xs/medium",
                     color: "text-secondary",
                     lineClamp: 1,
-                    children: i,
+                    children: s,
                 }),
                 null != o
                     ? (0, r.jsxs)(r.Fragment, {
@@ -259,14 +259,14 @@ function q(e) {
                 guild: a,
                 channel: t,
             }),
-            label: s,
+            label: i,
             subLabel: null != n ? n : d,
         }),
     );
 }
 function z(e) {
-    var { rowData: t, selectedDestinations: n, handleToggleDestination: a, disableSelection: s } = e,
-        i = I(e, ["rowData", "selectedDestinations", "handleToggleDestination", "disableSelection"]);
+    var { rowData: t, selectedDestinations: n, handleToggleDestination: a, disableSelection: i } = e,
+        s = I(e, ["rowData", "selectedDestinations", "handleToggleDestination", "disableSelection"]);
     let u = l.useMemo(() => [t.length], [t.length]),
         c = l.useCallback(() => 48, []),
         f = l.useMemo(() => {
@@ -277,10 +277,10 @@ function z(e) {
             (e) => {
                 let { section: n, row: l } = e;
                 if (n > 0) return;
-                let { type: i, record: u } = t[l];
-                if (i === h.h8.HEADER) return;
+                let { type: s, record: u } = t[l];
+                if (s === h.h8.HEADER) return;
                 let o =
-                        i === h.h8.USER
+                        s === h.h8.USER
                             ? {
                                   type: "user",
                                   id: u.id,
@@ -305,21 +305,21 @@ function z(e) {
                         key: c,
                         destination: o,
                         subLabel: null != d ? d.label : void 0,
-                        disabled: (s && !b) || null != d,
+                        disabled: (i && !b) || null != d,
                         selected: b,
                         onPressDestination: a,
                         "aria-posinset": l + 1,
                         "aria-setsize": t.length,
                     };
-                return i === h.h8.USER
+                return s === h.h8.USER
                     ? (0, r.jsx)(H, k({ user: u }, p))
-                    : i === h.h8.GROUP_DM
+                    : s === h.h8.GROUP_DM
                       ? (0, r.jsx)(F, k({ channel: u }, p))
-                      : i === h.h8.TEXT_CHANNEL || i === h.h8.VOICE_CHANNEL
+                      : s === h.h8.TEXT_CHANNEL || s === h.h8.VOICE_CHANNEL
                         ? (0, r.jsx)(q, k({ channel: u }, p))
-                        : void (0, T.vE)(i);
+                        : void (0, T.vE)(s);
             },
-            [s, a, t, f],
+            [i, a, t, f],
         ),
         m = l.useRef(null),
         g = (0, p.Z)("share-command-modal", m);
@@ -341,7 +341,7 @@ function z(e) {
                                 },
                             },
                             n,
-                            i,
+                            s,
                         ),
                         {
                             sections: u,

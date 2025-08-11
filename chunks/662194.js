@@ -99,7 +99,7 @@ let p = {
                     qos: u,
                     silence_warning: d,
                     deaf: p,
-                    mute: f,
+                    mute: h,
                 },
             } = e;
             if (
@@ -131,9 +131,9 @@ let p = {
                 let e = l.Z.isSelfDeaf();
                 ((e && !p) || (!e && p)) && i.Z.toggleSelfDeaf();
             }
-            if (null != f) {
+            if (null != h) {
                 let e = l.Z.isSelfMute();
-                ((e && !f) || (!e && f)) && i.Z.toggleSelfMute();
+                ((e && !h) || (!e && h)) && i.Z.toggleSelfMute();
             }
             return (0, c._X)();
         },

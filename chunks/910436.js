@@ -10,8 +10,8 @@ var i = n(287734),
     u = n(420660),
     d = n(509212),
     p = n(497505),
-    f = n(23404),
-    h = n(81063),
+    h = n(23404),
+    f = n(81063),
     g = n(761282),
     m = n(358924),
     b = n(868854),
@@ -125,7 +125,7 @@ function E(e) {
                         m.Z.RichPresenceSection,
                         {
                             activity: x,
-                            getAssetImage: h.xF,
+                            getAssetImage: f.xF,
                         },
                         "rich-presence-".concat(null != (g = x.session_id) ? g : t, "-").concat(w.id),
                     ),
@@ -140,7 +140,7 @@ function E(e) {
                             guildId: null == N ? void 0 : N.id,
                             activity: x,
                             user: e || n ? w : null,
-                            getAssetImage: h.xF,
+                            getAssetImage: f.xF,
                         },
                         "streaming-".concat(null != (b = x.session_id) ? b : t),
                     ),
@@ -158,7 +158,7 @@ function E(e) {
                                       unknownSize: 0,
                                       totalSize: Z.length,
                                   },
-                                  getAssetImage: h.xF,
+                                  getAssetImage: f.xF,
                                   members: Z,
                               },
                               "spotify-".concat(null != (y = x.session_id) ? y : t, "-").concat(w.id),
@@ -170,7 +170,7 @@ function E(e) {
                                 m.Z.RichPresenceSection,
                                 {
                                     activity: x,
-                                    getAssetImage: h.xF,
+                                    getAssetImage: f.xF,
                                 },
                                 "rich-presence-".concat(null != (S = x.session_id) ? S : t, "-").concat(w.id),
                             ),
@@ -187,7 +187,7 @@ function E(e) {
                 null != A &&
                 (0, d._D)(x, E) &&
                 (null == E.userStatus || !(0, d.zE)(E.userStatus, p.jn.ACTIVITY_PANEL)) &&
-                P((0, r.jsx)(f.Z, { quest: E }, "quest-".concat(E.id, "-").concat(null != (j = x.session_id) ? j : t)));
+                P((0, r.jsx)(h.Z, { quest: E }, "quest-".concat(E.id, "-").concat(null != (j = x.session_id) ? j : t)));
         }),
         T.length > 0 ? (0, r.jsx)(m.Z.Body, { children: T }) : null
     );

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => f });
 var r = n(255367);
 n(73800);
 var i = n(100527),
@@ -10,18 +10,18 @@ var i = n(100527),
     u = n(921944),
     d = n(30513),
     p = n(388032),
-    f = n(420569);
-function h(e) {
+    h = n(420569);
+function f(e) {
     let { guild: t, markAsDismissed: n } = e,
-        h = (0, s.KK)(t, c.Eu4.TIER_2),
+        f = (0, s.KK)(t, c.Eu4.TIER_2),
         { analyticsLocations: g } = (0, l.ZP)(i.Z.GUILD_BANNER_NOTICE);
     return (0, r.jsx)(a.Z, {
         guild: t,
         onDismissed: () => n(u.L.UNKNOWN),
         cta: p.intl.string(p.t["oPAx7+"]),
-        message: p.intl.format(p.t.AcaNY2, { boostsNeeded: h }),
+        message: p.intl.format(p.t.AcaNY2, { boostsNeeded: f }),
         type: c.vID.GUILD_BANNER,
-        image: f,
+        image: h,
         onClick: () =>
             (0, o.Z)({
                 analyticsLocations: g,

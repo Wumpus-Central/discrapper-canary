@@ -9,8 +9,8 @@ var r = n(255367),
     u = n(493683),
     d = n(239091),
     p = n(443589),
-    f = n(703656),
-    h = n(592125),
+    h = n(703656),
+    f = n(592125),
     g = n(131951),
     m = n(699516),
     b = n(51144),
@@ -44,14 +44,14 @@ function P(e) {
                 joinCall: !0,
             });
         }, [t.id]),
-        f = i.useCallback(() => {
+        h = i.useCallback(() => {
             u.Z.openPrivateChannel({
                 recipientIds: t.id,
                 joinCall: !0,
                 joinCallVideo: !0,
             });
         }, [t.id]),
-        h = i.useCallback(() => {
+        f = i.useCallback(() => {
             _.Z.removeFriend({
                 userId: t.id,
                 applicationId: l ? n : null,
@@ -66,9 +66,9 @@ function P(e) {
                 confirmText: e,
                 confirmVariant: "critical-primary",
                 cancelText: S.intl.string(S.t["ETE/oK"]),
-                onConfirm: h,
+                onConfirm: f,
             });
-        }, [h, l, t]),
+        }, [f, l, t]),
         O = (0, o.e7)([g.Z], () => g.Z.supports(C.AN.VIDEO)),
         E = t.isProvisional,
         y = l ? S.intl.string(S.t["RLcE6+"]) : S.intl.string(S.t.cvSt1N);
@@ -82,7 +82,7 @@ function P(e) {
                 ? (0, r.jsx)(s.sNh, {
                       id: "start-video-call",
                       label: S.intl.string(S.t.oCqlGB),
-                      action: f,
+                      action: h,
                   })
                 : null,
             !E &&
@@ -181,10 +181,10 @@ class j extends i.PureComponent {
                 let { user: t } = this.props;
                 e.stopPropagation();
                 let n = a().find(
-                    h.Z.getMutablePrivateChannels(),
+                    f.Z.getMutablePrivateChannels(),
                     (e) => e.type === I.d4z.DM && e.getRecipientId() === t.id,
                 );
-                null != n ? (0, f.uL)(I.Z5c.CHANNEL(I.ME, n.id)) : u.Z.openPrivateChannel({ recipientIds: t.id });
+                null != n ? (0, h.uL)(I.Z5c.CHANNEL(I.ME, n.id)) : u.Z.openPrivateChannel({ recipientIds: t.id });
             }),
             T(this, "handleOpenActionsMenu", (e) => {
                 let { user: t, isGameRelationship: n, applicationId: i } = this.props;

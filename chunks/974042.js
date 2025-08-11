@@ -9,8 +9,8 @@ var r,
     u = n(353926),
     d = n(5254),
     p = n(91896),
-    f = n(441623),
-    h = n(199902),
+    h = n(441623),
+    f = n(199902),
     g = n(271383),
     m = n(430824),
     b = n(158776),
@@ -77,7 +77,7 @@ function N(e) {
         status: b.Z.getStatus(e),
         isMobile: b.Z.isMobileOnline(e),
         activities: b.Z.getActivities(e),
-        applicationStream: h.Z.getAnyStreamForUser(e),
+        applicationStream: f.Z.getAnyStreamForUser(e),
     };
 }
 function T(e) {
@@ -175,7 +175,7 @@ class j {
                                 spam: _.Z.isSpam(n),
                                 ignoredUser: _.Z.isIgnored(n),
                                 giftIntentType:
-                                    r === E.OGo.FRIEND && f.Z.isTopAffinityFriendAnniversary({ userId: n })
+                                    r === E.OGo.FRIEND && h.Z.isTopAffinityFriendAnniversary({ userId: n })
                                         ? y.hX.FRIEND_ANNIVERSARY
                                         : void 0,
                                 applicationId: _.Z.getOriginApplicationId(n),
@@ -326,13 +326,13 @@ function U(e) {
 }
 class G extends (r = a.ZP.Store) {
     initialize() {
-        this.waitFor(_.Z, b.Z, O.default, m.Z, g.ZP, h.Z, d.Z, u.Z),
+        this.waitFor(_.Z, b.Z, O.default, m.Z, g.ZP, f.Z, d.Z, u.Z),
             this.syncWith([_.Z], M),
             this.syncWith([p.Z], M),
             this.syncWith([d.Z], M),
-            this.syncWith([f.Z], M),
+            this.syncWith([h.Z], M),
             this.syncWith([O.default], U(S)),
-            this.syncWith([b.Z, h.Z], U(N)),
+            this.syncWith([b.Z, f.Z], U(N)),
             k();
     }
     getState() {

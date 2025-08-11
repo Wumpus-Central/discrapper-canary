@@ -1,4 +1,4 @@
-n.d(t, { Z: () => d });
+n.d(t, { Z: () => f });
 var r = n(544891),
     i = n(570140),
     o = n(367907),
@@ -6,8 +6,9 @@ var r = n(544891),
     s = n(592125),
     l = n(493683),
     c = n(904245),
-    u = n(981631);
-let d = {
+    u = n(981631),
+    d = n(959517);
+let f = {
     updateActivity(e) {
         let {
             applicationId: t,
@@ -68,27 +69,28 @@ let d = {
                 });
     },
     sendActivityInvite(e) {
-        let { channelId: t, type: n, activity: r, content: i, targetUserId: l, location: d } = e,
-            f = s.Z.getChannel(t);
-        if (null == f) return Promise.resolve(null);
-        let _ = a.ZP.parse(f, null != i ? i : "");
-        return c.Z.sendMessage(f.id, _, !1, {
+        let { channelId: t, type: n, activity: r, content: i, targetUserId: l, location: f } = e,
+            _ = s.Z.getChannel(t);
+        if (null == _) return Promise.resolve(null);
+        let p = a.ZP.parse(_, null != i ? i : "");
+        return c.Z.sendMessage(_.id, p, !1, {
             activityAction: {
                 type: n,
                 activity: r,
                 targetUserId: l,
             },
+            location: d.dy.ACTIVITY_SHARE,
         }).then(
             (e) => (
                 o.ZP.trackWithMetadata(u.rMx.INVITE_SENT, {
-                    location: d,
+                    location: f,
                     invite_type: r.type === u.IIU.LISTENING ? u.dAT.SPOTIFY : u.dAT.APPLICATION,
                     application_id: r.application_id,
-                    guild_id: f.getGuildId(),
-                    channel_id: f.id,
+                    guild_id: _.getGuildId(),
+                    channel_id: _.id,
                     message_id: null != e ? e.body.id : null,
                 }),
-                Promise.resolve(f)
+                Promise.resolve(_)
             ),
             (e) => Promise.reject(e),
         );

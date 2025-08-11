@@ -12,27 +12,27 @@ function p(e) {
     let t = c.Z.getGuild(e);
     return null != t && !!t.features.has(u.oNc.HUB) && ((d = !0), !0);
 }
-function f() {
+function h() {
     return !0;
 }
-class h extends (r = a.ZP.Store) {
+class f extends (r = a.ZP.Store) {
     initialize() {
-        this.waitFor(c.Z, s.Z), this.syncWith([s.Z], f);
+        this.waitFor(c.Z, s.Z), this.syncWith([s.Z], h);
     }
     channelNoticePredicate(e) {
         return !!e.features.has(u.oNc.LINKED_TO_HUB) && !d;
     }
 }
 (l = "HubLinkNoticeStore"),
-    (i = "displayName") in h
-        ? Object.defineProperty(h, i, {
+    (i = "displayName") in f
+        ? Object.defineProperty(f, i, {
               value: l,
               enumerable: !0,
               configurable: !0,
               writable: !0,
           })
-        : (h[i] = l);
-let g = new h(o.Z, {
+        : (f[i] = l);
+let g = new f(o.Z, {
     CONNECTION_OPEN: function (e) {
         for (let t of e.guilds) if (p(t.id)) return !0;
         return !1;

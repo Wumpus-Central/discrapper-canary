@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h }), n(388685);
+n.d(t, { Z: () => f }), n(388685);
 var r = n(846519),
     i = n(570140),
     l = n(317770),
@@ -21,7 +21,7 @@ function p(e, t, n) {
         e
     );
 }
-class f extends l.Z {
+class h extends l.Z {
     _initialize() {
         (this.focusedOrForegrounded = (0, u.H)()),
             i.Z.subscribe("WINDOW_FOCUS", this.handleWindowFocus),
@@ -122,4 +122,4 @@ class f extends l.Z {
             });
     }
 }
-let h = new f();
+let f = new h();

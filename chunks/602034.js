@@ -1,6 +1,6 @@
 n.d(t, {
-    Z: () => m,
-    r: () => y,
+    Z: () => b,
+    r: () => x,
 });
 var r = n(73800),
     i = n(94171),
@@ -14,27 +14,29 @@ var r = n(73800),
     h = n(703558),
     p = n(117530),
     f = n(928477),
-    g = n(388032);
-function m(e) {
+    g = n(959517),
+    m = n(388032);
+function b(e) {
     let {
             parentChannel: t,
             parentMessageId: n,
             threadSettings: i,
             privateThreadMode: c,
             location: u,
-            onThreadCreated: m,
-            useDefaultThreadName: b,
+            onThreadCreated: b,
+            useDefaultThreadName: y,
         } = e,
-        y = r.useCallback((e, t, n, r) => {
+        x = r.useCallback((e, t, n, r) => {
             a.Z.sendMessage(e.id, d.ZP.parse(e, n), void 0, {
                 eagerDispatch: !1,
+                location: g.dy.THREAD_CREATION,
                 stickerIds: r,
                 attachmentsToUpload: t,
                 onAttachmentUploadError: (r, i, a, c) => {
                     var u;
                     (0, o.openUploadError)({
-                        title: g.intl.string(g.t.B3vFdX),
-                        help: null != (u = null == c ? void 0 : c.message) ? u : g.intl.string(g.t.zMEjJi),
+                        title: m.intl.string(m.t.B3vFdX),
+                        help: null != (u = null == c ? void 0 : c.message) ? u : m.intl.string(m.t.zMEjJi),
                     }),
                         "" !== n &&
                             "" === h.Z.getDraft(e.id, h.d.FirstThreadMessage) &&
@@ -54,12 +56,12 @@ function m(e) {
         threadSettings: i,
         privateThreadMode: c,
         location: u,
-        onThreadCreated: m,
-        useDefaultThreadName: b,
-        uploadHandler: y,
+        onThreadCreated: b,
+        useDefaultThreadName: y,
+        uploadHandler: x,
     });
 }
-async function b(e) {
+async function y(e) {
     let t = new c.Z(),
         n = await t.uploadFiles(e);
     return {
@@ -67,7 +69,7 @@ async function b(e) {
         files: n,
     };
 }
-function y(e) {
+function x(e) {
     let { parentChannel: t } = e,
         { name: n, appliedTags: r } = (0, u.xH)((e) => {
             let { name: t, appliedTags: n } = e;
@@ -80,6 +82,6 @@ function y(e) {
         parentChannel: t,
         name: n,
         appliedTags: r,
-        upload: b,
+        upload: y,
     });
 }

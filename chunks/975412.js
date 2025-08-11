@@ -1,5 +1,5 @@
-u.exports = function (u) {
+e.exports = function (e) {
     return function (t) {
-        return null == u ? void 0 : u[t];
+        return null == e ? void 0 : e[t];
     };
 };

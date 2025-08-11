@@ -65,7 +65,7 @@ function P(e, t) {
     );
 }
 function w(e) {
-    var { message: t, initialSelectedDestinations: w, forwardOptions: Z, onClose: j, onRequestSent: N } = e,
+    var { message: t, initialSelectedDestinations: w, forwardOptions: Z, onClose: N, onRequestSent: j } = e,
         I = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -89,22 +89,22 @@ function w(e) {
         })(e, ["message", "initialSelectedDestinations", "forwardOptions", "onClose", "onRequestSent"]);
     let { channel_id: T, id: L } = t,
         R = r.useMemo(() => (0, u.dL)(T), [T]),
-        [A, M] = r.useState(!1),
-        k = (0, i.e7)([f.Z], () => {
+        [A, D] = r.useState(!1),
+        M = (0, i.e7)([f.Z], () => {
             var e;
             return null != (e = f.Z.getMessage(t.channel_id, t.id)) ? e : t;
         }, [t]),
-        D = (0, i.e7)([h.Z], () => h.Z.getChannel(T), [T]),
+        k = (0, i.e7)([h.Z], () => h.Z.getChannel(T), [T]),
         U = (0, _.ZF)(),
         W = (0, _.mh)(),
-        H = r.useRef(0),
         G = r.useRef(0),
-        [F, V] = r.useState(w),
-        z = F.length,
+        F = r.useRef(0),
+        [H, V] = r.useState(w),
+        z = H.length,
         K = z >= x.G,
         [Q, B] = r.useState(""),
         { results: q, updateSearchText: X } = (0, d.s)({
-            selectedDestinations: F,
+            selectedDestinations: H,
             originDestination: R,
             includeMissingDMs: !0,
         }),
@@ -116,7 +116,7 @@ function w(e) {
         ),
         J = r.useCallback(
             (e) => {
-                Y(e), (G.current += 1), "" !== e && W(T, L);
+                Y(e), (F.current += 1), "" !== e && W(T, L);
             },
             [T, L, W, Y],
         ),
@@ -127,11 +127,11 @@ function w(e) {
             (0, _.sF)({
                 channelId: T,
                 messageId: L,
-                numDestinationChanges: H.current,
-                numQueryChanges: G.current,
+                numDestinationChanges: G.current,
+                numQueryChanges: F.current,
             }),
-                j();
-        }, [T, L, j]),
+                N();
+        }, [T, L, N]),
         et = r.useRef(null);
     r.useEffect(() => {
         if ("" === Q) {
@@ -161,9 +161,9 @@ function w(e) {
                             let { type: n, id: l } = t;
                             return n === e.type && l === e.id;
                         });
-                        if (-1 === n) return K ? t : (Y(""), (H.current += 1), [e, ...t]);
+                        if (-1 === n) return K ? t : (Y(""), (G.current += 1), [e, ...t]);
                         let l = [...t];
-                        return l.splice(n, 1), (H.current += 1), l;
+                        return l.splice(n, 1), (G.current += 1), l;
                     });
             },
             [T, K, L, Q, Y, U],
@@ -179,7 +179,7 @@ function w(e) {
                     b = null != (r = f.Z.getMessage(T, L)) ? r : t;
                 if (null == b)
                     return void (0, s.showToast)((0, s.createToast)(E.intl.string(E.t.R0RpRU), s.ToastType.FAILURE));
-                M(!0);
+                D(!0);
                 let y = (await Promise.all(e.map(u.qx))).filter(m.lm);
                 if (
                     (0, p.Z)(b, y) &&
@@ -197,9 +197,9 @@ function w(e) {
                         });
                     }))
                 )
-                    return void M(!1);
+                    return void D(!1);
                 d && (0, v.mc)(),
-                    null == N || N(),
+                    null == j || j(),
                     i &&
                         (await o.Z.fetchMessages({ channelId: y[0] }),
                         (0, c.Kh)(y[0], { openTextInVoiceIfVoiceChannel: !0 }));
@@ -220,8 +220,8 @@ function w(e) {
                         hasError: !1,
                         hasContextMessage: null != a && "" !== a,
                         numDestinations: y.length,
-                        numDestinationChanges: H.current,
-                        numQueryChanges: G.current,
+                        numDestinationChanges: G.current,
+                        numQueryChanges: F.current,
                         anyDestinationHasSlowmode: C,
                     }),
                         en();
@@ -233,8 +233,8 @@ function w(e) {
                     hasError: !0,
                     hasContextMessage: null != a && "" !== a,
                     numDestinations: y.length,
-                    numDestinationChanges: H.current,
-                    numQueryChanges: G.current,
+                    numDestinationChanges: G.current,
+                    numQueryChanges: F.current,
                     anyDestinationHasSlowmode: C,
                 });
                 let S = e.filter((e, t) => "rejected" === x[t].status);
@@ -244,19 +244,19 @@ function w(e) {
                     forwardOptions: Z,
                 });
             },
-            [T, Z, L, t, N, en],
+            [T, Z, L, t, j, en],
         ),
         ea = r.useCallback(
             (e) => {
-                er(F, {
+                er(H, {
                     withMessage: e,
-                    transitionToDestination: 1 === F.length,
+                    transitionToDestination: 1 === H.length,
                     closeAfterSend: !0,
                 });
             },
-            [er, F],
+            [er, H],
         );
-    if (null == k || null == D) return null;
+    if (null == M || null == k) return null;
     let ei =
             q.length > 0
                 ? (0, l.jsx)(b.F, {
@@ -264,10 +264,10 @@ function w(e) {
                       paddingTop: 16,
                       rowData: q,
                       rowMode: b.G.TOGGLE,
-                      message: k,
-                      originChannel: D,
+                      message: M,
+                      originChannel: k,
                       handleToggleDestination: el,
-                      selectedDestinations: F,
+                      selectedDestinations: H,
                       disableSelection: K,
                   })
                 : (0, l.jsxs)(s.hzk, {
@@ -344,11 +344,11 @@ function w(e) {
                     }),
                     ei,
                     (0, l.jsx)(y.n, {
-                        message: k,
+                        message: M,
                         forwardOptions: Z,
                         sendLabel: es,
                         canSend: z > 0,
-                        selectedDestinations: F,
+                        selectedDestinations: H,
                         isSending: A,
                         onSend: ea,
                     }),

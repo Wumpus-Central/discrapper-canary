@@ -39,16 +39,16 @@ function S(e) {
             initialSection: k,
             initialSubsection: D,
             transitionState: G,
-            openedAt: R,
+            openedAt: B,
             onClose: M,
-            sourceAnalyticsLocations: B = [],
+            sourceAnalyticsLocations: R = [],
         } = e,
         U = S === T.ME ? void 0 : S,
         F = (0, u.ZP)(t.id, U),
         V = s.ZP.getName(U, A, t),
         Y = (0, c.Dt)(),
-        { analyticsLocations: W } = (0, a.ZP)([...B, o.Z.USER_PROFILE_MODAL]),
-        H = (0, d.ZB)({
+        { analyticsLocations: H } = (0, a.ZP)([...R, o.Z.USER_PROFILE_MODAL]),
+        W = (0, d.ZB)({
             layout: "MODAL",
             userId: t.id,
             sourceSessionId: L,
@@ -59,10 +59,10 @@ function S(e) {
         }),
         z = (0, P.Z)(t);
     return (0, r.jsx)(a.Gt, {
-        value: W,
+        value: H,
         children: (0, r.jsx)(d.Mt, {
-            value: H,
-            openedAt: R,
+            value: W,
+            openedAt: B,
             fetchStartedAt: null == F ? void 0 : F.fetchStartedAt,
             fetchEndedAt: null == F ? void 0 : F.fetchEndedAt,
             isLoaded: null == F ? void 0 : F.isLoaded,

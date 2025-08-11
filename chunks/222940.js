@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f }), n(388685);
+n.d(t, { Z: () => h }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(399606),
@@ -9,28 +9,28 @@ var r = n(255367),
     u = n(594174),
     d = n(388032),
     p = n(950127);
-function f(e) {
+function h(e) {
     let { inboxIconRef: t, recentsPopoutShown: n } = e,
-        [f, h] = i.useState(!1),
+        [h, f] = i.useState(!1),
         g = (0, l.e7)([s.Z], () => s.Z.getLastUnseenInvite()),
         m = (0, l.e7)([u.default], () => (null != g ? u.default.getUser(g.inviter_id) : null));
     return (i.useEffect(() => {
-        n && h(!1);
+        n && f(!1);
     }, [n]),
     i.useEffect(() => {
-        if (null == g) return void h(!1);
-        (0, c.Br)(g), h(!0);
+        if (null == g) return void f(!1);
+        (0, c.Br)(g), f(!0);
         let e = new a.V7();
         return (
             e.start(5000, () => {
-                h(!1);
+                f(!1);
             }),
             () => {
                 e.stop();
             }
         );
     }, [g]),
-    f && null != g && null != m)
+    h && null != g && null != m)
         ? (0, r.jsxs)(o.Cys, {
               tooltipClassName: p.tooltip,
               tooltipContentClassName: p.tooltipContent,

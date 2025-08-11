@@ -14,8 +14,8 @@ var r,
     u = n(210887),
     d = n(981631),
     p = n(388032),
-    f = n(332295);
-function h(e, t, n) {
+    h = n(332295);
+function f(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -41,7 +41,7 @@ let m = Object.freeze({
                         (0, i.jsx)(c.OZU, { note: p.intl.string(p.t.Y4vMY2) }),
                         (0, i.jsx)("div", {
                             "data-button-hoisted-classname-wrapper": !0,
-                            className: f.button,
+                            className: h.button,
                             children: (0, i.jsx)(c.zxk, {
                                 variant: "primary",
                                 text: p.intl.string(p.t.w5uwoK),
@@ -72,7 +72,7 @@ let m = Object.freeze({
             height: 200,
             renderContent: (e, t) =>
                 (0, i.jsxs)("div", {
-                    className: f.emptyStateContainer,
+                    className: h.emptyStateContainer,
                     children: [
                         (0, i.jsx)(c.OZU, { note: p.intl.string(p.t["aCYQ+P"]) }),
                         null != e &&
@@ -81,7 +81,7 @@ let m = Object.freeze({
                                 look: s.zx.Looks.OUTLINED,
                                 size: s.zx.Sizes.TINY,
                                 onClick: e,
-                                className: f.spamButton,
+                                className: h.spamButton,
                                 children: (0, i.jsx)(c.Text, {
                                     variant: "text-xs/medium",
                                     color: "text-muted",
@@ -137,12 +137,12 @@ class _ extends l.PureComponent {
             })(e);
         return e === d.pJs.ADD_FRIEND
             ? (0, i.jsx)(a.Z.div, {
-                  className: f.friendsEmpty,
+                  className: h.friendsEmpty,
                   style: r,
                   children: (0, i.jsx)(b, { theme: n }),
               })
             : (0, i.jsx)(a.Z.div, {
-                  className: f.friendsEmpty,
+                  className: h.friendsEmpty,
                   style: r,
                   children: (0, i.jsx)(c.ubH, {
                       theme: n,
@@ -152,15 +152,15 @@ class _ extends l.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            h(this, "state", { opacity: new a.Z.Value(1) }),
-            h(this, "componentWillEnter", (e) => {
+            f(this, "state", { opacity: new a.Z.Value(1) }),
+            f(this, "componentWillEnter", (e) => {
                 this.state.opacity.setValue(0),
                     a.Z.timing(this.state.opacity, {
                         toValue: 1,
                         duration: 250,
                     }).start(e);
             }),
-            h(this, "componentWillLeave", (e) => {
+            f(this, "componentWillLeave", (e) => {
                 a.Z.timing(this.state.opacity, {
                     toValue: 0,
                     duration: 250,
