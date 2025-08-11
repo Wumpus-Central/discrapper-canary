@@ -24,12 +24,18 @@ function _(e) {
 function p(e) {
     e = f(e);
     let t = !1;
-    return (u.forEach((n) => {
-        !t && e.startsWith(n) && ((e = e.substr(n.length)), (t = !0));
-    }),
-    t)
-        ? (e = e.includes(d) ? e.split("/").slice(-3).join("/") : e.split("/").slice(-2).join("/"))
-        : null;
+    if (
+        (u.forEach((n) => {
+            !t && e.startsWith(n) && ((e = e.substr(n.length)), (t = !0));
+        }),
+        !t)
+    )
+        return null;
+    if ((0, l.isMac)()) {
+        let t = e.lastIndexOf(".app/");
+        -1 !== t && (e = e.substr(0, t + 4));
+    }
+    return (e = e.includes(d) ? e.split("/").slice(-3).join("/") : e.split("/").slice(-2).join("/"));
 }
 async function h() {
     if (null != r) return r;
@@ -47,7 +53,7 @@ async function h() {
             _(e.PROGRAMDATA),
             _("/games/"),
             _("/steamlibrary/steamapps/common/");
-    }
+    } else (0, l.isMac)() && _("/Applications");
     let e = a.Z.remoteApp.getPath;
     return (
         _(await e("home")),

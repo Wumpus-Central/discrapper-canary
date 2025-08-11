@@ -1,6 +1,6 @@
 n.d(t, {
     Sz: () => O,
-    of: () => E,
+    of: () => j,
 }),
     n(539854),
     n(388685),
@@ -24,7 +24,7 @@ var i = n(255367),
     h = n(981631),
     g = n(388032),
     C = n(714421);
-async function j(e) {
+async function E(e) {
     let {
         premiumSubscription: t,
         pauseDuration: n,
@@ -53,7 +53,7 @@ async function j(e) {
         r(!0), a(!1);
     }
 }
-function E(e) {
+function j(e) {
     let { premiumType: t, onClose: n, pauseDuration: a, setPauseDuration: s, footer: l, premiumSubscription: c } = e,
         d = r.useCallback(
             (e) => {
@@ -134,33 +134,33 @@ function O(e) {
     let { premiumSubscription: t, premiumType: n, onClose: a, pauseDuration: o, analyticsLocation: d } = e,
         [m, b] = r.useState(!1),
         { analyticsLocations: x } = (0, _.ZP)(),
-        [E, O] = r.useState(!1),
+        [j, O] = r.useState(!1),
         P = (0, p.ZP)(),
-        v = null,
         N = null,
+        v = null,
         I = [h.O0b.PAST_DUE, h.O0b.PAUSED].includes(t.status) ? t.currentPeriodStart : t.currentPeriodEnd,
         T = s()(I).add(o, "days").toDate();
     switch (t.status) {
         case h.O0b.PAST_DUE:
-            N = g.intl.format(g.t["xaS18/"], {
+            v = g.intl.format(g.t["xaS18/"], {
                 pauseDuration: o,
                 resumeDate: T,
             });
             break;
         case h.O0b.PAUSED:
-            N = g.intl.format(g.t.Vur3FR, { resumeDate: T });
+            v = g.intl.format(g.t.Vur3FR, { resumeDate: T });
             break;
         default:
-            N = g.intl.format(g.t.W85vFB, {
+            v = g.intl.format(g.t.W85vFB, {
                 pauseDate: I,
                 resumeDate: T,
                 pauseDuration: o,
             });
     }
     return (
-        (v = (0, i.jsx)("div", {
+        (N = (0, i.jsx)("div", {
             className: C.body,
-            children: N,
+            children: v,
         })),
         (0, i.jsxs)(i.Fragment, {
             children: [
@@ -188,7 +188,7 @@ function O(e) {
                                   children: g.intl.string(g.t["5mlOCQ"]),
                               })
                             : null,
-                        v,
+                        N,
                     ],
                 }),
                 (0, i.jsx)(u.mzw, {
@@ -199,9 +199,9 @@ function O(e) {
                             (0, i.jsx)(u.zxk, {
                                 variant: "critical-primary",
                                 text: g.intl.string(g.t["cY+Ooa"]),
-                                disabled: E || null == o,
+                                disabled: j || null == o,
                                 onClick: async () => {
-                                    await j({
+                                    await E({
                                         premiumSubscription: t,
                                         pauseDuration: o,
                                         setIsCancelling: O,

@@ -1,7 +1,7 @@
 n.d(t, { Z: () => ee }), n(388685);
 var r = n(255367),
     l = n(73800),
-    i = n(126663),
+    i = n(717976),
     o = n(442837),
     a = n(481060),
     c = n(666520),
@@ -27,16 +27,16 @@ var r = n(255367),
     N = n(771362),
     E = n(510659),
     S = n(113557),
-    A = n(648052),
-    w = n(867176),
+    w = n(648052),
+    A = n(867176),
     C = n(280885),
     L = n(537006),
-    k = n(681837),
-    D = n(78806),
-    G = n(91433),
-    B = n(451834),
-    M = n(900927),
-    R = n(944043),
+    D = n(681837),
+    k = n(78806),
+    R = n(91433),
+    G = n(451834),
+    B = n(900927),
+    M = n(944043),
     U = n(502762),
     F = n(530),
     V = n(4517),
@@ -47,8 +47,8 @@ var r = n(255367),
     K = n(661462),
     J = n(768111),
     X = n(228168),
-    q = n(981631),
-    Q = n(388032),
+    Q = n(981631),
+    q = n(388032),
     $ = n(517603);
 function ee(e) {
     var t;
@@ -106,16 +106,16 @@ function ee(e) {
                       size: 1024,
                   }),
         eS = (0, p.p)({ location: "UserProfileModalV2" }),
-        eA = l.useMemo(() => (null != es ? es : (0, g.Z)()), [es]),
-        ew = (0, J.Z)({
+        ew = l.useMemo(() => (null != es ? es : (0, g.Z)()), [es]),
+        eA = (0, J.Z)({
             user: n,
             currentUser: ee,
         }),
         eC = (0, j.Y)({ userId: n.id }),
         eL = (0, b.vh)(n.id),
-        ek = (0, N.Z)(n.id),
-        eD = (0, m.Dt)(),
-        eG = Q.intl.format(Q.t.KRe1Fh, { name: eP });
+        eD = (0, N.Z)(n.id),
+        ek = (0, m.Dt)(),
+        eR = q.intl.format(q.t.KRe1Fh, { name: eP });
     return (
         l.useEffect(() => {
             let e = () => {
@@ -125,9 +125,9 @@ function ee(e) {
                     }, 1000);
             };
             return (
-                O.S.subscribe(q.CkL.SHAKE_PROFILE_MODAL, e),
+                O.S.subscribe(Q.CkL.SHAKE_PROFILE_MODAL, e),
                 () => {
-                    O.S.unsubscribe(q.CkL.SHAKE_PROFILE_MODAL, e);
+                    O.S.unsubscribe(Q.CkL.SHAKE_PROFILE_MODAL, e);
                 }
             );
         }, []),
@@ -149,7 +149,7 @@ function ee(e) {
                             hideShadow: !0,
                             className: $.root,
                             transitionState: ec,
-                            "aria-labelledby": eD,
+                            "aria-labelledby": ek,
                             parentComponent: "UserProfileModalV2",
                             children: [
                                 ep
@@ -157,34 +157,34 @@ function ee(e) {
                                           className: $.previewBar,
                                           children: [
                                               (0, r.jsxs)(a.X6q, {
-                                                  id: eD,
+                                                  id: ek,
                                                   variant: "heading-sm/normal",
                                                   color: "text-primary",
                                                   children: [
                                                       (0, r.jsx)(a.nn4, {
                                                           children: ""
-                                                              .concat(Q.intl.string(Q.t.apViam), ": ")
-                                                              .concat(eG),
+                                                              .concat(q.intl.string(q.t.apViam), ": ")
+                                                              .concat(eR),
                                                       }),
                                                       (0, r.jsx)("span", {
                                                           "aria-hidden": !0,
-                                                          children: Q.intl.string(Q.t.apViam),
+                                                          children: q.intl.string(q.t.apViam),
                                                       }),
                                                   ],
                                               }),
                                               (0, r.jsx)(a.zxk, {
                                                   size: "sm",
                                                   variant: "secondary",
-                                                  text: Q.intl.string(Q.t.ojM1xM),
+                                                  text: q.intl.string(q.t.ojM1xM),
                                                   onClick: eu,
-                                                  "aria-label": Q.intl.string(Q.t.cpT0Cg),
+                                                  "aria-label": q.intl.string(q.t.cpT0Cg),
                                               }),
                                           ],
                                       })
                                     : (0, r.jsx)(a.nn4, {
                                           children: (0, r.jsx)(a.H, {
-                                              id: eD,
-                                              children: eG,
+                                              id: ek,
+                                              children: eR,
                                           }),
                                       }),
                                 (0, r.jsx)(a.y5t, {
@@ -211,12 +211,12 @@ function ee(e) {
                                                     (0, r.jsxs)("div", {
                                                         className: $.profileHeader,
                                                         children: [
-                                                            (0, r.jsx)(w.Z, {
+                                                            (0, r.jsx)(A.Z, {
                                                                 user: n,
                                                                 displayProfile: eI,
                                                                 themeType: X.lY.MODAL_V2,
                                                             }),
-                                                            (0, r.jsx)(B.Z, {
+                                                            (0, r.jsx)(G.Z, {
                                                                 userId: n.id,
                                                                 onClose: eu,
                                                                 className: $.toast,
@@ -236,7 +236,7 @@ function ee(e) {
                                                                 channelId: en,
                                                                 themeType: X.lY.MODAL_V2,
                                                                 hasEntered: ec === a.Dvm.ENTERED,
-                                                                prompt: eS && n.id === ee.id ? eA : null,
+                                                                prompt: eS && n.id === ee.id ? ew : null,
                                                                 disableToolbar: ep,
                                                             }),
                                                         ],
@@ -253,22 +253,22 @@ function ee(e) {
                                                                     en,
                                                                     n,
                                                                 ),
-                                                                nicknameIcons: (0, r.jsx)(k.Z, {
+                                                                nicknameIcons: (0, r.jsx)(D.Z, {
                                                                     size: "sm",
                                                                     userId: n.id,
                                                                 }),
                                                                 nicknameVariant: "heading-xl/semibold",
                                                                 pronouns: null == eI ? void 0 : eI.pronouns,
-                                                                tags: (0, r.jsx)(A.Z, {
+                                                                tags: (0, r.jsx)(w.Z, {
                                                                     displayProfile: eI,
                                                                     themeType: X.lY.MODAL_V2,
                                                                     onClose: eu,
                                                                 }),
                                                             }),
-                                                            eZ === q.OGo.PENDING_INCOMING &&
+                                                            eZ === Q.OGo.PENDING_INCOMING &&
                                                                 (0, r.jsx)(U.Z.Overlay, {
                                                                     className: $.profileOverlay,
-                                                                    children: (0, r.jsx)(G.Z, {
+                                                                    children: (0, r.jsx)(R.Z, {
                                                                         user: n,
                                                                         applicationId: eT,
                                                                         guildId:
@@ -287,7 +287,7 @@ function ee(e) {
                                                                     U.Z.Overlay,
                                                                     {
                                                                         className: $.profileOverlay,
-                                                                        children: (0, r.jsx)(G.Z, {
+                                                                        children: (0, r.jsx)(R.Z, {
                                                                             user: n,
                                                                             guildId:
                                                                                 null !=
@@ -307,7 +307,7 @@ function ee(e) {
                                                                 (0, r.jsx)(U.Z.Overlay, {
                                                                     className: $.profileOverlay,
                                                                     children: (0, r.jsx)(z.Z, {
-                                                                        heading: Q.intl.string(Q.t.Iyka0d),
+                                                                        heading: q.intl.string(q.t.Iyka0d),
                                                                         headingVariant: "text-md/semibold",
                                                                         headingIcon: (0, r.jsx)(a.Mgn, {
                                                                             size: "xs",
@@ -325,7 +325,7 @@ function ee(e) {
                                                                     isPremiumUser: (0, I.I5)(ee),
                                                                     onInteraction: eu,
                                                                 }),
-                                                            (0, r.jsx)(R.Z, {
+                                                            (0, r.jsx)(M.Z, {
                                                                 user: n,
                                                                 className: $.profileBanner,
                                                             }),
@@ -350,12 +350,12 @@ function ee(e) {
                                                                 }),
                                                             eC.length > 0 &&
                                                                 (0, r.jsx)(z.Z, {
-                                                                    heading: Q.intl.string(Q.t["Uv/eT0"]),
-                                                                    children: (0, r.jsx)(D.Z, { applicationIds: eC }),
+                                                                    heading: q.intl.string(q.t["Uv/eT0"]),
+                                                                    children: (0, r.jsx)(k.Z, { applicationIds: eC }),
                                                                 }),
                                                             (0, r.jsx)(z.Z, {
-                                                                heading: Q.intl.string(Q.t.a6XYDw),
-                                                                children: (0, r.jsx)(M.Z, {
+                                                                heading: q.intl.string(q.t.a6XYDw),
+                                                                children: (0, r.jsx)(B.Z, {
                                                                     userId: n.id,
                                                                     guildId: null == eI ? void 0 : eI.guildId,
                                                                     tooltipDelay: X.vB,
@@ -371,18 +371,18 @@ function ee(e) {
                                                                     headingColor: "currentColor",
                                                                     scrollIntoView: ea === X.Tb.ROLES,
                                                                 }),
-                                                            ek.length > 0 &&
+                                                            eD.length > 0 &&
                                                                 (0, r.jsx)(z.Z, {
-                                                                    heading: Q.intl.string(Q.t["3fe7U1"]),
+                                                                    heading: q.intl.string(q.t["3fe7U1"]),
                                                                     scrollIntoView: ea === X.Tb.CONNECTIONS,
                                                                     children: (0, r.jsx)(W.Z, {
-                                                                        connections: ek,
+                                                                        connections: eD,
                                                                         userId: n.id,
                                                                         className: $.profileAppConnections,
                                                                     }),
                                                                 }),
                                                             (0, r.jsx)(z.Z, {
-                                                                heading: Q.intl.string(Q.t["mQKv+v"]),
+                                                                heading: q.intl.string(q.t["mQKv+v"]),
                                                                 scrollIntoView: ea === X.Tb.NOTE,
                                                                 children: (0, r.jsx)(c.Z, {
                                                                     userId: n.id,
@@ -453,7 +453,7 @@ function ee(e) {
                                                 displayProfile: eI,
                                                 guildId: et,
                                                 channelId: en,
-                                                items: ew,
+                                                items: eA,
                                                 initialSection: eo,
                                                 initialSubsection: ea,
                                                 onClose: eu,

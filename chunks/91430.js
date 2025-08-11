@@ -1,8 +1,8 @@
 n.d(t, {
-    MM: () => H,
-    Yn: () => Y,
-    ZP: () => K,
-    eS: () => W,
+    MM: () => q,
+    Yn: () => Q,
+    ZP: () => $,
+    eS: () => J,
 }),
     n(388685);
 var i = n(255367),
@@ -32,16 +32,21 @@ var i = n(255367),
     I = n(74538),
     N = n(212895),
     y = n(374649),
-    A = n(160913),
-    P = n(987997),
-    R = n(393411),
-    D = n(908951),
-    Z = n(592889),
-    w = n(981631),
-    k = n(362786),
-    L = n(388032),
-    M = n(772526);
-function B(e) {
+    A = n(140465),
+    P = n(160913),
+    R = n(331972),
+    D = n(757861),
+    Z = n(385251),
+    w = n(987997),
+    k = n(393411),
+    L = n(908951),
+    M = n(592889),
+    B = n(474936),
+    U = n(981631),
+    V = n(362786),
+    G = n(388032),
+    F = n(772526);
+function H(e) {
     let t,
         {
             subscription: n,
@@ -57,35 +62,35 @@ function B(e) {
     if (0 === (0, I.uV)(n.additionalPlans)) return null;
     let { status: m } = n,
         f = (0, I.v6)(n);
-    if (f) t = M.guildBoostingSubscriptionRowCanceled;
+    if (f) t = F.guildBoostingSubscriptionRowCanceled;
     else
         switch (m) {
-            case w.O0b.PAST_DUE:
-            case w.O0b.ACCOUNT_HOLD:
-            case w.O0b.BILLING_RETRY:
-                t = M.guildBoostingSubscriptionRowFailedPayment;
+            case U.O0b.PAST_DUE:
+            case U.O0b.ACCOUNT_HOLD:
+            case U.O0b.BILLING_RETRY:
+                t = F.guildBoostingSubscriptionRowFailedPayment;
                 break;
-            case w.O0b.PAUSE_PENDING:
-            case w.O0b.PAUSED:
+            case U.O0b.PAUSE_PENDING:
+            case U.O0b.PAUSED:
                 t =
-                    n.pauseReason !== k.Id.FRACTIONAL_PREMIUM
-                        ? M.guildBoostingSubscriptionRowPaused
-                        : M.guildBoostingSubscriptionRowActive;
+                    n.pauseReason !== V.Id.FRACTIONAL_PREMIUM
+                        ? F.guildBoostingSubscriptionRowPaused
+                        : F.guildBoostingSubscriptionRowActive;
                 break;
             default:
-                t = M.guildBoostingSubscriptionRowActive;
+                t = F.guildBoostingSubscriptionRowActive;
         }
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsxs)("div", {
                 className: a()(t, c),
                 children: [
-                    (0, i.jsx)("div", { className: M.guildBoostingSubscriptionRowBackground }),
-                    (0, i.jsx)("div", { className: M.guildBoostingImage }),
+                    (0, i.jsx)("div", { className: F.guildBoostingSubscriptionRowBackground }),
+                    (0, i.jsx)("div", { className: F.guildBoostingImage }),
                     (0, i.jsxs)("div", {
-                        className: M.guildBoostingSubscriptionRowBody,
+                        className: F.guildBoostingSubscriptionRowBody,
                         children: [
-                            (0, i.jsx)("div", { className: a()(M.guildBoostingWordmark, { [M.canceled]: f }) }),
+                            (0, i.jsx)("div", { className: a()(F.guildBoostingWordmark, { [F.canceled]: f }) }),
                             (0, i.jsx)("div", {
                                 children: (0, I.bt)({
                                     subscription: n,
@@ -97,91 +102,91 @@ function B(e) {
                         ],
                     }),
                     l &&
-                        (0, i.jsx)(P.Z, {
+                        (0, i.jsx)(w.Z, {
                             color: p.zx.Colors.BRAND,
-                            onClick: () => h.Z.open(w.oAB.GUILD_BOOSTING),
-                            children: L.intl.string(L.t["NQ5g/f"]),
+                            onClick: () => h.Z.open(U.oAB.GUILD_BOOSTING),
+                            children: G.intl.string(G.t["NQ5g/f"]),
                         }),
                 ],
             }),
             !l &&
                 (0, i.jsx)(g.Text, {
-                    className: M.boostingDesktopAppBlurb,
+                    className: F.boostingDesktopAppBlurb,
                     variant: "text-sm/normal",
-                    children: L.intl.format(L.t.k6haR0, { openAppHook: () => (0, x.Z)("app") }),
+                    children: G.intl.format(G.t.k6haR0, { openAppHook: () => (0, x.Z)("app") }),
                 }),
         ],
     });
 }
-function U() {
+function z() {
     return (
         r.useEffect(() => {
-            S.default.track(w.rMx.TOOLTIP_VIEWED, { type: "subscription_settings_missing_payment_method" });
+            S.default.track(U.rMx.TOOLTIP_VIEWED, { type: "subscription_settings_missing_payment_method" });
         }, []),
         (0, i.jsxs)("div", {
-            className: M.paymentBanner,
+            className: F.paymentBanner,
             children: [
                 (0, i.jsx)(g.Mgn, {
                     size: "custom",
                     width: 20,
                     height: 20,
-                    className: M.paymentBannerIcon,
+                    className: F.paymentBannerIcon,
                     color: m.Z.unsafe_rawColors.YELLOW_260.css,
                 }),
                 (0, i.jsx)(g.Text, {
-                    className: M.paymentBannerText,
+                    className: F.paymentBannerText,
                     variant: "text-sm/normal",
-                    children: L.intl.string(L.t.xFHEMT),
+                    children: G.intl.string(G.t.xFHEMT),
                 }),
             ],
         })
     );
 }
-function V() {
+function W() {
     return (
         r.useEffect(() => {
-            S.default.track(w.rMx.TOOLTIP_VIEWED, { type: "subscription_settings_invalid_payment_method" });
+            S.default.track(U.rMx.TOOLTIP_VIEWED, { type: "subscription_settings_invalid_payment_method" });
         }, []),
         (0, i.jsxs)("div", {
-            className: M.paymentBanner,
+            className: F.paymentBanner,
             children: [
                 (0, i.jsx)(g.Mgn, {
                     size: "custom",
                     width: 20,
                     height: 20,
-                    className: M.paymentBannerIcon,
+                    className: F.paymentBannerIcon,
                     color: m.Z.unsafe_rawColors.RED_360.css,
                 }),
                 (0, i.jsx)(g.Text, {
-                    className: M.paymentBannerText,
+                    className: F.paymentBannerText,
                     variant: "text-sm/normal",
-                    children: L.intl.string(L.t["j+nuQU"]),
+                    children: G.intl.string(G.t["j+nuQU"]),
                 }),
             ],
         })
     );
 }
-function G(e) {
+function Y(e) {
     let { daysPastDue: t, subscription: n, openInvoiceId: s } = e,
         { analyticsLocations: a } = (0, b.ZP)(f.Z.PAST_DUE_ONE_TIME_PAYMENT_METHOD_BANNER);
     return (
         r.useEffect(() => {
-            S.default.track(w.rMx.TOOLTIP_VIEWED, { type: "subscription_settings_invalid_payment_method" });
+            S.default.track(U.rMx.TOOLTIP_VIEWED, { type: "subscription_settings_invalid_payment_method" });
         }, []),
         (0, i.jsxs)("div", {
-            className: M.paymentBanner,
+            className: F.paymentBanner,
             children: [
                 (0, i.jsx)(g.Mgn, {
                     size: "custom",
                     width: 20,
                     height: 20,
-                    className: M.paymentBannerIcon,
+                    className: F.paymentBannerIcon,
                     color: m.Z.unsafe_rawColors.YELLOW_260.css,
                 }),
                 (0, i.jsx)(g.Text, {
-                    className: M.paymentBannerText,
+                    className: F.paymentBannerText,
                     variant: "text-sm/normal",
-                    children: L.intl.format(L.t["0nbf/P"], {
+                    children: G.intl.format(G.t["0nbf/P"], {
                         daysPastDue: t,
                         paymentModalRedirect: () => {
                             (0, C.Z)({
@@ -196,34 +201,34 @@ function G(e) {
         })
     );
 }
-function F(e) {
+function K(e) {
     let { subscription: t, renewalInvoicePreview: n, openInvoice: r, className: s, fractionalPremiumInfo: l } = e;
     return (0, i.jsxs)("div", {
-        className: a()(M.billingInformation, s),
+        className: a()(F.billingInformation, s),
         children: [
             (0, i.jsx)(g.vwX, {
                 tag: "h3",
-                className: M.detailBlockHeader,
-                children: L.intl.string(L.t.KXQjfX),
+                className: F.detailBlockHeader,
+                children: G.intl.string(G.t.KXQjfX),
             }),
             (0, i.jsx)("div", { children: I.ZP.getBillingInformationString(t, n, r, !1, l) }),
         ],
     });
 }
-function H() {
+function q() {
     return (0, i.jsxs)("div", {
         children: [
             (0, i.jsx)(g.vwX, {
-                className: M.sectionTitle,
+                className: F.sectionTitle,
                 tag: "h1",
-                children: L.intl.string(L.t["/gs+Pz"]),
+                children: G.intl.string(G.t["/gs+Pz"]),
             }),
             (0, i.jsx)("p", {
-                className: M.sectionDescription,
-                children: L.intl.string(L.t.D8UpUl),
+                className: F.sectionDescription,
+                children: G.intl.string(G.t.D8UpUl),
             }),
             (0, i.jsx)(g.Zbd, {
-                className: M.noItemsCard,
+                className: F.noItemsCard,
                 type: g.Zbd.Types.CUSTOM,
                 children: (0, i.jsxs)(j.Z, {
                     align: j.Z.Align.CENTER,
@@ -231,11 +236,11 @@ function H() {
                         (0, i.jsx)(E.Z, {
                             game: null,
                             size: E.Z.Sizes.SMALL,
-                            className: M.noItemsIcon,
+                            className: F.noItemsIcon,
                         }),
                         (0, i.jsx)("span", {
-                            className: M.cardText,
-                            children: L.intl.string(L.t.xCRgr6),
+                            className: F.cardText,
+                            children: G.intl.string(G.t.xCRgr6),
                         }),
                     ],
                 }),
@@ -243,7 +248,7 @@ function H() {
         ],
     });
 }
-function z(e) {
+function X(e) {
     let {
             subscription: t,
             analyticsLocation: n,
@@ -280,84 +285,102 @@ function z(e) {
                   },
         [E] = (0, y.ED)(j);
     E = null != u ? u : E;
-    let C = (0, _.Z)();
-    return null == x || null == E
-        ? (0, i.jsx)(g.$jN, {})
-        : (0, i.jsxs)(i.Fragment, {
-              children: [
-                  (0, i.jsxs)("div", {
-                      className: M.subscriptionRows,
-                      children: [
-                          (0, i.jsx)(R.Z, {
+    let C = (0, _.Z)(),
+        O = (0, R.$)(),
+        v = (0, A.lr)(),
+        S = I.ZP.isBaseSubscriptionCanceled(t),
+        T = (0, D.P)(t, r);
+    if (null == x || null == E) return (0, i.jsx)(g.$jN, {});
+    let P = T ? (0, A.Yi)(E) : null,
+        w = null != P || (null != v && (v.discountId === B.dT || v.discountId === B.dB)),
+        M = T && ((S && null != O) || (!S && w));
+    return (0, i.jsxs)(i.Fragment, {
+        children: [
+            (0, i.jsxs)("div", {
+                className: F.subscriptionRows,
+                children: [
+                    M
+                        ? (0, i.jsx)(Z.Z, {
+                              subscription: t,
+                              currentInvoicePreview: x,
+                              renewalInvoicePreview: E,
+                              paymentSource: r,
+                              discountOffer: O,
+                              renewalChurnDiscountInfo: P,
+                              discountInfo: v,
+                              isLoading: s,
+                              analyticsLocation: n,
+                          })
+                        : (0, i.jsx)(k.Z, {
                               subscription: t,
                               renewalInvoicePreview: x,
                               paymentSource: r,
                               busy: s,
                               analyticsLocation: n,
                           }),
-                          (0, i.jsx)(B, {
-                              subscription: t,
-                              renewalInvoicePreview: x,
-                              fromStandaloneBillingPage: l,
-                              className: M.guildSubscriptionRow,
-                              fractionalPremiumInfo: C,
-                          }),
-                      ],
-                  }),
-                  (0, i.jsx)("div", {
-                      children: (0, i.jsx)(g.y5t, {
-                          component: (0, i.jsx)(g.vwX, {
-                              tag: "h5",
-                              children: L.intl.string(L.t.Sb6wIy),
-                          }),
-                          children: (0, i.jsxs)("div", {
-                              className: M.details,
-                              children: [
-                                  (0, i.jsx)(F, {
-                                      subscription: t,
-                                      renewalInvoicePreview: E,
-                                      className: M.detailsBlock,
-                                      fractionalPremiumInfo: C,
-                                      openInvoice: m,
-                                  }),
-                                  (0, i.jsxs)("div", {
-                                      className: a()(M.detailsBlock, { [M.redBorder]: o }),
-                                      children: [
-                                          (0, i.jsx)(g.vwX, {
-                                              tag: "h3",
-                                              className: M.detailBlockHeader,
-                                              children:
-                                                  t.isPurchasedExternally && null != t.paymentGateway
-                                                      ? L.intl.formatToPlainString(L.t.rTk9v7, {
-                                                            paymentGatewayName: w.Vzj[t.paymentGateway],
-                                                        })
-                                                      : L.intl.string(L.t.iRzXKS),
-                                          }),
-                                          (0, i.jsx)(D.Z, {
-                                              subscription: t,
-                                              onPaymentSourceAdded: N.i1,
-                                              highlightAddPaymentMethodButton: c || o,
-                                              analyticsLocation: n,
-                                              currentInvoicePreview: x,
-                                              dropdownClassName: M.paymentDropdown,
-                                          }),
-                                      ],
-                                  }),
-                              ],
-                          }),
-                      }),
-                  }),
-              ],
-          });
+                    (0, i.jsx)(H, {
+                        subscription: t,
+                        renewalInvoicePreview: x,
+                        fromStandaloneBillingPage: l,
+                        className: F.guildSubscriptionRow,
+                        fractionalPremiumInfo: C,
+                    }),
+                ],
+            }),
+            (0, i.jsx)("div", {
+                children: (0, i.jsx)(g.y5t, {
+                    component: (0, i.jsx)(g.vwX, {
+                        tag: "h5",
+                        children: G.intl.string(G.t.Sb6wIy),
+                    }),
+                    children: (0, i.jsxs)("div", {
+                        className: F.details,
+                        children: [
+                            (0, i.jsx)(K, {
+                                subscription: t,
+                                renewalInvoicePreview: E,
+                                className: F.detailsBlock,
+                                fractionalPremiumInfo: C,
+                                openInvoice: m,
+                            }),
+                            (0, i.jsxs)("div", {
+                                className: a()(F.detailsBlock, { [F.redBorder]: o }),
+                                children: [
+                                    (0, i.jsx)(g.vwX, {
+                                        tag: "h3",
+                                        className: F.detailBlockHeader,
+                                        children:
+                                            t.isPurchasedExternally && null != t.paymentGateway
+                                                ? G.intl.formatToPlainString(G.t.rTk9v7, {
+                                                      paymentGatewayName: U.Vzj[t.paymentGateway],
+                                                  })
+                                                : G.intl.string(G.t.iRzXKS),
+                                    }),
+                                    (0, i.jsx)(L.Z, {
+                                        subscription: t,
+                                        onPaymentSourceAdded: N.i1,
+                                        highlightAddPaymentMethodButton: c || o,
+                                        analyticsLocation: n,
+                                        currentInvoicePreview: x,
+                                        dropdownClassName: F.paymentDropdown,
+                                    }),
+                                ],
+                            }),
+                        ],
+                    }),
+                }),
+            }),
+        ],
+    });
 }
-let W = new Set([w.O0b.ACTIVE, w.O0b.PAST_DUE, w.O0b.CANCELED, w.O0b.PAUSE_PENDING, w.O0b.PAUSED]);
-function Y() {
+let J = new Set([U.O0b.ACTIVE, U.O0b.PAST_DUE, U.O0b.CANCELED, U.O0b.PAUSE_PENDING, U.O0b.PAUSED]);
+function Q() {
     return (
         r.useEffect(() => {
-            S.default.track(w.rMx.TOOLTIP_VIEWED, { type: "subscription_settings_duplicate_subscriptions" });
+            S.default.track(U.rMx.TOOLTIP_VIEWED, { type: "subscription_settings_duplicate_subscriptions" });
         }, []),
         (0, i.jsxs)("div", {
-            className: M.duplicateSubscriptionsBanner,
+            className: F.duplicateSubscriptionsBanner,
             children: [
                 (0, i.jsx)(g.Mgn, {
                     size: "custom",
@@ -366,15 +389,15 @@ function Y() {
                     color: m.Z.unsafe_rawColors.RED_360.css,
                 }),
                 (0, i.jsx)(g.Text, {
-                    className: M.duplicateSubscriptionsBannerText,
+                    className: F.duplicateSubscriptionsBannerText,
                     variant: "text-sm/normal",
-                    children: L.intl.format(L.t["6eXiiI"], { helpCenterLink: T.Z.getArticleURL(w.BhN.NITRO) }),
+                    children: G.intl.format(G.t["6eXiiI"], { helpCenterLink: T.Z.getArticleURL(U.BhN.NITRO) }),
                 }),
             ],
         })
     );
 }
-function K(e) {
+function $(e) {
     var t;
     let n,
         {
@@ -412,58 +435,58 @@ function K(e) {
         T =
             !C &&
             S > 0 &&
-            (7 >= E.diff(d()(), "days") || r.status === w.O0b.PAST_DUE) &&
+            (7 >= E.diff(d()(), "days") || r.status === U.O0b.PAST_DUE) &&
             !j &&
             !r.isPurchasedExternally,
-        I = _ && r.status === w.O0b.PAST_DUE && !j && !r.isPurchasedExternally,
-        N = (0, A.U)(),
-        P = !j && N,
-        R = (null == r ? void 0 : r.status) === w.O0b.PAST_DUE,
+        I = _ && r.status === U.O0b.PAST_DUE && !j && !r.isPurchasedExternally,
+        N = (0, P.U)(),
+        A = !j && N,
+        R = (null == r ? void 0 : r.status) === U.O0b.PAST_DUE,
         D = R ? d()().diff(d()(r.currentPeriodStart), "days") : 0,
-        [k] = (0, y.Ox)({
+        [Z] = (0, y.Ox)({
             subscriptionId: r.id,
-            preventFetch: !(P || R),
+            preventFetch: !(A || R),
         });
     return null == h || null == x
         ? (0, i.jsx)(g.$jN, {})
         : (null != r.renewalMutations &&
               ((r.renewalMutations.planId !== r.planId && !(0, O.Q0)(r.renewalMutations.planId)) ||
                   r.hasExternalPlanChange) &&
-              (n = (0, i.jsx)(Z.Z, {
+              (n = (0, i.jsx)(M.Z, {
                   subscription: r,
                   renewalMutations: r.renewalMutations,
-                  className: M.renewalMutationNotice,
+                  className: F.renewalMutationNotice,
                   analyticsLocation: c,
               })),
           (0, i.jsx)("div", {
               children: (0, i.jsxs)(g.y5t, {
                   component: (0, i.jsx)(g.vwX, {
-                      className: M.sectionTitle,
+                      className: F.sectionTitle,
                       tag: "h1",
-                      children: L.intl.string(L.t["/gs+Pz"]),
+                      children: G.intl.string(G.t["/gs+Pz"]),
                   }),
                   children: [
-                      T ? (0, i.jsx)(U, {}) : null,
-                      I ? (0, i.jsx)(V, {}) : null,
-                      P && null != k
-                          ? (0, i.jsx)(G, {
+                      T ? (0, i.jsx)(z, {}) : null,
+                      I ? (0, i.jsx)(W, {}) : null,
+                      A && null != Z
+                          ? (0, i.jsx)(Y, {
                                 daysPastDue: D,
                                 subscription: r,
-                                openInvoiceId: k.id,
+                                openInvoiceId: Z.id,
                             })
                           : null,
                       n,
                       (0, i.jsx)("div", {
                           children: (0, i.jsx)("p", {
-                              className: M.sectionDescription,
-                              children: L.intl.string(L.t.D8UpUl),
+                              className: F.sectionDescription,
+                              children: G.intl.string(G.t.D8UpUl),
                           }),
                       }),
                       (0, i.jsxs)("div", {
                           children: [
                               (0, i.jsx)("div", {
-                                  className: p.length > 0 ? M.dupSubscriptionRow : M.__invalid_singleSubscription,
-                                  children: (0, i.jsx)(z, {
+                                  className: p.length > 0 ? F.dupSubscriptionRow : F.__invalid_singleSubscription,
+                                  children: (0, i.jsx)(X, {
                                       subscription: r,
                                       analyticsLocation: c,
                                       paymentSource: a,
@@ -473,21 +496,21 @@ function K(e) {
                                       showInvalidPaymentMethod: I,
                                       fetchedCurrentInvoicePreview: h,
                                       fetchedRenewalInvoicePreview: x,
-                                      fetchedOpenInvoice: k,
+                                      fetchedOpenInvoice: Z,
                                   }),
                               }),
                               p.map((e, t) =>
                                   (0, i.jsxs)(
                                       "div",
                                       {
-                                          className: M.dupSubscriptionRow,
+                                          className: F.dupSubscriptionRow,
                                           children: [
                                               (0, i.jsx)(g.vwX, {
                                                   tag: "h2",
-                                                  className: M.duplicateHeader,
+                                                  className: F.duplicateHeader,
                                                   children: "Duplicate Subscriptions",
                                               }),
-                                              (0, i.jsx)(z, {
+                                              (0, i.jsx)(X, {
                                                   subscription: e,
                                                   analyticsLocation: c,
                                                   paymentSource: a,

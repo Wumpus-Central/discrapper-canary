@@ -407,7 +407,7 @@ function en(e) {
                   }))
                     ? t
                     : M
-                : null != p.webhookId && null != p.author.avatar
+                : null != p.webhookId
                   ? P.ZP.getUserAvatarURL(
                         {
                             avatar: p.author.avatar,

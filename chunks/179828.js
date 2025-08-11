@@ -181,7 +181,7 @@ function N(e) {
             },
             [_, i, t.id, a],
         ),
-        A = l.useCallback(
+        w = l.useCallback(
             (e) => {
                 a({ action: "ADD_ROLE" });
                 let n = null != _ ? _ : [];
@@ -190,8 +190,8 @@ function N(e) {
             [_, i, t.id, a],
         );
     if (null == h) return null;
-    let w = E && null != y;
-    return 0 !== N.length || w
+    let A = E && null != y;
+    return 0 !== N.length || A
         ? (0, r.jsx)(
               x.Z,
               P(I({ heading: O.intl.string(O.t.LPJmLy) }, o), {
@@ -203,7 +203,7 @@ function N(e) {
                       roles: N,
                       highestRole: g.e9(h, n.id),
                       canManageRoles: E,
-                      onAddRole: A,
+                      onAddRole: w,
                       onRemoveRole: S,
                   }),
               }),

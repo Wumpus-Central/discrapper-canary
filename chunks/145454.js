@@ -14,7 +14,7 @@ var s = n(255367),
     R = n(282287),
     m = n(893354),
     I = n(20493);
-function f(e, t, n) {
+function C(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -27,7 +27,7 @@ function f(e, t, n) {
         e
     );
 }
-class C extends i.PureComponent {
+class f extends i.PureComponent {
     async componentDidMount() {
         let [e, { default: t }] = await Promise.all([
             n.e("93198").then(n.t.bind(n, 140523, 19)),
@@ -49,7 +49,7 @@ class C extends i.PureComponent {
         let e,
             t,
             n,
-            { error: i, working: r, transitionState: o, validPhone: f } = this.props;
+            { error: i, working: r, transitionState: o, validPhone: C } = this.props;
         return (
             (e =
                 null != i && "" !== i
@@ -57,7 +57,7 @@ class C extends i.PureComponent {
                           className: l()(R.description, R.error, I.marginBottom20),
                           children: i,
                       })
-                    : f
+                    : C
                       ? (0, s.jsx)("div", {
                             className: l()(R.description, I.marginBottom20),
                             children: p.intl.string(p.t["4qMI6O"]),
@@ -74,7 +74,7 @@ class C extends i.PureComponent {
                                 }),
                             ],
                         })),
-            (t = f
+            (t = C
                 ? (0, s.jsxs)(u.Z, {
                       className: R.field,
                       direction: u.Z.Direction.VERTICAL,
@@ -96,7 +96,7 @@ class C extends i.PureComponent {
                       onSubmit: this.handleAddPhone,
                       submitting: r,
                   })),
-            (n = f ? p.intl.string(p.t.Xclkxs) : p.intl.string(p.t.uR76s7)),
+            (n = C ? p.intl.string(p.t.Xclkxs) : p.intl.string(p.t.uR76s7)),
             (0, s.jsxs)(h.Y0X, {
                 impression: { impressionName: a.ImpressionNames.USER_VERIFY_PHONE },
                 transitionState: o,
@@ -121,13 +121,13 @@ class C extends i.PureComponent {
     }
     constructor(e) {
         super(e),
-            f(this, "_animItem", null),
-            f(this, "_lottieRef", void 0),
-            f(this, "headerId", (0, o.Z)()),
-            f(this, "setLottieRef", (e) => {
+            C(this, "_animItem", null),
+            C(this, "_lottieRef", void 0),
+            C(this, "headerId", (0, o.Z)()),
+            C(this, "setLottieRef", (e) => {
                 this._lottieRef = e;
             }),
-            f(this, "handleAddPhone", (e) => {
+            C(this, "handleAddPhone", (e) => {
                 this.state.animated || null == this._animItem
                     ? this.setState({ phone: e })
                     : (this._animItem.play(),
@@ -138,11 +138,11 @@ class C extends i.PureComponent {
                 let { onAddPhone: t } = this.props;
                 null == t || t(e);
             }),
-            f(this, "handleVerifyPhone", (e) => {
+            C(this, "handleVerifyPhone", (e) => {
                 let { onVerifyPhone: t } = this.props;
                 null == t || t(e);
             }),
-            f(this, "handleResendCode", () => {
+            C(this, "handleResendCode", () => {
                 let { onAddPhone: e } = this.props;
                 null == e || e(this.state.phone);
             }),
@@ -152,4 +152,4 @@ class C extends i.PureComponent {
             });
     }
 }
-let g = C;
+let g = f;

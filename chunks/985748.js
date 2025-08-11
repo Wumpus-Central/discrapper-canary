@@ -30,7 +30,7 @@ function a(e) {
     let d = n.games.length >= l.k.current_games;
     return (0, r.jsx)(i.Z, {
         userId: t.id,
-        widgetType: n.type,
+        widget: n,
         reachedMaxGamesLimit: d,
         showHeaderActionButtons: c,
         children: (0, r.jsx)(

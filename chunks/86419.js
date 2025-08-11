@@ -1,9 +1,10 @@
 n.d(t, {
-    ES: () => I,
-    X6: () => S,
-    qH: () => v,
-    tk: () => A,
-    vH: () => T,
+    ES: () => S,
+    X6: () => N,
+    qH: () => I,
+    tk: () => C,
+    vH: () => A,
+    y8: () => T,
 }),
     n(388685),
     n(642613),
@@ -104,55 +105,60 @@ function O(e, t) {
     let n = e.filter((e) => e.type !== t.type);
     return b([t, ...n]);
 }
-function v(e) {
-    var t, n;
-    let u, d;
-    if (l.Z.hasPendingChanges()) u = null != (t = l.Z.getPendingWidgets()) ? t : [];
+function v() {
+    var e, t;
+    let n;
+    if (l.Z.hasPendingChanges()) n = null != (e = l.Z.getPendingWidgets()) ? e : [];
     else {
         let e = o.default.getCurrentUser(),
-            t = null != e ? a.Z.getUserProfile(e.id) : null;
-        u = null != (n = null == t ? void 0 : t.widgets) ? n : [];
+            r = null != e ? a.Z.getUserProfile(e.id) : null;
+        n = null != (t = null == r ? void 0 : r.widgets) ? t : [];
     }
-    let f = u.find((t) => t.type === e);
-    if (null != f)
-        if (e === r.l.FAVORITE_GAMES) d = E(e);
-        else {
-            let t = f.games || [];
-            if (t.length >= c.Xe[e]) return;
-            d = [...t, E(e)];
-        }
-    else d = e === r.l.FAVORITE_GAMES ? E(e) : [E(e)];
-    let _ = O(u, y(e, d));
-    s.Z.setPendingWidgets(_);
-    let p = [];
-    e === r.l.FAVORITE_GAMES
-        ? p.push(d.applicationId)
-        : d.forEach((e) => {
-              p.push(e.applicationId);
-          }),
-        i.Z.getDetectableGamesSupplemental(p);
+    return n;
 }
-function I(e, t) {
-    var n, u, d;
-    let f, _;
-    if (l.Z.hasPendingChanges()) f = null != (n = l.Z.getPendingWidgets()) ? n : [];
-    else {
-        let e = o.default.getCurrentUser(),
-            t = null != e ? a.Z.getUserProfile(e.id) : null;
-        f = null != (u = null == t ? void 0 : t.widgets) ? u : [];
-    }
-    let p = f.find((t) => t.type === e),
-        h = c.Xe[e];
-    if (null != p) {
-        if (e === r.l.FAVORITE_GAMES);
-        else if (((null == (d = p.games) ? void 0 : d.length) || 0) >= h) return;
-    }
-    let m = { applicationId: t };
-    _ = null != p ? (e === r.l.FAVORITE_GAMES ? m : [...(p.games || []), m]) : e === r.l.FAVORITE_GAMES ? m : [m];
-    let g = O(f, y(e, _));
-    s.Z.setPendingWidgets(g), i.Z.getDetectableGamesSupplemental([t]);
+function I(e) {
+    let t,
+        n = v(),
+        o = n.find((t) => t.type === e);
+    if (null != o)
+        if (e === r.l.FAVORITE_GAMES) t = E(e);
+        else {
+            let n = o.games || [];
+            if (n.length >= c.Xe[e]) return;
+            t = [...n, E(e)];
+        }
+    else t = e === r.l.FAVORITE_GAMES ? E(e) : [E(e)];
+    let a = O(n, y(e, t));
+    s.Z.setPendingWidgets(a);
+    let l = [];
+    e === r.l.FAVORITE_GAMES
+        ? l.push(t.applicationId)
+        : t.forEach((e) => {
+              l.push(e.applicationId);
+          }),
+        i.Z.getDetectableGamesSupplemental(l);
 }
 function T(e) {
+    let t = v().filter((t) => t.type !== e);
+    s.Z.setPendingWidgets(t);
+}
+function S(e, t) {
+    let n,
+        o = v(),
+        a = o.find((t) => t.type === e),
+        l = c.Xe[e];
+    if (null != a)
+        if (e === r.l.FAVORITE_GAMES);
+        else {
+            var u;
+            if (((null == (u = a.games) ? void 0 : u.length) || 0) >= l) return;
+        }
+    let d = { applicationId: t };
+    n = null != a ? (e === r.l.FAVORITE_GAMES ? d : [...(a.games || []), d]) : e === r.l.FAVORITE_GAMES ? d : [d];
+    let f = O(o, y(e, n));
+    s.Z.setPendingWidgets(f), i.Z.getDetectableGamesSupplemental([t]);
+}
+function A(e) {
     let t,
         n = (e) => ({
             game_id: e.applicationId,
@@ -169,7 +175,7 @@ function T(e) {
         }
     );
 }
-async function S() {
+async function N() {
     let e = l.Z.getPendingWidgets();
     if (null !== e)
         try {
@@ -178,7 +184,7 @@ async function S() {
             console.error("Failed to save sample widgets:", e);
         }
 }
-async function A() {
+async function C() {
     try {
         await s.Z.savePendingWidgets([]);
     } catch (e) {

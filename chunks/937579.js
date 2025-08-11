@@ -1,6 +1,8 @@
 n.d(t, {
+    Qe: () => _,
     Tf: () => f,
-    ab: () => _,
+    ab: () => h,
+    ev: () => p,
 });
 var r = n(544891),
     i = n(704215),
@@ -51,7 +53,54 @@ async function f(e) {
         }
     }
 }
-function _(e, t) {
+async function _() {
+    o.Z.dispatch({ type: "BILLING_USER_OFFER_FETCH_START" });
+    try {
+        var e;
+        let t =
+            null !=
+            (e = (
+                await r.tn.get({
+                    url: u.ANM.CHURN_USER_OFFER,
+                    rejectWithError: !0,
+                })
+            ).body.offer)
+                ? e
+                : null;
+        return (
+            o.Z.dispatch({
+                type: "BILLING_USER_OFFER_FETCH_SUCCESS",
+                userDiscountOffer: t,
+            }),
+            { userDiscountOffer: t }
+        );
+    } catch (e) {
+        o.Z.dispatch({ type: "BILLING_USER_OFFER_FETCH_FAIL" });
+    }
+}
+async function p() {
+    let e = null;
+    try {
+        var t;
+        (e =
+            null !=
+            (t = (
+                await r.tn.post({
+                    url: u.ANM.CHURN_USER_OFFER,
+                    rejectWithError: !0,
+                })
+            ).body.offer)
+                ? t
+                : null),
+            null != e &&
+                o.Z.dispatch({
+                    type: "BILLING_USER_OFFER_FETCH_SUCCESS",
+                    userDiscountOffer: e,
+                });
+    } catch (e) {}
+    return e;
+}
+function h(e, t) {
     let n = null != e && null == e.expires_at ? e.id : void 0,
         i = null != t && null == t.expires_at ? t.id : void 0;
     if (void 0 !== n || void 0 !== i)

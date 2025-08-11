@@ -1,8 +1,8 @@
 n.d(t, {
-    CJ: () => U,
-    Ee: () => j,
-    Il: () => k,
-    h4: () => G,
+    CJ: () => j,
+    Ee: () => k,
+    Il: () => M,
+    h4: () => U,
 }),
     n(388685),
     n(997841);
@@ -141,7 +141,7 @@ let C = (e) => {
     };
 function w(e, t) {
     var n, r;
-    let o = i.useContext(M),
+    let o = i.useContext(x),
         a = i.useCallback(
             (t) => {
                 var n;
@@ -206,32 +206,35 @@ function D(e, t, n, r) {
     };
 }
 function L(e, t, n) {
-    l.Z.dispatch({
-        type: "SET_INTERACTION_COMPONENT_STATE",
-        rootContainerId: e,
-        componentId: t,
-        state: n,
-    });
-}
-function x(e, t, n) {
     let r = (0, s.e7)([v.Z], () => v.Z.getInteractionComponentState(e.customId, t.id)),
         { error: o, validate: a } = w(t, r),
-        l = i.useCallback((n) => null == n || (L(e.customId, t.id, n), !!a(n)), [e.customId, t.id, a]);
+        c = i.useCallback(
+            (n) =>
+                null == n ||
+                (l.Z.dispatch({
+                    type: "SET_INTERACTION_COMPONENT_STATE",
+                    rootContainerId: e.customId,
+                    componentId: t.id,
+                    state: n,
+                }),
+                !!a(n)),
+            [e.customId, t.id, a],
+        );
     return (
         (0, u.ZP)(() => {
-            l(n);
+            c(n);
         }),
         {
             state: r,
-            executeStateUpdate: l,
+            executeStateUpdate: c,
             isDisabled: !1,
             visualState: O.gH.NORMAL,
             error: o,
         }
     );
 }
-let M = i.createContext(null);
-function k(e) {
+let x = i.createContext(null);
+function M(e) {
     let {
             children: t,
             message: n,
@@ -252,7 +255,7 @@ function k(e) {
                       }
                     : (a()(null != o, "modal is present if message is not"),
                       {
-                          useComponentState: x.bind(null, o),
+                          useComponentState: L.bind(null, o),
                           channelId: o.channelId,
                           modal: o,
                           validators: s,
@@ -261,18 +264,18 @@ function k(e) {
                       }),
             [n, o, s, l, c, u],
         );
-    return (0, r.jsx)(M.Provider, {
+    return (0, r.jsx)(x.Provider, {
         value: d,
         children: t,
     });
 }
-function j(e, t) {
-    return i.useContext(M).useComponentState(e, t);
+function k(e, t) {
+    return i.useContext(x).useComponentState(e, t);
 }
-function U() {
-    return i.useContext(M);
+function j() {
+    return i.useContext(x);
 }
-function G(e) {
+function U(e) {
     var t, n;
-    return null != (n = null == (t = i.useContext(M).validationErrors) ? void 0 : t[e.id]) ? n : null;
+    return null != (n = null == (t = i.useContext(x).validationErrors) ? void 0 : t[e.id]) ? n : null;
 }

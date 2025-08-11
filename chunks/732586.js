@@ -83,8 +83,9 @@ function _(e) {
         ? (0, r.jsx)(a.xJW, {
               title: _,
               required: g,
-              className: u.formItem,
               error: I,
+              className: u.formItem,
+              titleClassName: u.title,
               children: t,
           })
         : t;

@@ -74,6 +74,7 @@ var r = (function (e) {
         (e.EMPTY_STATE = "empty state"),
         (e.SUBSCRIPTION_DETAILS = "subscription details"),
         (e.SUBSCRIPTION_HEADER = "subscription header"),
+        (e.CHURN_DISCOUNT_SUBSCRIPTION_HEADER = "churn discount subscription header"),
         (e.ACCOUNT_CREDIT_BANNER = "account credit banner"),
         (e.PREMIUM_UNCANCEL_MODAL = "premium uncancel modal"),
         (e.PAST_DUE_ONE_TIME_PAYMENT_METHOD_BANNER = "past due one time payment method banner"),

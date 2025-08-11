@@ -1,39 +1,51 @@
-n.d(t, { Z: () => _ });
-var r = n(442837),
-    i = n(570140);
-let o = null,
-    a = !1;
-function s(e) {
+n.d(t, { Z: () => E });
+var r = n(392711),
+    i = n.n(r),
+    o = n(442837),
+    a = n(570140),
+    s = n(594174),
+    l = n(621853);
+let c = null,
+    u = null,
+    d = !1;
+function f(e) {
     let { widgets: t } = e;
-    o = t;
+    if (((c = t), null === u)) {
+        let e = s.default.getCurrentUser();
+        if (null != e) {
+            var n;
+            let t = l.Z.getUserProfile(e.id);
+            u = null != (n = null == t ? void 0 : t.widgets) ? n : [];
+        }
+    }
 }
-function l() {
-    o = null;
+function _() {
+    (c = null), (u = null);
 }
-function c(e) {
-    a = !0;
+function p(e) {
+    d = !0;
 }
-function u(e) {
-    (a = !1), null !== o && (o = null);
+function h(e) {
+    (d = !1), null !== c && ((u = c), (c = null));
 }
-function d(e) {
-    a = !1;
+function m(e) {
+    d = !1;
 }
-class f extends r.ZP.Store {
+class g extends o.ZP.Store {
     getPendingWidgets() {
-        return o;
+        return c;
     }
     hasPendingChanges() {
-        return null !== o;
+        return null !== c && (null === u || !i().isEqual(c, u));
     }
     get isSubmitting() {
-        return a;
+        return d;
     }
 }
-let _ = new f(i.Z, {
-    WIDGET_PENDING_SET: s,
-    WIDGET_PENDING_SAVE_START: c,
-    WIDGET_PENDING_SAVE_SUCCESS: u,
-    WIDGET_PENDING_SAVE_FAILURE: d,
-    WIDGET_PENDING_CLEAR: l,
+let E = new g(a.Z, {
+    WIDGET_PENDING_SET: f,
+    WIDGET_PENDING_SAVE_START: p,
+    WIDGET_PENDING_SAVE_SUCCESS: h,
+    WIDGET_PENDING_SAVE_FAILURE: m,
+    WIDGET_PENDING_CLEAR: _,
 });

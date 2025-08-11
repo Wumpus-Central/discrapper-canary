@@ -27,8 +27,8 @@ function I(e) {
         N = (0, l.e7)([d.Z], () => d.Z.getGuildId()),
         E = (0, a.Y)({ userId: t.id }),
         S = (0, l.e7)([u.Z], () => u.Z.hidePersonalInformation),
-        A = (0, l.e7)([s.default], () => s.default.locale),
-        w = (0, p.Z)(t.id),
+        w = (0, l.e7)([s.default], () => s.default.locale),
+        A = (0, p.Z)(t.id),
         C = (0, m.Z)(t.id);
     return (0, r.jsxs)(i.zJl, {
         fade: !0,
@@ -71,15 +71,15 @@ function I(e) {
                     tooltipDelay: v.vB,
                 }),
             }),
-            w.length > 0 &&
+            A.length > 0 &&
                 (0, r.jsx)(x.Z, {
                     heading: O.intl.string(O.t["3fe7U1"]),
                     scrollIntoView: P === v.Tb.CONNECTIONS,
                     children: (0, r.jsx)(b.ZP, {
-                        connectedAccounts: w,
+                        connectedAccounts: A,
                         className: _.connections,
                         userId: t.id,
-                        locale: A,
+                        locale: w,
                     }),
                 }),
             C.length > 0 &&
@@ -91,7 +91,7 @@ function I(e) {
                             {
                                 className: _.appsConnections,
                                 applicationRoleConnection: e,
-                                locale: A,
+                                locale: w,
                                 onApplicationClicked: () => {
                                     T({ action: "PRESS_APP_CONNECTION" }), Z();
                                 },

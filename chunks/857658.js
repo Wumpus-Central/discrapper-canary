@@ -228,7 +228,7 @@ function x(e) {
                         children: [
                             null != c &&
                                 (0, r.jsx)(p.ua7, {
-                                    text: y.intl.string(b.default["8QXO8v"]),
+                                    text: y.intl.string(b.default["NCFz+P"]),
                                     tooltipClassName: O.eyeDropperTooltip,
                                     children: (e) =>
                                         (0, r.jsx)(
@@ -244,14 +244,14 @@ function x(e) {
                                                 {
                                                     onClick: j,
                                                     icon: d.i,
-                                                    "aria-label": y.intl.string(b.default["8QXO8v"]),
+                                                    "aria-label": y.intl.string(b.default["NCFz+P"]),
                                                 },
                                             ),
                                         ),
                                 }),
                             Z &&
                                 (0, r.jsx)(p.ua7, {
-                                    text: y.intl.string(b.default["rTik5+"]),
+                                    text: y.intl.string(y.t.N86XcH),
                                     children: (e) =>
                                         (0, r.jsx)(
                                             _.h,
@@ -260,7 +260,7 @@ function x(e) {
                                                 size: "sm",
                                                 onClick: () => G(v),
                                                 icon: p.V_R,
-                                                "aria-label": y.intl.string(b.default["rTik5+"]),
+                                                "aria-label": y.intl.string(y.t.N86XcH),
                                             }),
                                         ),
                                 }),

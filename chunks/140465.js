@@ -1,8 +1,9 @@
 n.d(t, {
     B4: () => O,
     Nx: () => h,
-    UV: () => y,
-    WR: () => b,
+    UV: () => b,
+    WR: () => E,
+    Yi: () => y,
     lr: () => g,
     t7: () => m,
 }),
@@ -11,18 +12,18 @@ var r = n(73800),
     i = n(913527),
     o = n.n(i),
     a = n(442837),
-    s = n(544891),
+    s = n(911969),
     l = n(78839),
     c = n(775412),
     u = n(695349),
-    d = n(104494),
-    f = n(639119),
-    _ = n(474936),
-    p = n(981631);
+    d = n(937579),
+    f = n(104494),
+    _ = n(639119),
+    p = n(474936);
 function h() {
-    let e = (0, f.N)(),
+    let e = (0, _.N)(),
         t = (0, c._O)(),
-        n = (0, d.Ng)(),
+        n = (0, f.Ng)(),
         r = m();
     return null != e || t || null != n || r;
 }
@@ -34,58 +35,47 @@ let m = () => {
     },
     g = () => {
         var e;
-        let t = (0, a.e7)([l.Z], () => l.Z.getPremiumTypeSubscription());
-        switch (null == t || null == (e = t.metadata) ? void 0 : e.active_discount_id) {
-            case _.dT:
-            case _.rB:
+        let t = (0, a.e7)([l.Z], () => l.Z.getPremiumTypeSubscription()),
+            n = null == t || null == (e = t.metadata) ? void 0 : e.active_discount_id;
+        switch (n) {
+            case p.dT:
+            case p.rB:
                 return {
                     duration: 1,
                     percentage: 30,
+                    discountId: n,
                 };
-            case _.dB:
-            case _.hs:
-            case _.RU:
+            case p.dB:
+            case p.hs:
+            case p.RU:
                 return {
                     duration: 3,
                     percentage: 30,
+                    discountId: n,
                 };
-            case _.ih:
+            case p.ih:
                 return {
                     duration: 1,
                     percentage: 40,
+                    discountId: n,
                 };
-            case _.gW:
+            case p.gW:
                 return {
                     duration: 1,
                     percentage: 20,
+                    discountId: n,
                 };
-            case _.Nl:
+            case p.Nl:
                 return {
                     duration: 1,
                     percentage: 25,
+                    discountId: n,
                 };
             default:
                 return;
         }
     },
-    E = async () => {
-        let e = null;
-        try {
-            var t;
-            e =
-                null !=
-                (t = (
-                    await s.tn.post({
-                        url: p.ANM.CHURN_USER_OFFER,
-                        rejectWithError: !0,
-                    })
-                ).body.offer)
-                    ? t
-                    : null;
-        } catch (e) {}
-        return e;
-    },
-    b = (e) => {
+    E = (e) => {
         let [t, n] = r.useState(!1),
             [i, o] = r.useState(!1),
             [a, s] = r.useState(null);
@@ -101,7 +91,7 @@ let m = () => {
             i ||
                 t ||
                 (o(!0),
-                E()
+                (0, d.ev)()
                     .then((e) => {
                         s(e), l();
                     })
@@ -114,11 +104,32 @@ let m = () => {
             }
         );
     },
-    y = () => {
+    b = () => {
         let e = (0, a.e7)([l.Z], () => l.Z.getPremiumTypeSubscription()),
             t = m(),
             n = null !== e && e.hasPremiumNitroMonthly,
             r = !!(null == e ? void 0 : e.hasActiveTrial);
         return n && !r && !t;
+    },
+    y = (e) => {
+        for (let t of e.invoiceItems) {
+            let e = t.discounts.find((e) => e.type === s.eW.SUBSCRIPTION_PLAN);
+            if (null != e)
+                switch (e.discount_id) {
+                    case p.dT:
+                        return {
+                            duration: 1,
+                            percentage: e.percentage_amount,
+                            discountId: e.discount_id,
+                        };
+                    case p.dB:
+                        return {
+                            duration: 3,
+                            percentage: e.percentage_amount,
+                            discountId: e.discount_id,
+                        };
+                }
+        }
+        return null;
     },
     O = () => (0, u.W)();

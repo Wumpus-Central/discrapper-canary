@@ -1599,6 +1599,8 @@ let eE = "@me",
         USER_OFFER_ACKNOWLEDGED: "/users/@me/billing/user-offer/ack",
         CHURN_USER_OFFER: "/users/@me/billing/churn-user-offer",
         USER_OFFER_REDEEM: "/users/@me/billing/user-offer/redeem",
+        REACTIVATION_OFFER_REDEEM: (e, t) =>
+            "/users/@me/billing/subscriptions/".concat(e, "/reactivation-offers/").concat(t, "/redeem"),
         USER_PERKS_DEMOS: "/users/@me/perks-demos",
         USER_PERKS_DEMOS_ACTIVATE: (e) => "/users/@me/activate-perk-demo/".concat(e),
         GUILD_DISCOVERY: "/discoverable-guilds",

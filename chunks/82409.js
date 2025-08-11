@@ -3,7 +3,7 @@ var r = n(255367),
     i = n(73800),
     l = n(120356),
     o = n.n(l),
-    s = n(126663),
+    s = n(717976),
     a = n(442837),
     c = n(481060),
     u = n(570140),
@@ -130,10 +130,11 @@ function U(e) {
                         var t;
                         let n = _.Z.getMessages(e),
                             r = null == (t = n.last()) ? void 0 : t.id,
-                            i = y.ZP.ackMessageId(e);
+                            i = y.ZP.ackMessageId(e),
+                            l = n.hasPresent() && n.ready && !n.cached;
                         null != r &&
                             null != i &&
-                            n.hasPresent() &&
+                            l &&
                             C.default.compare(i, r) >= 0 &&
                             d.In(
                                 e,

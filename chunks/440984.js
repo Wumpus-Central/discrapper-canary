@@ -22,31 +22,31 @@ function g(e) {
             premiumType: n,
             onClose: g,
             confettiCanvas: C,
-            userWasChurned: j = !1,
-            userDiscountOffer: E,
+            userWasChurned: E = !1,
+            userDiscountOffer: j,
         } = e,
         O = (0, l.ZP)(),
         P = (0, s.wj)(O) ? y : h,
-        v = r.useRef(null),
-        [N, I] = r.useState(!1),
-        T = (0, p._)(t, f.Xh.PREMIUM_MONTH_TIER_2, E),
-        S = (0, d.aS)(f.Xh.PREMIUM_MONTH_TIER_2, !1, !1, {
+        N = r.useRef(null),
+        [v, I] = r.useState(!1),
+        T = (0, p._)(t, f.Xh.PREMIUM_MONTH_TIER_2, j),
+        R = (0, d.aS)(f.Xh.PREMIUM_MONTH_TIER_2, !1, !1, {
             currency: t.currency,
             paymentSourceId: t.paymentSourceId,
         }),
-        R = (0, m.T4)(S.amount, S.currency),
+        S = (0, m.T4)(R.amount, R.currency),
         w = (0, a.e7)([c.Z], () => c.Z.useReducedMotion);
     if (
         (r.useEffect(() => {
-            null != v.current && null != T && I(!0);
-        }, [v, N, T]),
-        null == E || null == T)
+            null != N.current && null != T && I(!0);
+        }, [N, v, T]),
+        null == j || null == T)
     )
         return null;
     let D = b.intl.format(b.t.gPzMHR, {
-            numMonths: E.discount.user_usage_limit,
+            numMonths: j.discount.user_usage_limit,
             discountedPrice: T,
-            regularPrice: R,
+            regularPrice: S,
         }),
         k = (0, i.jsx)("div", {
             className: x.whatYouLoseButtonContainer,
@@ -64,7 +64,7 @@ function g(e) {
                 onClose: g,
             }),
             (0, i.jsx)("div", {
-                ref: v,
+                ref: N,
                 children: (0, i.jsx)(o.hzk, {
                     "data-migration-pending": !0,
                     className: x.body,
@@ -82,7 +82,7 @@ function g(e) {
                                               }),
                                               (0, i.jsx)(o.X6q, {
                                                   variant: "heading-xl/bold",
-                                                  children: j ? b.intl.string(b.t.gOOPaG) : b.intl.string(b.t.PZSyRk),
+                                                  children: E ? b.intl.string(b.t.gOOPaG) : b.intl.string(b.t.PZSyRk),
                                               }),
                                           ],
                                       }),
@@ -97,9 +97,9 @@ function g(e) {
                 }),
             }),
             !w &&
-                N &&
+                v &&
                 (0, i.jsx)(u.Z, {
-                    confettiTarget: v.current,
+                    confettiTarget: N.current,
                     confettiCanvas: C,
                     confettiVelocityMultiplier: 0.75,
                 }),

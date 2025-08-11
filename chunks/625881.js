@@ -1,4 +1,4 @@
-n.d(t, { Z: () => j }), n(388685);
+n.d(t, { Z: () => E }), n(388685);
 var i = n(255367),
     r = n(73800),
     a = n(120356),
@@ -18,34 +18,34 @@ var i = n(255367),
     h = n(828576),
     g = n(982404),
     C = n(299156);
-let j = function (e) {
-    let { premiumSubscription: t, premiumType: n, onClose: a, onConfirm: j, userDiscountOffer: E } = e,
+let E = function (e) {
+    let { premiumSubscription: t, premiumType: n, onClose: a, onConfirm: E, userDiscountOffer: j } = e,
         [O, P] = r.useState(!1),
-        [v, N] = r.useState(!1),
+        [N, v] = r.useState(!1),
         I = async (e) => {
             try {
-                N(!0),
+                v(!0),
                     P(!1),
                     await o.tn.post({
                         url: x.ANM.USER_OFFER_REDEEM,
                         body: { user_discount_offer_id: e },
                         rejectWithError: !0,
                     }),
-                    j();
+                    E();
             } catch (e) {
                 P(!0);
             }
-            N(!1);
+            v(!1);
         },
         T = (0, u.ZP)(),
-        S = (0, l.wj)(T) ? g : C,
-        R = (0, _._)(t, b.Xh.PREMIUM_MONTH_TIER_2, E),
+        R = (0, l.wj)(T) ? g : C,
+        S = (0, _._)(t, b.Xh.PREMIUM_MONTH_TIER_2, j),
         w = (0, m.aS)(b.Xh.PREMIUM_MONTH_TIER_2, !1, !1, {
             currency: t.currency,
             paymentSourceId: t.paymentSourceId,
         }),
         D = (0, p.T4)(w.amount, w.currency);
-    return null == E
+    return null == j
         ? null
         : (0, i.jsxs)(i.Fragment, {
               children: [
@@ -61,21 +61,21 @@ let j = function (e) {
                           children: [
                               (0, i.jsx)(c.X6q, {
                                   variant: "heading-xl/bold",
-                                  children: y.intl.format(y.t.q9Vxu7, { percent: E.discount.amount }),
+                                  children: y.intl.format(y.t.q9Vxu7, { percent: j.discount.amount }),
                               }),
                               (0, i.jsxs)("div", {
                                   className: h.confirmDiscountDescription,
                                   children: [
                                       (0, i.jsx)("img", {
                                           alt: "",
-                                          src: S,
+                                          src: R,
                                           className: h.confirmDiscountIcon,
                                       }),
                                       (0, i.jsx)(c.Text, {
                                           variant: "text-sm/medium",
                                           children: y.intl.format(y.t.Eq1RHB, {
-                                              percent: E.discount.amount,
-                                              numMonths: E.discount.user_usage_limit,
+                                              percent: j.discount.amount,
+                                              numMonths: j.discount.user_usage_limit,
                                               price: D,
                                           }),
                                       }),
@@ -87,9 +87,9 @@ let j = function (e) {
                                       variant: "text-xs/semibold",
                                       className: h.confirmDiscountLegaleseText,
                                       children: y.intl.format(y.t.hrGTjI, {
-                                          discountedPrice: R,
-                                          billingPeriod: (0, m.JP)(E.discount.user_usage_limit_interval),
-                                          numMonths: E.discount.user_usage_limit,
+                                          discountedPrice: S,
+                                          billingPeriod: (0, m.JP)(j.discount.user_usage_limit_interval),
+                                          numMonths: j.discount.user_usage_limit,
                                           fullPrice: D,
                                           helpdeskArticle: d.Z.getArticleURL(x.BhN.PAID_TERMS),
                                       }),
@@ -119,8 +119,8 @@ let j = function (e) {
                                           variant: "primary",
                                           size: "sm",
                                           text: y.intl.string(y.t.CKSuZG),
-                                          loading: v,
-                                          onClick: () => I(E.id),
+                                          loading: N,
+                                          onClick: () => I(j.id),
                                       }),
                                   ],
                               }),

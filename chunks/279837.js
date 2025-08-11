@@ -56,10 +56,11 @@ class h extends (s = r.PureComponent) {
                                 children: [
                                     (0, i.jsx)(l.oil, {
                                         type: "password",
-                                        autoComplete: "off",
+                                        autoComplete: "current-password",
                                         autoFocus: !0,
                                         value: u,
                                         onChange: this.handlePasswordChange,
+                                        required: !0,
                                     }),
                                     null != c && "" !== c
                                         ? (0, i.jsxs)(l.Text, {

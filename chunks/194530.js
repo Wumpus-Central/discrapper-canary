@@ -82,11 +82,14 @@ function p(e) {
                                 (0, i.jsx)(a.xJW, {
                                     title: u.intl.string(u.t.WBqMRU),
                                     error: null == A || null == (t = A.password) ? void 0 : t[0],
+                                    required: !0,
                                     children: (0, i.jsx)(a.oil, {
                                         type: "password",
                                         value: j,
                                         onChange: E,
                                         inputRef: R,
+                                        autoComplete: "current-password",
+                                        required: !0,
                                     }),
                                 }),
                                 (0, i.jsx)(a.xJW, {
@@ -100,20 +103,26 @@ function p(e) {
                                                 : T)
                                             ? g
                                             : void 0,
+                                    required: !0,
                                     children: (0, i.jsx)(a.oil, {
                                         type: "password",
                                         value: C,
                                         onChange: O,
+                                        autoComplete: "new-password",
+                                        required: !0,
                                     }),
                                 }),
                                 (0, i.jsx)(a.xJW, {
                                     className: m.newPassword,
                                     title: u.intl.string(u.t.iQG2KC),
                                     error: null != N ? N : void 0,
+                                    required: !0,
                                     children: (0, i.jsx)(a.oil, {
                                         type: "password",
                                         value: v,
                                         onChange: S,
+                                        autoComplete: "new-password",
+                                        required: !0,
                                     }),
                                 }),
                             ],

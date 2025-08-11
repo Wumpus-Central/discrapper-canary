@@ -1,128 +1,124 @@
-n.d(t, { default: () => y }), n(35282), n(388685);
-var r = n(255367),
-    i = n(73800),
-    l = n(120356),
-    a = n.n(l),
-    s = n(512722),
-    o = n.n(s),
-    c = n(442837),
-    d = n(481060),
-    u = n(749210),
-    h = n(600164),
-    m = n(218867),
-    b = n(430824),
+n.d(t, { default: () => h }), n(35282), n(388685);
+var i = n(255367),
+    r = n(73800),
+    l = n(512722),
+    s = n.n(l),
+    a = n(442837),
+    o = n(82659),
+    u = n(481060),
+    c = n(749210),
+    d = n(430824),
     p = n(399860),
-    x = n(335049),
+    b = n(335049),
     f = n(689079),
     g = n(388032),
-    j = n(969957);
-function y(e) {
+    y = n(969957);
+function h(e) {
     let {
             editPermissions: t,
             guildId: n,
             hasMemberSearch: l,
-            headerText: s,
-            onClose: y,
+            headerText: h,
+            onClose: m,
             overwrittenKeys: k,
-            search: C,
-            searchPlaceholderText: _,
+            search: j,
+            searchPlaceholderText: C,
             selectedPermissionCount: v,
             transitionState: E,
         } = e,
-        w = (0, c.e7)([b.Z], () => b.Z.getGuild(n), [n]);
-    o()(null != w, "");
-    let [O, Z] = i.useState(null),
-        { query: N, results: T, setQuery: B } = C(n),
-        [D, I] = i.useState({}),
-        S = i.useMemo(() => Object.keys(D).length, [D]),
-        X = S + v >= f._n,
-        q = i.useMemo(
+        w = (0, a.e7)([d.Z], () => d.Z.getGuild(n), [n]);
+    s()(null != w, "");
+    let [O, x] = r.useState(null),
+        { query: T, results: Z, setQuery: M } = j(n),
+        [P, S] = r.useState({}),
+        _ = r.useMemo(() => Object.keys(P).length, [P]),
+        q = _ + v >= f._n,
+        I = r.useMemo(
             () =>
-                T.filter((e) => {
+                Z.filter((e) => {
                     let t = (0, p.rE)(e.id, e.type);
                     return !k.includes(t);
                 }),
-            [k, T],
+            [k, Z],
         ),
-        z = i.useCallback(
+        N = r.useCallback(
             (e, t) => {
-                I((n) => {
-                    let r = (0, p.rE)(e, t),
-                        i = (function (e) {
+                S((n) => {
+                    let i = (0, p.rE)(e, t),
+                        r = (function (e) {
                             for (var t = 1; t < arguments.length; t++) {
                                 var n = null != arguments[t] ? arguments[t] : {},
-                                    r = Object.keys(n);
+                                    i = Object.keys(n);
                                 "function" == typeof Object.getOwnPropertySymbols &&
-                                    (r = r.concat(
+                                    (i = i.concat(
                                         Object.getOwnPropertySymbols(n).filter(function (e) {
                                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                         }),
                                     )),
-                                    r.forEach(function (t) {
-                                        var r;
-                                        (r = n[t]),
+                                    i.forEach(function (t) {
+                                        var i;
+                                        (i = n[t]),
                                             t in e
                                                 ? Object.defineProperty(e, t, {
-                                                      value: r,
+                                                      value: i,
                                                       enumerable: !0,
                                                       configurable: !0,
                                                       writable: !0,
                                                   })
-                                                : (e[t] = r);
+                                                : (e[t] = i);
                                     });
                             }
                             return e;
                         })({}, n);
                     return (
-                        r in n
-                            ? delete i[r]
-                            : X ||
-                              (i[r] = {
+                        i in n
+                            ? delete r[i]
+                            : q ||
+                              (r[i] = {
                                   id: e,
                                   permission: !0,
                                   type: t,
                               }),
-                        i
+                        r
                     );
                 });
             },
-            [X, I],
+            [q, S],
         ),
-        M = i.useCallback(() => {
-            t(D, []), y();
-        }, [t, y, D]);
-    i.useEffect(() => () => clearTimeout(O), [O]);
-    let P = i.useCallback(
+        X = r.useCallback(() => {
+            t(P, []), m();
+        }, [t, m, P]);
+    r.useEffect(() => () => clearTimeout(O), [O]);
+    let D = r.useCallback(
             (e) => {
-                B(e),
+                M(e),
                     l &&
-                        Z((t) =>
+                        x((t) =>
                             (clearTimeout(t), 0 === e.length)
                                 ? null
                                 : setTimeout(() => {
-                                      u.Z.requestMembers(n, e, 200, !1);
+                                      c.Z.requestMembers(n, e, 200, !1);
                                   }, 500),
                         );
             },
-            [n, l, B, Z],
+            [n, l, M, x],
         ),
-        R = i.useCallback(
+        H = r.useCallback(
             (e) => {
-                let t = q[e],
+                let t = I[e.rowIndex],
                     n = (0, p.rE)(t.id, t.type),
-                    i = n in D,
-                    l = X && !i;
-                return (0, r.jsx)(
+                    r = n in P,
+                    l = q && !r;
+                return (0, i.jsx)(
                     "div",
                     {
-                        className: j.item,
-                        children: (0, r.jsx)(d.XZJ, {
-                            type: d.XZJ.Types.INVERTED,
-                            className: a()({ [j.checkboxItemDisabled]: l }),
+                        className: y.item,
+                        children: (0, i.jsx)(u.XZJ, {
+                            type: u.XZJ.Types.INVERTED,
                             disabled: l,
-                            value: i,
-                            onChange: () => z(t.id, t.type),
-                            children: (0, r.jsx)(x.Z, {
+                            value: r,
+                            onChange: () => N(t.id, t.type),
+                            children: (0, i.jsx)(b.Z, {
                                 guild: w,
                                 id: t.id,
                                 type: t.type,
@@ -133,76 +129,44 @@ function y(e) {
                     n,
                 );
             },
-            [q, w, X, z, D],
+            [I, w, q, N, P],
         );
     return (
-        i.useEffect(() => {
-            u.Z.requestMembers(n, void 0, 200, !1);
+        r.useEffect(() => {
+            c.Z.requestMembers(n, void 0, 200, !1);
         }, [n]),
-        (0, r.jsxs)(d.Y0X, {
+        (0, i.jsx)(o.Modal, {
             "aria-label": g.intl.string(g.t["N+InBQ"]),
             transitionState: E,
-            parentComponent: "AddPermissionsModal",
-            children: [
-                (0, r.jsxs)(d.xBx, {
-                    separator: !1,
-                    direction: h.Z.Direction.VERTICAL,
-                    children: [
-                        (0, r.jsx)(d.X6q, {
-                            variant: "heading-xl/semibold",
-                            className: j.header,
-                            children: s,
-                        }),
-                        X
-                            ? (0, r.jsx)(d.X6q, {
-                                  variant: "heading-sm/medium",
-                                  color: "text-danger",
-                                  children: g.intl.string(g.t.XTwtW1),
-                              })
-                            : null,
-                    ],
-                }),
-                (0, r.jsxs)(d.hzk, {
-                    className: j.modalContent,
-                    children: [
-                        (0, r.jsx)(d.E1j, {
-                            className: j.searchBar,
-                            query: N,
-                            placeholder: _,
-                            "aria-label": _,
-                            onChange: P,
-                            onClear: () => B(""),
-                        }),
-                        (0, r.jsx)(m.Z, {
-                            role: "listbox",
-                            renderRow: R,
-                            rowCount: q.length,
-                            rowCountBySection: [q.length],
-                            rowHeight: 36,
-                            className: j.__invalid_list,
-                        }),
-                    ],
-                }),
-                (0, r.jsx)(d.mzw, {
-                    children: (0, r.jsxs)(d.hE2, {
-                        direction: "horizontal-reverse",
-                        children: [
-                            (0, r.jsx)(d.zxk, {
-                                variant: "primary",
-                                text: g.intl.string(g.t.OYkgVl),
-                                type: "submit",
-                                onClick: M,
-                                disabled: 0 === S,
-                            }),
-                            (0, r.jsx)(d.zxk, {
-                                variant: "secondary",
-                                text: g.intl.string(g.t["ETE/oK"]),
-                                onClick: y,
-                            }),
-                        ],
-                    }),
-                }),
+            title: h,
+            subtitle: q ? g.intl.string(g.t.XTwtW1) : void 0,
+            onClose: m,
+            input: (0, i.jsx)(u.E1j, {
+                query: T,
+                placeholder: C,
+                "aria-label": C,
+                onChange: D,
+                onClear: () => M(""),
+            }),
+            actions: [
+                {
+                    text: g.intl.string(g.t["ETE/oK"]),
+                    onClick: m,
+                    variant: "secondary",
+                },
+                {
+                    text: g.intl.string(g.t.OYkgVl),
+                    onClick: X,
+                    variant: "primary",
+                    disabled: 0 === _,
+                },
             ],
+            listProps: {
+                renderRow: H,
+                sections: [I.length],
+                rowHeight: 36,
+                sectionHeight: 36,
+            },
         })
     );
 }

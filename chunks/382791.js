@@ -25,6 +25,7 @@ var i = n(120356),
             (e[(e.PREMIUM_TIER_2_OLD_GRADIENT_FILL = 4)] = "PREMIUM_TIER_2_OLD_GRADIENT_FILL"),
             (e[(e.PREMIUM_TIER_2_OLD_GRADIENT_FILL_LIGHT_MODE = 5)] = "PREMIUM_TIER_2_OLD_GRADIENT_FILL_LIGHT_MODE"),
             (e[(e.PREMIUM_TIER_2_GREY_FILL = 6)] = "PREMIUM_TIER_2_GREY_FILL"),
+            (e[(e.PREMIUM_TIER_2_MOD_BACKGROUND_FILL = 7)] = "PREMIUM_TIER_2_MOD_BACKGROUND_FILL"),
             e
         );
     })({});
@@ -37,6 +38,7 @@ function p(e) {
             [f.freeTrialPillTier2OldGradientFill]: 4 === i,
             [f.lightBackgroundPill]: 5 === i,
             [f.greyBackgroundPill]: 6 === i,
+            [f.modBackgroundPill]: 7 === i,
             [f.freeTrialPillGap]: l,
         }),
         children: [
@@ -46,6 +48,7 @@ function p(e) {
                     [f.freeTrialPillTextInverted]: 0 !== i && 2 !== i,
                     [f.freeTrialPillTextTier0]: 0 === i,
                     [f.freeTrialPillTextTier2]: 2 === i || 6 === i,
+                    [f.freeTrialPillTextDefault]: 7 === i,
                 }),
                 children: t,
             }),

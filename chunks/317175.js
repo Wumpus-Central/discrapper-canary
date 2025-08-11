@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C }), n(361932), n(187205);
+n.d(t, { Z: () => f }), n(361932), n(187205);
 var s = n(255367),
     i = n(73800),
     r = n(120356),
@@ -14,7 +14,7 @@ var s = n(255367),
     R = n(388032),
     m = n(939175),
     I = n(20795);
-function f(e, t, n) {
+function C(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -27,7 +27,7 @@ function f(e, t, n) {
         e
     );
 }
-class C extends i.PureComponent {
+class f extends i.PureComponent {
     renderItems() {
         let { query: e } = this.state,
             t = u.Z.flatMap((e, t) => {
@@ -83,7 +83,7 @@ class C extends i.PureComponent {
                                         }),
                                     )),
                                     s.forEach(function (t) {
-                                        f(e, t, n[t]);
+                                        C(e, t, n[t]);
                                     });
                             }
                             return e;
@@ -135,13 +135,13 @@ class C extends i.PureComponent {
     }
     constructor(e) {
         super(e),
-            f(this, "onChangeQuery", (e) => {
+            C(this, "onChangeQuery", (e) => {
                 this.setState({ query: e });
             }),
-            f(this, "onClearQuery", () => {
+            C(this, "onClearQuery", () => {
                 this.setState({ query: "" });
             }),
-            f(this, "onClick", (e) => {
+            C(this, "onClick", (e) => {
                 var t, n;
                 null == (t = (n = this.props).onClick) || t.call(n, e);
             }),

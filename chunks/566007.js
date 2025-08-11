@@ -29,7 +29,7 @@ function o(e) {
     let s = null != n.game;
     return (0, r.jsx)(l.Z, {
         userId: t.id,
-        widgetType: n.type,
+        widget: n,
         reachedMaxGamesLimit: s,
         showHeaderActionButtons: o,
         children: (0, r.jsx)(
