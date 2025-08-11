@@ -19,7 +19,9 @@ function f(e) {
     return (e = e.toLowerCase()), (0, l.isWindows)() && (e = (e = e.replace(/^[a-z]:/, "")).replace(/\\/g, "/")), e;
 }
 function _(e) {
-    null != e && "" !== e && ((e = f(e)).endsWith("/") || (e += "/"), u.push(e));
+    null != e &&
+        "" !== e &&
+        ((e = f(e)).endsWith("/") || (e += "/"), u.push(e), (0, l.isLinux)() && u.push("/var" + e));
 }
 function p(e) {
     e = f(e);
@@ -53,7 +55,8 @@ async function h() {
             _(e.PROGRAMDATA),
             _("/games/"),
             _("/steamlibrary/steamapps/common/");
-    } else (0, l.isMac)() && _("/Applications");
+    } else
+        (0, l.isMac)() ? _("/Applications") : (0, l.isLinux)() && (_("/app/bin"), _("/usr/bin"), _("/usr/local/bin"));
     let e = a.Z.remoteApp.getPath;
     return (
         _(await e("home")),

@@ -238,22 +238,30 @@ function L(e) {
     }),
     Object.entries(t)))
         r instanceof Set && (t[n] = Array.from(r));
-    if (t.content)
-        if ((delete t.contents, g.Z.getCurrentConfig({ location: "getSearchQueryFromTokens" }).enabled)) {
-            let e = [],
-                n = RegExp('("([^"]+)"|(?:\\S+))', "gu");
-            for (let r of t.content) {
-                let t = r.match(n);
+    if (t.content) {
+        delete t.contents;
+        let e = g.Z.getCurrentConfig({ location: "getSearchQueryFromTokens" });
+        if (e.enabled) {
+            let n = [],
+                r = e.brackets
+                    ? RegExp("(\\[([^\\]]+)\\]|(?:\\S+))", "gu")
+                    : e.quotes
+                      ? RegExp('("([^"]+)"|(?:\\S+))', "gu")
+                      : RegExp("(\\S+)", "gu");
+            for (let i of t.content) {
+                let t = i.match(r);
                 if (null != t)
-                    for (let n of t) {
-                        let t = n.startsWith('"') && n.endsWith('"'),
-                            r = n.includes("://"),
-                            i = t || r ? 0 : 2;
-                        e.push("".concat(i, "|").concat(n));
+                    for (let r of t) {
+                        let t = e.brackets && r.startsWith("[") && r.endsWith("]"),
+                            i = e.quotes && r.startsWith('"') && r.endsWith('"'),
+                            o = r.includes("://"),
+                            a = t || i || o ? 0 : 2;
+                        n.push("".concat(a, "|").concat(r));
                     }
             }
-            e.length > 0 && (t.contents = e), delete t.content;
+            n.length > 0 && (t.contents = n), delete t.content;
         } else (t.content = t.content.join(" ").trim()), t.content || delete t.content;
+    }
     return t;
 }
 function x(e) {

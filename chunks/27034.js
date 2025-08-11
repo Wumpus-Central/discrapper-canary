@@ -46,58 +46,70 @@ function g(e) {
 }
 function E(e) {
     var t, n, o, s, c, h;
-    let { header: m, isLargeModal: E, stepProps: b } = g(e),
+    let m,
+        { header: E, isLargeModal: b, stepProps: y } = g(e),
         {
-            step: y,
-            stepConfigs: O,
-            setBodyNode: v,
-            setFooterNode: I,
-            setModalOverlayNode: T,
-            setReadySlideId: S,
-            premiumBrandRefreshBackgroundClassName: A,
-            selectedSkuId: N,
-            isDisplayingWowMomentConfirmation: C,
+            step: O,
+            stepConfigs: v,
+            setBodyNode: I,
+            setFooterNode: T,
+            setModalOverlayNode: S,
+            setReadySlideId: A,
+            premiumBrandRefreshBackgroundClassName: N,
+            selectedSkuId: C,
+            isDisplayingWowMomentConfirmation: R,
+            isGift: P,
         } = (0, d.JL)(),
-        R = null != N && N in _.y7,
-        P = O.find((e) => e.key === y);
+        w = null != C && C in _.y7,
+        D = v.find((e) => e.key === O);
     i.useEffect(() => {
-        T(null);
-    }, [y, T]),
-        l()(null != P, "Unknown step for current payment flow.");
-    let w = null != (c = null == P || null == (t = P.options) ? void 0 : t.hideSlider) && c,
-        D = null == P || null == (n = P.options) ? void 0 : n.bodyClassName,
-        L = null == P || null == (o = P.options) ? void 0 : o.sliderBodyClassName;
-    return (
-        void 0 !== E && E && (L = p.sliderBodyLarge),
-        (0, r.jsxs)(r.Fragment, {
-            children: [
-                null == (h = null == P || null == (s = P.options) ? void 0 : s.renderHeader) || h ? m : null,
-                P.renderStep(b),
-                null == y || w
-                    ? null
-                    : (0, r.jsxs)(r.Fragment, {
-                          children: [
-                              (0, r.jsx)(u.hzk, {
-                                  "data-migration-pending": !0,
-                                  className: a()(D, p.body, A, {
-                                      [p.reviewStep]: y === f.h8.REVIEW,
-                                      [p.addPaymentStepForPremium]: y === f.h8.ADD_PAYMENT_STEPS && R,
-                                  }),
-                                  children: (0, r.jsx)(u.MyZ, {
-                                      activeSlide: y,
-                                      centered: !1,
-                                      onSlideReady: (e) => S(e),
-                                      width: y === f.h8.ADD_PAYMENT_STEPS ? 408 : y === f.h8.REVIEW ? 392 : void 0,
-                                      overflow: C ? "visible" : void 0,
-                                      children: O.filter((e) => null != e.key).map((e) =>
+        S(null);
+    }, [O, S]),
+        l()(null != D, "Unknown step for current payment flow.");
+    let L = null != (c = null == D || null == (t = D.options) ? void 0 : t.hideSlider) && c,
+        x = null == D || null == (n = D.options) ? void 0 : n.bodyClassName,
+        M = null == D || null == (o = D.options) ? void 0 : o.sliderBodyClassName;
+    switch ((void 0 !== b && b && (M = p.sliderBodyLarge), O)) {
+        case f.h8.ADD_PAYMENT_STEPS:
+            m = 408;
+            break;
+        case f.h8.REVIEW:
+            m = 392;
+            break;
+        case f.h8.PLAN_SELECT:
+            w && !P && (m = "100%");
+    }
+    return (0, r.jsxs)(r.Fragment, {
+        children: [
+            null == (h = null == D || null == (s = D.options) ? void 0 : s.renderHeader) || h ? E : null,
+            D.renderStep(y),
+            null == O || L
+                ? null
+                : (0, r.jsxs)(r.Fragment, {
+                      children: [
+                          (0, r.jsx)(u.hzk, {
+                              "data-migration-pending": !0,
+                              className: a()(x, p.body, N, {
+                                  [p.reviewStep]: O === f.h8.REVIEW,
+                                  [p.addPaymentStepForPremium]: O === f.h8.ADD_PAYMENT_STEPS && w,
+                              }),
+                              children: (0, r.jsx)(u.MyZ, {
+                                  activeSlide: O,
+                                  centered: !1,
+                                  onSlideReady: (e) => A(e),
+                                  width: m,
+                                  overflow: R ? "visible" : void 0,
+                                  children: v
+                                      .filter((e) => null != e.key)
+                                      .map((e) =>
                                           (0, r.jsx)(
                                               u.Mi4,
                                               {
                                                   id: e.key,
                                                   children: (0, r.jsx)("form", {
-                                                      className: a()(p.sliderBody, L),
+                                                      className: a()(p.sliderBody, M),
                                                       ref: (e) => {
-                                                          v(e);
+                                                          I(e);
                                                       },
                                                       onSubmit: (e) => e.preventDefault(),
                                                   }),
@@ -105,19 +117,18 @@ function E(e) {
                                               e.key,
                                           ),
                                       ),
-                                  }),
                               }),
-                              (0, r.jsx)("div", { ref: (e) => I(e) }),
-                              (0, r.jsx)("div", {
-                                  ref: (e) => {
-                                      T(e);
-                                  },
-                              }),
-                          ],
-                      }),
-            ],
-        })
-    );
+                          }),
+                          (0, r.jsx)("div", { ref: (e) => T(e) }),
+                          (0, r.jsx)("div", {
+                              ref: (e) => {
+                                  S(e);
+                              },
+                          }),
+                      ],
+                  }),
+        ],
+    });
 }
 function b(e) {
     let { children: t } = e,

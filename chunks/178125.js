@@ -1,81 +1,81 @@
-t.d(n, { default: () => p }), t(388685);
-var l = t(255367),
-    a = t(73800),
-    i = t(106351),
-    o = t(442837),
-    d = t(755721),
-    c = t(481060),
-    r = t(471445),
-    s = t(856768),
-    u = t(324067),
-    h = t(771845),
-    m = t(9156),
-    x = t(117984),
-    g = t(593214),
-    j = t(378337),
-    C = t(388032),
-    f = t(918492);
+l.d(n, { default: () => p }), l(388685);
+var t = l(255367),
+    i = l(73800),
+    a = l(106351),
+    d = l(442837),
+    o = l(755721),
+    r = l(481060),
+    c = l(471445),
+    s = l(856768),
+    u = l(324067),
+    h = l(771845),
+    v = l(9156),
+    f = l(117984),
+    m = l(593214),
+    x = l(378337),
+    g = l(388032),
+    j = l(918492);
 function p(e) {
-    let { transitionState: n, onClose: t, parentId: i } = e,
-        r = (0, o.e7)([h.ZP], () => h.ZP.getFlattenedGuildIds()[0]),
-        [u, m] = a.useState(r),
-        [x, g] = a.useState(!1);
-    return (0, l.jsxs)(c.Y0X, {
+    let { transitionState: n, onClose: l, parentId: a } = e,
+        c = (0, d.e7)([h.ZP], () => h.ZP.getFlattenedGuildIds()[0]),
+        [u, v] = i.useState(c),
+        [f, m] = i.useState(!1);
+    return (0, t.jsxs)(r.Y0X, {
         transitionState: n,
         parentComponent: "AddFavoriteChannelModal",
         children: [
-            (0, l.jsxs)(c.xBx, {
-                className: f.modalHeader,
+            (0, t.jsxs)(r.xBx, {
+                className: j.modalHeader,
                 children: [
-                    (0, l.jsxs)("div", {
-                        className: f.modalHeaderTitle,
+                    (0, t.jsxs)("div", {
+                        className: j.modalHeaderTitle,
                         children: [
-                            (0, l.jsx)(c.X6q, {
+                            (0, t.jsx)(r.X6q, {
                                 variant: "text-lg/semibold",
-                                children: C.intl.string(C.t["4wcdEx"]),
+                                children: g.intl.string(g.t["4wcdEx"]),
                             }),
-                            (0, l.jsx)(c.olH, { onClick: t }),
+                            (0, t.jsx)(r.olH, { onClick: l }),
                         ],
                     }),
-                    (0, l.jsx)("div", {
-                        className: f.guildSelector,
-                        children: (0, l.jsx)(s.q, {
+                    (0, t.jsx)("div", {
+                        className: j.guildSelector,
+                        children: (0, t.jsx)(s.q, {
                             guildId: u,
                             onChange: function (e) {
-                                null != e && m(e.id);
+                                null != e && v(e.id);
                             },
                         }),
                     }),
                 ],
             }),
-            (0, l.jsx)(c.hzk, {
-                className: f.modalContent,
-                children: (0, l.jsx)(v, {
+            (0, t.jsx)(r.hzk, {
+                className: j.modalContent,
+                children: (0, t.jsx)(C, {
                     guildId: u,
-                    hideMutedChannels: x,
-                    parentId: i,
+                    hideMutedChannels: f,
+                    parentId: a,
                 }),
             }),
-            (0, l.jsxs)(c.mzw, {
-                className: f.modalFooter,
+            (0, t.jsxs)(r.mzw, {
+                className: j.modalFooter,
                 children: [
-                    (0, l.jsx)(d.zx, {
-                        className: f.goBackButton,
-                        look: d.iL.BLANK,
-                        color: d.Tt.PRIMARY,
-                        size: d.Ph.SMALL,
-                        onClick: t,
-                        children: C.intl.string(C.t["/g10LC"]),
+                    (0, t.jsx)(o.zx, {
+                        className: j.goBackButton,
+                        look: o.iL.BLANK,
+                        color: o.Tt.PRIMARY,
+                        size: o.Ph.SMALL,
+                        onClick: l,
+                        children: g.intl.string(g.t["/g10LC"]),
                     }),
-                    (0, l.jsx)("div", {
-                        children: (0, l.jsx)(c.XZJ, {
-                            type: c.XZJ.Types.INVERTED,
-                            value: x,
-                            onChange: (e, n) => g(n),
-                            children: (0, l.jsx)(c.Text, {
+                    (0, t.jsx)("div", {
+                        children: (0, t.jsx)(r.XZJ, {
+                            type: r.XZJ.Types.INVERTED,
+                            value: f,
+                            onChange: (e, n) => m(n),
+                            children: (0, t.jsx)(r.Text, {
                                 variant: "text-sm/medium",
                                 color: "interactive-normal",
-                                children: C.intl.string(C.t.UwOLJC),
+                                children: g.intl.string(g.t.UwOLJC),
                             }),
                         }),
                     }),
@@ -84,27 +84,27 @@ function p(e) {
         ],
     });
 }
-function v(e) {
-    let { guildId: n, hideMutedChannels: t, parentId: d } = e,
-        c = (0, o.e7)([u.Z], () => u.Z.getCategories(n)),
-        r = (0, j.Z)(c),
-        s = a.useRef(null);
+function C(e) {
+    let { guildId: n, hideMutedChannels: l, parentId: o } = e,
+        r = (0, d.e7)([u.Z], () => u.Z.getCategories(n)),
+        c = (0, x.Z)(r),
+        s = i.useRef(null);
     return (
-        a.useEffect(() => {
+        i.useEffect(() => {
             var e;
             null == s || null == (e = s.current) || e.scroll({ top: 0 });
         }, [n]),
-        (0, l.jsx)("div", {
+        (0, t.jsx)("div", {
             ref: s,
-            children: r.map((e) =>
-                e.type === i.d.GUILD_CATEGORY
-                    ? (0, l.jsx)(N, { name: e.name }, e.id)
-                    : (0, l.jsx)(
-                          I,
+            children: c.map((e) =>
+                e.type === a.d.GUILD_CATEGORY
+                    ? (0, t.jsx)(Z, { name: e.name }, e.id)
+                    : (0, t.jsx)(
+                          _,
                           {
                               channel: e,
-                              hideMutedChannels: t,
-                              parentId: d,
+                              hideMutedChannels: l,
+                              parentId: o,
                           },
                           e.id,
                       ),
@@ -112,77 +112,77 @@ function v(e) {
         })
     );
 }
-function N(e) {
+function Z(e) {
     let { name: n } = e;
-    return (0, l.jsx)(c.Text, {
-        className: f.categoryRow,
+    return (0, t.jsx)(r.Text, {
+        className: j.categoryRow,
         variant: "eyebrow",
         color: "interactive-normal",
         children: n,
     });
 }
-function I(e) {
-    let { channel: n, hideMutedChannels: t, parentId: a } = e,
-        i = (0, g.s4)(n.id);
-    if ((0, o.e7)([m.ZP], () => m.ZP.isChannelMuted(n.guild_id, n.id)) && t) return null;
-    let d = (0, r.KS)(n);
-    return (0, l.jsxs)(
+function _(e) {
+    let { channel: n, hideMutedChannels: l, parentId: i } = e,
+        a = (0, m.s4)(n.id);
+    if ((0, d.e7)([v.ZP], () => v.ZP.isChannelMuted(n.guild_id, n.id)) && l) return null;
+    let o = (0, c.KS)(n);
+    return (0, t.jsxs)(
         "div",
         {
-            className: f.channelRow,
+            className: j.channelRow,
             children: [
-                (0, l.jsxs)("div", {
-                    className: f.channelName,
+                (0, t.jsxs)("div", {
+                    className: j.channelName,
                     children: [
-                        null != d &&
-                            (0, l.jsx)("div", {
-                                className: f.channelIconContainer,
-                                children: (0, l.jsx)(d, {
-                                    className: f.channelIcon,
+                        null != o &&
+                            (0, t.jsx)("div", {
+                                className: j.channelIconContainer,
+                                children: (0, t.jsx)(o, {
+                                    className: j.channelIcon,
                                     size: "custom",
                                     color: "currentColor",
                                     height: 20,
                                     width: 20,
                                 }),
                             }),
-                        (0, l.jsx)(c.Text, {
+                        (0, t.jsx)(r.Text, {
                             variant: "text-md/medium",
                             color: "interactive-normal",
                             children: n.name,
                         }),
                     ],
                 }),
-                null != i
-                    ? (0, l.jsx)(_, { channelId: n.id })
-                    : (0, l.jsx)(k, {
+                null != a
+                    ? (0, t.jsx)(b, { channelId: n.id })
+                    : (0, t.jsx)(I, {
                           channelId: n.id,
-                          parentId: a,
+                          parentId: i,
                       }),
             ],
         },
         n.id,
     );
 }
-function k(e) {
-    let { channelId: n, parentId: t } = e;
-    return (0, l.jsx)(d.zx, {
-        look: d.iL.OUTLINED,
-        size: d.Ph.SMALL,
-        color: d.Tt.BRAND,
+function I(e) {
+    let { channelId: n, parentId: l } = e;
+    return (0, t.jsx)(o.zx, {
+        look: o.iL.OUTLINED,
+        size: o.Ph.SMALL,
+        color: o.Tt.BRAND,
         onClick: function () {
-            (0, x.kj)(n, t);
+            (0, f.kj)(n, l);
         },
-        children: C.intl.string(C.t.OYkgVl),
+        children: g.intl.string(g.t.OYkgVl),
     });
 }
-function _(e) {
+function b(e) {
     let { channelId: n } = e;
-    return (0, l.jsx)(c.zxk, {
+    return (0, t.jsx)(r.zxk, {
         variant: "secondary",
         size: "sm",
-        text: C.intl.string(C.t.N86XcH),
+        text: g.intl.string(g.t.N86XcH),
         onClick: function () {
-            (0, x.oC)(n);
+            (0, f.oC)(n);
         },
     });
 }

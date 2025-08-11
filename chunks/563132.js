@@ -318,6 +318,7 @@ function J(e) {
                 setReadySlideId: e9,
                 defaultPlanId: ee,
                 isPremium: tn,
+                isGift: J,
                 startingFractionalPremiumEndsAtRef: to,
                 startedPaymentFlowWithPaymentSourcesRef: eE,
                 startingPremiumSubscriptionPlanIdRef: tr,

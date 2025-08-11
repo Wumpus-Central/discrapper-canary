@@ -1,69 +1,69 @@
-t.d(n, { default: () => p });
-var o = t(255367);
-t(73800);
-var r = t(481060),
-    i = t(546957),
-    a = t(190014),
-    c = t(301812),
-    l = t(988043),
-    s = t(919539),
-    d = t(526761),
-    _ = t(388032),
-    u = t(671364);
-function f(e) {
-    let { guildId: n } = e;
-    return (0, o.jsxs)(i.Z, {
+n.d(e, { default: () => f });
+var i = n(255367);
+n(73800);
+var l = n(481060),
+    r = n(546957),
+    a = n(190014),
+    s = n(301812),
+    o = n(988043),
+    u = n(919539),
+    c = n(526761),
+    d = n(388032),
+    g = n(671364);
+function _(t) {
+    let { guildId: e } = t;
+    return (0, i.jsxs)(r.Z, {
         children: [
-            (0, o.jsx)(l.Z, {
-                ingress: d.f4.SERVER_PRIVACY_MODAL,
-                guildId: n,
+            (0, i.jsx)(o.Z, {
+                ingress: c.f4.SERVER_PRIVACY_MODAL,
+                guildId: e,
             }),
-            (0, o.jsx)(s.Z, {
-                ingress: d.f4.SERVER_PRIVACY_MODAL,
-                guildId: n,
+            (0, i.jsx)(u.Z, {
+                ingress: c.f4.SERVER_PRIVACY_MODAL,
+                guildId: e,
             }),
-            (0, o.jsx)(c.Z, {
-                ingress: d.f4.SERVER_PRIVACY_MODAL,
-                guildId: n,
+            (0, i.jsx)(s.Z, {
+                ingress: c.f4.SERVER_PRIVACY_MODAL,
+                guildId: e,
             }),
-            (0, o.jsx)(a.Z, {
-                ingress: d.f4.SERVER_PRIVACY_MODAL,
-                guildId: n,
+            (0, i.jsx)(a.Z, {
+                ingress: c.f4.SERVER_PRIVACY_MODAL,
+                guildId: e,
             }),
-            (0, o.jsx)(r.Text, {
+            (0, i.jsx)(l.Text, {
                 color: "header-secondary",
                 variant: "text-sm/normal",
-                children: _.intl.format(_.t.LNsV09, {
+                children: d.intl.format(d.t.LNsV09, {
                     policyLink: "https://discord.com/safety/360043709612-our-policies",
                 }),
             }),
         ],
     });
 }
-function p(e) {
-    let { guild: n, transitionState: t, onClose: i } = e,
-        a = "".concat(_.intl.string(_.t.BayiAg), "\u2014").concat(null != n ? n.name : "??");
-    return (0, o.jsxs)(r.Y0X, {
-        transitionState: t,
-        size: r.CgR.SMALL,
+function f(t) {
+    let { guild: e, transitionState: n, onClose: r } = t,
+        a = "".concat(d.intl.string(d.t.BayiAg), "\u2014").concat(null != e ? e.name : "??");
+    return (0, i.jsxs)(l.Y0X, {
+        transitionState: n,
+        size: l.CgR.SMALL,
         "aria-label": a,
         parentComponent: "PrivacySettings",
         children: [
-            (0, o.jsx)(r.xBx, {
-                children: (0, o.jsx)(r.X6q, {
+            (0, i.jsx)(l.xBx, {
+                children: (0, i.jsx)(l.X6q, {
                     variant: "heading-lg/semibold",
                     children: a,
                 }),
             }),
-            (0, o.jsx)(r.hzk, {
-                className: u.content,
-                children: (0, o.jsx)(f, { guildId: n.id }),
+            (0, i.jsx)(l.hzk, {
+                className: g.content,
+                children: (0, i.jsx)(_, { guildId: e.id }),
             }),
-            (0, o.jsx)(r.mzw, {
-                children: (0, o.jsx)(r.zxk, {
+            (0, i.jsx)(l.mzw, {
+                children: (0, i.jsx)(l.zxk, {
                     variant: "primary",
-                    text: _.intl.string(_.t.i4jeWV),
-                    onClick: () => i(),
+                    text: d.intl.string(d.t.i4jeWV),
+                    onClick: () => r(),
                 }),
             }),
         ],
