@@ -99,6 +99,7 @@ function O(e) {
                     alt: "HD Streaming Nitro Perk",
                 }),
                 (0, r.jsx)(s.zx, {
+                    "data-migration-pending": !0,
                     className: p.closeButton,
                     "aria-label": _.intl.string(_.t.cpT0Cg),
                     look: s.zx.Looks.BLANK,

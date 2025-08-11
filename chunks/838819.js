@@ -1,4 +1,4 @@
-n.r(t), n.d(t, { default: () => F }), n(388685);
+n.r(t), n.d(t, { default: () => M }), n(388685);
 var r = n(255367),
     l = n(73800),
     a = n(120356),
@@ -29,8 +29,8 @@ var r = n(255367),
     k = n(963102),
     I = n(508498),
     N = n(681435),
-    w = n(215023),
-    A = n(981631),
+    A = n(215023),
+    w = n(981631),
     B = n(420212),
     R = n(484920),
     Z = n(306414);
@@ -48,22 +48,22 @@ let D = (e) => {
             t
         );
     },
-    F = function (e) {
-        let { isFullScreen: t = !0, tab: n = w.AW.HOME } = e;
+    M = function (e) {
+        let { isFullScreen: t = !0, tab: n = A.AW.HOME } = e;
         (0, b.z)(f.f);
         let a = (0, p.Z)((0, o.Z)()),
             c = (0, s.e7)([v.default], () => v.default.getCurrentUser()),
             { enableShopTakeOver: B } = E.Z.useConfig({ location: "CollectiblesShop" }),
-            { closeIntroToOrbsClaimedCoachmark: F } = (0, m.Z)({ location: "CollectiblesShop" });
+            { closeIntroToOrbsClaimedCoachmark: M } = (0, m.Z)({ location: "CollectiblesShop" });
         l.useEffect(
             () => () => {
-                F();
+                M();
             },
-            [a, F],
+            [a, M],
         );
-        let { onClose: M } = (0, I.Db)(),
+        let { onClose: F } = (0, I.Db)(),
             { currentTab: H, hasFilters: W } = (0, T.S)(),
-            V = l.useMemo(() => (n === w.AW.HOME && H && W() ? H : n), [n, H, W]),
+            V = l.useMemo(() => (n === A.AW.HOME && H && W() ? H : n), [n, H, W]),
             { categories: U, refreshCategories: z } = (0, y.ZP)(
                 {
                     location: "CollectiblesShop.web",
@@ -94,9 +94,9 @@ let D = (e) => {
             en();
         }, [en]),
             l.useEffect(() => {
-                t || (0, d.Y)(A.Z5c.COLLECTIBLES_SHOP);
+                t || (0, d.Y)(w.Z5c.COLLECTIBLES_SHOP);
             }, [t]);
-        let er = (0, s.e7)([_.Z], () => _.Z.getLayers().includes(A.S9g.COLLECTIBLES_SHOP)),
+        let er = (0, s.e7)([_.Z], () => _.Z.getLayers().includes(w.S9g.COLLECTIBLES_SHOP)),
             el = l.useRef(null),
             ea = l.useRef(null);
         (0, u.Tbt)(el);
@@ -117,10 +117,10 @@ let D = (e) => {
                       newValue: {
                           sessionId: a,
                           pageCategory: Y,
-                          pageSize: w.kN,
+                          pageSize: A.kN,
                       },
                       children: (0, r.jsx)(D, {
-                          onClose: M,
+                          onClose: F,
                           shouldAddEventListener: t && !er,
                           children: (0, r.jsxs)("div", {
                               className: i()(R.shop, { [Z.shopTakeOver]: B }),
@@ -130,15 +130,15 @@ let D = (e) => {
                                   (0, r.jsx)(k.I, {
                                       isFullScreen: t,
                                       isLayer: er,
-                                      onClose: M,
+                                      onClose: F,
                                       handleTransition: et,
                                       selectedTab: $,
                                   }),
                                   (0, r.jsx)("div", {
                                       className: i()(R.shopViewWrapper, {
-                                          [R.visible]: ee === w.f7.VISIBLE,
-                                          [R.in]: ee === w.f7.IN,
-                                          [R.out]: ee === w.f7.OUT,
+                                          [R.visible]: ee === A.f7.VISIBLE,
+                                          [R.in]: ee === A.f7.IN,
+                                          [R.out]: ee === A.f7.OUT,
                                       }),
                                       children: (0, r.jsx)(P.Z, {
                                           tab: $,

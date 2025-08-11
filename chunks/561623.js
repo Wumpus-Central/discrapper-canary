@@ -17,8 +17,8 @@ var t = r(255367),
     y = r(626135),
     h = r(74538),
     I = r(937615),
-    P = r(212895),
-    g = r(296848),
+    g = r(212895),
+    P = r(296848),
     O = r(374649),
     v = r(807163),
     w = r(798769),
@@ -86,7 +86,7 @@ let A = (e) => {
             analyticsLocations: (0, p.ZP)(d.Z.PREMIUM_UNCANCEL_MODAL),
             analyticsLocation: d.Z.PREMIUM_UNCANCEL_MODAL,
         }),
-        H = (0, i.e7)([b.Z], () => (0, g.oE)(W), [W]),
+        H = (0, i.e7)([b.Z], () => (0, P.oE)(W), [W]),
         q = (0, i.e7)([b.Z], () => b.Z.isFetchingForSKU(K)),
         J =
             null == X ||
@@ -198,7 +198,7 @@ let A = (e) => {
                                                   disabled: q,
                                                   onClick: () => {
                                                       if (null != U) {
-                                                          let e = (0, P.tD)(W, U.currency, null == G ? void 0 : G.id);
+                                                          let e = (0, g.tD)(W, U.currency, null == G ? void 0 : G.id);
                                                           null != G && G.id === U.paymentSourceId && e
                                                               ? (u.O5(U, Y, S.Sbl.UNCANCEL_WINBACK_MODAL), D(!0))
                                                               : (B.onClose(),
@@ -211,6 +211,7 @@ let A = (e) => {
                                                   },
                                               }),
                                               (0, t.jsx)(l.zx, {
+                                                  "data-migration-pending": !0,
                                                   look: l.zx.Looks.LINK,
                                                   color: (0, a.wj)(R) ? l.zx.Colors.WHITE : l.zx.Colors.PRIMARY,
                                                   onClick: B.onClose,

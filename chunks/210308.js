@@ -68,6 +68,7 @@ function O(e) {
         className: E.contents,
         children: [
             (0, i.jsx)(o.M0o, {
+                "data-migration-pending": !0,
                 className: E.closeButton,
                 tooltip: j.intl.string(j.t.cpT0Cg),
                 color: o.YX$.TERTIARY,
@@ -96,6 +97,7 @@ function O(e) {
                 }),
             }),
             (0, i.jsx)(l.zx, {
+                "data-migration-pending": !0,
                 className: E.checkItOutButton,
                 color: l.Tt.WHITE,
                 size: l.Ph.SMALL,

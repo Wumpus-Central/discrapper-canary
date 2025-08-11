@@ -1,21 +1,21 @@
-s.d(t, { Z: () => c });
-var r = s(512722),
-    n = s.n(r),
+s.d(t, { Z: () => d });
+var n = s(512722),
+    r = s.n(n),
     a = s(442837),
     i = s(276444),
     l = s(388032);
-let c = (e) => {
+let d = (e) => {
     let { numNewSelected: t, anySelected: s } = e,
-        r = (0, a.e7)([i.Z], () => i.Z.getReferralsRemaining());
-    n()(null != r, "Referrals remaining should not be null");
-    let c = r - t;
-    return 0 === r
+        n = (0, a.e7)([i.Z], () => i.Z.getReferralsRemaining());
+    r()(null != n, "Referrals remaining should not be null");
+    let d = n - t;
+    return 0 === n
         ? l.intl.string(l.t.mPmPrq)
         : 0 !== t || s
-          ? 1 === c
+          ? 1 === d
               ? l.intl.string(l.t.UfPk1t)
-              : c > 0
-                ? l.intl.formatToPlainString(l.t.hZnIz8, { numFriends: c })
-                : l.intl.formatToPlainString(l.t["3PJw6e"], { numReferrals: r })
-          : l.intl.formatToPlainString(l.t.GcKM5e, { numReferrals: r });
+              : d > 0
+                ? l.intl.formatToPlainString(l.t.hZnIz8, { numFriends: d })
+                : l.intl.formatToPlainString(l.t["3PJw6e"], { numReferrals: n })
+          : l.intl.formatToPlainString(l.t.GcKM5e, { numReferrals: n });
 };

@@ -40,6 +40,7 @@ let o = [
         r.x.RPC_SCREENSHARE_READ,
         r.x.RPC_SCREENSHARE_WRITE,
         r.x.RPC_ACTIVITIES_WRITE,
+        r.x.APPLICATION_IDENTITIES_WRITE,
         r.x.APPLICATIONS_BUILDS_UPLOAD,
         r.x.APPLICATIONS_BUILDS_READ,
         r.x.APPLICATIONS_COMMANDS,
@@ -151,6 +152,8 @@ function c(e, t) {
             return [i.intl.string(i.t.hycwLC)];
         case r.x.ACTIVITIES_INVITES_WRITE:
             return [i.intl.string(i.t.IM4CjY)];
+        case r.x.APPLICATION_IDENTITIES_WRITE:
+            return [i.intl.string(i.t["1zioRE"])];
         case r.x.SDK_SOCIAL_LAYER_PRESENCE:
             return [
                 i.intl.string(i.t.Pl1dTU),

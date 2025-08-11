@@ -33,6 +33,7 @@ e.exports = {
     blockHeader: "blockHeader__08415",
     headerLeft: "headerLeft__08415",
     headerRight: "headerRight__08415",
+    feedblockInteractiveBackground: "feedblockInteractiveBackground__08415",
     sortSelect: "sortSelect__08415",
     title: "title__08415",
     informationIcon: "informationIcon__08415",

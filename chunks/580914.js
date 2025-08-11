@@ -1,4 +1,4 @@
-n.d(t, { Z: () => F }), n(388685);
+n.d(t, { Z: () => M }), n(388685);
 var r = n(255367),
     l = n(73800),
     a = n(120356),
@@ -29,8 +29,8 @@ var r = n(255367),
     k = n(619899),
     I = n(859788),
     N = n(215023),
-    w = n(981631),
-    A = n(388032),
+    A = n(981631),
+    w = n(388032),
     B = n(806734);
 let R = {
         rankedSkuIds: [],
@@ -90,15 +90,15 @@ let R = {
             ],
         });
     },
-    F = (e) => {
+    M = (e) => {
         var t;
-        let { isLoading: n, handleTransition: a, category: c, heroBlock: C, tab: j, onVisibilityChange: F } = e,
-            M = (0, p.O)(
+        let { isLoading: n, handleTransition: a, category: c, heroBlock: C, tab: j, onVisibilityChange: M } = e,
+            F = (0, p.O)(
                 (e) => {
-                    null == F || F(e);
+                    null == M || M(e);
                 },
                 0.1,
-                null != F,
+                null != M,
             ),
             H = (0, u.e7)([m.default], () => m.default.getCurrentUser()),
             W = (0, S.u)(),
@@ -122,12 +122,12 @@ let R = {
             el = (0, k.St)(er),
             ea =
                 j === N.AW.ORBS
-                    ? A.intl.string(A.t["1CdL8f"])
-                    : A.intl.formatToPlainString(A.t.wvKYCg, { category_name: z.name }),
+                    ? w.intl.string(w.t["1CdL8f"])
+                    : w.intl.formatToPlainString(w.t.wvKYCg, { category_name: z.name }),
             ei = (0, E.FF)("CollectiblesContent");
         return null != H && (n || z !== R)
             ? (0, r.jsxs)("div", {
-                  ref: M,
+                  ref: F,
                   className: B.heroBlock,
                   children: [
                       (0, r.jsxs)("div", {
@@ -161,7 +161,7 @@ let R = {
                                                     null != z.unpublishedAt &&
                                                         (0, r.jsx)(d.IGR, {
                                                             disableColor: !0,
-                                                            text: A.intl.string(A.t["h/uBCQ"]),
+                                                            text: w.intl.string(w.t["h/uBCQ"]),
                                                             className: B.limitedTimeBadge,
                                                         }),
                                                     (0, r.jsxs)("div", {
@@ -218,9 +218,9 @@ let R = {
                                                   onClick: () => {
                                                       j === N.AW.ORBS
                                                           ? ((0, b.Y)({
-                                                                pageType: w.ZY5.SHOP_ORBS_TAB,
-                                                                sectionType: w.jXE.ORBS_SHOP_HERO_BLOCK,
-                                                                ctaObject: w.qAy.CTA_TO_QUEST_HOME,
+                                                                pageType: A.ZY5.SHOP_ORBS_TAB,
+                                                                sectionType: A.jXE.ORBS_SHOP_HERO_BLOCK,
+                                                                ctaObject: A.qAy.CTA_TO_QUEST_HOME,
                                                             }),
                                                             (0, f.navigateToQuestHome)({
                                                                 fromContent: s.j.ORBS_SHOP_HERO_CTA,
@@ -231,7 +231,7 @@ let R = {
                                                                     ? void 0
                                                                     : z.categorySkuId,
                                                             ),
-                                                            _.default.track(w.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                                                            _.default.track(A.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                                                                 collectibles_shop_session_id:
                                                                     null == V ? void 0 : V.sessionId,
                                                                 sku_id: z.categorySkuId,

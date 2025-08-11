@@ -153,6 +153,7 @@ let y = function (e) {
                         g(
                             h(
                                 {
+                                    "data-migration-pending": !0,
                                     disabled: x.disabled,
                                     onClick: c,
                                     innerClassName: _.premiumSubscribeButton,

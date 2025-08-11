@@ -308,6 +308,7 @@ function w(e) {
                             children: [
                                 null != q
                                     ? (0, r.jsx)(l.zx, {
+                                          "data-migration-pending": !0,
                                           className: a()(A.secondaryAction, X, { [A.enhancedSecondaryAction]: eo }),
                                           onClick: z,
                                           size: l.zx.Sizes.SMALL,

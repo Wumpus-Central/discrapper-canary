@@ -45,8 +45,8 @@ let k = (e) => {
         }, [c]);
         let {
                 isFetchingShopHome: N,
-                fetchShopHomeError: w,
-                shopBlocks: A,
+                fetchShopHomeError: A,
+                shopBlocks: w,
                 refreshShopHome: B,
             } = (0, g.E)(
                 c,
@@ -67,9 +67,9 @@ let k = (e) => {
             }, [B]);
         if (
             (l.useEffect(() => {
-                null != w ||
+                null != A ||
                     N ||
-                    0 === A.length ||
+                    0 === w.length ||
                     (0, f.n)({
                         sessionId: I,
                         checkpoint: f.a.SHOP_RENDERED,
@@ -78,15 +78,15 @@ let k = (e) => {
                         unpublishedCategoriesShown: h,
                         cacheDisabled: p,
                     });
-            }, [w, N, A.length, h, p, I, c, u]),
-            null != w)
+            }, [A, N, w.length, h, p, I, c, u]),
+            null != A)
         )
             return (0, r.jsx)(b.Z, {
                 onRetry: R,
                 errorOrigin: b.i.SHOP_PAGE,
-                errorMessage: w.message,
+                errorMessage: A.message,
             });
-        if (N || 0 === A.length)
+        if (N || 0 === w.length)
             return (0, r.jsxs)("div", {
                 className: i()(L.loadingContainer, L.feedContent),
                 children: [
@@ -109,13 +109,13 @@ let k = (e) => {
                     }),
                 ],
             });
-        let Z = (e, t) => {
+        let Z = (e, t, l) => {
             if (null == e) return null;
-            let l = null,
-                d = !1;
+            let d = null,
+                p = !1;
             switch (e.type) {
                 case o.z.HERO:
-                    l = (0, r.jsx)(
+                    d = (0, r.jsx)(
                         C.Z,
                         {
                             isLoading: N,
@@ -123,77 +123,81 @@ let k = (e) => {
                             heroBlock: e,
                             tab: c,
                         },
-                        t,
+                        l,
                     );
                     break;
                 case o.z.FEATURED:
-                    l = (0, r.jsx)(
+                    d = (0, r.jsx)(
                         v.Z,
                         {
                             isLoading: N,
                             handleTransition: n,
                             featuredBlockRecord: e,
                         },
-                        t,
+                        l,
                     );
                     break;
                 case o.z.FEED:
-                    let p = e.sortedSkuIds;
-                    l = (0, r.jsx)(
+                    let g = e.sortedSkuIds;
+                    d = (0, r.jsx)(
                         O.Z,
                         {
                             title: c === j.AW.ORBS ? P.intl.string(P.t.dFgeub) : P.intl.string(P.t.NSv5KS),
                             isLoading: N || s,
                             numVisibleItems: a,
-                            sortedSkuIds: p,
+                            sortedSkuIds: g,
+                            buttonContainerClassName:
+                                (null == t ? void 0 : t.type) === o.z.IMMERSIVE_BANNER
+                                    ? L.feedblockInteractiveBackground
+                                    : void 0,
                             hasSorting: c === j.AW.HOME,
                             tab: c,
                         },
-                        t,
+                        l,
                     );
                     break;
                 case o.z.WIDE_BANNER:
-                    l = (0, r.jsx)(
+                    d = (0, r.jsx)(
                         x.Z,
                         {
                             handleTransition: n,
                             wideBannerBlock: e,
                             tab: c,
                         },
-                        t,
+                        l,
                     );
                     break;
                 case o.z.SHELF:
-                    l = (0, r.jsx)(
+                    d = (0, r.jsx)(
                         S.Z,
                         {
                             handleTransition: n,
                             shelf: e,
                             tab: c,
                         },
-                        t,
+                        l,
                     );
                     break;
                 case o.z.COUNTDOWN_TIMER:
-                    (l = (0, r.jsx)(
+                    (d = (0, r.jsx)(
                         _.J,
                         {
                             countdownTimerBlock: e,
                             isVisible: y,
                             isFullScreen: u,
                         },
-                        t,
+                        l,
                     )),
-                        (d = !0);
+                        (p = !0);
                     break;
                 case o.z.IMMERSIVE_BANNER:
-                    l = (0, r.jsx)(
+                    d = (0, r.jsx)(
                         E.Z,
                         {
                             immersiveBannerBlock: e,
                             onVisibilityChange: (e) => T(!e),
                         },
-                        t,
+                        l,
                     );
                     break;
                 default:
@@ -202,13 +206,13 @@ let k = (e) => {
             return (0, r.jsx)(
                 "div",
                 {
-                    className: i()(L.blockContainer, L.feedContent, { [L.skipPadding]: 0 === t || d }),
-                    children: l,
+                    className: i()(L.blockContainer, L.feedContent, { [L.skipPadding]: 0 === l || p }),
+                    children: d,
                 },
-                t,
+                l,
             );
         };
-        return (0, r.jsx)(r.Fragment, { children: A.map((e, t) => Z(e, t)) });
+        return (0, r.jsx)(r.Fragment, { children: w.map((e, t) => Z(e, t > 0 ? w[t - 1] : null, t)) });
     },
     I = (e) => {
         let { isFullScreen: t, handleTransition: n, tab: a, transitionState: i } = e,

@@ -68,6 +68,7 @@ let b = (e) => {
                 (null == (n = null == A ? void 0 : A.descriptionCta) ? void 0 : n.hideOnHoverComponent) !== !0 &&
                 null != O &&
                 (0, i.jsx)(a.zx, {
+                    "data-migration-pending": !0,
                     className: x,
                     onClick: O,
                     children: E,

@@ -45,6 +45,7 @@ let d = function (e) {
                                           className: c.churnFooterCTAs,
                                           children: [
                                               (0, t.jsxs)(i.gtL, {
+                                                  "data-migration-pending": !0,
                                                   className: c.churnFooterClaimCTA,
                                                   innerClassName: c.churnFooterClaimCTAInner,
                                                   look: a.iL.OUTLINED,

@@ -30,21 +30,21 @@ var r = n(255367),
     I = n(719138);
 function N(e) {
     var t;
-    let { isFetchingCategories: n, isFullScreen: N, scrollerRef: w, tab: A } = e,
+    let { isFetchingCategories: n, isFullScreen: N, scrollerRef: A, tab: w } = e,
         B = (0, p.sp)(),
         R = null != (t = null == B ? void 0 : B.sessionId) ? t : "",
         { noCache: Z, includeUnpublished: D } = (0, v.Z)(),
-        F = (0, i.e7)([u.default], () => u.default.getCurrentUser()),
-        M = (0, i.e7)([g.Z], () => g.Z.productsWithVariantsAsGroup),
+        M = (0, i.e7)([u.default], () => u.default.getCurrentUser()),
+        F = (0, i.e7)([g.Z], () => g.Z.productsWithVariantsAsGroup),
         [H, W] = l.useState(1),
         V = () => {
             var e;
-            null == w || null == (e = w.current) || e.scrollToTop({ animate: !0 });
+            null == A || null == (e = A.current) || e.scrollToTop({ animate: !0 });
         },
         U = (0, c.Fg)(),
         z = (0, o.ap)(U),
         [G, q, K] = l.useMemo(() => {
-            switch (A) {
+            switch (w) {
                 case O.AW.AVATAR_DECORATIONS:
                     return [E.intl.string(E.t.dRZYND), z ? T.Z : j.Z, a.Z.AVATAR_DECORATION];
                 case O.AW.PROFILE_EFFECTS:
@@ -54,12 +54,12 @@ function N(e) {
                 case O.AW.BUNDLES:
                     return [E.intl.string(E.t.FYFppq), z ? x.Z : y.Z, a.Z.BUNDLE];
             }
-        }, [A, z]),
+        }, [w, z]),
         Y = (0, f.a)(),
         X = l.useMemo(
             () =>
                 Y(
-                    M.filter((e) => {
+                    F.filter((e) => {
                         var t;
                         return (
                             e.type === K ||
@@ -68,14 +68,14 @@ function N(e) {
                         );
                     }),
                 ),
-            [M, K, Y],
+            [F, K, Y],
         ),
         J = (0, b.l)(X);
     return (l.useEffect(() => {
         (0, h.n)({
             sessionId: R,
             checkpoint: h.a.SHOP_MOUNTED,
-            tab: A,
+            tab: w,
             isFullScreen: N,
             unpublishedCategoriesShown: D,
             cacheDisabled: Z,
@@ -86,13 +86,13 @@ function N(e) {
             (0, h.n)({
                 sessionId: R,
                 checkpoint: h.a.SHOP_RENDERED,
-                tab: A,
+                tab: w,
                 isFullScreen: N,
                 unpublishedCategoriesShown: D,
                 cacheDisabled: Z,
             });
-    }, [R, N, D, Z, n, A]),
-    n || null == F)
+    }, [R, N, D, Z, n, w]),
+    n || null == M)
         ? (0, r.jsx)(m.Z, {})
         : (0, r.jsxs)(r.Fragment, {
               children: [
@@ -118,9 +118,9 @@ function N(e) {
                                             _.Z,
                                             {
                                                 product: e,
-                                                user: F,
+                                                user: M,
                                                 category: n,
-                                                tab: A,
+                                                tab: w,
                                             },
                                             e.skuId,
                                         ),
@@ -144,8 +144,8 @@ function N(e) {
                                           page_category: null == B ? void 0 : B.pageCategory,
                                           page_index: e,
                                           page_size: 40,
-                                          cta_name: "".concat(A, " page ").concat(e),
-                                          page_type: A,
+                                          cta_name: "".concat(w, " page ").concat(e),
+                                          page_type: w,
                                       }),
                                           W(e),
                                           V();

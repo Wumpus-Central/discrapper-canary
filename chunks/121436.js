@@ -7,8 +7,8 @@ var a = n(120356),
     u = n(755721),
     d = n(481060),
     s = n(100527),
-    c = n(906732),
-    o = n(313201),
+    o = n(906732),
+    c = n(313201),
     m = n(703656),
     g = n(594174),
     b = n(111361),
@@ -24,8 +24,8 @@ var a = n(120356),
 let O = (e) => {
     var t, n;
     let { transitionState: a, onClose: O, displayProfile: h } = e,
-        { analyticsLocations: S } = (0, c.ZP)(s.Z.TIERED_TENURE_BADGES_MODAL),
-        M = (0, o.Dt)(),
+        { analyticsLocations: S } = (0, o.ZP)(s.Z.TIERED_TENURE_BADGES_MODAL),
+        M = (0, c.Dt)(),
         P = Object.values(x.vK),
         R = (0, p.SI)(null == h ? void 0 : h.userId),
         U = (0, p.Rw)(),
@@ -40,11 +40,11 @@ let O = (e) => {
                 u = T.intl.string(n),
                 d = (0, E.J)(t),
                 s = (0, _.q)(t, a),
-                c = null == h,
-                o = c && (null == U ? void 0 : U.id) === t,
-                m = !c && (null == R ? void 0 : R.id) === t,
-                g = o && (null == U ? void 0 : U.status) === p.Vq.EARNED,
-                b = o && (null == U ? void 0 : U.status) === p.Vq.UPCOMING,
+                o = null == h,
+                c = o && (null == U ? void 0 : U.id) === t,
+                m = !o && (null == R ? void 0 : R.id) === t,
+                g = c && (null == U ? void 0 : U.status) === p.Vq.EARNED,
+                b = c && (null == U ? void 0 : U.status) === p.Vq.UPCOMING,
                 v = m || g;
             return (0, l.jsxs)(
                 "div",
@@ -135,6 +135,7 @@ let O = (e) => {
                                   null != h &&
                                       h.userId !== (null == y ? void 0 : y.id) &&
                                       (0, l.jsx)(d.gtL, {
+                                          "data-migration-pending": !0,
                                           className: j.learnMoreButton,
                                           onClick: w,
                                           children: T.intl.string(T.t.hvVgAQ),

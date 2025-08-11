@@ -11,6 +11,7 @@ var r = n(755721),
 let u = (e) => {
     let { setIsAllPerksVisible: t, previousComponent: n } = e;
     return (0, i.jsx)(s.gtL, {
+        "data-migration-pending": !0,
         color: r.Tt.CUSTOM,
         onlyShineOnHover: !0,
         shineSize: s.rHe.SMALL,

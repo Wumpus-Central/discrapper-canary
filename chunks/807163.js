@@ -105,6 +105,7 @@ function ei(e) {
                         children: s,
                     }),
                     (0, t.jsx)(p.zx, {
+                        "data-migration-pending": !0,
                         look: p.zx.Looks.LINK,
                         color: p.zx.Colors.LINK,
                         size: p.zx.Sizes.NONE,

@@ -96,11 +96,11 @@ let j = (e) => {
         L = l.useRef(null),
         k = (0, p.S)((e) => e.hasDefaultFilters()),
         I = (0, u.sp)(),
-        { handlePageChange: N, currentPage: w } = (0, _.h)({
+        { handlePageChange: N, currentPage: A } = (0, _.h)({
             scrollerRef: x,
             sortedCategories: j,
         }),
-        A = l.useCallback(
+        w = l.useCallback(
             (e) => {
                 c.default.track(E.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                     collectibles_shop_session_id: null == I ? void 0 : I.sessionId,
@@ -224,13 +224,13 @@ let j = (e) => {
                                 b,
                             )
                           : (0, r.jsx)(u.k0, {
-                                newValue: { pageIndex: w },
+                                newValue: { pageIndex: A },
                                 children: (0, r.jsx)(f.Z, {
                                     isFullScreen: t,
                                     sortedCategories: j,
                                     setCategoryRef: T,
-                                    currentPage: w,
-                                    handlePageChange: A,
+                                    currentPage: A,
+                                    handlePageChange: w,
                                 }),
                             }),
                 ],

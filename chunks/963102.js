@@ -149,8 +149,8 @@ function N(e) {
     let { isFullScreen: t, isLayer: n, onClose: a, selectedTab: g, handleTransition: f } = e,
         y = (0, p.ZP)(),
         N = (0, s.e7)([O.default], () => O.default.getCurrentUser()),
-        w = (null == N ? void 0 : N.isStaff()) || (null == N ? void 0 : N.isStaffPersonal()) || !1,
-        { enabled: A } = (0, _.WX)({ location: "collectibles_shop_header_bar" }),
+        A = (null == N ? void 0 : N.isStaff()) || (null == N ? void 0 : N.isStaffPersonal()) || !1,
+        { enabled: w } = (0, _.WX)({ location: "collectibles_shop_header_bar" }),
         B = [
             {
                 tab: j.AW.HOME,
@@ -161,7 +161,7 @@ function N(e) {
                 displayText: P.intl.string(P.t.Ah5sJi),
             },
         ];
-    A &&
+    w &&
         B.push({
             tab: j.AW.ORBS,
             displayText: P.intl.string(P.t.EBYkzs),
@@ -177,15 +177,15 @@ function N(e) {
                 }),
                 (0, h.navigateToQuestHome)({ fromContent: o.j.ORBS_BALANCE_MENU });
         }, [R, t, Z]),
-        F = (0, S.eN)("collectibles_shop_header_bar");
+        M = (0, S.eN)("collectibles_shop_header_bar");
     return (0, r.jsx)(c.f6W, {
         theme: y,
         children: (e) =>
             (0, r.jsxs)(b.Z, {
                 disableDoubleClick: !0,
                 className: i()(e, L.headerBar, { [L.fullscreenHeaderBar]: t }),
-                innerClassname: A ? L.headerBarInner : void 0,
-                toolbar: t || !w ? null : (0, r.jsx)(l.Fragment, {}),
+                innerClassname: w ? L.headerBarInner : void 0,
+                toolbar: t || !A ? null : (0, r.jsx)(l.Fragment, {}),
                 children: [
                     (0, r.jsxs)(c.P3F, {
                         className: L.shopHomeLink,
@@ -223,16 +223,16 @@ function N(e) {
                                   );
                         }),
                     }),
-                    (A || t || F) &&
+                    (w || t || M) &&
                         (0, r.jsxs)("div", {
                             className: L.alignedRightContent,
                             children: [
-                                F &&
+                                M &&
                                     (0, r.jsx)(x.Z, {
                                         handleTransition: f,
                                         selectedTab: g,
                                     }),
-                                A &&
+                                w &&
                                     (0, r.jsx)(v.V9, {
                                         anchorPillType: t ? "SHOP_FULLSCREEN" : "SHOP",
                                         analyticsPage: Z,

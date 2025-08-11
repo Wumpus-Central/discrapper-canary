@@ -150,6 +150,7 @@ function G(e) {
         className: L.footer,
         children: [
             (0, r.jsx)(p.zx, {
+                "data-migration-pending": !0,
                 onClick: n,
                 size: p.zx.Sizes.SMALL,
                 look: p.iL.BLANK,

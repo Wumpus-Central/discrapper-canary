@@ -66,6 +66,7 @@ let u = (e) => {
                         0 !== b.length &&
                             null != g &&
                             (0, i.jsx)(a.zx, {
+                                "data-migration-pending": !0,
                                 className: u,
                                 fullWidth: !0,
                                 onClick: g,

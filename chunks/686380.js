@@ -139,6 +139,7 @@ class Z extends i.Component {
             children: [
                 (0, r.jsx)("div", {
                     children: (0, r.jsx)(d.zx, {
+                        "data-migration-pending": !0,
                         disabled: t,
                         color: d.zx.Colors.BRAND,
                         size: d.zx.Sizes.SMALL,

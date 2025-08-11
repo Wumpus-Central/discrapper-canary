@@ -26,40 +26,48 @@ var r = n(255367),
     T = n(806734);
 let P = (e) => {
     var t;
-    let { isLoading: n, title: a, sortedSkuIds: P, numVisibleItems: L, hasSorting: k, tab: I } = e,
-        N = (0, o.e7)([d.default], () => d.default.getCurrentUser()),
-        w = b.ZP.canUseCollectibles(N),
-        { enableShopTakeOver: A } = _.Z.useConfig({ location: "FeedBlock" }),
+    let {
+            isLoading: n,
+            title: a,
+            sortedSkuIds: P,
+            numVisibleItems: L,
+            hasSorting: k,
+            tab: I,
+            buttonContainerClassName: N,
+        } = e,
+        A = (0, o.e7)([d.default], () => d.default.getCurrentUser()),
+        w = b.ZP.canUseCollectibles(A),
+        { enableShopTakeOver: B } = _.Z.useConfig({ location: "FeedBlock" }),
         {
-            sortType: B,
-            setSortType: R,
-            sortedItems: Z,
-            sortOptions: D,
+            sortType: R,
+            setSortType: Z,
+            sortedItems: D,
+            sortOptions: M,
             shuffleProducts: F,
-            showRecommendationOption: M,
+            showRecommendationOption: H,
         } = (0, v.N)(P, w),
-        H = (0, S.St)(Z),
-        W = (0, o.e7)([u.Z], () => u.Z.useReducedMotion),
-        V = (0, o.e7)([p.Z], () => p.Z.isFocused()),
-        U = !W && V,
-        { animationPhase: z, startAnimation: G } = (0, E.y)(),
-        q = (0, h.sp)(),
-        K = null != (t = null == q ? void 0 : q.sessionId) ? t : "",
-        Y = l.useRef(null),
-        X = l.useCallback(
+        W = (0, S.St)(D),
+        V = (0, o.e7)([u.Z], () => u.Z.useReducedMotion),
+        U = (0, o.e7)([p.Z], () => p.Z.isFocused()),
+        z = !V && U,
+        { animationPhase: G, startAnimation: q } = (0, E.y)(),
+        K = (0, h.sp)(),
+        Y = null != (t = null == K ? void 0 : K.sessionId) ? t : "",
+        X = l.useRef(null),
+        J = l.useCallback(
             (e) => {
-                G({
+                q({
                     isShuffling: !1,
-                    onOutroComplete: () => R(e),
+                    onOutroComplete: () => Z(e),
                 }),
                     g.default.track(y.rMx.COLLECTIBLES_SHOP_FEED_SORT_CHANGED, {
-                        page_session_id: K,
+                        page_session_id: Y,
                         sort_type: e,
                     });
             },
-            [G, R, K],
+            [q, Z, Y],
         );
-    return null == N
+    return null == A
         ? null
         : (0, r.jsxs)("div", {
               className: i()(T.popularPicksSection, T.centeredSection),
@@ -74,7 +82,7 @@ let P = (e) => {
                                       variant: "heading-lg/semibold",
                                       children: a,
                                   }),
-                                  M &&
+                                  H &&
                                       (0, r.jsx)(s.ua7, {
                                           text: x.intl.string(x.t["3taPdn"]),
                                           position: "top",
@@ -142,35 +150,41 @@ let P = (e) => {
                           }),
                           k
                               ? (0, r.jsxs)("div", {
-                                    className: i()(T.headerRight, { [j.shopTakeOver]: A }),
+                                    className: i()(T.headerRight, { [j.shopTakeOver]: B }),
                                     children: [
                                         (0, r.jsx)(s.Text, {
                                             variant: "text-md/medium",
                                             children: x.intl.string(x.t.uaX709),
                                         }),
-                                        (0, r.jsx)(s.PhF, {
-                                            className: T.sortSelect,
-                                            options: D,
-                                            select: X,
-                                            isSelected: (e) => e === B,
-                                            serialize: (e) => e,
-                                            popoutClassName: i()({ [j.shopTakeOver]: A }),
+                                        (0, r.jsx)("div", {
+                                            className: N,
+                                            children: (0, r.jsx)(s.PhF, {
+                                                options: M,
+                                                select: J,
+                                                className: T.sortSelect,
+                                                popoutClassName: i()({ [j.shopTakeOver]: B }),
+                                                isSelected: (e) => e === R,
+                                                serialize: (e) => e,
+                                            }),
                                         }),
-                                        (0, r.jsx)(s.zxk, {
-                                            variant: "secondary",
-                                            text: x.intl.string(x.t.X3tnc3),
-                                            buttonRef: Y,
-                                            onClick: () => {
-                                                G({
-                                                    isShuffling: !0,
-                                                    onOutroComplete: F,
-                                                    returnRef: Y,
-                                                }),
-                                                    g.default.track(y.rMx.COLLECTIBLES_SHOP_FEED_SHUFFLE_CLICKED, {
-                                                        page_session_id: K,
-                                                    });
-                                            },
-                                            disabled: z !== E.g.MOUNTED && z !== E.g.FINISHED,
+                                        (0, r.jsx)("div", {
+                                            className: N,
+                                            children: (0, r.jsx)(s.zxk, {
+                                                variant: "secondary",
+                                                text: x.intl.string(x.t.X3tnc3),
+                                                buttonRef: X,
+                                                onClick: () => {
+                                                    q({
+                                                        isShuffling: !0,
+                                                        onOutroComplete: F,
+                                                        returnRef: X,
+                                                    }),
+                                                        g.default.track(y.rMx.COLLECTIBLES_SHOP_FEED_SHUFFLE_CLICKED, {
+                                                            page_session_id: Y,
+                                                        });
+                                                },
+                                                disabled: G !== E.g.MOUNTED && G !== E.g.FINISHED,
+                                            }),
                                         }),
                                     ],
                                 })
@@ -183,23 +197,23 @@ let P = (e) => {
                           ? (0, r.jsx)(r.Fragment, {
                                 children: [...Array(12)].map((e, t) => (0, r.jsx)(O.K, {}, t + 1)),
                             })
-                          : H.slice(0, L).map((e, t) => {
+                          : W.slice(0, L).map((e, t) => {
                                 let n,
                                     l = m.Z.getCategoryForProduct(e.skuId);
                                 if (null == e || null == l) return null;
-                                if (U)
-                                    if (z === E.g.SHUFFLE_OUT)
+                                if (z)
+                                    if (G === E.g.SHUFFLE_OUT)
                                         return (0, r.jsx)(
                                             "div",
                                             { className: T.shuffleOutro },
                                             "".concat(e.skuId, "-").concat(t),
                                         );
                                     else
-                                        z === E.g.SORT_OUT
+                                        G === E.g.SORT_OUT
                                             ? (n = T.sortChangedOutro)
-                                            : z === E.g.SHUFFLE_IN
+                                            : G === E.g.SHUFFLE_IN
                                               ? (n = T.shuffleIntro)
-                                              : z === E.g.SORT_IN && (n = T.sortChangedIntro);
+                                              : G === E.g.SORT_IN && (n = T.sortChangedIntro);
                                 return (0, r.jsx)(
                                     h.k0,
                                     {
@@ -211,7 +225,7 @@ let P = (e) => {
                                         children: (0, r.jsx)(C.Z, {
                                             product: e,
                                             category: l,
-                                            user: N,
+                                            user: A,
                                             tab: I,
                                             className: n,
                                         }),

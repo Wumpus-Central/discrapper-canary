@@ -201,6 +201,7 @@ let I = (e) => {
                                     [O.expandedProgressBarButtonContainerLayout]: !t,
                                 }),
                                 children: (0, i.jsx)(c.gtL, {
+                                    "data-migration-pending": !0,
                                     className: O.expandedProgressBarSelectFriendsCTA,
                                     color: o.Tt.CUSTOM,
                                     onClick: () => A({ analyticsLocations: I }),

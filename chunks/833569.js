@@ -187,6 +187,7 @@ function G(e) {
                       },
                   }),
         I = (0, i.jsx)(m.zx, {
+            "data-migration-pending": !0,
             look: m.zx.Looks.LINK,
             color: (0, d.ap)(j) ? m.zx.Colors.PRIMARY : m.zx.Colors.WHITE,
             onClick: o,
@@ -443,6 +444,7 @@ let ee = (e) => {
                             },
                         }),
                         (0, i.jsx)(m.zx, {
+                            "data-migration-pending": !0,
                             look: m.zx.Looks.LINK,
                             color: (0, d.wj)(I) ? m.zx.Colors.WHITE : m.zx.Colors.PRIMARY,
                             onClick: l,
@@ -490,6 +492,7 @@ let ee = (e) => {
                             onClick: () => M(z.R.CONFIRM),
                         }),
                         (0, i.jsx)(m.zx, {
+                            "data-migration-pending": !0,
                             look: m.zx.Looks.LINK,
                             color: (0, d.wj)(I) ? m.zx.Colors.WHITE : m.zx.Colors.PRIMARY,
                             onClick: () => $(w),
