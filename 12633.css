@@ -70727,34 +70727,6 @@ html .progress__61462 {
     box-shadow: var(--elevation-low)
 }
 
-.addReactButton__34c2c,
-.buttonInner__34c2c {
-    align-items: center;
-    background-color: var(--background-mod-subtle);
-    border: 1px solid transparent;
-    border-radius: var(--radius-sm);
-    color: var(--interactive-normal);
-    display: flex;
-    gap: 8px;
-    height: 24px
-}
-
-.addReactButton__34c2c:hover,
-.buttonInner__34c2c:hover {
-    background-color: var(--background-mod-normal);
-    border-color: var(--border-faint);
-    color: var(--interactive-active)
-}
-
-.button__34c2c {
-    min-width: 0;
-    padding: 0
-}
-
-.buttonInner__34c2c {
-    padding: 2px 8px
-}
-
 .reactButtons__34c2c {
     align-items: center;
     display: flex;
@@ -70775,20 +70747,18 @@ html .progress__61462 {
     margin-right: var(--space-16)
 }
 
-.showOnHover__34c2c {
-    margin-left: 8px
-}
-
-.reactButtons__34c2c:hover .showOnHover__34c2c {
-    visibility: visible
-}
-
 .addReactButton__34c2c {
     align-items: center;
-    color: var(--interactive-normal);
+    background-color: var(--control-background-secondary-default);
+    border: 1px solid transparent;
+    border-color: var(--control-border-secondary-default);
+    border-radius: var(--radius-sm);
+    color: var(--control-text-secondary-default);
     display: flex;
     font-size: 14px;
     font-weight: var(--font-weight-medium);
+    gap: 8px;
+    height: 24px;
     justify-content: center;
     line-height: 16px;
     margin: 0 2px;
@@ -70798,12 +70768,20 @@ html .progress__61462 {
     width: auto
 }
 
-.addReactButton__34c2c:hover {
-    color: var(--interactive-active)
-}
-
 .addReactButton__34c2c.hasNoReactions__34c2c {
     padding: 2px 8px
+}
+
+.addReactButton__34c2c:hover {
+    background-color: var(--control-background-secondary-hover);
+    border-color: var(--control-border-secondary-hover);
+    color: var(--control-text-secondary-hover)
+}
+
+.addReactButton__34c2c:active {
+    background-color: var(--control-background-secondary-active);
+    border-color: var(--control-border-secondary-active);
+    color: var(--control-text-secondary-active)
 }
 
 .reactions__34c2c {
@@ -70817,25 +70795,6 @@ html .progress__61462 {
     display: flex;
     flex-shrink: 0;
     gap: 4px
-}
-
-.divider__34c2c {
-    background-color: var(--border-subtle);
-    height: 8px;
-    margin-bottom: 16px;
-    width: 100%
-}
-
-.actionButton__34c2c,
-.active__34c2c,
-.active__34c2c:hover {
-    color: var(--text-brand)
-}
-
-.actionButton__34c2c {
-    align-items: center;
-    display: flex;
-    gap: var(--space-4)
 }
 
 .summaryDivider__3aab5 {
