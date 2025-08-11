@@ -769,7 +769,7 @@ class el extends (i = s.PureComponent) {
                     rule: "SKU_STICKER_PACK",
                     canRefund: () => {
                         let { payment: e } = this.props;
-                        return null == e.sku || !(0, U.yE)(e.sku.flags, H.l4R.STICKER_PACK);
+                        return null == e.sku || !(0, U.yE)(e.sku.flags, H.l4R.STICKER);
                     },
                 },
                 {

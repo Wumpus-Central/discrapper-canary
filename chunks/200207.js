@@ -1,26 +1,27 @@
-t.d(n, { I: () => d }), t(953529);
-var r = t(255367);
-t(73800);
-var i = t(120356),
-    l = t.n(i),
-    s = t(708816),
-    o = t(790472),
-    u = t(777207),
-    a = t(559554),
-    c = t(820468);
+n.d(t, { I: () => d }), n(953529);
+var r = n(255367);
+n(73800);
+var i = n(120356),
+    l = n.n(i),
+    o = n(708816),
+    s = n(790472),
+    a = n(777207),
+    u = n(559554),
+    c = n(820468);
 function d(e) {
     let {
-        title: n,
-        description: t,
+        title: t,
+        description: n,
         headerImage: i,
         onDetails: d,
         onPurchase: p,
-        PurchaseButton: m,
-        availabilityLabel: b,
+        PurchaseButton: b,
+        GiftButton: m,
+        availabilityLabel: f,
     } = e;
-    return (0, r.jsx)(s.tE, {
+    return (0, r.jsx)(o.tE, {
         children: (0, r.jsxs)("div", {
-            className: l()(a.wrapper, c.hoverCard),
+            className: l()(u.wrapper, c.hoverCard),
             tabIndex: 0,
             onClick: () => {
                 null != d ? d() : null != p && p();
@@ -30,12 +31,12 @@ function d(e) {
             },
             children: [
                 (0, r.jsx)("div", {
-                    className: a.cardHeaderImg,
+                    className: u.cardHeaderImg,
                     style:
                         null != i ? { backgroundImage: null != i ? "url(".concat(i.toString(), ")") : void 0 } : void 0,
                     children:
                         null == i &&
-                        (0, r.jsx)(o.P, {
+                        (0, r.jsx)(s.P, {
                             color: "white",
                             size: "custom",
                             height: 80,
@@ -43,35 +44,43 @@ function d(e) {
                         }),
                 }),
                 (0, r.jsxs)("div", {
-                    className: a.details,
+                    className: u.details,
                     children: [
-                        (0, r.jsx)(u.x, {
+                        (0, r.jsx)(a.x, {
                             color: "header-primary",
                             variant: "text-md/semibold",
-                            children: n,
+                            children: t,
                         }),
-                        null != t &&
-                            (0, r.jsx)(u.x, {
-                                className: a.description,
+                        null != n &&
+                            (0, r.jsx)(a.x, {
+                                className: u.description,
                                 color: "text-muted",
                                 variant: "text-sm/normal",
-                                children: t,
+                                children: n,
                             }),
                     ],
                 }),
-                null != m &&
+                (null != b || null != m) &&
                     (0, r.jsxs)("div", {
-                        className: a.footer,
+                        className: u.footer,
                         children: [
-                            (0, r.jsx)(u.x, {
-                                color: "interactive-normal",
-                                variant: "text-sm/normal",
-                                children: b,
-                            }),
-                            (0, r.jsx)(m, {
-                                onClick: (e) => {
-                                    e.stopPropagation(), null == p || p();
-                                },
+                            null != b &&
+                                (0, r.jsx)(a.x, {
+                                    color: "interactive-normal",
+                                    variant: "text-sm/normal",
+                                    children: f,
+                                }),
+                            (0, r.jsxs)("div", {
+                                className: u.buttonGroup,
+                                children: [
+                                    null != b &&
+                                        (0, r.jsx)(b, {
+                                            onClick: (e) => {
+                                                e.stopPropagation(), null == p || p();
+                                            },
+                                        }),
+                                    null != m && (0, r.jsx)(m, {}),
+                                ],
                             }),
                         ],
                     }),

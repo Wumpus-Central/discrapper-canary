@@ -109,8 +109,8 @@ var r = n(255367),
     e3 = n(194082),
     e8 = n(176505),
     e7 = n(981631),
-    e5 = n(918559),
-    e2 = n(354459),
+    e2 = n(918559),
+    e5 = n(354459),
     e4 = n(921944),
     e6 = n(408491),
     e9 = n(440493),
@@ -604,7 +604,7 @@ class ts extends i.PureComponent {
             }),
             tr(this, "renderStreamQualityLiveIndicatorToolbarItem", () => {
                 let { selectedParticipant: e, premiumIndicatorEnabled: t } = this.props;
-                return (null == e ? void 0 : e.type) !== e2.fO.STREAM
+                return (null == e ? void 0 : e.type) !== e5.fO.STREAM
                     ? null
                     : (0, r.jsx)(
                           z.Z,
@@ -892,7 +892,7 @@ let to = (0, C.Z)(ts),
         }, [R, c, v, C]);
         let D = (0, h.e7)([I.ZP], () => I.ZP.getCurrentEmbeddedActivity()),
             k = (0, h.e7)([I.ZP], () => I.ZP.getActivityPanelMode()),
-            L = null != D && !(0, P.Z)(null == c ? void 0 : c.id) && k === e5.Ez.PANEL,
+            L = null != D && !(0, P.Z)(null == c ? void 0 : c.id) && k === e2.Ez.PANEL,
             M = (0, h.e7)(
                 [eK.Z],
                 () => null != c && c.isVocalThread() && !u().isEmpty(eK.Z.getVoiceStatesForChannel(c.id)),
@@ -907,8 +907,8 @@ let to = (0, C.Z)(ts),
             q = (0, h.e7)(
                 [A.Z, I.ZP],
                 () =>
-                    null != I.ZP.getConnectedActivityLocation() && I.ZP.getActivityPanelMode() === e5.Ez.PANEL
-                        ? I.ZP.getFocusedLayout() === e5.MI.NO_CHAT
+                    null != I.ZP.getConnectedActivityLocation() && I.ZP.getActivityPanelMode() === e2.Ez.PANEL
+                        ? I.ZP.getFocusedLayout() === e2.MI.NO_CHAT
                             ? e7.AEg.NO_CHAT
                             : e7.AEg.NORMAL
                         : null != s

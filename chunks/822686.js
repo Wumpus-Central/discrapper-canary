@@ -1,7 +1,7 @@
 n.d(t, { Z: () => m }), n(388685);
 var r = n(255367),
-    l = n(73800),
-    i = n(904245),
+    i = n(73800),
+    l = n(904245),
     a = n(367907),
     s = n(138201),
     o = n(592125),
@@ -10,13 +10,13 @@ var r = n(255367),
     u = n(388032);
 let m = (e) => {
     let { message: t, reportId: n } = e,
-        [m, p] = l.useState(!1),
-        g = l.useCallback(() => {
+        [m, p] = i.useState(!1),
+        g = i.useCallback(() => {
             p(!0),
                 a.ZP.trackWithMetadata(d.rMx.IAR_DELETE_MESSAGE_BUTTON_CLICKED, { report_id: n }),
-                i.Z.deleteMessage(t.getChannelId(), t.id);
+                l.Z.deleteMessage(t.getChannelId(), t.id);
         }, [t, n]),
-        x = l.useMemo(() => {
+        _ = i.useMemo(() => {
             let e = o.Z.getChannel(t.getChannelId());
             return (
                 null != e &&
@@ -25,7 +25,7 @@ let m = (e) => {
                 c.Z.canWithPartialContext(d.Plq.MANAGE_MESSAGES, { channelId: e.id })
             );
         }, [t]);
-    return null != t && x
+    return null != t && _
         ? (0, r.jsx)(s.JZ, {
               title: u.intl.string(u.t.c9BHLy),
               description: u.intl.string(u.t.dK8S09),

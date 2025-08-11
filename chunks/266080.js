@@ -1,7 +1,7 @@
 n.d(t, { Z: () => m }), n(388685);
 var r = n(255367),
-    l = n(73800),
-    i = n(481060),
+    i = n(73800),
+    l = n(481060),
     a = n(367907),
     s = n(434404),
     o = n(138201),
@@ -10,13 +10,13 @@ var r = n(255367),
     u = n(388032);
 let m = (e) => {
     let { guildId: t, reportId: n } = e,
-        [m, p] = l.useState(!1),
+        [m, p] = i.useState(!1),
         g = c.Z.getGuild(t),
-        x = null != g;
-    l.useEffect(() => {
-        p(!x);
-    }, [x]);
-    let _ = l.useCallback(() => {
+        _ = null != g;
+    i.useEffect(() => {
+        p(!_);
+    }, [_]);
+    let b = i.useCallback(() => {
         p(!0),
             a.ZP.trackWithMetadata(d.rMx.IAR_LEAVE_GUILD_BUTTON_CLICKED, {
                 guild_id: t,
@@ -33,10 +33,10 @@ let m = (e) => {
               buttonDisabled: m,
               buttonVariant: "critical-primary",
               onButtonPress: () => {
-                  (0, i.h7j)((e) => {
+                  (0, l.h7j)((e) => {
                       var t, n;
                       return (0, r.jsx)(
-                          i.ConfirmModal,
+                          l.ConfirmModal,
                           ((t = (function (e) {
                               for (var t = 1; t < arguments.length; t++) {
                                   var n = null != arguments[t] ? arguments[t] : {},
@@ -66,13 +66,13 @@ let m = (e) => {
                                   header: u.intl.formatToPlainString(u.t["1GX6Pz"], { name: g.name }),
                                   confirmText: u.intl.string(u.t.J2TBi4),
                                   cancelText: u.intl.string(u.t["ETE/oK"]),
-                                  onConfirm: _,
+                                  onConfirm: b,
                               },
                               e,
                           )),
                           (n = n =
                               {
-                                  children: (0, r.jsx)(i.Text, {
+                                  children: (0, r.jsx)(l.Text, {
                                       variant: "text-md/normal",
                                       children: u.intl.format(u.t.ZEXC0t, { name: g.name }),
                                   }),

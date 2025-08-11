@@ -31,7 +31,9 @@ function p(e) {
     i.useEffect(() => {
         if (v || p || null == y) return;
         let e = b[y];
-        return O && (null == e ? void 0 : e.productLine) === _.POd.COLLECTIBLES
+        return O &&
+            ((null == e ? void 0 : e.productLine) === _.POd.COLLECTIBLES ||
+                (null == e ? void 0 : e.productLine) === _.POd.APPLICATION)
             ? void t(u.h8.GIFT_CUSTOMIZATION)
             : 0 === Object.keys(m).length
               ? void t(u.h8.ADD_PAYMENT_STEPS)

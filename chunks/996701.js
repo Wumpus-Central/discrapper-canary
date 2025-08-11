@@ -1,8 +1,8 @@
 n.d(t, { Z: () => m });
 var r = n(255367);
 n(73800);
-var l = n(120356),
-    i = n.n(l),
+var i = n(120356),
+    l = n.n(i),
     a = n(481060),
     s = n(782568),
     o = n(388032),
@@ -10,12 +10,12 @@ var l = n(120356),
     d = n(735247);
 let u = (e) => {
     let {
-        data: { url: t, link_text: n, link_description: l, is_localized: o },
+        data: { url: t, link_text: n, link_description: i, is_localized: o },
     } = e;
     return o
         ? (0, r.jsxs)(a.P3F, {
               role: "link",
-              className: i()(d.linkButton, c.listElement),
+              className: l()(d.linkButton, c.listElement),
               onClick: () => {
                   (0, s.Z)(t);
               },
@@ -28,12 +28,12 @@ let u = (e) => {
                               variant: "text-md/semibold",
                               children: n,
                           }),
-                          null != l &&
-                              "" !== l &&
+                          null != i &&
+                              "" !== i &&
                               (0, r.jsx)(a.Text, {
                                   variant: "text-md/normal",
                                   color: "text-muted",
-                                  children: l,
+                                  children: i,
                               }),
                       ],
                   }),
@@ -62,14 +62,14 @@ function m(e) {
             let { data: n } = e;
             return (0, r.jsx)(u, { data: n }, "external-link+".concat(t));
         }),
-        l = t.some((e) => {
+        i = t.some((e) => {
             let { data: t } = e;
             return t.is_header_hidden;
         });
     return (0, r.jsxs)("div", {
-        className: i()(d.linksContainer, c.listElementWrapper),
+        className: l()(d.linksContainer, c.listElementWrapper),
         children: [
-            !l &&
+            !i &&
                 (0, r.jsx)(a.X6q, {
                     variant: "heading-sm/semibold",
                     color: "header-secondary",

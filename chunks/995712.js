@@ -1,8 +1,8 @@
 n.d(t, { Z: () => c });
 var r = n(255367);
 n(73800);
-var l = n(481060),
-    i = n(686546),
+var i = n(481060),
+    l = n(686546),
     a = n(768581),
     s = n(388032),
     o = n(519582);
@@ -22,7 +22,7 @@ let c = (e) => {
     return (0, r.jsxs)("div", {
         className: o.container,
         children: [
-            (0, r.jsx)(l.X6q, {
+            (0, r.jsx)(i.X6q, {
                 className: o.header,
                 variant: "heading-sm/semibold",
                 children: s.intl.string(s.t.nTe4HB),
@@ -32,8 +32,8 @@ let c = (e) => {
                 children: (0, r.jsxs)("div", {
                     className: o.guildInfo,
                     children: [
-                        (0, r.jsx)(i.ZP, {
-                            mask: i.ZP.Masks.SQUIRCLE,
+                        (0, r.jsx)(l.ZP, {
+                            mask: l.ZP.Masks.SQUIRCLE,
                             width: 32,
                             height: 32,
                             className: o.guildIconMask,
@@ -43,7 +43,7 @@ let c = (e) => {
                                 className: o.guildIcon,
                             }),
                         }),
-                        (0, r.jsx)(l.Text, {
+                        (0, r.jsx)(i.Text, {
                             color: "header-secondary",
                             variant: "text-sm/normal",
                             children: u,

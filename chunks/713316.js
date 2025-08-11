@@ -1,46 +1,54 @@
-n.d(t, { w: () => p });
+n.d(t, { w: () => h });
 var r = n(255367);
 n(73800);
 var i = n(512722),
     o = n.n(i),
     a = n(680018),
     s = n(481060),
-    l = n(563132),
-    c = n(698708),
-    u = n(844068),
-    d = n(27034),
-    f = n(388032),
-    _ = n(419667);
-function p(e) {
-    let { handleClose: t } = e,
-        { skusById: n, selectedSkuId: i, application: p } = (0, l.JL)();
-    o()(null != i, "Expected selectedSkuId"), o()(null != p, "Expected application");
-    let h = n[i];
-    o()(null != h, "Expected sku");
-    let m = f.intl.formatToPlainString(f.t.wK0IbG, {
-        applicationName: p.name,
-        itemName: h.name,
-    });
-    return (0, r.jsxs)(d.C3, {
+    l = n(987209),
+    c = n(563132),
+    u = n(698708),
+    d = n(844068),
+    f = n(27034),
+    _ = n(388032),
+    p = n(419667);
+function h(e) {
+    var t;
+    let { handleClose: n } = e,
+        { skusById: i, selectedSkuId: h, application: m } = (0, c.JL)(),
+        { isGift: g, giftRecipient: E } = (0, l.wD)();
+    o()(null != h, "Expected selectedSkuId"), o()(null != m, "Expected application");
+    let b = i[h];
+    o()(null != b, "Expected sku");
+    let y = g
+        ? _.intl.formatToPlainString(_.t["2VjPT0"], {
+              itemName: b.name,
+              giftRecipient: null != (t = null == E ? void 0 : E.username) ? t : "your recipient",
+          })
+        : _.intl.formatToPlainString(_.t.wK0IbG, {
+              applicationName: m.name,
+              itemName: b.name,
+          });
+    return (0, r.jsxs)(f.C3, {
         children: [
+            (0, r.jsx)(d.Z, {}),
             (0, r.jsx)(u.Z, {}),
-            (0, r.jsx)(c.Z, {}),
             (0, r.jsxs)("div", {
-                className: _.confirmation,
+                className: p.confirmation,
                 children: [
                     (0, r.jsx)(s.X6q, {
                         variant: "heading-xxl/bold",
-                        className: _.confirmationHeader,
+                        className: p.confirmationHeader,
                         children: "Success!",
                     }),
                     (0, r.jsx)(s.Text, {
                         variant: "text-md/normal",
-                        children: m,
+                        children: y,
                     }),
-                    (0, r.jsx)("div", { className: _.divider }),
+                    (0, r.jsx)("div", { className: p.divider }),
                     (0, r.jsx)(a.z, {
-                        onClick: t,
-                        text: f.intl.string(f.t.cpT0Cg),
+                        onClick: n,
+                        text: _.intl.string(_.t.cpT0Cg),
                         fullWidth: !0,
                     }),
                 ],

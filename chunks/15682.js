@@ -1,24 +1,24 @@
 n.d(t, { Z: () => s }), n(388685);
 var r = n(255367);
 n(73800);
-var l = n(481060),
-    i = n(521545);
+var i = n(481060),
+    l = n(521545);
 let a = (e) => {
         let { onChange: t, label: n, subtitle: a, selected: s } = e;
         return (0, r.jsx)("div", {
-            className: i.checkboxRow,
-            children: (0, r.jsxs)(l.XZJ, {
-                type: l.XZJ.Types.INVERTED,
+            className: l.checkboxRow,
+            children: (0, r.jsxs)(i.XZJ, {
+                type: i.XZJ.Types.INVERTED,
                 onChange: () => t(),
                 value: s,
                 children: [
-                    (0, r.jsx)(l.Text, {
+                    (0, r.jsx)(i.Text, {
                         color: "interactive-active",
                         variant: "text-md/semibold",
                         children: n,
                     }),
                     null != a
-                        ? (0, r.jsx)(l.Text, {
+                        ? (0, r.jsx)(i.Text, {
                               color: "interactive-active",
                               variant: "text-sm/normal",
                               children: a,
@@ -29,17 +29,17 @@ let a = (e) => {
         });
     },
     s = (e) => {
-        let { element: t, state: n, onChange: l } = e;
+        let { element: t, state: n, onChange: i } = e;
         if ((null == t ? void 0 : t.type) !== "checkbox") return null;
-        let { data: i } = t;
+        let { data: l } = t;
         return (0, r.jsx)("div", {
-            children: i.map((e, t) => {
-                let [i, s, o] = e;
+            children: l.map((e, t) => {
+                let [l, s, o] = e;
                 return (0, r.jsx)(
                     a,
                     {
-                        onChange: () => l(i, s),
-                        selected: i in n,
+                        onChange: () => i(l, s),
+                        selected: l in n,
                         label: s,
                         subtitle: o,
                     },

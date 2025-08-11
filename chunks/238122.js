@@ -1,7 +1,7 @@
 n.d(t, { Z: () => m }), n(388685), n(413496), n(433524), n(35282);
 var r = n(255367),
-    l = n(73800),
-    i = n(481060),
+    i = n(73800),
+    l = n(481060),
     a = n(454585),
     s = n(273744),
     o = n(388032),
@@ -10,12 +10,12 @@ var r = n(255367),
 let u = (e) => {
         var t, n;
         let {
-                data: { title: u, subtitle: m, placeholder: p, rows: g, character_limit: x, pattern: _ },
-                onChange: b,
-                initialText: h,
+                data: { title: u, subtitle: m, placeholder: p, rows: g, character_limit: _, pattern: b },
+                onChange: h,
+                initialText: x,
                 isRequired: f,
             } = e,
-            v = l.useRef(
+            v = i.useRef(
                 a.Z.reactParserFor(
                     ((t = (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
@@ -58,30 +58,30 @@ let u = (e) => {
                     t),
                 ),
             ),
-            [j, y] = l.useState(""),
-            [O, Z] = l.useState(null);
-        l.useEffect(() => {
+            [j, y] = i.useState(""),
+            [O, Z] = i.useState(null);
+        i.useEffect(() => {
             var e;
-            y(null != (e = null == h ? void 0 : h.value) ? e : "");
-        }, [h]);
-        let I = l.useCallback(
+            y(null != (e = null == x ? void 0 : x.value) ? e : "");
+        }, [x]);
+        let I = i.useCallback(
             (e) => {
-                let t = null != _ ? new RegExp(_) : null;
+                let t = null != b ? new RegExp(b) : null;
                 null == t || t.test(e)
                     ? null != e &&
                       (Z(null),
                       y(e),
-                      b({
+                      h({
                           value: e,
                           isValid: !0,
                       }))
                     : (Z(o.intl.string(o.t["24xrGR"])),
-                      b({
+                      h({
                           value: e,
                           isValid: !1,
                       }));
             },
-            [b, _],
+            [h, b],
         );
         return (0, r.jsxs)("div", {
             className: d.marginBottom8,
@@ -89,7 +89,7 @@ let u = (e) => {
                 null != u &&
                     (0, r.jsx)("div", {
                         className: d.marginBottom8,
-                        children: (0, r.jsxs)(i.Text, {
+                        children: (0, r.jsxs)(l.Text, {
                             variant: "text-sm/bold",
                             children: [
                                 u,
@@ -101,8 +101,8 @@ let u = (e) => {
                             ],
                         }),
                     }),
-                (0, r.jsx)(i.Kx8, {
-                    maxLength: x,
+                (0, r.jsx)(l.Kx8, {
+                    maxLength: _,
                     onChange: I,
                     value: j,
                     error: O,
@@ -112,7 +112,7 @@ let u = (e) => {
                 }),
                 null != m &&
                     (0, r.jsx)("div", {
-                        children: (0, r.jsx)(i.Text, {
+                        children: (0, r.jsx)(l.Text, {
                             variant: "text-sm/normal",
                             children: v.current(m),
                         }),
@@ -121,20 +121,20 @@ let u = (e) => {
         });
     },
     m = (e) => {
-        let { elements: t, onChange: n, state: l } = e,
-            i = t.map((e) => {
+        let { elements: t, onChange: n, state: i } = e,
+            l = t.map((e) => {
                 var t;
-                let i = e.name;
+                let l = e.name;
                 return (0, r.jsx)(
                     u,
                     {
                         data: e.data,
-                        onChange: (e) => n(i, e.value, e.isValid),
-                        initialText: null != (t = null == l ? void 0 : l[i]) ? t : void 0,
+                        onChange: (e) => n(l, e.value, e.isValid),
+                        initialText: null != (t = null == i ? void 0 : i[l]) ? t : void 0,
                         isRequired: e.should_submit_data,
                     },
-                    i,
+                    l,
                 );
             });
-        return (0, r.jsx)("div", { children: i });
+        return (0, r.jsx)("div", { children: l });
     };

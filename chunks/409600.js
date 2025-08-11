@@ -1,71 +1,76 @@
-n.d(e, { default: () => f }), n(388685);
-var r = n(255367);
+n.d(t, { default: () => m }), n(388685);
+var i = n(255367);
 n(73800);
-var i = n(100527),
-    a = n(906732),
-    o = n(987209),
-    c = n(563132),
-    l = n(107998),
-    s = n(791785),
+var a = n(100527),
+    l = n(906732),
+    s = n(987209),
+    r = n(563132),
+    o = n(107998),
+    c = n(791785),
     u = n(961830),
-    p = n(231338);
-function d(t) {
-    let { onClose: e, onComplete: n, transitionState: i, applicationId: o, analyticsLocationObject: l, skuId: u } = t,
-        {} = (0, c.JL)(),
-        { analyticsLocations: p } = (0, a.ZP)();
-    return (0, r.jsx)(s.PaymentModal, {
-        onClose: e,
+    d = n(382263),
+    f = n(231338);
+function p(e) {
+    let { onClose: t, onComplete: n, transitionState: a, applicationId: s, analyticsLocationObject: o, skuId: u } = e,
+        {} = (0, r.JL)(),
+        { analyticsLocations: d } = (0, l.ZP)();
+    return (0, i.jsx)(c.PaymentModal, {
+        onClose: t,
         onComplete: n,
-        applicationId: o,
+        applicationId: s,
         skuId: u,
         initialPlanId: null,
-        analyticsObject: l,
-        analyticsLocations: p,
-        transitionState: i,
+        analyticsObject: o,
+        analyticsLocations: d,
+        transitionState: a,
     });
 }
-let b = [u.WA, u.s2, ...u.yp, u.wo, u.F7];
-function f(t) {
-    let { loadId: e, applicationId: n, skuId: s, analyticsLocations: u } = t,
-        { analyticsLocations: f } = (0, a.ZP)(u, i.Z.PREMIUM_PAYMENT_MODAL);
-    return (0, r.jsx)(a.Gt, {
-        value: f,
-        children: (0, r.jsx)(c.PaymentContextProvider, {
-            loadId: e,
-            stepConfigs: b,
+function m(e) {
+    let { loadId: t, applicationId: n, skuId: c, analyticsLocations: m, isGift: b = !1 } = e,
+        { analyticsLocations: g } = (0, l.ZP)(m, a.Z.PREMIUM_PAYMENT_MODAL);
+    return (0, i.jsx)(l.Gt, {
+        value: g,
+        children: (0, i.jsx)(r.PaymentContextProvider, {
+            loadId: t,
+            stepConfigs: (function () {
+                let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+                return [u.WA, ...(e ? [d.PT] : []), u.s2, ...u.yp, u.wo, u.F7];
+            })(b),
             applicationId: n,
-            skuIDs: [s],
+            skuIDs: [c],
             activeSubscription: null,
-            purchaseType: p.GZ.ONE_TIME,
-            children: (0, r.jsx)(l.c1, {
-                children: (0, r.jsx)(o.KB, {
-                    children: (0, r.jsx)(
-                        d,
-                        (function (t) {
-                            for (var e = 1; e < arguments.length; e++) {
-                                var n = null != arguments[e] ? arguments[e] : {},
-                                    r = Object.keys(n);
+            purchaseType: f.GZ.ONE_TIME,
+            isGift: b,
+            children: (0, i.jsx)(o.c1, {
+                children: (0, i.jsx)(s.KB, {
+                    isGift: b,
+                    children: (0, i.jsx)(
+                        p,
+                        (function (e) {
+                            for (var t = 1; t < arguments.length; t++) {
+                                var n = null != arguments[t] ? arguments[t] : {},
+                                    i = Object.keys(n);
                                 "function" == typeof Object.getOwnPropertySymbols &&
-                                    (r = r.concat(
-                                        Object.getOwnPropertySymbols(n).filter(function (t) {
-                                            return Object.getOwnPropertyDescriptor(n, t).enumerable;
+                                    (i = i.concat(
+                                        Object.getOwnPropertySymbols(n).filter(function (e) {
+                                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                         }),
                                     )),
-                                    r.forEach(function (e) {
-                                        var r;
-                                        (r = n[e]),
-                                            e in t
-                                                ? Object.defineProperty(t, e, {
-                                                      value: r,
+                                    i.forEach(function (t) {
+                                        var i;
+                                        (i = n[t]),
+                                            t in e
+                                                ? Object.defineProperty(e, t, {
+                                                      value: i,
                                                       enumerable: !0,
                                                       configurable: !0,
                                                       writable: !0,
                                                   })
-                                                : (t[e] = r);
+                                                : (e[t] = i);
                                     });
                             }
-                            return t;
-                        })({}, t),
+                            return e;
+                        })({}, e),
                     ),
                 }),
             }),

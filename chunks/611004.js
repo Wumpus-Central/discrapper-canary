@@ -3,11 +3,11 @@ var r = n(349033),
     i = n(72006),
     o = n(748610),
     a = n(171900),
-    s = n(518944),
-    l = n(607802),
-    c = n(187462),
-    u = n(532496),
-    d = n(532428),
+    s = n(607802),
+    l = n(187462),
+    c = n(532496),
+    u = n(532428),
+    d = n(817190),
     f = n(723642),
     _ = n(981631);
 function p(e, t, n) {
@@ -64,7 +64,7 @@ function g(e, t) {
 }
 function E(e) {
     let { searchContext: t, searchQueryString: n, searchQuery: r, offset: i } = e,
-        a = (0, l.Tm)(t);
+        a = (0, s.Tm)(t);
     o.Z.clearSearchMessages(a),
         o.Z.setShowNoResultsAlt(t),
         o.Z.setShowBlockedResults(t, !1),
@@ -73,7 +73,7 @@ function E(e) {
 }
 function b(e) {
     let { searchContext: t, selectedPageIndex: n, queryString: r, searchMode: i } = e,
-        a = (0, l.Tm)(t);
+        a = (0, s.Tm)(t);
     o.Z.fetchTabMessages({
         searchContext: t,
         searchTabs: [f.sR.MESSAGES],
@@ -95,8 +95,8 @@ function b(e) {
     });
 }
 function y(e) {
-    let { searchContext: t, searchQuery: n, queryString: r, searchEverywhere: i, offset: a, searchMode: s } = e,
-        c = g(h({}, n, null != s ? (0, l.zH)(s) : {}), { offset: a });
+    let { searchContext: t, searchQuery: n, queryString: r, searchEverywhere: i, offset: a, searchMode: l } = e,
+        c = g(h({}, n, null != l ? (0, s.zH)(l) : {}), { offset: a });
     E({
         searchContext: t,
         searchQueryString: r,
@@ -110,18 +110,18 @@ function y(e) {
         });
 }
 function O(e, t) {
-    let n = (0, l.Tm)(e),
-        c = s.Z.getEditorState(n),
-        u = s.Z.getSearchResultsQueryString(n),
+    let n = (0, s.Tm)(e),
+        l = d.Z.getEditorState(n),
+        c = d.Z.getSearchResultsQueryString(n),
         f = a.Z.getIsFetching(n);
-    if (null == c || null == u || f) return;
-    let p = u.endsWith(" ") ? u + t : u + " " + t,
-        h = i.c2(p, c);
+    if (null == l || null == c || f) return;
+    let p = c.endsWith(" ") ? c + t : c + " " + t,
+        h = i.c2(p, l);
     h = i.Hl(h, 512);
-    let m = (0, l.kG)(p),
+    let m = (0, s.kG)(p),
         g = m.filter((e) => e.type !== r.ZP.NON_TOKEN_TYPE);
-    (h = i.lv(g, h, d.ZP)), (h = i.iK(0 + p.length, h)), o.Z.setSearchState(e, h);
-    let E = (0, l.$G)(m);
+    (h = i.lv(g, h, u.ZP)), (h = i.iK(0 + p.length, h)), o.Z.setSearchState(e, h);
+    let E = (0, s.$G)(m);
     e.type === _.aib.DMS
         ? b({
               searchContext: e,
@@ -138,14 +138,14 @@ function O(e, t) {
 let v = {
     fetchCrossDMMessages: b,
     cleanUpSearchState: function (e) {
-        let t = (0, l.Tm)(e);
-        o.Z.clearSearchState(e), o.Z.clearSearchMessages(t), c.Z.cleanUp(t), u.Z.cleanUp(t);
+        let t = (0, s.Tm)(e);
+        o.Z.clearSearchState(e), o.Z.clearSearchMessages(t), l.Z.cleanUp(t), c.Z.cleanUp(t);
     },
     fetchMessages: y,
     appendTextToSearchInput: O,
     getSearchInputText: function (e) {
-        let t = (0, l.Tm)(e),
-            n = null != t ? s.Z.getEditorState(t) : null;
+        let t = (0, s.Tm)(e),
+            n = null != t ? d.Z.getEditorState(t) : null;
         return null != n ? i.Sq(n) : null;
     },
 };

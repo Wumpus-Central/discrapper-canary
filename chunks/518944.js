@@ -1,4 +1,4 @@
-n.d(t, { Z: () => P });
+n.d(t, { Z: () => y });
 var r,
     i = n(442837),
     o = n(570140),
@@ -6,9 +6,8 @@ var r,
     s = n(592125),
     l = n(430824),
     c = n(945577),
-    u = n(861262),
-    d = n(981631);
-function f(e, t, n) {
+    u = n(981631);
+function d(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -21,123 +20,53 @@ function f(e, t, n) {
         e
     );
 }
-let _ = 0.05,
-    p = {};
+let f = !1,
+    _ = null;
+function p(e) {
+    if (null == e);
+    else if (e === u.aib.DMS) return u.aib.DMS;
+    else if (e === u.I_8) return u.aib.FAVORITES;
+    else if (null != l.Z.getGuild(e)) return u.aib.GUILD;
+    else if (null != s.Z.getChannel(e)) return u.aib.CHANNEL;
+    return null;
+}
 function h(e) {
-    return (
-        null == p[e] &&
-            (p[e] = {
-                searchId: e,
-                editorState: null,
-                showBlockedResults: !1,
-                showNoResultsAlt: !1,
-                searchResultsQueryString: null,
-                searchResultsQuery: null,
-                searchResultsOffset: null,
-            }),
-        p[e]
-    );
+    if (e === _) return !1;
+    _ = e;
 }
-function m(e, t) {
-    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-    if (null == e) return n;
-    let r = p[e];
-    return null == r ? n : t(r);
+function m() {
+    (f = !0),
+        null != _ &&
+            p(_) === u.aib.CHANNEL &&
+            (0, c.ad)({ location: "SearchStore_handleConnectionOpen" }) &&
+            h(u.aib.DMS);
 }
-let g = !1,
-    E = null;
-function b(e) {
-    let { id: t, editorState: n } = e;
-    h(t).editorState = n;
+function g(e) {
+    let { guildId: t, channelId: n } = e;
+    null != t
+        ? h(t)
+        : (0, c.ad)({
+                location: "SearchStore_handleChannelSelect",
+                autoTrackExposure: f,
+            })
+          ? h(u.aib.DMS)
+          : h(n);
 }
-function y(e) {
+function E(e) {
     let { id: t } = e;
     h(t);
 }
-function O(e) {
-    let { id: t } = e;
-    if (null == p[t]) return !1;
-    delete p[t];
-}
-function v(e) {
-    if (e === E) return !1;
-    null != e && null == p[e] && h(e), (E = e);
-}
-function I() {
-    (g = !0),
-        null != E &&
-            (0, u.g)(E) === d.aib.CHANNEL &&
-            (0, c.ad)({ location: "SearchStore_handleConnectionOpen" }) &&
-            v(d.aib.DMS);
-}
-function T(e) {
-    let { guildId: t, channelId: n } = e;
-    null != t
-        ? v(t)
-        : (0, c.ad)({
-                location: "SearchStore_handleChannelSelect",
-                autoTrackExposure: g,
-            })
-          ? v(d.aib.DMS)
-          : v(n);
-}
-function S(e) {
-    let { id: t } = e;
-    v(t);
-}
-function A(e) {
-    let { id: t, showBlocked: n } = e;
-    h(t).showBlockedResults = n;
-}
-function N(e) {
-    let { id: t } = e;
-    h(t).showNoResultsAlt = Math.random() < _;
-}
-function C(e) {
-    let { id: t, queryString: n, query: r, offset: i } = e,
-        o = h(t);
-    (o.searchResultsQueryString = n), (o.searchResultsQuery = r), (o.searchResultsOffset = null != i ? i : 0);
-}
-class R extends (r = i.ZP.Store) {
+class b extends (r = i.ZP.Store) {
     initialize() {
         this.waitFor(l.Z, s.Z, a.Z);
     }
-    getCurrentSearchId() {
-        return E;
-    }
-    getEditorState(e) {
-        return m(e, (e) => e.editorState);
-    }
-    shouldShowBlockedResults(e) {
-        var t;
-        return null != (t = m(e, (e) => e.showBlockedResults, !1)) && t;
-    }
-    shouldShowNoResultsAlt(e) {
-        var t;
-        return null != (t = m(e, (e) => e.showNoResultsAlt, !1)) && t;
-    }
-    getSearchResultsQueryString(e) {
-        return m(e, (e) => e.searchResultsQueryString);
-    }
-    getSearchResultsQuery(e) {
-        return m(e, (e) => e.searchResultsQuery);
-    }
-    getSearchResultsOffset(e) {
-        return m(e, (e) => e.searchResultsOffset);
-    }
-    hasSearchState(e) {
-        return null != e && null != p[e];
+    getSelectedSearchContextId() {
+        return _;
     }
 }
-f(R, "displayName", "SearchStore");
-let P = new R(o.Z, {
-    CONNECTION_OPEN: I,
-    SEARCH_RESULTS_QUERY_UPDATE: C,
-    SEARCH_EDITOR_STATE_CLEAR: O,
-    SEARCH_ENSURE_SEARCH_STATE: y,
-    SEARCH_EDITOR_STATE_CHANGE: b,
-    SEARCH_SET_SHOW_BLOCKED_RESULTS: A,
-    SEARCH_SET_SHOW_NO_RESULTS_ALT: N,
-    SEARCH_SCREEN_OPEN: S,
-    CHANNEL_SELECT: T,
+d(b, "displayName", "SearchStore");
+let y = new b(o.Z, {
+    CONNECTION_OPEN: m,
+    SEARCH_SCREEN_OPEN: E,
+    CHANNEL_SELECT: g,
 });

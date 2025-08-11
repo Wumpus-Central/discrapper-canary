@@ -194,7 +194,7 @@ function Y(e) {
     null != n && delete R[n];
 }
 function W() {
-    let e = l.Z.getCurrentSearchId();
+    let e = l.Z.getSelectedSearchContextId();
     if (null == e) return !1;
     let t = s.Z.hasSearchState(e);
     if (C === t) return !1;

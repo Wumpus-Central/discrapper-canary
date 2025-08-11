@@ -1,21 +1,21 @@
 n.d(t, { Z: () => d });
 var r = n(255367);
 n(73800);
-var l = n(442837),
-    i = n(481060),
+var i = n(442837),
+    l = n(481060),
     a = n(565138),
     s = n(430824),
     o = n(388032),
     c = n(305636);
 let d = (e) => {
     let { event: t } = e,
-        n = (0, l.e7)([s.Z], () => s.Z.getGuild(t.guild_id));
+        n = (0, i.e7)([s.Z], () => s.Z.getGuild(t.guild_id));
     return null == n
         ? null
         : (0, r.jsxs)("div", {
               className: c.container,
               children: [
-                  (0, r.jsx)(i.X6q, {
+                  (0, r.jsx)(l.X6q, {
                       className: c.header,
                       variant: "heading-sm/semibold",
                       children: o.intl.string(o.t.SDTOLy),
@@ -31,14 +31,14 @@ let d = (e) => {
                                       size: a.Z.Sizes.MINI,
                                       className: c.guildIcon,
                                   }),
-                                  (0, r.jsx)(i.Text, {
+                                  (0, r.jsx)(l.Text, {
                                       color: "header-secondary",
                                       variant: "text-sm/normal",
                                       children: n.name,
                                   }),
                               ],
                           }),
-                          (0, r.jsx)(i.Text, {
+                          (0, r.jsx)(l.Text, {
                               variant: "text-md/semibold",
                               color: "header-primary",
                               children: t.name,

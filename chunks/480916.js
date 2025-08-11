@@ -30,6 +30,7 @@ var r = n(626135),
             (e.FORUM_POST_MEDIA_PREVIEW = "forum_post_media_preview"),
             (e.SEARCH_MEDIA_PREVIEW = "search_media_preview"),
             (e.CONTENT_AND_SOCIAL_NOTICE = "content_and_social_notice"),
+            (e.DEV_TOOLS_AGE_VERIFICATION_RETRY_MODAL = "dev_tools_age_verification_retry_modal"),
             e
         );
     })({}),

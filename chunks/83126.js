@@ -1,7 +1,7 @@
 n.d(t, { Z: () => o });
 var r = n(592204),
-    l = n(131681),
-    i = n(695346),
+    i = n(131681),
+    l = n(695346),
     a = n(82554),
     s = n(388032);
 let o = {
@@ -14,10 +14,10 @@ let o = {
         a.i5.SUB_VULGAR_LANGUAGE,
     ],
     onApply: () =>
-        i.gw.updateSetting({
+        l.gw.updateSetting({
             profanity: !0,
             slurs: !0,
             sexualContent: !0,
         }),
-    predicate: () => (0, r.pB)({ location: "iar_settings_upsells" }) && !(0, l.U)(),
+    predicate: () => (0, r.pB)({ location: "iar_settings_upsells" }) && !(0, i.U)(),
 };

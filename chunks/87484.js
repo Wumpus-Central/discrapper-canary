@@ -89,9 +89,10 @@ function m(e) {
             analyticsLocations: m,
             analyticsLocationObject: g,
             contextKey: E,
+            isGift: b = !1,
         } = e,
-        b = !1,
-        y = (0, i.Z)();
+        y = !1,
+        O = (0, i.Z)();
     (0, o.ZDy)(
         async () => {
             let { default: e } = await n.e("61670").then(n.bind(n, 409600));
@@ -101,16 +102,17 @@ function m(e) {
                 return (0, r.jsx)(
                     e,
                     _(d({}, o), {
-                        loadId: y,
+                        loadId: O,
                         applicationId: t,
                         skuId: u,
                         analyticsLocations: m,
                         analyticsLocationObject: g,
+                        isGift: b,
                         onClose: (e) => {
                             i(), null == f || f(e);
                         },
                         onComplete: (e) => {
-                            (b = !0), null == h || h(e);
+                            (y = !0), null == h || h(e);
                         },
                     }),
                 );
@@ -119,19 +121,19 @@ function m(e) {
         {
             contextKey: E,
             onCloseCallback: () => {
-                b ||
+                y ||
                     l.default.track(c.rMx.PAYMENT_FLOW_CANCELED, {
-                        load_id: y,
+                        load_id: O,
                         payment_type: c.Zuq[c.GZQ.ONE_TIME],
                         location: g,
-                        is_gift: !1,
+                        is_gift: b,
                         sku_id: u,
                         application_id: t,
                         location_stack: m,
                     }),
                     (0, a.fw)(),
                     (0, s.p)(),
-                    null == f || f(b);
+                    null == f || f(y);
             },
             onCloseRequest: c.dG4,
         },

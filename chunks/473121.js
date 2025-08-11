@@ -1,7 +1,7 @@
 n.d(t, { Z: () => d });
 var r = n(255367),
-    l = n(73800),
-    i = n(481060),
+    i = n(73800),
+    l = n(481060),
     a = n(454585),
     s = n(273744),
     o = n(388032),
@@ -13,7 +13,7 @@ let d = (e) => {
             isModeratorReport: p,
         } = e,
         g = (null == m ? void 0 : m.type) === "submit",
-        x = l.useRef(
+        _ = i.useRef(
             a.Z.reactParserFor(
                 ((t = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
@@ -60,22 +60,22 @@ let d = (e) => {
         className: c.headerContainer,
         children: [
             null != d && "" !== d
-                ? (0, r.jsx)(i.X6q, {
+                ? (0, r.jsx)(l.X6q, {
                       variant: "heading-xl/semibold",
                       color: "header-primary",
                       children: d,
                   })
                 : null,
             null != u && "" !== d
-                ? (0, r.jsx)(i.Text, {
+                ? (0, r.jsx)(l.Text, {
                       variant: "text-md/normal",
                       color: "header-secondary",
-                      children: x.current(u),
+                      children: _.current(u),
                   })
                 : null,
             g &&
                 !p &&
-                (0, r.jsx)(i.Text, {
+                (0, r.jsx)(l.Text, {
                     variant: "text-sm/normal",
                     children: o.intl.format(o.t.Q0tSKS, {}),
                 }),

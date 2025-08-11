@@ -4,4 +4,5 @@ e.exports = {
     details: "details__3564f",
     description: "description__3564f",
     footer: "footer__3564f",
+    buttonGroup: "buttonGroup__3564f",
 };

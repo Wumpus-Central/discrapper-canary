@@ -1,51 +1,50 @@
 n.d(t, {
-    JZ: () => d,
-    ZP: () => f,
-    rT: () => u,
+    JZ: () => u,
+    rT: () => c,
 }),
     n(953529);
 var r = n(255367);
 n(73800);
 var i = n(120356),
-    o = n.n(i),
-    a = n(755721),
-    s = n(481060),
-    l = n(754363);
-function c(e) {
+    o = n.n(i);
+n(755721);
+var a = n(481060),
+    s = n(754363);
+function l(e) {
     let { title: t } = e;
-    return (0, r.jsx)(s.Text, {
+    return (0, r.jsx)(a.Text, {
         variant: "text-sm/semibold",
         color: "header-secondary",
         children: t,
     });
 }
-function u(e) {
-    let { children: t, title: n, description: i, accessibilityRole: o = "none", accessibilityLabel: a } = e;
+function c(e) {
+    let { children: t, title: n, description: i, accessibilityRole: o = "none", accessibilityLabel: c } = e;
     return (0, r.jsxs)("div", {
-        className: l.tableRowGroup,
+        className: s.tableRowGroup,
         children: [
-            null != n && (0, r.jsx)(c, { title: n }),
+            null != n && (0, r.jsx)(l, { title: n }),
             null != i &&
-                (0, r.jsx)(s.Text, {
+                (0, r.jsx)(a.Text, {
                     variant: "text-sm/normal",
                     color: "text-secondary",
                     children: i,
                 }),
             (0, r.jsx)("div", {
-                className: l.content,
+                className: s.content,
                 role: o,
-                "aria-label": a,
+                "aria-label": c,
                 children: t,
             }),
         ],
     });
 }
-function d(e) {
+function u(e) {
     let {
             icon: t,
             title: n,
             titleVariant: i = "text-md/semibold",
-            description: a,
+            description: l,
             descriptionVariant: c = "text-xs/medium",
             iconClassName: u,
             color: d,
@@ -62,7 +61,7 @@ function d(e) {
         } = e,
         v =
             null != f
-                ? (0, r.jsx)(s.zxk, {
+                ? (0, r.jsx)(a.zxk, {
                       variant: _,
                       size: p,
                       text: f,
@@ -75,41 +74,41 @@ function d(e) {
                   })
                 : void 0;
     return (0, r.jsxs)("div", {
-        className: o()(l.row, l.rowMana),
+        className: o()(s.row, s.rowMana),
         children: [
-            (0, r.jsxs)(s.Kqy, {
+            (0, r.jsxs)(a.Kqy, {
                 direction: "horizontal",
                 gap: 16,
                 align: "center",
                 children: [
                     "numbered" === y && null != O
-                        ? (0, r.jsx)(s.X6q, {
+                        ? (0, r.jsx)(a.X6q, {
                               variant: "heading-md/semibold",
                               color: "text-brand",
-                              className: l.number,
+                              className: s.number,
                               children: O + 1,
                           })
                         : null != t &&
                           (0, r.jsx)("div", {
-                              className: l.iconContainer,
+                              className: s.iconContainer,
                               children: (0, r.jsx)(t, {
                                   color: null != d ? d : "currentColor",
-                                  className: o()(l.icon, u),
+                                  className: o()(s.icon, u),
                               }),
                           }),
                     (0, r.jsxs)("div", {
-                        className: l.textContainer,
+                        className: s.textContainer,
                         children: [
-                            (0, r.jsx)(s.Text, {
+                            (0, r.jsx)(a.Text, {
                                 variant: i,
                                 color: "header-primary",
                                 children: n,
                             }),
-                            null != a &&
-                                (0, r.jsx)(s.Text, {
+                            null != l &&
+                                (0, r.jsx)(a.Text, {
                                     variant: c,
                                     color: "text-secondary",
-                                    children: a,
+                                    children: l,
                                 }),
                         ],
                     }),
@@ -119,86 +118,3 @@ function d(e) {
         ],
     });
 }
-let f = function (e) {
-    let {
-            icon: t,
-            title: n,
-            titleVariant: i = "text-md/semibold",
-            description: c,
-            descriptionVariant: u = "text-xs/medium",
-            iconClassName: d,
-            color: f,
-            buttonText: _,
-            buttonColor: p = a.zx.Colors.PRIMARY,
-            buttonSize: h = a.zx.Sizes.SMALL,
-            buttonLook: m = a.zx.Looks.FILLED,
-            buttonDisabled: g,
-            buttonIcon: E,
-            buttonIconColor: b,
-            buttonLoading: y,
-            onButtonPress: O,
-            listType: v = "icon",
-            index: I,
-        } = e,
-        T =
-            null != _
-                ? (0, r.jsx)(a.zx, {
-                      className: l.button,
-                      size: h,
-                      color: p,
-                      look: m,
-                      disabled: g,
-                      "aria-label": _,
-                      onClick: O,
-                      submitting: y,
-                      children: (0, r.jsxs)("div", {
-                          className: l.buttonContainer,
-                          children: [
-                              _,
-                              null != E &&
-                                  (0, r.jsx)(E, {
-                                      color: null != b ? b : "currentColor",
-                                      className: l.buttonIcon,
-                                  }),
-                          ],
-                      }),
-                  })
-                : void 0;
-    return (0, r.jsxs)("div", {
-        className: l.row,
-        children: [
-            "numbered" === v && null != I
-                ? (0, r.jsx)(s.X6q, {
-                      variant: "heading-md/semibold",
-                      color: "text-brand",
-                      className: l.number,
-                      children: I + 1,
-                  })
-                : null != t &&
-                  (0, r.jsx)("div", {
-                      className: l.iconContainer,
-                      children: (0, r.jsx)(t, {
-                          color: null != f ? f : "currentColor",
-                          className: o()(l.icon, d),
-                      }),
-                  }),
-            (0, r.jsxs)("div", {
-                className: l.textContainer,
-                children: [
-                    (0, r.jsx)(s.Text, {
-                        variant: i,
-                        color: "header-primary",
-                        children: n,
-                    }),
-                    null != c &&
-                        (0, r.jsx)(s.Text, {
-                            variant: u,
-                            color: "text-secondary",
-                            children: c,
-                        }),
-                ],
-            }),
-            null != T && T,
-        ],
-    });
-};
