@@ -1,8 +1,8 @@
 r.d(t, { Z: () => h });
 var n = r(255367),
     a = r(120356),
-    l = r.n(a),
-    i = r(442837),
+    i = r.n(a),
+    l = r(442837),
     o = r(481060),
     s = r(597688),
     c = r(709999),
@@ -12,10 +12,10 @@ var n = r(255367),
     b = r(52431);
 let h = (e) => {
     let { user: t, guildId: r, selectedNameplate: a, purchased: h } = e,
-        f = (0, i.e7)([s.Z], () => s.Z.getProduct(null == a ? void 0 : a.skuId)),
-        v = (0, i.e7)([d.Z], () => d.Z.getPendingGlobalName());
+        f = (0, l.e7)([s.Z], () => s.Z.getProduct(null == a ? void 0 : a.skuId)),
+        v = (0, l.e7)([d.Z], () => d.Z.getPendingGlobalName());
     return (0, n.jsxs)("div", {
-        className: l()(b.previewBorder, { [b.upsell]: !h && null != a }),
+        className: i()(b.previewBorder, { [b.upsell]: !h && null != a }),
         children: [
             (0, n.jsx)("div", {
                 className: b.previewBox,

@@ -26,7 +26,8 @@ function o(e) {
             }
             return l;
         })(e, ["user", "widget", "showHeaderActionButtons", "isGameFetching"]);
-    let s = null != n.game;
+    let s = n.games.length > 0,
+        d = n.games[0];
     return (0, r.jsx)(l.Z, {
         userId: t.id,
         widget: n,
@@ -60,9 +61,9 @@ function o(e) {
                 return e;
             })(
                 {
-                    game: n.game,
+                    game: d,
                     user: t,
-                    loading: a(n.game.applicationId),
+                    loading: a(d.applicationId),
                 },
                 c,
             ),

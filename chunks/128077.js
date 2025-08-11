@@ -1,17 +1,17 @@
-r.d(t, { f: () => i }), r(388685);
+r.d(t, { f: () => l }), r(388685);
 var n = r(73800),
     a = r(751648),
-    l = r(388032);
-function i() {
+    i = r(388032);
+function l() {
     let [e, t] = (0, n.useState)(""),
-        [r, i] = (0, n.useState)([]),
+        [r, l] = (0, n.useState)([]),
         [o, s] = (0, n.useState)(null),
         [c, u] = (0, n.useState)(!1);
     return (
         (0, n.useEffect)(() => {
             if (null != o)
                 return void t(
-                    l.intl.format(l.t["7gHWra"], {
+                    i.intl.format(i.t["7gHWra"], {
                         amount: "1 orb",
                         errorMessage: o.message,
                     }),
@@ -22,7 +22,7 @@ function i() {
                     return null == (t = e.sku) ? void 0 : t.name;
                 });
                 t(
-                    l.intl.format(l.t.JxNFam, {
+                    i.intl.format(i.t.JxNFam, {
                         amountDescription: "1 orb",
                         redeemedItemDescription: ""
                             .concat(1 === e.length ? "SKU" : "SKUs", ": ")
@@ -48,7 +48,7 @@ function i() {
                         u(!0), s(null);
                     },
                     onRedeemSucceed: (e) => {
-                        i(e), u(!1), null == r || r(e);
+                        l(e), u(!1), null == r || r(e);
                     },
                     onRedeemFail: (e) => {
                         s(e), u(!1);

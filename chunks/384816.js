@@ -23,11 +23,11 @@ var l = n(442837),
     _ = n(349966);
 function I(e) {
     let { user: t, currentUser: n, displayProfile: I, subsection: P, onClose: Z } = e,
-        { trackUserProfileAction: T } = (0, f.KZ)(),
-        N = (0, l.e7)([d.Z], () => d.Z.getGuildId()),
+        { trackUserProfileAction: N } = (0, f.KZ)(),
+        T = (0, l.e7)([d.Z], () => d.Z.getGuildId()),
         E = (0, a.Y)({ userId: t.id }),
-        S = (0, l.e7)([u.Z], () => u.Z.hidePersonalInformation),
-        w = (0, l.e7)([s.default], () => s.default.locale),
+        w = (0, l.e7)([u.Z], () => u.Z.hidePersonalInformation),
+        S = (0, l.e7)([s.default], () => s.default.locale),
         A = (0, p.Z)(t.id),
         C = (0, m.Z)(t.id);
     return (0, r.jsxs)(i.zJl, {
@@ -36,7 +36,7 @@ function I(e) {
         children: [
             (null == I ? void 0 : I.bio) != null &&
                 (null == I ? void 0 : I.bio) !== "" &&
-                !S &&
+                !w &&
                 (0, r.jsx)(g.Z, {
                     userBio: I.bio,
                     setLineClamp: !1,
@@ -79,7 +79,7 @@ function I(e) {
                         connectedAccounts: A,
                         className: _.connections,
                         userId: t.id,
-                        locale: w,
+                        locale: S,
                     }),
                 }),
             C.length > 0 &&
@@ -91,11 +91,11 @@ function I(e) {
                             {
                                 className: _.appsConnections,
                                 applicationRoleConnection: e,
-                                locale: w,
+                                locale: S,
                                 onApplicationClicked: () => {
-                                    T({ action: "PRESS_APP_CONNECTION" }), Z();
+                                    N({ action: "PRESS_APP_CONNECTION" }), Z();
                                 },
-                                selectedGuildId: null != N ? N : void 0,
+                                selectedGuildId: null != T ? T : void 0,
                             },
                             e.application.id,
                         ),
@@ -108,7 +108,7 @@ function I(e) {
                     userId: t.id,
                     className: _.note,
                     autoFocus: P === v.Tb.NOTE,
-                    onUpdate: () => T({ action: "SET_NOTE" }),
+                    onUpdate: () => N({ action: "SET_NOTE" }),
                 }),
             }),
         ],

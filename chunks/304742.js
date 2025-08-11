@@ -1,15 +1,15 @@
-n.d(t, { Z: () => p });
-var r = n(255367),
-    l = n(73800),
-    a = n(120356),
-    i = n.n(a),
-    o = n(481060),
-    s = n(675997),
-    c = n(215023),
-    u = n(388032),
-    d = n(306414);
+r.d(t, { Z: () => p });
+var n = r(255367),
+    l = r(73800),
+    a = r(120356),
+    i = r.n(a),
+    o = r(481060),
+    s = r(675997),
+    c = r(215023),
+    u = r(388032),
+    d = r(306414);
 function p(e) {
-    let { handleTransition: t, onClose: n } = e,
+    let { handleTransition: t, onClose: r } = e,
         { enableShopTakeOver: a } = s.Z.useConfig({ location: "CollectiblesIndexPageContextMenu" }),
         p = l.useMemo(
             () => [
@@ -36,16 +36,16 @@ function p(e) {
             ],
             [],
         );
-    return (0, r.jsx)("div", {
+    return (0, n.jsx)("div", {
         className: i()({ [d.shopTakeOver]: a }),
-        children: (0, r.jsx)(o.v2r, {
+        children: (0, n.jsx)(o.v2r, {
             navId: "collectibles-index-page-menu",
             className: i()({ [d.shopTakeOver]: a }),
-            onClose: n,
+            onClose: r,
             "aria-label": u.intl.string(u.t.xFcotb),
             onSelect: () => {},
             children: p.map((e) =>
-                (0, r.jsx)(
+                (0, n.jsx)(
                     o.sNh,
                     {
                         id: e.value,

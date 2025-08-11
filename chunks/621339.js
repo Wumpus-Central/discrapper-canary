@@ -1,15 +1,15 @@
-n.d(t, { Z: () => s });
+n.d(t, { Z: () => r });
 var i = n(657707),
-    o = n(509613),
-    l = n(393681),
-    r = n(388032);
-let a = (0, o.x1)("AccountPane", {
-        useTitle: () => r.intl.string(r.t["JAIM/v"]),
+    l = n(509613),
+    s = n(393681),
+    o = n(388032);
+let a = (0, l.x1)("AccountPane", {
+        useTitle: () => o.intl.string(o.t["JAIM/v"]),
         layout: [],
-        render: l.Z,
+        render: s.Z,
     }),
-    s = (0, o.wf)("Account", {
-        useTitle: () => r.intl.string(r.t["JAIM/v"]),
+    r = (0, l.wf)("Account", {
+        useTitle: () => o.intl.string(o.t["JAIM/v"]),
         icon: i.tBG,
         layout: [a],
     });

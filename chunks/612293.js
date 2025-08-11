@@ -1,8 +1,8 @@
 r.d(t, { default: () => C }), r(388685);
 var n = r(255367),
     a = r(73800),
-    l = r(442837),
-    i = r(481060),
+    i = r(442837),
+    l = r(481060),
     o = r(809206),
     s = r(100527),
     c = r(906732),
@@ -20,7 +20,7 @@ var n = r(255367),
     y = r(637635);
 function C(e) {
     let { transitionState: t, analyticsLocations: r, onClose: o, guildId: u, initialSelectedNameplate: p } = e,
-        b = (0, l.e7)([f.default], () => f.default.getCurrentUser()),
+        b = (0, i.e7)([f.default], () => f.default.getCurrentUser()),
         { analyticsLocations: h } = (0, c.ZP)(r, s.Z.EDIT_NAMEPLATE_MODAL),
         { available: m, purchased: _, isFetchingCategories: O, isFetchingPurchases: C } = (0, d.yV)("NameplateModal"),
         P = O || (C && 0 === _.length);
@@ -35,15 +35,15 @@ function C(e) {
             ? null
             : (0, n.jsx)(c.Gt, {
                   value: h,
-                  children: (0, n.jsx)(i.Y0X, {
+                  children: (0, n.jsx)(l.Y0X, {
                       transitionState: t,
-                      size: P ? i.CgR.DYNAMIC : i.CgR.MEDIUM,
+                      size: P ? l.CgR.DYNAMIC : l.CgR.MEDIUM,
                       parentComponent: "NameplateModal",
                       "data-migration-pending": !0,
                       children: P
-                          ? (0, n.jsx)(i.$jN, {
+                          ? (0, n.jsx)(l.$jN, {
                                 className: y.spinner,
-                                type: i.$jN.Type.SPINNING_CIRCLE,
+                                type: l.$jN.Type.SPINNING_CIRCLE,
                             })
                           : (0, n.jsx)(j, {
                                 user: b,
@@ -69,7 +69,7 @@ function j(e) {
             guildId: P,
             initialSelectedNameplate: E,
         } = e,
-        x = (0, l.e7)([h.ZP], () => (null != P && null != f ? h.ZP.getMember(P, f.id) : null)),
+        x = (0, i.e7)([h.ZP], () => (null != P && null != f ? h.ZP.getMember(P, f.id) : null)),
         S =
             null != P
                 ? null == x || null == (r = x.collectibles) || null == (t = r.nameplate)
@@ -101,23 +101,23 @@ function j(e) {
         );
     return (0, n.jsxs)(n.Fragment, {
         children: [
-            (0, n.jsxs)(i.xBx, {
+            (0, n.jsxs)(l.xBx, {
                 "data-migration-pending": !0,
                 separator: !1,
                 className: y.header,
                 children: [
-                    (0, n.jsx)(i.X6q, {
+                    (0, n.jsx)(l.X6q, {
                         variant: "heading-lg/semibold",
                         children: O.intl.string(O.t.BwdeMz),
                     }),
-                    (0, n.jsx)(i.olH, {
+                    (0, n.jsx)(l.olH, {
                         "data-migration-pending": !0,
                         className: y.closeButton,
                         onClick: j,
                     }),
                 ],
             }),
-            (0, n.jsxs)(i.hzk, {
+            (0, n.jsxs)(l.hzk, {
                 "data-migration-pending": !0,
                 className: y.content,
                 scrollbarType: "none",
@@ -139,12 +139,12 @@ function j(e) {
                     }),
                 ],
             }),
-            (0, n.jsxs)(i.mzw, {
+            (0, n.jsxs)(l.mzw, {
                 "data-migration-pending": !0,
                 className: y.modalFooter,
                 children: [
                     k || null == I
-                        ? (0, n.jsx)(i.zxk, {
+                        ? (0, n.jsx)(l.zxk, {
                               variant: "primary",
                               text: O.intl.string(O.t.Jh8fJy),
                               disabled: N,
@@ -152,12 +152,12 @@ function j(e) {
                                   null != P ? (0, p.RH)(I) : (0, o.Rx)(I), j();
                               },
                           })
-                        : (0, n.jsx)(i.zxk, {
+                        : (0, n.jsx)(l.zxk, {
                               variant: "primary",
                               onClick: () => D(null == I ? void 0 : I.skuId),
                               text: O.intl.string(O.t.fYfGgI),
                           }),
-                    (0, n.jsx)(i.zxk, {
+                    (0, n.jsx)(l.zxk, {
                         variant: "secondary",
                         text: O.intl.string(O.t.mDcKND),
                         onClick: j,

@@ -1,14 +1,14 @@
-n.d(t, { Z: () => s });
+n.d(t, { Z: () => r });
 var i = n(255367),
-    o = n(120356),
-    l = n.n(o),
-    r = n(481060),
+    l = n(120356),
+    s = n.n(l),
+    o = n(481060),
     a = n(249274);
-function s(e) {
-    let { icon: t, title: n, onClick: o, active: s } = e;
-    return (0, i.jsxs)(r.P3F, {
-        className: l()(a.item, s && a.active),
-        onClick: o,
+function r(e) {
+    let { icon: t, title: n, onClick: l, active: r } = e;
+    return (0, i.jsxs)(o.P3F, {
+        className: s()(a.item, r && a.active),
+        onClick: l,
         children: [
             (0, i.jsx)(t, {
                 color: "currentColor",

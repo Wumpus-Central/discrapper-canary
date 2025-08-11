@@ -1,21 +1,21 @@
-n.d(t, { Z: () => _ });
-var r = n(255367),
-    l = n(73800),
-    a = n(979554),
-    i = n(481060),
-    o = n(906732),
-    s = n(333867),
-    c = n(626135),
-    u = n(381585),
-    d = n(884697),
-    p = n(228624),
-    g = n(410127),
-    f = n(67409),
-    b = n(981631),
-    h = n(474936),
-    m = n(388032);
+r.d(t, { Z: () => _ });
+var n = r(255367),
+    l = r(73800),
+    a = r(979554),
+    i = r(481060),
+    o = r(906732),
+    s = r(333867),
+    c = r(626135),
+    u = r(381585),
+    d = r(884697),
+    p = r(228624),
+    g = r(410127),
+    f = r(67409),
+    b = r(981631),
+    h = r(474936),
+    m = r(388032);
 let _ = (e) => {
-    let { product: t, primary: n, selectedVariantIndex: _, returnRef: v, onSuccess: O, tooltipDelay: C } = e,
+    let { product: t, primary: r, selectedVariantIndex: _, returnRef: v, onSuccess: O, tooltipDelay: C } = e,
         { analyticsLocations: E } = (0, o.ZP)(),
         S = l.useRef(null),
         y = (0, p.hv)("CollectiblesShopGiftButton"),
@@ -23,34 +23,34 @@ let _ = (e) => {
         j = (0, g.Z)();
     return (0, d.x6)(t)
         ? null
-        : (0, r.jsx)(i.ua7, {
+        : (0, n.jsx)(i.ua7, {
               text: m.intl.string(m.t["JCFN//"]),
               delay: C,
               children: (e) => {
                   var l, o;
-                  return (0, r.jsx)(
+                  return (0, n.jsx)(
                       i.hU,
                       ((l = (function (e) {
                           for (var t = 1; t < arguments.length; t++) {
-                              var n = null != arguments[t] ? arguments[t] : {},
-                                  r = Object.keys(n);
+                              var r = null != arguments[t] ? arguments[t] : {},
+                                  n = Object.keys(r);
                               "function" == typeof Object.getOwnPropertySymbols &&
-                                  (r = r.concat(
-                                      Object.getOwnPropertySymbols(n).filter(function (e) {
-                                          return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                  (n = n.concat(
+                                      Object.getOwnPropertySymbols(r).filter(function (e) {
+                                          return Object.getOwnPropertyDescriptor(r, e).enumerable;
                                       }),
                                   )),
-                                  r.forEach(function (t) {
-                                      var r;
-                                      (r = n[t]),
+                                  n.forEach(function (t) {
+                                      var n;
+                                      (n = r[t]),
                                           t in e
                                               ? Object.defineProperty(e, t, {
-                                                    value: r,
+                                                    value: n,
                                                     enumerable: !0,
                                                     configurable: !0,
                                                     writable: !0,
                                                 })
-                                              : (e[t] = r);
+                                              : (e[t] = n);
                                   });
                           }
                           return e;
@@ -59,7 +59,7 @@ let _ = (e) => {
                           {
                               "aria-label": m.intl.string(m.t["JCFN//"]),
                               buttonRef: S,
-                              variant: n ? "primary" : "secondary",
+                              variant: r ? "primary" : "secondary",
                               icon: i.OgN,
                               size: "md",
                               onClick: (e) => {
@@ -96,12 +96,12 @@ let _ = (e) => {
                       Object.getOwnPropertyDescriptors
                           ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(o))
                           : (function (e, t) {
-                                var n = Object.keys(e);
+                                var r = Object.keys(e);
                                 if (Object.getOwnPropertySymbols) {
-                                    var r = Object.getOwnPropertySymbols(e);
-                                    n.push.apply(n, r);
+                                    var n = Object.getOwnPropertySymbols(e);
+                                    r.push.apply(r, n);
                                 }
-                                return n;
+                                return r;
                             })(Object(o)).forEach(function (e) {
                                 Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(o, e));
                             }),

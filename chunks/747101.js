@@ -1,11 +1,9 @@
-n.d(t, { Z: () => u }), n(539854), n(388685);
+n.d(t, { Z: () => s }), n(539854), n(388685);
 var r = n(73800),
-    l = n(296009),
-    i = n(442837),
-    o = n(224706),
-    a = n(669764),
-    c = n(823379);
-function s(e) {
+    l = n(442837),
+    i = n(224706),
+    o = n(669764);
+function a(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -30,7 +28,7 @@ function s(e) {
     }
     return e;
 }
-function d(e, t) {
+function c(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -48,28 +46,16 @@ function d(e, t) {
         e
     );
 }
-function u(e) {
+function s(e) {
     let t = r.useMemo(
         () =>
             (function (e) {
                 let t = [];
                 return (
                     e.forEach((e) => {
-                        let n = e.type;
-                        switch (n) {
-                            case l.l.FAVORITE_GAMES:
-                                t.push(e.game.applicationId);
-                                break;
-                            case l.l.CURRENT_GAMES:
-                            case l.l.WANT_TO_PLAY_GAMES:
-                            case l.l.PLAYED_GAMES:
-                                e.games.forEach((e) => {
-                                    t.push(e.applicationId);
-                                });
-                                break;
-                            default:
-                                (0, c.vE)(n);
-                        }
+                        e.games.forEach((e) => {
+                            t.push(e.applicationId);
+                        });
                     }),
                     [...new Set(t)]
                 );
@@ -78,15 +64,15 @@ function u(e) {
     );
     r.useEffect(() => {
         if (t.length > 0) {
-            let e = t.filter((e) => a.Z.canFetch(e));
-            e.length > 0 && o.Z.getDetectableGamesSupplemental(e);
+            let e = t.filter((e) => o.Z.canFetch(e));
+            e.length > 0 && i.Z.getDetectableGamesSupplemental(e);
         }
     }, [t]);
-    let n = (0, i.cj)([a.Z], () => {
+    let n = (0, l.cj)([o.Z], () => {
         let e = {};
         return (
             t.forEach((t) => {
-                e[t] = a.Z.getGame(t);
+                e[t] = o.Z.getGame(t);
             }),
             e
         );
@@ -95,34 +81,17 @@ function u(e) {
         widgets: r.useMemo(
             () =>
                 e.map((e) => {
-                    let t = e.type;
-                    switch (t) {
-                        case l.l.FAVORITE_GAMES: {
-                            let t = n[e.game.applicationId],
-                                r = d(s({}, e.game), {
-                                    gameName: null == t ? void 0 : t.name,
-                                    imageSrc: null == t ? void 0 : t.coverImageUrl,
-                                });
-                            return d(s({}, e), { game: r });
-                        }
-                        case l.l.CURRENT_GAMES:
-                        case l.l.WANT_TO_PLAY_GAMES:
-                        case l.l.PLAYED_GAMES: {
-                            let t = e.games.map((e) => {
-                                let t = n[e.applicationId];
-                                return d(s({}, e), {
-                                    gameName: null == t ? void 0 : t.name,
-                                    imageSrc: null == t ? void 0 : t.coverImageUrl,
-                                });
-                            });
-                            return d(s({}, e), { games: t });
-                        }
-                        default:
-                            return (0, c.vE)(t);
-                    }
+                    let t = e.games.map((e) => {
+                        let t = n[e.applicationId];
+                        return c(a({}, e), {
+                            gameName: null == t ? void 0 : t.name,
+                            imageSrc: null == t ? void 0 : t.coverImageUrl,
+                        });
+                    });
+                    return c(a({}, e), { games: t });
                 }),
             [e, n],
         ),
-        isGameFetching: r.useCallback((e) => a.Z.isFetching(e), []),
+        isGameFetching: r.useCallback((e) => o.Z.isFetching(e), []),
     };
 }

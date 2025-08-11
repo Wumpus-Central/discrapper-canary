@@ -1,14 +1,14 @@
-n.d(t, {
+r.d(t, {
     D: () => a,
     E: () => o,
 });
-var r,
-    l = n(818083),
+var n,
+    l = r(818083),
     a =
-        (((r = {})[(r.CONTROL = 0)] = "CONTROL"),
-        (r[(r.TRANSFORMATION = 1)] = "TRANSFORMATION"),
-        (r[(r.NO_MOVEMENT = 2)] = "NO_MOVEMENT"),
-        r);
+        (((n = {})[(n.CONTROL = 0)] = "CONTROL"),
+        (n[(n.TRANSFORMATION = 1)] = "TRANSFORMATION"),
+        (n[(n.NO_MOVEMENT = 2)] = "NO_MOVEMENT"),
+        n);
 let i = (0, l.B)({
         kind: "user",
         id: "2024-03_shop_card_hover_animation",

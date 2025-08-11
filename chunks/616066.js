@@ -1,18 +1,18 @@
-n.d(t, { R: () => f });
-var r = n(255367);
-n(73800);
-var l = n(120356),
-    a = n.n(l),
-    i = n(979554),
-    o = n(481060),
-    s = n(1585),
-    c = n(125988),
-    u = n(998502),
-    d = n(388032),
-    p = n(614490);
+r.d(t, { R: () => f });
+var n = r(255367);
+r(73800);
+var l = r(120356),
+    a = r.n(l),
+    i = r(979554),
+    o = r(481060),
+    s = r(1585),
+    c = r(125988),
+    u = r(998502),
+    d = r(388032),
+    p = r(614490);
 let g = u.ZP.getEnableHardwareAcceleration() ? o.Xo$ : o.qEK,
     f = (e) => {
-        var t, n;
+        var t, r;
         let {
                 item: l,
                 user: u,
@@ -33,34 +33,34 @@ let g = u.ZP.getEnableHardwareAcceleration() ? o.Xo$ : o.qEK,
                 onlyAnimateOnHover: !f,
             }),
             E = d.intl.formatToPlainString(d.t.Do2lxM, { a11y_text: l.label });
-        return (0, r.jsx)(
+        return (0, n.jsx)(
             g,
             ((t = (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
-                    var n = null != arguments[t] ? arguments[t] : {},
-                        r = Object.keys(n);
+                    var r = null != arguments[t] ? arguments[t] : {},
+                        n = Object.keys(r);
                     "function" == typeof Object.getOwnPropertySymbols &&
-                        (r = r.concat(
-                            Object.getOwnPropertySymbols(n).filter(function (e) {
-                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                        (n = n.concat(
+                            Object.getOwnPropertySymbols(r).filter(function (e) {
+                                return Object.getOwnPropertyDescriptor(r, e).enumerable;
                             }),
                         )),
-                        r.forEach(function (t) {
-                            var r;
-                            (r = n[t]),
+                        n.forEach(function (t) {
+                            var n;
+                            (n = r[t]),
                                 t in e
                                     ? Object.defineProperty(e, t, {
-                                          value: r,
+                                          value: n,
                                           enumerable: !0,
                                           configurable: !0,
                                           writable: !0,
                                       })
-                                    : (e[t] = r);
+                                    : (e[t] = n);
                         });
                 }
                 return e;
             })({}, O)),
-            (n = n =
+            (r = r =
                 {
                     avatarDecoration: v,
                     src: f ? (null == u ? void 0 : u.getAvatarURL(void 0, 152, !0)) : null != m ? m : C,
@@ -70,16 +70,16 @@ let g = u.ZP.getEnableHardwareAcceleration() ? o.Xo$ : o.qEK,
                     "aria-label": E,
                 }),
             Object.getOwnPropertyDescriptors
-                ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
+                ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
                 : (function (e, t) {
-                      var n = Object.keys(e);
+                      var r = Object.keys(e);
                       if (Object.getOwnPropertySymbols) {
-                          var r = Object.getOwnPropertySymbols(e);
-                          n.push.apply(n, r);
+                          var n = Object.getOwnPropertySymbols(e);
+                          r.push.apply(r, n);
                       }
-                      return n;
-                  })(Object(n)).forEach(function (e) {
-                      Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
+                      return r;
+                  })(Object(r)).forEach(function (e) {
+                      Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(r, e));
                   }),
             t),
         );

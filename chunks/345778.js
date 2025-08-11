@@ -1,7 +1,7 @@
-n.d(t, { R: () => a });
-var r = n(818083),
-    l = n(987338);
-let a = (0, r.B)({
+r.d(t, { R: () => a });
+var n = r(818083),
+    l = r(987338);
+let a = (0, n.B)({
     kind: "user",
     id: "2025-07_mobile_shop_featured_page",
     label: "Mobile Shop Featured Page",

@@ -23,20 +23,20 @@ var r = n(255367),
     I = n(111361),
     P = n(785717),
     Z = n(221292),
-    T = n(687158),
-    N = n(771362),
+    N = n(687158),
+    T = n(771362),
     E = n(510659),
-    S = n(113557),
-    w = n(648052),
+    w = n(113557),
+    S = n(648052),
     A = n(867176),
     C = n(280885),
     L = n(537006),
     D = n(681837),
     k = n(78806),
-    R = n(91433),
-    G = n(451834),
-    B = n(900927),
-    M = n(944043),
+    B = n(91433),
+    R = n(451834),
+    M = n(900927),
+    G = n(944043),
     U = n(502762),
     F = n(530),
     V = n(4517),
@@ -91,13 +91,13 @@ function ee(e) {
         }),
         e_ = l.useMemo(() => (null != et ? { [et]: [n.id] } : {}), [et, n.id]);
     (0, d.$)(e_);
-    let eI = (0, T.ZP)(n.id, ef ? et : void 0),
+    let eI = (0, N.ZP)(n.id, ef ? et : void 0),
         eP = _.ZP.useName(null == eI ? void 0 : eI.guildId, en, n),
-        { relationshipType: eZ, originApplicationId: eT } = (0, o.cj)([y.Z], () => ({
+        { relationshipType: eZ, originApplicationId: eN } = (0, o.cj)([y.Z], () => ({
             relationshipType: y.Z.getRelationshipType(n.id),
             originApplicationId: y.Z.getOriginApplicationId(n.id),
         })),
-        eN = (0, o.e7)([v.Z], () => v.Z.hidePersonalInformation),
+        eT = (0, o.e7)([v.Z], () => v.Z.hidePersonalInformation),
         eE =
             null == eI
                 ? void 0
@@ -105,17 +105,17 @@ function ee(e) {
                       canAnimate: !1,
                       size: 1024,
                   }),
-        eS = (0, p.p)({ location: "UserProfileModalV2" }),
-        ew = l.useMemo(() => (null != es ? es : (0, g.Z)()), [es]),
+        ew = (0, p.p)({ location: "UserProfileModalV2" }),
+        eS = l.useMemo(() => (null != es ? es : (0, g.Z)()), [es]),
         eA = (0, J.Z)({
             user: n,
             currentUser: ee,
         }),
         eC = (0, j.Y)({ userId: n.id }),
         eL = (0, b.vh)(n.id),
-        eD = (0, N.Z)(n.id),
+        eD = (0, T.Z)(n.id),
         ek = (0, m.Dt)(),
-        eR = q.intl.format(q.t.KRe1Fh, { name: eP });
+        eB = q.intl.format(q.t.KRe1Fh, { name: eP });
     return (
         l.useEffect(() => {
             let e = () => {
@@ -164,7 +164,7 @@ function ee(e) {
                                                       (0, r.jsx)(a.nn4, {
                                                           children: ""
                                                               .concat(q.intl.string(q.t.apViam), ": ")
-                                                              .concat(eR),
+                                                              .concat(eB),
                                                       }),
                                                       (0, r.jsx)("span", {
                                                           "aria-hidden": !0,
@@ -184,7 +184,7 @@ function ee(e) {
                                     : (0, r.jsx)(a.nn4, {
                                           children: (0, r.jsx)(a.H, {
                                               id: ek,
-                                              children: eR,
+                                              children: eB,
                                           }),
                                       }),
                                 (0, r.jsx)(a.y5t, {
@@ -216,12 +216,12 @@ function ee(e) {
                                                                 displayProfile: eI,
                                                                 themeType: X.lY.MODAL_V2,
                                                             }),
-                                                            (0, r.jsx)(G.Z, {
+                                                            (0, r.jsx)(R.Z, {
                                                                 userId: n.id,
                                                                 onClose: eu,
                                                                 className: $.toast,
                                                             }),
-                                                            (0, r.jsx)(S.Z, {
+                                                            (0, r.jsx)(w.Z, {
                                                                 location: "UserProfileModalV2",
                                                                 user: n,
                                                                 displayProfile: eI,
@@ -236,7 +236,7 @@ function ee(e) {
                                                                 channelId: en,
                                                                 themeType: X.lY.MODAL_V2,
                                                                 hasEntered: ec === a.Dvm.ENTERED,
-                                                                prompt: eS && n.id === ee.id ? ew : null,
+                                                                prompt: ew && n.id === ee.id ? eS : null,
                                                                 disableToolbar: ep,
                                                             }),
                                                         ],
@@ -259,7 +259,7 @@ function ee(e) {
                                                                 }),
                                                                 nicknameVariant: "heading-xl/semibold",
                                                                 pronouns: null == eI ? void 0 : eI.pronouns,
-                                                                tags: (0, r.jsx)(w.Z, {
+                                                                tags: (0, r.jsx)(S.Z, {
                                                                     displayProfile: eI,
                                                                     themeType: X.lY.MODAL_V2,
                                                                     onClose: eu,
@@ -268,9 +268,9 @@ function ee(e) {
                                                             eZ === Q.OGo.PENDING_INCOMING &&
                                                                 (0, r.jsx)(U.Z.Overlay, {
                                                                     className: $.profileOverlay,
-                                                                    children: (0, r.jsx)(R.Z, {
+                                                                    children: (0, r.jsx)(B.Z, {
                                                                         user: n,
-                                                                        applicationId: eT,
+                                                                        applicationId: eN,
                                                                         guildId:
                                                                             null !=
                                                                             (t = null == eI ? void 0 : eI.guildId)
@@ -287,7 +287,7 @@ function ee(e) {
                                                                     U.Z.Overlay,
                                                                     {
                                                                         className: $.profileOverlay,
-                                                                        children: (0, r.jsx)(R.Z, {
+                                                                        children: (0, r.jsx)(B.Z, {
                                                                             user: n,
                                                                             guildId:
                                                                                 null !=
@@ -325,7 +325,7 @@ function ee(e) {
                                                                     isPremiumUser: (0, I.I5)(ee),
                                                                     onInteraction: eu,
                                                                 }),
-                                                            (0, r.jsx)(M.Z, {
+                                                            (0, r.jsx)(G.Z, {
                                                                 user: n,
                                                                 className: $.profileBanner,
                                                             }),
@@ -343,7 +343,7 @@ function ee(e) {
                                                             }),
                                                             (null == eI ? void 0 : eI.bio) != null &&
                                                                 (null == eI ? void 0 : eI.bio) !== "" &&
-                                                                !eN &&
+                                                                !eT &&
                                                                 (0, r.jsx)(C.Z, {
                                                                     userBio: eI.bio,
                                                                     setLineClamp: !1,
@@ -355,7 +355,7 @@ function ee(e) {
                                                                 }),
                                                             (0, r.jsx)(z.Z, {
                                                                 heading: q.intl.string(q.t.a6XYDw),
-                                                                children: (0, r.jsx)(B.Z, {
+                                                                children: (0, r.jsx)(M.Z, {
                                                                     userId: n.id,
                                                                     guildId: null == eI ? void 0 : eI.guildId,
                                                                     tooltipDelay: X.vB,

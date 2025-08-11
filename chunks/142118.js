@@ -1,23 +1,23 @@
-n.d(t, { Z: () => s });
+n.d(t, { Z: () => r });
 var i = n(255367),
-    o = n(73800),
-    l = n(481060),
-    r = n(36361),
+    l = n(73800),
+    s = n(481060),
+    o = n(36361),
     a = n(355521);
-let s = o.memo(function (e) {
+let r = l.memo(function (e) {
     let { node: t } = e,
-        { useTitle: n, layout: s, render: c, init: u } = t,
+        { useTitle: n, layout: r, render: u, init: c } = t,
         d = null == n ? void 0 : n();
-    return (o.useEffect(() => {
-        null == u || u();
-    }, [u]),
-    null != c)
-        ? (0, i.jsx)(c, {})
-        : (0, i.jsx)(l.hjN, {
-              tag: l.RB0.H1,
+    return (l.useEffect(() => {
+        null == c || c();
+    }, [c]),
+    null != u)
+        ? (0, i.jsx)(u, {})
+        : (0, i.jsx)(s.hjN, {
+              tag: s.RB0.H1,
               className: a.category,
               title: d,
               titleClassName: a.categoryTitle,
-              children: s.map((e) => (0, i.jsx)(r.Z, { node: e }, e.key)),
+              children: r.map((e) => (0, i.jsx)(o.Z, { node: e }, e.key)),
           });
 });

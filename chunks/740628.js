@@ -80,7 +80,7 @@ function v(e) {
         } = e,
         { trackUserProfileAction: I } = (0, s.KZ)(),
         P = (0, i.e7)([c.Z], () => c.Z.hidePersonalInformation),
-        [{ section: Z, subsection: T }, N] = l.useState({
+        [{ section: Z, subsection: N }, T] = l.useState({
             section:
                 null !=
                 (d =
@@ -99,7 +99,7 @@ function v(e) {
         });
     l.useEffect(() => {
         null == g.find((e) => e.section === Z) &&
-            N({
+            T({
                 section: g[0].section,
                 subsection: void 0,
             });
@@ -110,12 +110,12 @@ function v(e) {
                 action: "PRESS_SECTION",
                 section: e,
             }),
-                N({
+                T({
                     section: e,
                     subsection: void 0,
                 });
         },
-        [I, N],
+        [I, T],
     );
     return P
         ? (0, r.jsx)("div", {
@@ -159,7 +159,7 @@ function v(e) {
                   (0, r.jsx)(y, {
                       items: g,
                       section: Z,
-                      subsection: T,
+                      subsection: N,
                       user: u,
                       currentUser: f,
                       displayProfile: m,

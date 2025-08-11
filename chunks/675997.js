@@ -1,5 +1,5 @@
-n.d(t, { Z: () => r });
-let r = (0, n(427164).le)({
+r.d(t, { Z: () => n });
+let n = (0, r(427164).le)({
     name: "2025-08-collectibles-shop-takeover",
     kind: "user",
     defaultConfig: { enableShopTakeOver: !1 },

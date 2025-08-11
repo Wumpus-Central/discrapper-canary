@@ -1,10 +1,13 @@
-n.d(t, { Z: () => a });
+n.d(t, { Z: () => c });
 var i = n(509613),
-    o = n(381426),
-    l = n(388032);
-let r = (0, i.CB)("NotificationsAdvancedAccordion", {
-        useTitle: (e) => (e ? l.intl.string(l.t.RyimDg) : l.intl.string(l.t.CUICbG)),
-        useSubtitle: () => l.intl.string(l.t.SwKADQ),
-        layout: [o.Z],
+    l = n(304550),
+    s = n(381426),
+    o = n(248893),
+    a = n(986985),
+    r = n(388032);
+let u = (0, i.CB)("NotificationsAdvancedAccordion", {
+        useTitle: (e) => (e ? r.intl.string(r.t.RyimDg) : r.intl.string(r.t.CUICbG)),
+        useSubtitle: () => r.intl.string(r.t.SwKADQ),
+        layout: [s.Z, l.Z, o.Z, a.Z],
     }),
-    a = (0, i.k4)("NotificationsAdvanced", { layout: [r] });
+    c = (0, i.k4)("NotificationsAdvanced", { layout: [u] });

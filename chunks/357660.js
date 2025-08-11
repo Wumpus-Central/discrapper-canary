@@ -1,14 +1,16 @@
-n.d(t, { T: () => r });
-var i = n(255367),
-    o = n(670304),
-    l = n(594263);
-function r(e) {
+n.d(t, { T: () => o }), n(415506);
+var i = n(255367);
+n(73800);
+var l = n(670304),
+    s = n(594263);
+function o(e) {
     let { node: t } = e,
         n = t.render;
-    return null != n
-        ? (0, i.jsx)(n, {})
-        : (0, i.jsx)("div", {
-              className: l.panel,
-              children: (0, i.jsx)(o.Z, { node: t }),
-          });
+    if (null != n) return (0, i.jsx)(n, {});
+    if (1 !== t.layout.length)
+        throw Error("Panels with multiple panes must define a render prop to handle the multiple panes");
+    return (0, i.jsx)("div", {
+        className: s.panel,
+        children: (0, i.jsx)(l.Z, { node: t.layout[0] }),
+    });
 }

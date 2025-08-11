@@ -1,14 +1,14 @@
 n.d(t, {
     ES: () => S,
     X6: () => N,
+    np: () => E,
     qH: () => I,
     tk: () => C,
     vH: () => A,
     y8: () => T,
 }),
     n(388685),
-    n(642613),
-    n(539854);
+    n(642613);
 var r = n(296009),
     i = n(224706),
     o = n(594174),
@@ -86,94 +86,66 @@ function E(e) {
         i
     );
 }
-function b(e) {
+function b() {
+    var e, t;
+    if (l.Z.hasPendingChanges()) return null != (e = l.Z.getPendingWidgets()) ? e : [];
+    {
+        let e = o.default.getCurrentUser(),
+            n = null != e ? a.Z.getUserProfile(e.id) : null;
+        return null != (t = null == n ? void 0 : n.widgets) ? t : [];
+    }
+}
+function y(e) {
     return e.sort((e, t) => c.rR.indexOf(e.type) - c.rR.indexOf(t.type));
 }
-function y(e, t) {
-    let n = { id: e };
-    return e === r.l.FAVORITE_GAMES
-        ? h(_({}, n), {
-              type: r.l.FAVORITE_GAMES,
-              game: t,
-          })
-        : h(_({}, n), {
-              type: e,
-              games: t,
-          });
+function O(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
+    return h(_({}, { id: e }), {
+        type: e,
+        games: t,
+    });
 }
-function O(e, t) {
+function v(e, t) {
     let n = e.filter((e) => e.type !== t.type);
-    return b([t, ...n]);
-}
-function v() {
-    var e, t;
-    let n;
-    if (l.Z.hasPendingChanges()) n = null != (e = l.Z.getPendingWidgets()) ? e : [];
-    else {
-        let e = o.default.getCurrentUser(),
-            r = null != e ? a.Z.getUserProfile(e.id) : null;
-        n = null != (t = null == r ? void 0 : r.widgets) ? t : [];
-    }
-    return n;
+    return y([t, ...n]);
 }
 function I(e) {
-    let t,
-        n = v(),
-        o = n.find((t) => t.type === e);
-    if (null != o)
-        if (e === r.l.FAVORITE_GAMES) t = E(e);
-        else {
-            let n = o.games || [];
-            if (n.length >= c.Xe[e]) return;
-            t = [...n, E(e)];
-        }
-    else t = e === r.l.FAVORITE_GAMES ? E(e) : [E(e)];
-    let a = O(n, y(e, t));
-    s.Z.setPendingWidgets(a);
-    let l = [];
-    e === r.l.FAVORITE_GAMES
-        ? l.push(t.applicationId)
-        : t.forEach((e) => {
-              l.push(e.applicationId);
-          }),
-        i.Z.getDetectableGamesSupplemental(l);
+    let t = b();
+    if (null != t.find((t) => t.type === e)) return;
+    let n = O(e);
+    s.Z.setPendingWidgets(y([n, ...t]));
 }
 function T(e) {
-    let t = v().filter((t) => t.type !== e);
+    let t = b().filter((t) => t.type !== e);
     s.Z.setPendingWidgets(t);
 }
 function S(e, t) {
     let n,
-        o = v(),
+        o = b(),
         a = o.find((t) => t.type === e),
         l = c.Xe[e];
-    if (null != a)
-        if (e === r.l.FAVORITE_GAMES);
-        else {
-            var u;
-            if (((null == (u = a.games) ? void 0 : u.length) || 0) >= l) return;
-        }
-    let d = { applicationId: t };
-    n = null != a ? (e === r.l.FAVORITE_GAMES ? d : [...(a.games || []), d]) : e === r.l.FAVORITE_GAMES ? d : [d];
-    let f = O(o, y(e, n));
-    s.Z.setPendingWidgets(f), i.Z.getDetectableGamesSupplemental([t]);
+    if (null != a) {
+        var u, d;
+        if ((null != (d = null == (u = a.games) ? void 0 : u.length) ? d : 0) >= l) return;
+    }
+    let f = { applicationId: t };
+    n = null != a ? (e === r.l.FAVORITE_GAMES ? [f] : [...(a.games || []), f]) : [f];
+    let _ = v(o, O(e, n));
+    s.Z.setPendingWidgets(_), i.Z.getDetectableGamesSupplemental([t]);
 }
 function A(e) {
-    let t,
-        n = (e) => ({
+    let t = (e) => ({
             game_id: e.applicationId,
             comment: e.comment,
             tags: e.tags,
-        });
-    return (
-        (t = e.type === r.l.FAVORITE_GAMES ? [n(e.game)] : e.games.map(n)),
-        {
-            data: {
-                type: e.type,
-                games: t,
-            },
-        }
-    );
+        }),
+        n = e.games.map(t);
+    return {
+        data: {
+            type: e.type,
+            games: n,
+        },
+    };
 }
 async function N() {
     let e = l.Z.getPendingWidgets();

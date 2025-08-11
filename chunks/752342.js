@@ -1,4 +1,4 @@
-n.d(t, { Z: () => S }), n(388685);
+n.d(t, { Z: () => w }), n(388685);
 var r = n(255367);
 n(73800);
 var l = n(481060),
@@ -24,36 +24,36 @@ var l = n(481060),
     I = n(740628),
     P = n(398145),
     Z = n(228168),
-    T = n(981631),
-    N = n(388032),
+    N = n(981631),
+    T = n(388032),
     E = n(405666);
-function S(e) {
+function w(e) {
     let {
             user: t,
             currentUser: n,
-            guildId: S,
-            channelId: w,
+            guildId: w,
+            channelId: S,
             messageId: A,
             roleId: C,
             sessionId: L,
             initialSection: D,
             initialSubsection: k,
-            transitionState: R,
-            openedAt: G,
-            onClose: B,
-            sourceAnalyticsLocations: M = [],
+            transitionState: B,
+            openedAt: R,
+            onClose: M,
+            sourceAnalyticsLocations: G = [],
         } = e,
-        U = S === T.ME ? void 0 : S,
+        U = w === N.ME ? void 0 : w,
         F = (0, u.ZP)(t.id, U),
-        V = s.ZP.getName(U, w, t),
+        V = s.ZP.getName(U, S, t),
         Y = (0, c.Dt)(),
-        { analyticsLocations: H } = (0, a.ZP)([...M, o.Z.USER_PROFILE_MODAL]),
+        { analyticsLocations: H } = (0, a.ZP)([...G, o.Z.USER_PROFILE_MODAL]),
         W = (0, d.ZB)({
             layout: "MODAL",
             userId: t.id,
             sourceSessionId: L,
             guildId: U,
-            channelId: w,
+            channelId: S,
             messageId: A,
             roleId: C,
         }),
@@ -62,13 +62,13 @@ function S(e) {
         value: H,
         children: (0, r.jsx)(d.Mt, {
             value: W,
-            openedAt: G,
+            openedAt: R,
             fetchStartedAt: null == F ? void 0 : F.fetchStartedAt,
             fetchEndedAt: null == F ? void 0 : F.fetchEndedAt,
             isLoaded: null == F ? void 0 : F.isLoaded,
             children: (0, r.jsx)(l.Y0X, {
                 "data-migration-pending": !0,
-                transitionState: R,
+                transitionState: B,
                 className: E.root,
                 hideShadow: !0,
                 "aria-labelledby": Y,
@@ -77,7 +77,7 @@ function S(e) {
                     component: (0, r.jsx)(l.nn4, {
                         children: (0, r.jsx)(l.H, {
                             id: Y,
-                            children: N.intl.format(N.t.KRe1Fh, { name: V }),
+                            children: T.intl.format(T.t.KRe1Fh, { name: V }),
                         }),
                     }),
                     children: (0, r.jsxs)(b.Z, {
@@ -89,7 +89,7 @@ function S(e) {
                                 children: (0, r.jsx)(x.Z, {
                                     user: t,
                                     guildId: U,
-                                    onCloseProfile: B,
+                                    onCloseProfile: M,
                                 }),
                             }),
                             (0, r.jsxs)("div", {
@@ -106,15 +106,15 @@ function S(e) {
                                                 user: t,
                                                 displayProfile: F,
                                                 guildId: U,
-                                                channelId: w,
+                                                channelId: S,
                                                 themeType: Z.lY.MODAL,
                                             }),
                                             (0, r.jsx)(_.Z, {
                                                 location: "BotUserProfileModal",
                                                 user: t,
                                                 themeType: Z.lY.MODAL,
-                                                hasEntered: R === l.Dvm.ENTERED,
-                                                onCloseProfile: B,
+                                                hasEntered: B === l.Dvm.ENTERED,
+                                                onCloseProfile: M,
                                                 disableToolbar: !0,
                                             }),
                                             (0, r.jsxs)("div", {
@@ -159,7 +159,7 @@ function S(e) {
                                         tags: (0, r.jsx)(m.Z, {
                                             displayProfile: F,
                                             themeType: Z.lY.MODAL,
-                                            onClose: B,
+                                            onClose: M,
                                         }),
                                     }),
                                     (0, r.jsx)(I.Z, {
@@ -170,7 +170,7 @@ function S(e) {
                                         items: z,
                                         initialSection: null != D ? D : Z.oh.BOT_INFO,
                                         initialSubsection: k,
-                                        onClose: B,
+                                        onClose: M,
                                     }),
                                 ],
                             }),

@@ -1,7 +1,7 @@
-var n = f(160739),
-    r = f(988513),
-    e = f(263604),
-    o = f(519342);
-u.exports = function (u, t, f) {
-    return ((u = e(u)), void 0 === (t = f ? void 0 : t)) ? (r(u) ? o(u) : n(u)) : u.match(t) || [];
+var r = u(160739),
+    n = u(988513),
+    f = u(263604),
+    o = u(519342);
+e.exports = function (e, t, u) {
+    return ((e = f(e)), void 0 === (t = u ? void 0 : t)) ? (n(e) ? o(e) : r(e)) : e.match(t) || [];
 };

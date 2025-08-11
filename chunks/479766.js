@@ -1,8 +1,8 @@
 r.d(t, { Z: () => s }), r(539854);
 var n,
     a = r(442837),
-    l = r(570140);
-function i(e, t, r) {
+    i = r(570140);
+function l(e, t, r) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -115,7 +115,7 @@ class o extends (n = a.ZP.Store) {
         (this._earnedOrbsCoachmarkOpen = !1), (this._earnedOrbsCoachmarkQuantity = 0);
     }
     constructor() {
-        super(l.Z, {
+        super(i.Z, {
             VIRTUAL_CURRENCY_REDEEM_START: (e) => this.handleRedeemVirtualCurrencyStart(e),
             VIRTUAL_CURRENCY_REDEEM_SUCCESS: (e) => this.handleRedeemVirtualCurrencySuccess(e),
             VIRTUAL_CURRENCY_REDEEM_FAIL: (e) => this.handleRedeemVirtualCurrencyFail(e),
@@ -132,19 +132,19 @@ class o extends (n = a.ZP.Store) {
                 this.setBalancePillOverlay(e.balancePillOverlay);
             },
         }),
-            i(this, "_entitlements", null),
-            i(this, "_redeemingSkuId", null),
-            i(this, "_isRedeemingVirtualCurrency", !1),
-            i(this, "_redeemVirtualCurrencyError", null),
-            i(this, "_balance", null),
-            i(this, "_fetchBalanceError", null),
-            i(this, "_isFetchingBalance", !1),
-            i(this, "_onboardingModalOpenedPrior", !1),
-            i(this, "_earnedOrbsCoachmarkOpen", !1),
-            i(this, "_earnedOrbsCoachmarkDedupeKeys", []),
-            i(this, "_earnedOrbsCoachmarkQuantity", 0),
-            i(this, "_balancePillOverlay", !1);
+            l(this, "_entitlements", null),
+            l(this, "_redeemingSkuId", null),
+            l(this, "_isRedeemingVirtualCurrency", !1),
+            l(this, "_redeemVirtualCurrencyError", null),
+            l(this, "_balance", null),
+            l(this, "_fetchBalanceError", null),
+            l(this, "_isFetchingBalance", !1),
+            l(this, "_onboardingModalOpenedPrior", !1),
+            l(this, "_earnedOrbsCoachmarkOpen", !1),
+            l(this, "_earnedOrbsCoachmarkDedupeKeys", []),
+            l(this, "_earnedOrbsCoachmarkQuantity", 0),
+            l(this, "_balancePillOverlay", !1);
     }
 }
-i(o, "displayName", "VirtualCurrencyStore");
+l(o, "displayName", "VirtualCurrencyStore");
 let s = new o();

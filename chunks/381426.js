@@ -1,16 +1,16 @@
-n.d(t, { Z: () => s });
+n.d(t, { Z: () => a });
 var i = n(392711),
-    o = n(509613),
-    l = n(695346),
-    r = n(388032);
-let a = i.range(1, 11).map((e) => ({
-        value: 60 * e,
-        label: () => r.intl.formatToPlainString(r.t.iXLF9f, { minutes: e }),
-    })),
-    s = (0, o.Em)("MobileNotificationDelay", {
-        useTitle: () => r.intl.string(r.t["8rHeOj"]),
-        useSubtitle: () => r.intl.string(r.t["eJE6+P"]),
-        options: a,
-        useValue: l.CM.useSetting,
-        setValue: l.CM.updateSetting,
-    });
+    l = n(509613),
+    s = n(695346),
+    o = n(388032);
+let a = (0, l.Em)("MobileNotificationDelay", {
+    useTitle: () => o.intl.string(o.t["8rHeOj"]),
+    useSubtitle: () => o.intl.string(o.t["eJE6+P"]),
+    useOptions: () =>
+        i.range(1, 11).map((e) => ({
+            value: 60 * e,
+            label: o.intl.formatToPlainString(o.t.iXLF9f, { minutes: e }),
+        })),
+    useValue: s.CM.useSetting,
+    setValue: s.CM.updateSetting,
+});

@@ -1,16 +1,16 @@
-n.r(t), n.d(t, { default: () => c });
+n.r(t), n.d(t, { default: () => u });
 var i = n(255367);
 n(73800);
-var o = n(37234),
-    l = n(79808),
-    r = n(604227),
+var l = n(37234),
+    s = n(79808),
+    o = n(604227),
     a = n(92959),
-    s = n(920952);
-function c() {
-    return (0, i.jsx)(l.Z, {
-        onClose: o.xf,
-        root: s.Z,
-        sidebarFooter: r.Z,
+    r = n(920952);
+function u() {
+    return (0, i.jsx)(s.Z, {
+        onClose: l.xf,
+        root: r.Z,
+        sidebarFooter: o.Z,
         initialPanel: a.Z,
     });
 }

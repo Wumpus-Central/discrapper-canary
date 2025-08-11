@@ -1,18 +1,18 @@
-n.d(t, { Z: () => c });
+n.d(t, { Z: () => u });
 var i = n(442837),
-    o = n(509613),
-    l = n(960412),
-    r = n(151662),
+    l = n(509613),
+    s = n(960412),
+    o = n(151662),
     a = n(930441),
-    s = n(388032);
-let c = (0, o.ax)("UnsubscribeFromAllMarketingEmails", {
-    useTitle: () => s.intl.string(s.t.Ra9Pws),
-    useSubtitle: () => s.intl.string(s.t.iYjQ8f),
-    useLabel: () => s.intl.string(s.t.KT1pBA),
+    r = n(388032);
+let u = (0, l.ax)("UnsubscribeFromAllMarketingEmails", {
+    useTitle: () => r.intl.string(r.t.Ra9Pws),
+    useSubtitle: () => r.intl.string(r.t.iYjQ8f),
+    useLabel: () => r.intl.string(r.t.KT1pBA),
     useVariant: () => "critical-secondary",
     useDisabled: () => {
-        let { categories: e } = (0, i.cj)([r.Z], () => r.Z.getEmailSettings());
+        let { categories: e } = (0, i.cj)([o.Z], () => o.Z.getEmailSettings());
         return a.M0.every((t) => !e[t]);
     },
-    onClick: () => (0, l.oc)(),
+    onClick: () => (0, s.oc)(),
 });

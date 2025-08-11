@@ -154,7 +154,12 @@ let E = (e) => (null == e ? void 0 : e.premiumType) != null,
                 null != t && t.type === i.Z.VARIANTS_GROUP && null != t.variants
                     ? (0, r.concat)(
                           e,
-                          t.variants.map((e) => g(h({}, e), { variantGroupStoreListingId: t.storeListingId })),
+                          t.variants.map((e) =>
+                              g(h({}, e), {
+                                  variantGroupStoreListingId: t.storeListingId,
+                                  eligibleOffers: t.eligibleOffers,
+                              }),
+                          ),
                       )
                     : (e.push(t), e),
             [],

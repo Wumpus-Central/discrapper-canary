@@ -1,28 +1,28 @@
-n.d(t, { R: () => s }), n(35282);
-var r = n(255367);
-n(73800);
-var l = n(481060),
-    a = n(774078),
-    i = n(388032),
-    o = n(940326);
+r.d(t, { R: () => s }), r(35282);
+var n = r(255367);
+r(73800);
+var l = r(481060),
+    a = r(774078),
+    i = r(388032),
+    o = r(940326);
 let s = (e) => {
-    let { endDate: t, size: n = "md" } = e,
+    let { endDate: t, size: r = "md" } = e,
         { days: s, hours: c, minutes: u } = (0, a.Z)(t),
-        d = (function (e, t, n) {
-            let r = (e) => "".concat(e.toString().padStart(2, "0"));
-            return [r(e), r(t), r(n)].join(":");
+        d = (function (e, t, r) {
+            let n = (e) => "".concat(e.toString().padStart(2, "0"));
+            return [n(e), n(t), n(r)].join(":");
         })(s, c, u);
-    return (0, r.jsxs)("div", {
+    return (0, n.jsxs)("div", {
         className: o.container,
         role: "timer",
         children: [
             d.split("").map((e, t) =>
                 ":" === e
-                    ? (0, r.jsx)(
+                    ? (0, n.jsx)(
                           l.Text,
                           {
                               color: "none",
-                              variant: "md" === n ? "heading-lg/extrabold" : "heading-xxl/extrabold",
+                              variant: "md" === r ? "heading-lg/extrabold" : "heading-xxl/extrabold",
                               className: o.delineator,
                               "aria-hidden": !0,
                               tag: "div",
@@ -30,11 +30,11 @@ let s = (e) => {
                           },
                           t,
                       )
-                    : (0, r.jsx)(
+                    : (0, n.jsx)(
                           l.Text,
                           {
                               color: "always-white",
-                              variant: "md" === n ? "heading-md/bold" : "heading-xl/bold",
+                              variant: "md" === r ? "heading-md/bold" : "heading-xl/bold",
                               className: o.number,
                               "aria-hidden": !0,
                               tag: "div",
@@ -43,7 +43,7 @@ let s = (e) => {
                           t,
                       ),
             ),
-            (0, r.jsx)(l.nn4, {
+            (0, n.jsx)(l.nn4, {
                 children: i.intl.format(i.t.j6IyVV, {
                     days: s,
                     hours: c,

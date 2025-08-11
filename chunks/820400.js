@@ -8,10 +8,15 @@ var r = a(296009),
     o = a(447448),
     c = a(148444);
 function d() {
-    return (0, o.k)({
-        location: "DevToolsWidgetsPanel",
-        autoTrackExposure: !1,
-    })
+    let e = (0, o.k)({
+            location: "DevToolsWidgetsPanel",
+            autoTrackExposure: !1,
+        }),
+        t = (e) => {
+            let t = (0, s.np)(e);
+            (0, s.ES)(e, t.applicationId);
+        };
+    return e
         ? (0, n.jsx)("div", {
               className: c.container,
               children: (0, n.jsxs)(l.hjN, {
@@ -25,23 +30,23 @@ function d() {
                           children: [
                               (0, n.jsx)(l.zxk, {
                                   variant: "primary",
-                                  text: "Favorite Game Widget",
-                                  onClick: () => (0, s.qH)(r.l.FAVORITE_GAMES),
+                                  text: "Add Favorite Game",
+                                  onClick: () => t(r.l.FAVORITE_GAMES),
                               }),
                               (0, n.jsx)(l.zxk, {
                                   variant: "primary",
-                                  text: "Current Game Widget",
-                                  onClick: () => (0, s.qH)(r.l.CURRENT_GAMES),
+                                  text: "Add Current Game",
+                                  onClick: () => t(r.l.CURRENT_GAMES),
                               }),
                               (0, n.jsx)(l.zxk, {
                                   variant: "primary",
-                                  text: "Want to Play Game Widget",
-                                  onClick: () => (0, s.qH)(r.l.WANT_TO_PLAY_GAMES),
+                                  text: "Add Want to Play Game",
+                                  onClick: () => t(r.l.WANT_TO_PLAY_GAMES),
                               }),
                               (0, n.jsx)(l.zxk, {
                                   variant: "primary",
-                                  text: "Played Game Widget",
-                                  onClick: () => (0, s.qH)(r.l.PLAYED_GAMES),
+                                  text: "Add Played Game",
+                                  onClick: () => t(r.l.PLAYED_GAMES),
                               }),
                               (0, n.jsx)(l.zxk, {
                                   variant: "active",

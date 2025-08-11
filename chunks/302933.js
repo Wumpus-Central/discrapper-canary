@@ -1,48 +1,48 @@
-n.d(t, { J: () => g });
-var r = n(255367),
-    l = n(73800),
-    a = n(120356),
-    i = n.n(a),
-    o = n(717976),
-    s = n(873546),
-    c = n(435935),
-    u = n(481060),
-    d = n(168020),
-    p = n(326278);
+r.d(t, { J: () => g });
+var n = r(255367),
+    l = r(73800),
+    a = r(120356),
+    i = r.n(a),
+    o = r(717976),
+    s = r(873546),
+    c = r(435935),
+    u = r(481060),
+    d = r(168020),
+    p = r(326278);
 let g = l.memo(function (e) {
-    let { countdownTimerBlock: t, isVisible: n, isFullScreen: l } = e,
+    let { countdownTimerBlock: t, isVisible: r, isFullScreen: l } = e,
         a = (0, u.q_F)({
-            transform: "translateX(-50%) ".concat(n ? "translateY(-75%)" : "translateY(0%)"),
-            opacity: +!!n,
+            transform: "translateX(-50%) ".concat(r ? "translateY(-75%)" : "translateY(0%)"),
+            opacity: +!!r,
             config: {
                 tension: 120,
                 friction: 12,
             },
         });
-    return (0, r.jsxs)(o.animated.div, {
+    return (0, n.jsxs)(o.animated.div, {
         className: i()([p.countDownWrapper, l && p.fullScreenWrapper, s.tq && p.mobileWrapper]),
         role: "status",
         style: (function (e) {
             for (var t = 1; t < arguments.length; t++) {
-                var n = null != arguments[t] ? arguments[t] : {},
-                    r = Object.keys(n);
+                var r = null != arguments[t] ? arguments[t] : {},
+                    n = Object.keys(r);
                 "function" == typeof Object.getOwnPropertySymbols &&
-                    (r = r.concat(
-                        Object.getOwnPropertySymbols(n).filter(function (e) {
-                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                    (n = n.concat(
+                        Object.getOwnPropertySymbols(r).filter(function (e) {
+                            return Object.getOwnPropertyDescriptor(r, e).enumerable;
                         }),
                     )),
-                    r.forEach(function (t) {
-                        var r;
-                        (r = n[t]),
+                    n.forEach(function (t) {
+                        var n;
+                        (n = r[t]),
                             t in e
                                 ? Object.defineProperty(e, t, {
-                                      value: r,
+                                      value: n,
                                       enumerable: !0,
                                       configurable: !0,
                                       writable: !0,
                                   })
-                                : (e[t] = r);
+                                : (e[t] = n);
                     });
             }
             return e;
@@ -57,10 +57,10 @@ let g = l.memo(function (e) {
                 },
         ),
         children: [
-            (0, r.jsxs)(c.k, {
+            (0, n.jsxs)(c.k, {
                 direction: c.k.Direction.VERTICAL,
                 children: [
-                    (0, r.jsx)(u.Text, {
+                    (0, n.jsx)(u.Text, {
                         variant: "text-md/medium",
                         className: p.countdownLabel,
                         style: null != t.textColor && "" !== t.textColor ? { color: t.textColor } : void 0,
@@ -68,7 +68,7 @@ let g = l.memo(function (e) {
                     }),
                     null != t.body &&
                         "" !== t.body &&
-                        (0, r.jsx)(u.Text, {
+                        (0, n.jsx)(u.Text, {
                             variant: "text-sm/medium",
                             className: p.countdownBody,
                             style: null != t.textColor && "" !== t.textColor ? { color: t.textColor } : void 0,
@@ -76,7 +76,7 @@ let g = l.memo(function (e) {
                         }),
                 ],
             }),
-            (0, r.jsx)(d.R, { endDate: t.endTime }),
+            (0, n.jsx)(d.R, { endDate: t.endTime }),
         ],
     });
 });

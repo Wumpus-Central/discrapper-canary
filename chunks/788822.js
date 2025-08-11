@@ -1,21 +1,21 @@
-n.d(t, { q: () => _ });
-var r = n(255367),
-    l = n(73800),
-    a = n(120356),
-    i = n.n(a),
-    o = n(180650),
-    s = n(622535),
-    c = n(481060),
-    u = n(626135),
-    d = n(381585),
-    p = n(597688),
-    g = n(297651),
-    f = n(794324),
-    b = n(981631),
-    h = n(388032),
-    m = n(806734);
+r.d(t, { q: () => _ });
+var n = r(255367),
+    l = r(73800),
+    a = r(120356),
+    i = r.n(a),
+    o = r(180650),
+    s = r(622535),
+    c = r(481060),
+    u = r(626135),
+    d = r(381585),
+    p = r(597688),
+    g = r(297651),
+    f = r(794324),
+    b = r(981631),
+    h = r(388032),
+    m = r(806734);
 let _ = (e) => {
-    var t, n, a, _;
+    var t, r, a, _;
     let v,
         { category: O, subblock: C, badgeText: E, handleTransition: S } = e;
     null != C &&
@@ -23,7 +23,7 @@ let _ = (e) => {
             null == (t = p.Z.getCategoryByStoreListingId(null == C ? void 0 : C.categoryStoreListingId))
                 ? void 0
                 : t.skuId);
-    let y = null != (n = null != v ? v : null == O ? void 0 : O.skuId) ? n : "",
+    let y = null != (r = null != v ? v : null == O ? void 0 : O.skuId) ? r : "",
         { handleCardVisibilityChange: x } = (0, g.E)(y, "home", "marketing featured block"),
         { featuredBlockBanner: j } = (0, f.YG)(O, C),
         T = l.useRef(null),
@@ -31,11 +31,11 @@ let _ = (e) => {
         L = P ? "NAMEPLATES VOL.3" : null,
         k = null == C ? void 0 : C.bodyText,
         I = (0, d.sp)();
-    return (0, r.jsx)(s.$, {
+    return (0, n.jsx)(s.$, {
         innerRef: T,
         onChange: x,
         threshold: 0,
-        children: (0, r.jsxs)(c.P3F, {
+        children: (0, n.jsxs)(c.P3F, {
             className: m.featuredBlock,
             innerRef: T,
             style: { backgroundImage: "url(".concat(j, ")") },
@@ -54,16 +54,16 @@ let _ = (e) => {
             },
             children: [
                 null != E &&
-                    (0, r.jsx)(c.IGR, {
+                    (0, n.jsx)(c.IGR, {
                         disableColor: !0,
                         text: E,
                         className: m.featuredBlockBadge,
                     }),
-                (0, r.jsxs)("div", {
+                (0, n.jsxs)("div", {
                     className: m.featuredBlockTextContainer,
                     children: [
                         null != L &&
-                            (0, r.jsx)(c.X6q, {
+                            (0, n.jsx)(c.X6q, {
                                 lineClamp: 2,
                                 className: i()(m.featuredBlockTitleText, { [m.featuredBlockTitleTextNameplate]: P }),
                                 style: { color: null != (a = null == C ? void 0 : C.bannerTextColor) ? a : "white" },
@@ -71,7 +71,7 @@ let _ = (e) => {
                                 children: L,
                             }),
                         null != k &&
-                            (0, r.jsx)(c.X6q, {
+                            (0, n.jsx)(c.X6q, {
                                 lineClamp: null != L ? 2 : 4,
                                 className: m.featuredBlockBodyText,
                                 style: { color: null != (_ = null == C ? void 0 : C.bannerTextColor) ? _ : "white" },
@@ -80,9 +80,9 @@ let _ = (e) => {
                             }),
                     ],
                 }),
-                (0, r.jsx)("div", {
+                (0, n.jsx)("div", {
                     className: m.featuredBlockButtonContainer,
-                    children: (0, r.jsx)(c.zxk, {
+                    children: (0, n.jsx)(c.zxk, {
                         variant: "overlay-primary",
                         text: h.intl.string(h.t.jVcuVV),
                         onClick: (e) => {

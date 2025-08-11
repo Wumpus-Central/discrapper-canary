@@ -22,7 +22,7 @@ function m(e) {
                     null != l && "" !== l
                         ? (0, r.jsx)("img", {
                               src: l,
-                              alt: null != o ? o : "Game cover",
+                              alt: null != o ? o : "",
                               className: f.placeholderGameImage,
                           })
                         : (0, r.jsx)("div", { className: f.placeholderGameFallback }),
@@ -54,7 +54,7 @@ function g(e) {
             null != n && "" !== n
                 ? (0, r.jsx)("img", {
                       src: n,
-                      alt: null != l ? l : "Game cover",
+                      alt: null != l ? l : "",
                       className: f.placeholderGameImage,
                   })
                 : (0, r.jsx)("div", { className: f.placeholderGameFallback }),
@@ -123,7 +123,7 @@ function j() {
             }),
             (0, r.jsx)("ul", {
                 className: f.widgetGrid,
-                "aria-label": "Widget options",
+                "aria-label": u.intl.string(u.t["+EIBSE"]),
                 children: s.rR.map((e) => (0, r.jsx)("li", { children: (0, r.jsx)(b, { widgetType: e }) }, e)),
             }),
         ],

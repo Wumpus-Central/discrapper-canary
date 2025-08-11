@@ -1,16 +1,16 @@
-n.d(t, { W: () => r });
+n.d(t, { W: () => o });
 var i = n(255367),
-    o = n(657707),
-    l = n(206403);
-function r(e) {
+    l = n(657707),
+    s = n(206403);
+function o(e) {
     var t, n;
-    let { node: r } = e;
-    return (0, i.jsx)(l.x, {
+    let { node: o } = e;
+    return (0, i.jsx)(s.x, {
         title:
-            "useTitle" in r
-                ? "[PLACEHOLDER] ".concat(null == (t = r.useTitle) ? void 0 : t.call(r, !1))
+            "useTitle" in o
+                ? "[PLACEHOLDER] ".concat(null == (t = o.useTitle) ? void 0 : t.call(o, !1))
                 : "[PLACEHOLDER]",
-        description: "useSubtitle" in r ? (null == (n = r.useSubtitle) ? void 0 : n.call(r)) : "",
-        secondaryTrailingElement: (0, i.jsx)(o.tEQ, {}),
+        description: "useSubtitle" in o ? (null == (n = o.useSubtitle) ? void 0 : n.call(o)) : "",
+        secondaryTrailingElement: (0, i.jsx)(l.tEQ, {}),
     });
 }

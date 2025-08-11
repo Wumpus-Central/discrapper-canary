@@ -1,4 +1,4 @@
-n.d(t, { Z: () => N }), n(642613), n(388685);
+n.d(t, { Z: () => T }), n(642613), n(388685);
 var r = n(255367),
     l = n(73800),
     i = n(772848),
@@ -83,7 +83,7 @@ function Z(e, t) {
     }
     return l;
 }
-function T(e) {
+function N(e) {
     let {
             user: t,
             currentUser: n,
@@ -98,16 +98,16 @@ function T(e) {
         b = f && null != s,
         j = l.useRef(null),
         x = l.useMemo(() => "roles-".concat((0, i.Z)()), []),
-        T = (0, o.ZP)({
+        N = (0, o.ZP)({
             id: x,
             isEnabled: !0,
             scrollToStart: v.Cyb,
             scrollToEnd: v.Cyb,
             wrap: !0,
         }),
-        N = d.length,
-        E = 0 === N ? O.intl.string(O.t["vR7M+/"]) : O.intl.formatToPlainString(O.t.PCs0oq, { numRoles: N }),
-        S = d.map((e) => {
+        T = d.length,
+        E = 0 === T ? O.intl.string(O.t["vR7M+/"]) : O.intl.formatToPlainString(O.t.PCs0oq, { numRoles: T }),
+        w = d.map((e) => {
             var l;
             return (0, r.jsx)(
                 h.Z,
@@ -125,7 +125,7 @@ function T(e) {
             );
         });
     return (0, r.jsx)(a.bG, {
-        navigator: T,
+        navigator: N,
         children: (0, r.jsx)(a.SJ, {
             children: (e) => {
                 var { ref: t } = e,
@@ -143,13 +143,13 @@ function T(e) {
                         ),
                         {
                             children: [
-                                S,
+                                w,
                                 b &&
                                     (0, r.jsx)(y.Z, {
                                         buttonRef: j,
                                         guild: c,
                                         guildMember: s,
-                                        numRoles: N,
+                                        numRoles: T,
                                         highestRole: u,
                                         onAddRole: m,
                                     }),
@@ -161,16 +161,16 @@ function T(e) {
         }),
     });
 }
-function N(e) {
+function T(e) {
     var { user: t, currentUser: n, guildId: i } = e,
         o = Z(e, ["user", "currentUser", "guildId"]);
     let { trackUserProfileAction: a } = (0, b.KZ)(),
         h = (0, c.e7)([m.Z], () => m.Z.getGuild(i)),
         y = (0, c.e7)([u.ZP], () => u.ZP.getMember(i, t.id)),
         _ = null == y ? void 0 : y.roles,
-        N = (0, c.Wu)([f.Z], () => f.Z.getManyRoles(i, null != _ ? _ : []).sort(j.Z), [_, i]),
+        T = (0, c.Wu)([f.Z], () => f.Z.getManyRoles(i, null != _ ? _ : []).sort(j.Z), [_, i]),
         [E] = (0, c.Wu)([p.Z], () => [p.Z.can(v.Plq.MANAGE_ROLES, h), p.Z.getGuildVersion(i)]),
-        S = l.useCallback(
+        w = l.useCallback(
             (e) => {
                 var n, r;
                 a({ action: "REMOVE_ROLE" });
@@ -181,7 +181,7 @@ function N(e) {
             },
             [_, i, t.id, a],
         ),
-        w = l.useCallback(
+        S = l.useCallback(
             (e) => {
                 a({ action: "ADD_ROLE" });
                 let n = null != _ ? _ : [];
@@ -191,20 +191,20 @@ function N(e) {
         );
     if (null == h) return null;
     let A = E && null != y;
-    return 0 !== N.length || A
+    return 0 !== T.length || A
         ? (0, r.jsx)(
               x.Z,
               P(I({ heading: O.intl.string(O.t.LPJmLy) }, o), {
-                  children: (0, r.jsx)(T, {
+                  children: (0, r.jsx)(N, {
                       user: t,
                       currentUser: n,
                       guild: h,
                       guildMember: y,
-                      roles: N,
+                      roles: T,
                       highestRole: g.e9(h, n.id),
                       canManageRoles: E,
-                      onAddRole: w,
-                      onRemoveRole: S,
+                      onAddRole: S,
+                      onRemoveRole: w,
                   }),
               }),
           )
