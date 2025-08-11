@@ -1,7 +1,4 @@
-e.exports = {
-    center: "center__47458",
-    textCenter: "textCenter__47458",
-    button: "button__47458",
+t.exports = {
     options: "options__47458",
     optionContainer: "optionContainer__47458",
     optionContainerOther: "optionContainerOther__47458",

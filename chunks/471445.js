@@ -16,7 +16,7 @@ var r = n(481060),
 function _(e, t, n, r) {
     if (null == e) return null;
     if (e.id === (null == t ? void 0 : t.rulesChannelId)) return f.intl.string(f.t["/7EhaW"]);
-    let o = (0, i.aC)(e);
+    let o = (0, i.Gb)(e);
     switch (e.type) {
         case d.d4z.GUILD_TEXT:
             if (null != e.linkedLobby) return f.intl.string(f.t.Lt3PAA);
@@ -69,7 +69,7 @@ function p(e, t) {
     let g = (0, o.n)(null == t ? void 0 : t.id, [s.Z, l.default, a.ZP]);
     if (e.isModeratorReportChannel()) return r.U65;
     if ((null == e ? void 0 : e.id) === (null == t ? void 0 : t.rulesChannelId)) return r.snC;
-    let E = (0, i.aC)(e);
+    let E = (0, i.Gb)(e);
     switch (e.type) {
         case d.d4z.GUILD_ANNOUNCEMENT:
             if (h)

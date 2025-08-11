@@ -1,122 +1,100 @@
-t.d(n, { default: () => j }), t(388685);
-var l = t(255367),
-    a = t(73800),
-    i = t(442837),
-    r = t(755721),
-    o = t(481060),
-    s = t(933557),
-    c = t(313201),
-    d = t(592125),
-    u = t(984933),
-    h = t(699516),
-    x = t(594174),
-    m = t(556012),
-    C = t(388032),
-    p = t(331632);
-let g = (e) => {
-    let { guildId: n, channel: t, onSelectChannel: a } = e,
-        r = (0, i.Wu)(
-            [u.ZP],
+e.d(n, { default: () => v }), e(388685);
+var l = e(255367),
+    i = e(73800),
+    r = e(442837),
+    a = e(82659),
+    s = e(481060),
+    u = e(933557),
+    d = e(592125),
+    o = e(984933),
+    c = e(699516),
+    h = e(594174),
+    x = e(556012),
+    g = e(388032);
+let p = (t) => {
+    let { guildId: n, channel: e, onSelectChannel: i } = t,
+        a = (0, r.Wu)(
+            [o.ZP],
             () =>
-                u.ZP.getChannels(n)
-                    [u.sH].filter((e) => {
-                        let { channel: n } = e;
+                o.ZP.getChannels(n)
+                    [o.sH].filter((t) => {
+                        let { channel: n } = t;
                         return !n.isGuildVocal() && !n.isThread() && !n.isForumLikeChannel();
                     })
-                    .map((e) => {
-                        let { channel: n } = e;
+                    .map((t) => {
+                        let { channel: n } = t;
                         return n;
                     }),
             [n],
         );
-    return (0, l.jsx)(o.xJW, {
-        className: p.channelSelector,
+    return (0, l.jsx)(s.xJW, {
         required: !0,
-        children: (0, l.jsx)(o.VcW, {
-            value: null == t ? void 0 : t.id,
-            options: r.map((e) => ({
-                value: e.id,
-                label: (0, s.F6)(e, x.default, h.Z, !0),
+        children: (0, l.jsx)(s.VcW, {
+            value: null == e ? void 0 : e.id,
+            options: a.map((t) => ({
+                value: t.id,
+                label: (0, u.F6)(t, h.default, c.Z, !0),
             })),
-            onChange: (e) => {
-                let n = r.find((n) => n.id === e);
-                a(null != n ? n : void 0);
+            onChange: (t) => {
+                let n = a.find((n) => n.id === t);
+                i(null != n ? n : void 0);
             },
-            placeholder: C.intl.string(C.t["N+T69/"]),
+            placeholder: g.intl.string(g.t["N+T69/"]),
         }),
     });
 };
-function j(e) {
-    let { action: n, triggerType: t, guildId: s, isEdit: u, onEditChannel: h, onClose: x, transitionState: j } = e,
-        k = (0, c.Dt)(),
-        [v, f] = a.useState(n.metadata.channelId),
-        [z, S] = a.useState(null),
-        T = (0, i.e7)([d.Z], () => d.Z.getChannel(v), [v]),
-        N = (0, m.c)(n.type, n, t);
-    if (null == N) return null;
-    let { headerText: _ } = N;
-    return (0, l.jsxs)(o.Y0X, {
-        transitionState: j,
-        "aria-labelledby": k,
-        size: o.CgR.SMALL,
-        parentComponent: "AutomodActionFlagToChannelModal",
-        children: [
-            (0, l.jsxs)(o.hzk, {
-                className: p.actionContentContainer,
-                children: [
-                    (0, l.jsx)(o.X6q, {
-                        id: k,
-                        color: "header-primary",
-                        variant: "heading-lg/semibold",
-                        className: p.header,
-                        children: _,
-                    }),
-                    (0, l.jsx)(o.Text, {
-                        color: "header-secondary",
-                        variant: "text-sm/normal",
-                        children: C.intl.string(C.t["z/ZF2t"]),
-                    }),
-                    (0, l.jsx)(g, {
-                        guildId: s,
-                        channel: T,
-                        onSelectChannel: (e) => {
-                            null != e && f(e.id);
-                        },
-                    }),
-                    null != z
-                        ? (0, l.jsx)(o.Text, {
-                              color: "text-danger",
-                              variant: "text-sm/normal",
-                              children: z,
-                          })
-                        : (0, l.jsx)(o.Text, {
-                              color: "text-muted",
-                              variant: "text-sm/normal",
-                              children: C.intl.string(C.t["ric+5u"]),
-                          }),
-                ],
-            }),
-            (0, l.jsxs)(o.mzw, {
-                children: [
-                    (0, l.jsx)(o.zxk, {
-                        variant: "primary",
-                        size: "sm",
-                        text: u ? C.intl.string(C.t.bt75u7) : C.intl.string(C.t.R3BPHx),
-                        onClick: () => {
-                            if (null == v) return void S(C.intl.string(C.t.lM1NLi));
-                            h(v);
-                        },
-                    }),
-                    (0, l.jsx)(r.zx, {
-                        onClick: () => {
-                            x();
-                        },
-                        color: r.zx.Colors.TRANSPARENT,
-                        look: r.zx.Looks.LINK,
-                        children: C.intl.string(C.t["ETE/oK"]),
-                    }),
-                ],
-            }),
+function v(t) {
+    let { action: n, triggerType: e, guildId: u, isEdit: o, onEditChannel: c, onClose: h, transitionState: v } = t,
+        [C, m] = i.useState(n.metadata.channelId),
+        [f, j] = i.useState(null),
+        k = (0, r.e7)([d.Z], () => d.Z.getChannel(C), [C]),
+        Z = (0, x.c)(n.type, n, e);
+    if (null == Z) return null;
+    let { headerText: b } = Z;
+    return (0, l.jsx)(a.Modal, {
+        onClose: h,
+        transitionState: v,
+        title: b,
+        subtitle: g.intl.string(g.t["z/ZF2t"]),
+        actions: [
+            {
+                text: g.intl.string(g.t["ETE/oK"]),
+                onClick: () => {
+                    h();
+                },
+                variant: "secondary",
+            },
+            {
+                text: o ? g.intl.string(g.t.bt75u7) : g.intl.string(g.t.R3BPHx),
+                onClick: () => {
+                    if (null == C) return void j(g.intl.string(g.t.lM1NLi));
+                    c(C);
+                },
+            },
         ],
+        children: (0, l.jsxs)(s.Kqy, {
+            gap: 8,
+            direction: "vertical",
+            children: [
+                (0, l.jsx)(p, {
+                    guildId: u,
+                    channel: k,
+                    onSelectChannel: (t) => {
+                        null != t && m(t.id);
+                    },
+                }),
+                null != f
+                    ? (0, l.jsx)(s.Text, {
+                          color: "text-danger",
+                          variant: "text-sm/normal",
+                          children: f,
+                      })
+                    : (0, l.jsx)(s.Text, {
+                          color: "text-muted",
+                          variant: "text-sm/normal",
+                          children: g.intl.string(g.t["ric+5u"]),
+                      }),
+            ],
+        }),
     });
 }

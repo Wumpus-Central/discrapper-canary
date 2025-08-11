@@ -5,6 +5,7 @@ e.exports = {
     scroller: "scroller_ac6cb0",
     protip: "protip_ac6cb0",
     hasContent: "hasContent_ac6cb0",
+    resultsArea: "resultsArea_ac6cb0",
     emptyState: "emptyState_ac6cb0",
     emptyStateNote: "emptyStateNote_ac6cb0",
     emptyStateCTA: "emptyStateCTA_ac6cb0",

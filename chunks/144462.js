@@ -1,66 +1,38 @@
-n.d(t, { default: () => h }), n(388685);
-var a = n(255367),
-    s = n(73800),
-    i = n(755721),
-    o = n(481060),
-    r = n(313201),
-    l = n(273504),
-    c = n(388032),
-    d = n(831242);
-function h(e) {
-    let { initialCustomMessage: t, onSubmit: n, onClose: h, transitionState: x } = e,
-        m = (0, r.Dt)(),
-        [u, g] = s.useState(t);
-    return (0, a.jsxs)(o.Y0X, {
-        transitionState: x,
-        "aria-labelledby": m,
-        size: o.CgR.SMALL,
-        parentComponent: "AutomodActionBlockMessageModal",
-        children: [
-            (0, a.jsxs)(o.hzk, {
-                className: d.actionContentContainer,
-                children: [
-                    (0, a.jsx)(o.X6q, {
-                        id: m,
-                        color: "header-primary",
-                        variant: "heading-md/semibold",
-                        className: d.header,
-                        children: c.intl.string(c.t.Df4aUF),
-                    }),
-                    (0, a.jsx)(o.Text, {
-                        color: "header-secondary",
-                        variant: "text-sm/normal",
-                        children: c.intl.string(c.t.eOWEmJ),
-                    }),
-                    (0, a.jsx)(i.iS, {
-                        className: d.customMessageTextArea,
-                        placeholder: c.intl.string(c.t.gDZw7O),
-                        value: u,
-                        onChange: g,
-                        maxLength: l._6,
-                    }),
-                ],
-            }),
-            (0, a.jsxs)(o.mzw, {
-                children: [
-                    (0, a.jsx)(o.zxk, {
-                        variant: "primary",
-                        size: "sm",
-                        text: c.intl.string(c.t.bt75u7),
-                        onClick: () => {
-                            n(u);
-                        },
-                    }),
-                    (0, a.jsx)(i.zx, {
-                        onClick: () => {
-                            h();
-                        },
-                        color: i.zx.Colors.TRANSPARENT,
-                        look: i.zx.Looks.LINK,
-                        children: c.intl.string(c.t["ETE/oK"]),
-                    }),
-                ],
-            }),
+i.d(n, { default: () => c }), i(388685);
+var e = i(255367),
+    s = i(73800),
+    a = i(82659),
+    l = i(481060),
+    r = i(273504),
+    o = i(388032);
+function c(t) {
+    let { initialCustomMessage: n, onSubmit: i, onClose: c, transitionState: u } = t,
+        [d, h] = s.useState(n);
+    return (0, e.jsx)(a.Modal, {
+        onClose: c,
+        transitionState: u,
+        title: o.intl.string(o.t.Df4aUF),
+        subtitle: o.intl.string(o.t.eOWEmJ),
+        actions: [
+            {
+                text: o.intl.string(o.t["ETE/oK"]),
+                onClick: () => {
+                    c();
+                },
+                variant: "secondary",
+            },
+            {
+                text: o.intl.string(o.t.bt75u7),
+                onClick: () => {
+                    i(d);
+                },
+            },
         ],
+        children: (0, e.jsx)(l.Kx8, {
+            placeholder: o.intl.string(o.t.gDZw7O),
+            value: d,
+            onChange: h,
+            maxLength: r._6,
+        }),
     });
 }

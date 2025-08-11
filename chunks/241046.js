@@ -1,63 +1,40 @@
-n.d(e, { default: () => p });
-var i = n(255367),
-    s = n(73800),
-    a = n(481060),
-    r = n(367907),
-    d = n(313889),
-    o = n(177862),
-    c = n(36459),
-    l = n(981631),
-    x = n(388032),
-    h = n(141758);
+e.d(n, { default: () => p });
+var i = e(255367),
+    s = e(73800),
+    a = e(82659),
+    d = e(367907),
+    c = e(313889),
+    o = e(177862),
+    l = e(36459),
+    r = e(981631),
+    u = e(388032);
 function p(t) {
-    let { automodDecision: e, transitionState: n, onClose: p } = t,
-        u = s.useCallback(() => {
-            (0, r.yw)(l.rMx.GUILD_AUTOMOD_FEEDBACK, {
+    let { automodDecision: n, transitionState: e, onClose: p } = t,
+        C = s.useCallback(() => {
+            (0, d.yw)(r.rMx.GUILD_AUTOMOD_FEEDBACK, {
                 feedback_type: o.x2.BUG,
-                decision_id: e.decisionId,
-                message_id: e.messageId,
-                content: e.messageContent,
+                decision_id: n.decisionId,
+                message_id: n.messageId,
+                content: n.messageContent,
             }),
-                (0, c.Xx)(e.messageId, e.channel, d.d.SUBMIT_FEEDBACK),
+                (0, l.Xx)(n.messageId, n.channel, c.d.SUBMIT_FEEDBACK),
                 p();
-        }, [e, p]);
-    return (0, i.jsxs)(a.Y0X, {
-        transitionState: n,
-        size: a.CgR.SMALL,
-        parentComponent: "AutomodSubmitFeedbackModal",
-        children: [
-            (0, i.jsx)(a.xBx, {
-                separator: !1,
-                children: (0, i.jsx)(a.X6q, {
-                    color: "header-primary",
-                    variant: "heading-md/semibold",
-                    children: x.intl.string(x.t["7bdzNj"]),
-                }),
-            }),
-            (0, i.jsx)(a.hzk, {
-                children: (0, i.jsx)(a.Text, {
-                    variant: "text-sm/normal",
-                    color: "header-secondary",
-                    children: x.intl.string(x.t.Lbpk6u),
-                }),
-            }),
-            (0, i.jsxs)(a.mzw, {
-                children: [
-                    (0, i.jsx)("div", {
-                        className: h.button,
-                        children: (0, i.jsx)(a.zxk, {
-                            variant: "primary",
-                            text: x.intl.string(x.t.p89ACg),
-                            onClick: u,
-                        }),
-                    }),
-                    (0, i.jsx)(a.zxk, {
-                        variant: "secondary",
-                        text: x.intl.string(x.t["ETE/oK"]),
-                        onClick: p,
-                    }),
-                ],
-            }),
+        }, [n, p]);
+    return (0, i.jsx)(a.Modal, {
+        onClose: p,
+        transitionState: e,
+        title: u.intl.string(u.t["7bdzNj"]),
+        subtitle: u.intl.string(u.t.Lbpk6u),
+        actions: [
+            {
+                text: u.intl.string(u.t["ETE/oK"]),
+                onClick: p,
+                variant: "secondary",
+            },
+            {
+                text: u.intl.string(u.t.p89ACg),
+                onClick: C,
+            },
         ],
     });
 }

@@ -437,14 +437,23 @@ let ei = (0, d.Zc)(
     (e) => a.D5.create({ value: e }),
 );
 (0, d.Zc)(
-    "voiceAndVideo",
-    "nativePhoneIntegrationEnabled",
+    "privacy",
+    "quests3PDataOptedOut",
     (e) => {
         var t;
-        return null == (t = null == e ? void 0 : e.value) || t;
+        return null != (t = null == e ? void 0 : e.value) && t;
     },
     (e) => a.D5.create({ value: e }),
-);
+),
+    (0, d.Zc)(
+        "voiceAndVideo",
+        "nativePhoneIntegrationEnabled",
+        (e) => {
+            var t;
+            return null == (t = null == e ? void 0 : e.value) || t;
+        },
+        (e) => a.D5.create({ value: e }),
+    );
 let eo = (0, d.TG)({
         baseSetting: (0, d.Zc)(
             "voiceAndVideo",

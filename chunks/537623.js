@@ -1,176 +1,149 @@
-n.d(t, { default: () => x }), n(388685);
+n.d(e, { default: () => b }), n(388685);
 var r = n(255367),
     i = n(73800),
-    a = n(120356),
-    l = n.n(a),
-    o = n(755721),
-    s = n(481060),
-    c = n(367907),
-    u = n(369994),
-    d = n(177862),
+    l = n(120356),
+    o = n.n(l),
+    a = n(82659),
+    s = n(755721),
+    c = n(481060),
+    u = n(367907),
+    d = n(369994),
+    p = n(177862),
     _ = n(981631),
-    p = n(388032),
-    f = n(71250);
-function x(e) {
-    let { guildId: t, messageId: a, transitionState: x, onClose: b } = e,
-        [h, O] = i.useState([]),
-        [y, m] = i.useState(),
-        j = i.useCallback(() => {
-            let e = {
-                raid_alert_type: d.wR.JOIN_RAID,
-                raid_alert_id: a,
-                false_alarm_type: h.map((e) => e.toString()),
-                false_alarm_other_reason: y,
-                guild_id: t,
+    f = n(388032),
+    O = n(71250);
+function b(t) {
+    let { guildId: e, messageId: l, transitionState: b, onClose: y } = t,
+        [h, I] = i.useState([]),
+        [g, x] = i.useState(),
+        A = i.useCallback(() => {
+            let t = {
+                raid_alert_type: p.wR.JOIN_RAID,
+                raid_alert_id: l,
+                false_alarm_type: h.map((t) => t.toString()),
+                false_alarm_other_reason: g,
+                guild_id: e,
             };
-            (0, c.yw)(_.rMx.GUILD_RAID_FEEDBACK, e),
-                (0, u.Fi)(t, a, (0, d.J$)(h)),
-                b(),
-                (0, s.ZDy)(async () => {
-                    let { default: e } = await n.e("37564").then(n.bind(n, 969214));
-                    return (t) =>
+            (0, u.yw)(_.rMx.GUILD_RAID_FEEDBACK, t),
+                (0, d.Fi)(e, l, (0, p.J$)(h)),
+                y(),
+                (0, c.ZDy)(async () => {
+                    let { default: t } = await n.e("37564").then(n.bind(n, 969214));
+                    return (e) =>
                         (0, r.jsx)(
-                            e,
-                            (function (e) {
-                                for (var t = 1; t < arguments.length; t++) {
-                                    var n = null != arguments[t] ? arguments[t] : {},
+                            t,
+                            (function (t) {
+                                for (var e = 1; e < arguments.length; e++) {
+                                    var n = null != arguments[e] ? arguments[e] : {},
                                         r = Object.keys(n);
                                     "function" == typeof Object.getOwnPropertySymbols &&
                                         (r = r.concat(
-                                            Object.getOwnPropertySymbols(n).filter(function (e) {
-                                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                            Object.getOwnPropertySymbols(n).filter(function (t) {
+                                                return Object.getOwnPropertyDescriptor(n, t).enumerable;
                                             }),
                                         )),
-                                        r.forEach(function (t) {
+                                        r.forEach(function (e) {
                                             var r;
-                                            (r = n[t]),
-                                                t in e
-                                                    ? Object.defineProperty(e, t, {
+                                            (r = n[e]),
+                                                e in t
+                                                    ? Object.defineProperty(t, e, {
                                                           value: r,
                                                           enumerable: !0,
                                                           configurable: !0,
                                                           writable: !0,
                                                       })
-                                                    : (e[t] = r);
+                                                    : (t[e] = r);
                                         });
                                 }
-                                return e;
-                            })({}, t),
+                                return t;
+                            })({}, e),
                         );
                 });
-        }, [b, a, t, y, h]),
-        g = [
+        }, [y, l, e, g, h]),
+        E = [
             {
-                text: p.intl.string(p.t.yeaXw8),
-                value: d.$l.LEGITIMATE_ACTIVITY,
+                text: f.intl.string(f.t.yeaXw8),
+                value: p.$l.LEGITIMATE_ACTIVITY,
             },
             {
-                text: p.intl.string(p.t["o++3Bw"]),
-                value: d.$l.DM_SPAM,
+                text: f.intl.string(f.t["o++3Bw"]),
+                value: p.$l.DM_SPAM,
             },
             {
-                text: p.intl.string(p.t.UfHAwc),
-                value: d.$l.JOIN_RAID,
+                text: f.intl.string(f.t.UfHAwc),
+                value: p.$l.JOIN_RAID,
             },
             {
-                text: p.intl.string(p.t.K3UWeX),
-                value: d.$l.OTHER,
+                text: f.intl.string(f.t.K3UWeX),
+                value: p.$l.OTHER,
             },
         ];
-    function I(e) {
-        h.includes(e) ? O((t) => t.filter((t) => t !== e)) : O((t) => [...t, e]);
+    function j(t) {
+        h.includes(t) ? I((e) => e.filter((e) => e !== t)) : I((e) => [...e, t]);
     }
-    return (0, r.jsxs)(s.Y0X, {
-        transitionState: x,
-        size: s.CgR.SMALL,
-        parentComponent: "AutomodRaidResolveModal",
-        children: [
-            (0, r.jsx)(s.xBx, {
-                separator: !1,
-                className: f.center,
-                children: (0, r.jsx)(s.X6q, {
-                    color: "header-primary",
-                    variant: "heading-xl/bold",
-                    children: p.intl.string(p.t["1zmw/P"]),
-                }),
-            }),
-            (0, r.jsxs)(s.hzk, {
-                className: f.center,
-                children: [
-                    (0, r.jsx)(s.Text, {
-                        variant: "text-sm/normal",
-                        color: "header-secondary",
-                        className: f.textCenter,
-                        children: p.intl.string(p.t.nF79oK),
-                    }),
-                    (0, r.jsx)("div", {
-                        className: f.options,
-                        children: g.map((e) => {
-                            let { text: t, value: n } = e;
-                            return (0, r.jsxs)(
-                                "div",
-                                {
-                                    className: l()(f.optionContainer, { [f.optionContainerOther]: n === d.$l.OTHER }),
-                                    children: [
-                                        (0, r.jsxs)(s.P3F, {
-                                            className: f.optionText,
-                                            onClick: () => I(n),
-                                            children: [
-                                                (0, r.jsx)("div", {
-                                                    children: (0, r.jsx)(s.XZJ, {
-                                                        type: s.XZJ.Types.INVERTED,
-                                                        size: 20,
-                                                        value: h.includes(n),
-                                                        onChange: () => I(n),
-                                                    }),
-                                                }),
-                                                (0, r.jsx)(s.Text, {
-                                                    variant: "text-md/semibold",
-                                                    color: "header-primary",
-                                                    children: t,
-                                                }),
-                                            ],
-                                        }),
-                                        n === d.$l.OTHER &&
-                                            h.includes(d.$l.OTHER) &&
-                                            (0, r.jsx)("div", {
-                                                className: f.textboxContainer,
-                                                children: (0, r.jsx)(o.iS, {
-                                                    className: f.falseAlarmReasonText,
-                                                    placeholder: p.intl.string(p.t["PAM+JS"]),
-                                                    onChange: (e) => m(e),
-                                                    value: y,
-                                                    rows: 2,
-                                                    autoFocus: !0,
-                                                    flex: !0,
-                                                }),
-                                            }),
-                                    ],
-                                },
-                                n,
-                            );
-                        }),
-                    }),
-                ],
-            }),
-            (0, r.jsxs)(s.mzw, {
-                className: f.__invalid_modalFooter,
-                children: [
-                    (0, r.jsx)("div", {
-                        className: f.button,
-                        children: (0, r.jsx)(s.zxk, {
-                            variant: "primary",
-                            text: p.intl.string(p.t.Gh3A0N),
-                            onClick: j,
-                        }),
-                    }),
-                    (0, r.jsx)(s.zxk, {
-                        variant: "secondary",
-                        text: p.intl.string(p.t["ETE/oK"]),
-                        onClick: b,
-                    }),
-                ],
-            }),
+    return (0, r.jsx)(a.Modal, {
+        onClose: y,
+        transitionState: b,
+        title: f.intl.string(f.t["1zmw/P"]),
+        subtitle: f.intl.string(f.t.nF79oK),
+        actions: [
+            {
+                text: f.intl.string(f.t["ETE/oK"]),
+                onClick: y,
+                variant: "secondary",
+            },
+            {
+                text: f.intl.string(f.t.Gh3A0N),
+                onClick: A,
+            },
         ],
+        children: (0, r.jsx)("div", {
+            className: O.options,
+            children: E.map((t) => {
+                let { text: e, value: n } = t;
+                return (0, r.jsxs)(
+                    "div",
+                    {
+                        className: o()(O.optionContainer, { [O.optionContainerOther]: n === p.$l.OTHER }),
+                        children: [
+                            (0, r.jsxs)(c.P3F, {
+                                className: O.optionText,
+                                onClick: () => j(n),
+                                children: [
+                                    (0, r.jsx)("div", {
+                                        children: (0, r.jsx)(c.XZJ, {
+                                            type: c.XZJ.Types.INVERTED,
+                                            size: 20,
+                                            value: h.includes(n),
+                                            onChange: () => j(n),
+                                        }),
+                                    }),
+                                    (0, r.jsx)(c.Text, {
+                                        variant: "text-md/semibold",
+                                        color: "header-primary",
+                                        children: e,
+                                    }),
+                                ],
+                            }),
+                            n === p.$l.OTHER &&
+                                h.includes(p.$l.OTHER) &&
+                                (0, r.jsx)("div", {
+                                    className: O.textboxContainer,
+                                    children: (0, r.jsx)(s.iS, {
+                                        className: O.falseAlarmReasonText,
+                                        placeholder: f.intl.string(f.t["PAM+JS"]),
+                                        onChange: (t) => x(t),
+                                        value: g,
+                                        rows: 2,
+                                        autoFocus: !0,
+                                        flex: !0,
+                                    }),
+                                }),
+                        ],
+                    },
+                    n,
+                );
+            }),
+        }),
     });
 }

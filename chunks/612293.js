@@ -15,19 +15,19 @@ var n = r(255367),
     v = r(626135),
     m = r(653079),
     _ = r(576386),
-    O = r(981631),
-    y = r(388032),
-    g = r(637635);
+    g = r(981631),
+    O = r(388032),
+    y = r(637635);
 function C(e) {
     let { transitionState: t, analyticsLocations: r, onClose: o, guildId: u, initialSelectedNameplate: p } = e,
         b = (0, l.e7)([f.default], () => f.default.getCurrentUser()),
         { analyticsLocations: h } = (0, c.ZP)(r, s.Z.EDIT_NAMEPLATE_MODAL),
-        { available: m, purchased: _, isFetchingCategories: y, isFetchingPurchases: C } = (0, d.yV)("NameplateModal"),
-        P = y || (C && 0 === _.length);
+        { available: m, purchased: _, isFetchingCategories: O, isFetchingPurchases: C } = (0, d.yV)("NameplateModal"),
+        P = O || (C && 0 === _.length);
     return (
         (0, a.useEffect)(() => {
-            v.default.track(O.rMx.OPEN_MODAL, {
-                type: O.jXE.NAMEPLATE_CUSTOMIZATION,
+            v.default.track(g.rMx.OPEN_MODAL, {
+                type: g.jXE.NAMEPLATE_CUSTOMIZATION,
                 location_stack: h,
             });
         }, [h]),
@@ -42,7 +42,7 @@ function C(e) {
                       "data-migration-pending": !0,
                       children: P
                           ? (0, n.jsx)(i.$jN, {
-                                className: g.spinner,
+                                className: y.spinner,
                                 type: i.$jN.Type.SPINNING_CIRCLE,
                             })
                           : (0, n.jsx)(j, {
@@ -63,7 +63,7 @@ function j(e) {
     let {
             user: f,
             available: v,
-            purchased: O,
+            purchased: g,
             analyticsLocations: C,
             onClose: j,
             guildId: P,
@@ -78,7 +78,7 @@ function j(e) {
                 : null == f || null == (d = f.collectibles) || null == (c = d.nameplate)
                   ? void 0
                   : c.skuId,
-        w = O.find((e) => e.skuId === S),
+        w = g.find((e) => e.skuId === S),
         { pendingNameplate: R } = (0, b.Zx)(f, P),
         [I, A] = (0, a.useState)(() => {
             var e;
@@ -87,7 +87,7 @@ function j(e) {
         N =
             (null == I ? void 0 : I.skuId) ===
             (void 0 === R ? (null == w ? void 0 : w.skuId) : null == R ? void 0 : R.skuId),
-        [k, T] = (0, a.useState)(() => null != I && O.some((e) => e.id === I.id)),
+        [k, T] = (0, a.useState)(() => null != I && g.some((e) => e.id === I.id)),
         D = (0, a.useCallback)(
             (e) => {
                 j(),
@@ -102,21 +102,24 @@ function j(e) {
     return (0, n.jsxs)(n.Fragment, {
         children: [
             (0, n.jsxs)(i.xBx, {
+                "data-migration-pending": !0,
                 separator: !1,
-                className: g.header,
+                className: y.header,
                 children: [
                     (0, n.jsx)(i.X6q, {
                         variant: "heading-lg/semibold",
-                        children: y.intl.string(y.t.BwdeMz),
+                        children: O.intl.string(O.t.BwdeMz),
                     }),
                     (0, n.jsx)(i.olH, {
-                        className: g.closeButton,
+                        "data-migration-pending": !0,
+                        className: y.closeButton,
                         onClick: j,
                     }),
                 ],
             }),
             (0, n.jsxs)(i.hzk, {
-                className: g.content,
+                "data-migration-pending": !0,
+                className: y.content,
                 scrollbarType: "none",
                 children: [
                     (0, n.jsx)(_.Z, {
@@ -126,7 +129,7 @@ function j(e) {
                         },
                         onOpenShop: D,
                         available: v,
-                        purchased: O,
+                        purchased: g,
                     }),
                     (0, n.jsx)(m.Z, {
                         user: f,
@@ -137,12 +140,13 @@ function j(e) {
                 ],
             }),
             (0, n.jsxs)(i.mzw, {
-                className: g.modalFooter,
+                "data-migration-pending": !0,
+                className: y.modalFooter,
                 children: [
                     k || null == I
                         ? (0, n.jsx)(i.zxk, {
                               variant: "primary",
-                              text: y.intl.string(y.t.Jh8fJy),
+                              text: O.intl.string(O.t.Jh8fJy),
                               disabled: N,
                               onClick: () => {
                                   null != P ? (0, p.RH)(I) : (0, o.Rx)(I), j();
@@ -151,11 +155,11 @@ function j(e) {
                         : (0, n.jsx)(i.zxk, {
                               variant: "primary",
                               onClick: () => D(null == I ? void 0 : I.skuId),
-                              text: y.intl.string(y.t.fYfGgI),
+                              text: O.intl.string(O.t.fYfGgI),
                           }),
                     (0, n.jsx)(i.zxk, {
                         variant: "secondary",
-                        text: y.intl.string(y.t.mDcKND),
+                        text: O.intl.string(O.t.mDcKND),
                         onClick: j,
                     }),
                 ],

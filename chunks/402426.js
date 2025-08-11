@@ -1,26 +1,24 @@
-n.d(t, { Z: () => g }), n(388685), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749);
+n.d(t, { Z: () => h }), n(388685), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749);
 var r = n(73800),
     i = n(647000),
     o = n(544891),
     a = n(396704),
-    s = n(626135),
-    l = n(526167),
-    c = n(981631),
-    u = n(316776),
-    d = n(279421),
-    f = n(965715),
-    _ = n(410401),
-    p = n(51926),
-    h = n(701262);
-let m = (e) => {
-        let t = (0, l.rO)(),
+    s = n(526167),
+    l = n(316776),
+    c = n(279421),
+    u = n(965715),
+    d = n(410401),
+    f = n(51926),
+    _ = n(701262);
+let p = (e) => {
+        let t = (0, s.rO)(),
             [n, i] = (0, r.useState)({
                 modalGlowEntry: void 0,
                 modalGlowIdle: void 0,
                 modalGlowExit: void 0,
             }),
-            [a, s] = (0, r.useState)(!1),
-            [c, m] = (0, r.useState)(!1),
+            [a, p] = (0, r.useState)(!1),
+            [h, m] = (0, r.useState)(!1),
             [g, E] = (0, r.useState)(!1),
             b = (0, r.useRef)(!0);
         (0, r.useEffect)(
@@ -38,9 +36,14 @@ let m = (e) => {
             ),
             O = (0, r.useCallback)(async () => {
                 if (!y() && !g) {
-                    E(!0), m(!1), s(!1);
+                    E(!0), m(!1), p(!1);
                     try {
                         let [e, n, r] = await Promise.all([
+                            o.tn.get({
+                                url: t ? l.Z : c.Z,
+                                binary: !0,
+                                rejectWithError: !0,
+                            }),
                             o.tn.get({
                                 url: t ? u.Z : d.Z,
                                 binary: !0,
@@ -51,11 +54,6 @@ let m = (e) => {
                                 binary: !0,
                                 rejectWithError: !0,
                             }),
-                            o.tn.get({
-                                url: t ? p.Z : h.Z,
-                                binary: !0,
-                                rejectWithError: !0,
-                            }),
                         ]);
                         b.current &&
                             (i({
@@ -63,7 +61,7 @@ let m = (e) => {
                                 modalGlowExit: window.URL.createObjectURL(n.body),
                                 modalGlowIdle: window.URL.createObjectURL(r.body),
                             }),
-                            s(!0));
+                            p(!0));
                     } catch (e) {
                         b.current && m(!0);
                     } finally {
@@ -86,20 +84,17 @@ let m = (e) => {
             {
                 mediaUrls: n,
                 isSuccess: a,
-                isFailure: c,
+                isFailure: h,
                 isLoading: g,
             }
         );
     },
-    g = (e) => {
-        (0, r.useEffect)(() => {
-            e && s.default.track(c.rMx.PREMIUM_BRAND_REFRESH_WOW_MOMENT_ASSETS_PREFETCHING);
-        }, [e]);
-        let { mediaUrls: t, isSuccess: n, isLoading: o } = m(e),
-            { status: l } = (0, a.VG)(e ? i.Z : null);
+    h = (e) => {
+        let { mediaUrls: t, isSuccess: n, isLoading: r } = p(e),
+            { status: o } = (0, a.VG)(e ? i.Z : null);
         return {
             mediaUrls: t,
-            isSuccess: n && l === a.Jt.Loaded,
-            isLoading: o || l === a.Jt.Loading,
+            isSuccess: n && o === a.Jt.Loaded,
+            isLoading: r || o === a.Jt.Loading,
         };
     };

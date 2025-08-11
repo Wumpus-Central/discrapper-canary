@@ -37,44 +37,47 @@ function S(e) {
         } = e,
         b = (0, p.M)(),
         j = b && (0, u.G1)(r);
-    return (0, n.jsxs)(o.mzw, {
-        className: _.modalFooter,
-        children: [
-            (null != i && (!(0, u.qS)(i) || d)) || null === f
-                ? (0, n.jsx)(o.zxk, {
-                      variant: "primary",
-                      text: E.intl.string(E.t.Jh8fJy),
-                      onClick: l,
-                      disabled: a,
-                  })
-                : d || !(0, u.G1)(r)
-                  ? (0, n.jsx)(o.zxk, {
-                        variant: "primary",
-                        text: E.intl.string(E.t.fYfGgI),
-                        onClick: () => c(null == h ? void 0 : h.skuId),
-                    })
-                  : (0, n.jsx)(g.Z, {
-                        subscriptionTier: P.Si.TIER_2,
-                        showGradient: b,
-                        textOptions: {
-                            textOverride: y.ZP.isPremium(t)
-                                ? E.intl.string(E.t.KXLX7u)
-                                : b
-                                  ? E.intl.string(E.t.pj0XBA)
-                                  : E.intl.string(E.t.mr4K7O),
-                        },
-                    }),
-            j
-                ? (0, n.jsx)(m.Z, {
-                      product: r,
-                      onSecondaryClick: s,
-                  })
-                : (0, n.jsx)(o.zxk, {
-                      variant: "secondary",
-                      text: E.intl.string(E.t["ETE/oK"]),
-                      onClick: s,
-                  }),
-        ],
+    return (0, n.jsx)(n.Fragment, {
+        children: (0, n.jsxs)(o.mzw, {
+            "data-migration-pending": !0,
+            className: _.modalFooter,
+            children: [
+                (null != i && (!(0, u.qS)(i) || d)) || null === f
+                    ? (0, n.jsx)(o.zxk, {
+                          variant: "primary",
+                          text: E.intl.string(E.t.Jh8fJy),
+                          onClick: l,
+                          disabled: a,
+                      })
+                    : d || !(0, u.G1)(r)
+                      ? (0, n.jsx)(o.zxk, {
+                            variant: "primary",
+                            text: E.intl.string(E.t.fYfGgI),
+                            onClick: () => c(null == h ? void 0 : h.skuId),
+                        })
+                      : (0, n.jsx)(g.Z, {
+                            subscriptionTier: P.Si.TIER_2,
+                            showGradient: b,
+                            textOptions: {
+                                textOverride: y.ZP.isPremium(t)
+                                    ? E.intl.string(E.t.KXLX7u)
+                                    : b
+                                      ? E.intl.string(E.t.pj0XBA)
+                                      : E.intl.string(E.t.mr4K7O),
+                            },
+                        }),
+                j
+                    ? (0, n.jsx)(m.Z, {
+                          product: r,
+                          onSecondaryClick: s,
+                      })
+                    : (0, n.jsx)(o.zxk, {
+                          variant: "secondary",
+                          text: E.intl.string(E.t["ETE/oK"]),
+                          onClick: s,
+                      }),
+            ],
+        }),
     });
 }
 function C(e) {
@@ -124,6 +127,7 @@ function C(e) {
     return (0, n.jsxs)(n.Fragment, {
         children: [
             (0, n.jsxs)(o.xBx, {
+                "data-migration-pending": !0,
                 separator: !1,
                 className: _.modalHeader,
                 children: [
@@ -132,12 +136,14 @@ function C(e) {
                         children: E.intl.string(E.t["/6nv6O"]),
                     }),
                     (0, n.jsx)(o.olH, {
+                        "data-migration-pending": !0,
                         className: _.modalCloseButton,
                         onClick: f,
                     }),
                 ],
             }),
             (0, n.jsxs)(o.hzk, {
+                "data-migration-pending": !0,
                 className: _.modalContent,
                 children: [
                     (0, n.jsx)(O.Z, {

@@ -113,6 +113,7 @@ function C(e) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsxs)(a.xBx, {
+                "data-migration-pending": !0,
                 separator: !1,
                 className: N.modalHeader,
                 children: [
@@ -121,12 +122,14 @@ function C(e) {
                         children: A.intl.string(A.t.HykynZ),
                     }),
                     (0, r.jsx)(a.olH, {
+                        "data-migration-pending": !0,
                         className: N.modalCloseButton,
                         onClick: f,
                     }),
                 ],
             }),
             (0, r.jsxs)(a.hzk, {
+                "data-migration-pending": !0,
                 className: N.modalContent,
                 scrollbarType: "none",
                 children: [
@@ -147,6 +150,7 @@ function C(e) {
                 ],
             }),
             (0, r.jsxs)(a.mzw, {
+                "data-migration-pending": !0,
                 className: N.modalFooter,
                 children: [
                     Y(),

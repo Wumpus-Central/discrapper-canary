@@ -214,25 +214,30 @@ class q extends l.PureComponent {
         return null;
     }
     renderResults() {
-        let { query: e } = this.state,
-            { results: t } = this.props;
-        return 0 === t.length && e.length > 0
-            ? (0, i.jsx)(B, {})
-            : 0 === t.length
-              ? null
-              : (0, i.jsx)(u._2F, {
-                    innerId: this._listId,
-                    innerRole: "listbox",
-                    "aria-label": D.intl.string(D.t.Wef5Dg),
-                    ref: this.scrollerRef,
-                    sectionHeight: 0,
-                    rowHeight: 34,
-                    paddingBottom: G.bottom,
-                    sections: [t.length],
-                    className: L.scroller,
-                    renderRow: this.renderRow,
-                    renderSection: this.renderSection,
-                });
+        return (0, i.jsx)("div", {
+            className: L.resultsArea,
+            children: (() => {
+                let { query: e } = this.state,
+                    { results: t } = this.props;
+                return 0 === t.length && e.length > 0
+                    ? (0, i.jsx)(B, {})
+                    : 0 === t.length
+                      ? null
+                      : (0, i.jsx)(u._2F, {
+                            innerId: this._listId,
+                            innerRole: "listbox",
+                            "aria-label": D.intl.string(D.t.Wef5Dg),
+                            ref: this.scrollerRef,
+                            sectionHeight: 0,
+                            rowHeight: 34,
+                            paddingBottom: G.bottom,
+                            sections: [t.length],
+                            className: L.scroller,
+                            renderRow: this.renderRow,
+                            renderSection: this.renderSection,
+                        });
+            })(),
+        });
     }
     focusNode(e) {
         I.S.dispatch(R.CkL.QUICKSWITCHER_RESULT_FOCUS, { node: e });

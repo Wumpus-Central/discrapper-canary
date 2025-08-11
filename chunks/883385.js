@@ -1,41 +1,41 @@
-n.d(t, { Z: () => l });
-var i = n(255367);
-n(73800);
-var r = n(410575);
-function l(e, t) {
-    return function (n) {
-        return (0, i.jsx)(r.Z, {
-            page: t.page,
-            section: t.section,
-            object: t.object,
-            objectType: t.objectType,
+t.d(n, { Z: () => r });
+var i = t(255367);
+t(73800);
+var l = t(410575);
+function r(e, n) {
+    return function (t) {
+        return (0, i.jsx)(l.Z, {
+            page: n.page,
+            section: n.section,
+            object: n.object,
+            objectType: n.objectType,
             children: (0, i.jsx)(
                 e,
                 (function (e) {
-                    for (var t = 1; t < arguments.length; t++) {
-                        var n = null != arguments[t] ? arguments[t] : {},
-                            i = Object.keys(n);
+                    for (var n = 1; n < arguments.length; n++) {
+                        var t = null != arguments[n] ? arguments[n] : {},
+                            i = Object.keys(t);
                         "function" == typeof Object.getOwnPropertySymbols &&
                             (i = i.concat(
-                                Object.getOwnPropertySymbols(n).filter(function (e) {
-                                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                Object.getOwnPropertySymbols(t).filter(function (e) {
+                                    return Object.getOwnPropertyDescriptor(t, e).enumerable;
                                 }),
                             )),
-                            i.forEach(function (t) {
+                            i.forEach(function (n) {
                                 var i;
-                                (i = n[t]),
-                                    t in e
-                                        ? Object.defineProperty(e, t, {
+                                (i = t[n]),
+                                    n in e
+                                        ? Object.defineProperty(e, n, {
                                               value: i,
                                               enumerable: !0,
                                               configurable: !0,
                                               writable: !0,
                                           })
-                                        : (e[t] = i);
+                                        : (e[n] = i);
                             });
                     }
                     return e;
-                })({}, n),
+                })({}, t),
             ),
         });
     };
