@@ -1,5 +1,5 @@
 n.d(t, { Z: () => a });
-let { createLoader: i } = n(515149),
+let { createLoader: i } = n(125697),
     r = i(
         {
             bg: () => n.e("18340").then(n.t.bind(n, 74685, 19)),
@@ -36,5 +36,5 @@ let { createLoader: i } = n(515149),
         },
         "en-US",
     ),
-    { makeMessagesProxy: s } = n(515149),
+    { makeMessagesProxy: s } = n(125697),
     a = s(r);
