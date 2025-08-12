@@ -38,7 +38,7 @@ function s() {
     if ("string" == typeof c && ("string" == typeof u || null == u)) (e = c), (t = u), (n = s[2]);
     else if (c instanceof r.Z && ("object" == typeof u || null == u))
         (e = c.id), (t = c.getAvatarURL(void 0, 80)), (n = u);
-    else throw Error("Invalid arguments");
+    else throw Error("[preloadUserProfileForPopout] Invalid arguments");
     return null == e
         ? Promise.resolve()
         : (0, i.Z)(

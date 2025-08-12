@@ -424,7 +424,8 @@ class tu extends r.PureComponent {
             markRecurringAvatarDcAsDismissed: s,
         } = this.props;
         if (null == t) return null;
-        if (!this.props.isQuestBarEmpty) return this.renderAvatarWithPopout({ focusSectionProps: e });
+        if (!(null != this.avatarWithPopoutRef.current && this.props.isQuestBarEmpty))
+            return this.renderAvatarWithPopout({ focusSectionProps: e });
         if (r === u.z.GUILD_TAG_AVAILABLE_COACHMARK) {
             var a;
             return (0, i.jsx)(Q.ZP, {

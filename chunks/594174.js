@@ -267,12 +267,18 @@ function V(e) {
     let { data: t } = e;
     return (
         t.forEach((e) => {
-            let { messages: t } = e;
+            let { messages: t, channels: n } = e;
             t.forEach((e) => {
                 e.forEach((e) => {
                     w(e, !0);
                 });
-            });
+            }),
+                n.forEach((e) => {
+                    if (e.type === g.d4z.DM || e.type === g.d4z.GROUP_DM) {
+                        var t;
+                        null == (t = e.recipients) || t.forEach((e) => C(e)), null != e.recipient && C(e.recipient);
+                    }
+                });
         }),
         !1
     );

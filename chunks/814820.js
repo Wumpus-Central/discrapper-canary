@@ -1,82 +1,72 @@
-n.d(t, { f: () => v }), n(388685);
+n.d(t, { f: () => y }), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(442837),
-    a = n(159691),
-    s = n(755721),
-    l = n(541716),
-    c = n(419922),
-    u = n(665906),
-    d = n(271383),
-    f = n(430824),
-    _ = n(496675),
-    p = n(594174),
-    h = n(838440),
-    m = n(779139),
-    g = n(223750),
-    E = n(981631),
-    b = n(388032),
-    y = n(177562);
-let O = (e) => {
+    a = n(755721),
+    s = n(541716),
+    l = n(419922),
+    c = n(665906),
+    u = n(271383),
+    d = n(430824),
+    f = n(496675),
+    _ = n(594174),
+    p = n(838440),
+    h = n(779139),
+    m = n(981631),
+    g = n(388032),
+    E = n(177562);
+let b = (e) => {
         let { channel: t, message: n } = e,
-            o = (0, g.t)(),
-            [u, d] = i.useState(!1),
-            f = (0, m.y6)(n.id),
-            _ = i.useCallback(() => {
-                (0, h.v)({
-                    type: l.Ie.FORM,
+            [o, c] = i.useState(!1),
+            u = (0, h.y6)(n.id),
+            d = i.useCallback(() => {
+                (0, p.v)({
+                    type: s.Ie.FORM,
                     content: "",
                     channel: t,
                 }).then((e) => {
                     let { valid: r } = e;
-                    r && (0, m.TZ)(t, n, f.id);
+                    r && (0, h.TZ)(t, n, u.id);
                 });
-            }, [t, n, f]);
+            }, [t, n, u]);
         return (0, r.jsx)("div", {
-            className: y.welcomeCTA,
-            children: o
-                ? (0, r.jsx)(a.zx, {
-                      variant: "secondary",
-                      size: "md",
-                      onClick: _,
-                      text: b.intl.string(b.t["7Tj6HR"]),
-                  })
-                : (0, r.jsxs)(s.zx, {
-                      "data-migration-pending": !0,
-                      className: y.welcomeCTAButtonOuter,
-                      innerClassName: y.welcomeCTAButton,
-                      color: s.Tt.PRIMARY,
-                      onMouseEnter: () => d(!0),
-                      onMouseLeave: () => d(!1),
-                      onClick: _,
-                      children: [
-                          (0, r.jsx)(c.Z, {
-                              className: y.welcomeCTASticker,
-                              isInteracting: u,
-                              sticker: f,
-                              size: 28,
-                          }),
-                          b.intl.string(b.t["7Tj6HR"]),
-                      ],
-                  }),
+            className: E.welcomeCTA,
+            children: (0, r.jsxs)(a.zx, {
+                "data-migration-pending": !0,
+                className: E.welcomeCTAButtonOuter,
+                innerClassName: E.welcomeCTAButton,
+                color: a.Tt.PRIMARY,
+                onMouseEnter: () => c(!0),
+                onMouseLeave: () => c(!1),
+                onClick: d,
+                children: [
+                    (0, r.jsx)(l.Z, {
+                        className: E.welcomeCTASticker,
+                        isInteracting: o,
+                        sticker: u,
+                        size: 28,
+                    }),
+                    g.intl.string(g.t["7Tj6HR"]),
+                ],
+            }),
         });
     },
-    v = (e) => {
+    y = (e) => {
         let { message: t, channel: n } = e,
             i = n.getGuildId(),
-            a = (0, o.e7)([p.default, _.Z, f.Z, d.ZP], () => {
+            a = (0, o.e7)([_.default, f.Z, d.Z, u.ZP], () => {
                 var e;
-                let r = p.default.getCurrentUser(),
-                    o = (0, u.xl)(n),
-                    a = _.Z.can(E.Plq.SEND_MESSAGES, n),
-                    s = null != i && null != r && (null == (e = d.ZP.getMember(i, r.id)) ? void 0 : e.isPending),
+                let r = _.default.getCurrentUser(),
+                    o = (0, c.xl)(n),
+                    a = f.Z.can(m.Plq.SEND_MESSAGES, n),
+                    s = null != i && null != r && (null == (e = u.ZP.getMember(i, r.id)) ? void 0 : e.isPending),
                     l = t.author.bot,
-                    c = f.Z.getGuild(i),
-                    h = null != c && (c.systemChannelFlags & E.xmn.SUPPRESS_JOIN_NOTIFICATION_REPLIES) == 0;
+                    p = d.Z.getGuild(i),
+                    h = null != p && (p.systemChannelFlags & m.xmn.SUPPRESS_JOIN_NOTIFICATION_REPLIES) == 0;
                 return a && !o && !s && !l && h;
             });
         return null != i && a
-            ? (0, r.jsx)(O, {
+            ? (0, r.jsx)(b, {
                   message: t,
                   channel: n,
               })
