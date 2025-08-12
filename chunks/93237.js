@@ -41,9 +41,9 @@ let _ = () => (0, o.zu)(i.z.REFERRAL_PROGRAM_NITRO_TAB_BADGE),
     },
     g = () => (0, o.zu)(i.z.REFERRAL_PROGRAM_POPOVER),
     E = () => {
-        let e = (0, u.b)("useIsReferralProgramPopoverShowable"),
-            t = g(),
-            n = (0, r.e7)([l.Z], () => l.Z.getReferralsRemaining()),
-            i = c.ZP.useExperiment({ location: "useIsReferralProgramPopoverShowable" });
-        return e && !1 === t && null !== n && n > 0 && i.cohort !== c.xI.Control;
+        let e = c.ZP.useExperiment({ location: "useIsReferralProgramPopoverShowable" }),
+            t = (0, u.b)("useIsReferralProgramPopoverShowable", e.cohort === c.xI.Control),
+            n = g(),
+            i = (0, r.e7)([l.Z], () => l.Z.getReferralsRemaining());
+        return t && !1 === n && null !== i && i > 0 && e.cohort !== c.xI.Control;
     };

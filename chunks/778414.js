@@ -1,20 +1,23 @@
 n.d(t, {
-    C: () => j,
-    Z: () => g,
+    C: () => h,
+    Z: () => y,
 });
 var r = n(255367);
 n(73800);
 var l = n(296009),
-    i = n(481060),
-    o = n(747101),
-    a = n(517157),
-    c = n(985748),
-    s = n(566007),
-    d = n(173951),
-    u = n(455731),
-    f = n(795990),
-    m = n(19043);
-function p(e) {
+    i = n(442837),
+    o = n(481060),
+    a = n(314897),
+    c = n(747101),
+    s = n(517157),
+    d = n(985748),
+    u = n(566007),
+    f = n(173951),
+    p = n(455731),
+    m = n(430790),
+    g = n(795990),
+    b = n(19043);
+function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -39,7 +42,7 @@ function p(e) {
     }
     return e;
 }
-function g(e) {
+function y(e) {
     var { widget: t } = e,
         n = (function (e, t) {
             if (null == e) return {};
@@ -64,43 +67,47 @@ function g(e) {
         })(e, ["widget"]);
     switch (t.type) {
         case l.l.FAVORITE_GAMES:
-            return (0, r.jsx)(s.Z, p({ widget: t }, n));
+            return (0, r.jsx)(u.Z, j({ widget: t }, n));
         case l.l.CURRENT_GAMES:
-            return (0, r.jsx)(c.Z, p({ widget: t }, n));
+            return (0, r.jsx)(d.Z, j({ widget: t }, n));
         case l.l.WANT_TO_PLAY_GAMES:
-            return (0, r.jsx)(u.Z, p({ widget: t }, n));
+            return (0, r.jsx)(p.Z, j({ widget: t }, n));
         case l.l.PLAYED_GAMES:
-            return (0, r.jsx)(d.Z, p({ widget: t }, n));
+            return (0, r.jsx)(f.Z, j({ widget: t }, n));
         default:
             return null;
     }
 }
-function b(e) {
+function x(e) {
     let { user: t, guildId: n, channelId: l } = e,
-        i = (0, a.Z)(t.id),
-        { widgets: c, isGameFetching: s } = (0, o.Z)(i);
-    return 0 === c.length
-        ? (0, r.jsx)(f.Z, {})
-        : (0, r.jsx)(r.Fragment, {
-              children: c.map((e) =>
-                  (0, r.jsx)(
-                      g,
-                      {
-                          widget: e,
-                          user: t,
-                          guildId: n,
-                          channelId: l,
-                          isGameFetching: s,
-                      },
-                      e.id,
+        o = (0, s.Z)(t.id),
+        { widgets: d, isGameFetching: u } = (0, c.Z)(o),
+        f = (0, i.e7)([a.default], () => a.default.getId() === t.id);
+    return 0 === d.length && f
+        ? (0, r.jsx)(g.Z, {})
+        : (0, r.jsxs)(r.Fragment, {
+              children: [
+                  d.map((e) =>
+                      (0, r.jsx)(
+                          y,
+                          {
+                              widget: e,
+                              user: t,
+                              guildId: n,
+                              channelId: l,
+                              isGameFetching: u,
+                          },
+                          e.id,
+                      ),
                   ),
-              ),
+                  f && (0, r.jsx)(m.Z, {}),
+              ],
           });
 }
-function j(e) {
-    return (0, r.jsx)(i.Ttm, {
-        className: m.scroller,
+function h(e) {
+    return (0, r.jsx)(o.Ttm, {
+        className: b.scroller,
         fade: !0,
-        children: (0, r.jsx)(b, p({}, e)),
+        children: (0, r.jsx)(x, j({}, e)),
     });
 }

@@ -1,4 +1,4 @@
-i.d(e, { default: () => w });
+i.d(e, { default: () => g });
 var n = i(255367),
     r = i(73800),
     s = i(442837),
@@ -16,20 +16,20 @@ function p(t) {
         widget: e,
         user: i,
         isGameFetching: () => !1,
-        showHeaderActionButtons: !1,
+        disableInteraction: !0,
     });
 }
-function w(t) {
-    let { transitionState: e, widget: i, userId: u, onClose: w } = t,
-        g = r.useCallback(() => {
-            (0, o.y8)(i.type), w();
-        }, [i.type, w]),
+function g(t) {
+    let { transitionState: e, widget: i, userId: u, onClose: g } = t,
+        w = r.useCallback(() => {
+            (0, o.y8)(i.type), g();
+        }, [i.type, g]),
         v = (0, s.e7)([c.default], () => c.default.getUser(u));
     return null == v
         ? null
         : (0, n.jsxs)(a.Modal, {
               transitionState: e,
-              onClose: w,
+              onClose: g,
               title: x.intl.string(x.t.Mm07YW),
               subtitle: x.intl.format(x.t["x+djIy"], { helpUrl: d.w }),
               actionBarInput: (0, n.jsx)("div", {}),
@@ -37,12 +37,12 @@ function w(t) {
                   {
                       variant: "secondary",
                       text: x.intl.string(x.t["ETE/oK"]),
-                      onClick: w,
+                      onClick: g,
                   },
                   {
                       variant: "critical-primary",
                       text: x.intl.string(x.t.Mm07YW),
-                      onClick: g,
+                      onClick: w,
                   },
               ],
               children: [

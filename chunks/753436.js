@@ -8,9 +8,9 @@ var l = n(971082),
     c = n(467514),
     s = n(987278);
 function d(e) {
-    let { game: t, userId: n, guildId: d, channelId: u, loading: f = !1, disableInteraction: m = !1 } = e,
-        p = (0, o.Z)(t.applicationId),
-        g = p.length > 0;
+    let { game: t, userId: n, guildId: d, channelId: u, loading: f = !1, disableInteraction: p = !1 } = e,
+        m = (0, o.Z)(t.applicationId),
+        g = m.length > 0;
     return f
         ? (0, r.jsx)("div", { className: c.loadingCover })
         : (0, r.jsxs)("div", {
@@ -21,14 +21,15 @@ function d(e) {
                       gameName: t.gameName,
                       applicationId: t.applicationId,
                       userId: n,
-                      disableInteraction: m,
+                      disableInteraction: p,
                       className: g ? s.socialProofBackdrop : void 0,
                   }),
-                  g &&
+                  !p &&
+                      g &&
                       (0, r.jsx)(l.Z, {
-                          label: a.intl.formatToPlainString(a.t.ujhJdH, { numFriends: p.length }),
+                          label: a.intl.formatToPlainString(a.t.ujhJdH, { numFriends: m.length }),
                           className: s.socialProof,
-                          users: p,
+                          users: m,
                           guildId: d,
                           channelId: u,
                           visuallyHideLabel: !0,

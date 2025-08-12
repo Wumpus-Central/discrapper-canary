@@ -23,6 +23,7 @@ n.d(t, {
     aN: () => z,
     cQ: () => ed,
     dP: () => eR,
+    df: () => eF,
     f0: () => ee,
     fG: () => eP,
     i6: () => et,
@@ -1401,4 +1402,22 @@ function eZ(e) {
         type: "USER_PAYMENT_BROWSER_CHECKOUT_STARTED",
         loadId: e,
     });
+}
+async function eF(e, t) {
+    try {
+        let n = await l.tn.post({
+            url: I.ANM.REACTIVATION_OFFER_REDEEM(e.id, t.id),
+            rejectWithError: !1,
+        });
+        c.Z.dispatch({
+            type: "BILLING_SUBSCRIPTION_UPDATE_SUCCESS",
+            subscription: n.body,
+        });
+    } catch (t) {
+        let e = t instanceof u.HF ? t : new u.HF(t);
+        c.Z.dispatch({
+            type: "BILLING_SUBSCRIPTION_UPDATE_FAIL",
+            error: e,
+        });
+    }
 }

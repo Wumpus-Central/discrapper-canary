@@ -39,6 +39,7 @@ function f() {
                     minContrastRatio: d[n],
                 };
             }),
+            (t[i.m.GLOW] = t[i.m.GRADIENT]),
             t
         );
     }, [e]);

@@ -14,7 +14,7 @@ function u(e) {
         o = (0, l.useRef)(null),
         [s, u] = (0, l.useState)(0),
         [b, j] = (0, l.useState)(!1),
-        { trackUserProfileAction: h } = (0, a.KZ)(),
+        { trackUserProfileAction: y } = (0, a.KZ)(),
         x = g(o, n, i, u);
     if (
         ((0, l.useEffect)(
@@ -30,11 +30,11 @@ function u(e) {
         null == n || 0 === n.length)
     )
         return null;
-    let y = b ? n : n.slice(0, n.length - s);
+    let h = b ? n : n.slice(0, n.length - s);
     return (0, r.jsxs)("div", {
         className: d.tagListContainer,
         children: [
-            y.map((e) =>
+            h.map((e) =>
                 (0, r.jsx)(
                     f,
                     {
@@ -48,15 +48,15 @@ function u(e) {
             ),
             s > 0 &&
                 (b
-                    ? (0, r.jsx)(p, {
+                    ? (0, r.jsx)(m, {
                           onClick: () => {
-                              j(!1), h({ action: "COLLAPSE_GAME_TAGS" });
+                              j(!1), y({ action: "COLLAPSE_GAME_TAGS" });
                           },
                       })
-                    : (0, r.jsx)(m, {
+                    : (0, r.jsx)(p, {
                           numHidden: s,
                           onClick: () => {
-                              j(!0), h({ action: "EXPAND_GAME_TAGS" });
+                              j(!0), y({ action: "EXPAND_GAME_TAGS" });
                           },
                           ref: o,
                       })),
@@ -81,7 +81,7 @@ let f = (e) => {
             ],
         });
     },
-    m = (e) => {
+    p = (e) => {
         let { numHidden: t, onClick: n, ref: l } = e;
         return (0, r.jsx)(i.DY3, {
             className: d.buttonContainer,
@@ -99,7 +99,7 @@ let f = (e) => {
             }),
         });
     },
-    p = (e) => {
+    m = (e) => {
         let { onClick: t } = e;
         return (0, r.jsx)(i.DY3, {
             className: d.buttonContainer,

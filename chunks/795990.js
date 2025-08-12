@@ -4,14 +4,14 @@ var r = n(255367),
     i = n(296009),
     o = n(481060),
     a = n(210753),
-    c = n(86419),
-    s = n(247397),
-    d = n(570911),
+    c = n(804919),
+    s = n(86419),
+    d = n(247397),
     u = n(388032),
     f = n(436860);
-function m(e) {
+function p(e) {
     let { widgetType: t } = e,
-        n = t === i.l.FAVORITE_GAMES ? d.J6["23"] : d.J6["58"],
+        n = t === i.l.FAVORITE_GAMES ? c.LM.BALDURS_GATE_3 : c.LM.CYBERPUNK_2077,
         { coverImageUrl: l, localizedName: o } = (0, a.$)(n);
     return (0, r.jsxs)("div", {
         className: f.placeholderDetailCard,
@@ -37,9 +37,12 @@ function m(e) {
         ],
     });
 }
-function p(e) {
+function m(e) {
     let { widgetType: t } = e,
-        n = t === i.l.WANT_TO_PLAY_GAMES ? [d.J6["0"], d.J6["1"], d.J6["2"]] : [d.J6["20"], d.J6["35"], d.J6["42"]];
+        n =
+            t === i.l.WANT_TO_PLAY_GAMES
+                ? [c.LM.ROBLOX, c.LM.VALORANT, c.LM.LEAGUE_OF_LEGENDS]
+                : [c.LM.ZENLESS_ZONE_ZERO, c.LM.ELDEN_RING, c.LM.RED_DEAD_REDEMPTION_2];
     return (0, r.jsx)("div", {
         className: f.placeholderCoverGrid,
         children: n.map((e, t) => (0, r.jsx)(g, { applicationId: e }, t)),
@@ -63,21 +66,21 @@ function g(e) {
 function b(e) {
     let { widgetType: t } = e,
         n = l.useCallback(() => {
-            (0, c.qH)(t);
+            (0, s.qH)(t);
         }, [t]);
     return (0, r.jsxs)(o.P3F, {
         className: f.widgetPromptContainer,
         onClick: n,
-        "aria-label": "Add widget: ".concat(u.intl.string(s.NP[t])),
+        "aria-label": "Add widget: ".concat(u.intl.string(d.NP[t])),
         children: [
             (() => {
                 switch (t) {
                     case i.l.FAVORITE_GAMES:
                     case i.l.CURRENT_GAMES:
-                        return (0, r.jsx)(m, { widgetType: t });
+                        return (0, r.jsx)(p, { widgetType: t });
                     case i.l.WANT_TO_PLAY_GAMES:
                     case i.l.PLAYED_GAMES:
-                        return (0, r.jsx)(p, { widgetType: t });
+                        return (0, r.jsx)(m, { widgetType: t });
                     default:
                         return null;
                 }
@@ -95,7 +98,7 @@ function b(e) {
                     (0, r.jsx)(o.Text, {
                         variant: "text-md/medium",
                         color: "header-primary",
-                        children: u.intl.string(s.NP[t]),
+                        children: u.intl.string(d.NP[t]),
                     }),
                 ],
             }),
@@ -124,7 +127,7 @@ function j() {
             (0, r.jsx)("ul", {
                 className: f.widgetGrid,
                 "aria-label": u.intl.string(u.t["+EIBSE"]),
-                children: s.rR.map((e) => (0, r.jsx)("li", { children: (0, r.jsx)(b, { widgetType: e }) }, e)),
+                children: d.rR.map((e) => (0, r.jsx)("li", { children: (0, r.jsx)(b, { widgetType: e }) }, e)),
             }),
         ],
     });

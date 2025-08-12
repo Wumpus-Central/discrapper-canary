@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => m });
 var r = n(255367);
 n(73800);
 var l = n(624238),
@@ -10,18 +10,18 @@ var l = n(624238),
     d = n(825354),
     u = n(388032),
     f = n(196880);
-let m = {
+let p = {
     [i.l.FAVORITE_GAMES]: () => u.intl.string(u.t.sUQar6),
     [i.l.CURRENT_GAMES]: () => u.intl.string(u.t.SqNnur),
     [i.l.WANT_TO_PLAY_GAMES]: () => u.intl.string(u.t.bWSQwc),
     [i.l.PLAYED_GAMES]: () => u.intl.string(u.t.scOKER),
 };
-function p(e) {
+function m(e) {
     var t;
-    let { userId: n, headingId: p, widget: g, reachedMaxGamesLimit: b, showHeaderActionButtons: j } = e,
-        h = (0, o.e7)([c.default], () => c.default.getId() === n),
-        x = m[g.type](),
-        y = h
+    let { userId: n, headingId: m, widget: g, reachedMaxGamesLimit: b, disableInteraction: j = !1 } = e,
+        y = (0, o.e7)([c.default], () => c.default.getId() === n),
+        x = p[g.type](),
+        h = y
             ? (t = g.type) === i.l.FAVORITE_GAMES
                 ? u.intl.string(u.t.wiXdER)
                 : u.intl.format(u.t["zR1+09"], { numGames: l.k[t] })
@@ -35,19 +35,19 @@ function p(e) {
                     (0, r.jsx)(a.X6q, {
                         variant: "heading-sm/medium",
                         color: "text-default",
-                        id: p,
+                        id: m,
                         children: x,
                     }),
-                    null != y &&
+                    null != h &&
                         (0, r.jsx)(a.Text, {
                             variant: "text-xs/normal",
                             color: "text-secondary",
-                            children: y,
+                            children: h,
                         }),
                 ],
             }),
-            h &&
-                j &&
+            y &&
+                !j &&
                 (0, r.jsxs)("div", {
                     className: f.actions,
                     children: [

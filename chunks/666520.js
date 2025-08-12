@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m }), n(35282);
+n.d(t, { Z: () => p }), n(35282);
 var r = n(255367),
     l = n(73800),
     i = n(442837),
@@ -9,14 +9,14 @@ var r = n(255367),
     d = n(981631),
     u = n(388032),
     f = n(343074);
-function m(e) {
-    let { autoFocus: t = !1, className: n, userId: m, onUpdate: p } = e,
+function p(e) {
+    let { autoFocus: t = !1, className: n, userId: p, onUpdate: m } = e,
         g = (0, i.e7)([s.Z], () => s.Z.hidePersonalInformation),
-        { loading: b, note: j } = (0, c.Z)(m),
-        h = l.useRef(null);
+        { loading: b, note: j } = (0, c.Z)(p),
+        y = l.useRef(null);
     return (l.useEffect(() => {
         if (!t || g) return;
-        let e = h.current;
+        let e = y.current;
         (null == e ? void 0 : e.selectionStart) != null && (e.focus(), e.setSelection(e.value.length, e.value.length));
     }, [t, g]),
     g)
@@ -24,14 +24,14 @@ function m(e) {
         : (0, r.jsx)("div", {
               className: n,
               children: (0, r.jsx)(o.lcI, {
-                  ref: h,
+                  ref: y,
                   className: f.textarea,
                   disabled: b,
                   placeholder: b ? u.intl.string(u.t["WLKx//"]) : u.intl.string(u.t.VBhOe3),
                   "aria-label": u.intl.string(u.t.PbMNh4),
                   onBlur: (e) => {
                       let t = e.currentTarget.value;
-                      (null != j ? j : "") !== t && (null == p || p(), a.Z.updateNote(m, t));
+                      (null != j ? j : "") !== t && (null == m || m(), a.Z.updateNote(p, t));
                   },
                   onKeyPress: (e) => {
                       if (13 === e.which)

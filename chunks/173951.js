@@ -5,8 +5,8 @@ var l = n(624238),
     i = n(750312),
     o = n(30344);
 function a(e) {
-    var { user: t, widget: n, isGameFetching: a, showHeaderActionButtons: c } = e,
-        s = (function (e, t) {
+    var { user: t, widget: n, disableInteraction: a } = e,
+        c = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -26,13 +26,13 @@ function a(e) {
                         !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]);
             }
             return l;
-        })(e, ["user", "widget", "isGameFetching", "showHeaderActionButtons"]);
-    let d = n.games.length >= l.k.played_games;
+        })(e, ["user", "widget", "disableInteraction"]);
+    let s = n.games.length >= l.k.played_games;
     return (0, r.jsx)(i.Z, {
         userId: t.id,
         widget: n,
-        reachedMaxGamesLimit: d,
-        showHeaderActionButtons: c,
+        reachedMaxGamesLimit: s,
+        disableInteraction: a,
         children: (0, r.jsx)(
             o.Z,
             (function (e) {
@@ -61,11 +61,11 @@ function a(e) {
                 return e;
             })(
                 {
-                    games: n.games,
                     userId: t.id,
-                    isGameFetching: a,
+                    games: n.games,
+                    disableInteraction: a,
                 },
-                s,
+                c,
             ),
         ),
     });

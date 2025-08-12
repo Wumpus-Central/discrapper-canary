@@ -33,7 +33,7 @@ function f(e) {
     }
     return e;
 }
-function m(e) {
+function p(e) {
     let { imageSrc: t, gameName: n } = e,
         [i, o] = l.useState(!1),
         c = null != n ? n : d.intl.string(d.t.GIWFlJ);
@@ -57,29 +57,29 @@ function m(e) {
               onLoad: () => o(!1),
           });
 }
-function p(e) {
+function m(e) {
     let { imageSrc: t, gameName: n, applicationId: l, userId: i, className: f } = e,
-        p = (0, s.Z)({
+        m = (0, s.Z)({
             location: "GameCover",
             applicationId: l,
             source: c.m1.UserProfile,
             sourceUserId: i,
             trackEntryPointImpression: !0,
         });
-    if (null == p)
+    if (null == m)
         return (0, r.jsx)("div", {
             className: f,
-            children: (0, r.jsx)(m, {
+            children: (0, r.jsx)(p, {
                 imageSrc: t,
                 gameName: n,
             }),
         });
     let g = d.intl.formatToPlainString(d.t["8QLQBw"], { gameName: null != n ? n : d.intl.string(d.t.GIWFlJ) });
     return (0, r.jsx)(a.P3F, {
-        onClick: p,
+        onClick: m,
         "aria-label": g,
         className: o()(u.clickable, f),
-        children: (0, r.jsx)(m, {
+        children: (0, r.jsx)(p, {
             imageSrc: t,
             gameName: n,
         }),
@@ -112,10 +112,10 @@ function g(e) {
     return i
         ? (0, r.jsx)("div", {
               className: c,
-              children: (0, r.jsx)(m, f({}, a)),
+              children: (0, r.jsx)(p, f({}, a)),
           })
         : (0, r.jsx)(
-              p,
+              m,
               f(
                   {
                       className: c,

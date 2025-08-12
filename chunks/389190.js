@@ -9,18 +9,18 @@ var r = n(255367),
     d = n(857302),
     u = n(892001),
     f = n(252417),
-    m = n(388032),
-    p = n(301150);
+    p = n(388032),
+    m = n(301150);
 function g(e) {
     let { user: t, guildId: n, channelId: g, onClose: b } = e,
         { mutualFriends: j } = (0, s.Z)(t),
-        { analyticsLocations: h } = (0, a.ZP)(),
-        { context: x, trackUserProfileAction: y } = (0, c.KZ)(),
-        v = (0, o.Z)();
+        { analyticsLocations: y } = (0, a.ZP)(),
+        { context: x, trackUserProfileAction: h } = (0, c.KZ)(),
+        O = (0, o.Z)();
     l.useEffect(() => {
-        (0, d.Z)(t.id, v);
-    }, [t.id, v]);
-    let O = (e) => {
+        (0, d.Z)(t.id, O);
+    }, [t.id, O]);
+    let v = (e) => {
         var t, n;
         (0, u.openUserProfileModal)(
             ((t = (function (e) {
@@ -51,7 +51,7 @@ function g(e) {
             (n = n =
                 {
                     userId: e,
-                    sourceAnalyticsLocations: h,
+                    sourceAnalyticsLocations: y,
                 }),
             Object.getOwnPropertyDescriptors
                 ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
@@ -69,22 +69,22 @@ function g(e) {
         );
     };
     return (0, r.jsx)(i.zJl, {
-        className: p.listScroller,
+        className: m.listScroller,
         fade: !0,
         children:
             null == j
                 ? (0, r.jsx)("div", {
-                      className: p.empty,
+                      className: m.empty,
                       children: (0, r.jsx)(i.$jN, {}),
                   })
                 : 0 === j.length
                   ? (0, r.jsxs)("div", {
-                        className: p.empty,
+                        className: m.empty,
                         children: [
-                            (0, r.jsx)("div", { className: p.emptyIconFriends }),
+                            (0, r.jsx)("div", { className: m.emptyIconFriends }),
                             (0, r.jsx)("div", {
-                                className: p.emptyText,
-                                children: m.intl.string(m.t["/5p4g4"]),
+                                className: m.emptyText,
+                                children: p.intl.string(p.t["/5p4g4"]),
                             }),
                         ],
                     })
@@ -98,7 +98,7 @@ function g(e) {
                                 guildId: n,
                                 channelId: g,
                                 onSelect: () => {
-                                    null == b || b(), y({ action: "PRESS_MUTUAL_FRIEND" }), O(l.id);
+                                    null == b || b(), h({ action: "PRESS_MUTUAL_FRIEND" }), v(l.id);
                                 },
                             },
                             t,

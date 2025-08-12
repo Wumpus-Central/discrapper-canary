@@ -118,7 +118,16 @@ function A() {
 }
 let N = () => !0;
 function C() {
-    return null != d.Z.getPremiumTypeSubscription() && ((b.userDiscountOffers = {}), (b.userTrialOffers = {}), !0);
+    return (
+        null != d.Z.getPremiumTypeSubscription() &&
+        (null != b.userDiscountOffers[f.dT]
+            ? (b.userDiscountOffers = { [f.dT]: b.userDiscountOffers[f.dT] })
+            : null != b.userDiscountOffers[f.dB]
+              ? (b.userDiscountOffers = { [f.dB]: b.userDiscountOffers[f.dB] })
+              : (b.userDiscountOffers = {}),
+        (b.userTrialOffers = {}),
+        !0)
+    );
 }
 function R() {
     let e = l.default.getCurrentUser();

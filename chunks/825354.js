@@ -52,7 +52,7 @@ function u(e, t) {
 function f(e) {
     let { widget: t } = e,
         f = l.useRef(null),
-        m = (e) => {
+        p = (e) => {
             if (e.shiftKey) return void (0, c.y8)(t.type);
             (0, i.ZDy)(async () => {
                 let { default: e } = await n.e("70887").then(n.bind(n, 37668));
@@ -84,7 +84,7 @@ function f(e) {
                     children: (0, r.jsx)(i.sNh, {
                         id: "remove-widget",
                         label: s.intl.string(s.t.Mm07YW),
-                        action: m,
+                        action: p,
                         color: "danger",
                         icon: i.XHJ,
                     }),

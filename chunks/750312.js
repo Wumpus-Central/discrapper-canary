@@ -6,8 +6,8 @@ var l = n(793030),
     o = n(840367),
     a = n(347694);
 function c(e) {
-    var { children: t, widget: n, showHeaderActionButtons: c = !0, reachedMaxGamesLimit: s } = e,
-        d = (function (e, t) {
+    var { children: t, reachedMaxGamesLimit: n } = e,
+        c = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -27,13 +27,13 @@ function c(e) {
                         !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]);
             }
             return l;
-        })(e, ["children", "widget", "showHeaderActionButtons", "reachedMaxGamesLimit"]);
-    let u = (0, i.Dt)();
-    return (0, r.jsx)("section", {
+        })(e, ["children", "reachedMaxGamesLimit"]);
+    let s = (0, i.Dt)();
+    return (0, r.jsxs)("section", {
         className: a.container,
-        "aria-labelledby": u,
-        children: (0, r.jsx)(l.y5, {
-            component: (0, r.jsx)(
+        "aria-labelledby": s,
+        children: [
+            (0, r.jsx)(
                 o.Z,
                 (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
@@ -61,15 +61,13 @@ function c(e) {
                     return e;
                 })(
                     {
-                        headingId: u,
-                        widget: n,
-                        reachedMaxGamesLimit: s,
-                        showHeaderActionButtons: c,
+                        headingId: s,
+                        reachedMaxGamesLimit: n,
                     },
-                    d,
+                    c,
                 ),
             ),
-            children: t,
-        }),
+            (0, r.jsx)(l.y5, { children: t }),
+        ],
     });
 }

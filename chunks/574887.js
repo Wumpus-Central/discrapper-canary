@@ -10,14 +10,14 @@ var l = n(120356),
     d = n(122021),
     u = n(275759),
     f = n(888496),
-    m = n(768762),
-    p = n(706454),
+    p = n(768762),
+    m = n(706454),
     g = n(49012),
     b = n(981631),
     j = n(856651),
-    h = n(388032),
+    y = n(388032),
     x = n(738873);
-function y(e) {
+function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -42,7 +42,7 @@ function y(e) {
     }
     return e;
 }
-function v(e, t) {
+function O(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -60,26 +60,26 @@ function v(e, t) {
         e
     );
 }
-function O(e) {
+function v(e) {
     var t;
     let { account: n, locale: l, userId: i } = e,
         o = null != (t = n.metadata) ? t : {},
-        p = (0, u.FI)(o[j.PC.CREATED_AT], l),
-        O = c.Z.get((0, d.rR)(n.type));
+        m = (0, u.FI)(o[j.PC.CREATED_AT], l),
+        v = c.Z.get((0, d.rR)(n.type));
     return (0, r.jsxs)("li", {
         className: x.connection,
         children: [
             (0, r.jsx)(a.ua7, {
-                text: null == O ? void 0 : O.name,
+                text: null == v ? void 0 : v.name,
                 children: (e) =>
                     (0, r.jsx)(
                         "div",
-                        v(y({}, e), {
+                        O(h({}, e), {
                             className: x.platformIconContainer,
                             children: (0, r.jsx)("img", {
-                                alt: h.intl.formatToPlainString(h.t.rtm15O, { name: null == O ? void 0 : O.name }),
+                                alt: y.intl.formatToPlainString(y.t.rtm15O, { name: null == v ? void 0 : v.name }),
                                 className: x.platformIcon,
-                                src: null == O ? void 0 : O.icon.lightPNG,
+                                src: null == v ? void 0 : v.icon.lightPNG,
                             }),
                         }),
                     ),
@@ -91,7 +91,7 @@ function O(e) {
                         children: [
                             (() => {
                                 var e;
-                                let t = null == O || null == (e = O.getPlatformUserUrl) ? void 0 : e.call(O, n);
+                                let t = null == v || null == (e = v.getPlatformUserUrl) ? void 0 : e.call(v, n);
                                 return null == t
                                     ? (0, r.jsx)(a.ua7, {
                                           overflowOnly: !0,
@@ -99,7 +99,7 @@ function O(e) {
                                           children: (e) =>
                                               (0, r.jsx)(
                                                   a.Text,
-                                                  v(y({}, e), {
+                                                  O(h({}, e), {
                                                       variant: "text-sm/normal",
                                                       className: x.accountNameText,
                                                       children: n.name,
@@ -111,12 +111,12 @@ function O(e) {
                                           className: x.platformUrlAnchor,
                                           useDefaultUnderlineStyles: !1,
                                           "aria-label":
-                                              (null == O ? void 0 : O.name) != null
+                                              (null == v ? void 0 : v.name) != null
                                                   ? ""
-                                                        .concat(O.name, ", ")
+                                                        .concat(v.name, ", ")
                                                         .concat(n.name, ", ")
-                                                        .concat(h.intl.string(h.t.q5jLJC))
-                                                  : "".concat(n.name, ", ").concat(h.intl.string(h.t.q5jLJC)),
+                                                        .concat(y.intl.string(y.t.q5jLJC))
+                                                  : "".concat(n.name, ", ").concat(y.intl.string(y.t.q5jLJC)),
                                           onClick: (e) => {
                                               (0, s.yw)(b.rMx.CONNECTED_ACCOUNT_VIEWED, {
                                                   platform_type: n.type,
@@ -125,7 +125,7 @@ function O(e) {
                                                   (0, g.q)(
                                                       {
                                                           href: t,
-                                                          trusted: (null == O ? void 0 : O.type) !== b.ABu.DOMAIN,
+                                                          trusted: (null == v ? void 0 : v.type) !== b.ABu.DOMAIN,
                                                       },
                                                       e,
                                                   );
@@ -139,25 +139,25 @@ function O(e) {
                                                       children: (e) =>
                                                           (0, r.jsx)(
                                                               a.Text,
-                                                              v(y({}, e), {
+                                                              O(h({}, e), {
                                                                   variant: "text-sm/normal",
                                                                   className: x.accountNameText,
                                                                   children: n.name,
                                                               }),
                                                           ),
                                                   }),
-                                                  (0, r.jsx)(m.Z, {
+                                                  (0, r.jsx)(p.Z, {
                                                       className: x.platformUrlIcon,
-                                                      direction: m.Z.Directions.RIGHT,
+                                                      direction: p.Z.Directions.RIGHT,
                                                   }),
                                               ],
                                           }),
                                       });
                             })(),
-                            null != p &&
+                            null != m &&
                                 (0, r.jsx)(a.Text, {
                                     variant: "text-xs/normal",
-                                    children: h.intl.format(h.t["9rfonp"], { date: p }),
+                                    children: y.intl.format(y.t["9rfonp"], { date: m }),
                                 }),
                         ],
                     }),
@@ -185,14 +185,14 @@ function O(e) {
 }
 function _(e) {
     let { connections: t, userId: n, className: l } = e,
-        a = (0, o.e7)([p.default], () => p.default.locale);
+        a = (0, o.e7)([m.default], () => m.default.locale);
     return 0 === t.length
         ? null
         : (0, r.jsx)("ul", {
               className: i()(x.container, l),
               children: t.map((e) =>
                   (0, r.jsx)(
-                      O,
+                      v,
                       {
                           account: e,
                           userId: n,
