@@ -20,7 +20,7 @@ var i = n(255367),
     E = n(726985),
     C = n(981631),
     O = n(388032),
-    v = n(189435);
+    v = n(451023);
 let S = () =>
     (0, i.jsx)("div", {
         className: v.syncing,

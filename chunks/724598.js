@@ -12,7 +12,7 @@ var i = n(120356),
     m = n(629481),
     g = n(981631),
     p = n(388032),
-    h = n(765214);
+    h = n(229960);
 function f(e) {
     let { pills: t } = e;
     return (0, r.jsx)("div", {

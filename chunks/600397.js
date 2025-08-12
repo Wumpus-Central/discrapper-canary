@@ -10,7 +10,7 @@ var i = n(657707),
     u = n(834129),
     d = n(981631),
     f = n(388032),
-    _ = n(768921);
+    _ = n(872765);
 function p(e) {
     let { message: t, channel: n, author: p, compact: h } = e,
         { nick: m } = (0, l.Sw)(p, n),

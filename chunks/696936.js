@@ -7,7 +7,7 @@ n(73800);
 var i = n(120356),
     l = n.n(i),
     s = n(481060),
-    o = n(956542);
+    o = n(729329);
 let a = {
     RED: o.redMessageBlock,
     YELLOW: o.yellowMessageBlock,

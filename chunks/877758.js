@@ -4,7 +4,7 @@ n(73800);
 var o = n(120356),
     a = n.n(o),
     s = n(785997),
-    i = n(594777);
+    i = n(474200);
 function l(e) {
     let { step: t } = e,
         n = t === s.F.AGE_GATE,

@@ -8,7 +8,7 @@ var r = n(255367),
     c = n(70097),
     u = n(475595),
     d = n(388032),
-    f = n(536087);
+    f = n(755321);
 function _(e) {
     var t, n, o;
     let { videoActive: _, imageAsset: p, videoAsset: h, imageDimensions: m, onLoadComplete: g } = e,

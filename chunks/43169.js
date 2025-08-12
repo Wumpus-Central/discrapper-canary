@@ -1,4 +1,7 @@
-n.d(t, { kF: () => l });
+n.d(t, {
+    jX: () => a,
+    kF: () => l,
+});
 var r = n(818083),
     i = n(987338);
 let l = (0, r.B)({
@@ -15,3 +18,7 @@ let l = (0, r.B)({
         },
     ],
 });
+function a(e) {
+    let { inHoldout: t } = l.useExperiment({ location: e }, { autoTrackExposure: !1 });
+    return t;
+}

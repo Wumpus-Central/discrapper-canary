@@ -1,7 +1,7 @@
 n.d(t, { Z: () => l }), n(388685);
 var i = n(284539),
     r = n(477839),
-    s = n(771382);
+    s = n(632230);
 let a = {
     [r.Vx.DEFAULT]: s.default,
     [r.Vx.CAT]: s.cat,

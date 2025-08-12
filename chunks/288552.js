@@ -3,7 +3,7 @@ var r = n(255367);
 n(73800);
 var i = n(755721),
     l = n(481060),
-    o = n(690148);
+    o = n(953589);
 let s = (e) => {
     let { text: t, icon: n, onClick: s, ref: a } = e;
     return (0, r.jsxs)(i.zx, {

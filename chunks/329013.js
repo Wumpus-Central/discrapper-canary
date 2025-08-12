@@ -30,7 +30,7 @@ var i = n(255367),
     N = n(921944),
     y = n(474936),
     A = n(388032),
-    P = n(967655);
+    P = n(615288);
 let R = () => {
         (0, x.Q3)(a.z.CLIENT_THEMES_SPARKLE_PREVIEW, {
             dismissAction: N.L.PRIMARY,

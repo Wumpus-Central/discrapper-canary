@@ -9,7 +9,7 @@ n(73800);
 var r = n(120356),
     s = n.n(r),
     a = n(481060),
-    l = n(517791);
+    l = n(857725);
 let o = () => (0, i.jsx)("hr", { className: l.sectionDivider }),
     c = (e) => {
         let { label: t, children: n, direction: r = "horizontal", className: c } = e;

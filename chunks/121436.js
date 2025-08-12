@@ -20,7 +20,7 @@ var a = n(120356),
     x = n(474936),
     N = n(981631),
     T = n(388032),
-    j = n(840052);
+    j = n(772649);
 let O = (e) => {
     var t, n;
     let { transitionState: a, onClose: O, displayProfile: h } = e,

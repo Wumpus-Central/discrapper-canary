@@ -10,7 +10,7 @@ var i = n(255367),
     u = n(981631),
     m = n(29953),
     p = n(388032),
-    g = n(236022);
+    g = n(132398);
 function h(e) {
     let { guild: t, isActivityRestricted: n, onToggleActivityRestrictedGuild: r } = e,
         o = (0, s.e7)([l.Z], () => l.Z.getMemberCount(t.id));

@@ -5,16 +5,16 @@ var r = n(255367),
     l = n(793030),
     s = n(442837),
     a = n(304789),
-    c = n(755721),
-    u = n(481060),
+    u = n(755721),
+    c = n(481060),
     d = n(99690),
     p = n(607070),
     f = n(623624),
     m = n(678558),
     g = n(343649),
     x = n(742409),
-    _ = n(518950),
-    v = n(271383),
+    v = n(518950),
+    _ = n(271383),
     b = n(485386),
     j = n(430824),
     h = n(594174),
@@ -23,9 +23,9 @@ var r = n(255367),
     I = n(981631),
     O = n(93841),
     y = n(388032),
-    P = n(302794),
+    P = n(860834),
     w = n(350618);
-let N = C.ZP.getEnableHardwareAcceleration() ? u.Xo$ : d.Z;
+let N = C.ZP.getEnableHardwareAcceleration() ? c.Xo$ : d.Z;
 function Z(e) {
     var t, n;
     let { guildId: o } = e,
@@ -38,17 +38,17 @@ function Z(e) {
         ),
         Z = (0, s.e7)([h.default], () => h.default.getCurrentUser()),
         S = null == Z ? void 0 : Z.id,
-        T = (0, s.e7)([v.ZP], () => (null != S ? v.ZP.getMember(o, S) : void 0), [S, o]),
+        T = (0, s.e7)([_.ZP], () => (null != S ? _.ZP.getMember(o, S) : void 0), [S, o]),
         A = (null == T ? void 0 : T.premiumSince) != null,
         R = (0, s.e7)([p.Z], () => p.Z.useReducedMotion),
         {
             avatarDecorationSrc: k,
             avatarSrc: L,
             eventHandlers: D,
-        } = (0, _.Z)({
+        } = (0, v.Z)({
             userId: null == Z ? void 0 : Z.id,
             guildId: o,
-            size: u.EFr.SIZE_40,
+            size: c.EFr.SIZE_40,
             animateOnHover: !R,
         });
     return null == d || null == T || null == Z
@@ -119,7 +119,7 @@ function Z(e) {
                                       user: Z,
                                       src: L,
                                       avatarDecoration: k,
-                                      size: u.EFr.SIZE_40,
+                                      size: c.EFr.SIZE_40,
                                       "aria-hidden": !0,
                                       animate: !0,
                                   }),
@@ -137,7 +137,7 @@ function Z(e) {
                                     }),
                               t),
                           ),
-                          username: (0, r.jsx)(u.PUh, {
+                          username: (0, r.jsx)(c.PUh, {
                               variant: "text-md/semibold",
                               name: E.ZP.getName(o, null, Z),
                               colorString: C.colorString,
@@ -145,8 +145,8 @@ function Z(e) {
                           }),
                           className: i()(P.content, P.exampleMessage),
                           message: y.intl.string(y.t["6OSasb"]),
-                          decorations: (0, r.jsx)(u.$Eu, {
-                              color: u.TVs.unsafe_rawColors.GUILD_BOOSTING_PINK,
+                          decorations: (0, r.jsx)(c.$Eu, {
+                              color: c.TVs.unsafe_rawColors.GUILD_BOOSTING_PINK,
                               className: P.boostIcon,
                           }),
                       }),
@@ -157,11 +157,11 @@ function Z(e) {
                           page: I.ZY5.GUILD_POWERUPS_OVERVIEW,
                           section: I.jXE.GUILD_POWERUPS_OVERVIEW_SIDEBAR,
                       },
-                      color: c.Tt.BRAND,
-                      size: c.Ph.MEDIUM,
+                      color: u.Tt.BRAND,
+                      size: u.Ph.MEDIUM,
                       intent: g.P.NONE,
                       fullWidth: !0,
-                      icon: (0, r.jsx)(u.$Eu, {
+                      icon: (0, r.jsx)(c.$Eu, {
                           color: "currentColor",
                           size: "sm",
                       }),

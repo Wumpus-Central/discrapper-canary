@@ -1,30 +1,29 @@
-n.d(t, { h: () => M });
+n.d(t, { h: () => x });
 var r = n(255367),
     i = n(73800),
     o = n(120356),
     a = n.n(o),
     s = n(704215),
     l = n(692547),
-    c = n(755721),
-    u = n(481060),
-    d = n(493773),
-    f = n(456100),
-    _ = n(127255),
-    p = n(5200),
-    h = n(100527),
-    m = n(906732),
-    g = n(397698),
-    E = n(895924),
-    b = n(266454),
-    y = n(340541),
-    O = n(448239),
-    v = n(626135),
-    I = n(607187),
-    T = n(981631),
-    S = n(388032),
-    A = n(413384),
-    N = n(359165);
-function C(e, t, n) {
+    c = n(481060),
+    u = n(493773),
+    d = n(456100),
+    f = n(127255),
+    _ = n(5200),
+    p = n(100527),
+    h = n(906732),
+    m = n(397698),
+    g = n(895924),
+    E = n(266454),
+    b = n(340541),
+    y = n(448239),
+    O = n(626135),
+    v = n(607187),
+    I = n(981631),
+    T = n(388032),
+    S = n(46262),
+    A = n(359165);
+function N(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -37,7 +36,7 @@ function C(e, t, n) {
         e
     );
 }
-function R(e) {
+function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -48,12 +47,12 @@ function R(e) {
                 }),
             )),
             r.forEach(function (t) {
-                C(e, t, n[t]);
+                N(e, t, n[t]);
             });
     }
     return e;
 }
-function P(e, t) {
+function R(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -65,22 +64,22 @@ function P(e, t) {
     }
     return n;
 }
-function w(e, t) {
+function P(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : P(Object(t)).forEach(function (n) {
+            : R(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function D(e, t) {
+function w(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = L(e, t);
+        i = D(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
         for (r = 0; r < o.length; r++)
@@ -88,7 +87,7 @@ function D(e, t) {
     }
     return i;
 }
-function L(e, t) {
+function D(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -97,11 +96,11 @@ function L(e, t) {
     for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let x = 250;
-function M(e) {
+let L = 250;
+function x(e) {
     let { channel: t, guild: n, width: i, inPopout: o, handleClose: a, userParticipantCount: s } = e;
-    return i < x
-        ? (0, r.jsx)(k, {
+    return i < L
+        ? (0, r.jsx)(M, {
               channel: t,
               guild: n,
               width: i,
@@ -110,7 +109,7 @@ function M(e) {
               userParticipantCount: s,
           })
         : s > 1
-          ? (0, r.jsx)(U, {
+          ? (0, r.jsx)(j, {
                 channel: t,
                 guild: n,
                 width: i,
@@ -118,20 +117,20 @@ function M(e) {
                 handleClose: a,
                 userParticipantCount: s,
             })
-          : (0, r.jsx)(j, {
+          : (0, r.jsx)(k, {
                 channel: t,
                 guild: n,
                 width: i,
                 inPopout: o,
             });
 }
-function k(e) {
+function M(e) {
     let { channel: t, inPopout: n, handleClose: i } = e,
-        { analyticsLocations: o, newestAnalyticsLocation: s } = (0, m.ZP)(h.Z.VC_TILE_ACTIVITY_SHELF_BUTTON),
-        { enabled: c } = f.c.useExperiment({ location: "ActivityShelfButtonTile" }, { autoTrackExposure: !0 }),
-        d = c ? u.iWm : u.gQj,
+        { analyticsLocations: o, newestAnalyticsLocation: s } = (0, h.ZP)(p.Z.VC_TILE_ACTIVITY_SHELF_BUTTON),
+        { enabled: u } = d.c.useExperiment({ location: "ActivityShelfButtonTile" }, { autoTrackExposure: !0 }),
+        f = u ? c.iWm : c.gQj,
         _ = () => {
-            (0, g.Z)({
+            (0, m.Z)({
                 context:
                     null != t
                         ? {
@@ -143,26 +142,26 @@ function k(e) {
                 analyticsLocation: s,
             });
         };
-    return (0, r.jsx)(m.Gt, {
+    return (0, r.jsx)(h.Gt, {
         value: o,
-        children: (0, r.jsxs)(I.Z, {
-            className: A.root,
+        children: (0, r.jsxs)(v.Z, {
+            className: S.root,
             children: [
-                (0, r.jsx)(u.ua7, {
-                    text: S.intl.string(S.t.qJvTKS),
+                (0, r.jsx)(c.ua7, {
+                    text: T.intl.string(T.t.qJvTKS),
                     children: (e) => {
                         var { onClick: t } = e,
-                            n = D(e, ["onClick"]);
+                            n = w(e, ["onClick"]);
                         return (0, r.jsx)(
-                            u.P3F,
-                            w(R({}, n), {
-                                className: A.clickableTile,
+                            c.P3F,
+                            P(C({}, n), {
+                                className: S.clickableTile,
                                 onClick: () => {
                                     null == t || t(), _();
                                 },
                                 children: (0, r.jsx)("div", {
-                                    className: A.iconContainer,
-                                    children: (0, r.jsx)(d, {
+                                    className: S.iconContainer,
+                                    children: (0, r.jsx)(f, {
                                         size: "custom",
                                         color: "currentColor",
                                         width: 40,
@@ -173,16 +172,16 @@ function k(e) {
                         );
                     },
                 }),
-                (0, r.jsx)(u.f6W, {
-                    theme: T.BRd.DARK,
+                (0, r.jsx)(c.f6W, {
+                    theme: I.BRd.DARK,
                     children: (e) =>
-                        (0, r.jsx)(u.P3F, {
+                        (0, r.jsx)(c.P3F, {
                             onClick: i,
-                            className: a()(e, A.shelfButtonCloseButton),
-                            children: (0, r.jsx)(u.k$p, {
+                            className: a()(e, S.shelfButtonCloseButton),
+                            children: (0, r.jsx)(c.k$p, {
                                 size: "md",
                                 color: "currentColor",
-                                className: A.closeButtonIcon,
+                                className: S.closeButtonIcon,
                                 secondaryColor: l.Z.colors.INTERACTIVE_NORMAL.css,
                             }),
                         }),
@@ -191,38 +190,38 @@ function k(e) {
         }),
     });
 }
-function j(e) {
+function k(e) {
     let { channel: t, guild: o, inPopout: s } = e;
     i.useEffect(() => {
-        v.default.track(T.rMx.VC_TILE_ACTIVITIES_ENTRY_POINT_VIEWED, {
+        O.default.track(I.rMx.VC_TILE_ACTIVITIES_ENTRY_POINT_VIEWED, {
             tile_type: "activity invite",
             n_participants: 1,
         });
     }, []);
-    let { analyticsLocations: l, newestAnalyticsLocation: d } = (0, m.ZP)(h.Z.VC_TILE_ACTIVITY_INVITE),
-        { entrypoints: _ } = (0, y._k)({ location: "single_user_tile" }),
-        { enabled: p } = f.c.useExperiment({ location: "SingleUserTile" }, { autoTrackExposure: !0 });
-    function E() {
-        (0, u.ZDy)(
+    let { analyticsLocations: l, newestAnalyticsLocation: u } = (0, h.ZP)(p.Z.VC_TILE_ACTIVITY_INVITE),
+        { entrypoints: f } = (0, b._k)({ location: "single_user_tile" }),
+        { enabled: _ } = d.c.useExperiment({ location: "SingleUserTile" }, { autoTrackExposure: !0 });
+    function g() {
+        (0, c.ZDy)(
             async () => {
-                let { default: e } = await Promise.all([n.e("7654"), n.e("49049"), n.e("29328")]).then(
+                let { default: e } = await Promise.all([n.e("7654"), n.e("49049"), n.e("36264")]).then(
                     n.bind(n, 560114),
                 );
                 return (n) =>
                     (0, r.jsx)(
                         e,
-                        w(R({}, n), {
+                        P(C({}, n), {
                             guild: o,
                             channel: t,
-                            source: T.t4x.ACTIVITY_ENTRY_POINT_TILE,
+                            source: I.t4x.ACTIVITY_ENTRY_POINT_TILE,
                         }),
                     );
             },
-            { contextKey: s ? u.u1M : u.z1l },
+            { contextKey: s ? c.u1M : c.z1l },
         );
     }
-    function b() {
-        (0, g.Z)({
+    function E() {
+        (0, m.Z)({
             context:
                 null != t
                     ? {
@@ -231,53 +230,40 @@ function j(e) {
                       }
                     : { type: "contextless" },
             openInPopout: s,
-            analyticsLocation: d,
+            analyticsLocation: u,
         });
     }
-    let O = p ? u.iWm : u.nG3,
-        C = _ ? u.oLu : u.iFz;
-    return (0, r.jsx)(m.Gt, {
+    let y = _ ? c.iWm : c.nG3,
+        N = f ? c.oLu : c.iFz;
+    return (0, r.jsx)(h.Gt, {
         value: l,
-        children: (0, r.jsx)(u.f6W, {
+        children: (0, r.jsx)(c.f6W, {
             disableAdaptiveTheme: !0,
-            theme: T.BRd.MIDNIGHT,
+            theme: I.BRd.MIDNIGHT,
             children: (e) =>
-                (0, r.jsxs)(I.Z, {
-                    className: a()(A.root, A.singleUserRoot, e),
+                (0, r.jsxs)(v.Z, {
+                    className: a()(S.root, S.singleUserRoot, e),
                     children: [
                         (0, r.jsx)("img", {
-                            src: N,
-                            className: A.art,
+                            src: A,
+                            className: S.art,
                             alt: "",
                         }),
-                        (0, r.jsxs)("div", {
-                            className: A.buttonContainer,
+                        (0, r.jsxs)(c.hE2, {
+                            justify: "center",
+                            align: "center",
                             children: [
-                                (0, r.jsxs)(c.zx, {
-                                    size: c.zx.Sizes.LARGE,
-                                    color: c.zx.Colors.PRIMARY,
-                                    innerClassName: A.buttonContents,
-                                    onClick: E,
-                                    children: [
-                                        (0, r.jsx)(C, {
-                                            size: "xs",
-                                            color: "currentColor",
-                                        }),
-                                        _ ? S.intl.string(S.t["EE+P0N"]) : S.intl.string(S.t["6Qgren"]),
-                                    ],
+                                (0, r.jsx)(c.zxk, {
+                                    variant: "secondary",
+                                    icon: N,
+                                    text: f ? T.intl.string(T.t["EE+P0N"]) : T.intl.string(T.t["6Qgren"]),
+                                    onClick: g,
                                 }),
-                                (0, r.jsxs)(c.zx, {
-                                    size: c.zx.Sizes.LARGE,
-                                    color: c.zx.Colors.PRIMARY,
-                                    innerClassName: A.buttonContents,
-                                    onClick: b,
-                                    children: [
-                                        (0, r.jsx)(O, {
-                                            size: "xs",
-                                            color: "currentColor",
-                                        }),
-                                        S.intl.string(S.t.qnFavb),
-                                    ],
+                                (0, r.jsx)(c.zxk, {
+                                    variant: "secondary",
+                                    icon: y,
+                                    text: T.intl.string(T.t.qnFavb),
+                                    onClick: E,
                                 }),
                             ],
                         }),
@@ -286,32 +272,32 @@ function j(e) {
         }),
     });
 }
-function U(e) {
-    let { channel: t, guild: n, handleClose: o, width: l, userParticipantCount: c } = e;
-    (0, d.ZP)(() => {
-        v.default.track(T.rMx.VC_TILE_ACTIVITIES_ENTRY_POINT_VIEWED, {
+function j(e) {
+    let { channel: t, guild: n, handleClose: o, width: l, userParticipantCount: d } = e;
+    (0, u.ZP)(() => {
+        O.default.track(I.rMx.VC_TILE_ACTIVITIES_ENTRY_POINT_VIEWED, {
             tile_type: "activity suggestion",
-            n_participants: c,
+            n_participants: d,
         });
     });
-    let f = (0, _.Z)({ guildId: n.id }).slice(0, 3);
-    function g() {
-        v.default.track(T.rMx.VC_TILE_ACTIVITIES_ENTRY_POINT_CLOSED, {
+    let m = (0, f.Z)({ guildId: n.id }).slice(0, 3);
+    function b() {
+        O.default.track(I.rMx.VC_TILE_ACTIVITIES_ENTRY_POINT_CLOSED, {
             tile_type: "activity suggestion",
             close_type: "permanent",
-            n_participants: c,
+            n_participants: d,
         }),
-            (0, b.Q3)(s.z.VC_TILE_ACTIVITIES_ENTRY_POINT);
+            (0, E.Q3)(s.z.VC_TILE_ACTIVITIES_ENTRY_POINT);
     }
-    function y() {
-        v.default.track(T.rMx.VC_TILE_ACTIVITIES_ENTRY_POINT_CLOSED, {
+    function A() {
+        O.default.track(I.rMx.VC_TILE_ACTIVITIES_ENTRY_POINT_CLOSED, {
             tile_type: "activity suggestion",
             close_type: "temporary",
-            n_participants: c,
+            n_participants: d,
         }),
             o();
     }
-    let { analyticsLocations: N } = (0, m.ZP)(h.Z.VC_TILE_ACTIVITY_SUGGESTION),
+    let { analyticsLocations: N } = (0, h.ZP)(p.Z.VC_TILE_ACTIVITY_SUGGESTION),
         C = i.useMemo(
             () => ({
                 channel: t,
@@ -319,52 +305,52 @@ function U(e) {
             }),
             [t],
         );
-    return (0, r.jsx)(m.Gt, {
+    return (0, r.jsx)(h.Gt, {
         value: N,
-        children: (0, r.jsxs)(I.Z, {
-            className: A.root,
+        children: (0, r.jsxs)(v.Z, {
+            className: S.root,
             children: [
                 l > 300
-                    ? (0, r.jsx)(u.Text, {
-                          className: A.heading,
+                    ? (0, r.jsx)(c.Text, {
+                          className: S.heading,
                           variant: l > 550 ? "text-md/semibold" : "text-sm/semibold",
-                          children: S.intl.string(S.t["7BKMcH"]),
+                          children: T.intl.string(T.t["7BKMcH"]),
                       })
                     : null,
                 (0, r.jsx)("div", {
-                    className: a()(A.activitiesContainer, { [A.activitiesContainerSmol]: l <= 300 }),
-                    children: f.map((e) =>
+                    className: a()(S.activitiesContainer, { [S.activitiesContainerSmol]: l <= 300 }),
+                    children: m.map((e) =>
                         (0, r.jsx)(
-                            p.Y,
+                            _.Y,
                             {
                                 context: C,
                                 activityItem: e,
-                                aspectRatio: p.Y.AspectRatio.SIXTEEN_BY_NINE,
-                                animatedDivClass: A.activitySuggestion,
-                                commandOrigin: E.bB.VOICE_TILE_ACTIVITY_SUGGESTIONS,
+                                aspectRatio: _.Y.AspectRatio.SIXTEEN_BY_NINE,
+                                animatedDivClass: S.activitySuggestion,
+                                commandOrigin: g.bB.VOICE_TILE_ACTIVITY_SUGGESTIONS,
                             },
                             e.application.id,
                         ),
                     ),
                 }),
-                (0, r.jsxs)(u.P3F, {
-                    className: A.checkboxContainer,
-                    onClick: g,
+                (0, r.jsxs)(c.P3F, {
+                    className: S.checkboxContainer,
+                    onClick: b,
                     children: [
-                        (0, r.jsx)(O.Z, {}),
-                        (0, r.jsx)(u.Text, {
+                        (0, r.jsx)(y.Z, {}),
+                        (0, r.jsx)(c.Text, {
                             variant: "text-sm/medium",
-                            children: S.intl.string(S.t["5E9SBw"]),
+                            children: T.intl.string(T.t["5E9SBw"]),
                         }),
                     ],
                 }),
-                (0, r.jsx)(u.P3F, {
-                    className: A.closeButtonContainer,
-                    onClick: y,
-                    children: (0, r.jsx)(u.Dio, {
+                (0, r.jsx)(c.P3F, {
+                    className: S.closeButtonContainer,
+                    onClick: A,
+                    children: (0, r.jsx)(c.Dio, {
                         size: "md",
                         color: "currentColor",
-                        className: A.closeButton,
+                        className: S.closeButton,
                     }),
                 }),
             ],

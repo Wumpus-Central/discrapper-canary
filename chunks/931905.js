@@ -8,7 +8,7 @@ var r = n(755721),
     l = n(481060),
     a = n(17894),
     o = n(388032),
-    s = n(157020);
+    s = n(322726);
 let c = (e) => {
     let { onConfirm: t, onCancel: n, title: r, subtitle: c, confirmCta: u, showOpenDiscord: d = !0 } = e;
     return (0, i.jsxs)("div", {

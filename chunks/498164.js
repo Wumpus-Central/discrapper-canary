@@ -10,8 +10,8 @@ var i = n(756647),
     u = n(457330),
     d = n(533307),
     p = n(317381),
-    h = n(122613),
-    f = n(649256),
+    f = n(122613),
+    h = n(649256),
     g = n(100527),
     m = n(728345),
     b = n(962220),
@@ -85,7 +85,7 @@ let Z = {
             return (
                 S.ZP.focus(),
                 (0, l.ZDy)(async () => {
-                    let { default: e } = await Promise.all([n.e("10778"), n.e("44044")]).then(n.bind(n, 766775));
+                    let { default: e } = await Promise.all([n.e("10778"), n.e("58725")]).then(n.bind(n, 766775));
                     return (t) => {
                         var n, l;
                         return (0, r.jsx)(
@@ -132,7 +132,7 @@ let Z = {
                                     location: j.SaU,
                                 }),
                                 (0, l.ZDy)(async () => {
-                                    let { default: e } = await Promise.all([n.e("92446"), n.e("80877")]).then(
+                                    let { default: e } = await Promise.all([n.e("92446"), n.e("55356")]).then(
                                         n.bind(n, 409858),
                                     );
                                     return (n) => (0, r.jsx)(e, x({ code: t }, n));
@@ -239,12 +239,12 @@ let Z = {
                                 let s = await c.Z.openPrivateChannel({ recipientIds: o }),
                                     u = new URL(t),
                                     d = null != (i = u.searchParams.get("referrer_id")) ? i : void 0,
-                                    { customId: b } = await (0, f.ur)(
+                                    { customId: b } = await (0, h.ur)(
                                         e,
                                         u.searchParams.get("link_id"),
                                         u.searchParams.get("custom_id"),
                                     );
-                                await (0, h.Z)({
+                                await (0, f.Z)({
                                     targetApplicationId: e,
                                     channelId: s,
                                     analyticsLocations: [g.Z.DEEPLINK],

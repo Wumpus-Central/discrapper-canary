@@ -14,7 +14,7 @@ var i = n(296009),
     g = n(455731),
     O = n(231338),
     f = n(388032),
-    j = n(789101);
+    j = n(663161);
 let y = {
     [i.l.FAVORITE_GAMES]: {
         component: b.Z,

@@ -5,7 +5,7 @@ var n = r(255367),
     i = r.n(a),
     o = r(802433),
     s = r(680295),
-    c = r(313305),
+    c = r(941447),
     u = r(241822);
 let d = (e) => {
     let { profileEffectId: t, isHovering: r, forCollectedModal: a = !1, isPurchased: d, removeSetHeight: p = !1 } = e,

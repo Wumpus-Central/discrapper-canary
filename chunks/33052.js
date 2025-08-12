@@ -7,7 +7,7 @@ var n = i(255367),
     o = i(717401),
     c = i(286961),
     u = i(897942),
-    d = i(154422);
+    d = i(977631);
 function m() {
     let e = (0, r.e7)([a.Z], () => a.Z.useReducedMotion),
         { claimableRewards: t } = (0, s.wD)(),

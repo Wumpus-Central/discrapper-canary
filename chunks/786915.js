@@ -105,7 +105,7 @@ function S(e) {
     null == c || c(),
         (0, s.ZDy)(
             async () => {
-                let { default: e } = await Promise.all([n.e("7654"), n.e("49049"), n.e("29328")]).then(
+                let { default: e } = await Promise.all([n.e("7654"), n.e("49049"), n.e("36264")]).then(
                     n.bind(n, 560114),
                 );
                 return (n) =>

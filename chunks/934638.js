@@ -7,7 +7,7 @@ var r = n(255367),
     o = n(434404),
     c = n(999382),
     d = n(388032),
-    u = n(381109);
+    u = n(920643);
 function m(e) {
     let { profile: t, canManageGuild: n } = e,
         m = t.id,

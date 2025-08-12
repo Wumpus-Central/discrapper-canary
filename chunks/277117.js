@@ -29,7 +29,7 @@ var i = n(657707),
     P = n(228168),
     T = n(981631),
     N = n(388032),
-    R = n(283189);
+    R = n(267419);
 function w(e) {
     let { user: t, currentUser: n, displayProfile: w, channel: A, isHovering: D, onOpenProfile: k } = e,
         { relationshipType: L, originApplicationId: M } = (0, l.cj)([u.Z], () => ({

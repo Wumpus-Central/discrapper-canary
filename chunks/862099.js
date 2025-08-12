@@ -15,8 +15,8 @@ var r,
     u = n(884338),
     d = n(471445),
     p = n(986332),
-    h = n(662842),
-    f = n(703656),
+    f = n(662842),
+    h = n(703656),
     g = n(922482),
     m = n(565799),
     b = n(501655),
@@ -42,7 +42,7 @@ var r,
     k = n(765305),
     M = n(981631),
     U = n(388032),
-    G = n(647128);
+    G = n(848191);
 let V = l.memo(function (e) {
     let {
         heading: t,
@@ -182,12 +182,12 @@ function F(e) {
         s = null != a ? (0, x.m)(a, !0) : null,
         u = (0, L.nE)(n),
         p = (0, d.KS)(u),
-        { startTime: h, endTime: f } = (0, Z.ZP)(n),
+        { startTime: f, endTime: h } = (0, Z.ZP)(n),
         {
             startDateTimeString: g,
             upcomingEvent: m,
             diffMinutes: b,
-        } = (0, R.ub)(h.toISOString(), null == f ? void 0 : f.toISOString()),
+        } = (0, R.ub)(f.toISOString(), null == h ? void 0 : h.toISOString()),
         _ = m
             ? b > 0
                 ? U.intl.formatToPlainString(U.t.PQlCWl, { minutes: b })
@@ -331,7 +331,7 @@ function Y(e) {
             text: n,
             fullWidth: !0,
             onClick: () => {
-                null != t && null != t.getGuildId() && ((0, g.Cq)(t), (0, f.XU)(t.getGuildId(), t.id));
+                null != t && null != t.getGuildId() && ((0, g.Cq)(t), (0, h.XU)(t.getGuildId(), t.id));
             },
         }),
     });
@@ -376,20 +376,20 @@ function X(e) {
         a = t.getGuildId(),
         d = l.useMemo(() => n.slice(0, 3), [n]),
         p = (0, s.e7)([y.Z], () => y.Z.can(M.Plq.CONNECT, t)),
-        h = (0, E.Z)(t.id),
-        f = U.intl.string(U.t.VJlc0d);
+        f = (0, E.Z)(t.id),
+        h = U.intl.string(U.t.VJlc0d);
     switch (r) {
         case 1:
-            f = U.intl.string(U.t.VJlc0d);
+            h = U.intl.string(U.t.VJlc0d);
             break;
         case 2:
-            (f = U.intl.string(U.t.ZYO5OD)),
-                (null == h ? void 0 : h.speaker)
-                    ? (f = U.intl.string(U.t["/cnSFR"]))
-                    : null != h && (f = U.intl.string(U.t.btSGOj));
+            (h = U.intl.string(U.t.ZYO5OD)),
+                (null == f ? void 0 : f.speaker)
+                    ? (h = U.intl.string(U.t["/cnSFR"]))
+                    : null != f && (h = U.intl.string(U.t.btSGOj));
             break;
         case 3:
-            f = U.intl.string(U.t.wBoE6O);
+            h = U.intl.string(U.t.wBoE6O);
             break;
         default:
             (0, C.vE)(r);
@@ -418,10 +418,10 @@ function X(e) {
                         })
                       : null,
                   p &&
-                      null == h &&
+                      null == f &&
                       (0, i.jsx)(Y, {
                           channel: t,
-                          label: f,
+                          label: h,
                       }),
               ],
           });
@@ -442,15 +442,15 @@ let Q = l.memo(function (e) {
             [o, l],
         ),
         d = null,
-        f = null != o && null != r && !c;
-    if (n) return (0, i.jsx)(h.Z, { guild: t });
+        h = null != o && null != r && !c;
+    if (n) return (0, i.jsx)(f.Z, { guild: t });
     null == l || u
-        ? f &&
+        ? h &&
           (d = (0, i.jsx)(K, {
               stageInstance: o,
               channel: r,
           }))
-        : l.entity_type === k.WX.STAGE_INSTANCE && f
+        : l.entity_type === k.WX.STAGE_INSTANCE && h
           ? (d = (0, i.jsx)(K, {
                 stageInstance: o,
                 channel: r,

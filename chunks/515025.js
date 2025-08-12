@@ -12,7 +12,7 @@ var r = n(255367),
     g = n(30513),
     p = n(200299),
     h = n(388032),
-    f = n(322847);
+    f = n(747747);
 function b(e) {
     let { guild: t, canManageGuild: n } = e,
         b = t.features.has(m.oNc.INVITE_SPLASH),

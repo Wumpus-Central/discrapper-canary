@@ -10,7 +10,7 @@ var r = n(255367),
     u = n(273504),
     m = n(981631),
     g = n(388032),
-    p = n(409866);
+    p = n(562925);
 let h = o.Z.getArticleURL(m.BhN.GUILD_AUTOMOD_REGEX);
 function f(e) {
     let { hasErrors: t, text: n, errorText: i } = e;

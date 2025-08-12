@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f }), n(388685);
+n.d(t, { Z: () => h }), n(388685);
 var r = n(255367),
     i = n(481060),
     l = n(570140),
@@ -21,7 +21,7 @@ function d(e, t, n) {
     );
 }
 let p = "CollectiblesExpiryModal";
-class h extends a.Z {
+class f extends a.Z {
     _initialize() {
         l.Z.subscribe("POST_CONNECTION_OPEN", this.handleMaybeOpenModal),
             l.Z.subscribe("CURRENT_USER_UPDATE", this.handleMaybeOpenModal);
@@ -47,11 +47,11 @@ class h extends a.Z {
                 var e, t;
                 let l = s.default.getCurrentUser(),
                     a = o.Z.getState(),
-                    h = null == l || null == (e = l.avatarDecoration) ? void 0 : e.skuId,
-                    f = null == l || null == (t = l.avatarDecoration) ? void 0 : t.expiresAt;
+                    f = null == l || null == (e = l.avatarDecoration) ? void 0 : e.skuId,
+                    h = null == l || null == (t = l.avatarDecoration) ? void 0 : t.expiresAt;
                 return (
                     null != l &&
-                    !!(null != f && 1000 * f < Date.now()) &&
+                    !!(null != h && 1000 * h < Date.now()) &&
                     a !== u.hes.RTC_CONNECTED &&
                     ((0, i.Mr3)(p),
                     (0, i.ZDy)(
@@ -77,7 +77,7 @@ class h extends a.Z {
                                         }
                                         return e;
                                     })({}, t)),
-                                    (i = i = { skuId: h }),
+                                    (i = i = { skuId: f }),
                                     Object.getOwnPropertyDescriptors
                                         ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))
                                         : (function (e, t) {
@@ -102,4 +102,4 @@ class h extends a.Z {
             });
     }
 }
-let f = new h();
+let h = new f();

@@ -30,7 +30,7 @@ var n = a(255367),
     v = a(430824),
     j = a(914010),
     g = a(981631),
-    _ = a(444048);
+    _ = a(242253);
 let y = [
         o.z.GUILD_POWERUP_PERKS_COACHMARK,
         o.z.GUILD_POWERUPS_OVERVIEW_SIDEBAR_COACHMARK,

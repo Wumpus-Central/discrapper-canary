@@ -10,7 +10,7 @@ var i = n(442837),
     u = n(594174),
     d = n(967128),
     f = n(388032),
-    _ = n(156292);
+    _ = n(97612);
 function p(e) {
     var t;
     let { joinRequest: n, guild: l } = e,

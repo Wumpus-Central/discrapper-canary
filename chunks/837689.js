@@ -10,8 +10,8 @@ var i = n(873546),
     u = n(594174),
     d = n(431),
     p = n(74538),
-    h = n(374023),
-    f = n(367074),
+    f = n(374023),
+    h = n(367074),
     g = n(775412),
     m = n(695349),
     b = n(913976),
@@ -89,7 +89,7 @@ class T extends s.Z {
                 return null != n ? { userTrialOffer: n } : {};
             }),
             S(this, "mayShowAnnouncementModal", async () => {
-                if ((await (0, f.l2)(), h.s.isDisallowPopupsSet())) return;
+                if ((await (0, h.l2)(), f.s.isDisallowPopupsSet())) return;
                 let e = this.getOfferFromStore(),
                     t = _.Z.getCurrentConfig({ location: "announcementManager" }, { autoTrackExposure: !1 }).enabled,
                     n = (0, c.zu)(l.z.Q2_2025_MARKETING_MOMENT_FOLLOW_UP_MODAL),

@@ -4,7 +4,7 @@ var i = n(255367),
     s = n(657707),
     a = n(524437),
     l = n(481060),
-    o = n(486135);
+    o = n(177513);
 function c(e) {
     let { redactionType: t, label: n } = e,
         c = r.useMemo(() => {

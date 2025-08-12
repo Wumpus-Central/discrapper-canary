@@ -1,24 +1,26 @@
 n.d(t, {
-    ES: () => S,
-    X6: () => N,
-    np: () => E,
-    qH: () => I,
-    tk: () => C,
-    vH: () => A,
-    y8: () => T,
+    ES: () => A,
+    X6: () => C,
+    kQ: () => P,
+    np: () => b,
+    qH: () => T,
+    tk: () => R,
+    vH: () => N,
+    y8: () => S,
 }),
     n(388685),
     n(642613);
-var r = n(296009),
-    i = n(224706),
-    o = n(594174),
-    a = n(621853),
-    s = n(592183),
-    l = n(224724),
-    c = n(247397),
-    u = n(925434),
-    d = n(570911);
-function f(e, t, n) {
+var r = n(624238),
+    i = n(296009),
+    o = n(224706),
+    a = n(594174),
+    s = n(621853),
+    l = n(592183),
+    c = n(224724),
+    u = n(247397),
+    d = n(925434),
+    f = n(570911);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -31,7 +33,7 @@ function f(e, t, n) {
         e
     );
 }
-function _(e) {
+function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -42,12 +44,12 @@ function _(e) {
                 }),
             )),
             r.forEach(function (t) {
-                f(e, t, n[t]);
+                _(e, t, n[t]);
             });
     }
     return e;
 }
-function p(e, t) {
+function h(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -59,81 +61,81 @@ function p(e, t) {
     }
     return n;
 }
-function h(e, t) {
+function m(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : p(Object(t)).forEach(function (n) {
+            : h(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function m(e) {
+function g(e) {
     return e[Math.floor(Math.random() * e.length)];
 }
-function g(e, t) {
+function E(e, t) {
     return [...e].sort(() => 0.5 - Math.random()).slice(0, t);
 }
-function E(e) {
+function b(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : new Set(),
-        n = d.J6.filter((e) => !t.has(e)),
-        i = { applicationId: m(n.length > 0 ? n : d.J6) };
+        n = f.J6.filter((e) => !t.has(e)),
+        r = { applicationId: g(n.length > 0 ? n : f.J6) };
     return (
-        e === r.l.FAVORITE_GAMES && (i.comment = Math.random() > 0.5 ? m(u.x) : void 0),
-        e === r.l.CURRENT_GAMES && (i.tags = Math.random() > 0.3 ? g(u.T, Math.floor(3 * Math.random()) + 1) : void 0),
-        i
+        e === i.l.FAVORITE_GAMES && (r.comment = Math.random() > 0.5 ? g(d.x) : void 0),
+        e === i.l.CURRENT_GAMES && (r.tags = Math.random() > 0.3 ? E(d.T, Math.floor(3 * Math.random()) + 1) : void 0),
+        r
     );
 }
-function b() {
+function y() {
     var e, t;
-    if (l.Z.hasPendingChanges()) return null != (e = l.Z.getPendingWidgets()) ? e : [];
+    if (c.Z.hasPendingChanges()) return null != (e = c.Z.getPendingWidgets()) ? e : [];
     {
-        let e = o.default.getCurrentUser(),
-            n = null != e ? a.Z.getUserProfile(e.id) : null;
+        let e = a.default.getCurrentUser(),
+            n = null != e ? s.Z.getUserProfile(e.id) : null;
         return null != (t = null == n ? void 0 : n.widgets) ? t : [];
     }
 }
-function y(e) {
-    return e.sort((e, t) => c.rR.indexOf(e.type) - c.rR.indexOf(t.type));
-}
 function O(e) {
+    return e.sort((e, t) => u.r.indexOf(e.type) - u.r.indexOf(t.type));
+}
+function v(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
-    return h(_({}, { id: e }), {
+    return m(p({}, { id: e }), {
         type: e,
         games: t,
     });
 }
-function v(e, t) {
+function I(e, t) {
     let n = e.filter((e) => e.type !== t.type);
-    return y([t, ...n]);
-}
-function I(e) {
-    let t = b();
-    if (null != t.find((t) => t.type === e)) return;
-    let n = O(e);
-    s.Z.setPendingWidgets(y([n, ...t]));
+    return O([t, ...n]);
 }
 function T(e) {
-    let t = b().filter((t) => t.type !== e);
-    s.Z.setPendingWidgets(t);
+    let t = y();
+    if (null != t.find((t) => t.type === e)) return;
+    let n = v(e);
+    l.Z.setPendingWidgets(O([n, ...t]));
 }
-function S(e, t) {
+function S(e) {
+    let t = y().filter((t) => t.type !== e);
+    l.Z.setPendingWidgets(t);
+}
+function A(e, t) {
     let n,
-        o = b(),
-        a = o.find((t) => t.type === e),
-        l = c.Xe[e];
-    if (null != a) {
+        a = y(),
+        s = a.find((t) => t.type === e),
+        c = r.k[e];
+    if (null != s) {
         var u, d;
-        if ((null != (d = null == (u = a.games) ? void 0 : u.length) ? d : 0) >= l) return;
+        if ((null != (d = null == (u = s.games) ? void 0 : u.length) ? d : 0) >= c) return;
     }
     let f = { applicationId: t };
-    n = null != a ? (e === r.l.FAVORITE_GAMES ? [f] : [...(a.games || []), f]) : [f];
-    let _ = v(o, O(e, n));
-    s.Z.setPendingWidgets(_), i.Z.getDetectableGamesSupplemental([t]);
+    n = null != s ? (e === i.l.FAVORITE_GAMES ? [f] : [...(s.games || []), f]) : [f];
+    let _ = I(a, v(e, n));
+    l.Z.setPendingWidgets(_), o.Z.getDetectableGamesSupplemental([t]);
 }
-function A(e) {
+function N(e) {
     let t = (e) => ({
             game_id: e.applicationId,
             comment: e.comment,
@@ -147,19 +149,23 @@ function A(e) {
         },
     };
 }
-async function N() {
-    let e = l.Z.getPendingWidgets();
+async function C() {
+    let e = c.Z.getPendingWidgets();
     if (null !== e)
         try {
-            await s.Z.savePendingWidgets(e);
+            await l.Z.savePendingWidgets(e);
         } catch (e) {
             console.error("Failed to save sample widgets:", e);
         }
 }
-async function C() {
+async function R() {
     try {
-        await s.Z.savePendingWidgets([]);
+        await l.Z.savePendingWidgets([]);
     } catch (e) {
         console.error("Failed to clear saved widgets", e);
     }
+}
+function P(e) {
+    let t = r.k[e.type];
+    return e.games.length >= t;
 }

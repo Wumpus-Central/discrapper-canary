@@ -6,7 +6,7 @@ var i = n(481060),
     a = n(934415),
     s = n(834129),
     l = n(981631),
-    c = n(848024);
+    c = n(989539);
 function u(e) {
     let { giftIntentType: t, recipientUser: n, giftIntentSecondaryAction: u, channel: d } = e;
     return (0, r.jsx)(s.Z, {

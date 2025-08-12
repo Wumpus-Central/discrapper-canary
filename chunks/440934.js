@@ -15,7 +15,7 @@ var r = t(257465),
     u = t(293979),
     p = t(954654),
     m = t(388032),
-    b = t(994186);
+    b = t(721005);
 function f(n) {
     let { title: e, onClose: t, transitionState: f } = n,
         {

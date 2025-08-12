@@ -9,8 +9,8 @@ var r = n(392711),
     u = n(601964),
     d = n(199902),
     p = n(592125),
-    h = n(271383),
-    f = n(430824),
+    f = n(271383),
+    h = n(430824),
     g = n(131951),
     m = n(19780),
     b = n(594174),
@@ -53,12 +53,12 @@ let Z = {
             let {
                 args: { guild_id: t },
             } = e;
-            if (null == f.Z.getGuild(t))
+            if (null == h.Z.getGuild(t))
                 throw new O.Z({ errorCode: T.lTL.INVALID_GUILD }, "Invalid guild id: ".concat(t));
             return (e) => {
                 var n;
                 let { prevState: r, dispatch: l } = e,
-                    a = f.Z.getGuild(t);
+                    a = h.Z.getGuild(t);
                 if (null == a) return;
                 let o = {
                     guild: {
@@ -297,7 +297,7 @@ let Z = {
             } = e;
             return (e) => {
                 let { prevState: n, dispatch: r } = e,
-                    i = { currentGuildMember: h.ZP.getSelfMember(t) };
+                    i = { currentGuildMember: f.ZP.getSelfMember(t) };
                 return (
                     null == i.currentGuildMember || (null != n && (0, a.Z)(i, n)) || r((0, C.Z)(i.currentGuildMember)),
                     i
@@ -329,12 +329,12 @@ let Z = {
                 o = (null == a ? void 0 : a.id) != null ? s.Z.getApplication(a.id) : null,
                 u = null != o ? (0, I.Z)(o) : null,
                 p = null == l ? void 0 : l.sourceName,
-                h = {
+                f = {
                     active: null != l,
                     pid: null != (t = null == l ? void 0 : l.pid) ? t : null,
                     application: null != u ? { name: p } : null,
                 };
-            return i().isEqual(h, n) || r(h), h;
+            return i().isEqual(f, n) || r(f), f;
         },
     },
     [T.zMe.VIDEO_STATE_UPDATE]: {

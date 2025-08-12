@@ -34,8 +34,8 @@ var l = n(255367),
     A = n(981631),
     k = n(176505),
     B = n(388032),
-    D = n(86931),
-    L = n(100658);
+    D = n(13348),
+    L = n(149771);
 function G(e) {
     let { guild: t, currentTab: n, onTabSelect: r } = e,
         a = (0, j.W)(t.id),

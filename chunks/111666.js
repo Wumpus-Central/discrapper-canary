@@ -9,8 +9,8 @@ var r = n(255367),
     u = n(122943),
     d = n(665149),
     p = n(670188),
-    h = n(592125),
-    f = n(158776),
+    f = n(592125),
+    h = n(158776),
     g = n(699516),
     m = n(594174),
     b = n(482798),
@@ -18,7 +18,7 @@ var r = n(255367),
     O = n(151459),
     E = n(981631),
     y = n(388032),
-    v = n(398435);
+    v = n(306948);
 function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -90,7 +90,7 @@ function S(e) {
                                 }, 10000));
                         },
                         a = (t, n, l) => {
-                            var a, o, s, c, u, d, p, f;
+                            var a, o, s, c, u, d, p, h;
                             if (!g.Z.isFriend(t)) return !1;
                             let b = m.default.getUser(t);
                             if (null == b) return !1;
@@ -129,10 +129,10 @@ function S(e) {
                                         ((_ = !0), e(t, "presence", null));
                             }
                             if (null != l) {
-                                let n = h.Z.getChannel(l);
+                                let n = f.Z.getChannel(l);
                                 if (null != n) {
                                     let i = "voice-".concat(n.id);
-                                    (null == (f = r.current[t]) ? void 0 : f.voice) !== i &&
+                                    (null == (h = r.current[t]) ? void 0 : h.voice) !== i &&
                                         ((_ = !0),
                                         e(t, "voice", i),
                                         (O = {
@@ -148,7 +148,7 @@ function S(e) {
                         o = (e) => {
                             for (let t of e.updates) {
                                 let e = t.user.id,
-                                    n = f.Z.getPrimaryActivity(e);
+                                    n = h.Z.getPrimaryActivity(e);
                                 if (a(e, n)) break;
                             }
                         },

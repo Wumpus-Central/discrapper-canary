@@ -15,34 +15,34 @@ var r = n(255367),
     x = n(472144),
     h = n(644646),
     j = n(251360),
-    _ = n(19148),
-    b = n(69439),
+    b = n(19148),
+    _ = n(69439),
     v = n(46140),
     C = n(642145),
     y = n(388032),
-    O = n(882067);
+    O = n(809011);
 let E = async () => await n.e("67963").then(n.t.bind(n, 145193, 19));
 function S(e) {
     var t, n, o, S, w;
     let {
             quest: P,
-            questContent: N,
-            isHovering: A,
+            questContent: A,
+            isHovering: N,
             contentPosition: R,
             rowIndex: B,
             isVisibleInViewport: k,
-            onReceiveErrorHints: I,
-            sourceQuestContent: q,
+            onReceiveErrorHints: q,
+            sourceQuestContent: I,
         } = e,
-        D = s.useMemo(() => f.r.build(P.config), [P.config]),
-        Q = D.defaultRewardName,
-        V = D.defaultRewardNameWithArticle,
-        L = (null == (t = P.userStatus) ? void 0 : t.enrolledAt) != null,
-        { ref: M, scrollHeight: Z } = (0, u.kE)(),
+        Q = s.useMemo(() => f.r.build(P.config), [P.config]),
+        D = Q.defaultRewardName,
+        V = Q.defaultRewardNameWithArticle,
+        M = (null == (t = P.userStatus) ? void 0 : t.enrolledAt) != null,
+        { ref: L, scrollHeight: Z } = (0, u.kE)(),
         W = 104 !== Z,
         { onAssetLoadComplete: U } = s.useContext(j.k),
         { expansionSpring: H } = (0, c.q_F)({
-            expansionSpring: +!!A,
+            expansionSpring: +!!N,
             config:
                 ((S = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
@@ -84,15 +84,15 @@ function S(e) {
                       }),
                 S),
         }),
-        z = (null == (n = P.userStatus) ? void 0 : n.completedAt) != null,
-        F = (null == (o = P.userStatus) ? void 0 : o.claimedAt) != null,
+        F = (null == (n = P.userStatus) ? void 0 : n.completedAt) != null,
+        z = (null == (o = P.userStatus) ? void 0 : o.claimedAt) != null,
         X = (0, m.xN)(P.config),
         K = (0, m.LM)(P.config),
         { completedRatio: Y, completedRatioDisplay: G } = (0, g.I)(P),
-        J = (0, g.Bd)(P, q),
+        J = (0, g.Bd)(P, I),
         $ = s.useMemo(
             () =>
-                F && X
+                z && X
                     ? y.intl.format(y.t["8Op4c3"], {
                           balanceHook: () =>
                               (0, r.jsxs)(T, {
@@ -106,10 +106,10 @@ function S(e) {
                                   ],
                               }),
                       })
-                    : F
+                    : z
                       ? (0, r.jsx)(T, {
                             questId: P.id,
-                            children: Q,
+                            children: D,
                         })
                       : X
                         ? y.intl.format(y.t.ro1szc, {
@@ -132,7 +132,7 @@ function S(e) {
                                       children: V,
                                   }),
                           }),
-            [Q, F, V, P.id, K, X],
+            [D, z, V, P.id, K, X],
         ),
         ee = s.useMemo(() => {
             if (null != J)
@@ -153,19 +153,19 @@ function S(e) {
                 },
                 className: O.rewardDescriptionContainer,
                 children: [
-                    (0, r.jsx)(_.E, {
+                    (0, r.jsx)(b.E, {
                         showPlaceholder: !k,
                         width: 80,
                         height: 80,
                         children: (0, r.jsxs)("div", {
                             className: O.assetWrapper,
                             children: [
-                                !F && z && (0, r.jsx)("div", { className: O.completionAnimation }),
-                                L && !F
+                                !z && F && (0, r.jsx)("div", { className: O.completionAnimation }),
+                                M && !z
                                     ? (0, r.jsxs)("div", {
                                           className: O.progressWrapper,
                                           children: [
-                                              z &&
+                                              F &&
                                                   (0, r.jsx)(c.Fmz, {
                                                       importData: E,
                                                       className: O.confetti,
@@ -177,18 +177,18 @@ function S(e) {
                                                   quest: P,
                                                   size: 76,
                                                   percentComplete: Y,
-                                                  percentCompleteText: A && !(0, m.zi)(P) ? G : void 0,
+                                                  percentCompleteText: N && !(0, m.zi)(P) ? G : void 0,
                                                   children: (0, r.jsx)("div", {
                                                       className: O.circularRewardTileWrapper,
                                                       children: (0, r.jsx)(h.Z, {
                                                           quest: P,
-                                                          questContent: N,
+                                                          questContent: A,
                                                           className: O.circularQuestRewardTileAsset,
                                                           location: v.dr.QUEST_HOME_DESKTOP,
-                                                          autoplay: A,
+                                                          autoplay: N,
                                                           onLoadComplete: U,
                                                           lazyLoad: !0,
-                                                          sourceQuestContent: q,
+                                                          sourceQuestContent: I,
                                                       }),
                                                   }),
                                               }),
@@ -196,19 +196,19 @@ function S(e) {
                                       })
                                     : (0, r.jsx)(h.Z, {
                                           quest: P,
-                                          autoplay: A,
-                                          questContent: N,
+                                          autoplay: N,
+                                          questContent: A,
                                           className: O.questRewardTileAsset,
                                           location: v.dr.QUEST_HOME_DESKTOP,
                                           onLoadComplete: U,
                                           lazyLoad: !0,
-                                          sourceQuestContent: q,
+                                          sourceQuestContent: I,
                                       }),
                             ],
                         }),
                     }),
                     (0, r.jsxs)("div", {
-                        ref: M,
+                        ref: L,
                         className: a()(O.textContainer, { [O.justifyCenter]: !W }),
                         children: [
                             (0, r.jsx)(c.X6q, {
@@ -235,13 +235,13 @@ function S(e) {
                         }),
                 ],
             }),
-            (0, r.jsx)(b.Z, {
+            (0, r.jsx)(_.Z, {
                 quest: P,
-                questContent: N,
+                questContent: A,
                 contentPosition: R,
                 rowIndex: B,
-                onReceiveErrorHints: I,
-                sourceQuestContent: q,
+                onReceiveErrorHints: q,
+                sourceQuestContent: I,
             }),
         ],
     });

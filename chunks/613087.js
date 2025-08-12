@@ -76,8 +76,8 @@ let d = s.createContext({
                 mountPoints: h,
             } = s.useContext(d),
             j = s.useRef(null),
-            _ = s.useRef(null),
-            b = s.useRef(void 0);
+            b = s.useRef(null),
+            _ = s.useRef(void 0);
         s.useEffect(() => {
             m();
         }, [m]),
@@ -93,7 +93,7 @@ let d = s.createContext({
         let v = s.useCallback(
             (e) => {
                 let { height: t } = e;
-                b.current !== t && (m(), (b.current = t));
+                _.current !== t && (m(), (_.current = t));
             },
             [m],
         );
@@ -116,7 +116,7 @@ let d = s.createContext({
                                                 output: [1, 0],
                                             }),
                                         },
-                                        children: l(_),
+                                        children: l(b),
                                     }),
                                     C,
                                 ),
@@ -130,13 +130,13 @@ let d = s.createContext({
                                                 output: [0, 1],
                                             }),
                                         },
-                                        children: l(_),
+                                        children: l(b),
                                     }),
                                     C,
                                 ),
                         ],
                     }))
-                  : "collapsed" === u && (y = (0, o.createPortal)(l(_), C)),
+                  : "collapsed" === u && (y = (0, o.createPortal)(l(b), C)),
             (0, r.jsxs)("div", {
                 style: { opacity: +((null == y && "collapsed" === u) || null == C) },
                 ref: t,
@@ -185,7 +185,7 @@ let d = s.createContext({
                             return n.delete(e), n;
                         });
             }, []),
-            _ = s.useCallback(() => {
+            b = s.useCallback(() => {
                 let e = [];
                 for (let t in i) {
                     if (null == i[t] || null == n.current || null == o.current) continue;
@@ -222,7 +222,7 @@ let d = s.createContext({
                 animatedComponents: i,
                 expandedContentRef: n,
                 collapsedContentRef: o,
-                recalculateAnimationPositions: _,
+                recalculateAnimationPositions: b,
                 animatedComponentProps: m,
                 expansionSpring: a,
                 mountPoints: f,

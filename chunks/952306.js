@@ -33,7 +33,7 @@ let o = {
     openNewUserAgeGateModal: (e) => {
         (0, r.ZDy)(
             async () => {
-                let { default: e } = await Promise.all([n.e("6583"), n.e("1337"), n.e("89865")]).then(
+                let { default: e } = await Promise.all([n.e("6583"), n.e("1337"), n.e("65238")]).then(
                     n.bind(n, 298237),
                 );
                 return (t) => (0, i.jsx)(e, l({}, t));

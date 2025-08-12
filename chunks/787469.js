@@ -14,7 +14,7 @@ var r = n(255367),
     T = n(776767),
     m = n(981631),
     I = n(388032),
-    g = n(12740);
+    g = n(983843);
 function f(e) {
     let { member: t } = e,
         n = (0, a.e7)([_.Z], () => _.Z.getGuild(t.guildId)),

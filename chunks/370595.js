@@ -4,8 +4,8 @@ n(73800);
 var l = n(481060),
     s = n(50493),
     i = n(388032),
-    a = n(792461),
-    o = n(12740);
+    a = n(21678),
+    o = n(983843);
 function u(e) {
     let { onNavigate: t, backPanel: n = s.k.INFO } = e;
     return (0, r.jsxs)("div", {

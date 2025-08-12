@@ -7,7 +7,7 @@ var i = n(120356),
     s = n(481060),
     l = n(410030),
     c = n(388032),
-    u = n(286737);
+    u = n(256270);
 let d = function (e) {
     let { className: t, color: n = "header-primary", textOpacity: i = 0.9 } = e,
         d = (0, l.Fg)(),

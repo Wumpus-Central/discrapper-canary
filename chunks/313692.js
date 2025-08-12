@@ -20,8 +20,8 @@ var r = n(255367),
     h = n(370595),
     O = n(50493),
     p = n(981631),
-    R = n(12740),
-    S = n(450355);
+    R = n(983843),
+    S = n(194445);
 function C(e) {
     var t, n;
     let { userId: s, guildId: C, location: v, className: D, onNavigate: b } = e,

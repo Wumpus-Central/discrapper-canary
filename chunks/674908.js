@@ -22,7 +22,7 @@ var a = n(255367),
     w = n(356659),
     C = n(710111),
     P = n(388032),
-    k = n(935032),
+    k = n(395532),
     O = n(413135).Buffer;
 function S(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -95,7 +95,7 @@ function E(e) {
                 }),
             );
             (0, u.ZDy)(async () => {
-                let { default: l } = await Promise.all([n.e("56035"), n.e("34057")]).then(n.bind(n, 758961)),
+                let { default: l } = await Promise.all([n.e("56035"), n.e("88756")]).then(n.bind(n, 758961)),
                     i = (null == r ? void 0 : r.guild_id) != null ? f.Z.getGuild(r.guild_id) : null,
                     o = null != i && (0, m.Gw)(i, v.Z, h.default).canCreateExpressions,
                     s = null == E || "" === E ? (0, w.yl)(g.default.extractTimestamp(t.id)) : E,

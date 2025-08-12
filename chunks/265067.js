@@ -9,13 +9,13 @@ var r = n(243814),
     u = n(594174),
     d = n(996106),
     p = n(452426),
-    h = n(736045),
-    f = n(186901),
+    f = n(736045),
+    h = n(186901),
     g = n(231338);
 let m = {
     [g.Et.GET_SOUNDBOARD_SOUNDS]: {
         scope: {
-            [f.Gp.ANY]: [r.x.RPC, f.lH],
+            [h.Gp.ANY]: [r.x.RPC, h.lH],
         },
         async handler() {
             await (0, l.w)();
@@ -26,7 +26,7 @@ let m = {
     },
     [g.Et.PLAY_SOUNDBOARD_SOUND]: {
         scope: {
-            [f.Gp.ALL]: [r.x.RPC, r.x.RPC_VOICE_WRITE],
+            [h.Gp.ALL]: [r.x.RPC, r.x.RPC_VOICE_WRITE],
         },
         validation: (e) =>
             (0, p.Z)(e).required().keys({
@@ -40,10 +40,10 @@ let m = {
             await (0, l.w)();
             let r = u.default.getCurrentUser(),
                 o = a.Z.getSound(t, n),
-                p = (0, h.Z)(),
-                f = null != o && null != r && (0, s.Nq)(r, o, p);
+                p = (0, f.Z)(),
+                h = null != o && null != r && (0, s.Nq)(r, o, p);
             if (null == p) throw new d.Z({ errorCode: g.lT.INVALID_CHANNEL }, "Invalid Channel.");
-            if (f)
+            if (h)
                 if ((0, c.Z)(p)) null != o && (0, s.GN)(o, p.id, [i.Z.RPC]);
                 else throw new d.Z({ errorCode: g.lT.INVALID_PERMISSIONS }, "Invalid Permissions.");
             else throw new d.Z({ errorCode: g.lT.INVALID_SOUND }, "Invalid Sound.");

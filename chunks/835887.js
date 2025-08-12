@@ -9,7 +9,7 @@ var r = n(255367),
     d = n(755641),
     u = n(195196),
     m = n(388032),
-    g = n(602268);
+    g = n(8498);
 function p(e) {
     let { className: t, guildId: n, selectedBadge: p } = e,
         h = i.useCallback(

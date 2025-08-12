@@ -19,11 +19,11 @@ var r = n(255367),
     x = n(509212),
     h = n(113434),
     j = n(497505),
-    _ = n(475595),
-    b = n(667105),
+    b = n(475595),
+    _ = n(667105),
     v = n(981631),
     C = n(388032),
-    y = n(912621),
+    y = n(640938),
     O = n(708901);
 function E(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -53,34 +53,34 @@ function E(e) {
 function S(e) {
     var t;
     let { questId: n, errorHints: o, transitionState: S, onClose: w, sourceQuestContent: P } = e,
-        N = (0, h.sf)(n);
-    null == N && w();
-    let [A, R] = (0, s.useState)(o),
+        A = (0, h.sf)(n);
+    null == A && w();
+    let [N, R] = (0, s.useState)(o),
         B = (0, h.KX)(),
         k = (0, g.O5)(),
-        I = null == (t = (0, f.WD)()) ? void 0 : t.getId(),
-        q = (0, i.e7)([d.Z], () => d.Z.useReducedMotion),
-        D = (0, b.g2)({
-            useReducedMotion: q,
+        q = null == (t = (0, f.WD)()) ? void 0 : t.getId(),
+        I = (0, i.e7)([d.Z], () => d.Z.useReducedMotion),
+        Q = (0, _.g2)({
+            useReducedMotion: I,
             className: y.colorTransition,
         }),
-        Q = A.filter((e) => ["xbox", "playstation"].includes(e.connected_account_type)),
-        V = (0, x.Bz)(N),
-        L = (0, i.e7)([m.Z], () => m.Z.getState().theme),
-        M = (0, l.wj)(L) ? v.BRd.DARK : v.BRd.LIGHT,
+        D = N.filter((e) => ["xbox", "playstation"].includes(e.connected_account_type)),
+        V = (0, x.Bz)(A),
+        M = (0, i.e7)([m.Z], () => m.Z.getState().theme),
+        L = (0, l.wj)(M) ? v.BRd.DARK : v.BRd.LIGHT,
         { startConsoleQuest: Z, startingConsoleQuest: W } = (0, h.GI)({
-            questId: N.id,
+            questId: A.id,
             beforeRequest: () => {
-                D.startAnimation(),
+                Q.startAnimation(),
                     k({
-                        questId: N.id,
+                        questId: A.id,
                         questContent: j.jn.CONNECTIONS_MODAL,
                         questContentCTA: g.jZ.DEFIBRILLATOR,
                         sourceQuestContent: P,
                     });
             },
             afterRequest: (e) => {
-                D.stopAnimation(), R(e);
+                Q.stopAnimation(), R(e);
             },
         });
     return (0, r.jsxs)(u.Y0X, {
@@ -138,7 +138,7 @@ function S(e) {
                                 className: a()(y.refreshWrapper, { [y.disabled]: W }),
                                 onClick: Z,
                                 children: [
-                                    D.render(),
+                                    Q.render(),
                                     (0, r.jsx)(u.Text, {
                                         variant: "text-sm/medium",
                                         color: "currentColor",
@@ -159,17 +159,17 @@ function S(e) {
                             (0, r.jsx)(T, {
                                 icon: (0, r.jsx)(u.iWm, { size: "sm" }),
                                 text: C.intl.string(C.t.XF4wuL),
-                                errors: V ? void 0 : Q.map((e) => e.message),
+                                errors: V ? void 0 : D.map((e) => e.message),
                                 gameTile: V
                                     ? (0, r.jsx)(u.ua7, {
-                                          "aria-label": N.config.messages.gameTitle,
+                                          "aria-label": A.config.messages.gameTitle,
                                           text: () =>
                                               (0, r.jsxs)("div", {
                                                   className: y.tooltip,
                                                   children: [
                                                       (0, r.jsx)(u.Text, {
                                                           variant: "text-sm/medium",
-                                                          children: N.config.messages.gameTitle,
+                                                          children: A.config.messages.gameTitle,
                                                       }),
                                                       (0, r.jsx)(u.Text, {
                                                           variant: "text-xs/normal",
@@ -186,8 +186,8 @@ function S(e) {
                                                   (n = n =
                                                       {
                                                           className: y.gameTile,
-                                                          alt: N.config.messages.gameTitle,
-                                                          src: (0, _.fh)(N, _.eC.GAME_TILE, M).url,
+                                                          alt: A.config.messages.gameTitle,
+                                                          src: (0, b.fh)(A, b.eC.GAME_TILE, L).url,
                                                       }),
                                                   Object.getOwnPropertyDescriptors
                                                       ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
@@ -230,11 +230,11 @@ function S(e) {
                         onClick: () => {
                             w(),
                                 (0, x.V$)(
-                                    { quest: N },
+                                    { quest: A },
                                     {
                                         content: j.jn.CONNECTIONS_MODAL,
                                         ctaContent: g.jZ.VIEW_CONSOLE_CONNECTIONS_LINK,
-                                        impressionId: I,
+                                        impressionId: q,
                                         sourceQuestContent: P,
                                     },
                                 );

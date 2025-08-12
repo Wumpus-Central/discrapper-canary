@@ -9,8 +9,8 @@ var r = n(255367),
     u = n(367907),
     d = n(626135),
     p = n(981631),
-    h = n(388032),
-    f = n(29504);
+    f = n(388032),
+    h = n(488822);
 let g = (0, o.debounce)(u.ZP.trackWithMetadata, 500),
     m = function (e) {
         let {
@@ -42,7 +42,7 @@ let g = (0, o.debounce)(u.ZP.trackWithMetadata, 500),
             ? (P = C())
             : null != C &&
               (P = (0, r.jsx)(s.zx, {
-                  className: f.button,
+                  className: h.button,
                   size: s.zx.Sizes.SMALL,
                   onClick: () => {
                       null != m &&
@@ -64,7 +64,7 @@ let g = (0, o.debounce)(u.ZP.trackWithMetadata, 500),
               (j = (0, r.jsx)(c.Text, {
                   variant: "text-md/medium",
                   color: "header-primary",
-                  className: a()(f.title, { [f.noImageTitle]: null == o }, { [f.center]: N }),
+                  className: a()(h.title, { [h.noImageTitle]: null == o }, { [h.center]: N }),
                   children: n,
               }));
         let x = null;
@@ -72,14 +72,14 @@ let g = (0, o.debounce)(u.ZP.trackWithMetadata, 500),
             ? (x = l())
             : null != l &&
               (x = (0, r.jsx)(c.Text, {
-                  className: a()({ [f.center]: N }),
+                  className: a()({ [h.center]: N }),
                   variant: "text-sm/normal",
                   color: "text-muted",
                   children: l,
               }));
         let A = null != _ ? "".concat(_, "px") : "16px";
         return (0, r.jsxs)("div", {
-            className: a()(f.container, T),
+            className: a()(h.container, T),
             children: [
                 !0 === y
                     ? null
@@ -87,31 +87,31 @@ let g = (0, o.debounce)(u.ZP.trackWithMetadata, 500),
                           onClick: () => {
                               u.ZP.trackWithMetadata(p.rMx.CHANNEL_NOTICE_CLOSED, { notice_type: m }), null == v || v();
                           },
-                          className: f.close,
-                          "aria-label": h.intl.string(h.t.WAI6xs),
+                          className: h.close,
+                          "aria-label": f.intl.string(f.t.WAI6xs),
                           children: (0, r.jsx)(c.Dio, {
                               size: "md",
                               color: "currentColor",
-                              className: f.closeIcon,
+                              className: h.closeIcon,
                           }),
                       }),
                 null != o &&
                     (0, r.jsx)("div", {
-                        className: f.imageContainer,
+                        className: h.imageContainer,
                         style: {
                             marginTop: "".concat(O, "px"),
                             marginLeft: A,
                             marginRight: A,
                         },
                         children: (0, r.jsx)("img", {
-                            className: f.image,
+                            className: h.image,
                             style: b,
                             src: o,
                             alt: "",
                         }),
                     }),
                 (0, r.jsxs)("div", {
-                    className: f.message,
+                    className: h.message,
                     children: [j, x, P],
                 }),
             ],

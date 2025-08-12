@@ -178,7 +178,7 @@ class d extends o.C {
     }
 }
 let p = new d();
-class h extends o.C {
+class f extends o.C {
     create(e) {
         let t = {
             heroArtLocalizedVideoLinksDarkTheme: {},
@@ -350,7 +350,7 @@ class h extends o.C {
         ]);
     }
 }
-let f = new h();
+let h = new f();
 class g extends o.C {
     create(e) {
         let t = {
@@ -496,7 +496,7 @@ class b extends o.C {
                     l.heroArtVideoSubtitles.push(m.internalBinaryRead(e, e.uint32(), n));
                     break;
                 case 14:
-                    l.storage = f.internalBinaryRead(e, e.uint32(), n, l.storage);
+                    l.storage = h.internalBinaryRead(e, e.uint32(), n, l.storage);
                     break;
                 default:
                     let a = n.readUnknownField;
@@ -526,7 +526,7 @@ class b extends o.C {
             "" !== e.body && t.tag(12, i.TD.LengthDelimited).string(e.body);
         for (let r = 0; r < e.heroArtVideoSubtitles.length; r++)
             m.internalBinaryWrite(e.heroArtVideoSubtitles[r], t.tag(13, i.TD.LengthDelimited).fork(), n).join();
-        e.storage && f.internalBinaryWrite(e.storage, t.tag(14, i.TD.LengthDelimited).fork(), n).join();
+        e.storage && h.internalBinaryWrite(e.storage, t.tag(14, i.TD.LengthDelimited).fork(), n).join();
         let r = n.writeUnknownFields;
         return !1 !== r && (!0 == r ? i.z.onWrite : r)(this.typeName, e, t), t;
     }
@@ -616,7 +616,7 @@ class b extends o.C {
                 no: 14,
                 name: "storage",
                 kind: "message",
-                T: () => f,
+                T: () => h,
             },
         ]);
     }

@@ -3,7 +3,7 @@ var r = n(255367);
 n(73800);
 var i = n(481060),
     l = n(388032),
-    a = n(773100);
+    a = n(193204);
 let s = function () {
     return (0, r.jsxs)("div", {
         className: a.badExample,

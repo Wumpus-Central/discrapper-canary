@@ -27,7 +27,7 @@ var i = n(255367),
     N = n(474936),
     p = n(981631),
     T = n(388032),
-    I = n(106772);
+    I = n(218376);
 function E(t) {
     let e,
         { planId: n, startingPremiumSubscriptionPlanId: s, paymentSourceType: l } = t,
@@ -97,8 +97,8 @@ function v(t) {
             paymentSourceType: P,
             startingFractionalPremiumEndsAt: U,
         } = t,
-        { enablePremiumBrandRefresh: b, isDisplayingWowMomentConfirmation: k } = (0, u.JL)(),
-        { theme: w } = (0, C.TCT)(),
+        { enablePremiumBrandRefresh: k, isDisplayingWowMomentConfirmation: w } = (0, u.JL)(),
+        { theme: b } = (0, C.TCT)(),
         A = (0, r.e7)([M.Z], () => (null != v ? M.Z.get(v.id) : null)),
         O = (0, Z.qH)(U);
     s.useEffect(() => {
@@ -196,7 +196,7 @@ function v(t) {
             : null != L
               ? x.ZP.Types.PREMIUM_UPDATED
               : x.ZP.Types.PREMIUM_ACTIVATED;
-    return k
+    return w
         ? (0, i.jsx)(f.Z, {
               type: y(),
               text: e,
@@ -207,14 +207,14 @@ function v(t) {
         : (0, i.jsxs)("div", {
               className: I.confirmation,
               children: [
-                  b
+                  k
                       ? (0, i.jsx)(g.Z, {
                             type: y(),
-                            theme: w,
+                            theme: b,
                         })
                       : (0, i.jsx)(x.ZP, {
                             className: I.banner,
-                            theme: w,
+                            theme: b,
                             premiumType: X,
                             type: y(),
                         }),

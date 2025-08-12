@@ -37,7 +37,7 @@ var r = n(255367),
     P = n(880251),
     w = n(515344),
     D = n(388032),
-    L = n(758364);
+    L = n(919732);
 function x(e) {
     let { app: t, embedUrl: n, linkType: o, activityCustomId: a, activityReferrerId: l, onView: m } = e,
         { name: g, bot: E } = (t = (0, R.O)(t)),

@@ -5,24 +5,24 @@ var r = n(255367),
     l = n(704215),
     s = n(243778),
     a = n(430824),
-    c = n(232062),
-    u = n(618460),
+    u = n(232062),
+    c = n(618460),
     d = n(105529),
     p = n(800869),
     f = n(366751),
     m = n(309945),
     g = n(385902),
     x = n(234368),
-    _ = n(981631),
-    v = n(93841),
+    v = n(981631),
+    _ = n(93841),
     b = n(388032),
-    j = n(106180);
+    j = n(695124);
 function h() {
     return (0, r.jsx)("div", {
         className: j.staffContainer,
         children: (0, r.jsx)(o.xv, {
             variant: "text-sm/medium",
-            children: b.intl.string(v.default.l9n4QU),
+            children: b.intl.string(_.default.l9n4QU),
         }),
     });
 }
@@ -30,16 +30,16 @@ function E(e) {
     let { guildId: t } = e,
         n = (0, i.e7)([a.Z], () => {
             var e;
-            return (null == (e = a.Z.getGuild(t)) ? void 0 : e.features.has(_.oNc.PREMIUM_TIER_3_OVERRIDE)) === !0;
+            return (null == (e = a.Z.getGuild(t)) ? void 0 : e.features.has(v.oNc.PREMIUM_TIER_3_OVERRIDE)) === !0;
         }),
-        E = (0, u.Z)(t),
+        E = (0, c.Z)(t),
         C = E.length > 0,
         { shouldShow: I, notificationConfig: O } = (0, g._)(t, "GuildPowerupNotificationContainer"),
         y = [];
     I && y.push(l.z.VANITY_URL_POWERUP_ROLLBACK_NOTIFICATION);
     let [P, w] = (0, s.ZT)(y, t),
         N = null != P && null != O,
-        Z = (0, c.W)(t, "GuildPowerupNotificationContainer"),
+        Z = (0, u.W)(t, "GuildPowerupNotificationContainer"),
         S = [];
     N ||
         C ||
@@ -98,7 +98,7 @@ function E(e) {
                   (0, r.jsx)(o.xv, {
                       variant: "eyebrow",
                       color: "text-secondary",
-                      children: b.intl.string(v.default["3FRira"]),
+                      children: b.intl.string(_.default["3FRira"]),
                   }),
                   n && (0, r.jsx)(h, {}),
                   R.map((e) => e),

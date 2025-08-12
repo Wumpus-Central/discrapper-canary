@@ -9,8 +9,8 @@ var o = n(120356),
     c = n(660662),
     d = n(698282),
     u = n(388032),
-    p = n(397419),
-    f = n(441047);
+    p = n(179786),
+    f = n(615905);
 function m(e) {
     let { selectedFontId: t, setSelectedFontId: n, className: o } = e;
     return (0, r.jsxs)("div", {

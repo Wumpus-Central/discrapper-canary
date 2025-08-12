@@ -12,7 +12,7 @@ var r = n(255367),
     _ = n(461762),
     p = n(680783),
     h = n(981631),
-    m = n(24848),
+    m = n(658517),
     g = n(413135).Buffer;
 function E(e) {
     let { chatWallpaperState: t } = e,

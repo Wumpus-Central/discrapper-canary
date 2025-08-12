@@ -9,7 +9,7 @@ var i = n(120356),
     o = n.n(i),
     a = n(729594),
     s = n(388032),
-    l = n(519222);
+    l = n(496271);
 let c = ["sessionshare.sp-int.playstation.com", "session-share.playstation.com"],
     u = (e, t, n) => "https://".concat(e, "/embed/").concat(t, "?locale=").concat(n),
     d = 400,

@@ -6,7 +6,7 @@ var i = n(755721),
     a = n(39604),
     o = n(176127),
     s = n(388032),
-    c = n(442693);
+    c = n(792418);
 function u(e) {
     let { onOpenClipsGallery: t, clipIconRef: n, lastClipsSession: u } = e;
     return (0, r.jsxs)(l.Cys, {

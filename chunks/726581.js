@@ -9,13 +9,13 @@ var r = n(255367),
     u = n(246946),
     d = n(594174),
     p = n(525395),
-    h = n(55563),
-    f = n(551428),
+    f = n(55563),
+    h = n(551428),
     g = n(73346),
     m = n(733789),
     b = n(4962),
     _ = n(388032),
-    O = n(868454);
+    O = n(283118);
 class E extends i.Component {
     renderReasons(e, t, n) {
         return 0 === e.length && 0 === t.length
@@ -89,11 +89,11 @@ class E extends i.Component {
         });
     }
 }
-let y = o.ZP.connectStores([h.Z, d.default, f.Z, c.Z, p.Z, u.Z], (e) => {
+let y = o.ZP.connectStores([f.Z, d.default, h.Z, c.Z, p.Z, u.Z], (e) => {
     let { sku: t } = e;
     return {
-        socialReasons: (0, g.Gg)(t.id, h.Z, d.default, c.Z, p.Z),
-        nonSocialReasons: (0, g.Ww)(t.id, h.Z, f.Z),
+        socialReasons: (0, g.Gg)(t.id, f.Z, d.default, c.Z, p.Z),
+        nonSocialReasons: (0, g.Ww)(t.id, f.Z, h.Z),
         hidePersonalInformation: u.Z.hidePersonalInformation,
     };
 })(E);

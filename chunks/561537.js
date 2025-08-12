@@ -3,7 +3,7 @@ var i = n(255367),
     r = n(73800),
     s = n(120356),
     a = n.n(s),
-    l = n(603116);
+    l = n(302442);
 function o(e) {
     let { className: t, header: n, headerClassName: s, children: o } = e,
         c = r.useMemo(() => {

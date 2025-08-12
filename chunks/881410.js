@@ -6,7 +6,7 @@ var r = n(255367),
     a = n(510231),
     c = n(86419),
     s = n(388032),
-    d = n(591334);
+    d = n(84660);
 function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -114,7 +114,7 @@ function f(e) {
                     o.zxk,
                     u(
                         {
-                            variant: "primary",
+                            variant: "secondary",
                             size: "sm",
                             text: s.intl.string(s.t.uqw8wM),
                             disabled: t,

@@ -21,25 +21,25 @@ var l = n(442837),
     O = n(228168),
     v = n(981631),
     _ = n(388032),
-    I = n(514656);
+    I = n(850419);
 function P(e) {
     let { user: t, currentUser: n, displayProfile: P, guildId: E, channelId: Z, subsection: T, onClose: N } = e,
         { voiceActivityStatusEnabled: S } = (0, o.U)({ location: "UserProfileModalV2Activity" }),
-        w = (0, f.b)({ location: "UserProfileModalV2Activity" }),
-        { live: A, recent: C, stream: L } = (0, p.Z)(t.id),
+        A = (0, f.b)({ location: "UserProfileModalV2Activity" }),
+        { live: w, recent: C, stream: L } = (0, p.Z)(t.id),
         { voiceChannel: D, voiceActivity: R } = (0, m.Z)({
             userId: t.id,
             guildId: E,
         }),
         k = (0, l.e7)([a.Z], () => a.Z.isFetchingUserOutbox(t.id)),
         M = t.id === n.id,
-        G = (0, l.e7)([d.Z, s.Z], () => {
+        B = (0, l.e7)([d.Z, s.Z], () => {
             let e = M ? d.Z.getStatus() : s.Z.getStatus(t.id);
             return e === i.Skl.OFFLINE || e === i.Skl.INVISIBLE;
         }),
-        B = A.length > 0 || null != L,
+        G = w.length > 0 || null != L,
         U = S && null == L && null == R && null != D,
-        F = !G && (B || U),
+        F = !B && (G || U),
         V = C.length > 0;
     if (!F && !V && k)
         return (0, r.jsx)("div", {
@@ -85,7 +85,7 @@ function P(e) {
                       children: (0, r.jsxs)("ul", {
                           className: I.cards,
                           children: [
-                              !w &&
+                              !A &&
                                   U &&
                                   (0, r.jsx)("li", {
                                       children: (0, r.jsx)(y.Z, {
@@ -106,7 +106,7 @@ function P(e) {
                                           profileGuildId: null == P ? void 0 : P.guildId,
                                       }),
                                   }),
-                              A.map((e, l) =>
+                              w.map((e, l) =>
                                   (0, r.jsx)(
                                       "li",
                                       {
@@ -121,7 +121,7 @@ function P(e) {
                                       "live-".concat(l),
                                   ),
                               ),
-                              w &&
+                              A &&
                                   U &&
                                   (0, r.jsx)("li", {
                                       children: (0, r.jsx)(y.Z, {

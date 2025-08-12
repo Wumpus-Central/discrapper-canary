@@ -10,7 +10,7 @@ var i = l(399606),
     u = l(812545),
     d = l(981631),
     g = l(388032),
-    h = l(739788);
+    h = l(934747);
 function m(n) {
     let { channelId: t, messageId: l, transitionState: m, onClose: x } = n,
         f = (0, i.e7)([c.Z], () => c.Z.getChannel(t)),

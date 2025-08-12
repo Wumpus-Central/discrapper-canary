@@ -6,7 +6,7 @@ var r = n(255367),
     s = n(981631),
     i = n(93841),
     c = n(388032),
-    u = n(850926);
+    u = n(824701);
 function d(e) {
     let { powerup: t } = e;
     return t.skuId === o.A$

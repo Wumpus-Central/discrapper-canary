@@ -6,7 +6,7 @@ var l = r(120356),
     i = r(481060),
     o = r(960919),
     s = r(388032),
-    c = r(595392);
+    c = r(553399);
 function u(e) {
     let { orbAmount: t, className: r } = e;
     return (0, n.jsxs)(i.Text, {

@@ -6,7 +6,7 @@ var s = n(780384),
     a = n(176332),
     r = n(210642),
     C = n(859218),
-    c = n(297100);
+    c = n(704106);
 let d = (t, e) => {
         let n = (0, s.wj)(e) ? "white" : "black";
         switch (t) {

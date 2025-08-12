@@ -68,7 +68,7 @@ let f = async function () {
     }),
         await (0, i.ZDy)(
             async () => {
-                let { EmojiStudioModal: i } = await Promise.all([n.e("20087"), n.e("43404")]).then(n.bind(n, 546200));
+                let { EmojiStudioModal: i } = await Promise.all([n.e("20087"), n.e("45523")]).then(n.bind(n, 546200));
                 return (n) =>
                     (0, r.jsx)(
                         i,

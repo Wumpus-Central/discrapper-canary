@@ -21,7 +21,7 @@ var i = n(620662),
     O = n(715547),
     v = n(994102),
     I = n(981631),
-    T = n(327833);
+    T = n(874375);
 function S(e) {
     let { user: t, activity: n, onAction: S, onClose: A, application: N } = e,
         C = (0, c.q)(N, "UserProfileActivityButtons"),

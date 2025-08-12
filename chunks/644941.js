@@ -37,7 +37,7 @@ var n = r(255367),
     Z = r(978313),
     R = r(206583),
     z = r(388032),
-    F = r(263930);
+    F = r(110568);
 let H = () =>
     (0, n.jsxs)("div", {
         className: F.gameBadge,

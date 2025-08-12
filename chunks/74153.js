@@ -9,8 +9,8 @@ var r = n(255367),
     u = n(984370),
     d = n(703656),
     p = n(55563),
-    h = n(981631),
-    f = n(931464);
+    f = n(981631),
+    h = n(385685);
 function g(e, t, n) {
     return (
         t in e
@@ -34,11 +34,11 @@ class m extends i.PureComponent {
             n = [],
             i = null;
         if (null != e) {
-            let r = h.Z5c.APPLICATION_STORE_LISTING_SKU(e.id, e.slug);
+            let r = f.Z5c.APPLICATION_STORE_LISTING_SKU(e.id, e.slug);
             (i = r),
                 null != t &&
                     n.push({
-                        id: h.Z5c.APPLICATION_STORE_LISTING_SKU(t.id, t.slug),
+                        id: f.Z5c.APPLICATION_STORE_LISTING_SKU(t.id, t.slug),
                         label: t.name,
                     }),
                 n.push({
@@ -60,16 +60,16 @@ class m extends i.PureComponent {
                 (0, d.uL)(e.id, {
                     state: {
                         analyticsSource: {
-                            object: h.qAy.NAVIGATION_LINK,
-                            section: h.jXE.NAVIGATION,
-                            page: null == t ? h.ZY5.STORE_DIRECTORY_BROWSE : h.ZY5.STORE_LISTING,
+                            object: f.qAy.NAVIGATION_LINK,
+                            section: f.jXE.NAVIGATION,
+                            page: null == t ? f.ZY5.STORE_DIRECTORY_BROWSE : f.ZY5.STORE_LISTING,
                         },
                     },
                 });
             }),
             g(this, "renderCustomBreadcrumb", (e, t) =>
                 (0, r.jsx)(u.Z.Title, {
-                    className: t ? null : f.breadcrumb,
+                    className: t ? null : h.breadcrumb,
                     muted: !t,
                     children: e.label,
                 }),

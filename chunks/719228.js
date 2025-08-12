@@ -19,7 +19,7 @@ var l = n(255367),
     h = n(267642),
     p = n(981631),
     g = n(388032),
-    f = n(544197);
+    f = n(71345);
 function j(e) {
     let { isTransfer: t = !1, setQuery: n, query: r } = e;
     return (0, l.jsxs)(o.xBx, {

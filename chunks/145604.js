@@ -9,8 +9,8 @@ var r = n(255367),
     u = n(731429),
     d = n(188471),
     p = n(176881),
-    h = n(318885),
-    f = n(358221),
+    f = n(318885),
+    h = n(358221),
     g = n(710845),
     m = n(581567),
     b = n(594190),
@@ -115,7 +115,7 @@ class J extends i.PureComponent {
                     },
                     (0, c.kO)(e.voiceChannelGuildId, e.voiceChannelId, e.videoEnabled),
                     k.Z.getVoiceStateStats(),
-                    f.Z.getSelectedParticipantStats(e.voiceChannelId),
+                    h.Z.getSelectedParticipantStats(e.voiceChannelId),
                 ),
             );
         }
@@ -168,9 +168,9 @@ class J extends i.PureComponent {
                 s = b.ZP.getOverrideForGame(w),
                 c = L.Z.getGuildIds(),
                 d = x.SE.getSetting(),
-                h = c.filter((e) => !d.includes(e)).slice(0, 200),
-                f = null;
-            f = null != s ? "custom_override" : null != e ? "verified_game" : "launcher";
+                f = c.filter((e) => !d.includes(e)).slice(0, 200),
+                h = null;
+            h = null != s ? "custom_override" : null != e ? "verified_game" : "launcher";
             let E = N.default.getTrackedGameByPid(w.pid),
                 y = (0, b.b6)(w),
                 v = {
@@ -196,7 +196,7 @@ class J extends i.PureComponent {
                         elevated: w.elevated,
                         is_launcher: null != (t = null == w ? void 0 : w.isLauncher) && t,
                         game_platform: q.M7m.DESKTOP,
-                        detection_method: f,
+                        detection_method: h,
                         distributor: a,
                         is_overlay_enabled: d,
                         is_overlay_game_enabled: c,
@@ -204,7 +204,7 @@ class J extends i.PureComponent {
                         fullscreen_type: null != n ? o.Jx[n] : o.Jx.UNKNOWN.toString(),
                         overlay_method: C.gl[j],
                         activity_status_enabled: x.G6.getSetting(),
-                        activity_status_shared_guilds: h,
+                        activity_status_shared_guilds: f,
                         current_user_status: G.Z.getStatus(),
                         game_detection_enabled: (0, b.ik)(w),
                         executable_path: l,
@@ -230,7 +230,7 @@ class J extends i.PureComponent {
             let e = "none",
                 t = [v ? "screen" : null, y ? "camera" : null].filter(K.lm),
                 n = null;
-            v ? ((e = "screen"), (n = (0, h.t)())) : y && (e = "camera"),
+            v ? ((e = "screen"), (n = (0, f.t)())) : y && (e = "camera"),
                 W.default.track(
                     q.rMx.VIDEO_INPUT_TOGGLED,
                     Q(
@@ -296,9 +296,9 @@ class J extends i.PureComponent {
 function $() {
     let [e, t] = (0, l.Wu)([M.Z], () => [M.Z.getVoiceChannelId(), M.Z.getChannelId()], []),
         n = (0, l.e7)([A.Z], () => A.Z.getChannel(t), [t]),
-        a = (0, l.e7)([f.Z], () => (null == n ? void 0 : n.id) != null && f.Z.getChatOpen(n.id), [n]),
+        a = (0, l.e7)([h.Z], () => (null == n ? void 0 : n.id) != null && h.Z.getChatOpen(n.id), [n]),
         o = null == n ? void 0 : n.nsfw,
-        h = (0, l.e7)([A.Z], () => A.Z.getChannel(e), [e]),
+        f = (0, l.e7)([A.Z], () => A.Z.getChannel(e), [e]),
         g = (0, l.e7)([U.Z], () => U.Z.getGuildId(), []),
         m = (0, l.e7)([L.Z], () => L.Z.getGuild(g), [g]),
         E = (0, l.e7)([H.default], () => H.default.getCurrentUser(), []),
@@ -328,10 +328,10 @@ function $() {
             connected: N,
             videoEnabled: T,
             isScreenSharing: P,
-            voiceChannelId: null == h ? void 0 : h.id,
-            voiceChannelGuildId: null == h ? void 0 : h.getGuildId(),
-            voiceChannelType: null == h ? void 0 : h.type,
-            voiceChannelBitrate: null == h ? void 0 : h.bitrate,
+            voiceChannelId: null == f ? void 0 : f.id,
+            voiceChannelGuildId: null == f ? void 0 : f.getGuildId(),
+            voiceChannelType: null == f ? void 0 : f.type,
+            voiceChannelBitrate: null == f ? void 0 : f.bitrate,
             runningGame: x,
             runningGamePid: null != x ? x.pid : null,
             gamePlatform: (0, s.Z)(j),

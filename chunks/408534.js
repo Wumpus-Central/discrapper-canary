@@ -20,7 +20,7 @@ var i = n(442837),
     y = n(354459),
     O = n(981631),
     v = n(388032),
-    I = n(292538);
+    I = n(428586);
 function T(e) {
     let { onClose: t, onSelect: n, channel: T, remoteMode: S, onInteraction: A } = e,
         N = (0, a.bp)(),

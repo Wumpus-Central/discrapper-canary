@@ -19,7 +19,7 @@ var r = n(255367),
     h = n(314172),
     O = n(981631),
     v = n(388032),
-    _ = n(217919);
+    _ = n(669438);
 function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -181,7 +181,7 @@ function T(e) {
             },
             [_, i, t.id, a],
         ),
-        w = l.useCallback(
+        A = l.useCallback(
             (e) => {
                 a({ action: "ADD_ROLE" });
                 let n = null != _ ? _ : [];
@@ -190,8 +190,8 @@ function T(e) {
             [_, i, t.id, a],
         );
     if (null == y) return null;
-    let A = N && null != h;
-    return 0 !== T.length || A
+    let w = N && null != h;
+    return 0 !== T.length || w
         ? (0, r.jsx)(
               x.Z,
               P(I({ heading: v.intl.string(v.t.LPJmLy) }, o), {
@@ -203,7 +203,7 @@ function T(e) {
                       roles: T,
                       highestRole: g.e9(y, n.id),
                       canManageRoles: N,
-                      onAddRole: w,
+                      onAddRole: A,
                       onRemoveRole: S,
                   }),
               }),

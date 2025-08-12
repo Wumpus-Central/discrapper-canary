@@ -9,7 +9,7 @@ var r = n(255367),
     u = n(481060),
     d = n(451478),
     p = n(302221),
-    m = n(464121);
+    m = n(434143);
 let g = [0, 0.5, 1],
     f = {
         "layers[1].shapes[1].g.k.k": [0, 0.522, 0.278, 0.776, 0.5, 0.522, 0.278, 0.776, 1, 0.522, 0.278, 0.776],
@@ -37,8 +37,8 @@ function h(e) {
     let { animationClassName: n, className: o, quest: i, useReducedMotion: l } = e,
         f = (0, c.e7)([d.Z], () => d.Z.isFocused()),
         h = s.useRef(null),
-        [j, _] = s.useState(!1),
-        b = s.useMemo(() => {
+        [j, b] = s.useState(!1),
+        _ = s.useMemo(() => {
             if (null == i) return null;
             let e = (0, p.oo)(i.config.colors.primary),
                 t = {
@@ -58,9 +58,9 @@ function h(e) {
             : null == (t = h.current) || null == (e = t.animation) || e.goToAndStop(0, !0);
     }, [C, f]);
     let y = s.useCallback(() => {
-        _(!0);
+        b(!0);
     }, []);
-    return null == b || v
+    return null == _ || v
         ? (0, r.jsx)("div", {
               className: m.backgroundFallback,
               style: {
@@ -76,7 +76,7 @@ function h(e) {
                   {
                       ref: h,
                       onComplete: y,
-                      importData: () => b,
+                      importData: () => _,
                       shouldAnimate: !j && C,
                       className: a()(m.lottieAnimation, m.lottieAnimationBackground, n),
                       loop: 0,

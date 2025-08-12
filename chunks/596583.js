@@ -22,7 +22,7 @@ var i = t(120356),
     g = t(263885),
     F = t(981631),
     S = t(388032),
-    w = t(974149);
+    w = t(18557);
 let U = (e, r) => {
         _.Z.hasLayers() && (0, c.xf)(), p.Z.openPrivateChannel({ recipientIds: e }), r();
     },

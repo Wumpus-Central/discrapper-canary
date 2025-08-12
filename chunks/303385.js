@@ -7,7 +7,7 @@ var s = n(717976),
     i = n(644646),
     l = n(46140),
     c = n(388032),
-    u = n(420444);
+    u = n(507399);
 let d = (e) => {
     let { quest: t, expansionSpring: n, isFullyExpanded: d, partnerBranding: p, useReducedMotion: m } = e;
     return (0, r.jsxs)(r.Fragment, {

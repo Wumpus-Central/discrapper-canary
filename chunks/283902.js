@@ -1,7 +1,3 @@
-e.exports = {
-    keywordTextAreaContainer: "keywordTextAreaContainer__4546e",
-    keywordTextArea: "keywordTextArea__4546e",
-    collapseable: "collapseable__4546e",
-    header: "header__4546e",
-    arrow: "arrow__4546e",
-};
+n.d(t, { Z: () => r });
+let r =
+    "https://cdn.discordapp.com/assets/content/477c3ad9764f37e0991cbcd8a222b8270988e9dd81e5bb3a88f47944fd5e1c4d.gif";

@@ -1,12 +1,11 @@
-n.d(t, { Z: () => a });
+n.d(t, { Z: () => o });
 var r = n(255367);
 n(73800);
-var l = n(624238),
-    i = n(750312),
-    o = n(232083);
-function a(e) {
-    var { user: t, widget: n, disableInteraction: a } = e,
-        c = (function (e, t) {
+var l = n(750312),
+    i = n(232083);
+function o(e) {
+    var { user: t, widget: n, disableInteraction: o } = e,
+        a = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -27,14 +26,12 @@ function a(e) {
             }
             return l;
         })(e, ["user", "widget", "disableInteraction"]);
-    let s = n.games.length >= l.k.current_games;
-    return (0, r.jsx)(i.Z, {
+    return (0, r.jsx)(l.Z, {
         userId: t.id,
         widget: n,
-        reachedMaxGamesLimit: s,
-        disableInteraction: a,
+        disableInteraction: o,
         children: (0, r.jsx)(
-            o.Z,
+            i.Z,
             (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
@@ -63,9 +60,9 @@ function a(e) {
                 {
                     user: t,
                     games: n.games,
-                    disableInteraction: a,
+                    disableInteraction: o,
                 },
-                c,
+                a,
             ),
         ),
     });

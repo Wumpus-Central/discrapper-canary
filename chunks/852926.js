@@ -1,7 +1,7 @@
 n.d(t, {
     GC: () => _,
     _X: () => b,
-    br: () => f,
+    br: () => h,
     em: () => m,
     jU: () => g,
 });
@@ -15,8 +15,8 @@ var r = n(13245),
     u = n(914946),
     d = n(186901),
     p = n(981631);
-let h = ["207646673902501888"];
-function f(e) {
+let f = ["207646673902501888"];
+function h(e) {
     return (
         null != e &&
         l.default.isOverlayOOPEnabledForPid(e) &&
@@ -30,7 +30,7 @@ function g(e) {
               lock: p.VqG,
               context: p.IlC.APP,
           }
-        : f(e)
+        : h(e)
           ? (r.Z.setInputLocked(!1, e),
             {
                 lock() {
@@ -51,7 +51,7 @@ let m = async (e, t, n) => {
             return (e.authorization.scopes = [d.cE, d.CN]), Promise.resolve();
         if (null == n || "" === n)
             return Promise.reject(new c.Z({ closeCode: p.$VG.INVALID_CLIENTID }, "No Client ID Specified"));
-        let r = o.ZP.releaseChannel !== p.R5N.CANARY && !h.includes(n) && e.transport !== d.He.POST_MESSAGE;
+        let r = o.ZP.releaseChannel !== p.R5N.CANARY && !f.includes(n) && e.transport !== d.He.POST_MESSAGE;
         return await (0, u.vv)(n, r), (0, u.YS)(e, n, t);
     },
     b = () =>

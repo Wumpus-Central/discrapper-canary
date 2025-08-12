@@ -4,7 +4,7 @@ var r = n(255367),
     a = n(82659),
     i = n(481060),
     o = n(388032),
-    c = n(98847);
+    c = n(714533);
 function s(e) {
     let { errorText: t, title: n, description: s, transitionState: u, onCancel: d, onConfirm: p, children: g } = e,
         [m, b] = l.useState(!1),

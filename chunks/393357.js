@@ -6,8 +6,8 @@ var o = n(990547),
     l = n(906732),
     s = n(213609),
     a = n(353926),
-    c = n(443002),
-    u = n(703656),
+    u = n(443002),
+    c = n(703656),
     d = n(430824),
     p = n(742139),
     f = n(639777),
@@ -16,11 +16,11 @@ var o = n(990547),
 function x(e) {
     let { guildId: t, powerupListingId: n } = e,
         x = (0, i.e7)([d.Z], () => d.Z.getGuild(t)),
-        _ = (0, i.e7)([a.Z], () => a.Z.hasLoadedExperiments),
-        v = (0, f.Z)(t),
-        b = (0, u.At)(),
+        v = (0, i.e7)([a.Z], () => a.Z.hasLoadedExperiments),
+        _ = (0, f.Z)(t),
+        b = (0, c.At)(),
         j = (0, p.V)("GuildPowerupsPage"),
-        h = !_ || null == v || null == x,
+        h = !v || null == _ || null == x,
         E = (0, l.ZP)(null != b ? b : []);
     return ((0, s.Z)(
         {
@@ -32,12 +32,12 @@ function x(e) {
     ),
     h)
         ? null
-        : v || j
+        : _ || j
           ? (0, r.jsx)(m.Z, {
                 guildId: t,
                 powerupListingId: n,
             })
-          : (0, r.jsx)(c.Z, {
+          : (0, r.jsx)(u.Z, {
                 analyticsLocation: {
                     section: g.jXE.CHANNEL_LIST,
                     object: g.qAy.GUILD_POWERUPS_CHANNEL_LIST_ITEM,

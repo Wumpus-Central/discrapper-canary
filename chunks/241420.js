@@ -9,7 +9,7 @@ var l = n(481060),
     u = n(919539),
     c = n(526761),
     d = n(388032),
-    g = n(671364);
+    g = n(539698);
 function _(t) {
     let { guildId: e } = t;
     return (0, i.jsxs)(r.Z, {

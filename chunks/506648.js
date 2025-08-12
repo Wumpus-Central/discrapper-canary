@@ -9,8 +9,8 @@ var r = n(255367),
     u = n(39377),
     d = n(981631),
     p = n(388032),
-    h = n(46703);
-let f = [
+    f = n(186196);
+let h = [
         {
             feature: d.Qa3.SINGLE_PLAYER,
             getText: () => p.intl.string(p.t["V+/FjI"]),
@@ -93,7 +93,7 @@ let f = [
     g = (e) => {
         let { IconComponent: t, text: n, tooltip: i } = e;
         return (0, r.jsxs)("div", {
-            className: h.row,
+            className: f.row,
             children: [
                 (0, r.jsx)(l.ua7, {
                     text: i,
@@ -124,17 +124,17 @@ let f = [
                                         });
                                 }
                                 return e;
-                            })({ className: h.featureIcon }, e),
+                            })({ className: f.featureIcon }, e),
                         ),
                 }),
                 (0, r.jsx)("span", {
-                    className: h.featureText,
+                    className: f.featureText,
                     children: n,
                 }),
                 (0, r.jsx)(l.dz2, {
                     size: "md",
                     color: "currentColor",
-                    className: h.checkmarkIcon,
+                    className: f.checkmarkIcon,
                 }),
             ],
         });
@@ -142,7 +142,7 @@ let f = [
 class m extends i.PureComponent {
     render() {
         let { sku: e } = this.props,
-            t = f
+            t = h
                 .filter((t) => {
                     let { feature: n } = t;
                     return e.features.has(n);
@@ -162,7 +162,7 @@ class m extends i.PureComponent {
         return 0 === t.length
             ? null
             : (0, r.jsxs)("div", {
-                  className: h.features,
+                  className: f.features,
                   children: [(0, r.jsx)(a.Z, { children: p.intl.string(p.t.XXENra) }), t],
               });
     }

@@ -20,12 +20,12 @@ var n = r(255367),
     C = r(580914),
     E = r(92589),
     S = r(963278),
-    y = r(921120),
+    y = r(531864),
     x = r(384067),
     j = r(215023),
     T = r(981631),
     P = r(388032),
-    L = r(806734);
+    L = r(253032);
 let k = (e) => {
         var t;
         let { handleTransition: r, numVisibleItems: a, isFetchingCategories: s, tab: c, isFullScreen: u } = e,

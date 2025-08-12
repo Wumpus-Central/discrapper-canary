@@ -9,8 +9,8 @@ var r = n(255367),
     u = n(930446),
     d = n(31569),
     p = n(258971),
-    h = n(164991),
-    f = n(859921),
+    f = n(164991),
+    h = n(859921),
     g = n(220068),
     m = n(626135),
     b = n(836768),
@@ -20,7 +20,7 @@ var r = n(255367),
     y = n(981631),
     v = n(46140),
     I = n(388032),
-    C = n(444657);
+    C = n(151243);
 function S(e) {
     let { tab: t } = e,
         { enabled: n } = c.c.useExperiment({ location: "GlobalDiscoverySidebar" }, { autoTrackExposure: !0 }),
@@ -68,7 +68,7 @@ function S(e) {
                     return;
                 case E.GlobalDiscoveryTab.SERVERS:
                     if (!N) return (0, O.transitionToGlobalDiscovery)({ tab: t });
-                    h.Z.resetState(), f.Z.resetState();
+                    f.Z.resetState(), h.Z.resetState();
                     return;
                 default:
                     return (0, O.transitionToGlobalDiscovery)({ tab: t });

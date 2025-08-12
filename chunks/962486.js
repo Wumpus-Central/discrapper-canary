@@ -9,8 +9,8 @@ var r = n(255367),
     u = n(726115),
     d = n(294330),
     p = n(981631),
-    h = n(849781);
-let f = {
+    f = n(525012);
+let h = {
     page: p.ZY5.GUILD_DISCOVERY,
     object: p.qAy.CARD,
     section: p.jXE.DISCOVER_POPULAR,
@@ -32,7 +32,7 @@ function g(e) {
                         {
                             guildId: null != (i = n[a]) ? i : null,
                             index: a,
-                            onClick: (e) => m(e, a, y, f),
+                            onClick: (e) => m(e, a, y, h),
                             onView: (e) => b(e, y),
                         },
                         null != (l = n[a]) ? l : a,
@@ -52,13 +52,13 @@ function g(e) {
             (0, r.jsxs)(s.Z, {
                 children: [
                     (0, r.jsx)(l.X6q, {
-                        className: h.sectionTitle,
+                        className: f.sectionTitle,
                         variant: "heading-lg/semibold",
                         color: "header-primary",
                         children: E,
                     }),
                     (0, r.jsx)("div", {
-                        className: h.content,
+                        className: f.content,
                         children: v,
                     }),
                 ],

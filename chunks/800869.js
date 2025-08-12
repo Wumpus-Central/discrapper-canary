@@ -5,17 +5,17 @@ var r = n(255367),
     l = n(921944),
     s = n(93841),
     a = n(388032),
-    c = n(305063),
-    u = n(719119);
+    u = n(820222),
+    c = n(719119);
 function d(e) {
     let { markAsDismissed: t } = e;
     return (0, r.jsxs)("div", {
-        className: c.container,
+        className: u.container,
         children: [
             (0, r.jsx)("img", {
                 alt: "",
-                className: c.image,
-                src: u,
+                className: u.image,
+                src: c,
             }),
             (0, r.jsx)(o.xv, {
                 color: "always-white",
@@ -28,8 +28,8 @@ function d(e) {
                 children: a.intl.string(s.default.pycxTk),
             }),
             (0, r.jsx)(i.olH, {
-                className: c.close,
-                innerClassName: c.innerClose,
+                className: u.close,
+                innerClassName: u.innerClose,
                 onClick: () => {
                     t(l.L.USER_DISMISS);
                 },

@@ -9,8 +9,8 @@ var r = n(255367),
     u = n(481060),
     d = n(570140),
     p = n(509212),
-    h = n(569984),
-    f = n(93127),
+    f = n(569984),
+    h = n(93127),
     g = n(752048),
     m = n(594174),
     b = n(801077),
@@ -25,7 +25,7 @@ var r = n(255367),
     N = n(981631),
     T = n(46140),
     P = n(388032),
-    j = n(370168);
+    j = n(659769);
 let x = 15 * O.Z.Millis.MINUTE,
     A = (0, S.Z)(function (e) {
         let { party: t, onUserContextMenu: n, onChannelContextMenu: l, quest: a } = e,
@@ -39,13 +39,13 @@ let x = 15 * O.Z.Millis.MINUTE,
                 onChannelContextMenu: l,
                 quest: a,
             }),
-            { partiedMembers: p, applicationStreams: h, currentActivities: f, voiceChannels: g } = t,
+            { partiedMembers: p, applicationStreams: f, currentActivities: h, voiceChannels: g } = t,
             m = p.length,
-            b = h.length,
-            O = f.length,
+            b = f.length,
+            O = h.length,
             E = g.length > 0,
             S = i.useCallback(() => {
-                let e = f
+                let e = h
                     .filter((e) => {
                         var t, n;
                         return (
@@ -61,7 +61,7 @@ let x = 15 * O.Z.Millis.MINUTE,
                     in_voice_channel: E,
                     games_detected: e,
                 });
-            }, [m, b, O, E, f]),
+            }, [m, b, O, E, h]),
             T = s()(S, x);
         return null != c || null != d
             ? (0, r.jsx)(u.yRy, {
@@ -134,7 +134,7 @@ let x = 15 * O.Z.Millis.MINUTE,
               })
             : null;
     }),
-    Z = a().throttle(() => f._(), 300000);
+    Z = a().throttle(() => h._(), 300000);
 function w() {
     let {
             nowPlayingCards: e,
@@ -149,7 +149,7 @@ function w() {
             fetching: g.Z.isFetching(),
             currentUser: m.default.getCurrentUser(),
         })),
-        o = (0, c.e7)([h.Z], () => h.Z.quests);
+        o = (0, c.e7)([f.Z], () => f.Z.quests);
     i.useEffect(() => (d.Z.wait(() => E.L()), () => d.Z.wait(() => E.v())), [null == a ? void 0 : a.id]),
         i.useEffect(() => {
             n && !l && Z();
@@ -167,9 +167,9 @@ function w() {
                 });
             return t;
         }, [e, o]),
-        f = null;
+        h = null;
     return t
-        ? (f =
+        ? (h =
               e.length > 0
                   ? e.map((e) => {
                         let { party: t } = e;

@@ -5,21 +5,21 @@ var r = n(255367),
     l = n(481060),
     s = n(607070),
     a = n(973772),
-    c = n(838968),
-    u = n(857666),
+    u = n(838968),
+    c = n(857666),
     d = n(279475),
     p = n(535396),
     f = n(93841),
     m = n(388032),
-    g = n(475338);
+    g = n(574524);
 function x(e) {
     var t, n, x;
-    let _,
-        { guildId: v, group: b, powerups: j } = e,
+    let v,
+        { guildId: _, group: b, powerups: j } = e,
         [h, E] = o.useState(!1),
-        C = (0, a.Gv)(v, j),
+        C = (0, a.Gv)(_, j),
         I = (0, i.e7)([s.Z], () => s.Z.useReducedMotion),
-        O = (0, u.Z)(b, v);
+        O = (0, c.Z)(b, _);
     if (void 0 === O || j.length <= 0) return null;
     let y = C.some((e) => e.type !== p.A3.INACTIVE),
         P = (0, d.d)(y),
@@ -32,12 +32,12 @@ function x(e) {
             void 0,
         );
     void 0 !== w
-        ? (_ = {
+        ? (v = {
               type: "expiring",
               expiringAt: w,
           })
         : y &&
-          (_ = {
+          (v = {
               type: "active",
               statusText: m.intl.string(f.default.FFLkm5),
           });
@@ -65,8 +65,9 @@ function x(e) {
         T = y ? N : Z,
         A = !y && S > T ? "+" : void 0,
         R = !I && h ? O.image.animatedUrl : O.image.staticUrl,
-        k = null != O.viewCta && "" !== O.viewCta ? O.viewCta : m.intl.string(f.default["27GkOj"]);
-    return (0, r.jsxs)(c.aB, {
+        k = null != O.viewCta && "" !== O.viewCta ? O.viewCta : m.intl.string(f.default["27GkOj"]),
+        L = null != O.viewCtaTooltip && "" !== O.viewCtaTooltip ? O.viewCtaTooltip : void 0;
+    return (0, r.jsxs)(u.aB, {
         label: O.title,
         isActive: y,
         badge: O.badge,
@@ -79,11 +80,11 @@ function x(e) {
                 src: R,
                 className: g.image,
             }),
-            (0, r.jsx)(c.Q9, {
+            (0, r.jsx)(u.Q9, {
                 title: O.title,
                 textColor: P,
-                footer: (0, r.jsx)(c.uf, {
-                    status: _,
+                footer: (0, r.jsx)(u.uf, {
+                    status: v,
                     cost: T,
                     costDecorator: A,
                 }),
@@ -94,11 +95,20 @@ function x(e) {
                     children: O.description,
                 }),
             }),
-            (0, r.jsx)(c.N4, {
-                children: (0, r.jsx)(l.zxk, {
-                    text: k,
-                    fullWidth: !0,
-                }),
+            (0, r.jsx)(u.N4, {
+                children:
+                    null != L
+                        ? (0, r.jsx)(l.DY3, {
+                              text: L,
+                              children: (0, r.jsx)(l.zxk, {
+                                  text: k,
+                                  fullWidth: !0,
+                              }),
+                          })
+                        : (0, r.jsx)(l.zxk, {
+                              text: k,
+                              fullWidth: !0,
+                          }),
             }),
         ],
     });

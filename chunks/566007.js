@@ -26,15 +26,13 @@ function o(e) {
             }
             return l;
         })(e, ["user", "widget", "isGameFetching", "disableInteraction"]);
-    let s = n.games.length > 0,
-        d = n.games[0];
+    let s = n.games[0];
     return (0, r.jsx)(l.Z, {
         userId: t.id,
         widget: n,
-        reachedMaxGamesLimit: s,
         disableInteraction: a,
         children:
-            null != d &&
+            null != s &&
             (0, r.jsx)(
                 i.Z,
                 (function (e) {
@@ -64,8 +62,8 @@ function o(e) {
                 })(
                     {
                         user: t,
-                        game: d,
-                        loading: o(d.applicationId),
+                        game: s,
+                        loading: o(s.applicationId),
                         disableInteraction: a,
                     },
                     c,

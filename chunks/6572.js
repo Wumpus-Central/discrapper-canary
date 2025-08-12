@@ -7,7 +7,7 @@ var i = n(120356),
     s = n(963838),
     l = n(37091),
     c = n(388032),
-    u = n(690296);
+    u = n(872269);
 function d(e) {
     let t,
         { channelId: n, userId: i } = e,

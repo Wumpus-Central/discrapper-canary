@@ -27,8 +27,8 @@ var i = n(255367),
     N = n(726985),
     y = n(981631),
     A = n(388032),
-    P = n(187382),
-    R = n(20493);
+    P = n(140059),
+    R = n(881488);
 function D(e) {
     let t = () => {
         I.SE.updateSetting(e ? C.Z.getGuildIds() : []);

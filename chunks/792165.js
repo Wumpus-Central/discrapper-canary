@@ -15,7 +15,7 @@ var i = n(442837),
     h = n(474936),
     m = n(526761),
     g = n(388032),
-    E = n(435803);
+    E = n(6981);
 function b(e) {
     return e === h.p9.TIER_2
         ? g.intl.string(g.t.jqO5Qk)

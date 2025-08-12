@@ -26,7 +26,7 @@ var i = n(255367),
     I = n(474936),
     N = n(231338),
     y = n(388032),
-    A = n(363405);
+    A = n(505307);
 function P(e) {
     let { premiumSubscription: t, fractionalPremiumInfo: n, isInventory: r, onNext: s, onClose: a } = e,
         l = y.intl.format(y.t.otHdfX, { endDate: t.currentPeriodEnd });

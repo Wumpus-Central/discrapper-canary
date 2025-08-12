@@ -9,7 +9,7 @@ n(73800);
 var i = n(481060),
     o = n(834129),
     a = n(388032),
-    s = n(794446);
+    s = n(791014);
 function l(e) {
     let { message: t, compact: i, onClick: l } = e;
     return (0, r.jsx)(o.Z, {

@@ -17,7 +17,7 @@ var n = r(255367),
     _ = r(576386),
     g = r(981631),
     O = r(388032),
-    y = r(637635);
+    y = r(213866);
 function C(e) {
     let { transitionState: t, analyticsLocations: r, onClose: o, guildId: u, initialSelectedNameplate: p } = e,
         b = (0, i.e7)([f.default], () => f.default.getCurrentUser()),

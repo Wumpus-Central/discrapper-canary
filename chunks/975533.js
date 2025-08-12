@@ -9,8 +9,8 @@ var r = n(570140),
     u = n(317770),
     d = n(924557),
     p = n(39604),
-    h = n(569545),
-    f = n(722835),
+    f = n(569545),
+    h = n(722835),
     g = n(703656),
     m = n(352527),
     b = n(641015),
@@ -185,8 +185,8 @@ let L = {
         [j.kg4.TOGGLE_GO_LIVE_STREAMING]: {
             onTrigger() {
                 let e = E.Z.getCurrentUserActiveStream();
-                if (null != e) return (0, o.g)((0, h.V9)(e));
-                (0, f.Z)();
+                if (null != e) return (0, o.g)((0, f.V9)(e));
+                (0, h.Z)();
             },
             keyEvents: {
                 keyup: !0,

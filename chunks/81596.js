@@ -12,7 +12,7 @@ var e = i(255367),
     _ = i(540440),
     T = i(365583),
     h = i(388032),
-    p = i(807069);
+    p = i(646010);
 function C(t) {
     let { user: n, entry: i, transitionState: C, onAction: N, onClose: R, onOpenGameSettings: f } = t,
         [x, O] = (0, s.Wu)([E.Z], () => [E.Z.isDeletingEntryHistory, E.Z.deleteOutboxEntryError]);

@@ -16,7 +16,7 @@ var i = n(255367),
     p = n(823379),
     g = n(778825),
     h = n(388032),
-    f = n(835813);
+    f = n(653057);
 function b(e) {
     let { guildId: t, className: n, globalOption: r, hideDivider: s = !1, onChange: l, renderOptionSuffix: o } = e;
     return (0, i.jsx)(d.Z, {

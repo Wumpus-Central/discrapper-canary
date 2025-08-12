@@ -8,7 +8,7 @@ var i = n(481060),
     a = n(303737),
     c = n(293810),
     s = n(388032),
-    d = n(310045);
+    d = n(640303);
 function f(e) {
     let { channelId: t } = e,
         n = (0, a.m7)(t);

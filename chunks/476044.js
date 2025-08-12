@@ -15,9 +15,9 @@ function i(e) {
                     e = a;
                     return;
                 }
-                let c = a - e,
-                    u = Math.abs(c);
-                ((c < 0 && u > i) || (c > 0 && u > l)) && n();
+                let u = a - e,
+                    c = Math.abs(u);
+                ((u < 0 && c > i) || (u > 0 && c > l)) && n();
             };
         return (
             document.addEventListener("scroll", r, {

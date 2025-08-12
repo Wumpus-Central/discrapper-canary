@@ -9,8 +9,8 @@ var r = n(255367),
     u = n(481060),
     d = n(607070),
     p = n(100527),
-    h = n(213609),
-    f = n(335131),
+    f = n(213609),
+    h = n(335131),
     g = n(252618),
     m = n(70097),
     b = n(114851),
@@ -41,7 +41,7 @@ var r = n(255367),
     H = n(981631),
     B = n(215023),
     F = n(388032),
-    z = n(87671),
+    z = n(203336),
     W = n(13299),
     Y = n(606199),
     K = n(164792);
@@ -98,7 +98,7 @@ let X = function () {
     }),
         i.useEffect(() => {
             let { current: t } = j;
-            (0, h.h)({
+            (0, f.h)({
                 name: o.ImpressionNames.QUEST_HOME,
                 type: o.ImpressionTypes.VIEW,
                 properties: {
@@ -126,7 +126,7 @@ let X = function () {
                 sectionType: H.jXE.ORBS_BALANCE_MENU,
                 ctaObject: H.qAy.CTA_TO_ORBS_SHOP,
             }),
-                (0, f.mK)({
+                (0, h.mK)({
                     openInLayer: !1,
                     tab: B.AW.ORBS,
                     analyticsLocations: [],
@@ -167,7 +167,7 @@ let X = function () {
                                                     variant: "overlay-primary",
                                                     text: F.intl.string(F.t["1Wm129"]),
                                                     onClick: () =>
-                                                        (0, f.mK)({
+                                                        (0, h.mK)({
                                                             openInLayer: !1,
                                                             tab: B.AW.ORBS,
                                                             analyticsLocations: [],

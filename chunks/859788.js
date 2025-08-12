@@ -7,7 +7,7 @@ var l = r(120356),
     o = r(607070),
     s = r(70097),
     c = r(451478),
-    u = r(506510);
+    u = r(679064);
 let d = (e) => {
     let { bannerStatic: t, bannerAnimated: r, isResponsive: l = !1 } = e,
         d = (0, i.e7)([o.Z], () => o.Z.useReducedMotion),

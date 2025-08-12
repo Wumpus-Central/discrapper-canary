@@ -13,7 +13,7 @@ var r = n(255367),
     u = n(74538),
     d = n(639119),
     f = n(388032),
-    p = n(952849);
+    p = n(159670);
 function b(e) {
     let { isTabSelected: t, expiresAt: n, trialDuration: l, className: u } = e,
         d = i.useMemo(() => Date.parse(n), [n]),

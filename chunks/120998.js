@@ -5,7 +5,7 @@ var r,
     a = n(392711),
     o = n.n(a),
     s = n(302221),
-    c = n(33963);
+    c = n(117656);
 function u(e, t, n) {
     return (
         t in e
@@ -77,38 +77,38 @@ class d extends (r = l.PureComponent) {
                 } = this.props;
                 if (i.length < 2) return;
                 let p = Math.max(Math.min((e - this.dataChangedAt) / l, 1), 0),
-                    h = r.getContext("2d"),
-                    f = this.maxValue;
-                (h.strokeStyle = a), (h.lineWidth = c);
-                let g = r.height - h.lineWidth,
-                    m = h.createLinearGradient(0, 0, 0, g);
+                    f = r.getContext("2d"),
+                    h = this.maxValue;
+                (f.strokeStyle = a), (f.lineWidth = c);
+                let g = r.height - f.lineWidth,
+                    m = f.createLinearGradient(0, 0, 0, g);
                 if (null != d) m.addColorStop(0, d);
                 else {
                     let { r: e, g: t, b: n } = s.oo(a);
                     m.addColorStop(0, "rgba(".concat(e, ", ").concat(t, ", ").concat(n, ", 0)"));
                 }
-                m.addColorStop(1, this.fillColor), (h.fillStyle = m);
+                m.addColorStop(1, this.fillColor), (f.fillStyle = m);
                 let b = i.length >= o ? o : i.length;
-                h.setTransform(1, 0, 0, -1, 0, r.height),
-                    h.clearRect(0, 0, r.width, r.height),
-                    h.translate(0, 0.5 * h.lineWidth);
+                f.setTransform(1, 0, 0, -1, 0, r.height),
+                    f.clearRect(0, 0, r.width, r.height),
+                    f.translate(0, 0.5 * f.lineWidth);
                 let _ = Math.floor(r.width / (b - 3)),
                     O = 0.5 * _;
-                h.translate(_ - _ * p, 0), h.beginPath();
+                f.translate(_ - _ * p, 0), f.beginPath();
                 let E = -_;
                 i.forEach((e, r) => {
                     (t = {
                         x: E,
-                        y: (g * e) / f,
+                        y: (g * e) / h,
                     }),
-                        0 === r ? h.moveTo(t.x, t.y) : h.bezierCurveTo(n.x + O, n.y, t.x - O, t.y, t.x, t.y),
+                        0 === r ? f.moveTo(t.x, t.y) : f.bezierCurveTo(n.x + O, n.y, t.x - O, t.y, t.x, t.y),
                         (n = t),
                         (E += _);
                 }),
-                    h.stroke(),
-                    h.lineTo(E - _, 0),
-                    h.lineTo(0, 0),
-                    h.fill(),
+                    f.stroke(),
+                    f.lineTo(E - _, 0),
+                    f.lineTo(0, 0),
+                    f.fill(),
                     u && p < 1 && (this.animationFrameRequestId = window.requestAnimationFrame(this.updateAnimation));
             });
     }

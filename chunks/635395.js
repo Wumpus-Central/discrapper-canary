@@ -9,8 +9,8 @@ var r = n(73800),
     u = n(131951),
     d = n(292959),
     p = n(19780),
-    h = n(699516),
-    f = n(606304),
+    f = n(699516),
+    h = n(606304),
     g = n(358085),
     m = n(998502),
     b = n(981631);
@@ -58,14 +58,14 @@ g.isPlatformEmbedded &&
     m.ZP.on("SYSTEM_TRAY_OPEN_VOICE_SETTINGS", () => {
         a.Z.open(b.oAB.VOICE);
     }),
-    (E = i.ZP.connectStores([p.Z, u.Z, f.Z, c.default, h.Z, d.Z, o.Z], () => {
+    (E = i.ZP.connectStores([p.Z, u.Z, h.Z, c.default, f.Z, d.Z, o.Z], () => {
         let e = c.default.getTotalMentionCount(),
             t = c.default.hasAnyUnread(),
-            n = (0, s.m$)([h.Z, o.Z]),
+            n = (0, s.m$)([f.Z, o.Z]),
             r = !d.Z.getDisableUnreadBadge() && !!(t || e + n > 0);
         return {
             connected: p.Z.isConnected(),
-            speaking: f.Z.isCurrentUserSpeaking(),
+            speaking: h.Z.isCurrentUserSpeaking(),
             muted: u.Z.isSelfMute() || u.Z.isSelfMutedTemporarily(),
             deafened: u.Z.isSelfDeaf(),
             unread: r,

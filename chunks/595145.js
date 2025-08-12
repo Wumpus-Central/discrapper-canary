@@ -27,16 +27,16 @@ var r = n(255367),
     T = n(771362),
     N = n(510659),
     S = n(113557),
-    w = n(648052),
-    A = n(867176),
+    A = n(648052),
+    w = n(867176),
     C = n(280885),
     L = n(537006),
     D = n(681837),
     R = n(78806),
     k = n(91433),
     M = n(451834),
-    G = n(900927),
-    B = n(944043),
+    B = n(900927),
+    G = n(944043),
     U = n(502762),
     F = n(530),
     V = n(4517),
@@ -49,7 +49,7 @@ var r = n(255367),
     J = n(228168),
     q = n(981631),
     Q = n(388032),
-    $ = n(517603);
+    $ = n(690003);
 function ee(e) {
     var t;
     let {
@@ -106,8 +106,8 @@ function ee(e) {
                       size: 1024,
                   }),
         eS = (0, m.p)({ location: "UserProfileModalV2" }),
-        ew = l.useMemo(() => (null != es ? es : (0, g.Z)()), [es]),
-        eA = (0, X.Z)({
+        eA = l.useMemo(() => (null != es ? es : (0, g.Z)()), [es]),
+        ew = (0, X.Z)({
             user: n,
             currentUser: ee,
         }),
@@ -211,7 +211,7 @@ function ee(e) {
                                                     (0, r.jsxs)("div", {
                                                         className: $.profileHeader,
                                                         children: [
-                                                            (0, r.jsx)(A.Z, {
+                                                            (0, r.jsx)(w.Z, {
                                                                 user: n,
                                                                 displayProfile: eI,
                                                                 themeType: J.lY.MODAL_V2,
@@ -236,7 +236,7 @@ function ee(e) {
                                                                 channelId: en,
                                                                 themeType: J.lY.MODAL_V2,
                                                                 hasEntered: ec === a.Dvm.ENTERED,
-                                                                prompt: eS && n.id === ee.id ? ew : null,
+                                                                prompt: eS && n.id === ee.id ? eA : null,
                                                                 disableToolbar: em,
                                                             }),
                                                         ],
@@ -259,7 +259,7 @@ function ee(e) {
                                                                 }),
                                                                 nicknameVariant: "heading-xl/semibold",
                                                                 pronouns: null == eI ? void 0 : eI.pronouns,
-                                                                tags: (0, r.jsx)(w.Z, {
+                                                                tags: (0, r.jsx)(A.Z, {
                                                                     displayProfile: eI,
                                                                     themeType: J.lY.MODAL_V2,
                                                                     onClose: eu,
@@ -325,7 +325,7 @@ function ee(e) {
                                                                     isPremiumUser: (0, I.I5)(ee),
                                                                     onInteraction: eu,
                                                                 }),
-                                                            (0, r.jsx)(B.Z, {
+                                                            (0, r.jsx)(G.Z, {
                                                                 user: n,
                                                                 className: $.profileBanner,
                                                             }),
@@ -355,7 +355,7 @@ function ee(e) {
                                                                 }),
                                                             (0, r.jsx)(K.Z, {
                                                                 heading: Q.intl.string(Q.t.a6XYDw),
-                                                                children: (0, r.jsx)(G.Z, {
+                                                                children: (0, r.jsx)(B.Z, {
                                                                     userId: n.id,
                                                                     guildId: null == eI ? void 0 : eI.guildId,
                                                                     tooltipDelay: J.vB,
@@ -453,7 +453,7 @@ function ee(e) {
                                                 displayProfile: eI,
                                                 guildId: et,
                                                 channelId: en,
-                                                items: eA,
+                                                items: ew,
                                                 initialSection: eo,
                                                 initialSubsection: ea,
                                                 onClose: eu,

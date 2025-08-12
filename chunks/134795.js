@@ -10,7 +10,7 @@ var r = n(120356),
     d = n(993413),
     u = n(486324),
     m = n(388032),
-    p = n(771066);
+    p = n(338837);
 function g(e) {
     let {
             showRemoveBannerButton: t,

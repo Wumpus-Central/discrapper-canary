@@ -7,7 +7,7 @@ var r = n(255367),
     c = n(763283),
     l = n(603571),
     u = n(388032),
-    d = n(122846),
+    d = n(586214),
     f = n(225893);
 function p(e) {
     let { id: t, points: n, onFinished: s } = e,

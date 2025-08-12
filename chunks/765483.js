@@ -8,7 +8,7 @@ var i = t(442837),
     c = t(982168),
     s = t(388032),
     u = t(130883),
-    d = t(183446);
+    d = t(77593);
 function f(e) {
     let n = e.isArchivedThread(),
         t = (0, c.P0)(e),

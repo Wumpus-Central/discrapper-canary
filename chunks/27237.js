@@ -5,19 +5,19 @@ var r = n(255367),
     l = n.n(i),
     s = n(793030),
     a = n(481060),
-    c = n(808189),
-    u = n(973772),
+    u = n(808189),
+    c = n(973772),
     d = n(838968),
     p = n(262212),
     f = n(226278),
     m = n(279604),
     g = n(279475),
     x = n(535396),
-    _ = n(981631),
-    v = n(93841),
+    v = n(981631),
+    _ = n(93841),
     b = n(388032),
-    j = n(246499),
-    h = n(568413);
+    j = n(91900),
+    h = n(309714);
 function E(e) {
     let t,
         { active: n, nextActive: o, position: i } = e;
@@ -46,9 +46,9 @@ function C(e) {
         i = (0, g.d)(t),
         l = (0, g.u)(t),
         a = o.useMemo(() => {
-            let e = c.C[n];
+            let e = u.C[n];
             if (null == e) return [];
-            let t = e.tier === _.Eu4.TIER_3 ? e.perks.slice(0, -1) : e.perks;
+            let t = e.tier === v.Eu4.TIER_3 ? e.perks.slice(0, -1) : e.perks;
             return null == t
                 ? void 0
                 : t.map((e, t) =>
@@ -82,7 +82,7 @@ function C(e) {
                 children: (0, r.jsx)(s.xv, {
                     color: i,
                     variant: "text-sm/medium",
-                    children: b.intl.string(v.default.nIj3LS),
+                    children: b.intl.string(_.default.nIj3LS),
                 }),
             }),
         ],
@@ -90,14 +90,14 @@ function C(e) {
 }
 function I(e) {
     let { guildId: t, index: n, powerup: i, nextPowerup: l } = e,
-        s = (0, u.ZP)(t, i),
-        a = (0, u.ZP)(t, l),
-        c = s.type !== x.A3.INACTIVE,
-        _ = a.type !== x.A3.INACTIVE,
-        v = s.type === x.A3.TIER_OVERRIDE_ACTIVATED,
+        s = (0, c.ZP)(t, i),
+        a = (0, c.ZP)(t, l),
+        u = s.type !== x.A3.INACTIVE,
+        v = a.type !== x.A3.INACTIVE,
+        _ = s.type === x.A3.TIER_OVERRIDE_ACTIVATED,
         [b, j] = o.useState(void 0);
     (0, m.KT)(b);
-    let I = (0, g.d)(c);
+    let I = (0, g.d)(u);
     return (0, r.jsxs)(f.Z, {
         guildId: t,
         powerup: i,
@@ -105,25 +105,25 @@ function I(e) {
         children: [
             (0, r.jsx)(E, {
                 position: 0 === n ? "start" : null == l ? "end" : "middle",
-                active: c,
-                nextActive: null != l ? _ : void 0,
+                active: u,
+                nextActive: null != l ? v : void 0,
             }),
             (0, r.jsx)(d.Q9, {
                 title: i.title,
                 textColor: I,
                 footer:
-                    !v &&
+                    !_ &&
                     (0, r.jsx)(f.g, {
                         className: h.footer,
                         guildId: t,
                         powerup: i,
                     }),
                 children: (0, r.jsx)(C, {
-                    isActive: c,
+                    isActive: u,
                     index: n,
                 }),
             }),
-            !v &&
+            !_ &&
                 (0, r.jsx)(d.N4, {
                     children: (0, r.jsx)(p.ZP, {
                         guildId: t,

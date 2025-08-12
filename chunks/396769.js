@@ -4,7 +4,7 @@ n(73800);
 var i = n(755721),
     o = n(481060),
     a = n(600164),
-    s = n(180546);
+    s = n(791580);
 function l(e) {
     let { icon: t, onClick: n, label: l } = e;
     return (0, r.jsx)(i.zx, {

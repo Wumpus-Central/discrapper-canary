@@ -6,7 +6,7 @@ var i = n(755721),
     s = n(313201),
     o = n(192635),
     a = n(388032),
-    c = n(274970);
+    c = n(39281);
 function u(e) {
     let { transitionState: t, Icon: n, title: u, body: d, onClose: f } = e,
         p = (0, s.Dt)();

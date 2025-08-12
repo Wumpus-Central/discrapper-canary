@@ -6,7 +6,7 @@ var r = n(120356),
     l = n(382790),
     s = n(430036),
     a = n(518084),
-    c = n(724194);
+    c = n(299889);
 function d(e) {
     let { dragStart: t, dragging: n, pinned: r, locked: d, className: u } = e;
     return (0, i.jsxs)(a.ZP, {

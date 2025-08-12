@@ -8,7 +8,7 @@ var i = n(255367),
     u = n(404975),
     c = n(178167),
     d = n(59662),
-    f = n(254204);
+    f = n(580818);
 function g(e) {
     let { root: t, initialPanel: n, onClose: s, sidebarHeader: g, sidebarFooter: m } = e,
         [v, b] = l.useState(!0),

@@ -19,7 +19,7 @@ var r = n(255367),
     v = n(710111),
     C = n(130883),
     _ = n(388032),
-    y = n(773967);
+    y = n(943273);
 function O(e) {
     let { className: t, sound: n, playSound: a, isPlaying: s, text: d } = e,
         u = (null == n ? void 0 : n.emojiId) != null || (null == n ? void 0 : n.emojiName) != null,

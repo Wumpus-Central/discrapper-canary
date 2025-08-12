@@ -8,7 +8,7 @@ var r = n(255367),
     s = n(86419),
     d = n(247397),
     u = n(388032),
-    f = n(436860);
+    f = n(949237);
 function p(e) {
     let { widgetType: t } = e,
         n = t === i.l.FAVORITE_GAMES ? c.LM.BALDURS_GATE_3 : c.LM.CYBERPUNK_2077,
@@ -71,7 +71,7 @@ function b(e) {
     return (0, r.jsxs)(o.P3F, {
         className: f.widgetPromptContainer,
         onClick: n,
-        "aria-label": "Add widget: ".concat(u.intl.string(d.NP[t])),
+        "aria-label": "Add widget: ".concat(u.intl.string(d.N[t])),
         children: [
             (() => {
                 switch (t) {
@@ -98,7 +98,7 @@ function b(e) {
                     (0, r.jsx)(o.Text, {
                         variant: "text-md/medium",
                         color: "header-primary",
-                        children: u.intl.string(d.NP[t]),
+                        children: u.intl.string(d.N[t]),
                     }),
                 ],
             }),
@@ -127,7 +127,7 @@ function j() {
             (0, r.jsx)("ul", {
                 className: f.widgetGrid,
                 "aria-label": u.intl.string(u.t["+EIBSE"]),
-                children: d.rR.map((e) => (0, r.jsx)("li", { children: (0, r.jsx)(b, { widgetType: e }) }, e)),
+                children: d.r.map((e) => (0, r.jsx)("li", { children: (0, r.jsx)(b, { widgetType: e }) }, e)),
             }),
         ],
     });

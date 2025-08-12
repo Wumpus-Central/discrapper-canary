@@ -9,16 +9,16 @@ var r = n(570140),
     u = n(594174),
     d = n(74538),
     p = n(486324);
-let h = (e) => {
-        let { image: t, file: n, guildId: r, analyticsSource: l, isTryItOutFlow: h } = e;
-        if (h) return void (0, c.c_)(t);
-        let f = u.default.getCurrentUser(),
+let f = (e) => {
+        let { image: t, file: n, guildId: r, analyticsSource: l, isTryItOutFlow: f } = e;
+        if (f) return void (0, c.c_)(t);
+        let h = u.default.getCurrentUser(),
             g = null != r ? a.I5 : i.I5,
-            m = d.ZP.canUseAnimatedAvatar(f);
+            m = d.ZP.canUseAnimatedAvatar(h);
         if (m || "image/gif" !== n.type) return void g(t);
-        if (null == f) return;
+        if (null == h) return;
         let b = (0, s.SD)({
-            userId: f.id,
+            userId: h.id,
             image: t,
         });
         if (!m)
@@ -28,16 +28,16 @@ let h = (e) => {
                 analyticsSource: l,
             });
     },
-    f = (e) => {
+    h = (e) => {
         let { image: t, guildId: n, analyticsSource: r, isTryItOutFlow: i } = e,
             l = t.imageUri;
         if (i) return void (0, c.f4)(l);
         let s = u.default.getCurrentUser(),
-            h = null != n ? a.g_ : c.g_,
-            f = d.ZP.canUsePremiumProfileCustomization(s);
+            f = null != n ? a.g_ : c.g_,
+            h = d.ZP.canUsePremiumProfileCustomization(s);
         return d.ZP.canUsePremiumProfileCustomization(s)
-            ? void h(l)
-            : null == s || f
+            ? void f(l)
+            : null == s || h
               ? void 0
               : void (0, o.s)({
                     uploadType: p.pC.BANNER,
@@ -53,7 +53,7 @@ class g extends l.Z {
         r.Z.unsubscribe("PROFILE_CUSTOMIZATION_OPEN_PREVIEW_MODAL", this.maybeOpenProfilePreviewModal);
     }
     maybeOpenProfilePreviewModal(e) {
-        return e.uploadType === p.pC.AVATAR ? h(e) : e.uploadType === p.pC.BANNER ? f(e) : void 0;
+        return e.uploadType === p.pC.AVATAR ? f(e) : e.uploadType === p.pC.BANNER ? h(e) : void 0;
     }
 }
 let m = new g();

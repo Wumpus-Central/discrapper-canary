@@ -9,14 +9,14 @@ var r = n(255367),
     u = n(877604),
     d = n(998730),
     p = n(546247),
-    h = n(430824),
-    f = n(768581),
+    f = n(430824),
+    h = n(768581),
     g = n(302221),
     m = n(745752),
     b = n(17181),
     _ = n(388032),
-    O = n(150718),
-    E = n(113728);
+    O = n(512986),
+    E = n(620416);
 function y(e) {
     let { guildId: t, channelId: n } = e,
         { ref: l, width: y, height: v } = (0, c.ZP)(),
@@ -29,12 +29,12 @@ function y(e) {
                     returnChannelId: n,
                 }));
         }, [t, n]),
-        C = (0, o.e7)([h.Z], () => h.Z.getGuild(t)),
+        C = (0, o.e7)([f.Z], () => f.Z.getGuild(t)),
         S = i.useMemo(
             () =>
                 null == C
                     ? null
-                    : f.ZP.getGuildSplashURL({
+                    : h.ZP.getGuildSplashURL({
                           id: C.id,
                           splash: C.splash,
                       }),

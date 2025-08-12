@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => b });
 var r = n(255367),
     s = n(73800),
     o = n(120356),
@@ -14,14 +14,14 @@ var r = n(255367),
     f = n(670638),
     x = n(303385),
     h = n(388032),
-    j = n(74783);
-let _ = (e) => {
+    j = n(344837);
+let b = (e) => {
     let {
             quest: t,
             expansionSpring: n,
             onCtxMenuSelect: o,
-            onCtxMenuOpen: _,
-            onCtxMenuClose: b,
+            onCtxMenuOpen: b,
+            onCtxMenuClose: _,
             useReducedMotion: v,
             isExpanded: C,
             isExpansionAnimationComplete: y,
@@ -107,8 +107,8 @@ let _ = (e) => {
                         ],
                     }),
                     (0, r.jsx)(f.r, {
-                        onOpen: _,
-                        onClose: b,
+                        onOpen: b,
+                        onClose: _,
                         onSelect: o,
                         questContent: p.jn.QUEST_BAR_V2,
                         quest: t,

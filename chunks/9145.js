@@ -36,7 +36,7 @@ var r = n(255367),
     L = n(918559),
     M = n(981631),
     U = n(388032),
-    F = n(199570);
+    F = n(757728);
 let H = R.u8.SIZE_32,
     G = {
         [L.MI.NO_CHAT]: F.noChat,

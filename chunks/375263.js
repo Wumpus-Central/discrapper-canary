@@ -11,7 +11,7 @@ var r = n(255367),
     m = n(486324),
     g = n(200299),
     p = n(388032),
-    h = n(615511);
+    h = n(491905);
 function f(e) {
     let { guild: t, canManageGuild: n } = e,
         f = t.features.has(d.oNc.BANNER),

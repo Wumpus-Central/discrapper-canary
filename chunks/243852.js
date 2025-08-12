@@ -9,8 +9,8 @@ var r,
     u = n(570140),
     d = n(278323),
     p = n(581567),
-    h = n(594190),
-    f = n(581883),
+    f = n(594190),
+    h = n(581883),
     g = n(70956),
     m = n(780570),
     b = n(314897),
@@ -59,7 +59,7 @@ function x(e) {
 }
 function A() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
-        t = h.ZP.getVisibleRunningGames(),
+        t = f.ZP.getVisibleRunningGames(),
         n = new Set();
     for (let { name: e, distributor: r, exePath: i } of t) {
         let t = _.Z.getGameByName(e);
@@ -81,7 +81,7 @@ function Z() {
 }
 class w extends (i = o.ZP.Store) {
     initialize() {
-        this.waitFor(h.ZP, f.Z, O.Z), this.syncWith([f.Z], A);
+        this.waitFor(f.ZP, h.Z, O.Z), this.syncWith([h.Z], A);
     }
     getActivities() {
         return N;

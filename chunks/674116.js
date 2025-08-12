@@ -35,7 +35,7 @@ var i = n(255367),
     k = n(981631),
     L = n(65154),
     M = n(388032),
-    B = n(20493);
+    B = n(881488);
 let U = "".concat(
     m.Z.getArticleURL(k.BhN.VOICE_VIDEO_TROUBLESHOOTING),
     "?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-voice-video&utm_content=--t%3Apm",

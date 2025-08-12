@@ -13,7 +13,7 @@ var i = n(255367),
     C = n(892322),
     h = n(15608),
     p = n(75666),
-    g = n(563000);
+    g = n(789731);
 function f(e) {
     let {
             directoryChannelId: t,

@@ -3,7 +3,7 @@ var r = n(255367),
     i = n(481060),
     l = n(821020),
     o = n(388032),
-    s = n(375613);
+    s = n(798297);
 function a(e) {
     let { children: t } = e,
         { notificationCenterVariant: n } = (0, l.pN)({ location: "NotificationsInboxTooltip" }),

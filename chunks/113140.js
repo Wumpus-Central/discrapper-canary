@@ -6,7 +6,7 @@ var a = t(481060),
     s = t(471253),
     l = t(939863),
     r = t(388032),
-    o = t(555501);
+    o = t(439733);
 function d(n) {
     let { transitionState: e, onClose: t, channel: d } = n,
         h = (0, i.Dt)(),

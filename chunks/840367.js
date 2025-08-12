@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => g });
 var r = n(255367);
 n(73800);
 var l = n(624238),
@@ -6,56 +6,58 @@ var l = n(624238),
     o = n(442837),
     a = n(481060),
     c = n(314897),
-    s = n(881410),
-    d = n(825354),
-    u = n(388032),
-    f = n(196880);
-let p = {
-    [i.l.FAVORITE_GAMES]: () => u.intl.string(u.t.sUQar6),
-    [i.l.CURRENT_GAMES]: () => u.intl.string(u.t.SqNnur),
-    [i.l.WANT_TO_PLAY_GAMES]: () => u.intl.string(u.t.bWSQwc),
-    [i.l.PLAYED_GAMES]: () => u.intl.string(u.t.scOKER),
+    s = n(86419),
+    d = n(881410),
+    u = n(825354),
+    f = n(388032),
+    p = n(678299);
+let m = {
+    [i.l.FAVORITE_GAMES]: () => f.intl.string(f.t.sUQar6),
+    [i.l.CURRENT_GAMES]: () => f.intl.string(f.t.SqNnur),
+    [i.l.WANT_TO_PLAY_GAMES]: () => f.intl.string(f.t.bWSQwc),
+    [i.l.PLAYED_GAMES]: () => f.intl.string(f.t.scOKER),
 };
-function m(e) {
+function g(e) {
     var t;
-    let { userId: n, headingId: m, widget: g, reachedMaxGamesLimit: b, disableInteraction: j = !1 } = e,
+    let { userId: n, headingId: g, widget: b, disableInteraction: j = !1 } = e,
         y = (0, o.e7)([c.default], () => c.default.getId() === n),
-        x = p[g.type](),
-        h = y
-            ? (t = g.type) === i.l.FAVORITE_GAMES
-                ? u.intl.string(u.t.wiXdER)
-                : u.intl.format(u.t["zR1+09"], { numGames: l.k[t] })
+        x = (0, s.kQ)(b),
+        h = m[b.type](),
+        O = y
+            ? (t = b.type) === i.l.FAVORITE_GAMES
+                ? f.intl.string(f.t.wiXdER)
+                : f.intl.format(f.t["zR1+09"], { numGames: l.k[t] })
             : void 0;
     return (0, r.jsxs)("div", {
-        className: f.headerRow,
+        className: p.headerRow,
         children: [
             (0, r.jsxs)("div", {
-                className: f.title,
+                className: p.title,
                 children: [
                     (0, r.jsx)(a.X6q, {
                         variant: "heading-sm/medium",
                         color: "text-default",
-                        id: m,
-                        children: x,
+                        id: g,
+                        children: h,
                     }),
-                    null != h &&
+                    null != O &&
                         (0, r.jsx)(a.Text, {
                             variant: "text-xs/normal",
                             color: "text-secondary",
-                            children: h,
+                            children: O,
                         }),
                 ],
             }),
             y &&
                 !j &&
                 (0, r.jsxs)("div", {
-                    className: f.actions,
+                    className: p.actions,
                     children: [
-                        (0, r.jsx)(s.Z, {
-                            disabled: b,
-                            widgetType: g.type,
+                        (0, r.jsx)(d.Z, {
+                            disabled: x,
+                            widgetType: b.type,
                         }),
-                        (0, r.jsx)(d.Z, { widget: g }),
+                        (0, r.jsx)(u.Z, { widget: b }),
                     ],
                 }),
         ],

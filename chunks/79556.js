@@ -30,7 +30,7 @@ var r = n(255367),
     Z = n(304471),
     T = n(981631),
     A = n(647086),
-    R = n(915887);
+    R = n(81252);
 function D(e, t, n) {
     return (
         t in e
@@ -243,7 +243,7 @@ class k extends P.ZP {
                 let { channel: t } = this.props;
                 if (t.type === T.d4z.GROUP_DM)
                     return void (0, u.jW)(e, async () => {
-                        let { default: e } = await Promise.all([n.e("79695"), n.e("57789"), n.e("2016")]).then(
+                        let { default: e } = await Promise.all([n.e("79695"), n.e("57789"), n.e("38592")]).then(
                             n.bind(n, 354741),
                         );
                         return (n) =>
@@ -264,7 +264,7 @@ class k extends P.ZP {
                                 n.e("98783"),
                                 n.e("57789"),
                                 n.e("56826"),
-                                n.e("45903"),
+                                n.e("39544"),
                             ]).then(n.bind(n, 131404));
                             return (n) =>
                                 (0, r.jsx)(

@@ -19,7 +19,7 @@ var r = n(255367),
     _ = n(408310),
     j = n(75666),
     O = n(981631),
-    v = n(400816);
+    v = n(32455);
 let C = (e) => {
     var t;
     let { channel: C, guild: E } = e,

@@ -9,8 +9,8 @@ var r = n(664751),
     u = n(570140),
     d = n(812206),
     p = n(979200),
-    h = n(489863),
-    f = n(166148),
+    f = n(489863),
+    h = n(166148),
     g = n(307643),
     m = n(973616),
     b = n(594174),
@@ -116,7 +116,7 @@ async function N(e, t, n) {
     }
     try {
         [o, { disclosures: s, allAcked: c }] = await Promise.all([
-            (0, h.Ww)({
+            (0, f.Ww)({
                 clientId: u,
                 scopes: M,
                 responseType: y,
@@ -136,10 +136,10 @@ async function N(e, t, n) {
             "OAuth2 Authorization Error: ".concat((null == e ? void 0 : e.message) || "Unknown Error"),
         );
     }
-    if (Z === f.s.NONE && null != o && o.authorized && c)
+    if (Z === h.s.NONE && null != o && o.authorized && c)
         try {
             return (
-                await (0, h.Iq)({
+                await (0, f.Iq)({
                     authorize: !0,
                     clientId: u,
                     scopes: M,

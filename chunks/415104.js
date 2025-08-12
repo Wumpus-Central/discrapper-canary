@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b }), n(388685);
+n.d(t, { Z: () => _ }), n(388685);
 var r = n(255367),
     s = n(73800),
     o = n(120356),
@@ -14,15 +14,15 @@ var r = n(255367),
     f = n(439826),
     x = n(43779),
     h = n(981631),
-    j = n(168989);
-function _(e) {
+    j = n(794099);
+function b(e) {
     var t, n;
     let {
             quest: o,
             className: u,
             questContent: d,
-            contentPosition: _,
-            rowIndex: b,
+            contentPosition: b,
+            rowIndex: _,
             impressionRef: v,
             sourceQuestContent: C,
         } = e,
@@ -31,7 +31,7 @@ function _(e) {
         T = (0, c.qb)(o),
         w = s.useMemo(() => (0, l.q8)(o), [o]),
         P = (0, i._F)(),
-        N = s.useCallback(() => {
+        A = s.useCallback(() => {
             O(!0),
                 P({
                     questId: o.id,
@@ -44,7 +44,7 @@ function _(e) {
                 }),
                 w && (0, p.loadVideoQuestModal)();
         }, [P, o.id, d, w, C]),
-        A = s.useCallback(() => {
+        N = s.useCallback(() => {
             O(!1),
                 P({
                     questId: o.id,
@@ -81,10 +81,10 @@ function _(e) {
             (v.current = e), (B.current = e);
         },
         className: a()(j.container, u),
-        onMouseEnter: N,
-        onMouseLeave: A,
-        onFocus: N,
-        onBlur: A,
+        onMouseEnter: A,
+        onMouseLeave: N,
+        onFocus: A,
+        onBlur: N,
         children: [
             (0, r.jsx)(f.Z, {
                 quest: o,
@@ -98,8 +98,8 @@ function _(e) {
                 quest: o,
                 questContent: d,
                 isHovering: y,
-                contentPosition: _,
-                rowIndex: b,
+                contentPosition: b,
+                rowIndex: _,
                 onReceiveErrorHints: S,
                 isVisibleInViewport: k,
                 sourceQuestContent: C,
@@ -107,7 +107,7 @@ function _(e) {
         ],
     });
 }
-function b(e) {
+function _(e) {
     return (0, r.jsx)(d.A, {
         questOrQuests: e.quest,
         questContent: e.questContent,
@@ -118,7 +118,7 @@ function b(e) {
         children: (t) => {
             var n, s;
             return (0, r.jsx)(
-                _,
+                b,
                 ((n = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},

@@ -14,7 +14,7 @@ var r = n(255367),
     d = n(41776),
     f = n(981631),
     _ = n(388032),
-    p = n(695256),
+    p = n(372858),
     h = (function (e) {
         return (e[(e.CHAT = 0)] = "CHAT"), (e[(e.REACTIONS = 1)] = "REACTIONS"), e;
     })({});

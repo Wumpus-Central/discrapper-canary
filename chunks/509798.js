@@ -3,7 +3,7 @@ var r = n(255367);
 n(73800);
 var i = n(481060),
     l = n(388032),
-    a = n(529882);
+    a = n(805897);
 function s(e) {
     let { forceFetchGuildProfile: t } = e;
     return (0, r.jsxs)("main", {

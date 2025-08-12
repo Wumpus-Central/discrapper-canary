@@ -1,53 +1,53 @@
-e.d(n, {
-    Mt: () => g,
-    li: () => f,
-    s4: () => h,
-    up: () => Z,
+n.d(t, {
+    Mt: () => p,
+    li: () => c,
+    s4: () => _,
+    up: () => b,
     zv: () => v,
 }),
-    e(388685),
-    e(539854);
-var i = e(73800),
-    a = e(106351),
-    l = e(442837);
-e(592125);
-var r = e(984933),
-    o = e(914010);
-e(709054);
-var s = e(853856),
-    d = e(362658),
-    u = e(434065),
-    c = e(981631);
-function f(t) {
-    let { favoritesEnabled: n, hasStaffPrivileges: e } = (0, d.z)("useCanFavoriteChannel"),
-        i = (0, l.e7)([s.Z], () => s.Z.isFavorite(t.id)),
-        a = t.isDM() || t.isThread();
-    return n && !__OVERLAY__ && !i && (!a || e);
+    n(388685),
+    n(539854);
+var i = n(73800),
+    a = n(106351),
+    r = n(442837);
+n(592125);
+var l = n(984933),
+    o = n(914010);
+n(709054);
+var d = n(853856),
+    u = n(362658),
+    f = n(434065),
+    s = n(981631);
+function c(e) {
+    let { favoritesEnabled: t, hasStaffPrivileges: n } = (0, u.z)("useCanFavoriteChannel"),
+        i = (0, r.e7)([d.Z], () => d.Z.isFavorite(e.id)),
+        a = e.isDM() || e.isThread();
+    return t && !__OVERLAY__ && !i && (!a || n);
 }
-function h(t) {
-    return (0, l.e7)([s.Z], () => s.Z.getFavorite(t));
+function _(e) {
+    return (0, r.e7)([d.Z], () => d.Z.getFavorite(e));
 }
 function v() {
-    return (0, l.e7)([r.ZP], () => r.ZP.getChannels(c.I_8))[a.d.GUILD_CATEGORY].map((t) => ({
-        id: "null" === t.channel.id ? null : t.channel.id,
-        name: t.channel.name,
+    return (0, r.e7)([l.ZP], () => l.ZP.getChannels(s.I_8))[a.d.GUILD_CATEGORY].map((e) => ({
+        id: "null" === e.channel.id ? null : e.channel.id,
+        name: e.channel.name,
     }));
 }
-function g() {
-    return (0, l.e7)([o.Z], () => o.Z.getGuildId()) === c.I_8;
+function p() {
+    return (0, r.e7)([o.Z], () => o.Z.getGuildId()) === s.I_8;
 }
-function Z() {
-    let { isFavoritesPerk: t } = (0, d.z)("useFavoriteAdded"),
-        n = (0, u.r)(),
-        e = i.useCallback(() => {
-            t && n.notifyFavoriteAdded();
-        }, [n, t]),
+function b() {
+    let { isFavoritesPerk: e } = (0, u.z)("useFavoriteAdded"),
+        t = (0, f.r)(),
+        n = i.useCallback(() => {
+            e && t.notifyFavoriteAdded();
+        }, [t, e]),
         a = i.useCallback(() => {
-            t && n.clearFavoriteAdded();
-        }, [n, t]);
+            e && t.clearFavoriteAdded();
+        }, [t, e]);
     return {
-        favoriteAdded: n.favoriteAdded,
-        notifyFavoriteAdded: e,
+        favoriteAdded: t.favoriteAdded,
+        notifyFavoriteAdded: n,
         clearFavoriteAdded: a,
     };
 }

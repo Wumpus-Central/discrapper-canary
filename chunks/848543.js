@@ -9,8 +9,8 @@ var r = n(255367),
     u = n(755721),
     d = n(481060),
     p = n(239091),
-    h = n(100527),
-    f = n(906732),
+    f = n(100527),
+    h = n(906732),
     g = n(522651),
     m = n(795318),
     b = n(706140),
@@ -23,7 +23,7 @@ var r = n(255367),
     C = n(981631),
     S = n(921944),
     N = n(388032),
-    T = n(566177);
+    T = n(787140);
 function P(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -98,7 +98,7 @@ function x(e) {
         k = t.getGuildId(),
         M = (0, y.sR)({ isSoundboardButtonDisabled: L }),
         [U, G] = (0, b.cv)(M),
-        { analyticsLocations: V, parentAnalyticsLocation: H } = (0, f.ZP)(h.Z.SOUNDBOARD_BUTTON);
+        { analyticsLocations: V, parentAnalyticsLocation: H } = (0, h.ZP)(f.Z.SOUNDBOARD_BUTTON);
     function B(e) {
         null != k &&
             (0, p.jW)(e, async () => {
@@ -114,7 +114,7 @@ function x(e) {
                                 },
                                 t,
                             ),
-                            { onInteraction: (0, m.u)("SoundboardContextMenu", h.Z.RTC_PANEL) },
+                            { onInteraction: (0, m.u)("SoundboardContextMenu", f.Z.RTC_PANEL) },
                         ),
                     );
             });
@@ -206,7 +206,7 @@ function x(e) {
             event: C.CkL.TOGGLE_SOUNDBOARD,
             handler: q,
         }),
-        (0, r.jsx)(f.Gt, {
+        (0, r.jsx)(h.Gt, {
             value: V,
             children: (0, r.jsx)(d.ua7, {
                 targetElementRef: x,

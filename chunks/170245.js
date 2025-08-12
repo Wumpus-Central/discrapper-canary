@@ -8,19 +8,19 @@ var i = n(120356),
     s = n(700582),
     c = n(699516);
 n(51144);
-var u = n(535317);
+var u = n(656087);
 let d = function (e) {
-    let { user: t, hovered: n, subText: i, showAccountIdentifier: d, status: p, isMobile: h, className: f } = e,
+    let { user: t, hovered: n, subText: i, showAccountIdentifier: d, status: p, isMobile: f, className: h } = e,
         g = (0, a.e7)([c.Z], () => c.Z.getNickname(t.id));
     return (0, r.jsxs)("div", {
-        className: l()(u.userInfo, f, { [u.hovered]: n }),
+        className: l()(u.userInfo, h, { [u.hovered]: n }),
         children: [
             (0, r.jsx)(s.Z, {
                 user: t,
                 className: u.avatar,
                 animate: n,
                 status: p,
-                isMobile: h,
+                isMobile: f,
             }),
             (0, r.jsxs)("div", {
                 className: u.text,

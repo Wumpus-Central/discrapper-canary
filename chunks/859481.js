@@ -18,7 +18,7 @@ var r = n(255367),
     j = n(981631),
     v = n(30513),
     _ = n(388032),
-    O = n(919957);
+    O = n(194893);
 function y(e) {
     let { errorDetails: t, originalVanityURLCode: n } = e;
     if (null != t)

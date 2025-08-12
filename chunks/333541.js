@@ -17,7 +17,7 @@ var l = n(255367),
     v = n(505905),
     y = n(185923),
     O = n(388032),
-    h = n(737113);
+    h = n(657488);
 function C(e) {
     let { customStatusEmoji: t, setCustomStatusEmoji: n, onClose: r } = e,
         d = o.useRef(null),

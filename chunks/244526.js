@@ -14,7 +14,7 @@ var i,
     h = n(122289),
     f = n(624138),
     b = n(388032),
-    x = n(943617);
+    x = n(795695);
 class _ extends (i = l.PureComponent) {
     get typeString() {
         let { paymentSource: e } = this.props;

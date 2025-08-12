@@ -1,6 +1,6 @@
 n.d(t, {
-    Z: () => eS,
-    l: () => eA,
+    Z: () => eA,
+    l: () => eN,
 }),
     n(642613),
     n(415506),
@@ -64,8 +64,8 @@ var r,
     en = n(575464),
     er = n(981631),
     ei = n(388032),
-    eo = n(382314),
-    ea = n(20493);
+    eo = n(667275),
+    ea = n(881488);
 function es(e, t, n) {
     return (
         t in e
@@ -810,7 +810,7 @@ class ev extends (r = o.PureComponent) {
                 let { channel: e, selectedUsers: t, onClose: n } = this.props,
                     r = Array.from(t);
                 if (null != e) {
-                    let t = eN(Array.from(new Set([...e.recipients, ...r])));
+                    let t = eC(Array.from(new Set([...e.recipients, ...r])));
                     t.size > 0
                         ? (0, p.h7j)(
                               (n) =>
@@ -826,7 +826,7 @@ class ev extends (r = o.PureComponent) {
                           )
                         : this.pushToExistingDM(e, r);
                 } else {
-                    let e = eN(r);
+                    let e = eC(r);
                     r.length > 1 && e.size > 0
                         ? (0, p.h7j)(
                               (t) =>
@@ -921,6 +921,66 @@ function eT(e) {
     return (0, i.jsx)(ev, el({ channel: t }, n, r));
 }
 function eS(e) {
+    let { channel: t, location: n, subscribeToGlobalHotkey: r, initialPopoutOpen: a } = e,
+        [s, l] = o.useState(null != a && a),
+        c = (0, L.a)(n),
+        u = "channel-invite-modal-".concat(null == t ? void 0 : t.id),
+        d = (0, p.VXO)(u),
+        f = o.useCallback(
+            () =>
+                (0, p.ZDy)(
+                    () =>
+                        Promise.resolve((e) =>
+                            (0, i.jsx)(
+                                eT,
+                                eu(el({}, e), {
+                                    channel: t,
+                                    inBornThisNamedExperiment: c,
+                                }),
+                            ),
+                        ),
+                    { modalKey: u },
+                ),
+            [t, u, c],
+        ),
+        _ = o.useCallback(() => {
+            let e = () => (d ? (0, p.Mr3)(u) : f()),
+                t = () => l((e) => !e);
+            return c ? e() : t();
+        }, [c, d, u, f, l]);
+    o.useEffect(
+        () => (
+            r && X.S.subscribe(er.CkL.TOGGLE_DM_CREATE, _),
+            () => {
+                X.S.unsubscribe(er.CkL.TOGGLE_DM_CREATE, _);
+            }
+        ),
+        [r, _, c],
+    );
+    let h = (e) =>
+        (0, i.jsx)(
+            eT,
+            eu(el({}, e), {
+                onClose: e.closePopout,
+                channel: t,
+                inBornThisNamedExperiment: c,
+            }),
+        );
+    return (
+        (0, T.ZP)(() => {
+            (0, j._)();
+        }),
+        {
+            showModal: f,
+            renderPopout: h,
+            toggleVisible: _,
+            popoutOpen: s,
+            setPopoutOpen: l,
+            inBornThisNamedExperiment: c,
+        }
+    );
+}
+function eA(e) {
     var t, n;
     let {
             channel: r,
@@ -934,77 +994,43 @@ function eS(e) {
             subscribeToGlobalHotkey: h = !1,
             location: m,
         } = e,
-        g = null != l ? l : null == r ? p.kL_ : p.ejJ,
-        E = (0, L.a)(m),
-        b = "channel-invite-modal-".concat(null == r ? void 0 : r.id),
-        y = (0, p.VXO)(b),
-        O = o.useCallback(
-            () =>
-                (0, p.ZDy)(
-                    () =>
-                        Promise.resolve((e) =>
-                            (0, i.jsx)(
-                                eT,
-                                eu(el({}, e), {
-                                    channel: r,
-                                    inBornThisNamedExperiment: E,
-                                }),
-                            ),
-                        ),
-                    { modalKey: b },
-                ),
-            [r, b, E],
-        ),
-        v = o.useRef(null),
-        [I, S] = o.useState(null != r && r.isGroupDM() && 0 === r.recipients.length),
-        A = o.useCallback(() => {
-            let e = () => (y ? (0, p.Mr3)(b) : O()),
-                t = () => S((e) => !e);
-            return E ? e() : t();
-        }, [E, y, b, O]);
-    o.useEffect(
-        () => (
-            h && X.S.subscribe(er.CkL.TOGGLE_DM_CREATE, A),
-            () => {
-                X.S.unsubscribe(er.CkL.TOGGLE_DM_CREATE, A);
-            }
-        ),
-        [h, A, E],
-    );
-    let N = (0, f.e7)([K.default], () => K.default.getUser(null == r ? void 0 : r.getRecipientId())),
-        C = (e) =>
-            (0, i.jsx)(
-                eT,
-                eu(el({}, e), {
-                    onClose: e.closePopout,
-                    channel: r,
-                    inBornThisNamedExperiment: E,
-                }),
-            );
-    return ((0, T.ZP)(() => {
-        (0, j._)();
-    }),
-    (null != (t = null == N ? void 0 : N.bot) && t) || (null != (n = null == N ? void 0 : N.isProvisional) && n))
+        g = o.useRef(null),
+        E = null != l ? l : null == r ? p.kL_ : p.ejJ,
+        {
+            showModal: b,
+            renderPopout: y,
+            toggleVisible: O,
+            popoutOpen: v,
+            setPopoutOpen: I,
+            inBornThisNamedExperiment: T,
+        } = eS({
+            initialPopoutOpen: null != r && r.isGroupDM() && 0 === r.recipients.length,
+            channel: r,
+            location: m,
+            subscribeToGlobalHotkey: h,
+        }),
+        S = (0, f.e7)([K.default], () => K.default.getUser(null == r ? void 0 : r.getRecipientId()));
+    return (null != (t = null == S ? void 0 : S.bot) && t) || (null != (n = null == S ? void 0 : S.isProvisional) && n)
         ? null
-        : E
+        : T
           ? (0, i.jsx)(et.ZP.Icon, {
-                ref: v,
-                onClick: O,
-                icon: g,
+                ref: g,
+                onClick: b,
+                icon: E,
                 className: s,
                 iconClassName: a,
                 tooltip: c,
                 tooltipPosition: u,
             })
           : (0, i.jsx)(p.yRy, {
-                targetElementRef: v,
-                renderPopout: C,
+                targetElementRef: g,
+                renderPopout: y,
                 position: d,
-                shouldShow: I,
+                shouldShow: v,
                 nudgeAlignIntoViewport: !0,
                 autoInvert: !0,
                 align: _,
-                onRequestClose: () => S(!1),
+                onRequestClose: () => I(!1),
                 animation: p.yRy.Animation.NONE,
                 ignoreModalClicks: !0,
                 clickTrap: !0,
@@ -1012,9 +1038,9 @@ function eS(e) {
                     (0, i.jsx)(
                         et.ZP.Icon,
                         eu(el({}, e), {
-                            ref: v,
-                            onClick: A,
-                            icon: g,
+                            ref: g,
+                            onClick: O,
+                            icon: E,
                             className: s,
                             iconClassName: a,
                             tooltip: c,
@@ -1023,86 +1049,83 @@ function eS(e) {
                     ),
             });
 }
-function eA(e) {
-    let { channel: t, popoutPosition: n = "bottom", popoutAlign: r = "right" } = e;
-    (0, T.ZP)(() => {
-        (0, j._)();
-    });
-    let a = (0, L.a)("PrivateChannelRecipientsInviteTextButton"),
-        s = o.useRef(null),
-        [l, c] = o.useState(!1),
-        u = o.useCallback(() => c((e) => !e), []),
-        d = (e) =>
-            (0, i.jsx)(
-                eT,
-                eu(el({}, e), {
-                    onClose: e.closePopout,
-                    channel: t,
-                    inBornThisNamedExperiment: a,
-                }),
-            ),
-        f = o.useCallback(
-            () =>
-                (0, p.ZDy)(() =>
-                    Promise.resolve((e) =>
-                        (0, i.jsx)(
-                            eT,
-                            eu(el({}, e), {
-                                channel: t,
-                                inBornThisNamedExperiment: a,
-                            }),
-                        ),
-                    ),
-                ),
-            [t, a],
-        );
-    return a
-        ? (0, i.jsx)(p.zxk, {
-              onClick: f,
-              variant: "primary",
-              buttonRef: s,
-              text: ei.intl.string(ei.t["6Qgren"]),
-              "aria-label": ei.intl.string(ei.t["6Qgren"]),
-              icon: p.ejJ,
-          })
+function eN(e) {
+    var {
+            channel: t,
+            popoutPosition: n = "bottom",
+            popoutAlign: r = "right",
+            fullWidth: a = !1,
+            text: s,
+            icon: l,
+            subscribeToGlobalHotkey: c = !1,
+        } = e,
+        u = ed(e, ["channel", "popoutPosition", "popoutAlign", "fullWidth", "text", "icon", "subscribeToGlobalHotkey"]);
+    let d = o.useRef(null),
+        {
+            showModal: f,
+            renderPopout: _,
+            toggleVisible: h,
+            popoutOpen: m,
+            setPopoutOpen: g,
+            inBornThisNamedExperiment: E,
+        } = eS({
+            initialPopoutOpen: !1,
+            channel: t,
+            location: "PrivateChannelRecipientsInviteTextButton",
+            subscribeToGlobalHotkey: c,
+        });
+    return E
+        ? (0, i.jsx)(
+              p.zxk,
+              eu(el({}, u), {
+                  onClick: f,
+                  variant: "primary",
+                  buttonRef: d,
+                  text: s,
+                  "aria-label": s,
+                  icon: l,
+                  fullWidth: a,
+              }),
+          )
         : (0, i.jsx)(p.yRy, {
-              targetElementRef: s,
-              renderPopout: d,
+              targetElementRef: d,
+              renderPopout: _,
               position: n,
-              shouldShow: l,
+              shouldShow: m,
               nudgeAlignIntoViewport: !0,
               autoInvert: !0,
               align: r,
-              onRequestClose: () => c(!1),
+              onRequestClose: () => g(!1),
               animation: p.yRy.Animation.NONE,
               ignoreModalClicks: !0,
               clickTrap: !0,
               children: (e) =>
                   (0, i.jsx)(
                       p.zxk,
-                      eu(el({}, e), {
-                          onClick: u,
+                      eu(el({}, e, u), {
+                          onClick: h,
                           variant: "primary",
-                          buttonRef: s,
-                          text: ei.intl.string(ei.t["6Qgren"]),
-                          "aria-label": ei.intl.string(ei.t["6Qgren"]),
-                          icon: p.ejJ,
+                          buttonRef: d,
+                          text: s,
+                          "aria-label": s,
+                          icon: l,
+                          fullWidth: a,
                       }),
                   ),
           });
 }
-function eN(e) {
-    let t = eC(e);
+function eC(e) {
+    let t = eR(e);
     return new Set(
         (0, l.chain)(B.Z.getMutablePrivateChannels())
             .values()
             .filter((e) => (0, G.bc)(e.type))
-            .filter((e) => eC(e.recipients) === t)
+            .filter((e) => eR(e.recipients) === t)
             .map((e) => e.id)
             .value(),
     );
 }
-function eC(e) {
+function eR(e) {
     return JSON.stringify(e.sort());
 }
 es(ev, "contextType", S.ZP);

@@ -9,8 +9,8 @@ var r = n(846519),
     u = n(517100),
     d = n(19780),
     p = n(70956),
-    h = n(358085),
-    f = n(981631);
+    f = n(358085),
+    h = n(981631);
 let g = new r.V7(),
     m = new r.V7();
 class b extends a.Z {
@@ -22,8 +22,8 @@ class b extends a.Z {
     }
     handleIdleUpdate() {
         let e = u.Z.getIdleSince();
-        if (!h.isPlatformEmbedded) return;
-        for (let e of (g.stop(), m.stop(), o.Z.getAllActiveStreams())) if (e.state !== f.jm8.ENDED) return;
+        if (!f.isPlatformEmbedded) return;
+        for (let e of (g.stop(), m.stop(), o.Z.getAllActiveStreams())) if (e.state !== h.jm8.ENDED) return;
         if (null == e) return;
         let t = d.Z.getChannelId();
         if (null == t) return;

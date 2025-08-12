@@ -13,8 +13,8 @@ var i = n(442837),
     _ = n(533159),
     p = n(981631),
     h = n(388032),
-    m = n(969878),
-    g = n(409369);
+    m = n(235634),
+    g = n(820133);
 function E(e) {
     let { appId: t, skuId: n, transitionState: E, onClose: b, onHeaderTitleClick: y, children: O, footer: v } = e,
         I = (0, i.e7)([s.Z, l.Z], () => {

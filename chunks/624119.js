@@ -129,7 +129,7 @@ var r = {
     "./champion_64.jpg": "181219",
     "./champion_67.jpg": "495230",
     "./champion_68.jpg": "610766",
-    "./champion_69.jpg": "957686",
+    "./champion_69.jpg": "339408",
     "./champion_7.jpg": "216849",
     "./champion_711.jpg": "238433",
     "./champion_72.jpg": "389683",

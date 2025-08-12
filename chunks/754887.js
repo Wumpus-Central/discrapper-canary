@@ -1,22 +1,15 @@
-r.d(t, { default: () => l }), r(953529);
+r.d(t, { default: () => c }), r(953529);
 var n = r(255367),
-    o = r(481060),
-    a = r(639777),
-    i = r(507155),
-    s = r(679051);
-function l(e) {
+    o = r(82659),
+    a = r(481060),
+    i = r(639777),
+    s = r(507155),
+    l = r(454370);
+function c(e) {
     var t,
         r,
-        {
-            guildId: l,
-            title: d,
-            description: c,
-            powerups: u,
-            footerInfoText: p,
-            footerButtonText: f,
-            footerButtonOnClick: x,
-        } = e,
-        m = (function (e, t) {
+        { guildId: c, title: d, description: u, powerups: p, footerInfoText: f, footerAction: m } = e,
+        v = (function (e, t) {
             if (null == e) return {};
             var r,
                 n,
@@ -36,21 +29,20 @@ function l(e) {
                         !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (o[r] = e[r]);
             }
             return o;
-        })(e, [
-            "guildId",
-            "title",
-            "description",
-            "powerups",
-            "footerInfoText",
-            "footerButtonText",
-            "footerButtonOnClick",
-        ]);
-    let j = null != p && p.length > 0,
-        v = null != f && f.length > 0 && null != x,
-        C = j || v,
-        g = (0, a.Z)(l);
-    return (0, n.jsxs)(
-        o.Y0X,
+        })(e, ["guildId", "title", "description", "powerups", "footerInfoText", "footerAction"]);
+    let j = (0, i.Z)(c),
+        x =
+            null != f && f.length > 0
+                ? (0, n.jsx)("div", {
+                      className: l.footerInfoContainer,
+                      children: (0, n.jsx)(a.Text, {
+                          variant: "text-sm/medium",
+                          children: f,
+                      }),
+                  })
+                : void 0;
+    return (0, n.jsx)(
+        o.Modal,
         ((t = (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var r = null != arguments[t] ? arguments[t] : {},
@@ -75,70 +67,31 @@ function l(e) {
                     });
             }
             return e;
-        })({ size: o.CgR.DYNAMIC }, m)),
+        })(
+            {
+                title: d,
+                subtitle: u,
+                actionBarInput: x,
+                actions: null != m ? [m] : [],
+            },
+            v,
+        )),
         (r = r =
             {
-                parentComponent: "GuildPowerupPerkGroupModal",
-                children: [
-                    (0, n.jsxs)(o.hzk, {
-                        className: s.modalContentContainer,
-                        scrollbarType: "none",
-                        children: [
-                            (0, n.jsx)(o.X6q, {
-                                variant: "heading-lg/semibold",
-                                children: d,
-                            }),
-                            (0, n.jsx)(o.Text, {
-                                variant: "text-sm/medium",
-                                color: "text-secondary",
-                                children: c,
-                            }),
-                            (0, n.jsx)("div", {
-                                className: s.perkCardsContainer,
-                                children: u.map((e) =>
-                                    (0, n.jsx)(
-                                        i.Z,
-                                        {
-                                            guildId: l,
-                                            powerup: e,
-                                            canUseBoosts: null != g && g,
-                                        },
-                                        e.skuId,
-                                    ),
-                                ),
-                            }),
-                        ],
-                    }),
-                    C &&
-                        (0, n.jsx)(o.mzw, {
-                            children: (0, n.jsxs)("div", {
-                                className: s.footerContainer,
-                                children: [
-                                    j &&
-                                        (0, n.jsxs)("div", {
-                                            className: s.footerInfoContainer,
-                                            children: [
-                                                (0, n.jsx)(o.d3s, { size: "sm" }),
-                                                (0, n.jsx)(o.Text, {
-                                                    variant: "text-sm/medium",
-                                                    color: "text-secondary",
-                                                    children: p,
-                                                }),
-                                            ],
-                                        }),
-                                    v &&
-                                        (0, n.jsx)("div", {
-                                            children: (0, n.jsx)(o.zxk, {
-                                                variant: "secondary",
-                                                size: "md",
-                                                text: f,
-                                                onClick: x,
-                                            }),
-                                        }),
-                                ],
-                            }),
-                        }),
-                ],
+                children: (0, n.jsx)("div", {
+                    className: l.perkCardsContainer,
+                    children: p.map((e) =>
+                        (0, n.jsx)(
+                            s.Z,
+                            {
+                                guildId: c,
+                                powerup: e,
+                                canUseBoosts: null != j && j,
+                            },
+                            e.skuId,
+                        ),
+                    ),
+                }),
             }),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))

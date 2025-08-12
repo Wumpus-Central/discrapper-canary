@@ -15,7 +15,7 @@ var a = n(255367),
     h = n(674908),
     g = n(20437),
     x = n(388032),
-    b = n(138339);
+    b = n(980762);
 function j(e) {
     var t, n, j, y, _, w, C, P;
     let { clip: k, channelId: O, transitionState: S, onClose: N } = e,

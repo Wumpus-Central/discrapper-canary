@@ -17,8 +17,8 @@ var r = n(255367),
     j = n(527379),
     g = n(285173),
     x = n(388032),
-    v = n(506192),
-    y = n(350381);
+    v = n(335265),
+    y = n(92006);
 let O = new Set();
 function H(e) {
     let { guildId: t, onClose: n } = e,

@@ -156,7 +156,7 @@ function M(t, e) {
                 if (null != t && t.type === F.d4z.GUILD_VOICE)
                     return (0, a.ZDy)(
                         async () => {
-                            let { default: e } = await Promise.all([i.e("7654"), i.e("49049"), i.e("29328")]).then(
+                            let { default: e } = await Promise.all([i.e("7654"), i.e("49049"), i.e("36264")]).then(
                                 i.bind(i, 560114),
                             );
                             return (i) => {

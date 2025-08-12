@@ -9,7 +9,7 @@ var i = n(120356),
     o = n.n(i);
 n(755721);
 var a = n(481060),
-    s = n(754363);
+    s = n(50713);
 function l(e) {
     let { title: t } = e;
     return (0, r.jsx)(a.Text, {

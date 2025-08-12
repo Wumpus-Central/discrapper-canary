@@ -7,7 +7,7 @@ var i = n(120356),
     o = n(481060),
     a = n(266454),
     c = n(388032),
-    u = n(901986);
+    u = n(42083);
 function d() {
     return (0, a.zu)(s.z.BOGO_2025_NITRO_TAB_BADGE)
         ? (0, r.jsxs)("div", {

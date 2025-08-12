@@ -20,8 +20,8 @@ var r = n(255367),
     x = n(130653),
     h = n(415104),
     j = n(110560),
-    _ = n(78826),
-    b = n(37303),
+    b = n(78826),
+    _ = n(37303),
     v = n(134483),
     C = n(683650),
     y = n(920916),
@@ -31,9 +31,9 @@ var r = n(255367),
     T = n(602683),
     w = n(916028),
     P = n(749912),
-    N = n(815183),
-    A = n(899457),
-    R = n(409667);
+    A = n(815183),
+    N = n(899457),
+    R = n(961863);
 function B(e, t, n) {
     return (
         t in e
@@ -63,7 +63,7 @@ function k(e) {
     }
     return e;
 }
-function I(e, t) {
+function q(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -81,9 +81,9 @@ function I(e, t) {
         e
     );
 }
-let q = ["png", "gif", "webp"],
-    D = [...q, "jpg", "jpeg"],
-    Q = Array.from(new Set([...D, "gif", "mp4", "webm"]));
+let I = ["png", "gif", "webp"],
+    Q = [...I, "jpg", "jpeg"],
+    D = Array.from(new Set([...Q, "gif", "mp4", "webm"]));
 function V(e) {
     var t, n;
     return {
@@ -95,7 +95,7 @@ function V(e) {
         claimedAt: null != (n = null == (t = e.userStatus) ? void 0 : t.claimedAt) ? n : "",
     };
 }
-function L() {
+function M() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
         { streamProgressSeconds: t = 0, completedAt: n = null, enrolledAt: r = null, claimedAt: s = null } = e;
     return {
@@ -111,12 +111,12 @@ function L() {
         progress: {},
     };
 }
-let M = "1193992107035983872",
+let L = "1193992107035983872",
     Z = {
-        id: M,
+        id: L,
         preview: !0,
         config: {
-            id: M,
+            id: L,
             configVersion: 2,
             startsAt: "2024-01-01T00:00:00+00:00",
             expiresAt: "2030-01-01T00:00:00+00:00",
@@ -181,12 +181,12 @@ let M = "1193992107035983872",
         targetedContent: [],
     };
 function W() {
-    var e, t, o, u, B, V, M, W;
+    var e, t, o, u, B, V, L, W;
     let [U, H] = s.useState(Z),
-        z = s.useCallback((e) => {
-            H(I(k({}, e), { preview: !0 }));
+        F = s.useCallback((e) => {
+            H(q(k({}, e), { preview: !0 }));
         }, []),
-        [F, X] = s.useState(A.a.UNENROLLED),
+        [z, X] = s.useState(N.a.UNENROLLED),
         [K, Y] = s.useState(!1),
         [G, J] = s.useState(!1),
         [$, ee] = s.useState(null),
@@ -205,13 +205,13 @@ function W() {
             "questBarHeroVideo" === e
         ) {
             var n, r;
-            z(
-                I(k({}, U), {
+            F(
+                q(k({}, U), {
                     config:
                         ((n = U.config),
                         (r = { [e]: t }),
                         (0, i.EQ)(n)
-                            .with({ configVersion: 2 }, (e) => I(k({}, e), { assets: k({}, e.assets, r) }))
+                            .with({ configVersion: 2 }, (e) => q(k({}, e), { assets: k({}, e.assets, r) }))
                             .exhaustive()),
                 }),
             );
@@ -230,16 +230,16 @@ function W() {
                 s.videoLowRes = { url: t };
                 break;
             case "videoPlayerThumbnail":
-                s.video = I(k({}, s.video), { thumbnail: t });
+                s.video = q(k({}, s.video), { thumbnail: t });
                 break;
             default:
                 return;
         }
-        z(
-            I(k({}, U), {
-                config: I(k({}, U.config), {
-                    taskConfigV2: I(k({}, U.config.taskConfigV2), {
-                        tasks: I(k({}, n), { [l.X.WATCH_VIDEO]: I(k({}, r), { assets: s }) }),
+        F(
+            q(k({}, U), {
+                config: q(k({}, U.config), {
+                    taskConfigV2: q(k({}, U.config.taskConfigV2), {
+                        tasks: q(k({}, n), { [l.X.WATCH_VIDEO]: q(k({}, r), { assets: s }) }),
                     }),
                 }),
             }),
@@ -247,12 +247,12 @@ function W() {
     }
     function es(e, t) {
         var n, r, s;
-        z(
-            I(k({}, U), {
-                config: I(k({}, U.config), {
-                    videoMetadata: I(k({}, U.config.videoMetadata), {
+        F(
+            q(k({}, U), {
+                config: q(k({}, U.config), {
+                    videoMetadata: q(k({}, U.config.videoMetadata), {
                         messages: null != (s = null == (n = U.config.videoMetadata) ? void 0 : n.messages) ? s : {},
-                        assets: I(k({}, null == (r = U.config.videoMetadata) ? void 0 : r.assets), { [e]: t }),
+                        assets: q(k({}, null == (r = U.config.videoMetadata) ? void 0 : r.assets), { [e]: t }),
                     }),
                 }),
             }),
@@ -261,13 +261,13 @@ function W() {
     function eo(e, t) {
         if ("questName" === e || "gameTitle" === e || "gamePublisher" === e) {
             var n, r;
-            z(
-                I(k({}, U), {
+            F(
+                q(k({}, U), {
                     config:
                         ((n = U.config),
                         (r = { [e]: t }),
                         (0, i.EQ)(n)
-                            .with({ configVersion: 2 }, (e) => I(k({}, e), { messages: k({}, e.messages, r) }))
+                            .with({ configVersion: 2 }, (e) => q(k({}, e), { messages: k({}, e.messages, r) }))
                             .exhaustive()),
                 }),
             );
@@ -277,12 +277,12 @@ function W() {
         let n = U.config.taskConfigV2.tasks,
             r = n[l.X.WATCH_VIDEO];
         if (null == r) return;
-        let s = I(k({}, r.messages), { [e]: t });
-        z(
-            I(k({}, U), {
-                config: I(k({}, U.config), {
-                    taskConfigV2: I(k({}, U.config.taskConfigV2), {
-                        tasks: I(k({}, n), { [l.X.WATCH_VIDEO]: I(k({}, r), { messages: s }) }),
+        let s = q(k({}, r.messages), { [e]: t });
+        F(
+            q(k({}, U), {
+                config: q(k({}, U.config), {
+                    taskConfigV2: q(k({}, U.config.taskConfigV2), {
+                        tasks: q(k({}, n), { [l.X.WATCH_VIDEO]: q(k({}, r), { messages: s }) }),
                     }),
                 }),
             }),
@@ -291,17 +291,17 @@ function W() {
     function ei(e, t, n) {
         if ("name" === e || "nameWithArticle" === e) {
             var r, s;
-            z(
-                I(k({}, U), {
+            F(
+                q(k({}, U), {
                     config:
                         ((r = U.config),
                         (s = { [e]: t }),
                         (0, i.EQ)(r)
                             .with({ configVersion: 2 }, (e) =>
-                                I(k({}, e), {
-                                    rewardsConfig: I(k({}, e.rewardsConfig), {
+                                q(k({}, e), {
+                                    rewardsConfig: q(k({}, e.rewardsConfig), {
                                         rewards: e.rewardsConfig.rewards.map((e, t) =>
-                                            t === n ? I(k({}, e), { messages: k({}, e.messages, s) }) : e,
+                                            t === n ? q(k({}, e), { messages: k({}, e.messages, s) }) : e,
                                         ),
                                     }),
                                 }),
@@ -312,7 +312,7 @@ function W() {
         }
     }
     function el(e, t) {
-        z(I(k({}, U), { config: I(k({}, U.config), { colors: I(k({}, U.config.colors), { [e]: t }) }) }));
+        F(q(k({}, U), { config: q(k({}, U.config), { colors: q(k({}, U.config.colors), { [e]: t }) }) }));
     }
     function ec() {
         (0, m.Xv)(U.config)
@@ -347,24 +347,24 @@ function W() {
                             null != e &&
                                 (X(
                                     (function (e) {
-                                        if (null == e.userStatus) return A.a.UNENROLLED;
-                                        if (null != e.userStatus.claimedAt) return A.a.CLAIMED;
-                                        if (null != e.userStatus.completedAt) return A.a.COMPLETED_100;
+                                        if (null == e.userStatus) return N.a.UNENROLLED;
+                                        if (null != e.userStatus.claimedAt) return N.a.CLAIMED;
+                                        if (null != e.userStatus.completedAt) return N.a.COMPLETED_100;
                                         let t = (0, m.il)(e),
                                             n = t.progressSeconds,
                                             r = t.targetSeconds;
                                         return n / r >= 1
-                                            ? A.a.COMPLETED_100
+                                            ? N.a.COMPLETED_100
                                             : n / r >= 0.75
-                                              ? A.a.COMPLETED_75
+                                              ? N.a.COMPLETED_75
                                               : n / r >= 0.5
-                                                ? A.a.COMPLETED_50
+                                                ? N.a.COMPLETED_50
                                                 : n / r >= 0.25
-                                                  ? A.a.COMPLETED_25
-                                                  : A.a.ENROLLED;
+                                                  ? N.a.COMPLETED_25
+                                                  : N.a.ENROLLED;
                                     })(e),
                                 ),
-                                z(e));
+                                F(e));
                     },
                     quest: $,
                 }),
@@ -380,7 +380,7 @@ function W() {
                     taskDuration: eu,
                     taskConfigV2: U.config.taskConfigV2,
                     onSelect: function (e) {
-                        z(I(k({}, U), { config: I(k({}, U.config), { taskConfigV2: e }) }));
+                        F(q(k({}, U), { config: q(k({}, U.config), { taskConfigV2: e }) }));
                     },
                 }),
             }),
@@ -447,42 +447,42 @@ function W() {
                         title: "Hero",
                         assetKey: "hero",
                         onFileChange: en,
-                        filters: Q,
+                        filters: D,
                         initialValue: U.config.assets.hero,
                     }),
                     (0, r.jsx)(S.Z, {
                         title: "Hero Video (optional)",
                         assetKey: "heroVideo",
                         onFileChange: en,
-                        filters: Q,
+                        filters: D,
                         initialValue: null != (V = U.config.assets.heroVideo) ? V : void 0,
                     }),
                     (0, r.jsx)(S.Z, {
                         title: "Quest Bar Hero",
                         assetKey: "questBarHero",
                         onFileChange: en,
-                        filters: Q,
+                        filters: D,
                         initialValue: U.config.assets.questBarHero,
                     }),
                     (0, r.jsx)(S.Z, {
                         title: "Quest Bar Hero Video (optional)",
                         assetKey: "questBarHeroVideo",
                         onFileChange: en,
-                        filters: Q,
-                        initialValue: null != (M = U.config.assets.questBarHeroVideo) ? M : void 0,
+                        filters: D,
+                        initialValue: null != (L = U.config.assets.questBarHeroVideo) ? L : void 0,
                     }),
                     (0, r.jsx)(S.Z, {
                         title: "Game Tile",
                         assetKey: "gameTile",
                         onFileChange: en,
-                        filters: [...D, "svg"],
+                        filters: [...Q, "svg"],
                         initialValue: U.config.assets.gameTile,
                     }),
                     (0, r.jsx)(S.Z, {
                         title: "Logotype",
                         assetKey: "logotype",
                         onFileChange: en,
-                        filters: [...q, "svg"],
+                        filters: [...I, "svg"],
                         initialValue: U.config.assets.logotype,
                     }),
                     ed &&
@@ -492,28 +492,28 @@ function W() {
                                     title: "Quest Video",
                                     assetKey: "videoPlayerVideo",
                                     onFileChange: er,
-                                    filters: Q,
+                                    filters: D,
                                     initialValue: null == ep ? void 0 : ep.assets.video.url,
                                 }),
                                 (0, r.jsx)(S.Z, {
                                     title: "Quest Video (Low Resolution)",
                                     assetKey: "videoPlayerVideoLowRes",
                                     onFileChange: er,
-                                    filters: Q,
+                                    filters: D,
                                     initialValue: null == ep || null == (e = ep.assets.videoLowRes) ? void 0 : e.url,
                                 }),
                                 (0, r.jsx)(S.Z, {
                                     title: "Video Player Thumbnail (optional)",
                                     assetKey: "videoPlayerThumbnail",
                                     onFileChange: er,
-                                    filters: D,
+                                    filters: Q,
                                     initialValue: null == ep ? void 0 : ep.assets.video.thumbnail,
                                 }),
                                 (0, r.jsx)(S.Z, {
                                     title: "Quest Bar Preview Video (optional)",
                                     assetKey: "questBarPreviewVideo",
                                     onFileChange: es,
-                                    filters: Q,
+                                    filters: D,
                                     initialValue:
                                         null == (t = U.config.videoMetadata) ? void 0 : t.assets.questBarPreviewVideo,
                                 }),
@@ -521,7 +521,7 @@ function W() {
                                     title: "Quest Home Video (optional)",
                                     assetKey: "questHomeVideo",
                                     onFileChange: es,
-                                    filters: Q,
+                                    filters: D,
                                     initialValue:
                                         null == (o = U.config.videoMetadata) ? void 0 : o.assets.questHomeVideo,
                                 }),
@@ -562,21 +562,21 @@ function W() {
                                                 (function (e, t, n) {
                                                     if ("asset" === e) {
                                                         var r;
-                                                        z(
-                                                            I(k({}, U), {
+                                                        F(
+                                                            q(k({}, U), {
                                                                 config:
                                                                     ((r = U.config),
                                                                     (0, i.EQ)(r)
                                                                         .with({ configVersion: 2 }, (e) =>
-                                                                            I(k({}, e), {
-                                                                                rewardsConfig: I(
+                                                                            q(k({}, e), {
+                                                                                rewardsConfig: q(
                                                                                     k({}, e.rewardsConfig),
                                                                                     {
                                                                                         rewards:
                                                                                             e.rewardsConfig.rewards.map(
                                                                                                 (e, r) =>
                                                                                                     r === n
-                                                                                                        ? I(k({}, e), {
+                                                                                                        ? q(k({}, e), {
                                                                                                               asset: t,
                                                                                                               skuId: "",
                                                                                                           })
@@ -591,7 +591,7 @@ function W() {
                                                         );
                                                     }
                                                 })(e, n, t),
-                                            filters: Q,
+                                            filters: D,
                                             initialValue: e.asset,
                                         }),
                                     (0, r.jsxs)(d.xJW, {
@@ -639,51 +639,51 @@ function W() {
                     }),
                     (0, r.jsx)("div", {
                         className: R.fields,
-                        children: (0, r.jsx)(N.Z, {}),
+                        children: (0, r.jsx)(A.Z, {}),
                     }),
-                    (0, r.jsx)(A.Z, {
+                    (0, r.jsx)(N.Z, {
                         onChange: function (e) {
                             switch ((X(e), e)) {
-                                case A.a.UNENROLLED:
-                                    z(I(k({}, U), { userStatus: null }));
+                                case N.a.UNENROLLED:
+                                    F(q(k({}, U), { userStatus: null }));
                                     break;
-                                case A.a.ENROLLED:
-                                    z(I(k({}, U), { userStatus: L({ enrolledAt: new Date().toISOString() }) }));
+                                case N.a.ENROLLED:
+                                    F(q(k({}, U), { userStatus: M({ enrolledAt: new Date().toISOString() }) }));
                                     break;
-                                case A.a.COMPLETED_25:
-                                    z(
-                                        I(k({}, U), {
-                                            userStatus: L({
+                                case N.a.COMPLETED_25:
+                                    F(
+                                        q(k({}, U), {
+                                            userStatus: M({
                                                 enrolledAt: new Date().toISOString(),
                                                 streamProgressSeconds: 0.25 * eu,
                                             }),
                                         }),
                                     );
                                     break;
-                                case A.a.COMPLETED_50:
-                                    z(
-                                        I(k({}, U), {
-                                            userStatus: L({
+                                case N.a.COMPLETED_50:
+                                    F(
+                                        q(k({}, U), {
+                                            userStatus: M({
                                                 enrolledAt: new Date().toISOString(),
                                                 streamProgressSeconds: 0.5 * eu,
                                             }),
                                         }),
                                     );
                                     break;
-                                case A.a.COMPLETED_75:
-                                    z(
-                                        I(k({}, U), {
-                                            userStatus: L({
+                                case N.a.COMPLETED_75:
+                                    F(
+                                        q(k({}, U), {
+                                            userStatus: M({
                                                 enrolledAt: new Date().toISOString(),
                                                 streamProgressSeconds: 0.75 * eu,
                                             }),
                                         }),
                                     );
                                     break;
-                                case A.a.COMPLETED_100:
-                                    z(
-                                        I(k({}, U), {
-                                            userStatus: L({
+                                case N.a.COMPLETED_100:
+                                    F(
+                                        q(k({}, U), {
+                                            userStatus: M({
                                                 completedAt: new Date().toISOString(),
                                                 enrolledAt: new Date().toISOString(),
                                                 streamProgressSeconds: eu,
@@ -691,10 +691,10 @@ function W() {
                                         }),
                                     );
                                     break;
-                                case A.a.CLAIMED:
-                                    z(
-                                        I(k({}, U), {
-                                            userStatus: L({
+                                case N.a.CLAIMED:
+                                    F(
+                                        q(k({}, U), {
+                                            userStatus: M({
                                                 claimedAt: new Date().toISOString(),
                                                 completedAt: new Date().toISOString(),
                                                 enrolledAt: new Date().toISOString(),
@@ -704,7 +704,7 @@ function W() {
                                     );
                             }
                         },
-                        value: F,
+                        value: z,
                     }),
                 ],
             }),
@@ -731,7 +731,7 @@ function W() {
                                         }),
                                     (0, r.jsx)("div", {
                                         className: R.questBarPreview,
-                                        children: (0, r.jsx)(_.p, {
+                                        children: (0, r.jsx)(b.p, {
                                             isPreview: !0,
                                             source: "preview",
                                             questId: "0",
@@ -746,7 +746,7 @@ function W() {
                         withBorder: !0,
                         children: [
                             (0, r.jsx)(d.vwX, { children: "Quest Home Card" }),
-                            (0, r.jsx)(_.p, {
+                            (0, r.jsx)(b.p, {
                                 isPreview: !0,
                                 source: "preview",
                                 questId: "0",
@@ -774,7 +774,7 @@ function W() {
                                 }),
                             (0, r.jsx)("div", {
                                 className: R.questBarPreviewWrapper,
-                                children: (0, r.jsx)(_.p, {
+                                children: (0, r.jsx)(b.p, {
                                     isPreview: !0,
                                     source: "preview",
                                     questId: "0",
@@ -810,7 +810,7 @@ function W() {
                             G
                                 ? (0, r.jsx)(C.o, { questId: U.id })
                                 : (0, r.jsx)(
-                                      b.Z,
+                                      _.Z,
                                       {
                                           quest: U,
                                           location: g.jn.QUESTS_EMBED,
@@ -845,13 +845,13 @@ function W() {
                                             let { default: e } = await Promise.all([
                                                 n.e("66816"),
                                                 n.e("32249"),
-                                                n.e("63942"),
+                                                n.e("75961"),
                                             ]).then(n.bind(n, 536687));
                                             return (t) => {
                                                 var n;
                                                 return (0, r.jsx)(
                                                     e,
-                                                    I(k({}, t), {
+                                                    q(k({}, t), {
                                                         openStartClockTime: performance.now(),
                                                         videoSessionId: "fake-quest-session-id",
                                                         questId: null != (n = U.id) ? n : "fake-quest-id",

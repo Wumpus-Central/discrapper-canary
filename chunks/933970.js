@@ -4,7 +4,7 @@ n(73800);
 var r = n(120356),
     s = n.n(r),
     a = n(481060),
-    l = n(216419);
+    l = n(37519);
 function o(e) {
     let { icon: t, tooltip: n, onClick: r, className: o } = e,
         c = (e) => {

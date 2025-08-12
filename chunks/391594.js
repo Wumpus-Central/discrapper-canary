@@ -22,8 +22,8 @@ var r = n(73800),
     O = n(333867),
     y = n(98278),
     b = n(642619),
-    g = n(110560),
-    h = n(507808),
+    h = n(110560),
+    g = n(507808),
     P = n(626135),
     m = n(585483),
     v = n(63063),
@@ -50,8 +50,8 @@ let k = (t) => (null != t ? _.intl.format(_.t["4kp0AA"], { itemName: t }) : null
         if (null != r) return r;
         if (T.Vt.ORB_PROFILE_BADGE === e.skuId) return _.intl.string(S.default.nvaTQk);
         if (T.Vt.FRACTIONAL_PREMIUM === e.skuId)
-            if (o) return _.intl.string(_.t["Q+BB29"]);
-            else return _.intl.string(_.t["+PHEo6"]);
+            if (o) return _.intl.string(_.t.t0xkSE);
+            else return _.intl.string(_.t.g5W1g4);
         if (null != n)
             return _.intl.formatToPlainString(new Date() < T.a$ ? _.t.BhGU09 : _.t.Jfv5Qk, {
                 purchased_item: a,
@@ -78,14 +78,14 @@ let k = (t) => (null != t ? _.intl.format(_.t["4kp0AA"], { itemName: t }) : null
         if (T.Vt.FRACTIONAL_PREMIUM === e.skuId) {
             let t = _.intl.formatToPlainString(_.t["Cz1G9/"], { days: 3 });
             return c
-                ? _.intl.format(_.t.tgc1oq, {
+                ? _.intl.format(_.t.bhLChI, {
                       helpCenterLink: v.Z.getArticleURL(j.BhN.FRACTIONAL_PREMIUM_ABOUT),
                       duration: t,
                       expirationDate: p,
                   })
                 : d
-                  ? _.intl.string(_.t["1ku8i4"])
-                  : _.intl.format(_.t.fI1nLy, {
+                  ? _.intl.string(_.t.fBmhEx)
+                  : _.intl.format(_.t["1ZBX4O"], {
                         helpCenterLink: v.Z.getArticleURL(j.BhN.FRACTIONAL_PREMIUM_ABOUT),
                         duration: t,
                     });
@@ -134,12 +134,12 @@ let k = (t) => (null != t ? _.intl.format(_.t["4kp0AA"], { itemName: t }) : null
                     variant: "secondary",
                     onClick: () => {
                         r(),
-                            (0, h.Y)({
+                            (0, g.Y)({
                                 pageType: j.ZY5.SHOP_ORBS_TAB,
                                 sectionType: j.jXE.ORBS_BADGE_REDEMPTION_MODAL,
                                 ctaObject: j.qAy.CTA_TO_QUEST_HOME,
                             }),
-                            (0, g.navigateToQuestHome)();
+                            (0, h.navigateToQuestHome)();
                     },
                 },
             );
@@ -152,7 +152,7 @@ let k = (t) => (null != t ? _.intl.format(_.t["4kp0AA"], { itemName: t }) : null
                           onClick: r,
                       },
                       {
-                          text: _.intl.string(_.t["eQX+go"]),
+                          text: _.intl.string(_.t.ERKK6u),
                           variant: "primary",
                           onClick: () => {
                               (0, y.$)(r);
@@ -166,7 +166,7 @@ let k = (t) => (null != t ? _.intl.format(_.t["4kp0AA"], { itemName: t }) : null
                           onClick: r,
                       },
                       {
-                          text: _.intl.string(_.t.LnsQGR),
+                          text: _.intl.string(_.t["Jr6N+v"]),
                           variant: "primary",
                           onClick: () => {
                               d.Z.open(j.oAB.SUBSCRIPTIONS, null, {}), r();

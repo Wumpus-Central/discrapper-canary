@@ -1,50 +1,108 @@
-n.d(t, { Z: () => d });
+n.d(t, { Z: () => x }), n(388685);
 var r = n(255367),
     s = n(73800),
     o = n(120356),
     a = n.n(o),
     i = n(717976),
     l = n(113434),
-    c = n(95985),
-    u = n(667904);
-let d = s.forwardRef(function (e, t) {
+    c = n(497505),
+    u = n(164495),
+    d = n(759853),
+    p = n(95985),
+    m = n(688927),
+    g = n(743294),
+    f = n(518210);
+let x = s.forwardRef(function (e, t) {
     var n;
     let {
             className: o,
-            expansionSpring: d,
-            isExpanded: p,
-            isExpansionAnimationComplete: m,
-            quest: g,
-            taskDetails: f,
+            expansionSpring: x,
+            isExpanded: h,
+            isExpansionAnimationComplete: j,
+            quest: b,
+            taskDetails: _,
+            useReducedMotion: v,
+            onCtxMenuOpen: C,
+            onCtxMenuClose: y,
+            onCtxMenuSelect: O,
+            overlayRef: E,
+            shouldShowRewardsCTAWhenCollapsed: S,
         } = e,
-        x = (0, l.Jf)(g),
-        h = s.useRef(null),
-        j = (null == (n = g.userStatus) ? void 0 : n.enrolledAt) != null,
-        _ = null != x ? x.percentComplete : f.percentComplete;
-    return (0, r.jsx)(i.animated.div, {
-        ref: t,
-        "aria-hidden": p && m,
-        className: a()(o, u.contentCollapsed, {
-            [u.contentCollapsedExpanded]: p,
-            [u.contentCollapsedAccepted]: j,
-        }),
-        style: {
-            opacity: d.to({
-                range: [0, 1],
-                output: [1, 0],
+        T = (0, l.Jf)(b),
+        w = s.useRef(null),
+        P = (null == (n = b.userStatus) ? void 0 : n.enrolledAt) != null,
+        A = null != T ? T.percentComplete : _.percentComplete,
+        [N, R] = s.useState(!1);
+    return (0, r.jsxs)(r.Fragment, {
+        children: [
+            S &&
+                (0, r.jsx)(d.Z, {
+                    expansionSpring: x,
+                    overlayRef: E,
+                    progressBarRef: w,
+                    quest: b,
+                    isExpanded: h,
+                    isHovered: N,
+                    shouldShowRewardsCTAWhenCollapsed: !0,
+                }),
+            (0, r.jsx)(i.animated.div, {
+                ref: t,
+                "aria-hidden": h && j,
+                className: a()(o, f.contentCollapsed, {
+                    [f.contentCollapsedExpanded]: h,
+                    [f.contentCollapsedAccepted]: P,
+                }),
+                style: {
+                    opacity: x.to({
+                        range: [0, 1],
+                        output: [1, 0],
+                    }),
+                    backgroundImage: S ? "linear-gradient(90deg, ".concat(g.aY, ", ").concat(g.v6, ")") : void 0,
+                },
+                onMouseEnter: () => R(!0),
+                onMouseLeave: () => R(!1),
+                children: (0, r.jsxs)("div", {
+                    className: f.contentCollapsedWrapper,
+                    children: [
+                        S &&
+                            (0, r.jsxs)(r.Fragment, {
+                                children: [
+                                    (0, r.jsx)(m.Z, {
+                                        quest: b,
+                                        onCtxMenuOpen: C,
+                                        onCtxMenuClose: y,
+                                        onCtxMenuSelect: O,
+                                    }),
+                                    (0, r.jsx)("div", { className: f.divider }),
+                                ],
+                            }),
+                        P
+                            ? (0, r.jsx)(p.Z, {
+                                  contentLocation: "collapsed",
+                                  quest: b,
+                                  progressBarRef: w,
+                                  isExpanded: !1,
+                                  percentComplete: A,
+                              })
+                            : null,
+                        S &&
+                            (0, r.jsx)(u.y, {
+                                quest: b,
+                                useReducedMotion: v,
+                                isExpanded: !1,
+                                awaitingConsoleConnections: !1,
+                                hasMadeProgress: !0,
+                                isProgressing: !1,
+                                activeScreen: c.LI.DESKTOP,
+                                showBackButton: !1,
+                                onBack: () => {},
+                                taskDetails: _,
+                                sourceQuestContent: c.jn.QUEST_BAR_V2,
+                                shouldShowRewardsCTAWhenCollapsed: !0,
+                            }),
+                    ],
+                }),
             }),
-        },
-        children: (0, r.jsx)("div", {
-            className: u.contentCollapsedWrapper,
-            children: j
-                ? (0, r.jsx)(c.Z, {
-                      contentLocation: "collapsed",
-                      quest: g,
-                      progressBarRef: h,
-                      isExpanded: !1,
-                      percentComplete: _,
-                  })
-                : null,
-        }),
+        ],
     });
 });

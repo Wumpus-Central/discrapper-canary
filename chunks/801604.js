@@ -21,7 +21,7 @@ var i = n(120356),
     b = n(65154),
     S = n(676462),
     C = n(388032),
-    y = n(326879);
+    y = n(473866);
 function O() {
     return (0, r.jsx)("span", {
         className: y.ellipsis,

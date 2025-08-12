@@ -9,8 +9,8 @@ var r,
     u = n(215569),
     d = n(481060),
     p = n(37234),
-    h = n(134616),
-    f = n(714338),
+    f = n(134616),
+    h = n(714338),
     g = n(663993),
     m = n(84615),
     b = n(984802),
@@ -18,7 +18,7 @@ var r,
     O = n(819640),
     E = n(585483),
     y = n(981631),
-    v = n(400709);
+    v = n(124835);
 function I(e, t, n) {
     return (
         t in e
@@ -82,7 +82,7 @@ let N = (0, g.Un)({
     }),
     j = (0, g.Un)({
         createPromise: () =>
-            Promise.all([n.e("7654"), n.e("58175"), n.e("13616"), n.e("86915")]).then(n.bind(n, 869779)),
+            Promise.all([n.e("7654"), n.e("58175"), n.e("8725"), n.e("86915")]).then(n.bind(n, 869779)),
         webpackId: 869779,
         name: "ChannelSettings",
     }),
@@ -98,12 +98,12 @@ let N = (0, g.Un)({
                 n.e("7654"),
                 n.e("58175"),
                 n.e("44156"),
-                n.e("13616"),
+                n.e("8725"),
                 n.e("6850"),
                 n.e("58227"),
                 n.e("54408"),
                 n.e("20087"),
-                n.e("22988"),
+                n.e("5533"),
                 n.e("95140"),
             ]).then(n.bind(n, 994763)),
         webpackId: 994763,
@@ -123,7 +123,7 @@ let N = (0, g.Un)({
         tension: 100,
     };
 function D() {
-    return l.useEffect(() => (f.Z.enable(), f.Z.enableTemp(h.u), () => f.Z.disableTemp()), []), null;
+    return l.useEffect(() => (h.Z.enable(), h.Z.enableTemp(f.u), () => h.Z.disableTemp()), []), null;
 }
 class k extends (r = l.PureComponent) {
     static getDerivedStateFromProps(e, t) {

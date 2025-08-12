@@ -19,7 +19,7 @@ var i = n(442837),
     j = n(981631),
     v = n(611480),
     _ = n(388032),
-    O = n(776739);
+    O = n(114981);
 let y = {
         page: j.ZY5.GUILD_SETTINGS,
         section: j.jXE.GUILD_SETTINGS_STICKERS,

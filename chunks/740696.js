@@ -15,7 +15,7 @@ var a = n(255367),
     h = n(981631),
     f = n(921944),
     j = n(388032),
-    v = n(74891);
+    v = n(537581);
 let b = () => [
     {
         id: 0,
@@ -50,7 +50,7 @@ function y(t) {
                 text: j.intl.string(j.t["1X8SKy"]),
                 onClick: () => {
                     (0, g.ZDy)(async () => {
-                        let { default: t } = await Promise.all([n.e("45094"), n.e("45822")]).then(n.bind(n, 218613));
+                        let { default: t } = await Promise.all([n.e("45094"), n.e("78626")]).then(n.bind(n, 218613));
                         return (n) => {
                             var r, i;
                             return (0, a.jsx)(

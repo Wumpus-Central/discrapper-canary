@@ -25,7 +25,7 @@ var r = n(255367),
     O = n(765305),
     S = n(190378),
     E = n(388032),
-    w = n(994208);
+    w = n(578752);
 function T(e) {
     let { stageChannelsInGuild: t, channel: n, onSelectChannel: i } = e;
     return null == i

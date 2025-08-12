@@ -27,7 +27,7 @@ var o = l(255367),
     g = l(391594),
     S = l(302800),
     k = l(215023),
-    y = l(854402);
+    y = l(629755);
 let R = (e) => {
         let t = (0, _.o)("CollectiblesCollectedModal"),
             l = (0, s.e7)([f.default], () => {

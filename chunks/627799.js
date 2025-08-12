@@ -8,7 +8,7 @@ var i = n(243814),
     l = n(63063),
     c = n(981631),
     u = n(388032),
-    d = n(398032);
+    d = n(983545);
 function f(e) {
     let t,
         { application: n, accountScopes: o } = e,

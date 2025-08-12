@@ -6,7 +6,7 @@ var r = n(481060),
     t = n(488131),
     c = n(124368),
     i = n(388032),
-    l = n(576359);
+    l = n(178486);
 function d(e) {
     let { guildId: a, onClose: n, transitionState: d } = e;
     return (0, s.jsx)(r.Y0X, {

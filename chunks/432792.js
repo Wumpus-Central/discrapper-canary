@@ -23,7 +23,7 @@ var r = n(255367),
     b = n(622562),
     O = n(937860),
     _ = n(921944),
-    y = n(973792),
+    y = n(185905),
     C = n(447489),
     v = n(484885);
 let j = () => (0, g.Lk)(document.body.style.getPropertyValue("--custom-app-panels-height"), 56) + 8,

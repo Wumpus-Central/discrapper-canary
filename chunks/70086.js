@@ -4,7 +4,7 @@ n(73800);
 var i = n(755721),
     l = n(481060),
     a = n(388032),
-    s = n(476128);
+    s = n(369496);
 function o(e) {
     let { onClick: t, className: n } = e;
     return (0, r.jsxs)(l.gtL, {

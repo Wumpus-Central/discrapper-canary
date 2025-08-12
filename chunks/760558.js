@@ -16,7 +16,7 @@ var l = n(255367),
     f = n(4434),
     j = n(981631),
     C = n(388032),
-    v = n(671593);
+    v = n(537412);
 let b = (e) => {
     var t, n;
     let { guildBoostSlots: s, selectedGuild: b, locationSection: y, transitionState: S, onClose: N } = e,

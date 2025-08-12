@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => f });
 var r = n(255367),
     i = n(73800),
     l = n(481060),
@@ -33,16 +33,16 @@ function p(e) {
     }
     return e;
 }
-function h(e) {
+function f(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-        { priorityMembers: n, partiedMembers: h } = e,
-        f = i.useContext(c.AnalyticsContext),
+        { priorityMembers: n, partiedMembers: f } = e,
+        h = i.useContext(c.AnalyticsContext),
         g = n.map((e) => {
             let { user: t } = e;
             return t.id;
         }),
-        m = 1 === h.length && 1 === n.length,
-        b = n.length - h.length > 0;
+        m = 1 === f.length && 1 === n.length,
+        b = n.length - f.length > 0;
     return (m || t) && !b && 0 !== g.length
         ? (0, r.jsx)(l.sNh, {
               id: "message",
@@ -54,7 +54,7 @@ function h(e) {
                           p(
                               {
                                   source:
-                                      ((n = p({}, f.location)),
+                                      ((n = p({}, h.location)),
                                       (r = r = { object: u.qAy.LIST_ITEM }),
                                       Object.getOwnPropertyDescriptors
                                           ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(r))

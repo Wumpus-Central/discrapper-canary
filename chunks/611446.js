@@ -14,7 +14,7 @@ var i,
     d = n(858597),
     T = n(486213),
     S = n(388032),
-    x = n(692056),
+    x = n(543921),
     _ =
         (((i = {}).ACTIONS = "ACTIONS"),
         (i.SAFETY_TIPS = "SAFETY_TIPS"),

@@ -18,7 +18,7 @@ var r = n(255367),
     x = n(228168),
     h = n(981631),
     O = n(388032),
-    v = n(247787);
+    v = n(931944);
 function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -56,14 +56,14 @@ function I(e) {
             onHide: N,
             sourceAnalyticsLocations: S = [],
         } = e,
-        w = n === h.ME ? void 0 : n,
-        A = (0, l.e7)([d.Z], () => d.Z.isBlocked(t.id)),
-        { analyticsLocations: C } = (0, c.ZP)([...S, A ? a.Z.BLOCKED_PROFILE_MODAL : a.Z.IGNORED_PROFILE_MODAL]),
+        A = n === h.ME ? void 0 : n,
+        w = (0, l.e7)([d.Z], () => d.Z.isBlocked(t.id)),
+        { analyticsLocations: C } = (0, c.ZP)([...S, w ? a.Z.BLOCKED_PROFILE_MODAL : a.Z.IGNORED_PROFILE_MODAL]),
         L = (0, f.ZB)({
             layout: "MODAL_V2",
             userId: t.id,
             showGuildProfile: !0,
-            guildId: w,
+            guildId: A,
             channelId: I,
             messageId: P,
             roleId: E,
@@ -75,10 +75,10 @@ function I(e) {
             },
             {
                 icon: o.owK,
-                description: O.intl.string(A ? O.t.QxrDY2 : O.t.W6fjkZ),
+                description: O.intl.string(w ? O.t.QxrDY2 : O.t.W6fjkZ),
             },
         ],
-        R = (0, m.ZP)(t.id, w),
+        R = (0, m.ZP)(t.id, A),
         k = u.ZP.getName(null == R ? void 0 : R.guildId, I, t),
         M = O.intl.formatToPlainString(O.t.KRe1Fh, { name: k });
     return (0, r.jsx)(c.Gt, {
@@ -106,7 +106,7 @@ function I(e) {
                             children: [
                                 (0, r.jsx)(g.Z, {
                                     user: t,
-                                    guildId: w,
+                                    guildId: A,
                                     iconColor: o.TVs.colors.TEXT_DEFAULT,
                                 }),
                                 (0, r.jsxs)("div", {
@@ -120,7 +120,7 @@ function I(e) {
                                         (0, r.jsx)(o.Text, {
                                             variant: "text-md/medium",
                                             color: "text-default",
-                                            children: O.intl.format(A ? O.t.T7QiLi : O.t.MnEow8, { username: k }),
+                                            children: O.intl.format(w ? O.t.T7QiLi : O.t.MnEow8, { username: k }),
                                         }),
                                     ],
                                 }),
@@ -145,13 +145,13 @@ function I(e) {
                                     children: [
                                         (0, r.jsx)(y.Z, {
                                             size: i.Ph.MEDIUM,
-                                            isBlocked: A,
+                                            isBlocked: w,
                                             onClick: () => {
                                                 N(),
                                                     (0, p.pQ)(
                                                         _(
                                                             {
-                                                                action: A
+                                                                action: w
                                                                     ? "VIEW_BLOCKED_PROFILE"
                                                                     : "VIEW_IGNORED_PROFILE",
                                                                 analyticsLocations: C,

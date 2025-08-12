@@ -7,7 +7,7 @@ var i = n(255367),
     r = n(481060),
     u = n(59662),
     c = n(854014),
-    d = n(610844);
+    d = n(60265);
 function f(e) {
     let { node: t } = e,
         { history: n, activeIndex: s, pushPanel: o } = (0, u.t)(),

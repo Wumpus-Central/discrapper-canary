@@ -5,8 +5,8 @@ var n = r(255367),
     l = r(312097),
     o = r(810568),
     s = r(388032),
-    c = r(263930),
-    d = r(301736);
+    c = r(110568),
+    d = r(995512);
 function u(e) {
     let { detectedGame: t, trackAction: r } = e,
         u = a.useRef(null),

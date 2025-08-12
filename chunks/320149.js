@@ -9,8 +9,8 @@ var r = n(255367),
     u = n(910611),
     d = n(355298),
     p = n(333984),
-    h = n(26373),
-    f = n(486622),
+    f = n(26373),
+    h = n(486622),
     g = n(718538),
     m = n(359110),
     b = n(6025),
@@ -18,13 +18,13 @@ var r = n(255367),
     O = n(933557),
     E = n(287746),
     y = n(388032),
-    v = n(560460),
-    I = n(46467);
+    v = n(895762),
+    I = n(796108);
 function C(e) {
     let { channel: t, baseChannelId: n } = e,
         C = (0, O.ZP)(t),
-        S = (0, h.K)(),
-        N = (0, h.V)(),
+        S = (0, f.K)(),
+        N = (0, f.V)(),
         T = (0, l.e7)([d.Z], () => d.Z.isMessageRequest(t.id)),
         P = (0, l.e7)([p.Z], () => p.Z.isSpam(t.id)),
         j = (0, g.V)(t.id, t.getRecipientId()),
@@ -34,7 +34,7 @@ function C(e) {
         A = i.useCallback(() => {
             (0, o.showToast)((0, o.createToast)(y.intl.string(y.t.pIQ3h4), o.ToastType.FAILURE));
         }, []),
-        { markAsNotSpam: Z } = (0, f.m)({
+        { markAsNotSpam: Z } = (0, h.m)({
             onAcceptSuccess: x,
             onError: A,
         });

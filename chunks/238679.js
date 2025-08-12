@@ -1,7 +1,7 @@
 n.d(t, {
-    KW: () => h,
+    KW: () => f,
     dO: () => p,
-    gQ: () => f,
+    gQ: () => h,
 });
 var r = n(392711),
     i = n.n(r),
@@ -67,9 +67,9 @@ function p() {
         }).filter(s.lm),
     };
 }
-let h = { [d.Gp.ANY]: [d.wE] },
-    f = {
-        scope: h,
+let f = { [d.Gp.ANY]: [d.wE] },
+    h = {
+        scope: f,
         handler: () => (e) => {
             let { prevState: t, dispatch: n } = e,
                 r = p();

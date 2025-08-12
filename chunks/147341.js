@@ -4,7 +4,7 @@ n(73800);
 var i = n(481060),
     l = n(144717),
     a = n(388032),
-    o = n(677973);
+    o = n(563968);
 function s() {
     return (0, r.jsx)("div", {
         className: o.wrapper,

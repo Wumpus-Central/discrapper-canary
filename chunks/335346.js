@@ -4,7 +4,7 @@ n(73800);
 var r = n(120356),
     s = n.n(r);
 n(755721), n(481060), n(937860);
-var a = n(973792);
+var a = n(185905);
 let l = (e) => {
     let { invertTail: t, leftOffset: n, rightOffset: r, tailSpineClassName: l, tailTargetInnerClassName: o } = e;
     return (0, i.jsxs)("div", {

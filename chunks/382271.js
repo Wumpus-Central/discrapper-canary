@@ -20,7 +20,7 @@ var r = a(255367),
     g = a(263885),
     v = a(981631),
     C = a(388032),
-    E = a(404706),
+    E = a(323889),
     N = a(690813);
 let S = (e, t) => {
         x.Z.hasLayers() && (0, p.xf)(), m.Z.openPrivateChannel({ recipientIds: e }), t();

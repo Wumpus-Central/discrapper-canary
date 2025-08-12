@@ -1,5 +1,8 @@
 e.exports = {
-    wrapper: "wrapper__77ba1",
-    header: "header__77ba1",
-    content: "content__77ba1",
+    formHeaderContainer: "formHeaderContainer__23a6b",
+    formContent: "formContent__23a6b",
+    formFooter: "formFooter__23a6b",
+    formImage: "formImage__23a6b",
+    formSubHeader: "formSubHeader__23a6b",
+    formHeader: "formHeader__23a6b",
 };

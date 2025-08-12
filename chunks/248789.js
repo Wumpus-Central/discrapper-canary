@@ -92,7 +92,7 @@ function y(e) {
         T = i.useCallback(() => {
             (0, s.ZDy)(
                 async () => {
-                    let { default: e } = await Promise.all([n.e("49508"), n.e("9738"), n.e("28433")]).then(
+                    let { default: e } = await Promise.all([n.e("49508"), n.e("9738"), n.e("90025")]).then(
                         n.bind(n, 611446),
                     );
                     return (n) => {

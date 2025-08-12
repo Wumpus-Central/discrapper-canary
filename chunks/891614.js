@@ -3,7 +3,7 @@ var r = n(255367);
 n(73800);
 var i = n(442837),
     o = n(607070),
-    a = n(326669);
+    a = n(994114);
 function s(e) {
     let { guildId: t, user: n, className: s } = e,
         l = (0, i.e7)([o.Z], () => !o.Z.useReducedMotion),

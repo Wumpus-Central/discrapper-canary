@@ -34,7 +34,7 @@ var r = n(255367),
     M = n(151189),
     k = n(611480),
     j = n(981631),
-    U = n(655304);
+    U = n(102873);
 function G(e, t, n) {
     return (
         t in e
@@ -164,7 +164,7 @@ let V = (0, v.Mg)(c.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                                 location: Z,
                             }),
                                 (0, u.ZDy)(async () => {
-                                    let { default: t } = await Promise.all([n.e("93626"), n.e("61547")]).then(
+                                    let { default: t } = await Promise.all([n.e("93626"), n.e("72865")]).then(
                                         n.bind(n, 136735),
                                     );
                                     return (n) => (0, r.jsx)(t, B({ guildId: e.guild_id }, n));

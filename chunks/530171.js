@@ -4,7 +4,7 @@ var i = n(255367),
     s = n.n(l),
     o = n(657707),
     a = n(206403),
-    r = n(647371);
+    r = n(477541);
 function u(e) {
     let { title: t, subtitle: n, isOpen: l, setIsOpen: u, compact: c = !1, children: d } = e;
     return (0, i.jsxs)(i.Fragment, {

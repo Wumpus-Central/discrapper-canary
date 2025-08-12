@@ -9,16 +9,16 @@ var i = n(657707),
     l = n(793030),
     s = n(692547),
     a = n(93841),
-    c = n(388032),
-    u = n(154142),
+    u = n(388032),
+    c = n(65418),
     d = (((r = {})[(r.AVAILABLE = 0)] = "AVAILABLE"), (r[(r.SPENT = 1)] = "SPENT"), (r[(r.TOTAL = 2)] = "TOTAL"), r);
 function p(e) {
     let { count: t, type: n } = e;
     return (0, o.jsxs)("div", {
-        className: u.container,
+        className: c.container,
         children: [
             (0, o.jsxs)("div", {
-                className: u.headerContainer,
+                className: c.headerContainer,
                 children: [
                     (0, o.jsx)(i.$Eu, {
                         size: "sm",
@@ -37,11 +37,11 @@ function p(e) {
                 children: (() => {
                     switch (n) {
                         case 0:
-                            return c.intl.formatToPlainString(a.default.BdRXZG, { boostCount: t });
+                            return u.intl.formatToPlainString(a.default.BdRXZG, { boostCount: t });
                         case 1:
-                            return c.intl.formatToPlainString(a.default.xvgIVF, { boostCount: t });
+                            return u.intl.formatToPlainString(a.default.xvgIVF, { boostCount: t });
                         case 2:
-                            return c.intl.string(a.default["/F7Z29"]);
+                            return u.intl.string(a.default["/F7Z29"]);
                     }
                 })(),
             }),

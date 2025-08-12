@@ -9,7 +9,7 @@ let r = {
             themeColors: [752280, 9215590],
             avatarDecorationSkuId: "1144059132517826601",
             getName: () => i.intl.string(i.t["TFc+iI"]),
-            getHeaderSrc: () => n(947557).Z,
+            getHeaderSrc: () => n(517939).Z,
             getBannerSrc: (e) => (e ? n(288097).Z : n(201016).Z),
         },
         cyberpunk: {

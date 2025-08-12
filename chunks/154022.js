@@ -37,8 +37,8 @@ var i = n(255367),
     M = n(653477),
     B = n(388032),
     U = n(698282),
-    V = n(855112),
-    G = n(20493),
+    V = n(473265),
+    G = n(881488),
     F = n(328756);
 function H(e) {
     for (var t = 1; t < arguments.length; t++) {

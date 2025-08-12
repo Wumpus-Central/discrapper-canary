@@ -9,11 +9,11 @@ var r = n(255367),
     u = n(579022),
     d = n(391690),
     p = n(424218),
-    h = n(358085),
-    f = n(998502),
+    f = n(358085),
+    h = n(998502),
     g = n(388032),
-    m = n(512231),
-    b = n(20493);
+    m = n(128227),
+    b = n(881488);
 function _(e, t, n) {
     return (
         t in e
@@ -301,7 +301,7 @@ class E extends i.PureComponent {
                         variant: "primary",
                         size: "sm",
                         text: g.intl.string(g.t.pnZ2ur),
-                        disabled: !h.isPlatformEmbedded,
+                        disabled: !f.isPlatformEmbedded,
                         onClick: this.handleAddInstallationLocation,
                     }),
                 }),
@@ -312,7 +312,7 @@ class E extends i.PureComponent {
         super(...e),
             _(this, "state", { editingPath: null }),
             _(this, "handleAddInstallationLocation", () => {
-                f.ZP.showOpenDialog(["openDirectory"]).then((e) => {
+                h.ZP.showOpenDialog(["openDirectory"]).then((e) => {
                     null != e && 0 !== e.length && null != e[0] && "undefined" !== e[0] && (0, o.RY)(e[0]);
                 });
             }),

@@ -10,14 +10,14 @@ var i = n(120356),
     u = n(639351),
     d = n(565473),
     p = n(927923),
-    h = n(388032),
-    f = n(356849);
+    f = n(388032),
+    h = n(528833);
 function g(e) {
     let { platform: t } = e;
     return t === p.YE.XBOX
-        ? (0, r.jsx)(u.Z, { className: f.icon })
+        ? (0, r.jsx)(u.Z, { className: h.icon })
         : t === p.YE.PLAYSTATION
-          ? (0, r.jsx)(c.Z, { className: f.icon })
+          ? (0, r.jsx)(c.Z, { className: h.icon })
           : null;
 }
 function m(e) {
@@ -34,13 +34,13 @@ function m(e) {
     let m = null != n,
         b = m
             ? u === p.YE.XBOX
-                ? h.intl.string(h.t.UjA4HR)
-                : h.intl.string(h.t.QCw1oa)
+                ? f.intl.string(f.t.UjA4HR)
+                : f.intl.string(f.t.QCw1oa)
             : u === p.YE.XBOX
-              ? h.intl.format(h.t["ynEs/f"], {})
-              : h.intl.format(h.t.TZ17Bg, {});
+              ? f.intl.format(f.t["ynEs/f"], {})
+              : f.intl.format(f.t.TZ17Bg, {});
     return (0, r.jsxs)("div", {
-        className: l()(f.root, m ? f.connecting : f.connected),
+        className: l()(h.root, m ? h.connecting : h.connected),
         children: [
             (0, r.jsx)(g, { platform: u }),
             (0, r.jsx)(o.Text, {

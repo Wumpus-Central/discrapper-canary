@@ -13,7 +13,7 @@ var r = n(255367),
     d = n(981631),
     h = n(29953),
     p = n(388032),
-    f = n(420473);
+    f = n(89100);
 let g = () => {
     o.Z.open(d.oAB.ACTIVITY_PRIVACY);
 };

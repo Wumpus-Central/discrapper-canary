@@ -20,15 +20,15 @@ var l = n(442837),
     h = n(179828),
     O = n(228168),
     v = n(388032),
-    _ = n(349966);
+    _ = n(926505);
 function I(e) {
     let { user: t, currentUser: n, displayProfile: I, subsection: P, onClose: E } = e,
         { trackUserProfileAction: Z } = (0, f.KZ)(),
         T = (0, l.e7)([d.Z], () => d.Z.getGuildId()),
         N = (0, a.Y)({ userId: t.id }),
         S = (0, l.e7)([u.Z], () => u.Z.hidePersonalInformation),
-        w = (0, l.e7)([s.default], () => s.default.locale),
-        A = (0, m.Z)(t.id),
+        A = (0, l.e7)([s.default], () => s.default.locale),
+        w = (0, m.Z)(t.id),
         C = (0, p.Z)(t.id);
     return (0, r.jsxs)(i.zJl, {
         fade: !0,
@@ -71,15 +71,15 @@ function I(e) {
                     tooltipDelay: O.vB,
                 }),
             }),
-            A.length > 0 &&
+            w.length > 0 &&
                 (0, r.jsx)(x.Z, {
                     heading: v.intl.string(v.t["3fe7U1"]),
                     scrollIntoView: P === O.Tb.CONNECTIONS,
                     children: (0, r.jsx)(b.ZP, {
-                        connectedAccounts: A,
+                        connectedAccounts: w,
                         className: _.connections,
                         userId: t.id,
-                        locale: w,
+                        locale: A,
                     }),
                 }),
             C.length > 0 &&
@@ -91,7 +91,7 @@ function I(e) {
                             {
                                 className: _.appsConnections,
                                 applicationRoleConnection: e,
-                                locale: w,
+                                locale: A,
                                 onApplicationClicked: () => {
                                     Z({ action: "PRESS_APP_CONNECTION" }), E();
                                 },

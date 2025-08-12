@@ -6,7 +6,7 @@ var r = n(342905),
     i = n(594928),
     o = n(181430),
     a = n(698282),
-    s = n(772335);
+    s = n(224347);
 let l = {
         name: a.default.ZEL6m5,
         className: "",

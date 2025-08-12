@@ -24,7 +24,7 @@ var r = a(255367),
     N = a(382271),
     S = a(981631),
     y = a(388032),
-    w = a(556133);
+    w = a(476674);
 let Z = (e) => {
         let { onClose: t, onShare: a } = e,
             n = (0, l.e7)([j.Z], () => j.Z.getReferralsRemaining()),

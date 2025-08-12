@@ -18,7 +18,7 @@ var r = n(255367),
     b = n(490095),
     y = n(981631),
     O = n(388032),
-    v = n(157882);
+    v = n(898136);
 function I(e, t, n) {
     return (
         t in e
@@ -176,7 +176,7 @@ let R = (0, l.Mg)(v.__invalid_stickerPickerPreviewDimensions),
                                         location: W,
                                     }),
                                     (0, c.ZDy)(async () => {
-                                        let { default: t } = await Promise.all([n.e("93626"), n.e("61547")]).then(
+                                        let { default: t } = await Promise.all([n.e("93626"), n.e("72865")]).then(
                                             n.bind(n, 136735),
                                         );
                                         return (n) => (0, r.jsx)(t, T({ guildId: e.guild_id }, n));

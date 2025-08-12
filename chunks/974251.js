@@ -36,7 +36,7 @@ var r = n(255367),
     j = n(356659),
     U = n(921944),
     G = n(388032),
-    B = n(911777);
+    B = n(326218);
 function Z(e, t, n) {
     return (
         t in e
@@ -139,7 +139,7 @@ function Y(e) {
     function eg() {
         (0, c.ZDy)(
             async () => {
-                let { default: e } = await Promise.all([n.e("2668"), n.e("72739")]).then(n.bind(n, 542055));
+                let { default: e } = await Promise.all([n.e("2668"), n.e("27330")]).then(n.bind(n, 542055));
                 return (t) => (0, r.jsx)(e, H(F({}, t), { channelId: V.id }));
             },
             { modalKey: j.Qr },

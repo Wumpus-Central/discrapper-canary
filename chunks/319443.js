@@ -35,7 +35,7 @@ var r = n(255367),
     D = n(979007),
     k = n(981631),
     M = n(388032),
-    G = n(691133);
+    G = n(354451);
 function B(e) {
     let { applicationId: t, hideDetailHeaderButtons: n, onClickBack: i } = e,
         s = (0, o.e7)([y.Z], () => y.Z.getApplication(t)),

@@ -5,16 +5,16 @@ var r = n(255367),
     l = n(481060),
     s = n(434404),
     a = n(485386),
-    c = n(944888),
-    u = n(234368),
+    u = n(944888),
+    c = n(234368),
     d = n(981631),
     p = n(921944),
-    f = n(808353);
+    f = n(180799);
 function m(e) {
     let { guildId: t, perk: n, markAsDismissed: m } = e,
-        g = u._k[n],
+        g = c._k[n],
         x = async () => {
-            let e = a.Z.getSortedRoles(t).find(c.YB);
+            let e = a.Z.getSortedRoles(t).find(u.YB);
             await s.Z.open(t, d.pNK.ROLES), null != e && (await s.Z.selectRole(e.id)), m(p.L.SECONDARY);
         };
     return (0, r.jsxs)("div", {

@@ -16,7 +16,7 @@ var i = n(442837),
     m = n(518950),
     g = n(967128),
     E = n(388032),
-    b = n(906667);
+    b = n(152131);
 function y(e, t, n) {
     return (
         t in e
@@ -116,7 +116,11 @@ function T(e) {
                     (0, r.jsxs)(a.h, {
                         className: b.buttonContainer,
                         children: [
-                            (0, r.jsx)(h.l, { channel: n }),
+                            (0, r.jsx)(h.l, {
+                                channel: n,
+                                text: E.intl.string(E.t["6Qgren"]),
+                                icon: s.ejJ,
+                            }),
                             (0, r.jsx)(o.z, {
                                 icon: s.vdY,
                                 variant: "secondary",

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h }), n(388685), n(290780), n(539854);
+n.d(t, { Z: () => f }), n(388685), n(290780), n(539854);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(415104),
     u = n(46140),
     d = n(388032),
-    p = n(204997);
-function h(e) {
+    p = n(196180);
+function f(e) {
     let { quests: t, isFetching: n } = e,
         l = null;
     if (window.location.hash.length > 0) {
@@ -32,8 +32,8 @@ function h(e) {
                 break;
             }
     }, [t, l]);
-    let h = null != l,
-        [f, g] = i.useState(window.innerWidth);
+    let f = null != l,
+        [h, g] = i.useState(window.innerWidth);
     i.useEffect(() => {
         let e = () => {
             g(window.innerWidth);
@@ -45,7 +45,7 @@ function h(e) {
             }
         );
     }, []);
-    let m = f >= 1610 ? 3 : f >= 1340 ? 2 : 1,
+    let m = h >= 1610 ? 3 : h >= 1340 ? 2 : 1,
         b = i.useMemo(() => {
             let e = [];
             for (let r of t) {
@@ -85,8 +85,8 @@ function h(e) {
                                 contentPosition: t,
                                 rowIndex: n,
                                 className: a()(p.questTile, {
-                                    [p.selected]: h && e.id === l,
-                                    [p.unselected]: h && e.id !== l,
+                                    [p.selected]: f && e.id === l,
+                                    [p.unselected]: f && e.id !== l,
                                 }),
                                 sourceQuestContent: s.jn.QUEST_HOME_DESKTOP,
                             },

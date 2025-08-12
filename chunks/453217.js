@@ -13,7 +13,7 @@ var s = n(120356),
     m = n(788284),
     g = n(46140),
     f = n(388032),
-    x = n(192214);
+    x = n(674568);
 let h = function (e) {
     var t;
     let {
@@ -21,12 +21,12 @@ let h = function (e) {
             expansionSpring: s,
             isExpanded: h,
             isExpansionAnimationComplete: j,
-            quest: _,
-            useReducedMotion: b,
+            quest: b,
+            useReducedMotion: _,
         } = e,
-        v = (null == (t = _.userStatus) ? void 0 : t.enrolledAt) != null,
-        { percentComplete: C } = (0, l.Rf)(_),
-        y = (0, l.Jf)(_),
+        v = (null == (t = b.userStatus) ? void 0 : t.enrolledAt) != null,
+        { percentComplete: C } = (0, l.Rf)(b),
+        y = (0, l.Jf)(b),
         O = null != y ? y.percentComplete > 0 : C > 0;
     return (0, r.jsxs)(a.animated.div, {
         "aria-hidden": h && j,
@@ -42,8 +42,8 @@ let h = function (e) {
         },
         children: [
             (0, r.jsx)(m.Z, {
-                quest: _,
-                useReducedMotion: b,
+                quest: b,
+                useReducedMotion: _,
             }),
             (0, r.jsx)("div", {
                 className: x.contentCollapsedWrapper,
@@ -53,7 +53,7 @@ let h = function (e) {
                           children: [
                               (0, r.jsx)(p.Z, {
                                   className: x.questProgressRewardTile,
-                                  quest: _,
+                                  quest: b,
                                   questContent: c.jn.QUEST_BAR,
                                   autoplay: !1,
                                   location: g.dr.QUESTS_BAR,
@@ -62,7 +62,7 @@ let h = function (e) {
                               O
                                   ? (0, r.jsx)(d.Z, {
                                         className: x.questProgressBar,
-                                        quest: _,
+                                        quest: b,
                                     })
                                   : (0, r.jsx)(i.Text, {
                                         className: x.questProgressHint,
@@ -77,13 +77,13 @@ let h = function (e) {
                           children: [
                               (0, r.jsx)(u.ZP, {
                                   className: x.partnerBranding,
-                                  quest: _,
+                                  quest: b,
                               }),
                               (0, r.jsx)(i.X6q, {
                                   color: "always-white",
                                   variant: "heading-sm/medium",
                                   className: x.questName,
-                                  children: f.intl.format(f.t.EAYZAg, { questName: _.config.messages.questName }),
+                                  children: f.intl.format(f.t.EAYZAg, { questName: b.config.messages.questName }),
                               }),
                           ],
                       }),

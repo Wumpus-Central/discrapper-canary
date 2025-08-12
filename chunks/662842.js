@@ -9,8 +9,8 @@ var r = n(255367),
     u = n(232567),
     d = n(100527),
     p = n(471445),
-    h = n(15274),
-    f = n(924301),
+    f = n(15274),
+    h = n(924301),
     g = n(504160),
     m = n(151864),
     b = n(725436),
@@ -31,7 +31,7 @@ var r = n(255367),
     Z = n(981631),
     w = n(765305),
     L = n(388032),
-    R = n(29504);
+    R = n(488822);
 function D(e) {
     let { guild: t, isStudyRoomNotice: n = !1 } = e,
         l = (0, _.y)(t.id),
@@ -78,10 +78,10 @@ function D(e) {
                         speakers: s,
                         listenerCount: u,
                         isEventNoticeHidden: d,
-                        isStageNoticeHidden: h,
+                        isStageNoticeHidden: f,
                         isStudyRoomNotice: m,
                     } = e,
-                    _ = null != n && null != i && !h,
+                    _ = null != n && null != i && !f,
                     O = null != t ? (0, y.DK)(t) : null;
                 if (m && null != i) {
                     let e = (0, p.KS)(i);
@@ -196,7 +196,7 @@ function D(e) {
                 } else if (t.entity_type === w.WX.EXTERNAL) {
                     let e = (0, E.cS)(t);
                     if (null == e) return { noticeType: null };
-                    let n = f.ZP.getUserCount(t.id, O);
+                    let n = h.ZP.getUserCount(t.id, O);
                     return {
                         noticeType: 1,
                         title: t.name,
@@ -236,7 +236,7 @@ function D(e) {
                     };
                 } else if (t.entity_type === w.WX.VOICE && null != i) {
                     let e = (0, p.KS)(i),
-                        n = f.ZP.getUserCount(t.id, O);
+                        n = h.ZP.getUserCount(t.id, O);
                     return {
                         noticeType: 2,
                         title: t.name,
@@ -374,7 +374,7 @@ function D(e) {
                                             ((0, I.Cq)(l), (0, v.XU)(l.getGuildId(), l.id));
                                     else {
                                         if (null == d) return;
-                                        (0, h.bO)({ eventId: d.id });
+                                        (0, f.bO)({ eventId: d.id });
                                     }
                                 },
                                 fullWidth: !0,

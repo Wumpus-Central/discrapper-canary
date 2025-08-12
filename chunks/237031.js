@@ -18,7 +18,7 @@ let a = "collectibles shop product details modal",
         } = e;
         (0, l.ZDy)(
             async () => {
-                let { default: e } = await Promise.all([r.e("78223"), r.e("16476")]).then(r.bind(r, 702370));
+                let { default: e } = await Promise.all([r.e("78223"), r.e("70119")]).then(r.bind(r, 702370));
                 return (r) => {
                     var l, a;
                     return (0, n.jsx)(

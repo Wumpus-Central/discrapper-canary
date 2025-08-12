@@ -8,7 +8,7 @@ var i = n(215569),
     o = n(727072),
     c = n(65912),
     d = n(388032),
-    u = n(11532);
+    u = n(928426);
 function m(e) {
     let { guildId: t, existingRules: n } = e,
         {

@@ -1,9 +1,9 @@
-n.d(t, { Z: () => o });
+n.d(e, { Z: () => o });
 var i = n(626135),
     a = n(981631);
-function o(e) {
+function o(t) {
     let {
-        problem: t,
+        problem: e,
         channel: n,
         embeddedActivityLocation: o,
         feedback: l,
@@ -11,9 +11,9 @@ function o(e) {
         analyticsData: r = {},
         location: _,
         rating: d = null,
-    } = e;
+    } = t;
     i.default.track(a.rMx.ACTIVITY_REPORT_PROBLEM, {
-        reason: t,
+        reason: e,
         guild_id: null == n ? void 0 : n.getGuildId(),
         channel_id: null == n ? void 0 : n.id,
         application_id: null == c ? void 0 : c.id,

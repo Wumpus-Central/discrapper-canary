@@ -1,35 +1,35 @@
-r.d(t, { Z: () => v }), r(388685), r(953529);
+r.d(t, { Z: () => x }), r(388685), r(953529);
 var n = r(255367),
     o = r(73800),
     a = r(120356),
     i = r.n(a),
     s = r(481060),
     l = r(762762),
-    d = r(973772),
-    c = r(838968),
+    c = r(973772),
+    d = r(838968),
     u = r(795338),
     p = r(880419),
     f = r(279604),
-    x = r(787188),
-    m = r(388032),
-    j = r(153013);
-function v(e) {
+    m = r(787188),
+    v = r(388032),
+    j = r(162338);
+function x(e) {
     let { canUseBoosts: t, guildId: r, powerup: a } = e,
-        [v, C] = o.useState(!1),
-        g = (0, d.ZP)(r, a),
-        b = (0, x._)(a, g, !1),
-        h = (0, d.UP)(g),
-        { disabled: y } = (0, l.Z)(r, a, h),
-        { onShowDeactivate: O, onActivate: k } = (0, f.ZP)(r, a),
-        P = !t || y,
-        _ = h && !P,
+        [x, b] = o.useState(!1),
+        g = (0, c.ZP)(r, a),
+        O = (0, m._)(a, g, !1),
+        y = (0, c.UP)(g),
+        { disabled: C } = (0, l.Z)(r, a, y),
+        { onShowDeactivate: h, onActivate: P } = (0, f.ZP)(r, a),
+        k = !t || C,
+        _ = y && !k,
         w = (0, n.jsxs)(n.Fragment, {
             children: [
                 (0, n.jsx)("div", {
-                    className: i()(j.perkCardImage, { [j.active]: h }),
+                    className: i()(j.perkCardImage, { [j.active]: y }),
                     children: (0, n.jsx)(u.m, {
                         powerup: a,
-                        isHovering: v,
+                        isHovering: x,
                     }),
                 }),
                 (0, n.jsxs)("div", {
@@ -41,19 +41,19 @@ function v(e) {
                                 (0, n.jsx)("div", {
                                     children: (0, n.jsx)(s.Text, {
                                         variant: "text-sm/medium",
-                                        color: h || v ? "text-primary" : "text-secondary",
+                                        color: (y || x) && !k ? "text-primary" : "text-secondary",
                                         children: a.description,
                                     }),
                                 }),
                                 (0, n.jsxs)("div", {
                                     children: [
-                                        (null == b ? void 0 : b.type) === "expiring" &&
-                                            (0, n.jsx)(c.rL, { dateString: b.expiringAt }),
-                                        (null == b ? void 0 : b.type) === "removing" &&
-                                            (0, n.jsx)(c.c, { removingAt: b.removingAt }),
-                                        (null == b ? void 0 : b.type) === "active" &&
-                                            (0, n.jsx)(c.P2, { text: b.statusText }),
-                                        null == b &&
+                                        (null == O ? void 0 : O.type) === "expiring" &&
+                                            (0, n.jsx)(d.rL, { dateString: O.expiringAt }),
+                                        (null == O ? void 0 : O.type) === "removing" &&
+                                            (0, n.jsx)(d.c, { removingAt: O.removingAt }),
+                                        (null == O ? void 0 : O.type) === "active" &&
+                                            (0, n.jsx)(d.P2, { text: O.statusText }),
+                                        null == O &&
                                             (0, n.jsxs)("div", {
                                                 className: j.statusContainer,
                                                 children: [
@@ -64,7 +64,7 @@ function v(e) {
                                                     (0, n.jsx)(s.Text, {
                                                         variant: "text-sm/medium",
                                                         color: "text-secondary",
-                                                        children: m.intl.formatToPlainString(m.t.t2Wbo6, {
+                                                        children: v.intl.formatToPlainString(v.t.t2Wbo6, {
                                                             required: a.cost,
                                                             decorator: "",
                                                         }),
@@ -81,27 +81,27 @@ function v(e) {
                                 iconSize: "md",
                                 guildId: r,
                                 powerup: a,
-                                onClick: O,
+                                onClick: h,
                                 className: j.toggleButton,
                             }),
                     ],
                 }),
             ],
         });
-    return h
+    return y
         ? (0, n.jsx)("div", {
-              className: i()(j.perkCard, j.activeCard, { [j.disabled]: P }),
-              onMouseEnter: () => C(!0),
-              onMouseLeave: () => C(!1),
+              className: i()(j.perkCard, j.activeCard, { [j.disabled]: k }),
+              onMouseEnter: () => b(!0),
+              onMouseLeave: () => b(!1),
               children: w,
           })
         : (0, n.jsx)(s.P3F, {
-              className: i()(j.perkCard, { [j.disabled]: P }),
-              onMouseEnter: () => C(!0),
-              onMouseLeave: () => C(!1),
-              "aria-disabled": P,
+              className: i()(j.perkCard, { [j.disabled]: k }),
+              onMouseEnter: () => b(!0),
+              onMouseLeave: () => b(!1),
+              "aria-disabled": k,
               onClick: (e) => {
-                  e.stopPropagation(), P || null == k || k(e, { shouldCloseAllModals: !1 });
+                  e.stopPropagation(), k || null == P || P(e, { shouldCloseAllModals: !1 });
               },
               children: w,
           });

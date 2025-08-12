@@ -14,8 +14,8 @@ var r = n(255367),
     u = n(927359),
     d = n(975298),
     p = n(211644),
-    h = n(266454),
-    f = n(243778),
+    f = n(266454),
+    h = n(243778),
     g = n(594174),
     m = n(78839),
     b = n(626135),
@@ -98,8 +98,8 @@ let V = (e) => {
             es = (0, j.eW)(),
             ec = I.ZP.useExperiment({ location: "NitroTabButton" }),
             eu = (0, R.Kn)("NitroTabButton") && ec.cohort === I.xI.Control,
-            { fractionalState: ed, startsAt: ep, endsAt: eh } = (0, d.Z)({ forceFetch: !0 }),
-            [ef, eg] = (0, f.bf)(ed !== k.a$.NONE ? o.z.FRACTIONAL_NITRO_DURATION_LEFT_PILL : null, {
+            { fractionalState: ed, startsAt: ep, endsAt: ef } = (0, d.Z)({ forceFetch: !0 }),
+            [eh, eg] = (0, h.bf)(ed !== k.a$.NONE ? o.z.FRACTIONAL_NITRO_DURATION_LEFT_PILL : null, {
                 showAfterTimestamp: ep.valueOf(),
                 cooldownDurationMs: 0,
             }),
@@ -110,7 +110,7 @@ let V = (e) => {
             (el && e_.push(o.z.BOGO_2025_NITRO_TAB_BADGE),
             em && e_.push(o.z.VOICE_FILTER_EARLY_ACCESS_PREMIUM_TAB_BADGE),
             ei && e_.push(o.z.Q2_2025_MARKETING_MOMENT_NITRO_TAB_BADGE_V2));
-        let [eO, eE] = (0, f.US)(e_, void 0, !0);
+        let [eO, eE] = (0, h.US)(e_, void 0, !0);
         if (
             (i.useEffect(() => {
                 !0 === F && null != eO && eE(U.L.AUTO_DISMISS);
@@ -119,7 +119,7 @@ let V = (e) => {
         )
             return null;
         let ey = () => {
-            ef === o.z.FRACTIONAL_NITRO_DURATION_LEFT_PILL && eg(U.L.TAKE_ACTION),
+            eh === o.z.FRACTIONAL_NITRO_DURATION_LEFT_PILL && eg(U.L.TAKE_ACTION),
                 b.default.track(M.rMx.NITRO_TAB_VISITED, {
                     badge_decorator: O,
                     has_premium: Q,
@@ -133,7 +133,7 @@ let V = (e) => {
                 (n = (0, r.jsx)(S.Z, {
                     className: "",
                     startsAt: ep,
-                    endsAt: eh,
+                    endsAt: ef,
                     messageStyle: u.aj.SHORT_TIME,
                     upperCase: !0,
                 }))),
@@ -157,7 +157,7 @@ let V = (e) => {
                   })),
                   (O = 2))
                 : ei
-                  ? ((n = (0, r.jsx)(w.S, { expiresAt: eh })), (O = 4))
+                  ? ((n = (0, r.jsx)(w.S, { expiresAt: ef })), (O = 4))
                   : null != eo
                     ? ((n = (0, r.jsx)(D.Z, {
                           copy: eo,
@@ -176,7 +176,7 @@ let V = (e) => {
                           ((n = (0, r.jsx)(Z.l, {
                               isSelected: F,
                               onSelect: () =>
-                                  (0, h.Q3)(o.z.REFERRAL_PROGRAM_PREMIUM_TAB_BADGE, { dismissAction: U.L.TAKE_ACTION }),
+                                  (0, f.Q3)(o.z.REFERRAL_PROGRAM_PREMIUM_TAB_BADGE, { dismissAction: U.L.TAKE_ACTION }),
                           })),
                           (O = 6))
                         : ((n = (0, r.jsx)(A.$H, {

@@ -9,8 +9,8 @@ var r = n(255367),
     u = n(780384),
     d = n(481060),
     p = n(393238),
-    h = n(410030),
-    f = n(204418),
+    f = n(410030),
+    h = n(204418),
     g = n(70097),
     m = n(594174),
     b = n(626135),
@@ -23,7 +23,7 @@ var r = n(255367),
     C = n(685613),
     S = n(981631),
     N = n(388032),
-    T = n(45017);
+    T = n(425704);
 let P = (0, i.memo)(function (e) {
     var t, n, l, P, j, x;
     let { quest: A } = e,
@@ -35,7 +35,7 @@ let P = (0, i.memo)(function (e) {
         G = (0, i.useRef)(null),
         V = (0, c.e7)([m.default], () => m.default.getCurrentUser()),
         { ref: H, height: B = 0 } = (0, p.ZP)(),
-        F = (0, h.ZP)(),
+        F = (0, f.ZP)(),
         z = (0, O.B6)(null == (t = A.userStatus) ? void 0 : t.claimedAt, {
             month: "numeric",
             day: "numeric",
@@ -141,7 +141,7 @@ let P = (0, i.memo)(function (e) {
                               ref: G,
                               className: T.decoWrapper,
                               style: { top: L },
-                              children: (0, r.jsx)(f.Z, {
+                              children: (0, r.jsx)(h.Z, {
                                   avatarDecorationOverride: J,
                                   user: V,
                                   guildId: null,

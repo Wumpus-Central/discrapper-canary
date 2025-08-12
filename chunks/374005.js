@@ -9,17 +9,17 @@ var r = n(255367),
     u = n(840780),
     d = n(235555),
     p = n(746508),
-    h = n(210724),
-    f = n(905423),
+    f = n(210724),
+    h = n(905423),
     g = n(316173),
     m = n(410575),
     b = n(981631),
     _ = n(388032),
-    O = n(128654);
+    O = n(479098);
 function E(e) {
     var t, n;
     let { analyticsLocations: i } = (0, s.ZP)(o.Z.ACTIVITY_PANEL),
-        l = (0, f.Z)((e) => {
+        l = (0, h.Z)((e) => {
             let { guildId: t } = e;
             return t;
         });
@@ -88,7 +88,7 @@ let y = i.memo(function () {
                 containerRef: e,
                 children: [
                     (0, r.jsx)(g.Z, {}),
-                    (0, r.jsx)(h.Z, {}),
+                    (0, r.jsx)(f.Z, {}),
                     (0, r.jsx)(d.Z, {}),
                     (0, r.jsx)(m.Z, {
                         section: b.jXE.ACTIVITY_PANEL,

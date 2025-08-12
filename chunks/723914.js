@@ -5,7 +5,7 @@ var r = n(255367),
     a = n(434404),
     s = n(981631),
     o = n(388032),
-    c = n(837188);
+    c = n(951733);
 function d(e) {
     let { isInventoryFeedEnabled: t, canManageGuild: n, features: d } = e,
         u = i.useCallback(

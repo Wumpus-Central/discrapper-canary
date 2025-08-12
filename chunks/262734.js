@@ -9,15 +9,15 @@ var r = n(255367),
     u = n(988980),
     d = n(835473),
     p = n(871499),
-    h = n(786915),
-    f = n(510839),
+    f = n(786915),
+    h = n(510839),
     g = n(214143),
     m = n(610278),
     b = n(408491),
     _ = n(981631),
     O = n(918559),
     E = n(388032),
-    y = n(574682);
+    y = n(43022);
 let v = {
     [O.MI.NO_CHAT]: y.noChat,
     [O.MI.RESIZABLE]: y.resizable,
@@ -33,13 +33,13 @@ function I(e) {
             height: 0,
         }),
         T = i.useCallback(() => {
-            (0, f.eU)({
+            (0, h.eU)({
                 applicationId: t.applicationId,
                 layoutMode: b.U.PIP,
             });
         }, [t.applicationId]),
         P = i.useCallback(() => {
-            (0, f.xT)({ applicationId: t.applicationId });
+            (0, h.xT)({ applicationId: t.applicationId });
         }, [t.applicationId]);
     i.useLayoutEffect(() => {
         if (null == C.current) return;
@@ -57,7 +57,7 @@ function I(e) {
                 null == I.current ||
                     I.current.contains(e.target) ||
                     l ||
-                    (0, f.eU)({
+                    (0, h.eU)({
                         applicationId: t.applicationId,
                         layoutMode: b.U.PIP,
                     });
@@ -103,7 +103,7 @@ function I(e) {
                                     iconComponent: s.dOc,
                                     themeable: !0,
                                 }),
-                                (0, r.jsx)(h.Z, {
+                                (0, r.jsx)(f.Z, {
                                     appContext: _.IlC.APP,
                                     applicationId: n.id,
                                     shouldPrioritizeGroupPlusIcon: !0,

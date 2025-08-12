@@ -6,7 +6,7 @@ var e = n(255367),
     c = n(53365),
     s = n(377176),
     l = n(388032),
-    E = n(339500);
+    E = n(239315);
 function T(t) {
     let { guildId: r, transitionState: n, onClose: T } = t,
         [_, A] = i.useState(!1),

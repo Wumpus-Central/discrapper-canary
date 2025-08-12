@@ -6,7 +6,7 @@ var i = n(442837),
     a = n(430824),
     s = n(914010),
     l = n(388032),
-    c = n(502764);
+    c = n(368573);
 let u = () =>
         (0, r.jsx)(r.Fragment, {
             children: l.intl.format(l.t.ymkBtr, {

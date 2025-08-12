@@ -20,7 +20,7 @@ var n = r(255367),
     C = r(215023),
     E = r(981631),
     S = r(388032),
-    y = r(95368);
+    y = r(293013);
 function x(e) {
     let { isFullScreen: t, tab: r, sortedCategories: a, initialCategoryId: c, onUnmount: u } = e;
     (0, p.A)();

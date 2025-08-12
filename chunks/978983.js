@@ -2,7 +2,7 @@ n.d(t, { Z: () => a });
 var r = n(255367);
 n(73800);
 var i = n(481060),
-    o = n(816398);
+    o = n(741923);
 let a = () =>
     (0, r.jsx)("div", {
         className: o.loadingWrapper,

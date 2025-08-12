@@ -9,8 +9,8 @@ var r = n(255367),
     u = n(481060),
     d = n(570140),
     p = n(150063),
-    h = n(529103),
-    f = n(252618),
+    f = n(529103),
+    h = n(252618),
     g = n(313201),
     m = n(5254),
     b = n(984370),
@@ -25,7 +25,7 @@ var r = n(255367),
     N = n(981631),
     T = n(723359),
     P = n(388032),
-    j = n(610725);
+    j = n(802506);
 function x() {
     return (0, r.jsx)("div", {
         className: j.inviteToolbar,
@@ -57,15 +57,15 @@ let A = function (e) {
         L = (0, c.e7)([m.Z], () => m.Z.getSuggestionCount()),
         R = i.useMemo(() => w.getRelationshipCounts(), [w]);
     i.useEffect(() => {
-        null != t && h.Z.setInitialSection(t),
+        null != t && f.Z.setInitialSection(t),
             0 === R[N.OGo.FRIEND] &&
                 0 === R[N.OGo.PENDING_INCOMING] &&
                 0 === R[N.OGo.PENDING_OUTGOING] &&
                 0 === R[N.OGo.BLOCKED] &&
-                h.Z.transitionToSection(N.pJs.ADD_FRIEND);
+                f.Z.transitionToSection(N.pJs.ADD_FRIEND);
     }, [t, R]);
     let D = (e) => {
-            h.Z.transitionToSection(e, { explicit: !0 });
+            f.Z.transitionToSection(e, { explicit: !0 });
         },
         k = (0, g.Dt)(),
         M = (0, g.Dt)(),
@@ -125,7 +125,7 @@ let A = function (e) {
         className: j.container,
         "aria-label": P.intl.string(P.t.TdEu5e),
         children: [
-            (0, r.jsx)(f.yY, { location: P.intl.string(P.t.TdEu5e) }),
+            (0, r.jsx)(h.yY, { location: P.intl.string(P.t.TdEu5e) }),
             (0, r.jsx)(u.f6W, {
                 theme: _,
                 children: (e) =>

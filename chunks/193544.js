@@ -10,7 +10,7 @@ var r = n(255367),
     u = n(992249),
     m = n(717251),
     g = n(388032),
-    p = n(184520);
+    p = n(74394);
 function h(e) {
     var t, n, l;
     let { changeTitle: h, value: f, options: b, className: x, onChange: j } = e,

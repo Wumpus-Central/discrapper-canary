@@ -9,8 +9,8 @@ var a = t(120356),
     c = t(696375),
     d = t(800530),
     x = t(388032),
-    m = t(395494),
-    p = t(91463),
+    m = t(482609),
+    p = t(979527),
     u = t(160557);
 function _(e) {
     let { className: n, onNext: t, onClose: a } = e,

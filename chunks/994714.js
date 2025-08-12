@@ -7,7 +7,7 @@ var i = n(255367),
     o = n(481060),
     c = n(715495),
     d = n(538645),
-    u = n(512072);
+    u = n(184275);
 let m = (e) => {
         let { setTab: t } = e;
         return (0, i.jsxs)("div", {

@@ -11,12 +11,12 @@ var r = n(120356),
     u = n(320161),
     m = n(998502),
     p = n(388032),
-    g = n(980832);
+    g = n(418795);
 function h() {
     var e, t, n, r, a;
     let h = window.GLOBAL_ENV.RELEASE_CHANNEL,
-        f = "430185",
-        b = "f908b8f2045f14b3e6664977acee8e218ba160f2".substring(0, 7),
+        f = "430270",
+        b = "0f6eaeebf971716750e13365cffd2ddabe0d07e1".substring(0, 7),
         x = null === c.Z || void 0 === c.Z ? void 0 : c.Z.remoteApp.getVersion(),
         _ = null === c.Z || void 0 === c.Z || null == (e = (t = c.Z.remoteApp).getBuildNumber) ? void 0 : e.call(t),
         j = null === c.Z || void 0 === c.Z || null == (n = (r = c.Z.remoteApp).getAppArch) ? void 0 : n.call(r),

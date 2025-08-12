@@ -9,7 +9,7 @@ var r = n(255367),
     u = n(563593),
     d = n(981631),
     p = n(388032);
-function h(e, t, n) {
+function f(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -22,17 +22,17 @@ function h(e, t, n) {
         e
     );
 }
-let f = (0, o.GSL)(c.Z),
+let h = (0, o.GSL)(c.Z),
     g = (0, o.GSL)(u.Z),
     m = new Set([d.TzF.PUSHING, d.TzF.PULLING]),
     b = Object.freeze({
-        [d.TzF.DONE]: f,
-        [d.TzF.PLANNING]: f,
-        [d.TzF.PREPARING]: f,
+        [d.TzF.DONE]: h,
+        [d.TzF.PLANNING]: h,
+        [d.TzF.PREPARING]: h,
         [d.TzF.PUSHING]: o.rG2,
         [d.TzF.PULLING]: o._8t,
-        [d.TzF.CONFLICT]: f,
-        [d.TzF.ERROR]: f,
+        [d.TzF.CONFLICT]: h,
+        [d.TzF.ERROR]: h,
     });
 class _ extends i.PureComponent {
     componentDidMount() {
@@ -116,7 +116,7 @@ class _ extends i.PureComponent {
                                     }),
                                 )),
                                 r.forEach(function (t) {
-                                    h(e, t, n[t]);
+                                    f(e, t, n[t]);
                                 });
                         }
                         return e;
@@ -125,7 +125,7 @@ class _ extends i.PureComponent {
         });
     }
     constructor(...e) {
-        super(...e), h(this, "_doneTimer", new a.V7());
+        super(...e), f(this, "_doneTimer", new a.V7());
     }
 }
 let O = l.ZP.connectStores([s.Z], (e) => {

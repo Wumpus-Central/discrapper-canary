@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f });
+n.d(t, { Z: () => h });
 var r = n(255367),
     i = n(73800),
     l = n(481060),
@@ -8,12 +8,12 @@ var r = n(255367),
     c = n(804739),
     u = n(981631),
     d = n(388032),
-    p = n(449160);
-let h = (0, c.Q)() || !1,
-    f = i.memo(function (e) {
+    p = n(396469);
+let f = (0, c.Q)() || !1,
+    h = i.memo(function (e) {
         let { currentRoute: t, renderToolbar: n } = e,
             c = i.useContext(s.AnalyticsContext),
-            f = h || t === u.Z5c.APPLICATION_LIBRARY_SETTINGS;
+            h = f || t === u.Z5c.APPLICATION_LIBRARY_SETTINGS;
         return (0, r.jsxs)(a.Z, {
             className: p.libraryHeader,
             toolbar: null == n ? void 0 : n(),
@@ -84,7 +84,7 @@ let h = (0, c.Q)() || !1,
                             id: u.Z5c.APPLICATION_LIBRARY,
                             children: d.intl.string(d.t.p7ARTE),
                         }),
-                        f
+                        h
                             ? (0, r.jsx)(l.njP.Item, {
                                   id: u.Z5c.APPLICATION_LIBRARY_SETTINGS,
                                   children: d.intl.string(d.t["3D5yo6"]),

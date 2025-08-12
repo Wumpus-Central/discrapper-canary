@@ -11,7 +11,7 @@ var r,
     c = n(680018),
     u = n(481060),
     d = n(213609),
-    h = n(341402),
+    h = n(492211),
     p = (((r = {}).TOP = "top"), (r.BOTTOM = "bottom"), r);
 let f = l.forwardRef(function (e, t) {
     let { body: n, header: r, artClassName: l, buttonText: o, onClose: p, art: f, align: g } = e;

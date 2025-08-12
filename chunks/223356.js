@@ -23,8 +23,8 @@ async function c() {
     ).body;
 }
 function d(e) {
-    var t, n;
-    return null != (n = null != (t = null == e ? void 0 : e.name) ? t : "" + (null == e ? void 0 : e.squad)) ? n : "";
+    var t;
+    return null != (t = null == e ? void 0 : e.name) ? t : "" + (null == e ? void 0 : e.squad);
 }
 function m() {
     return [

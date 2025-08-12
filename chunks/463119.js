@@ -9,8 +9,8 @@ var r = n(255367),
     u = n(515753),
     d = n(410030),
     p = n(607070),
-    h = n(100527),
-    f = n(906732),
+    f = n(100527),
+    h = n(906732),
     g = n(821982),
     m = n(377171),
     b = n(633302),
@@ -26,7 +26,7 @@ var r = n(255367),
     T = n(981631),
     P = n(921944),
     j = n(388032),
-    x = n(560232);
+    x = n(3525);
 function A(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -131,8 +131,8 @@ let L = (e) => {
                 "children",
             ]);
         let b = (0, l.JA)("shop"),
-            _ = h.Z.HOME_PAGE_SHOP_TAB,
-            { analyticsLocations: O } = (0, f.ZP)(_),
+            _ = f.Z.HOME_PAGE_SHOP_TAB,
+            { analyticsLocations: O } = (0, h.ZP)(_),
             [y, v] = i.useState(!1),
             I = i.useCallback(() => {
                 void 0 !== o && o(),
@@ -222,8 +222,8 @@ let L = (e) => {
         var l,
             c,
             u,
-            h,
             f,
+            h,
             g,
             m,
             b,
@@ -242,8 +242,8 @@ let L = (e) => {
             ? U
                 ? ((t = null == (l = I.entryPointBackgroundAssets) ? void 0 : l.srcDarkHovered),
                   (n = null == (u = I.entrypointBackgroundStyle) || null == (c = u.hovered) ? void 0 : c.dark))
-                : ((t = null == (h = I.entryPointBackgroundAssets) ? void 0 : h.srcLightHovered),
-                  (n = null == (g = I.entrypointBackgroundStyle) || null == (f = g.hovered) ? void 0 : f.light))
+                : ((t = null == (f = I.entryPointBackgroundAssets) ? void 0 : f.srcLightHovered),
+                  (n = null == (g = I.entrypointBackgroundStyle) || null == (h = g.hovered) ? void 0 : h.light))
             : U
               ? ((t = null == (m = I.entryPointBackgroundAssets) ? void 0 : m.srcDark),
                 (n = null == (_ = I.entrypointBackgroundStyle) || null == (b = _.resting) ? void 0 : b.dark))
@@ -371,14 +371,14 @@ let L = (e) => {
         let c = i.useRef(null),
             u = (0, d.ZP)(),
             p = (0, o.wj)(u),
-            h = l.entryPointBackgroundAssets,
-            f = l.entrypointBackgroundStyle,
-            g = p ? (null == h ? void 0 : h.srcDarkHovered) : null == h ? void 0 : h.srcLightHovered,
+            f = l.entryPointBackgroundAssets,
+            h = l.entrypointBackgroundStyle,
+            g = p ? (null == f ? void 0 : f.srcDarkHovered) : null == f ? void 0 : f.srcLightHovered,
             m = p
-                ? null == f || null == (t = f.hovered)
+                ? null == h || null == (t = h.hovered)
                     ? void 0
                     : t.dark
-                : null == f || null == (n = f.hovered)
+                : null == h || null == (n = h.hovered)
                   ? void 0
                   : n.light;
         return (0, r.jsxs)(r.Fragment, {

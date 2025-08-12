@@ -16,7 +16,7 @@ var r = n(120356),
     f = n(981631),
     b = n(474936),
     x = n(388032),
-    _ = n(881207);
+    _ = n(27228);
 let j = l.ZP.connectStores([g.default], () => ({ user: g.default.getCurrentUser() }))(
     (0, u.Z)((e) => {
         let { isAuthenticated: t, user: n } = e,

@@ -14,7 +14,7 @@ var i = n(120356),
     p = n(531578),
     h = n(959517),
     m = n(388032),
-    g = n(613873);
+    g = n(954437);
 function E(e) {
     let { summary: t, channel: n } = e,
         i = null == (0, s.e7)([f.Z], () => f.Z.summaryFeedback(t)),
