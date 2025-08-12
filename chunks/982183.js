@@ -5,15 +5,14 @@ n.d(t, {
     JP: () => s,
     KZ: () => _,
     Lr: () => d,
-    NV: () => g,
     V5: () => p,
     Vv: () => m,
-    X: () => b,
-    a7: () => E,
+    X: () => E,
+    a7: () => g,
     fL: () => h,
     ib: () => c,
-    ln: () => y,
-    r0: () => O,
+    ln: () => b,
+    r0: () => y,
 });
 var r = n(70956),
     i = n(411198),
@@ -24,10 +23,10 @@ let s = "Notifications Inbox",
     c = r.Z.Millis.WEEK,
     u = 50,
     d = "notifications-inbox";
-function f() {
+function f(e) {
     return (0, i.yS)({
         id: o.STv,
-        name: a.intl.string(a.t.HcoRu7),
+        name: "bookmarks" === e ? a.intl.string(a.t["2pAkDA"]) : a.intl.string(a.t.HcoRu7),
         description: "",
         icon: void 0,
         features: [],
@@ -37,13 +36,7 @@ var _ = (function (e) {
         return (e.UNREAD = "UNREAD"), (e.TODAY = "TODAY"), (e.YESTERDAY = "YESTERDAY"), (e.OLDER = "OLDER"), e;
     })({}),
     p = (function (e) {
-        return (
-            (e.ALL = "all"),
-            (e.ANNOUNCEMENTS = "announcements"),
-            (e.MENTIONS = "mentions"),
-            (e.BOOKMARKS = "bookmarks"),
-            e
-        );
+        return (e.ALL = "all"), (e.BOOKMARKS = "bookmarks"), e;
     })({}),
     h = (function (e) {
         return (e.ALL_MESSAGES_CHANNEL = "ALL_MESSAGES_CHANNEL"), (e.MENTION = "MENTION"), (e.BOOKMARK = "BOOKMARK"), e;
@@ -54,18 +47,10 @@ let m = {
     YESTERDAY: a.t.gnv4pK,
     OLDER: a.t.exrPZm,
 };
-function g() {
-    return {
-        all: a.intl.string(a.t.iWyjNj),
-        bookmarks: a.intl.string(a.t["+rlGYW"]),
-        announcements: a.intl.string(a.t.jR39HB),
-        mentions: a.intl.string(a.t["GRZF9/"]),
-    };
-}
-var E = (function (e) {
+var g = (function (e) {
         return (e.UNLOADED = "unloaded"), (e.LOADED = "loaded"), (e.LOADED_UNREAD = "loadedUnread"), e;
     })({}),
-    b = (function (e) {
+    E = (function (e) {
         return (
             (e.AUTO_LOAD = "auto_load"),
             (e.ON_OPEN = "on_open"),
@@ -75,7 +60,7 @@ var E = (function (e) {
             e
         );
     })({}),
-    y = (function (e) {
+    b = (function (e) {
         return (
             (e.MENTION = "MENTION"),
             (e.REPLY = "REPLY"),
@@ -85,6 +70,6 @@ var E = (function (e) {
             e
         );
     })({}),
-    O = (function (e) {
+    y = (function (e) {
         return (e.ACK = "ACK"), (e.BOOKMARK = "BOOKMARK"), (e.SETTINGS = "SETTINGS"), e;
     })({});

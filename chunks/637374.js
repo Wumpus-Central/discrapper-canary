@@ -253,7 +253,7 @@ class K extends i.Component {
         if (!n && this.isCustomGiftMessage() && !e.redeemed) return;
         let s = r.isPreorder() ? G.intl.formatToPlainString(G.t.evinTU, { name: r.name }) : r.name;
         if (e.redeemed)
-            return e.isSubscription || (0, g.mO)(e)
+            return e.isSubscription || (0, g.mO)(e) || (0, D.HL)({ productLine: null == r ? void 0 : r.productLine })
                 ? G.intl.string(G.t.mVC3Cg)
                 : G.intl.format(G.t["ss/L+/"], {
                       skuName: s,

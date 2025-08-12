@@ -45,9 +45,9 @@ function v(e) {
     let [k, C] = o.useState(void 0),
         P = o.useMemo(() => {
             switch (y.skuId) {
-                case h.IN:
+                case l.IN:
                     return (0, r.jsx)(m.E, { guildId: v });
-                case h.If:
+                case l.If:
                     return (0, r.jsx)(m.Z, {});
                 case l.A$:
                     return (0, r.jsx)(g.Z, {});

@@ -37,7 +37,11 @@ class f extends i.Z {
             let f = l.Z.getApplicationActivity(e.userId, d.application.id, e.guildId);
             if (!(0, o.Z)(f, d, d.application.id)) continue;
             let _ = a.Z.getStreamForUser(e.userId, e.guildId);
-            null != _ && r.rn(_);
+            null != _ &&
+                r.rn(_, {
+                    forceMultiple: !0,
+                    noFocus: !0,
+                });
         }
     }
     constructor(...e) {

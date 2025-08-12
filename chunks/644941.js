@@ -231,6 +231,10 @@ function B(e) {
                         trackClick: i,
                     }),
                     (0, n.jsx)(D.Z, { detectedGame: t }),
+                    (0, n.jsx)(u.Text, {
+                        variant: "text-xxs/normal",
+                        children: z.intl.format(z.t.pch2Jy, { igdbLink: R.$f }),
+                    }),
                 ],
             }),
         ],

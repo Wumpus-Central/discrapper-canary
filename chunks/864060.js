@@ -1,9 +1,9 @@
 n.d(e, {
     FI: () => G,
-    LL: () => w,
+    LL: () => L,
     N_: () => M,
     Xi: () => H,
-    eF: () => L,
+    eF: () => w,
 }),
     n(997841),
     n(953529),
@@ -41,7 +41,7 @@ var U = n(842619),
     R = n(981631),
     b = n(124368),
     k = n(388032);
-function w(t, e, n) {
+function L(t, e, n) {
     let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
     if (e.hasFlag(R.xW$.SPAMMER) || n.isManaged()) return !1;
     let l = n.getGuildId();
@@ -54,7 +54,7 @@ function w(t, e, n) {
         (!i.ignoreNoMessagesSetting && v.ZP.allowNoMessages(n))
     );
 }
-function L(t, e) {
+function w(t, e) {
     var n, l;
     let a = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
         r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
@@ -69,7 +69,7 @@ function L(t, e) {
         null == d ||
         (o.type === R.d4z.GROUP_DM && t.type === R.uaV.RECIPIENT_REMOVE) ||
         (U.Z.areSlayerNotificationsSuppressed() && ((l = o).type === R.d4z.DM || null != l.linkedLobby)) ||
-        !w(s, d, o, {
+        !L(s, d, o, {
             ignoreStatus: r,
             ignoreSameUser: R.V$x.SELF_MENTIONABLE_SYSTEM.has(t.type),
         }) ||
@@ -151,7 +151,7 @@ function G(t, e) {
             null == e ||
             null == l ||
             null == a ||
-            !w(l, a, e, {
+            !L(l, a, e, {
                 ignoreStatus: i,
                 ignoreNoMessagesSetting: !0,
             }) ||

@@ -3,9 +3,9 @@ var r,
     i = n(255367),
     a = n(73800),
     s = n(82659),
-    c = n(279862),
-    o =
-        (((r = o || {}).UPGRADE = "UPGRADE"),
+    o = n(279862),
+    c =
+        (((r = c || {}).UPGRADE = "UPGRADE"),
         (r.CANCEL = "CANCEL"),
         (r.UNVERIFIED = "UNVERIFIED"),
         (r.UNCLAIMED = "UNCLAIMED"),
@@ -21,8 +21,8 @@ let l = {
     u = (e) => {
         var t,
             n,
-            { children: r, premiumModalType: o, primary: u, secondary: p } = e,
-            b = (function (e, t) {
+            { children: r, premiumModalType: c, primary: u, secondary: p } = e,
+            d = (function (e, t) {
                 if (null == e) return {};
                 var n,
                     r,
@@ -43,7 +43,7 @@ let l = {
                 }
                 return i;
             })(e, ["children", "premiumModalType", "primary", "secondary"]);
-        let d = a.useMemo(() => {
+        let g = a.useMemo(() => {
             let e = [];
             return (
                 null != p &&
@@ -87,14 +87,14 @@ let l = {
                         });
                 }
                 return e;
-            })({}, b)),
+            })({}, d)),
             (n = n =
                 {
-                    actions: d,
+                    actions: g,
                     children: [
-                        (0, i.jsx)("div", { className: c[l[o]] }),
+                        (0, i.jsx)("div", { className: o[l[c]] }),
                         (0, i.jsx)("div", {
-                            className: c.message,
+                            className: o.message,
                             children: r,
                         }),
                     ],
@@ -114,5 +114,5 @@ let l = {
             t),
         );
     };
-u.Types = o;
+u.Types = c;
 let p = u;

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b }), n(388685);
+n.d(t, { Z: () => v }), n(388685);
 var r = n(442837),
     i = n(570140),
     o = n(569545),
@@ -57,17 +57,21 @@ function d(e, t) {
     );
 }
 let f = {},
-    _ = {};
-function p(e) {
-    let { channelId: t, currentVoiceChannelId: n } = e;
-    if (t === n) return !1;
+    _ = {},
+    p = null;
+function h() {
     (_ = {}), (f = {});
 }
-function h(e) {
+function m(e) {
+    let { channelId: t, currentVoiceChannelId: n } = e;
+    if (t === n) return !1;
+    h();
+}
+function g(e) {
     let { id: t } = e;
     for (let [e, n] of (delete f[t], Object.entries(_))) t === n && delete _[e];
 }
-function m(e) {
+function E(e) {
     var t, n;
     let { channelId: r, sendMessageOptions: i, message: o, optimistic: l } = e;
     if (r !== a.Z.getChannelId()) return !1;
@@ -80,20 +84,34 @@ function m(e) {
     if (null == u) return !1;
     delete f[o.nonce], (_ = d(c({}, _), { [u]: o.id }));
 }
-function g(e) {
+function b(e) {
     let { streamKey: t } = e,
         { ownerId: n } = o.my(t);
     if (null == _[n]) return !1;
     delete _[n];
 }
-class E extends r.ZP.Store {
+function y() {
+    if (a.Z.getWasMoved()) {
+        if (a.Z.getChannelId() === p) return !1;
+        (p = a.Z.getChannelId()), h();
+    } else {
+        if (null == p) return !1;
+        p = null;
+    }
+}
+class O extends r.ZP.Store {
+    initialize() {
+        this.waitFor(a.Z);
+    }
     getPendingRequestForUser(e) {
         return _[e];
     }
 }
-let b = new E(i.Z, {
-    STREAM_WATCH: g,
-    MESSAGE_CREATE: m,
-    MESSAGE_DELETE: h,
-    VOICE_CHANNEL_SELECT: p,
+let v = new O(i.Z, {
+    STREAM_WATCH: b,
+    MESSAGE_CREATE: E,
+    MESSAGE_DELETE: g,
+    VOICE_CHANNEL_SELECT: m,
+    VOICE_STATE_UPDATES: y,
+    LOGOUT: h,
 });

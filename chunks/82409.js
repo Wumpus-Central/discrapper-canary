@@ -1,4 +1,4 @@
-n.d(t, { Z: () => G }), n(361932), n(187205), n(388685);
+n.d(t, { Z: () => B }), n(361932), n(187205), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -59,20 +59,21 @@ function M(e) {
     }
     return e;
 }
-let k = {
-    controller: new s.Controller({
-        value: 1,
-        immediate: !0,
-    }),
-    renderBanner: !1,
-    bannerVisible: !1,
-    communityInfoVisible: !1,
-    shouldShowSubscribeTooltip: !1,
-    bannerVisibleHeight: A.$J,
-    hasGuildSubheader: !1,
-    disableBannerAnimation: !0,
-};
-function U(e) {
+let k = [],
+    U = {
+        controller: new s.Controller({
+            value: 1,
+            immediate: !0,
+        }),
+        renderBanner: !1,
+        bannerVisible: !1,
+        communityInfoVisible: !1,
+        shouldShowSubscribeTooltip: !1,
+        bannerVisibleHeight: A.$J,
+        hasGuildSubheader: !1,
+        disableBannerAnimation: !0,
+    };
+function G(e) {
     var t, n;
     let { includePanelSpacing: l } = e,
         s = (0, E.fJ)(),
@@ -103,24 +104,23 @@ function U(e) {
                     }) || (0, I.Tj)(e, x.Z.selectedItemInfo),
             ),
         ),
-        U = i.useCallback(
+        G = i.useCallback(
             (e) => {
                 p !== A.V5.BOOKMARKS &&
                     j.Z.loadMoreInbox({
                         viewId: s,
                         loadingTrigger: e,
-                        onlyMentions: p === A.V5.MENTIONS,
                     });
             },
             [p, s],
         ),
-        { hasLoadedEver: G, canLoadMore: W } = (0, a.cj)([x.Z], () => ({
+        { hasLoadedEver: B, canLoadMore: W } = (0, a.cj)([x.Z], () => ({
             hasLoadedEver: x.Z.hasLoadedEver,
             canLoadMore: x.Z.canLoadMore({}),
         }));
     i.useEffect(() => {
-        W && !G && U(A.X.ON_OPEN);
-    }, [W, G, U]),
+        W && !B && G(A.X.ON_OPEN);
+    }, [W, B, G]),
         (function (e) {
             let { unreadChannelIds: t } = (0, I.O4)();
             i.useEffect(() => {
@@ -146,7 +146,7 @@ function U(e) {
                             );
                     });
             }, [e, t]);
-        })(G ? D : null);
+        })(B ? D : null);
     let K = (0, a.Wu)([m.Z], () => m.Z.getSavedMessages()),
         Y = i.useMemo(
             () =>
@@ -154,7 +154,7 @@ function U(e) {
                     var t;
                     let { message: n } = e;
                     return null == n
-                        ? []
+                        ? k
                         : [
                               {
                                   id: n.id,
@@ -167,8 +167,8 @@ function U(e) {
                 }),
             [K],
         ),
-        q = B(w, p, P),
-        X = B(D, p, null);
+        q = V(w, p, P),
+        X = V(D, p, null);
     (0, h.ZP)(() => {
         var e;
         u.Z.dispatch({ type: "NOTIFICATIONS_INBOX_OPEN" });
@@ -222,7 +222,7 @@ function U(e) {
     let { filterStyle: Q } = (0, v.pN)({ location: "NotificationsInboxSidebar" }),
         { entrypoints: J } = (0, g._k)({ location: "NotificationsInboxSidebar" }),
         $ = Q === v.v8.DROPDOWN && p !== A.V5.ALL,
-        ee = (0, A.H_)();
+        ee = (0, A.H_)(p);
     return (0, r.jsx)("nav", {
         className: o()(L.container, { [L.panelSpacing]: l }),
         children: (0, r.jsxs)(c.y5t, {
@@ -234,7 +234,7 @@ function U(e) {
                         hasSubheader: !0,
                         guild: ee,
                     },
-                    k,
+                    U,
                 )),
                 (n = n =
                     {
@@ -260,50 +260,43 @@ function U(e) {
                 t),
             ),
             children: [
-                Q === v.v8.TABS && (0, r.jsx)(Z.Z, {}),
-                p === A.V5.ALL && (0, r.jsx)(H, { hideBanner: !G || p !== A.V5.ALL }),
-                $ && (0, r.jsx)(z, { filter: p }),
+                p === A.V5.ALL && (0, r.jsx)(z, { hideBanner: !B || p !== A.V5.ALL }),
+                $ && (0, r.jsx)(c.LZC, { size: 8 }),
                 (0, r.jsx)(T.Z, {
                     className: L.messageList,
-                    renderMessageGroup: F,
+                    renderMessageGroup: H,
                     messages: p === A.V5.BOOKMARKS ? Y : q,
                     unreadMessages: p === A.V5.BOOKMARKS ? [] : X,
                     listName: "notifications-inbox",
-                    renderLoadingState: V,
+                    renderLoadingState: F,
                     ignoreGrouping: p === A.V5.BOOKMARKS,
-                    loadMore: U,
+                    loadMore: G,
                 }),
             ],
         }),
     });
 }
-function G(e) {
-    return (0, r.jsx)(E.HP, { children: (0, r.jsx)(U, M({}, e)) });
+function B(e) {
+    return (0, r.jsx)(E.HP, { children: (0, r.jsx)(G, M({}, e)) });
 }
-function B(e, t, n) {
+function V(e, t, n) {
     return i.useMemo(
         () =>
-            0 === e.length
-                ? []
+            0 === e.length || t === A.V5.BOOKMARKS
+                ? k
                 : e.filter((e) => {
-                      let { id: r, channelId: i, kind: l } = e;
-                      if (C.default.age(r) > A.ib) return !1;
-                      if (t === A.V5.MENTIONS) return l === A.fL.MENTION;
-                      if (null != n && 0 >= C.default.compare(r, n)) return !1;
-                      if (t === A.V5.ALL) return !0;
-                      if (t === A.V5.ANNOUNCEMENTS) {
-                          let e = b.Z.getBasicChannel(i);
-                          return (null == e ? void 0 : e.type) === R.d4z.GUILD_ANNOUNCEMENT;
-                      }
-                      return !1;
+                      let { id: r } = e;
+                      return (
+                          !(C.default.age(r) > A.ib || (null != n && 0 >= C.default.compare(r, n))) && t === A.V5.ALL
+                      );
                   }),
         [e, t, n],
     );
 }
-function V() {
+function F() {
     return (0, r.jsx)(N.Z, {});
 }
-function F(e, t) {
+function H(e, t) {
     return (0, r.jsx)(
         w.Z,
         {
@@ -314,7 +307,7 @@ function F(e, t) {
         e[0].id,
     );
 }
-function H(e) {
+function z(e) {
     let { hideBanner: t } = e,
         n = (0, P.d)((e) => e.shouldHide());
     return (0, r.jsx)("div", {
@@ -335,18 +328,4 @@ function H(e) {
             ],
         }),
     });
-}
-function z(e) {
-    let { filter: t } = e,
-        n = (0, A.NV)();
-    return (0, r.jsx)(
-        c.X6q,
-        {
-            color: "text-primary",
-            variant: "text-sm/semibold",
-            className: L.filterHeaderWrap,
-            children: n[t],
-        },
-        "filter-header",
-    );
 }

@@ -10,10 +10,10 @@ function u(e, t) {
         (n) => {
             if ((n.stopPropagation(), t.type !== s.Us.LEVEL))
                 switch (((0, i.Mr3)(s.H2), t.skuId)) {
-                    case s.IN:
+                    case o.IN:
                         l.Z.open(e, a.pNK.TAG, a.jXE.GUILD_POWERUPS_OVERVIEW_CARD);
                         return;
-                    case s.If:
+                    case o.If:
                         l.Z.open(e, a.pNK.ROLES, a.jXE.GUILD_POWERUPS_OVERVIEW_CARD);
                         return;
                     case o.A$:

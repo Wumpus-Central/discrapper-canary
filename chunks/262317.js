@@ -185,7 +185,7 @@ function H(e) {
         eE = i.useRef(null),
         [eb, ey] = i.useState(!1),
         [eO, ev] = i.useState(!1),
-        eI = null != em,
+        eI = (null == em ? void 0 : em.session_id) != null,
         eT = () => {
             ey(!eb);
         },

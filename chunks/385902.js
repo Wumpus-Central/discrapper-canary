@@ -35,42 +35,42 @@ function b(e, t) {
     };
 }
 function O(e, t) {
-    var n, d, b, O;
-    let _ = (0, l.e7)([o.Z], () => o.Z.getGuild(e)),
-        y = (0, l.e7)([s.Z], () => s.Z.hasLayers()),
-        C = null != (O = (0, u.Z)(e)) && O,
-        v = (0, c.q8)(e, t),
-        j = (0, l.e7)([a.Z], () => a.Z.getStateForGuild(e)),
-        E = (null == j || null == (n = j.unlockedPowerups) ? void 0 : n[i.A$]) != null,
-        S = null == j || null == (d = j.allPowerups) ? void 0 : d[i.A$],
-        x = null == S ? void 0 : S.storeRemovalDate,
-        I = null == j || null == (b = j.allPowerups) ? void 0 : b[f.XW],
-        { onActivate: P } = (0, p._C)(e, I),
-        N = !y && C && v && E && null != S && null != x && null != I && null != _,
-        w = r.useCallback(
+    var n, d, f, b;
+    let O = (0, l.e7)([o.Z], () => o.Z.getGuild(e)),
+        _ = (0, l.e7)([s.Z], () => s.Z.hasLayers()),
+        y = null != (b = (0, u.Z)(e)) && b,
+        C = (0, c.q8)(e, t),
+        v = (0, l.e7)([a.Z], () => a.Z.getStateForGuild(e)),
+        j = (null == v || null == (n = v.unlockedPowerups) ? void 0 : n[i.A$]) != null,
+        E = null == v || null == (d = v.allPowerups) ? void 0 : d[i.A$],
+        S = null == E ? void 0 : E.storeRemovalDate,
+        x = null == v || null == (f = v.allPowerups) ? void 0 : f[i.XW],
+        { onActivate: I } = (0, p._C)(e, x),
+        P = !_ && y && C && j && null != E && null != S && null != x && null != O,
+        N = r.useCallback(
             (e) => {
-                P(e);
+                I(e);
             },
-            [P],
+            [I],
         ),
-        Z = r.useMemo(() => {
-            if (!N) return null;
-            let e = (0, h.Z)(x);
+        w = r.useMemo(() => {
+            if (!P) return null;
+            let e = (0, h.Z)(S);
             return {
-                firstHeader: S.title,
+                firstHeader: E.title,
                 secondHeader: m.intl.formatToPlainString(g.default["8imxAg"], { dateString: e }),
-                firstBody: m.intl.formatToPlainString(g.default["/bW9tb"], { serverName: _.name }),
+                firstBody: m.intl.formatToPlainString(g.default["/bW9tb"], { serverName: O.name }),
                 secondBody: m.intl.formatToPlainString(g.default.D09fdn, {
                     dateString: e,
-                    boostCount: S.cost,
+                    boostCount: E.cost,
                 }),
                 thirdBody: m.intl.string(g.default["+zvKPj"]),
                 primaryButtonText: m.intl.string(g.default["0uo/LC"]),
-                onPrimaryClick: w,
+                onPrimaryClick: N,
             };
-        }, [N, S, x, _, w]);
+        }, [P, E, S, O, N]);
     return {
-        shouldShow: N,
-        modalConfig: Z,
+        shouldShow: P,
+        modalConfig: w,
     };
 }

@@ -1,68 +1,68 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => f });
 var r = n(255367),
     i = n(73800),
     o = n(442837),
-    a = n(755721),
-    s = n(481060),
-    l = n(528963),
-    c = n(143740),
-    u = n(212342),
-    d = n(388032),
-    f = n(577490);
-let _ = (e) => {
+    a = n(481060),
+    s = n(528963),
+    l = n(143740),
+    c = n(212342),
+    u = n(388032),
+    d = n(577490);
+let f = (e) => {
     let { channelId: t, messageId: n } = e,
-        _ = (0, o.e7)([u.Z], () => u.Z.shouldShowBump(n), [n]),
-        p = i.useCallback(() => {
-            l.Z.dismissPublishBump(n), (0, c.Z)(t, n);
+        f = (0, o.e7)([c.Z], () => c.Z.shouldShowBump(n), [n]),
+        _ = i.useCallback(() => {
+            s.Z.dismissPublishBump(n), (0, l.Z)(t, n);
         }, [t, n]),
-        h = i.useCallback(() => {
-            l.Z.dismissPublishBump(n);
+        p = i.useCallback(() => {
+            s.Z.dismissPublishBump(n);
         }, [n]),
-        m = i.useCallback(() => {
-            l.Z.permanentlyHidePublishBump(t);
+        h = i.useCallback(() => {
+            s.Z.permanentlyHidePublishBump(t);
         }, [t]);
-    return _
+    return f
         ? (0, r.jsxs)("div", {
-              className: f.container,
+              className: d.container,
               children: [
                   (0, r.jsxs)("div", {
-                      className: f.bumpBox,
+                      className: d.bumpBox,
                       children: [
-                          (0, r.jsx)(s.MqZ, {
+                          (0, r.jsx)(a.MqZ, {
                               size: "xs",
                               color: "currentColor",
-                              className: f.icon,
+                              className: d.icon,
                           }),
-                          (0, r.jsx)(s.X6q, {
+                          (0, r.jsx)(a.X6q, {
                               variant: "heading-sm/normal",
-                              className: f.tagline,
-                              children: d.intl.string(d.t.hasZoa),
+                              className: d.tagline,
+                              children: u.intl.string(u.t.hasZoa),
                           }),
-                          (0, r.jsx)(a.zx, {
-                              color: a.zx.Colors.LINK,
-                              look: a.zx.Looks.LINK,
-                              size: a.zx.Sizes.MIN,
-                              className: f.publish,
+                          (0, r.jsx)(a.Text, {
+                              color: "text-brand",
+                              className: d.publish,
+                              variant: "text-sm/normal",
+                              children: (0, r.jsx)(a.P3F, {
+                                  onClick: _,
+                                  children: u.intl.string(u.t["MFGE5+"]),
+                              }),
+                          }),
+                          (0, r.jsx)(a.P3F, {
                               onClick: p,
-                              children: d.intl.string(d.t["MFGE5+"]),
-                          }),
-                          (0, r.jsx)(s.P3F, {
-                              onClick: h,
-                              children: (0, r.jsx)(s.k$p, {
+                              children: (0, r.jsx)(a.k$p, {
                                   size: "xs",
                                   color: "currentColor",
-                                  className: f.closeIcon,
+                                  className: d.closeIcon,
                               }),
                           }),
                       ],
                   }),
-                  (0, r.jsx)(s.Text, {
+                  (0, r.jsx)(a.Text, {
                       color: "text-muted",
-                      className: f.hidePermanently,
+                      className: d.hidePermanently,
                       variant: "text-sm/normal",
-                      children: (0, r.jsx)(s.P3F, {
-                          onClick: m,
-                          children: d.intl.string(d.t.efSkDg),
+                      children: (0, r.jsx)(a.P3F, {
+                          onClick: h,
+                          children: u.intl.string(u.t.efSkDg),
                       }),
                   }),
               ],

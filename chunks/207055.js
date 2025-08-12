@@ -163,7 +163,7 @@ let Z = i.memo((e) => {
                 isGuest: Y,
                 isSelf: j,
                 requestToStreamActivity: el ? q : void 0,
-                application: es ? X : void 0,
+                application: es && (null == q ? void 0 : q.session_id) != null ? X : void 0,
                 showHangStatus: er && en && (j || null != eo),
                 hangStatusActivity: j ? ei : eo,
             }),

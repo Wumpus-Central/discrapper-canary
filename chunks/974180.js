@@ -36,8 +36,8 @@ var i,
     R = n(691294),
     b = n(11352),
     k = n(671105),
-    w = n(106371),
-    L = n(703656),
+    L = n(106371),
+    w = n(703656),
     M = n(359110),
     G = n(922482),
     V = n(427679),
@@ -321,7 +321,7 @@ tc(tD, "displayName", "NotificationStore"),
                       )
                           return !1;
                       let { icon: m, title: y, body: R } = (0, D.Xi)(f, u, _),
-                          w = !(0, U._x)("NotificationStore.handleMessage", null == E ? void 0 : E.id);
+                          L = !(0, U._x)("NotificationStore.handleMessage", null == E ? void 0 : E.id);
                       if (
                           (s.Z.dispatch({
                               type: "RPC_NOTIFICATION_CREATE",
@@ -335,7 +335,7 @@ tc(tD, "displayName", "NotificationStore"),
                           z.Z.getDesktopType() === tu.qrD.NEVER)
                       )
                           return N && to.Z.playNotificationSound(tg, t_, C), !1;
-                      let L = null != (r = q.Z.getMessage(o, u.id)) ? r : (0, P.e5)(u);
+                      let w = null != (r = q.Z.getMessage(o, u.id)) ? r : (0, P.e5)(u);
                       to.Z.showNotification(
                           m,
                           y,
@@ -348,10 +348,10 @@ tc(tD, "displayName", "NotificationStore"),
                               channel_id: f.id,
                               channel_type: f.type,
                               guild_id: f.guild_id,
-                              badge: (0, X.Ex)(L, E),
+                              badge: (0, X.Ex)(w, E),
                           },
                           {
-                              omitViewTracking: w,
+                              omitViewTracking: L,
                               tag: u.id,
                               sound: N ? tg : void 0,
                               soundpack: C,
@@ -363,7 +363,8 @@ tc(tD, "displayName", "NotificationStore"),
                                       g.default.clickedNotification();
                               },
                               isUserAvatar: !0,
-                              messageRecord: L,
+                              messageRecord: w,
+                              fallbackDeepLink: (0, to.W)(tu.Z5c.CHANNEL(f.guild_id, f.id, u.id)),
                           },
                       ).then((t) => {
                           null != t && tZ.track(f.id, t.notification, t.trackingProps);
@@ -608,7 +609,7 @@ tc(tD, "displayName", "NotificationStore"),
                   REACTION_NOTIFICATION_SENT: function (t) {
                       let { icon: e, title: n, body: i, route: l, trackingType: a, message: r } = t;
                       if (tP() || null == n || null == i || null == a) return !1;
-                      let { enableInAppNotifications: o } = w.Z.getCurrentConfig(
+                      let { enableInAppNotifications: o } = L.Z.getCurrentConfig(
                           { location: "desktopNotification" },
                           { autoTrackExposure: !0 },
                       );
@@ -646,7 +647,7 @@ tc(tD, "displayName", "NotificationStore"),
                                   {
                                       overrideStreamerMode: !0,
                                       onClick: () => {
-                                          (0, L.uL)(tu.Z5c.SETTINGS(t ? "windows" : "linux"));
+                                          (0, w.uL)(tu.Z5c.SETTINGS(t ? "windows" : "linux"));
                                       },
                                       onShown: () => {
                                           u.K.set(tp, !0);

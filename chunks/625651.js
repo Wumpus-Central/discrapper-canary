@@ -63,7 +63,7 @@ function j(e) {
                 x = (0, i.e7)(
                     [d.Z],
                     () =>
-                        t.skuId !== g.If || null == m
+                        t.skuId !== a.If || null == m
                             ? 0
                             : d.Z.getSortedRoles(e).reduce((e, t) => {
                                   var n, r;
@@ -76,7 +76,7 @@ function j(e) {
             return o.useMemo(() => {
                 let e;
                 switch (t.skuId) {
-                    case g.If:
+                    case a.If:
                         e =
                             x > 0
                                 ? v.intl.formatToPlainString(k.default["4jSvr6"], {
@@ -110,7 +110,7 @@ function j(e) {
                 }
                 return (
                     b &&
-                        t.skuId === g.XW &&
+                        t.skuId === a.XW &&
                         (e = (0, r.jsxs)(r.Fragment, {
                             children: [
                                 e,

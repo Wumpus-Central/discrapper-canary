@@ -2,6 +2,7 @@ n.d(t, {
     Bg: () => U,
     E5: () => ee,
     Fp: () => Z,
+    HL: () => en,
     JT: () => $,
     L2: () => z,
     MY: () => k,
@@ -117,10 +118,14 @@ function G(e) {
 function B(e) {
     return e.replace(/[^A-Za-z0-9]/g, "");
 }
-let Z = (e) =>
-        (null == e ? void 0 : e.type) === h.uaV.CUSTOM_GIFT &&
-        (null == e ? void 0 : e.embeds.length) === 1 &&
-        (null == e ? void 0 : e.embeds[0].type) === h.hBH.GIFT,
+let Z = (e) => {
+        var t;
+        return (
+            (null == e ? void 0 : e.type) === h.uaV.CUSTOM_GIFT &&
+            (null == e || null == (t = e.embeds) ? void 0 : t.length) === 1 &&
+            (null == e ? void 0 : e.embeds[0].type) === h.hBH.GIFT
+        );
+    },
     F = (e) => {
         let t;
         if (null == e) return [];
@@ -182,10 +187,11 @@ async function H(e) {
 function Y(e, t) {
     u.default.track(h.rMx.GIFT_CODE_COPIED, b({}, (0, s.Z)(t, !1, !1), e.analyticsData));
 }
-function W(e, t, n, r, i, o, a) {
-    return null == n && (r || i || null == e)
-        ? !a || o || r || i
-            ? r && (t.isSubscription || null != e)
+function W(e, t, n) {
+    let { error: r, accepted: i, accepting: o, opened: a, isCustomGift: s, isPremiumAppGift: l } = n;
+    return null == r && (i || o || null == e)
+        ? !s || a || i || o
+            ? i && (t.isSubscription || null != e || l)
                 ? h.wZ8.SUCCESS
                 : h.wZ8.CONFIRM
             : h.wZ8.OPEN
@@ -207,18 +213,20 @@ function K(e, t, n) {
     }
 }
 function z(e, t, n) {
+    let { isCustomGift: r, isPremiumAppGift: i } = n;
     switch (e) {
         case h.wZ8.ERROR:
             return g.intl.string(g.t.w19zb2);
         case h.wZ8.SUCCESS:
             if (__OVERLAY__) return g.intl.string(g.t.zW87EB);
             if (t.isSubscription) return g.intl.string(g.t.ex5TKi);
+            if (i) return g.intl.string(g.t.zW87EB);
             return g.intl.string(g.t.OOkjqq);
         case h.wZ8.OPEN:
             return g.intl.string(g.t.F8ktcn);
         case h.wZ8.CONFIRM:
         default:
-            if (null != n && n) return g.intl.string(g.t.n6I6k5);
+            if (null != r && r) return g.intl.string(g.t.n6I6k5);
             if (null != t.giftStyle) return t.isClaimed ? g.intl.string(g.t.OgpR0d) : g.intl.string(g.t["2BWscn"]);
             return t.isSubscription ? g.intl.string(g.t.wQ1FHx) : g.intl.string(g.t.OgpR0d);
     }
@@ -332,4 +340,8 @@ function et(e, t) {
         default:
             return g.intl.string(g.t["s9+XlJ"]);
     }
+}
+function en(e) {
+    let { productLine: t } = e;
+    return t === h.POd.APPLICATION;
 }

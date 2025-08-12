@@ -13,7 +13,7 @@ var r = n(255367),
     p = n(158776),
     h = n(19780),
     m = n(594174),
-    g = n(172029),
+    g = n(877912),
     E = n(762578),
     b = n(981631),
     y = n(704483),
@@ -23,7 +23,7 @@ let I = 46;
 function T(e) {
     let { activity: t, channel: n, userId: o } = e,
         c = (0, d.IX)(t.application_id).data,
-        f = (0, a.e7)([g.Z], () => null != g.Z.getPendingRequestForUser(o)),
+        f = (0, g.Z)(o),
         [_, p] = i.useState(!1),
         [m, E] = i.useState(!1),
         T = (0, a.e7)([h.Z], () => h.Z.getChannelId() !== n.id);

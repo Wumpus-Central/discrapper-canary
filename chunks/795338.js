@@ -1,33 +1,34 @@
 n.d(t, {
-    g: () => u,
-    m: () => d,
+    g: () => d,
+    m: () => h,
 });
 var r = n(255367),
     i = n(120356),
     l = n.n(i),
-    o = n(156732),
-    s = n(535396),
-    a = n(115094),
-    c = n(942570);
-function u(e) {
+    o = n(494497),
+    s = n(156732),
+    a = n(535396),
+    c = n(115094),
+    u = n(942570);
+function d(e) {
     let { className: t } = e;
     return (0, r.jsx)("img", {
         className: t,
         alt: "",
-        src: c,
+        src: u,
     });
 }
-function d(e) {
+function h(e) {
     let { className: t, powerup: n, isHovering: i } = e,
-        c = (0, o.Z)(n, i);
+        u = (0, s.Z)(n, i);
     switch (n.type) {
-        case s.Us.LEVEL:
-            return (0, r.jsx)(u, {});
-        case s.Us.PERK:
+        case a.Us.LEVEL:
+            return (0, r.jsx)(d, {});
+        case a.Us.PERK:
             return (0, r.jsx)("img", {
                 alt: "",
-                src: c,
-                className: l()(a.background, { [a.gradientRoleColorsImage]: n.skuId === s.If }, t),
+                src: u,
+                className: l()(c.background, { [c.gradientRoleColorsImage]: n.skuId === o.If }, t),
             });
     }
 }
