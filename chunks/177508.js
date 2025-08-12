@@ -487,19 +487,37 @@ function ea() {
             "overlay-secondary",
         ],
         d = [...c, "expressive"].map((t) =>
-            (0, i.jsx)(
-                es,
-                {
-                    component: u.z,
-                    variant: t,
-                    text: "".concat((0, l.capitalize)(t), " ").concat(e.toUpperCase()),
-                    size: e,
-                    icon: "none" !== n ? T.gw7 : void 0,
-                    iconPosition: n,
-                    showLoadingAnimation: a,
-                },
-                t + e,
-            ),
+            (0, i.jsxs)(i.Fragment, {
+                children: [
+                    (0, i.jsx)(
+                        es,
+                        {
+                            component: u.z,
+                            variant: t,
+                            text: "".concat((0, l.capitalize)(t), " ").concat(e.toUpperCase()),
+                            size: e,
+                            icon: "none" !== n ? T.gw7 : void 0,
+                            iconPosition: n,
+                            showLoadingAnimation: a,
+                        },
+                        t + e,
+                    ),
+                    (0, i.jsx)(
+                        es,
+                        {
+                            component: u.z,
+                            variant: t,
+                            text: "".concat((0, l.capitalize)(t), " ").concat(e.toUpperCase()),
+                            size: e,
+                            icon: "none" !== n ? T.gw7 : void 0,
+                            iconPosition: n,
+                            showLoadingAnimation: a,
+                            disabled: !0,
+                        },
+                        t + e + "disabled",
+                    ),
+                ],
+            }),
         ),
         g = [...c, "icon-only"].map((t) =>
             (0, i.jsx)(

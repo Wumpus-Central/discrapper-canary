@@ -235,6 +235,7 @@ function A(e) {
                                         hasReducedMotion: en.reducedMotion.enabled,
                                         buttonRef: ee,
                                         isLightMode: er,
+                                        disabled: V,
                                     }),
                                 null == D
                                     ? (0, r.jsx)("div", {
@@ -299,19 +300,19 @@ function N(e) {
     );
 }
 function C(e) {
-    let { hasReducedMotion: t, buttonRef: n, isLightMode: o } = e,
-        s = i.useRef(null);
+    let { hasReducedMotion: t, buttonRef: n, isLightMode: o, disabled: s } = e,
+        l = i.useRef(null);
     return (
         i.useEffect(() => {
-            if (t) {
+            if (!s && t) {
                 let e = n.current,
                     t = () => {
                         var e;
-                        null == (e = s.current) || e.play();
+                        null == (e = l.current) || e.play();
                     },
                     r = () => {
                         var e;
-                        null == (e = s.current) || e.pause();
+                        null == (e = l.current) || e.pause();
                     };
                 return (
                     null == e || e.addEventListener("mouseenter", t, !0),
@@ -322,18 +323,20 @@ function C(e) {
                     }
                 );
             }
-        }, [t, n]),
+        }, [t, n, s]),
         (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, r.jsx)(u.GlowButtonRive, {
-                    className: a()(g.expressiveRive, g.expressiveBackground),
-                    eventTargetRef: n,
-                    fit: "layout",
-                    artboard: "BaseGlowRemapped",
-                    ref: s,
-                    withReducedMotion: "short-loop",
-                }),
+                !s &&
+                    (0, r.jsx)(u.GlowButtonRive, {
+                        className: a()(g.expressiveRive, g.expressiveBackground),
+                        eventTargetRef: n,
+                        fit: "layout",
+                        artboard: "BaseGlowRemapped",
+                        ref: l,
+                        withReducedMotion: "short-loop",
+                    }),
                 !t &&
+                    !s &&
                     (0, r.jsx)(u.GlowButtonRive, {
                         className: a()(g.expressiveRive, g.expressiveHoverContainer),
                         fit: "layout",

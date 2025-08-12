@@ -1,4 +1,4 @@
-r.d(t, { N: () => h }), r(388685), r(642613), r(290780);
+r.d(t, { N: () => m }), r(388685), r(290780);
 var n = r(73800),
     l = r(392711),
     a = r.n(l),
@@ -6,81 +6,81 @@ var n = r(73800),
     o = r(442837),
     s = r(480294),
     c = r(597688),
-    u = r(884697),
-    d = r(26931),
-    p = r(370039),
-    g = r(937510),
-    f = r(981631),
-    b = r(388032);
-let h = (e, t) => {
-    let r = (0, o.e7)([s.Z], () => s.Z.hasConsented(f.pjP.PERSONALIZATION)),
-        l = n.useMemo(() => {
+    u = r(615006),
+    d = r(884697),
+    p = r(26931),
+    g = r(370039),
+    f = r(937510),
+    b = r(981631),
+    h = r(388032);
+let m = function (e, t) {
+    let r = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+        l = (0, o.e7)([s.Z], () => s.Z.hasConsented(b.pjP.PERSONALIZATION)),
+        m = n.useMemo(() => {
             var t;
             return null != (t = null == e ? void 0 : e[i.m.RECOMMENDED]) ? t : [];
         }, [e]),
-        h = n.useMemo(() => {
+        _ = n.useMemo(() => {
             var t;
             return null != (t = null == e ? void 0 : e[i.m.POPULAR]) ? t : [];
         }, [e]),
-        m = l.length > 0 && r,
-        [_, v] = n.useState(m ? i.m.RECOMMENDED : i.m.POPULAR),
-        [O, C] = n.useState(0),
-        E = (0, d.u)(),
+        v = m.length > 0 && l,
+        [O, C] = n.useState(v ? i.m.RECOMMENDED : i.m.POPULAR),
+        E = (0, p.u)(),
         S = (0, o.e7)([c.Z], () => c.Z.productsWithVariantsAsGroup),
-        y = (0, p.a)(),
-        x = n.useMemo(() => {
-            let e = [];
-            return (
-                _ === i.m.RECENT
-                    ? (e = S)
-                    : _ === i.m.PRICE_LOW_TO_HIGH
-                      ? (e = [...S].sort((e, r) => {
-                            var n, l, a, i;
-                            return (
-                                (null != (a = null == (n = (0, u.Vw)(e, t, !1)) ? void 0 : n.amount) ? a : 0) -
-                                (null != (i = null == (l = (0, u.Vw)(r, t, !1)) ? void 0 : l.amount) ? i : 0)
-                            );
-                        }))
-                      : _ === i.m.RECOMMENDED
-                        ? (e = E(l))
-                        : _ === i.m.POPULAR
-                          ? (e = E(h))
-                          : _ === i.m.RANDOM && (e = a().shuffle(S)),
-                y(e)
-            );
-        }, [_, y, S, t, E, l, h, O]),
-        j = n.useCallback(() => {
-            C((e) => e + 1), v(i.m.RANDOM);
-        }, []);
+        y = (0, o.e7)([u.Z], () => u.Z.getUserDiscounts()),
+        x = (0, g.a)(),
+        [j, T] = n.useState([]),
+        P = n.useCallback(() => {
+            C(i.m.RANDOM), T(a().shuffle(S));
+        }, [S]);
+    n.useEffect(() => {
+        T(a().shuffle(S));
+    }, [S]);
+    let L = n.useMemo(() => {
+        let e = [];
+        return (
+            O === i.m.RECENT
+                ? (e = S)
+                : O === i.m.PRICE_LOW_TO_HIGH
+                  ? (e = (0, d.hC)([...S], t))
+                  : O === i.m.RECOMMENDED
+                    ? (e = r ? (0, d.Qf)(E(m), y) : E(m))
+                    : O === i.m.POPULAR
+                      ? (e = r ? (0, d.Qf)(E(_), y) : E(_))
+                      : O === i.m.RANDOM && (e = j),
+            x(e)
+        );
+    }, [O, x, S, j, t, E, m, _, y, r]);
     return {
-        sortType: _,
-        setSortType: v,
-        sortedItems: (0, g.l)(x),
+        sortType: O,
+        setSortType: C,
+        sortedItems: (0, f.l)(L),
         sortOptions: n.useMemo(() => {
             let e = [
                 {
                     value: i.m.POPULAR,
-                    label: b.intl.string(b.t["1wQj4O"]),
+                    label: h.intl.string(h.t["1wQj4O"]),
                 },
                 {
                     value: i.m.RECENT,
-                    label: b.intl.string(b.t["6NZpt7"]),
+                    label: h.intl.string(h.t["6NZpt7"]),
                 },
                 {
                     value: i.m.PRICE_LOW_TO_HIGH,
-                    label: b.intl.string(b.t.RTG4yM),
+                    label: h.intl.string(h.t.RTG4yM),
                 },
             ];
             return (
-                m &&
+                v &&
                     e.unshift({
                         value: i.m.RECOMMENDED,
-                        label: b.intl.string(b.t.JrlKlp),
+                        label: h.intl.string(h.t.JrlKlp),
                     }),
                 e
             );
-        }, [m]),
-        showRecommendationOption: m,
-        shuffleProducts: j,
+        }, [v]),
+        showRecommendationOption: v,
+        shuffleProducts: P,
     };
 };

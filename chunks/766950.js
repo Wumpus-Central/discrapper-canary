@@ -1,4 +1,4 @@
-n.d(t, { default: () => R }), n(953529), n(388685);
+n.d(t, { default: () => I }), n(953529), n(388685);
 var r = n(255367),
     o = n(73800),
     l = n(990547),
@@ -19,14 +19,14 @@ var r = n(255367),
     _ = n(131016),
     S = n(922626),
     C = n(579346),
-    y = n(438759),
-    O = n(512070),
+    O = n(438759),
+    y = n(512070),
     P = n(305813),
     v = n(203872),
     k = n(981631),
     E = n(474936),
-    N = n(698282),
-    T = n(388032),
+    T = n(698282),
+    N = n(388032),
     D = n(212552);
 function w(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -53,7 +53,7 @@ function w(e) {
     }
     return e;
 }
-function I(e) {
+function R(e) {
     let { onApply: t, onSurpriseMe: n, onClose: o, canApply: l, isApplying: i } = e,
         a = (0, h.m)(E.p9.TIER_2),
         s = (0, r.jsx)(d.zxk, {
@@ -62,14 +62,14 @@ function I(e) {
             onClick: n,
             icon: d.T$Z,
             iconPosition: "start",
-            text: T.intl.string(N.default.NOGFdn),
+            text: N.intl.string(T.default.NOGFdn),
         }),
         c = (0, r.jsxs)("div", {
             className: D.subscriberButtonContainer,
             children: [
                 s,
                 (0, r.jsx)(d.ua7, {
-                    text: T.intl.string(N.default.cVTpnp),
+                    text: N.intl.string(T.default.cVTpnp),
                     shouldShow: !l,
                     children: (e) => {
                         var n, o;
@@ -81,7 +81,7 @@ function I(e) {
                                     onClick: t,
                                     disabled: !l || i,
                                     loading: i,
-                                    text: T.intl.string(T.t["1Qm829"]),
+                                    text: N.intl.string(N.t["1Qm829"]),
                                     variant: "primary",
                                     size: "md",
                                     fullWidth: !0,
@@ -111,7 +111,7 @@ function I(e) {
                     className: D.descriptionContainer,
                     children: [
                         (0, r.jsx)(d.ua7, {
-                            text: T.intl.string(T.t["5AFxuL"]),
+                            text: N.intl.string(N.t["5AFxuL"]),
                             children: (e) =>
                                 (0, r.jsx)(
                                     d.SrA,
@@ -128,7 +128,7 @@ function I(e) {
                             variant: "text-md/medium",
                             color: "text-default",
                             className: D.description,
-                            children: T.intl.format(N.default.PWf0xc, {
+                            children: N.intl.format(T.default.PWf0xc, {
                                 onClickNitro: () => {
                                     x.default.track(k.rMx.DISPLAY_NAME_STYLES_NITRO_CLICKED), (0, m.$)(o);
                                 },
@@ -157,20 +157,20 @@ function I(e) {
         children: a ? c : u,
     });
 }
-function R(e) {
-    var t, n, m, g, h, E, w, R, A, L;
+function I(e) {
+    var t, n, m, g, h, E, w, I, A, L;
     let { transitionState: B, analyticsLocations: M, guild: Z, onClose: Y } = e,
         G = (0, s.e7)([b.default], () => b.default.getCurrentUser()),
         H = null != (w = null == G || null == (t = G.displayNameStyles) ? void 0 : t.colors) ? w : [],
         [z, F] = o.useState(
-            null != (R = null == G || null == (n = G.displayNameStyles) ? void 0 : n.fontId) ? R : a.C.DEFAULT,
+            null != (I = null == G || null == (n = G.displayNameStyles) ? void 0 : n.fontId) ? I : a.C.DEFAULT,
         ),
-        [U, X] = o.useState(
+        [U, K] = o.useState(
             null != (A = null == G || null == (m = G.displayNameStyles) ? void 0 : m.effectId) ? A : i.m.SOLID,
         ),
-        K = (0, v.R)(U),
+        X = (0, v.R)(U),
         q = (0, v.R)(i.m.GRADIENT),
-        [V, W] = o.useState(H.length > 0 && U !== i.m.GRADIENT ? H[0] : K.defaultColors[0]),
+        [V, W] = o.useState(H.length > 0 && U !== i.m.GRADIENT ? H[0] : X.defaultColors[0]),
         [$, J] = o.useState(H.length > 0 && U === i.m.GRADIENT ? H : q.defaultColors);
     (0, f.Z)(
         {
@@ -218,18 +218,18 @@ function R(e) {
                                               className: D.sectionHeader,
                                               children: (0, r.jsx)(d.X6q, {
                                                   variant: "heading-lg/semibold",
-                                                  children: T.intl.string(N.default.ZPMAlZ),
+                                                  children: N.intl.string(T.default.ZPMAlZ),
                                               }),
                                           }),
-                                          (0, r.jsx)(O.Z, {
+                                          (0, r.jsx)(y.Z, {
                                               selectedFontId: z,
                                               setSelectedFontId: F,
                                               className: D.selectionSubSection,
                                           }),
-                                          (0, r.jsx)(y.Z, {
+                                          (0, r.jsx)(O.Z, {
                                               selectedEffectId: U,
                                               setSelectedEffectId: (e) => {
-                                                  X(e);
+                                                  K(e);
                                               },
                                               className: D.selectionSubSection,
                                           }),
@@ -240,7 +240,7 @@ function R(e) {
                                               },
                                               selectedEffectId: U,
                                               className: D.selectionSubSection,
-                                              defaultColor: K.defaultColors[0],
+                                              defaultColor: X.defaultColors[0],
                                           }),
                                       ],
                                   }),
@@ -248,17 +248,17 @@ function R(e) {
                                       user: G,
                                       selectedFontId: z,
                                       selectedEffectId: U,
-                                      selectedColors: U === i.m.SOLID && (0, c.E)(en, K.defaultColors) ? [] : en,
+                                      selectedColors: U === i.m.SOLID && (0, c.E)(en, X.defaultColors) ? [] : en,
                                       onClose: Y,
                                   }),
                               ],
                           }),
-                          (0, r.jsx)(I, {
+                          (0, r.jsx)(R, {
                               isApplying: et,
                               onApply: () => {
                                   if (er) {
                                       let e = en;
-                                      U === i.m.SOLID && en.length > 0 && en[0] === K.defaultColors[0] && (e = []),
+                                      U === i.m.SOLID && en.length > 0 && en[0] === X.defaultColors[0] && (e = []),
                                           ee({
                                               fontId: z,
                                               effectId: U,
@@ -274,7 +274,7 @@ function R(e) {
                               onSurpriseMe: () => {
                                   let e = (0, _.aY)();
                                   F(e.fontId),
-                                      X(e.effectId),
+                                      K(e.effectId),
                                       W(e.colors[0]),
                                       J(e.colors),
                                       x.default.track(k.rMx.DISPLAY_NAME_STYLES_SURPRISE_ME);

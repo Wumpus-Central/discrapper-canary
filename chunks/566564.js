@@ -151,6 +151,7 @@ let k = (e) => {
                                     ? L.feedblockInteractiveBackground
                                     : void 0,
                             hasSorting: c === j.AW.HOME,
+                            prioritizeUserDiscounts: c === j.AW.HOME,
                             tab: c,
                         },
                         l,

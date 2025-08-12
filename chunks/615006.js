@@ -26,10 +26,7 @@ let s = [],
     };
 class d extends (r = i.ZP.Store) {
     getUserDiscounts() {
-        let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        if (e) return l;
-        let t = Date.now();
-        return l.filter((e) => null == e.expiresAt || e.expiresAt.getTime() > t);
+        return l;
     }
 }
 a(d, "displayName", "CollectiblesUserDiscountStore");

@@ -49,7 +49,26 @@ let O = 1000,
         let L = (0, f.P)(N, !!C, R),
             { mediaUrls: x, isSuccess: M } = (0, E.Z)(!o && L && w),
             k = (0, i.useRef)(null),
-            [j, U] = (0, i.useState)(!1);
+            [j, U] = (0, i.useState)(!1),
+            [G, B] = (0, i.useState)(!1),
+            [Z, F] = (0, i.useState)(!1),
+            [V, H] = (0, i.useState)(!1);
+        return ((0, i.useEffect)(() => {
+            if (!o && L && n && !V) {
+                if (!M) {
+                    H(!0), _.default.track(b.rMx.PREMIUM_BRAND_REFRESH_WOW_MOMENT_ASSETS_NOT_LOADED_ON_CONFIRMATION);
+                    return;
+                }
+                M &&
+                    (F(!0),
+                    B(!0),
+                    c.Z.dispatch({
+                        type: "WOW_MOMENT_CONFIRMATION_SET_IS_DISPLAYING_WOW_MOMENT_CONFIRMATION",
+                        value: !0,
+                    }),
+                    _.default.track(b.rMx.PREMIUM_BRAND_REFRESH_WOW_MOMENT_VIEWED));
+            }
+        }, [o, L, n, M, V]),
         (0, i.useEffect)(() => {
             function e() {
                 U(!0), A();
@@ -60,24 +79,7 @@ let O = 1000,
                     p.S.unsubscribe(b.CkL.PREMIUM_PAYMENT_MODAL_CLOSED, e);
                 }
             );
-        }, [A]);
-        let [G, B] = (0, i.useState)(!1),
-            [Z, F] = (0, i.useState)(!1);
-        return ((0, i.useEffect)(() => {
-            if (!o && L && n && !Z) {
-                if (!M) {
-                    F(!0), _.default.track(b.rMx.PREMIUM_BRAND_REFRESH_WOW_MOMENT_ASSETS_NOT_LOADED_ON_CONFIRMATION);
-                    return;
-                }
-                M &&
-                    (B(!0),
-                    c.Z.dispatch({
-                        type: "WOW_MOMENT_CONFIRMATION_SET_IS_DISPLAYING_WOW_MOMENT_CONFIRMATION",
-                        value: !0,
-                    }),
-                    _.default.track(b.rMx.PREMIUM_BRAND_REFRESH_WOW_MOMENT_VIEWED));
-            }
-        }, [o, L, n, M, Z]),
+        }, [A]),
         (0, i.useEffect)(
             () => () => {
                 c.Z.dispatch({
@@ -87,7 +89,7 @@ let O = 1000,
             },
             [],
         ),
-        G)
+        Z)
             ? (0, r.jsxs)("div", {
                   children: [
                       (0, r.jsxs)("div", {
@@ -123,10 +125,13 @@ let O = 1000,
                       }),
                       (0, r.jsx)("div", {
                           className: y.wowAnimation,
-                          children: (0, r.jsx)(l._dj, {
+                          children: (0, r.jsx)(l.zec, {
                               fit: "layout",
                               ref: k,
-                              dataBinding: { ExitTrigger: j },
+                              dataBinding: {
+                                  ExitTrigger: j,
+                                  EntryTrigger: G,
+                              },
                           }),
                       }),
                       (0, r.jsx)("div", {

@@ -63,6 +63,7 @@ function _(e) {
     return (e) =>
         (function e(t, n, r) {
             if (Array.isArray(t)) t.forEach((t) => e(t, n, r));
+            else if ("list" === t.type) t.items.forEach((t) => e(t, n, r));
             else if ("string" == typeof t.content && "codeBlock" !== t.type) {
                 let e = [],
                     l = "";

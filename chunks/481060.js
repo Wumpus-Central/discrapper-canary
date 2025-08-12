@@ -290,7 +290,6 @@ n.d(t, {
     _S3: () => tp._S3,
     _Ve: () => tp._Ve,
     _XJ: () => tp._XJ,
-    _dj: () => tg.WowMomentConfirmationWumpusRive,
     _m8: () => tp._m8,
     _tJ: () => tp._tJ,
     _uN: () => tp._uN,
@@ -588,6 +587,7 @@ n.d(t, {
     zLd: () => tg.PulseGradientRive,
     zRq: () => tp.zRq,
     ze6: () => e0.z,
+    zec: () => tg.JetpackWumpusWithTrinketsRive,
     zsu: () => i.zs,
     zxk: () => i.zx,
 });

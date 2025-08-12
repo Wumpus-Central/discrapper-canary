@@ -1,42 +1,35 @@
-n.d(t, { Z: () => s }), n(388685);
-var r = n(570140),
-    i = n(996106),
-    l = n(452426),
-    a = n(701488),
-    o = n(231338);
-let s = {
-    [o.Et.SET_ORIENTATION_LOCK_STATE]: {
-        validation: (e) =>
-            (0, l.Z)(e)
-                .required()
-                .keys({
-                    lock_state: e.number().valid(a.xK.UNLOCKED, a.xK.PORTRAIT, a.xK.LANDSCAPE).required(),
-                    picture_in_picture_lock_state: e
-                        .number()
-                        .valid(a.xK.UNLOCKED, a.xK.PORTRAIT, a.xK.LANDSCAPE)
-                        .allow(null)
-                        .optional(),
-                    grid_lock_state: e
-                        .number()
-                        .valid(a.xK.UNLOCKED, a.xK.PORTRAIT, a.xK.LANDSCAPE)
-                        .allow(null)
-                        .optional(),
-                }),
-        handler(e) {
-            let {
-                    socket: t,
-                    args: { lock_state: n, picture_in_picture_lock_state: l, grid_lock_state: a },
-                } = e,
-                s = t.application.id;
-            if (null != s)
-                r.Z.dispatch({
-                    type: "EMBEDDED_ACTIVITY_SET_ORIENTATION_LOCK_STATE",
-                    applicationId: s,
-                    lockState: n,
-                    pictureInPictureLockState: l,
-                    gridLockState: a,
-                });
-            else throw new i.Z({ errorCode: o.lT.INVALID_COMMAND }, "No application.");
-        },
-    },
-};
+function r(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0,
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function i(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function o(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = {},
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    return i;
+}
+n(255367), n(73800), n(692547), n(331595), n(267843);
