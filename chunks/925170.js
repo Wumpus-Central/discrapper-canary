@@ -1,153 +1,195 @@
-n.d(t, { default: () => A }), n(388685);
-var i = n(255367),
-    r = n(73800),
-    a = n(120356),
-    d = n.n(a),
-    l = n(296009),
-    o = n(442837),
-    s = n(82659),
+n.d(t, { default: () => k }), n(388685), n(539854);
+var r = n(255367),
+    i = n(73800),
+    l = n(120356),
+    o = n.n(l),
+    a = n(296009),
+    s = n(442837),
+    d = n(82659),
     c = n(481060),
     u = n(313201),
     p = n(594174),
-    g = n(804919),
-    b = n(747101),
-    j = n(985748),
-    f = n(566007),
-    m = n(173951),
-    y = n(455731),
-    O = n(231338),
-    h = n(388032),
-    x = n(663161);
-let w = {
-    [l.l.FAVORITE_GAMES]: {
-        component: f.Z,
-        getAriaLabel: () => h.intl.string(h.t.xJtdIi),
-    },
-    [l.l.CURRENT_GAMES]: {
-        component: j.Z,
-        getAriaLabel: () => h.intl.string(h.t.Ae8tRk),
-    },
-    [l.l.PLAYED_GAMES]: {
+    b = n(804919),
+    g = n(86419),
+    f = n(810473),
+    j = n(747101),
+    O = n(985748),
+    m = n(566007),
+    y = n(173951),
+    h = n(455731),
+    w = n(247397),
+    x = n(388032),
+    v = n(663161);
+let A = {
+    [a.l.FAVORITE_GAMES]: {
         component: m.Z,
-        getAriaLabel: () => h.intl.string(h.t["pBR+4u"]),
+        getAriaLabel: () => x.intl.string(x.t.xJtdIi),
     },
-    [l.l.WANT_TO_PLAY_GAMES]: {
+    [a.l.CURRENT_GAMES]: {
+        component: O.Z,
+        getAriaLabel: () => x.intl.string(x.t.Ae8tRk),
+    },
+    [a.l.PLAYED_GAMES]: {
         component: y.Z,
-        getAriaLabel: () => h.intl.string(h.t.NtoBi4),
+        getAriaLabel: () => x.intl.string(x.t["pBR+4u"]),
+    },
+    [a.l.WANT_TO_PLAY_GAMES]: {
+        component: h.Z,
+        getAriaLabel: () => x.intl.string(x.t.NtoBi4),
     },
 };
-function v(e) {
-    let { widgetType: t, user: n, widget: a, isGameFetching: l, onClick: o, disabled: s } = e,
-        p = r.useRef(null),
-        g = (0, u.Dt)();
-    if (null == a) return null;
-    let { component: b, getAriaLabel: j } = w[t];
-    return (0, i.jsx)("li", {
-        children: (0, i.jsxs)("div", {
+function P(e) {
+    let { widgetType: t, user: n, widget: l, isGameFetching: a, onAddWidget: s, disabled: d } = e,
+        p = i.useRef(null),
+        b = (0, u.Dt)(),
+        f = i.useCallback(() => {
+            (0, g.qH)(t), s();
+        }, [t, s]);
+    if (null == l) return null;
+    let { component: j, getAriaLabel: O } = A[t];
+    return (0, r.jsx)("li", {
+        children: (0, r.jsxs)("div", {
             ref: p,
-            onClick: s ? void 0 : o,
-            className: d()(x.addButtonContainer, s && x.disabled),
+            onClick: d ? void 0 : f,
+            className: o()(v.addButtonContainer, d && v.disabled),
             children: [
-                (0, i.jsx)("div", {
-                    className: x.addButton,
-                    children: (0, i.jsx)(c.zxk, {
-                        text: h.intl.string(h.t.onajm5),
+                (0, r.jsx)("div", {
+                    className: v.addButton,
+                    children: (0, r.jsx)(c.zxk, {
+                        text: x.intl.string(x.t.onajm5),
                         variant: "overlay-primary",
-                        "aria-label": j(),
-                        "aria-describedby": s ? g : void 0,
+                        "aria-label": O(),
+                        "aria-describedby": d ? b : void 0,
                         focusProps: { ringTarget: p },
                         onClick: (e) => {
-                            e.stopPropagation(), o(e);
+                            e.stopPropagation(), f();
                         },
-                        disabled: s,
+                        disabled: d,
                     }),
                 }),
-                s &&
-                    (0, i.jsxs)("div", {
-                        className: x.widgetAdded,
+                d &&
+                    (0, r.jsxs)("div", {
+                        className: v.widgetAdded,
                         children: [
-                            (0, i.jsx)(c.kmB, {
+                            (0, r.jsx)(c.kmB, {
                                 size: "sm",
                                 color: "currentColor",
                             }),
-                            (0, i.jsx)(c.Text, {
+                            (0, r.jsx)(c.Text, {
                                 variant: "text-sm/medium",
                                 "aria-hidden": !0,
-                                children: h.intl.string(h.t["UEZy/f"]),
+                                children: x.intl.string(x.t["UEZy/f"]),
                             }),
-                            (0, i.jsx)(c.nn4, {
-                                id: g,
-                                children: h.intl.string(h.t.d8WVXF),
+                            (0, r.jsx)(c.nn4, {
+                                id: b,
+                                children: x.intl.string(x.t.d8WVXF),
                             }),
                         ],
                     }),
-                (0, i.jsx)(c.nn4, { children: h.intl.string(h.t.e9eskJ) }),
-                (0, i.jsx)(b, {
-                    widget: a,
+                (0, r.jsx)(c.nn4, { children: x.intl.string(x.t.e9eskJ) }),
+                (0, r.jsx)(j, {
+                    widget: l,
                     user: n,
-                    isGameFetching: l,
-                    containerClassName: s && x.disabledWidget,
+                    isGameFetching: a,
+                    containerClassName: d && v.disabledWidget,
                     disableInteraction: !0,
                 }),
             ],
         }),
     });
 }
-function A(e) {
-    var t, n;
-    let r = (0, o.e7)([p.default], () => p.default.getCurrentUser()),
-        a = (0, g.oD)(),
-        { widgets: d, isGameFetching: l } = (0, b.Z)(a),
-        c = new Map(d.map((e) => [e.type, e]));
-    return null == r
+function k(e) {
+    var t,
+        n,
+        { onClose: l } = e,
+        o = (function (e, t) {
+            if (null == e) return {};
+            var n,
+                r,
+                i = (function (e, t) {
+                    if (null == e) return {};
+                    var n,
+                        r,
+                        i = {},
+                        l = Object.keys(e);
+                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                    return i;
+                })(e, t);
+            if (Object.getOwnPropertySymbols) {
+                var l = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < l.length; r++)
+                    (n = l[r]),
+                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+            }
+            return i;
+        })(e, ["onClose"]);
+    let a = (0, s.e7)([p.default], () => p.default.getCurrentUser()),
+        c = (0, f.Z)(),
+        u = (0, b.oD)(),
+        { widgets: g, isGameFetching: O } = (0, j.Z)(u),
+        m = new Map(g.map((e) => [e.type, e])),
+        y = i.useMemo(() => {
+            let e = new Set(c),
+                t = [],
+                n = [];
+            return (
+                w.r.forEach((r) => {
+                    e.has(r) ? t.push(r) : n.push(r);
+                }),
+                [...t, ...n]
+            );
+        }, [c]);
+    return null == a
         ? null
-        : (0, i.jsx)(
-              s.Modal,
+        : (0, r.jsx)(
+              d.Modal,
               ((t = (function (e) {
                   for (var t = 1; t < arguments.length; t++) {
                       var n = null != arguments[t] ? arguments[t] : {},
-                          i = Object.keys(n);
+                          r = Object.keys(n);
                       "function" == typeof Object.getOwnPropertySymbols &&
-                          (i = i.concat(
+                          (r = r.concat(
                               Object.getOwnPropertySymbols(n).filter(function (e) {
                                   return Object.getOwnPropertyDescriptor(n, e).enumerable;
                               }),
                           )),
-                          i.forEach(function (t) {
-                              var i;
-                              (i = n[t]),
+                          r.forEach(function (t) {
+                              var r;
+                              (r = n[t]),
                                   t in e
                                       ? Object.defineProperty(e, t, {
-                                            value: i,
+                                            value: r,
                                             enumerable: !0,
                                             configurable: !0,
                                             writable: !0,
                                         })
-                                      : (e[t] = i);
+                                      : (e[t] = r);
                           });
                   }
                   return e;
               })(
                   {
-                      title: h.intl.string(h.t.grUgR0),
+                      title: x.intl.string(x.t.grUgR0),
                       actions: [],
+                      onClose: l,
                   },
-                  e,
+                  o,
               )),
               (n = n =
                   {
-                      children: (0, i.jsx)("ul", {
-                          "aria-label": h.intl.string(h.t["+EIBSE"]),
-                          className: x.options,
-                          children: Object.keys(w).map((e) =>
-                              (0, i.jsx)(
-                                  v,
+                      children: (0, r.jsx)("ul", {
+                          "aria-label": x.intl.string(x.t["+EIBSE"]),
+                          className: v.options,
+                          children: y.map((e) =>
+                              (0, r.jsx)(
+                                  P,
                                   {
                                       widgetType: e,
-                                      user: r,
-                                      widget: c.get(e),
-                                      isGameFetching: l,
-                                      onClick: O.dG,
+                                      user: a,
+                                      widget: m.get(e),
+                                      isGameFetching: O,
+                                      disabled: !c.includes(e),
+                                      onAddWidget: l,
                                   },
                                   e,
                               ),
@@ -159,8 +201,8 @@ function A(e) {
                   : (function (e, t) {
                         var n = Object.keys(e);
                         if (Object.getOwnPropertySymbols) {
-                            var i = Object.getOwnPropertySymbols(e);
-                            n.push.apply(n, i);
+                            var r = Object.getOwnPropertySymbols(e);
+                            n.push.apply(n, r);
                         }
                         return n;
                     })(Object(n)).forEach(function (e) {

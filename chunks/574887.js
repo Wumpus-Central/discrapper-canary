@@ -16,8 +16,8 @@ var l = n(120356),
     g = n(981631),
     j = n(856651),
     y = n(388032),
-    x = n(337634);
-function h(e) {
+    O = n(337634);
+function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -42,7 +42,7 @@ function h(e) {
     }
     return e;
 }
-function O(e, t) {
+function h(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -67,25 +67,25 @@ function v(e) {
         m = (0, u.FI)(o[j.PC.CREATED_AT], l),
         v = c.Z.get((0, d.rR)(n.type));
     return (0, r.jsxs)("li", {
-        className: x.connection,
+        className: O.connection,
         children: [
             (0, r.jsx)(a.ua7, {
                 text: null == v ? void 0 : v.name,
                 children: (e) =>
                     (0, r.jsx)(
                         "div",
-                        O(h({}, e), {
-                            className: x.platformIconContainer,
+                        h(x({}, e), {
+                            className: O.platformIconContainer,
                             children: (0, r.jsx)("img", {
                                 alt: y.intl.formatToPlainString(y.t.rtm15O, { name: null == v ? void 0 : v.name }),
-                                className: x.platformIcon,
+                                className: O.platformIcon,
                                 src: null == v ? void 0 : v.icon.lightPNG,
                             }),
                         }),
                     ),
             }),
             (0, r.jsxs)("div", {
-                className: x.connectionInfo,
+                className: O.connectionInfo,
                 children: [
                     (0, r.jsxs)("div", {
                         children: [
@@ -99,16 +99,16 @@ function v(e) {
                                           children: (e) =>
                                               (0, r.jsx)(
                                                   a.Text,
-                                                  O(h({}, e), {
+                                                  h(x({}, e), {
                                                       variant: "text-sm/normal",
-                                                      className: x.accountNameText,
+                                                      className: O.accountNameText,
                                                       children: n.name,
                                                   }),
                                               ),
                                       })
                                     : (0, r.jsx)(a.eee, {
                                           href: t,
-                                          className: x.platformUrlAnchor,
+                                          className: O.platformUrlAnchor,
                                           useDefaultUnderlineStyles: !1,
                                           "aria-label":
                                               (null == v ? void 0 : v.name) != null
@@ -131,7 +131,7 @@ function v(e) {
                                                   );
                                           },
                                           children: (0, r.jsxs)("div", {
-                                              className: x.accountName,
+                                              className: O.accountName,
                                               children: [
                                                   (0, r.jsx)(a.ua7, {
                                                       overflowOnly: !0,
@@ -139,15 +139,15 @@ function v(e) {
                                                       children: (e) =>
                                                           (0, r.jsx)(
                                                               a.Text,
-                                                              O(h({}, e), {
+                                                              h(x({}, e), {
                                                                   variant: "text-sm/normal",
-                                                                  className: x.accountNameText,
+                                                                  className: O.accountNameText,
                                                                   children: n.name,
                                                               }),
                                                           ),
                                                   }),
                                                   (0, r.jsx)(p.Z, {
-                                                      className: x.platformUrlIcon,
+                                                      className: O.platformUrlIcon,
                                                       direction: p.Z.Directions.RIGHT,
                                                   }),
                                               ],
@@ -162,7 +162,7 @@ function v(e) {
                         ],
                     }),
                     (0, r.jsx)("div", {
-                        className: x.metadata,
+                        className: O.metadata,
                         children:
                             n.type === g.ABu.REDDIT
                                 ? (0, f.oP)(o)
@@ -189,7 +189,7 @@ function _(e) {
     return 0 === t.length
         ? null
         : (0, r.jsx)("ul", {
-              className: i()(x.container, l),
+              className: i()(O.container, l),
               children: t.map((e) =>
                   (0, r.jsx)(
                       v,

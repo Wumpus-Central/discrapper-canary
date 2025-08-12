@@ -2,7 +2,7 @@ n.d(t, {
     P9: () => _,
     Uf: () => P,
     b0: () => v,
-    s_: () => O,
+    s_: () => h,
 }),
     n(388685);
 var r = n(255367),
@@ -50,7 +50,7 @@ let g = [
         () => m.intl.string(m.t.HQPAVV),
         () => m.intl.string(m.t.YolGh4),
     ],
-    x = [
+    O = [
         p.ABu.STEAM,
         p.ABu.PLAYSTATION,
         p.ABu.XBOX,
@@ -65,7 +65,7 @@ let g = [
         p.ABu.CRUNCHYROLL,
         p.ABu.BUNGIE,
     ];
-function h(e) {
+function x(e) {
     let { heading: t, bodyText: n, children: l } = e;
     return (0, r.jsxs)("div", {
         className: b.empty,
@@ -89,13 +89,13 @@ function h(e) {
         ],
     });
 }
-function O() {
+function h() {
     let e = m.intl.string(m.t.RnD2yc),
         [t] = l.useState(() => {
             var e;
             return (null != (e = (0, i.sample)(g)) ? e : g[0])();
         });
-    return (0, r.jsx)(h, {
+    return (0, r.jsx)(x, {
         heading: e,
         bodyText: t,
     });
@@ -106,7 +106,7 @@ function v() {
             var e;
             return (null != (e = (0, i.sample)(j)) ? e : j[0])();
         });
-    return (0, r.jsx)(h, {
+    return (0, r.jsx)(x, {
         heading: e,
         bodyText: t,
     });
@@ -122,7 +122,7 @@ function _(e) {
         j = l.useCallback(() => {
             a.Z.openPrivateChannel({ recipientIds: t.id }), null == s || s();
         }, [t.id, s]);
-    return (0, r.jsx)(h, {
+    return (0, r.jsx)(x, {
         heading: p,
         bodyText: g,
         children: (0, r.jsx)("div", {
@@ -140,7 +140,7 @@ function I() {
     let e = (0, s.ZP)();
     return (0, r.jsx)("div", {
         className: b.connectionPlatforms,
-        children: x.map((t, n) => {
+        children: O.map((t, n) => {
             let l = d.Z.get(t);
             if (null == l) return null;
             let i = (0, o.wjy)(e) ? l.icon.darkPNG : l.icon.lightPNG;
@@ -164,7 +164,7 @@ function P(e) {
         i = l.useCallback(() => {
             null == t || t(), c.Z.open(p.oAB.CONTENT_AND_SOCIAL, "CONNECTED_GAMES");
         }, [t]);
-    return (0, r.jsxs)(h, {
+    return (0, r.jsxs)(x, {
         heading: m.intl.string(m.t.VB6LWV),
         bodyText: m.intl.string(m.t.KpjsU1),
         children: [

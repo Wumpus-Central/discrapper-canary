@@ -15,26 +15,26 @@ function u(e) {
         [s, u] = (0, l.useState)(0),
         [g, j] = (0, l.useState)(!1),
         { trackUserProfileAction: y } = (0, a.KZ)(),
-        x = b(o, n, i, u);
+        O = b(o, n, i, u);
     if (
         ((0, l.useEffect)(
             () => (
-                x(),
-                window.addEventListener("resize", x),
+                O(),
+                window.addEventListener("resize", O),
                 () => {
-                    window.removeEventListener("resize", x);
+                    window.removeEventListener("resize", O);
                 }
             ),
-            [x, null == n ? void 0 : n.join("")],
+            [O, null == n ? void 0 : n.join("")],
         ),
         null == n || 0 === n.length)
     )
         return null;
-    let h = g ? n : n.slice(0, n.length - s);
+    let x = g ? n : n.slice(0, n.length - s);
     return (0, r.jsxs)("div", {
         className: d.tagListContainer,
         children: [
-            h.map((e) =>
+            x.map((e) =>
                 (0, r.jsx)(
                     f,
                     {

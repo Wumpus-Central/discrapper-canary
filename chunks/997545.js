@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x }), n(388685), n(290780), n(415506), n(49124), n(642613), n(35282), n(539854);
+n.d(t, { Z: () => x }), n(388685), n(415506), n(49124), n(642613), n(35282), n(539854);
 var r = n(595182),
     i = n.n(r),
     o = n(117806),
@@ -130,14 +130,6 @@ class x extends _.Z {
                                 };
                             }),
                         ]),
-                            n.experimentFlags.has(O.V8.SIGNAL_RED) &&
-                                (0, b.eJ)(v.eR.AUDIO_CODEC_RED) &&
-                                n.codecs.unshift({
-                                    type: "audio",
-                                    name: v.ad.RED,
-                                    priority: 1,
-                                    payloadType: 121,
-                                }),
                             n.setCodecs(v.ad.OPUS, v.ad.H264, e),
                             n.conn.startReplay();
                     });
@@ -202,14 +194,6 @@ class x extends _.Z {
                                     };
                                 }),
                             ]),
-                            this.experimentFlags.has(O.V8.SIGNAL_RED) &&
-                                (0, b.eJ)(v.eR.AUDIO_CODEC_RED) &&
-                                this.codecs.unshift({
-                                    type: "audio",
-                                    name: v.ad.RED,
-                                    priority: 1,
-                                    payloadType: 121,
-                                }),
                             this.logger.info(
                                 "Audio codecs: ".concat(
                                     this.codecs.filter((e) => "audio" === e.type).map((e) => e.name),

@@ -68,13 +68,13 @@ function f(e) {
             });
         };
     return (0, r.jsx)(o.ua7, {
-        text: c.intl.string(c.t["zyWY9/"]),
+        text: c.intl.string(c.t.HUvyDQ),
         children: (e) =>
             (0, r.jsx)(
                 o.P3F,
                 u(d({}, e), {
                     onClick: m,
-                    "aria-label": c.intl.string(c.t["zyWY9/"]),
+                    "aria-label": c.intl.string(c.t.HUvyDQ),
                     role: "button",
                     tabIndex: 0,
                     className: i()(p, s.clickable),

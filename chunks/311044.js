@@ -15,8 +15,8 @@ var r = n(255367),
 function g(e) {
     let { user: t, guildId: n, channelId: g, onClose: j } = e,
         { analyticsLocations: y } = (0, a.ZP)(),
-        { context: x, trackUserProfileAction: h } = (0, s.KZ)(),
-        { mutualFriends: O, mutualFriendsCount: v } = (0, d.Z)(t),
+        { context: O, trackUserProfileAction: x } = (0, s.KZ)(),
+        { mutualFriends: h, mutualFriendsCount: v } = (0, d.Z)(t),
         _ = (0, o.Z)();
     return (
         l.useEffect(() => {
@@ -26,7 +26,7 @@ function g(e) {
             className: b.scroller,
             fade: !0,
             children:
-                null == O
+                null == h
                     ? Array.from({ length: null != v ? v : 10 }).map((e, t) =>
                           (0, r.jsxs)(
                               "div",
@@ -46,9 +46,9 @@ function g(e) {
                               t,
                           ),
                       )
-                    : 0 === O.length
+                    : 0 === h.length
                       ? (0, r.jsx)(m.s_, {})
-                      : O.map((e) => {
+                      : h.map((e) => {
                             let { key: t, user: l, status: i } = e;
                             return (0, r.jsx)(
                                 p.Z,
@@ -60,7 +60,7 @@ function g(e) {
                                     onSelect: () => {
                                         var e, t;
                                         null == j || j(),
-                                            h({ action: "PRESS_MUTUAL_FRIEND" }),
+                                            x({ action: "PRESS_MUTUAL_FRIEND" }),
                                             (0, f.openUserProfileModal)(
                                                 ((e = (function (e) {
                                                     for (var t = 1; t < arguments.length; t++) {
@@ -87,7 +87,7 @@ function g(e) {
                                                             });
                                                     }
                                                     return e;
-                                                })({}, x)),
+                                                })({}, O)),
                                                 (t = t =
                                                     {
                                                         userId: l.id,

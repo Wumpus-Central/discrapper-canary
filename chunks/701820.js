@@ -15,9 +15,8 @@ function m(t) {
     return (0, e.jsxs)(s.Modal, {
         transitionState: p,
         onClose: x,
-        title: o.intl.string(o.t["G83l5+"]),
+        title: o.intl.string(o.t.HUvyDQ),
         subtitle: o.intl.string(o.t.ILbCi4),
-        actionBarInput: (0, e.jsx)("div", {}),
         actions: [
             {
                 variant: "secondary",
@@ -26,7 +25,7 @@ function m(t) {
             },
             {
                 variant: "critical-primary",
-                text: o.intl.string(o.t["zyWY9/"]),
+                text: o.intl.string(o.t.HUvyDQ),
                 onClick: u,
             },
         ],

@@ -279,7 +279,6 @@ var Y = (function (e) {
             (e.RESET_DECODER_ON_ERRORS = "reset_decoder_on_errors"),
             (e.SOFTWARE_FALLBACK_ON_ERRORS = "software_fallback_on_errors"),
             (e.SOFTWARE_FALLBACK_ON_CONSECUTIVE_ERRORS = "software_fallback_on_consecutive_errors"),
-            (e.SIGNAL_RED = "signal_red"),
             e
         );
     })({}),

@@ -1,41 +1,33 @@
-t.d(n, { default: () => s }), t(49124);
-var i = t(255367);
-t(73800);
-var r = t(481060);
-let s = (e) => {
-    let { entry: n, transitionState: t, requestId: s } = e;
-    return (0, i.jsxs)(r.Y0X, {
-        size: r.CgR.DYNAMIC,
-        transitionState: t,
-        parentComponent: "StaffOnlyEntryDebugModal",
-        children: [
-            (0, i.jsx)(r.xBx, {
-                children: (0, i.jsx)(r.X6q, {
-                    variant: "heading-md/semibold",
-                    children: "Debugging entry: ".concat(n.id),
+i.d(e, { default: () => a }), i(49124);
+var n = i(255367);
+i(73800);
+var r = i(82659),
+    s = i(481060);
+let a = (t) => {
+    let { entry: e, transitionState: i, requestId: a, onClose: d } = t;
+    return (0, n.jsx)(r.Modal, {
+        title: "Debugging entry: ".concat(e.id),
+        transitionState: i,
+        actions: [],
+        onClose: d,
+        children: (0, n.jsx)("div", {
+            style: {
+                userSelect: "text",
+                padding: "16px",
+            },
+            children: (0, n.jsx)(s.Text, {
+                variant: "text-sm/normal",
+                children: (0, n.jsx)("pre", {
+                    children: JSON.stringify(
+                        {
+                            entry: e,
+                            requestId: a,
+                        },
+                        null,
+                        2,
+                    ),
                 }),
             }),
-            (0, i.jsx)(r.hzk, {
-                children: (0, i.jsx)("div", {
-                    style: {
-                        userSelect: "text",
-                        padding: "16px",
-                    },
-                    children: (0, i.jsx)(r.Text, {
-                        variant: "text-sm/normal",
-                        children: (0, i.jsx)("pre", {
-                            children: JSON.stringify(
-                                {
-                                    entry: n,
-                                    requestId: s,
-                                },
-                                null,
-                                2,
-                            ),
-                        }),
-                    }),
-                }),
-            }),
-        ],
+        }),
     });
 };

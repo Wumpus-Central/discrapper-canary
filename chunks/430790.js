@@ -1,14 +1,15 @@
-n.d(t, { Z: () => d });
+n.d(t, { Z: () => u });
 var r = n(255367),
     l = n(73800),
     i = n(120356),
     o = n.n(i),
     a = n(481060),
-    c = n(388032),
-    s = n(915642);
-function d(e) {
-    let { disabled: t } = e,
-        i = l.useCallback(() => {
+    c = n(810473),
+    s = n(388032),
+    d = n(915642);
+function u() {
+    let e = 0 === (0, c.Z)().length,
+        t = l.useCallback(() => {
             (0, a.ZDy)(
                 async () => {
                     let { default: e } = await n.e("38576").then(n.bind(n, 925170));
@@ -46,9 +47,9 @@ function d(e) {
             );
         }, []);
     return (0, r.jsxs)(a.P3F, {
-        className: o()(s.addWidgetButton, t && s.disabled),
-        onClick: t ? void 0 : i,
-        "aria-disabled": t,
+        className: o()(d.addWidgetButton, e && d.disabled),
+        onClick: e ? void 0 : t,
+        "aria-disabled": e,
         children: [
             (0, r.jsx)(a.qJs, {
                 size: "sm",
@@ -56,8 +57,8 @@ function d(e) {
             }),
             (0, r.jsx)(a.Text, {
                 variant: "text-sm/medium",
-                color: t ? "text-muted" : "text-default",
-                children: c.intl.string(c.t.lBG2s7),
+                color: e ? "text-muted" : "text-default",
+                children: s.intl.string(s.t.lBG2s7),
             }),
         ],
     });

@@ -2,8 +2,8 @@ i.d(e, { default: () => g });
 var n = i(255367),
     r = i(73800),
     s = i(442837),
-    a = i(82659),
-    l = i(481060),
+    l = i(82659),
+    a = i(481060),
     c = i(594174),
     d = i(63063),
     o = i(86419),
@@ -24,15 +24,14 @@ function g(t) {
         w = r.useCallback(() => {
             (0, o.y8)(i.type), g();
         }, [i.type, g]),
-        v = (0, s.e7)([c.default], () => c.default.getUser(u));
-    return null == v
+        m = (0, s.e7)([c.default], () => c.default.getUser(u));
+    return null == m
         ? null
-        : (0, n.jsxs)(a.Modal, {
+        : (0, n.jsxs)(l.Modal, {
               transitionState: e,
               onClose: g,
               title: x.intl.string(x.t.Mm07YW),
               subtitle: x.intl.format(x.t["x+djIy"], { helpUrl: d.w }),
-              actionBarInput: (0, n.jsx)("div", {}),
               actions: [
                   {
                       variant: "secondary",
@@ -50,12 +49,12 @@ function g(t) {
                       className: h.widgetPreview,
                       children: (0, n.jsx)(p, {
                           widget: i,
-                          user: v,
+                          user: m,
                       }),
                   }),
                   (0, n.jsx)("div", {
                       className: h.hintText,
-                      children: (0, n.jsx)(l.Text, {
+                      children: (0, n.jsx)(a.Text, {
                           color: "text-secondary",
                           variant: "text-sm/normal",
                           children: x.intl.string(x.t.bQNGeX),

@@ -16,16 +16,16 @@ var l = n(442837),
     g = n(744802),
     j = n(493043),
     y = n(864141),
-    x = n(228168),
-    h = n(981631),
-    O = n(388032),
+    O = n(228168),
+    x = n(981631),
+    h = n(388032),
     v = n(727550),
     _ = n(889080);
 function I(e) {
     let { user: t, currentUser: n, displayProfile: I, guildId: P, subsection: E, onClose: Z } = e,
-        { voiceActivityStatusEnabled: N } = (0, o.U)({ location: "UserProfileModalActivity" }),
-        T = (0, u.b)({ location: "UserProfileModalActivity" }),
-        { live: S, recent: A, stream: w } = (0, f.Z)(t.id),
+        { voiceActivityStatusEnabled: T } = (0, o.U)({ location: "UserProfileModalActivity" }),
+        N = (0, u.b)({ location: "UserProfileModalActivity" }),
+        { live: S, recent: w, stream: A } = (0, f.Z)(t.id),
         { voiceChannel: C, voiceActivity: L } = (0, p.Z)({
             userId: t.id,
             guildId: P,
@@ -36,23 +36,23 @@ function I(e) {
             let e = R ? s.Z.getStatus() : c.Z.getStatus(t.id);
             return e === i.Skl.OFFLINE || e === i.Skl.INVISIBLE;
         }),
-        M = S.length > 0 || null != w,
-        B = N && null == w && null == L && null != C,
-        G = !k && (M || B),
-        U = A.length > 0;
-    return G || U || !D
+        B = S.length > 0 || null != A,
+        G = T && null == A && null == L && null != C,
+        M = !k && (B || G),
+        U = w.length > 0;
+    return M || U || !D
         ? (0, r.jsxs)(i.zJl, {
               className: v.scroller,
               fade: !0,
               children: [
-                  G
+                  M
                       ? (0, r.jsx)(m.Z, {
-                            "aria-label": O.intl.string(O.t.J6STd3),
+                            "aria-label": h.intl.string(h.t.J6STd3),
                             children: (0, r.jsxs)("ul", {
                                 className: v.activityList,
                                 children: [
-                                    !T &&
-                                        B &&
+                                    !N &&
+                                        G &&
                                         (0, r.jsx)("li", {
                                             children: (0, r.jsx)(y.Z, {
                                                 user: t,
@@ -61,13 +61,13 @@ function I(e) {
                                                 onClose: Z,
                                             }),
                                         }),
-                                    null != w &&
+                                    null != A &&
                                         (0, r.jsx)("li", {
                                             children: (0, r.jsx)(j.Z, {
                                                 location: "UserProfileModalActivity",
                                                 user: t,
                                                 currentUser: n,
-                                                stream: w,
+                                                stream: A,
                                                 onClose: Z,
                                                 profileGuildId: null == I ? void 0 : I.guildId,
                                             }),
@@ -93,24 +93,24 @@ function I(e) {
                       : null,
                   U
                       ? (0, r.jsx)(m.Z, {
-                            heading: O.intl.string(O.t.M0zgnZ),
+                            heading: h.intl.string(h.t.M0zgnZ),
                             introText: R
-                                ? O.intl.format(O.t["4bk9Ag"], {
+                                ? h.intl.format(h.t["4bk9Ag"], {
                                       learnMoreHook: (e, t) =>
                                           (0, r.jsx)(
                                               i.eee,
                                               {
-                                                  href: d.Z.getArticleURL(h.BhN.ACTIVITY_STATUS_SETTINGS),
+                                                  href: d.Z.getArticleURL(x.BhN.ACTIVITY_STATUS_SETTINGS),
                                                   children: e,
                                               },
                                               t,
                                           ),
                                   })
                                 : void 0,
-                            scrollIntoView: E === x.Tb.RECENT_ACTIVITY,
+                            scrollIntoView: E === O.Tb.RECENT_ACTIVITY,
                             children: (0, r.jsx)("ul", {
                                 className: v.activityList,
-                                children: A.map((e) =>
+                                children: w.map((e) =>
                                     (0, r.jsx)(
                                         "li",
                                         {

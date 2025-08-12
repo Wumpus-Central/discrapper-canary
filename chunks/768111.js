@@ -16,10 +16,10 @@ function u(e) {
         g = (0, o.Z)(t.id),
         j = [],
         y = t.id === (null == n ? void 0 : n.id),
-        x = g.length > 0;
+        O = g.length > 0;
     return (
         b &&
-            (x || y) &&
+            (O || y) &&
             j.push({
                 text: d.intl.string(d.t.laViw8),
                 section: s.oh.WIDGETS,

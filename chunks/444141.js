@@ -53,9 +53,9 @@ function f(e, t) {
 function p(e) {
     let { user: t, guildId: n, channelId: p, displayProfile: m, onClose: b } = e,
         { analyticsLocations: g, sourceAnalyticsLocations: j } = (0, i.ZP)(),
-        { context: y, trackUserProfileAction: x } = (0, a.KZ)(),
-        h = (0, s.ZP)(t.id, n);
-    return (null == h ? void 0 : h.guildId) == null || null == y
+        { context: y, trackUserProfileAction: O } = (0, a.KZ)(),
+        x = (0, s.ZP)(t.id, n);
+    return (null == x ? void 0 : x.guildId) == null || null == y
         ? null
         : (null == m ? void 0 : m.guildId) != null
           ? (0, r.jsx)(l.sNh, {
@@ -70,7 +70,7 @@ function p(e) {
                                 sourceAnalyticsLocations: j,
                             }),
                         ),
-                        x(
+                        O(
                             u(
                                 {
                                     action: "PRESS_VIEW_MAIN_PROFILE",
@@ -93,7 +93,7 @@ function p(e) {
                                 sourceAnalyticsLocations: j,
                             }),
                         ),
-                        x(
+                        O(
                             u(
                                 {
                                     action: "PRESS_VIEW_SERVER_PROFILE",

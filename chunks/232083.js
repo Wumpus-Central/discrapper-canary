@@ -4,8 +4,8 @@ n(73800);
 var l = n(623132),
     i = n(992880);
 function o(e) {
-    var { games: t, isGameFetching: n } = e,
-        o = (function (e, t) {
+    var { games: t, widgetType: n, isGameFetching: o } = e,
+        a = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -25,7 +25,7 @@ function o(e) {
                         !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]);
             }
             return l;
-        })(e, ["games", "isGameFetching"]);
+        })(e, ["games", "widgetType", "isGameFetching"]);
     return (0, r.jsx)("ul", {
         className: i.cardList,
         children: t.map((e, t) =>
@@ -61,9 +61,10 @@ function o(e) {
                         })(
                             {
                                 game: e,
-                                loading: n(e.applicationId),
+                                widgetType: n,
+                                loading: o(e.applicationId),
                             },
-                            o,
+                            a,
                         ),
                     ),
                 },
