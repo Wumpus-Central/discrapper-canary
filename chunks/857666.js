@@ -91,7 +91,7 @@ function _(e, t) {
                                                       {
                                                           guildId: t,
                                                           title: c,
-                                                          description: _,
+                                                          description: g.intl.string(m.default.BBRFRU),
                                                           powerups: e,
                                                           footerInfoText: C,
                                                           footerAction:

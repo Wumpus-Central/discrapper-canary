@@ -61,15 +61,23 @@ let O = 1000,
                 }
             );
         }, [A]);
-        let G = !o && L && n && M;
+        let [G, B] = (0, i.useState)(!1),
+            [Z, F] = (0, i.useState)(!1);
         return ((0, i.useEffect)(() => {
-            G &&
-                (c.Z.dispatch({
-                    type: "WOW_MOMENT_CONFIRMATION_SET_IS_DISPLAYING_WOW_MOMENT_CONFIRMATION",
-                    value: G,
-                }),
-                _.default.track(b.rMx.PREMIUM_BRAND_REFRESH_WOW_MOMENT_VIEWED));
-        }, [G]),
+            if (!o && L && n && !Z) {
+                if (!M) {
+                    F(!0), _.default.track(b.rMx.PREMIUM_BRAND_REFRESH_WOW_MOMENT_ASSETS_NOT_LOADED_ON_CONFIRMATION);
+                    return;
+                }
+                M &&
+                    (B(!0),
+                    c.Z.dispatch({
+                        type: "WOW_MOMENT_CONFIRMATION_SET_IS_DISPLAYING_WOW_MOMENT_CONFIRMATION",
+                        value: !0,
+                    }),
+                    _.default.track(b.rMx.PREMIUM_BRAND_REFRESH_WOW_MOMENT_VIEWED));
+            }
+        }, [o, L, n, M, Z]),
         (0, i.useEffect)(
             () => () => {
                 c.Z.dispatch({
@@ -79,13 +87,6 @@ let O = 1000,
             },
             [],
         ),
-        (0, i.useEffect)(() => {
-            !o &&
-                L &&
-                n &&
-                !M &&
-                _.default.track(b.rMx.PREMIUM_BRAND_REFRESH_WOW_MOMENT_ASSETS_NOT_LOADED_ON_CONFIRMATION);
-        }, [o, L, n, M]),
         G)
             ? (0, r.jsxs)("div", {
                   children: [

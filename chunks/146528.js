@@ -30,6 +30,10 @@ class a extends r.Z {
             status: e.status,
         });
     }
+    findInvoiceItemByPlanId(e) {
+        var t;
+        return null != (t = this.invoiceItems.find((t) => t.subscriptionPlanId === e)) ? t : null;
+    }
     constructor(e) {
         super(),
             o(this, "id", void 0),

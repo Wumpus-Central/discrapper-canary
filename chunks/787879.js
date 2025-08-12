@@ -255,8 +255,8 @@ function er() {
     x = !0;
 }
 function ei(e) {
-    let { preload: t, finished: n, analyticsPayload: r } = e;
-    (x = !1), t ? (j = !0) : ((G = !0 !== n), (k = !0)), (Z = null != r ? r : null);
+    let { preload: t, hasMoreToLoad: n, analyticsPayload: r } = e;
+    (x = !1), t ? (j = !0) : (null != n && (G = n), (k = !0)), (Z = null != r ? r : null);
 }
 function eo(e) {
     var t;

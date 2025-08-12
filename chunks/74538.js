@@ -1260,10 +1260,7 @@ function eB(e) {
     return e === C.O0b.PAST_DUE || e === C.O0b.ACCOUNT_HOLD || e === C.O0b.BILLING_RETRY;
 }
 function eZ(e, t, n) {
-    let r = e.invoiceItems.find((e) => {
-            let { subscriptionPlanId: t } = e;
-            return t === n.id;
-        }),
+    let r = e.findInvoiceItemByPlanId(n.id),
         i =
             null == r
                 ? Y(n.id, !1, !1, {

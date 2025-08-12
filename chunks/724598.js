@@ -3,7 +3,7 @@ var r = n(255367);
 n(73800);
 var i = n(120356),
     l = n.n(i),
-    a = n(755721),
+    a = n(159691),
     s = n(481060),
     o = n(367907),
     c = n(357352),
@@ -61,11 +61,10 @@ function b(e) {
                                     children: p.intl.string(p.t["67arYG"]),
                                 }),
                                 n &&
-                                    (0, r.jsxs)(s.gtL, {
-                                        size: a.zx.Sizes.MEDIUM,
-                                        className: h.getStartedButton,
-                                        innerClassName: h.getStartedButtonContents,
-                                        shineSize: s.gtL.ShineSizes.SMALL,
+                                    (0, r.jsx)(a.zx, {
+                                        text: p.intl.string(p.t.oyzLpK),
+                                        icon: s.ZSh,
+                                        size: "md",
                                         onClick: () => {
                                             var e, n;
                                             u.default.track(
@@ -117,14 +116,6 @@ function b(e) {
                                             ),
                                                 d.Z.open(t, g.pNK.GUILD_PRODUCTS);
                                         },
-                                        children: [
-                                            p.intl.string(p.t.oyzLpK),
-                                            (0, r.jsx)(s.ZSh, {
-                                                size: "md",
-                                                color: "currentColor",
-                                                className: h.getStartedArrow,
-                                            }),
-                                        ],
                                     }),
                             ],
                         }),

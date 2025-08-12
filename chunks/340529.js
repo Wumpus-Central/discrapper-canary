@@ -16,8 +16,8 @@ var i = r(120356),
     j = r(987513),
     g = r(895737),
     h = r(629481),
-    m = r(981631),
-    x = r(176505),
+    x = r(981631),
+    m = r(176505),
     O = r(388032),
     v = r(876610);
 function y(e) {
@@ -87,8 +87,8 @@ function _(e) {
         r = (0, C.RF)(t.id, "guild_shop_category_selector"),
         { selectedTab: i, setSelectedTab: o, categoryTabs: _, handlePreviewDismiss: w } = (0, p.m)(),
         P = "false" === s.K.get(h.Hr, "false"),
-        S = (0, l.e7)([a.Z], () => a.Z.useReducedMotion),
-        L = _.map((e) => {
+        L = (0, l.e7)([a.Z], () => a.Z.useReducedMotion),
+        S = _.map((e) => {
             switch (e) {
                 case f.y.GUILD_PRODUCTS:
                     return (0, n.jsx)(
@@ -117,7 +117,7 @@ function _(e) {
                             body: r
                                 ? O.intl.string(O.t["jqz+l5"])
                                 : O.intl.format(O.t.ycs4oK, {
-                                      openRoleSubPage: () => (0, u.uL)(m.Z5c.CHANNEL(t.id, x.oC.ROLE_SUBSCRIPTIONS)),
+                                      openRoleSubPage: () => (0, u.uL)(x.Z5c.CHANNEL(t.id, m.oC.ROLE_SUBSCRIPTIONS)),
                                   }),
                             disabled: !r,
                             selected: i === f.y.GUILD_ROLE_SUBSCRIPTIONS,
@@ -131,7 +131,7 @@ function _(e) {
                         {
                             icon: P
                                 ? (0, n.jsx)("img", {
-                                      src: S
+                                      src: L
                                           ? (0, d.b)("server_products/storefront/question-mark.png")
                                           : (0, d.b)("server_products/storefront/question-mark.gif"),
                                       className: v.questionMark,
@@ -172,7 +172,7 @@ function _(e) {
                 children: [
                     (0, n.jsx)("div", {
                         className: v.tabs,
-                        children: L,
+                        children: S,
                     }),
                     i === f.y.GUILD_PRODUCTS && (0, n.jsx)(g.Z, {}),
                 ],

@@ -39,13 +39,13 @@ function d(e, t, n) {
 let f = [];
 function _(e, t) {
     let n = (0, i.e7)([a.Z], () => (null != e ? a.Z.get(e) : null)),
-        o = (0, i.e7)([s.Z], () => {
-            var e;
-            return null != n && null != (e = s.Z.getForSku(n.skuId)) ? e : f;
+        o = (0, i.Wu)([s.Z], () => {
+            let e = null != n ? s.Z.getForSku(n.skuId) : null;
+            return null != e ? Array.from(e) : f;
         }),
         c = r.useMemo(
             () =>
-                Array.from(o).filter((e) => {
+                o.filter((e) => {
                     let { parentId: t, consumed: n } = e;
                     return null != t && !n;
                 }),

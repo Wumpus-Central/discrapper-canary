@@ -6,5 +6,4 @@ e.exports = {
     guildShopEmbedFooter: "guildShopEmbedFooter__86fa6",
     guildShopSummary: "guildShopSummary__86fa6",
     guildShopEmbedCta: "guildShopEmbedCta__86fa6",
-    guildShopEmbedCtaContent: "guildShopEmbedCtaContent__86fa6",
 };

@@ -984,6 +984,7 @@ class eI extends d.Z {
                                         ? -1
                                         : performance.now() -
                                           (null == (f = this._connection) ? void 0 : f.onConnectStarted),
+                                connect_count: this._connectCount,
                             });
                     }
                     null == (r = this._localMediaSinkWantsManager) || r.setConnection(h),

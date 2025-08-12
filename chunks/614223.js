@@ -24,7 +24,7 @@ function l(e) {
 }
 function c(e, t, n) {
     let r = !1;
-    return e && null != t && null == t.invoiceItems.find((e) => e.subscriptionPlanId === n.id) && (r = !0), r;
+    return e && null != t && null == t.findInvoiceItemByPlanId(n.id) && (r = !0), r;
 }
 function u(e, t, n) {
     let i = null != t ? (0, r.Af)(t) : null,

@@ -19,7 +19,7 @@ function g(e) {
         s = (0, u.ue)(t),
         g = i.useRef(null),
         { sortOption: h } = (0, p.s)(),
-        m = i.useMemo(
+        x = i.useMemo(
             () =>
                 (function (e, t) {
                     let r, n;
@@ -47,7 +47,7 @@ function g(e) {
         ? (0, n.jsx)("ul", {
               className: j.cardContainer,
               "aria-label": b.intl.string(b.t.qe4kTU),
-              children: m.map((e) =>
+              children: x.map((e) =>
                   (0, n.jsx)(
                       "li",
                       {

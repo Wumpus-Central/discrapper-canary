@@ -6,7 +6,7 @@ var r = n(255367),
     s = n(990547),
     l = n(831209),
     c = n(442837),
-    u = n(755721),
+    u = n(159691),
     d = n(481060),
     f = n(367907),
     _ = n(213609),
@@ -139,22 +139,12 @@ function C(e) {
                                         }),
                                 ],
                             }),
-                            (0, r.jsx)(u.zx, {
+                            (0, r.jsx)("div", {
                                 className: S.guildShopEmbedCta,
-                                onClick: w,
-                                children: (0, r.jsxs)("div", {
-                                    className: S.guildShopEmbedCtaContent,
-                                    children: [
-                                        (0, r.jsx)(v.Z, {
-                                            height: "18px",
-                                            width: "18px",
-                                        }),
-                                        (0, r.jsx)(d.Text, {
-                                            variant: "text-sm/medium",
-                                            color: "always-white",
-                                            children: T.intl.string(T.t.jXx1CA),
-                                        }),
-                                    ],
+                                children: (0, r.jsx)(u.zx, {
+                                    onClick: w,
+                                    icon: v.P,
+                                    text: T.intl.string(T.t.jXx1CA),
                                 }),
                             }),
                         ],

@@ -94,35 +94,36 @@ function T(e) {
 }
 async function S(e) {
     var t,
-        { preload: n = !1 } = e,
-        r = E(e, ["preload"]);
-    let o = Date.now(),
-        a = _.Z.getNotifyingChannelIds();
-    if (null == a) return;
-    let s = n ? [] : T(a),
-        c = l.ZP.getMentions(),
-        u = null != c && c.length > 0 ? c[c.length - 1].id : null,
-        d = !1;
-    if ((l.ZP.hasMore && !l.ZP.loading && (s.push(v(u)), (d = !0)), 0 === s.length))
+        { preload: n = !1, onlyMentions: r = !1 } = e,
+        o = E(e, ["preload", "onlyMentions"]);
+    let a = Date.now(),
+        s = _.Z.getNotifyingChannelIds();
+    if (null == s) return;
+    let c = n || r ? [] : T(s),
+        u = l.ZP.getMentions(),
+        d = null != u && u.length > 0 ? u[u.length - 1].id : null,
+        h = !1;
+    if (((!l.ZP.hasMore && l.ZP.hasLoadedEver) || l.ZP.loading || (c.push(v(d)), (h = !0)), 0 === c.length))
         return void i.Z.dispatch({
             type: "NOTIFICATIONS_INBOX_LOAD_MORE_INBOX_SUCCESS",
             preload: n,
-            finished: !0,
+            hasMoreToLoad: !!r && void 0,
         });
     try {
-        await Promise.all(s);
+        await Promise.all(c);
         let e = {
-            timeToLoad: Date.now() - o,
-            loadingTrigger: null != (t = r.loadingTrigger) ? t : p.X.UNKNOWN,
-            viewId: r.viewId,
-            channelsFetched: s.length - +!!d,
-            mentionsFetched: d,
+            timeToLoad: Date.now() - a,
+            loadingTrigger: null != (t = o.loadingTrigger) ? t : p.X.UNKNOWN,
+            viewId: o.viewId,
+            channelsFetched: c.length - +!!h,
+            mentionsFetched: h,
         };
         n && (0, f.CP)(e),
             i.Z.dispatch({
                 type: "NOTIFICATIONS_INBOX_LOAD_MORE_INBOX_SUCCESS",
                 preload: n,
                 analyticsPayload: e,
+                hasMoreToLoad: !r || void 0,
             });
     } catch (e) {
         i.Z.dispatch({ type: "NOTIFICATIONS_INBOX_LOAD_MORE_INBOX_FAILURE" });
@@ -131,14 +132,22 @@ async function S(e) {
 let A = {
     loadMoreInbox() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-        var { preload: t = !1 } = e,
-            n = E(e, ["preload"]);
+        var { preload: t = !1, onlyMentions: n = !1 } = e,
+            r = E(e, ["preload", "onlyMentions"]);
         if (!_.Z.canLoadMore({ preload: t })) return !1;
         i.Z.dispatch({
             type: "NOTIFICATIONS_INBOX_LOAD_MORE_INBOX_START",
             preload: t,
         }),
-            I(g({ preload: t }, n));
+            I(
+                g(
+                    {
+                        preload: t,
+                        onlyMentions: n,
+                    },
+                    r,
+                ),
+            );
     },
     inboxItemClick: function (e) {
         let { message: t, channel: n, isUnread: r, isSidebar: o, viewId: l, track: u = !0 } = e;

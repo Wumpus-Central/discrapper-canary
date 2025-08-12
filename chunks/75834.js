@@ -9,7 +9,7 @@ function i(e, t) {
     let n = e.find((e) => e.processId === t);
     return null == n ? null : l(e, n);
 }
-let o = "356869127241072640",
+let o = "1402418696126992445",
     a = "league of legends.exe";
 function s(e, t) {
     let n = t.processPath.length > 1 ? t.processPath[t.processPath.length - 2] : 0,
