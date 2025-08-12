@@ -55333,19 +55333,6 @@ screen and (max-width:485px) {
     min-height: 0
 }
 
-.buttonContainer__4ad81 {
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-gap: 8px;
-    margin-top: 16px
-}
-
-.buttonContents__4ad81 {
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-gap: 4px
-}
-
 .heading__4ad81 {
     flex: none;
     margin-top: 16px;
@@ -55435,7 +55422,11 @@ screen and (max-width:485px) {
 }
 
 .singleUserRoot__4ad81 {
-    background: radial-gradient(110.79% 100% at 50% 100%, var(--background-base-lower) 60%, var(--transparent) 100%), linear-gradient(270deg, var(--background-tile-gradient-pink-end) 0, var(--background-tile-gradient-pink-start) 80%), linear-gradient(0deg, var(--background-base-lower), var(--background-base-lower)), var(--opacity-black-20)
+    align-items: center;
+    background: radial-gradient(110.79% 100% at 50% 100%, var(--background-base-lower) 60%, var(--transparent) 100%), linear-gradient(270deg, var(--background-tile-gradient-pink-end) 0, var(--background-tile-gradient-pink-start) 80%), linear-gradient(0deg, var(--background-base-lower), var(--background-base-lower)), var(--opacity-black-20);
+    display: flex;
+    gap: 16px;
+    justify-content: center
 }
 
 .root_f555ee {
