@@ -23898,7 +23898,7 @@ img.inlineAsset__9c640 {
 .showEffect_dfb989 .neon_dfb989 {
     paint-order: stroke fill;
     -webkit-text-stroke-width: calc(1px + .04em);
-    -webkit-text-stroke-color: hsl(from var(--custom-display-name-styles-main-color) h calc(s * 1.2) calc(l + 10));
+    -webkit-text-stroke-color: hsl(from var(--custom-display-name-styles-main-color) h calc(s * 1.2) calc(min(60, l + 10 * clamp(0, (60 - l), 1))));
     color: var(--white-500);
     margin-bottom: calc(-1px - .04em);
     margin-left: calc(-1px - .04em);
