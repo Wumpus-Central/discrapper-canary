@@ -24,8 +24,8 @@ var l = n(481060),
     I = n(740628),
     P = n(398145),
     E = n(228168),
-    Z = n(981631),
-    T = n(388032),
+    T = n(981631),
+    Z = n(388032),
     N = n(401683);
 function S(e) {
     let {
@@ -35,34 +35,34 @@ function S(e) {
             channelId: w,
             messageId: A,
             roleId: C,
-            sessionId: L,
-            initialSection: D,
+            sessionId: D,
+            initialSection: L,
             initialSubsection: R,
             transitionState: k,
-            openedAt: B,
-            onClose: G,
-            sourceAnalyticsLocations: M = [],
+            openedAt: G,
+            onClose: M,
+            sourceAnalyticsLocations: B = [],
         } = e,
-        U = S === Z.ME ? void 0 : S,
+        U = S === T.ME ? void 0 : S,
         F = (0, u.ZP)(t.id, U),
         V = s.ZP.getName(U, w, t),
         Y = (0, c.Dt)(),
-        { analyticsLocations: H } = (0, a.ZP)([...M, o.Z.USER_PROFILE_MODAL]),
+        { analyticsLocations: H } = (0, a.ZP)([...B, o.Z.USER_PROFILE_MODAL]),
         W = (0, d.ZB)({
             layout: "MODAL",
             userId: t.id,
-            sourceSessionId: L,
+            sourceSessionId: D,
             guildId: U,
             channelId: w,
             messageId: A,
             roleId: C,
         }),
-        K = (0, P.Z)(t);
+        z = (0, P.Z)(t);
     return (0, r.jsx)(a.Gt, {
         value: H,
         children: (0, r.jsx)(d.Mt, {
             value: W,
-            openedAt: B,
+            openedAt: G,
             fetchStartedAt: null == F ? void 0 : F.fetchStartedAt,
             fetchEndedAt: null == F ? void 0 : F.fetchEndedAt,
             isLoaded: null == F ? void 0 : F.isLoaded,
@@ -77,7 +77,7 @@ function S(e) {
                     component: (0, r.jsx)(l.nn4, {
                         children: (0, r.jsx)(l.H, {
                             id: Y,
-                            children: T.intl.format(T.t.KRe1Fh, { name: V }),
+                            children: Z.intl.format(Z.t.KRe1Fh, { name: V }),
                         }),
                     }),
                     children: (0, r.jsxs)(g.Z, {
@@ -89,7 +89,7 @@ function S(e) {
                                 children: (0, r.jsx)(O.Z, {
                                     user: t,
                                     guildId: U,
-                                    onCloseProfile: G,
+                                    onCloseProfile: M,
                                 }),
                             }),
                             (0, r.jsxs)("div", {
@@ -114,7 +114,7 @@ function S(e) {
                                                 user: t,
                                                 themeType: E.lY.MODAL,
                                                 hasEntered: k === l.Dvm.ENTERED,
-                                                onCloseProfile: G,
+                                                onCloseProfile: M,
                                                 disableToolbar: !0,
                                             }),
                                             (0, r.jsxs)("div", {
@@ -159,7 +159,7 @@ function S(e) {
                                         tags: (0, r.jsx)(p.Z, {
                                             displayProfile: F,
                                             themeType: E.lY.MODAL,
-                                            onClose: G,
+                                            onClose: M,
                                         }),
                                     }),
                                     (0, r.jsx)(I.Z, {
@@ -167,10 +167,10 @@ function S(e) {
                                         currentUser: n,
                                         displayProfile: F,
                                         guildId: U,
-                                        items: K,
-                                        initialSection: null != D ? D : E.oh.BOT_INFO,
+                                        items: z,
+                                        initialSection: null != L ? L : E.oh.BOT_INFO,
                                         initialSubsection: R,
-                                        onClose: G,
+                                        onClose: M,
                                     }),
                                 ],
                             }),

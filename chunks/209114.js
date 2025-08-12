@@ -1,14 +1,7 @@
 n.d(t, { Z: () => r });
-let r = (0, n(818083).B)({
+let r = (0, n(427164).le)({
     kind: "user",
-    id: "2025-08_always_guild_media",
-    label: "Always Show Guild Media",
+    name: "2025-08_always_guild_media",
     defaultConfig: { enabled: !1 },
-    treatments: [
-        {
-            id: 1,
-            label: "Show guild media for muted guilds",
-            config: { enabled: !0 },
-        },
-    ],
+    variations: { 1: { enabled: !0 } },
 });

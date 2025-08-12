@@ -170,10 +170,6 @@ class N extends (r = a.ZP.DeviceSettingsStore) {
         var e;
         return null != (e = y.darkSidebar) && e;
     }
-    get useMobileChatCustomRenderer() {
-        var e;
-        return null != (e = y.useMobileChatCustomRenderer) && e;
-    }
     get saveCameraUploadsToDevice() {
         var e;
         return null == (e = y.saveCameraUploadsToDevice) || e;

@@ -30,7 +30,7 @@ class p {
         var t;
         _(this, "shopBlocks", void 0),
             _(this, "categories", void 0),
-            _(this, "user_discounts", void 0),
+            _(this, "userDiscounts", void 0),
             (this.shopBlocks = e.shop_blocks
                 .map((e) => {
                     switch (e.type) {
@@ -54,6 +54,6 @@ class p {
                 })
                 .filter((e) => void 0 !== e)),
             (this.categories = e.categories.map((e) => i.Z.fromServer(e))),
-            (this.user_discounts = null == (t = e.user_discounts) ? void 0 : t.map((e) => o.h.fromServer(e)));
+            (this.userDiscounts = null == (t = e.user_discounts) ? void 0 : t.map((e) => o.h.fromServer(e)));
     }
 }

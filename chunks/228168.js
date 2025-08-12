@@ -7,6 +7,7 @@ n.d(t, {
     lY: () => l,
     n_: () => f,
     oh: () => a,
+    qb: () => p,
     vB: () => i,
     yM: () => u,
 });
@@ -169,4 +170,7 @@ var f = (function (e) {
     })({}),
     _ = (function (e) {
         return (e.REPLY = "REPLY"), (e.REACT = "REACT"), e;
+    })({}),
+    p = (function (e) {
+        return (e.WIDGET_ADDED = "WIDGET_ADDED"), (e.WIDGET_REMOVED = "WIDGET_REMOVED"), e;
     })({});

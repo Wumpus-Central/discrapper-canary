@@ -17506,7 +17506,7 @@ svg.radioIcon_c1e9c4 {
     pointer-events: none;
     position: absolute;
     top: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, calc(-50% - 24px));
     width: 1512px;
     z-index: 1
 }

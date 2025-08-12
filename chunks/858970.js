@@ -51,15 +51,15 @@ function I(e) {
             channelId: I,
             messageId: P,
             roleId: E,
-            transitionState: Z,
-            openedAt: T,
+            transitionState: T,
+            openedAt: Z,
             onHide: N,
             sourceAnalyticsLocations: S = [],
         } = e,
         w = n === x.ME ? void 0 : n,
         A = (0, l.e7)([d.Z], () => d.Z.isBlocked(t.id)),
         { analyticsLocations: C } = (0, c.ZP)([...S, A ? a.Z.BLOCKED_PROFILE_MODAL : a.Z.IGNORED_PROFILE_MODAL]),
-        L = (0, f.ZB)({
+        D = (0, f.ZB)({
             layout: "MODAL_V2",
             userId: t.id,
             showGuildProfile: !0,
@@ -68,7 +68,7 @@ function I(e) {
             messageId: P,
             roleId: E,
         }),
-        D = [
+        L = [
             {
                 icon: o.owK,
                 description: h.intl.string(h.t.kcuWvb),
@@ -80,20 +80,20 @@ function I(e) {
         ],
         R = (0, m.ZP)(t.id, w),
         k = u.ZP.getName(null == R ? void 0 : R.guildId, I, t),
-        B = h.intl.formatToPlainString(h.t.KRe1Fh, { name: k });
+        G = h.intl.formatToPlainString(h.t.KRe1Fh, { name: k });
     return (0, r.jsx)(c.Gt, {
         value: C,
         children: (0, r.jsx)(f.Mt, {
-            value: L,
-            openedAt: T,
+            value: D,
+            openedAt: Z,
             fetchStartedAt: null == R ? void 0 : R.fetchStartedAt,
             fetchEndedAt: null == R ? void 0 : R.fetchEndedAt,
             isLoaded: null == R ? void 0 : R.isLoaded,
             children: (0, r.jsx)(o.Y0X, {
                 "data-migration-pending": !0,
-                transitionState: Z,
+                transitionState: T,
                 className: v.root,
-                "aria-label": B,
+                "aria-label": G,
                 parentComponent: "RestrictedUserProfileModalV2",
                 children: (0, r.jsxs)(g.Z, {
                     user: t,
@@ -126,7 +126,7 @@ function I(e) {
                                 }),
                                 (0, r.jsx)("div", {
                                     className: v.safetyTable,
-                                    children: D.map((e, t) => {
+                                    children: L.map((e, t) => {
                                         let { icon: n, description: l } = e;
                                         return (0, r.jsx)(
                                             s.JZ,
@@ -156,7 +156,7 @@ function I(e) {
                                                                     : "VIEW_IGNORED_PROFILE",
                                                                 analyticsLocations: C,
                                                             },
-                                                            L,
+                                                            D,
                                                         ),
                                                     );
                                             },
@@ -171,7 +171,7 @@ function I(e) {
                                                                 action: "DONT_SHOW_AGAIN_IGNORED_PROFILE",
                                                                 analyticsLocations: C,
                                                             },
-                                                            L,
+                                                            D,
                                                         ),
                                                     );
                                             },

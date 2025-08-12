@@ -21,8 +21,8 @@ function x(e) {
         _ = l.useRef(null),
         { analyticsLocations: I } = (0, c.ZP)(a.Z.USER_PROFILE_RECENT_ACTIVITY_CARD),
         { themeType: P } = (0, m.z)(),
-        { interactionSource: E, interactionSourceId: Z } = (0, u.Xo)(),
-        T = (0, d.Z)({
+        { interactionSource: E, interactionSourceId: T } = (0, u.Xo)(),
+        Z = (0, d.Z)({
             display: "recent",
             user: t,
             entry: n,
@@ -41,7 +41,7 @@ function x(e) {
                       themeType: P,
                       sourceId: n.id,
                       entry: n,
-                      onAction: T,
+                      onAction: Z,
                       sourceType: y.n_.ACTIVITY,
                       children: () =>
                           (0, r.jsx)(p.Z, {
@@ -50,8 +50,8 @@ function x(e) {
                               className: O.toolbarContainer,
                               interactionSourceId: n.id,
                               sourceType: y.n_.ACTIVITY,
-                              onAction: T,
-                              onShowToolbar: () => T({ action: "HOVER_ACTIVITY_CARD" }),
+                              onAction: Z,
+                              onShowToolbar: () => Z({ action: "HOVER_ACTIVITY_CARD" }),
                               renderMoreButtonPopout: v
                                   ? void 0
                                   : (e) =>
@@ -66,7 +66,7 @@ function x(e) {
                                   entry: n,
                                   user: t,
                                   onClose: h,
-                                  className: o()(x, { [O.hoisted]: E === y.n_.ACTIVITY && Z === n.id }),
+                                  className: o()(x, { [O.hoisted]: E === y.n_.ACTIVITY && T === n.id }),
                               }),
                           }),
                   }),

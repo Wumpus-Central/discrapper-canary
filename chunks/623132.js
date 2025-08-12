@@ -134,8 +134,8 @@ function v(e) {
 }
 function _(e) {
     let { user: t, guildId: n, channelId: i, game: o, widgetType: c, loading: s = !1, disableInteraction: p = !1 } = e,
-        { gameName: _ = m.intl.string(m.t.GIWFlJ), imageSrc: I, applicationId: P, comment: E, tags: Z } = o,
-        T = {
+        { gameName: _ = m.intl.string(m.t.GIWFlJ), imageSrc: I, applicationId: P, comment: E, tags: T } = o,
+        Z = {
             variant: "text-md/normal",
             color: "text-default",
         },
@@ -172,7 +172,7 @@ function _(e) {
                       className: j.details,
                       children: [
                           p
-                              ? (0, r.jsx)(l.X6q, O(y({}, T), { children: _ }))
+                              ? (0, r.jsx)(l.X6q, O(y({}, Z), { children: _ }))
                               : (0, r.jsx)(
                                     x,
                                     y(
@@ -181,7 +181,7 @@ function _(e) {
                                             userId: t.id,
                                             gameName: _,
                                         },
-                                        T,
+                                        Z,
                                     ),
                                 ),
                           null != E &&
@@ -191,7 +191,7 @@ function _(e) {
                                   guildId: n,
                                   channelId: i,
                               }),
-                          (0, r.jsx)(u.Z, { tags: Z }),
+                          (0, r.jsx)(u.Z, { tags: T }),
                           !p &&
                               (0, r.jsx)(v, {
                                   className: j.socialProof,

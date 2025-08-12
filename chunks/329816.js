@@ -78,11 +78,12 @@ let Q = (0, Z.Un)({
         let e = (0, c.e7)([G.Z], () => G.Z.hasLayers()),
             t = (0, j.wy)("AppSkeleton"),
             n = (0, c.e7)([G.Z], () => G.Z.getLayers().includes(q.S9g.USER_SETTINGS)),
-            i = (0, d.s9z)(d.$sL);
+            i = (0, d.s9z)(d.$sL),
+            o = (0, c.e7)([U.default], () => U.default.isAuthenticated());
         if (!n || !t)
             return (0, r.jsx)(z.Dg, {
                 fixed: !0,
-                show: e || i || !U.default.isAuthenticated(),
+                show: e || i || !o,
             });
     }),
     ee = function (e) {

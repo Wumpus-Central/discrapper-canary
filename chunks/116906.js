@@ -22,43 +22,43 @@ var l = n(442837),
     v = n(727550),
     _ = n(889080);
 function I(e) {
-    let { user: t, currentUser: n, displayProfile: I, guildId: P, subsection: E, onClose: Z } = e,
-        { voiceActivityStatusEnabled: T } = (0, o.U)({ location: "UserProfileModalActivity" }),
+    let { user: t, currentUser: n, displayProfile: I, guildId: P, subsection: E, onClose: T } = e,
+        { voiceActivityStatusEnabled: Z } = (0, o.U)({ location: "UserProfileModalActivity" }),
         N = (0, u.b)({ location: "UserProfileModalActivity" }),
         { live: S, recent: w, stream: A } = (0, f.Z)(t.id),
-        { voiceChannel: C, voiceActivity: L } = (0, p.Z)({
+        { voiceChannel: C, voiceActivity: D } = (0, p.Z)({
             userId: t.id,
             guildId: P,
         }),
-        D = (0, l.e7)([a.Z], () => a.Z.isFetchingUserOutbox(t.id)),
+        L = (0, l.e7)([a.Z], () => a.Z.isFetchingUserOutbox(t.id)),
         R = t.id === n.id,
         k = (0, l.e7)([s.Z, c.Z], () => {
             let e = R ? s.Z.getStatus() : c.Z.getStatus(t.id);
             return e === i.Skl.OFFLINE || e === i.Skl.INVISIBLE;
         }),
-        B = S.length > 0 || null != A,
-        G = T && null == A && null == L && null != C,
-        M = !k && (B || G),
+        G = S.length > 0 || null != A,
+        M = Z && null == A && null == D && null != C,
+        B = !k && (G || M),
         U = w.length > 0;
-    return M || U || !D
+    return B || U || !L
         ? (0, r.jsxs)(i.zJl, {
               className: v.scroller,
               fade: !0,
               children: [
-                  M
+                  B
                       ? (0, r.jsx)(m.Z, {
                             "aria-label": h.intl.string(h.t.J6STd3),
                             children: (0, r.jsxs)("ul", {
                                 className: v.activityList,
                                 children: [
                                     !N &&
-                                        G &&
+                                        M &&
                                         (0, r.jsx)("li", {
                                             children: (0, r.jsx)(y.Z, {
                                                 user: t,
                                                 currentUser: n,
                                                 voiceChannel: C,
-                                                onClose: Z,
+                                                onClose: T,
                                             }),
                                         }),
                                     null != A &&
@@ -68,7 +68,7 @@ function I(e) {
                                                 user: t,
                                                 currentUser: n,
                                                 stream: A,
-                                                onClose: Z,
+                                                onClose: T,
                                                 profileGuildId: null == I ? void 0 : I.guildId,
                                             }),
                                         }),
@@ -80,7 +80,7 @@ function I(e) {
                                                     user: t,
                                                     currentUser: n,
                                                     activity: e,
-                                                    onClose: Z,
+                                                    onClose: T,
                                                     profileGuildId: null == I ? void 0 : I.guildId,
                                                 }),
                                             },
@@ -120,7 +120,7 @@ function I(e) {
                                                 currentUser: n,
                                                 entry: e,
                                                 profileGuildId: null == I ? void 0 : I.guildId,
-                                                onClose: Z,
+                                                onClose: T,
                                             }),
                                         },
                                         e.id,

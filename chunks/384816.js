@@ -23,8 +23,8 @@ var l = n(442837),
     _ = n(926505);
 function I(e) {
     let { user: t, currentUser: n, displayProfile: I, subsection: P, onClose: E } = e,
-        { trackUserProfileAction: Z } = (0, f.KZ)(),
-        T = (0, l.e7)([d.Z], () => d.Z.getGuildId()),
+        { trackUserProfileAction: T } = (0, f.KZ)(),
+        Z = (0, l.e7)([d.Z], () => d.Z.getGuildId()),
         N = (0, a.Y)({ userId: t.id }),
         S = (0, l.e7)([u.Z], () => u.Z.hidePersonalInformation),
         w = (0, l.e7)([s.default], () => s.default.locale),
@@ -93,9 +93,9 @@ function I(e) {
                                 applicationRoleConnection: e,
                                 locale: w,
                                 onApplicationClicked: () => {
-                                    Z({ action: "PRESS_APP_CONNECTION" }), E();
+                                    T({ action: "PRESS_APP_CONNECTION" }), E();
                                 },
-                                selectedGuildId: null != T ? T : void 0,
+                                selectedGuildId: null != Z ? Z : void 0,
                             },
                             e.application.id,
                         ),
@@ -108,7 +108,7 @@ function I(e) {
                     userId: t.id,
                     className: _.note,
                     autoFocus: P === h.Tb.NOTE,
-                    onUpdate: () => Z({ action: "SET_NOTE" }),
+                    onUpdate: () => T({ action: "SET_NOTE" }),
                 }),
             }),
         ],

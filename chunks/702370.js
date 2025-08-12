@@ -13,8 +13,8 @@ var r = n(255367),
     p = n(780384),
     v = n(481060),
     h = n(809206),
-    b = n(727637),
-    P = n(410030),
+    P = n(727637),
+    b = n(410030),
     g = n(100527),
     x = n(906732),
     j = n(570908),
@@ -61,16 +61,16 @@ var r = n(255367),
     es = n(237031),
     ec = n(372654),
     eu = n(38914),
-    ed = n(262786),
-    em = n(259673),
-    ef = n(508925),
-    ep = n(953405),
-    ev = n(453713),
-    eh = n(616066),
-    eb = n(22267),
+    ed = n(259673),
+    em = n(508925),
+    ef = n(953405),
+    ep = n(453713),
+    ev = n(616066),
+    eh = n(22267),
     eP = n(332246),
-    eg = n(58201),
-    ex = n(794324),
+    eb = n(58201),
+    eg = n(794324),
+    ex = n(10694),
     ej = n(361110),
     eO = n(956472),
     e_ = n(832149),
@@ -126,12 +126,12 @@ function ek(e, t) {
 let eN = (e) => {
         let { item: t, user: n, isBundleItem: a = !1 } = e,
             l = i.useRef(null),
-            o = (0, b.Z)(l);
+            o = (0, P.Z)(l);
         return (0, c.EQ)(t.type)
             .with(d.Z.AVATAR_DECORATION, () =>
                 (0, r.jsx)("div", {
                     className: a ? eE.bundleAvatarPreviewContainer : eE.avatarPreviewContainer,
-                    children: (0, r.jsx)(eh.R, {
+                    children: (0, r.jsx)(ev.R, {
                         user: n,
                         item: t,
                     }),
@@ -152,7 +152,7 @@ let eN = (e) => {
                 (0, r.jsx)("div", {
                     ref: l,
                     className: eE.nameplatePreviewContainer,
-                    children: (0, r.jsx)(eb.Z, {
+                    children: (0, r.jsx)(eh.Z, {
                         className: eE.nameplatePreview,
                         nameplate: t,
                         isHighlighted: o,
@@ -218,7 +218,7 @@ let eN = (e) => {
                   user: n,
               })
             : (0, ew.o0)(t.skuId)
-              ? (0, r.jsx)(ef.b, {
+              ? (0, r.jsx)(em.b, {
                     animationState: "on_hover",
                     product: t,
                 })
@@ -249,7 +249,7 @@ let eN = (e) => {
                 category: o,
                 shouldCheckoutWithOrbs: c,
                 onClose: m,
-                returnRef: b,
+                returnRef: P,
                 previewingVariantIndexProps: g,
                 selectedVariantIndex: j,
                 tab: O,
@@ -258,7 +258,7 @@ let eN = (e) => {
             w = U.ZP.canUseCollectibles(a),
             { previewingVariantIndex: C } = g,
             y = (0, eP.N)(n, C),
-            E = (0, eg.W)(n, j);
+            E = (0, eb.W)(n, j);
         s()(null != E, "Selected product should not be null");
         let T = (0, J.L)(n),
             { isPurchased: k, isPartiallyOwnedBundle: N } = (0, J.L)(E),
@@ -269,21 +269,21 @@ let eN = (e) => {
                 isPurchased: k,
             }),
             M = (0, f.e7)([z.Z], () => z.Z.isClaiming === (null == E ? void 0 : E.skuId)),
-            W = (0, P.ZP)(),
+            W = (0, b.ZP)(),
             ee = (0, p.wj)(W),
             et = (0, G.G1)(E),
             en = (0, G.ql)(E, eC.tuJ.DEFAULT),
             ec = (null == en ? void 0 : en.amount) === 0,
             { firstAvatarDecoration: eu } = (0, Q.Rj)(null != y ? y : E),
-            em = i.useMemo(() => (0, G.BH)(E, w), [E, w]),
-            { handleUseNow: ef, isApplying: eh } = (0, q.W)({
+            ed = i.useMemo(() => (0, G.BH)(E, w), [E, w]),
+            { handleUseNow: em, isApplying: ev } = (0, q.W)({
                 product: E,
                 onSuccess: m,
             }),
-            eb = (0, V.hv)("CollectiblesProductPreviewInfo"),
-            ex = (0, Y.T)(E),
+            eh = (0, V.hv)("CollectiblesProductPreviewInfo"),
+            eg = (0, Y.T)(E),
             { enabled: ej } = (0, Z.WX)({ location: "collectibles_shop_product_details_modal" }),
-            eN = (0, ed._)(n.eligibleOffers),
+            eN = (0, ex.I)(n),
             eZ = null != eN,
             {
                 checkoutEligiblePrices: eL,
@@ -300,10 +300,10 @@ let eN = (e) => {
                     (0, I.Z)({
                         skuId: E.skuId,
                         analyticsLocations: _,
-                        variantsReturnStyle: eb,
+                        variantsReturnStyle: eh,
                         onClose: (e) => (e ? m() : (0, eI.dG)()),
                     }),
-                [_, m, E.skuId, eb],
+                [_, m, E.skuId, eh],
             );
         i.useEffect(() => {
             if (null != eu) return (0, h.cV)(eu), () => (0, h.cV)(void 0);
@@ -316,7 +316,7 @@ let eN = (e) => {
                                 var t;
                                 let { entitlements: n } = e;
                                 (0, F.qg)({
-                                    variantsReturnStyle: eb,
+                                    variantsReturnStyle: eh,
                                     location: "collectible_checkout_with_orb",
                                 }),
                                     m(),
@@ -421,7 +421,7 @@ let eN = (e) => {
                                 (0, r.jsx)(v.X6q, {
                                     variant: "heading-xl/extrabold",
                                     className: eE.headingWithItemTypePill,
-                                    children: ex,
+                                    children: eg,
                                 }),
                                 (0, r.jsx)(v.Text, {
                                     variant: "text-sm/normal",
@@ -440,11 +440,11 @@ let eN = (e) => {
                                             children: eS.intl.string(eS.t.rt69oq),
                                         })
                                       : ej
-                                        ? (0, r.jsx)(ep.a, {
+                                        ? (0, r.jsx)(ef.a, {
                                               prices: eL,
                                               product: E,
                                               isPremiumUser: w,
-                                              discount: em,
+                                              discount: ed,
                                               hasSufficientOrbs: eD,
                                               isProductDisabled: L,
                                               discountOfferAmount: eN,
@@ -454,7 +454,7 @@ let eN = (e) => {
                                               children: [
                                                   (0, r.jsx)(el.Z, {
                                                       product: E,
-                                                      discount: em,
+                                                      discount: ed,
                                                       isPremiumUser: w,
                                                       hideStrikethroughPrice: !w || eZ,
                                                       nitroIconType: "tooltip",
@@ -467,7 +467,7 @@ let eN = (e) => {
                             ],
                         }),
                         (0, r.jsx)(v.Rny, {
-                            children: (0, r.jsx)(ev.P, {
+                            children: (0, r.jsx)(ep.P, {
                                 selectedVariantIndex: j,
                                 variantGroupProduct: n,
                                 previewingVariantIndexProps: g,
@@ -488,8 +488,8 @@ let eN = (e) => {
                                         ? k
                                             ? (0, r.jsx)(v.zxk, {
                                                   variant: "primary",
-                                                  onClick: ef,
-                                                  loading: eh,
+                                                  onClick: em,
+                                                  loading: ev,
                                                   text: eS.intl.string(eS.t.MAS7uL),
                                                   fullWidth: !0,
                                               })
@@ -528,7 +528,7 @@ let eN = (e) => {
                                                   product: E,
                                                   category: o,
                                                   shouldCheckoutWithOrbs: c,
-                                                  returnRef: b,
+                                                  returnRef: P,
                                                   analyticsLocations: _,
                                               });
                                           },
@@ -584,7 +584,7 @@ let eN = (e) => {
                     }),
                     (0, r.jsx)("div", {
                         className: eE.nameplateRightPanePreviewAvatarContainer,
-                        children: (0, r.jsx)(eb.Z, {
+                        children: (0, r.jsx)(eh.Z, {
                             className: eE.nameplatePreview,
                             innerClassName: eE.userPink,
                             user: t,
@@ -754,20 +754,20 @@ let eN = (e) => {
                 shouldCheckoutWithOrbs: p,
                 tab: h,
             } = e,
-            b = (0, f.e7)([B.default], () => B.default.getCurrentUser()),
-            P = (0, ej.f)(a),
-            { previewingVariantIndex: j } = P,
+            P = (0, f.e7)([B.default], () => B.default.getCurrentUser()),
+            b = (0, ej.f)(a),
+            { previewingVariantIndex: j } = b,
             O = (0, f.e7)([z.Z], () => z.Z.purchases),
             _ = (0, W.o)(a, O),
             w = (0, eP.N)(a, j),
-            C = (0, eg.W)(a, _);
+            C = (0, eb.W)(a, _);
         s()(null != C, "Selected product should not be null");
         let { analyticsLocations: y } = (0, x.ZP)([...u, g.Z.COLLECTIBLES_SHOP_DETAILS_MODAL]);
         (0, en.u9)(C.skuId);
-        let { pdpBackground: I, logo: S } = (0, ex.OR)(l);
+        let { pdpBackground: I, logo: S } = (0, eg.OR)(l);
         i.useEffect(() => {
-            null != b && (0, N.Z)(b.id, b.getAvatarURL(void 0, 80));
-        }, [b]);
+            null != P && (0, N.Z)(P.id, P.getAvatarURL(void 0, 80));
+        }, [P]);
         let E = i.useMemo(() => (0, G.jm)(a.type, a.skuId), [a.type, a.skuId]);
         i.useEffect(() => {
             D.default.track(eC.rMx.OPEN_MODAL, {
@@ -781,7 +781,7 @@ let eN = (e) => {
         }, [c, y, C.skuId, C.items, E]);
         let T = (0, R.r9)(),
             k = t === v.Dvm.EXITING;
-        if (null == b) return null;
+        if (null == P) return null;
         let Z = (0, ew.ZS)(l.skuId);
         return (0, r.jsx)(x.Gt, {
             value: y,
@@ -798,11 +798,11 @@ let eN = (e) => {
                     className: eE.modalContent,
                     children: [
                         (0, r.jsx)(eL, {
-                            user: b,
+                            user: P,
                             product: a,
                             category: l,
                             onClose: n,
-                            previewingVariantIndexProps: P,
+                            previewingVariantIndexProps: b,
                             selectedVariantIndex: _,
                             shouldCheckoutWithOrbs: p,
                             tab: h,
@@ -825,15 +825,15 @@ let eN = (e) => {
                                     ? a.skuId === ew.Vt.ORB_PROFILE_BADGE
                                         ? T || k
                                             ? null
-                                            : (0, r.jsx)(em.M, { user: b })
+                                            : (0, r.jsx)(ed.M, { user: P })
                                         : a.skuId === m.a.PREMIUM_TIER_2_3_DAY
                                           ? (0, r.jsx)(eu.q, {})
-                                          : (0, r.jsx)(ef.b, {
+                                          : (0, r.jsx)(em.b, {
                                                 product: a,
                                                 className: eE.externalProductProfilePreview,
                                             })
                                     : (0, r.jsx)(eM, {
-                                          user: b,
+                                          user: P,
                                           product: null != w ? w : C,
                                       }),
                                 (0, r.jsxs)("div", {

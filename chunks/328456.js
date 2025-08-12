@@ -1,61 +1,61 @@
-n.d(e, {
-    Rj: () => s,
+i.d(t, {
+    Rj: () => a,
     Ws: () => o,
 }),
-    n(539854),
-    n(388685);
-var r = n(73800),
-    i = n(979554),
-    l = n(388032);
-class a {
+    i(539854),
+    i(388685);
+var r = i(73800),
+    l = i(979554),
+    n = i(388032);
+class s {
     get firstAvatarDecoration() {
-        return this.getFirstItemByType(i.Z.AVATAR_DECORATION);
+        return this.getFirstItemByType(l.Z.AVATAR_DECORATION);
     }
     get firstProfileEffect() {
-        return this.getFirstItemByType(i.Z.PROFILE_EFFECT);
+        return this.getFirstItemByType(l.Z.PROFILE_EFFECT);
     }
-    getFirstItemByType(t) {
-        var e;
-        let n = (null != (e = this.itemsByTypes.get(t)) ? e : [])[0];
-        if (null != n) return n;
+    getFirstItemByType(e) {
+        var t;
+        let i = (null != (t = this.itemsByTypes.get(e)) ? t : [])[0];
+        if (null != i) return i;
     }
-    sortByTypes(t) {
-        return t.reduce((t, e) => {
-            let n = t.get(e.type);
-            return null != n ? n.push(e) : t.set(e.type, [e]), t;
+    sortByTypes(e) {
+        return e.reduce((e, t) => {
+            let i = e.get(t.type);
+            return null != i ? i.push(t) : e.set(t.type, [t]), e;
         }, new Map());
     }
-    constructor(t) {
-        var e, n;
-        (n = void 0),
-            (e = "itemsByTypes") in this
-                ? Object.defineProperty(this, e, {
-                      value: n,
+    constructor(e) {
+        var t, i;
+        (i = void 0),
+            (t = "itemsByTypes") in this
+                ? Object.defineProperty(this, t, {
+                      value: i,
                       enumerable: !0,
                       configurable: !0,
                       writable: !0,
                   })
-                : (this[e] = n),
-            (this.itemsByTypes = this.sortByTypes(t));
+                : (this[t] = i),
+            (this.itemsByTypes = this.sortByTypes(e));
     }
 }
-let s = (t) => {
-        let { firstProfileEffect: e, firstAvatarDecoration: n } = r.useMemo(() => new a(t.items), [t]);
+let a = (e) => {
+        let { firstProfileEffect: t, firstAvatarDecoration: i } = r.useMemo(() => new s(e.items), [e]);
         return {
-            firstProfileEffect: e,
-            firstAvatarDecoration: n,
+            firstProfileEffect: t,
+            firstAvatarDecoration: i,
         };
     },
-    o = (t) => {
-        let e = l.intl.string(l.t["7v0T9P"]),
-            n = l.intl.string(l.t.wR5wOj);
-        if (null != t.bundledProducts) {
-            var r, i;
-            t.bundledProducts.length > 0 && (e = null == (r = t.bundledProducts[0]) ? void 0 : r.name),
-                t.bundledProducts.length > 1 && (n = null == (i = t.bundledProducts[1]) ? void 0 : i.name);
+    o = (e) => {
+        let t = n.intl.string(n.t["7v0T9P"]),
+            i = n.intl.string(n.t.wR5wOj);
+        if (null != e.bundledProducts) {
+            var r, l;
+            e.bundledProducts.length > 0 && (t = null == (r = e.bundledProducts[0]) ? void 0 : r.name),
+                e.bundledProducts.length > 1 && (i = null == (l = e.bundledProducts[1]) ? void 0 : l.name);
         }
         return {
-            itemOneName: e,
-            itemTwoName: n,
+            itemOneName: t,
+            itemTwoName: i,
         };
     };

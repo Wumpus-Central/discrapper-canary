@@ -3,6 +3,7 @@ e.exports = {
     disabled: "disabled__9c3be",
     previewBar: "previewBar__9c3be",
     toast: "toast__9c3be",
+    interactionToast: "interactionToast__9c3be",
     backdrop: "backdrop__9c3be",
     backgroundImage: "backgroundImage__9c3be",
     profile: "profile__9c3be",

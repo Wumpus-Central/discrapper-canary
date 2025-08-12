@@ -9,7 +9,7 @@ var r = n(255367),
     u = n(481060),
     d = n(906732),
     f = n(597688),
-    _ = n(262786),
+    _ = n(10694),
     p = n(600164),
     h = n(717401),
     m = n(160913),
@@ -104,20 +104,19 @@ function x(e) {
         eL = (0, m.U)(),
         ex = (0, c.e7)([N.Z], () => N.Z.currentOrderId),
         eM = null,
-        ek = null,
-        ej = null;
+        ek = null;
     if (et === P.GZQ.ONE_TIME) {
-        var eU, eG;
+        var ej;
         l()(null != ei, "SKU must be selected for one-time purchases"),
-            (eM = null != (eG = eo[ei]) ? eG : null),
+            (eM = null != (ej = eo[ei]) ? ej : null),
             l()(null != eM, "SKU must exist and be fetched.");
         let e = ea[ei],
             t = null != en ? en : y.c;
         ek = null != e ? e[t] : null;
-        let n = null == (eU = f.Z.getProduct(ei)) ? void 0 : eU.eligibleOffers;
-        ej = (0, _._)(n);
     }
-    let eB = async () => {
+    let eU = (0, _.I)(et === P.GZQ.ONE_TIME ? f.Z.getProduct(ei) : void 0),
+        eG = null !== eU,
+        eB = async () => {
             await (0, S.H)({
                 setPurchaseState: n,
                 setHasAcceptedTerms: $,
@@ -176,9 +175,9 @@ function x(e) {
         : (0, r.jsxs)(u.mzw, {
               "data-migration-pending": !0,
               align: p.Z.Align.CENTER,
-              className: a()({ [D.modalFooterDiscount]: null !== ej }, ed, D.modalFooter),
+              className: a()({ [D.modalFooterDiscount]: eG }, ed, D.modalFooter),
               children: [
-                  null !== ej &&
+                  eG &&
                       (0, r.jsx)("img", {
                           src: L.Z,
                           alt: "",
@@ -203,24 +202,24 @@ function x(e) {
                       onPaymentSourceAdd: X,
                   }),
                   (0, r.jsx)(R.Z, {
-                      iconClassName: null !== ej ? D.discountColor : null,
-                      textClassName: null !== ej ? D.discountColor : null,
+                      iconClassName: eG ? D.discountColor : null,
+                      textClassName: eG ? D.discountColor : null,
                   }),
                   eH
                       ? (0, r.jsx)("div", {
                             className: D.back,
                             children: (0, r.jsx)(g.Z, {
                                 onClick: o,
-                                className: a()({ [D.discountColor]: null !== ej }),
+                                className: a()({ [D.discountColor]: eG }),
                             }),
                         })
                       : null,
-                  null !== ej &&
+                  eG &&
                       !eH &&
                       (0, r.jsx)(u.Text, {
                           variant: "text-xs/semibold",
                           className: D.discountFooterText,
-                          children: w.intl.formatToPlainString(w.t.IhKBNT, { discountOfferAmount: ej }),
+                          children: w.intl.formatToPlainString(w.t.IhKBNT, { discountOfferAmount: eU }),
                       }),
               ],
           });
