@@ -11,8 +11,8 @@ var r = n(255367),
     f = n(906732),
     p = n(313201),
     m = n(368326),
-    g = n(429467),
-    b = n(320582),
+    b = n(429467),
+    g = n(320582),
     j = n(246016),
     y = n(680295),
     x = n(189156),
@@ -24,8 +24,8 @@ var r = n(255367),
     P = n(785717),
     E = n(221292),
     Z = n(687158),
-    T = n(771362),
-    N = n(510659),
+    N = n(771362),
+    T = n(510659),
     S = n(113557),
     A = n(648052),
     w = n(867176),
@@ -70,8 +70,8 @@ function ee(e) {
             sourceAnalyticsLocations: ep = [],
             disableActionsForPreview: em = !1,
         } = e,
-        { analyticsLocations: eg } = (0, f.ZP)([...ep, u.Z.USER_PROFILE_MODAL_V2]),
-        eb = (0, P.ZB)({
+        { analyticsLocations: eb } = (0, f.ZP)([...ep, u.Z.USER_PROFILE_MODAL_V2]),
+        eg = (0, P.ZB)({
             layout: "MODAL_V2",
             userId: n.id,
             sourceSessionId: ei,
@@ -84,7 +84,7 @@ function ee(e) {
         ej = l.useRef(null),
         ey = (0, s.Z)(ej),
         [ex, eh] = l.useState(!1),
-        eO = (0, N.$m)(),
+        eO = (0, T.$m)(),
         ev = (0, a.q_F)({
             opacity: +(null != eO.interactionType),
             config: { duration: 150 },
@@ -97,8 +97,8 @@ function ee(e) {
             relationshipType: h.Z.getRelationshipType(n.id),
             originApplicationId: h.Z.getOriginApplicationId(n.id),
         })),
-        eT = (0, o.e7)([O.Z], () => O.Z.hidePersonalInformation),
-        eN =
+        eN = (0, o.e7)([O.Z], () => O.Z.hidePersonalInformation),
+        eT =
             null == eI
                 ? void 0
                 : eI.getBannerURL({
@@ -106,14 +106,14 @@ function ee(e) {
                       size: 1024,
                   }),
         eS = (0, m.p)({ location: "UserProfileModalV2" }),
-        eA = l.useMemo(() => (null != es ? es : (0, g.Z)()), [es]),
+        eA = l.useMemo(() => (null != es ? es : (0, b.Z)()), [es]),
         ew = (0, X.Z)({
             user: n,
             currentUser: ee,
         }),
         eC = (0, j.Y)({ userId: n.id }),
-        eL = (0, b.vh)(n.id),
-        eD = (0, T.Z)(n.id),
+        eL = (0, g.vh)(n.id),
+        eD = (0, N.Z)(n.id),
         eR = (0, p.Dt)(),
         ek = Q.intl.format(Q.t.KRe1Fh, { name: eP });
     return (
@@ -132,14 +132,14 @@ function ee(e) {
             );
         }, []),
         (0, r.jsx)(f.Gt, {
-            value: eg,
+            value: eb,
             children: (0, r.jsx)(P.Mt, {
-                value: eb,
+                value: eg,
                 openedAt: ed,
                 fetchStartedAt: null == eI ? void 0 : eI.fetchStartedAt,
                 fetchEndedAt: null == eI ? void 0 : eI.fetchEndedAt,
                 isLoaded: null == eI ? void 0 : eI.isLoaded,
-                children: (0, r.jsx)(N.NJ, {
+                children: (0, r.jsx)(T.NJ, {
                     value: eO,
                     children: (0, r.jsx)(a.UkV, {
                         isShaking: ex,
@@ -194,10 +194,10 @@ function ee(e) {
                                         displayProfile: eI,
                                         themeType: J.lY.MODAL_V2,
                                         children: [
-                                            null != eN &&
+                                            null != eT &&
                                                 (0, r.jsx)("div", {
                                                     className: $.backgroundImage,
-                                                    style: { backgroundImage: "url(".concat(eN, ")") },
+                                                    style: { backgroundImage: "url(".concat(eT, ")") },
                                                 }),
                                             null != eO.interactionType &&
                                                 (0, r.jsx)(i.animated.div, {
@@ -343,7 +343,7 @@ function ee(e) {
                                                             }),
                                                             (null == eI ? void 0 : eI.bio) != null &&
                                                                 (null == eI ? void 0 : eI.bio) !== "" &&
-                                                                !eT &&
+                                                                !eN &&
                                                                 (0, r.jsx)(C.Z, {
                                                                     userBio: eI.bio,
                                                                     setLineClamp: !1,
@@ -434,7 +434,7 @@ function ee(e) {
                                                                                         });
                                                                                 }
                                                                                 return e;
-                                                                            })({ action: "SET_NOTE" }, eb),
+                                                                            })({ action: "SET_NOTE" }, eg),
                                                                         ),
                                                                 }),
                                                             }),

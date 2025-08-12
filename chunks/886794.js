@@ -11,8 +11,8 @@ var r = n(255367),
     f = n(785717),
     p = n(687158),
     m = n(899007),
-    g = n(648052),
-    b = n(867176),
+    b = n(648052),
+    g = n(867176),
     j = n(280885),
     y = n(900927),
     x = n(678738),
@@ -24,8 +24,8 @@ var r = n(255367),
     P = n(981631),
     E = n(388032),
     Z = n(401683),
-    T = n(926505),
-    N = n(860130);
+    N = n(926505),
+    T = n(860130);
 function S(e) {
     let {
             user: t,
@@ -87,7 +87,7 @@ function S(e) {
                                 (0, r.jsx)(_.Z, { children: (0, r.jsx)(v.Z, { user: t }) }),
                                 (0, r.jsxs)("div", {
                                     children: [
-                                        (0, r.jsx)(b.Z, {
+                                        (0, r.jsx)(g.Z, {
                                             user: t,
                                             displayProfile: B,
                                             themeType: I.lY.MODAL,
@@ -113,24 +113,24 @@ function S(e) {
                                             nickname: G,
                                             pronouns: null == B ? void 0 : B.pronouns,
                                             nicknameVariant: "heading-xl/bold",
-                                            tags: (0, r.jsx)(g.Z, {
+                                            tags: (0, r.jsx)(b.Z, {
                                                 displayProfile: B,
                                                 themeType: I.lY.MODAL,
                                                 onClose: R,
                                             }),
                                         }),
                                         (0, r.jsxs)("div", {
-                                            className: N.container,
+                                            className: T.container,
                                             children: [
                                                 (0, r.jsx)(i.njP, {
-                                                    className: N.tabBar,
+                                                    className: T.tabBar,
                                                     type: "top",
                                                     selectedItem: I.oh.BOT_INFO,
                                                     onItemSelect: P.dG4,
                                                     children: (0, r.jsx)(
                                                         i.njP.Item,
                                                         {
-                                                            className: N.tabBarItem,
+                                                            className: T.tabBarItem,
                                                             id: I.oh.BOT_INFO,
                                                             "aria-label": E.intl.string(E.t.jGoPJS),
                                                             children: (0, r.jsx)(i.Text, {
@@ -143,7 +143,7 @@ function S(e) {
                                                 }),
                                                 (0, r.jsxs)(i.zJl, {
                                                     fade: !0,
-                                                    className: T.scroller,
+                                                    className: N.scroller,
                                                     children: [
                                                         (0, r.jsx)(j.Z, {
                                                             userId: t.id,

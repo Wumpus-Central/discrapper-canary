@@ -4,8 +4,8 @@ n(73800);
 var l = n(750312),
     i = n(30344);
 function o(e) {
-    var { user: t, widget: n, disableInteraction: o } = e,
-        a = (function (e, t) {
+    var { user: t, widget: n, containerClassName: o, disableInteraction: a } = e,
+        c = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -25,11 +25,12 @@ function o(e) {
                         !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]);
             }
             return l;
-        })(e, ["user", "widget", "disableInteraction"]);
+        })(e, ["user", "widget", "containerClassName", "disableInteraction"]);
     return (0, r.jsx)(l.Z, {
         userId: t.id,
         widget: n,
-        disableInteraction: o,
+        className: o,
+        disableInteraction: a,
         children: (0, r.jsx)(
             i.Z,
             (function (e) {
@@ -60,9 +61,9 @@ function o(e) {
                 {
                     userId: t.id,
                     games: n.games,
-                    disableInteraction: o,
+                    disableInteraction: a,
                 },
-                a,
+                c,
             ),
         ),
     });

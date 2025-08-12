@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g }), n(388685);
+n.d(t, { Z: () => b }), n(388685);
 var r = n(255367),
     l = n(73800),
     i = n(120356),
@@ -74,10 +74,10 @@ function m(e) {
                 gameName: n,
             }),
         });
-    let g = d.intl.formatToPlainString(d.t["8QLQBw"], { gameName: null != n ? n : d.intl.string(d.t.GIWFlJ) });
+    let b = d.intl.formatToPlainString(d.t["8QLQBw"], { gameName: null != n ? n : d.intl.string(d.t.GIWFlJ) });
     return (0, r.jsx)(a.P3F, {
         onClick: m,
-        "aria-label": g,
+        "aria-label": b,
         className: o()(u.clickable, f),
         children: (0, r.jsx)(p, {
             imageSrc: t,
@@ -85,7 +85,7 @@ function m(e) {
         }),
     });
 }
-function g(e) {
+function b(e) {
     var { applicationId: t, userId: n, className: l, disableInteraction: i = !1 } = e,
         a = (function (e, t) {
             if (null == e) return {};

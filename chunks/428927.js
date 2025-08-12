@@ -13,7 +13,7 @@ function f(e) {
     let { user: t, onClose: n } = e,
         { trackUserProfileAction: f } = (0, a.KZ)(),
         { mutualGuilds: p, isFetching: m } = (0, c.Z)(t),
-        g = (e) => {
+        b = (e) => {
             (0, o.X)(e), n(), (0, i.xf)();
         };
     return (0, r.jsx)(l.zJl, {
@@ -37,7 +37,7 @@ function f(e) {
                                     guild: n,
                                     nick: l,
                                     onSelect: () => {
-                                        f({ action: "PRESS_MUTUAL_GUILD" }), g(n.id);
+                                        f({ action: "PRESS_MUTUAL_GUILD" }), b(n.id);
                                     },
                                 },
                                 n.id,

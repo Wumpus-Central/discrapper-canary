@@ -11,8 +11,8 @@ var r = n(255367),
     f = n(785717),
     p = n(221292),
     m = n(687158),
-    g = n(316027),
-    b = n(502762),
+    b = n(316027),
+    g = n(502762),
     j = n(848780),
     y = n(907179),
     x = n(228168),
@@ -52,8 +52,8 @@ function I(e) {
             messageId: P,
             roleId: E,
             transitionState: Z,
-            openedAt: T,
-            onHide: N,
+            openedAt: N,
+            onHide: T,
             sourceAnalyticsLocations: S = [],
         } = e,
         A = n === h.ME ? void 0 : n,
@@ -85,7 +85,7 @@ function I(e) {
         value: C,
         children: (0, r.jsx)(f.Mt, {
             value: L,
-            openedAt: T,
+            openedAt: N,
             fetchStartedAt: null == R ? void 0 : R.fetchStartedAt,
             fetchEndedAt: null == R ? void 0 : R.fetchEndedAt,
             isLoaded: null == R ? void 0 : R.isLoaded,
@@ -95,7 +95,7 @@ function I(e) {
                 className: v.root,
                 "aria-label": M,
                 parentComponent: "RestrictedUserProfileModalV2",
-                children: (0, r.jsxs)(b.Z, {
+                children: (0, r.jsxs)(g.Z, {
                     user: t,
                     displayProfile: R,
                     themeType: x.lY.MODAL_V2,
@@ -104,7 +104,7 @@ function I(e) {
                         (0, r.jsxs)("div", {
                             className: v.content,
                             children: [
-                                (0, r.jsx)(g.Z, {
+                                (0, r.jsx)(b.Z, {
                                     user: t,
                                     guildId: A,
                                     iconColor: o.TVs.colors.TEXT_DEFAULT,
@@ -147,7 +147,7 @@ function I(e) {
                                             size: i.Ph.MEDIUM,
                                             isBlocked: w,
                                             onClick: () => {
-                                                N(),
+                                                T(),
                                                     (0, p.pQ)(
                                                         _(
                                                             {
@@ -164,7 +164,7 @@ function I(e) {
                                         (0, r.jsx)(j.Z, {
                                             userId: t.id,
                                             onClick: () => {
-                                                N(),
+                                                T(),
                                                     (0, p.pQ)(
                                                         _(
                                                             {

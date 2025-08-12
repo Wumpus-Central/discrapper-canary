@@ -87,16 +87,15 @@ function f(e, t) {
     let i = {};
     switch (e) {
         case r.m.GRADIENT:
+        case r.m.GLOW:
             i = d(t);
             break;
         case r.m.NEON:
         case r.m.POP:
         case r.m.TOON:
         case r.m.SOLID:
-            i = u(t[0]);
-            break;
         default:
-            return {};
+            i = u(t[0]);
     }
     return l(a({}, i), { [c.WRAP]: n ? "wrap" : "nowrap" });
 }

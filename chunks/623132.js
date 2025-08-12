@@ -12,8 +12,8 @@ var l = n(481060),
     f = n(388032),
     p = n(949237),
     m = n(896270),
-    g = n(358340);
-function b(e) {
+    b = n(358340);
+function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -87,13 +87,13 @@ function y(e) {
         trackEntryPointImpression: !0,
     });
     return null == s
-        ? (0, r.jsx)(l.X6q, j(b({}, c), { children: a }))
+        ? (0, r.jsx)(l.X6q, j(g({}, c), { children: a }))
         : (0, r.jsx)(
               l.X6q,
-              j(b({}, c), {
+              j(g({}, c), {
                   children: (0, r.jsx)(l.P3F, {
                       onClick: s,
-                      className: g.clickableText,
+                      className: b.clickableText,
                       children: a,
                   }),
               }),
@@ -106,7 +106,7 @@ function x(e) {
             (0, r.jsx)(l.PEf, {
                 size: "xxs",
                 color: l.TVs.colors.ICON_TERTIARY,
-                className: g.icon,
+                className: b.icon,
             }),
             (0, r.jsx)(l.nn4, { children: f.intl.format(f.t.TM0XDQ, { name: a.ZP.getName(i, o, n) }) }),
             (0, r.jsx)(l.Text, {
@@ -139,11 +139,11 @@ function O(e) {
         };
     return a
         ? (0, r.jsxs)("div", {
-              className: g.card,
+              className: b.card,
               children: [
                   (0, r.jsx)("div", { className: m.loadingCover }),
                   (0, r.jsx)("div", {
-                      className: g.details,
+                      className: b.details,
                       children: (0, r.jsxs)("div", {
                           className: p.placeholderText,
                           children: [
@@ -155,7 +155,7 @@ function O(e) {
               ],
           })
         : (0, r.jsxs)("div", {
-              className: g.card,
+              className: b.card,
               children: [
                   (0, r.jsx)(s.Z, {
                       imageSrc: O,
@@ -165,13 +165,13 @@ function O(e) {
                       disableInteraction: c,
                   }),
                   (0, r.jsxs)("div", {
-                      className: g.details,
+                      className: b.details,
                       children: [
                           c
-                              ? (0, r.jsx)(l.X6q, j(b({}, P), { children: u }))
+                              ? (0, r.jsx)(l.X6q, j(g({}, P), { children: u }))
                               : (0, r.jsx)(
                                     y,
-                                    b(
+                                    g(
                                         {
                                             applicationId: v,
                                             userId: t.id,
@@ -190,7 +190,7 @@ function O(e) {
                           (0, r.jsx)(d.Z, { tags: I }),
                           !c &&
                               (0, r.jsx)(h, {
-                                  className: g.socialProof,
+                                  className: b.socialProof,
                                   applicationId: v,
                                   guildId: n,
                                   channelId: i,

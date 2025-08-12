@@ -12,8 +12,8 @@ var l = n(481060),
     f = n(899007),
     p = n(648052),
     m = n(867176),
-    g = n(681837),
-    b = n(502762),
+    b = n(681837),
+    g = n(502762),
     j = n(530),
     y = n(871604),
     x = n(952124),
@@ -25,8 +25,8 @@ var l = n(481060),
     P = n(398145),
     E = n(228168),
     Z = n(981631),
-    T = n(388032),
-    N = n(401683);
+    N = n(388032),
+    T = n(401683);
 function S(e) {
     let {
             user: t,
@@ -69,7 +69,7 @@ function S(e) {
             children: (0, r.jsx)(l.Y0X, {
                 "data-migration-pending": !0,
                 transitionState: k,
-                className: N.root,
+                className: T.root,
                 hideShadow: !0,
                 "aria-labelledby": Y,
                 parentComponent: "BotUserProfileModal",
@@ -77,10 +77,10 @@ function S(e) {
                     component: (0, r.jsx)(l.nn4, {
                         children: (0, r.jsx)(l.H, {
                             id: Y,
-                            children: T.intl.format(T.t.KRe1Fh, { name: V }),
+                            children: N.intl.format(N.t.KRe1Fh, { name: V }),
                         }),
                     }),
-                    children: (0, r.jsxs)(b.Z, {
+                    children: (0, r.jsxs)(g.Z, {
                         user: t,
                         displayProfile: F,
                         themeType: E.lY.MODAL,
@@ -100,7 +100,7 @@ function S(e) {
                                         themeType: E.lY.MODAL,
                                     }),
                                     (0, r.jsxs)("div", {
-                                        className: N.headerInner,
+                                        className: T.headerInner,
                                         children: [
                                             (0, r.jsx)(f.Z, {
                                                 user: t,
@@ -118,19 +118,19 @@ function S(e) {
                                                 disableToolbar: !0,
                                             }),
                                             (0, r.jsxs)("div", {
-                                                className: N.headerButtons,
+                                                className: T.headerButtons,
                                                 children: [
                                                     (0, r.jsx)(v.Z, {
                                                         type: "text",
                                                         userId: t.id,
                                                         onClose: i.Z.popAll,
-                                                        className: N.messageTextButton,
+                                                        className: T.messageTextButton,
                                                     }),
                                                     (0, r.jsx)(v.Z, {
                                                         type: "icon",
                                                         userId: t.id,
                                                         onClose: i.Z.popAll,
-                                                        tooltipContainerClassName: N.messageIconButton,
+                                                        tooltipContainerClassName: T.messageIconButton,
                                                     }),
                                                     (0, r.jsx)(h.Z, {
                                                         user: t,
@@ -144,15 +144,15 @@ function S(e) {
                                 ],
                             }),
                             (0, r.jsxs)("div", {
-                                className: N.body,
+                                className: T.body,
                                 children: [
                                     (0, r.jsx)(j.Z, {
-                                        className: N.username,
+                                        className: T.username,
                                         user: t,
                                         nickname: V,
                                         pronouns: null == F ? void 0 : F.pronouns,
                                         nicknameVariant: "heading-xl/bold",
-                                        nicknameIcons: (0, r.jsx)(g.Z, {
+                                        nicknameIcons: (0, r.jsx)(b.Z, {
                                             size: "sm",
                                             userId: t.id,
                                         }),

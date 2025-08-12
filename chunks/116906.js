@@ -12,8 +12,8 @@ var l = n(442837),
     f = n(369566),
     p = n(29899),
     m = n(678738),
-    g = n(151545),
-    b = n(744802),
+    b = n(151545),
+    g = n(744802),
     j = n(493043),
     y = n(864141),
     x = n(228168),
@@ -23,8 +23,8 @@ var l = n(442837),
     _ = n(889080);
 function I(e) {
     let { user: t, currentUser: n, displayProfile: I, guildId: P, subsection: E, onClose: Z } = e,
-        { voiceActivityStatusEnabled: T } = (0, o.U)({ location: "UserProfileModalActivity" }),
-        N = (0, u.b)({ location: "UserProfileModalActivity" }),
+        { voiceActivityStatusEnabled: N } = (0, o.U)({ location: "UserProfileModalActivity" }),
+        T = (0, u.b)({ location: "UserProfileModalActivity" }),
         { live: S, recent: A, stream: w } = (0, f.Z)(t.id),
         { voiceChannel: C, voiceActivity: L } = (0, p.Z)({
             userId: t.id,
@@ -37,7 +37,7 @@ function I(e) {
             return e === i.Skl.OFFLINE || e === i.Skl.INVISIBLE;
         }),
         M = S.length > 0 || null != w,
-        B = T && null == w && null == L && null != C,
+        B = N && null == w && null == L && null != C,
         G = !k && (M || B),
         U = A.length > 0;
     return G || U || !D
@@ -51,7 +51,7 @@ function I(e) {
                             children: (0, r.jsxs)("ul", {
                                 className: v.activityList,
                                 children: [
-                                    !N &&
+                                    !T &&
                                         B &&
                                         (0, r.jsx)("li", {
                                             children: (0, r.jsx)(y.Z, {
@@ -76,7 +76,7 @@ function I(e) {
                                         (0, r.jsx)(
                                             "li",
                                             {
-                                                children: (0, r.jsx)(g.Z, {
+                                                children: (0, r.jsx)(b.Z, {
                                                     user: t,
                                                     currentUser: n,
                                                     activity: e,
@@ -114,7 +114,7 @@ function I(e) {
                                     (0, r.jsx)(
                                         "li",
                                         {
-                                            children: (0, r.jsx)(b.Z, {
+                                            children: (0, r.jsx)(g.Z, {
                                                 location: "UserProfileModalActivity",
                                                 user: t,
                                                 currentUser: n,

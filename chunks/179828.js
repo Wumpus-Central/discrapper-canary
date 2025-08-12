@@ -1,4 +1,4 @@
-n.d(t, { Z: () => T }), n(642613), n(388685);
+n.d(t, { Z: () => N }), n(642613), n(388685);
 var r = n(255367),
     l = n(73800),
     i = n(772848),
@@ -11,8 +11,8 @@ var r = n(255367),
     f = n(485386),
     p = n(430824),
     m = n(496675),
-    g = n(700785),
-    b = n(785717),
+    b = n(700785),
+    g = n(785717),
     j = n(635042),
     y = n(256226),
     x = n(678738),
@@ -95,7 +95,7 @@ function Z(e) {
             onAddRole: p,
             onRemoveRole: m,
         } = e,
-        b = f && null != s,
+        g = f && null != s,
         j = l.useRef(null),
         x = l.useMemo(() => "roles-".concat((0, i.Z)()), []),
         Z = (0, o.ZP)({
@@ -105,8 +105,8 @@ function Z(e) {
             scrollToEnd: O.Cyb,
             wrap: !0,
         }),
-        T = d.length,
-        N = 0 === T ? v.intl.string(v.t["vR7M+/"]) : v.intl.formatToPlainString(v.t.PCs0oq, { numRoles: T }),
+        N = d.length,
+        T = 0 === N ? v.intl.string(v.t["vR7M+/"]) : v.intl.formatToPlainString(v.t.PCs0oq, { numRoles: N }),
         S = d.map((e) => {
             var l;
             return (0, r.jsx)(
@@ -119,7 +119,7 @@ function Z(e) {
                     canRemove:
                         (null == (l = e.tags) ? void 0 : l.guild_connections) === null
                             ? t.id === n.id
-                            : f && g.r6(c, n.id, u, e),
+                            : f && b.r6(c, n.id, u, e),
                 },
                 e.id,
             );
@@ -136,7 +136,7 @@ function Z(e) {
                         I(
                             {
                                 className: _.root,
-                                "aria-label": N,
+                                "aria-label": T,
                                 ref: t,
                             },
                             n,
@@ -144,12 +144,12 @@ function Z(e) {
                         {
                             children: [
                                 S,
-                                b &&
+                                g &&
                                     (0, r.jsx)(h.Z, {
                                         buttonRef: j,
                                         guild: c,
                                         guildMember: s,
-                                        numRoles: T,
+                                        numRoles: N,
                                         highestRole: u,
                                         onAddRole: p,
                                     }),
@@ -161,15 +161,15 @@ function Z(e) {
         }),
     });
 }
-function T(e) {
+function N(e) {
     var { user: t, currentUser: n, guildId: i } = e,
         o = E(e, ["user", "currentUser", "guildId"]);
-    let { trackUserProfileAction: a } = (0, b.KZ)(),
+    let { trackUserProfileAction: a } = (0, g.KZ)(),
         y = (0, c.e7)([p.Z], () => p.Z.getGuild(i)),
         h = (0, c.e7)([u.ZP], () => u.ZP.getMember(i, t.id)),
         _ = null == h ? void 0 : h.roles,
-        T = (0, c.Wu)([f.Z], () => f.Z.getManyRoles(i, null != _ ? _ : []).sort(j.Z), [_, i]),
-        [N] = (0, c.Wu)([m.Z], () => [m.Z.can(O.Plq.MANAGE_ROLES, y), m.Z.getGuildVersion(i)]),
+        N = (0, c.Wu)([f.Z], () => f.Z.getManyRoles(i, null != _ ? _ : []).sort(j.Z), [_, i]),
+        [T] = (0, c.Wu)([m.Z], () => [m.Z.can(O.Plq.MANAGE_ROLES, y), m.Z.getGuildVersion(i)]),
         S = l.useCallback(
             (e) => {
                 var n, r;
@@ -190,8 +190,8 @@ function T(e) {
             [_, i, t.id, a],
         );
     if (null == y) return null;
-    let w = N && null != h;
-    return 0 !== T.length || w
+    let w = T && null != h;
+    return 0 !== N.length || w
         ? (0, r.jsx)(
               x.Z,
               P(I({ heading: v.intl.string(v.t.LPJmLy) }, o), {
@@ -200,9 +200,9 @@ function T(e) {
                       currentUser: n,
                       guild: y,
                       guildMember: h,
-                      roles: T,
-                      highestRole: g.e9(y, n.id),
-                      canManageRoles: N,
+                      roles: N,
+                      highestRole: b.e9(y, n.id),
+                      canManageRoles: T,
                       onAddRole: A,
                       onRemoveRole: S,
                   }),

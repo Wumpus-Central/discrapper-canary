@@ -42,16 +42,16 @@ function f(e) {
             },
             [n],
         ),
-        { options: g, matchSorterOptions: b } = (0, a.h)(),
+        { options: b, matchSorterOptions: g } = (0, a.h)(),
         j = l.useCallback(
             (e) => {
                 var t, n;
                 return "" === e.trim()
-                    ? g
+                    ? b
                     : (0, i.Lu)(
-                          g,
+                          b,
                           e,
-                          ((t = u({}, b)),
+                          ((t = u({}, g)),
                           (n = n = { threshold: i.Lu.rankings.CONTAINS }),
                           Object.getOwnPropertyDescriptors
                               ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
@@ -68,7 +68,7 @@ function f(e) {
                           t),
                       );
             },
-            [g, b],
+            [b, g],
         );
     return (0, r.jsx)(o.yRy, {
         targetElementRef: p,

@@ -1569,45 +1569,39 @@ class eI extends d.Z {
             null == (t = this._socket) || t.flagMLSInvalidCommitWelcome(e);
     }
     _handleMLSFailure(e, t) {
-        let n = "".concat(e, ":").concat(t),
-            r = this._mlsFailures.get(n);
-        null != r
-            ? (r.count++, null != this._mlsSessionResetStartTime && r.countDuringReset++)
-            : this._mlsFailures.set(n, {
-                  source: e,
-                  reason: t,
-                  count: 1,
-                  countDuringReset: +(null != this._mlsSessionResetStartTime),
-                  firstOccurrence: (0, _.zO)(),
-              }),
+        this._mlsFailures.push({
+            id: this._nextFailureId++,
+            source: e,
+            reason: t,
+            count: 1,
+            countDuringReset: +(null != this._mlsSessionResetStartTime),
+            firstOccurrence: (0, _.zO)(),
+        }),
             this._alertMLSFailureDebouced(e, t);
     }
     _trackMLSFailures(e) {
         let { recovered: t } = e,
             n = this.getMediaSessionId(),
             r = null != this._mlsSessionResetStartTime ? (0, _.zO)() - this._mlsSessionResetStartTime : void 0;
-        for (let {
-            source: e,
-            reason: i,
-            count: o,
-            countDuringReset: a,
-            firstOccurrence: s,
-        } of this._mlsFailures.values())
+        for (let { id: e, source: i, reason: o, count: a, countDuringReset: s, firstOccurrence: l } of this
+            ._mlsFailures)
             B.default.track(
                 es.rMx.MLS_FAILURES,
                 ef(eu({}, this._getAnalyticsProperties()), {
                     media_session_id: n,
                     parent_media_session_id: this.parentMediaSessionId,
-                    failure_source: e,
-                    failure_reason: i,
-                    failure_count: o,
+                    failure_id: e,
+                    failure_time: l - this._createdTime,
+                    failure_source: i,
+                    failure_reason: o,
+                    failure_count: a,
                     failure_was_recovered: t,
-                    time_since_first_occurrence: (0, _.zO)() - s,
+                    time_since_first_occurrence: (0, _.zO)() - l,
                     time_since_last_reset: r,
-                    failure_count_during_reset: a,
+                    failure_count_during_reset: s,
                 }),
             );
-        this._mlsFailures.clear();
+        this._mlsFailures = [];
     }
     _alertMLSFailure(e, t) {
         let n = G.default.getCurrentUser();
@@ -1724,7 +1718,8 @@ class eI extends d.Z {
             ec(this, "_secureFramesState", void 0),
             ec(this, "_userIds", void 0),
             ec(this, "_secureFramesRosterMap", new Map()),
-            ec(this, "_mlsFailures", new Map()),
+            ec(this, "_nextFailureId", 0),
+            ec(this, "_mlsFailures", []),
             ec(this, "_secureFramesTransitionStates", new Map()),
             ec(this, "_secureFramesNextTransitionState", void 0),
             ec(this, "_secureFramesMaxConcurrentTransitions", 0),
@@ -1886,7 +1881,8 @@ class eI extends d.Z {
             (this._secureFramesState = null),
             (this._userIds = new Set([e])),
             this._secureFramesRosterMap.clear(),
-            this._mlsFailures.clear(),
+            (this._mlsFailures = []),
+            (this._nextFailureId = 0),
             (this._mediaEngineConnectionId = null),
             (this._lastSentSpeakingStatus = 0),
             (this._lastSentSSRC = void 0);

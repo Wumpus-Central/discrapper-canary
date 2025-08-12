@@ -13,9 +13,9 @@ function u(e) {
         i = (0, l.useRef)(new Map()),
         o = (0, l.useRef)(null),
         [s, u] = (0, l.useState)(0),
-        [b, j] = (0, l.useState)(!1),
+        [g, j] = (0, l.useState)(!1),
         { trackUserProfileAction: y } = (0, a.KZ)(),
-        x = g(o, n, i, u);
+        x = b(o, n, i, u);
     if (
         ((0, l.useEffect)(
             () => (
@@ -30,7 +30,7 @@ function u(e) {
         null == n || 0 === n.length)
     )
         return null;
-    let h = b ? n : n.slice(0, n.length - s);
+    let h = g ? n : n.slice(0, n.length - s);
     return (0, r.jsxs)("div", {
         className: d.tagListContainer,
         children: [
@@ -47,7 +47,7 @@ function u(e) {
                 ),
             ),
             s > 0 &&
-                (b
+                (g
                     ? (0, r.jsx)(m, {
                           onClick: () => {
                               j(!1), y({ action: "COLLAPSE_GAME_TAGS" });
@@ -117,7 +117,7 @@ let f = (e) => {
             }),
         });
     },
-    g = (e, t, n, r) =>
+    b = (e, t, n, r) =>
         (0, l.useCallback)(() => {
             var l, i;
             if (null == t) return void r(0);

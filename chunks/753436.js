@@ -10,7 +10,7 @@ var l = n(971082),
 function d(e) {
     let { game: t, userId: n, guildId: d, channelId: u, loading: f = !1, disableInteraction: p = !1 } = e,
         m = (0, o.Z)(t.applicationId),
-        g = m.length > 0;
+        b = m.length > 0;
     return f
         ? (0, r.jsx)("div", { className: c.loadingCover })
         : (0, r.jsxs)("div", {
@@ -22,10 +22,10 @@ function d(e) {
                       applicationId: t.applicationId,
                       userId: n,
                       disableInteraction: p,
-                      className: g ? s.socialProofBackdrop : void 0,
+                      className: b ? s.socialProofBackdrop : void 0,
                   }),
                   !p &&
-                      g &&
+                      b &&
                       (0, r.jsx)(l.Z, {
                           label: a.intl.formatToPlainString(a.t.ujhJdH, { numFriends: m.length }),
                           className: s.socialProof,

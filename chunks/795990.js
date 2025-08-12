@@ -45,10 +45,10 @@ function m(e) {
                 : [c.LM.ZENLESS_ZONE_ZERO, c.LM.ELDEN_RING, c.LM.RED_DEAD_REDEMPTION_2];
     return (0, r.jsx)("div", {
         className: f.placeholderCoverGrid,
-        children: n.map((e, t) => (0, r.jsx)(g, { applicationId: e }, t)),
+        children: n.map((e, t) => (0, r.jsx)(b, { applicationId: e }, t)),
     });
 }
-function g(e) {
+function b(e) {
     let { applicationId: t } = e,
         { coverImageUrl: n, localizedName: l } = (0, a.$)(t);
     return (0, r.jsx)("div", {
@@ -63,7 +63,7 @@ function g(e) {
                 : (0, r.jsx)("div", { className: f.placeholderGameFallback }),
     });
 }
-function b(e) {
+function g(e) {
     let { widgetType: t } = e,
         n = l.useCallback(() => {
             (0, s.qH)(t);
@@ -127,7 +127,7 @@ function j() {
             (0, r.jsx)("ul", {
                 className: f.widgetGrid,
                 "aria-label": u.intl.string(u.t["+EIBSE"]),
-                children: d.r.map((e) => (0, r.jsx)("li", { children: (0, r.jsx)(b, { widgetType: e }) }, e)),
+                children: d.r.map((e) => (0, r.jsx)("li", { children: (0, r.jsx)(g, { widgetType: e }) }, e)),
             }),
         ],
     });

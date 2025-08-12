@@ -12,8 +12,8 @@ var l = n(442837),
     f = n(209698),
     p = n(369566),
     m = n(29899),
-    g = n(151545),
-    b = n(744802),
+    b = n(151545),
+    g = n(744802),
     j = n(493043),
     y = n(864141),
     x = n(264481),
@@ -23,7 +23,7 @@ var l = n(442837),
     _ = n(388032),
     I = n(850419);
 function P(e) {
-    let { user: t, currentUser: n, displayProfile: P, guildId: E, channelId: Z, subsection: T, onClose: N } = e,
+    let { user: t, currentUser: n, displayProfile: P, guildId: E, channelId: Z, subsection: N, onClose: T } = e,
         { voiceActivityStatusEnabled: S } = (0, o.U)({ location: "UserProfileModalV2Activity" }),
         A = (0, f.b)({ location: "UserProfileModalV2Activity" }),
         { live: w, recent: C, stream: L } = (0, p.Z)(t.id),
@@ -67,12 +67,12 @@ function P(e) {
     if (!F && !V && !k) {
         var Y;
         return M
-            ? (0, r.jsx)(x.Uf, { onClose: N })
+            ? (0, r.jsx)(x.Uf, { onClose: T })
             : (0, r.jsx)(x.P9, {
                   user: t,
                   guildId: null != (Y = null == P ? void 0 : P.guildId) ? Y : void 0,
                   channelId: Z,
-                  onClose: N,
+                  onClose: T,
               });
     }
     return (0, r.jsxs)(i.Ttm, {
@@ -92,7 +92,7 @@ function P(e) {
                                           user: t,
                                           currentUser: n,
                                           voiceChannel: D,
-                                          onClose: N,
+                                          onClose: T,
                                       }),
                                   }),
                               null != L &&
@@ -102,7 +102,7 @@ function P(e) {
                                           user: t,
                                           currentUser: n,
                                           stream: L,
-                                          onClose: N,
+                                          onClose: T,
                                           profileGuildId: null == P ? void 0 : P.guildId,
                                       }),
                                   }),
@@ -110,11 +110,11 @@ function P(e) {
                                   (0, r.jsx)(
                                       "li",
                                       {
-                                          children: (0, r.jsx)(g.Z, {
+                                          children: (0, r.jsx)(b.Z, {
                                               user: t,
                                               currentUser: n,
                                               activity: e,
-                                              onClose: N,
+                                              onClose: T,
                                               profileGuildId: null == P ? void 0 : P.guildId,
                                           }),
                                       },
@@ -128,7 +128,7 @@ function P(e) {
                                           user: t,
                                           currentUser: n,
                                           voiceChannel: D,
-                                          onClose: N,
+                                          onClose: T,
                                       }),
                                   }),
                           ],
@@ -151,20 +151,20 @@ function P(e) {
                                     ),
                             })
                           : void 0,
-                      scrollIntoView: T === O.Tb.RECENT_ACTIVITY,
+                      scrollIntoView: N === O.Tb.RECENT_ACTIVITY,
                       children: (0, r.jsx)("ul", {
                           className: I.cards,
                           children: C.map((e) =>
                               (0, r.jsx)(
                                   "li",
                                   {
-                                      children: (0, r.jsx)(b.Z, {
+                                      children: (0, r.jsx)(g.Z, {
                                           location: "UserProfileModalV2Activity",
                                           user: t,
                                           currentUser: n,
                                           entry: e,
                                           profileGuildId: null == P ? void 0 : P.guildId,
-                                          onClose: N,
+                                          onClose: T,
                                       }),
                                   },
                                   e.id,

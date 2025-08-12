@@ -58,8 +58,8 @@ function m(e) {
             displayProfile: d,
             guildId: u,
             channelId: m,
-            items: g,
-            initialSection: b,
+            items: b,
+            initialSection: g,
             initialSubsection: j,
             onClose: y,
         } = e,
@@ -92,12 +92,12 @@ function m(e) {
             })(
                 {},
                 null !=
-                    (t = g.find((e) => {
+                    (t = b.find((e) => {
                         let { section: t } = e;
-                        return t === b;
+                        return t === g;
                     }))
                     ? t
-                    : g[0],
+                    : b[0],
             )),
             (a = a = { subsection: j }),
             Object.getOwnPropertyDescriptors
@@ -133,10 +133,10 @@ function m(e) {
                         }),
                             _((t) => {
                                 var n;
-                                return null != (n = g.find((t) => t.section === e)) ? n : t;
+                                return null != (n = b.find((t) => t.section === e)) ? n : t;
                             });
                     },
-                    children: g.map((e) =>
+                    children: b.map((e) =>
                         (0, r.jsx)(
                             i.njP.Item,
                             {

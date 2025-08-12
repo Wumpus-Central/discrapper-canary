@@ -2,8 +2,8 @@ n.d(t, { Z: () => E }), n(388685);
 var r = n(255367),
     o = n(73800),
     l = n(120356),
-    a = n.n(l),
-    i = n(481060),
+    i = n.n(l),
+    a = n(481060),
     s = n(410030),
     c = n(22267),
     d = n(786761),
@@ -77,30 +77,30 @@ function E(e) {
             }),
         ),
         w = (0, s.ZP)(),
-        I = (0, i.wjy)(w),
-        [A, L] = (0, o.useState)(I),
-        R = (0, g.ZP)(t.id, null),
+        I = (0, a.wjy)(w),
+        [R, A] = (0, o.useState)(I),
+        L = (0, g.ZP)(t.id, null),
         { bannerSrc: B } = (0, h.Z)({
-            displayProfile: R,
+            displayProfile: L,
             size: 413,
             canAnimate: !1,
         }),
-        M = A ? S.BRd.DARK : S.BRd.LIGHT;
-    ((I && A) || (!I && !A)) && (M = w);
+        M = R ? S.BRd.DARK : S.BRd.LIGHT;
+    ((I && R) || (!I && !R)) && (M = w);
     let Z = (0, o.useCallback)(() => {
             j.default.track(S.rMx.DISPLAY_NAME_STYLES_CLOSED), T();
         }, [T]),
         Y = (0, o.useCallback)((e) => {
-            L(e === S.BRd.DARK), j.default.track(S.rMx.DISPLAY_NAME_STYLES_THEME_TOGGLE, { dark: e === S.BRd.DARK });
+            A(e === S.BRd.DARK), j.default.track(S.rMx.DISPLAY_NAME_STYLES_THEME_TOGGLE, { dark: e === S.BRd.DARK });
         }, []);
     return (0, r.jsxs)("div", {
         className: P.previewSection,
         children: [
-            (0, r.jsx)(i.xBx, {
+            (0, r.jsx)(a.xBx, {
                 "data-migration-pending": !0,
                 separator: !1,
                 className: P.sectionHeader,
-                children: (0, r.jsx)(i.olH, {
+                children: (0, r.jsx)(a.olH, {
                     "data-migration-pending": !0,
                     onClick: Z,
                     innerClassName: P.closeButton,
@@ -109,7 +109,7 @@ function E(e) {
             null != B &&
                 (0, r.jsx)(b.Z, {
                     user: D,
-                    displayProfile: R,
+                    displayProfile: L,
                     themeType: C.lY.MODAL_V2,
                     className: P.backgroundThemeContainer,
                     forceUserTheme: !0,
@@ -118,11 +118,11 @@ function E(e) {
                         style: { backgroundImage: "url(".concat(B, ")") },
                     }),
                 }),
-            (0, r.jsx)(i.f6W, {
+            (0, r.jsx)(a.f6W, {
                 theme: M,
                 children: (e) =>
                     (0, r.jsxs)("div", {
-                        className: a()(P.previewCards, e),
+                        className: i()(P.previewCards, e),
                         inert: !0,
                         children: [
                             (0, r.jsx)(m.Z, {
@@ -170,7 +170,7 @@ function E(e) {
             (0, r.jsxs)("div", {
                 className: P.themeToggleSection,
                 children: [
-                    (0, r.jsx)(i.Text, {
+                    (0, r.jsx)(a.Text, {
                         variant: "text-xs/normal",
                         color: "text-muted",
                         children: O.intl.format(y.default.prQba2, {
@@ -178,7 +178,7 @@ function E(e) {
                         }),
                     }),
                     (0, r.jsx)(N, {
-                        darkPreview: A,
+                        darkPreview: R,
                         onToggleTheme: Y,
                     }),
                 ],
@@ -188,7 +188,7 @@ function E(e) {
 }
 function N(e) {
     let { darkPreview: t, onToggleTheme: n } = e;
-    return (0, r.jsx)(i.sY7, {
+    return (0, r.jsx)(a.sY7, {
         className: P.themeToggleControl,
         optionClassName: P.themeToggleOption,
         options: [
@@ -196,13 +196,13 @@ function N(e) {
                 name: "",
                 tooltip: O.intl.string(O.t.b8Cei4),
                 value: S.BRd.DARK,
-                icon: i.Z6G,
+                icon: a.Z6G,
             },
             {
                 name: "",
                 tooltip: O.intl.string(O.t.K2sFfn),
                 value: S.BRd.LIGHT,
-                icon: i.chG,
+                icon: a.chG,
             },
         ],
         value: t ? S.BRd.DARK : S.BRd.LIGHT,

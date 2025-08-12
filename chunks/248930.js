@@ -11,8 +11,8 @@ var r = n(255367),
     f = n(287954),
     p = n(660579),
     m = n(652853),
-    g = n(64621),
-    b = n(382405),
+    b = n(64621),
+    g = n(382405),
     j = n(386019),
     y = n(228168),
     x = n(861242);
@@ -22,7 +22,7 @@ function h(e) {
         { analyticsLocations: I } = (0, c.ZP)(a.Z.USER_PROFILE_RECENT_ACTIVITY_CARD),
         { themeType: P } = (0, m.z)(),
         { interactionSource: E, interactionSourceId: Z } = (0, u.Xo)(),
-        T = (0, d.Z)({
+        N = (0, d.Z)({
             display: "recent",
             user: t,
             entry: n,
@@ -31,7 +31,7 @@ function h(e) {
     return null != P && (0, s.Rh)(n)
         ? (0, r.jsx)(c.Gt, {
               value: I,
-              children: (0, r.jsx)(g.Z, {
+              children: (0, r.jsx)(b.Z, {
                   targetElementRef: _,
                   sourceType: y.n_.ACTIVITY,
                   user: t,
@@ -41,7 +41,7 @@ function h(e) {
                       themeType: P,
                       sourceId: n.id,
                       entry: n,
-                      onAction: T,
+                      onAction: N,
                       sourceType: y.n_.ACTIVITY,
                       children: () =>
                           (0, r.jsx)(p.Z, {
@@ -50,8 +50,8 @@ function h(e) {
                               className: x.toolbarContainer,
                               interactionSourceId: n.id,
                               sourceType: y.n_.ACTIVITY,
-                              onAction: T,
-                              onShowToolbar: () => T({ action: "HOVER_ACTIVITY_CARD" }),
+                              onAction: N,
+                              onShowToolbar: () => N({ action: "HOVER_ACTIVITY_CARD" }),
                               renderMoreButtonPopout: v
                                   ? void 0
                                   : (e) =>
@@ -62,7 +62,7 @@ function h(e) {
                                             onClose: O,
                                             children: e,
                                         }),
-                              children: (0, r.jsx)(b.Z, {
+                              children: (0, r.jsx)(g.Z, {
                                   entry: n,
                                   user: t,
                                   onClose: O,

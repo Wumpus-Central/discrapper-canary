@@ -50,7 +50,7 @@ function u(e) {
     var t;
     let { displayNameStyles: n, inProfile: r } = e,
         { includeNonProfile: a } = i.f.useExperiment({ location: "useDisplayNameStylesFont" });
-    if (!(0, o.Y)({ location: "useDisplayNameStylesFont" }) || (!r && !a) || null == n) return "";
-    let s = c[n.fontId];
-    return null != (t = null == s ? void 0 : s.className) ? t : "";
+    return (0, o.Y)({ location: "useDisplayNameStylesFont" }) && (r || a) && null != n
+        ? (null != (t = c[n.fontId]) ? t : l).className
+        : "";
 }
