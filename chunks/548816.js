@@ -49,8 +49,8 @@ function c(e, t) {
     );
 }
 function u(e) {
-    var { padded: t = !0, inset: n = !1, active: i = !1, className: u, children: d, onClick: p, ref: f } = e,
-        h = (function (e, t) {
+    var { padded: t = !0, inset: n = !1, active: i = !1, className: u, children: d, onClick: p, ref: h } = e,
+        f = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -77,7 +77,7 @@ function u(e) {
               c(
                   s(
                       {
-                          innerRef: f,
+                          innerRef: h,
                           onClick: p,
                           tabIndex: null != p ? 0 : -1,
                           className: l()(u, {
@@ -88,7 +88,7 @@ function u(e) {
                               [o.interactive]: null != p,
                           }),
                       },
-                      h,
+                      f,
                   ),
                   { children: d },
               ),
@@ -98,7 +98,7 @@ function u(e) {
               c(
                   s(
                       {
-                          ref: f,
+                          ref: h,
                           className: l()(u, {
                               [o.outer]: !n,
                               [o.inset]: n,
@@ -106,7 +106,7 @@ function u(e) {
                               [o.active]: i,
                           }),
                       },
-                      h,
+                      f,
                   ),
                   { children: d },
               ),

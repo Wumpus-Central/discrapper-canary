@@ -10,8 +10,8 @@ var i = n(685072),
     u = n(881824),
     d = n(719100),
     p = n(870569),
-    f = n(388032);
-function h(e) {
+    h = n(388032);
+function f(e) {
     var t, n;
     let { tooltipText: l, onClick: s } = e,
         { parentAnalyticsLocation: c } = (0, a.ZP)(),
@@ -69,8 +69,8 @@ function h(e) {
 }
 function g(e) {
     let { channel: t } = e;
-    return (0, r.jsx)(h, {
-        tooltipText: f.intl.string(f.t.SMKyio),
+    return (0, r.jsx)(f, {
+        tooltipText: h.intl.string(h.t.SMKyio),
         onClick: () => {
             if ((0, d.Z)(t)) return void (0, u.Us)(t);
             l.default.disconnect();
@@ -79,8 +79,8 @@ function g(e) {
 }
 function m(e) {
     let { channel: t } = e;
-    return (0, r.jsx)(h, {
-        tooltipText: f.intl.string(f.t["6vrfgo"]),
+    return (0, r.jsx)(f, {
+        tooltipText: h.intl.string(h.t["6vrfgo"]),
         onClick: () => {
             if ((0, c.Z)(t)) return void (0, s.lC)(t);
             l.default.disconnect();

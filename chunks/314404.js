@@ -321,7 +321,7 @@ function ee(e) {
             if (eO === y.xr.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD && null != eg)
                 return (0, r.jsx)(M.Z, {
                     sectionTitle: H.intl.string(H.t.B3miEx),
-                    className: a()(W.customGiftMessageWrapper, { [W.compactCustomGiftMessageWrapper]: eo }),
+                    className: W.customGiftMessageWrapper,
                     innerClassName: W.customGiftMessage,
                     onTextChange: (e) => eg(e),
                     pendingText: em,

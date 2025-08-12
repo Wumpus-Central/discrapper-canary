@@ -9,8 +9,8 @@ var r = n(255367),
     u = n(686546),
     d = n(944486),
     p = n(358085),
-    f = n(821020),
-    h = n(370774),
+    h = n(821020),
+    f = n(370774),
     g = n(128008),
     m = n(961040),
     b = n(981631),
@@ -18,8 +18,8 @@ var r = n(255367),
     O = n(789778);
 function E(e) {
     let { onClick: t, selectedOverride: n = !1, popoutProps: l, ref: o, focusSectionProps: s } = e,
-        [d, f] = i.useState(!1),
-        m = (0, h.D)(),
+        [d, h] = i.useState(!1),
+        m = (0, f.D)(),
         b = n || m,
         E = n || b,
         y = (0, r.jsx)(c.Dkj, {
@@ -83,11 +83,11 @@ function E(e) {
                             {
                                 onMouseEnter: () => {
                                     var t;
-                                    f(!0), null == (t = e.onMouseEnter) || t.call(e);
+                                    h(!0), null == (t = e.onMouseEnter) || t.call(e);
                                 },
                                 onMouseLeave: () => {
                                     var t;
-                                    f(!1), null == (t = e.onMouseLeave) || t.call(e);
+                                    h(!1), null == (t = e.onMouseLeave) || t.call(e);
                                 },
                                 onClick: () => {
                                     var n, r;
@@ -138,18 +138,18 @@ function E(e) {
 function y() {
     let { focusSectionProps: e } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
         t = i.useRef(null),
-        { notificationCenterVariant: n } = (0, f.pN)({ location: "NotificationsInboxButton" }),
+        { notificationCenterVariant: n } = (0, h.pN)({ location: "NotificationsInboxButton" }),
         l = (0, s.e7)([d.Z], () => d.Z.getChannelId()),
         a = i.useMemo(() => b.Z5c.CHANNEL(b.STv, null != l ? l : void 0), [l]),
         c = (0, g.mv)();
-    return n === f.jP.SIDEBAR
+    return n === h.jP.SIDEBAR
         ? (0, r.jsx)(E, {
               onClick: () => {
                   c(), (0, o.uL)(a);
               },
               focusSectionProps: e,
           })
-        : n === f.jP.POPOUT
+        : n === h.jP.POPOUT
           ? (0, r.jsx)(m.Z, {
                 targetElementRef: t,
                 popoutPosition: "bottom",

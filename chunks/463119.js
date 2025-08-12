@@ -1,4 +1,4 @@
-n.d(t, { i: () => B }), n(388685);
+n.d(t, { i: () => H }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(91192),
@@ -9,8 +9,8 @@ var r = n(255367),
     u = n(515753),
     d = n(410030),
     p = n(607070),
-    f = n(100527),
-    h = n(906732),
+    h = n(100527),
+    f = n(906732),
     g = n(821982),
     m = n(377171),
     b = n(633302),
@@ -27,7 +27,7 @@ var r = n(255367),
     P = n(921944),
     j = n(388032),
     x = n(3525);
-function A(e) {
+function Z(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -52,7 +52,7 @@ function A(e) {
     }
     return e;
 }
-function Z(e, t) {
+function A(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -131,8 +131,8 @@ let L = (e) => {
                 "children",
             ]);
         let b = (0, l.JA)("shop"),
-            _ = f.Z.HOME_PAGE_SHOP_TAB,
-            { analyticsLocations: O } = (0, h.ZP)(_),
+            _ = h.Z.HOME_PAGE_SHOP_TAB,
+            { analyticsLocations: O } = (0, f.ZP)(_),
             [y, v] = i.useState(!1),
             I = i.useCallback(() => {
                 void 0 !== o && o(),
@@ -155,8 +155,8 @@ let L = (e) => {
                 y && (0, r.jsx)(R, {}),
                 (0, r.jsx)(
                     u.Qj,
-                    Z(
-                        A(
+                    A(
+                        Z(
                             {
                                 selected: t,
                                 route: C,
@@ -178,7 +178,7 @@ let L = (e) => {
             ],
         });
     },
-    k = (e) => (0, r.jsx)(D, Z(A({}, e), { children: (0, r.jsx)(L, {}) })),
+    k = (e) => (0, r.jsx)(D, A(Z({}, e), { children: (0, r.jsx)(L, {}) })),
     M = i.memo(function (e) {
         var t;
         let { displayOptions: n, assetId: i, reducedMotion: l = !1 } = e,
@@ -222,8 +222,8 @@ let L = (e) => {
         var l,
             c,
             u,
-            f,
             h,
+            f,
             g,
             m,
             b,
@@ -242,8 +242,8 @@ let L = (e) => {
             ? U
                 ? ((t = null == (l = I.entryPointBackgroundAssets) ? void 0 : l.srcDarkHovered),
                   (n = null == (u = I.entrypointBackgroundStyle) || null == (c = u.hovered) ? void 0 : c.dark))
-                : ((t = null == (f = I.entryPointBackgroundAssets) ? void 0 : f.srcLightHovered),
-                  (n = null == (g = I.entrypointBackgroundStyle) || null == (h = g.hovered) ? void 0 : h.light))
+                : ((t = null == (h = I.entryPointBackgroundAssets) ? void 0 : h.srcLightHovered),
+                  (n = null == (g = I.entrypointBackgroundStyle) || null == (f = g.hovered) ? void 0 : f.light))
             : U
               ? ((t = null == (m = I.entryPointBackgroundAssets) ? void 0 : m.srcDark),
                 (n = null == (_ = I.entrypointBackgroundStyle) || null == (b = _.resting) ? void 0 : b.dark))
@@ -258,7 +258,7 @@ let L = (e) => {
             V = i.useCallback((e) => {
                 R(!1), null == e || e();
             }, []),
-            H = I.title();
+            B = I.title();
         return (0, r.jsx)(s.ua7, {
             text: (0, r.jsx)(M, {
                 displayOptions: I,
@@ -270,14 +270,14 @@ let L = (e) => {
             delay: 100,
             allowOverflow: !0,
             hideOnClick: !1,
-            "aria-label": "string" == typeof H ? H : j.intl.string(j.t.rSXaxc),
+            "aria-label": "string" == typeof B ? B : j.intl.string(j.t.rSXaxc),
             children: (e) =>
                 (0, r.jsxs)(
                     D,
-                    Z(
-                        A(
-                            Z(
-                                A(
+                    A(
+                        Z(
+                            A(
+                                Z(
                                     {
                                         className:
                                             null != I.entryPointClassName ? (0, O.l)(x, I.entryPointClassName) : void 0,
@@ -330,7 +330,7 @@ let L = (e) => {
             delay: 100,
             hideOnClick: !1,
             "aria-label": t.title(),
-            children: (e) => (0, r.jsx)(D, Z(A({}, n, e), { children: (0, r.jsx)(L, { color: t.badgeColor }) })),
+            children: (e) => (0, r.jsx)(D, A(Z({}, n, e), { children: (0, r.jsx)(L, { color: t.badgeColor }) })),
         });
     },
     V = (e) => {
@@ -342,8 +342,8 @@ let L = (e) => {
             c = w(a, ["positionControlRef", "onShopButtonClick"]);
         return (0, r.jsx)(
             _.Pk,
-            Z(
-                A(
+            A(
+                Z(
                     {
                         targetElementRef: l,
                         positionControlRef: o,
@@ -353,7 +353,7 @@ let L = (e) => {
                 {
                     children: (0, r.jsx)(
                         D,
-                        Z(A({}, n), {
+                        A(Z({}, n), {
                             listItemRef: l,
                             collectibleShopTab: N.AW.ORBS,
                             onClick: s,
@@ -363,7 +363,7 @@ let L = (e) => {
             ),
         );
     },
-    H = (e) => {
+    B = (e) => {
         var t,
             n,
             { displayOptions: l, dismissContent: a } = e,
@@ -371,21 +371,21 @@ let L = (e) => {
         let c = i.useRef(null),
             u = (0, d.ZP)(),
             p = (0, o.wj)(u),
-            f = l.entryPointBackgroundAssets,
-            h = l.entrypointBackgroundStyle,
-            g = p ? (null == f ? void 0 : f.srcDarkHovered) : null == f ? void 0 : f.srcLightHovered,
+            h = l.entryPointBackgroundAssets,
+            f = l.entrypointBackgroundStyle,
+            g = p ? (null == h ? void 0 : h.srcDarkHovered) : null == h ? void 0 : h.srcLightHovered,
             m = p
-                ? null == h || null == (t = h.hovered)
+                ? null == f || null == (t = f.hovered)
                     ? void 0
                     : t.dark
-                : null == h || null == (n = h.hovered)
+                : null == f || null == (n = f.hovered)
                   ? void 0
                   : n.light;
         return (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsxs)(
                     D,
-                    Z(A({}, s), {
+                    A(Z({}, s), {
                         onClick: () => a(P.L.TAKE_ACTION),
                         listItemRef: c,
                         children: [
@@ -414,7 +414,7 @@ let L = (e) => {
             ],
         });
     },
-    B = (e) => {
+    H = (e) => {
         let { selected: t, onClick: n, locationState: i, listItemRef: l, listScrollerRef: a } = e,
             { shouldShow: o } = (0, _.EQ)({}),
             { shopButtonDisplayOptions: s, dismissShopButtonDC: c } = (0, I.Z)(),
@@ -426,17 +426,17 @@ let L = (e) => {
                 },
                 listItemRef: l,
             };
-        if (o) return (0, r.jsx)(V, Z(A({}, u), { listScrollerRef: a }));
+        if (o) return (0, r.jsx)(V, A(Z({}, u), { listScrollerRef: a }));
         if (null != s)
             switch (s.type) {
                 case S.k2.TOOLTIP:
-                    return (0, r.jsx)(G, Z(A({}, u), { displayOptions: s }));
+                    return (0, r.jsx)(G, A(Z({}, u), { displayOptions: s }));
                 case S.k2.COACHTIP:
-                    return (0, r.jsx)(U, Z(A({}, u), { displayOptions: s }));
+                    return (0, r.jsx)(U, A(Z({}, u), { displayOptions: s }));
                 case S.k2.BADGE:
-                    return (0, r.jsx)(k, A({}, u));
+                    return (0, r.jsx)(k, Z({}, u));
                 case S.k2.COACHMARK:
-                    return (0, r.jsx)(H, Z(A({ dismissContent: c }, u), { displayOptions: s }));
+                    return (0, r.jsx)(B, A(Z({ dismissContent: c }, u), { displayOptions: s }));
             }
-        return (0, r.jsx)(D, A({}, u));
+        return (0, r.jsx)(D, Z({}, u));
     };

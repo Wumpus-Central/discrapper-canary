@@ -1,102 +1,108 @@
-n.d(t, { Z: () => f }), n(388685);
+n.d(t, { Z: () => h }), n(388685);
 var r = n(255367),
     i = n(73800),
-    o = n(692547),
-    a = n(481060),
-    s = n(697426),
-    l = n(603074),
-    c = n(388032),
-    u = n(221397);
-let d = [54, 8, 8, 8];
-function f(e) {
+    o = n(120356),
+    a = n.n(o),
+    s = n(692547),
+    l = n(481060),
+    c = n(47280),
+    u = n(697426),
+    d = n(603074),
+    f = n(388032),
+    _ = n(221397);
+let p = [54, 8, 8, 8];
+function h(e) {
     let { onSelect: t, sound: n } = e,
-        [f, _] = i.useState(!1),
-        p = i.useRef(null);
-    function h(e) {
-        _(!1), null == t || t(e);
+        [o, h] = i.useState(!1),
+        m = i.useRef(null),
+        g = (0, c.ZP)({ location: "GiftSoundboard" }),
+        E = a()(_.text, g && _.refresh);
+    function b(e) {
+        h(!1), null == t || t(e);
     }
-    let m = (e) =>
+    let y = (e) =>
         (0, r.jsxs)("div", {
-            className: u.customGiftHeader,
+            className: _.customGiftHeader,
             children: [
                 (0, r.jsxs)("div", {
-                    className: u.__invalid_customGiftHeaderText,
+                    className: _.__invalid_customGiftHeaderText,
                     children: [
-                        (0, r.jsx)(a.Text, {
+                        (0, r.jsx)(l.Text, {
                             variant: "text-md/bold",
-                            children: c.intl.string(c.t.aThJz8),
+                            children: f.intl.string(f.t.aThJz8),
                         }),
-                        (0, r.jsx)(a.Text, {
+                        (0, r.jsx)(l.Text, {
                             variant: "text-sm/normal",
-                            children: c.intl.string(c.t.stGFAw),
+                            children: f.intl.string(f.t.stGFAw),
                         }),
                     ],
                 }),
                 (0, r.jsx)("div", {
-                    className: u.searchAndSound,
+                    className: _.searchAndSound,
                     children: e,
                 }),
             ],
         });
-    return (0, r.jsx)(a.yRy, {
-        targetElementRef: p,
-        shouldShow: f,
+    return (0, r.jsx)(l.yRy, {
+        targetElementRef: m,
+        shouldShow: o,
         position: "bottom",
         align: "left",
-        onRequestClose: () => _(!1),
+        onRequestClose: () => h(!1),
         renderPopout: (e) => {
             let { closePopout: t } = e;
-            return (0, r.jsx)(a.VqE, {
-                children: (0, r.jsx)(l.Z, {
+            return (0, r.jsx)(l.VqE, {
+                children: (0, r.jsx)(d.Z, {
                     suppressPlaySound: !0,
                     shouldShowUpsell: !1,
                     guildId: null,
                     channel: null,
                     onClose: t,
-                    onSelect: h,
+                    onSelect: b,
                     analyticsSource: "gift soundboard",
-                    soundButtonOverlay: s.Pb.ADD,
-                    listPadding: d,
-                    renderHeader: m,
+                    soundButtonOverlay: u.Pb.ADD,
+                    listPadding: p,
+                    renderHeader: y,
                     defaultSoundsOnly: !0,
                 }),
             });
         },
         children: () =>
-            (0, r.jsx)(a.P3F, {
-                className: u.container,
-                onClick: () => _(!0),
-                innerRef: p,
+            (0, r.jsx)(l.P3F, {
+                className: a()(_.container, g && _.refresh),
+                onClick: () => h(!0),
+                innerRef: m,
                 children:
                     null == n
                         ? (0, r.jsxs)("div", {
-                              className: u.contentContainer,
+                              className: _.contentContainer,
                               children: [
-                                  (0, r.jsx)(a.KY1, {
+                                  (0, r.jsx)(l.KY1, {
                                       size: "custom",
-                                      color: o.Z.colors.WHITE,
-                                      className: u.soundIcon,
+                                      color: g ? s.Z.colors.ICON_PRIMARY : s.Z.colors.WHITE,
+                                      className: _.soundIcon,
                                       width: 14,
                                       height: 14,
                                   }),
-                                  (0, r.jsx)(a.Text, {
-                                      className: u.text,
+                                  (0, r.jsx)(l.Text, {
+                                      className: E,
                                       variant: "text-sm/semibold",
                                       lineClamp: 1,
-                                      children: c.intl.string(c.t.aThJz8),
+                                      children: f.intl.string(f.t.aThJz8),
                                   }),
                               ],
                           })
                         : (0, r.jsxs)("div", {
-                              className: u.contentContainer,
+                              className: _.contentContainer,
                               children: [
-                                  (0, r.jsx)(a.Text, {
-                                      className: u.textSelected,
+                                  (0, r.jsx)(l.Text, {
+                                      className: E,
                                       variant: "text-sm/semibold",
+                                      lineClamp: 1,
                                       children: n.emojiName,
                                   }),
-                                  (0, r.jsx)(a.Text, {
-                                      className: u.text,
+                                  (0, r.jsx)(l.Text, {
+                                      className: E,
                                       variant: "text-sm/semibold",
                                       lineClamp: 1,
                                       children: n.name,

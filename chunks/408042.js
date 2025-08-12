@@ -21,11 +21,11 @@ function d(e, t, n) {
     );
 }
 let p = {};
-function f(e, t) {
+function h(e, t) {
     let n = p[e];
     return !(null == n || n.has(t)) && ((p[e] = new Set(n.add(t))), !0);
 }
-class h extends (r = i.ZP.PersistedStore) {
+class f extends (r = i.ZP.PersistedStore) {
     initialize(e) {
         this.waitFor(a.default, s.Z),
             (p = {}),
@@ -46,15 +46,15 @@ class h extends (r = i.ZP.PersistedStore) {
         return p;
     }
 }
-d(h, "displayName", "GuildProgressStore"),
-    d(h, "persistKey", "GuildProgressStore"),
-    new h(l.Z, {
+d(f, "displayName", "GuildProgressStore"),
+    d(f, "persistKey", "GuildProgressStore"),
+    new f(l.Z, {
         CONNECTION_OPEN: function () {
             let e = [];
             c.default.keys(p).forEach((t) => {
                 p[t].has(u.Rg.COMPLETED) && e.push(t);
             }),
-                e.forEach((e) => f(e, u.Rg.DISMISSED));
+                e.forEach((e) => h(e, u.Rg.DISMISSED));
         },
         GUILD_PROGRESS_INITIALIZE: function (e) {
             let { guildId: t } = e;
@@ -67,7 +67,7 @@ d(h, "displayName", "GuildProgressStore"),
         },
         GUILD_PROGRESS_DISMISS: function (e) {
             let { guildId: t } = e;
-            return f(t, u.Rg.DISMISSED);
+            return h(t, u.Rg.DISMISSED);
         },
         GUILD_CREATE: function (e) {
             let {
@@ -81,7 +81,7 @@ d(h, "displayName", "GuildProgressStore"),
         },
         CHANNEL_CREATE: function (e) {
             let { channel: t } = e;
-            return null != t && null != t.guild_id && null != p[t.guild_id] && f(t.guild_id, u.Rg.CHANNEL);
+            return null != t && null != t.guild_id && null != p[t.guild_id] && h(t.guild_id, u.Rg.CHANNEL);
         },
         CHANNEL_UPDATES: function (e) {
             let { channels: t } = e,
@@ -90,13 +90,13 @@ d(h, "displayName", "GuildProgressStore"),
                 null != e &&
                     null != e.guild_id &&
                     null != p[e.guild_id] &&
-                    !1 !== f(e.guild_id, u.Rg.CHANNEL) &&
+                    !1 !== h(e.guild_id, u.Rg.CHANNEL) &&
                     (n = !0);
             return n;
         },
         GUILD_SETTINGS_SUBMIT_SUCCESS: function (e) {
             let { guild: t } = e;
-            return null != t && null != t.id && null != p[t.id] && null != t.icon && f(t.id, u.Rg.AVATAR);
+            return null != t && null != t.id && null != p[t.id] && null != t.icon && h(t.id, u.Rg.AVATAR);
         },
         MESSAGE_CREATE: function (e) {
             var t;
@@ -106,11 +106,11 @@ d(h, "displayName", "GuildProgressStore"),
                 (null == (t = r.author) ? void 0 : t.id) === a.default.getId() &&
                 null != i &&
                 null != p[i.guild_id] &&
-                f(i.guild_id, u.Rg.MESSAGE)
+                h(i.guild_id, u.Rg.MESSAGE)
             );
         },
         GUILD_MEMBER_LIST_UPDATE: function (e) {
             let { guildId: t, memberCount: n } = e;
-            return null != p[t] && n > 1 && f(t, u.Rg.INVITE);
+            return null != p[t] && n > 1 && h(t, u.Rg.INVITE);
         },
     });

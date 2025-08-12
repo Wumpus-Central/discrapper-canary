@@ -15,6 +15,5 @@ e.exports = {
     selectGiftTitle: "selectGiftTitle_d947e6",
     equalDistantBackButton: "equalDistantBackButton_d947e6",
     compactSendGiftToUser: "compactSendGiftToUser_d947e6",
-    compactCustomGiftMessageWrapper: "compactCustomGiftMessageWrapper_d947e6",
     compactSelectGiftTitle: "compactSelectGiftTitle_d947e6",
 };

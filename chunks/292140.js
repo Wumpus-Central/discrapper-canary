@@ -10,8 +10,8 @@ var i = n(481060),
     u = n(244080),
     d = n(247530),
     p = n(260889),
-    f = n(981631),
-    h = n(388032);
+    h = n(981631),
+    f = n(388032);
 function g(e) {
     let { party: t, close: n, onSelect: g } = e,
         m = (0, c.Z)(t),
@@ -31,7 +31,7 @@ function g(e) {
                     );
                 })
                 .map((e) => e.game.name);
-            a.default.track(f.rMx.OPEN_POPOUT, {
+            a.default.track(h.rMx.OPEN_POPOUT, {
                 type: "Now Playing Card Popout",
                 games_detected: e,
             });
@@ -39,7 +39,7 @@ function g(e) {
         (0, r.jsxs)(i.v2r, {
             navId: "now-playing-menu",
             onClose: n,
-            "aria-label": h.intl.string(h.t.ogxXGh),
+            "aria-label": f.intl.string(f.t.ogxXGh),
             onSelect: g,
             children: [
                 m,

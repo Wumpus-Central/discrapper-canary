@@ -37,7 +37,6 @@ let _ = (e) => {
             }),
             (0, r.jsx)(i.Text, {
                 variant: "text-sm/normal",
-                color: "header-primary",
                 children: d.intl.format(d.t.twSHtb, {
                     checkItOut: (e) =>
                         (0, r.jsx)(i.P3F, {

@@ -9,8 +9,8 @@ var r = n(255367),
     u = n(490983),
     d = n(626135),
     p = n(630388),
-    f = n(804739),
-    h = n(957657),
+    h = n(804739),
+    f = n(957657),
     g = n(34305),
     m = n(981631),
     b = n(388032),
@@ -114,7 +114,7 @@ class v extends i.PureComponent {
         return (0, r.jsxs)("div", {
             className: _.body,
             children: [
-                (0, f.Q)()
+                (0, h.Q)()
                     ? (0, r.jsxs)(i.Fragment, {
                           children: [
                               (0, r.jsx)(a.j7V, {
@@ -143,7 +143,7 @@ class v extends i.PureComponent {
     render() {
         return (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, r.jsx)(h.Z, { currentRoute: m.Z5c.APPLICATION_LIBRARY_SETTINGS }),
+                (0, r.jsx)(f.Z, { currentRoute: m.Z5c.APPLICATION_LIBRARY_SETTINGS }),
                 (0, r.jsx)(a.w0Z, {
                     className: _.scroller,
                     children: this.renderBody(),

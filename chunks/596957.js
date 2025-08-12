@@ -9,8 +9,8 @@ var r = n(255367),
     u = n(529103),
     d = n(194359),
     p = n(410575),
-    f = n(100527),
-    h = n(906732),
+    h = n(100527),
+    f = n(906732),
     g = n(835473),
     m = n(795448),
     b = n(699516),
@@ -27,7 +27,7 @@ var r = n(255367),
     P = n(981631),
     j = n(388032),
     x = n(271251);
-function A(e) {
+function Z(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -52,7 +52,7 @@ function A(e) {
     }
     return e;
 }
-function Z(e, t) {
+function A(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -77,7 +77,7 @@ function L() {
 function R() {
     (0, c.ZDy)(async () => {
         let { default: e } = await n.e("36312").then(n.bind(n, 153932));
-        return (t) => (0, r.jsx)(e, A({}, t));
+        return (t) => (0, r.jsx)(e, Z({}, t));
     });
 }
 function D(e) {
@@ -97,7 +97,7 @@ function D(e) {
 }
 let k = function (e) {
     let { titleId: t } = e,
-        { analyticsLocations: n } = (0, h.ZP)(f.Z.FRIENDS_LIST),
+        { analyticsLocations: n } = (0, f.ZP)(h.Z.FRIENDS_LIST),
         { rows: l, section: u } = (0, o.cj)([_.ZP], () => _.ZP.getState()),
         L = (0, o.e7)([O.Z], () => O.Z.isFocused()),
         { relationshipCount: k, hasBlockedOrIgnored: M } = (0, o.cj)([b.Z], () => ({
@@ -137,25 +137,25 @@ let k = function (e) {
                     })(e, ["key"]);
                 switch (u) {
                     case P.pJs.PENDING:
-                        return (0, r.jsx)(v.Z, Z(A({}, n), { isFocused: L }), t);
+                        return (0, r.jsx)(v.Z, A(Z({}, n), { isFocused: L }), t);
                     case P.pJs.SUGGESTIONS:
-                        return (0, r.jsx)(N.Z, Z(A({}, n), { isFocused: L }), t);
+                        return (0, r.jsx)(N.Z, A(Z({}, n), { isFocused: L }), t);
                     case P.pJs.ONLINE:
                     case P.pJs.ALL:
                     default:
-                        return (0, r.jsx)(E.Z, Z(A({}, n), { isFocused: L }), t);
+                        return (0, r.jsx)(E.Z, A(Z({}, n), { isFocused: L }), t);
                 }
             },
             [L, u],
         ),
-        H = i.useCallback(
+        B = i.useCallback(
             (e) => {
-                G(Z(A({}, U), { [u]: e }));
+                G(A(Z({}, U), { [u]: e }));
             },
             [U, u],
         ),
-        B = i.useCallback(() => {
-            G(Z(A({}, U), { [u]: "" }));
+        H = i.useCallback(() => {
+            G(A(Z({}, U), { [u]: "" }));
         }, [U, u]),
         F = i.useMemo(
             () =>
@@ -263,7 +263,7 @@ let k = function (e) {
         });
     let $ = "" !== U[u],
         ee = 0 === z.length && $;
-    return (0, r.jsx)(h.Gt, {
+    return (0, r.jsx)(f.Gt, {
         value: n,
         children: (0, r.jsxs)(p.Z, {
             section: P.jXE.FRIENDS_LIST,
@@ -272,8 +272,8 @@ let k = function (e) {
                 (0, r.jsx)(c.E1j, {
                     className: a()(x.searchBar, ee ? x.searchEmptyState : null),
                     query: U[u],
-                    onChange: H,
-                    onClear: B,
+                    onChange: B,
+                    onClear: H,
                 }),
                 (0, r.jsx)(I.Z, {
                     rows: K,

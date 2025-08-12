@@ -1,9 +1,10 @@
-n.d(t, { Z: () => d });
+n.d(t, { Z: () => f });
 var r = n(593473),
     i = n(703656),
-    o = n(981631),
-    a = n(176505);
-function s(e, t, n) {
+    o = n(535396),
+    a = n(981631),
+    s = n(176505);
+function l(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -16,7 +17,7 @@ function s(e, t, n) {
         e
     );
 }
-function l(e) {
+function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -27,12 +28,12 @@ function l(e) {
                 }),
             )),
             r.forEach(function (t) {
-                s(e, t, n[t]);
+                l(e, t, n[t]);
             });
     }
     return e;
 }
-function c(e, t) {
+function u(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -44,18 +45,18 @@ function c(e, t) {
     }
     return n;
 }
-function u(e, t) {
+function d(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : c(Object(t)).forEach(function (n) {
+            : u(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function d(e, t, n) {
-    let s = null != n ? { search: (0, r.stringify)({ powerupId: n }) } : void 0;
-    (0, i.uL)(o.Z5c.CHANNEL(e, a.oC.GUILD_BOOSTS), u(l({}, s), { source: t }));
+function f(e, t, n) {
+    let l = null != n ? { search: (0, r.stringify)({ [o.am]: n }) } : void 0;
+    (0, i.uL)(a.Z5c.CHANNEL(e, s.oC.GUILD_BOOSTS), d(c({}, l), { source: t }));
 }

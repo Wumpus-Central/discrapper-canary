@@ -9,8 +9,8 @@ var r = n(255367),
     u = n(998730),
     d = n(703656),
     p = n(430824),
-    f = n(768581),
-    h = n(302221),
+    h = n(768581),
+    f = n(302221),
     g = n(693546),
     m = n(305325),
     b = n(246364),
@@ -27,7 +27,7 @@ function N(e) {
         a = i.useMemo(
             () =>
                 (null == t ? void 0 : t.splash) != null
-                    ? f.ZP.getGuildSplashURL({
+                    ? h.ZP.getGuildSplashURL({
                           id: null == t ? void 0 : t.id,
                           splash: null == t ? void 0 : t.splash,
                       })
@@ -51,8 +51,8 @@ function N(e) {
                           className: S.splashGradient,
                           style: {
                               background: "linear-gradient(180deg, "
-                                  .concat((0, h.aD)(o, 0.16), " 0%, ")
-                                  .concat((0, h.aD)(o, 1), " 100%)"),
+                                  .concat((0, f.aD)(o, 0.16), " 0%, ")
+                                  .concat((0, f.aD)(o, 1), " 100%)"),
                           },
                       }),
                   (0, r.jsx)("div", { className: S.splashGradient }),
@@ -62,7 +62,7 @@ function N(e) {
 let T = (e) => {
     let { guildId: t } = e,
         { ref: n, width: c, height: u } = (0, s.ZP)(),
-        [f, h] = i.useState(I.hO.INITIAL),
+        [h, f] = i.useState(I.hO.INITIAL),
         T = (0, l.e7)([_.Z], () => _.Z.getRequest(t)),
         P = (0, l.e7)([p.Z], () => p.Z.getGuild(t)),
         { hasFetchedRequestToJoinGuilds: j, guildPreviewDisabled: x } = (0, l.cj)([_.Z], () => ({
@@ -75,10 +75,10 @@ let T = (e) => {
         i.useEffect(() => {
             j || g.Z.fetchRequestToJoinGuilds();
         }, [j]);
-    let A = i.useCallback(() => {
-            h(Math.max(f, I.hO.FILLING)), g.Z.removeGuildJoinRequest(t), (0, d.uL)(v.Z5c.ME);
-        }, [t, f]),
-        Z = (e, t) => () => {
+    let Z = i.useCallback(() => {
+            f(Math.max(h, I.hO.FILLING)), g.Z.removeGuildJoinRequest(t), (0, d.uL)(v.Z5c.ME);
+        }, [t, h]),
+        A = (e, t) => () => {
             (0, o.h7j)((n) => {
                 var i, l;
                 return (0, r.jsx)(
@@ -144,8 +144,8 @@ let T = (e) => {
         w = async () => {
             await g.Z.resetGuildJoinRequest(t), (0, m.hk)(t);
         },
-        L = Z(C.intl.format(C.t["9ZezpK"], { name: null == x ? void 0 : x.name }), A),
-        R = Z(C.intl.format(C.t.fJwWVl, { name: null == x ? void 0 : x.name }), A);
+        L = A(C.intl.format(C.t["9ZezpK"], { name: null == x ? void 0 : x.name }), Z),
+        R = A(C.intl.format(C.t.fJwWVl, { name: null == x ? void 0 : x.name }), Z);
     return (0, r.jsxs)("div", {
         className: S.page,
         ref: n,

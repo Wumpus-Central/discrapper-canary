@@ -38,7 +38,7 @@ function g(e) {
         C = o.useRef(null),
         { onShowMore: I } = (0, d.ZP)(n, p),
         [O, y] = o.useState(!1),
-        P = (0, i.O)(y, 1);
+        w = (0, i.O)(y, 1);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(u.aB, {
@@ -52,7 +52,7 @@ function g(e) {
                 onMouseLeave: () => (null == x ? void 0 : x(!1)),
                 className: g,
                 ref: (e) => {
-                    (C.current = e), (P.current = e);
+                    (C.current = e), (w.current = e);
                 },
                 children: v,
             }),

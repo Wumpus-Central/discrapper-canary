@@ -9,7 +9,7 @@ var r = n(570140),
     u = n(592125),
     d = n(131951),
     p = n(590415);
-function f(e, t, n) {
+function h(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -22,7 +22,7 @@ function f(e, t, n) {
         e
     );
 }
-class h extends a.Z {
+class f extends a.Z {
     _initialize() {
         r.Z.subscribe("VOICE_STATE_UPDATES", this.handleVoiceStateUpdates);
     }
@@ -31,7 +31,7 @@ class h extends a.Z {
     }
     constructor(...e) {
         super(...e),
-            f(this, "handleVoiceStateUpdates", (e) => {
+            h(this, "handleVoiceStateUpdates", (e) => {
                 let { voiceStates: t } = e,
                     n = c.default.getId();
                 t.forEach((e) => {
@@ -42,13 +42,13 @@ class h extends a.Z {
                         (this.handleStopStream(e), this.handleStopUserVideo());
                 });
             }),
-            f(this, "handleStopStream", (e) => {
+            h(this, "handleStopStream", (e) => {
                 let t = s.Z.getActiveStreamForUser(e.userId, e.guildId);
                 null != t && (0, l.g)((0, o.V9)(t), !1);
             }),
-            f(this, "handleStopUserVideo", () => {
+            h(this, "handleStopUserVideo", () => {
                 d.Z.isVideoEnabled() && i.Z.setVideoEnabled(!1);
             });
     }
 }
-let g = new h();
+let g = new f();

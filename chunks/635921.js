@@ -95,7 +95,7 @@ let I = r.forwardRef((e, t) => {
         I = (0, h.Nx)(),
         N = (0, g.Vi)(),
         y = (0, l.e7)([p.Z], () => p.Z.affinities).length > 0,
-        A = (0, b.Z)({ location: "HeroHeading" }) ? C.intl.string(C.t["EW+VIS"]) : C.intl.string(C.t.YCZldH);
+        A = (0, b.ZP)({ location: "HeroHeading" }) ? C.intl.string(C.t["EW+VIS"]) : C.intl.string(C.t.YCZldH);
     return (0, i.jsx)(u.Gt, {
         value: _,
         children: (0, i.jsxs)("div", {

@@ -54,57 +54,61 @@ function _(e, t) {
                           return {
                               title: c,
                               description: _,
-                              openModal: (e) => {
-                                  (0, l.ZDy)(async () => {
-                                      let { default: i } = await n.e("64767").then(n.bind(n, 754887));
-                                      return (n) =>
-                                          (0, r.jsx)(
-                                              i,
-                                              (function (e) {
-                                                  for (var t = 1; t < arguments.length; t++) {
-                                                      var n = null != arguments[t] ? arguments[t] : {},
-                                                          r = Object.keys(n);
-                                                      "function" == typeof Object.getOwnPropertySymbols &&
-                                                          (r = r.concat(
-                                                              Object.getOwnPropertySymbols(n).filter(function (e) {
-                                                                  return Object.getOwnPropertyDescriptor(n, e)
-                                                                      .enumerable;
-                                                              }),
-                                                          )),
-                                                          r.forEach(function (t) {
-                                                              var r;
-                                                              (r = n[t]),
-                                                                  t in e
-                                                                      ? Object.defineProperty(e, t, {
-                                                                            value: r,
-                                                                            enumerable: !0,
-                                                                            configurable: !0,
-                                                                            writable: !0,
-                                                                        })
-                                                                      : (e[t] = r);
-                                                          });
-                                                  }
-                                                  return e;
-                                              })(
-                                                  {
-                                                      guildId: t,
-                                                      title: c,
-                                                      description: _,
-                                                      powerups: e,
-                                                      footerInfoText: C,
-                                                      footerAction:
-                                                          o && null != y && null != I
-                                                              ? {
-                                                                    variant: null != O ? O : "secondary",
-                                                                    text: I,
-                                                                    onClick: y,
-                                                                }
-                                                              : void 0,
-                                                  },
-                                                  n,
-                                              ),
-                                          );
-                                  });
+                              openModal: function (e) {
+                                  let i = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+                                  (0, l.ZDy)(
+                                      async () => {
+                                          let { default: i } = await n.e("64767").then(n.bind(n, 754887));
+                                          return (n) =>
+                                              (0, r.jsx)(
+                                                  i,
+                                                  (function (e) {
+                                                      for (var t = 1; t < arguments.length; t++) {
+                                                          var n = null != arguments[t] ? arguments[t] : {},
+                                                              r = Object.keys(n);
+                                                          "function" == typeof Object.getOwnPropertySymbols &&
+                                                              (r = r.concat(
+                                                                  Object.getOwnPropertySymbols(n).filter(function (e) {
+                                                                      return Object.getOwnPropertyDescriptor(n, e)
+                                                                          .enumerable;
+                                                                  }),
+                                                              )),
+                                                              r.forEach(function (t) {
+                                                                  var r;
+                                                                  (r = n[t]),
+                                                                      t in e
+                                                                          ? Object.defineProperty(e, t, {
+                                                                                value: r,
+                                                                                enumerable: !0,
+                                                                                configurable: !0,
+                                                                                writable: !0,
+                                                                            })
+                                                                          : (e[t] = r);
+                                                              });
+                                                      }
+                                                      return e;
+                                                  })(
+                                                      {
+                                                          guildId: t,
+                                                          title: c,
+                                                          description: _,
+                                                          powerups: e,
+                                                          footerInfoText: C,
+                                                          footerAction:
+                                                              o && null != y && null != I
+                                                                  ? {
+                                                                        variant: null != O ? O : "secondary",
+                                                                        text: I,
+                                                                        onClick: y,
+                                                                    }
+                                                                  : void 0,
+                                                      },
+                                                      n,
+                                                  ),
+                                              );
+                                      },
+                                      { onCloseCallback: null == i ? void 0 : i.onModalClose },
+                                  );
                               },
                               viewCta: h,
                               viewCtaTooltip: E,

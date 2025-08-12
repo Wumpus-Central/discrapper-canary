@@ -9,11 +9,11 @@ var i = n(468363),
     c = n(388032),
     u = n(136851);
 let d = function (e) {
-    let { hovered: t, activities: n, applicationStream: d, status: p, user: f, userIgnored: h } = e,
+    let { hovered: t, activities: n, applicationStream: d, status: p, user: h, userIgnored: f } = e,
         { voiceActivityStatusEnabled: g } = (0, i.U)({ location: "StatusText" }),
-        { voiceChannel: m } = (0, a.Z)({ userId: null == f ? void 0 : f.id }),
+        { voiceChannel: m } = (0, a.Z)({ userId: null == h ? void 0 : h.id }),
         b = g ? m : void 0;
-    return h
+    return f
         ? (0, r.jsx)("div", {
               className: u.text,
               children: c.intl.string(c.t.tFY5ZW),
@@ -31,7 +31,7 @@ let d = function (e) {
                 applicationStream: d,
                 voiceChannel: b,
                 animateEmoji: t,
-                user: f,
+                user: h,
                 textSize: "sm",
             })
           : (0, r.jsx)("div", {

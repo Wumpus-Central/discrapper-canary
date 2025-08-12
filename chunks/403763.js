@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h }), n(388685);
+n.d(t, { Z: () => f }), n(388685);
 var r = n(255367);
 n(73800);
 var i = n(392711),
@@ -10,15 +10,15 @@ var i = n(392711),
     u = n(65154);
 let d = new Set(["DisplayPort"]),
     p = "connected-device-modal";
-function f() {
+function h() {
     let e;
     if ((0, a.nfh)(p)) return;
     let t = s.Z.getInputDeviceId(),
         i = s.Z.getOutputDeviceId();
     if (c.Z.getState().neverShowModal || l().isEmpty(c.Z.lastDeviceConnected)) return;
-    let f = (0, c.X)(s.Z.getInputDevices()[t]),
-        h = (0, c.X)(s.Z.getOutputDevices()[i]);
-    if (l().some(c.Z.lastDeviceConnected, (e) => d.has(e.displayName) || e.displayName === f || e.displayName === h))
+    let h = (0, c.X)(s.Z.getInputDevices()[t]),
+        f = (0, c.X)(s.Z.getOutputDevices()[i]);
+    if (l().some(c.Z.lastDeviceConnected, (e) => d.has(e.displayName) || e.displayName === h || e.displayName === f))
         return;
     let g = l().some(
         c.Z.lastDeviceConnected,
@@ -55,8 +55,8 @@ function f() {
                 { modalKey: p },
             )));
 }
-let h = {
+let f = {
     init() {
-        c.Z.addChangeListener(f);
+        c.Z.addChangeListener(h);
     },
 };

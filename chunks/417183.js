@@ -9,7 +9,7 @@ var r = n(255367),
     u = n(239091),
     d = n(617015),
     p = n(562101);
-function f(e, t, n) {
+function h(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -22,7 +22,7 @@ function f(e, t, n) {
         e
     );
 }
-function h(e) {
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -33,7 +33,7 @@ function h(e) {
                 }),
             )),
             r.forEach(function (t) {
-                f(e, t, n[t]);
+                h(e, t, n[t]);
             });
     }
     return e;
@@ -85,7 +85,7 @@ class m extends i.PureComponent {
     }
     render() {
         let { height: e, opacity: t, hovered: n, isContextMenuActive: i } = this.state,
-            { children: l, user: u, onClick: d, isActive: f, className: m, activeClassName: b } = this.props;
+            { children: l, user: u, onClick: d, isActive: h, className: m, activeClassName: b } = this.props;
         return (0, r.jsx)(s.mh, {
             id: u.id,
             children: (s) =>
@@ -97,10 +97,10 @@ class m extends i.PureComponent {
                     children: (0, r.jsx)(
                         o.Z.div,
                         g(
-                            h(
+                            f(
                                 {
-                                    className: a()(m, p.peopleListItem, null != b ? { [b]: f || i } : null, {
-                                        [p.active]: f || i,
+                                    className: a()(m, p.peopleListItem, null != b ? { [b]: h || i } : null, {
+                                        [p.active]: h || i,
                                     }),
                                     onContextMenu: (e) => this.handleContextMenu(e, u),
                                     onMouseEnter: this.handleMouseEnter,
@@ -113,7 +113,7 @@ class m extends i.PureComponent {
                                 },
                                 s,
                             ),
-                            { children: l(n || f || i) },
+                            { children: l(n || h || i) },
                         ),
                     ),
                 }),
@@ -121,21 +121,21 @@ class m extends i.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            f(this, "state", {
+            h(this, "state", {
                 height: new o.Z.Value(d.NV),
                 opacity: new o.Z.Value(1),
                 hovered: !1,
                 isContextMenuActive: !1,
             }),
-            f(this, "handleMouseEnter", () => {
+            h(this, "handleMouseEnter", () => {
                 let { isFocused: e, isActive: t, onOtherHover: n } = this.props,
                     { isContextMenuActive: r } = this.state;
                 this.setState({ hovered: e }), !e || t || r || null == n || n();
             }),
-            f(this, "handleMouseLeave", () => {
+            h(this, "handleMouseLeave", () => {
                 this.setState({ hovered: !1 });
             }),
-            f(this, "handleContextMenu", (e, t) => {
+            h(this, "handleContextMenu", (e, t) => {
                 this.setState({ isContextMenuActive: !0 }),
                     (0, u.jW)(
                         e,
@@ -143,7 +143,7 @@ class m extends i.PureComponent {
                             let { default: e } = await Promise.all([n.e("79695"), n.e("69220")]).then(
                                 n.bind(n, 881351),
                             );
-                            return (n) => (0, r.jsx)(e, g(h({}, n), { user: t }));
+                            return (n) => (0, r.jsx)(e, g(f({}, n), { user: t }));
                         },
                         {
                             onClose: () => {

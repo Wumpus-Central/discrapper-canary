@@ -9,8 +9,8 @@ var r,
     u = n(846519),
     d = n(477690),
     p = n(755721),
-    f = n(481060),
-    h = n(570140),
+    h = n(481060),
+    f = n(570140),
     g = n(239091),
     m = n(287259),
     b = n(785547),
@@ -27,7 +27,7 @@ var r,
     P = n(981631),
     j = n(388032),
     x = n(741881);
-function A(e, t, n) {
+function Z(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -40,7 +40,7 @@ function A(e, t, n) {
         e
     );
 }
-function Z(e) {
+function A(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -51,7 +51,7 @@ function Z(e) {
                 }),
             )),
             r.forEach(function (t) {
-                A(e, t, n[t]);
+                Z(e, t, n[t]);
             });
     }
     return e;
@@ -84,9 +84,9 @@ let L = (0, N.Mg)(d.Z.GAME_LIST_ROW_MIN_HEIGHT),
     k = (e) => {
         let { flag: t, icon: n, item: r, tooltip: l } = e,
             a = r.libraryApplication.hasFlag(t);
-        return (0, i.jsx)(f.ua7, {
+        return (0, i.jsx)(h.ua7, {
             text: l,
-            children: (e) => (0, i.jsx)(n, Z({ className: o()(x.settingIcon, { [x.hidden]: !a }) }, e)),
+            children: (e) => (0, i.jsx)(n, A({ className: o()(x.settingIcon, { [x.hidden]: !a }) }, e)),
         });
     },
     M = [
@@ -113,12 +113,12 @@ let L = (0, N.Mg)(d.Z.GAME_LIST_ROW_MIN_HEIGHT),
                                     children: e.libraryApplication.getBranchedName(e.application),
                                 }),
                                 e.libraryApplication.hasFlag(P.eHb.PREMIUM)
-                                    ? (0, i.jsx)(f.ua7, {
+                                    ? (0, i.jsx)(h.ua7, {
                                           text: j.intl.string(j.t.tG2SzM),
                                           children: (e) =>
                                               (0, i.jsx)(
-                                                  f.SrA,
-                                                  Z(
+                                                  h.SrA,
+                                                  A(
                                                       {
                                                           size: "md",
                                                           color: "currentColor",
@@ -191,13 +191,13 @@ let L = (0, N.Mg)(d.Z.GAME_LIST_ROW_MIN_HEIGHT),
                                 (0, i.jsx)(k, {
                                     flag: P.eHb.PRIVATE,
                                     item: e,
-                                    icon: f.kZF,
+                                    icon: h.kZF,
                                     tooltip: j.intl.string(j.t.NozAoq),
                                 }),
                                 (0, i.jsx)(k, {
                                     flag: P.eHb.OVERLAY_DISABLED,
                                     item: e,
-                                    icon: f.o8v,
+                                    icon: h.o8v,
                                     tooltip: j.intl.string(j.t.Az9eqq),
                                 }),
                                 (0, i.jsx)(T.Z, {
@@ -282,7 +282,7 @@ let L = (0, N.Mg)(d.Z.GAME_LIST_ROW_MIN_HEIGHT),
             onMouseEnter: () => l(t),
             onMouseLeave: a,
             onContextMenu: (e) => s(e, t),
-            children: (0, i.jsx)("div", Z({}, u)),
+            children: (0, i.jsx)("div", A({}, u)),
         });
     };
 class G extends (r = l.PureComponent) {
@@ -298,7 +298,7 @@ class G extends (r = l.PureComponent) {
         let t = this.props.activeRowKey;
         if (null != t && e.activeRowKey !== t && this.props.isNavigatingByKeyboard) {
             let e = this._rowRefs[t];
-            null != e && (h.Z.wait(g.Zy), this.props.scrollToRow(e, L));
+            null != e && (f.Z.wait(g.Zy), this.props.scrollToRow(e, L));
         }
     }
     handleHighlightedApplicationKey() {
@@ -351,7 +351,7 @@ class G extends (r = l.PureComponent) {
             }
             e.num_applications_total++;
         }
-        C.default.track(P.rMx.LIBRARY_VIEWED, w(Z({}, e), { load_id: t.loadId }));
+        C.default.track(P.rMx.LIBRARY_VIEWED, w(A({}, e), { load_id: t.loadId }));
     }
     handleSort(e, t) {
         m.fS(e, t);
@@ -433,29 +433,29 @@ class G extends (r = l.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            A(this, "_didUnmount", !1),
-            A(this, "_rowRefs", {}),
-            A(this, "state", {
+            Z(this, "_didUnmount", !1),
+            Z(this, "_rowRefs", {}),
+            Z(this, "state", {
                 overflowMenuRowKey: null,
                 highlightedApplicationKey:
                     null != this.props.location.state ? this.props.location.state.applicationId : null,
             }),
-            A(this, "setActiveRowKey", (e) => {
+            Z(this, "setActiveRowKey", (e) => {
                 this.setState({ overflowMenuRowKey: e.key });
             }),
-            A(this, "clearActiveRowKey", () => {
+            Z(this, "clearActiveRowKey", () => {
                 this._didUnmount || this.setState({ overflowMenuRowKey: null });
             }),
-            A(this, "handleRowMouseEnter", (e) => {
+            Z(this, "handleRowMouseEnter", (e) => {
                 this.props.isNavigatingByKeyboard || m.wX(e.key);
             }),
-            A(this, "handleRowMouseLeave", () => {
+            Z(this, "handleRowMouseLeave", () => {
                 this.props.isNavigatingByKeyboard || m.wX(null);
             }),
-            A(this, "setRowRef", (e, t) => {
+            Z(this, "setRowRef", (e, t) => {
                 this._rowRefs[t] = e;
             }),
-            A(this, "handleApplicationContextMenu", (e, t) => {
+            Z(this, "handleApplicationContextMenu", (e, t) => {
                 this.setActiveRowKey(t);
                 let { analyticsContext: r } = this.props;
                 (0, g.jW)(
@@ -465,7 +465,7 @@ class G extends (r = l.PureComponent) {
                         return (n) =>
                             (0, i.jsx)(
                                 e,
-                                w(Z({}, n), {
+                                w(A({}, n), {
                                     applicationId: t.libraryApplication.id,
                                     branchId: t.libraryApplication.branchId,
                                     analyticsContext: r,
@@ -493,7 +493,7 @@ function V(e) {
             sortKey: u,
             sortDirection: d,
             activeRowKey: p,
-            isNavigatingByKeyboard: f,
+            isNavigatingByKeyboard: h,
         } = (0, c.cj)([I.Z], () => ({
             sortKey: I.Z.sortKey,
             sortDirection: I.Z.sortDirection,
@@ -502,7 +502,7 @@ function V(e) {
         }));
     return (0, i.jsx)(
         G,
-        w(Z({}, e), {
+        w(A({}, e), {
             analyticsContext: t,
             location: n,
             applicationViewItems: r,
@@ -511,8 +511,8 @@ function V(e) {
             sortKey: u,
             sortDirection: d,
             activeRowKey: p,
-            isNavigatingByKeyboard: f,
+            isNavigatingByKeyboard: h,
         }),
     );
 }
-A(G, "defaultProps", { stickyHeader: !1 });
+Z(G, "defaultProps", { stickyHeader: !1 });

@@ -10,8 +10,8 @@ var i = n(481060),
     u = n(1964),
     d = n(852758),
     p = n(314897),
-    f = n(594174),
-    h = n(374023),
+    h = n(594174),
+    f = n(374023),
     g = n(886162),
     m = n(981631),
     b = n(815660),
@@ -26,8 +26,8 @@ let E = {
     },
     handleRequiredAction(e) {
         let t = e.requiredAction;
-        !h.s.isDisallowPopupsSet() &&
-            null != f.default.getCurrentUser() &&
+        !f.s.isDisallowPopupsSet() &&
+            null != h.default.getCurrentUser() &&
             (t === m.c2C.REQUIRE_CAPTCHA ||
             t === m.c2C.REQUIRE_VERIFIED_EMAIL ||
             t === m.c2C.REQUIRE_VERIFIED_PHONE ||

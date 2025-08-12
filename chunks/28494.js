@@ -1,6 +1,6 @@
 n.d(t, {
-    H: () => h,
-    f: () => f,
+    H: () => f,
+    f: () => h,
 }),
     n(781311);
 var r = n(73800),
@@ -13,7 +13,7 @@ var r = n(73800),
     u = n(456268),
     d = n(859921),
     p = n(128449);
-function f(e) {
+function h(e) {
     let { loadId: t } = e,
         n = c.Z.useField("fetchedQuery"),
         l = c.Z.useField("categoryId"),
@@ -30,12 +30,12 @@ function f(e) {
             var e;
             return null != (e = s.Z.getGuildIds(u)) ? e : p.q5;
         }),
-        f = (0, i.e7)([s.Z], () => {
+        h = (0, i.e7)([s.Z], () => {
             var e;
             return null != (e = s.Z.getIsFetching(u)) && e;
         }),
-        h = c.Z.useField("resultsQuery"),
-        g = h !== n,
+        f = c.Z.useField("resultsQuery"),
+        g = f !== n,
         m = r.useCallback(() => {
             let e = s.Z.getGuildIds(u),
                 n = s.Z.getTotal(u);
@@ -56,15 +56,15 @@ function f(e) {
     return r.useMemo(
         () => ({
             guildIds: d,
-            loading: g || f,
-            searchResultsQuery: h,
+            loading: g || h,
+            searchResultsQuery: f,
             loadMore: m,
             searchCategoryId: l,
         }),
-        [d, g, f, h, m, l],
+        [d, g, h, f, m, l],
     );
 }
-function h(e) {
+function f(e) {
     let { loadId: t } = e,
         n = d.Z.useField("isSearchVisible"),
         i = c.Z.useField("query");

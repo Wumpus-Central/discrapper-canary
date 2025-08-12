@@ -31,7 +31,7 @@ function L(e) {
         S = b && null != y && y.length > 0,
         v = (0, C.N)(i),
         E = (0, l.Nx)(),
-        I = (0, s.Z)({ location: "PremiumPaymentSelect" });
+        I = (0, s.ZP)({ location: "PremiumPaymentSelect" });
     return (0, t.jsx)(g, {
         selectSku: (e) =>
             (function (e) {

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => H });
+n.d(t, { Z: () => B });
 var r = n(255367),
     i = n(73800),
     l = n(392711),
@@ -9,8 +9,8 @@ var r = n(255367),
     u = n(569545),
     d = n(106301),
     p = n(460181),
-    f = n(979283),
-    h = n(590415),
+    h = n(979283),
+    f = n(590415),
     g = n(131704),
     m = n(199902),
     b = n(314897),
@@ -63,7 +63,7 @@ function x() {
         null
     );
 }
-function A() {
+function Z() {
     return (
         j(
             [E.Z, I.Z],
@@ -73,7 +73,7 @@ function A() {
             }),
             (e, t) => {
                 let { videoEnabled: n, inVoiceChannel: r } = t;
-                if (!(0, f.O)()) return;
+                if (!(0, h.O)()) return;
                 let { videoEnabled: i, inVoiceChannel: l } = e;
                 if (i !== n && l && r) return n ? "camera_on" : "camera_off";
             },
@@ -81,7 +81,7 @@ function A() {
         null
     );
 }
-function Z() {
+function A() {
     return (
         j(
             [_.Z, v.Z, I.Z, c.Z],
@@ -195,12 +195,12 @@ function M() {
             [I.Z, S.Z],
             () => {
                 let e = I.Z.getVoiceChannelId();
-                if (null == e) return h.xO.NONE;
+                if (null == e) return f.xO.NONE;
                 let t = S.Z.getVoiceStateForChannel(e);
-                return (0, h.gf)(t);
+                return (0, f.gf)(t);
             },
             (e, t) => {
-                if (e !== t && t === h.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK) return "reconnect";
+                if (e !== t && t === f.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK) return "reconnect";
             },
         ),
         null
@@ -404,12 +404,12 @@ function V() {
         null
     );
 }
-function H() {
+function B() {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(x, {}),
-            (0, r.jsx)(A, {}),
             (0, r.jsx)(Z, {}),
+            (0, r.jsx)(A, {}),
             (0, r.jsx)(w, {}),
             (0, r.jsx)(R, {}),
             (0, r.jsx)(k, {}),

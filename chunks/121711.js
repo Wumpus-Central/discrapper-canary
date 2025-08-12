@@ -9,8 +9,8 @@ var r = n(255367),
     u = n(481060),
     d = n(607070),
     p = n(100527),
-    f = n(213609),
-    h = n(335131),
+    h = n(213609),
+    f = n(335131),
     g = n(252618),
     m = n(70097),
     b = n(114851),
@@ -27,8 +27,8 @@ var r = n(255367),
     P = n(451478),
     j = n(526167),
     x = n(63063),
-    A = n(113434),
-    Z = n(833435),
+    Z = n(113434),
+    A = n(833435),
     w = n(150560),
     L = n(672188),
     R = n(558652),
@@ -38,8 +38,8 @@ var r = n(255367),
     U = n(466962),
     G = n(452081),
     V = n(46140),
-    H = n(981631),
-    B = n(215023),
+    B = n(981631),
+    H = n(215023),
     F = n(388032),
     z = n(203336),
     W = n(13299),
@@ -90,7 +90,7 @@ let X = function () {
     let { selectedTab: e, onSelectTab: t, tabs: n } = (0, G.z)(),
         { onScroll: l, scrollPosition: s } = (0, b.M)(),
         d = w.Z.getState().getUtmCurrentContext(),
-        m = (0, Z._)({ location: V.dr.QUEST_HOME_DESKTOP }) ? D.Z : D.j,
+        m = (0, A._)({ location: V.dr.QUEST_HOME_DESKTOP }) ? D.Z : D.j,
         P = (0, k.z)((e) => e.registerAssetLoad),
         j = i.useRef(d);
     i.useEffect(() => {
@@ -98,7 +98,7 @@ let X = function () {
     }),
         i.useEffect(() => {
             let { current: t } = j;
-            (0, f.h)({
+            (0, h.h)({
                 name: o.ImpressionNames.QUEST_HOME,
                 type: o.ImpressionTypes.VIEW,
                 properties: {
@@ -113,8 +113,8 @@ let X = function () {
     let { enabled: L } = (0, N.WX)({ location: V.dr.QUEST_HOME_DESKTOP }),
         { showBetaTag: W } = S.Z.useExperiment({ location: V.dr.QUEST_HOME_DESKTOP }),
         Y = i.useCallback(() => {
-            if (L) return void window.open(H.EYA.PAID_TERMS_ORBS);
-            window.open(x.Z.getArticleURL(H.BhN.QUESTS_LEARN_MORE));
+            if (L) return void window.open(B.EYA.PAID_TERMS_ORBS);
+            window.open(x.Z.getArticleURL(B.BhN.QUESTS_LEARN_MORE));
         }, [L]);
     (0, g.Tt)({ location: F.intl.string(F.t.JALI2N) });
     let K = L ? F.intl.format(F.t.BCBIlp, {}) : F.intl.format(F.t.lmMBf3, {}),
@@ -122,13 +122,13 @@ let X = function () {
         Q = i.useRef(null),
         J = i.useCallback(() => {
             (0, C.Y)({
-                pageType: H.ZY5.GLOBAL_DISCOVERY_QUESTS,
-                sectionType: H.jXE.ORBS_BALANCE_MENU,
-                ctaObject: H.qAy.CTA_TO_ORBS_SHOP,
+                pageType: B.ZY5.GLOBAL_DISCOVERY_QUESTS,
+                sectionType: B.jXE.ORBS_BALANCE_MENU,
+                ctaObject: B.qAy.CTA_TO_ORBS_SHOP,
             }),
-                (0, h.mK)({
+                (0, f.mK)({
                     openInLayer: !1,
-                    tab: B.AW.ORBS,
+                    tab: H.AW.ORBS,
                     analyticsLocations: [],
                     analyticsSource: p.Z.ORBS_BALANCE_MENU,
                 });
@@ -150,7 +150,7 @@ let X = function () {
                                   tabs: n,
                                   icon: u.qDn,
                                   children: (0, r.jsx)(T.V9, {
-                                      analyticsPage: H.ZY5.GLOBAL_DISCOVERY_QUESTS,
+                                      analyticsPage: B.ZY5.GLOBAL_DISCOVERY_QUESTS,
                                       cardAlignment: T.ek.END,
                                       ctaText: F.intl.string(F.t["J+vlIS"]),
                                       ctaOnClick: J,
@@ -167,9 +167,9 @@ let X = function () {
                                                     variant: "overlay-primary",
                                                     text: F.intl.string(F.t["1Wm129"]),
                                                     onClick: () =>
-                                                        (0, h.mK)({
+                                                        (0, f.mK)({
                                                             openInLayer: !1,
-                                                            tab: B.AW.ORBS,
+                                                            tab: H.AW.ORBS,
                                                             analyticsLocations: [],
                                                             analyticsSource: p.Z.INTRO_TO_ORBS_QUEST_BANNER,
                                                         }),
@@ -198,7 +198,7 @@ let X = function () {
                               }),
                               (0, r.jsx)(O.Z, {
                                   children:
-                                      e === A.e5.CLAIMED ? (0, r.jsx)(m, { onSelectTab: t }) : (0, r.jsx)(R.Z, {}),
+                                      e === Z.e5.CLAIMED ? (0, r.jsx)(m, { onSelectTab: t }) : (0, r.jsx)(R.Z, {}),
                               }),
                           ],
                       }),
@@ -247,7 +247,7 @@ let X = function () {
                                                       onTabSelect: t,
                                                   }),
                                               }),
-                                              e === A.e5.CLAIMED
+                                              e === Z.e5.CLAIMED
                                                   ? (0, r.jsx)(m, { onSelectTab: t })
                                                   : (0, r.jsx)(R.Z, {}),
                                           ],

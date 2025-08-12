@@ -204,7 +204,6 @@ function el() {
                                               (0, y.uL)(J.Z5c.APPLICATION_STORE);
                                       },
                                       children: (0, i.jsx)(p.Text, {
-                                          className: $.__invalid_managePlanButtonCTA,
                                           variant: "text-sm/medium",
                                           color: "always-white",
                                           children: l ? Q.intl.string(Q.t.VR2iVF) : Q.intl.string(Q.t.T1aUAQ),
@@ -243,7 +242,6 @@ function el() {
                                               x.Z.open(J.oAB.SUBSCRIPTIONS);
                                       },
                                       children: (0, i.jsx)(p.Text, {
-                                          className: $.__invalid_managePlanButtonCTA,
                                           variant: "text-sm/medium",
                                           color: "always-white",
                                           children: Q.intl.string(Q.t["9uDy6O"]),
@@ -408,13 +406,11 @@ let ed = function () {
         children: (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsxs)("div", {
-                    className: $.__invalid_container,
                     children: [
                         (0, i.jsx)(el, {}),
                         j && (0, i.jsx)(q.Z, { isInSettings: !0 }),
                         (0, i.jsx)(ec, {}),
                         (0, i.jsx)(K.Z, {
-                            className: $.__invalid_planComparisonTable,
                             hideCTAs: !0,
                             headingOverride: Q.intl.string(Q.t.dnVvQU),
                             hidePill: !w,

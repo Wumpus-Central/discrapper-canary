@@ -9,8 +9,8 @@ var r = n(73800),
     u = n(703656),
     d = n(594174),
     p = n(122613),
-    f = n(649256),
-    h = n(388032);
+    h = n(649256),
+    f = n(388032);
 function g(e) {
     var t, n;
     let { match: g } = e,
@@ -30,7 +30,7 @@ function g(e) {
                         let t = new URL(location.href),
                             n = await a.Z.openPrivateChannel({ recipientIds: E }),
                             r = null != (e = t.searchParams.get("referrer_id")) ? e : void 0,
-                            { customId: i } = await (0, f.ur)(
+                            { customId: i } = await (0, h.ur)(
                                 _,
                                 t.searchParams.get("link_id"),
                                 t.searchParams.get("custom_id"),
@@ -49,8 +49,8 @@ function g(e) {
             let e = setTimeout(() => {
                 null == E &&
                     l.Z.show({
-                        title: h.intl.string(h.t.PtobXV),
-                        body: h.intl.string(h.t["IOy+Iy"]),
+                        title: f.intl.string(f.t.PtobXV),
+                        body: f.intl.string(f.t["IOy+Iy"]),
                     });
             }, 5000);
             return () => {

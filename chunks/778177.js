@@ -421,11 +421,12 @@ class er extends i.PureComponent {
     }
     render() {
         let { selectedIndex: e } = this.state,
-            { navId: t, resultsState: n, totalResults: i, searchContext: o, channel: a } = this.props;
+            { className: t, navId: n, resultsState: i, totalResults: o, searchContext: a, channel: s } = this.props;
         return (0, r.jsx)(h.Z, {
-            numResults: i,
-            query: n.query,
-            navId: t,
+            className: t,
+            numResults: o,
+            query: i.query,
+            navId: n,
             hideQuery: !this.shouldShowSearchQuery(),
             focusedIndex: e,
             renderCustomResults: this.renderAutocompletes,
@@ -434,12 +435,12 @@ class er extends i.PureComponent {
             onSelectQuery: this.performSearch,
             onSelectSearchEverywhere: () => this.performSearch({ searchEverywhere: !0 }),
             renderNoResults: () => null,
-            searchFavorites: o.type === j.aib.FAVORITES && (0, P.X$)(),
+            searchFavorites: a.type === j.aib.FAVORITES && (0, P.X$)(),
             showSearchInSelectedChannel: this.shouldShowSearchInSelectedChannel(),
-            channel: a,
+            channel: s,
             onSelectSearchInSelectedChannel: () =>
                 this.handleSearchInChannel({ searchAutocompleteSelectAction: k.ZW.CLICK }),
-            showDMQueryText: o.type === j.aib.DMS && (0, P.R6)(o),
+            showDMQueryText: a.type === j.aib.DMS && (0, P.R6)(a),
         });
     }
     constructor(...e) {
@@ -695,23 +696,24 @@ class er extends i.PureComponent {
     }
 }
 let ei = i.forwardRef((e, t) => {
-    let { searchContext: n, navId: i, onSelectedIndexChanged: o } = e,
-        a = (0, f.e7)([v.Z, b.Z], () => {
+    let { className: n, searchContext: i, navId: o, onSelectedIndexChanged: a } = e,
+        s = (0, f.e7)([v.Z, b.Z], () => {
             let e = v.Z.getChannelId();
             return b.Z.getChannel(e);
         }),
-        [s, l] = (0, f.Wu)([R.Z], () => {
-            let e = R.Z.getState(n),
+        [l, c] = (0, f.Wu)([R.Z], () => {
+            let e = R.Z.getState(i),
                 t = (0, P.BU)(e.autocompletes);
             return [e, t];
         });
     return (0, r.jsx)(er, {
         ref: t,
-        navId: i,
-        onSelectedIndexChanged: o,
-        searchContext: n,
-        resultsState: s,
-        totalResults: l,
-        channel: a,
+        className: n,
+        navId: o,
+        onSelectedIndexChanged: a,
+        searchContext: i,
+        resultsState: l,
+        totalResults: c,
+        channel: s,
     });
 });

@@ -9,8 +9,8 @@ var r = n(255367),
     u = n(873546),
     d = n(442837),
     p = n(704215),
-    f = n(952265),
-    h = n(755721),
+    h = n(952265),
+    f = n(755721),
     g = n(481060),
     m = n(493683),
     b = n(529103),
@@ -27,8 +27,8 @@ var r = n(255367),
     P = n(28476),
     j = n(880257),
     x = n(631885),
-    A = n(849862),
-    Z = n(522558),
+    Z = n(849862),
+    A = n(522558),
     w = n(870041),
     L = n(795448),
     R = n(441623),
@@ -38,8 +38,8 @@ var r = n(255367),
     U = n(108989),
     G = n(51596),
     V = n(905423),
-    H = n(155409),
-    B = n(210887),
+    B = n(155409),
+    H = n(210887),
     F = n(695346),
     z = n(283595),
     W = n(923834),
@@ -124,20 +124,20 @@ let eu = (e) => {
         var { selected: t } = e,
             n = ec(e, ["selected"]);
         let l = (0, c.JA)("friends"),
-            a = (0, A.If)(),
+            a = (0, Z.If)(),
             o = (0, d.e7)([R.Z], () => R.Z.canShowFriendsTabBadge()),
             u = (0, d.e7)([_.Z], () => _.Z.useReducedMotion),
-            { enabled: p } = Z.w.useExperiment({ location: "Friends Tab" }, { autoTrackExposure: !1 }),
-            f = o && p;
+            { enabled: p } = A.w.useExperiment({ location: "Friends Tab" }, { autoTrackExposure: !1 }),
+            h = o && p;
         i.useEffect(() => {
-            f &&
+            h &&
                 (0, E.h)({
                     name: s.ImpressionNames.GIFT_INTENT_BADGE,
                     type: s.ImpressionTypes.VIEW,
                     properties: { gift_intent_type: er.hX.FRIEND_ANNIVERSARY },
                 });
-        }, [f]);
-        let [h, m] = i.useState(!1);
+        }, [h]);
+        let [f, m] = i.useState(!1);
         return (0, r.jsxs)("div", {
             className: ea.friendsButtonContainer,
             children: [
@@ -148,7 +148,7 @@ let eu = (e) => {
                             {
                                 onClick: () => {
                                     let e;
-                                    f
+                                    h
                                         ? (X.default.track(et.rMx.GIFT_INTENT_BADGE_CLICKED, {
                                               gift_intent_type: er.hX.FRIEND_ANNIVERSARY,
                                           }),
@@ -158,7 +158,7 @@ let eu = (e) => {
                                         : (e = q.ZP.getState().section),
                                         (0, O.Z)({ tab_opened: e });
                                 },
-                                interactiveClassName: f ? ea.friendsBadge : void 0,
+                                interactiveClassName: h ? ea.friendsBadge : void 0,
                                 selected: t,
                                 route: et.Z5c.FRIENDS,
                                 icon: g.iFz,
@@ -176,14 +176,14 @@ let eu = (e) => {
                         { children: a > 0 ? (0, r.jsx)(g.mAB, { count: a }) : null },
                     ),
                 ),
-                f &&
+                h &&
                     !u &&
                     (0, r.jsx)(U.Z, {
                         className: ea.confetti,
                         wind: 0,
                         sprites: en.CA,
                         spriteColors: en.Br,
-                        firing: h,
+                        firing: f,
                         confettiConfig: {
                             opacity: {
                                 type: "static",
@@ -237,11 +237,11 @@ let eu = (e) => {
                 subscribeToGlobalHotkey: !0,
             }),
         }),
-    ef = () => {
+    eh = () => {
         let e = (0, T.q)();
         return e > 0 ? (0, r.jsx)(g.mAB, { count: e }) : null;
     },
-    eh = (e) => {
+    ef = (e) => {
         let { selected: t } = e,
             n = (0, c.JA)("messageRequests"),
             { channelId: i } = (0, N._)();
@@ -260,7 +260,7 @@ let eu = (e) => {
                     },
                     n,
                 ),
-                { children: (0, r.jsx)(ef, {}) },
+                { children: (0, r.jsx)(eh, {}) },
             ),
         );
     },
@@ -300,7 +300,7 @@ let eu = (e) => {
                   className: ea.familyCenterButtonContainer,
                   children: (0, r.jsx)(J.bU, {
                       onClick: () => {
-                          (0, f.ZD)(async () => {
+                          (0, h.ZD)(async () => {
                               let { default: e } = await n.e("44153").then(n.bind(n, 760949));
                               return (t) => (0, r.jsx)(e, eo({}, t));
                           });
@@ -358,7 +358,7 @@ let eO = i.memo(function (e) {
             isReferralProgramPopoverShowable: c,
             shouldShowMessageRequestsRow: d,
             shouldShowFamilyCenterRow: p,
-            createDMButtonVariant: f,
+            createDMButtonVariant: h,
             selectedChannelId: g,
             path: m,
         } = e,
@@ -371,7 +371,7 @@ let eO = i.memo(function (e) {
         className: ea.privateChannels,
         "aria-label": ei.intl.string(ei.t.ZH9aPz),
         children: [
-            (0, r.jsx)(H.Z, {
+            (0, r.jsx)(B.Z, {
                 childRef: b,
                 tutorialId: "direct-messages",
                 position: "right",
@@ -379,10 +379,10 @@ let eO = i.memo(function (e) {
                 children: (0, r.jsx)("div", {
                     ref: b,
                     className: a()(ea.searchBar, { [ea.themedHeaderMobile]: u.tq }),
-                    children: (0, r.jsx)(h.zx, {
+                    children: (0, r.jsx)(f.zx, {
                         grow: !0,
-                        color: h.zx.Colors.PRIMARY,
-                        size: h.zx.Sizes.SMALL,
+                        color: f.zx.Colors.PRIMARY,
+                        size: f.zx.Sizes.SMALL,
                         fullWidth: !0,
                         onClick: eb,
                         children: ei.intl.string(ei.t.LzcpeX),
@@ -396,7 +396,7 @@ let eO = i.memo(function (e) {
                     selectedChannelId: g,
                     showDMHeader: !0,
                     listScrollerRef: O,
-                    createDMCTAButtonVariant: f,
+                    createDMCTAButtonVariant: h,
                     children: [
                         (0, r.jsx)(
                             eu,
@@ -418,7 +418,7 @@ let eO = i.memo(function (e) {
                             : null,
                         d
                             ? (0, r.jsx)(
-                                  eh,
+                                  ef,
                                   {
                                       selected:
                                           null == m
@@ -481,7 +481,7 @@ let eO = i.memo(function (e) {
                               )
                             : null,
                         (0, r.jsx)(eE, {}, "section-divider-top"),
-                        "full-width" === f && (0, r.jsx)(ep, {}, "create-dm"),
+                        "full-width" === h && (0, r.jsx)(ep, {}, "create-dm"),
                     ],
                 }),
             ),
@@ -503,7 +503,7 @@ function ey() {
             return !1;
         }, [e]),
         n = !F.bm.useSetting(),
-        { theme: i } = (0, d.cj)([B.Z], () => ({ theme: B.Z.theme })),
+        { theme: i } = (0, d.cj)([H.Z], () => ({ theme: H.Z.theme })),
         l = (0, d.e7)([z.Z], () => z.Z.hasLibraryApplication()),
         a = (0, d.e7)([W.Z], () => W.Z.getCurrentPath()),
         [s, c] = (0, V.Z)((e) => {
@@ -512,8 +512,8 @@ function ey() {
         }, o.X),
         u = (0, M.i)({ selected: null == c ? t : c.startsWith(et.Z5c.APPLICATION_STORE) }),
         p = (0, D.eW)(),
-        f = (0, P.a)(),
-        h = (function () {
+        h = (0, P.a)(),
+        f = (function () {
             let e = F.Ex.useSetting(),
                 t = (0, j.Z)();
             return !0 === e && !0 === t;
@@ -528,8 +528,8 @@ function ey() {
         premiumTabSelected: t,
         shouldShowNitroTab: u,
         isReferralProgramPopoverShowable: p,
-        shouldShowMessageRequestsRow: f,
-        shouldShowFamilyCenterRow: h,
+        shouldShowMessageRequestsRow: h,
+        shouldShowFamilyCenterRow: f,
         createDMButtonVariant: g,
         selectedChannelId: s,
         path: c,

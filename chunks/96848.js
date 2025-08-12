@@ -1,104 +1,110 @@
-n.d(t, { Z: () => _ }), n(388685), n(704826), n(35282);
+n.d(t, { Z: () => g }), n(388685), n(704826), n(35282);
 var r = n(255367),
     i = n(73800),
-    o = n(481060),
-    a = n(907040),
-    s = n(981631),
-    l = n(185923),
-    c = n(388032),
-    u = n(105065);
-let d = {
-        section: s.jXE.VOICE_CHANNEL_EFFECTS_EMOJI_PICKER,
+    o = n(120356),
+    a = n.n(o),
+    s = n(692547),
+    l = n(481060),
+    c = n(907040),
+    u = n(47280),
+    d = n(981631),
+    f = n(185923),
+    _ = n(388032),
+    p = n(105065);
+let h = {
+        section: d.jXE.VOICE_CHANNEL_EFFECTS_EMOJI_PICKER,
         openPopoutType: "gift_effect_emoji_picker",
     },
-    f = l.Hz.GIFT;
-function _(e) {
+    m = f.Hz.GIFT;
+function g(e) {
     let { setEmojiConfetti: t, emojiConfetti: n } = e,
-        [s, l] = i.useState(!1),
-        _ = i.useRef(null),
-        p = (e) =>
+        [o, d] = i.useState(!1),
+        f = i.useRef(null),
+        g = (0, u.ZP)({ location: "GiftEmoji" }),
+        E = a()(p.text, g && p.refresh),
+        b = (e) =>
             (0, r.jsxs)("div", {
-                className: u.customGiftContent,
+                className: p.customGiftContent,
                 children: [
                     (0, r.jsxs)("div", {
-                        className: u.customGiftHeader,
+                        className: p.customGiftHeader,
                         children: [
-                            (0, r.jsx)(o.Text, {
+                            (0, r.jsx)(l.Text, {
                                 variant: "text-md/bold",
-                                children: c.intl.string(c.t.Hl2IgY),
+                                children: _.intl.string(_.t.Hl2IgY),
                             }),
-                            (0, r.jsx)(o.Text, {
+                            (0, r.jsx)(l.Text, {
                                 variant: "text-sm/normal",
-                                children: c.intl.string(c.t.stGFAw),
+                                children: _.intl.string(_.t.stGFAw),
                             }),
                         ],
                     }),
                     e,
                 ],
             }),
-        h = (e) => {
+        y = (e) => {
             let { emoji: n } = e;
-            null != t && (t(n), l(!1));
+            null != t && (t(n), d(!1));
         };
-    return (0, r.jsx)(o.yRy, {
-        targetElementRef: _,
-        shouldShow: s,
+    return (0, r.jsx)(l.yRy, {
+        targetElementRef: f,
+        shouldShow: o,
         position: "bottom",
         align: "left",
-        onRequestClose: () => l(!1),
+        onRequestClose: () => d(!1),
         renderPopout: (e) => {
             let { closePopout: t } = e;
-            return (0, r.jsx)(o.VqE, {
-                children: (0, r.jsx)(a.Z, {
-                    analyticsOverride: d,
+            return (0, r.jsx)(l.VqE, {
+                children: (0, r.jsx)(c.Z, {
+                    analyticsOverride: h,
                     closePopout: t,
-                    onSelectEmoji: h,
+                    onSelectEmoji: y,
                     wrapper: "div",
-                    pickerIntention: f,
-                    renderHeader: p,
-                    headerClassName: u.emojiHeader,
-                    className: u.emojiList,
-                    listHeaderClassName: u.emojiList,
-                    categoryListClassName: u.categoryList,
+                    pickerIntention: m,
+                    renderHeader: b,
+                    headerClassName: p.emojiHeader,
+                    className: p.emojiList,
+                    listHeaderClassName: p.emojiList,
+                    categoryListClassName: p.categoryList,
                     searchProps: { accessory: (0, r.jsx)(r.Fragment, {}) },
                 }),
             });
         },
         children: () =>
-            (0, r.jsx)(o.P3F, {
-                className: u.container,
-                onClick: () => l(!0),
-                innerRef: _,
+            (0, r.jsx)(l.P3F, {
+                className: a()(p.container, g && p.refresh),
+                onClick: () => d(!0),
+                innerRef: f,
                 children:
                     (null == n ? void 0 : n.name) == null
                         ? (0, r.jsxs)("div", {
-                              className: u.contentContainer,
+                              className: p.contentContainer,
                               children: [
-                                  (0, r.jsx)(o.EO4, {
+                                  (0, r.jsx)(l.EO4, {
                                       size: "custom",
-                                      color: "currentColor",
-                                      className: u.emojiIcon,
+                                      color: g ? s.Z.colors.ICON_PRIMARY : s.Z.colors.WHITE,
+                                      className: p.emojiIcon,
                                       width: 14,
                                       height: 14,
                                   }),
-                                  (0, r.jsx)(o.Text, {
-                                      className: u.text,
+                                  (0, r.jsx)(l.Text, {
+                                      className: E,
                                       variant: "text-sm/semibold",
                                       lineClamp: 1,
-                                      children: c.intl.string(c.t.Hl2IgY),
+                                      children: _.intl.string(_.t.Hl2IgY),
                                   }),
                               ],
                           })
                         : (0, r.jsxs)("div", {
-                              className: u.contentContainer,
+                              className: p.contentContainer,
                               children: [
-                                  (0, r.jsx)(o.Text, {
-                                      className: u.textSelected,
+                                  (0, r.jsx)(l.Text, {
+                                      className: E,
                                       variant: "text-sm/semibold",
                                       children: null == n.guildId ? n.optionallyDiverseSequence : null,
                                   }),
-                                  (0, r.jsx)(o.Text, {
-                                      className: u.text,
+                                  (0, r.jsx)(l.Text, {
+                                      className: E,
                                       variant: "text-sm/semibold",
                                       lineClamp: 1,
                                       children: n.name.replace(/_/g, " "),

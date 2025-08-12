@@ -9,7 +9,7 @@ var r = n(255367),
     u = n(239091),
     d = n(687683),
     p = n(173519);
-function f(e) {
+function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -34,7 +34,7 @@ function f(e) {
     }
     return e;
 }
-function h(e, t) {
+function f(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -79,7 +79,7 @@ let g = function (e) {
                     e,
                     async () => {
                         let { default: e } = await Promise.all([n.e("79695"), n.e("69220")]).then(n.bind(n, 881351));
-                        return (n) => (0, r.jsx)(e, h(f({}, n), { user: t }));
+                        return (n) => (0, r.jsx)(e, f(h({}, n), { user: t }));
                     },
                     {
                         onClose: () => {
@@ -98,8 +98,8 @@ let g = function (e) {
                 },
                 children: (0, r.jsx)(
                     o.Z.div,
-                    h(
-                        f(
+                    f(
+                        h(
                             {
                                 className: a()(p.messageRequestItem, y, {
                                     [p.active]: O || C,

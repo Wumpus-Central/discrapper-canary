@@ -10,8 +10,8 @@ var i = n(481060),
     u = n(358085),
     d = n(998502),
     p = n(996106),
-    f = n(703912),
-    h = n(852926),
+    h = n(703912),
+    f = n(852926),
     g = n(981631),
     m = n(388032);
 function b(e) {
@@ -57,14 +57,14 @@ function _(e, t) {
         e
     );
 }
-let O = (0, f.Z)(
+let O = (0, h.Z)(
     (e) => {
         var t;
         let {
                 clientId: n,
                 authorizations: u,
                 scopes: d,
-                parsedPermissions: f,
+                parsedPermissions: h,
                 responseType: O,
                 redirectUri: E,
                 codeChallenge: y,
@@ -77,13 +77,13 @@ let O = (0, f.Z)(
                 disclosures: P,
                 integrationType: j,
                 pid: x,
-                signal: A,
+                signal: Z,
             } = e,
-            Z = "OAuth2Authorize_".concat(n, "_").concat(C, "_").concat(S),
+            A = "OAuth2Authorize_".concat(n, "_").concat(C, "_").concat(S),
             w = null != j ? (null == u ? void 0 : u.get(j)) : void 0,
             L = null != (t = null == w ? void 0 : w.application) ? t : a.Z.getApplication(n);
         return new Promise((e, t) => {
-            let a = (0, h.jU)(x),
+            let a = (0, f.jU)(x),
                 w = i.z1l;
             null != L &&
             null !=
@@ -151,7 +151,7 @@ let O = (0, f.Z)(
                             },
                         }
                     );
-                })(Z, A);
+                })(A, Z);
             (0, i.h7j)(
                 (e) =>
                     (0, r.jsx)(
@@ -167,7 +167,7 @@ let O = (0, f.Z)(
                             codeChallenge: y,
                             codeChallengeMethod: v,
                             state: I,
-                            permissions: f,
+                            permissions: h,
                             guildId: C,
                             channelId: S,
                             prompt: N,
@@ -177,7 +177,7 @@ let O = (0, f.Z)(
                         }),
                     ),
                 {
-                    modalKey: Z,
+                    modalKey: A,
                     onCloseCallback: () => {
                         k(),
                             R ||
@@ -190,7 +190,7 @@ let O = (0, f.Z)(
         });
     },
     function (e, t, n) {
-        if ((0, h.br)(n) || !u.isPlatformEmbedded) return;
+        if ((0, f.br)(n) || !u.isPlatformEmbedded) return;
         let r = (0, l.ZP)({
             application: e,
             channelId: t,

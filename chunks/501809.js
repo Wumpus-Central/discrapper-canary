@@ -24,8 +24,8 @@ let u = Object.freeze({
     }),
     d = {},
     p = {},
-    f = null;
-class h extends (r = i.ZP.PersistedStore) {
+    h = null;
+class f extends (r = i.ZP.PersistedStore) {
     initialize(e) {
         this.waitFor(a.Z, o.Z), (p = null != e ? e : d);
     }
@@ -37,18 +37,18 @@ class h extends (r = i.ZP.PersistedStore) {
         return null != (t = p[e]) ? t : u;
     }
     requestCount(e, t) {
-        (f = {
+        (h = {
             guildId: e,
             channelId: t,
         }),
             a.Z.getSocket().requestChannelMemberCount(e, t);
     }
 }
-c(h, "displayName", "ChannelMemberCountStore"),
-    c(h, "persistKey", "channelMemberCounts"),
-    new h(l.Z, {
+c(f, "displayName", "ChannelMemberCountStore"),
+    c(f, "persistKey", "channelMemberCounts"),
+    new f(l.Z, {
         CONNECTION_OPEN: function () {
-            null != f && a.Z.getSocket().requestChannelMemberCount(f.guildId, f.channelId),
+            null != h && a.Z.getSocket().requestChannelMemberCount(h.guildId, h.channelId),
                 s.default.keys(p).forEach((e) => {
                     null == o.Z.getChannel(e) && delete p[e];
                 });

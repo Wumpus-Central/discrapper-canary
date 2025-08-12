@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h }), n(388685), n(539854);
+n.d(t, { Z: () => f }), n(388685), n(539854);
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -9,13 +9,13 @@ var r = n(255367),
     u = n(270144),
     d = n(981631),
     p = n(388032),
-    f = n(466389);
-function h(e) {
+    h = n(466389);
+function f(e) {
     let t,
         { guild: n } = e,
-        h = (0, u.h6)(n),
+        f = (0, u.h6)(n),
         g = () => (0, c.sB)(n.id),
-        m = i.useMemo(() => new Set(h.map((e) => e.applicationId)), [h]),
+        m = i.useMemo(() => new Set(f.map((e) => e.applicationId)), [f]),
         b = (0, l.Wu)([a.Z], () => {
             let e = [];
             for (let t of m) {
@@ -46,7 +46,7 @@ function h(e) {
               onDismissed: g,
               message: t,
               type: d.vID.APPLICATION_SUBSCRIPTION_EXPIRATION,
-              image: f,
+              image: h,
               onClick: () => {
                   g(), s.Z.open(n.id, d.pNK.INTEGRATIONS);
               },

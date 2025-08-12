@@ -567,7 +567,7 @@ function em(e) {
                                         {
                                             innerRef: ef,
                                             to: $.Z5c.CHANNEL($.ME, t.id),
-                                            className: a()(et.link, { [et.linkPlated]: eB }),
+                                            className: et.link,
                                             "aria-label": (0, S.ZP)({
                                                 channel: t,
                                                 unread: eD,
@@ -598,42 +598,49 @@ function em(e) {
                                     },
                                 ),
                             ),
-                            ew && !eg ? (0, i.jsx)(eo, {}) : null,
-                            eA ? (0, i.jsx)(ec, {}) : null,
-                            eP ? (0, i.jsx)(ed, {}) : null,
-                            ek
-                                ? (0, i.jsx)(g.ua7, {
-                                      text: ee.intl.string(eC ? ee.t.Et8qws : ee.t["d+e27u"]),
-                                      delay: 500,
-                                      targetElementRef: eM,
-                                      children: (e) => {
-                                          var { onClick: t } = e,
-                                              n = er(e, ["onClick"]);
-                                          return (0, i.jsx)(
-                                              el,
-                                              ei(en({}, n), {
-                                                  icon: g.xhG,
-                                                  "aria-label": ee.intl.string(ee.t.PdRCRk),
-                                                  onClick: (e) => {
-                                                      null == t || t(), eK(e);
-                                                  },
-                                                  onMouseDown: eW,
-                                                  nameplate: z,
-                                                  forceShow: eg,
-                                                  visibleElementRef: eM,
-                                              }),
-                                          );
-                                      },
-                                  })
-                                : (0, i.jsx)(el, {
-                                      icon: g.Dio,
-                                      "aria-label": eC ? ee.intl.string(ee.t["26C4oq"]) : ee.intl.string(ee.t.jsvgc3),
-                                      onClick: eC ? eq : eH,
-                                      onMouseDown: eW,
-                                      nameplate: z,
-                                      reducedClickTarget: !0,
-                                      visibleElementRef: eM,
-                                  }),
+                            (0, i.jsxs)("div", {
+                                className: a()(et.iconsContainer, { [et.nameplated]: eB }),
+                                children: [
+                                    ew && !eg ? (0, i.jsx)(eo, {}) : null,
+                                    eA ? (0, i.jsx)(ec, {}) : null,
+                                    eP ? (0, i.jsx)(ed, {}) : null,
+                                    ek
+                                        ? (0, i.jsx)(g.ua7, {
+                                              text: ee.intl.string(eC ? ee.t.Et8qws : ee.t["d+e27u"]),
+                                              delay: 500,
+                                              targetElementRef: eM,
+                                              children: (e) => {
+                                                  var { onClick: t } = e,
+                                                      n = er(e, ["onClick"]);
+                                                  return (0, i.jsx)(
+                                                      el,
+                                                      ei(en({}, n), {
+                                                          icon: g.xhG,
+                                                          "aria-label": ee.intl.string(ee.t.PdRCRk),
+                                                          onClick: (e) => {
+                                                              null == t || t(), eK(e);
+                                                          },
+                                                          onMouseDown: eW,
+                                                          nameplate: z,
+                                                          forceShow: eg,
+                                                          visibleElementRef: eM,
+                                                      }),
+                                                  );
+                                              },
+                                          })
+                                        : (0, i.jsx)(el, {
+                                              icon: g.Dio,
+                                              "aria-label": eC
+                                                  ? ee.intl.string(ee.t["26C4oq"])
+                                                  : ee.intl.string(ee.t.jsvgc3),
+                                              onClick: eC ? eq : eH,
+                                              onMouseDown: eW,
+                                              nameplate: z,
+                                              reducedClickTarget: !0,
+                                              visibleElementRef: eM,
+                                          }),
+                                ],
+                            }),
                         ],
                     }),
                 ],

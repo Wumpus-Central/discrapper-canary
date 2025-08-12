@@ -12,7 +12,7 @@ let u = (e) => {
         d = (0, o.ZP)();
     if (null == t.unpublishedAt) return null;
     let p = (0, s.OT)(t.unpublishedAt);
-    function f(e) {
+    function h(e) {
         return (0, r.jsx)(a.IGR, {
             disableColor: !0,
             text: e,
@@ -30,7 +30,7 @@ let u = (e) => {
     }
     return (0, i.EQ)([n, p > 1])
         .with(["card", !0], () => null)
-        .with(["banner", !0], () => f(c.intl.formatToPlainString(c.t["8gsP5O"], { days: p })))
-        .with(["modal", !0], () => f(c.intl.formatToPlainString(c.t.Io7ozs, { days: p })))
-        .otherwise(() => f(c.intl.string(c.t.Bc13HB)));
+        .with(["banner", !0], () => h(c.intl.formatToPlainString(c.t["8gsP5O"], { days: p })))
+        .with(["modal", !0], () => h(c.intl.formatToPlainString(c.t.Io7ozs, { days: p })))
+        .otherwise(() => h(c.intl.string(c.t.Bc13HB)));
 };

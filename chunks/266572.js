@@ -10,8 +10,8 @@ var i = n(544891),
     u = n(594174),
     d = n(580130),
     p = n(695103),
-    f = n(70956),
-    h = n(998502),
+    h = n(70956),
+    f = n(998502),
     g = n(996106),
     m = n(186901),
     b = n(981631);
@@ -58,7 +58,7 @@ function O(e, t) {
         e
     );
 }
-let E = 10 * f.Z.Millis.SECOND,
+let E = 10 * h.Z.Millis.SECOND,
     y = {
         [b.Etm.VALIDATE_APPLICATION]: {
             scope: m.lH,
@@ -91,7 +91,7 @@ let E = 10 * f.Z.Millis.SECOND,
                 } catch (e) {
                     throw (
                         (e.code === b.lTL.INVALID_ENTITLEMENT &&
-                            (h.ZP.focus(null, !0),
+                            (f.ZP.focus(null, !0),
                             (0, a.ZDy)(async () => {
                                 let { default: e } = await n.e("48748").then(n.bind(n, 52004));
                                 return (t) => (0, r.jsx)(e, O(_({}, t), { applicationId: i }));
@@ -121,7 +121,7 @@ let E = 10 * f.Z.Millis.SECOND,
                     })
                     .catch((e) => {
                         throw (
-                            (h.ZP.focus(null, !0),
+                            (f.ZP.focus(null, !0),
                             (0, a.ZDy)(async () => {
                                 let { default: e } = await n.e("48748").then(n.bind(n, 52004));
                                 return (t) => (0, r.jsx)(e, O(_({}, t), { applicationId: l }));

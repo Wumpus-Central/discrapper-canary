@@ -9,8 +9,8 @@ var r = n(544891),
     u = n(996106),
     d = n(914946),
     p = n(452426),
-    f = n(561205),
-    h = n(186901),
+    h = n(561205),
+    f = n(186901),
     g = n(981631);
 let m = {
     [g.Etm.SEND_ANALYTICS_EVENT]: {
@@ -29,8 +29,8 @@ let m = {
             } = e;
             (0, d.bu)(n.transport), (0, d._f)(n.application);
             let o = n.application.id,
-                p = (0, f.Z)(),
-                h = null == p ? void 0 : p.getGuildId(),
+                p = (0, h.Z)(),
+                f = null == p ? void 0 : p.getGuildId(),
                 m = a.Z.getApplication(o);
             if (!(0, c.yE)(null != (t = null == m ? void 0 : m.flags) ? t : 0, g.udG.EMBEDDED_FIRST_PARTY))
                 throw new u.Z({ errorCode: g.lTL.INVALID_COMMAND }, "This application cannot access this API");
@@ -38,7 +38,7 @@ let m = {
                 _ = {
                     activity_application_id: o,
                     activity_channel_type: null == p ? void 0 : p.type,
-                    activity_guild_id: h,
+                    activity_guild_id: f,
                     activity_user_session_id: null == b ? void 0 : b.activityUserSessionId,
                 };
             s.default.track(
@@ -72,7 +72,7 @@ let m = {
         },
     },
     [g.Etm.GET_APPLICATION_TICKET]: {
-        scope: h.lH,
+        scope: f.lH,
         handler(e) {
             let { socket: t } = e,
                 n = t.application.id;

@@ -9,8 +9,8 @@ var r,
     u = n(215569),
     d = n(481060),
     p = n(37234),
-    f = n(134616),
-    h = n(714338),
+    h = n(134616),
+    f = n(714338),
     g = n(663993),
     m = n(84615),
     b = n(984802),
@@ -91,7 +91,7 @@ let N = (0, g.Un)({
         webpackId: 838819,
         name: "CollectiblesShop",
     }),
-    A = (0, g.Un)({
+    Z = (0, g.Un)({
         createPromise: () =>
             Promise.all([
                 n.e("1806"),
@@ -109,10 +109,10 @@ let N = (0, g.Un)({
         webpackId: 994763,
         name: "GuildSettings",
     }),
-    Z = {
+    A = {
         [y.S9g.USER_SETTINGS]: () => ((0, _.yP)("Layers") ? (0, i.jsx)(P, {}) : (0, i.jsx)(N, {})),
         [y.S9g.CHANNEL_SETTINGS]: () => (0, i.jsx)(j, {}),
-        [y.S9g.GUILD_SETTINGS]: () => (0, i.jsx)(A, {}),
+        [y.S9g.GUILD_SETTINGS]: () => (0, i.jsx)(Z, {}),
         [y.S9g.COLLECTIBLES_SHOP]: () => (0, i.jsx)(x, {}),
         [y.S9g.MANA_PLAYGROUND]: () => (0, i.jsx)(T, {}),
     },
@@ -123,7 +123,7 @@ let N = (0, g.Un)({
         tension: 100,
     };
 function D() {
-    return l.useEffect(() => (h.Z.enable(), h.Z.enableTemp(f.u), () => h.Z.disableTemp()), []), null;
+    return l.useEffect(() => (f.Z.enable(), f.Z.enableTemp(h.u), () => f.Z.disableTemp()), []), null;
 }
 class k extends (r = l.PureComponent) {
     static getDerivedStateFromProps(e, t) {
@@ -279,7 +279,7 @@ class M extends l.PureComponent {
     renderComponent(e, t, n) {
         let r;
         return (
-            (r = "string" == typeof e ? Z[e]() : (0, i.jsx)(e, {})),
+            (r = "string" == typeof e ? A[e]() : (0, i.jsx)(e, {})),
             (0, i.jsxs)(
                 k,
                 {

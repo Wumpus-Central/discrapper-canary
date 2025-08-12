@@ -9,8 +9,8 @@ var r = n(255367),
     u = n(122943),
     d = n(665149),
     p = n(670188),
-    f = n(592125),
-    h = n(158776),
+    h = n(592125),
+    f = n(158776),
     g = n(699516),
     m = n(594174),
     b = n(482798),
@@ -90,7 +90,7 @@ function S(e) {
                                 }, 10000));
                         },
                         a = (t, n, l) => {
-                            var a, o, s, c, u, d, p, h;
+                            var a, o, s, c, u, d, p, f;
                             if (!g.Z.isFriend(t)) return !1;
                             let b = m.default.getUser(t);
                             if (null == b) return !1;
@@ -129,10 +129,10 @@ function S(e) {
                                         ((_ = !0), e(t, "presence", null));
                             }
                             if (null != l) {
-                                let n = f.Z.getChannel(l);
+                                let n = h.Z.getChannel(l);
                                 if (null != n) {
                                     let i = "voice-".concat(n.id);
-                                    (null == (h = r.current[t]) ? void 0 : h.voice) !== i &&
+                                    (null == (f = r.current[t]) ? void 0 : f.voice) !== i &&
                                         ((_ = !0),
                                         e(t, "voice", i),
                                         (O = {
@@ -148,7 +148,7 @@ function S(e) {
                         o = (e) => {
                             for (let t of e.updates) {
                                 let e = t.user.id,
-                                    n = h.Z.getPrimaryActivity(e);
+                                    n = f.Z.getPrimaryActivity(e);
                                 if (a(e, n)) break;
                             }
                         },

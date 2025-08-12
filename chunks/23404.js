@@ -9,8 +9,8 @@ var r = n(255367),
     u = n(210887),
     d = n(617136),
     p = n(509212),
-    f = n(272008),
-    h = n(113434),
+    h = n(272008),
+    f = n(113434),
     g = n(569984),
     m = n(497505),
     b = n(373370),
@@ -51,11 +51,11 @@ function x(e) {
     }
     return e;
 }
-function A(e) {
+function Z(e) {
     var t;
     let { quest: n } = e,
-        i = (0, h.B6)(n.config.expiresAt),
-        l = (0, h.B6)(O.r.build(n.config).rewardsExpireAt),
+        i = (0, f.B6)(n.config.expiresAt),
+        l = (0, f.B6)(O.r.build(n.config).rewardsExpireAt),
         a = (0, o.e7)([u.Z], () => u.Z.getState().theme),
         s = (0, c.wjy)(a) ? T.BRd.DARK : T.BRd.LIGHT,
         d = (null == (t = n.userStatus) ? void 0 : t.completedAt) != null;
@@ -89,12 +89,12 @@ function A(e) {
         ],
     });
 }
-function Z(e) {
+function A(e) {
     var t, n, l, u;
     let { nodeRef: _, quest: O } = e,
         E = (0, d.O5)(),
         T = (0, o.e7)([g.Z], () => g.Z.isEnrolling(O.id), [O]),
-        Z = (0, o.e7)([g.Z], () => null != g.Z.questEnrollmentBlockedUntil, []),
+        A = (0, o.e7)([g.Z], () => null != g.Z.questEnrollmentBlockedUntil, []),
         [w, L] = i.useState(!1),
         R = i.useCallback(() => L(!0), []),
         D = i.useCallback(() => L(!1), []),
@@ -102,7 +102,7 @@ function Z(e) {
             e.stopPropagation();
         }, []),
         M = i.useCallback(() => {
-            (0, f.AH)(O.id, {
+            (0, h.AH)(O.id, {
                 questContent: m.jn.ACTIVITY_PANEL,
                 questContentCTA: d.jZ.ACCEPT_QUEST,
                 sourceQuestContent: m.jn.ACTIVITY_PANEL,
@@ -138,12 +138,12 @@ function Z(e) {
             questContent: m.jn.ACTIVITY_PANEL,
             sourceQuestContent: m.jn.ACTIVITY_PANEL,
         }),
-        H = (0, h.tP)(O),
-        B = (null == (t = O.userStatus) ? void 0 : t.enrolledAt) != null,
+        B = (0, f.tP)(O),
+        H = (null == (t = O.userStatus) ? void 0 : t.enrolledAt) != null,
         F = (null == (n = O.userStatus) ? void 0 : n.completedAt) != null,
         z = (null == (l = O.userStatus) ? void 0 : l.claimedAt) != null,
         W = (null == O ? void 0 : O.userStatus) != null && (0, p.zE)(O.userStatus, m.jn.ACTIVITY_PANEL),
-        Y = (0, h.Rf)(O),
+        Y = (0, f.Rf)(O),
         K = (0, b.DD)({
             quest: O,
             taskDetails: Y,
@@ -151,13 +151,13 @@ function Z(e) {
             questContent: m.jn.ACTIVITY_PANEL,
             sourceQuestContent: m.jn.ACTIVITY_PANEL,
         });
-    return W || H || z || Z
+    return W || B || z || A
         ? null
         : (0, r.jsxs)("div", {
               ref: (e) => {
                   _.current = e;
               },
-              className: a()(j.wrapper, { [j.wrapperQuestAccepted]: B }),
+              className: a()(j.wrapper, { [j.wrapperQuestAccepted]: H }),
               onClick: k,
               onKeyPress: k,
               onFocus: R,
@@ -168,7 +168,7 @@ function Z(e) {
                   (0, r.jsxs)("div", {
                       className: j.utils,
                       children: [
-                          B ? (0, r.jsx)(A, { quest: O }) : (0, r.jsx)(y.Z, {}),
+                          H ? (0, r.jsx)(Z, { quest: O }) : (0, r.jsx)(y.Z, {}),
                           (0, r.jsx)(I.r, {
                               quest: O,
                               questContent: m.jn.ACTIVITY_PANEL,
@@ -207,10 +207,10 @@ function Z(e) {
                           }),
                       ],
                   }),
-                  !B &&
+                  !H &&
                       (0, r.jsxs)(r.Fragment, {
                           children: [
-                              (0, r.jsx)(A, { quest: O }),
+                              (0, r.jsx)(Z, { quest: O }),
                               (0, r.jsx)("div", {
                                   className: j.instructions,
                                   children: (0, r.jsx)(c.Text, {
@@ -221,7 +221,7 @@ function Z(e) {
                               }),
                           ],
                       }),
-                  B &&
+                  H &&
                       !F &&
                       (0, r.jsx)(S.Z, {
                           autoplay: w,
@@ -235,7 +235,7 @@ function Z(e) {
                   (0, r.jsxs)("div", {
                       className: j.ctas,
                       children: [
-                          !B &&
+                          !H &&
                               (0, r.jsxs)(r.Fragment, {
                                   children: [
                                       (0, r.jsx)(s.zx, {
@@ -257,7 +257,7 @@ function Z(e) {
                                       }),
                                   ],
                               }),
-                          B &&
+                          H &&
                               !F &&
                               (0, r.jsx)(s.zx, {
                                   className: j.cta,
@@ -286,6 +286,6 @@ let w = function (e) {
         questOrQuests: e.quest,
         questContent: m.jn.ACTIVITY_PANEL,
         sourceQuestContent: m.jn.ACTIVITY_PANEL,
-        children: (t) => (0, r.jsx)(Z, x({ nodeRef: t }, e)),
+        children: (t) => (0, r.jsx)(A, x({ nodeRef: t }, e)),
     });
 };

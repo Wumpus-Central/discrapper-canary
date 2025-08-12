@@ -22,7 +22,7 @@ let d = (e) => {
                           (0, r.jsx)(s.Z, {
                               user: n,
                               className: u.__invalid_giftRecipient,
-                              size: a.EFr.SIZE_20,
+                              size: a.EFr.SIZE_44,
                           }),
                           (0, r.jsx)(a.X6q, {
                               className: u.giftRecipientName,

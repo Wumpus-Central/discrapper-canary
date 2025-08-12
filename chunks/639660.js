@@ -37,8 +37,8 @@ function E(e) {
         { shouldShow: I, notificationConfig: O } = (0, g._)(t, "GuildPowerupNotificationContainer"),
         y = [];
     I && y.push(l.z.VANITY_URL_POWERUP_ROLLBACK_NOTIFICATION);
-    let [P, w] = (0, s.ZT)(y, t),
-        N = null != P && null != O,
+    let [w, P] = (0, s.ZT)(y, t),
+        N = null != w && null != O,
         Z = (0, u.W)(t, "GuildPowerupNotificationContainer"),
         S = [];
     N ||
@@ -67,7 +67,7 @@ function E(e) {
                             {
                                 notificationConfig: O,
                                 markAsDismissed: (e) => {
-                                    w(e);
+                                    P(e);
                                 },
                             },
                             "rollback-notification",

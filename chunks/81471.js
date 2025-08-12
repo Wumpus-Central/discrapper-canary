@@ -9,8 +9,8 @@ var r = n(255367),
     u = n(905405),
     d = n(255269),
     p = n(937889),
-    f = n(267128),
-    h = n(695346),
+    h = n(267128),
+    f = n(695346),
     g = n(496675),
     m = n(699516),
     b = n(868807),
@@ -32,7 +32,7 @@ let I = i.memo(function (e) {
             [I],
         ),
         T = (0, o.e7)([g.Z], () => g.Z.can(_.Plq.MANAGE_MESSAGES, t)),
-        P = h.cC.useSetting(),
+        P = f.cC.useSetting(),
         { content: j } = i.useMemo(
             () =>
                 (null == I ? void 0 : I.content) != null && "" !== I.content
@@ -68,7 +68,7 @@ let I = i.memo(function (e) {
                 children: E.intl.string(E.t.uxrh1N),
             });
         else if (null != I) {
-            let { contentPlaceholder: e, renderedContent: t } = (0, f.f)(
+            let { contentPlaceholder: e, renderedContent: t } = (0, h.f)(
                 I,
                 j,
                 S,

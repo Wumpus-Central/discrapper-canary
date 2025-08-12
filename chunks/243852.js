@@ -9,8 +9,8 @@ var r,
     u = n(570140),
     d = n(278323),
     p = n(581567),
-    f = n(594190),
-    h = n(581883),
+    h = n(594190),
+    f = n(581883),
     g = n(70956),
     m = n(780570),
     b = n(314897),
@@ -57,9 +57,9 @@ function x(e) {
     null == u && (u = T[e.applicationId] = new c.Xp()).start(C, () => x(e)),
         t || ((N[e.applicationId] = e), s.K.set(I, N));
 }
-function A() {
+function Z() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
-        t = f.ZP.getVisibleRunningGames(),
+        t = h.ZP.getVisibleRunningGames(),
         n = new Set();
     for (let { name: e, distributor: r, exePath: i } of t) {
         let t = _.Z.getGameByName(e);
@@ -75,13 +75,13 @@ function A() {
     }
     for (let t of Object.keys(N)) n.has(t) || j(N[t], e);
 }
-function Z() {
+function A() {
     for (let e of Object.keys(N)) j(N[e]);
     P = !1;
 }
 class w extends (i = o.ZP.Store) {
     initialize() {
-        this.waitFor(f.ZP, h.Z, O.Z), this.syncWith([h.Z], A);
+        this.waitFor(h.ZP, f.Z, O.Z), this.syncWith([f.Z], Z);
     }
     getActivities() {
         return N;
@@ -97,17 +97,17 @@ class w extends (i = o.ZP.Store) {
           })
         : (w[l] = a),
     new w(u.Z, {
-        RUNNING_GAMES_CHANGE: () => A(),
+        RUNNING_GAMES_CHANGE: () => Z(),
         CONNECTION_OPEN: function () {
             if (P) return !1;
             for (let e of Object.keys(N)) x(N[e]);
-            A(!1), (P = !0);
+            Z(!1), (P = !0);
         },
         CONNECTION_CLOSED: function (e) {
             let { code: t } = e;
-            4004 === t && Z();
+            4004 === t && A();
         },
-        LOGOUT: Z,
+        LOGOUT: A,
         ACTIVITY_UPDATE_SUCCESS: function (e) {
             let { applicationId: t, token: n } = e,
                 r = N[t];

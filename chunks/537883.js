@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f });
+n.d(t, { Z: () => h });
 var r,
     i,
     l,
@@ -27,7 +27,7 @@ class p extends (l = a.ZP.Store) {
               writable: !0,
           })
         : (p[r] = i);
-let f = new p(o.Z, {
+let h = new p(o.Z, {
     CONNECTION_OPEN: d,
     GLOBAL_DISCOVERY_SERVERS_SEARCH_LAYOUT_RESET: d,
     GLOBAL_DISCOVERY_SERVERS_SEARCH_COUNT_SUCCESS: function (e) {

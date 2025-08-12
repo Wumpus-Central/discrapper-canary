@@ -9,12 +9,12 @@ var r = n(255367),
     u = n(701190),
     d = n(449934),
     p = n(650233),
-    f = n(981631),
-    h = n(898625),
+    h = n(981631),
+    f = n(898625),
     g = n(780822);
 let m = (e) => {
     let { guildId: t, inviteCode: n } = e,
-        [m, b] = i.useState(h.hO.INITIAL),
+        [m, b] = i.useState(f.hO.INITIAL),
         [_, O] = i.useState(null != n);
     i.useEffect(() => {
         null != n && a.ZP.resolveInvite(n, "Hub").finally(() => O(!1));
@@ -22,7 +22,7 @@ let m = (e) => {
     let E = (0, l.e7)([u.Z], () => (null != n ? u.Z.getInvite(n) : null)),
         y = (0, l.e7)([c.Z], () => c.Z.getGuild(t));
     i.useEffect(() => {
-        null != y && (0, s.uL)(f.Z5c.CHANNEL(t));
+        null != y && (0, s.uL)(h.Z5c.CHANNEL(t));
     }, [y, t]);
     let v = i.useCallback((e) => {
             b((t) => Math.max(t, e));

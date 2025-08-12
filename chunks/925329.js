@@ -77,7 +77,7 @@ let m = (e) => {
     if (
         (null != c && (t = p(c)),
         null != n && null == t && (t = n.getIconURL(_(b))),
-        null == (t = (0, s.Z)(m, t)) && null != i)
+        void 0 === (t = (0, s.Z)(m, t)) && null != i)
     ) {
         let e = h(b);
         return (0, r.jsx)(l.Z, {
@@ -86,7 +86,7 @@ let m = (e) => {
             size: e,
         });
     }
-    if (null == t)
+    if (void 0 === t || "" === t)
         return y
             ? (0, r.jsx)(a.IMN, {
                   size: "md",

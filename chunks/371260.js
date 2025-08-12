@@ -14,10 +14,10 @@ let u = {
     },
     d = function (e) {
         let { animate: t, state: n, cleanUp: d, children: p } = e,
-            f = (0, a.e7)([s.Z], () => s.Z.useReducedMotion),
-            h = i.useMemo(
+            h = (0, a.e7)([s.Z], () => s.Z.useReducedMotion),
+            f = i.useMemo(
                 () =>
-                    !1 === t || f
+                    !1 === t || h
                         ? { opacity: 1 }
                         : n === o.pJH.ENTERED || n === o.pJH.MOUNTED
                           ? {
@@ -33,9 +33,9 @@ let u = {
                                     d();
                                 },
                             },
-                [t, d, f, n],
+                [t, d, h, n],
             ),
-            g = (0, o.q_F)(h);
+            g = (0, o.q_F)(f);
         return (0, r.jsx)(l.animated.div, {
             style: g,
             className: c.transitionItem,

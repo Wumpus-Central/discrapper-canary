@@ -1,39 +1,39 @@
-n.d(t, { Z: () => Z });
+n.d(t, { Z: () => b });
 var l = n(255367);
 n(73800);
 var i = n(442837),
     r = n(481060),
-    a = n(493683),
-    o = n(40851),
+    o = n(493683),
+    a = n(40851),
     s = n(740492),
     u = n(314897),
     d = n(592125),
     c = n(699516),
     g = n(944486),
-    f = n(981631),
-    b = n(388032);
-function Z(e) {
-    let { user: t, context: Z, label: m, joinCallVideo: v, id: p, onCall: O } = e,
-        h = (0, o.Aq)(),
-        j = (0, i.e7)([u.default], () => u.default.getId() === t.id),
-        x = (0, i.e7)([c.Z], () => c.Z.isBlocked(t.id)),
-        _ = (0, i.e7)([g.Z, d.Z], () => g.Z.getVoiceChannelId() === d.Z.getDMFromUserId(t.id));
-    if (j || Z === f.IlC.POPOUT || _ || t.bot || t.isProvisional) return null;
+    Z = n(981631),
+    f = n(388032);
+function b(e) {
+    let { user: t, context: b, label: m, joinCallVideo: O, id: h, onCall: E } = e,
+        j = (0, a.Aq)(),
+        v = (0, i.e7)([u.default], () => u.default.getId() === t.id),
+        P = (0, i.e7)([c.Z], () => c.Z.isBlocked(t.id)),
+        p = (0, i.e7)([g.Z, d.Z], () => g.Z.getVoiceChannelId() === d.Z.getDMFromUserId(t.id));
+    if (v || b === Z.IlC.POPOUT || p || t.bot || t.isProvisional) return null;
     let y = () => {
-            null == O || O(),
-                a.Z.openPrivateChannel({
+            null == E || E(),
+                o.Z.openPrivateChannel({
                     recipientIds: t.id,
                     joinCall: !0,
-                    joinCallVideo: v,
+                    joinCallVideo: O,
                 }),
-                h.dispatch(f.CkL.POPOUT_CLOSE),
+                j.dispatch(Z.CkL.POPOUT_CLOSE),
                 (0, r.pTH)();
         },
-        N = !s.ZP.disableCallUserConfirmationPrompt;
+        S = !s.ZP.disableCallUserConfirmationPrompt;
     return (0, l.jsx)(r.sNh, {
-        id: null != p ? p : "call",
-        label: null != m ? m : b.intl.string(b.t.JJogjo),
-        action: N
+        id: null != h ? h : "call",
+        label: null != m ? m : f.intl.string(f.t.JJogjo),
+        action: S
             ? () => {
                   (0, r.ZDy)(async () => {
                       let { default: e } = await n.e("27157").then(n.bind(n, 736454));
@@ -69,6 +69,6 @@ function Z(e) {
                   });
               }
             : y,
-        disabled: x,
+        disabled: P,
     });
 }

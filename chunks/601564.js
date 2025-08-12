@@ -15,8 +15,8 @@ var r = n(255367),
     u = n(410575),
     d = n(666743),
     p = n(112724),
-    f = n(447269),
-    h = n(612226),
+    h = n(447269),
+    f = n(612226),
     g = n(714338),
     m = n(663993),
     b = n(628123),
@@ -57,14 +57,14 @@ class j extends i.PureComponent {
             })),
             this.props.isAuthenticated && (0, c.tZ)(),
             g.Z.disable(),
-            g.Z.setLayout(f.r),
+            g.Z.setLayout(h.r),
             g.Z.enable(),
             (0, O.e)("application_store");
     }
     componentWillUnmount() {
         null != this.stopListeningToHistory && this.stopListeningToHistory(),
             g.Z.disable(),
-            g.Z.setLayout(h.oT),
+            g.Z.setLayout(f.oT),
             g.Z.enable();
     }
     renderCustomErrorMessage() {

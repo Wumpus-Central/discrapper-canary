@@ -22,8 +22,8 @@ function p(e, t, n) {
         e
     );
 }
-let f = "STAGE_INVITED_TO_SPEAK_MODAL";
-class h extends a.Z {
+let h = "STAGE_INVITED_TO_SPEAK_MODAL";
+class f extends a.Z {
     _initialize() {
         l.Z.subscribe("VOICE_STATE_UPDATES", this.handleVoiceStateUpdates);
     }
@@ -36,19 +36,19 @@ class h extends a.Z {
                 var t;
                 let { voiceStates: l } = e,
                     a = o.default.getId(),
-                    h = null == (t = c.Z.getSession()) ? void 0 : t.sessionId,
-                    g = l.find((e) => e.userId === a && e.sessionId === h);
+                    f = null == (t = c.Z.getSession()) ? void 0 : t.sessionId,
+                    g = l.find((e) => e.userId === a && e.sessionId === f);
                 if (null == g) return;
                 let m = g.channelId;
                 if (null == m) {
-                    (0, i.nfh)(f) && (0, i.Mr3)(f);
+                    (0, i.nfh)(h) && (0, i.Mr3)(h);
                     return;
                 }
                 let b = s.Z.getChannel(m);
                 if (!(null == b ? void 0 : b.isGuildStageVoice())) return;
                 let _ = (0, u.gf)(g) === u.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
                 if (null != b && _) {
-                    if ((0, i.nfh)(f)) return;
+                    if ((0, i.nfh)(h)) return;
                     (0, i.ZDy)(
                         async () => {
                             let { default: e } = await n.e("13878").then(n.bind(n, 113140));
@@ -90,7 +90,7 @@ class h extends a.Z {
                             };
                         },
                         {
-                            modalKey: f,
+                            modalKey: h,
                             onCloseRequest: d.VqG,
                         },
                     );
@@ -98,4 +98,4 @@ class h extends a.Z {
             });
     }
 }
-let g = new h();
+let g = new f();

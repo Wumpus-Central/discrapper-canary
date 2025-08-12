@@ -9,8 +9,8 @@ var r = n(255367),
     u = n(680180),
     d = n(164991),
     p = n(444324),
-    f = n(726115),
-    h = n(859921),
+    h = n(726115),
+    f = n(859921),
     g = n(750910),
     m = n(28494),
     b = n(29086),
@@ -21,19 +21,19 @@ var r = n(255367),
     v = n(388032),
     I = n(503772);
 function C() {
-    let e = i.useRef((0, f.PM)()),
+    let e = i.useRef((0, h.PM)()),
         { onScroll: t, scrollPosition: n, resetScrollPosition: C } = (0, a.M)(),
         { tabs: S, selectedTab: N, setSelectedTab: T } = (0, b.Y)(),
-        P = (0, f.lg)(N),
+        P = (0, h.lg)(N),
         j = !E.MU.has(N),
         {
             searchQuery: x,
-            onSearchTextChange: A,
-            onClearSearch: Z,
+            onSearchTextChange: Z,
+            onClearSearch: A,
             onSearchSubmit: w,
             isSearchVisible: L,
         } = (0, m.H)({ loadId: e.current }),
-        R = h.Z.useField("searchBarState"),
+        R = f.Z.useField("searchBarState"),
         {
             onTabsAvailableWidthChange: D,
             onCollapsedSearchBarClick: k,
@@ -43,16 +43,16 @@ function C() {
             isSearchBarVisible: j,
             isSearchBarEmpty: "" === x.trim(),
             searchBarState: R,
-            setSearchBarState: (e) => h.Z.setState({ searchBarState: e }),
+            setSearchBarState: (e) => f.Z.setState({ searchBarState: e }),
         }),
         G = d.Z.useField("fetchedQuery"),
         V = i.useCallback(
             (e) => {
-                T(e), L && Z();
+                T(e), L && A();
             },
-            [L, Z, T],
+            [L, A, T],
         ),
-        H = i.useMemo(
+        B = i.useMemo(
             () =>
                 L
                     ? S.filter((e) => {
@@ -62,14 +62,14 @@ function C() {
                     : S,
             [S, L],
         ),
-        B = i.useRef(new p.Z(P)),
+        H = i.useRef(new p.Z(P)),
         { onGuildCardSeen: F, onGuildCardClick: z } = (0, g.H)({
-            guildDiscoveryCardSeenManager: B.current,
+            guildDiscoveryCardSeenManager: H.current,
             loadId: e.current,
         });
     return (
         i.useEffect(() => {
-            B.current.flushSeenGuilds(e.current);
+            H.current.flushSeenGuilds(e.current);
         }, [P]),
         i.useEffect(() => {
             C();
@@ -87,13 +87,13 @@ function C() {
                         L
                             ? (0, r.jsx)(s.Cm, {
                                   icon: l.j9r,
-                                  onClick: Z,
+                                  onClick: A,
                               })
                             : (0, r.jsx)(s.aV, { icon: l.QTo }),
                         !L &&
                             (0, r.jsx)(c.Z, {
                                 className: U,
-                                tabs: H,
+                                tabs: B,
                                 selectedTab: L ? null : N,
                                 onTabSelect: V,
                                 onAvailableWidthChange: D,
@@ -109,8 +109,8 @@ function C() {
                             (0, r.jsx)(u.Z, {
                                 query: x,
                                 placeholder: v.intl.string(v.t["5h0QOD"]),
-                                onTextChange: A,
-                                onClear: Z,
+                                onTextChange: Z,
+                                onClear: A,
                                 onSubmit: w,
                                 onCollapsedClick: k,
                                 state: L ? y.GlobalDiscoverySearchBarState.DEFAULT : R,

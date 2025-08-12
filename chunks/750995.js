@@ -10,14 +10,14 @@ var i = n(704215),
     u = n(650774),
     d = n(430824),
     p = n(496675),
-    f = n(228392),
-    h = n(981631),
+    h = n(228392),
+    f = n(981631),
     g = n(921944);
 let m = (e) => {
     var t;
     let n = d.Z.getGuild(e),
-        r = !!(null == n ? void 0 : n.features.has(h.oNc.COMMUNITY)),
-        l = p.Z.can(h.Plq.MANAGE_CHANNELS, n),
+        r = !!(null == n ? void 0 : n.features.has(f.oNc.COMMUNITY)),
+        l = p.Z.can(f.Plq.MANAGE_CHANNELS, n),
         a = (0, s.zu)(i.z.FORUM_CHANNEL_UPSELL_MODAL),
         o = null != (t = u.Z.getMemberCount(e)) ? t : 0;
     return r && l && !a && o >= 200;
@@ -32,7 +32,7 @@ class b extends o.Z {
     handleChannelSelect(e) {
         let { guildId: t } = e;
         if (null == t || !m(t)) return;
-        (0, f.qz)(), (0, c.kk)(i.z.FORUM_CHANNEL_UPSELL_MODAL);
+        (0, h.qz)(), (0, c.kk)(i.z.FORUM_CHANNEL_UPSELL_MODAL);
         let a = function () {
             let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : g.L.DISMISS;
             (0, s.Q3)(i.z.FORUM_CHANNEL_UPSELL_MODAL, { dismissAction: e });
@@ -95,7 +95,7 @@ class b extends o.Z {
             },
             {
                 onCloseCallback: () => (0, s.Q3)(i.z.FORUM_CHANNEL_UPSELL_MODAL, { dismissAction: g.L.DISMISS }),
-                onCloseRequest: h.VqG,
+                onCloseRequest: f.VqG,
             },
         );
     }

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => l }), n(539854);
 var r = n(73800),
     o = n(823379),
-    i = n(267642),
-    a = n(535396),
+    a = n(267642),
+    i = n(535396),
     s = n(93841),
     c = n(388032);
 function l(e) {
@@ -19,11 +19,11 @@ function l(e) {
           };
     return r.useMemo(() => {
         let r = [],
-            u = (0, a.d5)();
+            d = (0, i.d5)();
         return (
             t &&
                 r.push({
-                    perkIcon: i.Ro.EMOJI,
+                    perkIcon: a.Ro.EMOJI,
                     description: c.intl.formatToPlainString(s.default.NXvV09, {
                         totalEmojis: e.features.total_emoji_slots,
                         additionalEmojis: e.features.additional_emoji_slots,
@@ -31,7 +31,7 @@ function l(e) {
                 }),
             n &&
                 r.push({
-                    perkIcon: i.Ro.STICKER,
+                    perkIcon: a.Ro.STICKER,
                     description: c.intl.formatToPlainString(s.default.ZEvvPz, {
                         totalStickers: e.features.total_sticker_slots,
                         additionalStickers: e.features.additional_sticker_slots,
@@ -39,13 +39,13 @@ function l(e) {
                 }),
             l &&
                 r.push({
-                    perkIcon: i.Ro.SOUNDBOARD,
+                    perkIcon: a.Ro.SOUNDBOARD,
                     description: c.intl.formatToPlainString(s.default["s9u/Ex"], {
                         totalSoundboards: e.features.total_sound_slots,
                         additionalSoundboards: e.features.additional_sound_slots,
                     }),
                 }),
-            r.concat(e.features.features.map((e) => u[e]).filter(o.lm))
+            r.concat(e.features.features.map((e) => d[e]).filter(o.lm))
         );
     }, [e, t, n, l]);
 }

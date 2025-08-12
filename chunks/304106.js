@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h }), n(953529);
+n.d(t, { Z: () => f }), n(953529);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -18,7 +18,7 @@ let p = (e) => {
             }),
         });
     },
-    f = (e) => {
+    h = (e) => {
         let { circle: t, smallHeader: n, text: i, className: l } = e;
         return (0, r.jsxs)("div", {
             className: a()(d.recommendationReason, l),
@@ -42,18 +42,18 @@ let p = (e) => {
             ],
         });
     };
-class h extends i.Component {
+class f extends i.Component {
     render() {
         let { reason: e, className: t } = this.props;
         if (e.type === c.AzA.RECENT_RELEASE_DATE)
-            return (0, r.jsx)(f, {
+            return (0, r.jsx)(h, {
                 className: t,
                 circle: (0, r.jsx)(p, { IconComponent: o.Que }),
                 smallHeader: u.intl.string(u.t.u81aYW),
                 text: (0, s.vc)(e.releaseDate, "LL"),
             });
         if (e.type === c.AzA.RELEASE_DATE)
-            return (0, r.jsx)(f, {
+            return (0, r.jsx)(h, {
                 className: t,
                 circle: (0, r.jsx)(p, { IconComponent: o.Que }),
                 smallHeader: u.intl.string(u.t.qpwaNT),
@@ -61,7 +61,7 @@ class h extends i.Component {
             });
         if (e.type === c.AzA.EARLY_ACCESS)
             if (null != e.releaseDate)
-                return (0, r.jsx)(f, {
+                return (0, r.jsx)(h, {
                     className: t,
                     circle: (0, r.jsx)(p, {
                         IconComponent: o.d$P,
@@ -71,7 +71,7 @@ class h extends i.Component {
                     text: (0, s.vc)(e.releaseDate, "LL"),
                 });
             else
-                return (0, r.jsx)(f, {
+                return (0, r.jsx)(h, {
                     className: t,
                     circle: (0, r.jsx)(p, {
                         IconComponent: o.d$P,
@@ -80,13 +80,13 @@ class h extends i.Component {
                     text: u.intl.string(u.t.HYys0t),
                 });
         return e.type === c.AzA.FLAVOR_TEXT
-            ? (0, r.jsx)(f, {
+            ? (0, r.jsx)(h, {
                   circle: (0, r.jsx)(p, { IconComponent: o.dz2 }),
                   text: e.flavorText,
                   className: t,
               })
             : e.type === c.AzA.HAS_FREE_PREMIUM_CONTENT
-              ? (0, r.jsx)(f, {
+              ? (0, r.jsx)(h, {
                     className: t,
                     circle: (0, r.jsx)(p, {
                         IconComponent: o.SrA,

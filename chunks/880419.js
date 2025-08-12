@@ -144,19 +144,19 @@ function j(e) {
             return o;
         })(e, ["guildId", "powerup", "compact", "iconSize", "onError"]);
     let { onActivate: C, isLoading: I, error: O, onShowDeactivate: y } = (0, d.ZP)(t, n),
-        P = (0, c.ZP)(t, n).type !== p.A3.INACTIVE,
-        { disabled: w, reason: N } = (0, u.Z)(t, n, P);
+        w = (0, c.ZP)(t, n).type !== p.A3.INACTIVE,
+        { disabled: P, reason: N } = (0, u.Z)(t, n, w);
     return (
         o.useEffect(() => {
             null == h || h(O);
         }, [O, h]),
         (0, r.jsx)(a.ua7, {
             delay: 100,
-            "aria-label": null != N ? N : P ? m.intl.string(f.default.TZsu1d) : void 0,
+            "aria-label": null != N ? N : w ? m.intl.string(f.default.TZsu1d) : void 0,
             text:
                 null != N
                     ? N
-                    : P
+                    : w
                       ? (0, r.jsx)(b, {
                             guildId: t,
                             powerup: n,
@@ -171,10 +171,10 @@ function j(e) {
                                 className: g.secondaryButton,
                                 innerClassName: g.buttonInner,
                                 wrapperClassName: l()(g.secondaryButton, { [g.buttonWrapper]: !0 === E.grow }),
-                                color: P ? s.Tt.PRIMARY : s.Tt.BRAND,
-                                "aria-label": m.intl.string(P ? f.default.TZsu1d : f.default.gSxlHR),
-                                disabled: w,
-                                onClick: P ? y : C,
+                                color: w ? s.Tt.PRIMARY : s.Tt.BRAND,
+                                "aria-label": m.intl.string(w ? f.default.TZsu1d : f.default.gSxlHR),
+                                disabled: P,
+                                onClick: w ? y : C,
                                 submitting: I,
                             }),
                             E,
@@ -182,7 +182,7 @@ function j(e) {
                         {
                             children: (0, r.jsx)(_, {
                                 powerup: n,
-                                isActive: P,
+                                isActive: w,
                                 compact: i,
                                 iconSize: j,
                             }),

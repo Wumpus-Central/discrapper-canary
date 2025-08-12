@@ -243,7 +243,7 @@ function J(e) {
         tO = (0, c.e7)([T.Z], () => (null != eB ? T.Z.getForSKU(eB) : null), [eB]),
         [tv, tI] = i.useState(null),
         tT = null != (a = null == Y ? void 0 : Y.inReverseTrial) && a && !J,
-        tS = (0, b.Z)({ location: "PaymentModal" }) && tn,
+        tS = (0, b.ZP)({ location: "PaymentModal" }) && tn,
         { isDisplayingWowMomentConfirmation: tA } = (0, c.cj)([E.Z], () => ({
             isDisplayingWowMomentConfirmation: E.Z.isDisplayingWowMomentConfirmation,
         })),

@@ -9,8 +9,8 @@ var r = n(255367),
     u = n(393903),
     d = n(626135),
     p = n(823379),
-    f = n(900849),
-    h = n(356164),
+    h = n(900849),
+    f = n(356164),
     g = n(164991),
     m = n(726115),
     b = n(28494),
@@ -38,28 +38,28 @@ let S = Object.freeze({
         object: I.qAy.CARD,
         section: I.jXE.DISCOVER_SEARCH,
     },
-    P = s().throttle(f.c6, 1000, {
+    P = s().throttle(h.c6, 1000, {
         leading: !1,
         trailing: !0,
     });
 function j(e) {
     let { loadId: t, onGuildCardSeen: n, onGuildCardClick: l } = e,
-        { guildIds: s, loading: f, searchResultsQuery: I, loadMore: j, searchCategoryId: x } = (0, b.f)({ loadId: t }),
-        A = 0 === s.length && !f,
-        Z = i.useContext(d.AnalyticsContext),
+        { guildIds: s, loading: h, searchResultsQuery: I, loadMore: j, searchCategoryId: x } = (0, b.f)({ loadId: t }),
+        Z = 0 === s.length && !h,
+        A = i.useContext(d.AnalyticsContext),
         [w, L] = i.useState((0, m.PM)()),
         [R, D] = i.useState(!0),
         k = i.useRef(R),
         [M, U] = i.useState(3),
         G = i.useRef(M),
         V = i.useRef(null),
-        H = i.useCallback(
-            (e) => {
-                if (null != e && !A && !f) 336 * (s.length / M) <= e.height && j();
-            },
-            [A, f, s.length, M, j],
-        ),
         B = i.useCallback(
+            (e) => {
+                if (null != e && !Z && !h) 336 * (s.length / M) <= e.height && j();
+            },
+            [Z, h, s.length, M, j],
+        ),
+        H = i.useCallback(
             (e) => {
                 let t = e.contentRect;
                 if (null == t) return;
@@ -67,11 +67,11 @@ function j(e) {
                 n < 1024 && k.current ? ((k.current = !1), D(!1)) : n > 1024 && !k.current && ((k.current = !0), D(!0));
                 let r = 1;
                 for (n -= 450 * !!R, n -= 280; n > 0; ) (n -= 264), (r += 1);
-                r !== G.current && ((G.current = r), U(r)), H(t);
+                r !== G.current && ((G.current = r), U(r)), B(t);
             },
-            [R, H],
+            [R, B],
         ),
-        F = (0, u.y)(B, [R, H]);
+        F = (0, u.y)(H, [R, B]);
     i.useEffect(() => {
         L((0, m.PM)());
     }, [I]),
@@ -80,13 +80,13 @@ function j(e) {
                 loadId: t,
                 searchId: w,
                 query: I,
-                guildResults: s.map(h.Z.getGuild).filter(p.lm),
-                analyticsContext: Z,
+                guildResults: s.map(f.Z.getGuild).filter(p.lm),
+                analyticsContext: A,
                 categoryId: x,
             });
-        }, [Z, s, t, x, w, I]);
+        }, [A, s, t, x, w, I]);
     let z = i.useCallback((e) => n(e, x), [n, x]),
-        W = i.useMemo(() => (f ? [s.length, 0] : [s.length]), [s.length, f]),
+        W = i.useMemo(() => (h ? [s.length, 0] : [s.length]), [s.length, h]),
         Y = i.useCallback(
             (e, n, i) => {
                 switch (e) {
@@ -105,7 +105,7 @@ function j(e) {
                                             className: C.headingFilters,
                                             children: [(0, r.jsx)(O.Z, { loadId: t }), (0, r.jsx)(y.Z, { loadId: t })],
                                         }),
-                                    A && (0, r.jsx)(E.Z, { loadId: t }),
+                                    Z && (0, r.jsx)(E.Z, { loadId: t }),
                                 ],
                             },
                             i,
@@ -114,21 +114,21 @@ function j(e) {
                         return (0, r.jsx)(c.$jN, { className: a()(C.spinner, { [C.spinnerWithSidebar]: R }) }, i);
                 }
             },
-            [A, R, t],
+            [Z, R, t],
         ),
         K = i.useCallback(
             (e) => {
                 switch (e) {
                     case 0:
                         let t = R ? 16 : 50;
-                        return A ? t + 448 : t;
+                        return Z ? t + 448 : t;
                     case 1:
                         return 120;
                     default:
                         throw Error("[getSectionHeight] Failed for section: ".concat(e));
                 }
             },
-            [A, R],
+            [Z, R],
         ),
         q = i.useCallback(
             (e, t) => {

@@ -1,4 +1,4 @@
-n.d(t, { l: () => f });
+n.d(t, { l: () => h });
 var r = n(255367);
 n(73800);
 var i = n(442837),
@@ -55,7 +55,7 @@ function p(e) {
               ],
           });
 }
-function f(e) {
+function h(e) {
     var t, n;
     function i(t) {
         return (0, r.jsx)(p, {

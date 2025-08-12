@@ -77,38 +77,38 @@ class d extends (r = l.PureComponent) {
                 } = this.props;
                 if (i.length < 2) return;
                 let p = Math.max(Math.min((e - this.dataChangedAt) / l, 1), 0),
-                    f = r.getContext("2d"),
-                    h = this.maxValue;
-                (f.strokeStyle = a), (f.lineWidth = c);
-                let g = r.height - f.lineWidth,
-                    m = f.createLinearGradient(0, 0, 0, g);
+                    h = r.getContext("2d"),
+                    f = this.maxValue;
+                (h.strokeStyle = a), (h.lineWidth = c);
+                let g = r.height - h.lineWidth,
+                    m = h.createLinearGradient(0, 0, 0, g);
                 if (null != d) m.addColorStop(0, d);
                 else {
                     let { r: e, g: t, b: n } = s.oo(a);
                     m.addColorStop(0, "rgba(".concat(e, ", ").concat(t, ", ").concat(n, ", 0)"));
                 }
-                m.addColorStop(1, this.fillColor), (f.fillStyle = m);
+                m.addColorStop(1, this.fillColor), (h.fillStyle = m);
                 let b = i.length >= o ? o : i.length;
-                f.setTransform(1, 0, 0, -1, 0, r.height),
-                    f.clearRect(0, 0, r.width, r.height),
-                    f.translate(0, 0.5 * f.lineWidth);
+                h.setTransform(1, 0, 0, -1, 0, r.height),
+                    h.clearRect(0, 0, r.width, r.height),
+                    h.translate(0, 0.5 * h.lineWidth);
                 let _ = Math.floor(r.width / (b - 3)),
                     O = 0.5 * _;
-                f.translate(_ - _ * p, 0), f.beginPath();
+                h.translate(_ - _ * p, 0), h.beginPath();
                 let E = -_;
                 i.forEach((e, r) => {
                     (t = {
                         x: E,
-                        y: (g * e) / h,
+                        y: (g * e) / f,
                     }),
-                        0 === r ? f.moveTo(t.x, t.y) : f.bezierCurveTo(n.x + O, n.y, t.x - O, t.y, t.x, t.y),
+                        0 === r ? h.moveTo(t.x, t.y) : h.bezierCurveTo(n.x + O, n.y, t.x - O, t.y, t.x, t.y),
                         (n = t),
                         (E += _);
                 }),
-                    f.stroke(),
-                    f.lineTo(E - _, 0),
-                    f.lineTo(0, 0),
-                    f.fill(),
+                    h.stroke(),
+                    h.lineTo(E - _, 0),
+                    h.lineTo(0, 0),
+                    h.fill(),
                     u && p < 1 && (this.animationFrameRequestId = window.requestAnimationFrame(this.updateAnimation));
             });
     }

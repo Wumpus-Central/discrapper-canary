@@ -8,11 +8,11 @@ var r = n(255367),
     c = n(321051),
     u = n(669079),
     d = n(479446),
-    f = n(646476),
-    _ = n(981632),
-    p = n(96848),
-    h = n(703926),
-    m = n(474936),
+    f = n(47280),
+    _ = n(543995),
+    p = n(981632),
+    h = n(96848),
+    m = n(703926),
     g = n(388032),
     E = n(591858);
 function b(e, t, n) {
@@ -107,16 +107,11 @@ let S = (e) => {
         M = (0, u.MY)(b, t),
         k = M === u.xr.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD,
         j = M !== u.xr.DEFAULT,
-        U = (0, f.rK)(),
-        { enabled: G } = f.ZP.useExperiment(
-            { location: "premiumGiftSelect_GiftAnimationOptions" },
-            { autoTrackExposure: U },
-        ),
-        B = null;
-    j && (B = U && G ? m.kJ : m.QI);
-    let Z = (e) => {
-        null != C && C(null == e ? void 0 : e);
-    };
+        U = (0, _.m)(),
+        G = (0, f.ZP)({ location: "GiftAnimationOptions" }),
+        B = (e) => {
+            null != C && C(null == e ? void 0 : e);
+        };
     return (0, r.jsxs)("div", {
         children: [
             j &&
@@ -124,7 +119,7 @@ let S = (e) => {
                     className: a()(E.giftMainAnimation, n),
                     children: [
                         null != O
-                            ? (0, r.jsx)(_.Z, {
+                            ? (0, r.jsx)(p.Z, {
                                   giftStyle: O,
                                   defaultAnimationState: d.SR.ACTION,
                                   idleAnimationState: d.SR.LOOP,
@@ -134,21 +129,15 @@ let S = (e) => {
                             : (0, r.jsx)(s.$jN, { className: E.spinner }),
                         k &&
                             (0, r.jsxs)("div", {
-                                className: E.soundEmojiContainer,
+                                className: a()(E.soundEmojiContainer, G && E.refresh),
                                 children: [
-                                    (0, r.jsx)("div", {
-                                        className: E.sound,
-                                        children: (0, r.jsx)(c.Z, {
-                                            sound: A,
-                                            onSelect: Z,
-                                        }),
+                                    (0, r.jsx)(c.Z, {
+                                        sound: A,
+                                        onSelect: B,
                                     }),
-                                    (0, r.jsx)("div", {
-                                        className: E.emoji,
-                                        children: (0, r.jsx)(p.Z, {
-                                            setEmojiConfetti: N,
-                                            emojiConfetti: null == S ? void 0 : S,
-                                        }),
+                                    (0, r.jsx)(h.Z, {
+                                        setEmojiConfetti: N,
+                                        emojiConfetti: null == S ? void 0 : S,
                                     }),
                                 ],
                             }),
@@ -172,10 +161,11 @@ let S = (e) => {
                     ),
                     {
                         children:
-                            null != B &&
-                            B.map((e, t) =>
+                            null != U &&
+                            !G &&
+                            U.map((e, t) =>
                                 (0, r.jsx)(
-                                    h.m,
+                                    m.m,
                                     {
                                         isSelected: O === e,
                                         giftStyle: e,

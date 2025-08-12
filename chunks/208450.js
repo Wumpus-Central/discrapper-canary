@@ -1,4 +1,9 @@
-n.d(t, { Z: () => Y }), n(35282), n(704826);
+n.d(t, {
+    Z: () => Y,
+    o: () => H,
+}),
+    n(35282),
+    n(704826);
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -116,40 +121,47 @@ class V extends i.PureComponent {
         });
     }
     render() {
-        let { searchContext: e, editorState: t, hasResults: n, className: i } = this.props,
-            { focused: o } = this.state,
-            s = y.Sq(t).length > 0;
+        let {
+                searchContext: e,
+                editorState: t,
+                hasResults: n,
+                className: i,
+                searchBarContainerClassName: o,
+                searchBarClassName: s,
+            } = this.props,
+            { focused: l } = this.state,
+            c = y.Sq(t).length > 0;
         return (0, r.jsx)(d.yRy, {
             targetElementRef: this._containerRef,
             renderPopout: this.renderPopout,
             position: "bottom",
             animation: d.yRy.Animation.NONE,
-            shouldShow: o,
+            shouldShow: l,
             autoInvert: !1,
-            children: (t, l) => {
-                var c;
-                let { isShown: u } = l;
+            children: (t, u) => {
+                var f;
+                let { isShown: _ } = u;
                 return (0, r.jsx)("div", {
                     className: i,
                     ref: this._containerRef,
                     children: (0, r.jsx)("div", {
-                        className: a()(U.search, {
-                            [U.open]: s || o,
-                            [U.focused]: o,
+                        className: a()(U.search, o, {
+                            [U.open]: c || l,
+                            [U.focused]: l,
                         }),
                         children: (0, r.jsx)(d.tEY, {
-                            focusTarget: { current: null == (c = this._editorRef) ? void 0 : c.editor },
+                            focusTarget: { current: null == (f = this._editorRef) ? void 0 : f.editor },
                             ringTarget: this._searchBarRef,
                             children: (0, r.jsxs)(
                                 "div",
                                 {
-                                    className: U.searchBar,
+                                    className: a()(U.searchBar, s),
                                     ref: this._searchBarRef,
                                     children: [
-                                        this.renderInput(u),
+                                        this.renderInput(_),
                                         (0, r.jsx)(d.BK9, {
                                             onClear: this.handleClearSearch,
-                                            hasContent: s || n,
+                                            hasContent: c || n,
                                             className: U.icon,
                                             isLoading: !1,
                                         }),
@@ -198,6 +210,7 @@ class V extends i.PureComponent {
                     searchContext: this.props.searchContext,
                     navId: Z,
                     onSelectedIndexChanged: this.handleSelectedIndexChanged,
+                    className: this.props.searchPopoutClassName,
                 }),
             ),
             G(this, "search", (e) => {
@@ -400,83 +413,89 @@ class V extends i.PureComponent {
     }
 }
 function H(e) {
-    let { className: t, searchContext: n } = e,
-        o = (0, T.Tm)(n),
-        a = (0, u.e7)([p.Z], () => p.Z.keyboardModeEnabled),
-        s = (0, u.e7)([L.Z], () => (null != o ? L.Z.getEditorState(o) : null)),
-        l = i.useMemo(() => (null != s ? s : y.nR(O.Jl(R.ZP))), [s]),
+    let {
+            searchContext: t,
+            className: n,
+            searchBarContainerClassName: o,
+            searchBarClassName: a,
+            searchPopoutClassName: s,
+        } = e,
+        l = (0, T.Tm)(t),
+        c = (0, u.e7)([p.Z], () => p.Z.keyboardModeEnabled),
+        f = (0, u.e7)([L.Z], () => (null != l ? L.Z.getEditorState(l) : null)),
+        _ = i.useMemo(() => (null != f ? f : y.nR(O.Jl(R.ZP))), [f]),
         {
-            isSearching: c,
-            isSearchActive: f,
-            hasResults: _,
+            isSearching: h,
+            isSearchActive: E,
+            hasResults: b,
         } = (0, u.cj)([I.Z], () => {
-            let e = I.Z.getTotalCount(o);
+            let e = I.Z.getTotalCount(l);
             return {
                 hasResults: null != e && e > 0,
-                isSearching: I.Z.getIsFetching(o),
-                isSearchActive: I.Z.hasSearchState(o),
+                isSearching: I.Z.getIsFetching(l),
+                isSearchActive: I.Z.hasSearchState(l),
             };
         }),
-        h = i.useRef(f);
+        v = i.useRef(E);
     i.useEffect(() => {
-        h.current && !f && ((h.current = !1), (0, x.IZ)({ searchContext: n })), !h.current && f && (h.current = !0);
-    }, [f, n]);
-    let E = i.useCallback(
+        v.current && !E && ((v.current = !1), (0, x.IZ)({ searchContext: t })), !v.current && E && (v.current = !0);
+    }, [E, t]);
+    let S = i.useCallback(
             (e) => {
-                let { queryString: t, query: r, searchEverywhere: i } = e;
-                C.ZP.refreshSearchQueryAnalyticsId(n),
+                let { queryString: n, query: r, searchEverywhere: i } = e;
+                C.ZP.refreshSearchQueryAnalyticsId(t),
                     (0, x.tI)({
-                        searchContext: n,
+                        searchContext: t,
                         query: r,
-                        queryString: t,
+                        queryString: n,
                     }),
-                    n.type === k.aib.DMS
+                    t.type === k.aib.DMS
                         ? P.Z.fetchCrossDMMessages({
-                              searchContext: n,
+                              searchContext: t,
                               selectedPageIndex: 0,
-                              queryString: t,
+                              queryString: n,
                           })
                         : F({
-                              searchContext: n,
+                              searchContext: t,
                               searchQuery: r,
-                              queryString: t,
+                              queryString: n,
                               searchEverywhere: i,
                               offset: 0,
                               searchMode: k.QIO.NEWEST,
                           });
             },
-            [n],
+            [t],
         ),
-        b = (0, u.e7)([g.Z, m.Z], () => {
-            let e = (0, T.b7)(n) ? n.guildId : null;
+        A = (0, u.e7)([g.Z, m.Z], () => {
+            let e = (0, T.b7)(t) ? t.guildId : null;
             if (null != e) {
                 let t = g.Z.getGuild(e);
                 return null == t ? null : t.name;
             }
-            let t = (0, T.AH)(n);
-            if (null != t) {
-                let e = m.Z.getChannel(t);
+            let n = (0, T.AH)(t);
+            if (null != n) {
+                let e = m.Z.getChannel(n);
                 return null == e ? null : (0, T.nl)(e);
             }
             return null;
         }),
-        v = (0, N.xd)({
+        w = (0, N.xd)({
             isXDMSearch: !1,
             location: "Search",
         }),
-        S = (0, N.dB)({
+        D = (0, N.dB)({
             isXDMSearch: !1,
             location: "Search",
         }),
-        A = v || S,
-        w = i.useMemo(
+        M = w || D,
+        G = i.useMemo(
             () =>
-                n.type === k.aib.DMS
+                t.type === k.aib.DMS
                     ? j.intl.string(j.t.m7OrlZ)
-                    : A
+                    : M
                       ? (0, r.jsxs)(r.Fragment, {
                             children: [
-                                j.intl.formatToPlainString(j.t.LDZtFB, { name: b }),
+                                j.intl.formatToPlainString(j.t.LDZtFB, { name: A }),
                                 (0, r.jsx)("span", {
                                     className: U.keybind,
                                     children: (0, r.jsx)(d.M2$, {
@@ -487,18 +506,21 @@ function H(e) {
                             ],
                         })
                       : j.intl.string(j.t["5h0QOD"]),
-            [n.type, A, b],
+            [t.type, M, A],
         );
     return (0, r.jsx)(V, {
-        className: t,
-        searchContext: n,
-        isSearching: c,
-        editorState: l,
-        hasResults: _,
-        keyboardModeEnabled: a,
-        onSearch: E,
-        isSearchActive: f,
-        placeholder: w,
+        className: n,
+        searchPopoutClassName: s,
+        searchBarContainerClassName: o,
+        searchBarClassName: a,
+        searchContext: t,
+        isSearching: h,
+        editorState: _,
+        hasResults: b,
+        keyboardModeEnabled: c,
+        onSearch: S,
+        isSearchActive: E,
+        placeholder: G,
     });
 }
 function Y(e) {

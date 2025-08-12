@@ -9,8 +9,8 @@ var r = n(255367),
     u = n(304761),
     d = n(865427),
     p = n(820254),
-    f = n(388032),
-    h = n(531359);
+    h = n(388032),
+    f = n(531359);
 let g = "isHideDevBanner",
     m = () => {
         var e;
@@ -30,25 +30,25 @@ let g = "isHideDevBanner",
             b = () =>
                 (0, r.jsx)(c.P3F, {
                     onClick: m,
-                    className: h.closeButton,
-                    "aria-label": f.intl.string(f.t.WAI6xs),
+                    className: f.closeButton,
+                    "aria-label": h.intl.string(h.t.WAI6xs),
                     children: (0, r.jsx)(c.Dio, {
                         size: "md",
                         color: "currentColor",
-                        className: h.closeIcon,
+                        className: f.closeIcon,
                     }),
                 });
         return null != l
             ? (0, r.jsxs)("div", {
-                  className: a()(h.devBanner, h.buildOverride),
-                  children: [(0, r.jsx)(p.Z, { className: h.icon }), f.intl.string(f.t.Wj3LW1), (0, r.jsx)(b, {})],
+                  className: a()(f.devBanner, f.buildOverride),
+                  children: [(0, r.jsx)(p.Z, { className: f.icon }), h.intl.string(h.t.Wj3LW1), (0, r.jsx)(b, {})],
               })
             : "staging" === window.GLOBAL_ENV.RELEASE_CHANNEL
               ? (0, r.jsxs)("div", {
-                    className: a()(h.devBanner, h.staging),
+                    className: a()(f.devBanner, f.staging),
                     children: [
-                        (0, r.jsx)(p.Z, { className: h.icon }),
-                        f.intl.format(f.t.uyrfYG, { buildNumber: "430270" }),
+                        (0, r.jsx)(p.Z, { className: f.icon }),
+                        h.intl.format(h.t.uyrfYG, { buildNumber: "430306" }),
                         (0, r.jsx)(b, {}),
                     ],
                 })

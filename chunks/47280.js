@@ -1,6 +1,7 @@
 n.d(t, {
-    Z: () => a,
-    j: () => o,
+    YI: () => s,
+    ZP: () => a,
+    jk: () => o,
 });
 var r = n(818083),
     i = n(987338);
@@ -26,4 +27,8 @@ let o = (0, r.B)({
 function a(e) {
     let { location: t } = e;
     return o.useExperiment({ location: t }, { autoTrackExposure: !0 }).enabled;
+}
+function s(e) {
+    let { location: t } = e;
+    return o.getCurrentConfig({ location: t }).enabled;
 }

@@ -9,8 +9,8 @@ var r = n(255367),
     u = n(183126),
     d = n(493773),
     p = n(209613),
-    f = n(82295),
-    h = n(797614),
+    h = n(82295),
+    f = n(797614),
     g = n(626135),
     m = n(26373),
     b = n(486622),
@@ -34,13 +34,13 @@ function T() {
         x = i.useCallback(() => {
             (0, c.showToast)((0, c.createToast)(S.intl.string(S.t.EDYbS0), c.ToastType.FAILURE));
         }, []),
-        { rejectAll: A } = (0, b.m)({ onError: x }),
-        Z = i.useCallback(() => {
-            A(t.map((e) => e.channel.id));
-        }, [t, A]);
+        { rejectAll: Z } = (0, b.m)({ onError: x }),
+        A = i.useCallback(() => {
+            Z(t.map((e) => e.channel.id));
+        }, [t, Z]);
     (0, d.ZP)(() => {
         g.default.track(C.rMx.SPAM_MESSAGE_REQUESTS_VIEWED, { num_spam_message_requests: n }),
-            h.Z.increment({ name: s.V.SPAM_MESSAGE_REQUEST_VIEW });
+            f.Z.increment({ name: s.V.SPAM_MESSAGE_REQUEST_VIEW });
     });
     let w = i.useCallback(
             (e) => {
@@ -69,7 +69,7 @@ function T() {
         L = i.useCallback(
             () =>
                 (0, r.jsxs)(
-                    f.Z,
+                    h.Z,
                     {
                         className: N.sectionTitle,
                         children: [
@@ -87,7 +87,7 @@ function T() {
                                           (0, r.jsx)(c.Avr, {
                                               textVariant: "text-sm/normal",
                                               text: S.intl.string(S.t.p6t7RE),
-                                              onClick: Z,
+                                              onClick: A,
                                               "aria-label": S.intl.string(S.t.p6t7RE),
                                           }),
                                       ],
@@ -97,7 +97,7 @@ function T() {
                     },
                     "message-requests-spam-title",
                 ),
-            [n, Z, T],
+            [n, A, T],
         );
     return 0 === t.length
         ? (0, r.jsx)(y.Z, { section: I.pS.SPAM })

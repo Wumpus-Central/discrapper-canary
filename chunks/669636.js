@@ -56,7 +56,7 @@ let C = (e) => {
                 return s()(null != e, "User cannot be undefined"), e;
             }),
             x = Object.values(d.a).includes(t.skuId),
-            C = (0, v.Z)({ location: "CollectiblesProductPreview" });
+            C = (0, v.ZP)({ location: "CollectiblesProductPreview" });
         return (0, l.EQ)(t.type)
             .with(c.Z.PROFILE_EFFECT, () =>
                 (0, a.jsx)("div", {

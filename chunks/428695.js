@@ -9,8 +9,8 @@ var r = n(255367),
     u = n(367907),
     d = n(626135),
     p = n(981631),
-    f = n(388032),
-    h = n(488822);
+    h = n(388032),
+    f = n(488822);
 let g = (0, o.debounce)(u.ZP.trackWithMetadata, 500),
     m = function (e) {
         let {
@@ -42,7 +42,7 @@ let g = (0, o.debounce)(u.ZP.trackWithMetadata, 500),
             ? (P = C())
             : null != C &&
               (P = (0, r.jsx)(s.zx, {
-                  className: h.button,
+                  className: f.button,
                   size: s.zx.Sizes.SMALL,
                   onClick: () => {
                       null != m &&
@@ -64,7 +64,7 @@ let g = (0, o.debounce)(u.ZP.trackWithMetadata, 500),
               (j = (0, r.jsx)(c.Text, {
                   variant: "text-md/medium",
                   color: "header-primary",
-                  className: a()(h.title, { [h.noImageTitle]: null == o }, { [h.center]: N }),
+                  className: a()(f.title, { [f.noImageTitle]: null == o }, { [f.center]: N }),
                   children: n,
               }));
         let x = null;
@@ -72,14 +72,14 @@ let g = (0, o.debounce)(u.ZP.trackWithMetadata, 500),
             ? (x = l())
             : null != l &&
               (x = (0, r.jsx)(c.Text, {
-                  className: a()({ [h.center]: N }),
+                  className: a()({ [f.center]: N }),
                   variant: "text-sm/normal",
                   color: "text-muted",
                   children: l,
               }));
-        let A = null != _ ? "".concat(_, "px") : "16px";
+        let Z = null != _ ? "".concat(_, "px") : "16px";
         return (0, r.jsxs)("div", {
-            className: a()(h.container, T),
+            className: a()(f.container, T),
             children: [
                 !0 === y
                     ? null
@@ -87,31 +87,31 @@ let g = (0, o.debounce)(u.ZP.trackWithMetadata, 500),
                           onClick: () => {
                               u.ZP.trackWithMetadata(p.rMx.CHANNEL_NOTICE_CLOSED, { notice_type: m }), null == v || v();
                           },
-                          className: h.close,
-                          "aria-label": f.intl.string(f.t.WAI6xs),
+                          className: f.close,
+                          "aria-label": h.intl.string(h.t.WAI6xs),
                           children: (0, r.jsx)(c.Dio, {
                               size: "md",
                               color: "currentColor",
-                              className: h.closeIcon,
+                              className: f.closeIcon,
                           }),
                       }),
                 null != o &&
                     (0, r.jsx)("div", {
-                        className: h.imageContainer,
+                        className: f.imageContainer,
                         style: {
                             marginTop: "".concat(O, "px"),
-                            marginLeft: A,
-                            marginRight: A,
+                            marginLeft: Z,
+                            marginRight: Z,
                         },
                         children: (0, r.jsx)("img", {
-                            className: h.image,
+                            className: f.image,
                             style: b,
                             src: o,
                             alt: "",
                         }),
                     }),
                 (0, r.jsxs)("div", {
-                    className: h.message,
+                    className: f.message,
                     children: [j, x, P],
                 }),
             ],

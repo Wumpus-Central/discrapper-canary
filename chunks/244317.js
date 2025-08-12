@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f }), n(35282), n(388685);
+n.d(t, { Z: () => h }), n(35282), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(873546),
@@ -9,12 +9,12 @@ var r = n(255367),
     u = n(186901),
     d = n(388032),
     p = n(903312);
-function f(e) {
+function h(e) {
     let { applicationId: t } = e.match.params,
-        [f, h] = i.useState(!1),
+        [h, f] = i.useState(!1),
         g = i.useRef(!1),
         [m, b] = i.useState(null),
-        _ = !o.isPlatformEmbedded && !l.tq && !f;
+        _ = !o.isPlatformEmbedded && !l.tq && !h;
     return (i.useEffect(() => {
         _ &&
             !0 !== g.current &&
@@ -53,7 +53,7 @@ function f(e) {
                       (0, r.jsx)(a.zxk, {
                           variant: "primary",
                           text: d.intl.string(d.t.fIv16O),
-                          onClick: () => h(!0),
+                          onClick: () => f(!0),
                       }),
                   ],
               })

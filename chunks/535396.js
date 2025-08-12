@@ -16,6 +16,7 @@ n.d(t, {
     Us: () => c,
     XW: () => _,
     ad: () => p,
+    am: () => w,
     d5: () => T,
     os: () => P,
     uc: () => I,
@@ -151,4 +152,5 @@ let R = new Set([r.MB, r.Vk]),
     P = {
         1: new Set([r.A$]),
         2: R,
-    };
+    },
+    w = "powerupId";

@@ -13,8 +13,8 @@ var i = n(907862),
     u = n(388032),
     d = n(111613),
     p = n(712793),
-    f = n(295234);
-function h(e) {
+    h = n(295234);
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -50,7 +50,7 @@ let g = (e) => {
             body: u.intl.string(u.t["JICo+/"]),
             targetElementRef: t,
             asset: (0, r.jsx)("img", {
-                src: f.Z,
+                src: h.Z,
                 alt: "",
             }),
             size: "md",
@@ -74,7 +74,7 @@ let g = (e) => {
                                 let { default: e } = await Promise.all([n.e("83667"), n.e("67825")]).then(
                                     n.bind(n, 656139),
                                 );
-                                return (t) => (0, r.jsx)(e, h({}, t));
+                                return (t) => (0, r.jsx)(e, f({}, t));
                             });
                     },
                 },
@@ -121,7 +121,7 @@ let g = (e) => {
                 var n, i;
                 return (0, r.jsx)(
                     "div",
-                    ((n = h({}, e)),
+                    ((n = f({}, e)),
                     (i = i = { children: t }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))

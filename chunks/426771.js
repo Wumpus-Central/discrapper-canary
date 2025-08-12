@@ -22,8 +22,8 @@ function x(e) {
         O = (0, c.Z)(b, _);
     if (void 0 === O || j.length <= 0) return null;
     let y = C.some((e) => e.type !== p.A3.INACTIVE),
-        P = (0, d.d)(y),
-        w = C.reduce(
+        w = (0, d.d)(y),
+        P = C.reduce(
             (e, t) => {
                 let { sourceEntitlement: n } = t,
                     r = null == n ? void 0 : n.ends_at;
@@ -31,10 +31,10 @@ function x(e) {
             },
             void 0,
         );
-    void 0 !== w
+    void 0 !== P
         ? (v = {
               type: "expiring",
-              expiringAt: w,
+              expiringAt: P,
           })
         : y &&
           (v = {
@@ -82,7 +82,7 @@ function x(e) {
             }),
             (0, r.jsx)(u.Q9, {
                 title: O.title,
-                textColor: P,
+                textColor: w,
                 footer: (0, r.jsx)(u.uf, {
                     status: v,
                     cost: T,
@@ -90,7 +90,7 @@ function x(e) {
                 }),
                 children: (0, r.jsx)(l.Text, {
                     className: g.description,
-                    color: P,
+                    color: w,
                     variant: "text-sm/medium",
                     children: O.description,
                 }),

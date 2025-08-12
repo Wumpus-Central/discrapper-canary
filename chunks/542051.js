@@ -205,11 +205,10 @@ class y extends (r = o.PureComponent) {
         throw Error("SearchResultsPopout.renderResults: Flow should never allow this...");
     }
     render() {
-        let { query: e, focusedIndex: t, navId: n, width: r } = this.props,
+        let { query: e, focusedIndex: t, navId: n, className: r } = this.props,
             o = "" === e.trim();
         return (0, i.jsxs)("div", {
-            className: f.container,
-            style: { width: r },
+            className: s()(f.container, r),
             onMouseDown: E,
             role: "listbox",
             id: n,
@@ -256,6 +255,5 @@ class y extends (r = o.PureComponent) {
 _(y, "defaultProps", {
     renderInitialState: () => null,
     hideQuery: !1,
-    width: 320,
 });
 let O = y;

@@ -9,12 +9,12 @@ function o(e) {
         d = l.Z.getApplication(t);
     if (null == d) return void u(!1, !1);
     let p = null != (0, a.jA)({ applicationId: d.id }) ? i.u1M : i.z1l,
-        f = !1;
-    function h(e) {
-        u(e, f);
+        h = !1;
+    function f(e) {
+        u(e, h);
     }
     function g() {
-        f = !0;
+        h = !0;
     }
     (0, i.ZDy)(
         async () => {
@@ -53,7 +53,7 @@ function o(e) {
                             linkId: s,
                             message: c,
                             onCopyLink: g,
-                            onShare: h,
+                            onShare: f,
                         },
                         n,
                     ),
@@ -63,7 +63,7 @@ function o(e) {
             modalKey: "activity-share-moment-modal",
             contextKey: p,
             onCloseCallback: () => {
-                u(!1, f);
+                u(!1, h);
             },
         },
     );

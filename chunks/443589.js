@@ -9,8 +9,8 @@ var r = n(255367),
     u = n(481060),
     d = n(906732),
     p = n(213609),
-    f = n(963249),
-    h = n(579185),
+    h = n(963249),
+    f = n(579185),
     g = n(752048),
     m = n(626135),
     b = n(479446),
@@ -30,7 +30,7 @@ let T = {
 function P(e) {
     let { recipientUser: t, giftIntentType: n, analyticsPage: l, shouldHighlight: P } = e,
         { analyticsLocations: j } = (0, d.ZP)(),
-        { isHovered: x, setIsHovered: A, onMouseEnter: Z, onMouseLeave: w } = (0, h.Z)(200, 300),
+        { isHovered: x, setIsHovered: Z, onMouseEnter: A, onMouseLeave: w } = (0, f.Z)(200, 300),
         { enableEmojiCTA: L } = _.w.useExperiment({ location: "GiftIntentActionButton" }, { autoTrackExposure: !1 });
     i.useEffect(() => {
         let e = g.Z.getUserAffinity(t.id);
@@ -45,9 +45,9 @@ function P(e) {
     }, [t, n]);
     let R = i.useCallback(
             (e) => {
-                "focus" !== e.type && Z();
+                "focus" !== e.type && A();
             },
-            [Z],
+            [A],
         ),
         D = (e) => {
             e.stopPropagation();
@@ -56,7 +56,7 @@ function P(e) {
                 gift_intent_type: n,
                 affinity: null == r ? void 0 : r.communicationProbability,
             }),
-                (0, f.Z)({
+                (0, h.Z)({
                     isGift: !0,
                     initialPlanId: null,
                     giftRecipient: t,
@@ -124,14 +124,14 @@ function P(e) {
         align: "top",
         spacing: 9,
         onRequestClose: () => {
-            A(!1);
+            Z(!1);
         },
         renderPopout: (e) =>
             (0, r.jsx)(y.Z, {
                 giftIntentType: n,
                 premiumGiftIntentCardType: y.U.COACHMARK,
                 recipientUser: t,
-                onMouseEnter: Z,
+                onMouseEnter: A,
                 onMouseLeave: w,
                 popoutPosition: e.position,
                 analyticsPage: l,

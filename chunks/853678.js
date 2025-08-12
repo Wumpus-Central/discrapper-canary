@@ -9,8 +9,8 @@ var r = n(45792),
     u = n(16609),
     d = n(812206),
     p = n(12647),
-    f = n(630388),
-    h = n(49012),
+    h = n(630388),
+    f = n(49012),
     g = n(358085),
     m = n(996106),
     b = n(914946),
@@ -66,12 +66,12 @@ let I = new Set([y.Fu, y.JT]),
                         p.Z.focus(e, !0);
                     }
                     let c = d.Z.getApplication(null == (i = t.application) ? void 0 : i.id),
-                        f = (0, u.p)(null == r ? void 0 : r.location),
+                        h = (0, u.p)(null == r ? void 0 : r.location),
                         m = (null == c ? void 0 : c.id) !== void 0 ? S.get(c.id) : void 0;
                     if (void 0 !== m && m.trustedUntilEpochMs >= Date.now() && m.trustedHosts.has(e.host))
                         return (0, l.Z)(o), Promise.resolve({ opened: !0 });
                     return new Promise((e) =>
-                        (0, h.q)(
+                        (0, f.q)(
                             {
                                 href: o,
                                 shouldConfirm: !0,
@@ -86,7 +86,7 @@ let I = new Set([y.Fu, y.JT]),
                             void 0,
                             (0, s.z)({
                                 application: c,
-                                channelId: f,
+                                channelId: h,
                             }),
                         ),
                     );
@@ -121,7 +121,7 @@ let I = new Set([y.Fu, y.JT]),
                 (0, b.bu)(n.transport);
                 let a = (0, b._f)(n.application);
                 if (null == a) throw new m.Z({ errorCode: E.lTL.INVALID_COMMAND }, "No application.");
-                if (!(0, f.yE)(null != (t = n.application.flags) ? t : 0, E.udG.EMBEDDED))
+                if (!(0, h.yE)(null != (t = n.application.flags) ? t : 0, E.udG.EMBEDDED))
                     throw new m.Z({ errorCode: E.lTL.INVALID_COMMAND }, "This application cannot access this API");
                 return new Promise((e) => {
                     (0, c._)({

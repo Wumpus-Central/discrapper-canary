@@ -44,7 +44,7 @@ let P = r.forwardRef((e, t) => {
         B = null != M,
         U = P ? o.Tt.WHITE : o.Tt.BRAND,
         V = L.length > 0,
-        G = (0, x.Z)({ location: "HeroHeading" }) ? T.intl.string(T.t["EW+VIS"]) : T.intl.string(T.t.YCZldH),
+        G = (0, x.ZP)({ location: "HeroHeading" }) ? T.intl.string(T.t["EW+VIS"]) : T.intl.string(T.t.YCZldH),
         F = (0, g.rO)(),
         H = (0, l.e7)([d.Z], () => d.Z.useReducedMotion);
     return (0, i.jsx)(m.Gt, {

@@ -23,8 +23,8 @@ var r = n(255367),
     I = n(981631),
     O = n(93841),
     y = n(388032),
-    P = n(860834),
-    w = n(350618);
+    w = n(860834),
+    P = n(350618);
 let N = C.ZP.getEnableHardwareAcceleration() ? c.Xo$ : d.Z;
 function Z(e) {
     var t, n;
@@ -54,15 +54,15 @@ function Z(e) {
     return null == d || null == T || null == Z
         ? null
         : (0, r.jsxs)(a.$, {
-              className: P.container,
+              className: w.container,
               children: [
                   (0, r.jsx)("img", {
                       alt: "",
-                      className: P.image,
-                      src: w,
+                      className: w.image,
+                      src: P,
                   }),
                   (0, r.jsxs)("div", {
-                      className: P.textContainer,
+                      className: w.textContainer,
                       children: [
                           (0, r.jsx)(l.xv, {
                               variant: "text-md/semibold",
@@ -143,16 +143,16 @@ function Z(e) {
                               colorString: C.colorString,
                               colorStrings: C.colorStrings,
                           }),
-                          className: i()(P.content, P.exampleMessage),
+                          className: i()(w.content, w.exampleMessage),
                           message: y.intl.string(y.t["6OSasb"]),
                           decorations: (0, r.jsx)(c.$Eu, {
                               color: c.TVs.unsafe_rawColors.GUILD_BOOSTING_PINK,
-                              className: P.boostIcon,
+                              className: w.boostIcon,
                           }),
                       }),
                   (0, r.jsx)(m.Z, {
                       guild: d,
-                      className: P.content,
+                      className: w.content,
                       analyticsLocation: {
                           page: I.ZY5.GUILD_POWERUPS_OVERVIEW,
                           section: I.jXE.GUILD_POWERUPS_OVERVIEW_SIDEBAR,
