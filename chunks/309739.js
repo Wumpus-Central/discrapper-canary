@@ -225,7 +225,7 @@ let L = (e) => {
             return A.intl.format(A.t.nmMsys, { game: e.name });
     }
 };
-function M(e) {
+function B(e) {
     let { account: t } = e,
         [n, s] = r.useState(t.showActivity),
         a = (0, h.ZP)();
@@ -270,7 +270,7 @@ function M(e) {
         ],
     });
 }
-function B() {
+function M() {
     let e = (0, c.e7)([E.Z], () => E.Z.getAccounts()),
         t = r.useMemo(() => e.filter((e) => f.Z.isSupported(e.type) && y.vbS.has(e.type)), [e]),
         [n, s] = r.useState(""),
@@ -296,7 +296,7 @@ function B() {
                           onChange: s,
                           placeholder: A.intl.string(A.t.WPrtoa),
                       }),
-                      a.map((e) => (0, i.jsx)(M, { account: e }, e.id)),
+                      a.map((e) => (0, i.jsx)(B, { account: e }, e.id)),
                   ],
               }),
           });
@@ -312,6 +312,6 @@ function U(e) {
               className: t,
               tag: p.RB0.H1,
               title: n ? A.intl.string(A.t.Cq98yM) : null,
-              children: [(0, i.jsx)(Z, {}), (0, i.jsx)(w, {}), (0, i.jsx)(k, {}), r && (0, i.jsx)(B, {})],
+              children: [(0, i.jsx)(Z, {}), (0, i.jsx)(w, {}), (0, i.jsx)(k, {}), r && (0, i.jsx)(M, {})],
           });
 }

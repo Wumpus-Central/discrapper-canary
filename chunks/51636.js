@@ -76,7 +76,7 @@ let I = r.memo((e) => {
             _ === x.gM.CARD_CAROUSEL_THIRD_ROW,
         w = (0, b.Z)(),
         [k, L] = (0, p.cv)(null != s && n ? [s] : []),
-        { easterEggLevel: M, isEasterEggTriggered: B, onHover: U, onUnhover: V } = (0, f.Z)(5),
+        { easterEggLevel: B, isEasterEggTriggered: M, onHover: U, onUnhover: V } = (0, f.Z)(5),
         G = (0, l.debounce)(() => {
             g.default.track(E.rMx.PREMIUM_MARKETING_WHAT_IS_NEW_CARD_HOVERED, { card_type: (0, l.snakeCase)(t) });
         }, 800),
@@ -120,9 +120,9 @@ let I = r.memo((e) => {
                       className: a()(v.flipCardContainer, { [v.forceShadow]: h }),
                       children: (0, i.jsxs)("div", {
                           className: a()(v.flipCard, {
-                              [v.partialFlipCard]: !B,
-                              [v.ultraFlipCard]: B,
-                              [v.rotateCard]: B && 3 === M,
+                              [v.partialFlipCard]: !M,
+                              [v.ultraFlipCard]: M,
+                              [v.rotateCard]: M && 3 === B,
                               [v.reducedMotion]: y,
                           }),
                           children: [

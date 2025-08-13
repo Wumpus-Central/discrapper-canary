@@ -397,6 +397,9 @@ class eI extends d.Z {
         null == (r = this._localMediaSinkWantsManager) || r.setVideoSize(e, t * n),
             null == (i = this._goLiveQualityManager) || i.setVideoSize(e, t, n);
     }
+    clearJoinVoiceId() {
+        this.joinVoiceId = null;
+    }
     set channelId(e) {
         let t = x.Z.getChannel(this.channelId),
             n = null == t ? void 0 : t.type;
@@ -678,6 +681,7 @@ class eI extends d.Z {
                         secure_frames_transition_execute_count: this._secureFramesTransitionExecuteCount,
                         vad_use_advanced_voice_activity: i.modeOptions.vadUseKrisp,
                         soundshare_experimental: M.Z.getExperimentalSoundshare(),
+                        join_voice_id: this.joinVoiceId,
                     },
                 );
             Promise.all([
@@ -901,6 +905,7 @@ class eI extends d.Z {
                             error: t,
                             cloudflare_best_region: n,
                             connect_count: this._connectCount,
+                            join_voice_id: this.joinVoiceId,
                         }),
                     );
             }),
@@ -958,6 +963,7 @@ class eI extends d.Z {
                                     automatic_audio_subsystem: t.automaticAudioSubsystem,
                                     media_session_id: this.getMediaSessionId(),
                                     participant_type: this.getVoiceParticipantType(),
+                                    join_voice_id: this.joinVoiceId,
                                 }),
                                 this.stateHistory.getVoiceConnectionSuccessStats(),
                             ),
@@ -1656,6 +1662,7 @@ class eI extends d.Z {
         streamServerId: o,
         streamChannelId: s,
         parentMediaSessionId: l,
+        joinVoiceId: d,
     }) {
         super(),
             ec(this, "context", void 0),
@@ -1671,6 +1678,7 @@ class eI extends d.Z {
             ec(this, "streamServerId", void 0),
             ec(this, "streamChannelId", void 0),
             ec(this, "_channelId", void 0),
+            ec(this, "joinVoiceId", void 0),
             ec(this, "channelIds", void 0),
             ec(this, "_endpoint", void 0),
             ec(this, "port", void 0),
@@ -1817,6 +1825,7 @@ class eI extends d.Z {
                         channel_type: t,
                         participant_type: this.getVoiceParticipantType(),
                         is_muted: M.Z.isMute(),
+                        join_voice_id: this.joinVoiceId,
                     }),
                 );
             }),
@@ -1841,6 +1850,7 @@ class eI extends d.Z {
             (this.streamServerId = o),
             (this.streamChannelId = s),
             (this.parentMediaSessionId = l),
+            (this.joinVoiceId = d),
             (this.logger = new b.Z("RTCConnection(".concat(this.trueServerId, ", ").concat(this.context, ")"))),
             this.logger.enableNativeLogger(!0),
             (this._endpoint = null),
@@ -1886,11 +1896,11 @@ class eI extends d.Z {
             (this._mediaEngineConnectionId = null),
             (this._lastSentSpeakingStatus = 0),
             (this._lastSentSSRC = void 0);
-        let d = M.Z.supports(el.AN.FIRST_FRAME_CALLBACK) && M.Z.supports(el.AN.REMOTE_USER_MULTI_STREAM);
+        let f = M.Z.supports(el.AN.FIRST_FRAME_CALLBACK) && M.Z.supports(el.AN.REMOTE_USER_MULTI_STREAM);
         if (i === el.Yn.DEFAULT) {
-            var f;
-            let t = (null == (f = x.Z.getChannel(this.channelId)) ? void 0 : f.type) === es.d4z.GUILD_STAGE_VOICE;
-            (this._localMediaSinkWantsManager = new J.ZP(e, t, d)),
+            var p;
+            let t = (null == (p = x.Z.getChannel(this.channelId)) ? void 0 : p.type) === es.d4z.GUILD_STAGE_VOICE;
+            (this._localMediaSinkWantsManager = new J.ZP(e, t, f)),
                 this._localMediaSinkWantsManager.on(J.ai.Update, (e) => {
                     if (this.state === es.hes.RTC_CONNECTED && null != this._socket) {
                         var t;

@@ -44,6 +44,7 @@ class _ extends o.Z {
             guildId: null,
             video: !1,
             currentVoiceChannelId: null,
+            joinVoiceId: null,
         });
     }
     constructor(...e) {

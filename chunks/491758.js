@@ -45,7 +45,7 @@ function A() {
         );
     a()(null != D, "Save clip keybind unset");
     let L = (0, l.e7)([m.default], () => m.default.locale),
-        M = r.useMemo(
+        B = r.useMemo(
             () => [
                 {
                     value: C.OT.SECONDS_30,
@@ -62,7 +62,7 @@ function A() {
             ],
             [L],
         ),
-        B = r.useMemo(
+        M = r.useMemo(
             () => [
                 {
                     value: v.LY.RESOLUTION_480,
@@ -245,7 +245,7 @@ function A() {
                         title: T.intl.string(T.t.OgfUio),
                         note: T.intl.string(T.t.H7j4tb),
                         value: A,
-                        options: M,
+                        options: B,
                     }),
                     (0, i.jsx)(E.Q, {
                         className: N.formItem,
@@ -257,7 +257,7 @@ function A() {
                         title: T.intl.string(T.t.aFudZG),
                         note: T.intl.string(T.t.nIrkW1),
                         value: P.resolution,
-                        options: B,
+                        options: M,
                     }),
                     (0, i.jsx)(E.Q, {
                         className: N.formItem,

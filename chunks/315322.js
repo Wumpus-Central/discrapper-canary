@@ -189,7 +189,8 @@ function v(e) {
         E = 0,
         b = 0,
         y = 0,
-        O = 0;
+        O = 0,
+        v = 0;
     c.forEach((e) => {
         e.type === u.dCx.ANSWER_IN
             ? p++
@@ -205,13 +206,15 @@ function v(e) {
                       ? b++
                       : e.type === u.dCx.ANSWER_AFTER
                         ? y++
-                        : e.type === u.dCx.ANSWER_PINNED && O++;
+                        : e.type === u.dCx.ANSWER_PINNED
+                          ? O++
+                          : e.type === u.dCx.ANSWER_AUTHOR_TYPE && v++;
     });
-    let v = l.ZP.getQueryId(t);
+    let I = l.ZP.getQueryId(t);
     r.ZP.trackWithMetadata(u.rMx.MESSAGES_SEARCH_STARTED, {
         search_id: _(t),
         search_session_id: l.ZP.getSessionId(t),
-        search_query_id: v,
+        search_query_id: I,
         search_type: t.type,
         search_query_length: d(i),
         search_query_content_length: f(n),
@@ -224,6 +227,7 @@ function v(e) {
         filter_during_count: b,
         filter_after_count: y,
         filter_pinned_count: O,
+        filter_author_type_count: v,
     }),
         r.ZP.trackWithMetadata(u.rMx.SEARCH_STARTED, {
             search_id: _(t),

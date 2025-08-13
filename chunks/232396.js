@@ -1,6 +1,6 @@
-var r = u(826193),
-    n = u(386015),
-    f = u(12276);
-e.exports = function (e) {
-    return n(e) ? f(e) : r(e);
+var n = f(826193),
+    r = f(386015),
+    e = f(12276);
+u.exports = function (u) {
+    return r(u) ? e(u) : n(u);
 };

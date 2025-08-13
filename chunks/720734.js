@@ -39,8 +39,8 @@ var i = n(255367),
     w = n(571250),
     k = n(628581),
     L = n(55311),
-    M = n(575175),
-    B = n(522651),
+    B = n(575175),
+    M = n(522651),
     U = n(795318),
     V = n(338390),
     G = n(526371),
@@ -93,8 +93,8 @@ var i = n(255367),
     ew = n(131951),
     ek = n(19780),
     eL = n(914010),
-    eM = n(885110),
-    eB = n(246946),
+    eB = n(885110),
+    eM = n(246946),
     eU = n(594174),
     eV = n(78839),
     eG = n(626135),
@@ -530,11 +530,11 @@ class tc extends r.PureComponent {
             tt(this, "avatarWithPopoutRef", r.createRef()),
             tt(this, "handleToggleSelfMute", () => {
                 let { serverMute: e, suppress: t, selfMute: n } = this.props;
-                (0, M.Z)(e, t, e6.jXE.ACCOUNT_PANEL), (0, B.v)(N.Z.ACCOUNT, B.d.MIC, n);
+                (0, B.Z)(e, t, e6.jXE.ACCOUNT_PANEL), (0, M.v)(N.Z.ACCOUNT, M.d.MIC, n);
             }),
             tt(this, "handleToggleSelfDeaf", () => {
                 let { serverDeaf: e, selfDeaf: t } = this.props;
-                (0, L.Z)(e, e6.jXE.ACCOUNT_PANEL), (0, B.v)(N.Z.ACCOUNT, B.d.DEAFEN, !t);
+                (0, L.Z)(e, e6.jXE.ACCOUNT_PANEL), (0, M.v)(N.Z.ACCOUNT, M.d.DEAFEN, !t);
             }),
             tt(this, "handleOpenAccountSettings", () => {
                 var e, t, n, i;
@@ -835,8 +835,8 @@ function tm() {
             activities: r,
             streaming: s,
             status: a,
-        } = (0, d.cj)([eM.Z], () => {
-            let e = eM.Z.getActivities();
+        } = (0, d.cj)([eB.Z], () => {
+            let e = eB.Z.getActivities();
             return {
                 activities: e,
                 streaming:
@@ -845,13 +845,13 @@ function tm() {
                         let { type: t } = e;
                         return t === e6.IIU.STREAMING;
                     }),
-                status: eM.Z.getStatus(),
+                status: eB.Z.getStatus(),
             };
         }),
         l = (0, d.e7)([eA.Z], () => eA.Z.getAnyStreamForUser(n)),
         c = (0, j.Z)({ userId: n }),
         m = eJ.ZP.useUserTag(t, { decoration: "never" }),
-        p = (0, d.e7)([eB.Z], () => eB.Z.hidePersonalInformation),
+        p = (0, d.e7)([eM.Z], () => eM.Z.hidePersonalInformation),
         g = (0, d.e7)([ek.Z, eR.Z], () => {
             let e = ek.Z.getChannelId();
             return null != e ? eR.Z.getChannel(e) : null;
@@ -875,8 +875,8 @@ function tm() {
         w = (0, d.e7)([J.Z], () => null != J.Z.getAwaitingRemoteSessionInfo()),
         k = (0, d.e7)([eL.Z], () => eL.Z.getGuildId()),
         L = eq.ZP.canUsePremiumGuildMemberProfile(t),
-        M = (null == t || null == (e = t.avatarDecoration) ? void 0 : e.skuId) === e2.rL,
-        { voiceActivityStatusEnabled: B } = (0, O.U)({ location: "Account" }),
+        B = (null == t || null == (e = t.avatarDecoration) ? void 0 : e.skuId) === e2.rL,
+        { voiceActivityStatusEnabled: M } = (0, O.U)({ location: "Account" }),
         [U, V] = (0, $.G)(null != k ? k : null),
         G = W.J.useExperiment({ location: "Account" }).enabled,
         { analyticsLocations: F } = (0, y.ZP)(N.Z.ACCOUNT),
@@ -907,7 +907,7 @@ function tm() {
         };
     !A &&
         (L && et.settings.push(u.z.PER_GUILD_COLLECTIBLES_CUSTOMIZATION_COACHMARK),
-        M && et.avatar.push(u.z.PREMIUM_SUBSCRIPTION_APRIL_MARKETING_DECO_TOOLTIP),
+        B && et.avatar.push(u.z.PREMIUM_SUBSCRIPTION_APRIL_MARKETING_DECO_TOOLTIP),
         G && et.avatar.push(u.z.DISPLAY_NAME_STYLES_COACHMARK));
     let en = (0, Y.Y)({ location: "AccountConnected" });
     return (0, i.jsx)(y.Gt, {
@@ -936,7 +936,7 @@ function tm() {
             webBuildOverride: C,
             awaitingRemote: w,
             isEligibleForPomelo: P,
-            voiceActivityStatusEnabled: B,
+            voiceActivityStatusEnabled: M,
             nameplate: H,
             selectedGuildId: k,
             isQuestBarEmpty: z,
@@ -1036,7 +1036,7 @@ function tg(e) {
         D = null != I,
         Z = (0, ej.z)(I),
         w = (0, d.e7)([ek.Z], () => ek.Z.isConnected()),
-        { Component: L, events: M, play: B } = T,
+        { Component: L, events: B, play: M } = T,
         U = n || s ? f.v0G : L,
         V = R ? e9.intl.string(e9.t.ARRV6u) : null,
         G = (0, k.Z)(t, n, s, l),
@@ -1070,7 +1070,7 @@ function tg(e) {
             location: N.Z.AUDIO_INPUT_BUTTON,
             autoTrackExposure: !0,
         });
-    r.useEffect(() => () => B(), [O, B]);
+    r.useEffect(() => () => M(), [O, M]);
     let K = r.useCallback(
             (e) => {
                 j(e, H);
@@ -1125,10 +1125,10 @@ function tg(e) {
                     tooltipForceOpen: p,
                     plated: null != E,
                     onMouseEnter: () => {
-                        b(), M.onMouseEnter();
+                        b(), B.onMouseEnter();
                     },
                     onMouseLeave: () => {
-                        x(), M.onMouseLeave();
+                        x(), B.onMouseLeave();
                     },
                     icon: (0, i.jsx)(U, {
                         size: "custom",

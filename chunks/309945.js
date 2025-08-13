@@ -3,8 +3,8 @@ var r = n(255367),
     o = n(73800),
     i = n(494497),
     l = n(657707),
-    a = n(793030),
-    s = n(442837),
+    s = n(793030),
+    a = n(442837),
     c = n(692547),
     u = n(899667),
     d = n(905128),
@@ -13,11 +13,11 @@ var r = n(255367),
     f = n(200985);
 function _(e) {
     let { guildId: t, powerups: n } = e,
-        _ = (0, s.e7)([d.Z], () => {
+        _ = (0, a.e7)([d.Z], () => {
             var e, n;
             return null != (n = null == (e = d.Z.getStateForGuild(t)) ? void 0 : e.appliedBoosts) ? n : 0;
         }),
-        x = (0, s.e7)([u.Z], () => u.Z.getAppliedGuildBoostsForGuild(t), [t]),
+        x = (0, a.e7)([u.Z], () => u.Z.getAppliedGuildBoostsForGuild(t), [t]),
         g =
             _ -
             o.useMemo(() => {
@@ -41,12 +41,12 @@ function _(e) {
                 color: c.Z.colors.TEXT_FEEDBACK_WARNING,
                 className: f.icon,
             }),
-            (0, r.jsx)(a.xv, {
+            (0, r.jsx)(s.xv, {
                 variant: "text-md/semibold",
                 color: "text-feedback-warning",
                 children: m.intl.string(p.default.n5hQhY),
             }),
-            (0, r.jsxs)(a.xv, {
+            (0, r.jsxs)(s.xv, {
                 variant: "text-sm/medium",
                 children: [
                     m.intl.formatToPlainString(p.default.iAaAiI, {
@@ -54,7 +54,7 @@ function _(e) {
                         perksString: n.map((e) => e.title).join(", "),
                     }),
                     v &&
-                        (0, r.jsx)(a.xv, {
+                        (0, r.jsx)(s.xv, {
                             variant: "text-sm/medium",
                             color: "text-feedback-warning",
                             children: m.intl.string(p.default.Sfr0Jy),

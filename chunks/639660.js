@@ -3,8 +3,8 @@ var r = n(255367),
     o = n(793030),
     i = n(442837),
     l = n(704215),
-    a = n(243778),
-    s = n(430824),
+    s = n(243778),
+    a = n(430824),
     c = n(232062),
     u = n(618460),
     d = n(105529),
@@ -28,16 +28,16 @@ function j() {
 }
 function C(e) {
     let { guildId: t } = e,
-        n = (0, i.e7)([s.Z], () => {
+        n = (0, i.e7)([a.Z], () => {
             var e;
-            return (null == (e = s.Z.getGuild(t)) ? void 0 : e.features.has(g.oNc.PREMIUM_TIER_3_OVERRIDE)) === !0;
+            return (null == (e = a.Z.getGuild(t)) ? void 0 : e.features.has(g.oNc.PREMIUM_TIER_3_OVERRIDE)) === !0;
         }),
         C = (0, u.Z)(t),
         E = C.length > 0,
         { shouldShow: I, notificationConfig: N } = (0, _._)(t, "GuildPowerupNotificationContainer"),
         w = [];
     I && w.push(l.z.VANITY_URL_POWERUP_ROLLBACK_NOTIFICATION);
-    let [Z, P] = (0, a.ZT)(w, t),
+    let [Z, P] = (0, s.ZT)(w, t),
         S = null != Z && null != N,
         y = (0, c.W)(t, "GuildPowerupNotificationContainer"),
         T = [];
@@ -45,7 +45,7 @@ function C(e) {
         E ||
         (T.push(l.z.GUILD_POWERUPS_OVERVIEW_SIDEBAR_COACHMARK),
         y && T.push(l.z.BOOSTER_ENHANCED_ROLE_COLORS_ADMIN_UPSELL));
-    let [O, A] = (0, a.US)(T),
+    let [O, A] = (0, s.US)(T),
         R = ((e) => {
             let n = [];
             return (

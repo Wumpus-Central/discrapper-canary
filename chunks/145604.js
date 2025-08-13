@@ -149,6 +149,7 @@ class J extends i.PureComponent {
                             stage_instance_id: null == n ? void 0 : n.id,
                             guild_scheduled_event_id: null == r ? void 0 : r.id,
                             was_moved: k.Z.getWasMoved(),
+                            join_voice_id: k.Z.getJoinVoiceId(),
                         },
                         (0, c.oG)(p, u),
                         (0, c.kO)(p, u, y),

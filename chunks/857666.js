@@ -7,8 +7,8 @@ var r = n(255367),
     o = n(73800),
     i = n(494497),
     l = n(442837),
-    a = n(481060),
-    s = n(434404),
+    s = n(481060),
+    a = n(434404),
     c = n(905128),
     u = n(639777),
     d = n(169010),
@@ -41,14 +41,14 @@ function v(e, t) {
                               j = _.intl.string(f.default["/egwJC"]),
                               C = h ? void 0 : _.intl.string(f.default.W6Vwn5),
                               E = h ? void 0 : _.intl.string(f.default.lvk1GR),
-                              I = h ? _.intl.string(f.default["9CfkLC"]) : _.intl.string(f.default.NTuNw8),
-                              N = h ? "secondary" : "primary",
+                              I = h ? _.intl.string(f.default["9CfkLC"]) : _.intl.string(_.t["+7XY39"]),
+                              N = h ? "secondary" : "expressive",
                               w = o
                                   ? () => {
                                         h
-                                            ? s.Z.open(t, m.pNK.TAG, m.jXE.GUILD_POWERUPS_OVERVIEW_CARD)
+                                            ? a.Z.open(t, m.pNK.TAG, m.jXE.GUILD_POWERUPS_OVERVIEW_CARD)
                                             : null != b && (0, p.KE)(t, b),
-                                            (0, a.pTH)();
+                                            (0, s.pTH)();
                                     }
                                   : void 0;
                           return {
@@ -56,7 +56,7 @@ function v(e, t) {
                               description: v,
                               openModal: function (e) {
                                   let i = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-                                  (0, a.ZDy)(
+                                  (0, s.ZDy)(
                                       async () => {
                                           let { default: i } = await n.e("64767").then(n.bind(n, 754887));
                                           return (n) =>
@@ -97,8 +97,9 @@ function v(e, t) {
                                                           footerAction:
                                                               o && null != w && null != I
                                                                   ? {
-                                                                        variant: null != N ? N : "secondary",
+                                                                        variant: N,
                                                                         text: I,
+                                                                        icon: "expressive" === N ? s.$Eu : void 0,
                                                                         onClick: w,
                                                                     }
                                                                   : void 0,

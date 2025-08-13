@@ -34,8 +34,8 @@ var i = n(255367),
     w = n(413182),
     k = n(695346),
     L = n(265159),
-    M = n(532495),
-    B = n(981631),
+    B = n(532495),
+    M = n(981631),
     U = n(921944),
     V = n(388032),
     G = n(179571);
@@ -158,7 +158,7 @@ function F() {
                           className: G.nameplatePreview,
                           isHighlighted: !0,
                       }),
-                      children: (0, i.jsx)(M.Z, {}),
+                      children: (0, i.jsx)(B.Z, {}),
                   }),
                   eo && (0, i.jsx)(T.Z, {}),
                   (0, i.jsx)(c.$, {
@@ -187,7 +187,7 @@ function F() {
                               innerClassName: G.floatingNitroButtonInner,
                               onClick: () => {
                                   var e;
-                                  D.default.track(B.rMx.TRY_IT_OUT_PRESET_CLICKED, {
+                                  D.default.track(M.rMx.TRY_IT_OUT_PRESET_CLICKED, {
                                       cta_variant: "floating_action_button",
                                   }),
                                       null == ed ||

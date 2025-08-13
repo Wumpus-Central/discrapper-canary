@@ -15,8 +15,8 @@ var r = n(255367),
     o = n(73800),
     i = n(120356),
     l = n.n(i),
-    a = n(442837),
-    s = n(704215),
+    s = n(442837),
+    a = n(704215),
     c = n(481060),
     u = n(243778),
     d = n(984370),
@@ -47,13 +47,13 @@ function A(e) {
         (0, m.Sn)(t), (0, m.Fm)(t);
     }, [t]),
         (0, N.Wj)(t);
-    let A = (0, a.e7)([f.Z], () => f.Z.getStateForGuild(t)),
+    let A = (0, s.e7)([f.Z], () => f.Z.getStateForGuild(t)),
         R = (0, _.Z)(t),
         L = o.useRef(!1),
         { shouldShow: k, modalConfig: U } = (0, I.K)(t, "GuildPowerupsOverview"),
         D = null == i && null != U,
         M = [];
-    k && D && M.push(s.z.VANITY_URL_POWERUP_ROLLBACK_MODAL);
+    k && D && M.push(a.z.VANITY_URL_POWERUP_ROLLBACK_MODAL);
     let [V, B] = (0, u.US)(M),
         G = o.useMemo(
             () =>
@@ -173,7 +173,7 @@ function A(e) {
                               className: T.powerupsContainer,
                               children: G.map((e) => {
                                   let { type: n, listings: o } = e,
-                                      { title: i, description: a } = (function (e) {
+                                      { title: i, description: s } = (function (e) {
                                           switch (e) {
                                               case Z.Us.LEVEL:
                                                   return {
@@ -187,7 +187,7 @@ function A(e) {
                                                   };
                                           }
                                       })(n),
-                                      s = n === Z.Us.LEVEL ? c.zJl : "div";
+                                      a = n === Z.Us.LEVEL ? c.zJl : "div";
                                   return (0, r.jsxs)(
                                       "div",
                                       {
@@ -204,11 +204,11 @@ function A(e) {
                                                       (0, r.jsx)(c.Text, {
                                                           color: "text-muted",
                                                           variant: "text-sm/medium",
-                                                          children: a,
+                                                          children: s,
                                                       }),
                                                   ],
                                               }),
-                                              (0, r.jsx)(s, {
+                                              (0, r.jsx)(a, {
                                                   orientation: "horizontal",
                                                   className: l()(T.powerupContainer, T.powerupHorizontalPadding, {
                                                       [T.powerupsLevelContainer]: n === Z.Us.LEVEL,

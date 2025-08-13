@@ -128,6 +128,7 @@ async function A(e, t) {
                 sound: H,
                 previewDisabled: V,
                 goLiveModalDurationMs: null == t ? void 0 : t.goLiveModalDurationMs,
+                analyticsLocations: null == t ? void 0 : t.analyticsLocations,
             }),
         ),
         [!0, void 0]

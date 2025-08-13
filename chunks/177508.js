@@ -34,8 +34,8 @@ var i = n(255367),
     w = n(554042),
     k = n(706705),
     L = n(726985),
-    M = n(981631),
-    B = n(231338),
+    B = n(981631),
+    M = n(231338),
     U = n(884032),
     V = n(177475),
     G = n(691739),
@@ -386,7 +386,7 @@ function er() {
         children: [
             (0, i.jsx)(D.Z, {
                 parentSetting: L.s6.DESIGN_SYSTEMS,
-                settingsSection: M.oAB.DESIGN_SYSTEMS,
+                settingsSection: B.oAB.DESIGN_SYSTEMS,
                 tabs: [
                     {
                         title: "Components",
@@ -1115,8 +1115,8 @@ function em() {
         [P, R] = r.useState(!1),
         [D, Z] = r.useState(!1),
         [w, k] = r.useState(!1),
-        [L, M] = r.useState(!1),
-        [B, V] = r.useState(!1),
+        [L, B] = r.useState(!1),
+        [M, V] = r.useState(!1),
         [G, W] = r.useState(!1),
         Y = r.useRef(null),
         K = r.useRef(null),
@@ -1154,7 +1154,7 @@ function em() {
                 R(!1),
                 Z(!1),
                 k(!1),
-                M(!1),
+                B(!1),
                 V(!1),
                 W(!1);
         }, []);
@@ -1576,7 +1576,7 @@ function em() {
             }),
             (0, i.jsx)(S.e, {
                 targetElementRef: ed,
-                shouldShow: B,
+                shouldShow: M,
                 onRequestClose: em,
                 caretConfig: {
                     position: "bottom",
@@ -1901,7 +1901,7 @@ function em() {
                                 text: "Expressive Popover",
                                 buttonRef: ec,
                                 onClick: () => {
-                                    em(), M(!0);
+                                    em(), B(!0);
                                 },
                             }),
                             (0, i.jsx)(T.zxk, {
@@ -3103,7 +3103,7 @@ function ev() {
 function eS() {
     let e = (0, c.e7)([N.Z], () => N.Z.gradientPreset);
     return (0, i.jsx)(T.f6W, {
-        theme: B.BR.DARKER,
+        theme: M.BR.DARKER,
         disableAdaptiveTheme: !0,
         children: (t) =>
             (0, i.jsxs)("div", {
@@ -3115,7 +3115,7 @@ function eS() {
                         fullWidth: !0,
                     }),
                     (0, i.jsx)(T.f6W, {
-                        theme: B.BR.LIGHT,
+                        theme: M.BR.LIGHT,
                         children: (t) =>
                             (0, i.jsxs)("div", {
                                 className: a()(t, U.section),
@@ -3126,7 +3126,7 @@ function eS() {
                                         fullWidth: !0,
                                     }),
                                     (0, i.jsx)(T.f6W, {
-                                        theme: B.BR.DARKER,
+                                        theme: M.BR.DARKER,
                                         children: (e) =>
                                             (0, i.jsx)("div", {
                                                 className: a()(e, U.section),

@@ -1,18 +1,19 @@
-n.d(t, { h: () => E });
-var r = n(952265),
-    i = n(570140),
-    o = n(281956),
-    a = n(200498),
-    s = n(368442),
-    l = n(672339),
-    c = n(653175),
-    u = n(592125),
-    d = n(430824),
-    f = n(607744),
-    _ = n(944486),
-    p = n(979651),
-    h = n(934415);
-function m(e, t, n) {
+n.d(t, { h: () => b });
+var r = n(772848),
+    i = n(952265),
+    o = n(570140),
+    a = n(281956),
+    s = n(200498),
+    l = n(368442),
+    c = n(672339),
+    u = n(653175),
+    d = n(592125),
+    f = n(430824),
+    _ = n(607744),
+    p = n(944486),
+    h = n(979651),
+    m = n(934415);
+function g(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -25,7 +26,7 @@ function m(e, t, n) {
         e
     );
 }
-function g(e) {
+function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -36,43 +37,45 @@ function g(e) {
                 }),
             )),
             r.forEach(function (t) {
-                m(e, t, n[t]);
+                g(e, t, n[t]);
             });
     }
     return e;
 }
-let E = function (e, t) {
-    let m = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-        E = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-        { lockVoiceStateForResume: b = !1 } = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {},
-        y = u.Z.getChannel(e),
-        O = p.Z.getCurrentClientVoiceChannelId(null != t ? t : null) === e,
-        v = null != y ? f.Z.getCheck(y.guild_id) : null;
-    if (!(null != t && (0, o.n)(t)) && (null == v || v.canChat || (0, a.jU)(y))) {
-        if (null != y && !O) {
-            let e = (0, h.rY)(y, p.Z, d.Z);
-            if (e && y.isGuildStageVoice() && (0, s.xJ)(y.id))
-                return void (0, r.ZD)(async () => {
+let b = function (e, t) {
+    let g = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+        b = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+        { lockVoiceStateForResume: y = !1 } = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {},
+        O = d.Z.getChannel(e),
+        v = h.Z.getCurrentClientVoiceChannelId(null != t ? t : null) === e,
+        I = null != O ? _.Z.getCheck(O.guild_id) : null;
+    if (!(null != t && (0, a.n)(t)) && (null == I || I.canChat || (0, s.jU)(O))) {
+        if (null != O && !v) {
+            let e = (0, m.rY)(O, h.Z, f.Z);
+            if (e && O.isGuildStageVoice() && (0, l.xJ)(O.id))
+                return void (0, i.ZD)(async () => {
                     let { default: e } = await n.e("46398").then(n.bind(n, 523794));
-                    return (t) => e(g({ channel: y }, t));
+                    return (t) => e(E({ channel: O }, t));
                 });
             if (e)
-                return void (0, r.ZD)(async () => {
+                return void (0, i.ZD)(async () => {
                     let { default: e } = await n.e("86465").then(n.bind(n, 997308));
                     return (t) => e(t);
                 });
         }
-        m && (0, l.eH)(), (0, c.Z)(I, e, E, m);
+        g && (0, c.eH)(), (0, u.Z)(T, e, b, g);
     }
-    function I() {
-        i.Z.dispatch({
+    function T() {
+        let n = (0, r.Z)();
+        o.Z.dispatch({
             type: "VOICE_CHANNEL_SELECT",
             guildId: t,
             channelId: e,
-            currentVoiceChannelId: _.Z.getVoiceChannelId(),
-            video: m,
-            stream: E,
-            lockVoiceStateForResume: b,
+            currentVoiceChannelId: p.Z.getVoiceChannelId(),
+            video: g,
+            stream: b,
+            lockVoiceStateForResume: y,
+            joinVoiceId: n,
         });
     }
 };

@@ -3,8 +3,8 @@ var r = n(255367),
     o = n(73800),
     i = n(494497),
     l = n(481060),
-    a = n(158638),
-    s = n(973772),
+    s = n(158638),
+    a = n(973772),
     c = n(838968),
     u = n(262212),
     d = n(795338),
@@ -18,9 +18,9 @@ function g(e) {
         [g, v] = o.useState(void 0);
     (0, m.KT)(g);
     let [b, h] = o.useState(!1),
-        j = (0, s.ZP)(t, n).type !== _.A3.INACTIVE,
+        j = (0, a.ZP)(t, n).type !== _.A3.INACTIVE,
         C = (0, f.d)(j),
-        E = (0, a.g1)(t, "GuildPowerupPerkCard"),
+        E = (0, s.g1)(t, "GuildPowerupPerkCard"),
         I = n.skuId === i.A$;
     return (0, r.jsxs)(p.Z, {
         onHover: (e) => h(e),

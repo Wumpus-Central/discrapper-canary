@@ -104,7 +104,7 @@ let k = function () {
             value: e,
             label: e.name,
         })),
-        [M, B] = r.useState(L.length > 0 ? L[0].value : null),
+        [B, M] = r.useState(L.length > 0 ? L[0].value : null),
         [U, V] = r.useState(""),
         [G, F] = r.useState({
             plan_id: P.Xh.PREMIUM_MONTH_TIER_2,
@@ -219,13 +219,13 @@ let k = function () {
                             className: R.formItem,
                             children: [
                                 (0, i.jsx)(c.q4e, {
-                                    value: M,
+                                    value: B,
                                     options: L,
-                                    onChange: (e) => B(e),
+                                    onChange: (e) => M(e),
                                 }),
-                                null != M
+                                null != B
                                     ? (0, i.jsx)(b.Z, {
-                                          guild: M,
+                                          guild: B,
                                           analyticsLocation: {},
                                       })
                                     : (0, i.jsx)("div", { children: "No Guild to boost" }),

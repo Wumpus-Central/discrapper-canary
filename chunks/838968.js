@@ -11,8 +11,8 @@ var r = n(255367),
     o = n(73800),
     i = n(120356),
     l = n.n(i),
-    a = n(481060),
-    s = n(377171),
+    s = n(481060),
+    a = n(377171),
     c = n(192371),
     u = n(834209),
     d = n(93841),
@@ -23,11 +23,11 @@ function f(e) {
     return (0, r.jsxs)("div", {
         className: m.inline,
         children: [
-            (0, r.jsx)(a.owK, {
+            (0, r.jsx)(s.owK, {
                 size: "xs",
-                color: a.TVs.colors.STATUS_POSITIVE,
+                color: s.TVs.colors.STATUS_POSITIVE,
             }),
-            (0, r.jsx)(a.Text, {
+            (0, r.jsx)(s.Text, {
                 color: "text-feedback-positive",
                 variant: "text-sm/bold",
                 children: t,
@@ -40,11 +40,11 @@ function _(e) {
     return (0, r.jsxs)("div", {
         className: m.inline,
         children: [
-            (0, r.jsx)(a.Mgn, {
+            (0, r.jsx)(s.Mgn, {
                 size: "xs",
-                color: a.TVs.colors.STATUS_WARNING,
+                color: s.TVs.colors.STATUS_WARNING,
             }),
-            (0, r.jsx)(a.Text, {
+            (0, r.jsx)(s.Text, {
                 color: "status-warning",
                 variant: "text-sm/bold",
                 children: p.intl.formatToMarkdownString(d.default["ol/ao6"], { dateString: (0, c.Z)(t) }),
@@ -57,11 +57,11 @@ function x(e) {
     return (0, r.jsxs)("div", {
         className: m.rollbackInline,
         children: [
-            (0, r.jsx)(a.Mgn, {
+            (0, r.jsx)(s.Mgn, {
                 size: "xs",
-                color: a.TVs.colors.STATUS_WARNING,
+                color: s.TVs.colors.STATUS_WARNING,
             }),
-            (0, r.jsx)(a.Text, {
+            (0, r.jsx)(s.Text, {
                 color: "status-warning",
                 variant: "text-sm/bold",
                 children: p.intl.formatToPlainString(d.default["6e2ry8"], { dateString: (0, u.Z)(t) }),
@@ -71,19 +71,19 @@ function x(e) {
 }
 function g(e) {
     let { cost: t, costDecorator: n, status: o, className: i } = e,
-        s = void 0 !== t ? m.labelContainer : m.labelContainerEnd;
+        a = void 0 !== t ? m.labelContainer : m.labelContainerEnd;
     return (0, r.jsxs)("div", {
-        className: l()(s, i),
+        className: l()(a, i),
         children: [
             void 0 !== t &&
                 (0, r.jsxs)("div", {
                     className: l()(m.inline, m.inlineBoost),
                     children: [
-                        (0, r.jsx)(a.$Eu, {
+                        (0, r.jsx)(s.$Eu, {
                             size: "sm",
-                            color: a.TVs.unsafe_rawColors.GUILD_BOOSTING_PINK,
+                            color: s.TVs.unsafe_rawColors.GUILD_BOOSTING_PINK,
                         }),
-                        (0, r.jsx)(a.Text, {
+                        (0, r.jsx)(s.Text, {
                             className: m.price,
                             tag: "div",
                             variant: "heading-md/semibold",
@@ -117,7 +117,7 @@ function b(e) {
                 children: [
                     (0, r.jsx)("div", {
                         className: m.headerContainer,
-                        children: (0, r.jsx)(a.X6q, {
+                        children: (0, r.jsx)(s.X6q, {
                             color: n,
                             variant: "heading-md/bold",
                             children: t,
@@ -146,7 +146,7 @@ let h = o.forwardRef(function (e, t) {
     return (0, r.jsx)("div", {
         className: l()(m.parentContainer, { [m.rollbackInactive]: d && !i }),
         ref: t,
-        children: (0, r.jsxs)(a.kL8, {
+        children: (0, r.jsxs)(s.kL8, {
             "aria-label": o,
             onClick: f,
             onMouseOver: _,
@@ -161,15 +161,15 @@ let h = o.forwardRef(function (e, t) {
             ),
             children: [
                 "new" === u &&
-                    (0, r.jsx)(a.IGR, {
+                    (0, r.jsx)(s.IGR, {
                         className: m.new,
                         text: p.intl.string(p.t.y2b7CA),
                     }),
                 "beta" === u &&
-                    (0, r.jsx)(a.IGR, {
+                    (0, r.jsx)(s.IGR, {
                         className: m.new,
                         text: p.intl.string(p.t.oW0eUV),
-                        color: s.Z.BG_BRAND,
+                        color: a.Z.BG_BRAND,
                     }),
                 g,
             ],

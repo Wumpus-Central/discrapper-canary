@@ -16,8 +16,11 @@ let a = [
         getLabel: () => o.intl.string(o.t["5gztZG"]),
     },
     {
-        getDueAt: () => i()().add(1, "day").startOf("day").add(9, "hours").toDate(),
-        getLabel: () => o.intl.string(o.t["7MKr2N"]),
+        getDueAt: () => {
+            let e = i()().startOf("day").add(9, "hours");
+            return i()().hour() >= 9 ? e.add(1, "day").toDate() : e.toDate();
+        },
+        getLabel: () => (i()().hour() >= 9 ? o.intl.string(o.t["7MKr2N"]) : o.intl.string(o.t.FnFI3t)),
     },
     {
         getDueAt: () => {

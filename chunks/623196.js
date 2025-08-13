@@ -38,36 +38,8 @@ function E() {
     let C = (0, m.$6)(t, e) || n,
         O = null != t && a()().diff(a()(t.created_at), "days") < b.eBq,
         v = C && O,
-        S = () => {
-            j({
-                onConfirm: (e) => {
-                    E(!0),
-                        (0, p.h)(e)
-                            .then(
-                                (e) => {
-                                    null != e && null != e.body
-                                        ? c.Z.show({ body: x.intl.string(x.t["6Nmv4u"]) })
-                                        : c.Z.show({
-                                              title: x.intl.string(x.t.OjbtDg),
-                                              body: x.intl.string(x.t["0F5Jys"]),
-                                          });
-                                },
-                                (e) => {
-                                    var t;
-                                    let n =
-                                        (null == e ? void 0 : e.message) ||
-                                        (null == e || null == (t = e.body) ? void 0 : t.message) ||
-                                        x.intl.string(x.t["0F5Jys"]);
-                                    c.Z.show({
-                                        title: x.intl.string(x.t.OjbtDg),
-                                        body: n,
-                                    });
-                                },
-                            )
-                            .finally(() => E(!1));
-                },
-            });
-        };
+        S = e.isStaff(),
+        T = !e.verified;
     return (0, i.jsxs)(h.U, {
         setting: f.s6.PRIVACY_DATA_REQUEST_V2,
         children: [
@@ -85,28 +57,68 @@ function E() {
                           }),
                       }),
                   })
-                : (0, i.jsx)("div", {
-                      className: _.button,
-                      children: (0, i.jsx)(o.ua7, {
-                          text: e.isStaff()
-                              ? x.intl.string(x.t.ZPQLHx)
-                              : e.verified
-                                ? null
-                                : x.intl.string(x.t["c1f88/"]),
-                          children: (e) => {
-                              let { onMouseEnter: t, onMouseLeave: r } = e;
-                              return (0, i.jsx)(o.zxk, {
-                                  variant: "primary",
-                                  text: x.intl.string(x.t.dmBSKi),
-                                  disabled: C,
-                                  onClick: S,
-                                  onMouseEnter: t,
-                                  onMouseLeave: r,
-                                  loading: s || n,
-                              });
-                          },
-                      }),
-                  }),
+                : S
+                  ? (0, i.jsx)(o.Zbd, {
+                        className: _.card,
+                        children: (0, i.jsx)(o.Text, {
+                            variant: "text-md/normal",
+                            children: x.intl.string(x.t.ZPQLHx),
+                        }),
+                    })
+                  : (0, i.jsxs)(i.Fragment, {
+                        children: [
+                            T
+                                ? (0, i.jsx)(o.Zbd, {
+                                      className: _.card,
+                                      children: (0, i.jsx)(o.Text, {
+                                          variant: "text-md/normal",
+                                          children: x.intl.string(x.t["c1f88/"]),
+                                      }),
+                                  })
+                                : null,
+                            (0, i.jsx)("div", {
+                                className: _.button,
+                                children: (0, i.jsx)(o.zxk, {
+                                    variant: "primary",
+                                    text: x.intl.string(x.t.dmBSKi),
+                                    disabled: C,
+                                    onClick: () => {
+                                        j({
+                                            onConfirm: (e) => {
+                                                E(!0),
+                                                    (0, p.h)(e)
+                                                        .then(
+                                                            (e) => {
+                                                                null != e && null != e.body
+                                                                    ? c.Z.show({ body: x.intl.string(x.t["6Nmv4u"]) })
+                                                                    : c.Z.show({
+                                                                          title: x.intl.string(x.t.OjbtDg),
+                                                                          body: x.intl.string(x.t["0F5Jys"]),
+                                                                      });
+                                                            },
+                                                            (e) => {
+                                                                var t;
+                                                                let n =
+                                                                    (null == e ? void 0 : e.message) ||
+                                                                    (null == e || null == (t = e.body)
+                                                                        ? void 0
+                                                                        : t.message) ||
+                                                                    x.intl.string(x.t["0F5Jys"]);
+                                                                c.Z.show({
+                                                                    title: x.intl.string(x.t.OjbtDg),
+                                                                    body: n,
+                                                                });
+                                                            },
+                                                        )
+                                                        .finally(() => E(!1));
+                                            },
+                                        });
+                                    },
+                                    loading: s || n,
+                                }),
+                            }),
+                        ],
+                    }),
         ],
     });
 }

@@ -3,8 +3,8 @@ var r = n(255367),
     o = n(73800),
     i = n(120356),
     l = n.n(i),
-    a = n(793030),
-    s = n(481060),
+    s = n(793030),
+    a = n(481060),
     c = n(808189),
     u = n(973772),
     d = n(838968),
@@ -32,7 +32,7 @@ function C(e) {
                         [j.boostContainerActive]: n,
                         [h.active]: n,
                     }),
-                    children: (0, r.jsx)(s.$Eu, {
+                    children: (0, r.jsx)(a.$Eu, {
                         size: "sm",
                         color: "white",
                     }),
@@ -45,7 +45,7 @@ function E(e) {
     let { isActive: t, index: n } = e,
         i = (0, _.d)(t),
         l = (0, _.u)(t),
-        s = o.useMemo(() => {
+        a = o.useMemo(() => {
             let e = c.C[n];
             if (null == e) return [];
             let t = e.tier === g.Eu4.TIER_3 ? e.perks.slice(0, -1) : e.perks;
@@ -61,7 +61,7 @@ function E(e) {
                                       color: l,
                                       size: "sm",
                                   }),
-                                  (0, r.jsx)(a.xv, {
+                                  (0, r.jsx)(s.xv, {
                                       className: j.perkText,
                                       color: i,
                                       variant: "text-sm/medium",
@@ -76,10 +76,10 @@ function E(e) {
     return (0, r.jsxs)("div", {
         className: j.perkRowContainer,
         children: [
-            s,
+            a,
             (0, r.jsx)("div", {
                 className: j.perkRow,
-                children: (0, r.jsx)(a.xv, {
+                children: (0, r.jsx)(s.xv, {
                     color: i,
                     variant: "text-sm/medium",
                     children: b.intl.string(v.default.nIj3LS),
@@ -90,11 +90,11 @@ function E(e) {
 }
 function I(e) {
     let { guildId: t, index: n, powerup: i, nextPowerup: l } = e,
-        a = (0, u.ZP)(t, i),
-        s = (0, u.ZP)(t, l),
-        c = a.type !== x.A3.INACTIVE,
-        g = s.type !== x.A3.INACTIVE,
-        v = a.type === x.A3.TIER_OVERRIDE_ACTIVATED,
+        s = (0, u.ZP)(t, i),
+        a = (0, u.ZP)(t, l),
+        c = s.type !== x.A3.INACTIVE,
+        g = a.type !== x.A3.INACTIVE,
+        v = s.type === x.A3.TIER_OVERRIDE_ACTIVATED,
         [b, h] = o.useState(void 0);
     (0, f.KT)(b);
     let I = (0, _.d)(c);

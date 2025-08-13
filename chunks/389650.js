@@ -46,7 +46,7 @@ function L(e, t, n) {
         e
     );
 }
-function M(e) {
+function B(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -62,7 +62,7 @@ function M(e) {
     }
     return e;
 }
-function B(e, t) {
+function M(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -164,7 +164,7 @@ class G extends r.PureComponent {
                                     children: (e) =>
                                         (0, i.jsx)(
                                             "div",
-                                            B(M({}, e), {
+                                            M(B({}, e), {
                                                 children: (0, i.jsx)(m.rsf, {
                                                     checked: t,
                                                     onChange: this.handleEnableDisable,
@@ -188,17 +188,17 @@ class G extends r.PureComponent {
     constructor(...e) {
         super(...e),
             L(this, "handleActionChanged", (e) => {
-                p.Z.setKeybind(B(M({}, this.props.keybind), { action: e }));
+                p.Z.setKeybind(M(B({}, this.props.keybind), { action: e }));
             }),
             L(this, "handleShortcutChange", (e) => {
-                p.Z.setKeybind(B(M({}, this.props.keybind), { shortcut: e }));
+                p.Z.setKeybind(M(B({}, this.props.keybind), { shortcut: e }));
             }),
             L(this, "handleDeleteKeybind", () => {
                 p.Z.deleteKeybind(this.props.keybind.id);
             }),
             L(this, "handleEnableDisable", () => {
                 let { keybind: e } = this.props;
-                p.Z.setKeybind(B(M({}, this.props.keybind), { enabled: !e.enabled }));
+                p.Z.setKeybind(M(B({}, this.props.keybind), { enabled: !e.enabled }));
             });
     }
 }

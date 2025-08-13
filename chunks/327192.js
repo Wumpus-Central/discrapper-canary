@@ -34,8 +34,8 @@ var i = n(255367),
     w = n(494620),
     k = n(205266),
     L = n(216153),
-    M = n(981631),
-    B = n(856651),
+    B = n(981631),
+    M = n(856651),
     U = n(921944),
     V = n(388032),
     G = n(154040),
@@ -208,10 +208,10 @@ function W(e) {
                 var t;
                 let n = _.Z.get(e.type),
                     r = _.Z.get(X),
-                    s = "1" === (null != (t = e.metadata) ? t : {})[B.PC.TWITTER_VERIFIED],
+                    s = "1" === (null != (t = e.metadata) ? t : {})[M.PC.TWITTER_VERIFIED],
                     a = null;
                 return (
-                    n.type === M.ABu.TWITTER &&
+                    n.type === B.ABu.TWITTER &&
                         s &&
                         (a = (0, i.jsx)(m.ua7, {
                             text: V.intl.string(V.t.Jebrw8),
@@ -300,12 +300,12 @@ function W(e) {
             })(o),
             o.twoWayLink
                 ? null
-                : o.type === M.ABu.XBOX
+                : o.type === B.ABu.XBOX
                   ? (0, i.jsx)("div", {
                         className: G.upsellWrapper,
                         children: (0, i.jsx)(L.Y, {}),
                     })
-                  : o.type === M.ABu.PLAYSTATION
+                  : o.type === B.ABu.PLAYSTATION
                     ? (0, i.jsx)("div", {
                           className: G.upsellWrapper,
                           children: (0, i.jsx)(k.t, {}),
@@ -315,26 +315,26 @@ function W(e) {
                 var t;
                 let n = null != (t = e.metadata) ? t : {},
                     r = null,
-                    s = (0, E.FI)(n[B.PC.CREATED_AT], h);
+                    s = (0, E.FI)(n[M.PC.CREATED_AT], h);
                 switch (e.type) {
-                    case M.ABu.REDDIT:
+                    case B.ABu.REDDIT:
                         r = (0, O.oP)(n, G.metadataItem);
                         break;
-                    case M.ABu.STEAM:
+                    case B.ABu.STEAM:
                         r = (0, O.Dq)(n, G.metadataItem);
                         break;
-                    case M.ABu.BLUESKY:
-                    case M.ABu.TWITTER:
-                    case M.ABu.MASTODON:
+                    case B.ABu.BLUESKY:
+                    case B.ABu.TWITTER:
+                    case B.ABu.MASTODON:
                         r = (0, O.rJ)(n, G.metadataItem);
                         break;
-                    case M.ABu.EBAY:
+                    case B.ABu.EBAY:
                         r = (0, O.ul)(n, G.metadataItem);
                         break;
-                    case M.ABu.PAYPAL:
+                    case B.ABu.PAYPAL:
                         r = (0, O.li)(n, G.metadataItem);
                         break;
-                    case M.ABu.TIKTOK:
+                    case B.ABu.TIKTOK:
                         r = (0, O.hf)(n, G.metadataItem);
                 }
                 null !== s &&
@@ -372,7 +372,7 @@ function W(e) {
                                     variant: "text-xs/normal",
                                     className: G.connectionMetadataUpsellDescription,
                                     children: V.intl.format(V.t.Up2ni4, {
-                                        helpdeskUrl: R.Z.getArticleURL(M.BhN.CONNECTION_DETAILS),
+                                        helpdeskUrl: R.Z.getArticleURL(B.BhN.CONNECTION_DETAILS),
                                     }),
                                 },
                                 "label",
@@ -412,7 +412,7 @@ function W(e) {
                     })
                 );
             })(o),
-            (M.BFP.has(o.type) &&
+            (B.BFP.has(o.type) &&
                 (n = (0, i.jsx)(m.j7V, {
                     className: G.connectionOptionSwitch,
                     hideBorder: !0,
@@ -425,7 +425,7 @@ function W(e) {
                         children: V.intl.string(V.t["+KCMSk"]),
                     }),
                 })),
-            M.vbS.has(o.type) &&
+            B.vbS.has(o.type) &&
                 (s = (0, i.jsx)(m.j7V, {
                     className: G.connectionOptionSwitch,
                     hideBorder: !0,
@@ -554,7 +554,7 @@ function Y() {
                 (0, i.jsx)(m.Text, {
                     variant: "text-xs/normal",
                     color: "header-secondary",
-                    children: V.intl.format(V.t["oYc+Gx"], { privacyPolicyUrl: M.EYA.PRIVACY }),
+                    children: V.intl.format(V.t["oYc+Gx"], { privacyPolicyUrl: B.EYA.PRIVACY }),
                 }),
                 (0, i.jsx)(q, {}),
             ],
@@ -564,7 +564,7 @@ function Y() {
 function K(e) {
     let t = _.Z.get(e);
     (0, C.Z)({ platformType: t.type }),
-        P.default.track(M.rMx.ACCOUNT_LINK_STEP, {
+        P.default.track(B.rMx.ACCOUNT_LINK_STEP, {
             previous_step: "desktop connections",
             current_step: "desktop oauth",
             platform_type: t.type,

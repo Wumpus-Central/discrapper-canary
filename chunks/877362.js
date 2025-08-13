@@ -3,8 +3,8 @@ var r = n(255367),
     o = n(120356),
     i = n.n(o),
     l = n(793030),
-    a = n(442837),
-    s = n(304789),
+    s = n(442837),
+    a = n(304789),
     c = n(755721),
     u = n(481060),
     d = n(99690),
@@ -29,18 +29,18 @@ let S = E.ZP.getEnableHardwareAcceleration() ? u.Xo$ : d.Z;
 function y(e) {
     var t, n;
     let { guildId: o } = e,
-        d = (0, a.e7)([h.Z], () => h.Z.getGuild(o)),
-        E = (0, a.e7)([b.Z], () =>
+        d = (0, s.e7)([h.Z], () => h.Z.getGuild(o)),
+        E = (0, s.e7)([b.Z], () =>
             b.Z.getSortedRoles(o).find((e) => {
                 var t;
                 return (null == (t = e.tags) ? void 0 : t.premium_subscriber) === null;
             }),
         ),
-        y = (0, a.e7)([j.default], () => j.default.getCurrentUser()),
+        y = (0, s.e7)([j.default], () => j.default.getCurrentUser()),
         T = null == y ? void 0 : y.id,
-        O = (0, a.e7)([v.ZP], () => (null != T ? v.ZP.getMember(o, T) : void 0), [T, o]),
+        O = (0, s.e7)([v.ZP], () => (null != T ? v.ZP.getMember(o, T) : void 0), [T, o]),
         A = (null == O ? void 0 : O.premiumSince) != null,
-        R = (0, a.e7)([p.Z], () => p.Z.useReducedMotion),
+        R = (0, s.e7)([p.Z], () => p.Z.useReducedMotion),
         {
             avatarDecorationSrc: L,
             avatarSrc: k,
@@ -53,7 +53,7 @@ function y(e) {
         });
     return null == d || null == O || null == y
         ? null
-        : (0, r.jsxs)(s.$, {
+        : (0, r.jsxs)(a.$, {
               className: Z.container,
               children: [
                   (0, r.jsx)("img", {

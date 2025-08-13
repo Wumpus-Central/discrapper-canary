@@ -66,14 +66,17 @@ function g(e, t, _) {
     if (d.isPlatformEmbedded)
         (0, i.ZDy)(async () => {
             let { default: t } = await Promise.all([n.e("46746"), n.e("74304")]).then(n.bind(n, 60594));
-            return (n) =>
-                (0, r.jsx)(
+            return (n) => {
+                var i;
+                return (0, r.jsx)(
                     t,
                     m(p({}, n), {
                         guildId: e,
-                        analyticsLocation: _,
+                        analyticsLocation: null != (i = _[_.length - 1]) ? i : "unknown location",
+                        analyticsLocations: _,
                     }),
                 );
+            };
         });
     else {
         var h;
@@ -101,6 +104,7 @@ function g(e, t, _) {
                     pid: null,
                     sourceId: n,
                     sourceName: null,
+                    analyticsLocations: _,
                 });
             });
     }

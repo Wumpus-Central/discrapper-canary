@@ -58,7 +58,7 @@ function L(e) {
     }
     return e;
 }
-let M = () => {
+let B = () => {
         let e = (0, I.W)();
         return (0, i.jsx)(N.Cy, {
             text: e,
@@ -66,7 +66,7 @@ let M = () => {
             colorOptions: N.VE.PREMIUM_TIER_2_NEW_GRADIENT_FILL,
         });
     },
-    B = () =>
+    M = () =>
         (0, i.jsx)("div", {
             className: R.mostPopularPill,
             children: (0, i.jsx)(d.X6q, {
@@ -273,8 +273,8 @@ let M = () => {
                                   : N.VE.PREMIUM_TIER_2_WHITE_FILL,
                     })
                   : el
-                    ? (0, i.jsx)(M, {})
-                    : (0, i.jsx)(B, {}));
+                    ? (0, i.jsx)(B, {})
+                    : (0, i.jsx)(M, {}));
         let eu = J === A.Si.TIER_0 || Q === A.p9.TIER_0 || k === A.p9.TIER_0;
         return (0, i.jsx)(p.Gt, {
             value: F,

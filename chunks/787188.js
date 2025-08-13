@@ -3,7 +3,7 @@ var r = n(535396),
     o = n(93841),
     i = n(388032);
 function l(e, t, n) {
-    var l, a, s;
+    var l, s, a;
     return (null == (l = t.sourceEntitlement) ? void 0 : l.ends_at) != null
         ? {
               type: "expiring",
@@ -19,8 +19,8 @@ function l(e, t, n) {
                   type: "active",
                   statusText: i.intl.formatToPlainString(o.default.WRRYUV, {
                       perkName:
-                          null != (s = null == (a = t.sourcePowerup) ? void 0 : a.title)
-                              ? s
+                          null != (a = null == (s = t.sourcePowerup) ? void 0 : s.title)
+                              ? a
                               : i.intl.string(i.t.BfF6EB),
                   }),
               }

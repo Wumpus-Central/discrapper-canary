@@ -4,19 +4,19 @@ n(73800);
 var o = n(657707),
     i = n(793030),
     l = n(692547),
-    a = n(481060),
-    s = n(921944),
+    s = n(481060),
+    a = n(921944),
     c = n(365343);
 function u(e) {
     let { notificationConfig: t, markAsDismissed: n } = e;
     return (0, r.jsxs)("div", {
         className: c.container,
         children: [
-            (0, r.jsx)(a.olH, {
+            (0, r.jsx)(s.olH, {
                 className: c.close,
                 innerClassName: c.innerClose,
                 onClick: () => {
-                    n(s.L.USER_DISMISS);
+                    n(a.L.USER_DISMISS);
                 },
             }),
             (0, r.jsx)(o.Mgn, {

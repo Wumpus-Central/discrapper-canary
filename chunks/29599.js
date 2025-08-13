@@ -200,7 +200,7 @@ let k = function () {
             addClaimedOutboundPromotionCode: k,
         } = (0, E.lG)(),
         L = _.length + j.length > 0,
-        M =
+        B =
             x.g.useExperiment(
                 { location: "EntitlementGifts" },
                 {
@@ -223,7 +223,7 @@ let k = function () {
                               variant: "heading-md/semibold",
                               children: L ? D.intl.string(D.t.wFsj3N) : void 0,
                           }),
-                          m = M
+                          m = B
                               ? (0, i.jsxs)("div", {
                                     className: Z.promoHeaderContainer,
                                     children: [
@@ -257,11 +257,11 @@ let k = function () {
                               L ? (0, i.jsx)(u.$i$, { className: Z.divider }) : null,
                               (0, i.jsx)(v.Z, {
                                   className: Z.gradientContainer,
-                                  isShown: M,
+                                  isShown: B,
                                   type: v.Y.PREMIUM,
                                   hasBackground: !0,
                                   children: (0, i.jsxs)(u.hjN, {
-                                      className: a()({ [Z.marginContainer]: !M }),
+                                      className: a()({ [Z.marginContainer]: !B }),
                                       children: [
                                           m,
                                           j.map((e) => {

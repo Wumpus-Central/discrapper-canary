@@ -17,9 +17,9 @@ var l = n(442837),
     j = n(607783),
     m = n(786138),
     O = n(435064),
-    S = n(779618),
-    Z = n(39604),
-    v = n(258609),
+    Z = n(779618),
+    v = n(39604),
+    S = n(258609),
     y = n(111672),
     I = n(441167),
     w = n(700994),
@@ -28,8 +28,8 @@ var l = n(442837),
     P = n(314897),
     E = n(592125),
     k = n(131951),
-    M = n(594174),
-    A = n(358085),
+    A = n(594174),
+    M = n(358085),
     V = n(569545),
     N = n(981631),
     T = n(65154),
@@ -50,13 +50,13 @@ function D(e) {
             onInteraction: F,
             minimal: G = !1,
         } = e,
-        J = (0, l.cj)([M.default], () => {
+        J = (0, l.cj)([A.default], () => {
             var e;
-            return (null == t ? void 0 : t.ownerId) === (null == (e = M.default.getCurrentUser()) ? void 0 : e.id);
+            return (null == t ? void 0 : t.ownerId) === (null == (e = A.default.getCurrentUser()) ? void 0 : e.id);
         }),
         Q = (function (e) {
             let t = _(e),
-                n = (0, S.Z)(k.Z),
+                n = (0, Z.Z)(k.Z),
                 o = O.Z.getSettings().clipsEnabled,
                 a = e.ownerId === P.default.getId(),
                 { enableViewerClipping: c, ignoreSenderPreference: s } = I.Z.useExperiment(
@@ -70,7 +70,7 @@ function D(e) {
                       id: "clip-stream",
                       disabled: !o || !(a || d) || u,
                       label: U.intl.string(U.t.U4URzM),
-                      action: () => (a ? (0, Z.C1)() : (0, Z.C1)((0, V.V9)(e))),
+                      action: () => (a ? (0, v.C1)() : (0, v.C1)((0, V.V9)(e))),
                   })
                 : null;
         })(t),
@@ -82,10 +82,10 @@ function D(e) {
         })(t),
         z = (function (e, t) {
             let n,
-                o = (0, l.e7)([v.Z], () => null != v.Z.getRemoteSessionId()),
+                o = (0, l.e7)([S.Z], () => null != S.Z.getRemoteSessionId()),
                 a = (0, l.e7)([E.Z], () => E.Z.getChannel(e.channelId), [e.channelId]),
                 u = _(e),
-                d = M.default.getCurrentUser(),
+                d = A.default.getCurrentUser(),
                 f = null != d && e.ownerId === d.id;
             return ((n = f ? U.intl.string(U.t.S5anIS) : u ? U.intl.string(U.t.q3O3Jy) : U.intl.string(U.t["7Xq/nZ"])),
             o || (!f && u && (null == a ? void 0 : a.isGuildStageVoice())))
@@ -106,7 +106,7 @@ function D(e) {
         B = (function (e) {
             let t = _(e),
                 n = (0, l.e7)([k.Z], () => k.Z.isLocalMute(e.ownerId, T.Yn.STREAM)),
-                a = M.default.getCurrentUser(),
+                a = A.default.getCurrentUser(),
                 c = null != a && e.ownerId === a.id;
             return !t || c
                 ? null
@@ -126,7 +126,7 @@ function D(e) {
                 c = (0, l.e7)([k.Z], () => k.Z.getSidechainCompression()),
                 s = (0, l.e7)([k.Z], () => k.Z.getSidechainCompressionStrength()),
                 { analyticsLocations: u } = (0, f.ZP)();
-            return n || !t || !a || (0, A.isWeb)()
+            return n || !t || !a || (0, M.isWeb)()
                 ? null
                 : (0, r.jsxs)(i.kSQ, {
                       children: [
@@ -211,16 +211,16 @@ function D(e) {
             guildId: t.guildId,
             minimal: G,
         }),
-        et = (0, m.b)({
+        { analyticsLocations: et } = (0, f.ZP)(d.Z.STREAM_CONTEXT_MENU),
+        en = (0, m.b)({
             stream: t,
-            handleGoLive: () => (0, x.Z)(t.guildId, t.channelId, "StreamContextMenu"),
+            handleGoLive: () => (0, x.Z)(t.guildId, t.channelId, et),
             minimal: G,
             appContext: C,
-        }),
-        { analyticsLocations: en } = (0, f.ZP)(d.Z.STREAM_CONTEXT_MENU);
+        });
     return G
         ? (0, r.jsx)(f.Gt, {
-              value: en,
+              value: et,
               children: (0, r.jsxs)(i.v2r, {
                   navId: "stream-context",
                   onClose: a.Zy,
@@ -229,7 +229,7 @@ function D(e) {
                   onSelect: R,
                   onInteraction: F,
                   children: [
-                      (0, r.jsx)(i.kSQ, { children: J ? et : z }),
+                      (0, r.jsx)(i.kSQ, { children: J ? en : z }),
                       (0, r.jsxs)(i.kSQ, {
                           children: [B, Y],
                       }),

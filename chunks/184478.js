@@ -4,8 +4,8 @@ n(73800);
 var o = n(793030),
     i = n(442837),
     l = n(755721),
-    a = n(481060),
-    s = n(678558),
+    s = n(481060),
+    a = n(678558),
     c = n(343649),
     u = n(430824),
     d = n(63063),
@@ -58,7 +58,7 @@ function b(e) {
                         }),
                     ],
                 }),
-                (0, r.jsx)(s.Z, {
+                (0, r.jsx)(a.Z, {
                     className: v.boostButton,
                     guild: n,
                     analyticsLocation: {
@@ -68,10 +68,10 @@ function b(e) {
                     color: l.Tt.CUSTOM,
                     size: l.Ph.LARGE,
                     intent: c.P.NONE,
-                    icon: (0, r.jsx)(a.$Eu, {
+                    icon: (0, r.jsx)(s.$Eu, {
                         className: v.boostButtonIcon,
                         size: "sm",
-                        color: a.TVs.unsafe_rawColors.GUILD_BOOSTING_PINK,
+                        color: s.TVs.unsafe_rawColors.GUILD_BOOSTING_PINK,
                     }),
                 }),
                 (0, r.jsx)(m.Z, { guildId: t }),

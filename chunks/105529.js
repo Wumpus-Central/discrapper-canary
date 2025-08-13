@@ -3,8 +3,8 @@ var r = n(255367),
     o = n(793030),
     i = n(755721),
     l = n(481060),
-    a = n(434404),
-    s = n(485386),
+    s = n(434404),
+    a = n(485386),
     c = n(944888),
     u = n(234368),
     d = n(981631),
@@ -14,8 +14,8 @@ function f(e) {
     let { guildId: t, perk: n, markAsDismissed: f } = e,
         _ = u._k[n],
         x = async () => {
-            let e = s.Z.getSortedRoles(t).find(c.YB);
-            await a.Z.open(t, d.pNK.ROLES), null != e && (await a.Z.selectRole(e.id)), f(p.L.SECONDARY);
+            let e = a.Z.getSortedRoles(t).find(c.YB);
+            await s.Z.open(t, d.pNK.ROLES), null != e && (await s.Z.selectRole(e.id)), f(p.L.SECONDARY);
         };
     return (0, r.jsxs)("div", {
         className: m.container,

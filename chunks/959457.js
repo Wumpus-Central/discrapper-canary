@@ -77,26 +77,30 @@ function j(e) {
             sourceId: a,
             nativePickerStyleUsed: s,
             goLiveModalDurationMs: c,
+            analyticsLocations: u,
         } = e,
-        u = (0, p.V9)({
+        d = (0, p.V9)({
             streamType: t,
             guildId: n,
             channelId: r,
             ownerId: E.default.getId(),
         });
     if (
-        ((S[u] = i),
+        ((S[d] = {
+            appContext: i,
+            analyticsLocations: u,
+        }),
         l().forEach(D, (e) => {
             let { analyticsContext: t, isOwner: n } = e;
             t.setActionContext(i), t.setNativePickerStyleUsed(s), n && t.trackStart();
         }),
-        (C[u] = a),
-        (N[u] = o),
+        (C[d] = a),
+        (N[d] = o),
         null != o)
     ) {
         let e = f.ZP.getGameForPID(o);
         null != e &&
-            (A[u] = {
+            (A[d] = {
                 name: e.name,
                 id: e.id,
                 exe: e.exeName,
@@ -105,11 +109,14 @@ function j(e) {
                 gameMetadata: e.gameMetadata,
             });
     }
-    null != c ? (R[u] = c) : delete R[u];
+    null != c ? (R[d] = c) : delete R[d];
 }
 function U(e) {
     let { appContext: t, streamKey: n } = e;
-    (S[n] = t),
+    (S[n] = {
+        appContext: t,
+        analyticsLocations: void 0,
+    }),
         l().forEach(D, (e) => {
             let { analyticsContext: n, isOwner: r } = e;
             n.setActionContext(t), r && n.trackEnd();
@@ -122,18 +129,20 @@ function G(e) {
     let { streamKey: t, rtcServerId: n, rtcChannelId: r, region: i, viewerIds: o } = e,
         a = D[t];
     if (null == a && null != n) {
+        var s, l;
         null == N[t] && (A[t] = null);
         let e = (0, p.my)(t);
         null == A[t] && null == C[t] && (A[t] = (0, h.L2)(e, y.Z));
-        let s = new _.A({
+        let c = new _.A({
             streamRegion: i,
             streamApplication: A[t],
             streamSourceType: X(C[t]),
-            actionContext: S[t],
+            actionContext: null == (s = S[t]) ? void 0 : s.appContext,
             numViewers: null != o ? o.length : 0,
             goLiveModalDurationMs: R[t],
+            analyticsLocations: null == (l = S[t]) ? void 0 : l.analyticsLocations,
         });
-        (a = L(t, n, r, s)), (D[t] = a);
+        (a = L(t, n, r, c)), (D[t] = a);
     }
     delete P[t],
         d.Z.dispatch({

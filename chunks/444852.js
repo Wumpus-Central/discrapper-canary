@@ -93,6 +93,9 @@ class B {
     setActionContext(e) {
         this.actionContext = e;
     }
+    setAnalyticsLocations(e) {
+        this.analyticsLocations = e;
+    }
     trackViewerCount(e) {
         (this.maxViewers = Math.max(e, this.maxViewers)), (this.numViewers = e);
     }
@@ -118,6 +121,7 @@ class B {
         actionContext: r,
         numViewers: i,
         goLiveModalDurationMs: o,
+        analyticsLocations: a,
     }) {
         D(this, "streamRegion", void 0),
             D(this, "streamApplication", void 0),
@@ -129,13 +133,15 @@ class B {
             D(this, "endTime", void 0),
             D(this, "goLiveModalDurationMs", void 0),
             D(this, "numViewers", void 0),
+            D(this, "analyticsLocations", void 0),
             (this.streamRegion = e),
             (this.streamApplication = t),
             (this.streamSourceType = n),
             (this.actionContext = r),
             (this.maxViewers = i),
             (this.goLiveModalDurationMs = o),
-            (this.numViewers = i);
+            (this.numViewers = i),
+            (this.analyticsLocations = null != a ? a : []);
     }
 }
 class Z extends l.Z {
@@ -511,6 +517,7 @@ class Z extends l.Z {
                 effective_connection_speed: b.Z.getEffectiveConnectionSpeed(),
                 service_provider: b.Z.getServiceProvider(),
                 duration_go_live_modal: this.analyticsContext.goLiveModalDurationMs,
+                source_location_stack: this.analyticsContext.analyticsLocations,
             }),
         );
     }
@@ -621,6 +628,7 @@ class Z extends l.Z {
             streamServerId: n,
             streamChannelId: u,
             parentMediaSessionId: c,
+            joinVoiceId: null,
         }),
             D(this, "analyticsContext", void 0),
             D(this, "videoStreamStats", void 0),

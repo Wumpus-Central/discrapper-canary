@@ -1,4 +1,4 @@
-n.d(t, { Z: () => D });
+n.d(t, { Z: () => w });
 var r = n(255367),
     i = n(73800),
     o = n(442837),
@@ -15,12 +15,11 @@ var r = n(255367),
     m = n(74538),
     g = n(618158),
     E = n(871499),
-    b = n(981631),
-    y = n(354459),
-    O = n(474936),
-    v = n(388032),
-    I = n(982594);
-function T(e, t, n) {
+    b = n(354459),
+    y = n(474936),
+    O = n(388032),
+    v = n(982594);
+function I(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -33,7 +32,7 @@ function T(e, t, n) {
         e
     );
 }
-function S(e) {
+function T(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -44,12 +43,12 @@ function S(e) {
                 }),
             )),
             r.forEach(function (t) {
-                T(e, t, n[t]);
+                I(e, t, n[t]);
             });
     }
     return e;
 }
-function A(e, t) {
+function S(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -61,22 +60,22 @@ function A(e, t) {
     }
     return n;
 }
-function N(e, t) {
+function A(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : A(Object(t)).forEach(function (n) {
+            : S(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function C(e, t) {
+function N(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = R(e, t);
+        i = C(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
         for (r = 0; r < o.length; r++)
@@ -84,7 +83,7 @@ function C(e, t) {
     }
     return i;
 }
-function R(e, t) {
+function C(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -93,7 +92,7 @@ function R(e, t) {
     for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function P(e) {
+function R(e) {
     let { className: t } = e;
     return (0, r.jsx)(a.ewm, {
         size: "md",
@@ -101,49 +100,49 @@ function P(e) {
         className: t,
     });
 }
-function w(e) {
+function P(e) {
     let { className: t } = e;
     return (0, r.jsxs)(i.Fragment, {
         children: [
             (0, r.jsx)(u.ZP, {
                 className: t,
                 mask: u.ZP.Masks.HEADER_BAR_BADGE_BOTTOM,
-                children: (0, r.jsx)(P, {}),
+                children: (0, r.jsx)(R, {}),
             }),
-            (0, r.jsx)(h.Z, { className: I.badgeUpgrade }),
+            (0, r.jsx)(h.Z, { className: v.badgeUpgrade }),
         ],
     });
 }
-function D(e) {
+function w(e) {
     var { hideBadges: t = !1, stream: n, location: u } = e,
-        h = C(e, ["hideBadges", "stream", "location"]);
-    let I = i.useRef(null),
-        { parentAnalyticsLocation: T } = (0, s.ZP)(),
-        A = (0, o.e7)([p.default], () => m.ZP.isPremium(p.default.getCurrentUser(), O.p9.TIER_1)),
-        R = (0, o.e7)([_.Z], () => _.Z.getChannel(null == n ? void 0 : n.channelId)),
+        h = N(e, ["hideBadges", "stream", "location"]);
+    let v = i.useRef(null),
+        { analyticsLocations: I, parentAnalyticsLocation: S } = (0, s.ZP)(),
+        C = (0, o.e7)([p.default], () => m.ZP.isPremium(p.default.getCurrentUser(), y.p9.TIER_1)),
+        w = (0, o.e7)([_.Z], () => _.Z.getChannel(null == n ? void 0 : n.channelId)),
         D = i.useMemo(() => (null != n ? [n] : []), [n]),
         L = i.useCallback(() => {
-            null != R && (0, f.Z)(R.getGuildId(), R.id, b.jXE.STREAM_SETTINGS);
-        }, [R]);
-    if (null == n || null == R) return null;
-    let x = P;
+            null != w && (0, f.Z)(w.getGuildId(), w.id, I);
+        }, [w, I]);
+    if (null == n || null == w) return null;
+    let x = R;
     return (
-        t || A || (x = w),
+        t || C || (x = P),
         (0, r.jsx)(a.yRy, {
-            targetElementRef: I,
+            targetElementRef: v,
             position: "top",
             renderPopout: (e) => {
                 let { closePopout: t } = e;
                 return (0, r.jsx)(g.Z, {
                     children: (0, r.jsx)(d.Z, {
-                        channel: R,
+                        channel: w,
                         currentUser: p.default.getCurrentUser(),
                         activeStreams: D,
                         onClose: t,
                         showReportOption: !0,
                         handleGoLive: L,
-                        onInteraction: (0, c.u)("ManageStreamsButton", null != T ? T : u, {
-                            entrypoint: y.A5.OTHER_BUTTON,
+                        onInteraction: (0, c.u)("ManageStreamsButton", null != S ? S : u, {
+                            entrypoint: b.A5.OTHER_BUTTON,
                         }),
                     }),
                 });
@@ -152,13 +151,13 @@ function D(e) {
             children: (e) =>
                 (0, r.jsx)(
                     E.Z,
-                    S(
-                        N(S({}, e), {
-                            buttonRef: I,
-                            label: v.intl.string(v.t.tmiYpK),
+                    T(
+                        A(T({}, e), {
+                            buttonRef: v,
+                            label: O.intl.string(O.t.tmiYpK),
                             iconComponent: x,
                             onClick: (t) => {
-                                (null != T || null != u) && (0, l.v)(null != T ? T : u, l.d.STREAM_SETTINGS),
+                                (null != S || null != u) && (0, l.v)(null != S ? S : u, l.d.STREAM_SETTINGS),
                                     null == e || e.onClick(t);
                             },
                         }),

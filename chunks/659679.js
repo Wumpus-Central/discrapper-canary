@@ -4,8 +4,8 @@ n(73800);
 var o = n(793030),
     i = n(442837),
     l = n(481060),
-    a = n(111028),
-    s = n(834129),
+    s = n(111028),
+    a = n(834129),
     c = n(271383),
     u = n(709054),
     d = n(884902),
@@ -30,7 +30,7 @@ function _(e) {
             };
         }, [t]),
         v = (0, d.X7)(t.guildId, t.userId, null != g ? g : null);
-    return (0, r.jsx)(s.Z, {
+    return (0, r.jsx)(a.Z, {
         className: f.systemMessageContainer,
         contentClassName: f.systemMessageContent,
         iconNode: (0, r.jsx)(l.$Eu, {
@@ -56,7 +56,7 @@ function _(e) {
                 (0, r.jsx)(o.xv, {
                     variant: "text-md/medium",
                     lineClamp: 1,
-                    children: (0, r.jsx)(a.Z, { children: m.intl.string(p.default.plwH8f) }),
+                    children: (0, r.jsx)(s.Z, { children: m.intl.string(p.default.plwH8f) }),
                 }),
             ],
         }),

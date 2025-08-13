@@ -169,31 +169,31 @@ function eN(e, t) {
 }
 function eC(e) {
     let { channel: t, currentUser: n, exitFullScreen: o, canGoLive: a, hasPermission: s, disabled: l } = e,
-        { parentAnalyticsLocation: c } = (0, v.ZP)(),
-        _ = (0, E.bp)(),
-        p = (0, u.Wu)([$.Z], () => $.Z.getAllActiveStreams()),
-        h = p.find((e) => e.ownerId === n.id),
-        m = i.useRef(null),
+        { parentAnalyticsLocation: c, analyticsLocations: _ } = (0, v.ZP)(),
+        p = (0, E.bp)(),
+        h = (0, u.Wu)([$.Z], () => $.Z.getAllActiveStreams()),
+        m = h.find((e) => e.ownerId === n.id),
         g = i.useRef(null),
-        b = t.getGuildId(),
-        y = i.useCallback(() => {
+        b = i.useRef(null),
+        y = t.getGuildId(),
+        O = i.useCallback(() => {
             if ((null == o || o(), !a)) return (0, ef.Z)();
-            (0, e_.Z)(b, t.id, eh.ZY5.GUILD_CHANNEL);
-        }, [b, t.id, a, o]),
-        O = (0, U.B4)(),
-        [I, T] = i.useState(!1),
-        S = () => {
-            if (((0, N.v)(c, N.d.STREAM, !0), a)) return void y();
+            (0, e_.Z)(y, t.id, _);
+        }, [y, t.id, a, o, _]),
+        I = (0, U.B4)(),
+        [T, S] = i.useState(!1),
+        A = () => {
+            if (((0, N.v)(c, N.d.STREAM, !0), a)) return void O();
             (0, ef.Z)();
         },
-        A = () => {
-            (0, N.v)(c, N.d.STREAM, !1), (0, x.Z)(h);
+        C = () => {
+            (0, N.v)(c, N.d.STREAM, !1), (0, x.Z)(m);
         },
-        C = (e, t) => {
+        P = (e, t) => {
             let n = null != e ? e : { onClick: void 0 },
                 { onClick: i } = n,
                 o = eS(n, ["onClick"]),
-                a = null != h;
+                a = null != m;
             function c(e) {
                 null == i || i(e);
             }
@@ -204,19 +204,19 @@ function eC(e) {
                     disabled: l || !s,
                     className: eE.controlButton,
                     hasPermission: s,
-                    streamActive: null != h,
+                    streamActive: null != m,
                     isSelfStream: !0,
                     onPopoutClick: a ? c : null,
                     popoutOpen: t,
                     shouldShowTooltip: !t,
-                    renderNUXHighlight: I,
-                    buttonRef: m,
-                    onClick: null != h ? A : S,
+                    renderNUXHighlight: T,
+                    buttonRef: g,
+                    onClick: null != m ? C : A,
                 }),
             );
         },
-        P = () => {
-            if (O && 0 === p.length)
+        w = () => {
+            if (I && 0 === h.length)
                 return (0, r.jsx)(R.ZP, {
                     contentTypes: [d.z.TRIAL_NUX_STREAM_COACH_MARK],
                     bypassAutoDismiss: !0,
@@ -224,12 +224,12 @@ function eC(e) {
                         let { visibleContent: t, markAsDismissed: n } = e;
                         if (t === d.z.TRIAL_NUX_STREAM_COACH_MARK)
                             return (
-                                T(!0),
+                                S(!0),
                                 (0, r.jsx)(G.h, {
-                                    buttonRef: m,
+                                    buttonRef: g,
                                     dismissed: !1,
                                     onDismiss: () => {
-                                        n(eg.L.USER_DISMISS), T(!1);
+                                        n(eg.L.USER_DISMISS), S(!1);
                                     },
                                 })
                             );
@@ -238,19 +238,19 @@ function eC(e) {
         };
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            P(),
+            w(),
             (0, r.jsx)(Z.Z, {
                 children: (0, r.jsx)(f.yRy, {
-                    targetElementRef: g,
+                    targetElementRef: b,
                     renderPopout: (e) => {
                         let { closePopout: i } = e;
                         return (0, r.jsx)(F.Z, {
                             children: (0, r.jsx)(eu.Z, {
                                 channel: t,
                                 currentUser: n,
-                                activeStreams: null != h ? [h] : [],
-                                handleGoLive: y,
-                                appContext: _,
+                                activeStreams: null != m ? [m] : [],
+                                handleGoLive: O,
+                                appContext: p,
                                 onClose: i,
                                 onInteraction: eD("ManageStreamsMenu"),
                             }),
@@ -264,8 +264,8 @@ function eC(e) {
                         var n = ey({}, eO(e)),
                             { isShown: i } = t;
                         return (0, r.jsx)("div", {
-                            ref: g,
-                            children: C(n, i),
+                            ref: b,
+                            children: P(n, i),
                         });
                     },
                 }),

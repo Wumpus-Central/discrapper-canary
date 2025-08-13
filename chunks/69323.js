@@ -3,8 +3,8 @@ var r = n(255367),
     o = n(73800),
     i = n(494497),
     l = n(442837),
-    a = n(704215),
-    s = n(952265),
+    s = n(704215),
+    a = n(952265),
     c = n(907862),
     u = n(243778),
     d = n(819640),
@@ -15,13 +15,13 @@ var r = n(255367),
 function x(e) {
     let { powerup: t, targetRef: n, isCardVisible: x } = e,
         g = (0, l.e7)([d.Z], () => d.Z.hasLayers()),
-        v = (0, s.f9)(),
+        v = (0, a.f9)(),
         b =
             t.skuId === i.A$
                 ? {
                       title: _.intl.string(f.default.YWo6VF),
                       body: _.intl.string(f.default.gXVvKS),
-                      dismissibleContentType: a.z.VANITY_URL_POWERUP_EDUCATIONAL_POPOVER,
+                      dismissibleContentType: s.z.VANITY_URL_POWERUP_EDUCATIONAL_POPOVER,
                   }
                 : null,
         h = [];

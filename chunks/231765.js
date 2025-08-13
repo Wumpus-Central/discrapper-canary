@@ -301,7 +301,7 @@ function L(e) {
         ],
     });
 }
-function M(e) {
+function B(e) {
     let {
             settings: { enabled: t, screenshakeEnabled: n, shakeIntensity: r, screenshakeEnabledLocations: s },
             updateSettings: l,
@@ -352,7 +352,7 @@ function M(e) {
         ],
     });
 }
-function B(e) {
+function M(e) {
     let { updateSettings: t } = e;
     return (0, i.jsx)(o.hjN, {
         tag: o.RB0.H1,
@@ -496,7 +496,7 @@ function G(e) {
                     settings: s,
                     updateSettings: h,
                 }),
-                (0, i.jsx)(M, {
+                (0, i.jsx)(B, {
                     settings: s,
                     updateSettings: h,
                 }),
@@ -504,7 +504,7 @@ function G(e) {
                     settings: s,
                     updateSettings: h,
                 }),
-                (0, i.jsx)(B, { updateSettings: h }),
+                (0, i.jsx)(M, { updateSettings: h }),
             ],
         })
     );

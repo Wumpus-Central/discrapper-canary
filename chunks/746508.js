@@ -469,29 +469,29 @@ function eJ(e) {
     let t,
         { channel: n, canGoLive: l, enableActivities: o, disabled: s } = e,
         c = i.useRef(null),
-        { parentAnalyticsLocation: d } = (0, A.ZP)(),
-        f = (0, u.e7)([eS.default], () => eS.default.getCurrentUser()),
-        h = (0, u.Wu)([em.Z], () => em.Z.getAllActiveStreams()),
-        b = (0, ec.Z)(n),
-        _ = n.getGuildId(),
-        O = (0, u.cj)([C.ZP], () => null != C.ZP.getSelfEmbeddedActivityForChannel(n.id)),
-        E = (0, Q.Z)(n),
-        y = i.useCallback(() => {
-            (0, ef.Z)(_, n.id, eR.jXE.ACTIVITY_PANEL);
-        }, [_, n.id]),
-        v = h.find((e) => e.ownerId === (null == f ? void 0 : f.id)),
-        I = (0, eu.E)(n, f, h);
-    t = null == v ? (l ? y : ep.Z) : () => (0, z.Z)(v);
-    let S = null != v || I.length > 0,
-        N = b ? eU.intl.string(eU.t.fjBNo6) : eU.intl.string(eU.t.uQn9Bw),
-        T = O || o || E,
-        P = null != v,
-        { Component: j, events: x, play: Z } = (0, p.P)(P ? "disable" : "enable");
-    i.useEffect(() => () => Z(), [Z, P]);
-    let w = (0, r.jsx)(j, {
+        { parentAnalyticsLocation: d, analyticsLocations: f } = (0, A.ZP)(),
+        h = (0, u.e7)([eS.default], () => eS.default.getCurrentUser()),
+        b = (0, u.Wu)([em.Z], () => em.Z.getAllActiveStreams()),
+        _ = (0, ec.Z)(n),
+        O = n.getGuildId(),
+        E = (0, u.cj)([C.ZP], () => null != C.ZP.getSelfEmbeddedActivityForChannel(n.id)),
+        y = (0, Q.Z)(n),
+        v = i.useCallback(() => {
+            (0, ef.Z)(O, n.id, f);
+        }, [O, n.id, f]),
+        I = b.find((e) => e.ownerId === (null == h ? void 0 : h.id)),
+        S = (0, eu.E)(n, h, b);
+    t = null == I ? (l ? v : ep.Z) : () => (0, z.Z)(I);
+    let N = null != I || S.length > 0,
+        T = _ ? eU.intl.string(eU.t.fjBNo6) : eU.intl.string(eU.t.uQn9Bw),
+        P = E || o || y,
+        j = null != I,
+        { Component: x, events: Z, play: w } = (0, p.P)(j ? "disable" : "enable");
+    i.useEffect(() => () => w(), [w, j]);
+    let L = (0, r.jsx)(x, {
         size: "md",
         color: "currentColor",
-        className: a()(eG.buttonIcon, { [eG.withText]: !T }),
+        className: a()(eG.buttonIcon, { [eG.withText]: !P }),
     });
     return (0, r.jsx)(m.yRy, {
         targetElementRef: c,
@@ -499,10 +499,10 @@ function eJ(e) {
             let { closePopout: t } = e;
             return (0, r.jsx)(eu.Z, {
                 channel: n,
-                currentUser: f,
-                activeStreams: h,
+                currentUser: h,
+                activeStreams: b,
                 onClose: t,
-                handleGoLive: l ? y : ep.Z,
+                handleGoLive: l ? v : ep.Z,
                 onInteraction: (0, D.u)("ManageStreamsMenu", d, { entrypoint: eD.A5.OTHER_BUTTON }),
             });
         },
@@ -513,7 +513,7 @@ function eJ(e) {
             var { onClick: n, onMouseEnter: i } = e,
                 l = ez(e, ["onClick", "onMouseEnter"]);
             return (0, r.jsx)(m.ua7, {
-                text: N,
+                text: T,
                 children: (e) =>
                     (0, r.jsx)(
                         g.zx,
@@ -524,35 +524,35 @@ function eJ(e) {
                                     size: g.zx.Sizes.MEDIUM,
                                     onClick: (r) => {
                                         var i;
-                                        (0, R.v)(d, R.d.STREAM, null == v),
-                                            S ? n(r) : t(),
+                                        (0, R.v)(d, R.d.STREAM, null == I),
+                                            N ? n(r) : t(),
                                             null == (i = e.onClick) || i.call(e);
                                     },
-                                    disabled: !b || s,
+                                    disabled: !_ || s,
                                     className: a()(eG.button, eG.buttonColor, {
-                                        [eG.buttonActive]: null != v,
-                                        [eG.disabled]: !b || s,
+                                        [eG.buttonActive]: null != I,
+                                        [eG.disabled]: !_ || s,
                                     }),
                                 }),
-                                S ? l : null,
+                                N ? l : null,
                             ),
                             {
                                 onMouseEnter: () => {
                                     var t;
-                                    null == i || i(), null == (t = e.onMouseEnter) || t.call(e), x.onMouseEnter();
+                                    null == i || i(), null == (t = e.onMouseEnter) || t.call(e), Z.onMouseEnter();
                                 },
                                 onMouseLeave: () => {
                                     var t;
-                                    null == (t = e.onMouseLeave) || t.call(e), x.onMouseLeave();
+                                    null == (t = e.onMouseLeave) || t.call(e), Z.onMouseLeave();
                                 },
                                 innerClassName: eG.buttonContents,
                                 wrapperClassName: eG.button,
                                 focusProps: eW,
-                                children: T
-                                    ? w
+                                children: P
+                                    ? L
                                     : (0, r.jsxs)(U.Z, {
                                           align: U.Z.Align.CENTER,
-                                          children: [w, eU.intl.string(eU.t["r0/+v7"])],
+                                          children: [L, eU.intl.string(eU.t["r0/+v7"])],
                                       }),
                             },
                         ),
