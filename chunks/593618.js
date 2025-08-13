@@ -38,8 +38,8 @@ var r = n(255367),
     L = n(981631),
     x = n(388032),
     M = n(208772),
-    k = n(798297);
-function j(e, t, n) {
+    j = n(798297);
+function k(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -63,7 +63,7 @@ function U(e) {
                 }),
             )),
             r.forEach(function (t) {
-                j(e, t, n[t]);
+                k(e, t, n[t]);
             });
     }
     return e;
@@ -353,8 +353,8 @@ function q(e) {
                   includeActivity: s,
               }),
         "aria-label": o,
-        tooltipClassName: k.listItemTooltip,
-        tooltipContentClassName: k.listItemTooltipContent,
+        tooltipClassName: j.listItemTooltip,
+        tooltipContentClassName: j.listItemTooltipContent,
         children: (e) => {
             var { onFocus: t, onBlur: n } = e,
                 o = G(e, ["onFocus", "onBlur"]);

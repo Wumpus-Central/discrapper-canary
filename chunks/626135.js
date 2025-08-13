@@ -120,8 +120,8 @@ let A = { location: {} },
     L = 900000,
     x = 3600000,
     M = 86400000,
-    k = 0.001,
-    j = performance.now(),
+    j = 0.001,
+    k = performance.now(),
     U = (0, s.X6)() ? (0, s.Ub)((0, a.R)()) : null;
 o.extendSuperProperties({ launch_signature: U });
 let G = [];
@@ -242,12 +242,12 @@ let Z = {
     [m.rMx.RPC_COMMAND_SENT]: {
         throttlePeriod: M,
         throttleKeys: (e) => [e.application_id, e.command],
-        throttlePercent: k,
+        throttlePercent: j,
     },
     [m.rMx.RPC_SUBSCRIPTION_REQUESTED]: {
         throttlePeriod: M,
         throttleKeys: (e) => [e.application_id, e.event],
-        throttlePercent: k,
+        throttlePercent: j,
     },
     [m.rMx.ACTIVITY_HANDSHAKE]: {
         throttlePeriod: M,
@@ -414,7 +414,7 @@ function z(e) {
         (o.cpu_core_count = p.Z.getCPUCoreCount()),
         (o.accessibility_features = H()),
         (o.rendered_locale = b.intl.currentLocale),
-        (o.uptime_app = Math.floor((performance.now() - j) / 1000));
+        (o.uptime_app = Math.floor((performance.now() - k) / 1000));
     let a = p.Z.getProcessUptime();
     null != a && (o.uptime_process_renderer = Math.floor(a));
     let { utmSource: s, utmMedium: l, utmCampaign: c, utmContent: u } = C;

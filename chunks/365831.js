@@ -143,7 +143,7 @@ function C(e) {
             },
             "respect-motion-settings",
         ),
-        k = (0, c.Yzy)(
+        j = (0, c.Yzy)(
             null == l ? void 0 : l.id,
             {
                 key: P,
@@ -166,7 +166,7 @@ function C(e) {
             },
             "respect-motion-settings",
         ),
-        [j] = (0, c.bYB)(
+        [k] = (0, c.bYB)(
             2,
             (e) => ({
                 from: L
@@ -287,7 +287,7 @@ function C(e) {
             (0, r.jsx)("div", {
                 className: a()([E.bgGradient, E.bgGradientHighlight]),
             }),
-            k((e) =>
+            j((e) =>
                 (0, r.jsx)(s.animated.div, {
                     className: E.bgGradient,
                     style: e,
@@ -356,7 +356,7 @@ function C(e) {
                         children: (e) =>
                             (0, r.jsx)(s.animated.div, {
                                 className: E.buttonWrapper,
-                                style: j[0],
+                                style: k[0],
                                 children: (0, r.jsx)(
                                     c.P3F,
                                     v(
@@ -388,7 +388,7 @@ function C(e) {
                         children: (e) =>
                             (0, r.jsx)(s.animated.div, {
                                 className: E.buttonWrapper,
-                                style: j[1],
+                                style: k[1],
                                 children: (0, r.jsx)(
                                     c.P3F,
                                     v(

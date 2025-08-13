@@ -40,20 +40,20 @@ function O(e) {
         } = e,
         M = null;
     null != v && null == (0, p.ly)(v) ? (M = v) : null != R ? (M = R) : null != w && (M = w);
-    let k = null != M ? M.message : "";
+    let j = null != M ? M.message : "";
     null != M &&
         M instanceof d.HF &&
-        (M.code === f.SM.CARD_DECLINED && x && (k += " ".concat(E.intl.string(E.t.iWvwQU))),
-        M.code === f.SM.INVALID_GIFT_REDEMPTION_FRAUD_REJECTED && (k = E.intl.string(E.t.ypuSd3)),
-        M.code === g.evJ.BILLING_NON_REFUNDABLE_PAYMENT_SOURCE && (k = E.intl.string(E.t.mXMmWF)));
-    let { stripe: j } = (0, _.JL)();
-    C = C || null == j;
+        (M.code === f.SM.CARD_DECLINED && x && (j += " ".concat(E.intl.string(E.t.iWvwQU))),
+        M.code === f.SM.INVALID_GIFT_REDEMPTION_FRAUD_REJECTED && (j = E.intl.string(E.t.ypuSd3)),
+        M.code === g.evJ.BILLING_NON_REFUNDABLE_PAYMENT_SOURCE && (j = E.intl.string(E.t.mXMmWF)));
+    let { stripe: k } = (0, _.JL)();
+    C = C || null == k;
     let U = i.useRef(new l.V7());
     i.useEffect(() => {
         let e = U.current;
         return (
-            null != j || e.isStarted()
-                ? null != j && e.stop()
+            null != k || e.isStarted()
+                ? null != k && e.stop()
                 : e.start(10 * m.Z.Millis.SECOND, () => {
                       let e = Error("Stripe took too long to load");
                       (0, h.q2)(e);
@@ -62,11 +62,11 @@ function O(e) {
                 e.stop();
             }
         );
-    }, [j]);
+    }, [k]);
     let G = t.includes(p.h8.PAYMENT_TYPE) ? p.h8.PAYMENT_TYPE : p.h8.ADD_PAYMENT_STEPS;
     return (0, r.jsxs)(o.Elements, {
         options: g.OBo,
-        stripe: j,
+        stripe: k,
         children: [
             I,
             (0, r.jsxs)("div", {
@@ -104,7 +104,7 @@ function O(e) {
                                       className: b.errorBlockWrapper,
                                       children: (0, r.jsx)(c.kzN, {
                                           ref: P,
-                                          children: k,
+                                          children: j,
                                       }),
                                   }),
                             C

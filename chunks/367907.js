@@ -3,7 +3,7 @@ n.d(t, {
     AB: () => B,
     JS: () => U,
     ZP: () => W,
-    hH: () => k,
+    hH: () => j,
     kO: () => H,
     oG: () => Y,
     v_: () => G,
@@ -73,7 +73,7 @@ function M(e) {
     for (let n in e) t += 1;
     return t;
 }
-function k(e) {
+function j(e) {
     var t;
     if (null == e) return null;
     let n = m.Z.getGuild(e);
@@ -99,7 +99,7 @@ function k(e) {
         num_voice_channels_active: M(c),
     };
 }
-function j(e, t) {
+function k(e, t) {
     return {
         channel_static_route: t,
         channel_hidden: !1,
@@ -168,7 +168,7 @@ function F(e) {
         i = "guild_id" in t ? t.guild_id : r ? I.Z.getGuildId() : null,
         o = "channel_id" in t ? t.channel_id : r ? v.Z.getChannelId(i) : null,
         a = d.Z.getChannel(o),
-        s = x({}, t, k(Z(a, i)), null != i && null != o && (0, D.AB)(o) ? j(i, o) : G(a));
+        s = x({}, t, j(Z(a, i)), null != i && null != o && (0, D.AB)(o) ? k(i, o) : G(a));
     N.default.track(e, s, { flush: n });
 }
 function V(e) {

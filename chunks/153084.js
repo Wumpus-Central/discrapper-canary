@@ -1,6 +1,4 @@
 e.exports = {
-    container: "container__2692d " + n(193578).recentMentionsPopout,
-    widerInbox: "widerInbox__2692d " + n(193578).widerInbox,
     spinner: "spinner__2692d",
     tutorial: "tutorial__2692d",
     tutorialIcon: "tutorialIcon__2692d",

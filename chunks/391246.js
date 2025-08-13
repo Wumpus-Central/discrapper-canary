@@ -31,9 +31,9 @@ var r = n(127849),
     L = S.getterFor(C),
     x = S.getterFor(R),
     M = S.set,
-    k = r[C],
-    j = k,
-    U = j && j[P],
+    j = r[C],
+    k = j,
+    U = k && k[P],
     G = r[R],
     B = G && G[P],
     Z = Object.prototype,
@@ -88,24 +88,24 @@ var r = n(127849),
         for (var u = a.bytes, d = s + a.byteOffset, f = 0; f < t; f++) u[d + f] = l[c ? f : t - f - 1];
     };
 if (a) {
-    var er = A && k.name !== C;
+    var er = A && j.name !== C;
     !d(function () {
-        k(1);
+        j(1);
     }) ||
     !d(function () {
-        new k(-1);
+        new j(-1);
     }) ||
     d(function () {
-        return new k(), new k(1.5), new k(NaN), 1 !== k.length || (er && !N);
+        return new j(), new j(1.5), new j(NaN), 1 !== j.length || (er && !N);
     })
-        ? (((j = function (e) {
-              return f(this, U), v(new k(h(e)), this, j);
+        ? (((k = function (e) {
+              return f(this, U), v(new j(h(e)), this, k);
           })[P] = U),
-          (U.constructor = j),
-          I(j, k))
-        : er && N && l(k, "name", C),
+          (U.constructor = k),
+          I(k, j))
+        : er && N && l(j, "name", C),
         b && E(B) !== Z && b(B, Z);
-    var ei = new G(new j(2)),
+    var ei = new G(new k(2)),
         eo = i(B.setInt8);
     ei.setInt8(0, 2147483648),
         ei.setInt8(1, 2147483649),
@@ -123,7 +123,7 @@ if (a) {
                 { unsafe: !0 },
             );
 } else
-    (U = (j = function (e) {
+    (U = (k = function (e) {
         f(this, U);
         var t = h(e);
         M(this, {
@@ -149,7 +149,7 @@ if (a) {
             }),
                 o || ((this.buffer = e), (this.byteLength = n), (this.byteOffset = a));
         })[P]),
-        o && (ee(j, "byteLength", L), ee(G, "buffer", x), ee(G, "byteLength", x), ee(G, "byteOffset", x)),
+        o && (ee(k, "byteLength", L), ee(G, "buffer", x), ee(G, "byteLength", x), ee(G, "byteOffset", x)),
         u(B, {
             getInt8: function (e) {
                 return (et(this, 1, e)[0] << 24) >> 24;
@@ -202,9 +202,9 @@ if (a) {
                 en(this, 8, e, $, t, arguments.length > 2 && arguments[2]);
             },
         });
-T(j, C),
+T(k, C),
     T(G, R),
     (e.exports = {
-        ArrayBuffer: j,
+        ArrayBuffer: k,
         DataView: G,
     });

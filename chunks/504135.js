@@ -88,18 +88,18 @@ function b(e) {
             iconProps: x,
             sparkle: M,
         } = e,
-        { onSelect: k, onInteraction: j } = i.useContext(c.p),
+        { onSelect: j, onInteraction: k } = i.useContext(c.p),
         U = i.useRef(null),
         G = i.useCallback(
             (e) => {
                 var t;
-                if ((null == j || j({ type: c.U.DEFAULT }), null == A)) return !1;
+                if ((null == k || k({ type: c.U.DEFAULT }), null == A)) return !1;
                 (e.shiftKey && D) || L || N(),
                     e.persist(),
-                    null == k || k(),
+                    null == j || j(),
                     (null != (t = e.nativeEvent.view) ? t : window).requestAnimationFrame(() => A(e));
             },
-            [A, N, k, D, L, j],
+            [A, N, j, D, L, k],
         );
     return (
         i.useEffect(() => {

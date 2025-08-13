@@ -1,10 +1,10 @@
 n.d(t, {
     D$: () => P,
-    N4: () => k,
+    N4: () => j,
     UI: () => R,
     Uu: () => S,
     cS: () => w,
-    cZ: () => j,
+    cZ: () => k,
     e1: () => B,
     eQ: () => C,
     fw: () => N,
@@ -172,7 +172,7 @@ function M(e, t) {
             : "";
     return null != t ? (0, a.aF)(s, t) : s;
 }
-function k(e) {
+function j(e) {
     let t = (0, u.ZH)(e),
         n = M(e, E.Dv);
     return y.intl.format(y.t.Vn97KS, {
@@ -180,7 +180,7 @@ function k(e) {
         title: n,
     });
 }
-function j(e) {
+function k(e) {
     return e.reduce((e, t) => {
         var n, r;
         return e + (null != (r = null == (n = t.count_details) ? void 0 : n.vote) ? r : 0);

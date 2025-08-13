@@ -54,7 +54,7 @@ function v(e) {
     if ((0, l.e7)([_.Z], () => _.Z.isBlockedOrIgnored(null == t ? void 0 : t.id))) return null;
     let x = (null == t ? void 0 : t.bot) === !0,
         M = (null == L ? void 0 : L.state) != null && "xs" === S,
-        k = () => {
+        j = () => {
             if (null != P)
                 return (0, r.jsx)(h.Z, {
                     stream: P,
@@ -94,7 +94,7 @@ function v(e) {
                     })
                   : null;
         },
-        j = a()(O.container, {
+        k = a()(O.container, {
             [O.textXs]: "xs" === S,
             [O.textSm]: "sm" === S,
         }),
@@ -109,14 +109,14 @@ function v(e) {
                       hideTooltip: R,
                       textClassName: I,
                       iconClassName: T,
-                      tooltipClassName: j,
+                      tooltipClassName: k,
                       voiceChannel: v,
                       hangStatus: D,
                   });
     return (0, r.jsxs)("div", {
-        className: j,
+        className: k,
         children: [
-            k(),
+            j(),
             (0, r.jsx)(s.xv, {
                 variant: "text-".concat(S, "/normal"),
                 className: a()(O.truncated, O.dot, I),

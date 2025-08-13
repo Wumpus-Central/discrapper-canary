@@ -32,8 +32,8 @@ var r = n(255367),
     L = n(348238),
     x = n(38267),
     M = n(83561),
-    k = n(834129),
-    j = n(959517),
+    j = n(834129),
+    k = n(959517),
     U = n(981631),
     G = n(674563),
     B = n(590433),
@@ -113,7 +113,7 @@ function z(e, t) {
     return i;
 }
 function q(e, t) {
-    let { popouts: n, selected: r, setPopout: o } = (0, x.Z)(e.id, j.d$),
+    let { popouts: n, selected: r, setPopout: o } = (0, x.Z)(e.id, k.d$),
         { usernameProfile: a, avatarProfile: s } = n,
         l = (0, L.wq)(e.author.id, t.id),
         c = (0, L.RN)(e.author.id, t.id, e.id),
@@ -337,7 +337,7 @@ function ei(e) {
         A = (0, c.JA)(null != n ? n : ""),
         { onFocus: C } = A,
         R = K(A, ["onFocus"]),
-        { isFocused: D, handleFocus: x, handleBlur: j } = (0, L.bb)(C),
+        { isFocused: D, handleFocus: x, handleBlur: k } = (0, L.bb)(C),
         V = (0, d.e7)([p.Z], () => p.Z.keyboardModeEnabled),
         Y = (0, d.e7)([I.Z], () => I.Z.can(U.Plq.MANAGE_MESSAGES, l), [l]),
         {
@@ -404,7 +404,7 @@ function ei(e) {
     return (0, r.jsx)("div", {
         onMouseEnter: T,
         onMouseLeave: S,
-        children: (0, r.jsx)(k.Z, {
+        children: (0, r.jsx)(j.Z, {
             className: a()(F.mainContainer, { [F.compact]: o }),
             iconNode: o ? null : (0, r.jsx)(M.S, { src: v }),
             iconContainerClassName: F.iconContainer,
@@ -529,7 +529,7 @@ function ei(e) {
                                 popoutProps: ep,
                                 zalgo: !0,
                                 onFocus: x,
-                                onBlur: j,
+                                onBlur: k,
                                 onClick: eE,
                             }),
                         ),

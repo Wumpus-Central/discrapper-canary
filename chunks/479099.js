@@ -82,10 +82,10 @@ function I(e) {
         L = R || null != v,
         x = (!R || !P) && (null != N || null != C),
         M = 0 === o,
-        k = i.useRef(null),
-        j = (0, l.e7)([f.Z], () => f.Z.keyboardModeEnabled),
+        j = i.useRef(null),
+        k = (0, l.e7)([f.Z], () => f.Z.keyboardModeEnabled),
         U = (e) => {
-            null == v || v(e), null == I || I(t), j || null == k.current || k.current.blur();
+            null == v || v(e), null == I || I(t), k || null == j.current || j.current.blur();
         },
         G = (e) => {
             let i = p.Sb.getSetting();
@@ -150,8 +150,8 @@ function I(e) {
               O(
                   b(
                       O(b({}, F), {
-                          innerRef: k,
-                          focusProps: { ringTarget: k },
+                          innerRef: j,
+                          focusProps: { ringTarget: j },
                           "aria-label": null != S ? S : m.intl.formatToPlainString(m.t.iyRTLi, { tagName: A }),
                           role: "button",
                           "aria-pressed": T,

@@ -7,8 +7,6 @@ e.exports = {
     messageState: "messageState_f6bd5f",
     cancelMessageButton: "cancelMessageButton_f6bd5f",
     message: "message_f6bd5f",
-    container: "container_f6bd5f " + n(193578).recentMentionsPopout,
-    widerInbox: "widerInbox_f6bd5f " + n(193578).widerInbox,
     channelRow: "channelRow_f6bd5f",
     loadingPlaceholder: "loadingPlaceholder_f6bd5f",
 };

@@ -1,11 +1,12 @@
 n.d(t, {
-    AC: () => p,
-    Ct: () => _,
-    ER: () => s,
-    Ek: () => a,
-    Gg: () => l,
-    QV: () => u,
-    oC: () => c,
+    AC: () => h,
+    Ct: () => p,
+    ER: () => l,
+    Ek: () => s,
+    Gg: () => c,
+    KD: () => a,
+    QV: () => d,
+    oC: () => u,
     x_: () => o,
 });
 var r = n(494497),
@@ -45,8 +46,39 @@ var r = n(494497),
             (e[(e.DOLLAR_SIGN = 30)] = "DOLLAR_SIGN"),
             e
         );
+    })({}),
+    a = (function (e) {
+        return (
+            (e.HOT_PINK = "#ff1c90"),
+            (e.LIGHT_PINK = "#ff7fc0"),
+            (e.ORANGE = "#ff8f1c"),
+            (e.PEACH = "#ffae77"),
+            (e.GOLD = "#eebe1a"),
+            (e.LIGHT_YELLOW = "#fffc7f"),
+            (e.TEAL = "#32a070"),
+            (e.MINT_GREEN = "#57b59e"),
+            (e.BLUE_TEAL = "#32839a"),
+            (e.LIGHT_BLUE = "#71c2d9"),
+            (e.PURPLE = "#8a43ff"),
+            (e.LAVENDER = "#bd95ff"),
+            (e.VIOLET = "#9b3fe5"),
+            (e.MAUVE = "#cc8dff"),
+            (e.DEEP_PURPLE = "#942e8f"),
+            (e.ORCHID = "#d46cb5"),
+            (e.RED = "#d14242"),
+            (e.SALMON = "#ff8989"),
+            (e.BROWN = "#814300"),
+            (e.TAN = "#a88a6c"),
+            (e.OLIVE = "#717224"),
+            (e.GRAY = "#c3c3c3"),
+            (e.BURGUNDY = "#5d1d47"),
+            (e.ROSE = "#c58fbb"),
+            (e.DARK_GRAY = "#222222"),
+            (e.LIGHT_GRAY = "#cccccc"),
+            e
+        );
     })({});
-let a = [
+let s = [
     {
         primary: "#ff1c90",
         secondary: "#ff7fc0",
@@ -100,8 +132,8 @@ let a = [
         secondary: "#cccccc",
     },
 ];
-a[0].primary, a[0].secondary;
-let s = {
+s[0].primary, s[0].secondary;
+let l = {
     0: 2,
     1: 1,
     2: 1,
@@ -134,7 +166,7 @@ let s = {
     29: 1,
     30: 1,
 };
-var l = (function (e) {
+var c = (function (e) {
     return (
         (e[(e.SIZE_12 = 12)] = "SIZE_12"),
         (e[(e.SIZE_16 = 16)] = "SIZE_16"),
@@ -144,21 +176,21 @@ var l = (function (e) {
         e
     );
 })({});
-let c = {
+let u = {
         12: 16,
         16: 16,
         24: 24,
         32: 32,
         36: 40,
     },
-    u = [6, 0, 7, 8, 1, 2, 4, 5, 9, 3],
-    d = [21, 22, 23, 24, 25],
-    f = [26, 27, 28, 29, 30],
-    _ = {
-        [i.oNc.GUILD_TAGS_BADGE_PACK_PETS]: d,
-        [i.oNc.GUILD_TAGS_BADGE_PACK_FLEX]: f,
-    },
+    d = [6, 0, 7, 8, 1, 2, 4, 5, 9, 3],
+    f = [21, 22, 23, 24, 25],
+    _ = [26, 27, 28, 29, 30],
     p = {
+        [i.oNc.GUILD_TAGS_BADGE_PACK_PETS]: f,
+        [i.oNc.GUILD_TAGS_BADGE_PACK_FLEX]: _,
+    },
+    h = {
         [i.oNc.GUILD_TAGS_BADGE_PACK_PETS]: r.MB,
         [i.oNc.GUILD_TAGS_BADGE_PACK_FLEX]: r.Vk,
     };

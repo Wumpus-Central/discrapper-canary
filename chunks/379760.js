@@ -1,46 +1,46 @@
-r.d(t, { Z: () => d });
-var n = r(255367);
-r(73800);
-var s = r(755721),
-    i = r(481060),
-    l = r(600164),
-    o = r(7557),
-    a = r(388905),
-    c = r(388032),
-    u = r(170533),
-    h = r(881488);
-function d(e) {
-    let { title: t, subtitle: r, error: d, onSubmit: p, onCancel: m } = e;
-    return (0, n.jsxs)(l.Z, {
-        direction: l.Z.Direction.VERTICAL,
+n.d(t, { Z: () => p });
+var r = n(255367);
+n(73800);
+var s = n(755721),
+    i = n(481060),
+    a = n(600164),
+    l = n(7557),
+    o = n(388905),
+    c = n(388032),
+    u = n(170533),
+    d = n(881488);
+function p(e) {
+    let { title: t, subtitle: n, error: p, onSubmit: h, onCancel: f } = e;
+    return (0, r.jsxs)(a.Z, {
+        direction: a.Z.Direction.VERTICAL,
         children: [
-            (0, n.jsx)(a.Dx, {
-                className: h.marginBottom8,
+            (0, r.jsx)(o.Dx, {
+                className: d.marginBottom8,
                 children: t,
             }),
-            (0, n.jsx)(a.DK, {
+            (0, r.jsx)(o.DK, {
                 className: u.subTitle,
-                children: r,
+                children: n,
             }),
-            (0, n.jsxs)("div", {
+            (0, r.jsxs)("div", {
                 children: [
-                    (0, n.jsx)(o.Z, {
+                    (0, r.jsx)(l.Z, {
                         inputClassName: u.codeInput,
-                        onSubmit: p,
+                        onSubmit: h,
                     }),
-                    null != d
-                        ? (0, n.jsx)(i.Text, {
+                    null != p
+                        ? (0, r.jsx)(i.Text, {
                               className: u.error,
                               variant: "text-sm/normal",
-                              children: d,
+                              children: p,
                           })
                         : null,
                 ],
             }),
-            null != m &&
-                (0, n.jsx)(s.zx, {
+            null != f &&
+                (0, r.jsx)(s.zx, {
                     className: u.button,
-                    onClick: m,
+                    onClick: f,
                     color: s.zx.Colors.PRIMARY,
                     children: c.intl.string(c.t["ETE/oK"]),
                 }),

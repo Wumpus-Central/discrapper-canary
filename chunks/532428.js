@@ -117,23 +117,23 @@ function M() {
             .map((e) => e.toString()),
     );
 }
-function k(e, t) {
+function j(e, t) {
     return [e, e.clone().add(1, t)];
 }
-function j(e) {
+function k(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-    return k(l()().startOf(e).add(t, e), e);
+    return j(l()().startOf(e).add(t, e), e);
 }
 function U(e, t, n) {
-    return k(l()(e, t).local(), n);
+    return j(l()(e, t).local(), n);
 }
 function G() {
     return {
-        [C.intl.string(C.t.HYiVER)]: () => j("day"),
-        [C.intl.string(C.t.cu86KC)]: () => j("day", -1),
-        [C.intl.string(C.t["FvBj//"])]: () => j("week"),
-        [C.intl.string(C.t["20uWCw"])]: () => j("month"),
-        [C.intl.string(C.t["dXC/ho"])]: () => j("year"),
+        [C.intl.string(C.t.HYiVER)]: () => k("day"),
+        [C.intl.string(C.t.cu86KC)]: () => k("day", -1),
+        [C.intl.string(C.t["FvBj//"])]: () => k("week"),
+        [C.intl.string(C.t["20uWCw"])]: () => k("month"),
+        [C.intl.string(C.t["dXC/ho"])]: () => k("year"),
     };
 }
 let B = "([0-9]{4})-([0-9]{1,2})-([0-9]{1,2})",

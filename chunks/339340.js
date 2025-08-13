@@ -38,7 +38,7 @@ function P(e) {
         D = (0, s.e7)([p.Z], () => p.Z.getChannelStatus(t)),
         L = (0, s.e7)([O.Z], () => O.Z.getMediaSessionId()),
         [x, M] = i.useState(null != D ? D : ""),
-        [k, j] = i.useState(!1),
+        [j, k] = i.useState(!1),
         [U, G] = i.useState(null),
         B = (0, s.e7)([v.default], () => v.default.getCurrentUser()),
         Z = x.length > R;
@@ -56,12 +56,12 @@ function P(e) {
             let { invalidEmojis: n } = e;
             if (null != n && n.length > 0) {
                 let { errorMessage: e } = _.Z.validateMessage(n, B, t.id);
-                return G(e), j(!1), { hasErrors: !0 };
+                return G(e), k(!1), { hasErrors: !0 };
             }
             return { hasErrors: !1 };
         },
         H = async (e) => {
-            x === D && P(), null == e || e.preventDefault(), G(null), j(!0);
+            x === D && P(), null == e || e.preventDefault(), G(null), k(!0);
             let n = x.length,
                 r = x.replace(/<(a)?:[^:]+:[0-9]+>/g, "--").length,
                 i = y.ZP.parse(t, x),
@@ -83,7 +83,7 @@ function P(e) {
                 } catch (e) {
                     F(e);
                 }
-                j(!1);
+                k(!1);
             }
         },
         [Y, W] = i.useState((0, m.JM)(x)),
@@ -91,7 +91,7 @@ function P(e) {
             M(t), W(n);
         },
         z = async () => (
-            Z || k || (await H()),
+            Z || j || (await H()),
             Promise.resolve({
                 shouldClear: !1,
                 shouldRefocus: !0,
@@ -145,7 +145,7 @@ function P(e) {
                   },
                   {
                       variant: "primary",
-                      loading: k,
+                      loading: j,
                       disabled: Z,
                       text: S.intl.string(S.t.XqK2Iy),
                       onClick: H,
@@ -206,7 +206,7 @@ function P(e) {
                               }),
                               (0, r.jsx)(u.zx, {
                                   onClick: H,
-                                  submitting: k,
+                                  submitting: j,
                                   className: A.button,
                                   disabled: Z,
                                   children: S.intl.string(S.t.XqK2Iy),

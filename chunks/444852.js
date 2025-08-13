@@ -85,8 +85,8 @@ function M(e, t) {
         e
     );
 }
-let k = 10,
-    j = 1500000,
+let j = 10,
+    k = 1500000,
     U = 1500000,
     G = 5 * S.Z.Millis.SECOND;
 class B {
@@ -226,9 +226,9 @@ class Z extends l.Z {
             null != e &&
                 e < 100000000 &&
                 (this.bandwidthSamples.push(e),
-                this.bandwidthSamples.length > k && this.bandwidthSamples.shift(),
-                this.bandwidthSamples.length === k &&
-                    ((p = i().mean(this.bandwidthSamples)) > U ? (g = "HQ") : p < j && (g = "LQ")));
+                this.bandwidthSamples.length > j && this.bandwidthSamples.shift(),
+                this.bandwidthSamples.length === j &&
+                    ((p = i().mean(this.bandwidthSamples)) > U ? (g = "HQ") : p < k && (g = "LQ")));
         }
         let b = null != (o = null == (r = this._goLiveQualityManager) ? void 0 : r.isDowngraded()) && o;
         if (

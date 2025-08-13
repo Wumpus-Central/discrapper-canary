@@ -44,8 +44,8 @@ let N = new m.Z("AuthenticationStore"),
     L = null,
     x = null,
     M = null,
-    k = null,
-    j = T.u34.NONE,
+    j = null,
+    k = T.u34.NONE,
     U = !1,
     G = [],
     B = "",
@@ -117,29 +117,29 @@ function ee(e, t) {
     X("setAuthToken called."), (null == t || t !== P) && o.removeAnalyticsToken(), o.setToken(e, t);
 }
 function et(e) {
-    (k = e), o.setAnalyticsToken(e);
+    (j = e), o.setAnalyticsToken(e);
 }
 function en() {
     return X("removeAuthToken called."), o.removeAnalyticsToken(), o.removeToken();
 }
 function er(e) {
     let { isPasswordAttempt: t } = e;
-    (j = T.u34.LOGGING_IN), (z = z || !0 === t);
+    (k = T.u34.LOGGING_IN), (z = z || !0 === t);
 }
 function ei(e) {
     let { isMultiAccount: t } = e;
-    (j = T.u34.NONE), (B = ""), (Z = !1), (F = null), (r = null), t || (eu(), en(), Q(!1));
+    (k = T.u34.NONE), (B = ""), (Z = !1), (F = null), (r = null), t || (eu(), en(), Q(!1));
 }
 function eo() {
-    j = T.u34.NONE;
+    k = T.u34.NONE;
 }
 function ea(e) {
     let { token: t } = e;
-    (j = T.u34.NONE), ee(t), $(), (B = ""), (Z = !1), (F = null), eu(), (K = !1);
+    (k = T.u34.NONE), ee(t), $(), (B = ""), (Z = !1), (F = null), eu(), (K = !1);
 }
 function es(e) {
     let { error: t } = e;
-    (B = ""), (Z = !1), (F = null), eu(), (j = null != (0, _.p)(t).date_of_birth ? T.u34.LOGIN_AGE_GATE : T.u34.NONE);
+    (B = ""), (Z = !1), (F = null), eu(), (k = null != (0, _.p)(t).date_of_birth ? T.u34.LOGIN_AGE_GATE : T.u34.NONE);
 }
 function el() {
     K = !0;
@@ -150,7 +150,7 @@ function ec(e) {
         (Z = !1),
         (F = null),
         (K = !1),
-        (j = null != (0, _.F)(t).date_of_birth ? T.u34.LOGIN_AGE_GATE : T.u34.NONE);
+        (k = null != (0, _.F)(t).date_of_birth ? T.u34.LOGIN_AGE_GATE : T.u34.NONE);
 }
 function eu() {
     let e = [];
@@ -170,22 +170,22 @@ function eu() {
 }
 function ed(e) {
     let { ticket: t, sms: n, webauthn: r, backup: i, totp: o } = e;
-    null != t && ((B = t), (Z = n), (F = null != r ? r : null), (H = i), (V = o), eu()), (j = T.u34.MFA_STEP);
+    null != t && ((B = t), (Z = n), (F = null != r ? r : null), (H = i), (V = o), eu()), (k = T.u34.MFA_STEP);
 }
 function ef() {
-    j = T.u34.LOGGING_IN_MFA;
+    k = T.u34.LOGGING_IN_MFA;
 }
 function e_(e) {
-    (j = T.u34.ACCOUNT_SCHEDULED_FOR_DELETION), (r = e.credentials);
+    (k = T.u34.ACCOUNT_SCHEDULED_FOR_DELETION), (r = e.credentials);
 }
 function ep(e) {
-    (j = T.u34.ACCOUNT_DISABLED), (r = e.credentials);
+    (k = T.u34.ACCOUNT_DISABLED), (r = e.credentials);
 }
 function eh(e) {
-    (j = T.u34.PASSWORD_RECOVERY_PHONE_VERIFICATION), (r = e.credentials);
+    (k = T.u34.PASSWORD_RECOVERY_PHONE_VERIFICATION), (r = e.credentials);
 }
 function em(e) {
-    (j = T.u34.PHONE_IP_AUTHORIZATION), (r = e.credentials);
+    (k = T.u34.PHONE_IP_AUTHORIZATION), (r = e.credentials);
 }
 function eg(e) {
     let t = e.fingerprint;
@@ -228,7 +228,7 @@ function ey(e) {
     let { user: n, sessionId: r, analyticsToken: i, token: o } = e;
     O.Z.setUser(n.id, n.username, null != (t = n.email) ? t : void 0, (0, E.Z)(n)),
         (w = r),
-        (k = i),
+        (j = i),
         ee(o, n.id),
         null != i && et(i),
         $(),
@@ -288,7 +288,7 @@ function eS(e) {
         c.K.remove(R),
         (P = null),
         (w = null),
-        (j = (null == e ? void 0 : e.isSwitchingAccount) ? T.u34.LOGGING_IN : T.u34.NONE),
+        (k = (null == e ? void 0 : e.isSwitchingAccount) ? T.u34.LOGGING_IN : T.u34.NONE),
         (B = ""),
         (F = null),
         (Z = !1),
@@ -297,10 +297,10 @@ function eS(e) {
         eu();
 }
 function eA() {
-    j = T.u34.FORGOT_PASSWORD;
+    k = T.u34.FORGOT_PASSWORD;
 }
 function eN() {
-    j = T.u34.NONE;
+    k = T.u34.NONE;
 }
 function eC(e) {
     let { user: t } = e;
@@ -311,14 +311,14 @@ function eR(e) {
     (K = !1), (W = t), setImmediate(() => (0, g.uL)(T.Z5c.ACCOUNT_STANDING));
 }
 function eP() {
-    (W = null), (j = T.u34.NONE), eS(), setImmediate(() => (0, g.uL)(T.Z5c.DEFAULT_LOGGED_OUT));
+    (W = null), (k = T.u34.NONE), eS(), setImmediate(() => (0, g.uL)(T.Z5c.DEFAULT_LOGGED_OUT));
 }
 class ew extends (i = s.ZP.Store) {
     initialize() {
         (P = c.K.get(R)), null == o.getToken() && Q(), this.addChangeListener(() => (0, p.u)(P));
     }
     getLoginStatus() {
-        return j;
+        return k;
     }
     getId() {
         return P;
@@ -342,7 +342,7 @@ class ew extends (i = s.ZP.Store) {
         return x;
     }
     getAnalyticsToken() {
-        return null != k ? k : o.getAnalyticsToken();
+        return null != j ? j : o.getAnalyticsToken();
     }
     getMFATicket() {
         return B;

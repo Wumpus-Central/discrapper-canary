@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h }), n(388685);
+n.d(t, { Z: () => g }), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -8,10 +8,12 @@ var r = n(255367),
     c = n(585483),
     u = n(592183),
     d = n(224724),
-    f = n(981631),
-    _ = n(388032),
-    p = n(967187);
-function h() {
+    f = n(247989),
+    _ = n(228168),
+    p = n(981631),
+    h = n(388032),
+    m = n(967187);
+function g() {
     let [e, t] = i.useState(!1),
         { hasPendingChanges: n, pendingWidgets: o } = (0, s.cj)([d.Z], () => ({
             hasPendingChanges: d.Z.hasPendingChanges(),
@@ -23,47 +25,52 @@ function h() {
             t(!0), (e = setTimeout(() => t(!1), 500));
         }
         return (
-            c.S.subscribe(f.CkL.EMPHASIZE_NOTICE, n),
+            c.S.subscribe(p.CkL.EMPHASIZE_NOTICE, n),
             () => {
-                c.S.unsubscribe(f.CkL.EMPHASIZE_NOTICE, n), null !== e && clearTimeout(e);
+                c.S.unsubscribe(p.CkL.EMPHASIZE_NOTICE, n), null !== e && clearTimeout(e);
             }
         );
     }, []);
-    let h = i.useCallback(async () => {
-            null !== o && (await u.Z.savePendingWidgets(o));
+    let g = i.useCallback(async () => {
+            if (null !== o)
+                try {
+                    await u.Z.savePendingWidgets(o);
+                } catch (e) {
+                    (0, f.L$)(_.qb.WIDGET_SAVE_FAILURE);
+                }
         }, [o]),
-        m = i.useCallback(() => {
+        E = i.useCallback(() => {
             u.Z.clearPendingWidgets();
         }, []);
     return n
         ? (0, r.jsx)("div", {
-              className: a()(p.container, { [p.visible]: n }),
+              className: a()(m.container, { [m.visible]: n }),
               role: "status",
               children: (0, r.jsxs)("div", {
-                  className: a()(p.content, { [p.emphasized]: e }),
+                  className: a()(m.content, { [m.emphasized]: e }),
                   children: [
                       (0, r.jsx)("div", {
-                          className: p.message,
+                          className: m.message,
                           children: (0, r.jsx)(l.Text, {
                               variant: "text-md/medium",
                               color: "text-primary",
-                              children: _.intl.string(_.t["/lQiX1"]),
+                              children: h.intl.string(h.t["/lQiX1"]),
                           }),
                       }),
                       (0, r.jsxs)("div", {
-                          className: p.actions,
+                          className: m.actions,
                           children: [
                               (0, r.jsx)(l.zxk, {
                                   size: "sm",
                                   variant: "secondary",
-                                  text: _.intl.string(_.t.yBZMsb),
-                                  onClick: m,
+                                  text: h.intl.string(h.t.yBZMsb),
+                                  onClick: E,
                               }),
                               (0, r.jsx)(l.zxk, {
                                   size: "sm",
                                   variant: "primary",
-                                  text: _.intl.string(_.t.R3BPHx),
-                                  onClick: h,
+                                  text: h.intl.string(h.t.R3BPHx),
+                                  onClick: g,
                               }),
                           ],
                       }),

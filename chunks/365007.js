@@ -16,6 +16,7 @@ async function l() {
     return (
         await i.tn.post({
             url: s.ANM.WEBAUTHN_CONDITIONAL_UI_CHALLENGE,
+            headers: { authorization: "" },
             rejectWithError: !1,
         })
     ).body;

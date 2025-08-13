@@ -39,8 +39,8 @@ var r = n(255367),
     L = n(74538),
     x = n(276554),
     M = n(739566),
-    k = n(421399),
-    j = n(453687),
+    j = n(421399),
+    k = n(453687),
     U = n(318713),
     G = n(304176),
     B = n(47930),
@@ -221,7 +221,7 @@ let ee = i.memo(function (e) {
             [P, u, C],
         ),
         D = (0, l.e7)([R.default], () => R.default.getCurrentUser()),
-        j = i.useMemo(() => {
+        k = i.useMemo(() => {
             let e = [],
                 n = L.ZP.isPremium(t.author),
                 i = L.ZP.isPremium(D),
@@ -284,7 +284,7 @@ let ee = i.memo(function (e) {
         ? null
         : (0, r.jsxs)(r.Fragment, {
               children: [
-                  (0, r.jsx)(k.Z, {
+                  (0, r.jsx)(j.Z, {
                       message: t,
                       channel: o,
                       author: T,
@@ -296,8 +296,8 @@ let ee = i.memo(function (e) {
                       onContextMenu: E,
                       onPopoutRequestClose: y,
                       decorations: {
-                          [k.a.SYSTEM_TAG]: S,
-                          [k.a.BADGES]: j,
+                          [j.a.SYSTEM_TAG]: S,
+                          [j.a.BADGES]: k,
                       },
                       renderRemixTag: !0,
                       previewGuildId: a,
@@ -332,7 +332,7 @@ function et(e, t, n) {
     } = e;
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(k.Z, {
+            (0, r.jsx)(j.Z, {
                 message: i,
                 channel: o,
                 author: a,
@@ -385,8 +385,8 @@ function en(e) {
         x = m ? X : Q,
         {
             avatarSrc: M,
-            avatarDecorationSrc: k,
-            eventHandlers: j,
+            avatarDecorationSrc: j,
+            eventHandlers: k,
         } = (0, I.Z)({
             userId: p.author.id,
             guildId: a,
@@ -466,9 +466,9 @@ function en(e) {
                       clickTrap: v,
                       children: (e) =>
                           $(
-                              q(K({}, j), {
+                              q(K({}, k), {
                                   avatarSrc: G,
-                                  avatarDecorationSrc: k,
+                                  avatarDecorationSrc: j,
                                   compact: m,
                                   onClick: y,
                                   onContextMenu: b,
@@ -484,9 +484,9 @@ function en(e) {
             : (0, r.jsx)(d.Gt, {
                   value: R,
                   children: $(
-                      q(K({}, j), {
+                      q(K({}, k), {
                           avatarSrc: G,
-                          avatarDecorationSrc: k,
+                          avatarDecorationSrc: j,
                           compact: m,
                           onClick: y,
                           onContextMenu: b,
@@ -527,7 +527,7 @@ function er(e) {
                     u &&
                         l &&
                         (0, r.jsx)(U.Z, {
-                            id: (0, j.Dv)(t),
+                            id: (0, k.Dv)(t),
                             compact: !0,
                             timestamp: t.timestamp,
                             isVisibleOnlyOnHover: d,
@@ -544,7 +544,7 @@ function er(e) {
                     u &&
                         !l &&
                         (0, r.jsx)(U.Z, {
-                            id: (0, j.Dv)(t),
+                            id: (0, k.Dv)(t),
                             timestamp: t.timestamp,
                             className: m,
                             application: b,
@@ -649,10 +649,10 @@ let ea = i.memo(function (e) {
                     e
                 );
             }, [t]),
-            M = (0, j.XX)(t, f),
-            k = (0, j.Dv)(t),
-            U = _ ? "".concat(M) : "".concat(M, " ").concat(k),
-            G = (null == n ? void 0 : n.state) === y.Y.LOADED ? (0, j.Gq)(t) : void 0,
+            M = (0, k.XX)(t, f),
+            j = (0, k.Dv)(t),
+            U = _ ? "".concat(M) : "".concat(M, " ").concat(j),
+            G = (null == n ? void 0 : n.state) === y.Y.LOADED ? (0, k.Gq)(t) : void 0,
             Z = !0 !== _;
         return (0, r.jsx)(er, {
             message: t,
@@ -701,7 +701,7 @@ let ea = i.memo(function (e) {
                     ),
                 ],
             }),
-            usernameSpanId: (0, j.XX)(t, f),
+            usernameSpanId: (0, k.XX)(t, f),
             usernameClassName: a()(H.headerText, {
                 [H.hasRoleIcon]: 0 !== L,
                 [H.hasBadges]: null != w || x.length > 0,

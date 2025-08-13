@@ -36,8 +36,8 @@ let g = 280,
                 art: L,
                 isPremiumEarlyAccess: x = !1,
                 maxWidth: M = g,
-                hideDismissButton: k = !1,
-                pointerClassName: j,
+                hideDismissButton: j = !1,
+                pointerClassName: k,
                 dismissIconClassName: U,
                 dismissIcon: G,
                 onDismissIconClick: B,
@@ -149,7 +149,7 @@ let g = 280,
                                                             : s.zx.Colors.WHITE,
                                                   children: null != O ? O : h.intl.string(h.t.IHf1RE),
                                               }),
-                                              !k &&
+                                              !j &&
                                                   (0, r.jsx)(s.zx, {
                                                       className: m.button,
                                                       size: F,
@@ -173,7 +173,7 @@ let g = 280,
                                       }),
                         }),
                         (0, r.jsx)("div", {
-                            className: a()(m.pointer, j, {
+                            className: a()(m.pointer, k, {
                                 [m.bottomPointer]: "top" === w,
                                 [m.centerLeftPointer]: "right" === w && "center" === D,
                                 [m.topLeftPointer]: "right" === w && "top" === D,

@@ -90,19 +90,19 @@ function x(e, t) {
 function M(e) {
     return e === u.EO.VIDEO;
 }
-function k(e) {
+function j(e) {
     return (
         ((0, E._M)(e) || (0, E.MO)(e)) &&
         (e.pathname.toLowerCase().endsWith(".webp") || e.pathname.toLowerCase().endsWith(".avif"))
     );
 }
-function j(e) {
+function k(e) {
     return ((0, E._M)(e) || (0, E.MO)(e)) && e.pathname.toLowerCase().endsWith(".gif");
 }
 function U(e) {
     let t = y.Z.toURLSafe(e),
-        n = null != t && j(t);
-    return null != t && (k(t) || n)
+        n = null != t && k(t);
+    return null != t && (j(t) || n)
         ? (n && t.searchParams.set("format", "webp"), t.searchParams.set("animated", "true"), t.toString())
         : e;
 }

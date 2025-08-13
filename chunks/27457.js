@@ -36,8 +36,8 @@ var r = n(255367),
     L = n(131951),
     x = n(158776),
     M = n(979651),
-    k = n(574254),
-    j = n(374129),
+    j = n(574254),
+    k = n(374129),
     U = n(639351),
     G = n(584729),
     B = n(334374),
@@ -131,8 +131,8 @@ let eo = [z.fO.ACTIVITY],
         var t, n, o, l, c;
         let {
                 participant: g,
-                onDoubleClick: k,
-                onContextMenu: j,
+                onDoubleClick: j,
+                onContextMenu: k,
                 onClick: U,
                 onMouseDown: Y,
                 onKeyDown: $,
@@ -166,12 +166,12 @@ let eo = [z.fO.ACTIVITY],
             eL = null != (o = null == eD ? void 0 : eD.id) ? o : null,
             [ex] = (0, p.Z)(g.type === z.fO.ACTIVITY ? [g.applicationId] : []),
             eM = (0, s.e7)([b.Z], () => b.Z.getEnabled()),
-            ek = (0, s.e7)([L.Z], () => null != eL && L.Z.isLocalVideoDisabled(eL, (0, h.Z)(g.type)), [eL, g.type]),
-            ej = (0, s.e7)([L.Z], () => (null != eL ? L.Z.getVideoToggleState(eL, (0, h.Z)(g.type)) : K.ZUi.NONE), [
+            ej = (0, s.e7)([L.Z], () => null != eL && L.Z.isLocalVideoDisabled(eL, (0, h.Z)(g.type)), [eL, g.type]),
+            ek = (0, s.e7)([L.Z], () => (null != eL ? L.Z.getVideoToggleState(eL, (0, h.Z)(g.type)) : K.ZUi.NONE), [
                 eL,
                 g.type,
             ]),
-            eU = ej === K.ZUi.AUTO_PROBING,
+            eU = ek === K.ZUi.AUTO_PROBING,
             { speaking: eG, ringing: eB, hasVideo: eZ } = (0, W.Z)(g, ew),
             eF = (0, s.e7)([S.Z], () => null !== eL && S.Z.isUserPlayingSounds(eL), [eL]),
             eV = e_(ew, g, ea.getGuildId()),
@@ -221,15 +221,15 @@ let eo = [z.fO.ACTIVITY],
             ),
             e2 = i.useCallback(
                 (e) => {
-                    null == k || k(g, e);
+                    null == j || j(g, e);
                 },
-                [k, g],
+                [j, g],
             ),
             e3 = i.useCallback(
                 (e, t, n) => {
-                    null == j || j(g, e, t, n);
+                    null == k || k(g, e, t, n);
                 },
-                [j, g],
+                [k, g],
             ),
             e5 = () => {
                 eP(!0);
@@ -415,8 +415,8 @@ let eo = [z.fO.ACTIVITY],
                                                       title: (0, G.Z)(ea, g),
                                                       blocked: eg,
                                                       ignored: eE,
-                                                      localVideoDisabled: ek,
-                                                      videoToggleState: ej,
+                                                      localVideoDisabled: ej,
+                                                      videoToggleState: ek,
                                                       hideAudioIcon: eH,
                                                       onContextMenu: e3,
                                                       onToggleMute: e0,
@@ -482,7 +482,7 @@ function es(e) {
         case z.wR.XBOX:
             return (0, r.jsx)(U.Z, { className: i });
         case z.wR.PLAYSTATION:
-            return (0, r.jsx)(j.Z, { className: i });
+            return (0, r.jsx)(k.Z, { className: i });
         default:
             return null;
     }
@@ -578,13 +578,13 @@ let eu = i.memo((e) => {
                 : null,
         x = (0, Y.N)(o),
         M = (0, Y.K)(o),
-        [j, U] = i.useState(!1);
+        [k, U] = i.useState(!1);
     i.useEffect(() => {
         let e = !1,
             t = () => {
-                e !== k.Z.isOpen() && ((e = k.Z.isOpen()) || U(!1));
+                e !== j.Z.isOpen() && ((e = j.Z.isOpen()) || U(!1));
             };
-        return k.Z.addChangeListener(t), () => k.Z.removeChangeListener(t);
+        return j.Z.addChangeListener(t), () => j.Z.removeChangeListener(t);
     }, []);
     let G = (e) => {
             e.stopPropagation(), U(!0), O(e, !0, z.A5.THREE_DOT);
@@ -676,7 +676,7 @@ let eu = i.memo((e) => {
                                         onClick: G,
                                         tooltipText: Q.intl.string(Q.t["+1H47u"]),
                                         icon: u.xhG,
-                                        hideWhenInactive: !j,
+                                        hideWhenInactive: !k,
                                         compact: M,
                                     }),
                                     B &&
@@ -684,7 +684,7 @@ let eu = i.memo((e) => {
                                             onClick: R,
                                             tooltipText: T ? Q.intl.string(Q.t.YqAjX1) : Q.intl.string(Q.t["w4m94+"]),
                                             icon: T ? u.OyP : u.gj8,
-                                            hideWhenInactive: !T && !j,
+                                            hideWhenInactive: !T && !k,
                                             compact: M,
                                         }),
                                 ],

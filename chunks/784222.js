@@ -67,7 +67,7 @@ function M(e) {
     }
     return e;
 }
-function k(e, t) {
+function j(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -79,12 +79,12 @@ function k(e, t) {
     }
     return n;
 }
-function j(e, t) {
+function k(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : k(Object(t)).forEach(function (n) {
+            : j(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -109,7 +109,7 @@ let G = [D.Z5.DISALLOW_EXTERNAL, D.Z5.DISALLOW_CUSTOM],
                 emojiSearchResults: p,
                 gridWidth: h,
                 emojiPaddingHorizontal: x,
-                emojiSpriteSize: k,
+                emojiSpriteSize: j,
                 shouldShowSoundmojiInEmojiPicker: U,
                 showOnlyUnicode: B,
             } = e,
@@ -158,7 +158,7 @@ let G = [D.Z5.DISALLOW_EXTERNAL, D.Z5.DISALLOW_CUSTOM],
                 u = 0,
                 d = 0;
             if (null != Y && null != h) {
-                let f = Math.floor(h / (k + 2 * x)),
+                let f = Math.floor(h / (j + 2 * x)),
                     m = 3 * f,
                     g = (a, _) => {
                         let p = new Map(),
@@ -198,7 +198,7 @@ let G = [D.Z5.DISALLOW_EXTERNAL, D.Z5.DISALLOW_CUSTOM],
                                     return {
                                         type: 0,
                                         emoji: e,
-                                        size: k,
+                                        size: j,
                                         isDisabled: p.get(e),
                                         rowIndex: d,
                                         columnIndex: G && t ? n + 1 : n,
@@ -223,7 +223,7 @@ let G = [D.Z5.DISALLOW_EXTERNAL, D.Z5.DISALLOW_CUSTOM],
                                             type: 1,
                                             guildId: y.id,
                                             name: L.intl.string(L.t["Z/r7IS"]),
-                                            size: k,
+                                            size: j,
                                             rowIndex: d,
                                             columnIndex: 0,
                                             visibleRowIndex: u,
@@ -239,7 +239,7 @@ let G = [D.Z5.DISALLOW_EXTERNAL, D.Z5.DISALLOW_CUSTOM],
                                         type: 1,
                                         guildId: y.id,
                                         name: L.intl.string(L.t["Z/r7IS"]),
-                                        size: k,
+                                        size: j,
                                         rowIndex: e,
                                         columnIndex: t.length,
                                         visibleRowIndex: u,
@@ -251,7 +251,7 @@ let G = [D.Z5.DISALLOW_EXTERNAL, D.Z5.DISALLOW_CUSTOM],
                                         type: 2,
                                         guildId: y.id,
                                         name: L.intl.string(L.t.NZI2Zm),
-                                        size: k,
+                                        size: j,
                                         rowIndex: e,
                                         columnIndex: t.length,
                                         visibleRowIndex: u,
@@ -263,7 +263,7 @@ let G = [D.Z5.DISALLOW_EXTERNAL, D.Z5.DISALLOW_CUSTOM],
                             d++;
                         }
                         let F = h ? 0 : B,
-                            V = j(M({}, _), { count: a.length });
+                            V = k(M({}, _), { count: a.length });
                         r.push(V), e.push(F);
                     };
                 if (null != p)
@@ -406,7 +406,7 @@ let G = [D.Z5.DISALLOW_EXTERNAL, D.Z5.DISALLOW_CUSTOM],
                 rowCountBySection: e,
                 sectionDescriptors: r,
             };
-        }, [Y, h, k, x, p, n, el, ec, es, i, et, ee, t, l, Q, J, er, F, V, $, q, X, z, K, W, ei, eu, U]);
+        }, [Y, h, j, x, p, n, el, ec, es, i, et, ee, t, l, Q, J, er, F, V, $, q, X, z, K, W, ei, eu, U]);
     };
 var Z = (function (e) {
     return (e[(e.PREMIUM = 0)] = "PREMIUM"), (e[(e.ROLE_SUBSCRIPTION = 1)] = "ROLE_SUBSCRIPTION"), e;

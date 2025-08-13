@@ -41,9 +41,9 @@ function I(e) {
             S === g.h8.CONFIRM &&
             null != L &&
             (null == R ? void 0 : R.productLine) !== E.POd.COLLECTIBLES,
-        k = null != n && null != S,
-        j = [g.h8.SKU_SELECT, g.h8.SELECT_FREE_SKU],
-        U = null != S && !j.includes(S) && null != T,
+        j = null != n && null != S,
+        k = [g.h8.SKU_SELECT, g.h8.SELECT_FREE_SKU],
+        U = null != S && !k.includes(S) && null != T,
         G = (0, u.N)(o),
         B = !D && null != G && null != T && b.nG[G.trial_id].skus.includes(T),
         Z = (0, c.Ng)(),
@@ -69,7 +69,7 @@ function I(e) {
                           }),
                       ],
                   }))
-                : k
+                : j
                   ? (e = n(null != A ? A : null, I, S))
                   : C === y.GZ.ONE_TIME
                     ? (e = (0, r.jsx)(_.t, {
@@ -93,5 +93,5 @@ function I(e) {
                       }))),
             e
         );
-    }, [L, I, N, n, A, T, S, B, V, M, U, k, C, D, x, P, w]);
+    }, [L, I, N, n, A, T, S, B, V, M, U, j, C, D, x, P, w]);
 }

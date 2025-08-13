@@ -93,15 +93,15 @@ function T(e) {
             null != w && (L ? (0, f.rX)(S.system, n, null) : (0, f.rX)(S.system, n, w.value));
         },
         M = (0, r.jsx)(I, { url: t }),
-        k = null;
+        j = null;
     return (1 === D && null != w
-        ? (k = (0, r.jsx)(s.Text, {
+        ? (j = (0, r.jsx)(s.Text, {
               variant: "text-xs/normal",
               color: "text-muted",
               children: w.label,
           }))
         : null != C &&
-          (k = (0, r.jsxs)(s.Text, {
+          (j = (0, r.jsxs)(s.Text, {
               variant: "text-xs/normal",
               color: "text-muted",
               children: ["Server Config: ", R],
@@ -127,7 +127,7 @@ function T(e) {
                                               variant: "text-md/semibold",
                                               children: S.title,
                                           }),
-                                          k,
+                                          j,
                                       ],
                                   }),
                                   M,

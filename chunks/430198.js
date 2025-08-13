@@ -1,4 +1,4 @@
-n.d(t, { Z: () => j }), n(388685);
+n.d(t, { Z: () => k }), n(388685);
 var r,
     i = n(442837),
     o = n(570140),
@@ -127,7 +127,7 @@ function M(e) {
     let { guildId: t } = e;
     I.add(t);
 }
-class k extends (r = i.ZP.Store) {
+class j extends (r = i.ZP.Store) {
     initialize() {
         this.waitFor(E.Z, g.Z, h.Z, f.Z), l.Zo.subscribe({ location: "1" }, () => R());
     }
@@ -149,8 +149,8 @@ class k extends (r = i.ZP.Store) {
         );
     }
 }
-O(k, "displayName", "GatedChannelStore");
-let j = new k(o.Z, {
+O(j, "displayName", "GatedChannelStore");
+let k = new j(o.Z, {
     CONNECTION_OPEN: R,
     OVERLAY_INITIALIZE: R,
     CACHE_LOADED_LAZY: R,

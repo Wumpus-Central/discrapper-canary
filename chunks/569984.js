@@ -1,5 +1,5 @@
 let r, i, o, a, s, l, c, u, d, f, _, p, h, m, g, E, b, y, O, v, I;
-n.d(t, { Z: () => ek }), n(388685);
+n.d(t, { Z: () => ej }), n(388685);
 var T,
     S = n(392711),
     A = n(754700),
@@ -24,7 +24,7 @@ function M(e, t, n) {
         e
     );
 }
-function k(e) {
+function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -40,7 +40,7 @@ function k(e) {
     }
     return e;
 }
-function j(e, t) {
+function k(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -57,7 +57,7 @@ function U(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : j(Object(t)).forEach(function (n) {
+            : k(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -104,7 +104,7 @@ function V(e, t) {
 function H(e, t) {
     let n = (a = new Map(a)).get(e);
     if (null != n) {
-        let r = k({}, n, t);
+        let r = j({}, n, t);
         V(e, t), a.set(e, r);
     }
 }
@@ -116,7 +116,7 @@ function W(e, t) {
     Y(e, t);
     let n = a.get(e),
         r = null == n ? void 0 : n.userStatus;
-    null != r && null == r.claimedAt && H(e, { userStatus: U(k({}, r), { claimedAt: t.claimedAt }) });
+    null != r && null == r.claimedAt && H(e, { userStatus: U(j({}, r), { claimedAt: t.claimedAt }) });
 }
 function K(e) {
     var t;
@@ -134,7 +134,7 @@ function z(e, t) {
         let n = K({ entitlements: t });
         null != n && Y(e, n),
             H(e, {
-                userStatus: U(k({}, i), {
+                userStatus: U(j({}, i), {
                     claimedAt: t.claimedAt,
                     claimedTier: null != (o = null == n ? void 0 : n.tier) ? o : null,
                 }),
@@ -463,4 +463,4 @@ let eM = new ex(R.Z, {
         QUESTS_RESET_OPTIMISTIC_PROGRESS: eN,
         QUESTS_USER_COMPLETION_UPDATE: eL,
     }),
-    ek = eM;
+    ej = eM;

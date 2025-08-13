@@ -114,8 +114,8 @@ let w = Object.freeze({
     L = {},
     x = null,
     M = new Set(),
-    k = !1,
     j = !1,
+    k = !1,
     U = !1,
     G = new Set(),
     B = !1,
@@ -412,11 +412,11 @@ function eb() {
     V.disableExternalLinkAlert = !0;
 }
 function ey() {
-    k = !0;
+    j = !0;
 }
 function eO() {
     s.Z.addInterceptor((e) => {
-        if (j || !Y.has(e.type)) return !1;
+        if (k || !Y.has(e.type)) return !1;
         if ("CHANNEL_SELECT" === e.type) {
             let { guildId: t, channelId: n } = e;
             return (
@@ -461,7 +461,7 @@ function ev(e) {
                 o.ZP.PersistedStore.initializeAll(e.states);
                 break;
             case I.BmY.DISPATCH:
-                null != e.payloads && ((j = !0), e.payloads.forEach((e) => K(e)), (j = !1));
+                null != e.payloads && ((k = !0), e.payloads.forEach((e) => K(e)), (k = !1));
         }
 }
 function eI() {
@@ -585,7 +585,7 @@ class eC extends (i = o.ZP.PersistedStore) {
         return U;
     }
     get incompatibleApp() {
-        return k;
+        return j;
     }
     getActiveRegions() {
         return G;

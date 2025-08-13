@@ -16,7 +16,7 @@ n.d(t, {
     X_: () => et,
     Y0: () => Q,
     _H: () => eB,
-    bc: () => j,
+    bc: () => k,
     bw: () => D,
     dF: () => X,
     hv: () => M,
@@ -27,7 +27,7 @@ n.d(t, {
     nl: () => eE,
     oj: () => R,
     ov: () => $,
-    q_: () => ej,
+    q_: () => ek,
     r8: () => T,
     sR: () => U,
     tx: () => w,
@@ -187,9 +187,9 @@ let L = new Set([g.d4z.GUILD_STAGE_VOICE]),
 function M(e) {
     return x.has(e);
 }
-let k = new Set([g.d4z.GROUP_DM]);
-function j(e) {
-    return k.has(e);
+let j = new Set([g.d4z.GROUP_DM]);
+function k(e) {
+    return j.has(e);
 }
 let U = new Set([
     g.d4z.DM,
@@ -492,7 +492,7 @@ class eg extends ep {
         return this.type === g.d4z.GROUP_DM;
     }
     isMultiUserDM() {
-        return j(this.type);
+        return k(this.type);
     }
     isDM() {
         return this.type === g.d4z.DM;
@@ -1104,7 +1104,7 @@ class eM extends eg {
             (this.videoQualityMode = e.videoQualityMode);
     }
 }
-let ek = {
+let ej = {
     [g.d4z.DM]: eD.fromServer,
     [g.d4z.GROUP_DM]: eD.fromServer,
     [g.d4z.GUILD_TEXT]: ey.fromServer,
@@ -1120,9 +1120,9 @@ let ek = {
     [g.d4z.GUILD_FORUM]: eC.fromServer,
     [g.d4z.GUILD_MEDIA]: eC.fromServer,
 };
-function ej(e, t) {
+function ek(e, t) {
     var n, r;
-    return (null != (r = ek[null != (n = e.type) ? n : g.d4z.GUILD_TEXT]) ? r : eE.fromServer)(e, t);
+    return (null != (r = ej[null != (n = e.type) ? n : g.d4z.GUILD_TEXT]) ? r : eE.fromServer)(e, t);
 }
 function eU(e) {
     return eZ(e);

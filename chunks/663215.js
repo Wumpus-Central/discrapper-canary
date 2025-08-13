@@ -132,7 +132,7 @@ function A(e) {
         }),
         x = C(),
         M = (0, i.Wu)([h.Z], () => h.Z.recentlyHeardSoundIds),
-        k = p.C.useExperiment({ location: "useSoundGrid" });
+        j = p.C.useExperiment({ location: "useSoundGrid" });
     return r.useMemo(() => {
         let e = 0,
             r = 0,
@@ -183,7 +183,7 @@ function A(e) {
                     allSounds: f,
                     filterOutEmptyCurrentGuild: t,
                 });
-        let o = R || k.moveDefaultToBottom;
+        let o = R || j.moveDefaultToBottom;
         return (
             o || S(i, f),
             I({
@@ -209,7 +209,7 @@ function A(e) {
                 },
             }
         );
-    }, [A, f, b, M, x, L, D, P, w, t, R, N, n, O, u, k.moveDefaultToBottom]);
+    }, [A, f, b, M, x, L, D, P, w, t, R, N, n, O, u, j.moveDefaultToBottom]);
 }
 function N(e, t, n) {
     return r.useMemo(

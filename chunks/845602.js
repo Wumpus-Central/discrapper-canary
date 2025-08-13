@@ -4,9 +4,9 @@ n.d(t, {
 }),
     n(388685);
 var r = n(255367),
-    a = n(73800),
-    o = n(120356),
-    s = n.n(o),
+    o = n(73800),
+    a = n(120356),
+    s = n.n(a),
     l = n(481060),
     i = n(957537),
     c = n(839008),
@@ -14,26 +14,26 @@ var r = n(255367),
     u = n(755641),
     p = n(742409),
     m = n(369509),
-    g = n(101017),
-    f = n(606318),
-    b = n(141006),
-    _ = n(981631),
-    h = n(131085),
-    x = n(388032),
+    _ = n(101017),
+    b = n(606318),
+    g = n(141006),
+    f = n(981631),
+    x = n(131085),
+    h = n(388032),
     j = n(968946),
     v = n(482985);
 function k() {
     var e;
-    let [t, n] = a.useState(() => {
-            let e = Math.floor(Math.random() * b.tl.length);
+    let [t, n] = o.useState(() => {
+            let e = Math.floor(Math.random() * g.tl.length);
             return {
-                primary_color: b.tl[e].start,
-                secondary_color: b.tl[e].end,
+                primary_color: g.tl[e].start,
+                secondary_color: g.tl[e].end,
                 tertiary_color: null,
             };
         }),
-        { gradientStyle: o, gradientClassname: c } = (0, l.Icv)({
-            colorStrings: (0, f.DX)(t),
+        { gradientStyle: a, gradientClassname: c } = (0, l.Icv)({
+            colorStrings: (0, b.DX)(t),
             roleStyle: "username",
             includeConvenienceGlow: !0,
             animateGradient: !0,
@@ -46,18 +46,18 @@ function k() {
                 children: (0, r.jsx)(p.l, {
                     avatar: i.Z,
                     username: "Cherry",
-                    usernameStyle: o,
+                    usernameStyle: a,
                     usernameClassName: s()(c, v.animateGradient),
-                    message: x.intl.string(x.t["6OSasb"]),
+                    message: h.intl.string(h.t["6OSasb"]),
                 }),
             }),
             (0, r.jsx)(d.default, {
-                defaultColor: _.p6O,
-                colors: b.tl,
+                defaultColor: f.p6O,
+                colors: g.tl,
                 value: t.primary_color,
                 secondaryValue: null != (e = t.secondary_color) ? e : void 0,
                 onChange: (e) => {
-                    var r, a;
+                    var r, o;
                     return n(
                         ((r = (function (e) {
                             for (var t = 1; t < arguments.length; t++) {
@@ -84,9 +84,9 @@ function k() {
                             }
                             return e;
                         })({}, t)),
-                        (a = a = { primary_color: e }),
+                        (o = o = { primary_color: e }),
                         Object.getOwnPropertyDescriptors
-                            ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(a))
+                            ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(o))
                             : (function (e, t) {
                                   var n = Object.keys(e);
                                   if (Object.getOwnPropertySymbols) {
@@ -94,8 +94,8 @@ function k() {
                                       n.push.apply(n, r);
                                   }
                                   return n;
-                              })(Object(a)).forEach(function (e) {
-                                  Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(a, e));
+                              })(Object(o)).forEach(function (e) {
+                                  Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(o, e));
                               }),
                         r),
                     );
@@ -113,9 +113,9 @@ function k() {
 }
 function C(e) {
     let { guildId: t } = e,
-        [n, o] = a.useState(h.x_.HEART),
-        s = (0, g.Z)(),
-        l = a.useMemo(
+        [n, a] = o.useState(x.x_.HEART),
+        s = (0, _.Z)(),
+        l = o.useMemo(
             () => ({
                 unlockedBadges: s.unlockedBadges.slice(0, 10),
                 lockedBadges: [],
@@ -131,7 +131,7 @@ function C(e) {
                     avatar: c.Z,
                     username: "Roka",
                     usernameStyle: { color: "var(--brand-400)" },
-                    message: x.intl.string(x.t["6OSasb"]),
+                    message: h.intl.string(h.t["6OSasb"]),
                     decorations: (0, r.jsx)(m.S, {
                         guildId: t,
                         tag: "GGEZ",
@@ -141,7 +141,7 @@ function C(e) {
             }),
             (0, r.jsx)(u.g, {
                 selectedBadge: n,
-                onBadgeClicked: o,
+                onBadgeClicked: a,
                 badgeCollection: l,
             }),
         ],

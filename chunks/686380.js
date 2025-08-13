@@ -44,7 +44,7 @@ function M(e, t, n) {
         e
     );
 }
-function k(e) {
+function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -60,21 +60,21 @@ function k(e) {
     }
     return e;
 }
-let j = "???",
+let k = "???",
     U = (e) => {
         let { analyticsLocations: t } = e;
         y.default.track(P.rMx.REFERRAL_PROGRAM_SHARE_MODAL_CTA_CLICKED, { location_stack: t }),
             (0, f.ZDy)(async () => {
                 let { default: e } = await Promise.all([n.e("83667"), n.e("67825")]).then(n.bind(n, 656139));
-                return (t) => (0, r.jsx)(e, k({}, t));
+                return (t) => (0, r.jsx)(e, j({}, t));
             });
     };
 class G extends i.Component {
     getTitleText() {
         let e = E.default.getUser(this.trialOffer.user_id),
-            t = null != e ? e.username : j,
+            t = null != e ? e.username : k,
             n = E.default.getUser(this.trialOffer.referrer_id),
-            r = null != n ? n.username : j;
+            r = null != n ? n.username : k;
         return this.recipientHasNitro && void 0 === this.trialOffer.redeemed_at
             ? w.intl.formatToPlainString(w.t.Mptau7, { username: t })
             : this.offerExpired

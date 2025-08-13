@@ -13,12 +13,12 @@ var l = n(481060),
 function p(e) {
     let { user: t, onClose: n } = e,
         { trackUserProfileAction: p } = (0, c.KZ)(),
-        { mutualGuilds: m, isFetching: b } = (0, s.Z)(t);
+        { mutualGuilds: m, isFetching: g } = (0, s.Z)(t);
     return (0, r.jsx)(l.Ttm, {
         className: f.scroller,
         fade: !0,
         children:
-            null == m && b
+            null == m && g
                 ? Array.from({ length: 10 }).map((e, t) =>
                       (0, r.jsxs)(
                           "div",
@@ -38,7 +38,7 @@ function p(e) {
                           t,
                       ),
                   )
-                : (null != m || b) && (null == m ? void 0 : m.length) !== 0
+                : (null != m || g) && (null == m ? void 0 : m.length) !== 0
                   ? null == m
                       ? void 0
                       : m.map((e) => {

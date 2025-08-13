@@ -103,17 +103,17 @@ let w = (e) => {
             [D, L] = i.useState(null != t ? t : null),
             x = (0, c.e7)([h.default], () => h.default.getCurrentUser()),
             M = i.useMemo(() => [], []),
-            k = i.useRef(null).current;
+            j = i.useRef(null).current;
         i.useEffect(
             () => (
                 N || M.push(u.z.HANG_STATUS_NEW_BADGE),
                 () => {
-                    N && (null == k || k(I.L.PRIMARY));
+                    N && (null == j || j(I.L.PRIMARY));
                 }
             ),
-            [N, M, k],
+            [N, M, j],
         );
-        let j = (e, t) => {
+        let k = (e, t) => {
                 e.stopPropagation(), (0, g.Zx)(t, !0), R(!0);
             },
             U = (e, t) => {
@@ -151,7 +151,7 @@ let w = (e) => {
             children: (e) => {
                 let { visibleContent: n, markAsDismissed: i } = e;
                 return (
-                    (k = i),
+                    (j = i),
                     (0, r.jsxs)("div", {
                         className: A.container,
                         children: [
@@ -216,7 +216,7 @@ let w = (e) => {
                                                     {
                                                         "aria-label": i.title,
                                                         onMouseEnter: () => Z(n),
-                                                        onClick: (e) => j(e, n),
+                                                        onClick: (e) => k(e, n),
                                                         children: (0, r.jsx)(w, {
                                                             className: a()(A.iconWidget, {
                                                                 [A.selectedWidget]:

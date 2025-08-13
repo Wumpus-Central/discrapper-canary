@@ -36,8 +36,8 @@ var r = n(255367),
     L = n(388032),
     x = n(653438);
 let M = 1024,
-    k = ["embedded_background"];
-function j(e) {
+    j = ["embedded_background"];
+function k(e) {
     return e > 400 ? 2 : +(e > 300);
 }
 let U = 4;
@@ -90,7 +90,7 @@ function Z(e) {
 function F(e) {
     var t, n;
     let { participants: o, application: p, channel: m, width: g } = e,
-        E = j(g),
+        E = k(g),
         [b] = G(g),
         y = (0, s.Wu)([P.default, C.default], () =>
             Array.from(o)
@@ -114,7 +114,7 @@ function F(e) {
             }) === h.Fw.CAN_JOIN,
         R = null != (n = m.getGuildId()) ? n : void 0,
         M = i.useId(),
-        k = p.id,
+        j = p.id,
         U = i.useMemo(
             () => ({
                 channel: m,
@@ -123,7 +123,7 @@ function F(e) {
             [m],
         ),
         { submitting: F } = (0, S.Z)({
-            applicationId: k,
+            applicationId: j,
             context: U,
             launchingComponentId: M,
         });
@@ -195,7 +195,7 @@ function V(e) {
         [_] = (0, A.Z)([u]),
         { url: h } = (0, g.Z)({
             applicationId: u,
-            names: k,
+            names: j,
             size: M,
         }),
         y = !o && f,

@@ -1,26 +1,26 @@
-n.d(t, { P: () => o });
+n.d(t, { P: () => c });
 var r = n(255367);
 n(73800);
-var i = n(755721),
-    l = n(481060),
-    a = n(388032),
-    s = n(369496);
-function o(e) {
+var s = n(755721),
+    i = n(481060),
+    l = n(388032),
+    a = n(369496);
+function c(e) {
     let { onClick: t, className: n } = e;
-    return (0, r.jsxs)(l.gtL, {
-        color: i.zx.Colors.GREEN,
+    return (0, r.jsxs)(i.gtL, {
+        color: s.zx.Colors.GREEN,
         className: n,
-        innerClassName: s.upsellButton,
+        innerClassName: a.upsellButton,
         onClick: t,
         children: [
-            (0, r.jsx)(l.$Eu, {
+            (0, r.jsx)(i.$Eu, {
                 color: "white",
                 size: "custom",
                 height: 16,
                 width: 16,
-                className: s.premiumUpsellBadge,
+                className: a.premiumUpsellBadge,
             }),
-            a.intl.string(a.t["+7XY39"]),
+            l.intl.string(l.t["+7XY39"]),
         ],
     });
 }

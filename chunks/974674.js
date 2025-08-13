@@ -2,7 +2,7 @@ n.d(t, {
     Vq: () => D,
     Xo: () => V,
     qE: () => U,
-    qe: () => j,
+    qe: () => k,
 }),
     n(415506),
     n(388685);
@@ -352,7 +352,7 @@ function M(e) {
         }),
     );
 }
-function k(e) {
+function j(e) {
     let {
             children: t,
             size: n,
@@ -432,7 +432,7 @@ function k(e) {
               children: [t, w],
           });
 }
-let j = i.forwardRef((e, t) => {
+let k = i.forwardRef((e, t) => {
     let { src: n, isSpeaking: i, className: o } = e;
     return (0, r.jsxs)(
         "div",
@@ -477,7 +477,7 @@ function U(e) {
         L = R.size + P,
         M = (0, u.vj)(C, o);
     return (0, r.jsx)(
-        k,
+        j,
         I(O({}, e), {
             ariaLabel: S,
             ariaHidden: T,
@@ -498,7 +498,7 @@ function U(e) {
                         width: R.size,
                         height: R.size,
                         mask: "url(#".concat(w(C, i, s, l), ")"),
-                        children: (0, r.jsx)(j, {
+                        children: (0, r.jsx)(k, {
                             ref: _,
                             src: t,
                             isSpeaking: g,
@@ -647,7 +647,7 @@ function Z(e) {
             [Z, v],
         );
     return (0, r.jsx)(
-        k,
+        j,
         I(O({}, e), {
             ariaLabel: L,
             ariaHidden: D,
@@ -689,7 +689,7 @@ function Z(e) {
                         width: et,
                         height: et,
                         mask: "url(#".concat(V, ")"),
-                        children: (0, r.jsx)(j, {
+                        children: (0, r.jsx)(k, {
                             src: y,
                             isSpeaking: g,
                             className: U,
@@ -751,7 +751,7 @@ function Z(e) {
 function F(e, t, n, r, i) {
     return null != n && null != t && (!!e || t !== n || (t === m.Skl.ONLINE && r !== i));
 }
-j.displayName = "AvatarImg";
+k.displayName = "AvatarImg";
 let V = i.memo(function (e) {
     var { statusColor: t, status: n } = e,
         o = T(e, ["statusColor", "status"]);

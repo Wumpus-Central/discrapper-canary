@@ -112,8 +112,8 @@ function N(e) {
         }),
         M = i.useMemo(() => (0, h.XZ)(I.displayName), [I.displayName]),
         {
-            onActivityItemSelected: k,
-            buttonColor: j,
+            onActivityItemSelected: j,
+            buttonColor: k,
             buttonText: U,
         } = (0, g.P7)({
             context: t,
@@ -143,12 +143,12 @@ function N(e) {
                 T(v({}, i), {
                     type: "submit",
                     size: A,
-                    color: j,
+                    color: k,
                     disabled: G,
                     submitting: D,
                     onClick: () => {
                         L(!0),
-                            k(),
+                            j(),
                             null == t || t(),
                             u.default.track(E.rMx.APP_DETAIL_PAGE_ENTRY_POINT_COMMAND_BUTTON_CLICKED, {
                                 application_id: n.id,

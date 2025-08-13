@@ -33,8 +33,8 @@ function T(e) {
         ),
         x = (0, _.Z)(C),
         M = (0, E.Z)(C),
-        k = (0, h.Z)(T, P, null == D ? void 0 : D.ownerId, null == L ? void 0 : L.id),
-        j = (0, f.Z)(C),
+        j = (0, h.Z)(T, P, null == D ? void 0 : D.ownerId, null == L ? void 0 : L.id),
+        k = (0, f.Z)(C),
         U = (0, b.Z)(),
         G = (0, c.$A)(C),
         B = (0, c.j8)(C),
@@ -50,12 +50,12 @@ function T(e) {
         navId: "more-settings-context",
         "aria-label": v.intl.string(v.t.FTLzdX),
         children: [
-            (0, r.jsx)(o.kSQ, { children: R !== O.d4z.GUILD_STAGE_VOICE ? k : null }),
+            (0, r.jsx)(o.kSQ, { children: R !== O.d4z.GUILD_STAGE_VOICE ? j : null }),
             (0, r.jsxs)(o.kSQ, {
                 children: [
                     R === O.d4z.GUILD_STAGE_VOICE ? G : null,
                     R === O.d4z.GUILD_STAGE_VOICE ? B : null,
-                    S || R === O.d4z.GUILD_STAGE_VOICE ? null : j,
+                    S || R === O.d4z.GUILD_STAGE_VOICE ? null : k,
                     V,
                     R !== O.d4z.GUILD_STAGE_VOICE ? x : null,
                     R === O.d4z.GUILD_STAGE_VOICE || R === O.d4z.GUILD_VOICE ? M : null,

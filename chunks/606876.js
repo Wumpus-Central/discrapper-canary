@@ -1,14 +1,14 @@
 n.d(t, { Z: () => u }), n(388685);
 var r = n(255367),
-    a = n(73800),
-    o = n(481060),
+    o = n(73800),
+    a = n(481060),
     s = n(927160),
     l = n(203377),
     i = n(93841),
     c = n(388032),
     d = n(727565);
 function u() {
-    let [e, t] = a.useState("");
+    let [e, t] = o.useState("");
     return (0, r.jsxs)("div", {
         className: d.container,
         children: [
@@ -20,7 +20,7 @@ function u() {
                         children: [
                             (0, r.jsx)("div", {
                                 className: d.avatar,
-                                children: (0, r.jsx)(o.gw7, {
+                                children: (0, r.jsx)(a.gw7, {
                                     size: "custom",
                                     width: 24,
                                     height: 24,
@@ -39,13 +39,13 @@ function u() {
                                     (0, r.jsxs)("div", {
                                         className: d.previewCardUrl,
                                         children: [
-                                            (0, r.jsx)(o.Text, {
+                                            (0, r.jsx)(a.Text, {
                                                 variant: "text-sm/medium",
                                                 color: "text-tertiary",
                                                 className: d.baseUrl,
                                                 children: "".concat(l.mf, "/"),
                                             }),
-                                            (0, r.jsx)(o.Text, {
+                                            (0, r.jsx)(a.Text, {
                                                 variant: "text-sm/medium",
                                                 color: "text-link",
                                                 className: d.vanityCode,
@@ -91,7 +91,7 @@ function u() {
                     }),
                 ],
             }),
-            (0, r.jsx)(o.Text, {
+            (0, r.jsx)(a.Text, {
                 variant: "text-xs/normal",
                 color: "text-tertiary",
                 className: d.disclaimer,

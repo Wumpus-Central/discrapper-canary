@@ -37,8 +37,8 @@ var r = n(255367),
     L = n(114732),
     x = n(46140),
     M = n(981631),
-    k = n(675654),
-    j = n(474936),
+    j = n(675654),
+    k = n(474936),
     U = n(388032),
     G = n(565867);
 function B(e, t, n) {
@@ -185,8 +185,8 @@ function K(e) {
                 (0, r.jsx)(E.Z, {
                     confettiTarget: g.current,
                     confettiCanvas: b,
-                    sprites: k.CA,
-                    colors: k.Br,
+                    sprites: j.CA,
+                    colors: j.Br,
                 }),
         ],
     });
@@ -216,7 +216,7 @@ function q(e) {
         l = (0, P.fh)(t, P.eC.REWARD).url,
         c = (0, A.f$)(t.config),
         { fractionalState: d } = (0, m.Z)(),
-        f = d === j.a$.FP_ONLY,
+        f = d === k.a$.FP_ONLY,
         _ = (0, C.Qy)(t.config),
         p = c && !f;
     return (0, r.jsxs)("div", {

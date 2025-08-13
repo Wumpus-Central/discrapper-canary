@@ -143,13 +143,13 @@ function S(e) {
         properties: L,
         _stackContext: { isSlide: !0 },
     });
-    let { ref: x, width: M = 0, height: k = 0 } = (0, u.ZP)(N),
-        j = m({}, O, T.springConfig, P.enabled ? { clamp: !0 } : null),
+    let { ref: x, width: M = 0, height: j = 0 } = (0, u.ZP)(N),
+        k = m({}, O, T.springConfig, P.enabled ? { clamp: !0 } : null),
         U = (0, c.q_F)(
             {
                 width: null != (n = T.width) ? n : M,
-                height: k,
-                config: j,
+                height: j,
+                config: k,
             },
             null == C ? "animate-never" : "respect-motion-settings",
         ),
@@ -160,7 +160,7 @@ function S(e) {
                 from: { value: 1 },
                 enter: { value: 0 },
                 leave: { value: -1 },
-                config: j,
+                config: k,
                 onRest: (e, t) => {
                     let { item: n } = t;
                     n === N && null != T.onSlideReady && T.onSlideReady(n);

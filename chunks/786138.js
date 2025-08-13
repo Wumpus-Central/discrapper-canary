@@ -89,7 +89,7 @@ function b(e) {
                   action: L,
               })
             : null,
-        k =
+        j =
             !S || y || w
                 ? null
                 : (0, r.jsx)(a.sNh, {
@@ -98,7 +98,7 @@ function b(e) {
                       icon: a.hGI,
                       action: D,
                   }),
-        j = (0, r.jsx)(a.sNh, {
+        k = (0, r.jsx)(a.sNh, {
             id: "stop-streaming",
             label: E.intl.string(E.t.S5anIS),
             icon: a.g5r,
@@ -106,9 +106,9 @@ function b(e) {
         });
     return O
         ? (0, r.jsxs)(r.Fragment, {
-              children: [j, k, x, M],
+              children: [k, j, x, M],
           })
         : (0, r.jsxs)(r.Fragment, {
-              children: [x, b ? R : null, M, k, j],
+              children: [x, b ? R : null, M, j, k],
           });
 }

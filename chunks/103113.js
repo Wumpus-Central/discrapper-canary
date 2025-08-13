@@ -64,11 +64,11 @@ function P(e) {
             setPopoutRef: L,
             closePopout: x,
             disableUserProfileLink: M = __OVERLAY__,
-            newAnalyticsLocations: k = [],
-            disableAutoFocus: j = !1,
+            newAnalyticsLocations: j = [],
+            disableAutoFocus: k = !1,
         } = e,
         U = (0, h.ZP)(t.id, n),
-        { analyticsLocations: G } = (0, l.ZP)([...k, s.Z.USER_PROFILE_POPOUT]),
+        { analyticsLocations: G } = (0, l.ZP)([...j, s.Z.USER_PROFILE_POPOUT]),
         B = (0, _.ZB)({
             layout: "POPOUT",
             userId: t.id,
@@ -114,7 +114,7 @@ function P(e) {
                       },
                   })
                 : null,
-        W = j ? "div" : o.VqE,
+        W = k ? "div" : o.VqE,
         K = (0, u.Dt)(),
         z = f.ZP.useName(n, C, t);
     return (0, r.jsx)(l.Gt, {

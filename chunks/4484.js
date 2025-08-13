@@ -36,8 +36,8 @@ let L = i.forwardRef(function (e, t) {
             channel: L,
             className: x,
             id: M,
-            disabled: k,
-            submitting: j,
+            disabled: j,
+            submitting: k,
             placeholder: U,
             required: G,
             textAreaPaddingClassName: B,
@@ -74,7 +74,7 @@ let L = i.forwardRef(function (e, t) {
         em = i.useRef(null),
         eg = i.useRef(!0),
         eE = i.useRef(!0),
-        eb = k || j,
+        eb = j || k,
         ey = i.useCallback(
             (e, t, n) => {
                 var r;
@@ -261,7 +261,7 @@ let L = i.forwardRef(function (e, t) {
                     readOnly: eb,
                     spellCheck: ee,
                     autoFocus: !er,
-                    canFocus: !k,
+                    canFocus: !j,
                     onChange: ew,
                     onFocus: H,
                     onBlur: Y,

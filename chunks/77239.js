@@ -39,8 +39,8 @@ e.exports = function (e, t, n, p, h, m, g, E) {
         L = 0,
         x = 0,
         M = 0,
-        k = 0,
         j = 0,
+        k = 0,
         U = 0,
         G = null,
         B = 0,
@@ -53,8 +53,8 @@ e.exports = function (e, t, n, p, h, m, g, E) {
     for (L = C, D = i; D >= 1 && 0 === Z[D]; D--);
     if ((L > D && (L = D), 0 === D)) return (h[m++] = 20971520), (h[m++] = 20971520), (E.bits = 1), 0;
     for (w = 1; w < D && 0 === Z[w]; w++);
-    for (L < w && (L = w), k = 1, R = 1; R <= i; R++) if (((k <<= 1), (k -= Z[R]) < 0)) return -1;
-    if (k > 0 && (e === s || 1 !== D)) return -1;
+    for (L < w && (L = w), j = 1, R = 1; R <= i; R++) if (((j <<= 1), (j -= Z[R]) < 0)) return -1;
+    if (j > 0 && (e === s || 1 !== D)) return -1;
     for (R = 1, F[1] = 0; R < i; R++) F[R + 1] = F[R] + Z[R];
     for (P = 0; P < p; P++) 0 !== t[n + P] && (g[F[t[n + P]]++] = P);
     if (
@@ -70,8 +70,8 @@ e.exports = function (e, t, n, p, h, m, g, E) {
         (x = L),
         (M = 0),
         (O = -1),
-        (v = (j = 1 << L) - 1),
-        (e === l && j > o) || (e === c && j > a))
+        (v = (k = 1 << L) - 1),
+        (e === l && k > o) || (e === c && k > a))
     )
         return 1;
     for (;;) {
@@ -87,9 +87,9 @@ e.exports = function (e, t, n, p, h, m, g, E) {
             R = t[n + g[P]];
         }
         if (R > L && (U & v) !== O) {
-            for (0 === M && (M = L), I += w, k = 1 << (x = R - M); x + M < D && !((k -= Z[x + M]) <= 0); )
-                x++, (k <<= 1);
-            if (((j += 1 << x), (e === l && j > o) || (e === c && j > a))) return 1;
+            for (0 === M && (M = L), I += w, j = 1 << (x = R - M); x + M < D && !((j -= Z[x + M]) <= 0); )
+                x++, (j <<= 1);
+            if (((k += 1 << x), (e === l && k > o) || (e === c && k > a))) return 1;
             h[(O = U & v)] = (L << 24) | (x << 16) | (I - m) | 0;
         }
     }

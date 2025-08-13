@@ -80,7 +80,7 @@ let O = Symbol("NO GUILD ID"),
     L = new Map(),
     x = [],
     M = [];
-function k(e) {
+function j(e) {
     let t = e.data.type,
         n = e.data.games.map((e) => y(E({}, e), { applicationId: e.game_id }));
     return {
@@ -89,7 +89,7 @@ function k(e) {
         games: n,
     };
 }
-let j = !1,
+let k = !1,
     U = null;
 function G(e) {
     let t = N.get(e);
@@ -127,7 +127,7 @@ function B(e, t) {
     }
 }
 function Z() {
-    v.clear(), I.clear(), N.clear(), C.clear(), w.clear(), D.clear(), L.clear(), (j = !1);
+    v.clear(), I.clear(), N.clear(), C.clear(), w.clear(), D.clear(), L.clear(), (k = !1);
 }
 function F(e) {
     let { userId: t } = e;
@@ -154,7 +154,7 @@ function Y(e) {
     I.delete(e.userId), w.set(e.userId, H(e.mutualFriends)), D.set(e.userId, e.mutualFriends.length);
 }
 function W(e) {
-    var t, n, r, i, s, l, c, d, f, h, g, b, A, M, j, Z, F, V, Y, W, z, q, X, Q, J, $, ee, et;
+    var t, n, r, i, s, l, c, d, f, h, g, b, A, M, k, Z, F, V, Y, W, z, q, X, Q, J, $, ee, et;
     let { userProfile: en, fetchStartedAt: er } = e,
         ei = null != (Z = null == (t = en.guild_member_profile) ? void 0 : t.guild_id) ? Z : O;
     if ((null == (n = v.get(en.user.id)) || n.delete(ei), I.delete(en.user.id), null != en.mutual_guilds)) {
@@ -238,9 +238,9 @@ function W(e) {
                       }
                     : null,
             badges: el,
-            widgets: null == (A = en.widgets) ? void 0 : A.map(k),
+            widgets: null == (A = en.widgets) ? void 0 : A.map(j),
         }),
-        (null == (j = en.user_profile) || null == (M = j.profile_effect) ? void 0 : M.expires_at) != null)
+        (null == (k = en.user_profile) || null == (M = k.profile_effect) ? void 0 : M.expires_at) != null)
     ) {
         let e = new o.V7();
         R.set(en.user.id, e), G(en.user.id);
@@ -408,19 +408,19 @@ function Q(e) {
     }
 }
 function J(e) {
-    j = !0;
+    k = !0;
 }
 function $(e) {
-    (j = !1), null != e.guild_id ? Q(e) : X(e);
+    (k = !1), null != e.guild_id ? Q(e) : X(e);
 }
 function ee(e) {
-    j = !1;
+    k = !1;
 }
 function et(e) {
     let { userId: t, widgets: n } = e,
         r = N.get(t);
     if (null == r) return !1;
-    N.set(t, y(E({}, r), { widgets: n.map(k) }));
+    N.set(t, y(E({}, r), { widgets: n.map(j) }));
 }
 function en(e) {
     let { badges: t, ttlInSeconds: n, userId: r } = e;
@@ -471,7 +471,7 @@ class ec extends d.Z {
         return I.has(e);
     }
     get isSubmitting() {
-        return j;
+        return k;
     }
     getUserProfile(e) {
         return N.get(e);

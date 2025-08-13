@@ -44,8 +44,8 @@ function L(e, t, n) {
 }
 let x = "seenQSTutorial",
     M = 5,
-    k = 100,
-    j = [u.h8.USER, u.h8.GROUP_DM, u.h8.TEXT_CHANNEL, u.h8.GUILD, u.h8.APPLICATION, u.h8.LINK, u.h8.IN_APP_NAVIGATION],
+    j = 100,
+    k = [u.h8.USER, u.h8.GROUP_DM, u.h8.TEXT_CHANNEL, u.h8.GUILD, u.h8.APPLICATION, u.h8.LINK, u.h8.IN_APP_NAVIGATION],
     U = 0,
     G = !1,
     B = !1,
@@ -203,7 +203,7 @@ function J(e) {
         (r =
             null != r
                 ? r
-                : new u.ZP(et, j, null != i ? k : M, {
+                : new u.ZP(et, k, null != i ? j : M, {
                       frecencyBoosters: !0,
                       blacklist: a,
                   })),
@@ -237,7 +237,7 @@ function er(e) {
     let { query: i, queryMode: o } = e;
     if (null == r) return !1;
     if (Z !== o) {
-        r.setResultTypes(null != o ? [o] : j), r.setLimit(null != o ? k : M);
+        r.setResultTypes(null != o ? [o] : k), r.setLimit(null != o ? j : M);
         let e = null != (t = A.Z.getGuildId()) ? t : void 0;
         o === u.h8.USER && null != e
             ? r.setOptions(

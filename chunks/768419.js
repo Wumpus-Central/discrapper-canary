@@ -78,8 +78,8 @@ function M(e, t) {
         e
     );
 }
-let k = h.Z.get(w.ABu.SPOTIFY),
-    j = "wss://dealer.spotify.com/?access_token=",
+let j = h.Z.get(w.ABu.SPOTIFY),
+    k = "wss://dealer.spotify.com/?access_token=",
     U = "hm://pusher/v1/connections/",
     G = 30 * N.Z.Millis.SECOND,
     B = 30 * N.Z.Millis.SECOND,
@@ -153,10 +153,10 @@ class ep {
             (J.info("WS Connecting"),
             (this._requestedDisconnect = !1),
             (this._requestedConnect = !0),
-            ej(this.accountId, this.accessToken)
+            ek(this.accountId, this.accessToken)
                 .then(() => {
                     (this._requestedConnect = !1),
-                        (this.socket = new WebSocket("".concat(j).concat(this.accessToken))),
+                        (this.socket = new WebSocket("".concat(k).concat(this.accessToken))),
                         (this.socket.onopen = this.handleOpen.bind(this)),
                         (this.socket.onmessage = this.handleMessage.bind(this)),
                         (this.socket.onclose = this.socket.onerror = this.handleClose.bind(this));
@@ -211,7 +211,7 @@ class ep {
         let { type: t, event: n } = e;
         switch (t) {
             case "PLAYER_STATE_CHANGED":
-                null != n && null != n.state && ek(this.accountId, this.accessToken, n.state);
+                null != n && null != n.state && ej(this.accountId, this.accessToken, n.state);
                 break;
             case "DEVICE_STATE_CHANGED":
                 this.handleDeviceStateChange();
@@ -231,7 +231,7 @@ class ep {
                 this,
                 "handleDeviceStateChange",
                 l().throttle(() => {
-                    (0, R.PW)(this.accountId, this.accessToken), ej(this.accountId, this.accessToken);
+                    (0, R.PW)(this.accountId, this.accessToken), ek(this.accountId, this.accessToken);
                 }, z),
             ),
             (this.accountId = e),
@@ -509,12 +509,12 @@ function eM(e) {
     if ((null == t ? void 0 : t.desktopSettings) != null) {
         null == el || el.stop();
         let { sourceId: e, sound: n } = null == t ? void 0 : t.desktopSettings;
-        null != e && E.ZP.getObservedAppNameForWindow(e) === k.name && n
+        null != e && E.ZP.getObservedAppNameForWindow(e) === j.name && n
             ? (el = new f.Xp()).start(B, eP)
             : (null == el || el.stop(), (el = null));
     } else null == t && (null == el || el.stop(), (el = null));
 }
-function ek(e, t, n) {
+function ej(e, t, n) {
     var r, i, o, a, s, l, c, u, d, f, p, h, m, g;
     let E,
         b,
@@ -589,7 +589,7 @@ function ek(e, t, n) {
             });
     });
 }
-function ej(e, t) {
+function ek(e, t) {
     return R.rC
         .get(e, t, {
             url: P.C7.PLAYER,
@@ -598,7 +598,7 @@ function ej(e, t) {
         })
         .then((n) => {
             let r = n.body;
-            null != r ? ek(e, t, r).then(() => n) : ed(e);
+            null != r ? ej(e, t, r).then(() => n) : ed(e);
         })
         .catch(() => ed(e));
 }
@@ -682,7 +682,7 @@ class eU extends (a = u.ZP.Store) {
                 button_urls: [],
             },
             y = {
-                name: k.name,
+                name: j.name,
                 assets: h,
                 details: g,
                 state: e,

@@ -32,8 +32,8 @@ var r = n(255367),
     L = n(5967),
     x = n(28546),
     M = n(957825),
-    k = n(981631),
-    j = n(921944),
+    j = n(981631),
+    k = n(921944),
     U = n(149203),
     G = n(185923),
     B = n(611480),
@@ -129,7 +129,7 @@ let q = M.Om + U.Su.MEDIUM,
                 ),
                 {
                     onClick: () => {
-                        b.ZP.trackWithMetadata(k.rMx.EXPRESSION_PICKER_TAB_CLICKED, {
+                        b.ZP.trackWithMetadata(j.rMx.EXPRESSION_PICKER_TAB_CLICKED, {
                             tab: i,
                             badged: !1,
                         }),
@@ -260,7 +260,7 @@ function J(e) {
                 }
                 (0, x._Q)();
                 let r = null == (t = (0, L.uB)(e)) ? void 0 : t.activeElement;
-                (null == r || "BODY" === r.tagName) && D.S.dispatchToLastSubscribed(k.CkL.TEXTAREA_FOCUS);
+                (null == r || "BODY" === r.tagName) && D.S.dispatchToLastSubscribed(j.CkL.TEXTAREA_FOCUS);
             },
             [et, eg, em, eh],
         ),
@@ -274,13 +274,13 @@ function J(e) {
         return (
             ed.addEventListener("mousedown", ev),
             ed.addEventListener("contextmenu", ev),
-            ef.subscribe(k.CkL.POPOUT_CLOSE, eI),
-            D.S.subscribe(k.CkL.CLOSE_GIF_PICKER, e),
+            ef.subscribe(j.CkL.POPOUT_CLOSE, eI),
+            D.S.subscribe(j.CkL.CLOSE_GIF_PICKER, e),
             () => {
                 ed.removeEventListener("mousedown", ev),
                     ed.removeEventListener("contextmenu", ev),
-                    ef.unsubscribe(k.CkL.POPOUT_CLOSE, eI),
-                    D.S.unsubscribe(k.CkL.CLOSE_GIF_PICKER, e);
+                    ef.unsubscribe(j.CkL.POPOUT_CLOSE, eI),
+                    D.S.unsubscribe(j.CkL.CLOSE_GIF_PICKER, e);
             }
         );
     }, [ec, eI, ev, ed, ef]),
@@ -292,7 +292,7 @@ function J(e) {
     }, [ec]),
         i.useEffect(
             () => () => {
-                eA && eS(j.L.TAKE_ACTION);
+                eA && eS(k.L.TAKE_ACTION);
             },
             [eA, eS],
         ),
@@ -312,7 +312,7 @@ function J(e) {
                       ? (null == eo || null == (n = eo.current) ? void 0 : n.onPickerOpen) == null ||
                         e_ ||
                         (null == eo || null == (r = eo.current) || r.onPickerOpen(), (ei.current = !0))
-                      : (b.ZP.trackWithMetadata(k.rMx.EXPRESSION_PICKER_OPENED, {
+                      : (b.ZP.trackWithMetadata(j.rMx.EXPRESSION_PICKER_OPENED, {
                             width: ea.current.offsetWidth,
                             tab: ec,
                             badged: !1,
@@ -326,7 +326,7 @@ function J(e) {
         ew = "left" === $ ? "right" : "left",
         eD = null != ee ? ee : "left" === $ ? F.positionLayerDefaultAlignLeft : F.positionLayerDefaultAlignRight;
     return (0, r.jsx)(m.Z, {
-        section: k.jXE.EXPRESSION_PICKER,
+        section: j.jXE.EXPRESSION_PICKER,
         children: (0, r.jsx)(T.W5, {
             className: a()(F.positionLayer, eD),
             targetRef: l,

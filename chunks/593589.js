@@ -1,36 +1,36 @@
-t.d(n, { Z: () => m });
-var i = t(255367),
-    o = t(73800),
-    r = t(481060),
-    a = t(372900),
-    c = t(238246),
-    d = t(788983),
-    _ = t(207035),
-    l = t(823748),
-    s = t(981631),
-    f = t(660377);
-function u(e) {
-    let { windowKey: n, channel: t } = e;
-    return (0, i.jsx)(c.Z, {
+n.d(t, { Z: () => f });
+var r = n(255367),
+    i = n(73800),
+    l = n(481060),
+    c = n(372900),
+    o = n(238246),
+    a = n(788983),
+    u = n(207035),
+    s = n(823748),
+    d = n(981631),
+    p = n(660377);
+function b(e) {
+    let { windowKey: t, channel: n } = e;
+    return (0, r.jsx)(o.Z, {
         withTitleBar: !0,
-        windowKey: n,
-        title: t.name,
-        channelId: t.id,
-        contentClassName: f.popoutContent,
-        children: (0, i.jsx)(a.Z.Provider, {
-            value: t.guild_id,
-            children: (0, i.jsx)(l.Z, { providedChannel: t }),
+        windowKey: t,
+        title: n.name,
+        channelId: n.id,
+        contentClassName: p.popoutContent,
+        children: (0, r.jsx)(c.Z.Provider, {
+            value: n.guild_id,
+            children: (0, r.jsx)(s.Z, { providedChannel: n }),
         }),
     });
 }
-function m(e, n) {
-    let t = (0, _.P)(n),
-        a = o.useCallback(() => {
-            d.bA(
-                "".concat(s.KJ3.CHANNEL_POPOUT, "-").concat(e.id),
-                (n) =>
-                    (0, i.jsx)(u, {
-                        windowKey: n,
+function f(e, t) {
+    let n = (0, u.P)(t),
+        c = i.useCallback(() => {
+            a.bA(
+                "".concat(d.KJ3.CHANNEL_POPOUT, "-").concat(e.id),
+                (t) =>
+                    (0, r.jsx)(b, {
+                        windowKey: t,
                         channel: e,
                     }),
                 {
@@ -39,11 +39,11 @@ function m(e, n) {
                 },
             );
         }, [e]);
-    return t
-        ? (0, i.jsx)(r.sNh, {
+    return n
+        ? (0, r.jsx)(l.sNh, {
               id: "channel-pop-out",
               label: "Open in Popout",
-              action: () => a(),
+              action: () => c(),
           })
         : null;
 }

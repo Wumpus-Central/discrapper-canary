@@ -82,16 +82,16 @@ function P(e) {
             play: L,
             events: { onMouseEnter: x, onMouseLeave: M },
         } = (0, s.j)(),
-        k = t.getGuildId(),
-        { mute: j, suppress: U } = (0, E.Z)(t),
+        j = t.getGuildId(),
+        { mute: k, suppress: U } = (0, E.Z)(t),
         G = (0, o.e7)([b.Z], () => b.Z.isDeaf()),
-        B = j || U || G,
+        B = k || U || G,
         Z = (0, h.sR)({ isSoundboardButtonDisabled: B }),
         [F, V] = (0, _.cv)(Z),
         { analyticsLocations: H } = (0, u.ZP)(),
         { isHovered: Y, setIsHovered: W, onMouseEnter: K, onMouseLeave: z } = (0, p.Z)(R, C);
     function q() {
-        return j
+        return k
             ? I.intl.string(I.t["Ox4/zc"])
             : U
               ? I.intl.string(I.t["+YBKYG"])
@@ -100,7 +100,7 @@ function P(e) {
                 : void 0;
     }
     function X(e) {
-        null != k &&
+        null != j &&
             (0, c.jW)(e, async () => {
                 let { default: e } = await n.e("56049").then(n.bind(n, 338991));
                 return (t) =>
@@ -109,7 +109,7 @@ function P(e) {
                         N(
                             S(
                                 {
-                                    guildId: k,
+                                    guildId: j,
                                     sourceAnalyticsLocations: H,
                                 },
                                 t,
@@ -146,7 +146,7 @@ function P(e) {
                           onMouseEnter: K,
                           onMouseLeave: z,
                           children: (0, r.jsx)(g.Z, {
-                              guildId: k,
+                              guildId: j,
                               channel: t,
                               onClose: n,
                               gridNotice:

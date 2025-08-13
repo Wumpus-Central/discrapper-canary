@@ -62,8 +62,8 @@ function C(e) {
                       : null;
         }),
         { product: x, purchase: M } = (0, d.Z)(null == D ? void 0 : D.skuId),
-        k = y.ZP.canUseCollectibles(t),
-        j = i.useRef(null),
+        j = y.ZP.canUseCollectibles(t),
+        k = i.useRef(null),
         U = (0, _.Z)(l),
         G = (0, O.sr)(D, void 0 === R ? w : R),
         B = (e) => {
@@ -86,14 +86,14 @@ function C(e) {
         V = (0, p.M)(),
         H = V && (0, u.G1)(x),
         Y = () =>
-            (null != M && (!(0, u.qS)(M) || k)) || null === D
+            (null != M && (!(0, u.qS)(M) || j)) || null === D
                 ? (0, r.jsx)(a.zxk, {
                       variant: "primary",
                       text: A.intl.string(A.t.Jh8fJy),
                       onClick: Z,
                       disabled: G,
                   })
-                : null == M && (k || !(0, u.G1)(x))
+                : null == M && (j || !(0, u.G1)(x))
                   ? (0, r.jsx)(a.zxk, {
                         variant: "primary",
                         onClick: () => F(null == x ? void 0 : x.skuId),
@@ -137,7 +137,7 @@ function C(e) {
                         user: t,
                         guild: C,
                         pendingAvatarDecoration: D,
-                        selectedAvatarDecorationRef: j,
+                        selectedAvatarDecorationRef: k,
                         onSelect: B,
                         onOpenShop: F,
                     }),

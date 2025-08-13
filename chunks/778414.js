@@ -15,8 +15,8 @@ var l = n(296009),
     f = n(173951),
     p = n(455731),
     m = n(430790),
-    b = n(795990),
-    g = n(12085);
+    g = n(795990),
+    b = n(12085);
 function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -84,7 +84,7 @@ function x(e) {
         { widgets: d, isGameFetching: u } = (0, c.Z)(o),
         f = (0, i.e7)([a.default], () => a.default.getId() === t.id);
     return 0 === d.length && f
-        ? (0, r.jsx)(b.Z, {})
+        ? (0, r.jsx)(g.Z, {})
         : (0, r.jsxs)(r.Fragment, {
               children: [
                   d.map((e) =>
@@ -106,7 +106,7 @@ function x(e) {
 }
 function O(e) {
     return (0, r.jsx)(o.Ttm, {
-        className: g.scroller,
+        className: b.scroller,
         fade: !0,
         children: (0, r.jsx)(x, j({}, e)),
     });

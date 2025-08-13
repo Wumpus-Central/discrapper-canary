@@ -82,7 +82,7 @@ function D(e) {
         L = (0, f.KF)(t.id),
         x = (0, f.g5)(L),
         M = L !== f.jy.CAN_LAUNCH || D,
-        { isHovered: k, setIsHovered: j, onMouseEnter: U, onMouseLeave: G } = (0, y.Z)(w, P),
+        { isHovered: j, setIsHovered: k, onMouseEnter: U, onMouseLeave: G } = (0, y.Z)(w, P),
         B = (0, d.p)({ surface: l.eR.VOICE_LAUNCHER }),
         Z = (0, o.e7)(
             [u.ZP],
@@ -121,21 +121,21 @@ function D(e) {
         contentTypes: z,
         children: (e) => {
             let { visibleContent: i, markAsDismissed: o } = e,
-                l = i === a.z.VOICE_PANEL_ACTIVITIES_SHAPES_BUTTON_EDUCATION_TOOLTIP && !n && !k;
+                l = i === a.z.VOICE_PANEL_ACTIVITIES_SHAPES_BUTTON_EDUCATION_TOOLTIP && !n && !j;
             return (
                 q.current && !l && o(T.L.AUTO_DISMISS),
                 q.current !== l && (q.current = l),
                 (0, r.jsx)(s.yRy, {
                     targetElementRef: X,
                     fixed: !0,
-                    shouldShow: k && (A === v.D.ACTIVITY || null == A),
+                    shouldShow: j && (A === v.D.ACTIVITY || null == A),
                     animation: s.yRy.Animation.FADE,
                     animationPosition: "top",
                     position: "top",
                     align: "center",
                     spacing: 16,
                     onRequestClose: () => {
-                        j(!1), null == C || C(void 0);
+                        k(!1), null == C || C(void 0);
                     },
                     renderPopout: (e) => {
                         let { closePopout: n, setPopoutRef: i } = e;
@@ -148,7 +148,7 @@ function D(e) {
                                   closePopout: n,
                                   onMouseEnter: U,
                                   onMouseLeave: G,
-                                  isHovered: k,
+                                  isHovered: j,
                                   onClick: () => o(T.L.UNKNOWN),
                               })
                             : (0, r.jsx)(r.Fragment, {});

@@ -131,8 +131,8 @@ function P(e) {
             disableDoubleClick: x,
         } = e,
         M = null == s || (0, O.AB)(s) ? null : s,
-        k = (0, o.e7)([m.Z], () => m.Z.isInChannel(M) || !1),
-        j = (0, o.e7)([c.Z], () => null != M && c.Z.getParticipantsListOpen(M)),
+        j = (0, o.e7)([m.Z], () => m.Z.isInChannel(M) || !1),
+        k = (0, o.e7)([c.Z], () => null != M && c.Z.getParticipantsListOpen(M)),
         { enabled: U, inInbox: G } = d.Z.useExperiment({ location: "HeaderBar" }),
         { hasParticipantsPanel: B } = (0, u.Z)({ location: "HeaderBar" }),
         Z = (0, _.$)({ location: "HeaderBar" });
@@ -158,15 +158,15 @@ function P(e) {
                       L && (0, r.jsx)(b.ZP.Divider, {}),
                       U && !G ? (0, r.jsx)(f.Z, {}) : null,
                       B &&
-                          k &&
+                          j &&
                           null != M &&
-                          !j &&
+                          !k &&
                           l === y.d4z.GROUP_DM &&
                           (0, r.jsxs)("div", {
                               className: v.controlButtonWrapper,
                               children: [
                                   (0, r.jsx)(b.ZP.Divider, {}),
-                                  (0, r.jsx)(h.Z, { onClick: () => a.Z.toggleParticipantsList(M, !j) }),
+                                  (0, r.jsx)(h.Z, { onClick: () => a.Z.toggleParticipantsList(M, !k) }),
                               ],
                           }),
                   ],

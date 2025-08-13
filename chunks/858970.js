@@ -11,8 +11,8 @@ var r = n(255367),
     f = n(785717),
     p = n(221292),
     m = n(687158),
-    b = n(316027),
-    g = n(502762),
+    g = n(316027),
+    b = n(502762),
     j = n(848780),
     y = n(907179),
     x = n(228168),
@@ -95,7 +95,7 @@ function I(e) {
                 className: v.root,
                 "aria-label": G,
                 parentComponent: "RestrictedUserProfileModalV2",
-                children: (0, r.jsxs)(g.Z, {
+                children: (0, r.jsxs)(b.Z, {
                     user: t,
                     displayProfile: R,
                     themeType: x.lY.MODAL_V2,
@@ -104,7 +104,7 @@ function I(e) {
                         (0, r.jsxs)("div", {
                             className: v.content,
                             children: [
-                                (0, r.jsx)(b.Z, {
+                                (0, r.jsx)(g.Z, {
                                     user: t,
                                     guildId: w,
                                     iconColor: o.TVs.colors.TEXT_DEFAULT,

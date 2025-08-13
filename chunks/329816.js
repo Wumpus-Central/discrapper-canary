@@ -32,8 +32,8 @@ var r = n(255367),
     L = n(429142),
     x = n(813744),
     M = n(746106),
-    k = n(384166),
-    j = n(526665),
+    j = n(384166),
+    k = n(526665),
     U = n(314897),
     G = n(819640),
     B = n(358085),
@@ -76,7 +76,7 @@ let Q = (0, Z.Un)({
     }),
     $ = i.memo(function () {
         let e = (0, c.e7)([G.Z], () => G.Z.hasLayers()),
-            t = (0, j.wy)("AppSkeleton"),
+            t = (0, k.wy)("AppSkeleton"),
             n = (0, c.e7)([G.Z], () => G.Z.getLayers().includes(q.S9g.USER_SETTINGS)),
             i = (0, d.s9z)(d.$sL),
             o = (0, c.e7)([U.default], () => U.default.isAuthenticated());
@@ -91,7 +91,7 @@ let Q = (0, Z.Un)({
             o = (0, B.getPlatform)(),
             u = l.tq || l.Em,
             m = (0, c.e7)([E.Z], () => (E.Z.useForcedColors ? "yes" : "no")),
-            j = i.useRef(document.body),
+            k = i.useRef(document.body),
             U = "".concat(m);
         return (
             (0, C.G)(),
@@ -105,7 +105,7 @@ let Q = (0, Z.Un)({
                             (0, r.jsx)(h.T, {
                                 children: (0, r.jsx)(Y.Z, {
                                     children: (0, r.jsxs)(d.JcV, {
-                                        containerRef: j,
+                                        containerRef: k,
                                         children: [
                                             (0, r.jsx)(K.Co, {}),
                                             (0, r.jsx)(W.ZP, {}),
@@ -151,7 +151,7 @@ let Q = (0, Z.Un)({
                                                                                         (0, r.jsx)(x.Z, {}),
                                                                                         (0, r.jsx)(Q, {}),
                                                                                         (0, r.jsx)(J, {}),
-                                                                                        (0, r.jsx)(k.Z, {}),
+                                                                                        (0, r.jsx)(j.Z, {}),
                                                                                     ],
                                                                                 }),
                                                                             }),

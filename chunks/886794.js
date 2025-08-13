@@ -11,8 +11,8 @@ var r = n(255367),
     f = n(785717),
     p = n(687158),
     m = n(899007),
-    b = n(648052),
-    g = n(867176),
+    g = n(648052),
+    b = n(867176),
     j = n(280885),
     y = n(900927),
     x = n(678738),
@@ -87,7 +87,7 @@ function S(e) {
                                 (0, r.jsx)(_.Z, { children: (0, r.jsx)(v.Z, { user: t }) }),
                                 (0, r.jsxs)("div", {
                                     children: [
-                                        (0, r.jsx)(g.Z, {
+                                        (0, r.jsx)(b.Z, {
                                             user: t,
                                             displayProfile: M,
                                             themeType: I.lY.MODAL,
@@ -113,7 +113,7 @@ function S(e) {
                                             nickname: B,
                                             pronouns: null == M ? void 0 : M.pronouns,
                                             nicknameVariant: "heading-xl/bold",
-                                            tags: (0, r.jsx)(b.Z, {
+                                            tags: (0, r.jsx)(g.Z, {
                                                 displayProfile: M,
                                                 themeType: I.lY.MODAL,
                                                 onClose: R,

@@ -49,7 +49,7 @@ let D = (e, t) => (n) => {
         return () => {};
     },
     M = (e, t) => t && [R.WX.STAGE_INSTANCE, R.WX.VOICE].includes(null == e ? void 0 : e.entity_type),
-    k = i.memo(function (e) {
+    j = i.memo(function (e) {
         var t;
         let { guild: n, guildScheduledEvent: o, channel: a, isMember: l } = e,
             d = (0, s.e7)([m.Z], () => {
@@ -133,7 +133,7 @@ let D = (e, t) => (n) => {
             ],
         });
     }),
-    j = i.memo(function (e) {
+    k = i.memo(function (e) {
         let {
                 guildId: t,
                 guildScheduledEventId: n,
@@ -254,13 +254,13 @@ let D = (e, t) => (n) => {
                     (0, r.jsxs)("div", {
                         className: w.footerContainer,
                         children: [
-                            (0, r.jsx)(k, {
+                            (0, r.jsx)(j, {
                                 guild: o,
                                 channel: s,
                                 guildScheduledEvent: n,
                                 isMember: l,
                             }),
-                            (0, r.jsx)(j, {
+                            (0, r.jsx)(k, {
                                 isActive: y,
                                 isEnded: N,
                                 isMember: l,

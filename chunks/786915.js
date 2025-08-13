@@ -165,16 +165,16 @@ function A(e) {
         { parentAnalyticsLocation: L } = (0, u.ZP)(),
         x = null == i ? void 0 : i.getGuildId(),
         M = (0, a.e7)([f.Z], () => (null != x ? f.Z.getGuild(x) : null), [x]),
-        k = (0, a.e7)([_.Z], () => (null != t ? _.Z.getApplicationActivity(t) : void 0)),
-        j = null == t || O ? s.ejJ : s.gQj,
+        j = (0, a.e7)([_.Z], () => (null != t ? _.Z.getApplicationActivity(t) : void 0)),
+        k = null == t || O ? s.ejJ : s.gQj,
         U = null != t ? g.intl.string(g.t["OzOM/v"]) : g.intl.string(g.t["6F9ivr"]);
-    if (null != k && I) {
+    if (null != j && I) {
         let e = () => {
-            null != L && (0, d.v)(L, d.d.INVITE), l.h7(k, !1, D);
+            null != L && (0, d.v)(L, d.d.INVITE), l.h7(j, !1, D);
         };
         return (0, r.jsx)(h.Z, {
             onClick: e,
-            iconComponent: j,
+            iconComponent: k,
             label: U,
             iconClassName: A,
             look: N,
@@ -203,7 +203,7 @@ function A(e) {
                                   guildScheduledEvent: y,
                               });
                       },
-                      iconComponent: j,
+                      iconComponent: k,
                       label: U,
                       iconClassName: A,
                       look: N,

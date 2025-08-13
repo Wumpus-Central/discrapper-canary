@@ -81,7 +81,7 @@ function M(e, t, n, i, o, s) {
         ref: s,
     });
 }
-function k(e, t, n) {
+function j(e, t, n) {
     let {
             referencedMessage: o,
             channel: a,
@@ -143,7 +143,7 @@ function k(e, t, n) {
               children: y(),
           });
 }
-function j(e, t) {
+function k(e, t) {
     let {
             baseMessage: n,
             channel: i,
@@ -359,8 +359,8 @@ function B(e) {
         [m, g] = i.useState(!1),
         b = i.useMemo(() => (null != d && u.state === E.Y.LOADED ? (e) => d(e, u.message) : void 0), [u, d]),
         y = i.useCallback(() => g((e) => !e), []),
-        O = k(e, b, s.type),
-        I = j(e, b),
+        O = j(e, b, s.type),
+        I = k(e, b),
         S = U(e, m, y),
         A = i.useMemo(() => (e.compact ? (0, N.Z)((0, v.vc)(l()(), "LT")) : null), [e.compact]);
     null != n &&

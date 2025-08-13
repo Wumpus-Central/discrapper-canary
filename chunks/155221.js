@@ -90,12 +90,12 @@ let M = (0, h.Un)({
         webpackId: 576184,
         name: "UnsupportedBrowser",
     }),
-    k = (0, h.Un)({
+    j = (0, h.Un)({
         createPromise: () => n.e("74023").then(n.bind(n, 431583)),
         webpackId: 431583,
         name: "DownloadApps",
     }),
-    j = (0, h.Un)({
+    k = (0, h.Un)({
         createPromise: () => n.e("81226").then(n.bind(n, 484097)),
         webpackId: 484097,
         name: "InviteProxy",
@@ -220,7 +220,7 @@ let M = (0, h.Un)({
                 n.e("52030"),
                 n.e("86383"),
                 n.e("10778"),
-                n.e("74941"),
+                n.e("25761"),
                 n.e("84956"),
                 n.e("27978"),
             ]).then(n.bind(n, 822699)),
@@ -362,7 +362,7 @@ class ei extends i.Component {
                                   (0, r.jsx)(p.Z, {
                                       exact: !0,
                                       path: C.Z5c.APPS,
-                                      component: k,
+                                      component: j,
                                   }),
                                   (0, r.jsx)(a.AW, {
                                       path: er(
@@ -381,7 +381,7 @@ class ei extends i.Component {
                                   }),
                                   (0, r.jsx)(p.Z, {
                                       path: C.Z5c.INVITE_PROXY(O.Hw.channelId()),
-                                      component: j,
+                                      component: k,
                                   }),
                                   (0, r.jsx)(a.l_, {
                                       from: C.Z5c.INVITE(""),
@@ -448,7 +448,7 @@ class ei extends i.Component {
                                   }),
                                   (0, r.jsx)(p.Z, {
                                       path: C.Z5c.INVITE_PROXY(O.Hw.channelId()),
-                                      component: j,
+                                      component: k,
                                   }),
                                   (0, r.jsx)(a.l_, {
                                       from: C.Z5c.GIFT_CODE(""),

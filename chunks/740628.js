@@ -11,8 +11,8 @@ var r = n(255367),
     f = n(116906),
     p = n(384816),
     m = n(389190),
-    b = n(428927),
-    g = n(228168),
+    g = n(428927),
+    b = n(228168),
     j = n(388032),
     y = n(889080),
     x = n(860130);
@@ -27,7 +27,7 @@ function O(e) {
         channelId: c,
         onClose: s,
     } = e;
-    return t === g.oh.ACTIVITY
+    return t === b.oh.ACTIVITY
         ? (0, r.jsx)(f.Z, {
               user: l,
               currentUser: i,
@@ -35,21 +35,21 @@ function O(e) {
               guildId: a,
               onClose: s,
           })
-        : t === g.oh.MUTUAL_FRIENDS
+        : t === b.oh.MUTUAL_FRIENDS
           ? (0, r.jsx)(m.Z, {
                 user: l,
                 guildId: a,
                 channelId: c,
                 onClose: s,
             })
-          : t === g.oh.MUTUAL_GUILDS
-            ? (0, r.jsx)(b.Z, {
+          : t === b.oh.MUTUAL_GUILDS
+            ? (0, r.jsx)(g.Z, {
                   user: l,
                   onClose: s,
               })
-            : t === g.oh.BOT_DATA_ACCESS
+            : t === b.oh.BOT_DATA_ACCESS
               ? (0, r.jsx)(d.Z, { user: l })
-              : t === g.oh.BOT_INFO
+              : t === b.oh.BOT_INFO
                 ? (0, r.jsx)(u.Z, {
                       user: l,
                       currentUser: i,
@@ -73,8 +73,8 @@ function h(e) {
             currentUser: f,
             displayProfile: p,
             guildId: m,
-            items: b,
-            initialSection: h = g.oh.USER_INFO,
+            items: g,
+            initialSection: h = b.oh.USER_INFO,
             initialSubsection: v,
             onClose: _,
         } = e,
@@ -85,25 +85,25 @@ function h(e) {
                 null !=
                 (d =
                     null ==
-                    (t = b.find((e) => {
+                    (t = g.find((e) => {
                         let { section: t } = e;
                         return t === h;
                     }))
                         ? void 0
                         : t.section)
                     ? d
-                    : null == (n = b[0])
+                    : null == (n = g[0])
                       ? void 0
                       : n.section,
             subsection: v,
         });
     l.useEffect(() => {
-        null == b.find((e) => e.section === E) &&
+        null == g.find((e) => e.section === E) &&
             Z({
-                section: b[0].section,
+                section: g[0].section,
                 subsection: void 0,
             });
-    }, [b, E]);
+    }, [g, E]);
     let N = l.useCallback(
         (e) => {
             I({
@@ -139,7 +139,7 @@ function h(e) {
                       type: "top",
                       selectedItem: E,
                       onItemSelect: N,
-                      children: b.map((e) => {
+                      children: g.map((e) => {
                           let { section: t, text: n } = e;
                           return (0, r.jsx)(
                               o.n.Item,
@@ -157,7 +157,7 @@ function h(e) {
                       }),
                   }),
                   (0, r.jsx)(O, {
-                      items: b,
+                      items: g,
                       section: E,
                       subsection: T,
                       user: u,

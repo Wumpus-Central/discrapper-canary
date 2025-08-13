@@ -8,7 +8,7 @@ n.d(t, {
     aZ: () => R,
     bo: () => M,
     fz: () => W,
-    kK: () => k,
+    kK: () => j,
     lg: () => Y,
     om: () => F,
     pL: () => P,
@@ -124,7 +124,7 @@ function M(e) {
         return N.intl.formatToPlainString(N.t.ws6rWl, { count: e });
     }
 }
-function k(e) {
+function j(e) {
     let { isCurrentUserKeyPersistent: t, isOtherUserKeyPersistent: n, otherUserNickname: r } = e;
     return t && n
         ? N.intl.format(N.t["FJN+kp"], { helpArticle: C() })
@@ -137,7 +137,7 @@ function k(e) {
             ? N.intl.format(N.t["qT5z8/"], { helpArticle: C() })
             : N.intl.format(N.t["6JLy+v"], { helpArticle: C() });
 }
-async function j(e) {
+async function k(e) {
     let t = d.default.getStaticAuthSessionId();
     return o()(null != t, "[getCurrentUserPublicKey] session id should not be null"), await f.Z.getMLSSigningKey(t, e);
 }
@@ -162,7 +162,7 @@ async function G(e, t, n) {
     }
 }
 async function B(e) {
-    let { key: t, signature: n } = await j(e);
+    let { key: t, signature: n } = await k(e);
     try {
         await l.tn.put({
             url: A.ANM.VOICE_PUBLIC_KEYS(),
@@ -187,7 +187,7 @@ async function F(e) {
 async function V(e) {
     if (!Z(e)) return await B(e), !0;
     let t = d.default.getId(),
-        { key: n } = await j(e),
+        { key: n } = await k(e),
         r = await G(t, n, e);
     return r || (0, T.KA)(e), r;
 }

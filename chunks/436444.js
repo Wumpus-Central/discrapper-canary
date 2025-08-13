@@ -109,8 +109,8 @@ let T = {
             L = A <= N || b,
             x = L && A <= i.premiumTier,
             M = L && A < i.premiumTier,
-            k = L && A === i.premiumTier,
-            j = i.premiumTier < A && C >= w,
+            j = L && A === i.premiumTier,
+            k = i.premiumTier < A && C >= w,
             { scaleFactor: U } = (0, s.q_F)({
                 from: { scaleFactor: 0 },
                 to: { scaleFactor: N >= A || (b && N + 1 === A) || (b && -1 === N && A === p.Eu4.NONE) ? 1 : 0 },
@@ -126,7 +126,7 @@ let T = {
                         style: { transform: U.to((e) => "translate(-50%, -50%) scale(".concat(e, ")")) },
                     }),
                     A !== p.Eu4.NONE
-                        ? j
+                        ? k
                             ? (0, r.jsx)(s.mTd, {
                                   className: o()(E.boostedTierIcon, E.disabledIndicator),
                                   size: "xxs",
@@ -142,7 +142,7 @@ let T = {
             });
         function B() {
             L &&
-                (j ||
+                (k ||
                     (0, f.u)({
                         analyticsLocations: R,
                         analyticsLocation: {
@@ -162,7 +162,7 @@ let T = {
             tooltipClassName: E.tooltip,
             text: x
                 ? m.intl.formatToPlainString(m.t["1o48kp"], { tierName: (0, d.nW)(A, { useLevels: !1 }) })
-                : j
+                : k
                   ? m.intl.formatToPlainString(g.default["9CtPjo"], { perk: (0, d.nW)(A, { useLevels: !1 }) })
                   : m.intl.formatToPlainString(m.t.r6NN6e, {
                         numBoostsRequired: D,
@@ -179,7 +179,7 @@ let T = {
                                     [E.progressBarMarkerUnlocked]: x,
                                     [E.progressBarMarkerLocked]: Z,
                                     [E.progressBarMarkerLower]: M,
-                                    [E.progressBarMarkerCurrent]: k,
+                                    [E.progressBarMarkerCurrent]: j,
                                 }),
                                 style: { left: "".concat(100 * T[A], "%") },
                             },

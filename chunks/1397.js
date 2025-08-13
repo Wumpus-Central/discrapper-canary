@@ -32,8 +32,8 @@ var r = n(255367),
     L = n(496675),
     x = n(594174),
     M = n(700785),
-    k = n(413251),
-    j = n(862679),
+    j = n(413251),
+    k = n(862679),
     U = n(981631),
     G = n(701488),
     B = n(815660),
@@ -199,7 +199,7 @@ class K extends i.PureComponent {
             renderPopout: this.renderSuccessPopout,
             children: (e) =>
                 (0, r.jsx)(
-                    j.Z,
+                    k.Z,
                     W(H({}, A), {
                         children: (0, r.jsxs)("div", {
                             ref: this.textAreaContainerRef,
@@ -397,7 +397,7 @@ function z(e) {
         T = (0, s.e7)([v.Z], () => v.Z.shouldShowPopout(a)),
         S = (0, s.e7)([L.Z], () => L.Z.can(U.Plq.SEND_MESSAGES, i)),
         A = (0, s.e7)([y.Z], () => y.Z.getRequest(a)),
-        { showLinkedLobbyApplicationLoadingIndicator: N, requiredLinkedLobbyApplication: j } = (0, k.Z)(i.linkedLobby),
+        { showLinkedLobbyApplicationLoadingIndicator: N, requiredLinkedLobbyApplication: k } = (0, j.Z)(i.linkedLobby),
         G = W(H({}, c), {
             guild: l,
             isLurking: f,
@@ -412,7 +412,7 @@ function z(e) {
             guildJoinRequestStatus: null != (n = null == A ? void 0 : A.applicationStatus) ? n : E.wB.STARTED,
             guildJoinRequest: A,
             showLinkedLobbyApplicationLoadingIndicator: N,
-            requiredLinkedLobbyApplication: j,
+            requiredLinkedLobbyApplication: k,
             useReducedMotion: _.Z.useReducedMotion,
             isStaff: h,
         });

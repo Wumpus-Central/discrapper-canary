@@ -1,6 +1,6 @@
 n.d(t, {
-    Z: () => j,
-    p: () => k,
+    Z: () => k,
+    p: () => j,
 }),
     n(953529);
 var r = n(255367),
@@ -36,7 +36,7 @@ var r = n(255367),
     L = n(42948),
     x = n(109194),
     M = n(352812),
-    k = (function (e) {
+    j = (function (e) {
         return (
             (e[(e.NONE = 0)] = "NONE"),
             (e[(e.PARENT_CONTAINER = 1)] = "PARENT_CONTAINER"),
@@ -44,13 +44,13 @@ var r = n(255367),
             e
         );
     })({});
-function j(e) {
+function k(e) {
     let {
             containerContext: t,
             image: n,
             title: o,
-            description: k,
-            enableSocialProof: j,
+            description: j,
+            enableSocialProof: k,
             analyticsLocationSection: U,
             upsellViewedTrackingData: G,
             onClose: B,
@@ -61,12 +61,12 @@ function j(e) {
         H = (0, s.e7)([b.Z], () => b.Z.affinities),
         Y = (0, s.e7)([b.Z], () => b.Z.hasFetched);
     i.useEffect(() => {
-        !Y && j && f.MH();
-    }, [Y, j]),
+        !Y && k && f.MH();
+    }, [Y, k]),
         i.useEffect(() => {
             m.default.track(N.rMx.PREMIUM_UPSELL_VIEWED, G), null == Z || Z();
         }, [Z, G]);
-    let W = H.length > 1 && j,
+    let W = H.length > 1 && k,
         K = () => (2 === t ? P.hasTabParentContainer : 1 === t ? P.hasParentContainer : P.noParentContainer),
         z = () => {
             m.default.track(N.rMx.PREMIUM_PROMOTION_OPENED, {
@@ -131,7 +131,7 @@ function j(e) {
                                             variant: "text-md/medium",
                                             color: "text-secondary",
                                             className: R.body,
-                                            children: k,
+                                            children: j,
                                         }),
                                     ],
                                 }),
@@ -201,7 +201,7 @@ function j(e) {
                             (0, r.jsx)(d.Text, {
                                 variant: "text-sm/medium",
                                 className: P.body,
-                                children: k,
+                                children: j,
                             }),
                         ],
                     }),

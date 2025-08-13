@@ -172,5 +172,10 @@ var f = (function (e) {
         return (e.REPLY = "REPLY"), (e.REACT = "REACT"), e;
     })({}),
     p = (function (e) {
-        return (e.WIDGET_ADDED = "WIDGET_ADDED"), (e.WIDGET_REMOVED = "WIDGET_REMOVED"), e;
+        return (
+            (e.WIDGET_ADDED = "WIDGET_ADDED"),
+            (e.WIDGET_REMOVED = "WIDGET_REMOVED"),
+            (e.WIDGET_SAVE_FAILURE = "WIDGET_SAVE_FAILURE"),
+            e
+        );
     })({});

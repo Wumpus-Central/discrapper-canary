@@ -12,10 +12,10 @@ function u(e) {
         n = null == t ? void 0 : t.filter((e) => null != (0, c.z)(e)),
         i = (0, l.useRef)(new Map()),
         o = (0, l.useRef)(null),
-        [u, g] = (0, l.useState)(0),
+        [u, b] = (0, l.useState)(0),
         [j, y] = (0, l.useState)(!1),
         { trackUserProfileAction: x } = (0, a.KZ)(),
-        O = b(o, n, i, g);
+        O = g(o, n, i, b);
     if (
         ((0, l.useEffect)(
             () => (
@@ -121,7 +121,7 @@ let f = (e) => {
             }),
         });
     },
-    b = (e, t, n, r) =>
+    g = (e, t, n, r) =>
         (0, l.useCallback)(() => {
             var l, i;
             if (null == t) return void r(0);

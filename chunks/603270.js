@@ -151,7 +151,7 @@ function x(e) {
         M = () => {
             (0, T.X)(t, T.B.STORE_EMBED);
         };
-    return (0, r.jsx)(k, {
+    return (0, r.jsx)(j, {
         appName: u.name,
         title: R.intl.formatToPlainString(R.t.XDRjs7, { appName: u.name }),
         description: w,
@@ -188,7 +188,7 @@ function M(e) {
         });
     if (!w || null == b || null == _) return null;
     let M = _.type === N.epS.SUBSCRIPTION,
-        j = !!M && (0, p.KW)(_.flags),
+        k = !!M && (0, p.KW)(_.flags),
         U = () => {
             (0, l.ZDy)(async () => {
                 let { default: e } = await Promise.all([n.e("77803"), n.e("16721")]).then(n.bind(n, 7225));
@@ -215,7 +215,7 @@ function M(e) {
                               appId: b.id,
                               skuId: _.id,
                               guildId: y,
-                              subscriptionType: j ? "user" : "guild",
+                              subscriptionType: k ? "user" : "guild",
                               onClose: n.onClose,
                               onHeaderTitleClick: i,
                           })
@@ -233,7 +233,7 @@ function M(e) {
         },
         B = 12,
         Z = M
-            ? j
+            ? k
                 ? (0, r.jsxs)(r.Fragment, {
                       children: [
                           (0, r.jsx)(l.tBG, {
@@ -286,7 +286,7 @@ function M(e) {
         Y = () => {
             (0, T.X)(b.id, T.B.SKU_EMBED, c);
         };
-    return (0, r.jsx)(k, {
+    return (0, r.jsx)(j, {
         appName: b.name,
         title: _.name,
         description: Z,
@@ -310,7 +310,7 @@ function M(e) {
                         ? (0, r.jsx)(A.pV, {
                               onClick: D,
                               appId: b.id,
-                              subscriptionType: j ? "user" : "guild",
+                              subscriptionType: k ? "user" : "guild",
                               skuId: _.id,
                               icon: l.EOn,
                               onHasClicked: H,
@@ -332,7 +332,7 @@ function M(e) {
         }),
     });
 }
-function k(e) {
+function j(e) {
     let { appName: t, title: n, description: i, link: o, iconSrc: a, onIconClick: s, onLinkCopy: c, children: u } = e;
     return (0, r.jsxs)("div", {
         className: P.wrapper,

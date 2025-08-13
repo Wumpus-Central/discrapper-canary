@@ -32,8 +32,8 @@ var r = n(255367),
     L = n(296848),
     x = n(51144),
     M = n(626799),
-    k = n(981631),
-    j = n(474936),
+    j = n(981631),
+    k = n(474936),
     U = n(388032),
     G = n(775269);
 function B(e, t, n) {
@@ -109,7 +109,7 @@ class Y extends i.PureComponent {
         return e >= _.aL;
     }
     handleViewInventory() {
-        f.Z.open(k.oAB.INVENTORY);
+        f.Z.open(j.oAB.INVENTORY);
     }
     render() {
         return (0, r.jsx)(_.$G, {
@@ -153,7 +153,7 @@ class W extends i.Component {
         let {
             analyticsContext: { location: e },
         } = this.props;
-        return V(Z({}, e), { section: k.jXE.GIFT_CODE_EMBED });
+        return V(Z({}, e), { section: j.jXE.GIFT_CODE_EMBED });
     }
     renderActions(e) {
         let { libraryApplication: t } = this.props;
@@ -223,7 +223,7 @@ class W extends i.Component {
     }
     isCustomGiftMessage() {
         let { type: e } = this.props;
-        return e === k.uaV.CUSTOM_GIFT;
+        return e === j.uaV.CUSTOM_GIFT;
     }
     renderTitle(e) {
         let { currentUser: t, isSelfGift: n, sku: r } = this.props;
@@ -295,14 +295,14 @@ class W extends i.Component {
         if (e.isSubscription) {
             if (null == o) return U.intl.string(U.t.ZTNur6);
             if (null != i) {
-                let e = o.interval === j.rV.MONTH ? U.t["/RDIEB"] : U.t["3CX6Eh"];
+                let e = o.interval === k.rV.MONTH ? U.t["/RDIEB"] : U.t["3CX6Eh"];
                 return U.intl.format(e, {
                     username: x.ZP.getUserTag(i),
                     skuName: s,
                     intervalCount: o.intervalCount,
                 });
             }
-            let e = o.interval === j.rV.MONTH ? U.t["2O4lo6"] : U.t["+Xjmsb"];
+            let e = o.interval === k.rV.MONTH ? U.t["2O4lo6"] : U.t["+Xjmsb"];
             return U.intl.format(e, {
                 skuName: s,
                 intervalCount: o.intervalCount,
@@ -325,7 +325,7 @@ class W extends i.Component {
             : (0, r.jsx)(M.$, {
                   skuId: e.skuId,
                   onEmbedClick: this.handleEmbedClick,
-                  analyticsSection: k.jXE.GIFT_CODE_EMBED,
+                  analyticsSection: j.jXE.GIFT_CODE_EMBED,
                   renderCustomActions: () => this.renderActions(e),
                   renderCustomTitle: () => this.renderTitle(e),
                   renderCustomTagline: () => this.renderBody(e),
@@ -339,7 +339,7 @@ class W extends i.Component {
             return (0, r.jsx)(M.$, {
                 skuId: e.skuId,
                 onEmbedClick: this.handleClaimPromotion,
-                analyticsSection: k.jXE.GIFT_CODE_EMBED,
+                analyticsSection: j.jXE.GIFT_CODE_EMBED,
                 renderCustomActions: () => this.renderPromotionActions(),
                 renderCustomTitle: () => U.intl.string(U.t.X4p5uL),
                 renderCustomTagline: () => U.intl.string(U.t.VIuwDw),
@@ -365,21 +365,21 @@ class W extends i.Component {
                 let { libraryApplication: t } = this.props;
                 e.preventDefault(),
                     null != t && t.isHidden()
-                        ? (0, v.uL)(k.Z5c.APPLICATION_LIBRARY_SETTINGS)
-                        : (0, v.uL)(k.Z5c.APPLICATION_LIBRARY, { state: { applicationId: null != t ? t.id : void 0 } });
+                        ? (0, v.uL)(j.Z5c.APPLICATION_LIBRARY_SETTINGS)
+                        : (0, v.uL)(j.Z5c.APPLICATION_LIBRARY, { state: { applicationId: null != t ? t.id : void 0 } });
             }),
             B(this, "handleVerificationClick", (e) => {
-                e.stopPropagation(), e.preventDefault(), f.Z.open(k.oAB.ACCOUNT);
+                e.stopPropagation(), e.preventDefault(), f.Z.open(j.oAB.ACCOUNT);
             }),
             B(this, "handleAccept", (e) => {
                 let { channelId: t, code: n, content: r, type: i, giftInfo: o } = this.props;
                 e.preventDefault(),
                     e.stopPropagation(),
-                    P.default.track(k.rMx.OPEN_MODAL, {
+                    P.default.track(j.rMx.OPEN_MODAL, {
                         type: "gift_accept",
-                        location: V(Z({}, this.analyticsLocation), { object: k.qAy.BUTTON_CTA }),
+                        location: V(Z({}, this.analyticsLocation), { object: j.qAy.BUTTON_CTA }),
                     });
-                let a = i !== k.uaV.CUSTOM_GIFT ? void 0 : r;
+                let a = i !== j.uaV.CUSTOM_GIFT ? void 0 : r;
                 (0, y.V)({
                     processedCode: n,
                     channelContext: t,
@@ -389,18 +389,18 @@ class W extends i.Component {
             }),
             B(this, "handleEmbedClick", (e) => {
                 let { giftCode: t } = this.props;
-                null != t && t.isSubscription && (e.preventDefault(), f.Z.open(k.oAB.PREMIUM));
+                null != t && t.isSubscription && (e.preventDefault(), f.Z.open(j.oAB.PREMIUM));
             }),
             B(this, "handleClaimPromotion", (e) => {
                 var t;
                 e.stopPropagation(), e.preventDefault();
                 let n = null == (t = this.props.giftCode) ? void 0 : t.code;
-                null != n && window.open(k.Z5c.BILLING_PROMOTION_REDEMPTION(n));
+                null != n && window.open(j.Z5c.BILLING_PROMOTION_REDEMPTION(n));
             }),
             B(this, "renderCustomGiftBox", (e) => {
                 let { width: t } = this.props;
                 if (null == e || null == e.giftStyle) return null;
-                let n = j.jy.includes(e.giftStyle),
+                let n = k.jy.includes(e.giftStyle),
                     i = a()(G.customGiftEmbedWrapper, {
                         [G.legacySeasonalGiftEmbedWrapper]: n,
                         [G.giftEmbedWrapperHorizontal]: t >= _.aL,

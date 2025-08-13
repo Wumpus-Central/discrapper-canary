@@ -49,8 +49,8 @@ let A = 10,
     L = /^\/activities\/([0-9-]+)\/?$/,
     x = /^\/channels\/([0-9]+)\/shop\/([0-9]+)$/,
     M = /^\/channels\/([0-9]+)\/shop$/,
-    k = /^\/quests\/([0-9-]+)\/?$/,
-    j = /^\/oauth2\/authorize/,
+    j = /^\/quests\/([0-9-]+)\/?$/,
+    k = /^\/oauth2\/authorize/,
     U = /^#itemSkuId=([0-9]+)$/,
     G = /dev:\/\/[\w-.~:\/?#\[\]@!$&'()*+,;=%]+/i,
     B = q(window.GLOBAL_ENV.INVITE_HOST),
@@ -203,7 +203,7 @@ function eo(e) {
                     "".concat(f.guildId, "-").concat(f.guildEventId) +
                         (null != f.recurrenceId ? "-".concat(f.recurrenceId) : ""),
                 ),
-            null != (null == c ? void 0 : c.match(j)) && null != r.query)
+            null != (null == c ? void 0 : c.match(k)) && null != r.query)
         ) {
             let e = (0, y.y)(r.query),
                 t = e.clientId;
@@ -246,7 +246,7 @@ function eo(e) {
 function ea(e) {
     var t, n;
     let r = er(e),
-        i = null == r || null == (t = r.primaryHostRemainingPath) ? void 0 : t.match(k);
+        i = null == r || null == (t = r.primaryHostRemainingPath) ? void 0 : t.match(j);
     return null != (n = null == i ? void 0 : i[1]) ? n : null;
 }
 function es(e) {

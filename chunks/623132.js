@@ -12,8 +12,8 @@ var l = n(481060),
     f = n(533815),
     p = n(853072),
     m = n(388032),
-    b = n(949237),
-    g = n(896270),
+    g = n(949237),
+    b = n(896270),
     j = n(358340);
 function y(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -145,14 +145,14 @@ function _(e) {
         ? (0, r.jsxs)("div", {
               className: j.card,
               children: [
-                  (0, r.jsx)("div", { className: g.loadingCover }),
+                  (0, r.jsx)("div", { className: b.loadingCover }),
                   (0, r.jsx)("div", {
                       className: j.details,
                       children: (0, r.jsxs)("div", {
-                          className: b.placeholderText,
+                          className: g.placeholderText,
                           children: [
-                              (0, r.jsx)("div", { className: b.placeholderBar }),
-                              (0, r.jsx)("div", { className: b.placeholderBar }),
+                              (0, r.jsx)("div", { className: g.placeholderBar }),
+                              (0, r.jsx)("div", { className: g.placeholderBar }),
                           ],
                       }),
                   }),

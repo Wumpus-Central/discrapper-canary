@@ -11,8 +11,8 @@ var r = n(255367),
     f = n(906732),
     p = n(313201),
     m = n(368326),
-    b = n(429467),
-    g = n(320582),
+    g = n(429467),
+    b = n(320582),
     j = n(246016),
     y = n(680295),
     x = n(189156),
@@ -69,10 +69,10 @@ function en(e) {
             openedAt: ef,
             onClose: ep,
             showGuildProfile: em = !0,
-            sourceAnalyticsLocations: eb = [],
-            disableActionsForPreview: eg = !1,
+            sourceAnalyticsLocations: eg = [],
+            disableActionsForPreview: eb = !1,
         } = e,
-        { analyticsLocations: ej } = (0, f.ZP)([...eb, u.Z.USER_PROFILE_MODAL_V2]),
+        { analyticsLocations: ej } = (0, f.ZP)([...eg, u.Z.USER_PROFILE_MODAL_V2]),
         ey = (0, P.ZB)({
             layout: "MODAL_V2",
             userId: n.id,
@@ -108,13 +108,13 @@ function en(e) {
                       size: 1024,
                   }),
         eA = (0, m.p)({ location: "UserProfileModalV2" }),
-        eC = l.useMemo(() => (null != eu ? eu : (0, b.Z)()), [eu]),
+        eC = l.useMemo(() => (null != eu ? eu : (0, g.Z)()), [eu]),
         eD = (0, q.Z)({
             user: n,
             currentUser: en,
         }),
         eL = (0, j.Y)({ userId: n.id }),
-        eR = (0, g.vh)(n.id),
+        eR = (0, b.vh)(n.id),
         ek = (0, Z.Z)(n.id),
         eG = (0, p.Dt)(),
         eM = ee.intl.format(ee.t.KRe1Fh, { name: eT });
@@ -154,7 +154,7 @@ function en(e) {
                             "aria-labelledby": eG,
                             parentComponent: "UserProfileModalV2",
                             children: [
-                                eg
+                                eb
                                     ? (0, r.jsxs)("div", {
                                           className: et.previewBar,
                                           children: [
@@ -191,7 +191,7 @@ function en(e) {
                                       }),
                                 (0, r.jsx)(a.y5t, {
                                     children: (0, r.jsxs)(U.Z, {
-                                        className: eg ? et.disabled : void 0,
+                                        className: eb ? et.disabled : void 0,
                                         user: n,
                                         displayProfile: eE,
                                         themeType: Q.lY.MODAL_V2,
@@ -243,7 +243,7 @@ function en(e) {
                                                                 themeType: Q.lY.MODAL_V2,
                                                                 hasEntered: ed === a.Dvm.ENTERED,
                                                                 prompt: eA && n.id === en.id ? eC : null,
-                                                                disableToolbar: eg,
+                                                                disableToolbar: eb,
                                                             }),
                                                         ],
                                                     }),

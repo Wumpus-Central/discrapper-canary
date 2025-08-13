@@ -32,8 +32,8 @@ var r = n(255367),
     L = n(222677),
     x = n(995774),
     M = n(931651),
-    k = n(280845),
-    j = n(2818),
+    j = n(280845),
+    k = n(2818),
     U = n(768943),
     G = n(665906),
     B = n(695346),
@@ -230,7 +230,7 @@ function eb(e) {
             }),
             [t, I],
         ),
-        N = (0, k.U)(t, n),
+        N = (0, j.U)(t, n),
         C = (0, G.NE)(t, n),
         R = (0, G.Ek)(n),
         P = (0, u.e7)([A.Z], () => null != t.guild_id && A.Z.isLurking(t.guild_id), [t]),
@@ -255,7 +255,7 @@ function eb(e) {
         X = t.getGuildId(),
         en = null != X && n.type === ea.uaV.USER_JOIN && W.Z.canWithPartialContext(ea.Plq.MANAGE_GUILD, { guildId: X }),
         er = (0, v.a)(n),
-        { enabled: ei } = j.Z.useExperiment({ location: "message_utilities" }),
+        { enabled: ei } = k.Z.useExperiment({ location: "message_utilities" }),
         eo = (0, u.e7)([U.Z], () => null != U.Z.getSavedMessage(t.id, n.id)),
         es = (0, c.Z)(a),
         el = (0, u.e7)([p.Z], () => p.Z.keyboardModeEnabled),
@@ -311,8 +311,8 @@ function ey(e) {
             hasDeveloperMode: x,
             isFocused: M,
         } = eb(e),
-        k = i.useRef(null),
-        j = i.useCallback(() => {
+        j = i.useRef(null),
+        k = i.useCallback(() => {
             v ||
                 K.default.track(ea.rMx.MESSAGE_POPOUT_MENU_OPENED_DESKTOP, {
                     message_id: n.id,
@@ -589,7 +589,7 @@ function ey(e) {
             O && s
                 ? null
                 : (0, r.jsx)(f.yRy, {
-                      targetElementRef: k,
+                      targetElementRef: j,
                       renderPopout: (e) => {
                           let { updatePosition: i, closePopout: o } = e;
                           return (0, r.jsx)(eg, {
@@ -601,7 +601,7 @@ function ey(e) {
                           });
                       },
                       shouldShow: v,
-                      onRequestClose: j,
+                      onRequestClose: k,
                       position: "left",
                       align: "top",
                       animation: f.yRy.Animation.NONE,
@@ -613,11 +613,11 @@ function ey(e) {
                               en.sF,
                               ef(
                                   {
-                                      ref: k,
+                                      ref: j,
                                       label: ec.intl.string(ec.t.UKOtz8),
                                       icon: f.xhG,
                                       selected: o,
-                                      onClick: j,
+                                      onClick: k,
                                   },
                                   i,
                               ),

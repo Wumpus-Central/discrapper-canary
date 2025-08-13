@@ -105,8 +105,8 @@ function x(e, t) {
     return i;
 }
 let M = 43,
-    k = 25,
-    j = 40,
+    j = 25,
+    k = 40,
     U = 250;
 function G(e) {
     e.stopPropagation();
@@ -311,8 +311,8 @@ function H(e) {
                       }),
                   })
                 : null,
-        z = { maxHeight: Z.height - M - k - 48 };
-    B && (z.maxHeight -= j);
+        z = { maxHeight: Z.height - M - j - 48 };
+    B && (z.maxHeight -= k);
     let q = null != _ && o;
     return (0, r.jsx)("div", {
         className: a()(O, C.messagesPopoutWrap),

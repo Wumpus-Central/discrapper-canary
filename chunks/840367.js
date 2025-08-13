@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b });
+n.d(t, { Z: () => g });
 var r = n(255367);
 n(73800);
 var l = n(624238),
@@ -17,14 +17,14 @@ let m = {
     [i.l.WANT_TO_PLAY_GAMES]: () => f.intl.string(f.t.bWSQwc),
     [i.l.PLAYED_GAMES]: () => f.intl.string(f.t.scOKER),
 };
-function b(e) {
+function g(e) {
     var t;
-    let { userId: n, headingId: b, widget: g, disableInteraction: j = !1 } = e,
+    let { userId: n, headingId: g, widget: b, disableInteraction: j = !1 } = e,
         y = (0, o.e7)([c.default], () => c.default.getId() === n),
-        x = (0, s.kQ)(g),
-        O = m[g.type](),
+        x = (0, s.kQ)(b),
+        O = m[b.type](),
         h = y
-            ? (t = g.type) === i.l.FAVORITE_GAMES
+            ? (t = b.type) === i.l.FAVORITE_GAMES
                 ? f.intl.string(f.t.wiXdER)
                 : f.intl.format(f.t["zR1+09"], { numGames: l.k[t] })
             : void 0;
@@ -37,7 +37,7 @@ function b(e) {
                     (0, r.jsx)(a.X6q, {
                         variant: "heading-sm/medium",
                         color: "text-default",
-                        id: b,
+                        id: g,
                         children: O,
                     }),
                     null != h &&
@@ -55,9 +55,9 @@ function b(e) {
                     children: [
                         (0, r.jsx)(d.Z, {
                             disabled: x,
-                            widgetType: g.type,
+                            widgetType: b.type,
                         }),
-                        (0, r.jsx)(u.Z, { widget: g }),
+                        (0, r.jsx)(u.Z, { widget: b }),
                     ],
                 }),
         ],

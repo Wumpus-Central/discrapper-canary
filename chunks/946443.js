@@ -1,6 +1,7 @@
 n.d(t, {
-    Z: () => P,
-    h: () => w,
+    QP: () => N,
+    ZP: () => x,
+    h6: () => P,
 }),
     n(388685);
 var r = n(255367),
@@ -11,33 +12,32 @@ var r = n(255367),
     a = n.n(s),
     c = n(91192),
     u = n(442837),
-    d = n(524437),
-    h = n(481060),
-    p = n(570140),
+    d = n(481060),
+    h = n(570140),
+    p = n(493773),
     f = n(607070),
     g = n(724757),
-    m = n(216789),
-    b = n(626135),
-    O = n(585483),
-    _ = n(358085),
-    y = n(143316),
-    C = n(240126),
-    v = n(791914),
-    j = n(147522),
-    E = n(809780),
-    S = n(981631),
-    x = n(388032),
-    I = n(153084);
-function P(e) {
-    var t, n, l, s, P, w, Z;
-    let { setTab: T, onJump: A, showTutorial: R, setSeenTutorial: D, closePopout: L, badgeState: M } = e,
-        k = i.useRef(null),
-        [U, G] = (0, E.ZP)(k),
-        { loadState: B, channels: V } = U,
-        { maybeLoadMore: F, markAllRead: H } = G;
-    (t = k),
-        (n = U),
-        (l = G),
+    m = n(626135),
+    b = n(585483),
+    O = n(358085),
+    _ = n(143316),
+    y = n(240126),
+    C = n(147522),
+    v = n(809780),
+    j = n(981631),
+    E = n(388032),
+    S = n(153084);
+function x(e) {
+    var t, n, l, s, _, x, P;
+    let { onJump: N, showTutorial: w, setSeenTutorial: Z, closePopout: T } = e,
+        A = i.useRef(null),
+        [R, D] = (0, v.ZP)(A),
+        { loadState: L, channels: M } = R,
+        { maybeLoadMore: k } = D,
+        U = (0, u.e7)([f.Z], () => f.Z.messageGroupSpacing);
+    (t = A),
+        (n = R),
+        (l = D),
         i.useLayoutEffect(() => {
             var e;
             let { scrollToChannelIndex: r } = n;
@@ -51,28 +51,28 @@ function P(e) {
             let { scrollTop: a, offsetHeight: c } = i.getScrollerState();
             (s.offsetTop < a || s.offsetTop > a + c) && i.scrollTo({ to: s.offsetTop });
         }),
-        (s = U),
-        (P = G),
+        (s = R),
+        (_ = D),
         i.useEffect(() => {
             let e = () => {
                 let e = s.channels.find((e) => !e.collapsed);
-                null != e && P.markChannelRead(e);
+                null != e && _.markChannelRead(e);
             };
             return (
-                O.S.subscribe(S.CkL.MARK_TOP_INBOX_CHANNEL_READ, e),
+                b.S.subscribe(j.CkL.MARK_TOP_INBOX_CHANNEL_READ, e),
                 () => {
-                    O.S.unsubscribe(S.CkL.MARK_TOP_INBOX_CHANNEL_READ, e);
+                    b.S.unsubscribe(j.CkL.MARK_TOP_INBOX_CHANNEL_READ, e);
                 }
             );
-        }, [P, s.channels]),
-        (w = G),
+        }, [_, s.channels]),
+        (x = D),
         i.useEffect(() => {
             let e = (e) => {
-                ((0, _.isMac)() || (0, _.isMacWeb)() ? e.metaKey : e.ctrlKey) &&
+                ((0, O.isMac)() || (0, O.isMacWeb)() ? e.metaKey : e.ctrlKey) &&
                     !e.shiftKey &&
                     !e.altKey &&
                     "z" === e.key &&
-                    w.undoMarkChannelRead();
+                    x.undoMarkChannelRead();
             };
             return (
                 document.addEventListener("keydown", e),
@@ -80,185 +80,163 @@ function P(e) {
                     document.removeEventListener("keydown", e);
                 }
             );
-        }, [w]),
+        }, [x]),
         i.useEffect(() => {
-            b.default.track(S.rMx.OPEN_POPOUT, { type: "Inbox" });
+            m.default.track(j.rMx.OPEN_POPOUT, { type: "Inbox" });
         }, []),
         i.useEffect(
             () => (
-                p.Z.subscribe("CONNECTION_OPEN", L),
+                h.Z.subscribe("CONNECTION_OPEN", T),
                 () => {
-                    p.Z.unsubscribe("CONNECTION_OPEN", L);
+                    h.Z.unsubscribe("CONNECTION_OPEN", T);
                 }
             ),
-            [L],
+            [T],
+        ),
+        (0, p.ZP)(
+            () => (
+                b.S.subscribe(j.CkL.INBOX_MARK_ALL_UNREADS_READ, D.markAllRead),
+                () => {
+                    b.S.unsubscribe(j.CkL.INBOX_MARK_ALL_UNREADS_READ, D.markAllRead);
+                }
+            ),
         );
-    let z = (0, u.e7)([f.Z], () => f.Z.messageGroupSpacing),
-        W = (0, m.Us)({ location: "Unreads" }),
-        K = (0, g.Z)("unreads", k);
-    if (0 === V.length) {
-        return (0, r.jsx)("div", {
-            className: o()(I.container, { [I.widerInbox]: W }),
-            children: (0, r.jsx)(h.y5t, {
-                component: (0, r.jsx)(v.Z, {
-                    tab: d.X.UNREADS,
-                    setTab: T,
-                    badgeState: M,
-                    closePopout: L,
-                }),
-                children: (0, r.jsx)(C.Z, {
-                    Icon: h.xx7,
-                    header: x.intl.string(x.t["6XMM+P"]),
-                    tip:
-                        (null == (Z = a().os) ? void 0 : Z.family) === "OS X"
-                            ? x.intl.string(x.t.w9uDOT)
-                            : x.intl.string(x.t.BiUJCw),
-                }),
-            }),
+    let G = (0, g.Z)("unreads", A);
+    if (0 === M.length) {
+        return (0, r.jsx)(y.Z, {
+            Icon: d.xx7,
+            header: E.intl.string(E.t["6XMM+P"]),
+            tip:
+                (null == (P = a().os) ? void 0 : P.family) === "OS X"
+                    ? E.intl.string(E.t.w9uDOT)
+                    : E.intl.string(E.t.BiUJCw),
         });
     }
-    return (0, r.jsx)("div", {
-        className: o()(I.container, "group-spacing-".concat(z), { [I.widerInbox]: W }),
-        "aria-label": x.intl.string(x.t.sRUdBw),
-        children: (0, r.jsx)(h.y5t, {
-            component: (0, r.jsx)(v.Z, {
-                tab: d.X.UNREADS,
-                setTab: T,
-                badgeState: M,
-                closePopout: L,
-                children: (0, r.jsx)(y.Z, {
-                    type: "top-header",
-                    onClick: H,
-                }),
-            }),
-            children: (0, r.jsx)(c.bG, {
-                navigator: K,
-                children: (0, r.jsx)(c.SJ, {
-                    children: (e) => {
-                        var t,
-                            n,
-                            { ref: i } = e,
-                            l = (function (e, t) {
+    return (0, r.jsx)(c.bG, {
+        navigator: G,
+        children: (0, r.jsx)(c.SJ, {
+            children: (e) => {
+                var t,
+                    n,
+                    { ref: i } = e,
+                    l = (function (e, t) {
+                        if (null == e) return {};
+                        var n,
+                            r,
+                            i = (function (e, t) {
                                 if (null == e) return {};
                                 var n,
                                     r,
-                                    i = (function (e, t) {
-                                        if (null == e) return {};
-                                        var n,
-                                            r,
-                                            i = {},
-                                            l = Object.keys(e);
-                                        for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
-                                        return i;
-                                    })(e, t);
-                                if (Object.getOwnPropertySymbols) {
-                                    var l = Object.getOwnPropertySymbols(e);
-                                    for (r = 0; r < l.length; r++)
-                                        (n = l[r]),
-                                            !(t.indexOf(n) >= 0) &&
-                                                Object.prototype.propertyIsEnumerable.call(e, n) &&
-                                                (i[n] = e[n]);
-                                }
+                                    i = {},
+                                    l = Object.keys(e);
+                                for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
                                 return i;
-                            })(e, ["ref"]);
-                        return (0, r.jsxs)(
-                            h.h21,
-                            ((t = (function (e) {
-                                for (var t = 1; t < arguments.length; t++) {
-                                    var n = null != arguments[t] ? arguments[t] : {},
-                                        r = Object.keys(n);
-                                    "function" == typeof Object.getOwnPropertySymbols &&
-                                        (r = r.concat(
-                                            Object.getOwnPropertySymbols(n).filter(function (e) {
-                                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                            }),
-                                        )),
-                                        r.forEach(function (t) {
-                                            var r;
-                                            (r = n[t]),
-                                                t in e
-                                                    ? Object.defineProperty(e, t, {
-                                                          value: r,
-                                                          enumerable: !0,
-                                                          configurable: !0,
-                                                          writable: !0,
-                                                      })
-                                                    : (e[t] = r);
-                                        });
-                                }
-                                return e;
-                            })(
-                                {
-                                    ref: (e) => {
-                                        var t;
-                                        (k.current = e),
-                                            (i.current =
-                                                null != (t = null == e ? void 0 : e.getScrollerNode()) ? t : null);
-                                    },
-                                },
-                                l,
-                            )),
-                            (n = n =
-                                {
-                                    onScroll: B === E.jd.Done ? void 0 : F,
-                                    className: I.scroller,
-                                    children: [
-                                        R ? (0, r.jsx)(N, { setSeenTutorial: D }) : null,
-                                        (0, j.Z)(V, G, A),
-                                        B === E.jd.Done ? null : (0, r.jsx)(h.$jN, { className: I.spinner }),
-                                    ],
-                                }),
-                            Object.getOwnPropertyDescriptors
-                                ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
-                                : (function (e, t) {
-                                      var n = Object.keys(e);
-                                      if (Object.getOwnPropertySymbols) {
-                                          var r = Object.getOwnPropertySymbols(e);
-                                          n.push.apply(n, r);
-                                      }
-                                      return n;
-                                  })(Object(n)).forEach(function (e) {
-                                      Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
-                                  }),
-                            t),
-                        );
-                    },
-                }),
-            }),
+                            })(e, t);
+                        if (Object.getOwnPropertySymbols) {
+                            var l = Object.getOwnPropertySymbols(e);
+                            for (r = 0; r < l.length; r++)
+                                (n = l[r]),
+                                    !(t.indexOf(n) >= 0) &&
+                                        Object.prototype.propertyIsEnumerable.call(e, n) &&
+                                        (i[n] = e[n]);
+                        }
+                        return i;
+                    })(e, ["ref"]);
+                return (0, r.jsxs)(
+                    d.h21,
+                    ((t = (function (e) {
+                        for (var t = 1; t < arguments.length; t++) {
+                            var n = null != arguments[t] ? arguments[t] : {},
+                                r = Object.keys(n);
+                            "function" == typeof Object.getOwnPropertySymbols &&
+                                (r = r.concat(
+                                    Object.getOwnPropertySymbols(n).filter(function (e) {
+                                        return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                    }),
+                                )),
+                                r.forEach(function (t) {
+                                    var r;
+                                    (r = n[t]),
+                                        t in e
+                                            ? Object.defineProperty(e, t, {
+                                                  value: r,
+                                                  enumerable: !0,
+                                                  configurable: !0,
+                                                  writable: !0,
+                                              })
+                                            : (e[t] = r);
+                                });
+                        }
+                        return e;
+                    })(
+                        {
+                            ref: (e) => {
+                                var t;
+                                (A.current = e),
+                                    (i.current = null != (t = null == e ? void 0 : e.getScrollerNode()) ? t : null);
+                            },
+                        },
+                        l,
+                    )),
+                    (n = n =
+                        {
+                            onScroll: L === v.jd.Done ? void 0 : k,
+                            className: o()(S.scroller, "group-spacing-".concat(U)),
+                            children: [
+                                w ? (0, r.jsx)(I, { setSeenTutorial: Z }) : null,
+                                (0, C.Z)(M, D, N),
+                                L === v.jd.Done ? null : (0, r.jsx)(d.$jN, { className: S.spinner }),
+                            ],
+                        }),
+                    Object.getOwnPropertyDescriptors
+                        ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
+                        : (function (e, t) {
+                              var n = Object.keys(e);
+                              if (Object.getOwnPropertySymbols) {
+                                  var r = Object.getOwnPropertySymbols(e);
+                                  n.push.apply(n, r);
+                              }
+                              return n;
+                          })(Object(n)).forEach(function (e) {
+                              Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
+                          }),
+                    t),
+                );
+            },
         }),
     });
 }
-function N(e) {
+function I(e) {
     let { setSeenTutorial: t } = e;
     return (0, r.jsxs)("div", {
-        className: I.tutorial,
+        className: S.tutorial,
         children: [
             (0, r.jsx)("div", {
-                className: I.tutorialIcon,
-                children: (0, r.jsx)(h.xx7, {
+                className: S.tutorialIcon,
+                children: (0, r.jsx)(d.xx7, {
                     size: "md",
                     color: "currentColor",
                 }),
             }),
             (0, r.jsxs)("div", {
                 children: [
-                    (0, r.jsx)(h.X6q, {
-                        className: I.__invalid_tutorialHeader,
+                    (0, r.jsx)(d.X6q, {
+                        className: S.__invalid_tutorialHeader,
                         variant: "heading-md/semibold",
-                        children: x.intl.string(x.t.vZPktL),
+                        children: E.intl.string(E.t.vZPktL),
                     }),
-                    (0, r.jsx)(h.Text, {
+                    (0, r.jsx)(d.Text, {
                         color: "header-secondary",
                         variant: "text-sm/normal",
-                        children: x.intl.string(x.t.vWkIIC),
+                        children: E.intl.string(E.t.vWkIIC),
                     }),
                     (0, r.jsx)("div", {
                         "data-button-hoisted-classname-wrapper": !0,
-                        className: I.tutorialButton,
-                        children: (0, r.jsx)(h.zxk, {
+                        className: S.tutorialButton,
+                        children: (0, r.jsx)(d.zxk, {
                             variant: "primary",
                             size: "sm",
-                            text: x.intl.string(x.t["+IrDzM"]),
+                            text: E.intl.string(E.t["+IrDzM"]),
                             onClick: t,
                         }),
                     }),
@@ -267,23 +245,16 @@ function N(e) {
         ],
     });
 }
-function w(e) {
-    let { setTab: t, badgeState: n, closePopout: i } = e;
-    return (0, r.jsx)("div", {
-        className: I.container,
-        children: (0, r.jsx)(h.y5t, {
-            component: (0, r.jsx)(v.Z, {
-                tab: d.X.UNREADS,
-                setTab: t,
-                badgeState: n,
-                closePopout: i,
-            }),
-            children: (0, r.jsx)(C.Z, {
-                Icon: h.xx7,
-                disableStars: !0,
-                header: x.intl.string(x.t["KG/ynZ"]),
-                tip: x.intl.string(x.t.cvcKzc),
-            }),
-        }),
+function P() {
+    return (0, r.jsx)(y.Z, {
+        Icon: d.xx7,
+        disableStars: !0,
+        header: E.intl.string(E.t["KG/ynZ"]),
+        tip: E.intl.string(E.t.cvcKzc),
     });
 }
+let N = () =>
+    (0, r.jsx)(_.Z, {
+        onClick: () => b.S.dispatch(j.CkL.INBOX_MARK_ALL_UNREADS_READ),
+        type: "top-header",
+    });

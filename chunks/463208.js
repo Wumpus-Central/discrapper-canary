@@ -167,8 +167,8 @@ function I(e) {
             fullWidth: L = !1,
             clearable: x = !1,
             helperText: M,
-            showCharacterCount: k = !1,
-            successMessage: j,
+            showCharacterCount: j = !1,
+            successMessage: k,
         } = e,
         U = E(e, [
             "disabled",
@@ -248,8 +248,8 @@ function I(e) {
             fullWidth: L,
             readOnly: K,
             helperText: M,
-            successMessage: j,
-            characterCount: k ? (null != (t = null == T ? void 0 : T.length) ? t : 0) : void 0,
+            successMessage: k,
+            characterCount: j ? (null != (t = null == T ? void 0 : T.length) ? t : 0) : void 0,
             characterCountMaxLength: I,
             className: a()(_.container, _[D], {
                 [_.leading]: null != q,

@@ -194,7 +194,7 @@ class b extends i.Z {
         return (0, l.Pb)(null == (e = this.collectibles) ? void 0 : e.nameplate);
     }
     constructor(e) {
-        var t, n, i, o, l, c, u, d, f, p, m, g, E, b, y, O, v, I, T, S, A, N, C, R, P, w, D, L, x, M, k, j, U;
+        var t, n, i, o, l, c, u, d, f, p, m, g, E, b, y, O, v, I, T, S, A, N, C, R, P, w, D, L, x, M, j, k, U;
         super(),
             h(this, "id", void 0),
             h(this, "username", void 0),
@@ -256,7 +256,7 @@ class b extends i.Z {
                 null != (x = null != (L = e.personal_connection_id) ? L : e.personalConnectionId) ? x : null),
             (this.globalName = null != (M = e.global_name) ? M : e.globalName),
             (this.banner = e.banner),
-            (this.primaryGuild = (0, s.l)(null != (j = null != (k = e.primary_guild) ? k : e.primaryGuild) ? j : null)),
+            (this.primaryGuild = (0, s.l)(null != (k = null != (j = e.primary_guild) ? j : e.primaryGuild) ? k : null)),
             (this.collectibles = e.collectibles),
             (this.displayNameStyles = null != (U = e.displayNameStyles) ? U : (0, a.bN)(e.display_name_styles)),
             Object.defineProperties(this, {

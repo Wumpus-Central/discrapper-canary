@@ -21,11 +21,13 @@ function p(e) {
         f = i.useCallback(() => {
             (0, o.Z)(n, a.Z.GUILD_POWERUPS_GUILD_SETTINGS_TAGS, "guildTagsBadgePacks"), c.Z.close();
         }, [n]),
-        b = (0, s.Z)();
+        b = (0, s.Z)(),
+        x = i.useId();
     return (0, r.jsxs)("div", {
         className: t,
         children: [
             (0, r.jsx)(l.vwX, {
+                id: x,
                 className: g.sectionTitle,
                 children: m.intl.string(u.default.pb7lpK),
             }),
@@ -34,6 +36,7 @@ function p(e) {
                 handleBoostUpsellClick: f,
                 onBadgeClicked: h,
                 selectedBadge: p,
+                headingId: x,
             }),
         ],
     });

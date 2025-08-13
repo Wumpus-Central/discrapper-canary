@@ -118,7 +118,7 @@ let v = i.memo(function (e) {
             o = null != (M = (0, s.wK)(null != r ? r : "", i)) ? M : "";
         R && (x.borderColor = r), (x.background = o), (t = e), (n = e);
     }
-    let k = {
+    let j = {
         minWidth: L,
         color: t,
         borderColor: n,
@@ -139,7 +139,7 @@ let v = i.memo(function (e) {
             }),
             (0, r.jsx)("div", {
                 className: w.reactionCount,
-                style: k,
+                style: j,
                 children: D,
             }),
         ],

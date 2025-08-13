@@ -36,8 +36,8 @@ var r = n(255367),
     L = n(409813),
     x = n(45572),
     M = n(784707),
-    k = n(614223),
-    j = n(48175),
+    j = n(614223),
+    k = n(48175),
     U = n(435020),
     G = n(928886),
     B = n(456251),
@@ -110,8 +110,8 @@ function J(e) {
             analyticsSubscriptionType: p = F.NYc.PREMIUM,
             onComplete: m,
             transitionState: N,
-            initialPlanId: k,
-            subscriptionTier: j,
+            initialPlanId: j,
+            subscriptionTier: k,
             onClose: B,
             trialId: W,
             trialFooterMessageOverride: z,
@@ -155,8 +155,8 @@ function J(e) {
             priceOptions: eL,
             hasPaymentSources: ex,
             paymentSourceId: eM,
-            paymentSources: ek,
-            purchaseType: ej,
+            paymentSources: ej,
+            purchaseType: ek,
             defaultPlanId: eU,
             premiumBrandRefreshBackgroundClassName: eG,
         } = (0, D.JL)(),
@@ -167,12 +167,12 @@ function J(e) {
         ? (eW = c.CgR.LARGE)
         : (eR === L.h8.ADD_PAYMENT_STEPS || e_ || (null == eB ? void 0 : eB.isDynamicModal)) && (eW = c.CgR.DYNAMIC);
     let eK = (0, v.Ng)(),
-        ez = null != j && !eZ && (0, v.Wp)(eK, j),
+        ez = null != k && !eZ && (0, v.Wp)(eK, k),
         [eq, eX] = i.useState(
             K(
                 {
                     load_id: eP.loadId,
-                    payment_type: F.Zuq[ej],
+                    payment_type: F.Zuq[ek],
                     location: null != o ? o : l,
                     source: d,
                     subscription_type: p,
@@ -190,7 +190,7 @@ function J(e) {
                 t,
             ),
         ),
-        eQ = (0, U.m)(ek, eM);
+        eQ = (0, U.m)(ej, eM);
     i.useEffect(() => {
         eX((e) => {
             let n = null != eI ? (0, P.aS)(eI.id, !1, eZ, eL) : void 0;
@@ -215,12 +215,12 @@ function J(e) {
             );
         }),
         i.useEffect(() => {
-            if ((null == eI && (null != eU && null != eg ? eT(eU) : eT(k)), null != ec)) ev(ec);
-            else if (null != k) {
+            if ((null == eI && (null != eU && null != eg ? eT(eU) : eT(j)), null != ec)) ev(ec);
+            else if (null != j) {
                 var e;
-                ev(null == (e = A.Z.get(k)) ? void 0 : e.skuId);
+                ev(null == (e = A.Z.get(j)) ? void 0 : e.skuId);
             }
-        }, [eT, eI, ev, k, ec, eU, eg]);
+        }, [eT, eI, ev, j, ec, eU, eg]);
     let eJ = i.useCallback(() => {
             let e = (0, R.MY)(eF) === R.xr.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD,
                 t = Date.now();
@@ -288,8 +288,8 @@ function J(e) {
         (0, S.w)(eD, () => B(!1), eZ),
         (0, I.D6)(eC);
     let e2 = {
-            initialPlanId: k,
-            subscriptionTier: j,
+            initialPlanId: j,
+            subscriptionTier: k,
             handleStepChange: e1,
             handleClose: e$,
             analyticsData: eq,
@@ -361,7 +361,7 @@ function $(e) {
         } = (0, D.JL)(),
         { isGift: v } = (0, w.wD)(),
         I = O.current,
-        T = (0, j.Z)({
+        T = (0, k.Z)({
             isGift: v,
             skuId: E,
             referralTrialOfferId: a,
@@ -384,7 +384,7 @@ function $(e) {
     ),
     i.useEffect(() => {
         if ((C || (0, d.yD)(V.CL), S || f)) return;
-        let e = (0, k.Kp)({
+        let e = (0, j.Kp)({
             isTrial: T,
             isGift: v,
             selectedSkuId: E,
@@ -398,7 +398,7 @@ function $(e) {
             : null != n
               ? o(L.h8.REVIEW)
               : e
-                ? (b((0, k.nA)(E, u, y)), o(L.h8.REVIEW))
+                ? (b((0, j.nA)(E, u, y)), o(L.h8.REVIEW))
                 : null != t
                   ? o(L.h8.PLAN_SELECT)
                   : o(L.h8.SKU_SELECT);

@@ -31,7 +31,6 @@ e.exports = {
     content: "content__9a337",
     textContentFooter: "textContentFooter__9a337",
     noTags: "noTags__9a337",
-    tagPill: "tagPill__9a337",
     authorRow: "authorRow__9a337",
     rowGroup: "rowGroup__9a337",
     postCreationTimestamp: "postCreationTimestamp__9a337",
@@ -41,5 +40,6 @@ e.exports = {
     textContentRead: "textContentRead__9a337",
     mediaPostContainer: "mediaPostContainer__9a337",
     mediaPostThumbnail: "mediaPostThumbnail__9a337",
+    tagPill: "tagPill__9a337",
     blockedMessage: "blockedMessage__9a337",
 };

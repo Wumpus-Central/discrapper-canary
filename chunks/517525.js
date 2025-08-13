@@ -86,8 +86,8 @@ let P = (0, l.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
     L = { opacity: 0 },
     x = { opacity: 1 },
     M = { borderRadius: "".concat(P, "px ").concat(P, "px ").concat(P, "px ").concat(P, "px") },
-    k = { borderRadius: "0px ".concat(P, "px ").concat(P, "px 0px") },
-    j = {
+    j = { borderRadius: "0px ".concat(P, "px ").concat(P, "px 0px") },
+    k = {
         mass: 1,
         tension: 500,
         friction: 18,
@@ -120,17 +120,17 @@ let P = (0, l.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
             o = !1;
         }
         let M = t || o,
-            { location: k } = (0, _.O)(),
-            j = (0, c.e7)([g.default], () => g.default.getCurrentUser()),
-            U = l && !b.ZP.isPremium(j, I.p9.TIER_1) && !b.ZP.canStreamQuality(b.ZP.StreamQuality.MID, j),
+            { location: j } = (0, _.O)(),
+            k = (0, c.e7)([g.default], () => g.default.getCurrentUser()),
+            U = l && !b.ZP.isPremium(k, I.p9.TIER_1) && !b.ZP.canStreamQuality(b.ZP.StreamQuality.MID, k),
             G = i.useCallback(() => {
                 U &&
                     M &&
                     (0, f.ZDy)(async () => {
                         let { default: e } = await n.e("28479").then(n.bind(n, 78865));
-                        return (t) => (0, r.jsx)(e, R(N({}, t), { analyticsSource: k }));
+                        return (t) => (0, r.jsx)(e, R(N({}, t), { analyticsSource: j }));
                     });
-            }, [U, M, k]),
+            }, [U, M, j]),
             B = () => (x ? T.intl.string(T.t.q8TiVl) : M ? T.intl.string(T.t.IHgpEh) : T.intl.string(T.t.vLb0VV));
         if (
             (i.useEffect(() => {
@@ -204,14 +204,14 @@ let P = (0, l.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
                         to: g.enabled ? x : D,
                     },
                     leave: g.enabled ? L : w,
-                    config: j,
+                    config: k,
                 },
                 "animate-always",
             ),
             O = (0, f.q_F)(
                 {
-                    to: E ? k : M,
-                    config: j,
+                    to: E ? j : M,
+                    config: k,
                 },
                 "animate-always",
             );

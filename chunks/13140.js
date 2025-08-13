@@ -2,9 +2,9 @@ n.d(t, {
     BB: () => U,
     C$: () => N,
     H9: () => A,
-    Kd: () => j,
+    Kd: () => k,
     UR: () => v,
-    d2: () => k,
+    d2: () => j,
     dU: () => T,
 }),
     n(388685),
@@ -227,7 +227,7 @@ function x(e) {
 function M(e) {
     return e + "Key";
 }
-function k(e) {
+function j(e) {
     let t = {
         keyCode: 0,
         key: "",
@@ -250,7 +250,7 @@ function k(e) {
               }
           }, []);
 }
-function j(e) {
+function k(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : T(),
         n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : d.MoX.KEYBOARD_KEY;
     return e

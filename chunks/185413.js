@@ -1,5 +1,5 @@
 n.d(t, {
-    U: () => j,
+    U: () => k,
     default: () => B,
     t: () => G,
 }),
@@ -103,10 +103,10 @@ function x(e) {
     return e && "undefined" != typeof Symbol && e.constructor === Symbol ? "symbol" : typeof e;
 }
 let M = (0, d.hQ)();
-function k(e, t) {
+function j(e, t) {
     return t ? e.slice(1) : e;
 }
-function j(e) {
+function k(e) {
     let t,
         {
             guild: n,
@@ -121,7 +121,7 @@ function j(e) {
         [g, E] = i.useState(""),
         T = (0, o.e7)([h.Z], () => h.Z.getSortedRoles(n.id));
     function S(e) {
-        let t = k(g.trim(), _);
+        let t = j(g.trim(), _);
         return RegExp("".concat(y.Z.escape(t)), "i").test(e);
     }
     let A = (0, o.Wu)([p.ZP], () => p.ZP.getMemberIds(n.id));
@@ -134,7 +134,7 @@ function j(e) {
     function C(e) {
         let t = e.trim(),
             r = "@" === t.charAt(0);
-        b.Z.requestMembers(n.id, k(t, r), I.EQ), E(e), m(r);
+        b.Z.requestMembers(n.id, j(t, r), I.EQ), E(e), m(r);
     }
     function w(e) {
         let t = (0, v.G)(e);
@@ -170,7 +170,7 @@ function j(e) {
             return P(t, [e].map(L));
         });
     }
-    let { placeholderText: x, hintText: M, renderEmptyText: j } = U();
+    let { placeholderText: x, hintText: M, renderEmptyText: k } = U();
     return (0, r.jsx)(G, {
         pendingAdditions: l,
         query: g,
@@ -181,7 +181,7 @@ function j(e) {
         members: N,
         placeholderText: x,
         hintText: M,
-        renderEmptyText: j,
+        renderEmptyText: k,
         isStageChannel: d,
         description: f,
     });
@@ -303,7 +303,7 @@ function B(e) {
                     }),
                 ],
             }),
-            (0, r.jsx)(j, {
+            (0, r.jsx)(k, {
                 guild: O,
                 channel: y,
                 permission: y.accessPermissions,

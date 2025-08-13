@@ -35,8 +35,8 @@ var r = n(255367),
     L = n(132144),
     x = n(131130),
     M = n(458725),
-    k = n(386146),
-    j = n(492435),
+    j = n(386146),
+    k = n(492435),
     U = n(353926),
     G = n(506357),
     B = n(36459),
@@ -133,7 +133,7 @@ let eN = (e) => {
         let { error: n, location: i, allowClick: o = !1 } = e,
             a = null == (t = (0, M.hp)(n)) ? void 0 : t.errorCode,
             s = eO.intl.formatToPlainString(eO.t["ejOT9/"], { errorCode: a }),
-            { avErrorUIEnabled: l } = (0, k.JN)({ location: i });
+            { avErrorUIEnabled: l } = (0, j.JN)({ location: i });
         if (!l) return null;
         let u = (0, r.jsx)(c.Text, {
             variant: "text-sm/bold",
@@ -231,16 +231,16 @@ let ex = i.memo(function () {
         h = (0, l.e7)([es.Z], () => es.Z.getGuildId()),
         S = (0, l.e7)([ed.ZP], () => ed.ZP.getNotice()),
         { analyticsLocations: M } = (0, A.ZP)(),
-        k = null == S ? void 0 : S.type,
+        j = null == S ? void 0 : S.type,
         ef = (0, V.J)(h);
     i.useEffect(() => {
-        null != k && ew(k, h);
-    }, [k, h]),
+        null != j && ew(j, h);
+    }, [j, h]),
         i.useEffect(() => {
             if (null != S && S.type === eg.kVF.SURVEY && null != S.metadata) {
                 let { metadata: e } = S,
                     t = U.Z.getUserExperimentDescriptor(e.id);
-                null != t && (0, j.W9)(e.id, t),
+                null != t && (0, k.W9)(e.id, t),
                     (async () => {
                         var e, t;
                         (null == (e = S.metadata) ? void 0 : e.id) != null &&
@@ -248,13 +248,13 @@ let ex = i.memo(function () {
                     })();
             }
         }, [S]);
-    let em = null != k ? ed.zD[k] : null,
-        eI = null != k ? ed.o[k] : null,
-        eS = null != k ? ed.nA[k] : null,
-        eN = eL(k);
+    let em = null != j ? ed.zD[j] : null,
+        eI = null != j ? ed.o[j] : null,
+        eS = null != j ? ed.nA[j] : null,
+        eN = eL(j);
     if (null == S) return null;
     let { useRecurringNotices: ex } = X.b.getCurrentConfig({ location: "AppNotice" });
-    if (ex && null != em && (k === eg.kVF.PREMIUM_TIER_2_TRIAL_ENDING || k === eg.kVF.PREMIUM_TIER_2_DISCOUNT_ENDING))
+    if (ex && null != em && (j === eg.kVF.PREMIUM_TIER_2_TRIAL_ENDING || j === eg.kVF.PREMIUM_TIER_2_DISCOUNT_ENDING))
         return (0, r.jsx)(L.W, {
             dismissibleContent: em,
             noticeType: S.type,
@@ -279,15 +279,15 @@ let ex = i.memo(function () {
         case eg.kVF.INVITED_TO_SPEAK:
             return (0, r.jsx)(er.Z, {});
         case eg.kVF.GUILD_RAID_NOTIFICATION:
-            let { dismissUntil: ek } = S.metadata;
-            return (0, r.jsx)(G.Z, { onDismiss: () => eD(ek) });
-        case eg.kVF.WIN32_DEPRECATED_MESSAGE:
             let { dismissUntil: ej } = S.metadata;
+            return (0, r.jsx)(G.Z, { onDismiss: () => eD(ej) });
+        case eg.kVF.WIN32_DEPRECATED_MESSAGE:
+            let { dismissUntil: ek } = S.metadata;
             return (0, r.jsxs)(c.qXd, {
                 color: c.DM8.WARNING,
                 children: [
                     (0, r.jsx)(c.RyX, {
-                        onClick: () => eD(ej),
+                        onClick: () => eD(ek),
                         noticeType: eg.kVF.WIN32_DEPRECATED_MESSAGE,
                     }),
                     eO.intl.format(eO.t["08KQ1N"], { helpCenterLink: e_.Z.getArticleURL(eg.BhN.WIN32_DEPRECATE) }),
@@ -852,7 +852,7 @@ let ex = i.memo(function () {
                 color: c.DM8.WARNING,
                 children: [
                     (0, r.jsx)(c.RyX, {
-                        noticeType: k,
+                        noticeType: j,
                         onClick: () => {
                             eD(e$);
                         },

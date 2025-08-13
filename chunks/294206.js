@@ -63,7 +63,7 @@ function M(e) {
     }
     return e;
 }
-function k(e, t) {
+function j(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -75,12 +75,12 @@ function k(e, t) {
     }
     return n;
 }
-function j(e, t) {
+function k(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : k(Object(t)).forEach(function (n) {
+            : j(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -120,7 +120,7 @@ function Y(e) {
         children: (e) =>
             (0, r.jsx)(
                 d.P3F,
-                j(M({}, e), {
+                k(M({}, e), {
                     innerRef: l,
                     "aria-label": i,
                     className: a()(L.secondaryButton, { [L.buttonDisabled]: t }),
@@ -171,7 +171,7 @@ function K(e) {
                         ? (0, I.hs)(t.soundId)
                         : ((0, A.lF)({
                               sound: t,
-                              location: j(M({}, o), { object: R.qAy.SOUNDBOARD_SOUND }),
+                              location: k(M({}, o), { object: R.qAy.SOUNDBOARD_SOUND }),
                           }),
                           (0, I.TB)(t.soundId));
             },
@@ -223,7 +223,7 @@ let q = i.forwardRef(function (e, t) {
             channel: T,
             containerClassName: R,
             className: x,
-            focused: k,
+            focused: j,
             forceSecondaryActions: G = !1,
             interactive: Y = !0,
             enableSecondaryActions: q = !1,
@@ -298,10 +298,10 @@ let q = i.forwardRef(function (e, t) {
                 : "bottom",
         [eL, ex] = i.useState(!1),
         eM = eR && et;
-    function ek() {
+    function ej() {
         X || em($);
     }
-    function ej(e) {
+    function ek(e) {
         if (
             (eS &&
                 !ev &&
@@ -310,7 +310,7 @@ let q = i.forwardRef(function (e, t) {
             null != J)
         )
             return void J(e);
-        ek();
+        ej();
     }
     let eU = W({
             sound: I,
@@ -435,10 +435,10 @@ let q = i.forwardRef(function (e, t) {
                 children: (e) =>
                     (0, r.jsxs)(
                         d.kL8,
-                        j(
+                        k(
                             M(
-                                j(M({}, eu), {
-                                    buttonProps: j(M({}, eN), {
+                                k(M({}, eu), {
+                                    buttonProps: k(M({}, eN), {
                                         id: eA,
                                         role: "button",
                                     }),
@@ -456,7 +456,7 @@ let q = i.forwardRef(function (e, t) {
                                             [L.buttonDisabled]: !Y && !G,
                                             [L.premiumDisabled]: eR && !G,
                                             [L.buttonDisabledSecondaryActionsEnabled]: !Y && G,
-                                            [L.focused]: Y && k,
+                                            [L.focused]: Y && j,
                                         },
                                         x,
                                     ),
@@ -466,7 +466,7 @@ let q = i.forwardRef(function (e, t) {
                             {
                                 onClick: (t) => {
                                     var n;
-                                    null == e || null == (n = e.onClick) || n.call(e), null == ej || ej(t);
+                                    null == e || null == (n = e.onClick) || n.call(e), null == ek || ek(t);
                                 },
                                 onContextMenu: q && !eR ? eh : void 0,
                                 onMouseOver: () => {

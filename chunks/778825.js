@@ -75,10 +75,10 @@ function M(e) {
     let { nameplate: t } = e;
     o = t;
 }
-function k() {
-    j(), U(), (y = {}), (b = g.QZA.OPEN);
-}
 function j() {
+    k(), U(), (y = {}), (b = g.QZA.OPEN);
+}
+function k() {
     (r = void 0), (u = void 0), (i = void 0), (o = void 0);
 }
 function U() {
@@ -88,7 +88,7 @@ function G() {
     y = {};
 }
 function B() {
-    k(), v();
+    j(), v();
 }
 class Z extends (p = h.ZP.Store) {
     getFormState() {
@@ -180,9 +180,9 @@ let F = new Z(m.Z, {
     GUILD_IDENTITY_SETTINGS_SET_PENDING_PRONOUNS: D,
     GUILD_IDENTITY_SETTINGS_SET_PENDING_NICKNAME: L,
     GUILD_IDENTITY_SETTINGS_SET_PENDING_THEME_COLORS: x,
-    GUILD_IDENTITY_SETTINGS_RESET_PENDING_MEMBER_CHANGES: j,
+    GUILD_IDENTITY_SETTINGS_RESET_PENDING_MEMBER_CHANGES: k,
     GUILD_IDENTITY_SETTINGS_RESET_PENDING_PROFILE_CHANGES: U,
-    GUILD_IDENTITY_SETTINGS_RESET_ALL_PENDING: k,
-    GUILD_IDENTITY_SETTINGS_SUBMIT_SUCCESS: k,
+    GUILD_IDENTITY_SETTINGS_RESET_ALL_PENDING: j,
+    GUILD_IDENTITY_SETTINGS_SUBMIT_SUCCESS: j,
     GUILD_IDENTITY_SETTINGS_CLEAR_ERRORS: G,
 });

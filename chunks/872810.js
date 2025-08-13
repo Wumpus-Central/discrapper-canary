@@ -2,11 +2,11 @@ n.d(t, {
     L6: () => Z,
     Rc: () => G,
     WH: () => R,
-    aP: () => k,
+    aP: () => j,
     dV: () => B,
     g: () => M,
     iV: () => x,
-    n9: () => j,
+    n9: () => k,
     pR: () => L,
     rn: () => D,
     tK: () => P,
@@ -129,14 +129,14 @@ function x(e, t) {
 function M(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
         n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
-    n && k(e, t),
+    n && j(e, t),
         s.Z.dispatch({
             type: "STREAM_STOP",
             streamKey: e,
             appContext: __OVERLAY__ ? T.IlC.OVERLAY : T.IlC.APP,
         });
 }
-function k(e) {
+function j(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
     s.Z.dispatch({
         type: "STREAM_CLOSE",
@@ -144,7 +144,7 @@ function k(e) {
         canShowFeedback: t,
     });
 }
-async function j(e, t, n) {
+async function k(e, t, n) {
     if (!f.Z.shouldFetchPreview(e, t, n)) return;
     let r = (0, c.V9)({
         streamType: null != e ? S.lo.GUILD : S.lo.CALL,

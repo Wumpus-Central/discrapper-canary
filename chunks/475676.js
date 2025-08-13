@@ -83,15 +83,15 @@ function S(e) {
         leaderboard: R,
         guildId: C,
     });
-    let k = (0, s.q)(null == R || null == (t = R.settings) ? void 0 : t.application_id);
-    if (null == R || null == k) return null;
+    let j = (0, s.q)(null == R || null == (t = R.settings) ? void 0 : t.application_id);
+    if (null == R || null == j) return null;
     if (0 === R.users.length || null == D || null == x)
         return (0, r.jsx)(A, {
-            application: k,
+            application: j,
             selected: v,
         });
-    let { sort_by_statistic_id: j } = R.guild_settings,
-        U = null != (b = null == L || null == (f = L.statistics) || null == (n = f[j]) ? void 0 : n.value) ? b : 0,
+    let { sort_by_statistic_id: k } = R.guild_settings,
+        U = null != (b = null == L || null == (f = L.statistics) || null == (n = f[k]) ? void 0 : n.value) ? b : 0,
         { currentRank: G } = D;
     return (
         (y =
@@ -106,14 +106,14 @@ function S(e) {
             children: [
                 (0, r.jsxs)(c.e$, {
                     children: [
-                        (0, r.jsx)(I, { application: k }),
+                        (0, r.jsx)(I, { application: j }),
                         (0, r.jsx)(a.LZC, { size: 2 }),
                         (0, r.jsx)(c.ll, { children: y }),
                         (0, r.jsx)(l.Gk, {
                             location: l.Gt.CARD,
                             children: (0, r.jsx)(m.DC, {
                                 value: U,
-                                statisticId: j,
+                                statisticId: k,
                             }),
                         }),
                     ],

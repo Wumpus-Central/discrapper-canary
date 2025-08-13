@@ -109,8 +109,8 @@ class m extends i.Component {
                 onControlsHide: L,
                 onVolumeChange: x,
                 onMute: M,
-                disableArrowKeySeek: k,
-                alt: j = c.intl.string(c.t.FlNoSU),
+                disableArrowKeySeek: j,
+                alt: k = c.intl.string(c.t.FlNoSU),
             } = e,
             U = p(e, [
                 "src",
@@ -147,7 +147,7 @@ class m extends i.Component {
             _(
                 d(
                     {
-                        alt: j,
+                        alt: k,
                         className: i,
                         src: f,
                     },
@@ -195,7 +195,7 @@ class m extends i.Component {
                             onControlsHide: L,
                             mimeType: S,
                             downloadable: b,
-                            disableArrowKeySeek: k,
+                            disableArrowKeySeek: j,
                         });
                     },
                 },

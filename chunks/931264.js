@@ -52,17 +52,17 @@ e.exports = function (e, t) {
             return;
         }
         var M = O.getSelection(),
-            k = M.merge({
+            j = M.merge({
                 anchorOffset: C,
                 focusOffset: R,
                 isBackward: !1,
             }),
-            j = w.getEntityAt(C),
-            U = s(j) ? P.getEntity(j) : null,
+            k = w.getEntityAt(C),
+            U = s(k) ? P.getEntity(k) : null,
             G = null != U ? U.getMutability() : null,
             B = "MUTABLE" === G,
             Z = B ? "spellcheck-change" : "apply-entity",
-            F = r.replaceText(P, k, y, w.getInlineStyleAt(C), B ? w.getEntityAt(C) : null);
+            F = r.replaceText(P, j, y, w.getInlineStyleAt(C), B ? w.getEntityAt(C) : null);
         if (d)
             (n = h.anchorOffset), (p = (c = C + Math.min(n, (a = h.focusOffset))) + Math.abs(n - a)), (n = c), (a = p);
         else {

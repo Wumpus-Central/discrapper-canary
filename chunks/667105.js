@@ -3,10 +3,10 @@ n.d(t, {
     Ks: () => Z,
     Ws: () => H,
     g2: () => U,
-    hf: () => k,
+    hf: () => j,
     k3: () => G,
     qN: () => V,
-    tP: () => j,
+    tP: () => k,
 }),
     n(388685);
 var r = n(255367),
@@ -90,7 +90,7 @@ function M(e, t) {
         e
     );
 }
-function k(e) {
+function j(e) {
     let { quest: t, questContent: n, questContentPosition: r, questContentRowIndex: o, sourceQuestContent: s } = e,
         l = (0, a.e7)([_.default], () => _.default.getCurrentUser()),
         c = null == l ? void 0 : l.hasVerifiedEmailOrPhone(),
@@ -126,7 +126,7 @@ function k(e) {
                   : (0, N.B)());
     }, [t, d, n, r, o, c, u, s]);
 }
-function j(e) {
+function k(e) {
     var t;
     let n = (0, a.Wu)([u.ZP], () => u.ZP.getGamesSeen(!1)).find((t) => (null == t ? void 0 : t.id) === e);
     return null != n && Date.now() - 25920000000 <= (null != (t = n.lastLaunched) ? t : 0);
@@ -211,7 +211,7 @@ function Z(e) {
             inGameQuest: y,
             sourceQuestContent: O,
         } = e,
-        I = k({
+        I = j({
             quest: n,
             questContent: a,
             questContentPosition: s,
@@ -237,7 +237,7 @@ function Z(e) {
                 });
         }, []),
         x = null == (t = (0, m.WD)()) ? void 0 : t.getId(),
-        { launchInGameActivity: j } = (0, b.zB)(n),
+        { launchInGameActivity: k } = (0, b.zB)(n),
         U = (0, v.f)({
             location: C.dr.QUEST_HOME_DESKTOP,
             questFeatures: n.config.features,
@@ -292,7 +292,7 @@ function Z(e) {
                                           sourceQuestContent: O,
                                           sourceQuestContentCTA: h.jZ.ACCEPT_QUEST,
                                       })
-                                    : y && n.config.features.includes(C.S7.START_QUEST_CTA) && j();
+                                    : y && n.config.features.includes(C.S7.START_QUEST_CTA) && k();
                         },
                     }
                 );
@@ -341,7 +341,7 @@ function Z(e) {
                         text: e,
                         tooltipText: w.intl.string(w.t.hsbwjo),
                         onClick: () => {
-                            n.config.features.includes(C.S7.START_QUEST_CTA) && j();
+                            n.config.features.includes(C.S7.START_QUEST_CTA) && k();
                         },
                     };
                 }
@@ -377,7 +377,7 @@ function Z(e) {
                     };
                 return M(L({}, i), { text: w.intl.string(w.t.bAGFz8) });
         }
-    }, [r, p, T, _, I, o, n, a, s, u, x, A, N, D, y, j, O, U]);
+    }, [r, p, T, _, I, o, n, a, s, u, x, A, N, D, y, k, O, U]);
 }
 function F() {
     return (0, a.e7)([y.Z], () => {

@@ -185,34 +185,34 @@ function T(e) {
         D = u > 1,
         L = C === p.gH.LOADING,
         [x, M] = i.useState(!1),
-        [k, j] = i.useState(() => new Set(n.filter((e) => e.default).map((e) => e.value))),
-        [U, G] = i.useState(k),
+        [j, k] = i.useState(() => new Set(n.filter((e) => e.default).map((e) => e.value))),
+        [U, G] = i.useState(j),
         B = i.useMemo(() => n.some((e) => null != e.emoji), [n]);
     i.useEffect(() => {
         if ((null == A ? void 0 : A.type) === d.re.STRING_SELECT) {
             let e = new Set(A.values);
-            j(e), G(e);
+            k(e), G(e);
         } else {
             let e = new Set(T);
-            j(e), G(e);
+            k(e), G(e);
         }
     }, [o, T, A]);
     let Z = i.useCallback(() => {
-        U !== k &&
+        U !== j &&
             N({
                 type: d.re.STRING_SELECT,
-                values: Array.from(k),
+                values: Array.from(j),
             }) &&
-            G(k);
-    }, [k, U, G, N]);
+            G(j);
+    }, [j, U, G, N]);
     i.useEffect(() => {
-        !x && ((k.size === U.size && Array.from(U).every((e) => k.has(e))) || Z());
-    }, [x, k, U, Z]);
+        !x && ((j.size === U.size && Array.from(U).every((e) => j.has(e))) || Z());
+    }, [x, j, U, Z]);
     let F = c.UNb;
     D ? (F = c.gzz) : 0 === g && (F = c.s6k);
     let V = (0, c.cYr)({
-        value: k,
-        onChange: (e) => j(e),
+        value: j,
+        onChange: (e) => k(e),
         onSelectInteraction: F,
     });
     return (0, r.jsxs)(i.Fragment, {
@@ -226,7 +226,7 @@ function T(e) {
                             isProcessing: L,
                             isDisabled: b || C === p.gH.DISABLED || R,
                             className: a()(m.select, { [m.inModal]: w }),
-                            options: n.map((e) => y(E({}, e), { disabled: D && !k.has(e.value) && k.size === u })),
+                            options: n.map((e) => y(E({}, e), { disabled: D && !j.has(e.value) && j.size === u })),
                             placeholder: null != s ? s : h.intl.string(h.t.Otr6W1),
                             onClose: () => M(!1),
                             onOpen: () => M(!0),
@@ -237,7 +237,7 @@ function T(e) {
                                 (0, r.jsx)(
                                     O,
                                     y(E({}, e), {
-                                        isDisabled: D && !k.has(e.value) && k.size === u,
+                                        isDisabled: D && !j.has(e.value) && j.size === u,
                                         isOffset: B,
                                     }),
                                 ),

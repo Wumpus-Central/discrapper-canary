@@ -145,10 +145,10 @@ async function x(e) {
 function M() {
     L();
 }
-function k() {
+function j() {
     M();
 }
-function j() {
+function k() {
     D(v);
 }
 function U(e) {
@@ -181,8 +181,8 @@ class F extends a.Z {
     constructor(...e) {
         super(...e),
             b(this, "actions", {
-                POST_CONNECTION_OPEN: k,
-                CONNECTION_CLOSED: j,
+                POST_CONNECTION_OPEN: j,
+                CONNECTION_CLOSED: k,
                 WINDOW_FOCUS: M,
                 IDLE: M,
                 CONTENT_INVENTORY_TOGGLE_FEED_HIDDEN: M,

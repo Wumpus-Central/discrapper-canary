@@ -3,7 +3,7 @@ n.d(t, {
     UN: () => P,
     cY: () => N,
     gz: () => C,
-    q4: () => k,
+    q4: () => j,
     s6: () => R,
 }),
     n(388685);
@@ -179,8 +179,8 @@ function L(e) {
             popoutLayerContext: P,
             optionClassName: L,
             closeOnSelect: M,
-            select: k,
-            isSelected: j,
+            select: j,
+            isSelected: k,
             serialize: U,
             clear: G,
             hideIcon: B = !1,
@@ -208,12 +208,12 @@ function L(e) {
         Q = (0, h.O)(X),
         J = i.useCallback(
             (e) => {
-                if ((k(e), M)) {
+                if ((j(e), M)) {
                     var t;
                     null == (t = W.current) || t.focus();
                 }
             },
-            [k, M, W],
+            [j, M, W],
         ),
         $ = i.useCallback(
             (e) => {
@@ -221,7 +221,7 @@ function L(e) {
             },
             [G],
         ),
-        ee = t.filter((e) => j(e.value));
+        ee = t.filter((e) => k(e.value));
     return (
         i.useLayoutEffect(() => {
             if (u) {
@@ -247,7 +247,7 @@ function L(e) {
                     closeOnSelect: M,
                     maxVisibleItems: l,
                     width: "auto" === f ? void 0 : null != f ? f : K,
-                    isSelected: j,
+                    isSelected: k,
                     closePopout: n,
                     buttonHeight: null != z ? z : 0,
                     onSelect: J,
@@ -424,7 +424,7 @@ function x(e) {
                 }),
             [L, d, y, _, g, E],
         ),
-        k = _.length <= h ? f.xV : f.h2;
+        j = _.length <= h ? f.xV : f.h2;
     return (0, r.jsx)(l.bG, {
         navigator: w,
         children: (0, r.jsx)(l.SJ, {
@@ -434,7 +434,7 @@ function x(e) {
                 return (0, r.jsxs)(r.Fragment, {
                     children: [
                         (0, r.jsx)(
-                            k,
+                            j,
                             I(
                                 O(
                                     {
@@ -512,7 +512,7 @@ function M(e) {
         ),
     );
 }
-function k(e) {
+function j(e) {
     var { value: t, onChange: n } = e,
         i = T(e, ["value", "onChange"]);
     let o = A({

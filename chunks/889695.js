@@ -69,14 +69,14 @@ function S(e) {
             [o, n, R, x, A],
         );
     if (null == n || null == o || null == P) return null;
-    let k = {};
+    let j = {};
     return (P.roles.forEach((e) => {
         let t = S[e];
-        null != t && (k[t.id] = t);
+        null != t && (j[t.id] = t);
     }),
     s.e$(
         m.I0({
-            forceRoles: k,
+            forceRoles: j,
             context: o,
         }),
         s.$e(O.Plq.MANAGE_GUILD, O.Plq.MANAGE_ROLES),

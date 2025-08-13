@@ -12,8 +12,8 @@ var l = n(442837),
     f = n(209698),
     p = n(369566),
     m = n(29899),
-    b = n(151545),
-    g = n(744802),
+    g = n(151545),
+    b = n(744802),
     j = n(493043),
     y = n(864141),
     x = n(264481),
@@ -110,7 +110,7 @@ function P(e) {
                                   (0, r.jsx)(
                                       "li",
                                       {
-                                          children: (0, r.jsx)(b.Z, {
+                                          children: (0, r.jsx)(g.Z, {
                                               user: t,
                                               currentUser: n,
                                               activity: e,
@@ -158,7 +158,7 @@ function P(e) {
                               (0, r.jsx)(
                                   "li",
                                   {
-                                      children: (0, r.jsx)(g.Z, {
+                                      children: (0, r.jsx)(b.Z, {
                                           location: "UserProfileModalV2Activity",
                                           user: t,
                                           currentUser: n,

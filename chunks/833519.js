@@ -35,8 +35,8 @@ var r = n(255367),
     L = n(792517),
     x = n(351483),
     M = n(979425),
-    k = n(651183),
-    j = n(623825),
+    j = n(651183),
+    k = n(623825),
     U = n(981631),
     G = n(354459),
     B = n(65154),
@@ -77,10 +77,10 @@ let Y = 195,
 function z(e) {
     let { participant: t, selected: n, focused: i, idle: o, width: a, premiumIndicator: l } = e,
         c = (0, s.e7)([I.Z], () => I.Z.getActiveStreamForUser(t.user.id, t.stream.guildId)),
-        u = (0, j.K)(a);
+        u = (0, k.K)(a);
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            n || i ? null : (0, r.jsx)(k.Z, { participant: t }),
+            n || i ? null : (0, r.jsx)(j.Z, { participant: t }),
             i || null == c || c.state === U.jm8.ENDED || c.state === U.jm8.FAILED
                 ? null
                 : (0, r.jsx)(b.Z, {
@@ -102,8 +102,8 @@ function q(e) {
             fit: _,
             inPopout: p,
             inOverlayPopout: b = !1,
-            width: k,
-            focused: j,
+            width: j,
+            focused: k,
             wrapperClassName: V,
             paused: z = !1,
         } = e,
@@ -118,7 +118,7 @@ function q(e) {
         eo = (null == en ? void 0 : en.ownerId) === X,
         ea = eo && !ei && !p,
         es = null != en ? (0, g.Z)(en, $, $.id === X, ea) : null,
-        el = k < Y;
+        el = j < Y;
     (0, d.ZP)(() => {
         !er &&
             (null == et ? void 0 : et.isGuildStageVoice()) &&
@@ -147,7 +147,7 @@ function q(e) {
         return (0, r.jsx)(w.Z, {
             selected: n,
             stream: en,
-            width: k,
+            width: j,
         });
     if (null != ec || (null == en ? void 0 : en.state) === U.jm8.FAILED)
         return (0, r.jsx)(D.Z, {
@@ -155,13 +155,13 @@ function q(e) {
             avErrorContext: ec,
             selected: n,
             stream: t.stream,
-            width: k,
+            width: j,
         });
     if (t.type === G.fO.HIDDEN_STREAM)
         return (0, r.jsx)(L.Z, {
             selected: n,
             participant: t,
-            width: k,
+            width: j,
         });
     if (!(null != en && !n && null != q && A.Z.supports(B.AN.VIDEO)))
         return (0, r.jsxs)("div", {
@@ -182,7 +182,7 @@ function q(e) {
                                   children: (0, r.jsx)(l.Text, {
                                       variant: el ? "text-sm/semibold" : "text-md/semibold",
                                       color: "none",
-                                      children: k < W ? Z.intl.string(Z.t["I6JG4+"]) : Z.intl.string(Z.t["7Xq/nZ"]),
+                                      children: j < W ? Z.intl.string(Z.t["I6JG4+"]) : Z.intl.string(Z.t["7Xq/nZ"]),
                                   }),
                               }),
                               er
@@ -208,13 +208,13 @@ function q(e) {
         return eu && !b
             ? (0, r.jsx)(x.Z, {
                   selected: n,
-                  width: k,
+                  width: j,
               })
             : (0, r.jsxs)(r.Fragment, {
                   children: [
                       null != et
                           ? (0, r.jsx)(O.Z, {
-                                focused: j,
+                                focused: k,
                                 channelId: et.id,
                                 guildId: et.guild_id,
                                 streamerId: $.id,
@@ -238,7 +238,7 @@ function q(e) {
                           },
                           ee,
                       ),
-                      null != es ? (0, r.jsx)(v.Z, H({ size: (0, R.L)(k) }, es)) : null,
+                      null != es ? (0, r.jsx)(v.Z, H({ size: (0, R.L)(j) }, es)) : null,
                       (0, r.jsx)(P.Z, {
                           stream: J,
                           inPopout: p,

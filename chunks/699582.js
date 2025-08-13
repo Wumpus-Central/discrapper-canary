@@ -480,7 +480,7 @@ function x(e, t) {
 function M(e, t) {
     return x(e, t);
 }
-function k(e, t, n, r, i) {
+function j(e, t, n, r, i) {
     if (0 === e.length) throw ReferenceError("No locale data has been provided for this object yet.");
     if ("lookup" === n["[[localeMatcher]]"]) var o = x(e, t);
     else var o = M(e, t);
@@ -525,7 +525,7 @@ function k(e, t, n, r, i) {
             a = N + h + C;
     return (p["[[locale]]"] = a), p;
 }
-function j(e, t) {
+function k(e, t) {
     for (var n = t.length, r = new e_(), i = 0; i < n; ) {
         var o = t[i];
         void 0 !== L(e, String(o).replace(S, "")) && h.call(r, o), i++;
@@ -533,7 +533,7 @@ function j(e, t) {
     return _.call(r);
 }
 function U(e, t) {
-    return j(e, t);
+    return k(e, t);
 }
 function G(e, t, n) {
     if (void 0 !== n) {
@@ -543,7 +543,7 @@ function G(e, t, n) {
             throw RangeError('matcher should be "lookup" or "best fit"');
     }
     if (void 0 === r || "best fit" === r) var i = U(e, t);
-    else var i = j(e, t);
+    else var i = k(e, t);
     for (var o in i)
         c.call(i, o) &&
             u(i, o, {
@@ -593,7 +593,7 @@ function V(e, t, n) {
         s = B(n, "localeMatcher", "string", new e_("lookup", "best fit"), "best fit");
     a["[[localeMatcher]]"] = s;
     var c = b.NumberFormat["[[localeData]]"],
-        d = k(b.NumberFormat["[[availableLocales]]"], o, a, b.NumberFormat["[[relevantExtensionKeys]]"], c);
+        d = j(b.NumberFormat["[[availableLocales]]"], o, a, b.NumberFormat["[[relevantExtensionKeys]]"], c);
     (r["[[locale]]"] = d["[[locale]]"]),
         (r["[[numberingSystem]]"] = d["[[nu]]"]),
         (r["[[dataLocale]]"] = d["[[dataLocale]]"]);
@@ -812,7 +812,7 @@ function Q(e, t, n) {
     (v = B(n, "localeMatcher", "string", new e_("lookup", "best fit"), "best fit")), (a["[[localeMatcher]]"] = v);
     var s = b.DateTimeFormat,
         d = s["[[localeData]]"],
-        f = k(s["[[availableLocales]]"], o, a, s["[[relevantExtensionKeys]]"], d);
+        f = j(s["[[availableLocales]]"], o, a, s["[[relevantExtensionKeys]]"], d);
     (r["[[locale]]"] = f["[[locale]]"]),
         (r["[[calendar]]"] = f["[[ca]]"]),
         (r["[[numberingSystem]]"] = f["[[nu]]"]),

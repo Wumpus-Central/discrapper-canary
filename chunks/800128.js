@@ -1,8 +1,8 @@
-var a = n(543744);
+var r = n(543744);
 e.exports = function (e, t, n, i) {
     return (
-        a(e, function (e, a, r) {
-            t(i, e, n(e), r);
+        r(e, function (e, r, o) {
+            t(i, e, n(e), o);
         }),
         i
     );

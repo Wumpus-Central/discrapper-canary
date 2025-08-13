@@ -1,47 +1,47 @@
-a.d(t, { Z: () => c });
-var r = a(255367);
-a(73800);
-var i = a(120356),
-    n = a.n(i),
-    s = a(481060),
-    l = a(518950),
-    o = a(427399);
+r.d(t, { Z: () => c });
+var a = r(255367);
+r(73800);
+var i = r(120356),
+    n = r.n(i),
+    s = r(481060),
+    l = r(518950),
+    o = r(427399);
 function c(e) {
     var t;
-    let { user: a, checked: i, onChange: c, disabled: d } = e,
+    let { user: r, checked: i, onChange: c, disabled: d } = e,
         { avatarSrc: u, eventHandlers: m } = (0, l.Z)({
-            userId: null == a ? void 0 : a.id,
+            userId: null == r ? void 0 : r.id,
             size: s.EFr.SIZE_32,
         }),
-        p = null != (t = a.globalName) ? t : a.username;
-    return (0, r.jsxs)("div", {
+        f = null != (t = r.globalName) ? t : r.username;
+    return (0, a.jsxs)("div", {
         className: o.container,
         children: [
-            (0, r.jsx)("div", {
+            (0, a.jsx)("div", {
                 className: o.userAvatar,
-                children: (0, r.jsx)(
+                children: (0, a.jsx)(
                     s.qEK,
                     (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
-                            var a = null != arguments[t] ? arguments[t] : {},
-                                r = Object.keys(a);
+                            var r = null != arguments[t] ? arguments[t] : {},
+                                a = Object.keys(r);
                             "function" == typeof Object.getOwnPropertySymbols &&
-                                (r = r.concat(
-                                    Object.getOwnPropertySymbols(a).filter(function (e) {
-                                        return Object.getOwnPropertyDescriptor(a, e).enumerable;
+                                (a = a.concat(
+                                    Object.getOwnPropertySymbols(r).filter(function (e) {
+                                        return Object.getOwnPropertyDescriptor(r, e).enumerable;
                                     }),
                                 )),
-                                r.forEach(function (t) {
-                                    var r;
-                                    (r = a[t]),
+                                a.forEach(function (t) {
+                                    var a;
+                                    (a = r[t]),
                                         t in e
                                             ? Object.defineProperty(e, t, {
-                                                  value: r,
+                                                  value: a,
                                                   enumerable: !0,
                                                   configurable: !0,
                                                   writable: !0,
                                               })
-                                            : (e[t] = r);
+                                            : (e[t] = a);
                                 });
                         }
                         return e;
@@ -49,36 +49,36 @@ function c(e) {
                         {
                             className: n()({ [o.muted]: d }),
                             src: u,
-                            "aria-label": p,
+                            "aria-label": f,
                             size: s.EFr.SIZE_32,
                         },
                         m,
                     ),
                 ),
             }),
-            (0, r.jsxs)("div", {
+            (0, a.jsxs)("div", {
                 className: o.usernameContainer,
                 children: [
-                    (0, r.jsx)(s.Text, {
+                    (0, a.jsx)(s.Text, {
                         className: o.userName,
                         color: d ? "text-muted" : "text-default",
                         variant: "text-md/semibold",
-                        children: a.username,
+                        children: r.username,
                     }),
-                    (0, r.jsx)(s.Text, {
+                    (0, a.jsx)(s.Text, {
                         className: o.userName,
                         color: d ? "text-muted" : "text-secondary",
                         variant: "text-xs/normal",
-                        children: "@".concat(p),
+                        children: "@".concat(f),
                     }),
                 ],
             }),
-            (0, r.jsx)("div", {
+            (0, a.jsx)("div", {
                 className: o.checkbox,
-                children: (0, r.jsx)(s.XZJ, {
+                children: (0, a.jsx)(s.XZJ, {
                     disabled: d,
                     value: i,
-                    onChange: (e, t) => c(a, t),
+                    onChange: (e, t) => c(r, t),
                 }),
             }),
         ],

@@ -32,8 +32,8 @@ var r = n(73800),
     L = n(417363),
     x = n(358085),
     M = n(804739),
-    k = n(981631),
-    j = n(701488),
+    j = n(981631),
+    k = n(701488),
     U = n(388032);
 function G(e) {
     var t, n;
@@ -74,7 +74,7 @@ function G(e) {
         ),
         en = (0, i.e7)(
             [D.Z],
-            () => null != B && null != B.application_id && D.Z.getState(B.application_id, k.mFx.JOIN) === k.OcF.LOADING,
+            () => null != B && null != B.application_id && D.Z.getState(B.application_id, j.mFx.JOIN) === j.OcF.LOADING,
         ),
         er = (0, b.q)(q),
         ei = (0, y.A)(er),
@@ -116,9 +116,9 @@ function G(e) {
             return null != e && e.applicationId === (null == B ? void 0 : B.application_id);
         }),
         el = (0, l.O)();
-    if (X && null == Z && (null == B || !(0, h.Z)(B, k.xjy.CONTEXTLESS))) return null;
+    if (X && null == Z && (null == B || !(0, h.Z)(B, j.xjy.CONTEXTLESS))) return null;
     let ec = !x.isPlatformEmbedded;
-    if (!((0, h.Z)(B, k.xjy.JOIN) || X) || null == q) return null;
+    if (!((0, h.Z)(B, j.xjy.JOIN) || X) || null == q) return null;
     let eu = !J || (X && !es),
         ed = eu && (ec || ee) && !K && !et;
     eu
@@ -127,7 +127,7 @@ function G(e) {
     let ef = null != (n = null == Z ? void 0 : Z.launchId) ? n : null == B ? void 0 : B.session_id,
         e_ = async (e, t) => {
             if (null == ef || null == q) return;
-            let n = (0, h.Z)(t, k.xjy.EMBEDDED),
+            let n = (0, h.Z)(t, j.xjy.EMBEDDED),
                 r = R.Z.getVoiceChannelId(),
                 i = v.Z.getChannel(r);
             if (
@@ -137,7 +137,7 @@ function G(e) {
                     applicationId: q,
                     channelId: r,
                     messageId: null,
-                    intent: j.Ws.PLAY,
+                    intent: k.Ws.PLAY,
                     embedded: n,
                     locationObject: el.location,
                     analyticsLocations: W,
@@ -146,7 +146,7 @@ function G(e) {
             ) {
                 var o;
                 (0, g.Z)({
-                    type: k.q5t.JOIN,
+                    type: j.q5t.JOIN,
                     userId: e.id,
                     guildId: null == i ? void 0 : i.guild_id,
                     channelId: r,
@@ -165,10 +165,10 @@ function G(e) {
                 z(!0),
                     null != B &&
                         (e = await o.Z.sendActivityInviteUser({
-                            type: k.mFx.JOIN_REQUEST,
+                            type: j.mFx.JOIN_REQUEST,
                             userId: F.id,
                             activity: B,
-                            location: k.Sbl.USER_ACTIVITY_ACTIONS,
+                            location: j.Sbl.USER_ACTIVITY_ACTIONS,
                         })),
                     null != e && s.default.selectPrivateChannel(e.id);
             }

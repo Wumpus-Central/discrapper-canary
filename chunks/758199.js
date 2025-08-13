@@ -115,8 +115,8 @@ function N(e) {
         onClickBanner: x,
     } = e;
     D = S(D);
-    let { primaryColor: M, secondaryColor: k } = (0, f.Z)(null != C ? C : y),
-        j = "linear-gradient(45deg, ".concat(M, ", ").concat(k, ")"),
+    let { primaryColor: M, secondaryColor: j } = (0, f.Z)(null != C ? C : y),
+        k = "linear-gradient(45deg, ".concat(M, ", ").concat(j, ")"),
         U = (0, s.e7)([d.Z], () => d.Z.useReducedMotion),
         G = i.useRef(!1),
         B = (0, u.O)(
@@ -215,7 +215,7 @@ function N(e) {
                     ],
                 }),
             (0, r.jsxs)("div", {
-                style: { background: j },
+                style: { background: k },
                 children: [
                     (0, r.jsxs)("div", {
                         className: b.contentContainer,

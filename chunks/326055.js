@@ -1,7 +1,7 @@
 n.d(t, { default: () => v }), n(388685), n(953529);
 var r = n(255367),
-    a = n(73800),
-    o = n(494497),
+    o = n(73800),
+    a = n(494497),
     s = n(442837),
     l = n(304789),
     i = n(481060),
@@ -10,12 +10,12 @@ var r = n(255367),
     u = n(639777),
     p = n(262212),
     m = n(795338),
-    g = n(845602),
-    f = n(603213),
-    b = n(606876),
-    _ = n(535396),
-    h = n(93841),
-    x = n(388032),
+    _ = n(845602),
+    b = n(603213),
+    g = n(606876),
+    f = n(535396),
+    x = n(93841),
+    h = n(388032),
     j = n(804258);
 function v(e) {
     var t,
@@ -25,42 +25,42 @@ function v(e) {
             if (null == e) return {};
             var n,
                 r,
-                a = (function (e, t) {
+                o = (function (e, t) {
                     if (null == e) return {};
                     var n,
                         r,
-                        a = {},
-                        o = Object.keys(e);
-                    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (a[n] = e[n]);
-                    return a;
+                        o = {},
+                        a = Object.keys(e);
+                    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (o[n] = e[n]);
+                    return o;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var o = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < o.length; r++)
-                    (n = o[r]),
-                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (a[n] = e[n]);
+                var a = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < a.length; r++)
+                    (n = a[r]),
+                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (o[n] = e[n]);
             }
-            return a;
+            return o;
         })(e, ["guildId", "powerup"]);
-    let [y, O] = a.useState(void 0),
-        P = a.useMemo(() => {
+    let [y, O] = o.useState(void 0),
+        w = o.useMemo(() => {
             switch (k.skuId) {
-                case o.IN:
-                    return (0, r.jsx)(g.E, { guildId: v });
-                case o.If:
+                case a.IN:
+                    return (0, r.jsx)(_.E, { guildId: v });
+                case a.If:
+                    return (0, r.jsx)(_.Z, {});
+                case a.A$:
                     return (0, r.jsx)(g.Z, {});
-                case o.A$:
-                    return (0, r.jsx)(b.Z, {});
                 default:
                     return;
             }
         }, [k, v]);
     (0, d.$)(v, k, d.w.DETAIL);
     let S = (0, u.Z)(v),
-        w = _.Rx[k.skuId],
-        I = null != w ? _.Cp[w] : null,
-        N = (0, s.e7)([c.Z], () => c.Z.getStateForGuild(v)),
-        E = null != I ? (null == N ? void 0 : N.allPowerups[I]) : null;
+        P = f.Rx[k.skuId],
+        I = null != P ? f.Cp[P] : null,
+        E = (0, s.e7)([c.Z], () => c.Z.getStateForGuild(v)),
+        N = null != I ? (null == E ? void 0 : E.allPowerups[I]) : null;
     return (0, r.jsxs)(
         i.Y0X,
         ((t = (function (e) {
@@ -121,15 +121,15 @@ function v(e) {
                                                 variant: "text-sm/normal",
                                                 children: k.description,
                                             }),
-                                            null != E &&
+                                            null != N &&
                                                 (0, r.jsx)(i.Text, {
                                                     className: j.description,
                                                     variant: "text-sm/normal",
-                                                    children: x.intl.formatToPlainString(h.default.NAFGkJ, {
-                                                        level: E.title,
+                                                    children: h.intl.formatToPlainString(x.default.NAFGkJ, {
+                                                        level: N.title,
                                                     }),
                                                 }),
-                                            (0, r.jsx)(f.q, { powerup: k }),
+                                            (0, r.jsx)(b.q, { powerup: k }),
                                             null != y &&
                                                 (0, r.jsx)(i.Text, {
                                                     className: j.error,
@@ -148,10 +148,10 @@ function v(e) {
                                     }),
                                 ],
                             }),
-                            null != P &&
+                            null != w &&
                                 (0, r.jsx)("div", {
                                     className: j.exampleImage,
-                                    children: P,
+                                    children: w,
                                 }),
                         ],
                     }),

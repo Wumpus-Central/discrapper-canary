@@ -204,7 +204,7 @@ function N(e) {
         w = (0, u.dQu)(c.Z.colors.TEXT_DANGER).hex();
     null == g && (g = o === p.WX.EXTERNAL ? h.intl.string(h.t.IyZxjI) : h.intl.string(h.t["X2K3//"]));
     let D = (0, d.Z)(C, N),
-        [{ startDateTimeString: L, endDateTimeString: x, currentOrPastEvent: M, upcomingEvent: k, diffMinutes: j }, U] =
+        [{ startDateTimeString: L, endDateTimeString: x, currentOrPastEvent: M, upcomingEvent: j, diffMinutes: k }, U] =
             i.useState((0, f.ub)(t, _));
     i.useEffect(() => {
         U((0, f.ub)(t, _));
@@ -230,10 +230,10 @@ function N(e) {
                         ? 4
                         : M
                           ? 2
-                          : +!!k,
-            [n, null == D ? void 0 : D.is_canceled, M, k],
+                          : +!!j,
+            [n, null == D ? void 0 : D.is_canceled, M, j],
         ),
-        Z = I(B, G, g, x, j),
+        Z = I(B, G, g, x, k),
         {
             Icon: F,
             iconColor: V,

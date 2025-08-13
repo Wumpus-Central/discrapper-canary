@@ -11,8 +11,8 @@ var r = n(255367),
     f = n(287954),
     p = n(660579),
     m = n(652853),
-    b = n(64621),
-    g = n(382405),
+    g = n(64621),
+    b = n(382405),
     j = n(386019),
     y = n(228168),
     x = n(861242);
@@ -31,7 +31,7 @@ function O(e) {
     return null != P && (0, s.Rh)(n)
         ? (0, r.jsx)(c.Gt, {
               value: I,
-              children: (0, r.jsx)(b.Z, {
+              children: (0, r.jsx)(g.Z, {
                   targetElementRef: _,
                   sourceType: y.n_.ACTIVITY,
                   user: t,
@@ -62,7 +62,7 @@ function O(e) {
                                             onClose: h,
                                             children: e,
                                         }),
-                              children: (0, r.jsx)(g.Z, {
+                              children: (0, r.jsx)(b.Z, {
                                   entry: n,
                                   user: t,
                                   onClose: h,

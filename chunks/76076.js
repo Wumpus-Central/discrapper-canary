@@ -11,8 +11,8 @@ var r = n(255367),
     f = n(228168),
     p = n(388032),
     m = n(918857),
-    b = n(276441);
-let g = {
+    g = n(276441);
+let b = {
         [f.qb.WIDGET_ADDED]: {
             message: p.intl.string(p.t.fFP1U1),
             icon: (0, r.jsx)(s.dz2, {
@@ -29,11 +29,21 @@ let g = {
             }),
             toast_id: "user_profile_widget_removed",
         },
+        [f.qb.WIDGET_SAVE_FAILURE]: {
+            message: p.intl.string(p.t["84MExs"]),
+            icon: (0, r.jsx)(s.Uz9, {
+                size: "sm",
+                color: s.TVs.colors.STATUS_DANGER.css,
+            }),
+            toast_id: "user_profile_widget_save_failure",
+            type: s.ToastType.FAILURE,
+        },
     },
     j = (e) => {
-        let { message: t, icon: n } = e;
+        let { message: t, icon: n, type: l } = e;
         return (0, r.jsxs)("div", {
-            className: o()(b.toast, m.toast),
+            className: o()(g.toast, m.toast),
+            "data-type": l,
             children: [
                 (0, r.jsx)("div", {
                     className: m.toastIcon,
@@ -51,10 +61,10 @@ let g = {
         let { className: t, onAutoHide: n } = e,
             i = (0, u.be)(),
             f = (0, c.e7)([d.Z], () => d.Z.useReducedMotion),
-            [p, b] = l.useState(!1),
+            [p, g] = l.useState(!1),
             [y, x] = l.useState(null);
         l.useEffect(() => {
-            null !== i ? (b(!0), x(g[i]), s.uvj.announce(g[i].message)) : b(!1);
+            null !== i ? (g(!0), x(b[i]), s.uvj.announce(b[i].message)) : g(!1);
         }, [i]);
         let O = (0, s.Yzy)(
             p,

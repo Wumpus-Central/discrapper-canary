@@ -37,7 +37,7 @@ var r = n(255367),
     L = n(70722),
     x = n(388032),
     M = n(921665);
-function k(e, t, n) {
+function j(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -50,7 +50,7 @@ function k(e, t, n) {
         e
     );
 }
-function j(e) {
+function k(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -61,7 +61,7 @@ function j(e) {
                 }),
             )),
             r.forEach(function (t) {
-                k(e, t, n[t]);
+                j(e, t, n[t]);
             });
     }
     return e;
@@ -148,7 +148,7 @@ function H(e) {
     let {
             collapsed: o,
             user: _,
-            channel: k,
+            channel: j,
             mute: U,
             localMute: Z,
             localVideoDisabled: F,
@@ -208,16 +208,16 @@ function H(e) {
         eR = (e) => {
             e && (eN.cancel(), ev(!1));
         },
-        eP = () => ee && (0, y.p9)(k, w.Z, C.Z, R.Z, g.Z)[0],
+        eP = () => ee && (0, y.p9)(j, w.Z, C.Z, R.Z, g.Z)[0],
         ew = () => {
             if (!eP()) return;
             let e = {
                 streamType: L.lo.GUILD,
                 ownerId: _.id,
-                channelId: k.id,
-                guildId: k.guild_id,
+                channelId: j.id,
+                guildId: j.guild_id,
             };
-            N.default.getId() !== _.id && d.default.selectVoiceChannel(k.id),
+            N.default.getId() !== _.id && d.default.selectVoiceChannel(j.id),
                 et ? ((0, O.Z)(e), c.Z.selectParticipant(e.channelId, (0, b.V9)(e))) : (0, f.iV)(e),
                 null == eo || eo(_.id);
         },
@@ -233,12 +233,12 @@ function H(e) {
                 return (t) =>
                     (0, r.jsx)(
                         e,
-                        G(j({}, t), {
+                        G(k({}, t), {
                             user: _,
-                            guildId: k.guild_id,
-                            channel: k,
+                            guildId: j.guild_id,
+                            channel: j,
                             showMediaItems: !0,
-                            showStageChannelItems: k.isGuildStageVoice(),
+                            showStageChannelItems: j.isGuildStageVoice(),
                             onInteraction: (0, m.u)("GuildChannelUserContextMenu", h.Z.VOICE_USER, {
                                 targetUserId: _.id,
                             }),
@@ -249,7 +249,7 @@ function H(e) {
         eL = () =>
             (0, r.jsx)(I.Z, {
                 previewIsOpen: es,
-                channel: k,
+                channel: j,
                 hangStatusActivity: eh,
                 userId: _.id,
                 targetElementRef: eE,
@@ -257,19 +257,19 @@ function H(e) {
         ex = () =>
             (0, r.jsx)(T.Z, {
                 userId: _.id,
-                channel: k,
+                channel: j,
             }),
         eM = () =>
-            (0, p.dl)() && (0, p.zd)(k.id)
+            (0, p.dl)() && (0, p.zd)(j.id)
                 ? null
                 : (0, r.jsx)(v.Z, {
                       user: _,
-                      channel: k,
+                      channel: j,
                       onWatch: ew,
                       previewIsOpen: es,
                       location: ef,
                   }),
-        ek = (e) => {
+        ej = (e) => {
             let t = D.al.has(null != el ? el : ""),
                 n = {
                     user: _,
@@ -299,10 +299,10 @@ function H(e) {
                     onClick: t ? void 0 : eT,
                     onDoubleClick: ew,
                     onContextMenu: eD,
-                    guildId: k.guild_id,
+                    guildId: j.guild_id,
                     isSelf: e_,
                     application: ep,
-                    channelId: k.id,
+                    channelId: j.id,
                     hangStatusActivity: eh,
                     showHangStatus: eg,
                 };
@@ -313,7 +313,7 @@ function H(e) {
                     children: (e) => {
                         var { onClick: t, onContextMenu: i } = e,
                             o = B(e, ["onClick", "onContextMenu"]);
-                        return (0, r.jsx)(A.ZP, j({ ref: eE }, n, o));
+                        return (0, r.jsx)(A.ZP, k({ ref: eE }, n, o));
                     },
                 });
             }
@@ -330,7 +330,7 @@ function H(e) {
                     children: () =>
                         (0, r.jsx)(
                             A.ZP,
-                            G(j({}, n), {
+                            G(k({}, n), {
                                 ref: eE,
                                 onMouseDown: e.onMouseDown,
                                 onKeyDown: e.onKeyDown,
@@ -341,9 +341,9 @@ function H(e) {
                 })
             );
         },
-        ej = (0, r.jsx)("div", {
+        ek = (0, r.jsx)("div", {
             className: M.draggable,
-            "data-dnd-name": k.name,
+            "data-dnd-name": j.name,
             onMouseEnter: eu ? void 0 : eA,
             onMouseLeave: eu ? void 0 : eS,
             children: (0, r.jsx)(S.Z, {
@@ -351,14 +351,14 @@ function H(e) {
                     (null == _ ? void 0 : _.id) === (null == (t = P.default.getCurrentUser()) ? void 0 : t.id) && eb,
                 targetElementRef: eE,
                 user: _,
-                guildId: k.guild_id,
-                channelId: k.id,
+                guildId: j.guild_id,
+                channelId: j.id,
                 newAnalyticsLocations: [h.Z.VOICE_USER],
                 shouldShow: eb,
                 onRequestClose: () => ey(!1),
-                children: (e) => ek(e),
+                children: (e) => ej(e),
             }),
         });
-    return $ ? J(ej) : ej;
+    return $ ? J(ek) : ek;
 }
 let Y = (0, _.$)(H);
