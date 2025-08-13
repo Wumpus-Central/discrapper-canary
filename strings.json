@@ -663,6 +663,7 @@
   "GIWFlJ": "Unknown game",
   "bWSQwc": "Want to play",
   "fFP1U1": "Widget added",
+  "W8K2GB": "Add up to {maxGames, plural, one { game} other { games} }. This widget won't show up on your profile until you add at least 1 game.",
   "/lQiX1": "Don't forget to save your changes!",
   "zzsK7u": "Widget removed",
   "cuSp8f": "{count, plural, =1 {year} other { years} }",
