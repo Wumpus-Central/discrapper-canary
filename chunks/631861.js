@@ -16,10 +16,10 @@ let v = (0, a.Z)(
     (0, c.Z)(
         function (t) {
             let { game: e, guildId: n, context: c, onSelect: a } = t,
-                l = (0, f.Z)(),
+                l = (0, f.Z)(e.id),
                 d = (0, b.Z)(e),
                 v = (0, s.Z)(e, n, c),
-                j = (0, u.Z)({
+                Z = (0, u.Z)({
                     id: e.id,
                     label: p.intl.string(p.t["FfCL+/"]),
                 });
@@ -32,7 +32,7 @@ let v = (0, a.Z)(
                     (0, r.jsxs)(i.kSQ, {
                         children: [l, d, v],
                     }),
-                    (0, r.jsx)(i.kSQ, { children: j }),
+                    (0, r.jsx)(i.kSQ, { children: Z }),
                 ],
             });
         },

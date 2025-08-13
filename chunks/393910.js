@@ -1,16 +1,19 @@
-n.d(e, { Z: () => a }), n(388685);
-var r = n(255367),
-    i = n(73800),
+n.d(e, { Z: () => u });
+var r = n(255367);
+n(73800);
+var i = n(442837),
     o = n(481060),
-    c = n(388032);
-function a() {
-    let [t, e] = i.useState(!1);
+    c = n(406763),
+    a = n(893642),
+    l = n(388032);
+function u(t) {
+    let e = (0, i.e7)([a.Z], () => a.Z.getMute(t));
     return (0, r.jsx)(o.S89, {
         id: "mute-game",
-        label: c.intl.string(c.t["6EwEws"]),
-        checked: t,
+        label: l.intl.string(l.t["6EwEws"]),
+        checked: e,
         action: () => {
-            e(!t);
+            (0, c.X)(t, !e);
         },
     });
 }

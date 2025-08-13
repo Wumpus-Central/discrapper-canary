@@ -1,23 +1,23 @@
 n.d(t, {
-    CM: () => b,
-    UT: () => _,
-    _Z: () => v,
+    CM: () => g,
+    UT: () => b,
+    _Z: () => C,
     kj: () => f,
     oC: () => p,
-    s3: () => g,
-    uA: () => A,
-    xh: () => C,
+    s3: () => v,
+    uA: () => O,
+    xh: () => _,
 }),
     n(388685);
 var i = n(524437),
-    a = n(675478),
-    r = n(592125),
+    r = n(675478),
+    a = n(592125),
     o = n(496675),
     l = n(709054),
-    u = n(853856),
-    c = n(231338);
-function s() {
-    let e = u.Z.getFavoriteChannels(),
+    c = n(853856),
+    s = n(231338);
+function u() {
+    let e = c.Z.getFavoriteChannels(),
         t = 1;
     for (let n in e) t = Math.max(t, e[n].order);
     return t + 1;
@@ -30,33 +30,33 @@ function d(e) {
             continue;
         }
         if (n.type === i.Dd.CATEGORY) continue;
-        let a = r.Z.getChannel(t);
-        if (null == a || (!a.isPrivate() && !o.Z.can(c.Pl.VIEW_CHANNEL, a))) {
+        let r = a.Z.getChannel(t);
+        if (null == r || (!r.isPrivate() && !o.Z.can(s.Pl.VIEW_CHANNEL, r))) {
             delete e[t];
             continue;
         }
     }
 }
 function f(e, t) {
-    u.Z.isFavorite(e) ||
-        a.hW.updateAsync(
+    c.Z.isFavorite(e) ||
+        r.hW.updateAsync(
             "favorites",
             (n) => {
                 (n.favoriteChannels[e] = i.aV.create({
                     nickname: "",
                     type: i.Dd.REFERENCE_ORIGINAL,
-                    position: s(),
+                    position: u(),
                     parentId: null != t ? t : "0",
                 })),
                     d(n.favoriteChannels);
             },
-            a.fy.FREQUENT_USER_ACTION,
+            r.fy.FREQUENT_USER_ACTION,
         );
 }
 function p(e) {
-    let t = u.Z.getFavorite(e);
+    let t = c.Z.getFavorite(e);
     null != t &&
-        a.hW.updateAsync(
+        r.hW.updateAsync(
             "favorites",
             (n) => {
                 if ((delete n.favoriteChannels[e], t.type === i.Dd.CATEGORY))
@@ -64,39 +64,39 @@ function p(e) {
                         n.favoriteChannels[t].parentId === e && (n.favoriteChannels[t].parentId = "0");
                 d(n.favoriteChannels);
             },
-            a.fy.INFREQUENT_USER_ACTION,
+            r.fy.INFREQUENT_USER_ACTION,
         );
 }
-function _(e, t) {
-    u.Z.isFavorite(e) &&
-        a.hW.updateAsync(
+function b(e, t) {
+    c.Z.isFavorite(e) &&
+        r.hW.updateAsync(
             "favorites",
             (n) => {
                 n.favoriteChannels[e].nickname = null != t ? t : "";
             },
-            a.fy.INFREQUENT_USER_ACTION,
+            r.fy.INFREQUENT_USER_ACTION,
         );
 }
-function b(e) {
+function g(e) {
     let t = l.default.fromTimestamp(Date.now());
-    a.hW.updateAsync(
+    r.hW.updateAsync(
         "favorites",
         (n) => {
             n.favoriteChannels[t] = i.aV.create({
                 nickname: e,
                 type: i.Dd.CATEGORY,
-                position: s(),
+                position: u(),
                 parentId: "0",
             });
         },
-        a.fy.FREQUENT_USER_ACTION,
+        r.fy.FREQUENT_USER_ACTION,
     );
 }
-function C(e) {
+function _(e) {
     p(e);
 }
-function g(e) {
-    a.hW.updateAsync(
+function v(e) {
+    r.hW.updateAsync(
         "favorites",
         (t) => {
             for (let i of e)
@@ -105,24 +105,24 @@ function g(e) {
                     t.favoriteChannels[i.id].parentId = null != (n = i.parent_id) ? n : "0";
                 }
         },
-        a.fy.FREQUENT_USER_ACTION,
+        r.fy.FREQUENT_USER_ACTION,
     );
 }
-function A(e, t) {
-    a.hW.updateAsync(
+function O(e, t) {
+    r.hW.updateAsync(
         "favorites",
         (n) => {
             n.favoriteChannels[e].parentId = null != t ? t : "0";
         },
-        a.fy.FREQUENT_USER_ACTION,
+        r.fy.FREQUENT_USER_ACTION,
     );
 }
-function v() {
-    a.hW.updateAsync(
+function C() {
+    r.hW.updateAsync(
         "favorites",
         (e) => {
             e.muted = !e.muted;
         },
-        a.fy.INFREQUENT_USER_ACTION,
+        r.fy.INFREQUENT_USER_ACTION,
     );
 }

@@ -169,9 +169,20 @@ function _(e, t, n) {
             flag: s.Plq.USE_EXTERNAL_STICKERS,
         },
         [s.Plq.MENTION_EVERYONE.toString()]: {
-            title: c === s.d4z.GUILD_STAGE_VOICE ? l.intl.string(l.t.VDUAHB) : l.intl.string(l.t.Y78KGB),
+            title:
+                c === s.d4z.GUILD_STAGE_VOICE
+                    ? l.intl.string(l.t.VDUAHB)
+                    : (null == n ? void 0 : n.inGameMentionsExperiment)
+                      ? l.intl.string(l.t.lEO7Wl)
+                      : l.intl.string(l.t.Y78KGB),
             description:
-                c === s.d4z.GUILD_CATEGORY ? l.t["HOhg/P"] : c === s.d4z.GUILD_STAGE_VOICE ? l.t.rZn1oK : l.t["6IUSdn"],
+                c === s.d4z.GUILD_CATEGORY
+                    ? l.t["HOhg/P"]
+                    : c === s.d4z.GUILD_STAGE_VOICE
+                      ? l.t.rZn1oK
+                      : (null == n ? void 0 : n.inGameMentionsExperiment)
+                        ? l.t.wdHpIC
+                        : l.t["6IUSdn"],
             flag: s.Plq.MENTION_EVERYONE,
         },
         [s.Plq.MANAGE_MESSAGES.toString()]: {

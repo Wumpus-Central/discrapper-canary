@@ -97,25 +97,25 @@ function p(e) {
     return (0, o.bk)(s.X4, e);
 }
 function h(e, t) {
-    var n, o, s, l, c;
+    var n, o, s, l, c, u;
     return p({
         id: t.id,
         name: t.name,
         guildId: e,
         permissions: r.vB(t.permissions),
         mentionable: t.mentionable,
-        position: t.position,
+        position: null != (n = t.originalPosition) ? n : t.position,
         color: t.color,
         colorString: null != t.color && 0 !== t.color ? (0, i.Rf)(t.color) : null,
-        colors: null != (n = t.colors) ? n : null,
+        colors: null != (o = t.colors) ? o : null,
         colorStrings: null != t.colors ? (0, a.DX)(t.colors) : null,
         hoist: t.hoist,
-        managed: null != (o = t.managed) && o,
-        tags: null != (s = t.tags) ? s : {},
+        managed: null != (s = t.managed) && s,
+        tags: null != (l = t.tags) ? l : {},
         icon: t.icon,
         unicodeEmoji: t.unicodeEmoji,
-        flags: null != (l = t.flags) ? l : 0,
-        description: null != (c = t.description) ? c : null,
+        flags: null != (c = t.flags) ? c : 0,
+        description: null != (u = t.description) ? u : null,
         version: t.version,
     });
 }

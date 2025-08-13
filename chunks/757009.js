@@ -1,11 +1,11 @@
-var r = n(785902),
-    i = n(800128),
-    o = n(256098),
-    a = n(290677);
-e.exports = function (e, t) {
-    return function (n, c) {
-        var u = a(n) ? r : i,
-            s = t ? t() : {};
-        return u(n, e, o(c, 2), s);
+var o = n(785902),
+    c = n(800128),
+    t = n(256098),
+    s = n(290677);
+i.exports = function (i, a) {
+    return function (n, e) {
+        var l = s(n) ? o : c,
+            r = a ? a() : {};
+        return l(n, i, t(e, 2), r);
     };
 };

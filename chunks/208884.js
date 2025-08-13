@@ -1,15 +1,15 @@
 E.d(i, {
     FX: () => M,
-    Ny: () => _,
+    Ny: () => o,
     WV: () => N,
-    WW: () => A,
+    WW: () => s,
     _u: () => O,
-    aW: () => T,
+    aW: () => g,
     kv: () => I,
-    s4: () => s,
+    s4: () => A,
     uu: () => R,
-    vq: () => o,
-    xU: () => g,
+    vq: () => _,
+    xU: () => T,
     zO: () => P,
 }),
     E(539854),
@@ -31,7 +31,7 @@ function r(t) {
 function e(t, i) {
     return t.map((t) => i[t.toString()]);
 }
-function A(t) {
+function s(t) {
     var i, E;
     return {
         [l.Pl.VIEW_CHANNEL.toString()]: {
@@ -145,8 +145,8 @@ function A(t) {
             flag: l.Pl.USE_EXTERNAL_STICKERS,
         },
         [l.Pl.MENTION_EVERYONE.toString()]: {
-            title: S.intl.string(S.t.Y78KGB),
-            description: S.t.ryj6Nz,
+            title: t.inGameMentionsExperiment ? S.intl.string(S.t.lEO7Wl) : S.intl.string(S.t.Y78KGB),
+            description: t.inGameMentionsExperiment ? S.intl.string(S.t.wdHpIC) : S.intl.string(S.t.ryj6Nz),
             flag: l.Pl.MENTION_EVERYONE,
         },
         [l.Pl.MANAGE_MESSAGES.toString()]: {
@@ -292,9 +292,9 @@ function A(t) {
         },
     };
 }
-function s(t) {
+function A(t) {
     let i,
-        E = A(t),
+        E = s(t),
         n = [
             (function (t, i) {
                 let E = [
@@ -424,13 +424,13 @@ function P(t, i) {
         ),
     };
 }
-function _(t, i) {
+function o(t, i) {
     return {
         title: i,
         permissions: e([l.Pl.CREATE_INSTANT_INVITE], t),
     };
 }
-function o(t, i, E) {
+function _(t, i, E) {
     let n = [
         l.Pl.SEND_MESSAGES,
         l.Pl.SEND_MESSAGES_IN_THREADS,
@@ -484,7 +484,7 @@ function N(t, i) {
         ),
     };
 }
-function T(t, i, E) {
+function g(t, i, E) {
     let n = [
         l.Pl.SEND_MESSAGES,
         l.Pl.EMBED_LINKS,
@@ -509,7 +509,7 @@ function T(t, i, E) {
         }
     );
 }
-function g(t, i) {
+function T(t, i) {
     let E = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : { showActivities: !0 };
     return {
         title: i,

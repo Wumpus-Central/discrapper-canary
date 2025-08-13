@@ -12,8 +12,6 @@ e.exports = {
     statusPickerModalMenu: "statusPickerModalMenu_ce8328",
     statusItem: "statusItem_ce8328",
     expiringStatusMenuItem: "expiringStatusMenuItem_ce8328",
-    durationButtons: "durationButtons_ce8328",
-    durationButton: "durationButton_ce8328",
     status: "status_ce8328",
     icon: "icon_ce8328",
     description: "description_ce8328",

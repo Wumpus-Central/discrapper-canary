@@ -1,25 +1,26 @@
-n.d(t, { Z: () => C });
+n.d(t, { Z: () => R });
 var r = n(255367),
     i = n(73800),
     o = n(442837),
     a = n(25209),
     s = n(39154),
-    l = n(35125),
-    c = n(905405),
-    u = n(628238),
-    d = n(499401),
-    f = n(693912),
-    _ = n(869765),
-    p = n(699516),
-    h = n(352736),
-    m = n(937889),
-    g = n(739566),
-    E = n(267128),
-    b = n(507418),
-    y = n(348238),
-    O = n(981631),
-    v = n(388032);
-function I(e, t, n) {
+    l = n(627050),
+    c = n(35125),
+    u = n(905405),
+    d = n(628238),
+    f = n(499401),
+    _ = n(693912),
+    p = n(869765),
+    h = n(699516),
+    m = n(352736),
+    g = n(937889),
+    E = n(739566),
+    b = n(267128),
+    y = n(507418),
+    O = n(348238),
+    v = n(981631),
+    I = n(388032);
+function T(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -32,7 +33,7 @@ function I(e, t, n) {
         e
     );
 }
-function T(e) {
+function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -43,12 +44,12 @@ function T(e) {
                 }),
             )),
             r.forEach(function (t) {
-                I(e, t, n[t]);
+                T(e, t, n[t]);
             });
     }
     return e;
 }
-function S(e, t) {
+function A(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -60,138 +61,141 @@ function S(e, t) {
     }
     return n;
 }
-function A(e, t) {
+function N(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : S(Object(t)).forEach(function (n) {
+            : A(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let N = i.memo(function (e) {
+let C = i.memo(function (e) {
     var t;
     let {
             baseMessage: n,
-            referencedMessage: I,
-            channel: S,
-            compact: N = !1,
-            referencedUsernameProfile: C,
-            referencedAvatarProfile: R,
-            setPopout: P,
-            isReplySpineClickable: w,
-            showReplySpine: D,
+            referencedMessage: T,
+            channel: A,
+            compact: C = !1,
+            referencedUsernameProfile: R,
+            referencedAvatarProfile: P,
+            setPopout: w,
+            isReplySpineClickable: D,
+            showReplySpine: L,
         } = e,
-        L = I.state === _.Y.LOADED ? I.message : void 0,
-        x = (0, g.Uj)(L),
-        M = (0, c.p)(),
-        k = (0, u.A)((null != (t = n.editedTimestamp) ? t : n.timestamp).valueOf()),
-        j = i.useMemo(() => {
-            if (null == L) return null;
-            let e = (0, s.Z)(L);
-            if (e.type === O.uaV.USER_JOIN)
+        x = T.state === p.Y.LOADED ? T.message : void 0,
+        M = (0, E.Uj)(x),
+        k = (0, u.p)(),
+        j = l.d.useExperiment({ location: "repliedMessage" }).enabled,
+        U = (0, d.A)((null != (t = n.editedTimestamp) ? t : n.timestamp).valueOf()),
+        G = i.useMemo(() => {
+            if (null == x) return null;
+            let e = (0, s.Z)(x);
+            if (e.type === v.uaV.USER_JOIN)
                 return (0, a.Rp)(
-                    v.intl.formatToParts(h.Z.getSystemMessageUserJoin(e.id), {
-                        username: null != x ? x.nick : e.author.username,
+                    I.intl.formatToParts(m.Z.getSystemMessageUserJoin(e.id), {
+                        username: null != M ? M.nick : e.author.username,
                         usernameHook: (e) => e,
                     }),
                 );
-            if (e.type === O.uaV.ROLE_SUBSCRIPTION_PURCHASE)
+            if (e.type === v.uaV.ROLE_SUBSCRIPTION_PURCHASE)
                 return (0, a.Rp)(
-                    (0, l.PA)({
-                        username: null != x ? x.nick : e.author.username,
-                        guildId: null == S ? void 0 : S.guild_id,
+                    (0, c.PA)({
+                        username: null != M ? M.nick : e.author.username,
+                        guildId: null == A ? void 0 : A.guild_id,
                         roleSubscriptionData: e.roleSubscriptionData,
                     }),
                 );
-            if (e.type === O.uaV.GUILD_APPLICATION_PREMIUM_SUBSCRIPTION)
+            if (e.type === v.uaV.GUILD_APPLICATION_PREMIUM_SUBSCRIPTION)
                 return (0, a.Rp)(
-                    (0, d.Y)({
+                    (0, f.Y)({
                         application: null == e ? void 0 : e.application,
-                        username: null == x ? void 0 : x.nick,
+                        username: null == M ? void 0 : M.nick,
                     }),
                 );
-            if (e.type === O.uaV.PRIVATE_CHANNEL_INTEGRATION_ADDED)
+            if (e.type === v.uaV.PRIVATE_CHANNEL_INTEGRATION_ADDED)
                 return (0, a.Rp)(
-                    (0, f.B2)({
+                    (0, _.B2)({
                         application: null == e ? void 0 : e.application,
-                        username: null == x ? void 0 : x.nick,
+                        username: null == M ? void 0 : M.nick,
                     }),
                 );
-            if (e.type === O.uaV.PRIVATE_CHANNEL_INTEGRATION_REMOVED)
+            if (e.type === v.uaV.PRIVATE_CHANNEL_INTEGRATION_REMOVED)
                 return (0, a.Rp)(
-                    (0, f.hj)({
+                    (0, _.hj)({
                         application: null == e ? void 0 : e.application,
-                        username: null == x ? void 0 : x.nick,
+                        username: null == M ? void 0 : M.nick,
                     }),
                 );
-            else if (e.type === O.uaV.GUILD_DEADCHAT_REVIVE_PROMPT)
-                return "" !== e.content ? e.content : v.intl.string(v.t.wnn1DQ);
+            else if (e.type === v.uaV.GUILD_DEADCHAT_REVIVE_PROMPT)
+                return "" !== e.content ? e.content : I.intl.string(I.t.wnn1DQ);
             if (null != e.content && "" !== e.content) {
                 let t = {
                         formatInline: !0,
                         allowLinks: !0,
-                        shouldFilterKeywords: M,
+                        shouldFilterKeywords: k,
                     },
-                    n = e.isFirstMessageInForumPost(S)
-                        ? A(T({}, t), {
+                    n = e.isFirstMessageInForumPost(A)
+                        ? N(S({}, t), {
                               noStyleAndInteraction: !0,
                               allowHeading: !0,
                               allowList: !0,
+                              allowGameMentions: j,
                           })
-                        : A(T({}, t), {
+                        : N(S({}, t), {
                               formatInline: !0,
-                              allowHeading: k,
-                              allowList: k,
+                              allowHeading: U,
+                              allowList: U,
+                              allowGameMentions: j,
                           });
-                return (0, m.ZP)(e, n).content;
+                return (0, g.ZP)(e, n).content;
             }
             return null;
-        }, [L, x, S, k, M]),
-        { isReplyAuthorBlocked: U, isReplyAuthorIgnored: G } = (0, o.cj)(
-            [p.Z],
+        }, [x, M, A, U, k, j]),
+        { isReplyAuthorBlocked: B, isReplyAuthorIgnored: Z } = (0, o.cj)(
+            [h.Z],
             () => ({
-                isReplyAuthorBlocked: null != L && p.Z.isBlockedForMessage(L),
-                isReplyAuthorIgnored: null != L && p.Z.isIgnoredForMessage(L),
+                isReplyAuthorBlocked: null != x && h.Z.isBlockedForMessage(x),
+                isReplyAuthorIgnored: null != x && h.Z.isIgnoredForMessage(x),
             }),
-            [L],
+            [x],
         ),
-        B = (0, y.wq)(null == L ? void 0 : L.author.id, S.id),
-        Z = (0, y.$3)(n, L),
-        F = (0, y.Wl)(L, S, C, P),
-        V = (0, y.rY)(R, P),
-        H = i.useCallback(() => {
-            P({
+        F = (0, O.wq)(null == x ? void 0 : x.author.id, A.id),
+        V = (0, O.$3)(n, x),
+        H = (0, O.Wl)(x, A, R, w),
+        Y = (0, O.rY)(P, w),
+        W = i.useCallback(() => {
+            w({
                 referencedUsernameProfile: !1,
                 referencedAvatarProfile: !1,
             });
-        }, [P]),
-        Y = (0, g.Uj)(n);
-    return (0, r.jsx)(E.Z, {
-        repliedAuthor: x,
+        }, [w]),
+        K = (0, E.Uj)(n);
+    return (0, r.jsx)(b.Z, {
+        repliedAuthor: M,
         baseMessage: n,
-        channel: S,
-        baseAuthor: Y,
-        referencedMessage: I,
-        content: j,
-        compact: N,
-        isReplyAuthorBlocked: U,
-        isReplyAuthorIgnored: G,
-        showAvatarPopout: R,
-        showUsernamePopout: C,
-        renderPopout: b.Z,
-        onClickAvatar: V,
-        onClickUsername: F,
-        onClickReply: Z,
-        onContextMenu: B,
-        onPopoutRequestClose: H,
-        isReplySpineClickable: w,
-        showReplySpine: D,
+        channel: A,
+        baseAuthor: K,
+        referencedMessage: T,
+        content: G,
+        compact: C,
+        isReplyAuthorBlocked: B,
+        isReplyAuthorIgnored: Z,
+        showAvatarPopout: P,
+        showUsernamePopout: R,
+        renderPopout: y.Z,
+        onClickAvatar: Y,
+        onClickUsername: H,
+        onClickReply: V,
+        onContextMenu: F,
+        onPopoutRequestClose: W,
+        isReplySpineClickable: D,
+        showReplySpine: L,
     });
 });
-function C(e) {
+function R(e) {
     let {
         message: t,
         channel: n,
@@ -206,7 +210,7 @@ function C(e) {
     } = e;
     return (
         null != l &&
-        (0, r.jsx)(N, {
+        (0, r.jsx)(C, {
             baseMessage: t,
             replyReference: l,
             referencedMessage: c,

@@ -1,18 +1,21 @@
-n.d(t, { ZP: () => O }), n(388685);
+n.d(t, { ZP: () => T });
 var r = n(255367),
     i = n(73800),
     o = n(120356),
     a = n.n(o),
     s = n(793030),
-    l = n(481060),
-    c = n(768581),
-    u = n(814225),
-    d = n(810568),
-    f = n(168524),
-    _ = n(715318),
-    p = n(388032),
-    h = n(874672);
-function m(e) {
+    l = n(442837),
+    c = n(481060),
+    u = n(406763),
+    d = n(893642),
+    f = n(768581),
+    _ = n(814225),
+    p = n(810568),
+    h = n(168524),
+    m = n(715318),
+    g = n(388032),
+    E = n(874672);
+function b(e) {
     let { detectedGame: t } = e,
         n = i.useMemo(() => {
             if (null == t) return "";
@@ -28,32 +31,32 @@ function m(e) {
             return "";
         }, [t]);
     return (0, r.jsx)("div", {
-        className: h.gameArtHero,
+        className: E.gameArtHero,
         style: { backgroundImage: 'url("'.concat(n, '")') },
     });
 }
-function g(e) {
+function y(e) {
     let { application: t } = e,
-        n = null == t ? void 0 : t.getIconURL(160, c.$k ? "webp" : "png");
+        n = null == t ? void 0 : t.getIconURL(160, f.$k ? "webp" : "png");
     return (0, r.jsx)("div", {
-        className: h.iconContainer,
+        className: E.iconContainer,
         children:
             null != n &&
             (0, r.jsx)("img", {
-                className: h.gameIcon,
+                className: E.gameIcon,
                 src: n,
                 height: 80,
-                alt: p.intl.formatToPlainString(p.t["nh+jWl"], { game: t.name }),
+                alt: g.intl.formatToPlainString(g.t["nh+jWl"], { game: t.name }),
             }),
     });
 }
-function E(e) {
+function O(e) {
     var t;
     let { application: n, detectedGame: o } = e,
-        a = i.useMemo(() => (null == o ? void 0 : o.genres.map(u.P3).join(", ")), [o]),
+        a = i.useMemo(() => (null == o ? void 0 : o.genres.map(_.P3).join(", ")), [o]),
         l = null != (t = o.name) ? t : null == n ? void 0 : n.name;
     return (0, r.jsxs)("div", {
-        className: h.headingContainer,
+        className: E.headingContainer,
         children: [
             (0, r.jsx)(s.X6, {
                 variant: "heading-lg/bold",
@@ -68,14 +71,14 @@ function E(e) {
         ],
     });
 }
-function b(e) {
+function v(e) {
     var t;
     let { detectedGame: n, openFullGameProfile: i } = e;
     return (0, r.jsxs)("div", {
-        className: h.bodyContainer,
+        className: E.bodyContainer,
         children: [
             (0, r.jsxs)("div", {
-                className: h.summaryContainer,
+                className: E.summaryContainer,
                 children: [
                     (0, r.jsx)(s.xv, {
                         variant: "text-sm/medium",
@@ -83,18 +86,18 @@ function b(e) {
                         lineClamp: 3,
                         children: null != (t = n.summaryLocalized) ? t : n.summary,
                     }),
-                    (0, r.jsx)(l.P3F, {
-                        className: h.clickable,
+                    (0, r.jsx)(c.P3F, {
+                        className: E.clickable,
                         onClick: i,
                         children: (0, r.jsx)(s.xv, {
                             variant: "text-xs/normal",
                             color: "text-secondary",
-                            children: p.intl.string(p.t.lBeKY2),
+                            children: g.intl.string(g.t.lBeKY2),
                         }),
                     }),
                 ],
             }),
-            (0, r.jsx)(l.zxk, {
+            (0, r.jsx)(c.zxk, {
                 variant: "secondary",
                 size: "sm",
                 onClick: i,
@@ -104,49 +107,49 @@ function b(e) {
         ],
     });
 }
-function y(e) {
+function I(e) {
     let { application: t } = e,
-        n = i.useMemo(() => (0, d.fP)(), []),
-        [o, a] = i.useState(!1),
-        s = i.useMemo(() => (o ? p.intl.string(p.t.tpvw4e) : p.intl.string(p.t["6EwEws"])), [o]);
+        n = i.useMemo(() => (0, p.fP)(), []),
+        o = (0, l.e7)([d.Z], () => d.Z.getMute(t.id)),
+        a = i.useMemo(() => (o ? g.intl.string(g.t.tpvw4e) : g.intl.string(g.t["6EwEws"])), [o]);
     return (0, r.jsxs)("div", {
-        className: h.actionButtonsContainer,
+        className: E.actionButtonsContainer,
         children: [
-            (0, r.jsx)(l.DY3, {
+            (0, r.jsx)(c.DY3, {
                 element: "span",
-                text: s,
-                "aria-label": s,
+                text: a,
+                "aria-label": a,
                 delay: 750,
-                children: (0, r.jsx)(l.P3F, {
-                    className: h.actionButton,
-                    "aria-label": s,
-                    onClick: () => a(!o),
+                children: (0, r.jsx)(c.P3F, {
+                    className: E.actionButton,
+                    "aria-label": a,
+                    onClick: () => (0, u.X)(t.id, !o),
                     children: o
-                        ? (0, r.jsx)(l.owu, {
+                        ? (0, r.jsx)(c.owu, {
                               size: "xs",
-                              color: l.TVs.colors.WHITE,
+                              color: c.TVs.colors.WHITE,
                           })
-                        : (0, r.jsx)(l.Dkj, {
+                        : (0, r.jsx)(c.Dkj, {
                               size: "xs",
-                              color: l.TVs.colors.WHITE,
+                              color: c.TVs.colors.WHITE,
                           }),
                 }),
             }),
-            (0, r.jsx)(_.Z, {
+            (0, r.jsx)(m.Z, {
                 applicationId: t.id,
                 viewId: n,
-                className: h.actionButton,
+                className: E.actionButton,
             }),
         ],
     });
 }
-function O(e) {
+function T(e) {
     let { application: t, detectedGame: n, className: o, onClose: s } = e,
-        l = (0, f.Z)(
+        l = (0, h.Z)(
             {
                 location: "MiniGameProfile",
                 applicationId: t.id,
-                source: d.m1.MiniGameProfile,
+                source: p.m1.MiniGameProfile,
                 trackEntryPointImpression: !0,
                 sourceUserId: void 0,
             },
@@ -159,16 +162,16 @@ function O(e) {
             [s, l],
         );
     return (0, r.jsxs)("div", {
-        className: a()(h.container, o),
+        className: a()(E.container, o),
         children: [
-            (0, r.jsx)(m, { detectedGame: n }),
+            (0, r.jsx)(b, { detectedGame: n }),
+            (0, r.jsx)(I, { application: t }),
             (0, r.jsx)(y, { application: t }),
-            (0, r.jsx)(g, { application: t }),
-            (0, r.jsx)(E, {
+            (0, r.jsx)(O, {
                 application: t,
                 detectedGame: n,
             }),
-            (0, r.jsx)(b, {
+            (0, r.jsx)(v, {
                 application: t,
                 detectedGame: n,
                 openFullGameProfile: c,

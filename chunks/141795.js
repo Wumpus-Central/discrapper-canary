@@ -556,41 +556,37 @@ class x extends y.ZP {
         return (this.item = S({}, this.item, l)), (this.reactNativeFilePrepped = !0), this;
     }
     async maybeConvertToWebP() {
-        let e = (0, c.U)({ location: "CloudUpload.maybeConvertToWebP" });
-        if (!e.enabled) return;
+        if (!(0, c.U)({ location: "CloudUpload.maybeConvertToWebP" }).enabled) return;
         if (null == this.item.file) return void C.warn("webp conversion skipped for ".concat(this.id, ": no file"));
         if (this._aborted) return;
-        let t = performance.now();
+        let e = performance.now();
         try {
-            let t = await (0, v.LF)([this.item.file], {
-                minFileSizeBytes: e.minFileSizeBytes,
-                minSizeReductionPercent: e.minSizeReductionPercent,
-            });
+            let e = await (0, v.LF)([this.item.file]);
             if (this._aborted) return;
-            if (t.length > 0 && t[0].success) {
-                let e = t[0];
-                (this.item.file = (0, v.ub)(e)),
+            if (e.length > 0 && e[0].success) {
+                let t = e[0];
+                (this.item.file = (0, v.ub)(t)),
                     (this.currentSize = this.item.file.size),
                     (this.uploadAnalytics.convertedMimeType = "image/webp"),
-                    null != e.hashTimeMs && (this.uploadAnalytics.timing.hashTimeMs = e.hashTimeMs),
+                    null != t.hashTimeMs && (this.uploadAnalytics.timing.hashTimeMs = t.hashTimeMs),
                     C.log(
                         "webp conversion worked for "
                             .concat(this.id, ": ")
-                            .concat(e.sizeBefore, " -> ")
-                            .concat(e.sizeAfter, " bytes (")
-                            .concat(e.compressionRatio.toFixed(2), "x)"),
+                            .concat(t.sizeBefore, " -> ")
+                            .concat(t.sizeAfter, " bytes (")
+                            .concat(t.compressionRatio.toFixed(2), "x)"),
                     );
             } else {
-                var n, r;
-                let e = null != (r = null == (n = t[0]) ? void 0 : n.reason) ? r : "unknown";
-                (this.uploadAnalytics.conversionFailureReason = e),
-                    C.log("webp conversion skipped for ".concat(this.id, ": ").concat(e));
+                var t, n;
+                let r = null != (n = null == (t = e[0]) ? void 0 : t.reason) ? n : "unknown";
+                (this.uploadAnalytics.conversionFailureReason = r),
+                    C.log("webp conversion skipped for ".concat(this.id, ": ").concat(r));
             }
         } catch (e) {
             (this.uploadAnalytics.conversionFailureReason = "unknown_error"),
                 C.warn("webp conversion failed for ".concat(this.id, ":"), e);
         }
-        this.uploadAnalytics.timing.compressTimeMs = Math.round(performance.now() - t);
+        this.uploadAnalytics.timing.compressTimeMs = Math.round(performance.now() - e);
     }
     handleError(e) {
         this.setStatus("ERROR"), (this.error = e), this.trackUploadFinished("ERROR");

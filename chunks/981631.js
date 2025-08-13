@@ -1145,6 +1145,8 @@ let eE = "@me",
         GUILD_MEMBER_AVATAR: (e, t, n, r) =>
             "/guilds/".concat(e, "/users/").concat(t, "/avatars/").concat(n, ".").concat(r),
         SET_GUILD_MEMBER: (e) => "/guilds/".concat(e, "/members/@me"),
+        GAME_NOTIFICATION_SETTINGS: "/users/@me/notification-settings/muted-games",
+        GAME_NOTIFICATION_SETTING_UPDATE: (e) => "/users/@me/notification-settings/muted-games/".concat(e),
         GUILD_JOIN: (e) => "/guilds/".concat(e, "/members/@me"),
         GUILD_LEAVE: (e) => "/users/@me/guilds/".concat(e),
         GUILD_INTEGRATIONS: (e) => "/guilds/".concat(e, "/integrations"),

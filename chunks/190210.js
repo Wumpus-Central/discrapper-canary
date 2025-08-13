@@ -240,33 +240,50 @@ function ea(e, t) {
     let { eventEmitter: eX, handleEditorSelectionChanged: eQ } = (0, F.x2)(eM, f, m),
         eJ = i.useCallback(
             (e) => {
-                var t;
-                let n = [];
-                null != eR &&
-                    n.push({
-                        type: h.re.MEDIA_GALLERY,
-                        items: [ei("attachment://".concat(eo(eR.name)), !1)],
-                        id: "".concat(K.Vm),
-                    }),
+                var t, n;
+                let r = [],
+                    i = eC.length > 0 ? eC : e.value.length > 0 ? e.value.slice(0, 80) : q.intl.string(q.t["7Xm5QE"]);
+                if (null == eR)
+                    return (
+                        (0, v.c)(j.id, {
+                            title: "",
+                            heroFile: null,
+                        }),
+                        null == (n = eM.current) || n.blur(),
+                        e_(
+                            et($({}, e), {
+                                announcementSendOptions: {
+                                    createThread: eq && ew,
+                                    threadName: i,
+                                    publish: eP,
+                                },
+                            }),
+                        )
+                    );
+                r.push({
+                    type: h.re.MEDIA_GALLERY,
+                    items: [ei("attachment://".concat(eo(eR.name)), !1)],
+                    id: "".concat(K.Vm),
+                }),
                     e.value.length > 0 &&
-                        n.push({
+                        r.push({
                             type: h.re.TEXT_DISPLAY,
                             content: e.value,
                             id: "".concat(K.Kb),
                         });
-                let r = x.Z.getUploads(j.id, D.d.ChannelMessage),
-                    i = r.filter((e) => (e.isImage || e.isVideo) && e.filename !== (null == eR ? void 0 : eR.name)),
-                    o = r.filter((e) => !e.isImage && !e.isVideo && e.filename !== (null == eR ? void 0 : eR.name)),
-                    a = i.map((e) => ei("attachment://".concat(eo(e.filename)), !1));
+                let o = x.Z.getUploads(j.id, D.d.ChannelMessage),
+                    a = o.filter((e) => (e.isImage || e.isVideo) && e.filename !== (null == eR ? void 0 : eR.name)),
+                    s = o.filter((e) => !e.isImage && !e.isVideo && e.filename !== (null == eR ? void 0 : eR.name)),
+                    l = a.map((e) => ei("attachment://".concat(eo(e.filename)), !1));
                 return (
-                    a.length > 0 &&
-                        n.push({
+                    l.length > 0 &&
+                        r.push({
                             type: h.re.MEDIA_GALLERY,
-                            items: a,
+                            items: l,
                             id: "".concat(K.m2),
                         }),
-                    o.forEach((e, t) => {
-                        n.push({
+                    s.forEach((e, t) => {
+                        r.push({
                             type: h.re.FILE,
                             file: ei("attachment://".concat(eo(e.filename)), !1).media,
                             id: "".concat(K.kn + t),
@@ -281,10 +298,10 @@ function ea(e, t) {
                     null == (t = eM.current) || t.blur(),
                     e_(
                         et($({}, e), {
-                            components: n,
+                            components: r,
                             announcementSendOptions: {
                                 createThread: eq && ew,
-                                threadName: eC.length > 0 ? eC : q.intl.string(q.t["7Xm5QE"]),
+                                threadName: i,
                                 publish: eP,
                             },
                         }),
