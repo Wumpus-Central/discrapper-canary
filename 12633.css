@@ -72977,15 +72977,9 @@ strong {
     z-index: 0
 }
 
-.entryPointAppCommandButton_a83188 {
-    border-radius: var(--radius-sm);
+.entryPointAppCommandButtonContainer_a83188 {
     margin-left: 8px;
-    min-height: var(--custom-channel-textarea-text-area-height);
     min-width: var(--custom-app-dm-chat-input-primary-button-width)
-}
-
-.align-chat-input .entryPointAppCommandButton_a83188 {
-    height: 100%
 }
 
 .buttonContainer_e6e74f {
