@@ -78227,7 +78227,6 @@ span.clanTag__07f91.isOverlay__07f91 {
     gap: var(--space-8);
     justify-content: space-between;
     min-height: var(--custom-app-top-bar-height);
-    padding-left: var(--space-12);
     padding-right: var(--space-12);
     position: relative;
     -webkit-app-region: drag
@@ -78275,6 +78274,7 @@ span.clanTag__07f91.isOverlay__07f91 {
 
 .leading_c38106 {
     box-sizing: border-box;
+    gap: var(--space-4);
     justify-content: flex-start
 }
 
@@ -78282,10 +78282,13 @@ span.clanTag__07f91.isOverlay__07f91 {
 .trailing_c38106 {
     align-items: center;
     display: flex;
-    gap: var(--space-12);
     position: relative;
     z-index: 1;
     -webkit-app-region: no-drag
+}
+
+.trailing_c38106 {
+    gap: var(--space-12)
 }
 
 .trailing_c38106,
