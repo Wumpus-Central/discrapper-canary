@@ -35,8 +35,8 @@ let R = new E.Z("CacheStore"),
     w = "initializing",
     k = 0,
     L = !1,
-    B = !1,
-    M = !1;
+    M = !1,
+    B = !1;
 function U(e) {
     R.log("Clearing cache store"),
         (k = Date.now()),
@@ -100,8 +100,8 @@ async function G(e, t, n) {
                 ? Promise.resolve([])
                 : a.Z.timeAsync("\uD83D\uDCBE", "cache: user_guild_settings", () => b.Z.getAll(e)),
         [[N, y], P, D, Z, w, k, L] = await Promise.all([p, g, h, j, E, v, I]),
-        B = performance.now() - m;
-    if ((R.verbose("cache loaded in ".concat(B, "ms (channel_history ").concat(N, "ms)")), null == y))
+        M = performance.now() - m;
+    if ((R.verbose("cache loaded in ".concat(M, "ms (channel_history ").concat(N, "ms)")), null == y))
         return (
             (0, A.Z)("database:history_cache_null"),
             R.verbose("finished without dispatching CACHE_LOADED"),
@@ -283,7 +283,7 @@ async function W(e, t, n, i) {
                 c.Z.dispatch({ type: "CACHE_LOADED_LAZY_NO_CACHE" });
             return;
         }
-        if (B) {
+        if (M) {
             (0, A.Z)("already_connected"),
                 R.log("Skipping lazy cache; already connected."),
                 c.Z.dispatch({ type: "CACHE_LOADED_LAZY_NO_CACHE" });
@@ -393,7 +393,7 @@ class K extends (i = l.ZP.Store) {
         return (0, I.$8)()
             ? Z
                 ? (R.log("Not writing cache because caches cleared"), !1)
-                : !!e || !!M || (R.log("Not writing cache because never connected"), !1)
+                : !!e || !!B || (R.log("Not writing cache because never connected"), !1)
             : (R.log("Not writing cache because not authenticated"), !1);
     }
     async loadCacheAsync(e, t) {
@@ -444,11 +444,11 @@ class K extends (i = l.ZP.Store) {
         D
             ? {
                   CONNECTION_OPEN: function () {
-                      return (B = !0), (M = !0), !1;
+                      return (M = !0), (B = !0), !1;
                   },
                   LOGOUT: U,
                   CONNECTION_CLOSED: function () {
-                      return (B = !1), (M = !0), !1;
+                      return (M = !1), (B = !0), !1;
                   },
                   CACHE_LOADED: function () {
                       L = !0;

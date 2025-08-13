@@ -34,8 +34,8 @@ var i = n(255367),
     w = n(51144),
     k = n(998502),
     L = n(695346),
-    B = n(461877),
-    M = n(726985),
+    M = n(461877),
+    B = n(726985),
     U = n(981631),
     V = n(815660),
     G = n(801461),
@@ -338,7 +338,7 @@ function J(e) {
                 buttonColor: u.zx.Colors.PRIMARY,
                 valueMessage: (0, i.jsx)(X, {
                     text: e,
-                    censor: B.E,
+                    censor: M.E,
                     revealLabel: F.intl.string(F.t["Zvx+yc"]),
                     hideLabel: F.intl.string(F.t.nqTD4e),
                 }),
@@ -403,7 +403,7 @@ function Q(e) {
         (t = c
             ? (0, i.jsx)(X, {
                   text: l,
-                  censor: B.n,
+                  censor: M.n,
                   revealLabel: F.intl.string(F.t.eY3xlZ),
                   hideLabel: F.intl.string(F.t.jllbv7),
               })
@@ -653,32 +653,32 @@ function en() {
                         className: H.fieldList,
                         children: [
                             (0, i.jsx)(T.F, {
-                                setting: M.s6.ACCOUNT_DISPLAY_NAME,
+                                setting: B.s6.ACCOUNT_DISPLAY_NAME,
                                 children: (0, i.jsx)(q, {
                                     className: H.fieldSpacerBottom,
                                     user: t,
                                 }),
                             }),
                             (0, i.jsx)(T.F, {
-                                setting: M.s6.ACCOUNT_USERNAME,
+                                setting: B.s6.ACCOUNT_USERNAME,
                                 children: (0, i.jsx)(K, { user: t }),
                             }),
                             (0, i.jsx)(T.F, {
-                                setting: M.s6.ACCOUNT_EMAIL,
+                                setting: B.s6.ACCOUNT_EMAIL,
                                 children: (0, i.jsx)(J, {
                                     className: H.fieldSpacer,
                                     user: t,
                                 }),
                             }),
                             (0, i.jsx)(T.F, {
-                                setting: M.s6.ACCOUNT_PHONE_NUMBER,
+                                setting: B.s6.ACCOUNT_PHONE_NUMBER,
                                 children: (0, i.jsx)(Q, {
                                     className: H.fieldSpacer,
                                     user: t,
                                 }),
                             }),
                             (0, i.jsx)(T.F, {
-                                setting: M.s6.ACCOUNT_AGE_GROUP,
+                                setting: B.s6.ACCOUNT_AGE_GROUP,
                                 children: (0, i.jsx)(et, { className: H.fieldSpacer }),
                             }),
                         ],

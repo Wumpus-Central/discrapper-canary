@@ -1,4 +1,4 @@
-n.d(t, { Z: () => B }), n(388685), n(642613);
+n.d(t, { Z: () => M }), n(388685), n(642613);
 var i = n(255367),
     r = n(73800),
     s = n(120356),
@@ -369,7 +369,7 @@ function L(e) {
         tooltipText: a,
     });
 }
-function B(e) {
+function M(e) {
     let {
             canUseCustomBackgrounds: t,
             customBackgroundOptions: n,

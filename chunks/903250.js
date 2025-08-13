@@ -40,8 +40,8 @@ let P = r.forwardRef((e, t) => {
         w = (0, b._O)(),
         k = (0, f.Nx)(),
         L = (0, l.e7)([h.Z], () => h.Z.affinities),
-        B = (0, _.Z)(),
-        M = null != B,
+        M = (0, _.Z)(),
+        B = null != M,
         U = P ? o.Tt.WHITE : o.Tt.BRAND,
         V = L.length > 0,
         G = (0, x.ZP)({ location: "HeroHeading" }) ? T.intl.string(T.t["EW+VIS"]) : T.intl.string(T.t.YCZldH),
@@ -66,8 +66,8 @@ let P = r.forwardRef((e, t) => {
                                 color: "header-primary",
                                 children: G,
                             }),
-                            M
-                                ? (0, i.jsx)(C.Z, { referrer: B })
+                            B
+                                ? (0, i.jsx)(C.Z, { referrer: M })
                                 : V &&
                                   (0, i.jsx)("div", {
                                       className: I.affinityDescriptionContainer,
@@ -80,7 +80,7 @@ let P = r.forwardRef((e, t) => {
                             w
                                 ? (0, i.jsx)("div", {
                                       className: a()(I.buttonContainer, I.marketingPageCTAContainer, {
-                                          [I.marketingPageCTAMargin]: !(V || M),
+                                          [I.marketingPageCTAMargin]: !(V || B),
                                       }),
                                       children: (0, i.jsx)(j.Z, {
                                           className: a()(I.button, r),
@@ -91,7 +91,7 @@ let P = r.forwardRef((e, t) => {
                                       subscriptionTier: s,
                                       inOfferExperience: k,
                                       containerClassName: a()(I.marketingPageCTAContainer, {
-                                          [I.marketingPageCTAMargin]: !(V || M),
+                                          [I.marketingPageCTAMargin]: !(V || B),
                                       }),
                                       buttonClassName: r,
                                       isApplicationHome: !0,

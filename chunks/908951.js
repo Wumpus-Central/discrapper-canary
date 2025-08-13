@@ -39,13 +39,13 @@ function A(e) {
         Z = (0, c.e7)([_.Z], () => _.Z.hidePersonalInformation),
         [w, k] = (0, c.Wu)([j.Z], () => [j.Z.paymentSources, j.Z.hasFetchedPaymentSources]),
         L = (0, x.V)((0, v.yb)(t)),
-        { analyticsLocations: B } = (0, b.ZP)(),
-        M = r.useMemo(() => Object.values(w).filter((e) => !e.invalid), [w]),
+        { analyticsLocations: M } = (0, b.ZP)(),
+        B = r.useMemo(() => Object.values(w).filter((e) => !e.invalid), [w]),
         [U, V] = r.useState(!1),
         [G, F] = r.useState(t.currency),
         H = async (e, n, i) => {
             if (null == t) throw Error("missing subscription and paymentSource");
-            null == e ? await p.fG(t, n, i, B, A) : await p.tq(t, e, n, i, B, A), V(!1), F(n);
+            null == e ? await p.fG(t, n, i, M, A) : await p.tq(t, e, n, i, M, A), V(!1), F(n);
         },
         z = async (e, n, i) => {
             V(!0);
@@ -54,7 +54,7 @@ function A(e) {
                     paymentSourceId: null == e ? void 0 : e.id,
                     renewal: !0,
                     currency: n,
-                    analyticsLocations: B,
+                    analyticsLocations: M,
                     analyticsLocation: A,
                 }),
                 s = {
@@ -162,7 +162,7 @@ function A(e) {
         });
     }
     if (!k || !L) return (0, i.jsx)(u.$jN, {});
-    if (!(M.length > 0))
+    if (!(B.length > 0))
         return (0, i.jsx)(d.zx, {
             fullWidth: !0,
             look: d.zx.Looks.FILLED,
@@ -187,7 +187,7 @@ function A(e) {
                                   }
                                 : null,
                         className: l,
-                        paymentSources: M,
+                        paymentSources: B,
                         hidePersonalInformation: Z,
                         selectedPaymentSourceId: e,
                         onChange: Y,

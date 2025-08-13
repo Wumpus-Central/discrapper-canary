@@ -86,7 +86,7 @@ function b(e, t) {
     return d.info("QUNS for ".concat(t.name, ": ").concat(n)), n === r.Ng.QUNS_RUNNING_D3D_FULL_SCREEN;
 }
 let y = { "1314682894106497096": (e, t, n) => (b(e, t) ? r.Jx.FULLSCREEN : n) },
-    O = new Set(["762434991303950386", "367827983903490050", "1124351860376096858"]),
+    O = new Set(["762434991303950386", "1402418239342120960", "1124351860376096858"]),
     v = 16,
     I = !0;
 async function T(e) {

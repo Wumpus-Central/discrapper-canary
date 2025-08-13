@@ -34,8 +34,8 @@ var i = n(255367),
     w = n(490220),
     k = n(981631),
     L = n(474936),
-    B = n(526761),
-    M = n(388032),
+    M = n(526761),
+    B = n(388032),
     U = n(546374);
 function V(e) {
     var t, n;
@@ -98,7 +98,7 @@ function V(e) {
         Q = (0, g.Z)(X),
         { preset: $, onShuffle: ee } = (0, b.Z)(),
         et = r.useRef(null);
-    (0, v.Z)(et, B.Y_.TRY_IT_OUT);
+    (0, v.Z)(et, M.Y_.TRY_IT_OUT);
     let {
             analyticsLocations: en,
             newestAnalyticsLocation: ei,
@@ -145,7 +145,7 @@ function V(e) {
                                       color: "currentColor",
                                       className: U.premiumIcon,
                                   }),
-                                  M.intl.string(M.t.gMlDNT),
+                                  B.intl.string(B.t.gMlDNT),
                               ],
                           }),
                           profilePreview: (0, i.jsxs)(i.Fragment, {
@@ -164,12 +164,12 @@ function V(e) {
                                       children: [
                                           (0, i.jsx)(a.X6q, {
                                               variant: "heading-xl/extrabold",
-                                              children: M.intl.string(M.t["2zGdAQ"]),
+                                              children: B.intl.string(B.t["2zGdAQ"]),
                                           }),
                                           (0, i.jsx)(a.Text, {
                                               className: U.description,
                                               variant: "text-sm/normal",
-                                              children: M.intl.string(M.t.xeEC29),
+                                              children: B.intl.string(B.t.xeEC29),
                                           }),
                                       ],
                                   }),
@@ -197,8 +197,8 @@ function V(e) {
                                       isTryItOutFlow: !0,
                                       onAvatarChange: O.c_,
                                       showRemoveAvatarButton: !1,
-                                      changeAvatarButtonText: M.intl.string(M.t["7z0D1d"]),
-                                      sectionTitle: M.intl.string(M.t.vtFfPT),
+                                      changeAvatarButtonText: B.intl.string(B.t["7z0D1d"]),
+                                      sectionTitle: B.intl.string(B.t.vtFfPT),
                                   }),
                                   (0, i.jsx)(
                                       y.Z,
@@ -206,7 +206,7 @@ function V(e) {
                                           isTryItOutFlow: !0,
                                           className: U.customizationSection,
                                           user: V,
-                                          sectionTitle: M.intl.string(M.t["7v0T9P"]),
+                                          sectionTitle: B.intl.string(B.t["7v0T9P"]),
                                       },
                                       "decoration",
                                   ),
@@ -217,14 +217,14 @@ function V(e) {
                                           isTryItOutFlow: !0,
                                           initialSelectedEffectId: Q,
                                           user: V,
-                                          sectionTitle: M.intl.string(M.t.wR5wOj),
+                                          sectionTitle: B.intl.string(B.t.wR5wOj),
                                       },
                                       "effect",
                                   ),
                                   !ea &&
                                       (0, i.jsx)(a.Text, {
                                           variant: "text-sm/normal",
-                                          children: M.intl.string(M.t["smo74+"]),
+                                          children: B.intl.string(B.t["smo74+"]),
                                       }),
                               ],
                           }),
@@ -234,7 +234,7 @@ function V(e) {
                               onSubscribeModalClose: es,
                               className: U.floatingUpsell,
                               showUpsell: !0,
-                              text: M.intl.format(M.t.TmfgIy, {
+                              text: B.intl.format(B.t.TmfgIy, {
                                   onClick: () => {
                                       (0, E.y)({
                                           analyticsSource: ei,
@@ -243,12 +243,12 @@ function V(e) {
                                   },
                               }),
                               button: H
-                                  ? M.intl.string(M.t.AfRWIy)
+                                  ? B.intl.string(B.t.AfRWIy)
                                   : eo
-                                    ? M.intl.formatToPlainString(M.t.bkQ4bG, {
+                                    ? B.intl.formatToPlainString(B.t.bkQ4bG, {
                                           percent: null == el ? void 0 : el.discount.amount,
                                       })
-                                    : M.intl.string(M.t.pj0XBA),
+                                    : B.intl.string(B.t.pj0XBA),
                               position: "inline",
                               showShadow: !1,
                           }),

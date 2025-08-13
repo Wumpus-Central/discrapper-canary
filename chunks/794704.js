@@ -34,8 +34,8 @@ var i = n(255367),
     w = n(371651),
     k = n(829907),
     L = n(624864),
-    B = n(610394),
-    M = n(957148),
+    M = n(610394),
+    B = n(957148),
     U = n(340101),
     V = n(243487),
     G = n(430561),
@@ -337,7 +337,7 @@ function ev(e) {
                 case A.AE.OOP:
                     _.Z.setEnabled(D, e), (0, A.ou)(e, A.AE.OOP, null != (r = a.id) ? r : null);
             }
-            (l || o) && (0, M.l)(l ? A.AE.LEGACY_GAME : A.AE.OOP_GAME, null != (s = a.id) ? s : null);
+            (l || o) && (0, B.l)(l ? A.AE.LEGACY_GAME : A.AE.OOP_GAME, null != (s = a.id) ? s : null);
         },
         L = (e, t) => {
             let n = !t && e,
@@ -354,7 +354,7 @@ function ev(e) {
                     return "game";
             }
         },
-        B = (e, t, n) => {
+        M = (e, t, n) => {
             if ((eO(n), null == a)) return;
             let i = !1,
                 r = !1;
@@ -381,7 +381,7 @@ function ev(e) {
                 null != s)
             ) {
                 var l;
-                (0, M.l)(s, null != (l = a.id) ? l : null);
+                (0, B.l)(s, null != (l = a.id) ? l : null);
             }
         },
         U = I && P,
@@ -584,7 +584,7 @@ function ev(e) {
                       checked: (b && Z) || (j && D),
                       disabled: U,
                       onChange: (e, t) => {
-                          B(e, L(e, (b && Z) || (j && D)), t);
+                          M(e, L(e, (b && Z) || (j && D)), t);
                       },
                   }),
               }),
@@ -659,7 +659,7 @@ function eT(e) {
         let i = !e && g;
         if ((eO(n), f(e), l(e, d, u), i)) {
             var r, s;
-            (0, M.l)(o, null != (s = null != (r = d.id) ? r : null == t ? void 0 : t.id) ? s : null);
+            (0, B.l)(o, null != (s = null != (r = d.id) ? r : null == t ? void 0 : t.id) ? s : null);
         }
     };
     return (0, i.jsx)(ej, {
@@ -691,7 +691,7 @@ function eI() {
             var i, r;
             eO(t), _.Z.setEnabled(e, s);
             let a = null != (r = null == (i = T.ZP.getCurrentGameForAnalytics()) ? void 0 : i.id) ? r : null;
-            (0, A.ou)(e, A.AE.LEGACY, a), !e && n && (0, M.l)(A.AE.LEGACY, a);
+            (0, A.ou)(e, A.AE.LEGACY, a), !e && n && (0, B.l)(A.AE.LEGACY, a);
         },
         d = (e, t, n) => {
             let { enabledOOP: i } = n;
@@ -782,7 +782,7 @@ function eN() {
             let a = !e && n;
             _.Z.setEnabled(s, e);
             let l = null != (r = null == (i = T.ZP.getCurrentGameForAnalytics()) ? void 0 : i.id) ? r : null;
-            (0, A.ou)(e, A.AE.OOP, l), a && (0, M.l)(A.AE.OOP, l);
+            (0, A.ou)(e, A.AE.OOP, l), a && (0, B.l)(A.AE.OOP, l);
         },
         d = (e, t, n) => {
             let { enabledLegacy: i } = n;
@@ -1044,8 +1044,8 @@ function eD() {
             eR(ec.intl.string(ec.t.iOtj8P), !1, !1, !0),
             eR(ec.intl.string(ec.t["0oqNgI"]), !1, !0),
         ]),
-        d = (0, p.e7)([B.ZP, K.Z], () => {
-            let e = B.ZP.getWidgetByType(es.Odu.VOICE_V3);
+        d = (0, p.e7)([M.ZP, K.Z], () => {
+            let e = M.ZP.getWidgetByType(es.Odu.VOICE_V3);
             if (null == e) return null;
             let t = K.Z.getWidget(e.id);
             return null != t && (0, U.Aw)(t) ? t : null;

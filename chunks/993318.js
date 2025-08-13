@@ -4,8 +4,8 @@ a.d(t, {
 });
 var r = a(255367);
 a(73800);
-var s = a(755721),
-    n = a(481060),
+var n = a(755721),
+    s = a(481060),
     c = a(442837),
     o = a(607070),
     d = a(313201),
@@ -16,9 +16,9 @@ var s = a(755721),
     p = a(388032),
     f = a(367530),
     m = a(6210),
-    h = a(313460),
-    _ = a(686936),
-    g = a(326238);
+    g = a(313460),
+    h = a(686936),
+    _ = a(326238);
 function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var a = null != arguments[t] ? arguments[t] : {},
@@ -48,13 +48,13 @@ let j = a(450390),
     C = (e) => {
         var t, a;
         return (0, r.jsx)(
-            s.zx,
-            ((t = x({}, e)),
+            n.zx,
+            ((t = x({ "data-migration-pending": !0 }, e)),
             (a = a =
                 {
                     "aria-label": p.intl.string(p.t.cpT0Cg),
-                    look: s.zx.Looks.BLANK,
-                    size: s.zx.Sizes.NONE,
+                    look: n.zx.Looks.BLANK,
+                    size: n.zx.Sizes.NONE,
                     children: (0, r.jsx)("img", {
                         src: j,
                         alt: "Close Modal",
@@ -77,17 +77,17 @@ let j = a(450390),
         );
     },
     y = (e) => {
-        let { animatedAssetURL: t, staticAssetURL: a, className: s } = e;
+        let { animatedAssetURL: t, staticAssetURL: a, className: n } = e;
         return (0, c.e7)([o.Z], () => o.Z.useReducedMotion) || null == t
             ? (0, r.jsx)("img", {
                   src: a,
-                  className: s,
+                  className: n,
                   alt: "",
               })
             : (0, r.jsx)(i.Z, {
                   autoPlay: !0,
                   loop: !0,
-                  className: s,
+                  className: n,
                   children: (0, r.jsx)("source", {
                       src: t,
                       type: "video/webm",
@@ -95,19 +95,19 @@ let j = a(450390),
               });
     },
     N = (e) => {
-        let { header: t, subHeader: a, staticAsset: s, animatedAsset: c } = e;
+        let { header: t, subHeader: a, staticAsset: n, animatedAsset: c } = e;
         return (0, r.jsxs)("div", {
             className: f.featureCard,
             children: [
                 (0, r.jsx)(y, {
-                    staticAssetURL: s,
+                    staticAssetURL: n,
                     animatedAssetURL: c,
                     className: f.orbAsset,
                 }),
                 (0, r.jsxs)("div", {
                     className: f.featureCardTextGroup,
                     children: [
-                        (0, r.jsx)(n.X6q, {
+                        (0, r.jsx)(s.X6q, {
                             variant: "heading-md/extrabold",
                             className: f.featureCardTextHeader,
                             children: t,
@@ -122,26 +122,26 @@ let j = a(450390),
         });
     },
     O = (e) => {
-        let { onClose: t, ctaOnClick: a, transitionState: s } = e,
+        let { onClose: t, ctaOnClick: a, transitionState: n } = e,
             c = (0, d.Dt)(),
             { showBetaTag: o } = u.Z.useExperiment({ location: "virtual_currency_announcement_modal_v2" }),
             i = [
                 {
                     header: p.intl.string(p.t["2Nvn8/"]),
                     subHeader: p.intl.string(p.t.F1lGFx),
-                    staticAsset: _.Z,
+                    staticAsset: h.Z,
                 },
                 {
                     header: p.intl.string(p.t["1IEs7+"]),
                     subHeader: p.intl.string(p.t.mej05u),
-                    staticAsset: g.Z,
+                    staticAsset: _.Z,
                 },
             ];
-        return (0, r.jsxs)(n.Y0X, {
-            className: f.root,
-            transitionState: s,
-            "aria-labelledby": c,
+        return (0, r.jsxs)(s.Y0X, {
             "data-migration-pending": !0,
+            className: f.root,
+            transitionState: n,
+            "aria-labelledby": c,
             hideShadow: !0,
             parentComponent: "AnnouncementModalV2",
             children: [
@@ -151,16 +151,17 @@ let j = a(450390),
                 }),
                 (0, r.jsx)(y, {
                     staticAssetURL: m.Z,
-                    animatedAssetURL: h.Z,
+                    animatedAssetURL: g.Z,
                     className: f.heroAsset,
                 }),
-                (0, r.jsxs)(n.hzk, {
+                (0, r.jsxs)(s.hzk, {
+                    "data-migration-pending": !0,
                     className: f.content,
                     children: [
                         (0, r.jsxs)("div", {
                             className: f.headerContainer,
                             children: [
-                                (0, r.jsx)(n.X6q, {
+                                (0, r.jsx)(s.X6q, {
                                     variant: "display-md",
                                     className: f.header,
                                     children: p.intl.string(p.t.XKlAys),
@@ -168,7 +169,7 @@ let j = a(450390),
                                 o && (0, r.jsx)(l.Z, { className: f.betaBadge }),
                             ],
                         }),
-                        (0, r.jsx)(n.X6q, {
+                        (0, r.jsx)(s.X6q, {
                             variant: "heading-lg/semibold",
                             className: f.subHeader,
                             children: p.intl.string(p.t.icWQKi),
@@ -178,7 +179,8 @@ let j = a(450390),
                                 className: f.featureCardGroup,
                                 children: i.map((e, t) => (0, r.jsx)(N, x({}, e), "".concat(e.header, "_").concat(t))),
                             }),
-                        (0, r.jsx)(n.gtL, {
+                        (0, r.jsx)(s.gtL, {
+                            "data-migration-pending": !0,
                             onClick: a,
                             color: f.buttonColor,
                             className: f.button,

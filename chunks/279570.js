@@ -1,12 +1,13 @@
-n.d(t, { Q: () => m });
-var i = n(255367);
-n(73800);
-var r = n(120356),
-    s = n.n(r),
-    a = n(84735),
-    l = n(454104),
-    o = n(97780);
-function c(e) {
+n.d(t, { Q: () => p });
+var i = n(255367),
+    r = n(73800),
+    s = n(120356),
+    a = n.n(s),
+    l = n(84735),
+    o = n(780605),
+    c = n(454104),
+    d = n(97780);
+function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -31,7 +32,7 @@ function c(e) {
     }
     return e;
 }
-function d(e, t) {
+function m(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -49,26 +50,23 @@ function d(e, t) {
         e
     );
 }
-let u = {
-    sm: "xs",
-    md: "refresh_sm",
-    lg: "md",
-};
-function m(e) {
+function p(e) {
     var {
             role: t = "button",
             type: n = "button",
-            size: r = "md",
-            variant: m = "secondary",
-            icon: p,
-            iconOpticalOffsetMargin: g = 0,
-            focusProps: h,
-            pressed: f = !1,
-            "aria-label": b,
-            className: x,
-            style: _,
+            size: s = "md",
+            variant: p = "secondary",
+            icon: g,
+            iconOpticalOffsetMargin: h = 0,
+            focusProps: f,
+            pressed: b = !1,
+            "aria-label": x,
+            buttonRef: _,
+            disabled: j,
+            className: E,
+            style: C,
         } = e,
-        j = (function (e, t) {
+        O = (function (e, t) {
             if (null == e) return {};
             var n,
                 i,
@@ -98,33 +96,43 @@ function m(e) {
             "focusProps",
             "pressed",
             "aria-label",
+            "buttonRef",
+            "disabled",
             "className",
             "style",
         ]);
+    let v = r.useRef(null),
+        S = null != _ ? _ : v,
+        T = (0, i.jsx)(o.E, {
+            icon: g,
+            iconOpticalOffsetMargin: h,
+            iconPosition: "start",
+            size: s,
+            ref: S,
+            disabled: j,
+        });
     return (0, i.jsx)(
-        a.t,
-        d(c({}, h), {
+        l.t,
+        m(u({}, f), {
             children: (0, i.jsx)(
                 "button",
-                d(
-                    c(
+                m(
+                    u(
                         {
                             role: t,
                             type: n,
-                            "aria-pressed": f,
-                            className: s()(l.button, o.button, l[r], o[m], { [o.pressed]: f }),
-                            "aria-label": b,
+                            "aria-pressed": b,
+                            className: a()(c.button, d.button, c[s], d[p], { [d.pressed]: b }),
+                            "aria-label": x,
+                            disabled: j,
+                            ref: S,
                         },
-                        j,
+                        O,
                     ),
                     {
                         children: (0, i.jsx)("div", {
-                            className: l.buttonChildrenWrapper,
-                            children: (0, i.jsx)(p, {
-                                color: "currentColor",
-                                style: 0 === g ? {} : { marginLeft: g },
-                                size: u[r],
-                            }),
+                            className: c.buttonChildrenWrapper,
+                            children: T,
                         }),
                     },
                 ),

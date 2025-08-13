@@ -1,4 +1,4 @@
-n.d(t, { Z: () => B });
+n.d(t, { Z: () => M });
 var i = n(255367),
     r = n(73800),
     s = n(120356),
@@ -244,7 +244,7 @@ let y = () =>
             ],
         });
     },
-    B = (e) => {
+    M = (e) => {
         var t;
         let n,
             { className: s, hidePill: o = !1, selectedPlanColumnClassName: c, selectedPlanTier: d = j.p9.TIER_2 } = e,
@@ -257,8 +257,8 @@ let y = () =>
             R = null != P && (0, f.Wp)(P, j.Si.TIER_2),
             D = (0, x.A)(j.Xh.PREMIUM_MONTH_TIER_2),
             w = "".concat(D, "/").concat((0, h.eP)(j.rV.MONTH)),
-            B = (0, h.CY)(j.Xh.PREMIUM_MONTH_TIER_0),
-            M = (0, h.CY)(j.Xh.PREMIUM_MONTH_TIER_2),
+            M = (0, h.CY)(j.Xh.PREMIUM_MONTH_TIER_0),
+            B = (0, h.CY)(j.Xh.PREMIUM_MONTH_TIER_2),
             U = (0, _.e)();
         if (!O || !v) return null;
         n = o ? null : null != S ? (0, i.jsx)(A, {}) : (0, i.jsx)(y, {});
@@ -293,8 +293,8 @@ let y = () =>
                                 (0, i.jsxs)("tbody", {
                                     children: [
                                         (0, i.jsx)(L, {
-                                            tier0MonthlyPrice: B,
-                                            tier2MonthlyPrice: M,
+                                            tier0MonthlyPrice: M,
+                                            tier2MonthlyPrice: B,
                                             shouldUseDiscountPrice: R,
                                             tier2DiscountedPriceString: w,
                                         }),

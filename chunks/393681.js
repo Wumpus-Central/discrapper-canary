@@ -34,8 +34,8 @@ var i = n(255367),
     w = n(10298),
     k = n(526156),
     L = n(730820),
-    B = n(888256),
-    M = n(2719),
+    M = n(888256),
+    B = n(2719),
     U = n(194530),
     V = n(726985),
     G = n(981631),
@@ -172,7 +172,7 @@ class q extends r.PureComponent {
     renderAccountSettings() {
         let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
             t = (0, i.jsxs)(i.Fragment, {
-                children: [this.renderPomeloWarning(), this.renderAccountWarning(), (0, i.jsx)(M.Z, {})],
+                children: [this.renderPomeloWarning(), this.renderAccountWarning(), (0, i.jsx)(B.Z, {})],
             });
         return e
             ? (0, i.jsx)(m.hjN, {
@@ -324,7 +324,7 @@ class q extends r.PureComponent {
     }
     renderAccountRemovalSettings() {
         let { currentUser: e, userTeamsLoading: t } = this.props;
-        return (0, i.jsx)(B.Z, {
+        return (0, i.jsx)(M.Z, {
             className: W.marginTop40,
             currentUser: e,
             disabled: t,

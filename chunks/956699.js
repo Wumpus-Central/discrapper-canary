@@ -34,8 +34,8 @@ var i = n(255367),
     w = n(398269),
     k = n(921801),
     L = n(857192),
-    B = n(558724),
-    M = n(808506),
+    M = n(558724),
+    B = n(808506),
     U = n(626135),
     V = n(709054),
     G = n(998502),
@@ -1142,7 +1142,7 @@ function eg() {
         o = e || t === R.R5.OUT_OF_PROCESS_V3 || t === R.R5.OUT_OF_PROCESS_V3_LIMITED_INTERACTION;
     return (r.useEffect(() => {
         (async () => {
-            l(await (0, M.getOverlayURL)());
+            l(await (0, B.getOverlayURL)());
         })();
     }, []),
     n)
@@ -1272,7 +1272,7 @@ function eg() {
           });
 }
 function eh() {
-    let e = (0, d.e7)([B.Z], () => B.Z.getSurveyOverride()),
+    let e = (0, d.e7)([M.Z], () => M.Z.getSurveyOverride()),
         [t, n] = r.useState(null != e ? e : "");
     return (0, i.jsx)(k.F, {
         setting: K.s6.DEVELOPER_OPTIONS_SURVEY_OVERRIDE,

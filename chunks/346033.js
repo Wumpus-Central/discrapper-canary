@@ -34,8 +34,8 @@ var i = n(255367),
     w = n(388032),
     k = n(555519),
     L = n(512282),
-    B = n(865215);
-let M = (e) => {
+    M = n(865215);
+let B = (e) => {
         let { inOfferExperience: t } = e;
         return t ? (0, i.jsx)(N.Z, { lifted: t }) : null;
     },
@@ -112,7 +112,7 @@ let M = (e) => {
                     premiumSubscription: X,
                     className: a()(L.existingSubscriberSpacing, { [L.zIndex1]: en }),
                 }),
-                (0, i.jsx)(M, { inOfferExperience: en }),
+                (0, i.jsx)(B, { inOfferExperience: en }),
                 (0, i.jsx)("div", {
                     children: (0, i.jsx)(o.$, {
                         innerRef: s,
@@ -171,7 +171,7 @@ let M = (e) => {
                     }),
                 }),
                 (0, i.jsx)("img", {
-                    src: B,
+                    src: M,
                     className: L.bottomIllustration,
                     width: 112,
                     height: 85,

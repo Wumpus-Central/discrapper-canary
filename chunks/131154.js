@@ -1,63 +1,63 @@
 t.d(n, { Z: () => s });
-var i = t(255367);
+var r = t(255367);
 t(73800);
-var r = t(120356),
-    l = t.n(r),
-    o = t(481060),
-    c = t(388032),
-    a = t(841026);
+var o = t(120356),
+    i = t.n(o),
+    a = t(481060),
+    l = t(388032),
+    c = t(841026);
 function s(e) {
-    let { guild: n, speakers: t, speakerCount: r, className: s } = e,
-        u = t.slice(0, 5),
-        d = u.map((e) => {
-            var t, r;
-            return (0, i.jsxs)(
+    let { guild: n, speakers: t, speakerCount: o, className: s } = e,
+        d = t.slice(0, 5),
+        u = d.map((e) => {
+            var t, o;
+            return (0, r.jsxs)(
                 "div",
                 {
-                    className: a.speakerContainer,
+                    className: c.speakerContainer,
                     children: [
-                        (0, i.jsx)(o.qEK, {
+                        (0, r.jsx)(a.qEK, {
                             src: null == e || null == (t = e.user) ? void 0 : t.getAvatarURL(n.id, 20),
-                            size: o.EFr.SIZE_20,
-                            className: a.avatar,
+                            size: a.EFr.SIZE_20,
+                            className: c.avatar,
                             "aria-label": "".concat(null == e ? void 0 : e.userNick, "-avatar"),
                         }),
-                        (0, i.jsx)("div", {
-                            className: a.textInGridContainer,
-                            children: (0, i.jsx)(o.Text, {
+                        (0, r.jsx)("div", {
+                            className: c.textInGridContainer,
+                            children: (0, r.jsx)(a.Text, {
                                 color: "header-secondary",
                                 variant: "text-sm/normal",
-                                className: a.textInGrid,
+                                className: c.textInGrid,
                                 children: null == e ? void 0 : e.userNick,
                             }),
                         }),
                     ],
                 },
-                null == e || null == (r = e.user) ? void 0 : r.id,
+                null == e || null == (o = e.user) ? void 0 : o.id,
             );
         }),
-        g = r - u.length;
-    return (0, i.jsxs)("div", {
-        className: l()(a.grid, s),
+        _ = o - d.length;
+    return (0, r.jsxs)("div", {
+        className: i()(c.grid, s),
         children: [
-            d,
-            g > 0 &&
-                (0, i.jsxs)("div", {
-                    className: a.speakerContainer,
+            u,
+            _ > 0 &&
+                (0, r.jsxs)("div", {
+                    className: c.speakerContainer,
                     children: [
-                        (0, i.jsx)("div", {
-                            className: a.iconMicrophone,
-                            children: (0, i.jsx)(o.S6n, {
+                        (0, r.jsx)("div", {
+                            className: c.iconMicrophone,
+                            children: (0, r.jsx)(a.S6n, {
                                 size: "custom",
                                 color: "currentColor",
                                 height: 12,
                             }),
                         }),
-                        (0, i.jsx)(o.Text, {
+                        (0, r.jsx)(a.Text, {
                             color: "header-secondary",
                             variant: "text-sm/normal",
-                            className: a.textInGrid,
-                            children: c.intl.format(c.t["185ggI"], { count: g }),
+                            className: c.textInGrid,
+                            children: l.intl.format(l.t["185ggI"], { count: _ }),
                         }),
                     ],
                 }),

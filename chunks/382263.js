@@ -12,13 +12,13 @@ var a = n(442837),
     f = n(55563),
     p = n(987209),
     m = n(563132),
-    b = n(409813),
-    g = n(27034),
+    g = n(409813),
+    b = n(27034),
     h = n(474936),
     y = n(388032),
     j = n(509999);
 let x = {
-    key: b.h8.GIFT_CUSTOMIZATION,
+    key: g.h8.GIFT_CUSTOMIZATION,
     renderStep: (e) =>
         (0, i.jsx)(
             O,
@@ -56,7 +56,7 @@ let x = {
 function v(e) {
     let { onStepChange: t, onBackClick: n, showBackButton: a = !1, disabled: s = !1, loading: r = !1 } = e,
         { hasPaymentSources: o } = (0, m.JL)(),
-        c = o ? b.h8.REVIEW : b.h8.ADD_PAYMENT_STEPS;
+        c = o ? g.h8.REVIEW : g.h8.ADD_PAYMENT_STEPS;
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(l.zxk, {
@@ -72,14 +72,14 @@ function v(e) {
 function O(e) {
     var t;
     let { handleStepChange: n, handleClose: u } = e,
-        { customGiftMessage: b = "", setCustomGiftMessage: x, giftRecipient: O } = (0, p.wD)(),
+        { customGiftMessage: g = "", setCustomGiftMessage: x, giftRecipient: O } = (0, p.wD)(),
         { selectedSkuId: C } = (0, m.JL)(),
         T = (0, a.e7)([d.default], () => d.default.getCurrentUser()),
         P = (0, a.e7)([f.Z], () => (null != C ? f.Z.get(C) : null), [C]),
         k = async (e, t) => {};
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(g.C3, {
+            (0, i.jsx)(b.C3, {
                 children: (0, i.jsxs)("div", {
                     className: j.stepBody,
                     children: [
@@ -114,8 +114,8 @@ function O(e) {
                                 (0, i.jsx)(o.Z, {
                                     sectionTitle: y.intl.string(y.t.B3miEx),
                                     onTextChange: (e) => (null == x ? void 0 : x(e)),
-                                    pendingText: b,
-                                    currentText: b,
+                                    pendingText: g,
+                                    currentText: g,
                                     disableThemedBackground: !0,
                                     className: j.customGiftMessageWrapper,
                                     innerClassName: j.customGiftMessage,
@@ -125,14 +125,15 @@ function O(e) {
                     ],
                 }),
             }),
-            (0, i.jsx)(g.O3, {
+            (0, i.jsx)(b.O3, {
                 children: (0, i.jsx)(l.mzw, {
+                    "data-migration-pending": !0,
                     justify: r.Z.Justify.BETWEEN,
                     align: r.Z.Align.CENTER,
                     children: (0, i.jsx)(v, {
                         onStepChange: n,
                         onBackClick: u,
-                        disabled: null == O || O.id === (null == T ? void 0 : T.id) || b.length > h.$n,
+                        disabled: null == O || O.id === (null == T ? void 0 : T.id) || g.length > h.$n,
                     }),
                 }),
             }),

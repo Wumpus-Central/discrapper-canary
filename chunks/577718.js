@@ -14,7 +14,7 @@ var r = n(255367),
     g = n(782959),
     m = n(538445),
     b = n(933104),
-    _ = n(276645),
+    _ = n(355251),
     O = n(970731),
     E = n(626135),
     y = n(267642),
@@ -103,10 +103,12 @@ let D = i.memo(function (e) {
                     });
                 case l.z.PREMIUM_CUSTOM_NOTIFICATION_SOUNDS_COACHMARK:
                     return (0, r.jsx)(R, {
-                        renderPopout: (0, r.jsx)(_.Z, {
-                            guildId: i.id,
-                            markAsDismissed: M,
-                        }),
+                        renderPopout: (e) =>
+                            (0, r.jsx)(_.Z, {
+                                guildId: i.id,
+                                markAsDismissed: M,
+                                targetElementRef: e,
+                            }),
                         renderGuildHeaderDropdownButton: o,
                     });
                 case l.z.GUILD_HEADER_PREMIUM_GUILD_PROGRESS:

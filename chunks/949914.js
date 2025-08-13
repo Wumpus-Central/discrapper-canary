@@ -116,7 +116,7 @@ let L = (e) => {
             ],
         });
     },
-    B = (e) => {
+    M = (e) => {
         let { subscription: t } = e,
             { analyticsLocations: n } = (0, h.ZP)(),
             [r] = (0, E.ED)({
@@ -134,7 +134,7 @@ let L = (e) => {
               })
             : (0, i.jsx)(c.$jN, {});
     },
-    M = (e) => {
+    B = (e) => {
         let {
             isTrial: t,
             isCancelled: n,
@@ -338,11 +338,11 @@ let L = (e) => {
                                   (0, i.jsxs)(i.Fragment, {
                                       children: [
                                           (0, i.jsx)(c.vwX, { children: D.intl.string(D.t.wmMFvL) }),
-                                          (0, i.jsx)(B, { subscription: t }),
+                                          (0, i.jsx)(M, { subscription: t }),
                                       ],
                                   }),
                               !Q &&
-                                  (0, i.jsx)(M, {
+                                  (0, i.jsx)(B, {
                                       isTrial: J,
                                       isCancelled: z,
                                       isResubscribing: C,

@@ -88,8 +88,8 @@ let O = {
             [R, D] = r.useState([]),
             [Z, w] = r.useState(O),
             k = r.useRef([]),
-            [L, B] = r.useState(t.name),
-            M = L.toLowerCase().replace(/\s+/g, "_"),
+            [L, M] = r.useState(t.name),
+            B = L.toLowerCase().replace(/\s+/g, "_"),
             U = r.useMemo(
                 () => ({
                     type: l.Z.PROFILE_EFFECT,
@@ -225,7 +225,7 @@ let O = {
                                               value: L,
                                               className: x.input,
                                               onChange: (e) => {
-                                                  B(e.target.value);
+                                                  M(e.target.value);
                                               },
                                           }),
                                       ],
@@ -365,7 +365,7 @@ let O = {
                                                   (0, i.jsx)(u.Z, {
                                                       fileContents: () => (0, f.yR)(R),
                                                       contentType: "text/plain",
-                                                      fileName: "".concat(M, "_timing_config.txt"),
+                                                      fileName: "".concat(B, "_timing_config.txt"),
                                                       children: (0, i.jsx)(d.zxk, {
                                                           variant: "primary",
                                                           size: "sm",
@@ -384,7 +384,7 @@ let O = {
                                                               }),
                                                           ),
                                                       contentType: "text/plain",
-                                                      fileName: "".concat(M, "_config.txt"),
+                                                      fileName: "".concat(B, "_config.txt"),
                                                       children: (0, i.jsx)(d.zxk, {
                                                           variant: "primary",
                                                           size: "sm",

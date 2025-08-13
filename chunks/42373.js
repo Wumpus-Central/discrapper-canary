@@ -140,10 +140,10 @@ let v = (e) => {
             L = (0, l.debounce)(() => {
                 h.default.track(x.rMx.PREMIUM_WHATS_NEW_BOX_CTA_CLICKED, { box_type: (0, l.snakeCase)(n) });
             }, 800),
-            B = () => {
+            M = () => {
                 null == Z.current || N || ((Z.current.currentTime = w.current), Z.current.play());
             },
-            M = () => {
+            B = () => {
                 null == Z.current || N || ((w.current = Z.current.currentTime), Z.current.pause());
             },
             U = R ? E : j;
@@ -225,10 +225,10 @@ let v = (e) => {
                       }),
             z = {
                 className: a()(R ? E.backgroundColor : k, U.boxContainer, U["".concat(P)], R && E.gradientBackground),
-                onMouseEnter: B,
-                onFocus: B,
-                onBlur: M,
-                onMouseLeave: M,
+                onMouseEnter: M,
+                onFocus: M,
+                onBlur: B,
+                onMouseLeave: B,
             };
         return R
             ? (0, i.jsx)(

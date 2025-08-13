@@ -75,8 +75,8 @@ function D(e) {
             textChatDisabled: j.Z.isNotificationDisabled(b.OverlayNotificationDisabledSetting.TEXT_CHAT),
         })),
         L = (0, o.e7)([C.ZP], () => C.ZP.getOverlayKeybind()),
-        B = (0, x.Z)({ location: "overlay_user_settings" }),
-        M = (0, p.$1)(),
+        M = (0, x.Z)({ location: "overlay_user_settings" }),
+        B = (0, p.$1)(),
         U = P(A);
     return (
         l().isEqual(U, A) || (S.default.track(I.rMx.OVERLAY_SETTINGS_UPDATED, U), (A = U)),
@@ -97,8 +97,8 @@ function D(e) {
                                     children: (0, i.jsx)(c.j7V, {
                                         className: y.enableSwitch,
                                         value: a,
-                                        disabled: M,
-                                        note: M ? N.intl.string(N.t.Eb0lnJ) : null,
+                                        disabled: B,
+                                        note: B ? N.intl.string(N.t.Eb0lnJ) : null,
                                         hideBorder: !0,
                                         onChange: function (e) {
                                             var t, n;
@@ -242,7 +242,7 @@ function D(e) {
                                 value: D,
                             }),
                         }),
-                        B &&
+                        M &&
                             (0, i.jsx)(R, {
                                 children: (0, i.jsx)(c.j7V, {
                                     value: k,

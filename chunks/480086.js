@@ -22,10 +22,10 @@ let p = {
         "1113966530531704943": "https://diablo4.blizzard.com",
     },
     h = {
-        356869127241072640: "https://www.leagueoflegends.com",
+        "1402418696126992445": "https://www.leagueoflegends.com",
         401518684763586560: "https://www.leagueoflegends.com",
         "700136079562375258": "https://playvalorant.com",
-        "633832498614370323": "https://playruneterra.com",
+        "1402418693958275202": "https://playruneterra.com",
     };
 function m(e) {
     return {

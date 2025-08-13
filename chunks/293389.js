@@ -142,7 +142,7 @@ function k(e) {
                     : O.name,
             [O, b],
         ),
-        [B, M] = r.useState(null != L ? L : "???"),
+        [M, B] = r.useState(null != L ? L : "???"),
         U = a()(y.flexCenter, {
             [I.game]: !s,
             [I.activeGame]: s,
@@ -246,14 +246,14 @@ function k(e) {
                                       className: a()(I.gameName, I.gameNameInput),
                                       type: "text",
                                       maxLength: 128,
-                                      value: B,
+                                      value: M,
                                       onBlur: function () {
-                                          O.name !== B && u.Z.editName(O, B);
+                                          O.name !== M && u.Z.editName(O, M);
                                       },
                                       onKeyDown: function (e) {
                                           13 === e.keyCode && (e.currentTarget.blur(), e.preventDefault());
                                       },
-                                      onChange: (e) => M(e.target.value),
+                                      onChange: (e) => B(e.target.value),
                                   }),
                             (function () {
                                 let e,
@@ -437,7 +437,7 @@ function L() {
         }),
     });
 }
-function B(e) {
+function M(e) {
     let { children: t } = e;
     return (0, i.jsxs)(D, {
         className: A.marginTop40,
@@ -452,7 +452,7 @@ function B(e) {
         ],
     });
 }
-let M = (0, C.oH)(function () {
+let B = (0, C.oH)(function () {
         for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
         return new Set(t.map((e) => e.exePath));
     }),
@@ -461,7 +461,7 @@ let M = (0, C.oH)(function () {
             s = (0, l.Wu)([g.ZP], () => g.ZP.getGamesSeen(!1)),
             { runningGame: o, overrideExePaths: u } = (0, l.cj)([g.ZP], () => ({
                 runningGame: g.ZP.getVisibleGame(),
-                overrideExePaths: M(...g.ZP.getOverrides()),
+                overrideExePaths: B(...g.ZP.getOverrides()),
             })),
             { gameHistory: m, robloxSubgameHistory: p } = r.useMemo(
                 () =>
@@ -518,7 +518,7 @@ let M = (0, C.oH)(function () {
                         ],
                     }),
                     0 === m.length
-                        ? (0, i.jsx)(B, { children: (0, i.jsx)(d.OZU, { children: T.intl.string(T.t["1yiJws"]) }) })
+                        ? (0, i.jsx)(M, { children: (0, i.jsx)(d.OZU, { children: T.intl.string(T.t["1yiJws"]) }) })
                         : (0, i.jsxs)(d.hjN, {
                               className: A.marginTop40,
                               children: [

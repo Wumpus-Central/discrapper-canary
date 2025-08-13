@@ -34,8 +34,8 @@ var i = n(255367),
     w = n(502762),
     k = n(530),
     L = n(309494),
-    B = n(4517),
-    M = n(420654),
+    M = n(4517),
+    B = n(420654),
     U = n(785184),
     V = n(695346),
     G = n(622562),
@@ -125,13 +125,13 @@ function ea(e) {
         eZ = eR === l.z.CUSTOM_STATUS_PROMPTS_COACHMARK,
         ew = r.useRef((0, K.Z)((e) => e.shouldRenderTenureLevelUp)),
         ek = r.useMemo(() => (0, f.Z)(), []),
-        [eL, eB] = r.useState(!0);
+        [eL, eM] = r.useState(!0);
     r.useEffect(() => {
         setTimeout(() => {
-            eB(!1);
+            eM(!1);
         }, 500);
     }, []);
-    let eM = (e) => {
+    let eB = (e) => {
             null == n || n(),
                 (0, T.openUserProfileModal)(
                     es(
@@ -175,7 +175,7 @@ function ea(e) {
                                         user: t,
                                         displayProfile: ed,
                                         themeType: et.lY.POPOUT,
-                                        onOpenProfile: ec ? void 0 : eM,
+                                        onOpenProfile: ec ? void 0 : eB,
                                     }),
                                     eZ
                                         ? (0, i.jsx)(b.Z, {
@@ -184,7 +184,7 @@ function ea(e) {
                                               targetElementRef: ey,
                                               markAsDismissed: eD,
                                               children: () =>
-                                                  (0, i.jsx)(B.Z, {
+                                                  (0, i.jsx)(M.Z, {
                                                       ref: ey,
                                                       location: "UserProfileAccountPopout",
                                                       user: t,
@@ -193,7 +193,7 @@ function ea(e) {
                                                       prompt: ek,
                                                   }),
                                           })
-                                        : (0, i.jsx)(B.Z, {
+                                        : (0, i.jsx)(M.Z, {
                                               location: "UserProfileAccountPopout",
                                               user: t,
                                               themeType: et.lY.POPOUT,
@@ -210,7 +210,7 @@ function ea(e) {
                                         user: t,
                                         className: ei.username,
                                         nickname: W.ZP.getName(null, null, t),
-                                        onOpenProfile: ec ? void 0 : eM,
+                                        onOpenProfile: ec ? void 0 : eB,
                                         pronouns: null == ed ? void 0 : ed.pronouns,
                                         tags: (0, i.jsx)(N.Z, {
                                             displayProfile: ed,
@@ -229,7 +229,7 @@ function ea(e) {
                                             ],
                                         }),
                                     }),
-                                    (0, i.jsx)(M.Z, {
+                                    (0, i.jsx)(B.Z, {
                                         user: t,
                                         bio: null == ed ? void 0 : ed.bio,
                                         hidePersonalInformation: e_,
@@ -244,7 +244,7 @@ function ea(e) {
                                               user: t,
                                               currentUser: t,
                                               displayProfile: ed,
-                                              onOpenUserProfileModal: eM,
+                                              onOpenUserProfileModal: eB,
                                               onClose: n,
                                           })
                                         : (0, i.jsx)(R.Z, {

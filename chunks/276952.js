@@ -1,56 +1,49 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => d });
 var r = n(255367);
 n(73800);
 var i = n(120356),
     o = n.n(i),
     a = n(717976),
     s = n(481060),
-    l = n(821020),
-    c = n(736670),
-    u = n(808159);
-let d = Object.freeze({
+    l = n(808159);
+let c = Object.freeze({
         tension: 400,
         friction: 30,
     }),
-    f = Object.freeze({
+    u = Object.freeze({
         opacity: 0,
         height: 8,
         x: -4,
     });
-function _(e) {
-    let { selected: t = !1, hovered: n = !1, unread: i = !1, disabled: _ = !1, className: p } = e;
-    (t = !_ && t), (n = !_ && n), (i = !_ && i);
-    let h = {
+function d(e) {
+    let { selected: t = !1, hovered: n = !1, unread: i = !1, disabled: d = !1, className: f } = e;
+    (t = !d && t), (n = !d && n), (i = !d && i);
+    let _ = {
             opacity: 1,
             height: t ? 40 : n ? 20 : 8,
             x: 0,
         },
-        m = (0, s.Yzy)(
+        p = (0, s.Yzy)(
             t || n || i,
             {
-                config: d,
+                config: c,
                 keys: (e) => (e ? "pill" : "empty"),
-                initial: t || n || i ? h : null,
-                from: f,
-                leave: f,
-                enter: h,
-                update: h,
+                initial: t || n || i ? _ : null,
+                from: u,
+                leave: u,
+                enter: _,
+                update: _,
             },
             n || document.hasFocus() ? "animate-always" : "animate-never",
-        ),
-        g = (0, l.pN)({ location: "AnimatedHalfPill" }),
-        E =
-            (0, c.Z)((e) => e.isOpen) &&
-            g.notificationCenterVariant === l.jP.POPOUT &&
-            g.entrypoint === l.u3.TITLE_BAR_LEFT;
+        );
     return (0, r.jsx)("div", {
-        className: o()(p, u.wrapper, { [u.dimmed]: E }),
+        className: o()(f, l.wrapper),
         "aria-hidden": !0,
-        children: m(
+        children: p(
             (e, t) =>
                 t &&
                 (0, r.jsx)(a.animated.span, {
-                    className: u.item,
+                    className: l.item,
                     style: e,
                 }),
         ),

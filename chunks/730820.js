@@ -1,4 +1,4 @@
-n.d(t, { Z: () => B }), n(388685);
+n.d(t, { Z: () => M }), n(388685);
 var i = n(255367),
     r = n(73800),
     s = n(512722),
@@ -431,7 +431,7 @@ class L extends r.PureComponent {
             });
     }
 }
-function B(e) {
+function M(e) {
     let t = (0, l.e7)([C.default], () => C.default.getCurrentUser());
     a()(null != t, "TwoFactorAuth: currentUser cannot be undefined");
     let n = (0, l.cj)([E.Z, j.default], () => ({

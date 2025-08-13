@@ -46,7 +46,7 @@ let l = Object.values(i.E),
             sort_desc: !0,
             interval_type: r.q.WEEKLY,
             statistics: a(l),
-            application_id: "356869127241072640",
+            application_id: "1402418696126992445",
         },
         users: [
             s("213097507503210496", l),

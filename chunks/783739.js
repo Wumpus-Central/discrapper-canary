@@ -37,21 +37,21 @@ function S(e) {
         w = (0, s.e7)([u.Z], () => u.Z.getCurrentUserAppliedBoosts()),
         { fractionalState: k } = (0, a.Z)({ forceFetch: !0 }),
         L = (null == t ? void 0 : t.isPausedOrPausePending) === !0 && k === O.a$.NONE,
-        B = (null == t ? void 0 : t.isPausedOrPausePending) !== !0 && k === O.a$.NONE,
-        M = I && k === O.a$.FP_SUB_PAUSED;
+        M = (null == t ? void 0 : t.isPausedOrPausePending) !== !0 && k === O.a$.NONE,
+        B = I && k === O.a$.FP_SUB_PAUSED;
     return (0, i.jsxs)("div", {
         children: [
             (0, i.jsx)(l.oQ, { className: v.blockedPaymentsWarning }),
             (0, i.jsx)(x.Z, {
                 hasGuildBoostSlots: P,
                 hasAppliedGuildBoosts: D,
-                hasBoostPerk: M,
-                canAddBoosts: B,
+                hasBoostPerk: B,
+                canAddBoosts: M,
             }),
             k === O.a$.NONE &&
                 (0, i.jsx)(E.Z, {
                     hasAppliedGuildBoosts: D,
-                    hasBoostPerk: M,
+                    hasBoostPerk: B,
                     hasGuildAffinitiesOrInGuild: A,
                     subscriptionIsPausedOrPausePending: L,
                 }),
@@ -70,7 +70,7 @@ function S(e) {
                 fractionalPremiumState: k,
             }),
             (0, i.jsx)(j.Z, {
-                canAddBoosts: D && B,
+                canAddBoosts: D && M,
                 canApplyBoosts: Z,
             }),
             (0, i.jsx)(d.Z, {

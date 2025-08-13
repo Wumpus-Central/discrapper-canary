@@ -1,20 +1,19 @@
 n.d(t, {
-    Z: () => O,
-    g: () => E,
+    Z: () => y,
+    g: () => g,
 });
 var r = n(255367);
 n(73800);
 var i = n(793030),
     o = n(179538),
     a = n(159691),
-    s = n(755721),
-    l = n(481060),
-    c = n(600164),
-    u = n(563132),
-    d = n(612853),
-    f = n(388032),
-    _ = n(629954);
-function p(e, t, n) {
+    s = n(481060),
+    l = n(600164),
+    c = n(563132),
+    u = n(612853),
+    d = n(388032),
+    f = n(629954);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -27,7 +26,7 @@ function p(e, t, n) {
         e
     );
 }
-function h(e) {
+function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -38,12 +37,12 @@ function h(e) {
                 }),
             )),
             r.forEach(function (t) {
-                p(e, t, n[t]);
+                _(e, t, n[t]);
             });
     }
     return e;
 }
-function m(e, t) {
+function h(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -55,122 +54,94 @@ function m(e, t) {
     }
     return n;
 }
-function g(e, t) {
+function m(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : m(Object(t)).forEach(function (n) {
+            : h(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-var E = (function (e) {
+var g = (function (e) {
     return (e[(e.CONTINUE = 0)] = "CONTINUE"), (e[(e.UPGRADE = 1)] = "UPGRADE"), (e[(e.PURCHASE = 2)] = "PURCHASE"), e;
 })({});
-let b = (e) => {
+let E = (e) => {
         let {
                 primaryIcon: t,
                 primaryCTA: n,
                 primaryType: i,
                 primaryText: o,
-                primaryDisabled: c,
-                primarySubmitting: u,
-                onPrimary: d,
-                tooltipProps: f,
+                primaryDisabled: s,
+                primarySubmitting: l,
+                onPrimary: c,
+                tooltipProps: u,
             } = e,
-            p = {
+            d = {
                 type: i,
-                disabled: c,
-                onClick: d,
+                disabled: s,
+                onClick: c,
+                icon:
+                    null == t
+                        ? void 0
+                        : () =>
+                              (0, r.jsx)(t, {
+                                  color: "currentColor",
+                                  className: f.primaryIcon,
+                              }),
+                loading: l,
+                text: o,
             };
         return 2 === n
-            ? (0, r.jsx)(
-                  l.gtL,
-                  g(
-                      h(
-                          g(h({}, p), {
-                              submitting: u,
-                              color: s.zx.Colors.GREEN,
-                          }),
-                          f,
-                      ),
-                      {
-                          children:
-                              null == t
-                                  ? null
-                                  : (0, r.jsx)(t, {
-                                        color: "currentColor",
-                                        className: _.primaryIcon,
-                                    }),
-                      },
-                  ),
-              )
-            : (0, r.jsx)(
-                  a.zx,
-                  h(
-                      g(h({}, p), {
-                          text: o,
-                          loading: u,
-                          variant: 0 === n ? "primary" : "active",
-                          icon:
-                              null == t
-                                  ? void 0
-                                  : () =>
-                                        (0, r.jsx)(t, {
-                                            color: "currentColor",
-                                            className: _.primaryIcon,
-                                        }),
-                      }),
-                      f,
-                  ),
-              );
+            ? (0, r.jsx)(a.zx, p({ variant: "expressive" }, d, u))
+            : (0, r.jsx)(a.zx, p(m(p({}, d), { variant: 0 === n ? "primary" : "active" }), u));
     },
-    y = (e) => {
+    b = (e) => {
         let {
                 onBack: t,
                 backText: n,
                 primaryIcon: a,
-                primaryCTA: s,
+                primaryCTA: f,
                 primaryType: _,
-                primaryText: p,
-                primaryTooltip: m,
-                primaryDisabled: E,
+                primaryText: h,
+                primaryTooltip: g,
+                primaryDisabled: b,
                 primarySubmitting: y,
                 onPrimary: O,
             } = e,
-            { premiumBrandRefreshBackgroundClassName: v } = (0, u.JL)(),
+            { premiumBrandRefreshBackgroundClassName: v } = (0, c.JL)(),
             I = () => {
-                if (null == s || null == p) return null;
+                if (null == f || null == h) return null;
                 let e = {
                     primaryIcon: a,
-                    primaryCTA: s,
+                    primaryCTA: f,
                     primaryType: _,
-                    primaryText: p,
-                    primaryDisabled: E,
+                    primaryText: h,
+                    primaryDisabled: b,
                     primarySubmitting: y,
                     onPrimary: O,
                 };
-                return null != m
-                    ? (0, r.jsx)(l.ua7, {
-                          text: m,
-                          children: (t) => (0, r.jsx)(b, g(h({}, e), { tooltipProps: t })),
+                return null != g
+                    ? (0, r.jsx)(s.ua7, {
+                          text: g,
+                          children: (t) => (0, r.jsx)(E, m(p({}, e), { tooltipProps: t })),
                       })
-                    : (0, r.jsx)(b, g(h({}, e), { onPrimary: O }));
+                    : (0, r.jsx)(E, m(p({}, e), { onPrimary: O }));
             },
             T = () =>
                 null == t
                     ? null
                     : (0, r.jsx)(o.A, {
-                          text: null != n ? n : f.intl.string(f.t["13/7kZ"]),
+                          text: null != n ? n : d.intl.string(d.t["13/7kZ"]),
                           onClick: t,
                           variant: "secondary",
                       });
-        return (0, r.jsxs)(l.mzw, {
+        return (0, r.jsxs)(s.mzw, {
             "data-migration-pending": !0,
-            justify: c.Z.Justify.BETWEEN,
-            align: c.Z.Align.CENTER,
+            justify: l.Z.Justify.BETWEEN,
+            align: l.Z.Align.CENTER,
             className: v,
             children: [
                 (0, r.jsxs)(i.Kq, {
@@ -178,11 +149,11 @@ let b = (e) => {
                     align: "center",
                     gap: 0,
                     padding: 0,
-                    children: [I(), (0, r.jsx)(d.Z, {})],
+                    children: [I(), (0, r.jsx)(u.Z, {})],
                 }),
                 T(),
             ],
         });
     };
-y.CTAType = E;
-let O = y;
+b.CTAType = g;
+let y = b;

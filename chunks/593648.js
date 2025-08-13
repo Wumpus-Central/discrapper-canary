@@ -34,8 +34,8 @@ var i = n(255367),
     w = n(292959),
     k = n(9156),
     L = n(912101),
-    B = n(358085),
-    M = n(709054),
+    M = n(358085),
+    B = n(709054),
     U = n(695346),
     V = n(675478),
     G = n(33656),
@@ -293,7 +293,7 @@ function $(e) {
 function ee() {
     let e = (0, c.e7)([E.Z], () => E.Z.getGuildAlertSettings()),
         [t, n] = r.useState(null),
-        s = M.default.keys(e).map((t) => {
+        s = B.default.keys(e).map((t) => {
             let n = e[t];
             return {
                 label: n.guildName,
@@ -408,7 +408,7 @@ class et extends r.PureComponent {
                 notifyMessagesInSelectedChannel: c,
                 focusMode: d,
             } = this.props,
-            m = B.isPlatformEmbedded && (0, B.isWindows)(),
+            m = M.isPlatformEmbedded && (0, M.isWindows)(),
             p = o()
                 .range(1, 11)
                 .map((e) => ({

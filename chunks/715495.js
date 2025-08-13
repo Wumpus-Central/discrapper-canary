@@ -110,17 +110,17 @@ function E() {
             },
             [D],
         ),
-        B = (0, r.useCallback)((e) => {
+        M = (0, r.useCallback)((e) => {
             if (null != N.current) {
                 let t = N.current.getBoundingClientRect();
                 E(Math.max(264, Math.min(432, e.clientX - t.left)));
             }
         }, []),
-        M = (0, r.useCallback)(
+        B = (0, r.useCallback)(
             (e) => {
                 e.preventDefault(), e.stopPropagation();
                 let t = (e) => {
-                        e.preventDefault(), B(e);
+                        e.preventDefault(), M(e);
                     },
                     n = () => {
                         null != y.current && (document.removeEventListener("mousemove", y.current), (y.current = null)),
@@ -132,7 +132,7 @@ function E() {
                     document.addEventListener("mousemove", t),
                     document.addEventListener("mouseup", n);
             },
-            [B],
+            [M],
         );
     return (
         (0, r.useEffect)(
@@ -208,7 +208,7 @@ function E() {
                                 (0, i.jsx)(I, { nameplate: d }),
                                 (0, i.jsx)("div", {
                                     className: x.resizeHandle,
-                                    onMouseDown: M,
+                                    onMouseDown: B,
                                 }),
                             ],
                         }),

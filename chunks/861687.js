@@ -493,7 +493,7 @@ class eI extends d.Z {
             });
     }
     _handleDisconnect(e, t, n, r) {
-        var i, o, a, s, l, c, u, d, f, _, p, h, m, g, E, b, y, v, I, T, S;
+        var i, o, a, s, l, c, u, d, f, _, p, h, m, g, E, b, y, v, I, T, S, A;
         this.logger.info(
             "Disconnected from RTC server, clean: "
                 .concat(t, ", code: ")
@@ -516,8 +516,8 @@ class eI extends d.Z {
                 (this._encountered_socket_failure = !0)),
             k.Z.getRemoteDisconnectVoiceChannelId() === this.channelId &&
                 (null == (l = this._connection) || l.wasRemoteDisconnected());
-        let A = "Force Close" !== r;
-        if (A) {
+        let N = "Force Close" !== r;
+        if (N) {
             let e = this._backoff.fail(this.reconnect);
             this.logger.warn(
                 "Disconnect was not clean! reason="
@@ -620,7 +620,7 @@ class eI extends d.Z {
                             hostname: this.hostname,
                             port: this.port,
                             protocol: this.protocol,
-                            reconnect: A,
+                            reconnect: N,
                             reason: r,
                             duration: this.getDuration(),
                         }),
@@ -635,9 +635,10 @@ class eI extends d.Z {
                         null == (b = this._voiceQuality) ? void 0 : b.getTransportStats(),
                         null == (y = this._voiceQuality) ? void 0 : y.getE2EEStats(),
                         null == (v = this._voiceQuality) ? void 0 : v.getAudioDeviceStats(),
-                        null == (I = this._voiceDuration) ? void 0 : I.getDurationStats(),
+                        null == (I = this._voiceQuality) ? void 0 : I.getAudioLevelStats(),
+                        null == (T = this._voiceDuration) ? void 0 : T.getDurationStats(),
                         this.getAudioDeviceStates(),
-                        null == (T = this._systemResponsiveness) ? void 0 : T.getPttQueueLatencyStats(),
+                        null == (S = this._systemResponsiveness) ? void 0 : S.getPttQueueLatencyStats(),
                     ),
                     {
                         num_noise_cancellation_changes: this._numNoiseCancellationChanges,
@@ -665,9 +666,9 @@ class eI extends d.Z {
                         device_performance_class: (0, O.Z)(),
                         num_fast_udp_reconnects:
                             null != this._connection
-                                ? null == (S = this._connection)
+                                ? null == (A = this._connection)
                                     ? void 0
-                                    : S.getNumFastUdpReconnects()
+                                    : A.getNumFastUdpReconnects()
                                 : null,
                         parent_media_session_id: this.parentMediaSessionId,
                         audio_subsystem: M.Z.getMediaEngine().getAudioSubsystem(),
@@ -742,7 +743,7 @@ class eI extends d.Z {
             let e = this._connection;
             (this._connection = null), e.destroy();
         }
-        this.setState(es.hes.DISCONNECTED, { willReconnect: A });
+        this.setState(es.hes.DISCONNECTED, { willReconnect: N });
     }
     _handleResuming(e) {
         var t, n;

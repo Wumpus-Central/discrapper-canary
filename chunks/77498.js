@@ -184,6 +184,10 @@ p(w, "displayName", "GameStore"),
                       detectableGamesEtag: "",
                       detectableGames: [],
                   },
+        () => ({
+            detectableGamesEtag: "",
+            detectableGames: [],
+        }),
     ]);
 let D = new w(l.Z, {
     OVERLAY_INITIALIZE: N,

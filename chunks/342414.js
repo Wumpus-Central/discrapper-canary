@@ -35,7 +35,7 @@ var r = n(120356),
 let w = (e) => {
         var t, n;
         let { className: r } = e,
-            { headingText: c, headingTop: d } = M(),
+            { headingText: c, headingTop: d } = B(),
             u = (0, a.e7)([g.Z], () => g.Z.getPremiumTypeSubscription()),
             p = (0, E.N)(),
             h = (0, j.Ng)(),
@@ -91,7 +91,7 @@ let w = (e) => {
         });
     },
     k = () => {
-        let { headingText: e, headingTop: t } = M();
+        let { headingText: e, headingTop: t } = B();
         return (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)("img", {
@@ -130,7 +130,7 @@ let w = (e) => {
     },
     L = (e) => {
         let { isEligibleForBogoPromotion: t } = e,
-            { headingText: n, headingTop: r } = M();
+            { headingText: n, headingTop: r } = B();
         return (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)("img", {
@@ -170,7 +170,7 @@ let w = (e) => {
             ],
         });
     },
-    [B, M] = (0, h.Z)(),
+    [M, B] = (0, h.Z)(),
     U = (e) => {
         let { className: t, location: n } = e,
             { analyticsLocations: r } = (0, d.ZP)(c.Z.PREMIUM_MARKETING_HERO_CTA),
@@ -270,7 +270,7 @@ let w = (e) => {
         }
         return (0, i.jsx)(d.Gt, {
             value: r,
-            children: (0, i.jsx)(B.Provider, {
+            children: (0, i.jsx)(M.Provider, {
                 value: {
                     headingText: C,
                     headingTop: N,

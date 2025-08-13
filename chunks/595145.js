@@ -41,8 +41,8 @@ var r = n(255367),
     F = n(530),
     V = n(4517),
     Y = n(179828),
-    H = n(993160),
-    W = n(574887),
+    W = n(993160),
+    H = n(574887),
     z = n(693408),
     K = n(661462),
     X = n(76076),
@@ -337,7 +337,7 @@ function en(e) {
                                                             }),
                                                             (0, r.jsx)("div", {
                                                                 className: et.profileButtons,
-                                                                children: (0, r.jsx)(H.Z, {
+                                                                children: (0, r.jsx)(W.Z, {
                                                                     user: n,
                                                                     currentUser: en,
                                                                     guildId: er,
@@ -381,7 +381,7 @@ function en(e) {
                                                                 (0, r.jsx)(z.Z, {
                                                                     heading: ee.intl.string(ee.t["3fe7U1"]),
                                                                     scrollIntoView: es === Q.Tb.CONNECTIONS,
-                                                                    children: (0, r.jsx)(W.Z, {
+                                                                    children: (0, r.jsx)(H.Z, {
                                                                         connections: ek,
                                                                         userId: n.id,
                                                                         className: et.profileAppConnections,

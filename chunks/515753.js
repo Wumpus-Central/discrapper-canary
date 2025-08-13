@@ -40,8 +40,8 @@ var i = n(255367),
     w = n(93687),
     k = n(489618),
     L = n(785232),
-    B = n(172751),
-    M = n(850020),
+    M = n(172751),
+    B = n(850020),
     U = n(379839),
     V = n(359135),
     G = n(516817),
@@ -275,7 +275,7 @@ function ep(e) {
             activities: _,
             applicationStream: E,
             voiceChannel: w,
-            isTyping: M,
+            isTyping: B,
             status: U,
             isMobile: z,
             nameplate: W,
@@ -314,11 +314,11 @@ function ep(e) {
         eZ = (0, g.e7)([Y.ZP], () => Y.ZP.getMentionCount(t.id) > 0),
         ew = (0, N.ZP)(t),
         ek = (0, g.e7)([Z.Z], () => Z.Z.isFavorite(t.id)),
-        { dotsInsteadOfCloseButton: eL, rearrangeContextMenu: eB } = k.Z.useExperiment(
+        { dotsInsteadOfCloseButton: eL, rearrangeContextMenu: eM } = k.Z.useExperiment(
             { location: "private_channel" },
             { autoTrackExposure: !0 },
         ),
-        eM = r.useRef(null),
+        eB = r.useRef(null),
         eU = null != W && (l || $ || eh),
         eV = () => {
             em(!0);
@@ -350,7 +350,7 @@ function ep(e) {
         },
         eq = (e) => {
             let r = "contextmenu" === e.type,
-                s = eB && !r,
+                s = eM && !r,
                 a = r ? d.ImpressionNames.DM_LIST_RIGHT_CLICK_MENU_SHOWN : d.ImpressionNames.DM_LIST_KEBAB_MENU_SHOWN;
             ef(!0),
                 t.isMultiUserDM()
@@ -466,7 +466,7 @@ function ep(e) {
                         "aria-hidden": !0,
                         recipients: t.recipients,
                         size: e,
-                        isTyping: M,
+                        isTyping: B,
                         status: U,
                     });
                 else
@@ -476,8 +476,8 @@ function ep(e) {
                             src: (0, I.x)(t),
                             "aria-hidden": !0,
                             size: e,
-                            status: M ? ee.Skl.ONLINE : U,
-                            isTyping: M,
+                            status: B ? ee.Skl.ONLINE : U,
+                            isTyping: B,
                         }),
                     );
             o()(null != m, "PrivateChannel.renderAvatar: Invalid prop configuration - no user or channel");
@@ -492,7 +492,7 @@ function ep(e) {
                         avatarDecoration: eE,
                         status: n,
                         isMobile: z,
-                        isTyping: M,
+                        isTyping: B,
                         "aria-label": m.username,
                         statusTooltip: !0,
                     }),
@@ -509,7 +509,7 @@ function ep(e) {
             ? (0, i.jsxs)(i.Fragment, {
                   children: [
                       e$,
-                      (0, i.jsx)(B.ZP, {
+                      (0, i.jsx)(M.ZP, {
                           primaryGuild: null == m ? void 0 : m.primaryGuild,
                           userId: null == m ? void 0 : m.id,
                           inline: !0,
@@ -610,7 +610,7 @@ function ep(e) {
                                         ? (0, i.jsx)(h.ua7, {
                                               text: et.intl.string(eO ? et.t.Et8qws : et.t["d+e27u"]),
                                               delay: 500,
-                                              targetElementRef: eM,
+                                              targetElementRef: eB,
                                               children: (e) => {
                                                   var { onClick: t } = e,
                                                       n = es(e, ["onClick"]);
@@ -625,7 +625,7 @@ function ep(e) {
                                                           onMouseDown: eY,
                                                           nameplate: W,
                                                           forceShow: eh,
-                                                          visibleElementRef: eM,
+                                                          visibleElementRef: eB,
                                                       }),
                                                   );
                                               },
@@ -639,7 +639,7 @@ function ep(e) {
                                               onMouseDown: eY,
                                               nameplate: W,
                                               reducedClickTarget: !0,
-                                              visibleElementRef: eM,
+                                              visibleElementRef: eB,
                                           }),
                                 ],
                             }),
@@ -679,7 +679,7 @@ let eg =
                   }, [t, c, a]),
                   { voiceActivityStatusEnabled: u } = (0, _.U)({ location: "PrivateChannel" }),
                   { voiceChannel: m } = (0, E.Z)({ userId: c }),
-                  p = (0, M.K)({ user: s }),
+                  p = (0, B.K)({ user: s }),
                   h = (0, g.e7)([J.default, q.Z], () => {
                       if (t.isMultiUserDM())
                           if (l)

@@ -214,7 +214,7 @@ function L(e) {
             (0, r.jsxs)("div", {
                 className: D.details,
                 children: [
-                    (0, r.jsx)(M, {
+                    (0, r.jsx)(B, {
                         title: R.intl.string(R.t["5D/KEB"]),
                         content: L
                             ? (0, r.jsxs)(r.Fragment, {
@@ -246,15 +246,15 @@ function L(e) {
                               }),
                     }),
                     null != k &&
-                        (0, r.jsx)(M, {
+                        (0, r.jsx)(B, {
                             title: R.intl.string(R.t.KI7ER0),
                             content: k,
                         }),
-                    (0, r.jsx)(M, {
+                    (0, r.jsx)(B, {
                         title: R.intl.string(R.t.dnUzb2),
                         content: (0, y.p)(null != (c = u.createdAt) ? c : u.currentPeriodStart),
                     }),
-                    (0, r.jsx)(B, {
+                    (0, r.jsx)(M, {
                         isCancelled: W,
                         subscriptionPeriodEnd: ei,
                         renewalPlan: Y,
@@ -278,11 +278,11 @@ function L(e) {
         ],
     });
 }
-function B(e) {
+function M(e) {
     let { isCancelled: t, subscriptionPeriodEnd: n, renewalPlan: i } = e;
     if (null != i) {
         let e = (0, T.og)((0, T.T4)(i.price, i.currency), i.interval, i.intervalCount);
-        return (0, r.jsx)(M, {
+        return (0, r.jsx)(B, {
             title: R.intl.string(R.t.hIhAMz),
             content: (0, r.jsxs)(r.Fragment, {
                 children: [
@@ -301,12 +301,12 @@ function B(e) {
             }),
         });
     }
-    return (0, r.jsx)(M, {
+    return (0, r.jsx)(B, {
         title: t ? R.intl.string(R.t.enxcAg) : R.intl.string(R.t["Ms+6Zm"]),
         content: n,
     });
 }
-function M(e) {
+function B(e) {
     let { title: t, content: n } = e;
     return (0, r.jsxs)("div", {
         className: D.row,

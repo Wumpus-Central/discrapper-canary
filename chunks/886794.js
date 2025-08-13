@@ -54,7 +54,7 @@ function S(e) {
             roleId: A,
         }),
         Y = l.useRef(null),
-        H = (0, o.Z)(Y);
+        W = (0, o.Z)(Y);
     return (0, r.jsx)(c.Gt, {
         value: F,
         children: (0, r.jsx)(f.Mt, {
@@ -170,7 +170,7 @@ function S(e) {
                     (null == M ? void 0 : M.profileEffectId) != null &&
                         (0, r.jsx)(d.Z, {
                             profileEffectId: null == M ? void 0 : M.profileEffectId,
-                            isHovering: H,
+                            isHovering: W,
                         }),
                 ],
             }),

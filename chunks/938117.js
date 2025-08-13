@@ -92,7 +92,7 @@ function O(e) {
             let { isVideoBackgroundSupported: e, onSelectBackgroundOption: t, selectedBackgroundOption: n } = L.current;
             e ? (0, p.FU)(n, S, { track: !1 }).catch(() => t(null)) : null != n && t(null);
         }, [S]);
-    let B = (e) => {
+    let M = (e) => {
         v(e),
             (0, p.FU)(e, S, { location: w.location })
                 .then(() => A(null))
@@ -115,7 +115,7 @@ function O(e) {
                       canUseCustomBackgrounds: R,
                       customBackgroundOptions: Z,
                       selectedOption: O,
-                      onSelectOption: B,
+                      onSelectOption: M,
                       onUpsellClick: () => {
                           (0, a.ZDy)(async () => {
                               let { default: e } = await n.e("87200").then(n.bind(n, 592163));
@@ -134,7 +134,7 @@ function O(e) {
                           return new Promise(async (i) => {
                               try {
                                   let i = await (0, d.Ff)(e, f.xV.BACKGROUND);
-                                  B(i), (0, m.g5)(i, t.type === x.m.MP4, n), A(null);
+                                  M(i), (0, m.g5)(i, t.type === x.m.MP4, n), A(null);
                               } catch (e) {
                                   A(e.message);
                               }
