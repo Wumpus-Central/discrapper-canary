@@ -80159,8 +80159,17 @@ html.disable-forced-colors * {
     border-top: 1px solid var(--border-subtle);
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    gap: 8px;
     padding: 16px 20px
+}
+
+.footerContainer__5a2df>* {
+    flex: 1
+}
+
+.footerContainerNonPremium__5a2df {
+    flex-direction: column;
+    gap: 12px
 }
 
 .footerRightButtons__5a2df {
@@ -80175,9 +80184,8 @@ html.disable-forced-colors * {
     color: var(--white);
     flex-shrink: 0;
     height: 40px;
-    max-width: 140px;
     min-width: 110px;
-    width: auto
+    width: 100%
 }
 
 .coachmarkHeaderContainer__5a2df {
