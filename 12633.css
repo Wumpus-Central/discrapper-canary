@@ -79897,7 +79897,7 @@ html.disable-forced-colors * {
 
 .container__247cf {
     flex-direction: column;
-    gap: 12px
+    gap: 8px
 }
 
 .container__247cf,
@@ -79997,8 +79997,7 @@ html.disable-forced-colors * {
     border-radius: var(--radius-sm);
     display: flex;
     height: 32px;
-    margin: 0 1px;
-    padding: 4px 8px;
+    padding: 2px;
     position: relative;
     transition: border-color .15s ease
 }
@@ -80063,7 +80062,7 @@ html.disable-forced-colors * {
     border-radius: var(--radius-xs);
     flex-shrink: 0;
     height: 24px;
-    margin-right: 8px;
+    margin: 6px 8px 6px 4px;
     width: 24px
 }
 
@@ -80093,7 +80092,11 @@ html.disable-forced-colors * {
 }
 
 .themePillItemSelected_c85552 {
-    border: 1px solid var(--border-subtle);
+    border: 1px solid var(--border-subtle)
+}
+
+.themePillItemSelected_c85552,
+.themeSelector_c85552 [class*=pillItem] {
     border-radius: var(--radius-xs)
 }
 
