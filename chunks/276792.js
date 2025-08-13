@@ -10,8 +10,8 @@ var i = n(704215),
     u = n(626135),
     d = n(63063),
     p = n(382791),
-    h = n(474936),
-    f = n(981631),
+    f = n(474936),
+    h = n(981631),
     g = n(388032),
     m = n(178558),
     b = n(74316);
@@ -65,24 +65,24 @@ function E(e) {
         P = "AnnouncementModalVariant1_".concat(i.z[Number(I.dismissKey)]),
         { onClose: j } = C,
         x = null != (y = null == (t = I.button) ? void 0 : t.copy) ? y : g.intl.string(g.t.YScQSE),
-        Z =
+        A =
             (null == (n = I.button) ? void 0 : n.buttonAction) === l.Wc.OPEN_MARKETING_PAGE
                 ? "jump_to_mkt_button"
                 : "get_nitro_button";
     switch (null == (E = I.button) ? void 0 : E.buttonAction) {
         case l.Wc.OPEN_MARKETING_PAGE:
             v = () => {
-                (0, c.uL)(f.Z5c.APPLICATION_STORE), j();
+                (0, c.uL)(h.Z5c.APPLICATION_STORE), j();
             };
             break;
         case l.Wc.OPEN_TIER_1_PAYMENT_MODAL:
             v = () =>
                 (0, s.Z)({
-                    subscriptionTier: h.Si.TIER_1,
+                    subscriptionTier: f.Si.TIER_1,
                     analyticsLocations: S,
                     analyticsObject: O(_({}, N), {
-                        object: f.qAy.BUTTON_CTA,
-                        objectType: f.Qqv.TIER_1,
+                        object: h.qAy.BUTTON_CTA,
+                        objectType: h.Qqv.TIER_1,
                     }),
                     onClose: (e) => {
                         e && j();
@@ -94,18 +94,18 @@ function E(e) {
         default:
             v = () =>
                 (0, s.Z)({
-                    subscriptionTier: h.Si.TIER_2,
+                    subscriptionTier: f.Si.TIER_2,
                     analyticsLocations: S,
                     analyticsObject: O(_({}, N), {
-                        object: f.qAy.BUTTON_CTA,
-                        objectType: f.Qqv.TIER_2,
+                        object: h.qAy.BUTTON_CTA,
+                        objectType: h.Qqv.TIER_2,
                     }),
                     onClose: (e) => {
                         e && j();
                     },
                 });
     }
-    let A =
+    let Z =
             "" !== I.helpArticleId
                 ? () =>
                       (0, r.jsxs)(r.Fragment, {
@@ -147,7 +147,7 @@ function E(e) {
         header: I.header,
         modalTopExtra: L,
         subHeader: I.subheader,
-        subHeaderExtra: A,
+        subHeaderExtra: Z,
         body: I.body,
         heroArt: w,
         featureCards: I.featureCards.map((e) => ({
@@ -166,9 +166,9 @@ function E(e) {
                 wrapperClassName: m.tier2Gradient,
                 size: a.zx.Sizes.SMALL,
                 onClick: () => {
-                    u.default.track(f.rMx.CHANGE_LOG_CTA_CLICKED, {
+                    u.default.track(h.rMx.CHANGE_LOG_CTA_CLICKED, {
                         change_log_id: P,
-                        cta_type: Z,
+                        cta_type: A,
                         seconds_open: Math.round((Date.now() - e) / 1000),
                         target: P,
                     }),

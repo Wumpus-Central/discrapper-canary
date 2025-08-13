@@ -8,7 +8,7 @@ var r = n(544891),
     c = n(981631);
 let u = {
     fetchSearchResults: async function e(e, t) {
-        let { categoryId: n, languageCode: u, offset: d, limit: p, withCounts: h } = t;
+        let { categoryId: n, languageCode: u, offset: d, limit: p, withCounts: f } = t;
         l.Z.dispatch({
             type: "GLOBAL_DISCOVERY_SERVERS_SEARCH_START",
             query: e,
@@ -24,18 +24,18 @@ let u = {
                         offset: d,
                         limit: p,
                         language_code: u,
-                        with_counts: h,
+                        with_counts: f,
                     },
                     oldFormErrors: !0,
                     rejectWithError: !1,
                 }),
                 i = t.body.guilds.map(o.Iv),
                 a = t.body.total_count;
-            if (h) {
-                var f;
+            if (f) {
+                var h;
                 let n = [];
-                null == (f = t.body.categories) ||
-                    f.slice(0, 8).forEach((e) => {
+                null == (h = t.body.categories) ||
+                    h.slice(0, 8).forEach((e) => {
                         let { id: t, count: r } = e;
                         n.push([Number(t), r]);
                     }),
@@ -61,7 +61,7 @@ let u = {
                 willRequestRetry: !1,
                 isRequestRetry: !1,
             }),
-                h &&
+                f &&
                     l.Z.dispatch({
                         type: "GLOBAL_DISCOVERY_SERVERS_SEARCH_COUNT_SUCCESS",
                         query: e,

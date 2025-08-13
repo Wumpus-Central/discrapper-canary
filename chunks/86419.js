@@ -85,7 +85,7 @@ function b(e) {
         r = { applicationId: g(n.length > 0 ? n : f.J6) };
     return (
         e === i.l.FAVORITE_GAMES && (r.comment = Math.random() > 0.5 ? g(d.x) : void 0),
-        e === i.l.CURRENT_GAMES && (r.tags = Math.random() > 0.3 ? E(d.T, Math.floor(3 * Math.random()) + 1) : void 0),
+        e === i.l.CURRENT_GAMES && (r.tags = Math.random() > 0.3 ? E(d.T, d.T.length) : void 0),
         r
     );
 }
@@ -131,10 +131,14 @@ function A(e, t) {
         var u, d;
         if ((null != (d = null == (u = s.games) ? void 0 : u.length) ? d : 0) >= c) return;
     }
-    let f = { applicationId: t };
+    let f = {
+        applicationId: t.applicationId,
+        comment: t.comment,
+        tags: t.tags,
+    };
     n = null != s ? (e === i.l.FAVORITE_GAMES ? [f] : [...(s.games || []), f]) : [f];
     let _ = I(a, v(e, n));
-    l.Z.setPendingWidgets(_), o.Z.getDetectableGamesSupplemental([t]);
+    l.Z.setPendingWidgets(_), o.Z.getDetectableGamesSupplemental([t.applicationId]);
 }
 function N(e, t) {
     let n = y(),

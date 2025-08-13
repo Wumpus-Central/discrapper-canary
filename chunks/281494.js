@@ -114,8 +114,9 @@ let m = () => (
                     has_eligible_friends: e.body.has_eligible_friends,
                 });
             },
-            () => {
-                i.Z.dispatch({ type: "BILLING_REFERRALS_REMAINING_FETCH_FAIL" });
+            (e) => {
+                (null == e ? void 0 : e.status) !== 404 &&
+                    i.Z.dispatch({ type: "BILLING_REFERRALS_REMAINING_FETCH_FAIL" });
             },
         )
 );

@@ -12,10 +12,11 @@ let m = (e) => {
     let { entrypoint: t } = e,
         n = (0, l.N)(),
         m = (0, a.Ng)(),
-        p = (0, o.HI)({ trialOffer: n });
+        p = (0, o.HI)({ trialOffer: n }),
+        g = (0, o.eW)();
     return (r.useEffect(() => {
-        !0 === p && (0, o.p9)(), (null != n || null != m) && (0, s.ab)(n, m);
-    }, [n, m, p]),
+        !0 === p && (0, o.p9)(), !0 === g && (0, o.ZL)(), (null != n || null != m) && (0, s.ab)(n, m);
+    }, [n, m, p, g]),
     t === u.EZ.UserSettings)
         ? (0, i.jsx)(d.Z, {})
         : t === u.EZ.ApplicationStoreHome

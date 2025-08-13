@@ -9,10 +9,10 @@ var r = n(570140),
     u = n(914946),
     d = n(452426),
     p = n(186901),
-    h = n(981631),
-    f = n(701488),
+    f = n(981631),
+    h = n(701488),
     g = n(231338);
-let m = new Set([f.Fu, f.JT]),
+let m = new Set([h.Fu, h.JT]),
     b = {
         [g.Et.GET_PROVIDER_ACCESS_TOKEN]: {
             scope: { [p.Gp.ANY]: [p.wE] },
@@ -28,13 +28,13 @@ let m = new Set([f.Fu, f.JT]),
                 } = e;
                 (0, u.bu)(t.transport);
                 let p = (0, u._f)(t.application),
-                    f = l.Z.get(n);
-                if (null == f)
+                    h = l.Z.get(n);
+                if (null == h)
                     throw new c.Z(
                         { errorCode: g.lT.INVALID_PROVIDER },
                         'Platform not found for provider "'.concat(n, '"'),
                     );
-                if (n === h.ABu.AMAZON_MUSIC) {
+                if (n === f.ABu.AMAZON_MUSIC) {
                     if (!m.has(p))
                         throw new c.Z(
                             { errorCode: g.lT.UNAUTHORIZED_FOR_APPLICATION },
@@ -50,8 +50,8 @@ let m = new Set([f.Fu, f.JT]),
                     if (null == l) {
                         function u(t) {
                             var n;
-                            if (null == f) return;
-                            let r = (null != (n = t.accounts) ? n : []).find((e) => e.type === f.type);
+                            if (null == h) return;
+                            let r = (null != (n = t.accounts) ? n : []).find((e) => e.type === h.type);
                             null != r && (e({ access_token: r.access_token }), m());
                         }
                         function p() {
@@ -60,18 +60,18 @@ let m = new Set([f.Fu, f.JT]),
                         }
                         function m() {
                             r.Z.unsubscribe("USER_CONNECTIONS_UPDATE", u),
-                                s.S.unsubscribe(h.CkL.CONNECTIONS_CALLBACK_ERROR, p);
+                                s.S.unsubscribe(f.CkL.CONNECTIONS_CALLBACK_ERROR, p);
                         }
                         r.Z.subscribe("USER_CONNECTIONS_UPDATE", u),
-                            s.S.subscribe(h.CkL.CONNECTIONS_CALLBACK_ERROR, p),
+                            s.S.subscribe(f.CkL.CONNECTIONS_CALLBACK_ERROR, p),
                             (0, a.Z)({
-                                platformType: f.type,
-                                location: h.Sbl.ACTIVITY_RPC,
+                                platformType: h.type,
+                                location: f.Sbl.ACTIVITY_RPC,
                                 successRedirect: d,
                             });
                     } else
                         try {
-                            let t = await i.Z.refreshAccessToken(f.type, l.id);
+                            let t = await i.Z.refreshAccessToken(h.type, l.id);
                             if (null == t)
                                 throw new c.Z(
                                     { errorCode: g.lT.OAUTH2_ERROR },
@@ -100,7 +100,7 @@ let m = new Set([f.Fu, f.JT]),
                         { errorCode: g.lT.INVALID_PROVIDER },
                         'Platform not found for provider "'.concat(n, '"'),
                     );
-                if (n === h.ABu.AMAZON_MUSIC) {
+                if (n === f.ABu.AMAZON_MUSIC) {
                     if (!m.has(r))
                         throw new c.Z(
                             { errorCode: g.lT.UNAUTHORIZED_FOR_APPLICATION },

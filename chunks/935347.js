@@ -9,8 +9,8 @@ var r = n(255367),
     u = n(433517),
     d = n(481060),
     p = n(205355),
-    h = n(607070),
-    f = n(38618),
+    f = n(607070),
+    h = n(38618),
     g = n(197344),
     m = n(460181),
     b = n(474873),
@@ -383,12 +383,12 @@ class P extends i.PureComponent {
             (this._connectedSound.volume = 1);
     }
 }
-let j = c.ZP.connectStores([f.Z, O.Z, b.Z, h.Z], () => ({
-    isTryingToConnect: f.Z.isTryingToConnect(),
-    connected: f.Z.isConnected(),
+let j = c.ZP.connectStores([h.Z, O.Z, b.Z, f.Z], () => ({
+    isTryingToConnect: h.Z.isTryingToConnect(),
+    connected: h.Z.isConnected(),
     incident: O.Z.getIncident(),
     soundpack: b.Z.getSoundpack(),
-    reducedMotion: h.Z.useReducedMotion,
+    reducedMotion: f.Z.useReducedMotion,
 }))((e) => {
     let { isTryingToConnect: t, connected: n, incident: i, soundpack: l, reducedMotion: a } = e;
     return t

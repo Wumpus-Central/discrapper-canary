@@ -15,16 +15,22 @@ function a(e, t, n) {
         e
     );
 }
-let s = { isDisplayingWowMomentConfirmation: !1 };
+let s = {
+    isDisplayingWowMomentConfirmation: !1,
+    isAnimated: !1,
+};
 function l() {
-    s = { isDisplayingWowMomentConfirmation: !1 };
+    s = {
+        isDisplayingWowMomentConfirmation: !1,
+        isAnimated: !1,
+    };
 }
 function c() {
     l();
 }
 function u(e) {
-    let { value: t } = e;
-    s.isDisplayingWowMomentConfirmation = t;
+    let { value: t, isAnimated: n } = e;
+    (s.isDisplayingWowMomentConfirmation = t), (s.isAnimated = n);
 }
 class d extends (r = i.ZP.Store) {
     getState() {
@@ -32,6 +38,9 @@ class d extends (r = i.ZP.Store) {
     }
     get isDisplayingWowMomentConfirmation() {
         return s.isDisplayingWowMomentConfirmation;
+    }
+    get isAnimated() {
+        return s.isAnimated;
     }
 }
 a(d, "displayName", "WowMomentConfirmationStore");

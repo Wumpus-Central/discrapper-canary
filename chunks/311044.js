@@ -15,7 +15,7 @@ var r = n(255367),
 function g(e) {
     let { user: t, guildId: n, channelId: g, onClose: j } = e,
         { analyticsLocations: y } = (0, a.ZP)(),
-        { context: O, trackUserProfileAction: x } = (0, s.KZ)(),
+        { context: x, trackUserProfileAction: O } = (0, s.KZ)(),
         { mutualFriends: h, mutualFriendsCount: v } = (0, d.Z)(t),
         _ = (0, o.Z)();
     return (
@@ -60,7 +60,7 @@ function g(e) {
                                     onSelect: () => {
                                         var e, t;
                                         null == j || j(),
-                                            x({ action: "PRESS_MUTUAL_FRIEND" }),
+                                            O({ action: "PRESS_MUTUAL_FRIEND" }),
                                             (0, f.openUserProfileModal)(
                                                 ((e = (function (e) {
                                                     for (var t = 1; t < arguments.length; t++) {
@@ -87,7 +87,7 @@ function g(e) {
                                                             });
                                                     }
                                                     return e;
-                                                })({}, O)),
+                                                })({}, x)),
                                                 (t = t =
                                                     {
                                                         userId: l.id,

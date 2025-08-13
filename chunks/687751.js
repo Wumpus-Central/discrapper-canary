@@ -10,8 +10,8 @@ var i = n(481060),
     u = n(920644),
     d = n(208381),
     p = n(723359),
-    h = n(981631);
-function f(e) {
+    f = n(981631);
+function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -71,21 +71,21 @@ class g extends a.Z {
                 let { default: e } = await Promise.all([n.e("6583"), n.e("1337"), n.e("57155")]).then(
                     n.bind(n, 746882),
                 );
-                return (n) => (0, r.jsx)(e, f({ source: t }, n));
+                return (n) => (0, r.jsx)(e, h({ source: t }, n));
             },
             {
                 modalKey: p.dG,
-                onCloseRequest: h.dG4,
+                onCloseRequest: f.dG4,
                 backdropStyle: t === p.L0.NSFW_SERVER ? i.fCB.LIGHTBOX : void 0,
             },
         );
     }
     handleAgeGateSuccess() {
-        (0, i.oav)(p.dG, (e) => (0, r.jsx)(d.Z, f({}, e)));
+        (0, i.oav)(p.dG, (e) => (0, r.jsx)(d.Z, h({}, e)));
     }
     handleAgeGateFailure(e) {
         let { underageMessage: t } = e;
-        (0, i.oav)(p.dG, (e) => (0, r.jsx)(u.Z, f({ underageMessage: t }, e)));
+        (0, i.oav)(p.dG, (e) => (0, r.jsx)(u.Z, h({ underageMessage: t }, e)));
     }
     handleAgeGateModalClose() {
         (0, i.Mr3)(p.dG);
@@ -93,7 +93,7 @@ class g extends a.Z {
     handleGuildUpdate(e) {
         let { guild: t } = e,
             n = s.Z.getGuildId();
-        if (null != n && t.id === n && t.nsfw_level === h.V_K.AGE_RESTRICTED) return void (0, c.I8)(t.id, null);
+        if (null != n && t.id === n && t.nsfw_level === f.V_K.AGE_RESTRICTED) return void (0, c.I8)(t.id, null);
     }
 }
 let m = new g();

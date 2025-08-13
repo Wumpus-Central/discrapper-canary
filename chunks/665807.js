@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f });
+n.d(t, { Z: () => h });
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -9,11 +9,11 @@ var r = n(255367),
     u = n(128449),
     d = n(388032),
     p = n(254580),
-    h = n(882008);
-let f = function (e) {
+    f = n(882008);
+let h = function (e) {
     let { loadId: t } = e,
         n = s.Z.useField("categoryId"),
-        f = (0, l.e7)([c.Z], () => c.Z.getCategoryName(n)),
+        h = (0, l.e7)([c.Z], () => c.Z.getCategoryName(n)),
         g = i.useCallback(() => {
             s.Z.setState({ categoryId: u.Hk }),
                 o.Z.loadCategoryResults({
@@ -23,14 +23,14 @@ let f = function (e) {
                     languageCode: s.Z.getField("languageCode"),
                 });
         }, [t]),
-        m = n === u.Hk ? d.intl.string(d.t.Ivw1Ii) : d.intl.formatToPlainString(d.t["+1WAFR"], { categoryName: f }),
+        m = n === u.Hk ? d.intl.string(d.t.Ivw1Ii) : d.intl.formatToPlainString(d.t["+1WAFR"], { categoryName: h }),
         b = n === u.Hk ? d.intl.string(d.t.aXvEjY) : d.intl.format(d.t.XLioqq, { onClick: g });
     return (0, r.jsxs)("div", {
         className: p.container,
         children: [
             (0, r.jsx)("img", {
                 alt: "",
-                src: h,
+                src: f,
                 className: p.image,
             }),
             (0, r.jsx)(a.X6q, {

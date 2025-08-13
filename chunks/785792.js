@@ -1,27 +1,27 @@
-r.d(t, { b: () => s });
-var n = r(255367),
-    o = r(73800),
-    c = r(120356),
-    i = r.n(c),
-    l = r(481060),
-    a = r(795827);
-function s(e) {
-    let { chunks: t, columns: r, className: c } = e,
-        s = o.useMemo(() => ({ "--secure-frames-columns": r }), [r]);
+n.d(t, { b: () => c });
+var r = n(255367),
+    l = n(73800),
+    i = n(120356),
+    o = n.n(i),
+    s = n(481060),
+    a = n(795827);
+function c(e) {
+    let { chunks: t, columns: n, className: i } = e,
+        c = l.useMemo(() => ({ "--secure-frames-columns": n }), [n]);
     return null == t
-        ? (0, n.jsx)("div", {
+        ? (0, r.jsx)("div", {
               className: a.loading,
-              children: (0, n.jsx)(l.$jN, {}),
+              children: (0, r.jsx)(s.$jN, {}),
           })
-        : (0, n.jsx)("div", {
-              style: s,
-              className: i()(a.code, c),
+        : (0, r.jsx)("div", {
+              style: c,
+              className: o()(a.code, i),
               children: t.map((e, t) =>
-                  (0, n.jsx)(
+                  (0, r.jsx)(
                       "div",
                       {
-                          className: i()(a.chunk, { [a.divider]: t > r - 1 }),
-                          children: (0, n.jsx)(l.Text, {
+                          className: o()(a.chunk, { [a.divider]: t > n - 1 }),
+                          children: (0, r.jsx)(s.Text, {
                               className: a.codeText,
                               variant: "code",
                               color: "text-default",

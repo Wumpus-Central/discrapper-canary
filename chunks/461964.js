@@ -1,7 +1,7 @@
 n.d(t, { default: () => p });
 var l = n(255367),
-    a = n(73800),
-    i = n(481060),
+    i = n(73800),
+    a = n(481060),
     c = n(561716),
     r = n(721383),
     s = n(313201),
@@ -14,26 +14,26 @@ function p(e) {
     let { transitionState: t, onClose: n } = e,
         p = (0, s.Dt)();
     return (
-        a.useEffect(() => {
+        i.useEffect(() => {
             u.r_();
         }, []),
-        (0, l.jsxs)(i.Y0X, {
+        (0, l.jsxs)(a.Y0X, {
             transitionState: t,
             role: "alertdialog",
             "aria-labelledby": p,
             parentComponent: "KeyboardNavigationModal",
             children: [
-                (0, l.jsxs)(i.hzk, {
+                (0, l.jsxs)(a.hzk, {
                     className: h.content,
                     children: [
-                        (0, l.jsx)(i.X6q, {
+                        (0, l.jsx)(a.X6q, {
                             variant: "heading-xl/semibold",
                             id: p,
                             className: h.header,
                             children: _.intl.format(_.t.V4fxrq, {
                                 tab: (e, t) =>
                                     (0, l.jsx)(
-                                        i.M2$,
+                                        a.M2$,
                                         {
                                             shortcut: "tab",
                                             className: h.headerShortcut,
@@ -42,7 +42,7 @@ function p(e) {
                                     ),
                             }),
                         }),
-                        (0, l.jsx)(i.Text, {
+                        (0, l.jsx)(a.Text, {
                             variant: "text-md/normal",
                             children: _.intl.string(_.t["oQA/OD"]),
                         }),
@@ -51,8 +51,8 @@ function p(e) {
                             children: [
                                 (0, l.jsxs)("li", {
                                     children: [
-                                        (0, l.jsx)(i.M2$, { shortcut: r._.binds["0"] }),
-                                        (0, l.jsx)(i.Text, {
+                                        (0, l.jsx)(a.M2$, { shortcut: r._.binds["0"] }),
+                                        (0, l.jsx)(a.Text, {
                                             variant: "text-md/normal",
                                             children: _.intl.string(_.t["43Qn2t"]),
                                         }),
@@ -60,8 +60,8 @@ function p(e) {
                                 }),
                                 (0, l.jsxs)("li", {
                                     children: [
-                                        (0, l.jsx)(i.M2$, { shortcut: c.$.binds["0"] }),
-                                        (0, l.jsx)(i.Text, {
+                                        (0, l.jsx)(a.M2$, { shortcut: c.$.binds["0"] }),
+                                        (0, l.jsx)(a.Text, {
                                             variant: "text-md/normal",
                                             children: _.intl.string(_.t.zJg4FR),
                                         }),
@@ -69,14 +69,14 @@ function p(e) {
                                 }),
                             ],
                         }),
-                        (0, l.jsx)(i.Text, {
+                        (0, l.jsx)(a.Text, {
                             variant: "text-md/normal",
                             children: _.intl.format(_.t.EWFVSU, { link: o.Z.getArticleURL(d.BhN.KEYBOARD_NAVIGATION) }),
                         }),
                     ],
                 }),
-                (0, l.jsx)(i.mzw, {
-                    children: (0, l.jsx)(i.zxk, {
+                (0, l.jsx)(a.mzw, {
+                    children: (0, l.jsx)(a.zxk, {
                         variant: "primary",
                         size: "sm",
                         text: _.intl.string(_.t.BddRzc),

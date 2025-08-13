@@ -10,8 +10,8 @@ var r = n(73800),
 function d(e, t, n) {
     let d = (0, i.e7)([l.Z], () => l.Z.hasLoadedExperiments),
         p = (0, i.e7)([s.Z], () => s.Z.skipNumCategories),
-        h = (0, u.hv)("useMaybeFetchCollectiblesShopHome"),
-        f = (0, a.isDesktop)() || (0, a.isWeb)(),
+        f = (0, u.hv)("useMaybeFetchCollectiblesShopHome"),
+        h = (0, a.isDesktop)() || (0, a.isWeb)(),
         [g, m, b, _, O, E, y] = (0, i.Wu)([c.Z], () => {
             var t, n;
             return [
@@ -54,8 +54,8 @@ function d(e, t, n) {
                 })({}, t)),
                 (n = n =
                     {
-                        variantsReturnStyle: h,
-                        includeBundles: f,
+                        variantsReturnStyle: f,
+                        includeBundles: h,
                         includePopularPicks: !0,
                         includeDynamicBlocks: !0,
                         shopHomeConfig: y,
@@ -75,7 +75,7 @@ function d(e, t, n) {
                       }),
                 e
             );
-        }, [t, h, f, y, p]),
+        }, [t, f, h, y, p]),
         I = (0, r.useMemo)(() => !(0, o.oc)(_, v), [_, v]),
         C = (0, r.useMemo)(() => Date.now() - m < 600000, [m]);
     return (

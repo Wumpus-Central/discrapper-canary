@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f }), n(388685);
+n.d(t, { Z: () => h }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -9,7 +9,7 @@ var r = n(255367),
     u = n(921944),
     d = n(388032),
     p = n(241626);
-class h extends i.PureComponent {
+class f extends i.PureComponent {
     render() {
         let { guild: e, memberCount: t, markAsDismissed: n } = this.props;
         return (0, r.jsx)(a.Z, {
@@ -48,7 +48,7 @@ class h extends i.PureComponent {
                 : (this[t] = n);
     }
 }
-let f = l.ZP.connectStores([s.Z], (e) => {
+let h = l.ZP.connectStores([s.Z], (e) => {
     let { guild: t } = e;
     return { memberCount: s.Z.getMemberCount(t.id) };
-})(h);
+})(f);

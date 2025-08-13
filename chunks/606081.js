@@ -60,16 +60,16 @@ function d(e, t) {
 function p(e) {
     return d("Thing", e);
 }
-function h(e) {
+function f(e) {
     return d("Product", e);
 }
-h.Image = function (e) {
+f.Image = function (e) {
     if (null == e) return null;
     let t = e.filter((e) => null != e && "" !== e);
     return 0 === t.length ? null : 1 === t.length ? t[0] : t;
 };
-var f =
-        (((i = f || {}).DAMAGED = "http://schema.org/DamagedCondition"),
+var h =
+        (((i = h || {}).DAMAGED = "http://schema.org/DamagedCondition"),
         (i.NEW = "http://schema.org/NewCondition"),
         (i.REFURBISHED = "http://schema.org/RefurbishedCondition"),
         (i.USED = "http://schema.org/UsedCondition"),
@@ -88,7 +88,7 @@ var f =
 function m(e) {
     return d("Offer", e);
 }
-(m.ItemConditions = f), (m.ItemAvailability = g);
+(m.ItemConditions = h), (m.ItemAvailability = g);
 var b = (((a = b || {}).YEARLY = "ANN"), (a.MONTHLY = "MON"), a);
 function _(e) {
     return d("QuantitativeValue", e);
@@ -115,7 +115,7 @@ c(O, "Thing", p),
     c(O, "ItemPage", function (e) {
         return d("ItemPage", e);
     }),
-    c(O, "Product", h),
+    c(O, "Product", f),
     c(O, "Offer", m),
     c(O, "Rating", function (e) {
         return d("Rating", e);

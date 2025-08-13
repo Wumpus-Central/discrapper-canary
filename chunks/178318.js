@@ -1,5 +1,5 @@
 let r, i;
-n.d(t, { Z: () => A }), n(49124), n(388685), n(35282), n(65234), n(111804), n(490233), n(97749), n(539854), n(415506);
+n.d(t, { Z: () => Z }), n(49124), n(388685), n(35282), n(65234), n(111804), n(490233), n(97749), n(539854), n(415506);
 var l = n(836560),
     a = n(392711),
     o = n.n(a),
@@ -8,8 +8,8 @@ var l = n(836560),
     u = n(857192),
     d = n(591759),
     p = n(998502),
-    h = n(996106),
-    f = n(901077),
+    f = n(996106),
+    h = n(901077),
     g = n(76238),
     m = n(852926),
     b = n(186901),
@@ -110,7 +110,7 @@ function P(e, t, n, r) {
 class j extends g.Z {
     send(e) {
         (u.default.isLoggingOverlayEvents || (e.cmd !== _.Etm.OVERLAY && e.evt !== _.zMe.OVERLAY)) &&
-            I.info("Socket Emit: ".concat(this.id), (0, f.Z)(e)),
+            I.info("Socket Emit: ".concat(this.id), (0, h.Z)(e)),
             null != r && "etf" === this.encoding
                 ? this._socket.send(r.pack(e), { binary: !0 })
                 : this._socket.send(JSON.stringify(e));
@@ -120,9 +120,9 @@ class j extends g.Z {
     }
     constructor(e, t, n) {
         if ((super("ws", t, n), E(this, "_socket", void 0), -1 === ["etf", "json"].indexOf(n)))
-            throw new h.Z({ closeCode: _.$VG.INVALID_ENCODING }, "Invalid Encoding: ".concat(n));
+            throw new f.Z({ closeCode: _.$VG.INVALID_ENCODING }, "Invalid Encoding: ".concat(n));
         if ("etf" === n && null == r)
-            throw new h.Z({ closeCode: _.$VG.INVALID_ENCODING }, "Erlpack cannot be used on this client");
+            throw new f.Z({ closeCode: _.$VG.INVALID_ENCODING }, "Erlpack cannot be used on this client");
         this._socket = e;
     }
 }
@@ -136,11 +136,11 @@ class x extends g.Z {
     }
     constructor(e, t, n, r) {
         if ((super("http", n, r), E(this, "_sendCallback", void 0), E(this, "_closeCallback", void 0), "json" !== r))
-            throw new h.Z({ closeCode: _.$VG.INVALID_ENCODING }, "Invalid Encoding: ".concat(r));
+            throw new f.Z({ closeCode: _.$VG.INVALID_ENCODING }, "Invalid Encoding: ".concat(r));
         (this._sendCallback = e), (this._closeCallback = t);
     }
 }
-class Z extends l.EventEmitter {
+class A extends l.EventEmitter {
     handleRequest(e, t) {
         let [n, r] = S(e.url).split("?"),
             i = S(e.method);
@@ -219,7 +219,7 @@ class Z extends l.EventEmitter {
             return;
         }
         (u.default.isLoggingOverlayEvents || n.cmd !== _.Etm.OVERLAY) &&
-            I.info("Socket Message: ".concat(e.id), (0, f.Z)(n)),
+            I.info("Socket Message: ".concat(e.id), (0, h.Z)(n)),
             this.emit("request", e, n);
     }
     constructor() {
@@ -239,4 +239,4 @@ class Z extends l.EventEmitter {
         new y.ws.Server(n).on("connection", (e) => this.handleConnection(e));
     }
 }
-let A = new Z();
+let Z = new A();

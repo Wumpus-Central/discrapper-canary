@@ -40,7 +40,7 @@ function y(e) {
     }
     return e;
 }
-function O(e, t) {
+function x(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -58,7 +58,7 @@ function O(e, t) {
         e
     );
 }
-function x(e) {
+function O(e) {
     var { applicationId: t, userId: n, gameName: a } = e,
         c = (function (e, t) {
             if (null == e) return {};
@@ -89,10 +89,10 @@ function x(e) {
         trackEntryPointImpression: !0,
     });
     return null == s
-        ? (0, r.jsx)(l.X6q, O(y({}, c), { children: a }))
+        ? (0, r.jsx)(l.X6q, x(y({}, c), { children: a }))
         : (0, r.jsx)(
               l.X6q,
-              O(y({}, c), {
+              x(y({}, c), {
                   children: (0, r.jsx)(l.P3F, {
                       onClick: s,
                       className: j.clickableText,
@@ -172,9 +172,9 @@ function _(e) {
                       className: j.details,
                       children: [
                           p
-                              ? (0, r.jsx)(l.X6q, O(y({}, Z), { children: _ }))
+                              ? (0, r.jsx)(l.X6q, x(y({}, Z), { children: _ }))
                               : (0, r.jsx)(
-                                    x,
+                                    O,
                                     y(
                                         {
                                             applicationId: P,

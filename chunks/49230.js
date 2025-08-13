@@ -1,5 +1,5 @@
 n.d(t, {
-    $: () => f,
+    $: () => h,
     h: () => g,
 }),
     n(388685);
@@ -16,17 +16,17 @@ try {
     d = (0, a.N)();
 } catch (e) {}
 let p = new Map();
-async function h(e) {
+async function f(e) {
     let t = p.get(e);
     if (null != t) return t;
     let n = await (await fetch(e)).arrayBuffer(),
         r = await (null == d ? void 0 : d.decodeAudioData(n));
     return null != r && p.set(e, r), r;
 }
-function f(e) {
+function h(e) {
     let { soundKey: t, soundURL: n, soundVolume: r, reportSoundStartedPlaying: a } = e;
     return new Promise(async (e) => {
-        let o = await h(n);
+        let o = await f(n);
         null == o && e(),
             c.Z.getMediaEngine().eachConnection((n) => {
                 n.context === l.Yn.DEFAULT &&

@@ -2,9 +2,10 @@ n.d(t, {
     $Z: () => D,
     Cp: () => Z,
     F_: () => A,
-    Se: () => L,
-    tF: () => k,
-    yC: () => w,
+    Se: () => M,
+    ZN: () => w,
+    tF: () => L,
+    yC: () => k,
 }),
     n(413496),
     n(433524),
@@ -166,16 +167,20 @@ function D() {
 function Z() {
     P(v.rMx.QUICKSWITCHER_CLOSED), R();
 }
-function w(e) {
-    r.Z.dispatch(T({ type: "QUICKSWITCHER_SEARCH" }, A(e)));
+function w() {
+    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "KEYBIND";
+    O.Z.isOpen() ? Z() : D(e);
 }
 function k(e) {
+    r.Z.dispatch(T({ type: "QUICKSWITCHER_SEARCH" }, A(e)));
+}
+function L(e) {
     r.Z.dispatch({
         type: "QUICKSWITCHER_SELECT",
         selectedIndex: e,
     });
 }
-function L(e) {
+function M(e) {
     let t,
         n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     R(), (0, i.pTH)(), P(v.rMx.QUICKSWITCHER_RESULT_SELECTED, e);

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => f });
 var r = n(255367);
 n(73800);
 var i = n(481060),
@@ -10,7 +10,7 @@ var i = n(481060),
     u = n(388032),
     d = n(488822),
     p = n(932478);
-let h = (e) => {
+let f = (e) => {
     let t = (0, r.jsx)(i.M2$, {
         shortcut: l.$.binds["0"],
         keyClassName: d.key,

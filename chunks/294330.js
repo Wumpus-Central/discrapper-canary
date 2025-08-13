@@ -15,8 +15,8 @@ var r = n(255367),
     u = n(239091),
     d = n(410030),
     p = n(686546),
-    h = n(66637),
-    f = n(782738),
+    f = n(66637),
+    h = n(782738),
     g = n(371260),
     m = n(372769),
     b = n(134432),
@@ -31,11 +31,11 @@ var r = n(255367),
     N = n(755386);
 function T(e) {
     let { guild: t, onClick: l, onView: o } = e,
-        [f, g] = i.useState(!1),
+        [h, g] = i.useState(!1),
         [O, T] = i.useState(!1),
         [P, j] = i.useState(!1),
         x = i.useRef(null),
-        Z = i.useCallback(async () => {
+        A = i.useCallback(async () => {
             T(!0);
             try {
                 await l(t.id);
@@ -43,11 +43,11 @@ function T(e) {
                 T(!1);
             }
         }, [t.id, l]),
-        A = i.useCallback(
+        Z = i.useCallback(
             (e) => {
-                e && !f && (g(!0), null == o || o(t.id));
+                e && !h && (g(!0), null == o || o(t.id));
             },
-            [t.id, f, o],
+            [t.id, h, o],
         ),
         w = i.useCallback(
             (e) => {
@@ -141,13 +141,13 @@ function T(e) {
                 }),
             (0, r.jsx)(s.$, {
                 innerRef: x,
-                onChange: A,
-                active: !f,
+                onChange: Z,
+                active: !h,
                 threshold: 0.55,
-                children: (0, r.jsxs)(h.Z, {
+                children: (0, r.jsxs)(f.Z, {
                     ref: x,
                     className: I.card,
-                    onClick: Z,
+                    onClick: A,
                     disabled: O,
                     onContextMenu: w,
                     "aria-label": v.intl.string(v.t["M9wQ+f"]),
@@ -278,7 +278,7 @@ function j(e) {
                           {
                               state: n,
                               cleanUp: i,
-                              children: (0, r.jsx)(f.Z, { className: I.placeholder }),
+                              children: (0, r.jsx)(h.Z, { className: I.placeholder }),
                           },
                           e,
                       )

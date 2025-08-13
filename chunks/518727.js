@@ -1,6 +1,6 @@
 n.d(t, {
-    P: () => O,
-    Z: () => v,
+    P: () => I,
+    Z: () => T,
 }),
     n(388685);
 var r = n(255367),
@@ -20,124 +20,156 @@ var r = n(255367),
     g = n(45572),
     E = n(402426),
     b = n(981631),
-    y = n(320994);
-let O = 1000,
-    v = (e) => {
+    y = n(320994),
+    O = n(293914),
+    v = n(503019);
+let I = 1000,
+    T = (e) => {
         let { children: t, isConfirmationStep: n } = e,
             o = (0, s.e7)([u.Z], () => u.Z.useReducedMotion),
-            [O, v] = (0, i.useState)("entry"),
-            I = (0, i.useRef)(null),
-            T = (0, i.useRef)(null),
-            S = (0, i.useCallback)(() => {
-                if ("entry" === O && (v("idle"), null != I.current)) {
+            [I, T] = (0, i.useState)("entry"),
+            S = (0, i.useRef)(null),
+            A = (0, i.useRef)(null),
+            N = (0, i.useCallback)(() => {
+                if ("entry" === I && (T("idle"), null != S.current)) {
                     var e;
-                    null == (e = I.current) || e.play();
+                    null == (e = S.current) || e.play();
                 }
-            }, [O]),
-            A = (0, i.useCallback)(() => {
-                if ("exit" !== O && (v("exit"), null != T.current)) {
+            }, [I]),
+            C = (0, i.useCallback)(() => {
+                if ("exit" !== I && (T("exit"), null != A.current)) {
                     var e;
-                    null == (e = T.current) || e.play();
+                    null == (e = A.current) || e.play();
                 }
-            }, [O]),
-            { isGift: N } = (0, h.wD)(),
-            { wasTier2PremiumBeforePurchase: C, selectedSkuId: R, purchaseState: P } = (0, m.JL)(),
-            [w, D] = (0, i.useState)(!1);
+            }, [I]),
+            { isGift: R } = (0, h.wD)(),
+            { wasTier2PremiumBeforePurchase: P, selectedSkuId: w, purchaseState: D } = (0, m.JL)(),
+            [L, x] = (0, i.useState)(!1);
         (0, i.useEffect)(() => {
-            P === g.A.PURCHASING && D(!0);
-        }, [P]);
-        let L = (0, f.P)(N, !!C, R),
-            { mediaUrls: x, isSuccess: M } = (0, E.Z)(!o && L && w),
-            k = (0, i.useRef)(null),
-            [j, U] = (0, i.useState)(!1),
+            D === g.A.PURCHASING && x(!0);
+        }, [D]);
+        let M = (0, f.P)(R, !!P, w),
+            { mediaUrls: k, isSuccess: j } = (0, E.Z)(!o && M && L),
+            U = (0, i.useRef)(null),
             [G, B] = (0, i.useState)(!1),
             [Z, F] = (0, i.useState)(!1),
-            [V, H] = (0, i.useState)(!1);
-        return ((0, i.useEffect)(() => {
-            if (!o && L && n && !V) {
-                if (!M) {
-                    H(!0), _.default.track(b.rMx.PREMIUM_BRAND_REFRESH_WOW_MOMENT_ASSETS_NOT_LOADED_ON_CONFIRMATION);
-                    return;
-                }
+            [V, H] = (0, i.useState)("none"),
+            [Y, W] = (0, i.useState)(!1);
+        if (
+            ((0, i.useEffect)(() => {
+                let e;
                 M &&
-                    (F(!0),
-                    B(!0),
+                    n &&
+                    !Y &&
+                    (o || !j
+                        ? (H("static"),
+                          o ||
+                              (W(!0),
+                              _.default.track(
+                                  b.rMx.PREMIUM_BRAND_REFRESH_WOW_MOMENT_ASSETS_NOT_LOADED_ON_CONFIRMATION,
+                              )),
+                          (e = !1))
+                        : (H("animated"), F(!0), (e = !0)),
                     c.Z.dispatch({
                         type: "WOW_MOMENT_CONFIRMATION_SET_IS_DISPLAYING_WOW_MOMENT_CONFIRMATION",
                         value: !0,
+                        isAnimated: e,
                     }),
                     _.default.track(b.rMx.PREMIUM_BRAND_REFRESH_WOW_MOMENT_VIEWED));
-            }
-        }, [o, L, n, M, V]),
-        (0, i.useEffect)(() => {
-            function e() {
-                U(!0), A();
-            }
-            return (
-                p.S.subscribe(b.CkL.PREMIUM_PAYMENT_MODAL_CLOSED, e),
-                () => {
-                    p.S.unsubscribe(b.CkL.PREMIUM_PAYMENT_MODAL_CLOSED, e);
+            }, [o, M, n, j, Y]),
+            (0, i.useEffect)(() => {
+                function e() {
+                    B(!0), C();
                 }
-            );
-        }, [A]),
-        (0, i.useEffect)(
-            () => () => {
-                c.Z.dispatch({
-                    type: "WOW_MOMENT_CONFIRMATION_SET_IS_DISPLAYING_WOW_MOMENT_CONFIRMATION",
-                    value: !1,
-                });
-            },
-            [],
-        ),
-        Z)
-            ? (0, r.jsxs)("div", {
+                return (
+                    p.S.subscribe(b.CkL.PREMIUM_PAYMENT_MODAL_CLOSED, e),
+                    () => {
+                        p.S.unsubscribe(b.CkL.PREMIUM_PAYMENT_MODAL_CLOSED, e);
+                    }
+                );
+            }, [C]),
+            (0, i.useEffect)(
+                () => () => {
+                    c.Z.dispatch({
+                        type: "WOW_MOMENT_CONFIRMATION_SET_IS_DISPLAYING_WOW_MOMENT_CONFIRMATION",
+                        value: !1,
+                        isAnimated: !1,
+                    });
+                },
+                [],
+            ),
+            "animated" === V)
+        )
+            return (0, r.jsxs)("div", {
+                children: [
+                    (0, r.jsxs)("div", {
+                        className: y.videoContainer,
+                        children: [
+                            (0, r.jsx)("div", {
+                                className: y.entryAnimationContainer,
+                                children: (0, r.jsx)(d.Z, {
+                                    playsInline: !0,
+                                    muted: !0,
+                                    autoPlay: !0,
+                                    onEnded: N,
+                                    className: a()(y.video, "entry" === I ? y.visible : y.hidden),
+                                    children: (0, r.jsx)("source", { src: k.modalGlowEntry }),
+                                }),
+                            }),
+                            (0, r.jsx)(d.Z, {
+                                ref: S,
+                                playsInline: !0,
+                                muted: !0,
+                                loop: !0,
+                                className: a()(y.video, "idle" === I ? y.visible : y.hidden),
+                                children: (0, r.jsx)("source", { src: k.modalGlowIdle }),
+                            }),
+                            (0, r.jsx)(d.Z, {
+                                ref: A,
+                                playsInline: !0,
+                                muted: !0,
+                                className: a()(y.video, "exit" === I ? y.visible : y.hidden),
+                                children: (0, r.jsx)("source", { src: k.modalGlowExit }),
+                            }),
+                        ],
+                    }),
+                    (0, r.jsx)("div", {
+                        className: y.wowAnimation,
+                        children: (0, r.jsx)(l.zec, {
+                            fit: "layout",
+                            ref: U,
+                            dataBinding: {
+                                ExitTrigger: G,
+                                EntryTrigger: Z,
+                            },
+                        }),
+                    }),
+                    (0, r.jsx)("div", {
+                        className: "exit" === I ? y.exitAnimationContainer : y.entryAnimationContainer,
+                        children: t,
+                    }),
+                ],
+            });
+        let K = !G;
+        return "static" === V
+            ? (0, r.jsxs)(r.Fragment, {
                   children: [
-                      (0, r.jsxs)("div", {
-                          className: y.videoContainer,
-                          children: [
-                              (0, r.jsx)("div", {
-                                  className: y.entryAnimationContainer,
-                                  children: (0, r.jsx)(d.Z, {
-                                      playsInline: !0,
-                                      muted: !0,
-                                      autoPlay: !0,
-                                      onEnded: S,
-                                      className: a()(y.video, "entry" === O ? y.visible : y.hidden),
-                                      children: (0, r.jsx)("source", { src: x.modalGlowEntry }),
+                      K &&
+                          (0, r.jsxs)(r.Fragment, {
+                              children: [
+                                  (0, r.jsx)("img", {
+                                      src: O.Z,
+                                      alt: "",
+                                      className: y.staticGlow,
                                   }),
-                              }),
-                              (0, r.jsx)(d.Z, {
-                                  ref: I,
-                                  playsInline: !0,
-                                  muted: !0,
-                                  loop: !0,
-                                  className: a()(y.video, "idle" === O ? y.visible : y.hidden),
-                                  children: (0, r.jsx)("source", { src: x.modalGlowIdle }),
-                              }),
-                              (0, r.jsx)(d.Z, {
-                                  ref: T,
-                                  playsInline: !0,
-                                  muted: !0,
-                                  className: a()(y.video, "exit" === O ? y.visible : y.hidden),
-                                  children: (0, r.jsx)("source", { src: x.modalGlowExit }),
-                              }),
-                          ],
-                      }),
-                      (0, r.jsx)("div", {
-                          className: y.wowAnimation,
-                          children: (0, r.jsx)(l.zec, {
-                              fit: "layout",
-                              ref: k,
-                              dataBinding: {
-                                  ExitTrigger: j,
-                                  EntryTrigger: G,
-                              },
+                                  (0, r.jsx)("img", {
+                                      src: v.Z,
+                                      alt: "",
+                                      className: y.staticWumpusWithTrinkets,
+                                  }),
+                              ],
                           }),
-                      }),
-                      (0, r.jsx)("div", {
-                          className: "exit" === O ? y.exitAnimationContainer : y.entryAnimationContainer,
-                          children: t,
-                      }),
+                      t,
                   ],
               })
             : t;

@@ -15,7 +15,7 @@ function b(e) {
     let { user: t, guildId: n, channelId: b, onClose: g } = e,
         { mutualFriends: j } = (0, s.Z)(t),
         { analyticsLocations: y } = (0, a.ZP)(),
-        { context: O, trackUserProfileAction: x } = (0, c.KZ)(),
+        { context: x, trackUserProfileAction: O } = (0, c.KZ)(),
         h = (0, o.Z)();
     l.useEffect(() => {
         (0, d.Z)(t.id, h);
@@ -47,7 +47,7 @@ function b(e) {
                         });
                 }
                 return e;
-            })({}, O)),
+            })({}, x)),
             (n = n =
                 {
                     userId: e,
@@ -98,7 +98,7 @@ function b(e) {
                                 guildId: n,
                                 channelId: b,
                                 onSelect: () => {
-                                    null == g || g(), x({ action: "PRESS_MUTUAL_FRIEND" }), v(l.id);
+                                    null == g || g(), O({ action: "PRESS_MUTUAL_FRIEND" }), v(l.id);
                                 },
                             },
                             t,

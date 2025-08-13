@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f });
+n.d(t, { Z: () => h });
 var r = n(255367);
 n(73800);
 var i = n(990547),
@@ -10,10 +10,10 @@ var i = n(990547),
     u = n(981631),
     d = n(388032),
     p = n(959481);
-function h() {
+function f() {
     (0, c.qV)(), (0, o.uL)(u.Z5c.LOGIN, { source: "existing_user_age_gate_underage" });
 }
-function f(e) {
+function h(e) {
     let { underageMessage: t, transitionState: o } = e,
         c = (0, a.Dt)();
     return (0, r.jsxs)(l.Y0X, {
@@ -65,7 +65,7 @@ function f(e) {
                     size: "sm",
                     text: d.intl.string(d.t.szzQ6O),
                     fullWidth: !0,
-                    onClick: h,
+                    onClick: f,
                 }),
             }),
         ],

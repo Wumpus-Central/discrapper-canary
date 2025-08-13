@@ -1,4 +1,4 @@
-n.d(t, { ZP: () => V }), n(539854), n(388685);
+n.d(t, { ZP: () => B }), n(539854), n(388685);
 var r,
     i = n(392711),
     l = n.n(i),
@@ -9,8 +9,8 @@ var r,
     u = n(353926),
     d = n(5254),
     p = n(91896),
-    h = n(441623),
-    f = n(199902),
+    f = n(441623),
+    h = n(199902),
     g = n(271383),
     m = n(430824),
     b = n(158776),
@@ -77,7 +77,7 @@ function N(e) {
         status: b.Z.getStatus(e),
         isMobile: b.Z.isMobileOnline(e),
         activities: b.Z.getActivities(e),
-        applicationStream: f.Z.getAnyStreamForUser(e),
+        applicationStream: h.Z.getAnyStreamForUser(e),
     };
 }
 function T(e) {
@@ -175,7 +175,7 @@ class j {
                                 spam: _.Z.isSpam(n),
                                 ignoredUser: _.Z.isIgnored(n),
                                 giftIntentType:
-                                    r === E.OGo.FRIEND && h.Z.isTopAffinityFriendAnniversary({ userId: n })
+                                    r === E.OGo.FRIEND && f.Z.isTopAffinityFriendAnniversary({ userId: n })
                                         ? y.hX.FRIEND_ANNIVERSARY
                                         : void 0,
                                 applicationId: _.Z.getOriginApplicationId(n),
@@ -302,19 +302,19 @@ class j {
     }
 }
 let x = !0,
-    Z = !1,
-    A = E.pJs.ONLINE,
+    A = !1,
+    Z = E.pJs.ONLINE,
     w = new j(),
     L = !0,
     R = !1;
 function D() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-    x && (e || (A !== E.pJs.ONLINE && A !== E.pJs.ADD_FRIEND)) && !Z && ((x = !1), (Z = !0), s.Z.fetchRelationships());
+    x && (e || (Z !== E.pJs.ONLINE && Z !== E.pJs.ADD_FRIEND)) && !A && ((x = !1), (A = !0), s.Z.fetchRelationships());
 }
 function k() {
-    if (((x = !0), L ? (Z = !1) : D(), (w = w.reset()), R)) return;
+    if (((x = !0), L ? (A = !1) : D(), (w = w.reset()), R)) return;
     let e = w.getRelationshipCounts();
-    A = 0 === e[E.OGo.FRIEND] ? (0 !== e[E.OGo.PENDING_INCOMING] ? E.pJs.PENDING : E.pJs.ADD_FRIEND) : E.pJs.ONLINE;
+    Z = 0 === e[E.OGo.FRIEND] ? (0 !== e[E.OGo.PENDING_INCOMING] ? E.pJs.PENDING : E.pJs.ADD_FRIEND) : E.pJs.ONLINE;
 }
 function M() {
     w = L ? new j() : w.reset();
@@ -326,42 +326,42 @@ function U(e) {
 }
 class G extends (r = a.ZP.Store) {
     initialize() {
-        this.waitFor(_.Z, b.Z, O.default, m.Z, g.ZP, f.Z, d.Z, u.Z),
+        this.waitFor(_.Z, b.Z, O.default, m.Z, g.ZP, h.Z, d.Z, u.Z),
             this.syncWith([_.Z], M),
             this.syncWith([p.Z], M),
             this.syncWith([d.Z], M),
-            this.syncWith([h.Z], M),
+            this.syncWith([f.Z], M),
             this.syncWith([O.default], U(S)),
-            this.syncWith([b.Z, f.Z], U(N)),
+            this.syncWith([b.Z, h.Z], U(N)),
             k();
     }
     getState() {
         return {
-            fetching: Z,
-            section: A,
+            fetching: A,
+            section: Z,
             rows: w,
         };
     }
 }
 v(G, "displayName", "FriendsStore");
-let V = new G(o.Z, {
+let B = new G(o.Z, {
     CONNECTION_OPEN: function () {
         k();
     },
     FRIENDS_SET_SECTION: function (e) {
-        (A = e.section), D();
+        (Z = e.section), D();
     },
     CHANNEL_SELECT: function (e) {
         let { channelId: t } = e;
         return (L = null != t), M(), !L;
     },
     LOAD_RELATIONSHIPS_SUCCESS: function () {
-        Z = !1;
+        A = !1;
     },
     LOAD_RELATIONSHIPS_FAILURE: function () {
-        (x = !0), (Z = !0);
+        (x = !0), (A = !0);
     },
     FRIENDS_SET_INITIAL_SECTION: function (e) {
-        (A = e.section), (R = !0);
+        (Z = e.section), (R = !0);
     },
 });

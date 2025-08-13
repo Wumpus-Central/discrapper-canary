@@ -52,11 +52,11 @@ let g = {
             i = (0, u.be)(),
             f = (0, c.e7)([d.Z], () => d.Z.useReducedMotion),
             [p, b] = l.useState(!1),
-            [y, O] = l.useState(null);
+            [y, x] = l.useState(null);
         l.useEffect(() => {
-            null !== i ? (b(!0), O(g[i]), s.uvj.announce(g[i].message)) : b(!1);
+            null !== i ? (b(!0), x(g[i]), s.uvj.announce(g[i].message)) : b(!1);
         }, [i]);
-        let x = (0, s.Yzy)(
+        let O = (0, s.Yzy)(
             p,
             {
                 from: {
@@ -90,7 +90,7 @@ let g = {
                 }
             }, [p, n]),
             (0, r.jsx)(r.Fragment, {
-                children: x(
+                children: O(
                     (e, n) =>
                         n &&
                         null !== y &&

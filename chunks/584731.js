@@ -21,7 +21,7 @@ function u(e, t, n) {
 }
 let d = -1 / 0,
     p = new a.Z("MessagePreviewStore");
-class h extends r.ZP.Store {
+class f extends r.ZP.Store {
     isLatest(e, t) {
         var n;
         let r = this.guilds.get(null != e ? e : null);
@@ -131,4 +131,4 @@ class h extends r.ZP.Store {
             u(this, "generation", 0);
     }
 }
-new h();
+new f();

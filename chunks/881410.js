@@ -38,7 +38,7 @@ function f(e) {
         p = l.useRef(null),
         m = l.useCallback(
             (e) => {
-                (0, c.ES)(n, e);
+                (0, c.ES)(n, { applicationId: e });
             },
             [n],
         ),

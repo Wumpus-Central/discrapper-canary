@@ -9,8 +9,8 @@ var r = n(255367),
     u = n(726542),
     d = n(620662),
     p = n(841784),
-    h = n(802856),
-    f = n(594190),
+    f = n(802856),
+    h = n(594190),
     g = n(592745),
     m = n(553795),
     b = n(757266),
@@ -73,7 +73,7 @@ function P(e) {
                 n = (0, l.e7)([m.Z], () => m.Z.getAccounts().some((e) => e.type === u.Z.get(I.ABu.XBOX).type)),
                 i = t.some((e) => {
                     let { activity: t } = e;
-                    return (0, h.Z)(t);
+                    return (0, f.Z)(t);
                 });
             return n || !i
                 ? null
@@ -87,7 +87,7 @@ function P(e) {
             let { currentActivities: t } = e,
                 n = i.useContext(E.AnalyticsContext);
             return (0, l.Wu)(
-                [f.ZP, _.Z, g.Z, O.Z, b.Z],
+                [h.ZP, _.Z, g.Z, O.Z, b.Z],
                 () =>
                     t
                         .filter((e) => !(0, p.Z)(e.activity))
@@ -106,7 +106,7 @@ function P(e) {
                                     branchId: null != i ? i.branchId : null,
                                 }),
                                 isLaunching: g.Z.launchingGames.has(r.id),
-                                isRunning: f.ZP.getRunningVerifiedApplicationIds().includes(r.id),
+                                isRunning: h.ZP.getRunningVerifiedApplicationIds().includes(r.id),
                                 location: n.location,
                             });
                         }),

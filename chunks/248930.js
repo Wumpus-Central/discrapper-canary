@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x });
+n.d(t, { Z: () => O });
 var r = n(255367),
     l = n(73800),
     i = n(120356),
@@ -15,9 +15,9 @@ var r = n(255367),
     g = n(382405),
     j = n(386019),
     y = n(228168),
-    O = n(861242);
-function x(e) {
-    let { user: t, entry: n, profileGuildId: i, className: x, onClose: h, hideContextMenu: v = !1 } = e,
+    x = n(861242);
+function O(e) {
+    let { user: t, entry: n, profileGuildId: i, className: O, onClose: h, hideContextMenu: v = !1 } = e,
         _ = l.useRef(null),
         { analyticsLocations: I } = (0, c.ZP)(a.Z.USER_PROFILE_RECENT_ACTIVITY_CARD),
         { themeType: P } = (0, m.z)(),
@@ -47,7 +47,7 @@ function x(e) {
                           (0, r.jsx)(p.Z, {
                               ref: _,
                               user: t,
-                              className: O.toolbarContainer,
+                              className: x.toolbarContainer,
                               interactionSourceId: n.id,
                               sourceType: y.n_.ACTIVITY,
                               onAction: Z,
@@ -66,7 +66,7 @@ function x(e) {
                                   entry: n,
                                   user: t,
                                   onClose: h,
-                                  className: o()(x, { [O.hoisted]: E === y.n_.ACTIVITY && T === n.id }),
+                                  className: o()(O, { [x.hoisted]: E === y.n_.ACTIVITY && T === n.id }),
                               }),
                           }),
                   }),

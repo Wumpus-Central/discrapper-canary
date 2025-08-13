@@ -166,7 +166,7 @@ function C(e) {
                                         didSucceed: e,
                                     });
                             };
-                            _.Z.isDisplayingWowMomentConfirmation
+                            _.Z.isDisplayingWowMomentConfirmation && _.Z.isAnimated
                                 ? setTimeout(() => {
                                       n();
                                   }, b.P)
@@ -203,7 +203,7 @@ function C(e) {
                 ee ||
                     ((ee = !0),
                     g.S.dispatch(y.CkL.PREMIUM_PAYMENT_MODAL_CLOSED),
-                    _.Z.isDisplayingWowMomentConfirmation
+                    _.Z.isDisplayingWowMomentConfirmation && _.Z.isAnimated
                         ? setTimeout(() => {
                               (0, s.Mr3)(J);
                           }, b.P)

@@ -12,10 +12,10 @@ function u(e) {
         n = null == t ? void 0 : t.filter((e) => null != (0, c.z)(e)),
         i = (0, l.useRef)(new Map()),
         o = (0, l.useRef)(null),
-        [s, u] = (0, l.useState)(0),
-        [g, j] = (0, l.useState)(!1),
-        { trackUserProfileAction: y } = (0, a.KZ)(),
-        O = b(o, n, i, u);
+        [u, g] = (0, l.useState)(0),
+        [j, y] = (0, l.useState)(!1),
+        { trackUserProfileAction: x } = (0, a.KZ)(),
+        O = b(o, n, i, g);
     if (
         ((0, l.useEffect)(
             () => (
@@ -30,33 +30,37 @@ function u(e) {
         null == n || 0 === n.length)
     )
         return null;
-    let x = g ? n : n.slice(0, n.length - s);
+    let h = j ? n : n.slice(0, n.length - u);
     return (0, r.jsxs)("div", {
         className: d.tagListContainer,
         children: [
-            x.map((e) =>
-                (0, r.jsx)(
-                    f,
-                    {
-                        tag: e,
-                        ref: (t) => {
-                            null != t && i.current.set(e, t);
+            (0, r.jsx)("ul", {
+                className: d.tagList,
+                "aria-label": s.intl.string(s.t.EfjTi4),
+                children: h.map((e) =>
+                    (0, r.jsx)(
+                        f,
+                        {
+                            tag: e,
+                            ref: (t) => {
+                                null != t && i.current.set(e, t);
+                            },
                         },
-                    },
-                    e,
+                        e,
+                    ),
                 ),
-            ),
-            s > 0 &&
-                (g
+            }),
+            u > 0 &&
+                (j
                     ? (0, r.jsx)(m, {
                           onClick: () => {
-                              j(!1), y({ action: "COLLAPSE_GAME_TAGS" });
+                              y(!1), x({ action: "COLLAPSE_GAME_TAGS" });
                           },
                       })
                     : (0, r.jsx)(p, {
-                          numHidden: s,
+                          numHidden: u,
                           onClick: () => {
-                              j(!0), y({ action: "EXPAND_GAME_TAGS" });
+                              y(!0), x({ action: "EXPAND_GAME_TAGS" });
                           },
                           ref: o,
                       })),
@@ -68,7 +72,7 @@ let f = (e) => {
             l = (0, c.z)(t);
         if (null == l) return null;
         let { getText: o, icon: a } = l;
-        return (0, r.jsxs)("div", {
+        return (0, r.jsxs)("li", {
             className: d.tag,
             ref: n,
             children: [

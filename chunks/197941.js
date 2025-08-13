@@ -10,8 +10,8 @@ var i = n(243814),
     u = n(173507),
     d = n(199902),
     p = n(131951),
-    h = n(449224),
-    f = n(358085),
+    f = n(449224),
+    h = n(358085),
     g = n(452426),
     m = n(736045),
     b = n(186901),
@@ -40,14 +40,14 @@ let O = {
                 } = e,
                 i = d.Z.getCurrentUserActiveStream(),
                 a = d.Z.getStreamerActiveStreamMetadata(),
-                u = (0, c.Z)(s.ZP, h.Z),
+                u = (0, c.Z)(s.ZP, f.Z),
                 p = (0, m.Z)();
             null != p &&
-                (null != t && null != a && a.pid !== t && (0, f.isWindows)()
+                (null != t && null != a && a.pid !== t && (0, h.isWindows)()
                     ? (0, o.WH)(p.guild_id, p.id, { pid: t })
                     : null != i
                       ? (0, o.L6)(!1)
-                      : null != t && (0, f.isWindows)()
+                      : null != t && (0, h.isWindows)()
                         ? (0, o.WH)(p.guild_id, p.id, { pid: t })
                         : null != u
                           ? (0, o.WH)(p.guild_id, p.id, { pid: u.pid })

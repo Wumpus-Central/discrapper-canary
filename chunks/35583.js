@@ -9,8 +9,8 @@ var r = n(255367),
     u = n(91372),
     d = n(19780),
     p = n(665149),
-    h = n(388032),
-    f = n(284896);
+    f = n(388032),
+    h = n(284896);
 function g(e, t, n) {
     return (
         t in e
@@ -61,17 +61,17 @@ class m extends i.PureComponent {
             case "UPDATE_AVAILABLE":
                 return (0, r.jsx)(p.JO, {
                     hideOnClick: !1,
-                    tooltip: h.intl.string(h.t["zp9d//"]),
-                    foreground: f.downloadArrow,
-                    background: f.cloud,
+                    tooltip: f.intl.string(f.t["zp9d//"]),
+                    foreground: h.downloadArrow,
+                    background: h.cloud,
                     icon: a._8t,
                     className: this.props.className,
                 });
             case "UPDATE_MANUALLY":
             case "UPDATE_DOWNLOADED":
                 return (0, r.jsx)(p.JO, {
-                    tooltip: h.intl.string(h.t.u18OXF),
-                    foreground: f.updateIconForeground,
+                    tooltip: f.intl.string(f.t.u18OXF),
+                    foreground: h.updateIconForeground,
                     onClick: this.handleInstallDownload,
                     icon: a._8t,
                     className: this.props.className,
@@ -89,11 +89,11 @@ class m extends i.PureComponent {
             g(this, "handleInstallDownload", () => {
                 d.Z.isConnected()
                     ? o.Z.show({
-                          title: h.intl.string(h.t.tiu1l5),
-                          body: h.intl.string(h.t["zK+lqa"]),
+                          title: f.intl.string(f.t.tiu1l5),
+                          body: f.intl.string(f.t["zK+lqa"]),
                           onConfirm: this.doUpdate,
-                          cancelText: h.intl.string(h.t["ETE/oK"]),
-                          confirmText: h.intl.string(h.t["QDX/qq"]),
+                          cancelText: f.intl.string(f.t["ETE/oK"]),
+                          confirmText: f.intl.string(f.t["QDX/qq"]),
                           confirmVariant: "critical-primary",
                       })
                     : this.doUpdate();

@@ -10,8 +10,8 @@ var i = n(243814),
     u = n(45114),
     d = n(479531),
     p = n(40851),
-    h = n(636449),
-    f = n(566620),
+    f = n(636449),
+    h = n(566620),
     g = n(531826),
     m = n(596223),
     b = n(838195),
@@ -28,8 +28,8 @@ var i = n(243814),
     P = n(591759),
     j = n(228488),
     x = n(996106),
-    Z = n(914946),
-    A = n(452426),
+    A = n(914946),
+    Z = n(452426),
     w = n(561205),
     L = n(600027),
     R = n(852926),
@@ -39,7 +39,7 @@ var i = n(243814),
 async function U(e, t, n, r) {
     let i = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "",
         l = v.Z.getApplicationActivity(t);
-    if (null == l || null == l.secrets || !(0, Z.t9)(r, l.party, l.secrets))
+    if (null == l || null == l.secrets || !(0, A.t9)(r, l.party, l.secrets))
         throw new x.Z(
             { errorCode: k.lTL.NO_ELIGIBLE_ACTIVITY },
             "No eligible activity for application. Ensure an activity includes a party and appropriate secret.",
@@ -107,7 +107,7 @@ let G = {
             [D.Gp.ANY]: [i.x.RPC, D.lH],
         },
         validation: (e) =>
-            (0, A.Z)(e)
+            (0, Z.Z)(e)
                 .required()
                 .keys({
                     user_id: e.string().required(),
@@ -130,7 +130,7 @@ let G = {
             [D.Gp.ANY]: [i.x.RPC, D.lH],
         },
         validation: (e) =>
-            (0, A.Z)(e)
+            (0, Z.Z)(e)
                 .required()
                 .keys({
                     type: e.number().required().valid([k.mFx.JOIN]),
@@ -263,7 +263,7 @@ let G = {
             return new Promise((e, t) => {
                 !(function (e, t) {
                     let n;
-                    if ((0, h.R)()) n = O.Z.getWindow(k.KJ3.ACTIVITY_POPOUT);
+                    if ((0, f.R)()) n = O.Z.getWindow(k.KJ3.ACTIVITY_POPOUT);
                     else {
                         var r;
                         let e = C.Z.getLastFocusedWindowId();
@@ -292,7 +292,7 @@ let G = {
                         i.click();
                 })(
                     async (n) => {
-                        let l = await (0, f.kv)(r, i, n);
+                        let l = await (0, h.kv)(r, i, n);
                         (0, N.lm)(l) && (0, N.lm)(l.url) && !(l instanceof d.Z) ? e({ image_url: l.url }) : t(l);
                     },
                     () => t(Error("Upload canceled")),
@@ -314,7 +314,7 @@ let G = {
                 socket: n,
                 args: { mediaUrl: r },
             } = e;
-            (0, Z.bu)(n.transport);
+            (0, A.bu)(n.transport);
             let i = n.application.id;
             if (null == i) throw new x.Z({ errorCode: k.lTL.INVALID_COMMAND }, "No application.");
             if (!(0, S.yE)(null != (t = n.application.flags) ? t : 0, k.udG.EMBEDDED))
@@ -353,8 +353,8 @@ let G = {
             if (!M.Cr.includes(p)) throw new x.Z({ errorCode: k.lTL.INVALID_COMMAND }, "Unsupported application.");
             if (!(0, S.yE)(null != (t = r.application.flags) ? t : 0, k.udG.EMBEDDED))
                 throw new x.Z({ errorCode: k.lTL.INVALID_COMMAND }, "This application cannot access this API");
-            let h = (0, w.Z)();
-            if (null == h && s) throw new x.Z({ errorCode: k.lTL.INVALID_COMMAND }, "No channel found");
+            let f = (0, w.Z)();
+            if (null == f && s) throw new x.Z({ errorCode: k.lTL.INVALID_COMMAND }, "No channel found");
             if (null !== l || null !== o || null !== c) {
                 let e = [];
                 void 0 !== l &&
@@ -384,7 +384,7 @@ let G = {
                 (O.Z.getWindowOpen(k.KJ3.ACTIVITY_POPOUT) || r.context === k.IlC.POPOUT) && (l = a.u1M),
                     (0, _.M)({
                         applicationId: p,
-                        channel: h,
+                        channel: f,
                         command: {
                             name: i,
                             options: u,

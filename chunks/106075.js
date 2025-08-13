@@ -9,8 +9,8 @@ var r = n(255367),
     u = n(680180),
     d = n(164991),
     p = n(444324),
-    h = n(726115),
-    f = n(859921),
+    f = n(726115),
+    h = n(859921),
     g = n(750910),
     m = n(28494),
     b = n(29086),
@@ -21,19 +21,19 @@ var r = n(255367),
     v = n(388032),
     I = n(503772);
 function C() {
-    let e = i.useRef((0, h.PM)()),
+    let e = i.useRef((0, f.PM)()),
         { onScroll: t, scrollPosition: n, resetScrollPosition: C } = (0, a.M)(),
         { tabs: S, selectedTab: N, setSelectedTab: T } = (0, b.Y)(),
-        P = (0, h.lg)(N),
+        P = (0, f.lg)(N),
         j = !E.MU.has(N),
         {
             searchQuery: x,
-            onSearchTextChange: Z,
-            onClearSearch: A,
+            onSearchTextChange: A,
+            onClearSearch: Z,
             onSearchSubmit: w,
             isSearchVisible: L,
         } = (0, m.H)({ loadId: e.current }),
-        R = f.Z.useField("searchBarState"),
+        R = h.Z.useField("searchBarState"),
         {
             onTabsAvailableWidthChange: D,
             onCollapsedSearchBarClick: k,
@@ -43,16 +43,16 @@ function C() {
             isSearchBarVisible: j,
             isSearchBarEmpty: "" === x.trim(),
             searchBarState: R,
-            setSearchBarState: (e) => f.Z.setState({ searchBarState: e }),
+            setSearchBarState: (e) => h.Z.setState({ searchBarState: e }),
         }),
         G = d.Z.useField("fetchedQuery"),
-        V = i.useCallback(
+        B = i.useCallback(
             (e) => {
-                T(e), L && A();
+                T(e), L && Z();
             },
-            [L, A, T],
+            [L, Z, T],
         ),
-        B = i.useMemo(
+        V = i.useMemo(
             () =>
                 L
                     ? S.filter((e) => {
@@ -87,15 +87,15 @@ function C() {
                         L
                             ? (0, r.jsx)(s.Cm, {
                                   icon: l.j9r,
-                                  onClick: A,
+                                  onClick: Z,
                               })
                             : (0, r.jsx)(s.aV, { icon: l.QTo }),
                         !L &&
                             (0, r.jsx)(c.Z, {
                                 className: U,
-                                tabs: B,
+                                tabs: V,
                                 selectedTab: L ? null : N,
-                                onTabSelect: V,
+                                onTabSelect: B,
                                 onAvailableWidthChange: D,
                             }),
                         L &&
@@ -109,8 +109,8 @@ function C() {
                             (0, r.jsx)(u.Z, {
                                 query: x,
                                 placeholder: v.intl.string(v.t["5h0QOD"]),
-                                onTextChange: Z,
-                                onClear: A,
+                                onTextChange: A,
+                                onClear: Z,
                                 onSubmit: w,
                                 onCollapsedClick: k,
                                 state: L ? y.GlobalDiscoverySearchBarState.DEFAULT : R,

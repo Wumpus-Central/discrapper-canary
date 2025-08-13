@@ -1,4 +1,4 @@
-n.d(t, { Z: () => Z }), n(65234), n(111804), n(490233), n(97749), n(388685), n(35282), n(704826);
+n.d(t, { Z: () => A }), n(65234), n(111804), n(490233), n(97749), n(388685), n(35282), n(704826);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -9,8 +9,8 @@ var r = n(255367),
     u = n(481060),
     d = n(570140),
     p = n(150063),
-    h = n(529103),
-    f = n(252618),
+    f = n(529103),
+    h = n(252618),
     g = n(313201),
     m = n(5254),
     b = n(984370),
@@ -35,7 +35,7 @@ function x() {
         }),
     });
 }
-let Z = function (e) {
+let A = function (e) {
     let { initialSection: t } = e,
         n = (0, o.TH)(),
         l = (0, o.k6)();
@@ -52,20 +52,20 @@ let Z = function (e) {
             p.Y(N.Z5c.FRIENDS), (0, E.e)("friends");
         }, []);
     let _ = (0, c.e7)([y.Z], () => y.Z.theme),
-        Z = (0, I.If)(),
-        { section: A, rows: w } = (0, c.cj)([v.ZP], () => v.ZP.getState()),
+        A = (0, I.If)(),
+        { section: Z, rows: w } = (0, c.cj)([v.ZP], () => v.ZP.getState()),
         L = (0, c.e7)([m.Z], () => m.Z.getSuggestionCount()),
         R = i.useMemo(() => w.getRelationshipCounts(), [w]);
     i.useEffect(() => {
-        null != t && h.Z.setInitialSection(t),
+        null != t && f.Z.setInitialSection(t),
             0 === R[N.OGo.FRIEND] &&
                 0 === R[N.OGo.PENDING_INCOMING] &&
                 0 === R[N.OGo.PENDING_OUTGOING] &&
                 0 === R[N.OGo.BLOCKED] &&
-                h.Z.transitionToSection(N.pJs.ADD_FRIEND);
+                f.Z.transitionToSection(N.pJs.ADD_FRIEND);
     }, [t, R]);
     let D = (e) => {
-            h.Z.transitionToSection(e, { explicit: !0 });
+            f.Z.transitionToSection(e, { explicit: !0 });
         },
         k = (0, g.Dt)(),
         M = (0, g.Dt)(),
@@ -88,14 +88,14 @@ let Z = function (e) {
                 content: (0, r.jsxs)(r.Fragment, {
                     children: [
                         P.intl.string(P.t.p6IHGB),
-                        Z > 0 &&
+                        A > 0 &&
                             (0, r.jsx)(u.mAB, {
-                                count: Z,
+                                count: A,
                                 className: j.badge,
                             }),
                     ],
                 }),
-                ariaLabel: P.intl.formatToPlainString(P.t.OAC0Z2, { count: Z.toString() }),
+                ariaLabel: P.intl.formatToPlainString(P.t.OAC0Z2, { count: A.toString() }),
                 className: j.item,
             },
             {
@@ -125,7 +125,7 @@ let Z = function (e) {
         className: j.container,
         "aria-label": P.intl.string(P.t.TdEu5e),
         children: [
-            (0, r.jsx)(f.yY, { location: P.intl.string(P.t.TdEu5e) }),
+            (0, r.jsx)(h.yY, { location: P.intl.string(P.t.TdEu5e) }),
             (0, r.jsx)(u.f6W, {
                 theme: _,
                 children: (e) =>
@@ -147,7 +147,7 @@ let Z = function (e) {
                             (0, r.jsx)(b.Z.Divider, {}),
                             (0, r.jsx)(u.njP, {
                                 "aria-label": P.intl.string(P.t.TdEu5e),
-                                selectedItem: A,
+                                selectedItem: Z,
                                 type: "top-pill",
                                 onItemSelect: D,
                                 className: j.tabBar,
@@ -171,10 +171,10 @@ let Z = function (e) {
                 className: j.tabBody,
                 children: [
                     (0, r.jsx)(u.njP.Panel, {
-                        id: A,
+                        id: Z,
                         className: j.peopleColumn,
                         "aria-labelledby": M,
-                        children: A === N.pJs.ADD_FRIEND ? (0, r.jsx)(C.Z, {}) : (0, r.jsx)(S.Z, { titleId: M }),
+                        children: Z === N.pJs.ADD_FRIEND ? (0, r.jsx)(C.Z, {}) : (0, r.jsx)(S.Z, { titleId: M }),
                     }),
                     (0, r.jsx)("div", {
                         className: j.nowPlayingColumn,

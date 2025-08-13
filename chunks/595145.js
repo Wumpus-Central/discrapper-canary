@@ -15,8 +15,8 @@ var r = n(255367),
     g = n(320582),
     j = n(246016),
     y = n(680295),
-    O = n(189156),
-    x = n(699516),
+    x = n(189156),
+    O = n(699516),
     h = n(246946),
     v = n(585483),
     _ = n(5192),
@@ -83,8 +83,8 @@ function en(e) {
             roleId: eo,
             showGuildProfile: em,
         }),
-        eO = l.useRef(null),
-        ex = (0, s.Z)(eO),
+        ex = l.useRef(null),
+        eO = (0, s.Z)(ex),
         [eh, ev] = l.useState(!1),
         e_ = (0, N.$m)(),
         eI = (0, a.q_F)({
@@ -95,9 +95,9 @@ function en(e) {
     (0, d.$)(eP);
     let eE = (0, T.ZP)(n.id, em ? er : void 0),
         eT = _.ZP.useName(null == eE ? void 0 : eE.guildId, el, n),
-        { relationshipType: eZ, originApplicationId: eN } = (0, o.cj)([x.Z], () => ({
-            relationshipType: x.Z.getRelationshipType(n.id),
-            originApplicationId: x.Z.getOriginApplicationId(n.id),
+        { relationshipType: eZ, originApplicationId: eN } = (0, o.cj)([O.Z], () => ({
+            relationshipType: O.Z.getRelationshipType(n.id),
+            originApplicationId: O.Z.getOriginApplicationId(n.id),
         })),
         eS = (0, o.e7)([h.Z], () => h.Z.hidePersonalInformation),
         ew =
@@ -212,7 +212,7 @@ function en(e) {
                                             }),
                                             (0, r.jsxs)("div", {
                                                 className: et.profile,
-                                                ref: (null == eE ? void 0 : eE.profileEffectId) != null ? eO : void 0,
+                                                ref: (null == eE ? void 0 : eE.profileEffectId) != null ? ex : void 0,
                                                 children: [
                                                     (0, r.jsxs)("div", {
                                                         className: et.profileHeader,
@@ -320,7 +320,7 @@ function en(e) {
                                                                             color: "currentColor",
                                                                         }),
                                                                         className: et.profileBanner,
-                                                                        children: (0, r.jsx)(O.n, {
+                                                                        children: (0, r.jsx)(x.n, {
                                                                             userId: n.id,
                                                                             variant: "text-sm/normal",
                                                                         }),
@@ -449,7 +449,7 @@ function en(e) {
                                                     (null == eE ? void 0 : eE.profileEffectId) != null &&
                                                         (0, r.jsx)(y.Z, {
                                                             profileEffectId: null == eE ? void 0 : eE.profileEffectId,
-                                                            isHovering: ex,
+                                                            isHovering: eO,
                                                         }),
                                                 ],
                                             }),

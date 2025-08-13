@@ -1,5 +1,5 @@
 n.d(t, {
-    C: () => x,
+    C: () => O,
     Z: () => y,
 });
 var r = n(255367);
@@ -78,7 +78,7 @@ function y(e) {
             return null;
     }
 }
-function O(e) {
+function x(e) {
     let { user: t, guildId: n, channelId: l } = e,
         o = (0, s.Z)(t.id),
         { widgets: d, isGameFetching: u } = (0, c.Z)(o),
@@ -104,10 +104,10 @@ function O(e) {
               ],
           });
 }
-function x(e) {
+function O(e) {
     return (0, r.jsx)(o.Ttm, {
         className: g.scroller,
         fade: !0,
-        children: (0, r.jsx)(O, j({}, e)),
+        children: (0, r.jsx)(x, j({}, e)),
     });
 }

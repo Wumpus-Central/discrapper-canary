@@ -21,8 +21,8 @@ function b(e) {
     var t;
     let { userId: n, headingId: b, widget: g, disableInteraction: j = !1 } = e,
         y = (0, o.e7)([c.default], () => c.default.getId() === n),
-        O = (0, s.kQ)(g),
-        x = m[g.type](),
+        x = (0, s.kQ)(g),
+        O = m[g.type](),
         h = y
             ? (t = g.type) === i.l.FAVORITE_GAMES
                 ? f.intl.string(f.t.wiXdER)
@@ -38,7 +38,7 @@ function b(e) {
                         variant: "heading-sm/medium",
                         color: "text-default",
                         id: b,
-                        children: x,
+                        children: O,
                     }),
                     null != h &&
                         (0, r.jsx)(a.Text, {
@@ -54,7 +54,7 @@ function b(e) {
                     className: p.actions,
                     children: [
                         (0, r.jsx)(d.Z, {
-                            disabled: O,
+                            disabled: x,
                             widgetType: g.type,
                         }),
                         (0, r.jsx)(u.Z, { widget: g }),

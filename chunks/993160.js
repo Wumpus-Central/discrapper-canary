@@ -13,14 +13,14 @@ var l = n(755721),
     p = n(562831),
     m = n(981631);
 function b(e) {
-    let { user: t, currentUser: n, guildId: b, channelId: g, displayProfile: j, relationshipType: y, onClose: O } = e,
-        { newestAnalyticsLocation: x } = (0, o.ZP)(),
+    let { user: t, currentUser: n, guildId: b, channelId: g, displayProfile: j, relationshipType: y, onClose: x } = e,
+        { newestAnalyticsLocation: O } = (0, o.ZP)(),
         h = (0, a.Z)({
             user: t,
             guildId: b,
             channelId: g,
             displayProfile: j,
-            onClose: O,
+            onClose: x,
         }),
         {
             gameFriends: v,
@@ -36,9 +36,9 @@ function b(e) {
                     (0, r.jsx)(c.Z, {
                         user: t,
                         guildId: b,
-                        onClose: O,
+                        onClose: x,
                     }),
-                    (0, r.jsx)(u.Z, { onClose: O }),
+                    (0, r.jsx)(u.Z, { onClose: x }),
                     (0, r.jsx)(d.Z, {
                         type: "icon",
                         user: t,
@@ -100,7 +100,7 @@ function b(e) {
                               relationshipType: y,
                               shouldShowTooltip: !0,
                               themeColor: "secondary",
-                              analyticsLocation: x,
+                              analyticsLocation: O,
                           }),
                           (0, r.jsx)(d.Z, {
                               type: "icon",
@@ -123,7 +123,7 @@ function b(e) {
                             (0, r.jsx)(f.k9, {
                                 type: "icon",
                                 user: t,
-                                analyticsLocation: x,
+                                analyticsLocation: O,
                                 themeColor: "secondary",
                                 gameFriends: v,
                                 tooltipPosition: "top",
@@ -146,7 +146,7 @@ function b(e) {
                             (0, r.jsx)(f.Z7, {
                                 type: "text",
                                 userId: t.id,
-                                analyticsLocation: x,
+                                analyticsLocation: O,
                                 color: l.zx.Colors.BRAND,
                                 autoFocus: !0,
                             }),

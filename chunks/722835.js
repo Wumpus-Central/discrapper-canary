@@ -9,8 +9,8 @@ var r = n(209739),
     u = n(430824),
     d = n(131951),
     p = n(496675),
-    h = n(944486),
-    f = n(449224),
+    f = n(944486),
+    h = n(449224),
     g = n(358085),
     m = n(102172),
     b = n(74299),
@@ -20,7 +20,7 @@ var r = n(209739),
 function y() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
     if (!(0, b.Z)(d.Z) || null != s.Z.getCurrentUserActiveStream()) return !1;
-    let t = h.Z.getVoiceChannelId(),
+    let t = f.Z.getVoiceChannelId(),
         n = c.Z.getChannel(t);
     if (null == n) return !1;
     let r = n.getGuildId();
@@ -30,7 +30,7 @@ function y() {
             ? (0, _.T)()
             : (0, _.T)("window");
     else {
-        let t = (0, O.Z)(o.ZP, f.Z);
+        let t = (0, O.Z)(o.ZP, h.Z);
         if (null == t || (t.isLauncher && !e)) return !1;
         (0, l.WH)(r, n.id, { pid: t.pid });
     }

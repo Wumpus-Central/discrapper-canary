@@ -9,8 +9,8 @@ var r = n(392711),
     u = n(813370),
     d = n(626135),
     p = n(81063),
-    h = n(70956),
-    f = n(996106),
+    f = n(70956),
+    h = n(996106),
     g = n(452426),
     m = n(186901),
     b = n(981631);
@@ -82,12 +82,12 @@ let _ = ["349134787773988865"],
                         isSocketConnected: g,
                     } = e;
                 if (![m.He.IPC, m.He.WEBSOCKET, m.He.POST_MESSAGE].includes(r.transport))
-                    throw new f.Z(
+                    throw new h.Z(
                         { errorCode: b.lTL.INVALID_COMMAND },
                         'command not available from "'.concat(r.transport, '" transport'),
                     );
                 if (null == l && m.He.IPC === r.transport)
-                    throw new f.Z({ errorCode: b.lTL.INVALID_COMMAND }, "nonzero pid required");
+                    throw new h.Z({ errorCode: b.lTL.INVALID_COMMAND }, "nonzero pid required");
                 if (null == a)
                     return (
                         o.Z.dispatch({
@@ -115,14 +115,14 @@ let _ = ["349134787773988865"],
                         .values(T)
                         .filter((e) => !!e);
                     if (null != N && i().intersection(e, [N.id]).length > 0 && !_.includes(r.application.id))
-                        throw new f.Z(
+                        throw new h.Z(
                             { errorCode: b.lTL.INVALID_ACTIVITY_SECRET },
                             "secrets cannot match the party id",
                         );
                     if (i().uniq(e).length < e.length)
-                        throw new f.Z({ errorCode: b.lTL.INVALID_ACTIVITY_SECRET }, "secrets must be unique");
+                        throw new h.Z({ errorCode: b.lTL.INVALID_ACTIVITY_SECRET }, "secrets must be unique");
                     if (null != j)
-                        throw new f.Z(
+                        throw new h.Z(
                             { errorCode: b.lTL.INVALID_ACTIVITY_SECRET },
                             "secrets cannot currently be sent with buttons",
                         );
@@ -134,7 +134,7 @@ let _ = ["349134787773988865"],
                 )
                     for (let e of Object.keys(P))
                         Date.now().toString().length - P[e].toString().length > 2 &&
-                            (P[e] = Math.floor(P[e] * h.Z.Millis.SECOND));
+                            (P[e] = Math.floor(P[e] * f.Z.Millis.SECOND));
                 if (null == S) n = Promise.resolve([]);
                 else {
                     if (null == r.application || null == r.application.id) throw Error();
@@ -156,8 +156,8 @@ let _ = ["349134787773988865"],
                         pid: l,
                         activity: a,
                     });
-                    let { secrets: p, party: h } = a,
-                        f = {
+                    let { secrets: p, party: f } = a,
+                        h = {
                             application_id: r.application.id,
                             type: a.type,
                             name: a.name,
@@ -171,11 +171,11 @@ let _ = ["349134787773988865"],
                                 (null == (n = a.assets) ? void 0 : n.small_url) != null,
                         };
                     return (
-                        null != p && ((f.has_match_secret = !!p.match), (f.has_join_secret = !!p.join)),
-                        null != S && (f.has_images = !!(S.large_image || S.small_image)),
-                        null != h &&
-                            ((f.party_max = null != h.size && h.size[1] > 0 ? h.size[1] : void 0), (f.party_id = h.id)),
-                        d.default.track(b.rMx.ACTIVITY_UPDATED, f),
+                        null != p && ((h.has_match_secret = !!p.match), (h.has_join_secret = !!p.join)),
+                        null != S && (h.has_images = !!(S.large_image || S.small_image)),
+                        null != f &&
+                            ((h.party_max = null != f.size && f.size[1] > 0 ? f.size[1] : void 0), (h.party_id = f.id)),
+                        d.default.track(b.rMx.ACTIVITY_UPDATED, h),
                         a
                     );
                 });

@@ -14,7 +14,7 @@ function d() {
         }),
         t = (e) => {
             let t = (0, s.np)(e);
-            (0, s.ES)(e, t.applicationId);
+            (0, s.ES)(e, t);
         };
     return e
         ? (0, n.jsx)("div", {

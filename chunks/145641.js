@@ -9,8 +9,8 @@ var r = n(255367),
     u = n(617015),
     d = n(271251);
 let p = function (e) {
-    let { rows: t, renderRow: n, renderSection: p, footer: h } = e,
-        f = (e) => {
+    let { rows: t, renderRow: n, renderSection: p, footer: f } = e,
+        h = (e) => {
             let { section: r, row: i } = e,
                 l = t[r];
             if (null == l || null == i) return null;
@@ -127,7 +127,7 @@ let p = function (e) {
                                             (t.current =
                                                 null != (n = null == e ? void 0 : e.getScrollerNode()) ? n : null);
                                     },
-                                    renderRow: f,
+                                    renderRow: h,
                                     rowHeight: u.NV,
                                     renderSection: g,
                                     sectionHeight: u.aS,
@@ -137,7 +137,7 @@ let p = function (e) {
                                 n,
                             ),
                         ),
-                        h,
+                        f,
                     ],
                 });
             },

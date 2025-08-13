@@ -16,8 +16,8 @@ var l = n(442837),
     g = n(744802),
     j = n(493043),
     y = n(864141),
-    O = n(228168),
-    x = n(981631),
+    x = n(228168),
+    O = n(981631),
     h = n(388032),
     v = n(727550),
     _ = n(889080);
@@ -100,14 +100,14 @@ function I(e) {
                                           (0, r.jsx)(
                                               i.eee,
                                               {
-                                                  href: d.Z.getArticleURL(x.BhN.ACTIVITY_STATUS_SETTINGS),
+                                                  href: d.Z.getArticleURL(O.BhN.ACTIVITY_STATUS_SETTINGS),
                                                   children: e,
                                               },
                                               t,
                                           ),
                                   })
                                 : void 0,
-                            scrollIntoView: E === O.Tb.RECENT_ACTIVITY,
+                            scrollIntoView: E === x.Tb.RECENT_ACTIVITY,
                             children: (0, r.jsx)("ul", {
                                 className: v.activityList,
                                 children: w.map((e) =>

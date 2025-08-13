@@ -50,7 +50,7 @@ let g = [
         () => m.intl.string(m.t.HQPAVV),
         () => m.intl.string(m.t.YolGh4),
     ],
-    O = [
+    x = [
         p.ABu.STEAM,
         p.ABu.PLAYSTATION,
         p.ABu.XBOX,
@@ -65,7 +65,7 @@ let g = [
         p.ABu.CRUNCHYROLL,
         p.ABu.BUNGIE,
     ];
-function x(e) {
+function O(e) {
     let { heading: t, bodyText: n, children: l } = e;
     return (0, r.jsxs)("div", {
         className: b.empty,
@@ -95,7 +95,7 @@ function h() {
             var e;
             return (null != (e = (0, i.sample)(g)) ? e : g[0])();
         });
-    return (0, r.jsx)(x, {
+    return (0, r.jsx)(O, {
         heading: e,
         bodyText: t,
     });
@@ -106,7 +106,7 @@ function v() {
             var e;
             return (null != (e = (0, i.sample)(j)) ? e : j[0])();
         });
-    return (0, r.jsx)(x, {
+    return (0, r.jsx)(O, {
         heading: e,
         bodyText: t,
     });
@@ -122,7 +122,7 @@ function _(e) {
         j = l.useCallback(() => {
             a.Z.openPrivateChannel({ recipientIds: t.id }), null == s || s();
         }, [t.id, s]);
-    return (0, r.jsx)(x, {
+    return (0, r.jsx)(O, {
         heading: p,
         bodyText: g,
         children: (0, r.jsx)("div", {
@@ -140,7 +140,7 @@ function I() {
     let e = (0, s.ZP)();
     return (0, r.jsx)("div", {
         className: b.connectionPlatforms,
-        children: O.map((t, n) => {
+        children: x.map((t, n) => {
             let l = d.Z.get(t);
             if (null == l) return null;
             let i = (0, o.wjy)(e) ? l.icon.darkPNG : l.icon.lightPNG;
@@ -164,7 +164,7 @@ function P(e) {
         i = l.useCallback(() => {
             null == t || t(), c.Z.open(p.oAB.CONTENT_AND_SOCIAL, "CONNECTED_GAMES");
         }, [t]);
-    return (0, r.jsxs)(x, {
+    return (0, r.jsxs)(O, {
         heading: m.intl.string(m.t.VB6LWV),
         bodyText: m.intl.string(m.t.KpjsU1),
         children: [

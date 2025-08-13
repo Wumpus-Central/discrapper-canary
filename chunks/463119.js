@@ -9,8 +9,8 @@ var r = n(255367),
     u = n(515753),
     d = n(410030),
     p = n(607070),
-    h = n(100527),
-    f = n(906732),
+    f = n(100527),
+    h = n(906732),
     g = n(821982),
     m = n(377171),
     b = n(633302),
@@ -27,7 +27,7 @@ var r = n(255367),
     P = n(921944),
     j = n(388032),
     x = n(3525);
-function Z(e) {
+function A(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -52,7 +52,7 @@ function Z(e) {
     }
     return e;
 }
-function A(e, t) {
+function Z(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -131,8 +131,8 @@ let L = (e) => {
                 "children",
             ]);
         let b = (0, l.JA)("shop"),
-            _ = h.Z.HOME_PAGE_SHOP_TAB,
-            { analyticsLocations: O } = (0, f.ZP)(_),
+            _ = f.Z.HOME_PAGE_SHOP_TAB,
+            { analyticsLocations: O } = (0, h.ZP)(_),
             [y, v] = i.useState(!1),
             I = i.useCallback(() => {
                 void 0 !== o && o(),
@@ -155,8 +155,8 @@ let L = (e) => {
                 y && (0, r.jsx)(R, {}),
                 (0, r.jsx)(
                     u.Qj,
-                    A(
-                        Z(
+                    Z(
+                        A(
                             {
                                 selected: t,
                                 route: C,
@@ -178,7 +178,7 @@ let L = (e) => {
             ],
         });
     },
-    k = (e) => (0, r.jsx)(D, A(Z({}, e), { children: (0, r.jsx)(L, {}) })),
+    k = (e) => (0, r.jsx)(D, Z(A({}, e), { children: (0, r.jsx)(L, {}) })),
     M = i.memo(function (e) {
         var t;
         let { displayOptions: n, assetId: i, reducedMotion: l = !1 } = e,
@@ -222,8 +222,8 @@ let L = (e) => {
         var l,
             c,
             u,
-            h,
             f,
+            h,
             g,
             m,
             b,
@@ -242,8 +242,8 @@ let L = (e) => {
             ? U
                 ? ((t = null == (l = I.entryPointBackgroundAssets) ? void 0 : l.srcDarkHovered),
                   (n = null == (u = I.entrypointBackgroundStyle) || null == (c = u.hovered) ? void 0 : c.dark))
-                : ((t = null == (h = I.entryPointBackgroundAssets) ? void 0 : h.srcLightHovered),
-                  (n = null == (g = I.entrypointBackgroundStyle) || null == (f = g.hovered) ? void 0 : f.light))
+                : ((t = null == (f = I.entryPointBackgroundAssets) ? void 0 : f.srcLightHovered),
+                  (n = null == (g = I.entrypointBackgroundStyle) || null == (h = g.hovered) ? void 0 : h.light))
             : U
               ? ((t = null == (m = I.entryPointBackgroundAssets) ? void 0 : m.srcDark),
                 (n = null == (_ = I.entrypointBackgroundStyle) || null == (b = _.resting) ? void 0 : b.dark))
@@ -255,10 +255,10 @@ let L = (e) => {
                 },
                 [I.assetIds.length],
             ),
-            V = i.useCallback((e) => {
+            B = i.useCallback((e) => {
                 R(!1), null == e || e();
             }, []),
-            B = I.title();
+            V = I.title();
         return (0, r.jsx)(s.ua7, {
             text: (0, r.jsx)(M, {
                 displayOptions: I,
@@ -270,14 +270,14 @@ let L = (e) => {
             delay: 100,
             allowOverflow: !0,
             hideOnClick: !1,
-            "aria-label": "string" == typeof B ? B : j.intl.string(j.t.rSXaxc),
+            "aria-label": "string" == typeof V ? V : j.intl.string(j.t.rSXaxc),
             children: (e) =>
                 (0, r.jsxs)(
                     D,
-                    A(
-                        Z(
-                            A(
-                                Z(
+                    Z(
+                        A(
+                            Z(
+                                A(
                                     {
                                         className:
                                             null != I.entryPointClassName ? (0, O.l)(x, I.entryPointClassName) : void 0,
@@ -290,7 +290,7 @@ let L = (e) => {
                         ),
                         {
                             onMouseEnter: () => G(e.onMouseEnter),
-                            onMouseLeave: () => V(e.onMouseLeave),
+                            onMouseLeave: () => B(e.onMouseLeave),
                             children: [
                                 (0, r.jsx)("div", {
                                     className: x.marketingButtonBackground,
@@ -330,10 +330,10 @@ let L = (e) => {
             delay: 100,
             hideOnClick: !1,
             "aria-label": t.title(),
-            children: (e) => (0, r.jsx)(D, A(Z({}, n, e), { children: (0, r.jsx)(L, { color: t.badgeColor }) })),
+            children: (e) => (0, r.jsx)(D, Z(A({}, n, e), { children: (0, r.jsx)(L, { color: t.badgeColor }) })),
         });
     },
-    V = (e) => {
+    B = (e) => {
         var { listScrollerRef: t } = e,
             n = w(e, ["listScrollerRef"]);
         let l = i.useRef(null),
@@ -342,8 +342,8 @@ let L = (e) => {
             c = w(a, ["positionControlRef", "onShopButtonClick"]);
         return (0, r.jsx)(
             _.Pk,
-            A(
-                Z(
+            Z(
+                A(
                     {
                         targetElementRef: l,
                         positionControlRef: o,
@@ -353,7 +353,7 @@ let L = (e) => {
                 {
                     children: (0, r.jsx)(
                         D,
-                        A(Z({}, n), {
+                        Z(A({}, n), {
                             listItemRef: l,
                             collectibleShopTab: N.AW.ORBS,
                             onClick: s,
@@ -363,7 +363,7 @@ let L = (e) => {
             ),
         );
     },
-    B = (e) => {
+    V = (e) => {
         var t,
             n,
             { displayOptions: l, dismissContent: a } = e,
@@ -371,21 +371,21 @@ let L = (e) => {
         let c = i.useRef(null),
             u = (0, d.ZP)(),
             p = (0, o.wj)(u),
-            h = l.entryPointBackgroundAssets,
-            f = l.entrypointBackgroundStyle,
-            g = p ? (null == h ? void 0 : h.srcDarkHovered) : null == h ? void 0 : h.srcLightHovered,
+            f = l.entryPointBackgroundAssets,
+            h = l.entrypointBackgroundStyle,
+            g = p ? (null == f ? void 0 : f.srcDarkHovered) : null == f ? void 0 : f.srcLightHovered,
             m = p
-                ? null == f || null == (t = f.hovered)
+                ? null == h || null == (t = h.hovered)
                     ? void 0
                     : t.dark
-                : null == f || null == (n = f.hovered)
+                : null == h || null == (n = h.hovered)
                   ? void 0
                   : n.light;
         return (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsxs)(
                     D,
-                    A(Z({}, s), {
+                    Z(A({}, s), {
                         onClick: () => a(P.L.TAKE_ACTION),
                         listItemRef: c,
                         children: [
@@ -426,17 +426,17 @@ let L = (e) => {
                 },
                 listItemRef: l,
             };
-        if (o) return (0, r.jsx)(V, A(Z({}, u), { listScrollerRef: a }));
+        if (o) return (0, r.jsx)(B, Z(A({}, u), { listScrollerRef: a }));
         if (null != s)
             switch (s.type) {
                 case S.k2.TOOLTIP:
-                    return (0, r.jsx)(G, A(Z({}, u), { displayOptions: s }));
+                    return (0, r.jsx)(G, Z(A({}, u), { displayOptions: s }));
                 case S.k2.COACHTIP:
-                    return (0, r.jsx)(U, A(Z({}, u), { displayOptions: s }));
+                    return (0, r.jsx)(U, Z(A({}, u), { displayOptions: s }));
                 case S.k2.BADGE:
-                    return (0, r.jsx)(k, Z({}, u));
+                    return (0, r.jsx)(k, A({}, u));
                 case S.k2.COACHMARK:
-                    return (0, r.jsx)(B, A(Z({ dismissContent: c }, u), { displayOptions: s }));
+                    return (0, r.jsx)(V, Z(A({ dismissContent: c }, u), { displayOptions: s }));
             }
-        return (0, r.jsx)(D, Z({}, u));
+        return (0, r.jsx)(D, A({}, u));
     };

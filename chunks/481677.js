@@ -1023,7 +1023,7 @@ Object.freeze({
     "divider-strong": [r.I.WHITE, r.I.BLACK, r.I.PLUM_11, r.I.PLUM_11],
     "divider-subtle": [r.I.WHITE, r.I.BLACK, r.I.PLUM_11, r.I.PLUM_11],
     "embed-background": [r.I.PRIMARY_630, r.I.PRIMARY_130, r.I.PLUM_23, r.I.PLUM_18],
-    "embed-background-alternate": [r.I.PRIMARY_600, r.I.PRIMARY_200, r.I.PRIMARY_600, r.I.PRIMARY_600],
+    "embed-background-alternate": [r.I.PRIMARY_600, r.I.PRIMARY_200, r.I.PLUM_23, r.I.PLUM_18],
     "embed-title": [r.I.NEUTRAL_1, r.I.NEUTRAL_71, r.I.NEUTRAL_8, r.I.NEUTRAL_2],
     "experimental-avatar-embed-bg": [
         r.I.OPACITY_BLACK_52,

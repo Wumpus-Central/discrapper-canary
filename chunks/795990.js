@@ -1,4 +1,4 @@
-n.d(t, { Z: () => O });
+n.d(t, { Z: () => x });
 var r = n(255367),
     l = n(73800),
     i = n(296009),
@@ -107,7 +107,7 @@ function y(e) {
         ],
     });
 }
-function O() {
+function x() {
     return (0, r.jsxs)("div", {
         className: m.empty,
         children: [

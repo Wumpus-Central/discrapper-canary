@@ -16,8 +16,8 @@ var l = n(442837),
     g = n(744802),
     j = n(493043),
     y = n(864141),
-    O = n(264481),
-    x = n(693408),
+    x = n(264481),
+    O = n(693408),
     h = n(228168),
     v = n(981631),
     _ = n(388032),
@@ -67,8 +67,8 @@ function P(e) {
     if (!F && !V && !k) {
         var Y;
         return G
-            ? (0, r.jsx)(O.Uf, { onClose: N })
-            : (0, r.jsx)(O.P9, {
+            ? (0, r.jsx)(x.Uf, { onClose: N })
+            : (0, r.jsx)(x.P9, {
                   user: t,
                   guildId: null != (Y = null == P ? void 0 : P.guildId) ? Y : void 0,
                   channelId: T,
@@ -80,7 +80,7 @@ function P(e) {
         fade: !0,
         children: [
             F
-                ? (0, r.jsx)(x.Z, {
+                ? (0, r.jsx)(O.Z, {
                       heading: _.intl.string(_.t.J6STd3),
                       children: (0, r.jsxs)("ul", {
                           className: I.cards,
@@ -136,7 +136,7 @@ function P(e) {
                   })
                 : null,
             V
-                ? (0, r.jsx)(x.Z, {
+                ? (0, r.jsx)(O.Z, {
                       heading: _.intl.string(_.t.jzgEoK),
                       introText: G
                           ? _.intl.format(_.t["4bk9Ag"], {

@@ -8,7 +8,7 @@ var r = n(255367),
     a = n.n(o),
     s = n(97519),
     l = n(731965),
-    c = n(755721),
+    c = n(481060),
     u = n(911969),
     d = n(100527),
     f = n(367907),
@@ -103,14 +103,16 @@ function N(e) {
             setIsExecutingLaunchInteraction: E,
             analyticsLocations: y,
         }),
-        T = _ ? c.zx.Colors.RED : c.zx.Colors.BRAND;
-    return (0, r.jsx)(c.zx, {
-        className: a()(v.entryPointAppCommandButton, O.Id),
-        size: c.zx.Sizes.SMALL,
-        color: T,
-        submitting: d,
-        onClick: I,
-        buttonRef: s,
-        children: f,
+        T = _ ? "critical-primary" : "primary";
+    return (0, r.jsx)("div", {
+        className: a()(v.entryPointAppCommandButtonContainer, O.Id),
+        children: (0, r.jsx)(c.zxk, {
+            variant: T,
+            loading: d,
+            onClick: I,
+            fullWidth: !0,
+            buttonRef: s,
+            text: f,
+        }),
     });
 }

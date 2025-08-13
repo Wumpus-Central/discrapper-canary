@@ -16,8 +16,8 @@ var l = n(442837),
     g = n(819602),
     j = n(78806),
     y = n(900927),
-    O = n(678738),
-    x = n(179828),
+    x = n(678738),
+    O = n(179828),
     h = n(228168),
     v = n(388032),
     _ = n(926505);
@@ -42,14 +42,14 @@ function I(e) {
                     setLineClamp: !1,
                 }),
             (null == I ? void 0 : I.guildId) != null &&
-                (0, r.jsx)(x.Z, {
+                (0, r.jsx)(O.Z, {
                     user: t,
                     currentUser: n,
                     guildId: I.guildId,
                     scrollIntoView: P === h.Tb.ROLES,
                 }),
             t.isProvisional &&
-                (0, r.jsx)(O.Z, {
+                (0, r.jsx)(x.Z, {
                     heading: v.intl.string(v.t.Iyka0d),
                     headingIcon: (0, r.jsx)(i.Mgn, {
                         size: "xxs",
@@ -59,11 +59,11 @@ function I(e) {
                     children: (0, r.jsx)(c.n, { userId: t.id }),
                 }),
             N.length > 0 &&
-                (0, r.jsx)(O.Z, {
+                (0, r.jsx)(x.Z, {
                     heading: v.intl.string(v.t["Uv/eT0"]),
                     children: (0, r.jsx)(j.Z, { applicationIds: N }),
                 }),
-            (0, r.jsx)(O.Z, {
+            (0, r.jsx)(x.Z, {
                 heading: v.intl.string(v.t.a6XYDw),
                 children: (0, r.jsx)(y.Z, {
                     userId: t.id,
@@ -72,7 +72,7 @@ function I(e) {
                 }),
             }),
             A.length > 0 &&
-                (0, r.jsx)(O.Z, {
+                (0, r.jsx)(x.Z, {
                     heading: v.intl.string(v.t["3fe7U1"]),
                     scrollIntoView: P === h.Tb.CONNECTIONS,
                     children: (0, r.jsx)(g.ZP, {
@@ -83,7 +83,7 @@ function I(e) {
                     }),
                 }),
             C.length > 0 &&
-                (0, r.jsx)(O.Z, {
+                (0, r.jsx)(x.Z, {
                     heading: v.intl.string(v.t.PHjkRE),
                     children: C.map((e) =>
                         (0, r.jsx)(
@@ -101,7 +101,7 @@ function I(e) {
                         ),
                     ),
                 }),
-            (0, r.jsx)(O.Z, {
+            (0, r.jsx)(x.Z, {
                 heading: v.intl.string(v.t["mQKv+v"]),
                 scrollIntoView: P === h.Tb.NOTE,
                 children: (0, r.jsx)(o.Z, {

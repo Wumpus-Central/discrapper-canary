@@ -5869,11 +5869,11 @@ let { Themes: r } = n(15202).V,
                     opacity: 1,
                 },
                 [r.MIDNIGHT]: {
-                    raw: "PRIMARY_600",
+                    raw: "PLUM_23",
                     opacity: 1,
                 },
                 [r.DARKER]: {
-                    raw: "PRIMARY_600",
+                    raw: "PLUM_18",
                     opacity: 1,
                 },
                 gradient: {
