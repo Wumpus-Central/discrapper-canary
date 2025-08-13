@@ -1,12 +1,13 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => h });
 var r = n(255367),
     i = n(73800),
-    o = n(906732),
-    a = n(628581),
-    s = n(522651),
-    l = n(8404),
-    c = n(871499);
-function u(e, t, n) {
+    o = n(481060),
+    a = n(906732),
+    s = n(628581),
+    l = n(522651),
+    c = n(8404),
+    u = n(871499);
+function d(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -19,7 +20,7 @@ function u(e, t, n) {
         e
     );
 }
-function d(e) {
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -30,16 +31,16 @@ function d(e) {
                 }),
             )),
             r.forEach(function (t) {
-                u(e, t, n[t]);
+                d(e, t, n[t]);
             });
     }
     return e;
 }
-function f(e, t) {
+function _(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = _(e, t);
+        i = p(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
         for (r = 0; r < o.length; r++)
@@ -47,7 +48,7 @@ function f(e, t) {
     }
     return i;
 }
-function _(e, t) {
+function p(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -56,18 +57,18 @@ function _(e, t) {
     for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function p(e) {
+function h(e) {
     var {
             selfMute: t,
             serverMute: n,
-            suppress: u,
-            centerButton: _ = !1,
-            awaitingRemote: p,
-            onMouseEnter: h,
-            onMouseLeave: m,
-            onClick: g,
+            suppress: d,
+            centerButton: p = !1,
+            awaitingRemote: h,
+            onMouseEnter: m,
+            onMouseLeave: g,
+            onClick: E,
         } = e,
-        E = f(e, [
+        b = _(e, [
             "selfMute",
             "serverMute",
             "suppress",
@@ -77,33 +78,34 @@ function p(e) {
             "onMouseLeave",
             "onClick",
         ]);
-    let { parentAnalyticsLocation: b } = (0, o.ZP)(),
-        y = t || n || u,
-        O = _ ? c.d : c.Z,
-        v = (0, a.Z)(t, n, u, p),
-        { events: I, play: T, Component: S } = (0, l.b)(y);
+    let { parentAnalyticsLocation: y } = (0, a.ZP)(),
+        O = t || n || d,
+        v = p ? u.d : u.Z,
+        I = (0, s.Z)(t, n, d, h),
+        { events: T, play: S, Component: A } = (0, c.b)(O),
+        N = n || d ? o.v0G : A;
     return (
-        i.useEffect(() => () => T(), [T, y]),
+        i.useEffect(() => () => S(), [S, O]),
         (0, r.jsx)(
-            O,
-            d(
+            v,
+            f(
                 {
-                    iconComponent: S,
+                    iconComponent: N,
                     isTrayButton: !0,
-                    caretColor: y ? "red" : "primaryDark",
-                    color: y ? "red" : void 0,
-                    label: v,
+                    caretColor: O ? "red" : "primaryDark",
+                    color: O ? "red" : void 0,
+                    label: I,
                     onMouseEnter: (e) => {
-                        null == h || h(e), I.onMouseEnter();
+                        null == m || m(e), T.onMouseEnter();
                     },
                     onMouseLeave: (e) => {
-                        null == m || m(e), I.onMouseLeave();
+                        null == g || g(e), T.onMouseLeave();
                     },
                     onClick: (e) => {
-                        null == g || g(e), (0, s.v)(b, s.d.MIC, t);
+                        null == E || E(e), (0, l.v)(y, l.d.MIC, t);
                     },
                 },
-                E,
+                b,
             ),
         )
     );

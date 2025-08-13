@@ -1,122 +1,111 @@
-n.d(t, { Z: () => T });
+n.d(t, { Z: () => O });
 var r = n(255367);
 n(73800);
 var i = n(120356),
     o = n.n(i),
-    a = n(442837),
-    s = n(481060),
-    l = n(607070),
-    c = n(600164),
-    u = n(483444),
-    d = n(599250),
-    f = n(926153),
-    _ = n(27693),
-    p = n(74538),
-    h = n(937615),
-    m = n(104494),
-    g = n(639119),
-    E = n(108989),
-    b = n(474936),
-    y = n(388032),
-    O = n(377779);
-function v(e, t) {
-    let n = p.ZP.getDefaultPrice(e),
-        { intervalType: r } = p.ZP.getInterval(e),
-        i = (0, h.T4)(n.amount, n.currency);
+    a = n(481060),
+    s = n(600164),
+    l = n(483444),
+    c = n(599250),
+    u = n(926153),
+    d = n(27693),
+    f = n(74538),
+    _ = n(937615),
+    p = n(104494),
+    h = n(639119),
+    m = n(474936),
+    g = n(388032),
+    E = n(377779);
+function b(e, t) {
+    let n = f.ZP.getDefaultPrice(e),
+        { intervalType: r } = f.ZP.getInterval(e),
+        i = (0, _.T4)(n.amount, n.currency);
     if (t) return i;
     switch (r) {
-        case b.rV.MONTH:
-            return y.intl.formatToPlainString(y.t.AbOLNj, { price: i });
-        case b.rV.YEAR:
-            return y.intl.formatToPlainString(y.t.rS8FAw, { price: i });
+        case m.rV.MONTH:
+            return g.intl.formatToPlainString(g.t.AbOLNj, { price: i });
+        case m.rV.YEAR:
+            return g.intl.formatToPlainString(g.t.rS8FAw, { price: i });
     }
 }
-let I = (e) => {
+let y = (e) => {
         let { isTier0: t, discountAmount: n } = e,
-            i = (0, g.N)(),
-            a = null != i && i.trial_id === b.a7,
-            l = y.intl.string(y.t.IBYG5e);
+            i = (0, h.N)(),
+            s = null != i && i.trial_id === m.a7,
+            l = g.intl.string(g.t.IBYG5e);
         return (
             void 0 !== n
-                ? (l = y.intl.formatToPlainString(y.t.iiLbvr, { percent: n }))
-                : a && (l = y.intl.string(y.t.gtNqJS)),
+                ? (l = g.intl.formatToPlainString(g.t.iiLbvr, { percent: n }))
+                : s && (l = g.intl.string(g.t.gtNqJS)),
             (0, r.jsx)("div", {
-                className: O.trialBadgeContainer,
-                children: (0, r.jsx)(s.Text, {
+                className: E.trialBadgeContainer,
+                children: (0, r.jsx)(a.Text, {
                     variant: "text-xs/bold",
-                    className: o()(O.trialOfferText, { [O.tier0TrialOffer]: t }),
+                    className: o()(E.trialOfferText, { [E.tier0TrialOffer]: t }),
                     children: l,
                 }),
             })
         );
     },
-    T = function (e) {
+    O = function (e) {
         var t;
         let n,
             {
                 hideCloseButton: i = !1,
-                hideCloseOnFullScreen: p,
-                shouldShowPrice: h,
-                plan: g,
-                renderAnimation: y,
-                onClose: T,
-                isGift: S,
-                upgradeToPremiumType: A,
-                headerTheme: N = b.nL.DEFAULT,
-                className: C,
-                showTrialBadge: R = !1,
-                showDiscountBadge: P = !1,
+                hideCloseOnFullScreen: f,
+                shouldShowPrice: _,
+                plan: h,
+                renderAnimation: g,
+                onClose: O,
+                isGift: v,
+                upgradeToPremiumType: I,
+                className: T,
+                showTrialBadge: S = !1,
+                showDiscountBadge: A = !1,
             } = e,
-            w = A === b.p9.TIER_2;
-        n = A === b.p9.TIER_0 ? d.Z : A === b.p9.TIER_1 ? f.Z : u.Z;
-        let D = (0, a.e7)([l.Z], () => l.Z.useReducedMotion),
-            L = (0, m.Ng)(),
-            x = null == L || null == (t = L.discount) ? void 0 : t.amount;
+            N = I === m.p9.TIER_2;
+        n = I === m.p9.TIER_0 ? c.Z : I === m.p9.TIER_1 ? u.Z : l.Z;
+        let C = (0, p.Ng)(),
+            R = null == C || null == (t = C.discount) ? void 0 : t.amount;
         return (0, r.jsxs)("div", {
             "aria-hidden": !0,
             className: o()(
                 {
-                    [O.headerBackground]: !w,
-                    [O.tier2HeaderBackground]: w,
+                    [E.headerBackground]: !N,
+                    [E.tier2HeaderBackground]: N,
                 },
-                C,
+                T,
             ),
             children: [
-                D || N !== b.nL.WINTER
-                    ? null
-                    : (0, r.jsx)(E.Z, {
-                          className: O.snow,
-                          wind: 5,
-                      }),
-                (R || P) && (0, r.jsx)(_.Z, { className: O.trialBadgeSparkles }),
-                y(),
-                (0, r.jsxs)(c.Z, {
-                    align: c.Z.Align.START,
-                    justify: c.Z.Justify.BETWEEN,
-                    className: O.headerTop,
+                (S || A) && (0, r.jsx)(d.Z, { className: E.trialBadgeSparkles }),
+                g(),
+                (0, r.jsxs)(s.Z, {
+                    align: s.Z.Align.START,
+                    justify: s.Z.Justify.BETWEEN,
+                    className: E.headerTop,
                     children: [
                         (0, r.jsxs)("div", {
                             children: [
-                                (0, r.jsx)(n, { className: o()(O.headerIcon, { [O.nonTier2]: !w }) }),
-                                (R || P) &&
-                                    (0, r.jsx)(I, {
-                                        isTier0: A === b.p9.TIER_0,
-                                        discountAmount: P ? x : void 0,
+                                (0, r.jsx)(n, { className: o()(E.headerIcon, { [E.nonTier2]: !N }) }),
+                                (S || A) &&
+                                    (0, r.jsx)(y, {
+                                        isTier0: I === m.p9.TIER_0,
+                                        discountAmount: A ? R : void 0,
                                     }),
                             ],
                         }),
                         !i &&
-                            (0, r.jsx)(s.olH, {
-                                hideOnFullscreen: p,
-                                onClick: T,
-                                className: O.closeButton,
+                            (0, r.jsx)(a.olH, {
+                                hideOnFullscreen: f,
+                                onClick: O,
+                                className: E.closeButton,
                             }),
                     ],
                 }),
-                h && null != g
+                _ && null != h
                     ? (0, r.jsx)("div", {
-                          className: O.price,
-                          children: v(g, S),
+                          className: E.price,
+                          children: b(h, v),
                       })
                     : null,
             ],

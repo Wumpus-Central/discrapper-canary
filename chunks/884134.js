@@ -203,7 +203,7 @@ function q(e) {
                 className: U.controlLabelContainer,
                 children: [
                     (0, r.jsx)(_.Text, {
-                        variant: "text-sm/medium",
+                        variant: "text-md/medium",
                         children: j.intl.string(k.default.dZkwg4),
                     }),
                     (0, r.jsx)("input", {
@@ -255,7 +255,7 @@ function X(e) {
                 className: U.controlLabelContainer,
                 children: [
                     (0, r.jsx)(_.Text, {
-                        variant: "text-sm/medium",
+                        variant: "text-md/medium",
                         children: j.intl.string(k.default.xlXkaG),
                     }),
                     (0, r.jsx)("input", {
@@ -296,19 +296,12 @@ function Q() {
             chassisMixAmount: t.intensity,
         });
     }, []);
-    return (0, r.jsx)(_.ua7, {
+    return (0, r.jsx)(c.z, {
+        variant: "secondary",
+        onClick: e,
+        icon: _.$2U,
         text: j.intl.string(k.default.c9MBEB),
-        children: (t) =>
-            (0, r.jsx)(
-                c.z,
-                F(B({}, t), {
-                    variant: "secondary",
-                    onClick: e,
-                    icon: _.$2U,
-                    text: j.intl.string(k.default.c9MBEB),
-                    fullWidth: !0,
-                }),
-            ),
+        fullWidth: !0,
     });
 }
 function J(e) {

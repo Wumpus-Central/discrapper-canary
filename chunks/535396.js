@@ -50,7 +50,7 @@ let u = "1340102344645283891",
     },
     m = "guild_powerup_modal",
     g = [[r.IN], [r.If], [r.A$], [r.MB, r.Vk]],
-    E = new Set([r.IN, r.If, r.A$]),
+    E = new Set([r.IN, r.If, r.A$, r.MB, r.Vk]),
     b = () => ({
         [s.oNc.VIDEO_BITRATE_ENHANCED]: {
             perkIcon: o.Ro.STREAM,

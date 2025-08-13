@@ -16,8 +16,8 @@ var r = n(255367),
     b = n(5192),
     y = n(501655),
     x = n(504185),
-    _ = n(388032),
-    j = n(203435);
+    j = n(388032),
+    _ = n(203435);
 let O = (e, t) => b.ZP.getName(e.getGuildId(), e.id, t.user),
     v = function (e) {
         let { participants: t, channel: n, hasConnectPermission: l } = e,
@@ -31,11 +31,11 @@ let O = (e, t) => b.ZP.getName(e.getGuildId(), e.id, t.user),
             E = 4 === C.length ? 2 : 3,
             S = (0, s.Wu)([d.Z], () => C.map((e) => d.Z.getParticipant(n.id, e.id)).filter(m.lm), [n.id, C]);
         return (0, r.jsxs)("div", {
-            className: j.container,
+            className: _.container,
             children: [
                 (0, r.jsx)(g.Z, {}),
                 (0, r.jsx)("div", {
-                    className: j.tiles,
+                    className: _.tiles,
                     style: { maxWidth: 168 * E },
                     children: S.slice(0, 5).map((e) =>
                         (0, r.jsx)(
@@ -43,7 +43,7 @@ let O = (e, t) => b.ZP.getName(e.getGuildId(), e.id, t.user),
                             {
                                 participant: e,
                                 channel: n,
-                                className: j.tile,
+                                className: _.tile,
                                 inCall: !0,
                                 noVideoRender: !0,
                                 inPopout: !1,
@@ -54,28 +54,28 @@ let O = (e, t) => b.ZP.getName(e.getGuildId(), e.id, t.user),
                     ),
                 }),
                 (0, r.jsx)(c.X6q, {
-                    className: j.channelName,
+                    className: _.channelName,
                     variant: "heading-xxl/normal",
                     children: n.name,
                 }),
                 (0, r.jsx)("div", {
-                    className: j.participantsRow,
+                    className: _.participantsRow,
                     children: (0, r.jsx)(c.Text, {
                         tag: "div",
                         color: "header-secondary",
                         variant: "heading-lg/normal",
                         children:
                             0 === C.length
-                                ? _.intl.string(_.t.FUVhyM)
+                                ? j.intl.string(j.t.FUVhyM)
                                 : 1 === C.length
-                                  ? _.intl.formatToPlainString(_.t.EQwZlJ, { a: O(n, C[0]) })
+                                  ? j.intl.formatToPlainString(j.t.EQwZlJ, { a: O(n, C[0]) })
                                   : 2 === C.length
-                                    ? _.intl.formatToPlainString(_.t.zBcKoK, {
+                                    ? j.intl.formatToPlainString(j.t.zBcKoK, {
                                           a: O(n, C[0]),
                                           b: O(n, C[1]),
                                       })
                                     : C.length > 2
-                                      ? _.intl.formatToPlainString(_.t["3AqFaG"], {
+                                      ? j.intl.formatToPlainString(j.t["3AqFaG"], {
                                             a: O(n, C[0]),
                                             b: O(n, C[1]),
                                             n: C.length - 2,
@@ -84,15 +84,15 @@ let O = (e, t) => b.ZP.getName(e.getGuildId(), e.id, t.user),
                     }),
                 }),
                 (0, r.jsxs)("div", {
-                    className: j.buttonContainer,
+                    className: _.buttonContainer,
                     children: [
                         (0, r.jsx)(o.zx, {
                             disabled: !l,
-                            className: a()(j.joinButton, { [j.roundButton]: !1 }),
+                            className: a()(_.joinButton, { [_.roundButton]: !1 }),
                             color: l ? o.zx.Colors.WHITE : o.zx.Colors.PRIMARY,
                             onClick: v,
                             size: o.zx.Sizes.MEDIUM,
-                            children: l ? _.intl.string(_.t["7vb2cX"]) : _.intl.string(_.t.TVBCKS),
+                            children: l ? j.intl.string(j.t["7vb2cX"]) : j.intl.string(j.t.TVBCKS),
                         }),
                         (0, r.jsx)(x.e, { channel: n }),
                     ],

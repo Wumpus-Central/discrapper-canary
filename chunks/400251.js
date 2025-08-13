@@ -21,8 +21,8 @@ var r = n(255367),
     b = n(769654),
     y = n(430824),
     x = n(768581),
-    _ = n(411198),
-    j = n(683818),
+    j = n(411198),
+    _ = n(683818),
     O = n(16853),
     v = n(981631),
     C = n(388032),
@@ -114,7 +114,7 @@ function N(e) {
     let { entry: t } = e,
         [l, s] = i.useState(!1),
         o = i.useRef(null),
-        { canEdit: u } = (0, j.Z)(t);
+        { canEdit: u } = (0, _.Z)(t);
     return (0, r.jsx)("div", {
         className: a()(E.actionButtonsContainer, { [E.forceButtonsShow]: l }),
         children: (0, r.jsxs)(p.ZP, {
@@ -189,11 +189,11 @@ let R = (e) => {
     var t;
     let { entry: l } = e,
         [a, p] = i.useState(!1),
-        j = null != (0, s.e7)([y.Z], () => y.Z.getGuild(l.guildId)),
+        _ = null != (0, s.e7)([y.Z], () => y.Z.getGuild(l.guildId)),
         O = async () => {
             p(!0);
             try {
-                j ? (0, b.X)(l.guildId) : await d.Z.joinGuild(l.guildId, { source: v.vtS.DIRECTORY_ENTRY });
+                _ ? (0, b.X)(l.guildId) : await d.Z.joinGuild(l.guildId, { source: v.vtS.DIRECTORY_ENTRY });
             } finally {
                 p(!1);
             }
@@ -214,7 +214,7 @@ let R = (e) => {
                 : void 0,
         T = C.intl.string(C.t.VJlc0d);
     return (
-        j && (T = C.intl.string(C.t.cqWE2d)),
+        _ && (T = C.intl.string(C.t.cqWE2d)),
         (0, r.jsxs)("div", {
             className: E.card,
             onContextMenu: (e) => {
@@ -248,7 +248,7 @@ let R = (e) => {
                                     children: (0, r.jsx)(f.Z, {
                                         className: E.icon,
                                         iconSrc: P,
-                                        guild: (0, _.e)(l),
+                                        guild: (0, j.e)(l),
                                         size: f.Z.Sizes.MEDIUM,
                                         active: !0,
                                     }),
@@ -318,7 +318,7 @@ let R = (e) => {
                         (0, r.jsx)(o.zx, {
                             submitting: a,
                             className: E.joinButton,
-                            color: j ? o.zx.Colors.PRIMARY : o.zx.Colors.GREEN,
+                            color: _ ? o.zx.Colors.PRIMARY : o.zx.Colors.GREEN,
                             onClick: O,
                             children: T,
                         }),

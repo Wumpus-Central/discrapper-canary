@@ -152,6 +152,7 @@ function Y(e) {
         ev = (0, f.Z)(K, t, {
             shouldHideMediaOptions: et,
             contentType: null == i ? void 0 : i.contentType,
+            originalContentType: null == i ? void 0 : i.originalContentType,
         }),
         eI = (0, Z.Z)(t, i),
         eT = (0, u.Z)({

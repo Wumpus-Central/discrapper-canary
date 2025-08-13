@@ -92,6 +92,8 @@ function S(e) {
             original: n.url,
             placeholder: n.placeholder,
             placeholderVersion: n.placeholder_version,
+            contentType: n.content_type,
+            originalContentType: n.original_content_type,
             srcIsAnimated: (0, p.yE)(null != (t = n.flags) ? t : 0, E.J0y.IS_ANIMATED),
             sourceMetadata: {
                 message: e.message,

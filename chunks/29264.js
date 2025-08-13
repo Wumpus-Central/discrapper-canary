@@ -49,10 +49,10 @@ function g(e, t, n) {
         (null == n ? void 0 : n.shouldHideMediaOptions) === !0 ||
         !l.isPlatformEmbedded ||
         null == e ||
-        !(0, o.gS)(e, null == n ? void 0 : n.contentType)
+        !(0, o.gS)(e, null == n ? void 0 : n.contentType, null == n ? void 0 : n.originalContentType)
     )
         return null;
-    let c = (0, o.s$)(e, null == n ? void 0 : n.contentType, o.wV),
+    let c = (0, o.s$)(e, null == n ? void 0 : n.contentType, null == n ? void 0 : n.originalContentType, o.wV),
         p = async () => {
             try {
                 await u.ZP.saveImage(c, null == n ? void 0 : n.contentType, o.wV),
@@ -74,7 +74,7 @@ function g(e, t, n) {
             }
         };
     return [
-        (0, o.Lz)(e, null == n ? void 0 : n.contentType)
+        (0, o.Lz)(e, null == n ? void 0 : n.contentType, null == n ? void 0 : n.originalContentType)
             ? (0, r.jsx)(
                   i.sNh,
                   {

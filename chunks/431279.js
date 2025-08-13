@@ -127,13 +127,17 @@ class b extends (r = o.PureComponent) {
                         shouldHideMediaOptions: p = !1,
                         sourceMetadata: h,
                         analyticsSource: m,
+                        contentType: g,
+                        originalContentType: E,
                     } = this.props,
-                    g = {
+                    b = {
                         url: o,
                         width: l,
                         height: c,
                         type: "IMAGE",
                         alt: i,
+                        contentType: g,
+                        originalContentType: E,
                         zoomThumbnailPlaceholder: n,
                         animated: u,
                         srcIsAnimated: f,
@@ -145,7 +149,7 @@ class b extends (r = o.PureComponent) {
                 (0, a.k)(e.currentTarget) && e.currentTarget.blur(),
                     (0, d.K)({
                         onClose: this.onCloseImage,
-                        items: [g],
+                        items: [b],
                         shouldHideMediaOptions: p,
                         location: null != m ? m : "LazyImageZoomable",
                         contextKey: this.modalContext,

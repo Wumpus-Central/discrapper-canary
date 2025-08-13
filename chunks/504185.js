@@ -20,8 +20,8 @@ var r = n(255367),
     b = n(906732),
     y = n(358221),
     x = n(414910),
-    _ = n(909820),
-    j = n(493010),
+    j = n(909820),
+    _ = n(493010),
     O = n(71127),
     v = n(185935),
     C = n(522651),
@@ -116,14 +116,14 @@ function eu(e) {
             var e;
             return null != (e = null == a ? void 0 : a.window) ? e : window;
         }, [a]),
-        _ = (0, $.Z)({
+        j = (0, $.Z)({
             channel: t,
             appContext: n,
             popoutOpen: l,
             popoutWindow: a,
             currentWindow: m,
         }),
-        j = n === et.IlC.POPOUT && F.isPlatformEmbedded && H.ZP.supportsFeature(et.eRX.POPOUT_WINDOWS);
+        _ = n === et.IlC.POPOUT && F.isPlatformEmbedded && H.ZP.supportsFeature(et.eRX.POPOUT_WINDOWS);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             g
@@ -135,7 +135,7 @@ function eu(e) {
                       location: u,
                   })
                 : null,
-            j
+            _
                 ? (0, r.jsx)(w.Z, {
                       popoutWindowAlwaysOnTop: s,
                       onToggleStayOnTop: ec,
@@ -152,7 +152,7 @@ function eu(e) {
                       },
                   })
                 : null,
-            _,
+            j,
         ],
     });
 }
@@ -185,7 +185,7 @@ function eh(e) {
             popoutWindowAlwaysOnTop: p,
             popoutOpen: f,
             chatOpen: x,
-            idleProps: j,
+            idleProps: _,
         } = e,
         { analyticsLocations: O } = (0, b.ZP)(m.Z.VOICE_CONTROL_TRAY),
         v = (0, g.bp)(),
@@ -263,7 +263,7 @@ function eh(e) {
                     renderChatToasts: () =>
                         !A || x || Z
                             ? null
-                            : (0, r.jsx)(_.ZP, {
+                            : (0, r.jsx)(j.ZP, {
                                   children: (0, r.jsx)(T.Z, {
                                       className: a()(ei.chatToasts, { [ei.rtsSidebarOpen]: d }),
                                       channelId: c.id,
@@ -271,7 +271,7 @@ function eh(e) {
                               }),
                     screenMessage: Z ? { mainText: er.intl.string(er.t.J5bXZW) } : null,
                 },
-                j,
+                _,
             )),
             (n = n = { children: !Z && l }),
             Object.getOwnPropertyDescriptors
@@ -326,7 +326,7 @@ function ep(e) {
         k = !C || (C && I === et.IlC.POPOUT);
     return (0, r.jsx)(b.Gt, {
         value: E,
-        children: (0, r.jsxs)(_.B2, {
+        children: (0, r.jsxs)(j.B2, {
             children: [
                 (0, r.jsxs)("div", {
                     className: ei.container,
@@ -368,7 +368,7 @@ function ep(e) {
                             children: [
                                 Z &&
                                     k &&
-                                    (0, r.jsx)(j.Z, {
+                                    (0, r.jsx)(_.Z, {
                                         channel: t,
                                         guild: N,
                                         maxWidth: D,
@@ -384,7 +384,7 @@ function ep(e) {
                         }),
                     ],
                 }),
-                (0, r.jsx)(_.H_, {}),
+                (0, r.jsx)(j.H_, {}),
             ],
         }),
     });

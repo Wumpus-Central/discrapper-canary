@@ -16,8 +16,8 @@ var r = n(255367),
     b = n(906732),
     y = n(541716),
     x = n(752305),
-    _ = n(893718),
-    j = n(303628),
+    j = n(893718),
+    _ = n(303628),
     O = n(313201),
     v = n(967128),
     C = n(665149),
@@ -211,9 +211,9 @@ function X(e) {
                 }
             );
         })(t, f),
-        _ = (0, M.vH)(t),
+        j = (0, M.vH)(t),
         {
-            isGeneratingAI: j,
+            isGeneratingAI: _,
             enableAIFeatures: O,
             renderAiGenerateButton: C,
         } = (0, H.U)({
@@ -328,12 +328,12 @@ function X(e) {
             parentChannel: t,
             parentMessageId: n,
             threadSettings: h,
-            privateThreadMode: _,
+            privateThreadMode: j,
             textAreaState: b,
             location: l,
             enableAIFeatures: O,
         }),
-        R = (0, M.oD)(h, _) ? c.qtY : c.or_;
+        R = (0, M.oD)(h, j) ? c.qtY : c.or_;
     return (0, r.jsx)("div", {
         className: V.chat,
         onMouseDown: d,
@@ -366,7 +366,7 @@ function X(e) {
                                             updateThreadSettings: m,
                                             error: E,
                                             disabled: N,
-                                            isGeneratingAI: j,
+                                            isGeneratingAI: _,
                                             enableAIFeatures: O,
                                             renderAiGenerateButton: C,
                                         }),
@@ -375,7 +375,7 @@ function X(e) {
                                                   startedFromMessage: null != n,
                                                   threadSettings: h,
                                                   updateThreadSettings: m,
-                                                  privateThreadMode: _,
+                                                  privateThreadMode: j,
                                               })
                                             : null,
                                     ],
@@ -467,11 +467,11 @@ function $(e) {
         b = (0, L.Op)(u, { content: m }),
         y = (0, M.Od)(n, i),
         x = null != i && !f,
-        _ = (0, O.Dt)(),
-        j = f ? W.intl.string(W.t["Nb2/RE"]) : "" !== y ? y : W.intl.string(W.t["Nb2/RE"]);
+        j = (0, O.Dt)(),
+        _ = f ? W.intl.string(W.t["Nb2/RE"]) : "" !== y ? y : W.intl.string(W.t["Nb2/RE"]);
     return (0, r.jsx)(c.hjN, {
         tag: "label",
-        htmlFor: _,
+        htmlFor: j,
         title: W.intl.string(x ? W.t.JPvIiI : W.t.j3XWjI),
         className: V.formSection,
         children: (0, r.jsxs)("div", {
@@ -479,8 +479,8 @@ function $(e) {
             children: [
                 (0, r.jsx)(o.Is, {
                     value: m,
-                    id: _,
-                    placeholder: j,
+                    id: j,
+                    placeholder: _,
                     maxLength: B.HN8,
                     onChange: (e) => {
                         s({ name: (0, U.Z)(e, !1) }), "" !== e ? d.Z.startTyping(n.id) : d.Z.stopTyping(n.id);
@@ -537,7 +537,7 @@ function ee(e) {
         O = (0, L.Op)(h, { content: n.textValue });
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(j.Z, {
+            (0, r.jsx)(_.Z, {
                 channelId: t.id,
                 type: q,
                 canAttachFiles: x,
@@ -546,7 +546,7 @@ function ee(e) {
                 className: V.starterMessageError,
                 children: (0, r.jsx)(c.pdY, { error: O }),
             }),
-            (0, r.jsx)(_.ZP, {
+            (0, r.jsx)(j.ZP, {
                 type: q,
                 channel: t,
                 placeholder: W.intl.string(W.t.taZfIC),

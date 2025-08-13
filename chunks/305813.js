@@ -78,20 +78,20 @@ function E(e) {
         ),
         w = (0, s.ZP)(),
         R = (0, a.wjy)(w),
-        [I, A] = (0, o.useState)(R),
+        [A, I] = (0, o.useState)(R),
         L = (0, g.ZP)(t.id, null),
         { bannerSrc: B } = (0, h.Z)({
             displayProfile: L,
             size: 413,
             canAnimate: !1,
         }),
-        M = I ? S.BRd.DARK : S.BRd.LIGHT;
-    ((R && I) || (!R && !I)) && (M = w);
+        M = A ? S.BRd.DARK : S.BRd.LIGHT;
+    ((R && A) || (!R && !A)) && (M = w);
     let Z = (0, o.useCallback)(() => {
             j.default.track(S.rMx.DISPLAY_NAME_STYLES_CLOSED), N();
         }, [N]),
-        Y = (0, o.useCallback)((e) => {
-            A(e === S.BRd.DARK), j.default.track(S.rMx.DISPLAY_NAME_STYLES_THEME_TOGGLE, { dark: e === S.BRd.DARK });
+        G = (0, o.useCallback)((e) => {
+            I(e === S.BRd.DARK), j.default.track(S.rMx.DISPLAY_NAME_STYLES_THEME_TOGGLE, { dark: e === S.BRd.DARK });
         }, []);
     return (0, r.jsxs)("div", {
         className: P.previewSection,
@@ -178,8 +178,8 @@ function E(e) {
                         }),
                     }),
                     (0, r.jsx)(T, {
-                        darkPreview: I,
-                        onToggleTheme: Y,
+                        darkPreview: A,
+                        onToggleTheme: G,
                     }),
                 ],
             }),

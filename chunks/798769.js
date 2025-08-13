@@ -18,20 +18,18 @@ function h(e) {
             className: n,
             purchaseState: h,
             premiumType: m,
-            useWinterTheme: g = !1,
-            onClose: E,
-            hideCloseButton: b,
-            showTrialBadge: y,
-            showDiscountBadge: O,
-            isGift: v,
-            giftRecipient: I,
-            isEligibleForTrial: T,
-            enablePremiumBrandRefresh: S,
-            isDisplayingWowMomentConfirmation: A,
+            onClose: g,
+            hideCloseButton: E,
+            showTrialBadge: b,
+            showDiscountBadge: y,
+            isGift: O,
+            giftRecipient: v,
+            isEligibleForTrial: I,
+            enablePremiumBrandRefresh: T,
+            isDisplayingWowMomentConfirmation: S,
         } = e,
-        N = (0, i.e7)([a.Z], () => a.Z.useReducedMotion),
-        C = g ? f.nL.WINTER : f.nL.DEFAULT,
-        R = () => {
+        A = (0, i.e7)([a.Z], () => a.Z.useReducedMotion),
+        N = () => {
             switch (t) {
                 case s.h8.PLAN_SELECT:
                     return m === f.p9.TIER_0 ? _.intl.string(_.t.rk4Uu7) : _.intl.string(_.t["7YWj6+"]);
@@ -43,7 +41,7 @@ function h(e) {
                     return _.intl.string(_.t["7YWj6+"]);
             }
         };
-    return v && (0, l.pO)(I) && t !== s.h8.CONFIRM
+    return O && (0, l.pO)(v) && t !== s.h8.CONFIRM
         ? (0, r.jsxs)(o.xBx, {
               className: p.modalHeaderCustomGift,
               separator: !1,
@@ -51,31 +49,31 @@ function h(e) {
               children: [
                   (0, r.jsx)(o.X6q, {
                       variant: "heading-lg/semibold",
-                      children: R(),
+                      children: N(),
                   }),
                   (0, r.jsx)(o.olH, {
-                      onClick: E,
+                      onClick: g,
                       className: p.closeButton,
                       innerClassName: p.closeButtonInner,
                       "data-migration-pending": !0,
                   }),
               ],
           })
-        : S || A
+        : T || S
           ? (0, r.jsx)(c.Z, {
                 hideCloseOnFullScreen: !0,
-                hideCloseButton: b,
+                hideCloseButton: E,
                 upgradeToPremiumType: m,
-                onClose: E,
-                isEligibleForTrial: T,
-                showTrialBadge: y,
-                showDiscountBadge: O,
+                onClose: g,
+                isEligibleForTrial: I,
+                showTrialBadge: b,
+                showDiscountBadge: y,
             })
           : (0, r.jsx)("div", {
                 className: n,
                 children: (0, r.jsx)(u.Z, {
                     hideCloseOnFullScreen: !0,
-                    hideCloseButton: b,
+                    hideCloseButton: E,
                     shouldShowPrice: !0,
                     upgradeToPremiumType: m,
                     renderAnimation: () =>
@@ -84,28 +82,27 @@ function h(e) {
                                   className: p.headerAnimation,
                                   currentStep: t,
                                   purchaseState: h,
-                                  pause: N,
+                                  pause: A,
                               })
                             : m === f.p9.TIER_1
                               ? (0, r.jsx)(d.tK, {
                                     className: p.headerAnimation,
                                     currentStep: t,
                                     purchaseState: h,
-                                    pause: N,
+                                    pause: A,
                                 })
                               : (0, r.jsx)(d.Bk, {
                                     className: p.headerAnimation,
                                     currentStep: t,
                                     purchaseState: h,
-                                    pause: N,
+                                    pause: A,
                                 }),
                     plan: null,
                     isGift: !1,
                     className: p.header,
-                    onClose: E,
-                    headerTheme: C,
-                    showTrialBadge: y,
-                    showDiscountBadge: O,
+                    onClose: g,
+                    showTrialBadge: b,
+                    showDiscountBadge: y,
                 }),
             });
 }

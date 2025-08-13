@@ -7,7 +7,6 @@ e.exports = {
     legacySeasonalGiftEmbedWrapper: "legacySeasonalGiftEmbedWrapper__857bf",
     customGiftEmbedWrapper: "customGiftEmbedWrapper__857bf",
     giftEmbedWrapperHorizontal: "giftEmbedWrapperHorizontal__857bf",
-    snow: "snow__857bf",
     legacySeasonalGiftEmbedBox: "legacySeasonalGiftEmbedBox__857bf",
     legacySeasonalGiftEmbedBoxHorizontal: "legacySeasonalGiftEmbedBoxHorizontal__857bf",
     customGiftEmbedBox: "customGiftEmbedBox__857bf",

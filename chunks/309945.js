@@ -1,25 +1,25 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => _ });
 var r = n(255367),
     o = n(73800),
     i = n(494497),
     l = n(657707),
-    s = n(793030),
-    a = n(442837),
-    u = n(692547),
-    c = n(899667),
+    a = n(793030),
+    s = n(442837),
+    c = n(692547),
+    u = n(899667),
     d = n(905128),
     p = n(93841),
-    f = n(388032),
-    m = n(200985);
-function g(e) {
+    m = n(388032),
+    f = n(200985);
+function _(e) {
     let { guildId: t, powerups: n } = e,
-        g = (0, a.e7)([d.Z], () => {
+        _ = (0, s.e7)([d.Z], () => {
             var e, n;
             return null != (n = null == (e = d.Z.getStateForGuild(t)) ? void 0 : e.appliedBoosts) ? n : 0;
         }),
-        x = (0, a.e7)([c.Z], () => c.Z.getAppliedGuildBoostsForGuild(t), [t]),
-        v =
-            g -
+        x = (0, s.e7)([u.Z], () => u.Z.getAppliedGuildBoostsForGuild(t), [t]),
+        g =
+            _ -
             o.useMemo(() => {
                 var e, t, n;
                 return null !=
@@ -32,32 +32,32 @@ function g(e) {
                     ? n
                     : 0;
             }, [x]);
-    if (v <= 0) return null;
-    let _ = n.some((e) => e.skuId === i.A$);
+    if (g <= 0) return null;
+    let v = n.some((e) => e.skuId === i.A$);
     return (0, r.jsxs)("div", {
-        className: m.container,
+        className: f.container,
         children: [
             (0, r.jsx)(l.Mgn, {
-                color: u.Z.colors.TEXT_FEEDBACK_WARNING,
-                className: m.icon,
+                color: c.Z.colors.TEXT_FEEDBACK_WARNING,
+                className: f.icon,
             }),
-            (0, r.jsx)(s.xv, {
+            (0, r.jsx)(a.xv, {
                 variant: "text-md/semibold",
                 color: "text-feedback-warning",
-                children: f.intl.string(p.default.n5hQhY),
+                children: m.intl.string(p.default.n5hQhY),
             }),
-            (0, r.jsxs)(s.xv, {
+            (0, r.jsxs)(a.xv, {
                 variant: "text-sm/medium",
                 children: [
-                    f.intl.formatToPlainString(p.default.iAaAiI, {
-                        boostCount: v,
+                    m.intl.formatToPlainString(p.default.iAaAiI, {
+                        boostCount: g,
                         perksString: n.map((e) => e.title).join(", "),
                     }),
-                    _ &&
-                        (0, r.jsx)(s.xv, {
+                    v &&
+                        (0, r.jsx)(a.xv, {
                             variant: "text-sm/medium",
                             color: "text-feedback-warning",
-                            children: f.intl.string(p.default.Sfr0Jy),
+                            children: m.intl.string(p.default.Sfr0Jy),
                         }),
                 ],
             }),

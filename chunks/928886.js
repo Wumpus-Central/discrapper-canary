@@ -1,102 +1,97 @@
-n.d(t, { U: () => T });
+n.d(t, { U: () => I });
 var r = n(255367),
     i = n(73800),
     o = n(512722),
     a = n.n(o),
     s = n(481060),
     l = n(479446),
-    c = n(646476),
-    u = n(104494),
-    d = n(639119),
-    f = n(981632),
-    _ = n(798769),
-    p = n(689011),
-    h = n(669079),
-    m = n(987209),
-    g = n(563132),
-    E = n(409813),
-    b = n(981631),
-    y = n(474936),
-    O = n(231338),
-    v = n(19549);
-function I(e, t) {
+    c = n(104494),
+    u = n(639119),
+    d = n(981632),
+    f = n(798769),
+    _ = n(689011),
+    p = n(669079),
+    h = n(987209),
+    m = n(563132),
+    g = n(409813),
+    E = n(981631),
+    b = n(474936),
+    y = n(231338),
+    O = n(19549);
+function v(e, t) {
     return e in t;
 }
-function T(e) {
+function I(e) {
     var t;
-    let { renderHeader: n, referralTrialOfferId: o, handleClose: T } = e,
+    let { renderHeader: n, referralTrialOfferId: o, handleClose: I } = e,
         {
-            selectedSkuId: S,
-            step: A,
-            selectedPlan: N,
-            purchaseState: C,
-            purchaseType: R,
-            selectedSku: P,
-            enablePremiumBrandRefresh: w,
-            isDisplayingWowMomentConfirmation: D,
-        } = (0, g.JL)(),
-        { isGift: L, selectedGiftStyle: x, giftRecipient: M } = (0, m.wD)(),
-        k =
-            L &&
-            (0, h.pO)(M) &&
-            A === E.h8.CONFIRM &&
-            null != x &&
-            (null == P ? void 0 : P.productLine) !== b.POd.COLLECTIBLES,
-        j = null != n && null != A,
-        U = [E.h8.SKU_SELECT, E.h8.SELECT_FREE_SKU],
-        G = null != A && !U.includes(A) && null != S,
-        B = (0, d.N)(o),
-        Z = !L && null != B && null != S && y.nG[B.trial_id].skus.includes(S),
-        F = (0, u.Ng)(),
-        V = null == F || null == (t = F.discount) ? void 0 : t.plan_ids.some((e) => y.GP[e].skuId === S),
-        H = !L && null != F && null != S && V,
-        { enabled: Y } = c.ZP.useExperiment({ location: "PaymentModalHeader" }, { autoTrackExposure: !1 }),
-        W = (0, c.rK)(),
-        K = Y && W;
+            selectedSkuId: T,
+            step: S,
+            selectedPlan: A,
+            purchaseState: N,
+            purchaseType: C,
+            selectedSku: R,
+            enablePremiumBrandRefresh: P,
+            isDisplayingWowMomentConfirmation: w,
+        } = (0, m.JL)(),
+        { isGift: D, selectedGiftStyle: L, giftRecipient: x } = (0, h.wD)(),
+        M =
+            D &&
+            (0, p.pO)(x) &&
+            S === g.h8.CONFIRM &&
+            null != L &&
+            (null == R ? void 0 : R.productLine) !== E.POd.COLLECTIBLES,
+        k = null != n && null != S,
+        j = [g.h8.SKU_SELECT, g.h8.SELECT_FREE_SKU],
+        U = null != S && !j.includes(S) && null != T,
+        G = (0, u.N)(o),
+        B = !D && null != G && null != T && b.nG[G.trial_id].skus.includes(T),
+        Z = (0, c.Ng)(),
+        F = null == Z || null == (t = Z.discount) ? void 0 : t.plan_ids.some((e) => b.GP[e].skuId === T),
+        V = !D && null != Z && null != T && F;
     return i.useMemo(() => {
-        if (null == A) return;
+        if (null == S) return;
         let e = null;
         return (
-            k
+            M
                 ? (e = (0, r.jsxs)("div", {
-                      className: v.container,
+                      className: O.container,
                       children: [
-                          (0, r.jsx)(f.Z, {
+                          (0, r.jsx)(d.Z, {
                               defaultAnimationState: l.SR.LOOP,
-                              giftStyle: x,
-                              className: v.seasonalGiftBoxHeaderIcon,
+                              giftStyle: L,
+                              className: O.seasonalGiftBoxHeaderIcon,
                           }),
                           (0, r.jsx)(s.olH, {
-                              onClick: T,
-                              className: v.closeButton,
+                              onClick: I,
+                              className: O.closeButton,
                               "data-migration-pending": !0,
                           }),
                       ],
                   }))
-                : j
-                  ? (e = n(null != N ? N : null, T, A))
-                  : R === O.GZ.ONE_TIME
-                    ? (e = (0, r.jsx)(p.t, {
-                          step: A,
-                          onClose: T,
+                : k
+                  ? (e = n(null != A ? A : null, I, S))
+                  : C === y.GZ.ONE_TIME
+                    ? (e = (0, r.jsx)(_.t, {
+                          step: S,
+                          onClose: I,
                       }))
-                    : G &&
-                      (a()(I(S, y.y7), "invalid sku id: ".concat(S)),
-                      (e = (0, r.jsx)(_.Z, {
-                          currentStep: null != A ? A : void 0,
-                          purchaseState: C,
-                          premiumType: y.y7[S],
-                          onClose: T,
-                          showTrialBadge: Z,
-                          showDiscountBadge: H,
-                          isGift: L,
-                          giftRecipient: M,
-                          useWinterTheme: K,
-                          isEligibleForTrial: Z,
-                          enablePremiumBrandRefresh: w,
-                          isDisplayingWowMomentConfirmation: D,
+                    : U &&
+                      (a()(v(T, b.y7), "invalid sku id: ".concat(T)),
+                      (e = (0, r.jsx)(f.Z, {
+                          currentStep: null != S ? S : void 0,
+                          purchaseState: N,
+                          premiumType: b.y7[T],
+                          onClose: I,
+                          showTrialBadge: B,
+                          showDiscountBadge: V,
+                          isGift: D,
+                          giftRecipient: x,
+                          isEligibleForTrial: B,
+                          enablePremiumBrandRefresh: P,
+                          isDisplayingWowMomentConfirmation: w,
                       }))),
             e
         );
-    }, [x, T, C, n, N, S, A, Z, H, k, G, j, R, L, M, K, w, D]);
+    }, [L, I, N, n, A, T, S, B, V, M, U, k, C, D, x, P, w]);
 }

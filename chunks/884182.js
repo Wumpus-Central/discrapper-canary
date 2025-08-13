@@ -140,7 +140,7 @@ function T(e) {
         children: (0, r.jsx)(w, {
             props: s,
             useFullWidth: !i,
-            isSingleItem: !0,
+            isSingleItem: i,
             maxWidth: n,
             footer: o,
         }),

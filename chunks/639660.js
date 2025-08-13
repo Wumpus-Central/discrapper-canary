@@ -1,71 +1,71 @@
-n.d(t, { Z: () => E }), n(539854), n(388685);
+n.d(t, { Z: () => C }), n(539854), n(388685);
 var r = n(255367),
     o = n(793030),
     i = n(442837),
     l = n(704215),
-    s = n(243778),
-    a = n(430824),
-    u = n(232062),
-    c = n(618460),
+    a = n(243778),
+    s = n(430824),
+    c = n(232062),
+    u = n(618460),
     d = n(105529),
     p = n(800869),
-    f = n(366751),
-    m = n(309945),
-    g = n(385902),
+    m = n(366751),
+    f = n(309945),
+    _ = n(385902),
     x = n(234368),
-    v = n(981631),
-    _ = n(93841),
+    g = n(981631),
+    v = n(93841),
     b = n(388032),
-    j = n(695124);
-function h() {
+    h = n(695124);
+function j() {
     return (0, r.jsx)("div", {
-        className: j.staffContainer,
+        className: h.staffContainer,
         children: (0, r.jsx)(o.xv, {
             variant: "text-sm/medium",
-            children: b.intl.string(_.default.l9n4QU),
+            children: b.intl.string(v.default.l9n4QU),
         }),
     });
 }
-function E(e) {
+function C(e) {
     let { guildId: t } = e,
-        n = (0, i.e7)([a.Z], () => {
+        n = (0, i.e7)([s.Z], () => {
             var e;
-            return (null == (e = a.Z.getGuild(t)) ? void 0 : e.features.has(v.oNc.PREMIUM_TIER_3_OVERRIDE)) === !0;
+            return (null == (e = s.Z.getGuild(t)) ? void 0 : e.features.has(g.oNc.PREMIUM_TIER_3_OVERRIDE)) === !0;
         }),
-        E = (0, c.Z)(t),
-        C = E.length > 0,
-        { shouldShow: I, notificationConfig: O } = (0, g._)(t, "GuildPowerupNotificationContainer"),
-        y = [];
-    I && y.push(l.z.VANITY_URL_POWERUP_ROLLBACK_NOTIFICATION);
-    let [w, P] = (0, s.ZT)(y, t),
-        N = null != w && null != O,
-        Z = (0, u.W)(t, "GuildPowerupNotificationContainer"),
-        S = [];
-    N ||
-        C ||
-        (S.push(l.z.GUILD_POWERUPS_OVERVIEW_SIDEBAR_COACHMARK),
-        Z && S.push(l.z.BOOSTER_ENHANCED_ROLE_COLORS_ADMIN_UPSELL));
-    let [T, A] = (0, s.US)(S),
+        C = (0, u.Z)(t),
+        E = C.length > 0,
+        { shouldShow: I, notificationConfig: N } = (0, _._)(t, "GuildPowerupNotificationContainer"),
+        w = [];
+    I && w.push(l.z.VANITY_URL_POWERUP_ROLLBACK_NOTIFICATION);
+    let [Z, P] = (0, a.ZT)(w, t),
+        S = null != Z && null != N,
+        y = (0, c.W)(t, "GuildPowerupNotificationContainer"),
+        T = [];
+    S ||
+        E ||
+        (T.push(l.z.GUILD_POWERUPS_OVERVIEW_SIDEBAR_COACHMARK),
+        y && T.push(l.z.BOOSTER_ENHANCED_ROLE_COLORS_ADMIN_UPSELL));
+    let [O, A] = (0, a.US)(T),
         R = ((e) => {
             let n = [];
             return (
-                C &&
-                    n.push(
-                        (0, r.jsx)(
-                            m.Z,
-                            {
-                                guildId: t,
-                                powerups: E,
-                            },
-                            "expiring-powerups",
-                        ),
-                    ),
-                N &&
+                E &&
                     n.push(
                         (0, r.jsx)(
                             f.Z,
                             {
-                                notificationConfig: O,
+                                guildId: t,
+                                powerups: C,
+                            },
+                            "expiring-powerups",
+                        ),
+                    ),
+                S &&
+                    n.push(
+                        (0, r.jsx)(
+                            m.Z,
+                            {
+                                notificationConfig: N,
                                 markAsDismissed: (e) => {
                                     P(e);
                                 },
@@ -90,17 +90,17 @@ function E(e) {
                           )),
                 n
             );
-        })(T);
+        })(O);
     return 0 !== R.length || n
         ? (0, r.jsxs)("div", {
-              className: j.container,
+              className: h.container,
               children: [
                   (0, r.jsx)(o.xv, {
                       variant: "eyebrow",
                       color: "text-secondary",
-                      children: b.intl.string(_.default["3FRira"]),
+                      children: b.intl.string(v.default["3FRira"]),
                   }),
-                  n && (0, r.jsx)(h, {}),
+                  n && (0, r.jsx)(j, {}),
                   R.map((e) => e),
               ],
           })

@@ -1,5 +1,5 @@
 n.d(t, {
-    S: () => s,
+    S: () => a,
     z: () => i,
 }),
     n(388685),
@@ -14,7 +14,7 @@ let i = {
         for (let t of r) e[t] = n;
         return e;
     }, {});
-function s(e) {
+function a(e) {
     let t = [],
         n = e.reduce((e, t) => {
             var n;

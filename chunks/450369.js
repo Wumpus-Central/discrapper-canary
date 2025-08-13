@@ -19,8 +19,8 @@ var r = n(255367),
     b = n(358221),
     y = n(795318),
     x = n(258609),
-    _ = n(569545),
-    j = n(102172),
+    j = n(569545),
+    _ = n(102172),
     O = n(352978),
     v = n(880395),
     C = n(670188),
@@ -156,10 +156,10 @@ let M = 16 / 9,
                 (e, t) => {
                     if (
                         e.type === A.fO.STREAM &&
-                        0 === v.filter((t) => (0, _.V9)(t) === e.id && t.state !== w.jm8.ENDED).length
+                        0 === v.filter((t) => (0, j.V9)(t) === e.id && t.state !== w.jm8.ENDED).length
                     ) {
-                        if (!(0, j.p9)(l, P.Z, I.Z, Z.Z, x.Z)[0]) return;
-                        (0, h.rn)((0, _.my)(e.id), { forceMultiple: t.shiftKey });
+                        if (!(0, _.p9)(l, P.Z, I.Z, Z.Z, x.Z)[0]) return;
+                        (0, h.rn)((0, j.my)(e.id), { forceMultiple: t.shiftKey });
                     }
                     (null == C ? void 0 : C.id) === e.id
                         ? S
@@ -196,11 +196,11 @@ let M = 16 / 9,
             { newestAnalyticsLocation: u } = (0, g.ZP)(f.Z.STAGE_TILE),
             h = (0, p.bp)(),
             x = l.getGuildId(),
-            _ = S.default.getId();
+            j = S.default.getId();
         a()(null != x, "Channel cannot be guildless");
-        let { user: j } = i,
+        let { user: _ } = i,
             O = (0, o.e7)([b.Z], () => b.Z.getParticipant(l.id, i.id), [l.id, i.id]),
-            C = (0, o.e7)([T.ZP], () => T.ZP.isModerator(j.id, l.id), [l.id, j.id]);
+            C = (0, o.e7)([T.ZP], () => T.ZP.isModerator(_.id, l.id), [l.id, _.id]);
         if (null == O || O.type === A.fO.ACTIVITY) return null;
         let E = (e) => {
                 (0, m.h)({
@@ -208,7 +208,7 @@ let M = 16 / 9,
                     name: s.ImpressionNames.CALL_TILE_CONTEXT_MENU,
                     properties: {
                         location: "StageTile",
-                        is_tile_owner: j.id === _,
+                        is_tile_owner: _.id === j,
                         tile_type: e,
                     },
                 });
@@ -231,7 +231,7 @@ let M = 16 / 9,
                                                 exitFullscreen: () => {},
                                                 onInteraction: (0, y.u)("StreamContextMenu", u, {
                                                     entrypoint: a,
-                                                    targetUserId: j.id,
+                                                    targetUserId: _.id,
                                                     tileType: A.TH.STREAM,
                                                 }),
                                             }),
@@ -243,12 +243,12 @@ let M = 16 / 9,
                     case A.fO.USER:
                     default:
                         if ((E(A.TH.USER), i))
-                            return (0, v.D)(t, j, l, { context: h }, (e, t) =>
+                            return (0, v.D)(t, _, l, { context: h }, (e, t) =>
                                 (0, y.o)({
                                     menuName: e,
                                     menuItemProps: t,
                                     entrypoint: A.A5.THREE_DOT,
-                                    targetUserId: j.id,
+                                    targetUserId: _.id,
                                     location: u,
                                     tileType: A.TH.USER,
                                 }),
@@ -267,14 +267,14 @@ let M = 16 / 9,
                                     (0, r.jsx)(
                                         e,
                                         L(k({}, t), {
-                                            user: j,
+                                            user: _,
                                             guildId: x,
                                             channel: l,
                                             showMediaItems: !0,
                                             showStageChannelItems: !0,
                                             showChatItems: !1,
                                             onInteraction: (0, y.u)("GuildChannelUserContextMenu", u, {
-                                                targetUserId: j.id,
+                                                targetUserId: _.id,
                                                 tileType: A.TH.USER,
                                             }),
                                         }),
@@ -290,7 +290,7 @@ let M = 16 / 9,
                   rtcParticipant: O,
                   channel: l,
                   guildId: x,
-                  user: j,
+                  user: _,
                   width: c,
                   isModerator: C,
                   onContextMenu: I,
@@ -301,7 +301,7 @@ let M = 16 / 9,
                   rtcParticipant: O,
                   channel: l,
                   guildId: x,
-                  user: j,
+                  user: _,
                   width: c,
                   isModerator: C,
                   onContextMenu: I,

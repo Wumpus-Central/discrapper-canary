@@ -1,4 +1,4 @@
-n.d(t, { default: () => I }), n(953529), n(388685);
+n.d(t, { default: () => A }), n(953529), n(388685);
 var r = n(255367),
     o = n(73800),
     l = n(990547),
@@ -157,16 +157,16 @@ function R(e) {
         children: a ? c : u,
     });
 }
-function I(e) {
-    var t, n, m, g, h, E, w, I, A, L;
-    let { transitionState: B, analyticsLocations: M, guild: Z, onClose: Y } = e,
-        G = (0, s.e7)([b.default], () => b.default.getCurrentUser()),
-        H = null != (w = null == G || null == (t = G.displayNameStyles) ? void 0 : t.colors) ? w : [],
+function A(e) {
+    var t, n, m, g, h, E, w, A, I, L;
+    let { transitionState: B, analyticsLocations: M, guild: Z, onClose: G } = e,
+        Y = (0, s.e7)([b.default], () => b.default.getCurrentUser()),
+        H = null != (w = null == Y || null == (t = Y.displayNameStyles) ? void 0 : t.colors) ? w : [],
         [z, F] = o.useState(
-            null != (I = null == G || null == (n = G.displayNameStyles) ? void 0 : n.fontId) ? I : a.C.DEFAULT,
+            null != (A = null == Y || null == (n = Y.displayNameStyles) ? void 0 : n.fontId) ? A : a.C.DEFAULT,
         ),
         [U, K] = o.useState(
-            null != (A = null == G || null == (m = G.displayNameStyles) ? void 0 : m.effectId) ? A : i.m.SOLID,
+            null != (I = null == Y || null == (m = Y.displayNameStyles) ? void 0 : m.effectId) ? I : i.m.SOLID,
         ),
         X = (0, v.R)(U),
         q = (0, v.R)(i.m.GRADIENT),
@@ -182,16 +182,16 @@ function I(e) {
     let { analyticsLocations: Q } = (0, p.ZP)(M, u.Z.EDIT_DISPLAY_NAME_STYLES_MODAL),
         { handleApplyDisplayNameStyles: ee, isApplying: et } = (0, S.Z)({
             onSuccess: () => {
-                Y();
+                G();
             },
             onError: (e) => {},
         }),
         en = U === i.m.GRADIENT ? $ : [V],
         er =
-            z !== (null == G || null == (g = G.displayNameStyles) ? void 0 : g.fontId) ||
-            U !== (null == G || null == (h = G.displayNameStyles) ? void 0 : h.effectId) ||
-            !(0, c.E)(en, null != (L = null == G || null == (E = G.displayNameStyles) ? void 0 : E.colors) ? L : []);
-    return (o.useEffect(() => {}, [Q]), null == G)
+            z !== (null == Y || null == (g = Y.displayNameStyles) ? void 0 : g.fontId) ||
+            U !== (null == Y || null == (h = Y.displayNameStyles) ? void 0 : h.effectId) ||
+            !(0, c.E)(en, null != (L = null == Y || null == (E = Y.displayNameStyles) ? void 0 : E.colors) ? L : []);
+    return (o.useEffect(() => {}, [Q]), null == Y)
         ? null
         : (0, r.jsx)(p.Gt, {
               value: Q,
@@ -245,11 +245,11 @@ function I(e) {
                                       ],
                                   }),
                                   (0, r.jsx)(P.Z, {
-                                      user: G,
+                                      user: Y,
                                       selectedFontId: z,
                                       selectedEffectId: U,
                                       selectedColors: U === i.m.SOLID && (0, c.E)(en, X.defaultColors) ? [] : en,
-                                      onClose: Y,
+                                      onClose: G,
                                   }),
                               ],
                           }),
@@ -272,14 +272,13 @@ function I(e) {
                                   }
                               },
                               onSurpriseMe: () => {
-                                  let e = (0, _.aY)();
-                                  F(e.fontId),
-                                      K(e.effectId),
-                                      W(e.colors[0]),
-                                      J(e.colors),
+                                  let { fontId: e, effectId: t, colors: n } = (0, _.aY)();
+                                  F(e),
+                                      K(t),
+                                      t === i.m.GRADIENT ? J(n) : W(n[0]),
                                       x.default.track(k.rMx.DISPLAY_NAME_STYLES_SURPRISE_ME);
                               },
-                              onClose: Y,
+                              onClose: G,
                               canApply: er,
                               analyticsLocations: Q,
                           }),

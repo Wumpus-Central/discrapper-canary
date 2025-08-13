@@ -1,23 +1,23 @@
-n.d(t, { default: () => m }), n(388685), n(953529);
+n.d(t, { default: () => j }), n(388685), n(953529);
 var r = n(255367),
     o = n(73800),
-    i = n(505266),
-    l = n(442837),
-    a = n(481060),
-    c = n(607070),
-    s = n(530618),
+    a = n(505266),
+    c = n(442837),
+    i = n(481060),
+    s = n(607070),
+    l = n(530618),
     u = n(372654),
     p = n(262212),
-    d = n(795338),
-    f = n(535396),
+    f = n(795338),
+    d = n(535396),
     b = n(93841),
-    O = n(388032),
-    y = n(726999);
-function m(e) {
+    m = n(388032),
+    _ = n(726999);
+function j(e) {
     var t,
         n,
-        { guildId: m, powerup: j } = e,
-        g = (function (e, t) {
+        { guildId: j, powerup: y } = e,
+        O = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -26,32 +26,32 @@ function m(e) {
                     var n,
                         r,
                         o = {},
-                        i = Object.keys(e);
-                    for (r = 0; r < i.length; r++) (n = i[r]), t.indexOf(n) >= 0 || (o[n] = e[n]);
+                        a = Object.keys(e);
+                    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (o[n] = e[n]);
                     return o;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var i = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < i.length; r++)
-                    (n = i[r]),
+                var a = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < a.length; r++)
+                    (n = a[r]),
                         !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (o[n] = e[n]);
             }
             return o;
         })(e, ["guildId", "powerup"]);
-    let v = (0, l.e7)([c.Z], () => c.Z.useReducedMotion),
-        x = o.useRef(null),
-        P = o.useRef(new i.qA()),
-        [w, _] = o.useState(null),
-        h = f.uc.has(j.skuId);
+    let g = (0, c.e7)([s.Z], () => s.Z.useReducedMotion),
+        C = o.useRef(null),
+        x = o.useRef(new a.qA()),
+        [v, h] = o.useState(null),
+        w = d.uc.has(y.skuId);
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(i.O_, {
-                ref: _,
-                className: y.confettiCanvas,
-                environment: P.current,
+            (0, r.jsx)(a.O_, {
+                ref: h,
+                className: _.confettiCanvas,
+                environment: x.current,
             }),
             (0, r.jsxs)(
-                a.Y0X,
+                i.Y0X,
                 ((t = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
@@ -78,57 +78,57 @@ function m(e) {
                     return e;
                 })(
                     {
-                        className: y.modal,
-                        size: a.CgR.DYNAMIC,
+                        className: _.modal,
+                        size: i.CgR.DYNAMIC,
                     },
-                    g,
+                    O,
                 )),
                 (n = n =
                     {
                         parentComponent: "GuildPowerupActivateModal",
                         children: [
-                            (0, r.jsx)(a.hzk, {
-                                className: y.modalContentContainer,
+                            (0, r.jsx)(i.hzk, {
+                                className: _.modalContentContainer,
                                 scrollbarType: "none",
                                 children: (0, r.jsxs)("div", {
-                                    className: y.container,
-                                    ref: x,
+                                    className: _.container,
+                                    ref: C,
                                     children: [
-                                        (0, r.jsx)(d.m, {
-                                            className: y.image,
-                                            powerup: j,
+                                        (0, r.jsx)(f.m, {
+                                            className: _.image,
+                                            powerup: y,
                                         }),
                                         (0, r.jsxs)("div", {
-                                            className: y.contentContainer,
+                                            className: _.contentContainer,
                                             children: [
-                                                (0, r.jsx)(a.X6q, {
+                                                (0, r.jsx)(i.X6q, {
                                                     variant: "heading-xl/extrabold",
-                                                    children: O.intl.formatToPlainString(b.default.lFuOFB, {
-                                                        perkName: j.title,
+                                                    children: m.intl.formatToPlainString(b.default.lFuOFB, {
+                                                        perkName: y.title,
                                                     }),
                                                 }),
-                                                (0, r.jsx)(a.Text, {
+                                                (0, r.jsx)(i.Text, {
                                                     tag: "span",
-                                                    className: y.description,
+                                                    className: _.description,
                                                     variant: "text-sm/normal",
-                                                    children: O.intl.formatToPlainString(b.default.y3wHoq, {
-                                                        perkName: j.title,
+                                                    children: m.intl.formatToPlainString(b.default.y3wHoq, {
+                                                        perkName: y.title,
                                                     }),
                                                 }),
-                                                h
+                                                w
                                                     ? (0, r.jsx)(p.ms, {
-                                                          className: y.button,
-                                                          guildId: m,
-                                                          powerup: j,
-                                                          onClick: g.onClose,
+                                                          className: _.button,
+                                                          guildId: j,
+                                                          powerup: y,
+                                                          onClick: O.onClose,
                                                       })
                                                     : (0, r.jsx)("div", {
                                                           "data-button-hoisted-classname-wrapper": !0,
-                                                          className: y.button,
-                                                          children: (0, r.jsx)(a.zxk, {
+                                                          className: _.button,
+                                                          children: (0, r.jsx)(i.zxk, {
                                                               variant: "primary",
-                                                              text: O.intl.string(O.t.cpT0Cg),
-                                                              onClick: g.onClose,
+                                                              text: m.intl.string(m.t.cpT0Cg),
+                                                              onClick: O.onClose,
                                                           }),
                                                       }),
                                             ],
@@ -136,14 +136,14 @@ function m(e) {
                                     ],
                                 }),
                             }),
-                            (0, r.jsx)(a.olH, {
-                                className: y.close,
-                                onClick: g.onClose,
+                            (0, r.jsx)(i.olH, {
+                                className: _.close,
+                                onClick: O.onClose,
                             }),
-                            !v &&
-                                (0, r.jsx)(s.Z, {
-                                    confettiTarget: x.current,
-                                    confettiCanvas: w,
+                            !g &&
+                                (0, r.jsx)(l.Z, {
+                                    confettiTarget: C.current,
+                                    confettiCanvas: v,
                                     sprites: (0, u.vK)(),
                                 }),
                         ],

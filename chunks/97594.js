@@ -1,6 +1,6 @@
 n.d(t, { default: () => v }), n(388685);
-var r = n(255367),
-    i = n(73800),
+var i = n(255367),
+    r = n(73800),
     o = n(120356),
     l = n.n(o),
     a = n(466377),
@@ -14,9 +14,9 @@ var r = n(255367),
     y = n(730606),
     b = n(860153),
     O = n(981631),
-    h = n(388032),
-    E = n(141983);
-function g(e, t) {
+    g = n(388032),
+    h = n(141983);
+function E(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     !0 === n || d.Z.useReducedMotion ? e.set(t) : e.start(t);
 }
@@ -29,26 +29,26 @@ function v(e) {
             shouldHideMediaOptions: S = !1,
             transitionState: j,
         } = e,
-        x = (function (e, t) {
+        T = (function (e, t) {
             if (null == e) return {};
             var n,
-                r,
-                i = (function (e, t) {
+                i,
+                r = (function (e, t) {
                     if (null == e) return {};
                     var n,
-                        r,
-                        i = {},
+                        i,
+                        r = {},
                         o = Object.keys(e);
-                    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
-                    return i;
+                    for (i = 0; i < o.length; i++) (n = o[i]), t.indexOf(n) >= 0 || (r[n] = e[n]);
+                    return r;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
                 var o = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < o.length; r++)
-                    (n = o[r]),
-                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                for (i = 0; i < o.length; i++)
+                    (n = o[i]),
+                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]);
             }
-            return i;
+            return r;
         })(e, [
             "onClose",
             "items",
@@ -57,8 +57,8 @@ function v(e) {
             "shouldHideMediaOptions",
             "transitionState",
         ]);
-    let [T, C] = i.useState(null != o ? o : 0),
-        [P, _] = i.useState(!1),
+    let [C, x] = r.useState(null != o ? o : 0),
+        [P, _] = r.useState(!1),
         [w, L] = (0, s.q_F)(() => ({
             scale: d.Z.useReducedMotion ? 1 : 0.9,
             x: 0,
@@ -68,8 +68,8 @@ function v(e) {
                 tension: 300,
             },
         })),
-        M = i.useRef(null);
-    i.useEffect(() => {
+        M = r.useRef(null);
+    r.useEffect(() => {
         if (null != t)
             return (
                 p.S.subscribe(O.CkL.MEDIA_MODAL_CLOSE, t),
@@ -78,77 +78,77 @@ function v(e) {
                 }
             );
     }, [t]),
-        i.useEffect(() => {
+        r.useEffect(() => {
             var e, t;
-            j === s.Dvm.ENTERING && g(w.scale, 1),
+            j === s.Dvm.ENTERING && E(w.scale, 1),
                 j === s.Dvm.ENTERED && (u.Z.disable(), u.Z.enableTemp(c.P)),
-                j === s.Dvm.HIDDEN && (g(w.scale, 0.9), u.Z.disable(), u.Z.enableTemp(c.v)),
-                j === s.Dvm.EXITING && g(w.scale, 0.9);
+                j === s.Dvm.HIDDEN && (E(w.scale, 0.9), u.Z.disable(), u.Z.enableTemp(c.v)),
+                j === s.Dvm.EXITING && E(w.scale, 0.9);
             let n = () => {
                     u.Z.disable(), j === s.Dvm.ENTERED ? u.Z.enableTemp(c.P) : u.Z.enableTemp(c.v);
                 },
-                r = () => {
+                i = () => {
                     u.Z.disableTemp();
                 },
-                i = null == (t = M.current) || null == (e = t.ownerDocument) ? void 0 : e.defaultView;
+                r = null == (t = M.current) || null == (e = t.ownerDocument) ? void 0 : e.defaultView;
             return (
-                null == i || i.addEventListener("focus", n),
-                null == i || i.addEventListener("blur", r),
+                null == r || r.addEventListener("focus", n),
+                null == r || r.addEventListener("blur", i),
                 () => {
-                    null == i || i.removeEventListener("focus", n),
-                        null == i || i.removeEventListener("blur", r),
+                    null == r || r.removeEventListener("focus", n),
+                        null == r || r.removeEventListener("blur", i),
                         u.Z.disableTemp();
                 }
             );
         }, [j, w]);
-    let D = i.useCallback((e) => {
-            C(e), (0, m.yg)(m.uG.SELECTED_ITEM_CHANGE);
+    let D = r.useCallback((e) => {
+            x(e), (0, m.yg)(m.uG.SELECTED_ITEM_CHANGE);
         }, []),
-        I = i.useMemo(
+        I = r.useMemo(
             () => ({
                 scale: w.scale,
                 x: w.x,
                 y: w.y,
                 setScale(e, t) {
-                    g(w.scale, e, null == t ? void 0 : t.immediate);
+                    E(w.scale, e, null == t ? void 0 : t.immediate);
                 },
                 setOffset(e, t, n) {
-                    g(w.x, e, null == n ? void 0 : n.immediate), g(w.y, t, null == n ? void 0 : n.immediate);
+                    E(w.x, e, null == n ? void 0 : n.immediate), E(w.y, t, null == n ? void 0 : n.immediate);
                 },
                 zoomed: P,
                 setZoomed(e) {
-                    _(e), g(w.scale, e ? 2.5 : 1), e || (g(w.x, 0), g(w.y, 0));
+                    _(e), E(w.scale, e ? 2.5 : 1), e || (E(w.x, 0), E(w.y, 0));
                 },
             }),
             [P, w],
         );
-    return (0, r.jsx)(s.f6W, {
+    return (0, i.jsx)(s.f6W, {
         theme: O.BRd.MIDNIGHT,
         children: (e) => {
-            var i, o;
-            return (0, r.jsx)(
+            var r, o;
+            return (0, i.jsx)(
                 s.Y0X,
-                ((i = (function (e) {
+                ((r = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
-                            r = Object.keys(n);
+                            i = Object.keys(n);
                         "function" == typeof Object.getOwnPropertySymbols &&
-                            (r = r.concat(
+                            (i = i.concat(
                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                 }),
                             )),
-                            r.forEach(function (t) {
-                                var r;
-                                (r = n[t]),
+                            i.forEach(function (t) {
+                                var i;
+                                (i = n[t]),
                                     t in e
                                         ? Object.defineProperty(e, t, {
-                                              value: r,
+                                              value: i,
                                               enumerable: !0,
                                               configurable: !0,
                                               writable: !0,
                                           })
-                                        : (e[t] = r);
+                                        : (e[t] = i);
                             });
                     }
                     return e;
@@ -156,10 +156,10 @@ function v(e) {
                     {
                         "data-migration-pending": !0,
                         hideShadow: !0,
-                        className: l()(E.carouselModal, e),
+                        className: l()(h.carouselModal, e),
                         transitionState: j,
                     },
-                    x,
+                    T,
                 )),
                 (o = o =
                     {
@@ -167,23 +167,23 @@ function v(e) {
                         animation: a.fM.SUBTLE,
                         fullscreenOnMobile: !1,
                         onClick: t,
-                        "aria-label": h.intl.string(h.t.AMTX3t),
+                        "aria-label": g.intl.string(g.t.AMTX3t),
                         parentComponent: "MediaViewerModal",
-                        children: (0, r.jsxs)(f.z.Provider, {
+                        children: (0, i.jsxs)(f.z.Provider, {
                             value: I,
                             children: [
-                                (0, r.jsx)(b.Z, {
-                                    item: n[T],
+                                (0, i.jsx)(b.Z, {
+                                    item: n[C],
                                     hideMediaOptions: S,
                                     onClose: t,
                                 }),
-                                (0, r.jsx)("div", {
+                                (0, i.jsx)("div", {
                                     style: { display: "none" },
                                     ref: M,
                                 }),
-                                (0, r.jsx)(y.ZP, {
+                                (0, i.jsx)(y.ZP, {
                                     items: n,
-                                    startIndex: T,
+                                    startIndex: C,
                                     onIndexChange: D,
                                     enabledContentHarmTypeFlags: v,
                                     shouldHideMediaOptions: S,
@@ -192,18 +192,18 @@ function v(e) {
                         }),
                     }),
                 Object.getOwnPropertyDescriptors
-                    ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(o))
+                    ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(o))
                     : (function (e, t) {
                           var n = Object.keys(e);
                           if (Object.getOwnPropertySymbols) {
-                              var r = Object.getOwnPropertySymbols(e);
-                              n.push.apply(n, r);
+                              var i = Object.getOwnPropertySymbols(e);
+                              n.push.apply(n, i);
                           }
                           return n;
                       })(Object(o)).forEach(function (e) {
-                          Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(o, e));
+                          Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(o, e));
                       }),
-                i),
+                r),
             );
         },
     });

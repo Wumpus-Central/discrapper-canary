@@ -37,8 +37,8 @@ var r = n(255367),
     M = n(761700),
     U = n(11352),
     G = n(304445),
-    B = n(984802),
-    V = n(344185),
+    V = n(984802),
+    B = n(344185),
     H = n(155409),
     F = n(10401),
     z = n(970731),
@@ -555,7 +555,7 @@ function eS(e) {
         [m, b] = (0, d.Wu)([ee.Z], () => [ee.Z.can(ep.Plq.MANAGE_GUILD, o), ee.Z.can(ep.Plq.MANAGE_THREADS, o)]),
         A = (0, d.e7)([q.Z], () => q.Z.isUnavailable(n)),
         L = (0, d.e7)([er.default], () => er.default.getCurrentUser()),
-        R = (0, B.Ll)(),
+        R = (0, V.Ll)(),
         G = (0, d.e7)([W.Z], () => (null != R ? R : W.Z.theme)),
         { enableStudyGroup: H } = (0, w.s)(o),
         z = (0, C.ZP)((e) => e.currentlyShown.has(p.z.NAGBAR_NOTICE_CONNECT_PLAYSTATION)),
@@ -596,7 +596,7 @@ function eS(e) {
         ej = (0, d.e7)([Y.Z], () => Y.Z.getChannel(a)),
         { isPopoutOpen: ex } = (0, T.y)(),
         eA = null != (t = null == o ? void 0 : o.features.has(ep.oNc.COMMUNITY)) && t,
-        eZ = (0, d.e7)([V.Z], () => !s().isEmpty(V.Z.getThreadsForGuild(n))),
+        eZ = (0, d.e7)([B.Z], () => !s().isEmpty(B.Z.getThreadsForGuild(n))),
         ew = ei.ZP.isNewUser(L),
         eL = X && !ew;
     (0, P.Z)(o);
@@ -606,8 +606,8 @@ function eS(e) {
         eM = (0, d.e7)([en.Z], () => en.Z.getChannelId()),
         eU = (0, d.e7)([et.Z], () => et.Z.desyncedVoiceStatesCount),
         eG = U.Y.useExperiment({ location: "GuildSidebar" }, { autoTrackExposure: !0 }).enabled,
-        eB = (0, k.Z)(n),
-        eV = (0, M.Z)(null == L ? void 0 : L.id, n) && (null == o ? void 0 : o.premiumProgressBarEnabled) === !1;
+        eV = (0, k.Z)(n),
+        eB = (0, M.Z)(null == L ? void 0 : L.id, n) && (null == o ? void 0 : o.premiumProgressBarEnabled) === !1;
     return (0, r.jsx)(eC, {
         guildId: n,
         hideSelectedChannel: l,
@@ -644,7 +644,7 @@ function eS(e) {
         isTutorialHighlightDismissed: eR,
         shouldRenderBurstCoachmark: eL,
         shouldRenderCustomNotificationSoundsCoachmark: eG,
-        shouldRenderGuildPowerupPerkCoachmark: !1 === eB,
-        shouldRenderBoosterEnhancedRoleColorsCoachmark: eV,
+        shouldRenderGuildPowerupPerkCoachmark: !1 === eV,
+        shouldRenderBoosterEnhancedRoleColorsCoachmark: eB,
     });
 }

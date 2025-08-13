@@ -16,8 +16,8 @@ var r = n(255367),
     b = n(236091),
     y = n(623624),
     x = n(665149),
-    _ = n(984370),
-    j = n(616286),
+    j = n(984370),
+    _ = n(616286),
     O = n(975146),
     v = n(430824),
     C = n(496675),
@@ -46,8 +46,8 @@ function L(e) {
         ),
         y = (0, Z.B)(t.id),
         x = (0, S.Rk)(t.id, I.pV.REQUESTED_TO_SPEAK_ONLY),
-        { hasParticipantsPanel: _ } = (0, f.Z)({ location: "StageChannelCallHeader" }),
-        v = _ && m;
+        { hasParticipantsPanel: j } = (0, f.Z)({ location: "StageChannelCallHeader" }),
+        v = j && m;
     return (0, r.jsxs)(h.Gt, {
         value: l,
         children: [
@@ -68,7 +68,7 @@ function L(e) {
                   })
                 : null,
             !m &&
-                _ &&
+                j &&
                 (0, r.jsx)(
                     O.Z,
                     {
@@ -82,7 +82,7 @@ function L(e) {
             !c &&
                 (0, r.jsx)("div", {
                     className: a()(k.button, { [k.sidebarOpen]: v || i }),
-                    children: (0, r.jsx)(j.T, {
+                    children: (0, r.jsx)(_.T, {
                         channelId: t.id,
                         showRequestToSpeakSidebar: i,
                         toggleRequestToSpeakSidebar: n,
@@ -100,11 +100,11 @@ function M(e) {
         f = (0, S.Io)(n.id),
         g = (0, S.Rk)(n.id, I.pV.AUDIENCE),
         b = (0, s.e7)([v.Z], () => v.Z.getGuild(n.guild_id), [n.guild_id]),
-        j = null != (t = null == b ? void 0 : b.maxStageVideoChannelUsers) ? t : 0,
+        _ = null != (t = null == b ? void 0 : b.maxStageVideoChannelUsers) ? t : 0,
         O =
             null != b && b.features.has(w.oNc.COMMUNITY)
-                ? j < w.TU7
-                : (null == b ? void 0 : b.premiumTier) !== w.Eu4.TIER_3 && j <= w.eez,
+                ? _ < w.TU7
+                : (null == b ? void 0 : b.premiumTier) !== w.Eu4.TIER_3 && _ <= w.eez,
         Z = (0, R.Z)(n),
         N = (0, s.e7)([C.Z], () => C.Z.can(P.yP, n)),
         M = () => {
@@ -146,7 +146,7 @@ function M(e) {
                     showRequestToSpeakSidebar: d,
                     channel: n,
                 }),
-                onDoubleClick: _.O,
+                onDoubleClick: j.O,
                 transparent: !0,
                 className: a()(e, k.participants),
                 children: [

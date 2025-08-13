@@ -19,8 +19,8 @@ var i = n(81897),
 function x(e) {
     let { user: t, channelId: n } = e,
         { analyticsLocations: x } = (0, l.ZP)(),
-        { context: _ } = (0, o.KZ)(),
-        j = (0, i.Z)(),
+        { context: j } = (0, o.KZ)(),
+        _ = (0, i.Z)(),
         { mutualFriendsCount: O, mutualFriends: v, mutualGuilds: C } = (0, c.Z)(t),
         E = !t.bot && null != O && O > 0,
         S = null != C && C.length > 0;
@@ -53,7 +53,7 @@ function x(e) {
                           section: "MUTUAL_FRIENDS",
                           header: b.intl.string(b.t["0mTJ3t"]),
                           listClassName: y.list,
-                          onExpand: () => (0, u.Z)(t.id, j),
+                          onExpand: () => (0, u.Z)(t.id, _),
                           items:
                               null == v
                                   ? Array.from({ length: O }).map((e, t) =>
@@ -115,7 +115,7 @@ function x(e) {
                                                                     });
                                                             }
                                                             return e;
-                                                        })({}, _)),
+                                                        })({}, j)),
                                                         (t = t =
                                                             {
                                                                 userId: i.id,

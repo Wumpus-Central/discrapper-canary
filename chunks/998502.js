@@ -1,8 +1,8 @@
 n.d(t, {
     ZP: () => q,
     jK: () => V,
-    mD: () => W,
     tS: () => H,
+    xG: () => W,
 }),
     n(388685),
     n(35282),
@@ -172,19 +172,15 @@ function Y(e) {
     };
 }
 function W(e, t) {
-    var n, r, i, o, a;
+    var n, r, i, o;
     if (null != t && A(t)) {
-        let e = null == (a = t.split("/")[1]) ? void 0 : a.toLowerCase();
+        let e = null == (o = t.split("/")[1]) ? void 0 : o.toLowerCase();
         if ("jpeg" === e) return "jpg";
         if (null != e) return e;
     }
-    let s =
-        null == (o = m.Z.toURLSafe(e)) ||
-        null == (i = o.pathname) ||
-        null == (r = i.split(".")) ||
-        null == (n = r.pop())
-            ? void 0
-            : n.toLowerCase();
+    let a = m.Z.toURLSafe(e);
+    if (null == a) return;
+    let s = null == (i = a.pathname) || null == (r = i.split(".")) || null == (n = r.pop()) ? void 0 : n.toLowerCase();
     return null != s && s.length <= N ? s : void 0;
 }
 function K(e) {

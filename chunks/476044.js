@@ -2,22 +2,22 @@ n.d(t, { Z: () => i });
 var r = n(73800),
     o = n(374470);
 function i(e) {
-    let { targetRef: t, onShouldClose: n, topThreshold: i = 40, bottomThreshold: l = 60, enabled: s = !0 } = e;
+    let { targetRef: t, onShouldClose: n, topThreshold: i = 40, bottomThreshold: l = 60, enabled: a = !0 } = e;
     r.useEffect(() => {
-        if (!s || (null == t ? void 0 : t.current) == null) return;
+        if (!a || (null == t ? void 0 : t.current) == null) return;
         let e = null,
             r = (r) => {
                 if ((null == t ? void 0 : t.current) == null || !(0, o.k)(r.target, HTMLElement)) return;
-                let s = r.target;
-                if (!s.contains(t.current)) return;
-                let a = s.scrollTop;
+                let a = r.target;
+                if (!a.contains(t.current)) return;
+                let s = a.scrollTop;
                 if (null === e) {
-                    e = a;
+                    e = s;
                     return;
                 }
-                let u = a - e,
-                    c = Math.abs(u);
-                ((u < 0 && c > i) || (u > 0 && c > l)) && n();
+                let c = s - e,
+                    u = Math.abs(c);
+                ((c < 0 && u > i) || (c > 0 && u > l)) && n();
             };
         return (
             document.addEventListener("scroll", r, {
@@ -28,5 +28,5 @@ function i(e) {
                 document.removeEventListener("scroll", r, { capture: !0 });
             }
         );
-    }, [s, t, n, i, l]);
+    }, [a, t, n, i, l]);
 }

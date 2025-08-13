@@ -2,6 +2,7 @@ n.d(t, {
     Gc: () => c,
     UX: () => l,
     ad: () => s,
+    wn: () => u,
 });
 var r = n(818083),
     i = n(154579);
@@ -70,6 +71,21 @@ function c(e) {
             autoTrackExposure: n,
         }),
         { inExperiment: o } = a.useExperiment(
+            { location: t },
+            {
+                autoTrackExposure: n,
+                disable: r,
+            },
+        );
+    return o;
+}
+function u(e) {
+    let { location: t, autoTrackExposure: n = !0 } = e,
+        r = (0, i.ro)({
+            location: t,
+            autoTrackExposure: n,
+        }),
+        { inExperiment: o } = a.getCurrentConfig(
             { location: t },
             {
                 autoTrackExposure: n,

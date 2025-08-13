@@ -2,7 +2,7 @@ n.d(t, {
     Co: () => X,
     ZP: () => Q,
     bZ: () => q,
-    gt: () => B,
+    gt: () => V,
 }),
     n(388685);
 var r,
@@ -43,7 +43,7 @@ var r,
     M = n(981631),
     U = n(388032),
     G = n(848191);
-let B = l.memo(function (e) {
+let V = l.memo(function (e) {
     let {
         heading: t,
         location: n,
@@ -120,7 +120,7 @@ let B = l.memo(function (e) {
         ],
     });
 });
-function V(e) {
+function B(e) {
     let { guildEvent: t, channel: n } = e,
         r = (0, s.Wu)(
             [v.ZP],
@@ -132,7 +132,7 @@ function V(e) {
             [n],
         ),
         l = (0, d.KS)(n);
-    return (0, i.jsx)(B, {
+    return (0, i.jsx)(V, {
         onClickCloseIcon: () => (0, T.ji)({ eventId: null == t ? void 0 : t.id }),
         heading: U.intl.string(U.t["X2K3//"]),
         topic: t.name,
@@ -288,7 +288,7 @@ function z(e) {
         n = (0, L.cS)(t);
     return null == n
         ? null
-        : (0, i.jsx)(B, {
+        : (0, i.jsx)(V, {
               onClickCloseIcon: () => (0, T.ji)({ eventId: null == t ? void 0 : t.id }),
               heading: U.intl.string(U.t["1+boPj"]),
               topic: t.name,
@@ -343,7 +343,7 @@ function K(e) {
         ]),
         l = (0, s.e7)([m.Z], () => m.Z.getParticipantCount(n.id, b.pV.AUDIENCE), [n.id]),
         a = U.intl.formatToPlainString(U.t["+v2pNz"], { count: "".concat(l) });
-    return (0, i.jsx)(B, {
+    return (0, i.jsx)(V, {
         onClickCloseIcon: () => (0, T.ji)({ stageId: null == t ? void 0 : t.id }),
         heading: U.intl.string(U.t["X2K3//"]),
         location: n.name,
@@ -459,7 +459,7 @@ let Q = l.memo(function (e) {
             ? (d = (0, i.jsx)(z, { guildEvent: l }))
             : l.entity_type === k.WX.VOICE &&
               null != r &&
-              (d = (0, i.jsx)(V, {
+              (d = (0, i.jsx)(B, {
                   guildEvent: l,
                   channel: r,
               }));

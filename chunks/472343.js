@@ -1,4 +1,4 @@
-t.exports = {
+e.exports = {
     container: "container__6faef",
     title: "title__6faef",
     img: "img__6faef",

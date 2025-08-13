@@ -3,27 +3,27 @@ var r = n(255367),
     o = n(73800),
     i = n(442837),
     l = n(481060),
-    s = n(607070),
-    a = n(973772),
-    u = n(838968),
-    c = n(857666),
+    a = n(607070),
+    s = n(973772),
+    c = n(838968),
+    u = n(857666),
     d = n(279475),
     p = n(535396),
-    f = n(93841),
-    m = n(388032),
-    g = n(574524);
+    m = n(93841),
+    f = n(388032),
+    _ = n(574524);
 function x(e) {
     var t, n, x;
-    let v,
-        { guildId: _, group: b, powerups: j } = e,
-        [h, E] = o.useState(!1),
-        C = (0, a.Gv)(_, j),
-        I = (0, i.e7)([s.Z], () => s.Z.useReducedMotion),
-        O = (0, c.Z)(b, _);
-    if (void 0 === O || j.length <= 0) return null;
-    let y = C.some((e) => e.type !== p.A3.INACTIVE),
-        w = (0, d.d)(y),
-        P = C.reduce(
+    let g,
+        { guildId: v, group: b, powerups: h } = e,
+        [j, C] = o.useState(!1),
+        E = (0, s.Gv)(v, h),
+        I = (0, i.e7)([a.Z], () => a.Z.useReducedMotion),
+        N = (0, u.Z)(b, v);
+    if (void 0 === N || h.length <= 0) return null;
+    let w = E.some((e) => e.type !== p.A3.INACTIVE),
+        Z = (0, d.d)(w),
+        P = E.reduce(
             (e, t) => {
                 let { sourceEntitlement: n } = t,
                     r = null == n ? void 0 : n.ends_at;
@@ -32,20 +32,20 @@ function x(e) {
             void 0,
         );
     void 0 !== P
-        ? (v = {
+        ? (g = {
               type: "expiring",
               expiringAt: P,
           })
-        : y &&
-          (v = {
+        : w &&
+          (g = {
               type: "active",
-              statusText: m.intl.string(f.default.FFLkm5),
+              statusText: f.intl.string(m.default.FFLkm5),
           });
-    let N = C.reduce((e, t) => {
+    let S = E.reduce((e, t) => {
             let { type: n, powerup: r } = t;
             return n === p.A3.POWERUP_ACTIVATED ? e + r.cost : e;
         }, 0),
-        Z = C.reduce(
+        y = E.reduce(
             (e, t) => {
                 var n, r;
                 let { powerup: o } = t;
@@ -55,58 +55,58 @@ function x(e) {
                       ? r
                       : 0;
             },
-            null != (x = null == (n = C[0]) || null == (t = n.powerup) ? void 0 : t.cost) ? x : 0,
+            null != (x = null == (n = E[0]) || null == (t = n.powerup) ? void 0 : t.cost) ? x : 0,
         ),
-        S = C.reduce((e, t) => {
+        T = E.reduce((e, t) => {
             var n;
             let { powerup: r } = t;
             return e + (null != (n = null == r ? void 0 : r.cost) ? n : 0);
         }, 0),
-        T = y ? N : Z,
-        A = !y && S > T ? "+" : void 0,
-        R = !I && h ? O.image.animatedUrl : O.image.staticUrl,
-        k = null != O.viewCta && "" !== O.viewCta ? O.viewCta : m.intl.string(f.default["27GkOj"]),
-        L = null != O.viewCtaTooltip && "" !== O.viewCtaTooltip ? O.viewCtaTooltip : void 0;
-    return (0, r.jsxs)(u.aB, {
-        label: O.title,
-        isActive: y,
-        badge: O.badge,
-        onClick: () => O.openModal(j),
-        onMouseOver: () => E(!0),
-        onMouseLeave: () => E(!1),
+        O = w ? S : y,
+        A = !w && T > O ? "+" : void 0,
+        R = !I && j ? N.image.animatedUrl : N.image.staticUrl,
+        L = null != N.viewCta && "" !== N.viewCta ? N.viewCta : f.intl.string(m.default["27GkOj"]),
+        k = null != N.viewCtaTooltip && "" !== N.viewCtaTooltip ? N.viewCtaTooltip : void 0;
+    return (0, r.jsxs)(c.aB, {
+        label: N.title,
+        isActive: w,
+        badge: N.badge,
+        onClick: () => N.openModal(h),
+        onMouseOver: () => C(!0),
+        onMouseLeave: () => C(!1),
         children: [
             (0, r.jsx)("img", {
                 alt: "",
                 src: R,
-                className: g.image,
+                className: _.image,
             }),
-            (0, r.jsx)(u.Q9, {
-                title: O.title,
-                textColor: w,
-                footer: (0, r.jsx)(u.uf, {
-                    status: v,
-                    cost: T,
+            (0, r.jsx)(c.Q9, {
+                title: N.title,
+                textColor: Z,
+                footer: (0, r.jsx)(c.uf, {
+                    status: g,
+                    cost: O,
                     costDecorator: A,
                 }),
                 children: (0, r.jsx)(l.Text, {
-                    className: g.description,
-                    color: w,
+                    className: _.description,
+                    color: Z,
                     variant: "text-sm/medium",
-                    children: O.description,
+                    children: N.description,
                 }),
             }),
-            (0, r.jsx)(u.N4, {
+            (0, r.jsx)(c.N4, {
                 children:
-                    null != L
+                    null != k
                         ? (0, r.jsx)(l.DY3, {
-                              text: L,
+                              text: k,
                               children: (0, r.jsx)(l.zxk, {
-                                  text: k,
+                                  text: L,
                                   fullWidth: !0,
                               }),
                           })
                         : (0, r.jsx)(l.zxk, {
-                              text: k,
+                              text: L,
                               fullWidth: !0,
                           }),
             }),

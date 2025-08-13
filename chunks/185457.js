@@ -1,37 +1,37 @@
-t.d(n, { Z: () => Z });
-var l = t(255367);
-t(73800);
-var i = t(481060),
-    r = t(906732),
-    a = t(531301),
-    u = t(892001),
-    o = t(314897),
-    s = t(246946),
-    d = t(981631),
-    c = t(228168),
-    g = t(388032);
-function Z(e) {
-    let { user: n, guildId: t, channelId: Z, context: f } = e,
-        { id: b } = n,
-        { loading: O, note: p } = (0, a.Z)(b),
-        m = !O && null != p && p.length > 0,
-        h = f === d.IlC.POPOUT || f === d.IlC.OVERLAY,
-        { analyticsLocations: j } = (0, r.ZP)();
-    return b === o.default.getId() || s.Z.hidePersonalInformation || h
+n.d(t, { Z: () => f });
+var l = n(255367);
+n(73800);
+var i = n(481060),
+    r = n(906732),
+    a = n(531301),
+    o = n(892001),
+    s = n(314897),
+    u = n(246946),
+    d = n(981631),
+    c = n(228168),
+    g = n(388032);
+function f(e) {
+    let { user: t, guildId: n, channelId: f, context: b } = e,
+        { id: Z } = t,
+        { loading: m, note: v } = (0, a.Z)(Z),
+        p = !m && null != v && v.length > 0,
+        O = b === d.IlC.POPOUT || b === d.IlC.OVERLAY,
+        { analyticsLocations: h } = (0, r.ZP)();
+    return Z === s.default.getId() || u.Z.hidePersonalInformation || O
         ? null
         : (0, l.jsx)(i.sNh, {
               id: "note",
-              label: O ? g.intl.string(g.t["WLKx//"]) : m ? g.intl.string(g.t.sHHsOD) : g.intl.string(g.t.Dglxra),
+              label: m ? g.intl.string(g.t["WLKx//"]) : p ? g.intl.string(g.t.sHHsOD) : g.intl.string(g.t.Dglxra),
               subtext: g.intl.string(g.t.r1BOdX),
               action: () => {
-                  (0, u.openUserProfileModal)({
-                      userId: n.id,
+                  (0, o.openUserProfileModal)({
+                      userId: t.id,
                       section: c.oh.USER_INFO,
                       subsection: c.Tb.NOTE,
-                      guildId: t,
-                      channelId: Z,
-                      sourceAnalyticsLocations: j,
-                      appContext: f,
+                      guildId: n,
+                      channelId: f,
+                      sourceAnalyticsLocations: h,
+                      appContext: b,
                   });
               },
           });

@@ -1,6 +1,6 @@
 n.d(t, {
     Ek: () => P,
-    HJ: () => j,
+    HJ: () => _,
     LE: () => T,
     Z2: () => E,
     Zc: () => O,
@@ -70,7 +70,7 @@ function x(e, t) {
         e
     );
 }
-function _(e) {
+function j(e) {
     let { user: t, guildId: n, channelId: r } = e,
         i = h.ZP.getName(n, r, t);
     return {
@@ -79,7 +79,7 @@ function _(e) {
         key: t.id,
     };
 }
-function j(e, t) {
+function _(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [],
         r = i.useMemo(() => (0, f.s5)(e), [e]),
         l = i.useMemo(() => (0, f.AH)(e), [e]),
@@ -94,7 +94,7 @@ function j(e, t) {
                 n.length > 0 &&
                     n.forEach((e) => {
                         let t = e.user,
-                            n = _({
+                            n = j({
                                 user: t,
                                 guildId: r,
                                 channelId: l,
@@ -106,7 +106,7 @@ function j(e, t) {
                         if (s.has(e)) return;
                         let t = d.default.getUser(e);
                         if (null == t) return;
-                        let n = _({
+                        let n = j({
                             user: t,
                             guildId: r,
                             channelId: l,
@@ -335,10 +335,10 @@ function I() {
                 return (n[r] = x(y({}, n[r]), { date: t })), n;
             });
         }, []),
-        _ = i.useCallback(() => {
+        j = i.useCallback(() => {
             n((e) => [...e, h()]);
         }, [h]),
-        j = i.useCallback((e) => {
+        _ = i.useCallback((e) => {
             n((t) => {
                 let n = [...t];
                 return n.splice(e, 1), n;
@@ -366,8 +366,8 @@ function I() {
         validDates: a,
         handleDateQueryChange: f,
         handleDateChange: g,
-        handleAddDateFilter: _,
-        handleRemoveDateFilter: j,
+        handleAddDateFilter: j,
+        handleRemoveDateFilter: _,
         handleClearDateFilter: O,
         getDateQueryString: v,
     };
@@ -413,18 +413,18 @@ function Z(e) {
                         case m.dCx.ANSWER_BEFORE:
                             let y = i[m.dCx.FILTER_BEFORE],
                                 x = e.getData("end"),
-                                _ = s()(x);
+                                j = s()(x);
                             y.push({
                                 query: t,
-                                date: _,
+                                date: j,
                                 id: (0, o.Z)(),
                             });
                             break;
                         case m.dCx.ANSWER_ON:
-                            let j = i[m.dCx.FILTER_ON],
+                            let _ = i[m.dCx.FILTER_ON],
                                 O = e.getData("start"),
                                 v = s()(O);
-                            j.push({
+                            _.push({
                                 query: r,
                                 date: v,
                                 id: (0, o.Z)(),

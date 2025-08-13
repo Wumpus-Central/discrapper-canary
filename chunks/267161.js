@@ -41,8 +41,8 @@ var r = n(255367),
     M = n(914010),
     U = n(451478),
     G = n(768581),
-    B = n(358085),
-    V = n(998502),
+    V = n(358085),
+    B = n(998502),
     H = n(228488),
     F = n(950796),
     z = n(981631),
@@ -234,19 +234,19 @@ function er(e) {
 }
 let ei = i.memo(function () {
     i.useLayoutEffect(() => {
-        V.ZP.setMinimumSize(Y.J, Y.N);
+        B.ZP.setMinimumSize(Y.J, Y.N);
     }, []);
     let e = (0, g.T)("AppTitleBar"),
         t = ee((e) => e.isOpen),
         { notificationCenterVariant: n, entrypoint: l } = (0, S.pN)({ location: "AppTitleBar" }),
         { backForwardButtons: a, titlebarFastTravel: o } = m.ZP.useExperiment({ location: "AppTitleBar" }),
-        s = (0, B.isDesktop)() && a,
+        s = (0, V.isDesktop)() && a,
         { hasBugReporterAccess: p } = f.Z.useExperiment({ location: "HeaderBar" }, { autoTrackExposure: !1 }),
         _ = !t && e,
         O = null !== n && l === S.u3.TITLE_BAR_LEFT,
         y = null === n;
     i.useLayoutEffect(() => {
-        V.ZP.setMinimumSize(Y.J, Y.N);
+        B.ZP.setMinimumSize(Y.J, Y.N);
     }, []);
     let N = (0, L.Ll)(),
         j = (0, c.e7)([U.Z, P.Z], () => (0, H.rB)()),

@@ -1,196 +1,196 @@
-n.d(e, { default: () => C }), n(388685), n(781311), n(539854);
+n.d(e, { default: () => x }), n(388685), n(781311), n(539854);
 var l = n(255367),
     r = n(73800),
     i = n(120356),
     a = n.n(i),
     o = n(442837),
-    s = n(82659),
-    u = n(481060),
+    u = n(82659),
+    s = n(481060),
     c = n(749210),
     d = n(910693),
-    p = n(501517),
+    _ = n(501517),
     g = n(592125),
-    v = n(70956),
-    b = n(5192),
-    m = n(981631),
-    h = n(388032),
-    j = n(130883),
-    x = n(389999);
-function f() {
+    b = n(70956),
+    p = n(5192),
+    v = n(981631),
+    m = n(388032),
+    f = n(130883),
+    O = n(389999);
+function E() {
     return [
         {
             value: 0,
-            label: h.intl.string(h.t["4obaMT"]),
+            label: m.intl.string(m.t["4obaMT"]),
         },
         {
-            value: +v.Z.Seconds.HOUR,
-            label: h.intl.string(h.t.RKpitb),
+            value: +b.Z.Seconds.HOUR,
+            label: m.intl.string(m.t.RKpitb),
         },
         {
-            value: 6 * v.Z.Seconds.HOUR,
-            label: h.intl.string(h.t["8WfJZ2"]),
+            value: 6 * b.Z.Seconds.HOUR,
+            label: m.intl.string(m.t["8WfJZ2"]),
         },
         {
-            value: 12 * v.Z.Seconds.HOUR,
-            label: h.intl.string(h.t.p1up7u),
+            value: 12 * b.Z.Seconds.HOUR,
+            label: m.intl.string(m.t.p1up7u),
         },
         {
-            value: +v.Z.Seconds.DAY,
-            label: h.intl.string(h.t.XuVkkJ),
+            value: +b.Z.Seconds.DAY,
+            label: m.intl.string(m.t.XuVkkJ),
         },
         {
-            value: 3 * v.Z.Seconds.DAY,
-            label: h.intl.string(h.t.gMcDS0),
+            value: 3 * b.Z.Seconds.DAY,
+            label: m.intl.string(m.t.gMcDS0),
         },
         {
-            value: 7 * v.Z.Seconds.DAY,
-            label: h.intl.string(h.t.FA7IUl),
+            value: 7 * b.Z.Seconds.DAY,
+            label: m.intl.string(m.t.FA7IUl),
         },
     ];
 }
-let y = f()[1].value,
-    O = f()[0].value;
-function C(t) {
+let h = E()[1].value,
+    j = E()[0].value;
+function x(t) {
     let {
             guildId: e,
             user: n,
             location: i,
-            userIds: v,
-            onBanMultiple: C,
-            transitionState: S,
-            onClose: k,
-            canBulkBan: P = !1,
-            modReportId: Z,
+            userIds: b,
+            onBanMultiple: x,
+            transitionState: y,
+            onClose: S,
+            canBulkBan: M = !1,
+            modReportId: C,
         } = t,
-        [w, _] = r.useState(null != Z ? O : y),
-        [T, I] = r.useState(""),
-        [M, N] = r.useState(null),
-        { isModReportClosed: D, isModReport: K } = (0, o.cj)([g.Z], () => {
-            let t = g.Z.getChannel(Z);
+        [A, T] = r.useState(null != C ? j : h),
+        [I, D] = r.useState(""),
+        [k, N] = r.useState(null),
+        { isModReportClosed: R, isModReport: P } = (0, o.cj)([g.Z], () => {
+            let t = g.Z.getChannel(C);
             return {
                 isModReportClosed: null == t ? void 0 : t.isArchivedThread(),
                 isModReport: null == t ? void 0 : t.isModeratorReportChannel(),
             };
         }),
-        [R, E] = r.useState(!1),
-        [U, Y] = r.useState(!1),
-        F = (0, d.sE)(e, {
+        [U, w] = r.useState(!1),
+        [Z, Y] = r.useState(!1),
+        B = (0, d.sE)(e, {
             location: i,
             targetUserId: null == n ? void 0 : n.id,
-            targets: v,
+            targets: b,
         }),
-        J = r.useCallback(() => {
-            let t = null != M ? M : T;
-            if (null != C) {
-                if (!(null != v && (null == v ? void 0 : v.size) > 0 && P) || R) return;
-                if ("" === T.trim() && !R) return void E(!0);
-                C(e, [...v], w, t);
+        F = r.useCallback(() => {
+            let t = null != k ? k : I;
+            if (null != x) {
+                if (!(null != b && (null == b ? void 0 : b.size) > 0 && M) || U) return;
+                if ("" === I.trim() && !U) return void w(!0);
+                x(e, [...b], A, t);
             } else {
                 if (null == n) return;
-                c.Z.banUser(e, null == n ? void 0 : n.id, w, t, Z).then(() => {
-                    U && null != Z && p.Z.resolveFlag(Z);
+                c.Z.banUser(e, null == n ? void 0 : n.id, A, t, C).then(() => {
+                    Z && null != C && _.Z.resolveFlag(C);
                 });
             }
-            F(d.jQ.BAN), k();
-        }, [M, T, C, F, k, v, P, R, e, w, n, Z, U]),
-        X = r.useCallback((t) => {
-            _(t);
+            B(d.jQ.BAN), S();
+        }, [k, I, x, B, S, b, M, U, e, A, n, C, Z]),
+        L = r.useCallback((t) => {
+            T(t);
         }, []),
-        A = r.useCallback((t) => {
+        K = r.useCallback((t) => {
             let { value: e } = t;
-            I(e), E(!1), N(null);
+            D(e), w(!1), N(null);
         }, []),
-        B = r.useCallback(
+        H = r.useCallback(
             (t) => {
-                N(t), R && E(!1);
+                N(t), U && w(!1);
             },
-            [R],
+            [U],
         ),
-        W = K && !D && null != Z,
-        q = [
+        G = P && !R && null != C,
+        V = [
             {
-                name: h.intl.string(h.t.tamLhY),
-                value: h.intl.string(h.t.tamLhY),
+                name: m.intl.string(m.t.tamLhY),
+                value: m.intl.string(m.t.tamLhY),
             },
             {
-                name: h.intl.string(h.t.UmxjMj),
-                value: h.intl.string(h.t.UmxjMj),
+                name: m.intl.string(m.t.UmxjMj),
+                value: m.intl.string(m.t.UmxjMj),
             },
             {
-                name: h.intl.string(h.t.EXY1d3),
-                value: h.intl.string(h.t.EXY1d3),
+                name: m.intl.string(m.t.EXY1d3),
+                value: m.intl.string(m.t.EXY1d3),
             },
             {
-                name: h.intl.string(h.t.BcZTKi),
+                name: m.intl.string(m.t.BcZTKi),
                 value: "other",
             },
         ],
-        G = (() => {
-            if (null != C && null != v)
-                return h.intl.formatToPlainString(h.t.HVJexc, { count: null == v ? void 0 : v.size });
+        J = (() => {
+            if (null != x && null != b)
+                return m.intl.formatToPlainString(m.t.HVJexc, { count: null == b ? void 0 : b.size });
             if (null == n) return "";
-            let t = b.ZP.getName(e, null, n);
-            return h.intl.formatToPlainString(null != Z ? h.t.WDR8XV : h.t.jeKpoq, { username: "@".concat(t) });
+            let t = p.ZP.getName(e, null, n);
+            return m.intl.formatToPlainString(null != C ? m.t.WDR8XV : m.t.jeKpoq, { username: "@".concat(t) });
         })(),
-        H = null == Z ? null : h.intl.string(h.t.pQjhIC);
-    return (0, l.jsx)(s.Modal, {
-        onClose: k,
-        transitionState: S,
-        title: G,
-        subtitle: null != H ? H : void 0,
+        W = null == C ? null : m.intl.string(m.t.pQjhIC);
+    return (0, l.jsx)(u.Modal, {
+        onClose: S,
+        transitionState: y,
+        title: J,
+        subtitle: null != W ? W : void 0,
         actions: (() => {
             let t = [];
             return (
-                K ||
+                P ||
                     t.push({
                         variant: "secondary",
-                        text: h.intl.string(h.t["ETE/oK"]),
-                        onClick: k,
+                        text: m.intl.string(m.t["ETE/oK"]),
+                        onClick: S,
                     }),
                 t.push({
                     variant: "critical-primary",
-                    text: h.intl.string(h.t["5MBJ5O"]),
-                    onClick: J,
+                    text: m.intl.string(m.t["5MBJ5O"]),
+                    onClick: F,
                 }),
                 t
             );
         })(),
-        actionBarInput: W
-            ? (0, l.jsx)(u.XZJ, {
-                  value: U,
+        actionBarInput: G
+            ? (0, l.jsx)(s.XZJ, {
+                  value: Z,
                   onChange: (t, e) => Y(e),
-                  children: (0, l.jsx)(u.Text, {
+                  children: (0, l.jsx)(s.Text, {
                       variant: "text-md/normal",
                       color: "text-default",
-                      children: h.intl.string(j.default["8yIKen"]),
+                      children: m.intl.string(f.default["8yIKen"]),
                   }),
               })
             : void 0,
-        children: (0, l.jsxs)(u.Kqy, {
+        children: (0, l.jsxs)(s.Kqy, {
             direction: "vertical",
             gap: 24,
             children: [
-                (0, l.jsxs)(u.Kqy, {
+                (0, l.jsxs)(s.Kqy, {
                     direction: "vertical",
                     gap: 8,
                     children: [
-                        (0, l.jsxs)(u.xJW, {
-                            titleClassName: x.title,
-                            title: (0, l.jsx)(u.Text, {
+                        (0, l.jsxs)(s.xJW, {
+                            titleClassName: O.title,
+                            title: (0, l.jsx)(s.Text, {
                                 variant: "text-md/medium",
                                 color: "text-primary",
-                                children: h.intl.string(null != Z ? h.t["+KCLVl"] : h.t.w4Ivys),
+                                children: m.intl.string(null != C ? m.t["+KCLVl"] : m.t.w4Ivys),
                             }),
                             children: [
-                                R &&
-                                    (0, l.jsx)(u.kzN, {
-                                        className: x.error,
-                                        children: h.intl.string(h.t.IrYX19),
+                                U &&
+                                    (0, l.jsx)(s.kzN, {
+                                        className: O.error,
+                                        children: m.intl.string(m.t.IrYX19),
                                     }),
-                                (0, l.jsx)(u.FXm, {
-                                    className: x.radioGroup,
-                                    value: T,
-                                    options: q.map((t) => {
+                                (0, l.jsx)(s.FXm, {
+                                    className: O.radioGroup,
+                                    value: I,
+                                    options: V.map((t) => {
                                         var e, n;
                                         return (
                                             (e = (function (t) {
@@ -218,7 +218,7 @@ function C(t) {
                                                 }
                                                 return t;
                                             })({}, t)),
-                                            (n = n = { radioBarClassName: x.radioItem }),
+                                            (n = n = { radioBarClassName: O.radioItem }),
                                             Object.getOwnPropertyDescriptors
                                                 ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
                                                 : (function (t, e) {
@@ -238,34 +238,34 @@ function C(t) {
                                             e
                                         );
                                     }),
-                                    onChange: A,
+                                    onChange: K,
                                     withTransparentBackground: !0,
                                 }),
                             ],
                         }),
                         (0, l.jsx)("div", {
-                            className: a()(x.reasonFreeText, { [x.hidden]: "other" !== T }),
-                            children: (0, l.jsx)(u.Kx8, {
-                                maxLength: m.GNZ,
-                                onChange: B,
-                                value: null != M ? M : "",
+                            className: a()(O.reasonFreeText, { [O.hidden]: "other" !== I }),
+                            children: (0, l.jsx)(s.Kx8, {
+                                maxLength: v.GNZ,
+                                onChange: H,
+                                value: null != k ? k : "",
                                 rows: 5,
                                 autoFocus: !0,
                             }),
                         }),
                     ],
                 }),
-                (0, l.jsx)(u.xJW, {
-                    titleClassName: x.title,
-                    title: (0, l.jsx)(u.Text, {
+                (0, l.jsx)(s.xJW, {
+                    titleClassName: O.title,
+                    title: (0, l.jsx)(s.Text, {
                         variant: "text-md/medium",
                         color: "text-primary",
-                        children: h.intl.string(null != Z ? h.t.ERSM8P : h.t["8l3W09"]),
+                        children: m.intl.string(null != C ? m.t.ERSM8P : m.t["8l3W09"]),
                     }),
-                    children: (0, l.jsx)(u.q4e, {
-                        options: f(),
-                        value: w,
-                        onChange: X,
+                    children: (0, l.jsx)(s.q4e, {
+                        options: E(),
+                        value: A,
+                        onChange: L,
                     }),
                 }),
             ],

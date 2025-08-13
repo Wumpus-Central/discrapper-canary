@@ -97,6 +97,10 @@ function l(e) {
             (o.application_id = e.clip.applicationId),
             (o.clip_created_at = (0, r.U)(e.clip.id)),
             (o.clip_participant_ids = (0, r.Z)(e.clip.users))),
+        "item" in e &&
+            null != e.item &&
+            "originalContentType" in e.item &&
+            (o.original_content_type = e.item.originalContentType),
         o
     );
 }

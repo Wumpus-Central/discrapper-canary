@@ -43,8 +43,8 @@ function y(e) {
         [n] = t.recipients,
         y = (0, l.e7)([o.default], () => o.default.getUser(n)),
         x = (0, l.e7)([o.default], () => o.default.getCurrentUser()),
-        _ = (0, d.Z)(),
-        [j, O] = (0, u.Z)(n);
+        j = (0, d.Z)(),
+        [_, O] = (0, u.Z)(n);
     if (
         (i.useEffect(() => {
             (0, s.t)();
@@ -58,7 +58,7 @@ function y(e) {
                 channelId: t.id,
             });
         }, [y, n, t.id]),
-        null == y || null == x || !_)
+        null == y || null == x || !j)
     )
         return null;
     let v = "user-profile-sidebar-heading-".concat(y.id),
@@ -72,7 +72,7 @@ function y(e) {
                     children: m.intl.format(m.t.KRe1Fh, { name: C }),
                 }),
             }),
-            children: j
+            children: _
                 ? (0, r.jsx)(
                       f.Z,
                       b(

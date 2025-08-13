@@ -1,4 +1,4 @@
-n.d(t, { Z: () => j });
+n.d(t, { Z: () => _ });
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -16,11 +16,11 @@ var r = n(255367),
     b = n(358085),
     y = n(228488),
     x = n(981631);
-let _ = () => {
+let j = () => {
     a.Z.wait(() => h.xv(x.KJ3.CHANNEL_CALL_POPOUT));
 };
-function j(e) {
-    let { channel: t, appContext: n, popoutOpen: a, popoutWindow: h, currentWindow: j } = e,
+function _(e) {
+    let { channel: t, appContext: n, popoutOpen: a, popoutWindow: h, currentWindow: _ } = e,
         { parentAnalyticsLocation: O } = (0, c.ZP)(),
         v = n === x.IlC.POPOUT,
         C = i.useRef(null),
@@ -44,13 +44,13 @@ function j(e) {
     let Z = i.useRef(E),
         { currentDocument: P, rootNode: T } = i.useMemo(() => {
             let e = null != h && v ? h.document : document,
-                t = j.document.getElementById("app-mount");
+                t = _.document.getElementById("app-mount");
             return {
-                currentWindow: j,
+                currentWindow: _,
                 currentDocument: e,
                 rootNode: t,
             };
-        }, [h, v, j]),
+        }, [h, v, _]),
         N = a && !v,
         R = S === x.WtW.VIDEO && I && !N,
         w = i.useCallback(
@@ -139,7 +139,7 @@ function j(e) {
         null != T && C.current === x.WtW.VIDEO && S === x.WtW.VOICE && (0, y.Pr)(T, P);
     }, [P, S, C, T]),
     i.useEffect(() => {
-        !I && v && _();
+        !I && v && j();
     }, [I, v]),
     R)
         ? (0, r.jsx)(p.Z, {

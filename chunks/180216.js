@@ -21,8 +21,8 @@ function b(e) {
         }),
         y = (0, c.GG)(t),
         x = (0, c.YB)(t),
-        _ = (0, l.e7)([o.Z], () => o.Z.getGuild(t), [t]),
-        j = null == _ ? void 0 : _.name,
+        j = (0, l.e7)([o.Z], () => o.Z.getGuild(t), [t]),
+        _ = null == j ? void 0 : j.name,
         O = (0, l.e7)([s.Z], () => s.Z.getChannel(n)),
         v = i.useMemo(() => {
             let e = {};
@@ -34,7 +34,7 @@ function b(e) {
         location: f.Sbl.ROLE_SUBSCRIPTION_GATED_CHANNEL,
         relevantSubscriptionListingIds: b.map((e) => e.id),
     }),
-    null == _)
+    null == j)
         ? (0, r.jsx)("div", {
               className: m.__invalid_spinnerContainer,
               children: (0, r.jsx)(a.$jN, { className: m.__invalid_spinner }),
@@ -46,7 +46,7 @@ function b(e) {
                       variant: "heading-xl/semibold",
                       className: m.joinCtaTitle,
                       children: g.intl.format(g.t.xHMpys, {
-                          serverName: j,
+                          serverName: _,
                           channelName: null == O ? void 0 : O.name,
                       }),
                   }),

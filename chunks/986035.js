@@ -25,10 +25,10 @@ let h = function (e) {
     i.useEffect(() => {
         (0, c.YT)(b, y, x);
     }, [b, y, x]);
-    let _ = i.useCallback(() => {
+    let j = i.useCallback(() => {
             (0, c.qd)(c.iP.NSFW_CHANNEL_DISAGREE_CTA, b, y, x), null == f || f();
         }, [f, b, y, x]),
-        j = i.useCallback(() => {
+        _ = i.useCallback(() => {
             (0, c.qd)(c.iP.NSFW_CHANNEL_AGREE_CTA, b, y, x), null == p || p();
         }, [p, b, y, x]);
     return (0, r.jsxs)(o.Kqy, {
@@ -57,13 +57,13 @@ let h = function (e) {
                         ? (0, r.jsx)(o.zxk, {
                               variant: "secondary",
                               text: h,
-                              onClick: _,
+                              onClick: j,
                           })
                         : null,
                     null != l && null != p
                         ? (0, r.jsx)(s.zx, {
                               color: m,
-                              onClick: j,
+                              onClick: _,
                               children: l,
                           })
                         : null,

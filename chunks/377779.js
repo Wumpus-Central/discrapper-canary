@@ -1,7 +1,6 @@
 e.exports = {
     headerBackground: "headerBackground_b66356",
     tier2HeaderBackground: "tier2HeaderBackground_b66356 headerBackground_b66356",
-    snow: "snow_b66356",
     headerTop: "headerTop_b66356",
     headerIcon: "headerIcon_b66356",
     nonTier2: "nonTier2_b66356",

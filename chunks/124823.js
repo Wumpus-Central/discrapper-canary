@@ -16,8 +16,8 @@ var r = n(255367),
     b = n(892001),
     y = n(899007),
     x = n(648052),
-    _ = n(867176),
-    j = n(280885),
+    j = n(867176),
+    _ = n(280885),
     O = n(900927),
     v = n(678738),
     C = n(502762),
@@ -100,7 +100,7 @@ function w(e) {
                             (0, r.jsxs)("div", {
                                 className: T.header,
                                 children: [
-                                    (0, r.jsx)(_.Z, {
+                                    (0, r.jsx)(j.Z, {
                                         user: t,
                                         displayProfile: A,
                                         themeType: Z.lY.SIDEBAR,
@@ -134,7 +134,7 @@ function w(e) {
                                             (0, r.jsx)(v.Z, {
                                                 heading: P.intl.string(P.t["61W33d"]),
                                                 headingColor: "header-primary",
-                                                children: (0, r.jsx)(j.Z, {
+                                                children: (0, r.jsx)(_.Z, {
                                                     userBio: null == A ? void 0 : A.bio,
                                                     userId: t.id,
                                                     animateOnHover: !0,

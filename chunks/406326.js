@@ -62,7 +62,7 @@ function x(e) {
             searchMode: l,
             onSearchModeChange: o,
             totalResults: x,
-            isIndexing: j,
+            isIndexing: _,
             isSearching: O,
             documentsIndexed: v,
         } = e,
@@ -111,10 +111,10 @@ function x(e) {
             (0, r.jsx)("div", {
                 className: m.totalResults,
                 role: "status",
-                children: (0, r.jsx)(_, {
+                children: (0, r.jsx)(j, {
                     totalResults: x,
                     subtitle: Z,
-                    isIndexing: j,
+                    isIndexing: _,
                     isSearching: O,
                     documentsIndexed: v,
                 }),
@@ -166,7 +166,7 @@ function x(e) {
         ],
     });
 }
-function _(e) {
+function j(e) {
     let { totalResults: t, subtitle: n, isSearching: i, isIndexing: l, documentsIndexed: a } = e;
     return l
         ? (0, r.jsx)(O, { documentsIndexed: a })
@@ -177,7 +177,7 @@ function _(e) {
                 subtitle: n,
             });
 }
-function j() {
+function _() {
     return (0, r.jsx)("div", {
         className: m.spinnerWrapper,
         children: (0, r.jsx)(s.$jN, {
@@ -205,7 +205,7 @@ function O(e) {
                                 children: g.intl.string(g.t["G3EA+/"]),
                             }),
                         }),
-                        (0, r.jsx)(j, {}),
+                        (0, r.jsx)(_, {}),
                     ],
                 }),
             ),
@@ -219,7 +219,7 @@ function v() {
                 color: "header-secondary",
                 children: g.intl.string(g.t.uixzLS),
             }),
-            (0, r.jsx)(j, {}),
+            (0, r.jsx)(_, {}),
         ],
     });
 }

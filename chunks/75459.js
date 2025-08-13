@@ -38,8 +38,8 @@ let p = [
         },
         chatGiftIcon: {
             trinketsAnimation: {
-                getAnimationData: () => n(119452),
-                getGlowAnimationData: () => n(431947),
+                getAnimationData: () => n.e("18950").then(n.bind(n, 94613)),
+                getGlowAnimationData: () => n.e("38555").then(n.bind(n, 220590)),
             },
         },
         firstTimeNotice: {

@@ -67,7 +67,7 @@ function O(e, t) {
                             ),
                         );
                 case f.Us.PERK: {
-                    let { default: i } = await n.e("59256").then(n.bind(n, 326055));
+                    let { default: i } = await Promise.all([n.e("97844"), n.e("1150")]).then(n.bind(n, 326055));
                     return (n) =>
                         (0, r.jsx)(
                             i,
@@ -143,7 +143,10 @@ function _(e, t) {
                                       : e.then(() => {
                                             s && (0, o.pTH)(),
                                                 (0, o.ZDy)(async () => {
-                                                    let { default: e } = await n.e("13965").then(n.bind(n, 666083));
+                                                    let { default: e } = await Promise.all([
+                                                        n.e("97844"),
+                                                        n.e("35323"),
+                                                    ]).then(n.bind(n, 666083));
                                                     return (n) =>
                                                         (0, r.jsx)(
                                                             e,
@@ -164,7 +167,9 @@ function _(e, t) {
                           : i.then(() => {
                                 s && (0, o.pTH)(),
                                     (0, o.ZDy)(async () => {
-                                        let { default: e } = await n.e("13965").then(n.bind(n, 666083));
+                                        let { default: e } = await Promise.all([n.e("97844"), n.e("35323")]).then(
+                                            n.bind(n, 666083),
+                                        );
                                         return (n) =>
                                             (0, r.jsx)(
                                                 e,

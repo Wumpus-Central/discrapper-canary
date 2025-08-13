@@ -1,66 +1,66 @@
 n.d(t, { default: () => v }), n(388685), n(953529);
 var r = n(255367),
-    o = n(73800),
-    l = n(494497),
-    a = n(442837),
-    s = n(304789),
+    a = n(73800),
+    o = n(494497),
+    s = n(442837),
+    l = n(304789),
     i = n(481060),
     c = n(905128),
-    u = n(870246),
-    d = n(639777),
+    d = n(870246),
+    u = n(639777),
     p = n(262212),
-    f = n(795338),
-    m = n(845602),
-    b = n(603213),
-    g = n(606876),
-    h = n(535396),
-    _ = n(93841),
-    j = n(388032),
-    x = n(804258);
+    m = n(795338),
+    g = n(845602),
+    f = n(603213),
+    b = n(606876),
+    _ = n(535396),
+    h = n(93841),
+    x = n(388032),
+    j = n(804258);
 function v(e) {
     var t,
         n,
-        { guildId: v, powerup: y } = e,
-        O = (function (e, t) {
+        { guildId: v, powerup: k } = e,
+        C = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
-                o = (function (e, t) {
+                a = (function (e, t) {
                     if (null == e) return {};
                     var n,
                         r,
-                        o = {},
-                        l = Object.keys(e);
-                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (o[n] = e[n]);
-                    return o;
+                        a = {},
+                        o = Object.keys(e);
+                    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (a[n] = e[n]);
+                    return a;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var l = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < l.length; r++)
-                    (n = l[r]),
-                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (o[n] = e[n]);
+                var o = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < o.length; r++)
+                    (n = o[r]),
+                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (a[n] = e[n]);
             }
-            return o;
+            return a;
         })(e, ["guildId", "powerup"]);
-    let [k, C] = o.useState(void 0),
-        P = o.useMemo(() => {
-            switch (y.skuId) {
-                case l.IN:
-                    return (0, r.jsx)(m.E, { guildId: v });
-                case l.If:
-                    return (0, r.jsx)(m.Z, {});
-                case l.A$:
+    let [y, O] = a.useState(void 0),
+        P = a.useMemo(() => {
+            switch (k.skuId) {
+                case o.IN:
+                    return (0, r.jsx)(g.E, { guildId: v });
+                case o.If:
                     return (0, r.jsx)(g.Z, {});
+                case o.A$:
+                    return (0, r.jsx)(b.Z, {});
                 default:
                     return;
             }
-        }, [y, v]);
-    (0, u.$)(v, y, u.w.DETAIL);
-    let w = (0, d.Z)(v),
-        S = h.Rx[y.skuId],
-        I = null != S ? h.Cp[S] : null,
-        E = (0, a.e7)([c.Z], () => c.Z.getStateForGuild(v)),
-        N = null != I ? (null == E ? void 0 : E.allPowerups[I]) : null;
+        }, [k, v]);
+    (0, d.$)(v, k, d.w.DETAIL);
+    let S = (0, u.Z)(v),
+        w = _.Rx[k.skuId],
+        I = null != w ? _.Cp[w] : null,
+        N = (0, s.e7)([c.Z], () => c.Z.getStateForGuild(v)),
+        E = null != I ? (null == N ? void 0 : N.allPowerups[I]) : null;
     return (0, r.jsxs)(
         i.Y0X,
         ((t = (function (e) {
@@ -89,60 +89,60 @@ function v(e) {
             return e;
         })(
             {
-                className: x.modal,
+                className: j.modal,
                 size: i.CgR.DYNAMIC,
             },
-            O,
+            C,
         )),
         (n = n =
             {
                 parentComponent: "GuildPowerupPerkModal",
                 children: [
                     (0, r.jsxs)(i.hzk, {
-                        className: x.modalContentContainer,
+                        className: j.modalContentContainer,
                         scrollbarType: "none",
                         children: [
                             (0, r.jsxs)("div", {
-                                className: x.sidebar,
+                                className: j.sidebar,
                                 children: [
-                                    (0, r.jsx)(s.$, {
-                                        className: x.powerupImage,
-                                        children: (0, r.jsx)(f.m, { powerup: y }),
+                                    (0, r.jsx)(l.$, {
+                                        className: j.powerupImage,
+                                        children: (0, r.jsx)(m.m, { powerup: k }),
                                     }),
                                     (0, r.jsxs)("div", {
-                                        className: x.contentContainer,
+                                        className: j.contentContainer,
                                         children: [
                                             (0, r.jsx)(i.X6q, {
                                                 variant: "heading-xl/extrabold",
-                                                children: y.title,
+                                                children: k.title,
                                             }),
                                             (0, r.jsx)(i.Text, {
-                                                className: x.description,
+                                                className: j.description,
                                                 variant: "text-sm/normal",
-                                                children: y.description,
+                                                children: k.description,
                                             }),
-                                            null != N &&
+                                            null != E &&
                                                 (0, r.jsx)(i.Text, {
-                                                    className: x.description,
+                                                    className: j.description,
                                                     variant: "text-sm/normal",
-                                                    children: j.intl.formatToPlainString(_.default.NAFGkJ, {
-                                                        level: N.title,
+                                                    children: x.intl.formatToPlainString(h.default.NAFGkJ, {
+                                                        level: E.title,
                                                     }),
                                                 }),
-                                            (0, r.jsx)(b.q, { powerup: y }),
-                                            null != k &&
+                                            (0, r.jsx)(f.q, { powerup: k }),
+                                            null != y &&
                                                 (0, r.jsx)(i.Text, {
-                                                    className: x.error,
+                                                    className: j.error,
                                                     color: "status-danger",
                                                     variant: "text-sm/semibold",
-                                                    children: k,
+                                                    children: y,
                                                 }),
-                                            w &&
+                                            S &&
                                                 (0, r.jsx)(p.ZP, {
-                                                    className: x.footer,
+                                                    className: j.footer,
                                                     guildId: v,
-                                                    powerup: y,
-                                                    onError: C,
+                                                    powerup: k,
+                                                    onError: O,
                                                 }),
                                         ],
                                     }),
@@ -150,14 +150,14 @@ function v(e) {
                             }),
                             null != P &&
                                 (0, r.jsx)("div", {
-                                    className: x.exampleImage,
+                                    className: j.exampleImage,
                                     children: P,
                                 }),
                         ],
                     }),
                     (0, r.jsx)(i.olH, {
-                        className: x.close,
-                        onClick: O.onClose,
+                        className: j.close,
+                        onClick: C.onClose,
                     }),
                 ],
             }),

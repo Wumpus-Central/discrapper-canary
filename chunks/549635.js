@@ -109,7 +109,7 @@ function S(e) {
         { width: d, height: _, url: g, proxyUrl: b, alt: v, type: I, maxWidth: S, maxHeight: A } = n,
         C = O(n, ["width", "height", "url", "proxyUrl", "alt", "type", "maxWidth", "maxHeight"]),
         { zoomed: R } = (0, p.Y)(),
-        P = N(R, g, b),
+        P = N(R, g, b, n.contentType, n.originalContentType),
         w = null != d && 0 !== d && null != _ && 0 !== _;
     if ("VIDEO" === I && w && null != b) {
         var D;
@@ -173,9 +173,9 @@ function S(e) {
     );
 }
 let A = i.memo(S);
-function N(e, t, n) {
-    return e && _.Z.isDiscordAssetUrl(t)
-        ? (0, l.s$)(t)
+function N(e, t, n, r, i) {
+    return e && _.Z.isDiscordAssetUrl(t, r, i)
+        ? (0, l.s$)(t, r, i)
         : (0, u.q)({
               proxyURL: n,
               url: t,
