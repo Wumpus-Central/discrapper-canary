@@ -82636,7 +82636,7 @@ html.disable-forced-colors * {
     --divider-strong: hsl(var(--plum-11-hsl)/0.24);
     --divider-subtle: hsl(var(--plum-11-hsl)/0.12);
     --embed-background: var(--plum-23);
-    --embed-background-alternate: var(--primary-600);
+    --embed-background-alternate: var(--plum-23);
     --embed-title: var(--neutral-8);
     --experimental-avatar-embed-bg: hsl(var(--opacity-black-52-hsl)/0.5215686274509804);
     --expression-picker-bg: var(--neutral-97);
@@ -82936,7 +82936,7 @@ html.disable-forced-colors * {
         --divider-strong: color-mix(in oklab, hsl(var(--plum-11-hsl)/0.24) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.24) var(--custom-theme-base-color-amount, 0%));
         --divider-subtle: color-mix(in oklab, hsl(var(--plum-11-hsl)/0.12) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.12) var(--custom-theme-base-color-amount, 0%));
         --embed-background: color-mix(in oklab, var(--plum-23) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
-        --embed-background-alternate: color-mix(in oklab, var(--primary-600) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
+        --embed-background-alternate: color-mix(in oklab, var(--plum-23) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --embed-title: color-mix(in oklab, var(--neutral-8) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --experimental-avatar-embed-bg: color-mix(in oklab, hsl(var(--opacity-black-52-hsl)/0.5215686274509804) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.5215686274509804) var(--custom-theme-base-color-amount, 0%));
         --expression-picker-bg: color-mix(in oklab, var(--neutral-97) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
@@ -83440,7 +83440,7 @@ html.disable-forced-colors * {
     --divider-strong: hsl(var(--plum-11-hsl)/0.22);
     --divider-subtle: hsl(var(--plum-11-hsl)/0.12);
     --embed-background: var(--plum-18);
-    --embed-background-alternate: var(--primary-600);
+    --embed-background-alternate: var(--plum-18);
     --embed-title: var(--neutral-2);
     --experimental-avatar-embed-bg: hsl(var(--opacity-black-52-hsl)/0.5215686274509804);
     --expression-picker-bg: var(--neutral-86);
@@ -83740,7 +83740,7 @@ html.disable-forced-colors * {
         --divider-strong: color-mix(in oklab, hsl(var(--plum-11-hsl)/0.22) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.22) var(--custom-theme-base-color-amount, 0%));
         --divider-subtle: color-mix(in oklab, hsl(var(--plum-11-hsl)/0.12) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.12) var(--custom-theme-base-color-amount, 0%));
         --embed-background: color-mix(in oklab, var(--plum-18) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
-        --embed-background-alternate: color-mix(in oklab, var(--primary-600) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
+        --embed-background-alternate: color-mix(in oklab, var(--plum-18) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --embed-title: color-mix(in oklab, var(--neutral-2) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --experimental-avatar-embed-bg: color-mix(in oklab, hsl(var(--opacity-black-52-hsl)/0.5215686274509804) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.5215686274509804) var(--custom-theme-base-color-amount, 0%));
         --expression-picker-bg: color-mix(in oklab, var(--neutral-86) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
