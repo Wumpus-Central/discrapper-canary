@@ -1,14 +1,15 @@
 n.d(t, {
     Ej: () => v,
+    HU: () => S,
     Nc: () => E,
     Qj: () => _,
     TX: () => I,
-    Uv: () => C,
-    X2: () => A,
+    Uv: () => R,
+    X2: () => N,
     ZZ: () => d,
     Zt: () => y,
     cq: () => f,
-    eN: () => N,
+    eN: () => C,
     f1: () => h,
     gs: () => T,
     lq: () => m,
@@ -17,8 +18,8 @@ n.d(t, {
     qz: () => O,
     r_: () => g,
     rf: () => p,
-    u1: () => S,
-    vW: () => R,
+    u1: () => A,
+    vW: () => P,
 });
 var r = n(570140),
     i = n(153867),
@@ -125,24 +126,30 @@ function T(e) {
 }
 function S(e) {
     r.Z.dispatch({
+        type: "ACCESSIBILITY_SET_ENABLE_CUSTOM_CURSOR",
+        enableCustomCursor: e,
+    });
+}
+function A(e) {
+    r.Z.dispatch({
         type: "ACCESSIBILITY_SET_ROLE_STYLE",
         roleStyle: e,
     }),
         o.default.track(s.rMx.ROLE_STYLE_SETTING_UPDATED, { role_style: e });
 }
-function A(e) {
+function N(e) {
     r.Z.dispatch({
         type: "ACCESSIBILITY_SET_DISPLAY_NAME_STYLES_ENABLED",
         enabled: e,
     });
 }
-function N() {
+function C() {
     r.Z.dispatch({ type: "ACCESSIBILITY_SUBMIT_BUTTON_TOGGLE" });
 }
-function C() {
+function R() {
     r.Z.dispatch({ type: "ACCESSIBILITY_SYNC_PROFILE_THEME_WITH_USER_THEME_TOGGLE" });
 }
-function R(e) {
+function P(e) {
     r.Z.dispatch({
         type: "ACCESSIBILITY_SET_CONTRAST_MODE",
         contrastMode: e,

@@ -100,6 +100,7 @@ function x(e) {
                     null != k
                         ? (0, r.jsx)(l.DY3, {
                               text: k,
+                              delay: 100,
                               children: (0, r.jsx)(l.zxk, {
                                   text: L,
                                   fullWidth: !0,

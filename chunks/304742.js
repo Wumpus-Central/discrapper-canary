@@ -4,13 +4,13 @@ var n = r(255367),
     a = r(120356),
     i = r.n(a),
     o = r(481060),
-    s = r(675997),
+    s = r(642909),
     c = r(215023),
     u = r(388032),
     d = r(138954);
 function p(e) {
     let { handleTransition: t, onClose: r } = e,
-        { enableShopTakeOver: a } = s.Z.useConfig({ location: "CollectiblesIndexPageContextMenu" }),
+        a = (0, s.G)("CollectiblesIndexPageContextMenu"),
         p = l.useMemo(
             () => [
                 {

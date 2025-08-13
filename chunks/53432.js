@@ -44,15 +44,13 @@ function E() {
                         (0, s.ZI)({ theme: e });
                 },
             }),
-        v = O(m.BRd.DARK, g.intl.string(g.t.SMPT1t)),
-        I = O(m.BRd.LIGHT, g.intl.string(g.t.K2sFfn)),
-        T = [
+        v = [
             (0, r.jsxs)(
                 a.kSQ,
                 {
                     children: [
-                        I,
-                        v,
+                        O(m.BRd.LIGHT, g.intl.string(g.t.K2sFfn)),
+                        O(m.BRd.DARK, g.intl.string(g.t.SMPT1t)),
                         O(m.BRd.DARKER, g.intl.string(g.t.b8Cei4)),
                         O(m.BRd.MIDNIGHT, g.intl.string(g.t.Do4ZJy)),
                         O("system", g.intl.string(g.t["7rOU6u"])),
@@ -60,10 +58,9 @@ function E() {
                 },
                 "theme-items",
             ),
-            ,
         ];
     return (
-        T.push(
+        v.push(
             (0, r.jsxs)(
                 a.kSQ,
                 {
@@ -101,7 +98,7 @@ function E() {
                 "list-density",
             ),
         ),
-        T.push(
+        v.push(
             (0, r.jsxs)(
                 a.kSQ,
                 {
@@ -130,6 +127,6 @@ function E() {
                 "chat-density",
             ),
         ),
-        T
+        v
     );
 }

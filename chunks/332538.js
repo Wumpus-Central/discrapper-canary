@@ -2,7 +2,6 @@ n.d(t, {
     Wj: () => w,
     ZP: () => N,
 }),
-    n(539854),
     n(388685),
     n(361932),
     n(187205);
@@ -13,7 +12,7 @@ var r = n(255367),
     s = n(704215),
     a = n(481060),
     c = n(377171),
-    u = n(706140),
+    u = n(605236),
     d = n(243778),
     h = n(645041),
     p = n(430824),
@@ -38,9 +37,8 @@ function N(e) {
         { trailing: m, showUnread: P } = (function (e, t, n) {
             let l = (0, j.Z)(e).available,
                 { shouldShow: o } = (0, S._)(e, "useGuildPowerupsChannelListIndicators"),
-                d = [];
-            o && d.push(s.z.VANITY_URL_POWERUP_ROLLBACK_NOTIFICATION);
-            let [h] = (0, u.zH)(d, e);
+                d = (0, u.OA)(s.z.VANITY_URL_POWERUP_ROLLBACK_NOTIFICATION, e),
+                h = o && !d;
             return i.useMemo(() => {
                 var e, i, o;
                 if (null == t)
@@ -53,7 +51,7 @@ function N(e) {
                     d = null != (i = null == n ? void 0 : n.lastSeenWarningNotification) ? i : Date.now(),
                     p = new Date(null == (e = u[u.length - 1]) ? void 0 : e.ends_at).getTime(),
                     f = null != (o = null == n ? void 0 : n.lastBoostCount) ? o : 0;
-                return (u.length > 0 && d < p) || null != h
+                return (u.length > 0 && d < p) || h
                     ? {
                           trailing: (0, r.jsx)(a.Mgn, {
                               color: a.TVs.colors.STATUS_WARNING,

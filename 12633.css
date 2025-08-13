@@ -77758,7 +77758,7 @@ span.clanTag__07f91.isOverlay__07f91 {
     padding: var(--space-8) var(--space-12)
 }
 
-.root_e2a426 {
+.root__92958 {
     background: var(--background-surface-high);
     border: 1px solid var(--border-subtle);
     border-radius: var(--radius-md);
@@ -77767,7 +77767,7 @@ span.clanTag__07f91.isOverlay__07f91 {
     min-width: 240px
 }
 
-.userHeader_e2a426 {
+.userHeader__92958 {
     align-items: center;
     background: var(--background-mod-subtle);
     display: flex;
@@ -77775,11 +77775,11 @@ span.clanTag__07f91.isOverlay__07f91 {
     padding: var(--space-12) var(--space-16)
 }
 
-.activityList_e2a426 {
+.activityList__92958 {
     padding: 0 var(--space-16)
 }
 
-.activityRow_e2a426 {
+.activityRow__92958 {
     align-items: stretch;
     border-bottom: 1px solid var(--border-subtle);
     display: flex;
@@ -77788,13 +77788,13 @@ span.clanTag__07f91.isOverlay__07f91 {
     padding: var(--space-12) 0
 }
 
-.activityRowContent_e2a426 {
+.activityRowContent__92958 {
     align-items: center;
     display: flex;
     gap: var(--space-12)
 }
 
-.activityRow_e2a426:last-child {
+.activityRow__92958:last-child {
     border-bottom: none
 }
 

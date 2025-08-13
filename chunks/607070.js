@@ -1,6 +1,6 @@
 n.d(t, {
     X: () => b,
-    Z: () => X,
+    Z: () => Q,
 });
 var r,
     i = n(442837),
@@ -112,6 +112,7 @@ let y = {
         displayNameStylesEnabled: !0,
         submitButtonEnabled: !1,
         syncProfileThemeWithUserTheme: !1,
+        enableCustomCursor: !0,
     },
     O = y,
     v = {
@@ -197,28 +198,31 @@ function F(e) {
     O = m(p({}, O), { alwaysShowLinkDecorations: e.alwaysShowLinkDecorations });
 }
 function V(e) {
+    O = m(p({}, O), { enableCustomCursor: e.enableCustomCursor });
+}
+function H(e) {
     var t;
     return (O = m(p({}, O), { systemForcedColors: null != (t = e.systemForcedColors) ? t : "none" })), !0;
 }
-function H() {
+function Y() {
     O.forcedColorsModalSeen = !0;
 }
-function Y() {
+function W() {
     O = m(p({}, O), { keyboardNavigationExplainerModalSeen: !0 });
 }
-function W(e) {
+function K(e) {
     let { messageGroupSpacing: t } = e;
     O = m(p({}, O), { messageGroupSpacing: t });
 }
-function K(e) {
+function z(e) {
     let { contrast: t } = e;
     O = m(p({}, O), { contrast: t });
 }
-function z(e) {
+function q(e) {
     let { contrastMode: t } = e;
     O = m(p({}, O), { contrastMode: t });
 }
-class q extends (r = i.ZP.DeviceSettingsStore) {
+class X extends (r = i.ZP.DeviceSettingsStore) {
     initialize(e) {
         this.waitFor(c.Z),
             isNaN((O = p({}, y, null != e ? e : null)).fontSize) && (O.fontSize = d.yqN.FONT_SIZE_DEFAULT),
@@ -330,6 +334,9 @@ class q extends (r = i.ZP.DeviceSettingsStore) {
     get alwaysShowLinkDecorations() {
         return O.alwaysShowLinkDecorations;
     }
+    get enableCustomCursor() {
+        return O.enableCustomCursor;
+    }
     get roleStyle() {
         return O.roleStyle;
     }
@@ -343,9 +350,9 @@ class q extends (r = i.ZP.DeviceSettingsStore) {
         return O;
     }
 }
-_(q, "displayName", "AccessibilityStore"),
-    _(q, "persistKey", "AccessibilityStore"),
-    _(q, "migrations", [
+_(X, "displayName", "AccessibilityStore"),
+    _(X, "persistKey", "AccessibilityStore"),
+    _(X, "migrations", [
         () => {
             let e = "a11yFontScale",
                 t = "a11yZoom",
@@ -411,8 +418,9 @@ _(q, "displayName", "AccessibilityStore"),
             } catch (e) {}
             return e;
         },
+        (e) => m(p({}, e), { enableCustomCursor: !0 }),
     ]);
-let X = new q(s.Z, {
+let Q = new X(s.Z, {
     ACCESSIBILITY_SET_FONT_SIZE: T,
     ACCESSIBILITY_SET_ZOOM: S,
     ACCESSIBILITY_RESET_TO_DEFAULT: A,
@@ -422,20 +430,21 @@ let X = new q(s.Z, {
     ACCESSIBILITY_LOW_CONTRAST_TOGGLE: P,
     ACCESSIBILITY_SET_SATURATION: D,
     ACCESSIBILITY_DESATURATE_ROLES_TOGGLE: L,
-    ACCESSIBILITY_SYSTEM_COLOR_PREFERENCES_CHANGED: V,
+    ACCESSIBILITY_SYSTEM_COLOR_PREFERENCES_CHANGED: H,
     ACCESSIBILITY_SYSTEM_PREFERS_CONTRAST_CHANGED: Z,
     ACCESSIBILITY_SYSTEM_PREFERS_REDUCED_MOTION_CHANGED: U,
     ACCESSIBILITY_SYSTEM_PREFERS_CROSSFADES_CHANGED: G,
     ACCESSIBILITY_SET_PREFERS_REDUCED_MOTION: B,
     ACCESSIBILITY_SET_SYNC_FORCED_COLORS: w,
     ACCESSIBILITY_SET_ALWAYS_SHOW_LINK_DECORATIONS: F,
+    ACCESSIBILITY_SET_ENABLE_CUSTOM_CURSOR: V,
     ACCESSIBILITY_SET_ROLE_STYLE: x,
     ACCESSIBILITY_SET_DISPLAY_NAME_STYLES_ENABLED: M,
-    ACCESSIBILITY_FORCED_COLORS_MODAL_SEEN: H,
-    KEYBOARD_NAVIGATION_EXPLAINER_MODAL_SEEN: Y,
-    ACCESSIBILITY_SET_MESSAGE_GROUP_SPACING: W,
+    ACCESSIBILITY_FORCED_COLORS_MODAL_SEEN: Y,
+    KEYBOARD_NAVIGATION_EXPLAINER_MODAL_SEEN: W,
+    ACCESSIBILITY_SET_MESSAGE_GROUP_SPACING: K,
     ACCESSIBILITY_SUBMIT_BUTTON_TOGGLE: k,
     ACCESSIBILITY_SYNC_PROFILE_THEME_WITH_USER_THEME_TOGGLE: j,
-    ACCESSIBILITY_SET_CONTRAST: K,
-    ACCESSIBILITY_SET_CONTRAST_MODE: z,
+    ACCESSIBILITY_SET_CONTRAST: z,
+    ACCESSIBILITY_SET_CONTRAST_MODE: q,
 });
