@@ -89603,8 +89603,6 @@ code {
     --custom-scrollbar-scrollbar-width: 14px;
     --custom-scrollbar-scrollbar-margin: 3px;
     --custom-scrollbar-border-radius: calc(var(--custom-scrollbar-scrollbar-width)/2);
-    --custom-create-welcome-channel-modal-emoji-size: 20px;
-    --custom-create-welcome-channel-modal-input-elements-padding: 10px;
     --custom-voice-channel-effect-voice-channel-effect-animation-size: 800px;
     --custom-voice-channel-effects-bar-effect-bar-padding-x: 16px;
     --custom-voice-channel-effects-bar-effect-bar-padding-y: 12px;
