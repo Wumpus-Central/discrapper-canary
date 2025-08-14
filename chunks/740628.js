@@ -11,12 +11,12 @@ var r = n(255367),
     f = n(116906),
     p = n(384816),
     m = n(389190),
-    g = n(428927),
-    b = n(228168),
+    b = n(428927),
+    g = n(228168),
     j = n(388032),
     y = n(878449),
-    x = n(602727);
-function O(e) {
+    O = n(602727);
+function x(e) {
     let {
         section: t,
         subsection: n,
@@ -27,7 +27,7 @@ function O(e) {
         channelId: c,
         onClose: s,
     } = e;
-    return t === b.oh.ACTIVITY
+    return t === g.oh.ACTIVITY
         ? (0, r.jsx)(f.Z, {
               user: l,
               currentUser: i,
@@ -35,21 +35,21 @@ function O(e) {
               guildId: a,
               onClose: s,
           })
-        : t === b.oh.MUTUAL_FRIENDS
+        : t === g.oh.MUTUAL_FRIENDS
           ? (0, r.jsx)(m.Z, {
                 user: l,
                 guildId: a,
                 channelId: c,
                 onClose: s,
             })
-          : t === b.oh.MUTUAL_GUILDS
-            ? (0, r.jsx)(g.Z, {
+          : t === g.oh.MUTUAL_GUILDS
+            ? (0, r.jsx)(b.Z, {
                   user: l,
                   onClose: s,
               })
-            : t === b.oh.BOT_DATA_ACCESS
+            : t === g.oh.BOT_DATA_ACCESS
               ? (0, r.jsx)(d.Z, { user: l })
-              : t === b.oh.BOT_INFO
+              : t === g.oh.BOT_INFO
                 ? (0, r.jsx)(u.Z, {
                       user: l,
                       currentUser: i,
@@ -73,8 +73,8 @@ function h(e) {
             currentUser: f,
             displayProfile: p,
             guildId: m,
-            items: g,
-            initialSection: h = b.oh.USER_INFO,
+            items: b,
+            initialSection: h = g.oh.USER_INFO,
             initialSubsection: v,
             onClose: _,
         } = e,
@@ -85,25 +85,25 @@ function h(e) {
                 null !=
                 (d =
                     null ==
-                    (t = g.find((e) => {
+                    (t = b.find((e) => {
                         let { section: t } = e;
                         return t === h;
                     }))
                         ? void 0
                         : t.section)
                     ? d
-                    : null == (n = g[0])
+                    : null == (n = b[0])
                       ? void 0
                       : n.section,
             subsection: v,
         });
     l.useEffect(() => {
-        null == g.find((e) => e.section === E) &&
+        null == b.find((e) => e.section === E) &&
             Z({
-                section: g[0].section,
+                section: b[0].section,
                 subsection: void 0,
             });
-    }, [g, E]);
+    }, [b, E]);
     let N = l.useCallback(
         (e) => {
             I({
@@ -119,7 +119,7 @@ function h(e) {
     );
     return P
         ? (0, r.jsx)("div", {
-              className: x.container,
+              className: O.container,
               children: (0, r.jsxs)("div", {
                   className: y.empty,
                   children: [
@@ -132,19 +132,19 @@ function h(e) {
               }),
           })
         : (0, r.jsxs)("div", {
-              className: x.container,
+              className: O.container,
               children: [
                   (0, r.jsx)(o.n, {
-                      className: x.tabBar,
+                      className: O.tabBar,
                       type: "top",
                       selectedItem: E,
                       onItemSelect: N,
-                      children: g.map((e) => {
+                      children: b.map((e) => {
                           let { section: t, text: n } = e;
                           return (0, r.jsx)(
                               o.n.Item,
                               {
-                                  className: x.tabBarItem,
+                                  className: O.tabBarItem,
                                   id: t,
                                   "aria-label": n,
                                   children: (0, r.jsx)(a.Text, {
@@ -156,8 +156,8 @@ function h(e) {
                           );
                       }),
                   }),
-                  (0, r.jsx)(O, {
-                      items: g,
+                  (0, r.jsx)(x, {
+                      items: b,
                       section: E,
                       subsection: T,
                       user: u,

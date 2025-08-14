@@ -1,4 +1,4 @@
-n.d(t, { Z: () => j }), n(388685);
+n.d(t, { Z: () => Z }), n(388685);
 var i = n(255367),
     r = n(73800),
     o = n(442837),
@@ -208,7 +208,7 @@ let x = o.ZP.connectStores([d.Z, u.default], (e) => {
         isActiveRegion: null != n && n.type === _.Odu.TEXT && i.has(_.O0n.TEXT_WIDGET),
     };
 })(S);
-function C(e, t) {
+function j(e, t) {
     return (0, i.jsx)(
         x,
         {
@@ -218,11 +218,11 @@ function C(e, t) {
         e,
     );
 }
-let j = o.ZP.connectStores([d.Z, h.Z], () => {
+let Z = o.ZP.connectStores([d.Z, h.Z], () => {
     var e;
     return {
         layout: null != (e = d.Z.getLayout(f.OVERLAY_LAYOUT_ID)) ? e : void 0,
         layoutSize: h.Z.windowSize(),
-        renderWidget: C,
+        renderWidget: j,
     };
 })(a.Z);

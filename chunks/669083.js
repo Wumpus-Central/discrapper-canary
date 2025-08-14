@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C }), n(388685);
+n.d(t, { Z: () => j }), n(388685);
 var i = n(255367),
     r = n(73800),
     o = n(442837),
@@ -320,7 +320,7 @@ class x extends r.PureComponent {
             });
     }
 }
-function C(e) {
+function j(e) {
     let { onClose: t } = e,
         {
             avatarSizeMode: n,

@@ -11,12 +11,12 @@ var r = n(255367),
     f = n(785717),
     p = n(687158),
     m = n(899007),
-    g = n(648052),
-    b = n(867176),
+    b = n(648052),
+    g = n(867176),
     j = n(280885),
     y = n(900927),
-    x = n(678738),
-    O = n(502762),
+    O = n(678738),
+    x = n(502762),
     h = n(530),
     v = n(679332),
     _ = n(544989),
@@ -37,18 +37,18 @@ function S(e) {
             transitionState: D,
             openedAt: L,
             onClose: R,
-            sourceAnalyticsLocations: G = [],
+            sourceAnalyticsLocations: k = [],
         } = e,
-        k = n === P.ME ? void 0 : n,
-        B = (0, p.ZP)(t.id, k),
-        M = u.ZP.getName(k, S, t),
+        G = n === P.ME ? void 0 : n,
+        B = (0, p.ZP)(t.id, G),
+        M = u.ZP.getName(G, S, t),
         U = (0, s.Dt)(),
-        { analyticsLocations: F } = (0, c.ZP)([...G, a.Z.USER_PROFILE_MODAL]),
+        { analyticsLocations: F } = (0, c.ZP)([...k, a.Z.USER_PROFILE_MODAL]),
         V = (0, f.ZB)({
             layout: "MODAL",
             userId: t.id,
             sourceSessionId: C,
-            guildId: k,
+            guildId: G,
             channelId: S,
             messageId: w,
             roleId: A,
@@ -78,7 +78,7 @@ function S(e) {
                                 children: E.intl.format(E.t.KRe1Fh, { name: M }),
                             }),
                         }),
-                        children: (0, r.jsxs)(O.Z, {
+                        children: (0, r.jsxs)(x.Z, {
                             user: t,
                             displayProfile: B,
                             themeType: I.lY.MODAL,
@@ -87,7 +87,7 @@ function S(e) {
                                 (0, r.jsx)(_.Z, { children: (0, r.jsx)(v.Z, { user: t }) }),
                                 (0, r.jsxs)("div", {
                                     children: [
-                                        (0, r.jsx)(b.Z, {
+                                        (0, r.jsx)(g.Z, {
                                             user: t,
                                             displayProfile: B,
                                             themeType: I.lY.MODAL,
@@ -97,7 +97,7 @@ function S(e) {
                                             children: (0, r.jsx)(m.Z, {
                                                 user: t,
                                                 displayProfile: B,
-                                                guildId: k,
+                                                guildId: G,
                                                 channelId: S,
                                                 themeType: I.lY.MODAL,
                                             }),
@@ -113,7 +113,7 @@ function S(e) {
                                             nickname: M,
                                             pronouns: null == B ? void 0 : B.pronouns,
                                             nicknameVariant: "heading-xl/bold",
-                                            tags: (0, r.jsx)(g.Z, {
+                                            tags: (0, r.jsx)(b.Z, {
                                                 displayProfile: B,
                                                 themeType: I.lY.MODAL,
                                                 onClose: R,
@@ -150,11 +150,11 @@ function S(e) {
                                                             userBio: null == B ? void 0 : B.bio,
                                                             setLineClamp: !1,
                                                         }),
-                                                        (0, r.jsx)(x.Z, {
+                                                        (0, r.jsx)(O.Z, {
                                                             heading: E.intl.string(E.t["A//N4u"]),
                                                             children: (0, r.jsx)(y.Z, {
                                                                 userId: t.id,
-                                                                guildId: k,
+                                                                guildId: G,
                                                                 tooltipDelay: I.vB,
                                                             }),
                                                         }),

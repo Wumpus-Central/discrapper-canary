@@ -2,8 +2,8 @@ n.d(t, { Z: () => m });
 var i = n(255367),
     r = n(73800),
     l = n(120356),
-    o = n.n(l),
-    a = n(481060),
+    a = n.n(l),
+    o = n(481060),
     s = n(388032),
     c = n(376585);
 function d(e) {
@@ -52,7 +52,7 @@ function u(e, t) {
 let p = [!1, !0];
 function m(e) {
     let { isDisabled: t, currentValue: n, onChange: l } = e,
-        s = (0, a.arW)({
+        s = (0, o.arW)({
             orientation: "horizontal",
             isDisabled: t,
         }),
@@ -89,7 +89,7 @@ function m(e) {
         u(
             d(
                 {
-                    className: o()(c.group, { [c.disabled]: t }),
+                    className: a()(c.group, { [c.disabled]: t }),
                     ref: m,
                 },
                 g,
@@ -113,18 +113,18 @@ function m(e) {
 function b(e) {
     let { isSelected: t, itemValue: n, onClick: r } = e,
         l = n ? c.allow : c.deny,
-        p = n ? a.dz2 : a.Dio,
+        p = n ? o.dz2 : o.Dio,
         m = n ? s.intl.string(s.t.RzDfSk) : s.intl.string(s.t["6639Oz"]),
-        b = (0, a.xUy)({
+        b = (0, o.xUy)({
             isSelected: t,
             label: m,
         });
     return (0, i.jsx)(
-        a.P3F,
+        o.P3F,
         u(
             d(
                 {
-                    className: o()(c.item, l, { [c.selected]: t }),
+                    className: a()(c.item, l, { [c.selected]: t }),
                     onClick: r,
                 },
                 b,

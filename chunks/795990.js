@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x });
+n.d(t, { Z: () => O });
 var r = n(255367),
     l = n(73800),
     i = n(296009),
@@ -11,7 +11,7 @@ var r = n(255367),
     f = n(247397),
     p = n(388032),
     m = n(958461);
-function g(e) {
+function b(e) {
     let { widgetType: t } = e,
         n = t === i.l.FAVORITE_GAMES ? c.LM.BALDURS_GATE_3 : c.LM.CYBERPUNK_2077,
         { coverImageUrl: l, localizedName: o } = (0, a.$)(n);
@@ -39,7 +39,7 @@ function g(e) {
         ],
     });
 }
-function b(e) {
+function g(e) {
     let { widgetType: t } = e,
         n =
             t === i.l.WANT_TO_PLAY_GAMES
@@ -79,10 +79,10 @@ function y(e) {
                 switch (t) {
                     case i.l.FAVORITE_GAMES:
                     case i.l.CURRENT_GAMES:
-                        return (0, r.jsx)(g, { widgetType: t });
+                        return (0, r.jsx)(b, { widgetType: t });
                     case i.l.WANT_TO_PLAY_GAMES:
                     case i.l.PLAYED_GAMES:
-                        return (0, r.jsx)(b, { widgetType: t });
+                        return (0, r.jsx)(g, { widgetType: t });
                     default:
                         return null;
                 }
@@ -107,7 +107,7 @@ function y(e) {
         ],
     });
 }
-function x() {
+function O() {
     return (0, r.jsxs)("div", {
         className: m.empty,
         children: [

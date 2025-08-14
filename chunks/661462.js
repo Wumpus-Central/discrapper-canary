@@ -58,13 +58,13 @@ function m(e) {
             displayProfile: d,
             guildId: u,
             channelId: m,
-            items: g,
-            initialSection: b,
+            items: b,
+            initialSection: g,
             initialSubsection: j,
             onClose: y,
         } = e,
-        { trackUserProfileAction: x } = (0, o.KZ)(),
-        [{ section: O, subsection: h, text: v }, _] = l.useState(
+        { trackUserProfileAction: O } = (0, o.KZ)(),
+        [{ section: x, subsection: h, text: v }, _] = l.useState(
             ((n = (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
@@ -92,12 +92,12 @@ function m(e) {
             })(
                 {},
                 null !=
-                    (t = g.find((e) => {
+                    (t = b.find((e) => {
                         let { section: t } = e;
-                        return t === b;
+                        return t === g;
                     }))
                     ? t
-                    : g[0],
+                    : b[0],
             )),
             (a = a = { subsection: j }),
             Object.getOwnPropertyDescriptors
@@ -125,18 +125,18 @@ function m(e) {
                 children: (0, r.jsx)(i.njP, {
                     type: "top",
                     look: "custom",
-                    selectedItem: O,
+                    selectedItem: x,
                     onItemSelect: (e) => {
-                        x({
+                        O({
                             action: "PRESS_SECTION",
                             section: e,
                         }),
                             _((t) => {
                                 var n;
-                                return null != (n = g.find((t) => t.section === e)) ? n : t;
+                                return null != (n = b.find((t) => t.section === e)) ? n : t;
                             });
                     },
-                    children: g.map((e) =>
+                    children: b.map((e) =>
                         (0, r.jsx)(
                             i.njP.Item,
                             {
@@ -151,7 +151,7 @@ function m(e) {
                 }),
             }),
             (0, r.jsx)(i.njP.Panel, {
-                id: O,
+                id: x,
                 "aria-label": v,
                 className: f.tabBarPanel,
                 children: (0, r.jsx)(p, {
@@ -160,7 +160,7 @@ function m(e) {
                     displayProfile: d,
                     guildId: u,
                     channelId: m,
-                    section: O,
+                    section: x,
                     subsection: h,
                     onClose: y,
                 }),

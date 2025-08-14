@@ -25,8 +25,8 @@ var r = n(255367),
     x = n(602667),
     T = n(644646),
     D = n(604162),
-    P = n(747717),
-    R = n(963123),
+    R = n(747717),
+    P = n(963123),
     N = n(281055),
     I = n(46140),
     k = n(981631),
@@ -186,7 +186,7 @@ function V(e) {
                                             className: i()(w.contentHeaderLogotype, w.accentOnHover),
                                             src: (0, h.fh)(Z, h.eC.LOGO_TYPE, K).url,
                                         }),
-                                        (0, r.jsx)(P.Z, {}),
+                                        (0, r.jsx)(R.Z, {}),
                                         (0, r.jsxs)("div", {
                                             className: w.questHeading,
                                             children: [
@@ -240,7 +240,7 @@ function V(e) {
                                     }),
                             ],
                         }),
-                        (0, r.jsx)(R.Z, {
+                        (0, r.jsx)(P.Z, {
                             quest: Z,
                             videoTask: eg,
                             videoSessionId: U,

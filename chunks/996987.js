@@ -3,8 +3,8 @@ var i = n(255367);
 n(73800);
 var r = n(481060),
     l = n(600164),
-    o = n(313201),
-    a = n(63063),
+    a = n(313201),
+    o = n(63063),
     s = n(453628),
     c = n(388032),
     d = n(197571);
@@ -20,7 +20,7 @@ function u(e) {
             hideBorder: f = !1,
             className: h = d.marginBottom20,
         } = e,
-        x = (0, o.Dt)();
+        x = (0, a.Dt)();
     return (0, i.jsxs)(l.Z, {
         style: b,
         className: h,
@@ -64,7 +64,7 @@ function u(e) {
                         disabled: g,
                         type: r.geA.DESCRIPTION,
                         children: (0, i.jsx)(r.eee, {
-                            href: a.Z.getArticleURL(m),
+                            href: o.Z.getArticleURL(m),
                             children: c.intl.string(c.t.hvVgAQ),
                         }),
                     }),

@@ -25,8 +25,8 @@ var r = n(255367),
     x = n(184299),
     T = n(347382),
     D = n(5881),
-    P = n(208109),
-    R = n(117242),
+    R = n(208109),
+    P = n(117242),
     N = n(720293),
     I = n(566078),
     k = n(602667),
@@ -153,7 +153,7 @@ function J(e) {
         [ej, ey] = l.useState(!1),
         ex = (0, _.il)(J),
         [eT, eD] = l.useState(ex.percentComplete),
-        [eP, eR] = l.useState(!1),
+        [eR, eP] = l.useState(!1),
         [eN, eI] = l.useState(!0),
         [ek, eA] = l.useState(!1),
         [ew, eL] = l.useState([]),
@@ -315,7 +315,7 @@ function J(e) {
             var e, t;
             return null != (t = null == (e = e1.current) ? void 0 : e.currentTime) ? t : null;
         }, []),
-        { forceSendCurrentSegment: tD } = (0, R.Z)({
+        { forceSendCurrentSegment: tD } = (0, P.Z)({
             getCurrentVideoTime: tT,
             isPlaying: eC === V.rq.PLAYING,
             isMetadataLoaded: e9,
@@ -324,7 +324,7 @@ function J(e) {
             emitIntervalMs: 4000,
             minSegmentDurationMs: 2000,
         }),
-        tP = l.useCallback(
+        tR = l.useCallback(
             (e) => {
                 if ((to.info("[QV] | updatePlayerState | playerState: ".concat(e)), eS(e), null != e1.current))
                     switch (e) {
@@ -346,7 +346,7 @@ function J(e) {
         l.useEffect(() => {
             eE && tO(ev, eC);
         }, [ev, eE, eC, tO]);
-    let tR = l.useCallback(
+    let tP = l.useCallback(
         (e) => {
             var t;
             e6 ||
@@ -372,9 +372,9 @@ function J(e) {
                     .concat(ev, ", isQuestCompleted: ")
                     .concat(e6),
             ),
-            tP(V.rq.PAUSED),
+            tR(V.rq.PAUSED),
             e6 || e3(y.yE.LOST_FOCUS));
-    }, [el, ev, eE, eg, eO, eC, e6, tP, tR, to]);
+    }, [el, ev, eE, eg, eO, eC, e6, tR, tP, to]);
     let [tN, tI] = l.useState(!1),
         tk = l.useRef(null),
         tA = l.useRef(performance.now()),
@@ -415,7 +415,7 @@ function J(e) {
             let e = Math.max(e1.current.currentTime - 10, 0);
             to.info("[QV] | handleSeekBackIncrement | newTime: ".concat(e)),
                 tF(e),
-                eC === V.rq.ENDED && tP(V.rq.PAUSED),
+                eC === V.rq.ENDED && tR(V.rq.PAUSED),
                 tb(y.jn.VIDEO_MODAL, h.jZ.SEEK_BACKWARD);
         },
         tZ = () => {
@@ -423,7 +423,7 @@ function J(e) {
             let e = Math.min(e1.current.currentTime + 10, tl);
             to.info("[QV] | handleSeekForwardIncrement | newTime: ".concat(e)),
                 tF(e),
-                eC !== V.rq.ENDED && e >= e1.current.duration && tP(V.rq.ENDED),
+                eC !== V.rq.ENDED && e >= e1.current.duration && tR(V.rq.ENDED),
                 tb(y.jn.VIDEO_MODAL, h.jZ.SEEK_FORWARD);
         };
     l.useEffect(() => {
@@ -438,7 +438,7 @@ function J(e) {
                 null != e1.current &&
                     (to.info("[QV] | seekTimeline | timeSec: ".concat(e)),
                     tD(),
-                    eR(!0),
+                    eP(!0),
                     tt(!1),
                     (e1.current.currentTime = e),
                     eX(J.id, e, e1.current.duration));
@@ -449,13 +449,13 @@ function J(e) {
             if (null != e1.current)
                 switch ((to.info("[QV] | handlePlaybackBtnClick | playerState: ".concat(eC)), eC)) {
                     case V.rq.ENDED:
-                        tF(0), tP(V.rq.PLAYING);
+                        tF(0), tR(V.rq.PLAYING);
                         break;
                     case V.rq.PLAYING:
-                        tP(V.rq.PAUSED), e3(y.yE.PAUSE_BUTTON);
+                        tR(V.rq.PAUSED), e3(y.yE.PAUSE_BUTTON);
                         break;
                     default:
-                        tP(V.rq.PLAYING);
+                        tR(V.rq.PLAYING);
                 }
         },
         tq = (e) => {
@@ -513,15 +513,15 @@ function J(e) {
                         tS(null != eK.current ? performance.now() - eK.current : null),
                         eA(!1)),
                     to.info("[QV] | handleCanPlay: updating player state to playing"),
-                    tP(V.rq.PLAYING));
+                    tR(V.rq.PLAYING));
         };
     l.useEffect(() => {
-        if (!eP) return;
+        if (!eR) return;
         let e = setTimeout(() => {
-            eR(!1);
+            eP(!1);
         }, 1000);
         return () => clearTimeout(e);
-    }, [eP]);
+    }, [eR]);
     let [{ controlBarAnimSpring: tG }, tK] = (0, f.q_F)(() => ({
             from: { controlBarAnimSpring: 0 },
             config: K,
@@ -608,7 +608,7 @@ function J(e) {
             children: [
                 tJ &&
                     (() => {
-                        if (!(0, P.e)({ location: q.dr.VIDEO_MODAL }))
+                        if (!(0, R.e)({ location: q.dr.VIDEO_MODAL }))
                             return (0, r.jsxs)(r.Fragment, {
                                 children: [
                                     (0, r.jsx)(X, {
@@ -671,7 +671,7 @@ function J(e) {
                                     ),
                                 ),
                                 eZ(e1.current.currentTime + 6 + 2 * Math.random()),
-                                tR(e1.current.currentTime)),
+                                tP(e1.current.currentTime)),
                             e1.current.currentTime >= eF &&
                                 (eU(e1.current.currentTime + 1),
                                 (0, j.qm)(J.id, ex.taskType, e1.current.currentTime),
@@ -681,10 +681,10 @@ function J(e) {
                     },
                     onEnded: (e) => {
                         null != e1.current &&
-                            (tR(e1.current.duration + 1),
+                            (tP(e1.current.duration + 1),
                             to.info("[QV] | handleEnded: sending progress update: ".concat(e1.current.duration + 1)),
                             eX(J.id, e1.current.duration, e1.current.duration)),
-                            tP(V.rq.ENDED),
+                            tR(V.rq.ENDED),
                             eA(!1);
                     },
                     onLoadedData: (e) => {
@@ -881,14 +881,14 @@ function J(e) {
                     children: [
                         (0, r.jsx)(L.Z, {
                             percent: eT,
-                            animate: !0 !== e8.current && !eP,
+                            animate: !0 !== e8.current && !eR,
                             interactionEnabled: e6 && eH,
                             backgroundColor: tM ? void 0 : "rgba(0, 0, 0, 0.0)",
                             preloadedBuffers: tM ? ew : void 0,
                             duration: null != (Z = null == (p = e1.current) ? void 0 : p.duration) ? Z : 1,
                             maxSeekableTime: tM && eH ? tl : void 0,
                             onClick: (e) => {
-                                tF(e), eC === V.rq.ENDED && tP(V.rq.PLAYING);
+                                tF(e), eC === V.rq.ENDED && tR(V.rq.PLAYING);
                             },
                             onScrubBack: () => {
                                 tB();

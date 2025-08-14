@@ -2,8 +2,8 @@ n.d(t, { Z: () => j }), n(539854), n(388685);
 var i = n(255367),
     r = n(73800),
     l = n(149765),
-    o = n(442837),
-    a = n(481060),
+    a = n(442837),
+    o = n(481060),
     s = n(749210),
     c = n(412899),
     d = n(995648),
@@ -20,9 +20,9 @@ function j(e) {
     let { guild: n, applicationIntegration: j } = e,
         { application: v } = j,
         y = null != v.bot ? new b.Z(v.bot) : null,
-        O = (0, o.e7)([g.ZP], () => (null != y ? g.ZP.getMember(n.id, y.id) : null), [y, n]),
-        _ = (0, o.e7)([f.Z], () => f.Z.getEveryoneRole(n)),
-        C = (0, o.Wu)([f.Z], () => {
+        O = (0, a.e7)([g.ZP], () => (null != y ? g.ZP.getMember(n.id, y.id) : null), [y, n]),
+        _ = (0, a.e7)([f.Z], () => f.Z.getEveryoneRole(n)),
+        C = (0, a.Wu)([f.Z], () => {
             var e;
             return f.Z.getManyRoles(n.id, null != (e = null == O ? void 0 : O.roles) ? e : []);
         }),
@@ -30,10 +30,10 @@ function j(e) {
     r.useEffect(() => {
         null != N && s.Z.requestMembersById(n.id, N);
     }, [n.id, N]);
-    let w = r.useMemo(() => l.$e(_.permissions, ...C.map((e) => e.permissions)), [C, _]);
+    let Z = r.useMemo(() => l.$e(_.permissions, ...C.map((e) => e.permissions)), [C, _]);
     return null == y
         ? null
-        : (0, i.jsx)(a.Zbd, {
+        : (0, i.jsx)(o.Zbd, {
               editable: !0,
               className: x.card,
               children: (0, i.jsxs)(p.Z, {
@@ -47,7 +47,7 @@ function j(e) {
                                   src: y.getAvatarURL(n.id, 32),
                                   className: x.iconWrapper,
                               }),
-                              (0, i.jsx)(a.Text, {
+                              (0, i.jsx)(o.Text, {
                                   color: "header-primary",
                                   variant: "text-sm/normal",
                                   children: h.intl.format(h.t.GyhzGx, { user: y.toString() }),
@@ -59,16 +59,16 @@ function j(e) {
                           ],
                       }),
                       (function (e, t, n, r) {
-                          let o = [],
+                          let a = [],
                               s = [];
-                          for (let e of m.VY) l.e$(r, e) ? o.push(e) : s.push(e);
+                          for (let e of m.VY) l.e$(r, e) ? a.push(e) : s.push(e);
                           return (0, i.jsxs)(i.Fragment, {
                               children: [
-                                  (0, i.jsx)(a.$i$, { className: x.divider }),
+                                  (0, i.jsx)(o.$i$, { className: x.divider }),
                                   n.length > 0
                                       ? (0, i.jsxs)(i.Fragment, {
                                             children: [
-                                                (0, i.jsx)(a.vwX, {
+                                                (0, i.jsx)(o.vwX, {
                                                     className: x.permissionHeader,
                                                     children: h.intl.format(h.t.PCs0oq, { numRoles: n.length }),
                                                 }),
@@ -83,9 +83,9 @@ function j(e) {
                                             ],
                                         })
                                       : null,
-                                  o.length > 0 || s.length > 0
+                                  a.length > 0 || s.length > 0
                                       ? (0, i.jsx)(d.Z, {
-                                            grantedPermissions: o,
+                                            grantedPermissions: a,
                                             grantedPermissionsHeader: h.intl.string(h.t["hA4+sr"]),
                                             disabledPermissions: s,
                                             disabledPermissionsHeader: h.intl.string(h.t["/rEZ2t"]),
@@ -93,7 +93,7 @@ function j(e) {
                                       : null,
                               ],
                           });
-                      })(y, n, null != (t = null == O ? void 0 : O.roles) ? t : [], w),
+                      })(y, n, null != (t = null == O ? void 0 : O.roles) ? t : [], Z),
                   ],
               }),
           });

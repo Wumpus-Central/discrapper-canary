@@ -1,5 +1,5 @@
 let i;
-n.d(t, { Z: () => eC }), n(539854);
+n.d(t, { Z: () => ej }), n(539854);
 var r = n(255367),
     o = n(73800),
     l = n(120356),
@@ -21,9 +21,9 @@ var r = n(255367),
     E = n(951483),
     S = n(714338),
     x = n(185666),
-    C = n(100527),
-    j = n(906732),
-    Z = n(600164);
+    j = n(100527),
+    Z = n(906732),
+    C = n(600164);
 n(70097);
 var I = n(266454),
     P = n(594190),
@@ -34,8 +34,8 @@ var I = n(266454),
     k = n(199902),
     R = n(314897),
     A = n(592125),
-    L = n(430824),
-    M = n(355863),
+    M = n(430824),
+    L = n(355863),
     z = n(131951),
     V = n(944486),
     W = n(618541),
@@ -217,7 +217,7 @@ class ex extends o.Component {
             voice_widget_connected: e,
             text_widget_connected: Y.default.isPinned(eg.Odu.TEXT),
             overlay_render_method: ei.gl[ei.gl.Hook],
-            unpinned_widget_types: M.Z.getAllUnpinnedPinnedWidgets(ee.OVERLAY_LAYOUT_ID),
+            unpinned_widget_types: L.Z.getAllUnpinnedPinnedWidgets(ee.OVERLAY_LAYOUT_ID),
         }),
             et.Z.trackExposure({ location: "Overlay" });
         let d = n && !i && null != l,
@@ -297,9 +297,9 @@ class ex extends o.Component {
             D.Z.terminate();
     }
     renderInvalidSizeMessage() {
-        return (0, r.jsx)(Z.Z, {
-            justify: Z.Z.Justify.CENTER,
-            align: Z.Z.Align.CENTER,
+        return (0, r.jsx)(C.Z, {
+            justify: C.Z.Justify.CENTER,
+            align: C.Z.Align.CENTER,
             className: ey.invalidContainer,
             children: (0, r.jsx)("div", {
                 className: ey.inactiveContainer,
@@ -400,7 +400,7 @@ class ex extends o.Component {
         S.Z.setLayout(t ? E.Xq : E.Sr), t && S.Z.enable();
     }
 }
-function eC() {
+function ej() {
     var e, t;
     let {
             locked: n,
@@ -421,18 +421,18 @@ function eC() {
         d = (0, f.e7)([G.ZP], () => G.ZP.getOverlayKeybind()),
         u = (0, f.e7)([V.Z], () => V.Z.getVoiceChannelId()),
         h = (0, f.e7)([A.Z], () => A.Z.getChannel(u)),
-        p = (0, f.e7)([L.Z], () => (null != h ? L.Z.getGuild(h.guild_id) : null)),
+        p = (0, f.e7)([M.Z], () => (null != h ? M.Z.getGuild(h.guild_id) : null)),
         g = (0, f.e7)([P.ZP, U.Z], () => (0, N.Z)(P.ZP, U.Z)),
         m = (0, f.e7)([z.Z], () => (0, w.Z)(z.Z)),
         y = (0, f.e7)([k.Z], () => null != k.Z.getCurrentUserActiveStream()),
-        { analyticsLocations: O } = (0, j.ZP)(C.Z.OVERLAY),
+        { analyticsLocations: O } = (0, Z.ZP)(j.Z.OVERLAY),
         { showKeybindIndicators: v, dismissKeybindNotification: _ } = (0, el.K)(),
         E = (null == a ? void 0 : a.fullscreenType) === b.Jx.FULLSCREEN,
         S = null != (e = null == a ? void 0 : a.oopEnabled) && e,
         x = en.v.oopEnabled,
-        Z = null != (t = null == a ? void 0 : a.hasChangedRenderMode) && t,
+        C = null != (t = null == a ? void 0 : a.hasChangedRenderMode) && t,
         { useContextualNudge: I, disableNudge: T } = (0, er.J0)("OverlaySetup");
-    return (0, r.jsx)(j.Gt, {
+    return (0, r.jsx)(Z.Gt, {
         value: O,
         children: (0, r.jsx)(ex, {
             locked: n,
@@ -451,7 +451,7 @@ function eC() {
             isStreaming: y,
             showKeybindNotification: v,
             dismissKeybindNotification: _,
-            isOOPOverlayAvailable: (!I || (x && S && E && !Z)) && !T,
+            isOOPOverlayAvailable: (!I || (x && S && E && !C)) && !T,
         }),
     });
 }

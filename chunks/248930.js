@@ -1,4 +1,4 @@
-n.d(t, { Z: () => O });
+n.d(t, { Z: () => x });
 var r = n(255367),
     l = n(73800),
     i = n(120356),
@@ -11,13 +11,13 @@ var r = n(255367),
     f = n(287954),
     p = n(660579),
     m = n(652853),
-    g = n(64621),
-    b = n(382405),
+    b = n(64621),
+    g = n(382405),
     j = n(386019),
     y = n(228168),
-    x = n(704543);
-function O(e) {
-    let { user: t, entry: n, profileGuildId: i, className: O, onClose: h, hideContextMenu: v = !1 } = e,
+    O = n(704543);
+function x(e) {
+    let { user: t, entry: n, profileGuildId: i, className: x, onClose: h, hideContextMenu: v = !1 } = e,
         _ = l.useRef(null),
         { analyticsLocations: I } = (0, c.ZP)(a.Z.USER_PROFILE_RECENT_ACTIVITY_CARD),
         { themeType: P } = (0, m.z)(),
@@ -31,7 +31,7 @@ function O(e) {
     return null != P && (0, s.Rh)(n)
         ? (0, r.jsx)(c.Gt, {
               value: I,
-              children: (0, r.jsx)(g.Z, {
+              children: (0, r.jsx)(b.Z, {
                   targetElementRef: _,
                   sourceType: y.n_.ACTIVITY,
                   user: t,
@@ -47,7 +47,7 @@ function O(e) {
                           (0, r.jsx)(p.Z, {
                               ref: _,
                               user: t,
-                              className: x.toolbarContainer,
+                              className: O.toolbarContainer,
                               interactionSourceId: n.id,
                               sourceType: y.n_.ACTIVITY,
                               onAction: Z,
@@ -62,11 +62,11 @@ function O(e) {
                                             onClose: h,
                                             children: e,
                                         }),
-                              children: (0, r.jsx)(b.Z, {
+                              children: (0, r.jsx)(g.Z, {
                                   entry: n,
                                   user: t,
                                   onClose: h,
-                                  className: o()(O, { [x.hoisted]: E === y.n_.ACTIVITY && T === n.id }),
+                                  className: o()(x, { [O.hoisted]: E === y.n_.ACTIVITY && T === n.id }),
                               }),
                           }),
                   }),

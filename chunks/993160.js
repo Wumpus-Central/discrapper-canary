@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => b });
 var r = n(255367);
 n(73800);
 var l = n(755721),
@@ -12,15 +12,15 @@ var l = n(755721),
     f = n(821706),
     p = n(562831),
     m = n(981631);
-function g(e) {
-    let { user: t, currentUser: n, guildId: g, channelId: b, displayProfile: j, relationshipType: y, onClose: x } = e,
-        { newestAnalyticsLocation: O } = (0, o.ZP)(),
+function b(e) {
+    let { user: t, currentUser: n, guildId: b, channelId: g, displayProfile: j, relationshipType: y, onClose: O } = e,
+        { newestAnalyticsLocation: x } = (0, o.ZP)(),
         h = (0, a.Z)({
             user: t,
-            guildId: g,
-            channelId: b,
+            guildId: b,
+            channelId: g,
             displayProfile: j,
-            onClose: x,
+            onClose: O,
         }),
         {
             gameFriends: v,
@@ -35,14 +35,14 @@ function g(e) {
                 children: [
                     (0, r.jsx)(c.Z, {
                         user: t,
-                        guildId: g,
-                        onClose: x,
+                        guildId: b,
+                        onClose: O,
                     }),
-                    (0, r.jsx)(u.Z, { onClose: x }),
+                    (0, r.jsx)(u.Z, { onClose: O }),
                     (0, r.jsx)(d.Z, {
                         type: "icon",
                         user: t,
-                        guildId: g,
+                        guildId: b,
                         viewProfileItem: h,
                         themeColor: "secondary",
                     }),
@@ -60,7 +60,7 @@ function g(e) {
                       (0, r.jsx)(d.Z, {
                           type: "icon",
                           user: t,
-                          guildId: g,
+                          guildId: b,
                           viewProfileItem: h,
                           themeColor: "secondary",
                       }),
@@ -79,7 +79,7 @@ function g(e) {
                         (0, r.jsx)(d.Z, {
                             type: "icon",
                             user: t,
-                            guildId: g,
+                            guildId: b,
                             themeColor: "secondary",
                         }),
                     ],
@@ -100,12 +100,12 @@ function g(e) {
                               relationshipType: y,
                               shouldShowTooltip: !0,
                               themeColor: "secondary",
-                              analyticsLocation: O,
+                              analyticsLocation: x,
                           }),
                           (0, r.jsx)(d.Z, {
                               type: "icon",
                               user: t,
-                              guildId: g,
+                              guildId: b,
                               viewProfileItem: h,
                               themeColor: "secondary",
                           }),
@@ -123,7 +123,7 @@ function g(e) {
                             (0, r.jsx)(f.k9, {
                                 type: "icon",
                                 user: t,
-                                analyticsLocation: O,
+                                analyticsLocation: x,
                                 themeColor: "secondary",
                                 gameFriends: v,
                                 tooltipPosition: "top",
@@ -135,7 +135,7 @@ function g(e) {
                             (0, r.jsx)(d.Z, {
                                 type: "icon",
                                 user: t,
-                                guildId: g,
+                                guildId: b,
                                 viewProfileItem: h,
                                 themeColor: "secondary",
                             }),
@@ -146,7 +146,7 @@ function g(e) {
                             (0, r.jsx)(f.Z7, {
                                 type: "text",
                                 userId: t.id,
-                                analyticsLocation: O,
+                                analyticsLocation: x,
                                 color: l.zx.Colors.BRAND,
                                 autoFocus: !0,
                             }),
@@ -159,7 +159,7 @@ function g(e) {
                             (0, r.jsx)(d.Z, {
                                 type: "icon",
                                 user: t,
-                                guildId: g,
+                                guildId: b,
                                 viewProfileItem: h,
                                 themeColor: "secondary",
                             }),

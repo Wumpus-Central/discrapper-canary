@@ -31,10 +31,10 @@ function v(e) {
         [h, _] = l.useState(null),
         [j, y] = l.useState(null),
         [x, T] = l.useState(null),
-        [D, P] = l.useState(!1),
-        R = l.useRef(null),
+        [D, R] = l.useState(!1),
+        P = l.useRef(null),
         N = (e) => {
-            (R.current = e), _(e);
+            (P.current = e), _(e);
         };
     l.useEffect(() => {
         null != h && (null == O ? T(null) : T(f(O, g, h)));
@@ -80,10 +80,10 @@ function v(e) {
                     o && null != b && b(p(e.clientX, e.currentTarget.getBoundingClientRect(), g));
                 },
                 onMouseEnter: (e) => {
-                    o && (null != k.current && N(k.current.getBoundingClientRect()), P(!0), A(e));
+                    o && (null != k.current && N(k.current.getBoundingClientRect()), R(!0), A(e));
                 },
                 onMouseLeave: (e) => {
-                    o && (P(!1), y(null));
+                    o && (R(!1), y(null));
                 },
                 onMouseMove: (e) => {
                     o && D && A(e);

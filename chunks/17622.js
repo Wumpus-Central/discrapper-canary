@@ -1,13 +1,13 @@
-n.d(t, { Z: () => d }), n(953529);
+n.d(t, { Z: () => u }), n(953529);
 var r = n(255367);
 n(73800);
 var o = n(120356),
-    a = n.n(o),
-    i = n(793030),
+    i = n.n(o),
+    a = n(793030),
     s = n(119331),
     c = n(336227),
     l = n(467541);
-function d(e) {
+function u(e) {
     let { powerup: t } = e,
         n = (0, c.Z)(t);
     return (0, r.jsx)("div", {
@@ -21,9 +21,9 @@ function d(e) {
                     children: [
                         (0, r.jsx)(t, {
                             color: "currentColor",
-                            className: a()(l.perkIcon, n),
+                            className: i()(l.perkIcon, n),
                         }),
-                        (0, r.jsx)(i.xv, {
+                        (0, r.jsx)(a.xv, {
                             className: l.perkText,
                             color: "text-default",
                             variant: "text-sm/medium",

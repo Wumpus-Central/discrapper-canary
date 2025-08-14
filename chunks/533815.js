@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f });
+n.d(t, { Z: () => d });
 var r = n(255367);
 n(73800);
 var l = n(120356),
@@ -8,81 +8,67 @@ var l = n(120356),
     c = n(388032),
     s = n(51708);
 function d(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                var r;
-                (r = n[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: r,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0,
-                          })
-                        : (e[t] = r);
-            });
-    }
-    return e;
-}
-function u(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : (function (e, t) {
-                  var n = Object.keys(e);
-                  if (Object.getOwnPropertySymbols) {
-                      var r = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, r);
-                  }
-                  return n;
-              })(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-function f(e) {
-    let { game: t, widgetType: l, userId: f, iconSize: p = "refresh_sm", className: m } = e,
-        g = (e) => {
-            if (e.shiftKey) return void (0, a.$b)(l, t.applicationId);
-            (0, o.ZDy)(async () => {
-                let { default: e } = await n.e("68774").then(n.bind(n, 701820));
-                return (n) =>
-                    (0, r.jsx)(
-                        e,
-                        u(d({}, n), {
-                            userId: f,
-                            widgetType: l,
-                            game: t,
-                        }),
-                    );
-            });
+    let { game: t, widgetType: n, iconSize: l = "refresh_sm", className: d } = e,
+        u = () => {
+            (0, a.$b)(n, t.applicationId);
         };
     return (0, r.jsx)(o.ua7, {
         text: c.intl.string(c.t.HUvyDQ),
-        children: (e) =>
-            (0, r.jsx)(
+        children: (e) => {
+            var t, n;
+            return (0, r.jsx)(
                 o.P3F,
-                u(d({}, e), {
-                    onClick: g,
-                    "aria-label": c.intl.string(c.t.HUvyDQ),
-                    role: "button",
-                    tabIndex: 0,
-                    className: i()(m, s.clickable),
-                    children: (0, r.jsx)(o.XHJ, {
-                        size: p,
-                        color: o.TVs.colors.STATUS_DANGER,
+                ((t = (function (e) {
+                    for (var t = 1; t < arguments.length; t++) {
+                        var n = null != arguments[t] ? arguments[t] : {},
+                            r = Object.keys(n);
+                        "function" == typeof Object.getOwnPropertySymbols &&
+                            (r = r.concat(
+                                Object.getOwnPropertySymbols(n).filter(function (e) {
+                                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                }),
+                            )),
+                            r.forEach(function (t) {
+                                var r;
+                                (r = n[t]),
+                                    t in e
+                                        ? Object.defineProperty(e, t, {
+                                              value: r,
+                                              enumerable: !0,
+                                              configurable: !0,
+                                              writable: !0,
+                                          })
+                                        : (e[t] = r);
+                            });
+                    }
+                    return e;
+                })({}, e)),
+                (n = n =
+                    {
+                        onClick: u,
+                        "aria-label": c.intl.string(c.t.HUvyDQ),
+                        role: "button",
+                        tabIndex: 0,
+                        className: i()(d, s.clickable),
+                        children: (0, r.jsx)(o.XHJ, {
+                            size: l,
+                            color: o.TVs.colors.STATUS_DANGER,
+                        }),
                     }),
-                }),
-            ),
+                Object.getOwnPropertyDescriptors
+                    ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
+                    : (function (e, t) {
+                          var n = Object.keys(e);
+                          if (Object.getOwnPropertySymbols) {
+                              var r = Object.getOwnPropertySymbols(e);
+                              n.push.apply(n, r);
+                          }
+                          return n;
+                      })(Object(n)).forEach(function (e) {
+                          Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
+                      }),
+                t),
+            );
+        },
     });
 }

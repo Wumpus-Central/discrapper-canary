@@ -1,4 +1,9 @@
-n.d(t, { Z: () => s }), n(539854), n(388685);
+n.d(t, {
+    F: () => s,
+    Z: () => d,
+}),
+    n(539854),
+    n(388685);
 var r = n(73800),
     l = n(442837),
     i = n(224706),
@@ -47,51 +52,60 @@ function c(e, t) {
     );
 }
 function s(e) {
-    let t = r.useMemo(
-        () =>
-            (function (e) {
-                let t = [];
+    return (
+        r.useEffect(() => {
+            if (e.length > 0) {
+                let t = e.filter((e) => o.Z.canFetch(e));
+                t.length > 0 && i.Z.getDetectableGamesSupplemental(t);
+            }
+        }, [e]),
+        {
+            gameDataMap: (0, l.cj)([o.Z], () => {
+                let t = {};
                 return (
                     e.forEach((e) => {
-                        e.games.forEach((e) => {
-                            t.push(e.applicationId);
-                        });
+                        t[e] = o.Z.getGame(e);
                     }),
-                    [...new Set(t)]
+                    t
                 );
-            })(e),
-        [e],
-    );
-    r.useEffect(() => {
-        if (t.length > 0) {
-            let e = t.filter((e) => o.Z.canFetch(e));
-            e.length > 0 && i.Z.getDetectableGamesSupplemental(e);
-        }
-    }, [t]);
-    let n = (0, l.cj)([o.Z], () => {
-        let e = {};
-        return (
-            t.forEach((t) => {
-                e[t] = o.Z.getGame(t);
             }),
-            e
-        );
-    });
+            isGameFetching: r.useCallback((e) => o.Z.isFetching(e), []),
+        }
+    );
+}
+function d(e) {
+    let { gameDataMap: t, isGameFetching: n } = s(
+        r.useMemo(
+            () =>
+                (function (e) {
+                    let t = [];
+                    return (
+                        e.forEach((e) => {
+                            e.games.forEach((e) => {
+                                t.push(e.applicationId);
+                            });
+                        }),
+                        [...new Set(t)]
+                    );
+                })(e),
+            [e],
+        ),
+    );
     return {
         widgets: r.useMemo(
             () =>
                 e.map((e) => {
-                    let t = e.games.map((e) => {
-                        let t = n[e.applicationId];
+                    let n = e.games.map((e) => {
+                        let n = t[e.applicationId];
                         return c(a({}, e), {
-                            gameName: null == t ? void 0 : t.name,
-                            imageSrc: null == t ? void 0 : t.coverImageUrl,
+                            gameName: null == n ? void 0 : n.name,
+                            imageSrc: null == n ? void 0 : n.coverImageUrl,
                         });
                     });
-                    return c(a({}, e), { games: t });
+                    return c(a({}, e), { games: n });
                 }),
-            [e, n],
+            [e, t],
         ),
-        isGameFetching: r.useCallback((e) => o.Z.isFetching(e), []),
+        isGameFetching: n,
     };
 }

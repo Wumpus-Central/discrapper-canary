@@ -2,8 +2,8 @@ n.d(t, { Z: () => h }), n(415506), n(953529);
 var i = n(255367),
     r = n(73800),
     l = n(120356),
-    o = n.n(l),
-    a = n(149765),
+    a = n.n(l),
+    o = n(149765),
     s = n(481060),
     c = n(208884),
     d = n(453628),
@@ -16,10 +16,10 @@ class f extends r.PureComponent {
     getOverwriteValue(e) {
         let { allow: t, deny: n } = this.props;
         if (null == t || null == n) throw Error("PermissionsForm.getOverwriteValue: Invalid allow or deny props");
-        return a.e$(t, e) ? d.y.ALLOW : a.e$(n, e) ? d.y.DENY : d.y.PASSTHROUGH;
+        return o.e$(t, e) ? d.y.ALLOW : o.e$(n, e) ? d.y.DENY : d.y.PASSTHROUGH;
     }
     getPermissionValue(e, t) {
-        return a.e$(t, e);
+        return o.e$(t, e);
     }
     handleChange(e, t) {
         let { onChange: n } = this.props;
@@ -95,20 +95,20 @@ class f extends r.PureComponent {
     }
     renderComponent(e) {
         var t;
-        let { title: n, description: r, helpdeskArticleId: l, flag: a } = e,
+        let { title: n, description: r, helpdeskArticleId: l, flag: o } = e,
             { permissions: d, locked: p, permissionRender: m } = this.props,
             g = null != (t = this.props.inPinPermissionExperiment) && t,
-            f = null == m ? void 0 : m(a),
+            f = null == m ? void 0 : m(o),
             h = !!(p || f),
             x = "string" == typeof f ? this.renderDisabledIndicator(f) : null,
-            j = o()({ [b.title]: null != x });
+            j = a()({ [b.title]: null != x });
         return null == d
             ? (0, i.jsxs)(
                   u.Z,
                   {
                       disabled: h,
-                      value: this.getOverwriteValue(a),
-                      onChange: (e) => this.handleChange(a, e),
+                      value: this.getOverwriteValue(o),
+                      onChange: (e) => this.handleChange(o, e),
                       note: (0, c._u)(r),
                       helpdeskArticleId: l,
                       children: [
@@ -117,17 +117,17 @@ class f extends r.PureComponent {
                               className: j,
                               children: n,
                           }),
-                          this.renderTitleAccessory(a, g),
+                          this.renderTitleAccessory(o, g),
                       ],
                   },
-                  String(a),
+                  String(o),
               )
             : (0, i.jsxs)(
                   s.j7V,
                   {
                       disabled: h,
-                      value: this.getPermissionValue(a, d),
-                      onChange: (e) => this.handleChange(a, e),
+                      value: this.getPermissionValue(o, d),
+                      onChange: (e) => this.handleChange(o, e),
                       note: (0, c._u)(r),
                       children: [
                           x,
@@ -135,10 +135,10 @@ class f extends r.PureComponent {
                               className: j,
                               children: n,
                           }),
-                          this.renderTitleAccessory(a, g),
+                          this.renderTitleAccessory(o, g),
                       ],
                   },
-                  String(a),
+                  String(o),
               );
     }
     render() {

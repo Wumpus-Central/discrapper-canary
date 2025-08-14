@@ -69,7 +69,7 @@ let E = i.memo(function (e) {
             onMouseEnter: d,
             textVariant: p = "text-xs/semibold",
             textColor: m = "text-default",
-            badgeSize: g = _.Gg.SIZE_12,
+            badgeSize: g = _.Gg.SIZE_14,
             inline: b = !0,
         } = e;
         return (0, r.jsx)(l.P3F, {

@@ -1,5 +1,5 @@
 n.d(t, {
-    C: () => O,
+    C: () => x,
     Z: () => y,
 });
 var r = n(255367);
@@ -15,8 +15,8 @@ var l = n(296009),
     f = n(173951),
     p = n(455731),
     m = n(430790),
-    g = n(795990),
-    b = n(830202);
+    b = n(795990),
+    g = n(830202);
 function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -78,13 +78,13 @@ function y(e) {
             return null;
     }
 }
-function x(e) {
+function O(e) {
     let { user: t, guildId: n, channelId: l } = e,
         o = (0, s.Z)(t.id),
         { widgets: d, isGameFetching: u } = (0, c.Z)(o),
         f = (0, i.e7)([a.default], () => a.default.getId() === t.id);
     return 0 === d.length && f
-        ? (0, r.jsx)(g.Z, {})
+        ? (0, r.jsx)(b.Z, {})
         : (0, r.jsxs)(r.Fragment, {
               children: [
                   d.map((e) =>
@@ -104,10 +104,10 @@ function x(e) {
               ],
           });
 }
-function O(e) {
+function x(e) {
     return (0, r.jsx)(o.Ttm, {
-        className: b.scroller,
+        className: g.scroller,
         fade: !0,
-        children: (0, r.jsx)(x, j({}, e)),
+        children: (0, r.jsx)(O, j({}, e)),
     });
 }

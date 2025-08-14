@@ -12,20 +12,20 @@ function u(e) {
         n = null == t ? void 0 : t.filter((e) => null != (0, c.z)(e)),
         i = (0, l.useRef)(new Map()),
         o = (0, l.useRef)(null),
-        [u, b] = (0, l.useState)(0),
+        [u, g] = (0, l.useState)(0),
         [j, y] = (0, l.useState)(!1),
-        { trackUserProfileAction: x } = (0, a.KZ)(),
-        O = g(o, n, i, b);
+        { trackUserProfileAction: O } = (0, a.KZ)(),
+        x = b(o, n, i, g);
     if (
         ((0, l.useEffect)(
             () => (
-                O(),
-                window.addEventListener("resize", O),
+                x(),
+                window.addEventListener("resize", x),
                 () => {
-                    window.removeEventListener("resize", O);
+                    window.removeEventListener("resize", x);
                 }
             ),
-            [O, null == n ? void 0 : n.join("")],
+            [x, null == n ? void 0 : n.join("")],
         ),
         null == n || 0 === n.length)
     )
@@ -54,13 +54,13 @@ function u(e) {
                 (j
                     ? (0, r.jsx)(m, {
                           onClick: () => {
-                              y(!1), x({ action: "COLLAPSE_GAME_TAGS" });
+                              y(!1), O({ action: "COLLAPSE_GAME_TAGS" });
                           },
                       })
                     : (0, r.jsx)(p, {
                           numHidden: u,
                           onClick: () => {
-                              y(!0), x({ action: "EXPAND_GAME_TAGS" });
+                              y(!0), O({ action: "EXPAND_GAME_TAGS" });
                           },
                           ref: o,
                       })),
@@ -121,7 +121,7 @@ let f = (e) => {
             }),
         });
     },
-    g = (e, t, n, r) =>
+    b = (e, t, n, r) =>
         (0, l.useCallback)(() => {
             var l, i;
             if (null == t) return void r(0);

@@ -144,10 +144,14 @@ function N(e, t) {
     let n = y(),
         r = n.find((t) => t.type === e);
     if (null == r) return;
-    let i = (null != r.games ? r.games : []).filter((e) => e.applicationId !== t);
-    if (0 === i.length) return void S(e);
-    let o = I(n, v(e, i));
-    l.Z.setPendingWidgets(o);
+    let i = I(
+        n,
+        v(
+            e,
+            (null != r.games ? r.games : []).filter((e) => e.applicationId !== t),
+        ),
+    );
+    l.Z.setPendingWidgets(i);
 }
 function C(e) {
     let t = (e) => ({

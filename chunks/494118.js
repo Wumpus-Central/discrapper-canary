@@ -3,8 +3,8 @@ var i = n(255367);
 n(73800);
 var r = n(780384),
     l = n(481060),
-    o = n(410030),
-    a = n(600164),
+    a = n(410030),
+    o = n(600164),
     s = n(63063),
     c = n(725875),
     d = n(981631),
@@ -14,7 +14,7 @@ var r = n(780384),
     b = n(408942);
 function g(e) {
     let { followedChannelWebhooks: t, editedWebhook: n, selectableWebhookChannels: g, errors: f, canNavigate: h } = e,
-        x = (0, o.ZP)();
+        x = (0, a.ZP)();
     return (0, i.jsxs)(l.hjN, {
         children: [
             (0, i.jsx)(l.R94, {
@@ -32,9 +32,9 @@ function g(e) {
                   })
                 : (function (e, t) {
                       let n = (0, r.wj)(e) ? m : b;
-                      return (0, i.jsxs)(a.Z, {
-                          direction: a.Z.Direction.VERTICAL,
-                          align: a.Z.Align.CENTER,
+                      return (0, i.jsxs)(o.Z, {
+                          direction: o.Z.Direction.VERTICAL,
+                          align: o.Z.Align.CENTER,
                           children: [
                               (0, i.jsx)("img", {
                                   alt: "",

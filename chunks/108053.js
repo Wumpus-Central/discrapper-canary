@@ -2,8 +2,8 @@ n.d(t, { Z: () => j }), n(388685);
 var i = n(255367),
     r = n(73800),
     l = n(780384),
-    o = n(481060),
-    a = n(668781),
+    a = n(481060),
+    o = n(668781),
     s = n(308063),
     c = n(493773),
     d = n(410030),
@@ -27,9 +27,9 @@ function j(e) {
             errors: C,
             canNavigate: N,
         } = e,
-        w = (0, d.ZP)(),
-        [Z, S] = r.useState(null),
-        [P, I] = r.useState(null);
+        Z = (0, d.ZP)(),
+        [S, w] = r.useState(null),
+        [I, P] = r.useState(null);
     if (null != j) t = j;
     else {
         let e = Object.values(O);
@@ -41,46 +41,46 @@ function j(e) {
                 let { body: t, status: n } = e;
                 return (
                     t && t.code === b.evJ.TOO_MANY_WEBHOOKS
-                        ? a.Z.show({
+                        ? o.Z.show({
                               title: g.intl.string(g.t.cCqscX),
                               body: g.intl.string(g.t["w+QZoa"]),
                           })
                         : 429 === n
-                          ? a.Z.show({
+                          ? o.Z.show({
                                 title: g.intl.string(g.t.cCqscX),
                                 body: g.intl.string(g.t["YBM+UV"]),
                             })
-                          : a.Z.show({
+                          : o.Z.show({
                                 title: g.intl.string(g.t.cCqscX),
                                 body: g.intl.string(g.t["/4TwKS"]),
                             }),
                     null
                 );
             });
-            null != e && (I(e.id), S(e));
+            null != e && (P(e.id), w(e));
         }
     }, [N, t, n]);
     (0, c.ZP)(() => {
         0 === v.length && T();
     });
     let E = null !== t;
-    return (0, i.jsxs)(o.hjN, {
+    return (0, i.jsxs)(a.hjN, {
         children: [
-            (0, i.jsx)(o.R94, {
-                type: o.geA.DESCRIPTION,
+            (0, i.jsx)(a.R94, {
+                type: a.geA.DESCRIPTION,
                 children: g.intl.format(g.t.WL0d0d, {
                     helpdeskArticle: p.Z.getArticleURL(b.BhN.WEBHOOKS),
                     developersArticle: b.EYA.API_DOCS_WEBHOOKS,
                 }),
             }),
-            (0, i.jsx)(o.$i$, { className: f.headerDivider }),
+            (0, i.jsx)(a.$i$, { className: f.headerDivider }),
             v.length > 0
                 ? (0, i.jsxs)(i.Fragment, {
                       children: [
                           (0, i.jsx)("div", {
                               "data-button-hoisted-classname-wrapper": !0,
                               className: f.createButton,
-                              children: (0, i.jsx)(o.zxk, {
+                              children: (0, i.jsx)(a.zxk, {
                                   variant: "primary",
                                   size: "sm",
                                   text: g.intl.string(g.t["nrO/HB"]),
@@ -92,7 +92,7 @@ function j(e) {
                               webhooks: v,
                               editedWebhook: y,
                               selectableWebhookChannels: O,
-                              lastCreatedWebhookId: null == Z ? void 0 : Z.id,
+                              lastCreatedWebhookId: null == S ? void 0 : S.id,
                               errors: C,
                               canNavigate: N,
                           }),
@@ -109,14 +109,14 @@ function j(e) {
                                   src: r,
                                   className: f.emptyStateImage,
                               }),
-                              (0, i.jsx)(o.X6q, {
+                              (0, i.jsx)(a.X6q, {
                                   variant: "heading-md/semibold",
                                   children: g.intl.string(g.t.LzmsWl),
                               }),
                               (0, i.jsx)("div", {
                                   "data-button-hoisted-classname-wrapper": !0,
                                   className: f.emptyStateButton,
-                                  children: (0, i.jsx)(o.zxk, {
+                                  children: (0, i.jsx)(a.zxk, {
                                       variant: "primary",
                                       text: g.intl.string(g.t.lOQqJC),
                                       disabled: !t,
@@ -125,7 +125,7 @@ function j(e) {
                               }),
                           ],
                       });
-                  })(w, E, T),
+                  })(Z, E, T),
         ],
     });
 }

@@ -21,9 +21,9 @@ var i,
     E = n(925329),
     S = n(569545),
     x = n(914923),
-    C = n(662304),
-    j = n(989941),
-    Z = n(552282),
+    j = n(662304),
+    Z = n(989941),
+    C = n(552282),
     I = n(345243),
     P = n(565799),
     w = n(501655),
@@ -33,8 +33,8 @@ var i,
     k = n(199902),
     R = n(314897),
     A = n(592125),
-    L = n(77498),
-    M = n(131951),
+    M = n(77498),
+    L = n(131951),
     z = n(944486),
     V = n(606304),
     W = n(449224),
@@ -117,21 +117,21 @@ function eo(e) {
         O = (0, Q.Z)({ location: "overlay_voice_widget" }),
         v = (0, a.e7)([B.default], () => B.default.showKeybindIndicators),
         _ = (0, a.e7)([R.default], () => R.default.getId()),
-        b = (0, a.e7)([M.Z], () => M.Z.isLocalMute(i.id)),
+        b = (0, a.e7)([L.Z], () => L.Z.isLocalMute(i.id)),
         E = (0, a.e7)([k.Z], () => k.Z.getCurrentUserActiveStream()),
         S = (0, a.Wu)([k.Z], () => (null != E ? k.Z.getViewerIds(E) : [])),
         x = (0, y.Z)({
             userId: i.id,
             context: f,
         }),
-        C = (0, a.e7)([V.Z], () => V.Z.isPrioritySpeaker(i.id, f)),
-        j = (0, a.e7)([k.Z], () => null != k.Z.getStreamForUser(i.id, g)),
-        Z = o.useMemo(() => null != E && E.ownerId !== i.id && S.includes(i.id), [E, i.id, S]);
+        j = (0, a.e7)([V.Z], () => V.Z.isPrioritySpeaker(i.id, f)),
+        Z = (0, a.e7)([k.Z], () => null != k.Z.getStreamForUser(i.id, g)),
+        C = o.useMemo(() => null != E && E.ownerId !== i.id && S.includes(i.id), [E, i.id, S]);
     if (d === q.OYC.ONLY_WHILE_SPEAKING && n && !x) return null;
     let I = i.id === _,
         { mute: P, selfMute: w, suppress: N, deaf: T, selfDeaf: A } = m,
-        L = O && v,
-        z = w && (!I || !L);
+        M = O && v,
+        z = w && (!I || !M);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(D.ZP, {
@@ -146,12 +146,12 @@ function eo(e) {
                 nick: l,
                 speaking: !1,
                 flipped: t,
-                isStreaming: j,
+                isStreaming: Z,
                 iconClassName: s()(et.voiceIcon, { [et.locked]: n }),
-                isWatching: Z,
+                isWatching: C,
                 isOverlay: !0,
                 size: u,
-                priority: C,
+                priority: j,
                 mute: P || z || b,
                 localMute: b,
                 serverMute: P || N,
@@ -163,7 +163,7 @@ function eo(e) {
                 }),
             }),
             I &&
-                L &&
+                M &&
                 (0, r.jsx)(K.Z, {
                     value: w,
                     action: q.kg4.TOGGLE_MUTE,
@@ -305,7 +305,7 @@ class el extends (i = o.PureComponent) {
                                       className: et.gameIcon,
                                       game: l,
                                   })
-                                : (0, r.jsx)(C.Z, { title: p }),
+                                : (0, r.jsx)(j.Z, { title: p }),
                             (0, r.jsxs)(_.Z, {
                                 direction: _.Z.Direction.VERTICAL,
                                 justify: _.Z.Justify.BETWEEN,
@@ -477,20 +477,20 @@ function es(e) {
             );
         })(),
         s = (0, a.e7)([k.Z], () => k.Z.getStreamerActiveStreamMetadata()),
-        c = (0, a.e7)([b.ZP, W.Z, L.Z], () => {
+        c = (0, a.e7)([b.ZP, W.Z, M.Z], () => {
             var e;
-            let t = (0, j.Z)(b.ZP, W.Z);
-            return null != t ? (null == (e = L.Z.getGameByGameData(t)) ? void 0 : e.id) : null;
+            let t = (0, Z.Z)(b.ZP, W.Z);
+            return null != t ? (null == (e = M.Z.getGameByGameData(t)) ? void 0 : e.id) : null;
         }),
         d = (0, O.q)(c),
         u = (0, a.cj)([b.ZP, W.Z, k.Z, B.default], () => {
-            let e = (0, j.Z)(b.ZP, W.Z),
+            let e = (0, Z.Z)(b.ZP, W.Z),
                 t = k.Z.getCurrentUserActiveStream();
             return {
                 displayUserMode: B.default.getDisplayUserMode(),
                 displayNameMode: B.default.getDisplayNameMode(),
                 avatarSizeMode: B.default.getAvatarSizeMode(),
-                streamApplication: (null == s ? void 0 : s.pid) === (0, H.getPID)() ? (0, Z.Z)(e) : null,
+                streamApplication: (null == s ? void 0 : s.pid) === (0, H.getPID)() ? (0, C.Z)(e) : null,
                 stream: t,
             };
         });

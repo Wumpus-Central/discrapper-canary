@@ -1,4 +1,4 @@
-n.d(t, { Z: () => o }), n(35282);
+n.d(t, { Z: () => o });
 var r = n(255367),
     i = n(73800),
     l = n(208450),
@@ -34,10 +34,10 @@ let o = i.memo(function (e) {
         })(
             {
                 searchContext: t,
-                className: a.search,
-                searchBarContainerClassName: a.searchBarContainer,
-                searchBarClassName: a.searchBar,
-                searchPopoutClassName: a.searchPopout,
+                className: a.appTitleSearch,
+                searchBarContainerClassName: a.appTitleSearchBarContainer,
+                searchBarClassName: a.appTitleSearchBar,
+                searchPopoutClassName: a.appTitleSearchPopout,
             },
             n,
         ),

@@ -2,8 +2,8 @@ n.d(t, { Z: () => c });
 var i = n(255367),
     r = n(73800),
     l = n(120356),
-    o = n.n(l),
-    a = n(481060),
+    a = n.n(l),
+    o = n(481060),
     s = n(343357);
 function c(e) {
     let { children: t, icon: n, title: l } = e;
@@ -14,11 +14,11 @@ function c(e) {
                 className: s.name,
                 children: [
                     r.cloneElement(n, {
-                        className: o()(n.props.className, s.icon),
+                        className: a()(n.props.className, s.icon),
                         height: 24,
                         width: 24,
                     }),
-                    (0, i.jsx)(a.X6q, {
+                    (0, i.jsx)(o.X6q, {
                         variant: "heading-md/semibold",
                         className: s.title,
                         children: l,

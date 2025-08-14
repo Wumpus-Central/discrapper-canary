@@ -12,12 +12,12 @@ var l = n(481060),
     f = n(899007),
     p = n(648052),
     m = n(867176),
-    g = n(681837),
-    b = n(502762),
+    b = n(681837),
+    g = n(502762),
     j = n(530),
     y = n(871604),
-    x = n(952124),
-    O = n(53558),
+    O = n(952124),
+    x = n(53558),
     h = n(544989),
     v = n(30556),
     _ = n(4517),
@@ -38,8 +38,8 @@ function S(e) {
             sessionId: D,
             initialSection: L,
             initialSubsection: R,
-            transitionState: G,
-            openedAt: k,
+            transitionState: k,
+            openedAt: G,
             onClose: B,
             sourceAnalyticsLocations: M = [],
         } = e,
@@ -48,7 +48,7 @@ function S(e) {
         V = s.ZP.getName(U, w, t),
         Y = (0, c.Dt)(),
         { analyticsLocations: W } = (0, a.ZP)([...M, o.Z.USER_PROFILE_MODAL]),
-        H = (0, d.ZB)({
+        z = (0, d.ZB)({
             layout: "MODAL",
             userId: t.id,
             sourceSessionId: D,
@@ -57,18 +57,18 @@ function S(e) {
             messageId: A,
             roleId: C,
         }),
-        z = (0, P.Z)(t);
+        H = (0, P.Z)(t);
     return (0, r.jsx)(a.Gt, {
         value: W,
         children: (0, r.jsx)(d.Mt, {
-            value: H,
-            openedAt: k,
+            value: z,
+            openedAt: G,
             fetchStartedAt: null == F ? void 0 : F.fetchStartedAt,
             fetchEndedAt: null == F ? void 0 : F.fetchEndedAt,
             isLoaded: null == F ? void 0 : F.isLoaded,
             children: (0, r.jsx)(l.Y0X, {
                 "data-migration-pending": !0,
-                transitionState: G,
+                transitionState: k,
                 className: N.root,
                 hideShadow: !0,
                 "aria-labelledby": Y,
@@ -80,13 +80,13 @@ function S(e) {
                             children: Z.intl.format(Z.t.KRe1Fh, { name: V }),
                         }),
                     }),
-                    children: (0, r.jsxs)(b.Z, {
+                    children: (0, r.jsxs)(g.Z, {
                         user: t,
                         displayProfile: F,
                         themeType: E.lY.MODAL,
                         children: [
                             (0, r.jsx)(h.Z, {
-                                children: (0, r.jsx)(x.Z, {
+                                children: (0, r.jsx)(O.Z, {
                                     user: t,
                                     guildId: U,
                                     onCloseProfile: B,
@@ -113,7 +113,7 @@ function S(e) {
                                                 location: "BotUserProfileModal",
                                                 user: t,
                                                 themeType: E.lY.MODAL,
-                                                hasEntered: G === l.Dvm.ENTERED,
+                                                hasEntered: k === l.Dvm.ENTERED,
                                                 onCloseProfile: B,
                                                 disableToolbar: !0,
                                             }),
@@ -132,7 +132,7 @@ function S(e) {
                                                         onClose: i.Z.popAll,
                                                         tooltipContainerClassName: N.messageIconButton,
                                                     }),
-                                                    (0, r.jsx)(O.Z, {
+                                                    (0, r.jsx)(x.Z, {
                                                         user: t,
                                                         guildId: U,
                                                     }),
@@ -152,7 +152,7 @@ function S(e) {
                                         nickname: V,
                                         pronouns: null == F ? void 0 : F.pronouns,
                                         nicknameVariant: "heading-xl/bold",
-                                        nicknameIcons: (0, r.jsx)(g.Z, {
+                                        nicknameIcons: (0, r.jsx)(b.Z, {
                                             size: "sm",
                                             userId: t.id,
                                         }),
@@ -167,7 +167,7 @@ function S(e) {
                                         currentUser: n,
                                         displayProfile: F,
                                         guildId: U,
-                                        items: z,
+                                        items: H,
                                         initialSection: null != L ? L : E.oh.BOT_INFO,
                                         initialSubsection: R,
                                         onClose: B,

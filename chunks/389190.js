@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => b });
 var r = n(255367),
     l = n(73800),
     i = n(481060),
@@ -11,11 +11,11 @@ var r = n(255367),
     f = n(252417),
     p = n(388032),
     m = n(878449);
-function g(e) {
-    let { user: t, guildId: n, channelId: g, onClose: b } = e,
+function b(e) {
+    let { user: t, guildId: n, channelId: b, onClose: g } = e,
         { mutualFriends: j } = (0, s.Z)(t),
         { analyticsLocations: y } = (0, a.ZP)(),
-        { context: x, trackUserProfileAction: O } = (0, c.KZ)(),
+        { context: O, trackUserProfileAction: x } = (0, c.KZ)(),
         h = (0, o.Z)();
     return (
         l.useEffect(() => {
@@ -49,11 +49,11 @@ function g(e) {
                                     user: l,
                                     status: i,
                                     guildId: n,
-                                    channelId: g,
+                                    channelId: b,
                                     onSelect: () => {
                                         var e, t, n;
-                                        null == b || b(),
-                                            O({ action: "PRESS_MUTUAL_FRIEND" }),
+                                        null == g || g(),
+                                            x({ action: "PRESS_MUTUAL_FRIEND" }),
                                             (e = l.id),
                                             (0, u.openUserProfileModal)(
                                                 ((t = (function (e) {
@@ -81,7 +81,7 @@ function g(e) {
                                                             });
                                                     }
                                                     return e;
-                                                })({}, x)),
+                                                })({}, O)),
                                                 (n = n =
                                                     {
                                                         userId: e,

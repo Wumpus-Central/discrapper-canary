@@ -1,16 +1,16 @@
 n.d(t, {
     L_: () => s,
     nj: () => c,
-    sE: () => a,
+    sE: () => o,
 });
 var i = n(544891),
     r = n(570140),
     l = n(480608),
-    o = n(981631);
-function a(e, t) {
+    a = n(981631);
+function o(e, t) {
     i.tn
         .get({
-            url: o.ANM.GUILD_ROLE_CONNECTIONS_CONFIGURATION(e, t),
+            url: a.ANM.GUILD_ROLE_CONNECTIONS_CONFIGURATION(e, t),
             rejectWithError: !0,
         })
         .then((e) => {
@@ -34,7 +34,7 @@ function a(e, t) {
         .catch(() => {});
 }
 async function s(e, t, n) {
-    let a = n.map((e) =>
+    let o = n.map((e) =>
             e.map((e) => ({
                 connection_type: e.connectionType,
                 connection_metadata_field: e.connectionMetadataField,
@@ -45,8 +45,8 @@ async function s(e, t, n) {
         ),
         s = await i.tn
             .put({
-                url: o.ANM.GUILD_ROLE_CONNECTIONS_CONFIGURATION(e, t),
-                body: 0 === a.length ? [] : a,
+                url: a.ANM.GUILD_ROLE_CONNECTIONS_CONFIGURATION(e, t),
+                body: 0 === o.length ? [] : o,
                 oldFormErrors: !0,
                 rejectWithError: !1,
             })
@@ -83,7 +83,7 @@ async function s(e, t, n) {
 async function c() {
     return (
         await i.tn.get({
-            url: o.ANM.APPLICATION_USER_ROLE_CONNECTIONS,
+            url: a.ANM.APPLICATION_USER_ROLE_CONNECTIONS,
             rejectWithError: !1,
         })
     ).body;

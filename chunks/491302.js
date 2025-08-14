@@ -2,8 +2,8 @@ n.d(t, { Z: () => h }), n(35282), n(539854);
 var i = n(255367),
     r = n(73800),
     l = n(755721),
-    o = n(481060),
-    a = n(668781),
+    a = n(481060),
+    o = n(668781),
     s = n(139387),
     c = n(308063),
     d = n(600164),
@@ -26,10 +26,10 @@ function h(e) {
                   });
         }, [t]),
         O = r.useCallback(() => {
-            (0, o.h7j)((e) => {
+            (0, a.h7j)((e) => {
                 var n, r;
                 return (0, i.jsx)(
-                    o.ConfirmModal,
+                    a.ConfirmModal,
                     ((n = (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
@@ -62,13 +62,13 @@ function h(e) {
                             cancelText: g.intl.string(g.t["ETE/oK"]),
                             onConfirm: () => {
                                 c.Z.delete(t.guild_id, t.id).catch(() => {
-                                    a.Z.show({
+                                    o.Z.show({
                                         title: g.intl.string(g.t.LpbaFR),
                                         body: g.intl.string(g.t["/4TwKS"]),
                                     });
                                 });
                             },
-                            children: (0, i.jsx)(o.Text, {
+                            children: (0, i.jsx)(a.Text, {
                                 variant: "text-md/normal",
                                 children: g.intl.string(g.t.zO9jrK),
                             }),
@@ -93,7 +93,7 @@ function h(e) {
     null != t.source_channel &&
         null != t.source_guild &&
         (_.push({
-            icon: o.MqZ,
+            icon: a.MqZ,
             text: t.source_channel.name,
         }),
         _.push({
@@ -123,7 +123,7 @@ function h(e) {
             (C = (0, i.jsxs)("div", {
                 className: f.body,
                 children: [
-                    (0, i.jsx)(o.$i$, { className: f.topDivider }),
+                    (0, i.jsx)(a.$i$, { className: f.topDivider }),
                     (0, i.jsx)(d.Z, {
                         children: (0, i.jsxs)(d.Z, {
                             direction: d.Z.Direction.VERTICAL,
@@ -132,9 +132,9 @@ function h(e) {
                                     children: [
                                         (0, i.jsx)(d.Z.Child, {
                                             basis: "50%",
-                                            children: (0, i.jsx)(o.xJW, {
+                                            children: (0, i.jsx)(a.xJW, {
                                                 title: g.intl.string(g.t.I1o5gY),
-                                                children: (0, i.jsx)(o.oil, {
+                                                children: (0, i.jsx)(a.oil, {
                                                     value: n.name,
                                                     onChange: (e) => {
                                                         s.Z.updateWebhook({ name: e });
@@ -146,9 +146,9 @@ function h(e) {
                                         }),
                                         (0, i.jsx)(d.Z.Child, {
                                             basis: "50%",
-                                            children: (0, i.jsx)(o.xJW, {
+                                            children: (0, i.jsx)(a.xJW, {
                                                 title: g.intl.string(g.t["4TuWfX"]),
-                                                children: (0, i.jsx)(o.q4e, {
+                                                children: (0, i.jsx)(a.q4e, {
                                                     value: n.channel_id,
                                                     options: h,
                                                     onChange: (e) => {
@@ -159,7 +159,7 @@ function h(e) {
                                         }),
                                     ],
                                 }),
-                                (0, i.jsx)(o.$i$, { className: f.bottomDivider }),
+                                (0, i.jsx)(a.$i$, { className: f.bottomDivider }),
                                 (0, i.jsx)(d.Z, {
                                     children: (0, i.jsx)(l.zx, {
                                         onClick: O,
@@ -175,13 +175,13 @@ function h(e) {
                     }),
                 ],
             })),
-        (0, i.jsx)(o.Zbd, {
+        (0, i.jsx)(a.Zbd, {
             editable: !0,
             className: f.card,
             children: (0, i.jsxs)(d.Z, {
                 direction: d.Z.Direction.VERTICAL,
                 children: [
-                    (0, i.jsx)(o.P3F, {
+                    (0, i.jsx)(a.P3F, {
                         className: f.header,
                         "aria-expanded": x,
                         onClick: v,

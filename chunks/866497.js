@@ -7,8 +7,6 @@ e.exports = {
     clickable: "clickable__350af",
     dismissButton: "dismissButton__350af",
     dismissIcon: "dismissIcon__350af",
-    buttonContainer: "buttonContainer__350af",
-    button: "button__350af",
     avatar: "avatar__350af",
     title: "title__350af",
     body: "body__350af",
@@ -17,5 +15,4 @@ e.exports = {
     keybind: "keybind__350af",
     hintSubtleText: "hintSubtleText__350af",
     themePrimary: "themePrimary__350af",
-    innerText: "innerText__350af",
 };

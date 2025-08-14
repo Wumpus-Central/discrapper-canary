@@ -1,69 +1,47 @@
-n.d(t, { Z: () => d });
-var r = n(255367);
-n(73800);
-var l = n(120356),
-    i = n.n(l),
-    o = n(793030),
-    a = n(313201),
-    c = n(840367),
-    s = n(415734);
-function d(e) {
-    var { children: t, className: n } = e,
-        l = (function (e, t) {
-            if (null == e) return {};
-            var n,
-                r,
-                l = (function (e, t) {
-                    if (null == e) return {};
-                    var n,
-                        r,
-                        l = {},
-                        i = Object.keys(e);
-                    for (r = 0; r < i.length; r++) (n = i[r]), t.indexOf(n) >= 0 || (l[n] = e[n]);
-                    return l;
-                })(e, t);
-            if (Object.getOwnPropertySymbols) {
-                var i = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < i.length; r++)
-                    (n = i[r]),
-                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]);
-            }
-            return l;
-        })(e, ["children", "className"]);
-    let d = (0, a.Dt)();
+n.d(t, { Z: () => b }), n(388685);
+var r = n(255367),
+    l = n(73800),
+    i = n(120356),
+    o = n.n(i),
+    a = n(793030),
+    c = n(442837),
+    s = n(313201),
+    d = n(314897),
+    u = n(86419),
+    f = n(840367),
+    p = n(272289),
+    m = n(415734);
+function b(e) {
+    let { userId: t, widget: n, children: i, disableInteraction: b, className: g } = e,
+        [j, y] = l.useState(!1),
+        O = (0, s.Dt)(),
+        x = (0, c.e7)([d.default], () => d.default.getId() === t),
+        h = (0, u.kQ)(n);
     return (0, r.jsxs)("section", {
-        className: i()(s.container, n),
-        "aria-labelledby": d,
+        className: o()(m.container, g),
+        "aria-labelledby": O,
         children: [
-            (0, r.jsx)(
-                c.Z,
-                (function (e) {
-                    for (var t = 1; t < arguments.length; t++) {
-                        var n = null != arguments[t] ? arguments[t] : {},
-                            r = Object.keys(n);
-                        "function" == typeof Object.getOwnPropertySymbols &&
-                            (r = r.concat(
-                                Object.getOwnPropertySymbols(n).filter(function (e) {
-                                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                }),
-                            )),
-                            r.forEach(function (t) {
-                                var r;
-                                (r = n[t]),
-                                    t in e
-                                        ? Object.defineProperty(e, t, {
-                                              value: r,
-                                              enumerable: !0,
-                                              configurable: !0,
-                                              writable: !0,
-                                          })
-                                        : (e[t] = r);
-                            });
-                    }
-                    return e;
-                })({ headingId: d }, l),
-            ),
-            (0, r.jsx)(o.y5, { children: t }),
+            (0, r.jsx)(f.Z, {
+                userId: t,
+                headingId: O,
+                widget: n,
+                disableInteraction: b,
+            }),
+            (0, r.jsxs)(a.y5, {
+                children: [
+                    i,
+                    x &&
+                        !h &&
+                        !b &&
+                        !j &&
+                        (0, r.jsx)(p.Z, {
+                            userId: t,
+                            widgetType: n.type,
+                            widgetGames: n.games,
+                            onDismiss: () => y(!0),
+                        }),
+                ],
+            }),
         ],
     });
 }

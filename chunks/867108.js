@@ -3,8 +3,8 @@ var i = n(255367);
 n(73800);
 var r = n(442837),
     l = n(481060),
-    o = n(434404),
-    a = n(962086),
+    a = n(434404),
+    o = n(962086),
     s = n(225675),
     c = n(496675),
     d = n(981631),
@@ -19,8 +19,8 @@ function p(e, t) {
                   label: u.intl.string(u.t.arFPfH),
                   icon: l.ZSh,
                   action: () => {
-                      o.Z.close(),
-                          (0, a.iD)(e.id, {
+                      a.Z.close(),
+                          (0, o.iD)(e.id, {
                               type: s.z.ROLES,
                               roles: { [t.id]: t },
                               returnToSection: n,

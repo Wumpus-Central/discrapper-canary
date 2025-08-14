@@ -21,9 +21,9 @@ var i = n(255367),
     E = n(25007),
     S = n(199649),
     x = n(1397),
-    C = n(541716),
-    j = n(752305),
-    Z = n(974251),
+    j = n(541716),
+    Z = n(752305),
+    C = n(974251),
     I = n(893718),
     P = n(249458),
     w = n(552062),
@@ -33,8 +33,8 @@ var i = n(255367),
     k = n(807092),
     R = n(592125),
     A = n(703558),
-    L = n(731290),
-    M = n(430824),
+    M = n(731290),
+    L = n(430824),
     z = n(375954),
     V = n(944486),
     W = n(914010),
@@ -162,7 +162,7 @@ class ea extends r.Component {
                             ref: this.textAreaRef,
                             renderAttachButton: this.renderAttachButton,
                             channel: t,
-                            type: C.Ie.OVERLAY,
+                            type: j.Ie.OVERLAY,
                             onFocus: () => this.setState({ focused: !0 }),
                             onBlur: () => this.setState({ focused: !1 }),
                             placeholder: n,
@@ -202,7 +202,7 @@ class ea extends r.Component {
                 let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : t.props,
                     { textValue: n } = t.state,
                     i = A.Z.getDraft(e.channel.id, A.d.ChannelMessage);
-                n !== i && "" === i && t.setState((0, j.eK)(i));
+                n !== i && "" === i && t.setState((0, Z.eK)(i));
             }),
             ei(this, "handleTextareaKeyDown", (e) => {
                 if (
@@ -240,7 +240,7 @@ class ea extends r.Component {
                       })
                     : (0, H.v)({
                           openWarningPopout: (e) => this.setState({ contentWarningProps: e }),
-                          type: C.Ie.OVERLAY,
+                          type: j.Ie.OVERLAY,
                           content: t,
                           channel: n,
                       }).then((e) => {
@@ -263,7 +263,7 @@ class ea extends r.Component {
                               !0,
                               eo(er({}, s), { location: ee.dy.OVERLAY }),
                           ),
-                          this.setState((0, j.H2)()),
+                          this.setState((0, Z.H2)()),
                           (0, D.A6)(n.id),
                           r)
                               ? (f.Z.deactivateAllRegions(),
@@ -284,18 +284,18 @@ class ea extends r.Component {
                 this.setState({ focused: !1 });
             }),
             ei(this, "renderAttachButton", (e, t) =>
-                (0, i.jsx)(Z.Z, {
+                (0, i.jsx)(C.Z, {
                     className: t,
                     channel: this.props.channel,
                     draftType: A.d.ChannelMessage,
                     editorTextContent: this.state.textValue,
-                    setValue: (e) => this.handleTextareaChange(null, e, (0, j.JM)(e)),
+                    setValue: (e) => this.handleTextareaChange(null, e, (0, Z.JM)(e)),
                     canOnlyUseTextCommands: e,
                 }),
             ),
             A.Z.addChangeListener(this.draftDidChange);
         let n = A.Z.getDraft(e.channel.id, A.d.ChannelMessage);
-        (this.state = eo(er({}, (0, j.eK)(n)), {
+        (this.state = eo(er({}, (0, Z.eK)(n)), {
             focused: !1,
             contentWarningProps: null,
         })),
@@ -565,8 +565,8 @@ function ed(e) {
             G.default.getActiveRegions(),
             !t && G.default.isPreviewingInGame(),
         ]),
-        p = (0, c.e7)([M.Z], () => M.Z.getGuild(r)),
-        f = (0, c.e7)([L.Z], () => null != r && L.Z.didAgree(r)),
+        p = (0, c.e7)([L.Z], () => L.Z.getGuild(r)),
+        f = (0, c.e7)([M.Z], () => null != r && M.Z.didAgree(r)),
         g = null != l && l.isPrivate() ? l.getRecipientId() : null,
         m = (0, c.e7)([k.Z], () => (null != o ? k.Z.getPendingReply(o) : void 0)),
         y = (0, c.e7)([U.default], () => (null != g ? U.default.getUser(g) : null)),

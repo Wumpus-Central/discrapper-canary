@@ -2,8 +2,8 @@ n.d(t, { Z: () => g }), n(539854), n(388685), n(642613);
 var i = n(255367),
     r = n(73800),
     l = n(481060),
-    o = n(139387),
-    a = n(933557),
+    a = n(139387),
+    o = n(933557),
     s = n(699516),
     c = n(594174),
     d = n(491302),
@@ -24,7 +24,7 @@ function g(e) {
             () =>
                 Object.values(n).map((e) => ({
                     value: e.id,
-                    label: (0, a.F6)(e, c.default, s.Z, !0),
+                    label: (0, o.F6)(e, c.default, s.Z, !0),
                 })),
             [n],
         ),
@@ -44,7 +44,7 @@ function g(e) {
         }, [n, t]),
         y = r.useCallback(
             (e) => {
-                x() && (e === (null == f ? void 0 : f.id) ? o.Z.stopEditingWebhook() : o.Z.startEditingWebhook(e));
+                x() && (e === (null == f ? void 0 : f.id) ? a.Z.stopEditingWebhook() : a.Z.startEditingWebhook(e));
             },
             [x, f],
         );
@@ -57,7 +57,7 @@ function g(e) {
                     channel: t,
                     webhooks: n,
                     channelOptions: r,
-                    lastCreatedWebhookId: o,
+                    lastCreatedWebhookId: a,
                     editedWebhook: g,
                     errors: f,
                     toggleWebhookExpand: h,
@@ -74,7 +74,7 @@ function g(e) {
                                             "span",
                                             {
                                                 className: b.channelName,
-                                                children: (0, a.F6)(t, c.default, s.Z, !0),
+                                                children: (0, o.F6)(t, c.default, s.Z, !0),
                                             },
                                             t.id,
                                         ),
@@ -103,7 +103,7 @@ function g(e) {
                                               editedWebhook: g,
                                               channelOptions: r,
                                               isExpanded: (null == g ? void 0 : g.id) === e.id,
-                                              isNew: o === e.id,
+                                              isNew: a === e.id,
                                               onToggleExpand: () => h(e.id),
                                               errors: f,
                                           },

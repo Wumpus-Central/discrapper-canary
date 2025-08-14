@@ -2,8 +2,8 @@ n.d(t, { t: () => d });
 var i = n(255367),
     r = n(73800),
     l = n(481060),
-    o = n(296023),
-    a = n(768581),
+    a = n(296023),
+    o = n(768581),
     s = n(585835);
 function c(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -54,7 +54,7 @@ function d(e) {
             }
             return r;
         })(e, ["channel", "application", "showApplicationImage"]);
-    let b = (0, o.w)(d),
+    let b = (0, a.w)(d),
         g = r.useCallback(
             () =>
                 (0, l.ZDy)(async () => {
@@ -87,7 +87,7 @@ function d(e) {
                 }),
             [u, d],
         ),
-        f = p ? (null != (t = u.getIconURL(48)) ? t : a.pK["0"]) : void 0;
+        f = p ? (null != (t = u.getIconURL(48)) ? t : o.pK["0"]) : void 0;
     return (0, i.jsx)(
         s.Z,
         c(

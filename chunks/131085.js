@@ -169,6 +169,7 @@ let l = {
 var c = (function (e) {
     return (
         (e[(e.SIZE_12 = 12)] = "SIZE_12"),
+        (e[(e.SIZE_14 = 14)] = "SIZE_14"),
         (e[(e.SIZE_16 = 16)] = "SIZE_16"),
         (e[(e.SIZE_24 = 24)] = "SIZE_24"),
         (e[(e.SIZE_32 = 32)] = "SIZE_32"),
@@ -178,6 +179,7 @@ var c = (function (e) {
 })({});
 let u = {
         12: 16,
+        14: 16,
         16: 16,
         24: 24,
         32: 32,

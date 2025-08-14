@@ -5,12 +5,12 @@ function r(e, t) {
         l = i.useCallback((e) => {
             r(e);
         }, []),
-        o = i.useCallback(() => {
+        a = i.useCallback(() => {
             r(null);
         }, []),
-        a = i.useCallback(
+        o = i.useCallback(
             (i) => {
-                o();
+                a();
                 let r = e.find((e) => {
                         let { id: t } = e;
                         return n === t;
@@ -20,18 +20,18 @@ function r(e, t) {
                         return i === t;
                     });
                 if (null == r || null == l || r === l) return;
-                let a = [...e],
-                    s = a.indexOf(r),
-                    c = a.indexOf(l),
+                let o = [...e],
+                    s = o.indexOf(r),
+                    c = o.indexOf(l),
                     d = +(c - s > 0);
-                a.splice(s, 1), (c = a.indexOf(l)), a.splice(c + d, 0, r), t(a);
+                o.splice(s, 1), (c = o.indexOf(l)), o.splice(c + d, 0, r), t(o);
             },
-            [e, n, o, t],
+            [e, n, a, t],
         );
     return {
         draggingId: n,
         handleDragStart: l,
-        handleDragReset: o,
-        handleDragComplete: a,
+        handleDragReset: a,
+        handleDragComplete: o,
     };
 }

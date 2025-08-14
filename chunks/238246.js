@@ -205,11 +205,7 @@ class z extends (r = o.Component) {
                                                             (0, i.jsxs)("div", {
                                                                 className: F.popout,
                                                                 children: [
-                                                                    m &&
-                                                                        (0, i.jsx)(C.TF, {
-                                                                            windowKey: r,
-                                                                            short: !0,
-                                                                        }),
+                                                                    m && (0, i.jsx)(C.TF, { windowKey: r }),
                                                                     null,
                                                                     (0, i.jsx)("div", {
                                                                         className: s()(F.content, f),

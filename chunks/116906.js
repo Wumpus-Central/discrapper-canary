@@ -12,12 +12,12 @@ var l = n(442837),
     f = n(369566),
     p = n(29899),
     m = n(678738),
-    g = n(151545),
-    b = n(744802),
+    b = n(151545),
+    g = n(744802),
     j = n(493043),
     y = n(864141),
-    x = n(228168),
-    O = n(981631),
+    O = n(228168),
+    x = n(981631),
     h = n(388032),
     v = n(7994),
     _ = n(878449);
@@ -32,13 +32,13 @@ function I(e) {
         }),
         L = (0, l.e7)([a.Z], () => a.Z.isFetchingUserOutbox(t.id)),
         R = t.id === n.id,
-        G = (0, l.e7)([s.Z, c.Z], () => {
+        k = (0, l.e7)([s.Z, c.Z], () => {
             let e = R ? s.Z.getStatus() : c.Z.getStatus(t.id);
             return e === i.Skl.OFFLINE || e === i.Skl.INVISIBLE;
         }),
-        k = S.length > 0 || null != A,
+        G = S.length > 0 || null != A,
         B = Z && null == A && null == D && null != C,
-        M = !G && (k || B),
+        M = !k && (G || B),
         U = w.length > 0;
     return M || U || !L
         ? (0, r.jsxs)(i.zJl, {
@@ -76,7 +76,7 @@ function I(e) {
                                         (0, r.jsx)(
                                             "li",
                                             {
-                                                children: (0, r.jsx)(g.Z, {
+                                                children: (0, r.jsx)(b.Z, {
                                                     user: t,
                                                     currentUser: n,
                                                     activity: e,
@@ -100,21 +100,21 @@ function I(e) {
                                           (0, r.jsx)(
                                               i.eee,
                                               {
-                                                  href: d.Z.getArticleURL(O.BhN.ACTIVITY_STATUS_SETTINGS),
+                                                  href: d.Z.getArticleURL(x.BhN.ACTIVITY_STATUS_SETTINGS),
                                                   children: e,
                                               },
                                               t,
                                           ),
                                   })
                                 : void 0,
-                            scrollIntoView: E === x.Tb.RECENT_ACTIVITY,
+                            scrollIntoView: E === O.Tb.RECENT_ACTIVITY,
                             children: (0, r.jsx)("ul", {
                                 className: v.activityList,
                                 children: w.map((e) =>
                                     (0, r.jsx)(
                                         "li",
                                         {
-                                            children: (0, r.jsx)(b.Z, {
+                                            children: (0, r.jsx)(g.Z, {
                                                 location: "UserProfileModalActivity",
                                                 user: t,
                                                 currentUser: n,

@@ -1,7 +1,7 @@
 let i, r, l;
 n.d(t, { Z: () => h }), n(467055), n(388685);
-var o,
-    a = n(442837),
+var a,
+    o = n(442837),
     s = n(570140),
     c = n(581364),
     d = n(399860);
@@ -24,7 +24,7 @@ let p = {},
 function g() {
     (i = void 0), (p = {}), (m = {}), (r = void 0), (l = void 0), (b = !1);
 }
-class f extends (o = a.ZP.Store) {
+class f extends (a = o.ZP.Store) {
     getApplicationPermissions() {
         return p;
     }
@@ -62,14 +62,14 @@ let h = new f(s.Z, {
     },
     INTEGRATION_PERMISSION_SETTINGS_COMMAND_UPDATE: function (e) {
         var t, n;
-        let { applicationId: r, commandId: l, permissions: o } = e;
+        let { applicationId: r, commandId: l, permissions: a } = e;
         if (r !== i) return !1;
         if (l === i) {
-            p = (0, d.tk)(o);
+            p = (0, d.tk)(a);
             return;
         }
-        let a = m[l];
-        if (null == a) return !1;
+        let o = m[l];
+        if (null == o) return !1;
         m[l] =
             ((t = (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
@@ -86,8 +86,8 @@ let h = new f(s.Z, {
                         });
                 }
                 return e;
-            })({}, a)),
-            (n = n = { permissions: (0, d.tk)(o) }),
+            })({}, o)),
+            (n = n = { permissions: (0, d.tk)(a) }),
             Object.getOwnPropertyDescriptors
                 ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
                 : (function (e, t) {
@@ -103,13 +103,13 @@ let h = new f(s.Z, {
             t);
     },
     INTEGRATION_PERMISSION_SETTINGS_EDIT: function (e) {
-        let { applicationId: t, commandId: n, permissions: o } = e;
+        let { applicationId: t, commandId: n, permissions: a } = e;
         if (t !== i) return !1;
         n === i
-            ? (r = o)
+            ? (r = a)
             : (l = {
                   commandId: n,
-                  permissions: o,
+                  permissions: a,
               });
     },
     INTEGRATION_PERMISSION_SETTINGS_RESET: function (e) {
@@ -125,7 +125,7 @@ let h = new f(s.Z, {
         let { applicationId: t, commands: n, permissions: r } = e;
         if (t !== i) return !1;
         let l = Object.fromEntries(r.map((e) => [e.id, e.permissions])),
-            o = {};
+            a = {};
         for (let e of n)
             if (e.application_id === i) {
                 let t = (0, c.Z8)({
@@ -134,8 +134,8 @@ let h = new f(s.Z, {
                         applicationId: e.application_id,
                     }),
                     n = l[e.id];
-                null != n && (t.permissions = (0, d.tk)(n)), (o[e.id] = t);
+                null != n && (t.permissions = (0, d.tk)(n)), (a[e.id] = t);
             }
-        m = o;
+        m = a;
     },
 });

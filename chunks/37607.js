@@ -2,8 +2,8 @@ n.d(t, { Z: () => j });
 var i = n(255367),
     r = n(73800),
     l = n(392711),
-    o = n.n(l),
-    a = n(481060),
+    a = n.n(l),
+    o = n(481060),
     s = n(139387),
     c = n(835473),
     d = n(471445),
@@ -29,7 +29,7 @@ function x(e) {
                               game: r,
                               size: u.Z.Sizes.XSMALL,
                           }),
-                          (0, i.jsx)(a.X6q, {
+                          (0, i.jsx)(o.X6q, {
                               variant: "heading-md/semibold",
                               children: null == r ? void 0 : r.name,
                           }),
@@ -46,7 +46,7 @@ function x(e) {
                               icon: null != (t = (0, d.KS)(e)) ? t : void 0,
                               iconWrapperClassName: h.iconwrapper,
                               hasNextSection: !0,
-                              trailing: (0, i.jsx)(a.vdY, { size: "xs" }),
+                              trailing: (0, i.jsx)(o.vdY, { size: "xs" }),
                           },
                           e.id,
                       );
@@ -57,7 +57,7 @@ function x(e) {
 function j(e) {
     let { guild: t } = e,
         n = (0, p.F)(t.id),
-        l = o().groupBy(n, (e) => {
+        l = a().groupBy(n, (e) => {
             var t;
             return null == (t = e.linkedLobby) ? void 0 : t.application_id;
         }),
@@ -66,15 +66,15 @@ function j(e) {
         r.useEffect(() => {
             0 === n.length && s.Z.setSection(g.b4C.OVERVIEW);
         }, [n]),
-        (0, i.jsxs)(a.hjN, {
+        (0, i.jsxs)(o.hjN, {
             children: [
-                (0, i.jsx)(a.R94, {
-                    type: a.geA.DESCRIPTION,
+                (0, i.jsx)(o.R94, {
+                    type: o.geA.DESCRIPTION,
                     children: f.intl.format(f.t["9gsSLi"], {
                         helpdeskArticle: m.Z.getArticleURL(g.BhN.LINKED_LOBBIES),
                     }),
                 }),
-                (0, i.jsx)(a.$i$, { className: h.headerDivider }),
+                (0, i.jsx)(o.$i$, { className: h.headerDivider }),
                 c.map((e) =>
                     (0, i.jsx)(
                         x,

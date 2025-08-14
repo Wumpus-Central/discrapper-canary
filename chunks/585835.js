@@ -2,8 +2,8 @@ n.d(t, { Z: () => _ }), n(539854), n(388685);
 var i = n(255367),
     r = n(73800),
     l = n(120356),
-    o = n.n(l),
-    a = n(243814),
+    a = n.n(l),
+    o = n(243814),
     s = n(442837),
     c = n(755721),
     d = n(481060),
@@ -25,11 +25,11 @@ function _(e) {
             name: _,
             icon: C,
             imageSrc: N,
-            iconBackgroundColor: w,
-            iconClassName: Z,
-            iconWrapperClassName: S,
-            details: P,
-            integration: I,
+            iconBackgroundColor: Z,
+            iconClassName: S,
+            iconWrapperClassName: w,
+            details: I,
+            integration: P,
             buttonText: T,
             buttonDisabled: E,
             hasNextSection: k,
@@ -41,7 +41,7 @@ function _(e) {
         } = e,
         [B, U] = r.useState(!1),
         [W, H] = r.useState(!1),
-        G = L && !R && !W && void 0 !== D && null != I,
+        G = L && !R && !W && void 0 !== D && null != P,
         z = r.useRef(null),
         F = r.useRef(null),
         K = r.useCallback(
@@ -111,7 +111,7 @@ function _(e) {
                 })({}, (0, u.hH)(D))),
                 (t = t =
                     {
-                        application_id: null == I ? void 0 : I.application.id,
+                        application_id: null == P ? void 0 : P.application.id,
                         location: "overview",
                     }),
                 Object.getOwnPropertyDescriptors
@@ -128,14 +128,14 @@ function _(e) {
                       }),
                 e),
             );
-    }, [D, null == I ? void 0 : I.application.id, G]);
+    }, [D, null == P ? void 0 : P.application.id, G]);
     let q = G
             ? (0, i.jsx)(d.yRy, {
                   targetElementRef: k ? F : z,
                   renderPopout: () =>
                       (0, i.jsx)(d.P3F, {
                           onClick: (e) => {
-                              e.stopPropagation(), H(!0), j.Z.dismissOverviewTooltip(D, I.integration);
+                              e.stopPropagation(), H(!0), j.Z.dismissOverviewTooltip(D, P.integration);
                           },
                           children: (0, i.jsx)(g.ZP, {
                               content: y.intl.string(y.t.TyMJwM),
@@ -151,15 +151,15 @@ function _(e) {
             : K,
         V = (0, s.Wu)([b.Z], () => {
             var e;
-            return null != I && null != D && null != (e = b.Z.getApplicationEntitlementsForGuild(I.application.id, D))
+            return null != P && null != D && null != (e = b.Z.getApplicationEntitlementsForGuild(P.application.id, D))
                 ? e
                 : [];
         }),
         Y = (0, p.LD)(D, !0),
         X =
-            (null == I ? void 0 : I.application) != null &&
+            (null == P ? void 0 : P.application) != null &&
             Object.keys(
-                null != (l = null == (n = Y.result) || null == (t = n.sections[I.application.id]) ? void 0 : t.commands)
+                null != (l = null == (n = Y.result) || null == (t = n.sections[P.application.id]) ? void 0 : t.commands)
                     ? l
                     : {},
             ).length > 0,
@@ -169,10 +169,10 @@ function _(e) {
                     name: _,
                     icon: C,
                     imageSrc: N,
-                    iconBackgroundColor: w,
-                    iconClassName: Z,
-                    iconWrapperClassName: S,
-                    details: P,
+                    iconBackgroundColor: Z,
+                    iconClassName: S,
+                    iconWrapperClassName: w,
+                    details: I,
                     isPremium: V.length > 0,
                 }),
                 (0, i.jsx)(m.Z.Child, {
@@ -185,12 +185,12 @@ function _(e) {
                             (function (e, t, n) {
                                 var r, l;
                                 if (null == e) return null;
-                                let o = [],
+                                let a = [],
                                     { application: s, integration: c, webhooks: u } = e;
                                 return (
                                     null != s.bot &&
-                                        (null == c || null == (r = c.scopes) ? void 0 : r.includes(a.x.BOT)) &&
-                                        o.push(
+                                        (null == c || null == (r = c.scopes) ? void 0 : r.includes(o.x.BOT)) &&
+                                        a.push(
                                             (0, i.jsx)(
                                                 d.DY3,
                                                 {
@@ -209,7 +209,7 @@ function _(e) {
                                             ),
                                         ),
                                     u.length > 0 &&
-                                        o.push(
+                                        a.push(
                                             (0, i.jsx)(
                                                 d.DY3,
                                                 {
@@ -229,9 +229,9 @@ function _(e) {
                                         ),
                                     (null == c || null == (l = c.scopes)
                                         ? void 0
-                                        : l.includes(a.x.APPLICATIONS_COMMANDS)) === !0 &&
+                                        : l.includes(o.x.APPLICATIONS_COMMANDS)) === !0 &&
                                         n &&
-                                        o.push(
+                                        a.push(
                                             (0, i.jsx)(
                                                 d.DY3,
                                                 {
@@ -247,9 +247,9 @@ function _(e) {
                                                 "commands",
                                             ),
                                         ),
-                                    o
+                                    a
                                 );
-                            })(I, B, X),
+                            })(P, B, X),
                             q,
                             M,
                         ],
@@ -260,13 +260,13 @@ function _(e) {
     return k
         ? (0, i.jsx)(d.P3F, {
               onClick: () => {
-                  L && null != D && null != I && j.Z.dismissOverviewTooltip(D, I.integration), null == A || A();
+                  L && null != D && null != P && j.Z.dismissOverviewTooltip(D, P.integration), null == A || A();
               },
               onFocus: () => U(!0),
               onBlur: () => U(!1),
               children: (0, i.jsx)(d.Zbd, {
                   editable: !0,
-                  className: o()(O.card, O.clickable),
+                  className: a()(O.card, O.clickable),
                   children: $,
               }),
           })

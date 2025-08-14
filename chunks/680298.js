@@ -2,8 +2,8 @@ n.d(t, { Z: () => p });
 var i = n(255367),
     r = n(73800),
     l = n(481060),
-    o = n(239091),
-    a = n(911969),
+    a = n(239091),
+    o = n(911969),
     s = n(399860),
     c = n(388032),
     d = n(301603);
@@ -61,7 +61,7 @@ function p(e) {
         }, [t, p, m, b, g]),
         x = r.useCallback(
             (e) => {
-                (0, o.jW)(e, async () => {
+                (0, a.jW)(e, async () => {
                     let { default: e } = await n.e("5396").then(n.bind(n, 731646));
                     return (t) => {
                         var n, r;
@@ -92,7 +92,7 @@ function p(e) {
             },
             [b],
         ),
-        j = b.type === a.yU.CHAT ? l.SsZ : l.hH0,
+        j = b.type === o.yU.CHAT ? l.SsZ : l.hH0,
         v = (0, s.gw)(b.type, b.displayName);
     return (0, i.jsxs)(l.P3F, {
         onClick: h,

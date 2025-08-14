@@ -12,12 +12,12 @@ var l = n(442837),
     f = n(209698),
     p = n(369566),
     m = n(29899),
-    g = n(151545),
-    b = n(744802),
+    b = n(151545),
+    g = n(744802),
     j = n(493043),
     y = n(864141),
-    x = n(264481),
-    O = n(693408),
+    O = n(264481),
+    x = n(693408),
     h = n(228168),
     v = n(981631),
     _ = n(388032),
@@ -31,17 +31,17 @@ function P(e) {
             userId: t.id,
             guildId: E,
         }),
-        G = (0, l.e7)([a.Z], () => a.Z.isFetchingUserOutbox(t.id)),
-        k = t.id === n.id,
+        k = (0, l.e7)([a.Z], () => a.Z.isFetchingUserOutbox(t.id)),
+        G = t.id === n.id,
         B = (0, l.e7)([d.Z, s.Z], () => {
-            let e = k ? d.Z.getStatus() : s.Z.getStatus(t.id);
+            let e = G ? d.Z.getStatus() : s.Z.getStatus(t.id);
             return e === i.Skl.OFFLINE || e === i.Skl.INVISIBLE;
         }),
         M = A.length > 0 || null != D,
         U = S && null == D && null == R && null != L,
         F = !B && (M || U),
         V = C.length > 0;
-    if (!F && !V && G)
+    if (!F && !V && k)
         return (0, r.jsx)("div", {
             className: I.cards,
             children: Array.from({ length: 8 }).map((e, t) =>
@@ -64,11 +64,11 @@ function P(e) {
                 ),
             ),
         });
-    if (!F && !V && !G) {
+    if (!F && !V && !k) {
         var Y;
-        return k
-            ? (0, r.jsx)(x.Uf, { onClose: N })
-            : (0, r.jsx)(x.P9, {
+        return G
+            ? (0, r.jsx)(O.Uf, { onClose: N })
+            : (0, r.jsx)(O.P9, {
                   user: t,
                   guildId: null != (Y = null == P ? void 0 : P.guildId) ? Y : void 0,
                   channelId: T,
@@ -80,7 +80,7 @@ function P(e) {
         fade: !0,
         children: [
             F
-                ? (0, r.jsx)(O.Z, {
+                ? (0, r.jsx)(x.Z, {
                       heading: _.intl.string(_.t.J6STd3),
                       children: (0, r.jsxs)("ul", {
                           className: I.cards,
@@ -110,7 +110,7 @@ function P(e) {
                                   (0, r.jsx)(
                                       "li",
                                       {
-                                          children: (0, r.jsx)(g.Z, {
+                                          children: (0, r.jsx)(b.Z, {
                                               user: t,
                                               currentUser: n,
                                               activity: e,
@@ -136,9 +136,9 @@ function P(e) {
                   })
                 : null,
             V
-                ? (0, r.jsx)(O.Z, {
+                ? (0, r.jsx)(x.Z, {
                       heading: _.intl.string(_.t.jzgEoK),
-                      introText: k
+                      introText: G
                           ? _.intl.format(_.t["4bk9Ag"], {
                                 learnMoreHook: (e, t) =>
                                     (0, r.jsx)(
@@ -158,7 +158,7 @@ function P(e) {
                               (0, r.jsx)(
                                   "li",
                                   {
-                                      children: (0, r.jsx)(b.Z, {
+                                      children: (0, r.jsx)(g.Z, {
                                           location: "UserProfileModalV2Activity",
                                           user: t,
                                           currentUser: n,

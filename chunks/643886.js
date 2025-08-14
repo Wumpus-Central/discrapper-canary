@@ -2,8 +2,8 @@ n.d(t, { U: () => f }), n(539854), n(388685), n(290780);
 var i = n(73800),
     r = n(512722),
     l = n.n(r),
-    o = n(442837),
-    a = n(345162),
+    a = n(442837),
+    o = n(345162),
     s = n(271383),
     c = n(485386),
     d = n(430824),
@@ -13,12 +13,12 @@ var i = n(73800),
     b = n(282923),
     g = n(981631);
 function f(e) {
-    let t = (0, o.e7)([d.Z], () => d.Z.getGuild(e));
+    let t = (0, a.e7)([d.Z], () => d.Z.getGuild(e));
     l()(null != t, "guild must be present to be editing its integration settings");
-    let n = (0, o.e7)([u.Z], () => u.Z.getHighestRole(t)),
-        r = (0, o.Wu)([s.ZP], () => s.ZP.getMembers(e), [e]),
-        f = (0, o.cj)([p.default], () => p.default.getUsers()),
-        j = (0, o.e7)([c.Z], () => c.Z.getSortedRoles(e), [e]),
+    let n = (0, a.e7)([u.Z], () => u.Z.getHighestRole(t)),
+        r = (0, a.Wu)([s.ZP], () => s.ZP.getMembers(e), [e]),
+        f = (0, a.cj)([p.default], () => p.default.getUsers()),
+        j = (0, a.e7)([c.Z], () => c.Z.getSortedRoles(e), [e]),
         v = i.useMemo(() => {
             let e = [];
             for (let n of r) {
@@ -49,13 +49,13 @@ function f(e) {
             let e = [];
             for (let i of j) {
                 if (y(i)) continue;
-                let r = !(0, a.Fs)(i, g.Plq.ADMINISTRATOR) && u.Z.isRoleHigher(t, n, i),
+                let r = !(0, o.Fs)(i, g.Plq.ADMINISTRATOR) && u.Z.isRoleHigher(t, n, i),
                     l = {
                         id: i.id,
                         name: i.name,
                         canManage: r,
                     };
-                (0, a.fI)(i) ? e.unshift(l) : e.push(l);
+                (0, o.fI)(i) ? e.unshift(l) : e.push(l);
             }
             return e;
         }, [j, t, n]),

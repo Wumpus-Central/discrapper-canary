@@ -2,8 +2,8 @@ n.d(t, { Z: () => p });
 var i = n(255367),
     r = n(73800),
     l = n(481060),
-    o = n(139387),
-    a = n(726542),
+    a = n(139387),
+    o = n(726542),
     s = n(434404),
     c = n(486199),
     d = n(13051),
@@ -19,17 +19,17 @@ function p(e) {
             helpText: f,
             canNavigate: h,
         } = e,
-        x = a.Z.get(m),
+        x = o.Z.get(m),
         j = r.useCallback(
             async (e) => {
-                h() && (await s.Z.enableIntegration(p.id, e.type, e.id), o.Z.startEditingIntegration(e.id));
+                h() && (await s.Z.enableIntegration(p.id, e.type, e.id), a.Z.startEditingIntegration(e.id));
             },
             [h, p.id],
         ),
         v = r.useCallback(
             (e) => {
                 h() &&
-                    (e.id === (null == n ? void 0 : n.id) && o.Z.stopEditingIntegration(),
+                    (e.id === (null == n ? void 0 : n.id) && a.Z.stopEditingIntegration(),
                     s.Z.disableIntegration(p.id, e.id));
             },
             [h, n, p.id],
@@ -37,7 +37,7 @@ function p(e) {
         y = r.useCallback(
             (e) => {
                 h() &&
-                    (e === (null == n ? void 0 : n.id) ? o.Z.stopEditingIntegration() : o.Z.startEditingIntegration(e));
+                    (e === (null == n ? void 0 : n.id) ? a.Z.stopEditingIntegration() : a.Z.startEditingIntegration(e));
             },
             [h, n],
         );

@@ -3,8 +3,8 @@ var i = n(255367);
 n(73800);
 var r = n(442837),
     l = n(481060),
-    o = n(749210),
-    a = n(240872),
+    a = n(749210),
+    o = n(240872),
     s = n(228643),
     c = n(299206),
     d = n(345162),
@@ -42,12 +42,12 @@ function b(e, t) {
                             color: "danger",
                             icon: l.XHJ,
                             action: () => {
-                                a.Z.show({
+                                o.Z.show({
                                     title: m.intl.string(m.t.YWISbW),
                                     body: m.intl.format(m.t["9+nrUV"], { name: t.name }),
                                     cancelText: m.intl.string(m.t["ETE/oK"]),
                                     onConfirm: async () => {
-                                        x && (await (0, s.L_)(e.id, t.id, [])), o.Z.deleteRole(e.id, t.id);
+                                        x && (await (0, s.L_)(e.id, t.id, [])), a.Z.deleteRole(e.id, t.id);
                                     },
                                 });
                             },

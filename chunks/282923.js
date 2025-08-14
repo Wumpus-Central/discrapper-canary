@@ -5,10 +5,10 @@ function l(e, t, n) {
     if ("" === n) return e;
     let i = n.toLowerCase(),
         l = [];
-    for (let o of e) {
-        let { id: e, names: a } = t(o);
-        if (e === n) return [o];
-        a.some((e) => r()(i, e.toLowerCase())) && l.push(o);
+    for (let a of e) {
+        let { id: e, names: o } = t(a);
+        if (e === n) return [a];
+        o.some((e) => r()(i, e.toLowerCase())) && l.push(a);
     }
     return l;
 }

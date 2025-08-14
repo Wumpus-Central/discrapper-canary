@@ -11,8 +11,8 @@ var r = n(255367),
     f = n(228168),
     p = n(388032),
     m = n(361623),
-    g = n(583140);
-let b = {
+    b = n(583140);
+let g = {
         [f.qb.WIDGET_ADDED]: {
             message: p.intl.string(p.t.fFP1U1),
             icon: (0, r.jsx)(s.dz2, {
@@ -42,7 +42,7 @@ let b = {
     j = (e) => {
         let { message: t, icon: n, type: l } = e;
         return (0, r.jsxs)("div", {
-            className: o()(g.toast, m.toast),
+            className: o()(b.toast, m.toast),
             "data-type": l,
             children: [
                 (0, r.jsx)("div", {
@@ -61,12 +61,12 @@ let b = {
         let { className: t, onAutoHide: n } = e,
             i = (0, u.be)(),
             f = (0, c.e7)([d.Z], () => d.Z.useReducedMotion),
-            [p, g] = l.useState(!1),
-            [y, x] = l.useState(null);
+            [p, b] = l.useState(!1),
+            [y, O] = l.useState(null);
         l.useEffect(() => {
-            null !== i ? (g(!0), x(b[i]), s.uvj.announce(b[i].message)) : g(!1);
+            null !== i ? (b(!0), O(g[i]), s.uvj.announce(g[i].message)) : b(!1);
         }, [i]);
-        let O = (0, s.Yzy)(
+        let x = (0, s.Yzy)(
             p,
             {
                 from: {
@@ -100,7 +100,7 @@ let b = {
                 }
             }, [p, n]),
             (0, r.jsx)(r.Fragment, {
-                children: O(
+                children: x(
                     (e, n) =>
                         n &&
                         null !== y &&

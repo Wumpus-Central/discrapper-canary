@@ -1,4 +1,7 @@
-n.d(t, { $: () => a });
+n.d(t, {
+    $: () => a,
+    Q: () => s,
+});
 var r = n(818083);
 let i = {
         enabled: !1,
@@ -31,5 +34,10 @@ let i = {
 function a(e) {
     let { location: t, autoTrackExposure: n = !0 } = e,
         { enabled: r } = o.useExperiment({ location: t }, { autoTrackExposure: n });
+    return r;
+}
+function s(e) {
+    let { location: t, autoTrackExposure: n = !0 } = e,
+        { enabled: r } = o.getCurrentConfig({ location: t }, { autoTrackExposure: n });
     return r;
 }

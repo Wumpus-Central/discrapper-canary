@@ -1,9 +1,11 @@
 let r;
-n.d(t, { Z: () => O }), n(388685);
+n.d(t, { Z: () => S }), n(388685);
 var i,
     o = n(442837),
-    a = n(570140);
-function s(e, t, n) {
+    a = n(570140),
+    s = n(215023),
+    l = n(474936);
+function c(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -16,61 +18,77 @@ function s(e, t, n) {
         e
     );
 }
-let l = [],
-    c = new Map(),
-    u = new Map(),
+let u = [],
     d = new Map(),
     f = new Map(),
     _ = new Map(),
     p = new Map(),
-    h = (e) => {
-        _.set(e.tab, !0), f.set(e.tab, void 0), d.set(e.tab, e.options), d.set(e.tab, e.options), u.set(e.tab, void 0);
-    },
-    m = (e) => {
-        p.set(e.tab, e.shopHome.shopBlocks),
-            c.set(e.tab, Date.now()),
-            _.set(e.tab, !1),
+    h = new Map(),
+    m = new Map(),
+    g = new Map(),
+    E = (e) => {
+        h.set(e.tab, !0),
+            p.set(e.tab, void 0),
+            _.set(e.tab, e.options),
+            _.set(e.tab, e.options),
             f.set(e.tab, void 0),
-            u.set(e.tab, void 0);
-    },
-    g = (e) => {
-        p.set(e.tab, l), _.set(e.tab, !1), f.set(e.tab, e.error), u.set(e.tab, Date.now());
-    },
-    E = () => {
-        p.clear(), d.clear(), f.clear(), _.clear(), c.clear(), u.clear(), (r = void 0);
+            m.set(e.tab, !1);
     },
     b = (e) => {
+        g.set(e.tab, e.shopHome.shopBlocks),
+            d.set(e.tab, Date.now()),
+            h.set(e.tab, !1),
+            p.set(e.tab, void 0),
+            f.set(e.tab, void 0),
+            m.set(e.tab, !1);
+    },
+    y = (e) => {
+        g.set(e.tab, u), h.set(e.tab, !1), p.set(e.tab, e.error), f.set(e.tab, Date.now()), m.set(e.tab, !0);
+    },
+    O = (e) => {
+        null != e.appliedUserDiscounts &&
+            e.appliedUserDiscounts.some((e) => e.discount.id === l.$X || e.discount.id === l.nC) &&
+            m.set(s.AW.HOME, !0);
+    },
+    v = () => {
+        g.clear(), _.clear(), p.clear(), h.clear(), d.clear(), f.clear(), m.clear(), (r = void 0);
+    },
+    I = (e) => {
         r = e.shopHomeConfigOverride;
     };
-class y extends (i = o.ZP.Store) {
+class T extends (i = o.ZP.Store) {
     getLastSuccessfulFetch(e) {
-        return c.get(e);
-    }
-    getLastErrorTimestamp(e) {
-        return u.get(e);
-    }
-    getLastFetchOptions(e) {
         return d.get(e);
     }
-    getFetchShopHomeError(e) {
+    getLastErrorTimestamp(e) {
         return f.get(e);
     }
-    getIsFetchingShopHome(e) {
+    getLastFetchOptions(e) {
         return _.get(e);
+    }
+    getFetchShopHomeError(e) {
+        return p.get(e);
+    }
+    getIsFetchingShopHome(e) {
+        return h.get(e);
     }
     getShopBlocks(e) {
         var t;
-        return null != (t = p.get(e)) ? t : l;
+        return null != (t = g.get(e)) ? t : u;
+    }
+    getHasKnownStaleData(e) {
+        return m.get(e);
     }
     getShopHomeConfigOverride() {
         return r;
     }
 }
-s(y, "displayName", "CollectiblesShopHomesStore");
-let O = new y(a.Z, {
-    COLLECTIBLES_SHOP_HOME_FETCH: h,
-    COLLECTIBLES_SHOP_HOME_FETCH_SUCCESS: m,
-    COLLECTIBLES_SHOP_HOME_FETCH_FAILURE: g,
-    COLLECTIBLES_SET_SHOP_HOME_CONFIG_OVERRIDE: b,
-    LOGOUT: E,
+c(T, "displayName", "CollectiblesShopHomesStore");
+let S = new T(a.Z, {
+    COLLECTIBLES_SHOP_HOME_FETCH: E,
+    COLLECTIBLES_SHOP_HOME_FETCH_SUCCESS: b,
+    COLLECTIBLES_SHOP_HOME_FETCH_FAILURE: y,
+    COLLECTIBLES_SET_SHOP_HOME_CONFIG_OVERRIDE: I,
+    SKU_PURCHASE_SUCCESS: O,
+    LOGOUT: v,
 });

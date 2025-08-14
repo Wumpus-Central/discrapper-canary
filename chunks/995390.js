@@ -2,8 +2,8 @@ n.d(t, { Z: () => O }), n(539854), n(388685), n(467055);
 var i = n(73800),
     r = n(512722),
     l = n.n(r),
-    o = n(392711),
-    a = n.n(o),
+    a = n(392711),
+    o = n.n(a),
     s = n(442837),
     c = n(139387),
     d = n(895924),
@@ -44,7 +44,7 @@ function y(e) {
 }
 function O(e, t, n) {
     let r = (0, s.e7)([x.Z], () => x.Z.getApplicationPermissions()),
-        o = i.useMemo(
+        a = i.useMemo(
             () =>
                 (function (e, t) {
                     let n = y({}, t),
@@ -84,27 +84,27 @@ function O(e, t, n) {
                   : e.permissions;
         }, [n]),
         C = null != n ? n : t,
-        N = null != n ? O : o,
-        w = i.useMemo(() => (null != _ ? _ : y({}, null != N ? N : {})), [_, N]),
-        Z = i.useMemo(() => Object.keys(w).length, [w]),
-        S = i.useMemo(() => (null == N || null == w ? null : !a().isEqual(N, w)), [N, w]);
+        N = null != n ? O : a,
+        Z = i.useMemo(() => (null != _ ? _ : y({}, null != N ? N : {})), [_, N]),
+        S = i.useMemo(() => Object.keys(Z).length, [Z]),
+        w = i.useMemo(() => (null == N || null == Z ? null : !o().isEqual(N, Z)), [N, Z]);
     return (
         i.useEffect(() => {
-            C === t && (S ? c.Z.startEditingCommandPermissions(C) : c.Z.stopEditingCommandPermissions(C));
-        }, [t, S, C]),
+            C === t && (w ? c.Z.startEditingCommandPermissions(C) : c.Z.stopEditingCommandPermissions(C));
+        }, [t, w, C]),
         {
-            originalApplicationPermissions: o,
+            originalApplicationPermissions: a,
             originalCommandPermissions: O,
             editedTargetPermissions: (function (e, t) {
                 let n = (0, s.e7)([b.Z], () => b.Z.getGuild(e), [e]);
                 l()(null != n, "guild must be present to be editing its integration settings");
                 let r = (0, s.e7)([g.Z], () => g.Z.getHighestRole(n), [n]),
-                    o = (0, s.e7)([f.default], () => {
+                    a = (0, s.e7)([f.default], () => {
                         var e;
                         return null == (e = f.default.getCurrentUser()) ? void 0 : e.id;
                     });
-                l()(null != o, "useComputePermissions: currentUserId must not be null");
-                let a = o === n.ownerId,
+                l()(null != a, "useComputePermissions: currentUserId must not be null");
+                let o = a === n.ownerId,
                     {
                         channelIds: c,
                         roleIds: x,
@@ -162,7 +162,7 @@ function O(e, t, n) {
                     let e = n.id,
                         i = (0, u.bD)(n.id),
                         l = {};
-                    for (let [o, s] of Object.entries(t)) {
+                    for (let [a, s] of Object.entries(t)) {
                         let t = !1,
                             c = !1;
                         if (s.type === d.Kw.CHANNEL) {
@@ -172,13 +172,13 @@ function O(e, t, n) {
                         } else if (s.type === d.Kw.ROLE) {
                             let i = s.id === e,
                                 l = _[s.id];
-                            (t = i || null != l), (c = a || i || g.Z.isRoleHigher(n, r, l));
+                            (t = i || null != l), (c = o || i || g.Z.isRoleHigher(n, r, l));
                         } else if (s.type === d.Kw.USER) {
                             let e = C[s.id];
                             (t = null != e),
-                                (c = null != e && (a || g.Z.canManageUser(v.Plq.USE_APPLICATION_COMMANDS, e, n)));
+                                (c = null != e && (o || g.Z.canManageUser(v.Plq.USE_APPLICATION_COMMANDS, e, n)));
                         }
-                        l[o] = (function (e, t) {
+                        l[a] = (function (e, t) {
                             return (
                                 (t = null != t ? t : {}),
                                 Object.getOwnPropertyDescriptors
@@ -201,10 +201,10 @@ function O(e, t, n) {
                         });
                     }
                     return l;
-                }, [O, n, r, a, t, _, C]);
-            })(e, w),
-            hasChanges: S,
-            selectedPermissionCount: Z,
+                }, [O, n, r, o, t, _, C]);
+            })(e, Z),
+            hasChanges: w,
+            selectedPermissionCount: S,
         }
     );
 }

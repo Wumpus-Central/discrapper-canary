@@ -1,10 +1,10 @@
-n.d(t, { Z: () => S });
+n.d(t, { Z: () => w });
 var i = n(255367),
     r = n(73800),
     l = n(120356),
-    o = n.n(l),
-    a = n(512722),
-    s = n.n(a),
+    a = n.n(l),
+    o = n(512722),
+    s = n.n(o),
     c = n(442837),
     d = n(481060),
     u = n(239091),
@@ -22,7 +22,7 @@ var i = n(255367),
     _ = n(981631),
     C = n(388032),
     N = n(243226);
-function w(e) {
+function Z(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -47,7 +47,7 @@ function w(e) {
     }
     return e;
 }
-function Z(e, t) {
+function S(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -65,9 +65,9 @@ function Z(e, t) {
         e
     );
 }
-function S(e) {
-    let { guild: t, id: l, type: o, isLocked: a, lockTooltipText: c } = e,
-        d = !a || null != c;
+function w(e) {
+    let { guild: t, id: l, type: a, isLocked: o, lockTooltipText: c } = e,
+        d = !o || null != c;
     s()(d, "No lockTooltipText provided while isLocked=true");
     let m = r.useCallback(
         (e) => {
@@ -76,7 +76,7 @@ function S(e) {
                 return (t) =>
                     (0, i.jsx)(
                         e,
-                        Z(w({}, t), {
+                        S(Z({}, t), {
                             id: l,
                             label: C.intl.string(C.t.oJ1Mu7),
                         }),
@@ -85,20 +85,20 @@ function S(e) {
         },
         [l],
     );
-    switch (o) {
+    switch (a) {
         case p.Kw.CHANNEL:
-            return (0, i.jsx)(P, {
+            return (0, i.jsx)(I, {
                 guild: t,
                 id: l,
-                isLocked: a,
+                isLocked: o,
                 lockTooltipText: c,
                 openEntryContextMenu: m,
             });
         case p.Kw.ROLE:
-            return (0, i.jsx)(I, {
+            return (0, i.jsx)(P, {
                 guild: t,
                 id: l,
-                isLocked: a,
+                isLocked: o,
                 lockTooltipText: c,
                 openEntryContextMenu: m,
             });
@@ -106,14 +106,14 @@ function S(e) {
             return (0, i.jsx)(T, {
                 guild: t,
                 id: l,
-                isLocked: a,
+                isLocked: o,
                 lockTooltipText: c,
                 openEntryContextMenu: m,
             });
     }
 }
-function P(e) {
-    let { guild: t, id: n, isLocked: l, lockTooltipText: a, openEntryContextMenu: s } = e,
+function I(e) {
+    let { guild: t, id: n, isLocked: l, lockTooltipText: o, openEntryContextMenu: s } = e,
         u = (0, m.bD)(t.id),
         {
             icon: p,
@@ -150,7 +150,7 @@ function P(e) {
                       width: 20,
                       height: 20,
                       color: "currentColor",
-                      className: o()(N.channelIcon, N.image),
+                      className: a()(N.channelIcon, N.image),
                   }),
                   (0, i.jsx)(d.Text, {
                       className: N.roleName,
@@ -165,17 +165,17 @@ function P(e) {
                             children: ["(", f, ")"],
                         })
                       : null,
-                  l ? (0, i.jsx)(E, { tooltipText: a }) : null,
+                  l ? (0, i.jsx)(E, { tooltipText: o }) : null,
               ],
           });
 }
-function I(e) {
+function P(e) {
     var t;
-    let { guild: l, id: a, isLocked: s, lockTooltipText: p } = e,
-        m = (0, c.e7)([j.Z], () => j.Z.getRole(l.id, a)),
+    let { guild: l, id: o, isLocked: s, lockTooltipText: p } = e,
+        m = (0, c.e7)([j.Z], () => j.Z.getRole(l.id, o)),
         b = (0, f.p9)({
             guildId: l.id,
-            roleId: a,
+            roleId: o,
             size: 24,
         }),
         h = r.useCallback(
@@ -187,7 +187,7 @@ function I(e) {
                         return (t) =>
                             (0, i.jsx)(
                                 e,
-                                Z(w({}, t), {
+                                S(Z({}, t), {
                                     guild: l,
                                     role: m,
                                 }),
@@ -203,12 +203,12 @@ function I(e) {
               className: N.identifier,
               children: [
                   null != b
-                      ? (0, i.jsx)(g.Z, w({ className: o()(N.__invalid_icon, N.image) }, b))
+                      ? (0, i.jsx)(g.Z, Z({ className: a()(N.__invalid_icon, N.image) }, b))
                       : (0, i.jsx)(d.lZ8, {
                             size: "custom",
                             width: 23,
                             height: 23,
-                            className: o()(N.shield, N.image),
+                            className: a()(N.shield, N.image),
                             color: null != (t = m.colorString) ? t : _.Pbq,
                         }),
                   (0, i.jsx)(d.Text, {
@@ -222,37 +222,37 @@ function I(e) {
           });
 }
 function T(e) {
-    let { guild: t, id: n, isLocked: r, lockTooltipText: l, openEntryContextMenu: o } = e,
-        a = (0, c.e7)([y.default], () => y.default.getUser(n)),
+    let { guild: t, id: n, isLocked: r, lockTooltipText: l, openEntryContextMenu: a } = e,
+        o = (0, c.e7)([y.default], () => y.default.getUser(n)),
         s = (0, c.e7)([x.ZP], () => {
             var e;
             return null == (e = x.ZP.getMember(t.id, n)) ? void 0 : e.nick;
         }, [t.id, n]),
         u = (0, c.e7)([v.Z], () => v.Z.hidePersonalInformation);
-    return null == a
+    return null == o
         ? null
         : (0, i.jsxs)("div", {
-              onContextMenu: o,
+              onContextMenu: a,
               className: N.identifier,
               children: [
                   (0, i.jsx)(d.qEK, {
                       className: N.image,
-                      src: a.getAvatarURL(t.id, 24),
-                      "aria-label": a.username,
+                      src: o.getAvatarURL(t.id, 24),
+                      "aria-label": o.username,
                       size: d.EFr.SIZE_24,
                   }),
                   (0, i.jsx)(d.Text, {
                       className: N.roleName,
                       color: "header-primary",
                       variant: "text-md/normal",
-                      children: null != s ? s : a.username,
+                      children: null != s ? s : o.username,
                   }),
                   u
                       ? null
                       : (0, i.jsx)(d.Text, {
                             className: N.tag,
                             variant: "text-sm/normal",
-                            children: O.ZP.getUserTag(a),
+                            children: O.ZP.getUserTag(o),
                         }),
                   r ? (0, i.jsx)(E, { tooltipText: l }) : null,
               ],
@@ -265,7 +265,7 @@ function E(e) {
         children: (e) =>
             (0, i.jsx)(
                 "div",
-                Z(w({ className: N.lockIcon }, e), {
+                S(Z({ className: N.lockIcon }, e), {
                     children: (0, i.jsx)(d.mBM, {
                         size: "xs",
                         color: "currentColor",

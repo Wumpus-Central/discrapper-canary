@@ -1,6 +1,6 @@
 e.exports = {
-    search: "search_a92646",
-    searchBar: "searchBar_a92646",
-    searchPopout: "searchPopout_a92646",
-    searchBarContainer: "searchBarContainer_a92646",
+    appTitleSearch: "appTitleSearch_a92646",
+    appTitleSearchBar: "appTitleSearchBar_a92646",
+    appTitleSearchPopout: "appTitleSearchPopout_a92646",
+    appTitleSearchBarContainer: "appTitleSearchBarContainer_a92646",
 };

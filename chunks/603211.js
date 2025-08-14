@@ -1,16 +1,16 @@
-n.d(t, { Z: () => o }), n(388685);
+n.d(t, { Z: () => a }), n(388685);
 var i = n(73800),
     r = n(562075),
     l = n(539202);
-function o(e) {
-    let { type: t, index: n, optionId: o, onDragStart: a, onDragComplete: s, onDragReset: c } = e,
+function a(e) {
+    let { type: t, index: n, optionId: a, onDragStart: o, onDragComplete: s, onDragReset: c } = e,
         [d, u] = i.useState(!1),
         [, p] = (0, r.c)({
             type: t,
             item: () => (
-                a(o),
+                o(a),
                 {
-                    id: o,
+                    id: a,
                     position: n,
                 }
             ),
@@ -31,7 +31,7 @@ function o(e) {
                     ? { dragSourcePosition: t.position }
                     : { dragSourcePosition: null };
             },
-            drop: () => ({ optionId: o }),
+            drop: () => ({ optionId: a }),
         });
     return {
         drag: p,

@@ -1,41 +1,41 @@
 n.d(t, { Z: () => p });
 var r = n(255367),
     i = n(73800),
-    a = n(120356),
-    l = n.n(a),
-    o = n(628238),
-    s = n(750030),
-    c = n(492593),
-    u = n(25015),
+    l = n(120356),
+    o = n.n(l),
+    u = n(628238),
+    a = n(750030),
+    s = n(492593),
+    c = n(25015),
     d = n(963550),
-    m = n(845080),
-    f = n(360514);
+    f = n(845080),
+    m = n(360514);
 let p = i.memo(function (e) {
     var t;
     let {
             message: n,
-            channel: a,
+            channel: l,
             compact: p,
             className: v,
-            isGroupStart: h,
-            hideSimpleEmbedContent: P = !0,
-            disableInteraction: b,
-            previewGuildId: g,
-            preview: x,
-            author: j,
+            isGroupStart: g,
+            hideSimpleEmbedContent: b = !0,
+            disableInteraction: E,
+            previewGuildId: O,
+            preview: y,
+            author: S,
         } = e,
-        O = null != g ? g : (0, s.k)(n),
-        _ = (0, o.A)((null != (t = n.editedTimestamp) ? t : n.timestamp).valueOf()),
-        { content: w } = (0, u.Z)(n, {
-            hideSimpleEmbedContent: P,
+        j = null != O ? O : (0, a.k)(n),
+        _ = (0, u.A)((null != (t = n.editedTimestamp) ? t : n.timestamp).valueOf()),
+        { content: h } = (0, c.Z)(n, {
+            hideSimpleEmbedContent: b,
             allowList: _,
             allowHeading: _,
             allowLinks: !0,
             previewLinkTarget: !0,
         }),
-        C = i.useMemo(() => {
+        P = i.useMemo(() => {
             var t, n;
-            return (0, m.Z)(
+            return (0, f.Z)(
                 ((t = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
@@ -63,8 +63,8 @@ let p = i.memo(function (e) {
                 })({}, e)),
                 (n = n =
                     {
-                        channel: a,
-                        guildId: O,
+                        channel: l,
+                        guildId: j,
                     }),
                 Object.getOwnPropertyDescriptors
                     ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
@@ -80,18 +80,18 @@ let p = i.memo(function (e) {
                       }),
                 t),
             );
-        }, [e, a, O]);
-    return (0, r.jsx)(c.Z, {
+        }, [e, l, j]);
+    return (0, r.jsx)(s.Z, {
         compact: p,
-        className: l()(v, {
-            [f.message]: !0,
-            [f.cozyMessage]: !p,
-            [f.groupStart]: h,
+        className: o()(v, {
+            [m.message]: !0,
+            [m.cozyMessage]: !p,
+            [m.groupStart]: g,
         }),
-        childrenHeader: C,
-        childrenMessageContent: (0, d.Z)(e, w),
-        disableInteraction: b,
-        author: j,
-        preview: x,
+        childrenHeader: P,
+        childrenMessageContent: (0, d.Z)(e, h),
+        disableInteraction: E,
+        author: S,
+        preview: y,
     });
 });

@@ -11,12 +11,12 @@ var r = n(255367),
     f = n(785717),
     p = n(221292),
     m = n(687158),
-    g = n(316027),
-    b = n(502762),
+    b = n(316027),
+    g = n(502762),
     j = n(848780),
     y = n(907179),
-    x = n(228168),
-    O = n(981631),
+    O = n(228168),
+    x = n(981631),
     h = n(388032),
     v = n(220566);
 function _(e) {
@@ -56,7 +56,7 @@ function I(e) {
             onHide: N,
             sourceAnalyticsLocations: S = [],
         } = e,
-        w = n === O.ME ? void 0 : n,
+        w = n === x.ME ? void 0 : n,
         A = (0, l.e7)([d.Z], () => d.Z.isBlocked(t.id)),
         { analyticsLocations: C } = (0, c.ZP)([...S, A ? a.Z.BLOCKED_PROFILE_MODAL : a.Z.IGNORED_PROFILE_MODAL]),
         D = (0, f.ZB)({
@@ -79,8 +79,8 @@ function I(e) {
             },
         ],
         R = (0, m.ZP)(t.id, w),
-        G = u.ZP.getName(null == R ? void 0 : R.guildId, I, t),
-        k = h.intl.formatToPlainString(h.t.KRe1Fh, { name: G });
+        k = u.ZP.getName(null == R ? void 0 : R.guildId, I, t),
+        G = h.intl.formatToPlainString(h.t.KRe1Fh, { name: k });
     return (0, r.jsx)(c.Gt, {
         value: C,
         children: (0, r.jsx)(f.Mt, {
@@ -93,18 +93,18 @@ function I(e) {
                 "data-migration-pending": !0,
                 transitionState: T,
                 className: v.root,
-                "aria-label": k,
+                "aria-label": G,
                 parentComponent: "RestrictedUserProfileModalV2",
-                children: (0, r.jsxs)(b.Z, {
+                children: (0, r.jsxs)(g.Z, {
                     user: t,
                     displayProfile: R,
-                    themeType: x.lY.MODAL_V2,
+                    themeType: O.lY.MODAL_V2,
                     children: [
                         (0, r.jsx)("div", { className: v.background }),
                         (0, r.jsxs)("div", {
                             className: v.content,
                             children: [
-                                (0, r.jsx)(g.Z, {
+                                (0, r.jsx)(b.Z, {
                                     user: t,
                                     guildId: w,
                                     iconColor: o.TVs.colors.TEXT_DEFAULT,
@@ -120,7 +120,7 @@ function I(e) {
                                         (0, r.jsx)(o.Text, {
                                             variant: "text-md/medium",
                                             color: "text-default",
-                                            children: h.intl.format(A ? h.t.T7QiLi : h.t.MnEow8, { username: G }),
+                                            children: h.intl.format(A ? h.t.T7QiLi : h.t.MnEow8, { username: k }),
                                         }),
                                     ],
                                 }),

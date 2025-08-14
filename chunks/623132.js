@@ -12,8 +12,8 @@ var l = n(481060),
     f = n(533815),
     p = n(853072),
     m = n(388032),
-    g = n(958461),
-    b = n(932366),
+    b = n(958461),
+    g = n(932366),
     j = n(776385);
 function y(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -40,7 +40,7 @@ function y(e) {
     }
     return e;
 }
-function x(e, t) {
+function O(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -58,7 +58,7 @@ function x(e, t) {
         e
     );
 }
-function O(e) {
+function x(e) {
     var { applicationId: t, userId: n, gameName: a } = e,
         c = (function (e, t) {
             if (null == e) return {};
@@ -89,10 +89,10 @@ function O(e) {
         trackEntryPointImpression: !0,
     });
     return null == s
-        ? (0, r.jsx)(l.X6q, x(y({}, c), { children: a }))
+        ? (0, r.jsx)(l.X6q, O(y({}, c), { children: a }))
         : (0, r.jsx)(
               l.X6q,
-              x(y({}, c), {
+              O(y({}, c), {
                   children: (0, r.jsx)(l.P3F, {
                       onClick: s,
                       className: j.clickableText,
@@ -145,14 +145,14 @@ function _(e) {
         ? (0, r.jsxs)("div", {
               className: j.card,
               children: [
-                  (0, r.jsx)("div", { className: b.loadingCover }),
+                  (0, r.jsx)("div", { className: g.loadingCover }),
                   (0, r.jsx)("div", {
                       className: j.details,
                       children: (0, r.jsxs)("div", {
-                          className: g.placeholderText,
+                          className: b.placeholderText,
                           children: [
-                              (0, r.jsx)("div", { className: g.placeholderBar }),
-                              (0, r.jsx)("div", { className: g.placeholderBar }),
+                              (0, r.jsx)("div", { className: b.placeholderBar }),
+                              (0, r.jsx)("div", { className: b.placeholderBar }),
                           ],
                       }),
                   }),
@@ -172,9 +172,9 @@ function _(e) {
                       className: j.details,
                       children: [
                           p
-                              ? (0, r.jsx)(l.X6q, x(y({}, Z), { children: _ }))
+                              ? (0, r.jsx)(l.X6q, O(y({}, Z), { children: _ }))
                               : (0, r.jsx)(
-                                    O,
+                                    x,
                                     y(
                                         {
                                             applicationId: P,
@@ -206,7 +206,6 @@ function _(e) {
                       (0, r.jsx)(f.Z, {
                           game: o,
                           widgetType: c,
-                          userId: t.id,
                           className: j.removeGameButton,
                       }),
               ],

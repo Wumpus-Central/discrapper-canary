@@ -21,9 +21,9 @@ var i,
     E = n(358446),
     S = n(371651),
     x = n(624864),
-    C = n(695346),
-    j = n(163612),
-    Z = n(314897),
+    j = n(695346),
+    Z = n(163612),
+    C = n(314897),
     I = n(592125),
     P = n(292959),
     w = n(158776),
@@ -33,8 +33,8 @@ var i,
     k = n(594174),
     R = n(974180),
     A = n(808506),
-    L = n(237997),
-    M = n(70956),
+    M = n(237997),
+    L = n(70956),
     z = n(129724),
     V = n(145597),
     W = n(449224),
@@ -88,9 +88,9 @@ function Y(e, t) {
         e
     );
 }
-let K = 5 * M.Z.Millis.SECOND,
-    X = 8 * M.Z.Millis.SECOND,
-    J = 30 * M.Z.Millis.SECOND,
+let K = 5 * L.Z.Millis.SECOND,
+    X = 8 * L.Z.Millis.SECOND,
+    J = 30 * L.Z.Millis.SECOND,
     Q = Object.freeze({
         priority: 0,
         duration: K,
@@ -120,7 +120,7 @@ function en(e) {
 }
 function ei(e, t) {
     let n = H({}, Q, t);
-    if (2 !== n.priority && !L.default.isInstanceFocused()) return null;
+    if (2 !== n.priority && !M.default.isInstanceFocused()) return null;
     let i = (0, l.Z)(),
         r = H(
             {
@@ -137,19 +137,19 @@ function ei(e, t) {
 function er(e) {
     let { channelId: t, ringing: n } = e,
         i = en(t);
-    if (!n.includes(Z.default.getId())) return ee(i);
+    if (!n.includes(C.default.getId())) return ee(i);
     if (null != i) return !1;
     let r = I.Z.getChannel(t);
     if (
         null == r ||
         !r.isRingable() ||
         ("GUILD_RING_START" === e.type &&
-            !j.Z.getCurrentConfig({
+            !Z.Z.getCurrentConfig({
                 guildId: e.guildId,
                 location: "OverlayStartRinging",
             }).enabled) ||
         T.Z.getStatus() === U.Skl.DND ||
-        C.QZ.getSetting()
+        j.QZ.getSetting()
     )
         return !1;
     let o = q.find((e) => 1 === e.type && e.channelId === t && e.messageType === U.uaV.CALL);
@@ -163,7 +163,7 @@ function er(e) {
 }
 class eo extends (i = s.ZP.Store) {
     initialize() {
-        this.waitFor(L.default, I.Z, k.default, x.Z);
+        this.waitFor(M.default, I.Z, k.default, x.Z);
     }
     getNotifications() {
         return q;
@@ -226,7 +226,7 @@ let el = new eo(
                       if (!(0, _.eF)(l, r, !0, !0)) return !1;
                       let e = (function (e, t, n) {
                           let i, r;
-                          if ((o()(null != t.activity, "received null message activity"), n.id === Z.default.getId()))
+                          if ((o()(null != t.activity, "received null message activity"), n.id === C.default.getId()))
                               return !1;
                           let l = W.Z.getGame();
                           if (null == l) return !1;
@@ -260,7 +260,7 @@ let el = new eo(
                       if (!1 !== e) return e;
                   }
                   if (
-                      ((!L.default.isInstanceLocked() || L.default.isPinned(U.Odu.TEXT)) && r === N.Z.getChannelId()) ||
+                      ((!M.default.isInstanceLocked() || M.default.isPinned(U.Odu.TEXT)) && r === N.Z.getChannelId()) ||
                       x.Z.isNotificationDisabled(b.OverlayNotificationDisabledSetting.TEXT_CHAT) ||
                       D.Z.disableNotifications ||
                       !(0, _.eF)(l, r)
@@ -291,13 +291,13 @@ let el = new eo(
               GUILD_RING_STOP: function (e) {
                   let { channelId: t, guildId: n, ringing: i } = e;
                   if (
-                      !j.Z.getCurrentConfig({
+                      !Z.Z.getCurrentConfig({
                           guildId: n,
                           location: "OverlayStopRinging",
                       }).enabled
                   )
                       return !1;
-                  i.includes(Z.default.getId()) && ee(en(t));
+                  i.includes(C.default.getId()) && ee(en(t));
               },
               ACTIVITY_USER_ACTION: function (e) {
                   let t,

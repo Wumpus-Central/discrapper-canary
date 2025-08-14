@@ -2,8 +2,8 @@ n.d(t, { w: () => d }), n(388685), n(539854), n(290780);
 var i = n(73800),
     r = n(581364),
     l = n(984933),
-    o = n(496675),
-    a = n(282923),
+    a = n(496675),
+    o = n(282923),
     s = n(981631),
     c = n(388032);
 function d(e) {
@@ -14,7 +14,7 @@ function d(e) {
             let i = n.map((e) => ({
                 id: e.channel.id,
                 name: e.channel.name,
-                canManage: o.Z.can(s.Plq.MANAGE_ROLES, e.channel),
+                canManage: a.Z.can(s.Plq.MANAGE_ROLES, e.channel),
             }));
             return (
                 i.unshift({
@@ -29,7 +29,7 @@ function d(e) {
         p = i.useMemo(() => {
             var e;
             let i = (e = n).startsWith("#") ? e.substr(1) : e;
-            return (0, a.B)(t, u, i);
+            return (0, o.B)(t, u, i);
         }, [t, n]);
     return {
         query: n,
