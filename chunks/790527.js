@@ -332,6 +332,7 @@ function w(e) {
                 }),
                 eo
                     ? (0, r.jsx)(c.olH, {
+                          "data-migration-pending": !0,
                           onClick: Y,
                           className: A.closeButton,
                       })

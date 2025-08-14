@@ -65,6 +65,7 @@ function a(e) {
                               userId: t.id,
                               games: n.games,
                               disableInteraction: c,
+                              widgetType: n.type,
                           },
                           s,
                       ),

@@ -79,8 +79,8 @@ function I(e) {
             },
         ],
         R = (0, m.ZP)(t.id, w),
-        k = u.ZP.getName(null == R ? void 0 : R.guildId, I, t),
-        G = h.intl.formatToPlainString(h.t.KRe1Fh, { name: k });
+        G = u.ZP.getName(null == R ? void 0 : R.guildId, I, t),
+        k = h.intl.formatToPlainString(h.t.KRe1Fh, { name: G });
     return (0, r.jsx)(c.Gt, {
         value: C,
         children: (0, r.jsx)(f.Mt, {
@@ -93,7 +93,7 @@ function I(e) {
                 "data-migration-pending": !0,
                 transitionState: T,
                 className: v.root,
-                "aria-label": G,
+                "aria-label": k,
                 parentComponent: "RestrictedUserProfileModalV2",
                 children: (0, r.jsxs)(b.Z, {
                     user: t,
@@ -120,7 +120,7 @@ function I(e) {
                                         (0, r.jsx)(o.Text, {
                                             variant: "text-md/medium",
                                             color: "text-default",
-                                            children: h.intl.format(A ? h.t.T7QiLi : h.t.MnEow8, { username: k }),
+                                            children: h.intl.format(A ? h.t.T7QiLi : h.t.MnEow8, { username: G }),
                                         }),
                                     ],
                                 }),

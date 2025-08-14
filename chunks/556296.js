@@ -450,7 +450,8 @@ d.Z.setGetKeybindList(() => {
 });
 class em extends (i = c.ZP.DeviceSettingsStore) {
     initialize(e) {
-        __OVERLAY__ || this.waitFor(m.Z, v.default), (Z = null != e ? e : {});
+        for (let t in (__OVERLAY__ || this.waitFor(m.Z, v.default), (Z = null != e ? e : {})))
+            delete Z[t].latched, delete Z[t].pressedTime;
     }
     getUserAgnosticState() {
         return Z;

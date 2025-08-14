@@ -237,7 +237,6 @@ var Y = (function (e) {
     z = (function (e) {
         return (
             (e.OPUS = "opus"),
-            (e.RED = "red"),
             (e.VP8 = "VP8"),
             (e.VP9 = "VP9"),
             (e.H264 = "H264"),

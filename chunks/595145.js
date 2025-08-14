@@ -33,10 +33,10 @@ var r = n(255367),
     D = n(537006),
     L = n(681837),
     R = n(78806),
-    k = n(91433),
-    G = n(451834),
-    M = n(900927),
-    B = n(944043),
+    G = n(91433),
+    k = n(451834),
+    B = n(900927),
+    M = n(944043),
     U = n(502762),
     F = n(530),
     V = n(4517),
@@ -115,9 +115,9 @@ function en(e) {
         }),
         eL = (0, j.Y)({ userId: n.id }),
         eR = (0, b.vh)(n.id),
-        ek = (0, Z.Z)(n.id),
-        eG = (0, p.Dt)(),
-        eM = ee.intl.format(ee.t.KRe1Fh, { name: eT });
+        eG = (0, Z.Z)(n.id),
+        ek = (0, p.Dt)(),
+        eB = ee.intl.format(ee.t.KRe1Fh, { name: eT });
     return (
         l.useEffect(() => {
             let e = () => {
@@ -151,7 +151,7 @@ function en(e) {
                             hideShadow: !0,
                             className: et.root,
                             transitionState: ed,
-                            "aria-labelledby": eG,
+                            "aria-labelledby": ek,
                             parentComponent: "UserProfileModalV2",
                             children: [
                                 eb
@@ -159,14 +159,14 @@ function en(e) {
                                           className: et.previewBar,
                                           children: [
                                               (0, r.jsxs)(a.X6q, {
-                                                  id: eG,
+                                                  id: ek,
                                                   variant: "heading-sm/normal",
                                                   color: "text-primary",
                                                   children: [
                                                       (0, r.jsx)(a.nn4, {
                                                           children: ""
                                                               .concat(ee.intl.string(ee.t.apViam), ": ")
-                                                              .concat(eM),
+                                                              .concat(eB),
                                                       }),
                                                       (0, r.jsx)("span", {
                                                           "aria-hidden": !0,
@@ -185,8 +185,8 @@ function en(e) {
                                       })
                                     : (0, r.jsx)(a.nn4, {
                                           children: (0, r.jsx)(a.H, {
-                                              id: eG,
-                                              children: eM,
+                                              id: ek,
+                                              children: eB,
                                           }),
                                       }),
                                 (0, r.jsx)(a.y5t, {
@@ -222,7 +222,7 @@ function en(e) {
                                                                 displayProfile: eE,
                                                                 themeType: Q.lY.MODAL_V2,
                                                             }),
-                                                            (0, r.jsx)(G.Z, {
+                                                            (0, r.jsx)(k.Z, {
                                                                 userId: n.id,
                                                                 onClose: ep,
                                                                 className: et.interactionToast,
@@ -274,7 +274,7 @@ function en(e) {
                                                             eZ === $.OGo.PENDING_INCOMING &&
                                                                 (0, r.jsx)(U.Z.Overlay, {
                                                                     className: et.profileOverlay,
-                                                                    children: (0, r.jsx)(k.Z, {
+                                                                    children: (0, r.jsx)(G.Z, {
                                                                         user: n,
                                                                         applicationId: eN,
                                                                         guildId:
@@ -293,7 +293,7 @@ function en(e) {
                                                                     U.Z.Overlay,
                                                                     {
                                                                         className: et.profileOverlay,
-                                                                        children: (0, r.jsx)(k.Z, {
+                                                                        children: (0, r.jsx)(G.Z, {
                                                                             user: n,
                                                                             guildId:
                                                                                 null !=
@@ -331,7 +331,7 @@ function en(e) {
                                                                     isPremiumUser: (0, I.I5)(en),
                                                                     onInteraction: ep,
                                                                 }),
-                                                            (0, r.jsx)(B.Z, {
+                                                            (0, r.jsx)(M.Z, {
                                                                 user: n,
                                                                 className: et.profileBanner,
                                                             }),
@@ -361,7 +361,7 @@ function en(e) {
                                                                 }),
                                                             (0, r.jsx)(z.Z, {
                                                                 heading: ee.intl.string(ee.t.a6XYDw),
-                                                                children: (0, r.jsx)(M.Z, {
+                                                                children: (0, r.jsx)(B.Z, {
                                                                     userId: n.id,
                                                                     guildId: null == eE ? void 0 : eE.guildId,
                                                                     tooltipDelay: Q.vB,
@@ -377,12 +377,12 @@ function en(e) {
                                                                     headingColor: "currentColor",
                                                                     scrollIntoView: es === Q.Tb.ROLES,
                                                                 }),
-                                                            ek.length > 0 &&
+                                                            eG.length > 0 &&
                                                                 (0, r.jsx)(z.Z, {
                                                                     heading: ee.intl.string(ee.t["3fe7U1"]),
                                                                     scrollIntoView: es === Q.Tb.CONNECTIONS,
                                                                     children: (0, r.jsx)(H.Z, {
-                                                                        connections: ek,
+                                                                        connections: eG,
                                                                         userId: n.id,
                                                                         className: et.profileAppConnections,
                                                                     }),

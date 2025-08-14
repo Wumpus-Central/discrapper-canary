@@ -33,7 +33,11 @@ function o(e) {
               ? (t.avatarId = n.originalAsset.id)
               : ((t.avatar = n.imageUri), (t.avatarDescription = n.description));
     }
-    return void 0 !== e.pendingAvatarDecoration && (t.avatarDecoration = e.pendingAvatarDecoration), t;
+    return (
+        void 0 !== e.pendingAvatarDecoration && (t.avatarDecoration = e.pendingAvatarDecoration),
+        void 0 !== e.pendingDisplayNameStyles && (t.displayNameStyles = e.pendingDisplayNameStyles),
+        t
+    );
 }
 function a(e) {
     let t = {};

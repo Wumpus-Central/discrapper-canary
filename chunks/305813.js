@@ -1,28 +1,30 @@
-n.d(t, { Z: () => E }), n(388685);
+n.d(t, { Z: () => T }), n(388685);
 var r = n(255367),
     o = n(73800),
     l = n(120356),
-    i = n.n(l),
-    a = n(481060),
-    s = n(410030),
-    c = n(22267),
-    d = n(786761),
-    u = n(3148),
-    p = n(739566),
-    f = n(753206),
-    m = n(678135),
-    g = n(687158),
-    h = n(28660),
-    b = n(502762),
-    x = n(598077),
-    j = n(626135),
-    _ = n(63063),
-    S = n(981631),
-    C = n(228168),
-    O = n(698282),
-    y = n(388032),
-    P = n(53426);
-function v(e) {
+    a = n.n(l),
+    i = n(442837),
+    s = n(481060),
+    c = n(410030),
+    d = n(22267),
+    u = n(786761),
+    p = n(3148),
+    f = n(739566),
+    m = n(753206),
+    g = n(678135),
+    h = n(643879),
+    b = n(687158),
+    x = n(28660),
+    j = n(502762),
+    _ = n(25990),
+    S = n(626135),
+    C = n(63063),
+    O = n(981631),
+    y = n(228168),
+    v = n(698282),
+    P = n(388032),
+    k = n(53426);
+function N(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -47,7 +49,7 @@ function v(e) {
     }
     return e;
 }
-function k(e, t) {
+function E(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -65,90 +67,101 @@ function k(e, t) {
         e
     );
 }
-function E(e) {
-    let { user: t, selectedFontId: n, selectedEffectId: l, selectedColors: E, onClose: N } = e,
-        D = new x.Z(
-            k(v({}, t), {
-                displayNameStyles: {
-                    fontId: n,
-                    effectId: l,
-                    colors: E,
-                },
-            }),
-        ),
-        w = (0, s.ZP)(),
-        R = (0, a.wjy)(w),
-        [A, I] = (0, o.useState)(R),
-        L = (0, g.ZP)(t.id, null),
-        { bannerSrc: B } = (0, h.Z)({
-            displayProfile: L,
+function T(e) {
+    let { user: t, selectedFontId: n, selectedEffectId: l, selectedColors: T, onClose: w } = e,
+        R = (0, c.ZP)(),
+        A = (0, s.wjy)(R),
+        [I, L] = (0, o.useState)(A),
+        B = (0, b.ZP)(t.id, null),
+        { bannerSrc: M } = (0, x.Z)({
+            displayProfile: B,
             size: 413,
             canAnimate: !1,
         }),
-        M = A ? S.BRd.DARK : S.BRd.LIGHT;
-    ((R && A) || (!R && !A)) && (M = w);
-    let Z = (0, o.useCallback)(() => {
-            j.default.track(S.rMx.DISPLAY_NAME_STYLES_CLOSED), N();
-        }, [N]),
-        G = (0, o.useCallback)((e) => {
-            I(e === S.BRd.DARK), j.default.track(S.rMx.DISPLAY_NAME_STYLES_THEME_TOGGLE, { dark: e === S.BRd.DARK });
-        }, []);
+        G = (0, i.e7)([_.Z], () => _.Z.getAllPending()),
+        Z = (0, h.SD)({
+            userId: t.id,
+            image: G.pendingAvatar,
+        }),
+        Y = I ? O.BRd.DARK : O.BRd.LIGHT;
+    ((A && I) || (!A && !I)) && (Y = R);
+    let H = (0, o.useCallback)(() => {
+            S.default.track(O.rMx.DISPLAY_NAME_STYLES_CLOSED), w();
+        }, [w]),
+        z = (0, o.useCallback)((e) => {
+            L(e === O.BRd.DARK), S.default.track(O.rMx.DISPLAY_NAME_STYLES_THEME_TOGGLE, { dark: e === O.BRd.DARK });
+        }, []),
+        F = (0, o.useMemo)(() => {
+            var e;
+            let r = (0, f.ij)(t, null);
+            return E(N({}, r), {
+                nick: null != (e = G.pendingGlobalName) ? e : r.nick,
+                displayNameStyles: {
+                    fontId: n,
+                    effectId: l,
+                    colors: T,
+                },
+            });
+        }, [t, n, l, T, G.pendingGlobalName]);
     return (0, r.jsxs)("div", {
-        className: P.previewSection,
+        className: k.previewSection,
         children: [
-            (0, r.jsx)(a.xBx, {
+            (0, r.jsx)(s.xBx, {
                 "data-migration-pending": !0,
                 separator: !1,
-                className: P.sectionHeader,
-                children: (0, r.jsx)(a.olH, {
+                className: k.sectionHeader,
+                children: (0, r.jsx)(s.olH, {
                     "data-migration-pending": !0,
-                    onClick: Z,
-                    innerClassName: P.closeButton,
+                    onClick: H,
+                    innerClassName: k.closeButton,
                 }),
             }),
-            null != B &&
-                (0, r.jsx)(b.Z, {
-                    user: D,
-                    displayProfile: L,
-                    themeType: C.lY.MODAL_V2,
-                    className: P.backgroundThemeContainer,
+            null != M &&
+                (0, r.jsx)(j.Z, {
+                    user: t,
+                    displayProfile: B,
+                    themeType: y.lY.MODAL_V2,
+                    className: k.backgroundThemeContainer,
                     forceUserTheme: !0,
                     children: (0, r.jsx)("div", {
-                        className: P.bannerBackground,
-                        style: { backgroundImage: "url(".concat(B, ")") },
+                        className: k.bannerBackground,
+                        style: { backgroundImage: "url(".concat(M, ")") },
                     }),
                 }),
-            (0, r.jsx)(a.f6W, {
-                theme: M,
+            (0, r.jsx)(s.f6W, {
+                theme: Y,
                 children: (e) =>
                     (0, r.jsxs)("div", {
-                        className: i()(P.previewCards, e),
+                        className: a()(k.previewCards, e),
                         inert: !0,
                         children: [
+                            (0, r.jsx)(
+                                g.Z,
+                                E(N({ user: t }, G), {
+                                    pendingAvatar: Z,
+                                    pendingDisplayNameStyles: F.displayNameStyles,
+                                    canUsePremiumCustomization: !0,
+                                    disabledInputs: !0,
+                                    hideCustomStatus: !0,
+                                    hideBioSection: !0,
+                                    containerClassName: k.profile,
+                                    interactive: !1,
+                                    hideViewFullProfileButton: !0,
+                                }),
+                            ),
                             (0, r.jsx)(m.Z, {
-                                user: D,
-                                pendingAvatar: void 0,
-                                canUsePremiumCustomization: !0,
-                                disabledInputs: !0,
-                                hideCustomStatus: !0,
-                                hideBioSection: !0,
-                                containerClassName: P.profile,
-                                interactive: !1,
-                                hideViewFullProfileButton: !0,
-                            }),
-                            (0, r.jsx)(f.Z, {
-                                author: (0, p.ij)(D, null),
-                                message: (0, d.e5)(
-                                    k(
-                                        v(
+                                author: F,
+                                message: (0, u.e5)(
+                                    E(
+                                        N(
                                             {},
-                                            (0, u.ZP)({
+                                            (0, p.ZP)({
                                                 channelId: "1337",
-                                                content: y.intl.string(O.default.h5Cuen),
+                                                content: P.intl.string(v.default.h5Cuen),
                                             }),
                                         ),
                                         {
-                                            state: S.yb.SENT,
+                                            state: O.yb.SENT,
                                             id: "0",
                                         },
                                     ),
@@ -156,56 +169,58 @@ function E(e) {
                                 isGroupStart: !0,
                                 hideSimpleEmbedContent: !0,
                                 hideGuildTag: !0,
-                                className: P.chatMessage,
+                                className: k.chatMessage,
                             }),
-                            (0, r.jsx)(c.Z, {
-                                user: D,
-                                nameplate: null,
-                                nameplateData: D.nameplate,
-                                className: P.nameplate,
+                            (0, r.jsx)(d.Z, {
+                                user: t,
+                                nameplate: G.pendingNameplate,
+                                nameplateData: void 0 === G.pendingNameplate ? t.nameplate : void 0,
+                                pendingGlobalName: G.pendingGlobalName,
+                                pendingDisplayNameStyles: F.displayNameStyles,
+                                className: k.nameplate,
                             }),
                         ],
                     }),
             }),
             (0, r.jsxs)("div", {
-                className: P.themeToggleSection,
+                className: k.themeToggleSection,
                 children: [
-                    (0, r.jsx)(a.Text, {
+                    (0, r.jsx)(s.Text, {
                         variant: "text-xs/normal",
                         color: "text-muted",
-                        children: y.intl.format(O.default.prQba2, {
-                            helpArticleLink: _.Z.getArticleURL(S.BhN.DISPLAY_NAME_STYLES),
+                        children: P.intl.format(v.default.prQba2, {
+                            helpArticleLink: C.Z.getArticleURL(O.BhN.DISPLAY_NAME_STYLES),
                         }),
                     }),
-                    (0, r.jsx)(T, {
-                        darkPreview: A,
-                        onToggleTheme: G,
+                    (0, r.jsx)(D, {
+                        darkPreview: I,
+                        onToggleTheme: z,
                     }),
                 ],
             }),
         ],
     });
 }
-function T(e) {
+function D(e) {
     let { darkPreview: t, onToggleTheme: n } = e,
-        o = t ? S.BRd.DARK : S.BRd.LIGHT;
-    return (0, r.jsx)(a.sY7, {
-        className: P.themeToggleControl,
-        optionClassName: P.themeToggleOption,
+        o = t ? O.BRd.DARK : O.BRd.LIGHT;
+    return (0, r.jsx)(s.sY7, {
+        className: k.themeToggleControl,
+        optionClassName: k.themeToggleOption,
         options: [
             {
                 name: "",
-                tooltip: y.intl.string(y.t.b8Cei4),
-                value: S.BRd.DARK,
-                icon: a.Z6G,
-                className: o === S.BRd.DARK ? P.themeToggleOptionSelected : void 0,
+                tooltip: P.intl.string(P.t.b8Cei4),
+                value: O.BRd.DARK,
+                icon: s.Z6G,
+                className: o === O.BRd.DARK ? k.themeToggleOptionSelected : void 0,
             },
             {
                 name: "",
-                tooltip: y.intl.string(y.t.K2sFfn),
-                value: S.BRd.LIGHT,
-                icon: a.chG,
-                className: o === S.BRd.LIGHT ? P.themeToggleOptionSelected : void 0,
+                tooltip: P.intl.string(P.t.K2sFfn),
+                value: O.BRd.LIGHT,
+                icon: s.chG,
+                className: o === O.BRd.LIGHT ? k.themeToggleOptionSelected : void 0,
             },
         ],
         value: o,

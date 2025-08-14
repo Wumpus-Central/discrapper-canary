@@ -2,20 +2,21 @@ n.d(t, {
     FD: () => h,
     I5: () => O,
     Mn: () => b,
-    OU: () => L,
-    P6: () => w,
+    NI: () => C,
+    OU: () => x,
+    P6: () => D,
     Rx: () => S,
     S2: () => E,
     V3: () => y,
     W0: () => v,
-    W3: () => P,
+    W3: () => w,
     Zy: () => m,
-    b9: () => C,
+    b9: () => R,
     cV: () => T,
     e1: () => I,
-    iR: () => D,
+    iR: () => L,
     s4: () => N,
-    si: () => R,
+    si: () => P,
     ss: () => g,
     xn: () => A,
 });
@@ -247,21 +248,27 @@ function N(e) {
         primaryGuildId: e,
     });
 }
-function C() {
-    a.Z.dispatch({ type: "USER_SETTINGS_CLEAR_ERRORS" });
+function C(e) {
+    a.Z.dispatch({
+        type: "USER_SETTINGS_ACCOUNT_SET_PENDING_DISPLAY_NAME_STYLES",
+        displayNameStyles: e,
+    });
 }
 function R() {
-    a.Z.dispatch({ type: "USER_SETTINGS_RESET_PENDING_ACCOUNT_CHANGES" });
+    a.Z.dispatch({ type: "USER_SETTINGS_CLEAR_ERRORS" });
 }
 function P() {
-    a.Z.dispatch({ type: "USER_SETTINGS_RESET_ALL_PENDING" });
+    a.Z.dispatch({ type: "USER_SETTINGS_RESET_PENDING_ACCOUNT_CHANGES" });
 }
 function w() {
-    a.Z.dispatch({ type: "USER_SETTINGS_ACCOUNT_RESET_AND_CLOSE_FORM" });
+    a.Z.dispatch({ type: "USER_SETTINGS_RESET_ALL_PENDING" });
 }
 function D() {
-    a.Z.dispatch({ type: "USER_SETTINGS_ACCOUNT_RESET_PENDING_LEGACY_USERNAME_DISABLED" });
+    a.Z.dispatch({ type: "USER_SETTINGS_ACCOUNT_RESET_AND_CLOSE_FORM" });
 }
 function L() {
+    a.Z.dispatch({ type: "USER_SETTINGS_ACCOUNT_RESET_PENDING_LEGACY_USERNAME_DISABLED" });
+}
+function x() {
     a.Z.dispatch({ type: "USER_SETTINGS_RESET_PENDING_PRIMARY_GUILD_CHANGES" });
 }

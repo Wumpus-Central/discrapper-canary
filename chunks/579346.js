@@ -2,8 +2,8 @@ n.d(t, { Z: () => h });
 var r = n(255367),
     o = n(73800),
     l = n(522942),
-    i = n(793030),
-    a = n(481060),
+    a = n(793030),
+    i = n(481060),
     s = n(797967),
     c = n(626135),
     d = n(660662),
@@ -39,14 +39,14 @@ function h(e) {
     return (0, r.jsxs)("div", {
         className: j,
         children: [
-            (0, r.jsxs)(i.X6, {
+            (0, r.jsxs)(a.X6, {
                 variant: "heading-md/semibold",
                 className: g.selectorHeading,
                 children: [
                     f.intl.string(p.default["JOpi7+"]),
-                    (0, r.jsx)(a.SrA, {
+                    (0, r.jsx)(i.SrA, {
                         size: "xs",
-                        color: a.TVs.colors.TEXT_DEFAULT,
+                        color: i.TVs.colors.TEXT_DEFAULT,
                     }),
                 ],
             }),

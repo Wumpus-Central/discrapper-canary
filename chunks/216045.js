@@ -1,4 +1,4 @@
-n.d(t, { Z: () => F }), n(388685);
+n.d(t, { Z: () => z }), n(388685);
 var i = n(255367),
     r = n(73800),
     s = n(512722),
@@ -39,15 +39,57 @@ var i = n(255367),
     U = n(921944),
     V = n(388032),
     G = n(179571);
-function F() {
-    var e, t;
-    let n = (0, l.e7)([R.default], () => {
+function F(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            i = Object.keys(n);
+        "function" == typeof Object.getOwnPropertySymbols &&
+            (i = i.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                }),
+            )),
+            i.forEach(function (t) {
+                var i;
+                (i = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: i,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0,
+                          })
+                        : (e[t] = i);
+            });
+    }
+    return e;
+}
+function H(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var i = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, i);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function z() {
+    let e = (0, l.e7)([R.default], () => {
             let e = R.default.getCurrentUser();
             return a()(null != e, "UserSettingsProfileCustomization: user cannot be undefined"), e;
         }),
-        s = (0, l.e7)([A.Z], () => A.Z.hidePersonalInformation),
-        F = (0, l.cj)([P.Z], () => P.Z.getAllPending()),
-        { pendingBio: H, pendingAvatar: z, pendingNameplate: W } = F,
+        t = (0, l.e7)([A.Z], () => A.Z.hidePersonalInformation),
+        n = (0, l.cj)([P.Z], () => P.Z.getAllPending()),
+        { pendingBio: s, pendingAvatar: z, pendingNameplate: W } = n,
         Y = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -68,14 +110,14 @@ function F() {
                         !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]);
             }
             return r;
-        })(F, ["pendingBio", "pendingAvatar", "pendingNameplate"]),
+        })(n, ["pendingBio", "pendingAvatar", "pendingNameplate"]),
         K = (0, N.SD)({
-            userId: n.id,
+            userId: e.id,
             image: z,
         }),
         q = (0, l.e7)([P.Z], () => P.Z.showNotice()),
-        X = k.dN.useSetting() && null != H ? E.ZP.parse(void 0, H).content : H,
-        J = Z.ZP.canUsePremiumProfileCustomization(n),
+        X = k.dN.useSetting() && null != s ? E.ZP.parse(void 0, s).content : s,
+        J = Z.ZP.canUsePremiumProfileCustomization(e),
         { analyticsLocations: Q, newestAnalyticsLocation: $ } = (0, f.ZP)(h.Z.USER_SETTINGS_USER_PROFILE),
         ee = (0, y.T)({ location: "UserSettingsProfileCustomization" }),
         et = (0, _.Nj)(o.z.RECENT_AVATARS_SETTINGS_MENU_NEW_BADGE),
@@ -93,7 +135,7 @@ function F() {
         { showRedesign: eo } = w.b.useExperiment({ location: "profile customization" }),
         ec = !J,
         ed = r.useRef(null);
-    return s
+    return t
         ? (0, i.jsx)(g.Z, {})
         : (0, i.jsxs)(f.Gt, {
               value: Q,
@@ -102,62 +144,36 @@ function F() {
                   (0, i.jsx)(v.Z, {
                       profilePreview: (0, i.jsx)(
                           S.Z,
-                          ((e = (function (e) {
-                              for (var t = 1; t < arguments.length; t++) {
-                                  var n = null != arguments[t] ? arguments[t] : {},
-                                      i = Object.keys(n);
-                                  "function" == typeof Object.getOwnPropertySymbols &&
-                                      (i = i.concat(
-                                          Object.getOwnPropertySymbols(n).filter(function (e) {
-                                              return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                          }),
-                                      )),
-                                      i.forEach(function (t) {
-                                          var i;
-                                          (i = n[t]),
-                                              t in e
-                                                  ? Object.defineProperty(e, t, {
-                                                        value: i,
-                                                        enumerable: !0,
-                                                        configurable: !0,
-                                                        writable: !0,
-                                                    })
-                                                  : (e[t] = i);
-                                      });
-                              }
-                              return e;
-                          })(
-                              {
-                                  user: n,
-                                  canUsePremiumCustomization: J,
-                                  onUpsellClick: L.Z,
-                                  pendingBio: X,
-                              },
-                              Y,
-                          )),
-                          (t = t = { pendingAvatar: K }),
-                          Object.getOwnPropertyDescriptors
-                              ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-                              : (function (e, t) {
-                                    var n = Object.keys(e);
-                                    if (Object.getOwnPropertySymbols) {
-                                        var i = Object.getOwnPropertySymbols(e);
-                                        n.push.apply(n, i);
-                                    }
-                                    return n;
-                                })(Object(t)).forEach(function (n) {
-                                    Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-                                }),
-                          e),
+                          H(
+                              F(
+                                  {
+                                      user: e,
+                                      canUsePremiumCustomization: J,
+                                      onUpsellClick: L.Z,
+                                      pendingBio: X,
+                                  },
+                                  Y,
+                              ),
+                              { pendingAvatar: K },
+                          ),
                       ),
-                      nameplatePreview: (0, i.jsx)(x.Z, {
-                          user: n,
-                          nameplate: W,
-                          nameplateData: void 0 === W ? n.nameplate : void 0,
-                          pendingGlobalName: Y.pendingGlobalName,
-                          className: G.nameplatePreview,
-                          isHighlighted: !0,
-                      }),
+                      nameplatePreview: (0, i.jsx)(
+                          x.Z,
+                          H(
+                              F(
+                                  {
+                                      user: e,
+                                      nameplate: W,
+                                      nameplateData: void 0 === W ? e.nameplate : void 0,
+                                  },
+                                  Y,
+                              ),
+                              {
+                                  className: G.nameplatePreview,
+                                  isHighlighted: !0,
+                              },
+                          ),
+                      ),
                       children: (0, i.jsx)(M.Z, {}),
                   }),
                   eo && (0, i.jsx)(T.Z, {}),
@@ -169,7 +185,7 @@ function F() {
                       children: (0, i.jsx)("div", {
                           ref: ed,
                           children: (0, i.jsx)(I.Z, {
-                              user: n,
+                              user: e,
                               shouldShow: ec,
                               isVisible: ea,
                           }),

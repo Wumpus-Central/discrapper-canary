@@ -34,7 +34,7 @@ function L(e, t, n) {
     var r;
     let i = performance.now(),
         l = null != (r = n.context) ? r : Z.Yn.DEFAULT;
-    if (!0 !== n.latched && e) n.pressedTime = i;
+    if (e) n.pressedTime = i;
     else if (
         null != n.pressedTime &&
         (0, E.f)({
@@ -44,7 +44,7 @@ function L(e, t, n) {
     ) {
         let e = A._M,
             { pttLatchingEnabled: t = !1 } = v.Z.getModeOptions(l);
-        if (!0 === t && i < n.pressedTime + e) {
+        if (!n.latched && !0 === t && i < n.pressedTime + e) {
             n.latched = !0;
             return;
         }

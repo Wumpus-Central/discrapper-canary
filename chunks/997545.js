@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x }), n(388685), n(415506), n(49124), n(642613), n(35282), n(539854);
+n.d(t, { Z: () => L }), n(388685), n(415506), n(49124), n(642613), n(35282), n(539854);
 var r = n(595182),
     i = n.n(r),
     o = n(117806),
@@ -74,24 +74,20 @@ function A(e, t) {
 let N = 50,
     C = 0.9,
     R = 0.1,
-    P = 0,
-    w = {
-        fec: !0,
-        packetLossRate: 0.3,
-    };
-function D(e) {
+    P = 0;
+function w(e) {
     return (null != e ? e : v.Qx) / v.Qx;
 }
-function L(e) {
+function D(e) {
     return null != e && 0 !== e ? e + 1 : 0;
 }
-class x extends _.Z {
+class L extends _.Z {
     static create(e, t, n) {
-        let r = new x(e, t, !0);
+        let r = new L(e, t, !0);
         return r.initialize(n), r;
     }
     static createReplay(e, t) {
-        let n = new x(e, "0", !0),
+        let n = new L(e, "0", !0),
             r = (0, b.zS)();
         n.initializeStreamParameters([
             {
@@ -113,7 +109,7 @@ class x extends _.Z {
                             {
                                 type: "audio",
                                 name: v.ad.OPUS,
-                                priority: 2,
+                                priority: 1,
                                 payloadType: 120,
                             },
                             ...(0, g.yQ)(t, r).map((e, t) => {
@@ -177,7 +173,7 @@ class x extends _.Z {
                                 {
                                     type: "audio",
                                     name: v.ad.OPUS,
-                                    priority: 2,
+                                    priority: 1,
                                     payloadType: 120,
                                 },
                                 ...(0, g.yQ)(r, i).map((e, t) => {
@@ -345,16 +341,7 @@ class x extends _.Z {
             super.destroy();
     }
     setCodecs(e, t, n) {
-        this.logger.info("Setting codecs for context: ".concat(n, ": ").concat(e, " ").concat(t));
-        let r = this.getCodecOptions(e, t, n),
-            i =
-                e === v.ad.RED
-                    ? {
-                          fec: !1,
-                          packetLossRate: 0,
-                      }
-                    : w;
-        this.conn.setTransportOptions(T({}, r, i)),
+        this.conn.setTransportOptions(this.getCodecOptions(e, t, n)),
             this.videoEncoderFallbackPending && (this.videoEncoderFallbackPending = !1);
     }
     getStats() {
@@ -419,7 +406,7 @@ class x extends _.Z {
                     ssrc: t,
                     videoSsrc: r,
                     videoSsrcs: n,
-                    rtxSsrc: L(r),
+                    rtxSsrc: D(r),
                     mute: this.getLocalMute(e),
                     volume: this.getLocalVolume(e),
                 };
@@ -516,7 +503,7 @@ class x extends _.Z {
     }
     getLocalVolume(e) {
         let t = this.localVolumes[e];
-        return null == t && (t = this.context === v.Yn.DEFAULT ? v.Qx : v.Yh), D(t);
+        return null == t && (t = this.context === v.Yn.DEFAULT ? v.Qx : v.Yh), w(t);
     }
     setLocalVolume(e, t) {
         this.localVolumes[e] = t;
@@ -805,7 +792,7 @@ class x extends _.Z {
                     null,
                     this.audioSSRC,
                     this.videoStreamParameters[s].ssrc,
-                    L(this.videoStreamParameters[s].ssrc),
+                    D(this.videoStreamParameters[s].ssrc),
                     this.videoStreamParameters,
                 ),
                 this.conn.setTransportOptions(this.applyQualityConstraints().constraints));
@@ -901,7 +888,7 @@ class x extends _.Z {
                 ssrc: this.remoteAudioSSRCs[e],
                 videoSsrc: t,
                 videoSsrcs: this.remoteVideoSSRCs[e],
-                rtxSsrc: L(t),
+                rtxSsrc: D(t),
                 mute: this.getLocalMute(e),
                 volume: this.getLocalVolume(e),
             };
@@ -953,12 +940,8 @@ class x extends _.Z {
     }
     getCodecOptions(e, t, n) {
         var r, i, o;
-        let a, s;
-        if (e === v.ad.RED) {
-            let t = this.codecs.find((t) => t.name === e);
-            (s = null == t ? void 0 : t.payloadType), (e = v.ad.OPUS);
-        }
-        let l = {
+        let a,
+            s = {
                 type:
                     null != (r = null == (a = this.codecs.find((t) => t.name === e)) ? void 0 : a.payloadType) ? r : 0,
                 name: e,
@@ -966,9 +949,8 @@ class x extends _.Z {
                 pacsize: 960,
                 channels: 1,
                 rate: 64000,
-                redPayloadType: s,
             },
-            c = this.codecs
+            l = this.codecs
                 .filter((e) => "audio" === e.type)
                 .map((e) => {
                     var t;
@@ -980,9 +962,9 @@ class x extends _.Z {
                         params: { stereo: "1" },
                     };
                 });
-        n === v.Yn.STREAM && (l.channels = 2);
-        let u = [],
-            d = {
+        n === v.Yn.STREAM && (s.channels = 2);
+        let c = [],
+            u = {
                 name: "",
                 type: 0,
                 rtxType: 0,
@@ -1003,18 +985,18 @@ class x extends _.Z {
                 this.experimentFlags.has(O.V8.SIGNAL_AV1_HARDWARE_DECODE) && (n.params["hardware-av1-decode"] = "1");
             let r = this.hardwareH264 && this.useElectronVideo ? "1" : "0";
             (n.params["hardware-h264"] = r),
-                u.push(n),
+                c.push(n),
                 a.name === t &&
-                    ((d = A(T({}, n), { params: this.getCodecParams(a.name, !1) })),
+                    ((u = A(T({}, n), { params: this.getCodecParams(a.name, !1) })),
                     this.experimentFlags.has(O.V8.VIDEOTOOLBOX_RATE_CONTROL) &&
-                        (d.params["fixed-rate-presentation-timestamps"] = "1"),
-                    (d.params["hardware-h264"] = r));
+                        (u.params["fixed-rate-presentation-timestamps"] = "1"),
+                    (u.params["hardware-h264"] = r));
         }
         return {
-            videoEncoder: d,
-            videoDecoders: u,
-            audioEncoder: l,
-            audioDecoders: c,
+            videoEncoder: u,
+            videoDecoders: c,
+            audioEncoder: s,
+            audioDecoders: l,
         };
     }
     getKeyFrameInterval() {
@@ -1033,9 +1015,10 @@ class x extends _.Z {
                     postponeDecodeLevel: this.postponeDecodeLevel,
                 },
                 this.getAttenuationOptions(),
-                w,
             ),
             {
+                fec: !0,
+                packetLossRate: 0.3,
                 qos: this.qos,
                 prioritySpeakerDucking: v.jg,
                 encodingVoiceBitRate: this.voiceBitrate,
@@ -1252,7 +1235,7 @@ class x extends _.Z {
                               });
                           })
                         : t > 0
-                          ? ((i[0].active = !0), (i[0].ssrc = t), (i[0].rtxSsrc = L(t)))
+                          ? ((i[0].active = !0), (i[0].ssrc = t), (i[0].rtxSsrc = D(t)))
                           : (i[0].active = !1)
                     : t > 0 &&
                       (void 0 !== this.remoteVideoSSRCs[e]
@@ -1266,7 +1249,7 @@ class x extends _.Z {
                         null != n && "" !== n ? n : null,
                         e === this.userId ? this.audioSSRC : this.remoteAudioSSRCs[e],
                         t,
-                        L(t),
+                        D(t),
                         this.videoStreamParameters,
                     );
             }),
