@@ -86,8 +86,8 @@ function M(e, t) {
         e
     );
 }
-let k = 190,
-    j = 178,
+let j = 190,
+    k = 178,
     U = "MESSAGE_CONFETTI_POTION_MODAL_KEY",
     G = (e) => {
         let { channelId: t, message: i, onRedeem: o, onClose: a, buttonUseState: l = "activate", source: u } = e,
@@ -464,8 +464,8 @@ let F = (e) => {
                 children: [
                     (0, r.jsx)(c.Eep, {
                         src: w,
-                        width: j,
-                        height: k,
+                        width: k,
+                        height: j,
                     }),
                     (0, r.jsx)(c.Text, {
                         variant: "text-md/normal",

@@ -44,7 +44,7 @@ function M(e, t, n) {
         e
     );
 }
-function k(e) {
+function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -60,7 +60,7 @@ function k(e) {
     }
     return e;
 }
-function j(e, t) {
+function k(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -77,7 +77,7 @@ function U(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : j(Object(t)).forEach(function (n) {
+            : k(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -206,8 +206,8 @@ function Z(e) {
             });
         }),
         M = I.Z.getChannel(null == (n = a.channel) ? void 0 : n.id),
-        k = (0, c.e7)([S.Z], () => null != M && S.Z.can(w.Plq.USE_EMBEDDED_ACTIVITIES, M), [M]),
-        { analyticsLocations: j } = (0, p.ZP)(_.Z.INVITE_EMBED),
+        j = (0, c.e7)([S.Z], () => null != M && S.Z.can(w.Plq.USE_EMBEDDED_ACTIVITIES, M), [M]),
+        { analyticsLocations: k } = (0, p.ZP)(_.Z.INVITE_EMBED),
         U = (0, c.Wu)(
             [f.ZP],
             () =>
@@ -227,27 +227,27 @@ function Z(e) {
                     inviter_id: s.author.id,
                     invite_message_id: s.id,
                 },
-                j,
+                k,
             ),
                 d.ZP.acceptInviteAndTransitionToInviteChannel({
                     inviteKey: a.code,
                     context: u("Invite Button Embed"),
-                    analyticsLocations: j,
+                    analyticsLocations: k,
                 });
-        }, [a, s, j, u]),
+        }, [a, s, k, u]),
         Z = a.state === w.r2o.ACCEPTING,
         V = null != O;
     if (null == O) {
         if (null == a.guild) return (0, r.jsx)(P.Z, {});
         O = (0, R.Qs)(a.guild);
     }
-    let H = (V && !k) || (V && C);
+    let H = (V && !j) || (V && C);
     return (V && C && (o = L.intl.string(L.t.wJNK8P)),
-    k || (o = L.intl.string(L.t.hHGrW1)),
+    j || (o = L.intl.string(L.t.hHGrW1)),
     null == a.code || "" === a.code || null == v)
         ? null
         : (0, r.jsx)(p.Gt, {
-              value: j,
+              value: k,
               children: (0, r.jsx)(F, {
                   app: v,
                   activityUsers: G,
@@ -309,7 +309,7 @@ function F(e) {
     return (0, r.jsx)(
         h.W,
         U(
-            k(
+            j(
                 {
                     header: t.name,
                     title: L.intl.string(L.t["7vb6n5"]),

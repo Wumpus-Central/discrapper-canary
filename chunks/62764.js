@@ -32,8 +32,8 @@ var r = n(255367),
     L = n(109590),
     x = n(228392),
     M = n(981631),
-    k = n(388032),
-    j = n(764295),
+    j = n(388032),
+    k = n(764295),
     U = n(319720),
     G = n(214785),
     B = n(127947);
@@ -123,7 +123,7 @@ function q(e) {
     return (0, r.jsx)(c.zxk, {
         size: "sm",
         variant: "secondary",
-        text: o ? k.intl.string(j.default["2Y4vkp"]) : k.intl.string(j.default.YIbR4u),
+        text: o ? j.intl.string(k.default["2Y4vkp"]) : j.intl.string(k.default.YIbR4u),
         onClick: f,
         loading: s,
         icon: c.dz2,
@@ -133,7 +133,7 @@ function q(e) {
 function X(e) {
     let { postId: t, isFirstMessage: n, isLastItem: o = !1, parentChannelId: l } = e,
         { ref: v, width: I } = (0, f.ZP)(),
-        [S, j] = i.useState(W),
+        [S, k] = i.useState(W),
         [Z, V] = i.useState(!n),
         [X, Q] = (0, _.Z)(!1, Y),
         J = (0, s.e7)([R.Z], () => R.Z.getChannel(t), [t]),
@@ -175,7 +175,7 @@ function X(e) {
     let [ed, ef] = i.useState(!0);
     if (
         (i.useEffect(() => {
-            null != I && (j(Math.floor((I - K) / z)), ef(!1));
+            null != I && (k(Math.floor((I - K) / z)), ef(!1));
         }, [I]),
         null == J || null == $)
     )
@@ -261,7 +261,7 @@ function X(e) {
                                           useChatFontScaling: !1,
                                           className: a()(G.secondary, U.addReactButton, { [U.hasNoReactions]: !e_ }),
                                           isForumToolbar: !0,
-                                          children: !e_ && k.intl.string(k.t.xpOyTE),
+                                          children: !e_ && j.intl.string(j.t.xpOyTE),
                                       }),
                               ],
                           }),
@@ -271,7 +271,7 @@ function X(e) {
                             ea
                                 ? (0, r.jsx)(q, { channel: J })
                                 : (0, r.jsx)(c.ua7, {
-                                      text: k.intl.string(k.t.F7oeDg),
+                                      text: j.intl.string(j.t.F7oeDg),
                                       children: (e) =>
                                           (0, r.jsx)(
                                               c.zxk,
@@ -280,14 +280,14 @@ function X(e) {
                                                   size: "sm",
                                                   variant: "secondary",
                                                   text: ee
-                                                      ? k.intl.string(k.t["7OkUzs"])
-                                                      : k.intl.string(k.t["3aOv+v"]),
+                                                      ? j.intl.string(j.t["7OkUzs"])
+                                                      : j.intl.string(j.t["3aOv+v"]),
                                                   onClick: ep,
                                               }),
                                           ),
                                   }),
                             (0, r.jsx)(c.ua7, {
-                                text: k.intl.string(k.t.WqhZsr),
+                                text: j.intl.string(j.t.WqhZsr),
                                 children: (e) =>
                                     X
                                         ? (0, r.jsx)(
@@ -297,7 +297,7 @@ function X(e) {
                                                   size: "sm",
                                                   variant: "secondary",
                                                   onClick: eh,
-                                                  text: k.intl.string(k.t["t5VZ8/"]),
+                                                  text: j.intl.string(j.t["t5VZ8/"]),
                                               }),
                                           )
                                         : (0, r.jsx)(
@@ -307,13 +307,13 @@ function X(e) {
                                                   size: "sm",
                                                   variant: "secondary",
                                                   onClick: eh,
-                                                  "aria-label": k.intl.string(k.t.WqhZsr),
+                                                  "aria-label": j.intl.string(j.t.WqhZsr),
                                               }),
                                           ),
                             }),
                             !n &&
                                 (0, r.jsx)(c.ua7, {
-                                    text: k.intl.string(k.t.nFP4oa),
+                                    text: j.intl.string(j.t.nFP4oa),
                                     children: (e) =>
                                         (0, r.jsx)(
                                             c.hU,
@@ -322,7 +322,7 @@ function X(e) {
                                                 size: "sm",
                                                 variant: "secondary",
                                                 onClick: em,
-                                                "aria-label": k.intl.string(k.t.nFP4oa),
+                                                "aria-label": j.intl.string(j.t.nFP4oa),
                                             }),
                                         ),
                                 }),

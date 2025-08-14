@@ -152,7 +152,7 @@ function b(e) {
             var t, n;
             null == (t = R.onBlur) || t.call(R, e, y), null == (n = D.setIsFocused) || n.call(D, !1);
         },
-        k = i.useMemo(() => {
+        j = i.useMemo(() => {
             var e, t;
             return null === N || "" === N
                 ? null
@@ -166,7 +166,7 @@ function b(e) {
                           : null
                     : null;
         }, [N, P, A, I, null == T ? void 0 : T.length]),
-        j = (null != N && "" !== N) || null != k;
+        k = (null != N && "" !== N) || null != j;
     return (0, r.jsxs)("div", {
         className: a()(d.inputWrapper, n),
         children: [
@@ -181,7 +181,7 @@ function b(e) {
                                 {
                                     name: y,
                                     className: a()(d.input, o, {
-                                        [d.error]: j,
+                                        [d.error]: k,
                                         [d.disabled]: l,
                                         [d.editable]: f,
                                     }),
@@ -207,7 +207,7 @@ function b(e) {
                     ),
                 }),
             ),
-            (0, r.jsx)(c.V, { error: k }),
+            (0, r.jsx)(c.V, { error: j }),
         ],
     });
 }

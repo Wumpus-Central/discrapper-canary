@@ -42,8 +42,8 @@ var r,
     L = n(10433),
     x = n(715903),
     M = n(71619),
-    k = n(637618),
-    j = n(225890),
+    j = n(637618),
+    k = n(225890),
     U = n(364097),
     G = n(939170),
     B = n(187506),
@@ -96,8 +96,8 @@ var r,
     eL = n(530472),
     ex = n(29909),
     eM = n(782658),
-    ek = n(219797),
-    ej = n(453687),
+    ej = n(219797),
+    ek = n(453687),
     eU = n(128854),
     eG = n(101578),
     eB = n(524444),
@@ -297,7 +297,7 @@ class tt extends (r = o.Component) {
                             )
                           : null;
                   if (n === T.g.TEMPLATE) return (0, i.jsx)(U.Z, { code: r }, r);
-                  if (n === T.g.EVENT) return (0, i.jsx)(j.Z, { code: r }, r);
+                  if (n === T.g.EVENT) return (0, i.jsx)(k.Z, { code: r }, r);
                   if (n === T.g.CHANNEL_LINK)
                       return (0, i.jsx)(
                           ew.Z,
@@ -329,7 +329,7 @@ class tt extends (r = o.Component) {
                           },
                           r,
                       );
-                  } else if (n === T.g.GUILD_PRODUCT) return (0, i.jsx)(k.Z, { code: r }, r);
+                  } else if (n === T.g.GUILD_PRODUCT) return (0, i.jsx)(j.Z, { code: r }, r);
                   else if (n === T.g.SERVER_SHOP) return (0, i.jsx)(S.Z, { guildId: r }, r);
                   else if (n === T.g.QUESTS_EMBED) return (0, i.jsx)(ee.Z, { questId: r }, r);
                   else if (n === T.g.APP_DIRECTORY_STOREFRONT)
@@ -487,12 +487,12 @@ class tt extends (r = o.Component) {
                                   e.stopPropagation(), e.preventDefault(), a(e, l);
                               }
                             : void 0,
-                    renderAudioComponent: m ? ek.jY : ek.q7,
-                    renderImageComponent: ek.dS,
-                    renderVideoComponent: ek.vZ,
-                    renderPlaintextFilePreview: ek.d4,
-                    renderGenericFileComponent: ek.ZK,
-                    renderMosaicItemFooter: ek.L9,
+                    renderAudioComponent: m ? ej.jY : ej.q7,
+                    renderImageComponent: ej.dS,
+                    renderVideoComponent: ej.vZ,
+                    renderPlaintextFilePreview: ej.d4,
+                    renderGenericFileComponent: ej.ZK,
+                    renderMosaicItemFooter: ej.L9,
                     onPlay: s,
                     gifFavoriteButton: e9(l),
                     isSearchResult: this.props.isSearchResult,
@@ -805,7 +805,7 @@ class tt extends (r = o.Component) {
             null == D
             ? null
             : (0, i.jsxs)("div", {
-                  id: (0, ej.bX)(t),
+                  id: (0, ek.bX)(t),
                   className: s()(e, eQ.container),
                   children: [
                       D,
@@ -993,8 +993,8 @@ function tn(e) {
         w = (0, K.Z)(null == n ? void 0 : n.id),
         D = (0, X.Z)(r),
         L = (0, C.v)(r),
-        k = (0, eN._)(n),
-        j = (0, eI.ro)(r.id, r.channel_id),
+        j = (0, eN._)(n),
+        k = (0, eI.ro)(r.id, r.channel_id),
         U = (0, A.m8)();
     return (0, i.jsx)(
         tt,
@@ -1013,7 +1013,7 @@ function tn(e) {
                 e,
             ),
             {
-                hasSpoilerEmbeds: e.hasSpoilerEmbeds && k,
+                hasSpoilerEmbeds: e.hasSpoilerEmbeds && j,
                 isLurking: h && p,
                 isGuest: m && p,
                 isPendingMember: g && p,
@@ -1028,7 +1028,7 @@ function tn(e) {
                 showMaskedLinks: P,
                 shouldHideMediaOptions: w,
                 enabledContentHarmTypeFlags: L,
-                ctaButtonType: j,
+                ctaButtonType: k,
                 shouldAgeVerify: U,
             },
         ),

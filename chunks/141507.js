@@ -37,7 +37,7 @@ let P = (e) => {
         let t,
             w,
             D,
-            { className: L, emojiGrid: x, guildId: M, pickerIntention: k, channel: j } = e,
+            { className: L, emojiGrid: x, guildId: M, pickerIntention: j, channel: k } = e,
             { enabled: U } = y.Z.useExperiment({ location: "EmojiPicker" }, { autoTrackExposure: !1 }),
             G = _.kJ.useStore((e) => e.inspectedExpressionPosition),
             B = i.useMemo(() => {
@@ -73,7 +73,7 @@ let P = (e) => {
             H = m.Yk.useSetting(),
             Y = (0, O.C1)(M, R(t) ? t : null),
             W = (0, o.e7)([c.ZP], () => c.ZP.expandedSectionsByGuildIds),
-            { newlyAddedEmojis: K } = (0, v.Z)(M, k),
+            { newlyAddedEmojis: K } = (0, v.Z)(M, j),
             z = (null == B ? void 0 : B.type) === T.ld.EMOJI ? B.subCategory : S.t0.NONE;
         if (
             (i.useEffect(() => {
@@ -166,9 +166,9 @@ let P = (e) => {
                 ? A.intl.string(A.t["Z/r7IS"])
                 : P({
                       inspectedEmoji: t,
-                      channel: j,
+                      channel: k,
                       guildId: M,
-                      intention: k,
+                      intention: j,
                       guild: Z,
                   });
         return (0, r.jsx)(p.Z, {

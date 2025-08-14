@@ -1,56 +1,58 @@
 n.d(t, {
-    j: () => u,
-    y: () => c,
+    j: () => f,
+    y: () => d,
 });
-var r = n(342905),
-    i = n(594928),
-    o = n(181430),
-    a = n(693450),
-    s = n(806539);
-let l = {
-        name: a.default.ZEL6m5,
+var r = n(120356),
+    i = n.n(r),
+    o = n(342905),
+    a = n(594928),
+    s = n(181430),
+    l = n(693450),
+    c = n(806539);
+let u = {
+        name: l.default.ZEL6m5,
         className: "",
     },
-    c = {
-        [r.C.DEFAULT]: l,
-        [r.C.CHERRY_BOMB]: {
-            name: a.default.rN7cub,
-            className: s.cherryBomb,
+    d = {
+        [o.C.DEFAULT]: u,
+        [o.C.CHERRY_BOMB]: {
+            name: l.default.rN7cub,
+            className: c.cherryBomb,
         },
-        [r.C.CHICLE]: {
-            name: a.default.CbHHnJ,
-            className: s.chicle,
+        [o.C.CHICLE]: {
+            name: l.default.CbHHnJ,
+            className: c.chicle,
         },
-        [r.C.MUSEO_MODERNO]: {
-            name: a.default.iEcEKC,
-            className: s.museoModerno,
+        [o.C.MUSEO_MODERNO]: {
+            name: l.default.iEcEKC,
+            className: c.museoModerno,
         },
-        [r.C.NEO_CASTEL]: {
-            name: a.default.DL7jLS,
-            className: s.neoCastel,
+        [o.C.NEO_CASTEL]: {
+            name: l.default.DL7jLS,
+            className: c.neoCastel,
         },
-        [r.C.PIXELIFY]: {
-            name: a.default.jq4aRk,
-            className: s.pixelify,
+        [o.C.PIXELIFY]: {
+            name: l.default.jq4aRk,
+            className: c.pixelify,
         },
-        [r.C.SINISTRE]: {
-            name: a.default.jV9DNz,
-            className: s.sinistre,
+        [o.C.SINISTRE]: {
+            name: l.default.jV9DNz,
+            className: c.sinistre,
         },
-        [r.C.ZILLA_SLAB]: {
-            name: a.default.KMR8ra,
-            className: s.zillaSlab,
+        [o.C.ZILLA_SLAB]: {
+            name: l.default.KMR8ra,
+            className: c.zillaSlab,
         },
-        [r.C.BIO_RHYME]: l,
-        [r.C.BANGERS]: l,
-        [r.C.COMPAGNON]: l,
-        [r.C.RIBES]: l,
+        [o.C.BIO_RHYME]: u,
+        [o.C.BANGERS]: u,
+        [o.C.COMPAGNON]: u,
+        [o.C.RIBES]: u,
     };
-function u(e) {
+function f(e) {
     var t;
     let { displayNameStyles: n, inProfile: r } = e,
-        { includeNonProfile: a } = i.f.useExperiment({ location: "useDisplayNameStylesFont" });
-    return (0, o.Y)({ location: "useDisplayNameStylesFont" }) && (r || a) && null != n
-        ? (null != (t = c[n.fontId]) ? t : l).className
-        : "";
+        { includeNonProfile: o } = a.f.useExperiment({ location: "useDisplayNameStylesFont" });
+    if (!(0, s.Y)({ location: "useDisplayNameStylesFont" }) || (!r && !o) || null == n) return "";
+    let l = null != (t = d[n.fontId]) ? t : u;
+    return "" === l.className ? "" : i()(c.dnsFont, l.className);
 }

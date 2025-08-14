@@ -23,8 +23,8 @@ function p(e, t, n) {
         e
     );
 }
-let h = 3 * o.Z.Millis.DAY,
-    m = 7 * o.Z.Millis.DAY,
+let h = +o.Z.Millis.DAY,
+    m = 3 * o.Z.Millis.DAY,
     g = {
         joinGameLogPrefix: "[FLog::GameJoinLoadTime] Report game_join_loadtime:",
         joinGameFields: [

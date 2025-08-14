@@ -9,8 +9,8 @@ n.r(t),
         openQuestInGameRewardModal: () => U,
         openQuestMinorEnrollmentBlockModal: () => B,
         openQuestOrbsRewardModal: () => G,
-        openQuestsNitroRewardModal: () => j,
-        openQuestsRewardCodeModal: () => k,
+        openQuestsNitroRewardModal: () => k,
+        openQuestsRewardCodeModal: () => j,
         openVideoQuestModal: () => Y,
     });
 var r = n(255367);
@@ -95,7 +95,7 @@ function L(e, t) {
 }
 let x = "in-app",
     M = "Discord Widget";
-function k(e) {
+function j(e) {
     let {
         questId: t,
         questContent: i,
@@ -120,7 +120,7 @@ function k(e) {
             );
     });
 }
-function j(e, t) {
+function k(e, t) {
     var i;
     (null == (i = e.userStatus) ? void 0 : i.claimedAt) == null
         ? (0, s.ZDy)(async () => {

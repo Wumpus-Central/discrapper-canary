@@ -168,8 +168,8 @@ function T(e) {
             onMouseEnter: L,
             onMouseLeave: x,
             onKeyDown: M,
-            children: k,
-            rel: j,
+            children: j,
+            rel: k,
             buttonRef: U,
             focusProps: G,
             "aria-label": B,
@@ -233,7 +233,7 @@ function T(e) {
                     type: T,
                     disabled: h,
                     style: S,
-                    rel: j,
+                    rel: k,
                     className: a()(
                         N,
                         I({
@@ -257,7 +257,7 @@ function T(e) {
                             : null,
                         (0, r.jsx)("div", {
                             className: a()(f.contents, C),
-                            children: k,
+                            children: j,
                         }),
                     ],
                 }),

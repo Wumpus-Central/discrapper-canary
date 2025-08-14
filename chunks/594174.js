@@ -227,12 +227,12 @@ function x(e) {
 function M(e) {
     if (null != e.users) for (let t of e.users) (t.id in y && x(t)) || (y[t.id] = new f.Z(t));
 }
-function k(e) {
+function j(e) {
     let { user: t } = e;
     if (!N(t)) return !1;
     C(t);
 }
-function j(e) {
+function k(e) {
     let { userProfile: t } = e;
     if (!N(t.user)) return !1;
     C(t.user);
@@ -606,8 +606,8 @@ class eD extends m.Z {
             UPDATE_CLIENT_PREMIUM_TYPE: G,
             OVERLAY_INITIALIZE: M,
             CACHE_LOADED: (e) => this.handleLoadCache(e),
-            USER_UPDATE: k,
-            USER_PROFILE_FETCH_SUCCESS: j,
+            USER_UPDATE: j,
+            USER_PROFILE_FETCH_SUCCESS: k,
             CURRENT_USER_UPDATE: U,
             PRESENCE_UPDATES: ee,
             SEARCH_MESSAGES_SUCCESS: V,

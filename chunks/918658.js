@@ -1,6 +1,6 @@
 n.d(t, {
     Z: () => M,
-    d: () => k,
+    d: () => j,
 });
 var r = n(255367),
     i = n(73800),
@@ -82,8 +82,8 @@ function M() {
         }));
     if (null == o || null == t) return null;
     let M = L(a),
-        k = x(a),
-        j = n === A.oC.GUILD_ONBOARDING,
+        j = x(a),
+        k = n === A.oC.GUILD_ONBOARDING,
         U = (e) => {
             let { backToSettings: n } = e;
             null != t &&
@@ -110,7 +110,7 @@ function M() {
                     M,
                 ],
             }),
-            j && c
+            k && c
                 ? (0, r.jsx)("div", {
                       className: P.noticeContents,
                       children: (0, r.jsx)("div", {
@@ -137,7 +137,7 @@ function M() {
                                       onClick: n,
                                       buttonRef: e,
                                       children: [
-                                          k,
+                                          j,
                                           (0, r.jsx)(y.Z, {
                                               width: 16,
                                               height: 16,
@@ -175,7 +175,7 @@ function M() {
         ],
     });
 }
-function k(e) {
+function j(e) {
     let { guildId: t } = e;
     return (0, s.e7)([I.Z], () => I.Z.isViewingRoles(t))
         ? (0, r.jsx)("div", {

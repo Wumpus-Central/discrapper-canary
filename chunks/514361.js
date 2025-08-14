@@ -1,5 +1,5 @@
 let r, i;
-n.d(t, { Z: () => j }), n(388685);
+n.d(t, { Z: () => k }), n(388685);
 var o,
     a = n(442837),
     s = n(704215),
@@ -92,7 +92,7 @@ let L = () => {
             n = (null == r ? void 0 : r.id) === (null == t ? void 0 : t.id);
         null == t || n || (r = t);
     };
-class k extends (o = a.ZP.PersistedStore) {
+class j extends (o = a.ZP.PersistedStore) {
     initialize(e) {
         null != e && (r = (null == e ? void 0 : e.gradientPresetId) != null ? I.qt[e.gradientPresetId] : void 0),
             this.waitFor(E.default, f.Z, g.Z, u.Z, h.Z),
@@ -127,8 +127,8 @@ class k extends (o = a.ZP.PersistedStore) {
             ]);
     }
 }
-S(k, "displayName", "ClientThemesBackgroundStore"), S(k, "persistKey", "ClientThemesBackgroundStore");
-let j = new k(l.Z, {
+S(j, "displayName", "ClientThemesBackgroundStore"), S(j, "persistKey", "ClientThemesBackgroundStore");
+let k = new j(l.Z, {
     UPDATE_BACKGROUND_GRADIENT_PRESET: C,
     UPDATE_MOBILE_PENDING_THEME_INDEX: R,
     RESET_PREVIEW_CLIENT_THEME: P,

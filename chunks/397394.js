@@ -2,8 +2,8 @@ n.d(t, {
     $0: () => B,
     Lk: () => F,
     Xg: () => V,
-    ZP: () => k,
-    c7: () => j,
+    ZP: () => j,
+    c7: () => k,
     j3: () => H,
     jO: () => U,
     ks: () => Z,
@@ -111,7 +111,7 @@ function M(e, t) {
     for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function k(e) {
+function j(e) {
     let { message: t, footer: n, headerClassName: i, showsCloseWindowText: o, spinner: s } = e;
     return (
         (0, h.Tt)({ location: C.intl.string(C.t["3S249/"]) }),
@@ -138,8 +138,8 @@ function k(e) {
         })
     );
 }
-function j(e) {
-    return (0, r.jsx)(k, L(w({}, e), { headerClassName: R.headerSuccess }));
+function k(e) {
+    return (0, r.jsx)(j, L(w({}, e), { headerClassName: R.headerSuccess }));
 }
 function U(e) {
     var { guild: t, application: n } = e,
@@ -242,7 +242,7 @@ function G(e) {
             children: s,
         });
     return (0, r.jsx)(
-        j,
+        k,
         w(
             {
                 message: a,
@@ -322,7 +322,7 @@ function Z(e) {
     );
 }
 function F(e) {
-    return (0, r.jsx)(k, L(w({}, e), { headerClassName: R.headerFailure }));
+    return (0, r.jsx)(j, L(w({}, e), { headerClassName: R.headerFailure }));
 }
 function V() {
     var e, t;

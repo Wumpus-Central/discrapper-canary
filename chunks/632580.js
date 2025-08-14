@@ -87,8 +87,8 @@ async function y(e) {
         premiumSubscription: L,
         onNext: x,
         metadata: M,
-        sku: k,
-        skuPricePreview: j,
+        sku: j,
+        skuPricePreview: k,
         purchaseType: U,
         referralCode: G,
         loadId: B,
@@ -98,7 +98,7 @@ async function y(e) {
     } = e;
     t(_.A.PURCHASING), n(!0), r(!0), o.Z.wait(s.fw), m(null);
     try {
-        let e, n, r;
+        let e, n, r, o;
         if (
             (d.default.track(
                 p.rMx.PAYMENT_FLOW_COMPLETED,
@@ -114,11 +114,11 @@ async function y(e) {
         )
             return;
         if (U === p.GZQ.ONE_TIME)
-            i()(null != k, "SKU must exist and be fetched."),
-                i()(null != j, "SKUPricePreview must exist."),
-                (e = await (0, c.ZZ)(k.applicationId, k.id, {
-                    expectedAmount: j.amount,
-                    expectedCurrency: j.currency,
+            i()(null != j, "SKU must exist and be fetched."),
+                i()(null != k, "SKUPricePreview must exist."),
+                (e = await (0, c.ZZ)(j.applicationId, j.id, {
+                    expectedAmount: k.amount,
+                    expectedCurrency: k.currency,
                     isGift: O,
                     paymentSource: P,
                     loadId: B,
@@ -191,7 +191,12 @@ async function y(e) {
             "subscription" in e
                 ? (n = null != e.subscription ? u.Z.createFromServer(e.subscription) : null)
                 : "entitlements" in e && (r = null != e.entitlements ? e.entitlements : void 0),
-            x(n, r);
+            "appliedUserDiscounts" in e &&
+                (o =
+                    null != e.appliedUserDiscounts && e.appliedUserDiscounts.length > 0
+                        ? e.appliedUserDiscounts
+                        : void 0),
+            x(n, r, o);
     } catch (e) {
         t(_.A.FAIL),
             m(e),

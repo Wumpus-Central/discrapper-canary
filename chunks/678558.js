@@ -108,7 +108,7 @@ let R = (e) => {
             icon: x,
             intent: M,
         } = e,
-        k = N(e, [
+        j = N(e, [
             "analyticsLocation",
             "analyticsSourceLocation",
             "guild",
@@ -123,7 +123,7 @@ let R = (e) => {
             "icon",
             "intent",
         ]),
-        { analyticsLocations: j } = (0, f.ZP)(),
+        { analyticsLocations: k } = (0, f.ZP)(),
         U = (0, d.bp)() === b.IlC.POPOUT,
         [G, B] = i.useState(!1),
         { fractionalState: Z } = (0, _.Z)(),
@@ -137,7 +137,7 @@ let R = (e) => {
         W = async () => {
             B(!0),
                 await (0, E.u)({
-                    analyticsLocations: j,
+                    analyticsLocations: k,
                     analyticsLocation: t,
                     analyticsSourceLocation: n,
                     guild: o,
@@ -169,7 +169,7 @@ let R = (e) => {
                 z,
             ],
         })),
-        (k.disabled = !0)),
+        (j.disabled = !0)),
     null != Y)
         ? (0, r.jsx)(p.Z, {
               text: Y,
@@ -184,7 +184,7 @@ let R = (e) => {
                                   size: l.zx.Sizes.SMALL,
                                   pauseAnimation: P,
                               }),
-                              k,
+                              j,
                           ),
                           { children: z },
                       ),
@@ -192,8 +192,8 @@ let R = (e) => {
           })
         : (0, r.jsx)(
               c.gtL,
-              A(T({ size: l.zx.Sizes.SMALL }, k), {
-                  className: a()(k.className, { [v.buttonHighlighted]: L }),
+              A(T({ size: l.zx.Sizes.SMALL }, j), {
+                  className: a()(j.className, { [v.buttonHighlighted]: L }),
                   submitting: G,
                   onClick: W,
                   pauseAnimation: P,

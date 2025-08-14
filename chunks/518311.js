@@ -41,8 +41,8 @@ var r,
     L = n(429090),
     x = n(912114),
     M = n(366980),
-    k = n(703656),
-    j = n(93127),
+    j = n(703656),
+    k = n(93127),
     U = n(752048),
     G = n(131704),
     B = n(592125),
@@ -165,7 +165,7 @@ let ey = (e) => {
             });
         return (0, i.jsx)(p.P3F, {
             onClick: () => {
-                (0, k.XU)(er.ME, n.id), r();
+                (0, j.XU)(er.ME, n.id), r();
             },
             children: (0, i.jsxs)("div", {
                 className: eo.confirmChannelItemContainer,
@@ -968,7 +968,7 @@ function eS(e) {
         );
     return (
         (0, T.ZP)(() => {
-            (0, j._)();
+            (0, k._)();
         }),
         {
             showModal: f,

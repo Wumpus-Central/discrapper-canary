@@ -1,4 +1,4 @@
-n.d(t, { Z: () => k }), n(388685), n(539854);
+n.d(t, { Z: () => j }), n(388685), n(539854);
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -103,11 +103,11 @@ let M = {
     animationPhase: "awaitingInput",
     height: "auto",
 };
-function k(e) {
+function j(e) {
     let { user: t, currentUser: n, displayProfile: o, guildId: m, onOpenUserProfileModal: C, onClose: P } = e,
         w = (0, _.Dt)(),
-        { analyticsLocations: k } = (0, f.ZP)(),
-        { trackUserProfileAction: j } = (0, g.KZ)(),
+        { analyticsLocations: j } = (0, f.ZP)(),
+        { trackUserProfileAction: k } = (0, g.KZ)(),
         { live: U, stream: G } = (0, E.Z)(t.id),
         { voiceChannel: B, voiceActivity: Z } = (0, b.Z)({
             userId: t.id,
@@ -178,9 +178,9 @@ function k(e) {
                       color: l.zx.Colors.TRANSPARENT,
                       className: a()(N.viewAllButton, er && N.isShown),
                       onClick: () => {
-                          j({
+                          k({
                               action: "PRESS_VIEW_PROFILE",
-                              analyticsLocations: k,
+                              analyticsLocations: j,
                           }),
                               C({ section: T.oh.ACTIVITY });
                       },
@@ -193,9 +193,9 @@ function k(e) {
                 : null,
         eu = i.useCallback(() => {
             if (null == z.current || null == X.current) return;
-            j({
+            k({
                 action: "PRESS_SHOW_MORE_ACTIVITY",
-                analyticsLocations: k,
+                analyticsLocations: j,
             });
             let e = z.current.getBoundingClientRect().height,
                 t = X.current.getBoundingClientRect().height;
@@ -217,7 +217,7 @@ function k(e) {
                                 null == (e = q.current) || e.focus();
                         }, D));
                 });
-        }, [k, j]);
+        }, [j, k]);
     return ((0, u.zq)(() => {
         null != Q.current && window.clearTimeout(Q.current);
     }),

@@ -73,7 +73,7 @@ function M(e, t) {
     }
     return n;
 }
-function k(e, t) {
+function j(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -84,7 +84,7 @@ function k(e, t) {
         e
     );
 }
-let j = 124,
+let k = 124,
     U = l.EFr.SIZE_80,
     G = l.EFr.SIZE_40;
 function B(e) {
@@ -97,7 +97,7 @@ function B(e) {
               children: (e) =>
                   (0, r.jsx)(
                       "div",
-                      k(x({}, e), {
+                      j(x({}, e), {
                           className: D.interactive,
                           children: (0, r.jsx)(l.Mgn, { color: l.TVs.colors.STATUS_WARNING_BACKGROUND }),
                       }),
@@ -116,7 +116,7 @@ function Z(e) {
             onVideoResize: L,
             blocked: x,
             ignored: M,
-            noVideoRender: k = !1,
+            noVideoRender: j = !1,
             pulseSpeakingIndicator: B = !1,
             inOverlayPopout: Z = !1,
             paused: F = !1,
@@ -132,7 +132,7 @@ function Z(e) {
         $ = (0, s.e7)([O.ZP], () => O.ZP.isGuestOrLurker(n.guild_id, Y.id)),
         ee = T.ZP.getName(n.getGuildId(), n.id, Y) + ($ ? " ".concat(w.intl.string(w.t["pFO/Pj"])) : ""),
         et = K && (Q || X),
-        en = l < j ? G : U,
+        en = l < k ? G : U,
         { avatarSrc: er, avatarDecorationSrc: ei } = (0, E.Z)({
             userId: Y.id,
             guildId: n.guild_id,
@@ -156,7 +156,7 @@ function Z(e) {
             e.isGuildStageVoice() && !q && (null == t ? void 0 : t.id) === n.id && c.Z.selectParticipant(e.id, null);
         }, [q]);
     let eu = !1;
-    return o && !J && !k && q && !b && null != V && v.Z.supports(P.AN.VIDEO)
+    return o && !J && !j && q && !b && null != V && v.Z.supports(P.AN.VIDEO)
         ? eu && !Z
             ? (0, r.jsx)(A.Z, {
                   selected: b,

@@ -98,8 +98,8 @@ function x(e) {
             (0, r.jsxs)("div", {
                 className: b ? C.overviewContainerWithVideo : C.overviewContainerNoVideo,
                 children: [
-                    (0, r.jsx)(k, { application: n }),
                     (0, r.jsx)(j, { application: n }),
+                    (0, r.jsx)(k, { application: n }),
                     _.length > 0 ? (0, r.jsx)(B, { description: _ }) : null,
                     p
                         ? (0, r.jsx)("div", {
@@ -167,7 +167,7 @@ function M(e) {
           })
         : null;
 }
-function k(e) {
+function j(e) {
     var t;
     let { application: n } = e,
         i = (0, O.BQ)(n) ? n.name : null != (t = (0, O.$d)(n)) ? t : "",
@@ -193,7 +193,7 @@ function k(e) {
         ],
     });
 }
-function j(e) {
+function k(e) {
     let { application: t } = e,
         n = i.useMemo(() => {
             var e;

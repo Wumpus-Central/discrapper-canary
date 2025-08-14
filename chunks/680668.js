@@ -60,8 +60,8 @@ function I(e) {
             currentUserId: D,
         } = e,
         L = D === w.author.id,
-        { channel: x, approximate_member_count: M, approximate_presence_count: k } = P,
-        j = P.state === E.r2o.ACCEPTING,
+        { channel: x, approximate_member_count: M, approximate_presence_count: j } = P,
+        k = P.state === E.r2o.ACCEPTING,
         U = null != x ? (0, _.jD)(x) : null,
         G = null != R,
         B = null != U,
@@ -153,10 +153,10 @@ function I(e) {
                       }),
                   ],
               })))
-            : (null != M && M >= 5) || (null != k && k > 0)
+            : (null != M && M >= 5) || (null != j && j > 0)
               ? (T = (0, r.jsx)(f.Z.Data, {
                     members: M,
-                    membersOnline: k,
+                    membersOnline: j,
                 }))
               : B &&
                 (T = (0, r.jsx)(f.Z.Channel, {
@@ -185,7 +185,7 @@ function I(e) {
                         }),
                         (0, r.jsx)(f.Z.Button, {
                             onClick: J,
-                            submitting: j,
+                            submitting: k,
                             color: f.Z.Button.Colors.GREEN,
                             children: Z
                                 ? F

@@ -37,8 +37,8 @@ function A(e) {
         L = (0, s.e7)([E.Z], () => E.Z.getGuild(C.guild_id), [C.guild_id]),
         { dismissedActivityEntryPointTileChannel: x } = (0, v.d)(),
         M = (0, s.e7)([_.Z], () => _.Z.getUserParticipantCount(C.id), [C]),
-        k = (0, g.bt)(C.id, t),
-        j = i.useCallback(() => {
+        j = (0, g.bt)(C.id, t),
+        k = i.useCallback(() => {
             (0, a.j)(() => {
                 v.d.setState({ dismissedActivityEntryPointTileChannel: C.id });
             });
@@ -57,7 +57,7 @@ function A(e) {
         F = (0, p.Nj)(l.z.VC_TILE_ACTIVITIES_ENTRY_POINT),
         V = (0, d.KF)(C.id) !== d.jy.CAN_LAUNCH,
         H = null != x && x === C.id,
-        Y = k.map(
+        Y = j.map(
             (e) => (t) =>
                 (0, r.jsx)(
                     O.ZP,
@@ -102,7 +102,7 @@ function A(e) {
                                 guild: L,
                                 width: e,
                                 inPopout: D,
-                                handleClose: j,
+                                handleClose: k,
                                 userParticipantCount: M,
                             }),
                         )
@@ -120,16 +120,16 @@ function A(e) {
                           guild: L,
                           width: e,
                           inPopout: D,
-                          handleClose: j,
+                          handleClose: k,
                           userParticipantCount: M,
                       }),
                   ));
     let W = i.useCallback(
         (e) => {
             var t, n;
-            return null != (n = null == (t = k[e]) ? void 0 : t.id) ? n : "empty-tile";
+            return null != (n = null == (t = j[e]) ? void 0 : t.id) ? n : "empty-tile";
         },
-        [k],
+        [j],
     );
     return (0, r.jsx)(m.Z, {
         className: R,

@@ -41,8 +41,8 @@ let N = {
                 showPlaceholderUser: L,
                 pendingGlobalName: x,
                 pendingDisplayNameStyles: M,
-                nameplatePreviewSize: k = "default",
-                isPurchased: j = !1,
+                nameplatePreviewSize: j = "default",
+                isPurchased: k = !1,
             } = e,
             U = (0, s.e7)([b.Z], () => (0, l.wj)(b.Z.theme)),
             G = null != o ? (0, v.EU)(o) : C,
@@ -59,7 +59,7 @@ let N = {
                           guildMember: V,
                       })
                     : void 0,
-            Y = N[k],
+            Y = N[j],
             W = (0, f.Y)({ location: "NameplatePreview" }),
             K = void 0 !== M ? M : null == t ? void 0 : t.displayNameStyles;
         return (0, r.jsx)("div", {
@@ -71,9 +71,9 @@ let N = {
             },
             children: (0, r.jsxs)(c.Rny, {
                 className: a()(R, T.nameplatePreview, {
-                    [T.nameplatePurchased]: j && !w,
-                    [T.large]: "large" === k,
-                    [T.xlarge]: "xlarge" === k,
+                    [T.nameplatePurchased]: k && !w,
+                    [T.large]: "large" === j,
+                    [T.xlarge]: "xlarge" === j,
                 }),
                 children: [
                     null != G &&

@@ -70,8 +70,8 @@ function w(e) {
             analyticsSource: L,
             analyticsLocation: x,
             body: M,
-            context: k,
-            glowUp: j,
+            context: j,
+            glowUp: k,
             modalClassName: U,
             modalContentClassName: G,
             artContainerClassName: B,
@@ -269,11 +269,11 @@ function w(e) {
                                         ? o
                                         : I.Si.TIER_2,
                                 headingText: R,
-                                context: k,
+                                context: j,
                                 analyticsLocationObject: x,
                                 discountOffer: eg,
                                 trialOffer: em,
-                                children: j,
+                                children: k,
                             })
                           : (0, r.jsxs)("div", {
                                 className: A.contentContainer,

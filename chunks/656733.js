@@ -70,7 +70,7 @@ let _ = "mp4",
     I = "downsized_small.mp4",
     T = "original.mp4",
     S = m,
-    A = k(S) ? o.EO.VIDEO : o.EO.IMAGE,
+    A = j(S) ? o.EO.VIDEO : o.EO.IMAGE,
     N = null,
     C = "",
     R = "",
@@ -84,7 +84,7 @@ function x(e) {
 function M(e) {
     "" === (C = e.query) && ((R = ""), (P = []), (D = []));
 }
-function k(e) {
+function j(e) {
     switch (e) {
         case b:
         case y:
@@ -103,7 +103,7 @@ function k(e) {
             return !1;
     }
 }
-function j(e) {
+function k(e) {
     return e.replace(/^https?:/, "");
 }
 function U(e) {
@@ -114,8 +114,8 @@ function U(e) {
             return {
                 width: t,
                 height: n,
-                src: j(r),
-                gifSrc: j(i),
+                src: k(r),
+                gifSrc: k(i),
                 url: o,
                 id: a,
                 format: A,
@@ -135,14 +135,14 @@ function B(e) {
                   {
                       type: s.wI2.TRENDING_GIFS,
                       name: l.intl.string(l.t.H6zNFx),
-                      src: j(e.trendingGIFPreview.src),
+                      src: k(e.trendingGIFPreview.src),
                       format: A,
                   },
               ]
             : []),
         ...t.map((e) =>
             f(u({}, e), {
-                src: j(e.src),
+                src: k(e.src),
                 type: s.wI2.TRENDING_CATEGORY,
                 format: A,
             }),

@@ -40,8 +40,8 @@ var r = n(255367),
     L = n(944486),
     x = n(914010),
     M = n(594174),
-    k = n(626135),
-    j = n(768581),
+    j = n(626135),
+    k = n(768581),
     U = n(900849),
     G = n(74538),
     B = n(886132),
@@ -153,7 +153,7 @@ let Q = 32,
         let { expressionSourceGuild: t, hasJoinedExpressionSourceGuild: n, isDisplayingJoinGuildButtonInPopout: i } = e,
             { id: o, icon: s, name: l } = t,
             c = Q,
-            u = j.ZP.getGuildIconURL({
+            u = k.ZP.getGuildIconURL({
                 id: o,
                 icon: s,
                 size: c,
@@ -309,7 +309,7 @@ let Q = 32,
                 closePopout: R,
                 onToggleShowMoreEmojis: D,
                 guildEmoji: L,
-                demoMode: j = !1,
+                demoMode: k = !1,
                 nonce: U,
             } = e,
             K = (0, l.e7)([M.default], () => M.default.getCurrentUser()),
@@ -318,7 +318,7 @@ let Q = 32,
             X = null != z && (z === (null == T ? void 0 : T.id) || z === (null == S ? void 0 : S.id)),
             Q = null != S,
             J = null != (t = null == T ? void 0 : T.isDiscoverable()) && t;
-        j && ((q = !0), (J = !0), (Q = !1), (X = !1));
+        k && ((q = !0), (J = !0), (Q = !1), (X = !1));
         let ee = $(),
             {
                 isRoleSubscriptionEmoji: en,
@@ -367,7 +367,7 @@ let Q = 32,
                 shouldHideRoleSubscriptionCTA: ea,
                 onOpenPremiumSettings: () => {
                     R(),
-                        k.default.track(F.rMx.PREMIUM_PROMOTION_OPENED, {
+                        j.default.track(F.rMx.PREMIUM_PROMOTION_OPENED, {
                             location_page: ee.page,
                             location_section: ee.section,
                         }),
@@ -382,13 +382,13 @@ let Q = 32,
                 popoutData: ec,
                 emojiSourceGuildId: null == T ? void 0 : T.id,
                 nonce: U,
-                demoMode: j,
+                demoMode: k,
             }),
             e_ = ec.type === B.$.JOIN_GUILD,
             ep = ec.type === B.$.GET_PREMIUM,
             eh = () => {
                 let e = async () => {
-                        if (j || null == T || Q) return;
+                        if (k || null == T || Q) return;
                         R();
                         let e = T.id;
                         try {
@@ -483,7 +483,7 @@ let Q = 32,
                     i = () => {
                         n &&
                             (null == D || D(),
-                            em || j || k.default.track(F.rMx.EMOJI_UPSELL_POPOUT_MORE_EMOJIS_OPENED, ef),
+                            em || k || j.default.track(F.rMx.EMOJI_UPSELL_POPOUT_MORE_EMOJIS_OPENED, ef),
                             eg(!em));
                     },
                     o = () => {

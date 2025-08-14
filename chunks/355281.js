@@ -6,10 +6,23 @@ var r = n(818083);
 let i = (0, n(427164).le)({
         name: "2025-08-view-roblox-subgames-in-rich-presence",
         kind: "user",
-        defaultConfig: { enabled: !1 },
+        defaultConfig: {
+            enabled: !1,
+            showPlayButton: !1,
+        },
         variations: {
-            0: { enabled: !1 },
-            1: { enabled: !0 },
+            0: {
+                enabled: !1,
+                showPlayButton: !1,
+            },
+            1: {
+                enabled: !0,
+                showPlayButton: !1,
+            },
+            2: {
+                enabled: !0,
+                showPlayButton: !0,
+            },
         },
     }),
     o = (0, r.B)({

@@ -32,7 +32,7 @@ n.d(t, {
     CoT: () => P,
     Cyb: () => E.Cy,
     DJE: () => rn,
-    DJj: () => ej,
+    DJj: () => ek,
     DZw: () => eL,
     E07: () => tN,
     EKQ: () => E.EK,
@@ -43,7 +43,7 @@ n.d(t, {
     Etm: () => E.Et,
     Eu4: () => nl,
     FD8: () => eB,
-    FQ1: () => rj,
+    FQ1: () => rk,
     Fc: () => to,
     FoC: () => J,
     FsG: () => b.Fs,
@@ -74,7 +74,7 @@ n.d(t, {
     Jn9: () => rX,
     JuI: () => eX,
     JwP: () => nh,
-    K3D: () => rk,
+    K3D: () => rj,
     KA4: () => tw,
     KFR: () => nx,
     KJ3: () => rD,
@@ -114,7 +114,7 @@ n.d(t, {
     PUi: () => nG,
     Pbq: () => t7,
     Plq: () => E.Pl,
-    PrB: () => k,
+    PrB: () => j,
     PrS: () => ty,
     PsQ: () => tz,
     PyE: () => E.Py,
@@ -133,7 +133,7 @@ n.d(t, {
     RK: () => E.RK,
     RYY: () => t3,
     RcX: () => tm,
-    Rg9: () => nk,
+    Rg9: () => nj,
     S7T: () => E.S7,
     S9g: () => nR,
     SOq: () => n6,
@@ -141,7 +141,7 @@ n.d(t, {
     STv: () => ey,
     SaU: () => tV,
     Sap: () => no,
-    Sbl: () => tk,
+    Sbl: () => tj,
     Sc2: () => eS,
     Skl: () => E.Sk,
     T23: () => rJ,
@@ -180,7 +180,7 @@ n.d(t, {
     YeM: () => ed,
     Ypu: () => es,
     Z5c: () => eP,
-    Z8P: () => ek,
+    Z8P: () => ej,
     Z9p: () => ng,
     ZUi: () => W,
     ZY5: () => tU,
@@ -202,7 +202,7 @@ n.d(t, {
     b4C: () => rV,
     b8q: () => tG,
     bL: () => eD,
-    c2C: () => nj,
+    c2C: () => nk,
     d4z: () => a.d,
     dAT: () => tq,
     dCx: () => nr,
@@ -277,12 +277,12 @@ n.d(t, {
     pAY: () => tg,
     pJs: () => L,
     pKx: () => E.pK,
-    pM4: () => j,
+    pM4: () => k,
     pNK: () => C,
     pTL: () => rq,
     pjP: () => n4,
     pmI: () => t9,
-    q5t: () => tj,
+    q5t: () => tk,
     q9n: () => nY,
     qAy: () => tZ,
     qWG: () => rH,
@@ -668,10 +668,10 @@ var v = (function (e) {
     M = (function (e) {
         return (e.NEVER = "NEVER"), (e.ENABLED = "ENABLED"), (e.BLOCKED = "BLOCKED"), e;
     })({}),
-    k = (function (e) {
+    j = (function (e) {
         return (e.NEVER = "NEVER"), (e.ALL_CHANNELS = "ALL_CHANNELS"), (e.SELECTED_CHANNEL = "SELECTED_CHANNEL"), e;
     })({}),
-    j = (function (e) {
+    k = (function (e) {
         return (e.PUSH_TO_TALK = "PUSH_TO_TALK"), (e.VOICE_ACTIVITY = "VOICE_ACTIVITY"), e;
     })({}),
     U = (function (e) {
@@ -1134,6 +1134,7 @@ let eE = "@me",
         UNVERIFIED_APPLICATIONS: "/unverified-applications",
         UNVERIFIED_APPLICATIONS_ICONS: "/unverified-applications/icons",
         PLATFORM_APPLICATION: "/platform-application",
+        ROBLOX_APPLICATIONS_SUPPLEMENTAL_DATA: "/roblox-applications-supplemental-data",
         GUILD_FEATURE_ACK: (e, t, n) => "/guilds/".concat(e, "/ack/").concat(n, "/").concat(t),
         USER_NON_CHANNEL_ACK: (e, t) => "/users/@me/".concat(t, "/").concat(e, "/ack"),
         BULK_ACK: "/read-states/ack-bulk",
@@ -2118,8 +2119,8 @@ var ew = (function (e) {
 let eL = 100,
     ex = 200,
     eM = 50,
-    ek = 50,
-    ej = 25,
+    ej = 50,
+    ek = 25,
     eU = 200,
     eG = 100,
     eB = 250,
@@ -2506,7 +2507,7 @@ var tL = (function (e) {
             e
         );
     })({}),
-    tk = (function (e) {
+    tj = (function (e) {
         return (
             (e.GUILD_CREATE_INVITE_SUGGESTION = "Guild Create Invite Suggestion"),
             (e.ADD_FRIENDS_TO_DM = "Add Friends to DM"),
@@ -2589,7 +2590,7 @@ var tL = (function (e) {
             e
         );
     })({}),
-    tj = (function (e) {
+    tk = (function (e) {
         return (e.JOIN = "join"), (e.ASK_TO_JOIN = "ask to join"), (e.LAUNCH = "launch"), (e.SPECTATE = "spectate"), e;
     })({}),
     tU = (function (e) {
@@ -3870,6 +3871,7 @@ var nb = (function (e) {
             (e.ATT_APP_STATE_CHECKED = "att_app_state_checked"),
             (e.ATT_APP_STATE_CHECKED_OVERRIDE = "att_app_state_checked_override"),
             (e.ATT_PROMPT_ERROR = "att_prompt_error"),
+            (e.AD_USER_FETCH_DURATION = "ad_user_fetch_duration"),
             (e.HEADLESS_TASK_INVOKED = "headless_task_invoked"),
             (e.HEADLESS_TASK_COMPLETED = "headless_task_completed"),
             (e.VERIFY_ACCOUNT_APP_OPENED = "verify_account_app_opened"),
@@ -4851,6 +4853,8 @@ var nb = (function (e) {
             (e.PREMIUM_BRAND_REFRESH_WOW_MOMENT_VIEWED = "premium_brand_refresh_wow_moment_viewed"),
             (e.PREMIUM_BRAND_REFRESH_WOW_MOMENT_ASSETS_PREFETCHING =
                 "premium_brand_refresh_wow_moment_assets_prefetching"),
+            (e.PREMIUM_BRAND_REFRESH_WOW_MOMENT_ASSETS_PREFETCH_SUCCESS =
+                "premium_brand_refresh_wow_moment_assets_prefetch_success"),
             (e.PREMIUM_BRAND_REFRESH_WOW_MOMENT_ASSETS_NOT_LOADED_ON_CONFIRMATION =
                 "premium_brand_refresh_wow_moment_assets_not_loaded_on_confirmation"),
             (e.PREMIUM_FEATURE_HELPER_ACTIONS = "premium_feature_helper_actions"),
@@ -5564,8 +5568,8 @@ var nw = (function (e) {
             e
         );
     })({});
-let nk = 50;
-var nj = (function (e) {
+let nj = 50;
+var nk = (function (e) {
         return (
             (e.AGREEMENTS = "AGREEMENTS"),
             (e.REQUIRE_CAPTCHA = "REQUIRE_CAPTCHA"),
@@ -6542,10 +6546,10 @@ var rD = (function (e) {
             e
         );
     })({}),
-    rk = (function (e) {
+    rj = (function (e) {
         return (e.SOUND = "SOUND"), (e.VIDEO = "VIDEO"), e;
     })({}),
-    rj = (function (e) {
+    rk = (function (e) {
         return (e.PLAYING = "playing"), (e.PAUSED = "paused"), e;
     })({}),
     rU = (function (e) {

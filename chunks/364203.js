@@ -32,8 +32,8 @@ var r = n(255367),
     L = n(680783),
     x = n(981631),
     M = n(921944),
-    k = n(474936),
-    j = n(388032),
+    j = n(474936),
+    k = n(388032),
     U = n(839449);
 function G(e, t, n) {
     return (
@@ -104,7 +104,7 @@ function K(e) {
                 (0, r.jsxs)("div", {
                     className: U.badgeAndCloseRow,
                     children: [
-                        (0, r.jsx)(_.lBU, { text: j.intl.string(j.t.oW0eUV) }),
+                        (0, r.jsx)(_.lBU, { text: k.intl.string(k.t.oW0eUV) }),
                         (0, r.jsx)("div", {
                             className: U.coachmarkCloseIcon,
                             children: (0, r.jsx)(d.P, {
@@ -124,13 +124,13 @@ function K(e) {
                     children: [
                         (0, r.jsx)(_.X6q, {
                             variant: "heading-lg/extrabold",
-                            children: j.intl.string(j.t.dFhhcX),
+                            children: k.intl.string(k.t.dFhhcX),
                         }),
                         (0, r.jsx)(_.Text, {
                             className: U.subtitle,
                             variant: "text-xs/medium",
                             color: "text-muted",
-                            children: j.intl.string(j.t.u7Hzjo),
+                            children: k.intl.string(k.t.u7Hzjo),
                         }),
                     ],
                 }),
@@ -147,12 +147,12 @@ function z(e) {
                 children: [
                     (0, r.jsx)(_.X6q, {
                         variant: "heading-md/semibold",
-                        children: j.intl.string(j.t.EJ4k19),
+                        children: k.intl.string(k.t.EJ4k19),
                     }),
                     (0, r.jsx)(_.Text, {
                         className: U.subtitle,
                         variant: "text-sm/medium",
-                        children: t ? j.intl.string(j.t.MnUZLS) : j.intl.string(j.t.frNDKS),
+                        children: t ? k.intl.string(k.t.MnUZLS) : k.intl.string(k.t.frNDKS),
                     }),
                 ],
             }),
@@ -291,8 +291,8 @@ function Q(e) {
         isSelected: t,
         onSelect: n,
         selectionId: H,
-        tooltipText: j.intl.string(j.t["C/MRFx"]),
-        label: j.intl.string(j.t["C/MRFx"]),
+        tooltipText: k.intl.string(k.t["C/MRFx"]),
+        label: k.intl.string(k.t["C/MRFx"]),
         className: U.wallpaperRemoveSelection,
         children: (0, r.jsx)(_.t6m, {
             size: "lg",
@@ -315,7 +315,7 @@ function J(e) {
                 onChange: (e, t) => {
                     S.default.track(x.rMx.CHAT_WALLPAPER_PICKER_BLUR_TOGGLED, { selected: t }), o(t);
                 },
-                children: j.intl.string(j.t["3nPvdH"]),
+                children: k.intl.string(k.t["3nPvdH"]),
             }),
             (0, r.jsx)(_.Kqy, {
                 direction: "horizontal",
@@ -325,7 +325,7 @@ function J(e) {
                     children: [
                         (0, r.jsx)(_.zxk, {
                             variant: "secondary",
-                            text: j.intl.string(j.t["ETE/oK"]),
+                            text: k.intl.string(k.t["ETE/oK"]),
                             onClick: () => {
                                 S.default.track(x.rMx.CHAT_WALLPAPER_PICKER_CANCEL_CLICKED, { cta_location: "footer" }),
                                     a();
@@ -334,7 +334,7 @@ function J(e) {
                         }),
                         (0, r.jsx)(_.zxk, {
                             variant: "primary",
-                            text: j.intl.string(j.t["1Qm829"]),
+                            text: k.intl.string(k.t["1Qm829"]),
                             onClick: s,
                             disabled: !t,
                             loading: n,
@@ -356,7 +356,7 @@ function $() {
                 variant: "text-sm/medium",
                 color: "text-muted",
                 className: U.nonTier2FooterText,
-                children: j.intl.format(j.t["0Tapv7"], {
+                children: k.intl.format(k.t["0Tapv7"], {
                     onClickNitro: () => {
                         S.default.track(x.rMx.CHAT_WALLPAPER_NITRO_LINK_CLICKED), (0, v.uL)(x.Z5c.NITRO_HOME);
                     },
@@ -365,10 +365,10 @@ function $() {
             (0, r.jsx)(y.Z, {
                 className: U.getNitroButton,
                 textOptions: {
-                    textOverride: j.intl.string(j.t.JST6jo),
+                    textOverride: k.intl.string(k.t.JST6jo),
                     textClassName: U.getNitroButtonText,
                 },
-                subscriptionTier: k.Si.TIER_2,
+                subscriptionTier: j.Si.TIER_2,
                 showGradient: !0,
                 color: f.Tt.BRAND,
                 size: f.zx.Sizes.MEDIUM,
@@ -381,7 +381,7 @@ let ee = function (e) {
         { analyticsLocations: l } = (0, m.ZP)(h.Z.CHAT_WALLPAPER_PICKER),
         { activePickerChannelId: c, closePicker: d, setPreviewWallpaperId: f } = (0, A.B)(),
         g = (0, L.Z)(c),
-        E = (0, O.m)(k.p9.TIER_2),
+        E = (0, O.m)(j.p9.TIER_2),
         [b, y] = i.useState(!1),
         v = (0, C.e)(b),
         D = (0, w.u)();
@@ -425,7 +425,7 @@ let ee = function (e) {
                 channel_type: null == e ? void 0 : e.type,
             }),
                 W(c, g.wallpaperId, () => {
-                    (0, _.showToast)((0, _.createToast)(j.intl.string(j.t.F8FvU1), _.ToastType.FAILURE));
+                    (0, _.showToast)((0, _.createToast)(k.intl.string(k.t.F8FvU1), _.ToastType.FAILURE));
                 });
         }, [c, g, W, b]),
         et = i.useCallback(
@@ -488,7 +488,7 @@ let ee = function (e) {
                               variant: "text-sm/medium",
                               color: "text-muted",
                               className: U.errorText,
-                              children: j.intl.string(j.t.F8FvU1),
+                              children: k.intl.string(k.t.F8FvU1),
                           }),
                       ],
                   })

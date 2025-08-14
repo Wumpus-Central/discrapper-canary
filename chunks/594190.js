@@ -44,8 +44,8 @@ var i,
     L = n(358085),
     x = n(998502),
     M = n(145597),
-    k = n(581567),
-    j = n(981631),
+    j = n(581567),
+    k = n(981631),
     U = n(987650);
 function G(e, t, n) {
     return (
@@ -205,7 +205,7 @@ let V = new h.Z("RunningGameStore"),
                     name: "spotify",
                 },
             ],
-            name: _.Z.get(j.ABu.SPOTIFY).name,
+            name: _.Z.get(k.ABu.SPOTIFY).name,
         },
     ],
     z = [],
@@ -299,13 +299,13 @@ function ev() {
             var t;
             (eu[n.pid] = n), e.push(n);
             let r = A.Z.getGameByName(n.name);
-            R.default.track(j.rMx.GAME_DETECTED, {
+            R.default.track(k.rMx.GAME_DETECTED, {
                 game: n.name,
                 orig_game_name: n.origGameName,
                 game_id: null == r ? void 0 : r.id,
                 distributor: n.distributor,
-                verified: (0, k.vp)(n.exePath, null != (t = null == r ? void 0 : r.executables) ? t : []),
-                game_platform: j.M7m.DESKTOP,
+                verified: (0, j.vp)(n.exePath, null != (t = null == r ? void 0 : r.executables) ? t : []),
+                game_platform: k.M7m.DESKTOP,
                 is_launcher: n.isLauncher,
                 detection_method: "process_observer",
                 game_detection_enabled: eC(n),
@@ -331,6 +331,7 @@ function ev() {
         });
 }
 function eI(e) {
+    if ((0, T.le)(e)) return "".concat(e.exePath, ":").concat(e.id);
     let t = null != e.name ? e.name : "";
     return "".concat(e.exePath, ":").concat(t);
 }
@@ -497,7 +498,7 @@ function eM(e) {
         (e.forEach((e) => {
             if (
                 ei.gamesSeen.some((t) => {
-                    if (t.name === e.name) {
+                    if (t.name === e.name || (null != t.id && t.id === e.id)) {
                         if (e.lastFocused) {
                             t.lastFocused = e.lastFocused;
                             let n = ei.gameOverrides[eI(e)];
@@ -520,13 +521,13 @@ function eM(e) {
         }),
         ei.gamesSeen.sort((e, t) => t.lastFocused - e.lastFocused),
         eP(),
-        w.Z.setRecentGames(ek().map((e) => ew(e, e3, A.Z, N.Z))));
+        w.Z.setRecentGames(ej().map((e) => ew(e, e3, A.Z, N.Z))));
 }
-function ek() {
+function ej() {
     let e = a().values(ei.gameOverrides);
     return ei.gamesSeen.filter((e) => void 0 === ei.gameOverrides[eI(e)]).concat(e);
 }
-function ej(e, t) {
+function ek(e, t) {
     if (void 0 === t) {
         let t = x.ZP.getDiscordUtils();
         if (null != t && null != t.getWindowHandleFromPid) {
@@ -539,7 +540,7 @@ function ej(e, t) {
 }
 function eU() {
     (ee =
-        ($ = $.map((e) => (e.distributor === j.GQo.ROBLOX ? (0, T.ON)(e, S.Z.getCurrentSubgameInfo()) : e))).length > 0
+        ($ = $.map((e) => (e.distributor === k.GQo.ROBLOX ? (0, T.ON)(e, S.Z.getCurrentSubgameInfo()) : e))).length > 0
             ? $[0]
             : null),
         eM($);
@@ -605,7 +606,7 @@ function eq(e) {
         })
         .map((e) => e.cleanedExePath);
     t.length > 0 &&
-        R.default.track(j.rMx.GAME_DETECTION_DEBUGGING_KEYWORD_MATCH, {
+        R.default.track(k.rMx.GAME_DETECTION_DEBUGGING_KEYWORD_MATCH, {
             keywords: z,
             paths: t,
             debugging_level: e_,
@@ -632,8 +633,8 @@ function eQ(e) {
         n = eC(t);
     (ei.enableDetection[eI(t)] = !n),
         eP(),
-        $.length > 0 && $.some((e) => e.distributor === j.GQo.ROBLOX) && eU(),
-        R.default.track(j.rMx.USER_SETTINGS_GAME_DETECTION_TOGGLE, { enabled: !n });
+        $.length > 0 && $.some((e) => e.distributor === k.GQo.ROBLOX) && eU(),
+        R.default.track(k.rMx.USER_SETTINGS_GAME_DETECTION_TOGGLE, { enabled: !n });
 }
 function eJ(e) {
     let t = eI(e.game),
@@ -741,10 +742,10 @@ function e1() {
                     (e) => (
                         (null == e.distributor || "" === e.distributor) &&
                             e.id === I.eB &&
-                            (e.distributor = j.GQo.ROBLOX),
+                            (e.distributor = k.GQo.ROBLOX),
                         (e.isLauncher = e.isLauncher || t.has(e.exeName)),
                         e.isLauncher && null != e.id && (i[e.id] = e),
-                        (e.windowHandle = ej(e.pid, e.windowHandle)),
+                        (e.windowHandle = ek(e.pid, e.windowHandle)),
                         null == ey(e) || (n.push(e), !1)
                     ),
                 );
@@ -844,7 +845,7 @@ class e2 extends (i = c.ZP.Store) {
     }
     getGamesSeen(e) {
         let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-            n = ek();
+            n = ej();
         if (e) {
             let e = this.getVisibleGame();
             if (null != e) {

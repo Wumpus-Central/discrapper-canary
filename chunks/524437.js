@@ -28,12 +28,12 @@ n.d(t, {
     n9: () => A,
     nI: () => d,
     o8: () => D,
-    os: () => k,
+    os: () => j,
     p5: () => H,
     sf: () => ef,
     tA: () => em,
     v_: () => en,
-    yX: () => ek,
+    yX: () => ej,
 }),
     n(980754),
     n(388685),
@@ -291,7 +291,7 @@ class w extends a.C {
                     o.inbox = x.internalBinaryRead(e, e.uint32(), n, o.inbox);
                     break;
                 case 3:
-                    o.guilds = k.internalBinaryRead(e, e.uint32(), n, o.guilds);
+                    o.guilds = j.internalBinaryRead(e, e.uint32(), n, o.guilds);
                     break;
                 case 4:
                     o.userContent = X.internalBinaryRead(e, e.uint32(), n, o.userContent);
@@ -374,7 +374,7 @@ class w extends a.C {
     internalBinaryWrite(e, t, n) {
         e.versions && c.L.internalBinaryWrite(e.versions, t.tag(1, r.TD.LengthDelimited).fork(), n).join(),
             e.inbox && x.internalBinaryWrite(e.inbox, t.tag(2, r.TD.LengthDelimited).fork(), n).join(),
-            e.guilds && k.internalBinaryWrite(e.guilds, t.tag(3, r.TD.LengthDelimited).fork(), n).join(),
+            e.guilds && j.internalBinaryWrite(e.guilds, t.tag(3, r.TD.LengthDelimited).fork(), n).join(),
             e.userContent && X.internalBinaryWrite(e.userContent, t.tag(4, r.TD.LengthDelimited).fork(), n).join(),
             e.voiceAndVideo && en.internalBinaryWrite(e.voiceAndVideo, t.tag(5, r.TD.LengthDelimited).fork(), n).join(),
             e.textAndImages && eu.internalBinaryWrite(e.textAndImages, t.tag(6, r.TD.LengthDelimited).fork(), n).join(),
@@ -422,7 +422,7 @@ class w extends a.C {
                 no: 3,
                 name: "guilds",
                 kind: "message",
-                T: () => k,
+                T: () => j,
             },
             {
                 no: 4,
@@ -699,8 +699,8 @@ class M extends a.C {
         ]);
     }
 }
-let k = new M();
-class j extends a.C {
+let j = new M();
+class k extends a.C {
     create(e) {
         let t = {
             dismissed: !1,
@@ -784,7 +784,7 @@ class j extends a.C {
         ]);
     }
 }
-let U = new j();
+let U = new k();
 class G extends a.C {
     create(e) {
         let t = {
@@ -3829,7 +3829,7 @@ class eL extends a.C {
             let [t, i] = e.tag();
             switch (t) {
                 case 1:
-                    o.folders.push(ek.internalBinaryRead(e, e.uint32(), n));
+                    o.folders.push(ej.internalBinaryRead(e, e.uint32(), n));
                     break;
                 case 2:
                     if (i === r.TD.LengthDelimited)
@@ -3850,7 +3850,7 @@ class eL extends a.C {
     }
     internalBinaryWrite(e, t, n) {
         for (let i = 0; i < e.folders.length; i++)
-            ek.internalBinaryWrite(e.folders[i], t.tag(1, r.TD.LengthDelimited).fork(), n).join();
+            ej.internalBinaryWrite(e.folders[i], t.tag(1, r.TD.LengthDelimited).fork(), n).join();
         if (e.guildPositions.length) {
             t.tag(2, r.TD.LengthDelimited).fork();
             for (let n = 0; n < e.guildPositions.length; n++) t.fixed64(e.guildPositions[n]);
@@ -3866,7 +3866,7 @@ class eL extends a.C {
                 name: "folders",
                 kind: "message",
                 repeat: 1,
-                T: () => ek,
+                T: () => ej,
             },
             {
                 no: 2,
@@ -3965,8 +3965,8 @@ class eM extends a.C {
         ]);
     }
 }
-let ek = new eM();
-class ej extends a.C {
+let ej = new eM();
+class ek extends a.C {
     create(e) {
         let t = {
             favoriteChannels: {},
@@ -4058,7 +4058,7 @@ class ej extends a.C {
         ]);
     }
 }
-let eU = new ej();
+let eU = new ek();
 class eG extends a.C {
     create(e) {
         let t = {

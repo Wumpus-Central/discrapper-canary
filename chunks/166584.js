@@ -118,8 +118,8 @@ function x(e) {
             null != t ? (T.current[e] = t) : delete T.current[e];
         },
         [R, x] = i.useState(d),
-        [M, k] = i.useState(w),
-        [j, U] = i.useState(!1),
+        [M, j] = i.useState(w),
+        [k, U] = i.useState(!1),
         G = i.useRef(null),
         B = i.useRef(null),
         Z = i.useRef(0);
@@ -127,7 +127,7 @@ function x(e) {
         Z.current = 0;
     }, [d]),
         i.useLayoutEffect(() => {
-            if (j) return;
+            if (k) return;
             let e = L(G.current),
                 t = L(B.current),
                 n = [],
@@ -146,8 +146,8 @@ function x(e) {
                     (e += a + P), n.push(i);
                 }
             }
-            x(n.length === R.length ? R : n), k(r), Z.current++;
-        }, [d, R, j]);
+            x(n.length === R.length ? R : n), j(r), Z.current++;
+        }, [d, R, k]);
     let F = i.useMemo(() => "roles-".concat((0, o.Z)()), []),
         V = (0, a.ZP)({
             id: F,
@@ -158,14 +158,14 @@ function x(e) {
         }),
         H = d.length,
         Y = 0 === H ? v.intl.string(v.t["vR7M+/"]) : v.intl.formatToPlainString(v.t.PCs0oq, { numRoles: H }),
-        W = (j ? d : R).map((e, i) => {
+        W = (k ? d : R).map((e, i) => {
             var o;
             return (0, r.jsx)(
                 b.Z,
                 {
                     role: e,
                     guildId: l.id,
-                    style: { maxWidth: j || i !== R.length - 1 ? w : M },
+                    style: { maxWidth: k || i !== R.length - 1 ? w : M },
                     disableBorderColor: !0,
                     ref: (t) => A(e.id, t),
                     onRemove: () => E(e),
@@ -205,7 +205,7 @@ function x(e) {
                             children: [
                                 W,
                                 R.length < d.length
-                                    ? j
+                                    ? k
                                         ? (0, r.jsx)(c.DY3, {
                                               text: v.intl.string(v.t.XnXtCg),
                                               children: (0, r.jsx)(c.P3F, {

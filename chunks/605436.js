@@ -163,15 +163,15 @@ function M(e, t) {
     var n;
     return null != (n = c.ZP.getNick(t.id, e.id)) ? n : m.ZP.getName(e);
 }
-function k(e, t) {
+function j(e, t) {
     return (0, s.eM)(t, e);
 }
-function j(e, t) {
+function k(e, t) {
     return (0, s.eM)(t, e) ? g.aC.OWNER : g.aC.MEMBER;
 }
 function U(e, t) {
     var n;
-    let r = j(e, t);
+    let r = k(e, t);
     return {
         rowType: r,
         name: M(e, t),
@@ -181,7 +181,7 @@ function U(e, t) {
         avatarURL: e.getAvatarURL(t.id, 24),
         bot: e.bot,
         verifiedBot: e.isVerifiedBot(),
-        disabled: k(e, t),
+        disabled: j(e, t),
         key: "".concat(r, ":").concat(e.id),
     };
 }
@@ -203,7 +203,7 @@ function Z(e, t, n, r, i) {
     return e
         .map(u.default.getUser)
         .filter(f.lm)
-        .filter((e) => !N(t, e.id, r, i) || k(e, n));
+        .filter((e) => !N(t, e.id, r, i) || j(e, n));
 }
 function F(e, t, n, r, i) {
     return Z(e, t, n, r, i)

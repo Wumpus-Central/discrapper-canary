@@ -161,14 +161,14 @@ function D(e) {
                 (t[v] = e.hex), s(t);
             }
         },
-        k = async () => {
+        j = async () => {
             if (null != c)
                 try {
                     let { sRGBHex: e } = await c.open();
                     (0, E.J4)(), L(e);
                 } catch (e) {}
         },
-        j = () => {
+        k = () => {
             if (a.length === C) return;
             0 === a.length && (0, g.ft)(), (0, E.gG)();
             let e = a.length > 0 ? a[a.length - 1] : A,
@@ -204,7 +204,7 @@ function D(e) {
                             (0, r.jsx)(
                                 p.P3F,
                                 S(I({}, e), {
-                                    onClick: a.length === C ? void 0 : j,
+                                    onClick: a.length === C ? void 0 : k,
                                     className: l()(O.addColorButton, { [O.disabled]: a.length === C }),
                                     children: (0, r.jsx)(p.Text, {
                                         variant: "text-sm/medium",
@@ -257,7 +257,7 @@ function D(e) {
                                                     e,
                                                 ),
                                                 {
-                                                    onClick: k,
+                                                    onClick: j,
                                                     icon: d.i,
                                                     "aria-label": y.intl.string(b.default["8QXO8v"]),
                                                 },

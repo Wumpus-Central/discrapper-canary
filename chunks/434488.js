@@ -109,7 +109,7 @@ function x(e) {
               userParticipantCount: s,
           })
         : s > 1
-          ? (0, r.jsx)(j, {
+          ? (0, r.jsx)(k, {
                 channel: t,
                 guild: n,
                 width: i,
@@ -117,7 +117,7 @@ function x(e) {
                 handleClose: a,
                 userParticipantCount: s,
             })
-          : (0, r.jsx)(k, {
+          : (0, r.jsx)(j, {
                 channel: t,
                 guild: n,
                 width: i,
@@ -190,7 +190,7 @@ function M(e) {
         }),
     });
 }
-function k(e) {
+function j(e) {
     let { channel: t, guild: o, inPopout: s } = e;
     i.useEffect(() => {
         O.default.track(I.rMx.VC_TILE_ACTIVITIES_ENTRY_POINT_VIEWED, {
@@ -272,7 +272,7 @@ function k(e) {
         }),
     });
 }
-function j(e) {
+function k(e) {
     let { channel: t, guild: n, handleClose: o, width: l, userParticipantCount: d } = e;
     (0, u.ZP)(() => {
         O.default.track(I.rMx.VC_TILE_ACTIVITIES_ENTRY_POINT_VIEWED, {

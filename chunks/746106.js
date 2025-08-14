@@ -36,8 +36,8 @@ function I(e) {
             useForcedColors: L,
             systemForcedColors: x,
             useReducedMotion: M,
-            alwaysShowLinkDecorations: k,
-            confettiMode: j,
+            alwaysShowLinkDecorations: j,
+            confettiMode: k,
             highContrastMode: U,
         } = (0, s.cj)([g.default, c.Z, E.Z, b.Z, h.Z, m.Z], () => {
             var e;
@@ -88,11 +88,11 @@ function I(e) {
             useForcedColors: L,
             systemForcedColors: x,
             useReducedMotion: M,
-            alwaysShowLinkDecorations: k,
+            alwaysShowLinkDecorations: j,
             hardwareAccelerationEnabled: I,
             highContrastMode: G && U,
             rootClassName: a()({
-                "confetti-mode": j,
+                "confetti-mode": k,
                 "refresh-fast-follow-avatars": V && !K,
                 "refresh-fast-follow-guild-bg": H,
                 "refresh-fast-follow-distinct-borders": Y,

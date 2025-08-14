@@ -180,7 +180,7 @@ class M {
             });
     }
 }
-class k {
+class j {
     static makeEmptyAnalytics() {
         return {
             initialized: !1,
@@ -216,12 +216,12 @@ class k {
     }
     constructor() {
         N(this, "types", {
-            0: k.makeEmptyAnalytics(),
-            1: k.makeEmptyAnalytics(),
+            0: j.makeEmptyAnalytics(),
+            1: j.makeEmptyAnalytics(),
         });
     }
 }
-class j {
+class k {
     update() {
         let e = this.game,
             t = y.ZP.GetWindowFullscreenTypeByPid(e.pid, e.name, e.fullscreenType);
@@ -558,7 +558,7 @@ class G {
             (this.overlayMethod = null),
             (this.overlayMethodStats = null),
             (this.notificationAnalytics = new M()),
-            (this.widgetAnalytics = new k()),
+            (this.widgetAnalytics = new j()),
             (this.uiUnlockedCount = 0),
             (this.uiLockedCount = 0),
             (this.gameFocusChangedCount = 0),
@@ -578,7 +578,7 @@ class G {
             (this.soundboardKeepOpenCount = 0),
             (this.muteToggledCount = 0),
             (this._successfullyShown = !1),
-            (this.screenAnalytics = new j(e)),
+            (this.screenAnalytics = new k(e)),
             (this.overlayStatus = (0, d.b6)(e)),
             (this.overlayMethod = null != (n = null == (t = this.overlayStatus) ? void 0 : t.overlayMethod) ? n : null),
             (this.overlayMethodStats = this.buildOverlayMethodStats(this.overlayMethod, e)),

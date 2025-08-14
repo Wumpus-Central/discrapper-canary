@@ -1,4 +1,4 @@
-n.d(t, { Z: () => k }), n(997841), n(388685);
+n.d(t, { Z: () => j }), n(997841), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -355,7 +355,7 @@ class M extends i.PureComponent {
             });
     }
 }
-let k = {
+let j = {
     confirmPin: L,
     confirmUnpin: x,
     confirmDelete: function (e, t) {

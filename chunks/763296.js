@@ -80,14 +80,14 @@ function M(e) {
     let { soundboardSounds: t } = e;
     E.set(p.X8, t), (O = 2);
 }
-function k(e) {
+function j(e) {
     var t, n, r;
     let { soundId: i, userId: o } = e,
         a = (null != (n = b.get(i)) ? n : 0) + 1,
         s = (null != (r = T.get(o)) ? r : 0) + 1;
     b.set(i, a), T.set(o, s), o !== (null == (t = u.default.getCurrentUser()) ? void 0 : t.id) && (S = !0);
 }
-function j(e) {
+function k(e) {
     var t, n;
     let { soundId: r, userId: i } = e,
         o = (null != (t = b.get(r)) ? t : 0) - 1,
@@ -200,8 +200,8 @@ let Y = new H(s.Z, {
     GUILD_SOUNDBOARD_SOUND_CREATE: w,
     GUILD_SOUNDBOARD_SOUND_UPDATE: w,
     GUILD_SOUNDBOARD_SOUND_DELETE: L,
-    GUILD_SOUNDBOARD_SOUND_PLAY_START: k,
-    GUILD_SOUNDBOARD_SOUND_PLAY_END: j,
+    GUILD_SOUNDBOARD_SOUND_PLAY_START: j,
+    GUILD_SOUNDBOARD_SOUND_PLAY_END: k,
     GUILD_SOUNDBOARD_SOUNDS_UPDATE: D,
     USER_SOUNDBOARD_SET_VOLUME: G,
     VOICE_CHANNEL_SELECT: N,

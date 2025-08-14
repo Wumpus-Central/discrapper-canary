@@ -340,14 +340,14 @@ let M = (e, t) => {
             : e.id;
         return "".concat(n, "_").concat(t);
     },
-    k = (e) => {
+    j = (e) => {
         let t = Array.isArray(e) ? null : (0, b.uk)(e),
             n = (0, c.Z)(t);
         return t !== n;
     },
-    j = i.createContext(void 0);
+    k = i.createContext(void 0);
 function U() {
-    let e = i.useContext(j);
+    let e = i.useContext(k);
     return null == e ? void 0 : e.current;
 }
 function G() {
@@ -356,7 +356,7 @@ function G() {
 }
 function B(e) {
     let { visible: t, visibleChanged: n, focused: o, reference: a, focusedChanged: c, sourceQuestContent: u } = e,
-        d = k(e.questOrQuests),
+        d = j(e.questOrQuests),
         f = i.useRef(null),
         _ = (0, s.e7)([O.Z], () => null != O.Z.questEnrollmentBlockedUntil, []);
     return (
@@ -396,7 +396,7 @@ function B(e) {
             _,
             u,
         ]),
-        (0, r.jsx)(j.Provider, {
+        (0, r.jsx)(k.Provider, {
             value: f,
             children: e.children(a, f),
         })

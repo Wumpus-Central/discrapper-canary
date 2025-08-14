@@ -1,7 +1,7 @@
 n.d(t, {
     Ic: () => x,
-    O5: () => k,
-    Zk: () => j,
+    O5: () => j,
+    Zk: () => k,
     _3: () => L,
     _F: () => M,
     _b: () => N,
@@ -245,7 +245,7 @@ function M() {
         [e],
     );
 }
-function k() {
+function j() {
     let e = M();
     return r.useCallback(
         (t) => {
@@ -278,7 +278,7 @@ function k() {
         [e],
     );
 }
-function j(e, t) {
+function k(e, t) {
     r.useEffect(() => {
         U(t, e);
     }, [e, t]);

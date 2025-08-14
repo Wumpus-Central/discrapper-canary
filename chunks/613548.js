@@ -70,7 +70,7 @@ function M(e, t) {
     }
     return n;
 }
-function k(e, t) {
+function j(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -81,7 +81,7 @@ function k(e, t) {
         e
     );
 }
-let j = 3;
+let k = 3;
 function U(e) {
     let { channelId: t, guildId: n } = e,
         i = (0, c.Wu)([A.Z, N.Z], () => {
@@ -90,7 +90,7 @@ function U(e) {
                 .map((e) => N.Z.getParticipant(t, e))
                 .filter((e) => null != e && e.type === P.fO.USER && e.speaking && !(0, b.ZP)(e))
                 .sortBy((t) => -A.Z.getSpeakingDuration(t.user.id, e))
-                .slice(0, j)
+                .slice(0, k)
                 .value();
         });
     return 0 === i.length
@@ -106,7 +106,7 @@ function U(e) {
                           children: (o) =>
                               (0, r.jsx)(
                                   S.ZP,
-                                  k(x({}, o), {
+                                  j(x({}, o), {
                                       className: a()(D.speaker, { [D.last]: t === i.length - 1 }),
                                       user: e.user,
                                       speaking: !0,
@@ -142,7 +142,7 @@ function G(e) {
         ),
         L = t.isGuildVoice() && !n,
         { hasParticipantsPanel: M } = (0, R.Z)({ location: "ChannelCallHeaderToolbar" }),
-        j = !w && M && (t.isGuildVoice() || t.isGroupDM()),
+        k = !w && M && (t.isGuildVoice() || t.isGroupDM()),
         { enabled: G, inInbox: B } = g.Z.useExperiment({ location: "ChannelCallHeaderToolbar" }),
         Z = [];
     return (
@@ -215,7 +215,7 @@ function G(e) {
                             let { isShown: n } = t;
                             return (0, i.createElement)(
                                 T.Z,
-                                k(x({}, e), {
+                                j(x({}, e), {
                                     buttonRef: o,
                                     isActive: n,
                                     count: A,
@@ -229,7 +229,7 @@ function G(e) {
                 ),
             ),
         G && !B && Z.push((0, r.jsx)(E.Z, { className: D.button }, "for-later")),
-        j &&
+        k &&
             Z.push(
                 (0, r.jsx)(
                     T.Z,

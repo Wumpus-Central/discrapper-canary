@@ -96,8 +96,8 @@ let N = i.forwardRef(function (e, t) {
         { canRemove: N, className: C, role: R, onRemove: P, guildId: w, disableBorderColor: D, onMouseDown: L } = e,
         x = (0, s.JA)(R.id),
         { tabIndex: M } = x,
-        k = S(x, ["tabIndex"]),
-        j = (0, g.p9)({
+        j = S(x, ["tabIndex"]),
+        k = (0, g.p9)({
             roleId: R.id,
             size: 16,
             guildId: w,
@@ -195,12 +195,12 @@ let N = i.forwardRef(function (e, t) {
                         "aria-label": R.name,
                         tabIndex: M,
                     },
-                    k,
+                    j,
                 ),
                 {
                     children: [
                         z(),
-                        null != j ? (0, r.jsx)(m.Z, T(v({ className: y.roleIcon }, j), { enableTooltip: !1 })) : null,
+                        null != k ? (0, r.jsx)(m.Z, T(v({ className: y.roleIcon }, k), { enableTooltip: !1 })) : null,
                         (0, r.jsx)("div", {
                             "aria-hidden": !0,
                             className: y.roleName,

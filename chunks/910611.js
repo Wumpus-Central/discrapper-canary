@@ -49,7 +49,7 @@ function M(e, t, n) {
         e
     );
 }
-function k(e) {
+function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -65,7 +65,7 @@ function k(e) {
     }
     return e;
 }
-function j(e, t) {
+function k(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -82,7 +82,7 @@ function U(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : j(Object(t)).forEach(function (n) {
+            : k(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -148,7 +148,7 @@ function B(e) {
             children: (e) =>
                 (0, r.jsxs)(
                     "div",
-                    U(k({ className: x.linkedLobbyTooltip }, e), {
+                    U(j({ className: x.linkedLobbyTooltip }, e), {
                         children: [
                             i,
                             (0, r.jsxs)(c.Text, {
@@ -430,7 +430,7 @@ function W(e) {
         children: (e) =>
             (0, r.jsxs)(
                 c.P3F,
-                U(k({}, e), {
+                U(j({}, e), {
                     onClick: d,
                     className: x.guildBreadcrumbContainer,
                     children: [

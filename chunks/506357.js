@@ -107,7 +107,7 @@ function S(e) {
             guild: C,
             size: s.Z.Sizes.MINI,
         }),
-        k = (0, m.OY)(P, C.name);
+        j = (0, m.OY)(P, C.name);
     if (null != (null != (O = P.dmsDisabledUntil) ? O : P.invitesDisabledUntil) && w)
         return (0, r.jsxs)(a.qXd, {
             className: y.notice,
@@ -118,7 +118,7 @@ function S(e) {
                     noticeType: g.kVF.GUILD_RAID_NOTIFICATION,
                 }),
                 M,
-                k,
+                j,
                 (0, r.jsx)(a.EyT, {
                     className: y.actionButton,
                     onClick: () => x(!1),
@@ -135,7 +135,7 @@ function S(e) {
                 }),
             ],
         });
-    let j = (0, m.CG)(P)
+    let k = (0, m.CG)(P)
             ? b.intl.formatToPlainString(b.t.tZTx2N, { guildName: C.name })
             : (0, m.kk)(P)
               ? b.intl.formatToPlainString(b.t["1bSmxs"], { guildName: C.name })
@@ -150,7 +150,7 @@ function S(e) {
                 noticeType: g.kVF.GUILD_RAID_NOTIFICATION,
             }),
             M,
-            j,
+            k,
             !U &&
                 (0, r.jsx)(a.EyT, {
                     className: y.actionButton,

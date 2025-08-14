@@ -59,7 +59,7 @@ function M(e) {
     }
     return e;
 }
-function k(e, t) {
+function j(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -71,12 +71,12 @@ function k(e, t) {
     }
     return n;
 }
-function j(e, t) {
+function k(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : k(Object(t)).forEach(function (n) {
+            : j(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -89,7 +89,7 @@ function U(e) {
         y = n.skuId === c.A$,
         O = (0, A.ZP)(t, n).type !== C.A3.INACTIVE,
         v = (0, S.Z)(t),
-        [x, k] = i.useState(!1),
+        [x, j] = i.useState(!1),
         [U, G] = i.useState(!1),
         B = U,
         Z = i.useCallback(() => {
@@ -130,7 +130,7 @@ function U(e) {
             config: V,
         }),
         K = i.useCallback((e) => {
-            e && k(!0);
+            e && j(!0);
         }, []),
         z = (0, p.O)(K),
         q = (0, T.Z)(n, U);
@@ -153,7 +153,7 @@ function U(e) {
                 }),
             }),
             (0, r.jsxs)(s.animated.div, {
-                style: j(M({}, Y), { transform: Y.y.to((e) => "translateY(".concat(e, "px)")) }),
+                style: k(M({}, Y), { transform: Y.y.to((e) => "translateY(".concat(e, "px)")) }),
                 className: a()(L.contentContainer, D.contentContainer),
                 children: [
                     (0, r.jsx)(E.xm, {

@@ -89,7 +89,7 @@ function M(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = k(e, t);
+        i = j(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
         for (r = 0; r < o.length; r++)
@@ -97,7 +97,7 @@ function M(e, t) {
     }
     return i;
 }
-function k(e, t) {
+function j(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -106,7 +106,7 @@ function k(e, t) {
     for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let j = [];
+let k = [];
 class U extends i.PureComponent {
     componentDidMount() {
         this.timeout = setTimeout(() => {
@@ -119,12 +119,12 @@ class U extends i.PureComponent {
     logShownEventIfNeeded() {
         let e = this.props.activity.application_id;
         null != e &&
-            -1 === j.indexOf(e) &&
+            -1 === k.indexOf(e) &&
             (S.default.track(C.rMx.SHOW_TUTORIAL, {
                 tutorial: "activity-invite-nux-inline",
                 application_id: e,
             }),
-            j.push(e));
+            k.push(e));
     }
     componentWillUnmount() {
         null !== this.timeout && clearTimeout(this.timeout);

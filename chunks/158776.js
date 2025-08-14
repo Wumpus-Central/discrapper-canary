@@ -117,7 +117,7 @@ function M(e) {
     n.status !== E.Skl.OFFLINE || (null != n.hiddenActivities && n.hiddenActivities.length > 0)
         ? ((v[e] = n.status),
           (I[e] = n.activities),
-          (T[e] = k(
+          (T[e] = j(
               Object.values(t).flatMap((e) => {
                   var t;
                   return null != (t = e.hiddenActivities) ? t : [];
@@ -131,14 +131,14 @@ function M(e) {
           ? delete O[e]
           : n.status === E.Skl.OFFLINE &&
             t.some((e) => null != e.hiddenActivities && e.hiddenActivities.length > 0) &&
-            (T[e] = k(
+            (T[e] = j(
                 Object.values(t).flatMap((e) => {
                     var t;
                     return null != (t = e.hiddenActivities) ? t : [];
                 }),
             ));
 }
-function k(e) {
+function j(e) {
     return 0 === e.length
         ? e
         : [
@@ -150,7 +150,7 @@ function k(e) {
               ).values(),
           ];
 }
-function j(e) {
+function k(e) {
     let t = O[e];
     if (null == t) return;
     let n = s().maxBy(Object.values(t), (e) => e.processedAtTimestamp);
@@ -189,7 +189,7 @@ function U(e) {
         };
     else {
         let { visible: e, hidden: c } = x(a.length > 1 ? [...a].sort(L) : a, n),
-            d = k([...(null != s ? s : []), ...c]),
+            d = j([...(null != s ? s : []), ...c]),
             f = u[t];
         (a = null != f && o()(f.activities, e) ? f.activities : e),
             (u[t] = {
@@ -229,7 +229,7 @@ function G(e) {
         };
     else {
         let { visible: e, hidden: l } = x(o.length > 1 ? [...o].sort(L) : o, n),
-            u = k([...(null != a ? a : []), ...l]);
+            u = j([...(null != a ? a : []), ...l]);
         c[t] = {
             status: r,
             clientStatus: i,
@@ -300,7 +300,7 @@ function V(e) {
                 i.add(t.id));
         }),
         i.delete(r),
-        i.forEach(j);
+        i.forEach(k);
 }
 function H(e) {
     let { presences: t } = e;

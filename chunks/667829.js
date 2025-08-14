@@ -81,10 +81,10 @@ function M(e, t) {
     );
 }
 new E.Z("ChannelEditor.tsx");
-let k = function () {
+let j = function () {
         for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
     },
-    j = 1000;
+    k = 1000;
 class U extends i.Component {
     _getEditorWindow() {
         var e, t, n, r, i;
@@ -106,7 +106,7 @@ class U extends i.Component {
         this.props.focused && requestAnimationFrame(() => this.focus()),
             document.addEventListener("selectionchange", this.handleSelectionChange),
             window.addEventListener("beforeunload", this.handleBeforeUnload),
-            (this._initTimeoutId = setTimeout(() => void this._getEditorWindow(), j));
+            (this._initTimeoutId = setTimeout(() => void this._getEditorWindow(), k));
     }
     componentDidUpdate(e) {
         if ((this.fixFocus(e), this.props.useSlate !== e.useSlate)) {
@@ -250,8 +250,8 @@ class U extends i.Component {
                 required: P,
                 maxCharacterCount: D,
                 allowNewLines: x,
-                "aria-describedby": k,
-                "aria-labelledby": j,
+                "aria-describedby": j,
+                "aria-labelledby": k,
                 accessibilityLabel: U,
             } = this.props,
             { submitting: G, popup: B } = this.state,
@@ -296,8 +296,8 @@ class U extends i.Component {
                 "aria-expanded": null !== B.id || void 0,
                 "aria-activedescendant": null != (s = B.activeDescendant) ? s : void 0,
                 "aria-invalid": l.length > D,
-                "aria-describedby": k,
-                "aria-labelledby": j,
+                "aria-describedby": j,
+                "aria-labelledby": k,
                 "aria-autocomplete": "list",
             },
             F = E
@@ -452,7 +452,7 @@ class U extends i.Component {
                     O = null != s ? s : c,
                     { files: v } = G(e.clipboardData, u.uploadLongMessages ? O : null);
                 return (
-                    k(
+                    j(
                         "onPaste",
                         [...e.clipboardData.items].map((e) => {
                             if ("file" !== e.kind)

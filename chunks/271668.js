@@ -32,8 +32,8 @@ let D = 512,
     L = 7,
     x = 56,
     M = 16,
-    k = 32,
-    j = 20,
+    j = 32,
+    k = 20,
     U = 420,
     G = [8, 8, 0, 8],
     B = l().debounce(() => {
@@ -87,11 +87,11 @@ let D = 512,
                         m.Xn.setActiveCategoryIndex(e);
                     }
                 },
-                scrollOffset: j,
+                scrollOffset: k,
                 searchQuery: "",
             }),
             er = (e) => {
-                let t = q.length * (k + M) + (X.reduce((e, t) => e + t.data.length, 0) - (Q ? L : 0)) * x - D;
+                let t = q.length * (j + M) + (X.reduce((e, t) => e + t.data.length, 0) - (Q ? L : 0)) * x - D;
                 Q && e + U > t && ee(), en(e), B(), (l.current = e);
             },
             ei = i.useRef(er);
@@ -278,7 +278,7 @@ let D = 512,
                         rowCount: q.length,
                         rowCountBySection: ea,
                         rowHeight: x,
-                        sectionHeaderHeight: k,
+                        sectionHeaderHeight: j,
                         sectionMarginBottom: eo,
                         ref: H,
                         stickyHeaders: !0,

@@ -115,8 +115,8 @@ let P = ["TOP_LEFT", "TOP_RIGHT"],
         leafRotationDirection: 1,
     },
     M = 10,
-    k = 80,
     j = 80,
+    k = 80,
     U = 180,
     G = 8,
     B = 12,
@@ -283,10 +283,10 @@ function ee(e) {
                         type: "static-random",
                         minValue: {
                             x: M * e.x,
-                            y: j * e.y,
+                            y: k * e.y,
                         },
                         maxValue: {
-                            x: k * e.x,
+                            x: j * e.x,
                             y: U * e.y,
                         },
                     },
@@ -420,14 +420,14 @@ function et(e) {
         M = i.useCallback(() => {
             (0, h.AI)({ settingsVisible: !0 }), f.Z.open(y.oAB.POGGERMODE), A(!1);
         }, []),
-        k = i.useCallback(
+        j = i.useCallback(
             (e, t) => {
                 (null == t ? void 0 : t.id.startsWith(F)) && M();
             },
             [M],
         );
-    i.useEffect(() => T(k));
-    let j = (0, r.jsx)(d.P3F, {
+    i.useEffect(() => T(j));
+    let k = (0, r.jsx)(d.P3F, {
         className: v.iconWrapper,
         innerRef: C,
         onClick: l,
@@ -438,7 +438,7 @@ function et(e) {
         }),
     });
     return (0, r.jsxs)(b.Z, {
-        iconNode: j,
+        iconNode: k,
         timestamp: n.timestamp,
         compact: o,
         children: [

@@ -19,62 +19,66 @@ let m = (e) => {
                 modalGlowIdle: void 0,
                 modalGlowExit: void 0,
             }),
-            [a, s] = (0, r.useState)(!1),
-            [c, m] = (0, r.useState)(!1),
+            [a, m] = (0, r.useState)(!1),
             [g, E] = (0, r.useState)(!1),
-            b = (0, r.useRef)(!0);
+            [b, y] = (0, r.useState)(!1),
+            O = (0, r.useRef)(!0);
         (0, r.useEffect)(
             () => (
-                (b.current = !0),
+                (O.current = !0),
                 () => {
-                    b.current = !1;
+                    O.current = !1;
                 }
             ),
             [],
         );
-        let y = (0, r.useCallback)(
+        let v = (0, r.useCallback)(
                 () => null != n.modalGlowEntry && null != n.modalGlowIdle && null != n.modalGlowExit,
                 [n.modalGlowEntry, n.modalGlowIdle, n.modalGlowExit],
             ),
-            O = (0, r.useCallback)(async () => {
-                if (!y() && !g) {
-                    E(!0), m(!1), s(!1);
+            I = (0, r.useCallback)(async () => {
+                if (!v() && !b) {
+                    y(!0), E(!1), m(!1);
                     try {
-                        let [e, n, r] = await Promise.all([
-                            o.tn.get({
-                                url: t ? u.Z : d.Z,
-                                binary: !0,
-                                rejectWithError: !0,
-                            }),
-                            o.tn.get({
-                                url: t ? f.Z : _.Z,
-                                binary: !0,
-                                rejectWithError: !0,
-                            }),
-                            o.tn.get({
-                                url: t ? p.Z : h.Z,
-                                binary: !0,
-                                rejectWithError: !0,
-                            }),
-                        ]);
-                        b.current &&
+                        let e = Date.now(),
+                            [n, r, a] = await Promise.all([
+                                o.tn.get({
+                                    url: t ? u.Z : d.Z,
+                                    binary: !0,
+                                    rejectWithError: !0,
+                                }),
+                                o.tn.get({
+                                    url: t ? f.Z : _.Z,
+                                    binary: !0,
+                                    rejectWithError: !0,
+                                }),
+                                o.tn.get({
+                                    url: t ? p.Z : h.Z,
+                                    binary: !0,
+                                    rejectWithError: !0,
+                                }),
+                            ]);
+                        O.current &&
                             (i({
-                                modalGlowEntry: window.URL.createObjectURL(e.body),
-                                modalGlowExit: window.URL.createObjectURL(n.body),
-                                modalGlowIdle: window.URL.createObjectURL(r.body),
+                                modalGlowEntry: window.URL.createObjectURL(n.body),
+                                modalGlowExit: window.URL.createObjectURL(r.body),
+                                modalGlowIdle: window.URL.createObjectURL(a.body),
                             }),
-                            s(!0));
+                            m(!0),
+                            s.default.track(c.rMx.PREMIUM_BRAND_REFRESH_WOW_MOMENT_ASSETS_PREFETCH_SUCCESS, {
+                                load_duration_ms: Date.now() - e,
+                            }));
                     } catch (e) {
-                        b.current && m(!0);
+                        O.current && E(!0);
                     } finally {
-                        b.current && E(!1);
+                        O.current && y(!1);
                     }
                 }
-            }, [y, g, t]);
+            }, [v, b, t]);
         return (
             (0, r.useEffect)(() => {
-                e && O();
-            }, [e, O]),
+                e && I();
+            }, [e, I]),
             (0, r.useEffect)(
                 () => () => {
                     null != n.modalGlowEntry && window.URL.revokeObjectURL(n.modalGlowEntry),
@@ -86,8 +90,8 @@ let m = (e) => {
             {
                 mediaUrls: n,
                 isSuccess: a,
-                isFailure: c,
-                isLoading: g,
+                isFailure: g,
+                isLoading: b,
             }
         );
     },

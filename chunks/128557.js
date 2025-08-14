@@ -123,7 +123,7 @@ function M(e) {
         })
     );
 }
-function k(e) {
+function j(e) {
     let t = i.useCallback(() => {
             _.ZP.trackWithMetadata(N.rMx.SERVER_SETUP_CTA_CLICKED, {
                 setup_type: C.Ft.CHANNEL_WELCOME,
@@ -197,7 +197,7 @@ function k(e) {
         }, [e]),
     };
 }
-function j(e) {
+function k(e) {
     let t = (0, d.Z)(() => new s.Z.Value(0)),
         n = (0, d.Z)(() => new s.Z.Value(0)),
         r = (0, d.Z)(() => [new s.Z.Value(0), new s.Z.Value(0), new s.Z.Value(0), new s.Z.Value(0)]);
@@ -266,9 +266,9 @@ function U(e) {
             );
         }),
         { guildPopulated: g, guildMessaged: O, guildPersonalized: v } = (0, p.h_)(n),
-        { handleInvite: C, handleMessage: w, handlePersonalize: D, handleDownload: L, handleAddApplication: x } = k(n),
+        { handleInvite: C, handleMessage: w, handlePersonalize: D, handleDownload: L, handleAddApplication: x } = j(n),
         U = !(h || g || O || v),
-        { titleAnimatedStyle: G, opacities: B } = j(U),
+        { titleAnimatedStyle: G, opacities: B } = k(U),
         [Z, F] = i.useState([]),
         V = Z.length > 0;
     if (

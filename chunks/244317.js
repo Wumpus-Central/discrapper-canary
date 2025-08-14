@@ -1,74 +1,75 @@
-n.d(t, { Z: () => f }), n(35282), n(388685);
+n.d(t, { Z: () => h }), n(35282), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(873546),
-    a = n(481060),
-    o = n(358085),
-    s = n(289341),
-    c = n(981631),
-    u = n(186901),
-    d = n(388032),
-    p = n(87805);
-function f(e) {
+    a = n(680018),
+    o = n(481060),
+    s = n(358085),
+    c = n(289341),
+    u = n(981631),
+    d = n(186901),
+    p = n(388032),
+    f = n(87805);
+function h(e) {
     let { applicationId: t } = e.match.params,
-        [f, h] = i.useState(!1),
-        g = i.useRef(!1),
-        [m, b] = i.useState(null),
-        _ = !o.isPlatformEmbedded && !l.tq && !f;
+        [h, g] = i.useState(!1),
+        m = i.useRef(!1),
+        [b, _] = i.useState(null),
+        O = !s.isPlatformEmbedded && !l.tq && !h;
     return (i.useEffect(() => {
-        _ &&
-            !0 !== g.current &&
+        O &&
+            !0 !== m.current &&
             (Promise.resolve()
                 .then(n.bind(n, 536285))
                 .then((e) => {
                     let { default: n } = e;
-                    n.request(c.Etm.DEEP_LINK, {
-                        type: u.jE.ACTIVITIES,
+                    n.request(u.Etm.DEEP_LINK, {
+                        type: d.jE.ACTIVITIES,
                         params: {
                             applicationId: t,
                             url: location.href,
                         },
                     })
                         .then((e) => {
-                            b(null != e && e);
+                            _(null != e && e);
                         })
-                        .catch(() => b(!1))
+                        .catch(() => _(!1))
                         .then(() => n.disconnect());
                 }),
-            (g.current = !0));
-    }, [t, _]),
-    _ && !1 !== m)
-        ? !0 === m
+            (m.current = !0));
+    }, [t, O]),
+    O && !1 !== b)
+        ? !0 === b
             ? (0, r.jsxs)("div", {
-                  className: p.container,
+                  className: f.container,
                   children: [
-                      (0, r.jsx)(a.X6q, {
+                      (0, r.jsx)(o.X6q, {
                           variant: "heading-xxl/bold",
-                          children: d.intl.string(d.t.csrAMD),
+                          children: p.intl.string(p.t.csrAMD),
                       }),
-                      (0, r.jsx)(a.Text, {
+                      (0, r.jsx)(o.Text, {
                           variant: "text-xs/semibold",
-                          children: d.intl.string(d.t["m1+IBg"]),
+                          children: p.intl.string(p.t["m1+IBg"]),
                       }),
-                      (0, r.jsx)(a.zxk, {
+                      (0, r.jsx)(a.z, {
                           variant: "primary",
-                          text: d.intl.string(d.t.fIv16O),
-                          onClick: () => h(!0),
+                          text: p.intl.string(p.t.fIv16O),
+                          onClick: () => g(!0),
                       }),
                   ],
               })
             : (0, r.jsxs)("div", {
-                  className: p.container,
+                  className: f.container,
                   children: [
-                      (0, r.jsx)(a.X6q, {
+                      (0, r.jsx)(o.X6q, {
                           variant: "heading-xxl/bold",
-                          children: d.intl.string(d.t["Z+hCVV"]),
+                          children: p.intl.string(p.t["Z+hCVV"]),
                       }),
-                      (0, r.jsx)(a.$jN, {}),
+                      (0, r.jsx)(o.$jN, {}),
                   ],
               })
         : (0, r.jsx)(
-              s.Z,
+              c.Z,
               (function (e) {
                   for (var t = 1; t < arguments.length; t++) {
                       var n = null != arguments[t] ? arguments[t] : {},

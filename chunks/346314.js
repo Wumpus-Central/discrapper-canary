@@ -100,58 +100,59 @@ function O(e) {
             nameTextClassName: g,
             animateRoleGradient: E,
             variant: b,
+            displayNameStylesFont: y = "",
         } = e,
-        y = i.useContext(u.d),
-        [O, v] = i.useState(!1),
-        I = i.useCallback(() => {
-            v(!0);
-        }, []),
+        O = i.useContext(u.d),
+        [v, I] = i.useState(!1),
         T = i.useCallback(() => {
-            v(!1);
+            I(!0);
         }, []),
-        S = "username" === t,
-        A = "dot" === t,
-        N = null != c && null != c.primaryColor && null != c.secondaryColor,
-        C = S && N,
+        S = i.useCallback(() => {
+            I(!1);
+        }, []),
+        A = "username" === t,
+        N = "dot" === t,
+        C = null != c && null != c.primaryColor && null != c.secondaryColor,
+        R = A && C,
         {
-            gradientStyle: R,
-            gradientClassname: P,
-            gradientGlowClassname: w,
+            gradientStyle: P,
+            gradientClassname: w,
+            gradientGlowClassname: D,
         } = (0, f.Ic)({
             colorStrings: c,
             roleStyle: "username",
-            animateGradient: E || O || (null == y ? void 0 : y.animate),
+            animateGradient: E || v || (null == O ? void 0 : O.animate),
         }),
-        D = (0, f.EJ)(n),
-        L = {
-            className: a()(p.name, g, {
-                [p.username]: S,
-                [P]: C,
-            }),
-            children: D,
-        },
+        L = (0, f.EJ)(n),
         x = {
-            className: a()(p.nameGlow, w),
+            className: a()(p.name, g, y, {
+                [p.username]: A,
+                [w]: R,
+            }),
+            children: L,
+        },
+        M = {
+            className: a()(p.nameGlow, D, y),
             children: n,
         },
-        M = A
+        j = N
             ? (0, r.jsx)(_.F, {
                   color: o,
-                  colors: N ? c : null,
+                  colors: C ? c : null,
                   name: l,
                   className: "left" === d ? p.roleDotLeft : p.roleDotRight,
-                  hoverOverride: E || O || (null == y ? void 0 : y.animate),
+                  hoverOverride: E || v || (null == O ? void 0 : O.animate),
               })
             : null;
     return (0, r.jsxs)("span", {
         className: a()(h, p.container),
-        onMouseEnter: I,
-        onMouseLeave: T,
+        onMouseEnter: T,
+        onMouseLeave: S,
         children: [
-            "left" === d && M,
+            "left" === d && j,
             (0, r.jsxs)("span", {
                 className: p.nameContainer,
-                style: m({ color: S && !N && null != o ? o : void 0 }, C ? R : {}),
+                style: m({ color: A && !C && null != o ? o : void 0 }, R ? P : {}),
                 children: [
                     null != b
                         ? (0, r.jsx)(
@@ -162,11 +163,11 @@ function O(e) {
                                       color: "currentColor",
                                       variant: b,
                                   },
-                                  L,
+                                  x,
                               ),
                           )
-                        : (0, r.jsx)("span", m({}, L)),
-                    C &&
+                        : (0, r.jsx)("span", m({}, x)),
+                    R &&
                         (null != b
                             ? (0, r.jsx)(
                                   s.xv,
@@ -177,13 +178,13 @@ function O(e) {
                                           "aria-hidden": !0,
                                           variant: b,
                                       },
-                                      x,
+                                      M,
                                   ),
                               )
-                            : (0, r.jsx)("span", m({ "aria-hidden": !0 }, x))),
+                            : (0, r.jsx)("span", m({ "aria-hidden": !0 }, M))),
                 ],
             }),
-            "right" === d && M,
+            "right" === d && j,
         ],
     });
 }

@@ -211,7 +211,7 @@ function L(e) {
     };
 }
 function x(e) {
-    return [M(e), k(e), j(e), U(e), G(e)];
+    return [M(e), j(e), k(e), U(e), G(e)];
 }
 function M(e) {
     return (t) => {
@@ -220,7 +220,7 @@ function M(e) {
         return n.startsWith(e) || r.startsWith(e);
     };
 }
-function k(e) {
+function j(e) {
     let t = null == e ? void 0 : e.split(" "),
         n = t[0],
         r = t.slice(1).join(" ");
@@ -235,7 +235,7 @@ function k(e) {
         );
     };
 }
-function j(e) {
+function k(e) {
     return (t) => {
         let n = t.untranslatedName,
             r = t.displayName;

@@ -88,7 +88,7 @@ function P() {
         0 !== A && (clearInterval(A), (A = 0)),
         u.ZP.useNewNotifications &&
             (A = setInterval(() => {
-                C() && j.emitChange();
+                C() && k.emitChange();
             }, 15 * d.Z.Millis.SECOND)),
         !1
     );
@@ -143,7 +143,7 @@ function M(e, t) {
         )
     );
 }
-class k extends (r = i.ZP.PersistedStore) {
+class j extends (r = i.ZP.PersistedStore) {
     initialize(e) {
         null != e && (v.channels = e.channels), this.syncWith([u.ZP], P), this.waitFor(u.ZP, c.Z, s.Z);
     }
@@ -165,10 +165,10 @@ class k extends (r = i.ZP.PersistedStore) {
         );
     }
 }
-E(k, "displayName", "UnreadSettingNoticeStore2"), E(k, "persistKey", "UnreadSettingNoticeStore2");
-let j = new k(o.Z, {
+E(j, "displayName", "UnreadSettingNoticeStore2"), E(j, "persistKey", "UnreadSettingNoticeStore2");
+let k = new j(o.Z, {
         CHANNEL_SELECT: w,
         CONNECTION_OPEN: R,
         MESSAGE_CREATE: N,
     }),
-    U = j;
+    U = k;

@@ -86,8 +86,8 @@ function p(e) {
             itemNodeMargin: L,
             listPadding: x,
             gridNavigatorId: M,
-            gridNotice: k,
-            renderHeader: j,
+            gridNotice: j,
+            renderHeader: k,
             renderUpsell: U,
         } = e,
         G = i.useRef(null),
@@ -184,8 +184,8 @@ function p(e) {
     });
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            null != j
-                ? j(es)
+            null != k
+                ? k(es)
                 : (0, r.jsxs)("div", {
                       className: c.header,
                       children: [" ", es, " "],
@@ -195,10 +195,10 @@ function p(e) {
                 : (0, r.jsxs)(r.Fragment, {
                       children: [
                           A(B),
-                          null != k &&
+                          null != j &&
                               (0, r.jsx)("div", {
                                   className: c.gridNoticeWrapper,
-                                  children: k,
+                                  children: j,
                               }),
                           (0, r.jsx)(
                               "div",

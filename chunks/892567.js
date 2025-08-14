@@ -43,7 +43,7 @@ let v = i.memo(function (e) {
         L = (0, b.R)(null != (t = null == o ? void 0 : o.effectId) ? t : c.m.SOLID),
         x = (0, f.qgQ)(n),
         M = (0, d.EJ)(x, (null == o ? void 0 : o.effectId) === c.m.TOON ? O.emoji : void 0),
-        k = i.useMemo(
+        j = i.useMemo(
             () =>
                 null != o && w
                     ? o.colors.map((e) =>
@@ -58,7 +58,7 @@ let v = i.memo(function (e) {
             [o, w, L.minContrastRatio, R, D],
         );
     if (!w || (!v && !P) || null == o) return n;
-    let j = (0, E.K)(o.effectId, k, { shouldWrap: A }),
+    let k = (0, E.K)(o.effectId, j, { shouldWrap: A }),
         U = I(o.effectId);
     return (0, r.jsxs)("div", {
         className: l()(O.container, N, T, {
@@ -67,7 +67,7 @@ let v = i.memo(function (e) {
             [O.loop]: S,
             [O.inProfile]: v,
         }),
-        style: j,
+        style: k,
         children: [
             (0, r.jsx)("span", {
                 "data-username-with-effects": x,

@@ -88,12 +88,12 @@ let C = 200,
                 clearTimeout(e), M(!1);
             };
         }, [L]);
-        let k = (0, m.J_)({
+        let j = (0, m.J_)({
                 location: "voice_filter_item",
                 autoTrackExposure: !0,
                 disable: !_.ZP.canCheckVoiceFilterFilesExist(),
             }),
-            j = (0, s.e7)([g.Z], () => g.Z.isVoiceFilterDownloaded(t.id), [t]),
+            k = (0, s.e7)([g.Z], () => g.Z.isVoiceFilterDownloaded(t.id), [t]),
             U = null == R ? void 0 : R.previewSoundURLs,
             [G, B] = i.useState(0),
             {
@@ -129,7 +129,7 @@ let C = 200,
             }),
             children: [
                 (0, r.jsx)(c.ua7, {
-                    shouldShow: k && !j,
+                    shouldShow: j && !k,
                     "aria-label": v.intl.string(v.t.SQ7qMD),
                     text: (0, r.jsxs)("div", {
                         className: I.downloadRequiredContent,
@@ -227,7 +227,7 @@ let C = 200,
                                                 color: t.underDevelopment ? "header-muted" : "header-primary",
                                                 children: [t.underDevelopment ? "\uD83D\uDEA7 " : "", z],
                                             }),
-                                            k && !j ? (0, r.jsx)(c._8t, { size: "xxs" }) : null,
+                                            j && !k ? (0, r.jsx)(c._8t, { size: "xxs" }) : null,
                                         ],
                                     }),
                                 ],

@@ -171,7 +171,7 @@ let N = function (e) {
                 }
             ),
         );
-    let k = (e) => {
+    let j = (e) => {
         e.preventDefault();
         let r = R !== N,
             i = void 0 !== w;
@@ -198,7 +198,7 @@ let N = function (e) {
         : (0, r.jsx)(_.Gt, {
               value: x,
               children: (0, r.jsx)("form", {
-                  onSubmit: k,
+                  onSubmit: j,
                   children: (0, r.jsx)(l.Modal, {
                       title: y.intl.string(y.t["5Q9+/P"]),
                       actions: [

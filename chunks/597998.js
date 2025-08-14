@@ -39,8 +39,8 @@ var r = n(255367),
     L = n(981631),
     x = n(354459),
     M = n(927923),
-    k = n(388032),
-    j = n(368736);
+    j = n(388032),
+    k = n(368736);
 function U(e, t, n) {
     return (
         t in e
@@ -120,20 +120,20 @@ let H = (e) => {
             ? (0, r.jsx)(
                   l.DY3,
                   {
-                      className: j.iconSpacing,
-                      text: k.intl.string(k.t.qstQub),
-                      children: (0, r.jsx)(l.svS, { className: a()(j.icon, n) }),
+                      className: k.iconSpacing,
+                      text: j.intl.string(j.t.qstQub),
+                      children: (0, r.jsx)(l.svS, { className: a()(k.icon, n) }),
                   },
                   "add-status",
               )
             : (0, r.jsx)(
                   l.DY3,
                   {
-                      className: j.iconSpacing,
+                      className: k.iconSpacing,
                       text: (0, O.O8)(t),
                       children: (0, r.jsx)(v.Z, {
                           hangStatusActivity: t,
-                          className: a()(j.hangStatusIcon, n),
+                          className: a()(k.hangStatusIcon, n),
                       }),
                   },
                   "hang-status",
@@ -142,7 +142,7 @@ let H = (e) => {
     Y = (e) => {
         let { children: t, collapsed: n = !1, className: i } = e;
         return (0, r.jsx)("div", {
-            className: a()(i, j.list, n ? j.listCollapse : j.listDefault),
+            className: a()(i, k.list, n ? k.listCollapse : k.listDefault),
             role: "group",
             children: t,
         });
@@ -193,13 +193,13 @@ function W(e) {
                   (0, r.jsx)(
                       l.DY3,
                       {
-                          className: j.iconSpacing,
-                          text: k.intl.string(k.t["PXMZ//"]),
+                          className: k.iconSpacing,
+                          text: j.intl.string(j.t["PXMZ//"]),
                           children: (0, r.jsx)(l.Amn, {
                               size: "md",
                               color: "currentColor",
-                              className: a()(j.icon, b),
-                              colorClass: j.strikethrough,
+                              className: a()(k.icon, b),
+                              colorClass: k.strikethrough,
                           }),
                       },
                       "video",
@@ -209,12 +209,12 @@ function W(e) {
                   (0, r.jsx)(
                       l.DY3,
                       {
-                          className: j.iconSpacing,
-                          text: k.intl.string(k.t.FlNoSU),
+                          className: k.iconSpacing,
+                          text: j.intl.string(j.t.FlNoSU),
                           children: (0, r.jsx)(l.Odl, {
                               size: "md",
                               color: "currentColor",
-                              className: a()(j.icon, b),
+                              className: a()(k.icon, b),
                           }),
                       },
                       "video",
@@ -225,10 +225,10 @@ function W(e) {
                 (0, r.jsx)(
                     l.DY3,
                     {
-                        className: j.iconSpacing,
-                        text: k.intl.string(k.t.HFwRpq),
+                        className: k.iconSpacing,
+                        text: j.intl.string(j.t.HFwRpq),
                         children: (0, r.jsx)(l.Mgn, {
-                            className: a()(j.icon, b),
+                            className: a()(k.icon, b),
                             color: l.TVs.colors.STATUS_WARNING_BACKGROUND,
                         }),
                     },
@@ -242,11 +242,11 @@ function W(e) {
                 l.DY3,
                 {
                     text: (0, f.Z)(y.name),
-                    className: j.iconSpacing,
+                    className: k.iconSpacing,
                     children: (0, r.jsx)(Y, {
                         size: "md",
                         color: "currentColor",
-                        className: a()(j.icon, b),
+                        className: a()(k.icon, b),
                     }),
                 },
                 "activity",
@@ -257,8 +257,8 @@ function W(e) {
                   (0, r.jsx)(
                       "div",
                       {
-                          className: j.iconSpacing,
-                          children: (0, r.jsx)(R.Z, { className: a()(j.icon, b) }),
+                          className: k.iconSpacing,
+                          children: (0, r.jsx)(R.Z, { className: a()(k.icon, b) }),
                       },
                       "xbox",
                   ),
@@ -268,8 +268,8 @@ function W(e) {
                   (0, r.jsx)(
                       "div",
                       {
-                          className: j.iconSpacing,
-                          children: (0, r.jsx)(C.Z, { className: a()(j.icon, b) }),
+                          className: k.iconSpacing,
+                          children: (0, r.jsx)(C.Z, { className: a()(k.icon, b) }),
                       },
                       "playstation",
                   ),
@@ -279,12 +279,12 @@ function W(e) {
                 (0, r.jsx)(
                     l.DY3,
                     {
-                        className: j.iconSpacing,
-                        text: k.intl.string(k.t.JH1SJy),
+                        className: k.iconSpacing,
+                        text: j.intl.string(j.t.JH1SJy),
                         children: (0, r.jsx)(l.tEF, {
                             size: "xs",
                             color: "currentColor",
-                            className: a()(j.icon, b),
+                            className: a()(k.icon, b),
                         }),
                     },
                     "watch",
@@ -295,7 +295,7 @@ function W(e) {
                 (0, r.jsx)(
                     "div",
                     {
-                        className: a()(j.iconSpacing, j.liveIconSpacing),
+                        className: a()(k.iconSpacing, k.liveIconSpacing),
                         children: (0, r.jsx)(g.ZP, { size: g.ZP.Sizes.SMALL }),
                     },
                     "stream",
@@ -305,17 +305,17 @@ function W(e) {
         K = null == w && W;
     return 0 !== F.length || null != V || D || K
         ? (0, r.jsxs)("div", {
-              className: a()(j.icons, t),
+              className: a()(k.icons, t),
               children: [
                   (0, r.jsxs)("div", {
-                      className: j.iconGroup,
+                      className: k.iconGroup,
                       onMouseEnter: () => (null == B ? void 0 : B(!0)),
                       onMouseLeave: () => (null == B ? void 0 : B(!1)),
                       children: [V, F],
                   }),
                   D || K
                       ? (0, r.jsx)("div", {
-                            className: j.iconGroup,
+                            className: k.iconGroup,
                             onMouseEnter: () => (null == G ? void 0 : G(!0)),
                             onMouseLeave: () => (null == G ? void 0 : G(!1)),
                             children: K
@@ -344,8 +344,8 @@ function W(e) {
 function K(e, t) {
     var n,
         {
-            avatarContainerClass: o = j.avatarContainer,
-            userNameClassName: c = j.usernameFont,
+            avatarContainerClass: o = k.avatarContainer,
+            userNameClassName: c = k.usernameFont,
             size: d = L.ipw.SMALL,
             selected: f = !1,
             disabled: _ = !1,
@@ -407,14 +407,14 @@ function K(e, t) {
     function em() {
         return U && !V
             ? (0, r.jsx)(l.ua7, {
-                  text: k.intl.string(k.t.BVK71t),
+                  text: j.intl.string(j.t.BVK71t),
                   children: (e) =>
                       (0, r.jsx)(
                           "div",
                           G(
                               {
-                                  className: a()(j.iconPriortySpeaker, {
-                                      [j.iconPriortySpeakerSpeaking]: !H && !Y && B,
+                                  className: a()(k.iconPriortySpeaker, {
+                                      [k.iconPriortySpeakerSpeaking]: !H && !Y && B,
                                   }),
                               },
                               e,
@@ -425,23 +425,23 @@ function K(e, t) {
     }
     function eg() {
         return (0, r.jsx)("div", {
-            className: a()(o, j.avatar, {
-                [j.avatarLarge]: d === L.ipw.LARGE,
-                [j.avatarSmall]: d === L.ipw.SMALL,
-                [j.avatarSpeaking]: B,
+            className: a()(o, k.avatar, {
+                [k.avatarLarge]: d === L.ipw.LARGE,
+                [k.avatarSmall]: d === L.ipw.SMALL,
+                [k.avatarSpeaking]: B,
             }),
             style: { backgroundImage: "url(".concat(et.getAvatarURL(K, d === L.ipw.LARGE ? 38 : 24), ")") },
         });
     }
     function eE() {
         let e = (0, r.jsxs)("div", {
-                className: a()(c, j.username, el, { [j.usernameSpeaking]: !H && !Y && B }),
+                className: a()(c, k.username, el, { [k.usernameSpeaking]: !H && !Y && B }),
                 children: [
                     null != z ? z : w.ZP.getName(et),
                     q
                         ? (0, r.jsxs)("span", {
-                              className: j.guestSuffix,
-                              children: ["\xA0", k.intl.string(k.t["pFO/Pj"])],
+                              className: k.guestSuffix,
+                              children: ["\xA0", j.intl.string(j.t["pFO/Pj"])],
                           })
                         : "",
                 ],
@@ -452,7 +452,7 @@ function K(e, t) {
                 contextGuildId: K,
                 isOverlay: g,
                 disableTooltip: !0,
-                className: a()(j.clanTag, g && j.isOverlay),
+                className: a()(k.clanTag, g && k.isOverlay),
                 profileViewedAnalytics: { source: g ? L.jXE.OVERLAY : L.Sbl.VOICE_PANEL },
             };
         return !V || g ? (0, r.jsx)(y.Z, Z(G({}, t), { children: e })) : null;
@@ -479,14 +479,14 @@ function K(e, t) {
         return V || !ea || es
             ? null
             : (0, r.jsx)(l.DY3, {
-                  text: k.intl.string(k.t["+1H47u"]),
-                  className: a()(j.optionsButtonContainer, { [j.optionsContainerActive]: ec }),
+                  text: j.intl.string(j.t["+1H47u"]),
+                  className: a()(k.optionsButtonContainer, { [k.optionsContainerActive]: ec }),
                   children: (0, r.jsx)(l.P3F, {
-                      className: a()(j.optionsButton, { [j.optionsActive]: ec }),
+                      className: a()(k.optionsButton, { [k.optionsActive]: ec }),
                       onClick: ey,
                       children: (0, r.jsx)(l.xhG, {
                           size: "md",
-                          className: j.icon,
+                          className: k.icon,
                       }),
                   }),
               });
@@ -494,14 +494,14 @@ function K(e, t) {
     return (0, r.jsx)(l.kL8, {
         ref: t,
         className: a()(Q, {
-            [j.voiceUser]: !0,
-            [j.overlap]: J,
-            [j.selected]: f,
-            [j.clickable]: null != O,
-            [j.userSmall]: d === L.ipw.SMALL,
-            [j.userLarge]: d === L.ipw.LARGE,
-            [j.disabled]: !f && _,
-            [j.ringing]: ee,
+            [k.voiceUser]: !0,
+            [k.overlap]: J,
+            [k.selected]: f,
+            [k.clickable]: null != O,
+            [k.userSmall]: d === L.ipw.SMALL,
+            [k.userLarge]: d === L.ipw.LARGE,
+            [k.disabled]: !f && _,
+            [k.ringing]: ee,
         }),
         onClick: ed,
         onDoubleClick: ef,
@@ -512,7 +512,7 @@ function K(e, t) {
         "aria-label": null != (n = null != $ ? $ : z) ? n : et.username,
         focusProps: { offset: { right: 4 } },
         children: (0, r.jsxs)("div", {
-            className: a()(j.content, { [j.flipped]: X }),
+            className: a()(k.content, { [k.flipped]: X }),
             children: [em(), eg(), eE(), eb(), eO()],
         }),
     });
@@ -539,13 +539,13 @@ function q(e) {
         });
     };
     return (0, r.jsx)(l.DY3, {
-        text: k.intl.formatToPlainString(k.t.Sq9xJy, { game: t.name }),
-        "aria-label": k.intl.formatToPlainString(k.t.Sq9xJy, { game: t.name }),
-        className: j.iconSpacing,
+        text: j.intl.formatToPlainString(j.t.Sq9xJy, { game: t.name }),
+        "aria-label": j.intl.formatToPlainString(j.t.Sq9xJy, { game: t.name }),
+        className: k.iconSpacing,
         children: (0, r.jsx)("div", {
             ref: p,
             children: (0, r.jsx)(b.Z, {
-                className: a()(j.icon, n),
+                className: a()(k.icon, n),
                 game: t,
                 size: b.Z.Sizes.XSMALL,
                 onMouseEnter: h,
@@ -558,10 +558,10 @@ function X(e) {
         u = [];
     if (n) {
         let e,
-            n = () => (i ? k.intl.string(k.t.Q8Uzoa) : o ? k.intl.string(k.t.uLddbW) : k.intl.string(k.t.tjtv3N));
+            n = () => (i ? j.intl.string(j.t.Q8Uzoa) : o ? j.intl.string(j.t.uLddbW) : j.intl.string(j.t.tjtv3N));
         e = o || i ? l.v0G : l.nRN;
         let s = (0, r.jsx)(e, {
-            className: a()(j.icon, t, { [j.iconServer]: o }),
+            className: a()(k.icon, t, { [k.iconServer]: o }),
             color: "currentColor",
         });
         u.push(
@@ -569,7 +569,7 @@ function X(e) {
                 l.DY3,
                 {
                     text: n(),
-                    className: j.iconSpacing,
+                    className: k.iconSpacing,
                     children: s,
                 },
                 "mute",
@@ -579,15 +579,15 @@ function X(e) {
     if (c || s) {
         let e = c ? l.Vm4 : l.wE8,
             n = (0, r.jsx)(e, {
-                className: a()(j.icon, t, { [j.iconServer]: c }),
+                className: a()(k.icon, t, { [k.iconServer]: c }),
                 color: "currentColor",
             });
         u.push(
             (0, r.jsx)(
                 l.DY3,
                 {
-                    className: j.iconSpacing,
-                    text: c ? k.intl.string(k.t.btxSdH) : k.intl.string(k.t.NjmiOD),
+                    className: k.iconSpacing,
+                    text: c ? j.intl.string(j.t.btxSdH) : j.intl.string(j.t.NjmiOD),
                     children: n,
                 },
                 "deaf",

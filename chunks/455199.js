@@ -68,13 +68,13 @@ let A = "recentMentionFilterSettings",
     L = !1,
     x = 0,
     M = !1;
-function k(e) {
+function j(e) {
     (C = {}),
         e.forEach((e) => {
             null == C[e.getChannelId()] && (C[e.getChannelId()] = 0), C[e.getChannelId()]++;
         });
 }
-function j(e) {
+function k(e) {
     let { addedMessages: t, deletedMessages: n } = e;
     null != t &&
         t.forEach((e) => {
@@ -120,7 +120,7 @@ function B(e) {
 function Z(e) {
     let { hasMoreAfter: t, messages: n, isAfter: r } = e,
         i = o().map(n, G);
-    j({ addedMessages: i }),
+    k({ addedMessages: i }),
         r ? (N = N.concat(i)) : ((N = i), (R = {})),
         o().forEach(i, (e) => {
             R[e.id] = !0;
@@ -182,7 +182,7 @@ function H(e) {
         return !1;
     let i = V(n, t);
     if (null == i) return !1;
-    (N = N.slice()).unshift(i), (R[i.id] = !0), j({ addedMessages: [i] });
+    (N = N.slice()).unshift(i), (R[i.id] = !0), k({ addedMessages: [i] });
 }
 function Y(e) {
     let t = e.message.id;
@@ -197,7 +197,7 @@ function Y(e) {
 function W(e) {
     if (null == R[e]) return !1;
     delete R[e],
-        j({
+        k({
             deletedMessages: o().filter(N, (t) => {
                 let { id: n } = t;
                 return n === e;
@@ -228,7 +228,7 @@ function q(e) {
             let t = V(e);
             null != t && (i.push(t), (R[t.id] = !0));
         }),
-        k((N = i)),
+        j((N = i)),
         0 === N.length && (L = !1);
 }
 function X() {
@@ -245,23 +245,23 @@ function J(e) {
         let r = m.Z.getChannel(e.channel_id);
         return (null != r && r.getGuildId() !== t.id) || (delete R[e.id], n.push(e), !1);
     })),
-        j({ deletedMessages: n });
+        k({ deletedMessages: n });
 }
 function $() {
-    j({ deletedMessages: o().filter(N, (e) => b.Z.isBlockedOrIgnoredForMessage(e)) }),
+    k({ deletedMessages: o().filter(N, (e) => b.Z.isBlockedOrIgnoredForMessage(e)) }),
         (N = N.filter((e) => !b.Z.isBlockedOrIgnoredForMessage(e)));
 }
 function ee(e) {
     let { channel: t } = e,
         n = [];
-    (N = o().filter(N, (e) => e.channel_id !== t.id || (delete R[e.id], n.push(e), !1))), j({ deletedMessages: n });
+    (N = o().filter(N, (e) => e.channel_id !== t.id || (delete R[e.id], n.push(e), !1))), k({ deletedMessages: n });
 }
 function et(e) {
     Q();
 }
 function en(e) {
     let { size: t } = e;
-    j({ deletedMessages: N.slice(t) });
+    k({ deletedMessages: N.slice(t) });
     for (let e = t; e < N.length; ++e) delete R[N[e].id];
     N.length > (N = N.slice(0, t)).length && (w = !0);
 }

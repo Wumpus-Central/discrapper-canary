@@ -114,8 +114,8 @@ let P = Object.freeze({
     L = null,
     x = new Set(),
     M = !1,
-    k = null,
-    j = !1,
+    j = null,
+    k = !1,
     U = !1,
     G = new Set(),
     B = !1,
@@ -416,7 +416,7 @@ function ey() {
 }
 function eO() {
     a.Z.addInterceptor((e) => {
-        if (j || !Y.has(e.type)) return !1;
+        if (k || !Y.has(e.type)) return !1;
         if ("CHANNEL_SELECT" === e.type) {
             let { guildId: t, channelId: n } = e;
             return (
@@ -461,7 +461,7 @@ function ev(e) {
                 i.ZP.PersistedStore.initializeAll(e.states);
                 break;
             case v.BmY.DISPATCH:
-                null != e.payloads && ((j = !0), e.payloads.forEach((e) => K(e)), (j = !1));
+                null != e.payloads && ((k = !0), e.payloads.forEach((e) => K(e)), (k = !1));
         }
 }
 function eI() {
@@ -500,7 +500,7 @@ class eC extends (r = i.ZP.PersistedStore) {
         ) {
             if (E.isPlatformEmbedded) {
                 let e = (0, y.M)();
-                null == e && Z.error("Overlay module failed loaded"), (k = e);
+                null == e && Z.error("Overlay module failed loaded"), (j = e);
             }
             x.delete((0, b.getPID)());
         }

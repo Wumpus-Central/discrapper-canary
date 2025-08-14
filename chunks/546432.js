@@ -92,7 +92,7 @@ function M(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = k(e, t);
+        i = j(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
         for (r = 0; r < o.length; r++)
@@ -100,7 +100,7 @@ function M(e, t) {
     }
     return i;
 }
-function k(e, t) {
+function j(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -109,7 +109,7 @@ function k(e, t) {
     for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let j = 200,
+let k = 200,
     U = 50;
 function G(e) {
     return "IMAGE" === e || "VIDEO" === e;
@@ -250,8 +250,8 @@ function F(e) {
             className: L,
             imgContainerClassName: x,
             imgClassName: M,
-            focusable: k,
-            hiddenSpoilers: j,
+            focusable: j,
+            hiddenSpoilers: k,
             mediaLayoutType: U,
             maxWidth: G,
             maxHeight: B,
@@ -362,7 +362,7 @@ function F(e) {
                         message: t,
                         width: q,
                         height: X,
-                        autoPlay: o && !j,
+                        autoPlay: o && !k,
                         onClick: _,
                         onContextMenu: h,
                         shouldHideMediaOptions: ea,
@@ -371,8 +371,8 @@ function F(e) {
                         containerClassName: L,
                         className: x,
                         imageClassName: M,
-                        shouldLink: k,
-                        hiddenSpoilers: j,
+                        shouldLink: j,
+                        hiddenSpoilers: k,
                         responsive: !0,
                         mediaLayoutType: U,
                         maxWidth: G,
@@ -396,7 +396,7 @@ function F(e) {
                 naturalWidth: q,
                 naturalHeight: X,
                 className: a()(L, { [R.hasFooter]: F }),
-                playable: k,
+                playable: j,
                 responsive: !0,
                 mediaLayoutType: U,
                 maxWidth: G,
@@ -425,7 +425,7 @@ function F(e) {
                 item: n,
                 message: t,
                 className: L,
-                playable: k,
+                playable: j,
                 mimeType: el,
                 renderAdjacentContent: e_,
                 onVolumeShow: () => et(!0),
@@ -500,11 +500,11 @@ let H = function (e) {
         [v, I] = i.useState(null != O),
         T = (0, h.JO)(O),
         N = c === A.hV.MOSAIC,
-        C = !N && ((null != E && E < j) || (null != b && b < U)),
+        C = !N && ((null != E && E < k) || (null != b && b < U)),
         P = G(y),
         w = (0, S.R_)(y),
         L = u && null != O && (0, h.yf)(E, b),
-        [k, B] = i.useState(!1),
+        [j, B] = i.useState(!1),
         Z = () => {
             B(!0);
         },
@@ -561,7 +561,7 @@ let H = function (e) {
                       isSingleMosaicItem: u,
                       obscured: v,
                       containerStyles: V(n, P, c),
-                      obscurityControlClassName: a()({ [R.obscureVideoSpacing]: "VIDEO" === y && u && !v && k }),
+                      obscurityControlClassName: a()({ [R.obscureVideoSpacing]: "VIDEO" === y && u && !v && j }),
                       onToggleObscurity: () => I((e) => !e),
                       children: (e) => Y(e),
                   })

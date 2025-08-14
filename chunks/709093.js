@@ -91,13 +91,13 @@ let N = function (e) {
         x = P ? T : I,
         M = P ? p.Z : _.Z,
         {
-            step: k,
-            breadcrumbs: j,
+            step: j,
+            breadcrumbs: k,
             startedPaymentFlowWithPaymentSourcesRef: U,
             isDisplayingWowMomentConfirmation: G,
         } = (0, c.JL)();
-    if (null == j || 0 === j.length) return null;
-    let B = j.flatMap((e) => {
+    if (null == k || 0 === k.length) return null;
+    let B = k.flatMap((e) => {
         let t = e.useBreadcrumbLabel(v),
             n = e.sectionHeaderText;
         return null != t
@@ -113,15 +113,15 @@ let N = function (e) {
             let t = e.id !== u.h8.ADD_PAYMENT_STEPS,
                 n = e.id === u.h8.ADD_PAYMENT_STEPS && !U.current;
             return !v || (v && (t || n));
-        })).find((e) => e.id === k),
+        })).find((e) => e.id === j),
         F =
             null != (i = null == Z || null == (n = Z.sectionHeaderText) ? void 0 : n.call(Z))
                 ? i
                 : null == Z
                   ? void 0
                   : Z.label,
-        V = null != F && null != k,
-        H = w && V && k === u.h8.REVIEW,
+        V = null != F && null != j,
+        H = w && V && j === u.h8.REVIEW,
         Y = P ? "nitro-pink" : "nitro-green";
     return G
         ? (0, r.jsx)("div", {
@@ -165,7 +165,7 @@ let N = function (e) {
                       (0, r.jsx)(S, {
                           isOneStepCheckout: w,
                           headerText: F,
-                          step: k,
+                          step: j,
                           filteredBreadcrumbs: B,
                       }),
                   H &&

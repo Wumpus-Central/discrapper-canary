@@ -59,7 +59,7 @@ function M(e) {
     }
     return e;
 }
-function k(e, t) {
+function j(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -71,12 +71,12 @@ function k(e, t) {
     }
     return n;
 }
-function j(e, t) {
+function k(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : k(Object(t)).forEach(function (n) {
+            : j(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -88,12 +88,12 @@ function G(e) {
         [n, o] = i.useState(!1),
         s = (0, p.ZP)(t, !0),
         x = t.guild_id,
-        k = (0, u.e7)([O.Z], () => (null != x ? O.Z.getSortedRoles(x) : void 0)),
+        j = (0, u.e7)([O.Z], () => (null != x ? O.Z.getSortedRoles(x) : void 0)),
         G = (0, u.e7)([T.default, v.Z], () => {
             var e;
             return T.default.getUser(null == (e = v.Z.getGuild(x)) ? void 0 : e.ownerId);
         }),
-        B = i.useMemo(() => (null != k ? k.filter((e) => !(0, y.fI)(e)) : []), [k]),
+        B = i.useMemo(() => (null != j ? j.filter((e) => !(0, y.fI)(e)) : []), [j]),
         Z = i.useMemo(
             () =>
                 l()(B)
@@ -231,7 +231,7 @@ function G(e) {
                   renderModal: (e) =>
                       (0, r.jsx)(
                           h.default,
-                          j(M({}, e), {
+                          k(M({}, e), {
                               onClose: () => (z(), e.onClose()),
                               channelId: t.id,
                           }),

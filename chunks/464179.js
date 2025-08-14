@@ -191,7 +191,7 @@ let M = {
         [O]: l.G,
         [v]: a.X,
     },
-    k = (e) => ({
+    j = (e) => ({
         name: "name",
         id: A,
         title: () => _.intl.string(_.t.vyuULS),
@@ -210,7 +210,7 @@ let M = {
                 : p.width60,
         renderInput: (e) => (0, i.jsx)(c.oil, m({}, e)),
     }),
-    j = (e) => ({
+    k = (e) => ({
         name: "country",
         id: N,
         title: () => _.intl.string(_.t.eDdrAA),
@@ -408,16 +408,16 @@ let M = {
         };
     },
     V = {
-        modalUS: [[j], [U], [G], [B], [F, Z]],
-        modalInternational: [[j], [U], [G], [B], [F], [Z]],
-        modalUSWithName: [[j], [k], [U], [G], [B], [F, Z]],
-        modalInternationalWithName: [[j], [k], [U], [G], [B], [F], [Z]],
-        settingsUS: [[k], [U, G], [B, F, Z], [j]],
-        settingsUSMobile: [[k], [U], [G], [B], [F], [Z], [j]],
-        settingsInternational: [[k], [U, G], [B], [F, Z], [j]],
-        settingsInternationalMobile: [[k], [U], [G], [B], [F], [Z], [j]],
-        settingsInternationalWithoutName: [[U, G], [B], [F, Z], [j]],
-        settingsInternationalWithoutNameMobile: [[U], [G], [B], [F], [Z], [j]],
+        modalUS: [[k], [U], [G], [B], [F, Z]],
+        modalInternational: [[k], [U], [G], [B], [F], [Z]],
+        modalUSWithName: [[k], [j], [U], [G], [B], [F, Z]],
+        modalInternationalWithName: [[k], [j], [U], [G], [B], [F], [Z]],
+        settingsUS: [[j], [U, G], [B, F, Z], [k]],
+        settingsUSMobile: [[j], [U], [G], [B], [F], [Z], [k]],
+        settingsInternational: [[j], [U, G], [B], [F, Z], [k]],
+        settingsInternationalMobile: [[j], [U], [G], [B], [F], [Z], [k]],
+        settingsInternationalWithoutName: [[U, G], [B], [F, Z], [k]],
+        settingsInternationalWithoutNameMobile: [[U], [G], [B], [F], [Z], [k]],
     };
 class H extends (r = o.PureComponent) {
     componentDidMount() {

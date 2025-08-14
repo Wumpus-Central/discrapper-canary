@@ -32,7 +32,7 @@ var r = n(255367),
     L = n(723359);
 function x(e) {
     let { code: t, message: n, getAcceptInviteContext: x } = e,
-        { invite: M, inviteError: k } = (0, o.cj)(
+        { invite: M, inviteError: j } = (0, o.cj)(
             [y.Z],
             () => ({
                 invite: y.Z.getInvite(t),
@@ -40,10 +40,10 @@ function x(e) {
             }),
             [t],
         ),
-        j = null == M;
+        k = null == M;
     i.useEffect(() => {
-        j && a.ZP.resolveInvite(t);
-    }, [t, j]);
+        k && a.ZP.resolveInvite(t);
+    }, [t, k]);
     let U =
             null != M
                 ? M
@@ -104,7 +104,7 @@ function x(e) {
         case D.r2o.ERROR:
             W = (0, r.jsx)(I.Z, {
                 author: n.author,
-                inviteError: k,
+                inviteError: j,
             });
             break;
         default:

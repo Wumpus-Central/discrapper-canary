@@ -32,8 +32,8 @@ var r = n(255367),
     L = n(443603),
     x = n(193910),
     M = n(951211),
-    k = n(981631),
-    j = n(356659),
+    j = n(981631),
+    k = n(356659),
     U = n(921944),
     G = n(388032),
     B = n(90274);
@@ -105,13 +105,13 @@ function Y(e) {
             { autoTrackExposure: !1 },
         ),
         ei = (0, s.e7)([b.qc], () => b.qc.hasHotspot(b.v6.CLIPS_CHANNEL_ATTACH_REMINDER)),
-        eo = (0, c.s9z)((e) => (0, c.DEQ)(e, j.Qr)),
+        eo = (0, c.s9z)((e) => (0, c.DEQ)(e, k.Qr)),
         ea = (0, s.e7)([S.Z], () => S.Z.hasLayers()),
         es = (0, s.e7)([m.Z], () => m.Z.hasClips()),
         [el, ec] = i.useState(null),
         eu = (0, h.Go)() && ($ || es),
         ed = V.isPrivate(),
-        ef = (0, s.e7)([N.Z], () => ed || (N.Z.can(k.Plq.ATTACH_FILES, V) && N.Z.can(k.Plq.SEND_MESSAGES, V))),
+        ef = (0, s.e7)([N.Z], () => ed || (N.Z.can(j.Plq.ATTACH_FILES, V) && N.Z.can(j.Plq.SEND_MESSAGES, V))),
         e_ = (0, d.Z)(ee);
     (null == e_ ? void 0 : e_.newClipIds.length) !== (null == ee ? void 0 : ee.newClipIds.length) &&
         (null != (t = null == ee ? void 0 : ee.newClipIds.length) ? t : 0) > 0 &&
@@ -130,7 +130,7 @@ function Y(e) {
                       showLargeMessageDialog: n,
                       origin: "file_picker",
                   }),
-                R.S.dispatchToLastSubscribed(k.CkL.TEXTAREA_FOCUS);
+                R.S.dispatchToLastSubscribed(j.CkL.TEXTAREA_FOCUS);
         },
         eh = (e) => {
             ep(e.currentTarget.files, e.currentTarget.err), (e.currentTarget.value = "");
@@ -142,7 +142,7 @@ function Y(e) {
                 let { default: e } = await Promise.all([n.e("2668"), n.e("10286")]).then(n.bind(n, 542055));
                 return (t) => (0, r.jsx)(e, H(F({}, t), { channelId: V.id }));
             },
-            { modalKey: j.Qr },
+            { modalKey: k.Qr },
         ),
             ec(null);
     }
@@ -152,9 +152,9 @@ function Y(e) {
             return null == (e = X.current) ? void 0 : e.activateUploadDialogue();
         };
         return (
-            R.S.subscribe(k.CkL.UPLOAD_FILE, e),
+            R.S.subscribe(j.CkL.UPLOAD_FILE, e),
             () => {
-                R.S.unsubscribe(k.CkL.UPLOAD_FILE, e);
+                R.S.unsubscribe(j.CkL.UPLOAD_FILE, e);
             }
         );
     });

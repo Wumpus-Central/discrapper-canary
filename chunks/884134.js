@@ -32,7 +32,7 @@ var r = n(255367),
     L = n(119475),
     x = n(388032),
     M = n(882741);
-function k(e, t, n) {
+function j(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -45,7 +45,7 @@ function k(e, t, n) {
         e
     );
 }
-function j(e) {
+function k(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -56,7 +56,7 @@ function j(e) {
                 }),
             )),
             r.forEach(function (t) {
-                k(e, t, n[t]);
+                j(e, t, n[t]);
             });
     }
     return e;
@@ -124,7 +124,7 @@ function V() {
                 children: (e) =>
                     (0, r.jsx)(
                         d.SrA,
-                        j(
+                        k(
                             {
                                 size: "custom",
                                 height: 20,
@@ -309,7 +309,7 @@ function q(e) {
         children: (e) =>
             (0, r.jsx)(
                 c.z,
-                G(j({}, e), {
+                G(k({}, e), {
                     variant: "primary",
                     onClick: t,
                     disabled: n,
@@ -406,8 +406,8 @@ function J(e) {
             chassisMixAmount: T,
             gradientAngle: P,
             setColors: D,
-            setChassisMixAmount: k,
-            setGradientAngle: j,
+            setChassisMixAmount: j,
+            setGradientAngle: k,
         } = (0, I.Ig)(),
         [U, G] = i.useState(null != (t = y[0]) ? t : I.Dp),
         B = (0, s.e7)([v.Z], () => v.Z.theme),
@@ -496,12 +496,12 @@ function J(e) {
                                       y.length > 1 &&
                                           (0, r.jsx)(W, {
                                               gradientAngle: P,
-                                              setGradientAngle: j,
+                                              setGradientAngle: k,
                                           }),
                                       (0, r.jsx)(K, {
                                           chassisMixAmount: T,
                                           setChassisMixAmount: (e) => {
-                                              k(e), 0 === y.length && (0, S.lT)(y, U, D);
+                                              j(e), 0 === y.length && (0, S.lT)(y, U, D);
                                           },
                                       }),
                                   ],

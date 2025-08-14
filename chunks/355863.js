@@ -478,7 +478,7 @@ function M(e) {
             }
         });
 }
-function k(e) {
+function j(e) {
     let { layoutId: t } = e,
         n = r[t];
     if (null == n) return !1;
@@ -487,7 +487,7 @@ function k(e) {
     }),
         (r = y(E({}, r), { [n.id]: n.set("widgets", []) }));
 }
-function j(e) {
+function k(e) {
     let { widgetConfigs: t } = e;
     t.forEach((e) => {
         let t = new _.Z(e),
@@ -792,7 +792,7 @@ let Y = new H(d.Z, {
     LAYOUT_UPDATE_WIDGET: C,
     LAYOUT_SET_TOP_WIDGET: R,
     LAYOUT_DELETE_WIDGET: M,
-    LAYOUT_DELETE_ALL_WIDGETS: k,
-    LAYOUT_CREATE_WIDGETS: j,
+    LAYOUT_DELETE_ALL_WIDGETS: j,
+    LAYOUT_CREATE_WIDGETS: k,
     LAYOUT_SET_WIDGET_META: w,
 });

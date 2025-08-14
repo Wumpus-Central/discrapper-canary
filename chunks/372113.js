@@ -80,7 +80,7 @@ function M(e, t) {
         e
     );
 }
-let k = (e, t, n) =>
+let j = (e, t, n) =>
     (0, A.uq)(e) && !n && "lg" === t
         ? "text-lg/medium"
         : "lg" === t
@@ -88,7 +88,7 @@ let k = (e, t, n) =>
           : "sm" === t
             ? "text-sm/medium"
             : "text-xs/medium";
-function j(e) {
+function k(e) {
     let { containerSize: t, onClick: n, children: i, tabIndex: o } = e;
     return "xs" === t
         ? (0, r.jsx)(c.P3F, {
@@ -345,7 +345,7 @@ let B = (e) => {
                         className: a()(w.gridText, w.taskDetails),
                         children: [
                             (0, r.jsx)(c.Text, {
-                                variant: k(o, u, F),
+                                variant: j(o, u, F),
                                 className: w.taskInstructions,
                                 children: _
                                     ? P.intl.formatToPlainString(P.t["ge+AJi"], {
@@ -389,7 +389,7 @@ let B = (e) => {
                               className: a()(w.ctaButtonContainer, w.gridCtaButtons),
                               children: [
                                   !W &&
-                                      (0, r.jsx)(j, {
+                                      (0, r.jsx)(k, {
                                           containerSize: u,
                                           onClick: er,
                                           children: P.intl.string(P.t.LLLLPD),

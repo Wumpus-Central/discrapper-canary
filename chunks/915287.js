@@ -191,8 +191,8 @@ function v(e, t, n, o) {
                 renderRow: L,
                 renderFooter: x,
                 renderSidebar: M,
-                renderListHeader: k,
-                stickyListHeader: j,
+                renderListHeader: j,
+                stickyListHeader: k,
                 wrapSection: U,
                 getAnchorId: G,
                 paddingTop: B,
@@ -383,8 +383,8 @@ function v(e, t, n, o) {
                                             containerRef: et,
                                             children: y({
                                                 items: ec,
-                                                renderListHeader: k,
-                                                stickyListHeader: j,
+                                                renderListHeader: j,
+                                                stickyListHeader: k,
                                                 renderSection: D,
                                                 renderRow: L,
                                                 renderFooter: x,
@@ -393,7 +393,7 @@ function v(e, t, n, o) {
                                             }),
                                         }),
                                     }),
-                                [J, W, K, z, q, X, el, Q, ec, k, j, D, L, x, U, es],
+                                [J, W, K, z, q, X, el, Q, ec, j, k, D, L, x, U, es],
                             ),
                             i.useMemo(
                                 () =>

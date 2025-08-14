@@ -171,7 +171,7 @@ function M(e) {
               )
               .toString();
 }
-class k {
+class j {
     updateOwnerId() {
         let e = b.Z.getGuild(this.guildId);
         if (null == e) return !1;
@@ -251,14 +251,14 @@ class k {
             this.updateOwnerId();
     }
 }
-class j {
+class k {
     get(e, t) {
         let n = this._guildLists[e];
         null == n && (n = this._guildLists[e] = {});
         let r = n[t];
         return (
             null == r &&
-                ((r = new k(e, t)).setGroups([
+                ((r = new j(e, t)).setGroups([
                     {
                         id: I.Skl.UNKNOWN,
                         count: 0,
@@ -288,7 +288,7 @@ class j {
         S(this, "_guildLists", {});
     }
 }
-let U = new j();
+let U = new k();
 function G(e) {
     let t = U.get(e.guildId, e.id);
     e.ops.forEach((e) => {

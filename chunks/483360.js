@@ -47,8 +47,8 @@ var i = n(658722),
     L = n(131704),
     x = n(345162),
     M = n(598077),
-    k = n(592125),
-    j = n(580005),
+    j = n(592125),
+    k = n(580005),
     U = n(77498),
     G = n(984933),
     B = n(271383),
@@ -151,8 +151,8 @@ let eE = new h.Z("AutocompleteUtils"),
     eL = 0.2,
     ex = 0.1,
     eM = 50,
-    ek = () => !0,
-    ej = /(\t|\s)/,
+    ej = () => !0,
+    ek = /(\t|\s)/,
     eU = [],
     eG = (r = n(786074).Z).MENTION_EVERYONE,
     eB = r.MENTION_HERE,
@@ -165,10 +165,10 @@ function eV() {
 }
 function eH(e) {
     var t, n;
-    let r = j.Z.getFrequentlyWithoutFetchingLatest(),
+    let r = k.Z.getFrequentlyWithoutFetchingLatest(),
         i = r.reduce((e, t) => {
             let { id: n } = t,
-                r = j.Z.getScoreWithoutFetchingLatest(n);
+                r = k.Z.getScoreWithoutFetchingLatest(n);
             return r > e ? r : e;
         }, 0),
         o = [];
@@ -191,7 +191,7 @@ function eH(e) {
     let a = {};
     for (let t of o) {
         let { id: n } = t,
-            r = j.Z.getScoreWithoutFetchingLatest(n);
+            r = k.Z.getScoreWithoutFetchingLatest(n);
         if (e === el.h8.USER && t instanceof L.mn) {
             if (t.type === es.d4z.DM) a[(n = t.getRecipientId())] = 1 + r / i;
             else if (t.type === es.d4z.GROUP_DM) {
@@ -201,7 +201,7 @@ function eH(e) {
         } else a[n] = 1 + r / i;
     }
     for (let e of W.Z.getFriendIDs()) a[e] = (null != (t = a[e]) ? t : 1) + eL;
-    for (let e of k.Z.getDMUserIds()) a[e] = (null != (n = a[e]) ? n : 1) + ex;
+    for (let e of j.Z.getDMUserIds()) a[e] = (null != (n = a[e]) ? n : 1) + ex;
     return a;
 }
 let eY = [G.sH, G.Zb, es.d4z.GUILD_CATEGORY];
@@ -378,12 +378,12 @@ function e3(e, t) {
     let n = t[e.parent_id];
     if (null == n) {
         var r;
-        n = t[e.parent_id] = null == (r = k.Z.getChannel(e.parent_id)) ? void 0 : r.name.toLocaleLowerCase();
+        n = t[e.parent_id] = null == (r = j.Z.getChannel(e.parent_id)) ? void 0 : r.name.toLocaleLowerCase();
     }
     return n;
 }
 function e5(e, t) {
-    let n = k.Z.getChannel(e);
+    let n = j.Z.getChannel(e);
     return null == e || null == n
         ? []
         : s()(V.Z.getMessages(e).toArray())
@@ -414,7 +414,7 @@ let e4 = (0, J.oH)((e, t, n) => {
             i = new Map(),
             o = [];
         return (
-            s()(k.Z.getMutablePrivateChannels())
+            s()(j.Z.getMutablePrivateChannels())
                 .values()
                 .value()
                 .forEach((e) => {
@@ -455,7 +455,7 @@ let e4 = (0, J.oH)((e, t, n) => {
             let { query: t, limit: n = 10, filter: r } = e;
             return eq({
                 query: t,
-                members: k.Z.getDMUserIds()
+                members: j.Z.getDMUserIds()
                     .map((e) => q.default.getUser(e))
                     .filter($.lm),
                 limit: n,
@@ -472,9 +472,9 @@ let e4 = (0, J.oH)((e, t, n) => {
                     checkRecentlyTalkedOnEmptyQuery: a = !0,
                     allowSnowflake: s = !1,
                 } = e,
-                l = k.Z.getChannel(n);
+                l = j.Z.getChannel(n);
             if (null == l) return [];
-            let c = l.isThread() ? k.Z.getChannel(l.parent_id) : null,
+            let c = l.isThread() ? j.Z.getChannel(l.parent_id) : null,
                 u = null != c ? c : l;
             if (null == u) return [];
             if (u.isPrivate()) {
@@ -570,7 +570,7 @@ let e4 = (0, J.oH)((e, t, n) => {
                     guildId: r,
                     limit: i = es.rnv,
                     fuzzy: o = !0,
-                    filter: a = ek,
+                    filter: a = ej,
                     type: l = G.sH,
                     allowEmptyQueries: c = !1,
                     requireVocalConnectAccess: u = !0,
@@ -584,15 +584,15 @@ let e4 = (0, J.oH)((e, t, n) => {
                 null != r
                     ? s()(G.ZP.getChannels(r)[l])
                           .map((e) => e.channel)
-                          .concat(g ? (h ? k.Z.getAllThreadsForGuild(r) : P.Z.computeAllActiveJoinedThreads(r)) : [])
+                          .concat(g ? (h ? j.Z.getAllThreadsForGuild(r) : P.Z.computeAllActiveJoinedThreads(r)) : [])
                           .value()
-                    : s()(k.Z.loadAllGuildAndPrivateChannelsFromDisk())
+                    : s()(j.Z.loadAllGuildAndPrivateChannelsFromDisk())
                           .values()
                           .concat(g ? P.Z.computeAllActiveJoinedThreads() : [])
                           .value();
             let E = {},
                 b = [],
-                y = j.Z.getMaxScore();
+                y = k.Z.getMaxScore();
             for (let e of t) {
                 var O;
                 if (
@@ -620,7 +620,7 @@ let e4 = (0, J.oH)((e, t, n) => {
                         (e$(l, e.type) && (c = Math.max(c - eT, eI / 2)),
                         e.isThread() && (e.isActiveThread() || (c -= eS), w.Z.hasJoined(e.id) || (c -= eA)),
                         (c = Math.min(
-                            c + Math.min(null != (O = j.Z.getScoreWithoutFetchingLatest(e.id)) ? O : 0 / y, 1) * eN,
+                            c + Math.min(null != (O = k.Z.getScoreWithoutFetchingLatest(e.id)) ? O : 0 / y, 1) * eN,
                             c >= ey ? eb : ey,
                         )),
                         b.push({
@@ -635,7 +635,7 @@ let e4 = (0, J.oH)((e, t, n) => {
             return b.sort(f.Z), null != i && b.length > i && (b.length = i), b;
         },
         queryGuilds(e) {
-            let { query: t, limit: n = 10, fuzzy: r = !0, filter: i = ek, boosters: o = {} } = e,
+            let { query: t, limit: n = 10, fuzzy: r = !0, filter: i = ej, boosters: o = {} } = e,
                 a = "" === t ? "" : t.toLocaleLowerCase(),
                 s = {
                     exactQuery: RegExp("^".concat(er.Z.escape(a)), "i"),
@@ -664,7 +664,7 @@ let e4 = (0, J.oH)((e, t, n) => {
                     channelsByRecipientId: i,
                     recipientsById: o,
                     recipients: a,
-                } = e4(k.Z.getPrivateChannelsVersion(), W.Z.getVersion(), q.default.getUserStoreVersion()),
+                } = e4(j.Z.getPrivateChannelsVersion(), W.Z.getVersion(), q.default.getUserStoreVersion()),
                 s = eq({
                     query: t,
                     members: a,
@@ -690,14 +690,14 @@ let e4 = (0, J.oH)((e, t, n) => {
             );
         },
         queryGroupDMs(e) {
-            let { query: t, limit: n = 10, fuzzy: r = !0, filter: i = ek, boosters: o = {} } = e,
+            let { query: t, limit: n = 10, fuzzy: r = !0, filter: i = ej, boosters: o = {} } = e,
                 a = (0, eo._I)((0, eo.Fv)(t.toLocaleLowerCase())),
                 l = {
                     exactQuery: RegExp("^".concat(er.Z.escape(a)), "i"),
                     containQuery: RegExp(er.Z.escape(a), "i"),
                     queryLower: a,
                 },
-                c = s()(k.Z.getMutablePrivateChannels()).values().value(),
+                c = s()(j.Z.getMutablePrivateChannels()).values().value(),
                 u = [];
             for (let e of c) {
                 if (!e.isMultiUserDM() || !i(e)) continue;
@@ -720,7 +720,7 @@ let e4 = (0, J.oH)((e, t, n) => {
             return u.sort(f.Z), u.length > n && (u.length = n), u;
         },
         queryApplications(e) {
-            let { query: t, limit: n = 10, fuzzy: r = !0, filter: i = ek } = e,
+            let { query: t, limit: n = 10, fuzzy: r = !0, filter: i = ej } = e,
                 o = t.toLocaleLowerCase(),
                 a = {
                     exactQuery: RegExp("^".concat(er.Z.escape(o)), "i"),
@@ -796,7 +796,7 @@ let e4 = (0, J.oH)((e, t, n) => {
             );
         },
         querySKUs(e) {
-            let { query: t, limit: n = 10, fuzzy: r = !0, filter: i = ek } = e,
+            let { query: t, limit: n = 10, fuzzy: r = !0, filter: i = ej } = e,
                 o = t.toLocaleLowerCase(),
                 a = {
                     exactQuery: RegExp("^".concat(er.Z.escape(o)), "i"),
@@ -1097,7 +1097,7 @@ let e4 = (0, J.oH)((e, t, n) => {
         },
         queryStickers(e) {
             let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-                [n, r] = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [null, ek],
+                [n, r] = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [null, ej],
                 { stickerMetadata: i } = C.Z,
                 o = q.default.getCurrentUser(),
                 a = new Set(),
@@ -1213,7 +1213,7 @@ let e4 = (0, J.oH)((e, t, n) => {
                 .value()
                 .slice(0, es.rnv);
         },
-        matchSentinel: (e, t, n) => !ej.test(t) && e === n,
+        matchSentinel: (e, t, n) => !ek.test(t) && e === n,
         hasSameRoleAsUsername(e, t) {
             if (!t.hasUniqueUsername()) return !1;
             let n = F.Z.getGuild(e.getGuildId());

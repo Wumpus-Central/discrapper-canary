@@ -32,18 +32,18 @@ var r = n(255367),
     L = n(982204),
     x = n(981631),
     M = n(388032),
-    k = n(416439);
-function j(e) {
+    j = n(416439);
+function k(e) {
     let { application: t, sku: n, isEmbeddedIAP: i } = e;
     return !0 !== i
         ? null
         : (0, r.jsxs)("div", {
-              className: k.skuHeading,
+              className: j.skuHeading,
               children: [
                   (0, r.jsx)(m.Z, { game: t }),
                   (0, r.jsx)(c.X6q, {
                       variant: "heading-lg/bold",
-                      className: k.skuHeadingText,
+                      className: j.skuHeadingText,
                       children: n.name,
                   }),
               ],
@@ -103,7 +103,7 @@ function U(e) {
     }, [et, en, Z, er.applicationId, er.id, es, X, J]);
     let ep = null != ei && ei.length > 0 && (Z === I.c || null === e_) && Q ? E.w.SELECT_PAYMENT_METHOD : void 0;
     return (0, r.jsxs)("div", {
-        className: k.stepBody,
+        className: j.stepBody,
         children: [
             (0, r.jsx)(E.Y, { paymentRestrictionBannerType: ep }),
             el
@@ -113,7 +113,7 @@ function U(e) {
                           icon: (0, c.GSL)(S.Z),
                           iconSize: f.Z.Sizes.SMALL,
                           color: f.Z.Colors.WARNING,
-                          className: k.errorBlock,
+                          className: j.errorBlock,
                           children: M.intl.string(M.t.OvMyMT),
                       },
                       "TEST_MODE",
@@ -126,13 +126,13 @@ function U(e) {
                           icon: (0, c.GSL)(S.Z),
                           iconSize: f.Z.Sizes.SMALL,
                           color: f.Z.Colors.ERROR,
-                          className: k.errorBlock,
+                          className: j.errorBlock,
                           children: M.intl.string(M.t.tAmECg),
                       },
                       "DEV_SHELF_ERROR",
                   )
                 : null,
-            (0, r.jsx)(j, {
+            (0, r.jsx)(k, {
                 application: U,
                 sku: er,
                 isEmbeddedIAP: W,
@@ -151,14 +151,14 @@ function U(e) {
                 : null == z
                   ? (0, r.jsx)(c.$jN, {
                         type: c.$jN.Type.WANDERING_CUBES,
-                        className: k.invoiceSpinner,
+                        className: j.invoiceSpinner,
                     })
                   : (0, r.jsx)(L.E, {
                         sku: er,
                         value: "",
                     }),
             (0, r.jsxs)("div", {
-                className: k.paymentSourceWrapper,
+                className: j.paymentSourceWrapper,
                 children: [
                     (0, r.jsx)(c.vwX, {
                         tag: c.RB0.H5,
@@ -183,7 +183,7 @@ function U(e) {
                     showWithdrawalWaiver: eu,
                     disabled: ed,
                     subscriptionPlan: null,
-                    finePrintClassname: k.fineprint,
+                    finePrintClassname: j.fineprint,
                     purchaseType: K,
                     isGift: J,
                     checkboxLabel:

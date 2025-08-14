@@ -1,6 +1,6 @@
 let r;
 n.d(t, {
-    Jc: () => k,
+    Jc: () => j,
     dx: () => M,
     tE: () => G,
 });
@@ -409,7 +409,7 @@ let x = !1,
             (P = !1), null != w && cancelAnimationFrame(w);
         },
     };
-function k(e) {
+function j(e) {
     let { containerRef: t, children: n, themeOptions: r } = e,
         i = o.useRef(new A());
     return (
@@ -418,11 +418,11 @@ function k(e) {
         }, [t.current]),
         (0, a.jsxs)(C.Provider, {
             value: i.current,
-            children: [n, (0, a.jsx)(j, {})],
+            children: [n, (0, a.jsx)(k, {})],
         })
     );
 }
-function j() {
+function k() {
     let e = o.useContext(C),
         [, t] = o.useState({});
     return (

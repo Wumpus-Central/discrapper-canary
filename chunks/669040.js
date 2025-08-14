@@ -32,8 +32,8 @@ var r = n(255367),
     L = n(74538),
     x = n(624138),
     M = n(543241),
-    k = n(883661),
-    j = n(880949),
+    j = n(883661),
+    k = n(880949),
     U = n(784222),
     G = n(172800),
     B = n(149203),
@@ -186,14 +186,14 @@ let W = 0,
                         let c =
                                 s === B.En.GUILD
                                     ? null != i
-                                        ? (0, r.jsx)(j.Z, {
+                                        ? (0, r.jsx)(k.Z, {
                                               guild: i,
                                               height: ee,
                                               width: ee,
                                           })
                                         : null
                                     : null != o
-                                      ? (0, r.jsx)(k.Z, {
+                                      ? (0, r.jsx)(j.Z, {
                                             categoryId: o,
                                             height: ee,
                                             width: ee,
@@ -308,8 +308,8 @@ let W = 0,
                 isUsingKeyboardNavigation: C,
                 channelGuildId: x,
                 channelId: M,
-                messageId: k,
-                isBurstReaction: j,
+                messageId: j,
+                isBurstReaction: k,
                 listHeaderClassName: G,
             } = e,
             B = i.useRef(!1),
@@ -349,8 +349,8 @@ let W = 0,
                 allowAnimatedEmoji: z,
                 channelGuildId: x,
                 channelId: M,
-                messageId: k,
-                isBurstReaction: j,
+                messageId: j,
+                isBurstReaction: k,
                 listHeaderClassName: G,
                 activeSectionIndex: $,
                 upsellGlowOpacity: er,

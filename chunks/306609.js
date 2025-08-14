@@ -32,8 +32,8 @@ var r = n(255367),
     L = n(639539),
     x = n(627325),
     M = n(981631),
-    k = n(354459),
-    j = n(474936),
+    j = n(354459),
+    k = n(474936),
     U = n(65154),
     G = n(696162),
     B = n(388032),
@@ -216,7 +216,7 @@ function Q(e) {
                                     children: (0, r.jsx)(E.p, {
                                         showUpsell: !0,
                                         text: B.intl.format(B.t["XMDm8/"], {
-                                            nitroTierName: (0, T.Px)(j.p9.TIER_2),
+                                            nitroTierName: (0, T.Px)(k.p9.TIER_2),
                                             onClick: () => (0, b.i)(),
                                         }),
                                         button: B.intl.string(B.t.cRCCJy),
@@ -267,7 +267,7 @@ function Q(e) {
                                     renderOutputDevices: o,
                                     renderOutputVolume: o,
                                     onClose: t,
-                                    onInteraction: (0, m.u)("AudioDeviceMenu", $, { entrypoint: k.A5.THREE_DOT }),
+                                    onInteraction: (0, m.u)("AudioDeviceMenu", $, { entrypoint: j.A5.THREE_DOT }),
                                     minimal: !0,
                                 }),
                             children: (e) =>

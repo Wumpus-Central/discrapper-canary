@@ -1,8 +1,8 @@
 n.d(t, {
-    Ds: () => j,
+    Ds: () => k,
     YB: () => M,
     of: () => U,
-    q5: () => k,
+    q5: () => j,
 });
 var r = n(255367);
 n(73800);
@@ -56,9 +56,9 @@ function M(e) {
             onJumpToChannel: w,
             idle: x,
             selectedParticipant: M,
-            embeddedActivity: k,
+            embeddedActivity: j,
         } = e,
-        j = (0, c.bp)() === R.IlC.POPOUT,
+        k = (0, c.bp)() === R.IlC.POPOUT,
         U = (0, a.e7)([S.Z], () => S.Z.isVideoEnabled()),
         G = (0, a.e7)([S.Z], () => Object.values(S.Z.getVideoDevices())[0]),
         B = !1 === (null == (t = null == G ? void 0 : G.disabled) || t),
@@ -128,7 +128,7 @@ function M(e) {
                         basis: "50%",
                         align: p.Z.Align.CENTER,
                         children: [
-                            j || (0, A.R)()
+                            k || (0, A.R)()
                                 ? null
                                 : (0, r.jsx)(v.Z, {
                                       className: D.rightPipIcon,
@@ -138,7 +138,7 @@ function M(e) {
                                   }),
                             (0, r.jsx)(O.Z, {
                                 applicationId: s,
-                                location: k.location,
+                                location: j.location,
                                 className: D.rightPipIcon,
                             }),
                         ],
@@ -148,7 +148,7 @@ function M(e) {
         ],
     });
 }
-function k(e) {
+function j(e) {
     var t, n;
     let {
             channel: i,
@@ -202,7 +202,7 @@ function k(e) {
         ],
     });
 }
-function j(e) {
+function k(e) {
     let { channelId: t, participantsOpen: n, showToggleParticipants: i } = e;
     return i
         ? (0, r.jsx)(I.Z, {

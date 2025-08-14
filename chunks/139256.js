@@ -1,5 +1,5 @@
 n.d(t, {
-    $e: () => k,
+    $e: () => j,
     $w: () => Z,
     Og: () => V,
     ZY: () => F,
@@ -169,7 +169,7 @@ function M(e) {
         children: i,
     });
 }
-function k(e) {
+function j(e) {
     let {
             answers: t,
             answersInteraction: n,
@@ -210,7 +210,7 @@ function k(e) {
         className: l,
         children: t.map((e, t) =>
             (0, r.jsx)(
-                j,
+                k,
                 {
                     className: c,
                     answer: e,
@@ -225,7 +225,7 @@ function k(e) {
         ),
     });
 }
-function j(e) {
+function k(e) {
     let { className: t, answer: n, children: o, hasSelectedAnyAnswer: s, isFirstAnswer: l, elementType: c } = e,
         { channelId: u, messageId: d } = (0, y.pE)(),
         f = (0, y.$B)(n.style),

@@ -83,7 +83,7 @@ function M(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = k(e, t);
+        i = j(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
         for (r = 0; r < o.length; r++)
@@ -91,7 +91,7 @@ function M(e, t) {
     }
     return i;
 }
-function k(e, t) {
+function j(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -100,7 +100,7 @@ function k(e, t) {
     for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let j = 1000,
+let k = 1000,
     U = (0, s.animated)(d.CJ0),
     G = (e) => {
         var { quest: t, location: n, questContentPosition: o, sourceQuestContent: a } = e,
@@ -123,7 +123,7 @@ let j = 1000,
                 sourceQuestContent: a,
             }),
                 (0, h.JG)((0, g.Rs)(t.id), () => {
-                    f(!0), _.current.start(j, () => f(!1));
+                    f(!0), _.current.start(k, () => f(!1));
                 });
         };
         return (0, r.jsx)(d.ua7, {
@@ -156,9 +156,9 @@ let j = 1000,
                 isExpanded: w,
                 contentPosition: L,
                 toggleExpanded: M,
-                sourceQuestContent: k,
+                sourceQuestContent: j,
             } = e,
-            { ref: j, height: B } = (0, f.ZP)(),
+            { ref: k, height: B } = (0, f.ZP)(),
             [Z, F] = i.useState(null),
             [V, H] = i.useState(null),
             Y = (0, p.Z)((e) => {
@@ -168,7 +168,7 @@ let j = 1000,
             W = (0, _.y)(Y),
             K = (0, A.uq)(c),
             z = c === b.jn.QUESTS_EMBED,
-            q = (0, E.t5)(o, N.dr.QUESTS_CARD, c, k),
+            q = (0, E.t5)(o, N.dr.QUESTS_CARD, c, j),
             X = (null == (t = o.userStatus) ? void 0 : t.completedAt) != null,
             Q = (0, m.O5)(),
             J = (0, E.B6)(o.config.expiresAt),
@@ -183,7 +183,7 @@ let j = 1000,
                         questContent: c,
                         questContentCTA: w ? m.jZ.COLLAPSE : m.jZ.EXPAND,
                         questContentPosition: L,
-                        sourceQuestContent: k,
+                        sourceQuestContent: j,
                     });
             },
             en = () => null != Z && null != V && Z < V,
@@ -251,7 +251,7 @@ let j = 1000,
                                                         questContent: c,
                                                         className: P.headerCollapsedRewardTile,
                                                         location: N.dr.QUESTS_CARD,
-                                                        sourceQuestContent: k,
+                                                        sourceQuestContent: j,
                                                     }),
                                                 }),
                                                 (0, r.jsxs)("div", {
@@ -272,7 +272,7 @@ let j = 1000,
                                     }),
                                 (0, r.jsxs)(s.animated.div, {
                                     ref: (e) => {
-                                        j.current = e;
+                                        k.current = e;
                                     },
                                     className: a()(P.headerExpandedContent, {
                                         [P.outerContainerGiftInventory]: K,
@@ -354,7 +354,7 @@ let j = 1000,
                                                 quest: o,
                                                 location: c,
                                                 questContentPosition: L,
-                                                sourceQuestContent: k,
+                                                sourceQuestContent: j,
                                             }),
                                     ],
                                 }),
@@ -378,7 +378,7 @@ let j = 1000,
                                     shouldShowDisclosure: !0,
                                     hideLearnMore: K,
                                     showShareLink: !n && z,
-                                    sourceQuestContent: k,
+                                    sourceQuestContent: j,
                                     children: (e) =>
                                         (0, r.jsx)(s.animated.div, {
                                             style: {

@@ -106,8 +106,8 @@ function C(e) {
             showRemainingCharacterCount: L = !0,
             "aria-labelledby": x,
             rows: M = 3,
-            disabled: k,
-            helperText: j,
+            disabled: j,
+            helperText: k,
             successMessage: U,
         } = e,
         G = O(e, [
@@ -159,8 +159,8 @@ function C(e) {
         };
     return (0, r.jsxs)(d.J, {
         validation: Z,
-        disabled: k,
-        helperText: j,
+        disabled: j,
+        helperText: k,
         successMessage: U,
         characterCount: B && D ? (null != (t = null == n ? void 0 : n.length) ? t : 0) : void 0,
         characterCountMaxLength: B && L ? b : void 0,
@@ -182,7 +182,7 @@ function C(e) {
                                 minLength: g,
                                 maxLength: b,
                                 rows: M,
-                                disabled: k,
+                                disabled: j,
                             },
                             G,
                         ),

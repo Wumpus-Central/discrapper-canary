@@ -248,7 +248,7 @@ var m = {
             return t ? t + " " + r : r;
         }, "");
     },
-    k = function (e, t) {
+    j = function (e, t) {
         return (
             void 0 === t && (t = {}),
             Object.keys(e).reduce(function (t, n) {
@@ -256,7 +256,7 @@ var m = {
             }, t)
         );
     },
-    j = function (e, t) {
+    k = function (e, t) {
         return t.map(function (t, n) {
             var i,
                 o = (((i = { key: n })["data-rh"] = !0), i);
@@ -280,7 +280,7 @@ var m = {
                         return (
                             (n = t.titleAttributes),
                             ((i = { key: (e = t.title) })["data-rh"] = !0),
-                            (o = k(n, i)),
+                            (o = j(n, i)),
                             [r.createElement(m.TITLE, o, e)]
                         );
                     },
@@ -298,7 +298,7 @@ var m = {
             case "htmlAttributes":
                 return {
                     toComponent: function () {
-                        return k(t);
+                        return j(t);
                     },
                     toString: function () {
                         return M(t);
@@ -307,7 +307,7 @@ var m = {
             default:
                 return {
                     toComponent: function () {
-                        return j(e, t);
+                        return k(e, t);
                     },
                     toString: function () {
                         return (function (e, t, n) {
@@ -359,7 +359,7 @@ var m = {
                 return {
                     priorityMethods: {
                         toComponent: function () {
-                            return [].concat(j(m.META, i.priority), j(m.LINK, o.priority), j(m.SCRIPT, a.priority));
+                            return [].concat(k(m.META, i.priority), k(m.LINK, o.priority), k(m.SCRIPT, a.priority));
                         },
                         toString: function () {
                             return (

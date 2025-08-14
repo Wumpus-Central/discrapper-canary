@@ -225,9 +225,13 @@ async function A(e, t, n) {
                 libraryApplications:
                     null != n.body.library_applications ? n.body.library_applications.filter(_.lm) : [],
                 entitlements: n.body.entitlements,
+                appliedUserDiscounts: n.body.applied_user_discounts,
                 giftCode: n.body.gift_code,
             }),
-            O(b({}, n.body), { redirectConfirmation: !1 })
+            O(b({}, n.body), {
+                appliedUserDiscounts: n.body.applied_user_discounts,
+                redirectConfirmation: !1,
+            })
         );
     } catch (i) {
         let n = i instanceof a.HF ? i : new a.HF(i);

@@ -43,8 +43,8 @@ var r = n(255367),
     L = n(398327),
     x = n(117530),
     M = n(956664),
-    k = n(358085),
-    j = n(127654),
+    j = n(358085),
+    k = n(127654),
     U = n(746877),
     G = n(541716),
     B = n(667829),
@@ -175,7 +175,7 @@ function ea(e, t) {
             required: N,
             disabled: C,
             accessibilityLabel: M,
-            channel: j,
+            channel: k,
             type: V,
             focused: z,
             onChange: J,
@@ -198,7 +198,7 @@ function ea(e, t) {
             emojiPickerCloseOnModalOuterClick: eS,
             parentModalKey: eA,
         } = e,
-        eN = v.Z.useField("channelDrafts")[j.id],
+        eN = v.Z.useField("channelDrafts")[k.id],
         eC = null != (o = null == eN ? void 0 : eN.title) ? o : "",
         eR = null == eN ? void 0 : eN.heroFile,
         eP = null == (s = null == eN ? void 0 : eN.publish) || s,
@@ -208,15 +208,15 @@ function ea(e, t) {
         eL = (0, F.qz)(t),
         ex = i.useRef(null),
         eM = i.useRef(null),
-        ek = i.useRef(null),
-        ej = i.useRef(null);
+        ej = i.useRef(null),
+        ek = i.useRef(null);
     null == eO || eO(eM.current);
     let { activeCommand: eU } = (0, d.cj)([y.Z], () => {
             var e, t;
             return {
-                activeCommand: (null == (e = V.commands) ? void 0 : e.enabled) ? y.Z.getActiveCommand(j.id) : null,
+                activeCommand: (null == (e = V.commands) ? void 0 : e.enabled) ? y.Z.getActiveCommand(k.id) : null,
                 activeCommandSection: (null == (t = V.commands) ? void 0 : t.enabled)
-                    ? y.Z.getActiveCommandSection(j.id)
+                    ? y.Z.getActiveCommandSection(k.id)
                     : null,
             };
         }),
@@ -226,8 +226,8 @@ function ea(e, t) {
             disabled: eZ,
             canAttachFiles: eF,
             canEveryoneSendMessages: eV,
-        } = (0, F.TE)(j, V, eU, C),
-        eH = !w.dN.useSetting() && !(0, k.isAndroidWeb)() && null != window.ResizeObserver,
+        } = (0, F.TE)(k, V, eU, C),
+        eH = !w.dN.useSetting() && !(0, j.isAndroidWeb)() && null != window.ResizeObserver,
         eY = !eH || !(null == (n = V.commands) ? void 0 : n.enabled) || !z || f !== W.GI,
         eW = (0, R.Z)(),
         { fontSize: eK } = (0, d.cj)([g.Z], () => ({
@@ -235,7 +235,7 @@ function ea(e, t) {
             isSubmitButtonEnabled: g.Z.isSubmitButtonEnabled,
         })),
         ez = (0, d.e7)([L.Z], () => L.Z.isEnabled()),
-        eq = (0, P.NE)(j);
+        eq = (0, P.NE)(k);
     (0, F.hJ)(V, eZ);
     let { eventEmitter: eX, handleEditorSelectionChanged: eQ } = (0, F.x2)(eM, f, m),
         eJ = i.useCallback(
@@ -245,7 +245,7 @@ function ea(e, t) {
                     i = eC.length > 0 ? eC : e.value.length > 0 ? e.value.slice(0, 80) : q.intl.string(q.t["7Xm5QE"]);
                 if (null == eR)
                     return (
-                        (0, v.c)(j.id, {
+                        (0, v.c)(k.id, {
                             title: "",
                             heroFile: null,
                         }),
@@ -271,7 +271,7 @@ function ea(e, t) {
                             content: e.value,
                             id: "".concat(K.Kb),
                         });
-                let o = x.Z.getUploads(j.id, D.d.ChannelMessage),
+                let o = x.Z.getUploads(k.id, D.d.ChannelMessage),
                     a = o.filter((e) => (e.isImage || e.isVideo) && e.filename !== (null == eR ? void 0 : eR.name)),
                     s = o.filter((e) => !e.isImage && !e.isVideo && e.filename !== (null == eR ? void 0 : eR.name)),
                     l = a.map((e) => ei("attachment://".concat(eo(e.filename)), !1));
@@ -291,7 +291,7 @@ function ea(e, t) {
                             size: null,
                         });
                     }),
-                    (0, v.c)(j.id, {
+                    (0, v.c)(k.id, {
                         title: "",
                         heroFile: null,
                     }),
@@ -308,13 +308,13 @@ function ea(e, t) {
                     )
                 );
             },
-            [e_, eC, eR, j.id, ew, eP, eq],
+            [e_, eC, eR, k.id, ew, eP, eq],
         ),
-        { submit: e$, handleSubmit: e0 } = (0, F.bL)(eJ, V, eM, ej, j.id),
+        { submit: e$, handleSubmit: e0 } = (0, F.bL)(eJ, V, eM, ek, k.id),
         { autocompleteRef: e1, handleMaybeShowAutocomplete: e2, handleHideAutocomplete: e3 } = (0, F.jx)(),
         e5 = i.useCallback(() => {
             var e;
-            return null == ej || null == (e = ej.current) ? void 0 : e.hide();
+            return null == ek || null == (e = ek.current) ? void 0 : e.hide();
         }, []),
         { editorHeight: e4, handleResize: e6 } = (0, F.oR)(ee),
         { handleTab: e8, handleEnter: e7, handleMoveSelection: e9 } = er(e1, ex, eY),
@@ -330,11 +330,11 @@ function ea(e, t) {
             editorRef: eM,
             disabled: eZ,
             textValue: f,
-            channelId: j.id,
+            channelId: k.id,
             chatInputType: V,
             submit: eJ,
         });
-    (0, U.S)(eX, j.guild_id, j.id);
+    (0, U.S)(eX, k.guild_id, k.id);
     let [ts, tl] = i.useState(!1),
         tc = z || ts || f.length > 0 || null != eR || eC.length > 0,
         { editorHeaderHeight: tu, paddingTop: td } = (0, _.q_F)({
@@ -367,9 +367,9 @@ function ea(e, t) {
             var e;
             if (null == eR) return;
             let t =
-                null == (e = x.Z.getUploads(j.id, V.drafts.type).find((e) => e.filename === eR.name)) ? void 0 : e.id;
-            null != t && p.Z.remove(j.id, t, D.d.ChannelMessage), (0, v.c)(j.id, { heroFile: null });
-        }, [j.id, eR, V.drafts.type]);
+                null == (e = x.Z.getUploads(k.id, V.drafts.type).find((e) => e.filename === eR.name)) ? void 0 : e.id;
+            null != t && p.Z.remove(k.id, t, D.d.ChannelMessage), (0, v.c)(k.id, { heroFile: null });
+        }, [k.id, eR, V.drafts.type]);
     return (0, r.jsx)(I.f6, {
         value: eX,
         children: (0, r.jsxs)(b.Gt, {
@@ -381,7 +381,7 @@ function ea(e, t) {
                     onMouseDown: tr,
                     children: [
                         (0, r.jsx)("div", {
-                            ref: ek,
+                            ref: ej,
                             onScroll: e5,
                             className: a()(Q.announcementScrollableContainer, { [Q.themedBackground]: !eT }),
                             children: (0, r.jsxs)("div", {
@@ -406,8 +406,8 @@ function ea(e, t) {
                                                     null != eR
                                                         ? null
                                                         : (0, r.jsx)(ed, {
-                                                              channel: j,
-                                                              onImageUploaded: (e) => (0, v.c)(j.id, { heroFile: e }),
+                                                              channel: k,
+                                                              onImageUploaded: (e) => (0, v.c)(k.id, { heroFile: e }),
                                                               onFocus: () => tl(!0),
                                                           }),
                                                     (0, r.jsx)("input", {
@@ -417,7 +417,7 @@ function ea(e, t) {
                                                         className: X.titleInput,
                                                         placeholder: q.intl.string(q.t.Z8fYjI),
                                                         value: eC,
-                                                        onChange: (e) => (0, v.c)(j.id, { title: e.target.value }),
+                                                        onChange: (e) => (0, v.c)(k.id, { title: e.target.value }),
                                                     }),
                                                 ],
                                             }),
@@ -438,7 +438,7 @@ function ea(e, t) {
                                                         required: N,
                                                         accessibilityLabel: M,
                                                         isPreviewing: (eG || eB) && eV,
-                                                        channel: j,
+                                                        channel: k,
                                                         type: G.Ie.CREATE_ANNOUNCEMENT_POST,
                                                         canPasteFiles: eF,
                                                         uploadPromptCharacterCount: Y.en1,
@@ -470,7 +470,7 @@ function ea(e, t) {
                                     (0, r.jsx)("div", {
                                         className: X.attachmentsContainer,
                                         children: (0, r.jsx)(H.Z, {
-                                            channelId: j.id,
+                                            channelId: k.id,
                                             type: V,
                                             canAttachFiles: eF,
                                             ignoreFile: null == eR ? void 0 : eR.name,
@@ -487,11 +487,11 @@ function ea(e, t) {
                                 (0, r.jsxs)("div", {
                                     className: X.footerPart,
                                     children: [
-                                        (0, r.jsx)(eu, { channel: j }),
+                                        (0, r.jsx)(eu, { channel: k }),
                                         (0, r.jsx)(Z.Z, {
                                             type: G.Ie.CREATE_ANNOUNCEMENT_POST,
                                             disabled: eZ,
-                                            channel: j,
+                                            channel: k,
                                             handleSubmit: e0,
                                             isEmpty: 0 === f.trim().length,
                                             showAllButtons: !0,
@@ -509,7 +509,7 @@ function ea(e, t) {
                                             targetElementRef: tf,
                                             renderPopout: () =>
                                                 (0, r.jsx)(el, {
-                                                    channelId: j.id,
+                                                    channelId: k.id,
                                                     canCreateThread: eq,
                                                 }),
                                             shouldShow: t_,
@@ -568,7 +568,7 @@ function ea(e, t) {
                         (0, r.jsx)(O.Z, {
                             targetRef: eL,
                             ref: e1,
-                            channel: j,
+                            channel: k,
                             canMentionRoles: eh,
                             canMentionChannels: em,
                             useNewSlashCommands: eH,
@@ -597,7 +597,7 @@ function ea(e, t) {
                           onSelectGIF: to,
                           onSelectEmoji: ti,
                           onSelectSticker: ta,
-                          channel: j,
+                          channel: k,
                           closeOnModalOuterClick: eS,
                           parentModalKey: eA,
                           position: "top",
@@ -691,7 +691,7 @@ function ec(e) {
 function eu(e) {
     let { channel: t } = e,
         n = (e) => {
-            (0, j.d)(e.currentTarget.files, t, D.d.ChannelMessage, {
+            (0, k.d)(e.currentTarget.files, t, D.d.ChannelMessage, {
                 requireConfirm: !0,
                 origin: "file_picker",
             }),

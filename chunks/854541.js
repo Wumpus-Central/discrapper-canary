@@ -2,7 +2,7 @@ n.d(t, {
     AG: () => D,
     Z$: () => M,
     jH: () => L,
-    zH: () => k,
+    zH: () => j,
 }),
     n(388685);
 var r = n(255367),
@@ -270,14 +270,14 @@ function x(e) {
             }),
                 o(n);
         },
-        k = async () => {
+        j = async () => {
             if (null != S)
                 try {
                     let { sRGBHex: e } = await S.open();
                     M(e);
                 } catch (e) {}
         },
-        j = i.useCallback(
+        k = i.useCallback(
             (e) => {
                 x((t) =>
                     T(v({}, t), {
@@ -297,7 +297,7 @@ function x(e) {
                 (0, r.jsx)(i.Suspense, {
                     fallback: null,
                     children: (0, r.jsx)(N, {
-                        onChange: j,
+                        onChange: k,
                         onChangeComplete: (e) => {
                             let { hex: t } = e;
                             return U(t);
@@ -312,7 +312,7 @@ function x(e) {
                         E &&
                             null != S &&
                             (0, r.jsx)(g.JO, {
-                                onClick: k,
+                                onClick: j,
                                 tooltip: b.intl.string(b.t["0dU9Nz"]),
                                 tooltipPosition: "top",
                                 className: y.customColorPickerEyeDropper,
@@ -354,7 +354,7 @@ function x(e) {
     });
 }
 let M = i.memo(x);
-function k(e) {
+function j(e) {
     let {
             className: t,
             defaultColor: n,

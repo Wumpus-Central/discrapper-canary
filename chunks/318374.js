@@ -109,7 +109,7 @@ function v(e) {
             "aria-labelledby": x,
             "aria-hidden": M,
         } = e,
-        [k, j] = i.useState(!1),
+        [j, k] = i.useState(!1),
         U = y(v),
         G = i.useRef(null),
         B = t.length - o,
@@ -133,7 +133,7 @@ function v(e) {
                                 disablePopout: "function" == typeof C ? C(e.id) : C,
                                 onClick: w,
                                 onPopoutRequestClose: () => {
-                                    j(!1), null == D || D();
+                                    k(!1), null == D || D();
                                 },
                                 onContextMenu: (t) =>
                                     (0, u.jW)(
@@ -152,7 +152,7 @@ function v(e) {
                                                     }),
                                                 );
                                         },
-                                        { onClose: () => j(!1) },
+                                        { onClose: () => k(!1) },
                                     ),
                             },
                             e.id,
@@ -216,9 +216,9 @@ function v(e) {
                 {
                     targetElementRef: G,
                     renderPopout: V,
-                    shouldShow: k,
+                    shouldShow: j,
                     position: "bottom",
-                    onRequestClose: () => j(!1),
+                    onRequestClose: () => k(!1),
                     children: (t) =>
                         (0, r.jsx)(
                             c.P3F,
@@ -227,7 +227,7 @@ function v(e) {
                                 className: a()(h.overflow, U, S),
                                 onFocus: P,
                                 onClick: (e) => {
-                                    null == R || R(e), j(!0);
+                                    null == R || R(e), k(!0);
                                 },
                                 "aria-label": p.intl.formatToPlainString(p.t.R8Z8Qk, { count: Z }),
                                 children: (0, r.jsx)(c.Text, {

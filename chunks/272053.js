@@ -1,4 +1,4 @@
-n.d(t, { Z: () => j }), n(388685), n(35282), n(415506), n(539854), n(993155);
+n.d(t, { Z: () => k }), n(388685), n(35282), n(415506), n(539854), n(993155);
 var r,
     i = n(348327),
     o = n.n(i),
@@ -201,7 +201,7 @@ function M(e) {
     if (o()(e.stream, T)) return !1;
     T = null != (t = e.stream) ? t : null;
 }
-class k extends (r = a.ZP.Store) {
+class j extends (r = a.ZP.Store) {
     initialize() {
         x(), this.waitFor(_.Z), this.syncWith([p.Z], x);
     }
@@ -209,8 +209,8 @@ class k extends (r = a.ZP.Store) {
         return T;
     }
 }
-m(k, "displayName", "ExternalStreamingStore");
-let j = new k(l.Z, {
+m(j, "displayName", "ExternalStreamingStore");
+let k = new j(l.Z, {
     STREAMING_UPDATE: M,
     USER_CONNECTIONS_UPDATE: () => L._check(),
 });

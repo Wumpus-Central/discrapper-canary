@@ -50,11 +50,11 @@ let v = function (e) {
                 m.S.dispatchToLastSubscribed(y.CkL.TEXTAREA_FOCUS));
         },
         M = () => S(!0),
-        k = (e) => {
+        j = (e) => {
             if (C) return !1;
             P || e.shiftKey !== T || S(!e.shiftKey);
         },
-        j = P
+        k = P
             ? y.TPd.GUILD_THREADS_ONLY.has(v.type)
                 ? O.intl.string(O.t.RBBLhI)
                 : O.intl.string(O.t.gUx4en)
@@ -66,11 +66,11 @@ let v = function (e) {
         : (0, r.jsx)(E.Z, {
               className: t,
               style: n,
-              title: j,
+              title: k,
               description: P ? O.intl.string(O.t.lpgkzs) : O.intl.string(O.t.usQh4O),
               icons: b.J6,
               onDrop: x,
               onDragClear: M,
-              onDragOver: k,
+              onDragOver: j,
           });
 };
