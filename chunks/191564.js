@@ -20,8 +20,8 @@ var n = r(255367),
     O = r(52268),
     v = r(981631),
     P = r(474936),
-    E = r(388032),
-    _ = r(625002);
+    _ = r(388032),
+    E = r(625002);
 function S(e) {
     let {
             user: t,
@@ -40,19 +40,19 @@ function S(e) {
     return (0, n.jsx)(n.Fragment, {
         children: (0, n.jsxs)(o.mzw, {
             "data-migration-pending": !0,
-            className: _.modalFooter,
+            className: E.modalFooter,
             children: [
                 (null != i && (!(0, u.qS)(i) || d)) || null === f
                     ? (0, n.jsx)(o.zxk, {
                           variant: "primary",
-                          text: E.intl.string(E.t.Jh8fJy),
+                          text: _.intl.string(_.t.Jh8fJy),
                           onClick: l,
                           disabled: a,
                       })
                     : d || !(0, u.G1)(r)
                       ? (0, n.jsx)(o.zxk, {
                             variant: "primary",
-                            text: E.intl.string(E.t.fYfGgI),
+                            text: _.intl.string(_.t.fYfGgI),
                             onClick: () => c(null == h ? void 0 : h.skuId),
                         })
                       : (0, n.jsx)(g.Z, {
@@ -60,10 +60,10 @@ function S(e) {
                             showGradient: b,
                             textOptions: {
                                 textOverride: y.ZP.isPremium(t)
-                                    ? E.intl.string(E.t.KXLX7u)
+                                    ? _.intl.string(_.t.KXLX7u)
                                     : b
-                                      ? E.intl.string(E.t.pj0XBA)
-                                      : E.intl.string(E.t.mr4K7O),
+                                      ? _.intl.string(_.t.pj0XBA)
+                                      : _.intl.string(_.t.mr4K7O),
                             },
                         }),
                 j
@@ -73,7 +73,7 @@ function S(e) {
                       })
                     : (0, n.jsx)(o.zxk, {
                           variant: "secondary",
-                          text: E.intl.string(E.t["ETE/oK"]),
+                          text: _.intl.string(_.t["ETE/oK"]),
                           onClick: s,
                       }),
             ],
@@ -129,22 +129,22 @@ function C(e) {
             (0, n.jsxs)(o.xBx, {
                 "data-migration-pending": !0,
                 separator: !1,
-                className: _.modalHeader,
+                className: E.modalHeader,
                 children: [
                     (0, n.jsx)(o.X6q, {
                         variant: "heading-lg/semibold",
-                        children: E.intl.string(E.t["/6nv6O"]),
+                        children: _.intl.string(_.t["/6nv6O"]),
                     }),
                     (0, n.jsx)(o.olH, {
                         "data-migration-pending": !0,
-                        className: _.modalCloseButton,
+                        className: E.modalCloseButton,
                         onClick: f,
                     }),
                 ],
             }),
             (0, n.jsxs)(o.hzk, {
                 "data-migration-pending": !0,
-                className: _.modalContent,
+                className: E.modalContent,
                 children: [
                     (0, n.jsx)(O.Z, {
                         user: t,
@@ -184,7 +184,7 @@ function C(e) {
 }
 function I(e) {
     let { transitionState: t, analyticsLocations: r, initialSelectedEffectId: a, guild: u, onClose: d } = e,
-        { isFetching: p, categories: m, purchases: g } = (0, f.Z)("ProfileEffectModal"),
+        { isFetching: p, categories: m, purchases: g } = (0, f.Z)(),
         y = (0, l.e7)([b.default], () => b.default.getCurrentUser()),
         { analyticsLocations: x } = (0, c.ZP)(r, s.Z.EDIT_PROFILE_EFFECT_MODAL),
         O = (0, h.Kg)(y, u);
@@ -199,13 +199,13 @@ function I(e) {
             value: x,
             children: (0, n.jsx)(o.Y0X, {
                 transitionState: t,
-                className: _.modal,
+                className: E.modal,
                 size: p ? o.CgR.DYNAMIC : o.CgR.MEDIUM,
                 parentComponent: "ProfileEffectModal",
                 "data-migration-pending": !0,
                 children: p
                     ? (0, n.jsx)(o.$jN, {
-                          className: _.spinner,
+                          className: E.spinner,
                           type: o.$jN.Type.SPINNING_CIRCLE,
                       })
                     : (0, n.jsx)(C, {

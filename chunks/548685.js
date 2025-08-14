@@ -14,10 +14,10 @@ var n = r(255367),
     b = r(74538),
     h = r(381585),
     m = r(597688),
-    _ = r(243126),
-    v = r(38900),
-    O = r(709999),
-    C = r(328626),
+    _ = r(38900),
+    v = r(709999),
+    O = r(328626),
+    C = r(849275),
     E = r(619899),
     S = r(642909),
     y = r(981631),
@@ -46,12 +46,12 @@ let P = (e) => {
             sortOptions: F,
             shuffleProducts: H,
             showRecommendationOption: W,
-        } = (0, _.N)(P, B, I),
+        } = (0, C.Z)(P, B, I),
         V = (0, E.St)(M),
         U = (0, o.e7)([u.Z], () => u.Z.useReducedMotion),
         z = (0, o.e7)([p.Z], () => p.Z.isFocused()),
         G = !U && z,
-        { animationPhase: q, startAnimation: K } = (0, C.y)(),
+        { animationPhase: q, startAnimation: K } = (0, O.y)(),
         Y = (0, h.sp)(),
         X = null != (t = null == Y ? void 0 : Y.sessionId) ? t : "",
         J = l.useRef(null),
@@ -184,7 +184,7 @@ let P = (e) => {
                                                             page_session_id: X,
                                                         });
                                                 },
-                                                disabled: q !== C.g.MOUNTED && q !== C.g.FINISHED,
+                                                disabled: q !== O.g.MOUNTED && q !== O.g.FINISHED,
                                             }),
                                         }),
                                     ],
@@ -196,25 +196,25 @@ let P = (e) => {
                       className: T.feed,
                       children: r
                           ? (0, n.jsx)(n.Fragment, {
-                                children: [...Array(12)].map((e, t) => (0, n.jsx)(v.K, {}, t + 1)),
+                                children: [...Array(12)].map((e, t) => (0, n.jsx)(_.K, {}, t + 1)),
                             })
                           : V.slice(0, L).map((e, t) => {
                                 let r,
                                     l = m.Z.getCategoryForProduct(e.skuId);
                                 if (null == e || null == l) return null;
                                 if (G)
-                                    if (q === C.g.SHUFFLE_OUT)
+                                    if (q === O.g.SHUFFLE_OUT)
                                         return (0, n.jsx)(
                                             "div",
                                             { className: T.shuffleOutro },
                                             "".concat(e.skuId, "-").concat(t),
                                         );
                                     else
-                                        q === C.g.SORT_OUT
+                                        q === O.g.SORT_OUT
                                             ? (r = T.sortChangedOutro)
-                                            : q === C.g.SHUFFLE_IN
+                                            : q === O.g.SHUFFLE_IN
                                               ? (r = T.shuffleIntro)
-                                              : q === C.g.SORT_IN && (r = T.sortChangedIntro);
+                                              : q === O.g.SORT_IN && (r = T.sortChangedIntro);
                                 return (0, n.jsx)(
                                     h.k0,
                                     {
@@ -223,7 +223,7 @@ let P = (e) => {
                                             pageSection: "popular picks",
                                             categoryPosition: 2,
                                         },
-                                        children: (0, n.jsx)(O.Z, {
+                                        children: (0, n.jsx)(v.Z, {
                                             product: e,
                                             category: l,
                                             user: w,

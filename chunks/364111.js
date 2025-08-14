@@ -1,30 +1,30 @@
-n.d(t, { E: () => d }), n(388685);
+n.d(t, { E: () => p }), n(388685);
 var r = n(73800),
-    i = n(442837),
-    l = n(353926),
-    a = n(358085),
-    o = n(335131),
-    s = n(597688),
-    c = n(52030),
-    u = n(228624);
-function d(e, t, n) {
-    let d = (0, i.e7)([l.Z], () => l.Z.hasLoadedExperiments),
-        p = (0, i.e7)([s.Z], () => s.Z.skipNumCategories),
-        f = (0, u.hv)("useMaybeFetchCollectiblesShopHome"),
-        h = (0, a.isDesktop)() || (0, a.isWeb)(),
-        [g, m, b, _, O, E, y] = (0, i.Wu)([c.Z], () => {
+    i = n(311570),
+    l = n(442837),
+    a = n(353926),
+    o = n(358085),
+    s = n(335131),
+    c = n(597688),
+    u = n(52030);
+let d = i.v.VARIANTS_GROUP;
+function p(e, t, n) {
+    let i = (0, l.e7)([a.Z], () => a.Z.hasLoadedExperiments),
+        p = (0, l.e7)([c.Z], () => c.Z.skipNumCategories),
+        f = (0, o.isDesktop)() || (0, o.isWeb)(),
+        [h, g, m, b, _, O, E] = (0, l.Wu)([u.Z], () => {
             var t, n;
             return [
-                c.Z.getShopBlocks(e),
-                null != (t = c.Z.getLastSuccessfulFetch(e)) ? t : 0,
-                null != (n = c.Z.getLastErrorTimestamp(e)) ? n : 0,
-                c.Z.getLastFetchOptions(e),
-                c.Z.getFetchShopHomeError(e),
-                c.Z.getIsFetchingShopHome(e),
-                c.Z.getShopHomeConfigOverride(),
+                u.Z.getShopBlocks(e),
+                null != (t = u.Z.getLastSuccessfulFetch(e)) ? t : 0,
+                null != (n = u.Z.getLastErrorTimestamp(e)) ? n : 0,
+                u.Z.getLastFetchOptions(e),
+                u.Z.getFetchShopHomeError(e),
+                u.Z.getIsFetchingShopHome(e),
+                u.Z.getShopHomeConfigOverride(),
             ];
         }),
-        v = (0, r.useMemo)(() => {
+        y = (0, r.useMemo)(() => {
             var e, n;
             return (
                 (e = (function (e) {
@@ -54,11 +54,11 @@ function d(e, t, n) {
                 })({}, t)),
                 (n = n =
                     {
-                        variantsReturnStyle: f,
-                        includeBundles: h,
+                        variantsReturnStyle: d,
+                        includeBundles: f,
                         includePopularPicks: !0,
                         includeDynamicBlocks: !0,
-                        shopHomeConfig: y,
+                        shopHomeConfig: E,
                         skipNumCategories: p,
                     }),
                 Object.getOwnPropertyDescriptors
@@ -75,22 +75,22 @@ function d(e, t, n) {
                       }),
                 e
             );
-        }, [t, f, h, y, p]),
-        I = (0, r.useMemo)(() => !(0, o.oc)(_, v), [_, v]),
-        C = (0, r.useMemo)(() => Date.now() - m < 600000, [m]);
+        }, [t, f, E, p]),
+        v = (0, r.useMemo)(() => !(0, s.oc)(b, y), [b, y]),
+        I = (0, r.useMemo)(() => Date.now() - g < 600000, [g]);
     return (
         (0, r.useEffect)(() => {
-            if (!d || E) return;
-            let t = Date.now() - b < 600000;
-            (null != O && t) || ((I || !C) && (0, o.Ov)(e, v, n));
-        }, [d, E, O, b, C, I, v, e, n]),
+            if (!i || O) return;
+            let t = Date.now() - m < 600000;
+            (null != _ && t) || ((v || !I) && (0, s.Ov)(e, y, n));
+        }, [i, O, _, m, I, v, y, e, n]),
         {
-            isFetchingShopHome: E,
-            fetchShopHomeError: O,
-            shopBlocks: g,
+            isFetchingShopHome: O,
+            fetchShopHomeError: _,
+            shopBlocks: h,
             refreshShopHome: (0, r.useCallback)(() => {
-                (0, o.Ov)(e, v, n);
-            }, [e, v, n]),
+                (0, s.Ov)(e, y, n);
+            }, [e, y, n]),
         }
     );
 }

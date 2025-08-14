@@ -168,11 +168,7 @@ function T(e) {
                         (0, s.fw)(),
                         (0, l.p)(),
                         null == T || T(P),
-                        P &&
-                            (0, c.qg)({
-                                variantsReturnStyle: R,
-                                location: "openCollectiblesPaymentModal",
-                            });
+                        P && (0, c.qg)({ variantsReturnStyle: R });
                 },
                 onCloseRequest: () => {
                     null != t && I.has(t) && (0, o.Mr3)(L);

@@ -5,7 +5,7 @@ var i = n(73800),
     a = n(223143);
 let l = (e) => {
     let [t, n] = i.useState(),
-        { categories: l } = (0, a.ZP)({ location: "useTryItOutProfileEffectId" });
+        { categories: l } = (0, a.ZP)();
     return (
         i.useEffect(() => {
             (null == t || 0 === t.size) && n(l);

@@ -22,7 +22,7 @@ function C(e) {
     let { transitionState: t, analyticsLocations: r, onClose: o, guildId: u, initialSelectedNameplate: p } = e,
         b = (0, i.e7)([f.default], () => f.default.getCurrentUser()),
         { analyticsLocations: h } = (0, c.ZP)(r, s.Z.EDIT_NAMEPLATE_MODAL),
-        { available: m, purchased: _, isFetchingCategories: O, isFetchingPurchases: C } = (0, d.yV)("NameplateModal"),
+        { available: m, purchased: _, isFetchingCategories: O, isFetchingPurchases: C } = (0, d.yV)(),
         P = O || (C && 0 === _.length);
     return (
         (0, a.useEffect)(() => {

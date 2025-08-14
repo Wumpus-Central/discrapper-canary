@@ -1,10 +1,10 @@
 n.d(t, { Z: () => g }), n(388685), n(49124);
 var r = n(73800),
-    i = n(399606),
-    o = n(16084),
-    a = n(881052),
-    s = n(128069),
-    l = n(228624),
+    i = n(311570),
+    o = n(399606),
+    a = n(16084),
+    s = n(881052),
+    l = n(128069),
     c = n(855775),
     u = n(55563),
     d = n(474936);
@@ -75,21 +75,20 @@ function m() {
 function g(e) {
     let { applicationId: t, skuIDs: n, currentPaymentSourceId: f, isGift: _, excludeSKUPurchasePreviews: p = !1 } = e,
         h = r.useMemo(() => n.filter((e) => !d.YQ.includes(e)), [JSON.stringify(n)]),
-        g = (0, i.e7)([u.Z], () => h.every((e) => !u.Z.isFetching(e) && null != u.Z.get(e))),
+        g = (0, o.e7)([u.Z], () => h.every((e) => !u.Z.isFetching(e) && null != u.Z.get(e))),
         { previewErrorsById: E, setErrorById: b } = m(),
-        y = (0, i.cj)([u.Z], () => {
+        y = (0, o.cj)([u.Z], () => {
             let e = {};
             for (let n of h) {
                 var t;
                 e[n] = null != (t = u.Z.get(n)) ? t : void 0;
             }
             return e;
-        }, [h]),
-        O = (0, l.hv)("useSkus");
+        }, [h]);
     r.useEffect(() => {
-        for (let e of h) u.Z.isFetching(e) || null != u.Z.get(e) || (0, o.$N)(t, e, O);
-    }, [t, h, O]);
-    let v = (0, i.cj)([c.Z], () => {
+        for (let e of h) u.Z.isFetching(e) || null != u.Z.get(e) || (0, a.$N)(t, e, i.v.VARIANTS_GROUP);
+    }, [t, h]);
+    let O = (0, o.cj)([c.Z], () => {
         let e = {};
         for (let n of h) {
             var t;
@@ -102,18 +101,18 @@ function g(e) {
             if (!p)
                 for (let e of h)
                     c.Z.isFetchingSKU(e) ||
-                        (0, o.x2)(t, e, f, { isGift: _ }).catch((t) => {
-                            t instanceof a.HF &&
-                                (t.code === s.SM.BILLING_BUNDLE_ALREADY_PURCHASED ||
-                                    t.code === s.SM.BILLING_BUNDLE_PARTIALLY_OWNED ||
-                                    t.code === s.SM.INVALID_BILLING_ADDRESS) &&
+                        (0, a.x2)(t, e, f, { isGift: _ }).catch((t) => {
+                            t instanceof s.HF &&
+                                (t.code === l.SM.BILLING_BUNDLE_ALREADY_PURCHASED ||
+                                    t.code === l.SM.BILLING_BUNDLE_PARTIALLY_OWNED ||
+                                    t.code === l.SM.INVALID_BILLING_ADDRESS) &&
                                 b(e, t);
                         });
         }, [t, h, f, _, b, p]),
         {
             hasFetchedSkus: g,
             skusById: y,
-            skuPricePreviewsById: v,
+            skuPricePreviewsById: O,
             previewErrorsById: E,
         }
     );

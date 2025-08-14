@@ -65,10 +65,7 @@ let D = (e) => {
             { currentTab: H, hasFilters: W } = (0, j.S)(),
             V = l.useMemo(() => (r === A.AW.HOME && H && W() ? H : r), [r, H, W]),
             { categories: U, refreshCategories: z } = (0, S.ZP)(
-                {
-                    location: "CollectiblesShop.web",
-                    logPerf: !0,
-                },
+                { logPerf: !0 },
                 {
                     sessionId: a,
                     tab: V,

@@ -19,7 +19,7 @@ let c = {
         [i.m.GLOW]: 2.5,
         [i.m.NEON]: 3,
         [i.m.TOON]: 3,
-        [i.m.POP]: 2.5,
+        [i.m.POP]: 3,
     };
 function d(e) {
     let t = (0, a.P)(e);

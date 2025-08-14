@@ -182,12 +182,7 @@ function R(e) {
         } = e,
         m = (0, o.e7)([E.default], () => E.default.getCurrentUser()),
         { analyticsLocations: g } = (0, l.ZP)(n, s.Z.EDIT_AVATAR_DECORATION_MODAL),
-        {
-            categories: y,
-            purchases: O,
-            isFetchingCategories: v,
-            isFetchingPurchases: I,
-        } = (0, f.ZP)({ location: "AvatarDecorationModal" }),
+        { categories: y, purchases: O, isFetchingCategories: v, isFetchingPurchases: I } = (0, f.ZP)(),
         S = v || (I && 0 === O.size),
         A = () => {
             u(), null == c || c();

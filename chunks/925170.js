@@ -13,52 +13,54 @@ var r = n(255367),
     g = n(86419),
     f = n(810473),
     j = n(747101),
-    O = n(985748),
-    m = n(566007),
-    y = n(173951),
-    h = n(455731),
-    w = n(247397),
-    x = n(388032),
-    v = n(663161);
-let A = {
+    O = n(247989),
+    m = n(985748),
+    y = n(566007),
+    h = n(173951),
+    w = n(455731),
+    x = n(228168),
+    v = n(247397),
+    A = n(388032),
+    P = n(663161);
+let E = {
     [a.l.FAVORITE_GAMES]: {
-        component: m.Z,
-        getAriaLabel: () => x.intl.string(x.t.xJtdIi),
+        component: y.Z,
+        getAriaLabel: () => A.intl.string(A.t.xJtdIi),
     },
     [a.l.CURRENT_GAMES]: {
-        component: O.Z,
-        getAriaLabel: () => x.intl.string(x.t.Ae8tRk),
+        component: m.Z,
+        getAriaLabel: () => A.intl.string(A.t.Ae8tRk),
     },
     [a.l.PLAYED_GAMES]: {
-        component: y.Z,
-        getAriaLabel: () => x.intl.string(x.t["pBR+4u"]),
+        component: h.Z,
+        getAriaLabel: () => A.intl.string(A.t["pBR+4u"]),
     },
     [a.l.WANT_TO_PLAY_GAMES]: {
-        component: h.Z,
-        getAriaLabel: () => x.intl.string(x.t.NtoBi4),
+        component: w.Z,
+        getAriaLabel: () => A.intl.string(A.t.NtoBi4),
     },
 };
-function P(e) {
+function _(e) {
     let { widgetType: t, user: n, widget: l, isGameFetching: a, onAddWidget: s, disabled: d } = e,
         p = i.useRef(null),
         b = (0, u.Dt)(),
         f = i.useCallback(() => {
-            (0, g.qH)(t), s();
+            (0, g.qH)(t), s(), (0, O.L$)(x.qb.WIDGET_ADDED);
         }, [t, s]);
     if (null == l) return null;
-    let { component: j, getAriaLabel: O } = A[t];
+    let { component: j, getAriaLabel: m } = E[t];
     return (0, r.jsx)("li", {
         children: (0, r.jsxs)("div", {
             ref: p,
             onClick: d ? void 0 : f,
-            className: o()(v.addButtonContainer, d && v.disabled),
+            className: o()(P.addButtonContainer, d && P.disabled),
             children: [
                 (0, r.jsx)("div", {
-                    className: v.addButton,
+                    className: P.addButton,
                     children: (0, r.jsx)(c.zxk, {
-                        text: x.intl.string(x.t.onajm5),
+                        text: A.intl.string(A.t.onajm5),
                         variant: "overlay-primary",
-                        "aria-label": O(),
+                        "aria-label": m(),
                         "aria-describedby": d ? b : void 0,
                         focusProps: { ringTarget: p },
                         onClick: (e) => {
@@ -69,7 +71,7 @@ function P(e) {
                 }),
                 d &&
                     (0, r.jsxs)("div", {
-                        className: v.widgetAdded,
+                        className: P.widgetAdded,
                         children: [
                             (0, r.jsx)(c.kmB, {
                                 size: "sm",
@@ -78,20 +80,20 @@ function P(e) {
                             (0, r.jsx)(c.Text, {
                                 variant: "text-sm/medium",
                                 "aria-hidden": !0,
-                                children: x.intl.string(x.t["UEZy/f"]),
+                                children: A.intl.string(A.t["UEZy/f"]),
                             }),
                             (0, r.jsx)(c.nn4, {
                                 id: b,
-                                children: x.intl.string(x.t.d8WVXF),
+                                children: A.intl.string(A.t.d8WVXF),
                             }),
                         ],
                     }),
-                (0, r.jsx)(c.nn4, { children: x.intl.string(x.t.e9eskJ) }),
+                (0, r.jsx)(c.nn4, { children: A.intl.string(A.t.e9eskJ) }),
                 (0, r.jsx)(j, {
                     widget: l,
                     user: n,
                     isGameFetching: a,
-                    containerClassName: d && v.disabledWidget,
+                    containerClassName: d && P.disabledWidget,
                     disableInteraction: !0,
                 }),
             ],
@@ -133,7 +135,7 @@ function k(e) {
                 t = [],
                 n = [];
             return (
-                w.r.forEach((r) => {
+                v.r.forEach((r) => {
                     e.has(r) ? t.push(r) : n.push(r);
                 }),
                 [...t, ...n]
@@ -169,7 +171,7 @@ function k(e) {
                   return e;
               })(
                   {
-                      title: x.intl.string(x.t.grUgR0),
+                      title: A.intl.string(A.t.grUgR0),
                       actions: [],
                       onClose: l,
                   },
@@ -178,11 +180,11 @@ function k(e) {
               (n = n =
                   {
                       children: (0, r.jsx)("ul", {
-                          "aria-label": x.intl.string(x.t["+EIBSE"]),
-                          className: v.options,
+                          "aria-label": A.intl.string(A.t["+EIBSE"]),
+                          className: P.options,
                           children: y.map((e) =>
                               (0, r.jsx)(
-                                  P,
+                                  _,
                                   {
                                       widgetType: e,
                                       user: a,

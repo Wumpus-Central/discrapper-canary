@@ -2,13 +2,13 @@ r.d(t, { Z: () => _ });
 var n = r(255367),
     l = r(73800),
     a = r(979554),
-    i = r(481060),
-    o = r(906732),
-    s = r(333867),
-    c = r(626135),
-    u = r(381585),
-    d = r(884697),
-    p = r(228624),
+    i = r(311570),
+    o = r(481060),
+    s = r(906732),
+    c = r(333867),
+    u = r(626135),
+    d = r(381585),
+    p = r(884697),
     g = r(410127),
     f = r(67409),
     b = r(981631),
@@ -16,20 +16,19 @@ var n = r(255367),
     m = r(388032);
 let _ = (e) => {
     let { product: t, primary: r, selectedVariantIndex: _, returnRef: v, onSuccess: O, tooltipDelay: C } = e,
-        { analyticsLocations: E } = (0, o.ZP)(),
+        { analyticsLocations: E } = (0, s.ZP)(),
         S = l.useRef(null),
-        y = (0, p.hv)("CollectiblesShopGiftButton"),
-        x = (0, u.sp)(),
-        j = (0, g.Z)();
-    return (0, d.x6)(t)
+        y = (0, d.sp)(),
+        x = (0, g.Z)();
+    return (0, p.x6)(t)
         ? null
-        : (0, n.jsx)(i.ua7, {
+        : (0, n.jsx)(o.ua7, {
               text: m.intl.string(m.t["JCFN//"]),
               delay: C,
               children: (e) => {
-                  var l, o;
+                  var l, s;
                   return (0, n.jsx)(
-                      i.hU,
+                      o.hU,
                       ((l = (function (e) {
                           for (var t = 1; t < arguments.length; t++) {
                               var r = null != arguments[t] ? arguments[t] : {},
@@ -55,26 +54,26 @@ let _ = (e) => {
                           }
                           return e;
                       })({}, e)),
-                      (o = o =
+                      (s = s =
                           {
                               "aria-label": m.intl.string(m.t["JCFN//"]),
                               buttonRef: S,
                               variant: r ? "primary" : "secondary",
-                              icon: i.OgN,
+                              icon: o.OgN,
                               size: "md",
                               onClick: (e) => {
                                   e.stopPropagation(),
-                                      c.default.track(b.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
-                                          collectibles_shop_session_id: null == x ? void 0 : x.sessionId,
+                                      u.default.track(b.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                                          collectibles_shop_session_id: null == y ? void 0 : y.sessionId,
                                           sku_id: t.skuId,
-                                          page_section: null == x ? void 0 : x.pageSection,
-                                          page_category: null == x ? void 0 : x.pageCategory,
+                                          page_section: null == y ? void 0 : y.pageSection,
+                                          page_category: null == y ? void 0 : y.pageCategory,
                                           tile_type: a.Z[t.type],
-                                          tile_position: String(null == x ? void 0 : x.tilePosition),
+                                          tile_position: String(null == y ? void 0 : y.tilePosition),
                                           cta_name: "gift button",
-                                          page_type: j || "home",
+                                          page_type: x || "home",
                                       }),
-                                      (0, s.Z)({
+                                      (0, c.Z)({
                                           skuId: (0, f.S)({
                                               product: t,
                                               selectedVariantIndex: _,
@@ -83,7 +82,7 @@ let _ = (e) => {
                                           giftingOrigin: h.Wt.SHOP_PAGE,
                                           analyticsLocations: E,
                                           returnRef: v,
-                                          variantsReturnStyle: y,
+                                          variantsReturnStyle: i.v.VARIANTS_GROUP,
                                           onClose:
                                               null != O
                                                   ? (e) => {
@@ -94,7 +93,7 @@ let _ = (e) => {
                               },
                           }),
                       Object.getOwnPropertyDescriptors
-                          ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(o))
+                          ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(s))
                           : (function (e, t) {
                                 var r = Object.keys(e);
                                 if (Object.getOwnPropertySymbols) {
@@ -102,8 +101,8 @@ let _ = (e) => {
                                     r.push.apply(r, n);
                                 }
                                 return r;
-                            })(Object(o)).forEach(function (e) {
-                                Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(o, e));
+                            })(Object(s)).forEach(function (e) {
+                                Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(s, e));
                             }),
                       l),
                   );

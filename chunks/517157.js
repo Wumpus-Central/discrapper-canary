@@ -9,11 +9,11 @@ function a(e) {
             return null != e && t === e;
         }, [e]),
         n = (0, r.e7)([o.Z], () => o.Z.getPendingWidgets()),
-        a = (0, r.e7)([i.Z], () => {
+        a = (0, r.Wu)([i.Z], () => {
             var t;
             if (null == e) return [];
             let n = i.Z.getUserProfile(e);
             return null != (t = null == n ? void 0 : n.widgets) ? t : [];
-        });
+        }, [e]);
     return t && null !== n ? n : a;
 }

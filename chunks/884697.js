@@ -272,21 +272,16 @@ let E = (e) => (null == e ? void 0 : e.premiumType) != null,
         }
         return e;
     },
-    J = (e) => {
-        let {
-                categories: t,
-                purchases: n,
-                isFetchingCategories: r,
-                isFetchingPurchases: o,
-            } = (0, l.ZP)({ location: e }),
-            a = w(t, i.Z.NAMEPLATE),
-            s = P(n, i.Z.NAMEPLATE),
-            c = new Set(s.map((e) => e.id));
+    J = () => {
+        let { categories: e, purchases: t, isFetchingCategories: n, isFetchingPurchases: r } = (0, l.ZP)(),
+            o = w(e, i.Z.NAMEPLATE),
+            a = P(t, i.Z.NAMEPLATE),
+            s = new Set(a.map((e) => e.id));
         return {
-            available: a.filter((e) => !c.has(e.id)),
-            purchased: s,
-            isFetchingCategories: r,
-            isFetchingPurchases: o,
+            available: o.filter((e) => !s.has(e.id)),
+            purchased: a,
+            isFetchingCategories: n,
+            isFetchingPurchases: r,
         };
     },
     $ = (e) => {

@@ -11,8 +11,8 @@ var r = n(255367),
     f = n(484459),
     _ = n(594174),
     p = n(583434),
-    h = n(905357),
-    m = n(473608),
+    h = n(473608),
+    m = n(29121),
     g = n(388032),
     E = n(205436);
 function b(e, t, n) {
@@ -72,7 +72,7 @@ let I = (e) => {
         { product: T } = (0, p.T)(t),
         { giftRecipient: S, giftRecipientError: A } = (0, u.wD)(),
         N = (0, l.e7)([_.default], () => _.default.getCurrentUser()),
-        C = (0, h.k)(T),
+        C = (0, m.kd)(T),
         R = i.useRef(null);
     if (null == T) return null;
     let [P] = T.items,
@@ -153,7 +153,7 @@ let I = (e) => {
                     (0, r.jsxs)("div", {
                         className: E.giftInfoContainer,
                         children: [
-                            (0, r.jsx)(m.O, {
+                            (0, r.jsx)(h.O, {
                                 product: T,
                                 fallbackLabel: null,
                             }),

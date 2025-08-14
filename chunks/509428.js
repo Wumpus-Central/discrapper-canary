@@ -5,20 +5,20 @@ var s = i(255367),
     r = i(399606),
     a = i(667202),
     c = i(481060),
-    u = i(100527),
-    d = i(906732),
+    d = i(100527),
+    u = i(906732),
     l = i(975298),
     p = i(350327),
     f = i(55935),
     C = i(1870),
     L = i(429368),
     v = i(635552),
-    E = i(905357),
-    h = i(530618),
-    m = i(372654),
-    I = i(197831),
-    _ = i(755419),
-    j = i(58201),
+    E = i(530618),
+    h = i(372654),
+    m = i(197831),
+    I = i(755419),
+    _ = i(58201),
+    j = i(29121),
     x = i(391594),
     P = i(215023),
     k = i(629755);
@@ -44,10 +44,10 @@ let O = () => {
             } = t,
             Z = (0, r.e7)([C.Z], () => C.Z.purchases),
             g = (0, L.o)(i, Z),
-            B = (0, j.W)(i, g),
-            { analyticsLocations: R } = (0, d.ZP)([...f, u.Z.COLLECTIBLES_COLLECTED_MODAL]);
+            B = (0, _.W)(i, g),
+            { analyticsLocations: R } = (0, u.ZP)([...f, d.Z.COLLECTIBLES_COLLECTED_MODAL]);
         n.useEffect(() => {
-            P.Vt.ORB_PROFILE_BADGE === B.skuId && (0, p.Ls)([(0, _.X)()], 600);
+            P.Vt.ORB_PROFILE_BADGE === B.skuId && (0, p.Ls)([(0, I.X)()], 600);
         }, [B.skuId]);
         let { isLoading: T, isFractionalPremiumActive: b, expiresAt: w } = O(),
             {
@@ -58,7 +58,7 @@ let O = () => {
                 customConfettiDisplayOptions: V,
             } = (0, x.$0)(B, A);
         (0, x.f1)(B, R);
-        let W = (0, E.k)(B),
+        let W = (0, j.kd)(B),
             { handleUseNow: X, isApplying: K } = (0, v.W)({
                 product: B,
                 onSuccess: l,
@@ -91,7 +91,7 @@ let O = () => {
                 isApplying: K,
                 itemConsumed: S,
             });
-        return (0, s.jsx)(d.Gt, {
+        return (0, s.jsx)(u.Gt, {
             value: R,
             children: (0, s.jsxs)("div", {
                 ref: G,
@@ -117,11 +117,11 @@ let O = () => {
                         actions: z,
                     }),
                     null != V
-                        ? (0, s.jsx)(I.i, { options: V })
-                        : (0, s.jsx)(h.Z, {
+                        ? (0, s.jsx)(m.i, { options: V })
+                        : (0, s.jsx)(E.Z, {
                               confettiTarget: G.current,
                               confettiCanvas: $,
-                              sprites: (0, m.vK)(B.categorySkuId),
+                              sprites: (0, h.vK)(B.categorySkuId),
                           }),
                 ],
             }),

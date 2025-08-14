@@ -1,25 +1,25 @@
 n.d(t, { default: () => C });
 var r = n(255367),
     c = n(73800),
-    o = n(442837),
+    o = n(311570),
+    a = n(442837),
     i = n(481060),
-    a = n(809206),
-    s = n(410030),
-    l = n(906732),
-    d = n(1585),
-    f = n(335131),
-    u = n(1870),
-    p = n(228624),
+    s = n(809206),
+    l = n(410030),
+    d = n(906732),
+    f = n(1585),
+    u = n(335131),
+    p = n(1870),
     b = n(164946),
     g = n(25990),
     y = n(594174),
     O = n(668826),
     j = n(120421),
-    m = n(477839),
-    h = n(603571),
+    h = n(477839),
+    m = n(603571),
     x = n(388032),
-    P = n(453438),
-    v = n(688401),
+    v = n(453438),
+    P = n(688401),
     k = n(609051),
     w = n(171346);
 function C(e) {
@@ -47,21 +47,16 @@ function C(e) {
             }
             return c;
         })(e, ["analyticsLocations"]);
-    let z = (0, o.e7)([y.default], () => y.default.getCurrentUser()),
-        E = (0, s.ZP)(),
-        { analyticsLocations: D } = (0, l.ZP)(C),
-        S = (0, o.e7)([j.Z], () => j.Z.isRedeemingPrize),
-        M = (0, o.e7)([u.Z], () => u.Z.isFetching),
-        _ = (0, p.hv)("ClickerGameRedeemPrizeModal");
+    let S = (0, a.e7)([y.default], () => y.default.getCurrentUser()),
+        E = (0, l.ZP)(),
+        { analyticsLocations: z } = (0, d.ZP)(C),
+        D = (0, a.e7)([j.Z], () => j.Z.isRedeemingPrize),
+        _ = (0, a.e7)([p.Z], () => p.Z.isFetching);
     return (
         (0, c.useEffect)(() => {
-            null != z &&
+            null != S &&
                 (async () => {
-                    await (0, O.YM)(z),
-                        (0, f.qg)({
-                            variantsReturnStyle: _,
-                            location: "ClickerGameRedeemPrizeModal",
-                        });
+                    await (0, O.YM)(S), (0, u.qg)({ variantsReturnStyle: o.v.VARIANTS_GROUP });
                 })();
         }, []),
         (0, r.jsxs)(
@@ -96,26 +91,26 @@ function C(e) {
                     parentComponent: "ClickerGameRedeemPrizeModal",
                     children: [
                         (0, r.jsx)("img", {
-                            className: P.decorationBackground,
-                            src: "light" === E ? k : v,
+                            className: v.decorationBackground,
+                            src: "light" === E ? k : P,
                             alt: "",
                         }),
                         (0, r.jsxs)(i.hzk, {
-                            className: P.content,
+                            className: v.content,
                             children: [
                                 (0, r.jsx)("img", {
-                                    className: P.decoration,
+                                    className: v.decoration,
                                     src: w.Z,
                                     alt: "",
                                 }),
                                 (0, r.jsx)(i.X6q, {
-                                    className: P.header,
+                                    className: v.header,
                                     variant: "heading-md/bold",
-                                    children: x.intl.string(h.default.B0jZ3t),
+                                    children: x.intl.string(m.default.B0jZ3t),
                                 }),
                                 (0, r.jsx)(i.Text, {
                                     variant: "text-md/normal",
-                                    children: x.intl.string(h.default.aexiND),
+                                    children: x.intl.string(m.default.aexiND),
                                 }),
                             ],
                         }),
@@ -128,17 +123,17 @@ function C(e) {
                                         text: x.intl.string(x.t.BVcYCw),
                                         onClick: () => {
                                             Z.onClose(),
-                                                (0, d.ps)({
-                                                    initialSelectedDecorationId: m.MH,
-                                                    analyticsLocations: D,
+                                                (0, f.ps)({
+                                                    initialSelectedDecorationId: h.MH,
+                                                    analyticsLocations: z,
                                                     onClose: () => {
                                                         let e = g.Z.getAllPending(),
                                                             t = (0, b.ED)(e);
-                                                        (0, a.Mn)(t), (0, a.si)();
+                                                        (0, s.Mn)(t), (0, s.si)();
                                                     },
                                                 });
                                         },
-                                        loading: S || M,
+                                        loading: D || _,
                                     }),
                                     (0, r.jsx)(i.zxk, {
                                         variant: "secondary",

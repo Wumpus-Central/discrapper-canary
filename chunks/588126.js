@@ -6,7 +6,7 @@ var i = n(73800),
 let l = function (e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
         [n, l] = i.useState(),
-        { categories: o, purchases: c } = (0, a.ZP)({ location: "useTryItOutAvatarDecoration" });
+        { categories: o, purchases: c } = (0, a.ZP)();
     return (
         i.useEffect(() => {
             (null == n || 0 === n.size) && l(o);

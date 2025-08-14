@@ -19,13 +19,13 @@ var n = r(255367),
     O = r(597688),
     C = r(884697),
     E = r(870289),
-    S = r(26931),
-    y = r(370039),
-    x = r(937510),
-    j = r(823941),
-    T = r(38900),
-    P = r(709999),
-    L = r(794324),
+    S = r(370039),
+    y = r(937510),
+    x = r(823941),
+    j = r(38900),
+    T = r(709999),
+    P = r(794324),
+    L = r(934760),
     k = r(619899),
     I = r(859788),
     N = r(215023),
@@ -52,7 +52,7 @@ let R = {
                   rankedSkuIds: null != (t = e.heroRanking) ? t : [],
                   name: e.name,
                   unpublishedAt: e.unpublishedAt,
-                  logoUrl: (0, C.uV)(null != (n = null != (r = e.heroLogo) ? r : e.logo) ? n : "", { size: j.n }),
+                  logoUrl: (0, C.uV)(null != (n = null != (r = e.heroLogo) ? r : e.logo) ? n : "", { size: x.n }),
                   categorySkuId: e.skuId,
                   bannerAsset: e.heroBannerAsset,
                   fallbackBannerUrl: (0, C.uV)(null != (l = e.heroBanner) ? l : "", {
@@ -92,7 +92,7 @@ let R = {
     },
     M = (e) => {
         var t;
-        let { isLoading: r, handleTransition: a, category: c, heroBlock: C, tab: j, onVisibilityChange: M } = e,
+        let { isLoading: r, handleTransition: a, category: c, heroBlock: C, tab: x, onVisibilityChange: M } = e,
             F = (0, p.O)(
                 (e) => {
                     null == M || M(e);
@@ -101,7 +101,7 @@ let R = {
                 null != M,
             ),
             H = (0, u.e7)([m.default], () => m.default.getCurrentUser()),
-            W = (0, S.u)(),
+            W = (0, L.Z)(),
             V = (0, v.sp)(),
             { showBetaTag: U } = h.Z.useExperiment({ location: "collectible_hero_block" }),
             z = l.useMemo(() => (null != C ? C : Z(c)), [C, c]),
@@ -112,16 +112,16 @@ let R = {
                 heroLogo: Y,
                 heroBannerStatic: X,
                 heroBannerAnimated: J,
-            } = (0, L.hr)(z),
+            } = (0, P.hr)(z),
             Q = null == G ? void 0 : G.heroBanner,
             $ = null != (t = null == q ? void 0 : q.responsive) && t,
             ee = null == q ? void 0 : q.backgroundStyle,
             et = l.useMemo(() => W(z.rankedSkuIds), [r, W, z.rankedSkuIds]),
-            er = (0, y.a)()(et),
-            en = (0, x.l)(er).slice(0, 4),
+            er = (0, S.a)()(et),
+            en = (0, y.l)(er).slice(0, 4),
             el = (0, k.St)(en),
             ea =
-                j === N.AW.ORBS
+                x === N.AW.ORBS
                     ? w.intl.string(w.t["1CdL8f"])
                     : w.intl.formatToPlainString(w.t.wvKYCg, { category_name: z.name }),
             ei = (0, E.FF)("CollectiblesContent");
@@ -181,7 +181,7 @@ let R = {
                                                                     color: "header-primary",
                                                                     children: [
                                                                         z.title,
-                                                                        j === N.AW.ORBS && U && (0, n.jsx)(g.Z, {}),
+                                                                        x === N.AW.ORBS && U && (0, n.jsx)(g.Z, {}),
                                                                     ],
                                                                 }),
                                                             "" !== z.summary &&
@@ -216,7 +216,7 @@ let R = {
                                               children: (0, n.jsx)(d.zxk, {
                                                   variant: "overlay-primary",
                                                   onClick: () => {
-                                                      j === N.AW.ORBS
+                                                      x === N.AW.ORBS
                                                           ? ((0, b.Y)({
                                                                 pageType: A.ZY5.SHOP_ORBS_TAB,
                                                                 sectionType: A.jXE.ORBS_SHOP_HERO_BLOCK,
@@ -235,7 +235,7 @@ let R = {
                                                                 collectibles_shop_session_id:
                                                                     null == V ? void 0 : V.sessionId,
                                                                 sku_id: z.categorySkuId,
-                                                                page_type: j,
+                                                                page_type: x,
                                                                 page_section: null == V ? void 0 : V.pageSection,
                                                                 page_category: null == V ? void 0 : V.pageCategory,
                                                                 cta_name: "shop latest category hero button",
@@ -247,11 +247,11 @@ let R = {
                                   ],
                               }),
                               (0, n.jsx)("div", {
-                                  className: i()(B.row, B.feed, { [B.feedSingleRow]: j !== N.AW.ORBS }),
+                                  className: i()(B.row, B.feed, { [B.feedSingleRow]: x !== N.AW.ORBS }),
                                   children: r
                                       ? (0, n.jsx)(n.Fragment, {
                                             children: [void 0, void 0, void 0, void 0].map((e, t) =>
-                                                (0, n.jsx)(T.K, {}, t),
+                                                (0, n.jsx)(j.K, {}, t),
                                             ),
                                         })
                                       : (0, n.jsx)(n.Fragment, {
@@ -268,12 +268,12 @@ let R = {
                                                                   categoryPosition: 0,
                                                               },
                                                               children: (0, n.jsx)(
-                                                                  P.Z,
+                                                                  T.Z,
                                                                   {
                                                                       product: e,
                                                                       category: r,
                                                                       user: H,
-                                                                      tab: j,
+                                                                      tab: x,
                                                                       _isInHeroBlock: !0,
                                                                   },
                                                                   e.skuId,

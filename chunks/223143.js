@@ -1,14 +1,14 @@
 n.d(t, {
-    ZP: () => p,
-    c7: () => _,
-    mw: () => h,
+    ZP: () => h,
+    c7: () => p,
+    mw: () => m,
 }),
     n(388685);
 var r = n(73800),
-    i = n(399606),
-    o = n(335131),
-    a = n(1870),
-    s = n(228624),
+    i = n(311570),
+    o = n(399606),
+    a = n(335131),
+    s = n(1870),
     l = n(267097);
 function c(e, t, n) {
     return (
@@ -62,45 +62,40 @@ function f(e, t) {
         e
     );
 }
-function _() {
+let _ = i.v.VARIANTS_GROUP;
+function p() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
-        t = arguments.length > 1 ? arguments[1] : void 0,
-        n = (0, s.hv)("useFetchPurchases"),
-        [l, c, u, d, f, _] = (0, i.Wu)([a.Z], () => [
-            a.Z.isFetching,
-            a.Z.isClaiming,
-            a.Z.fetchError,
-            a.Z.claimError,
-            a.Z.purchases,
-            a.Z.hasPreviouslyFetched,
+        [t, n, i, l, c, u] = (0, o.Wu)([s.Z], () => [
+            s.Z.isFetching,
+            s.Z.isClaiming,
+            s.Z.fetchError,
+            s.Z.claimError,
+            s.Z.purchases,
+            s.Z.hasPreviouslyFetched,
         ]),
-        p = (0, r.useRef)(a.Z.hasPreviouslyFetched);
+        d = (0, r.useRef)(s.Z.hasPreviouslyFetched);
     (0, r.useEffect)(() => {
-        p.current = _;
-    }, [_]);
-    let h = (0, r.useRef)(a.Z.fetchError);
+        d.current = u;
+    }, [u]);
+    let f = (0, r.useRef)(s.Z.fetchError);
     return (
         (0, r.useEffect)(() => {
-            h.current = u;
-        }, [u]),
+            f.current = i;
+        }, [i]),
         (0, r.useEffect)(() => {
-            (!0 === e && p.current && null == h.current) ||
-                (0, o.qg)({
-                    variantsReturnStyle: n,
-                    location: t,
-                });
-        }, [t, e, n]),
+            (!0 === e && d.current && null == f.current) || (0, a.qg)({ variantsReturnStyle: _ });
+        }, [e]),
         {
-            isClaiming: c,
-            fetchPurchasesError: u,
-            claimError: d,
-            isFetching: l,
-            purchases: f,
-            hasPreviouslyFetched: _,
+            isClaiming: n,
+            fetchPurchasesError: i,
+            claimError: l,
+            isFetching: t,
+            purchases: c,
+            hasPreviouslyFetched: u,
         }
     );
 }
-function p(e, t) {
+function h(e, t) {
     let n = null == e ? void 0 : e.paymentGateway,
         {
             isFetching: r,
@@ -122,8 +117,8 @@ function p(e, t) {
             claimError: u,
             isFetching: d,
             purchases: f,
-            hasPreviouslyFetched: p,
-        } = _(null == e ? void 0 : e.stalePurchasesOK, null == e ? void 0 : e.location);
+            hasPreviouslyFetched: _,
+        } = p(null == e ? void 0 : e.stalePurchasesOK);
     return {
         isFetching: r || d,
         isFetchingCategories: r,
@@ -135,7 +130,7 @@ function p(e, t) {
         fetchPurchasesError: c,
         claimError: u,
         refreshCategories: a,
-        hasPreviouslyFetched: p,
+        hasPreviouslyFetched: _,
     };
 }
-let h = (e) => p(f(u({}, null != e ? e : {}), { stalePurchasesOK: !0 }));
+let m = (e) => h(f(u({}, null != e ? e : {}), { stalePurchasesOK: !0 }));

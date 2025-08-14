@@ -1,10 +1,10 @@
-n.d(t, { e: () => h }), n(388685);
+n.d(t, { e: () => m }), n(388685);
 var r = n(73800),
-    i = n(442837),
-    o = n(353926),
-    a = n(335131),
-    s = n(597688),
-    l = n(228624);
+    i = n(311570),
+    o = n(442837),
+    a = n(353926),
+    s = n(335131),
+    l = n(597688);
 function c(e, t, n) {
     return (
         t in e
@@ -58,48 +58,49 @@ function f(e, t) {
     );
 }
 let _ = 600000,
-    p = 600000;
-function h(e, t, n) {
-    let c = (0, i.e7)([o.Z], () => o.Z.hasLoadedExperiments),
-        d = null == e ? void 0 : e.includeBundles,
-        h = (0, l.hv)("useMaybeFetchCollectiblesCategoriesShared"),
-        [m, g, E, b, y, O, v] = (0, i.Wu)([s.Z], () => {
+    p = 600000,
+    h = i.v.VARIANTS_GROUP;
+function m(e, t, n) {
+    let i = (0, o.e7)([a.Z], () => a.Z.hasLoadedExperiments),
+        c = null == e ? void 0 : e.includeBundles,
+        [d, m, g, E, b, y, O] = (0, o.Wu)([l.Z], () => {
             var e, t;
             return [
-                s.Z.isFetchingCategories,
-                s.Z.lastFetchOptions,
-                s.Z.error,
-                null != (e = s.Z.lastErrorTimestamp) ? e : 0,
-                null != (t = s.Z.lastSuccessfulFetch) ? t : 0,
-                s.Z.categories,
-                s.Z.skipNumCategories,
+                l.Z.isFetchingCategories,
+                l.Z.lastFetchOptions,
+                l.Z.error,
+                null != (e = l.Z.lastErrorTimestamp) ? e : 0,
+                null != (t = l.Z.lastSuccessfulFetch) ? t : 0,
+                l.Z.categories,
+                l.Z.skipNumCategories,
             ];
         });
     return (
         (0, r.useEffect)(() => {
-            if (!c || m) return;
-            let r = Date.now() - b < p;
-            if (E && r) return;
-            let i = f(u({}, e), {
-                    includeBundles: d,
+            if (!i || d) return;
+            let r = Date.now() - E < p;
+            if (g && r) return;
+            let o = f(u({}, e), {
                     variantsReturnStyle: h,
-                    skipNumCategories: v,
+                    includeBundles: c,
+                    skipNumCategories: O,
                 }),
-                o = !(0, a.oc)(g, i),
-                s = Date.now() - y < _;
-            (o || !s) && (0, a.F$)(i, t, n);
-        }, [c, m, g, y, e, E, d, b, h, t, n, v]),
+                a = !(0, s.oc)(m, o),
+                l = Date.now() - b < _;
+            (a || !l) && (0, s.F$)(o, t, n);
+        }, [i, d, m, b, e, g, c, E, t, n, O]),
         {
-            isFetching: m,
-            categories: O,
-            fetchCategoriesError: E,
+            isFetching: d,
+            categories: y,
+            fetchCategoriesError: g,
             refreshCategories: (0, r.useCallback)(() => {
                 let t = f(u({}, e), {
-                    includeBundles: d,
-                    skipNumCategories: v,
+                    variantsReturnStyle: h,
+                    includeBundles: c,
+                    skipNumCategories: O,
                 });
-                (0, a.F$)(t, void 0, n);
-            }, [e, d, n, v]),
+                (0, s.F$)(t, void 0, n);
+            }, [e, c, n, O]),
         }
     );
 }
