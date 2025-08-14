@@ -1,8 +1,8 @@
-n.d(t, { Z: () => C }), n(388685);
+n.d(t, { Z: () => C });
 var r = n(255367),
     i = n(73800),
     o = n(442837),
-    a = n(755721),
+    a = n(159691),
     s = n(904245),
     l = n(541716),
     c = n(419922),
@@ -101,8 +101,7 @@ function A(e) {
 }
 function N(e) {
     let { currentUser: t, channel: n, message: o, buttonLabels: s, stickers: u, event: d, eventProperties: f } = e,
-        [_, p] = i.useState(!1),
-        h = i.useMemo(
+        _ = i.useMemo(
             () =>
                 T({
                     assets: u,
@@ -111,7 +110,7 @@ function N(e) {
                 }),
             [u, t, o],
         ),
-        g = i.useMemo(
+        p = i.useMemo(
             () =>
                 T({
                     assets: s,
@@ -120,7 +119,7 @@ function N(e) {
                 }),
             [s, t, o],
         ),
-        b = i.useCallback(async () => {
+        h = i.useCallback(async () => {
             let { valid: e } = await (0, m.v)({
                 type: l.Ie.FORM,
                 content: "",
@@ -130,31 +129,23 @@ function N(e) {
                 (S({
                     channel: n,
                     message: o,
-                    sticker: h,
+                    sticker: _,
                 }),
                 A({
-                    sticker: h,
+                    sticker: _,
                     event: d,
                     eventProperties: f,
                 }));
-        }, [n, o, h, d, f]);
-    return (0, r.jsxs)(a.zx, {
-        "data-migration-pending": !0,
-        className: E.CTAMessageButtonOuter,
-        innerClassName: E.CTAMessageButton,
-        color: a.Tt.PRIMARY,
-        onMouseEnter: () => p(!0),
-        onMouseLeave: () => p(!1),
-        onClick: b,
-        children: [
-            (0, r.jsx)(c.Z, {
-                className: E.CTAMessageSticker,
-                isInteracting: _,
-                sticker: h,
-                size: 28,
-            }),
-            g,
-        ],
+        }, [n, o, _, d, f]);
+    return (0, r.jsx)(a.zx, {
+        icon: {
+            type: "sticker",
+            asset: _,
+            component: c.Z,
+        },
+        text: p,
+        onClick: h,
+        variant: "secondary",
     });
 }
 function C(e) {

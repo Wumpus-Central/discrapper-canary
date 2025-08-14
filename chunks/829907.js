@@ -30,7 +30,7 @@ function p(e) {
 }
 function h(e) {
     let [t] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [o.ZP],
-        n = t.getGameForPID(e);
+        n = t.getGameOrTransformedSubgameForPID(e);
     try {
         return null == n
             ? s.ZP.GetWindowFullscreenTypeByPid(e)
@@ -93,7 +93,7 @@ async function T(e) {
     var t;
     let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : v,
         r = await m(e, n),
-        i = o.ZP.getGameForPID(e);
+        i = o.ZP.getGameOrTransformedSubgameForPID(e);
     if (null == i || null == i.name) return r;
     let s = null == (t = a.Z.getGameByName(i.name)) ? void 0 : t.id;
     if (null == s) return r;
@@ -106,7 +106,7 @@ function S(e) {
     return null != n && O.has(n);
 }
 function A(e) {
-    let t = o.ZP.getGameForPID(e);
+    let t = o.ZP.getGameOrTransformedSubgameForPID(e);
     return null != t && null != t.name && S(t);
 }
 let N = new Set([r.Jx.UNKNOWN, r.Jx.FULLSCREEN]);

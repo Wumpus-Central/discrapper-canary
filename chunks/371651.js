@@ -163,7 +163,7 @@ async function ee(e) {
     var t, n, r, i;
     let o = W(e);
     if (null != o) return o;
-    let a = d.ZP.getGameForPID(e);
+    let a = d.ZP.getGameOrTransformedSubgameForPID(e);
     if (null == a) return R.error("Tried to track game ".concat(e, " but it was not found in RunningGameStore")), null;
     let s = (0, d.b6)(a),
         { enabledOOP: l, enabledLegacy: c } = s,
@@ -221,7 +221,7 @@ function et(e, t) {
             enabledLegacy: !1,
             overlayMethod: g.gl.Disabled,
         };
-    let i = d.ZP.getGameForPID(e.pid);
+    let i = d.ZP.getGameOrTransformedSubgameForPID(e.pid);
     if (null == i)
         return {
             source: g.d0.DEFAULT,
@@ -334,8 +334,10 @@ async function er(e) {
 }
 async function ei(e) {
     var t;
-    let n = d.ZP.getGameForPID(e),
-        r = null != (t = null == n ? void 0 : n.fullscreenType) ? t : l.Jx.UNKNOWN;
+    let n = d.ZP.getGameOrTransformedSubgameForPID(e);
+    if (null == n)
+        return R.error("Tried to determine first fullscreen type for untracked pid ".concat(e)), l.Jx.UNKNOWN;
+    let r = null != (t = null == n ? void 0 : n.fullscreenType) ? t : l.Jx.UNKNOWN;
     if (U.has(r)) {
         let t = await (0, y.hj)(e, (0, y.O0)("first_fullscreen"));
         R.verbose("Resolved fullscreen type for pid ".concat(e, ": ").concat(t)), null != t && (r = t);

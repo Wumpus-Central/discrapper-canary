@@ -369,7 +369,7 @@ class G {
             null ==
             (t = d.ZP.getRunningGames().find((t) => {
                 var n;
-                return (null == (n = t.name) ? void 0 : n.toLowerCase()) === e.toLowerCase();
+                return (null == (n = (0, d.ow)(t).name) ? void 0 : n.toLowerCase()) === e.toLowerCase();
             }))
                 ? void 0
                 : t.pid;

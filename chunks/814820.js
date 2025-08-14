@@ -1,8 +1,8 @@
-n.d(t, { f: () => y }), n(388685);
+n.d(t, { f: () => y });
 var r = n(255367),
     i = n(73800),
     o = n(442837),
-    a = n(755721),
+    a = n(159691),
     s = n(541716),
     l = n(419922),
     c = n(665906),
@@ -17,37 +17,28 @@ var r = n(255367),
     E = n(628800);
 let b = (e) => {
         let { channel: t, message: n } = e,
-            [o, c] = i.useState(!1),
-            u = (0, h.y6)(n.id),
-            d = i.useCallback(() => {
+            o = (0, h.y6)(n.id),
+            c = i.useCallback(() => {
                 (0, p.v)({
                     type: s.Ie.FORM,
                     content: "",
                     channel: t,
                 }).then((e) => {
                     let { valid: r } = e;
-                    r && (0, h.TZ)(t, n, u.id);
+                    r && (0, h.TZ)(t, n, o.id);
                 });
-            }, [t, n, u]);
+            }, [t, n, o]);
         return (0, r.jsx)("div", {
             className: E.welcomeCTA,
-            children: (0, r.jsxs)(a.zx, {
-                "data-migration-pending": !0,
-                className: E.welcomeCTAButtonOuter,
-                innerClassName: E.welcomeCTAButton,
-                color: a.Tt.PRIMARY,
-                onMouseEnter: () => c(!0),
-                onMouseLeave: () => c(!1),
-                onClick: d,
-                children: [
-                    (0, r.jsx)(l.Z, {
-                        className: E.welcomeCTASticker,
-                        isInteracting: o,
-                        sticker: u,
-                        size: 28,
-                    }),
-                    g.intl.string(g.t["7Tj6HR"]),
-                ],
+            children: (0, r.jsx)(a.zx, {
+                icon: {
+                    type: "sticker",
+                    asset: o,
+                    component: l.Z,
+                },
+                text: g.intl.string(g.t["7Tj6HR"]),
+                onClick: c,
+                variant: "secondary",
             }),
         });
     },

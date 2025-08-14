@@ -1,15 +1,16 @@
 n.d(t, {
-    I8: () => E,
-    Jc: () => O,
-    LK: () => y,
-    ON: () => g,
-    bP: () => I,
-    le: () => v,
-    sD: () => b,
-    x3: () => h,
-    xr: () => T,
-    yA: () => m,
-    yb: () => S,
+    I8: () => y,
+    Jc: () => I,
+    LK: () => v,
+    ON: () => b,
+    bP: () => S,
+    le: () => T,
+    oK: () => C,
+    sD: () => O,
+    x3: () => g,
+    xr: () => A,
+    yA: () => E,
+    yb: () => N,
 }),
     n(49124),
     n(415506);
@@ -52,7 +53,30 @@ function p(e) {
     }
     return e;
 }
-function h(e) {
+function h(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function m(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : h(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function g(e) {
     if (e.distributor === d.GQo.ROBLOX && null != e.sku) {
         var t, n;
         return ""
@@ -61,17 +85,17 @@ function h(e) {
     }
     return null;
 }
-function m(e, t) {
+function E(e, t) {
     return (null == e && null != t) || (null != e && null == t) || (null != e && null != t && !i().isEqual(e, t));
 }
-function g(e, t) {
+function b(e, t) {
     var n, r, i;
     let o = p({}, e),
         s = t.subgameInfo,
         l = t.application,
         u = Number(null == (n = e.gameMetadata) ? void 0 : n[c.wF.ROBLOX_TIME_STARTED]);
     if (((isNaN(u) || 0 === u) && (u = null != (r = e.start) ? r : Date.now()), null == s))
-        v(e) && ((o.id = c.eB), (o.name = d.EOG[d.GQo.ROBLOX])),
+        T(e) && ((o.id = c.eB), (o.name = d.EOG[d.GQo.ROBLOX])),
             (o.gameMetadata = void 0),
             (o.sku = void 0),
             (o.start = u),
@@ -106,7 +130,7 @@ function g(e, t) {
     }
     return o;
 }
-function E(e) {
+function y(e) {
     return null == e[c.SQ.UNIVERSE_ID] || null == e[c.SQ.PLACE_ID] || null == e[c.SQ.JOB_ID] || null == e[c.SQ.USER_ID]
         ? null
         : {
@@ -116,12 +140,12 @@ function E(e) {
               robloxUserId: e[c.SQ.USER_ID],
           };
 }
-function b(e) {
+function O(e) {
     return e.distributor === d.GQo.ROBLOX && null != e.gameMetadata && null != e.gameMetadata[c.wF.PLACE_ID]
         ? JSON.stringify({ placeId: e.gameMetadata[c.wF.PLACE_ID] })
         : null;
 }
-function y(e) {
+function v(e) {
     return e.distributor !== d.GQo.ROBLOX ||
         null == e.gameMetadata ||
         null == e.gameMetadata[c.wF.ROBLOX_TIME_STARTED] ||
@@ -133,7 +157,7 @@ function y(e) {
               sync_id: e.gameMetadata[c.wF.ROBLOX_TIME_STARTED],
           };
 }
-function O(e) {
+function I(e) {
     var t;
     if (
         e.type !== d.IIU.PLAYING ||
@@ -145,25 +169,33 @@ function O(e) {
         r = p({}, e);
     return (r.application_id = c.eB), (r.name = d.EOG[d.GQo.ROBLOX]), isNaN(n) || (r.timestamps = { start: n }), r;
 }
-function v(e) {
+function T(e) {
     return e.distributor === d.GQo.ROBLOX && e.id !== c.eB;
 }
-function I(e) {
+function S(e) {
     return e.thirdPartySkus.some((e) => e.distributor === d.GQo.ROBLOX);
 }
-async function T(e) {
+async function A(e) {
     var t;
     let n = null == (t = u.Z.getSupplementalData(e)) ? void 0 : t.rootPlaceId;
-    if (null != n) return await S(n);
+    if (null != n) return await N(n);
     try {
         let t = await (0, s.v)([e]);
-        if (null != t[e] && null != t[e].rootPlaceId) return await S(t[e].rootPlaceId);
+        if (null != t[e] && null != t[e].rootPlaceId) return await N(t[e].rootPlaceId);
     } catch (e) {
         return Promise.reject(e);
     }
     return Promise.reject(Error("Failed to find root place id for activity"));
 }
-async function S(e) {
+async function N(e) {
     let t = await l.Z.getRobloxSubgameURL(e);
     return await (0, o.Z)(t);
+}
+function C(e) {
+    return e.distributor !== d.GQo.ROBLOX || e.id === c.eB
+        ? e
+        : m(p({}, e), {
+              id: c.eB,
+              name: d.EOG[d.GQo.ROBLOX],
+          });
 }

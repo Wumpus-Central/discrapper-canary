@@ -26,10 +26,9 @@ function d(e) {
 }
 class f extends (i = o.ZP.Store) {
     getGameForPID(e) {
-        var t;
         if (__OVERLAY__ || null == e) return null;
-        let n = null == (t = s.ZP.getGameForPID(e)) ? void 0 : t.name;
-        return l.Z.getGameByName(n);
+        let t = s.ZP.getGameOrTransformedSubgameForPID(e);
+        return l.Z.getGameByName(null == t ? void 0 : t.name);
     }
     getGame() {
         return r;

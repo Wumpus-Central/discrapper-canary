@@ -158,7 +158,7 @@ function Y(e) {
 }
 let J = r.memo(function (e) {
         let { trackedGame: t } = e,
-            a = (0, d.e7)([f.ZP], () => f.ZP.getGameForPID(t.pid)),
+            a = (0, d.e7)([f.ZP], () => f.ZP.getGameOrTransformedSubgameForPID(t.pid)),
             r = (0, d.e7)([S.Z], () => S.Z.getGameForPID(t.pid)),
             l = (0, d.e7)([f.ZP], () => (null == a ? null : f.ZP.getGameOverlayStatus(a)));
         return (0, n.jsxs)("div", {
@@ -528,14 +528,12 @@ function et() {
 let ea = r.memo(function (e) {
         let { pid: t } = e,
             a = (0, d.e7)([_.default, f.ZP], () => {
-                var e, a, n;
+                var e, a;
                 if (null == t) return null;
-                let r = null == (e = _.default.getTrackedGameByPid(t)) ? void 0 : e.fullscreenType;
-                return null != r
-                    ? r
-                    : null != (n = null == (a = f.ZP.getGameForPID(t)) ? void 0 : a.fullscreenType)
-                      ? n
-                      : p.Jx.UNKNOWN;
+                let n = null == (e = _.default.getTrackedGameByPid(t)) ? void 0 : e.fullscreenType;
+                if (null != n) return n;
+                let r = f.ZP.getGameOrTransformedSubgameForPID(t);
+                return null != (a = null == r ? void 0 : r.fullscreenType) ? a : p.Jx.UNKNOWN;
             }, [t]);
         return (0, n.jsxs)(m.Text, {
             variant: "text-sm/normal",
