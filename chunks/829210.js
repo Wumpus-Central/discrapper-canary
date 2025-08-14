@@ -3,33 +3,33 @@ var i = n(255367),
     l = n(73800),
     s = n(120356),
     o = n.n(s),
-    a = n(717976),
-    r = n(481060),
+    r = n(717976),
+    a = n(481060),
     u = n(59662),
     c = n(854014),
     d = n(643153);
 function f(e) {
     let { node: t } = e,
         { history: n, activeIndex: s, pushPanel: o } = (0, u.t)(),
-        a = t.useTitle(),
-        r = l.useMemo(() => t.layout.flatMap((e) => e.layout), [t]),
+        r = t.useTitle(),
+        a = l.useMemo(() => t.layout.flatMap((e) => e.layout), [t]),
         d = n[s] === t;
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(c.Z, {
                 icon: t.icon,
-                title: a,
+                title: r,
                 active: d,
                 onClick: () => o(t),
             }),
-            d && r.length > 1 && (0, i.jsx)(g, { categories: r }),
+            d && a.length > 1 && (0, i.jsx)(g, { categories: a }),
         ],
     });
 }
 function g(e) {
     let { categories: t } = e,
         [n, s] = l.useState(0),
-        [u, c] = (0, r.q_F)(() => ({
+        [u, c] = (0, a.q_F)(() => ({
             y: 0,
             config: {
                 mass: 0.1,
@@ -58,16 +58,16 @@ function g(e) {
         children: [
             (0, i.jsx)("div", {
                 className: d.track,
-                children: (0, i.jsx)(a.animated.div, {
+                children: (0, i.jsx)(r.animated.div, {
                     className: d.thumb,
                     style: u,
                 }),
             }),
             (0, i.jsx)("ul", {
                 children: f.map((e, t) => {
-                    let { title: l, key: a } = e;
+                    let { title: l, key: r } = e;
                     return (0, i.jsx)(
-                        r.P3F,
+                        a.P3F,
                         {
                             onClick: () => {
                                 s(t), c({ y: 40 * t });
@@ -76,7 +76,7 @@ function g(e) {
                             className: o()({ [d.active]: t === n }),
                             children: l,
                         },
-                        a,
+                        r,
                     );
                 }),
             }),

@@ -12,8 +12,8 @@ var l = n(120356),
     f = n(888496),
     p = n(768762),
     m = n(706454),
-    b = n(49012),
-    g = n(981631),
+    g = n(49012),
+    b = n(981631),
     j = n(856651),
     y = n(388032),
     O = n(20163);
@@ -118,14 +118,14 @@ function v(e) {
                                                         .concat(y.intl.string(y.t.q5jLJC))
                                                   : "".concat(n.name, ", ").concat(y.intl.string(y.t.q5jLJC)),
                                           onClick: (e) => {
-                                              (0, s.yw)(g.rMx.CONNECTED_ACCOUNT_VIEWED, {
+                                              (0, s.yw)(b.rMx.CONNECTED_ACCOUNT_VIEWED, {
                                                   platform_type: n.type,
                                                   other_user_id: i,
                                               }),
-                                                  (0, b.q)(
+                                                  (0, g.q)(
                                                       {
                                                           href: t,
-                                                          trusted: (null == v ? void 0 : v.type) !== g.ABu.DOMAIN,
+                                                          trusted: (null == v ? void 0 : v.type) !== b.ABu.DOMAIN,
                                                       },
                                                       e,
                                                   );
@@ -164,17 +164,17 @@ function v(e) {
                     (0, r.jsx)("div", {
                         className: O.metadata,
                         children:
-                            n.type === g.ABu.REDDIT
+                            n.type === b.ABu.REDDIT
                                 ? (0, f.oP)(o)
-                                : n.type === g.ABu.STEAM
+                                : n.type === b.ABu.STEAM
                                   ? (0, f.Dq)(o)
-                                  : n.type === g.ABu.BLUESKY || n.type === g.ABu.MASTODON || n.type === g.ABu.TWITTER
+                                  : n.type === b.ABu.BLUESKY || n.type === b.ABu.MASTODON || n.type === b.ABu.TWITTER
                                     ? (0, f.rJ)(o)
-                                    : n.type === g.ABu.PAYPAL
+                                    : n.type === b.ABu.PAYPAL
                                       ? (0, f.li)(o)
-                                      : n.type === g.ABu.EBAY
+                                      : n.type === b.ABu.EBAY
                                         ? (0, f.ul)(o)
-                                        : n.type === g.ABu.TIKTOK
+                                        : n.type === b.ABu.TIKTOK
                                           ? (0, f.hf)(o)
                                           : null,
                     }),

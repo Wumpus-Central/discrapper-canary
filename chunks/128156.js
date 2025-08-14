@@ -12,8 +12,8 @@ var l = n(442837),
     f = n(209698),
     p = n(369566),
     m = n(29899),
-    b = n(151545),
-    g = n(744802),
+    g = n(151545),
+    b = n(744802),
     j = n(493043),
     y = n(864141),
     O = n(264481),
@@ -31,17 +31,17 @@ function P(e) {
             userId: t.id,
             guildId: E,
         }),
-        k = (0, l.e7)([a.Z], () => a.Z.isFetchingUserOutbox(t.id)),
-        G = t.id === n.id,
+        G = (0, l.e7)([a.Z], () => a.Z.isFetchingUserOutbox(t.id)),
+        k = t.id === n.id,
         B = (0, l.e7)([d.Z, s.Z], () => {
-            let e = G ? d.Z.getStatus() : s.Z.getStatus(t.id);
+            let e = k ? d.Z.getStatus() : s.Z.getStatus(t.id);
             return e === i.Skl.OFFLINE || e === i.Skl.INVISIBLE;
         }),
         M = A.length > 0 || null != D,
         U = S && null == D && null == R && null != L,
         F = !B && (M || U),
         V = C.length > 0;
-    if (!F && !V && k)
+    if (!F && !V && G)
         return (0, r.jsx)("div", {
             className: I.cards,
             children: Array.from({ length: 8 }).map((e, t) =>
@@ -64,9 +64,9 @@ function P(e) {
                 ),
             ),
         });
-    if (!F && !V && !k) {
+    if (!F && !V && !G) {
         var Y;
-        return G
+        return k
             ? (0, r.jsx)(O.Uf, { onClose: N })
             : (0, r.jsx)(O.P9, {
                   user: t,
@@ -110,7 +110,7 @@ function P(e) {
                                   (0, r.jsx)(
                                       "li",
                                       {
-                                          children: (0, r.jsx)(b.Z, {
+                                          children: (0, r.jsx)(g.Z, {
                                               user: t,
                                               currentUser: n,
                                               activity: e,
@@ -138,7 +138,7 @@ function P(e) {
             V
                 ? (0, r.jsx)(x.Z, {
                       heading: _.intl.string(_.t.jzgEoK),
-                      introText: G
+                      introText: k
                           ? _.intl.format(_.t["4bk9Ag"], {
                                 learnMoreHook: (e, t) =>
                                     (0, r.jsx)(
@@ -158,7 +158,7 @@ function P(e) {
                               (0, r.jsx)(
                                   "li",
                                   {
-                                      children: (0, r.jsx)(g.Z, {
+                                      children: (0, r.jsx)(b.Z, {
                                           location: "UserProfileModalV2Activity",
                                           user: t,
                                           currentUser: n,

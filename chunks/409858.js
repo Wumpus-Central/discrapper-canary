@@ -173,10 +173,11 @@ class J extends r.Component {
         let { error: l, accepted: s, isCustomGift: a, opened: o, isPremiumAppGift: u } = this.state;
         if (u) {
             let t = I.default.getUser(r.userId);
-            if (o)
-                if (s) return V.intl.string(V.t.fLHIp6);
-                else return null;
-            V.intl.formatToPlainString(V.t.DDO4W1, { sender: G.ZP.getName(t) });
+            return o
+                ? s
+                    ? V.intl.string(V.t.fLHIp6)
+                    : null
+                : V.intl.formatToPlainString(V.t.DDO4W1, { sender: G.ZP.getName(t) });
         }
         return !o && a
             ? null

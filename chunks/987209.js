@@ -9,7 +9,7 @@ var r = n(255367),
     o = n(442837),
     a = n(597688),
     s = n(479446),
-    l = n(646476),
+    l = n(347896),
     c = n(717401),
     u = n(975104),
     d = n(669079),
@@ -27,7 +27,7 @@ function O(e) {
         [T, S] = i.useState(),
         [A, N] = i.useState(!1),
         C = (0, d.pO)(v),
-        R = (0, l.TX)(),
+        R = null != (0, l.Z)(),
         P = g;
     C && (P = R ? p.Cj.SEASONAL_STANDARD_BOX : null != _ ? _ : m);
     let [w, D] = i.useState(P),

@@ -5,8 +5,8 @@ n.d(t, {
 var i,
     s = n(255367);
 n(73800);
-var r = n(120356),
-    a = n.n(r),
+var a = n(120356),
+    r = n.n(a),
     l = n(481060),
     c = n(388032),
     o = n(686529),
@@ -41,10 +41,10 @@ function m(e) {
     });
 }
 function x(e) {
-    let { tab: t, selectedTab: n, label: i, disabled: r, onClick: c } = e;
-    return r
+    let { tab: t, selectedTab: n, label: i, disabled: a, onClick: c } = e;
+    return a
         ? (0, s.jsxs)("div", {
-              className: a()(o.tab, { [o.current]: n === t }),
+              className: r()(o.tab, { [o.current]: n === t }),
               children: [
                   (0, s.jsx)("div", { className: o.progressBar }),
                   (0, s.jsx)(l.Text, {
@@ -56,7 +56,7 @@ function x(e) {
           })
         : (0, s.jsxs)(l.P3F, {
               onClick: () => c(t),
-              className: a()(o.tab, { [o.current]: n === t }),
+              className: r()(o.tab, { [o.current]: n === t }),
               children: [
                   (0, s.jsx)("div", { className: o.progressBar }),
                   (0, s.jsx)(l.Text, {

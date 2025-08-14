@@ -1,4 +1,8 @@
-n.d(t, { z: () => a });
+n.d(t, {
+    XV: () => o,
+    aE: () => c,
+    zK: () => a,
+});
 var r = n(379405),
     l = n(481060),
     i = n(388032);
@@ -83,4 +87,34 @@ let o = {
     a = (e) => {
         let t = o[e];
         return null != t ? t : null;
+    },
+    c = {
+        skill_level: {
+            getLabel: () => i.intl.string(i.t.MKqADA),
+            tags: [
+                r._.BETTER_THAN_YOU,
+                r._.NOOB,
+                r._.LEARNING_THE_ROPES,
+                r._.GETTING_GOOD,
+                r._.SKILLED,
+                r._.EXPERT,
+                r._.MASTER,
+            ],
+        },
+        rating: {
+            getLabel: () => i.intl.string(i.t["7/umur"]),
+            tags: [
+                r._.LIKE_IT,
+                r._.LOVE_IT,
+                r._.KIND_OF_LOVE_IT,
+                r._.KIND_OF_HATE_IT,
+                r._.FRUSTRATED,
+                r._.RAGE_QUITTING,
+                r._.TOO_EASY,
+            ],
+        },
+        looking_for: {
+            getLabel: () => i.intl.string(i.t["5Dez19"]),
+            tags: [r._.LFG, r._.OPEN_TO_PLAY, r._.LOOKING_FOR_TIPS, r._.LOOKING_TO_LEARN, r._.OPEN_TO_TEACH],
+        },
     };

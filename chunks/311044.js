@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => b });
 var r = n(255367),
     l = n(73800),
     i = n(481060),
@@ -11,9 +11,9 @@ var r = n(255367),
     f = n(892001),
     p = n(252417),
     m = n(264481),
-    b = n(443680);
-function g(e) {
-    let { user: t, guildId: n, channelId: g, onClose: j } = e,
+    g = n(443680);
+function b(e) {
+    let { user: t, guildId: n, channelId: b, onClose: j } = e,
         { analyticsLocations: y } = (0, a.ZP)(),
         { context: O, trackUserProfileAction: x } = (0, s.KZ)(),
         { mutualFriends: h, mutualFriendsCount: v } = (0, d.Z)(t),
@@ -23,7 +23,7 @@ function g(e) {
             (0, u.Z)(t.id, _);
         }, [t.id, _]),
         (0, r.jsx)(i.Ttm, {
-            className: b.scroller,
+            className: g.scroller,
             fade: !0,
             children:
                 null == h
@@ -31,7 +31,7 @@ function g(e) {
                           (0, r.jsxs)(
                               "div",
                               {
-                                  className: b.friendsLoadingItem,
+                                  className: g.friendsLoadingItem,
                                   children: [
                                       (0, r.jsx)(c.ZT, {
                                           width: 40,
@@ -56,7 +56,7 @@ function g(e) {
                                     user: l,
                                     status: i,
                                     guildId: n,
-                                    channelId: g,
+                                    channelId: b,
                                     onSelect: () => {
                                         var e, t;
                                         null == j || j(),

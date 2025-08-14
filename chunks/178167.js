@@ -3,8 +3,8 @@ var i = n(255367),
     l = n(873546),
     s = n(755721),
     o = n(481060),
-    a = n(950796),
-    r = n(59662),
+    r = n(950796),
+    a = n(59662),
     u = n(990757);
 function c(e) {
     let { icon: t, onClick: n, disabled: l } = e;
@@ -20,10 +20,10 @@ function c(e) {
 }
 function d(e) {
     let { onClose: t } = e,
-        { history: n, activeIndex: s, forward: d, back: f } = (0, r.t)();
+        { history: n, activeIndex: s, forward: d, back: f } = (0, a.t)();
     return (0, i.jsx)("div", {
         className: u.topBar,
-        children: (0, i.jsx)(a.TF, {
+        children: (0, i.jsx)(r.TF, {
             leading: (0, i.jsxs)("div", {
                 className: u.arrowButtons,
                 children: [

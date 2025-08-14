@@ -11,6 +11,7 @@ let r = {
         "report_to_mod_message",
         "stage_channel",
         "user",
+        "widget",
     ]),
     REPORT_TO_MOD: new Set(["report_to_mod_message"]),
     UNAUTHENTICATED: new Set(["guild_urf", "message_urf", "user_urf"]),

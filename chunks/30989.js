@@ -5,5 +5,4 @@ e.exports = {
     trinketsIcon: "trinketsIcon_c0c49a",
     trinketsDecoration: "trinketsDecoration_c0c49a",
     trinketsGlow: "trinketsGlow_c0c49a",
-    trinketsGlowMask: "trinketsGlowMask_c0c49a",
 };

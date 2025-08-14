@@ -3,8 +3,8 @@ var i = n(255367),
     l = n(73800),
     s = n(28682),
     o = n(211512),
-    a = n(401250),
-    r = n(976713),
+    r = n(401250),
+    a = n(976713),
     u = n(72704),
     c = n(867694),
     d = n(4794),
@@ -34,9 +34,9 @@ let b = l.memo(function (e) {
         case s.J.SELECT:
             return (0, i.jsx)(u.Z, { node: t });
         case s.J.RADIO:
-            return (0, i.jsx)(r.Z, { node: t });
+            return (0, i.jsx)(a.Z, { node: t });
         case s.J.CUSTOM:
         default:
-            return (0, i.jsx)(a.W, { node: t });
+            return (0, i.jsx)(r.W, { node: t });
     }
 });

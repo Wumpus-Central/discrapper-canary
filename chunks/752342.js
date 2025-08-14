@@ -12,8 +12,8 @@ var l = n(481060),
     f = n(899007),
     p = n(648052),
     m = n(867176),
-    b = n(681837),
-    g = n(502762),
+    g = n(681837),
+    b = n(502762),
     j = n(530),
     y = n(871604),
     O = n(952124),
@@ -38,8 +38,8 @@ function S(e) {
             sessionId: D,
             initialSection: L,
             initialSubsection: R,
-            transitionState: k,
-            openedAt: G,
+            transitionState: G,
+            openedAt: k,
             onClose: B,
             sourceAnalyticsLocations: M = [],
         } = e,
@@ -47,8 +47,8 @@ function S(e) {
         F = (0, u.ZP)(t.id, U),
         V = s.ZP.getName(U, w, t),
         Y = (0, c.Dt)(),
-        { analyticsLocations: W } = (0, a.ZP)([...M, o.Z.USER_PROFILE_MODAL]),
-        z = (0, d.ZB)({
+        { analyticsLocations: H } = (0, a.ZP)([...M, o.Z.USER_PROFILE_MODAL]),
+        W = (0, d.ZB)({
             layout: "MODAL",
             userId: t.id,
             sourceSessionId: D,
@@ -57,18 +57,18 @@ function S(e) {
             messageId: A,
             roleId: C,
         }),
-        H = (0, P.Z)(t);
+        K = (0, P.Z)(t);
     return (0, r.jsx)(a.Gt, {
-        value: W,
+        value: H,
         children: (0, r.jsx)(d.Mt, {
-            value: z,
-            openedAt: G,
+            value: W,
+            openedAt: k,
             fetchStartedAt: null == F ? void 0 : F.fetchStartedAt,
             fetchEndedAt: null == F ? void 0 : F.fetchEndedAt,
             isLoaded: null == F ? void 0 : F.isLoaded,
             children: (0, r.jsx)(l.Y0X, {
                 "data-migration-pending": !0,
-                transitionState: k,
+                transitionState: G,
                 className: N.root,
                 hideShadow: !0,
                 "aria-labelledby": Y,
@@ -80,7 +80,7 @@ function S(e) {
                             children: Z.intl.format(Z.t.KRe1Fh, { name: V }),
                         }),
                     }),
-                    children: (0, r.jsxs)(g.Z, {
+                    children: (0, r.jsxs)(b.Z, {
                         user: t,
                         displayProfile: F,
                         themeType: E.lY.MODAL,
@@ -113,7 +113,7 @@ function S(e) {
                                                 location: "BotUserProfileModal",
                                                 user: t,
                                                 themeType: E.lY.MODAL,
-                                                hasEntered: k === l.Dvm.ENTERED,
+                                                hasEntered: G === l.Dvm.ENTERED,
                                                 onCloseProfile: B,
                                                 disableToolbar: !0,
                                             }),
@@ -152,7 +152,7 @@ function S(e) {
                                         nickname: V,
                                         pronouns: null == F ? void 0 : F.pronouns,
                                         nicknameVariant: "heading-xl/bold",
-                                        nicknameIcons: (0, r.jsx)(b.Z, {
+                                        nicknameIcons: (0, r.jsx)(g.Z, {
                                             size: "sm",
                                             userId: t.id,
                                         }),
@@ -167,7 +167,7 @@ function S(e) {
                                         currentUser: n,
                                         displayProfile: F,
                                         guildId: U,
-                                        items: H,
+                                        items: K,
                                         initialSection: null != L ? L : E.oh.BOT_INFO,
                                         initialSubsection: R,
                                         onClose: B,

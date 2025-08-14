@@ -172,7 +172,9 @@ let O = function (e) {
                                     className: a()(t, {
                                         [p.gradient]: U,
                                         [p.withDisplayNameStyles]:
-                                            V && (null == L ? void 0 : L.displayNameStyles) != null,
+                                            V &&
+                                            (null == L ? void 0 : L.displayNameStyles) != null &&
+                                            (null == L ? void 0 : L.guildId) == null,
                                         [p.wrapper]: !0,
                                         [p.contentOnly]: o,
                                         [p.compact]: n,

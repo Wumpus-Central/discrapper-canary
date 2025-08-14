@@ -16,6 +16,7 @@ var r = (function (e) {
             (e.FIRST_DM = "first_dm"),
             (e.USER = "user"),
             (e.APPLICATION = "application"),
+            (e.WIDGET = "widget"),
             e
         );
     })({}),

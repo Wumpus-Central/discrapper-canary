@@ -1,53 +1,53 @@
-n.d(t, { Z: () => i }), n(388685);
-var r = n(70722),
-    l = n(388032);
-function i(e) {
-    let t = new Set();
+n.d(e, { Z: () => i }), n(388685);
+var l = n(70722),
+    r = n(388032);
+function i(t) {
+    let e = new Set();
     return (
-        e.showVibesHoneypot || t.add(r.kr.VIBES_OFF),
-        (function (e) {
-            let { isEndStream: t } = e;
+        t.showVibesHoneypot || e.add(l.kr.VIBES_OFF),
+        (function (t) {
+            let { isEndStream: e } = t;
             return [
                 {
-                    value: r.kr.BLACK_SCREEN,
-                    label: t ? l.intl.string(l.t["0X5Zbm"]) : l.intl.string(l.t.fxiRNj),
+                    value: l.kr.BLACK_SCREEN,
+                    label: e ? r.intl.string(r.t["0X5Zbm"]) : r.intl.string(r.t.fxiRNj),
                 },
                 {
-                    value: r.kr.BLURRY,
-                    label: t ? l.intl.string(l.t.VVPQy8) : l.intl.string(l.t.E8jTMD),
+                    value: l.kr.BLURRY,
+                    label: e ? r.intl.string(r.t.VVPQy8) : r.intl.string(r.t.E8jTMD),
                 },
                 {
-                    value: r.kr.LAGGING,
-                    label: t ? l.intl.string(l.t.ObEHd3) : l.intl.string(l.t.VoSJER),
+                    value: l.kr.LAGGING,
+                    label: e ? r.intl.string(r.t.ObEHd3) : r.intl.string(r.t.VoSJER),
                 },
                 {
-                    value: r.kr.OUT_OF_SYNC,
-                    label: t ? l.intl.string(l.t.mYmwDw) : l.intl.string(l.t["+NluQk"]),
+                    value: l.kr.OUT_OF_SYNC,
+                    label: e ? r.intl.string(r.t.mYmwDw) : r.intl.string(r.t["+NluQk"]),
                 },
                 {
-                    value: r.kr.AUDIO_MISSING,
-                    label: t ? l.intl.string(l.t.Xwv419) : l.intl.string(l.t.G2egzc),
+                    value: l.kr.AUDIO_MISSING,
+                    label: e ? r.intl.string(r.t.Xwv419) : r.intl.string(r.t.G2egzc),
                 },
                 {
-                    value: r.kr.AUDIO_POOR,
-                    label: t ? l.intl.string(l.t["fHey+f"]) : l.intl.string(l.t.aHOfIi),
+                    value: l.kr.AUDIO_POOR,
+                    label: e ? r.intl.string(r.t["fHey+f"]) : r.intl.string(r.t.aHOfIi),
                 },
                 {
-                    value: r.kr.STREAM_STOPPED,
-                    label: l.intl.string(l.t.uEoqQk),
+                    value: l.kr.STREAM_STOPPED,
+                    label: r.intl.string(r.t.uEoqQk),
                 },
                 {
-                    value: r.kr.VIBES_OFF,
-                    label: l.intl.string(l.t["++JLLy"]),
+                    value: l.kr.VIBES_OFF,
+                    label: r.intl.string(r.t["++JLLy"]),
                 },
                 {
-                    value: r.kr.OTHER,
-                    label: l.intl.string(l.t["emlT9/"]),
+                    value: l.kr.OTHER,
+                    label: r.intl.string(r.t["emlT9/"]),
                 },
             ];
-        })(e).filter((e) => {
-            let { value: n } = e;
-            return !t.has(n);
+        })(t).filter((t) => {
+            let { value: n } = t;
+            return !e.has(n);
         })
     );
 }

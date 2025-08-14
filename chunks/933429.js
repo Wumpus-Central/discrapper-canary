@@ -36,10 +36,10 @@ var r,
     R = n(41776),
     P = n(332473),
     w = n(30684),
-    D = n(646476),
-    L = n(616106),
-    x = n(475580),
-    M = n(96320),
+    D = n(616106),
+    L = n(475580),
+    x = n(96320),
+    M = n(107756),
     j = n(518638),
     k = n(1844),
     U = n(621615),
@@ -218,7 +218,7 @@ function eq(e, t, n) {
 }
 function eX(e) {
     if (null == e) return !1;
-    let { useRecurringNotices: t } = M.b.getCurrentConfig({ location: "NoticeStore.isNoticeDismissed" });
+    let { useRecurringNotices: t } = x.b.getCurrentConfig({ location: "NoticeStore.isNoticeDismissed" });
     if (t && null != ek[e]) return !1;
     let n = ej[e];
     if (null != n) return (0, g.H4)(n).isDismissed;
@@ -311,8 +311,8 @@ let eQ = [
     e$ = {
         [eS.kVF.GIFTING_PROMOTION_REMINDER]: {
             predicate: () => {
-                let { enabled: e } = D.Ys.getCurrentConfig({ location: "NoticeStore" }, { autoTrackExposure: !1 }),
-                    { enabled: t } = D.ZP.getCurrentConfig({ location: "NoticeStore" }, { autoTrackExposure: !1 });
+                let { enabled: e } = M.Ys.getCurrentConfig({ location: "NoticeStore" }, { autoTrackExposure: !1 }),
+                    { enabled: t } = M.ZP.getConfig({ location: "NoticeStore" });
                 return (
                     e &&
                     t &&
@@ -522,7 +522,7 @@ let eQ = [
         },
         [eS.kVF.PREMIUM_TIER_2_DISCOUNT_ENDING]: {
             predicate: () => {
-                let { enabled: e } = x.D.getCurrentConfig({ location: "NoticeStore.NoticeDefinition.predicate" });
+                let { enabled: e } = L.D.getCurrentConfig({ location: "NoticeStore.NoticeDefinition.predicate" });
                 return (
                     !!e &&
                     eg.Z.getAlmostExpiringDiscountOffers([eN.Si.TIER_2]).length > 0 &&
@@ -674,7 +674,7 @@ let eQ = [
             },
         },
         [eS.kVF.PREMIUM_REACTIVATE]: {
-            predicate: () => !eX(eS.kVF.PREMIUM_REACTIVATE) && L.Z.shouldShowReactivateNotice(),
+            predicate: () => !eX(eS.kVF.PREMIUM_REACTIVATE) && D.Z.shouldShowReactivateNotice(),
         },
         [eS.kVF.PREMIUM_PAST_DUE_ONE_TIME_PAYMENT]: {
             predicate: (e) => {

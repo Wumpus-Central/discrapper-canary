@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => p });
 var i = n(255367);
 n(73800);
 var r = n(120356),
@@ -6,40 +6,35 @@ var r = n(120356),
     a = n(755721),
     l = n(481060),
     o = n(906732),
-    c = n(646476),
-    d = n(736519),
-    u = n(388032),
-    m = n(602062),
-    p = n(568147),
-    g = n(332796);
-let h = (e) => {
+    c = n(736519),
+    d = n(388032),
+    u = n(602062),
+    m = n(568147);
+let p = (e) => {
     let { className: t, location: n, analyticsLocation: r } = e,
-        { analyticsLocations: h } = (0, o.ZP)(n),
-        f = (0, c.rK)(),
-        { enabled: b } = c.RO.useExperiment({ location: "GiftNitro" }, { autoTrackExposure: f }),
-        x = b && f;
+        { analyticsLocations: p } = (0, o.ZP)(n);
     return (0, i.jsx)(o.Gt, {
-        value: h,
+        value: p,
         children: (0, i.jsxs)("div", {
-            className: s()(m.container, t),
+            className: s()(u.container, t),
             children: [
                 (0, i.jsxs)("div", {
-                    className: m.textContainer,
+                    className: u.textContainer,
                     children: [
                         (0, i.jsx)(l.X6q, {
                             variant: "heading-lg/extrabold",
-                            className: m.heading,
-                            children: x ? u.intl.string(u.t.LB3bJC) : u.intl.string(u.t.Ve9Ge3),
+                            className: u.heading,
+                            children: d.intl.string(d.t.Ve9Ge3),
                         }),
                         (0, i.jsx)(l.Text, {
                             variant: "text-sm/medium",
-                            children: x ? u.intl.string(u.t.u49cn5) : u.intl.string(u.t.yQ06u7),
+                            children: d.intl.string(d.t.yQ06u7),
                         }),
-                        (0, i.jsx)(d.Z, {
-                            className: m.giftCardButton,
+                        (0, i.jsx)(c.Z, {
+                            className: u.giftCardButton,
                             textOptions: {
-                                textOverride: u.intl.string(u.t.Ve9Ge3),
-                                textClassName: m.giftButtonCTA,
+                                textOverride: d.intl.string(d.t.Ve9Ge3),
+                                textClassName: u.giftButtonCTA,
                             },
                             color: a.zx.Colors.CUSTOM,
                             premiumModalAnalyticsLocation: r,
@@ -47,8 +42,8 @@ let h = (e) => {
                     ],
                 }),
                 (0, i.jsx)("img", {
-                    src: x ? g : p,
-                    className: m.bannerImage,
+                    src: m,
+                    className: u.bannerImage,
                     alt: "gift nitro banner",
                 }),
             ],

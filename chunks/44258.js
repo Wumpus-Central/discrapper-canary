@@ -5,5 +5,6 @@ e.exports = {
     buttonContainer: "buttonContainer__25a50",
     expandButton: "expandButton__25a50 tag__25a50",
     collapseButton: "collapseButton__25a50 tag__25a50",
+    addButton: "addButton__25a50 tag__25a50",
     caret: "caret__25a50",
 };

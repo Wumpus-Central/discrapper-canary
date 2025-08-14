@@ -1,7 +1,4 @@
-n.d(t, {
-    D_: () => h,
-    cU: () => g,
-});
+n.d(t, { D_: () => h });
 var r = n(674746),
     i = n(242433),
     o = n(100527),
@@ -23,51 +20,13 @@ let p = [
     h = 3,
     m = {
         gradient: ["rgba(218, 237, 137, 1)", "rgba(121, 199, 223, 1)", "rgba(177, 176, 234, 1)"],
-    },
-    g = {
-        rewards: p,
-        rewardAssetIdMap: (0, a.YV)(p),
-        dismissibleContentVersion: h,
-        eligiblePlanIds: [s.Xh.PREMIUM_YEAR_TIER_2, s.Xh.PREMIUM_MONTH_TIER_2],
-        planSelection: {
-            heading: () => c.intl.string(c.t.ymgFZW),
-            gradientConfig: m,
-            getImageUrl: () => u.Z,
-            getBackgroundImageUrl: () => d.Z,
-            getCardImageUrl: () => _.Z,
-        },
-        chatGiftIcon: {
-            trinketsAnimation: {
-                getAnimationData: () => n.e("18950").then(n.bind(n, 94613)),
-                getGlowAnimationData: () => n.e("38555").then(n.bind(n, 220590)),
-            },
-        },
-        firstTimeNotice: {
-            getImageUrl: (e, t) => (t ? u.Z : f.Z),
-            title: () => c.intl.string(c.t.PWaKU1),
-            description: () => c.intl.string(c.t.EWn7kZ),
-            cta: () => c.intl.string(c.t.RzWDqa),
-            analyticsLocation: o.Z.GIFTING_PROMOTION_COACHMARK,
-            analyticsPage: l.ZY5.PREMUIM_UPSELL_GIFTING_PROMOTION,
-        },
-        planSelectionBanner: {
-            desktopBannerText: () => c.intl.string(c.t.Q0VMqK),
-            mobileBannerText: () => c.intl.string(c.t.VBnNJS),
-            getImageUrl: () => "",
-            gradientConfig: () => m,
-        },
-        billingSettingsMarketingBanner: {
-            getAnimatedImageUrl: () => f.Z,
-            getStaticImageUrl: () => u.Z,
-            title: () => c.intl.string(c.t.ydPofH),
-            body: () => c.intl.string(c.t.iI74ho),
-            gradientConfig: m,
-            textColor: r.Z.NEUTRAL_71,
-        },
-        giftPurchaseConfirmation: {
-            yearGiftText: c.t.xFKdb2,
-            monthGiftText: c.t.GnL3Gh,
-            collectRewardButtonText: () => c.intl.string(c.t.kMYVws),
-            rewardCollectedText: () => c.intl.string(c.t.eZrmtr),
-        },
     };
+(0, a.YV)(p),
+    s.Xh.PREMIUM_YEAR_TIER_2,
+    s.Xh.PREMIUM_MONTH_TIER_2,
+    o.Z.GIFTING_PROMOTION_COACHMARK,
+    l.ZY5.PREMUIM_UPSELL_GIFTING_PROMOTION,
+    r.Z.NEUTRAL_71,
+    c.t.xFKdb2,
+    c.t.GnL3Gh,
+    () => c.intl.string(c.t.eZrmtr);

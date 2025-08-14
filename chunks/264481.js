@@ -17,8 +17,8 @@ var r = n(255367),
     f = n(475413),
     p = n(981631),
     m = n(388032),
-    b = n(839468);
-let g = [
+    g = n(839468);
+let b = [
         () => m.intl.string(m.t.madJdH),
         () => m.intl.string(m.t.NYmfoK),
         () => m.intl.string(m.t.R2PaCg),
@@ -68,10 +68,10 @@ let g = [
 function x(e) {
     let { heading: t, bodyText: n, children: l } = e;
     return (0, r.jsxs)("div", {
-        className: b.empty,
+        className: g.empty,
         children: [
             (0, r.jsxs)("div", {
-                className: b.textContainer,
+                className: g.textContainer,
                 children: [
                     (0, r.jsx)(o.X6q, {
                         variant: "heading-md/medium",
@@ -93,7 +93,7 @@ function h() {
     let e = m.intl.string(m.t.RnD2yc),
         [t] = l.useState(() => {
             var e;
-            return (null != (e = (0, i.sample)(g)) ? e : g[0])();
+            return (null != (e = (0, i.sample)(b)) ? e : b[0])();
         });
     return (0, r.jsx)(x, {
         heading: e,
@@ -115,7 +115,7 @@ function _(e) {
     let { user: t, guildId: n, channelId: c, onClose: s } = e,
         d = u.ZP.getName(n, c, t),
         p = m.intl.formatToPlainString(m.t.sjSitL, { name: d }),
-        [g] = l.useState(() => {
+        [b] = l.useState(() => {
             var e;
             return (null != (e = (0, i.sample)(y)) ? e : y[0])(d);
         }),
@@ -124,9 +124,9 @@ function _(e) {
         }, [t.id, s]);
     return (0, r.jsx)(x, {
         heading: p,
-        bodyText: g,
+        bodyText: b,
         children: (0, r.jsx)("div", {
-            className: b.buttonRow,
+            className: g.buttonRow,
             children: (0, r.jsx)(f.tG, {
                 icon: o.kBi,
                 text: m.intl.string(m.t["g33r/P"]),
@@ -139,7 +139,7 @@ function _(e) {
 function I() {
     let e = (0, s.ZP)();
     return (0, r.jsx)("div", {
-        className: b.connectionPlatforms,
+        className: g.connectionPlatforms,
         children: O.map((t, n) => {
             let l = d.Z.get(t);
             if (null == l) return null;
@@ -149,7 +149,7 @@ function I() {
                 {
                     src: i,
                     alt: l.name,
-                    className: b.connectionIcon,
+                    className: g.connectionIcon,
                 },
                 n,
             );
@@ -170,7 +170,7 @@ function P(e) {
         children: [
             (0, r.jsx)(I, {}),
             (0, r.jsxs)("div", {
-                className: b.buttonRow,
+                className: g.buttonRow,
                 children: [
                     (0, r.jsx)(f.tG, {
                         text: m.intl.string(m.t["/Hl24e"]),

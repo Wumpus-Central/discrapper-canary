@@ -296,7 +296,11 @@ function z() {
     return (0, r.jsx)(c.z, {
         variant: "secondary",
         onClick: e,
-        icon: d.$2U,
+        icon: {
+            type: "rive",
+            asset: d.xhK,
+            riveProps: { dataBinding: { fill: d.TVs.colors.ICON_PRIMARY } },
+        },
         text: x.intl.string(L.default.c9MBEB),
         fullWidth: !0,
     });

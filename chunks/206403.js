@@ -3,8 +3,8 @@ var i = n(255367),
     l = n(120356),
     s = n.n(l),
     o = n(793030),
-    a = n(481060),
-    r = n(845442);
+    r = n(481060),
+    a = n(845442);
 function u(e) {
     let {
         leadingElement: t,
@@ -16,20 +16,20 @@ function u(e) {
         compact: f = !1,
         onClick: g,
     } = e;
-    return (0, i.jsxs)(a.P3F, {
-        className: s()(r.baseControlItem, { [r.compact]: f }),
+    return (0, i.jsxs)(r.P3F, {
+        className: s()(a.baseControlItem, { [a.compact]: f }),
         onClick: g,
         children: [
             null != t &&
                 (0, i.jsx)("div", {
-                    className: r.baseControlItemLeadingElement,
+                    className: a.baseControlItemLeadingElement,
                     children: t,
                 }),
             (0, i.jsxs)("div", {
-                className: r.baseControlItemContent,
+                className: a.baseControlItemContent,
                 children: [
                     (0, i.jsxs)("div", {
-                        className: r.baseControlItemTitle,
+                        className: a.baseControlItemTitle,
                         children: [
                             (0, i.jsx)(o.X6, {
                                 variant: "heading-md/semibold",
@@ -40,7 +40,7 @@ function u(e) {
                                 (0, i.jsx)(o.X6, {
                                     variant: "heading-md/semibold",
                                     color: "text-secondary",
-                                    className: r.secondaryTitle,
+                                    className: a.secondaryTitle,
                                     children: c,
                                 }),
                         ],
@@ -55,7 +55,7 @@ function u(e) {
             }),
             (null != n || null != l) &&
                 (0, i.jsxs)("div", {
-                    className: r.baseControlItemTrailingElements,
+                    className: a.baseControlItemTrailingElements,
                     children: [n, l],
                 }),
         ],

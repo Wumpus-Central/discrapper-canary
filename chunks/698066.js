@@ -1,59 +1,59 @@
-n.d(t, { Z: () => i });
-var r = n(626135),
-    l = n(981631);
-function i(e) {
+n.d(e, { Z: () => i });
+var l = n(626135),
+    r = n(981631);
+function i(t) {
     let {
-        problem: t,
+        problem: e,
         stream: n,
         feedback: i,
-        streamApplication: o,
-        analyticsData: a,
-        location: s,
+        streamApplication: a,
+        analyticsData: s,
+        location: o,
         rating: c = null,
         category: u,
-        variant: m,
-    } = e;
-    r.default.track(
-        l.rMx.STREAM_REPORT_PROBLEM,
-        (function (e) {
-            for (var t = 1; t < arguments.length; t++) {
-                var n = null != arguments[t] ? arguments[t] : {},
-                    r = Object.keys(n);
+        variant: d,
+    } = t;
+    l.default.track(
+        r.rMx.STREAM_REPORT_PROBLEM,
+        (function (t) {
+            for (var e = 1; e < arguments.length; e++) {
+                var n = null != arguments[e] ? arguments[e] : {},
+                    l = Object.keys(n);
                 "function" == typeof Object.getOwnPropertySymbols &&
-                    (r = r.concat(
-                        Object.getOwnPropertySymbols(n).filter(function (e) {
-                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                    (l = l.concat(
+                        Object.getOwnPropertySymbols(n).filter(function (t) {
+                            return Object.getOwnPropertyDescriptor(n, t).enumerable;
                         }),
                     )),
-                    r.forEach(function (t) {
-                        var r;
-                        (r = n[t]),
-                            t in e
-                                ? Object.defineProperty(e, t, {
-                                      value: r,
+                    l.forEach(function (e) {
+                        var l;
+                        (l = n[e]),
+                            e in t
+                                ? Object.defineProperty(t, e, {
+                                      value: l,
                                       enumerable: !0,
                                       configurable: !0,
                                       writable: !0,
                                   })
-                                : (e[t] = r);
+                                : (t[e] = l);
                     });
             }
-            return e;
+            return t;
         })(
             {
-                reason: t,
+                reason: e,
                 category: u,
-                reason_variant: m,
+                reason_variant: d,
                 streamer_user_id: n.ownerId,
                 stream_channel_id: n.channelId,
                 guild_id: n.guildId,
-                application_id: null != o ? o.id : null,
-                application_name: null != o ? o.name : null,
-                location: s,
+                application_id: null != a ? a.id : null,
+                application_name: null != a ? a.name : null,
+                location: o,
                 rating: c,
                 feedback: i,
             },
-            a,
+            s,
         ),
     );
 }

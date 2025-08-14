@@ -5,15 +5,15 @@ var i = n(255367),
 function o(e) {
     var t;
     let { node: n } = e,
-        { useValue: o, setValue: a, useTitle: r, useSubtitle: u, useDisabled: c, useTooltip: d } = n,
-        f = r(),
+        { useValue: o, setValue: r, useTitle: a, useSubtitle: u, useDisabled: c, useTooltip: d } = n,
+        f = a(),
         g = null == u ? void 0 : u(),
         m = o(),
         v = null != (t = null == c ? void 0 : c()) && t,
         b = null == d ? void 0 : d();
     return (0, i.jsx)(l.j, {
         value: m,
-        onChange: (e) => a(e),
+        onChange: (e) => r(e),
         className: s.toggle,
         note: g,
         disabled: v,

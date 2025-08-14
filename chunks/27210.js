@@ -1,10 +1,10 @@
-n.d(t, { ZP: () => j }), n(415506), n(539854), n(388685);
+n.d(t, { ZP: () => p }), n(415506), n(539854), n(388685);
 var i = n(255367),
     l = n(73800),
     s = n(442837),
     o = n(481060),
-    a = n(292556),
-    r = n(734934),
+    r = n(292556),
+    a = n(734934),
     u = n(509613),
     c = n(460181),
     d = n(292959),
@@ -34,8 +34,8 @@ let b = [
         {
             useLabel: () => f.intl.string(f.t.jD1qzM),
             sound: "message1",
-            useDisabled: r.p,
-            useTooltip: () => ((0, r.p)() ? f.intl.string(f.t.cIRG0t) : void 0),
+            useDisabled: a.p,
+            useTooltip: () => ((0, a.p)() ? f.intl.string(f.t.cIRG0t) : void 0),
         },
         {
             useLabel: () => f.intl.string(f.t.XBrJT0),
@@ -146,7 +146,7 @@ let b = [
             },
             setValue: (t) => {
                 let n = d.Z.getDisabledSounds().filter((t) => t !== e.sound);
-                t || n.push(e.sound), a.default.setDisabledSounds(n);
+                t || n.push(e.sound), r.default.setDisabledSounds(n);
             },
             useDisabled: () => {
                 var t;
@@ -160,15 +160,15 @@ let b = [
     x = (0, u.qs)("SelectedChannelNotifications", {
         useTitle: () => f.intl.string(f.t.TzjwV1),
         useValue: () => (0, s.e7)([d.Z], () => d.Z.getNotifyMessagesInSelectedChannel()),
-        setValue: (e) => a.default.setNotifyMessagesInSelectedChannel(e),
+        setValue: (e) => r.default.setNotifyMessagesInSelectedChannel(e),
     }),
-    p = (0, u.qs)("DisableAllNotificationSounds", {
+    j = (0, u.qs)("DisableAllNotificationSounds", {
         useTitle: () => f.intl.string(f.t["2ZhCOT"]),
         useSubtitle: () => f.intl.string(f.t["+B0XLC"]),
         useValue: () => (0, s.e7)([d.Z], () => d.Z.getDisableAllSounds()),
-        setValue: (e) => a.default.toggleDisableAllSounds(e),
+        setValue: (e) => r.default.toggleDisableAllSounds(e),
     }),
-    j = (0, u.$l)("NotificationSoundsSettingList", {
+    p = (0, u.$l)("NotificationSoundsSettingList", {
         collapseAfter: 4,
         useCollapsibleTitle: (e, t) =>
             e
@@ -196,5 +196,5 @@ let b = [
                 children: t,
             });
         },
-        layout: [b[0].node, x, b[1].node, p, ...b.slice(2).map((e) => e.node)],
+        getLayout: () => [b[0].node, x, b[1].node, j, ...b.slice(2).map((e) => e.node)],
     });

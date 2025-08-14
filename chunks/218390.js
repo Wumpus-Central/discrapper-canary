@@ -39,8 +39,8 @@ var i = n(255367),
     k = n(140465),
     L = n(695349),
     B = n(46062),
-    M = n(717401),
-    U = n(286961),
+    M = n(347896),
+    U = n(717401),
     V = n(533525),
     G = n(232076),
     F = n(736519),
@@ -266,7 +266,7 @@ function eo(e) {
     var t, n;
     let { className: r, config: s } = e,
         l = (0, c.e7)([E.Z], () => E.Z.useReducedMotion) ? s.getStaticImageUrl() : s.getAnimatedImageUrl(),
-        o = (0, M.Tl)(null != (t = s.gradientConfig) ? t : void 0),
+        o = (0, U.Tl)(null != (t = s.gradientConfig) ? t : void 0),
         d = { color: null != (n = s.textColor) ? n : "var(--always-white)" };
     return (0, i.jsxs)("div", {
         className: a()($.giftCardPromotion, r),
@@ -328,7 +328,7 @@ function eo(e) {
 }
 function ec() {
     var e;
-    let t = null == (e = (0, U.Z)()) ? void 0 : e.billingSettingsMarketingBanner;
+    let t = null == (e = (0, M.Z)()) ? void 0 : e.billingSettingsMarketingBanner;
     return null != t
         ? (0, i.jsx)(eo, { config: t })
         : (0, i.jsxs)("div", {

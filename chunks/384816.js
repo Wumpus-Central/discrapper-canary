@@ -12,8 +12,8 @@ var l = n(442837),
     f = n(785717),
     p = n(250822),
     m = n(771362),
-    b = n(280885),
-    g = n(819602),
+    g = n(280885),
+    b = n(819602),
     j = n(78806),
     y = n(900927),
     O = n(678738),
@@ -37,7 +37,7 @@ function I(e) {
             (null == I ? void 0 : I.bio) != null &&
                 (null == I ? void 0 : I.bio) !== "" &&
                 !S &&
-                (0, r.jsx)(b.Z, {
+                (0, r.jsx)(g.Z, {
                     userBio: I.bio,
                     setLineClamp: !1,
                 }),
@@ -75,7 +75,7 @@ function I(e) {
                 (0, r.jsx)(O.Z, {
                     heading: v.intl.string(v.t["3fe7U1"]),
                     scrollIntoView: P === h.Tb.CONNECTIONS,
-                    children: (0, r.jsx)(g.ZP, {
+                    children: (0, r.jsx)(b.ZP, {
                         connectedAccounts: A,
                         className: _.connections,
                         userId: t.id,
@@ -87,7 +87,7 @@ function I(e) {
                     heading: v.intl.string(v.t.PHjkRE),
                     children: C.map((e) =>
                         (0, r.jsx)(
-                            g.tH,
+                            b.tH,
                             {
                                 className: _.appsConnections,
                                 applicationRoleConnection: e,

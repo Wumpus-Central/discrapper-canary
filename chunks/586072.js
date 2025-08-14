@@ -3,6 +3,7 @@ n.d(t, {
     IW: () => s,
     aC: () => l,
     bT: () => i,
+    kR: () => c,
     z: () => o,
 });
 var r = n(818083);
@@ -68,6 +69,19 @@ let i = (0, r.B)({
                 id: 1,
                 label: "Enables users to see nag bar to activate server subscriptions",
                 config: { enableCreatorMonetizationNagActivateForUser: !0 },
+            },
+        ],
+    }),
+    c = (0, r.B)({
+        kind: "guild",
+        id: "2025-08_move_role_subscriptions_onboarding_from_server_settings_",
+        label: "Move Role Subscriptions Onboarding From Server Settings",
+        defaultConfig: { hideMonetizatonOnboardingInServerSettings: !1 },
+        treatments: [
+            {
+                id: 1,
+                label: "Only shows onboarding page if first visited from new home",
+                config: { hideMonetizatonOnboardingInServerSettings: !0 },
             },
         ],
     });

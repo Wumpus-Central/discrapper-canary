@@ -129,12 +129,17 @@ function z() {
         es = ei === o.z.NAMEPLATE_USER_SETTINGS_MENU_NEW_BADGE;
     r.useEffect(() => {
         es && er(U.L.TAKE_ACTION);
-    }, [es, er]),
+    }, [es, er]);
+    let [ea, el] = (0, j.US)([o.z.DISPLAY_NAME_STYLES_NEW_BADGE]),
+        eo = ea === o.z.DISPLAY_NAME_STYLES_NEW_BADGE;
+    r.useEffect(() => {
+        eo && el(U.L.TAKE_ACTION);
+    }, [eo, el]),
         r.useEffect(() => () => m.Z.wait(p.W3), []);
-    let [ea, el] = r.useState(!1),
-        { showRedesign: eo } = w.b.useExperiment({ location: "profile customization" }),
-        ec = !J,
-        ed = r.useRef(null);
+    let [ec, ed] = r.useState(!1),
+        { showRedesign: eu } = w.b.useExperiment({ location: "profile customization" }),
+        em = !J,
+        ep = r.useRef(null);
     return t
         ? (0, i.jsx)(g.Z, {})
         : (0, i.jsxs)(f.Gt, {
@@ -176,26 +181,26 @@ function z() {
                       ),
                       children: (0, i.jsx)(B.Z, {}),
                   }),
-                  eo && (0, i.jsx)(T.Z, {}),
+                  eu && (0, i.jsx)(T.Z, {}),
                   (0, i.jsx)(c.$, {
-                      innerRef: ed,
-                      onChange: (e) => el(e),
+                      innerRef: ep,
+                      onChange: (e) => ed(e),
                       threshold: 0.25,
-                      active: ec,
+                      active: em,
                       children: (0, i.jsx)("div", {
-                          ref: ed,
+                          ref: ep,
                           children: (0, i.jsx)(I.Z, {
                               user: e,
-                              shouldShow: ec,
-                              isVisible: ea,
+                              shouldShow: em,
+                              isVisible: ec,
                           }),
                       }),
                   }),
-                  ec &&
+                  em &&
                       !q &&
                       (0, i.jsx)(C.p, {
                           className: G.floatingNitroUpsell,
-                          showUpsell: ec && !ea,
+                          showUpsell: em && !ec,
                           text: V.intl.format(V.t.TmfgIy, { onClick: () => (0, O.y)({ analyticsSource: $ }) }),
                           textVariant: "heading-md/medium",
                           button: (0, i.jsxs)(u.gtL, {
@@ -206,8 +211,8 @@ function z() {
                                   D.default.track(M.rMx.TRY_IT_OUT_PRESET_CLICKED, {
                                       cta_variant: "floating_action_button",
                                   }),
-                                      null == ed ||
-                                          null == (e = ed.current) ||
+                                      null == ep ||
+                                          null == (e = ep.current) ||
                                           e.scrollIntoView({ behavior: "smooth" });
                               },
                               color: d.zx.Colors.GREEN,

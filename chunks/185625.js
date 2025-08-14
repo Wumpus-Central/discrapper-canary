@@ -275,6 +275,7 @@ let M = (e, t, n) => {
                 email_token: void 0,
                 application_id: void 0,
                 entrypoint: void 0,
+                widget_id: void 0,
             },
             l = {
                 version: i,
@@ -367,6 +368,12 @@ let M = (e, t, n) => {
                 guild_id: t.contextualGuildId,
                 channel_id: t.contextualChannelId,
                 entrypoint: t.entrypoint,
+            });
+        else if (t.name === f.b.WIDGET)
+            return E(m({}, l, s), {
+                name: t.name,
+                user_id: t.user_id,
+                widget_id: t.widget_id,
             });
         return null;
     };

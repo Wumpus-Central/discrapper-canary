@@ -1,13 +1,13 @@
-n.d(t, { Z: () => r });
+n.d(t, { Z: () => a });
 var i = n(255367),
     l = n(120356),
     s = n.n(l),
     o = n(481060),
-    a = n(873395);
-function r(e) {
-    let { icon: t, title: n, onClick: l, active: r } = e;
+    r = n(873395);
+function a(e) {
+    let { icon: t, title: n, onClick: l, active: a } = e;
     return (0, i.jsxs)(o.P3F, {
-        className: s()(a.item, r && a.active),
+        className: s()(r.item, a && r.active),
         onClick: l,
         children: [
             (0, i.jsx)(t, {

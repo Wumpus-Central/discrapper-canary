@@ -1,154 +1,137 @@
-n.d(t, { default: () => _ }), n(388685);
+n.d(t, { default: () => g }), n(388685);
 var i = n(255367),
     s = n(73800),
-    r = n(755721),
     a = n(481060),
-    l = n(626135),
-    c = n(115345),
-    o = n(57927),
-    d = n(273236),
-    m = n(931839),
-    x = n(905987),
-    h = n(789662),
-    u = n(981631),
-    j = n(388032),
-    g = n(920178);
-function _(e) {
-    let { onClose: t, transitionState: n, dismissable: o, guildPain: _, myUsage: v } = e,
-        [f, N] = s.useState(m.O.Intro),
-        { submitted: p, submitting: C, saveSettings: y } = (0, c.vo)(t),
-        { guildPlans: T, overrideGuild: w, getDebug: O } = (0, c.F6)(_, v),
-        I = s.useRef(null);
+    r = n(626135),
+    l = n(115345),
+    c = n(57927),
+    o = n(273236),
+    d = n(931839),
+    m = n(905987),
+    x = n(789662),
+    h = n(981631),
+    u = n(388032),
+    j = n(920178);
+function g(e) {
+    let { onClose: t, transitionState: n, dismissable: c, guildPain: g, myUsage: b } = e,
+        [v, f] = s.useState(d.O.Intro),
+        { submitted: p, submitting: N, saveSettings: C } = (0, l.vo)(t),
+        { guildPlans: y, overrideGuild: w, getDebug: T } = (0, l.F6)(g, b),
+        O = s.useRef(null);
     return (
         s.useEffect(() => {
-            l.default.track(u.rMx.OPEN_MODAL, { type: "notification_migration_modal" });
+            r.default.track(h.rMx.OPEN_MODAL, { type: "notification_migration_modal" });
         }, []),
         (0, i.jsxs)(a.Y0X, {
-            className: g.__invalid_modal,
+            className: j.__invalid_modal,
             transitionState: n,
-            "aria-label": j.intl.string(j.t.HcoRu7),
+            "aria-label": u.intl.string(u.t.HcoRu7),
             size: a.CgR.DYNAMIC,
             parentComponent: "NotificationMigrationModal",
             children: [
-                (0, i.jsx)(m.Z, {
-                    selectedTab: f,
-                    onClick: N,
+                (0, i.jsx)(d.Z, {
+                    selectedTab: v,
+                    onClick: f,
                     submitted: p,
                 }),
-                f === m.O.Intro
-                    ? (0, i.jsx)(d.Z, { ref: I })
-                    : f === m.O.Customize
-                      ? (0, i.jsx)(b, {
-                            guildPlans: T,
+                v === d.O.Intro
+                    ? (0, i.jsx)(o.Z, { ref: O })
+                    : v === d.O.Customize
+                      ? (0, i.jsx)(_, {
+                            guildPlans: y,
                             overrideGuild: w,
-                            getDebug: O,
+                            getDebug: T,
                         })
-                      : (0, i.jsx)(x.Z, {
-                            count: Object.values(T).filter((e) => {
+                      : (0, i.jsx)(m.Z, {
+                            count: Object.values(y).filter((e) => {
                                 var t;
-                                return (null != (t = e.overrideMode) ? t : e.mode) === h.AR.UseGreyDot;
+                                return (null != (t = e.overrideMode) ? t : e.mode) === x.AR.UseGreyDot;
                             }).length,
                         }),
                 (0, i.jsxs)(a.mzw, {
-                    className: g.buttons,
+                    className: j.buttons,
                     children: [
                         (0, i.jsxs)("div", {
-                            className: g.__invalid_left,
+                            className: j.__invalid_left,
                             children: [
-                                o || (f !== m.O.Tips && f !== m.O.Customize)
+                                c || (v !== d.O.Tips && v !== d.O.Customize)
                                     ? null
                                     : (0, i.jsx)(a.eee, {
-                                          className: g.dismiss,
+                                          className: j.dismiss,
                                           href: "https://dis.gd/better-muting",
                                           children: (0, i.jsx)(a.Text, {
                                               variant: "text-sm/semibold",
                                               color: "interactive-normal",
-                                              children: j.intl.string(j.t.hvVgAQ),
+                                              children: u.intl.string(u.t.hvVgAQ),
                                           }),
                                       }),
-                                o && f === m.O.Intro
+                                c && v === d.O.Intro
                                     ? (0, i.jsx)(a.P3F, {
-                                          className: g.dismiss,
+                                          className: j.dismiss,
                                           onClick: t,
                                           children: (0, i.jsx)(a.Text, {
                                               variant: "text-sm/semibold",
                                               color: "interactive-normal",
-                                              children: j.intl.string(j.t.WAI6xs),
+                                              children: u.intl.string(u.t.WAI6xs),
                                           }),
                                       })
                                     : null,
-                                o && f === m.O.Customize
+                                c && v === d.O.Customize
                                     ? (0, i.jsx)(a.P3F, {
-                                          className: g.dismiss,
+                                          className: j.dismiss,
                                           onClick: t,
                                           children: (0, i.jsx)(a.Text, {
                                               variant: "text-sm/semibold",
                                               color: "interactive-normal",
-                                              children: j.intl.string(j.t["ETE/oK"]),
+                                              children: u.intl.string(u.t["ETE/oK"]),
                                           }),
                                       })
                                     : null,
                             ],
                         }),
                         (0, i.jsxs)("div", {
-                            className: g.right,
+                            className: j.right,
                             children: [
-                                f === m.O.Customize
+                                v === d.O.Customize
                                     ? (0, i.jsx)(a.Text, {
-                                          className: g.warning,
+                                          className: j.warning,
                                           variant: "text-xs/medium",
                                           color: "text-muted",
-                                          children: j.intl.string(j.t.nlpqxM),
+                                          children: u.intl.string(u.t.nlpqxM),
                                       })
                                     : null,
-                                f !== m.O.Customize || p
+                                v !== d.O.Customize || p
                                     ? null
-                                    : (0, i.jsxs)(r.zx, {
-                                          onClick: () => N(m.O.Intro),
-                                          color: r.zx.Colors.TRANSPARENT,
-                                          children: [
-                                              (0, i.jsx)(a.whL, {
-                                                  size: "xs",
-                                                  color: "currentColor",
-                                              }),
-                                              " ",
-                                              j.intl.string(j.t["13/7kZ"]),
-                                          ],
+                                    : (0, i.jsx)(a.zxk, {
+                                          icon: a.whL,
+                                          onClick: () => f(d.O.Intro),
+                                          variant: "secondary",
+                                          text: u.intl.string(u.t["13/7kZ"]),
                                       }),
-                                f === m.O.Intro
-                                    ? (0, i.jsxs)(r.zx, {
+                                v === d.O.Intro
+                                    ? (0, i.jsx)(a.zxk, {
+                                          icon: a.ZSh,
+                                          iconPosition: "end",
                                           onClick: () => {
                                               var e;
-                                              (null == (e = I.current) ? void 0 : e.maybeChangeToAfterTab()) &&
-                                                  N(m.O.Customize);
+                                              (null == (e = O.current) ? void 0 : e.maybeChangeToAfterTab()) &&
+                                                  f(d.O.Customize);
                                           },
-                                          children: [
-                                              j.intl.string(j.t.uw9zIy),
-                                              " ",
-                                              (0, i.jsx)(a.ZSh, {
-                                                  size: "xs",
-                                                  color: "currentColor",
-                                              }),
-                                          ],
+                                          text: u.intl.string(u.t.uw9zIy),
                                       })
-                                    : f === m.O.Customize
-                                      ? (0, i.jsxs)(r.zx, {
+                                    : v === d.O.Customize
+                                      ? (0, i.jsx)(a.zxk, {
+                                            icon: a.dz2,
+                                            iconPosition: "end",
                                             onClick: () => {
-                                                N(m.O.Tips), y(T);
+                                                f(d.O.Tips), C(y);
                                             },
-                                            children: [
-                                                j.intl.string(j.t["1Qm829"]),
-                                                " ",
-                                                (0, i.jsx)(a.dz2, {
-                                                    size: "xs",
-                                                    color: "currentColor",
-                                                }),
-                                            ],
+                                            text: u.intl.string(u.t["1Qm829"]),
                                         })
                                       : (0, i.jsx)(a.zxk, {
                                             variant: "primary",
-                                            text: j.intl.string(j.t.cpT0Cg),
-                                            loading: C,
+                                            text: u.intl.string(u.t.cpT0Cg),
+                                            loading: N,
                                             onClick: t,
                                         }),
                             ],
@@ -159,28 +142,28 @@ function _(e) {
         })
     );
 }
-function b(e) {
+function _(e) {
     let { guildPlans: t, overrideGuild: n } = e;
     return (0, i.jsxs)(a.Ttm, {
-        className: g.content,
+        className: j.content,
         children: [
             (0, i.jsxs)("div", {
-                className: g.header,
+                className: j.header,
                 children: [
                     (0, i.jsx)(a.X6q, {
                         variant: "heading-xl/bold",
                         color: "header-primary",
-                        children: j.intl.string(j.t["zBC2+f"]),
+                        children: u.intl.string(u.t["zBC2+f"]),
                     }),
                     (0, i.jsx)(a.Text, {
-                        className: g.__invalid_subtitle,
+                        className: j.__invalid_subtitle,
                         variant: "text-md/medium",
                         color: "header-secondary",
-                        children: j.intl.string(j.t["zE9e//"]),
+                        children: u.intl.string(u.t["zE9e//"]),
                     }),
                 ],
             }),
-            (0, i.jsx)(o.Z, {
+            (0, i.jsx)(c.Z, {
                 guildPlans: t,
                 overrideGuild: n,
             }),

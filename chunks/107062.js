@@ -1,4 +1,4 @@
-n.d(t, { ZP: () => D }), n(804061), n(704826), n(35282);
+n.d(t, { ZP: () => x }), n(804061), n(704826), n(35282);
 var r = n(255367),
     i = n(73800),
     o = n(442837),
@@ -52,12 +52,33 @@ function C(e) {
     }
     return e;
 }
-let R = (e, t) =>
+function R(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = P(e, t);
+    if (Object.getOwnPropertySymbols) {
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+    }
+    return i;
+}
+function P(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = {},
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    return i;
+}
+let w = (e, t) =>
         A.intl.formatToPlainString(A.t.tAwI1t, {
             username: t.username,
             activity: e.extra.activity_name,
         }),
-    P = (e, t, n) => {
+    D = (e, t, n) => {
         let r = A.t["bES+y8"],
             i = m.ZP.getName(t.guild_id, t.id, n),
             o = e.extra.activity_name;
@@ -68,7 +89,7 @@ let R = (e, t) =>
             })
             .replaceAll("*", "");
     },
-    w = (e) => {
+    L = (e) => {
         let { entry: t, channel: n, users: r, countOthers: i } = e,
             o = A.t["7j/5mp"];
         return A.intl
@@ -80,95 +101,108 @@ let R = (e, t) =>
             })
             .replaceAll("*", "");
     },
-    D = (e) => {
-        let { channel: t, entry: n, onReaction: m, onVoiceChannelPreview: N, disableActivityProfileLinks: D } = e,
-            { largeImage: L } = (0, g.rv)({
+    x = (e) => {
+        let { channel: t, entry: n, onReaction: m, onVoiceChannelPreview: N, disableActivityProfileLinks: P } = e,
+            { largeImage: x } = (0, g.rv)({
                 entry: n,
                 showCoverImage: !1,
             }),
-            { user: x, details: M, activity: j, embeddedActivity: k } = (0, T.n)(n),
-            { primaryColor: U, secondaryColor: G } = (0, O.Z)(null == L ? void 0 : L.src),
-            B = (0, o.e7)([p.default], () => p.default.locale),
-            { displayParticipants: Z, participant1: F, participant2: V, numOtherParticipants: H } = (0, E.Z)(n, 3),
-            Y = () => {
+            { user: M, details: j, activity: k, embeddedActivity: U } = (0, T.n)(n),
+            { primaryColor: G, secondaryColor: B } = (0, O.Z)(null == x ? void 0 : x.src),
+            Z = (0, o.e7)([p.default], () => p.default.locale),
+            { displayParticipants: F, participant1: V, participant2: H, numOtherParticipants: Y } = (0, E.Z)(n, 3),
+            W = () => {
                 d.__(f._b.TEXT, _.Ie.NORMAL, { applicationId: n.extra.application_id });
             },
-            W = i.useCallback(
+            K = i.useCallback(
                 (e) => {
-                    if ((null == L ? void 0 : L.src) == null || null == t || null == x) return;
+                    if ((null == x ? void 0 : x.src) == null || null == t || null == M) return;
                     let r =
-                        H > 0
-                            ? w({
+                        Y > 0
+                            ? L({
                                   entry: n,
                                   channel: t,
-                                  users: [F, V],
-                                  countOthers: H,
+                                  users: [V, H],
+                                  countOthers: Y,
                               })
-                            : P(n, t, x);
+                            : D(n, t, M);
                     return (0, y.C4)({
                         entry: n,
-                        applicationImageSrc: null == L ? void 0 : L.src,
-                        avatarSrcs: Z.map((e) => e.getAvatarURL(t.guild_id, 128)),
+                        applicationImageSrc: null == x ? void 0 : x.src,
+                        avatarSrcs: F.map((e) => e.getAvatarURL(t.guild_id, 128)),
                         description: r,
-                        timestamp: (0, b.yh)(n, B),
-                        colors: [U, G],
+                        timestamp: (0, b.yh)(n, Z),
+                        colors: [G, B],
                         channelId: e,
                     });
                 },
-                [null == L ? void 0 : L.src, t, Z, n, B, H, F, V, U, G, x],
+                [null == x ? void 0 : x.src, t, F, n, Z, Y, V, H, G, B, M],
             ),
-            { enabled: K } = s.c.useExperiment(
+            { enabled: z } = s.c.useExperiment(
                 { location: "MemberListAcitivtyContentPopout" },
                 { autoTrackExposure: !0 },
             );
-        if (null == x) return null;
-        let z = (0, r.jsx)(v.PZ, {
+        if (null == M) return null;
+        let q = (0, r.jsx)(v.PZ, {
                 location: v.Gt.POPOUT,
                 entry: n,
             }),
-            q = (0, r.jsx)(I.wG, {
+            X = (0, r.jsx)(I.wG, {
                 channel: t,
                 userDescription: (0, b.kr)(n) ? A.t.vPg1JS : A.t.rPqqtr,
                 title: n.extra.activity_name,
-                subtitle: M,
-                badges: z,
+                subtitle: j,
+                badges: q,
                 entry: n,
                 showCoverImage: !1,
-                onClickTitle: D ? void 0 : Y,
-                onClickSubtitle: D ? void 0 : Y,
-                onClickThumbnail: D ? void 0 : Y,
+                onClickTitle: P ? void 0 : W,
+                onClickSubtitle: P ? void 0 : W,
+                onClickThumbnail: P ? void 0 : W,
             }),
-            X = (0, l.Z)(j, S.xjy.JOIN) || (0, c.Z)(j),
-            Q = X
+            Q = (0, l.Z)(k, S.xjy.JOIN) || (0, c.Z)(k),
+            J = Q
                 ? (0, r.jsx)(u.Z, {
-                      embeddedActivity: k,
-                      activity: j,
-                      user: x,
-                      ButtonComponent: (e) => (0, r.jsx)(I.Ll, C({ IconComponent: a.YVR }, e)),
+                      embeddedActivity: U,
+                      activity: k,
+                      user: M,
+                      ButtonComponent: (e) => {
+                          let { children: t, size: n } = e,
+                              i = R(e, ["children", "size"]);
+                          return (0, r.jsx)(
+                              I.Ll,
+                              C(
+                                  {
+                                      icon: a.YVR,
+                                      text: t,
+                                  },
+                                  i,
+                              ),
+                          );
+                      },
                   })
                 : null,
-            J = K ? a.iWm : a.jje,
-            $ = D
+            $ = z ? a.iWm : a.jje,
+            ee = P
                 ? null
                 : (0, r.jsx)(I.Ll, {
-                      onClick: Y,
-                      IconComponent: J,
-                      children: A.intl.string(A.t.GDWYR0),
+                      onClick: W,
+                      icon: $,
+                      text: A.intl.string(A.t.GDWYR0),
                   }),
-            ee = [X && !D ? Q : $].filter(h.lm);
+            et = [Q && !P ? J : ee].filter(h.lm);
         return (0, r.jsxs)(I.yR, {
             children: [
-                q,
+                X,
                 (0, r.jsx)(I.St, {
                     children: (0, r.jsx)(I.WT, {
                         onReaction: m,
                         onVoiceChannelPreview: N,
-                        user: x,
+                        user: M,
                         channel: t,
-                        generateReactionImage: W,
-                        reactionImageAltText: R(n, x),
+                        generateReactionImage: K,
+                        reactionImageAltText: w(n, M),
                         entry: n,
-                        buttons: ee,
+                        buttons: et,
                     }),
                 }),
             ],

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b }), n(388685);
+n.d(t, { Z: () => g }), n(388685);
 var r = n(255367),
     l = n(73800),
     i = n(120356),
@@ -59,14 +59,14 @@ function p(e) {
 }
 function m(e) {
     let { imageSrc: t, gameName: n, applicationId: l, userId: i, className: f, disableHoverEffect: m } = e,
-        b = (0, s.Z)({
+        g = (0, s.Z)({
             location: "GameCover",
             applicationId: l,
             source: c.m1.UserProfile,
             sourceUserId: i,
             trackEntryPointImpression: !0,
         });
-    if (null == b)
+    if (null == g)
         return (0, r.jsx)("div", {
             className: f,
             children: (0, r.jsx)(p, {
@@ -74,10 +74,10 @@ function m(e) {
                 gameName: n,
             }),
         });
-    let g = d.intl.formatToPlainString(d.t["8QLQBw"], { gameName: null != n ? n : d.intl.string(d.t.GIWFlJ) });
+    let b = d.intl.formatToPlainString(d.t["8QLQBw"], { gameName: null != n ? n : d.intl.string(d.t.GIWFlJ) });
     return (0, r.jsx)(a.P3F, {
-        onClick: b,
-        "aria-label": g,
+        onClick: g,
+        "aria-label": b,
         className: o()(u.clickable, !m && u.hoverEffect, f),
         children: (0, r.jsx)(p, {
             imageSrc: t,
@@ -85,7 +85,7 @@ function m(e) {
         }),
     });
 }
-function b(e) {
+function g(e) {
     var { applicationId: t, userId: n, className: l, disableInteraction: i = !1 } = e,
         a = (function (e, t) {
             if (null == e) return {};

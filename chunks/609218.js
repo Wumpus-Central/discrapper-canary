@@ -85,7 +85,7 @@ function k(e) {
             return null != (e = (0, E.fr)(q)) ? e : C.intl.string(C.t.pj0XBA);
         }, [q]),
         Q = (0, y.Z)({ location: "PremiumUpsellPickerOverlay" }),
-        J = (0, T.Z)();
+        J = (0, T.Z)(A.Si.TIER_2);
     if (Q) {
         let e;
         e = V ? ((0, g.rO)() ? D.Z : L.Z) : (0, g.rO)() ? x.Z : M.Z;

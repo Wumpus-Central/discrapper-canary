@@ -1,8 +1,8 @@
 n.d(t, { Z: () => C }), n(388685);
 var i = n(255367),
     s = n(73800),
-    r = n(120356),
-    a = n.n(r),
+    a = n(120356),
+    r = n.n(a),
     l = n(392711),
     c = n.n(l),
     o = n(442837),
@@ -17,7 +17,7 @@ var i = n(255367),
     b = n(981631),
     v = n(388032),
     f = n(865311);
-function N(e) {
+function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -42,7 +42,7 @@ function N(e) {
     }
     return e;
 }
-function p(e, t) {
+function N(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -62,21 +62,21 @@ function p(e, t) {
 }
 function C(e) {
     let { guildPlans: t, overrideGuild: n } = e,
-        r = (0, o.e7)([u.ZP], () => u.ZP.getFlattenedGuildIds()),
-        [a, l] = s.useMemo(
+        a = (0, o.e7)([u.ZP], () => u.ZP.getFlattenedGuildIds()),
+        [r, l] = s.useMemo(
             () =>
                 c()(t)
                     .values()
                     .sortBy((e) => {
-                        let t = r.indexOf(e.guildId);
-                        return -1 === t ? r.length : t;
+                        let t = a.indexOf(e.guildId);
+                        return -1 === t ? a.length : t;
                     })
                     .partition((e) => {
                         var t;
                         return (null != (t = e.overrideMode) ? t : e.mode) === _.AR.UseGreyDot;
                     })
                     .value(),
-            [t, r],
+            [t, a],
         ),
         d = s.useCallback(
             (e) => {
@@ -102,14 +102,14 @@ function C(e) {
             (0, i.jsx)(y, {
                 header: v.intl.string(v.t.f6pf39),
                 subheader: v.intl.string(v.t.izeB6e),
-                guildPlans: a,
+                guildPlans: r,
                 onClick: d,
             }),
         ],
     });
 }
 function y(e) {
-    let { header: t, subheader: n, guildPlans: s, onClick: r } = e;
+    let { header: t, subheader: n, guildPlans: s, onClick: a } = e;
     return (0, i.jsxs)("div", {
         className: f.column,
         children: [
@@ -135,10 +135,10 @@ function y(e) {
                     className: f.guilds,
                     children: s.map((e) =>
                         (0, i.jsx)(
-                            T,
+                            w,
                             {
                                 plan: e,
-                                onClick: r,
+                                onClick: a,
                             },
                             e.guildId,
                         ),
@@ -148,16 +148,16 @@ function y(e) {
         ],
     });
 }
-function T(e) {
+function w(e) {
     var t;
     let { plan: n, onClick: s } = e,
-        r = (0, o.e7)([h.Z], () => h.Z.getGuild(n.guildId));
-    if (null == r) return null;
+        a = (0, o.e7)([h.Z], () => h.Z.getGuild(n.guildId));
+    if (null == a) return null;
     let l = (null != (t = n.overrideMode) ? t : n.mode) === _.AR.UseGreyDot;
     function c() {
         g.default.track(
             b.rMx.NOTIFICATION_MIGRATION_GUILD_CHANGED,
-            p(N({}, (0, m.hH)(n.guildId)), {
+            N(p({}, (0, m.hH)(n.guildId)), {
                 is_selected: !l,
                 is_muted: j.ZP.isMuted(n.guildId),
                 notification_setting: j.ZP.getMessageNotifications(n.guildId),
@@ -171,7 +171,7 @@ function T(e) {
                 (0, i.jsx)(d.Text, {
                     variant: "text-md/semibold",
                     color: "header-primary",
-                    children: r.name,
+                    children: a.name,
                 }),
                 (0, i.jsxs)("div", {
                     className: f.tooltipRow,
@@ -222,8 +222,8 @@ function T(e) {
         children: (e) =>
             (0, i.jsxs)(
                 d.P3F,
-                p(N({}, e), {
-                    className: a()(f.guild, l ? f.selected : void 0),
+                N(p({}, e), {
+                    className: r()(f.guild, l ? f.selected : void 0),
                     onClick: c,
                     children: [
                         (0, i.jsx)(d.owK, {
@@ -235,7 +235,7 @@ function T(e) {
                         (0, i.jsx)(x.Z, {
                             "aria-hidden": !0,
                             className: f.guildIcon,
-                            guild: r,
+                            guild: a,
                             size: x.Z.Sizes.MEDIUM,
                             active: !0,
                             tabIndex: -1,

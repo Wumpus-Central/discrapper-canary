@@ -12,13 +12,13 @@ function u(e) {
         { mutualFriendsCount: u, mutualGuilds: f } = (0, i.Z)(t),
         p = null == f ? void 0 : f.length,
         m = (0, l.Z)(t),
-        b = (0, r.k)({ location: "useUserProfileModalV2TabBarItems" }),
-        g = (0, o.Z)(t.id),
+        g = (0, r.k)({ location: "useUserProfileModalV2TabBarItems" }),
+        b = (0, o.Z)(t.id),
         j = [],
         y = t.id === (null == n ? void 0 : n.id),
-        O = g.length > 0;
+        O = b.length > 0;
     return (
-        b &&
+        g &&
             (O || y) &&
             j.push({
                 text: d.intl.string(d.t.laViw8),

@@ -1,13 +1,14 @@
 n.d(t, {
-    Ek: () => P,
-    HJ: () => _,
-    LE: () => T,
-    Z2: () => E,
-    Zc: () => O,
-    fI: () => I,
-    hE: () => Z,
-    ur: () => C,
+    Ek: () => R,
+    HJ: () => C,
+    LE: () => w,
+    Z2: () => Z,
+    Zc: () => E,
+    fI: () => T,
+    hE: () => N,
+    ur: () => I,
 }),
+    n(781311),
     n(388685),
     n(539854),
     n(290780),
@@ -18,16 +19,18 @@ var r = n(255367),
     a = n(913527),
     s = n.n(a),
     o = n(772848),
-    c = n(481060),
-    u = n(592125),
-    d = n(594174),
-    h = n(5192),
-    p = n(738018),
-    f = n(607802),
-    g = n(532428),
-    m = n(981631),
-    b = n(388032);
-function y(e) {
+    c = n(442837),
+    u = n(481060),
+    d = n(592125),
+    h = n(594174),
+    p = n(5192),
+    f = n(748610),
+    g = n(738018),
+    m = n(607802),
+    b = n(532428),
+    y = n(981631),
+    x = n(388032);
+function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -52,7 +55,7 @@ function y(e) {
     }
     return e;
 }
-function x(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -70,62 +73,95 @@ function x(e, t) {
         e
     );
 }
-function j(e) {
+function O(e) {
+    let { searchContext: t, filter: n, queryString: r } = e,
+        l = (0, c.e7)([g.Z], () => g.Z.getState(t)),
+        a = i.useMemo(() => {
+            let e = l.autocompletes[0];
+            return null != e && e.group === n ? e.results : [];
+        }, [l.autocompletes, n]),
+        s = i.useMemo(() => {
+            let e = b.ZP[n].key;
+            return "".concat(e, " ").concat(r);
+        }, [n, r]),
+        o = i.useCallback(() => {
+            let e = (0, m.kG)(s),
+                n = (0, m.g9)(e, s.length - 1, s.length - 1);
+            f.Z.updateAutocompleteQuery(t, e, n);
+        }, [t, s]),
+        u = i.useCallback(() => {
+            o();
+        }, [o]);
+    return (
+        i.useEffect(() => {
+            r.trim().length > 0 && o();
+        }, [s, t, o, r]),
+        {
+            filterAutocompleteResults: a,
+            handleFocusFilter: u,
+        }
+    );
+}
+function v(e) {
     let { user: t, guildId: n, channelId: r } = e,
-        i = h.ZP.getName(n, r, t);
+        i = p.ZP.getName(n, r, t);
     return {
         value: t.id,
         label: i,
         key: t.id,
     };
 }
-function _(e, t) {
+function C(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [],
-        r = i.useMemo(() => (0, f.s5)(e), [e]),
-        l = i.useMemo(() => (0, f.AH)(e), [e]),
+        r = i.useMemo(() => (0, m.s5)(e), [e]),
+        l = i.useMemo(() => (0, m.AH)(e), [e]),
         [a, s] = i.useState(n),
         [o, c] = i.useState(""),
-        u = i.useMemo(() => {
-            let n = p.Z.getFilterResults(e, t, o);
-            if (0 === n.length && 0 === a.length) return [];
-            let i = [],
-                s = new Set();
+        { filterAutocompleteResults: u, handleFocusFilter: d } = O({
+            searchContext: e,
+            filter: t,
+            queryString: o,
+        }),
+        p = i.useMemo(() => {
+            if (0 === u.length && 0 === a.length) return [];
+            let e = [],
+                t = new Set();
             return (
-                n.length > 0 &&
-                    n.forEach((e) => {
-                        let t = e.user,
-                            n = j({
-                                user: t,
+                u.length > 0 &&
+                    u.forEach((n) => {
+                        let i = n.user,
+                            a = v({
+                                user: i,
                                 guildId: r,
                                 channelId: l,
                             });
-                        s.add(t.id), i.push(n);
+                        t.add(i.id), e.push(a);
                     }),
                 a.length > 0 &&
-                    a.forEach((e) => {
-                        if (s.has(e)) return;
-                        let t = d.default.getUser(e);
-                        if (null == t) return;
-                        let n = j({
-                            user: t,
+                    a.forEach((n) => {
+                        if (t.has(n)) return;
+                        let i = h.default.getUser(n);
+                        if (null == i) return;
+                        let a = v({
+                            user: i,
                             guildId: r,
                             channelId: l,
                         });
-                        s.add(e), i.unshift(n);
+                        t.add(n), e.unshift(a);
                     }),
-                i
+                e
             );
-        }, [e, t, o, a, r, l]),
-        h = i.useCallback(() => {
+        }, [u, a, r, l]),
+        f = i.useCallback(() => {
             s([]), c("");
         }, []),
-        m = i.useCallback(
+        g = i.useCallback(
             (e) => {
                 if (0 === a.length) return null;
-                let t = g.ZP[e];
+                let t = b.ZP[e];
                 return a
                     .map((e) => {
-                        let n = d.default.getUser(e);
+                        let n = h.default.getUser(e);
                         return "".concat(t.key, " ").concat(null == n ? void 0 : n.username);
                     })
                     .join(" ");
@@ -133,15 +169,16 @@ function _(e, t) {
             [a],
         );
     return {
-        options: u,
+        options: p,
         query: a,
         setQuery: s,
         setQueryString: c,
-        handleClearFilter: h,
-        getApplyQueryString: m,
+        handleClearFilter: f,
+        getApplyQueryString: g,
+        handleFocusFilter: d,
     };
 }
-function O(e) {
+function E(e) {
     return {
         filter: !1,
         closeOnSelect: !1,
@@ -149,12 +186,12 @@ function O(e) {
             (t) => {
                 var n;
                 if (null == t) return;
-                let i = d.default.getUser(t.value);
+                let i = h.default.getUser(t.value);
                 if (null == i) return;
                 let l = null != (n = i.getAvatarURL(e, 80)) ? n : i.avatar;
-                return (0, r.jsx)(c.qEK, {
+                return (0, r.jsx)(u.qEK, {
                     src: l,
-                    size: c.EFr.SIZE_16,
+                    size: u.EFr.SIZE_16,
                     "aria-hidden": !0,
                 });
             },
@@ -162,9 +199,9 @@ function O(e) {
         ),
         renderOptionSuffix: i.useCallback((e) => {
             if (null == e) return;
-            let t = d.default.getUser(e.value);
+            let t = h.default.getUser(e.value);
             if (null != t)
-                return (0, r.jsx)(c.Text, {
+                return (0, r.jsx)(u.Text, {
                     variant: "text-md/normal",
                     color: "text-muted",
                     children: t.username,
@@ -172,53 +209,57 @@ function O(e) {
         }, []),
     };
 }
-function v(e) {
+function S(e) {
     let { channel: t } = e;
     return {
         value: t.id,
-        label: (0, f.nl)(t),
+        label: (0, m.nl)(t),
         key: t.id,
     };
 }
-function C(e) {
+function I(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [],
         [n, r] = i.useState(t),
         [l, a] = i.useState(""),
-        s = i.useMemo(() => {
-            let t = p.Z.getFilterResults(e, m.dCx.FILTER_IN, l);
-            if (0 === t.length && 0 === n.length) return [];
-            let r = [],
-                i = new Set();
+        { filterAutocompleteResults: s, handleFocusFilter: o } = O({
+            searchContext: e,
+            filter: y.dCx.FILTER_IN,
+            queryString: l,
+        }),
+        c = i.useMemo(() => {
+            if (0 === s.length && 0 === n.length) return [];
+            let e = [],
+                t = new Set();
             return (
-                t.length > 0 &&
-                    t.forEach((e) => {
-                        let t = e.channel,
-                            n = v({ channel: t });
-                        i.add(t.id), r.push(n);
+                s.length > 0 &&
+                    s.forEach((n) => {
+                        let r = n.channel,
+                            i = S({ channel: r });
+                        t.add(r.id), e.push(i);
                     }),
                 n.length > 0 &&
-                    n.forEach((e) => {
-                        if (i.has(e)) return;
-                        let t = u.Z.getChannel(e);
-                        if (null == t) return;
-                        let n = v({ channel: t });
-                        i.add(e), r.unshift(n);
+                    n.forEach((n) => {
+                        if (t.has(n)) return;
+                        let r = d.Z.getChannel(n);
+                        if (null == r) return;
+                        let i = S({ channel: r });
+                        t.add(n), e.unshift(i);
                     }),
-                r
+                e
             );
-        }, [e, l, n]),
-        o = i.useCallback(() => {
+        }, [s, n]),
+        u = i.useCallback(() => {
             r([]), a("");
         }, []),
-        c = i.useCallback(
+        h = i.useCallback(
             (e) => {
                 if (0 === n.length) return null;
-                let t = g.ZP[e];
+                let t = b.ZP[e];
                 return n
                     .map((e) => {
-                        let n = u.Z.getChannel(e);
+                        let n = d.Z.getChannel(e);
                         if (null == n) return;
-                        let r = (0, f.nl)(n);
+                        let r = (0, m.nl)(n);
                         return "".concat(t.key, " ").concat(r);
                     })
                     .join(" ");
@@ -226,73 +267,90 @@ function C(e) {
             [n],
         );
     return {
-        options: s,
+        options: c,
         query: n,
         setQuery: r,
         setQueryString: a,
-        handleClearFilter: o,
-        getApplyQueryString: c,
+        handleClearFilter: u,
+        getApplyQueryString: h,
+        handleFocusFilter: o,
     };
 }
-function E(e) {
+function Z(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [],
         [n, r] = i.useState(t),
-        l = i.useMemo(() => {
-            let t = p.Z.getFilterResults(e, m.dCx.FILTER_HAS, "");
-            if (0 === t.length) return [];
-            let n = [];
+        { filterAutocompleteResults: l, handleFocusFilter: a } = O({
+            searchContext: e,
+            filter: y.dCx.FILTER_HAS,
+            queryString: "",
+        }),
+        s = i.useMemo(() => {
+            if (0 === l.length && 0 === n.length) return [];
+            let e = [],
+                t = new Set();
             return (
-                n.push(
-                    ...t.map((e) => {
-                        let { text: t } = e;
-                        return {
-                            value: t,
-                            label: t,
-                            key: t,
-                        };
+                n.length > 0 &&
+                    n.forEach((n) => {
+                        t.add(n),
+                            e.push({
+                                value: n,
+                                label: n,
+                                key: n,
+                            });
                     }),
-                ),
-                n
+                l.length > 0 &&
+                    l.forEach((n) => {
+                        let { text: r } = n;
+                        t.has(r) ||
+                            (e.push({
+                                value: r,
+                                label: r,
+                                key: r,
+                            }),
+                            t.add(r));
+                    }),
+                e
             );
-        }, [e]),
-        a = i.useCallback(() => {
+        }, [l, n]),
+        o = i.useCallback(() => {
             r([]);
         }, []),
-        s = i.useCallback(
+        c = i.useCallback(
             (e) => {
                 if (0 === n.length) return null;
-                let t = g.ZP[e];
+                let t = b.ZP[e];
                 return n.map((e) => "".concat(t.key, " ").concat(e)).join(" ");
             },
             [n],
         );
     return {
-        options: l,
+        options: s,
         query: n,
         setQuery: r,
-        handleClearFilter: a,
-        getApplyQueryString: s,
+        handleClearFilter: o,
+        getApplyQueryString: c,
+        handleFocusFilter: a,
     };
 }
-let S = () =>
+let P = () =>
     i.useMemo(() => {
         var e, t, n;
-        let r = g.ZP[m.dCx.FILTER_BEFORE],
-            i = g.ZP[m.dCx.FILTER_AFTER],
-            l = g.ZP[m.dCx.FILTER_ON];
+        let r = b.ZP[y.dCx.FILTER_BEFORE],
+            i = b.ZP[y.dCx.FILTER_AFTER],
+            l = b.ZP[y.dCx.FILTER_ON];
         return {
-            beforeFilter: null != (e = null == r ? void 0 : r.key) ? e : "".concat(b.intl.string(b.t["qZ+7BA"]), ":"),
-            afterFilter: null != (t = null == i ? void 0 : i.key) ? t : "".concat(b.intl.string(b.t.KSDx7O), ":"),
-            duringFilter: null != (n = null == l ? void 0 : l.key) ? n : "".concat(b.intl.string(b.t.h2NzSU), ":"),
+            beforeFilter: null != (e = null == r ? void 0 : r.key) ? e : "".concat(x.intl.string(x.t["qZ+7BA"]), ":"),
+            afterFilter: null != (t = null == i ? void 0 : i.key) ? t : "".concat(x.intl.string(x.t.KSDx7O), ":"),
+            duringFilter: null != (n = null == l ? void 0 : l.key) ? n : "".concat(x.intl.string(x.t.h2NzSU), ":"),
         };
     }, []);
-function I() {
+function T() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [],
         [t, n] = i.useState(e),
         r = i.useCallback(() => (0, o.Z)(), []),
         l = i.useCallback((e) => e.date.isValid(), []),
         a = i.useMemo(() => t.filter(l), [t, l]),
-        { beforeFilter: c, afterFilter: u, duringFilter: d } = S(),
+        { beforeFilter: c, afterFilter: u, duringFilter: d } = P(),
         h = i.useCallback(
             () => ({
                 query: c,
@@ -305,17 +363,17 @@ function I() {
             () => [
                 {
                     key: "Before",
-                    label: b.intl.string(b.t["ptL/DA"]),
+                    label: x.intl.string(x.t["ptL/DA"]),
                     value: c,
                 },
                 {
                     key: "After",
-                    label: b.intl.string(b.t.waQeER),
+                    label: x.intl.string(x.t.waQeER),
                     value: u,
                 },
                 {
                     key: "During",
-                    label: b.intl.string(b.t.LT5TnZ),
+                    label: x.intl.string(x.t.LT5TnZ),
                     value: d,
                 },
             ],
@@ -325,20 +383,20 @@ function I() {
             let { query: t, index: r } = e;
             n((e) => {
                 let n = [...e];
-                return (n[r] = x(y({}, n[r]), { query: t })), n;
+                return (n[r] = _(j({}, n[r]), { query: t })), n;
             });
         }, []),
         g = i.useCallback((e) => {
             let { date: t, index: r } = e;
             n((e) => {
                 let n = [...e];
-                return (n[r] = x(y({}, n[r]), { date: t })), n;
+                return (n[r] = _(j({}, n[r]), { date: t })), n;
             });
         }, []),
-        j = i.useCallback(() => {
+        m = i.useCallback(() => {
             n((e) => [...e, h()]);
         }, [h]),
-        _ = i.useCallback((e) => {
+        b = i.useCallback((e) => {
             n((t) => {
                 let n = [...t];
                 return n.splice(e, 1), n;
@@ -354,7 +412,7 @@ function I() {
                     : a
                           .map((e) => {
                               let { query: t, date: n } = e,
-                                  r = n.format(m.b2L);
+                                  r = n.format(y.b2L);
                               return "".concat(t, " ").concat(r);
                           })
                           .join(" "),
@@ -366,62 +424,62 @@ function I() {
         validDates: a,
         handleDateQueryChange: f,
         handleDateChange: g,
-        handleAddDateFilter: j,
-        handleRemoveDateFilter: _,
+        handleAddDateFilter: m,
+        handleRemoveDateFilter: b,
         handleClearDateFilter: O,
         getDateQueryString: v,
     };
 }
-function Z(e) {
-    let { beforeFilter: t, afterFilter: n, duringFilter: r } = S();
+function N(e) {
+    let { beforeFilter: t, afterFilter: n, duringFilter: r } = P();
     return i.useMemo(() => {
         let i = {
-                [m.dCx.FILTER_FROM]: [],
-                [m.dCx.FILTER_MENTIONS]: [],
-                [m.dCx.FILTER_HAS]: [],
-                [m.dCx.FILTER_IN]: [],
-                [m.dCx.FILTER_ON]: [],
-                [m.dCx.FILTER_BEFORE]: [],
-                [m.dCx.FILTER_AFTER]: [],
+                [y.dCx.FILTER_FROM]: [],
+                [y.dCx.FILTER_MENTIONS]: [],
+                [y.dCx.FILTER_HAS]: [],
+                [y.dCx.FILTER_IN]: [],
+                [y.dCx.FILTER_ON]: [],
+                [y.dCx.FILTER_BEFORE]: [],
+                [y.dCx.FILTER_AFTER]: [],
             },
             l = 0;
         return (
             e.forEach((e) => {
-                if (m.KA4.test(e.type))
+                if (y.KA4.test(e.type))
                     switch (((l += 1), e.type)) {
-                        case m.dCx.ANSWER_USERNAME_FROM:
-                            let a = i[m.dCx.FILTER_FROM],
+                        case y.dCx.ANSWER_USERNAME_FROM:
+                            let a = i[y.dCx.FILTER_FROM],
                                 c = e.getData("userId");
                             a.push(c);
                             break;
-                        case m.dCx.ANSWER_USERNAME_MENTIONS:
-                            let u = i[m.dCx.FILTER_MENTIONS],
+                        case y.dCx.ANSWER_USERNAME_MENTIONS:
+                            let u = i[y.dCx.FILTER_MENTIONS],
                                 d = e.getData("userId");
                             u.push(d);
                             break;
-                        case m.dCx.ANSWER_HAS:
-                            let h = i[m.dCx.FILTER_HAS],
+                        case y.dCx.ANSWER_HAS:
+                            let h = i[y.dCx.FILTER_HAS],
                                 p = e.getData("has");
                             h.push(p);
                             break;
-                        case m.dCx.ANSWER_IN:
+                        case y.dCx.ANSWER_IN:
                             var f;
-                            let g = i[m.dCx.FILTER_IN],
-                                b = (null != (f = e.getData("channels")) ? f : []).map((e) => e.id);
-                            g.push(...b);
+                            let g = i[y.dCx.FILTER_IN],
+                                m = (null != (f = e.getData("channels")) ? f : []).map((e) => e.id);
+                            g.push(...m);
                             break;
-                        case m.dCx.ANSWER_BEFORE:
-                            let y = i[m.dCx.FILTER_BEFORE],
+                        case y.dCx.ANSWER_BEFORE:
+                            let b = i[y.dCx.FILTER_BEFORE],
                                 x = e.getData("end"),
                                 j = s()(x);
-                            y.push({
+                            b.push({
                                 query: t,
                                 date: j,
                                 id: (0, o.Z)(),
                             });
                             break;
-                        case m.dCx.ANSWER_ON:
-                            let _ = i[m.dCx.FILTER_ON],
+                        case y.dCx.ANSWER_ON:
+                            let _ = i[y.dCx.FILTER_ON],
                                 O = e.getData("start"),
                                 v = s()(O);
                             _.push({
@@ -430,8 +488,8 @@ function Z(e) {
                                 id: (0, o.Z)(),
                             });
                             break;
-                        case m.dCx.ANSWER_AFTER:
-                            let C = i[m.dCx.FILTER_AFTER],
+                        case y.dCx.ANSWER_AFTER:
+                            let C = i[y.dCx.FILTER_AFTER],
                                 E = e.getData("start"),
                                 S = s()(E);
                             C.push({
@@ -448,10 +506,10 @@ function Z(e) {
         );
     }, [e, t, n, r]);
 }
-function P(e, t) {
+function R(e, t) {
     return e === t || (0, l.isEqual)(e, t);
 }
-function T(e, t) {
+function w(e, t) {
     var n, r;
     if (e.length !== t.length) return !1;
     let i = new Map();

@@ -1,46 +1,50 @@
-n.d(t, { Z: () => d }), n(388685);
+n.d(t, { Z: () => u }), n(388685);
 var r = n(255367),
     l = n(73800),
     i = n(481060),
     o = n(785717),
-    a = n(286957),
-    c = n(388032),
-    s = n(44258);
-function d() {
-    let e = (0, l.useRef)(null),
-        { trackUserProfileAction: t } = (0, o.KZ)(),
-        [n, d] = (0, l.useState)(new Set());
+    a = n(86419),
+    c = n(286957),
+    s = n(388032),
+    d = n(44258);
+function u(e) {
+    let { tags: t, widgetType: n, applicationId: u } = e,
+        f = (0, l.useRef)(null),
+        { trackUserProfileAction: p } = (0, o.KZ)(),
+        m = null != t ? t : [];
     return (0, r.jsx)(i.yRy, {
-        targetElementRef: e,
+        targetElementRef: f,
         position: "right",
         align: "top",
         renderPopout: (e) => {
-            let { closePopout: l } = e;
+            let { closePopout: t } = e;
             return (0, r.jsx)(i.v2r, {
                 navId: "widget-game-tags",
-                "aria-label": c.intl.string(c.t.r6EJOj),
-                onClose: l,
+                "aria-label": s.intl.string(s.t.r6EJOj),
+                onClose: t,
                 onSelect: () => {},
-                children: Object.entries(a.aE).map((e) => {
-                    let [l, o] = e,
-                        c = o.tags
+                children: Object.entries(c.aE).map((e) => {
+                    let [t, l] = e,
+                        o = l.tags
                             .map((e) => {
-                                let l = a.XV[e];
-                                return null == l
+                                let t = c.XV[e];
+                                return null == t
                                     ? null
                                     : (0, r.jsx)(
                                           i.S89,
                                           {
                                               id: e,
-                                              label: l.getText(),
-                                              checked: n.has(e),
-                                              action: () => {
-                                                  d((t) => {
-                                                      let n = new Set(t);
-                                                      return n.has(e) ? n.delete(e) : n.add(e), n;
-                                                  }),
-                                                      t({ action: "ADD_GAME_TAGS" });
-                                              },
+                                              label: t.getText(),
+                                              checked: m.includes(e),
+                                              action: () =>
+                                                  ((e) => {
+                                                      if (null == n || null == u) return;
+                                                      let t = new Set(m);
+                                                      t.has(e)
+                                                          ? (t.delete(e), p({ action: "REMOVE_GAME_TAGS" }))
+                                                          : (t.add(e), p({ action: "ADD_GAME_TAGS" })),
+                                                          (0, a.n$)(n, u, Array.from(t));
+                                                  })(e),
                                           },
                                           e,
                                       );
@@ -49,21 +53,21 @@ function d() {
                     return (0, r.jsx)(
                         i.kSQ,
                         {
-                            label: o.getLabel(),
-                            children: c,
+                            label: l.getLabel(),
+                            children: o,
                         },
-                        l,
+                        t,
                     );
                 }),
             });
         },
-        children: (t) => {
-            var n, l;
+        children: (e) => {
+            var t, n;
             return (0, r.jsx)("div", {
-                ref: e,
+                ref: f,
                 children: (0, r.jsx)(
                     i.P3F,
-                    ((n = (function (e) {
+                    ((t = (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
                                 r = Object.keys(n);
@@ -87,19 +91,19 @@ function d() {
                                 });
                         }
                         return e;
-                    })({}, t)),
-                    (l = l =
+                    })({}, e)),
+                    (n = n =
                         {
-                            className: s.addButton,
-                            "aria-label": c.intl.string(c.t.r6EJOj),
+                            className: d.addButton,
+                            "aria-label": s.intl.string(s.t.r6EJOj),
                             children: (0, r.jsx)(i.Text, {
                                 variant: "text-xxs/medium",
                                 color: "text-secondary",
-                                children: c.intl.string(c.t.fZSej4),
+                                children: s.intl.string(s.t.fZSej4),
                             }),
                         }),
                     Object.getOwnPropertyDescriptors
-                        ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(l))
+                        ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
                         : (function (e, t) {
                               var n = Object.keys(e);
                               if (Object.getOwnPropertySymbols) {
@@ -107,10 +111,10 @@ function d() {
                                   n.push.apply(n, r);
                               }
                               return n;
-                          })(Object(l)).forEach(function (e) {
-                              Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(l, e));
+                          })(Object(n)).forEach(function (e) {
+                              Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
                           }),
-                    n),
+                    t),
                 ),
             });
         },

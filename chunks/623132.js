@@ -12,8 +12,8 @@ var l = n(481060),
     f = n(533815),
     p = n(853072),
     m = n(388032),
-    b = n(958461),
-    g = n(932366),
+    g = n(958461),
+    b = n(932366),
     j = n(776385);
 function y(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -145,14 +145,14 @@ function _(e) {
         ? (0, r.jsxs)("div", {
               className: j.card,
               children: [
-                  (0, r.jsx)("div", { className: g.loadingCover }),
+                  (0, r.jsx)("div", { className: b.loadingCover }),
                   (0, r.jsx)("div", {
                       className: j.details,
                       children: (0, r.jsxs)("div", {
-                          className: b.placeholderText,
+                          className: g.placeholderText,
                           children: [
-                              (0, r.jsx)("div", { className: b.placeholderBar }),
-                              (0, r.jsx)("div", { className: b.placeholderBar }),
+                              (0, r.jsx)("div", { className: g.placeholderBar }),
+                              (0, r.jsx)("div", { className: g.placeholderBar }),
                           ],
                       }),
                   }),
@@ -191,7 +191,12 @@ function _(e) {
                                   guildId: n,
                                   channelId: i,
                               }),
-                          (0, r.jsx)(u.Z, { tags: T }),
+                          (0, r.jsx)(u.Z, {
+                              tags: T,
+                              isCurrentUser: S,
+                              widgetType: c,
+                              applicationId: P,
+                          }),
                           !p &&
                               (0, r.jsx)(v, {
                                   className: j.socialProof,

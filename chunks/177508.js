@@ -1,4 +1,4 @@
-n.d(t, { Z: () => er }), n(704826), n(35282), n(388685), n(361932), n(187205);
+n.d(t, { Z: () => ea }), n(704826), n(35282), n(388685), n(361932), n(187205);
 var i = n(255367),
     r = n(73800),
     s = n(120356),
@@ -22,27 +22,29 @@ var i = n(255367),
     O = n(37148),
     v = n(907862),
     S = n(466590),
-    T = n(481060),
-    I = n(240872),
-    N = n(514361),
-    y = n(705262),
-    A = n(377089),
-    P = n(581612),
-    R = n(580747),
-    D = n(526156),
-    Z = n(799071),
-    w = n(554042),
-    k = n(706705),
-    L = n(726985),
-    B = n(981631),
-    M = n(231338),
-    U = n(726927),
-    V = n(177475),
-    G = n(691739),
-    F = n(453707),
-    H = n(315416),
-    z = n(715720);
-function W(e) {
+    T = n(681715),
+    I = n(481060),
+    N = n(240872),
+    y = n(514361),
+    A = n(705262),
+    P = n(377089),
+    R = n(581612),
+    D = n(580747),
+    Z = n(526156),
+    w = n(799071),
+    k = n(554042),
+    L = n(706705),
+    B = n(726985),
+    M = n(981631),
+    U = n(231338),
+    V = n(726927),
+    G = n(177475),
+    F = n(518797),
+    H = n(691739),
+    z = n(453707),
+    W = n(315416),
+    Y = n(715720);
+function K(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -67,7 +69,7 @@ function W(e) {
     }
     return e;
 }
-function Y(e, t) {
+function q(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -85,33 +87,33 @@ function Y(e, t) {
         e
     );
 }
-function K() {
+function X() {
     return (0, i.jsxs)("div", {
-        className: U.root,
+        className: V.root,
         children: [
-            (0, i.jsx)(q, {}),
-            (0, i.jsx)(ea, {}),
-            (0, i.jsx)(eg, {}),
+            (0, i.jsx)(J, {}),
+            (0, i.jsx)(eo, {}),
+            (0, i.jsx)(ef, {}),
+            (0, i.jsx)(eb, {}),
             (0, i.jsx)(eh, {}),
             (0, i.jsx)(ep, {}),
-            (0, i.jsx)(eu, {}),
+            (0, i.jsx)(eg, {}),
             (0, i.jsx)(em, {}),
-            (0, i.jsx)(ed, {}),
-            (0, i.jsx)(ec, {}),
-            (0, i.jsx)(ev, {}),
-            (0, i.jsx)(X, {}),
-            (0, i.jsx)(eS, {}),
+            (0, i.jsx)(eu, {}),
+            (0, i.jsx)(eT, {}),
+            (0, i.jsx)(Q, {}),
+            (0, i.jsx)(eI, {}),
         ],
     });
 }
-function q() {
-    let e = (0, R.Z)("highlight_mana_components");
-    return (0, i.jsx)(T.hjN, {
+function J() {
+    let e = (0, D.Z)("highlight_mana_components");
+    return (0, i.jsx)(I.hjN, {
         title: "Design System Controls",
-        children: (0, i.jsx)(T.xJW, {
-            children: (0, i.jsx)(T.j7V, {
+        children: (0, i.jsx)(I.xJW, {
+            children: (0, i.jsx)(I.j7V, {
                 value: e,
-                onChange: (e) => (0, P.Z)("highlight_mana_components", e),
+                onChange: (e) => (0, R.Z)("highlight_mana_components", e),
                 note: "Highlights all mana components marked with data-mana-component",
                 hideBorder: !0,
                 children: "Highlight Mana Components",
@@ -119,22 +121,22 @@ function q() {
         }),
     });
 }
-function X() {
-    let e = Object.keys(T.DM8);
+function Q() {
+    let e = Object.keys(I.DM8);
     return (0, i.jsxs)("div", {
-        className: U.section,
+        className: V.section,
         children: [
-            (0, i.jsx)(T.X6q, {
+            (0, i.jsx)(I.X6q, {
                 variant: "heading-xl/semibold",
                 children: "Notice",
             }),
-            (0, i.jsx)(T.Kqy, {
+            (0, i.jsx)(I.Kqy, {
                 gap: 16,
                 children: e.map((e) =>
                     (0, i.jsx)(
-                        T.qXd,
+                        I.qXd,
                         {
-                            color: T.DM8[e],
+                            color: I.DM8[e],
                             children: (0, i.jsxs)("code", {
                                 children: ["NoticeColors.", e],
                             }),
@@ -146,7 +148,7 @@ function X() {
         ],
     });
 }
-let J = [
+let $ = [
         "neutral",
         "blue_new",
         "blurple",
@@ -158,7 +160,7 @@ let J = [
         "pink",
         "purple",
     ],
-    Q = [
+    ee = [
         "background-surface-highest",
         "background-surface-higher",
         "background-surface-high",
@@ -166,7 +168,7 @@ let J = [
         "background-base-lower",
         "background-base-lowest",
     ],
-    $ = [
+    et = [
         "background-gradient-lowest",
         "background-gradient-lower",
         "background-gradient-low",
@@ -174,9 +176,9 @@ let J = [
         "background-gradient-higher",
         "background-gradient-highest",
     ],
-    ee = ["", "background-mod-subtle", "background-mod-normal", "background-mod-strong"],
-    et = ["critical", "warning", "positive", "info"],
-    en = [
+    en = ["", "background-mod-subtle", "background-mod-normal", "background-mod-strong"],
+    ei = ["critical", "warning", "positive", "info"],
+    er = [
         "text-default",
         "text-primary",
         "text-secondary",
@@ -187,26 +189,26 @@ let J = [
         "text-feedback-info",
         "premium-nitro-pink-text",
     ];
-function ei() {
-    let e = (0, c.e7)([N.Z], () => N.Z.gradientPreset);
+function es() {
+    let e = (0, c.e7)([y.Z], () => y.Z.gradientPreset);
     return (0, i.jsxs)("div", {
         children: [
-            (0, i.jsx)(T.X6q, {
+            (0, i.jsx)(I.X6q, {
                 variant: "heading-xl/semibold",
-                className: U.heading,
+                className: V.heading,
                 children: "Background Colors",
             }),
-            Q.map((e) =>
+            ee.map((e) =>
                 (0, i.jsxs)(
                     "div",
                     {
-                        className: U.palette,
+                        className: V.palette,
                         style: {
                             backgroundColor: "var(--".concat(e, ")"),
                             padding: 24,
                         },
                         children: [
-                            (0, i.jsx)(T.Text, {
+                            (0, i.jsx)(I.Text, {
                                 variant: "text-md/medium",
                                 children: e,
                             }),
@@ -216,25 +218,25 @@ function ei() {
                                     gap: 8,
                                     gridTemplateColumns: "repeat(3, 1fr)",
                                 },
-                                children: ee.map((e) =>
+                                children: en.map((e) =>
                                     (0, i.jsxs)(
                                         "div",
                                         {
-                                            className: U.color,
+                                            className: V.color,
                                             style: {
                                                 padding: 16,
                                                 background: "var(--".concat(e, ")"),
                                             },
                                             children: [
-                                                (0, i.jsx)(T.Text, {
+                                                (0, i.jsx)(I.Text, {
                                                     variant: "text-xs/semibold",
                                                     color: "header-secondary",
                                                     children: e,
                                                 }),
-                                                (0, i.jsx)("hr", { className: U.sectionDivider }),
-                                                en.map((e) =>
+                                                (0, i.jsx)("hr", { className: V.sectionDivider }),
+                                                er.map((e) =>
                                                     (0, i.jsx)(
-                                                        T.Text,
+                                                        I.Text,
                                                         {
                                                             variant: "text-xs/medium",
                                                             style: { color: "var(--".concat(e, ")") },
@@ -249,36 +251,36 @@ function ei() {
                                     ),
                                 ),
                             }),
-                            (0, i.jsx)("hr", { className: U.sectionDivider }),
+                            (0, i.jsx)("hr", { className: V.sectionDivider }),
                             (0, i.jsx)("div", {
                                 style: {
                                     display: "grid",
                                     gap: 8,
                                     gridTemplateColumns: "repeat(3, 1fr)",
                                 },
-                                children: et.map((e) => {
+                                children: ei.map((e) => {
                                     let t = "var(--text-feedback-".concat(e, ")");
                                     return (0, i.jsxs)(
                                         "div",
                                         {
-                                            className: U.color,
+                                            className: V.color,
                                             style: {
                                                 padding: 16,
                                                 background: "var(--background-feedback-".concat(e, ")"),
                                             },
                                             children: [
-                                                (0, i.jsx)(T.Text, {
+                                                (0, i.jsx)(I.Text, {
                                                     variant: "text-xs/semibold",
                                                     color: "header-secondary",
                                                 }),
-                                                (0, i.jsxs)(T.Kqy, {
+                                                (0, i.jsxs)(I.Kqy, {
                                                     children: [
-                                                        (0, i.jsxs)(T.Text, {
+                                                        (0, i.jsxs)(I.Text, {
                                                             variant: "text-xs/semibold",
                                                             style: { color: t },
                                                             children: ["background-feedback-", e],
                                                         }),
-                                                        (0, i.jsx)(T.Text, {
+                                                        (0, i.jsx)(I.Text, {
                                                             variant: "text-xs/normal",
                                                             style: { color: t },
                                                             children:
@@ -300,9 +302,9 @@ function ei() {
             null !== e &&
                 (0, i.jsxs)(i.Fragment, {
                     children: [
-                        (0, i.jsx)(T.X6q, {
+                        (0, i.jsx)(I.X6q, {
                             variant: "heading-xl/semibold",
-                            className: U.heading,
+                            className: V.heading,
                             children: "Gradient Background Colors",
                         }),
                         (0, i.jsx)("div", {
@@ -312,16 +314,16 @@ function ei() {
                                 gridTemplateColumns: "repeat(6, 1fr)",
                                 transform: "translateZ(0)",
                             },
-                            children: $.map((e) =>
+                            children: et.map((e) =>
                                 (0, i.jsx)(
                                     "div",
                                     {
-                                        className: U.palette,
+                                        className: V.palette,
                                         style: {
                                             background: "var(--".concat(e, ")"),
                                             height: 400,
                                         },
-                                        children: (0, i.jsx)(T.Text, {
+                                        children: (0, i.jsx)(I.Text, {
                                             variant: "text-xs/medium",
                                             children: e,
                                         }),
@@ -332,37 +334,37 @@ function ei() {
                         }),
                     ],
                 }),
-            (0, i.jsx)(T.X6q, {
+            (0, i.jsx)(I.X6q, {
                 variant: "heading-xl/semibold",
-                className: U.heading,
+                className: V.heading,
                 children: "Scales",
             }),
-            J.map((e) =>
+            $.map((e) =>
                 (0, i.jsxs)(
                     "div",
                     {
-                        className: U.palette,
+                        className: V.palette,
                         children: [
-                            (0, i.jsx)(T.Text, {
+                            (0, i.jsx)(I.Text, {
                                 variant: "text-lg/semibold",
                                 children: e,
                             }),
                             (0, i.jsx)("div", {
-                                className: U.colors,
+                                className: V.colors,
                                 children: Array.from({ length: 100 }, (t, n) =>
                                     (0, i.jsx)(
                                         "div",
                                         {
-                                            className: U.color,
+                                            className: V.color,
                                             style: {
                                                 background: "var(--"
                                                     .concat(e.replace("_", "-"), "-")
                                                     .concat(n + 1, ")"),
                                             },
-                                            children: (0, i.jsx)(T.f6W, {
+                                            children: (0, i.jsx)(I.f6W, {
                                                 theme: n < 50 ? "light" : "dark",
                                                 children: (t) =>
-                                                    (0, i.jsxs)(T.Text, {
+                                                    (0, i.jsxs)(I.Text, {
                                                         className: t,
                                                         variant: "text-xs/medium",
                                                         children: [e, ".", n + 1],
@@ -381,51 +383,51 @@ function ei() {
         ],
     });
 }
-function er() {
+function ea() {
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(D.Z, {
-                parentSetting: L.s6.DESIGN_SYSTEMS,
-                settingsSection: B.oAB.DESIGN_SYSTEMS,
+            (0, i.jsx)(Z.Z, {
+                parentSetting: B.s6.DESIGN_SYSTEMS,
+                settingsSection: M.oAB.DESIGN_SYSTEMS,
                 tabs: [
                     {
                         title: "Components",
-                        component: () => (0, i.jsx)(K, {}),
-                        setting: L.s6.DESIGN_SYSTEMS_COMPONENTS,
+                        component: () => (0, i.jsx)(X, {}),
+                        setting: B.s6.DESIGN_SYSTEMS_COMPONENTS,
                     },
                     {
                         title: "Colors",
-                        component: () => (0, i.jsx)(ei, {}),
-                        setting: L.s6.DESIGN_SYSTEMS_COLORS,
+                        component: () => (0, i.jsx)(es, {}),
+                        setting: B.s6.DESIGN_SYSTEMS_COLORS,
                     },
                     {
                         title: "Animations",
-                        component: () => (0, i.jsx)(k.Z, {}),
-                        setting: L.s6.ANIMATION_TESTING,
+                        component: () => (0, i.jsx)(L.Z, {}),
+                        setting: B.s6.ANIMATION_TESTING,
                     },
                     {
                         title: "Text Playground",
-                        component: () => (0, i.jsx)(w.Z, {}),
-                        setting: L.s6.TEXT_PLAYGROUND,
+                        component: () => (0, i.jsx)(k.Z, {}),
+                        setting: B.s6.TEXT_PLAYGROUND,
                     },
                     {
                         title: "Text Componnts",
-                        component: () => (0, i.jsx)(Z.Z, {}),
-                        setting: L.s6.TEXT_COMPONENTS,
+                        component: () => (0, i.jsx)(w.Z, {}),
+                        setting: B.s6.TEXT_COMPONENTS,
                     },
                 ],
             }),
             (0, i.jsx)("div", {
-                className: U.themes,
-                children: (0, i.jsx)(y.ZP, {
-                    type: y.yH.SETTINGS,
-                    children: (0, i.jsx)(y.ZP.Basic, { className: U.themeSelectionGroup }),
+                className: V.themes,
+                children: (0, i.jsx)(A.ZP, {
+                    type: A.yH.SETTINGS,
+                    children: (0, i.jsx)(A.ZP.Basic, { className: V.themeSelectionGroup }),
                 }),
             }),
         ],
     });
 }
-function es(e) {
+function el(e) {
     var { component: t, showLoadingAnimation: n } = e,
         s = (function (e, t) {
             if (null == e) return {};
@@ -466,14 +468,14 @@ function es(e) {
         ),
         (0, i.jsx)(
             t,
-            Y(W({}, s), {
+            q(K({}, s), {
                 loading: n ? a : void 0,
                 onClick: () => l(!a),
             }),
         )
     );
 }
-function ea() {
+function eo() {
     let [e, t] = r.useState("md"),
         [n, s] = r.useState("start"),
         [a, o] = r.useState(!0),
@@ -490,26 +492,26 @@ function ea() {
             (0, i.jsxs)(i.Fragment, {
                 children: [
                     (0, i.jsx)(
-                        es,
+                        el,
                         {
                             component: u.z,
                             variant: t,
                             text: "".concat((0, l.capitalize)(t), " ").concat(e.toUpperCase()),
                             size: e,
-                            icon: "none" !== n ? T.gw7 : void 0,
+                            icon: "none" !== n ? I.gw7 : void 0,
                             iconPosition: n,
                             showLoadingAnimation: a,
                         },
                         t + e,
                     ),
                     (0, i.jsx)(
-                        es,
+                        el,
                         {
                             component: u.z,
                             variant: t,
                             text: "".concat((0, l.capitalize)(t), " ").concat(e.toUpperCase()),
                             size: e,
-                            icon: "none" !== n ? T.gw7 : void 0,
+                            icon: "none" !== n ? I.gw7 : void 0,
                             iconPosition: n,
                             showLoadingAnimation: a,
                             disabled: !0,
@@ -521,11 +523,11 @@ function ea() {
         ),
         g = [...c, "icon-only"].map((t) =>
             (0, i.jsx)(
-                es,
+                el,
                 {
                     component: p.h,
                     variant: t,
-                    icon: T.gw7,
+                    icon: I.gw7,
                     size: e,
                     "aria-label": "".concat(t, " ").concat(e),
                     showLoadingAnimation: a,
@@ -546,18 +548,18 @@ function ea() {
             ),
         );
     return (0, i.jsxs)("div", {
-        className: U.section,
+        className: V.section,
         children: [
-            (0, i.jsx)(T.X6q, {
+            (0, i.jsx)(I.X6q, {
                 variant: "heading-xl/semibold",
                 children: "Buttons",
             }),
-            (0, i.jsxs)(eo, {
+            (0, i.jsxs)(ed, {
                 title: "Button Options",
                 children: [
-                    (0, i.jsx)(T.xJW, {
+                    (0, i.jsx)(I.xJW, {
                         title: "Button size",
-                        children: (0, i.jsx)(T.FXm, {
+                        children: (0, i.jsx)(I.FXm, {
                             onChange: (e) => {
                                 let { value: n } = e;
                                 return t(n);
@@ -575,9 +577,9 @@ function ea() {
                             value: e,
                         }),
                     }),
-                    (0, i.jsx)(T.xJW, {
+                    (0, i.jsx)(I.xJW, {
                         title: "Icon position",
-                        children: (0, i.jsx)(T.FXm, {
+                        children: (0, i.jsx)(I.FXm, {
                             onChange: (e) => {
                                 let { value: t } = e;
                                 return s(t);
@@ -599,9 +601,9 @@ function ea() {
                             value: n,
                         }),
                     }),
-                    (0, i.jsx)(T.xJW, {
+                    (0, i.jsx)(I.xJW, {
                         title: "Loading animation",
-                        children: (0, i.jsx)(T.FXm, {
+                        children: (0, i.jsx)(I.FXm, {
                             onChange: (e) => {
                                 let { value: t } = e;
                                 return o("on" === t);
@@ -629,35 +631,35 @@ function ea() {
                 },
                 children: [f, d, g],
             }),
-            (0, i.jsxs)(T.Kqy, {
+            (0, i.jsxs)(I.Kqy, {
                 gap: 16,
                 padding: { top: 16 },
                 children: [
-                    (0, i.jsx)(T.X6q, {
+                    (0, i.jsx)(I.X6q, {
                         variant: "heading-lg/semibold",
                         children: "Button Groups",
                     }),
-                    (0, i.jsx)(T.Text, {
+                    (0, i.jsx)(I.Text, {
                         variant: "text-lg/medium",
                         children: "Horizontal",
                     }),
-                    (0, i.jsxs)(T.Kqy, {
+                    (0, i.jsxs)(I.Kqy, {
                         gap: 16,
                         direction: "horizontal",
                         children: [
-                            (0, i.jsxs)(T.Kqy, {
+                            (0, i.jsxs)(I.Kqy, {
                                 gap: 16,
                                 children: [
                                     (0, i.jsxs)(m.h, {
                                         size: e,
                                         children: [
-                                            (0, i.jsx)(es, {
+                                            (0, i.jsx)(el, {
                                                 component: u.z,
                                                 variant: "secondary",
                                                 text: "Cancel",
                                                 showLoadingAnimation: a,
                                             }),
-                                            (0, i.jsx)(es, {
+                                            (0, i.jsx)(el, {
                                                 component: u.z,
                                                 variant: "primary",
                                                 text: "Submit",
@@ -668,16 +670,16 @@ function ea() {
                                     (0, i.jsxs)(m.h, {
                                         size: e,
                                         children: [
-                                            (0, i.jsx)(es, {
+                                            (0, i.jsx)(el, {
                                                 component: u.z,
                                                 variant: "primary",
                                                 text: "Submit",
                                                 showLoadingAnimation: a,
                                             }),
-                                            (0, i.jsx)(es, {
+                                            (0, i.jsx)(el, {
                                                 component: p.h,
                                                 variant: "secondary",
-                                                icon: T.gw7,
+                                                icon: I.gw7,
                                                 "aria-label": "Clyde",
                                                 showLoadingAnimation: a,
                                             }),
@@ -685,19 +687,19 @@ function ea() {
                                     }),
                                 ],
                             }),
-                            (0, i.jsx)(T.Kqy, {
+                            (0, i.jsx)(I.Kqy, {
                                 gap: 16,
                                 children: (0, i.jsxs)(m.h, {
                                     size: e,
                                     fullWidth: !0,
                                     children: [
-                                        (0, i.jsx)(es, {
+                                        (0, i.jsx)(el, {
                                             component: u.z,
                                             variant: "secondary",
                                             text: "Cancel",
                                             showLoadingAnimation: a,
                                         }),
-                                        (0, i.jsx)(es, {
+                                        (0, i.jsx)(el, {
                                             component: u.z,
                                             variant: "primary",
                                             text: "Submit",
@@ -708,27 +710,27 @@ function ea() {
                             }),
                         ],
                     }),
-                    (0, i.jsx)(T.Text, {
+                    (0, i.jsx)(I.Text, {
                         variant: "text-lg/medium",
                         children: "Vertical",
                     }),
-                    (0, i.jsxs)(T.Kqy, {
+                    (0, i.jsxs)(I.Kqy, {
                         gap: 16,
                         direction: "horizontal",
                         children: [
-                            (0, i.jsx)(T.Kqy, {
+                            (0, i.jsx)(I.Kqy, {
                                 gap: 16,
                                 children: (0, i.jsxs)(m.h, {
                                     direction: "vertical",
                                     size: e,
                                     children: [
-                                        (0, i.jsx)(es, {
+                                        (0, i.jsx)(el, {
                                             component: u.z,
                                             variant: "secondary",
                                             text: "Cancel",
                                             showLoadingAnimation: a,
                                         }),
-                                        (0, i.jsx)(es, {
+                                        (0, i.jsx)(el, {
                                             component: u.z,
                                             variant: "primary",
                                             text: "Submit",
@@ -737,20 +739,20 @@ function ea() {
                                     ],
                                 }),
                             }),
-                            (0, i.jsx)(T.Kqy, {
+                            (0, i.jsx)(I.Kqy, {
                                 gap: 16,
                                 children: (0, i.jsxs)(m.h, {
                                     fullWidth: !0,
                                     direction: "vertical",
                                     size: e,
                                     children: [
-                                        (0, i.jsx)(es, {
+                                        (0, i.jsx)(el, {
                                             component: u.z,
                                             variant: "secondary",
                                             text: "Cancel",
                                             showLoadingAnimation: a,
                                         }),
-                                        (0, i.jsx)(es, {
+                                        (0, i.jsx)(el, {
                                             component: u.z,
                                             variant: "primary",
                                             text: "Submit",
@@ -761,30 +763,30 @@ function ea() {
                             }),
                         ],
                     }),
-                    (0, i.jsx)(el, { buttonSize: e }),
+                    (0, i.jsx)(ec, { buttonSize: e }),
                 ],
             }),
         ],
     });
 }
-function el(e) {
+function ec(e) {
     let { buttonSize: t } = e,
         [n, s] = r.useState(!1);
-    return (0, i.jsxs)(T.Kqy, {
+    return (0, i.jsxs)(I.Kqy, {
         gap: 16,
         children: [
-            (0, i.jsx)(T.X6q, {
+            (0, i.jsx)(I.X6q, {
                 variant: "heading-xl/semibold",
                 children: "PlayButton",
             }),
-            (0, i.jsx)(T.Kqy, {
+            (0, i.jsx)(I.Kqy, {
                 direction: "horizontal",
                 gap: 16,
                 children: ["dark", "mid", "light"].map((e) =>
                     (0, i.jsx)(
                         "div",
                         {
-                            className: U.video,
+                            className: V.video,
                             "data-luminance": e,
                             children: (0, i.jsx)(g.J, {
                                 size: t,
@@ -799,127 +801,127 @@ function el(e) {
         ],
     });
 }
-function eo(e) {
+function ed(e) {
     let { children: t, title: n } = e,
         [s, l] = r.useState(!1);
-    return (0, i.jsxs)(T.Kqy, {
+    return (0, i.jsxs)(I.Kqy, {
         direction: "vertical",
         gap: 0,
         padding: 16,
-        className: U.floatingControls,
+        className: V.floatingControls,
         children: [
-            (0, i.jsxs)(T.Kqy, {
+            (0, i.jsxs)(I.Kqy, {
                 direction: "horizontal",
                 gap: 16,
                 align: "center",
                 justify: "space-between",
                 children: [
-                    (0, i.jsx)(T.X6q, {
+                    (0, i.jsx)(I.X6q, {
                         variant: "heading-lg/semibold",
                         children: n,
                     }),
                     (0, i.jsx)(f.Q, {
-                        icon: s ? T.hic : T.sXD,
+                        icon: s ? I.hic : I.sXD,
                         onClick: () => l(!s),
                         pressed: s,
                         "aria-label": "Show controls",
                     }),
                 ],
             }),
-            (0, i.jsx)(T.Kqy, {
+            (0, i.jsx)(I.Kqy, {
                 gap: 16,
-                className: a()(U.floatingControlsContent, { [U.floatingControlsContentHidden]: !s }),
+                className: a()(V.floatingControlsContent, { [V.floatingControlsContentHidden]: !s }),
                 children: t,
             }),
         ],
     });
 }
-function ec() {
+function eu() {
     let [e, t] = r.useState("1");
     return (0, i.jsxs)("div", {
-        className: U.section,
+        className: V.section,
         children: [
-            (0, i.jsx)(T.X6q, {
+            (0, i.jsx)(I.X6q, {
                 variant: "heading-xl/semibold",
                 children: "TabBar",
             }),
-            (0, i.jsxs)(T.njP, {
+            (0, i.jsxs)(I.njP, {
                 type: "top",
                 look: "brand",
                 selectedItem: e,
                 onItemSelect: (e) => t(e),
-                className: U.tabBar,
+                className: V.tabBar,
                 children: [
-                    (0, i.jsx)(T.njP.Item, {
+                    (0, i.jsx)(I.njP.Item, {
                         id: "1",
                         children: "Tab 1",
                     }),
-                    (0, i.jsx)(T.njP.Item, {
+                    (0, i.jsx)(I.njP.Item, {
                         id: "2",
                         children: "Tab 2",
                     }),
-                    (0, i.jsx)(T.njP.Item, {
+                    (0, i.jsx)(I.njP.Item, {
                         id: "3",
                         children: "Tab 3",
                     }),
                 ],
             }),
-            (0, i.jsxs)(T.Text, {
+            (0, i.jsxs)(I.Text, {
                 variant: "text-md/medium",
                 children: ["Selected tab: ", e],
             }),
         ],
     });
 }
-function ed() {
+function em() {
     let [e, t] = r.useState(1),
         [n, s] = r.useState(!1),
         [a, l] = r.useState(5),
         [o, c] = r.useState(!1),
         d = r.useRef(null);
     return (0, i.jsxs)("div", {
-        className: U.section,
+        className: V.section,
         children: [
-            (0, i.jsx)(T.X6q, {
+            (0, i.jsx)(I.X6q, {
                 variant: "heading-xl/semibold",
                 children: "Context Menus",
             }),
             (0, i.jsx)("span", {
-                children: (0, i.jsx)(T.yRy, {
+                children: (0, i.jsx)(I.yRy, {
                     targetElementRef: d,
                     shouldShow: o,
                     renderPopout: () =>
-                        (0, i.jsxs)(T.v2r, {
+                        (0, i.jsxs)(I.v2r, {
                             navId: "demo",
                             "aria-label": "Demo Actions",
                             onClose: () => null,
                             onSelect: () => null,
                             children: [
-                                (0, i.jsxs)(T.kSQ, {
+                                (0, i.jsxs)(I.kSQ, {
                                     label: "Basic items",
                                     children: [
-                                        (0, i.jsx)(T.sNh, {
+                                        (0, i.jsx)(I.sNh, {
                                             id: "first",
                                             label: "An option",
                                         }),
-                                        (0, i.jsx)(T.sNh, {
+                                        (0, i.jsx)(I.sNh, {
                                             id: "second",
                                             label: "An option with an icon",
-                                            icon: T.kBi,
+                                            icon: I.kBi,
                                         }),
-                                        (0, i.jsxs)(T.sNh, {
+                                        (0, i.jsxs)(I.sNh, {
                                             id: "item-with-submenu",
                                             label: "Item with submenu",
                                             children: [
-                                                (0, i.jsx)(T.sNh, {
+                                                (0, i.jsx)(I.sNh, {
                                                     id: "subitem-1",
                                                     label: "Subitem 1",
                                                 }),
-                                                (0, i.jsx)(T.sNh, {
+                                                (0, i.jsx)(I.sNh, {
                                                     id: "subitem-2",
                                                     label: "Subitem 2",
                                                 }),
-                                                (0, i.jsx)(T.sNh, {
+                                                (0, i.jsx)(I.sNh, {
                                                     id: "subitem-3",
                                                     label: "Subitem 3",
                                                 }),
@@ -927,41 +929,41 @@ function ed() {
                                         }),
                                     ],
                                 }),
-                                (0, i.jsxs)(T.kSQ, {
+                                (0, i.jsxs)(I.kSQ, {
                                     label: "Inputs",
                                     children: [
-                                        (0, i.jsx)(T.S89, {
+                                        (0, i.jsx)(I.S89, {
                                             id: "checkable",
                                             label: "Checkbox",
                                             checked: n,
                                             action: () => s(!n),
                                         }),
-                                        (0, i.jsx)(T.k5B, {
+                                        (0, i.jsx)(I.k5B, {
                                             id: "radio-one",
                                             group: "a-group",
                                             label: "Radio 1",
                                             action: () => t(1),
                                             checked: 1 === e,
                                         }),
-                                        (0, i.jsx)(T.k5B, {
+                                        (0, i.jsx)(I.k5B, {
                                             id: "radio-two",
                                             group: "a-group",
                                             label: "Radio 2",
                                             action: () => t(2),
                                             checked: 2 === e,
                                         }),
-                                        (0, i.jsx)(T.k5B, {
+                                        (0, i.jsx)(I.k5B, {
                                             id: "radio-three",
                                             group: "a-group",
                                             label: "Radio 3",
                                             action: () => t(3),
                                             checked: 3 === e,
                                         }),
-                                        (0, i.jsx)(T.II_, {
+                                        (0, i.jsx)(I.II_, {
                                             id: "slider",
                                             label: "Slider",
                                             control: (e, t) =>
-                                                (0, i.jsx)(T._wy, {
+                                                (0, i.jsx)(I._wy, {
                                                     ref: t,
                                                     value: a,
                                                     minValue: 0,
@@ -972,17 +974,17 @@ function ed() {
                                         }),
                                     ],
                                 }),
-                                (0, i.jsx)(T.Clw, {}),
-                                (0, i.jsx)(T.sNh, {
+                                (0, i.jsx)(I.Clw, {}),
+                                (0, i.jsx)(I.sNh, {
                                     id: "danger",
                                     label: "A destructive option",
                                     color: "danger",
-                                    icon: T.XHJ,
+                                    icon: I.XHJ,
                                 }),
                             ],
                         }),
                     children: () =>
-                        (0, i.jsx)(T.zxk, {
+                        (0, i.jsx)(I.zxk, {
                             variant: "primary",
                             text: "Toggle context menu",
                             buttonRef: d,
@@ -993,11 +995,11 @@ function ed() {
         ],
     });
 }
-function eu() {
-    let [e, t] = r.useState(T.FGA.PRIMARY),
+function ep() {
+    let [e, t] = r.useState(I.FGA.PRIMARY),
         n = r.useMemo(
             () =>
-                Object.entries(T.FGA).map((e) => {
+                Object.entries(I.FGA).map((e) => {
                     let [t, n] = e;
                     return {
                         label: t,
@@ -1007,15 +1009,19 @@ function eu() {
             [],
         );
     return (0, i.jsxs)("div", {
-        className: U.section,
+        className: V.section,
         children: [
-            (0, i.jsx)(T.X6q, {
+            (0, i.jsx)(I.X6q, {
                 variant: "heading-xl/semibold",
                 children: "Tooltips",
             }),
-            (0, i.jsx)(T.xJW, {
+            (0, i.jsx)(I.X6q, {
+                variant: "heading-lg/semibold",
+                children: "Legacy Tooltips",
+            }),
+            (0, i.jsx)(I.xJW, {
                 title: "Color",
-                children: (0, i.jsx)(T.q4e, {
+                children: (0, i.jsx)(I.q4e, {
                     value: e,
                     onChange: t,
                     options: n,
@@ -1028,14 +1034,14 @@ function eu() {
                     flexWrap: "wrap",
                 },
                 children: [
-                    (0, i.jsx)(T.ua7, {
+                    (0, i.jsx)(I.ua7, {
                         color: e,
                         text: "Here's top aligned tooltip text!",
                         position: "top",
                         children: (e) =>
                             (0, i.jsx)(
-                                T.zxk,
-                                W(
+                                I.zxk,
+                                K(
                                     {
                                         variant: "primary",
                                         text: "Tooltip on the top",
@@ -1044,14 +1050,14 @@ function eu() {
                                 ),
                             ),
                     }),
-                    (0, i.jsx)(T.ua7, {
+                    (0, i.jsx)(I.ua7, {
                         color: e,
                         text: "Here's right aligned tooltip text!",
                         position: "left",
                         children: (e) =>
                             (0, i.jsx)(
-                                T.zxk,
-                                W(
+                                I.zxk,
+                                K(
                                     {
                                         variant: "primary",
                                         text: "Tooltip on the left",
@@ -1060,14 +1066,14 @@ function eu() {
                                 ),
                             ),
                     }),
-                    (0, i.jsx)(T.ua7, {
+                    (0, i.jsx)(I.ua7, {
                         color: e,
                         text: "Here's bottom aligned tooltip text!",
                         position: "bottom",
                         children: (e) =>
                             (0, i.jsx)(
-                                T.zxk,
-                                W(
+                                I.zxk,
+                                K(
                                     {
                                         variant: "primary",
                                         text: "Tooltip on the bottom",
@@ -1076,14 +1082,14 @@ function eu() {
                                 ),
                             ),
                     }),
-                    (0, i.jsx)(T.ua7, {
+                    (0, i.jsx)(I.ua7, {
                         color: e,
                         text: "Here's right aligned tooltip text!",
                         position: "right",
                         children: (e) =>
                             (0, i.jsx)(
-                                T.zxk,
-                                W(
+                                I.zxk,
+                                K(
                                     {
                                         variant: "primary",
                                         text: "Tooltip on the right",
@@ -1094,11 +1100,272 @@ function eu() {
                     }),
                 ],
             }),
-            (0, i.jsx)("div", {}),
+            (0, i.jsx)(I.X6q, {
+                variant: "heading-lg/semibold",
+                style: { marginTop: 32 },
+                children: "New Mana Tooltips",
+            }),
+            (0, i.jsxs)("div", {
+                style: {
+                    display: "flex",
+                    gap: 8,
+                    flexWrap: "wrap",
+                },
+                children: [
+                    (0, i.jsx)(T.u, {
+                        text: "New Mana Tooltip with animations!",
+                        position: "top",
+                        children: (0, i.jsx)(I.zxk, {
+                            variant: "primary",
+                            text: "Mana Tooltip (Top)",
+                        }),
+                    }),
+                    (0, i.jsx)(T.u, {
+                        text: "Left positioned animated tooltip",
+                        position: "left",
+                        children: (0, i.jsx)(I.zxk, {
+                            variant: "primary",
+                            text: "Mana Tooltip (Left)",
+                        }),
+                    }),
+                    (0, i.jsx)(T.u, {
+                        text: "Bottom positioned animated tooltip",
+                        position: "bottom",
+                        children: (0, i.jsx)(I.zxk, {
+                            variant: "primary",
+                            text: "Mana Tooltip (Bottom)",
+                        }),
+                    }),
+                    (0, i.jsx)(T.u, {
+                        text: "Right positioned animated tooltip",
+                        position: "right",
+                        children: (0, i.jsx)(I.zxk, {
+                            variant: "primary",
+                            text: "Mana Tooltip (Right)",
+                        }),
+                    }),
+                    (0, i.jsx)(T.u, {
+                        text: "Lorem ipsum dolor sit amet, consectetur elit. Sed do eiusmod non proident amo.",
+                        position: "right",
+                        children: (0, i.jsx)(I.zxk, {
+                            variant: "primary",
+                            text: "Three lines",
+                        }),
+                    }),
+                ],
+            }),
+            (0, i.jsx)(I.X6q, {
+                variant: "heading-lg/semibold",
+                style: { marginTop: 32 },
+                children: "Tooltip Caret API Examples",
+            }),
+            (0, i.jsx)(I.Text, {
+                variant: "text-md/medium",
+                style: {
+                    marginTop: 16,
+                    marginBottom: 8,
+                },
+                children: "Vertical Positions",
+            }),
+            (0, i.jsxs)("div", {
+                style: {
+                    display: "flex",
+                    gap: 8,
+                    flexWrap: "wrap",
+                    marginBottom: 16,
+                },
+                children: [
+                    (0, i.jsx)(T.u, {
+                        text: "Top with start",
+                        position: "top",
+                        caretConfig: { align: "start" },
+                        children: (0, i.jsx)(I.zxk, {
+                            variant: "primary",
+                            text: "Top - Start",
+                        }),
+                    }),
+                    (0, i.jsx)(T.u, {
+                        text: "Top with center",
+                        position: "top",
+                        caretConfig: { align: "center" },
+                        children: (0, i.jsx)(I.zxk, {
+                            variant: "primary",
+                            text: "Top - Center",
+                        }),
+                    }),
+                    (0, i.jsx)(T.u, {
+                        text: "Top with end",
+                        position: "top",
+                        caretConfig: { align: "end" },
+                        children: (0, i.jsx)(I.zxk, {
+                            variant: "primary",
+                            text: "Top - End",
+                        }),
+                    }),
+                    (0, i.jsx)(T.u, {
+                        text: "Bottom with start",
+                        position: "bottom",
+                        caretConfig: { align: "start" },
+                        children: (0, i.jsx)(I.zxk, {
+                            variant: "primary",
+                            text: "Bottom - Start",
+                        }),
+                    }),
+                    (0, i.jsx)(T.u, {
+                        text: "Bottom with center",
+                        position: "bottom",
+                        caretConfig: { align: "center" },
+                        children: (0, i.jsx)(I.zxk, {
+                            variant: "primary",
+                            text: "Bottom - Center",
+                        }),
+                    }),
+                    (0, i.jsx)(T.u, {
+                        text: "Bottom with end",
+                        position: "bottom",
+                        caretConfig: { align: "end" },
+                        children: (0, i.jsx)(I.zxk, {
+                            variant: "primary",
+                            text: "Bottom - End",
+                        }),
+                    }),
+                ],
+            }),
+            (0, i.jsx)(I.Text, {
+                variant: "text-md/medium",
+                style: { marginBottom: 8 },
+                children: "Horizontal Positions",
+            }),
+            (0, i.jsxs)("div", {
+                style: {
+                    display: "flex",
+                    gap: 8,
+                    flexWrap: "wrap",
+                    marginBottom: 16,
+                },
+                children: [
+                    (0, i.jsx)(T.u, {
+                        text: "Left with center",
+                        position: "left",
+                        caretConfig: { align: "center" },
+                        children: (0, i.jsx)(I.zxk, {
+                            variant: "primary",
+                            text: "Left - Center",
+                        }),
+                    }),
+                    (0, i.jsx)(T.u, {
+                        text: "Right with center",
+                        position: "right",
+                        caretConfig: { align: "center" },
+                        children: (0, i.jsx)(I.zxk, {
+                            variant: "primary",
+                            text: "Right - Center",
+                        }),
+                    }),
+                ],
+            }),
+            (0, i.jsx)(I.Text, {
+                variant: "text-md/medium",
+                style: { marginBottom: 8 },
+                children: "Custom Offset",
+            }),
+            (0, i.jsx)("div", {
+                style: {
+                    display: "flex",
+                    gap: 8,
+                    flexWrap: "wrap",
+                },
+                children: (0, i.jsx)(T.u, {
+                    text: "Bottom with custom",
+                    position: "bottom",
+                    caretConfig: {
+                        align: "custom",
+                        customOffset: 30,
+                    },
+                    children: (0, i.jsx)(I.zxk, {
+                        variant: "primary",
+                        text: "Custom Offset",
+                    }),
+                }),
+            }),
+            (0, i.jsx)(I.X6q, {
+                variant: "heading-lg/semibold",
+                style: { marginTop: 32 },
+                children: "Tooltip Delays",
+            }),
+            (0, i.jsxs)("div", {
+                style: {
+                    display: "flex",
+                    gap: 8,
+                    flexWrap: "wrap",
+                },
+                children: [
+                    (0, i.jsx)(T.u, {
+                        text: "No delay (immediate)",
+                        delay: 0,
+                        children: (0, i.jsx)(I.zxk, {
+                            variant: "primary",
+                            text: "No Delay",
+                        }),
+                    }),
+                    (0, i.jsx)(T.u, {
+                        text: "Short delay (500ms)",
+                        delay: 500,
+                        children: (0, i.jsx)(I.zxk, {
+                            variant: "primary",
+                            text: "Short Delay",
+                        }),
+                    }),
+                    (0, i.jsx)(T.u, {
+                        text: "Long delay (1000ms)",
+                        delay: 1000,
+                        children: (0, i.jsx)(I.zxk, {
+                            variant: "primary",
+                            text: "Long Delay",
+                        }),
+                    }),
+                ],
+            }),
+            (0, i.jsx)(I.X6q, {
+                variant: "heading-lg/semibold",
+                style: { marginTop: 32 },
+                children: "Rich Tooltips",
+            }),
+            (0, i.jsxs)("div", {
+                style: {
+                    display: "flex",
+                    gap: 8,
+                    flexWrap: "wrap",
+                },
+                children: [
+                    (0, i.jsx)(T.i_, {
+                        title: "Title goes here",
+                        body: "Body copy goes in this section. Meow.",
+                        position: "top",
+                        children: (0, i.jsx)(I.zxk, {
+                            variant: "primary",
+                            text: "Rich Tooltip (No Graphic)",
+                        }),
+                    }),
+                    (0, i.jsx)(T.i_, {
+                        title: "With Graphic Asset",
+                        body: "This tooltip includes a graphic element on the left side",
+                        asset: (0, i.jsx)("img", {
+                            src: F.Z,
+                            alt: "Graphic slot 48px",
+                        }),
+                        position: "top",
+                        children: (0, i.jsx)(I.zxk, {
+                            variant: "primary",
+                            text: "With Asset",
+                        }),
+                    }),
+                ],
+            }),
         ],
     });
 }
-function em() {
+function eg() {
     let [e, t] = r.useState(!1),
         [n, s] = r.useState(!1),
         [a, l] = r.useState(!1),
@@ -1110,15 +1377,15 @@ function em() {
         [x, _] = r.useState(!1),
         [j, E] = r.useState(!1),
         [C, O] = r.useState(!1),
-        [I, N] = r.useState(!1),
+        [T, N] = r.useState(!1),
         [y, A] = r.useState(!1),
         [P, R] = r.useState(!1),
         [D, Z] = r.useState(!1),
         [w, k] = r.useState(!1),
         [L, B] = r.useState(!1),
-        [M, V] = r.useState(!1),
-        [G, W] = r.useState(!1),
-        Y = r.useRef(null),
+        [M, U] = r.useState(!1),
+        [G, F] = r.useState(!1),
+        H = r.useRef(null),
         K = r.useRef(null),
         q = r.useRef(null),
         X = r.useRef(null),
@@ -1155,18 +1422,18 @@ function em() {
                 Z(!1),
                 k(!1),
                 B(!1),
-                V(!1),
-                W(!1);
+                U(!1),
+                F(!1);
         }, []);
     return (0, i.jsxs)("div", {
-        className: U.section,
+        className: V.section,
         children: [
-            (0, i.jsx)(T.X6q, {
+            (0, i.jsx)(I.X6q, {
                 variant: "heading-xl/semibold",
                 children: "Popovers",
             }),
             (0, i.jsx)(v.J2, {
-                targetElementRef: Y,
+                targetElementRef: H,
                 shouldShow: e,
                 onRequestClose: em,
                 caretConfig: {
@@ -1177,7 +1444,7 @@ function em() {
                 body: "Body",
                 size: "sm",
                 asset: (0, i.jsx)("img", {
-                    src: H.Z,
+                    src: W.Z,
                     alt: "Small placeholder",
                 }),
                 badge: "new",
@@ -1199,7 +1466,7 @@ function em() {
                 title: "Header",
                 body: "Body",
                 asset: (0, i.jsx)("img", {
-                    src: F.Z,
+                    src: z.Z,
                     alt: "Medium placeholder",
                 }),
                 badge: "new",
@@ -1238,7 +1505,7 @@ function em() {
                 title: "Ipsum Dolor",
                 body: "Lorem ipsum dolor sit amet, consectetur elit. Sed do eiusmod.",
                 asset: (0, i.jsx)("img", {
-                    src: F.Z,
+                    src: z.Z,
                     alt: "Medium placeholder",
                 }),
                 badge: "new",
@@ -1265,7 +1532,7 @@ function em() {
                 title: "Header",
                 body: "Body",
                 asset: (0, i.jsx)("img", {
-                    src: F.Z,
+                    src: z.Z,
                     alt: "Medium placeholder",
                 }),
                 badge: "new",
@@ -1293,7 +1560,7 @@ function em() {
                 title: "No Actions",
                 body: "This popover has no action buttons, just content to display.",
                 asset: (0, i.jsx)("img", {
-                    src: F.Z,
+                    src: z.Z,
                     alt: "Medium placeholder",
                 }),
                 badge: "new",
@@ -1309,7 +1576,7 @@ function em() {
                 title: "Custom Caret API",
                 body: "Using CaretConfig with END placement",
                 asset: (0, i.jsx)("img", {
-                    src: F.Z,
+                    src: z.Z,
                     alt: "Medium placeholder",
                 }),
                 badge: "new",
@@ -1331,7 +1598,7 @@ function em() {
                 title: "Left Side Caret",
                 body: "Caret positioned on the left side at start",
                 asset: (0, i.jsx)("img", {
-                    src: F.Z,
+                    src: z.Z,
                     alt: "Medium placeholder",
                 }),
                 badge: "early_access",
@@ -1354,7 +1621,7 @@ function em() {
                 title: "Custom Offset",
                 body: "Caret positioned 50px from center with custom offset",
                 asset: (0, i.jsx)("img", {
-                    src: F.Z,
+                    src: z.Z,
                     alt: "Medium placeholder",
                 }),
                 badge: "beta",
@@ -1377,7 +1644,7 @@ function em() {
                 title: "Left Center Positioning",
                 body: "Popover appears to the right with caret centered on the left side",
                 asset: (0, i.jsx)("img", {
-                    src: F.Z,
+                    src: z.Z,
                     alt: "Medium placeholder",
                 }),
                 badge: "new",
@@ -1399,7 +1666,7 @@ function em() {
                 title: "Purple Gradient",
                 body: "This popover has a beautiful purple gradient background",
                 asset: (0, i.jsx)("img", {
-                    src: F.Z,
+                    src: z.Z,
                     alt: "Medium placeholder",
                 }),
                 gradientColor: "purple",
@@ -1413,7 +1680,7 @@ function em() {
             }),
             (0, i.jsx)(v.J2, {
                 targetElementRef: er,
-                shouldShow: I,
+                shouldShow: T,
                 onRequestClose: em,
                 caretConfig: {
                     position: "bottom",
@@ -1422,7 +1689,7 @@ function em() {
                 title: "Blue Gradient",
                 body: "This popover showcases the blue gradient option",
                 asset: (0, i.jsx)("img", {
-                    src: F.Z,
+                    src: z.Z,
                     alt: "Medium placeholder",
                 }),
                 gradientColor: "blue",
@@ -1445,7 +1712,7 @@ function em() {
                 title: "Nitro Pink Gradient",
                 body: "Experience the premium nitro-pink gradient effect",
                 asset: (0, i.jsx)("img", {
-                    src: F.Z,
+                    src: z.Z,
                     alt: "Medium placeholder",
                 }),
                 gradientColor: "nitro-pink",
@@ -1472,7 +1739,7 @@ function em() {
                 title: "Voice Filters",
                 body: "Experience enhanced voice quality with our latest filtering technology. Perfect for gaming and streaming.",
                 asset: (0, i.jsx)("img", {
-                    src: z.Z,
+                    src: Y.Z,
                     alt: "Voice Filters",
                 }),
                 badge: "new",
@@ -1515,7 +1782,7 @@ function em() {
                         title: "Welcome to Quests!",
                         body: "Journey to Quest Home in Discover to start earning Orbs.",
                         asset: (0, i.jsx)("img", {
-                            src: F.Z,
+                            src: z.Z,
                             alt: "Medium placeholder",
                         }),
                         badge: "new",
@@ -1526,7 +1793,7 @@ function em() {
                         title: "Earn Rewards",
                         body: "Complete quests to earn Orbs and unlock exclusive rewards.",
                         asset: (0, i.jsx)("img", {
-                            src: z.Z,
+                            src: Y.Z,
                             alt: "Quest Rewards",
                         }),
                         action: { text: "Next" },
@@ -1536,7 +1803,7 @@ function em() {
                         title: "Quest Complete!",
                         body: "You're all set to start your quest adventure. Good luck!",
                         asset: (0, i.jsx)("img", {
-                            src: F.Z,
+                            src: z.Z,
                             alt: "Medium placeholder",
                         }),
                         action: { text: "Get Started" },
@@ -1561,7 +1828,7 @@ function em() {
                 title: "Experience Voice Filters",
                 body: "Enhanced voice quality with our latest filtering technology. Try the expressive button!",
                 asset: (0, i.jsx)("img", {
-                    src: z.Z,
+                    src: Y.Z,
                     alt: "Voice Filters",
                 }),
                 badge: "new",
@@ -1587,7 +1854,7 @@ function em() {
                         title: "Discover Features",
                         body: "Explore amazing new capabilities in Discord.",
                         asset: (0, i.jsx)("img", {
-                            src: F.Z,
+                            src: z.Z,
                             alt: "Medium placeholder",
                         }),
                         badge: "new",
@@ -1598,7 +1865,7 @@ function em() {
                         title: "Unlock Potential",
                         body: "Learn how to make the most of your Discord experience.",
                         asset: (0, i.jsx)("img", {
-                            src: z.Z,
+                            src: Y.Z,
                             alt: "Features",
                         }),
                         action: { text: "Almost There" },
@@ -1608,7 +1875,7 @@ function em() {
                         title: "Ready to Go!",
                         body: "You're all set! Notice the expressive button animation.",
                         asset: (0, i.jsx)("img", {
-                            src: F.Z,
+                            src: z.Z,
                             alt: "Medium placeholder",
                         }),
                         action: {
@@ -1646,7 +1913,7 @@ function em() {
             (0, i.jsxs)("div", {
                 style: { marginTop: 16 },
                 children: [
-                    (0, i.jsx)(T.X6q, {
+                    (0, i.jsx)(I.X6q, {
                         variant: "heading-lg/semibold",
                         children: "Size Examples",
                     }),
@@ -1658,15 +1925,15 @@ function em() {
                             marginTop: 8,
                         },
                         children: [
-                            (0, i.jsx)(T.zxk, {
+                            (0, i.jsx)(I.zxk, {
                                 variant: "primary",
                                 text: "Small Content",
-                                buttonRef: Y,
+                                buttonRef: H,
                                 onClick: () => {
                                     em(), t(!0);
                                 },
                             }),
-                            (0, i.jsx)(T.zxk, {
+                            (0, i.jsx)(I.zxk, {
                                 variant: "primary",
                                 text: "Medium Content",
                                 buttonRef: K,
@@ -1674,7 +1941,7 @@ function em() {
                                     em(), s(!0);
                                 },
                             }),
-                            (0, i.jsx)(T.zxk, {
+                            (0, i.jsx)(I.zxk, {
                                 buttonRef: q,
                                 onClick: () => {
                                     em(), l(!0);
@@ -1688,7 +1955,7 @@ function em() {
             (0, i.jsxs)("div", {
                 style: { marginTop: 16 },
                 children: [
-                    (0, i.jsx)(T.X6q, {
+                    (0, i.jsx)(I.X6q, {
                         variant: "heading-lg/semibold",
                         children: "Actions Examples",
                     }),
@@ -1700,7 +1967,7 @@ function em() {
                             marginTop: 8,
                         },
                         children: [
-                            (0, i.jsx)(T.zxk, {
+                            (0, i.jsx)(I.zxk, {
                                 variant: "primary",
                                 text: "External Link",
                                 buttonRef: X,
@@ -1708,7 +1975,7 @@ function em() {
                                     em(), c(!0);
                                 },
                             }),
-                            (0, i.jsx)(T.zxk, {
+                            (0, i.jsx)(I.zxk, {
                                 variant: "primary",
                                 text: "Two Actions",
                                 buttonRef: J,
@@ -1716,7 +1983,7 @@ function em() {
                                     em(), u(!0);
                                 },
                             }),
-                            (0, i.jsx)(T.zxk, {
+                            (0, i.jsx)(I.zxk, {
                                 buttonRef: Q,
                                 onClick: () => {
                                     em(), p(!0);
@@ -1730,7 +1997,7 @@ function em() {
             (0, i.jsxs)("div", {
                 style: { marginTop: 16 },
                 children: [
-                    (0, i.jsx)(T.X6q, {
+                    (0, i.jsx)(I.X6q, {
                         variant: "heading-lg/semibold",
                         children: "Caret API Examples",
                     }),
@@ -1742,7 +2009,7 @@ function em() {
                             marginTop: 8,
                         },
                         children: [
-                            (0, i.jsx)(T.zxk, {
+                            (0, i.jsx)(I.zxk, {
                                 variant: "primary",
                                 text: "Custom Caret API",
                                 buttonRef: $,
@@ -1750,7 +2017,7 @@ function em() {
                                     em(), h(!0);
                                 },
                             }),
-                            (0, i.jsx)(T.zxk, {
+                            (0, i.jsx)(I.zxk, {
                                 variant: "primary",
                                 text: "Left Side Caret",
                                 buttonRef: ee,
@@ -1758,7 +2025,7 @@ function em() {
                                     em(), b(!0);
                                 },
                             }),
-                            (0, i.jsx)(T.zxk, {
+                            (0, i.jsx)(I.zxk, {
                                 variant: "primary",
                                 text: "Custom Offset",
                                 buttonRef: et,
@@ -1766,7 +2033,7 @@ function em() {
                                     em(), _(!0);
                                 },
                             }),
-                            (0, i.jsx)(T.zxk, {
+                            (0, i.jsx)(I.zxk, {
                                 variant: "primary",
                                 text: "Left Center",
                                 buttonRef: en,
@@ -1781,7 +2048,7 @@ function em() {
             (0, i.jsxs)("div", {
                 style: { marginTop: 16 },
                 children: [
-                    (0, i.jsx)(T.X6q, {
+                    (0, i.jsx)(I.X6q, {
                         variant: "heading-lg/semibold",
                         children: "Gradient Examples",
                     }),
@@ -1793,7 +2060,7 @@ function em() {
                             marginTop: 8,
                         },
                         children: [
-                            (0, i.jsx)(T.zxk, {
+                            (0, i.jsx)(I.zxk, {
                                 variant: "primary",
                                 text: "Purple Gradient",
                                 buttonRef: ei,
@@ -1801,7 +2068,7 @@ function em() {
                                     em(), O(!0);
                                 },
                             }),
-                            (0, i.jsx)(T.zxk, {
+                            (0, i.jsx)(I.zxk, {
                                 variant: "primary",
                                 text: "Blue Gradient",
                                 buttonRef: er,
@@ -1809,7 +2076,7 @@ function em() {
                                     em(), N(!0);
                                 },
                             }),
-                            (0, i.jsx)(T.zxk, {
+                            (0, i.jsx)(I.zxk, {
                                 variant: "primary",
                                 text: "Nitro Pink Gradient",
                                 buttonRef: es,
@@ -1824,7 +2091,7 @@ function em() {
             (0, i.jsxs)("div", {
                 style: { marginTop: 16 },
                 children: [
-                    (0, i.jsx)(T.X6q, {
+                    (0, i.jsx)(I.X6q, {
                         variant: "heading-lg/semibold",
                         children: "With Asset",
                     }),
@@ -1836,7 +2103,7 @@ function em() {
                             marginTop: 8,
                         },
                         children: [
-                            (0, i.jsx)(T.zxk, {
+                            (0, i.jsx)(I.zxk, {
                                 variant: "primary",
                                 text: "Voice Filters",
                                 buttonRef: ea,
@@ -1844,7 +2111,7 @@ function em() {
                                     em(), R(!0);
                                 },
                             }),
-                            (0, i.jsx)(T.zxk, {
+                            (0, i.jsx)(I.zxk, {
                                 variant: "primary",
                                 text: "Video Media Viewer",
                                 buttonRef: el,
@@ -1859,7 +2126,7 @@ function em() {
             (0, i.jsxs)("div", {
                 style: { marginTop: 16 },
                 children: [
-                    (0, i.jsx)(T.X6q, {
+                    (0, i.jsx)(I.X6q, {
                         variant: "heading-lg/semibold",
                         children: "Multi-Step",
                     }),
@@ -1870,7 +2137,7 @@ function em() {
                             flexWrap: "wrap",
                             marginTop: 8,
                         },
-                        children: (0, i.jsx)(T.zxk, {
+                        children: (0, i.jsx)(I.zxk, {
                             variant: "primary",
                             text: "Multi-Step",
                             buttonRef: eo,
@@ -1884,7 +2151,7 @@ function em() {
             (0, i.jsxs)("div", {
                 style: { marginTop: 16 },
                 children: [
-                    (0, i.jsx)(T.X6q, {
+                    (0, i.jsx)(I.X6q, {
                         variant: "heading-lg/semibold",
                         children: "Expressive",
                     }),
@@ -1896,7 +2163,7 @@ function em() {
                             marginTop: 8,
                         },
                         children: [
-                            (0, i.jsx)(T.zxk, {
+                            (0, i.jsx)(I.zxk, {
                                 variant: "primary",
                                 text: "Expressive Popover",
                                 buttonRef: ec,
@@ -1904,20 +2171,20 @@ function em() {
                                     em(), B(!0);
                                 },
                             }),
-                            (0, i.jsx)(T.zxk, {
+                            (0, i.jsx)(I.zxk, {
                                 variant: "primary",
                                 text: "Expressive Multi-Step",
                                 buttonRef: ed,
                                 onClick: () => {
-                                    em(), V(!0);
+                                    em(), U(!0);
                                 },
                             }),
-                            (0, i.jsx)(T.zxk, {
+                            (0, i.jsx)(I.zxk, {
                                 variant: "primary",
                                 text: "Expressive Video",
                                 buttonRef: eu,
                                 onClick: () => {
-                                    em(), W(!0);
+                                    em(), F(!0);
                                 },
                             }),
                         ],
@@ -1927,50 +2194,50 @@ function em() {
         ],
     });
 }
-function ep() {
+function eh() {
     let [e, t] = r.useState(!1),
         [n, s] = r.useState(!1),
         [a, l] = r.useState("auto");
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsxs)("div", {
-                className: U.section,
+                className: V.section,
                 children: [
-                    (0, i.jsx)(T.X6q, {
+                    (0, i.jsx)(I.X6q, {
                         variant: "heading-xl/semibold",
                         children: "Checkboxes",
                     }),
-                    (0, i.jsx)(T.XZJ, {
+                    (0, i.jsx)(I.XZJ, {
                         value: e,
                         onChange: (e, n) => t(n),
-                        children: (0, i.jsx)(T.Text, {
+                        children: (0, i.jsx)(I.Text, {
                             variant: "text-md/medium",
                             children: "Checkbox input",
                         }),
                     }),
-                    (0, i.jsx)(T.XZJ, {
+                    (0, i.jsx)(I.XZJ, {
                         value: e,
                         onChange: (e, n) => t(n),
                         disabled: !0,
-                        children: (0, i.jsx)(T.Text, {
+                        children: (0, i.jsx)(I.Text, {
                             variant: "text-md/medium",
                             children: "Disabled checkbox",
                         }),
                     }),
-                    (0, i.jsx)(T.XZJ, {
+                    (0, i.jsx)(I.XZJ, {
                         value: e,
                         onChange: (e, n) => t(n),
                         readOnly: !0,
-                        children: (0, i.jsx)(T.Text, {
+                        children: (0, i.jsx)(I.Text, {
                             variant: "text-md/medium",
                             children: "Read-only checkbox",
                         }),
                     }),
-                    (0, i.jsx)(T.XZJ, {
+                    (0, i.jsx)(I.XZJ, {
                         value: e,
                         onChange: (e, n) => t(n),
-                        type: T.XZJ.Types.ROW,
-                        children: (0, i.jsx)(T.Text, {
+                        type: I.XZJ.Types.ROW,
+                        children: (0, i.jsx)(I.Text, {
                             variant: "text-md/medium",
                             children: "Checkbox row",
                         }),
@@ -1978,13 +2245,13 @@ function ep() {
                 ],
             }),
             (0, i.jsxs)("div", {
-                className: U.section,
+                className: V.section,
                 children: [
-                    (0, i.jsx)(T.X6q, {
+                    (0, i.jsx)(I.X6q, {
                         variant: "heading-xl/semibold",
                         children: "Switches",
                     }),
-                    (0, i.jsx)(T.j7V, {
+                    (0, i.jsx)(I.j7V, {
                         hideBorder: !0,
                         value: n,
                         onChange: (e) => s(e),
@@ -1993,14 +2260,14 @@ function ep() {
                 ],
             }),
             (0, i.jsxs)("div", {
-                className: U.section,
+                className: V.section,
                 children: [
-                    (0, i.jsx)(T.X6q, {
+                    (0, i.jsx)(I.X6q, {
                         variant: "heading-xl/semibold",
                         children: "Radio Buttons",
                     }),
-                    (0, i.jsx)(T.xJW, {
-                        children: (0, i.jsx)(T.FXm, {
+                    (0, i.jsx)(I.xJW, {
+                        children: (0, i.jsx)(I.FXm, {
                             onChange: (e) => {
                                 let { value: t } = e;
                                 return l(t);
@@ -2025,20 +2292,20 @@ function ep() {
                 ],
             }),
             (0, i.jsxs)("div", {
-                className: U.section,
+                className: V.section,
                 children: [
-                    (0, i.jsx)(T.X6q, {
+                    (0, i.jsx)(I.X6q, {
                         variant: "heading-xl/semibold",
                         children: "Slider",
                     }),
                     (0, i.jsxs)("div", {
-                        className: U.slider,
+                        className: V.slider,
                         children: [
-                            (0, i.jsx)(T.Text, {
+                            (0, i.jsx)(I.Text, {
                                 variant: "text-md/medium",
                                 children: "Standard slider",
                             }),
-                            (0, i.jsx)(T.iRW, {
+                            (0, i.jsx)(I.iRW, {
                                 minValue: 0,
                                 maxValue: 100,
                                 initialValue: 50,
@@ -2048,13 +2315,13 @@ function ep() {
                         ],
                     }),
                     (0, i.jsxs)("div", {
-                        className: U.slider,
+                        className: V.slider,
                         children: [
-                            (0, i.jsx)(T.Text, {
+                            (0, i.jsx)(I.Text, {
                                 variant: "text-md/medium",
                                 children: "Sticky markers",
                             }),
-                            (0, i.jsx)(T.iRW, {
+                            (0, i.jsx)(I.iRW, {
                                 minValue: 0,
                                 maxValue: 100,
                                 initialValue: 50,
@@ -2064,13 +2331,13 @@ function ep() {
                         ],
                     }),
                     (0, i.jsxs)("div", {
-                        className: U.slider,
+                        className: V.slider,
                         children: [
-                            (0, i.jsx)(T.Text, {
+                            (0, i.jsx)(I.Text, {
                                 variant: "text-md/medium",
                                 children: "Non-uniform markers",
                             }),
-                            (0, i.jsx)(T.iRW, {
+                            (0, i.jsx)(I.iRW, {
                                 minValue: 0,
                                 maxValue: 100,
                                 initialValue: 50,
@@ -2080,13 +2347,13 @@ function ep() {
                         ],
                     }),
                     (0, i.jsxs)("div", {
-                        className: U.slider,
+                        className: V.slider,
                         children: [
-                            (0, i.jsx)(T.Text, {
+                            (0, i.jsx)(I.Text, {
                                 variant: "text-md/medium",
                                 children: "Non-uniform equidistant markers",
                             }),
-                            (0, i.jsx)(T.iRW, {
+                            (0, i.jsx)(I.iRW, {
                                 minValue: 0,
                                 maxValue: 100,
                                 initialValue: 50,
@@ -2096,13 +2363,13 @@ function ep() {
                         ],
                     }),
                     (0, i.jsxs)("div", {
-                        className: U.slider,
+                        className: V.slider,
                         children: [
-                            (0, i.jsx)(T.Text, {
+                            (0, i.jsx)(I.Text, {
                                 variant: "text-md/medium",
                                 children: "No markers",
                             }),
-                            (0, i.jsx)(T.iRW, {
+                            (0, i.jsx)(I.iRW, {
                                 minValue: 0,
                                 maxValue: 100,
                                 initialValue: 50,
@@ -2110,13 +2377,13 @@ function ep() {
                         ],
                     }),
                     (0, i.jsxs)("div", {
-                        className: U.slider,
+                        className: V.slider,
                         children: [
-                            (0, i.jsx)(T.Text, {
+                            (0, i.jsx)(I.Text, {
                                 variant: "text-md/medium",
                                 children: "Mini slider",
                             }),
-                            (0, i.jsx)(T.iRW, {
+                            (0, i.jsx)(I.iRW, {
                                 mini: !0,
                                 minValue: 0,
                                 maxValue: 100,
@@ -2129,40 +2396,40 @@ function ep() {
         ],
     });
 }
-function eg() {
+function ef() {
     let [e, t] = r.useState(null),
         [n, s] = r.useState(null),
         [a, l] = r.useState([]),
         [c, d] = r.useState([]),
         [u, m] = r.useState([]);
     return (0, i.jsxs)("div", {
-        className: U.section,
+        className: V.section,
         children: [
-            (0, i.jsx)(T.X6q, {
+            (0, i.jsx)(I.X6q, {
                 variant: "heading-xl/semibold",
                 children: "SearchableSelect",
             }),
-            (0, i.jsx)(T.VcW, {
+            (0, i.jsx)(I.VcW, {
                 placeholder: "Single select",
                 value: e,
                 onChange: (e) => t(e),
                 options: o.G,
             }),
-            (0, i.jsx)(T.VcW, {
+            (0, i.jsx)(I.VcW, {
                 placeholder: "Single select (clearable)",
                 clearable: !0,
                 value: n,
                 onChange: (e) => s(e),
                 options: o.G,
             }),
-            (0, i.jsx)(T.VcW, {
+            (0, i.jsx)(I.VcW, {
                 placeholder: "Multi select",
                 multi: !0,
                 value: a,
                 onChange: (e) => l(e),
                 options: o.G,
             }),
-            (0, i.jsx)(T.VcW, {
+            (0, i.jsx)(I.VcW, {
                 placeholder: "Multi select (clearable)",
                 multi: !0,
                 clearable: !0,
@@ -2170,14 +2437,14 @@ function eg() {
                 onChange: (e) => m(e),
                 options: o.G,
             }),
-            (0, i.jsx)(T.VcW, {
+            (0, i.jsx)(I.VcW, {
                 placeholder: "Multi select (custom pills)",
                 multi: !0,
                 value: c,
                 onChange: (e) => d(e),
                 options: o.G,
                 hidePills: !0,
-                customPillContainerClassName: U.customPillContainer,
+                customPillContainerClassName: V.customPillContainer,
                 renderCustomPill: (e) =>
                     (0, i.jsx)("div", {
                         style: {
@@ -2185,7 +2452,7 @@ function eg() {
                             border: "1px solid var(--bg-brand)",
                             borderRadius: 8,
                         },
-                        children: (0, i.jsx)(T.Text, {
+                        children: (0, i.jsx)(I.Text, {
                             variant: "text-md/bold",
                             children: e.label,
                         }),
@@ -2194,30 +2461,30 @@ function eg() {
         ],
     });
 }
-function eh() {
+function eb() {
     let [e, t] = r.useState(""),
         [n, s] = r.useState(""),
         [a, l] = r.useState(""),
-        o = (0, A.U)("UserSettingsDesignSystems");
+        o = (0, P.U)("UserSettingsDesignSystems");
     return (0, i.jsxs)("div", {
-        className: U.section,
+        className: V.section,
         children: [
-            (0, i.jsx)(T.X6q, {
+            (0, i.jsx)(I.X6q, {
                 variant: "heading-xl/semibold",
                 children: "TextInput",
             }),
-            (0, i.jsx)(T.xJW, {
+            (0, i.jsx)(I.xJW, {
                 title: "Search",
-                children: (0, i.jsxs)(T.Kqy, {
+                children: (0, i.jsxs)(I.Kqy, {
                     gap: 8,
                     children: [
-                        (0, i.jsx)(T.E1j, {
+                        (0, i.jsx)(I.E1j, {
                             placeholder: "Search...",
                             onChange: (e) => l(e),
                             query: a,
                             onClear: () => l(""),
                         }),
-                        (0, i.jsx)(T.E1j, {
+                        (0, i.jsx)(I.E1j, {
                             size: "sm",
                             placeholder: "Search...",
                             onChange: (e) => l(e),
@@ -2227,72 +2494,72 @@ function eh() {
                     ],
                 }),
             }),
-            (0, i.jsx)(T.xJW, {
+            (0, i.jsx)(I.xJW, {
                 title: "Disabled",
                 disabled: !0,
-                children: (0, i.jsx)(T.oil, {
+                children: (0, i.jsx)(I.oil, {
                     placeholder: "Disabled",
                     disabled: !0,
                 }),
             }),
-            (0, i.jsx)(T.xJW, {
+            (0, i.jsx)(I.xJW, {
                 title: "Error",
-                children: (0, i.jsx)(T.oil, {
+                children: (0, i.jsx)(I.oil, {
                     required: !0,
                     error: "This must have a value",
                 }),
             }),
-            (0, i.jsx)(T.xJW, {
+            (0, i.jsx)(I.xJW, {
                 title: "Error",
-                children: (0, i.jsx)(T.oil, {
+                children: (0, i.jsx)(I.oil, {
                     defaultValue: "Not a valid value",
                     error: "This has an error.",
                 }),
             }),
-            (0, i.jsx)(T.xJW, {
+            (0, i.jsx)(I.xJW, {
                 title: "minLength",
-                children: (0, i.jsx)(T.oil, {
+                children: (0, i.jsx)(I.oil, {
                     minLength: 6,
                     value: e,
                     onChange: t,
                     placeholder: "Enter at least 6 characters",
                 }),
             }),
-            (0, i.jsx)(T.xJW, {
+            (0, i.jsx)(I.xJW, {
                 title: "Read only",
-                children: (0, i.jsx)(T.oil, {
+                children: (0, i.jsx)(I.oil, {
                     value: "Read-only, not-editable field",
                     editable: !1,
                 }),
             }),
-            (0, i.jsx)(T.xJW, {
+            (0, i.jsx)(I.xJW, {
                 title: "Input with a label",
-                children: (0, i.jsx)(T.oil, {
+                children: (0, i.jsx)(I.oil, {
                     placeholder: "Real placeholder",
                     value: e,
                     onChange: t,
                 }),
             }),
             o &&
-                (0, i.jsx)(T.xJW, {
+                (0, i.jsx)(I.xJW, {
                     title: "Leading and Trailing",
-                    children: (0, i.jsxs)(T.Kqy, {
+                    children: (0, i.jsxs)(I.Kqy, {
                         gap: 16,
                         children: [
-                            (0, i.jsx)(T.Wn, {
-                                messageType: T.QYI.WARNING,
+                            (0, i.jsx)(I.Wn, {
+                                messageType: I.QYI.WARNING,
                                 children: "Leading and trailing accessories are not yet supported in the public API.",
                             }),
-                            (0, i.jsxs)(T.Kqy, {
+                            (0, i.jsxs)(I.Kqy, {
                                 children: [
-                                    (0, i.jsx)(T.oil, {
-                                        leading: T.qJs,
+                                    (0, i.jsx)(I.oil, {
+                                        leading: I.qJs,
                                         placeholder: "Create Channel",
                                         value: e,
                                         onChange: t,
                                     }),
-                                    (0, i.jsx)(T.oil, {
-                                        trailing: T.lOy,
+                                    (0, i.jsx)(I.oil, {
+                                        trailing: I.lOy,
                                         placeholder: "Send Message",
                                         value: e,
                                         onChange: t,
@@ -2302,9 +2569,9 @@ function eh() {
                         ],
                     }),
                 }),
-            (0, i.jsx)(T.xJW, {
+            (0, i.jsx)(I.xJW, {
                 title: "Text area",
-                children: (0, i.jsx)(T.Kx8, {
+                children: (0, i.jsx)(I.Kx8, {
                     placeholder: "Text area placeholder",
                     showCharacterCount: !0,
                     value: n,
@@ -2314,35 +2581,35 @@ function eh() {
         ],
     });
 }
-function ef(e) {
+function ex(e) {
     let { transitionState: t } = e,
         [n, s] = r.useState(!1),
-        [a, l] = r.useState(T.CgR.SMALL),
+        [a, l] = r.useState(I.CgR.SMALL),
         [o, c] = r.useState(!1),
-        d = n ? U.modalOutlines : "";
-    return (0, i.jsxs)(T.Y0X, {
+        d = n ? V.modalOutlines : "";
+    return (0, i.jsxs)(I.Y0X, {
         transitionState: t,
         size: a,
         parentComponent: "UserSettingsDesignSystem",
         children: [
-            (0, i.jsx)(T.xBx, {
+            (0, i.jsx)(I.xBx, {
                 className: d,
-                children: (0, i.jsx)(T.X6q, {
+                children: (0, i.jsx)(I.X6q, {
                     variant: "heading-xl/semibold",
                     children: "Modal",
                 }),
             }),
-            (0, i.jsx)(T.hzk, {
+            (0, i.jsx)(I.hzk, {
                 className: d,
-                children: (0, i.jsxs)(T.Kqy, {
+                children: (0, i.jsxs)(I.Kqy, {
                     gap: 16,
                     children: [
-                        (0, i.jsx)(T.xJW, {
+                        (0, i.jsx)(I.xJW, {
                             title: "Modal Size",
-                            children: (0, i.jsx)(T.q4e, {
+                            children: (0, i.jsx)(I.q4e, {
                                 value: a,
                                 onChange: l,
-                                options: Object.entries(T.CgR).map((e) => {
+                                options: Object.entries(I.CgR).map((e) => {
                                     let [t, n] = e;
                                     return {
                                         label: t,
@@ -2351,23 +2618,23 @@ function ef(e) {
                                 }),
                             }),
                         }),
-                        (0, i.jsx)(T.hjN, {
+                        (0, i.jsx)(I.hjN, {
                             title: "Options",
-                            children: (0, i.jsxs)(T.Kqy, {
+                            children: (0, i.jsxs)(I.Kqy, {
                                 gap: 16,
                                 children: [
-                                    (0, i.jsx)(T.XZJ, {
+                                    (0, i.jsx)(I.XZJ, {
                                         value: n,
                                         onChange: (e, t) => s(t),
-                                        children: (0, i.jsx)(T.Text, {
+                                        children: (0, i.jsx)(I.Text, {
                                             variant: "text-md/medium",
                                             children: "Show Section Outlines",
                                         }),
                                     }),
-                                    (0, i.jsx)(T.XZJ, {
+                                    (0, i.jsx)(I.XZJ, {
                                         value: o,
                                         onChange: (e, t) => c(t),
-                                        children: (0, i.jsx)(T.Text, {
+                                        children: (0, i.jsx)(I.Text, {
                                             variant: "text-md/medium",
                                             children: "Show secondary action in footer",
                                         }),
@@ -2378,19 +2645,19 @@ function ef(e) {
                     ],
                 }),
             }),
-            (0, i.jsx)(T.mzw, {
+            (0, i.jsx)(I.mzw, {
                 className: d,
-                children: (0, i.jsxs)(T.Kqy, {
+                children: (0, i.jsxs)(I.Kqy, {
                     direction: "horizontal",
                     justify: "end",
                     gap: 8,
                     children: [
                         o &&
-                            (0, i.jsx)(T.zxk, {
+                            (0, i.jsx)(I.zxk, {
                                 variant: "secondary",
                                 text: "Secondary Action",
                             }),
-                        (0, i.jsx)(T.zxk, {
+                        (0, i.jsx)(I.zxk, {
                             variant: "primary",
                             text: "Close",
                         }),
@@ -2400,33 +2667,33 @@ function ef(e) {
         ],
     });
 }
-function eb(e) {
+function e_(e) {
     let { transitionState: t, onClose: n, modalCount: s = 1 } = e,
         [a, l] = r.useState("replace"),
         o = s < 3;
-    return (0, i.jsxs)(T.Y0X, {
+    return (0, i.jsxs)(I.Y0X, {
         transitionState: t,
-        size: 1 === s ? T.CgR.LARGE : 2 === s ? T.CgR.MEDIUM : T.CgR.SMALL,
+        size: 1 === s ? I.CgR.LARGE : 2 === s ? I.CgR.MEDIUM : I.CgR.SMALL,
         parentComponent: "UserSettingsDesignSystem",
         children: [
-            (0, i.jsx)(T.xBx, {
-                children: (0, i.jsx)(T.X6q, {
+            (0, i.jsx)(I.xBx, {
+                children: (0, i.jsx)(I.X6q, {
                     variant: "heading-xl/semibold",
                     children: "Modal Stacking Demo",
                 }),
             }),
-            (0, i.jsx)(T.hzk, {
-                children: (0, i.jsxs)(T.Kqy, {
+            (0, i.jsx)(I.hzk, {
+                children: (0, i.jsxs)(I.Kqy, {
                     gap: 16,
                     children: [
-                        (0, i.jsxs)(T.Text, {
+                        (0, i.jsxs)(I.Text, {
                             variant: "text-md/medium",
                             children: ["This is modal level ", s, "."],
                         }),
                         o &&
-                            (0, i.jsx)(T.xJW, {
+                            (0, i.jsx)(I.xJW, {
                                 title: "Stacking Behavior",
-                                children: (0, i.jsx)(T.q4e, {
+                                children: (0, i.jsx)(I.q4e, {
                                     value: a,
                                     onChange: l,
                                     options: [
@@ -2445,10 +2712,10 @@ function eb(e) {
                                     ],
                                 }),
                             }),
-                        (0, i.jsxs)(T.Kqy, {
+                        (0, i.jsxs)(I.Kqy, {
                             gap: 8,
                             children: [
-                                (0, i.jsxs)(T.Text, {
+                                (0, i.jsxs)(I.Text, {
                                     variant: "text-sm/normal",
                                     color: "text-muted",
                                     children: [
@@ -2456,7 +2723,7 @@ function eb(e) {
                                         " The modal directly below is hidden (default behavior)",
                                     ],
                                 }),
-                                (0, i.jsxs)(T.Text, {
+                                (0, i.jsxs)(I.Text, {
                                     variant: "text-sm/normal",
                                     color: "text-muted",
                                     children: [
@@ -2464,7 +2731,7 @@ function eb(e) {
                                         " All modals below are hidden",
                                     ],
                                 }),
-                                (0, i.jsxs)(T.Text, {
+                                (0, i.jsxs)(I.Text, {
                                     variant: "text-sm/normal",
                                     color: "text-muted",
                                     children: [
@@ -2477,24 +2744,24 @@ function eb(e) {
                     ],
                 }),
             }),
-            (0, i.jsx)(T.mzw, {
-                children: (0, i.jsxs)(T.Kqy, {
+            (0, i.jsx)(I.mzw, {
+                children: (0, i.jsxs)(I.Kqy, {
                     direction: "horizontal",
                     justify: "end",
                     gap: 8,
                     children: [
-                        (0, i.jsx)(T.zxk, {
+                        (0, i.jsx)(I.zxk, {
                             variant: "secondary",
                             text: "Close",
                             onClick: n,
                         }),
                         o &&
-                            (0, i.jsx)(T.zxk, {
+                            (0, i.jsx)(I.zxk, {
                                 variant: "primary",
                                 text: "Open Next Modal",
                                 onClick: () => {
                                     let e = s + 1;
-                                    (0, T.h7j)((t) => (0, i.jsx)(eb, Y(W({}, t), { modalCount: e })), {
+                                    (0, I.h7j)((t) => (0, i.jsx)(e_, q(K({}, t), { modalCount: e })), {
                                         stackingBehavior: a,
                                     });
                                 },
@@ -2505,12 +2772,12 @@ function eb(e) {
         ],
     });
 }
-function ex(e) {
+function ej(e) {
     let { transitionState: t, onClose: n } = e;
     function r(e) {
         let { children: t } = e;
         return (0, i.jsx)("div", {
-            className: U.modalOutlines,
+            className: V.modalOutlines,
             style: { padding: "24px" },
             children: t,
         });
@@ -2520,7 +2787,7 @@ function ex(e) {
         onClose: n,
         children: [
             (0, i.jsx)("div", {
-                className: U.modalOutlines,
+                className: V.modalOutlines,
                 children: (0, i.jsx)(O.x, {
                     title: "Demo Modal",
                     subtitle: "The ModalHeader can have leading and trailing items on either side of the text",
@@ -2529,7 +2796,7 @@ function ex(e) {
                 }),
             }),
             (0, i.jsx)("div", {
-                className: U.modalOutlines,
+                className: V.modalOutlines,
                 children: (0, i.jsx)(E.f, {
                     controls: (0, i.jsx)(r, { children: "This ModalBody renders any controls here" }),
                     children: (0, i.jsx)(r, {
@@ -2538,11 +2805,11 @@ function ex(e) {
                 }),
             }),
             (0, i.jsx)("div", {
-                className: U.modalOutlines,
+                className: V.modalOutlines,
                 children: (0, i.jsx)(C.m, { children: (0, i.jsx)(r, { children: "This is the ModalFooter" }) }),
             }),
             (0, i.jsx)("div", {
-                className: U.modalOutlines,
+                className: V.modalOutlines,
                 children: (0, i.jsx)(j.G, {
                     leading: (0, i.jsx)(r, { children: "ModalActionBar leading" }),
                     actions: [
@@ -2562,7 +2829,7 @@ function ex(e) {
         ],
     });
 }
-function e_(e) {
+function eE(e) {
     let { transitionState: t, onClose: n } = e,
         [s, a] = r.useState("md"),
         [l, o] = r.useState("Demo Modal"),
@@ -2584,18 +2851,18 @@ function e_(e) {
             }),
             (0, i.jsx)(E.f, {
                 controls: p
-                    ? (0, i.jsx)(T.E1j, {
+                    ? (0, i.jsx)(I.E1j, {
                           placeholder: "Search",
                           onChange: () => null,
                           query: "",
                       })
                     : void 0,
-                children: (0, i.jsxs)(T.Kqy, {
+                children: (0, i.jsxs)(I.Kqy, {
                     gap: 16,
                     children: [
-                        (0, i.jsx)(T.xJW, {
+                        (0, i.jsx)(I.xJW, {
                             title: "Modal Size",
-                            children: (0, i.jsx)(T.q4e, {
+                            children: (0, i.jsx)(I.q4e, {
                                 value: s,
                                 onChange: a,
                                 options: [
@@ -2618,61 +2885,61 @@ function e_(e) {
                                 ],
                             }),
                         }),
-                        (0, i.jsx)(T.xJW, {
+                        (0, i.jsx)(I.xJW, {
                             title: "Header Title",
-                            children: (0, i.jsx)(T.oil, {
+                            children: (0, i.jsx)(I.oil, {
                                 onChange: o,
                                 defaultValue: l,
                             }),
                         }),
-                        (0, i.jsx)(T.xJW, {
+                        (0, i.jsx)(I.xJW, {
                             title: "Header body",
-                            children: (0, i.jsx)(T.oil, {
+                            children: (0, i.jsx)(I.oil, {
                                 onChange: d,
                                 defaultValue: c,
                             }),
                         }),
-                        (0, i.jsx)(T.xJW, {
+                        (0, i.jsx)(I.xJW, {
                             title: "Optional Content",
-                            children: (0, i.jsxs)(T.Kqy, {
+                            children: (0, i.jsxs)(I.Kqy, {
                                 gap: 12,
                                 children: [
-                                    (0, i.jsx)(T.XZJ, {
+                                    (0, i.jsx)(I.XZJ, {
                                         value: u,
                                         onChange: (e, t) => m(t),
-                                        children: (0, i.jsx)(T.Text, {
+                                        children: (0, i.jsx)(I.Text, {
                                             variant: "text-md/medium",
                                             children: "Header Align Center",
                                         }),
                                     }),
-                                    (0, i.jsx)(T.XZJ, {
+                                    (0, i.jsx)(I.XZJ, {
                                         value: p,
                                         onChange: (e, t) => g(t),
-                                        children: (0, i.jsx)(T.Text, {
+                                        children: (0, i.jsx)(I.Text, {
                                             variant: "text-md/medium",
                                             children: "Show Search Input",
                                         }),
                                     }),
-                                    (0, i.jsx)(T.XZJ, {
+                                    (0, i.jsx)(I.XZJ, {
                                         value: h,
                                         onChange: (e, t) => f(t),
-                                        children: (0, i.jsx)(T.Text, {
+                                        children: (0, i.jsx)(I.Text, {
                                             variant: "text-md/medium",
                                             children: "Show Preview Content",
                                         }),
                                     }),
-                                    (0, i.jsx)(T.XZJ, {
+                                    (0, i.jsx)(I.XZJ, {
                                         value: x,
                                         onChange: (e, t) => _(t),
-                                        children: (0, i.jsx)(T.Text, {
+                                        children: (0, i.jsx)(I.Text, {
                                             variant: "text-md/medium",
                                             children: "Show Action Bar Leading Input",
                                         }),
                                     }),
-                                    (0, i.jsx)(T.XZJ, {
+                                    (0, i.jsx)(I.XZJ, {
                                         value: v,
                                         onChange: (e, t) => S(t),
-                                        children: (0, i.jsx)(T.Text, {
+                                        children: (0, i.jsx)(I.Text, {
                                             variant: "text-md/medium",
                                             children: "Full Width Actions",
                                         }),
@@ -2686,11 +2953,11 @@ function e_(e) {
             h &&
                 (0, i.jsxs)(C.m, {
                     children: [
-                        (0, i.jsx)(T.X6q, {
+                        (0, i.jsx)(I.X6q, {
                             variant: "heading-lg/semibold",
                             children: "Celebration Station",
                         }),
-                        (0, i.jsx)(T.Text, {
+                        (0, i.jsx)(I.Text, {
                             variant: "text-sm/normal",
                             color: "text-secondary",
                             children: "32 Members \u25CF 19 Online",
@@ -2721,17 +2988,17 @@ function e_(e) {
         ],
     });
 }
-function ej(e) {
+function eC(e) {
     let { transitionState: t, onClose: n } = e;
     function s(e) {
         let { text: t } = e,
             [n, s] = r.useState(!1);
         return (0, i.jsx)("div", {
             style: { padding: "8px 0" },
-            children: (0, i.jsx)(T.XZJ, {
+            children: (0, i.jsx)(I.XZJ, {
                 value: n,
                 onChange: (e, t) => s(t),
-                children: (0, i.jsx)(T.Text, {
+                children: (0, i.jsx)(I.Text, {
                     variant: "text-md/medium",
                     children: t,
                 }),
@@ -2743,18 +3010,18 @@ function ej(e) {
         onClose: n,
         size: "md",
         title: "Invite to server",
-        input: (0, i.jsx)(T.E1j, {
+        input: (0, i.jsx)(I.E1j, {
             placeholder: "Search",
             onChange: () => null,
             query: "",
         }),
         preview: (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, i.jsx)(T.X6q, {
+                (0, i.jsx)(I.X6q, {
                     variant: "heading-lg/semibold",
                     children: "Celebration Station",
                 }),
-                (0, i.jsx)(T.Text, {
+                (0, i.jsx)(I.Text, {
                     variant: "text-sm/normal",
                     color: "text-secondary",
                     children: "32 Members \u25CF 19 Online",
@@ -2770,7 +3037,7 @@ function ej(e) {
             {
                 variant: "primary",
                 text: "Send Invite",
-                icon: T.kBi,
+                icon: I.kBi,
                 iconPosition: "end",
                 onClick: n,
             },
@@ -2795,7 +3062,7 @@ function ej(e) {
         ],
     });
 }
-function eE(e) {
+function eO(e) {
     let { transitionState: t, onClose: n } = e;
     return (0, i.jsx)(_.Modal, {
         transitionState: t,
@@ -2816,7 +3083,7 @@ function eE(e) {
         ],
     });
 }
-function eC(e) {
+function ev(e) {
     let { transitionState: t, onClose: s } = e,
         [a, l] = r.useState(0),
         [o, c] = r.useState(!1),
@@ -2825,7 +3092,7 @@ function eC(e) {
                 0 === a
                     ? {
                           type: "image",
-                          src: V,
+                          src: G,
                       }
                     : 1 === a
                       ? {
@@ -2841,15 +3108,15 @@ function eC(e) {
                         : 3 === a
                           ? {
                                 type: "video",
-                                src: G.Z,
-                                fallbackImageSrc: V,
+                                src: H.Z,
+                                fallbackImageSrc: G,
                                 loop: !0,
                                 loopAt: 2.5,
                             }
                           : 4 === a
                             ? {
                                   type: "dynamic",
-                                  component: T.AX$.DEMO,
+                                  component: I.AX$.DEMO,
                                   props: { text: "Dynamic Content" },
                               }
                             : void 0,
@@ -2876,9 +3143,9 @@ function eC(e) {
             },
         ],
         children: [
-            (0, i.jsx)(T.xJW, {
+            (0, i.jsx)(I.xJW, {
                 title: "Graphic Type",
-                children: (0, i.jsx)(T.q4e, {
+                children: (0, i.jsx)(I.q4e, {
                     value: a,
                     onChange: l,
                     options: [
@@ -2905,12 +3172,12 @@ function eC(e) {
                     ],
                 }),
             }),
-            (0, i.jsx)(T.xJW, {
+            (0, i.jsx)(I.xJW, {
                 style: { paddingTop: "16px" },
-                children: (0, i.jsx)(T.XZJ, {
+                children: (0, i.jsx)(I.XZJ, {
                     value: o,
                     onChange: (e, t) => c(t),
-                    children: (0, i.jsx)(T.Text, {
+                    children: (0, i.jsx)(I.Text, {
                         variant: "text-md/medium",
                         children: "Show beta badge",
                     }),
@@ -2919,7 +3186,7 @@ function eC(e) {
         ],
     });
 }
-function eO(e) {
+function eS(e) {
     let { transitionState: t, onClose: n, modalCount: s = 1 } = e,
         [a, l] = r.useState("replace"),
         o = s < 3;
@@ -2942,7 +3209,7 @@ function eO(e) {
                           text: "Open Next Modal",
                           onClick: () => {
                               let e = s + 1;
-                              (0, T.h7j)((t) => (0, i.jsx)(eO, Y(W({}, t), { modalCount: e })), {
+                              (0, I.h7j)((t) => (0, i.jsx)(eS, q(K({}, t), { modalCount: e })), {
                                   stackingBehavior: a,
                               });
                           },
@@ -2950,13 +3217,13 @@ function eO(e) {
                   ]
                 : []),
         ],
-        children: (0, i.jsxs)(T.Kqy, {
+        children: (0, i.jsxs)(I.Kqy, {
             gap: 16,
             children: [
                 o &&
-                    (0, i.jsx)(T.xJW, {
+                    (0, i.jsx)(I.xJW, {
                         title: "Stacking Behavior",
-                        children: (0, i.jsx)(T.q4e, {
+                        children: (0, i.jsx)(I.q4e, {
                             value: a,
                             onChange: l,
                             options: [
@@ -2975,10 +3242,10 @@ function eO(e) {
                             ],
                         }),
                     }),
-                (0, i.jsxs)(T.Kqy, {
+                (0, i.jsxs)(I.Kqy, {
                     gap: 8,
                     children: [
-                        (0, i.jsxs)(T.Text, {
+                        (0, i.jsxs)(I.Text, {
                             variant: "text-sm/normal",
                             color: "text-muted",
                             children: [
@@ -2986,7 +3253,7 @@ function eO(e) {
                                 " The modal directly below is hidden (default behavior)",
                             ],
                         }),
-                        (0, i.jsxs)(T.Text, {
+                        (0, i.jsxs)(I.Text, {
                             variant: "text-sm/normal",
                             color: "text-muted",
                             children: [
@@ -2994,7 +3261,7 @@ function eO(e) {
                                 " All modals below are hidden",
                             ],
                         }),
-                        (0, i.jsxs)(T.Text, {
+                        (0, i.jsxs)(I.Text, {
                             variant: "text-sm/normal",
                             color: "text-muted",
                             children: [
@@ -3008,28 +3275,28 @@ function eO(e) {
         }),
     });
 }
-function ev() {
+function eT() {
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsxs)("div", {
-                className: U.section,
+                className: V.section,
                 children: [
-                    (0, i.jsx)(T.X6q, {
+                    (0, i.jsx)(I.X6q, {
                         variant: "heading-xl/semibold",
                         children: "Modals (Void)",
                     }),
-                    (0, i.jsx)(T.zxk, {
+                    (0, i.jsx)(I.zxk, {
                         variant: "primary",
                         text: "Open modal",
                         onClick: () => {
-                            (0, T.h7j)((e) => (0, i.jsx)(ef, W({}, e)));
+                            (0, I.h7j)((e) => (0, i.jsx)(ex, K({}, e)));
                         },
                     }),
-                    (0, i.jsx)(T.zxk, {
+                    (0, i.jsx)(I.zxk, {
                         variant: "primary",
                         text: "Show Alert",
                         onClick: () => {
-                            I.Z.show({
+                            N.Z.show({
                                 title: "Alert",
                                 body: "This is an alert",
                                 confirmText: "Confirm Text",
@@ -3037,62 +3304,62 @@ function ev() {
                             });
                         },
                     }),
-                    (0, i.jsx)(T.zxk, {
+                    (0, i.jsx)(I.zxk, {
                         variant: "primary",
                         text: "Open modal stacking demo",
                         onClick: () => {
-                            (0, T.h7j)((e) => (0, i.jsx)(eb, W({}, e)));
+                            (0, I.h7j)((e) => (0, i.jsx)(e_, K({}, e)));
                         },
                     }),
                 ],
             }),
             (0, i.jsxs)("div", {
-                className: U.section,
+                className: V.section,
                 children: [
-                    (0, i.jsx)(T.X6q, {
+                    (0, i.jsx)(I.X6q, {
                         variant: "heading-xl/semibold",
                         children: "Modals (Mana)",
                     }),
-                    (0, i.jsx)(T.zxk, {
+                    (0, i.jsx)(I.zxk, {
                         variant: "primary",
                         text: "Open modal section visualizer",
                         onClick: () => {
-                            (0, T.h7j)((e) => (0, i.jsx)(ex, W({}, e)));
+                            (0, I.h7j)((e) => (0, i.jsx)(ej, K({}, e)));
                         },
                     }),
-                    (0, i.jsx)(T.zxk, {
+                    (0, i.jsx)(I.zxk, {
                         variant: "primary",
                         text: "Open demo modal",
                         onClick: () => {
-                            (0, T.h7j)((e) => (0, i.jsx)(e_, W({}, e)));
+                            (0, I.h7j)((e) => (0, i.jsx)(eE, K({}, e)));
                         },
                     }),
-                    (0, i.jsx)(T.zxk, {
+                    (0, i.jsx)(I.zxk, {
                         variant: "primary",
                         text: "Open sample invite modal",
                         onClick: () => {
-                            (0, T.h7j)((e) => (0, i.jsx)(ej, W({}, e)));
+                            (0, I.h7j)((e) => (0, i.jsx)(eC, K({}, e)));
                         },
                     }),
-                    (0, i.jsx)(T.zxk, {
+                    (0, i.jsx)(I.zxk, {
                         variant: "primary",
                         text: "Open sample alert modal",
                         onClick: () => {
-                            (0, T.h7j)((e) => (0, i.jsx)(eE, W({}, e)));
+                            (0, I.h7j)((e) => (0, i.jsx)(eO, K({}, e)));
                         },
                     }),
-                    (0, i.jsx)(T.zxk, {
+                    (0, i.jsx)(I.zxk, {
                         variant: "primary",
                         text: "Open expressive modal",
                         onClick: () => {
-                            (0, T.h7j)((e) => (0, i.jsx)(eC, W({}, e)));
+                            (0, I.h7j)((e) => (0, i.jsx)(ev, K({}, e)));
                         },
                     }),
-                    (0, i.jsx)(T.zxk, {
+                    (0, i.jsx)(I.zxk, {
                         variant: "primary",
                         text: "Open Mana modal stacking demo",
                         onClick: () => {
-                            (0, T.h7j)((e) => (0, i.jsx)(eO, W({}, e)));
+                            (0, I.h7j)((e) => (0, i.jsx)(eS, K({}, e)));
                         },
                     }),
                 ],
@@ -3100,49 +3367,49 @@ function ev() {
         ],
     });
 }
-function eS() {
-    let e = (0, c.e7)([N.Z], () => N.Z.gradientPreset);
-    return (0, i.jsx)(T.f6W, {
-        theme: M.BR.DARKER,
+function eI() {
+    let e = (0, c.e7)([y.Z], () => y.Z.gradientPreset);
+    return (0, i.jsx)(I.f6W, {
+        theme: U.BR.DARKER,
         disableAdaptiveTheme: !0,
         children: (t) =>
             (0, i.jsxs)("div", {
-                className: a()(t, U.section),
+                className: a()(t, V.section),
                 children: [
-                    (0, i.jsx)(T.zxk, {
+                    (0, i.jsx)(I.zxk, {
                         variant: "secondary",
                         text: "Button",
                         fullWidth: !0,
                     }),
-                    (0, i.jsx)(T.f6W, {
-                        theme: M.BR.LIGHT,
+                    (0, i.jsx)(I.f6W, {
+                        theme: U.BR.LIGHT,
                         children: (t) =>
                             (0, i.jsxs)("div", {
-                                className: a()(t, U.section),
+                                className: a()(t, V.section),
                                 children: [
-                                    (0, i.jsx)(T.zxk, {
+                                    (0, i.jsx)(I.zxk, {
                                         variant: "secondary",
                                         text: "Button",
                                         fullWidth: !0,
                                     }),
-                                    (0, i.jsx)(T.f6W, {
-                                        theme: M.BR.DARKER,
+                                    (0, i.jsx)(I.f6W, {
+                                        theme: U.BR.DARKER,
                                         children: (e) =>
                                             (0, i.jsx)("div", {
-                                                className: a()(e, U.section),
-                                                children: (0, i.jsx)(T.zxk, {
+                                                className: a()(e, V.section),
+                                                children: (0, i.jsx)(I.zxk, {
                                                     variant: "secondary",
                                                     text: "Button",
                                                     fullWidth: !0,
                                                 }),
                                             }),
                                     }),
-                                    (0, i.jsx)(T.f6W, {
+                                    (0, i.jsx)(I.f6W, {
                                         gradient: e,
                                         children: (e) =>
                                             (0, i.jsx)("div", {
-                                                className: a()(e, U.section),
-                                                children: (0, i.jsx)(T.zxk, {
+                                                className: a()(e, V.section),
+                                                children: (0, i.jsx)(I.zxk, {
                                                     variant: "secondary",
                                                     text: "Button",
                                                     fullWidth: !0,

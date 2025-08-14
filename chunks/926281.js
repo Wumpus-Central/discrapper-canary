@@ -1,4 +1,4 @@
-r.d(t, { default: () => d }), r(388685);
+r.d(t, { default: () => b }), r(388685);
 var n = r(255367),
     i = r(73800),
     l = r(82659),
@@ -31,7 +31,7 @@ function u(e) {
     }
     return e;
 }
-function b(e, t) {
+function d(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -49,9 +49,9 @@ function b(e, t) {
         e
     );
 }
-function d(e) {
+function b(e) {
     let { modalProps: t, onConfirm: r } = e,
-        [d, p] = i.useState({
+        [b, p] = i.useState({
             Account: {
                 value: "Account",
                 label: o.intl.string(o.t["rfe/x8"]),
@@ -87,9 +87,14 @@ function d(e) {
                 label: o.intl.string(o.t.JN9c39),
                 checked: !1,
             },
+            Zendesk: {
+                value: "Zendesk",
+                label: o.intl.string(o.t.yaLeEB),
+                checked: !1,
+            },
         }),
         [g, v] = i.useState(!1),
-        y = Object.values(d).some((e) => e.checked);
+        y = Object.values(b).some((e) => e.checked);
     return (0, n.jsx)(l.Modal, {
         title: o.intl.string(o.t.jxXMEx),
         subtitle: o.intl.format(o.t.fSv59f, { helpdeskArticle: s.Z.getArticleURL(a.BhN.GDPR_PACKAGE_CONTENTS) }),
@@ -107,9 +112,9 @@ function d(e) {
                 text: o.intl.string(o.t.NYgNg4),
                 onClick: () => {
                     if (!y) return void v(!0);
-                    let e = Object.keys(d)
-                        .filter((e) => d[e].checked)
-                        .map((e) => d[e].value);
+                    let e = Object.keys(b)
+                        .filter((e) => b[e].checked)
+                        .map((e) => b[e].value);
                     null == r || r(e), t.onClose();
                 },
                 variant: "primary",
@@ -119,15 +124,15 @@ function d(e) {
             direction: "vertical",
             gap: 8,
             children: [
-                Object.keys(d).map((e) => {
-                    let { label: t, checked: r } = d[e];
+                Object.keys(b).map((e) => {
+                    let { label: t, checked: r } = b[e];
                     return (0, n.jsx)(
                         c.XZJ,
                         {
                             type: c.XZJ.Types.INVERTED,
                             value: r,
                             onChange: (t, r) => {
-                                p((t) => b(u({}, t), { [e]: b(u({}, t[e]), { checked: r }) })), r && g && v(!1);
+                                p((t) => d(u({}, t), { [e]: d(u({}, t[e]), { checked: r }) })), r && g && v(!1);
                             },
                             children: (0, n.jsx)(c.Text, {
                                 variant: "text-md/normal",

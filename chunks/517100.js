@@ -33,7 +33,8 @@ function O() {
     return E || b || ((0, u.isAndroid)() && y);
 }
 function v() {
-    Date.now() - h > Math.min(l.CM.getSetting() * c.Z.Millis.SECOND, f.OSm) || O()
+    let e = l.CM.getSetting();
+    0 === e || Date.now() - h > Math.min(e * c.Z.Millis.SECOND, f.OSm) || O()
         ? g ||
           o.Z.dispatch({
               type: "AFK",

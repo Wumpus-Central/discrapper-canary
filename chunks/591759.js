@@ -62,7 +62,7 @@ function N(e) {
     let t = c.Z.toURLSafe(e);
     return (
         null != t &&
-        ((!!(0, l.SO)() && ("localhost" === t.hostname || "127.0.0.1" === t.hostname)) ||
+        ((!!(0, l.ii)() && ("localhost" === t.hostname || "127.0.0.1" === t.hostname)) ||
             t.hostname === window.GLOBAL_ENV.CDN_HOST ||
             f.test(t.hostname))
     );
@@ -72,7 +72,7 @@ function C(e, t, n) {
     let r = c.Z.toURLSafe(e);
     return (
         null != r &&
-        ((!!(0, l.SO)() && ("localhost" === r.hostname || "127.0.0.1" === r.hostname) && "4000" === r.port) ||
+        ((!!(0, l.ii)() && ("localhost" === r.hostname || "127.0.0.1" === r.hostname) && "4000" === r.port) ||
             _.test(r.hostname))
     );
 }
@@ -94,7 +94,7 @@ function w(e) {
 let D = {
     URL_REGEX: O,
     makeUrl: function (e) {
-        let t = (0, l.SO)() ? window.GLOBAL_ENV.INVITE_HOST : location.host;
+        let t = (0, l.Hc)() ? window.GLOBAL_ENV.INVITE_HOST : location.host;
         return "".concat(location.protocol, "//").concat(t).concat(e);
     },
     isOriginalContentTypeDifferent: I,

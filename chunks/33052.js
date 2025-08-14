@@ -4,17 +4,17 @@ var n = i(255367),
     l = i(481060),
     a = i(607070),
     s = i(987209),
-    o = i(717401),
-    c = i(286961),
+    o = i(347896),
+    c = i(717401),
     u = i(897942),
     d = i(897159);
 function m() {
     let e = (0, r.e7)([a.Z], () => a.Z.useReducedMotion),
         { claimableRewards: t } = (0, s.wD)(),
-        i = (0, c.Z)(),
+        i = (0, o.Z)(),
         m = null == i ? void 0 : i.planSelection;
     if (null == m || null == t || 0 === t.length) return null;
-    let C = (0, o.Tl)(m.gradientConfig);
+    let C = (0, c.Tl)(m.gradientConfig);
     return (0, n.jsxs)("div", {
         className: d.promotionalGiftMessage,
         style: C,

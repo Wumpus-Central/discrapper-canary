@@ -562,6 +562,7 @@ n.d(t, {
     xVE: () => ey.xV,
     xVZ: () => tp.xVZ,
     xhG: () => tp.xhG,
+    xhK: () => tg.WandAndSparklesRive,
     xjP: () => tp.xjP,
     xko: () => eE.x,
     xmR: () => tp.xmR,

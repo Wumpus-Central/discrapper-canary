@@ -1,4 +1,4 @@
-n.d(t, { Z: () => E }), n(804061), n(704826), n(35282), n(388685), n(781311);
+n.d(t, { Z: () => b }), n(804061), n(704826), n(35282), n(388685), n(781311);
 var r = n(255367),
     i = n(73800),
     o = n(658722),
@@ -7,9 +7,10 @@ var r = n(255367),
     l = n(492435),
     c = n(667344),
     u = n(493075),
-    d = n(878209),
-    f = n(388032);
-function _(e, t, n) {
+    d = n(438159),
+    f = n(878209),
+    _ = n(388032);
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -22,7 +23,7 @@ function _(e, t, n) {
         e
     );
 }
-function p(e) {
+function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -33,12 +34,12 @@ function p(e) {
                 }),
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                p(e, t, n[t]);
             });
     }
     return e;
 }
-function h(e, t) {
+function m(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -50,19 +51,20 @@ function h(e, t) {
     }
     return n;
 }
-function m(e, t) {
+function g(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : h(Object(t)).forEach(function (n) {
+            : m(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function g(e) {
-    let { id: t, experiment: n, currentBucket: i, system: o } = e;
+function E(e) {
+    let { id: t, experiment: n, currentBucket: i, system: o } = e,
+        a = (0, d.v)(n);
     return (0, r.jsxs)(
         s.sNh,
         {
@@ -70,7 +72,7 @@ function g(e) {
             label: n.title,
             action: () => (0, l.rX)(o, t, null),
             children: [
-                n.variants.map((e) =>
+                a.map((e) =>
                     (0, r.jsx)(
                         s.S89,
                         {
@@ -98,13 +100,13 @@ function g(e) {
         t,
     );
 }
-function E() {
+function b() {
     let { experiments: e, overridesInfo: t } = (0, u.s)(),
         { experiments: n, overridesInfo: o } = (0, c.Q)(),
         l = i.useMemo(() => {
-            let r = p({}, e, n),
-                i = p({}, t, o);
-            return (0, d.Tc)((0, d.Cg)(r), i).map((e) => {
+            let r = h({}, e, n),
+                i = h({}, t, o);
+            return (0, f.Tc)((0, f.Cg)(r), i).map((e) => {
                 let { id: t, experiment: n } = e;
                 return {
                     id: t,
@@ -114,12 +116,12 @@ function E() {
                 };
             });
         }, [e, t, n, o]),
-        [_, h] = i.useState(""),
-        [E, b] = i.useState([]);
+        [d, p] = i.useState(""),
+        [m, b] = i.useState([]);
     i.useEffect(() => {
-        if (0 === _.trim().length) return void b(l);
-        b(l.filter((e) => a()(_, e.experiment.title.toLowerCase())));
-    }, [l, _]);
+        if (0 === d.trim().length) return void b(l);
+        b(l.filter((e) => a()(d, e.experiment.title.toLowerCase())));
+    }, [l, d]);
     let y = i.useMemo(
             () =>
                 l.filter((e) => {
@@ -130,14 +132,14 @@ function E() {
         ),
         O = i.useMemo(
             () =>
-                E.filter((e) => {
+                m.filter((e) => {
                     let { currentBucket: t } = e;
                     return null == t;
                 }),
-            [E],
+            [m],
         ),
-        v = i.useMemo(() => y.map(g), [y]),
-        I = i.useMemo(() => O.map(g), [O]),
+        v = i.useMemo(() => y.map(E), [y]),
+        I = i.useMemo(() => O.map(E), [O]),
         T = (0, r.jsx)(
             s.II_,
             {
@@ -145,11 +147,11 @@ function E() {
                 control: (e, t) =>
                     (0, r.jsx)(
                         s.ne,
-                        m(p({}, e), {
-                            query: _,
-                            onChange: h,
+                        g(h({}, e), {
+                            query: d,
+                            onChange: p,
                             ref: t,
-                            placeholder: f.intl.string(f.t["5h0QOD"]),
+                            placeholder: _.intl.string(_.t["5h0QOD"]),
                         }),
                     ),
             },

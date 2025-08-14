@@ -1,14 +1,52 @@
 n.d(t, {
     $l: () => f,
     CB: () => d,
-    Em: () => v,
-    J9: () => b,
-    ON: () => x,
-    ax: () => g,
+    Em: () => b,
+    J9: () => x,
+    ON: () => j,
+    Ql: () =>
+        function e(t, n) {
+            if ("function" == typeof (null == t ? void 0 : t.getLayout)) {
+                let n = t.getLayout().map((t) => e(t)),
+                    { getLayout: i } = t,
+                    o = s(
+                        l(
+                            {},
+                            (function (e, t) {
+                                if (null == e) return {};
+                                var n,
+                                    i,
+                                    l = (function (e, t) {
+                                        if (null == e) return {};
+                                        var n,
+                                            i,
+                                            l = {},
+                                            s = Object.keys(e);
+                                        for (i = 0; i < s.length; i++) (n = s[i]), t.indexOf(n) >= 0 || (l[n] = e[n]);
+                                        return l;
+                                    })(e, t);
+                                if (Object.getOwnPropertySymbols) {
+                                    var s = Object.getOwnPropertySymbols(e);
+                                    for (i = 0; i < s.length; i++)
+                                        (n = s[i]),
+                                            !(t.indexOf(n) >= 0) &&
+                                                Object.prototype.propertyIsEnumerable.call(e, n) &&
+                                                (l[n] = e[n]);
+                                }
+                                return l;
+                            })(t, ["getLayout"]),
+                        ),
+                        { layout: n },
+                    );
+                return n.forEach((e) => (e.parent = o)), o;
+            }
+            return t;
+        },
+    ax: () => m,
     k4: () => c,
-    qs: () => m,
-    so: () => a,
-    wf: () => r,
+    qs: () => v,
+    so: () => r,
+    wf: () => a,
     x1: () => u,
 }),
     n(388685),
@@ -57,86 +95,48 @@ function s(e, t) {
         e
     );
 }
-function o(e) {
-    for (let t of e.layout) t.parent = e;
-}
-function a(e) {
-    let t = s(l({}, e), {
-        key: "$Root",
-        type: i.J.ROOT,
-    });
-    o(t);
-    let n = new Map(),
-        a = (e) => {
-            let t = n.get(e.key);
-            if (null != t && !Object.is(t, e))
-                throw Error("Duplicate key '".concat(e.key, "' is defined twice in this settings graph"));
-            if ((n.set(e.key, e), "layout" in e)) for (let t of e.layout) a(t);
-        };
-    return a(t), t;
-}
-function r(e, t) {
-    let n = s(l({}, t), {
+function o(e, t, n) {
+    return s(l({}, n), {
         key: e,
-        type: i.J.PANEL,
+        type: t,
     });
-    return o(n), n;
+}
+function r(e) {
+    return o("$Root", i.J.ROOT, e);
+}
+function a(e, t) {
+    return o(e, i.J.PANEL, t);
 }
 function u(e, t) {
-    let n = s(l({}, t), {
-        key: e,
-        type: i.J.PANE,
-    });
-    return o(n), n;
+    return o(e, i.J.PANE, t);
 }
 function c(e, t) {
-    let n = s(l({}, t), {
-        key: e,
-        type: i.J.CATEGORY,
-    });
-    return o(n), n;
+    return o(e, i.J.CATEGORY, t);
 }
 function d(e, t) {
-    let n = s(l({}, t), {
-        key: e,
-        type: i.J.ACCORDION,
-    });
-    return o(n), n;
+    return o(e, i.J.ACCORDION, t);
 }
 function f(e, t) {
-    let n = s(l({}, t), {
-        key: e,
-        type: i.J.LIST,
-    });
-    return o(n), n;
+    return o(e, i.J.LIST, t);
 }
-function g(e, t) {
-    return s(l({}, t), {
+function g(e, t, n) {
+    return s(l({}, n), {
         key: e,
-        type: i.J.BUTTON,
+        type: t,
     });
 }
 function m(e, t) {
-    return s(l({}, t), {
-        key: e,
-        type: i.J.TOGGLE,
-    });
+    return g(e, i.J.BUTTON, t);
 }
 function v(e, t) {
-    return s(l({}, t), {
-        key: e,
-        type: i.J.SELECT,
-    });
+    return g(e, i.J.TOGGLE, t);
 }
 function b(e, t) {
-    return s(l({}, t), {
-        key: e,
-        type: i.J.RADIO,
-    });
+    return g(e, i.J.SELECT, t);
 }
 function x(e, t) {
-    return s(l({}, t), {
-        key: e,
-        type: i.J.CUSTOM,
-    });
+    return g(e, i.J.RADIO, t);
+}
+function j(e, t) {
+    return g(e, i.J.CUSTOM, t);
 }

@@ -11,8 +11,8 @@ var r = n(255367),
     f = n(228168),
     p = n(388032),
     m = n(361623),
-    b = n(583140);
-let g = {
+    g = n(583140);
+let b = {
         [f.qb.WIDGET_ADDED]: {
             message: p.intl.string(p.t.fFP1U1),
             icon: (0, r.jsx)(s.dz2, {
@@ -42,7 +42,7 @@ let g = {
     j = (e) => {
         let { message: t, icon: n, type: l } = e;
         return (0, r.jsxs)("div", {
-            className: o()(b.toast, m.toast),
+            className: o()(g.toast, m.toast),
             "data-type": l,
             children: [
                 (0, r.jsx)("div", {
@@ -61,10 +61,10 @@ let g = {
         let { className: t, onAutoHide: n } = e,
             i = (0, u.be)(),
             f = (0, c.e7)([d.Z], () => d.Z.useReducedMotion),
-            [p, b] = l.useState(!1),
+            [p, g] = l.useState(!1),
             [y, O] = l.useState(null);
         l.useEffect(() => {
-            null !== i ? (b(!0), O(g[i]), s.uvj.announce(g[i].message)) : b(!1);
+            null !== i ? (g(!0), O(b[i]), s.uvj.announce(b[i].message)) : g(!1);
         }, [i]);
         let x = (0, s.Yzy)(
             p,

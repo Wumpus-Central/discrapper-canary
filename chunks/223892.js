@@ -4,6 +4,7 @@ n.d(t, {
     Ob: () => d,
     Rw: () => f,
     Sd: () => o,
+    Vm: () => m,
     gS: () => _,
     mG: () => p,
 });
@@ -87,4 +88,14 @@ function h() {
         { autoTrackExposure: !0 },
     );
     return e;
+}
+function m(e) {
+    let { hideMonetizatonOnboardingInServerSettings: t } = r.kR.getCurrentConfig(
+        {
+            guildId: null != e ? e : i.lds,
+            location: "e3bb71_12",
+        },
+        { autoTrackExposure: !1 },
+    );
+    return t;
 }

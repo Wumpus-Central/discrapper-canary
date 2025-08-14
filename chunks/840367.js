@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b });
+n.d(t, { Z: () => g });
 var r = n(255367);
 n(73800);
 var l = n(624238),
@@ -17,17 +17,18 @@ let m = {
     [i.l.WANT_TO_PLAY_GAMES]: () => f.intl.string(f.t.bWSQwc),
     [i.l.PLAYED_GAMES]: () => f.intl.string(f.t.scOKER),
 };
-function b(e) {
+function g(e) {
     var t;
-    let { userId: n, headingId: b, widget: g, disableInteraction: j = !1 } = e,
-        y = (0, o.e7)([c.default], () => c.default.getId() === n),
-        O = (0, s.kQ)(g),
-        x = m[g.type](),
-        h = y
-            ? (t = g.type) === i.l.FAVORITE_GAMES
-                ? f.intl.string(f.t.wiXdER)
-                : f.intl.format(f.t["zR1+09"], { numGames: l.k[t] })
-            : void 0;
+    let { userId: n, headingId: d, widget: u, disableInteraction: g = !1 } = e,
+        j = (0, o.e7)([c.default], () => c.default.getId() === n),
+        y = (0, s.kQ)(u),
+        O = m[u.type](),
+        x =
+            j && u.games.length > 0
+                ? (t = u.type) === i.l.FAVORITE_GAMES
+                    ? f.intl.string(f.t.wiXdER)
+                    : f.intl.format(f.t["zR1+09"], { numGames: l.k[t] })
+                : void 0;
     return (0, r.jsxs)("div", {
         className: p.headerRow,
         children: [
@@ -37,29 +38,43 @@ function b(e) {
                     (0, r.jsx)(a.X6q, {
                         variant: "heading-sm/medium",
                         color: "text-default",
-                        id: b,
-                        children: x,
+                        id: d,
+                        children: O,
                     }),
-                    null != h &&
+                    null != x &&
                         (0, r.jsx)(a.Text, {
                             variant: "text-xs/normal",
                             color: "text-secondary",
-                            children: h,
+                            children: x,
                         }),
                 ],
             }),
-            y &&
-                !j &&
-                (0, r.jsxs)("div", {
-                    className: p.actions,
-                    children: [
-                        (0, r.jsx)(d.Z, {
-                            disabled: O,
-                            widgetType: g.type,
-                        }),
-                        (0, r.jsx)(u.Z, { widget: g }),
-                    ],
-                }),
+            (0, r.jsx)(b, {
+                widget: u,
+                disabled: y,
+                disabledInteraction: g,
+                userId: n,
+            }),
         ],
     });
+}
+function b(e) {
+    let { widget: t, disabled: n, disabledInteraction: l, userId: a } = e,
+        s = (0, o.e7)([c.default], () => c.default.getId() === a);
+    return (s || t.type === i.l.FAVORITE_GAMES) && !l
+        ? (0, r.jsxs)("div", {
+              className: p.actions,
+              children: [
+                  s &&
+                      (0, r.jsx)(d.Z, {
+                          disabled: n,
+                          widgetType: t.type,
+                      }),
+                  (0, r.jsx)(u.Z, {
+                      widget: t,
+                      userId: a,
+                  }),
+              ],
+          })
+        : null;
 }

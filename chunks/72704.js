@@ -4,9 +4,9 @@ var i = n(255367),
     s = n(825185);
 function o(e) {
     let { node: t } = e,
-        { useValue: n, setValue: o, useTitle: a, useSubtitle: r, useOptions: u, renderOptionLabel: c } = t,
-        d = a(),
-        f = null == r ? void 0 : r(),
+        { useValue: n, setValue: o, useTitle: r, useSubtitle: a, useOptions: u, renderOptionLabel: c } = t,
+        d = r(),
+        f = null == a ? void 0 : a(),
         g = n(),
         m = u();
     return (0, i.jsx)(l.xJW, {

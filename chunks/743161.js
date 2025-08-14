@@ -3,11 +3,11 @@ var n = r(255367),
     o = r(73800),
     c = r(442837),
     i = r(481060),
-    l = r(541099),
-    p = r(827498),
-    s = r(421591),
-    u = r(496977),
-    a = r(314734),
+    p = r(541099),
+    a = r(827498),
+    l = r(421591),
+    s = r(496977),
+    u = r(314734),
     b = r(388032),
     f = r(604590);
 let O = o.memo(function (e) {
@@ -35,13 +35,13 @@ let O = o.memo(function (e) {
             }
             return o;
         })(e, ["context"]);
-    let j = (0, c.e7)([l.Z], () => l.Z.shouldShowModal());
+    let j = (0, c.e7)([p.Z], () => p.Z.shouldShowModal());
     o.useEffect(() => {
-        j || (0, i.Fvk)(a.e9);
+        j || (0, i.Fvk)(u.e9);
     });
-    let h = (0, u.Z)();
+    let d = (0, s.Z)();
     return (0, n.jsx)("span", {
-        style: a.u$,
+        style: u.u$,
         children: (0, n.jsx)(
             i.Y0X,
             ((t = (function (e) {
@@ -79,10 +79,11 @@ let O = o.memo(function (e) {
             (r = r =
                 {
                     parentComponent: "AppLauncherModal",
-                    children: (0, n.jsx)(s.Z, {
+                    "data-migration-pending": !0,
+                    children: (0, n.jsx)(l.Z, {
                         context: O,
-                        entrypoint: p._b.VOICE,
-                        initHistory: h,
+                        entrypoint: a._b.VOICE,
+                        initHistory: d,
                     }),
                 }),
             Object.getOwnPropertyDescriptors

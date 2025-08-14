@@ -1,51 +1,66 @@
-n.d(t, { Z: () => b });
+n.d(t, { Z: () => j }), n(539854), n(388685);
 var i = n(255367),
     r = n(73800),
-    s = n(481060),
-    a = n(809206),
-    l = n(906732),
-    o = n(594928),
-    c = n(829716),
-    d = n(626135),
-    u = n(74538),
-    m = n(993413),
-    p = n(981631),
-    g = n(388032),
-    h = n(693450),
-    f = n(147164);
-function b(e) {
+    s = n(704215),
+    a = n(481060),
+    l = n(809206),
+    o = n(906732),
+    c = n(243778),
+    d = n(594928),
+    u = n(829716),
+    m = n(626135),
+    p = n(74538),
+    g = n(993413),
+    h = n(981631),
+    f = n(921944),
+    b = n(388032),
+    x = n(693450),
+    _ = n(147164);
+function j(e) {
     let { user: t, className: n } = e,
-        b = o.J.useExperiment({ location: "DisplayNameStylesSection" }).enabled,
-        x = u.ZP.canUsePremiumProfileCustomization(t),
-        { analyticsLocations: _ } = (0, l.ZP)(),
-        j = null != t.displayNameStyles,
-        E = (0, r.useCallback)(() => {
-            d.default.track(p.rMx.DISPLAY_NAME_STYLES_FROM_SETTINGS), (0, c.I)({ analyticsLocations: _ });
-        }, [_]),
-        C = (0, r.useCallback)(() => {
-            (0, a.NI)(null), d.default.track(p.rMx.DISPLAY_NAME_STYLES_REMOVED);
+        j = d.J.useExperiment({ location: "DisplayNameStylesSection" }).enabled,
+        E = p.ZP.canUsePremiumProfileCustomization(t),
+        { analyticsLocations: C } = (0, o.ZP)(),
+        O = null != t.displayNameStyles,
+        v = [];
+    j && v.push(s.z.DISPLAY_NAME_STYLES_NEW_BADGE_PROFILE_PAGE);
+    let [S, T] = (0, c.US)(v),
+        I = S === s.z.DISPLAY_NAME_STYLES_NEW_BADGE_PROFILE_PAGE,
+        N = (0, r.useCallback)(() => {
+            T(f.L.TAKE_ACTION),
+                m.default.track(h.rMx.DISPLAY_NAME_STYLES_FROM_SETTINGS),
+                (0, u.I)({ analyticsLocations: C });
+        }, [C, T]),
+        y = (0, r.useCallback)(() => {
+            (0, l.NI)(null), m.default.track(h.rMx.DISPLAY_NAME_STYLES_REMOVED);
         }, []);
-    return b || j
-        ? (0, i.jsx)(m.Z, {
-              title: g.intl.string(h.default["86GtGB"]),
+    return j || O
+        ? (0, i.jsx)(g.Z, {
+              title: b.intl.string(x.default["86GtGB"]),
+              titleIcon: I
+                  ? (0, i.jsx)(a.IGR, {
+                        text: b.intl.string(b.t.y2b7CA),
+                        className: _.newBadge,
+                    })
+                  : void 0,
               className: n,
-              showPremiumIcon: x,
+              showPremiumIcon: E,
               children: (0, i.jsxs)("div", {
-                  className: f.buttonsContainer,
+                  className: _.buttonsContainer,
                   children: [
-                      b &&
-                          (0, i.jsx)(s.zxk, {
+                      j &&
+                          (0, i.jsx)(a.zxk, {
                               variant: "primary",
                               size: "sm",
-                              text: g.intl.string(h.default.vJqrIi),
-                              onClick: E,
+                              text: b.intl.string(x.default.vJqrIi),
+                              onClick: N,
                           }),
-                      j &&
-                          (0, i.jsx)(s.zxk, {
+                      O &&
+                          (0, i.jsx)(a.zxk, {
                               variant: "secondary",
                               size: "sm",
-                              text: g.intl.string(h.default.ymq8WV),
-                              onClick: C,
+                              text: b.intl.string(x.default.ymq8WV),
+                              onClick: y,
                           }),
                   ],
               }),

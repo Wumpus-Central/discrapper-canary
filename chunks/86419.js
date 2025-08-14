@@ -1,12 +1,13 @@
 n.d(t, {
-    $b: () => N,
-    ES: () => A,
-    X6: () => R,
-    kQ: () => w,
+    $b: () => C,
+    ES: () => N,
+    X6: () => P,
+    kQ: () => D,
+    n$: () => A,
     np: () => b,
     qH: () => T,
-    tk: () => P,
-    vH: () => C,
+    tk: () => w,
+    vH: () => R,
     y8: () => S,
 }),
     n(388685),
@@ -122,7 +123,18 @@ function S(e) {
     let t = y().filter((t) => t.type !== e);
     l.Z.setPendingWidgets(t);
 }
-function A(e, t) {
+function A(e, t, n) {
+    let r = y(),
+        i = r.find((t) => t.type === e);
+    if (null == i) return;
+    let o = i.games.find((e) => e.applicationId === t);
+    if (null == o) return;
+    let a = m(p({}, o), { tags: n }),
+        s = i.games.map((e) => (e.applicationId === t ? a : e)),
+        c = I(r, m(p({}, i), { games: s }));
+    l.Z.setPendingWidgets(c);
+}
+function N(e, t) {
     let n,
         a = y(),
         s = a.find((t) => t.type === e),
@@ -140,7 +152,7 @@ function A(e, t) {
     let _ = I(a, v(e, n));
     l.Z.setPendingWidgets(_), o.Z.getDetectableGamesSupplemental([t.applicationId]);
 }
-function N(e, t) {
+function C(e, t) {
     let n = y(),
         r = n.find((t) => t.type === e);
     if (null == r) return;
@@ -153,7 +165,7 @@ function N(e, t) {
     );
     l.Z.setPendingWidgets(i);
 }
-function C(e) {
+function R(e) {
     let t = (e) => ({
             game_id: e.applicationId,
             comment: e.comment,
@@ -167,7 +179,7 @@ function C(e) {
         },
     };
 }
-async function R() {
+async function P() {
     let e = c.Z.getPendingWidgets();
     if (null !== e)
         try {
@@ -176,14 +188,14 @@ async function R() {
             console.error("Failed to save sample widgets:", e);
         }
 }
-async function P() {
+async function w() {
     try {
         await l.Z.savePendingWidgets([]);
     } catch (e) {
         console.error("Failed to clear saved widgets", e);
     }
 }
-function w(e) {
+function D(e) {
     let t = r.k[e.type];
     return e.games.length >= t;
 }

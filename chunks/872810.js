@@ -1,9 +1,9 @@
 n.d(t, {
-    L6: () => Z,
-    Rc: () => G,
+    L6: () => F,
+    Rc: () => B,
     WH: () => R,
     aP: () => j,
-    dV: () => B,
+    dV: () => Z,
     g: () => M,
     iV: () => x,
     n9: () => k,
@@ -11,6 +11,7 @@ n.d(t, {
     rn: () => D,
     tK: () => P,
     xc: () => U,
+    zf: () => G,
 });
 var r = n(512722),
     i = n.n(r),
@@ -188,10 +189,11 @@ async function U(e) {
         });
     } catch (e) {}
 }
-function G(e) {
+function G(e, t) {}
+function B(e) {
     (0, O.Ye)(e.preset, e.resolution, e.frameRate), s.Z.dispatch(N({ type: "STREAM_UPDATE_SETTINGS" }, e));
 }
-function B(e, t) {
+function Z(e, t) {
     a.tn.patch({
         url: T.ANM.STREAM(e),
         body: { region: t },
@@ -199,7 +201,7 @@ function B(e, t) {
         rejectWithError: !0,
     });
 }
-function Z() {
+function F() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
         t = _.Z.getCurrentUserActiveStream();
     null != t && M((0, c.V9)(t), e);
