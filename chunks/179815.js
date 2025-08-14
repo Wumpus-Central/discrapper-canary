@@ -1,0 +1,3 @@
+i.exports = JSON.parse(
+    '{"RPb8Zm":"Palautteesi auttaa meitä parantamaan Discordin turvallisuustoimintoja.","cDP3b2":"Palaute lähetetty","KZw6kp":"Mikä ei toimi hyvin?","eSP1Fx":"Muutin mieltäni tämän sisällön näkemisestä","bC0QVV":"Ohjeet olivat sekavat","8JFGXV":"Yritin toimia ohjeiden mukaisesti, mutta se ei toiminut","Dl4A+f":"Minulla ei ollut oikeita dokumentteja","ZsnNg4":"Olen huolissani henkilötietojeni jakamisesta","ep5SQk":"Jokin muu","kkKhVF":"Tämä kestää liian pitkään","maxf2d":"En ollut varma, miksi tämä oli tarpeen","Q5cQ4+":"Kuvaile ongelmasi","zApKaW":"Haluatko kertoa tästä tarkemmin?","4djgOz":"Kiitos palautteesta!","RqoA4u":"Miten iän vahvistus toimi mielestäsi?"}',
+);

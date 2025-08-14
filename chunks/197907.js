@@ -1,1 +1,0 @@
-e.exports = "#violation-overlay";

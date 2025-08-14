@@ -1,8 +1,0 @@
-e.exports = {
-    header: "header__5be3e",
-    body: "body__5be3e",
-    card: "card__5be3e",
-    footer: "footer__5be3e",
-    backdrop: "backdrop__5be3e",
-    toast: "toast__5be3e",
-};

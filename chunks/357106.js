@@ -1,0 +1,3 @@
+e.exports = JSON.parse(
+    '{"o/An3t":[[1,"username"]," ți-a cerut să faci streaming la ",[1,"applicationName"]],"DKHheX":"Cerere de streaming","8qq+Hx":["Cerere de streaming la ",[1,"applicationName"]],"s7bMT0":[[1,"username"]," îți cere să faci streaming la ",[1,"applicationName"]],"7pndSk":["I-ai cerut cuiva să facă streaming la ",[1,"applicationName"]],"P0wwmJ":"Face deja streaming","u4QmWl":"Cerere expirată","qRXatr":"Nu este în canalul de voce","43zohI":"Nu este în joc","8HU1Mz":"Cerere în așteptare","5+172d":"Fă streaming","jTbTAA":[[8,"$b",[[1,"username"]]]," vrea să te vadă jucând ",[8,"$b",[[1,"game"]]],". Transmiți în direct?"]}',
+);

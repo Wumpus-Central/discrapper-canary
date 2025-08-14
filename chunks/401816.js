@@ -1,0 +1,3 @@
+a.exports = JSON.parse(
+    '{"o/An3t":[[1,"username"]," pyysi sinua striimaamaan tätä: ",[1,"applicationName"]],"DKHheX":"Tee striimauspyyntö","8qq+Hx":["Tee striimauspyyntö tästä: ",[1,"applicationName"]],"s7bMT0":[[1,"username"]," pyytää sinua striimaamaan tätä: ",[1,"applicationName"]],"7pndSk":["Pyysit jotakuta striimaamaan tätä: ",[1,"applicationName"]],"P0wwmJ":"Striimi on jo käynnissä","u4QmWl":"Pyyntö vanhentunut","qRXatr":"Ei puhekanavalla","43zohI":"Ei suorita peliä","8HU1Mz":"Pyyntö odottaa","5+172d":"Striimaa","jTbTAA":[[8,"$b",[[1,"username"]]]," haluaa katsella, kun pelaat peliä ",[8,"$b",[[1,"game"]]],". Haluatko siirtyä live-tilaan?"]}',
+);
