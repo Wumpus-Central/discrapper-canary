@@ -74393,9 +74393,9 @@ strong {
 }
 
 .searchTokenTopLevel_bd8186 {
-    font-size: 12px;
-    height: 16px;
-    line-height: 16px;
+    font-size: 14px;
+    height: 20px;
+    line-height: 20px;
     padding: 0 var(--space-4)
 }
 
@@ -78227,10 +78227,6 @@ span.clanTag__07f91.isOverlay__07f91 {
 
 .platform-win .bar_c38106 {
     padding-right: 0
-}
-
-.shortBar_c38106 {
-    --custom-app-top-bar-height: 24px
 }
 
 .systemBar_c38106 {
@@ -90079,6 +90075,14 @@ img[alt] {
     --custom-channel-textarea-text-area-height: calc(44px + var(--space-xs));
     --custom-chat-aligned-icon-offset: ((var(--chat-avatar-size) - var(--chat-input-icon-size))/2);
     --custom-message-margin-horizontal: var(--space-md)
+}
+
+.refresh-title-bar-small {
+    --custom-app-top-bar-height: calc(16px + var(--space-8))
+}
+
+.refresh-title-bar-large {
+    --custom-app-top-bar-height: calc(32px + var(--space-8))
 }
 
 .refresh-fast-follow-avatars {
