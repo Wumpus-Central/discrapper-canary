@@ -27,7 +27,7 @@ var r = n(255367),
     C = n(556638),
     R = n(981631),
     P = n(388032),
-    w = n(93779);
+    w = n(80568);
 function D(e, t, n) {
     return (
         t in e
@@ -80,11 +80,11 @@ function M(e, t) {
         e
     );
 }
-function j(e) {
+function k(e) {
     let t = (null == e ? void 0 : e.name) === "" ? null : null == e ? void 0 : e.name;
     return null != t ? P.intl.formatToPlainString(P.t["0wJXSk"], { name: t }) : P.intl.string(P.t.eXan7O);
 }
-function k(e, t) {
+function j(e, t) {
     return (
         (e.isDM() || e.isGroupDM()
             ? P.intl.string(P.t["9FaEzs"])
@@ -101,12 +101,12 @@ function U(e) {
         s = (0, _.ZP)(r),
         l = o || a;
     return (
-        null != t && i.push(j(t)),
+        null != t && i.push(k(t)),
         n.forEach((e) => {
             let { tooltip: t } = (0, v.Z)(e, l);
             null != t && i.push(t);
         }),
-        null == t && null != r && i.push(k(r, s)),
+        null == t && null != r && i.push(j(r, s)),
         i.length > 0 ? i.join(", ") : ""
     );
 }
@@ -143,8 +143,8 @@ function Z(e) {
         hideTooltip: x = !1,
     } = e;
     (0, f.Z)(null == t ? void 0 : t.id);
-    let j = (null == o ? void 0 : o.discoverable) !== !1 ? o : null,
-        k = (0, g.Cf)(j),
+    let k = (null == o ? void 0 : o.discoverable) !== !1 ? o : null,
+        j = (0, g.Cf)(k),
         Z = i.useMemo(() => {
             var e, t;
             let r =
@@ -174,7 +174,7 @@ function Z(e) {
                                   return (
                                       t !== R.IIU.CUSTOM_STATUS &&
                                       t !== R.IIU.HANG_STATUS &&
-                                      n !== (null == k ? void 0 : k.name)
+                                      n !== (null == j ? void 0 : j.name)
                                   );
                               }))
                     ? e
@@ -183,13 +183,13 @@ function Z(e) {
                     (null != e.application_id && null != t.application_id && e.application_id === t.application_id) ||
                     (null != e.name && null != t.name && e.name === t.name),
             );
-        }, [n, null == k ? void 0 : k.name]),
-        Y = null == n ? void 0 : n.find((e) => e.name === (null == k ? void 0 : k.name)),
+        }, [n, null == j ? void 0 : j.name]),
+        Y = null == n ? void 0 : n.find((e) => e.name === (null == j ? void 0 : j.name)),
         W = (null == t ? void 0 : t.bot) === !0,
         K = (0, c.e7)([y.Z], () => y.Z.isBlockedOrIgnored(null == t ? void 0 : t.id)),
         z = (0, p.Z)({ location: "ActivityStatus" }) && null != Z ? (0, h.Z)(Z) : null,
         q = (null == Z ? void 0 : Z.state) != null || null != z,
-        X = null != j,
+        X = null != k,
         Q = !X && null != l,
         J = H.length + (X || Q ? 1 : 0),
         $ = J > 1,
@@ -203,9 +203,9 @@ function Z(e) {
     let en = function () {
             let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
                 t = !0 === e || x;
-            if (null != j)
+            if (null != k)
                 return (0, r.jsx)(T.Z, {
-                    stream: j,
+                    stream: k,
                     game: Y,
                     textVariant: "text-".concat(O, "/medium"),
                     textClassName: _,
@@ -246,14 +246,14 @@ function Z(e) {
                     canTruncate: !1,
                 };
             return (
-                null != j &&
+                null != k &&
                     e.push(
                         (0, r.jsx)(
                             T.Z,
                             M(
                                 L(
                                     {
-                                        stream: j,
+                                        stream: k,
                                         game: null == n ? void 0 : n.find(d.Z),
                                     },
                                     t,

@@ -3,20 +3,20 @@ var r = n(255367),
     i = n(73800),
     l = n(442837),
     o = n(358230),
-    s = n(18998),
-    a = n(220444),
+    a = n(18998),
+    s = n(220444),
     c = n(569471),
     u = n(592125),
     d = n(306680),
-    h = n(9156),
-    p = n(451478);
-function f(e) {
+    p = n(9156),
+    f = n(451478);
+function h(e) {
     let t = u.Z.getChannel(e);
     return (
         null != t &&
         null != t.getGuildId() &&
-        !(t.isThread() ? c.Z.isMuted(t.id) : h.ZP.isChannelMuted(t.getGuildId(), t.id)) &&
-        (0, a.d)(t)
+        !(t.isThread() ? c.Z.isMuted(t.id) : p.ZP.isChannelMuted(t.getGuildId(), t.id)) &&
+        (0, s.d)(t)
     );
 }
 function g(e) {
@@ -24,14 +24,14 @@ function g(e) {
     if (null == t) return !1;
     let n = t.getGuildId();
     if (null == n) return !1;
-    let r = h.ZP.isGuildCollapsed(n),
-        i = h.ZP.isChannelMuted(n, t.id);
+    let r = p.ZP.isGuildCollapsed(n),
+        i = p.ZP.isChannelMuted(n, t.id);
     return (!r || !i) && d.ZP.getMentionCount(e) > 0;
 }
 let m = i.forwardRef(function (e, t) {
     var n,
         i,
-        { guildId: a, guildChannels: c, guildChannelsVersion: u } = e,
+        { guildId: s, guildChannels: c, guildChannelsVersion: u } = e,
         d = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -53,10 +53,10 @@ let m = i.forwardRef(function (e, t) {
             }
             return i;
         })(e, ["guildId", "guildChannels", "guildChannelsVersion"]);
-    let h = (0, o.T)(a, c, u, { withVoiceChannels: !1 }, { ignoreRecents: !0 }),
-        m = (0, l.e7)([p.Z], () => p.Z.isFocused());
+    let p = (0, o.T)(s, c, u, { withVoiceChannels: !1 }, { ignoreRecents: !0 }),
+        m = (0, l.e7)([f.Z], () => f.Z.isFocused());
     return (0, r.jsx)(
-        s.Z,
+        a.Z,
         ((n = (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
@@ -84,9 +84,9 @@ let m = i.forwardRef(function (e, t) {
         })({ ref: t }, d)),
         (i = i =
             {
-                isUnread: f,
+                isUnread: h,
                 isMentioned: g,
-                items: h,
+                items: p,
                 animate: m,
             }),
         Object.getOwnPropertyDescriptors

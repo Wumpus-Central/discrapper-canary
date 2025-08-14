@@ -238,7 +238,7 @@ function M(e, t) {
         results: i,
     };
 }
-function j(e, t, n) {
+function k(e, t, n) {
     let r = (null != e ? e.getFullMatch() : "").trim(),
         i = [];
     return (
@@ -255,12 +255,12 @@ function j(e, t, n) {
                 });
                 null != o && i.push(o);
             }),
-            i.push(k(e, t))),
+            i.push(j(e, t))),
         5 > (0, m.BU)(i) && i.push(M(e, t)),
         i
     );
 }
-function k(e, t) {
+function j(e, t) {
     let n = (null != e ? e.getFullMatch() : "").trim();
     if (null != n && "" !== n) {
         var r, i, o, a, s, l, c, u, d;
@@ -337,7 +337,7 @@ function G(e, t, n) {
                   }),
               )
             : t.type === b.Sap.FILTER_ALL
-              ? (r = j(t.token, e, n))
+              ? (r = k(t.token, e, n))
               : t.type === b.Sap.EMPTY && (r.push(M(t.token, e)), r.push(U(e))),
         r
     );

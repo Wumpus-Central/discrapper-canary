@@ -23,7 +23,7 @@ var i = n(255367),
     v = n(981631),
     S = n(474936),
     T = n(388032),
-    I = n(867776);
+    I = n(387473);
 function N(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -181,8 +181,8 @@ let D = function (e) {
         {
             appliedGuildBoostSlots: k,
             unappliedGuildBoostSlots: L,
-            numActiveGuildBoostSlots: M,
-            hasCooldownBoosts: B,
+            numActiveGuildBoostSlots: B,
+            hasCooldownBoosts: M,
             allGuildBoostsAreOnCooldown: U,
         } = r.useMemo(() => {
             let e = [],
@@ -207,7 +207,7 @@ let D = function (e) {
         }, [o]),
         V = null != g ? j.ZP.getNumIncludedPremiumGuildSubscriptionSlots(g.planId) : 0,
         G = Math.max(0, V - k.length),
-        F = M > V,
+        F = B > V,
         H = V === o.length,
         z = H ? G : 1,
         W = r.useMemo(() => {
@@ -334,7 +334,7 @@ let D = function (e) {
                             }),
                         ],
                     }),
-                    (!H || B) &&
+                    (!H || M) &&
                         (0, i.jsx)("ul", {
                             className: I.unappliedBoostSlots,
                             children: L.map((e) =>

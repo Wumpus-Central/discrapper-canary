@@ -8,7 +8,7 @@ var i = n(442837),
     s = n(63063),
     d = n(981631),
     c = n(388032),
-    u = n(613281),
+    u = n(319766),
     m = n(767688);
 function x(e) {
     let { guildId: t, title: n, transitionState: x, children: g, buttons: j, onClose: p } = e,

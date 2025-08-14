@@ -22,7 +22,7 @@ var r = n(255367),
     I = n(921944),
     T = n(231338),
     S = n(388032),
-    A = n(1165);
+    A = n(805787);
 function N(e, t, n) {
     return (
         t in e
@@ -103,17 +103,17 @@ let w = (e) => {
             [D, L] = i.useState(null != t ? t : null),
             x = (0, c.e7)([h.default], () => h.default.getCurrentUser()),
             M = i.useMemo(() => [], []),
-            j = i.useRef(null).current;
+            k = i.useRef(null).current;
         i.useEffect(
             () => (
                 N || M.push(u.z.HANG_STATUS_NEW_BADGE),
                 () => {
-                    N && (null == j || j(I.L.PRIMARY));
+                    N && (null == k || k(I.L.PRIMARY));
                 }
             ),
-            [N, M, j],
+            [N, M, k],
         );
-        let k = (e, t) => {
+        let j = (e, t) => {
                 e.stopPropagation(), (0, g.Zx)(t, !0), R(!0);
             },
             U = (e, t) => {
@@ -151,7 +151,7 @@ let w = (e) => {
             children: (e) => {
                 let { visibleContent: n, markAsDismissed: i } = e;
                 return (
-                    (j = i),
+                    (k = i),
                     (0, r.jsxs)("div", {
                         className: A.container,
                         children: [
@@ -216,7 +216,7 @@ let w = (e) => {
                                                     {
                                                         "aria-label": i.title,
                                                         onMouseEnter: () => Z(n),
-                                                        onClick: (e) => k(e, n),
+                                                        onClick: (e) => j(e, n),
                                                         children: (0, r.jsx)(w, {
                                                             className: a()(A.iconWidget, {
                                                                 [A.selectedWidget]:

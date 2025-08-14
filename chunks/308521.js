@@ -314,7 +314,7 @@ function b(e) {
         L = null != c ? c : {},
         x = L.maxX,
         M = L.maxY,
-        j = r.useCallback(
+        k = r.useCallback(
             function () {
                 var e,
                     t,
@@ -337,7 +337,7 @@ function b(e) {
     r.useEffect(
         function () {
             if (C && o.current && n) {
-                var e = j(),
+                var e = k(),
                     t = e.width,
                     r = e.height,
                     a = !1;
@@ -377,7 +377,7 @@ function b(e) {
                 l && (S || a) && l && l(), S && A(!1);
             }
         },
-        [i, o, w, D, j, S, A, O, v, p, h, l, C, N, R, n],
+        [i, o, w, D, k, S, A, O, v, p, h, l, C, N, R, n],
     ),
         r.useEffect(
             function () {

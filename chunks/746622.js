@@ -2,15 +2,15 @@ n.d(t, {
     H: () => u,
     z: () => d,
 });
-var r = n(255367),
-    l = n(481060),
+var l = n(255367),
+    r = n(481060),
     i = n(598117),
     a = n(981631),
     o = n(185923),
     s = n(388032);
 let u = (e) => {
         let { error: t, variant: n, color: i } = e;
-        return (0, r.jsx)(l.Text, {
+        return (0, l.jsx)(r.Text, {
             variant: n,
             color: i,
             children: c(t),

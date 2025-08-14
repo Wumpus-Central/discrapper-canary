@@ -15,13 +15,13 @@ n.d(t, {
     X3: () => q,
     b7: () => S,
     cl: () => Z,
-    g9: () => j,
+    g9: () => k,
     i3: () => G,
     jW: () => D,
     kG: () => V,
     nI: () => M,
     nl: () => X,
-    qc: () => k,
+    qc: () => j,
     s5: () => T,
     zH: () => N,
 }),
@@ -280,7 +280,7 @@ function M(e) {
         .join(" ")
         .trim();
 }
-function j(e, t, n) {
+function k(e, t, n) {
     let r,
         i,
         o = e.find((o, a) =>
@@ -298,7 +298,7 @@ function j(e, t, n) {
               anchorOffset: n,
           };
 }
-function k(e, t) {
+function j(e, t) {
     let n,
         { currentToken: r, nextToken: i, previousToken: a } = (e = null != e ? e : {});
     if (0 === t.length)

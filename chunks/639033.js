@@ -52,42 +52,50 @@ class h extends a.Z {
                     (0, i.ZDy)(
                         async () => {
                             let { default: e } = await n.e("13878").then(n.bind(n, 113140));
-                            return (t) => {
-                                var n, i;
-                                return (0, r.jsx)(
+                            return (t) =>
+                                (0, r.jsx)(
                                     e,
-                                    ((n = (function (e) {
-                                        for (var t = 1; t < arguments.length; t++) {
-                                            var n = null != arguments[t] ? arguments[t] : {},
-                                                r = Object.keys(n);
-                                            "function" == typeof Object.getOwnPropertySymbols &&
-                                                (r = r.concat(
-                                                    Object.getOwnPropertySymbols(n).filter(function (e) {
-                                                        return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                                    }),
-                                                )),
-                                                r.forEach(function (t) {
-                                                    p(e, t, n[t]);
-                                                });
-                                        }
-                                        return e;
-                                    })({}, t)),
-                                    (i = i = { channel: b }),
-                                    Object.getOwnPropertyDescriptors
-                                        ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))
-                                        : (function (e, t) {
-                                              var n = Object.keys(e);
-                                              if (Object.getOwnPropertySymbols) {
-                                                  var r = Object.getOwnPropertySymbols(e);
-                                                  n.push.apply(n, r);
-                                              }
-                                              return n;
-                                          })(Object(i)).forEach(function (e) {
-                                              Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(i, e));
-                                          }),
-                                    n),
+                                    (function (e, t) {
+                                        return (
+                                            (t = null != t ? t : {}),
+                                            Object.getOwnPropertyDescriptors
+                                                ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+                                                : (function (e, t) {
+                                                      var n = Object.keys(e);
+                                                      if (Object.getOwnPropertySymbols) {
+                                                          var r = Object.getOwnPropertySymbols(e);
+                                                          n.push.apply(n, r);
+                                                      }
+                                                      return n;
+                                                  })(Object(t)).forEach(function (n) {
+                                                      Object.defineProperty(
+                                                          e,
+                                                          n,
+                                                          Object.getOwnPropertyDescriptor(t, n),
+                                                      );
+                                                  }),
+                                            e
+                                        );
+                                    })(
+                                        (function (e) {
+                                            for (var t = 1; t < arguments.length; t++) {
+                                                var n = null != arguments[t] ? arguments[t] : {},
+                                                    r = Object.keys(n);
+                                                "function" == typeof Object.getOwnPropertySymbols &&
+                                                    (r = r.concat(
+                                                        Object.getOwnPropertySymbols(n).filter(function (e) {
+                                                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                                        }),
+                                                    )),
+                                                    r.forEach(function (t) {
+                                                        p(e, t, n[t]);
+                                                    });
+                                            }
+                                            return e;
+                                        })({}, t),
+                                        { channel: b },
+                                    ),
                                 );
-                            };
                         },
                         {
                             modalKey: f,

@@ -48,10 +48,10 @@ e.exports = function (e, t, n, a, p, m, A) {
         L = e.prototype,
         x = L[O] || L["@@iterator"] || (p && L[p]),
         M = (!y && x) || P(p),
-        j = ("Array" === t && L.entries) || x;
+        k = ("Array" === t && L.entries) || x;
     if (
-        (j &&
-            (N = c(j.call(new e()))) !== Object.prototype &&
+        (k &&
+            (N = c(k.call(new e()))) !== Object.prototype &&
             N.next &&
             (!o && c(N) !== b && (u ? u(N, b) : s(N[O]) || _(N, O, S)), d(N, w, !0, !0), o && (h[w] = S)),
         g &&

@@ -14,7 +14,7 @@ var r = n(255367),
     b = n(915509),
     h = n(592286),
     f = n(388032),
-    x = n(714533);
+    x = n(1904);
 let y = "MULTIPLE_CHOICE",
     v = (e) => {
         let { choice: t, index: n, onChange: a, onClear: s, onReorder: p, isDropHovered: m } = e,
@@ -112,14 +112,7 @@ let y = "MULTIPLE_CHOICE",
             [C, _] = l.useState(null != (n = null == o ? void 0 : o.choices) ? n : [""]),
             [I, O] = l.useState(null),
             [w, E] = l.useState(null),
-            P = (e, t) => {
-                null != I && O(null);
-                let n = e.replace(/(\r\n|\n|\r)/g, " ");
-                n.length > h.au && (n = n.slice(0, h.au));
-                let r = [...C];
-                (r[t] = n), _(r);
-            },
-            k = (e, t, n) => {
+            P = (e, t, n) => {
                 if (null == C) return;
                 null != I && O(null);
                 let r = C.indexOf(e),
@@ -127,12 +120,7 @@ let y = "MULTIPLE_CHOICE",
                 null != t && t !== r && (l.splice(r, 1), l.splice(t, 0, e), _(l)),
                     n ? null !== t && E(null) : t !== w && E(t);
             },
-            N = (e) => {
-                null != I && O(null);
-                let t = [...C.slice(0, e), ...C.slice(e + 1)];
-                _(0 === t.length ? [""] : t);
-            },
-            S = async () => {
+            k = async () => {
                 null != I && O(null);
                 let e = y.trim();
                 if ("" === e) return void O(f.intl.string(f.t["G+TI4+"]));
@@ -181,7 +169,7 @@ let y = "MULTIPLE_CHOICE",
                 {
                     errorText: I,
                     title: f.intl.string(f.t.ooKh3t),
-                    onConfirm: S,
+                    onConfirm: k,
                     onCancel: g,
                     children: [
                         (0, r.jsx)(u.Is, {
@@ -202,9 +190,21 @@ let y = "MULTIPLE_CHOICE",
                                 {
                                     choice: e,
                                     index: t,
-                                    onChange: (e) => P(e, t),
-                                    onClear: () => N(t),
-                                    onReorder: k,
+                                    onChange: (e) =>
+                                        ((e, t) => {
+                                            null != I && O(null);
+                                            let n = e.replace(/(\r\n|\n|\r)/g, " ");
+                                            n.length > h.au && (n = n.slice(0, h.au));
+                                            let r = [...C];
+                                            (r[t] = n), _(r);
+                                        })(e, t),
+                                    onClear: () =>
+                                        ((e) => {
+                                            null != I && O(null);
+                                            let t = [...C.slice(0, e), ...C.slice(e + 1)];
+                                            _(0 === t.length ? [""] : t);
+                                        })(t),
+                                    onReorder: P,
                                     isDropHovered: t === w,
                                 },
                                 "choice-".concat(t),

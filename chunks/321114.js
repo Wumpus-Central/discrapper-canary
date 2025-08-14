@@ -1,12 +1,12 @@
-n.d(t, { c: () => o });
+n.d(t, { c: () => s });
 var r = n(544891),
     i = n(570140),
     l = n(594174),
-    s = n(981631);
-async function o(e, t) {
+    o = n(981631);
+async function s(e, t) {
     try {
         let n = await r.tn.put({
-            url: s.ANM.USER_SET_GUILD_IDENTITY,
+            url: o.ANM.USER_SET_GUILD_IDENTITY,
             body: {
                 identity_guild_id: e,
                 identity_enabled: t,

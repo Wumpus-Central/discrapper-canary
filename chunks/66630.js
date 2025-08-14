@@ -18,9 +18,9 @@ var l = n(255367),
     j = n(626135),
     O = n(644540),
     v = n(359588),
-    x = n(368326),
-    C = n(720449),
-    _ = n(684269),
+    C = n(368326),
+    _ = n(720449),
+    x = n(684269),
     T = n(397416),
     y = n(745579),
     P = n(74340),
@@ -33,7 +33,7 @@ var l = n(255367),
     A = n(981631),
     R = n(185923),
     L = n(388032),
-    k = n(513126);
+    k = n(343190);
 let B = "CLEAR_AFTER";
 function M(t) {
     var e, n;
@@ -45,7 +45,7 @@ function M(t) {
             prompt: Y = null,
             showLabelSelectorNewTooltip: H = !1,
         } = t,
-        W = (0, x.p)({ location: "CustomStatusModalWithPreview" }),
+        W = (0, C.p)({ location: "CustomStatusModalWithPreview" }),
         z = (0, O.P)({ location: "CustomStatusModalWithPreview" }),
         V = (0, v.Z)({ location: "CustomStatusModalWithPreview" }),
         { analyticsLocations: G } = (0, h.ZP)(F, p.Z.CUSTOM_STATUS_MODAL),
@@ -56,7 +56,7 @@ function M(t) {
         q = (0, N.a)(),
         [X, Q] = a.useState(null != (e = null == q ? void 0 : q.state) ? e : ""),
         [$, J] = a.useState(null != (n = null == q ? void 0 : q.emoji) ? n : null),
-        [tt, te] = a.useState((0, _.Z)()),
+        [tt, te] = a.useState((0, x.Z)()),
         tn = a.useRef(null),
         tl = a.useRef(null),
         ta = a.useRef(null),
@@ -88,25 +88,9 @@ function M(t) {
             var t, e;
             null == (t = tn.current) || t.focus(), null == (e = tn.current) || e.setSelection(X.length, X.length);
         });
-    let th = (t) => {
-            null != t &&
-                J(
-                    null != t.id
-                        ? {
-                              id: t.id,
-                              name: t.name,
-                              animated: t.animated,
-                          }
-                        : {
-                              id: null,
-                              name: t.optionallyDiverseSequence,
-                              animated: !1,
-                          },
-                );
-        },
-        tb = () => {
+    let th = () => {
             tt !== B &&
-                ((0, C.Z)({
+                ((0, _.Z)({
                     text: X,
                     emojiInfo: $,
                     clearAfter: tt,
@@ -117,18 +101,8 @@ function M(t) {
                 }),
                 M());
         },
-        tS = () =>
-            null == $
-                ? null
-                : () =>
-                      (0, l.jsx)(d.Z, {
-                          className: k.emoji,
-                          emojiId: $.id,
-                          emojiName: $.name,
-                          animated: !!$.animated,
-                      }),
-        tg = W ? L.intl.string(L.t.rp0aho) : L.intl.string(L.t.UcdRn5),
-        tj = "custom-status-placeholder-text";
+        tb = W ? L.intl.string(L.t.rp0aho) : L.intl.string(L.t.UcdRn5),
+        tS = "custom-status-placeholder-text";
     return (0, l.jsxs)(s.Modal, {
         title: L.intl.string(L.t.Zx4jzM),
         actionBarInput: (0, l.jsx)("div", {
@@ -177,7 +151,7 @@ function M(t) {
             {
                 text: L.intl.string(L.t.R3BPHx),
                 variant: "primary",
-                onClick: tb,
+                onClick: th,
             },
         ],
         children: [
@@ -196,7 +170,7 @@ function M(t) {
             (0, l.jsxs)(c.hjN, {
                 className: k.formGroup,
                 titleClassName: k.customStatusInputTitle,
-                title: tg,
+                title: tb,
                 children: [
                     V &&
                         (0, l.jsx)("div", {
@@ -243,8 +217,23 @@ function M(t) {
                                         return (0, l.jsx)(S.Z, {
                                             closePopout: e,
                                             onSelectEmoji: (t) => {
-                                                let { emoji: n, willClose: l } = t;
-                                                th(n), l && e();
+                                                var n;
+                                                let { emoji: l, willClose: a } = t;
+                                                null != (n = l) &&
+                                                    J(
+                                                        null != n.id
+                                                            ? {
+                                                                  id: n.id,
+                                                                  name: n.name,
+                                                                  animated: n.animated,
+                                                              }
+                                                            : {
+                                                                  id: null,
+                                                                  name: n.optionallyDiverseSequence,
+                                                                  animated: !1,
+                                                              },
+                                                    ),
+                                                    a && e();
                                             },
                                             pickerIntention: R.Hz.STATUS,
                                             onNavigateAway: M,
@@ -289,7 +278,16 @@ function M(t) {
                                                     active: r,
                                                     className: k.emojiButton,
                                                     tabIndex: 0,
-                                                    renderButtonContents: tS(),
+                                                    renderButtonContents:
+                                                        null == $
+                                                            ? null
+                                                            : () =>
+                                                                  (0, l.jsx)(d.Z, {
+                                                                      className: k.emoji,
+                                                                      emojiId: $.id,
+                                                                      emojiName: $.name,
+                                                                      animated: !!$.animated,
+                                                                  }),
                                                 }),
                                             Object.getOwnPropertyDescriptors
                                                 ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(a))
@@ -316,7 +314,7 @@ function M(t) {
                                 u.iS,
                                 {
                                     autosize: !0,
-                                    "aria-describedby": tj,
+                                    "aria-describedby": tS,
                                     value: X,
                                     maxLength: Z.s0,
                                     rows: 1,
@@ -326,7 +324,7 @@ function M(t) {
                                         Q(t);
                                     },
                                     onKeyDown: (t) => {
-                                        "Enter" === t.key && tb();
+                                        "Enter" === t.key && th();
                                     },
                                     className: i()(k.input, null != tr && k.inputWithLabel),
                                     inputRef: tn,
@@ -339,7 +337,7 @@ function M(t) {
                                     children: (0, l.jsx)(E.Z, { label: tr }),
                                 }),
                             (0, l.jsx)(c.nn4, {
-                                id: tj,
+                                id: tS,
                                 children: "".concat(L.intl.string(L.t.EVV6ub), ": ").concat(tu),
                             }),
                             (X.length > 0 || null != $) &&

@@ -25,8 +25,8 @@ var r = n(255367),
     A = n(981631),
     N = n(616922),
     C = n(388032),
-    R = n(631736),
-    P = n(143595);
+    R = n(119835),
+    P = n(951948);
 function w(e, t) {
     return C.intl.formatToPlainString(C.t.h2yWWV, {
         username: t.username,
@@ -89,7 +89,7 @@ function x(e) {
     let n,
         m,
         T,
-        { channel: R, entry: x, closePopout: M, onReaction: j, onVoiceChannelPreview: k } = e,
+        { channel: R, entry: x, closePopout: M, onReaction: k, onVoiceChannelPreview: j } = e,
         { largeImage: U } = (0, g.rv)({ entry: x }),
         { activity: G, currentEntry: B, artist: Z, title: F, user: V } = (0, v.pi)(x),
         { primaryColor: H, secondaryColor: Y } = (0, O.Z)(null == U ? void 0 : U.src),
@@ -191,8 +191,8 @@ function x(e) {
             Q,
             (0, r.jsx)(I.St, {
                 children: (0, r.jsx)(I.WT, {
-                    onReaction: j,
-                    onVoiceChannelPreview: k,
+                    onReaction: k,
+                    onVoiceChannelPreview: j,
                     user: V,
                     channel: R,
                     generateReactionImage: z,

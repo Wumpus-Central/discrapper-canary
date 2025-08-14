@@ -33,7 +33,7 @@ var r = n(255367),
     N = n(981631),
     C = n(979007),
     R = n(388032),
-    P = n(795455);
+    P = n(561498);
 let w = (0, s.Kb)([b.Z, y.Z, g.Z], {
         queryId: (e) => N.McO.SKU(e),
         get: (e) => {
@@ -124,7 +124,7 @@ function x(e) {
     if (!a || null == u) return null;
     let D = () => {
             (0, l.ZDy)(async () => {
-                let { default: e } = await Promise.all([n.e("77803"), n.e("16721")]).then(n.bind(n, 7225));
+                let { default: e } = await Promise.all([n.e("77803"), n.e("18992")]).then(n.bind(n, 7225));
                 return (n) =>
                     (0, r.jsx)(e, {
                         transitionState: n.transitionState,
@@ -151,7 +151,7 @@ function x(e) {
         M = () => {
             (0, T.X)(t, T.B.STORE_EMBED);
         };
-    return (0, r.jsx)(j, {
+    return (0, r.jsx)(k, {
         appName: u.name,
         title: R.intl.formatToPlainString(R.t.XDRjs7, { appName: u.name }),
         description: w,
@@ -188,10 +188,10 @@ function M(e) {
         });
     if (!w || null == b || null == _) return null;
     let M = _.type === N.epS.SUBSCRIPTION,
-        k = !!M && (0, p.KW)(_.flags),
+        j = !!M && (0, p.KW)(_.flags),
         U = () => {
             (0, l.ZDy)(async () => {
-                let { default: e } = await Promise.all([n.e("77803"), n.e("16721")]).then(n.bind(n, 7225));
+                let { default: e } = await Promise.all([n.e("77803"), n.e("18992")]).then(n.bind(n, 7225));
                 return (t) =>
                     (0, r.jsx)(e, {
                         transitionState: t.transitionState,
@@ -215,7 +215,7 @@ function M(e) {
                               appId: b.id,
                               skuId: _.id,
                               guildId: y,
-                              subscriptionType: k ? "user" : "guild",
+                              subscriptionType: j ? "user" : "guild",
                               onClose: n.onClose,
                               onHeaderTitleClick: i,
                           })
@@ -233,7 +233,7 @@ function M(e) {
         },
         B = 12,
         Z = M
-            ? k
+            ? j
                 ? (0, r.jsxs)(r.Fragment, {
                       children: [
                           (0, r.jsx)(l.tBG, {
@@ -286,7 +286,7 @@ function M(e) {
         Y = () => {
             (0, T.X)(b.id, T.B.SKU_EMBED, c);
         };
-    return (0, r.jsx)(j, {
+    return (0, r.jsx)(k, {
         appName: b.name,
         title: _.name,
         description: Z,
@@ -310,7 +310,7 @@ function M(e) {
                         ? (0, r.jsx)(A.pV, {
                               onClick: D,
                               appId: b.id,
-                              subscriptionType: k ? "user" : "guild",
+                              subscriptionType: j ? "user" : "guild",
                               skuId: _.id,
                               icon: l.EOn,
                               onHasClicked: H,
@@ -332,7 +332,7 @@ function M(e) {
         }),
     });
 }
-function j(e) {
+function k(e) {
     let { appName: t, title: n, description: i, link: o, iconSrc: a, onIconClick: s, onLinkCopy: c, children: u } = e;
     return (0, r.jsxs)("div", {
         className: P.wrapper,

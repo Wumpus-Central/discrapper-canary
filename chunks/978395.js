@@ -27,7 +27,7 @@ var r = n(255367),
     C = n(228168),
     R = n(981631),
     P = n(388032),
-    w = n(81208);
+    w = n(116649);
 function D(e) {
     let {
             user: t,
@@ -36,10 +36,10 @@ function D(e) {
             guild: L,
             isHovering: x,
             onOpenProfile: M,
-            channelId: j,
-            onClose: k,
+            channelId: k,
+            onClose: j,
         } = e,
-        U = u.ZP.useName(null == L ? void 0 : L.id, j, t),
+        U = u.ZP.useName(null == L ? void 0 : L.id, k, t),
         { relationshipType: G, originApplicationId: B } = (0, i.cj)([l.Z], () => ({
             relationshipType: l.Z.getRelationshipType(t.id),
             originApplicationId: l.Z.getOriginApplicationId(t.id),
@@ -56,7 +56,7 @@ function D(e) {
             (0, r.jsx)(v.Z, {
                 user: t,
                 onOpenProfile: M,
-                onClose: k,
+                onClose: j,
                 usernameIcon:
                     t.hasAvatarForGuild(null == L ? void 0 : L.id) &&
                     (0, r.jsx)(S.Z, {
@@ -68,7 +68,7 @@ function D(e) {
                 tags: (0, r.jsx)(_.Z, {
                     displayProfile: D,
                     themeType: C.lY.POPOUT,
-                    onClose: k,
+                    onClose: j,
                 }),
                 nicknameIcons: (0, r.jsxs)(r.Fragment, {
                     children: [
@@ -87,7 +87,7 @@ function D(e) {
                     children: (0, r.jsx)(g.Z, {
                         user: t,
                         guildId: null == L ? void 0 : L.id,
-                        channelId: j,
+                        channelId: k,
                         applicationId: B,
                     }),
                 }),
@@ -99,7 +99,7 @@ function D(e) {
                             user: t,
                             isGameRelationship: !0,
                             applicationId: e.applicationId,
-                            channelId: j,
+                            channelId: k,
                         }),
                     },
                     e.applicationId,
@@ -128,12 +128,12 @@ function D(e) {
                       user: t,
                       bio: null == D ? void 0 : D.bio,
                       hidePersonalInformation: F,
-                      onClose: k,
+                      onClose: j,
                   }),
             H &&
                 (0, r.jsx)(p.Z, {
                     isPremiumUser: Y,
-                    onInteraction: k,
+                    onInteraction: j,
                 }),
             V
                 ? (0, r.jsx)(y.Z, {
@@ -142,14 +142,14 @@ function D(e) {
                       displayProfile: D,
                       guildId: null == L ? void 0 : L.id,
                       onOpenUserProfileModal: M,
-                      onClose: k,
+                      onClose: j,
                   })
                 : (0, r.jsx)(h.Z, {
                       user: t,
                       currentUser: n,
                       displayProfile: D,
                       guildId: null == L ? void 0 : L.id,
-                      onClose: k,
+                      onClose: j,
                   }),
             null != L &&
                 (0, r.jsx)(A.Z, {

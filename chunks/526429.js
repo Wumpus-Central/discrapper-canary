@@ -1,60 +1,58 @@
-r.d(t, { Z: () => I }), r(642613), r(539854), r(388685), r(392711);
+r.d(t, { Z: () => O }), r(642613), r(539854), r(388685), r(392711);
 var n,
     i,
-    a,
-    o = r(442837),
-    l = r(570140),
-    s = r(823379),
-    c = r(128449),
-    d = r(388032);
-let u = null,
+    a = r(442837),
+    o = r(570140),
+    l = r(823379),
+    s = r(128449),
+    c = r(388032);
+let d = null,
+    u = [],
     _ = [],
-    p = [],
-    E = {};
-class O extends (n = o.ZP.Store) {
+    p = {};
+class E extends (n = a.ZP.Store) {
     getPrimaryCategories() {
-        return _;
+        return u;
     }
     getDiscoveryCategories() {
-        let e = c.L3.map((e) => p.find((t) => t.categoryId === e)).filter(s.lm);
+        let e = s.L3.map((e) => _.find((t) => t.categoryId === e)).filter(l.lm);
         return [
             {
-                categoryId: c.Hk,
-                name: d.intl.string(d.t.Ym2Ri4),
+                categoryId: s.Hk,
+                name: c.intl.string(c.t.Ym2Ri4),
             },
             ...e,
         ];
     }
     getClanDiscoveryCategories() {
-        let e = c.L3.map((e) => p.find((t) => t.categoryId === e)).filter(s.lm);
+        let e = s.L3.map((e) => _.find((t) => t.categoryId === e)).filter(l.lm);
         return [
             {
-                categoryId: c.Hk,
-                name: d.intl.string(d.t.QToH29),
+                categoryId: s.Hk,
+                name: c.intl.string(c.t.QToH29),
             },
             ...e,
         ];
     }
     getAllCategories() {
-        return p;
+        return _;
     }
     getFetchedLocale() {
-        return u;
+        return d;
     }
     getCategoryName(e) {
-        return e === c.Hk ? d.intl.string(d.t.Ym2Ri4) : E[e];
+        return e === s.Hk ? c.intl.string(c.t.Ym2Ri4) : p[e];
     }
 }
-(a = "GuildDiscoveryCategoryStore"),
-    (i = "displayName") in O
-        ? Object.defineProperty(O, i, {
-              value: a,
-              enumerable: !0,
-              configurable: !0,
-              writable: !0,
-          })
-        : (O[i] = a);
-let I = new O(l.Z, {
+(i = "displayName") in E
+    ? Object.defineProperty(E, i, {
+          value: "GuildDiscoveryCategoryStore",
+          enumerable: !0,
+          configurable: !0,
+          writable: !0,
+      })
+    : (E[i] = "GuildDiscoveryCategoryStore");
+let O = new E(o.Z, {
     GUILD_DISCOVERY_CATEGORY_FETCH_SUCCESS: function (e) {
         let t,
             { categories: r, locale: n } = e,
@@ -65,8 +63,8 @@ let I = new O(l.Z, {
                 .sort((e, t) => (e.name < t.name ? -1 : 1))
                 .forEach((e) => {
                     let { id: r, name: n, is_primary: o } = e;
-                    if (r !== c.o3) {
-                        if (r === c.dc) {
+                    if (r !== s.o3) {
+                        if (r === s.dc) {
                             t = {
                                 categoryId: r,
                                 name: n,
@@ -82,7 +80,7 @@ let I = new O(l.Z, {
                                 categoryId: r,
                                 name: n,
                             }),
-                            (E[r] = n);
+                            (p[r] = n);
                     }
                 }),
             null != t)
@@ -92,8 +90,8 @@ let I = new O(l.Z, {
                 categoryId: e,
                 name: r,
             }),
-                (E[e] = r);
+                (p[e] = r);
         }
-        (u = n), (_ = i), (p = a);
+        (d = n), (u = i), (_ = a);
     },
 });

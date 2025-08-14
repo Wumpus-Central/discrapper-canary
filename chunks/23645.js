@@ -21,22 +21,21 @@ class l extends i.Component {
         return i.cloneElement(t, { onClick: this.handleFileDownload });
     }
     constructor(...e) {
-        var t, n;
         super(...e),
-            (t = "handleFileDownload"),
-            (n = (e) => {
+            (function (e, t, n) {
+                t in e
+                    ? Object.defineProperty(e, t, {
+                          value: n,
+                          enumerable: !0,
+                          configurable: !0,
+                          writable: !0,
+                      })
+                    : (e[t] = n);
+            })(this, "handleFileDownload", (e) => {
                 e.preventDefault();
                 let t = this.getFileContents(),
                     { fileName: n, onDownload: i } = this.props;
                 a.isPlatformEmbedded ? this.downloadNative(t, n) : this.downloadHtml5(t, n), null == i || i();
-            }),
-            t in this
-                ? Object.defineProperty(this, t, {
-                      value: n,
-                      enumerable: !0,
-                      configurable: !0,
-                      writable: !0,
-                  })
-                : (this[t] = n);
+            });
     }
 }

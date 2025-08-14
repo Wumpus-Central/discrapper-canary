@@ -89,10 +89,7 @@ function d(e) {
             },
         }),
         [g, v] = i.useState(!1),
-        y = (e) => (t, r) => {
-            p((t) => b(u({}, t), { [e]: b(u({}, t[e]), { checked: r }) })), r && g && v(!1);
-        },
-        O = Object.values(d).some((e) => e.checked);
+        y = Object.values(d).some((e) => e.checked);
     return (0, n.jsx)(l.Modal, {
         title: o.intl.string(o.t.jxXMEx),
         subtitle: o.intl.format(o.t.fSv59f, { helpdeskArticle: s.Z.getArticleURL(a.BhN.GDPR_PACKAGE_CONTENTS) }),
@@ -109,7 +106,7 @@ function d(e) {
             {
                 text: o.intl.string(o.t.NYgNg4),
                 onClick: () => {
-                    if (!O) return void v(!0);
+                    if (!y) return void v(!0);
                     let e = Object.keys(d)
                         .filter((e) => d[e].checked)
                         .map((e) => d[e].value);
@@ -129,7 +126,9 @@ function d(e) {
                         {
                             type: c.XZJ.Types.INVERTED,
                             value: r,
-                            onChange: y(e),
+                            onChange: (t, r) => {
+                                p((t) => b(u({}, t), { [e]: b(u({}, t[e]), { checked: r }) })), r && g && v(!1);
+                            },
                             children: (0, n.jsx)(c.Text, {
                                 variant: "text-md/normal",
                                 children: t,

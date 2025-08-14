@@ -10,7 +10,7 @@ var r = n(255367),
     d = n(873596),
     f = n(423516),
     h = n(981631),
-    g = n(786009);
+    g = n(445233);
 function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -41,13 +41,13 @@ let O = {
         [h.QKv.CONNECTING]: g.rtcConnectionStatusConnecting,
         [h.QKv.ERROR]: g.rtcConnectionStatusError,
     },
-    N = {
+    y = {
         [h.IE4.FINE]: g.rtcConnectionQualityFine,
         [h.IE4.AVERAGE]: g.rtcConnectionQualityAverage,
         [h.IE4.BAD]: g.rtcConnectionQualityBad,
         [h.IE4.UNKNOWN]: null,
     },
-    y = {
+    N = {
         [h.IE4.FINE]: s.B_b,
         [h.IE4.AVERAGE]: s.hLg,
         [h.IE4.BAD]: s.mbS,
@@ -76,7 +76,7 @@ function b(e) {
             }
             return l;
         })(e, ["quality", "largePing"]);
-    let i = y[t];
+    let i = N[t];
     return (0, r.jsx)(i, p({ className: o()(g.ping, { [g.largePing]: n }) }, l));
 }
 function x(e) {
@@ -84,7 +84,7 @@ function x(e) {
             quality: t,
             lastPing: n,
             state: i,
-            className: y,
+            className: N,
             children: x,
             channelId: E,
             childrenAsSubtitle: m,
@@ -117,12 +117,12 @@ function x(e) {
             },
             [E],
         ),
-        { connectionStatus: _, connectionStatusText: S } = u.Z.getStatus(i, v);
+        { connectionStatus: S, connectionStatusText: _ } = u.Z.getStatus(i, v);
     return (0, r.jsxs)("div", {
         className: g.rtcConnectionStatusWrapper,
         children: [
             (0, r.jsxs)("div", {
-                className: o()(g.rtcConnectionStatus, N[t], y),
+                className: o()(g.rtcConnectionStatus, y[t], N),
                 children: [
                     j &&
                         (0, r.jsx)(s.ua7, {
@@ -154,10 +154,10 @@ function x(e) {
                                             (0, c.v)(a.Z.RTC_PANEL, c.d.CONNECTION_STATUS), t(e);
                                         },
                                         children: (0, r.jsx)(f.Z, {
-                                            text: S,
+                                            text: _,
                                             textVariant: C,
                                             hasVideo: v,
-                                            className: O[_],
+                                            className: O[S],
                                             hasConnectedChannel: null != E,
                                         }),
                                     });

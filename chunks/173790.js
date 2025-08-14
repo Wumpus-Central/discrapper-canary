@@ -17,7 +17,7 @@ var r = n(255367),
     E = n(675993),
     b = n(689079),
     y = n(388032),
-    O = n(582631),
+    O = n(30787),
     v = n(413097);
 let I = 2048,
     T = 84;
@@ -40,12 +40,12 @@ function S(e) {
         ),
         x = (0, u.PL)(!0, !0),
         M = (0, u.LD)(null == I ? void 0 : I.guild_id, !0),
-        j = i.useMemo(() => (0, u.If)(n, N.id), [x, M, n, N.id]),
-        k = !j.isGuildInstalled && !j.isUserInstalled;
+        k = i.useMemo(() => (0, u.If)(n, N.id), [x, M, n, N.id]),
+        j = !k.isGuildInstalled && !k.isUserInstalled;
     return (
         i.useEffect(() => {
-            k && u.ZP.queryInstallOnDemandApp(N.id, null == I ? void 0 : I.id);
-        }, [N.id, null == I ? void 0 : I.id, k]),
+            j && u.ZP.queryInstallOnDemandApp(N.id, null == I ? void 0 : I.id);
+        }, [N.id, null == I ? void 0 : I.id, j]),
         (0, r.jsxs)(s.u2D, {
             className: O.container,
             fade: !0,
@@ -78,7 +78,7 @@ function S(e) {
                           context: n,
                           application: N,
                           sectionName: c,
-                          installOnDemand: k,
+                          installOnDemand: j,
                           setHasCommands: w,
                       })
                     : null,

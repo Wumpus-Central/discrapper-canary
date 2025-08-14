@@ -9,9 +9,9 @@ var r = n(524437),
     c = n(940276),
     d = n(981631),
     u = n(726985),
-    m = n(29953),
+    m = n(933554),
     p = n(388032),
-    g = n(513710);
+    g = n(764055);
 function h(e) {
     let { label: t, sublabel: n, id: r, checked: a, onChange: l } = e;
     return (0, i.jsxs)("div", {
@@ -43,10 +43,7 @@ function h(e) {
 function f() {
     let e = l.G6.useSetting(),
         t = l.no.useSetting(),
-        n = (e) => {
-            l.no.updateSetting(e);
-        },
-        a = [
+        n = [
             {
                 value: r.GI.ACTIVITY_STATUS_ON,
                 name: p.intl.string(p.t.UzGMHx),
@@ -88,9 +85,12 @@ function f() {
                             children: p.intl.string(m.default["/LHVbm"]),
                         }),
                         (0, i.jsx)(s.FXm, {
-                            options: a,
+                            options: n,
                             value: t,
-                            onChange: (e) => n(e.value),
+                            onChange: (e) => {
+                                var t;
+                                return (t = e.value), void l.no.updateSetting(t);
+                            },
                         }),
                     ],
                 }),

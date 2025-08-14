@@ -32,14 +32,14 @@ var i = n(255367),
     D = n(132547),
     Z = n(474936),
     w = n(981631),
-    k = n(83157);
+    k = n(166893);
 let L = function (e) {
     let { entrypoint: t = Z.EZ.UserSettings } = e;
     (0, j.z)(_.X);
     let n = (0, f.Q)(),
         { sourceAnalyticsLocations: s, analyticsLocations: L } = (0, h.ZP)(g.Z.PREMIUM_MARKETING),
-        M = (0, l.e7)([v.Z], () => v.Z.hasFetchedSubscriptions()),
-        B = (0, l.e7)([O.Z], () => O.Z.hasFetchedPaymentSources),
+        B = (0, l.e7)([v.Z], () => v.Z.hasFetchedSubscriptions()),
+        M = (0, l.e7)([O.Z], () => O.Z.hasFetchedPaymentSources),
         U = (0, l.e7)([C.default], () => C.default.getCurrentUser()),
         V = null == U ? void 0 : U.id,
         G = (0, P.N)(),
@@ -82,7 +82,7 @@ let L = function (e) {
                       value: L,
                       children: (0, i.jsx)(D.Z, { userId: V }),
                   })
-                : M && H && B
+                : B && H && M
                   ? null
                   : (0, i.jsx)("div", {
                         className: a()(k.container, k.loading),

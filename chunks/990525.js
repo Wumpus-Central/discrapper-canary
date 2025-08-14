@@ -19,7 +19,7 @@ var r = n(255367),
     y = n(981631),
     O = n(509571),
     v = n(388032),
-    I = n(662799);
+    I = n(478875);
 function T(e, t, n) {
     return (
         t in e
@@ -88,12 +88,12 @@ let C = 200,
                 clearTimeout(e), M(!1);
             };
         }, [L]);
-        let j = (0, m.J_)({
+        let k = (0, m.J_)({
                 location: "voice_filter_item",
                 autoTrackExposure: !0,
                 disable: !_.ZP.canCheckVoiceFilterFilesExist(),
             }),
-            k = (0, s.e7)([g.Z], () => g.Z.isVoiceFilterDownloaded(t.id), [t]),
+            j = (0, s.e7)([g.Z], () => g.Z.isVoiceFilterDownloaded(t.id), [t]),
             U = null == R ? void 0 : R.previewSoundURLs,
             [G, B] = i.useState(0),
             {
@@ -129,7 +129,7 @@ let C = 200,
             }),
             children: [
                 (0, r.jsx)(c.ua7, {
-                    shouldShow: j && !k,
+                    shouldShow: k && !j,
                     "aria-label": v.intl.string(v.t.SQ7qMD),
                     text: (0, r.jsxs)("div", {
                         className: I.downloadRequiredContent,
@@ -227,7 +227,7 @@ let C = 200,
                                                 color: t.underDevelopment ? "header-muted" : "header-primary",
                                                 children: [t.underDevelopment ? "\uD83D\uDEA7 " : "", z],
                                             }),
-                                            j && !k ? (0, r.jsx)(c._8t, { size: "xxs" }) : null,
+                                            k && !j ? (0, r.jsx)(c._8t, { size: "xxs" }) : null,
                                         ],
                                     }),
                                 ],

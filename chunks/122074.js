@@ -19,13 +19,13 @@ var i = n(255367),
     f = n(213931),
     S = n(767157),
     O = n(112440),
-    E = n(671105),
-    h = n(552958),
+    h = n(671105),
+    E = n(552958),
     y = n(981631),
     j = n(921944),
     _ = n(871465),
     N = n(388032),
-    P = n(810644);
+    P = n(392238);
 function v(e, t) {
     let n = p.Y.useExperiment({ location: "guild_context_menu" }, { autoTrackExposure: !0 }),
         i = A(e, void 0, s.z.PREMIUM_CUSTOM_NOTIFICATION_SOUNDS_GUILD_BADGE, n.nestedEntry ? "trailing" : "top");
@@ -49,15 +49,15 @@ function x() {
 }
 function A(e, t, s, v) {
     var m, x;
-    let A = (0, E.OR)(e),
-        L = (0, E._c)(e, t),
-        I = (0, l.e7)([d.default], () => d.default.getCurrentUser()),
-        Z = (0, l.e7)([u.ZP], () => u.ZP.isMuted(e), [e]),
-        D = g.ZP.canUseCustomNotificationSounds(I),
-        M = D ? (null != L ? L : A) : _.YC.CLASSIC,
+    let A = (0, h.OR)(e),
+        L = (0, h._c)(e, t),
+        Z = (0, l.e7)([d.default], () => d.default.getCurrentUser()),
+        I = (0, l.e7)([u.ZP], () => u.ZP.isMuted(e), [e]),
+        M = g.ZP.canUseCustomNotificationSounds(Z),
+        D = M ? (null != L ? L : A) : _.YC.CLASSIC,
         T = p.Y.useExperiment({ location: "guild_context_menu" }, { autoTrackExposure: !0 }).enabled,
         [k, G] = r.useState(!1),
-        { playSound: w } = (0, h.Z)(),
+        { playSound: w } = (0, E.Z)(),
         [U, C] = (0, c.cv)([s]),
         R = U === s;
     if (
@@ -71,15 +71,15 @@ function A(e, t, s, v) {
     )
         return null;
     let B = (n) => {
-            if ((w(n), C(j.L.TAKE_ACTION), !D && n !== _.YC.CLASSIC)) {
+            if ((w(n), C(j.L.TAKE_ACTION), !M && n !== _.YC.CLASSIC)) {
                 (0, S.Z)(n, "contextMenu"), (0, O.Z)();
                 return;
             }
-            null != t ? (0, f.M)(e, t, M, n, "contextMenu") : (0, f.t)(e, M, n, "contextMenu");
+            null != t ? (0, f.M)(e, t, D, n, "contextMenu") : (0, f.t)(e, D, n, "contextMenu");
         },
-        Y = D ? o.Text : b.Z,
+        Y = M ? o.Text : b.Z,
         Q = (0, _.LB)(),
-        F = null != (x = null == (m = Q.find((e) => e.value === M)) ? void 0 : m.label) ? x : N.intl.string(N.t.p3Hg5e),
+        F = null != (x = null == (m = Q.find((e) => e.value === D)) ? void 0 : m.label) ? x : N.intl.string(N.t.p3Hg5e),
         H = (0, i.jsx)(o.IGR, {
             className: P.newBadge,
             text: N.intl.string(N.t.y2b7CA),
@@ -107,7 +107,7 @@ function A(e, t, s, v) {
                                         (0, i.jsx)(o.SrA, {
                                             size: "xs",
                                             className: P.nitroWheel,
-                                            color: D ? void 0 : a.JX.PREMIUM_TIER_2,
+                                            color: M ? void 0 : a.JX.PREMIUM_TIER_2,
                                         }),
                                     ],
                                 }),
@@ -128,7 +128,9 @@ function A(e, t, s, v) {
             e !== y.aIL
                 ? () =>
                       (0, o.ZDy)(async () => {
-                          let { default: t } = await Promise.all([n.e("5863"), n.e("56959")]).then(n.bind(n, 751212));
+                          let { default: t } = await Promise.all([n.e("12830"), n.e("5863"), n.e("35515")]).then(
+                              n.bind(n, 751212),
+                          );
                           return (n) => {
                               var r, l;
                               return (0, i.jsx)(
@@ -184,11 +186,11 @@ function A(e, t, s, v) {
                         r.Fragment,
                         {
                             children: [
-                                D || e.value === _.YC.CLASSIC
+                                M || e.value === _.YC.CLASSIC
                                     ? (0, i.jsx)(o.k5B, {
                                           id: e.label,
                                           group: "notification-preset",
-                                          checked: (null != M ? M : _.YC.CLASSIC) === e.value,
+                                          checked: (null != D ? D : _.YC.CLASSIC) === e.value,
                                           label: e.label,
                                           action: () => B(e.value),
                                       })
@@ -221,7 +223,7 @@ function A(e, t, s, v) {
                         t,
                     ),
                 ),
-                Z &&
+                I &&
                     (0, i.jsxs)(i.Fragment, {
                         children: [
                             (0, i.jsx)(o.Clw, {}),

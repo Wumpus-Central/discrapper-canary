@@ -17,7 +17,7 @@ var r = n(255367),
     E = n(981631),
     b = n(245335),
     y = n(388032),
-    O = n(664643);
+    O = n(105341);
 function v(e) {
     let t,
         n,
@@ -52,9 +52,9 @@ function v(e) {
             w.channelId === v.channel.id &&
             w.guildId === v.guild.id;
     a()(null != v, "Invite cannot be null");
-    let { target_type: M, target_user: j } = v;
-    a()(M === b.Iq.STREAM && null != j, "invalid streaming invite");
-    let k = I === j.id,
+    let { target_type: M, target_user: k } = v;
+    a()(M === b.Iq.STREAM && null != k, "invalid streaming invite");
+    let j = I === k.id,
         U = v.state === E.r2o.ACCEPTING,
         G = i.useCallback(() => {
             let e = "noop";
@@ -75,13 +75,13 @@ function v(e) {
         T = (0, h.Qs)(v.guild);
     }
     let Z = null != v.channel ? (0, f.jD)(v.channel) : null,
-        F = m.ZP.getName(j);
+        F = m.ZP.getName(k);
     B && !x
-        ? (o = k ? y.intl.string(y.t.oBLoZG) : y.intl.formatToPlainString(y.t["0QJmAw"], { name: F }))
+        ? (o = j ? y.intl.string(y.t.oBLoZG) : y.intl.formatToPlainString(y.t["0QJmAw"], { name: F }))
         : ((t = y.intl.string(y.t["I6JG4+"])),
           (n = d.Z.Button.Colors.GREEN),
           L && ((t = y.intl.string(y.t["Q1W99/"])), (n = d.Z.Button.Colors.PRIMARY)),
-          (o = k ? y.intl.string(y.t["4hyaHh"]) : y.intl.formatToPlainString(y.t.QmlLEh, { name: F })));
+          (o = j ? y.intl.string(y.t["4hyaHh"]) : y.intl.formatToPlainString(y.t.QmlLEh, { name: F })));
     let V =
         R === T.id && null != Z
             ? (0, r.jsx)(d.Z.Channel, { channel: Z })

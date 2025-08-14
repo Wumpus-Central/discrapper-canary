@@ -1,5 +1,5 @@
 n.d(t, {
-    SI: () => d,
+    SI: () => c,
     nS: () => o,
 });
 var i = n(81643),
@@ -70,9 +70,10 @@ let a = (0, r.B)({
             n = a.useExperiment({ location: e }, { autoTrackExposure: !1 });
         return t.dmOffByDefault || n.dmOffByDefault;
     },
-    c = (e) => {
-        let t = l.getCurrentConfig({ location: e }, { autoTrackExposure: !1 }),
-            n = a.getCurrentConfig({ location: e }, { autoTrackExposure: !1 });
-        return t.messageRequestOnByDefault || n.messageRequestOnByDefault || (0, s.c_)(e);
-    },
-    d = () => (0, i.sf)() && c("shouldAgeVerifyForDMDefaultOff");
+    c = () =>
+        (0, i.sf)() &&
+        ((e) => {
+            let t = l.getCurrentConfig({ location: e }, { autoTrackExposure: !1 }),
+                n = a.getCurrentConfig({ location: e }, { autoTrackExposure: !1 });
+            return t.messageRequestOnByDefault || n.messageRequestOnByDefault || (0, s.c_)(e);
+        })("shouldAgeVerifyForDMDefaultOff");

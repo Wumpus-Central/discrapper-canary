@@ -35,7 +35,7 @@ var r = n(120356),
     P = n(474936),
     R = n(981631),
     D = n(388032),
-    Z = n(79793);
+    Z = n(965406);
 function w(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -80,12 +80,12 @@ function k(e, t) {
     );
 }
 let L = new g.Z("SubscriptionHeader.tsx"),
-    M = {
+    B = {
         page: R.ZY5.USER_SETTINGS,
         section: R.jXE.SETTINGS_PREMIUM,
         object: R.qAy.CARD,
     },
-    B = [R.O0b.PAUSED, R.O0b.PAUSE_PENDING, R.O0b.BILLING_RETRY];
+    M = [R.O0b.PAUSED, R.O0b.PAUSE_PENDING, R.O0b.BILLING_RETRY];
 function U(e) {
     let {
         wordMark: t,
@@ -205,7 +205,7 @@ function F() {
                 (0, h.Z)({
                     subscriptionTier: P.Si.TIER_1,
                     analyticsLocations: e,
-                    analyticsObject: M,
+                    analyticsObject: B,
                 }),
             children: D.intl.string(D.t["/ygMUV"]),
         }),
@@ -237,7 +237,7 @@ let H = function (e) {
         },
         en = (e) => {
             (0, c.ZDy)(async () => {
-                let { default: t } = await n.e("81709").then(n.bind(n, 833569));
+                let { default: t } = await Promise.all([n.e("58067"), n.e("81709")]).then(n.bind(n, 833569));
                 return (n) =>
                     (0, i.jsx)(
                         t,
@@ -267,13 +267,13 @@ let H = function (e) {
                               initialPlanId: r.premiumPlanIdFromItems,
                               analyticsLocations: H,
                               analyticsLocation: F,
-                              analyticsObject: M,
+                              analyticsObject: B,
                               subscription: r,
                           });
             }
         },
         er = () => {
-            if (!B.includes(r.status) || null == r.pauseEndsAt)
+            if (!M.includes(r.status) || null == r.pauseEndsAt)
                 return void (0, j.q2)(Error("Invalid subscription to resume"), {
                     extra: {
                         subscriptionId: r.id,
@@ -286,7 +286,7 @@ let H = function (e) {
                       initialPlanId: r.premiumPlanIdFromItems,
                       analyticsLocations: H,
                       analyticsLocation: F,
-                      analyticsObject: M,
+                      analyticsObject: B,
                       subscription: r,
                       skipConfirm: !0,
                   })
@@ -334,7 +334,7 @@ let H = function (e) {
                 "aria-label": D.intl.string(D.t.lpNrPj),
             });
     }
-    let em = B.includes(r.status) && !W ? V : U;
+    let em = M.includes(r.status) && !W ? V : U;
     return (0, i.jsx)(em, {
         wordMark: eu,
         subscriptionInfo:
@@ -406,7 +406,7 @@ let H = function (e) {
                                             (0, h.Z)({
                                                 analyticsLocations: H,
                                                 analyticsLocation: F,
-                                                analyticsObject: M,
+                                                analyticsObject: B,
                                                 subscription: r,
                                             });
                                         },

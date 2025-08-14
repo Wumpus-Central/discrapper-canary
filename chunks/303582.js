@@ -1,7 +1,7 @@
 n.d(t, { Z: () => a }), n(953529);
 var r = n(255367),
     s = n(763283),
-    o = n(772341);
+    o = n(438498);
 function a(e) {
     let { name: t, description: n, pointsDescription: a } = e;
     return (0, r.jsxs)("div", {

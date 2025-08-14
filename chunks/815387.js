@@ -32,8 +32,8 @@ var r = n(255367),
     L = n(590415),
     x = n(911560),
     M = n(488131),
-    j = n(814820),
-    k = n(314897),
+    k = n(814820),
+    j = n(314897),
     U = n(523746),
     G = n(592125),
     B = n(430824),
@@ -136,10 +136,10 @@ function ex(e, t) {
 function eM(e) {
     z.Z.captureException(e), new m.Z("SystemMessage").error("", e);
 }
-function ej(e) {
+function ek(e) {
     let { message: t, compact: n, channel: a } = e,
         { id: s, author: l } = t,
-        u = k.default.getId(),
+        u = j.default.getId(),
         d = t.getChannelId(),
         f = (0, o.e7)([U.Z], () => U.Z.isCallActive(d, s), [d, s]),
         _ = (0, o.e7)([Y.Z], () => Y.Z.getVoiceState(eC.ME, u)),
@@ -161,7 +161,7 @@ function ej(e) {
         onClickJoinCall: m,
     });
 }
-function ek(e) {
+function ej(e) {
     let { message: t, compact: n, channel: i } = e,
         { author: o } = t,
         a = t.getChannelId(),
@@ -275,7 +275,7 @@ function eZ(e) {
         ),
         d = i.useCallback(() => {
             (0, a.ZDy)(async () => {
-                let { default: e } = await Promise.all([n.e("91315"), n.e("67626")]).then(n.bind(n, 223901));
+                let { default: e } = await Promise.all([n.e("91315"), n.e("219")]).then(n.bind(n, 223901));
                 return (t) => (0, r.jsx)(e, eD({ channel: o }, t));
             });
         }, [o]),
@@ -285,7 +285,7 @@ function eZ(e) {
                 let o = G.Z.getChannel(null == (i = t.messageReference) ? void 0 : i.channel_id);
                 null != o &&
                     (0, s.jW)(e, async () => {
-                        let { default: e } = await Promise.all([n.e("46154"), n.e("57706")]).then(n.bind(n, 422200));
+                        let { default: e } = await Promise.all([n.e("46154"), n.e("18356")]).then(n.bind(n, 422200));
                         return (t) => (0, r.jsx)(e, ex(eD({}, t), { channel: o }));
                     });
             },
@@ -358,7 +358,7 @@ function eV(e) {
                 compact: n,
                 usernameHook: s,
             }),
-            (0, r.jsx)(j.f, {
+            (0, r.jsx)(k.f, {
                 channel: i,
                 message: t,
             }),
@@ -730,8 +730,8 @@ let ti = Object.freeze({
     [eC.uaV.CONTEXT_MENU_COMMAND]: void 0,
     [eC.uaV.RECIPIENT_ADD]: eB,
     [eC.uaV.RECIPIENT_REMOVE]: eF,
-    [eC.uaV.CALL]: ej,
-    [eC.uaV.CHANNEL_NAME_CHANGE]: ek,
+    [eC.uaV.CALL]: ek,
+    [eC.uaV.CHANNEL_NAME_CHANGE]: ej,
     [eC.uaV.CHANNEL_ICON_CHANGE]: eU,
     [eC.uaV.CHANNEL_PINNED_MESSAGE]: eG,
     [eC.uaV.USER_JOIN]: eV,

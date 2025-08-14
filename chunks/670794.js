@@ -7,7 +7,7 @@ var e = i(255367),
     r = i(194359),
     o = i(51144),
     c = i(388032),
-    p = i(545276);
+    p = i(467438);
 function d(t) {
     let { user: n, nickname: i, transitionState: d, onClose: x } = t,
         [h, m] = a.useState(!1),

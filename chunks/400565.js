@@ -1,12 +1,12 @@
-n.d(t, { U: () => h });
+n.d(t, { U: () => p });
 var r = n(255367),
     i = n(73800),
     l = n(442837),
     o = n(686546),
-    s = n(598077),
-    a = n(430824),
+    a = n(598077),
+    s = n(430824),
     c = n(865112),
-    u = n(653619);
+    u = n(121099);
 let d = (e) => {
         let { mask: t } = e;
         return null == t
@@ -21,31 +21,31 @@ let d = (e) => {
                   }),
               });
     },
-    h = i.memo(function (e) {
+    p = i.memo(function (e) {
         var t, n;
         let { item: i } = e,
-            h = null,
-            p = !1,
-            f = (0, l.e7)([a.Z], () => a.Z.getGuild(i.guild_id));
+            p = null,
+            f = !1,
+            h = (0, l.e7)([s.Z], () => s.Z.getGuild(i.guild_id));
         if (null != i.icon_name)
-            h = (0, r.jsx)("img", {
+            p = (0, r.jsx)("img", {
                 alt: "",
                 src: c.VH[(0, c.RB)(i.icon_name)],
             });
         else if (null != i.other_user) {
-            let e = i.other_user instanceof s.Z ? i.other_user : new s.Z(i.other_user),
+            let e = i.other_user instanceof a.Z ? i.other_user : new a.Z(i.other_user),
                 n = null != (t = e.globalName) ? t : e.username;
-            (h = (0, r.jsx)("img", {
+            (p = (0, r.jsx)("img", {
                 alt: n,
                 className: u.image,
                 src: e.getAvatarURL(void 0, 40),
             })),
-                (p = !0);
+                (f = !0);
         } else
-            h =
+            p =
                 null != i.icon_url
                     ? (0, r.jsx)("img", {
-                          alt: null != (n = null == f ? void 0 : f.name) ? n : "",
+                          alt: null != (n = null == h ? void 0 : h.name) ? n : "",
                           className: u.image,
                           src: i.icon_url,
                       })
@@ -66,8 +66,8 @@ let d = (e) => {
                     className: u.mask,
                     children: (0, r.jsx)("div", {
                         className: u.imageContainer,
-                        style: p ? void 0 : { backgroundColor: (0, c.Vu)(i) },
-                        children: h,
+                        style: f ? void 0 : { backgroundColor: (0, c.Vu)(i) },
+                        children: p,
                     }),
                 }),
                 (0, r.jsx)(d, { mask: g }),

@@ -1,64 +1,62 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => g });
 var r,
     i,
-    l,
-    a = n(442837),
-    s = n(570140);
-let o = null,
-    c = 0,
+    l = n(442837),
+    a = n(570140);
+let s = null,
+    o = 0,
+    c = null,
     d = null,
-    u = null,
-    m = !1;
-class g extends (l = a.ZP.Store) {
+    u = !1;
+class m extends (i = l.ZP.Store) {
     hasChanges() {
-        return o !== d;
+        return s !== c;
     }
     showNotice() {
         return this.hasChanges();
     }
     get vanityURLCode() {
-        return o;
+        return s;
     }
     get originalVanityURLCode() {
-        return d;
-    }
-    get vanityURLUses() {
         return c;
     }
+    get vanityURLUses() {
+        return o;
+    }
     hasError() {
-        return null != u;
+        return null != d;
     }
     get errorDetails() {
-        return u;
+        return d;
     }
     get fetchedVanityURL() {
-        return m;
+        return u;
     }
 }
-(i = "GuildSettingsVanityURLStore"),
-    (r = "displayName") in g
-        ? Object.defineProperty(g, r, {
-              value: i,
-              enumerable: !0,
-              configurable: !0,
-              writable: !0,
-          })
-        : (g[r] = i);
-let p = new g(s.Z, {
+(r = "displayName") in m
+    ? Object.defineProperty(m, r, {
+          value: "GuildSettingsVanityURLStore",
+          enumerable: !0,
+          configurable: !0,
+          writable: !0,
+      })
+    : (m[r] = "GuildSettingsVanityURLStore");
+let g = new m(a.Z, {
     GUILD_SETTINGS_SET_VANITY_URL: function (e) {
         var t, n;
-        (d = o = null != (t = e.code) ? t : ""), (c = e.uses), (u = null != (n = e.error) ? n : null), (m = !0);
+        (c = s = null != (t = e.code) ? t : ""), (o = e.uses), (d = null != (n = e.error) ? n : null), (u = !0);
     },
     GUILD_SETTINGS_CLOSE: function () {
-        (d = o = null), (c = 0), (u = null), (m = !1);
+        (c = s = null), (o = 0), (d = null), (u = !1);
     },
     GUILD_SETTINGS_VANITY_URL_RESET: function () {
-        (o = d), (c = 0), (u = null);
+        (s = c), (o = 0), (d = null);
     },
     GUILD_SETTINGS_VANITY_URL_SET: function (e) {
-        (o = e.code), (c = 0);
+        (s = e.code), (o = 0);
     },
     GUILD_SETTINGS_VANITY_URL_ERROR: function (e) {
-        u = e.error;
+        d = e.error;
     },
 });

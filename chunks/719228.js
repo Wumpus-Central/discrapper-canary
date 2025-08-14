@@ -1,39 +1,39 @@
 n.d(t, {
     default: () => v,
     e: () => C,
-    g: () => j,
+    g: () => f,
 }),
     n(539854),
     n(388685);
 var l = n(255367),
     r = n(73800),
-    s = n(658722),
-    i = n.n(s),
+    i = n(658722),
+    s = n.n(i),
     a = n(442837),
     o = n(481060),
-    c = n(37234),
-    d = n(565138),
+    d = n(37234),
+    c = n(565138),
     u = n(703656),
     m = n(430824),
     x = n(771845),
     h = n(267642),
     p = n(981631),
     g = n(388032),
-    f = n(71345);
-function j(e) {
+    j = n(30408);
+function f(e) {
     let { isTransfer: t = !1, setQuery: n, query: r } = e;
     return (0, l.jsxs)(o.xBx, {
-        className: f.selectHeaderContainer,
+        className: j.selectHeaderContainer,
         children: [
             (0, l.jsx)(o.X6q, {
-                className: f.selectHeader,
+                className: j.selectHeader,
                 variant: "heading-md/semibold",
                 children: t ? g.intl.string(g.t.IB13DQ) : g.intl.string(g.t.cQYceX),
             }),
             (0, l.jsx)(o.E1j, {
                 placeholder: g.intl.string(g.t.vf3ZTU),
                 "aria-label": g.intl.string(g.t.vf3ZTU),
-                className: f.selectSearch,
+                className: j.selectSearch,
                 query: r,
                 onChange: n,
                 onClear: () => n(""),
@@ -42,7 +42,7 @@ function j(e) {
     });
 }
 function C(e) {
-    let { isTransfer: t = !1, selectedSlotGuilds: n, onClose: r, onSelectGuild: s, query: j } = e,
+    let { isTransfer: t = !1, selectedSlotGuilds: n, onClose: r, onSelectGuild: i, query: f } = e,
         C = (0, a.e7)([x.ZP], () => x.ZP.getFlattenedGuildIds()),
         v = (0, a.Wu)([m.Z], () =>
             C.reduce((e, t) => {
@@ -50,20 +50,20 @@ function C(e) {
                 return (
                     null == l ||
                         (null != n && n.some((e) => e.id === t)) ||
-                        ((j.length <= 0 || i()(j.toLowerCase(), null == l ? void 0 : l.name.toLowerCase())) &&
+                        ((f.length <= 0 || s()(f.toLowerCase(), null == l ? void 0 : l.name.toLowerCase())) &&
                             e.push(l)),
                     e
                 );
             }, []),
         );
-    function b() {
-        r(), (0, c.xf)(), (0, u.uL)(p.Z5c.GUILD_DISCOVERY);
+    function y() {
+        r(), (0, d.xf)(), (0, u.uL)(p.Z5c.GUILD_DISCOVERY);
     }
     return (0, l.jsxs)(l.Fragment, {
         children: [
             0 === v.length &&
                 (0, l.jsx)("div", {
-                    className: f.emptyStateWrapper,
+                    className: j.emptyStateWrapper,
                     children: (0, l.jsx)(o.Text, {
                         variant: "text-md/normal",
                         children:
@@ -73,7 +73,7 @@ function C(e) {
                                           (0, l.jsx)(
                                               o.P3F,
                                               {
-                                                  onClick: b,
+                                                  onClick: y,
                                                   tag: "a",
                                                   children: e,
                                               },
@@ -87,26 +87,26 @@ function C(e) {
                 (0, l.jsxs)(
                     o.P3F,
                     {
-                        className: f.selectGuild,
+                        className: j.selectGuild,
                         onClick: () => {
-                            s(e);
+                            i(e);
                         },
                         children: [
-                            (0, l.jsx)(d.Z, {
-                                className: f.selectGuildIcon,
+                            (0, l.jsx)(c.Z, {
+                                className: j.selectGuildIcon,
                                 guild: e,
-                                size: d.Z.Sizes.SMALL,
+                                size: c.Z.Sizes.SMALL,
                             }),
                             (0, l.jsxs)("div", {
-                                className: f.selectGuildCopy,
+                                className: j.selectGuildCopy,
                                 children: [
                                     (0, l.jsx)(o.Text, {
-                                        className: f.selectGuildName,
+                                        className: j.selectGuildName,
                                         variant: "text-md/normal",
                                         children: e.name,
                                     }),
                                     (0, l.jsx)(o.Text, {
-                                        className: f.selectGuildLevel,
+                                        className: j.selectGuildLevel,
                                         color: "text-muted",
                                         variant: "text-xs/normal",
                                         children: (0, h.nW)(e.premiumTier),
@@ -114,7 +114,7 @@ function C(e) {
                                 ],
                             }),
                             (0, l.jsx)(o.Text, {
-                                className: f.selectGuildPseudoCta,
+                                className: j.selectGuildPseudoCta,
                                 color: "always-white",
                                 variant: "text-sm/medium",
                                 children: t ? g.intl.string(g.t.dUgaFx) : g.intl.string(g.t.Uj0md3),
@@ -128,28 +128,28 @@ function C(e) {
     });
 }
 function v(e) {
-    let { onClose: t, onSelectGuild: n, transitionState: s } = e,
-        [i, a] = r.useState("");
+    let { onClose: t, onSelectGuild: n, transitionState: i } = e,
+        [s, a] = r.useState("");
     return (0, l.jsxs)(o.Y0X, {
-        transitionState: s,
-        className: f.modal,
+        transitionState: i,
+        className: j.modal,
         size: o.CgR.SMALL,
         parentComponent: "GuildSelectModal",
         children: [
-            (0, l.jsx)(j, {
-                query: i,
+            (0, l.jsx)(f, {
+                query: s,
                 setQuery: a,
             }),
             (0, l.jsx)(o.hzk, {
-                className: f.modalContent,
+                className: j.modalContent,
                 children: (0, l.jsx)(C, {
                     onClose: t,
                     onSelectGuild: n,
-                    query: i,
+                    query: s,
                 }),
             }),
             (0, l.jsx)(o.olH, {
-                className: f.modalCloseButton,
+                className: j.modalCloseButton,
                 onClick: t,
             }),
         ],

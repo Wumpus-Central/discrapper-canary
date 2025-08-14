@@ -28,7 +28,7 @@ var r = n(255367),
     R = n(474936),
     P = n(981631),
     w = n(388032),
-    D = n(681782),
+    D = n(269143),
     L = n(754761),
     x = n(295234);
 function M(e, t, n) {
@@ -44,7 +44,7 @@ function M(e, t, n) {
         e
     );
 }
-function j(e) {
+function k(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -60,21 +60,21 @@ function j(e) {
     }
     return e;
 }
-let k = "???",
+let j = "???",
     U = (e) => {
         let { analyticsLocations: t } = e;
         y.default.track(P.rMx.REFERRAL_PROGRAM_SHARE_MODAL_CTA_CLICKED, { location_stack: t }),
             (0, f.ZDy)(async () => {
-                let { default: e } = await Promise.all([n.e("83667"), n.e("67825")]).then(n.bind(n, 656139));
-                return (t) => (0, r.jsx)(e, j({}, t));
+                let { default: e } = await Promise.all([n.e("83667"), n.e("4048")]).then(n.bind(n, 656139));
+                return (t) => (0, r.jsx)(e, k({}, t));
             });
     };
 class G extends i.Component {
     getTitleText() {
         let e = E.default.getUser(this.trialOffer.user_id),
-            t = null != e ? e.username : k,
+            t = null != e ? e.username : j,
             n = E.default.getUser(this.trialOffer.referrer_id),
-            r = null != n ? n.username : k;
+            r = null != n ? n.username : j;
         return this.recipientHasNitro && void 0 === this.trialOffer.redeemed_at
             ? w.intl.formatToPlainString(w.t.Mptau7, { username: t })
             : this.offerExpired

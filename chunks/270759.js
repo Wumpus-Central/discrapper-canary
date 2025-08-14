@@ -25,7 +25,7 @@ var r = n(255367),
     N = n(981631),
     T = n(723359),
     P = n(388032),
-    j = n(802506);
+    j = n(236202);
 function x() {
     return (0, r.jsx)("div", {
         className: j.inviteToolbar,

@@ -1,4 +1,4 @@
-r.d(t, { m: () => Z });
+r.d(t, { m: () => S });
 var a = r(255367),
     i = r(73800),
     n = r(120356),
@@ -20,12 +20,9 @@ var a = r(255367),
     R = r(263885),
     v = r(981631),
     E = r(388032),
-    C = r(323889),
+    C = r(734501),
     y = r(690813);
-let N = (e, t) => {
-        x.Z.hasLayers() && (0, f.xf)(), m.Z.openPrivateChannel({ recipientIds: e }), t();
-    },
-    S = (e) => {
+let N = (e) => {
         let { recipient: t, status: r, onClose: i } = e,
             { avatarSrc: n, eventHandlers: l } = (0, p.Z)({
                 userId: null == t ? void 0 : t.id,
@@ -100,12 +97,18 @@ let N = (e, t) => {
                     size: "sm",
                     text: E.intl.string(E.t["E+yYpq"]),
                     icon: u.kBi,
-                    onClick: () => N(t.id, i),
+                    onClick: () => {
+                        var e;
+                        return (
+                            (e = t.id),
+                            void (x.Z.hasLayers() && (0, f.xf)(), m.Z.openPrivateChannel({ recipientIds: e }), i())
+                        );
+                    },
                 }),
             ],
         });
     },
-    Z = (e) => {
+    S = (e) => {
         let { results: t, onClose: r } = e,
             n = (0, l.e7)([g.Z], () => g.Z.getReferralsRemaining());
         b.default.track(v.rMx.REFERRAL_PROGRAM_SHARE_CTA_CLICKED);
@@ -142,7 +145,7 @@ let N = (e, t) => {
                       className: C.trialRecipientContainer,
                       children: t.map((e) =>
                           (0, a.jsx)(
-                              S,
+                              N,
                               {
                                   recipient: e.recipient,
                                   status: e.status,

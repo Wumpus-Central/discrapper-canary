@@ -36,8 +36,8 @@ var r = n(255367),
     L = n(453687),
     x = n(348238),
     M = n(62072),
-    j = n(38267),
-    k = n(25015),
+    k = n(38267),
+    j = n(25015),
     U = n(689674),
     G = n(438075),
     B = n(764893),
@@ -50,8 +50,8 @@ var r = n(255367),
     K = n(959517),
     z = n(981631),
     q = n(388032),
-    X = n(433869),
-    Q = n(295719);
+    X = n(360514),
+    Q = n(492333);
 function J(e, t, n) {
     return (
         t in e
@@ -177,7 +177,7 @@ function el(e) {
         eh = v.NA.useSetting(),
         em = ep && eh,
         eg = (0, u.e7)([y.Z], () => y.Z.getMessageByReference(ec)),
-        { popouts: eE, selected: eb, setPopout: ey } = (0, j.Z)(O.id, K.d$),
+        { popouts: eE, selected: eb, setPopout: ey } = (0, k.Z)(O.id, K.d$),
         eO = (0, x.qo)(O, J, ey),
         ev = (0, x.Go)(O, J),
         {
@@ -207,17 +207,17 @@ function el(e) {
         eL = (0, u.e7)([S.Z], () => S.Z.isEditing($, C), [$, C]),
         ex = (0, u.e7)([f.Z], () => f.Z.keyboardModeEnabled),
         eM = eb || eL || (ex && eN),
-        ej = eM || eA,
-        ek = (0, u.e7)(
+        ek = eM || eA,
+        ej = (0, u.e7)(
             [I.Z],
             () => O.hasFlag(z.iLy.HAS_THREAD) && I.Z.getChannel(A.default.castMessageIdAsChannelId(O.id)),
         ),
         eU = O.isFirstMessageInForumPost(J),
         eG = (0, h.A)((null != (n = O.editedTimestamp) ? n : O.timestamp).valueOf()),
         eB = (0, u.e7)([T.Z], () => T.Z.isDeveloper),
-        { content: eZ, hasSpoilerEmbeds: eF } = (0, k.Z)(O, {
+        { content: eZ, hasSpoilerEmbeds: eF } = (0, j.Z)(O, {
             hideSimpleEmbedContent: em,
-            isInteracting: ej,
+            isInteracting: ek,
             formatInline: !1,
             allowList: eU || eG,
             allowHeading: eU || eG,
@@ -325,7 +325,7 @@ function el(e) {
                                 channelMessageProps: e,
                                 hasSpoilerEmbeds: eF,
                                 handleContextMenu: eO,
-                                isInteracting: ej,
+                                isInteracting: ek,
                                 isAutomodBlockedMessage: e$,
                                 forceAddReactions: O.type === z.uaV.EMOJI_ADDED,
                             }),
@@ -343,7 +343,7 @@ function el(e) {
                             childrenMessageContent: o,
                             onMouseMove: eI,
                             onMouseLeave: eT,
-                            hasThread: !el && O.hasFlag(z.iLy.HAS_THREAD) && null != ek,
+                            hasThread: !el && O.hasFlag(z.iLy.HAS_THREAD) && null != ej,
                             isSystemMessage: (0, R.Z)(O),
                             hasReply: O.type === z.uaV.REPLY,
                             messageRef: (e) => {
@@ -388,7 +388,7 @@ function ec(e) {
     l()(i.type === z.uaV.THREAD_STARTER_MESSAGE, "Message must be a thread starter message");
     let f = $({}, ee((0, c.JA)(null != (t = e.id) ? t : ""))),
         _ = (0, u.e7)([y.Z], () => y.Z.getMessageByReference(o)),
-        { popouts: p, setPopout: h } = (0, j.Z)(i.id, K.d$),
+        { popouts: p, setPopout: h } = (0, k.Z)(i.id, K.d$),
         m = (0, P.ZP)(i),
         g = (0, L.iG)(i),
         E = (0, L.Gx)(i);
@@ -445,7 +445,7 @@ function eu(e) {
         { onFocus: A } = S,
         C = ei(S, ["onFocus"]),
         { isFocused: w, handleFocus: U, handleBlur: B } = (0, x.bb)(A),
-        { popouts: Z, selected: H, setPopout: Q } = (0, j.Z)(s.id, K.d$),
+        { popouts: Z, selected: H, setPopout: Q } = (0, k.Z)(s.id, K.d$),
         J = v.RS.useSetting(),
         $ = v.NA.useSetting(),
         ee = J && $,
@@ -464,7 +464,7 @@ function eu(e) {
         ec = (0, u.e7)([f.Z], () => f.Z.keyboardModeEnabled),
         eu = H || (ec && w),
         ed = eu || el,
-        { content: ef, hasSpoilerEmbeds: e_ } = (0, k.Z)(s, {
+        { content: ef, hasSpoilerEmbeds: e_ } = (0, j.Z)(s, {
             hideSimpleEmbedContent: ee,
             isInteracting: ed,
             formatInline: !1,

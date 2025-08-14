@@ -9,7 +9,7 @@ var s = n(120356),
     d = n(552958),
     c = n(767157),
     u = n(388032),
-    h = n(932787);
+    h = n(759796);
 function g(e) {
     let { label: t, className: n, description: s, soundpack: g, location: m } = e,
         { playSound: x, isPlaying: p } = (0, d.Z)();

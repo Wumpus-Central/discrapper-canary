@@ -3,7 +3,7 @@ var n = r(255367),
     l = r(120356),
     a = r.n(l),
     i = r(755419),
-    o = r(434372);
+    o = r(200192);
 let s = (e) => {
     let { product: t, animationState: r, className: l } = e,
         s = i.K[t.skuId];

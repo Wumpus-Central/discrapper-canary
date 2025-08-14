@@ -27,12 +27,12 @@ var i = n(255367),
     I = n(911969),
     j = n(367907),
     b = n(812206),
-    v = n(933557),
-    f = n(636816),
+    f = n(933557),
+    v = n(636816),
     O = n(605436),
     S = n(185413),
-    y = n(313201),
-    A = n(318766),
+    A = n(313201),
+    y = n(318766),
     _ = n(907040),
     T = n(906411),
     D = n(688465),
@@ -57,7 +57,7 @@ var i = n(255367),
     K = n(710352),
     J = n(231338),
     Q = n(388032),
-    $ = n(655410);
+    $ = n(421835);
 function ee(e, t, n) {
     return (
         t in e
@@ -183,7 +183,7 @@ function er(e) {
         children: (e, t) => {
             let { isShown: n } = t;
             return (0, i.jsx)(
-                A.Z,
+                y.Z,
                 en(et({}, e), {
                     ref: r,
                     active: n,
@@ -318,7 +318,7 @@ class el extends s.PureComponent {
                     ? (0, i.jsx)(g.R94, {
                           className: $.channelNameNote,
                           type: g.R94.Types.DESCRIPTION,
-                          children: Q.intl.format(Q.t.s2ZzZW, { name: (0, v.F6)(t, H.default, k.Z, !0) }),
+                          children: Q.intl.format(Q.t.s2ZzZW, { name: (0, f.F6)(t, H.default, k.Z, !0) }),
                       })
                     : l === Y.d4z.GUILD_FORUM
                       ? (0, i.jsx)(g.R94, {
@@ -369,7 +369,7 @@ class el extends s.PureComponent {
                 autoFocus: !0,
                 focusProps: { offset: { right: -30 } },
             };
-        return (0, i.jsx)(y.FG, {
+        return (0, i.jsx)(A.FG, {
             children: (t) =>
                 (0, i.jsxs)(g.xJW, {
                     title: o,
@@ -787,7 +787,7 @@ class el extends s.PureComponent {
                         this.renderType(),
                         this.renderName(),
                         e === Y.d4z.GUILD_STORE ? this.renderStoreOptions() : null,
-                        (0, i.jsx)(f.Z, {
+                        (0, i.jsx)(v.Z, {
                             guildId: t,
                             channelType: e,
                             className: $.channelTypeDescription,
@@ -891,7 +891,7 @@ class el extends s.PureComponent {
     }
     constructor(e) {
         super(e),
-            ee(this, "headerId", (0, y.hQ)()),
+            ee(this, "headerId", (0, A.hQ)()),
             ee(this, "_input", void 0),
             ee(this, "setInputRef", (e) => {
                 this._input = e;
@@ -1027,7 +1027,7 @@ class el extends s.PureComponent {
         let { channelType: t, cloneChannel: n, prefillChannelName: i } = e;
         (this.state = {
             channelType: null != t ? t : Y.d4z.GUILD_TEXT,
-            name: null != n ? (0, v.F6)(n, H.default, k.Z) : null != i ? i : "",
+            name: null != n ? (0, f.F6)(n, H.default, k.Z) : null != i ? i : "",
             pendingPermissionOverwrites: {},
             isPrivate: !1,
             prevGuildId: e.guildId,

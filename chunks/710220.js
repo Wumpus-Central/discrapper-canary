@@ -1,15 +1,14 @@
-n.d(t, { Z: () => d });
+n.d(t, { Z: () => c });
 var i = n(255367);
 n(73800);
 var r = n(481060),
     s = n(518950),
     a = n(182294),
     l = n(388032),
-    o = n(230946);
-let c = (e) => (null != e.globalName ? e.globalName : e.username);
-function d(e) {
+    o = n(215062);
+function c(e) {
     let { referrer: t, enablePremiumBrandRefresh: n } = e,
-        { avatarSrc: d, eventHandlers: u } = (0, s.Z)({
+        { avatarSrc: c, eventHandlers: d } = (0, s.Z)({
             userId: null == t ? void 0 : t.id,
             size: n ? a.EF.SIZE_24 : a.EF.SIZE_32,
             animateOnHover: !0,
@@ -50,11 +49,11 @@ function d(e) {
                         })(
                             {
                                 className: o.icon,
-                                src: d,
+                                src: c,
                                 "aria-label": t.username,
                                 size: a.EF.SIZE_32,
                             },
-                            u,
+                            d,
                         ),
                     ),
                 }),
@@ -62,7 +61,7 @@ function d(e) {
                     variant: "heading-sm/normal",
                     className: o.textContainerRebranded,
                     color: "header-primary",
-                    children: l.intl.format(l.t.IqxblZ, { username: c(t) }),
+                    children: l.intl.format(l.t.IqxblZ, { username: null != t.globalName ? t.globalName : t.username }),
                 }),
             ],
         }),

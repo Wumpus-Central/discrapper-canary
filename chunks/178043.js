@@ -1,4 +1,4 @@
-n.d(t, { Z: () => T }), n(388685);
+n.d(t, { Z: () => A }), n(388685);
 var r = n(255367),
     s = n(73800),
     o = n(120356),
@@ -21,9 +21,9 @@ var r = n(255367),
     j = n(763283),
     N = n(944548),
     P = n(477839),
-    _ = n(603571),
+    _ = n(511479),
     C = n(388032),
-    Z = n(26707),
+    Z = n(693337),
     w = n(300090),
     E = n(965084),
     S = n(702536);
@@ -326,36 +326,38 @@ function M() {
         ],
     });
 }
-let R = (e) => [
-    {
-        string: _.default.JsWx19,
-        value: e.playTime,
-    },
-    {
-        string: _.default.kJVOLy,
-        value: e.timesClicked,
-    },
-    {
-        string: _.default.sm0Dw8,
-        value: e.lifetimePoints,
-    },
-];
-function A() {
-    let e = (0, c.e7)([p.default], () => p.default.locale),
-        [t, n, s] = (0, c.Wu)(
+function R() {
+    let e,
+        t = (0, c.e7)([p.default], () => p.default.locale),
+        [n, s, o] = (0, c.Wu)(
             [y.Z],
             () => [
                 (0, f.m)((y.Z.endTime - y.Z.startTime) / 1000),
-                (0, h.u)(y.Z.getContributionsForItem(P.yN.CLICKER_BUTTON), e),
-                (0, h.u)(Math.floor(y.Z.lifetimePoints), e),
+                (0, h.u)(y.Z.getContributionsForItem(P.yN.CLICKER_BUTTON), t),
+                (0, h.u)(Math.floor(y.Z.lifetimePoints), t),
             ],
-            [e],
+            [t],
         ),
-        o = R({
-            playTime: t,
-            timesClicked: n,
-            lifetimePoints: s,
-        });
+        a =
+            ((e = {
+                playTime: n,
+                timesClicked: s,
+                lifetimePoints: o,
+            }),
+            [
+                {
+                    string: _.default.JsWx19,
+                    value: e.playTime,
+                },
+                {
+                    string: _.default.kJVOLy,
+                    value: e.timesClicked,
+                },
+                {
+                    string: _.default.sm0Dw8,
+                    value: e.lifetimePoints,
+                },
+            ]);
     return (0, r.jsxs)("div", {
         className: Z.stats,
         children: [
@@ -365,7 +367,7 @@ function A() {
                 color: "none",
                 children: C.intl.string(_.default.Z84a2d),
             }),
-            o.map((e, t) =>
+            a.map((e, t) =>
                 (0, r.jsx)(
                     j.Z,
                     {
@@ -389,13 +391,13 @@ function A() {
         ],
     });
 }
-function T(e) {
+function A(e) {
     let { className: t } = e,
         { analyticsLocations: o } = (0, d.ZP)(),
         [f, p] = (0, s.useState)(!1),
         h = (0, c.e7)([y.Z], () => y.Z.isRedeemingPrize),
         v = (0, c.e7)([m.default], () => m.default.getCurrentUser()),
-        [N, R] = (0, c.Wu)([g.Z], () => [g.Z.isEntitledToSku(v, P.VU, P.oK), g.Z.isFetchingForApplication(P.oK)]);
+        [N, A] = (0, c.Wu)([g.Z], () => [g.Z.isEntitledToSku(v, P.VU, P.oK), g.Z.isFetchingForApplication(P.oK)]);
     return (
         (0, O.is)(i.Z, !1),
         (0, s.useEffect)(() => {
@@ -417,7 +419,7 @@ function T(e) {
                         (0, r.jsx)("div", { className: Z.groundRight }),
                     ],
                 }),
-                (0, r.jsx)(A, {}),
+                (0, r.jsx)(R, {}),
                 (0, r.jsxs)("div", {
                     className: Z.imagery,
                     children: [
@@ -443,7 +445,7 @@ function T(e) {
                             alt: "",
                         }),
                         (0, r.jsx)(x.Z, {
-                            disabled: R || h,
+                            disabled: A || h,
                             color: "green",
                             onMouseEnter: () => p(!0),
                             onMouseLeave: () => p(!1),

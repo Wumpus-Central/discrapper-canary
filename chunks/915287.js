@@ -7,7 +7,7 @@ var r = n(255367),
     l = n.n(s),
     c = n(84735),
     u = n(562701),
-    d = n(170669);
+    d = n(121958);
 function f(e, t, n) {
     return (
         t in e
@@ -191,8 +191,8 @@ function v(e, t, n, o) {
                 renderRow: L,
                 renderFooter: x,
                 renderSidebar: M,
-                renderListHeader: j,
-                stickyListHeader: k,
+                renderListHeader: k,
+                stickyListHeader: j,
                 wrapSection: U,
                 getAnchorId: G,
                 paddingTop: B,
@@ -383,8 +383,8 @@ function v(e, t, n, o) {
                                             containerRef: et,
                                             children: y({
                                                 items: ec,
-                                                renderListHeader: j,
-                                                stickyListHeader: k,
+                                                renderListHeader: k,
+                                                stickyListHeader: j,
                                                 renderSection: D,
                                                 renderRow: L,
                                                 renderFooter: x,
@@ -393,7 +393,7 @@ function v(e, t, n, o) {
                                             }),
                                         }),
                                     }),
-                                [J, W, K, z, q, X, el, Q, ec, j, k, D, L, x, U, es],
+                                [J, W, K, z, q, X, el, Q, ec, k, j, D, L, x, U, es],
                             ),
                             i.useMemo(
                                 () =>

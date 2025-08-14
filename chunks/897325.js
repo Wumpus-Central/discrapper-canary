@@ -5,7 +5,7 @@ n.d(t, {
     n(314940);
 var r = n(278074),
     i = n(263568),
-    o = n(342387);
+    o = n(807554);
 function a(e, t) {
     let n = (0, r.EQ)(t)
         .with(i.C.IMAGE_ONLY_ANSWERS, () => o.normalStylesImageOnlyAnswers)

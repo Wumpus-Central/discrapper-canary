@@ -14,7 +14,7 @@ var i = n(255367),
     h = n(711325),
     f = n(852630),
     b = n(731994),
-    x = n(619911);
+    x = n(30827);
 function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -110,17 +110,17 @@ function E() {
             },
             [D],
         ),
-        M = (0, r.useCallback)((e) => {
+        B = (0, r.useCallback)((e) => {
             if (null != N.current) {
                 let t = N.current.getBoundingClientRect();
                 E(Math.max(264, Math.min(432, e.clientX - t.left)));
             }
         }, []),
-        B = (0, r.useCallback)(
+        M = (0, r.useCallback)(
             (e) => {
                 e.preventDefault(), e.stopPropagation();
                 let t = (e) => {
-                        e.preventDefault(), M(e);
+                        e.preventDefault(), B(e);
                     },
                     n = () => {
                         null != y.current && (document.removeEventListener("mousemove", y.current), (y.current = null)),
@@ -132,7 +132,7 @@ function E() {
                     document.addEventListener("mousemove", t),
                     document.addEventListener("mouseup", n);
             },
-            [M],
+            [B],
         );
     return (
         (0, r.useEffect)(
@@ -208,7 +208,7 @@ function E() {
                                 (0, i.jsx)(I, { nameplate: d }),
                                 (0, i.jsx)("div", {
                                     className: x.resizeHandle,
-                                    onMouseDown: B,
+                                    onMouseDown: M,
                                 }),
                             ],
                         }),

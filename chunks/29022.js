@@ -20,7 +20,7 @@ var i = n(255367),
     O = n(921944),
     T = n(135899),
     x = n(388032),
-    g = n(329873);
+    g = n(281718);
 function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -330,34 +330,33 @@ function D(e) {
         }, [t]);
     if (null == t) return null;
     let N = () => {
-            var e, n;
-            let i = E.Z.getEveryoneRole(t),
-                a = o.Od(i.permissions, T.mu);
-            (0, p.Gf)(t.id, [
-                ((e = b({}, i)),
-                (n = n = { permissions: a }),
-                Object.getOwnPropertyDescriptors
-                    ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
-                    : (function (e, t) {
-                          var n = Object.keys(e);
-                          if (Object.getOwnPropertySymbols) {
-                              var i = Object.getOwnPropertySymbols(e);
-                              n.push.apply(n, i);
-                          }
-                          return n;
-                      })(Object(n)).forEach(function (t) {
-                          Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(n, t));
-                      }),
-                e),
-            ]);
-        },
-        C = () => {
-            u.Z.updateGuild({ defaultMessageNotifications: h.bL.ONLY_MENTIONS }),
-                u.Z.saveGuild(t.id, { defaultMessageNotifications: h.bL.ONLY_MENTIONS });
-        },
-        R = () => {
-            n && N(), s && C();
-        };
+        n &&
+            (() => {
+                var e, n;
+                let i = E.Z.getEveryoneRole(t),
+                    a = o.Od(i.permissions, T.mu);
+                (0, p.Gf)(t.id, [
+                    ((e = b({}, i)),
+                    (n = n = { permissions: a }),
+                    Object.getOwnPropertyDescriptors
+                        ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
+                        : (function (e, t) {
+                              var n = Object.keys(e);
+                              if (Object.getOwnPropertySymbols) {
+                                  var i = Object.getOwnPropertySymbols(e);
+                                  n.push.apply(n, i);
+                              }
+                              return n;
+                          })(Object(n)).forEach(function (t) {
+                              Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(n, t));
+                          }),
+                    e),
+                ]);
+            })(),
+            s &&
+                (u.Z.updateGuild({ defaultMessageNotifications: h.bL.ONLY_MENTIONS }),
+                u.Z.saveGuild(t.id, { defaultMessageNotifications: h.bL.ONLY_MENTIONS }));
+    };
     return (0, i.jsxs)(d.Y0X, {
         transitionState: r,
         size: d.CgR.SMALL,
@@ -381,7 +380,7 @@ function D(e) {
                 onConfirm: () => {
                     var e, i;
                     n ||
-                        (R(),
+                        (N(),
                         c(),
                         (0, I.Qd)(
                             l.C.DISABLE_UNSAFE_COMMUNITY_PERMISSIONS_NOTICE,
@@ -392,7 +391,7 @@ function D(e) {
                         0 === _
                             ? (f(1), setTimeout(() => f(2), 3000))
                             : 2 === _ &&
-                              (R(),
+                              (N(),
                               c(),
                               (0, I.Qd)(
                                   l.C.DISABLE_UNSAFE_COMMUNITY_PERMISSIONS_NOTICE,

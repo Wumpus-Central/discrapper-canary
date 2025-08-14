@@ -16,13 +16,13 @@ var l = n(255367),
     h = n(263954),
     S = n(706454),
     y = n(626135),
-    f = n(930153),
-    I = n(74538),
+    I = n(930153),
+    f = n(74538),
     N = n(937615),
     O = n(981631),
     g = n(474936),
     b = n(388032),
-    x = n(837852);
+    x = n(22706);
 function M(e) {
     let { shouldUpsellFromNoneTier: t } = e,
         n = (0, o.e7)([S.default], () => S.default.locale);
@@ -38,7 +38,7 @@ function M(e) {
             (0, l.jsx)(h.Z, {
                 icon: u.$Eu,
                 iconClassName: x.perkIconGuild,
-                description: b.intl.formatToPlainString(b.t["1A6vXl"], { percent: (0, f.T3)(n, g.Rr / 100) }),
+                description: b.intl.formatToPlainString(b.t["1A6vXl"], { percent: (0, I.T3)(n, g.Rr / 100) }),
                 color: u.TVs.unsafe_rawColors.GUILD_BOOSTING_PINK.css,
             }),
             t
@@ -69,7 +69,7 @@ function L(e) {
             onBack: o,
             onSkip: h,
             onSubscriptionConfirmation: S,
-            analyticsLocation: f,
+            analyticsLocation: I,
             analyticsSourceLocation: L,
             priceOptions: T,
         } = e,
@@ -77,7 +77,7 @@ function L(e) {
         { theme: A } = (0, u.TCT)(),
         k = (0, a.ap)(A) ? c.zx.Colors.PRIMARY : c.zx.Colors.WHITE,
         R = null == n || null == n.premiumSubscriptionType,
-        D = I.ZP.getPrice(g.Xh.PREMIUM_MONTH_TIER_2, !1, !1, T),
+        D = f.ZP.getPrice(g.Xh.PREMIUM_MONTH_TIER_2, !1, !1, T),
         v = (0, N.T4)(D.amount, D.currency),
         w = (0, P.N)(),
         Z = null == w ? void 0 : w.trial_id,
@@ -162,7 +162,7 @@ function L(e) {
                                                                 });
                                                         }
                                                         return e;
-                                                    })({}, f)),
+                                                    })({}, I)),
                                                     (t = t = { section: O.jXE.PREMIUM_GUILD_PURCHASE_MODAL }),
                                                     Object.getOwnPropertyDescriptors
                                                         ? Object.defineProperties(

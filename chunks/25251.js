@@ -34,7 +34,7 @@ let u = [],
     O = (e) => {
         let { presets: t } = e;
         0 === t.length ? ((f = u), (_ = d)) : ((f = (0, o.cloneDeep)(t)), (_ = (0, o.keyBy)(f, "id"))),
-            (E = Number.POSITIVE_INFINITY),
+            (E = 1 / 0),
             (b = 0),
             (r = void 0),
             (g = !1);

@@ -20,7 +20,7 @@ var r,
     O = n(585483),
     C = n(981631),
     x = n(388032),
-    j = n(881488);
+    j = n(197571);
 function v(e, t, n) {
     return (
         t in e
@@ -89,16 +89,17 @@ class P extends (r = i.PureComponent) {
         });
     }
     renderMFA() {
-        let { mfaTicket: e, mfaMethods: t, theme: n, authBoxClassName: r, width: i } = this.props;
+        let { mfaTicket: e, mfaMethods: t, theme: n, authBoxClassName: r, width: i } = this.props,
+            a = (e) => {
+                let { mfaType: t, data: n } = e;
+                return this.handleTokenSubmitMFAv2(t, n);
+            };
         return (0, s.jsx)(m.ZP, {
             style: { padding: 0 },
             theme: n,
             className: r,
             children: (0, s.jsx)(y.Cd, {
-                mfaFinish: (e) => {
-                    let { mfaType: t, data: n } = e;
-                    return this.handleTokenSubmitMFAv2(t, n);
-                },
+                mfaFinish: a,
                 mfaChallenge: {
                     ticket: e,
                     methods: t,

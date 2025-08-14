@@ -7,7 +7,7 @@ var n = a(255367),
     o = a(982905),
     c = a(431138),
     d = a(330711),
-    u = a(185972);
+    u = a(405948);
 function _(e, t, a) {
     return (
         t in e
@@ -35,12 +35,13 @@ class N extends r.PureComponent {
                     .sort((e, t) => (e.code < t.code ? -1 : +(e.code > t.code)))
                     .map((e) => {
                         let t = (function (e) {
-                            try {
-                                return a(621287)("./".concat(e, ".png"));
-                            } catch (e) {
-                                return null;
-                            }
-                        })(e.code);
+                                try {
+                                    return a(621287)("./".concat(e, ".png"));
+                                } catch (e) {
+                                    return null;
+                                }
+                            })(e.code),
+                            s = () => this.setLocale(e.code);
                         return null == t
                             ? null
                             : (0, n.jsxs)(
@@ -51,7 +52,7 @@ class N extends r.PureComponent {
                                           "locale",
                                           null != r && e.code === r.code ? "Current" : null,
                                       ),
-                                      onClick: () => this.setLocale(e.code),
+                                      onClick: s,
                                       children: [
                                           (0, n.jsx)("img", {
                                               className: u.localeImage,

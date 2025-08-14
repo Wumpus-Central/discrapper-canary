@@ -14,7 +14,7 @@ var r = n(255367),
     h = n(981631),
     m = n(182294),
     g = n(388032),
-    E = n(831220);
+    E = n(604483);
 function b(e) {
     let { user: t, application: n, bot: b, accountScopes: y, showLogout: O, location: v, scopes: I } = e,
         T = (0, p.X)(),

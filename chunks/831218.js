@@ -3,28 +3,28 @@ var r,
     i = n(255367),
     l = n(73800),
     o = n(120356),
-    s = n.n(o),
-    a = n(299608),
-    c = n.n(a),
+    a = n.n(o),
+    s = n(299608),
+    c = n.n(s),
     u = n(91192),
     d = n(924826),
-    h = n(442837),
-    p = n(902704),
-    f = n(481060),
+    p = n(442837),
+    f = n(902704),
+    h = n(481060),
     g = n(925549),
     m = n(607070),
     b = n(100527),
     O = n(367907),
     _ = n(906732),
     y = n(453542),
-    C = n(702321),
-    v = n(46148),
-    j = n(82295),
+    v = n(702321),
+    j = n(46148),
+    C = n(82295),
     E = n(313201),
-    S = n(860144),
-    x = n(214852),
-    I = n(518311),
-    P = n(355298),
+    x = n(860144),
+    S = n(214852),
+    P = n(518311),
+    I = n(355298),
     N = n(869404),
     w = n(333984),
     Z = n(984802),
@@ -33,7 +33,7 @@ var r,
     R = n(55589),
     D = n(981631),
     L = n(388032),
-    M = n(228308);
+    M = n(777126);
 function k(e, t, n) {
     return (
         t in e
@@ -253,7 +253,7 @@ class V extends (r = l.Component) {
         null != e && null != t && t.indexOf(e) >= 0 && this.scrollToChannel(e), this.reportAnalytics();
     }
     shouldComponentUpdate(e) {
-        return !(0, p.Z)(this.props, e, ["children"]);
+        return !(0, f.Z)(this.props, e, ["children"]);
     }
     componentDidUpdate(e) {
         let { selectedChannelId: t, homeLink: n } = this.props;
@@ -282,7 +282,7 @@ class V extends (r = l.Component) {
         return (0, i.jsx)(u.SJ, {
             children: (r) => {
                 var { ref: l, role: o } = r,
-                    s = (function (e, t) {
+                    a = (function (e, t) {
                         if (null == e) return {};
                         var n,
                             r,
@@ -305,10 +305,10 @@ class V extends (r = l.Component) {
                         }
                         return i;
                     })(r, ["ref", "role"]);
-                return (0, i.jsx)(f.Wdt, {
+                return (0, i.jsx)(h.Wdt, {
                     children: (r) =>
                         (0, i.jsx)(
-                            f.aVo,
+                            h.aVo,
                             U(
                                 {
                                     fade: !0,
@@ -332,7 +332,7 @@ class V extends (r = l.Component) {
                                     renderRow: this.renderRow,
                                     sections: [n, Math.max(e.length, 1)],
                                 },
-                                s,
+                                a,
                                 r,
                             ),
                         ),
@@ -360,19 +360,19 @@ class V extends (r = l.Component) {
                 let i = l.Children.count(this.props.children);
                 if (null == t) return;
                 let o = Math.round((t.offsetHeight - 44 * i) / 44),
-                    s = o > n.length ? n.slice(0, o + 1) : n,
-                    a = s.map((e) => (null != r[e] ? r[e].getRecipientId() : null)),
-                    c = n.some((e) => (0, C.Z)(e)),
+                    a = o > n.length ? n.slice(0, o + 1) : n,
+                    s = a.map((e) => (null != r[e] ? r[e].getRecipientId() : null)),
+                    c = n.some((e) => (0, v.Z)(e)),
                     u = {
-                        num_users_visible: s.length,
-                        num_users_visible_with_mobile_indicator: a.filter((e) => null != e && A.Z.isMobileOnline(e))
+                        num_users_visible: a.length,
+                        num_users_visible_with_mobile_indicator: s.filter((e) => null != e && A.Z.isMobileOnline(e))
                             .length,
                     };
                 (this.hasReportedAnalytics = !0),
                     O.ZP.trackWithMetadata(
                         D.rMx.DM_LIST_VIEWED,
                         G(U({}, u, (0, y.X)()), {
-                            visible_user_ids: a.filter((e) => null != e),
+                            visible_user_ids: s.filter((e) => null != e),
                             changelog_dm_visible: c,
                         }),
                     );
@@ -394,19 +394,19 @@ class V extends (r = l.Component) {
             ),
             k(this, "renderDM", (e, t) => {
                 let { privateChannelIds: n, channels: r, selectedChannelId: l } = this.props,
-                    { totalRowCount: o, preRenderedChildren: s } = this.state,
-                    a = r[n[t]];
-                return null == a
+                    { totalRowCount: o, preRenderedChildren: a } = this.state,
+                    s = r[n[t]];
+                return null == s
                     ? null
                     : (0, i.jsx)(
-                          v.W,
+                          j.W,
                           {
-                              channel: a,
-                              selected: a.id === l,
-                              "aria-posinset": s + t + 1,
+                              channel: s,
+                              selected: s.id === l,
+                              "aria-posinset": a + t + 1,
                               "aria-setsize": o,
                           },
-                          a.id,
+                          s.id,
                       );
             }),
             k(this, "renderChild", (e) => {
@@ -433,29 +433,29 @@ class V extends (r = l.Component) {
                     { showDMHeader: n, createDMCTAButtonVariant: r } = this.props;
                 return 0 !== t && n
                     ? (0, i.jsxs)(
-                          j.Z,
+                          C.Z,
                           {
-                              className: s()(M.privateChannelsHeaderContainer, { [M.tall]: "side" === r }),
+                              className: a()(M.privateChannelsHeaderContainer, { [M.tall]: "side" === r }),
                               children: [
                                   (0, i.jsx)("span", {
                                       className: M.headerText,
                                       children: L.intl.string(L.t.YUU0RE),
                                   }),
                                   null == r &&
-                                      (0, i.jsx)(I.Z, {
+                                      (0, i.jsx)(P.Z, {
                                           location: "PrivateChannelsList-CreateDMButton",
                                           tooltip: L.intl.string(L.t["6Urw1t"]),
                                           tooltipPosition: "top",
                                           popoutAlign: "left",
                                           className: M.privateChannelRecipientsInviteButtonIconContainer,
                                           iconClassName: M.privateChannelRecipientsInviteButtonIcon,
-                                          icon: f.BRu,
+                                          icon: h.BRu,
                                           subscribeToGlobalHotkey: !0,
                                       }),
                                   "side" === r &&
-                                      (0, i.jsx)(I.l, {
+                                      (0, i.jsx)(P.l, {
                                           popoutAlign: "left",
-                                          icon: f.kL_,
+                                          icon: h.kL_,
                                           text: L.intl.string(L.t["6Urw1t"]),
                                           size: "sm",
                                           subscribeToGlobalHotkey: !0,
@@ -473,8 +473,8 @@ class V extends (r = l.Component) {
                 if (0 === e) {
                     let e = i[t];
                     if (l.isValidElement(e)) {
-                        var s;
-                        o = (null == (s = e.key) ? void 0 : s.startsWith("section-divider"))
+                        var a;
+                        o = (null == (a = e.key) ? void 0 : a.startsWith("section-divider"))
                             ? 25
                             : "dm-quick-launcher" === e.key
                               ? 67
@@ -487,25 +487,25 @@ class V extends (r = l.Component) {
 }
 k(V, "defaultProps", { padding: 8 });
 let F = (e) => {
-    let { density: t } = (0, f.TCT)(),
-        { version: n, theme: r, children: o, showDMHeader: s, listScrollerRef: a, createDMCTAButtonVariant: c } = e,
-        p = l.Children.count(o),
+    let { density: t } = (0, h.TCT)(),
+        { version: n, theme: r, children: o, showDMHeader: a, listScrollerRef: s, createDMCTAButtonVariant: c } = e,
+        f = l.Children.count(o),
         g = T.Z.getMutablePrivateChannels(),
         O = (0, N.k1)(g),
-        y = (0, h.Wu)([R.Z, P.Z, w.Z], () => {
+        y = (0, p.Wu)([R.Z, I.Z, w.Z], () => {
             let e = R.Z.getPrivateChannelIds();
-            return (0, N.tU)(e, [P.Z, w.Z]);
+            return (0, N.tU)(e, [I.Z, w.Z]);
         }, []);
-    (0, x.z)(S.R);
-    let { analyticsLocations: C } = (0, _.ZP)(b.Z.CONTACTS_LIST),
-        v = (0, Z.Ll)(),
-        { keyboardModeEnabled: j, version: I } = (0, h.cj)([m.Z, T.Z], () => ({
+    (0, S.z)(x.R);
+    let { analyticsLocations: v } = (0, _.ZP)(b.Z.CONTACTS_LIST),
+        j = (0, Z.Ll)(),
+        { keyboardModeEnabled: C, version: P } = (0, p.cj)([m.Z, T.Z], () => ({
             keyboardModeEnabled: m.Z.keyboardModeEnabled,
             version:
                 null != n ? "".concat(n, ":").concat(T.Z.getPrivateChannelsVersion()) : T.Z.getPrivateChannelsVersion(),
         })),
         A = l.useRef(null),
-        D = null != a ? a : A,
+        D = null != s ? s : A,
         L = l.useCallback(
             (e) => {
                 let t = D.current,
@@ -551,14 +551,14 @@ let F = (e) => {
         B = (0, E.Dt)(),
         F = (0, d.ZP)({
             id: "private-channels-".concat(B),
-            isEnabled: j,
+            isEnabled: C,
             scrollToStart: M,
             scrollToEnd: k,
-            defaultFocused: (p + +!!s).toString(),
+            defaultFocused: (f + +!!a).toString(),
             setFocus: L,
         });
     return (0, i.jsx)(_.Gt, {
-        value: C,
+        value: v,
         children: (0, i.jsx)(u.bG, {
             navigator: F,
             children: (0, i.jsx)(
@@ -568,8 +568,8 @@ let F = (e) => {
                     channels: O,
                     privateChannelIds: y,
                     listRef: D,
-                    theme: null != v ? v : r,
-                    version: I,
+                    theme: null != j ? j : r,
+                    version: P,
                     createDMCTAButtonVariant: c,
                 }),
             ),

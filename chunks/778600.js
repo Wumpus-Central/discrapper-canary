@@ -553,10 +553,9 @@ class U {
         });
     }
     takeSnapshot(t, e, a, r, _, n, o, c) {
-        let E,
-            s = 1000 / e,
-            l = 0,
-            u = (t) => {
+        let E = 1000 / e,
+            s = 0,
+            l = (t) => {
                 if (t) return [t];
                 let e = [],
                     n = (t) => {
@@ -574,11 +573,11 @@ class U {
                 }
                 return e;
             },
-            I = (e) => {
+            u = (e) => {
                 if (this.windows.length) {
-                    if (l && e - l < s) return void f(I);
-                    (l = e),
-                        u(c).forEach((e) => {
+                    if (s && e - s < E) return void f(u);
+                    (s = e),
+                        l(c).forEach((e) => {
                             if (!this.mirror.hasNode(e)) return;
                             let a = this.mirror.getId(e);
                             if (!this.snapshotInProgressMap.get(a) && e.width && e.height) {
@@ -628,10 +627,10 @@ class U {
                                     });
                             }
                         }),
-                        f(I);
+                        f(u);
                 }
             };
-        return f(I);
+        return f(u);
     }
     startPendingCanvasMutationFlusher() {
         f(() => this.flushPendingCanvasMutations());

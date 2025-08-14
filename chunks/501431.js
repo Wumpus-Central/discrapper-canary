@@ -1,5 +1,5 @@
 r.d(t, {
-    A: () => E,
+    A: () => C,
     S: () => v,
 }),
     r(388685),
@@ -235,19 +235,7 @@ let f = {
             search: "" !== i ? i : void 0,
         };
     },
-    C = (e) => {
-        let t = e.skus,
-            r = e.pagination.total,
-            n = e.pagination.has_more;
-        return {
-            skus: t,
-            totalCount: r,
-            hasMorePages: n,
-            pageOffset: e.pagination.offset,
-            pageLimit: e.pagination.limit,
-        };
-    },
-    E = () => {
+    C = () => {
         let { onSetResponse: e, setSearchError: t, setIsFetchingResults: r } = (0, u.a)(),
             l = (0, c.FF)("collectibles_shop_header_bar");
         n.useEffect(() => {
@@ -256,7 +244,21 @@ let f = {
                     r(!0);
                     try {
                         let t = await (0, s.y)(n);
-                        e(C(t));
+                        e(
+                            ((e) => {
+                                let t = e.skus,
+                                    r = e.pagination.total,
+                                    n = e.pagination.has_more,
+                                    l = e.pagination.offset;
+                                return {
+                                    skus: t,
+                                    totalCount: r,
+                                    hasMorePages: n,
+                                    pageOffset: l,
+                                    pageLimit: e.pagination.limit,
+                                };
+                            })(t),
+                        );
                     } catch (e) {
                         var l;
                         t(null != (l = null == e ? void 0 : e.message) ? l : "Unknown error");

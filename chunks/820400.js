@@ -6,7 +6,7 @@ var r = a(296009),
     i = a(592183),
     s = a(86419),
     o = a(447448),
-    c = a(401702);
+    c = a(667108);
 function d() {
     let e = (0, o.k)({
             location: "DevToolsWidgetsPanel",

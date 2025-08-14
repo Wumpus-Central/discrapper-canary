@@ -23,7 +23,7 @@ var r = n(255367),
     T = n(784222),
     S = n(149203),
     A = n(388032),
-    N = n(356094);
+    N = n(545424);
 let C = 250;
 function R(e) {
     return null != e && "animated" in e;
@@ -37,7 +37,7 @@ let P = (e) => {
         let t,
             w,
             D,
-            { className: L, emojiGrid: x, guildId: M, pickerIntention: j, channel: k } = e,
+            { className: L, emojiGrid: x, guildId: M, pickerIntention: k, channel: j } = e,
             { enabled: U } = y.Z.useExperiment({ location: "EmojiPicker" }, { autoTrackExposure: !1 }),
             G = _.kJ.useStore((e) => e.inspectedExpressionPosition),
             B = i.useMemo(() => {
@@ -73,7 +73,7 @@ let P = (e) => {
             H = m.Yk.useSetting(),
             Y = (0, O.C1)(M, R(t) ? t : null),
             W = (0, o.e7)([c.ZP], () => c.ZP.expandedSectionsByGuildIds),
-            { newlyAddedEmojis: K } = (0, v.Z)(M, j),
+            { newlyAddedEmojis: K } = (0, v.Z)(M, k),
             z = (null == B ? void 0 : B.type) === T.ld.EMOJI ? B.subCategory : S.t0.NONE;
         if (
             (i.useEffect(() => {
@@ -166,9 +166,9 @@ let P = (e) => {
                 ? A.intl.string(A.t["Z/r7IS"])
                 : P({
                       inspectedEmoji: t,
-                      channel: k,
+                      channel: j,
                       guildId: M,
-                      intention: j,
+                      intention: k,
                       guild: Z,
                   });
         return (0, r.jsx)(p.Z, {

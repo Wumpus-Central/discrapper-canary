@@ -5,7 +5,7 @@ var i = n(755721),
     o = n(481060),
     a = n(395361),
     s = n(829820),
-    l = n(568761);
+    l = n(191242);
 function c(e) {
     let { activity: t, user: n, source: c, className: u, size: d, look: f, color: _, fullWidth: p, onAction: h } = e,
         { label: m, tooltip: g, loading: E, disabled: b, onClick: y } = (0, s.Ih)(t, n, c),

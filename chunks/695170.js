@@ -93,16 +93,17 @@ var r = n(686942),
     T = function (e, t) {
         void 0 === t && (t = !0);
         var n = new Date(e);
-        return [
-            (0, r.Sk)(n.getUTCFullYear().toString(), 4, "0"),
-            (0, r.Sk)(n.getUTCMonth() + 1, 2, "0"),
-            (0, r.Sk)(n.getUTCDate(), 2, "0"),
-            "T",
-            (0, r.Sk)(n.getUTCHours(), 2, "0"),
-            (0, r.Sk)(n.getUTCMinutes(), 2, "0"),
-            (0, r.Sk)(n.getUTCSeconds(), 2, "0"),
-            t ? "Z" : "",
-        ].join("");
+        return (
+            "" +
+            (0, r.Sk)(n.getUTCFullYear().toString(), 4, "0") +
+            (0, r.Sk)(n.getUTCMonth() + 1, 2, "0") +
+            (0, r.Sk)(n.getUTCDate(), 2, "0") +
+            "T" +
+            (0, r.Sk)(n.getUTCHours(), 2, "0") +
+            (0, r.Sk)(n.getUTCMinutes(), 2, "0") +
+            (0, r.Sk)(n.getUTCSeconds(), 2, "0") +
+            (t ? "Z" : "")
+        );
     },
     S = function (e) {
         var t = /^(\d{4})(\d{2})(\d{2})(T(\d{2})(\d{2})(\d{2})Z?)?$/.exec(e);

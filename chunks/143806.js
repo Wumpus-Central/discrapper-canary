@@ -11,16 +11,15 @@ function r(e, t, n) {
         e
     );
 }
-n.d(t, { S: () => o }), n(953529), n(388685), n(583741);
-let i = Symbol.iterator;
-class o {
+n.d(t, { S: () => i }), n(953529), n(388685), n(583741);
+class i {
     get length() {
         return this.items.size;
     }
     get capacity() {
         return this.limit;
     }
-    [i]() {
+    [Symbol.iterator]() {
         return this.items.entries();
     }
     entries() {

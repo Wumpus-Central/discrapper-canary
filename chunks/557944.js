@@ -12,7 +12,7 @@ var i = n(255367),
     b = n(335049),
     f = n(689079),
     g = n(388032),
-    y = n(956606);
+    y = n(320692);
 function h(e) {
     let {
             editPermissions: t,

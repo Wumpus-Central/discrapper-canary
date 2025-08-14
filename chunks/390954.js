@@ -14,7 +14,7 @@ var i,
     h = n(244526),
     f = n(981631),
     b = n(388032),
-    x = n(388912);
+    x = n(579378);
 function _(e, t, n) {
     return (
         t in e
@@ -237,27 +237,28 @@ class C extends s.PureComponent {
                 (0, c.ZDy)(
                     async () => {
                         let { default: e } = await Promise.resolve().then(n.bind(n, 623573));
-                        return (t) => {
-                            var n, i;
-                            return (0, r.jsx)(
+                        return (t) =>
+                            (0, r.jsx)(
                                 e,
-                                ((n = j({}, t)),
-                                (i = i = { onAddPaymentSource: this.handlePaymentSourceAdded }),
-                                Object.getOwnPropertyDescriptors
-                                    ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))
-                                    : (function (e, t) {
-                                          var n = Object.keys(e);
-                                          if (Object.getOwnPropertySymbols) {
-                                              var i = Object.getOwnPropertySymbols(e);
-                                              n.push.apply(n, i);
-                                          }
-                                          return n;
-                                      })(Object(i)).forEach(function (e) {
-                                          Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(i, e));
-                                      }),
-                                n),
+                                (function (e, t) {
+                                    return (
+                                        (t = null != t ? t : {}),
+                                        Object.getOwnPropertyDescriptors
+                                            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+                                            : (function (e, t) {
+                                                  var n = Object.keys(e);
+                                                  if (Object.getOwnPropertySymbols) {
+                                                      var i = Object.getOwnPropertySymbols(e);
+                                                      n.push.apply(n, i);
+                                                  }
+                                                  return n;
+                                              })(Object(t)).forEach(function (n) {
+                                                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+                                              }),
+                                        e
+                                    );
+                                })(j({}, t), { onAddPaymentSource: this.handlePaymentSourceAdded }),
                             );
-                        };
                     },
                     {
                         onCloseCallback: () => {

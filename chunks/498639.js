@@ -28,7 +28,7 @@ var i = n(255367),
     y = n(78839),
     A = n(981631),
     P = n(474936),
-    R = n(761575);
+    R = n(137067);
 function D(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -104,7 +104,7 @@ let k = function () {
             value: e,
             label: e.name,
         })),
-        [M, B] = r.useState(L.length > 0 ? L[0].value : null),
+        [B, M] = r.useState(L.length > 0 ? L[0].value : null),
         [U, V] = r.useState(""),
         [G, F] = r.useState({
             plan_id: P.Xh.PREMIUM_MONTH_TIER_2,
@@ -218,13 +218,13 @@ let k = function () {
                             className: R.formItem,
                             children: [
                                 (0, i.jsx)(d.q4e, {
-                                    value: M,
+                                    value: B,
                                     options: L,
-                                    onChange: (e) => B(e),
+                                    onChange: (e) => M(e),
                                 }),
-                                null != M
+                                null != B
                                     ? (0, i.jsx)(b.Z, {
-                                          guild: M,
+                                          guild: B,
                                           analyticsLocation: {},
                                       })
                                     : (0, i.jsx)("div", { children: "No Guild to boost" }),

@@ -4,7 +4,7 @@ n(73800);
 var i = n(120356),
     o = n.n(i),
     a = n(731994),
-    s = n(560548);
+    s = n(995751);
 let l = function (e) {
     let { icons: t, className: n } = e;
     return (0, r.jsxs)("div", {

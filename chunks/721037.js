@@ -29,7 +29,7 @@ var r = n(255367),
     P = n(918559),
     w = n(354459),
     D = n(408491),
-    L = n(796532);
+    L = n(639965);
 function x(e, t, n) {
     return (
         t in e
@@ -48,11 +48,11 @@ let M = {
         [R.NYg.ACTIVITY]: d.Z,
         [R.NYg.FRAME]: m.Z,
     },
-    j = {
+    k = {
         minWidth: w.Rv[w.cL.VIDEO],
         maxWidth: w.$i[w.cL.VIDEO],
     },
-    k = [];
+    j = [];
 class U extends i.PureComponent {
     render() {
         let {
@@ -92,7 +92,7 @@ class U extends i.PureComponent {
                     onWindowResize: this.handleWindowResize,
                     appContext: l,
                     roundCorners: c,
-                    resizeConfig: j,
+                    resizeConfig: k,
                     getDockedRectPositionY: u,
                 }),
                 (0, r.jsx)(E.mK, { className: I ? L.belowSidebar : void 0 }),
@@ -118,8 +118,8 @@ let G = o.ZP.connectStores([y.Z, s.ZP, N.Z, O.Z, T.Z, A.Z, S.Z, f.Z, v.ZP, h.Z],
         L = s.ZP.getCurrentEmbeddedActivity(),
         x = (0, c.p)(null == L ? void 0 : L.location),
         M = null != L && !(0, u.Z)(x, T.Z, A.Z),
-        j = s.ZP.getActivityPanelMode(),
-        U = M && j === P.Ez.PANEL,
+        k = s.ZP.getActivityPanelMode(),
+        U = M && k === P.Ez.PANEL,
         G = null != L && null != x && (null == (t = f.Z.getSelectedParticipant(x)) ? void 0 : t.type) === w.fO.ACTIVITY,
         B = h.Z.getConnectedFrame(),
         Z = h.Z.getFrameLayoutMode() === D.U.FOCUSED,
@@ -174,7 +174,7 @@ let G = o.ZP.connectStores([y.Z, s.ZP, N.Z, O.Z, T.Z, A.Z, S.Z, f.Z, v.ZP, h.Z],
         eo = !er && null != _ && et && en;
     return {
         selectedPIPWindow: _,
-        pipWindows: 0 === J.length ? k : J,
+        pipWindows: 0 === J.length ? j : J,
         pipWidth: q,
         maxX: Y.width - (eo ? $ : 0),
         maxY: Y.height,

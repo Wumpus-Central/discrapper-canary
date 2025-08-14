@@ -1,4 +1,4 @@
-n.d(t, { Z: () => k }), n(539854);
+n.d(t, { Z: () => D }), n(539854);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -19,13 +19,13 @@ var r = n(255367),
     v = n(267642),
     _ = n(926491),
     O = n(909707),
-    y = n(553264),
+    y = n(863562),
     C = n(399829),
     N = n(428862),
     I = n(981631),
     E = n(535396),
     S = n(388032),
-    T = n(825541);
+    T = n(486217);
 function P(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -51,18 +51,7 @@ function P(e) {
     }
     return e;
 }
-let w = (e, t) =>
-        e < (0, v.A3)(I.Eu4.NONE)
-            ? I.Eu4.NONE
-            : e < (0, v.A3)(I.Eu4.TIER_1)
-              ? I.Eu4.TIER_1
-              : e < (0, v.A3)(I.Eu4.TIER_2)
-                ? I.Eu4.TIER_2
-                : e < (0, v.A3)(I.Eu4.TIER_3) ||
-                    (null != t && t.features.has(I.oNc.MORE_STICKERS) && e < d.D.MAX_STICKER_SLOTS)
-                  ? I.Eu4.TIER_3
-                  : I.Eu4.NONE,
-    R = (e) => {
+let w = (e) => {
         let { children: t, currentGuildTier: n, guildStickers: i, tier: l } = e,
             a = n < l,
             s = (0, v.ig)(l);
@@ -84,14 +73,7 @@ let w = (e, t) =>
             ],
         });
     },
-    Z = (e) => {
-        let { guildId: t } = e;
-        (0, c.ZDy)(async () => {
-            let { default: e } = await Promise.all([n.e("93626"), n.e("151")]).then(n.bind(n, 136735));
-            return (n) => (0, r.jsx)(e, P({ guildId: t }, n));
-        });
-    },
-    D = () =>
+    R = () =>
         (0, r.jsx)("div", {
             className: T.placeholderCard,
             children: (0, r.jsx)("img", {
@@ -100,10 +82,10 @@ let w = (e, t) =>
                 src: n(872732),
             }),
         }),
-    A = (e) => {
+    Z = (e) => {
         let { guild: t } = e,
-            { location: n } = (0, u.O)(),
-            { canCreateExpressions: i } = (0, h.XJ)(t);
+            { location: i } = (0, u.O)(),
+            { canCreateExpressions: l } = (0, h.XJ)(t);
         return (0, r.jsx)(c.zxk, {
             variant: "primary",
             size: "sm",
@@ -111,177 +93,202 @@ let w = (e, t) =>
             onClick: () => {
                 j.default.track(I.rMx.OPEN_MODAL, {
                     type: I.jXE.CREATE_STICKER_MODAL,
-                    location: n,
+                    location: i,
                 }),
-                    Z({ guildId: t.id });
+                    ((e) => {
+                        let { guildId: t } = e;
+                        (0, c.ZDy)(async () => {
+                            let { default: e } = await Promise.all([n.e("93626"), n.e("34765")]).then(
+                                n.bind(n, 136735),
+                            );
+                            return (n) => (0, r.jsx)(e, P({ guildId: t }, n));
+                        });
+                    })({ guildId: t.id });
             },
-            disabled: !i,
+            disabled: !l,
         });
     },
-    k = (e) => {
+    D = (e) => {
         let { guild: t } = e,
             { isLoading: l } = (0, O.Z)(t.id),
-            d = (0, s.e7)([_.Z], () => {
+            u = (0, s.e7)([_.Z], () => {
                 var e;
                 return null != (e = _.Z.getStickersByGuildId(t.id)) ? e : [];
             }, [t]),
-            { analyticsLocations: u } = (0, m.ZP)(),
-            j = (0, b.Z)(t.id),
-            Z = t.features.has(I.oNc.MORE_STICKERS) ? I.Eu4.TIER_3 : t.premiumTier,
-            k = t.features.has(I.oNc.MORE_STICKERS) ? I.oCV[I.Eu4.TIER_3] : j,
+            { analyticsLocations: j } = (0, m.ZP)(),
+            D = (0, b.Z)(t.id),
+            A = t.features.has(I.oNc.MORE_STICKERS) ? I.Eu4.TIER_3 : t.premiumTier,
+            k = t.features.has(I.oNc.MORE_STICKERS) ? I.oCV[I.Eu4.TIER_3] : D,
             L = (0, x.Z)(t.id);
         if (
             (i.useEffect(() => {
                 window.dispatchEvent(new Event("resize"));
-            }, [d]),
+            }, [u]),
             l)
         )
             return (0, r.jsx)(c.$jN, {});
-        let M = (e, n) => {
-                let r = null;
-                n === I.Eu4.TIER_1
-                    ? (r = I.Qqv.TIER_1)
-                    : n === I.Eu4.TIER_2
-                      ? (r = I.Qqv.TIER_2)
-                      : n === I.Eu4.TIER_3 && (r = I.Qqv.TIER_3),
-                    (0, p.Z)({
-                        analyticsLocations: u,
-                        analyticsLocation: {
-                            page: I.ZY5.GUILD_SETTINGS,
-                            section: I.jXE.GUILD_SETTINGS_STICKERS,
-                            object: I.qAy.BOOST_LEVEL_UPSELL_BUTTON,
-                            objectType: r,
-                        },
-                        guildId: t.id,
-                        totalNumberOfSlotsToAssign: e,
-                    });
-            },
-            G = [
-                {
+        let M = [
+            {
+                tier: I.Eu4.NONE,
+                title: (0, r.jsx)(w, {
+                    guildStickers: u,
+                    currentGuildTier: A,
                     tier: I.Eu4.NONE,
-                    title: (0, r.jsx)(R, {
-                        guildStickers: d,
-                        currentGuildTier: Z,
-                        tier: I.Eu4.NONE,
-                        children: S.intl.string(S.t.tfVXhI),
-                    }),
-                },
-                {
+                    children: S.intl.string(S.t.tfVXhI),
+                }),
+            },
+            {
+                tier: I.Eu4.TIER_1,
+                title: (0, r.jsx)(w, {
+                    guildStickers: u,
+                    currentGuildTier: A,
                     tier: I.Eu4.TIER_1,
-                    title: (0, r.jsx)(R, {
-                        guildStickers: d,
-                        currentGuildTier: Z,
-                        tier: I.Eu4.TIER_1,
-                        children: S.intl.string(S.t.nzXtaW),
-                    }),
-                },
-                {
+                    children: S.intl.string(S.t.nzXtaW),
+                }),
+            },
+            {
+                tier: I.Eu4.TIER_2,
+                title: (0, r.jsx)(w, {
+                    guildStickers: u,
+                    currentGuildTier: A,
                     tier: I.Eu4.TIER_2,
-                    title: (0, r.jsx)(R, {
-                        guildStickers: d,
-                        currentGuildTier: Z,
-                        tier: I.Eu4.TIER_2,
-                        children: S.intl.string(S.t["h33/ub"]),
-                    }),
-                },
-                {
+                    children: S.intl.string(S.t["h33/ub"]),
+                }),
+            },
+            {
+                tier: I.Eu4.TIER_3,
+                title: (0, r.jsx)(w, {
+                    guildStickers: u,
+                    currentGuildTier: A,
                     tier: I.Eu4.TIER_3,
-                    title: (0, r.jsx)(R, {
-                        guildStickers: d,
-                        currentGuildTier: Z,
-                        tier: I.Eu4.TIER_3,
-                        children: S.intl.string(S.t.BfF6EB),
-                    }),
-                },
-            ];
+                    children: S.intl.string(S.t.BfF6EB),
+                }),
+            },
+        ];
         return (0, r.jsx)(C.Z, {
-            tiers: G,
+            tiers: M,
             renderTier: (e) => {
-                let i,
-                    l,
-                    { isAnimatedTo: s, onSetRef: u, tier: m, tiers: p, tierIndex: b } = e,
-                    { canCreateExpressions: x, canManageGuildExpression: _ } = (0, h.Gw)(t),
-                    O = p[b - 1],
-                    C = null != O ? (0, v.A3)(O.tier) : 0,
-                    R = (0, v.A3)(m.tier, t),
-                    G = (0, v.ig)(m.tier),
-                    U = d.slice(C, R),
-                    B = U.length > 0,
-                    F = Z < m.tier,
-                    H = w(d.length, t),
-                    z = x && !F && H === m.tier && R !== U.length,
-                    W = z || U.length > 0,
-                    V = R - C,
-                    Y = n(872732),
-                    K = G - U.length,
-                    q = z ? Math.min(5 - ((U.length + 0) % 5), K) : 0,
-                    X = [];
-                for (let e = 0; e < q; e++) X.push((0, r.jsx)(D, {}, "placeholder-".concat(e)));
-                let Q = t.premiumTier < m.tier && j >= I.oCV[m.tier],
-                    J = S.intl.string(S.t.dtFw5e),
-                    $ = () => M(Math.max(1, I.oCV[m.tier] - j), m.tier),
-                    ee = !1;
-                Q &&
+                var i;
+                let l,
+                    s,
+                    { isAnimatedTo: m, onSetRef: b, tier: x, tiers: _, tierIndex: O } = e,
+                    { canCreateExpressions: C, canManageGuildExpression: w } = (0, h.Gw)(t),
+                    M = _[O - 1],
+                    G = null != M ? (0, v.A3)(M.tier) : 0,
+                    U = (0, v.A3)(x.tier, t),
+                    B = (0, v.ig)(x.tier),
+                    F = u.slice(G, U),
+                    H = F.length > 0,
+                    z = A < x.tier,
+                    W =
+                        ((i = u.length),
+                        i < (0, v.A3)(I.Eu4.NONE)
+                            ? I.Eu4.NONE
+                            : i < (0, v.A3)(I.Eu4.TIER_1)
+                              ? I.Eu4.TIER_1
+                              : i < (0, v.A3)(I.Eu4.TIER_2)
+                                ? I.Eu4.TIER_2
+                                : i < (0, v.A3)(I.Eu4.TIER_3) ||
+                                    (null != t && t.features.has(I.oNc.MORE_STICKERS) && i < d.D.MAX_STICKER_SLOTS)
+                                  ? I.Eu4.TIER_3
+                                  : I.Eu4.NONE),
+                    V = C && !z && W === x.tier && U !== F.length,
+                    Y = V || F.length > 0,
+                    K = U - G,
+                    q = n(872732),
+                    X = B - F.length,
+                    Q = V ? Math.min(5 - ((F.length + 0) % 5), X) : 0,
+                    J = [];
+                for (let e = 0; e < Q; e++) J.push((0, r.jsx)(R, {}, "placeholder-".concat(e)));
+                let $ = t.premiumTier < x.tier && D >= I.oCV[x.tier],
+                    ee = S.intl.string(S.t.dtFw5e),
+                    et = () => {
+                        var e, n;
+                        let r;
+                        return (
+                            (e = Math.max(1, I.oCV[x.tier] - D)),
+                            (n = x.tier),
+                            (r = null),
+                            void (n === I.Eu4.TIER_1
+                                ? (r = I.Qqv.TIER_1)
+                                : n === I.Eu4.TIER_2
+                                  ? (r = I.Qqv.TIER_2)
+                                  : n === I.Eu4.TIER_3 && (r = I.Qqv.TIER_3),
+                            (0, p.Z)({
+                                analyticsLocations: j,
+                                analyticsLocation: {
+                                    page: I.ZY5.GUILD_SETTINGS,
+                                    section: I.jXE.GUILD_SETTINGS_STICKERS,
+                                    object: I.qAy.BOOST_LEVEL_UPSELL_BUTTON,
+                                    objectType: r,
+                                },
+                                guildId: t.id,
+                                totalNumberOfSlotsToAssign: e,
+                            }))
+                        );
+                    },
+                    en = !1;
+                $ &&
                     (L
-                        ? (($ = () => {
-                              let e = E.Cp[m.tier];
+                        ? ((et = () => {
+                              let e = E.Cp[x.tier];
                               null != e && (0, f.H6)(t.id, e);
                           }),
-                          (J = S.intl.string(S.t.g7lkra)),
-                          t.premiumTier + 1 !== m.tier && ((ee = !0), (i = S.intl.string(S.t.mTMkY2))))
-                        : ((ee = !0), (i = S.intl.string(S.t.hwPEJS))));
-                let et = H === b + 1 && H > Z,
-                    en = z || et || b > Z;
+                          (ee = S.intl.string(S.t.g7lkra)),
+                          t.premiumTier + 1 !== x.tier && ((en = !0), (l = S.intl.string(S.t.mTMkY2))))
+                        : ((en = !0), (l = S.intl.string(S.t.hwPEJS))));
+                let er = W === O + 1 && W > A,
+                    ei = V || er || O > A;
                 return (
-                    et
-                        ? (l = (0, r.jsx)(g.Z, {
+                    er
+                        ? (s = (0, r.jsx)(g.Z, {
                               guild: t,
                               size: o.zx.Sizes.SMALL,
                               color: o.zx.Colors.GREEN,
                               buttonText: S.intl.string(S.t.Vbkh2t),
-                              targetBoostedGuildTier: Z + 1,
+                              targetBoostedGuildTier: A + 1,
                               analyticsLocation: {
                                   page: I.ZY5.GUILD_SETTINGS,
                                   section: I.jXE.GUILD_SETTINGS_STICKERS,
                                   object: I.qAy.BOOST_UPSELL_NEXT_LEVEL_HEADER,
-                                  objectType: (0, v.ge)(m.tier),
+                                  objectType: (0, v.ge)(x.tier),
                               },
                           }))
-                        : z && (l = (0, r.jsx)(A, { guild: t })),
+                        : V && (s = (0, r.jsx)(Z, { guild: t })),
                     (0, r.jsxs)(
                         N.Z,
                         {
                             subscriptionCount: k,
-                            tier: m,
-                            onSetRef: u,
-                            isAnimatedTo: s,
-                            hasBottomMargin: b !== p.length - 1,
-                            withCardBody: !W,
-                            headerButton: l,
-                            showHeaderLockStatus: en,
+                            tier: x,
+                            onSetRef: b,
+                            isAnimatedTo: m,
+                            hasBottomMargin: O !== _.length - 1,
+                            withCardBody: !Y,
+                            headerButton: s,
+                            showHeaderLockStatus: ei,
                             guildId: t.id,
                             children: [
-                                W &&
+                                Y &&
                                     (0, r.jsxs)("div", {
                                         className: T.grid,
                                         children: [
-                                            U.map((e) =>
+                                            F.map((e) =>
                                                 (0, r.jsx)(
                                                     y.Z,
                                                     {
-                                                        isDisabled: F,
+                                                        isDisabled: z,
                                                         sticker: e,
-                                                        canManageSticker: _(e),
+                                                        canManageSticker: w(e),
                                                     },
                                                     e.id,
                                                 ),
                                             ),
-                                            X,
+                                            J,
                                         ],
                                     }),
-                                !F &&
-                                    !z &&
-                                    0 === U.length &&
+                                !z &&
+                                    !V &&
+                                    0 === F.length &&
                                     (0, r.jsx)("div", {
                                         className: a()(T.emptyTierWrapper, T.unusedTierWrapper),
                                         children: (0, r.jsx)(c.Text, {
@@ -290,32 +297,32 @@ let w = (e, t) =>
                                             children: S.intl.string(S.t.lqwv0N),
                                         }),
                                     }),
-                                F &&
-                                    !B &&
+                                z &&
+                                    !H &&
                                     (0, r.jsxs)("div", {
                                         className: T.emptyTierWrapper,
                                         children: [
                                             (0, r.jsx)("img", {
                                                 alt: S.intl.string(S.t.BAhsws),
                                                 className: T.emptyTierImage,
-                                                src: Y,
+                                                src: q,
                                             }),
                                             (0, r.jsx)(c.Text, {
                                                 className: T.unlockTierCtaHeading,
                                                 variant: "text-md/normal",
                                                 color: "header-secondary",
                                                 children:
-                                                    m.tier === I.Eu4.TIER_1
-                                                        ? S.intl.formatToPlainString(S.t.psMYu7, { numAdditional: V })
+                                                    x.tier === I.Eu4.TIER_1
+                                                        ? S.intl.formatToPlainString(S.t.psMYu7, { numAdditional: K })
                                                         : S.intl.formatToPlainString(S.t.bLykER, {
-                                                              numAdditional: V,
-                                                              numTotal: R,
+                                                              numAdditional: K,
+                                                              numTotal: U,
                                                           }),
                                             }),
                                             (0, r.jsx)(c.ua7, {
                                                 tooltipClassName: T.tooltip,
-                                                text: i,
-                                                shouldShow: ee,
+                                                text: l,
+                                                shouldShow: en,
                                                 children: (e) => {
                                                     var t, n;
                                                     return (0, r.jsx)(
@@ -323,14 +330,14 @@ let w = (e, t) =>
                                                         ((t = P(
                                                             {
                                                                 variant: "active",
-                                                                text: J,
+                                                                text: ee,
                                                             },
                                                             e,
                                                         )),
                                                         (n = n =
                                                             {
-                                                                disabled: ee,
-                                                                onClick: $,
+                                                                disabled: en,
+                                                                onClick: et,
                                                             }),
                                                         Object.getOwnPropertyDescriptors
                                                             ? Object.defineProperties(
@@ -359,7 +366,7 @@ let w = (e, t) =>
                                     }),
                             ],
                         },
-                        m.tier,
+                        x.tier,
                     )
                 );
             },

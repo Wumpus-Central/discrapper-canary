@@ -4,7 +4,7 @@ var l = t(255367),
     r = t(481060),
     o = t(765305),
     c = t(388032),
-    s = t(846955);
+    s = t(500537);
 function a(e) {
     let { selectedTab: n, onTabSelected: t, userCount: a, isHub: u = !1 } = e,
         d = i.useRef(null);

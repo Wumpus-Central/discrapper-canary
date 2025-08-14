@@ -1,18 +1,18 @@
-async function a(e) {
+async function r(e) {
     let { default: t } = await n.e("32990").then(n.t.bind(n, 735630, 19)),
-        a = t.createFile(),
         r = t.createFile(),
+        a = t.createFile(),
         l = {};
     (e.fileStart = 0),
-        (a.onReady = (e) => {
-            for (let t of (r.init({
+        (r.onReady = (e) => {
+            for (let t of (a.init({
                 duration: e.duration,
                 timescale: e.timescale,
             }),
             e.audioTracks))
                 (l[t.id] = t),
-                    a.setExtractionOptions(t.id, null, { nbSamples: 1 / 0 }),
-                    r.addTrack({
+                    r.setExtractionOptions(t.id, null, { nbSamples: 1 / 0 }),
+                    a.addTrack({
                         id: t.id,
                         timescale: t.timescale,
                         hdlr: "soun",
@@ -24,14 +24,14 @@ async function a(e) {
                         samplesize: t.audio.sample_size,
                         name: t.name,
                     });
-            a.start();
+            r.start();
         });
     let i = new Promise((e) => {
-        a.onSamples = (t, n, i) => {
-            for (let e of i) r.addSample(t, e.data, e);
-            a.releaseUsedSamples(t, i.length), delete l[t];
-            let o = r.getTrackById(t),
-                s = a.getTrackById(t);
+        r.onSamples = (t, n, i) => {
+            for (let e of i) a.addSample(t, e.data, e);
+            r.releaseUsedSamples(t, i.length), delete l[t];
+            let o = a.getTrackById(t),
+                s = r.getTrackById(t);
             if (null != s.edts) {
                 let e = s.edts.elst;
                 o.add("edts").boxes.push(e);
@@ -39,6 +39,6 @@ async function a(e) {
             0 === Object.keys(l).length && e();
         };
     });
-    return a.appendBuffer(e), a.flush(), await i, r.getBuffer();
+    return r.appendBuffer(e), r.flush(), await i, a.getBuffer();
 }
-n.d(t, { w: () => a }), n(388685), n(539854);
+n.d(t, { w: () => r }), n(388685), n(539854);

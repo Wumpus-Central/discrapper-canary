@@ -18,7 +18,7 @@ var r = n(255367),
     O = n(151459),
     E = n(981631),
     y = n(388032),
-    v = n(306948);
+    v = n(10058);
 function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -82,24 +82,17 @@ function S(e) {
                                 null == n ? delete r.current[e][t] : (r.current[e][t] = n),
                                 0 === Object.keys(r.current[e]).length && delete r.current[e];
                         },
-                        i = (e) => {
-                            null != l.current && (window.clearTimeout(l.current), (l.current = null)),
-                                t(e),
-                                (l.current = window.setTimeout(() => {
-                                    t(null), (l.current = null);
-                                }, 10000));
-                        },
-                        a = (t, n, l) => {
-                            var a, o, s, c, u, d, p, h;
-                            if (!g.Z.isFriend(t)) return !1;
-                            let b = m.default.getUser(t);
-                            if (null == b) return !1;
-                            let _ = !1,
-                                O = null;
-                            if (null != n) {
-                                let i = n.type;
+                        i = (n, i, a) => {
+                            var o, s, c, u, d, p, h, b, _;
+                            if (!g.Z.isFriend(n)) return !1;
+                            let O = m.default.getUser(n);
+                            if (null == O) return !1;
+                            let y = !1,
+                                v = null;
+                            if (null != i) {
+                                let t = i.type;
                                 if (
-                                    null != i &&
+                                    null != t &&
                                     (function (e) {
                                         let t = e.type;
                                         return (
@@ -107,60 +100,70 @@ function S(e) {
                                             t === E.IIU.LISTENING ||
                                             t === E.IIU.WATCHING
                                         );
-                                    })(n)
+                                    })(i)
                                 ) {
                                     let l =
-                                        i === E.IIU.WATCHING || i === E.IIU.LISTENING
+                                        t === E.IIU.WATCHING || t === E.IIU.LISTENING
                                             ? ""
-                                                  .concat(i, "-")
-                                                  .concat(null != (c = n.name) ? c : "", "-")
-                                                  .concat(null != (u = n.state) ? u : "", "-")
-                                                  .concat(null != (d = n.details) ? d : "")
-                                            : "".concat(i, "-").concat(null != (p = n.name) ? p : "");
-                                    (null == (s = r.current[t]) ? void 0 : s.presence) !== l &&
-                                        ((_ = !0),
-                                        e(t, "presence", l),
-                                        (O = {
-                                            user: b,
-                                            activity: n,
+                                                  .concat(t, "-")
+                                                  .concat(null != (u = i.name) ? u : "", "-")
+                                                  .concat(null != (d = i.state) ? d : "", "-")
+                                                  .concat(null != (p = i.details) ? p : "")
+                                            : "".concat(t, "-").concat(null != (h = i.name) ? h : "");
+                                    (null == (c = r.current[n]) ? void 0 : c.presence) !== l &&
+                                        ((y = !0),
+                                        e(n, "presence", l),
+                                        (v = {
+                                            user: O,
+                                            activity: i,
                                         }));
                                 } else
-                                    (null == (o = r.current[t]) ? void 0 : o.presence) != null &&
-                                        ((_ = !0), e(t, "presence", null));
+                                    (null == (s = r.current[n]) ? void 0 : s.presence) != null &&
+                                        ((y = !0), e(n, "presence", null));
                             }
-                            if (null != l) {
-                                let n = f.Z.getChannel(l);
-                                if (null != n) {
-                                    let i = "voice-".concat(n.id);
-                                    (null == (h = r.current[t]) ? void 0 : h.voice) !== i &&
-                                        ((_ = !0),
-                                        e(t, "voice", i),
-                                        (O = {
-                                            user: b,
-                                            voiceChannel: n,
+                            if (null != a) {
+                                let t = f.Z.getChannel(a);
+                                if (null != t) {
+                                    let i = "voice-".concat(t.id);
+                                    (null == (b = r.current[n]) ? void 0 : b.voice) !== i &&
+                                        ((y = !0),
+                                        e(n, "voice", i),
+                                        (v = {
+                                            user: O,
+                                            voiceChannel: t,
                                         }));
                                 }
                             } else
-                                (null == (a = r.current[t]) ? void 0 : a.voice) != null &&
-                                    ((_ = !0), e(t, "voice", null));
-                            return _ && null != O && i(O), _;
+                                (null == (o = r.current[n]) ? void 0 : o.voice) != null &&
+                                    ((y = !0), e(n, "voice", null));
+                            return (
+                                y &&
+                                    null != v &&
+                                    ((_ = v),
+                                    null != l.current && (window.clearTimeout(l.current), (l.current = null)),
+                                    t(_),
+                                    (l.current = window.setTimeout(() => {
+                                        t(null), (l.current = null);
+                                    }, 10000))),
+                                y
+                            );
                         },
-                        o = (e) => {
+                        a = (e) => {
                             for (let t of e.updates) {
                                 let e = t.user.id,
                                     n = h.Z.getPrimaryActivity(e);
-                                if (a(e, n)) break;
+                                if (i(e, n)) break;
                             }
                         },
-                        c = (e) => {
-                            for (let t of e.voiceStates) if (a(t.userId, void 0, t.channelId)) break;
+                        o = (e) => {
+                            for (let t of e.voiceStates) if (i(t.userId, void 0, t.channelId)) break;
                         };
                     return (
-                        s.Z.subscribe("PRESENCE_UPDATES", o),
-                        s.Z.subscribe("VOICE_STATE_UPDATES", c),
+                        s.Z.subscribe("PRESENCE_UPDATES", a),
+                        s.Z.subscribe("VOICE_STATE_UPDATES", o),
                         () => {
-                            s.Z.unsubscribe("PRESENCE_UPDATES", o),
-                                s.Z.unsubscribe("VOICE_STATE_UPDATES", c),
+                            s.Z.unsubscribe("PRESENCE_UPDATES", a),
+                                s.Z.unsubscribe("VOICE_STATE_UPDATES", o),
                                 null != l.current && (window.clearTimeout(l.current), (l.current = null));
                         }
                     );

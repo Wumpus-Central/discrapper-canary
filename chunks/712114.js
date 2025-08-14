@@ -8,7 +8,7 @@ var r = n(255367),
     c = n(39604),
     u = n(176127),
     d = n(388032),
-    f = n(105882);
+    f = n(945202);
 function _(e) {
     let { onOpenClips: t, lastClipsSession: n, closePopout: _ } = e;
     function p() {

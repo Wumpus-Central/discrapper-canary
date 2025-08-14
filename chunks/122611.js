@@ -30,10 +30,7 @@ function P(e) {
     var t;
     let { guild: n } = e,
         [p, h] = i.useState(null != (t = o.K.get(C.Iv)) ? t : 0),
-        g = (e) => {
-            o.K.set(C.Iv, e), h(e);
-        },
-        m = (0, l.Wu)(
+        g = (0, l.Wu)(
             C.HG,
             () =>
                 C.XN.filter((e) => {
@@ -43,14 +40,15 @@ function P(e) {
             [n, p],
         );
     return (0, r.jsx)(c.ZP, {
-        contentTypes: m,
+        contentTypes: g,
         groupName: S.R.CHANNEL_NOTICES,
         children: (e) => {
             let { visibleContent: t, markAsDismissed: i } = e,
                 l = () => {
-                    g(Date.now()), i(S.L.UNKNOWN);
+                    var e;
+                    (e = Date.now()), o.K.set(C.Iv, e), h(e), i(S.L.UNKNOWN);
                 },
-                o = (() => {
+                c = (() => {
                     switch (t) {
                         case a.z.CHANNEL_NOTICE_HUBLINK:
                             return (0, r.jsx)(f.Z, {
@@ -86,11 +84,11 @@ function P(e) {
                             return null;
                     }
                 })();
-            return null == o
+            return null == c
                 ? null
                 : (0, r.jsx)("div", {
                       onContextMenu: T,
-                      children: o,
+                      children: c,
                   });
         },
     });

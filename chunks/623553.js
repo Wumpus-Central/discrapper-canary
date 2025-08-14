@@ -7,9 +7,9 @@ var r = n(255367),
     c = n(763283),
     l = n(892689),
     u = n(477839),
-    d = n(603571),
+    d = n(511479),
     f = n(388032),
-    p = n(460919),
+    p = n(73205),
     m = n(225893),
     g = n(768675),
     b = n(624868);
@@ -23,68 +23,67 @@ function x(e) {
         O = (0, s.useRef)(-1),
         [j, N] = (0, s.useState)(!1),
         P = (0, s.useRef)(h()),
-        _ = (0, i.eR)(y),
-        C = (e) => {
-            var t;
-            null == (t = v.current) || t.removeDrop(e), (P.current = h()), N(!1), clearTimeout(O.current);
-        },
-        Z = (e) => {
-            N(!0),
-                _(),
-                (0, o.KH)(u.yN.LOOTBOXES, P.current),
-                (O.current = setTimeout(() => {
-                    C(e);
-                }, 1000));
-        };
-    (0, s.useEffect)(() => () => clearTimeout(O.current), []);
-    let w = (e) =>
-        j
-            ? (0, r.jsxs)(r.Fragment, {
-                  children: [
-                      (0, r.jsxs)("div", {
-                          className: p.points,
-                          children: [
-                              (0, r.jsxs)(c.Z, {
-                                  variant: "text-lg/normal",
-                                  children: ["+", P.current],
+        _ = (0, i.eR)(y);
+    return (
+        (0, s.useEffect)(() => () => clearTimeout(O.current), []),
+        (0, r.jsx)(l.Z, {
+            ref: v,
+            isPaused: t,
+            itemId: u.yN.LOOTBOXES,
+            chance: 0.2,
+            points: 0,
+            width: n,
+            height: x,
+            dropPadding: 200,
+            maxDrops: 1,
+            children: (e) =>
+                (0, r.jsx)("div", {
+                    className: p.lootbox,
+                    children: j
+                        ? (0, r.jsxs)(r.Fragment, {
+                              children: [
+                                  (0, r.jsxs)("div", {
+                                      className: p.points,
+                                      children: [
+                                          (0, r.jsxs)(c.Z, {
+                                              variant: "text-lg/normal",
+                                              children: ["+", P.current],
+                                          }),
+                                          (0, r.jsx)("img", {
+                                              src: m,
+                                              alt: f.intl.string(d.default.BropER),
+                                          }),
+                                      ],
+                                  }),
+                                  (0, r.jsx)("img", {
+                                      src: b,
+                                      alt: f.intl.string(d.default.CwZfY2),
+                                      width: 100,
+                                      height: 100,
+                                  }),
+                              ],
+                          })
+                        : (0, r.jsx)(a.Z, {
+                              onClick: () => {
+                                  N(!0),
+                                      _(),
+                                      (0, o.KH)(u.yN.LOOTBOXES, P.current),
+                                      (O.current = setTimeout(() => {
+                                          var t;
+                                          null == (t = v.current) || t.removeDrop(e),
+                                              (P.current = h()),
+                                              N(!1),
+                                              clearTimeout(O.current);
+                                      }, 1000));
+                              },
+                              children: (0, r.jsx)("img", {
+                                  src: g,
+                                  alt: f.intl.string(d.default.CwZfY2),
+                                  width: 100,
+                                  height: 100,
                               }),
-                              (0, r.jsx)("img", {
-                                  src: m,
-                                  alt: f.intl.string(d.default.BropER),
-                              }),
-                          ],
-                      }),
-                      (0, r.jsx)("img", {
-                          src: b,
-                          alt: f.intl.string(d.default.CwZfY2),
-                          width: 100,
-                          height: 100,
-                      }),
-                  ],
-              })
-            : (0, r.jsx)(a.Z, {
-                  onClick: () => Z(e),
-                  children: (0, r.jsx)("img", {
-                      src: g,
-                      alt: f.intl.string(d.default.CwZfY2),
-                      width: 100,
-                      height: 100,
-                  }),
-              });
-    return (0, r.jsx)(l.Z, {
-        ref: v,
-        isPaused: t,
-        itemId: u.yN.LOOTBOXES,
-        chance: 0.2,
-        points: 0,
-        width: n,
-        height: x,
-        dropPadding: 200,
-        maxDrops: 1,
-        children: (e) =>
-            (0, r.jsx)("div", {
-                className: p.lootbox,
-                children: w(e),
-            }),
-    });
+                          }),
+                }),
+        })
+    );
 }

@@ -38,8 +38,8 @@ var s = n(399606),
     w = n(926433),
     k = n(302036),
     L = n(994554),
-    M = n(567396),
-    B = n(925309),
+    B = n(567396),
+    M = n(925309),
     U = n(46245),
     V = n(766491),
     G = n(193943),
@@ -139,7 +139,7 @@ let ed = () => {
                         analyticsLocations: e,
                     });
                 },
-                perkImage: M,
+                perkImage: B,
             },
             clips: em
                 ? {
@@ -242,7 +242,7 @@ let ed = () => {
                 description: D.intl.string(D.t.kWcDKy),
                 descriptionCta: D.intl.string(D.t.jVcuVV),
                 onCtaClick: ex,
-                perkImage: B,
+                perkImage: M,
             },
             remixing: em
                 ? {

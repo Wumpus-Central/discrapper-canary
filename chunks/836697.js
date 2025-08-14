@@ -3,46 +3,46 @@ var r = n(255367),
     i = n(73800),
     l = n(442837),
     o = n(481060),
-    s = n(110924),
-    a = n(693546),
+    a = n(110924),
+    s = n(693546),
     c = n(863249),
     u = n(937111),
     d = n(914010),
-    h = n(289090),
-    p = n(727258),
-    f = n(234383),
+    p = n(289090),
+    f = n(727258),
+    h = n(234383),
     g = n(179809),
     m = n(588275),
     b = n(388032),
-    O = n(818881);
+    O = n(264096);
 function _(e) {
     let { onActivate: t, children: n } = e,
-        a = i.useRef(null),
+        s = i.useRef(null),
         d = (0, l.e7)([u.Z], () => u.Z.hasJoinRequestCoackmark()),
-        h = i.useCallback(() => {
+        p = i.useCallback(() => {
             c.ZP.clearCoachmark();
         }, []),
-        p = (0, s.Z)(d),
-        f = i.useRef(null);
+        f = (0, a.Z)(d),
+        h = i.useRef(null);
     return (
         i.useEffect(() => {
-            if (d && d !== p) {
+            if (d && d !== f) {
                 var e, n, r, i, l;
                 t(),
-                    null == (l = f.current) ||
+                    null == (l = h.current) ||
                         null == (i = l.ref) ||
                         null == (r = i.current) ||
                         null == (n = r.layerRef) ||
                         null == (e = n.current) ||
                         e.updatePosition();
             }
-        }, [f, d, p, t]),
+        }, [h, d, f, t]),
         (0, r.jsxs)("div", {
             className: O.container,
             children: [
                 (0, r.jsx)(o.yRy, {
-                    ref: f,
-                    targetElementRef: a,
+                    ref: h,
+                    targetElementRef: s,
                     shouldShow: d,
                     renderPopout: () =>
                         (0, r.jsxs)("div", {
@@ -70,7 +70,7 @@ function _(e) {
                                             size: "sm",
                                             text: b.intl.string(b.t["4r+amZ"]),
                                             fullWidth: !0,
-                                            onClick: h,
+                                            onClick: p,
                                         }),
                                     ],
                                 }),
@@ -113,7 +113,7 @@ function _(e) {
                             (n = n =
                                 {
                                     className: O.popoutAnchor,
-                                    ref: a,
+                                    ref: s,
                                 }),
                             Object.getOwnPropertyDescriptors
                                 ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
@@ -139,35 +139,35 @@ function _(e) {
 function y(e) {
     let { onActivate: t } = e,
         [n, y] = i.useState(!1),
-        C = (0, l.e7)([d.Z], () => d.Z.getGuildId()),
-        v = (0, l.e7)([u.Z], () => u.Z.hasFetchedRequestToJoinGuilds),
-        j = (0, f.Z)(),
-        E = (0, s.Z)(C),
-        S = i.useMemo(() => {
-            let e = (0, p.qQ)({
-                folderId: h.S.PENDING_JOIN_REQUESTS_FOLDER,
+        v = (0, l.e7)([d.Z], () => d.Z.getGuildId()),
+        j = (0, l.e7)([u.Z], () => u.Z.hasFetchedRequestToJoinGuilds),
+        C = (0, h.Z)(),
+        E = (0, a.Z)(v),
+        x = i.useMemo(() => {
+            let e = (0, f.qQ)({
+                folderId: p.S.PENDING_JOIN_REQUESTS_FOLDER,
                 folderName: b.intl.string(b.t["scsU+v"]),
                 expanded: n,
                 guildIds: [],
             });
-            for (let t of j) e.children.push((0, p.Mg)(t, e.id));
+            for (let t of C) e.children.push((0, f.Mg)(t, e.id));
             return e;
-        }, [j, n]);
+        }, [C, n]);
     i.useEffect(() => {
-        n && !v && a.Z.fetchRequestToJoinGuilds();
-    }, [n, v]);
-    let x = null != C && j.includes(C);
+        n && !j && s.Z.fetchRequestToJoinGuilds();
+    }, [n, j]);
+    let S = null != v && C.includes(v);
     return (i.useEffect(() => {
-        !n && x && E !== C && y(!0);
-    }, [n, x, E, C]),
-    0 === j.length)
+        !n && S && E !== v && y(!0);
+    }, [n, S, E, v]),
+    0 === C.length)
         ? null
         : (0, r.jsx)(_, {
               onActivate: t,
               children: (0, r.jsx)(g.Z, {
-                  folderNode: S,
+                  folderNode: x,
                   expanded: n,
-                  selected: x,
+                  selected: S,
                   draggable: !1,
                   sorting: !1,
                   onExpandCollapse: () => {
@@ -182,7 +182,7 @@ function y(e) {
                       }),
                   }),
                   renderChildNode: function (e, t, n) {
-                      return e.type !== p.eD.GUILD
+                      return e.type !== f.eD.GUILD
                           ? null
                           : (0, r.jsx)(
                                 m.Z,

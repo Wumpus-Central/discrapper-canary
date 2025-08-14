@@ -9,7 +9,7 @@ var i = n(658722),
     c = n(339085),
     d = n(456269),
     u = n(388032),
-    m = n(442304);
+    m = n(183132);
 let h = (e) => {
     let { tag: t } = e,
         { id: n, name: i, emojiId: a, emojiName: d } = t,
@@ -49,8 +49,7 @@ let h = (e) => {
 };
 function g(e) {
     let { parentChannel: t, appliedTags: n, maxTagsApplied: i, onSelectTag: l, onClose: o } = e,
-        c = (0, d.Vm)(t),
-        m = (e, t) => t.filter((t) => a()(e.toLowerCase(), t.name.toLowerCase()));
+        c = (0, d.Vm)(t);
     return (0, r.jsx)(s.DBG, {
         showScrollbar: !0,
         value: n,
@@ -59,6 +58,7 @@ function g(e) {
         },
         placeholder: u.intl.string(u.t.MbhGm5),
         "aria-label": u.intl.string(u.t.MbhGm5),
-        children: (e) => m(e, c).map((e) => (0, r.jsx)(h, { tag: e }, e.id)),
+        children: (e) =>
+            c.filter((t) => a()(e.toLowerCase(), t.name.toLowerCase())).map((e) => (0, r.jsx)(h, { tag: e }, e.id)),
     });
 }

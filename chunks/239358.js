@@ -2,7 +2,7 @@ t.d(a, { Z: () => l });
 var r = t(255367);
 t(73800);
 var s = t(481060),
-    n = t(442450);
+    n = t(771831);
 let l = function (e) {
     let { label: a, subLabel: t, icon: l } = e;
     return (0, r.jsxs)("div", {

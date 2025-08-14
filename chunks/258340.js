@@ -1,4 +1,4 @@
-r.d(t, { Z: () => h }),
+r.d(t, { Z: () => m }),
     r(388685),
     r(410992),
     r(227481),
@@ -21,51 +21,12 @@ var n = r(73800),
     u = r(709054),
     c = r(693824);
 let s = (e) => Math.round(4 * e) / 4,
-    o = (e) => {
-        let [t, r] = n.useState({
-                y: 0.9 * e.h,
-                x: 0.3 * e.w,
-            }),
-            [a, i] = n.useState(1400),
-            [l, u] = n.useState(0.94),
-            [c, s] = n.useState(110),
-            [o, d] = n.useState(30),
-            [f, m] = n.useState(900),
-            [h, p] = n.useState(60);
-        n.useEffect(() => {
-            r({
-                y: 0.9 * e.h,
-                x: 0.3 * e.w,
-            });
-        }, [e.h, e.w]);
-        let y = n.useCallback(() => {
-            let e, t;
-            return (
-                60 === h
-                    ? p(() => 45)
-                    : (d((t) => (null != (e = Math.max(3, Math.floor(0.75 * t))) ? e : t)),
-                      m((e) => (null != (t = Math.max(6, Math.floor(0.8 * e))) ? t : e)),
-                      null != e && e < 16.875 && p(() => 28)),
-                !0
-            );
-        }, [h, 30]);
-        return {
-            SPEED: t,
-            GRAVITY: a,
-            DRAG: l,
-            Y_POS: c,
-            PARTICLES_PER_EMISSION: o,
-            MAX_PARTICLES: f,
-            tickRate: 1000 / h,
-            improvePerformance: y,
-        };
-    },
-    d = () => {
+    o = () => {
         let e = Math.random();
         return e < 0.15 ? (0, a.random)(0.8, 1) : e < 0.8 ? (0, a.random)(1, 1.3) : (0, a.random)(1.3, 1.75);
     },
-    f = (e, t) => e.position.y > t.h || e.position.x < -128 || e.position.x > t.w,
-    m = (e) => {
+    d = (e, t) => e.position.y > t.h || e.position.x < -128 || e.position.x > t.w,
+    f = (e) => {
         let t = e.particles.current,
             r = e.particleStates.current;
         e.sortedParticles.current.sort((e, n) => {
@@ -74,45 +35,83 @@ let s = (e) => Math.round(4 * e) / 4,
             return a !== i ? a - i : 1 === a ? t[e].scale - t[n].scale : 0;
         });
     },
-    h = (e) => {
+    m = (e) => {
         let {
                 SPEED: t,
                 GRAVITY: r,
-                DRAG: h,
-                Y_POS: p,
-                PARTICLES_PER_EMISSION: y,
-                MAX_PARTICLES: w,
-                tickRate: v,
-                improvePerformance: x,
-            } = o(e),
-            E = {
-                particles: n.useRef(Array(w)),
-                particleStates: n.useRef(new Uint8Array(w)),
-                sortedParticles: n.useRef(new Uint16Array(Array.from({ length: w }, (e, t) => t))),
-                freeParticles: n.useRef(w),
+                DRAG: m,
+                Y_POS: h,
+                PARTICLES_PER_EMISSION: p,
+                MAX_PARTICLES: y,
+                tickRate: w,
+                improvePerformance: v,
+            } = ((e) => {
+                let [t, r] = n.useState({
+                        y: 0.9 * e.h,
+                        x: 0.3 * e.w,
+                    }),
+                    [a, i] = n.useState(1400),
+                    [l, u] = n.useState(0.94),
+                    [c, s] = n.useState(110),
+                    [o, d] = n.useState(30),
+                    [f, m] = n.useState(900),
+                    [h, p] = n.useState(60);
+                n.useEffect(() => {
+                    r({
+                        y: 0.9 * e.h,
+                        x: 0.3 * e.w,
+                    });
+                }, [e.h, e.w]);
+                let y = n.useCallback(() => {
+                    let e, t;
+                    return (
+                        60 === h
+                            ? p(() => 45)
+                            : (d((t) => (null != (e = Math.max(3, Math.floor(0.75 * t))) ? e : t)),
+                              m((e) => (null != (t = Math.max(6, Math.floor(0.8 * e))) ? t : e)),
+                              null != e && e < 16.875 && p(() => 28)),
+                        !0
+                    );
+                }, [h, 30]);
+                return {
+                    SPEED: t,
+                    GRAVITY: a,
+                    DRAG: l,
+                    Y_POS: c,
+                    PARTICLES_PER_EMISSION: o,
+                    MAX_PARTICLES: f,
+                    tickRate: 1000 / h,
+                    improvePerformance: y,
+                };
+            })(e),
+            x = {
+                particles: n.useRef(Array(y)),
+                particleStates: n.useRef(new Uint8Array(y)),
+                sortedParticles: n.useRef(new Uint16Array(Array.from({ length: y }, (e, t) => t))),
+                freeParticles: n.useRef(y),
                 activeParticles: n.useRef(0),
             },
-            S = n.useRef(!1);
+            E = n.useRef(!1);
         return {
             update: (t) => {
-                if (0 === E.activeParticles.current) return;
-                let n = E.particleStates.current,
-                    a = E.particles.current;
-                for (let i = 0; i < w; i++) {
+                if (0 === x.activeParticles.current) return;
+                let n = x.particleStates.current,
+                    a = x.particles.current;
+                for (let i = 0; i < y; i++) {
                     if (0 === n[i]) continue;
                     let l = a[i];
                     (l.position.x -= l.velocity.x * t),
                         (l.position.y -= l.velocity.y * t),
-                        (l.velocity.x *= h ** t),
-                        (l.velocity.y *= h ** t),
+                        (l.velocity.x *= m ** t),
+                        (l.velocity.y *= m ** t),
                         (l.rotation += l.angularVelocity * t),
                         (l.velocity.y -= r * t),
-                        f(l, e) &&
-                            ((E.particleStates.current[i] = 0),
-                            (E.activeParticles.current -= 1),
-                            (E.freeParticles.current += 1));
+                        d(l, e) &&
+                            ((x.particleStates.current[i] = 0),
+                            (x.activeParticles.current -= 1),
+                            (x.freeParticles.current += 1));
                 }
-                0 === E.activeParticles.current && (S.current = !1);
+                0 === x.activeParticles.current && (E.current = !1);
             },
             draw: (t) => {
                 if (
@@ -122,13 +121,13 @@ let s = (e) => Math.round(4 * e) / 4,
                         w: e.w,
                         h: e.h,
                     }),
-                    0 === E.activeParticles.current)
+                    0 === x.activeParticles.current)
                 )
                     return;
-                let r = E.particleStates.current,
-                    n = E.particles.current,
-                    a = E.sortedParticles.current;
-                for (let e = 0; e < w; e++) {
+                let r = x.particleStates.current,
+                    n = x.particles.current,
+                    a = x.sortedParticles.current;
+                for (let e = 0; e < y; e++) {
                     var u;
                     let o = a[e];
                     if (0 === r[o]) continue;
@@ -193,7 +192,7 @@ let s = (e) => Math.round(4 * e) / 4,
                 }
             },
             emit: (r, n) => {
-                if ((u.default.isProbablyAValidSnowflake(r), E.freeParticles.current < y / 2)) return;
+                if ((u.default.isProbablyAValidSnowflake(r), x.freeParticles.current < p / 2)) return;
                 let i = 0 === n.x && 0 === n.y && 0 === n.w && 0 === n.h,
                     l = {
                         min: e.h / 8,
@@ -201,8 +200,8 @@ let s = (e) => Math.round(4 * e) / 4,
                     },
                     c = n.y < 0.66 * e.h ? Math.max(0.2, n.y / (0.66 * e.h)) : 1,
                     s = 1 + (1 - c);
-                for (let u = 0; u < y; u++) {
-                    let u, o;
+                for (let u = 0; u < p; u++) {
+                    let u, d;
                     u = i
                         ? {
                               x: (0, a.random)(-t.x, t.x, !0),
@@ -212,44 +211,44 @@ let s = (e) => Math.round(4 * e) / 4,
                               x: (0, a.random)(-t.x * s, t.x * s, !0),
                               y: t.y * c + (0, a.random)(-l.min, l.max, !0),
                           };
-                    let f = (0, a.random)(0, 30),
-                        h =
+                    let m = (0, a.random)(0, 30),
+                        p =
                             Math.atan2(-t.y - (0, a.random)(-l.min, l.max, !0), (0, a.random)(-t.x, t.x, !0)) *
                             (0, a.random)(-50, 50);
                     if (i)
-                        o = {
+                        d = {
                             x: e.w / 2 + (0, a.random)(-50, 50),
-                            y: e.h - p + (0, a.random)(-50, 50),
+                            y: e.h - h + (0, a.random)(-50, 50),
                         };
                     else {
                         let e = n.h / 4,
                             t = n.h / 4;
-                        o = {
+                        d = {
                             x: n.x + n.w / 2 + (0, a.random)(-t, t),
                             y: n.y + n.h / 2 + (0, a.random)(-e, e),
                         };
                     }
-                    for (let e = 0; e < w; e += 1)
-                        if (0 === E.particleStates.current[e]) {
-                            (E.particles.current[e] = {
+                    for (let e = 0; e < y; e += 1)
+                        if (0 === x.particleStates.current[e]) {
+                            (x.particles.current[e] = {
                                 key: r,
-                                position: o,
+                                position: d,
                                 velocity: u,
-                                scale: d(),
-                                rotation: f,
-                                angularVelocity: h,
+                                scale: o(),
+                                rotation: m,
+                                angularVelocity: p,
                             }),
-                                (E.particleStates.current[e] = 1),
-                                (E.freeParticles.current -= 1),
-                                (E.activeParticles.current += 1);
+                                (x.particleStates.current[e] = 1),
+                                (x.freeParticles.current -= 1),
+                                (x.activeParticles.current += 1);
                             break;
                         }
-                    m(E);
+                    f(x);
                 }
-                S.current = !0;
+                E.current = !0;
             },
-            tickRate: v,
-            improvePerformance: x,
-            shouldTick: S,
+            tickRate: w,
+            improvePerformance: v,
+            shouldTick: E,
         };
     };

@@ -16,7 +16,7 @@ var r = n(255367),
     h = n(855935),
     j = n(231338),
     g = n(388032),
-    x = n(792251);
+    x = n(124831);
 function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -65,12 +65,12 @@ let O = l.forwardRef(function (e, t) {
         o = l.useRef(null),
         a = (0, u.e7)([p.Z], () => p.Z.hasDefaultSearchStateByGuildId(n.id), [n.id]),
         O = (0, u.e7)([m.Z], () => m.Z.can(c.$e(j.Pl.MANAGE_GUILD, j.Pl.KICK_MEMBERS), n)),
-        H = l.useCallback(() => {
+        _ = l.useCallback(() => {
             null != n && O && (0, d.ZDy)(async () => (e) => (0, r.jsx)(C.Z, y(v({}, e), { guild: n })));
         }, [n, O]),
-        _ = (0, u.e7)([p.Z], () => p.Z.getSearchStateByGuildId(n.id), [n.id], s()),
+        H = (0, u.e7)([p.Z], () => p.Z.getSearchStateByGuildId(n.id), [n.id], s()),
         w = (0, b.gm)(n.id),
-        [N, S] = l.useState(_.query),
+        [N, S] = l.useState(H.query),
         Z = l.useCallback(
             (e) => {
                 let t = e.trim();
@@ -79,13 +79,13 @@ let O = l.forwardRef(function (e, t) {
             [n.id, w],
         ),
         D = l.useMemo(() => i()(Z, 300), [Z]),
-        L = l.useCallback(
+        R = l.useCallback(
             (e) => {
                 S(e), D(e);
             },
             [D],
         ),
-        R = l.useCallback(() => {
+        L = l.useCallback(() => {
             S(""), Z("");
         }, [Z]);
     return (
@@ -118,8 +118,8 @@ let O = l.forwardRef(function (e, t) {
                             className: x.searchBar,
                             query: N,
                             placeholder: g.intl.string(g.t.NVoAMz),
-                            onChange: L,
-                            onClear: R,
+                            onChange: R,
+                            onClear: L,
                             autoComplete: "off",
                             inputProps: {
                                 autoCapitalize: "none",
@@ -192,7 +192,7 @@ let O = l.forwardRef(function (e, t) {
                                 variant: "critical-secondary",
                                 size: "sm",
                                 text: g.intl.string(g.t["2mIlKS"]),
-                                onClick: H,
+                                onClick: _,
                                 "aria-label": g.intl.string(g.t.zbyz7u),
                             }),
                         }),

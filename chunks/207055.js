@@ -32,8 +32,8 @@ var r = n(255367),
     L = n(262317),
     x = n(981631),
     M = n(524484),
-    j = n(170088);
-function k(e, t, n) {
+    k = n(541675);
+function j(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -57,7 +57,7 @@ function U(e) {
                 }),
             )),
             r.forEach(function (t) {
-                k(e, t, n[t]);
+                j(e, t, n[t]);
             });
     }
     return e;
@@ -88,53 +88,53 @@ function B(e, t) {
 let Z = i.memo((e) => {
     var t, n;
     let { mute: i, deaf: o, user: a, channel: l, sessionId: O, nick: A } = e,
-        j = a.id,
-        k = (0, s.e7)([I.default], () => I.default.getId() === j, [j]),
+        k = a.id,
+        j = (0, s.e7)([I.default], () => I.default.getId() === k, [k]),
         [G, Z, F] = (0, s.Wu)(
             [S.Z],
             () =>
-                k
+                j
                     ? [!S.Z.isSupported() || S.Z.isSelfMute() || S.Z.isSelfMutedTemporarily(), S.Z.isSelfDeaf(), !1]
-                    : [!S.Z.isSupported() || S.Z.isLocalMute(j), !1, S.Z.isLocalVideoDisabled(j)],
-            [k, j],
+                    : [!S.Z.isSupported() || S.Z.isLocalMute(k), !1, S.Z.isLocalVideoDisabled(k)],
+            [j, k],
         ),
-        V = (0, s.e7)([P.Z], () => P.Z.isPrioritySpeaker(j)),
+        V = (0, s.e7)([P.Z], () => P.Z.isPrioritySpeaker(k)),
         H = (0, c.Z)({
-            userId: j,
+            userId: k,
             checkSoundSharing: !0,
         }),
-        Y = (0, s.e7)([T.ZP], () => T.ZP.isGuestOrLurker(l.guild_id, j)),
-        W = (0, s.e7)([_.Z], () => _.Z.getGuildRingingUsers(l.id).has(j)),
+        Y = (0, s.e7)([T.ZP], () => T.ZP.isGuestOrLurker(l.guild_id, k)),
+        W = (0, s.e7)([_.Z], () => _.Z.getGuildRingingUsers(l.id).has(k)),
         K = (0, s.e7)(
             [u.ZP],
             () =>
                 u.ZP.getEmbeddedActivitiesForChannel(l.id).find((e) => {
                     let { userIds: t } = e;
-                    return t.has(j);
+                    return t.has(k);
                 }),
-            [j, l.id],
+            [k, l.id],
         ),
         z = (0, f.Z)(null != K ? [K.applicationId] : []),
-        q = (0, s.e7)([N.Z, C.Z], () => (k ? C.Z.getActivities() : N.Z.getActivities(j, l.guild_id))).find(
+        q = (0, s.e7)([N.Z, C.Z], () => (j ? C.Z.getActivities() : N.Z.getActivities(k, l.guild_id))).find(
             (e) => null != e.application_id && e.type === x.IIU.PLAYING,
         ),
         X = null != (n = (0, d.IX)(null == q ? void 0 : q.application_id).data) ? n : void 0,
         [Q, J] = (0, s.Wu)(
             [v.Z],
-            () => [v.Z.getStreamForUser(j, l.getGuildId()), v.Z.getActiveStreamForUser(j, l.getGuildId())],
-            [l, j],
+            () => [v.Z.getStreamForUser(k, l.getGuildId()), v.Z.getActiveStreamForUser(k, l.getGuildId())],
+            [l, k],
         ),
         $ = (0, s.e7)([R.Z], () => R.Z.getSessionById(O)),
         ee = D.ZP.useName(a),
-        et = (0, s.e7)([w.Z], () => w.Z.getVoicePlatformForChannel(l.id, j), [l.id, j]),
+        et = (0, s.e7)([w.Z], () => w.Z.getVoicePlatformForChannel(l.id, k), [l.id, k]),
         { enableHangStatus: en } = h.n.useExperiment({
             guildId: l.guild_id,
             location: "VoiceUsers",
         }),
         er = (0, p.ZP)(l, !0, a),
-        ei = (0, s.e7)([m.Z], () => (k ? m.Z.getHangStatusActivity() : null), [k]),
-        eo = (0, g.j)(j),
-        ea = (0, y.Eu)(l.id, j),
+        ei = (0, s.e7)([m.Z], () => (j ? m.Z.getHangStatusActivity() : null), [j]),
+        eo = (0, g.j)(k),
+        ea = (0, y.Eu)(l.id, k),
         { enableVCStatusIcons: es, enableRequestToStream: el } = b.A.useExperiment({
             guildId: l.guild_id,
             location: "VoiceUsers",
@@ -150,7 +150,7 @@ let Z = i.memo((e) => {
                 disconnected: ea,
                 otherClientSessionType: null == $ || null == (t = $.clientInfo) ? void 0 : t.os,
                 voicePlatform: et,
-                localMute: G && !k,
+                localMute: G && !j,
                 localVideoDisabled: F,
                 mute: i || G,
                 deaf: o || Z,
@@ -161,11 +161,11 @@ let Z = i.memo((e) => {
                 isStreaming: null != Q && Q.channelId === l.id,
                 isWatching: null != J && J.state !== x.jm8.ENDED,
                 isGuest: Y,
-                isSelf: k,
+                isSelf: j,
                 requestToStreamActivity: el ? q : void 0,
                 application: es && (null == q ? void 0 : q.session_id) != null ? X : void 0,
-                showHangStatus: er && en && (k || null != eo),
-                hangStatusActivity: k ? ei : eo,
+                showHangStatus: er && en && (j || null != eo),
+                hangStatusActivity: j ? ei : eo,
             }),
         ),
     });
@@ -209,7 +209,7 @@ let F = 50,
                 },
                 [t],
             ),
-            k = i.useCallback(
+            j = i.useCallback(
                 (e) => {
                     t && (w.current.cancel(), v === e && (C(!1), D.current.delay()));
                 },
@@ -240,7 +240,7 @@ let F = 50,
                                 collapsed: u,
                                 canDrag: n && A.Z.can(x.Plq.MOVE_MEMBERS, o),
                                 showPreview: M,
-                                hidePreview: k,
+                                hidePreview: j,
                                 previewIsOpen: S,
                                 shouldShowHoverPopout: v === a.id,
                                 tabIndex: p,
@@ -280,9 +280,9 @@ let F = 50,
         return null == B && null == b
             ? null
             : (0, r.jsxs)(O.eJ, {
-                  className: a()(E, j.list, {
-                      [j.collapsed]: u,
-                      [j.withGuildIcon]: g,
+                  className: a()(E, k.list, {
+                      [k.collapsed]: u,
+                      [k.withGuildIcon]: g,
                   }),
                   collapsed: u,
                   children: [B, b],

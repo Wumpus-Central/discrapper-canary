@@ -16,12 +16,12 @@ var r = n(255367),
     g = n(895924),
     E = n(266454),
     b = n(340541),
-    y = n(448239),
+    y = n(416345),
     O = n(626135),
     v = n(607187),
     I = n(981631),
     T = n(388032),
-    S = n(46262),
+    S = n(348130),
     A = n(359165);
 function N(e, t, n) {
     return (
@@ -109,7 +109,7 @@ function x(e) {
               userParticipantCount: s,
           })
         : s > 1
-          ? (0, r.jsx)(k, {
+          ? (0, r.jsx)(j, {
                 channel: t,
                 guild: n,
                 width: i,
@@ -117,7 +117,7 @@ function x(e) {
                 handleClose: a,
                 userParticipantCount: s,
             })
-          : (0, r.jsx)(j, {
+          : (0, r.jsx)(k, {
                 channel: t,
                 guild: n,
                 width: i,
@@ -190,7 +190,7 @@ function M(e) {
         }),
     });
 }
-function j(e) {
+function k(e) {
     let { channel: t, guild: o, inPopout: s } = e;
     i.useEffect(() => {
         O.default.track(I.rMx.VC_TILE_ACTIVITIES_ENTRY_POINT_VIEWED, {
@@ -204,7 +204,7 @@ function j(e) {
     function g() {
         (0, c.ZDy)(
             async () => {
-                let { default: e } = await Promise.all([n.e("7654"), n.e("49049"), n.e("36264")]).then(
+                let { default: e } = await Promise.all([n.e("7654"), n.e("49049"), n.e("53020")]).then(
                     n.bind(n, 560114),
                 );
                 return (n) =>
@@ -272,7 +272,7 @@ function j(e) {
         }),
     });
 }
-function k(e) {
+function j(e) {
     let { channel: t, guild: n, handleClose: o, width: l, userParticipantCount: d } = e;
     (0, u.ZP)(() => {
         O.default.track(I.rMx.VC_TILE_ACTIVITIES_ENTRY_POINT_VIEWED, {

@@ -20,7 +20,7 @@ var r = n(255367),
     O = n(158776),
     v = n(579407),
     I = n(388032),
-    T = n(805920),
+    T = n(198921),
     S = n(460400),
     A = n(943549);
 let N = {
@@ -41,8 +41,8 @@ let N = {
                 showPlaceholderUser: L,
                 pendingGlobalName: x,
                 pendingDisplayNameStyles: M,
-                nameplatePreviewSize: j = "default",
-                isPurchased: k = !1,
+                nameplatePreviewSize: k = "default",
+                isPurchased: j = !1,
             } = e,
             U = (0, s.e7)([b.Z], () => (0, l.wj)(b.Z.theme)),
             G = null != o ? (0, v.EU)(o) : C,
@@ -59,7 +59,7 @@ let N = {
                           guildMember: V,
                       })
                     : void 0,
-            Y = N[j],
+            Y = N[k],
             W = (0, f.Y)({ location: "NameplatePreview" }),
             K = void 0 !== M ? M : null == t ? void 0 : t.displayNameStyles;
         return (0, r.jsx)("div", {
@@ -71,9 +71,9 @@ let N = {
             },
             children: (0, r.jsxs)(c.Rny, {
                 className: a()(R, T.nameplatePreview, {
-                    [T.nameplatePurchased]: k && !w,
-                    [T.large]: "large" === j,
-                    [T.xlarge]: "xlarge" === j,
+                    [T.nameplatePurchased]: j && !w,
+                    [T.large]: "large" === k,
+                    [T.xlarge]: "xlarge" === k,
                 }),
                 children: [
                     null != G &&

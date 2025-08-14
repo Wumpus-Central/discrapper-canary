@@ -1,11 +1,11 @@
-n.d(t, { Z: () => s });
+n.d(t, { Z: () => i });
 var r = n(255367);
 n(73800);
 var l = n(325767);
-function s(e) {
+function i(e) {
     var t,
         n,
-        { width: s = 24, height: i = 24, color: a = "currentColor", foreground: o } = e,
+        { width: i = 24, height: s = 24, color: a = "currentColor", foreground: o } = e,
         u = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -15,14 +15,14 @@ function s(e) {
                     var n,
                         r,
                         l = {},
-                        s = Object.keys(e);
-                    for (r = 0; r < s.length; r++) (n = s[r]), t.indexOf(n) >= 0 || (l[n] = e[n]);
+                        i = Object.keys(e);
+                    for (r = 0; r < i.length; r++) (n = i[r]), t.indexOf(n) >= 0 || (l[n] = e[n]);
                     return l;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var s = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < s.length; r++)
-                    (n = s[r]),
+                var i = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < i.length; r++)
+                    (n = i[r]),
                         !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]);
             }
             return l;
@@ -56,8 +56,8 @@ function s(e) {
         })({}, (0, l.Z)(u))),
         (n = n =
             {
-                width: s,
-                height: i,
+                width: i,
+                height: s,
                 viewBox: "0 0 24 24",
                 children: [
                     (0, r.jsx)("path", {

@@ -9,8 +9,8 @@ n.d(t, {
 });
 var r,
     l,
-    s = n(73800),
-    i = n(100527),
+    i = n(73800),
+    s = n(100527),
     a = n(367907),
     o = n(314897),
     u = n(626135),
@@ -45,11 +45,11 @@ function E(e, t, n) {
     u.default.track(e, l);
 }
 function d(e) {
-    return s.useCallback(
+    return i.useCallback(
         (t) => {
             let n = {
                 guild_id: e,
-                location: i.Z.MEMBER_SAFETY_PAGE,
+                location: s.Z.MEMBER_SAFETY_PAGE,
             };
             E(c.rMx.MOD_DASH_SEARCH_MEMBERS, n);
         },
@@ -57,12 +57,12 @@ function d(e) {
     );
 }
 function _(e) {
-    return s.useCallback(
+    return i.useCallback(
         (t) => {
             let n = {
                 selected_role_count: t.size,
                 guild_id: e,
-                location: i.Z.MEMBER_SAFETY_PAGE,
+                location: s.Z.MEMBER_SAFETY_PAGE,
             };
             E(c.rMx.MOD_DASH_FILTER_ROLES, n);
         },
@@ -76,12 +76,12 @@ var A =
     (r.USERNAME_QUARANTINED = "username_quarantined"),
     r);
 function T(e) {
-    return s.useCallback(
+    return i.useCallback(
         (t) => {
             let n = {
                 flag_type: t,
                 guild_id: e,
-                location: i.Z.MEMBER_SAFETY_PAGE,
+                location: s.Z.MEMBER_SAFETY_PAGE,
             };
             E(c.rMx.MOD_DASH_FILTER_SAFETY_FLAGS, n);
         },
@@ -99,21 +99,21 @@ var m =
     (l.CHANGE_NICKNAME = "change_nickname"),
     l);
 function I(e, t) {
-    let { location: n, targetUserId: r, targets: l, locations: i } = t;
-    return s.useCallback(
+    let { location: n, targetUserId: r, targets: l, locations: s } = t;
+    return i.useCallback(
         (t) => {
-            let s = {
+            let i = {
                 action_type: t,
                 mod_user_id: o.default.getId(),
                 guild_id: e,
                 location: n,
-                locations: i,
+                locations: s,
                 target_user_id: null != r ? r : void 0,
                 targets: null != l ? l : void 0,
             };
-            E(c.rMx.MODERATION_ACTION, s);
+            E(c.rMx.MODERATION_ACTION, i);
         },
-        [e, n, r, l, i],
+        [e, n, r, l, s],
     );
 }
 function g(e, t) {

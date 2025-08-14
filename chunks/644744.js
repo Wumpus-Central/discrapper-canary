@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x }), n(388685);
+n.d(t, { Z: () => b }), n(388685);
 var i = n(255367),
     r = n(73800),
     s = n(120356),
@@ -8,7 +8,7 @@ var i = n(255367),
     c = n(490529),
     d = n(981631),
     u = n(388032),
-    m = n(784390);
+    m = n(134840);
 function p(e, t, n) {
     return (
         t in e
@@ -36,14 +36,8 @@ let g = {
         [d.gkr.HOUSE_1]: n(246300),
         [d.gkr.HOUSE_2]: n(797148),
         [d.gkr.HOUSE_3]: n(374347),
-    },
-    b = (e) =>
-        ({
-            [d.gkr.HOUSE_1]: u.intl.string(u.t.CpG10d),
-            [d.gkr.HOUSE_2]: u.intl.string(u.t.VNPE6u),
-            [d.gkr.HOUSE_3]: u.intl.string(u.t.KNfiTU),
-        })[e];
-class x extends r.Component {
+    };
+class b extends r.Component {
     render() {
         let { houseMembership: e, isClaimed: t, isVerified: n } = this.props;
         if (!t || !n) return null;
@@ -73,7 +67,11 @@ class x extends r.Component {
                                         (0, i.jsx)(l.Text, {
                                             className: m.membershipDialogHouseDescription,
                                             variant: "text-md/normal",
-                                            children: b(e),
+                                            children: {
+                                                [d.gkr.HOUSE_1]: u.intl.string(u.t.CpG10d),
+                                                [d.gkr.HOUSE_2]: u.intl.string(u.t.VNPE6u),
+                                                [d.gkr.HOUSE_3]: u.intl.string(u.t.KNfiTU),
+                                            }[e],
                                         }),
                                     ],
                                 }),

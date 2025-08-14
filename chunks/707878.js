@@ -10,7 +10,7 @@ var i = n(255367),
     u = n(987650),
     h = n(981631),
     p = n(388032),
-    f = n(18172);
+    f = n(264815);
 let g = Object.values(u.wF).map((e) => 100 * e),
     m = (0, a.hQ)();
 class y extends r.PureComponent {
@@ -53,18 +53,17 @@ class y extends r.PureComponent {
         });
     }
     constructor(...e) {
-        var t, n;
         super(...e),
-            (t = "initialValue"),
-            (n = 100 * this.props.opacity),
-            t in this
-                ? Object.defineProperty(this, t, {
-                      value: n,
-                      enumerable: !0,
-                      configurable: !0,
-                      writable: !0,
-                  })
-                : (this[t] = n);
+            (function (e, t, n) {
+                t in e
+                    ? Object.defineProperty(e, t, {
+                          value: n,
+                          enumerable: !0,
+                          configurable: !0,
+                          writable: !0,
+                      })
+                    : (e[t] = n);
+            })(this, "initialValue", 100 * this.props.opacity);
     }
 }
 let O = o.ZP.connectStores([c.default], () => ({ opacity: c.default.getTextWidgetOpacity() }))(y);

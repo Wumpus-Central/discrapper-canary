@@ -6,7 +6,7 @@ var i = n(120356),
     a = n(481060),
     s = n(596454),
     l = n(889989),
-    c = n(930122);
+    c = n(617374);
 function u(e) {
     let t,
         { applicationId: n, storeListingBenefits: i, skuBenefits: o, className: a } = e;

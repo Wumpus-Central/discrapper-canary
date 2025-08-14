@@ -36,8 +36,8 @@ var i = n(255367),
     M = n(981631),
     k = n(231338),
     B = n(388032),
-    V = n(214785);
-function U(e) {
+    V = n(411851);
+function H(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -62,7 +62,7 @@ function U(e) {
     }
     return e;
 }
-function H(e, t) {
+function W(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -80,7 +80,7 @@ function H(e, t) {
         e
     );
 }
-function W(e) {
+function U(e) {
     let { channel: t, roles: n, members: l, disabledReason: r, getRemoveTooltipHint: a } = e;
     return (0, i.jsx)(c.aVo, {
         className: V.roleMemberList,
@@ -246,7 +246,7 @@ function G(e) {
     function g() {
         (0, c.ZDy)(async () => {
             let { default: e } = await n.e("46786").then(n.bind(n, 388131));
-            return (t) => (0, i.jsx)(e, H(U({}, t), { channelId: l.id }));
+            return (t) => (0, i.jsx)(e, W(H({}, t), { channelId: l.id }));
         });
     }
     return (0, i.jsxs)("div", {
@@ -283,8 +283,8 @@ function G(e) {
                                 children: (e) =>
                                     (0, i.jsx)(
                                         c.zxk,
-                                        H(
-                                            U(
+                                        W(
+                                            H(
                                                 {
                                                     variant: "primary",
                                                     size: "sm",
@@ -301,7 +301,7 @@ function G(e) {
                             }),
                         ],
                     }),
-                    (0, i.jsx)(W, {
+                    (0, i.jsx)(U, {
                         channel: l,
                         roles: d,
                         members: u,
@@ -327,7 +327,7 @@ function F(e) {
                 return (n) =>
                     (0, i.jsx)(
                         e,
-                        H(U({}, n), {
+                        W(H({}, n), {
                             confirmButtonColor: o.Tt.BRAND,
                             header: B.intl.string(B.t.ZzdgUl),
                             confirmText: B.intl.string(B.t.BddRzc),
@@ -418,7 +418,7 @@ function F(e) {
                                                         return (t) =>
                                                             (0, i.jsx)(
                                                                 e,
-                                                                H(U({}, t), {
+                                                                W(H({}, t), {
                                                                     channelId: l.id,
                                                                     inSettings: !0,
                                                                 }),
@@ -428,7 +428,7 @@ function F(e) {
                                             }),
                                         ],
                                     }),
-                                    (0, i.jsx)(W, {
+                                    (0, i.jsx)(U, {
                                         channel: l,
                                         roles: d,
                                         members: u,
@@ -534,12 +534,12 @@ let X = a.ZP.connectStores([S.Z, w.Z, E.ZP, Z.Z, O.Z], () => {
                                           return (t) =>
                                               (0, i.jsx)(
                                                   e,
-                                                  H(U({}, t), {
+                                                  W(H({}, t), {
                                                       channel: s,
                                                       category: r,
                                                       onConfirm: async () => {
                                                           let { guild_id: e } = r,
-                                                              t = U({}, r.permissionOverwrites);
+                                                              t = H({}, r.permissionOverwrites);
                                                           null != e && null == t[e] && (t[e] = _.we(e)),
                                                               (await (0, j.u)(s, t[e].deny, t[e].allow)) &&
                                                                   (0, h.wk)(s.id, {

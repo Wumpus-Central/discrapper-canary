@@ -8,7 +8,7 @@ var r = n(255367),
     c = n(976288),
     d = n(386885),
     u = n(388032),
-    m = n(204278);
+    m = n(366869);
 function g(e) {
     let { fetchDiscoveryData: t, settingsView: n, requireTerms: g, rules: p } = e,
         h = (0, l.e7)([s.Z], () => s.Z.getProps().guild);

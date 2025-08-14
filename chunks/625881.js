@@ -2,8 +2,8 @@ n.d(t, { Z: () => j }), n(388685);
 var i = n(255367),
     r = n(73800),
     a = n(120356),
-    s = n.n(a),
-    o = n(544891),
+    o = n.n(a),
+    s = n(544891),
     l = n(780384),
     c = n(481060),
     u = n(410030),
@@ -15,18 +15,18 @@ var i = n(255367),
     b = n(474936),
     x = n(981631),
     y = n(388032),
-    h = n(695937),
+    h = n(768051),
     g = n(982404),
     C = n(299156);
 let j = function (e) {
     let { premiumSubscription: t, premiumType: n, onClose: a, onConfirm: j, userDiscountOffer: E } = e,
         [O, P] = r.useState(!1),
-        [v, N] = r.useState(!1),
+        [N, v] = r.useState(!1),
         I = async (e) => {
             try {
-                N(!0),
+                v(!0),
                     P(!1),
-                    await o.tn.post({
+                    await s.tn.post({
                         url: x.ANM.USER_OFFER_REDEEM,
                         body: { user_discount_offer_id: e },
                         rejectWithError: !0,
@@ -35,7 +35,7 @@ let j = function (e) {
             } catch (e) {
                 P(!0);
             }
-            N(!1);
+            v(!1);
         },
         T = (0, u.ZP)(),
         S = (0, l.wj)(T) ? g : C,
@@ -105,7 +105,7 @@ let j = function (e) {
                                       }),
                                   }),
                               (0, i.jsxs)("div", {
-                                  className: s()(h.confirmDiscountButtons, {
+                                  className: o()(h.confirmDiscountButtons, {
                                       [h.confrimDiscountsButtonsError]: O,
                                       [h.confrimDiscountsButtonsNoError]: !O,
                                   }),
@@ -119,7 +119,7 @@ let j = function (e) {
                                           variant: "primary",
                                           size: "sm",
                                           text: y.intl.string(y.t.CKSuZG),
-                                          loading: v,
+                                          loading: N,
                                           onClick: () => I(E.id),
                                       }),
                                   ],

@@ -2,8 +2,8 @@ r.r(t), r.d(t, { default: () => A }), r(388685), r(314940);
 var a = r(255367),
     n = r(73800),
     i = r(512722),
-    s = r.n(i),
-    o = r(717976),
+    o = r.n(i),
+    s = r(717976),
     l = r(278074),
     c = r(979554),
     d = r(314794),
@@ -18,7 +18,7 @@ var a = r(255367),
     P = r(22267),
     b = r(302800),
     w = r(388032),
-    O = r(181004),
+    O = r(186175),
     j = r(593639),
     _ = r(945182),
     E = r(234286);
@@ -50,10 +50,10 @@ function x(e) {
 let C = (e) => {
         let { product: t, pairedProduct: r, itemConsumed: n } = e,
             [i] = t.items,
-            o = null == r ? void 0 : r.items[0],
+            s = null == r ? void 0 : r.items[0],
             b = (0, u.e7)([h.default], () => {
                 let e = h.default.getCurrentUser();
-                return s()(null != e, "User cannot be undefined"), e;
+                return o()(null != e, "User cannot be undefined"), e;
             }),
             x = Object.values(d.a).includes(t.skuId),
             C = (0, v.ZP)({ location: "CollectiblesProductPreview" });
@@ -68,8 +68,8 @@ let C = (e) => {
                 }),
             )
             .with(c.Z.AVATAR_DECORATION, () =>
-                (s()(i.type === c.Z.AVATAR_DECORATION, "ts-match already checked the type"),
-                null != o && o.type === c.Z.AVATAR_DECORATION)
+                (o()(i.type === c.Z.AVATAR_DECORATION, "ts-match already checked the type"),
+                null != s && s.type === c.Z.AVATAR_DECORATION)
                     ? (0, a.jsxs)("div", {
                           children: [
                               (0, a.jsx)("div", {
@@ -85,7 +85,7 @@ let C = (e) => {
                               (0, a.jsx)("div", {
                                   className: O.avatarDecorationPairTwo,
                                   children: (0, a.jsx)(m.R, {
-                                      item: o,
+                                      item: s,
                                       avatarSize: f.EFr.SIZE_120,
                                       isPurchased: !1,
                                   }),
@@ -144,7 +144,7 @@ let C = (e) => {
     },
     S = (e) => {
         let { reducedMotion: t, displayOptions: r } = e,
-            [i, s] = n.useState(!1),
+            [i, o] = n.useState(!1),
             l = (0, f.q_F)({
                 from: {
                     transform: "translateX(100%)",
@@ -155,7 +155,7 @@ let C = (e) => {
                     right: "50%",
                 },
                 config: { duration: 1550 },
-                onRest: () => setTimeout(() => s(!0), 100),
+                onRest: () => setTimeout(() => o(!0), 100),
             }),
             c = (0, f.q_F)({
                 from: {
@@ -188,12 +188,12 @@ let C = (e) => {
             );
         return (0, a.jsxs)(a.Fragment, {
             children: [
-                (0, a.jsx)(o.animated.div, {
+                (0, a.jsx)(s.animated.div, {
                     className: O.easterEggContainer,
                     style: l,
                     children: (0, a.jsx)(C, x({}, e)),
                 }),
-                (0, a.jsx)(o.animated.div, {
+                (0, a.jsx)(s.animated.div, {
                     className: O.easterEggContainer,
                     style: t ? d : c,
                     children: (0, a.jsx)("img", {

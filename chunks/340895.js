@@ -27,30 +27,28 @@ function g(e, t, n) {
     );
 }
 let E = "IncomingCallStore",
-    b = {
-        width: 232,
-        height: 315,
-    },
-    y = 10,
-    O = new Set(),
-    v = [],
-    I = new Map(),
-    T = new Set(),
-    S = !1;
-function A() {
+    b = 232,
+    y = 315,
+    O = 10,
+    v = new Set(),
+    I = [],
+    T = new Map(),
+    S = new Set(),
+    A = !1;
+function N() {
     let e = h.Z.windowSize();
-    return null != r && r.x + b.width < e.width && r.y + b.height < e.height
+    return null != r && r.x + b < e.width && r.y + y < e.height
         ? r
         : {
-              x: e.width / 2 - b.width / 2,
-              y: e.height / 2 - b.height / 2,
+              x: e.width / 2 - b / 2,
+              y: e.height / 2 - y / 2,
           };
 }
-function N(e) {
-    if (null == e || null == I.get(e)) return !1;
-    I.delete(e), (T = new Set(T)).delete(e);
-}
 function C(e) {
+    if (null == e || null == T.get(e)) return !1;
+    T.delete(e), (S = new Set(S)).delete(e);
+}
+function R(e) {
     let { channelId: t, ringing: n } = e;
     if (
         "GUILD_RING_START" === e.type &&
@@ -61,23 +59,23 @@ function C(e) {
     )
         return !1;
     let r = n.includes(f.default.getId());
-    if (!T.has(t) && r) {
+    if (!S.has(t) && r) {
         let e = _.Z.getChannel(t);
         if (null == e) return !1;
-        let n = y * T.size,
-            { x: r, y: i } = A();
+        let n = O * S.size,
+            { x: r, y: i } = N();
         return (
-            I.set(t, {
+            T.set(t, {
                 channel: e,
                 x: r + n,
                 y: i + n,
             }),
-            void (T = new Set(T)).add(t)
+            void (S = new Set(S)).add(t)
         );
     }
-    return !!T.has(t) && !r && N(t);
+    return !!S.has(t) && !r && C(t);
 }
-function R(e) {
+function P(e) {
     let { channelId: t } = e;
     return (
         ("GUILD_RING_STOP" !== e.type ||
@@ -86,14 +84,14 @@ function R(e) {
                 location: "IncomingCallDelete",
             }).enabled &&
                 !!e.ringing.includes(f.default.getId()))) &&
-        N(t)
+        C(t)
     );
 }
-function P(e) {
-    let { channelId: t } = e;
-    return N(t);
-}
 function w(e) {
+    let { channelId: t } = e;
+    return C(t);
+}
+function D(e) {
     let { x: t, y: n } = e;
     return (
         (r = {
@@ -104,46 +102,46 @@ function w(e) {
         !1
     );
 }
-function D(e) {
+function L(e) {
     let { channel: t } = e;
-    return N(t.id);
-}
-function L() {
-    S = p.Z.getStatus() === m.Skl.DND || c.QZ.getSetting();
+    return C(t.id);
 }
 function x() {
+    A = p.Z.getStatus() === m.Skl.DND || c.QZ.getSetting();
+}
+function M() {
     let e = f.default.getId();
-    T.forEach((t) => {
+    S.forEach((t) => {
         var n;
         let r = t;
-        null != (null == (n = _.Z.getChannel(r)) ? void 0 : n.guild_id) && (l.Z.getGuildRingingUsers(r).has(e) || N(r));
+        null != (null == (n = _.Z.getChannel(r)) ? void 0 : n.guild_id) && (l.Z.getGuildRingingUsers(r).has(e) || C(r));
     });
 }
-class M extends (i = o.ZP.Store) {
+class k extends (i = o.ZP.Store) {
     initialize() {
-        this.waitFor(_.Z, p.Z), this.syncWith([p.Z], L), this.syncWith([u.Z], L), this.syncWith([l.Z], x);
+        this.waitFor(_.Z, p.Z), this.syncWith([p.Z], x), this.syncWith([u.Z], x), this.syncWith([l.Z], M);
     }
     getIncomingCalls() {
-        return S ? v : Array.from(I.values());
+        return A ? I : Array.from(T.values());
     }
     getIncomingCallChannelIds() {
-        return S ? O : T;
+        return A ? v : S;
     }
     getFirstIncomingCallId() {
-        return S ? null : T.values().next().value;
+        return A ? null : S.values().next().value;
     }
     hasIncomingCalls() {
-        return !S && T.size > 0;
+        return !A && S.size > 0;
     }
 }
-g(M, "displayName", "IncomingCallStore");
-let j = new M(s.Z, {
-    CALL_CREATE: C,
-    CALL_UPDATE: C,
-    CALL_DELETE: R,
-    GUILD_RING_START: C,
-    GUILD_RING_STOP: R,
-    VOICE_CHANNEL_SELECT: P,
-    INCOMING_CALL_MOVE: w,
-    CHANNEL_DELETE: D,
+g(k, "displayName", "IncomingCallStore");
+let j = new k(s.Z, {
+    CALL_CREATE: R,
+    CALL_UPDATE: R,
+    CALL_DELETE: P,
+    GUILD_RING_START: R,
+    GUILD_RING_STOP: P,
+    VOICE_CHANNEL_SELECT: w,
+    INCOMING_CALL_MOVE: D,
+    CHANNEL_DELETE: L,
 });

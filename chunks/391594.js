@@ -22,8 +22,8 @@ var r = n(73800),
     O = n(333867),
     y = n(98278),
     b = n(642619),
-    h = n(110560),
-    g = n(507808),
+    g = n(110560),
+    h = n(507808),
     P = n(626135),
     m = n(585483),
     v = n(63063),
@@ -33,7 +33,7 @@ var r = n(73800),
     T = n(215023),
     j = n(981631),
     w = n(474936),
-    S = n(427487),
+    S = n(456003),
     _ = n(388032);
 let k = (t) => (null != t ? _.intl.format(_.t["4kp0AA"], { itemName: t }) : null),
     R = (t) => {
@@ -134,12 +134,12 @@ let k = (t) => (null != t ? _.intl.format(_.t["4kp0AA"], { itemName: t }) : null
                     variant: "secondary",
                     onClick: () => {
                         r(),
-                            (0, g.Y)({
+                            (0, h.Y)({
                                 pageType: j.ZY5.SHOP_ORBS_TAB,
                                 sectionType: j.jXE.ORBS_BADGE_REDEMPTION_MODAL,
                                 ctaObject: j.qAy.CTA_TO_QUEST_HOME,
                             }),
-                            (0, h.navigateToQuestHome)();
+                            (0, g.navigateToQuestHome)();
                     },
                 },
             );

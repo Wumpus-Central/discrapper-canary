@@ -170,8 +170,8 @@ function P(e) {
                   content: V,
                   referralTrialOfferId: h,
                   call: x(e.call, T.timestamp),
-                  messageSnapshots: k(e),
-                  reactions: j(null != y ? y : e.reactions, e.poll),
+                  messageSnapshots: j(e),
+                  reactions: k(null != y ? y : e.reactions, e.poll),
                   interaction: Z,
                   interactionData: null != v ? v : e.interaction_data,
                   interactionMetadata: e.interaction_metadata,
@@ -206,7 +206,7 @@ function D(e, t) {
         null != t.attachments && (n = n.set("attachments", L(t))),
         null != t.content && "" !== t.content && (n = n.set("content", t.content)),
         null != t.embeds && (n = n.set("embeds", M(t))),
-        null != t.message_snapshots && (n = n.set("messageSnapshots", k(t))),
+        null != t.message_snapshots && (n = n.set("messageSnapshots", j(t))),
         t.pinned !== n.pinned && (n = n.set("pinned", t.pinned)),
         null != n.webhookId && null != t.author && (n = n.set("author", new f.Z(t.author))),
         null != t.flags && t.flags !== n.flags && (n = n.set("flags", t.flags)),
@@ -215,7 +215,7 @@ function D(e, t) {
         null != t.reactions)
     ) {
         var i;
-        n = n.set("reactions", j(null != (i = e.reactions) ? i : t.reactions));
+        n = n.set("reactions", k(null != (i = e.reactions) ? i : t.reactions));
     }
     return (
         null != t.poll && (n = n.set("poll", (0, l.Z)(t.poll))),
@@ -260,7 +260,7 @@ function M(e) {
     let t = e.embeds.map((t) => (0, m.kC)(e.channel_id, e.id, t));
     return (0, m.o3)(t);
 }
-function j(e, t) {
+function k(e, t) {
     var n;
     if (null == e && (null == t ? void 0 : t.results) == null) return [];
     let r =
@@ -289,7 +289,7 @@ function j(e, t) {
         return t.count < 0 && (t.count = 0), t.burst_count < 0 && (t.burst_count = 0), t;
     });
 }
-function k(e) {
+function j(e) {
     return null == e.message_snapshots
         ? []
         : e.message_snapshots.map((e) => {

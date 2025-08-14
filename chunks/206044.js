@@ -26,7 +26,7 @@ var r = n(255367),
     N = n(46140),
     C = n(231338),
     R = n(388032),
-    P = n(982976);
+    P = n(310696);
 function w(e, t, n) {
     return (
         t in e
@@ -83,7 +83,7 @@ function M(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = j(e, t);
+        i = k(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
         for (r = 0; r < o.length; r++)
@@ -91,7 +91,7 @@ function M(e, t) {
     }
     return i;
 }
-function j(e, t) {
+function k(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -100,7 +100,7 @@ function j(e, t) {
     for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let k = 1000,
+let j = 1000,
     U = (0, s.animated)(d.CJ0),
     G = (e) => {
         var { quest: t, location: n, questContentPosition: o, sourceQuestContent: a } = e,
@@ -123,7 +123,7 @@ let k = 1000,
                 sourceQuestContent: a,
             }),
                 (0, h.JG)((0, g.Rs)(t.id), () => {
-                    f(!0), _.current.start(k, () => f(!1));
+                    f(!0), _.current.start(j, () => f(!1));
                 });
         };
         return (0, r.jsx)(d.ua7, {
@@ -156,9 +156,9 @@ let k = 1000,
                 isExpanded: w,
                 contentPosition: L,
                 toggleExpanded: M,
-                sourceQuestContent: j,
+                sourceQuestContent: k,
             } = e,
-            { ref: k, height: B } = (0, f.ZP)(),
+            { ref: j, height: B } = (0, f.ZP)(),
             [Z, F] = i.useState(null),
             [V, H] = i.useState(null),
             Y = (0, p.Z)((e) => {
@@ -168,7 +168,7 @@ let k = 1000,
             W = (0, _.y)(Y),
             K = (0, A.uq)(c),
             z = c === b.jn.QUESTS_EMBED,
-            q = (0, E.t5)(o, N.dr.QUESTS_CARD, c, j),
+            q = (0, E.t5)(o, N.dr.QUESTS_CARD, c, k),
             X = (null == (t = o.userStatus) ? void 0 : t.completedAt) != null,
             Q = (0, m.O5)(),
             J = (0, E.B6)(o.config.expiresAt),
@@ -183,7 +183,7 @@ let k = 1000,
                         questContent: c,
                         questContentCTA: w ? m.jZ.COLLAPSE : m.jZ.EXPAND,
                         questContentPosition: L,
-                        sourceQuestContent: j,
+                        sourceQuestContent: k,
                     });
             },
             en = () => null != Z && null != V && Z < V,
@@ -251,7 +251,7 @@ let k = 1000,
                                                         questContent: c,
                                                         className: P.headerCollapsedRewardTile,
                                                         location: N.dr.QUESTS_CARD,
-                                                        sourceQuestContent: j,
+                                                        sourceQuestContent: k,
                                                     }),
                                                 }),
                                                 (0, r.jsxs)("div", {
@@ -272,7 +272,7 @@ let k = 1000,
                                     }),
                                 (0, r.jsxs)(s.animated.div, {
                                     ref: (e) => {
-                                        k.current = e;
+                                        j.current = e;
                                     },
                                     className: a()(P.headerExpandedContent, {
                                         [P.outerContainerGiftInventory]: K,
@@ -354,7 +354,7 @@ let k = 1000,
                                                 quest: o,
                                                 location: c,
                                                 questContentPosition: L,
-                                                sourceQuestContent: j,
+                                                sourceQuestContent: k,
                                             }),
                                     ],
                                 }),
@@ -378,7 +378,7 @@ let k = 1000,
                                     shouldShowDisclosure: !0,
                                     hideLearnMore: K,
                                     showShareLink: !n && z,
-                                    sourceQuestContent: j,
+                                    sourceQuestContent: k,
                                     children: (e) =>
                                         (0, r.jsx)(s.animated.div, {
                                             style: {

@@ -1,25 +1,25 @@
-n.d(t, { W: () => I }), n(388685);
+n.d(t, { W: () => E }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(442837),
     o = n(704215),
-    s = n(481060),
-    a = n(515753),
+    a = n(481060),
+    s = n(515753),
     c = n(266454),
     u = n(243778),
     d = n(612659),
-    h = n(819640),
-    p = n(436952),
-    f = n(54480),
+    p = n(819640),
+    f = n(436952),
+    h = n(54480),
     g = n(680783),
     m = n(13186),
     b = n(981631),
     O = n(921944),
     _ = n(474936),
     y = n(388032),
-    C = n(614058),
-    v = n(777091);
-function j(e) {
+    v = n(865696),
+    j = n(777091);
+function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -44,103 +44,100 @@ function j(e) {
     }
     return e;
 }
-let E = (e, t) => {
-        let n = null != t && !t.isPreview;
-        return e ? (e && !n ? "no-wallpaper-nitro" : "has-wallpaper-nitro") : "non-nitro";
-    },
-    S = (e) => ("has-wallpaper-nitro" === e ? y.intl.string(y.t.T9dXPj) : y.intl.string(y.t.zyvzQ0)),
-    x = (e) => {
-        switch (e) {
-            case "non-nitro":
-                return y.intl.string(y.t.VU8fxM);
-            case "no-wallpaper-nitro":
-                return y.intl.string(y.t.BQBNjY);
-            case "has-wallpaper-nitro":
-                return y.intl.string(y.t.eZMxlZ);
-        }
-    },
-    I = i.memo(function (e) {
-        let t = e.channel.id,
-            n = e.selected,
-            I = (0, c.Nj)(o.z.CHAT_WALLPAPERS_PICKER_COACHMARK),
-            P = (0, l.e7)([h.Z], () => h.Z.getLayers().includes(b.S9g.USER_SETTINGS)),
-            { canAccessPicker: N, entryPoint: w } = (0, f.m)({
-                location: "ChatWallpaperDMListCoachmark",
-                channelId: t,
-            }),
-            Z = w === p.FN.CONTEXT_MENU,
-            [T, A] = (0, u.US)(I && Z && n && N && !P ? [o.z.CHAT_WALLPAPERS_DM_LIST_COACHMARK] : []),
-            R = (0, d.m)(_.p9.TIER_2),
-            D = (0, g.Z)(t),
-            L = T === o.z.CHAT_WALLPAPERS_DM_LIST_COACHMARK,
-            M = (0, i.useRef)(null),
-            k = (0, i.useRef)(null),
-            U = (0, i.useRef)(null),
-            [G, B] = (0, i.useState)(m.U.TOP);
-        if (
-            ((0, i.useLayoutEffect)(() => {
-                if (null === M.current) return;
-                let e = () => {
-                    var e, t, n;
-                    let r = null == (e = M.current) ? void 0 : e.getBoundingClientRect();
-                    if (null == r) return;
-                    let i = null != (n = null == (t = U.current) ? void 0 : t.getBoundingClientRect().height) ? n : 0;
-                    window.innerHeight - r.bottom < i ? B(m.U.BOTTOM) : B(m.U.TOP);
-                };
-                return e(), window.addEventListener("resize", e), () => window.removeEventListener("resize", e);
-            }, [L]),
-            !L)
-        )
-            return (0, r.jsx)(a.ZP, j({}, e));
-        let V = () => {
-                A(O.L.USER_DISMISS);
-            },
-            F = E(R, null != D ? D : null),
-            H = S(F),
-            z = x(F);
-        return (0, r.jsx)("div", {
-            ref: M,
-            children: (0, r.jsx)(s.yRy, {
-                targetElementRef: k,
-                align: G,
-                position: "right",
-                shouldShow: L,
-                onRequestClose: V,
-                renderPopout: () =>
-                    (0, r.jsx)(m.Z, {
-                        ref: U,
-                        onClose: V,
-                        buttonText: y.intl.string(y.t["+IrDzM"]),
-                        header: H,
-                        art: (0, r.jsx)("img", {
-                            src: v.Z,
-                            alt: "",
-                            className: C.chatWallpaperDMListCoachmarkArt,
-                        }),
-                        body: z,
-                        align: G,
+let E = i.memo(function (e) {
+    let t = e.channel.id,
+        n = e.selected,
+        E = (0, c.Nj)(o.z.CHAT_WALLPAPERS_PICKER_COACHMARK),
+        x = (0, l.e7)([p.Z], () => p.Z.getLayers().includes(b.S9g.USER_SETTINGS)),
+        { canAccessPicker: S, entryPoint: P } = (0, h.m)({
+            location: "ChatWallpaperDMListCoachmark",
+            channelId: t,
+        }),
+        I = P === f.FN.CONTEXT_MENU,
+        [N, w] = (0, u.US)(E && I && n && S && !x ? [o.z.CHAT_WALLPAPERS_DM_LIST_COACHMARK] : []),
+        Z = (0, d.m)(_.p9.TIER_2),
+        T = (0, g.Z)(t),
+        A = N === o.z.CHAT_WALLPAPERS_DM_LIST_COACHMARK,
+        R = (0, i.useRef)(null),
+        D = (0, i.useRef)(null),
+        L = (0, i.useRef)(null),
+        [M, k] = (0, i.useState)(m.U.TOP);
+    if (
+        ((0, i.useLayoutEffect)(() => {
+            if (null === R.current) return;
+            let e = () => {
+                var e, t, n;
+                let r = null == (e = R.current) ? void 0 : e.getBoundingClientRect();
+                if (null == r) return;
+                let i = null != (n = null == (t = L.current) ? void 0 : t.getBoundingClientRect().height) ? n : 0;
+                window.innerHeight - r.bottom < i ? k(m.U.BOTTOM) : k(m.U.TOP);
+            };
+            return e(), window.addEventListener("resize", e), () => window.removeEventListener("resize", e);
+        }, [A]),
+        !A)
+    )
+        return (0, r.jsx)(s.ZP, C({}, e));
+    let U = () => {
+            w(O.L.USER_DISMISS);
+        },
+        G = ((e, t) => {
+            let n = null != t && !t.isPreview;
+            return e ? (e && !n ? "no-wallpaper-nitro" : "has-wallpaper-nitro") : "non-nitro";
+        })(Z, null != T ? T : null),
+        B = "has-wallpaper-nitro" === G ? y.intl.string(y.t.T9dXPj) : y.intl.string(y.t.zyvzQ0),
+        V = ((e) => {
+            switch (e) {
+                case "non-nitro":
+                    return y.intl.string(y.t.VU8fxM);
+                case "no-wallpaper-nitro":
+                    return y.intl.string(y.t.BQBNjY);
+                case "has-wallpaper-nitro":
+                    return y.intl.string(y.t.eZMxlZ);
+            }
+        })(G);
+    return (0, r.jsx)("div", {
+        ref: R,
+        children: (0, r.jsx)(a.yRy, {
+            targetElementRef: D,
+            align: M,
+            position: "right",
+            shouldShow: A,
+            onRequestClose: U,
+            renderPopout: () =>
+                (0, r.jsx)(m.Z, {
+                    ref: L,
+                    onClose: U,
+                    buttonText: y.intl.string(y.t["+IrDzM"]),
+                    header: B,
+                    art: (0, r.jsx)("img", {
+                        src: j.Z,
+                        alt: "",
+                        className: v.chatWallpaperDMListCoachmarkArt,
                     }),
-                children: (t) => {
-                    var n, i;
-                    return (0, r.jsx)(
-                        a.ZP,
-                        ((n = j({}, e)),
-                        (i = i = { ref: k }),
-                        Object.getOwnPropertyDescriptors
-                            ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))
-                            : (function (e, t) {
-                                  var n = Object.keys(e);
-                                  if (Object.getOwnPropertySymbols) {
-                                      var r = Object.getOwnPropertySymbols(e);
-                                      n.push.apply(n, r);
-                                  }
-                                  return n;
-                              })(Object(i)).forEach(function (e) {
-                                  Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(i, e));
-                              }),
-                        n),
-                    );
-                },
-            }),
-        });
+                    body: V,
+                    align: M,
+                }),
+            children: (t) => {
+                var n, i;
+                return (0, r.jsx)(
+                    s.ZP,
+                    ((n = C({}, e)),
+                    (i = i = { ref: D }),
+                    Object.getOwnPropertyDescriptors
+                        ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))
+                        : (function (e, t) {
+                              var n = Object.keys(e);
+                              if (Object.getOwnPropertySymbols) {
+                                  var r = Object.getOwnPropertySymbols(e);
+                                  n.push.apply(n, r);
+                              }
+                              return n;
+                          })(Object(i)).forEach(function (e) {
+                              Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(i, e));
+                          }),
+                    n),
+                );
+            },
+        }),
     });
+});

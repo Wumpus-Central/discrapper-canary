@@ -5,7 +5,7 @@ var r = n(120356),
     s = n.n(r),
     a = n(481060),
     l = n(338390),
-    o = n(883955);
+    o = n(173943);
 function c(e) {
     let { children: t, className: n } = e,
         r = (0, l.Z)("PanelSubtext");

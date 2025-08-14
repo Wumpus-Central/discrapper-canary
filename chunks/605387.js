@@ -122,7 +122,7 @@ var t = (function () {
                 for (var T = 0; T < r; T++)
                     for (var S = T * a, A = T * n, p = 0; p < n; p++) {
                         var y = (A + p) << 2,
-                            N = (t[S + (p >> 3)] >> (7 - ((7 & p) << 0))) & 1,
+                            N = (t[S + (p >> 3)] >> (7 - (7 & p))) & 1,
                             C = 3 * N;
                         (s[y] = O[C]), (s[y + 1] = O[C + 1]), (s[y + 2] = O[C + 2]), (s[y + 3] = N < I ? v[N] : 255);
                     }
@@ -549,10 +549,10 @@ var t = (function () {
                             }
                             var M = f[a(r, v) & y];
                             v += 15 & M;
-                            var j = M >>> 4,
-                                k = e.h[j],
-                                U = (k >>> 4) + o(r, v, 15 & k);
-                            for (v += 15 & k, I && (u = s(u, O + 131072)); O < L; )
+                            var k = M >>> 4,
+                                j = e.h[k],
+                                U = (j >>> 4) + o(r, v, 15 & j);
+                            for (v += 15 & j, I && (u = s(u, O + 131072)); O < L; )
                                 (u[O] = u[O++ - U]), (u[O] = u[O++ - U]), (u[O] = u[O++ - U]), (u[O] = u[O++ - U]);
                             O = L;
                         }
@@ -586,7 +586,7 @@ var t = (function () {
                 for (var S = f[h], A = (u + I * v) << 3; S < n; ) {
                     if (1 == i) {
                         var N = e[A >> 3];
-                        (N = (N >> (7 - (7 & A))) & 1), (s[T * a + (S >> 3)] |= N << (7 - ((7 & S) << 0)));
+                        (N = (N >> (7 - (7 & A))) & 1), (s[T * a + (S >> 3)] |= N << (7 - (7 & S)));
                     }
                     if (2 == i) {
                         var N = e[A >> 3];
@@ -974,13 +974,13 @@ var t = (function () {
                     w = new Uint8Array(b);
                 S.push(w);
                 for (var y = 0; y < b; y++) {
-                    var j = x[y];
-                    if (0 != y && j == x[y - 1]) w[y] = w[y - 1];
-                    else if (y > M && j == x[y - M]) w[y] = w[y - M];
+                    var k = x[y];
+                    if (0 != y && k == x[y - 1]) w[y] = w[y - 1];
+                    else if (y > M && k == x[y - M]) w[y] = w[y - M];
                     else {
-                        var k = I[j];
-                        if (null == k && ((I[j] = k = T.length), T.push(j), T.length >= 300)) break;
-                        w[y] = k;
+                        var j = I[k];
+                        if (null == j && ((I[k] = j = T.length), T.push(k), T.length >= 300)) break;
+                        w[y] = j;
                     }
                 }
             }
@@ -1086,15 +1086,15 @@ var t = (function () {
                 if (1 != L.blend) {
                     var x = L.rect,
                         M = s[l - 1].rect,
-                        j = Math.min(x.x, M.x),
-                        k = Math.min(x.y, M.y),
+                        k = Math.min(x.x, M.x),
+                        j = Math.min(x.y, M.y),
                         U = Math.max(x.x + x.width, M.x + M.width),
                         G = Math.max(x.y + x.height, M.y + M.height),
                         B = {
-                            x: j,
-                            y: k,
-                            width: U - j,
-                            height: G - k,
+                            x: k,
+                            y: j,
+                            width: U - k,
+                            height: G - j,
                         };
                     (s[l - 1].dispose = 1), l - 1 != 0 && p(t, n, r, s, l - 1, B, o), p(t, n, r, s, l, B, o);
                 }
@@ -1486,7 +1486,7 @@ var t = (function () {
                 ((Math.round(255 * m[3]) << 24) |
                     (Math.round(255 * m[2]) << 16) |
                     (Math.round(255 * m[1]) << 8) |
-                    (Math.round(255 * m[0]) << 0)) >>>
+                    (0 | Math.round(255 * m[0]))) >>>
                 0,
         };
     }

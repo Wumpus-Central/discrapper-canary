@@ -7,7 +7,7 @@ var i = n(120356),
     s = n(111028),
     l = n(652853),
     c = n(228168),
-    u = n(861242);
+    u = n(704543);
 function d(e) {
     let { text: t, textId: n, tags: i, platformIcon: d, contextMenu: f } = e,
         { themeType: _ } = (0, l.z)();

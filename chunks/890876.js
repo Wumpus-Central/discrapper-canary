@@ -5,7 +5,7 @@ var i = n(892001),
     o = n(732380),
     a = n(955418),
     s = n(388032),
-    l = n(81208);
+    l = n(116649);
 function c(e) {
     let { user: t, hideMessageInput: n, hideViewFullProfileButton: c } = e;
     return n

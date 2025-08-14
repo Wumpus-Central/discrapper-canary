@@ -1,6 +1,6 @@
 n.d(e, {
     O: () => _,
-    default: () => b,
+    default: () => O,
 }),
     n(388685);
 var i,
@@ -14,28 +14,28 @@ var i,
     d = n(858597),
     T = n(486213),
     S = n(388032),
-    x = n(543921),
+    x = n(767770),
     _ =
         (((i = {}).ACTIONS = "ACTIONS"),
         (i.SAFETY_TIPS = "SAFETY_TIPS"),
         (i.ABOUT_SAFETY_ALERTS = "ABOUT_SAFETY_ALERTS"),
         i);
-let b = (t) => {
-    let { onClose: e, channelId: n, warningId: i, warningType: _, otherUserId: b, transitionState: O } = t,
-        g = null != (0, o.M)(n),
-        [E, h] = s.useState("ACTIONS"),
+let O = (t) => {
+    let { onClose: e, channelId: n, warningId: i, warningType: _, otherUserId: O, transitionState: b } = t,
+        E = null != (0, o.M)(n),
+        [g, h] = s.useState("ACTIONS"),
         p = s.useCallback(
             (t) => {
                 (0, c.qc)({
                     channelId: n,
                     warningId: i,
                     warningType: _,
-                    senderId: b,
+                    senderId: O,
                     cta: t,
-                    isNudgeWarning: g,
+                    isNudgeWarning: E,
                 });
             },
-            [n, i, _, b, g],
+            [n, i, _, O, E],
         ),
         A = s.useCallback((t) => {
             let { text: e, onClick: n } = t;
@@ -47,7 +47,7 @@ let b = (t) => {
             });
         }, []),
         m = s.useCallback(() => {
-            switch (E) {
+            switch (g) {
                 case "SAFETY_TIPS":
                 case "ABOUT_SAFETY_ALERTS":
                     return (0, r.jsx)(A, {
@@ -57,9 +57,9 @@ let b = (t) => {
                 default:
                     return null;
             }
-        }, [E, A]),
+        }, [g, A]),
         j = s.useCallback(() => {
-            switch (E) {
+            switch (g) {
                 case "SAFETY_TIPS":
                     return S.intl.string(S.t.EtNxi4);
                 case "ABOUT_SAFETY_ALERTS":
@@ -67,8 +67,8 @@ let b = (t) => {
                 default:
                     return S.intl.string(S.t.MAhAp6);
             }
-        }, [E]),
-        f = s.useCallback(
+        }, [g]),
+        N = s.useCallback(
             (t) => {
                 h(t);
             },
@@ -76,7 +76,7 @@ let b = (t) => {
         );
     return (0, r.jsxs)(l.Y0X, {
         "data-migration-pending": !0,
-        transitionState: O,
+        transitionState: b,
         "aria-label": S.intl.string(S.t.eXlt09),
         size: l.CgR.SMALL,
         parentComponent: "SafetyToolsModal",
@@ -93,17 +93,17 @@ let b = (t) => {
             }),
             (0, r.jsx)(l.Ttm, {
                 children: (0, r.jsxs)(l.MyZ, {
-                    activeSlide: E,
+                    activeSlide: g,
                     width: 440,
                     children: [
                         (0, r.jsx)(l.Mi4, {
                             id: "ACTIONS",
                             children: (0, r.jsx)(d.Z, {
-                                otherUserId: b,
+                                otherUserId: O,
                                 channelId: n,
                                 warningId: i,
                                 warningType: _,
-                                transitionToSlide: f,
+                                transitionToSlide: N,
                             }),
                         }),
                         (0, r.jsx)(l.Mi4, {

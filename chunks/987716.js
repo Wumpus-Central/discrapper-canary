@@ -14,7 +14,7 @@ var r = n(255367),
     h = n(96848),
     m = n(703926),
     g = n(388032),
-    E = n(591858);
+    E = n(611344);
 function b(e, t, n) {
     return (
         t in e
@@ -105,8 +105,8 @@ let S = (e) => {
         { ref: L } = D,
         x = I(D, ["ref"]),
         M = (0, u.MY)(b, t),
-        j = M === u.xr.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD,
-        k = M !== u.xr.DEFAULT,
+        k = M === u.xr.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD,
+        j = M !== u.xr.DEFAULT,
         U = (0, _.m)(),
         G = (0, f.ZP)({ location: "GiftAnimationOptions" }),
         B = (e) => {
@@ -114,7 +114,7 @@ let S = (e) => {
         };
     return (0, r.jsxs)("div", {
         children: [
-            k &&
+            j &&
                 (0, r.jsxs)("div", {
                     className: a()(E.giftMainAnimation, n),
                     children: [
@@ -127,7 +127,7 @@ let S = (e) => {
                                   className: E.animation,
                               })
                             : (0, r.jsx)(s.$jN, { className: E.spinner }),
-                        j &&
+                        k &&
                             (0, r.jsxs)("div", {
                                 className: a()(E.soundEmojiContainer, G && E.refresh),
                                 children: [

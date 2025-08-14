@@ -15,7 +15,7 @@ var i = n(120356),
     h = n(981631),
     m = n(474936),
     g = n(388032),
-    E = n(136615);
+    E = n(781990);
 function b(e, t, n) {
     return (
         t in e
@@ -80,8 +80,8 @@ function I(e) {
         L = null != O.upsellLongMessages && !N,
         x = (null == (n = (0, d.N)()) || null == (t = n.subscription_trial) ? void 0 : t.sku_id) === m.Si.TIER_2,
         M = R - w,
-        j = M > P,
-        k = M < 0 && x,
+        k = M > P,
+        j = M < 0 && x,
         U =
             0 === M
                 ? g.intl.string(g.t.tU6YQ0)
@@ -89,7 +89,7 @@ function I(e) {
                   ? g.intl.formatToPlainString(g.t.qH8uFR, { count: M })
                   : g.intl.string(g.t.YSRIqa),
         { analyticsLocations: G } = (0, c.ZP)(l.Z.CHARACTER_COUNT);
-    if (!((D && M >= 0) || !j || (L && !j))) return null;
+    if (!((D && M >= 0) || !k || (L && !k))) return null;
     let B = M >= 0;
     return (0, r.jsx)(c.Gt, {
         value: G,
@@ -117,7 +117,7 @@ function I(e) {
                                       ),
                               })
                             : null,
-                        j || k
+                        k || j
                             ? null
                             : (0, r.jsx)(s.ua7, {
                                   text: U,
@@ -144,7 +144,7 @@ function I(e) {
                     ],
                 }),
                 (0, r.jsx)(s.nn4, { children: g.intl.format(g.t.qH8uFR, { count: M }) }),
-                L && !j
+                L && !k
                     ? (0, r.jsx)(p.Z, {
                           className: E.upsell,
                           iconOnly: (null == (i = O.upsellLongMessages) ? void 0 : i.iconOnly) || !1,

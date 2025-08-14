@@ -32,8 +32,8 @@ var r = n(255367),
     L = n(827498),
     x = n(87005),
     M = n(219066),
-    j = n(106066),
-    k = n(783097),
+    k = n(106066),
+    j = n(783097),
     U = n(695676),
     G = n(98880),
     B = n(804307),
@@ -46,7 +46,7 @@ var r = n(255367),
     K = n(981631),
     z = n(689079),
     q = n(388032),
-    X = n(997438);
+    X = n(729755);
 let Q = [],
     J = 4,
     $ = 4,
@@ -72,8 +72,8 @@ function eo(e) {
     let { context: t, entrypoint: n, searchQuery: o, setSearchQuery: a, setScroller: s, isScrollCloseToBottom: l } = e,
         c = (0, _.e7)([m.Z], () => m.Z.getIsEnabled(), []),
         u = n === L._b.TEXT && "channel" === t.type && null != t.channel && !t.channel.isPrivate(),
-        d = (0, k.Yn)(n),
-        f = !(0, k.Yn)(n),
+        d = (0, j.Yn)(n),
+        f = !(0, j.Yn)(n),
         h = n === L._b.TEXT,
         [E, b] = ep(!0),
         [y, O] = ep(u),
@@ -349,7 +349,7 @@ function eu(e) {
             numItems: a.length,
             numVisibleItems: a.length,
         }),
-        c = (0, j.s)(),
+        c = (0, k.s)(),
         u = 0 === a.length;
     return (i.useEffect(() => {
         o(u);
@@ -673,7 +673,7 @@ function em(e) {
         c = n === L._b.VOICE;
     return {
         fetchState: s,
-        recommendationsSections: i.useMemo(() => (c ? (0, k.pF)(l) : l), [l, c]),
+        recommendationsSections: i.useMemo(() => (c ? (0, j.pF)(l) : l), [l, c]),
         isInstallOnDemand: a,
     };
 }

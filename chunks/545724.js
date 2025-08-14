@@ -8,7 +8,7 @@ var r = n(255367),
     c = n(481060),
     u = n(239091),
     d = n(687683),
-    p = n(173519);
+    p = n(978070);
 function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -71,22 +71,6 @@ let g = function (e) {
         },
         T = () => {
             I(!1);
-        },
-        P = (e, t) => {
-            null != t &&
-                (S(!0),
-                (0, u.jW)(
-                    e,
-                    async () => {
-                        let { default: e } = await Promise.all([n.e("79695"), n.e("69220")]).then(n.bind(n, 881351));
-                        return (n) => (0, r.jsx)(e, h(f({}, n), { user: t }));
-                    },
-                    {
-                        onClose: () => {
-                            S(!1);
-                        },
-                    },
-                ));
         };
     return (0, r.jsx)(s.mh, {
         id: m.id,
@@ -105,7 +89,25 @@ let g = function (e) {
                                     [p.active]: O || C,
                                     [p.firstItem]: 0 === t,
                                 }),
-                                onContextMenu: (e) => P(e, g),
+                                onContextMenu: (e) => {
+                                    null != g &&
+                                        (S(!0),
+                                        (0, u.jW)(
+                                            e,
+                                            async () => {
+                                                let { default: e } = await Promise.all([
+                                                    n.e("79695"),
+                                                    n.e("69220"),
+                                                ]).then(n.bind(n, 881351));
+                                                return (t) => (0, r.jsx)(e, h(f({}, t), { user: g }));
+                                            },
+                                            {
+                                                onClose: () => {
+                                                    S(!1);
+                                                },
+                                            },
+                                        ));
+                                },
                                 onMouseEnter: N,
                                 onMouseLeave: T,
                                 onClick: null != b ? b : void 0,

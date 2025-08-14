@@ -43,7 +43,7 @@ var r = n(713267),
 function d(e, t, n) {
     void 0 === n && (n = " ");
     var r = String(e);
-    return ((t >>= 0), r.length > t)
+    return ((t |= 0), r.length > t)
         ? String(r)
         : ((t -= r.length) > n.length && (n += c(n, t / n.length)), n.slice(0, t) + String(r));
 }

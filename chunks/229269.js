@@ -16,8 +16,8 @@ var i = n(255367),
     b = n(450272),
     x = n(231338),
     _ = n(388032),
-    j = n(483348),
-    E = n(875531);
+    j = n(403645),
+    E = n(818033);
 function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -169,16 +169,13 @@ function I(e) {
 function N(e) {
     let { paymentRequestWallet: t } = e,
         n = r.useRef(null),
-        [s, a] = r.useState(!1),
-        l = () => {
-            null != n.current && n.current.show();
-        };
+        [s, a] = r.useState(!1);
     return (0, i.jsx)(I, {
         footer: (0, i.jsx)(h.Z, {
             primaryCTA: h.Z.CTAType.CONTINUE,
             primaryText: _.intl.string("applePay" === t ? _.t.WoXvJC : _.t.wnVVr6),
             primaryDisabled: !s,
-            onPrimary: () => l(),
+            onPrimary: () => void (null != n.current && n.current.show()),
             onBack: () => {},
         }),
         children: (0, i.jsx)(T, {

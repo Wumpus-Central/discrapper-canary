@@ -64,8 +64,8 @@ let N = new Set(),
     L = !1,
     x = new Set(),
     M = new Map(),
-    j = new Map(),
-    k = new Map();
+    k = new Map(),
+    j = new Map();
 function U() {
     return null == r || null == w
         ? []
@@ -89,15 +89,15 @@ function B() {
         (P = !1),
         (o = void 0),
         N.clear(),
-        k.clear(),
+        j.clear(),
         (C = v.QZA.OPEN),
         (D = [...(w = null != r ? [...g.Z.getSortedRoles(r.id)] : [])]),
         Z(null == r ? void 0 : r.id, D),
         (L = !1),
         e &&
-            (j.clear(),
+            (k.clear(),
             M.forEach((e, t) => {
-                j.set(t, [...e]);
+                k.set(t, [...e]);
             }));
 }
 function Z(e, t) {
@@ -118,7 +118,7 @@ function Z(e, t) {
                 tertiary_color: null != (s = t.colors.tertiary_color) ? s : null,
             };
         }
-        k.set(t.id, {
+        j.set(t.id, {
             currentStyle: n,
             styleColors: i,
         });
@@ -129,8 +129,8 @@ function F() {
         (D = w = []),
         M.clear(),
         N.clear(),
-        k.clear(),
         j.clear(),
+        k.clear(),
         (x = new Set()),
         (R = !1),
         (P = !1),
@@ -174,7 +174,7 @@ function q(e) {
         r = 0 === n ? null : (0, u.Rf)(n),
         i = ea(t);
     if (null == i) return !1;
-    let o = k.get(t);
+    let o = j.get(t);
     return (
         null != o &&
         ((o.currentStyle = "solid"),
@@ -183,7 +183,7 @@ function q(e) {
             secondary_color: null,
             tertiary_color: null,
         }),
-        k.set(t, S({}, o)),
+        j.set(t, S({}, o)),
         et(i, {
             color: n,
             colorString: r,
@@ -208,12 +208,12 @@ function X(e) {
         i = ea(t);
     if (null == i) return !1;
     let o = (0, h.DX)(n),
-        a = k.get(t);
+        a = j.get(t);
     return (
         null != a &&
         ((a.styleColors[r] = n),
         (a.currentStyle = r),
-        k.set(t, S({}, a)),
+        j.set(t, S({}, a)),
         et(i, {
             color: n.primary_color,
             colors: n,
@@ -251,7 +251,7 @@ let $ = l().debounce(() => {
             l().isEqual(ea(t), es(t)) && (N.delete(t), (e = !0));
         }),
         0 === N.size && (R = !1),
-        L && l().isEqual(M, j) && ((e = !0), (L = !1)),
+        L && l().isEqual(M, k) && ((e = !0), (L = !1)),
         e && eh.emitChange();
 }, 500);
 function ee(e) {
@@ -273,9 +273,9 @@ function en(e) {
     let { id: n, currentStyle: r } = e,
         i = ea(n);
     if (null == i) return !1;
-    let o = k.get(n);
+    let o = j.get(n);
     if (null == o) return !1;
-    k.set(n, {
+    j.set(n, {
         currentStyle: r,
         styleColors: o.styleColors,
     });
@@ -294,13 +294,13 @@ function er(e) {
     if (null == r) return !1;
     let i = M.get(r.id);
     if (l().isEqual(i, n)) return !1;
-    j.set(r.id, n), M.set(r.id, n), $();
+    k.set(r.id, n), M.set(r.id, n), $();
 }
 function ei(e) {
     let { roleId: t, roleConnectionConfigurations: n } = e,
         r = ea(t);
     if (null == r) return !1;
-    (L = !0), x.add(r.id), j.set(r.id, n), $();
+    (L = !0), x.add(r.id), k.set(r.id, n), $();
 }
 function eo(e) {
     let { guildId: t } = e;
@@ -321,7 +321,7 @@ function es(e) {
     });
 }
 function el(e) {
-    return x.has(e.roleId) && (x.delete(e.roleId), M.delete(e.roleId), j.delete(e.roleId), (L = !1)), ec(e);
+    return x.has(e.roleId) && (x.delete(e.roleId), M.delete(e.roleId), k.delete(e.roleId), (L = !1)), ec(e);
 }
 function ec(e) {
     let { guildId: t } = e;
@@ -341,13 +341,13 @@ function ec(e) {
         0 === N.size && (R = !1);
     let i = new Map();
     N.forEach((e) => {
-        let t = k.get(e);
+        let t = j.get(e);
         null != t && i.set(e, t);
     }),
-        k.clear(),
+        j.clear(),
         Z(t, n),
         i.forEach((e, t) => {
-            k.set(t, e);
+            j.set(t, e);
         }),
         (P = !1),
         (w = [...n]);
@@ -389,7 +389,7 @@ class ep extends (a = d.ZP.Store) {
         return R || P || L;
     }
     getRoleStyleData(e) {
-        return k.get(e);
+        return j.get(e);
     }
     get errorMessage() {
         return o;
@@ -428,7 +428,7 @@ class ep extends (a = d.ZP.Store) {
         return i;
     }
     getEditedRoleConnectionConfigurationsMap() {
-        return j;
+        return k;
     }
 }
 T(ep, "displayName", "GuildSettingsRolesStore");

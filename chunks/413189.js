@@ -19,7 +19,7 @@ var r = n(255367),
     y = n(981631),
     O = n(474936),
     v = n(388032),
-    I = n(920706);
+    I = n(664677);
 function T(e) {
     var t, n, T, S;
     let A,
@@ -30,9 +30,9 @@ function T(e) {
         { enabled: L } = (0, p.sX)({ location: "ChatWallpaperSetSystemMessage" }),
         x = p.qM.useExperiment({ location: "ChatWallpaperSetSystemMessage" }).lightMode,
         M = (0, c.ZP)(R),
-        j = (0, s.wjy)((0, l.ZP)()),
+        k = (0, s.wjy)((0, l.ZP)()),
         {
-            chatWallpaper: k,
+            chatWallpaper: j,
             isUpdatingChatWallpaperFlag: U,
             lastSetMessageId: G,
         } = (0, o.cj)([h.Z], () => ({
@@ -47,24 +47,24 @@ function T(e) {
         H = (0, u.m)(O.p9.TIER_2),
         Y = m.t(P);
     return (i.useEffect(() => {
-        null == k && h.Z.shouldFetchWallpapers && g.k9();
-    }, [k]),
+        null == j && h.Z.shouldFetchWallpapers && g.k9();
+    }, [j]),
     null == D)
         ? null
         : ((A = V
               ? v.intl.format(v.t.z847Tk, {
-                    wallpaper_name: null != (n = null == k ? void 0 : k.label) ? n : v.intl.string(v.t["UQMV/P"]),
+                    wallpaper_name: null != (n = null == j ? void 0 : j.label) ? n : v.intl.string(v.t["UQMV/P"]),
                 })
               : v.intl.format(v.t["+lKndX"], {
                     username: null == M ? void 0 : M.nick,
-                    wallpaper_name: null != (T = null == k ? void 0 : k.label) ? T : v.intl.string(v.t["UQMV/P"]),
+                    wallpaper_name: null != (T = null == j ? void 0 : j.label) ? T : v.intl.string(v.t["UQMV/P"]),
                 })),
           L
-              ? j || x
+              ? k || x
                   ? Y && Z
                       ? (N = v.intl.formatToPlainString(v.t.PzTpVV, {
                             wallpaperName:
-                                null != (S = null == k ? void 0 : k.label) ? S : v.intl.string(v.t["UQMV/P"]),
+                                null != (S = null == j ? void 0 : j.label) ? S : v.intl.string(v.t["UQMV/P"]),
                         }))
                       : V ||
                         H ||

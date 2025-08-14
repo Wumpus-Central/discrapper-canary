@@ -45,8 +45,8 @@ let P = new c.Z("ConnectionStore"),
     L = null,
     x = !0,
     M = null,
-    j = null;
-function k() {
+    k = null;
+function j() {
     return I.Wb.isClosed()
         ? (P.verbose("Socket is reconnecting because of starting new session"), I.Wb.connect())
         : (P.verbose("Socket is not reconnecting during a new session because it is not closed"), !1);
@@ -90,13 +90,13 @@ async function B(e) {
                 });
         }
     }
-    I.GC.update(t, !0), (x = !1), (j = null);
+    I.GC.update(t, !0), (x = !1), (k = null);
 }
 function Z() {
     P.verbose("connection closed dispatched"), (D = Date.now());
 }
 function F() {
-    j = null;
+    k = null;
 }
 function V(e) {
     return e.resetSocket && (I.Wb.close(), I.Wb.dispatcher.clear(), I.Wb.connect()), !1;
@@ -107,7 +107,7 @@ function H(e) {
             guildId: e.guildId,
             channelId: e.channelId,
         }),
-        (j = e.lockVoiceStateForResume && null != e.channelId ? e.channelId : null),
+        (k = e.lockVoiceStateForResume && null != e.channelId ? e.channelId : null),
         (0, O.isIOS)() &&
             M === A.$7l.BACKGROUND &&
             (null == e.channelId ? I.Wb.close(!0) : I.Wb.isClosed() && (T.Y(!1), I.Wb.connect())),
@@ -128,7 +128,7 @@ function K(e) {
     return t.reduce((e, t) => {
         if (f.default.getId() !== t.userId) return e;
         if (t.sessionId === L) {
-            if (null != j) return P.verbose("Ignoring voice state for own session due to VSU lock on channel:", j), e;
+            if (null != k) return P.verbose("Ignoring voice state for own session due to VSU lock on channel:", k), e;
             I.GC.setState({
                 guildId: t.guildId,
                 channelId: t.channelId,
@@ -153,7 +153,7 @@ function z(e) {
 function q(e) {
     let { channelId: t } = e;
     if (t === I.GC.channelId) {
-        if (j === t) return !1;
+        if (k === t) return !1;
         I.GC.setState({
             guildId: null,
             channelId: null,
@@ -320,7 +320,7 @@ class eE extends (r = a.ZP.Store) {
 }
 C(eE, "displayName", "GatewayConnectionStore");
 let eb = new eE(s.Z, {
-    START_SESSION: k,
+    START_SESSION: j,
     LOGIN_SUCCESS: G,
     LOGOUT: U,
     CLEAR_CACHES: V,

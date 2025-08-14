@@ -3,16 +3,16 @@ var r = n(255367),
     i = n(73800),
     l = n(120356),
     o = n.n(l),
-    s = n(717976),
-    a = n(442837),
+    a = n(717976),
+    s = n(442837),
     c = n(481060),
     u = n(492162),
     d = n(237583),
-    h = n(451478),
-    p = n(934415),
-    f = n(968847),
+    p = n(451478),
+    f = n(934415),
+    h = n(968847),
     g = n(388032),
-    m = n(76260);
+    m = n(74664);
 let b = {
     friction: 30,
     tension: 300,
@@ -20,24 +20,24 @@ let b = {
 function O(e) {
     var t;
     let { guildChannels: n, jumpToVoiceChannels: l } = e,
-        s = n.getCategoryFromSection(n.voiceChannelsSectionNumber),
-        a = (0, u.Z)(n.id),
-        h = i.useCallback(
+        a = n.getCategoryFromSection(n.voiceChannelsSectionNumber),
+        s = (0, u.Z)(n.id),
+        p = i.useCallback(
             (e) => {
                 e.preventDefault(), e.stopPropagation(), l();
             },
             [l],
         ),
-        f = null != (t = null == s ? void 0 : s.getChannelRecords()) ? t : [],
-        b = (0, p.c4)({
-            channels: f,
+        h = null != (t = null == a ? void 0 : a.getChannelRecords()) ? t : [],
+        b = (0, f.c4)({
+            channels: h,
             selectedChannelId: null,
             selectedVoiceChannelId: null,
-            voiceStates: a,
+            voiceStates: s,
         });
     return (0, r.jsxs)(c.P3F, {
         className: o()(m.bar, m.voiceBar),
-        onClick: h,
+        onClick: p,
         children: [
             (0, r.jsx)(c.gj8, {
                 size: "custom",
@@ -64,39 +64,39 @@ function O(e) {
 }
 function _(e) {
     let { position: t, guildChannels: n, guildChannelsVersion: l, jumpToVoiceChannels: u, jumpToChannel: d } = e,
-        { bottomBar: p, topBar: _ } = (0, a.cj)([f.Z], () => f.Z.getUnreadStateForGuildId(n.id)),
-        y = (0, a.e7)([h.Z], () => h.Z.isFocused()),
-        { mode: C, mentionCount: v, targetChannelId: j } = "bottom" === t ? p : _,
-        E = C === f.x.HIDDEN,
-        S = (0, c.q_F)(
+        { bottomBar: f, topBar: _ } = (0, s.cj)([h.Z], () => h.Z.getUnreadStateForGuildId(n.id)),
+        y = (0, s.e7)([p.Z], () => p.Z.isFocused()),
+        { mode: v, mentionCount: j, targetChannelId: C } = "bottom" === t ? f : _,
+        E = v === h.x.HIDDEN,
+        x = (0, c.q_F)(
             {
                 to: { transform: E ? ("bottom" === t ? "translateY(180%)" : "translateY(-180%)") : "translateY(0%)" },
                 config: b,
             },
             y ? "respect-motion-settings" : "animate-never",
         ),
-        x = i.useCallback(
+        S = i.useCallback(
             (e) => {
-                e.preventDefault(), e.stopPropagation(), null != j && d(j);
+                e.preventDefault(), e.stopPropagation(), null != C && d(C);
             },
-            [d, j],
+            [d, C],
         );
     return (0, r.jsx)("div", {
         className: o()(m.container, {
             [m.top]: "top" === t,
             [m.bottom]: "bottom" === t,
         }),
-        children: (0, r.jsx)(s.animated.div, {
+        children: (0, r.jsx)(a.animated.div, {
             className: m.containerPadding,
-            style: S,
+            style: x,
             "aria-hidden": E,
             children:
-                C === f.x.HIDDEN
+                v === h.x.HIDDEN
                     ? (0, r.jsx)("div", { className: o()(m.bar, m.emptyBar) })
-                    : C === f.x.UNREAD
+                    : v === h.x.UNREAD
                       ? (0, r.jsxs)(c.P3F, {
                             className: m.bar,
-                            onClick: x,
+                            onClick: S,
                             children: [
                                 "bottom" === t
                                     ? (0, r.jsx)(c.CJ0, {
@@ -121,18 +121,18 @@ function _(e) {
                                 }),
                             ],
                         })
-                      : C === f.x.MENTIONS
+                      : v === h.x.MENTIONS
                         ? (0, r.jsx)(c.P3F, {
                               className: o()(m.bar, m.mentionsBar),
-                              onClick: x,
+                              onClick: S,
                               children: (0, r.jsx)(c.Text, {
                                   variant: "text-xs/semibold",
                                   color: "status-danger-text",
                                   className: m.barText,
-                                  children: g.intl.format(g.t.EQcLys, { count: v }),
+                                  children: g.intl.format(g.t.EQcLys, { count: j }),
                               }),
                           })
-                        : C === f.x.VOICE_CHANNELS
+                        : v === h.x.VOICE_CHANNELS
                           ? (0, r.jsx)(O, {
                                 jumpToVoiceChannels: u,
                                 guildChannels: n,

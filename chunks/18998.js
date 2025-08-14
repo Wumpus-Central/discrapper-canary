@@ -3,14 +3,14 @@ var r,
     i = n(255367),
     l = n(73800),
     o = n(120356),
-    s = n.n(o),
-    a = n(954955),
-    c = n.n(a),
+    a = n.n(o),
+    s = n(954955),
+    c = n.n(s),
     u = n(748780),
     d = n(902704),
-    h = n(481060),
-    p = n(80948);
-function f(e, t, n) {
+    p = n(481060),
+    f = n(247060);
+function h(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -34,7 +34,7 @@ function g(e) {
                 }),
             )),
             r.forEach(function (t) {
-                f(e, t, n[t]);
+                h(e, t, n[t]);
             });
     }
     return e;
@@ -74,12 +74,12 @@ class b extends l.Component {
     render() {
         let { className: e, text: t, hide: n, onClick: r } = this.props;
         return (0, i.jsx)(u.Z.div, {
-            className: s()(p.bar, e, { [p.hidden]: n }),
+            className: a()(f.bar, e, { [f.hidden]: n }),
             onClick: r,
             style: this.getAnimatedStyle(),
             "aria-hidden": n,
             children: (0, i.jsx)("span", {
-                className: p.text,
+                className: f.text,
                 children: t,
             }),
         });
@@ -100,7 +100,7 @@ class b extends l.Component {
     }
     constructor(e) {
         super(e),
-            f(this, "_timeout", void 0),
+            h(this, "_timeout", void 0),
             (this.state = {
                 translateY: new u.Z.Value(),
                 reduceMotion: !1,
@@ -124,7 +124,7 @@ class O extends (r = l.PureComponent) {
                 textUnread: r,
                 reverse: l,
                 className: o,
-                barClassName: a,
+                barClassName: s,
                 hide: c,
                 animate: u,
             } = this.props,
@@ -133,7 +133,7 @@ class O extends (r = l.PureComponent) {
             className: null != o ? o : void 0,
             children: (0, i.jsx)(b, {
                 hide: !0 === c || (null == e && null == t),
-                className: s()(a, null != t ? p.mention : p.unread),
+                className: a()(s, null != t ? f.mention : f.unread),
                 text: null != t ? n : r,
                 reverse: l,
                 animate: u && !d.enabled,
@@ -143,11 +143,11 @@ class O extends (r = l.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            f(this, "state", {
+            h(this, "state", {
                 unread: null,
                 mention: null,
             }),
-            f(
+            h(
                 this,
                 "calculateState",
                 c()(() => {
@@ -160,8 +160,8 @@ class O extends (r = l.PureComponent) {
                             reverse: l,
                             onCalculate: o,
                         } = this.props,
-                        s = null,
                         a = null,
+                        s = null,
                         c = [];
                     e.forEach((e) => {
                         "string" == typeof e
@@ -173,17 +173,17 @@ class O extends (r = l.PureComponent) {
                               : c.push(e.guildIds[0]);
                     });
                     let u = (e) => {
-                            null == s && i(e, l, c) && (s = e), null == a && r(e, l, c) && (a = e);
+                            null == a && i(e, l, c) && (a = e), null == s && r(e, l, c) && (s = e);
                         },
                         d = l ? c.length - 1 : 0,
-                        h = c[d];
-                    for (; null != h; ) {
-                        if ("string" == typeof h) {
-                            if (n(h, l, c)) break;
-                            u(h);
+                        p = c[d];
+                    for (; null != p; ) {
+                        if ("string" == typeof p) {
+                            if (n(p, l, c)) break;
+                            u(p);
                         } else {
                             let e = !1;
-                            for (let t of h) {
+                            for (let t of p) {
                                 if (n(t, l, c)) {
                                     e = !0;
                                     break;
@@ -192,16 +192,16 @@ class O extends (r = l.PureComponent) {
                             }
                             if (e) break;
                         }
-                        (d += l ? -1 : 1), (h = c[d]);
+                        (d += l ? -1 : 1), (p = c[d]);
                     }
-                    null != o && o(s, a, l),
+                    null != o && o(a, s, l),
                         this.setState({
-                            mention: s,
-                            unread: a,
+                            mention: a,
+                            unread: s,
                         });
                 }, 200),
             ),
-            f(this, "handleClick", (e) => {
+            h(this, "handleClick", (e) => {
                 e.preventDefault(), e.stopPropagation();
                 let { unread: t, mention: n } = this.state,
                     { onJumpTo: r } = this.props,
@@ -210,9 +210,9 @@ class O extends (r = l.PureComponent) {
             });
     }
 }
-f(O, "contextType", h.Sfi),
-    f(O, "defaultProps", {
-        className: p.container,
+h(O, "contextType", p.Sfi),
+    h(O, "defaultProps", {
+        className: f.container,
         reverse: !1,
         hide: !1,
         animate: !0,

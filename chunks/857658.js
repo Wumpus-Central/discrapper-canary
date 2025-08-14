@@ -15,9 +15,9 @@ var r = n(255367),
     m = n(233398),
     g = n(866419),
     E = n(771934),
-    b = n(671147),
+    b = n(119475),
     y = n(388032),
-    O = n(52526);
+    O = n(209289);
 function v(e, t, n) {
     return (
         t in e
@@ -165,13 +165,13 @@ function x(e) {
         M = i.useCallback((e) => {
             R(e.hex);
         }, []),
-        j = (e) => {
+        k = (e) => {
             if (((0, E.P0)(), n(e.hex), a.length > 0)) {
                 let t = [...a];
                 (t[v] = e.hex), s(t);
             }
         },
-        k = async () => {
+        j = async () => {
             if (null != c)
                 try {
                     let { sRGBHex: e } = await c.open();
@@ -208,7 +208,7 @@ function x(e) {
                 }),
             (0, r.jsx)(N, {
                 onChange: M,
-                onChangeComplete: j,
+                onChangeComplete: k,
                 color: A,
             }),
             (0, r.jsxs)("div", {
@@ -242,7 +242,7 @@ function x(e) {
                                                     e,
                                                 ),
                                                 {
-                                                    onClick: k,
+                                                    onClick: j,
                                                     icon: d.i,
                                                     "aria-label": y.intl.string(b.default["NCFz+P"]),
                                                 },

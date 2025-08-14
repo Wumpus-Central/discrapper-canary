@@ -163,9 +163,9 @@ function R(e) {
         event: y.CkL.FOCUS_CHAT_BUTTON,
         handler: S ? null : M,
     });
-    let [j, k] = i.useState(!1),
+    let [k, j] = i.useState(!1),
         U = i.useCallback(() => {
-            p && k(!0);
+            p && j(!0);
         }, [p]);
     (0, m.yp)({
         event: y.CkL.SHOW_TEXT_IN_VOICE_POPOUT_COMING_SOON_TIP,
@@ -174,15 +174,15 @@ function R(e) {
         i.useEffect(() => {
             let e;
             return (
-                j &&
+                k &&
                     (e = setTimeout(() => {
-                        k(!1);
+                        j(!1);
                     }, 3000)),
                 () => {
                     clearTimeout(e);
                 }
             );
-        }, [j]);
+        }, [k]);
     let G = [(t = p && S ? O.intl.string(O.t.DPgc5u) : R ? O.intl.string(O.t.nthdxM) : O.intl.string(O.t["5KxXrK"]))];
     return (
         D > 0 && G.push(O.intl.formatToPlainString(O.t["3l1GOz"], { mentionCount: D })),
@@ -198,7 +198,7 @@ function R(e) {
                     iconComponent: x,
                     tooltipPosition: "bottom",
                     wrapperClassName: a()(o, null != s && { [s]: P }),
-                    forceTooltipOpen: j,
+                    forceTooltipOpen: k,
                 },
                 E,
             ),

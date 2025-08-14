@@ -29,8 +29,8 @@ var r = n(255367),
     P = n(981631),
     w = n(474936),
     D = n(388032),
-    L = n(704775),
-    x = n(69002);
+    L = n(564651),
+    x = n(975900);
 function M(e, t, n) {
     return (
         t in e
@@ -44,7 +44,7 @@ function M(e, t, n) {
         e
     );
 }
-function j(e) {
+function k(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -60,7 +60,7 @@ function j(e) {
     }
     return e;
 }
-function k(e, t) {
+function j(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -77,7 +77,7 @@ function U(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : k(Object(t)).forEach(function (n) {
+            : j(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -192,7 +192,7 @@ let Q = (e) => {
                 let { channel: e } = m.current;
                 I.default.track(
                     P.rMx.OPEN_POPOUT,
-                    j(
+                    k(
                         {
                             type: P.jXE.STICKER_POPOUT,
                             guild_id: e.getGuildId(),
@@ -262,7 +262,7 @@ let Q = (e) => {
             [S, A] = i.useState(null),
             [N, R] = i.useState(!1),
             M = v.default.getCurrentUser(),
-            k = T.ZP.canUseCustomStickersEverywhere(M),
+            j = T.ZP.canUseCustomStickersEverywhere(M),
             B = (0, s.e7)([O.Z], () => O.Z.getGuild(n.guild_id)),
             Z = null != B,
             [F, Y] = i.useState(!1),
@@ -274,7 +274,7 @@ let Q = (e) => {
                 }),
                 [o.guild_id],
             ),
-            { current: J } = i.useRef(j({ guild_id: o.getGuildId() }, (0, f.v_)(o))),
+            { current: J } = i.useRef(k({ guild_id: o.getGuildId() }, (0, f.v_)(o))),
             $ = {
                 stickerSourceGuild: B,
                 refreshPositionKey: b,
@@ -293,7 +293,7 @@ let Q = (e) => {
             en = null != S,
             er = !1,
             ei = "Custom Sticker Popout";
-        k
+        j
             ? (t = Z
                   ? et
                       ? D.intl.string(D.t.fZ0DiI)
@@ -313,14 +313,14 @@ let Q = (e) => {
                       },
                   })),
                   (ei = "Custom Sticker Popout (Soft Upsell)"));
-        let eo = !er && !Z && en && k;
+        let eo = !er && !Z && en && j;
         if (
             (i.useEffect(() => {
                 let { refreshPositionKey: e } = ee.current;
                 e();
             }, [N, S]),
             (0, d.ZP)(() => {
-                I.default.track(P.rMx.OPEN_POPOUT, j({ type: ei }, J));
+                I.default.track(P.rMx.OPEN_POPOUT, k({ type: ei }, J));
             }),
             !N)
         )
@@ -424,14 +424,14 @@ let Q = (e) => {
                                                 children: t.map((e) =>
                                                     (0, r.jsx)(
                                                         c.ua7,
-                                                        U(j({ text: e.name }, E.b_), {
+                                                        U(k({ text: e.name }, E.b_), {
                                                             children: (t) => {
                                                                 var { onMouseEnter: n, onMouseLeave: i } = t,
                                                                     o = G(t, ["onMouseEnter", "onMouseLeave"]);
                                                                 return (0, r.jsx)(
                                                                     "div",
                                                                     U(
-                                                                        j(
+                                                                        k(
                                                                             {
                                                                                 className: a()(x.otherEmoji, {
                                                                                     [L.nonInteractingSticker]:

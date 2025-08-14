@@ -2,7 +2,7 @@ n.d(t, { Z: () => o });
 var r = n(255367);
 n(73800);
 var l = n(623132),
-    i = n(992880);
+    i = n(112794);
 function o(e) {
     var { games: t, widgetType: n, isGameFetching: o } = e,
         a = (function (e, t) {

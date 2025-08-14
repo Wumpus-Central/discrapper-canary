@@ -1,10 +1,7 @@
-n.d(t, {
-    l: () => a,
-    m: () => o,
-});
+n.d(t, { m: () => l });
 var r = n(818083),
     i = n(987338);
-let o = (0, r.B)({
+let l = (0, r.B)({
     kind: "user",
     id: "2025-04_rich_presence_activity_invite_redesign",
     label: "Rich Presence Activity Invite Redesign Experiment",
@@ -18,6 +15,3 @@ let o = (0, r.B)({
         },
     ],
 });
-function a() {
-    return o.getCurrentConfig({ location: "getIsRichPresenceActivityInviteRedesignEnabled" }).enabled;
-}

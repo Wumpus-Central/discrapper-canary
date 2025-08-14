@@ -46,7 +46,7 @@ function p(e) {
         b = (0, l.yd)(null == E ? void 0 : E.premiumType, u.p9.TIER_0);
     (0, i.ZDy)(
         async () => {
-            let { default: e } = await Promise.all([n.e("92446"), n.e("49161")]).then(n.bind(n, 409858));
+            let { default: e } = await Promise.all([n.e("92446"), n.e("50981")]).then(n.bind(n, 409858));
             return (n) => {
                 var i, o;
                 return (0, r.jsx)(

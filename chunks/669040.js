@@ -32,8 +32,8 @@ var r = n(255367),
     L = n(74538),
     x = n(624138),
     M = n(543241),
-    j = n(883661),
-    k = n(880949),
+    k = n(883661),
+    j = n(880949),
     U = n(784222),
     G = n(172800),
     B = n(149203),
@@ -41,7 +41,7 @@ var r = n(255367),
     F = n(957825),
     V = n(474936),
     H = n(388032),
-    Y = n(349405);
+    Y = n(751466);
 let W = 0,
     K = 0,
     z = (0, x.Mg)(f.Z.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_TOP),
@@ -186,14 +186,14 @@ let W = 0,
                         let c =
                                 s === B.En.GUILD
                                     ? null != i
-                                        ? (0, r.jsx)(k.Z, {
+                                        ? (0, r.jsx)(j.Z, {
                                               guild: i,
                                               height: ee,
                                               width: ee,
                                           })
                                         : null
                                     : null != o
-                                      ? (0, r.jsx)(j.Z, {
+                                      ? (0, r.jsx)(k.Z, {
                                             categoryId: o,
                                             height: ee,
                                             width: ee,
@@ -308,8 +308,8 @@ let W = 0,
                 isUsingKeyboardNavigation: C,
                 channelGuildId: x,
                 channelId: M,
-                messageId: j,
-                isBurstReaction: k,
+                messageId: k,
+                isBurstReaction: j,
                 listHeaderClassName: G,
             } = e,
             B = i.useRef(!1),
@@ -349,8 +349,8 @@ let W = 0,
                 allowAnimatedEmoji: z,
                 channelGuildId: x,
                 channelId: M,
-                messageId: j,
-                isBurstReaction: k,
+                messageId: k,
+                isBurstReaction: j,
                 listHeaderClassName: G,
                 activeSectionIndex: $,
                 upsellGlowOpacity: er,

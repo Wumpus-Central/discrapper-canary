@@ -6,7 +6,7 @@ var i = n(481060),
     a = n(475413),
     s = n(228168),
     l = n(388032),
-    c = n(584870);
+    c = n(925568);
 function u(e) {
     let { userId: t, isHovering: n, onOpenProfile: u } = e,
         { note: d } = (0, o.Z)(t),

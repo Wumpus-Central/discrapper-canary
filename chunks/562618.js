@@ -5,7 +5,7 @@ var r = n(255367),
     a = n(756715),
     s = n(446673),
     l = n(481060),
-    c = n(748491);
+    c = n(254477);
 function u(e) {
     var t;
     let { title: n, body: i, badge: u, className: d, textLink: f, hasBottomMargin: _ = !1 } = e,

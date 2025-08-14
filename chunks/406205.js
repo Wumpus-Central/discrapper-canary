@@ -1,4 +1,4 @@
-n.d(t, { Z: () => E }), n(388685), n(997841);
+n.d(t, { Z: () => O }), n(388685), n(997841);
 var i = n(255367),
     s = n(73800),
     l = n(120356),
@@ -16,7 +16,7 @@ var i = n(255367),
     v = n(490897),
     j = n(526761),
     S = n(388032),
-    N = n(660418),
+    N = n(407937),
     f = n(650455);
 function b(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -61,25 +61,7 @@ function C(e, t) {
         e
     );
 }
-let O = () => [
-    {
-        value: x.s8.ALL_MESSAGES,
-        name: S.intl.string(S.t.hZrr6u),
-    },
-    {
-        value: x.s8.MENTIONS,
-        name: S.intl.string(S.t.y59NJi),
-    },
-    {
-        value: x.s8.NOTHING,
-        name: S.intl.string(S.t["pGn/bG"]),
-    },
-    {
-        value: x.s8.CUSTOM,
-        name: S.intl.string(S.t["32yow8"]),
-    },
-];
-function E(e) {
+function O(e) {
     let { guildId: t } = e,
         n = (0, a.e7)([c.ZP], () => c.ZP.getGuildFlags(t)),
         l = (0, a.e7)([c.ZP], () => {
@@ -88,22 +70,35 @@ function E(e) {
             return e === v.i.UNSET ? (n === p.bL.ALL_MESSAGES ? v.i.ALL_MESSAGES : v.i.ONLY_MENTIONS) : e;
         }),
         r = (0, a.e7)([c.ZP], () => c.ZP.getMessageNotifications(t)),
-        [f, E] = (0, s.useState)(!1),
-        L = f ? x.s8.CUSTOM : (0, x.gs)(l, r),
-        T = (e) => {
-            if (e === x.s8.CUSTOM) return void E(!0);
-            E(!1), (0, g.V)(t, e);
-        };
+        [f, O] = (0, s.useState)(!1),
+        _ = f ? x.s8.CUSTOM : (0, x.gs)(l, r);
     return (0, i.jsxs)("div", {
         children: [
             (0, i.jsx)("div", {
                 className: N.segmentedControlsContainer,
                 children: (0, i.jsx)(o.sY7, {
-                    value: L,
-                    options: O(),
+                    value: _,
+                    options: [
+                        {
+                            value: x.s8.ALL_MESSAGES,
+                            name: S.intl.string(S.t.hZrr6u),
+                        },
+                        {
+                            value: x.s8.MENTIONS,
+                            name: S.intl.string(S.t.y59NJi),
+                        },
+                        {
+                            value: x.s8.NOTHING,
+                            name: S.intl.string(S.t["pGn/bG"]),
+                        },
+                        {
+                            value: x.s8.CUSTOM,
+                            name: S.intl.string(S.t["32yow8"]),
+                        },
+                    ],
                     onChange: (e) => {
-                        let { value: t } = e;
-                        return T(t);
+                        let { value: n } = e;
+                        return n === x.s8.CUSTOM ? void O(!0) : (O(!1), void (0, g.V)(t, n));
                     },
                     className: N.segmentedControl,
                     look: "pill",
@@ -115,7 +110,7 @@ function E(e) {
                 children: [
                     (0, i.jsxs)("div", {
                         className: N.grid,
-                        children: [(0, i.jsx)(Z, { unreadSetting: l }), (0, i.jsx)(_, { notificationSetting: r })],
+                        children: [(0, i.jsx)(E, { unreadSetting: l }), (0, i.jsx)(Z, { notificationSetting: r })],
                     }),
                     (0, i.jsxs)("div", {
                         className: N.grid,
@@ -157,7 +152,7 @@ function E(e) {
                                 value: l,
                                 className: N.input,
                                 onChange: (e) => {
-                                    E(!1),
+                                    O(!1),
                                         d.Z.updateGuildNotificationSettings(
                                             t,
                                             {
@@ -204,7 +199,7 @@ function E(e) {
                                 className: N.input,
                                 value: r,
                                 onChange: (e) => {
-                                    E(!1);
+                                    O(!1);
                                     let n = { message_notifications: e };
                                     e === p.bL.ALL_MESSAGES &&
                                         l !== v.i.ALL_MESSAGES &&
@@ -247,7 +242,7 @@ function E(e) {
         ],
     });
 }
-function Z(e) {
+function E(e) {
     let { unreadSetting: t } = e,
         n = [
             {
@@ -312,7 +307,7 @@ function Z(e) {
         })
     );
 }
-function _(e) {
+function Z(e) {
     return (0, i.jsxs)("div", {
         className: N.mockMessage,
         children: [

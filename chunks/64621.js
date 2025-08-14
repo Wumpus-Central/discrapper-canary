@@ -16,7 +16,7 @@ var r = n(255367),
     g = n(228168),
     E = n(981631),
     b = n(388032),
-    y = n(738931),
+    y = n(705738),
     O = n(425637),
     v = n(685741);
 let I = 200,
@@ -44,8 +44,8 @@ function A(e) {
     (0, c.Z)(() => x(!0), D() ? I : null);
     let {
             asset: M,
-            assetClassName: j,
-            className: k,
+            assetClassName: k,
+            className: j,
             content: U,
             header: G,
             spacing: B,
@@ -85,11 +85,11 @@ function A(e) {
                     null == i || i(e);
                 },
                 children: (0, r.jsx)(f.ZP, {
-                    className: k,
+                    className: j,
                     asset: (0, r.jsx)("img", {
                         alt: "",
                         src: M,
-                        className: j,
+                        className: k,
                     }),
                     buttonCTA: b.intl.string(b.t["+IrDzM"]),
                     buttonLayout: f._F.STACKED,

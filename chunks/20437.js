@@ -1,9 +1,9 @@
 n.d(t, {
-    Q: () => r,
+    Q: () => a,
     S: () => l,
 });
-var a = n(73800);
-let r = a.createContext({
+var r = n(73800);
+let a = r.createContext({
     videoPlayerRef: { current: null },
     applicationAudioEnabled: !0,
     setApplicationAudioEnabled: () => {},
@@ -16,5 +16,5 @@ let r = a.createContext({
     setCropData: () => {},
 });
 function l() {
-    return a.useContext(r);
+    return r.useContext(a);
 }

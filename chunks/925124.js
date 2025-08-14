@@ -16,8 +16,8 @@ var n = a(255367),
     f = a(232867),
     v = a(981631),
     j = a(474936),
-    g = a(743549),
-    _ = a(881291);
+    g = a(711322),
+    _ = a(451429);
 let y = async () => {
         try {
             let { body: e } = await s.tn.get({
@@ -540,11 +540,10 @@ function w() {
         { entitlements: B, deleteFractionalPremium: M, refreshEntitlementList: F } = (0, f.m)();
     r.useEffect(() => {
         F();
-    }, [F]);
-    let U = (e) => e.filter((e) => e.sourceType === v.kNB.REVERSE_TRIAL && null != e.endsAt && e.endsAt > new Date());
-    r.useEffect(() => {
-        L(U(B));
-    }, [B]),
+    }, [F]),
+        r.useEffect(() => {
+            L(B.filter((e) => e.sourceType === v.kNB.REVERSE_TRIAL && null != e.endsAt && e.endsAt > new Date()));
+        }, [B]),
         r.useEffect(() => {
             (0 === e.length || 0 === a.length || k) &&
                 y().then((e) => {
@@ -569,16 +568,16 @@ function w() {
                         I(e.discount.sort((e, t) => e.id.localeCompare(t.id)));
                 }));
         }, [k]);
-    let z = async () => {
+    let U = async () => {
             null != i && (await C(i, "trial"), R(!0));
         },
-        G = async () => {
+        z = async () => {
             null != x && (await C(x, "discount"), R(!0));
         },
-        V = async () => {
+        G = async () => {
             await T(), R(!0);
         },
-        H = async () => {
+        V = async () => {
             let e = new Date(Date.now() + 60 * Z * 1000).toISOString();
             await E(e), F();
         };
@@ -601,7 +600,7 @@ function w() {
                                     variant: "primary",
                                     size: "sm",
                                     text: "Clear all User Offers",
-                                    onClick: V,
+                                    onClick: G,
                                 }),
                                 (0, n.jsx)(c.zxk, {
                                     variant: "primary",
@@ -647,7 +646,7 @@ function w() {
                                 (0, n.jsx)(c.zxk, {
                                     variant: "primary",
                                     text: "Create",
-                                    onClick: z,
+                                    onClick: U,
                                 }),
                             ],
                         }),
@@ -675,7 +674,7 @@ function w() {
                                 (0, n.jsx)(c.zxk, {
                                     variant: "primary",
                                     text: "Create",
-                                    onClick: G,
+                                    onClick: z,
                                 }),
                             ],
                         }),
@@ -762,7 +761,7 @@ function w() {
                                 (0, n.jsx)(c.zxk, {
                                     variant: "primary",
                                     text: "Create",
-                                    onClick: H,
+                                    onClick: V,
                                 }),
                             ],
                         }),

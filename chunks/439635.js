@@ -1,4 +1,4 @@
-n.d(t, { default: () => v });
+n.d(t, { default: () => Z });
 var r = n(255367);
 n(73800);
 var i = n(481060),
@@ -20,11 +20,11 @@ var i = n(481060),
     P = n(593589),
     E = n(442754),
     _ = n(981631),
-    Z = n(388032);
-let v = (0, c.Z)(
+    v = n(388032);
+let Z = (0, c.Z)(
     function (e) {
         let { channel: t, guild: n, includeTopic: c = !1, onSelect: o } = e,
-            v = (0, E.Z)(t),
+            Z = (0, E.Z)(t),
             N = (0, g.ZP)(t),
             w = (0, j.Z)(t),
             x = (0, d.Z)(t),
@@ -37,7 +37,7 @@ let v = (0, c.Z)(
             I = (0, f.Z)(t),
             k = (0, a.Z)({
                 id: t.id,
-                label: Z.intl.string(Z.t.gFHI3t),
+                label: v.intl.string(v.t.gFHI3t),
             }),
             L = (0, P.Z)(t, "title_context_menu"),
             M = (0, u.Mn)("ChannelTitleContextMenu"),
@@ -45,10 +45,10 @@ let v = (0, c.Z)(
         return (0, r.jsxs)(i.v2r, {
             navId: "channel-context",
             onClose: l.Zy,
-            "aria-label": Z.intl.string(Z.t.Xm41aW),
+            "aria-label": v.intl.string(v.t.Xm41aW),
             onSelect: o,
             children: [
-                (0, r.jsx)(i.kSQ, { children: v }),
+                (0, r.jsx)(i.kSQ, { children: Z }),
                 (0, r.jsx)(i.kSQ, { children: N }),
                 (0, r.jsxs)(i.kSQ, {
                     children: [c ? C : M ? U : w, m],

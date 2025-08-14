@@ -1,4 +1,4 @@
-l.d(t, { default: () => L }), l(388685), l(953529), l(35282);
+l.d(t, { default: () => U }), l(388685), l(953529), l(35282);
 var n = l(255367),
     i = l(73800),
     s = l(120356),
@@ -27,7 +27,7 @@ var n = l(255367),
     C = l(611480),
     P = l(981631),
     D = l(388032),
-    k = l(143039),
+    k = l(491202),
     Z = l(434227),
     R = l(600126);
 let T = new Set(["application/json", "image/png", "image/apng", "image/gif", "image/jpeg", "image/jpg"]),
@@ -44,69 +44,42 @@ function z(e, t) {
     });
 }
 let A = (e) => {
-        let { stickerPreview: t } = e;
-        return (0, n.jsxs)("div", {
-            className: k.preview,
-            children: [
-                (0, n.jsx)("div", {
-                    className: k.previewDark,
-                    children:
-                        null != t
-                            ? t
-                            : (0, n.jsx)("img", {
-                                  src: Z,
-                                  alt: D.intl.string(D.t.qOsjZm),
-                              }),
-                }),
-                (0, n.jsx)("div", {
-                    className: k.previewLight,
-                    children:
-                        null != t
-                            ? t
-                            : (0, n.jsx)("img", {
-                                  src: R,
-                                  alt: D.intl.string(D.t.YC5NAA),
-                              }),
-                }),
-            ],
-        });
-    },
-    B = (e) => {
-        let { sticker: t, previewData: l, onStickerError: i } = e;
-        if (null != t)
-            return (0, n.jsx)(w.Z, {
-                size: 160,
-                sticker: t,
-            });
-        if (null == l) return null;
-        let { id: s, formatType: r, content: a } = l;
-        return (0, n.jsx)(
-            w.Z,
-            {
-                assetData: a,
-                fileUri: a,
-                size: 160,
-                sticker: {
-                    name: s,
-                    description: "",
-                    id: s,
-                    pack_id: "",
-                    format_type: r,
-                },
-                onError: i,
-            },
-            s,
-        );
-    };
-async function U(e) {
+    let { stickerPreview: t } = e;
+    return (0, n.jsxs)("div", {
+        className: k.preview,
+        children: [
+            (0, n.jsx)("div", {
+                className: k.previewDark,
+                children:
+                    null != t
+                        ? t
+                        : (0, n.jsx)("img", {
+                              src: Z,
+                              alt: D.intl.string(D.t.qOsjZm),
+                          }),
+            }),
+            (0, n.jsx)("div", {
+                className: k.previewLight,
+                children:
+                    null != t
+                        ? t
+                        : (0, n.jsx)("img", {
+                              src: R,
+                              alt: D.intl.string(D.t.YC5NAA),
+                          }),
+            }),
+        ],
+    });
+};
+async function B(e) {
     let t = await (0, I.fD)(e),
         l = new Image();
     (l.src = t), await l.decode();
     let n = (0, o.Ae)(l, 320, 320);
     return (0, I.Bo)(n, e.name, "image/png");
 }
-function L(e) {
-    var t, l, s, o, w, Z, R, L;
+function U(e) {
+    var t, l, s, o, Z, R, U, L;
     let { transitionState: K, onClose: M, guildId: F, sticker: W } = e,
         Y = (0, u.e7)([p.ZP], () => ((null == W ? void 0 : W.tags) != null ? p.ZP.getCustomEmojiById(W.tags) : null)),
         q = null != (l = null == (t = h.default.getCurrentUser()) ? void 0 : t.isStaff()) && l ? C.OC : C.Ht,
@@ -117,8 +90,8 @@ function L(e) {
             filename: null != (o = (0, S._V)(W)) ? o : "",
         }),
         [$, ee] = i.useState(null == Y ? void 0 : Y.id),
-        [et, el] = i.useState(null != (w = null == Y ? void 0 : Y.name) ? w : null == W ? void 0 : W.tags),
-        [en, ei] = i.useState(null != (Z = null == W ? void 0 : W.description) ? Z : ""),
+        [et, el] = i.useState(null != (Z = null == Y ? void 0 : Y.name) ? Z : null == W ? void 0 : W.tags),
+        [en, ei] = i.useState(null != (R = null == W ? void 0 : W.description) ? R : ""),
         [es, er] = i.useState(!1),
         [ea, eo] = i.useState(null),
         eu = (0, u.e7)([x.Z], () => x.Z.getGuild(F)),
@@ -147,9 +120,9 @@ function L(e) {
                     isBlocking: !0,
                 });
             let n = e;
-            if ("image/jpeg" === l || "image/jpg" === l) n = await U(e);
+            if ("image/jpeg" === l || "image/jpg" === l) n = await B(e);
             else if ("image/png" === l && e.size > q && !(await (0, I.c0)(e))) {
-                let t = (n = await U(e)).size > q;
+                let t = (n = await B(e)).size > q;
                 b.default.track(P.rMx.STICKER_FILE_RESIZED, {
                     original_file_size_bytes: e.size,
                     resized_file_size_bytes: n.size,
@@ -236,7 +209,33 @@ function L(e) {
                 er(!1);
             }
         },
-        ev = B({
+        ev = ((e) => {
+            let { sticker: t, previewData: l, onStickerError: i } = e;
+            if (null != t)
+                return (0, n.jsx)(w.Z, {
+                    size: 160,
+                    sticker: t,
+                });
+            if (null == l) return null;
+            let { id: s, formatType: r, content: a } = l;
+            return (0, n.jsx)(
+                w.Z,
+                {
+                    assetData: a,
+                    fileUri: a,
+                    size: 160,
+                    sticker: {
+                        name: s,
+                        description: "",
+                        id: s,
+                        pack_id: "",
+                        format_type: r,
+                    },
+                    onError: i,
+                },
+                s,
+            );
+        })({
             sticker: W,
             previewData: G,
             onStickerError: i.useCallback(() => {
@@ -276,7 +275,7 @@ function L(e) {
                                     children: ed
                                         ? (0, n.jsx)(g.oil, {
                                               disabled: !0,
-                                              value: null != (R = null == H ? void 0 : H.filename) ? R : "",
+                                              value: null != (U = null == H ? void 0 : H.filename) ? U : "",
                                           })
                                         : (0, n.jsx)(v.Z, {
                                               buttonText: D.intl.string(D.t.xEnDUV),

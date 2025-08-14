@@ -8,14 +8,11 @@ var l = n(481060),
     c = n(806729),
     s = n(821179),
     d = n(388032),
-    u = n(889080);
+    u = n(878449);
 function f(e) {
     let { user: t, onClose: n } = e,
         { trackUserProfileAction: f } = (0, a.KZ)(),
-        { mutualGuilds: p, isFetching: m } = (0, c.Z)(t),
-        g = (e) => {
-            (0, o.X)(e), n(), (0, i.xf)();
-        };
+        { mutualGuilds: p, isFetching: m } = (0, c.Z)(t);
     return (0, r.jsx)(l.zJl, {
         className: u.listScroller,
         fade: !0,
@@ -29,18 +26,19 @@ function f(e) {
                   ? null == p
                       ? void 0
                       : p.map((e) => {
-                            let { guild: n, nick: l } = e;
+                            let { guild: l, nick: a } = e;
                             return (0, r.jsx)(
                                 s.Z,
                                 {
                                     user: t,
-                                    guild: n,
-                                    nick: l,
+                                    guild: l,
+                                    nick: a,
                                     onSelect: () => {
-                                        f({ action: "PRESS_MUTUAL_GUILD" }), g(n.id);
+                                        var e;
+                                        f({ action: "PRESS_MUTUAL_GUILD" }), (e = l.id), (0, o.X)(e), n(), (0, i.xf)();
                                     },
                                 },
-                                n.id,
+                                l.id,
                             );
                         })
                   : (0, r.jsxs)("div", {

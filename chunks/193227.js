@@ -19,7 +19,7 @@ var n = r(255367),
     O = r(81136),
     C = r(619899),
     E = r(215023),
-    S = r(955210);
+    S = r(887353);
 function y(e) {
     let { products: t, header: r, category: l } = e,
         a = (0, o.e7)([u.default], () => u.default.getCurrentUser()),

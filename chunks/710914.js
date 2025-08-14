@@ -8,7 +8,7 @@ var r = n(255367),
     c = n(415104),
     u = n(46140),
     d = n(388032),
-    p = n(196180);
+    p = n(334525);
 function f(e) {
     let { quests: t, isFetching: n } = e,
         l = null;

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m }), n(388685);
+n.d(t, { Z: () => u }), n(388685);
 var i = n(255367),
     r = n(73800),
     s = n(442837),
@@ -6,16 +6,12 @@ var i = n(255367),
     l = n(747545),
     o = n(131951),
     c = n(388032),
-    d = n(944856);
-let u = {
-    width: 387,
-    height: 218,
-};
-function m() {
+    d = n(766625);
+function u() {
     let e = o.Z.getCameraComponent(),
         t = (0, s.e7)([o.Z], () => o.Z.getVideoDeviceId()),
-        [n, m] = r.useState(!1),
-        p = (0, s.e7)([o.Z], () => o.Z.isVideoAvailable());
+        [n, u] = r.useState(!1),
+        m = (0, s.e7)([o.Z], () => o.Z.isVideoAvailable());
     return n
         ? (0, i.jsx)("div", {
               className: d.cameraWrapper,
@@ -24,8 +20,8 @@ function m() {
                   children: [
                       (0, i.jsx)(e, {
                           deviceId: t,
-                          width: u.width,
-                          height: u.height,
+                          width: 387,
+                          height: 218,
                           disabled: !n,
                       }),
                       (0, i.jsx)(l.S, {}),
@@ -35,7 +31,7 @@ function m() {
         : (0, i.jsx)("div", {
               className: d.cameraWrapper,
               children: (0, i.jsx)(a.ua7, {
-                  text: p ? null : c.intl.string(c.t["8jSzSU"]),
+                  text: m ? null : c.intl.string(c.t["8jSzSU"]),
                   children: (e) => {
                       var t, n;
                       return (0, i.jsx)(
@@ -73,8 +69,8 @@ function m() {
                           )),
                           (n = n =
                               {
-                                  onClick: () => m(!0),
-                                  disabled: !p,
+                                  onClick: () => u(!0),
+                                  disabled: !m,
                               }),
                           Object.getOwnPropertyDescriptors
                               ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))

@@ -17,8 +17,8 @@ var r = n(255367),
     _ = n(100527),
     v = n(906732),
     j = n(594190),
-    b = n(72897),
-    S = n(695346),
+    S = n(72897),
+    b = n(695346),
     C = n(131951),
     y = n(19780),
     O = n(594174),
@@ -41,14 +41,14 @@ var r = n(255367),
     W = n(328242),
     F = n(565574),
     H = n(286420),
-    z = n(51708),
+    z = n(173044),
     V = n(801604),
     Y = n(577257),
     J = n(70722),
     X = n(65154),
-    K = n(676462),
+    K = n(637824),
     q = n(388032),
-    Q = n(123972);
+    Q = n(468918);
 function $(e) {
     return e * (2 - e);
 }
@@ -87,7 +87,7 @@ function ee(e) {
             ed,
             (0, Z.isWindows)() && null != a && et ? "confirm" : "source_select",
         ),
-        [em, eh] = (0, b.Ls)(X.h7.AUDIO_INPUT, { location: "GoLiveModalV2" }),
+        [em, eh] = (0, S.Ls)(X.h7.AUDIO_INPUT, { location: "GoLiveModalV2" }),
         ep = em.concat(eh);
     (0, Y.Z)(eo, ef, "confirm" === eu.modalStep);
     let ex = !w.ZP.canStreamQuality(w.ZP.StreamQuality.HIGH, ec),
@@ -104,8 +104,8 @@ function ee(e) {
         ),
         ev = !(0, Z.isLinux)(),
         ej = "confirm" === eu.modalStep,
-        eb = !et && null != a && !ej,
-        eS = ej || (!eb && en && (!eo || eu.sourceType === f.vA.CAMERA)),
+        eS = !et && null != a && !ej,
+        eb = ej || (!eS && en && (!eo || eu.sourceType === f.vA.CAMERA)),
         eC = eo && eu.sourceType !== f.vA.CAMERA,
         ey = eo || !(0, Z.isWindows)() || !er || ej,
         eO = ei && ex,
@@ -136,7 +136,7 @@ function ee(e) {
         { sourceType: ew } = eu,
         eN = i.useCallback(
             async (e) => {
-                S.eo.updateSetting(eu.notifyFriends), S.I0.updateSetting(eu.hidePreview);
+                b.eo.updateSetting(eu.notifyFriends), b.I0.updateSetting(eu.hidePreview);
                 let [t, r] = await (0, R.Z)(e.hasOwnProperty("pid") ? e.pid : e, {
                     preset: eu.preset,
                     fps: eu.fps,
@@ -193,7 +193,7 @@ function ee(e) {
                             children: [
                                 eO && (0, r.jsx)(H.Z, { onClose: n }),
                                 eC &&
-                                    !eS &&
+                                    !eb &&
                                     (0, r.jsx)(k.Z, {
                                         mainCTADisabled: !ev && "" === eu.nativeSourceType,
                                         mainCTAOnClick: () => {
@@ -203,7 +203,7 @@ function ee(e) {
                                         ctaText: q.intl.string(q.t.FiBjwc),
                                         hideOptionsButton: !eO,
                                     }),
-                                eS &&
+                                eb &&
                                     !eC &&
                                     (0, r.jsx)(k.Z, {
                                         mainCTADisabled: null == eu.selectedSource,
@@ -216,7 +216,7 @@ function ee(e) {
                                         hideOptionsButton: !eO,
                                         ctaText: q.intl.string(K.default["5AyH/v"]),
                                     }),
-                                (!eO || !(eS || eC)) &&
+                                (!eO || !(eb || eC)) &&
                                     (0, r.jsx)(F.Z, {
                                         useSimplifiedMenu: eI,
                                         align: "right",
@@ -248,14 +248,14 @@ function ee(e) {
             },
             className: s()(Q.root, {
                 [Q.nativePicker]: eo && null == a,
-                [Q.channelSelector]: eb,
+                [Q.channelSelector]: eS,
                 [Q.confirmStep]: ej,
             }),
             size: h.CgR.DYNAMIC,
             transitionState: l,
             parentComponent: "GoLiveModalV2",
             children: [
-                eb
+                eS
                     ? (0, r.jsx)(L.Z, {
                           className: s()(Q.channelSelectorComponent, { [Q.withFooter]: ey }),
                           onSelectChannel: eT,

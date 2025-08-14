@@ -23,7 +23,7 @@ var i = n(873546),
     b = n(665149),
     y = n(981631),
     O = n(176505),
-    v = n(284896);
+    v = n(979905);
 function I(e, t, n) {
     return (
         t in e
@@ -131,8 +131,8 @@ function P(e) {
             disableDoubleClick: x,
         } = e,
         M = null == s || (0, O.AB)(s) ? null : s,
-        j = (0, o.e7)([m.Z], () => m.Z.isInChannel(M) || !1),
-        k = (0, o.e7)([c.Z], () => null != M && c.Z.getParticipantsListOpen(M)),
+        k = (0, o.e7)([m.Z], () => m.Z.isInChannel(M) || !1),
+        j = (0, o.e7)([c.Z], () => null != M && c.Z.getParticipantsListOpen(M)),
         { enabled: U, inInbox: G } = d.Z.useExperiment({ location: "HeaderBar" }),
         { hasParticipantsPanel: B } = (0, u.Z)({ location: "HeaderBar" }),
         Z = (0, _.$)({ location: "HeaderBar" });
@@ -158,15 +158,15 @@ function P(e) {
                       L && (0, r.jsx)(b.ZP.Divider, {}),
                       U && !G ? (0, r.jsx)(f.Z, {}) : null,
                       B &&
-                          j &&
+                          k &&
                           null != M &&
-                          !k &&
+                          !j &&
                           l === y.d4z.GROUP_DM &&
                           (0, r.jsxs)("div", {
                               className: v.controlButtonWrapper,
                               children: [
                                   (0, r.jsx)(b.ZP.Divider, {}),
-                                  (0, r.jsx)(h.Z, { onClick: () => a.Z.toggleParticipantsList(M, !k) }),
+                                  (0, r.jsx)(h.Z, { onClick: () => a.Z.toggleParticipantsList(M, !j) }),
                               ],
                           }),
                   ],

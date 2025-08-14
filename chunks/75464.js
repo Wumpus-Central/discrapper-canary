@@ -1,11 +1,11 @@
-n.d(t, { Z: () => m }), n(388685);
+n.d(t, { Z: () => g }), n(388685);
 var i,
     l = n(255367),
     r = n(73800),
     s = n(120356),
     a = n.n(s),
     o = n(153066),
-    c = n(485319);
+    c = n(800967);
 function d(e, t, n) {
     return (
         t in e
@@ -20,16 +20,12 @@ function d(e, t, n) {
     );
 }
 let u = {
-        XSMALL: c.xsmall,
-        SMALL: c.small,
-        MEDIUM: c.medium,
-        LARGE: c.large,
-    },
-    h = {
-        DEFAULT: "default",
-        STATIC: "static",
-    };
-class g extends (i = r.PureComponent) {
+    XSMALL: c.xsmall,
+    SMALL: c.small,
+    MEDIUM: c.medium,
+    LARGE: c.large,
+};
+class h extends (i = r.PureComponent) {
     render() {
         let e = this.props,
             { size: t, src: n, srcHover: i, className: r } = e,
@@ -89,7 +85,7 @@ class g extends (i = r.PureComponent) {
     constructor(...e) {
         super(...e),
             d(this, "state", { hovered: !1 }),
-            d(this, "getMode", () => (null != this.props.srcHover ? h.STATIC : h.DEFAULT)),
+            d(this, "getMode", () => (null != this.props.srcHover ? "static" : "default")),
             d(this, "handleHover", (e) => {
                 let { onMouseEnter: t } = this.props;
                 null == t || t(e), this.state.hovered || this.setState({ hovered: !0 });
@@ -100,9 +96,9 @@ class g extends (i = r.PureComponent) {
             });
     }
 }
-d(g, "Sizes", u),
-    d(g, "defaultProps", {
+d(h, "Sizes", u),
+    d(h, "defaultProps", {
         size: u.MEDIUM,
         disabled: !1,
     });
-let m = g;
+let g = h;

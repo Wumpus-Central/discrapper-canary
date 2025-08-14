@@ -2,14 +2,13 @@ a.d(t, { Z: () => n });
 var i = a(799761);
 let n = {
     ordinalNumber: function (e, t) {
-        var a,
-            i = Number(e),
-            n = null == t ? void 0 : t.unit;
+        var a = Number(e),
+            i = null == t ? void 0 : t.unit;
         return (
-            i +
-            ("year" === n || "month" === n
+            a +
+            ("year" === i || "month" === i
                 ? "ος"
-                : "week" === n || "dayOfYear" === n || "day" === n || "hour" === n || "date" === n
+                : "week" === i || "dayOfYear" === i || "day" === i || "hour" === i || "date" === i
                   ? "η"
                   : "ο")
         );

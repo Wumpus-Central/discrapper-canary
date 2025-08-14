@@ -69,60 +69,63 @@ function v(e) {
         c = (e, t) => {
             let r = n[e];
             i([...n.slice(0, e), b(g({}, r), { response: t }), ...n.slice(e + 1)]);
-        },
-        u = (e, t) => {
-            let r = n[e];
-            i([...n.slice(0, e), b(g({}, r), { response: t }), ...n.slice(e + 1)]);
-        },
-        f = (e, t) => {
-            let { value: r } = t,
-                l = n[e];
-            i([...n.slice(0, e), b(g({}, l), { response: r }), ...n.slice(e + 1)]);
-        },
-        p = (e, t) => {
-            switch (e.field_type) {
-                case o.QJ.TERMS:
-                    return (0, r.jsx)(
-                        h.dd,
-                        {
-                            channelId: a,
-                            formField: e,
-                            onChange: (e, n) => c(t, n),
-                        },
-                        t,
-                    );
-                case o.QJ.TEXT_INPUT:
-                    return (0, r.jsx)(
-                        x.zY,
-                        {
-                            formField: e,
-                            autofocus: 0 === t,
-                            onChange: (e) => u(t, e),
-                        },
-                        t,
-                    );
-                case o.QJ.PARAGRAPH:
-                    return (0, r.jsx)(
-                        m.lX,
-                        {
-                            formField: e,
-                            autofocus: 0 === t,
-                            onChange: (e) => u(t, e),
-                        },
-                        t,
-                    );
-                case o.QJ.MULTIPLE_CHOICE:
-                    return (0, r.jsx)(
-                        d.sp,
-                        {
-                            formField: e,
-                            onChange: (e) => f(t, e),
-                        },
-                        t,
-                    );
-            }
         };
-    return (0, r.jsx)(r.Fragment, { children: n.map((e, t) => p(e, t)) });
+    return (0, r.jsx)(r.Fragment, {
+        children: n.map((e, t) =>
+            ((e, t) => {
+                switch (e.field_type) {
+                    case o.QJ.TERMS:
+                        return (0, r.jsx)(
+                            h.dd,
+                            {
+                                channelId: a,
+                                formField: e,
+                                onChange: (e, r) =>
+                                    ((e, t) => {
+                                        let r = n[e];
+                                        i([...n.slice(0, e), b(g({}, r), { response: t }), ...n.slice(e + 1)]);
+                                    })(t, r),
+                            },
+                            t,
+                        );
+                    case o.QJ.TEXT_INPUT:
+                        return (0, r.jsx)(
+                            x.zY,
+                            {
+                                formField: e,
+                                autofocus: 0 === t,
+                                onChange: (e) => c(t, e),
+                            },
+                            t,
+                        );
+                    case o.QJ.PARAGRAPH:
+                        return (0, r.jsx)(
+                            m.lX,
+                            {
+                                formField: e,
+                                autofocus: 0 === t,
+                                onChange: (e) => c(t, e),
+                            },
+                            t,
+                        );
+                    case o.QJ.MULTIPLE_CHOICE:
+                        return (0, r.jsx)(
+                            d.sp,
+                            {
+                                formField: e,
+                                onChange: (e) =>
+                                    ((e, t) => {
+                                        let { value: r } = t,
+                                            l = n[e];
+                                        i([...n.slice(0, e), b(g({}, l), { response: r }), ...n.slice(e + 1)]);
+                                    })(t, e),
+                            },
+                            t,
+                        );
+                }
+            })(e, t),
+        ),
+    });
 }
 function j(e) {
     let t,

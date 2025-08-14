@@ -28,7 +28,7 @@ var r = n(255367),
     R = n(474936),
     P = n(231338),
     w = n(388032),
-    D = n(88784);
+    D = n(108626);
 let L = 500;
 function x(e) {
     var t, n;
@@ -36,8 +36,8 @@ function x(e) {
         {
             handleStepChange: x,
             trialId: M,
-            trialFooterMessageOverride: j,
-            reviewWarningMessage: k,
+            trialFooterMessageOverride: k,
+            reviewWarningMessage: j,
             planGroup: U,
             openInvoiceId: G,
             analyticsData: B,
@@ -107,14 +107,14 @@ function x(e) {
         eD = (0, S.m)(Q, X),
         eL = null != en && R.o4.has(en.id) && null != eD && !(0, l.aQ)(eD) ? Error(w.intl.string(w.t["2ik8io"])) : null,
         ex = i.useRef(null),
-        [eM, ej] = i.useState(null),
-        ek = !eE && null != eC && null != er && R.nG[eC.trial_id].skus.includes(er),
+        [eM, ek] = i.useState(null),
+        ej = !eE && null != eC && null != er && R.nG[eC.trial_id].skus.includes(er),
         eU = null == eR || null == (t = eR.discount) ? void 0 : t.plan_ids,
         eG = !eE && null != eR && null != eU && null != en && eU.includes(en.id),
         eB = eE && (0, h.pO)(ey),
         eZ = null == V && null == H && ef === P.GZ.SUBSCRIPTION,
         eF = (0, I.Kp)({
-            isTrial: ek,
+            isTrial: ej,
             isGift: eE,
             selectedSkuId: er,
             startedPaymentFlowWithPaymentSources: ep.current,
@@ -146,7 +146,7 @@ function x(e) {
                   onPaymentSourceChange: (e) => eo(null != e ? e.id : null),
                   handlePaymentSourceAdd: () => x(E.h8.ADD_PAYMENT_STEPS),
               })))
-            : ((eK = null == eh || (!eE && null != eD && ef === P.GZ.SUBSCRIPTION && ek && !eD.canRedeemTrial())),
+            : ((eK = null == eh || (!eE && null != eD && ef === P.GZ.SUBSCRIPTION && ej && !eD.canRedeemTrial())),
               null == W || em || eE
                   ? (a()(null != en, "Expected plan to be selected"),
                     (o = (0, r.jsx)(f.Z, {
@@ -162,11 +162,11 @@ function x(e) {
                         legalTermsNodeRef: ex,
                         hasLegalTermsFlash: eT,
                         trialId: eN,
-                        trialFooterMessageOverride: j,
-                        reviewWarningMessage: k,
+                        trialFooterMessageOverride: k,
+                        reviewWarningMessage: j,
                         purchaseState: ec,
                         referralTrialOfferId: F,
-                        isTrial: ek || (null != M && null != j),
+                        isTrial: ej || (null != M && null != k),
                         isDiscount: eG,
                         handleClose: Y,
                     })))
@@ -183,7 +183,7 @@ function x(e) {
                         setHasAcceptedTerms: ed,
                         legalTermsNodeRef: ex,
                         hasLegalTermsFlash: eT,
-                        onInvoiceError: (e) => ej(e),
+                        onInvoiceError: (e) => ek(e),
                         planGroup: U,
                         currencies: q,
                         onCurrencyChange: (e) => ei(e),
@@ -194,7 +194,7 @@ function x(e) {
         (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(y.P, { giftMessage: eb }),
-                !eB && (0, r.jsx)(A.Z, { isEligibleForTrial: ek }),
+                !eB && (0, r.jsx)(A.Z, { isEligibleForTrial: ej }),
                 (0, r.jsxs)(C.C3, {
                     children: [
                         eg && eF && (0, r.jsx)("div", { className: D.bodyGradientPadding }),
@@ -224,7 +224,7 @@ function x(e) {
                         openInvoiceId: G,
                         backButtonEligible: eH,
                         metadata: eP,
-                        isTrial: ek,
+                        isTrial: ej,
                         disablePurchase: eK,
                         onPaymentSourceAdd: ez,
                     }),

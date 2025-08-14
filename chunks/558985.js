@@ -74,5 +74,5 @@ s(d, "defaultProps", {
     children: i.createElement("span"),
     root: null,
     rootMargin: "0px 0px 0px 0px",
-    threshold: [0, Number.MIN_VALUE],
+    threshold: [0, 5e-324],
 });

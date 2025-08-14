@@ -8,7 +8,7 @@ var i = n(255367),
     u = n(481060),
     c = n(59662),
     d = n(36361),
-    f = n(864091);
+    f = n(214779);
 function g(e) {
     let { icon: t, onClick: n } = e;
     return (0, i.jsx)(r.zx, {

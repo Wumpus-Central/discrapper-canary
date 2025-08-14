@@ -2,7 +2,7 @@ n.d(t, { Z: () => a });
 var r = n(255367);
 n(73800);
 var i = n(82295),
-    l = n(711680);
+    l = n(349598);
 function a(e) {
     let { title: t, id: n } = e;
     return (0, r.jsx)(i.Z, {

@@ -29,7 +29,7 @@ var r = n(255367),
     T = n(921944),
     N = n(65154),
     R = n(388032),
-    w = n(261834);
+    w = n(765476);
 function A(e, t, n) {
     return (
         t in e
@@ -197,8 +197,9 @@ class D extends i.PureComponent {
                 this.handleStartCall(e, !0);
             }),
             A(this, "handleJoinVideoCall", () => {
-                let { appContext: e } = this.props;
-                (0, x.Z)(() => this.handleJoinCall(!0), e);
+                let { appContext: e } = this.props,
+                    t = () => this.handleJoinCall(!0);
+                (0, x.Z)(t, e);
             }),
             A(this, "handleBrowserNotSupported", () => {
                 (0, y.Z)();

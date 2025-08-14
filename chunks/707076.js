@@ -1,6 +1,6 @@
 n.d(t, {
-    Z: () => v,
-    j: () => _,
+    Z: () => _,
+    j: () => O,
 });
 var l = n(255367);
 n(73800);
@@ -17,76 +17,33 @@ var i = n(120356),
     I = n(594174),
     g = n(626135),
     N = n(999382),
-    f = n(983135),
-    S = n(84658),
+    S = n(983135),
+    f = n(84658),
     p = n(981631),
     E = n(388032),
-    T = n(384892);
-let O = () => [
-        {
-            emoji: "\uD83E\uDDD9",
-            emojiDescription: E.intl.string(E.t.Jh9uiY),
-            title: E.intl.string(E.t.ATF45u),
-            selected: !0,
-        },
-        {
-            emoji: "\uD83C\uDFA4",
-            emojiDescription: E.intl.string(E.t["nGt+MT"]),
-            title: E.intl.string(E.t["30uo7O"]),
-            selected: !1,
-        },
-        {
-            emoji: "\uD83D\uDC40",
-            emojiDescription: E.intl.string(E.t.hOMH5u),
-            title: E.intl.string(E.t["5Z5sgo"]),
-            selected: !1,
-        },
-    ],
-    x = () => [
-        {
-            channelIcon: () =>
-                (0, l.jsx)(a.MqZ, {
-                    size: "xs",
-                    color: "currentColor",
-                    className: T.channelIcon,
-                }),
-            channel: E.intl.string(E.t.MXJozM),
-            selected: !0,
-        },
-        {
-            channelIcon: () =>
-                (0, l.jsx)(a.VL1, {
-                    size: "md",
-                    color: "currentColor",
-                    className: T.channelIcon,
-                }),
-            channel: E.intl.string(E.t.Pkj0f3),
-            selected: !0,
-        },
-        {
-            channelIcon: () =>
-                (0, l.jsx)(a.VL1, {
-                    size: "md",
-                    color: "currentColor",
-                    className: T.channelIcon,
-                }),
-            channel: E.intl.string(E.t["imVD+v"]),
-            selected: !1,
-        },
-        {
-            channelIcon: () =>
-                (0, l.jsx)(a.Mmi, {
-                    size: "md",
-                    color: "currentColor",
-                    className: T.channelIcon,
-                }),
-            channel: E.intl.string(E.t["Pj/Wpq"]),
-            selected: !0,
-        },
-    ];
-function _(e) {
+    T = n(473450);
+function O(e) {
     let { isTooltip: t = !1 } = e,
-        n = O();
+        n = [
+            {
+                emoji: "\uD83E\uDDD9",
+                emojiDescription: E.intl.string(E.t.Jh9uiY),
+                title: E.intl.string(E.t.ATF45u),
+                selected: !0,
+            },
+            {
+                emoji: "\uD83C\uDFA4",
+                emojiDescription: E.intl.string(E.t["nGt+MT"]),
+                title: E.intl.string(E.t["30uo7O"]),
+                selected: !1,
+            },
+            {
+                emoji: "\uD83D\uDC40",
+                emojiDescription: E.intl.string(E.t.hOMH5u),
+                title: E.intl.string(E.t["5Z5sgo"]),
+                selected: !1,
+            },
+        ];
     t && n.pop();
     let i = t
             ? (0, l.jsx)(a.Text, {
@@ -149,7 +106,7 @@ function _(e) {
         ],
     });
 }
-function j() {
+function x() {
     let e = [
         {
             message: E.t.FUUXXl,
@@ -178,7 +135,7 @@ function j() {
     ];
     return (0, l.jsx)(d.i, { testimonials: e });
 }
-function v() {
+function _() {
     let e = (0, s.e7)([N.Z], () => N.Z.getGuildId()),
         t = (0, s.e7)([h.Z], () => h.Z.getGuild(e)),
         n = (0, s.e7)([I.default], () => I.default.getCurrentUser());
@@ -253,7 +210,7 @@ function v() {
                                               })({}, (0, o.hH)(e))),
                                               (n = n =
                                                   {
-                                                      step: S.PG[S.PG.LANDING],
+                                                      step: f.PG[f.PG.LANDING],
                                                       back: !1,
                                                       skip: !1,
                                                   }),
@@ -275,7 +232,7 @@ function v() {
                                                     }),
                                               t),
                                           ),
-                                              (0, f.IG)(e, S.PG.LANDING);
+                                              (0, S.IG)(e, f.PG.LANDING);
                                       }
                                   },
                                   disabled: !1,
@@ -284,7 +241,7 @@ function v() {
                       ],
                   }),
                   (0, l.jsx)(a.$i$, {}),
-                  (0, l.jsx)(j, {}),
+                  (0, l.jsx)(x, {}),
                   (0, l.jsx)(a.$i$, {}),
                   (0, l.jsxs)("div", {
                       className: T.valuesContainer,
@@ -292,7 +249,7 @@ function v() {
                           (0, l.jsxs)("div", {
                               className: T.valueContainer,
                               children: [
-                                  (0, l.jsx)(_, {}),
+                                  (0, l.jsx)(O, {}),
                                   (0, l.jsxs)("div", {
                                       className: T.valueText,
                                       children: [
@@ -357,7 +314,48 @@ function v() {
                               children: [
                                   (0, l.jsx)("div", {
                                       className: r()(T.upsellPreview, T.spacingLarge),
-                                      children: x().map((e, t) => {
+                                      children: [
+                                          {
+                                              channelIcon: () =>
+                                                  (0, l.jsx)(a.MqZ, {
+                                                      size: "xs",
+                                                      color: "currentColor",
+                                                      className: T.channelIcon,
+                                                  }),
+                                              channel: E.intl.string(E.t.MXJozM),
+                                              selected: !0,
+                                          },
+                                          {
+                                              channelIcon: () =>
+                                                  (0, l.jsx)(a.VL1, {
+                                                      size: "md",
+                                                      color: "currentColor",
+                                                      className: T.channelIcon,
+                                                  }),
+                                              channel: E.intl.string(E.t.Pkj0f3),
+                                              selected: !0,
+                                          },
+                                          {
+                                              channelIcon: () =>
+                                                  (0, l.jsx)(a.VL1, {
+                                                      size: "md",
+                                                      color: "currentColor",
+                                                      className: T.channelIcon,
+                                                  }),
+                                              channel: E.intl.string(E.t["imVD+v"]),
+                                              selected: !1,
+                                          },
+                                          {
+                                              channelIcon: () =>
+                                                  (0, l.jsx)(a.Mmi, {
+                                                      size: "md",
+                                                      color: "currentColor",
+                                                      className: T.channelIcon,
+                                                  }),
+                                              channel: E.intl.string(E.t["Pj/Wpq"]),
+                                              selected: !0,
+                                          },
+                                      ].map((e, t) => {
                                           let { channelIcon: n, channel: i, selected: s } = e;
                                           return (0, l.jsxs)(
                                               "div",

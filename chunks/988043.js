@@ -43,36 +43,35 @@ function C(e) {
             applied_to_existing_guilds: t,
         });
     }
-    let I = (e) => {
-            (0, h.V)({
-                header: E.intl.string(E.t["uUr+GR"]),
-                body: E.intl.string(E.t.hjGJBg),
-                confirmText: E.intl.string(E.t.gm1Ven),
-                cancelText: E.intl.string(E.t.p89ACg),
-                confirmButtonColor: s.zx.Colors.BRAND,
-                onConfirm: () => {
-                    d.gR.updateSetting(e), T(e, !1);
-                },
-                onCancel: () => {
-                    d.gR.updateSetting(e), d.h2.updateSetting(e ? a.Z.getGuildIds() : []), T(e, !0);
-                },
-            });
-        },
-        N = v ? E.intl.string(E.t.PMsfcH) : E.intl.string(E.t.RAQUSE);
+    let I = v ? E.intl.string(E.t.PMsfcH) : E.intl.string(E.t.RAQUSE);
     return (0, i.jsx)(p.U, {
         setting: x.s6.PRIVACY_SERVER_SPECIFIC_PRIVACY_DMS_V2,
         children:
             n === _.T
                 ? (0, i.jsx)(g.Z, {
-                      title: N,
+                      title: I,
                       note: v ? E.intl.string(E.t.XXGmuL) : E.intl.string(E.t.wbYDfX),
                       value: !O,
                       onChange: (e) => {
-                          I(!e);
+                          var t;
+                          (t = !e),
+                              (0, h.V)({
+                                  header: E.intl.string(E.t["uUr+GR"]),
+                                  body: E.intl.string(E.t.hjGJBg),
+                                  confirmText: E.intl.string(E.t.gm1Ven),
+                                  cancelText: E.intl.string(E.t.p89ACg),
+                                  confirmButtonColor: s.zx.Colors.BRAND,
+                                  onConfirm: () => {
+                                      d.gR.updateSetting(t), T(t, !1);
+                                  },
+                                  onCancel: () => {
+                                      d.gR.updateSetting(t), d.h2.updateSetting(t ? a.Z.getGuildIds() : []), T(t, !0);
+                                  },
+                              });
                       },
                   })
                 : (0, i.jsx)(g.Z, {
-                      title: N,
+                      title: I,
                       note: b ? E.intl.string(E.t.V0ka0d) : v ? E.intl.string(E.t.F9WY3d) : E.intl.string(E.t.G7c3Xl),
                       value: !C,
                       onChange: S,

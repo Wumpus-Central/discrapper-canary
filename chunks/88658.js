@@ -1,8 +1,8 @@
 n.d(t, {
-    $6: () => p,
-    YK: () => a,
+    $6: () => f,
+    YK: () => s,
     _o: () => u,
-    bL: () => h,
+    bL: () => p,
     gl: () => c,
     rr: () => d,
 }),
@@ -13,8 +13,8 @@ var r = n(695346),
 n(626135);
 var o = n(981631);
 n(388032);
-let s = 86400000 * o.eBq;
-function a() {
+let a = 86400000 * o.eBq;
+function s() {
     let e = r.h2.getSetting();
     return 0 === i.Z.totalUnavailableGuilds && (e = e.filter((e) => null != l.Z.getGuild(e))), new Set(e);
 }
@@ -30,7 +30,7 @@ function d() {
     let e = r.iH.getSetting();
     return 0 === i.Z.totalUnavailableGuilds && (e = e.filter((e) => null != l.Z.getGuild(e))), new Set(e);
 }
-function h(e) {
+function p(e) {
     return (e & o.HGf) === o.HGf
         ? {
               all: !0,
@@ -43,6 +43,6 @@ function h(e) {
               mutualGuilds: (e & o.SOq.MUTUAL_GUILDS) === o.SOq.MUTUAL_GUILDS,
           };
 }
-function p(e, t) {
-    return !!(!t.verified || t.isStaff()) || (null != e && s > Date.now() - new Date(e.created_at).getTime());
+function f(e, t) {
+    return !!(!t.verified || t.isStaff()) || (null != e && a > Date.now() - new Date(e.created_at).getTime());
 }

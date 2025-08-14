@@ -18,7 +18,7 @@ var r = n(255367),
     b = n(981631),
     y = n(701488),
     O = n(388032),
-    v = n(860108);
+    v = n(714759);
 function I(e) {
     let { application: t } = e,
         n = t.getIconURL(y.Si.LARGE),
@@ -83,15 +83,15 @@ function S(e) {
         leaderboard: R,
         guildId: C,
     });
-    let j = (0, s.q)(null == R || null == (t = R.settings) ? void 0 : t.application_id);
-    if (null == R || null == j) return null;
+    let k = (0, s.q)(null == R || null == (t = R.settings) ? void 0 : t.application_id);
+    if (null == R || null == k) return null;
     if (0 === R.users.length || null == D || null == x)
         return (0, r.jsx)(A, {
-            application: j,
+            application: k,
             selected: v,
         });
-    let { sort_by_statistic_id: k } = R.guild_settings,
-        U = null != (b = null == L || null == (f = L.statistics) || null == (n = f[k]) ? void 0 : n.value) ? b : 0,
+    let { sort_by_statistic_id: j } = R.guild_settings,
+        U = null != (b = null == L || null == (f = L.statistics) || null == (n = f[j]) ? void 0 : n.value) ? b : 0,
         { currentRank: G } = D;
     return (
         (y =
@@ -106,14 +106,14 @@ function S(e) {
             children: [
                 (0, r.jsxs)(c.e$, {
                     children: [
-                        (0, r.jsx)(I, { application: j }),
+                        (0, r.jsx)(I, { application: k }),
                         (0, r.jsx)(a.LZC, { size: 2 }),
                         (0, r.jsx)(c.ll, { children: y }),
                         (0, r.jsx)(l.Gk, {
                             location: l.Gt.CARD,
                             children: (0, r.jsx)(m.DC, {
                                 value: U,
-                                statisticId: k,
+                                statisticId: j,
                             }),
                         }),
                     ],

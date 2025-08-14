@@ -59,8 +59,8 @@ var C = a(392750),
     el = a(621060),
     ei = a(981631),
     es = a(388032),
-    eo = a(360175),
-    ec = a(881291);
+    eo = a(552883),
+    ec = a(451429);
 function ed(e) {
     let { resizableNode: t, onResize: a, onResizeEnd: r } = e,
         l = (0, d.Z)({

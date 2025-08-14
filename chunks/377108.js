@@ -9,7 +9,7 @@ n.d(t, {
     _F: () => A,
     h_: () => C,
     ji: () => u,
-    lG: () => j,
+    lG: () => k,
     ls: () => E,
     pL: () => D,
     wK: () => f,
@@ -78,7 +78,7 @@ class c extends a.C {
                     o.playedSoundFrecency = D.internalBinaryRead(e, e.uint32(), n, o.playedSoundFrecency);
                     break;
                 case 12:
-                    o.guildAndChannelFrecency = j.internalBinaryRead(e, e.uint32(), n, o.guildAndChannelFrecency);
+                    o.guildAndChannelFrecency = k.internalBinaryRead(e, e.uint32(), n, o.guildAndChannelFrecency);
                     break;
                 case 13:
                     o.emojiReactionFrecency = v.internalBinaryRead(e, e.uint32(), n, o.emojiReactionFrecency);
@@ -116,7 +116,7 @@ class c extends a.C {
             e.playedSoundFrecency &&
                 D.internalBinaryWrite(e.playedSoundFrecency, t.tag(11, r.TD.LengthDelimited).fork(), n).join(),
             e.guildAndChannelFrecency &&
-                j.internalBinaryWrite(e.guildAndChannelFrecency, t.tag(12, r.TD.LengthDelimited).fork(), n).join(),
+                k.internalBinaryWrite(e.guildAndChannelFrecency, t.tag(12, r.TD.LengthDelimited).fork(), n).join(),
             e.emojiReactionFrecency &&
                 v.internalBinaryWrite(e.emojiReactionFrecency, t.tag(13, r.TD.LengthDelimited).fork(), n).join();
         let i = n.writeUnknownFields;
@@ -194,7 +194,7 @@ class c extends a.C {
                 no: 12,
                 name: "guild_and_channel_frecency",
                 kind: "message",
-                T: () => j,
+                T: () => k,
             },
             {
                 no: 13,
@@ -1182,4 +1182,4 @@ class M extends a.C {
         ]);
     }
 }
-let j = new M();
+let k = new M();

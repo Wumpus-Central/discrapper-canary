@@ -1,8 +1,8 @@
-n.d(t, { Z: () => N });
+n.d(t, { Z: () => h });
 var r = n(255367),
     l = n(73800),
-    s = n(717976),
-    i = n(442837),
+    i = n(717976),
+    s = n(442837),
     a = n(186325),
     o = n(481060),
     u = n(110924),
@@ -15,48 +15,48 @@ var r = n(255367),
     m = n(596443),
     I = n(50493),
     g = n(981631);
-function f(e, t) {
+function N(e, t) {
     return (n) => {
         if (0 === n) return "auto";
         let r = "forwards" === t.current,
             l = n > 0,
-            s = !1;
+            i = !1;
         return (
-            l && r && "left" === e && (s = !0),
-            l && !r && "right" === e && (s = !0),
-            !l && r && "right" === e && (s = !0),
-            l || r || "left" !== e || (s = !0),
-            s ? "calc(".concat(100 * Math.abs(n), "% + ").concat(Math.round(12 * Math.abs(n)), "px)") : "auto"
+            l && r && "left" === e && (i = !0),
+            l && !r && "right" === e && (i = !0),
+            !l && r && "right" === e && (i = !0),
+            l || r || "left" !== e || (i = !0),
+            i ? "calc(".concat(100 * Math.abs(n), "% + ").concat(Math.round(12 * Math.abs(n)), "px)") : "auto"
         );
     };
 }
-function N(e) {
+function h(e) {
     var t;
-    let { userId: n, guildId: N, onClose: h, analyticsLocation: O, className: p } = e,
-        R = (0, i.e7)([d.ZP], () => d.ZP.getGuildSidebarState(N), [N]),
+    let { userId: n, guildId: h, onClose: f, analyticsLocation: O, className: p } = e,
+        R = (0, s.e7)([d.ZP], () => d.ZP.getGuildSidebarState(h), [h]),
         S = null != (t = null == R ? void 0 : R.details.modViewPanel) ? t : I.k.INFO,
         C = (0, u.Z)(n),
-        v = null == S ? null : S === I.k.INFO ? "backwards" : "forwards",
-        D = (0, E.Z)(v),
-        { reducedMotion: b } = l.useContext(a.S),
-        L = l.useCallback(
+        D = null == S ? null : S === I.k.INFO ? "backwards" : "forwards",
+        L = (0, E.Z)(D),
+        { reducedMotion: U } = l.useContext(a.S),
+        M = l.useCallback(
             (e) => {
-                null != R && (0, _.r)(N, n, R.baseChannelId, { modViewPanel: e });
+                null != R && (0, _.r)(h, n, R.baseChannelId, { modViewPanel: e });
             },
-            [R, N, n],
+            [R, h, n],
         ),
-        x = l.useMemo(
+        v = l.useMemo(
             () => ({
                 [g.EkH.CLOSE_MODAL]: {
                     binds: ["esc"],
                     comboKeysBindGlobal: !0,
-                    action: () => (S === I.k.INFO ? h() : L(I.k.INFO)),
+                    action: () => (S === I.k.INFO ? f() : M(I.k.INFO)),
                 },
             }),
-            [h, S, L],
+            [f, S, M],
         );
-    l.useEffect(() => (c.Z.enable(), c.Z.enableTemp(x), () => c.Z.disableTemp()), [x]);
-    let U = (0, o.Yzy)(
+    l.useEffect(() => (c.Z.enable(), c.Z.enableTemp(v), () => c.Z.disableTemp()), [v]);
+    let b = (0, o.Yzy)(
         S,
         {
             value: 0,
@@ -66,18 +66,18 @@ function N(e) {
         },
         C !== n ? "animate-never" : "animate-always",
     );
-    return (0, r.jsx)(s.animated.div, {
+    return (0, r.jsx)(i.animated.div, {
         style: {
             position: "relative",
             height: "100%",
             flex: 1,
             overflow: "hidden",
         },
-        children: U((e, t, l) => {
-            var i, a, o;
+        children: b((e, t, l) => {
+            var s, a, o;
             let { key: u } = l;
             return (0, r.jsx)(
-                s.animated.div,
+                i.animated.div,
                 {
                     style: (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
@@ -112,11 +112,11 @@ function N(e) {
                             width: "100%",
                             height: "100%",
                         },
-                        b.enabled
-                            ? { opacity: null == (i = e.value) ? void 0 : i.to((e) => 1 - Math.abs(e)) }
+                        U.enabled
+                            ? { opacity: null == (s = e.value) ? void 0 : s.to((e) => 1 - Math.abs(e)) }
                             : {
-                                  left: null == (a = e.value) ? void 0 : a.to(f("left", D)),
-                                  right: null == (o = e.value) ? void 0 : o.to(f("right", D)),
+                                  left: null == (a = e.value) ? void 0 : a.to(N("left", L)),
+                                  right: null == (o = e.value) ? void 0 : o.to(N("right", L)),
                               },
                     ),
                     children: (function (e) {
@@ -124,22 +124,22 @@ function N(e) {
                             case I.k.INFO:
                                 return (0, r.jsx)(A.Z, {
                                     userId: n,
-                                    guildId: N,
-                                    onNavigate: L,
+                                    guildId: h,
+                                    onNavigate: M,
                                     className: p,
                                 });
                             case I.k.MESSAGE_HISTORY:
                                 return (0, r.jsx)(T.Z, {
                                     userId: n,
-                                    guildId: N,
-                                    onNavigate: () => L(I.k.INFO),
+                                    guildId: h,
+                                    onNavigate: () => M(I.k.INFO),
                                     className: p,
                                 });
                             case I.k.PERMISSIONS:
                                 return (0, r.jsx)(m.Z, {
                                     userId: n,
-                                    guildId: N,
-                                    onNavigate: () => L(I.k.INFO),
+                                    guildId: h,
+                                    onNavigate: () => M(I.k.INFO),
                                     className: p,
                                 });
                             default:

@@ -26,7 +26,7 @@ var r = n(255367),
     N = n(921944),
     C = n(474936),
     R = n(388032),
-    P = n(5739);
+    P = n(164161);
 let w = () => {
         var e, t, n;
         let i = (0, s.e7)([y.default], () => v.ZP.isPremium(y.default.getCurrentUser())),

@@ -1,15 +1,15 @@
-n.d(t, { m: () => f });
+n.d(t, { m: () => h });
 var r = n(255367);
 n(73800);
 var i = n(120356),
     l = n.n(i),
     o = n(91192),
-    s = n(589440),
-    a = n(481060),
-    c = n(828997),
-    u = n(81252),
-    d = n(859402);
-function h(e) {
+    a = n(589440),
+    s = n(481060),
+    c = n(780462),
+    u = n(55940),
+    d = n(509612);
+function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -34,7 +34,7 @@ function h(e) {
     }
     return e;
 }
-function p(e, t) {
+function f(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -52,21 +52,21 @@ function p(e, t) {
         e
     );
 }
-function f(e) {
+function h(e) {
     var t,
         {
             id: n,
             className: i,
-            innerClassName: f,
+            innerClassName: h,
             renderIcon: g,
             text: m,
             selected: b,
             trailing: O,
             background: _,
             showUnread: y = !1,
-            ref: C,
+            ref: v,
         } = e,
-        v = (function (e, t) {
+        j = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -98,14 +98,14 @@ function f(e) {
             "showUnread",
             "ref",
         ]);
-    let j = (0, o.JA)(n),
-        E = null != (t = (0, s.qg)(m)) ? t : "";
+    let C = (0, o.JA)(n),
+        E = null != (t = (0, a.qg)(m)) ? t : "";
     return (0, r.jsx)("li", {
-        ref: C,
+        ref: v,
         children: (0, r.jsxs)(
-            a.kL8,
-            p(h({}, v), {
-                buttonProps: p(h({}, j), {
+            s.kL8,
+            f(p({}, j), {
+                buttonProps: f(p({}, C), {
                     id: n,
                     role: "button",
                 }),
@@ -119,8 +119,8 @@ function f(e) {
                     },
                 },
                 onContextMenu:
-                    null != v.onContextMenu
-                        ? v.onContextMenu
+                    null != j.onContextMenu
+                        ? j.onContextMenu
                         : (e) => {
                               e.stopPropagation();
                           },
@@ -129,7 +129,7 @@ function f(e) {
                     _,
                     y ? (0, r.jsx)("div", { className: l()(d.unread, d.unreadImportant) }) : null,
                     (0, r.jsx)("div", {
-                        className: l()([d.link, d.basicChannelRowLink, f]),
+                        className: l()([d.link, d.basicChannelRowLink, h]),
                         children: (0, r.jsxs)("div", {
                             className: c.content,
                             children: [

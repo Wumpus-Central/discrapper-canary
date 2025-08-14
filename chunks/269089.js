@@ -8,7 +8,7 @@ var r = n(255367),
     c = n(788983),
     u = n(981631),
     d = n(757744);
-n(312305);
+n(966117);
 let p = (0, o.Un)({
         createPromise: () => n.e("80960").then(n.bind(n, 223455)),
         webpackId: 223455,
@@ -25,7 +25,7 @@ let p = (0, o.Un)({
         name: "PopoutWindowRTCDebug",
     }),
     g = (0, o.Un)({
-        createPromise: () => Promise.all([n.e("92922"), n.e("9646"), n.e("27278")]).then(n.bind(n, 748623)),
+        createPromise: () => Promise.all([n.e("92922"), n.e("46290"), n.e("27278")]).then(n.bind(n, 748623)),
         webpackId: 748623,
         name: "PopoutWindowActivity",
     });
@@ -93,16 +93,17 @@ class m extends a.Z {
             });
     }
     constructor(...e) {
-        var t;
         super(...e),
-            (t = "_observer") in this
-                ? Object.defineProperty(this, t, {
-                      value: null,
-                      enumerable: !0,
-                      configurable: !0,
-                      writable: !0,
-                  })
-                : (this[t] = null);
+            (function (e, t, n) {
+                t in e
+                    ? Object.defineProperty(e, t, {
+                          value: null,
+                          enumerable: !0,
+                          configurable: !0,
+                          writable: !0,
+                      })
+                    : (e[t] = null);
+            })(this, "_observer", null);
     }
 }
 let b = new m();

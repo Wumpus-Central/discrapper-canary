@@ -1,46 +1,44 @@
-n.d(t, { Z: () => b }), n(388685);
+n.d(t, { Z: () => m }), n(388685);
 var r,
     i,
-    l,
-    a = n(442837),
-    o = n(433517),
-    s = n(570140),
-    c = n(650774),
-    u = n(430824),
-    d = n(496675),
-    p = n(135899),
-    f = n(981631);
-let h = "publicUpsellChannelNoticeGuilds",
-    g = new Set();
-class m extends (r = a.ZP.Store) {
+    l = n(442837),
+    a = n(433517),
+    o = n(570140),
+    s = n(650774),
+    c = n(430824),
+    u = n(496675),
+    d = n(135899),
+    p = n(981631);
+let f = "publicUpsellChannelNoticeGuilds",
+    h = new Set();
+class g extends (r = l.ZP.Store) {
     initialize() {
         var e;
-        this.waitFor(d.Z, u.Z, c.Z), this.syncWith([d.Z, u.Z, c.Z], f.dG4), (g = ((e = new Set(o.K.get(h))), e));
+        this.waitFor(u.Z, c.Z, s.Z), this.syncWith([u.Z, c.Z, s.Z], p.dG4), (h = ((e = new Set(a.K.get(f))), e));
     }
     isVisible(e) {
         if (null == e) return;
-        let t = c.Z.getMemberCount(e.id);
+        let t = s.Z.getMemberCount(e.id);
         return (
-            !g.has(e.id) &&
+            !h.has(e.id) &&
             null != t &&
-            t >= p.U3 &&
-            d.Z.can(f.Plq.ADMINISTRATOR, e) &&
-            !e.features.has(f.oNc.COMMUNITY)
+            t >= d.U3 &&
+            u.Z.can(p.Plq.ADMINISTRATOR, e) &&
+            !e.features.has(p.oNc.COMMUNITY)
         );
     }
 }
-(l = "EnablePublicGuildUpsellNoticeStore"),
-    (i = "displayName") in m
-        ? Object.defineProperty(m, i, {
-              value: l,
-              enumerable: !0,
-              configurable: !0,
-              writable: !0,
-          })
-        : (m[i] = l);
-let b = new m(s.Z, {
+(i = "displayName") in g
+    ? Object.defineProperty(g, i, {
+          value: "EnablePublicGuildUpsellNoticeStore",
+          enumerable: !0,
+          configurable: !0,
+          writable: !0,
+      })
+    : (g[i] = "EnablePublicGuildUpsellNoticeStore");
+let m = new g(o.Z, {
     PUBLIC_UPSELL_NOTICE_DISMISS: function (e) {
         let t = e.guildId;
-        if (!g.has(t)) return g.add(t), o.K.set(h, g), !0;
+        if (!h.has(t)) return h.add(t), a.K.set(f, h), !0;
     },
 });

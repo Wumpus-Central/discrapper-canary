@@ -15,25 +15,24 @@ class s extends i.Z {
         r.Z.unsubscribe("POST_CONNECTION_OPEN", this.handlePostConnectionOpen);
     }
     constructor(...e) {
-        var t, n;
         super(...e),
-            (t = "handlePostConnectionOpen"),
-            (n = () => {
+            (function (e, t, n) {
+                t in e
+                    ? Object.defineProperty(e, t, {
+                          value: n,
+                          enumerable: !0,
+                          configurable: !0,
+                          writable: !0,
+                      })
+                    : (e[t] = n);
+            })(this, "handlePostConnectionOpen", () => {
                 let e = a.Z.getGameRelationships(),
                     t = new Set();
                 e.values().forEach((e) => {
                     e.type === o.OGo.PENDING_INCOMING && t.add(e.applicationId);
                 }),
                     l.ZP.fetchApplications(Array.from(t));
-            }),
-            t in this
-                ? Object.defineProperty(this, t, {
-                      value: n,
-                      enumerable: !0,
-                      configurable: !0,
-                      writable: !0,
-                  })
-                : (this[t] = n);
+            });
     }
 }
 let c = new s();

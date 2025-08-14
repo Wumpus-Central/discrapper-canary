@@ -130,8 +130,8 @@ function I(e) {
             hasAcceptedTerms: L,
             purchaseType: x,
             paymentSourceId: M,
-            activeSubscription: j,
-            devShelfFetchState: k,
+            activeSubscription: k,
+            devShelfFetchState: j,
             hasPaymentSources: U,
         } = (0, c.JL)(),
         G = O({
@@ -196,7 +196,7 @@ function I(e) {
                     ),
                 ),
         });
-    if ((0, u.yE)(null != (t = null == w ? void 0 : w.flags) ? t : 0, p.udG.EMBEDDED) && k === s.O.LOADING)
+    if ((0, u.yE)(null != (t = null == w ? void 0 : w.flags) ? t : 0, p.udG.EMBEDDED) && j === s.O.LOADING)
         return (0, r.jsx)(a.ua7, {
             text: m.intl.string(m.t.cjA5tr),
             children: (e) =>
@@ -250,9 +250,9 @@ function I(e) {
                     ),
                 ),
         });
-    else if (C && null != j && null != M)
+    else if (C && null != k && null != M)
         return (0, r.jsx)(_.Z, {
-            activeSubscription: j,
+            activeSubscription: k,
             onNext: R,
             isSubmitting: h,
             paymentSourceId: M,

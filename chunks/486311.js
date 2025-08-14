@@ -1,23 +1,23 @@
-n.d(t, { Z: () => j }), n(388685);
+n.d(t, { Z: () => C }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
     o = n.n(l),
-    s = n(442837),
-    a = n(481060),
+    a = n(442837),
+    s = n(481060),
     c = n(100527),
     u = n(434479),
     d = n(819640),
-    h = n(713081),
-    p = n(326660),
-    f = n(441536),
+    p = n(713081),
+    f = n(326660),
+    h = n(441536),
     g = n(933104),
     m = n(332538),
     b = n(921944),
-    O = n(93841),
+    O = n(989308),
     _ = n(388032),
-    y = n(18282);
-function C(e) {
+    y = n(969649);
+function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -42,7 +42,7 @@ function C(e) {
     }
     return e;
 }
-let v = {
+let j = {
         animation: {
             BEG: 0,
             END: 75,
@@ -52,88 +52,88 @@ let v = {
             END: 376,
         },
     },
-    j = i.memo(function (e) {
+    C = i.memo(function (e) {
         let { guildId: t, selected: l } = e,
-            j = (0, m.ZP)(t),
+            C = (0, m.ZP)(t),
             E = i.useCallback(() => {
                 var e;
-                (0, h.jd)(t),
-                    (0, f.Z)(t, c.Z.GUILD_POWERUPS_CHANNEL_LIST_ROW),
-                    null == j || null == (e = j.popout) || e.markAsDismissed(b.L.INDIRECT_ACTION);
-            }, [t, j]),
-            S = i.useCallback(() => {
+                (0, p.jd)(t),
+                    (0, h.Z)(t, c.Z.GUILD_POWERUPS_CHANNEL_LIST_ROW),
+                    null == C || null == (e = C.popout) || e.markAsDismissed(b.L.INDIRECT_ACTION);
+            }, [t, C]),
+            x = i.useCallback(() => {
                 var e;
-                switch (null == j || null == (e = j.popout) ? void 0 : e.type) {
-                    case p.J.LEVEL_REACHED:
-                        return (0, r.jsx)(g.jG, C({ guildId: t }, j.popout));
-                    case p.J.PERKS_AVAILABLE:
-                        return (0, r.jsx)(g.$h, C({ guildId: t }, j.popout));
-                    case p.J.PERKS_PURCHASABLE:
-                        return (0, r.jsx)(g.yI, C({ guildId: t }, j.popout));
-                    case p.J.NEW_PERK_AVAILABLE:
-                        return (0, r.jsx)(g.cO, C({ guildId: t }, j.popout));
+                switch (null == C || null == (e = C.popout) ? void 0 : e.type) {
+                    case f.J.LEVEL_REACHED:
+                        return (0, r.jsx)(g.jG, v({ guildId: t }, C.popout));
+                    case f.J.PERKS_AVAILABLE:
+                        return (0, r.jsx)(g.$h, v({ guildId: t }, C.popout));
+                    case f.J.PERKS_PURCHASABLE:
+                        return (0, r.jsx)(g.yI, v({ guildId: t }, C.popout));
+                    case f.J.NEW_PERK_AVAILABLE:
+                        return (0, r.jsx)(g.cO, v({ guildId: t }, C.popout));
                     default:
                         return (0, r.jsx)("div", {});
                 }
-            }, [t, null == j ? void 0 : j.popout]),
-            x = (0, a.s9z)(a.JQI),
-            I = (0, s.e7)([d.Z], () => d.Z.hasLayers()),
-            [P, N] = i.useState(null),
-            w = null == P ? "animation" : "LOOP";
+            }, [t, null == C ? void 0 : C.popout]),
+            S = (0, s.s9z)(s.JQI),
+            P = (0, a.e7)([d.Z], () => d.Z.hasLayers()),
+            [I, N] = i.useState(null),
+            w = null == I ? "animation" : "LOOP";
         i.useEffect(() => {
-            (null == j ? void 0 : j.popout) == null && N(null);
-        }, [null == j ? void 0 : j.popout]);
+            (null == C ? void 0 : C.popout) == null && N(null);
+        }, [null == C ? void 0 : C.popout]);
         let Z = i.useCallback((e) => {
                 N(e);
             }, []),
             T = i.useRef(null);
-        return (0, r.jsx)(a.yRy, {
+        return (0, r.jsx)(s.yRy, {
             targetElementRef: T,
-            shouldShow: (null == j ? void 0 : j.popout) != null && !(x || I),
+            shouldShow: (null == C ? void 0 : C.popout) != null && !(S || P),
             nudgeAlignIntoViewport: !0,
             animationPosition: "bottom",
             position: "right",
-            renderPopout: S,
+            renderPopout: x,
             children: (e) => {
-                var i, s;
+                var i, a;
                 return (0, r.jsx)(
                     u.m,
-                    ((i = C({}, e)),
-                    (s = s =
+                    ((i = v({}, e)),
+                    (a = a =
                         {
                             ref: T,
                             className: y.container,
                             id: "skill-trees-".concat(t),
                             renderIcon: (e) =>
-                                (0, r.jsx)(a.$Eu, {
+                                (0, r.jsx)(s.$Eu, {
                                     size: "md",
                                     className: e,
                                     color: "currentColor",
                                 }),
                             background:
-                                (null == j ? void 0 : j.popout) != null &&
+                                (null == C ? void 0 : C.popout) != null &&
                                 (0, r.jsx)("div", {
                                     className: y.lottieContainer,
-                                    children: (0, r.jsx)(a.kci, {
+                                    children: (0, r.jsx)(s.kci, {
                                         nextScene: w,
                                         className: y.lottie,
-                                        sceneSegments: v,
+                                        sceneSegments: j,
                                         importData: () => n.e("50821").then(n.t.bind(n, 548421, 19)),
                                         onScenePlay: Z,
                                         rendererSettings: { preserveAspectRatio: "xMidYMid slice" },
                                     }),
                                 }),
                             text: (0, r.jsx)("span", {
-                                className: o()({ [y.textImportant]: (null == j ? void 0 : j.showUnread) === !0 }),
+                                className: o()({ [y.textImportant]: (null == C ? void 0 : C.showUnread) === !0 }),
                                 children: _.intl.string(O.default.yv3DJC),
                             }),
                             selected: l,
                             onClick: E,
-                            showUnread: (null == j ? void 0 : j.showUnread) === !0,
-                            trailing: null == j ? void 0 : j.trailing,
+                            showUnread: (null == C ? void 0 : C.showUnread) === !0,
+                            trailing: null == C ? void 0 : C.trailing,
                         }),
                     Object.getOwnPropertyDescriptors
-                        ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(s))
+                        ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(a))
                         : (function (e, t) {
                               var n = Object.keys(e);
                               if (Object.getOwnPropertySymbols) {
@@ -141,8 +141,8 @@ let v = {
                                   n.push.apply(n, r);
                               }
                               return n;
-                          })(Object(s)).forEach(function (e) {
-                              Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(s, e));
+                          })(Object(a)).forEach(function (e) {
+                              Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(a, e));
                           }),
                     i),
                 );

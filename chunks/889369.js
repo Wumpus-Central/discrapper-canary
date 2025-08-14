@@ -1,67 +1,65 @@
 n.d(t, { Z: () => S }), n(388685), n(642613);
 var l,
     i,
-    r,
-    s = n(392711),
-    a = n.n(s),
-    o = n(442837),
-    c = n(570140),
-    d = n(45966),
-    u = n(999382),
-    m = n(981631);
-let h = !1,
-    I = null,
-    g = new Set();
-function N() {
-    (h = !1),
-        (I = null),
-        null != (I = u.Z.getGuildId()) &&
-            u.Z.getSection() === m.pNK.ONBOARDING &&
-            (g = new Set(d.Z.getDefaultChannelIds(I)));
+    r = n(392711),
+    s = n.n(r),
+    a = n(442837),
+    o = n(570140),
+    c = n(45966),
+    d = n(999382),
+    u = n(981631);
+let m = !1,
+    h = null,
+    I = new Set();
+function g() {
+    (m = !1),
+        (h = null),
+        null != (h = d.Z.getGuildId()) &&
+            d.Z.getSection() === u.pNK.ONBOARDING &&
+            (I = new Set(c.Z.getDefaultChannelIds(h)));
 }
-class f extends (l = o.ZP.Store) {
+class N extends (l = a.ZP.Store) {
     initialize() {
-        this.waitFor(u.Z, d.Z);
+        this.waitFor(d.Z, c.Z);
     }
     hasChanges() {
-        if (null == I) return !1;
-        let e = d.Z.getDefaultChannelIds(I).sort(),
-            t = Array.from(g).sort();
-        return !a().isEqual(e, t);
+        if (null == h) return !1;
+        let e = c.Z.getDefaultChannelIds(h).sort(),
+            t = Array.from(I).sort();
+        return !s().isEqual(e, t);
     }
     get guildId() {
-        return I;
-    }
-    get submitting() {
         return h;
     }
+    get submitting() {
+        return m;
+    }
     get editedDefaultChannelIds() {
-        return g;
+        return I;
     }
 }
-(r = "GuildSettingsDefaultChannelsStore"),
-    (i = "displayName") in f
-        ? Object.defineProperty(f, i, {
-              value: r,
-              enumerable: !0,
-              configurable: !0,
-              writable: !0,
-          })
-        : (f[i] = r);
-let S = new f(c.Z, {
-    GUILD_SETTINGS_INIT: N,
-    GUILD_SETTINGS_SET_SECTION: N,
-    GUILD_ONBOARDING_PROMPTS_FETCH_SUCCESS: N,
-    GUILD_SETTINGS_DEFAULT_CHANNELS_RESET: N,
-    GUILD_SETTINGS_DEFAULT_CHANNELS_SAVE_SUCCESS: N,
+(i = "displayName") in N
+    ? Object.defineProperty(N, i, {
+          value: "GuildSettingsDefaultChannelsStore",
+          enumerable: !0,
+          configurable: !0,
+          writable: !0,
+      })
+    : (N[i] = "GuildSettingsDefaultChannelsStore");
+let S = new N(o.Z, {
+    GUILD_SETTINGS_INIT: g,
+    GUILD_SETTINGS_SET_SECTION: g,
+    GUILD_ONBOARDING_PROMPTS_FETCH_SUCCESS: g,
+    GUILD_SETTINGS_DEFAULT_CHANNELS_RESET: g,
+    GUILD_SETTINGS_DEFAULT_CHANNELS_SAVE_SUCCESS: g,
     GUILD_SETTINGS_DEFAULT_CHANNELS_SAVE_FAILED: function () {
-        h = !1;
+        m = !1;
     },
     GUILD_SETTINGS_DEFAULT_CHANNELS_TOGGLE: function (e) {
         let { channelId: t } = e;
-        (g = new Set(g)).has(t) ? g.delete(t) : g.add(t);
+        (I = new Set(I)).has(t) ? I.delete(t) : I.add(t);
     },
     GUILD_SETTINGS_DEFAULT_CHANNELS_SUBMIT: function () {
-        h = !0;
+        m = !0;
     },
 });

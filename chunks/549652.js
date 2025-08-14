@@ -1,4 +1,4 @@
-n.r(e), n.d(e, { default: () => E }), n(35282);
+n.r(e), n.d(e, { default: () => b }), n(35282);
 var s = n(255367),
     r = n(73800),
     i = n(593473),
@@ -11,9 +11,9 @@ var s = n(255367),
     f = n(314897),
     u = n(981631),
     p = n(388032),
-    g = n(57010),
-    m = n(881488);
-function D(t, e, n) {
+    m = n(796771),
+    g = n(197571);
+function x(t, e, n) {
     return (
         e in t
             ? Object.defineProperty(t, e, {
@@ -27,20 +27,17 @@ function D(t, e, n) {
     );
 }
 a.ZP.initialize();
-let x = {
-    HANDOFF: "handoff",
-    DONE: "done",
-    FAILED: "failed",
-};
+let j = "done",
+    D = "failed";
 function N() {
     try {
         window.close();
     } catch (t) {}
 }
-class E extends r.PureComponent {
+class b extends r.PureComponent {
     componentDidMount() {
         let { stage: t, key: e } = this.state;
-        t === x.DONE
+        t === j
             ? N()
             : f.default.isAuthenticated()
               ? l.tn
@@ -69,14 +66,14 @@ class E extends r.PureComponent {
             children: [
                 (0, s.jsx)(d.Ee, {
                     src: n(69008),
-                    className: m.marginBottom20,
+                    className: g.marginBottom20,
                 }),
                 (0, s.jsx)(d.Dx, {
-                    className: m.marginBottom8,
+                    className: g.marginBottom8,
                     children: p.intl.string(p.t.YsLqvr),
                 }),
                 (0, s.jsx)(d.DK, {
-                    className: m.marginBottom40,
+                    className: g.marginBottom40,
                     children: p.intl.string(p.t.CSBYDg),
                 }),
                 (0, s.jsx)(d.zx, {
@@ -91,14 +88,14 @@ class E extends r.PureComponent {
             children: [
                 (0, s.jsx)(d.Ee, {
                     src: n(69008),
-                    className: m.marginBottom20,
+                    className: g.marginBottom20,
                 }),
                 (0, s.jsx)(d.Dx, {
-                    className: m.marginBottom8,
+                    className: g.marginBottom8,
                     children: p.intl.string(p.t.hsLIsb),
                 }),
                 (0, s.jsx)(d.DK, {
-                    className: m.marginBottom40,
+                    className: g.marginBottom40,
                     children: p.intl.string(p.t.CSBYDg),
                 }),
                 (0, s.jsx)(d.zx, {
@@ -113,7 +110,7 @@ class E extends r.PureComponent {
             children: [
                 (0, s.jsx)(d.Hh, {}),
                 (0, s.jsx)(d.Dx, {
-                    className: m.marginBottom8,
+                    className: g.marginBottom8,
                     children: p.intl.string(p.t["ctWa6+"]),
                 }),
                 (0, s.jsx)(d.DK, { children: p.intl.string(p.t["53IHoq"]) }),
@@ -124,40 +121,39 @@ class E extends r.PureComponent {
         let t,
             { stage: e } = this.state;
         switch (e) {
-            case x.DONE:
+            case j:
                 t = this.renderDone();
                 break;
-            case x.FAILED:
+            case D:
                 t = this.renderFailed();
                 break;
-            case x.HANDOFF:
             default:
                 t = this.renderHandoff();
         }
         return (0, s.jsx)(c.Z, {
             justify: c.Z.Justify.CENTER,
             align: c.Z.Align.CENTER,
-            className: g.wrapper,
+            className: m.wrapper,
             children: t,
         });
     }
     constructor(t) {
         var e;
         super(t),
-            D(this, "done", () => {
-                N(), this.setState({ stage: x.DONE });
+            x(this, "done", () => {
+                N(), this.setState({ stage: j });
             }),
-            D(this, "failed", () => {
-                this.setState({ stage: x.FAILED }), N();
+            x(this, "failed", () => {
+                this.setState({ stage: D }), N();
             }),
-            D(this, "handleOpenApp", () => {
+            x(this, "handleOpenApp", () => {
                 (0, h.uL)(u.Z5c.ME);
             });
         let { search: n } = t.location,
             s = null != n && "" !== n ? (0, i.parse)(n) : {};
         this.state = {
             key: null != (e = s.key) ? e : "",
-            stage: "true" === s.done ? x.DONE : x.HANDOFF,
+            stage: "true" === s.done ? j : "handoff",
         };
     }
 }

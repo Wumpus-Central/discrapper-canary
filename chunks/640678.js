@@ -1,16 +1,12 @@
-n.d(t, { t: () => a });
+n.d(t, { t: () => o });
 var i = n(163400),
     r = n(995532),
     l = n(496675),
     s = n(896007);
-let o = {
-    HEADER: "HEADER",
-    DIVIDER: "DIVIDER",
-};
-function a(e) {
+function o(e) {
     var t, n;
-    let a = l.Z.getGuildPermissionProps(e),
-        c = (0, i.p)(e.id).length > 0;
+    let o = l.Z.getGuildPermissionProps(e),
+        a = (0, i.p)(e.id).length > 0;
     return s.ZP.generateSections(
         ((t = (function (e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -36,10 +32,10 @@ function a(e) {
                     });
             }
             return e;
-        })({ showDirtyGuildTemplateIndicator: !1 }, a)),
+        })({ showDirtyGuildTemplateIndicator: !1 }, o)),
         (n = n =
             {
-                canUnlinkChannels: c,
+                canUnlinkChannels: a,
                 welcomeScreenEmpty: r.Z.isEmpty(e.id),
             }),
         Object.getOwnPropertyDescriptors
@@ -58,7 +54,7 @@ function a(e) {
     )
         .filter((e) => {
             let { section: t } = e;
-            return t !== o.HEADER && t !== o.DIVIDER;
+            return "HEADER" !== t && "DIVIDER" !== t;
         })
         .filter((e) => null == e.predicate || e.predicate());
 }

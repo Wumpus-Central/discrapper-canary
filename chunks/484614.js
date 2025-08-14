@@ -2,10 +2,10 @@ n.d(t, { Z: () => p });
 var r,
     i = n(255367),
     l = n(73800),
-    s = n(846519),
-    o = n(755721),
-    a = n(481060),
-    c = n(572004),
+    o = n(846519),
+    s = n(755721),
+    c = n(481060),
+    a = n(572004),
     u = n(388032);
 function d(e, t, n) {
     return (
@@ -28,9 +28,9 @@ class f extends (r = l.PureComponent) {
         var e, t;
         let { text: n } = this.props,
             { mode: r } = this.state,
-            l = r === a.kO8.Modes.SUCCESS ? u.intl.string(u.t["t5VZ8/"]) : n;
+            l = r === c.kO8.Modes.SUCCESS ? u.intl.string(u.t["t5VZ8/"]) : n;
         return (0, i.jsx)(
-            a.kO8,
+            c.kO8,
             ((e = (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
@@ -52,7 +52,7 @@ class f extends (r = l.PureComponent) {
                     onCopy: this.handleCopy,
                     mode: r,
                     text: l,
-                    supportsCopy: c.wS,
+                    supportsCopy: a.wS,
                 }),
             Object.getOwnPropertyDescriptors
                 ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
@@ -71,29 +71,29 @@ class f extends (r = l.PureComponent) {
     }
     handleCopy(e) {
         let { onCopy: t, delay: n = 1000 } = this.props;
-        (0, c.JG)(
+        (0, a.JG)(
             e,
-            () => this.setState({ mode: a.kO8.Modes.SUCCESS }),
-            () => this.setState({ mode: a.kO8.Modes.ERROR }),
+            () => this.setState({ mode: c.kO8.Modes.SUCCESS }),
+            () => this.setState({ mode: c.kO8.Modes.ERROR }),
         ),
-            this._timeout.start(n, () => this.setState({ mode: a.kO8.Modes.DEFAULT })),
+            this._timeout.start(n, () => this.setState({ mode: c.kO8.Modes.DEFAULT })),
             null == t || t(e);
     }
     getVerticalButtonColor(e) {
         switch (e) {
-            case a.kO8.Modes.SUCCESS:
-                return o.zx.Colors.GREEN;
-            case a.kO8.Modes.ERROR:
-                return o.zx.Colors.RED;
+            case c.kO8.Modes.SUCCESS:
+                return s.zx.Colors.GREEN;
+            case c.kO8.Modes.ERROR:
+                return s.zx.Colors.RED;
             default:
-                return o.zx.Colors.BRAND;
+                return s.zx.Colors.BRAND;
         }
     }
     constructor(e) {
         super(e),
             d(this, "_timeout", void 0),
-            (this.state = { mode: a.kO8.Modes.DEFAULT }),
-            (this._timeout = new s.V7()),
+            (this.state = { mode: c.kO8.Modes.DEFAULT }),
+            (this._timeout = new o.V7()),
             (this.handleCopy = this.handleCopy.bind(this));
     }
 }

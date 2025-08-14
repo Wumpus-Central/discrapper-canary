@@ -10,8 +10,8 @@ var i = n(255367),
     d = n(476326),
     m = n(304761),
     h = n(273031),
-    p = n(859235),
-    f = n(898463),
+    f = n(859235),
+    p = n(898463),
     x = n(951394),
     v = n(594174),
     g = n(768581),
@@ -20,7 +20,7 @@ var i = n(255367),
     b = n(223356),
     O = n(225452),
     S = n(388032),
-    _ = n(511742);
+    _ = n(176059);
 let w = ["Android", "iOS", "Windows Mobile", "Windows", "Linux", "Mac OS X"].map((e) => ({
     label: e,
     value: e,
@@ -59,7 +59,7 @@ function P(e) {
         [eo, es] = r.useState(!1),
         [eu, ec] = r.useState(!1),
         [ed, em] = r.useState(!1),
-        [eh, ep] = r.useState(null);
+        [eh, ef] = r.useState(null);
     r.useEffect(() => {
         let e = Math.random().toString(16).slice(2);
         o.tn
@@ -73,15 +73,15 @@ function P(e) {
                 rejectWithError: !0,
             })
             .then((e) => {
-                if (null != e.body && "6d5608adb62fd2bf03d2581bb3b2e97c01a85294" !== e.body.hash) {
-                    let e = new Date("1755147758852"),
+                if (null != e.body && "8465777f81e7c89fa73a05f249f723c84cda391e" !== e.body.hash) {
+                    let e = new Date("1755189105619"),
                         t = new Date(),
                         n = (0, j.TD)(t, e);
-                    n.hours > 6 && ep(n.hours);
+                    n.hours > 6 && ef(n.hours);
                 }
             });
     }, []);
-    let ef = (0, a.e7)([v.default], () => {
+    let ep = (0, a.e7)([v.default], () => {
             let e = v.default.getCurrentUser();
             return (null == e ? void 0 : e.isStaff()) || (null == e ? void 0 : e.isStaffPersonal());
         }),
@@ -91,11 +91,8 @@ function P(e) {
         }),
         ev = () => {
             null == D || D();
-        },
-        eg = (e) => {
-            q(M.filter((t) => t.id !== e));
         };
-    async function ej() {
+    async function eg() {
         var e, t;
         if ((em(!1), "" === N || "" === R || null == I)) return void es(!0);
         let r = null == B || null == (e = B.features) ? void 0 : e.find((e) => (0, b.pD)(e) === G);
@@ -130,7 +127,7 @@ function P(e) {
             ).catch(() => em(!0));
         ec(!1),
             null != a && a.ok
-                ? (ef && window.open(a.body.permalink_url, "_blank"),
+                ? (ep && window.open(a.body.permalink_url, "_blank"),
                   ev(),
                   (0, u.ZDy)(async () => {
                       let { default: e } = await n.e("64648").then(n.bind(n, 81155));
@@ -186,8 +183,8 @@ function P(e) {
         async function e() {
             V(await (0, b.WG)());
         }
-        ef && e();
-    }, [ef]),
+        ep && e();
+    }, [ep]),
         r.useEffect(() => {
             if (M.length > 0) {
                 var e;
@@ -198,7 +195,7 @@ function P(e) {
                     });
             }
         }, [M]);
-    let ey = r.useCallback(
+    let ej = r.useCallback(
         (e) => {
             let t = Array.from(e.clipboardData.files)
                 .filter((e) => e.type.startsWith("image/"))
@@ -233,9 +230,9 @@ function P(e) {
                 }),
             }),
             (0, i.jsx)(u.hzk, {
-                onPaste: ey,
+                onPaste: ej,
                 children: (0, i.jsxs)("form", {
-                    onSubmit: ej,
+                    onSubmit: eg,
                     children: [
                         null != ex &&
                             (0, i.jsx)(u.ToO, {
@@ -279,7 +276,7 @@ function P(e) {
                                             value: R,
                                             onChange: L,
                                         }),
-                                        ef &&
+                                        ep &&
                                             (0, i.jsx)(u.R94, {
                                                 type: u.geA.DESCRIPTION,
                                                 children:
@@ -337,7 +334,7 @@ function P(e) {
                                         closeOnSelect: !0,
                                     }),
                                 }),
-                                ef &&
+                                ep &&
                                     (0, i.jsx)(u.xJW, {
                                         title: S.intl.string(S.t["77VVd3"]),
                                         children: (0, i.jsx)(u.VcW, {
@@ -480,8 +477,8 @@ function P(e) {
                                                                   children: [
                                                                       (0, i.jsxs)("div", {
                                                                           children: [
-                                                                              (0, i.jsx)(f.r, {
-                                                                                  size: p.q.SMALL,
+                                                                              (0, i.jsx)(p.r, {
+                                                                                  size: f.q.SMALL,
                                                                                   upload: e,
                                                                               }),
                                                                               (0, i.jsx)("div", {
@@ -491,7 +488,19 @@ function P(e) {
                                                                                           tooltip: S.intl.string(
                                                                                               S.t.vN7REx,
                                                                                           ),
-                                                                                          onClick: () => eg(e.id),
+                                                                                          onClick: () => {
+                                                                                              var t;
+                                                                                              return (
+                                                                                                  (t = e.id),
+                                                                                                  void q(
+                                                                                                      M.filter(
+                                                                                                          (e) =>
+                                                                                                              e.id !==
+                                                                                                              t,
+                                                                                                      ),
+                                                                                                  )
+                                                                                              );
+                                                                                          },
                                                                                           dangerous: !0,
                                                                                           children: (0, i.jsx)(u.XHJ, {
                                                                                               size: "md",
@@ -536,9 +545,9 @@ function P(e) {
                     children: [
                         (0, i.jsx)(u.zxk, {
                             variant: "primary",
-                            text: ef ? "Submit and Open Report" : "Submit Report",
+                            text: ep ? "Submit and Open Report" : "Submit Report",
                             loading: eu,
-                            onClick: ej,
+                            onClick: eg,
                         }),
                         (0, i.jsx)(u.zxk, {
                             variant: "secondary",

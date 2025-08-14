@@ -31,7 +31,7 @@ var r = n(255367),
     Z = n(981631),
     w = n(765305),
     L = n(388032),
-    R = n(488822);
+    R = n(454703);
 function D(e) {
     let { guild: t, isStudyRoomNotice: n = !1 } = e,
         l = (0, _.y)(t.id),

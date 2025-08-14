@@ -17,34 +17,34 @@ var i = n(255367),
     x = n(486199),
     j = n(929507),
     v = n(981631),
-    O = n(388032),
-    y = n(115429);
+    y = n(388032),
+    O = n(473059);
 function _(e) {
     var t, n, l;
     let {
             name: _,
             icon: C,
             imageSrc: N,
-            iconBackgroundColor: S,
-            iconClassName: I,
-            iconWrapperClassName: w,
-            details: Z,
-            integration: E,
-            buttonText: P,
-            buttonDisabled: T,
+            iconBackgroundColor: w,
+            iconClassName: Z,
+            iconWrapperClassName: S,
+            details: P,
+            integration: I,
+            buttonText: T,
+            buttonDisabled: E,
             hasNextSection: k,
             onButtonClick: A,
-            guildId: R,
-            isScrolling: D,
+            guildId: D,
+            isScrolling: R,
             canShowMigrationTooltip: L,
             trailing: M,
         } = e,
         [B, U] = r.useState(!1),
         [W, H] = r.useState(!1),
-        G = L && !D && !W && void 0 !== R && null != E,
+        G = L && !R && !W && void 0 !== D && null != I,
         z = r.useRef(null),
         F = r.useRef(null),
-        V = r.useCallback(
+        K = r.useCallback(
             (e, t, n, r) =>
                 null == e || null == r
                     ? null
@@ -63,7 +63,7 @@ function _(e) {
                                           color: "currentColor",
                                           width: 10,
                                           height: 10,
-                                          className: y.caret,
+                                          className: O.caret,
                                       })
                                     : null,
                             ],
@@ -78,7 +78,7 @@ function _(e) {
                             children: e,
                         }),
             [z, F],
-        )(P, T, k, A);
+        )(T, E, k, A);
     r.useEffect(() => {
         var e, t;
         G &&
@@ -108,10 +108,10 @@ function _(e) {
                             });
                     }
                     return e;
-                })({}, (0, u.hH)(R))),
+                })({}, (0, u.hH)(D))),
                 (t = t =
                     {
-                        application_id: null == E ? void 0 : E.application.id,
+                        application_id: null == I ? void 0 : I.application.id,
                         location: "overview",
                     }),
                 Object.getOwnPropertyDescriptors
@@ -128,17 +128,17 @@ function _(e) {
                       }),
                 e),
             );
-    }, [R, null == E ? void 0 : E.application.id, G]);
-    let K = G
+    }, [D, null == I ? void 0 : I.application.id, G]);
+    let q = G
             ? (0, i.jsx)(d.yRy, {
                   targetElementRef: k ? F : z,
                   renderPopout: () =>
                       (0, i.jsx)(d.P3F, {
                           onClick: (e) => {
-                              e.stopPropagation(), H(!0), j.Z.dismissOverviewTooltip(R, E.integration);
+                              e.stopPropagation(), H(!0), j.Z.dismissOverviewTooltip(D, I.integration);
                           },
                           children: (0, i.jsx)(g.ZP, {
-                              content: O.intl.string(O.t.TyMJwM),
+                              content: y.intl.string(y.t.TyMJwM),
                               onClick: () => {},
                           }),
                       }),
@@ -146,20 +146,20 @@ function _(e) {
                   align: "center",
                   animation: d.yRy.Animation.TRANSLATE,
                   shouldShow: !0,
-                  children: () => V,
+                  children: () => K,
               })
-            : V,
-        q = (0, s.Wu)([b.Z], () => {
+            : K,
+        V = (0, s.Wu)([b.Z], () => {
             var e;
-            return null != E && null != R && null != (e = b.Z.getApplicationEntitlementsForGuild(E.application.id, R))
+            return null != I && null != D && null != (e = b.Z.getApplicationEntitlementsForGuild(I.application.id, D))
                 ? e
                 : [];
         }),
-        Y = (0, p.LD)(R, !0),
+        Y = (0, p.LD)(D, !0),
         X =
-            (null == E ? void 0 : E.application) != null &&
+            (null == I ? void 0 : I.application) != null &&
             Object.keys(
-                null != (l = null == (n = Y.result) || null == (t = n.sections[E.application.id]) ? void 0 : t.commands)
+                null != (l = null == (n = Y.result) || null == (t = n.sections[I.application.id]) ? void 0 : t.commands)
                     ? l
                     : {},
             ).length > 0,
@@ -169,11 +169,11 @@ function _(e) {
                     name: _,
                     icon: C,
                     imageSrc: N,
-                    iconBackgroundColor: S,
-                    iconClassName: I,
-                    iconWrapperClassName: w,
-                    details: Z,
-                    isPremium: q.length > 0,
+                    iconBackgroundColor: w,
+                    iconClassName: Z,
+                    iconWrapperClassName: S,
+                    details: P,
+                    isPremium: V.length > 0,
                 }),
                 (0, i.jsx)(m.Z.Child, {
                     shrink: 0,
@@ -196,13 +196,13 @@ function _(e) {
                                                 {
                                                     forceOpen: t,
                                                     text: new f.Z(s.bot).isVerifiedBot()
-                                                        ? O.intl.string(O.t.xxcTGx)
-                                                        : O.intl.string(O.t.AOdOYm),
-                                                    className: y.feature,
+                                                        ? y.intl.string(y.t.xxcTGx)
+                                                        : y.intl.string(y.t.AOdOYm),
+                                                    className: O.feature,
                                                     children: (0, i.jsx)(d.wGt, {
                                                         size: "md",
                                                         color: "currentColor",
-                                                        className: y.featureIcon,
+                                                        className: O.featureIcon,
                                                     }),
                                                 },
                                                 "bot",
@@ -214,14 +214,14 @@ function _(e) {
                                                 d.DY3,
                                                 {
                                                     forceOpen: t,
-                                                    text: O.intl.formatToPlainString(O.t["6HqDfX"], {
+                                                    text: y.intl.formatToPlainString(y.t["6HqDfX"], {
                                                         count: u.length,
                                                     }),
-                                                    className: y.feature,
+                                                    className: O.feature,
                                                     children: (0, i.jsx)(d.tYf, {
                                                         size: "md",
                                                         color: "currentColor",
-                                                        className: y.featureIcon,
+                                                        className: O.featureIcon,
                                                     }),
                                                 },
                                                 "webhooks",
@@ -236,12 +236,12 @@ function _(e) {
                                                 d.DY3,
                                                 {
                                                     forceOpen: t,
-                                                    text: O.intl.string(O.t["0hKkS0"]),
-                                                    className: y.feature,
+                                                    text: y.intl.string(y.t["0hKkS0"]),
+                                                    className: O.feature,
                                                     children: (0, i.jsx)(d.SsZ, {
                                                         size: "md",
                                                         color: "currentColor",
-                                                        className: y.featureIcon,
+                                                        className: O.featureIcon,
                                                     }),
                                                 },
                                                 "commands",
@@ -249,8 +249,8 @@ function _(e) {
                                         ),
                                     o
                                 );
-                            })(E, B, X),
-                            K,
+                            })(I, B, X),
+                            q,
                             M,
                         ],
                     }),
@@ -260,19 +260,19 @@ function _(e) {
     return k
         ? (0, i.jsx)(d.P3F, {
               onClick: () => {
-                  L && null != R && null != E && j.Z.dismissOverviewTooltip(R, E.integration), null == A || A();
+                  L && null != D && null != I && j.Z.dismissOverviewTooltip(D, I.integration), null == A || A();
               },
               onFocus: () => U(!0),
               onBlur: () => U(!1),
               children: (0, i.jsx)(d.Zbd, {
                   editable: !0,
-                  className: o()(y.card, y.clickable),
+                  className: o()(O.card, O.clickable),
                   children: $,
               }),
           })
         : (0, i.jsx)(d.Zbd, {
               editable: !0,
-              className: y.card,
+              className: O.card,
               children: $,
           });
 }

@@ -17,9 +17,9 @@ var r = n(255367),
     b = n(981631),
     j = n(675654),
     v = n(710111),
-    C = n(130883),
+    C = n(764295),
     _ = n(388032),
-    y = n(943273);
+    y = n(65766);
 function O(e) {
     let { className: t, sound: n, playSound: a, isPlaying: s, text: d } = e,
         u = (null == n ? void 0 : n.emojiId) != null || (null == n ? void 0 : n.emojiName) != null,

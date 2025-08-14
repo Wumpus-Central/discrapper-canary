@@ -44,17 +44,7 @@ function b(e) {
         return (0, i.jsx)(i.Fragment, { children: d({}) });
     let I = _ >= f.length - 1,
         N = I ? l.FGA.RED : l.FGA.GREEN,
-        y = E ? N : l.FGA.PRIMARY,
-        A = () => {
-            null == m || m(),
-                (0, c.JG)(n),
-                o.default.track(u.rMx.TEXT_COPIED),
-                O || j(_ + 1),
-                v(!0),
-                C(!0),
-                S.start(p, () => v(!1)),
-                T.start(g, () => j(0));
-        };
+        y = E ? N : l.FGA.PRIMARY;
     return (0, i.jsx)(l.ua7, {
         text: (() => {
             var e;
@@ -75,8 +65,8 @@ function b(e) {
         },
         children: (e) => {
             var t,
-                n,
-                { onClick: i, onMouseEnter: r } = e;
+                i,
+                { onClick: r, onMouseEnter: s } = e;
             return d(
                 ((t = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
@@ -128,21 +118,29 @@ function b(e) {
                         return r;
                     })(e, ["onClick", "onMouseEnter"]),
                 )),
-                (n = n =
+                (i = i =
                     {
                         onClick: () => {
-                            null == i || i(), A();
+                            null == r || r(),
+                                null == m || m(),
+                                (0, c.JG)(n),
+                                o.default.track(u.rMx.TEXT_COPIED),
+                                O || j(_ + 1),
+                                v(!0),
+                                C(!0),
+                                S.start(p, () => v(!1)),
+                                T.start(g, () => j(0));
                         },
                         onMouseEnter: () => {
                             if (!E) {
-                                null == r || r();
+                                null == s || s();
                                 return;
                             }
                             S.stop(), v(!1);
                         },
                     }),
                 Object.getOwnPropertyDescriptors
-                    ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
+                    ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(i))
                     : (function (e, t) {
                           var n = Object.keys(e);
                           if (Object.getOwnPropertySymbols) {
@@ -150,8 +148,8 @@ function b(e) {
                               n.push.apply(n, i);
                           }
                           return n;
-                      })(Object(n)).forEach(function (e) {
-                          Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
+                      })(Object(i)).forEach(function (e) {
+                          Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(i, e));
                       }),
                 t),
             );

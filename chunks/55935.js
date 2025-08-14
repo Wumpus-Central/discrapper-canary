@@ -35,7 +35,7 @@ function h(e, t) {
     return Math.floor((p(e, !1) - p(t, !1)) / f);
 }
 function m(e, t) {
-    return Math.abs(+e - +t) <= f && e.getDate() === t.getDate();
+    return Math.abs(e - t) <= f && e.getDate() === t.getDate();
 }
 function g(e, t, n) {
     return Math.abs(e.valueOf() - t.valueOf()) < n;

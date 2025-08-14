@@ -1,4 +1,4 @@
-n.d(t, { Z: () => K }), n(997841), n(388685);
+n.d(t, { Z: () => W }), n(997841), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -36,8 +36,8 @@ var r = n(255367),
     k = n(701476),
     B = n(436620),
     M = n(388032),
-    U = n(881488);
-function G(e, t, n) {
+    U = n(197571);
+function F(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -51,16 +51,14 @@ function G(e, t, n) {
     );
 }
 c.ZP.initialize();
-let F = "Accept Invite Page",
-    z = {
-        REGISTER: "register",
-        LOGIN: "login",
-    };
-async function V(e) {
-    let { invite: t } = await d.ZP.resolveInvite(e, F);
+let G = "Accept Invite Page",
+    z = "register",
+    V = "login";
+async function H(e) {
+    let { invite: t } = await d.ZP.resolveInvite(e, G);
     null != t && (0, f.A)(t);
 }
-class H extends i.PureComponent {
+class K extends i.PureComponent {
     componentDidMount() {
         let { isUnderage: e, login: t, inviteKey: n } = this.props;
         if ((y.default.track(L.rMx.INVITE_VIEWED, { invite_code: n }, { flush: !0 }), (0, I.e)("invite"), !B.KO)) {
@@ -76,9 +74,9 @@ class H extends i.PureComponent {
     componentDidUpdate(e) {
         let { invite: t, nativeAppState: n, authenticated: r, transitionTo: i } = this.props,
             l = this.getInviteKey();
-        if (l !== this.getInviteKey(e)) V(l);
+        if (l !== this.getInviteKey(e)) H(l);
         else if (t.state === L.r2o.APP_NOT_OPENED) this.handleContinue();
-        else if (this.getMode() === z.LOGIN && r !== e.authenticated && r) {
+        else if (this.getMode() === V && r !== e.authenticated && r) {
             let e = O.default.getFingerprint();
             if (null != e) {
                 let t = (0, a.s)(e);
@@ -86,14 +84,14 @@ class H extends i.PureComponent {
             }
             d.ZP.acceptInvite({
                 inviteKey: l,
-                context: this.getAcceptInviteContext(F),
+                context: this.getAcceptInviteContext(G),
                 skipOnboarding: !0,
                 callback: this.handleContinue,
             });
         }
         if (
             (n !== e.nativeAppState && n === L.kEZ.OPEN && this.track(L.rMx.INVITE_APP_INVOKED, !1),
-            this.getMode() === z.REGISTER && r && !e.authenticated)
+            this.getMode() === z && r && !e.authenticated)
         ) {
             let { channel: e } = t;
             if (null != e)
@@ -121,7 +119,7 @@ class H extends i.PureComponent {
     }
     getMode() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : this.props;
-        return D.a ? z.REGISTER : e.login ? z.LOGIN : z.REGISTER;
+        return D.a ? z : e.login ? V : z;
     }
     track(e, t, n) {
         let { invite: r } = this.props,
@@ -148,7 +146,7 @@ class H extends i.PureComponent {
                             }),
                         )),
                         r.forEach(function (t) {
-                            G(e, t, n[t]);
+                            F(e, t, n[t]);
                         });
                 }
                 return e;
@@ -282,7 +280,7 @@ class H extends i.PureComponent {
                 if (n && (0, C.yE)(null != (o = e.flags) ? o : 0, s.$.IS_GUEST_INVITE))
                     return d.ZP.openApp(e.code), u.x.set(b.J, e.code), this.renderAppOpened(() => i(L.Z5c.APP));
                 if (n || !B.KO) return this.renderAuthenticatedOrDownload();
-                if (this.getMode() === z.LOGIN)
+                if (this.getMode() === V)
                     return (0, r.jsx)(R.Z, {
                         invite: e,
                         transitionTo: i,
@@ -312,9 +310,9 @@ class H extends i.PureComponent {
         var t;
         super(...e),
             (t = this),
-            G(this, "state", { error: null }),
-            G(this, "getAcceptInviteContext", (e) => d.ZP.getInviteContext(e, this.props.invite)),
-            G(this, "handleContinue", (e) => {
+            F(this, "state", { error: null }),
+            F(this, "getAcceptInviteContext", (e) => d.ZP.getInviteContext(e, this.props.invite)),
+            F(this, "handleContinue", (e) => {
                 let { invite: t, transitionTo: n } = this.props;
                 if (null != t.channel || (null == e ? void 0 : e.channel) != null) {
                     var r;
@@ -323,12 +321,12 @@ class H extends i.PureComponent {
                         : d.ZP.transitionToInvite(null != e ? e : t, n);
                 }
             }),
-            G(this, "handleAccept", () => {
+            F(this, "handleAccept", () => {
                 this.setState({ error: null });
                 let e = this.getInviteKey();
                 d.ZP.acceptInvite({
                     inviteKey: e,
-                    context: this.getAcceptInviteContext(F),
+                    context: this.getAcceptInviteContext(G),
                     skipOnboarding: !0,
                     callback: (t) => {
                         (0, f.A)(t), null != t.channel && d.ZP.openApp(e, t.channel.id);
@@ -351,11 +349,11 @@ class H extends i.PureComponent {
                         });
                 });
             }),
-            G(this, "handleDefaultTransition", () => {
+            F(this, "handleDefaultTransition", () => {
                 let { defaultRoute: e, transitionTo: t } = this.props;
                 t(e);
             }),
-            G(this, "renderButton", function (e) {
+            F(this, "renderButton", function (e) {
                 let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : t.handleDefaultTransition,
                     { invite: i } = t.props,
                     l = null != i.stage_instance || null != i.guild_scheduled_event;
@@ -370,7 +368,7 @@ class H extends i.PureComponent {
             });
     }
 }
-let K = c.ZP.connectStores([N.Z, S.Z, O.default, x.Z, p.Z], (e) => {
+let W = c.ZP.connectStores([N.Z, S.Z, O.default, x.Z, p.Z], (e) => {
     var t;
     let { inviteKey: n } = e;
     return {
@@ -380,4 +378,4 @@ let K = c.ZP.connectStores([N.Z, S.Z, O.default, x.Z, p.Z], (e) => {
         defaultRoute: S.Z.defaultRoute,
         isUnderage: p.Z.isUnderageAnonymous(),
     };
-})(H);
+})(K);

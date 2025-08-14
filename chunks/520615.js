@@ -1,39 +1,39 @@
-s.d(n, { default: () => d });
-var e = s(255367);
-s(73800);
-var r = s(481060),
-    a = s(338690),
-    i = s(388032),
-    c = s(72547);
+e.d(n, { default: () => d });
+var r = e(255367);
+e(73800);
+var i = e(481060),
+    a = e(338690),
+    s = e(388032),
+    l = e(473865);
 function d(t) {
-    let { transitionState: n, onClose: s } = t;
-    return (0, e.jsxs)(r.Y0X, {
+    let { transitionState: n, onClose: e } = t;
+    return (0, r.jsxs)(i.Y0X, {
         transitionState: n,
         parentComponent: "UrgentMessageModal",
         children: [
-            (0, e.jsx)(r.xBx, {
+            (0, r.jsx)(i.xBx, {
                 separator: !1,
-                children: (0, e.jsx)(r.X6q, {
+                children: (0, r.jsx)(i.X6q, {
                     variant: "heading-lg/semibold",
-                    children: i.intl.string(i.t.bAhz9v),
+                    children: s.intl.string(s.t.bAhz9v),
                 }),
             }),
-            (0, e.jsxs)(r.hzk, {
+            (0, r.jsxs)(i.hzk, {
                 children: [
-                    (0, e.jsx)(r.Text, {
+                    (0, r.jsx)(i.Text, {
                         variant: "text-md/normal",
-                        children: i.intl.string(i.t["7KjxW1"]),
+                        children: s.intl.string(s.t["7KjxW1"]),
                     }),
-                    (0, e.jsx)("div", { className: c.art }),
+                    (0, r.jsx)("div", { className: l.art }),
                 ],
             }),
-            (0, e.jsx)(r.mzw, {
-                children: (0, e.jsx)(r.zxk, {
+            (0, r.jsx)(i.mzw, {
+                children: (0, r.jsx)(i.zxk, {
                     variant: "primary",
-                    text: i.intl.string(i.t.BddRzc),
+                    text: s.intl.string(s.t.BddRzc),
                     type: "submit",
                     onClick: () => {
-                        (0, a.Z)(), s();
+                        (0, a.Z)(), e();
                     },
                 }),
             }),

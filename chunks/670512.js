@@ -3,14 +3,14 @@ var r,
     i = n(255367),
     l = n(73800),
     o = n(120356),
-    s = n.n(o),
-    a = n(748780),
+    a = n.n(o),
+    s = n(748780),
     c = n(846519),
     u = n(481060),
     d = n(585483),
-    h = n(981631),
-    p = n(388032),
-    f = n(877528);
+    p = n(981631),
+    f = n(388032),
+    h = n(992261);
 function g(e, t, n) {
     return (
         t in e
@@ -30,10 +30,10 @@ let m = {
 };
 class b extends (r = l.PureComponent) {
     componentDidMount() {
-        this.setState({ shown: !0 }), d.S.subscribe(h.CkL.QUICKSWITCHER_RESULT_FOCUS, this.handleResultFocus);
+        this.setState({ shown: !0 }), d.S.subscribe(p.CkL.QUICKSWITCHER_RESULT_FOCUS, this.handleResultFocus);
     }
     componentWillUnmount() {
-        this.focusTimeout.stop(), d.S.unsubscribe(h.CkL.QUICKSWITCHER_RESULT_FOCUS, this.handleResultFocus);
+        this.focusTimeout.stop(), d.S.unsubscribe(p.CkL.QUICKSWITCHER_RESULT_FOCUS, this.handleResultFocus);
     }
     componentDidUpdate() {
         let { hasQuery: e } = this.props;
@@ -42,7 +42,7 @@ class b extends (r = l.PureComponent) {
     springTo(e) {
         let { reducedMotion: t } = this.context;
         !0 !== t.enabled &&
-            a.Z.spring(
+            s.Z.spring(
                 this.state.translateY,
                 (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
@@ -64,31 +64,31 @@ class b extends (r = l.PureComponent) {
     }
     renderArrowGroup(e) {
         return (0, i.jsxs)("div", {
-            className: s()(f.arrowGroup, e),
+            className: a()(h.arrowGroup, e),
             children: [
-                (0, i.jsx)(a.Z.div, {
-                    className: s()(f.arrowContainer, f.horizontal),
+                (0, i.jsx)(s.Z.div, {
+                    className: a()(h.arrowContainer, h.horizontal),
                     style: this.getStyle(),
                     children: (0, i.jsx)("img", {
                         alt: "",
                         src: n(403756),
-                        className: f.arrowIcon,
+                        className: h.arrowIcon,
                     }),
                 }),
                 (0, i.jsx)("div", {
-                    className: s()(f.arrowContainer, f.diag1),
+                    className: a()(h.arrowContainer, h.diag1),
                     children: (0, i.jsx)("img", {
                         alt: "",
                         src: n(536404),
-                        className: f.arrowIcon,
+                        className: h.arrowIcon,
                     }),
                 }),
                 (0, i.jsx)("div", {
-                    className: s()(f.arrowContainer, f.diag2),
+                    className: a()(h.arrowContainer, h.diag2),
                     children: (0, i.jsx)("img", {
                         alt: "",
                         src: n(569347),
-                        className: f.arrowIcon,
+                        className: h.arrowIcon,
                     }),
                 }),
             ],
@@ -96,15 +96,15 @@ class b extends (r = l.PureComponent) {
     }
     renderContent() {
         return (0, i.jsxs)("div", {
-            className: f.tutorialMessages,
+            className: h.tutorialMessages,
             children: [
                 (0, i.jsx)("div", {
-                    className: f.searchMessage,
-                    children: p.intl.string(p.t.Mp0IGB),
+                    className: h.searchMessage,
+                    children: f.intl.string(f.t.Mp0IGB),
                 }),
                 (0, i.jsx)("div", {
-                    className: f.selectMessage,
-                    children: p.intl.string(p.t["3CbpwM"]),
+                    className: h.selectMessage,
+                    children: f.intl.string(f.t["3CbpwM"]),
                 }),
             ],
         });
@@ -114,11 +114,11 @@ class b extends (r = l.PureComponent) {
             { shown: t } = this.state;
         return (0, i.jsxs)("div", {
             ref: this.rootRef,
-            className: s()(f.tutorial, {
-                [f.shown]: t,
-                [f.hasQuery]: e,
+            className: a()(h.tutorial, {
+                [h.shown]: t,
+                [h.hasQuery]: e,
             }),
-            children: [this.renderContent(), this.renderArrowGroup(f.__invalid_left), this.renderArrowGroup(f.right)],
+            children: [this.renderContent(), this.renderArrowGroup(h.__invalid_left), this.renderArrowGroup(h.right)],
         });
     }
     getStyle() {
@@ -142,7 +142,7 @@ class b extends (r = l.PureComponent) {
         super(...e),
             g(this, "state", {
                 shown: !1,
-                translateY: new a.Z.Value(0),
+                translateY: new s.Z.Value(0),
             }),
             g(this, "rootRef", l.createRef()),
             g(this, "focusTimeout", new c.V7()),

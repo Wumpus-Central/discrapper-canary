@@ -12,14 +12,14 @@ var r = n(255367),
     p = n(714338),
     y = n(213609),
     m = n(429142),
-    g = n(144114),
-    h = n(210887),
+    h = n(144114),
+    g = n(210887),
     b = n(23434),
-    v = n(1964),
-    j = n(762756),
+    j = n(1964),
+    v = n(762756),
     O = n(308569),
-    x = n(981631),
-    E = n(815660),
+    E = n(981631),
+    x = n(815660),
     w = n(388032);
 function _(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -65,11 +65,11 @@ function P(e, t) {
     );
 }
 function A() {
-    let { action: e, theme: t } = (0, l.cj)([b.Z, h.Z], () => ({
+    let { action: e, theme: t } = (0, l.cj)([b.Z, g.Z], () => ({
             action: b.Z.getAction(),
-            theme: h.Z.theme,
+            theme: g.Z.theme,
         })),
-        A = v.Z.getVerificationTypes(e),
+        A = j.Z.getVerificationTypes(e),
         [S, N] = i.useState(0),
         k = (0, f.Z)(A);
     (0, y.Z)(
@@ -85,30 +85,18 @@ function A() {
         [A.toString()],
     );
     let R = () => {
-            (0, d.FD)(),
-                (0, o.ZDy)(
-                    async () => {
-                        let { default: e } = await n.e("35401").then(n.bind(n, 284549));
-                        return (t) => (0, r.jsx)(e, _({}, t));
-                    },
-                    {
-                        modalKey: O.F0,
-                        Layer: m.ZP,
-                    },
-                );
-        },
-        I = () => {
+        (0, d.FD)(),
             (0, o.ZDy)(
                 async () => {
-                    let { default: e } = await Promise.resolve().then(n.bind(n, 607018));
-                    return (t) => (0, r.jsx)(e, _({ reason: g.L.USER_ACTION_REQUIRED }, t));
+                    let { default: e } = await n.e("35401").then(n.bind(n, 284549));
+                    return (t) => (0, r.jsx)(e, _({}, t));
                 },
                 {
-                    modalKey: E.M,
+                    modalKey: O.F0,
                     Layer: m.ZP,
                 },
             );
-        };
+    };
     return (
         i.useEffect(
             () => (
@@ -120,8 +108,8 @@ function A() {
             [],
         ),
         i.useEffect(() => {
-            (null == k ? void 0 : k[0]) === x.PUi.PHONE &&
-                (null == A ? void 0 : A[0]) === x.PUi.EMAIL &&
+            (null == k ? void 0 : k[0]) === E.PUi.PHONE &&
+                (null == A ? void 0 : A[0]) === E.PUi.EMAIL &&
                 (0, o.ZDy)(
                     async () => {
                         let { default: e } = await Promise.resolve().then(n.bind(n, 468026));
@@ -142,13 +130,13 @@ function A() {
                     },
                 );
         }, [A, k]),
-        (0, r.jsx)(j.Z, {
+        (0, r.jsx)(v.Z, {
             types: A,
             captchaKey: S,
             onCaptchaVerify: (e) => {
                 c.tn
                     .post({
-                        url: x.ANM.CAPTCHA,
+                        url: E.ANM.CAPTCHA,
                         body: { captcha_key: e },
                         oldFormErrors: !0,
                         rejectWithError: !0,
@@ -159,7 +147,18 @@ function A() {
             },
             theme: t,
             onClick: (e) => {
-                e === x.PUi.EMAIL_OR_PHONE || e === x.PUi.EMAIL || e === x.PUi.REVERIFY_EMAIL ? R() : I();
+                e === E.PUi.EMAIL_OR_PHONE || e === E.PUi.EMAIL || e === E.PUi.REVERIFY_EMAIL
+                    ? R()
+                    : (0, o.ZDy)(
+                          async () => {
+                              let { default: e } = await Promise.resolve().then(n.bind(n, 607018));
+                              return (t) => (0, r.jsx)(e, _({ reason: h.L.USER_ACTION_REQUIRED }, t));
+                          },
+                          {
+                              modalKey: x.M,
+                              Layer: m.ZP,
+                          },
+                      );
             },
             onLogout: () => {
                 (0, o.ZDy)(

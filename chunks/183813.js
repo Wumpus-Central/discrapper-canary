@@ -16,7 +16,7 @@ var t = n(255367),
     m = n(27034),
     h = n(981631),
     j = n(388032),
-    L = n(864089);
+    L = n(950174);
 function g(e) {
     let { handleStepChange: r, handleClose: n } = e,
         { selectedPlan: o, selectedSkuId: g, step: b } = (0, x.JL)(),
@@ -25,26 +25,30 @@ function g(e) {
     i.useEffect(() => {
         let e = null != v && v.length > 0;
         null == S && e && y(v[0]);
-    }, [v, S, y]);
-    let I = (e) => {
-        let r = e.skuId;
-        return (0, t.jsx)(
-            d.Z,
-            {
-                skuId: r,
-                price: j.intl.string(j.t.QQsaCQ),
-                isSelected: r === (null == S ? void 0 : S.skuId),
-                onSelect: () => y(e),
-                className: L.giftSelectItem,
-            },
-            r,
-        );
-    };
-    a()(null != o, "Expected plan to selected"),
+    }, [v, S, y]),
+        a()(null != o, "Expected plan to selected"),
         a()(null != g, "Expected selectedSkuId"),
         a()(null != b, "Step should be set");
-    let P = null == v ? void 0 : v.map((e) => I(e)),
-        T =
+    let I =
+            null == v
+                ? void 0
+                : v.map((e) =>
+                      ((e) => {
+                          let r = e.skuId;
+                          return (0, t.jsx)(
+                              d.Z,
+                              {
+                                  skuId: r,
+                                  price: j.intl.string(j.t.QQsaCQ),
+                                  isSelected: r === (null == S ? void 0 : S.skuId),
+                                  onSelect: () => y(e),
+                                  className: L.giftSelectItem,
+                              },
+                              r,
+                          );
+                      })(e),
+                  ),
+        P =
             null != S && null != E
                 ? (0, t.jsx)(C.Z, {
                       avatarDecorationOverride: { asset: S.assetId },
@@ -53,7 +57,7 @@ function g(e) {
                       avatarSize: s.EFr.SIZE_152,
                   })
                 : null,
-        O = (0, t.jsx)(m.O3, {
+        T = (0, t.jsx)(m.O3, {
             children: (0, t.jsx)(s.mzw, {
                 className: L.modalFooter,
                 children: (0, t.jsx)(c.y, {
@@ -74,7 +78,7 @@ function g(e) {
                 }),
             }),
         }),
-        w = (0, t.jsx)(s.X6q, {
+        O = (0, t.jsx)(s.X6q, {
             variant: "heading-lg/bold",
             color: "header-primary",
             children: j.intl.string(j.t["Rp0+ZG"]),
@@ -87,7 +91,7 @@ function g(e) {
                     direction: "horizontal",
                     justify: "space-between",
                     align: "center",
-                    children: [w, (0, t.jsx)(s.olH, { onClick: n })],
+                    children: [O, (0, t.jsx)(s.olH, { onClick: n })],
                 }),
             }),
             (0, t.jsx)(s.hzk, {
@@ -96,16 +100,16 @@ function g(e) {
                     align: "center",
                     padding: { top: 24 },
                     children: [
-                        T,
+                        P,
                         (0, t.jsx)(s.Kqy, {
                             gap: 8,
                             padding: { top: 12 },
-                            children: P,
+                            children: I,
                         }),
                     ],
                 }),
             }),
-            O,
+            T,
         ],
     });
 }

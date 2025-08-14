@@ -6,7 +6,7 @@ n.d(t, {
     J0: () => P,
     K8: () => L,
     RE: () => T,
-    Vt: () => j,
+    Vt: () => k,
     ZS: () => h,
     a$: () => D,
     aK: () => S,
@@ -220,12 +220,12 @@ var M = (function (e) {
         e
     );
 })({});
-let j = {
+let k = {
         ORB_PROFILE_BADGE: "1342211853484429445",
         FRACTIONAL_PREMIUM: _.a.PREMIUM_TIER_2_3_DAY,
     },
-    k = new Set(Object.values(j)),
-    U = (e) => k.has(e),
+    j = new Set(Object.values(k)),
+    U = (e) => j.has(e),
     G = [c.G.AVATAR_DECORATION, c.G.PROFILE_EFFECT, c.G.NAMEPLATE, c.G.BUNDLE],
     B = [
         {

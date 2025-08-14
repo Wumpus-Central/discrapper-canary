@@ -34,11 +34,11 @@ var i = n(255367),
     w = n(954003),
     k = n(664134),
     L = n(457227),
-    M = n(474936),
-    B = n(981631),
+    B = n(474936),
+    M = n(981631),
     U = n(231338),
-    V = n(529020),
-    G = n(408217),
+    V = n(379039),
+    G = n(810392),
     F = n(107283);
 let H = () => {
     (0, f.z)(h.X);
@@ -59,7 +59,7 @@ let H = () => {
         es = (0, l.e7)([b.Z], () => b.Z.getPremiumTypeSubscription()),
         ea = null != es ? (0, _.Af)(es) : null,
         el = null != ea ? _.ZP.getSkuIdForPlan(ea.planId) : null,
-        eo = null !== el && el !== M.Si.TIER_2 ? M.Si.TIER_2 : null,
+        eo = null !== el && el !== B.Si.TIER_2 ? B.Si.TIER_2 : null,
         ec = (0, j.Vi)(),
         ed = null != ec && ec,
         { analyticsLocations: eu } = (0, g.ZP)(p.Z.PREMIUM_MARKETING),
@@ -184,7 +184,7 @@ let H = () => {
                     onChange: (e) => {
                         e &&
                             !et &&
-                            (x.default.track(B.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: eu }),
+                            (x.default.track(M.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: eu }),
                             en(!0));
                     },
                     children: (0, i.jsx)("div", {

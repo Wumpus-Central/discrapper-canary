@@ -28,12 +28,12 @@ var r = n(220159),
     A = n(787899),
     R = n(592802),
     F = n(394370),
-    O = n(862097),
-    E = F("iterator"),
+    E = n(862097),
+    O = F("iterator"),
     I = "URLSearchParams",
     M = I + "Iterator",
-    B = y.set,
-    T = y.getterFor(I),
+    T = y.set,
+    B = y.getterFor(I),
     D = y.getterFor(M),
     L = a("fetch"),
     V = a("Request"),
@@ -140,9 +140,9 @@ var r = n(220159),
     },
     ef = m(
         function (e, t) {
-            B(this, {
+            T(this, {
                 type: M,
-                target: T(e).entries,
+                target: B(e).entries,
                 index: 0,
                 kind: t,
             });
@@ -227,7 +227,7 @@ em.prototype = {
 var ey = function () {
         v(this, ev);
         var e = arguments.length > 0 ? arguments[0] : void 0,
-            t = B(this, new em(e));
+            t = T(this, new em(e));
         l || (this.size = t.entries.length);
     },
     ev = ey.prototype;
@@ -236,7 +236,7 @@ if (
         ev,
         {
             append: function (e, t) {
-                var n = T(this);
+                var n = B(this);
                 R(arguments.length, 2),
                     Q(n.entries, {
                         key: w(e),
@@ -247,7 +247,7 @@ if (
             },
             delete: function (e) {
                 for (
-                    var t = T(this),
+                    var t = B(this),
                         n = R(arguments.length, 1),
                         r = t.entries,
                         o = w(e),
@@ -264,20 +264,20 @@ if (
                 l || (this.size = r.length), t.updateURL();
             },
             get: function (e) {
-                var t = T(this).entries;
+                var t = B(this).entries;
                 R(arguments.length, 1);
                 for (var n = w(e), r = 0; r < t.length; r++) if (t[r].key === n) return t[r].value;
                 return null;
             },
             getAll: function (e) {
-                var t = T(this).entries;
+                var t = B(this).entries;
                 R(arguments.length, 1);
                 for (var n = w(e), r = [], o = 0; o < t.length; o++) t[o].key === n && Q(r, t[o].value);
                 return r;
             },
             has: function (e) {
                 for (
-                    var t = T(this).entries,
+                    var t = B(this).entries,
                         n = R(arguments.length, 1),
                         r = w(e),
                         o = n < 2 ? void 0 : arguments[1],
@@ -292,7 +292,7 @@ if (
             },
             set: function (e, t) {
                 var n,
-                    r = T(this);
+                    r = B(this);
                 R(arguments.length, 1);
                 for (var o = r.entries, a = !1, i = w(e), s = w(t), c = 0; c < o.length; c++)
                     (n = o[c]).key === i && (a ? ee(o, c--, 1) : ((a = !0), (n.value = s)));
@@ -305,15 +305,15 @@ if (
                     r.updateURL();
             },
             sort: function () {
-                var e = T(this);
-                O(e.entries, function (e, t) {
+                var e = B(this);
+                E(e.entries, function (e, t) {
                     return e.key > t.key ? 1 : -1;
                 }),
                     e.updateURL();
             },
             forEach: function (e) {
                 for (
-                    var t, n = T(this).entries, r = _(e, arguments.length > 1 ? arguments[1] : void 0), o = 0;
+                    var t, n = B(this).entries, r = _(e, arguments.length > 1 ? arguments[1] : void 0), o = 0;
                     o < n.length;
                 )
                     r((t = n[o++]).value, t.key, this);
@@ -330,19 +330,19 @@ if (
         },
         { enumerable: !0 },
     ),
-    d(ev, E, ev.entries, { name: "entries" }),
+    d(ev, O, ev.entries, { name: "entries" }),
     d(
         ev,
         "toString",
         function () {
-            return T(this).serialize();
+            return B(this).serialize();
         },
         { enumerable: !0 },
     ),
     l &&
         p(ev, "size", {
             get: function () {
-                return T(this).entries.length;
+                return B(this).entries.length;
             },
             configurable: !0,
             enumerable: !0,
@@ -411,5 +411,5 @@ if (
 }
 e.exports = {
     URLSearchParams: ey,
-    getState: T,
+    getState: B,
 };

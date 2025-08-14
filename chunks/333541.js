@@ -17,40 +17,40 @@ var l = n(255367),
     v = n(505905),
     y = n(185923),
     O = n(388032),
-    h = n(657488);
+    h = n(492006);
 function C(e) {
     let { customStatusEmoji: t, setCustomStatusEmoji: n, onClose: r } = e,
         d = o.useRef(null),
-        j = (0, i.e7)([p.Z, m.Z], () => m.Z.getChannel(p.Z.getVoiceChannelId())),
-        f = (e) => {
-            var t;
-            if (null == e) return void n(null);
-            n(
-                null != e.id
-                    ? {
-                          id: e.id,
-                          name: e.name,
-                          animated: e.animated,
-                      }
-                    : {
-                          id: null,
-                          name: null != (t = e.optionallyDiverseSequence) ? t : "",
-                          animated: !1,
-                      },
-            );
-        };
+        j = (0, i.e7)([p.Z, m.Z], () => m.Z.getChannel(p.Z.getVoiceChannelId()));
     return (0, l.jsx)(u.yRy, {
         targetElementRef: d,
         renderPopout: (e) => {
             var t;
-            let { closePopout: n } = e;
+            let { closePopout: o } = e;
             return (0, l.jsx)(c.Z, {
                 channel: j,
                 guildId: null != (t = null == j ? void 0 : j.guild_id) ? t : void 0,
-                closePopout: n,
+                closePopout: o,
                 onSelectEmoji: (e) => {
                     let { emoji: t, willClose: l } = e;
-                    f(t), l && n();
+                    ((e) => {
+                        var t;
+                        if (null == e) return n(null);
+                        n(
+                            null != e.id
+                                ? {
+                                      id: e.id,
+                                      name: e.name,
+                                      animated: e.animated,
+                                  }
+                                : {
+                                      id: null,
+                                      name: null != (t = e.optionallyDiverseSequence) ? t : "",
+                                      animated: !1,
+                                  },
+                        );
+                    })(t),
+                        l && o();
                 },
                 pickerIntention: y.Hz.STATUS,
                 onNavigateAway: r,

@@ -12,8 +12,8 @@ var r = n(255367),
     f = n(358085),
     h = n(998502),
     g = n(388032),
-    m = n(128227),
-    b = n(881488);
+    m = n(499126),
+    b = n(197571);
 function _(e, t, n) {
     return (
         t in e
@@ -199,27 +199,43 @@ class O extends i.PureComponent {
                     });
             }),
             _(this, "handleRemoveLocation", () => {
-                (0, a.h7j)((e) => {
-                    var t, n;
-                    return (0, r.jsx)(
+                (0, a.h7j)((e) =>
+                    (0, r.jsx)(
                         a.ConfirmModal,
-                        ((t = (function (e) {
-                            for (var t = 1; t < arguments.length; t++) {
-                                var n = null != arguments[t] ? arguments[t] : {},
-                                    r = Object.keys(n);
-                                "function" == typeof Object.getOwnPropertySymbols &&
-                                    (r = r.concat(
-                                        Object.getOwnPropertySymbols(n).filter(function (e) {
-                                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                        }),
-                                    )),
-                                    r.forEach(function (t) {
-                                        _(e, t, n[t]);
-                                    });
-                            }
-                            return e;
-                        })({}, e)),
-                        (n = n =
+                        (function (e, t) {
+                            return (
+                                (t = null != t ? t : {}),
+                                Object.getOwnPropertyDescriptors
+                                    ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+                                    : (function (e, t) {
+                                          var n = Object.keys(e);
+                                          if (Object.getOwnPropertySymbols) {
+                                              var r = Object.getOwnPropertySymbols(e);
+                                              n.push.apply(n, r);
+                                          }
+                                          return n;
+                                      })(Object(t)).forEach(function (n) {
+                                          Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+                                      }),
+                                e
+                            );
+                        })(
+                            (function (e) {
+                                for (var t = 1; t < arguments.length; t++) {
+                                    var n = null != arguments[t] ? arguments[t] : {},
+                                        r = Object.keys(n);
+                                    "function" == typeof Object.getOwnPropertySymbols &&
+                                        (r = r.concat(
+                                            Object.getOwnPropertySymbols(n).filter(function (e) {
+                                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                            }),
+                                        )),
+                                        r.forEach(function (t) {
+                                            _(e, t, n[t]);
+                                        });
+                                }
+                                return e;
+                            })({}, e),
                             {
                                 header: g.intl.string(g.t.iBUzS0),
                                 confirmText: g.intl.string(g.t.iBUzS0),
@@ -231,22 +247,10 @@ class O extends i.PureComponent {
                                     variant: "text-md/normal",
                                     children: g.intl.string(g.t["1XqeW1"]),
                                 }),
-                            }),
-                        Object.getOwnPropertyDescriptors
-                            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
-                            : (function (e, t) {
-                                  var n = Object.keys(e);
-                                  if (Object.getOwnPropertySymbols) {
-                                      var r = Object.getOwnPropertySymbols(e);
-                                      n.push.apply(n, r);
-                                  }
-                                  return n;
-                              })(Object(n)).forEach(function (e) {
-                                  Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
-                              }),
-                        t),
-                    );
-                });
+                            },
+                        ),
+                    ),
+                );
             }),
             _(this, "handleSaveChanges", () => {
                 (0, o.Tb)(this.props.path, {

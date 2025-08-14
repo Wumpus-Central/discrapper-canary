@@ -11,7 +11,7 @@ var r = n(255367),
     p = n(177862),
     _ = n(981631),
     f = n(388032),
-    O = n(223139);
+    O = n(833894);
 function b(t) {
     let { guildId: e, messageId: l, transitionState: b, onClose: y } = t,
         [h, I] = i.useState([]),

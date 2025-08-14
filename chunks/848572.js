@@ -1,7 +1,7 @@
 n.d(t, {
     GG: () => _,
-    Rw: () => O,
-    SI: () => v,
+    Rw: () => E,
+    SI: () => C,
     Vq: () => f,
     a1: () => x,
     kG: () => b,
@@ -97,29 +97,27 @@ let j = () => {
         }, null);
     },
     E = () => {
-        let e = b(),
-            t = (0, a.e7)([d.Z], () => d.Z.getPremiumTypeSubscription());
-        return null == e || null == t || null == t.premiumSince ? null : (0, l.RZ)(e, t.premiumSince);
-    },
-    C = () => {
-        let e = _(),
-            t = Object.values(p.vK);
-        if (null == e || null == t) return null;
-        let n = s()().diff(e, "days"),
-            i = t[0],
-            r = 30 * i.tenureReqNumMonths - n;
-        return r <= 0
-            ? null
-            : h(g({}, i), {
-                  daysLeft: r,
-                  status: "upcoming",
-              });
-    },
-    O = () => {
         let e = (0, a.e7)([c.default], () => c.default.getCurrentUser()),
-            t = v(null == e ? void 0 : e.id),
-            n = E(),
-            i = C();
+            t = C(null == e ? void 0 : e.id),
+            n = (() => {
+                let e = b(),
+                    t = (0, a.e7)([d.Z], () => d.Z.getPremiumTypeSubscription());
+                return null == e || null == t || null == t.premiumSince ? null : (0, l.RZ)(e, t.premiumSince);
+            })(),
+            i = (() => {
+                let e = _(),
+                    t = Object.values(p.vK);
+                if (null == e || null == t) return null;
+                let n = s()().diff(e, "days"),
+                    i = t[0],
+                    r = 30 * i.tenureReqNumMonths - n;
+                return r <= 0
+                    ? null
+                    : h(g({}, i), {
+                          daysLeft: r,
+                          status: "upcoming",
+                      });
+            })();
         return null != t
             ? h(g({}, t), {
                   earnedOnDate: n,
@@ -129,7 +127,7 @@ let j = () => {
               ? i
               : null;
     },
-    v = (e) => {
+    C = (e) => {
         let t = (0, m.l)(e);
         return null == t ? null : p.vK[t];
     };

@@ -25,7 +25,7 @@ var n = r(255367),
     j = r(215023),
     T = r(981631),
     P = r(388032),
-    L = r(253032);
+    L = r(310582);
 let k = (e) => {
         var t;
         let { handleTransition: r, numVisibleItems: a, isFetchingCategories: s, tab: c, isFullScreen: u } = e,
@@ -65,155 +65,157 @@ let k = (e) => {
             R = l.useCallback(() => {
                 B();
             }, [B]);
-        if (
-            (l.useEffect(() => {
-                null != A ||
-                    N ||
-                    0 === w.length ||
-                    (0, f.n)({
-                        sessionId: I,
-                        checkpoint: f.a.SHOP_RENDERED,
-                        tab: c,
-                        isFullScreen: u,
-                        unpublishedCategoriesShown: h,
-                        cacheDisabled: p,
-                    });
-            }, [A, N, w.length, h, p, I, c, u]),
-            null != A)
-        )
-            return (0, n.jsx)(b.Z, {
-                onRetry: R,
-                errorOrigin: b.i.SHOP_PAGE,
-                errorMessage: A.message,
-            });
-        if (N || 0 === w.length)
-            return (0, n.jsxs)("div", {
-                className: i()(L.loadingContainer, L.feedContent),
-                children: [
-                    (0, n.jsx)(C.Z, {
-                        isLoading: N,
-                        handleTransition: r,
-                        tab: c,
-                    }),
-                    (0, n.jsx)(v.Z, {
-                        isLoading: N,
-                        handleTransition: r,
-                        categories: [],
-                    }),
-                    (0, n.jsx)(O.Z, {
-                        isLoading: N,
-                        title: c === j.AW.ORBS ? P.intl.string(P.t.dFgeub) : P.intl.string(P.t.NSv5KS),
-                        numVisibleItems: a,
-                        hasSorting: c === j.AW.HOME,
-                        tab: c,
-                    }),
-                ],
-            });
-        let Z = (e, t, l) => {
-            if (null == e) return null;
-            let d = null,
-                p = !1;
-            switch (e.type) {
-                case o.z.HERO:
-                    d = (0, n.jsx)(
-                        C.Z,
-                        {
+        return (l.useEffect(() => {
+            null != A ||
+                N ||
+                0 === w.length ||
+                (0, f.n)({
+                    sessionId: I,
+                    checkpoint: f.a.SHOP_RENDERED,
+                    tab: c,
+                    isFullScreen: u,
+                    unpublishedCategoriesShown: h,
+                    cacheDisabled: p,
+                });
+        }, [A, N, w.length, h, p, I, c, u]),
+        null != A)
+            ? (0, n.jsx)(b.Z, {
+                  onRetry: R,
+                  errorOrigin: b.i.SHOP_PAGE,
+                  errorMessage: A.message,
+              })
+            : N || 0 === w.length
+              ? (0, n.jsxs)("div", {
+                    className: i()(L.loadingContainer, L.feedContent),
+                    children: [
+                        (0, n.jsx)(C.Z, {
                             isLoading: N,
                             handleTransition: r,
-                            heroBlock: e,
                             tab: c,
-                        },
-                        l,
-                    );
-                    break;
-                case o.z.FEATURED:
-                    d = (0, n.jsx)(
-                        v.Z,
-                        {
+                        }),
+                        (0, n.jsx)(v.Z, {
                             isLoading: N,
                             handleTransition: r,
-                            featuredBlockRecord: e,
-                        },
-                        l,
-                    );
-                    break;
-                case o.z.FEED:
-                    let g = e.sortedSkuIds;
-                    d = (0, n.jsx)(
-                        O.Z,
-                        {
+                            categories: [],
+                        }),
+                        (0, n.jsx)(O.Z, {
+                            isLoading: N,
                             title: c === j.AW.ORBS ? P.intl.string(P.t.dFgeub) : P.intl.string(P.t.NSv5KS),
-                            isLoading: N || s,
                             numVisibleItems: a,
-                            sortedSkuIds: g,
-                            buttonContainerClassName:
-                                (null == t ? void 0 : t.type) === o.z.IMMERSIVE_BANNER
-                                    ? L.feedblockInteractiveBackground
-                                    : void 0,
                             hasSorting: c === j.AW.HOME,
-                            prioritizeUserDiscounts: c === j.AW.HOME,
                             tab: c,
-                        },
-                        l,
-                    );
-                    break;
-                case o.z.WIDE_BANNER:
-                    d = (0, n.jsx)(
-                        x.Z,
-                        {
-                            handleTransition: r,
-                            wideBannerBlock: e,
-                            tab: c,
-                        },
-                        l,
-                    );
-                    break;
-                case o.z.SHELF:
-                    d = (0, n.jsx)(
-                        S.Z,
-                        {
-                            handleTransition: r,
-                            shelf: e,
-                            tab: c,
-                        },
-                        l,
-                    );
-                    break;
-                case o.z.COUNTDOWN_TIMER:
-                    (d = (0, n.jsx)(
-                        _.J,
-                        {
-                            countdownTimerBlock: e,
-                            isVisible: y,
-                            isFullScreen: u,
-                        },
-                        l,
-                    )),
-                        (p = !0);
-                    break;
-                case o.z.IMMERSIVE_BANNER:
-                    d = (0, n.jsx)(
-                        E.Z,
-                        {
-                            immersiveBannerBlock: e,
-                            onVisibilityChange: (e) => T(!e),
-                        },
-                        l,
-                    );
-                    break;
-                default:
-                    return null;
-            }
-            return (0, n.jsx)(
-                "div",
-                {
-                    className: i()(L.blockContainer, L.feedContent, { [L.skipPadding]: 0 === l || p }),
-                    children: d,
-                },
-                l,
-            );
-        };
-        return (0, n.jsx)(n.Fragment, { children: w.map((e, t) => Z(e, t > 0 ? w[t - 1] : null, t)) });
+                        }),
+                    ],
+                })
+              : (0, n.jsx)(n.Fragment, {
+                    children: w.map((e, t) =>
+                        ((e, t, l) => {
+                            if (null == e) return null;
+                            let d = null,
+                                p = !1;
+                            switch (e.type) {
+                                case o.z.HERO:
+                                    d = (0, n.jsx)(
+                                        C.Z,
+                                        {
+                                            isLoading: N,
+                                            handleTransition: r,
+                                            heroBlock: e,
+                                            tab: c,
+                                        },
+                                        l,
+                                    );
+                                    break;
+                                case o.z.FEATURED:
+                                    d = (0, n.jsx)(
+                                        v.Z,
+                                        {
+                                            isLoading: N,
+                                            handleTransition: r,
+                                            featuredBlockRecord: e,
+                                        },
+                                        l,
+                                    );
+                                    break;
+                                case o.z.FEED:
+                                    let g = e.sortedSkuIds;
+                                    d = (0, n.jsx)(
+                                        O.Z,
+                                        {
+                                            title:
+                                                c === j.AW.ORBS ? P.intl.string(P.t.dFgeub) : P.intl.string(P.t.NSv5KS),
+                                            isLoading: N || s,
+                                            numVisibleItems: a,
+                                            sortedSkuIds: g,
+                                            buttonContainerClassName:
+                                                (null == t ? void 0 : t.type) === o.z.IMMERSIVE_BANNER
+                                                    ? L.feedblockInteractiveBackground
+                                                    : void 0,
+                                            hasSorting: c === j.AW.HOME,
+                                            prioritizeUserDiscounts: c === j.AW.HOME,
+                                            tab: c,
+                                        },
+                                        l,
+                                    );
+                                    break;
+                                case o.z.WIDE_BANNER:
+                                    d = (0, n.jsx)(
+                                        x.Z,
+                                        {
+                                            handleTransition: r,
+                                            wideBannerBlock: e,
+                                            tab: c,
+                                        },
+                                        l,
+                                    );
+                                    break;
+                                case o.z.SHELF:
+                                    d = (0, n.jsx)(
+                                        S.Z,
+                                        {
+                                            handleTransition: r,
+                                            shelf: e,
+                                            tab: c,
+                                        },
+                                        l,
+                                    );
+                                    break;
+                                case o.z.COUNTDOWN_TIMER:
+                                    (d = (0, n.jsx)(
+                                        _.J,
+                                        {
+                                            countdownTimerBlock: e,
+                                            isVisible: y,
+                                            isFullScreen: u,
+                                        },
+                                        l,
+                                    )),
+                                        (p = !0);
+                                    break;
+                                case o.z.IMMERSIVE_BANNER:
+                                    d = (0, n.jsx)(
+                                        E.Z,
+                                        {
+                                            immersiveBannerBlock: e,
+                                            onVisibilityChange: (e) => T(!e),
+                                        },
+                                        l,
+                                    );
+                                    break;
+                                default:
+                                    return null;
+                            }
+                            return (0, n.jsx)(
+                                "div",
+                                {
+                                    className: i()(L.blockContainer, L.feedContent, { [L.skipPadding]: 0 === l || p }),
+                                    children: d,
+                                },
+                                l,
+                            );
+                        })(e, t > 0 ? w[t - 1] : null, t),
+                    ),
+                });
     },
     I = (e) => {
         let { isFullScreen: t, handleTransition: r, tab: a, transitionState: i } = e,

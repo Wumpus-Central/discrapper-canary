@@ -1,4 +1,4 @@
-n.d(t, { Z: () => U }), n(388685), n(781311);
+n.d(t, { Z: () => M }), n(388685), n(781311);
 var i = n(255367),
     r = n(73800),
     s = n(120356),
@@ -27,8 +27,8 @@ var i = n(255367),
     N = n(726985),
     y = n(981631),
     A = n(388032),
-    P = n(140059),
-    R = n(881488);
+    P = n(85240),
+    R = n(197571);
 function D(e) {
     let t = () => {
         I.SE.updateSetting(e ? C.Z.getGuildIds() : []);
@@ -99,13 +99,7 @@ function Z() {
         t = I.no.useSetting(),
         n = (0, S.Yd)("activity privacy tab"),
         r = v.isPlatformEmbedded ? A.intl.string(A.t.MznbeH) : A.intl.string(A.t.oKqC4u),
-        s = (e) => {
-            I.no.updateSetting(e ? d.GI.ACTIVITY_STATUS_ON_FOR_LARGE_GUILDS : d.GI.ACTIVITY_STATUS_OFF), D(e);
-        },
-        l = (e) => {
-            I.no.updateSetting(e), D(e !== d.GI.ACTIVITY_STATUS_OFF);
-        },
-        o = [
+        s = [
             {
                 value: d.GI.ACTIVITY_STATUS_ON,
                 label: A.intl.string(A.t.UzGMHx),
@@ -150,9 +144,11 @@ function Z() {
                                           }),
                                       }),
                                       (0, i.jsx)(p.q4e, {
-                                          options: o,
+                                          options: s,
                                           value: t,
-                                          onChange: (e) => l(e),
+                                          onChange: (e) => {
+                                              I.no.updateSetting(e), D(e !== d.GI.ACTIVITY_STATUS_OFF);
+                                          },
                                       }),
                                   ],
                               }),
@@ -164,7 +160,16 @@ function Z() {
                           note: A.intl.format(A.t["+5/xu7"], {
                               helpdeskArticle: O.Z.getArticleURL(y.BhN.ACTIVITY_STATUS_SETTINGS),
                           }),
-                          onChange: (e) => s(!e),
+                          onChange: (e) => {
+                              var t;
+                              return (
+                                  (t = !e),
+                                  void (I.no.updateSetting(
+                                      t ? d.GI.ACTIVITY_STATUS_ON_FOR_LARGE_GUILDS : d.GI.ACTIVITY_STATUS_OFF,
+                                  ),
+                                  D(t))
+                              );
+                          },
                           children: A.intl.string(A.t.D5GXTU),
                       }),
             ],
@@ -215,17 +220,7 @@ function k() {
         }),
     });
 }
-let L = (e) => {
-    switch (e.type) {
-        case y.ABu.SPOTIFY:
-            return A.intl.format(A.t["5sYPnp"], { name: e.name });
-        case y.ABu.CRUNCHYROLL:
-            return A.intl.format(A.t.Ge29Z2, { name: e.name });
-        default:
-            return A.intl.format(A.t.nmMsys, { game: e.name });
-    }
-};
-function M(e) {
+function L(e) {
     let { account: t } = e,
         [n, s] = r.useState(t.showActivity),
         a = (0, h.ZP)();
@@ -259,7 +254,20 @@ function M(e) {
                                 (0, i.jsxs)(p.Text, {
                                     variant: "text-sm/normal",
                                     color: "text-muted",
-                                    children: ['"', L(l), '"'],
+                                    children: [
+                                        '"',
+                                        ((e) => {
+                                            switch (e.type) {
+                                                case y.ABu.SPOTIFY:
+                                                    return A.intl.format(A.t["5sYPnp"], { name: e.name });
+                                                case y.ABu.CRUNCHYROLL:
+                                                    return A.intl.format(A.t.Ge29Z2, { name: e.name });
+                                                default:
+                                                    return A.intl.format(A.t.nmMsys, { game: e.name });
+                                            }
+                                        })(l),
+                                        '"',
+                                    ],
                                 }),
                             ],
                         }),
@@ -296,12 +304,12 @@ function B() {
                           onChange: s,
                           placeholder: A.intl.string(A.t.WPrtoa),
                       }),
-                      a.map((e) => (0, i.jsx)(M, { account: e }, e.id)),
+                      a.map((e) => (0, i.jsx)(L, { account: e }, e.id)),
                   ],
               }),
           });
 }
-function U(e) {
+function M(e) {
     let { className: t, showHeader: n = !0 } = e,
         { showRedesign: r } = T.b.useExperiment({ location: "activity privacy tab" }),
         { showPerGuildActivityStatusSetting: s } = (0, x.c)("activity privacy tab"),

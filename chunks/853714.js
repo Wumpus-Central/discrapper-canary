@@ -27,9 +27,9 @@ var r = n(255367),
     S = n(603784),
     T = n(981631),
     P = n(388032),
-    w = n(259387),
-    R = n(131902),
-    Z = n(210297);
+    w = n(912864),
+    R = n(630016),
+    Z = n(315091);
 function D(e, t, n) {
     return (
         t in e
@@ -509,11 +509,13 @@ class U extends i.PureComponent {
                     },
                     m = [u, ...s].map((e) =>
                         e instanceof b.Z
-                            ? {
-                                  label: e.username,
-                                  value: e.id,
-                                  user: e,
-                              }
+                            ? (function (e) {
+                                  return {
+                                      label: e.username,
+                                      value: e.id,
+                                      user: e,
+                                  };
+                              })(e)
                             : e,
                     ),
                     g =

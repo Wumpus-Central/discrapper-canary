@@ -9,8 +9,8 @@ var r = n(255367),
     d = n(434404),
     u = n(981631),
     m = n(388032),
-    g = n(130883),
-    p = n(389240);
+    g = n(764295),
+    p = n(759071);
 async function h(e, t) {
     return await d.Z.saveGuild(e.id, { moderatorReportingEnabled: t });
 }

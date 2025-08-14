@@ -1,4 +1,4 @@
-n.d(t, { Z: () => k }), n(388685);
+n.d(t, { Z: () => j }), n(388685);
 var r = n(392711),
     i = n(846519),
     o = n(570140),
@@ -77,7 +77,7 @@ function M(e, t) {
     let n = null != t ? t : h.Z.getPreferredRegion();
     null != n && n !== h.Z.getRegion(g.Z.getHostname(e)) && (0, a.dV)(e, n);
 }
-function j(e, t) {
+function k(e, t) {
     var n;
     if (g.Z.getAllActiveStreamKeys().includes(e)) return;
     let r = null != (n = N[e]) ? n : new i.V7();
@@ -89,14 +89,14 @@ function j(e, t) {
             });
         });
 }
-class k extends s.Z {
+class j extends s.Z {
     constructor(...e) {
         super(...e),
             I(this, "handleStreamWatch", (e) => {
                 let { streamKey: t, allowMultiple: n } = e,
                     { channelId: r } = (0, y.my)(t),
                     i = _.Z.getChannel(r);
-                j(t, null == i ? void 0 : i.isGuildStageVoice()),
+                k(t, null == i ? void 0 : i.isGuildStageVoice()),
                     D(t),
                     n ||
                         d.Z.getAllActiveStreams().forEach((e) => {
@@ -107,7 +107,7 @@ class k extends s.Z {
             I(this, "handleStreamStart", (e) => {
                 let { channelId: t, streamType: n, guildId: r } = e,
                     i = _.Z.getChannel(t);
-                j(
+                k(
                     (0, y.V9)({
                         streamType: n,
                         guildId: r,

@@ -1,35 +1,34 @@
-n.d(t, { p: () => m });
+n.d(t, { p: () => g });
 var r = n(255367),
     i = n(120356),
     l = n.n(i),
     o = n(481060),
-    s = n(377171),
-    a = n(804932),
+    a = n(377171),
+    s = n(804932),
     c = n(725739),
     u = n(370774),
     d = n(334426),
-    h = n(982183),
-    p = n(388032),
-    f = n(603706);
-let g = (e) => (e === h.V5.ALL ? p.intl.string(p.t["2pAkDA"]) : p.intl.string(p.t.HcoRu7));
-function m(e) {
+    p = n(982183),
+    f = n(388032),
+    h = n(567843);
+function g(e) {
     let { className: t } = e,
-        n = (0, a.fJ)(),
+        n = (0, s.fJ)(),
         i = (0, u.ux)(),
-        { selectedFilter: p, setSelectedFilter: m } = (0, c.Z)(),
+        { selectedFilter: g, setSelectedFilter: m } = (0, c.Z)(),
         b = (0, d.d)((e) => e.setInboxReadState);
     if (!i) return null;
     let O = () => {
-            let e = p === h.V5.ALL ? h.V5.BOOKMARKS : h.V5.ALL;
+            let e = g === p.V5.ALL ? p.V5.BOOKMARKS : p.V5.ALL;
             m(e),
-                e === h.V5.ALL && b(!1),
-                (0, a.RZ)({
+                e === p.V5.ALL && b(!1),
+                (0, s.RZ)({
                     section: e,
                     enabled: !0,
                     viewId: n,
                 });
         },
-        _ = g(p);
+        _ = g === p.V5.ALL ? f.intl.string(f.t["2pAkDA"]) : f.intl.string(f.t.HcoRu7);
     return (0, r.jsx)(o.ua7, {
         position: "bottom",
         text: _,
@@ -64,18 +63,18 @@ function m(e) {
                 })({}, e)),
                 (i = i =
                     {
-                        className: l()(t, f.headerButton, { [f.enabled]: p === h.V5.BOOKMARKS }),
+                        className: l()(t, h.headerButton, { [h.enabled]: g === p.V5.BOOKMARKS }),
                         "aria-label": _,
                         onClick: O,
                         children:
-                            p === h.V5.BOOKMARKS
+                            g === p.V5.BOOKMARKS
                                 ? (0, r.jsx)(o.plf, {
                                       size: "xs",
-                                      color: s.Z.ICON_DEFAULT,
+                                      color: a.Z.ICON_DEFAULT,
                                   })
                                 : (0, r.jsx)(o.gt9, {
                                       size: "xs",
-                                      color: s.Z.ICON_TERTIARY,
+                                      color: a.Z.ICON_TERTIARY,
                                   }),
                     }),
                 Object.getOwnPropertyDescriptors

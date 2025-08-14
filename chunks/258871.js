@@ -3,14 +3,14 @@ var r = n(255367),
     i = n(73800),
     l = n(442837),
     o = n(481060),
-    s = n(554747),
-    a = n(434479),
+    a = n(554747),
+    s = n(434479),
     c = n(593364),
     u = n(703656),
     d = n(944486),
-    h = n(147754),
-    p = n(688438),
-    f = n(981631),
+    p = n(147754),
+    f = n(688438),
+    h = n(981631),
     g = n(388032);
 function m(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -70,7 +70,7 @@ let O = [
             },
             handler: (e) =>
                 (0, o.ZDy)(async () => {
-                    let { default: t } = await Promise.all([n.e("22347"), n.e("56236"), n.e("97209")]).then(
+                    let { default: t } = await Promise.all([n.e("22347"), n.e("56236"), n.e("25688")]).then(
                         n.bind(n, 17671),
                     );
                     return (n) => (0, r.jsx)(t, b(m({}, n), { guildId: e.id }));
@@ -116,14 +116,14 @@ let O = [
             getName: () => g.intl.string(g.t.MJQOuL),
             handler: (e, t) =>
                 (0, o.ZDy)(async () => {
-                    let { default: i } = await Promise.all([n.e("7654"), n.e("41832")]).then(n.bind(n, 560114));
+                    let { default: i } = await Promise.all([n.e("7654"), n.e("54833")]).then(n.bind(n, 560114));
                     return (n) =>
                         (0, r.jsx)(
                             i,
                             b(m({}, n), {
                                 guild: e,
                                 channel: t,
-                                source: f.t4x.HUB_SIDEBAR,
+                                source: h.t4x.HUB_SIDEBAR,
                             }),
                         );
                 }),
@@ -131,35 +131,35 @@ let O = [
     ],
     _ = (e) => {
         let { guild: t, channel: n } = e,
-            o = (0, s.ZP)(t.id);
+            o = (0, a.ZP)(t.id);
         i.useEffect(() => {
-            h.Z.trackExposure({
+            p.Z.trackExposure({
                 guildId: t.id,
                 location: "543af8_1",
             });
         }, [t.id]);
-        let { showHubEventsList: u } = h.Z.useExperiment(
+        let { showHubEventsList: u } = p.Z.useExperiment(
                 {
                     guildId: t.id,
                     location: "543af8_2",
                 },
                 { autoTrackExposure: !1 },
             ),
-            f = (0, l.e7)([d.Z], () => null != n && d.Z.getChannelId() === n.id),
+            h = (0, l.e7)([d.Z], () => null != n && d.Z.getChannelId() === n.id),
             g = i.useMemo(() => ({ numEvents: o.length }), [o.length]),
-            m = (0, p.t)(n);
+            m = (0, f.t)(n);
         return (0, r.jsx)(r.Fragment, {
             children: O.map((e) => {
-                let { key: i, getName: l, handler: o, renderIcon: s } = e;
+                let { key: i, getName: l, handler: o, renderIcon: a } = e;
                 if (!u && "EVENTS" === i) return null;
                 let d = "".concat(i, "-").concat(t.id);
                 return (0, r.jsx)(
-                    a.m,
+                    s.m,
                     {
                         id: d,
-                        renderIcon: s,
+                        renderIcon: a,
                         text: l(g),
-                        selected: f && "JOIN_SERVERS" === i,
+                        selected: h && "JOIN_SERVERS" === i,
                         onClick: null != n ? () => o(t, n) : void 0,
                         trailing: "JOIN_SERVERS" === i && m > 0 ? (0, c.N)(m) : null,
                     },

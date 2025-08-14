@@ -1,11 +1,11 @@
-n.d(t, { Z: () => f });
+n.d(t, { Z: () => h });
 var r = n(255367);
 n(73800);
 var i = n(82659),
     l = n(481060),
     o = n(570140),
-    s = n(317770),
-    a = n(981631),
+    a = n(317770),
+    s = n(981631),
     c = n(388032);
 function u(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -33,10 +33,10 @@ function u(e) {
     return e;
 }
 let d = "ActivityInviteManager",
-    h = () => {
+    p = () => {
         o.Z.dispatch({ type: "ACTIVITY_INVITE_MODAL_CLOSE" });
     };
-class p extends s.Z {
+class f extends a.Z {
     _initialize() {
         o.Z.subscribe("ACTIVITY_INVITE_MODAL_OPEN", this.handleModalOpen),
             o.Z.subscribe("ACTIVITY_INVITE_MODAL_CLOSE", this.handleModalClose);
@@ -46,8 +46,8 @@ class p extends s.Z {
             o.Z.unsubscribe("ACTIVITY_INVITE_MODAL_CLOSE", this.handleModalClose);
     }
     handleModalOpen(e) {
-        let { activity: t, isPrivate: o, context: s } = e,
-            p = s === a.IlC.POPOUT ? l.u1M : l.z1l;
+        let { activity: t, isPrivate: o, context: a } = e,
+            f = a === s.IlC.POPOUT ? l.u1M : l.z1l;
         o
             ? (0, l.h7j)(
                   (e) => {
@@ -91,20 +91,20 @@ class p extends s.Z {
                       );
                   },
                   {
-                      onCloseCallback: h,
+                      onCloseCallback: p,
                       modalKey: d,
                   },
-                  p,
+                  f,
               )
             : (0, l.ZDy)(
                   async () => {
-                      let { default: e } = await n.e("95463").then(n.bind(n, 699099));
+                      let { default: e } = await n.e("79921").then(n.bind(n, 699099));
                       return (t) => (0, r.jsx)(e, u({}, t));
                   },
                   {
-                      onCloseCallback: h,
+                      onCloseCallback: p,
                       modalKey: d,
-                      contextKey: p,
+                      contextKey: f,
                   },
               );
     }
@@ -112,4 +112,4 @@ class p extends s.Z {
         (0, l.Mr3)(d);
     }
 }
-let f = new p();
+let h = new f();

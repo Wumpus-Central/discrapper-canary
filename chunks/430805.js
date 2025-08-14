@@ -41,7 +41,7 @@ var A = function (e) {
     F = function (e) {
         A(e.data);
     },
-    O = function (e) {
+    E = function (e) {
         s.postMessage(S(e), r.protocol + "//" + r.host);
     };
 (b && _) ||
@@ -70,8 +70,8 @@ var A = function (e) {
             })
           : w && !v
             ? ((i = (a = new w()).port2), (a.port1.onmessage = F), (o = l(i.postMessage, i)))
-            : s.addEventListener && u(s.postMessage) && !s.importScripts && r && "file:" !== r.protocol && !p(O)
-              ? ((o = O), s.addEventListener("message", F, !1))
+            : s.addEventListener && u(s.postMessage) && !s.importScripts && r && "file:" !== r.protocol && !p(E)
+              ? ((o = E), s.addEventListener("message", F, !1))
               : (o =
                     P in m("script")
                         ? function (e) {

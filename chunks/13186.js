@@ -1,40 +1,40 @@
 n.d(t, {
-    U: () => p,
-    Z: () => f,
+    U: () => f,
+    Z: () => h,
 });
 var r,
     i = n(255367),
     l = n(73800),
     o = n(120356),
-    s = n.n(o),
-    a = n(990547),
+    a = n.n(o),
+    s = n(990547),
     c = n(680018),
     u = n(481060),
     d = n(213609),
-    h = n(492211),
-    p = (((r = {}).TOP = "top"), (r.BOTTOM = "bottom"), r);
-let f = l.forwardRef(function (e, t) {
-    let { body: n, header: r, artClassName: l, buttonText: o, onClose: p, art: f, align: g } = e;
+    p = n(452956),
+    f = (((r = {}).TOP = "top"), (r.BOTTOM = "bottom"), r);
+let h = l.forwardRef(function (e, t) {
+    let { body: n, header: r, artClassName: l, buttonText: o, onClose: f, art: h, align: g } = e;
     return (
         (0, d.Z)({
-            type: a.ImpressionTypes.POPOUT,
-            name: a.ImpressionNames.CHAT_WALLPAPER_DM_LIST_COACHMARK,
+            type: s.ImpressionTypes.POPOUT,
+            name: s.ImpressionNames.CHAT_WALLPAPER_DM_LIST_COACHMARK,
         }),
         (0, i.jsx)("div", {
-            className: h.tooltip,
+            className: p.tooltip,
             ref: t,
             children: (0, i.jsxs)("div", {
-                className: h.content,
+                className: p.content,
                 children: [
                     (0, i.jsx)("div", {
                         className: l,
-                        children: f,
+                        children: h,
                     }),
                     (0, i.jsxs)("div", {
-                        className: h.body,
+                        className: p.body,
                         children: [
                             (0, i.jsx)(u.X6q, {
-                                className: h.header,
+                                className: p.header,
                                 variant: "heading-md/bold",
                                 color: "always-white",
                                 children: r,
@@ -51,17 +51,17 @@ let f = l.forwardRef(function (e, t) {
                         ],
                     }),
                     (0, i.jsx)("div", {
-                        className: h.buttonContainer,
+                        className: p.buttonContainer,
                         children: (0, i.jsx)(c.z, {
                             variant: "primary",
                             text: o,
                             fullWidth: !0,
                             onClick: (e) => {
-                                null == p || p(e);
+                                null == f || f(e);
                             },
                         }),
                     }),
-                    (0, i.jsx)("div", { className: s()(h.pointer, { [h.pointerBottom]: "bottom" === g }) }),
+                    (0, i.jsx)("div", { className: a()(p.pointer, { [p.pointerBottom]: "bottom" === g }) }),
                 ],
             }),
         })

@@ -20,7 +20,7 @@ var r = n(255367),
     O = n(466711),
     v = n(319417),
     I = n(728386),
-    T = n(939267);
+    T = n(564355);
 function S(e) {
     let { disabled: t, channel: n } = e,
         i = (0, f.Z)();
@@ -40,11 +40,11 @@ function A(e) {
     let { type: O, disabled: A, channel: C, handleSubmit: R, isEmpty: P, showAllButtons: w, children: D } = e,
         L = (0, a.e7)([l.Z], () => l.Z.isSubmitButtonEnabled),
         x = N(C.id, O, P),
-        { activeCommand: M, activeCommandOption: j } = (0, a.cj)([c.Z], () => ({
+        { activeCommand: M, activeCommandOption: k } = (0, a.cj)([c.Z], () => ({
             activeCommand: c.Z.getActiveCommand(C.id),
             activeCommandOption: c.Z.getActiveOption(C.id),
         })),
-        { paymentsBlocked: k } = u.Z.useExperiment({ location: "dc120b_3" }, { autoTrackExposure: !1 }),
+        { paymentsBlocked: j } = u.Z.useExperiment({ location: "dc120b_3" }, { autoTrackExposure: !1 }),
         U = [],
         G = !C.isDM() || void 0 === C.recipients || C.recipients.length > 1,
         B = (0, a.e7)([h.default], () => (G ? null : h.default.getUser(C.recipients[0]))),
@@ -52,7 +52,7 @@ function A(e) {
     return (o.tq ||
         ((null == (_ = O.gifts) ? void 0 : _.button) != null &&
             null == M &&
-            !k &&
+            !j &&
             (null == B || m.ZP.isPremiumEligible(B)) &&
             U.push(
                 (0, r.jsx)(
@@ -104,7 +104,7 @@ function A(e) {
                 ),
             )),
     (null == (n = O.emojis) ? void 0 : n.button) != null &&
-        (null == M || (null != j && j.type !== s.jw.ATTACHMENT)) &&
+        (null == M || (null != k && k.type !== s.jw.ATTACHMENT)) &&
         U.push(
             (0, r.jsx)(
                 g.Z,

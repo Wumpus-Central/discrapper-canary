@@ -4,7 +4,7 @@ n(73800);
 var r = n(120356),
     s = n.n(r),
     l = n(481060),
-    a = n(449006);
+    a = n(514923);
 function o(t) {
     let { tips: e, className: n, headerText: r } = t;
     return (0, i.jsxs)("div", {

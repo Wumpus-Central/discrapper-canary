@@ -2,8 +2,8 @@ n.d(t, { default: () => w }), n(388685);
 var l = n(255367),
     r = n(73800),
     a = n(120356),
-    s = n.n(a),
-    i = n(442837),
+    i = n.n(a),
+    s = n(442837),
     o = n(481060),
     d = n(570140),
     c = n(528963),
@@ -12,17 +12,17 @@ var l = n(255367),
     g = n(313201),
     m = n(565138),
     p = n(592125),
-    f = n(984933),
-    x = n(430824),
-    b = n(496675),
+    x = n(984933),
+    b = n(430824),
+    f = n(496675),
     j = n(699516),
     C = n(944486),
     y = n(594174),
     M = n(626135),
-    v = n(709054),
-    _ = n(981631),
+    _ = n(709054),
+    v = n(981631),
     N = n(388032),
-    Z = n(232750);
+    Z = n(360242);
 function S(e, t, n) {
     return (
         t in e
@@ -38,7 +38,7 @@ function S(e, t, n) {
 }
 class O extends r.PureComponent {
     componentDidMount() {
-        M.default.track(_.rMx.OPEN_MODAL, {
+        M.default.track(v.rMx.OPEN_MODAL, {
             type: "Follow Channel Modal",
             num_guild_permissions: Object.keys(this.props.guilds).length,
             location: "Chat Input Blocker - Follow Channel",
@@ -75,8 +75,8 @@ class O extends r.PureComponent {
     }
     renderForm() {
         let { guilds: e } = this.props,
-            { channels: t, selectedGuildId: n, selectedChannelId: a, errorMessage: s } = this.state,
-            i = v.default.keys(e).map((t) => {
+            { channels: t, selectedGuildId: n, selectedChannelId: a, errorMessage: i } = this.state,
+            s = _.default.keys(e).map((t) => {
                 let { guild: n } = e[t];
                 return {
                     value: t,
@@ -93,7 +93,7 @@ class O extends r.PureComponent {
                     category: n,
                 };
             }),
-            c = 0 === i.length,
+            c = 0 === s.length,
             g = c ? N.intl.string(N.t["6b6QoK"]) : N.intl.string(N.t.Z0quyM);
         return (0, l.jsxs)(r.Fragment, {
             children: [
@@ -102,7 +102,7 @@ class O extends r.PureComponent {
                     title: N.intl.string(N.t.xFn72t),
                     children: (0, l.jsx)(o.VcW, {
                         value: n,
-                        options: i,
+                        options: s,
                         isDisabled: c,
                         onChange: this.handleGuildSelect,
                         renderOptionPrefix: (e) =>
@@ -142,9 +142,9 @@ class O extends r.PureComponent {
                 }),
                 (0, l.jsx)(o.Text, {
                     variant: "text-sm/normal",
-                    color: c || null != s ? "text-danger" : "text-muted",
+                    color: c || null != i ? "text-danger" : "text-muted",
                     className: Z.bottomMargin,
-                    children: null != s ? s : g,
+                    children: null != i ? i : g,
                 }),
             ],
         });
@@ -163,13 +163,13 @@ class O extends r.PureComponent {
                 }),
                 (0, l.jsx)(o.Text, {
                     color: "text-muted",
-                    className: s()(Z.topMargin, { [Z.formMargin]: !e }),
+                    className: i()(Z.topMargin, { [Z.formMargin]: !e }),
                     variant: "text-sm/normal",
                     children: N.intl.string(N.t.kbpkxM),
                 }),
                 e
                     ? (0, l.jsx)(o.Text, {
-                          className: s()(Z.formMargin, Z.topMargin),
+                          className: i()(Z.formMargin, Z.topMargin),
                           color: "text-danger",
                           variant: "text-sm/normal",
                           children: N.intl.string(N.t["DrNm//"]),
@@ -283,7 +283,7 @@ class O extends r.PureComponent {
                                 });
                         })
                         .catch((e) => {
-                            e.body.code === _.evJ.TOO_MANY_WEBHOOKS
+                            e.body.code === v.evJ.TOO_MANY_WEBHOOKS
                                 ? this.setState({
                                       errorMessage: N.intl.string(N.t["1eZ4aG"]),
                                       submitting: !1,
@@ -295,10 +295,10 @@ class O extends r.PureComponent {
                         }));
             });
         let { guilds: t, lastChannelFollowingDestination: r } = e,
-            { guildId: a, channelId: s } = r;
+            { guildId: a, channelId: i } = r;
         this.state = {
             selectedGuildId: a,
-            selectedChannelId: s,
+            selectedChannelId: i,
             channels: null != a && null != t[a] ? t[a].channels : [],
             errorMessage: null,
             submitting: !1,
@@ -306,15 +306,15 @@ class O extends r.PureComponent {
         };
     }
 }
-let w = i.ZP.connectStores(
-    [x.Z, p.Z, f.ZP, b.Z, C.Z],
+let w = s.ZP.connectStores(
+    [b.Z, p.Z, x.ZP, f.Z, C.Z],
     (e) => {
         let { channel: t } = e,
-            n = x.Z.getGuild(t.guild_id),
-            l = x.Z.getGuildsArray().reduce((e, t) => {
-                let n = f.ZP.getChannels(t.id)
+            n = b.Z.getGuild(t.guild_id),
+            l = b.Z.getGuildsArray().reduce((e, t) => {
+                let n = x.ZP.getChannels(t.id)
                     .SELECTABLE.map((e) => e.channel)
-                    .filter((e) => e.type === _.d4z.GUILD_TEXT && b.Z.can(_.Plq.MANAGE_WEBHOOKS, e))
+                    .filter((e) => e.type === v.d4z.GUILD_TEXT && f.Z.can(v.Plq.MANAGE_WEBHOOKS, e))
                     .map((e) => {
                         let t = p.Z.getChannel(e.parent_id);
                         return {

@@ -23,7 +23,7 @@ var r = n(255367),
     T = n(149203),
     S = n(981631),
     A = n(388032),
-    N = n(674490);
+    N = n(999642);
 function C(e, t, n) {
     return (
         t in e
@@ -106,8 +106,8 @@ let x = (e) => {
             onInspect: L,
             surrogateCodePoint: x,
             getEmojiItemProps: M,
-            getEmojiRowProps: j,
-            isScrolling: k,
+            getEmojiRowProps: k,
+            isScrolling: j,
             isUsingKeyboardNavigation: U,
             rowIndex: G,
             allowAnimatedEmoji: B,
@@ -170,7 +170,7 @@ let x = (e) => {
                         b = D(h, ["ref", "tabIndex", "onFocus"]),
                         y = el.rowIndex === _ && el.columnIndex === p,
                         O = () => {
-                            k.current || U.current || L(e);
+                            j.current || U.current || L(e);
                         };
                     return (0, i.createElement)(
                         "li",
@@ -203,7 +203,7 @@ let x = (e) => {
                         o = el.rowIndex === t && el.columnIndex === i,
                         a = (t) => {
                             t.stopPropagation(),
-                                k.current ||
+                                j.current ||
                                     U.current ||
                                     (C(e, {
                                         isFinalSelection: !0,
@@ -247,7 +247,7 @@ let x = (e) => {
                     if (Q) return null;
                     let t = (t) => {
                         t.stopPropagation(),
-                            k.current ||
+                            j.current ||
                                 U.current ||
                                 (C(e, {
                                     isFinalSelection: !0,
@@ -278,7 +278,7 @@ let x = (e) => {
                             descriptor: e,
                             emojiItemKey: t,
                             isInspected: a,
-                            isScrolling: k,
+                            isScrolling: j,
                             isUsingKeyboardNavigation: U,
                             surrogateCodePoint: x,
                             allowAnimatedEmoji: B,
@@ -307,7 +307,7 @@ let x = (e) => {
         em = (e) =>
             (0, r.jsx)(
                 "ul",
-                w(R({}, j(G)), {
+                w(R({}, k(G)), {
                     className: a()(N.emojiListRow, {
                         [N.emojiListRowLargeSize]: e_,
                         [N.emojiListRowMediumSize]: ep,

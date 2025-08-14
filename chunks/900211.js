@@ -2,7 +2,7 @@ n.d(t, { Z: () => s }), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(347469),
-    a = n(400258);
+    a = n(432267);
 function s(e) {
     let { resizableNode: t, onResize: n, onResizeEnd: s, minHeight: l, maxHeight: c } = e,
         [u, d] = i.useState(null);

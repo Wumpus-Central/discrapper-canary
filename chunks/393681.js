@@ -34,15 +34,15 @@ var i = n(255367),
     w = n(10298),
     k = n(526156),
     L = n(730820),
-    M = n(888256),
-    B = n(2719),
+    B = n(888256),
+    M = n(2719),
     U = n(194530),
     V = n(726985),
     G = n(981631),
     F = n(801461),
     H = n(388032),
-    z = n(94563),
-    W = n(881488);
+    z = n(343396),
+    W = n(197571);
 function Y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -172,7 +172,7 @@ class q extends r.PureComponent {
     renderAccountSettings() {
         let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
             t = (0, i.jsxs)(i.Fragment, {
-                children: [this.renderPomeloWarning(), this.renderAccountWarning(), (0, i.jsx)(B.Z, {})],
+                children: [this.renderPomeloWarning(), this.renderAccountWarning(), (0, i.jsx)(M.Z, {})],
             });
         return e
             ? (0, i.jsx)(m.hjN, {
@@ -324,7 +324,7 @@ class q extends r.PureComponent {
     }
     renderAccountRemovalSettings() {
         let { currentUser: e, userTeamsLoading: t } = this.props;
-        return (0, i.jsx)(M.Z, {
+        return (0, i.jsx)(B.Z, {
             className: W.marginTop40,
             currentUser: e,
             disabled: t,

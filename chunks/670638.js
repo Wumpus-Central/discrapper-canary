@@ -130,7 +130,7 @@ function P(e) {
             }),
                 (0, a.showToast)((0, a.createToast)(I.intl.string(I.t["+5kSoa"]), a.ToastType.SUCCESS));
         }, [A, e.quest.id, e.questContent, e.questContentPosition, e.sourceQuestContent]),
-        j = () => {
+        k = () => {
             (0, b.openDisclosureModal)(e.quest, {
                 content: e.questContent,
                 position: e.questContentPosition,
@@ -139,7 +139,7 @@ function P(e) {
                 sourceQuestContent: e.sourceQuestContent,
             });
         },
-        k = () => {
+        j = () => {
             S({
                 questId: e.quest.id,
                 questContent: e.questContent,
@@ -221,14 +221,14 @@ function P(e) {
                             (0, r.jsx)(a.sNh, {
                                 id: "learn-more",
                                 label: I.intl.string(I.t.Ws2Bl5),
-                                action: k,
+                                action: j,
                                 icon: a.qDn,
                             }),
                         W &&
                             (0, r.jsx)(a.sNh, {
                                 id: "display-disclosure",
                                 label: I.intl.string(I.t.GcsZKC),
-                                action: j,
+                                action: k,
                             }),
                         c &&
                             (0, r.jsx)(a.sNh, {

@@ -20,8 +20,8 @@ var r = n(255367),
     v = n(201756),
     y = n(66747),
     O = n(852479),
-    H = n(420212),
-    _ = n(383791);
+    _ = n(420212),
+    H = n(655804);
 let w = {
         transform: "translate3d(15%, 0, 0)",
         opacity: 0.3,
@@ -39,9 +39,9 @@ let w = {
         friction: 24,
         tension: 260,
     },
-    D = (e) => e.shiftKey || e.key === H.vn.SHIFT,
-    L = (e) => e.metaKey || e.ctrlKey || ["Meta", "Control"].includes(e.key),
-    R = l.memo(
+    D = (e) => e.shiftKey || e.key === _.vn.SHIFT,
+    R = (e) => e.metaKey || e.ctrlKey || ["Meta", "Control"].includes(e.key),
+    L = l.memo(
         function (e) {
             let {
                     members: t,
@@ -53,20 +53,20 @@ let w = {
                     onResetForNewMembers: b,
                 } = e,
                 f = (0, c.e7)([C.Z], () => C.Z.useReducedMotion),
-                H = (0, u.f9)(),
-                R = (0, p.n)(),
+                _ = (0, u.f9)(),
+                L = (0, p.n)(),
                 [I, P] = l.useState(!1),
                 [M, V] = l.useState(!1),
-                E = !H && I && M;
+                E = !_ && I && M;
             l.useEffect(() => {
-                R || (P(!1), V(!1));
-            }, [R]),
+                L || (P(!1), V(!1));
+            }, [L]),
                 l.useLayoutEffect(() => {
                     let e = (e) => {
-                            D(e) && P(!0), L(e) && V(!0);
+                            D(e) && P(!0), R(e) && V(!0);
                         },
                         t = (e) => {
-                            D(e) && P(!1), L(e) && V(!1);
+                            D(e) && P(!1), R(e) && V(!1);
                         };
                     return (
                         window.addEventListener("keydown", e),
@@ -95,7 +95,7 @@ let w = {
                 }),
                 A = !f && a === x.po.LOADING;
             return (0, r.jsxs)("table", {
-                className: i()(_.table, o),
+                className: i()(H.table, o),
                 children: [
                     (0, r.jsx)(v.Z, {
                         guildId: n.id,
@@ -158,7 +158,7 @@ let w = {
             l.useEffect(() => {
                 (0, f.h1)(o.id, v);
             }, [o.id, v]),
-            (0, r.jsx)(R, {
+            (0, r.jsx)(L, {
                 members: g,
                 guild: o,
                 className: i,

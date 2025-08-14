@@ -44,8 +44,8 @@ let P = {},
     L = new S.Z(),
     x = !1,
     M = !1,
-    j = !1,
     k = !1,
+    j = !1,
     U = v.default.fromTimestamp(Date.now()),
     G = !0,
     B = null,
@@ -152,10 +152,10 @@ function K() {
         (L = new S.Z()),
         (x = !1),
         (M = !1),
-        (j = !1),
+        (k = !1),
         (U = v.default.fromTimestamp(Date.now())),
         (G = !0),
-        (k = !1),
+        (j = !1),
         (Z = null),
         (B = null);
 }
@@ -256,7 +256,7 @@ function er() {
 }
 function ei(e) {
     let { preload: t, hasMoreToLoad: n, analyticsPayload: r } = e;
-    (x = !1), t ? (k = !0) : (null != n && (G = n), (j = !0)), (Z = null != r ? r : null);
+    (x = !1), t ? (j = !0) : (null != n && (G = n), (k = !0)), (Z = null != r ? r : null);
 }
 function eo(e) {
     var t;
@@ -273,7 +273,7 @@ function eo(e) {
         null != w &&
         !x &&
         !M &&
-        (!n || !k) &&
+        (!n || !j) &&
         G
     );
 }
@@ -370,10 +370,10 @@ class eg extends (r = a.ZP.Store) {
         return x;
     }
     get hasLoadedEver() {
-        return j;
+        return k;
     }
     get hasPreloaded() {
-        return k;
+        return j;
     }
     get isLoadingComplete() {
         return !x && !G;

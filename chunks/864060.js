@@ -22,8 +22,8 @@ var i = n(317381),
     _ = n(723170),
     E = n(695346),
     p = n(131704),
-    T = n(433355),
-    N = n(592125),
+    N = n(433355),
+    T = n(592125),
     S = n(430824),
     I = n(19780),
     h = n(699516),
@@ -59,8 +59,8 @@ function w(t, e) {
     let a = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
         r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
     if (null != t.flags && (0, y.yE)(t.flags, R.iLy.SUPPRESS_NOTIFICATIONS)) return !1;
-    let o = N.Z.getChannel(e);
-    t.type === R.uaV.THREAD_STARTER_MESSAGE && (o = N.Z.getChannel(null == o ? void 0 : o.parent_id));
+    let o = T.Z.getChannel(e);
+    t.type === R.uaV.THREAD_STARTER_MESSAGE && (o = T.Z.getChannel(null == o ? void 0 : o.parent_id));
     let s = m.default.getCurrentUser(),
         d = m.default.getUser(null == (n = t.author) ? void 0 : n.id);
     if (
@@ -78,7 +78,7 @@ function w(t, e) {
         return !1;
     if (!a) {
         let t = C.Z.getChannelId(Z.Z.getGuildId());
-        if (t === o.id || T.ZP.getCurrentSidebarChannelId(t) === o.id) return !1;
+        if (t === o.id || N.ZP.getCurrentSidebarChannelId(t) === o.id) return !1;
     }
     if (
         h.Z.isBlockedOrIgnoredForMessage(t) ||
@@ -120,8 +120,8 @@ function w(t, e) {
 function M(t, e) {
     var n;
     if (C.Z.getChannelId(Z.Z.getGuildId()) !== e) return !1;
-    let i = N.Z.getChannel(e);
-    t.type === R.uaV.THREAD_STARTER_MESSAGE && (i = N.Z.getChannel(null == i ? void 0 : i.parent_id));
+    let i = T.Z.getChannel(e);
+    t.type === R.uaV.THREAD_STARTER_MESSAGE && (i = T.Z.getChannel(null == i ? void 0 : i.parent_id));
     let l = m.default.getCurrentUser(),
         a = m.default.getUser(null == (n = t.author) ? void 0 : n.id);
     return (
@@ -189,9 +189,9 @@ function H(t, e, n) {
         case R.d4z.ANNOUNCEMENT_THREAD:
         case R.d4z.PUBLIC_THREAD:
         case R.d4z.PRIVATE_THREAD:
-            let c = N.Z.getChannel(t.parent_id);
+            let c = T.Z.getChannel(t.parent_id);
             e.type === R.uaV.THREAD_STARTER_MESSAGE && null != c
-                ? (u = V(u, c, N.Z.getChannel(c.parent_id)))
+                ? (u = V(u, c, T.Z.getChannel(c.parent_id)))
                 : (0, f.Z)(e)
                   ? null != S.Z.getGuild(t.getGuildId()) && (u = V(u, t, c))
                   : (u = V(u, t, c));
@@ -231,9 +231,9 @@ function H(t, e, n) {
         i = k.intl.formatToPlainString(k.t.lieTqa, { username: D.ZP.getName(n) });
     else if (null != e.poll) i = k.intl.formatToPlainString(k.t.ImizdH, { question: e.poll.question.text });
     else if (e.type === R.uaV.POLL_RESULT) {
-        var E, p, T;
+        var E, p, N;
         let t =
-                null == (T = e.embeds) || null == (p = T[0]) || null == (E = p.fields)
+                null == (N = e.embeds) || null == (p = N[0]) || null == (E = p.fields)
                     ? void 0
                     : E.find((t) => ("name" in t ? t.name : t.rawName) === "poll_question_text"),
             n = null != t ? ("value" in t ? t.value : t.rawValue) : "";

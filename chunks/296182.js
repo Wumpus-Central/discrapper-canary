@@ -48,13 +48,12 @@ function E(e, t, n, r) {
         i.searchParams.delete("quality"),
         i.searchParams.delete("size"),
         p)
-    ) {
-        if (a.Z.isOriginalContentTypeDifferent(t, n)) return i.toString();
-        (0, o.SO)()
-            ? ((i.host = d),
-              (i.port = f),
-              i.pathname.startsWith("/attachments/") && (i.pathname = "/channels/" + i.pathname.substring(13)))
-            : (i.host = u);
-    }
+    )
+        if ((0, o.SO)()) {
+            if (a.Z.isOriginalContentTypeDifferent(t, n)) return i.toString();
+            (i.host = d),
+                (i.port = f),
+                i.pathname.startsWith("/attachments/") && (i.pathname = "/channels/" + i.pathname.substring(13));
+        } else i.host = u;
     return i.searchParams.delete("format"), null == l && null != r && i.searchParams.append("format", r), i.toString();
 }

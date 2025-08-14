@@ -4,5 +4,5 @@ var r,
     o = n(120356),
     a = n.n(o),
     s = n(355336),
-    l = n(477515);
+    l = n(901259);
 let c = (0, s.$)(a()(l.auto, l.disableScrollAnchor), null != (r = window.ResizeObserver) ? r : i.d);

@@ -25,7 +25,7 @@ var i = n(255367),
     h = n(373071),
     f = n(489495),
     b = n(189),
-    x = n(189270),
+    x = n(558270),
     _ = n(346537),
     j = n(830318);
 function E(e) {
@@ -88,8 +88,8 @@ let O = {
             [R, D] = r.useState([]),
             [Z, w] = r.useState(O),
             k = r.useRef([]),
-            [L, M] = r.useState(t.name),
-            B = L.toLowerCase().replace(/\s+/g, "_"),
+            [L, B] = r.useState(t.name),
+            M = L.toLowerCase().replace(/\s+/g, "_"),
             U = r.useMemo(
                 () => ({
                     type: l.Z.PROFILE_EFFECT,
@@ -114,30 +114,6 @@ let O = {
                     (0, f.i0)(n, (t) => {
                         w((i) => C(E({}, i), { [e]: (0, f.z)(t, n) }));
                     });
-            },
-            F = (e, t) => {
-                let n = V(e);
-                null != n &&
-                    (0, f.i0)(n, (e) => {
-                        D((i) => {
-                            let r = [...i],
-                                s = i[t];
-                            if (null == s) return i;
-                            let a = E({}, s);
-                            return (
-                                null == a.randomizedSources && (a.randomizedSources = []),
-                                a.randomizedSources.push({
-                                    src: e,
-                                    filename: n.name,
-                                }),
-                                (r[t] = a),
-                                r
-                            );
-                        });
-                    });
-            },
-            H = (e) => {
-                w((t) => C(E({}, t), { [e]: null }));
             };
         r.useEffect(() => {
             let e = t.config.effects;
@@ -163,16 +139,16 @@ let O = {
                         }
                     });
             }, [t.config.stillFrames]);
-        let z = {
+        let F = {
                 effect: t,
                 upsertConfig: n,
             },
-            W = r.useRef(z);
+            H = r.useRef(F);
         return (r.useEffect(() => {
-            W.current = z;
+            H.current = F;
         }),
         r.useEffect(() => {
-            let { effect: e, upsertConfig: t } = W.current;
+            let { effect: e, upsertConfig: t } = H.current;
             e.readonly ||
                 t({
                     id: e.id,
@@ -225,7 +201,7 @@ let O = {
                                               value: L,
                                               className: x.input,
                                               onChange: (e) => {
-                                                  M(e.target.value);
+                                                  B(e.target.value);
                                               },
                                           }),
                                       ],
@@ -365,7 +341,7 @@ let O = {
                                                   (0, i.jsx)(u.Z, {
                                                       fileContents: () => (0, f.yR)(R),
                                                       contentType: "text/plain",
-                                                      fileName: "".concat(B, "_timing_config.txt"),
+                                                      fileName: "".concat(M, "_timing_config.txt"),
                                                       children: (0, i.jsx)(d.zxk, {
                                                           variant: "primary",
                                                           size: "sm",
@@ -384,7 +360,7 @@ let O = {
                                                               }),
                                                           ),
                                                       contentType: "text/plain",
-                                                      fileName: "".concat(B, "_config.txt"),
+                                                      fileName: "".concat(M, "_config.txt"),
                                                       children: (0, i.jsx)(d.zxk, {
                                                           variant: "primary",
                                                           size: "sm",
@@ -425,7 +401,9 @@ let O = {
                                                                       size: c.Ph.TINY,
                                                                       color: c.Tt.RED,
                                                                       look: c.iL.OUTLINED,
-                                                                      onClick: () => H(t),
+                                                                      onClick: () => {
+                                                                          w((e) => C(E({}, e), { [t]: null }));
+                                                                      },
                                                                       children: "Clear",
                                                                   }),
                                                           ],
@@ -685,7 +663,31 @@ let O = {
                                                                   }),
                                                                   (0, i.jsx)(m.Z, {
                                                                       ref: I,
-                                                                      onChange: (e) => F(e, t),
+                                                                      onChange: (e) =>
+                                                                          ((e, t) => {
+                                                                              let n = V(e);
+                                                                              null != n &&
+                                                                                  (0, f.i0)(n, (e) => {
+                                                                                      D((i) => {
+                                                                                          let r = [...i],
+                                                                                              s = i[t];
+                                                                                          if (null == s) return i;
+                                                                                          let a = E({}, s);
+                                                                                          return (
+                                                                                              null ==
+                                                                                                  a.randomizedSources &&
+                                                                                                  (a.randomizedSources =
+                                                                                                      []),
+                                                                                              a.randomizedSources.push({
+                                                                                                  src: e,
+                                                                                                  filename: n.name,
+                                                                                              }),
+                                                                                              (r[t] = a),
+                                                                                              r
+                                                                                          );
+                                                                                      });
+                                                                                  });
+                                                                          })(e, t),
                                                                       multiple: !1,
                                                                   }),
                                                               ],

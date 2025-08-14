@@ -7,7 +7,7 @@ var n = r(255367),
     s = r(642909),
     c = r(215023),
     u = r(388032),
-    d = r(138954);
+    d = r(345213);
 function p(e) {
     let { handleTransition: t, onClose: r } = e,
         a = (0, s.G)("CollectiblesIndexPageContextMenu"),

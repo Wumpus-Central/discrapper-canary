@@ -9,17 +9,17 @@ var r = n(481060),
     l = n(955708),
     d = n(850165),
     u = n(388032),
-    x = n(682721),
+    x = n(394968),
     p = n(282668);
 function h(t) {
     let { senderId: e, trackAnalyticsEvent: n, onNavigate: h } = t,
-        g = (0, s.e7)([a.default], () => {
+        m = (0, s.e7)([a.default], () => {
             let t = a.default.getUser(e);
             return o.ZP.getName(t);
         });
     return (0, i.jsx)(d.Z, {
         header: u.intl.string(u.t.sSMgCw),
-        description: u.intl.formatToPlainString(u.t.q2QrTU, { username: g }),
+        description: u.intl.formatToPlainString(u.t.q2QrTU, { username: m }),
         heroImageSrc: p,
         heroImageAlt: u.intl.string(u.t["3QhxXF"]),
         children: (0, i.jsxs)("div", {

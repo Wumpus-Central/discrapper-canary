@@ -100,8 +100,8 @@ function R(e) {
         x = w ? T.intl.string(T.t["Cia+Aw"]) : T.intl.string(T.t.NgXl3N);
     if (null == R || !(0, d.Eb)(R)) return null;
     let { customInstallUrl: M } = R,
-        j = null == M || E.Z.isDiscordUrl(M) ? a.qJs : a.Gr1,
-        k = w ? void 0 : j;
+        k = null == M || E.Z.isDiscordUrl(M) ? a.qJs : a.Gr1,
+        j = w ? void 0 : k;
     return g.wS
         ? (0, r.jsx)(a.yRy, {
               targetElementRef: C,
@@ -131,7 +131,7 @@ function R(e) {
                               ref: C,
                               action: "PRESS_ADD_APP",
                               text: x,
-                              icon: k,
+                              icon: j,
                               onContextMenu: t,
                               onClick: L,
                           },
@@ -147,7 +147,7 @@ function R(e) {
                   {
                       action: "PRESS_ADD_APP",
                       text: x,
-                      icon: k,
+                      icon: j,
                       onClick: L,
                   },
                   S,

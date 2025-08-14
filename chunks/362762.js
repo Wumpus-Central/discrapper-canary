@@ -1,40 +1,38 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => d });
 var r,
     i,
-    l,
-    a = n(442837),
-    o = n(570140),
-    s = n(981631);
-let c = null,
-    u = {};
-class d extends (l = a.ZP.Store) {
+    l = n(442837),
+    a = n(570140),
+    o = n(981631);
+let s = null,
+    c = {};
+class u extends (i = l.ZP.Store) {
     getState(e) {
-        return u[e];
+        return c[e];
     }
     getHighestState() {
-        return c;
+        return s;
     }
 }
-(i = "CodedLinkNativeAppStateStore"),
-    (r = "displayName") in d
-        ? Object.defineProperty(d, r, {
-              value: i,
-              enumerable: !0,
-              configurable: !0,
-              writable: !0,
-          })
-        : (d[r] = i);
-let p = new d(o.Z, {
+(r = "displayName") in u
+    ? Object.defineProperty(u, r, {
+          value: "CodedLinkNativeAppStateStore",
+          enumerable: !0,
+          configurable: !0,
+          writable: !0,
+      })
+    : (u[r] = "CodedLinkNativeAppStateStore");
+let d = new u(a.Z, {
     NATIVE_APP_MODAL_OPENING: function (e) {
         let { code: t } = e;
-        (u[t] = s.kEZ.OPENING), null === c && (c = s.kEZ.OPENING);
+        (c[t] = o.kEZ.OPENING), null === s && (s = o.kEZ.OPENING);
     },
     NATIVE_APP_MODAL_OPENED: function (e) {
         let { code: t } = e;
-        (u[t] = s.kEZ.OPEN), (c = s.kEZ.OPEN);
+        (c[t] = o.kEZ.OPEN), (s = o.kEZ.OPEN);
     },
     NATIVE_APP_MODAL_OPEN_FAILED: function (e) {
         let { code: t } = e;
-        (u[t] = s.kEZ.OPEN_FAIL), (null === c || c === s.kEZ.OPENING) && (c = s.kEZ.OPEN_FAIL);
+        (c[t] = o.kEZ.OPEN_FAIL), (null === s || s === o.kEZ.OPENING) && (s = o.kEZ.OPEN_FAIL);
     },
 });

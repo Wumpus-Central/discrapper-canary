@@ -99,8 +99,8 @@ let R = new c.Z("OverlayRenderStore"),
     L = !1,
     x = null,
     M = {},
-    j = null,
     k = null,
+    j = null,
     U = new Set([l.Jx.FULLSCREEN, l.Jx.BORDERLESS_FULLSCREEN, l.Jx.UNKNOWN, l.Jx.MINIMIZED]),
     G = new Set([l.Jx.MINIMIZED, l.Jx.UNKNOWN]),
     B = !1,
@@ -315,7 +315,7 @@ async function en(e) {
         $(e, g.zE.SCREEN_TYPE_RESOLUTION),
         await ea(e, n),
         ef(y.HD),
-        (k = n.overlayMethod),
+        (j = n.overlayMethod),
         ex.emitChange(),
         await s.Z.updateTrackedGame(e, t);
 }
@@ -483,10 +483,10 @@ async function ed(e) {
         F(null, "fullscreen_overlay_method_swap_changes", { tracked_game_pids: Array.from(e) }));
 }
 function ef(e) {
-    null == j &&
+    null == k &&
         (__OVERLAY__ && R.error("Running Polling While in Overlay Context!"),
-        (j = setTimeout(async () => {
-            j = null;
+        (k = setTimeout(async () => {
+            k = null;
             let e = K();
             e.length > 0 && (ef(y.HD), await ed(new Set(e)));
         }, e)));
@@ -517,7 +517,7 @@ async function e_(e, t) {
     else for (let e of K()) await er(e), await (0, o._v)(16);
 }
 function ep() {
-    es(), (L = !1), (k = null), eP();
+    es(), (L = !1), (j = null), eP();
 }
 function eh(e) {
     let { legacyEnabled: t, oopEnabled: n } = e;
@@ -637,10 +637,10 @@ function eP() {
     u.Z.hasLoadedExperiments && !L && ((L = !0), e_(m.v.legacyEnabled, m.v.oopEnabled));
 }
 function ew() {
-    (L = !1), (k = null);
+    (L = !1), (j = null);
 }
 function eD() {
-    (L = !1), (k = null), ey();
+    (L = !1), (j = null), ey();
 }
 class eL extends (r = i.ZP.Store) {
     initialize() {
@@ -719,7 +719,7 @@ class eL extends (r = i.ZP.Store) {
         if (null != e) return null != (n = null == (t = W(e)) ? void 0 : t.overlayMethod) ? n : void 0;
     }
     getMostRecentOverlayRenderMethod() {
-        return k;
+        return j;
     }
     getOverlayRenderingTrackedGames() {
         return Object.values(M).filter((e) => e.overlayMethod !== g.gl.Disabled && e.state === g.mM.OVERLAY_RENDERING);

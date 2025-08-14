@@ -35,7 +35,7 @@ var r = n(255367),
     L = n(797342),
     x = n(981631),
     M = n(388032);
-function j(e, t, n) {
+function k(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -48,7 +48,7 @@ function j(e, t, n) {
         e
     );
 }
-function k(e) {
+function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -59,7 +59,7 @@ function k(e) {
                 }),
             )),
             r.forEach(function (t) {
-                j(e, t, n[t]);
+                k(e, t, n[t]);
             });
     }
     return e;
@@ -80,7 +80,7 @@ let U = {
                 entry: n,
                 disableGameProfileLinks: E,
                 onReaction: b,
-                onVoiceChannelPreview: j,
+                onVoiceChannelPreview: k,
                 onUserPopoutClosed: G,
                 trackRankingItemInteraction: B,
             } = e,
@@ -162,7 +162,7 @@ let U = {
                 !el && es
                     ? (0, r.jsx)(f.Z, {
                           application: ea,
-                          ButtonComponent: (e) => (0, r.jsx)(w.Ll, k({ IconComponent: s.v3n }, e)),
+                          ButtonComponent: (e) => (0, r.jsx)(w.Ll, j({ IconComponent: s.v3n }, e)),
                           location: "MemberListGamingContentPopout",
                       })
                     : null,
@@ -171,13 +171,13 @@ let U = {
                     ? (0, r.jsx)(_.Z, {
                           activity: Y,
                           user: F,
-                          ButtonComponent: (e) => (0, r.jsx)(w.Ll, k({ IconComponent: s.iWm }, e)),
+                          ButtonComponent: (e) => (0, r.jsx)(w.Ll, j({ IconComponent: s.iWm }, e)),
                       })
                     : null,
                 (0, u.Z)(Y)
                     ? (0, r.jsx)(p.Z, {
                           activity: Y,
-                          ButtonComponent: (e) => (0, r.jsx)(w.Ll, k({ IconComponent: s.tEF }, e)),
+                          ButtonComponent: (e) => (0, r.jsx)(w.Ll, j({ IconComponent: s.tEF }, e)),
                       })
                     : null,
                 ef,
@@ -188,7 +188,7 @@ let U = {
                 (0, r.jsx)(w.St, {
                     children: (0, r.jsx)(w.WT, {
                         onReaction: b,
-                        onVoiceChannelPreview: j,
+                        onVoiceChannelPreview: k,
                         user: F,
                         channel: t,
                         generateReactionImage: ec,

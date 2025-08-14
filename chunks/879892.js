@@ -109,7 +109,7 @@ async function v(e) {
     if (!L.verified)
         return void (0, i.ZDy)(
             async () => {
-                let { default: e } = await n.e("20102").then(n.bind(n, 444688));
+                let { default: e } = await Promise.all([n.e("88470"), n.e("20102")]).then(n.bind(n, 444688));
                 return (t) => {
                     var { onClose: n } = t,
                         i = b(t, ["onClose"]);
@@ -123,8 +123,8 @@ async function v(e) {
         c.Z.hasFetched || (x.push(o.jg()), x.push((0, a.X8)())),
         x.length > 0 && (await Promise.allSettled(x));
     let M = (0, f.vx)(c.Z.boostSlots),
-        j = M.length,
-        k = (e) => {
+        k = M.length,
+        j = (e) => {
             null == v || v(), null == N || N(e);
         },
         U = () => {
@@ -135,16 +135,16 @@ async function v(e) {
                     location_section: h.section,
                 });
         };
-    if (j > 0 && (null == y || j >= y)) {
+    if (k > 0 && (null == y || k >= y)) {
         let e;
-        1 === j ? (e = M.slice(0, 1)) : null != y && (e = M.slice(0, y)),
+        1 === k ? (e = M.slice(0, 1)) : null != y && (e = M.slice(0, y)),
             await (0, i.ZDy)(
                 async () => {
                     let { default: t } = await Promise.all([
                         n.e("8016"),
                         n.e("22646"),
                         n.e("30419"),
-                        n.e("98098"),
+                        n.e("14719"),
                     ]).then(n.bind(n, 760558));
                     return (n) => {
                         var { onClose: i } = n,
@@ -153,7 +153,7 @@ async function v(e) {
                             t,
                             E(m({}, o), {
                                 onClose: (e) => {
-                                    i(), k(e);
+                                    i(), j(e);
                                 },
                                 selectedGuild: A,
                                 locationSection: p.ZY5.PREMIUM_GUILD_USER_MODAL,
@@ -165,7 +165,7 @@ async function v(e) {
                 {
                     modalKey: O,
                     onCloseRequest: () => {
-                        (0, i.Mr3)(O), k(!1);
+                        (0, i.Mr3)(O), j(!1);
                     },
                     contextKey: D,
                 },
@@ -178,7 +178,7 @@ async function v(e) {
             guildId: A.id,
             closeLayer: U,
             totalNumberOfSlotsToAssign: null != y ? y : 1,
-            onCloseModal: k,
+            onCloseModal: j,
             disablePremiumUpsell: C,
             onSubscriptionConfirmation: T,
             onSubscribeComplete: S,

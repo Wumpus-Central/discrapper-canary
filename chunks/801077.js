@@ -32,8 +32,8 @@ var r,
     L = n(699516),
     x = n(594174),
     M = n(979651),
-    j = n(823379),
-    k = n(981631);
+    k = n(823379),
+    j = n(981631);
 function U(e, t, n) {
     return (
         t in e
@@ -101,11 +101,11 @@ let F = "party-",
 function ee() {
     let e = L.Z.getFriendIDs();
     return new Set(
-        N.Z.hasConsented(k.pjP.PERSONALIZATION) ? [...O.Z.getUserAffinities().map((e) => e.otherUserId), ...e] : e,
+        N.Z.hasConsented(j.pjP.PERSONALIZATION) ? [...O.Z.getUserAffinities().map((e) => e.otherUserId), ...e] : e,
     );
 }
 function et(e) {
-    return D.Z.findActivity(e, (e) => e.type !== k.IIU.CUSTOM_STATUS);
+    return D.Z.findActivity(e, (e) => e.type !== j.IIU.CUSTOM_STATUS);
 }
 function en(e) {
     return null == X[e] && (X = Z(G({}, X), { [e]: new T.Z({ name: e }) })), X[e];
@@ -147,7 +147,7 @@ function ea(e) {
 function es(e) {
     let t = M.Z.getVoiceStateForUser(e);
     return (null == t ? void 0 : t.channelId) != null &&
-        w.Z.canWithPartialContext(k.Plq.VIEW_CHANNEL, { channelId: t.channelId })
+        w.Z.canWithPartialContext(j.Plq.VIEW_CHANNEL, { channelId: t.channelId })
         ? t.channelId
         : null;
 }
@@ -250,7 +250,7 @@ function ed(e, t, n) {
             });
     }
     let L = 1 === g.length,
-        k = [],
+        j = [],
         U = new Set(),
         G = new Set();
     for (let e of t) {
@@ -267,14 +267,14 @@ function ed(e, t, n) {
                         let { userId: t } = e;
                         return x.default.getUser(t);
                     })
-                    .filter(j.lm)
+                    .filter(k.lm)
                     .orderBy([eu], ["desc"])
                     .value();
             s.filter((e) => !m.includes(e.id)).forEach((e) => t.push(e)),
                 L ? G.has(i) || (f = null) : ((f = a), (L = !0)),
                 G.add(i),
                 U.add(n),
-                k.push({
+                j.push({
                     channel: r,
                     guild: a,
                     members: s,
@@ -284,7 +284,7 @@ function ed(e, t, n) {
     }
     return {
         id: n,
-        voiceChannels: k,
+        voiceChannels: j,
         isSpotifyActivity: T,
         priorityMembers: g.map((e) => ({
             user: e,
@@ -350,7 +350,7 @@ function eg(e) {
 }
 function eE(e) {
     return e.map((e) => ({
-        type: k.GOo.USER,
+        type: j.GOo.USER,
         party: e,
     }));
 }

@@ -34,12 +34,12 @@ var i = n(255367),
     w = n(526761),
     k = n(726985),
     L = n(981631),
-    M = n(611480),
-    B = n(653477),
+    B = n(611480),
+    M = n(653477),
     U = n(388032),
-    V = n(698282),
-    G = n(473265),
-    F = n(881488),
+    V = n(693450),
+    G = n(953752),
+    F = n(197571),
     H = n(328756);
 function z(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -534,16 +534,16 @@ function ec() {
                 options: [
                     {
                         name: U.intl.string(U.t["Xp+X2d"]),
-                        value: M.yr.ALWAYS_ANIMATE,
+                        value: B.yr.ALWAYS_ANIMATE,
                     },
                     {
                         name: U.intl.string(U.t.IlLT7e),
                         desc: U.intl.string(U.t.bIW9Tk),
-                        value: M.yr.ANIMATE_ON_INTERACTION,
+                        value: B.yr.ANIMATE_ON_INTERACTION,
                     },
                     {
                         name: U.intl.string(U.t.IGu8x8),
-                        value: M.yr.NEVER_ANIMATE,
+                        value: B.yr.NEVER_ANIMATE,
                     },
                 ],
                 onChange: n,
@@ -658,7 +658,7 @@ function eu() {
                                   }),
                               }),
                               (0, i.jsx)(d.iRW, {
-                                  markers: B.q,
+                                  markers: M.q,
                                   initialValue: t,
                                   defaultValue: 1,
                                   stickToMarkers: !0,

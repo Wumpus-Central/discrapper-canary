@@ -34,20 +34,19 @@ class c extends s.Component {
         });
     }
     constructor(...e) {
-        var t, n;
         super(...e),
-            (t = "handleChange"),
-            (n = (e) => {
+            (function (e, t, n) {
+                t in e
+                    ? Object.defineProperty(e, t, {
+                          value: n,
+                          enumerable: !0,
+                          configurable: !0,
+                          writable: !0,
+                      })
+                    : (e[t] = n);
+            })(this, "handleChange", (e) => {
                 this.props.onChange(e);
-            }),
-            t in this
-                ? Object.defineProperty(this, t, {
-                      value: n,
-                      enumerable: !0,
-                      configurable: !0,
-                      writable: !0,
-                  })
-                : (this[t] = n);
+            });
     }
 }
 let h = r.ZP.connectStores([o.Z], (e) => {

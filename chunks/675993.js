@@ -24,8 +24,8 @@ var r = n(255367),
     S = n(783685),
     A = n(981631),
     N = n(388032),
-    C = n(771328),
-    R = n(692228);
+    C = n(208733),
+    R = n(430864);
 function P(e, t, n) {
     return (
         t in e
@@ -98,8 +98,8 @@ function x(e) {
             (0, r.jsxs)("div", {
                 className: b ? C.overviewContainerWithVideo : C.overviewContainerNoVideo,
                 children: [
-                    (0, r.jsx)(j, { application: n }),
                     (0, r.jsx)(k, { application: n }),
+                    (0, r.jsx)(j, { application: n }),
                     _.length > 0 ? (0, r.jsx)(B, { description: _ }) : null,
                     p
                         ? (0, r.jsx)("div", {
@@ -167,7 +167,7 @@ function M(e) {
           })
         : null;
 }
-function j(e) {
+function k(e) {
     var t;
     let { application: n } = e,
         i = (0, O.BQ)(n) ? n.name : null != (t = (0, O.$d)(n)) ? t : "",
@@ -193,7 +193,7 @@ function j(e) {
         ],
     });
 }
-function k(e) {
+function j(e) {
     let { application: t } = e,
         n = i.useMemo(() => {
             var e;

@@ -5,7 +5,7 @@ var r = n(255367),
     a = n.n(l),
     s = n(481060),
     o = n(717251),
-    c = n(318309);
+    c = n(987120);
 function d(e) {
     var { action: t, children: n, className: l, onExpandChange: d, loading: u } = e,
         m = (function (e, t) {
@@ -29,10 +29,7 @@ function d(e) {
             }
             return i;
         })(e, ["action", "children", "className", "onExpandChange", "loading"]);
-    let [g, p] = i.useState(!1),
-        h = (e) => {
-            p(e), null == d || d(e);
-        };
+    let [g, p] = i.useState(!1);
     return (0, r.jsx)(s.zF9, {
         className: a()(c.groupContainer, l),
         isExpanded: g,
@@ -75,7 +72,8 @@ function d(e) {
                         className: c.groupHeaderRow,
                         action: u ? (0, r.jsx)(s.$jN, { type: s.$jN.Type.PULSING_ELLIPSIS }) : t,
                         onClick: (e) => {
-                            h(!g), l(e);
+                            var t;
+                            p((t = !g)), null == d || d(t), l(e);
                         },
                     }),
                 Object.getOwnPropertyDescriptors

@@ -11,7 +11,7 @@ var r = n(255367),
     p = n(125631),
     f = n(981631),
     h = n(388032),
-    g = n(958122);
+    g = n(184904);
 let m = (0, a.hQ)(),
     b = "".concat(m, "-decription");
 function _(e, t, n) {
@@ -46,10 +46,7 @@ function _(e, t, n) {
     );
 }
 function O() {
-    let e = c.Z.getGuildsArray().filter((e) => e.features.has(f.oNc.HUB)),
-        t = (e) => {
-            u.default.track(f.rMx.ADD_FRIEND_OTHER_PLACES_HUB_CLICKED, { guild_id: e }), (0, s.X)(e);
-        };
+    let e = c.Z.getGuildsArray().filter((e) => e.features.has(f.oNc.HUB));
     return (0, r.jsxs)(i.Fragment, {
         children: [
             (0, r.jsxs)("header", {
@@ -83,7 +80,10 @@ function O() {
                             }),
                             e.name,
                             () => {
-                                t(e.id);
+                                var t;
+                                (t = e.id),
+                                    u.default.track(f.rMx.ADD_FRIEND_OTHER_PLACES_HUB_CLICKED, { guild_id: t }),
+                                    (0, s.X)(t);
                             },
                         ),
                     ),

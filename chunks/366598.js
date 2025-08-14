@@ -4,7 +4,7 @@ var i = n(255367),
     l = n(120356),
     o = n.n(l),
     a = n(481060),
-    s = n(878214);
+    s = n(343357);
 function c(e) {
     let { children: t, icon: n, title: l } = e;
     return (0, i.jsxs)("header", {

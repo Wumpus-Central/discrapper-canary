@@ -4,7 +4,7 @@ var r = n(255367),
     i = n(120356),
     o = n.n(i),
     s = n(481060),
-    a = n(795827);
+    a = n(840937);
 function c(e) {
     let { chunks: t, columns: n, className: i } = e,
         c = l.useMemo(() => ({ "--secure-frames-columns": n }), [n]);

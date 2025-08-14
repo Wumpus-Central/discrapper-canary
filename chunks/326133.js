@@ -19,7 +19,7 @@ var r = n(255367),
     y = n(606992),
     O = n(51062),
     v = n(918559),
-    I = n(274523);
+    I = n(671982);
 function T(e, t, n) {
     return (
         t in e
@@ -99,13 +99,13 @@ let P = 490,
     L = 200,
     x = 120,
     M = i.forwardRef(function (e, t) {
-        var n, o, T, A, R, M, j;
-        let { channel: k, type: U, editorHeight: G, onVisibilityChange: B, editorScrollerRef: Z, barsHeight: F } = e,
+        var n, o, T, A, R, M, k;
+        let { channel: j, type: U, editorHeight: G, onVisibilityChange: B, editorScrollerRef: Z, barsHeight: F } = e,
             V = (0, h.Dt)(),
             H = (0, l.e7)([E.Z], () => {
                 var e;
-                return null != (e = E.Z.getGuild(k.guild_id)) ? e : null;
-            }, [k.guild_id]),
+                return null != (e = E.Z.getGuild(j.guild_id)) ? e : null;
+            }, [j.guild_id]),
             Y = i.useRef(null),
             [W, K, z] = (0, O.Z)(N(S({}, e), { guild: H }), t, Y),
             q = (null == (n = U.autocomplete) ? void 0 : n.forceChatLayer) ? g.ZP : m.ZP,
@@ -117,10 +117,10 @@ let P = 490,
                 state: W,
             }),
             J = (0, l.e7)([d.ZP], () => {
-                let e = d.ZP.getSelfEmbeddedActivityForChannel(k.id),
+                let e = d.ZP.getSelfEmbeddedActivityForChannel(j.id),
                     t = d.ZP.getActivityPanelMode();
-                return (0, u.l5)(k) && null != e && (0, f.p)(e.location) === k.id && t === v.Ez.PANEL;
-            }, [k]),
+                return (0, u.l5)(j) && null != e && (0, f.p)(e.location) === j.id && t === v.Ez.PANEL;
+            }, [j]),
             $ = i.useMemo(
                 () =>
                     (null == Q ? void 0 : Q.top) == null &&
@@ -148,7 +148,7 @@ let P = 490,
             (T = W.query.typeInfo.renderResults({
                 results: W.query.results,
                 selectedIndex: W.selectedIndex,
-                channel: k,
+                channel: j,
                 guild: H,
                 query: W.query.queryText,
                 options: W.query.options,
@@ -219,7 +219,7 @@ let P = 490,
                       targetRef: e.targetRef,
                       overrideTargetRect: Q,
                       positionKey: $,
-                      position: null != (j = e.position) ? j : "top",
+                      position: null != (k = e.position) ? k : "top",
                       align: "left",
                       spacing: 8,
                       autoInvert: !0,

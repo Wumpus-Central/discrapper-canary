@@ -39,7 +39,7 @@ var r = n(255367),
     L = n(797342),
     x = n(206583),
     M = n(921944);
-function j(e, t, n) {
+function k(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -52,7 +52,7 @@ function j(e, t, n) {
         e
     );
 }
-function k(e) {
+function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -63,7 +63,7 @@ function k(e) {
                 }),
             )),
             r.forEach(function (t) {
-                j(e, t, n[t]);
+                k(e, t, n[t]);
             });
     }
     return e;
@@ -122,19 +122,19 @@ let Y = (e) => {
             n = B(e, ["entry"]);
         switch (t.content_type) {
             case l.s.PLAYED_GAME:
-                return (0, r.jsx)(I.Z, G(k({}, n), { entry: t }));
+                return (0, r.jsx)(I.Z, G(j({}, n), { entry: t }));
             case l.s.WATCHED_MEDIA:
-                return (0, r.jsx)(w.Z, G(k({}, n), { entry: t }));
+                return (0, r.jsx)(w.Z, G(j({}, n), { entry: t }));
             case l.s.TOP_GAME:
-                return (0, r.jsx)(R.ZP, G(k({}, n), { entry: t }));
+                return (0, r.jsx)(R.ZP, G(j({}, n), { entry: t }));
             case l.s.TOP_ARTIST:
-                return (0, r.jsx)(N.ZP, G(k({}, n), { entry: t }));
+                return (0, r.jsx)(N.ZP, G(j({}, n), { entry: t }));
             case l.s.LISTENED_SESSION:
-                return (0, r.jsx)(S.ZP, G(k({}, n), { entry: t }));
+                return (0, r.jsx)(S.ZP, G(j({}, n), { entry: t }));
             case l.s.LAUNCHED_ACTIVITY:
-                return (0, r.jsx)(O.Z, G(k({}, n), { entry: t }));
+                return (0, r.jsx)(O.Z, G(j({}, n), { entry: t }));
             case l.s.LEADERBOARD:
-                return (0, r.jsx)(g.Z, G(k({}, n), { entry: t }));
+                return (0, r.jsx)(g.Z, G(j({}, n), { entry: t }));
             default:
                 return null;
         }
@@ -144,7 +144,7 @@ let Y = (e) => {
             n = B(e, ["closePopout"]);
         return (0, r.jsx)(
             K,
-            k(
+            j(
                 {
                     onReaction: (e, r) => {
                         n.trackRankingItemInteraction(e, {
@@ -171,17 +171,17 @@ let Y = (e) => {
             i = B(e, ["entry"]);
         switch (n.content_type) {
             case l.s.PLAYED_GAME:
-                return (0, r.jsx)(T.Z, G(k({}, i), { entry: n }));
+                return (0, r.jsx)(T.Z, G(j({}, i), { entry: n }));
             case l.s.WATCHED_MEDIA:
-                return (0, r.jsx)(D.Z, G(k({}, i), { entry: n }));
+                return (0, r.jsx)(D.Z, G(j({}, i), { entry: n }));
             case l.s.TOP_GAME:
-                return (0, r.jsx)(P.Z, G(k({}, i), { entry: n }));
+                return (0, r.jsx)(P.Z, G(j({}, i), { entry: n }));
             case l.s.TOP_ARTIST:
-                return (0, r.jsx)(C.Z, G(k({}, i), { entry: n }));
+                return (0, r.jsx)(C.Z, G(j({}, i), { entry: n }));
             case l.s.LISTENED_SESSION:
-                return (0, r.jsx)(A.Z, G(k({}, i), { entry: n }));
+                return (0, r.jsx)(A.Z, G(j({}, i), { entry: n }));
             case l.s.LAUNCHED_ACTIVITY:
-                return (0, r.jsx)(v.ZP, G(k({}, i), { entry: n }));
+                return (0, r.jsx)(v.ZP, G(j({}, i), { entry: n }));
             case l.s.LEADERBOARD:
                 return (null == (t = i.channel) ? void 0 : t.guild_id) != null
                     ? (0, r.jsx)(m.Z, {
@@ -222,7 +222,7 @@ let Y = (e) => {
         i.useEffect(() => {
             C && D && w(!0);
         }, [C, D]);
-        let j = i.useCallback(
+        let k = i.useCallback(
                 (e) => {
                     I &&
                         (0, f.jW)(e, async () => {
@@ -242,7 +242,7 @@ let Y = (e) => {
             Z = i.useCallback(
                 function (e) {
                     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-                    (0, y.L)(e, k({}, A, t));
+                    (0, y.L)(e, j({}, A, t));
                 },
                 [A],
             ),
@@ -286,7 +286,7 @@ let Y = (e) => {
                         value: H,
                         children: (0, r.jsx)(
                             W,
-                            k(
+                            j(
                                 {
                                     closePopout: t,
                                     updatePopoutPosition: U,
@@ -309,7 +309,7 @@ let Y = (e) => {
                     let { isShown: n } = t;
                     return (0, r.jsx)(
                         d.P3F,
-                        G(k({}, e, v), {
+                        G(j({}, e, v), {
                             innerRef: g,
                             focusProps: {
                                 offset: {
@@ -322,10 +322,10 @@ let Y = (e) => {
                             onClick: () => {
                                 C || R(!0);
                             },
-                            onContextMenu: j,
+                            onContextMenu: k,
                             children: (0, r.jsx)(
                                 Y,
-                                G(k({}, m), {
+                                G(j({}, m), {
                                     selected: n,
                                     hovered: N.current,
                                 }),

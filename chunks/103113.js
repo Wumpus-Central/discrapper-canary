@@ -23,7 +23,7 @@ var r = n(255367),
     T = n(544989),
     S = n(228168),
     A = n(388032),
-    N = n(81208);
+    N = n(116649);
 function C(e, t, n) {
     return (
         t in e
@@ -64,11 +64,11 @@ function P(e) {
             setPopoutRef: L,
             closePopout: x,
             disableUserProfileLink: M = __OVERLAY__,
-            newAnalyticsLocations: j = [],
-            disableAutoFocus: k = !1,
+            newAnalyticsLocations: k = [],
+            disableAutoFocus: j = !1,
         } = e,
         U = (0, h.ZP)(t.id, n),
-        { analyticsLocations: G } = (0, l.ZP)([...j, s.Z.USER_PROFILE_POPOUT]),
+        { analyticsLocations: G } = (0, l.ZP)([...k, s.Z.USER_PROFILE_POPOUT]),
         B = (0, _.ZB)({
             layout: "POPOUT",
             userId: t.id,
@@ -114,7 +114,7 @@ function P(e) {
                       },
                   })
                 : null,
-        W = k ? "div" : o.VqE,
+        W = j ? "div" : o.VqE,
         K = (0, u.Dt)(),
         z = f.ZP.useName(n, C, t);
     return (0, r.jsx)(l.Gt, {

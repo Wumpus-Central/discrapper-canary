@@ -3,36 +3,36 @@ var r = n(255367),
     i = n(73800),
     l = n(636977),
     o = n(481060),
-    s = n(571457),
-    a = n(836768),
+    a = n(571457),
+    s = n(836768),
     c = n(749681),
     u = n(258971),
     d = n(603592),
-    h = n(49898),
-    p = n(128449),
-    f = n(46140),
+    p = n(49898),
+    f = n(128449),
+    h = n(46140),
     g = n(388032);
 let m = i.forwardRef(function (e, t) {
     let { selected: n, onClick: m, questId: b, className: O } = e,
         _ = i.useCallback(() => {
-            (0, s.k5)({ source: h.GlobalDiscoveryAnalyticsLocations.GUILDS_BAR_ICON });
-            let e = void 0 !== b ? h.GlobalDiscoveryTab.QUESTS : a.Z.getField("selectedTab");
+            (0, a.k5)({ source: p.GlobalDiscoveryAnalyticsLocations.GUILDS_BAR_ICON });
+            let e = void 0 !== b ? p.GlobalDiscoveryTab.QUESTS : s.Z.getField("selectedTab");
             switch (e) {
-                case h.GlobalDiscoveryTab.QUESTS:
+                case p.GlobalDiscoveryTab.QUESTS:
                     return (0, c.transitionToGlobalDiscovery)({
-                        tab: h.GlobalDiscoveryTab.QUESTS,
-                        location: f.dr.DISCOVERY_COMPASS,
+                        tab: p.GlobalDiscoveryTab.QUESTS,
+                        location: h.dr.DISCOVERY_COMPASS,
                         questContent: l.j.DISCOVERY_COMPASS,
                         questId: b,
                     });
-                case h.GlobalDiscoveryTab.SERVERS:
+                case p.GlobalDiscoveryTab.SERVERS:
                     return (0, c.transitionToGlobalDiscovery)({
-                        tab: h.GlobalDiscoveryTab.SERVERS,
-                        entrypoint: p.Qq.GUILDS_BAR,
+                        tab: p.GlobalDiscoveryTab.SERVERS,
+                        entrypoint: f.Qq.GUILDS_BAR,
                     });
-                case h.GlobalDiscoveryTab.APPS:
+                case p.GlobalDiscoveryTab.APPS:
                     return (0, c.transitionToGlobalDiscovery)({
-                        tab: h.GlobalDiscoveryTab.APPS,
+                        tab: p.GlobalDiscoveryTab.APPS,
                         newSessionState: {
                             entrypoint: { name: u.xF.GLOBAL_DISCOVERY_BUTTON },
                             restorePreviousView: !0,

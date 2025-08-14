@@ -1,29 +1,27 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => d });
 var r,
     i,
-    l,
-    a = n(442837),
-    o = n(570140),
-    s = n(496675),
-    c = n(981631);
-function u() {
+    l = n(442837),
+    a = n(570140),
+    o = n(496675),
+    s = n(981631);
+function c() {
     return !0;
 }
-class d extends (l = a.ZP.Store) {
+class u extends (i = l.ZP.Store) {
     initialize() {
-        this.waitFor(s.Z), this.syncWith([s.Z], u);
+        this.waitFor(o.Z), this.syncWith([o.Z], c);
     }
     channelNoticePredicate(e, t) {
-        return Date.now() - t >= c.Hqc && s.Z.can(c.Plq.ADMINISTRATOR, e);
+        return Date.now() - t >= s.Hqc && o.Z.can(s.Plq.ADMINISTRATOR, e);
     }
 }
-(i = "InviteNoticeStore"),
-    (r = "displayName") in d
-        ? Object.defineProperty(d, r, {
-              value: i,
-              enumerable: !0,
-              configurable: !0,
-              writable: !0,
-          })
-        : (d[r] = i);
-let p = new d(o.Z);
+(r = "displayName") in u
+    ? Object.defineProperty(u, r, {
+          value: "InviteNoticeStore",
+          enumerable: !0,
+          configurable: !0,
+          writable: !0,
+      })
+    : (u[r] = "InviteNoticeStore");
+let d = new u(a.Z);

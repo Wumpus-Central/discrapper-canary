@@ -1,10 +1,10 @@
 n.d(t, { Z: () => d }), n(388685);
 var r = n(255367),
     l = n(73800),
-    s = n(525654),
-    i = n.n(s),
+    i = n(525654),
+    s = n.n(i),
     a = n(748780),
-    o = n(17833);
+    o = n(654339);
 function u(e, t, n) {
     return (
         t in e
@@ -32,7 +32,7 @@ class E extends l.Component {
     componentDidMount() {
         this._isMounted = !0;
         let { x: e, y: t } = this.state;
-        "Firefox" !== i().name &&
+        "Firefox" !== s().name &&
             (a.Z.animate(e, {
                 loop: !0,
                 toValueMin: -74,

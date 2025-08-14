@@ -6,8 +6,8 @@ n.d(t, {
 });
 var r = n(913527),
     l = n.n(r),
-    s = n(81825),
-    i = n(960048),
+    i = n(81825),
+    s = n(960048),
     a = n(709054),
     o = n(981631);
 function u(e, t, n) {
@@ -57,7 +57,7 @@ function c(e) {
     else if (e <= o.rsA.GUILD_MEMBER_VERIFICATION_UPDATE) return o.KFR.GUILD_MEMBER_VERIFICATION;
     else if (e <= o.rsA.GUILD_PROFILE_UPDATE) return o.KFR.GUILD_PROFILE;
     else if (e <= o.rsA.GUILD_MIGRATE_PIN_PERMISSION) return o.KFR.GUILD;
-    return i.Z.captureMessage("Unknown target type for: ".concat(e)), o.KFR.UNKNOWN;
+    return s.Z.captureMessage("Unknown target type for: ".concat(e)), o.KFR.UNKNOWN;
 }
 function E(e) {
     switch (e) {
@@ -155,9 +155,9 @@ class d {
             (this.newValue = n);
     }
 }
-class _ extends s.Z {
+class _ extends i.Z {
     constructor(e) {
-        var t, n, r, s, i, o;
+        var t, n, r, i, s, o;
         super(),
             u(this, "id", void 0),
             u(this, "actionType", void 0),
@@ -180,8 +180,8 @@ class _ extends s.Z {
             (this.userId = e.userId),
             (this.changes = null != (r = e.changes) ? r : []),
             (this.targetType = c(this.action)),
-            (this.options = null != (s = e.options) ? s : {}),
-            (this.target = null != (i = e.target) ? i : e.id),
+            (this.options = null != (i = e.options) ? i : {}),
+            (this.target = null != (s = e.target) ? s : e.id),
             (this.user = null != (o = e.user) ? o : null);
     }
 }

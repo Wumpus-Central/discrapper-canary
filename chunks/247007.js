@@ -10,18 +10,18 @@ var r = n(255367),
     u = n(881052),
     m = n(686546),
     h = n(565138),
-    f = n(768581),
-    x = n(411198),
-    p = n(888592),
+    x = n(768581),
+    p = n(411198),
+    f = n(888592),
     g = n(388032),
-    _ = n(622974),
+    _ = n(642480),
     v = n(216019);
 function N(e) {
     var t, n, l;
     let { guildInfo: i, onClick: a, submitting: s } = e,
         o =
             null !=
-            (t = f.ZP.getGuildIconURL({
+            (t = x.ZP.getGuildIconURL({
                 id: i.id,
                 icon: i.icon,
                 size: 40,
@@ -39,7 +39,7 @@ function N(e) {
                 children: (0, r.jsx)(h.Z, {
                     className: _.guildIcon,
                     iconSrc: o,
-                    guild: (0, x.yS)(
+                    guild: (0, p.yS)(
                         ((n = (function (e) {
                             for (var t = 1; t < arguments.length; t++) {
                                 var n = null != arguments[t] ? arguments[t] : {},
@@ -100,23 +100,13 @@ function N(e) {
 }
 let E = (e) => {
     let { setStep: t, email: n, guildsInfo: i, setGuildId: s, forceGuildScrollHeight: m } = e,
-        [h, f] = l.useState(null),
-        [x, v] = l.useState(void 0),
+        [h, x] = l.useState(null),
+        [p, v] = l.useState(void 0),
         [E, S] = l.useState(null),
-        y = (e) => async () => {
-            f(null), s(e), S(e);
-            try {
-                await d.Z.sendVerificationEmail(n, !0, e), t(p.tF.VERIFY_PIN);
-            } catch (e) {
-                f(new u.Hx(e));
-            } finally {
-                S(null);
-            }
-        },
-        j = () => t(p.tF.SUBMIT_SCHOOL),
-        I = i;
+        y = () => t(f.tF.SUBMIT_SCHOOL),
+        j = i;
     return (
-        null != x && "" !== x && (I = i.filter((e) => o()(x.toLowerCase(), e.name.toLowerCase()))),
+        null != p && "" !== p && (j = i.filter((e) => o()(p.toLowerCase(), e.name.toLowerCase()))),
         (0, r.jsxs)("div", {
             className: _.container,
             children: [
@@ -131,7 +121,7 @@ let E = (e) => {
                         className: _.centerText,
                         variant: "text-sm/normal",
                         color: "header-secondary",
-                        children: g.intl.format(g.t.dZeiTE, { onJoinWaitlist: j }),
+                        children: g.intl.format(g.t.dZeiTE, { onJoinWaitlist: y }),
                     }),
                 }),
                 (0, r.jsxs)("div", {
@@ -150,7 +140,7 @@ let E = (e) => {
                                         v(e);
                                     },
                                     label: g.intl.string(g.t["5h0QOD"]),
-                                    searchTerm: x,
+                                    searchTerm: p,
                                     onClear: () => {
                                         v(void 0);
                                     },
@@ -162,22 +152,35 @@ let E = (e) => {
                                 }),
                             ],
                         }),
-                        I.length > 0
+                        j.length > 0
                             ? (0, r.jsx)(c.zJl, {
                                   className: _.scroller,
-                                  children: I.map((e) =>
-                                      void 0 === e
+                                  children: j.map((e) => {
+                                      let l;
+                                      return void 0 === e
                                           ? null
                                           : (0, r.jsx)(
                                                 N,
                                                 {
                                                     guildInfo: e,
-                                                    onClick: y(e.id),
+                                                    onClick:
+                                                        ((l = e.id),
+                                                        async () => {
+                                                            x(null), s(l), S(l);
+                                                            try {
+                                                                await d.Z.sendVerificationEmail(n, !0, l),
+                                                                    t(f.tF.VERIFY_PIN);
+                                                            } catch (e) {
+                                                                x(new u.Hx(e));
+                                                            } finally {
+                                                                S(null);
+                                                            }
+                                                        }),
                                                     submitting: E === e.id,
                                                 },
                                                 e.id,
-                                            ),
-                                  ),
+                                            );
+                                  }),
                               })
                             : (0, r.jsx)("div", {
                                   className: _.noResultsContainer,
@@ -193,7 +196,7 @@ let E = (e) => {
                                           (0, r.jsx)(c.Text, {
                                               className: _.centerText,
                                               variant: "text-md/normal",
-                                              children: g.intl.format(g.t.flgDKC, { onJoinWaitlist: j }),
+                                              children: g.intl.format(g.t.flgDKC, { onJoinWaitlist: y }),
                                           }),
                                       ],
                                   }),

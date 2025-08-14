@@ -6,7 +6,7 @@ var i = n(793030),
     a = n(760632),
     s = n(578053),
     o = n(388032),
-    c = n(97831);
+    c = n(354962);
 function d(e) {
     let { canManageGuild: t, guild: n } = e;
     return (0, r.jsxs)(l.hjN, {

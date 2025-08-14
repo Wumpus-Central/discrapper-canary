@@ -115,7 +115,7 @@ async function S(e) {
             timeToLoad: Date.now() - o,
             loadingTrigger: null != (t = r.loadingTrigger) ? t : p.X.UNKNOWN,
             viewId: r.viewId,
-            channelsFetched: s.length - +!!d,
+            channelsFetched: s.length - !!d,
             mentionsFetched: d,
         };
         n && (0, f.CP)(e),

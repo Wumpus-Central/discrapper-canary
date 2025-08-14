@@ -20,7 +20,7 @@ var r = n(255367),
     g = n(768581),
     E = n(28660),
     b = n(462997),
-    y = n(861888);
+    y = n(572425);
 function O(e, t, n) {
     return (
         t in e
@@ -118,13 +118,13 @@ function C(e) {
         } = e,
         L = (0, _.Dt)(),
         [x, M] = i.useState(!1),
-        j = (0, l.e7)([m.Z], () => m.Z.isFocused()),
-        k = h.QK.getSetting(),
+        k = (0, l.e7)([m.Z], () => m.Z.isFocused()),
+        j = h.QK.getSetting(),
         { bannerSrc: U, status: G } = (0, E.Z)({
             displayProfile: o,
             pendingBanner: O,
             size: C,
-            canAnimate: D || !k ? x : j,
+            canAnimate: D || !j ? x : k,
         }),
         B = (0, u.dQu)(c.Z.unsafe_rawColors.PRIMARY_800).hex(),
         Z = n.getAvatarURL(b, (0, u.pxk)(T)),
@@ -178,7 +178,7 @@ function C(e) {
                             backgroundImage: null != U ? "url(".concat(U, ")") : void 0,
                             backgroundColor: "COMPLETE" !== G ? c.Z.unsafe_rawColors.PRIMARY_800.css : V,
                         },
-                        children: [!k && (0, g.F8)(U) && (0, r.jsx)(p.Z, { className: y.gifTag }), v],
+                        children: [!j && (0, g.F8)(U) && (0, r.jsx)(p.Z, { className: y.gifTag }), v],
                     }),
                 ],
             }),

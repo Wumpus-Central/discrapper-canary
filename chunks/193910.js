@@ -1,4 +1,4 @@
-n.d(t, { Z: () => j }), n(413496), n(433524), n(35282), n(539854), n(388685);
+n.d(t, { Z: () => k }), n(413496), n(433524), n(35282), n(539854), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(831209),
@@ -25,7 +25,7 @@ var r = n(255367),
     A = n(921944),
     N = n(489887),
     C = n(388032),
-    R = n(115203);
+    R = n(749723);
 function P(e, t, n) {
     return (
         t in e
@@ -106,7 +106,7 @@ function M() {
         })
     );
 }
-function j(e) {
+function k(e) {
     let {
             channel: t,
             options: a,
@@ -115,8 +115,8 @@ function j(e) {
             onSelect: E,
             draftType: P,
             editorTextContent: D,
-            setValue: j,
-            openClips: k,
+            setValue: k,
+            openClips: j,
         } = e,
         { analyticsLocations: U, newestAnalyticsLocation: G } = (0, d.ZP)(),
         B = (0, m.Dt)({ channel: t });
@@ -148,10 +148,10 @@ function j(e) {
         (0, g.R6)(t, void 0, "Plus Button");
     }
     function Y() {
-        b.default.track(S.rMx.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), j("/", (0, I.JM)("/"));
+        b.default.track(S.rMx.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), k("/", (0, I.JM)("/"));
     }
     function W() {
-        k();
+        j();
     }
     function K() {
         (0, _.Q3)(s.z.POLLS_CHAT_INPUT_COACHMARK, { dismissAction: A.L.TAKE_ACTION }),

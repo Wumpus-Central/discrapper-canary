@@ -1,16 +1,16 @@
-n.d(t, { Z: () => C }), n(388685);
+n.d(t, { Z: () => v }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(442837),
     o = n(18998),
-    s = n(664915),
-    a = n(888369),
+    a = n(664915),
+    s = n(888369),
     c = n(358652),
     u = n(771845),
     d = n(613060),
-    h = n(451478),
-    p = n(251625),
-    f = n(981631),
+    p = n(451478),
+    f = n(251625),
+    h = n(981631),
     g = n(388032);
 let m = "app-download-item",
     b = "add-server-item";
@@ -19,20 +19,20 @@ function O() {
 }
 function _(e) {
     var t;
-    let n = a.default.getMutableGuildStates();
+    let n = s.default.getMutableGuildStates();
     return (
-        (e === f.x8Z.SERVER_DISCOVERY_BADGE && !d.Z.hasViewed(f.x8Z.SERVER_DISCOVERY_BADGE)) ||
+        (e === h.x8Z.SERVER_DISCOVERY_BADGE && !d.Z.hasViewed(h.x8Z.SERVER_DISCOVERY_BADGE)) ||
         (e !== m && e !== b && (null == (t = n[null != e ? e : "null"]) ? void 0 : t.highImportanceMentionCount) > 0)
     );
 }
-let y = (0, p.oH)((e, t, n) => ["null", ...t, ...e, b, f.x8Z.E3_SERVER_DISCOVERY_BADGE, m]),
-    C = i.forwardRef(function (e, t) {
+let y = (0, f.oH)((e, t, n) => ["null", ...t, ...e, b, h.x8Z.E3_SERVER_DISCOVERY_BADGE, m]),
+    v = i.forwardRef(function (e, t) {
         var n, i;
-        let d = (0, l.Wu)([u.ZP, c.Z, a.default], () =>
-                y(u.ZP.getGuildFolders(), c.Z.getUnreadPrivateChannelIds(), a.default.getStoreChangeSentinel()),
+        let d = (0, l.Wu)([u.ZP, c.Z, s.default], () =>
+                y(u.ZP.getGuildFolders(), c.Z.getUnreadPrivateChannelIds(), s.default.getStoreChangeSentinel()),
             ),
-            p = (0, l.e7)([h.Z], () => h.Z.isFocused()),
-            f = (0, l.e7)([s.Z], () => s.Z.getExpandedFolders());
+            f = (0, l.e7)([p.Z], () => p.Z.isFocused()),
+            h = (0, l.e7)([a.Z], () => a.Z.getExpandedFolders());
         return (0, r.jsx)(
             o.Z,
             ((n = (function (e) {
@@ -68,8 +68,8 @@ let y = (0, p.oH)((e, t, n) => ["null", ...t, ...e, b, f.x8Z.E3_SERVER_DISCOVERY
                     textUnread: g.intl.string(g.t.y2b7CA),
                     textMention: g.intl.string(g.t.y2b7CA),
                     isMentioned: _,
-                    animate: p,
-                    expandedFolders: f,
+                    animate: f,
+                    expandedFolders: h,
                 }),
             Object.getOwnPropertyDescriptors
                 ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))

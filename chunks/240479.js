@@ -21,7 +21,7 @@ var r = n(255367),
     v = n(981631),
     I = n(710111),
     T = n(388032),
-    S = n(807795);
+    S = n(937309);
 function A(e) {
     let { discoverableGuildId: t, closePopout: n, buttonType: o } = e,
         a = i.useCallback(async () => {
@@ -73,12 +73,12 @@ function N(e) {
     }, [u, P, t.guildId, t.soundId]);
     let { buttonType: L, description: x } = (0, y.Z)(t, n, v, N),
         M = L === y.y.JOIN_GUILD,
-        j = !E && w,
-        k = i.useMemo(
+        k = !E && w,
+        j = i.useMemo(
             () => (v ? d.JO.createFromGuildRecord(O) : null != N ? d.JO.createFromDiscoverableGuild(N) : void 0),
             [O, v, N],
         );
-    return j
+    return k
         ? (0, r.jsx)(_.SE, {})
         : (0, r.jsxs)("div", {
               className: S.infoContainer,
@@ -101,7 +101,7 @@ function N(e) {
                                   }),
                               ],
                           }),
-                          null != k &&
+                          null != j &&
                               (0, r.jsxs)("div", {
                                   className: S.infoExpandedGuildContainer,
                                   children: [
@@ -114,7 +114,7 @@ function N(e) {
                                       (0, r.jsx)("div", {
                                           className: S.infoExpandedGuildInfo,
                                           children: (0, r.jsx)(f.Oe, {
-                                              expressionSourceGuild: k,
+                                              expressionSourceGuild: j,
                                               hasJoinedExpressionSourceGuild: v,
                                               isDisplayingJoinGuildButtonInPopout: M,
                                           }),

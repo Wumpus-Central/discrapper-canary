@@ -10,9 +10,9 @@ var r = n(913527),
     u = n(594174),
     m = n(374023),
     h = n(709054),
-    f = n(645792),
-    x = n(981631),
-    p = n(921944);
+    x = n(645792),
+    p = n(981631),
+    f = n(921944);
 let g = {
     init(e) {
         let { hasModalOpen: t, openModal: n } = e;
@@ -21,14 +21,14 @@ let g = {
                 if ((0, a.Z)()) return;
                 let e = u.default.getCurrentUser(),
                     r = null != e && 7 > l()().diff(l()(h.default.extractTimestamp(e.id)), "days"),
-                    c = null != d.Z.getGuildsArray().find((e) => e.features.has(x.oNc.HUB)),
+                    c = null != d.Z.getGuildsArray().find((e) => e.features.has(p.oNc.HUB)),
                     m = !(0, s.zu)(i.z.HUB_BACK_TO_SCHOOL_UPSELL);
                 !(r || t() || c || !m) &&
-                    (0, f.b)() &&
-                    (f.Z.trackExposure({ location: "8b792a_1" }), n(), (0, o.kk)(i.z.HUB_BACK_TO_SCHOOL_UPSELL));
+                    (0, x.b)() &&
+                    (x.Z.trackExposure({ location: "8b792a_1" }), n(), (0, o.kk)(i.z.HUB_BACK_TO_SCHOOL_UPSELL));
             });
     },
     hideHubUpsell() {
-        (0, s.Q3)(i.z.HUB_BACK_TO_SCHOOL_UPSELL, { dismissAction: p.L.AUTO });
+        (0, s.Q3)(i.z.HUB_BACK_TO_SCHOOL_UPSELL, { dismissAction: f.L.AUTO });
     },
 };

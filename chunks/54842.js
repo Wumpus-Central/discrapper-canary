@@ -1,4 +1,4 @@
-n.d(t, { Z: () => w }), n(388685);
+n.d(t, { Z: () => E }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -13,16 +13,13 @@ var r = n(255367),
     p = n(981631),
     h = n(190378),
     f = n(388032),
-    b = n(18712),
+    b = n(977235),
     x = n(438825),
     j = n(236140),
     v = n(37069),
     _ = n(518513),
-    O = n(40271),
-    y = n(348986),
-    C = n(930065),
-    N = n(345669);
-function I(e) {
+    O = n(40271);
+function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -47,71 +44,14 @@ function I(e) {
     }
     return e;
 }
-let E = () => [
+let C = [
         {
-            icon: c.IeX,
-            color: o.Z.unsafe_rawColors.GREEN_360.css,
-            header: f.intl.string(f.t.oVQF29),
-            body: f.intl.format(f.t.A6G7am, {
-                featureHook: (e, t) =>
-                    (0, r.jsx)(
-                        "strong",
-                        {
-                            className: b.featuredText,
-                            children: e,
-                        },
-                        t,
-                    ),
-            }),
-        },
-        {
-            icon: c.IeX,
-            color: o.Z.unsafe_rawColors.PARTNER.css,
-            header: f.intl.string(f.t["0rJl9/"]),
-            body: f.intl.format(f.t.XsCNk5, {
-                infoHook: () =>
-                    (0, r.jsx)(c.ua7, {
-                        text: f.intl.string(f.t.kPJlTk),
-                        "aria-label": f.intl.string(f.t.kPJlTk),
-                        children: (e) =>
-                            (0, r.jsx)(
-                                c.d3s,
-                                I(
-                                    {
-                                        size: "xs",
-                                        color: "currentColor",
-                                        className: b.infoIcon,
-                                    },
-                                    e,
-                                ),
-                            ),
-                    }),
-                featureHook: (e, t) =>
-                    (0, r.jsx)(
-                        "strong",
-                        {
-                            className: b.featuredText,
-                            children: e,
-                        },
-                        t,
-                    ),
-            }),
-        },
-        {
-            icon: c.d3s,
-            color: o.Z.unsafe_rawColors.RED_360.css,
-            header: f.intl.string(f.t.W2kLJC),
-            body: f.intl.string(f.t.hyNkHx),
-        },
-    ],
-    S = [
-        {
-            iconSrc: y,
+            iconSrc: n(348986),
             name: "Pokemon GO Paris",
             position: [-230, -100],
         },
         {
-            iconSrc: C,
+            iconSrc: n(930065),
             name: "Python",
             position: [-180, -100],
             faded: !0,
@@ -130,7 +70,7 @@ let E = () => [
             rightAlign: !0,
         },
         {
-            iconSrc: N,
+            iconSrc: n(345669),
             name: "Sneaker Fans",
             position: [-250, 40],
         },
@@ -142,7 +82,7 @@ let E = () => [
             rightAlign: !0,
         },
     ],
-    T = (e) => {
+    N = (e) => {
         let { icon: t, color: n, size: i = 24, header: l, body: a } = e;
         return (0, r.jsxs)("div", {
             className: b.featureCard,
@@ -169,7 +109,7 @@ let E = () => [
             ],
         });
     },
-    P = (e) => {
+    I = (e) => {
         let { iconSrc: t, name: n, position: i, faded: l, rightAlign: s, imageCoordinates: o } = e,
             d = {
                 [s ? "right" : "left"]: o[0] + i[0],
@@ -195,21 +135,21 @@ let E = () => [
             ],
         });
     },
-    w = (e) => {
+    E = (e) => {
         let { guild: t } = e,
             [n, l] = i.useState(0),
-            [a, o] = i.useState(0),
-            [v, _] = i.useState(),
-            O = (0, s.e7)([m.Z], () => m.Z.can(p.Plq.ADMINISTRATOR, t)),
-            y = null == v ? void 0 : v.offsetWidth,
-            C = null == v ? void 0 : v.offsetHeight;
+            [a, v] = i.useState(0),
+            [_, O] = i.useState(),
+            E = (0, s.e7)([m.Z], () => m.Z.can(p.Plq.ADMINISTRATOR, t)),
+            S = null == _ ? void 0 : _.offsetWidth,
+            T = null == _ ? void 0 : _.offsetHeight;
         i.useEffect(() => {
-            null != y && l(y / 2), null != C && o(C / 2);
-        }, [y, C, l, o]),
+            null != S && l(S / 2), null != T && v(T / 2);
+        }, [S, T, l, v]),
             i.useEffect(() => {
                 (0, d.Kw)(h.v.GUILD_SETTINGS_COMMUNITY_GUILD_UPSELL);
             }, []);
-        let N = () => {
+        let P = () => {
             u.Z.open();
         };
         return (0, r.jsxs)("div", {
@@ -217,13 +157,13 @@ let E = () => [
             children: [
                 (0, r.jsxs)("div", {
                     className: b.banner,
-                    ref: (e) => _(e),
+                    ref: (e) => O(e),
                     children: [
-                        S.map((e) => {
+                        C.map((e) => {
                             var t, i;
                             return (0, r.jsx)(
-                                P,
-                                ((t = I({}, e)),
+                                I,
+                                ((t = y({}, e)),
                                 (i = i =
                                     {
                                         imageCoordinates: [n, a],
@@ -270,20 +210,20 @@ let E = () => [
                     }),
                 }),
                 (0, r.jsx)(c.ua7, {
-                    text: O ? null : f.intl.string(f.t["pjG+T0"]),
-                    "aria-label": O ? void 0 : f.intl.string(f.t["pjG+T0"]),
+                    text: E ? null : f.intl.string(f.t["pjG+T0"]),
+                    "aria-label": E ? void 0 : f.intl.string(f.t["pjG+T0"]),
                     children: (e) =>
                         (0, r.jsx)("div", {
                             "data-button-hoisted-classname-wrapper": !0,
                             className: b.button,
                             children: (0, r.jsx)(
                                 c.zxk,
-                                I(
+                                y(
                                     {
                                         variant: "primary",
                                         text: f.intl.string(f.t.LhlgY2),
-                                        onClick: N,
-                                        disabled: !O,
+                                        onClick: P,
+                                        disabled: !E,
                                     },
                                     e,
                                 ),
@@ -306,7 +246,63 @@ let E = () => [
                 }),
                 (0, r.jsx)("div", {
                     className: b.features,
-                    children: E().map((e, t) => (0, r.jsx)(T, I({}, e), t)),
+                    children: [
+                        {
+                            icon: c.IeX,
+                            color: o.Z.unsafe_rawColors.GREEN_360.css,
+                            header: f.intl.string(f.t.oVQF29),
+                            body: f.intl.format(f.t.A6G7am, {
+                                featureHook: (e, t) =>
+                                    (0, r.jsx)(
+                                        "strong",
+                                        {
+                                            className: b.featuredText,
+                                            children: e,
+                                        },
+                                        t,
+                                    ),
+                            }),
+                        },
+                        {
+                            icon: c.IeX,
+                            color: o.Z.unsafe_rawColors.PARTNER.css,
+                            header: f.intl.string(f.t["0rJl9/"]),
+                            body: f.intl.format(f.t.XsCNk5, {
+                                infoHook: () =>
+                                    (0, r.jsx)(c.ua7, {
+                                        text: f.intl.string(f.t.kPJlTk),
+                                        "aria-label": f.intl.string(f.t.kPJlTk),
+                                        children: (e) =>
+                                            (0, r.jsx)(
+                                                c.d3s,
+                                                y(
+                                                    {
+                                                        size: "xs",
+                                                        color: "currentColor",
+                                                        className: b.infoIcon,
+                                                    },
+                                                    e,
+                                                ),
+                                            ),
+                                    }),
+                                featureHook: (e, t) =>
+                                    (0, r.jsx)(
+                                        "strong",
+                                        {
+                                            className: b.featuredText,
+                                            children: e,
+                                        },
+                                        t,
+                                    ),
+                            }),
+                        },
+                        {
+                            icon: c.d3s,
+                            color: o.Z.unsafe_rawColors.RED_360.css,
+                            header: f.intl.string(f.t.W2kLJC),
+                            body: f.intl.string(f.t.hyNkHx),
+                        },
+                    ].map((e, t) => (0, r.jsx)(N, y({}, e), t)),
                 }),
             ],
         });

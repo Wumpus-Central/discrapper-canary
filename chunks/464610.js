@@ -11,7 +11,7 @@ var r = n(255367),
     m = n(740903),
     g = n(598622),
     p = n(388032),
-    h = n(697151);
+    h = n(687726);
 function f(e) {
     let { title: t, subtitle: n, icon: i, page: a } = e;
     return (0, r.jsxs)("div", {

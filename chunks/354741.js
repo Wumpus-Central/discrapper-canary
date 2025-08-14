@@ -13,8 +13,8 @@ var r = n(481060),
     p = n(489618),
     b = n(769409),
     g = n(122074),
-    _ = n(314897),
-    v = n(858687),
+    v = n(314897),
+    _ = n(858687),
     O = n(461535),
     C = n(776568),
     h = n(981631),
@@ -23,12 +23,12 @@ let E = (0, l.Z)(
     (0, o.Z)(
         function (e) {
             let { channel: t, selected: o, onSelect: l } = e,
-                E = t.isOwner(_.default.getId()),
+                E = t.isOwner(v.default.getId()),
                 y = (0, O.Z)(t),
                 m = (0, C.ZP)(t),
                 N = (0, g.Uf)(h.aIL, t.id, "top"),
                 { rearrangeContextMenu: T } = p.Z.useExperiment({ location: s.Z.GROUP_DM_CONTEXT_MENU }),
-                I = (0, v.Z)(t, o),
+                I = (0, _.Z)(t, o),
                 R = (0, d.Z)({
                     id: t.id,
                     label: A.intl.string(A.t.gFHI3t),
@@ -43,7 +43,9 @@ let E = (0, l.Z)(
                           label: A.intl.string(A.t.ngRFjY),
                           action: () =>
                               (0, r.ZDy)(async () => {
-                                  let { default: e } = await n.e("97573").then(n.bind(n, 892382));
+                                  let { default: e } = await Promise.all([n.e("12830"), n.e("97573")]).then(
+                                      n.bind(n, 892382),
+                                  );
                                   return (n) =>
                                       (0, i.jsx)(
                                           e,

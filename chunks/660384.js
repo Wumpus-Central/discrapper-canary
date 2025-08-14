@@ -8,15 +8,15 @@ class a {
         return this.top;
     }
     constructor() {
-        var e;
-        (e = new r.SpringValue(0)),
-            "top" in this
-                ? Object.defineProperty(this, "top", {
-                      value: e,
+        !(function (e, t, n) {
+            "top" in e
+                ? Object.defineProperty(e, "top", {
+                      value: n,
                       enumerable: !0,
                       configurable: !0,
                       writable: !0,
                   })
-                : (this.top = e);
+                : (e[t] = n);
+        })(this, "top", new r.SpringValue(0));
     }
 }

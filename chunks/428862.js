@@ -15,7 +15,7 @@ var r,
     f = n(402766),
     b = n(981631),
     x = n(388032),
-    j = n(621760);
+    j = n(744834);
 let v = {
         tension: 200,
         friction: 20,
@@ -194,47 +194,7 @@ function C(e) {
         }),
         O = b.oCV[i.tier],
         C = a && i.tier <= _,
-        N = i.tier !== b.Eu4.NONE && i.tier !== b.Eu4.TIER_1,
-        I = (e, t) => {
-            var n;
-            let { Icon: r, className: i } = (0, g.t)(e.icon, t);
-            return (0, l.jsxs)(
-                "div",
-                {
-                    className: j.perk,
-                    children: [
-                        (0, l.jsx)(p.Z, {
-                            name: String(e.icon),
-                            icon: r,
-                            className: j.perkIcon,
-                            iconClassName: i,
-                        }),
-                        (0, l.jsxs)("div", {
-                            className: j.perkText,
-                            children: [
-                                (0, l.jsxs)("div", {
-                                    className: j.perkTitle,
-                                    children: [
-                                        e.title,
-                                        e.isNew
-                                            ? (0, l.jsx)(u.IGR, {
-                                                  className: j.newBadge,
-                                                  text: x.intl.string(x.t.y2b7CA),
-                                              })
-                                            : null,
-                                    ],
-                                }),
-                                (0, l.jsx)("div", {
-                                    className: j.perkDescription,
-                                    children: e.description,
-                                }),
-                            ],
-                        }),
-                    ],
-                },
-                null == (n = e.title) ? void 0 : n.toString(),
-            );
-        };
+        N = i.tier !== b.Eu4.NONE && i.tier !== b.Eu4.TIER_1;
     return (0, l.jsxs)(
         "div",
         {
@@ -271,7 +231,50 @@ function C(e) {
                                       null != i.perks &&
                                           (0, l.jsx)("div", {
                                               className: j.perks,
-                                              children: i.perks.map((e) => I(e, C)),
+                                              children: i.perks.map((e) =>
+                                                  ((e, t) => {
+                                                      var n;
+                                                      let { Icon: r, className: i } = (0, g.t)(e.icon, t);
+                                                      return (0, l.jsxs)(
+                                                          "div",
+                                                          {
+                                                              className: j.perk,
+                                                              children: [
+                                                                  (0, l.jsx)(p.Z, {
+                                                                      name: String(e.icon),
+                                                                      icon: r,
+                                                                      className: j.perkIcon,
+                                                                      iconClassName: i,
+                                                                  }),
+                                                                  (0, l.jsxs)("div", {
+                                                                      className: j.perkText,
+                                                                      children: [
+                                                                          (0, l.jsxs)("div", {
+                                                                              className: j.perkTitle,
+                                                                              children: [
+                                                                                  e.title,
+                                                                                  e.isNew
+                                                                                      ? (0, l.jsx)(u.IGR, {
+                                                                                            className: j.newBadge,
+                                                                                            text: x.intl.string(
+                                                                                                x.t.y2b7CA,
+                                                                                            ),
+                                                                                        })
+                                                                                      : null,
+                                                                              ],
+                                                                          }),
+                                                                          (0, l.jsx)("div", {
+                                                                              className: j.perkDescription,
+                                                                              children: e.description,
+                                                                          }),
+                                                                      ],
+                                                                  }),
+                                                              ],
+                                                          },
+                                                          null == (n = e.title) ? void 0 : n.toString(),
+                                                      );
+                                                  })(e, C),
+                                              ),
                                           }),
                                   ],
                               }),

@@ -2,7 +2,7 @@ n.d(t, { T: () => o }), n(415506);
 var i = n(255367);
 n(73800);
 var l = n(670304),
-    s = n(535320);
+    s = n(764516);
 function o(e) {
     let { node: t } = e,
         n = t.render;

@@ -49,7 +49,7 @@ function M(e) {
     let t = m.Z.getGameByName(e);
     return null != t ? x(t.id) : f.G6.getSetting();
 }
-function j(e) {
+function k(e) {
     var t;
     if ((0, p.yE)(null != (t = e.flags) ? t : 0, v.xjy.CONTEXTLESS)) return !0;
     switch (e.type) {
@@ -65,7 +65,7 @@ function j(e) {
             return null == e.application_id || x(e.application_id);
     }
 }
-function k() {
+function j() {
     (P = !0), (A = S), U();
 }
 function U() {
@@ -78,7 +78,7 @@ function U() {
     }
     S === v.Skl.ONLINE && N > 0 && (S = v.Skl.IDLE);
     let t = !1,
-        n = P || S === v.Skl.INVISIBLE ? [] : b.Z.getActivities().filter(j);
+        n = P || S === v.Skl.INVISIBLE ? [] : b.Z.getActivities().filter(k);
     o()(C, n) || ((C = n), (t = !0));
     let r = O.Z.getRemoteActivities();
     w !== r && ((w = r), (t = !0));
@@ -156,7 +156,7 @@ let H = new V(c.Z, {
     RPC_APP_DISCONNECTED: U,
     LIBRARY_FETCH_SUCCESS: U,
     LIBRARY_APPLICATION_FLAGS_UPDATE_SUCCESS: U,
-    LOGOUT: k,
+    LOGOUT: j,
     FORCE_INVISIBLE: G,
     WINDOW_FOCUS: B,
 });

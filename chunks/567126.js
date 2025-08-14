@@ -24,8 +24,8 @@ var r = n(255367),
     _ = n(509212),
     v = n(569984),
     j = n(977156),
-    b = n(28798),
-    S = n(131951),
+    S = n(28798),
+    b = n(131951),
     C = n(449224),
     y = n(358085),
     O = n(463727),
@@ -43,7 +43,7 @@ var r = n(255367),
     L = n(46140),
     D = n(65154),
     B = n(388032),
-    U = n(988598);
+    U = n(336606);
 function G(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -77,7 +77,7 @@ function W(e) {
 function F(e) {
     let { selectedSource: t, onChangeSelectedSource: n } = e,
         { enableGoLiveCaptureCard: l } = O.Z.useExperiment({ location: "GoLive_Source_Select" }),
-        o = S.Z.supports(D.AN.GO_LIVE_HARDWARE),
+        o = b.Z.supports(D.AN.GO_LIVE_HARDWARE),
         [a, m] = i.useState(null),
         [C, y] = i.useState(null),
         [Z, w] = i.useState(null),
@@ -250,7 +250,7 @@ function F(e) {
                     null != e && G(!e.isScrolledToTop());
                 },
                 children: [
-                    E === c.vA.WINDOW && null != V && (0, r.jsx)(b.Z, { quest: V.quest }),
+                    E === c.vA.WINDOW && null != V && (0, r.jsx)(S.Z, { quest: V.quest }),
                     (0, r.jsx)(p.Z, {
                         layout: p.Z.Layout.WRAP,
                         columns: 2,
@@ -326,7 +326,7 @@ function V(e) {
     i.useEffect(() => {
         let e = d.current,
             t = () => {
-                let e = Object.entries(S.Z.getVideoDevices()).filter((e) => {
+                let e = Object.entries(b.Z.getVideoDevices()).filter((e) => {
                     let [t, n] = e;
                     return !n.disabled;
                 });

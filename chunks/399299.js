@@ -17,8 +17,8 @@ var r = n(255367),
     _ = n(494620),
     v = n(592125),
     j = n(650774),
-    b = n(430824),
-    S = n(131951),
+    S = n(430824),
+    b = n(131951),
     C = n(944486),
     y = n(594174),
     O = n(449224),
@@ -39,8 +39,8 @@ var r = n(255367),
     U = n(981631),
     G = n(526761),
     W = n(388032),
-    F = n(485399),
-    H = n(84162);
+    F = n(734102),
+    H = n(542257);
 function z(e) {
     let { selectedSource: t, selectSource: n, sourceChanged: i, onChangeSource: l } = e,
         s = (0, o.e7)([h.ZP, O.Z], () => ((0, N.isWindows)() ? (0, E.Z)(h.ZP, O.Z) : null)),
@@ -89,7 +89,7 @@ function z(e) {
 }
 function V(e) {
     let { onChange: t, guildId: n } = e,
-        i = (0, o.e7)([b.Z], () => b.Z.getGuild(n));
+        i = (0, o.e7)([S.Z], () => S.Z.getGuild(n));
     return null == i
         ? (t(), null)
         : (0, r.jsx)(c.xJW, {
@@ -172,7 +172,7 @@ function X(e) {
             },
             [n],
         ),
-        d = (0, o.e7)([S.Z], () => S.Z.getUseSystemScreensharePicker() && (0, N.isLinux)());
+        d = (0, o.e7)([b.Z], () => b.Z.getUseSystemScreensharePicker() && (0, N.isLinux)());
     return (0, r.jsx)(c.xJW, {
         className: s()(H.modalContent, F.checkboxRow),
         children: (0, r.jsx)(c.XZJ, {
@@ -222,7 +222,7 @@ function q(e) {
             sound: x,
             previewDisabled: g,
             onClose: j,
-            onChangeSelectedFPS: b,
+            onChangeSelectedFPS: S,
             onChangeSelectedResolution: O,
             onChangeSelectedPreset: I,
             onChangeSelectedChannelId: Z,
@@ -237,11 +237,11 @@ function q(e) {
         Q = (0, o.e7)([T.Z], () => T.Z.problematicGPUDriver),
         $ = (0, o.e7)([y.default], () => y.default.getCurrentUser()),
         ee = (0, P.Z)();
-    null != t && t.id.startsWith("screen") && !S.Z.supportsScreenSoundshare() && (ee = W.intl.string(W.t["1b0Gm5"]));
+    null != t && t.id.startsWith("screen") && !b.Z.supportsScreenSoundshare() && (ee = W.intl.string(W.t["1b0Gm5"]));
     let et = !!(null == t ? void 0 : t.id.startsWith("camera")),
         en = null != $ && $.verified && !$.bot,
         er = null != H && !(0, f.Yk)(H),
-        ei = !(0, o.e7)([S.Z], () => S.Z.getHardwareEncoding());
+        ei = !(0, o.e7)([b.Z], () => b.Z.getHardwareEncoding());
     return (0, r.jsxs)(i.Fragment, {
         children: [
             et
@@ -309,7 +309,7 @@ function q(e) {
                 selectedResolution: a,
                 targetGuildPremiumTier: m,
                 onClose: j,
-                onFPSChange: b,
+                onFPSChange: S,
                 onResolutionChange: O,
                 onPresetChange: I,
                 captureDeviceSelected: et,

@@ -7,7 +7,7 @@ var r = n(255367),
     o = n(481060),
     c = n(144114),
     u = n(317175),
-    d = n(952566);
+    d = n(33048);
 function p(e) {
     let { show: t, alpha2: n, countryCode: i } = e,
         p = s.useRef(null),
@@ -22,17 +22,14 @@ function p(e) {
         return e(), window.addEventListener("resize", e), () => window.removeEventListener("resize", e);
     }, [t, n, i]);
     let b = (0, o.q_F)({
-            width: "".concat(f, "px"),
-            onStart: () => {
-                y(!0);
-            },
-            onRest: () => {
-                y(!1);
-            },
-        }),
-        w = (e) => {
-            c.Z.setCountryCode(e);
-        };
+        width: "".concat(f, "px"),
+        onStart: () => {
+            y(!0);
+        },
+        onRest: () => {
+            y(!1);
+        },
+    });
     return (0, r.jsx)(o.yRy, {
         targetElementRef: p,
         position: "top",
@@ -40,7 +37,7 @@ function p(e) {
             (0, r.jsx)(u.Z, {
                 className: d.popout,
                 onClick: (t) => {
-                    w(t), e.closePopout();
+                    c.Z.setCountryCode(t), e.closePopout();
                 },
             }),
         children: (e) => {

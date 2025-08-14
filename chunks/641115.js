@@ -21,15 +21,15 @@ var r = n(255367),
     _ = n(592125),
     v = n(944486),
     j = n(594174),
-    b = n(74538),
-    S = n(451467),
+    S = n(74538),
+    b = n(451467),
     C = n(122186),
     y = n(37113),
     O = n(981631),
     I = n(388032),
-    Z = n(84162),
-    w = n(856933),
-    N = n(881488);
+    Z = n(542257),
+    w = n(381994),
+    N = n(197571);
 function T(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -171,7 +171,7 @@ function M(e) {
             return a()(null != e, "StreamSettings: user cannot be undefined"), e;
         }),
         D = (0, c.e7)([v.Z, _.Z], () => _.Z.getChannel(v.Z.getVoiceChannelId())),
-        B = b.ZP.canStreamQuality(b.U2.MID, L),
+        B = S.ZP.canStreamQuality(S.U2.MID, L),
         { location: U } = (0, m.O)(),
         G = (0, h.Zq)({ autoTrackExposure: !1 }),
         W = (0, g.B4)(),
@@ -184,7 +184,7 @@ function M(e) {
                 A({
                     type: e,
                     selected: e.value === l,
-                    needsPremium: !(0, S.Z)(n, e.value, s, L, M, D),
+                    needsPremium: !(0, b.Z)(n, e.value, s, L, M, D),
                     needsDemo: W && e.value !== y.LY.RESOLUTION_720,
                     analyticsLocation: Y,
                     onClick: () => o(e.value),
@@ -198,7 +198,7 @@ function M(e) {
                 A({
                     type: e,
                     selected: e.value === s,
-                    needsPremium: !(0, S.Z)(n, l, e.value, L, M, D),
+                    needsPremium: !(0, b.Z)(n, l, e.value, L, M, D),
                     needsDemo: W && e.value === y.ws.FPS_60,
                     analyticsLocation: Y,
                     onClick: () => x(e.value),

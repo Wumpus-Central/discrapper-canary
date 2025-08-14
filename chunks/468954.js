@@ -5,7 +5,7 @@ var r = n(255367),
     a = n(98528),
     s = n(429155),
     l = n(810462),
-    c = n(855797);
+    c = n(681561);
 function u(e, t, n) {
     return (
         t in e
@@ -86,8 +86,8 @@ function p(e) {
             itemNodeMargin: L,
             listPadding: x,
             gridNavigatorId: M,
-            gridNotice: j,
-            renderHeader: k,
+            gridNotice: k,
+            renderHeader: j,
             renderUpsell: U,
         } = e,
         G = i.useRef(null),
@@ -184,8 +184,8 @@ function p(e) {
     });
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            null != k
-                ? k(es)
+            null != j
+                ? j(es)
                 : (0, r.jsxs)("div", {
                       className: c.header,
                       children: [" ", es, " "],
@@ -195,10 +195,10 @@ function p(e) {
                 : (0, r.jsxs)(r.Fragment, {
                       children: [
                           A(B),
-                          null != j &&
+                          null != k &&
                               (0, r.jsx)("div", {
                                   className: c.gridNoticeWrapper,
-                                  children: j,
+                                  children: k,
                               }),
                           (0, r.jsx)(
                               "div",

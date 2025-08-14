@@ -24,7 +24,7 @@ var n = i(255367),
     x = i(46887),
     v = i(981631),
     y = i(388032),
-    S = i(487951);
+    S = i(815976);
 function w(e) {
     for (var t = 1; t < arguments.length; t++) {
         var i = null != arguments[t] ? arguments[t] : {},
@@ -116,12 +116,7 @@ function O(e) {
                 ),
             [a, b],
         ),
-        g = b.size > 0,
-        j = (e) =>
-            f((t) => {
-                let i = new Set(t);
-                return t.has(e) ? i.delete(e) : i.add(e), i;
-            });
+        g = b.size > 0;
     return (0, n.jsx)(d.Modal, {
         onClose: i,
         transitionState: t,
@@ -195,7 +190,16 @@ function O(e) {
                                     (0, n.jsx)(
                                         k,
                                         {
-                                            onChange: () => j(e.role_id),
+                                            onChange: () => {
+                                                let t;
+                                                return (
+                                                    (t = e.role_id),
+                                                    f((e) => {
+                                                        let i = new Set(e);
+                                                        return e.has(t) ? i.delete(t) : i.add(t), i;
+                                                    })
+                                                );
+                                            },
                                             value: b.has(e.role_id),
                                             label: e.name,
                                             isArchived: e.archived,

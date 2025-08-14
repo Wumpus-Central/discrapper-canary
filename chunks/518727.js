@@ -20,7 +20,7 @@ var r = n(255367),
     g = n(45572),
     E = n(402426),
     b = n(981631),
-    y = n(320994),
+    y = n(839249),
     O = n(293914),
     v = n(503019);
 let I = 1000,
@@ -49,7 +49,7 @@ let I = 1000,
             D === g.A.PURCHASING && x(!0);
         }, [D]);
         let M = (0, f.P)(R, !!P, w),
-            { mediaUrls: j, isSuccess: k } = (0, E.Z)(!o && M && L),
+            { mediaUrls: k, isSuccess: j } = (0, E.Z)(!o && M && L),
             U = (0, i.useRef)(null),
             [G, B] = (0, i.useState)(!1),
             [Z, F] = (0, i.useState)(!1),
@@ -61,7 +61,7 @@ let I = 1000,
                 M &&
                     n &&
                     !Y &&
-                    (o || !k
+                    (o || !j
                         ? (H("static"),
                           o ||
                               (W(!0),
@@ -76,7 +76,7 @@ let I = 1000,
                         isAnimated: e,
                     }),
                     _.default.track(b.rMx.PREMIUM_BRAND_REFRESH_WOW_MOMENT_VIEWED));
-            }, [o, M, n, k, Y]),
+            }, [o, M, n, j, Y]),
             (0, i.useEffect)(() => {
                 function e() {
                     B(!0), C();
@@ -113,7 +113,7 @@ let I = 1000,
                                     autoPlay: !0,
                                     onEnded: N,
                                     className: a()(y.video, "entry" === I ? y.visible : y.hidden),
-                                    children: (0, r.jsx)("source", { src: j.modalGlowEntry }),
+                                    children: (0, r.jsx)("source", { src: k.modalGlowEntry }),
                                 }),
                             }),
                             (0, r.jsx)(d.Z, {
@@ -122,14 +122,14 @@ let I = 1000,
                                 muted: !0,
                                 loop: !0,
                                 className: a()(y.video, "idle" === I ? y.visible : y.hidden),
-                                children: (0, r.jsx)("source", { src: j.modalGlowIdle }),
+                                children: (0, r.jsx)("source", { src: k.modalGlowIdle }),
                             }),
                             (0, r.jsx)(d.Z, {
                                 ref: A,
                                 playsInline: !0,
                                 muted: !0,
                                 className: a()(y.video, "exit" === I ? y.visible : y.hidden),
-                                children: (0, r.jsx)("source", { src: j.modalGlowExit }),
+                                children: (0, r.jsx)("source", { src: k.modalGlowExit }),
                             }),
                         ],
                     }),

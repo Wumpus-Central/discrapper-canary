@@ -57,7 +57,7 @@ var r = n(255367),
     ei = n(981631),
     el = n(354459),
     ea = n(388032),
-    es = n(879274);
+    es = n(769265);
 function eo(e) {
     let { channel: t } = e,
         { parentAnalyticsLocation: n } = (0, p.ZP)(),

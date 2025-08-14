@@ -3,22 +3,22 @@ var r = n(255367),
     i = n(73800),
     l = n(120356),
     o = n.n(l),
-    s = n(442837),
-    a = n(481060),
+    a = n(442837),
+    s = n(481060),
     c = n(377171),
     u = n(565138),
     d = n(430824),
-    h = n(674552),
-    p = n(388032),
-    f = n(731234);
+    p = n(674552),
+    f = n(388032),
+    h = n(106663);
 function g(e) {
     let { guildId: t, animate: n } = e,
-        i = (0, s.e7)([d.Z], () => d.Z.getGuild(t), [t]),
-        l = (0, a.dQu)(a.TVs.modules.guildbar.AVATAR_SIZE);
+        i = (0, a.e7)([d.Z], () => d.Z.getGuild(t), [t]),
+        l = (0, s.dQu)(s.TVs.modules.guildbar.AVATAR_SIZE);
     return null == i
         ? (0, r.jsx)("div", {
-              className: o()(f.folderPreviewGuildIcon, f.folderPreviewGuildIconError),
-              children: (0, r.jsx)(a.Mgn, { color: "currentColor" }),
+              className: o()(h.folderPreviewGuildIcon, h.folderPreviewGuildIconError),
+              children: (0, r.jsx)(s.Mgn, { color: "currentColor" }),
           })
         : (0, r.jsx)(u.Z, {
               guild: i,
@@ -26,28 +26,28 @@ function g(e) {
               size: u.Z.Sizes.MINI,
               iconSize: l,
               lossless: !0,
-              className: f.folderPreviewGuildIcon,
+              className: h.folderPreviewGuildIcon,
               tabIndex: -1,
           });
 }
 function m(e) {
     let { folderNode: t, hovered: n, sorting: i } = e,
         { children: l } = t,
-        s = n && i,
+        a = n && i,
         c = (0, r.jsx)("div", {
-            className: f.folderIconWrapper,
+            className: h.folderIconWrapper,
             children: (0, r.jsx)("div", {
-                className: f.folderIcon,
-                children: (0, r.jsx)(a.ROc, {
+                className: h.folderIcon,
+                children: (0, r.jsx)(s.ROc, {
                     size: "sm",
                     color: "currentColor",
                 }),
             }),
         }),
         u = (0, r.jsx)("div", {
-            className: f.folderPreviewWrapper,
+            className: h.folderPreviewWrapper,
             children: (0, r.jsx)("div", {
-                className: f.folderPreview,
+                className: h.folderPreview,
                 children: l.slice(0, 4).map((e) =>
                     (0, r.jsx)(
                         g,
@@ -63,10 +63,10 @@ function m(e) {
     return (0, r.jsxs)("div", {
         "aria-hidden": !0,
         className: o()({
-            [f.folderDragPreview]: s,
-            [f.folderButtonContent]: !s,
+            [h.folderDragPreview]: a,
+            [h.folderButtonContent]: !a,
         }),
-        children: [!s && c, u],
+        children: [!a && c, u],
     });
 }
 function b(e) {
@@ -74,7 +74,7 @@ function b(e) {
     let {
             folderNode: l,
             expanded: o,
-            sorting: s,
+            sorting: a,
             mediaState: u,
             mentionCount: d = 0,
             isMentionLowImportance: g,
@@ -82,14 +82,14 @@ function b(e) {
             folderGroupId: O,
             folderButtonContent: _,
             onClick: y,
-            onContextMenu: C,
-            onHoverChange: v,
-            onKeyDown: j,
+            onContextMenu: v,
+            onHoverChange: j,
+            onKeyDown: C,
             treeItemProps: { onFocus: E },
-            "aria-setsize": S,
-            "aria-posinset": x,
+            "aria-setsize": x,
+            "aria-posinset": S,
         } = e,
-        I = (function (e, t) {
+        P = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -110,18 +110,18 @@ function b(e) {
             }
             return i;
         })(e.treeItemProps, ["onFocus"]),
-        [P, N] = i.useState(!1),
+        [I, N] = i.useState(!1),
         w = i.useCallback(() => {
-            s || N(!0), null == v || v(!0);
-        }, [s, v]),
+            a || N(!0), null == j || j(!0);
+        }, [a, j]),
         Z = i.useCallback(() => {
-            s || N(!1), null == v || v(!1);
-        }, [s, v]),
-        T = o || null == u ? null : (0, h.Or)(u),
-        A = !o && d > 0 ? (0, h.Ne)(d, g ? c.Z.BACKGROUND_ACCENT : c.Z.STATUS_DANGER) : null;
-    return (0, r.jsx)(a.tEY, {
+            a || N(!1), null == j || j(!1);
+        }, [a, j]),
+        T = o || null == u ? null : (0, p.Or)(u),
+        A = !o && d > 0 ? (0, p.Ne)(d, g ? c.Z.BACKGROUND_ACCENT : c.Z.STATUS_DANGER) : null;
+    return (0, r.jsx)(s.tEY, {
         children: (0, r.jsx)(
-            a.P3F,
+            s.P3F,
             ((t = (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
@@ -148,48 +148,48 @@ function b(e) {
                 return e;
             })(
                 {
-                    className: f.folderButton,
+                    className: h.folderButton,
                     onClick: y,
-                    onContextMenu: C,
+                    onContextMenu: v,
                     onMouseEnter: w,
                     onMouseLeave: Z,
-                    onKeyDown: j,
+                    onKeyDown: C,
                     onFocus: E,
                     focusProps: { enabled: !1 },
                 },
-                I,
+                P,
             )),
             (n = n =
                 {
                     role: "treeitem",
-                    "aria-setsize": S,
-                    "aria-posinset": x,
+                    "aria-setsize": x,
+                    "aria-posinset": S,
                     "aria-expanded": o,
                     "aria-owns": O,
-                    children: (0, r.jsxs)(a.aRk, {
+                    children: (0, r.jsxs)(s.aRk, {
                         isFolder: !0,
                         upperBadge: T,
                         lowerBadge: A,
-                        lowerBadgeSize: { width: (0, a.OVM)(d) },
+                        lowerBadgeSize: { width: (0, s.OVM)(d) },
                         children: [
-                            (0, r.jsx)(a.nn4, {
-                                children: p.intl.formatToPlainString(p.t["90/DwM"], {
+                            (0, r.jsx)(s.nn4, {
+                                children: f.intl.formatToPlainString(f.t["90/DwM"], {
                                     folderName: b,
                                     mentions: d,
                                 }),
                             }),
                             (0, r.jsx)("div", {
-                                className: f.folderButtonInner,
+                                className: h.folderButtonInner,
                                 children:
                                     null != _
                                         ? (0, r.jsx)("div", {
-                                              className: f.folderIconWrapper,
+                                              className: h.folderIconWrapper,
                                               children: _,
                                           })
                                         : (0, r.jsx)(m, {
                                               folderNode: l,
-                                              hovered: P,
-                                              sorting: s,
+                                              hovered: I,
+                                              sorting: a,
                                           }),
                             }),
                         ],

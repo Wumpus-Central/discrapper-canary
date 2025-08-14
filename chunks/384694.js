@@ -1,6 +1,6 @@
 n.d(t, { q: () => j }), n(467055), n(388685);
-var r = n(255367),
-    l = n(73800),
+var l = n(255367),
+    r = n(73800),
     i = n(442837),
     a = n(481060),
     o = n(339085),
@@ -14,7 +14,7 @@ var r = n(255367),
     f = n(598117),
     x = n(981631),
     p = n(388032),
-    _ = n(978967);
+    _ = n(503366);
 let b = (e) => ({
         label: e.name,
         value: e.id,
@@ -40,10 +40,10 @@ let b = (e) => ({
                                 t,
                                 (function (e) {
                                     var t;
-                                    let { guild: n, emojis: r, isEmojiAnimated: l } = e,
+                                    let { guild: n, emojis: l, isEmojiAnimated: r } = e,
                                         i =
                                             null !=
-                                            (t = r.filter((e) => e.animated === l && !(0, u.Kt)(e, n.id)).length)
+                                            (t = l.filter((e) => e.animated === r && !(0, u.Kt)(e, n.id)).length)
                                                 ? t
                                                 : 0;
                                     return (0, g.y4)(n) - i;
@@ -57,24 +57,24 @@ let b = (e) => ({
                     ),
                 [C, N],
             ),
-            I = l.useMemo(() => Object.values(C).filter(v).map(b), [C]),
-            O = l.useCallback(
+            I = r.useMemo(() => Object.values(C).filter(v).map(b), [C]),
+            O = r.useCallback(
                 (e) => {
                     let [t] = e;
                     if (null == t || null == t.value) return null;
                     let n = C[t.value];
                     return null == n
                         ? null
-                        : (0, r.jsxs)("div", {
+                        : (0, l.jsxs)("div", {
                               className: _.value,
                               children: [
-                                  (0, r.jsx)(s.Z, {
+                                  (0, l.jsx)(s.Z, {
                                       guild: n,
                                       size: s.Z.Sizes.SMALLER,
                                       active: !0,
                                       className: _.icon,
                                   }),
-                                  (0, r.jsx)(a.Text, {
+                                  (0, l.jsx)(a.Text, {
                                       variant: "text-sm/normal",
                                       className: _.text,
                                       children: t.label,
@@ -84,30 +84,30 @@ let b = (e) => ({
                 },
                 [C],
             ),
-            S = l.useCallback(
+            S = r.useCallback(
                 (e) => {
                     if (null == e || null == e.value) return null;
                     let t = C[e.value];
                     return null == t
                         ? null
-                        : (0, r.jsxs)("div", {
+                        : (0, l.jsxs)("div", {
                               className: _.option,
                               children: [
-                                  (0, r.jsx)(s.Z, {
+                                  (0, l.jsx)(s.Z, {
                                       guild: t,
                                       size: s.Z.Sizes.MEDIUM,
                                       active: !0,
                                       className: _.icon,
                                   }),
-                                  (0, r.jsxs)("div", {
+                                  (0, l.jsxs)("div", {
                                       className: _.optionLabelContainer,
                                       children: [
-                                          (0, r.jsx)(a.Text, {
+                                          (0, l.jsx)(a.Text, {
                                               variant: "text-sm/medium",
                                               className: _.text,
                                               children: e.label,
                                           }),
-                                          (0, r.jsx)(a.Text, {
+                                          (0, l.jsx)(a.Text, {
                                               variant: "text-xs/normal",
                                               color: "text-tertiary",
                                               className: _.text,
@@ -121,7 +121,7 @@ let b = (e) => ({
                 [E, C],
             );
         return (
-            l.useEffect(() => {
+            r.useEffect(() => {
                 var e;
                 I.length < 1
                     ? d(f.ze.NO_PERMISSIONS)
@@ -129,7 +129,7 @@ let b = (e) => ({
                       ? d(x.evJ.TOO_MANY_EMOJI)
                       : d(null);
             }, [I, t, d, n, E]),
-            (0, r.jsx)(a.q4e, {
+            (0, l.jsx)(a.q4e, {
                 className: _.guildSelector,
                 onChange: t,
                 options: I,

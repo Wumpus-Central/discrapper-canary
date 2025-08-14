@@ -3,8 +3,8 @@ n.d(t, {
     IG: () => v,
     Nb: () => _,
     Ts: () => j,
-    Wy: () => b,
-    di: () => D,
+    Wy: () => D,
+    di: () => b,
 }),
     n(388685);
 var l = n(570140),
@@ -21,8 +21,8 @@ var l = n(570140),
     I = n(430824),
     g = n(823379),
     N = n(434404),
-    f = n(889369),
-    S = n(570961),
+    S = n(889369),
+    f = n(570961),
     p = n(84658),
     E = n(176505),
     T = n(290511),
@@ -42,7 +42,7 @@ function _(e) {
 }
 async function j(e, t) {
     let n = a.Z.getEnabled(e),
-        s = Array.from(f.Z.editedDefaultChannelIds).filter((e) => null != h.Z.getChannel(e)),
+        s = Array.from(S.Z.editedDefaultChannelIds).filter((e) => null != h.Z.getChannel(e)),
         [o, d] = (0, c.d9)(e, [...s]);
     if (n && t === T.Un.ONBOARDING_DEFAULT && (d.length < T.md || o.length < T.X))
         return void i.Z.show({
@@ -50,7 +50,7 @@ async function j(e, t) {
             body: O.intl.string(O.t.JOT74e),
         });
     try {
-        await (0, S.n_)(e, { mode: t });
+        await (0, f.n_)(e, { mode: t });
     } catch (n) {
         var u;
         let { fieldName: e, error: t } = null != (u = new r.Z(n).getAnyErrorMessageAndField()) ? u : {};
@@ -69,11 +69,11 @@ function v(e, t) {
     let n = p.xh.findIndex((e) => e === t);
     -1 !== n && n !== p.xh.length - 1 && x(p.xh[n + 1]);
 }
-function b(e, t) {
+function D(e, t) {
     let n = p.xh.findIndex((e) => e === t);
     -1 !== n && 0 !== n && x(p.xh[n - 1]);
 }
-async function D(e) {
+async function b(e) {
     let t = I.Z.getGuild(e);
     null != t &&
         (N.Z.close(),

@@ -32,7 +32,7 @@ var r = n(255367),
     N = n(981631),
     C = n(921944),
     R = n(388032),
-    P = n(508242),
+    P = n(393919),
     w = n(99713);
 function D(e, t, n) {
     return (
@@ -86,8 +86,8 @@ function M(e, t) {
         e
     );
 }
-let j = 190,
-    k = 178,
+let k = 190,
+    j = 178,
     U = "MESSAGE_CONFETTI_POTION_MODAL_KEY",
     G = (e) => {
         let { channelId: t, message: i, onRedeem: o, onClose: a, buttonUseState: l = "activate", source: u } = e,
@@ -464,8 +464,8 @@ let F = (e) => {
                 children: [
                     (0, r.jsx)(c.Eep, {
                         src: w,
-                        width: k,
-                        height: j,
+                        width: j,
+                        height: k,
                     }),
                     (0, r.jsx)(c.Text, {
                         variant: "text-md/normal",

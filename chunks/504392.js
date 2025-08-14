@@ -37,9 +37,9 @@ var r = n(255367),
     w = n(857666),
     Z = n(535396),
     P = n(921944),
-    S = n(93841),
+    S = n(989308),
     y = n(388032),
-    T = n(941818);
+    T = n(823441);
 let O = [Z.Us.LEVEL, Z.Us.PERK];
 function A(e) {
     let { guildId: t, powerupListingId: i } = e;

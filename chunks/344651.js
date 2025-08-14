@@ -81,11 +81,11 @@ function M(e, t) {
         e
     );
 }
-function j(e, t) {
+function k(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = k(e, t);
+        i = j(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
         for (r = 0; r < o.length; r++)
@@ -93,7 +93,7 @@ function j(e, t) {
     }
     return i;
 }
-function k(e, t) {
+function j(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -716,7 +716,7 @@ Y(
         (e) => O.o.loadGuildIds([e.guild_id]),
         (e, t) => {
             let { newly_created: n } = e,
-                r = j(e, ["newly_created"]);
+                r = k(e, ["newly_created"]);
             z({
                 type: t,
                 isNewlyCreated: n,

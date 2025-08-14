@@ -41,7 +41,7 @@ var r = n(255367),
     I = n(465520),
     E = n(981631),
     S = n(388032),
-    T = n(640637);
+    T = n(539981);
 let P = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
     w = () => {
         let {
@@ -94,44 +94,31 @@ let P = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
             [L, M] = i.useState([!0]),
             [G, U] = i.useState(!0),
             [B, F] = i.useState([!1]),
-            [H, z] = i.useState([""]),
-            W = (e) => {
-                let t = Object.entries(I.z)
-                    .filter((e) => !H.includes(e[1].presentation))
-                    .map((e) => ({
-                        label: e[1].presentation,
-                        value: e[0],
-                    }));
-                return null == e || "" === e
-                    ? t
-                    : t.concat({
-                          label: e,
-                          value: e,
-                      });
-            },
-            V = (e) => {
-                try {
-                    var t, n, r, i;
-                    let l = new URL(e).hostname.split(".");
-                    if (3 === l.length && "bandcamp" === l[1].toLowerCase()) return I.z.bandcamp.presentation;
-                    let a = null != (n = null == (t = l.shift()) ? void 0 : t.toLowerCase()) ? n : "";
-                    if (
-                        ("www" === a && (a = null != (i = null == (r = l.shift()) ? void 0 : r.toLowerCase()) ? i : ""),
-                        a in I.z)
-                    )
-                        return I.z[a].presentation;
-                    return null;
-                } catch (e) {
-                    return null;
-                }
-            };
+            [H, z] = i.useState([""]);
         i.useEffect(() => {
             if (null !== A) {
                 let e = [],
                     t = [];
                 A.socialLinks.forEach((n, r) => {
                     if ("" !== n) {
-                        let i = V(n);
+                        let i = ((e) => {
+                            try {
+                                var t, n, r, i;
+                                let l = new URL(e).hostname.split(".");
+                                if (3 === l.length && "bandcamp" === l[1].toLowerCase())
+                                    return I.z.bandcamp.presentation;
+                                let a = null != (n = null == (t = l.shift()) ? void 0 : t.toLowerCase()) ? n : "";
+                                if (
+                                    ("www" === a &&
+                                        (a = null != (i = null == (r = l.shift()) ? void 0 : r.toLowerCase()) ? i : ""),
+                                    a in I.z)
+                                )
+                                    return I.z[a].presentation;
+                                return null;
+                            } catch (e) {
+                                return null;
+                            }
+                        })(n);
                         null !== i ? ((t[r] = i), (e[r] = !0)) : (e[r] = !1);
                     } else e[r] = !0;
                 }),
@@ -140,12 +127,12 @@ let P = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
                     U(e.every((e) => !0 === e));
             }
         }, [A]);
-        let Y = (0, l.e7)([O.Z], () => (null != u ? O.Z.getErrors() : null));
+        let W = (0, l.e7)([O.Z], () => (null != u ? O.Z.getErrors() : null));
         if (null == u || null == A) return null;
-        let K = (e) => {
+        let V = (e) => {
                 _.Z.updateGuild({ discoverySplash: e });
             },
-            q = (e) => {
+            Y = (e) => {
                 let t = () => {
                     (0, p.W1)(u.id, e),
                         e
@@ -188,45 +175,11 @@ let P = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
                           })
                     : t();
             },
-            X = (e, t) => {
-                let n = [...A.socialLinks],
-                    r = [...H],
-                    i = [...L];
-                (r[t] = e),
-                    (n[t] = I.z[e].baseUrl),
-                    (i[t] = !0),
-                    M(i),
-                    z(r),
-                    U(i.every((e) => !0 === e)),
-                    (0, p.t$)(u.id, n);
-            },
-            Q = (e, t) => {
-                let n = [...A.socialLinks],
-                    r = n[t],
-                    i = e;
-                0 === r.length && i.length > 1 && !1 === RegExp("^https?:").test(i) && (i = "https://" + i),
-                    /\.(zip|exe|pdf|dmg|msi|apk|rar|7z|tar|gz|iso|docx?|xlsx?|pptx?|mp4|mp3)$/i.test(i) ||
-                        ((n[t] = i), (0, p.t$)(u.id, n));
-            },
-            J = (e) => {
-                let t = [...B];
-                t.splice(e, 1), F(t);
-                let n = [...L];
-                n.splice(e, 1), M(n);
-                let r = [...H];
-                r.splice(e, 1), z(r);
-                let i = [...A.socialLinks];
-                i.splice(e, 1), (0, p.t$)(u.id, i);
-            },
-            $ = (e) => {
+            K = (e) => {
                 let { reason: t = "", emoji_name: n = "" } = e;
                 return null !== t && t.length >= 10 && t.length <= 128 && null !== n;
             },
-            ee = (e) => {
-                let { reason: t = "", emoji_name: n = "" } = e;
-                return (null === t || "" === t) && null === n;
-            },
-            et = [
+            q = [
                 {
                     title: S.intl.string(S.t["/SWsHx"]),
                     items: [
@@ -246,13 +199,19 @@ let P = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
                             description: S.intl.string(S.t.qpx5MD),
                             completed:
                                 null !== A.reasonsToJoin &&
-                                A.reasonsToJoin.every((e) => ee(e) || $(e)) &&
-                                A.reasonsToJoin.filter($).length >= 2,
+                                A.reasonsToJoin.every(
+                                    (e) =>
+                                        ((e) => {
+                                            let { reason: t = "", emoji_name: n = "" } = e;
+                                            return (null === t || "" === t) && null === n;
+                                        })(e) || K(e),
+                                ) &&
+                                A.reasonsToJoin.filter(K).length >= 2,
                         },
                     ],
                 },
             ],
-            en = (e, t) => {
+            X = (e, t) => {
                 let n = [...B];
                 (n[e] = t), F(n);
             };
@@ -355,12 +314,12 @@ let P = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
                                                                     }),
                                                                 ],
                                                             }),
-                                                            (null == Y ? void 0 : Y.category) != null
+                                                            (null == W ? void 0 : W.category) != null
                                                                 ? (0, r.jsx)(o.Text, {
                                                                       color: "text-danger",
                                                                       className: T.error,
                                                                       variant: "text-sm/normal",
-                                                                      children: Y.category,
+                                                                      children: W.category,
                                                                   })
                                                                 : null,
                                                         ],
@@ -392,7 +351,7 @@ let P = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
                                                                                     S.intl.string(S.t.yG2pUl),
                                                                                     (0, r.jsx)(f.ZP, {
                                                                                         disabled: !Z,
-                                                                                        onChange: K,
+                                                                                        onChange: V,
                                                                                     }),
                                                                                 ],
                                                                             }),
@@ -407,18 +366,18 @@ let P = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
                                                                                 size: 512 * (0, h.x_)(),
                                                                             }),
                                                                         disabled: !Z,
-                                                                        onChange: K,
+                                                                        onChange: V,
                                                                         hint: S.intl.string(S.t.uPvxqK),
                                                                         imageClassName: T.imageUploaderInnerSquare,
                                                                         hideSize: !0,
                                                                     }),
                                                                 ],
                                                             }),
-                                                            (null == Y ? void 0 : Y.discovery_splash) != null
+                                                            (null == W ? void 0 : W.discovery_splash) != null
                                                                 ? (0, r.jsx)(o.Text, {
                                                                       color: "text-danger",
                                                                       variant: "text-sm/normal",
-                                                                      children: Y.discovery_splash,
+                                                                      children: W.discovery_splash,
                                                                   })
                                                                 : null,
                                                         ],
@@ -484,11 +443,11 @@ let P = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
                                                                 reasons: e,
                                                             }),
                                                         }),
-                                                        (null == Y ? void 0 : Y.reasons_to_join) != null
+                                                        (null == W ? void 0 : W.reasons_to_join) != null
                                                             ? (0, r.jsx)(o.Text, {
                                                                   color: "text-danger",
                                                                   variant: "text-sm/normal",
-                                                                  children: Y.reasons_to_join,
+                                                                  children: W.reasons_to_join,
                                                               })
                                                             : null,
                                                     ],
@@ -528,11 +487,11 @@ let P = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
                                                             ),
                                                         ],
                                                     }),
-                                                    (null == Y ? void 0 : Y.about) != null
+                                                    (null == W ? void 0 : W.about) != null
                                                         ? (0, r.jsx)(o.Text, {
                                                               color: "text-danger",
                                                               variant: "text-sm/normal",
-                                                              children: Y.about,
+                                                              children: W.about,
                                                           })
                                                         : null,
                                                 ],
@@ -554,10 +513,10 @@ let P = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
                                                             "div",
                                                             {
                                                                 className: T.socialLinksContainer,
-                                                                onMouseOver: () => en(t, !0),
-                                                                onFocus: () => en(t, !0),
-                                                                onMouseOut: () => en(t, !1),
-                                                                onBlur: () => en(t, !1),
+                                                                onMouseOver: () => X(t, !0),
+                                                                onFocus: () => X(t, !0),
+                                                                onMouseOut: () => X(t, !1),
+                                                                onBlur: () => X(t, !1),
                                                                 children: [
                                                                     (0, r.jsx)(
                                                                         o.q4e,
@@ -565,10 +524,40 @@ let P = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
                                                                             className: A.isPublished
                                                                                 ? T.socialLinksDropdownMax
                                                                                 : T.socialLinksDropdownMin,
-                                                                            options: W(H[t]),
+                                                                            options: ((e) => {
+                                                                                let t = Object.entries(I.z)
+                                                                                    .filter(
+                                                                                        (e) =>
+                                                                                            !H.includes(
+                                                                                                e[1].presentation,
+                                                                                            ),
+                                                                                    )
+                                                                                    .map((e) => ({
+                                                                                        label: e[1].presentation,
+                                                                                        value: e[0],
+                                                                                    }));
+                                                                                return null == e || "" === e
+                                                                                    ? t
+                                                                                    : t.concat({
+                                                                                          label: e,
+                                                                                          value: e,
+                                                                                      });
+                                                                            })(H[t]),
                                                                             placeholder: S.intl.string(S.t.xSALIC),
                                                                             value: H[t],
-                                                                            onChange: (e) => X(e, t),
+                                                                            onChange: (e) =>
+                                                                                ((e, t) => {
+                                                                                    let n = [...A.socialLinks],
+                                                                                        r = [...H],
+                                                                                        i = [...L];
+                                                                                    (r[t] = e),
+                                                                                        (n[t] = I.z[e].baseUrl),
+                                                                                        (i[t] = !0),
+                                                                                        M(i),
+                                                                                        z(r),
+                                                                                        U(i.every((e) => !0 === e)),
+                                                                                        (0, p.t$)(u.id, n);
+                                                                                })(e, t),
                                                                             isDisabled: !Z,
                                                                         },
                                                                         "dropdown-" + t,
@@ -580,7 +569,24 @@ let P = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
                                                                             className: A.isPublished
                                                                                 ? T.socialLinksMax
                                                                                 : T.socialLinksMin,
-                                                                            onChange: (e) => Q(e, t),
+                                                                            onChange: (e) =>
+                                                                                ((e, t) => {
+                                                                                    let n = [...A.socialLinks],
+                                                                                        r = n[t],
+                                                                                        i = e;
+                                                                                    0 === r.length &&
+                                                                                        i.length > 1 &&
+                                                                                        !1 ===
+                                                                                            RegExp("^https?:").test(
+                                                                                                i,
+                                                                                            ) &&
+                                                                                        (i = "https://" + i),
+                                                                                        /\.(zip|exe|pdf|dmg|msi|apk|rar|7z|tar|gz|iso|docx?|xlsx?|pptx?|mp4|mp3)$/i.test(
+                                                                                            i,
+                                                                                        ) ||
+                                                                                            ((n[t] = i),
+                                                                                            (0, p.t$)(u.id, n));
+                                                                                })(e, t),
                                                                             placeholder: S.intl.string(S.t.Q6o4pK),
                                                                             maxLength: 150,
                                                                             disabled: !Z,
@@ -627,7 +633,18 @@ let P = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
                                                                                     : A.isPublished
                                                                                       ? T.deleteButtonHiddenMax
                                                                                       : T.deleteButtonHiddenMin,
-                                                                                onClick: () => J(t),
+                                                                                onClick: () =>
+                                                                                    ((e) => {
+                                                                                        let t = [...B];
+                                                                                        t.splice(e, 1), F(t);
+                                                                                        let n = [...L];
+                                                                                        n.splice(e, 1), M(n);
+                                                                                        let r = [...H];
+                                                                                        r.splice(e, 1), z(r);
+                                                                                        let i = [...A.socialLinks];
+                                                                                        i.splice(e, 1),
+                                                                                            (0, p.t$)(u.id, i);
+                                                                                    })(t),
                                                                             },
                                                                             "delete-button-" + t,
                                                                         ),
@@ -636,11 +653,11 @@ let P = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
                                                             "social-container-" + t,
                                                         ),
                                                     ),
-                                                    (null == Y ? void 0 : Y.social_links) != null
+                                                    (null == W ? void 0 : W.social_links) != null
                                                         ? (0, r.jsx)(o.Text, {
                                                               color: "text-danger",
                                                               variant: "text-sm/normal",
-                                                              children: Y.social_links,
+                                                              children: W.social_links,
                                                           })
                                                         : null,
                                                     (0, r.jsx)(o.zxk, {
@@ -676,18 +693,18 @@ let P = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
                                                                     variant: "critical-primary",
                                                                     size: "sm",
                                                                     text: S.intl.string(S.t["DCHd/P"]),
-                                                                    onClick: () => q(!1),
+                                                                    onClick: () => Y(!1),
                                                                     disabled: !Z,
                                                                 }),
                                                             ],
                                                         }),
                                                     ],
                                                 }),
-                                            (null == Y ? void 0 : Y.is_published) != null
+                                            (null == W ? void 0 : W.is_published) != null
                                                 ? (0, r.jsx)(o.Text, {
                                                       color: "text-danger",
                                                       variant: "text-sm/normal",
-                                                      children: Y.is_published,
+                                                      children: W.is_published,
                                                   })
                                                 : null,
                                         ],
@@ -697,9 +714,9 @@ let P = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
                                             className: T.checklist,
                                             children: (0, r.jsx)(g.Z, {
                                                 title: S.intl.string(S.t["2kCyn5"]),
-                                                children: et,
+                                                children: q,
                                                 buttonLabel: S.intl.string(S.t.tVK6S0),
-                                                buttonCallback: () => q(!0),
+                                                buttonCallback: () => Y(!0),
                                                 disabled: !Z || !G,
                                             }),
                                         }),

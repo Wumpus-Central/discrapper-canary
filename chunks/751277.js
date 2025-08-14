@@ -1,26 +1,26 @@
-n.d(t, { Z: () => f });
+n.d(t, { Z: () => h });
 var r = n(255367);
 n(73800);
 var i = n(114858),
     l = n(442837),
     o = n(481060),
-    s = n(893607),
-    a = n(701190),
+    a = n(893607),
+    s = n(701190),
     c = n(411198),
     u = n(836040),
     d = n(603592),
-    h = n(981631),
-    p = n(388032);
-function f(e) {
+    p = n(981631),
+    f = n(388032);
+function h(e) {
     var t;
     let { isOnHubVerificationRoute: n } = e,
-        f = (0, i.LX)(null != (t = window.location.pathname) ? t : "", {
-            path: h.Z5c.GUILD_MEMBER_VERIFICATION_FOR_HUB(s.Hw.guildId(), ":inviteCode"),
+        h = (0, i.LX)(null != (t = window.location.pathname) ? t : "", {
+            path: p.Z5c.GUILD_MEMBER_VERIFICATION_FOR_HUB(a.Hw.guildId(), ":inviteCode"),
         }),
-        g = (0, l.e7)([a.Z], () => {
-            if (null == f) return null;
-            let { inviteCode: e } = f.params;
-            return null != e ? a.Z.getInvite(e) : null;
+        g = (0, l.e7)([s.Z], () => {
+            if (null == h) return null;
+            let { inviteCode: e } = h.params;
+            return null != e ? s.Z.getInvite(e) : null;
         }),
         m = (null == g ? void 0 : g.guild) != null ? (0, c.Qs)(null == g ? void 0 : g.guild) : null;
     return n
@@ -30,7 +30,7 @@ function f(e) {
                   invite: g,
               })
             : (0, r.jsx)(d.Z, {
-                  tooltip: p.intl.string(p.t.rn9HIS),
+                  tooltip: f.intl.string(f.t.rn9HIS),
                   id: "guild-hub-button",
                   icon: o.aVH,
               })

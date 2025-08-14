@@ -24,12 +24,12 @@ function n(r) {
             s = r[0] | (r[1] << 8) | (r[2] << 16),
             u = r[3] | (r[4] << 8),
             p = (63 & s) / 63,
-            c = ((s >> 6) & 63) / 31.5 - 1,
-            d = ((s >> 12) & 63) / 31.5 - 1,
+            d = ((s >> 6) & 63) / 31.5 - 1,
+            c = ((s >> 12) & 63) / 31.5 - 1,
             v = s >> 23,
-            b = u >> 15,
-            h = f(3, b ? (v ? 5 : 7) : 7 & u),
-            g = f(3, b ? 7 & u : v ? 5 : 7),
+            h = u >> 15,
+            b = f(3, h ? (v ? 5 : 7) : 7 & u),
+            g = f(3, h ? 7 & u : v ? 5 : 7),
             y = v ? (15 & r[5]) / 15 : 1,
             O = (r[5] >> 4) / 15,
             m = v ? 6 : 5,
@@ -41,7 +41,7 @@ function n(r) {
                         n.push((((r[m + (w >> 1)] >> ((1 & w++) << 2)) & 15) / 7.5 - 1) * o);
                 return n;
             },
-            j = x(h, g, ((s >> 18) & 31) / 31 / 2),
+            j = x(b, g, ((s >> 18) & 31) / 31 / 2),
             k = x(3, 3, (((u >> 3) & 63) / 63) * t),
             P = x(3, 3, (((u >> 9) & 63) / 63) * t),
             _ = v ? x(5, 5, O) : [],
@@ -54,13 +54,13 @@ function n(r) {
         for (let r = 0, t = 0; r < F; r++)
             for (let o = 0; o < C; o++, t += 4) {
                 let i = p,
-                    s = c,
-                    u = d,
-                    b = y;
-                for (let r = 0, e = f(h, v ? 5 : 3); r < e; r++) U[r] = l((n / C) * (o + 0.5) * r);
+                    s = d,
+                    u = c,
+                    h = y;
+                for (let r = 0, e = f(b, v ? 5 : 3); r < e; r++) U[r] = l((n / C) * (o + 0.5) * r);
                 for (let e = 0, t = f(g, v ? 5 : 3); e < t; e++) T[e] = l((n / F) * (r + 0.5) * e);
                 for (let r = 0, t = 0; r < g; r++)
-                    for (let o = +!r, n = 2 * T[r]; o * g < h * (g - r); o++, t++)
+                    for (let o = +!r, n = 2 * T[r]; o * g < b * (g - r); o++, t++)
                         o > e || r > e || (i += j[t] * U[o] * n);
                 for (let r = 0, e = 0; r < 3; r++)
                     for (let t = +!r, o = 2 * T[r]; t < 3 - r; t++, e++) {
@@ -69,14 +69,14 @@ function n(r) {
                     }
                 if (v)
                     for (let r = 0, e = 0; r < 5; r++)
-                        for (let t = +!r, o = 2 * T[r]; t < 5 - r; t++, e++) b += _[e] * U[t] * o;
+                        for (let t = +!r, o = 2 * T[r]; t < 5 - r; t++, e++) h += _[e] * U[t] * o;
                 let O = i - (2 / 3) * s,
                     m = (3 * i - O + u) / 2,
                     w = m - u;
                 (M[t] = f(0, 255 * a(1, m))),
                     (M[t + 1] = f(0, 255 * a(1, w))),
                     (M[t + 2] = f(0, 255 * a(1, O))),
-                    (M[t + 3] = f(0, 255 * a(1, b)));
+                    (M[t + 3] = f(0, 255 * a(1, h)));
             }
         return {
             w: C,

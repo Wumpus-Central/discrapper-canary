@@ -31,8 +31,8 @@ var r = n(687249),
     L = "[object GeneratorFunction]",
     x = "[object Map]",
     M = "[object Number]",
-    j = "[object Object]",
-    k = "[object RegExp]",
+    k = "[object Object]",
+    j = "[object RegExp]",
     U = "[object Set]",
     G = "[object String]",
     B = "[object Symbol]",
@@ -53,7 +53,7 @@ function ee(e, t, n, C, R, P) {
     var w,
         x = t & T,
         M = t & S,
-        k = t & A;
+        j = t & A;
     if ((n && (w = R ? n(e, C, R, P) : n(e)), void 0 !== w)) return w;
     if (!O(e)) return e;
     var U = E(e);
@@ -63,7 +63,7 @@ function ee(e, t, n, C, R, P) {
         var G = p(e),
             B = G == D || G == L;
         if (b(e)) return l(e, x);
-        if (G == j || G == N || (B && !R)) {
+        if (G == k || G == N || (B && !R)) {
             if (((w = M || B ? {} : g(e)), !x)) return M ? d(e, s(w, e)) : u(e, a(w, e));
         } else {
             if (!$[G]) return R ? e : {};
@@ -82,7 +82,7 @@ function ee(e, t, n, C, R, P) {
               e.forEach(function (r, i) {
                   w.set(i, ee(r, t, n, i, e, P));
               });
-    var F = k ? (M ? _ : f) : M ? keysIn : I,
+    var F = j ? (M ? _ : f) : M ? keysIn : I,
         V = U ? void 0 : F(e);
     return (
         i(V || e, function (r, i) {
@@ -104,8 +104,8 @@ function ee(e, t, n, C, R, P) {
     $[z] =
     $[x] =
     $[M] =
-    $[j] =
     $[k] =
+    $[j] =
     $[U] =
     $[G] =
     $[B] =

@@ -22,7 +22,7 @@ var r = n(255367),
     y = n(474024),
     C = n(981631),
     N = n(388032),
-    I = n(825539);
+    I = n(805220);
 let E = function () {
     let { analyticsLocations: e } = (0, c.ZP)(o.Z.GUILD_SETTINGS_PROFILE_PAGE),
         t = (0, l.e7)([h.Z], () => h.Z.getGuild(), []),

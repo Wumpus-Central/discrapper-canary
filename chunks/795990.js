@@ -6,11 +6,11 @@ var r = n(255367),
     a = n(210753),
     c = n(804919),
     s = n(86419),
-    d = n(247989),
+    d = n(872269),
     u = n(228168),
     f = n(247397),
     p = n(388032),
-    m = n(949237);
+    m = n(958461);
 function g(e) {
     let { widgetType: t } = e,
         n = t === i.l.FAVORITE_GAMES ? c.LM.BALDURS_GATE_3 : c.LM.CYBERPUNK_2077,

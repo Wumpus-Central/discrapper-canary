@@ -1,29 +1,29 @@
-n.d(t, { Z: () => f });
+n.d(t, { Z: () => h });
 var r = n(255367);
 n(73800);
 var i = n(481060),
     l = n(570140),
     o = n(317770),
-    s = n(731971),
-    a = n(626135),
+    a = n(731971),
+    s = n(626135),
     c = n(379164),
     u = n(590965),
     d = n(981631);
-let h = "INVITE_MODAL_KEY";
-class p extends o.Z {
+let p = "INVITE_MODAL_KEY";
+class f extends o.Z {
     _initialize() {
         l.Z.subscribe("INVITE_MODAL_OPEN", this.handleOpenModal),
             l.Z.subscribe("INVITE_MODAL_CLOSE", this.handleCloseModal);
     }
     _terminate() {
-        (0, i.Mr3)(h),
+        (0, i.Mr3)(p),
             l.Z.unsubscribe("INVITE_MODAL_OPEN", this.handleOpenModal),
             l.Z.unsubscribe("INVITE_MODAL_CLOSE", this.handleCloseModal);
     }
     handleOpenModal(e) {
         let { context: t } = e;
         u.Z.isOpen() &&
-            !(0, i.nfh)(h) &&
+            !(0, i.nfh)(p) &&
             (0, i.ZDy)(
                 async () => {
                     let { default: e } = await n.e("86872").then(n.bind(n, 472365));
@@ -58,12 +58,12 @@ class p extends o.Z {
                         );
                 },
                 {
-                    modalKey: h,
+                    modalKey: p,
                     contextKey: (0, i.VnL)(t),
                     onCloseRequest: () => {
-                        let e = (0, s.e7)(),
-                            t = (0, s._J)();
-                        a.default.track(d.rMx.INVITE_ACCEPT_DISMISSED, {
+                        let e = (0, a.e7)(),
+                            t = (0, a._J)();
+                        s.default.track(d.rMx.INVITE_ACCEPT_DISMISSED, {
                             invite_code: e,
                             guild_id: t,
                         }),
@@ -73,7 +73,7 @@ class p extends o.Z {
             );
     }
     handleCloseModal() {
-        (0, i.Mr3)(h);
+        (0, i.Mr3)(p);
     }
 }
-let f = new p();
+let h = new f();

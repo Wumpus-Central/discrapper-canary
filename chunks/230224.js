@@ -1,11 +1,11 @@
 n.d(t, {
-    GB: () => y,
-    JI: () => S,
-    UM: () => T,
-    V6: () => C,
+    GB: () => N,
+    JI: () => O,
+    UM: () => A,
+    V6: () => y,
     WT: () => v,
     X7: () => j,
-    jq: () => A,
+    jq: () => C,
     mx: () => x,
 }),
     n(415506);
@@ -23,7 +23,7 @@ var r = n(255367),
     f = n(981631),
     m = n(888592),
     g = n(388032),
-    _ = n(97029);
+    _ = n(215613);
 let x = 100,
     b = (e) => {
         var t, n;
@@ -39,18 +39,22 @@ let x = 100,
         return (null == (t = e.channel) ? void 0 : t.type) === f.d4z.GROUP_DM;
     },
     j = (e) => null == e.channel && null == e.guild && null != e.inviter,
-    I = (e) => {
-        var t;
-        let n = b(e);
-        return (null != (t = null == n ? void 0 : n.memberCount) ? t : 0) > x;
-    },
-    O = (e) => e.state === f.r2o.ACCEPTED,
-    S = (e) => {
+    I = (e) => e.state === f.r2o.ACCEPTED,
+    O = (e) => {
         let { guild_scheduled_event: t } = e;
         return null != t;
     },
-    N = (e) => !S(e) && (!!j(e) || (null != e.inviter && !O(e) && !I(e))),
-    y = (e) => {
+    S = (e) =>
+        !O(e) &&
+        (!!j(e) ||
+            (null != e.inviter &&
+                !I(e) &&
+                !((e) => {
+                    var t;
+                    let n = b(e);
+                    return (null != (t = null == n ? void 0 : n.memberCount) ? t : 0) > x;
+                })(e))),
+    N = (e) => {
         let { guild: t, user: n, application: i } = e;
         return null != i
             ? (0, r.jsx)(c.Z, {
@@ -73,11 +77,11 @@ let x = 100,
                   })
                 : null;
     };
-function C(e) {
+function y(e) {
     var t;
     let { invite: n, textClassName: i, className: l } = e,
         s = b(n);
-    return null == s || N(n) || (null == n || null == (t = n.guild) ? void 0 : t.id) === m.fQ
+    return null == s || S(n) || (null == n || null == (t = n.guild) ? void 0 : t.id) === m.fQ
         ? null
         : (0, r.jsx)(a.EJ, {
               className: o()(_.activityCount, l),
@@ -87,7 +91,7 @@ function C(e) {
               flat: !0,
           });
 }
-function A(e) {
+function C(e) {
     let { invite: t, showBigUserIcon: n } = e,
         l = i.useMemo(
             () =>
@@ -95,7 +99,7 @@ function A(e) {
                     ? null
                     : E(t) && null != t.target_user
                       ? d.ZP.getUserAvatarURL(t.target_user)
-                      : N(t) && null != t.inviter
+                      : S(t) && null != t.inviter
                         ? d.ZP.getUserAvatarURL(t.inviter)
                         : null,
             [t, n],
@@ -111,9 +115,9 @@ function A(e) {
     } else
         E(t) && null != t.target_user
             ? (o = g.intl.formatToPlainString(g.t.x2L32d, { username: t.target_user.username }))
-            : O(t)
+            : I(t)
               ? (o = g.intl.string(g.t["FDsl+P"]))
-              : N(t) &&
+              : S(t) &&
                 null != t.inviter &&
                 (o = g.intl.format(g.t.spU2mJ, { username: h.ZP.getFormattedName(t.inviter) }));
     return (0, r.jsxs)("div", {
@@ -134,7 +138,7 @@ function A(e) {
         ],
     });
 }
-function T(e) {
+function A(e) {
     let t,
         n,
         i,

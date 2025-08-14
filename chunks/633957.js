@@ -32,9 +32,9 @@ var r = n(255367),
     L = n(506071),
     x = n(226378),
     M = n(981631),
-    j = n(701488),
-    k = n(388032),
-    U = n(712374);
+    k = n(701488),
+    j = n(388032),
+    U = n(853392);
 function G(e) {
     var t, n, o, l;
     let d,
@@ -79,7 +79,7 @@ function G(e) {
         Q = null == X ? void 0 : X.details,
         J = i.useMemo(() => {
             let e = new T.ZP(I);
-            return null == e.embeddedActivityConfig && (e.embeddedActivityConfig = j.wT), e;
+            return null == e.embeddedActivityConfig && (e.embeddedActivityConfig = k.wT), e;
         }, [I]),
         $ = (0, h.s5)({
             userId: H,
@@ -120,7 +120,7 @@ function G(e) {
                           componentId: en,
                       });
         },
-        eo = et.disabled ? k.intl.string(k.t.JBnc7O) : k.intl.string(k.t.cX9uLS),
+        eo = et.disabled ? j.intl.string(j.t.JBnc7O) : j.intl.string(j.t.cX9uLS),
         ea = (0, v.G)(J, () => {
             R.default.track(M.rMx.ACTIVITY_INSTANCE_EMBED_CLICKED, {
                 application_id: I.id,
@@ -145,7 +145,7 @@ function G(e) {
         eu = (0, y.r)(X),
         ed = [
             {
-                label: ee ? k.intl.string(k.t.RscU7O) : k.intl.string(k.t.VJlc0d),
+                label: ee ? j.intl.string(j.t.RscU7O) : j.intl.string(j.t.VJlc0d),
                 trackingArea: O.j_.PLAY,
                 onClick: ei,
                 disabledReason: d,
@@ -153,7 +153,7 @@ function G(e) {
             },
         ];
     return (0, r.jsx)(b.W, {
-        header: k.intl.string(k.t.pkq6Vl),
+        header: j.intl.string(j.t.pkq6Vl),
         title: I.name,
         iconSrc: es,
         info: (0, r.jsx)("div", {

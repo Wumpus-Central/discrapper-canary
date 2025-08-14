@@ -1,4 +1,4 @@
-n.d(t, { Z: () => P });
+n.d(t, { Z: () => T });
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -21,17 +21,13 @@ var r = n(255367),
     v = n(474936),
     I = n(981631),
     C = n(388032),
-    S = n(49764),
-    N = n(379939);
-let T = {
-    width: 14,
-    height: 14,
-};
-function P(e) {
-    let { recipientUser: t, giftIntentType: n, analyticsPage: l, shouldHighlight: P } = e,
-        { analyticsLocations: j } = (0, d.ZP)(),
-        { isHovered: x, setIsHovered: A, onMouseEnter: Z, onMouseLeave: w } = (0, h.Z)(200, 300),
-        { enableEmojiCTA: L } = _.w.useExperiment({ location: "GiftIntentActionButton" }, { autoTrackExposure: !1 });
+    S = n(427954),
+    N = n(286389);
+function T(e) {
+    let { recipientUser: t, giftIntentType: n, analyticsPage: l, shouldHighlight: T } = e,
+        { analyticsLocations: P } = (0, d.ZP)(),
+        { isHovered: j, setIsHovered: x, onMouseEnter: A, onMouseLeave: Z } = (0, h.Z)(200, 300),
+        { enableEmojiCTA: w } = _.w.useExperiment({ location: "GiftIntentActionButton" }, { autoTrackExposure: !1 });
     i.useEffect(() => {
         let e = g.Z.getUserAffinity(t.id);
         (0, p.h)({
@@ -43,13 +39,13 @@ function P(e) {
             },
         });
     }, [t, n]);
-    let R = i.useCallback(
+    let L = i.useCallback(
             (e) => {
-                "focus" !== e.type && Z();
+                "focus" !== e.type && A();
             },
-            [Z],
+            [A],
         ),
-        D = (e) => {
+        R = (e) => {
             e.stopPropagation();
             let r = g.Z.getUserAffinity(t.id);
             m.default.track(I.rMx.GIFT_INTENT_ACTION_BUTTON_CLICKED, {
@@ -61,84 +57,83 @@ function P(e) {
                     initialPlanId: null,
                     giftRecipient: t,
                     analyticsLocation: (0, E.F)(n).actionButton,
-                    analyticsLocations: j,
+                    analyticsLocations: P,
                     analyticsObject: {
                         page: l,
                         section: I.jXE.FRIENDS_LIST_FRIEND_ROW,
                         object: I.qAy.BUTTON_CTA,
                         objectType: I.Qqv.GIFT,
                     },
-                    giftMessage: k(),
+                    giftMessage: D(),
                 });
         },
-        k = () =>
+        D = () =>
             n === v.hX.FRIEND_ANNIVERSARY
                 ? C.intl.formatToPlainString(C.t["L2s/Nz"], { numberOfYears: O.Z.getFriendAnniversaryYears(t.id) })
                 : (0, b.Ou)(n),
-        M = () => (n === v.hX.FRIEND_ANNIVERSARY ? C.intl.string(C.t["4LohBA"]) : (0, b.Ou)(n)),
-        U = i.useRef(null),
-        G = () =>
-            L
-                ? (0, r.jsx)(u.P3F, {
-                      innerRef: U,
-                      "aria-label": M(),
-                      onClick: D,
-                      className: a()(N.actionButton, S.popoutButton, { [N.highlight]: P }),
-                      onMouseEnter: R,
-                      onMouseLeave: w,
-                      children: (0, r.jsx)(o.animated.div, {
-                          className: S.spriteContainer,
-                          children: (0, r.jsx)("div", { className: S.sprite }),
-                      }),
-                  })
-                : (0, r.jsx)(c.zx, {
-                      buttonRef: U,
-                      onClick: D,
-                      onMouseEnter: R,
-                      onMouseLeave: w,
-                      children: (0, r.jsxs)("div", {
-                          className: S.pillContentContainer,
-                          children: [
-                              (0, r.jsx)(u.OgN, {
-                                  size: "custom",
-                                  width: T.width,
-                                  height: T.height,
-                                  color: "currentColor",
-                              }),
-                              (0, r.jsx)(u.Text, {
-                                  variant: "text-sm/medium",
-                                  color: "always-white",
-                                  className: S.pillButtonText,
-                                  children: M(),
-                              }),
-                          ],
-                      }),
-                  });
+        k = () => (n === v.hX.FRIEND_ANNIVERSARY ? C.intl.string(C.t["4LohBA"]) : (0, b.Ou)(n)),
+        M = i.useRef(null);
     return (0, r.jsx)(u.yRy, {
-        targetElementRef: U,
+        targetElementRef: M,
         animation: u.yRy.Animation.FADE,
         nudgeAlignIntoViewport: !1,
         closeOnScroll: !0,
-        shouldShow: x,
+        shouldShow: j,
         position: "right",
         align: "top",
         spacing: 9,
         onRequestClose: () => {
-            A(!1);
+            x(!1);
         },
         renderPopout: (e) =>
             (0, r.jsx)(y.Z, {
                 giftIntentType: n,
                 premiumGiftIntentCardType: y.U.COACHMARK,
                 recipientUser: t,
-                onMouseEnter: Z,
-                onMouseLeave: w,
+                onMouseEnter: A,
+                onMouseLeave: Z,
                 popoutPosition: e.position,
                 analyticsPage: l,
                 analyticsSection: I.jXE.FRIENDS_LIST_FRIEND_ROW_GIFT_POPOUT,
                 giftIntentSecondaryAction: v.X2.SEND_MESSAGE,
                 glow: !0,
             }),
-        children: () => G(),
+        children: () =>
+            w
+                ? (0, r.jsx)(u.P3F, {
+                      innerRef: M,
+                      "aria-label": k(),
+                      onClick: R,
+                      className: a()(N.actionButton, S.popoutButton, { [N.highlight]: T }),
+                      onMouseEnter: L,
+                      onMouseLeave: Z,
+                      children: (0, r.jsx)(o.animated.div, {
+                          className: S.spriteContainer,
+                          children: (0, r.jsx)("div", { className: S.sprite }),
+                      }),
+                  })
+                : (0, r.jsx)(c.zx, {
+                      buttonRef: M,
+                      onClick: R,
+                      onMouseEnter: L,
+                      onMouseLeave: Z,
+                      children: (0, r.jsxs)("div", {
+                          className: S.pillContentContainer,
+                          children: [
+                              (0, r.jsx)(u.OgN, {
+                                  size: "custom",
+                                  width: 14,
+                                  height: 14,
+                                  color: "currentColor",
+                              }),
+                              (0, r.jsx)(u.Text, {
+                                  variant: "text-sm/medium",
+                                  color: "always-white",
+                                  className: S.pillButtonText,
+                                  children: k(),
+                              }),
+                          ],
+                      }),
+                  }),
     });
 }

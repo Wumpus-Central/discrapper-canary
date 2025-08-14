@@ -4,18 +4,18 @@ n(73800);
 var i = n(120356),
     l = n.n(i),
     o = n(481060),
-    s = n(40614),
-    a = n(736409),
+    a = n(40614),
+    s = n(736409),
     c = n(12694),
     u = n(925329),
     d = n(810568),
-    h = n(168524),
-    p = n(115530),
-    f = n(388032),
-    g = n(727196);
+    p = n(168524),
+    f = n(115530),
+    h = n(388032),
+    g = n(48733);
 function m(e) {
     let { name: t, applicationId: n } = e,
-        i = (0, h.Z)({
+        i = (0, p.Z)({
             location: "ActivityPanelGameCard",
             applicationId: n,
             source: d.m1.RtcPanel,
@@ -24,7 +24,7 @@ function m(e) {
     return (0, r.jsx)(o.P3F, {
         onClick: i,
         className: l()(null != i && g.clickableGameName),
-        children: (0, r.jsx)(p.Z, {
+        children: (0, r.jsx)(f.Z, {
             className: g.gameName,
             children: t,
         }),
@@ -37,9 +37,9 @@ function b(e) {
             game: i,
             onClickNotSharing: l,
             isForceShowSharingPopout: d,
-            setIsForceShowSharingPopout: h,
+            setIsForceShowSharingPopout: p,
         } = e,
-        p = null != n ? n.name : null != i ? i.name : f.intl.string(f.t["UQMV/P"]);
+        f = null != n ? n.name : null != i ? i.name : h.intl.string(h.t["UQMV/P"]);
     return (
         (0, c.V)(),
         (0, r.jsxs)("div", {
@@ -62,19 +62,19 @@ function b(e) {
                             : null,
                     ],
                 }),
-                (0, r.jsx)(a.j, {
+                (0, r.jsx)(s.j, {
                     isForceShowSharingPopout: d,
-                    setIsForceShowSharingPopout: h,
+                    setIsForceShowSharingPopout: p,
                     children: (0, r.jsxs)("div", {
                         className: g.info,
                         children: [
-                            null != p
+                            null != f
                                 ? (0, r.jsx)(m, {
-                                      name: p,
+                                      name: f,
                                       applicationId: null == n ? void 0 : n.id,
                                   })
                                 : null,
-                            (0, r.jsx)(s.V, { onClick: l }),
+                            (0, r.jsx)(a.V, { onClick: l }),
                         ],
                     }),
                 }),

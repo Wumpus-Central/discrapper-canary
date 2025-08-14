@@ -12,10 +12,10 @@ var i = n(255367),
     m = n(486199),
     b = n(981631),
     g = n(388032),
-    f = n(210630);
+    f = n(941678);
 function h(e) {
     let { webhook: t, editedWebhook: n, channelOptions: h, isExpanded: x, errors: j, onToggleExpand: v } = e,
-        O = r.useMemo(() => {
+        y = r.useMemo(() => {
             var e;
             return null != (e = t.avatar) && /^data:/.test(e)
                 ? e
@@ -25,7 +25,7 @@ function h(e) {
                       discriminator: b.fo$,
                   });
         }, [t]),
-        y = r.useCallback(() => {
+        O = r.useCallback(() => {
             (0, o.h7j)((e) => {
                 var n, r;
                 return (0, i.jsx)(
@@ -162,7 +162,7 @@ function h(e) {
                                 (0, i.jsx)(o.$i$, { className: f.bottomDivider }),
                                 (0, i.jsx)(d.Z, {
                                     children: (0, i.jsx)(l.zx, {
-                                        onClick: y,
+                                        onClick: O,
                                         size: l.zx.Sizes.SMALL,
                                         color: l.zx.Colors.RED,
                                         look: l.zx.Looks.LINK,
@@ -190,7 +190,7 @@ function h(e) {
                             children: [
                                 (0, i.jsx)(m.Z, {
                                     name: t.name,
-                                    imageSrc: O,
+                                    imageSrc: y,
                                     detailsClassName: f.__invalid_description,
                                     details: _,
                                 }),

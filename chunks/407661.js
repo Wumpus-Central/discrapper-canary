@@ -17,7 +17,7 @@ var r = n(255367),
     E = n(962293),
     b = n(981631),
     y = n(388032),
-    O = n(311960);
+    O = n(204427);
 let v = 2,
     I = 10;
 function T(e, t) {
@@ -95,10 +95,10 @@ function A(e) {
         L = (0, h.NE)(i, o),
         x = n.showThreadPromptOnReply && D >= v && L,
         M = () => (0, p.uL)(b.Z5c.CHANNEL(i.getGuildId(), i.id, o.id));
-    function j(e) {
+    function k(e) {
         e.stopPropagation(), (0, _.qx)(i.id, !s);
     }
-    function k(e) {
+    function j(e) {
         e.stopPropagation(), (0, _.A6)(i.id);
     }
     return (0, r.jsx)("div", {
@@ -153,7 +153,7 @@ function A(e) {
                                                     return (0, r.jsx)(l.P3F, {
                                                         role: "switch",
                                                         "aria-checked": s,
-                                                        onClick: j,
+                                                        onClick: k,
                                                         onMouseEnter: t,
                                                         onMouseLeave: n,
                                                         onFocus: i,
@@ -183,7 +183,7 @@ function A(e) {
                                             }),
                                         ],
                                     }),
-                                (0, r.jsx)(E.B, { onClick: k }),
+                                (0, r.jsx)(E.B, { onClick: j }),
                             ],
                         }),
                     ],

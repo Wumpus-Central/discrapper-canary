@@ -19,7 +19,7 @@ var n = r(255367),
     O = r(215023),
     C = r(981631),
     E = r(388032),
-    S = r(955210),
+    S = r(887353),
     y = r(558513),
     x = r(662128),
     j = r(676790),
@@ -37,40 +37,36 @@ function N(e) {
         M = (0, i.e7)([u.default], () => u.default.getCurrentUser()),
         F = (0, i.e7)([g.Z], () => g.Z.productsWithVariantsAsGroup),
         [H, W] = l.useState(1),
-        V = () => {
-            var e;
-            null == A || null == (e = A.current) || e.scrollToTop({ animate: !0 });
-        },
-        U = (0, c.Fg)(),
-        z = (0, o.ap)(U),
-        [G, q, K] = l.useMemo(() => {
+        V = (0, c.Fg)(),
+        U = (0, o.ap)(V),
+        [z, G, q] = l.useMemo(() => {
             switch (w) {
                 case O.AW.AVATAR_DECORATIONS:
-                    return [E.intl.string(E.t.dRZYND), z ? T.Z : j.Z, a.Z.AVATAR_DECORATION];
+                    return [E.intl.string(E.t.dRZYND), U ? T.Z : j.Z, a.Z.AVATAR_DECORATION];
                 case O.AW.PROFILE_EFFECTS:
-                    return [E.intl.string(E.t["1cNjt7"]), z ? I.Z : k.Z, a.Z.PROFILE_EFFECT];
+                    return [E.intl.string(E.t["1cNjt7"]), U ? I.Z : k.Z, a.Z.PROFILE_EFFECT];
                 case O.AW.NAMEPLATES:
-                    return [E.intl.string(E.t.V68Fq6), z ? L.Z : P.Z, a.Z.NAMEPLATE];
+                    return [E.intl.string(E.t.V68Fq6), U ? L.Z : P.Z, a.Z.NAMEPLATE];
                 case O.AW.BUNDLES:
-                    return [E.intl.string(E.t.FYFppq), z ? x.Z : y.Z, a.Z.BUNDLE];
+                    return [E.intl.string(E.t.FYFppq), U ? x.Z : y.Z, a.Z.BUNDLE];
             }
-        }, [w, z]),
-        Y = (0, f.a)(),
-        X = l.useMemo(
+        }, [w, U]),
+        K = (0, f.a)(),
+        Y = l.useMemo(
             () =>
-                Y(
+                K(
                     F.filter((e) => {
                         var t;
                         return (
-                            e.type === K ||
+                            e.type === q ||
                             (e.type === a.Z.VARIANTS_GROUP &&
-                                (null == (t = e.variants) ? void 0 : t.some((e) => e.type === K)) === !0)
+                                (null == (t = e.variants) ? void 0 : t.some((e) => e.type === q)) === !0)
                         );
                     }),
                 ),
-            [F, K, Y],
+            [F, q, K],
         ),
-        J = (0, b.l)(X);
+        X = (0, b.l)(Y);
     return (l.useEffect(() => {
         (0, h.n)({
             sessionId: R,
@@ -97,16 +93,16 @@ function N(e) {
         : (0, n.jsxs)(n.Fragment, {
               children: [
                   (0, n.jsx)("div", {
-                      style: { backgroundImage: "url(".concat(q, ")") },
+                      style: { backgroundImage: "url(".concat(G, ")") },
                       className: S.bannerContainer,
                       children: (0, n.jsx)(s.X6q, {
                           variant: "heading-xxl/extrabold",
-                          children: G,
+                          children: z,
                       }),
                   }),
                   (0, n.jsx)("div", {
                       className: S.products,
-                      children: J.slice(40 * (H - 1), 40 * H).map((e, t) => {
+                      children: X.slice(40 * (H - 1), 40 * H).map((e, t) => {
                           let r = g.Z.getCategory(e.categorySkuId);
                           return null == r
                               ? null
@@ -129,15 +125,16 @@ function N(e) {
                                 );
                       }),
                   }),
-                  J.length > 40 &&
+                  X.length > 40 &&
                       (0, n.jsx)("div", {
                           className: S.paginationContainer,
                           children: (0, n.jsx)("div", {
                               children: (0, n.jsx)(s.DsT, {
                                   currentPage: H,
-                                  totalCount: J.length,
+                                  totalCount: X.length,
                                   pageSize: 40,
                                   onPageChange: (e) => {
+                                      var t;
                                       d.default.track(C.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                                           collectibles_shop_session_id: null == B ? void 0 : B.sessionId,
                                           page_section: null == B ? void 0 : B.pageSection,
@@ -148,7 +145,7 @@ function N(e) {
                                           page_type: w,
                                       }),
                                           W(e),
-                                          V();
+                                          null == A || null == (t = A.current) || t.scrollToTop({ animate: !0 });
                                   },
                                   disablePaginationGap: !0,
                               }),

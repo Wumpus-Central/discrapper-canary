@@ -10,7 +10,7 @@ var i = n(399606),
     u = n(572004),
     d = n(267101),
     f = n(863663),
-    _ = n(676651),
+    _ = n(612111),
     p = n(623488),
     h = n(942833),
     m = n(391181),
@@ -41,9 +41,9 @@ function O(e) {
         L = (0, h.C)(t),
         x = (0, d.SO)(P),
         { shouldHideGuildPurchaseEntryPoints: M } = (0, s.uP)(n),
-        j = (0, h.k)(t);
+        k = (0, h.k)(t);
     if (null == P || M) return null;
-    let k = () =>
+    let j = () =>
             (0, g.e)({
                 guildId: n,
                 guildProductListingId: t.id,
@@ -80,7 +80,7 @@ function O(e) {
             imageUrl: D,
             name: t.name,
             description: t.description,
-            formattedPrice: j,
+            formattedPrice: k,
             role: w,
             ctaComponent: (0, r.jsx)(E.Z, {
                 guildId: n,
@@ -89,8 +89,8 @@ function O(e) {
             }),
             productType: L,
             shouldShowFullDescriptionButton: v,
-            onShowFullDescription: k,
-            onTapCard: k,
+            onShowFullDescription: j,
+            onTapCard: j,
             actionMenu: Z,
             showOpaqueBackground: R,
             hideRoleTag: I,

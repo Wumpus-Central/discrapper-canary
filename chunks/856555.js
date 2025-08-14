@@ -1,6 +1,6 @@
 n.d(t, {
-    EQ: () => E,
-    Pk: () => y,
+    EQ: () => O,
+    Pk: () => E,
 });
 var r = n(255367),
     i = n(73800),
@@ -72,38 +72,37 @@ let b = (e) =>
                 e,
             ),
         ),
-    _ = () => {
-        let e = i.useCallback(
-            () =>
-                (0, o.Lk)(document.body.style.getPropertyValue("--custom-channel-header-height"), 48) +
-                (0, o.Lk)(document.body.style.getPropertyValue("--custom-app-top-bar-height"), 36),
-            [],
-        );
-        return { requiredSpacingFromTop: i.useMemo(() => e(), [e]) };
-    },
-    O = (e) => {
+    _ = (e) => {
         var { positionControlRef: t, targetElementRef: n, children: l } = e,
             a = m(e, ["positionControlRef", "targetElementRef", "children"]);
-        let { requiredSpacingFromTop: o } = _(),
-            s = i.useCallback(
+        let { requiredSpacingFromTop: s } = (() => {
+                let e = i.useCallback(
+                    () =>
+                        (0, o.Lk)(document.body.style.getPropertyValue("--custom-channel-header-height"), 48) +
+                        (0, o.Lk)(document.body.style.getPropertyValue("--custom-app-top-bar-height"), 36),
+                    [],
+                );
+                return { requiredSpacingFromTop: i.useMemo(() => e(), [e]) };
+            })(),
+            c = i.useCallback(
                 (e) => {
-                    if ((e.bottom + e.top) / 2 <= o) return !1;
+                    if ((e.bottom + e.top) / 2 <= s) return !1;
                     let t = window.innerHeight - (0, d.t4)();
                     return !(e.bottom > t);
                 },
-                [o],
+                [s],
             );
         return (0, r.jsx)(d.WS, {
             defaultCoachmarkAlign: "bottom",
             targetElementRef: n,
             positionControlRef: t,
             popoutElement: (0, r.jsx)(b, g({}, a)),
-            calculateVisibility: s,
+            calculateVisibility: c,
             spacing: 12,
             children: l,
         });
     },
-    E = (e) => {
+    O = (e) => {
         let { listScrollerRef: t } = e,
             { enabled: n } = (0, c.WX)({ location: "useShopOnboardingCoachmark" }),
             r = i.useRef(null),
@@ -148,7 +147,7 @@ let b = (e) =>
                   onShopButtonClick: p.dG4,
               };
     },
-    y = (e) => {
+    E = (e) => {
         var t,
             n,
             { children: i } = e,
@@ -157,7 +156,7 @@ let b = (e) =>
             errorSource: "ORBS_SHOP_ONBOARDING_COACHMARK",
             renderCustomErrorComponent: () => i,
             children: (0, r.jsx)(
-                O,
+                _,
                 ((t = g({}, l)),
                 (n = n = { children: i }),
                 Object.getOwnPropertyDescriptors

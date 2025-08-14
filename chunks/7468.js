@@ -20,8 +20,8 @@ var i = n(579092),
 let d = new i.Yd("EncryptionWorker");
 (0, i._n)(i.Sm);
 let s = "uninitialized",
-    f = new Map(),
     c = new Map(),
+    f = new Map(),
     g = [];
 (self.onmessage = (e) => {
     p(e);
@@ -70,14 +70,14 @@ let p = (e) => {
     },
     h = (e) => {
         let { userId: r, operation: n, protocolVersion: a, keyRatchet: o } = e,
-            i = c.get(r);
+            i = f.get(r);
         null == i &&
             ((i = {
                 audioSSRC: 0,
                 videoSSRCs: [],
                 cryptor: null,
             }),
-            c.set(r, i));
+            f.set(r, i));
         let u = i.cryptor;
         if (null == u) {
             if (n === l.Bp.ENCRYPT) {
@@ -101,17 +101,17 @@ let p = (e) => {
     b = (e) => {
         let { userId: r, audioSsrc: n, videoSsrcs: t } = e,
             a = [n, ...t],
-            o = c.get(r);
+            o = f.get(r);
         for (let e of (null == o &&
             ((o = {
                 audioSSRC: n,
                 videoSSRCs: t,
                 cryptor: null,
             }),
-            c.set(r, o)),
+            f.set(r, o)),
         [o.audioSSRC, ...o.videoSSRCs]))
-            a.includes(e) || f.get(e) !== r || f.delete(e);
-        for (let e of a) e > 0 && f.set(e, r);
+            a.includes(e) || c.get(e) !== r || c.delete(e);
+        for (let e of a) e > 0 && c.set(e, r);
         (o.audioSSRC = n), (o.videoSSRCs = t);
     },
     v = (e) => {
@@ -120,11 +120,11 @@ let p = (e) => {
     },
     E = (e) => {
         let { userId: r } = e,
-            n = c.get(r);
+            n = f.get(r);
         if (null == n) return;
-        c.delete(r);
+        f.delete(r);
         let { audioSSRC: t, videoSSRCs: a } = n;
-        for (let e of [t, ...a]) f.get(e) === r && f.delete(e);
+        for (let e of [t, ...a]) c.get(e) === r && c.delete(e);
     },
     S = (e) => {
         postMessage({
@@ -137,13 +137,13 @@ let p = (e) => {
             let n,
                 a = e.getMetadata().synchronizationSource;
             if (null == a) return void d.warn("no ssrc found in frame metadata");
-            let o = f.get(a);
+            let o = c.get(a);
             if (null == o) return void d.warn("no userId found for ssrc", a);
-            let i = c.get(o);
+            let i = f.get(o);
             if (null == i) return void d.warn("no user found for userId", o);
             let l = i.cryptor;
             if (null == l) {
-                1 !== c.size && d.warn("no cryptor found for userId", o);
+                1 !== f.size && d.warn("no cryptor found for userId", o);
                 return;
             }
             if (l instanceof t.Encryptor) n = C(e, a, l);

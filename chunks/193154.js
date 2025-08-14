@@ -1,14 +1,14 @@
-n.d(t, { Z: () => p }), n(388685);
+n.d(t, { Z: () => f }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(91192),
     o = n(481060),
-    s = n(460562),
-    a = n(768581),
+    a = n(460562),
+    s = n(768581),
     c = n(682662),
     u = n(662146),
-    d = n(409026);
-function h(e) {
+    d = n(961699);
+function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -33,9 +33,9 @@ function h(e) {
     }
     return e;
 }
-function p(e) {
-    let [t, p] = i.useState(!1),
-        f = (0, l.Ie)("guild-".concat(e.id));
+function f(e) {
+    let [t, f] = i.useState(!1),
+        h = (0, l.Ie)("guild-".concat(e.id));
     return (0, r.jsx)(c.H, {
         children: (0, r.jsx)(u.Z, {
             text: e.name,
@@ -43,20 +43,20 @@ function p(e) {
                 className: d.circleIconButton,
                 selected: t,
                 lowerBadge: (0, r.jsx)(o.G2e, {
-                    icon: (0, o.GSL)(s.Z),
+                    icon: (0, o.GSL)(a.Z),
                     disableColor: !0,
                     className: d.geoRestrictedBadge,
                 }),
                 children: (0, r.jsx)(
                     o.LYs,
-                    h(
+                    p(
                         {
                             name: e.name,
                             onMouseEnter: () => {
-                                p(!0);
+                                f(!0);
                             },
                             onMouseLeave: () => {
-                                p(!1);
+                                f(!1);
                             },
                             onClick: () => {
                                 (0, o.ZDy)(async () => {
@@ -64,7 +64,7 @@ function p(e) {
                                     return (n) =>
                                         (0, r.jsx)(
                                             t,
-                                            h(
+                                            p(
                                                 {
                                                     name: e.name,
                                                     guildId: e.id,
@@ -76,7 +76,7 @@ function p(e) {
                             },
                             icon:
                                 null != e.icon
-                                    ? a.ZP.getGuildIconURL({
+                                    ? s.ZP.getGuildIconURL({
                                           id: e.id,
                                           icon: e.icon,
                                           canAnimate: !1,
@@ -84,7 +84,7 @@ function p(e) {
                                       })
                                     : null,
                         },
-                        f,
+                        h,
                     ),
                 ),
             }),

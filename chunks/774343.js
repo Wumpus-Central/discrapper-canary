@@ -1,73 +1,71 @@
-n.d(t, { Z: () => j });
+n.d(t, { Z: () => _ });
 var i,
     r,
     s,
     a,
     l,
-    o,
-    c = n(442837),
-    d = n(570140),
-    u = n(592125),
-    m = n(896797),
-    p = n(430824),
-    g = n(944486),
-    h = n(55589),
-    f = n(981631);
-let b = (null != (l = null == (a = window) || null == (s = a.location) ? void 0 : s.pathname) ? l : "").startsWith(
-    f.Z5c.ACTIVITIES,
+    o = n(442837),
+    c = n(570140),
+    d = n(592125),
+    u = n(896797),
+    m = n(430824),
+    p = n(944486),
+    g = n(55589),
+    h = n(981631);
+let f = (null != (a = null == (s = window) || null == (r = s.location) ? void 0 : r.pathname) ? a : "").startsWith(
+    h.Z5c.ACTIVITIES,
 )
-    ? f.Z5c.ACTIVITIES
+    ? h.Z5c.ACTIVITIES
     : null;
-function x(e) {
+function b(e) {
     let { link: t } = e;
-    if (b === t) return !1;
-    b = t;
+    if (f === t) return !1;
+    f = t;
 }
-class _ extends (o = c.ZP.Store) {
+class x extends (l = o.ZP.Store) {
     initialize() {
-        this.waitFor(m.Z, h.Z, g.Z, p.Z, u.Z);
+        this.waitFor(u.Z, g.Z, p.Z, m.Z, d.Z);
     }
     getHomeLink() {
-        return null != b ? b : m.Z.fallbackRoute;
+        return null != f ? f : u.Z.fallbackRoute;
     }
 }
-(r = "AppViewStore"),
-    (i = "displayName") in _
-        ? Object.defineProperty(_, i, {
-              value: r,
-              enumerable: !0,
-              configurable: !0,
-              writable: !0,
-          })
-        : (_[i] = r);
-let j = new _(d.Z, {
+(i = "displayName") in x
+    ? Object.defineProperty(x, i, {
+          value: "AppViewStore",
+          enumerable: !0,
+          configurable: !0,
+          writable: !0,
+      })
+    : (x[i] = "AppViewStore");
+let _ = new x(c.Z, {
     OVERLAY_INITIALIZE: function () {
-        let e = h.Z.getPrivateChannelIds(),
-            t = g.Z.getChannelId(f.ME);
-        (null != t || null != e[0]) && (b = f.Z5c.CHANNEL(f.ME, null != t ? t : e[0]));
+        let e = g.Z.getPrivateChannelIds(),
+            t = p.Z.getChannelId(h.ME);
+        (null != t || null != e[0]) && (f = h.Z5c.CHANNEL(h.ME, null != t ? t : e[0]));
     },
-    APP_VIEW_SET_HOME_LINK: x,
+    APP_VIEW_SET_HOME_LINK: b,
     APPLICATION_STORE_LOCATION_CHANGE: function (e) {
         let { location: t } = e;
-        x({
+        b({
             link: t.pathname,
             type: "APP_VIEW_SET_HOME_LINK",
         });
     },
     APPLICATION_STORE_RESET_NAVIGATION: function () {
-        if (null == b || !b.startsWith(f.Z5c.APPLICATION_STORE)) return !1;
-        b = f.Z5c.APPLICATION_STORE;
+        if (null == f || !f.startsWith(h.Z5c.APPLICATION_STORE)) return !1;
+        f = h.Z5c.APPLICATION_STORE;
     },
     CHANNEL_SELECT: function (e) {
         let { guildId: t, channelId: n } = e;
         if (null == t && null != n) {
-            let e = f.Z5c.CHANNEL(f.ME, n);
-            if (e !== b) return (b = e), !0;
+            let e = h.Z5c.CHANNEL(h.ME, n);
+            if (e !== f) return (f = e), !0;
         }
         return !1;
     },
     CHANNEL_DELETE: function (e) {
         let { channel: t } = e;
-        null == t.guild_id && null != t.id && null != b && b === f.Z5c.CHANNEL(f.ME, t.id) && (b = null);
+        null == t.guild_id && null != t.id && null != f && f === h.Z5c.CHANNEL(h.ME, t.id) && (f = null);
     },
 });

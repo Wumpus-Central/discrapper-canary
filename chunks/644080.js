@@ -1,4 +1,4 @@
-t.d(n, { Z: () => I });
+t.d(n, { Z: () => Z });
 var l = t(255367),
     r = t(73800),
     a = t(120356),
@@ -15,27 +15,10 @@ var l = t(255367),
     p = t(768581),
     x = t(981631),
     b = t(388032),
-    j = t(335138),
+    j = t(917733),
     C = t(63190),
     v = t(102219);
-let _ = (e) => {
-    let n = r.useMemo(
-        () =>
-            null == e
-                ? null
-                : p.ZP.getGuildHomeHeaderURL({
-                      id: e.id,
-                      homeHeader: e.homeHeader,
-                  }),
-        [e],
-    );
-    return {
-        homeHeaderImage: n,
-        isHomeHeaderImageSet: null != n,
-        homeHeaderScroll: 200 * (null != n),
-    };
-};
-function Z(e) {
+function _(e) {
     let { guild: n } = e,
         {
             variant: t,
@@ -64,12 +47,28 @@ function Z(e) {
         }),
     });
 }
-let I = r.memo(function (e) {
-    let { guild: n, titleClassName: r } = e,
-        { homeHeaderImage: a, isHomeHeaderImageSet: h } = _(n),
-        p = (0, m.b$)(n.id),
-        I = (0, s.e7)([g.Z], () => (0, f.b)(g.Z, n)),
-        y = (0, o.ZP)();
+let Z = r.memo(function (e) {
+    let { guild: n, titleClassName: a } = e,
+        { homeHeaderImage: h, isHomeHeaderImageSet: Z } = ((e) => {
+            let n = r.useMemo(
+                () =>
+                    null == e
+                        ? null
+                        : p.ZP.getGuildHomeHeaderURL({
+                              id: e.id,
+                              homeHeader: e.homeHeader,
+                          }),
+                [e],
+            );
+            return {
+                homeHeaderImage: n,
+                isHomeHeaderImageSet: null != n,
+                homeHeaderScroll: 200 * (null != n),
+            };
+        })(n),
+        I = (0, m.b$)(n.id),
+        y = (0, s.e7)([g.Z], () => (0, f.b)(g.Z, n)),
+        N = (0, o.ZP)();
     return (0, l.jsxs)("div", {
         className: j.header,
         children: [
@@ -77,16 +76,16 @@ let I = r.memo(function (e) {
                 className: j.headerArtWrapper,
                 children: [
                     (0, l.jsx)("div", {
-                        className: i()(j.headerArt, { [j.headerArtPlaceholder]: !h }),
-                        style: { backgroundImage: "url(".concat(h ? a : "dark" === y ? C : v, ")") },
+                        className: i()(j.headerArt, { [j.headerArtPlaceholder]: !Z }),
+                        style: { backgroundImage: "url(".concat(Z ? h : "dark" === N ? C : v, ")") },
                     }),
-                    p && (0, l.jsx)(Z, { guild: n }),
+                    I && (0, l.jsx)(_, { guild: n }),
                 ],
             }),
             (0, l.jsx)("div", {
                 className: j.titleWrapper,
                 children: (0, l.jsxs)("div", {
-                    className: r,
+                    className: a,
                     children: [
                         (0, l.jsx)(d.Z, {
                             className: j.headerIcon,
@@ -109,7 +108,7 @@ let I = r.memo(function (e) {
                                         tooltipPosition: "bottom",
                                         tooltipColor: c.ua7.Colors.PRIMARY,
                                     }),
-                                    I &&
+                                    y &&
                                         (0, l.jsx)("div", {
                                             "data-button-hoisted-classname-wrapper": !0,
                                             className: j.inviteButton,
@@ -120,7 +119,7 @@ let I = r.memo(function (e) {
                                                     (0, c.ZDy)(async () => {
                                                         let { default: e } = await Promise.all([
                                                             t.e("7654"),
-                                                            t.e("41832"),
+                                                            t.e("54833"),
                                                         ]).then(t.bind(t, 560114));
                                                         return (t) => {
                                                             var r, a;

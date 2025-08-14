@@ -12,7 +12,7 @@ var r = n(255367),
     _ = n(970184),
     p = n(280501),
     h = n(388032),
-    m = n(927619);
+    m = n(623734);
 function g(e, t, n) {
     return (
         t in e
@@ -185,34 +185,34 @@ function T(e) {
         D = u > 1,
         L = C === p.gH.LOADING,
         [x, M] = i.useState(!1),
-        [j, k] = i.useState(() => new Set(n.filter((e) => e.default).map((e) => e.value))),
-        [U, G] = i.useState(j),
+        [k, j] = i.useState(() => new Set(n.filter((e) => e.default).map((e) => e.value))),
+        [U, G] = i.useState(k),
         B = i.useMemo(() => n.some((e) => null != e.emoji), [n]);
     i.useEffect(() => {
         if ((null == A ? void 0 : A.type) === d.re.STRING_SELECT) {
             let e = new Set(A.values);
-            k(e), G(e);
+            j(e), G(e);
         } else {
             let e = new Set(T);
-            k(e), G(e);
+            j(e), G(e);
         }
     }, [o, T, A]);
     let Z = i.useCallback(() => {
-        U !== j &&
+        U !== k &&
             N({
                 type: d.re.STRING_SELECT,
-                values: Array.from(j),
+                values: Array.from(k),
             }) &&
-            G(j);
-    }, [j, U, G, N]);
+            G(k);
+    }, [k, U, G, N]);
     i.useEffect(() => {
-        !x && ((j.size === U.size && Array.from(U).every((e) => j.has(e))) || Z());
-    }, [x, j, U, Z]);
+        !x && ((k.size === U.size && Array.from(U).every((e) => k.has(e))) || Z());
+    }, [x, k, U, Z]);
     let F = c.UNb;
     D ? (F = c.gzz) : 0 === g && (F = c.s6k);
     let V = (0, c.cYr)({
-        value: j,
-        onChange: (e) => k(e),
+        value: k,
+        onChange: (e) => j(e),
         onSelectInteraction: F,
     });
     return (0, r.jsxs)(i.Fragment, {
@@ -226,7 +226,7 @@ function T(e) {
                             isProcessing: L,
                             isDisabled: b || C === p.gH.DISABLED || R,
                             className: a()(m.select, { [m.inModal]: w }),
-                            options: n.map((e) => y(E({}, e), { disabled: D && !j.has(e.value) && j.size === u })),
+                            options: n.map((e) => y(E({}, e), { disabled: D && !k.has(e.value) && k.size === u })),
                             placeholder: null != s ? s : h.intl.string(h.t.Otr6W1),
                             onClose: () => M(!1),
                             onOpen: () => M(!0),
@@ -237,7 +237,7 @@ function T(e) {
                                 (0, r.jsx)(
                                     O,
                                     y(E({}, e), {
-                                        isDisabled: D && !j.has(e.value) && j.size === u,
+                                        isDisabled: D && !k.has(e.value) && k.size === u,
                                         isOffset: B,
                                     }),
                                 ),

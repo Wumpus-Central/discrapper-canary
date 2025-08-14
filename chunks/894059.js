@@ -17,10 +17,11 @@ function a(e) {
               action: () => {
                   (0, i.ZDy)(async () => {
                       let { default: t } = await Promise.all([
+                          r.e("36599"),
                           r.e("22347"),
                           r.e("82758"),
-                          r.e("58023"),
-                          r.e("9317"),
+                          r.e("61"),
+                          r.e("45612"),
                       ]).then(r.bind(r, 779250));
                       return (r) => {
                           var i, l;

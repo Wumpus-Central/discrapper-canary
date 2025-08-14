@@ -44,8 +44,8 @@ function L(e, t, n) {
 }
 let x = new Set(),
     M = new d.Z("MessageStore"),
-    j = !1;
-function k() {
+    k = !1;
+function j() {
     c.Z.forEach((e) => {
         c.Z.commit(
             e.mutate({
@@ -341,7 +341,7 @@ function e_(e) {
 function ep(e) {
     let { message: t } = e,
         n = w.default.getCurrentUser();
-    null != t && null != t.author && null != n && t.author.id === n.id && (j = !0);
+    null != t && null != t.author && null != n && t.author.id === n.id && (k = !0);
 }
 class eh extends (r = a.ZP.Store) {
     initialize() {
@@ -415,14 +415,14 @@ class eh extends (r = a.ZP.Store) {
         return null != this.getMessages(e).findNewest((e) => e.author.id === (null == t ? void 0 : t.id));
     }
     hasCurrentUserSentMessageSinceAppStart() {
-        return j;
+        return k;
     }
 }
 L(eh, "displayName", "MessageStore");
 let em = new eh(s.Z, {
     BACKGROUND_SYNC_CHANNEL_MESSAGES: U,
-    CONNECTION_OPEN: k,
-    OVERLAY_INITIALIZE: k,
+    CONNECTION_OPEN: j,
+    OVERLAY_INITIALIZE: j,
     CACHE_LOADED: ef,
     LOAD_MESSAGES: G,
     LOAD_MESSAGES_SUCCESS: V,

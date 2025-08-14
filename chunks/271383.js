@@ -88,8 +88,8 @@ let R = new f.Z("GuildMemberStore"),
     L = {},
     x = {},
     M = !1,
-    j = 0,
     k = 0,
+    j = 0,
     U = {},
     G = {},
     B = {
@@ -112,7 +112,7 @@ function F(e, t) {
         }
 }
 function V(e) {
-    (j += 1), (U[e] = j);
+    (k += 1), (U[e] = k);
 }
 function H(e) {
     W(e) === y.default.getId() && (0, p.l)(K(e)), delete x[e];
@@ -424,7 +424,7 @@ function ep(e, t) {
               })),
                   Z(e, n[t.user.id]);
           }),
-          k++,
+          j++,
           !0);
 }
 function eh(e) {
@@ -451,7 +451,7 @@ function eE(e) {
 function eb(e, t) {
     let n = P[e];
     if (null == n || null == n[t]) return !1;
-    delete n[t], F(e, t), k++;
+    delete n[t], F(e, t), j++;
 }
 function ey(e) {
     let { guild: t } = e;
@@ -749,7 +749,7 @@ class ex extends (r = a.ZP.Store) {
         return x;
     }
     getCommunicationDisabledVersion() {
-        return j;
+        return k;
     }
     getPendingRoleUpdates(e) {
         var t;
@@ -762,7 +762,7 @@ class ex extends (r = a.ZP.Store) {
         return null == a ? i : o().difference(o().union(i, a.added), a.removed);
     }
     getMemberVersion() {
-        return k;
+        return j;
     }
 }
 S(ex, "displayName", "GuildMemberStore");

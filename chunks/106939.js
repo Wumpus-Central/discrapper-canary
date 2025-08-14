@@ -37,11 +37,11 @@ var i = n(255367),
     w = n(521450),
     k = n(292352),
     L = n(981631),
-    M = n(723359),
-    B = n(921944),
-    U = n(916723),
+    B = n(723359),
+    M = n(921944),
+    U = n(345909),
     V = n(388032),
-    G = n(637646);
+    G = n(166387);
 let F = {
         [k.dG.REQUESTS]: () => (0, i.jsx)(Z.Z, {}),
         [k.dG.ACTIVITY]: () => (0, i.jsx)(D.Z, {}),
@@ -163,7 +163,7 @@ function Y() {
             I.ZP.initialPageLoad(),
             n ||
                 (0, _.Q3)(d.z.FAMILY_CENTER_NEW_BADGE, {
-                    dismissAction: B.L.AUTO,
+                    dismissAction: M.L.AUTO,
                     forceTrack: !0,
                 });
     });
@@ -191,7 +191,7 @@ function Y() {
         }
     }, [s, j]),
     r.useEffect(() => {
-        O && (0, g.mN)(M.L0.FAMILY_CENTER);
+        O && (0, g.mN)(B.L0.FAMILY_CENTER);
     }, [O]),
     O)
         ? null
@@ -234,7 +234,7 @@ function K() {
             !N.Z.isLoading() && N.Z.canRefetch() && I.ZP.initialPageLoad(),
             s ||
                 (0, _.Q3)(d.z.FAMILY_CENTER_NEW_BADGE, {
-                    dismissAction: B.L.AUTO,
+                    dismissAction: M.L.AUTO,
                     forceTrack: !0,
                 });
     });
@@ -267,7 +267,7 @@ function K() {
             l && t && void 0 === e && v.Ex.updateSetting(!0);
         }, [l, t]),
         r.useEffect(() => {
-            K && (0, g.mN)(M.L0.FAMILY_CENTER);
+            K && (0, g.mN)(B.L0.FAMILY_CENTER);
         }, [K]),
         K)
     )

@@ -19,7 +19,7 @@ var r = n(255367),
     y = n(228168),
     O = n(981631),
     v = n(474936),
-    I = n(304985);
+    I = n(66856);
 function T(e, t, n) {
     return (
         t in e
@@ -89,9 +89,9 @@ function R(e) {
         { analyticsLocations: L } = (0, d.ZP)(u.Z.AVATAR),
         { trackUserProfileAction: x } = (0, m.KZ)(),
         M = p.ZP.isPremiumAtLeast(null == n ? void 0 : n.premiumType, v.p9.TIER_2),
-        j = i.useMemo(() => t.isNonUserBot() || (0, f.W)(t, h), [t, h]),
-        { live: k } = (0, g.Z)(t.id),
-        [U] = k,
+        k = i.useMemo(() => t.isNonUserBot() || (0, f.W)(t, h), [t, h]),
+        { live: j } = (0, g.Z)(t.id),
+        [U] = j,
         { status: G, isMobileOnline: B } = (0, s.cj)([_.Z], () => ({
             status: (0, c.Z)(U) ? O.Skl.STREAMING : _.Z.getStatus(t.id),
             isMobileOnline: _.Z.isMobileOnline(t.id),
@@ -115,8 +115,8 @@ function R(e) {
             size: F,
             "aria-label": t.username,
             imageClassName: null != R ? I.overlay : void 0,
-            status: j ? O.Skl.UNKNOWN : Z,
-            statusBackdropColor: M && !j ? (0, l.QFD)(D) : void 0,
+            status: k ? O.Skl.UNKNOWN : Z,
+            statusBackdropColor: M && !k ? (0, l.QFD)(D) : void 0,
             isMobile: B,
             statusTooltip: !0,
             statusTooltipDelay: y.vB,

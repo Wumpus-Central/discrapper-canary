@@ -1,34 +1,34 @@
 n.d(t, {
-    Vk: () => h,
+    Vk: () => p,
     g3: () => b,
-    jF: () => p,
-    jk: () => f,
+    jF: () => f,
+    jk: () => h,
     wt: () => g,
 });
 var r = n(990547),
     i = n(544891),
     l = n(283693),
     o = n(570140),
-    s = n(695346),
-    a = n(573261),
+    a = n(695346),
+    s = n(573261),
     c = n(140155),
     u = n(178480),
     d = n(981631);
-function h(e) {
+function p(e) {
     o.Z.dispatch({
         type: "NOTIFICATION_CENTER_SET_ACTIVE",
         active: e,
     });
 }
-function p() {
+function f() {
     o.Z.dispatch({ type: "RESET_NOTIFICATION_CENTER" });
 }
-async function f(e, t) {
+async function h(e, t) {
     if (c.Z.loading) return;
     await o.Z.dispatch({ type: "LOAD_NOTIFICATION_CENTER_ITEMS" });
     let n = Math.ceil(c.Z.items.length / e.limit);
     try {
-        let i = await a.Z.get({
+        let i = await s.Z.get({
             url: d.ANM.NOTIF_CENTER_ITEMS(),
             trackedActionData: {
                 event: r.NetworkActionNames.NOTIFICATION_CENTER_PAGE_FETCH,
@@ -116,13 +116,13 @@ async function m(e) {
     }
 }
 async function b(e) {
-    let t = s.d$.getSetting();
+    let t = a.d$.getSetting();
     try {
         o.Z.dispatch({
             type: "NOTIFICATION_CENTER_ITEM_DELETE",
             id: e.id,
         }),
-            await a.Z.delete({
+            await s.Z.delete({
                 url: d.ANM.NOTIF_CENTER_ITEMS(e.id),
                 body: { item_type: (0, u.RB)(e) ? "mention" : "regular" },
                 trackedActionData: {

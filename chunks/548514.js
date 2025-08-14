@@ -27,7 +27,7 @@ var r = n(255367),
     E = n(98449),
     N = n(981631),
     T = n(388032),
-    A = n(843736);
+    A = n(219923);
 let L = "start_application_install",
     R = "launch_activity";
 function Z(e) {
@@ -185,37 +185,41 @@ function D(e) {
 let k = a.forwardRef(function (e, t) {
     let { application: n, size: i } = e,
         s = h.J.useExperiment({ location: "UserSettingsAuthedApps" }, { autoTrackExposure: !0 }).enabled,
-        _ = (e) =>
-            "".concat(location.protocol, "//").concat(location.host).concat(N.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE(e)),
-        { analyticsLocations: y } = (0, m.ZP)(),
-        O = a.useCallback(() => {
+        { analyticsLocations: _ } = (0, m.ZP)(),
+        y = a.useCallback(() => {
+            let e;
             (0, S.zZ)(N.rMx.APP_DIRECTORY_APPLICATION_LINK_COPIED, { application_id: n.id }),
-                (0, I.JG)(_(n.id), () =>
-                    (0, c.showToast)((0, c.createToast)(T.intl.string(T.t["L/PwZW"]), c.ToastType.SUCCESS)),
+                (0, I.JG)(
+                    ((e = n.id),
+                    ""
+                        .concat(location.protocol, "//")
+                        .concat(location.host)
+                        .concat(N.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE(e))),
+                    () => (0, c.showToast)((0, c.createToast)(T.intl.string(T.t["L/PwZW"]), c.ToastType.SUCCESS)),
                 );
         }, [n.id]),
-        P = (0, o.e7)([C.default], () => C.default.locale),
-        L = a.useCallback(() => {
+        O = (0, o.e7)([C.default], () => C.default.locale),
+        P = a.useCallback(() => {
             (0, d.Z)(
                 (0, E.G)({
                     id: n.id,
                     name: n.name,
-                    locale: P,
+                    locale: O,
                 }),
             );
-        }, [P, n]),
-        k = (0, b.Z)({
+        }, [O, n]),
+        L = (0, b.Z)({
             id: n.id,
             label: T.intl.string(T.t["FfCL+/"]),
             onSuccess: () => (0, c.showToast)((0, c.createToast)(T.intl.string(T.t.eNjAam), c.ToastType.SUCCESS)),
         }),
-        M = (0, x.Z)({
+        k = (0, x.Z)({
             application: n,
             onItemClick: () => {
                 (0, S.zZ)(N.rMx.APP_DIRECTORY_APPLICATION_LINK_COPIED, { application_id: n.id });
             },
         }),
-        G = a.useCallback(
+        M = a.useCallback(
             (e, t) =>
                 (0, r.jsxs)(c.v2r, {
                     navId: "application-directory-profile",
@@ -223,13 +227,13 @@ let k = a.forwardRef(function (e, t) {
                     onClose: t,
                     onSelect: void 0,
                     children: [
-                        s && (0, r.jsx)(c.kSQ, { children: M }),
+                        s && (0, r.jsx)(c.kSQ, { children: k }),
                         e
                             ? (0, r.jsx)(c.kSQ, {
                                   children: (0, r.jsx)(c.sNh, {
                                       id: "copy",
                                       label: T.intl.string(T.t.z4sP5O),
-                                      action: O,
+                                      action: y,
                                       icon: c.xPt,
                                   }),
                               })
@@ -239,15 +243,15 @@ let k = a.forwardRef(function (e, t) {
                                 id: "report",
                                 label: T.intl.string(T.t.NgA5vr),
                                 color: "danger",
-                                action: L,
+                                action: P,
                             }),
                         }),
-                        null != k ? (0, r.jsx)(c.kSQ, { children: k }) : null,
+                        null != L ? (0, r.jsx)(c.kSQ, { children: L }) : null,
                     ],
                 }),
-            [k, L, O, s, M],
+            [L, P, y, s, k],
         ),
-        { onClickLaunchActivity: B, isSubmitting: U } = (function (e, t) {
+        { onClickLaunchActivity: G, isSubmitting: B } = (function (e, t) {
             var n;
             let r = e.id,
                 i = null == e || null == (n = e.bot) ? void 0 : n.id,
@@ -295,9 +299,9 @@ let k = a.forwardRef(function (e, t) {
                 onClickLaunchActivity: l ? b : void 0,
                 isSubmitting: s,
             };
-        })(n, y),
-        z = null != B,
-        F = z ? "secondary" : "primary";
+        })(n, _),
+        z = null != G,
+        U = z ? "secondary" : "primary";
     return (0, r.jsxs)("div", {
         ref: t,
         children: [
@@ -308,26 +312,26 @@ let k = a.forwardRef(function (e, t) {
                         (0, r.jsx)(D, {
                             size: i,
                             contentWidth: "normal",
-                            onClick: B,
-                            isSubmitting: U,
+                            onClick: G,
+                            isSubmitting: B,
                         }),
                     (0, r.jsx)(w, {
                         application: n,
                         size: i,
                         contentWidth: "normal",
-                        variant: F,
+                        variant: U,
                     }),
                     I.wS
                         ? (0, r.jsx)(c.hU, {
                               variant: "secondary",
                               size: i,
                               icon: c.xPt,
-                              onClick: O,
+                              onClick: y,
                               "aria-label": T.intl.string(T.t.z4sP5O),
                           })
                         : null,
                     (0, r.jsx)(Z, {
-                        renderDropdown: (e) => G(!1, e),
+                        renderDropdown: (e) => M(!1, e),
                         size: i,
                     }),
                 ],
@@ -339,17 +343,17 @@ let k = a.forwardRef(function (e, t) {
                         (0, r.jsx)(D, {
                             size: i,
                             contentWidth: "small",
-                            onClick: B,
-                            isSubmitting: U,
+                            onClick: G,
+                            isSubmitting: B,
                         }),
                     (0, r.jsx)(w, {
                         application: n,
                         size: i,
                         contentWidth: "small",
-                        variant: F,
+                        variant: U,
                     }),
                     (0, r.jsx)(Z, {
-                        renderDropdown: (e) => G(I.wS, e),
+                        renderDropdown: (e) => M(I.wS, e),
                         size: i,
                     }),
                 ],
@@ -361,17 +365,17 @@ let k = a.forwardRef(function (e, t) {
                         (0, r.jsx)(D, {
                             size: i,
                             contentWidth: "icon",
-                            onClick: B,
-                            isSubmitting: U,
+                            onClick: G,
+                            isSubmitting: B,
                         }),
                     (0, r.jsx)(w, {
                         application: n,
                         size: i,
                         contentWidth: "icon",
-                        variant: F,
+                        variant: U,
                     }),
                     (0, r.jsx)(Z, {
-                        renderDropdown: (e) => G(I.wS, e),
+                        renderDropdown: (e) => M(I.wS, e),
                         size: i,
                     }),
                 ],

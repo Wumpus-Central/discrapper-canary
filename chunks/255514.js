@@ -39,8 +39,8 @@ var r = n(255367),
     L = n(375790),
     G = n(981631),
     W = n(388032),
-    F = n(130883),
-    z = n(944135);
+    F = n(764295),
+    z = n(520310);
 function V(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -165,33 +165,12 @@ let Q = (e) => {
                                 })(V({}, e), { [t]: n }),
                             );
             }
-        }, [er]);
-    let eI = (e) => {
-            e === G.evJ.INVALID_FORM_BODY
-                ? e_(W.intl.string(W.t.VjAAuL))
-                : ec
-                  ? e_(W.intl.string(F.default.psKFdH))
-                  : e_(W.intl.string(W.t.h6D8V1));
-        },
-        eS = () => {
-            let t = ["", e.successNodeId];
-            $(ej(t))
-                .then(() => {
-                    e_(""), eZ(t);
-                })
-                .catch((e) => {
-                    var t;
-                    eI(null == (t = e.body) ? void 0 : t.code);
-                })
-                .finally(() => {
-                    eu(!1);
-                });
-        };
-    i.useEffect(() => {
-        t.is_auto_submit && !em && (ep(!0), $(ej(["", t.id])));
-    }, [t.is_auto_submit, em, $, ej, t.id]);
-    let eC = (0, o.fW)(Q),
-        eN = null != q(t, "ignore_users") && ("message" === n.name || "first_dm" === n.name || "user" === n.name);
+        }, [er]),
+        i.useEffect(() => {
+            t.is_auto_submit && !em && (ep(!0), $(ej(["", t.id])));
+        }, [t.is_auto_submit, em, $, ej, t.id]);
+    let eI = (0, o.fW)(Q),
+        eS = null != q(t, "ignore_users") && ("message" === n.name || "first_dm" === n.name || "user" === n.name);
     return (0, r.jsxs)("div", {
         className: z.container,
         children: [
@@ -234,7 +213,7 @@ let Q = (e) => {
                     })(t) &&
                         (0, r.jsxs)(k.Z, {
                             children: [
-                                eN &&
+                                eS &&
                                     (0, r.jsx)(S.Z, {
                                         user: "user" === n.name ? n.record : n.record.author,
                                         channelId: ev,
@@ -257,7 +236,7 @@ let Q = (e) => {
                                         reportId: et,
                                         reportType: n,
                                     }),
-                                !eN &&
+                                !eS &&
                                     null != q(t, "mute_users") &&
                                     ("message" === n.name ||
                                         "first_dm" === n.name ||
@@ -296,9 +275,9 @@ let Q = (e) => {
                         }),
                     null != q(t, "settings_upsells") &&
                         ("message" === n.name || "report_to_mod_message" === n.name) &&
-                        null != eC &&
+                        null != eI &&
                         (0, r.jsx)(w.Z, {
-                            settingsUpsells: eC,
+                            settingsUpsells: eI,
                             channelId: n.record.channel_id,
                             onModalClose: Y,
                             reportId: et,
@@ -366,17 +345,33 @@ let Q = (e) => {
                 submitting: ed,
                 disableNext: ey,
                 isModeratorReport: ec,
-                onClick: (e) => {
-                    switch (e.type) {
+                onClick: (t) => {
+                    switch (t.type) {
                         case "done":
                         case "cancel":
                             Y();
                             break;
                         case "next":
-                            eZ(["", e.target]);
+                            eZ(["", t.target]);
                             break;
                         case "submit":
-                            eu(!0), eS();
+                            eu(!0);
+                            let n = ["", e.successNodeId];
+                            $(ej(n))
+                                .then(() => {
+                                    e_(""), eZ(n);
+                                })
+                                .catch((e) => {
+                                    var t;
+                                    (null == (t = e.body) ? void 0 : t.code) === G.evJ.INVALID_FORM_BODY
+                                        ? e_(W.intl.string(W.t.VjAAuL))
+                                        : ec
+                                          ? e_(W.intl.string(F.default.psKFdH))
+                                          : e_(W.intl.string(W.t.h6D8V1));
+                                })
+                                .finally(() => {
+                                    eu(!1);
+                                });
                     }
                 },
                 onBackClicked: e.onNavigateBack,

@@ -49,47 +49,50 @@ class g extends i.PureComponent {
             h(this, "handleInvite", () => {
                 let { guild: e } = this.props;
                 (0, l.ZDy)(async () => {
-                    let { default: t } = await Promise.all([n.e("7654"), n.e("41832")]).then(n.bind(n, 560114));
-                    return (n) => {
-                        var i, l;
-                        return (0, r.jsx)(
+                    let { default: t } = await Promise.all([n.e("7654"), n.e("54833")]).then(n.bind(n, 560114));
+                    return (n) =>
+                        (0, r.jsx)(
                             t,
-                            ((i = (function (e) {
-                                for (var t = 1; t < arguments.length; t++) {
-                                    var n = null != arguments[t] ? arguments[t] : {},
-                                        r = Object.keys(n);
-                                    "function" == typeof Object.getOwnPropertySymbols &&
-                                        (r = r.concat(
-                                            Object.getOwnPropertySymbols(n).filter(function (e) {
-                                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                            }),
-                                        )),
-                                        r.forEach(function (t) {
-                                            h(e, t, n[t]);
-                                        });
-                                }
-                                return e;
-                            })({}, n)),
-                            (l = l =
+                            (function (e, t) {
+                                return (
+                                    (t = null != t ? t : {}),
+                                    Object.getOwnPropertyDescriptors
+                                        ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+                                        : (function (e, t) {
+                                              var n = Object.keys(e);
+                                              if (Object.getOwnPropertySymbols) {
+                                                  var r = Object.getOwnPropertySymbols(e);
+                                                  n.push.apply(n, r);
+                                              }
+                                              return n;
+                                          })(Object(t)).forEach(function (n) {
+                                              Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+                                          }),
+                                    e
+                                );
+                            })(
+                                (function (e) {
+                                    for (var t = 1; t < arguments.length; t++) {
+                                        var n = null != arguments[t] ? arguments[t] : {},
+                                            r = Object.keys(n);
+                                        "function" == typeof Object.getOwnPropertySymbols &&
+                                            (r = r.concat(
+                                                Object.getOwnPropertySymbols(n).filter(function (e) {
+                                                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                                }),
+                                            )),
+                                            r.forEach(function (t) {
+                                                h(e, t, n[t]);
+                                            });
+                                    }
+                                    return e;
+                                })({}, n),
                                 {
                                     guild: e,
                                     source: u.t4x.INVITE_NOTICE,
-                                }),
-                            Object.getOwnPropertyDescriptors
-                                ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(l))
-                                : (function (e, t) {
-                                      var n = Object.keys(e);
-                                      if (Object.getOwnPropertySymbols) {
-                                          var r = Object.getOwnPropertySymbols(e);
-                                          n.push.apply(n, r);
-                                      }
-                                      return n;
-                                  })(Object(l)).forEach(function (e) {
-                                      Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(l, e));
-                                  }),
-                            i),
+                                },
+                            ),
                         );
-                    };
                 });
             }),
             h(this, "handleClose", () => {

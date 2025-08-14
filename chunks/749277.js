@@ -24,7 +24,7 @@ var i = n(442837),
     T = n(801461),
     S = n(474936),
     A = n(388032),
-    N = n(768339);
+    N = n(50953);
 function C(e, t, n) {
     return (
         t in e
@@ -81,7 +81,9 @@ let P = (e) => {
                                 noticeType: C,
                                 onClick: () => {
                                     (0, a.ZDy)(async () => {
-                                        let { default: e } = await n.e("74023").then(n.bind(n, 431583));
+                                        let { default: e } = await Promise.all([n.e("32996"), n.e("74023")]).then(
+                                            n.bind(n, 431583),
+                                        );
                                         return (t) => (0, r.jsx)(e, R({ source: "Top Bar Nag" }, t));
                                     });
                                 },

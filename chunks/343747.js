@@ -59,7 +59,7 @@ function u(e, t) {
 function d(e) {
     o.Z.open(e, a.pNK.SOUNDBOARD),
         (0, i.ZDy)(async () => {
-            let { default: t } = await Promise.all([n.e("56035"), n.e("88756")]).then(n.bind(n, 758961));
+            let { default: t } = await Promise.all([n.e("12830"), n.e("56035"), n.e("62599")]).then(n.bind(n, 758961));
             return (n) => (0, r.jsx)(t, u(l({}, n), { guildId: e }));
         });
 }

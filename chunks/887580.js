@@ -20,7 +20,7 @@ var r = n(255367),
     p = n(667344),
     h = n(453032),
     m = n(493075),
-    g = n(164000);
+    g = n(941189);
 let E = RegExp("^dev://experiment/([-\\w._0-9]+)(?:/([0-9]+))?$", "i");
 function b(e) {
     return E.test(e);
@@ -93,15 +93,15 @@ function T(e) {
             null != w && (L ? (0, f.rX)(S.system, n, null) : (0, f.rX)(S.system, n, w.value));
         },
         M = (0, r.jsx)(I, { url: t }),
-        j = null;
+        k = null;
     return (1 === D && null != w
-        ? (j = (0, r.jsx)(s.Text, {
+        ? (k = (0, r.jsx)(s.Text, {
               variant: "text-xs/normal",
               color: "text-muted",
               children: w.label,
           }))
         : null != C &&
-          (j = (0, r.jsxs)(s.Text, {
+          (k = (0, r.jsxs)(s.Text, {
               variant: "text-xs/normal",
               color: "text-muted",
               children: ["Server Config: ", R],
@@ -127,7 +127,7 @@ function T(e) {
                                               variant: "text-md/semibold",
                                               children: S.title,
                                           }),
-                                          j,
+                                          k,
                                       ],
                                   }),
                                   M,

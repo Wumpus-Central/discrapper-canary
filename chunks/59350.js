@@ -43,9 +43,9 @@ var l = n(255367),
     F = n(176505),
     q = n(490897),
     z = n(388032),
-    X = n(623923),
-    V = n(149771),
-    J = n(692228);
+    X = n(29858),
+    V = n(97009),
+    J = n(430864);
 function Q(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -306,15 +306,7 @@ function et(e) {
                     t,
                 ),
         }),
-        { handleSelectOption: b } = (0, R.Z)(i.id),
-        j = (e, t) => {
-            if (!t && 1 === x.length && n.required) return void d({ type: K });
-            b(n, e, null != t && t),
-                n.singleSelect && t && n.options.forEach((e) => u.delete(e.id)),
-                t ? u.add(e.id) : u.delete(e.id),
-                m(new Set(u)),
-                d(null);
-        };
+        { handleSelectOption: b } = (0, R.Z)(i.id);
     return (0, l.jsxs)("div", {
         className: X.prompt,
         "data-new": n.isNew,
@@ -348,7 +340,15 @@ function et(e) {
                             hideMemberCount: !0,
                             guildId: i.id,
                             option: e,
-                            onSelect: (t) => j(e, t),
+                            onSelect: (t) =>
+                                ((e, t) => {
+                                    if (!t && 1 === x.length && n.required) return void d({ type: K });
+                                    b(n, e, null != t && t),
+                                        n.singleSelect && t && n.options.forEach((e) => u.delete(e.id)),
+                                        t ? u.add(e.id) : u.delete(e.id),
+                                        m(new Set(u)),
+                                        d(null);
+                                })(e, t),
                             selected: x.includes(e.id),
                             canBeNew: !n.isNew,
                         },

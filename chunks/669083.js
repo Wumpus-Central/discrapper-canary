@@ -1,4 +1,4 @@
-n.d(t, { Z: () => I }), n(388685);
+n.d(t, { Z: () => C }), n(388685);
 var i = n(255367),
     r = n(73800),
     o = n(442837),
@@ -16,8 +16,8 @@ var i = n(255367),
     y = n(624864),
     O = n(981631),
     v = n(388032),
-    _ = n(500411),
-    b = n(881488);
+    _ = n(476828),
+    b = n(197571);
 function E(e, t, n) {
     return (
         t in e
@@ -31,41 +31,7 @@ function E(e, t, n) {
         e
     );
 }
-let S = () => [
-        {
-            value: O.ipw.LARGE,
-            name: v.intl.string(v.t.YcOxtr),
-        },
-        {
-            value: O.ipw.SMALL,
-            name: v.intl.string(v.t.BKIKq6),
-        },
-    ],
-    x = () => [
-        {
-            value: O.wC$.ALWAYS,
-            name: v.intl.string(v.t.nBmDra),
-        },
-        {
-            value: O.wC$.ONLY_WHILE_SPEAKING,
-            name: v.intl.string(v.t["2OvIZW"]),
-        },
-        {
-            value: O.wC$.NEVER,
-            name: v.intl.string(v.t.ekjlPD),
-        },
-    ],
-    C = () => [
-        {
-            value: O.OYC.ALWAYS,
-            name: v.intl.string(v.t.nBmDra),
-        },
-        {
-            value: O.OYC.ONLY_WHILE_SPEAKING,
-            name: v.intl.string(v.t["2OvIZW"]),
-        },
-    ];
-function j() {
+function S() {
     let e = h.default.getNotificationPositionMode(),
         t = e !== O._vf.DISABLED,
         n = u.ZP.getOverlayKeybind(),
@@ -82,7 +48,7 @@ function j() {
         text_activation_hotkey: null != i ? (0, f.BB)(i.shortcut) : null,
     });
 }
-class Z extends r.PureComponent {
+class x extends r.PureComponent {
     componentDidMount() {
         s.Z.track(O.rMx.SETTINGS_PANE_VIEWED, {
             settings_type: "overlay",
@@ -91,7 +57,7 @@ class Z extends r.PureComponent {
         });
     }
     handleChangeNotificationPositionMode(e, t) {
-        s.Z.setNotificationPositionMode(t), j();
+        s.Z.setNotificationPositionMode(t), S();
     }
     handleChangeAvatarSizeMode(e) {
         let { value: t } = e;
@@ -232,7 +198,16 @@ class Z extends r.PureComponent {
                     className: b.marginBottom20,
                     children: (0, i.jsx)(l.FXm, {
                         onChange: this.handleChangeAvatarSizeMode,
-                        options: S(),
+                        options: [
+                            {
+                                value: O.ipw.LARGE,
+                                name: v.intl.string(v.t.YcOxtr),
+                            },
+                            {
+                                value: O.ipw.SMALL,
+                                name: v.intl.string(v.t.BKIKq6),
+                            },
+                        ],
                         value: e,
                         size: l.FXm.Sizes.SMALL,
                     }),
@@ -242,7 +217,20 @@ class Z extends r.PureComponent {
                     className: b.marginBottom20,
                     children: (0, i.jsx)(l.FXm, {
                         onChange: this.handleChangeDisplayNameMode,
-                        options: x(),
+                        options: [
+                            {
+                                value: O.wC$.ALWAYS,
+                                name: v.intl.string(v.t.nBmDra),
+                            },
+                            {
+                                value: O.wC$.ONLY_WHILE_SPEAKING,
+                                name: v.intl.string(v.t["2OvIZW"]),
+                            },
+                            {
+                                value: O.wC$.NEVER,
+                                name: v.intl.string(v.t.ekjlPD),
+                            },
+                        ],
                         value: t,
                         size: l.FXm.Sizes.SMALL,
                     }),
@@ -252,7 +240,16 @@ class Z extends r.PureComponent {
                     className: b.marginBottom20,
                     children: (0, i.jsx)(l.FXm, {
                         onChange: this.handleChangeDisplayUserMode,
-                        options: C(),
+                        options: [
+                            {
+                                value: O.OYC.ALWAYS,
+                                name: v.intl.string(v.t.nBmDra),
+                            },
+                            {
+                                value: O.OYC.ONLY_WHILE_SPEAKING,
+                                name: v.intl.string(v.t["2OvIZW"]),
+                            },
+                        ],
                         value: n,
                         size: l.FXm.Sizes.SMALL,
                     }),
@@ -315,7 +312,7 @@ class Z extends r.PureComponent {
                     g.OverlayNotificationDisabledSetting.TEXT_CHAT,
                     !this.props.textChatDisabled,
                 ),
-                    j();
+                    S();
             }),
             E(this, "handleToggleInviteNotification", () => {
                 let e = this.props.shouldShowInviteNotification;
@@ -323,7 +320,7 @@ class Z extends r.PureComponent {
             });
     }
 }
-function I(e) {
+function C(e) {
     let { onClose: t } = e,
         {
             avatarSizeMode: n,
@@ -345,7 +342,7 @@ function I(e) {
             ),
         })),
         u = (0, m.Z)({ location: "Overlay Settings" });
-    return (0, i.jsx)(Z, {
+    return (0, i.jsx)(x, {
         onClose: t,
         avatarSizeMode: n,
         displayNameMode: r,

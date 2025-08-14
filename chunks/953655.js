@@ -8,7 +8,7 @@ var l = r(120356),
     s = r(381585),
     c = r(788822),
     u = r(388032),
-    d = r(253032);
+    d = r(310582);
 let p = ["1366494385738354769", "1385035256125591633"],
     g = (e) => {
         let { handleTransition: t, featuredBlockRecord: r } = e;

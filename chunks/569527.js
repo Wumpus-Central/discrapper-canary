@@ -25,7 +25,7 @@ var r = n(255367),
     S = n(188607),
     P = n(979007),
     E = n(981631),
-    N = n(574003);
+    N = n(36523);
 function T(e) {
     var t;
     let { onSelectApplication: n, onScroll: T } = e,
@@ -84,7 +84,7 @@ function T(e) {
                 onSuccessCallback: B,
             });
     }, [k, D, w, B]);
-    let { fetchState: U, searchResults: z } = (0, o.cj)([b.Z], () => ({
+    let { fetchState: z, searchResults: U } = (0, o.cj)([b.Z], () => ({
             fetchState: b.Z.getFetchState({
                 query: w,
                 categoryId: k,
@@ -133,8 +133,8 @@ function T(e) {
                   })({ [x.MU]: e.totalCount }, e.countsByCategory)
                 : {};
         }),
-        V = (0, d.Z)(z),
-        H = a.useMemo(() => (U === f.M.FETCHING ? V : z), [U, V, z]),
+        V = (0, d.Z)(U),
+        H = a.useMemo(() => (z === f.M.FETCHING ? V : U), [z, V, U]),
         Y = a.useCallback(
             (e) => {
                 (0, I.pR)({
@@ -196,9 +196,9 @@ function T(e) {
                                         }),
                                     }),
                                     (0, r.jsx)(C.Z, {
-                                        loading: U === f.M.FETCHING,
+                                        loading: z === f.M.FETCHING,
                                         children:
-                                            U === f.M.FETCHED &&
+                                            z === f.M.FETCHED &&
                                             (null == H || (null == H ? void 0 : H.results.length) === 0)
                                                 ? (0, r.jsx)(S.Z, {
                                                       selectedCategoryId: null != k ? k : K.id,

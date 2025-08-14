@@ -42,7 +42,7 @@ var r,
     k = n(765305),
     M = n(981631),
     U = n(388032),
-    G = n(848191);
+    G = n(507795);
 let V = l.memo(function (e) {
     let {
         heading: t,

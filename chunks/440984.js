@@ -2,8 +2,8 @@ n.d(t, { D: () => g }), n(388685);
 var i = n(255367),
     r = n(73800),
     a = n(442837),
-    s = n(780384),
-    o = n(481060),
+    o = n(780384),
+    s = n(481060),
     l = n(410030),
     c = n(607070),
     u = n(530618),
@@ -13,7 +13,7 @@ var i = n(255367),
     _ = n(798769),
     f = n(474936),
     b = n(388032),
-    x = n(998029),
+    x = n(957759),
     y = n(982404),
     h = n(299156);
 function g(e) {
@@ -26,9 +26,9 @@ function g(e) {
             userDiscountOffer: E,
         } = e,
         O = (0, l.ZP)(),
-        P = (0, s.wj)(O) ? y : h,
-        v = r.useRef(null),
-        [N, I] = r.useState(!1),
+        P = (0, o.wj)(O) ? y : h,
+        N = r.useRef(null),
+        [v, I] = r.useState(!1),
         T = (0, p._)(t, f.Xh.PREMIUM_MONTH_TIER_2, E),
         S = (0, d.aS)(f.Xh.PREMIUM_MONTH_TIER_2, !1, !1, {
             currency: t.currency,
@@ -38,8 +38,8 @@ function g(e) {
         w = (0, a.e7)([c.Z], () => c.Z.useReducedMotion);
     if (
         (r.useEffect(() => {
-            null != v.current && null != T && I(!0);
-        }, [v, N, T]),
+            null != N.current && null != T && I(!0);
+        }, [N, v, T]),
         null == E || null == T)
     )
         return null;
@@ -50,7 +50,7 @@ function g(e) {
         }),
         k = (0, i.jsx)("div", {
             className: x.whatYouLoseButtonContainer,
-            children: (0, i.jsx)(o.zxk, {
+            children: (0, i.jsx)(s.zxk, {
                 variant: "primary",
                 text: b.intl.string(b.t["/r8g/v"]),
                 onClick: g,
@@ -64,8 +64,8 @@ function g(e) {
                 onClose: g,
             }),
             (0, i.jsx)("div", {
-                ref: v,
-                children: (0, i.jsx)(o.hzk, {
+                ref: N,
+                children: (0, i.jsx)(s.hzk, {
                     "data-migration-pending": !0,
                     className: x.body,
                     children:
@@ -80,7 +80,7 @@ function g(e) {
                                                   src: P,
                                                   className: x.nitroIcon,
                                               }),
-                                              (0, i.jsx)(o.X6q, {
+                                              (0, i.jsx)(s.X6q, {
                                                   variant: "heading-xl/bold",
                                                   children: j ? b.intl.string(b.t.gOOPaG) : b.intl.string(b.t.PZSyRk),
                                               }),
@@ -93,13 +93,13 @@ function g(e) {
                                       k,
                                   ],
                               })
-                            : (0, i.jsx)(o.$jN, {}),
+                            : (0, i.jsx)(s.$jN, {}),
                 }),
             }),
             !w &&
-                N &&
+                v &&
                 (0, i.jsx)(u.Z, {
-                    confettiTarget: v.current,
+                    confettiTarget: N.current,
                     confettiCanvas: C,
                     confettiVelocityMultiplier: 0.75,
                 }),

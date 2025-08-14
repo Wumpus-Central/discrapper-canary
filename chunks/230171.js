@@ -37,7 +37,7 @@ var r = n(255367),
     P = n(880251),
     w = n(515344),
     D = n(388032),
-    L = n(919732);
+    L = n(217648);
 function x(e) {
     let { app: t, embedUrl: n, linkType: o, activityCustomId: a, activityReferrerId: l, onView: m } = e,
         { name: g, bot: E } = (t = (0, R.O)(t)),
@@ -50,7 +50,7 @@ function x(e) {
         }),
         { staticBannerSrc: T, videoBannerSrc: N, bannerAspectRatio: L } = (0, P.E)(t),
         x = (0, s.e7)([b.default], () => (null != l ? l : b.default.getId()), [l]),
-        { analyticsLocations: k } = (0, f.ZP)(d.Z.APP_MESSAGE_EMBED),
+        { analyticsLocations: j } = (0, f.ZP)(d.Z.APP_MESSAGE_EMBED),
         { currentChannelId: U, instanceId: G, isCurrentlyInInstance: B, canLaunchInChannel: Z } = (0, S.c)(t.id),
         F = (0, u.Z)(),
         V = (0, h.ms)({
@@ -78,7 +78,7 @@ function x(e) {
                                       embeddedActivitiesManager: F,
                                       customId: a,
                                       referrerId: x,
-                                      analyticsLocations: k,
+                                      analyticsLocations: j,
                                   });
                               },
                               disabledReason: B ? D.intl.string(D.t.wJNK8P) : void 0,
@@ -92,7 +92,7 @@ function x(e) {
                                   (0, _.W)({
                                       appId: t.id,
                                       botId: y,
-                                      analyticsLocations: k,
+                                      analyticsLocations: j,
                                       customId: a,
                                       referrerId: x,
                                   });
@@ -101,8 +101,8 @@ function x(e) {
                     : null != K && e.push(K),
                 e
             );
-        }, [Y, H, G, B, U, t.id, F, a, x, k, O, K, y]),
-        q = O ? (0, r.jsx)(j, { app: t }) : (0, r.jsx)(M, { app: t });
+        }, [Y, H, G, B, U, t.id, F, a, x, j, O, K, y]),
+        q = O ? (0, r.jsx)(k, { app: t }) : (0, r.jsx)(M, { app: t });
     return (0, r.jsx)(A.W, {
         title: g,
         staticBannerSrc: T,
@@ -172,7 +172,7 @@ function M(e) {
         ],
     });
 }
-function j(e) {
+function k(e) {
     let { app: t } = e,
         { tags: n, maxParticipants: o = 0 } = t,
         c = (0, s.e7)([O.Z], () => {

@@ -20,7 +20,7 @@ var r = n(255367),
     v = n(258356),
     j = n(981631),
     I = n(388032),
-    O = n(522976);
+    O = n(271922);
 function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -160,36 +160,25 @@ function T(e) {
 }
 function Z(e) {
     let { invite: t } = e;
-    if (null == t || !(0, b.JI)(t)) return null;
-    let n = (e) => (null == t ? null : 1 === e ? (0, r.jsx)(v.X, { invite: t }) : null);
-    return (0, r.jsx)(
-        T,
-        N(
-            S(
-                {
-                    startAnimHeightPx: 0,
-                    innerStyle: () => O.guildInfoInner,
-                },
-                e,
-            ),
-            { children: (e) => n(e) },
-        ),
-    );
+    return null != t && (0, b.JI)(t)
+        ? (0, r.jsx)(
+              T,
+              N(
+                  S(
+                      {
+                          startAnimHeightPx: 0,
+                          innerStyle: () => O.guildInfoInner,
+                      },
+                      e,
+                  ),
+                  { children: (e) => (null == t ? null : 1 === e ? (0, r.jsx)(v.X, { invite: t }) : null) },
+              ),
+          )
+        : null;
 }
 function P(e) {
     let { invite: t } = e,
-        n = (n) => {
-            if (null == t) return (0, r.jsx)(y, {});
-            switch (n) {
-                case 1:
-                    return (0, r.jsx)(E.Z, N(S({}, e), { invite: t }));
-                case 2:
-                    return (0, r.jsx)(A, N(S({}, e), { invite: t }));
-                default:
-                    return (0, r.jsx)(y, {});
-            }
-        },
-        i = {
+        n = {
             1: O.inviteCardInner,
             2: O.inviteCardInnerError,
             0: O.inviteCardInnerLoading,
@@ -200,11 +189,24 @@ function P(e) {
             S(
                 {
                     startAnimHeightPx: 200,
-                    innerStyle: (e) => i[e],
+                    innerStyle: (e) => n[e],
                 },
                 e,
             ),
-            { children: (e) => n(e) },
+            {
+                children: (n) =>
+                    ((n) => {
+                        if (null == t) return (0, r.jsx)(y, {});
+                        switch (n) {
+                            case 1:
+                                return (0, r.jsx)(E.Z, N(S({}, e), { invite: t }));
+                            case 2:
+                                return (0, r.jsx)(A, N(S({}, e), { invite: t }));
+                            default:
+                                return (0, r.jsx)(y, {});
+                        }
+                    })(n),
+            },
         ),
     );
 }

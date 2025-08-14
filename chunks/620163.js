@@ -35,8 +35,8 @@ var r = n(990547),
     w = n(351780),
     k = n(231765),
     L = n(813732),
-    M = n(398140),
-    B = n(564344),
+    B = n(398140),
+    M = n(564344),
     U = n(977156),
     V = n(14676),
     G = n(652380),
@@ -89,8 +89,8 @@ var r = n(990547),
     ew = n(936982),
     ek = n(200645),
     eL = n(287490),
-    eM = n(706060),
-    eB = n(168308),
+    eB = n(706060),
+    eM = n(168308),
     eU = n(277329),
     eV = n(273927),
     eG = n(604224),
@@ -103,11 +103,11 @@ var r = n(990547),
     eq = n(46140),
     eX = n(65154),
     eJ = n(388032),
-    eQ = n(603571),
-    e$ = n(698282),
-    e0 = n(916723),
-    e3 = n(713141);
-let e1 = () => {
+    eQ = n(511479),
+    e$ = n(693450),
+    e0 = n(345909),
+    e1 = n(202323);
+let e3 = () => {
         let e = [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BADGE];
         return (
             E.Mc.getCurrentConfig({ location: "getAppearanceDCs" }).enabled &&
@@ -115,8 +115,8 @@ let e1 = () => {
             e
         );
     },
-    e8 = () => {
-        let e = e1(),
+    e6 = () => {
+        let e = e3(),
             [t] = (0, N.US)(e);
         return t === s.z.CLIENT_THEMES_SETTINGS_BADGE || t === s.z.DEKSTOP_CUSTOM_APP_ICON_BADGE
             ? (0, i.jsx)(l.lBU, { text: eJ.intl.string(eJ.t.y2b7CA) })
@@ -124,7 +124,7 @@ let e1 = () => {
               ? (0, i.jsx)(l.IGR, { text: eJ.intl.string(eJ.t.y2b7CA) })
               : null;
     },
-    e6 = () => {
+    e8 = () => {
         let e = [];
         return (
             F.c.getCurrentConfig({ location: "SettingsRendererConfig" }).enabled &&
@@ -136,7 +136,7 @@ let e1 = () => {
         );
     },
     e2 = () => {
-        let e = e6(),
+        let e = e8(),
             [t] = (0, N.US)(e);
         return t === s.z.NAMEPLATE_USER_SETTINGS_MENU_NEW_BADGE
             ? (0, i.jsx)(Z.Z, {})
@@ -326,12 +326,12 @@ let e1 = () => {
                 searchableTitles: [eJ.intl.string(eJ.t["vi7f+v"])],
                 label: eJ.intl.string(eJ.t["vi7f+v"]),
                 ariaLabel: eJ.intl.string(eJ.t["vi7f+v"]),
-                element: B.Z,
+                element: M.Z,
                 newIndicator: (0, i.jsx)(e2, {}),
-                newIndicatorDismissibleContentTypes: [...e6()],
+                newIndicatorDismissibleContentTypes: [...e8()],
                 notice: {
                     stores: [q.Z, R.Z],
-                    element: M.Z,
+                    element: B.Z,
                 },
                 onSettingsClose: () => {
                     o.Z.wait(() => {
@@ -680,7 +680,7 @@ let e1 = () => {
                 searchableTitles: [eJ.intl.string(eJ.t.Ipxkoq)],
                 label: eJ.intl.string(eJ.t.Ipxkoq),
                 element: ea.Z,
-                className: e3.premiumTab,
+                className: e1.premiumTab,
             },
             [eW.s6.GUILD_BOOSTING]: {
                 section: eK.oAB.GUILD_BOOSTING,
@@ -761,8 +761,8 @@ let e1 = () => {
                 label: eJ.intl.string(eJ.t["iHH+k5"]),
                 ariaLabel: eJ.intl.string(eJ.t["iHH+k5"]),
                 element: ep.Z,
-                newIndicator: (0, i.jsx)(e8, {}),
-                newIndicatorDismissibleContentTypes: e1(),
+                newIndicator: (0, i.jsx)(e6, {}),
+                newIndicatorDismissibleContentTypes: e3(),
                 url: eK.Z5c.SETTINGS("appearance"),
             },
             [eW.s6.APPEARANCE_THEME]: {
@@ -1272,7 +1272,7 @@ let e1 = () => {
                 icon: (0, i.jsx)("img", {
                     alt: "",
                     src: n(186542),
-                    className: e3.clickerGameIcon,
+                    className: e1.clickerGameIcon,
                 }),
             },
             [eW.s6.POGGERMODE]: {
@@ -1285,7 +1285,7 @@ let e1 = () => {
                 icon: (0, i.jsx)("img", {
                     alt: "",
                     src: n(348621),
-                    className: e3.poggermodeIcon,
+                    className: e1.poggermodeIcon,
                 }),
             },
             [eW.s6.CHAT]: {
@@ -1687,7 +1687,7 @@ let e1 = () => {
                 searchableTitles: [eJ.intl.string(eJ.t.AVDyEh)],
                 label: eJ.intl.string(eJ.t.AVDyEh),
                 element: eC.Z,
-                predicate: () => !e7 && (0, eB.Jw)(),
+                predicate: () => !e7 && (0, eM.Jw)(),
             },
             [eW.s6.OVERLAY]: {
                 section: eK.oAB.OVERLAY,
@@ -2092,7 +2092,7 @@ let e1 = () => {
                 section: eK.oAB.WEB_SETTING_TREE_TOOL,
                 searchableTitles: ["Web Setting Tree Tool"],
                 label: "Web Setting Tree Tool",
-                element: eM.Z,
+                element: eB.Z,
                 predicate: () => W.Z.isDeveloper,
             },
             [eW.s6.LOGOUT]: {

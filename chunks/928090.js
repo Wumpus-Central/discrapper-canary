@@ -1,119 +1,119 @@
-r.d(t, { default: () => g }), r(388685);
-var n = r(255367),
-    i = r(73800),
-    s = r(990547),
-    a = r(755721),
-    o = r(481060),
-    c = r(37234),
-    l = r(700582),
-    d = r(213609),
-    u = r(600164),
-    m = r(434404),
-    f = r(706454),
-    p = r(768581),
-    _ = r(5192),
-    x = r(51144),
-    h = r(981631),
-    b = r(72766),
-    E = r(388032),
-    j = r(327763);
-function N(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var r = null != arguments[t] ? arguments[t] : {},
-            n = Object.keys(r);
+t.d(r, { default: () => y }), t(388685);
+var n = t(255367),
+    i = t(73800),
+    a = t(990547),
+    s = t(755721),
+    o = t(481060),
+    c = t(37234),
+    l = t(700582),
+    d = t(213609),
+    u = t(600164),
+    m = t(434404),
+    f = t(706454),
+    p = t(768581),
+    _ = t(5192),
+    h = t(51144),
+    x = t(981631),
+    E = t(72766),
+    j = t(388032),
+    N = t(568073);
+function T(e) {
+    for (var r = 1; r < arguments.length; r++) {
+        var t = null != arguments[r] ? arguments[r] : {},
+            n = Object.keys(t);
         "function" == typeof Object.getOwnPropertySymbols &&
             (n = n.concat(
-                Object.getOwnPropertySymbols(r).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(r, e).enumerable;
+                Object.getOwnPropertySymbols(t).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(t, e).enumerable;
                 }),
             )),
-            n.forEach(function (t) {
+            n.forEach(function (r) {
                 var n;
-                (n = r[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
+                (n = t[r]),
+                    r in e
+                        ? Object.defineProperty(e, r, {
                               value: n,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0,
                           })
-                        : (e[t] = n);
+                        : (e[r] = n);
             });
     }
     return e;
 }
-function T(e, t) {
+function b(e, r) {
     return (
-        (t = null != t ? t : {}),
+        (r = null != r ? r : {}),
         Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : (function (e, t) {
-                  var r = Object.keys(e);
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r))
+            : (function (e, r) {
+                  var t = Object.keys(e);
                   if (Object.getOwnPropertySymbols) {
                       var n = Object.getOwnPropertySymbols(e);
-                      r.push.apply(r, n);
+                      t.push.apply(t, n);
                   }
-                  return r;
-              })(Object(t)).forEach(function (r) {
-                  Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r));
+                  return t;
+              })(Object(r)).forEach(function (t) {
+                  Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(r, t));
               }),
         e
     );
 }
 let O = function () {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : f.default.locale;
-    return "https://".concat(h.xr4, "/hc/").concat(e.toLowerCase(), "/requests/new?ticket_form_id=360000168511");
+    return "https://".concat(x.xr4, "/hc/").concat(e.toLowerCase(), "/requests/new?ticket_form_id=360000168511");
 };
-function g(e) {
-    let { guild: t, toUser: f, fromUser: g, onClose: y, transitionState: I } = e,
+function y(e) {
+    let { guild: r, toUser: f, fromUser: y, onClose: g, transitionState: I } = e,
         [R, v] = i.useState(!1),
-        w = t.features.has(h.oNc.VERIFIED) || t.features.has(h.oNc.PARTNERED),
-        S = w ? E.intl.string(E.t.wDkfrK) : null,
-        P = w ? E.intl.format(E.t.A37vwM, { ticketUrl: O() }) : null,
-        A = t.features.has(h.oNc.CREATOR_MONETIZABLE) || t.features.has(h.oNc.CREATOR_MONETIZABLE_PROVISIONAL);
+        w = r.features.has(x.oNc.VERIFIED) || r.features.has(x.oNc.PARTNERED),
+        S = w ? j.intl.string(j.t.wDkfrK) : null,
+        P = w ? j.intl.format(j.t.A37vwM, { ticketUrl: O() }) : null,
+        A = r.features.has(x.oNc.CREATOR_MONETIZABLE) || r.features.has(x.oNc.CREATOR_MONETIZABLE_PROVISIONAL);
     async function k(e) {
-        await m.Z.transferOwnership(t.id, f.id, b.X.EMAIL, e);
+        await m.Z.transferOwnership(r.id, f.id, E.X.EMAIL, e);
     }
     async function Z() {
-        await m.Z.sendTransferOwnershipPincode(t.id, !0);
+        await m.Z.sendTransferOwnershipPincode(r.id, !0);
     }
     async function D(e) {
-        e.preventDefault(), y();
+        e.preventDefault(), g();
         try {
-            g.mfaEnabled || null == g.email
-                ? (await m.Z.transferOwnership(t.id, f.id, g.mfaEnabled ? b.X.MFA : null), (0, c.xf)())
-                : (await m.Z.sendTransferOwnershipPincode(t.id),
+            y.mfaEnabled || null == y.email
+                ? (await m.Z.transferOwnership(r.id, f.id, y.mfaEnabled ? E.X.MFA : null), (0, c.xf)())
+                : (await m.Z.sendTransferOwnershipPincode(r.id),
                   (0, o.ZDy)(async () => {
-                      let { default: e } = await r.e("94566").then(r.bind(r, 965072));
-                      return (t) =>
+                      let { default: e } = await t.e("94566").then(t.bind(t, 965072));
+                      return (r) =>
                           (0, n.jsx)(
                               e,
-                              T(N({}, t), {
+                              b(T({}, r), {
                                   onFormSubmit: k,
                                   onResend: Z,
                                   onSuccess: c.xf,
-                                  headerText: E.intl.string(E.t.Z5s7PD),
-                                  confirmButtonText: E.intl.string(E.t.Z5s7PD),
+                                  headerText: j.intl.string(j.t.Z5s7PD),
+                                  confirmButtonText: j.intl.string(j.t.Z5s7PD),
                                   confirmButtonVariant: "critical-primary",
                                   impression: {
-                                      impressionName: s.ImpressionNames.GUILD_TRANSFER_OWNERSHIP_CONFIRM_EMAIL_CODE,
+                                      impressionName: a.ImpressionNames.GUILD_TRANSFER_OWNERSHIP_CONFIRM_EMAIL_CODE,
                                   },
                               }),
                           );
                   }));
         } catch (e) {
-            e.body.code === h.evJ.NEW_OWNER_INELIGIBLE_FOR_SERVER_SUBSCRIPTION &&
+            e.body.code === x.evJ.NEW_OWNER_INELIGIBLE_FOR_SERVER_SUBSCRIPTION &&
                 (0, o.h7j)((e) =>
                     (0, n.jsx)(
                         o.ConfirmModal,
-                        T(N({}, e), {
-                            header: E.intl.string(E.t["m+nQlp"]),
-                            confirmText: E.intl.string(E.t["NX+WJC"]),
-                            confirmButtonColor: a.zx.Colors.BRAND,
+                        b(T({}, e), {
+                            header: j.intl.string(j.t["m+nQlp"]),
+                            confirmText: j.intl.string(j.t["NX+WJC"]),
+                            confirmButtonColor: s.zx.Colors.BRAND,
                             children: (0, n.jsx)(o.Text, {
                                 variant: "text-md/normal",
-                                children: E.intl.format(E.t.wG747e, {
-                                    server_subscription_owner_transfer_article: h.T23,
+                                children: j.intl.format(j.t.wG747e, {
+                                    server_subscription_owner_transfer_article: x.T23,
                                 }),
                             }),
                         }),
@@ -122,31 +122,31 @@ function g(e) {
         }
     }
     (0, d.Z)({
-        type: s.ImpressionTypes.MODAL,
-        name: s.ImpressionNames.GUILD_TRANSFER_OWNERSHIP,
+        type: a.ImpressionTypes.MODAL,
+        name: a.ImpressionNames.GUILD_TRANSFER_OWNERSHIP,
     });
-    let C = _.ZP.getNickname(t.id, void 0, f),
-        L = f.hasAvatarForGuild(t.id),
+    let C = _.ZP.getNickname(r.id, void 0, f),
+        L = f.hasAvatarForGuild(r.id),
         F = () =>
             (0, n.jsxs)("span", {
-                className: j.guildTransfer,
+                className: N.guildTransfer,
                 children: [
-                    null != t.icon
+                    null != r.icon
                         ? (0, n.jsx)(o.qEK, {
                               src: p.ZP.getGuildIconURL({
-                                  id: t.id,
-                                  icon: t.icon,
+                                  id: r.id,
+                                  icon: r.icon,
                                   size: 16,
                               }),
                               size: o.EFr.SIZE_16,
-                              className: j.miniGuildIcon,
+                              className: N.miniGuildIcon,
                               "aria-hidden": !0,
                           })
                         : null,
                     (0, n.jsx)(o.Text, {
-                        className: j.guildName,
+                        className: N.guildName,
                         variant: "text-sm/bold",
-                        children: t.name,
+                        children: r.name,
                     }),
                 ],
             });
@@ -160,64 +160,64 @@ function g(e) {
                     separator: !1,
                     children: (0, n.jsx)(o.X6q, {
                         variant: "heading-lg/semibold",
-                        className: j.header,
-                        children: E.intl.string(E.t.Z5s7PD),
+                        className: N.header,
+                        children: j.intl.string(j.t.Z5s7PD),
                     }),
                 }),
                 (0, n.jsxs)(o.hzk, {
                     children: [
                         (0, n.jsx)(o.R94, {
                             type: o.R94.Types.DESCRIPTION,
-                            className: j.subHeader,
+                            className: N.subHeader,
                             children:
                                 null != C || L
-                                    ? E.intl.format(E.t.E90vgo, {
+                                    ? j.intl.format(j.t.E90vgo, {
                                           GuildHook: F,
-                                          user: (0, x.W5)(f),
+                                          user: (0, h.W5)(f),
                                           AKAHook: function () {
                                               return (0, n.jsxs)("span", {
-                                                  className: j.akaTransfer,
+                                                  className: N.akaTransfer,
                                                   children: [
                                                       (0, n.jsx)(o.IGR, {
-                                                          text: E.intl.string(E.t.l1QVfn),
+                                                          text: j.intl.string(j.t.l1QVfn),
                                                           disableColor: !0,
-                                                          className: j.akaBadge,
+                                                          className: N.akaBadge,
                                                       }),
                                                       L
                                                           ? (0, n.jsx)(o.qEK, {
-                                                                src: f.getAvatarURL(t.id, 16, !0),
+                                                                src: f.getAvatarURL(r.id, 16, !0),
                                                                 size: o.EFr.SIZE_16,
-                                                                className: j.miniAvatar,
+                                                                className: N.miniAvatar,
                                                                 "aria-hidden": !0,
                                                             })
                                                           : null,
                                                       (0, n.jsx)(o.Text, {
-                                                          className: j.nickname,
+                                                          className: N.nickname,
                                                           variant: "text-sm/normal",
-                                                          children: null != C ? C : x.ZP.getName(f),
+                                                          children: null != C ? C : h.ZP.getName(f),
                                                       }),
                                                   ],
                                               });
                                           },
                                       })
-                                    : E.intl.format(E.t["2XLnGx"], {
+                                    : j.intl.format(j.t["2XLnGx"], {
                                           GuildHook: F,
-                                          user: (0, x.W5)(f),
+                                          user: (0, h.W5)(f),
                                       }),
                         }),
                         (0, n.jsxs)(u.Z, {
-                            className: j.fromToWrapper,
+                            className: N.fromToWrapper,
                             justify: u.Z.Justify.CENTER,
                             children: [
                                 (0, n.jsx)("div", {
-                                    className: j.from,
+                                    className: N.from,
                                     children: (0, n.jsx)(l.Z, {
-                                        user: g,
+                                        user: y,
                                         size: o.EFr.SIZE_80,
                                     }),
                                 }),
                                 (0, n.jsx)("div", {
-                                    className: j.to,
+                                    className: N.to,
                                     children: (0, n.jsx)(l.Z, {
                                         user: f,
                                         size: o.EFr.SIZE_80,
@@ -228,9 +228,9 @@ function g(e) {
                         A &&
                             (0, n.jsx)(o.R94, {
                                 type: o.R94.Types.DESCRIPTION,
-                                className: j.roleSubscriptionText,
-                                children: E.intl.format(E.t.LAlucX, {
-                                    server_subscription_owner_transfer_article: h.T23,
+                                className: N.roleSubscriptionText,
+                                children: j.intl.format(j.t.LAlucX, {
+                                    server_subscription_owner_transfer_article: x.T23,
                                 }),
                             }),
                         (0, n.jsx)(o.j7V, {
@@ -243,11 +243,11 @@ function g(e) {
                             },
                             children: (0, n.jsx)(o.R94, {
                                 type: o.R94.Types.DESCRIPTION,
-                                children: E.intl.format(E.t.xm6ACA, { username: (0, x.W5)(f) }),
+                                children: j.intl.format(j.t.xm6ACA, { username: (0, h.W5)(f) }),
                             }),
                         }),
                         (0, n.jsx)(o.R94, {
-                            className: j.protectedText,
+                            className: N.protectedText,
                             type: o.R94.Types.DEFAULT,
                             children: P,
                         }),
@@ -259,14 +259,14 @@ function g(e) {
                         children: [
                             (0, n.jsx)(o.zxk, {
                                 variant: "critical-primary",
-                                text: E.intl.string(E.t.Z5s7PD),
+                                text: j.intl.string(j.t.Z5s7PD),
                                 type: "submit",
                                 disabled: !R,
                             }),
                             (0, n.jsx)(o.zxk, {
                                 variant: "secondary",
-                                text: E.intl.string(E.t["ETE/oK"]),
-                                onClick: y,
+                                text: j.intl.string(j.t["ETE/oK"]),
+                                onClick: g,
                             }),
                         ],
                     }),

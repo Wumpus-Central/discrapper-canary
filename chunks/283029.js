@@ -3,7 +3,7 @@ var i = n(255367);
 n(73800);
 var r = n(120356),
     s = n.n(r),
-    a = n(353410);
+    a = n(609894);
 let l = function (e) {
     let { className: t, imageClassName: r, boostInCooldown: l, useReducedMotion: o } = e;
     return (0, i.jsx)("div", {

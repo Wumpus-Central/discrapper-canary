@@ -16,7 +16,7 @@ var r = n(255367),
     g = n(981631),
     E = n(176505),
     b = n(388032),
-    y = n(444470);
+    y = n(752338);
 function O(e, t, n) {
     return (
         t in e
@@ -91,7 +91,7 @@ function S(e) {
                         source: h.Zu.NAGBAR,
                         alertType: (0, m.T1)(P),
                     },
-                    { default: t } = await Promise.all([n.e("58175"), n.e("74662")]).then(n.bind(n, 664452));
+                    { default: t } = await Promise.all([n.e("58175"), n.e("54255")]).then(n.bind(n, 664452));
                 return (n) =>
                     (0, r.jsx)(
                         t,
@@ -107,7 +107,7 @@ function S(e) {
             guild: C,
             size: s.Z.Sizes.MINI,
         }),
-        j = (0, m.OY)(P, C.name);
+        k = (0, m.OY)(P, C.name);
     if (null != (null != (O = P.dmsDisabledUntil) ? O : P.invitesDisabledUntil) && w)
         return (0, r.jsxs)(a.qXd, {
             className: y.notice,
@@ -118,7 +118,7 @@ function S(e) {
                     noticeType: g.kVF.GUILD_RAID_NOTIFICATION,
                 }),
                 M,
-                j,
+                k,
                 (0, r.jsx)(a.EyT, {
                     className: y.actionButton,
                     onClick: () => x(!1),
@@ -135,7 +135,7 @@ function S(e) {
                 }),
             ],
         });
-    let k = (0, m.CG)(P)
+    let j = (0, m.CG)(P)
             ? b.intl.formatToPlainString(b.t.tZTx2N, { guildName: C.name })
             : (0, m.kk)(P)
               ? b.intl.formatToPlainString(b.t["1bSmxs"], { guildName: C.name })
@@ -150,7 +150,7 @@ function S(e) {
                 noticeType: g.kVF.GUILD_RAID_NOTIFICATION,
             }),
             M,
-            k,
+            j,
             !U &&
                 (0, r.jsx)(a.EyT, {
                     className: y.actionButton,

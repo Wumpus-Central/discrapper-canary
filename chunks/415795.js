@@ -30,7 +30,7 @@ var i,
     j = n(594174),
     E = n(51144),
     C = n(388032),
-    O = n(568670);
+    O = n(297762);
 function v(e, t, n) {
     return (
         t in e
@@ -74,7 +74,7 @@ class S extends s.PureComponent {
                 null != n
                     ? (0, r.jsx)("div", {
                           className: O.score,
-                          children: n >> 0,
+                          children: 0 | n,
                       })
                     : null,
             ],

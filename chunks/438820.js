@@ -1,40 +1,38 @@
-a.d(t, { Z: () => p });
+a.d(t, { Z: () => r });
 var n,
     i,
-    c,
-    o = a(442837),
-    s = a(570140);
-let d = {
+    c = a(442837),
+    o = a(570140);
+let s = {
     canPlayWowMoment: !1,
     isFetchingWowMomentMedia: !1,
     wowMomentWumpusMediaUrl: null,
 };
-class r extends (c = o.ZP.Store) {
+class d extends (i = c.ZP.Store) {
     getState() {
-        return d;
+        return s;
     }
     get canPlayWowMoment() {
-        return d.canPlayWowMoment;
+        return s.canPlayWowMoment;
     }
     get isFetchingWowMomentMedia() {
-        return d.isFetchingWowMomentMedia;
+        return s.isFetchingWowMomentMedia;
     }
     get wowMomentWumpusMedia() {
-        return d.wowMomentWumpusMediaUrl;
+        return s.wowMomentWumpusMediaUrl;
     }
 }
-(i = "PurchasedItemsFestivityStore"),
-    (n = "displayName") in r
-        ? Object.defineProperty(r, n, {
-              value: i,
-              enumerable: !0,
-              configurable: !0,
-              writable: !0,
-          })
-        : (r[n] = i);
-let p = new r(s.Z, {
+(n = "displayName") in d
+    ? Object.defineProperty(d, n, {
+          value: "PurchasedItemsFestivityStore",
+          enumerable: !0,
+          configurable: !0,
+          writable: !0,
+      })
+    : (d[n] = "PurchasedItemsFestivityStore");
+let r = new d(o.Z, {
     LOGOUT: function () {
-        d = {
+        s = {
             canPlayWowMoment: !1,
             isFetchingWowMomentMedia: !1,
             wowMomentWumpusMediaUrl: null,
@@ -42,16 +40,16 @@ let p = new r(s.Z, {
     },
     PURCHASED_ITEMS_FESTIVITY_SET_CAN_PLAY_WOW_MOMENT: function (e) {
         let { value: t } = e;
-        d.canPlayWowMoment = t;
+        s.canPlayWowMoment = t;
     },
     PURCHASED_ITEMS_FESTIVITY_IS_FETCHING_WOW_MOMENT_MEDIA: function () {
-        d.isFetchingWowMomentMedia = !0;
+        s.isFetchingWowMomentMedia = !0;
     },
     PURCHASED_ITEMS_FESTIVITY_FETCH_WOW_MOMENT_MEDIA_SUCCESS: function (e) {
         let { wumpusMedia: t } = e;
-        (d.wowMomentWumpusMediaUrl = t), (d.isFetchingWowMomentMedia = !1);
+        (s.wowMomentWumpusMediaUrl = t), (s.isFetchingWowMomentMedia = !1);
     },
     PURCHASED_ITEMS_FESTIVITY_FETCH_WOW_MOMENT_MEDIA_FAILURE: function () {
-        (d.isFetchingWowMomentMedia = !1), (d.canPlayWowMoment = !1);
+        (s.isFetchingWowMomentMedia = !1), (s.canPlayWowMoment = !1);
     },
 });

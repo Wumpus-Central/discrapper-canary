@@ -1,4 +1,4 @@
-t.d(r, { Z: () => B }), t(388685);
+t.d(r, { Z: () => O }), t(388685);
 var a = t(255367);
 t(73800);
 var i = t(120356),
@@ -22,11 +22,8 @@ var i = t(120356),
     g = t(263885),
     F = t(981631),
     S = t(388032),
-    w = t(18557);
-let U = (e, r) => {
-        _.Z.hasLayers() && (0, c.xf)(), p.Z.openPrivateChannel({ recipientIds: e }), r();
-    },
-    O = (e) => {
+    w = t(436931);
+let U = (e) => {
         let { user: r, trialCreationResult: t, onClose: i } = e,
             { avatarSrc: s, eventHandlers: l } = (0, f.Z)({
                 userId: null == r ? void 0 : r.id,
@@ -34,7 +31,7 @@ let U = (e, r) => {
             }),
             n = u.ZP.getName(r),
             o = r.username !== n && t === j.Fz.SUCCESS,
-            p = t === j.Fz.FAIL;
+            x = t === j.Fz.FAIL;
         return (0, a.jsxs)("div", {
             className: w.referredUserRowContainer,
             children: [
@@ -66,7 +63,7 @@ let U = (e, r) => {
                         return e;
                     })(
                         {
-                            imageClassName: C()({ [w.erroredAvatar]: p }),
+                            imageClassName: C()({ [w.erroredAvatar]: x }),
                             src: s,
                             "aria-label": n,
                             size: d.EFr.SIZE_56,
@@ -77,7 +74,7 @@ let U = (e, r) => {
                 (0, a.jsxs)("div", {
                     className: w.referredUserRowBody,
                     children: [
-                        p
+                        x
                             ? (0, a.jsxs)(a.Fragment, {
                                   children: [
                                       (0, a.jsx)(d.Text, {
@@ -98,7 +95,15 @@ let U = (e, r) => {
                                   children: (e) => {
                                       let { onMouseEnter: t, onMouseLeave: C } = e;
                                       return (0, a.jsx)(d.P3F, {
-                                          onClick: () => U(r.id, i),
+                                          onClick: () => {
+                                              var e;
+                                              return (
+                                                  (e = r.id),
+                                                  void (_.Z.hasLayers() && (0, c.xf)(),
+                                                  p.Z.openPrivateChannel({ recipientIds: e }),
+                                                  i())
+                                              );
+                                          },
                                           className: w.displayNameClickableContainer,
                                           onMouseEnter: t,
                                           onMouseLeave: C,
@@ -121,11 +126,11 @@ let U = (e, r) => {
             ],
         });
     },
-    B = (e) => {
+    O = (e) => {
         let { selectedUsers: r, trialCreationResult: t, onClose: i } = e,
             C = [...r].map((e) =>
                 (0, a.jsx)(
-                    O,
+                    U,
                     {
                         user: e,
                         trialCreationResult: t.get(e.id),

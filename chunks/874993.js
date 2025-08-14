@@ -19,7 +19,7 @@ var r = n(255367),
     v = n(273504),
     _ = n(981631),
     O = n(388032),
-    y = n(811354);
+    y = n(894780);
 function C(e) {
     var t, n;
     let { guildId: C, setPreventNavigation: N = () => {} } = e,
@@ -82,23 +82,7 @@ function C(e) {
     i.useEffect(() => {
         N(w, (0, j.af)(G));
     }, [N, w, G]);
-    let U = (0, p.Z6)(P),
-        B = (e) =>
-            (0, r.jsx)(r.Fragment, {
-                children: e.map((e) => {
-                    var t;
-                    return (0, r.jsx)(
-                        x.Z,
-                        {
-                            guildId: P,
-                            triggerType: e,
-                            rules: null != (t = Z[e]) ? t : [],
-                            initWithEdit: T === _.KsC.AUTOMOD_MENTION_SPAM && e === v.fX.MENTION_SPAM,
-                        },
-                        e,
-                    );
-                }),
-            });
+    let U = (0, p.Z6)(P);
     return (0, r.jsxs)(s.hjN, {
         title: O.intl.string(O.t.uRelg4),
         tag: "h1",
@@ -177,7 +161,25 @@ function C(e) {
                           "div",
                           {
                               className: y.categoryContainer,
-                              children: [l, B(n)],
+                              children: [
+                                  l,
+                                  (0, r.jsx)(r.Fragment, {
+                                      children: n.map((e) => {
+                                          var t;
+                                          return (0, r.jsx)(
+                                              x.Z,
+                                              {
+                                                  guildId: P,
+                                                  triggerType: e,
+                                                  rules: null != (t = Z[e]) ? t : [],
+                                                  initWithEdit:
+                                                      T === _.KsC.AUTOMOD_MENTION_SPAM && e === v.fX.MENTION_SPAM,
+                                              },
+                                              e,
+                                          );
+                                      }),
+                                  }),
+                              ],
                           },
                           t,
                       );

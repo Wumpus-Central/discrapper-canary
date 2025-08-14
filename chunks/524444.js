@@ -51,13 +51,13 @@ var r = n(255367),
     L = n(626135),
     x = n(823379),
     M = n(589530),
-    j = n(709054),
-    k = n(217702),
+    k = n(709054),
+    j = n(217702),
     U = n(981631),
     G = n(420212),
     B = n(814249),
     Z = n(388032),
-    F = n(793398);
+    F = n(180376);
 function V(e, t, n) {
     return (
         t in e
@@ -239,7 +239,7 @@ function et(e) {
             imageContainerStyle: _,
             mosaicStyleAlt: h,
         } = e,
-        m = f === k.hV.MOSAIC || !0 === h,
+        m = f === j.hV.MOSAIC || !0 === h,
         g = !c && C.H1.getSetting() && null != t && "" !== t && !0 !== n,
         E = (e) => {
             let { altText: t } = e;
@@ -426,7 +426,7 @@ function eu(e) {
                   })
                 : f.Z.jumpToMessage({
                       channelId: n,
-                      messageId: j.default.castChannelIdAsMessageId(n),
+                      messageId: k.default.castChannelIdAsMessageId(n),
                       offset: 1,
                       context: "Mark As Read",
                   });
@@ -490,9 +490,9 @@ function ed(e) {
             var e;
             return null != (e = A.Z.summaries(s.id)) ? e : [];
         }, [s]),
-        k = (0, g.Z)(M);
+        j = (0, g.Z)(M);
     i.useEffect(() => {
-        l().isEqual(k, M) ||
+        l().isEqual(j, M) ||
             L.default.track(U.rMx.SUMMARIES_TOPICS_PILL_VIEWED, {
                 num_summaries: M.length,
                 message_counts: M.map((e) => e.count),
@@ -503,7 +503,7 @@ function ed(e) {
                 channel_id: s.id,
                 channel_type: s.type,
             });
-    }, [M, k, s.guild_id, s.id, s.type]);
+    }, [M, j, s.guild_id, s.id, s.type]);
     let G = (0, u.e7)(
             [w.default],
             () => {
@@ -679,7 +679,7 @@ function ed(e) {
                   })
                 : f.Z.jumpToMessage({
                       channelId: s.id,
-                      messageId: j.default.castChannelIdAsMessageId(s.id),
+                      messageId: k.default.castChannelIdAsMessageId(s.id),
                       offset: 1,
                       context: "Mark As Read",
                   });
@@ -859,9 +859,9 @@ function ep(e) {
             e_,
         ),
         M = null != (n = (0, u.e7)([A.Z], () => A.Z.visibleSummaryIndex())) ? n : -1,
-        j = null == C || null == (t = C[M]) ? void 0 : t.topic;
-    null == j && null == h && (null == C ? void 0 : C.length) >= 1 && (j = null == (o = C[0]) ? void 0 : o.topic);
-    let k = i.useMemo(() => l().get(C, M - 1), [M, C]),
+        k = null == C || null == (t = C[M]) ? void 0 : t.topic;
+    null == k && null == h && (null == C ? void 0 : C.length) >= 1 && (k = null == (o = C[0]) ? void 0 : o.topic);
+    let j = i.useMemo(() => l().get(C, M - 1), [M, C]),
         G = i.useMemo(() => l().get(C, M + 1), [M, C]),
         V = i.useMemo(
             () =>
@@ -1008,7 +1008,7 @@ function ep(e) {
     if (!(0, u.e7)([A.Z], () => A.Z.shouldShowTopicsBar())) return null;
     let et = Z.intl.string(Z.t["38qwgI"]);
     return (
-        C.length > 0 && (et = "" === j || null == j ? Z.intl.string(Z.t.DwnFuL) : j),
+        C.length > 0 && (et = "" === k || null == k ? Z.intl.string(Z.t.DwnFuL) : k),
         p
             ? null
             : (0, r.jsxs)("div", {
@@ -1066,7 +1066,7 @@ function ep(e) {
                                           "aria-label": Z.intl.string(Z.t["58KOoK"]),
                                           onClick: X,
                                           className: a()(F.topicsPillCaret, F.topicsCaretRight, {
-                                              [F.topicsPillCaretDisabled]: null == k,
+                                              [F.topicsPillCaretDisabled]: null == j,
                                           }),
                                           children: (0, r.jsx)(D.Z, {
                                               width: 16,

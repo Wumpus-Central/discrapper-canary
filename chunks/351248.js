@@ -1,4 +1,4 @@
-n.d(t, { Z: () => N }), n(539854), n(388685);
+n.d(t, { Z: () => R }), n(539854), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -12,9 +12,9 @@ var r = n(255367),
     _ = n(451478),
     p = n(584511),
     h = n(354459),
-    m = n(416038),
-    g = n(794287),
-    E = n(584783);
+    m = n(907894),
+    g = n(149715),
+    E = n(162130);
 function b(e, t, n) {
     return (
         t in e
@@ -29,12 +29,10 @@ function b(e, t, n) {
     );
 }
 let y = 8,
-    O = {
-        STEPS: 23,
-        FRAME_DURATION: 17,
-        FRAME_SIZE: 26,
-    },
-    v = {
+    O = 23,
+    v = 17,
+    I = 26,
+    T = {
         SCALE_MIN: 0.7,
         SCALE_MAX: 1,
         DURATION_IN: 300,
@@ -42,9 +40,9 @@ let y = 8,
         EASING_IN: s.Z.Easing.inOut(s.Z.Easing.back()),
         EASING_OUT: s.Z.Easing.quad,
     },
-    I = 200,
-    T = 125;
-class S extends i.PureComponent {
+    S = 200,
+    A = 125;
+class N extends i.PureComponent {
     componentDidMount() {
         this.componentDidAppear();
     }
@@ -59,12 +57,12 @@ class S extends i.PureComponent {
             s.Z.parallel([
                 s.Z.timing(t, {
                     toValue: 1,
-                    duration: v.DURATION_IN,
-                    easing: v.EASING_IN,
+                    duration: T.DURATION_IN,
+                    easing: T.EASING_IN,
                 }),
                 s.Z.timing(n, {
                     toValue: 1,
-                    duration: I,
+                    duration: S,
                 }),
             ]).start(e);
     }
@@ -72,23 +70,23 @@ class S extends i.PureComponent {
         let { scaleAnimation: t, spriteAnimation: n, spriteOpacity: r, widthAnimation: i } = this;
         r.setValue(1), n.setValue(0);
         let o = [];
-        for (let e = 0; e < O.STEPS; e++)
+        for (let e = 0; e < O; e++)
             o.push(
                 s.Z.timing(n, {
-                    toValue: -O.FRAME_SIZE * e,
-                    duration: O.FRAME_DURATION,
+                    toValue: -I * e,
+                    duration: v,
                 }),
             );
         s.Z.sequence([
             s.Z.timing(t, {
                 toValue: 0,
-                duration: v.DURATION_OUT,
-                easing: v.EASING_OUT,
+                duration: T.DURATION_OUT,
+                easing: T.EASING_OUT,
             }),
             s.Z.sequence(o),
             s.Z.timing(i, {
                 toValue: 0,
-                duration: T,
+                duration: A,
             }),
         ]).start(e);
     }
@@ -99,7 +97,7 @@ class S extends i.PureComponent {
                 {
                     scale: e.interpolate({
                         inputRange: [0, 1],
-                        outputRange: [v.SCALE_MIN, v.SCALE_MAX],
+                        outputRange: [T.SCALE_MIN, T.SCALE_MAX],
                     }),
                 },
             ],
@@ -154,20 +152,20 @@ class S extends i.PureComponent {
             b(this, "widthAnimation", new s.Z.Value(0));
     }
 }
-function A(e, t) {
+function C(e, t) {
     return ((0, d.pxk)(d.EFr.SIZE_80) + 2 * y) * t > e ? d.EFr.SIZE_40 : d.EFr.SIZE_80;
 }
-function N(e) {
+function R(e) {
     let { participants: t, onContextMenu: n, className: i, onClick: o, width: s, guildId: u } = e,
         g = (0, f.ZP)(),
-        E = A(s, t.length),
+        E = C(s, t.length),
         b = (0, l.e7)([_.Z], () => _.Z.isFocused()),
         y = t.map((e) => {
             var t, i;
             if (e.type !== h.fO.USER) return null;
             let { user: a, voiceState: s, speaking: l, ringing: c } = e;
             return (0, r.jsx)(
-                S,
+                N,
                 {
                     className: m.participant,
                     width: (0, d.pxk)(E),

@@ -6,7 +6,7 @@ var e = a(255367),
     c = a(86419),
     l = a(817053),
     o = a(388032),
-    d = a(501406);
+    d = a(713620);
 function m(t) {
     let { game: i, widgetType: a, userId: m, onClose: x, transitionState: p } = t,
         u = n.useCallback(() => {

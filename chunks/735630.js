@@ -99,8 +99,7 @@ var n = function (t) {
                     throw "readInt method not implemented for size: " + t;
             }
             return (this.position += t), i;
-        }
-        throw "Not enough bytes in buffer";
+        } else throw "Not enough bytes in buffer";
     }),
     (n.prototype.readUint8 = function () {
         return this.readAnyInt(1, !1);
@@ -675,7 +674,7 @@ var a = function (t, e, i) {
     }),
     (a.prototype.writeUint64 = function (t) {
         var e = Math.floor(t / 4294967296);
-        this.writeUint32(e), this.writeUint32(4294967295 & t);
+        this.writeUint32(e), this.writeUint32(0 | t);
     }),
     (a.prototype.writeUint24 = function (t) {
         this.writeUint8((16711680 & t) >> 16), this.writeUint8((65280 & t) >> 8), this.writeUint8(255 & t);
@@ -3051,11 +3050,7 @@ d.initialize(),
                         r,
                         n = [];
                     for (
-                        s = 0,
-                            i =
-                                0 |
-                                (this.vvcC.ptl_frame_only_constraint << 7) |
-                                (this.vvcC.ptl_multilayer_enabled << 6);
+                        s = 0, i = (this.vvcC.ptl_frame_only_constraint << 7) | (this.vvcC.ptl_multilayer_enabled << 6);
                         s < this.vvcC.general_constraint_info.length;
                         ++s
                     )

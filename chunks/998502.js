@@ -105,17 +105,17 @@ let D = new Set([
     L = !1,
     x = "lastImageSaveDirectory",
     M = /[<>:"/\\|?*@]/g,
-    j = /(\.[a-zA-Z0-9]+):[^.]*$/,
-    k = /(\.[a-zA-Z0-9]+)%3A.+$/,
+    k = /(\.[a-zA-Z0-9]+):[^.]*$/,
+    j = /(\.[a-zA-Z0-9]+)%3A.+$/,
     U = /[^a-zA-Z0-9]/g,
     G = /\.[^.]*$/;
 function B(e) {
     try {
         let t = decodeURIComponent(e);
-        return (t = (t = t.replace(j, "$1")).replace(/(.+)@([a-zA-Z0-9]+)$/, "$1.$2")).replace(M, "_");
+        return (t = (t = t.replace(k, "$1")).replace(/(.+)@([a-zA-Z0-9]+)$/, "$1.$2")).replace(M, "_");
     } catch (t) {
         return e
-            .replace(k, "$1")
+            .replace(j, "$1")
             .replace(/(.+)%40([a-zA-Z0-9]+)$/, "$1.$2")
             .replace(M, "_");
     }

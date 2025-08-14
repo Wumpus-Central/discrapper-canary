@@ -3,7 +3,7 @@ n.d(t, {
     Y0: () => x,
     YA: () => B,
     fM: () => L,
-    hz: () => k,
+    hz: () => j,
     mz: () => U,
     ol: () => G,
     xB: () => M,
@@ -29,7 +29,7 @@ var r = n(255367),
     O = n(602091),
     v = n(231338),
     I = n(388032),
-    T = n(875531);
+    T = n(818033);
 function S(e, t, n) {
     return (
         t in e
@@ -164,16 +164,16 @@ function x(e) {
             "animate-always",
         ),
         M = i.useRef(null),
-        j = null != P["aria-label"],
-        k = null != P["aria-labelledby"],
+        k = null != P["aria-label"],
+        j = null != P["aria-labelledby"],
         U = i.useId(),
         G = null != (t = P["aria-labelledby"]) ? t : U,
         B = i.useMemo(
             () => ({
                 headerId: G,
-                headerIdIsManaged: k,
+                headerIdIsManaged: j,
             }),
-            [G, k],
+            [G, j],
         );
     return (0, r.jsx)(O.zM.Provider, {
         value: B,
@@ -186,7 +186,7 @@ function x(e) {
                         role: _,
                         returnRef: I,
                         impressionType: l.ImpressionTypes.MODAL,
-                        "aria-labelledby": j ? void 0 : B.headerId,
+                        "aria-labelledby": k ? void 0 : B.headerId,
                     },
                     P,
                 ),
@@ -223,7 +223,7 @@ function M(e) {
         children: e.children,
     });
 }
-function j(e) {
+function k(e) {
     switch (null != e ? e : "thin") {
         case "auto":
             return g.yW;
@@ -233,10 +233,10 @@ function j(e) {
             return g.h2;
     }
 }
-function k(e) {
+function j(e) {
     let { className: t, children: n, scrollerRef: i, scrollbarType: o } = e,
         s = R(e, ["className", "children", "scrollerRef", "scrollbarType"]),
-        l = j(o);
+        l = k(o);
     return (0, r.jsx)(
         l,
         C(

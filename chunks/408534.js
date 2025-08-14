@@ -20,7 +20,7 @@ var i = n(442837),
     y = n(354459),
     O = n(981631),
     v = n(388032),
-    I = n(428586);
+    I = n(895634);
 function T(e) {
     let { onClose: t, onSelect: n, channel: T, remoteMode: S, onInteraction: A } = e,
         N = (0, a.bp)(),
@@ -33,8 +33,8 @@ function T(e) {
         ),
         x = (0, _.Z)(C),
         M = (0, E.Z)(C),
-        j = (0, h.Z)(T, P, null == D ? void 0 : D.ownerId, null == L ? void 0 : L.id),
-        k = (0, f.Z)(C),
+        k = (0, h.Z)(T, P, null == D ? void 0 : D.ownerId, null == L ? void 0 : L.id),
+        j = (0, f.Z)(C),
         U = (0, b.Z)(),
         G = (0, c.$A)(C),
         B = (0, c.j8)(C),
@@ -50,12 +50,12 @@ function T(e) {
         navId: "more-settings-context",
         "aria-label": v.intl.string(v.t.FTLzdX),
         children: [
-            (0, r.jsx)(o.kSQ, { children: R !== O.d4z.GUILD_STAGE_VOICE ? j : null }),
+            (0, r.jsx)(o.kSQ, { children: R !== O.d4z.GUILD_STAGE_VOICE ? k : null }),
             (0, r.jsxs)(o.kSQ, {
                 children: [
                     R === O.d4z.GUILD_STAGE_VOICE ? G : null,
                     R === O.d4z.GUILD_STAGE_VOICE ? B : null,
-                    S || R === O.d4z.GUILD_STAGE_VOICE ? null : k,
+                    S || R === O.d4z.GUILD_STAGE_VOICE ? null : j,
                     V,
                     R !== O.d4z.GUILD_STAGE_VOICE ? x : null,
                     R === O.d4z.GUILD_STAGE_VOICE || R === O.d4z.GUILD_VOICE ? M : null,

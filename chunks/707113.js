@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => v });
 var l = n(255367),
     r = n(73800),
     a = n(120356),
@@ -10,9 +10,9 @@ var l = n(255367),
     u = n(893966),
     m = n(472596),
     x = n(598948),
-    h = n(428936),
-    j = n(41586),
-    b = n(336164);
+    j = n(428936),
+    h = n(41586),
+    b = n(243194);
 function f(e) {
     let { guild: t } = e,
         n = (0, d.$j)(t.id),
@@ -28,19 +28,19 @@ function f(e) {
         }),
     });
 }
-function p(e) {
+function v(e) {
     let { guild: t, className: n, onPageChange: a, onMemberSelect: s } = e,
-        p = t.id,
-        v = (0, o.e7)([u.Z], () => u.Z.getEstimatedMemberSearchCountByGuildId(p), [p]),
-        g = (0, d.$j)(p),
-        C = (0, d.M3)(p),
+        v = t.id,
+        g = (0, o.e7)([u.Z], () => u.Z.getEstimatedMemberSearchCountByGuildId(v), [v]),
+        p = (0, d.$j)(v),
+        C = (0, d.M3)(v),
         _ = r.useCallback(
             (e) => {
                 null != e && (null == s || s(e));
             },
             [s],
         ),
-        T = (0, m.xb)(C, g, v),
+        T = (0, m.xb)(C, p, g),
         E = r.useRef(null),
         N = r.useRef(null),
         S = r.useCallback(() => {
@@ -54,7 +54,7 @@ function p(e) {
             ref: N,
             orientation: "horizontal",
             children: [
-                (0, l.jsx)(j.Z, {
+                (0, l.jsx)(h.Z, {
                     guild: t,
                     ref: E,
                 }),
@@ -66,7 +66,7 @@ function p(e) {
                     onResetForNewMembers: S,
                 }),
                 T !== m.po.SUCCESS_STILL_INDEXING &&
-                    (0, l.jsx)(h.Z, {
+                    (0, l.jsx)(j.Z, {
                         guildId: t.id,
                         onPageChange: a,
                     }),

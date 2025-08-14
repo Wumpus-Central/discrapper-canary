@@ -8,11 +8,11 @@ var r = n(442837),
     o = n(430824),
     c = n(313550),
     d = n(388032),
-    u = n(933468);
+    u = n(406671);
 let m = (e) => {
     let { onClose: t, listing: n, guildId: m } = e,
         f = (0, r.e7)([o.Z], () => o.Z.getGuild(m), [m]),
-        h = (0, c.Z)({
+        g = (0, c.Z)({
             listing: n,
             guildId: m,
         });
@@ -27,12 +27,12 @@ let m = (e) => {
                     tierName: n.name,
                 }),
             }),
-            !h.isEmpty() &&
+            !g.isEmpty() &&
                 (0, i.jsx)(a.Text, {
                     className: u.confirmationSubtitle,
                     variant: "text-sm/normal",
                     color: "header-secondary",
-                    children: d.intl.format(d.t.TnhFHh, { benefits: h.asString() }),
+                    children: d.intl.format(d.t.TnhFHh, { benefits: g.asString() }),
                 }),
             (0, i.jsx)(l.zx, {
                 className: u.openDiscordButton,

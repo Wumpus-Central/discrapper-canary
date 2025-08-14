@@ -15,11 +15,11 @@ function f(e) {
 }
 self.addEventListener("message", (e) => {
     let {
-            data: { id: r, searchTerm: t, searchStrings: n, searchType: c, sortType: s, jaroWinklerSearchThreshold: h },
+            data: { id: r, searchTerm: t, searchStrings: n, searchType: s, sortType: c, jaroWinklerSearchThreshold: h },
         } = e,
         p = [];
     for (let e of u(t))
-        switch (c) {
+        switch (s) {
             case i.S.REGEX:
                 p.push(
                     ...(function (e, r) {
@@ -68,9 +68,9 @@ self.addEventListener("message", (e) => {
                     })(e, n),
                 );
         }
-    let d = [...new Set(p)];
-    s === i.E.JARO_WINKLER &&
-        (d = (function (e, r, t) {
+    let m = [...new Set(p)];
+    c === i.E.JARO_WINKLER &&
+        (m = (function (e, r, t) {
             let n = u(e);
             return t
                 .map((e) => {
@@ -82,10 +82,10 @@ self.addEventListener("message", (e) => {
                 })
                 .sort((e, r) => r.rank - e.rank)
                 .map((e) => e.index);
-        })(t, n, d));
-    let m = {
+        })(t, n, m));
+    let d = {
         id: r,
-        foundItemIndexes: d,
+        foundItemIndexes: m,
     };
-    self.postMessage(m);
+    self.postMessage(d);
 });

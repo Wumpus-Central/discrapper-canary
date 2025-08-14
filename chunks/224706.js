@@ -32,7 +32,7 @@ var r = n(664751),
 let L = 3,
     x = 20,
     M = new f.Z("GamesActionCreators");
-function j(e) {
+function k(e) {
     let {
         applicationId: t,
         secret: n,
@@ -72,7 +72,7 @@ function j(e) {
             }),
         );
 }
-function k(e, t) {
+function j(e, t) {
     return null == e || "" === e
         ? null
         : {
@@ -357,7 +357,7 @@ let B = {
                             name: t,
                             os: (0, S.getPlatformName)(),
                             icon: n,
-                            distributor_application: k(i, o),
+                            distributor_application: j(i, o),
                             executable: c,
                             publisher: r,
                             report_version: L,
@@ -430,7 +430,7 @@ let B = {
         try {
             let e = await N.Z.getJoinSecret(t, n, r, i, o);
             return (
-                j({
+                k({
                     applicationId: r,
                     secret: e,
                     channelId: i,
@@ -452,5 +452,5 @@ let B = {
             );
         }
     },
-    joinWithSecret: j,
+    joinWithSecret: k,
 };

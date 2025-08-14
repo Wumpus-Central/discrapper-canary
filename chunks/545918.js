@@ -1,4 +1,4 @@
-n.r(t), n.d(t, { default: () => F }), n(388685);
+n.r(t), n.d(t, { default: () => q }), n(388685);
 var l = n(255367),
     r = n(73800),
     a = n(120356),
@@ -10,13 +10,13 @@ var l = n(255367),
     u = n(252618),
     m = n(189357),
     x = n(693546),
-    h = n(246364),
-    j = n(697379),
+    j = n(246364),
+    h = n(697379),
     b = n(98493),
     f = n(412222),
-    p = n(223312),
-    v = n(571728),
-    g = n(984370),
+    v = n(223312),
+    g = n(571728),
+    p = n(984370),
     C = n(703656),
     _ = n(433355),
     T = n(984933),
@@ -28,36 +28,36 @@ var l = n(255367),
     I = n(987491),
     Z = n(305473),
     w = n(995596),
-    y = n(937283),
-    M = n(440857),
-    O = n(707113),
+    M = n(937283),
+    O = n(440857),
+    y = n(707113),
     A = n(981631),
     k = n(176505),
-    B = n(388032),
-    D = n(13348),
-    L = n(149771);
+    D = n(388032),
+    B = n(350013),
+    L = n(97009);
 function G(e) {
     let { guild: t, currentTab: n, onTabSelect: r } = e,
-        a = (0, j.W)(t.id),
-        i = B.intl.string(B.t.oclz3d),
-        s = B.intl.string(B.t.oclz3d);
+        a = (0, h.W)(t.id),
+        i = D.intl.string(D.t.oclz3d),
+        s = D.intl.string(D.t.oclz3d);
     return (
         (0, u.Tt)({
             location: t.name,
             subsection: i,
         }),
-        (0, l.jsxs)(g.Z, {
-            className: D.header,
-            innerClassname: D.__invalid_innerHeader,
+        (0, l.jsxs)(p.Z, {
+            className: B.header,
+            innerClassname: B.__invalid_innerHeader,
             channelId: k.oC.MEMBER_SAFETY,
             guildId: t.id,
             hideSearch: !0,
             children: [
-                (0, l.jsx)(g.Z.Icon, {
+                (0, l.jsx)(p.Z.Icon, {
                     icon: o.BFJ,
                     "aria-hidden": !0,
                 }),
-                (0, l.jsx)(g.Z.Title, { children: s }),
+                (0, l.jsx)(p.Z.Title, { children: s }),
                 a &&
                     (0, l.jsx)(w.Z, {
                         guildId: t.id,
@@ -68,29 +68,29 @@ function G(e) {
         })
     );
 }
-function F(e) {
+function q(e) {
     var t;
     let { guildId: n } = e,
-        a = null != (t = (0, v.A)({ guildId: n })) ? t : 0,
-        [u, j] = r.useState(a > 0 ? N.e.PENDING : N.e.ALL_MEMBERS),
-        g = (0, s.e7)([E.Z], () => E.Z.getGuild(n)),
+        a = null != (t = (0, g.A)({ guildId: n })) ? t : 0,
+        [u, h] = r.useState(a > 0 ? N.e.PENDING : N.e.ALL_MEMBERS),
+        p = (0, s.e7)([E.Z], () => E.Z.getGuild(n)),
         { analyticsLocations: w } = (0, d.ZP)(c.Z.MEMBER_SAFETY_PAGE),
         k = (0, f.C)({ guildId: n }),
-        { guildJoinRequests: B } = (0, p.j)({
+        { guildJoinRequests: D } = (0, v.j)({
             guildId: n,
-            applicationStatus: "ALL_MEMBERS" === u ? h.wB.SUBMITTED : u,
+            applicationStatus: "ALL_MEMBERS" === u ? j.wB.SUBMITTED : u,
             sortOrder: k,
         });
     r.useEffect(() => {
-        (null == g ? void 0 : g.features.has(A.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL)) || j(N.e.ALL_MEMBERS);
-    }, [g]);
-    let F = (0, S.n2)(n),
-        q = (0, m.m)(n),
+        (null == p ? void 0 : p.features.has(A.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL)) || h(N.e.ALL_MEMBERS);
+    }, [p]);
+    let q = (0, S.n2)(n),
+        F = (0, m.m)(n),
         U = r.useRef(null);
     (0, P.n)(n);
     let { fetchNextPage: z } = (0, b.m)({
             guildId: n,
-            guildJoinRequests: B,
+            guildJoinRequests: D,
         }),
         V = r.useCallback(async () => {
             var e;
@@ -100,27 +100,27 @@ function F(e) {
         }, [u, u, k, z]),
         J = r.useCallback(
             async (e) => {
-                u !== e && (j(e), x.Z.setSelectedGuildJoinRequest(n, null), "ALL_MEMBERS" !== e && (await z(k, e)));
+                u !== e && (h(e), x.Z.setSelectedGuildJoinRequest(n, null), "ALL_MEMBERS" !== e && (await z(k, e)));
             },
             [u, n, z, k],
         );
     r.useEffect(() => {
-        if (!F && null != g) {
+        if (!q && null != p) {
             var e;
-            let t = null == (e = T.ZP.getDefaultChannel(g.id)) ? void 0 : e.id;
-            (0, C.XU)(g.id, t);
+            let t = null == (e = T.ZP.getDefaultChannel(p.id)) ? void 0 : e.id;
+            (0, C.XU)(p.id, t);
         }
-    }, [g, F]);
+    }, [p, q]);
     let K = (0, s.e7)([_.ZP], () => null != _.ZP.getGuildSidebarState(n), [n]);
-    return null != g && F
+    return null != p && q
         ? (0, l.jsxs)(d.Gt, {
               value: w,
               children: [
                   (0, l.jsxs)("div", {
-                      className: i()(L.chat, D.page, { [L.threadSidebarOpen]: K }),
+                      className: i()(L.chat, B.page, { [L.threadSidebarOpen]: K }),
                       children: [
                           (0, l.jsx)(G, {
-                              guild: g,
+                              guild: p,
                               currentTab: u,
                               onTabSelect: J,
                           }),
@@ -129,26 +129,26 @@ function F(e) {
                               ref: U,
                               orientation: "vertical",
                               children: (0, l.jsx)("div", {
-                                  className: i()(L.content, D.container),
+                                  className: i()(L.content, B.container),
                                   children:
                                       u === N.e.ALL_MEMBERS
                                           ? (0, l.jsxs)(l.Fragment, {
                                                 children: [
-                                                    (0, l.jsx)(Z.Z, { guild: g }),
-                                                    (0, l.jsx)(O.Z, { guild: g }),
+                                                    (0, l.jsx)(Z.Z, { guild: p }),
+                                                    (0, l.jsx)(y.Z, { guild: p }),
                                                 ],
                                             })
                                           : (0, l.jsx)(I.Z, {
-                                                guildId: g.id,
+                                                guildId: p.id,
                                                 currentTab: u,
                                             }),
                               }),
                           }),
-                          (0, l.jsx)(M.Z, { guildId: g.id }),
+                          (0, l.jsx)(O.Z, { guildId: p.id }),
                       ],
                   }),
-                  q &&
-                      (u === N.e.ALL_MEMBERS ? (0, l.jsx)(y.Z, { guildId: g.id }) : (0, l.jsx)(R.Z, { guildId: g.id })),
+                  F &&
+                      (u === N.e.ALL_MEMBERS ? (0, l.jsx)(M.Z, { guildId: p.id }) : (0, l.jsx)(R.Z, { guildId: p.id })),
               ],
           })
         : null;

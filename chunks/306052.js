@@ -11,7 +11,7 @@ var r = n(442837),
     u = n(594174),
     m = n(726985),
     p = n(474936),
-    g = n(600961);
+    g = n(131662);
 let h = (e) => {
     let { isDevTools: t = !1 } = e,
         n = (0, r.e7)([u.default], () => u.default.getCurrentUser()),
@@ -19,10 +19,7 @@ let h = (e) => {
             let e = c.Z.getCreatedAtOverride();
             return null != e ? e.toISOString().substring(0, 10) : "";
         }),
-        f = (0, r.e7)([c.Z], () => c.Z.getPremiumTypeOverride()),
-        b = (e) => {
-            (0, o.u)(new Date(e));
-        };
+        f = (0, r.e7)([c.Z], () => c.Z.getPremiumTypeOverride());
     return (0, i.jsxs)("div", {
         children: [
             (0, i.jsxs)(d.F, {
@@ -59,7 +56,10 @@ let h = (e) => {
                         children: (0, i.jsx)("input", {
                             type: "date",
                             value: h,
-                            onChange: (e) => b(e.target.value),
+                            onChange: (e) => {
+                                var t;
+                                return (t = e.target.value), void (0, o.u)(new Date(t));
+                            },
                             className: g.datePicker,
                         }),
                     }),

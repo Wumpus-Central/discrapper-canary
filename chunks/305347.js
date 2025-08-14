@@ -11,7 +11,7 @@ var i = n(120356),
     l = n(451478),
     c = n(768581),
     u = n(624138),
-    d = n(533465);
+    d = n(272714);
 function f(e) {
     let { guildName: t, iconSize: n, className: i } = e,
         a = (0, u.Zg)(t);

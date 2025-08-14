@@ -8,7 +8,7 @@ var s = n(481060),
     l = n(613087),
     c = n(472144),
     u = n(46140),
-    d = n(951802);
+    d = n(245565);
 let p = (e) => {
     let { contentLocation: t, quest: n, progressBarRef: p, isExpanded: m, percentComplete: g, activeScreen: f } = e,
         x = (0, o.eQ)(n),

@@ -209,7 +209,7 @@ function M(e, t, n, r, i) {
         content: [x()],
     };
 }
-function j(e, t, n, r) {
+function k(e, t, n, r) {
     let i = A(e),
         o = N(t),
         a = R(t.isForumPost);
@@ -252,7 +252,7 @@ function j(e, t, n, r) {
                   content: [o],
               };
 }
-function k(e, t, n, r) {
+function j(e, t, n, r) {
     if (!e.canViewChannel) return C(e, t);
     if (!e.isMentionable) return D("#".concat(e.name));
     let i = {
@@ -272,7 +272,7 @@ function k(e, t, n, r) {
             });
         else return L(r);
     let a = e.guildId === n;
-    return v({}, i, j(o, e, a, null != t));
+    return v({}, i, k(o, e, a, null != t));
 }
 let U = {
         order: E.ZP.order,
@@ -286,7 +286,7 @@ let U = {
                     id: r,
                 };
             let i = P(r, n.mentionChannels);
-            return null == i ? M(null, r, null, S(n.channelId)) : k(i, null, S(n.channelId));
+            return null == i ? M(null, r, null, S(n.channelId)) : j(i, null, S(n.channelId));
         },
     },
     G = {
@@ -305,7 +305,7 @@ let U = {
                     a = e[3];
                 if (null == o) return w(r);
                 let s = P(o, null);
-                return null == s ? M(i, o, a, S(n.channelId), r) : k(s, a, S(n.channelId), r);
+                return null == s ? M(i, o, a, S(n.channelId), r) : j(s, a, S(n.channelId), r);
             },
         },
         mediaPostLink: {
@@ -320,9 +320,9 @@ let U = {
                     s = e[4];
                 if (null == o || null == a) return w(r);
                 let l = P(a, null);
-                if (null != l) return k(l, s, S(n.channelId), r);
+                if (null != l) return j(l, s, S(n.channelId), r);
                 let c = P(o, null);
-                return null != c ? k(c, s, S(n.channelId), r) : M(i, o, s, S(n.channelId), r);
+                return null != c ? j(c, s, S(n.channelId), r) : M(i, o, s, S(n.channelId), r);
             },
         },
     };

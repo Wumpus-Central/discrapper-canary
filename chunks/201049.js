@@ -15,7 +15,7 @@ var i = t(255367),
     g = t(981631),
     b = t(185923),
     y = t(388032),
-    f = t(196650);
+    f = t(851458);
 function h(e) {
     var n;
     let { transitionState: t, onClose: h, channelId: x, guildId: C, tag: O } = e,
@@ -65,25 +65,11 @@ function h(e) {
                     h();
             }
         },
-        T = (e) => {
-            null != e &&
-                B(
-                    null != e.id
-                        ? {
-                              id: e.id,
-                              name: e.name,
-                          }
-                        : {
-                              id: void 0,
-                              name: e.optionallyDiverseSequence,
-                          },
-                );
-        },
-        R = l.useCallback((e) => _(e), []),
-        D = l.useRef(null);
+        T = l.useCallback((e) => _(e), []),
+        R = l.useRef(null);
     return (
         (0, s.ZP)(() => {
-            null != D.current && D.current.focus();
+            null != R.current && R.current.focus();
         }),
         (0, i.jsxs)(a.Modal, {
             title: k ? y.intl.string(y.t.zeVg5e) : y.intl.string(y.t["/jubeH"]),
@@ -131,7 +117,19 @@ function h(e) {
                                         closePopout: n,
                                         onSelectEmoji: (e) => {
                                             let { emoji: t, willClose: i } = e;
-                                            T(t), i && n();
+                                            null != t &&
+                                                B(
+                                                    null != t.id
+                                                        ? {
+                                                              id: t.id,
+                                                              name: t.name,
+                                                          }
+                                                        : {
+                                                              id: void 0,
+                                                              name: t.optionallyDiverseSequence,
+                                                          },
+                                                ),
+                                                i && n();
                                         },
                                         pickerIntention: b.Hz.COMMUNITY_CONTENT,
                                         onNavigateAway: h,
@@ -210,12 +208,12 @@ function h(e) {
                             }),
                         }),
                         (0, i.jsx)(r.Is, {
-                            inputRef: D,
+                            inputRef: R,
                             maxLength: 20,
                             value: P,
                             inputClassName: f.input,
                             placeholder: y.intl.string(y.t["5vpeb2"]),
-                            onChange: R,
+                            onChange: T,
                             autoFocus: !0,
                             onKeyDown: (e) => {
                                 e.keyCode === g.yXg.ENTER && P.length > 0 && (P.length > 0 && z(), e.preventDefault());

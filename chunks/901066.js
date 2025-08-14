@@ -10,21 +10,21 @@ var l = n(255367),
     u = n(906732),
     m = n(252618),
     x = n(693546),
-    h = n(246364),
-    j = n(328977),
+    j = n(246364),
+    h = n(328977),
     b = n(666233),
     f = n(360328),
-    p = n(172751),
-    v = n(892001),
-    g = n(598077),
+    v = n(172751),
+    g = n(892001),
+    p = n(598077),
     C = n(430824),
     _ = n(709054),
     T = n(51144),
     E = n(981631),
     N = n(131085),
     S = n(388032),
-    P = n(494469),
-    R = n(466314);
+    P = n(59678),
+    R = n(428331);
 function I(e) {
     let { icon: t, label: n, onClick: r, disabled: a } = e;
     return (0, l.jsxs)(d.P3F, {
@@ -50,7 +50,7 @@ function Z(e) {
     let { user: t, guildId: n, joinRequest: r } = e,
         { analyticsLocations: a } = (0, u.ZP)(),
         s = () => {
-            (0, v.openUserProfileModal)({
+            (0, g.openUserProfileModal)({
                 userId: t.id,
                 joinRequestId: r.joinRequestId,
                 sourceAnalyticsLocations: a,
@@ -85,7 +85,7 @@ function Z(e) {
                                             children: null == t ? void 0 : t.globalName,
                                         }),
                                     }),
-                                    (0, l.jsx)(p.ZP, {
+                                    (0, l.jsx)(v.ZP, {
                                         primaryGuild: null == t ? void 0 : t.primaryGuild,
                                         userId: null == t ? void 0 : t.id,
                                         contextGuildId: n,
@@ -152,7 +152,7 @@ function w(e) {
         ],
     });
 }
-function y(e) {
+function M(e) {
     var t;
     let { joinRequest: n } = e,
         { actionedAt: r, actionedByUser: a, rejectionReason: i } = n;
@@ -202,7 +202,7 @@ function y(e) {
         ],
     });
 }
-function M(e) {
+function O(e) {
     var t;
     let { joinRequest: n } = e,
         { actionedAt: r, actionedByUser: a } = n;
@@ -246,7 +246,7 @@ function M(e) {
         ],
     });
 }
-function O(e) {
+function y(e) {
     let { user: t, joinRequest: n } = e;
     return (0, l.jsxs)(l.Fragment, {
         children: [
@@ -296,13 +296,13 @@ function O(e) {
 }
 function A(e) {
     let { guildId: t } = e,
-        n = (0, j.L)({ guildId: t }),
+        n = (0, h.L)({ guildId: t }),
         { user: a } = null != n ? n : {},
         s = r.useMemo(() => {
             var e;
             return null != (e = null == n ? void 0 : n.formResponses) ? e : [];
         }, [null == n ? void 0 : n.formResponses]),
-        o = r.useMemo(() => (null != a ? new g.Z(a) : null), [a]),
+        o = r.useMemo(() => (null != a ? new p.Z(a) : null), [a]),
         u = (0, c.e7)([C.Z], () => C.Z.getGuild(t), [t]);
     return ((0, m.Tt)({
         subsection: S.intl.string(S.t.nqrK8f),
@@ -324,14 +324,14 @@ function A(e) {
                                       guildId: t,
                                       joinRequest: n,
                                   }),
-                                  n.applicationStatus === h.wB.SUBMITTED &&
+                                  n.applicationStatus === j.wB.SUBMITTED &&
                                       (0, l.jsx)(w, {
                                           user: o,
                                           guildId: t,
                                           joinRequest: n,
                                       }),
-                                  n.applicationStatus === h.wB.REJECTED && (0, l.jsx)(y, { joinRequest: n }),
-                                  n.applicationStatus === h.wB.APPROVED && (0, l.jsx)(M, { joinRequest: n }),
+                                  n.applicationStatus === j.wB.REJECTED && (0, l.jsx)(M, { joinRequest: n }),
+                                  n.applicationStatus === j.wB.APPROVED && (0, l.jsx)(O, { joinRequest: n }),
                               ],
                           }),
                           (0, l.jsxs)("div", {
@@ -343,7 +343,7 @@ function A(e) {
                                       user: o,
                                       showRequirements: !1,
                                   }),
-                                  (0, l.jsx)(O, {
+                                  (0, l.jsx)(y, {
                                       guildId: t,
                                       user: o,
                                       joinRequest: n,

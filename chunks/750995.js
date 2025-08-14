@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => b });
 var r = n(255367);
 n(73800);
 var i = n(704215),
@@ -13,16 +13,7 @@ var i = n(704215),
     f = n(228392),
     h = n(981631),
     g = n(921944);
-let m = (e) => {
-    var t;
-    let n = d.Z.getGuild(e),
-        r = !!(null == n ? void 0 : n.features.has(h.oNc.COMMUNITY)),
-        l = p.Z.can(h.Plq.MANAGE_CHANNELS, n),
-        a = (0, s.zu)(i.z.FORUM_CHANNEL_UPSELL_MODAL),
-        o = null != (t = u.Z.getMemberCount(e)) ? t : 0;
-    return r && l && !a && o >= 200;
-};
-class b extends o.Z {
+class m extends o.Z {
     _initialize() {
         a.Z.subscribe("CHANNEL_SELECT", this.handleChannelSelect);
     }
@@ -31,7 +22,19 @@ class b extends o.Z {
     }
     handleChannelSelect(e) {
         let { guildId: t } = e;
-        if (null == t || !m(t)) return;
+        if (
+            null == t ||
+            !((e) => {
+                var t;
+                let n = d.Z.getGuild(e),
+                    r = !!(null == n ? void 0 : n.features.has(h.oNc.COMMUNITY)),
+                    l = p.Z.can(h.Plq.MANAGE_CHANNELS, n),
+                    a = (0, s.zu)(i.z.FORUM_CHANNEL_UPSELL_MODAL),
+                    o = null != (t = u.Z.getMemberCount(e)) ? t : 0;
+                return r && l && !a && o >= 200;
+            })(t)
+        )
+            return;
         (0, f.qz)(), (0, c.kk)(i.z.FORUM_CHANNEL_UPSELL_MODAL);
         let a = function () {
             let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : g.L.DISMISS;
@@ -100,4 +103,4 @@ class b extends o.Z {
         );
     }
 }
-let _ = new b();
+let b = new m();

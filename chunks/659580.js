@@ -21,7 +21,7 @@ var i = n(990547),
     O = n(345655),
     v = n(65154),
     I = n(388032),
-    T = n(428586);
+    T = n(895634);
 function S(e) {
     let {
             onClose: t,
@@ -43,8 +43,8 @@ function S(e) {
         name: i.ImpressionNames.AUDIO_DEVICE_MENU,
         properties: { location_stack: M },
     });
-    let j = (0, b.Z)(L),
-        k = (0, f.M)({
+    let k = (0, b.Z)(L),
+        j = (0, f.M)({
             deviceType: v.h7.AUDIO_INPUT,
             analyticsLocations: M,
             asSubmenu: w,
@@ -73,7 +73,7 @@ function S(e) {
             navId: "audio-device-context",
             "aria-label": I.intl.string(I.t.ZR1Ss7),
             children: [
-                S && k,
+                S && j,
                 n && U,
                 A && B,
                 !w && N && G !== O._.STUDIO
@@ -112,7 +112,7 @@ function S(e) {
                                   disabled: G === O._.STUDIO,
                               })
                             : null,
-                        j,
+                        k,
                     ],
                 }),
             ],

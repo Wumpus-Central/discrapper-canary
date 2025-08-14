@@ -12,13 +12,12 @@ var r = a(394798),
     o = a(255768);
 let i = [];
 function c(t) {
-    let e,
-        a = t.defaultIntegrations || [],
-        _ = t.integrations;
-    a.forEach((t) => {
+    let e = t.defaultIntegrations || [],
+        a = t.integrations;
+    e.forEach((t) => {
         t.isDefaultInstance = !0;
     });
-    let n = (function (t) {
+    let _ = (function (t) {
             let e = {};
             return (
                 t.forEach((t) => {
@@ -28,13 +27,13 @@ function c(t) {
                 }),
                 Object.values(e)
             );
-        })(Array.isArray(_) ? [...a, ..._] : "function" == typeof _ ? (0, r.lE)(_(a)) : a),
-        o = n.findIndex((t) => "Debug" === t.name);
-    if (o > -1) {
-        let [t] = n.splice(o, 1);
-        n.push(t);
+        })(Array.isArray(a) ? [...e, ...a] : "function" == typeof a ? (0, r.lE)(a(e)) : e),
+        n = _.findIndex((t) => "Debug" === t.name);
+    if (n > -1) {
+        let [t] = _.splice(n, 1);
+        _.push(t);
     }
-    return n;
+    return _;
 }
 function E(t, e) {
     let a = {};

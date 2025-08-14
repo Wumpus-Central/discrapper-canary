@@ -1,8 +1,8 @@
 n.d(t, { Z: () => C }), n(388685);
 var r = n(255367),
     l = n(73800),
-    s = n(120356),
-    i = n.n(s),
+    i = n(120356),
+    s = n.n(i),
     a = n(392711),
     o = n(399606),
     u = n(481060),
@@ -15,31 +15,31 @@ var r = n(255367),
     m = n(433355),
     I = n(271383),
     g = n(594174),
-    f = n(189432),
-    N = n(356778),
-    h = n(370595),
+    N = n(189432),
+    h = n(356778),
+    f = n(370595),
     O = n(50493),
     p = n(981631),
-    R = n(983843),
-    S = n(194445);
+    R = n(87819),
+    S = n(125134);
 function C(e) {
     var t, n;
-    let { userId: s, guildId: C, location: v, className: D, onNavigate: b } = e,
-        L = l.useRef(null),
-        x = (0, o.e7)([m.ZP], () => m.ZP.getGuildSidebarState(C), [C]),
-        U = l.useRef(0),
-        [M, P] = l.useState(null != (t = null == x ? void 0 : x.details.additionalSearchQuery) ? t : {}),
-        j = (0, N.z0)(s, C, {
-            addtionalQuery: M,
+    let { userId: i, guildId: C, location: D, className: L, onNavigate: U } = e,
+        M = l.useRef(null),
+        v = (0, o.e7)([m.ZP], () => m.ZP.getGuildSidebarState(C), [C]),
+        b = l.useRef(0),
+        [x, P] = l.useState(null != (t = null == v ? void 0 : v.details.additionalSearchQuery) ? t : {}),
+        j = (0, h.z0)(i, C, {
+            addtionalQuery: x,
             shouldDispatch: !0,
         }),
-        y = (0, o.e7)([g.default], () => g.default.getUser(s), [s]),
-        w = (0, o.e7)([I.ZP], () => I.ZP.getMember(C, s), [C, s]);
+        y = (0, o.e7)([g.default], () => g.default.getUser(i), [i]),
+        w = (0, o.e7)([I.ZP], () => I.ZP.getMember(C, i), [C, i]);
     (0, c.Ng)(() => {
-        let e = null == x ? void 0 : x.details.scrollOffset;
+        let e = null == v ? void 0 : v.details.scrollOffset;
         if (null != e) {
             var t;
-            null == (t = L.current) ||
+            null == (t = M.current) ||
                 t.scrollTo({
                     to: e,
                     animate: !1,
@@ -48,21 +48,21 @@ function C(e) {
     });
     let G = l.useCallback(
             (e) => {
-                null != x &&
-                    ((U.current = e.target.scrollTop),
-                    (0, f.r)(C, s, x.baseChannelId, {
+                null != v &&
+                    ((b.current = e.target.scrollTop),
+                    (0, N.r)(C, i, v.baseChannelId, {
                         modViewPanel: O.k.MESSAGE_HISTORY,
-                        additionalSearchQuery: M,
-                        scrollOffset: U.current,
+                        additionalSearchQuery: x,
+                        scrollOffset: b.current,
                     }));
             },
-            [C, s, x, M],
+            [C, i, v, x],
         ),
         k = (0, a.throttle)(G, 300),
         F = l.useCallback(
             (e) => {
                 var t, n;
-                if (null == x) return;
+                if (null == v) return;
                 let r =
                     ((t = (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
@@ -88,7 +88,7 @@ function C(e) {
                                 });
                         }
                         return e;
-                    })({}, M)),
+                    })({}, x)),
                     (n = n = { offset: 25 * e }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
@@ -104,15 +104,15 @@ function C(e) {
                           }),
                     t);
                 P(r),
-                    (0, f.r)(C, s, x.baseChannelId, {
+                    (0, N.r)(C, i, v.baseChannelId, {
                         modViewPanel: O.k.MESSAGE_HISTORY,
                         additionalSearchQuery: r,
-                        scrollOffset: U.current,
+                        scrollOffset: b.current,
                     });
             },
-            [C, s, x, M],
+            [C, i, v, x],
         ),
-        z = null != (n = null == M ? void 0 : M.offset) ? n : 0,
+        z = null != (n = null == x ? void 0 : x.offset) ? n : 0,
         Z = (0, o.e7)([d.Z], () => {
             if (null == j.result) return [];
             let e = j.result.messages,
@@ -170,16 +170,16 @@ function C(e) {
     return null == y || null == w || null == B
         ? null
         : (0, r.jsxs)("div", {
-              className: i()(R.container, D),
+              className: s()(R.container, L),
               children: [
-                  (0, r.jsx)(h.Z, {
+                  (0, r.jsx)(f.Z, {
                       guildId: C,
-                      userId: s,
-                      onNavigate: b,
+                      userId: i,
+                      onNavigate: U,
                   }),
                   (0, r.jsx)(u.Den, {
                       className: S.innerContainer,
-                      ref: L,
+                      ref: M,
                       onScroll: k,
                       children: (0, r.jsx)(T.Z, {
                           searchResults: Z,

@@ -3,26 +3,26 @@ var r = n(255367),
     i = n(73800),
     l = n(120356),
     o = n.n(l),
-    s = n(717976),
-    a = n(793030),
+    a = n(717976),
+    s = n(793030),
     c = n(442837),
     u = n(704215),
     d = n(481060),
-    h = n(239091),
-    p = n(100527),
-    f = n(243778),
+    p = n(239091),
+    f = n(100527),
+    h = n(243778),
     g = n(667815),
     m = n(531572),
     b = n(259580),
     O = n(538445),
     _ = n(639777),
     y = n(495804),
-    C = n(441536),
-    v = n(921944),
-    j = n(93841),
+    v = n(441536),
+    j = n(921944),
+    C = n(989308),
     E = n(388032),
-    S = n(263977);
-function x(e) {
+    x = n(931942);
+function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -47,7 +47,7 @@ function x(e) {
     }
     return e;
 }
-function I(e, t) {
+function P(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -65,12 +65,12 @@ function I(e, t) {
         e
     );
 }
-function P(e) {
-    let { guild: t, tooltipTypes: l, withMargin: P } = e,
+function I(e) {
+    let { guild: t, tooltipTypes: l, withMargin: I } = e,
         N = (0, y.Z)(t, "GuildPowerupsProgressBar"),
         w = (0, _.Z)(t.id),
         Z = i.useCallback(() => {
-            (0, C.Z)(t.id, p.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY);
+            (0, v.Z)(t.id, f.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY);
         }, [t.id]),
         T = (0, c.e7)([m.Z], () => {
             var e;
@@ -97,11 +97,11 @@ function P(e) {
     }, [A, D]);
     let L = T >= N,
         M = i.useRef(null),
-        [k, U] = (0, f.US)(l),
+        [k, U] = (0, h.US)(l),
         G = (e) =>
             (0, r.jsx)(
                 d.P3F,
-                I(x({}, e), {
+                P(S({}, e), {
                     "aria-label": void 0,
                     role: "button",
                     focusProps: {
@@ -114,52 +114,52 @@ function P(e) {
                         var t;
                         null == e || null == (t = e.onClick) || t.call(e), Z();
                     },
-                    className: o()(S.container, { [S.containerWithMargin]: P }),
+                    className: o()(x.container, { [x.containerWithMargin]: I }),
                     onContextMenu: (e) => {
                         w &&
-                            (0, h.jW)(e, async () => {
+                            (0, p.jW)(e, async () => {
                                 let { default: e } = await n.e("8570").then(n.bind(n, 651138));
-                                return (n) => (0, r.jsx)(e, I(x({}, n), { guild: t }));
+                                return (n) => (0, r.jsx)(e, P(S({}, n), { guild: t }));
                             });
                     },
                     children: (0, r.jsxs)("div", {
-                        className: S.contentContainer,
+                        className: x.contentContainer,
                         children: [
-                            (0, r.jsx)("div", { className: S.progressContainer }),
-                            (0, r.jsx)(s.animated.div, {
-                                className: o()(S.progress, { [S.progressLow]: A <= 5 }),
+                            (0, r.jsx)("div", { className: x.progressContainer }),
+                            (0, r.jsx)(a.animated.div, {
+                                className: o()(x.progress, { [x.progressLow]: A <= 5 }),
                                 style: R,
                             }),
                             (0, r.jsxs)("div", {
-                                className: S.textContainer,
+                                className: x.textContainer,
                                 children: [
                                     (0, r.jsxs)("div", {
-                                        className: S.textContentContainer,
+                                        className: x.textContentContainer,
                                         children: [
-                                            (0, r.jsx)(a.xv, {
-                                                className: S.text,
+                                            (0, r.jsx)(s.xv, {
+                                                className: x.text,
                                                 variant: "text-xs/semibold",
-                                                children: E.intl.string(j.default.NI6IhY),
+                                                children: E.intl.string(C.default.NI6IhY),
                                             }),
                                             t.premiumSubscriberCount >= N &&
-                                                (0, r.jsx)(a.xv, {
-                                                    className: S.text,
+                                                (0, r.jsx)(s.xv, {
+                                                    className: x.text,
                                                     variant: "text-xs/semibold",
                                                     children: "\uD83C\uDF89",
                                                 }),
                                         ],
                                     }),
                                     (0, r.jsxs)("div", {
-                                        className: S.textContentContainer,
+                                        className: x.textContentContainer,
                                         children: [
-                                            (0, r.jsx)(a.xv, {
-                                                className: o()(S.text, S.boostCountText),
+                                            (0, r.jsx)(s.xv, {
+                                                className: o()(x.text, x.boostCountText),
                                                 variant: "text-xs/semibold",
                                                 children: L
-                                                    ? E.intl.formatToPlainString(j.default["Ehpq+/"], {
+                                                    ? E.intl.formatToPlainString(C.default["Ehpq+/"], {
                                                           appliedBoostCount: T,
                                                       })
-                                                    : E.intl.formatToPlainString(j.default["/rbPDg"], {
+                                                    : E.intl.formatToPlainString(C.default["/rbPDg"], {
                                                           appliedBoostCount: T,
                                                           maxBoostCount: N,
                                                       }),
@@ -168,7 +168,7 @@ function P(e) {
                                                 width: 12,
                                                 height: 12,
                                                 direction: b.Z.Directions.RIGHT,
-                                                className: o()(S.text, S.boostCountText),
+                                                className: o()(x.text, x.boostCountText),
                                             }),
                                         ],
                                     }),
@@ -192,7 +192,7 @@ function P(e) {
               align: "top",
               shouldShow: !0,
               closeOnScroll: !0,
-              onRequestClose: () => U(v.L.INDIRECT_ACTION),
+              onRequestClose: () => U(j.L.INDIRECT_ACTION),
               animation: d.yRy.Animation.TRANSLATE,
               children: (e) =>
                   (0, r.jsx)("div", {
@@ -204,7 +204,7 @@ function P(e) {
 }
 function N(e) {
     let { guild: t, tooltipTypes: n, withMargin: i } = e;
-    return (0, r.jsx)(P, {
+    return (0, r.jsx)(I, {
         guild: t,
         tooltipTypes: n,
         withMargin: i,

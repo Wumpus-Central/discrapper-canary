@@ -31,8 +31,8 @@ var r = n(255367),
     D = n(981631),
     L = n(231338),
     x = n(388032),
-    M = n(406897);
-function j(e, t, n) {
+    M = n(85468);
+function k(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -45,7 +45,7 @@ function j(e, t, n) {
         e
     );
 }
-function k(e) {
+function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -56,7 +56,7 @@ function k(e) {
                 }),
             )),
             r.forEach(function (t) {
-                j(e, t, n[t]);
+                k(e, t, n[t]);
             });
     }
     return e;
@@ -72,7 +72,7 @@ function F(e) {
     let {
             quest: v,
             memberListItemRef: N,
-            applicationStream: j,
+            applicationStream: k,
             position: F,
             closePopout: V,
             updatePosition: H,
@@ -81,7 +81,7 @@ function F(e) {
         } = e,
         K = (0, s.e7)([b.Z], () => {
             var e;
-            return null != (e = b.Z.getChannel(null == j ? void 0 : j.channelId)) ? e : null;
+            return null != (e = b.Z.getChannel(null == k ? void 0 : k.channelId)) ? e : null;
         }),
         z = (0, P.hf)({
             quest: v,
@@ -146,7 +146,7 @@ function F(e) {
             ea.dispatch(D.CkL.POPOUT_CLOSE);
         },
         ed = "top" === F ? "".concat(U, " ").concat(U, " 0 0") : "0 0 ".concat(U, " ").concat(U);
-    if (null == v || q || (X && !Z(j, K))) return null;
+    if (null == v || q || (X && !Z(k, K))) return null;
     let ef = () => {
             (0, I._3)({
                 questId: v.id,
@@ -178,7 +178,7 @@ function F(e) {
             e.stopPropagation(), ef();
         },
         eh = () => {
-            Z(j, K) && null != K
+            Z(k, K) && null != K
                 ? ((0, I._3)({
                       questId: v.id,
                       questContent: S.jn.MEMBERS_LIST,
@@ -191,7 +191,7 @@ function F(e) {
                       return (t) =>
                           (0, r.jsx)(
                               e,
-                              k(
+                              j(
                                   {
                                       username: null != W ? W : "",
                                       onConfirm: () => (
@@ -203,7 +203,7 @@ function F(e) {
                                               sourceQuestContent: S.jn.MEMBERS_LIST,
                                           }),
                                           d.default.selectVoiceChannel(K.id),
-                                          (0, f.iV)(j)
+                                          (0, f.iV)(k)
                                       ),
                                   },
                                   t,
@@ -227,7 +227,7 @@ function F(e) {
                         handleClickCta: e_,
                         tileAssetType: "reward",
                     }
-                  : Z(j, K)
+                  : Z(k, K)
                     ? {
                           headerText: x.intl.string(x.t.Bz6SkJ),
                           ctaText: x.intl.string(x.t.BXFP39),
@@ -351,6 +351,6 @@ function V(e) {
               questContent: S.jn.MEMBERS_LIST,
               trackGuildAndChannelMetadata: !0,
               sourceQuestContent: S.jn.MEMBERS_LIST,
-              children: (t) => (0, r.jsx)(F, k({ impressionRef: t }, e)),
+              children: (t) => (0, r.jsx)(F, j({ impressionRef: t }, e)),
           });
 }

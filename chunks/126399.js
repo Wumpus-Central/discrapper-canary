@@ -57,10 +57,17 @@ class p extends u.Z {
               : (l.Z.setFingerprint(i), (0, o.by)());
     }
     constructor(...e) {
-        var t, n;
         super(...e),
-            (t = "handleEnd"),
-            (n = (e) => {
+            (function (e, t, n) {
+                t in e
+                    ? Object.defineProperty(e, t, {
+                          value: n,
+                          enumerable: !0,
+                          configurable: !0,
+                          writable: !0,
+                      })
+                    : (e[t] = n);
+            })(this, "handleEnd", (e) => {
                 let { handoffToken: t, fingerprint: n } = e,
                     r = a.Z.key;
                 null != r && a.Z.isHandoffAvailable()
@@ -71,15 +78,7 @@ class p extends u.Z {
                           handoffSource: void 0,
                       })
                     : (l.Z.setFingerprint(null), (0, o.by)());
-            }),
-            t in this
-                ? Object.defineProperty(this, t, {
-                      value: n,
-                      enumerable: !0,
-                      configurable: !0,
-                      writable: !0,
-                  })
-                : (this[t] = n);
+            });
     }
 }
 let f = new p();

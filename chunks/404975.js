@@ -7,7 +7,7 @@ var i = n(255367),
     r = n(59662),
     u = n(829210),
     c = n(388032),
-    d = n(183313);
+    d = n(845435);
 function f(e) {
     let { root: t, header: n, footer: l } = e,
         { showNavigationMobile: f } = (0, r.t)();

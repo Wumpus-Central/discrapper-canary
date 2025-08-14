@@ -41,8 +41,8 @@ var c = n(442837),
     L = n(871118),
     x = n(565138),
     M = n(66999),
-    j = n(359110),
-    k = n(12168),
+    k = n(359110),
+    j = n(12168),
     U = n(237583),
     G = n(131704),
     B = n(592125),
@@ -72,7 +72,7 @@ var c = n(442837),
     eu = n(981631),
     ed = n(959517),
     ef = n(388032),
-    e_ = n(143595);
+    e_ = n(951948);
 function ep(e, t, n) {
     return (
         t in e
@@ -197,12 +197,12 @@ function eI(e) {
         D = null != R && 0 === s.length ? [R] : s,
         L = D.length > 0,
         x = D.length >= 2,
-        [M, j] = i.useState(!L),
-        k = X.ZP.getName(null == t ? void 0 : t.guild_id, null == t ? void 0 : t.id, n),
+        [M, k] = i.useState(!L),
+        j = X.ZP.getName(null == t ? void 0 : t.guild_id, null == t ? void 0 : t.id, n),
         U =
             null != t && g
                 ? ef.intl.formatToPlainString(ef.t["8lzR/f"], { channel: "#".concat(t.name) })
-                : ef.intl.formatToPlainString(ef.t["4c+CAw"], { channel: "@".concat(k) }),
+                : ef.intl.formatToPlainString(ef.t["4c+CAw"], { channel: "@".concat(j) }),
         G = g ? ef.intl.string(ef.t.Z2CUgo) : ef.intl.string(ef.t.XLGiTE),
         Z = async (e) => {
             let r,
@@ -278,7 +278,7 @@ function eI(e) {
             E((e) => !e), M && (null == b || b.focus());
         },
         K = (e) => {
-            j(e), e && (null == b || b.focus());
+            k(e), e && (null == b || b.focus());
         };
     return (0, r.jsxs)("div", {
         style: { pointerEvents: I ? "none" : "all" },
@@ -417,7 +417,7 @@ let eT = (e) => {
                               "aria-label": ef.intl.formatToPlainString(ef.t.kilW3t, { emojiName: t.name }),
                               color: p.ua7.Colors.PRIMARY,
                               shouldShow: !s && void 0,
-                              children: (0, r.jsx)(k.u, {
+                              children: (0, r.jsx)(j.u, {
                                   emoji: t,
                                   isDisabled: !o,
                                   onClick: () => n({ emoji: t }),
@@ -683,8 +683,8 @@ function eC(e) {
             { onOpened: () => (null == h ? void 0 : h(ec.xP.OPENED_GAME_PROFILE)) },
         ),
         N = I ? A : void 0,
-        { activity: x, activityApplication: M, fallbackApplication: j } = (0, en.Z)(v),
-        { largeImage: k, smallImage: U } = (0, Q.YC)(x, null != M ? M : j),
+        { activity: x, activityApplication: M, fallbackApplication: k } = (0, en.Z)(v),
+        { largeImage: j, smallImage: U } = (0, Q.YC)(x, null != M ? M : k),
         { largeImage: G } = (0, Q.rv)({ entry: v });
     return (0, r.jsxs)("div", {
         className: e_.popoutContentWrapper,
@@ -722,11 +722,11 @@ function eC(e) {
                     (0, r.jsxs)("div", {
                         className: e_.streamingPopoutHeader,
                         children: [
-                            null != k &&
+                            null != j &&
                                 (0, r.jsx)("div", {
                                     className: e_.popoutThumbnailContainer,
                                     children: (0, r.jsx)(ee.E, {
-                                        image: k,
+                                        image: j,
                                         smallImage: U,
                                         onClick: null != l ? l : N,
                                         size: ee.J.SIZE_72,
@@ -817,7 +817,7 @@ function eP(e) {
                       children: [
                           (0, r.jsxs)(p.P3F, {
                               "aria-label": ef.intl.string(ef.t["W/A4Qk"]),
-                              onClick: () => (0, j.Kh)(n.id),
+                              onClick: () => (0, k.Kh)(n.id),
                               className: e_.voiceChannelPopoutReactorChannel,
                               children: [
                                   (0, r.jsx)(x.Z, {
@@ -893,7 +893,7 @@ function ew(e) {
         };
     let E = null != a,
         b = () => {
-            m.Z.updateChatOpen(s.id, !0), (0, j.Kh)(s.id), null == o || o(s);
+            m.Z.updateChatOpen(s.id, !0), (0, k.Kh)(s.id), null == o || o(s);
         },
         y = () => {
             I.Z.handleVoiceConnect({

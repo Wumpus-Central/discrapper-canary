@@ -24,7 +24,7 @@ var r = n(255367),
     S = n(666984),
     A = n(670451),
     N = n(228168),
-    C = n(861242);
+    C = n(704543);
 function R(e, t, n) {
     return (
         t in e
@@ -82,19 +82,19 @@ function L(e) {
         L = (0, p.Dt)(),
         x = (0, p.Dt)(),
         { themeType: M } = (0, b.z)(),
-        j = (0, _.Z)({
+        k = (0, _.Z)({
             activity: o,
             user: t,
         }),
-        k = (0, E.Z)(o),
-        U = null != k.text && "" !== k.text,
+        j = (0, E.Z)(o),
+        U = null != j.text && "" !== j.text,
         { largeImage: G } = (0, d.FO)(o),
         { analyticsLocations: B } = (0, u.ZP)(c.Z.USER_PROFILE_LIVE_ACTIVITY_CARD),
         Z = (0, m.Z)({
             display: "live",
             user: t,
             activity: o,
-            entry: j,
+            entry: k,
             analyticsLocations: B,
         }),
         F = (0, g.Z)({
@@ -169,12 +169,12 @@ function L(e) {
             children: [
                 (0, r.jsx)(
                     v.Z,
-                    D(P({ textId: x }, k), {
+                    D(P({ textId: x }, j), {
                         contextMenu: (0, r.jsx)(A.Z, {
                             display: "live",
                             user: t,
                             activity: o,
-                            entry: j,
+                            entry: k,
                             onClose: w,
                         }),
                     }),

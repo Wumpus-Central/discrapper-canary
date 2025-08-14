@@ -1,8 +1,8 @@
-n.d(t, { Z: () => f });
+n.d(t, { Z: () => N });
 var r = n(255367),
     l = n(73800),
-    s = n(120356),
-    i = n.n(s),
+    i = n(120356),
+    s = n.n(i),
     a = n(399606),
     o = n(481060),
     u = n(893966),
@@ -14,17 +14,17 @@ var r = n(255367),
     T = n(776767),
     m = n(981631),
     I = n(388032),
-    g = n(983843);
-function f(e) {
+    g = n(87819);
+function N(e) {
     let { member: t } = e,
         n = (0, a.e7)([_.Z], () => _.Z.getGuild(t.guildId)),
-        s = (0, a.e7)([d.Z], () => d.Z.getSortedRoles(t.guildId)),
-        f = l.useMemo(
-            () => s.filter((e) => e.id !== t.highestRoleId && t.roles.includes(e.id)),
-            [t.roles, t.highestRoleId, s],
+        i = (0, a.e7)([d.Z], () => d.Z.getSortedRoles(t.guildId)),
+        N = l.useMemo(
+            () => i.filter((e) => e.id !== t.highestRoleId && t.roles.includes(e.id)),
+            [t.roles, t.highestRoleId, i],
         ),
-        N = (0, a.e7)([u.Z], () => u.Z.getEnhancedMember(t.guildId, t.userId), [t.guildId, t.userId]),
-        h = (0, c.zq)(N),
+        h = (0, a.e7)([u.Z], () => u.Z.getEnhancedMember(t.guildId, t.userId), [t.guildId, t.userId]),
+        f = (0, c.zq)(h),
         O = (0, c.vN)(t),
         p = (0, a.e7)([A.Z], () => A.Z.can(m.Plq.MANAGE_ROLES, n), [n]);
     return null == n
@@ -49,14 +49,14 @@ function f(e) {
                                                     onMouseEnter: n,
                                                     onMouseLeave: l,
                                                     children: (0, r.jsx)(E.Z, {
-                                                        className: i()(g.roleTooltipItem, g.highestRole),
-                                                        role: h,
+                                                        className: s()(g.roleTooltipItem, g.highestRole),
+                                                        role: f,
                                                         guildId: t.guildId,
                                                     }),
                                                 });
                                             },
                                         }),
-                                        f.map((e) =>
+                                        N.map((e) =>
                                             (0, r.jsx)(
                                                 E.Z,
                                                 {

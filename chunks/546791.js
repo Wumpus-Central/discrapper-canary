@@ -11,7 +11,7 @@ n.d(e, {
 var i = n(913527),
     r = n.n(i),
     l = n(292352),
-    a = n(916723),
+    a = n(345909),
     d = n(388032);
 let u = () => ({
         today: d.intl.string(a.default.VjIAQU),
@@ -32,8 +32,8 @@ let u = () => ({
               },
     o = (t, e, n) => {
         let i = r()().diff(r()(t), "s"),
-            l = e(),
-            a = r()(t).format("LL");
+            l = e();
+        r()(t).format("LL");
         return i < 86400
             ? l.today
             : i < 172800

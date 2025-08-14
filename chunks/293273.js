@@ -135,11 +135,11 @@ function M(e) {
     if (o()(D[t], [n, r])) return !1;
     null != r ? (D[t] = [n, r]) : delete D[t], L();
 }
-function j(e) {
+function k(e) {
     let { socketId: t } = e;
     delete D[t], L();
 }
-function k(e) {
+function j(e) {
     let { localActivities: t } = e;
     (D = C({}, t)), L();
 }
@@ -188,10 +188,10 @@ N(B, "displayName", "LocalActivityStore");
 let Z = new B(c.Z, {
     ROBLOX_SUBGAME_UPDATE: L,
     ROBLOX_SUBGAME_APPLICATION_FETCH_SUCCESS: L,
-    OVERLAY_INITIALIZE: k,
+    OVERLAY_INITIALIZE: j,
     START_SESSION: x,
     LOCAL_ACTIVITY_UPDATE: M,
-    RPC_APP_DISCONNECTED: j,
+    RPC_APP_DISCONNECTED: k,
     RUNNING_GAMES_CHANGE: L,
     LIBRARY_APPLICATION_FLAGS_UPDATE_SUCCESS: L,
     SPOTIFY_PLAYER_STATE: L,

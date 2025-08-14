@@ -10,18 +10,18 @@ var n = a(255367),
     m = a(600164),
     u = a(781792),
     f = a(430824),
-    b = a(645792),
-    h = a(981631),
+    h = a(645792),
+    b = a(981631),
     x = a(388032),
-    g = a(603116);
+    g = a(687212);
 function _(e) {
     let { guildId: t } = e,
         a = (0, o.e7)([f.Z], () => f.Z.getGuild(t)),
         [_, p] = r.useState(null),
-        [C, v] = r.useState(""),
-        { createMultipleConfettiAt: H } = r.useContext(c.h),
-        N = (0, o.e7)([d.Z], () => d.Z.useReducedMotion, []),
-        k = async (t) => {
+        [C, H] = r.useState(""),
+        { createMultipleConfettiAt: N } = r.useContext(c.h),
+        k = (0, o.e7)([d.Z], () => d.Z.useReducedMotion, []),
+        v = async (t) => {
             let { onClose: a, guildId: n } = e;
             t.preventDefault(), p(null);
             try {
@@ -31,12 +31,12 @@ function _(e) {
             }
         },
         { transitionState: j } = e,
-        S = f.Z.getGuildsArray().filter((e) => e.id !== t && e.features.has(h.oNc.HUB)).length > 0,
-        w = !N && !S && (null == a ? void 0 : a.features.has(h.oNc.HUB)) && (0, b.b)();
+        S = f.Z.getGuildsArray().filter((e) => e.id !== t && e.features.has(b.oNc.HUB)).length > 0,
+        w = !k && !S && (null == a ? void 0 : a.features.has(b.oNc.HUB)) && (0, h.b)();
     return (
         r.useEffect(() => {
-            w && H(window.innerWidth / 2, window.innerHeight / 2);
-        }, [H, w]),
+            w && N(window.innerWidth / 2, window.innerHeight / 2);
+        }, [N, w]),
         (0, n.jsxs)(l.Y0X, {
             className: g.__invalid_modalRoot,
             transitionState: j,
@@ -64,7 +64,7 @@ function _(e) {
                 }),
                 (0, n.jsxs)("form", {
                     className: g.formContent,
-                    onSubmit: k,
+                    onSubmit: v,
                     children: [
                         (0, n.jsx)(l.hzk, {
                             children: (0, n.jsx)(l.xJW, {
@@ -72,7 +72,7 @@ function _(e) {
                                 children: (0, n.jsx)(l.oil, {
                                     placeholder: x.intl.string(x.t.RfWvWF),
                                     onChange: (e) => {
-                                        v(e);
+                                        H(e);
                                     },
                                     error: null == _ ? void 0 : _.getFirstFieldErrorMessage("name"),
                                     value: C,

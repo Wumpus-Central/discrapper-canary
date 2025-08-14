@@ -31,7 +31,7 @@ var r = n(255367),
     R = n(182294),
     P = n(957825),
     w = n(388032),
-    D = n(891509),
+    D = n(553517),
     L = (function (e) {
         return (e.SYSTEM_MESSAGE = "system_message"), (e.COACHMARK = "coachmark"), e;
     })({});
@@ -43,8 +43,8 @@ function x(e) {
             onMouseEnter: L,
             onMouseLeave: x,
             popoutPosition: M,
-            analyticsPage: j,
-            analyticsSection: k,
+            analyticsPage: k,
+            analyticsSection: j,
             glow: U,
             giftIntentSecondaryAction: G,
         } = e,
@@ -92,8 +92,8 @@ function x(e) {
                 analyticsLocation: "system_message" === n ? r.chat : r.actionButtonCoachmark,
                 analyticsLocations: Z,
                 analyticsObject: {
-                    page: j,
-                    section: k,
+                    page: k,
+                    section: j,
                     object: C.qAy.BUTTON_CTA,
                     objectType: C.Qqv.GIFT,
                 },

@@ -10,9 +10,9 @@ var r = n(255367),
     s = n(355863),
     f = n(944486),
     _ = n(808506),
-    b = n(358085);
+    h = n(358085);
 n(606206);
-var h = n(998502),
+var b = n(998502),
     p = n(145597);
 n(371467);
 var g = n(41534),
@@ -26,16 +26,16 @@ let I = new c.Z("AppOverlay");
 async function S(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1000,
         r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 3;
-    if (b.isPlatformEmbedded) {
+    if (h.isPlatformEmbedded) {
         try {
-            await h.ZP.isAlwaysOnTop(t);
+            await b.ZP.isAlwaysOnTop(t);
         } catch (e) {
             I.error("Window does not exist while trying to show inactive", e), (0, g.D1)(e, v.gl.OutOfProcess);
         }
         for (let o = 0; o < r; o++)
             try {
-                if (!(await h.ZP.waitForIPCReady(n, e))) throw Error("IPC not ready");
-                h.ZP.showInactive(t);
+                if (!(await b.ZP.waitForIPCReady(n, e))) throw Error("IPC not ready");
+                b.ZP.showInactive(t);
                 return;
             } catch (e) {
                 var a;
@@ -54,11 +54,11 @@ let w = a.memo(function (e) {
                 r = a.useRef(null),
                 c = a.useRef(null),
                 d = a.useRef(null),
-                h = (0, o.e7)([_.default], () => {
+                b = (0, o.e7)([_.default], () => {
                     let e = _.default.getFocusedPID();
-                    return !b.isPlatformEmbedded || (null != e && e !== p.UNSET_PID);
+                    return !h.isPlatformEmbedded || (null != e && e !== p.UNSET_PID);
                 }),
-                [g, m] = a.useState(h),
+                [g, m] = a.useState(b),
                 [y, I] = a.useState(!1),
                 w = a.useCallback(() => {
                     let e = (0, p.getPID)(),
@@ -111,8 +111,8 @@ let w = a.memo(function (e) {
             );
             return (
                 a.useEffect(() => {
-                    (!g || null == n) && h && h && null != n && P(n, e);
-                }, [P, g, h, e, n]),
+                    (!g || null == n) && b && b && null != n && P(n, e);
+                }, [P, g, b, e, n]),
                 (0, i.Ng)(() => {
                     g && null != n && P(n, e);
                 }),
@@ -122,8 +122,8 @@ let w = a.memo(function (e) {
                 y
             );
         })(n, y.$S),
-        h = (0, p.getPID)(),
-        g = (0, o.e7)([_.default], () => _.default.isInputLocked(h), [h]);
+        b = (0, p.getPID)(),
+        g = (0, o.e7)([_.default], () => _.default.isInputLocked(b), [b]);
     return c
         ? (0, r.jsx)(d.Z, {
               withTitleBar: t,

@@ -1,6 +1,6 @@
 n.d(t, {
-    ZP: () => y,
-    gN: () => E,
+    ZP: () => O,
+    gN: () => b,
 }),
     n(388685),
     n(415506);
@@ -11,7 +11,7 @@ var r,
     s = n.n(a),
     l = n(748780),
     c = n(112724),
-    u = n(606234);
+    u = n(582235);
 function d(e, t, n) {
     return (
         t in e
@@ -70,21 +70,19 @@ let h = {
         overshootClamping: !0,
     },
     m = 100,
-    g = {
-        CENTER: "center",
-        RIGHT: "right",
-    };
-function E(e, t) {
+    g = "center",
+    E = "right";
+function b(e, t) {
     return ((e % t) + t) % t;
 }
-class b extends (r = o.Component) {
+class y extends (r = o.Component) {
     componentDidMount() {
         this.animatedIndex.setValue(this.props.currentIndex);
     }
     componentDidUpdate(e) {
         let { align: t, animate: n, currentIndex: r, items: i, width: o } = this.props,
-            a = E(r, i.length),
-            s = E(e.currentIndex, i.length);
+            a = b(r, i.length),
+            s = b(e.currentIndex, i.length);
         (a !== s || i.length !== e.items.length) && this.updateAnimatedIndex(a, s),
             o !== e.width
                 ? this.animatedAlignmentOffset.setValue(this.getAlignmentOffset(t))
@@ -97,8 +95,8 @@ class b extends (r = o.Component) {
     }
     getAlignmentOffset(e) {
         let { width: t, itemSize: n, currentIndex: r, gutter: i, items: o } = this.props,
-            a = i * E(r, o.length) * 2;
-        return e === g.CENTER ? (t - n.width) / 2 + a : e === g.RIGHT ? t - n.width - i + a : i + a;
+            a = i * b(r, o.length) * 2;
+        return e === g ? (t - n.width) / 2 + a : e === E ? t - n.width - i + a : i + a;
     }
     getCarouselTranslate() {
         let { itemSize: e, edgeItems: t } = this.props;
@@ -214,11 +212,11 @@ class b extends (r = o.Component) {
             );
     }
 }
-d(b, "defaultProps", {
+d(y, "defaultProps", {
     animate: !0,
     edgeItems: 2,
-    align: g.CENTER,
+    align: g,
     gutter: 0,
     hideOverflow: !0,
 });
-let y = (0, c.Z)(b);
+let O = (0, c.Z)(y);

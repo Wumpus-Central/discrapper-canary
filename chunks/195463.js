@@ -266,10 +266,9 @@ var o = {
 };
 let r = function (e, n, t) {
     var r,
-        a,
-        u = o[e];
-    r = "other" === u.type ? u.other : 1 === n ? u.one : n > 1 && n < 5 ? u.few : u.many;
-    var i = (null == t ? void 0 : t.addSuffix) === !0,
-        d = null == t ? void 0 : t.comparison;
-    return (i && -1 === d ? r.past : i && 1 === d ? r.future : r.regular).replace("{{count}}", String(n));
+        a = o[e];
+    r = "other" === a.type ? a.other : 1 === n ? a.one : n > 1 && n < 5 ? a.few : a.many;
+    var u = (null == t ? void 0 : t.addSuffix) === !0,
+        i = null == t ? void 0 : t.comparison;
+    return (u && -1 === i ? r.past : u && 1 === i ? r.future : r.regular).replace("{{count}}", String(n));
 };

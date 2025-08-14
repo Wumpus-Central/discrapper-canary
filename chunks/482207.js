@@ -1,60 +1,58 @@
-n.d(t, { Z: () => f });
+n.d(t, { Z: () => d });
 var r,
     a,
-    l,
-    i = n(442837),
-    s = n(570140);
-let o = () => ({
+    l = n(442837),
+    i = n(570140);
+let s = () => ({
         isFetching: !1,
         lastFetchedAt: null,
         error: null,
     }),
-    c = [],
-    u = o();
-class d extends (l = i.ZP.Store) {
+    o = [],
+    c = s();
+class u extends (a = l.ZP.Store) {
     get isFetching() {
-        return u.isFetching;
+        return c.isFetching;
     }
     get fetchError() {
-        return u.error;
+        return c.error;
     }
     get shouldFetch() {
         var e;
-        return Date.now() - (null != (e = u.lastFetchedAt) ? e : 0) > 300000 && !u.isFetching;
+        return Date.now() - (null != (e = c.lastFetchedAt) ? e : 0) > 300000 && !c.isFetching;
     }
     getAvatars() {
-        return c;
+        return o;
     }
 }
-(a = "RecentAvatarsStore"),
-    (r = "displayName") in d
-        ? Object.defineProperty(d, r, {
-              value: a,
-              enumerable: !0,
-              configurable: !0,
-              writable: !0,
-          })
-        : (d[r] = a);
-let f = new d(s.Z, {
+(r = "displayName") in u
+    ? Object.defineProperty(u, r, {
+          value: "RecentAvatarsStore",
+          enumerable: !0,
+          configurable: !0,
+          writable: !0,
+      })
+    : (u[r] = "RecentAvatarsStore");
+let d = new u(i.Z, {
     RECENT_AVATARS_FETCH_START: function () {
-        (u.isFetching = !0), (u.error = null);
+        (c.isFetching = !0), (c.error = null);
     },
     RECENT_AVATARS_FETCH_SUCCESS: function (e) {
         let { avatars: t } = e;
-        (c = t), (u.isFetching = !1), (u.lastFetchedAt = Date.now());
+        (o = t), (c.isFetching = !1), (c.lastFetchedAt = Date.now());
     },
     RECENT_AVATARS_FETCH_FAILURE: function (e) {
         let { error: t } = e;
-        (u.isFetching = !1), (u.error = t);
+        (c.isFetching = !1), (c.error = t);
     },
     RECENT_AVATARS_UPDATE: function () {
-        u.lastFetchedAt = 0;
+        c.lastFetchedAt = 0;
     },
     RECENT_AVATAR_DELETE: function (e) {
         let { avatarId: t } = e;
-        c = c.filter((e) => e.id !== t);
+        o = o.filter((e) => e.id !== t);
     },
     LOGOUT: function () {
-        (c = []), (u = o());
+        (o = []), (c = s());
     },
 });

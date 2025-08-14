@@ -18,8 +18,8 @@ var r = n(255367),
     y = n(430824),
     x = n(914010),
     A = n(594174),
-    C = n(626135),
-    v = n(267642),
+    v = n(626135),
+    C = n(267642),
     O = n(74538),
     E = n(621961),
     N = n(884858),
@@ -27,7 +27,7 @@ var r = n(255367),
     w = n(486324),
     P = n(869783),
     T = n(388032),
-    R = n(357243);
+    R = n(133495);
 function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -90,10 +90,10 @@ function Z(e) {
 function D(e) {
     let { guildFeature: t, guild: n } = e;
     if (null == t || null == n) return;
-    let r = (0, v._p)(t),
+    let r = (0, C._p)(t),
         a = n.features.has(t);
     if (null == r) return;
-    let l = (0, v.nW)(r);
+    let l = (0, C.nW)(r);
     return a
         ? T.intl.formatToPlainString(T.t.u3L3TU, { levelName: l })
         : T.intl.formatToPlainString(T.t["r/v25e"], { levelName: l });
@@ -238,7 +238,7 @@ function U(e) {
             uploadType: d,
             maxFileSizeBytes: f,
             showUpsellHeader: j,
-            filters: v,
+            filters: C,
             analyticsLocation: E,
             analyticsLocations: F = [],
             imageSpecifications: Z,
@@ -278,7 +278,7 @@ function U(e) {
                     });
                 (0, o.ZDy)(
                     async () => {
-                        let { default: a } = await Promise.all([n.e("59732"), n.e("46689")]).then(n.bind(n, 712451));
+                        let { default: a } = await Promise.all([n.e("59732"), n.e("11866")]).then(n.bind(n, 712451));
                         return (n) =>
                             (0, r.jsx)(
                                 a,
@@ -333,11 +333,11 @@ function U(e) {
         }, [null == E ? void 0 : E.page, V, J, j, d]);
     a.useEffect(() => {
         G &&
-            C.default.track(S.rMx.PREMIUM_UPSELL_VIEWED, {
+            v.default.track(S.rMx.PREMIUM_UPSELL_VIEWED, {
                 type: S.jXE.UPLOAD_FILE_OR_CHOOSE_GIF_MODAL,
                 location_stack: Y,
             }),
-            C.default.track(S.rMx.OPEN_MODAL, {
+            v.default.track(S.rMx.OPEN_MODAL, {
                 type: S.jXE.UPLOAD_FILE_OR_CHOOSE_GIF_MODAL,
                 location: E,
                 location_stack: Y,
@@ -383,7 +383,7 @@ function U(e) {
                                             guild: H,
                                             handleOpenImageEditingModal: K,
                                             maxFileSizeBytes: f,
-                                            filters: v,
+                                            filters: C,
                                             handleFileSizeError: $,
                                         }),
                                     }),

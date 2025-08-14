@@ -39,15 +39,15 @@ var r,
     L = n(408433),
     x = n(956664),
     M = n(624138),
-    j = n(468846),
-    k = n(401419),
+    k = n(468846),
+    j = n(401419),
     U = n(249458),
     G = n(981631),
     B = n(217702),
     Z = n(388032),
-    F = n(849443),
-    V = n(823675),
-    H = n(692228);
+    F = n(781452),
+    V = n(374299),
+    H = n(430864);
 function Y(e, t, n) {
     return (
         t in e
@@ -141,7 +141,7 @@ function er(e) {
             href: D,
             placeholder: L,
             placeholderVersion: M,
-            sourceMetadata: k,
+            sourceMetadata: j,
         } = e,
         [U, B] = o.useState(b),
         Z = null != d && null == d.proxyURL,
@@ -195,7 +195,7 @@ function er(e) {
                 onMute: P,
                 onControlsHide: A,
                 onControlsShow: N,
-                sourceMetadata: k,
+                sourceMetadata: j,
             }),
         });
     if (U && null != d) {
@@ -235,7 +235,7 @@ function er(e) {
             children: (0, i.jsx)("div", {
                 className: s()(F.embedVideo, a),
                 style: o,
-                children: (0, i.jsx)(j.ZP, {
+                children: (0, i.jsx)(k.ZP, {
                     provider: f,
                     src: d.url,
                     style: e,
@@ -268,7 +268,7 @@ function er(e) {
                 placeholder: L,
                 placeholderVersion: M,
                 onClick: E && null != d ? H : null,
-                sourceMetadata: k,
+                sourceMetadata: j,
                 analyticsSource: "EmbedVideo",
             }),
             (0, i.jsx)("div", {
@@ -280,8 +280,8 @@ function er(e) {
                               onPlay: null != d ? H : null,
                               externalURL: D,
                               renderLinkComponent: g,
-                              messageId: null == k || null == (t = k.message) ? void 0 : t.id,
-                              channelId: null == k || null == (n = k.message) ? void 0 : n.channel_id,
+                              messageId: null == j || null == (t = j.message) ? void 0 : t.id,
+                              channelId: null == j || null == (n = j.message) ? void 0 : n.channel_id,
                           })
                         : null,
                 }),
@@ -1085,8 +1085,8 @@ class eo extends (r = o.PureComponent) {
     render() {
         var e;
         let { embed: t, obscureReason: n, className: r } = this.props;
-        return null != t.provider && k.j.includes(t.provider.name)
-            ? (0, i.jsx)(k.Z, {
+        return null != t.provider && j.j.includes(t.provider.name)
+            ? (0, i.jsx)(j.Z, {
                   embed: t,
                   className: r,
               })

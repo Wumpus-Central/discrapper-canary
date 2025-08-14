@@ -32,13 +32,13 @@ var r = n(255367),
     L = n(255269),
     x = n(47481),
     M = n(977391),
-    j = n(959258),
-    k = n(73274),
-    U = n(693676),
+    k = n(959258),
+    j = n(73274),
+    U = n(419388),
     G = n(406534),
     B = n(981631),
     Z = n(388032),
-    F = n(77346);
+    F = n(151227);
 function V(e, t, n) {
     return (
         t in e
@@ -170,7 +170,7 @@ function $(e) {
             isChatInputBottomAligned: D,
         } = e,
         [L, x] = i.useState(null != (n = T.Z.isAtBottom(h.id)) && n),
-        j = i.useMemo(
+        k = i.useMemo(
             () =>
                 b
                     ? (0, M.aJ)({
@@ -197,13 +197,13 @@ function $(e) {
             compact: b,
             hasUnreads: v,
             focusId: I,
-            placeholderHeight: j.totalHeight,
+            placeholderHeight: k.totalHeight,
             canLoadMore: null == N,
             handleScrollToBottom: i.useCallback(() => x(!0), [x]),
             handleScrollFromBottom: i.useCallback(() => x(!1), [x]),
             additionalMessagePadding: 48 * !!D,
         }),
-        Y = (0, k.Z)({
+        Y = (0, j.Z)({
             scrollerRef: V.ref,
             isEditing: null != I,
             keyboardModeEnabled: A,
@@ -232,7 +232,7 @@ function $(e) {
             uploads: O,
             loadMore: V.loadMore,
             scrollManager: V,
-            specs: j,
+            specs: k,
             filterAfterTimestamp: null != N ? N : $,
             showingQuarantineBanner: C,
             hideSummaries: R,
@@ -468,7 +468,7 @@ let eo = i.memo(function (e) {
         { messages: y, channelStream: O, oldestUnreadMessageId: v, editingMessageId: I } = et(t);
     return (0, r.jsx)(g.aQ.Provider, {
         value: (0, L.Z)(E, d),
-        children: (0, r.jsx)(j.v, {
+        children: (0, r.jsx)(k.v, {
             children: (0, r.jsx)(
                 ee,
                 W(H({}, u), {

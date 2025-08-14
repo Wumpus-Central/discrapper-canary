@@ -14,7 +14,7 @@ var r = n(255367),
     g = n(665149),
     m = n(134612),
     b = n(388032),
-    y = n(53987);
+    y = n(807597);
 let x = i.memo(function (e) {
     let { channel: t } = e,
         x = (0, u.h)(t.id),
@@ -69,9 +69,12 @@ let x = i.memo(function (e) {
             null != x &&
                 ((0, s.ZDy)(
                     async () => {
-                        let { default: e } = await Promise.all([n.e("49508"), n.e("9738"), n.e("782")]).then(
-                            n.bind(n, 611446),
-                        );
+                        let { default: e } = await Promise.all([
+                            n.e("49508"),
+                            n.e("37031"),
+                            n.e("89650"),
+                            n.e("37157"),
+                        ]).then(n.bind(n, 611446));
                         return (n) => {
                             let { onClose: i, transitionState: l } = n;
                             return (0, r.jsx)(e, {

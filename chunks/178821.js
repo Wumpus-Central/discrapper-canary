@@ -17,8 +17,8 @@ var n = r(255367),
     u = r(481060),
     i = r(493773),
     o = r(38618),
-    d = r(265658),
-    x = r(881291);
+    d = r(499504),
+    x = r(451429);
 function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
@@ -369,61 +369,63 @@ function R(e) {
     let { socket: t, isAverageFrameTime: r, onToggleAverageFrameTime: c } = e,
         [s, l] = a.useState(t.dispatcher.getIsRequestIdleCallbackEnabled()),
         i = a.useRef(null);
-    a.useEffect(
-        () => (
-            (i.current = setInterval(() => {
-                l(t.dispatcher.getIsRequestIdleCallbackEnabled());
-            }, f)),
-            () => {
-                null != i.current && clearInterval(i.current);
-            }
+    return (
+        a.useEffect(
+            () => (
+                (i.current = setInterval(() => {
+                    l(t.dispatcher.getIsRequestIdleCallbackEnabled());
+                }, f)),
+                () => {
+                    null != i.current && clearInterval(i.current);
+                }
+            ),
+            [t.dispatcher],
         ),
-        [t.dispatcher],
-    );
-    let o = (e) => {
-        t.dispatcher.toggleRequestIdleCallback(e), l(e);
-    };
-    return (0, n.jsxs)("div", {
-        className: d.panelGroup,
-        children: [
-            (0, n.jsx)(u.ua7, {
-                position: "left",
-                text: "Instead of using 60fps to calculate the number of dropped frames, we use the average framerate to more accurately determine the number of actual dropped frames. Turn this off when benchmarking to get better comparsion between two different runtimes, where higher FPS might result in a higher dropped frame count.",
-                children: (e) =>
-                    (0, n.jsx)(
-                        "div",
-                        h(m({}, e), {
-                            children: (0, n.jsx)(u.XZJ, {
-                                value: r,
-                                onChange: () => c(!r),
-                                size: 18,
-                                type: u.XZJ.Types.INVERTED,
-                                shape: u.XZJ.Shapes.BOX,
-                                children: (0, n.jsx)(u.Text, {
-                                    tag: "span",
-                                    variant: "text-md/normal",
-                                    color: "text-muted",
-                                    children: "Use Average Frame Time",
+        (0, n.jsxs)("div", {
+            className: d.panelGroup,
+            children: [
+                (0, n.jsx)(u.ua7, {
+                    position: "left",
+                    text: "Instead of using 60fps to calculate the number of dropped frames, we use the average framerate to more accurately determine the number of actual dropped frames. Turn this off when benchmarking to get better comparsion between two different runtimes, where higher FPS might result in a higher dropped frame count.",
+                    children: (e) =>
+                        (0, n.jsx)(
+                            "div",
+                            h(m({}, e), {
+                                children: (0, n.jsx)(u.XZJ, {
+                                    value: r,
+                                    onChange: () => c(!r),
+                                    size: 18,
+                                    type: u.XZJ.Types.INVERTED,
+                                    shape: u.XZJ.Shapes.BOX,
+                                    children: (0, n.jsx)(u.Text, {
+                                        tag: "span",
+                                        variant: "text-md/normal",
+                                        color: "text-muted",
+                                        children: "Use Average Frame Time",
+                                    }),
                                 }),
                             }),
-                        }),
-                    ),
-            }),
-            (0, n.jsx)(u.XZJ, {
-                value: s,
-                onChange: () => o(!s),
-                size: 18,
-                type: u.XZJ.Types.INVERTED,
-                shape: u.XZJ.Shapes.BOX,
-                children: (0, n.jsx)(u.Text, {
-                    tag: "span",
-                    variant: "text-md/normal",
-                    color: "text-muted",
-                    children: "Enable New Dispatch Scheduler (requestIdleCallback)",
+                        ),
                 }),
-            }),
-        ],
-    });
+                (0, n.jsx)(u.XZJ, {
+                    value: s,
+                    onChange: () => {
+                        var e;
+                        return (e = !s), void (t.dispatcher.toggleRequestIdleCallback(e), l(e));
+                    },
+                    size: 18,
+                    type: u.XZJ.Types.INVERTED,
+                    shape: u.XZJ.Shapes.BOX,
+                    children: (0, n.jsx)(u.Text, {
+                        tag: "span",
+                        variant: "text-md/normal",
+                        color: "text-muted",
+                        children: "Enable New Dispatch Scheduler (requestIdleCallback)",
+                    }),
+                }),
+            ],
+        })
+    );
 }
 function S(e) {
     let { socket: t } = e,

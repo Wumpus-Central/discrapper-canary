@@ -1,8 +1,8 @@
 n.d(t, {
-    ZM: () => p,
+    ZM: () => m,
     gx: () => u,
-    mN: () => h,
-    re: () => g,
+    mN: () => g,
+    re: () => p,
 }),
     n(539854);
 var i = n(442837),
@@ -15,25 +15,6 @@ var i = n(442837),
     d = n(388032);
 let u = (e, t, n) => ((0, r.wj)(e) ? t : n),
     m = (e) => {
-        let { cards: t, perksCards: n, showVoiceFiltersCard: i } = e,
-            r = (e) => {
-                let { card: n } = e;
-                t.length < 3 && t.push(n);
-            },
-            s = f();
-        return (
-            r(i ? { card: n.voiceFilters } : { card: n.nameplates }),
-            null != n.tenureBadge && r({ card: n.tenureBadge }),
-            r({ card: n.permadecos }),
-            s ? 0 === t.length && r({ card: n.specialShopPerks }) : r({ card: n.referralProgram }),
-            r({ card: n.newAppStylesUpdateJune2024 }),
-            r({ card: n.serverProfiles }),
-            r({ card: n.earlyAccess }),
-            r({ card: n.unlimitedSuperReactions }),
-            t
-        );
-    },
-    p = (e) => {
         let {
                 perksCards: t,
                 variant: n,
@@ -54,7 +35,25 @@ let u = (e, t, n) => ((0, r.wj)(e) ? t : n),
                           : [t.profiles, t.clientThemes, t.serverBoosts];
                 break;
             case o.gM.WHATS_NEW:
-                d = m({
+                d = ((e) => {
+                    let { cards: t, perksCards: n, showVoiceFiltersCard: i } = e,
+                        r = (e) => {
+                            let { card: n } = e;
+                            t.length < 3 && t.push(n);
+                        },
+                        s = h();
+                    return (
+                        r(i ? { card: n.voiceFilters } : { card: n.nameplates }),
+                        null != n.tenureBadge && r({ card: n.tenureBadge }),
+                        r({ card: n.permadecos }),
+                        s ? 0 === t.length && r({ card: n.specialShopPerks }) : r({ card: n.referralProgram }),
+                        r({ card: n.newAppStylesUpdateJune2024 }),
+                        r({ card: n.serverProfiles }),
+                        r({ card: n.earlyAccess }),
+                        r({ card: n.unlimitedSuperReactions }),
+                        t
+                    );
+                })({
                     cards: d,
                     perksCards: t,
                     showVoiceFiltersCard: l,
@@ -105,7 +104,7 @@ let u = (e, t, n) => ((0, r.wj)(e) ? t : n),
         }
         return i && (d = d.filter((e) => !e.hideOnNarrowScreen)), d;
     },
-    g = (e) => {
+    p = (e) => {
         let t = (0, i.e7)([a.Z], () => a.Z.getPremiumTypeSubscription()),
             n = null != t ? l.ZP.getPremiumPlanItem(t) : null,
             r = (null != n ? l.ZP.getSkuIdForPlan(n.planId) : null) === c.Si.TIER_2;
@@ -124,11 +123,11 @@ let u = (e, t, n) => ((0, r.wj)(e) ? t : n),
                   subtitle: d.intl.string(d.t["5TFEXl"]),
               };
     },
-    h = () => {
+    g = () => {
         let e = (0, i.e7)([s.default], () => s.default.getCurrentUser());
         return (0, l.I5)(e);
     },
-    f = () => {
+    h = () => {
         let e = s.default.getCurrentUser();
         return (0, l.M5)(e, c.p9.TIER_2);
     };

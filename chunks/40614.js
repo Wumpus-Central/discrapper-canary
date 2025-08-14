@@ -3,16 +3,16 @@ var r = n(255367),
     i = n(73800),
     l = n(442837),
     o = n(481060),
-    s = n(550532),
-    a = n(371991),
+    a = n(550532),
+    s = n(371991),
     c = n(561308),
     u = n(594190),
     d = n(695346),
-    h = n(885110),
-    p = n(316496),
-    f = n(29953),
+    p = n(885110),
+    f = n(316496),
+    h = n(933554),
     g = n(388032),
-    m = n(898344);
+    m = n(973543);
 function b(e) {
     let { onClick: t } = e;
     return (0, r.jsx)(o.P3F, {
@@ -29,14 +29,14 @@ function b(e) {
 function O(e) {
     var t;
     let { onClick: n } = e,
-        h = (0, l.e7)([s.Z], () => s.Z.getFakeGameData()),
-        p = (0, l.e7)([u.ZP], () => u.ZP.getVisibleGame()),
-        b = null != (t = null == h ? void 0 : h.start) ? t : null == p ? void 0 : p.start,
+        p = (0, l.e7)([a.Z], () => a.Z.getFakeGameData()),
+        f = (0, l.e7)([u.ZP], () => u.ZP.getVisibleGame()),
+        b = null != (t = null == p ? void 0 : p.start) ? t : null == f ? void 0 : f.start,
         O = d.SE.useSetting().length > 0,
-        { now: _ } = (0, a.tS)(),
+        { now: _ } = (0, s.tS)(),
         y = (0, i.useMemo)(() => (null == b ? null : (0, c.T_)({ start: b }, _)), [b, _]);
     if (null == b) return null;
-    let C = [...(O ? [g.intl.string(f.default.jfDsyM)] : []), g.intl.string(g.t.BMTj29), y];
+    let v = [...(O ? [g.intl.string(h.default.jfDsyM)] : []), g.intl.string(g.t.BMTj29), y];
     return (0, r.jsx)(o.P3F, {
         className: m.container,
         onClick: n,
@@ -45,18 +45,18 @@ function O(e) {
             variant: "text-xs/medium",
             color: "text-feedback-positive",
             lineClamp: 1,
-            children: C.join(" \xB7 "),
+            children: v.join(" \xB7 "),
         }),
     });
 }
 function _(e) {
     let { onClick: t } = e,
-        { isEnabled: n, showActivitySharingIndicatorWhenSharing: i } = (0, p.D)("not sharing link"),
-        s = d.G6.useSetting(),
-        a = (0, l.e7)([h.Z], () => h.Z.getStatus());
+        { isEnabled: n, showActivitySharingIndicatorWhenSharing: i } = (0, f.D)("not sharing link"),
+        a = d.G6.useSetting(),
+        s = (0, l.e7)([p.Z], () => p.Z.getStatus());
     return !n || __OVERLAY__
         ? null
-        : s && a !== o.Skl.INVISIBLE
+        : a && s !== o.Skl.INVISIBLE
           ? i
               ? (0, r.jsx)(O, { onClick: t })
               : null

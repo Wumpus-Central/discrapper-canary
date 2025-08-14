@@ -1,11 +1,11 @@
 n.d(t, {
-    B1: () => k,
+    B1: () => j,
     DR: () => R,
     F$: () => L,
     Ov: () => G,
     R2: () => U,
     Sm: () => C,
-    fK: () => j,
+    fK: () => k,
     fi: () => B,
     jr: () => M,
     mK: () => N,
@@ -230,7 +230,7 @@ let N = (e) => {
                 });
         }
     },
-    j = async (e) => {
+    k = async (e) => {
         s.Z.dispatch({
             type: "COLLECTIBLES_CLAIM",
             skuId: e,
@@ -259,7 +259,7 @@ let N = (e) => {
             );
         }
     },
-    k = async (e, t) => {
+    j = async (e, t) => {
         try {
             return (
                 await a.tn.get({

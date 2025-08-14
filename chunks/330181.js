@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g }), n(388685);
+n.d(t, { Z: () => p }), n(388685);
 var i = n(255367),
     r = n(73800),
     s = n(913527),
@@ -9,28 +9,31 @@ var i = n(255367),
     d = n(584825),
     u = n(931547),
     m = n(388032);
-let p = (e) => {
-    let [t, n] = r.useState(!1),
-        [i, s] = r.useState(null);
-    return {
-        resetRenewalMutation: async (t) => {
-            n(!0), s(null);
-            try {
-                await (0, l.qu)(t, e);
-            } catch (e) {
-                s(e);
-            } finally {
-                n(!1);
-            }
-        },
-        submitting: t,
-        error: i,
-    };
-};
-function g(e) {
+function p(e) {
     let { groupListingId: t, subscription: n, className: s } = e,
-        { analyticsLocations: l } = (0, c.ZP)(o.Z.PENDING_PLAN_CHANGE_NOTICE),
-        { resetRenewalMutation: g, submitting: h, error: f } = p(l),
+        { analyticsLocations: p } = (0, c.ZP)(o.Z.PENDING_PLAN_CHANGE_NOTICE),
+        {
+            resetRenewalMutation: g,
+            submitting: h,
+            error: f,
+        } = ((e) => {
+            let [t, n] = r.useState(!1),
+                [i, s] = r.useState(null);
+            return {
+                resetRenewalMutation: async (t) => {
+                    n(!0), s(null);
+                    try {
+                        await (0, l.qu)(t, e);
+                    } catch (e) {
+                        s(e);
+                    } finally {
+                        n(!1);
+                    }
+                },
+                submitting: t,
+                error: i,
+            };
+        })(p),
         b = (0, d._k)(t, { includeSoftDeleted: !0 }),
         { currentListing: x, nextListing: _ } = r.useMemo(() => {
             if ((null == n ? void 0 : n.renewalMutations) == null)

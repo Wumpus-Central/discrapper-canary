@@ -13,9 +13,9 @@ var r = n(255367),
     m = n(81829),
     g = n(892689),
     b = n(477839),
-    y = n(603571),
+    y = n(511479),
     h = n(388032),
-    x = n(180447),
+    x = n(228135),
     v = n(255785),
     O = n(938998);
 function j(e) {
@@ -57,10 +57,6 @@ function _(e) {
     (0, d.Z)(P, A);
     let T = (0, p.eR)(N),
         L = (e) => {
-            var t;
-            null == (t = S.current) || t.removeDrop(e), T(), R({ count: A + 1 });
-        },
-        B = (e) => {
             delete w[e], E(j({}, w));
         };
     return I
@@ -99,10 +95,13 @@ function _(e) {
                       children: [
                           (0, r.jsx)(m.Z, {
                               renderedPoints: w,
-                              onRemovePoint: B,
+                              onRemovePoint: L,
                           }),
                           (0, r.jsx)(i.P3F, {
-                              onClick: () => L(e),
+                              onClick: () => {
+                                  var t;
+                                  null == (t = S.current) || t.removeDrop(e), T(), R({ count: A + 1 });
+                              },
                               className: x.clickable,
                               children: (0, r.jsx)(f.Z, {
                                   sources: [v, O],

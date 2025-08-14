@@ -12,7 +12,7 @@ var r,
     _ = n(84735),
     p = n(981729),
     h = n(607070),
-    m = n(947729);
+    m = n(89079);
 function g(e, t, n) {
     return (
         t in e
@@ -162,8 +162,8 @@ class T extends (r = o.PureComponent) {
                 barClassName: L,
                 grabberClassName: x,
                 grabberStyles: M = {},
-                markerPosition: j = 0,
-                "aria-hidden": k,
+                markerPosition: k = 0,
+                "aria-hidden": j,
                 "aria-label": U,
                 "aria-labelledby": G,
                 "aria-describedby": B,
@@ -182,8 +182,8 @@ class T extends (r = o.PureComponent) {
                               {
                                   className: s()(m.mark, {
                                       [m.defaultValue]: r,
-                                      [m.markAbove]: 0 === j,
-                                      [m.markBelow]: 1 === j,
+                                      [m.markAbove]: 0 === k,
+                                      [m.markBelow]: 1 === k,
                                   }),
                                   style: { left: "".concat(e, "%") },
                                   children:
@@ -227,7 +227,7 @@ class T extends (r = o.PureComponent) {
                         "aria-valuenow": t,
                         "aria-disabled": g,
                         "aria-orientation": R,
-                        "aria-hidden": k,
+                        "aria-hidden": j,
                         "aria-label": U,
                         "aria-labelledby": G,
                         "aria-describedby": B,

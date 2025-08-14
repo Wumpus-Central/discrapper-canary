@@ -1,5 +1,5 @@
 r.d(t, {
-    A4: () => h,
+    A4: () => f,
     b6: () => u.b,
 }),
     r(388685);
@@ -11,74 +11,73 @@ var n = r(255367),
     u = r(317257),
     c = r(583478),
     s = r(976845),
-    d = r(494628);
+    d = r(647917);
 let b = () =>
         (0, n.jsx)("img", {
             className: d.notificationBadge,
             src: r(808824),
             alt: "",
         }),
-    f = (e, t) => (e === u.b.SELECTED ? d.selected : t ? d.highlighted : d.default),
-    h = (0, a.forwardRef)(function (e, t) {
+    f = (0, a.forwardRef)(function (e, t) {
         let {
                 id: r,
                 balance: l,
-                balanceWidgetMode: h = u.b.DEFAULT,
-                showNotificationBadge: O,
-                onClick: y,
-                onMouseDown: p,
-                disabled: m,
-                isInModalOverlay: C,
-                className: g,
+                balanceWidgetMode: f = u.b.DEFAULT,
+                showNotificationBadge: h,
+                onClick: O,
+                onMouseDown: y,
+                disabled: p,
+                isInModalOverlay: m,
+                className: C,
             } = e,
-            [_, E] = (0, a.useState)(!1),
-            R = (0, a.useMemo)(() => f(h, _), [h, _]),
-            [j, v] = (0, a.useState)(!1),
-            [S, P] = (0, a.useState)(!1),
-            [A, w] = (0, a.useState)(0.9 * s.D2),
-            L = null === l;
+            [g, _] = (0, a.useState)(!1),
+            E = (0, a.useMemo)(() => (f === u.b.SELECTED ? d.selected : g ? d.highlighted : d.default), [f, g]),
+            [R, j] = (0, a.useState)(!1),
+            [v, S] = (0, a.useState)(!1),
+            [P, A] = (0, a.useState)(0.9 * s.D2),
+            w = null === l;
         (0, a.useEffect)(() => {
-            L &&
-                !j &&
-                (v(!0),
+            w &&
+                !R &&
+                (j(!0),
                 setTimeout(() => {
-                    P(!0);
+                    S(!0);
                 }, 500));
-        }, [L, v, j]),
+        }, [w, j, R]),
             (0, a.useEffect)(() => {
-                S && !L && v(!1);
-            }, [L, S]);
-        let k = L || j,
-            D = j ? null : l,
-            [N, U] = (0, a.useState)(null),
-            I = (0, a.useRef)(null),
-            T = (0, a.useCallback)(() => {
-                (I.current = null), U(null);
+                v && !w && j(!1);
+            }, [w, v]);
+        let L = w || R,
+            k = R ? null : l,
+            [D, N] = (0, a.useState)(null),
+            U = (0, a.useRef)(null),
+            I = (0, a.useCallback)(() => {
+                (U.current = null), N(null);
             }, []),
-            V = (0, a.useCallback)(
+            T = (0, a.useCallback)(
                 (e) => {
-                    let t = N === I.current;
-                    e > 0 && ("earn" !== N || !t) && U("earn");
+                    let t = D === U.current;
+                    e > 0 && ("earn" !== D || !t) && N("earn");
                 },
-                [U, N],
+                [N, D],
             );
         return (0, n.jsx)(o.P3F, {
-            onClick: k ? void 0 : y,
-            className: i()(d.clickable, { [d.disabled]: m }),
+            onClick: L ? void 0 : O,
+            className: i()(d.clickable, { [d.disabled]: p }),
             id: null != r ? r : "balance-widget-pill",
             children: (0, n.jsxs)("span", {
-                onMouseDown: p,
-                onMouseEnter: m ? void 0 : () => E(!0),
-                onMouseLeave: m ? void 0 : () => E(!1),
+                onMouseDown: y,
+                onMouseEnter: p ? void 0 : () => _(!0),
+                onMouseLeave: p ? void 0 : () => _(!1),
                 ref: t,
-                className: i()(d.container, R, g, {
-                    [d.containerLoading]: k,
-                    [d.inModalOverlay]: C,
-                    [d.disabled]: m,
+                className: i()(d.container, E, C, {
+                    [d.containerLoading]: L,
+                    [d.inModalOverlay]: m,
+                    [d.disabled]: p,
                 }),
                 children: [
                     (0, n.jsx)("div", {
-                        className: i()(d.orbsLottieContainer, k ? d.orbIconloading : void 0),
+                        className: i()(d.orbsLottieContainer, L ? d.orbIconloading : void 0),
                         children: (0, n.jsx)(
                             s.ZP,
                             (function (e) {
@@ -108,21 +107,21 @@ let b = () =>
                             })(
                                 {},
                                 {
-                                    currentAnimationType: N,
-                                    animationTypeRef: I,
-                                    onSetAnimationDurationMS: w,
+                                    currentAnimationType: D,
+                                    animationTypeRef: U,
+                                    onSetAnimationDurationMS: A,
                                 },
                             ),
                         ),
                     }),
                     (0, n.jsx)(c.Z, {
-                        value: D,
-                        onValueChange: V,
-                        onValueReached: T,
-                        targetTotalCounterTime: A,
-                        className: k ? d.counterLoading : void 0,
+                        value: k,
+                        onValueChange: T,
+                        onValueReached: I,
+                        targetTotalCounterTime: P,
+                        className: L ? d.counterLoading : void 0,
                     }),
-                    O && (0, n.jsx)(b, {}),
+                    h && (0, n.jsx)(b, {}),
                 ],
             }),
         });

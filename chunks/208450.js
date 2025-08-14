@@ -37,10 +37,10 @@ var r = n(255367),
     L = n(165017),
     x = n(817190),
     M = n(315322),
-    j = n(723642),
-    k = n(981631),
+    k = n(723642),
+    j = n(981631),
     U = n(388032),
-    G = n(107482);
+    G = n(448402);
 function B(e, t, n) {
     return (
         t in e
@@ -54,16 +54,16 @@ function B(e, t, n) {
         e
     );
 }
-n(693805);
+n(890150);
 let Z = 512,
     F = (0, h.hQ)(),
     V = c()(w.Z.fetchMessages, 500);
 class H extends i.PureComponent {
     componentDidMount() {
         var e, t;
-        b.S.subscribe(k.CkL.PERFORM_SEARCH, this.search),
-            b.S.subscribe(k.CkL.SET_SEARCH_QUERY, this.handleSetSearchQuery),
-            b.S.subscribe(k.CkL.FOCUS_SEARCH, this.handleFocusSearch),
+        b.S.subscribe(j.CkL.PERFORM_SEARCH, this.search),
+            b.S.subscribe(j.CkL.SET_SEARCH_QUERY, this.handleSetSearchQuery),
+            b.S.subscribe(j.CkL.FOCUS_SEARCH, this.handleFocusSearch),
             null == (t = this._editorRef) || null == (e = t.editor) || e.setAttribute("aria-haspopup", "listbox");
     }
     componentDidUpdate(e) {
@@ -75,9 +75,9 @@ class H extends i.PureComponent {
         }
     }
     componentWillUnmount() {
-        b.S.unsubscribe(k.CkL.PERFORM_SEARCH, this.search),
-            b.S.unsubscribe(k.CkL.SET_SEARCH_QUERY, this.handleSetSearchQuery),
-            b.S.unsubscribe(k.CkL.FOCUS_SEARCH, this.handleFocusSearch);
+        b.S.unsubscribe(j.CkL.PERFORM_SEARCH, this.search),
+            b.S.unsubscribe(j.CkL.SET_SEARCH_QUERY, this.handleSetSearchQuery),
+            b.S.unsubscribe(j.CkL.FOCUS_SEARCH, this.handleFocusSearch);
     }
     tokenize(e) {
         let t = (0, T.kG)(y.Sq(e)).filter((e) => e.type !== f.ZP.NON_TOKEN_TYPE);
@@ -261,7 +261,7 @@ class H extends i.PureComponent {
                     return void this.focusEditor();
                 let { searchContext: o } = this.props,
                     a = (0, N.ad)({ location: "SearchBar_handleFocusSearch" }),
-                    s = o.type === k.aib.DMS && a;
+                    s = o.type === j.aib.DMS && a;
                 if (r.isPrivate() && !s) return void this.focusEditor();
                 let l = (0, T.X3)(r);
                 if (null == l) return void this.focusEditor();
@@ -270,7 +270,7 @@ class H extends i.PureComponent {
                         let { _editorRef: e } = this;
                         null == e || e.focus(),
                             this.handleSetSearchQuery({
-                                query: P.ZP[k.dCx.FILTER_IN].key + "".concat(l, " "),
+                                query: P.ZP[j.dCx.FILTER_IN].key + "".concat(l, " "),
                                 replace: !0,
                             });
                     });
@@ -305,8 +305,8 @@ class H extends i.PureComponent {
                 (e) =>
                     null != e &&
                     (-1 === e.state.selectedIndex && e.shouldShowSearchInSelectedChannel()
-                        ? e.handleSearchInChannel({ searchAutocompleteSelectAction: j.ZW.KEY_PRESS })
-                        : e.selectOption({ searchAutocompleteSelectAction: j.ZW.KEY_PRESS })),
+                        ? e.handleSearchInChannel({ searchAutocompleteSelectAction: k.ZW.KEY_PRESS })
+                        : e.selectOption({ searchAutocompleteSelectAction: k.ZW.KEY_PRESS })),
             ),
             B(this, "handleReturn", (e) => {
                 let { shiftKey: t } = e;
@@ -450,7 +450,7 @@ function Y(e) {
                         query: r,
                         queryString: n,
                     }),
-                    t.type === k.aib.DMS
+                    t.type === j.aib.DMS
                         ? w.Z.fetchCrossDMMessages({
                               searchContext: t,
                               selectedPageIndex: 0,
@@ -462,7 +462,7 @@ function Y(e) {
                               queryString: n,
                               searchEverywhere: i,
                               offset: 0,
-                              searchMode: k.QIO.NEWEST,
+                              searchMode: j.QIO.NEWEST,
                           });
             },
             [t],
@@ -481,22 +481,22 @@ function Y(e) {
             return null;
         }),
         D = (0, C.xd)({
-            isXDMSearch: t.type === k.aib.DMS,
+            isXDMSearch: t.type === j.aib.DMS,
             location: "Search",
         }),
         L = (0, C.dB)({
-            isXDMSearch: t.type === k.aib.DMS,
+            isXDMSearch: t.type === j.aib.DMS,
             location: "Search",
         }),
-        j = D || L,
+        k = D || L,
         B = (0, A.$)({ location: "Search" }),
         Z = i.useMemo(
             () =>
-                t.type === k.aib.DMS
+                t.type === j.aib.DMS
                     ? U.intl.string(U.t.m7OrlZ)
                     : B
                       ? U.intl.formatToPlainString(U.t.LDZtFB, { name: N })
-                      : j
+                      : k
                         ? (0, r.jsxs)(r.Fragment, {
                               children: [
                                   U.intl.formatToPlainString(U.t.LDZtFB, { name: N }),
@@ -510,7 +510,7 @@ function Y(e) {
                               ],
                           })
                         : U.intl.string(U.t["5h0QOD"]),
-            [t.type, j, N, B],
+            [t.type, k, N, B],
         );
     return (0, r.jsx)(H, {
         className: n,

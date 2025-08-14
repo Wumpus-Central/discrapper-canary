@@ -32,8 +32,8 @@ var r = n(278074),
     L = n(467512),
     x = n(779832),
     M = n(786761),
-    j = n(459618),
-    k = n(541288),
+    k = n(459618),
+    j = n(541288),
     U = n(3148),
     G = n(48854),
     B = n(785359),
@@ -265,7 +265,7 @@ function eM(e) {
             d.ZP.trackWithMetadata(eO.rMx.INVITE_SENT, e));
     }
 }
-function ej(e, t, n, r, i) {
+function ek(e, t, n, r, i) {
     (0, eh.Q_)(e).forEach((e) => {
         let o = eo.Z.getChannel(t);
         null != o &&
@@ -280,7 +280,7 @@ function ej(e, t, n, r, i) {
             });
     });
 }
-function ek(e, t) {
+function ej(e, t) {
     let n = es.Z.getMessage(e, t);
     return null != n && n.hasFlag(eO.iLy.CROSSPOSTED);
 }
@@ -846,7 +846,7 @@ let eG = {
             i = eC(eA({}, i), { nonce: a });
             let s = () => eB._sendMessage(e, t, i),
                 l = x.ZP.backgroundify(s, void 0);
-            return (j.Z.recordMessageSendAttempt(e, a, i), es.Z.isReady(e))
+            return (k.Z.recordMessageSendAttempt(e, a, i), es.Z.isReady(e))
                 ? l()
                 : r && e !== E.V
                   ? (ew.info("Waiting for channel ".concat(e, " to be ready before sending.")),
@@ -966,7 +966,7 @@ let eG = {
                 })
                 .then(
                     (n) => (
-                        k.Z.donateSentMessage(n.body.content, e),
+                        j.Z.donateSentMessage(n.body.content, e),
                         eB.receiveMessage(e, n.body),
                         s.Z.dispatch({
                             type: "STICKER_TRACK_USAGE",
@@ -1171,7 +1171,7 @@ let eG = {
                         (a) => {
                             let c = Date.now() - i;
                             if (a.ok) {
-                                k.Z.donateSentMessage(d, e),
+                                j.Z.donateSentMessage(d, e),
                                     eB.receiveMessage(e, a.body, !0, {
                                         sendAnalytics: {
                                             duration: c,
@@ -1203,7 +1203,7 @@ let eG = {
                                         joinRequestUserId: n,
                                     });
                                 }
-                                j.Z.recordMessageSendApiResponse(et),
+                                k.Z.recordMessageSendApiResponse(et),
                                     s.Z.dispatch({
                                         type: "SLOWMODE_RESET_COOLDOWN",
                                         slowmodeType: ed.S.SendMessage,
@@ -1231,7 +1231,7 @@ let eG = {
                                         location: null != m ? m : "chat_input",
                                         suggested: g,
                                     }),
-                                    ej(d, e, a.body.id, null != m ? m : "chat_input", !!n.isGiftLinkSentOnBehalfOfUser),
+                                    ek(d, e, a.body.id, null != m ? m : "chat_input", !!n.isGiftLinkSentOnBehalfOfUser),
                                     null != l &&
                                         s.Z.dispatch({
                                             type: "UPLOAD_COMPLETE",
@@ -1372,7 +1372,7 @@ let eG = {
             let { content: r, components: i } = n;
             await et.Z.unarchiveThreadIfNecessary(e);
             let o = eU(e, t),
-                l = ek(e, t),
+                l = ej(e, t),
                 c = {
                     channelId: e,
                     messageId: t,

@@ -8,10 +8,10 @@ var n = i(255367),
     d = i(63063),
     o = i(86419),
     u = i(778414),
-    x = i(247989),
+    x = i(872269),
     h = i(228168),
     p = i(388032),
-    g = i(680148);
+    g = i(107669);
 function w(t) {
     let { widget: e, user: i } = t;
     return (0, n.jsx)(u.Z, {

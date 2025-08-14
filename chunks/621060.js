@@ -17,7 +17,7 @@ var n,
     m = a(424625),
     x = a(823379),
     h = a(246992),
-    p = a(881291),
+    p = a(451429),
     b =
         (((n = {}).NONE = ""),
         (n.EXPERIMENTS = "Experiments"),
@@ -77,14 +77,14 @@ function j(e) {
     }, [t, g, j, a]);
     let y = l.useCallback(
         (e) => {
-            var a, l, i;
-            let { closePopout: s } = e,
-                c = t.filter((e) => null == e.group),
-                u = {};
-            for (let e of t) null != e.group && (null != u[(a = e.group)] || (u[a] = []), u[e.group].push(e));
+            var a, l;
+            let { closePopout: i } = e,
+                s = t.filter((e) => null == e.group),
+                c = {};
+            for (let e of t) null != e.group && (null != c[(a = e.group)] || (c[a] = []), c[e.group].push(e));
             for (let e of f)
-                null == (i = u[e]) ||
-                    i.sort((e, t) => {
+                null == (l = c[e]) ||
+                    l.sort((e, t) => {
                         var a, n;
                         return (null != (a = (0, o.q)(e.name)) ? a : "").localeCompare(
                             null != (n = (0, o.q)(t.name)) ? n : "",
@@ -93,11 +93,11 @@ function j(e) {
             return (0, r.jsxs)(d.v2r, {
                 navId: "devtools-overflow",
                 variant: "fixed",
-                onClose: s,
+                onClose: i,
                 "aria-label": "Overflowed DevTools Tabs",
-                onSelect: s,
+                onSelect: i,
                 children: [
-                    c.map((e) => {
+                    s.map((e) => {
                         let { id: t, name: a } = e;
                         return (0, r.jsx)(
                             d.sNh,
@@ -114,7 +114,7 @@ function j(e) {
                             d.kSQ,
                             {
                                 label: e,
-                                children: u[e].map((e) => {
+                                children: c[e].map((e) => {
                                     let { id: t, name: a } = e;
                                     return (0, r.jsx)(
                                         d.sNh,

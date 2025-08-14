@@ -2,7 +2,7 @@ n.d(t, { k: () => l }), n(388685);
 var i = n(255367),
     r = n(73800),
     s = n(481060),
-    a = n(857725);
+    a = n(959591);
 class l extends r.PureComponent {
     componentDidCatch(e, t) {
         console.error("Error rendering component (LocalErrorBoundary): ", e),
@@ -24,19 +24,19 @@ class l extends r.PureComponent {
             : this.props.children;
     }
     constructor(...e) {
-        var t, n;
         super(...e),
-            (n = {
+            (function (e, t, n) {
+                t in e
+                    ? Object.defineProperty(e, t, {
+                          value: n,
+                          enumerable: !0,
+                          configurable: !0,
+                          writable: !0,
+                      })
+                    : (e[t] = n);
+            })(this, "state", {
                 error: null,
                 info: null,
-            }),
-            (t = "state") in this
-                ? Object.defineProperty(this, t, {
-                      value: n,
-                      enumerable: !0,
-                      configurable: !0,
-                      writable: !0,
-                  })
-                : (this[t] = n);
+            });
     }
 }

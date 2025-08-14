@@ -1,4 +1,4 @@
-n.d(t, { Z: () => S }), n(388685);
+n.d(t, { Z: () => w }), n(388685);
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -13,11 +13,11 @@ var r = n(255367),
     g = n(496675),
     f = n(63063),
     x = n(981631),
-    p = n(130883),
+    p = n(764295),
     b = n(388032),
-    j = n(971778),
-    v = n(105603),
-    C = n(151454),
+    j = n(814346),
+    v = n(816922),
+    C = n(586301),
     _ = n(184476);
 let y = {
         mass: 1,
@@ -25,28 +25,7 @@ let y = {
         friction: 18,
         clamp: !0,
     },
-    O = () => {
-        let [e, t] = i.useState(!0);
-        return {
-            transitions: (0, c.Yzy)(e, {
-                keys: (e) => (e ? "shown" : "hidden"),
-                config: y,
-                from: { opacity: 0 },
-                enter: { opacity: 1 },
-                leave: { opacity: 0 },
-                unique: !0,
-            }),
-            setVisible: t,
-        };
-    },
-    w = (e) =>
-        (0, c.Yzy)(e, {
-            from: { maxHeight: 0 },
-            enter: { maxHeight: 850 },
-            leave: { maxHeight: 0 },
-            config: { duration: 200 },
-        }),
-    P = (e) => {
+    O = (e) => {
         let { guild: t } = e,
             n = (0, o.e7)([g.Z], () => g.Z.can(x.Plq.MANAGE_GUILD, t));
         return (0, r.jsxs)(c.Kqy, {
@@ -230,22 +209,43 @@ let y = {
             ],
         });
     };
-function S(e) {
-    let { guild: t } = e,
-        [n, a] = (0, d.R)("report-to-mod-education-dismissed", !1),
-        [o, u] = (0, d.R)("report-to-mod-education-expanded", !1),
-        { transitions: m, setVisible: h } = O(),
-        g = w(null != o && o);
+function w(e) {
+    let t,
+        { guild: n } = e,
+        [a, o] = (0, d.R)("report-to-mod-education-dismissed", !1),
+        [u, m] = (0, d.R)("report-to-mod-education-expanded", !1),
+        { transitions: h, setVisible: g } = (() => {
+            let [e, t] = i.useState(!0);
+            return {
+                transitions: (0, c.Yzy)(e, {
+                    keys: (e) => (e ? "shown" : "hidden"),
+                    config: y,
+                    from: { opacity: 0 },
+                    enter: { opacity: 1 },
+                    leave: { opacity: 0 },
+                    unique: !0,
+                }),
+                setVisible: t,
+            };
+        })(),
+        f =
+            ((t = null != u && u),
+            (0, c.Yzy)(t, {
+                from: { maxHeight: 0 },
+                enter: { maxHeight: 850 },
+                leave: { maxHeight: 0 },
+                config: { duration: 200 },
+            }));
     return (i.useEffect(() => {
-        n && h(!1);
-    }, [n, h]),
-    n)
+        a && g(!1);
+    }, [a, g]),
+    a)
         ? null
-        : m((e, n) =>
-              n
+        : h((e, t) =>
+              t
                   ? (0, r.jsxs)(s.animated.div, {
                         style: e,
-                        onClick: () => u(!o),
+                        onClick: () => m(!u),
                         className: l()(C.container, j.container, v.mainCard),
                         children: [
                             (0, r.jsxs)("div", {
@@ -279,7 +279,7 @@ function S(e) {
                                         ],
                                     }),
                                     (0, r.jsx)(c.P3F, {
-                                        onClick: () => a(!0),
+                                        onClick: () => o(!0),
                                         children: (0, r.jsx)(c.Dio, {
                                             size: "xs",
                                             color: "currentColor",
@@ -288,13 +288,13 @@ function S(e) {
                                     }),
                                 ],
                             }),
-                            g((e, n) =>
-                                n
+                            f((e, t) =>
+                                t
                                     ? (0, r.jsxs)(s.animated.div, {
                                           style: e,
                                           children: [
                                               (0, r.jsx)("hr", { className: j.separator }),
-                                              (0, r.jsx)(P, { guild: t }),
+                                              (0, r.jsx)(O, { guild: n }),
                                           ],
                                       })
                                     : null,

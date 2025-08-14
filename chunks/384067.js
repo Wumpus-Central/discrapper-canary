@@ -11,7 +11,7 @@ var n = r(255367),
     p = r(215023),
     g = r(981631),
     f = r(388032),
-    b = r(253032);
+    b = r(310582);
 let h = (e) => {
     var t, r, a;
     let { wideBannerBlock: h, handleTransition: m, tab: _ } = e,

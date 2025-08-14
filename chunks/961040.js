@@ -3,57 +3,57 @@ var r = n(255367),
     i = n(73800),
     l = n(120356),
     o = n.n(l),
-    s = n(481060),
-    a = n(570140),
+    a = n(481060),
+    s = n(570140),
     c = n(493773),
     u = n(585483),
     d = n(821020),
-    h = n(736670),
-    p = n(82409),
-    f = n(981631),
+    p = n(736670),
+    f = n(82409),
+    h = n(981631),
     g = n(388032),
-    m = n(11779);
+    m = n(888831);
 function b(e) {
-    let { children: t, popoutPosition: n, popoutAlign: l, targetElementRef: p, spacing: b = 0 } = e,
-        { isOpen: _, setIsOpen: y } = (0, h.Z)(),
-        C = i.useCallback(() => {
+    let { children: t, popoutPosition: n, popoutAlign: l, targetElementRef: f, spacing: b = 0 } = e,
+        { isOpen: _, setIsOpen: y } = (0, p.Z)(),
+        v = i.useCallback(() => {
             y(!1);
         }, [y]),
-        v = i.useCallback(() => {
+        j = i.useCallback(() => {
             y(!_);
         }, [_, y]);
     (0, c.ZP)(() => {
         let e = () => {
             y(!1);
         };
-        return a.Z.subscribe("USER_SETTINGS_MODAL_OPEN", e), () => a.Z.unsubscribe("USER_SETTINGS_MODAL_OPEN", e);
+        return s.Z.subscribe("USER_SETTINGS_MODAL_OPEN", e), () => s.Z.unsubscribe("USER_SETTINGS_MODAL_OPEN", e);
     }),
         i.useEffect(
-            () => (u.S.subscribe(f.CkL.TOGGLE_INBOX, v), () => void u.S.unsubscribe(f.CkL.TOGGLE_INBOX, v)),
-            [v],
+            () => (u.S.subscribe(h.CkL.TOGGLE_INBOX, j), () => void u.S.unsubscribe(h.CkL.TOGGLE_INBOX, j)),
+            [j],
         );
-    let { entrypoint: j } = (0, d.pN)({ location: "NotificationsInboxPopout" });
-    return (0, r.jsx)(s.yRy, {
-        targetElementRef: p,
+    let { entrypoint: C } = (0, d.pN)({ location: "NotificationsInboxPopout" });
+    return (0, r.jsx)(a.yRy, {
+        targetElementRef: f,
         shouldShow: _,
         align: l,
-        animation: j === d.u3.TITLE_BAR_LEFT ? s.yRy.Animation.TRANSLATE : s.yRy.Animation.FADE,
-        animationPosition: j === d.u3.TITLE_BAR_LEFT ? "bottom" : "left",
+        animation: C === d.u3.TITLE_BAR_LEFT ? a.yRy.Animation.TRANSLATE : a.yRy.Animation.FADE,
+        animationPosition: C === d.u3.TITLE_BAR_LEFT ? "bottom" : "left",
         position: n,
-        onRequestClose: C,
+        onRequestClose: v,
         spacing: b,
         renderPopout: () =>
-            (0, r.jsx)(s.VqE, {
+            (0, r.jsx)(a.VqE, {
                 "aria-label": g.intl.string(g.t.GSmTKC),
                 className: o()({
-                    [m.repositionLayerTitlebarPopout]: j === d.u3.TITLE_BAR_LEFT,
-                    [m.repositionLayerSidebarPopout]: j === d.u3.SERVER_RAIL_TOP,
+                    [m.repositionLayerTitlebarPopout]: C === d.u3.TITLE_BAR_LEFT,
+                    [m.repositionLayerSidebarPopout]: C === d.u3.SERVER_RAIL_TOP,
                 }),
                 children: (0, r.jsx)(O, {}),
             }),
         children: (e, n) => {
             let { isShown: r } = n;
-            return t(v, r, e);
+            return t(j, r, e);
         },
     });
 }
@@ -65,7 +65,7 @@ function O() {
                 className: m.backgroundContainer,
                 children: (0, r.jsx)("span", { className: m.background }),
             }),
-            (0, r.jsx)(p.Z, {}),
+            (0, r.jsx)(f.Z, {}),
         ],
     });
 }

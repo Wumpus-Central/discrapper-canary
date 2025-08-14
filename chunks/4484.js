@@ -28,7 +28,7 @@ var r = n(255367),
     R = n(321127),
     P = n(645174),
     w = n(981631),
-    D = n(184600);
+    D = n(867641);
 let L = i.forwardRef(function (e, t) {
     let {
             value: n,
@@ -36,8 +36,8 @@ let L = i.forwardRef(function (e, t) {
             channel: L,
             className: x,
             id: M,
-            disabled: j,
-            submitting: k,
+            disabled: k,
+            submitting: j,
             placeholder: U,
             required: G,
             textAreaPaddingClassName: B,
@@ -74,7 +74,7 @@ let L = i.forwardRef(function (e, t) {
         em = i.useRef(null),
         eg = i.useRef(!0),
         eE = i.useRef(!0),
-        eb = j || k,
+        eb = k || j,
         ey = i.useCallback(
             (e, t, n) => {
                 var r;
@@ -261,7 +261,7 @@ let L = i.forwardRef(function (e, t) {
                     readOnly: eb,
                     spellCheck: ee,
                     autoFocus: !er,
-                    canFocus: !j,
+                    canFocus: !k,
                     onChange: ew,
                     onFocus: H,
                     onBlur: Y,

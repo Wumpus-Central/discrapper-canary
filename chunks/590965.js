@@ -1,16 +1,16 @@
 let r;
-n.d(t, { Z: () => I }), n(388685), n(539854);
+n.d(t, { Z: () => P }), n(388685), n(539854);
 var i,
     l = n(442837),
     o = n(570140),
-    s = n(413605),
-    a = n(703656),
+    a = n(413605),
+    s = n(703656),
     c = n(131704),
     u = n(592125),
     d = n(430824),
-    h = n(701190),
-    p = n(496675),
-    f = n(594174),
+    p = n(701190),
+    f = n(496675),
+    h = n(594174),
     g = n(411198),
     m = n(998502),
     b = n(981631),
@@ -44,35 +44,35 @@ function y(e) {
     }
     return e;
 }
-let C = b.IlC.APP,
-    v = !1,
+let v = b.IlC.APP,
     j = !1,
+    C = !1,
     E = [];
-function S() {
-    v = !0;
+function x() {
+    j = !0;
 }
-class x extends (i = l.ZP.Store) {
+class S extends (i = l.ZP.Store) {
     initialize() {
-        this.waitFor(d.Z, h.Z, f.default);
+        this.waitFor(d.Z, p.Z, h.default);
     }
     isOpen() {
         let e = __OVERLAY__ ? b.IlC.OVERLAY : b.IlC.APP;
-        return !!(v && E.length > 0 && C === e);
+        return !!(j && E.length > 0 && v === e);
     }
     getProps() {
         return {
             invite: E.length > 0 ? E[0][0] : null,
             error: null != r && "" !== r ? r : null,
-            submitting: j,
+            submitting: C,
         };
     }
 }
-_(x, "displayName", "InviteModalStore");
-let I = new x(o.Z, {
-    OVERLAY_INITIALIZE: S,
-    CONNECTION_OPEN: S,
+_(S, "displayName", "InviteModalStore");
+let P = new S(o.Z, {
+    OVERLAY_INITIALIZE: x,
+    CONNECTION_OPEN: x,
     CONNECTION_CLOSED: function () {
-        v = !1;
+        j = !1;
     },
     INVITE_MODAL_OPEN: function (e) {
         let t = e.invite;
@@ -81,20 +81,20 @@ let I = new x(o.Z, {
             let { channel: e, guild: n } = t;
             if (null == e) return !1;
             if ((0, c.bc)(e.type)) {
-                if (null != u.Z.getChannel(e.id)) return (0, a.XU)(b.ME, e.id), m.ZP.focus(), !1;
+                if (null != u.Z.getChannel(e.id)) return (0, s.XU)(b.ME, e.id), m.ZP.focus(), !1;
             } else {
                 if (null == n) return !1;
-                if (null != d.Z.getGuild(n.id) && !(0, s.TY)(t)) {
+                if (null != d.Z.getGuild(n.id) && !(0, a.TY)(t)) {
                     let e = (function (e) {
-                        if ((0, s.W6)(e)) return O.oC.ROLE_SUBSCRIPTIONS;
+                        if ((0, a.W6)(e)) return O.oC.ROLE_SUBSCRIPTIONS;
                         let { channel: t } = e;
                         if (null != t) {
                             let e = u.Z.getChannel(t.id);
-                            if (p.Z.can(b.Plq.VIEW_CHANNEL, e)) return t.id;
+                            if (f.Z.can(b.Plq.VIEW_CHANNEL, e)) return t.id;
                         }
                         return null;
                     })(t);
-                    return (0, a.XU)(n.id, e), m.ZP.focus(), !1;
+                    return (0, s.XU)(n.id, e), m.ZP.focus(), !1;
                 }
             }
         }
@@ -105,7 +105,7 @@ let I = new x(o.Z, {
             })
         )
             return !1;
-        (C = e.context), (j = !1);
+        (v = e.context), (C = !1);
         let n = (function (e) {
             let {
                     approximate_member_count: t,
@@ -114,45 +114,45 @@ let I = new x(o.Z, {
                     state: i,
                     target_type: l,
                     target_user: o,
-                    target_application: s,
-                    stage_instance: a,
+                    target_application: a,
+                    stage_instance: s,
                     type: c,
                     channel: u,
                     guild: d,
-                    is_nickname_changeable: h,
+                    is_nickname_changeable: p,
                 } = e,
-                p = {
+                f = {
                     code: r,
                     state: i,
                     approximate_member_count: t,
                     approximate_presence_count: n,
                     target_type: l,
                     target_user: o,
-                    target_application: s,
-                    stage_instance: a,
+                    target_application: a,
+                    stage_instance: s,
                     type: c,
-                    is_nickname_changeable: h,
+                    is_nickname_changeable: p,
                 };
             return (
-                null != u && (p.channel = y({}, u)),
-                null != d && (p.guild = (0, g.Qs)(d)),
-                null != e.inviter && (p.inviter = y({}, e.inviter)),
-                p
+                null != u && (f.channel = y({}, u)),
+                null != d && (f.guild = (0, g.Qs)(d)),
+                null != e.inviter && (f.inviter = y({}, e.inviter)),
+                f
             );
         })(t);
         E.push([n, e.resolve]);
     },
     INVITE_MODAL_CLOSE: function () {
-        if (((r = null), (j = !1), E.length > 0)) {
+        if (((r = null), (C = !1), E.length > 0)) {
             let [, e] = E.shift();
             null != e && e();
         }
     },
     INVITE_ACCEPT: function () {
-        j = !0;
+        C = !0;
     },
     INVITE_MODAL_ERROR: function (e) {
         let { message: t } = e;
-        (r = t), (j = !1);
+        (r = t), (C = !1);
     },
 });

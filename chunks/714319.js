@@ -4,7 +4,7 @@ n.d(t, {
 });
 var r,
     l = n(536895);
-function s(e) {
+function i(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -29,7 +29,7 @@ function s(e) {
     }
     return e;
 }
-function i(e, t) {
+function s(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -51,22 +51,22 @@ var a = (((r = {}).UPDATE_ITEM_COUNT = "UPDATE_ITEM_COUNT"), (r.SET_FOCUSED_INDE
 function o(e, t) {
     switch (t.type) {
         case l.Us.NAVIGATE_UP:
-            return i(s({}, e), { focusedIndex: Math.max(0, e.focusedIndex - 1) });
+            return s(i({}, e), { focusedIndex: Math.max(0, e.focusedIndex - 1) });
         case l.Us.NAVIGATE_DOWN:
-            return i(s({}, e), { focusedIndex: Math.min(e.focusedIndex + 1, e.itemCount - 1) });
+            return s(i({}, e), { focusedIndex: Math.min(e.focusedIndex + 1, e.itemCount - 1) });
         case l.Us.NAVIGATE_START:
-            return i(s({}, e), { focusedIndex: 0 });
+            return s(i({}, e), { focusedIndex: 0 });
         case l.Us.NAVIGATE_END:
-            return i(s({}, e), { focusedIndex: e.itemCount - 1 });
+            return s(i({}, e), { focusedIndex: e.itemCount - 1 });
         case "UPDATE_ITEM_COUNT":
             let { itemCount: n } = t;
-            return i(s({}, e), {
+            return s(i({}, e), {
                 itemCount: n,
                 focusedIndex: Math.min(n - 1, e.focusedIndex),
             });
         case "SET_FOCUSED_INDEX":
             let { index: r } = t;
-            return i(s({}, e), { focusedIndex: Math.max(0, Math.min(r, e.itemCount - 1)) });
+            return s(i({}, e), { focusedIndex: Math.max(0, Math.min(r, e.itemCount - 1)) });
         case l.Us.SELECT_FOCUSED_ITEM:
             break;
         default:

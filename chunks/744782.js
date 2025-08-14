@@ -16,7 +16,7 @@ var l = n(442837),
     v = n(230900),
     p = n(981631),
     f = n(388032),
-    j = n(709949);
+    j = n(369702);
 let { INVITE_OPTIONS_7_DAYS: b, INVITE_OPTIONS_UNLIMITED: y } = h.ZP;
 function O(e) {
     var t, n, O;
@@ -43,8 +43,8 @@ function O(e) {
                 : null,
         _ = null == D || null == w,
         R = (0, s.Z)(null != D ? D : ""),
-        k = null != (n = null == w ? void 0 : w.maxAge) ? n : b.value,
-        A = null != (O = null == w ? void 0 : w.maxUses) ? O : y.value;
+        A = null != (n = null == w ? void 0 : w.maxAge) ? n : b.value,
+        k = null != (O = null == w ? void 0 : w.maxUses) ? O : y.value;
     return (0, r.jsxs)("div", {
         className: j.container,
         children: [
@@ -105,7 +105,7 @@ function O(e) {
                             variant: "text-xs/normal",
                             color: "header-secondary",
                             className: j.inviteDetail,
-                            children: (0, h.Vg)(k, A),
+                            children: (0, h.Vg)(A, k),
                         }),
                 ],
             }),

@@ -10,7 +10,7 @@ var r = n(255367),
     u = n(992249),
     m = n(717251),
     g = n(388032),
-    p = n(74394);
+    p = n(201720);
 function h(e) {
     var t, n, l;
     let { changeTitle: h, value: f, options: b, className: x, onChange: j } = e,
@@ -27,17 +27,7 @@ function h(e) {
             },
             [],
         );
-    let E = b.find((e) => e.value === v),
-        S = (e) => {
-            e.disabled ||
-                e.value === v ||
-                (N(!0),
-                null == j || j(e),
-                _(e.value),
-                (I.current = setTimeout(() => {
-                    N(!1), y(!1);
-                }, 1000)));
-        };
+    let E = b.find((e) => e.value === v);
     return (0, r.jsx)(u.Z, {
         title: O ? h : null != (t = null == E ? void 0 : E.title) ? t : h,
         description: O
@@ -67,7 +57,16 @@ function h(e) {
                         v === e.value
                             ? (0, r.jsx)(c.Z, { className: p.radioItem })
                             : (0, r.jsx)(o.Z, { className: p.radioItem }),
-                    onClick: () => S(e),
+                    onClick: () => {
+                        e.disabled ||
+                            e.value === v ||
+                            (N(!0),
+                            null == j || j(e),
+                            _(e.value),
+                            (I.current = setTimeout(() => {
+                                N(!1), y(!1);
+                            }, 1000)));
+                    },
                     disabled: e.disabled,
                 },
                 "".concat(e.title, "-").concat(t),

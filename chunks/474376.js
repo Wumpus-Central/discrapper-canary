@@ -17,18 +17,13 @@ var r = n(442837),
     b = n(383832),
     x = n(981631),
     _ = n(388032),
-    j = n(56380);
+    j = n(681285);
 function E(e) {
     let t = (0, r.e7)([u.default], () => u.default.getCurrentUser()),
         n = (0, r.e7)([d.Z], () => d.Z.hidePersonalInformation),
         E = (0, r.e7)([o.Z], () => (0, s.wj)(o.Z.theme)),
         { multiAccountUsers: C } = (0, f.L)(),
-        O = (e) => {
-            e !== (null == t ? void 0 : t.id) &&
-                (m.default.track(x.rMx.MULTI_ACCOUNT_SWITCH_ATTEMPT, { location: { section: x.jXE.USER_PROFILE } }),
-                g.yD(e));
-        },
-        v = C.map((r) => {
+        O = C.map((r) => {
             let s = new c.Z(r),
                 o = s.id === (null == t ? void 0 : t.id),
                 d = r.tokenStatus === h.q.INVALID,
@@ -89,14 +84,22 @@ function E(e) {
                         });
                     },
                     action: () => {
-                        null == e || e(), d ? (0, b.Z)() : O(s.id);
+                        if ((null == e || e(), d)) (0, b.Z)();
+                        else {
+                            var n;
+                            (n = s.id) !== (null == t ? void 0 : t.id) &&
+                                (m.default.track(x.rMx.MULTI_ACCOUNT_SWITCH_ATTEMPT, {
+                                    location: { section: x.jXE.USER_PROFILE },
+                                }),
+                                g.yD(n));
+                        }
                     },
                 },
                 s.id,
             );
         });
     return (
-        v.push(
+        O.push(
             (0, i.jsxs)(i.Fragment, {
                 children: [
                     (0, i.jsx)(a.Clw, {}),
@@ -110,6 +113,6 @@ function E(e) {
                 ],
             }),
         ),
-        v
+        O
     );
 }

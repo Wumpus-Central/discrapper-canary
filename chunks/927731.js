@@ -1,4 +1,4 @@
-n.d(t, { Z: () => S }), n(388685);
+n.d(t, { Z: () => E }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -18,7 +18,7 @@ var r = n(255367),
     j = n(450215),
     v = n(981631),
     _ = n(388032),
-    O = n(958619);
+    O = n(255311);
 function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -62,24 +62,8 @@ function C(e, t) {
         e
     );
 }
-let N = "guild-role-subscription-tier-template-selector",
-    I = (e) => {
-        let [t, n] = i.useState(!0),
-            [r, l] = i.useState();
-        return (
-            i.useEffect(() => {
-                n(!0),
-                    (0, f.X)(e).then((e) => {
-                        l(e), n(!1);
-                    });
-            }, [e]),
-            {
-                loading: t,
-                priceTiers: r,
-            }
-        );
-    };
-function E(e) {
+let N = "guild-role-subscription-tier-template-selector";
+function I(e) {
     let { guildId: t, priceTiers: l, groupListingId: f } = e,
         I = (0, h._k)(f),
         {
@@ -96,18 +80,15 @@ function E(e) {
             });
             return (0, s.uniq)(e);
         }, [E, w]),
-        D = (e, t) => {
-            R((n) => C(y({}, n), { [e]: t }));
-        },
-        A = (0, p.ss)(t),
-        k = (0, p.Gp)(),
-        L = i.useCallback(() => {
-            k &&
+        D = (0, p.ss)(t),
+        A = (0, p.Gp)(),
+        k = i.useCallback(() => {
+            A &&
                 g.jJ.trackExposure({
                     guildId: t,
                     location: "b2d9de_1",
                 }),
-                k && A
+                A && D
                     ? (0, d.ZDy)(
                           async () => {
                               let { default: e } = await n.e("9558").then(n.bind(n, 34460));
@@ -125,20 +106,20 @@ function E(e) {
                           { modalKey: N },
                       )
                     : S();
-        }, [t, T, S, l, k, A]),
-        M = x.Lo(Z),
-        G = i.useCallback(() => Z.forEach(x.GM), [Z]),
-        U = (0, b.mY)(),
-        B = (0, o.e7)([m.Z], () => m.Z.getProps().subsection);
+        }, [t, T, S, l, A, D]),
+        L = x.Lo(Z),
+        M = i.useCallback(() => Z.forEach(x.GM), [Z]),
+        G = (0, b.mY)(),
+        U = (0, o.e7)([m.Z], () => m.Z.getProps().subsection);
     return (
         i.useEffect(
             () => (
-                B === v.KsC.ROLE_SUBSCRIPTION_TIER_TEMPLATE && L(),
+                U === v.KsC.ROLE_SUBSCRIPTION_TIER_TEMPLATE && k(),
                 () => {
                     (0, d.Mr3)(N);
                 }
             ),
-            [B, L],
+            [U, k],
         ),
         (0, r.jsxs)(r.Fragment, {
             children: [
@@ -155,16 +136,19 @@ function E(e) {
                                     priceTiers: l,
                                     groupListingId: f,
                                     onDeleteEditState: () => P(e),
-                                    onBeforeDispatchNewListing: (t) => D(t.id, e),
+                                    onBeforeDispatchNewListing: (t) => {
+                                        var n;
+                                        return (n = t.id), void R((t) => C(y({}, t), { [n]: e }));
+                                    },
                                     onAfterDispatchNewListing: () => P(e),
                                 },
                                 e,
                             ),
                         ),
                         (0, r.jsxs)(d.P3F, {
-                            onClick: U ? void 0 : L,
-                            className: a()(O.createTierButton, { [O.disabled]: U }),
-                            "aria-disabled": U,
+                            onClick: G ? void 0 : k,
+                            className: a()(O.createTierButton, { [O.disabled]: G }),
+                            "aria-disabled": G,
                             children: [
                                 (0, r.jsx)(d.oFk, {
                                     size: "xs",
@@ -183,31 +167,46 @@ function E(e) {
                 (0, r.jsx)(c.W, {
                     component: "div",
                     className: O.contentRegion,
-                    children: M && (0, r.jsx)(d.oXn, { children: (0, r.jsx)(u.Z, { onReset: G }) }),
+                    children: L && (0, r.jsx)(d.oXn, { children: (0, r.jsx)(u.Z, { onReset: M }) }),
                 }),
             ],
         })
     );
 }
-function S(e) {
+function E(e) {
     let { guildId: t } = e,
-        { priceTiers: n } = I(t),
-        i = (0, h.GG)(t),
-        { maxTiers: l } = (0, p.s1)(t),
-        a = i.map((e) => e.id);
+        { priceTiers: n } = ((e) => {
+            let [t, n] = i.useState(!0),
+                [r, l] = i.useState();
+            return (
+                i.useEffect(() => {
+                    n(!0),
+                        (0, f.X)(e).then((e) => {
+                            l(e), n(!1);
+                        });
+                }, [e]),
+                {
+                    loading: t,
+                    priceTiers: r,
+                }
+            );
+        })(t),
+        l = (0, h.GG)(t),
+        { maxTiers: a } = (0, p.s1)(t),
+        s = l.map((e) => e.id);
     return (0, r.jsxs)(d.hjN, {
         title: _.intl.string(_.t["72+Soq"]),
         className: O.container,
         children: [
             (0, r.jsx)(d.R94, {
                 type: d.R94.Types.DESCRIPTION,
-                children: _.intl.format(_.t.nHRSvL, { maxTiers: l }),
+                children: _.intl.format(_.t.nHRSvL, { maxTiers: a }),
             }),
             (0, r.jsx)(d.LZC, { size: 16 }),
-            (0, r.jsx)(E, {
+            (0, r.jsx)(I, {
                 priceTiers: n,
                 guildId: t,
-                groupListingId: a[0],
+                groupListingId: s[0],
             }),
         ],
     });

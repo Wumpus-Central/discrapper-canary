@@ -169,7 +169,7 @@ let L = function (e) {
         }
         (t || n) && e.stickers.forEach((e) => L(e));
     },
-    j = () => {
+    k = () => {
         C.forEach((e, t) => {
             let n = _.Z.getGuild(t);
             null != n && e.forEach((e) => x(e, n));
@@ -178,7 +178,7 @@ let L = function (e) {
                 e.stickers.forEach((e) => x(e));
             });
     },
-    k = (e) => {
+    j = (e) => {
         let { guilds: t } = e;
         (T = null), (I = new Map()), (C = new Map()), t.forEach(G), (O = +!!t.every((e) => null != e.stickers.items));
     },
@@ -257,7 +257,7 @@ class X extends (r = o.ZP.Store) {
         return O;
     }
     get stickerMetadata() {
-        return w(), null == T && ((T = new Map()), j()), T;
+        return w(), null == T && ((T = new Map()), k()), T;
     }
     get hasLoadedStickerPacks() {
         return null != A && A + P > Date.now();
@@ -293,7 +293,7 @@ class X extends (r = o.ZP.Store) {
 g(X, "displayName", "StickersStore");
 let Q = new X(a.Z, {
     BACKGROUND_SYNC: U,
-    CONNECTION_OPEN: k,
+    CONNECTION_OPEN: j,
     GUILD_CREATE: B,
     GUILD_DELETE: Z,
     LOGOUT: F,

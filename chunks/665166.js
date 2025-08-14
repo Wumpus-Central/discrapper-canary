@@ -3,8 +3,8 @@ var i = n(255367),
     r = n(73800),
     s = n(125697),
     a = n(481060),
-    l = n(832840),
-    o = n(200951),
+    l = n(48480),
+    o = n(931115),
     c = n(388032);
 function d() {
     r.useSyncExternalStore(c.intl.onLocaleChange, () => c.intl.currentLocale);

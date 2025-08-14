@@ -29,13 +29,13 @@ var r = n(120356),
     y = n(474936),
     A = n(981631),
     P = n(388032),
-    R = n(525433),
+    R = n(644219),
     D = n(872905),
     Z = n(578478);
 let w = (e) => {
         var t, n;
         let { className: r } = e,
-            { headingText: c, headingTop: d } = B(),
+            { headingText: c, headingTop: d } = M(),
             u = (0, a.e7)([g.Z], () => g.Z.getPremiumTypeSubscription()),
             p = (0, E.N)(),
             h = (0, j.Ng)(),
@@ -91,7 +91,7 @@ let w = (e) => {
         });
     },
     k = () => {
-        let { headingText: e, headingTop: t } = B();
+        let { headingText: e, headingTop: t } = M();
         return (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)("img", {
@@ -130,7 +130,7 @@ let w = (e) => {
     },
     L = (e) => {
         let { isEligibleForBogoPromotion: t } = e,
-            { headingText: n, headingTop: r } = B();
+            { headingText: n, headingTop: r } = M();
         return (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)("img", {
@@ -170,7 +170,7 @@ let w = (e) => {
             ],
         });
     },
-    [M, B] = (0, h.Z)(),
+    [B, M] = (0, h.Z)(),
     U = (e) => {
         let { className: t, location: n } = e,
             { analyticsLocations: r } = (0, d.ZP)(c.Z.PREMIUM_MARKETING_HERO_CTA),
@@ -270,7 +270,7 @@ let w = (e) => {
         }
         return (0, i.jsx)(d.Gt, {
             value: r,
-            children: (0, i.jsx)(M.Provider, {
+            children: (0, i.jsx)(B.Provider, {
                 value: {
                     headingText: C,
                     headingTop: N,

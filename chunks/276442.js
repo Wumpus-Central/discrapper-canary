@@ -90,8 +90,8 @@ function y(e) {
             setPurchaseState: x,
             paymentElementsEnabled: M,
         } = (0, d.JL)(),
-        { isGift: j } = (0, u.wD)(),
-        k = b(g({}, (0, s.fL)()), {
+        { isGift: k } = (0, u.wD)(),
+        j = b(g({}, (0, s.fL)()), {
             paymentSources: T,
             paymentSourceId: S,
             setPaymentSourceId: A,
@@ -100,10 +100,10 @@ function y(e) {
             purchaseErrorBlockRef: R,
             paymentAuthenticationState: P,
             selectedSkuId: w,
-            isGift: j,
+            isGift: k,
         }),
         U = (0, a.N)(m),
-        G = !j && null != U && null != w && h.nG[U.trial_id].skus.includes(w),
+        G = !k && null != U && null != w && h.nG[U.trial_id].skus.includes(w),
         B = () => {
             c(Object.values(T).length < 1 && null == n ? f.h8.PLAN_SELECT : f.h8.REVIEW, {
                 trackedFromStep: f.h8.PAYMENT_TYPE,
@@ -122,7 +122,7 @@ function y(e) {
             [y, L.current, M],
         );
     return (0, s.vP)({
-        paymentModalArgs: k,
+        paymentModalArgs: j,
         initialStep: V,
         prependSteps: [f.h8.PROMOTION_INFO],
         appendSteps: [f.h8.REVIEW, f.h8.CONFIRM],
@@ -150,7 +150,7 @@ function y(e) {
             );
         },
         isEligibleForTrial: G,
-        allowDesktopRedirectPurchase: O(w, j, D),
+        allowDesktopRedirectPurchase: O(w, k, D),
         continueSessionToInitialStep: y,
     });
 }

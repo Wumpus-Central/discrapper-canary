@@ -449,21 +449,20 @@ for (var i in o)
     }),
     (o.rgb.hcg = function (e) {
         var t,
-            r,
-            a = e[0] / 255,
-            n = e[1] / 255,
-            s = e[2] / 255,
-            o = Math.max(Math.max(a, n), s),
-            i = Math.min(Math.min(a, n), s),
-            c = o - i;
+            r = e[0] / 255,
+            a = e[1] / 255,
+            n = e[2] / 255,
+            s = Math.max(Math.max(r, a), n),
+            o = Math.min(Math.min(r, a), n),
+            i = s - o;
         return (
-            (t = c < 1 ? i / (1 - c) : 0),
+            (t = i < 1 ? o / (1 - i) : 0),
             [
                 360 *
-                    (((c <= 0 ? 0 : o === a ? ((n - s) / c) % 6 : o === n ? 2 + (s - a) / c : 4 + (a - n) / c + 4) /
+                    (((i <= 0 ? 0 : s === r ? ((a - n) / i) % 6 : s === a ? 2 + (n - r) / i : 4 + (r - a) / i + 4) /
                         6) %
                         1),
-                100 * c,
+                100 * i,
                 100 * t,
             ]
         );

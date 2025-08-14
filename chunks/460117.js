@@ -10,20 +10,7 @@ var i = n(255367),
 function u(e) {
     let { className: t, emojiClassName: n, emoji: u, setEmoji: m, channel: j } = e,
         v = l.useRef(null),
-        h = (e) => (t) => {
-            var n, i;
-            let { emoji: l, willClose: r } = t;
-            null != l &&
-                (null == l.id
-                    ? m({ name: null != (n = l.optionallyDiverseSequence) ? n : "" })
-                    : m({
-                          id: l.id,
-                          name: null != (i = l.originalName) ? i : l.name,
-                          animated: l.animated,
-                      }),
-                r && e());
-        },
-        p =
+        h =
             null == u || null == u.name
                 ? null
                 : () => {
@@ -47,7 +34,19 @@ function u(e) {
                 let { closePopout: t } = e;
                 return (0, i.jsx)(a.Z, {
                     closePopout: t,
-                    onSelectEmoji: h(t),
+                    onSelectEmoji: (e) => {
+                        var n, i;
+                        let { emoji: l, willClose: r } = e;
+                        null != l &&
+                            (null == l.id
+                                ? m({ name: null != (n = l.optionallyDiverseSequence) ? n : "" })
+                                : m({
+                                      id: l.id,
+                                      name: null != (i = l.originalName) ? i : l.name,
+                                      animated: l.animated,
+                                  }),
+                            r && t());
+                    },
                     pickerIntention: d.Hz.COMMUNITY_CONTENT,
                     channel: j,
                 });
@@ -88,7 +87,7 @@ function u(e) {
                             tabIndex: 0,
                             active: o,
                             className: t,
-                            renderButtonContents: p,
+                            renderButtonContents: h,
                         }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(r))

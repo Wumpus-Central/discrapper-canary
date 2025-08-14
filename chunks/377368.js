@@ -94,47 +94,50 @@ class v extends p.Z {
                     o.Z.hasHotspot(a.v6.SOUNDBOARD_WHEEL_EDUCATION_MODAL) &&
                     (0, i.ZDy)(async () => {
                         let { default: t } = await n.e("69208").then(n.bind(n, 490166));
-                        return (n) => {
-                            var i, a;
-                            return (0, r.jsx)(
+                        return (n) =>
+                            (0, r.jsx)(
                                 t,
-                                ((i = (function (e) {
-                                    for (var t = 1; t < arguments.length; t++) {
-                                        var n = null != arguments[t] ? arguments[t] : {},
-                                            r = Object.keys(n);
-                                        "function" == typeof Object.getOwnPropertySymbols &&
-                                            (r = r.concat(
-                                                Object.getOwnPropertySymbols(n).filter(function (e) {
-                                                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                                }),
-                                            )),
-                                            r.forEach(function (t) {
-                                                y(e, t, n[t]);
-                                            });
-                                    }
-                                    return e;
-                                })({}, n)),
-                                (a = a =
+                                (function (e, t) {
+                                    return (
+                                        (t = null != t ? t : {}),
+                                        Object.getOwnPropertyDescriptors
+                                            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+                                            : (function (e, t) {
+                                                  var n = Object.keys(e);
+                                                  if (Object.getOwnPropertySymbols) {
+                                                      var r = Object.getOwnPropertySymbols(e);
+                                                      n.push.apply(n, r);
+                                                  }
+                                                  return n;
+                                              })(Object(t)).forEach(function (n) {
+                                                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+                                              }),
+                                        e
+                                    );
+                                })(
+                                    (function (e) {
+                                        for (var t = 1; t < arguments.length; t++) {
+                                            var n = null != arguments[t] ? arguments[t] : {},
+                                                r = Object.keys(n);
+                                            "function" == typeof Object.getOwnPropertySymbols &&
+                                                (r = r.concat(
+                                                    Object.getOwnPropertySymbols(n).filter(function (e) {
+                                                        return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                                    }),
+                                                )),
+                                                r.forEach(function (t) {
+                                                    y(e, t, n[t]);
+                                                });
+                                        }
+                                        return e;
+                                    })({}, n),
                                     {
                                         guildId: e,
                                         keybind: c,
                                         channel: l,
-                                    }),
-                                Object.getOwnPropertyDescriptors
-                                    ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(a))
-                                    : (function (e, t) {
-                                          var n = Object.keys(e);
-                                          if (Object.getOwnPropertySymbols) {
-                                              var r = Object.getOwnPropertySymbols(e);
-                                              n.push.apply(n, r);
-                                          }
-                                          return n;
-                                      })(Object(a)).forEach(function (e) {
-                                          Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(a, e));
-                                      }),
-                                i),
+                                    },
+                                ),
                             );
-                        };
                     });
             });
     }

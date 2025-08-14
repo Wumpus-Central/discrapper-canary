@@ -9,7 +9,7 @@ var i = n(481060),
     s = n(489813),
     a = n(815660),
     o = n(388032),
-    c = n(863296);
+    c = n(624463);
 function u() {
     return (0, r.jsx)(s.PU, {
         className: c.editableRequirementContainer,
@@ -44,7 +44,7 @@ function d(e) {
             onClick: () => {
                 (0, i.ZDy)(
                     async () => {
-                        let { default: e } = await Promise.all([n.e("76540"), n.e("79861")]).then(n.bind(n, 607018));
+                        let { default: e } = await Promise.all([n.e("76540"), n.e("92304")]).then(n.bind(n, 607018));
                         return (t) =>
                             (0, r.jsx)(
                                 e,

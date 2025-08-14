@@ -38,9 +38,9 @@ var r = n(255367),
     L = n(474936),
     x = n(874893),
     M = n(526761),
-    j = n(231338),
-    k = n(388032),
-    U = n(263408);
+    k = n(231338),
+    j = n(388032),
+    U = n(227674);
 function G(e, t, n) {
     return (
         t in e
@@ -144,16 +144,16 @@ let W = Object.freeze({
                         isCoachmark: !0,
                         isPreview: !0,
                     },
-                    () => k.intl.string(k.t.D29k19),
+                    () => j.intl.string(j.t.D29k19),
                 )
                 .with(
                     {
                         type: "EDITOR",
                         isCoachmark: !0,
                     },
-                    () => k.intl.string(k.t["8+vbqa"]),
+                    () => j.intl.string(j.t["8+vbqa"]),
                 )
-                .otherwise(() => k.intl.string(k.t.hjV0fX));
+                .otherwise(() => j.intl.string(j.t.hjV0fX));
         return (0, r.jsxs)("div", {
             className: U.title,
             children: [
@@ -182,24 +182,24 @@ let W = Object.freeze({
                     type: "EDITOR",
                     isPreview: !0,
                 },
-                () => k.intl.format(k.t.G8yQXl, { onPremiumClick: () => E.z }),
+                () => j.intl.format(j.t.G8yQXl, { onPremiumClick: () => E.z }),
             )
             .with(
                 {
                     type: "EDITOR",
                     isCoachmark: !0,
                 },
-                () => k.intl.string(k.t.jmZiNj),
+                () => j.intl.string(j.t.jmZiNj),
             )
             .with(
                 {
                     type: "EDITOR",
                     isPreview: !1,
                 },
-                () => k.intl.string(k.t.dqDFwc),
+                () => j.intl.string(j.t.dqDFwc),
             )
-            .with({ isPreview: !0 }, () => k.intl.format(k.t.DWIjJy, { onPremiumClick: () => E.z }))
-            .otherwise(() => k.intl.string(k.t["np0X/v"]));
+            .with({ isPreview: !0 }, () => j.intl.format(j.t.DWIjJy, { onPremiumClick: () => E.z }))
+            .otherwise(() => j.intl.string(j.t["np0X/v"]));
         return (0, r.jsx)(u.X6q, {
             variant: "text-sm/normal",
             className: U.subtext,
@@ -216,7 +216,7 @@ let W = Object.freeze({
             ? (0, r.jsx)(y.ZP, {
                   type: L.cd.PREMIUM_CLIENT_THEME_TRY_IT_OUT,
                   subscriptionTier: L.Si.TIER_2,
-                  children: k.intl.format(k.t.G8yQXl, { onPremiumClick: () => E.z }),
+                  children: j.intl.format(j.t.G8yQXl, { onPremiumClick: () => E.z }),
               })
             : (0, r.jsxs)("div", {
                   className: U.header,
@@ -379,24 +379,24 @@ let W = Object.freeze({
                         onSelect: () => d("system"),
                     }),
                 (0, r.jsx)(P.bD, {
-                    theme: j.BR.LIGHT,
-                    isSelected: c && !u && s === j.BR.LIGHT,
-                    onSelect: () => d(j.BR.LIGHT),
+                    theme: k.BR.LIGHT,
+                    isSelected: c && !u && s === k.BR.LIGHT,
+                    onSelect: () => d(k.BR.LIGHT),
                 }),
                 (0, r.jsx)(P.bD, {
-                    theme: j.BR.DARK,
-                    isSelected: c && !u && s === j.BR.DARK,
-                    onSelect: () => d(j.BR.DARK),
+                    theme: k.BR.DARK,
+                    isSelected: c && !u && s === k.BR.DARK,
+                    onSelect: () => d(k.BR.DARK),
                 }),
                 (0, r.jsx)(P.bD, {
-                    theme: j.BR.DARKER,
-                    isSelected: c && !u && s === j.BR.DARKER,
-                    onSelect: () => d(j.BR.DARKER),
+                    theme: k.BR.DARKER,
+                    isSelected: c && !u && s === k.BR.DARKER,
+                    onSelect: () => d(k.BR.DARKER),
                 }),
                 (0, r.jsx)(P.bD, {
-                    theme: j.BR.MIDNIGHT,
-                    isSelected: c && !u && s === j.BR.MIDNIGHT,
-                    onSelect: () => d(j.BR.MIDNIGHT),
+                    theme: k.BR.MIDNIGHT,
+                    isSelected: c && !u && s === k.BR.MIDNIGHT,
+                    onSelect: () => d(k.BR.MIDNIGHT),
                 }),
                 !n &&
                     !t &&
@@ -423,7 +423,7 @@ let W = Object.freeze({
                     (0, r.jsx)(u.X6q, {
                         className: U.upsellText,
                         variant: "heading-sm/semibold",
-                        children: k.intl.string(k.t.POSLGR),
+                        children: j.intl.string(j.t.POSLGR),
                     }),
                 (0, r.jsxs)("div", {
                     className: a()(U.presets, { [U.presetsJustify]: t }),

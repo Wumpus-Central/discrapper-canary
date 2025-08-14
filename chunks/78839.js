@@ -154,11 +154,11 @@ function M(e) {
     let { eligible: t } = e;
     (T = t), (I = !1);
 }
-function j(e) {
+function k(e) {
     let {} = e;
     (T = !1), (I = !1);
 }
-function k() {
+function j() {
     (h = null),
         (m = null),
         (g = null),
@@ -259,9 +259,9 @@ let Z = new B(o.Z, {
     BILLING_MOST_RECENT_SUBSCRIPTION_FETCH_SUCCESS: P,
     BILLING_MOST_RECENT_SUBSCRIPTION_FETCH_FAIL: w,
     BILLING_PREVIOUS_PREMIUM_SUBSCRIPTION_FETCH_SUCCESS: D,
-    BILLING_SUBSCRIPTION_RESET: k,
+    BILLING_SUBSCRIPTION_RESET: j,
     BILLING_SUBSCRIPTION_REWARD_ELIGIBILITY_FETCH_START: L,
     BILLING_SUBSCRIPTION_REWARD_ELIGIBILITY_FETCH_SUCCESS: M,
-    BILLING_SUBSCRIPTION_REWARD_ELIGIBILITY_FETCH_FAILURE: j,
-    LOGOUT: k,
+    BILLING_SUBSCRIPTION_REWARD_ELIGIBILITY_FETCH_FAILURE: k,
+    LOGOUT: j,
 });

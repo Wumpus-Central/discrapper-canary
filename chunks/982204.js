@@ -20,7 +20,7 @@ var i = n(120356),
     m = n(937615),
     g = n(981631),
     E = n(388032),
-    b = n(176985);
+    b = n(221152);
 let y = (e, t) =>
         null != t && e.productLine === g.POd.COLLECTIBLES && t.type !== l.Z.BUNDLE ? "THREE_COLUMN" : "TWO_COLUMN",
     O = (e) => {

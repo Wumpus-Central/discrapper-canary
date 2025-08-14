@@ -1,20 +1,18 @@
-r.d(t, { T: () => n });
-var n = function (e, t, r) {
-    var n = r.getBoundingClientRect(),
-        o = n.width,
-        a = n.height,
-        i = "number" == typeof e.pageX ? e.pageX : e.touches[0].pageX,
-        l = "number" == typeof e.pageY ? e.pageY : e.touches[0].pageY,
-        s = i - (r.getBoundingClientRect().left + window.pageXOffset),
-        u = l - (r.getBoundingClientRect().top + window.pageYOffset);
-    s < 0 ? (s = 0) : s > o && (s = o), u < 0 ? (u = 0) : u > a && (u = a);
-    var c = s / o,
-        p = 1 - u / a;
-    return {
-        h: t.h,
-        s: c,
-        v: p,
-        a: t.a,
-        source: "hsv",
-    };
+e.exports = {
+    container: "container__91a9d",
+    muted: "muted__91a9d",
+    childContainer: "childContainer__91a9d",
+    nameplated: "nameplated__91a9d",
+    avatar: "avatar__91a9d",
+    clickable: "clickable__91a9d",
+    highlighted: "highlighted__91a9d",
+    selected: "selected__91a9d",
+    layout: "layout__91a9d",
+    wrappedLayout: "wrappedLayout__91a9d",
+    content: "content__91a9d",
+    name: "name__91a9d",
+    wrappedName: "wrappedName__91a9d",
+    nameAndDecorators: "nameAndDecorators__91a9d",
+    subText: "subText__91a9d",
+    children: "children__91a9d",
 };

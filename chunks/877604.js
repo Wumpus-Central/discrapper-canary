@@ -1,10 +1,10 @@
-i.d(e, { Z: () => u }), i(415506);
+i.d(e, { Z: () => c }), i(415506);
 var s,
     n = i(255367),
     a = i(73800),
     h = i(120356),
     r = i.n(h),
-    o = i(216224);
+    o = i(156578);
 function l(t, e, i) {
     return (
         e in t
@@ -18,18 +18,18 @@ function l(t, e, i) {
         t
     );
 }
-let d = (t) =>
-    new Promise((e, i) => {
-        null == t && i(Error("No image src passed"));
-        let s = new Image();
-        (s.src = t), (s.onload = () => e(s)), (s.onerror = (t) => i(t));
-    });
-class c extends (s = a.PureComponent) {
+class d extends (s = a.PureComponent) {
     componentDidUpdate(t) {
         t.src !== this.props.src && this.setState({ loaded: !1 }, () => this.initialize());
     }
     initialize() {
-        d(this.props.src).then(() => {
+        let t;
+        ((t = this.props.src),
+        new Promise((e, i) => {
+            null == t && i(Error("No image src passed"));
+            let s = new Image();
+            (s.src = t), (s.onload = () => e(s)), (s.onerror = (t) => i(t));
+        })).then(() => {
             this.unmounting || this.setState({ loaded: !0 });
         });
     }
@@ -91,9 +91,9 @@ class c extends (s = a.PureComponent) {
         super(t), l(this, "unmounting", !1), l(this, "state", { loaded: !1 }), this.initialize();
     }
 }
-l(c, "defaultProps", {
+l(d, "defaultProps", {
     width: 0,
     height: 0,
     alt: "",
 });
-let u = c;
+let c = d;

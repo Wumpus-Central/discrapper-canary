@@ -82,11 +82,11 @@ function M(e) {
     let { userTrialOfferId: t } = e;
     m.delete(t), g.add(t);
 }
-function j(e) {
+function k(e) {
     let { message: t } = e;
     G(t);
 }
-function k(e) {
+function j(e) {
     let { messages: t } = e;
     t.forEach((e) => G(e));
 }
@@ -166,8 +166,8 @@ let H = new V(a.Z, {
     REFERRALS_FETCH_ELIGIBLE_USER_START: B,
     REFERRALS_FETCH_ELIGIBLE_USER_SUCCESS: Z,
     REFERRALS_FETCH_ELIGIBLE_USER_FAIL: F,
-    LOAD_MESSAGES_SUCCESS: k,
-    MESSAGE_CREATE: j,
-    LOAD_MESSAGES_AROUND_SUCCESS: k,
+    LOAD_MESSAGES_SUCCESS: j,
+    MESSAGE_CREATE: k,
+    LOAD_MESSAGES_AROUND_SUCCESS: j,
     LOGOUT: A,
 });

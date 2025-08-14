@@ -1,69 +1,69 @@
-n.d(t, { t: () => x }), n(388685);
+n.d(t, { t: () => S }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(636977),
     o = n(442837),
-    s = n(704215),
-    a = n(952265),
+    a = n(704215),
+    s = n(952265),
     c = n(481060),
     u = n(570140),
     d = n(266454),
-    h = n(243778),
-    p = n(110560),
-    f = n(819640),
+    p = n(243778),
+    f = n(110560),
+    h = n(819640),
     g = n(594174),
     m = n(74538),
     b = n(507808),
     O = n(822857),
     _ = n(479766),
     y = n(275388),
-    C = n(331663),
-    v = n(981631),
-    j = n(921944),
+    v = n(331663),
+    j = n(981631),
+    C = n(921944),
     E = n(46140);
-let S = "orb-announcement-modal-key";
-function x() {
+let x = "orb-announcement-modal-key";
+function S() {
     let { enabled: e } = (0, O.hl)({ location: "virtual_currency_announcement_modal" }),
         t = (0, o.e7)([_.Z], () => _.Z.onboardingModalOpenedPrior),
-        { user: x } = (0, o.cj)([g.default], () => ({ user: g.default.getCurrentUser() })),
-        I = (0, o.e7)([f.Z], () => f.Z.hasLayers()),
-        P = (0, y.GE)(S),
-        N = (0, m.EO)(x) || I || P,
-        [w, Z] = (0, h.US)(
-            e && !N ? [s.z.VIRTUAL_CURRENCY_ONBOARDING_ANNOUNCEMENT_MODAL] : [],
-            ...C.b.useSelectedDismissibleContent,
+        { user: S } = (0, o.cj)([g.default], () => ({ user: g.default.getCurrentUser() })),
+        P = (0, o.e7)([h.Z], () => h.Z.hasLayers()),
+        I = (0, y.GE)(x),
+        N = (0, m.EO)(S) || P || I,
+        [w, Z] = (0, p.US)(
+            e && !N ? [a.z.VIRTUAL_CURRENCY_ONBOARDING_ANNOUNCEMENT_MODAL] : [],
+            ...v.b.useSelectedDismissibleContent,
         );
     i.useEffect(() => {
-        w !== s.z.VIRTUAL_CURRENCY_ONBOARDING_ANNOUNCEMENT_MODAL ||
+        w !== a.z.VIRTUAL_CURRENCY_ONBOARDING_ANNOUNCEMENT_MODAL ||
             t ||
             (u.Z.dispatch({ type: "VIRTUAL_CURRENCY_ONBOARDING_MODAL_OPEN" }),
-            (0, a.ZD)(
+            (0, s.ZD)(
                 async () => {
                     let { WrappedAnnouncementModal: e } = await n.e("86653").then(n.bind(n, 993318));
                     return function (t) {
                         let { onClose: n, transitionState: i } = t,
                             o = async () => {
-                                await n(), Z(j.L.USER_DISMISS);
+                                await n(), Z(C.L.USER_DISMISS);
                             };
                         return (0, r.jsx)(e, {
                             transitionState: i,
                             onClose: o,
                             ctaOnClick: () => {
-                                Z(j.L.TAKE_ACTION),
-                                    (0, d.Q3)(s.z.VIRTUAL_CURRENCY_DISCOVERY_ONBOARDING_COACHMARK, {
-                                        dismissAction: j.L.INDIRECT_ACTION,
-                                        groupName: j.R.VIRTUAL_CURRENCY_ONBOARDING,
+                                Z(C.L.TAKE_ACTION),
+                                    (0, d.Q3)(a.z.VIRTUAL_CURRENCY_DISCOVERY_ONBOARDING_COACHMARK, {
+                                        dismissAction: C.L.INDIRECT_ACTION,
+                                        groupName: C.R.VIRTUAL_CURRENCY_ONBOARDING,
                                     }),
-                                    (0, d.Q3)(s.z.VIRTUAL_CURRENCY_SHOP_ONBOARDING_COACHMARK, {
-                                        dismissAction: j.L.INDIRECT_ACTION,
-                                        groupName: j.R.VIRTUAL_CURRENCY_ONBOARDING,
+                                    (0, d.Q3)(a.z.VIRTUAL_CURRENCY_SHOP_ONBOARDING_COACHMARK, {
+                                        dismissAction: C.L.INDIRECT_ACTION,
+                                        groupName: C.R.VIRTUAL_CURRENCY_ONBOARDING,
                                     }),
                                     (0, b.Y)({
-                                        pageType: v.ZY5.ORBS_ANNOUNCEMENT_MODAL,
-                                        sectionType: v.jXE.ORBS_ANNOUNCEMENT_MODAL,
-                                        ctaObject: v.qAy.CTA_TO_ORB_INTRO_QUEST,
+                                        pageType: j.ZY5.ORBS_ANNOUNCEMENT_MODAL,
+                                        sectionType: j.jXE.ORBS_ANNOUNCEMENT_MODAL,
+                                        ctaObject: j.qAy.CTA_TO_ORB_INTRO_QUEST,
                                     }),
-                                    (0, p.navigateToQuestHome)({
+                                    (0, f.navigateToQuestHome)({
                                         questId: E.V6,
                                         fromContent: l.j.ORBS_ANNOUNCEMENT_MODAL,
                                     }),
@@ -73,11 +73,11 @@ function x() {
                     };
                 },
                 {
-                    modalKey: S,
+                    modalKey: x,
                     onCloseRequest: () => {
-                        Z(j.L.USER_DISMISS), (0, c.Mr3)(S);
+                        Z(C.L.USER_DISMISS), (0, c.Mr3)(x);
                     },
                 },
             ));
-    }, [w, e, t, Z, I]);
+    }, [w, e, t, Z, P]);
 }

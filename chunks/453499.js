@@ -1,4 +1,4 @@
-n.d(t, { Z: () => O }), n(388685);
+n.d(t, { Z: () => I }), n(388685);
 var r,
     a,
     i = n(255367),
@@ -16,7 +16,7 @@ var r,
     _ = n(585483),
     b = n(981631),
     x = n(388032),
-    v = n(73088);
+    v = n(633448);
 function C(e, t, n) {
     return (
         t in e
@@ -30,12 +30,7 @@ function C(e, t, n) {
         e
     );
 }
-let j = {
-    JUMP: "jump",
-    NEXT: "next",
-    PREVIOUS: "previous",
-};
-class y extends (r = l.PureComponent) {
+class j extends (r = l.PureComponent) {
     componentDidMount() {
         _.S.subscribe(b.CkL.CAROUSEL_PREV, this.handlePrevious), _.S.subscribe(b.CkL.CAROUSEL_NEXT, this.handleNext);
     }
@@ -112,22 +107,22 @@ class y extends (r = l.PureComponent) {
         super(...e),
             C(this, "handleDotClick", (e) => {
                 let { onSetItem: t, onIntentionalChange: n, current: r } = this.props;
-                null == n || n(r, e, j.JUMP), t(e);
+                null == n || n(r, e, "jump"), t(e);
             }),
             C(this, "handleNext", () => {
                 let { onIntentionalChange: e, current: t, onChangePage: n } = this.props,
                     r = n(1);
-                null == e || e(t, r, j.NEXT);
+                null == e || e(t, r, "next");
             }),
             C(this, "handlePrevious", () => {
                 let { onIntentionalChange: e, current: t, onChangePage: n } = this.props,
                     r = n(-1);
-                null == e || e(t, r, j.PREVIOUS);
+                null == e || e(t, r, "previous");
             });
     }
 }
-C(y, "defaultProps", { includeHitboxPadding: !0 });
-class I extends (a = l.PureComponent) {
+C(j, "defaultProps", { includeHitboxPadding: !0 });
+class y extends (a = l.PureComponent) {
     componentDidMount() {
         m.Z.subscribe("WINDOW_FOCUS", this.handleWindowFocusChange),
             this.props.initialPaused || this.state.paused || this.startTimer();
@@ -205,7 +200,7 @@ class I extends (a = l.PureComponent) {
                             }),
                         }),
                         e.length > 1 &&
-                            (0, i.jsx)(y, {
+                            (0, i.jsx)(j, {
                                 className: o()(s, m ? v.themedPagination : v.pagination),
                                 arrowClassName: c,
                                 includeHitboxPadding: g,
@@ -266,5 +261,5 @@ class I extends (a = l.PureComponent) {
             });
     }
 }
-C(I, "defaultProps", { aspectRatio: 16 / 9 });
-let O = I;
+C(y, "defaultProps", { aspectRatio: 16 / 9 });
+let I = y;

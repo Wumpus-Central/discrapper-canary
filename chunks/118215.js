@@ -1,24 +1,23 @@
-t.d(i, { ZP: () => d });
+t.d(i, { ZP: () => c });
 var n,
     l,
-    r,
-    s = t(442837),
-    a = t(570140);
-let u = {},
-    o = !1;
-class c extends (r = s.ZP.Store) {
+    r = t(442837),
+    s = t(570140);
+let a = {},
+    u = !1;
+class o extends (l = r.ZP.Store) {
     isLoading() {
-        return o;
+        return u;
     }
     passesChecklist(e) {
         var i;
-        return !o && (null == (i = u[e]) ? void 0 : i.sufficient);
+        return !u && (null == (i = a[e]) ? void 0 : i.sufficient);
     }
     isPendingSuccess(e) {
-        let i = u[e];
+        let i = a[e];
         return (
             null != i &&
-            !o &&
+            !u &&
             i.healthScorePending &&
             i.safeEnvironment &&
             0 === Object.keys(i.nsfwProperties).length &&
@@ -27,30 +26,29 @@ class c extends (r = s.ZP.Store) {
         );
     }
     getDiscoveryChecklist(e) {
-        return u[e];
+        return a[e];
     }
 }
-(l = "DiscoverGuildChecklistStore"),
-    (n = "displayName") in c
-        ? Object.defineProperty(c, n, {
-              value: l,
-              enumerable: !0,
-              configurable: !0,
-              writable: !0,
-          })
-        : (c[n] = l);
-let d = new c(a.Z, {
+(n = "displayName") in o
+    ? Object.defineProperty(o, n, {
+          value: "DiscoverGuildChecklistStore",
+          enumerable: !0,
+          configurable: !0,
+          writable: !0,
+      })
+    : (o[n] = "DiscoverGuildChecklistStore");
+let c = new o(s.Z, {
     DISCOVER_CHECKLIST_FETCH_START: function (e) {
-        o = !0;
+        u = !0;
     },
     DISCOVER_CHECKLIST_FETCH_FAILURE: function (e) {
-        o = !1;
+        u = !1;
     },
     DISCOVER_CHECKLIST_FETCH_SUCCESS: function (e) {
         var i;
         let { checklist: t, guildId: n } = e;
-        (o = !1),
-            (u[n] = {
+        (u = !1),
+            (a[n] = {
                 guildId: t.guild_id,
                 safeEnvironment: t.safe_environment,
                 healthy: t.healthy,

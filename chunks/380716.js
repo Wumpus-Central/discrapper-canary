@@ -25,7 +25,7 @@ var t = l(255367),
     S = l(981631),
     T = l(185923),
     _ = l(388032),
-    k = l(895383);
+    k = l(353441);
 function E(e) {
     for (var n = 1; n < arguments.length; n++) {
         var l = null != arguments[n] ? arguments[n] : {},
@@ -280,29 +280,8 @@ function G(e) {
             },
             [ej],
         ),
-        ey = (e) => (n) => {
-            var l, t;
-            let { emoji: i, willClose: a } = n;
-            if (null == i) return;
-            let r = null;
-            ej(
-                null,
-                null == i.id
-                    ? {
-                          id: null,
-                          name: null != (l = i.optionallyDiverseSequence) ? l : "",
-                          animated: !1,
-                      }
-                    : {
-                          id: i.id,
-                          name: null != (t = i.originalName) ? t : i.name,
-                          animated: i.animated,
-                      },
-            ),
-                a && e();
-        },
-        eC = null;
-    eC =
+        ey = null;
+    ey =
         null != ef
             ? (0, t.jsxs)(t.Fragment, {
                   children: [
@@ -344,7 +323,7 @@ function G(e) {
                     size: "md",
                     color: "currentColor",
                 });
-    let eI = i.useMemo(
+    let eC = i.useMemo(
         () => [
             {
                 text: _.intl.string(_.t["ETE/oK"]),
@@ -456,14 +435,43 @@ function G(e) {
                                                 targetElementRef: H,
                                                 position: "top",
                                                 renderPopout: (e) => {
-                                                    let { closePopout: l } = e;
+                                                    let l,
+                                                        { closePopout: i } = e;
                                                     return (0, t.jsx)(v.Z, {
                                                         closePopout: () => {
-                                                            l(), n();
+                                                            i(), n();
                                                         },
-                                                        onSelectEmoji: ey(() => {
-                                                            l(), n();
-                                                        }),
+                                                        onSelectEmoji:
+                                                            ((l = () => {
+                                                                i(), n();
+                                                            }),
+                                                            (e) => {
+                                                                var n, t;
+                                                                let { emoji: i, willClose: a } = e;
+                                                                if (null != i)
+                                                                    ej(
+                                                                        null,
+                                                                        null == i.id
+                                                                            ? {
+                                                                                  id: null,
+                                                                                  name:
+                                                                                      null !=
+                                                                                      (n = i.optionallyDiverseSequence)
+                                                                                          ? n
+                                                                                          : "",
+                                                                                  animated: !1,
+                                                                              }
+                                                                            : {
+                                                                                  id: i.id,
+                                                                                  name:
+                                                                                      null != (t = i.originalName)
+                                                                                          ? t
+                                                                                          : i.name,
+                                                                                  animated: i.animated,
+                                                                              },
+                                                                    ),
+                                                                        a && l();
+                                                            }),
                                                         pickerIntention: T.Hz.COMMUNITY_CONTENT,
                                                         channel: X,
                                                     });
@@ -517,7 +525,7 @@ function G(e) {
                                             P(E({}, e), {
                                                 className: k.iconUpload,
                                                 ref: F,
-                                                children: eC,
+                                                children: ey,
                                             }),
                                         ),
                                 }),
@@ -558,7 +566,7 @@ function G(e) {
                 ],
             }),
             (0, t.jsx)(c.G, {
-                actions: eI,
+                actions: eC,
                 leading:
                     null != A
                         ? (0, t.jsx)(d.Avr, {

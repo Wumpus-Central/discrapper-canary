@@ -1,6 +1,6 @@
 n.d(t, { default: () => V }), n(388685);
-var a = n(255367),
-    i = n(73800),
+var i = n(255367),
+    a = n(73800),
     r = n(120356),
     l = n.n(r),
     s = n(218887),
@@ -10,8 +10,8 @@ var a = n(255367),
     u = n(82659),
     m = n(481060),
     p = n(493683),
-    f = n(247272),
-    g = n(904245),
+    g = n(247272),
+    f = n(904245),
     b = n(166459),
     h = n(476326),
     I = n(213609),
@@ -40,7 +40,7 @@ var a = n(255367),
     G = n(245335),
     q = n(959517),
     B = n(388032),
-    H = n(731480);
+    H = n(989201);
 function V(e) {
     var t,
         n,
@@ -48,23 +48,23 @@ function V(e) {
         _ = (function (e, t) {
             if (null == e) return {};
             var n,
-                a,
-                i = (function (e, t) {
+                i,
+                a = (function (e, t) {
                     if (null == e) return {};
                     var n,
-                        a,
-                        i = {},
+                        i,
+                        a = {},
                         r = Object.keys(e);
-                    for (a = 0; a < r.length; a++) (n = r[a]), t.indexOf(n) >= 0 || (i[n] = e[n]);
-                    return i;
+                    for (i = 0; i < r.length; i++) (n = r[i]), t.indexOf(n) >= 0 || (a[n] = e[n]);
+                    return a;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
                 var r = Object.getOwnPropertySymbols(e);
-                for (a = 0; a < r.length; a++)
-                    (n = r[a]),
-                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                for (i = 0; i < r.length; i++)
+                    (n = r[i]),
+                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (a[n] = e[n]);
             }
-            return i;
+            return a;
         })(e, ["applicationId", "mediaUrl", "onClose", "transitionState"]);
     let O = (0, d.e7)([L.ZP], () => L.ZP.getCurrentEmbeddedActivity());
     (0, I.Z)({
@@ -77,25 +77,25 @@ function V(e) {
     });
     let [j] = (0, y.Z)([r]),
         P = (0, d.e7)([Z.default], () => Z.default.getCurrentUser()),
-        [U, k] = i.useState(""),
-        [V, K] = i.useState([]),
-        [Q, Y] = i.useState(null),
-        [W, X] = i.useState(null),
-        [J, $] = i.useState(!1);
-    i.useEffect(() => {
+        [U, k] = a.useState(""),
+        [V, K] = a.useState([]),
+        [Q, Y] = a.useState(null),
+        [W, X] = a.useState(null),
+        [J, $] = a.useState(!1);
+    a.useEffect(() => {
         (async () => {
             let e = M.Z.toURLSafe(l);
             if (null == e) return;
             let t = o().basename(e.pathname),
                 n = await fetch(l),
-                a = new File([await n.arrayBuffer()], t);
-            Y(a);
-            let i = new FileReader();
-            (i.onload = () => {
+                i = new File([await n.arrayBuffer()], t);
+            Y(i);
+            let a = new FileReader();
+            (a.onload = () => {
                 var e;
-                return X(null == i || null == (e = i.result) ? void 0 : e.toString());
+                return X(null == a || null == (e = a.result) ? void 0 : e.toString());
             }),
-                i.readAsDataURL(a);
+                a.readAsDataURL(i);
         })();
     }, [l, Y]);
     let ee = (0, d.Wu)([N.Z, C.Z], () =>
@@ -103,15 +103,15 @@ function V(e) {
             (e) => e.type === D.bm.FRIEND || e.type === D.bm.DM || C.Z.can(F.Plq.ATTACH_FILES, e.item),
         ),
     );
-    i.useEffect(() => {
-        (0, f.x)({
+    a.useEffect(() => {
+        (0, g.x)({
             omitUserIds: new Set(),
             applicationId: r,
             inviteTargetType: G.Iq.EMBEDDED_APPLICATION,
         });
     }, [r]),
-        i.useEffect(() => (0, f.C)(U), [U]),
-        i.useEffect(() => {
+        a.useEffect(() => (0, g.C)(U), [U]),
+        a.useEffect(() => {
             let e;
             return (
                 J &&
@@ -123,10 +123,10 @@ function V(e) {
                 }
             );
         }, [J]);
-    let et = i.useCallback(async () => {
+    let et = a.useCallback(async () => {
             await s();
         }, [s]),
-        en = i.useCallback(async () => {
+        en = a.useCallback(async () => {
             A.default.track(F.rMx.ACTIVITY_SHARE_MOMENT_COPY, {
                 user_id: null == P ? void 0 : P.id,
                 application_id: r,
@@ -135,27 +135,27 @@ function V(e) {
                 await R.ZP.copyImage(l),
                 $(!0);
         }, [null == O ? void 0 : O.compositeInstanceId, r, l, null == P ? void 0 : P.id]),
-        ea = i.useCallback(async () => {
+        ei = a.useCallback(async () => {
             let e = 0,
                 t = 0,
                 n = 0;
-            async function a(a) {
-                let i;
-                switch (a.type) {
+            async function i(i) {
+                let a;
+                switch (i.type) {
                     case D.bm.DM:
                     case D.bm.FRIEND:
-                        (i = await p.Z.ensurePrivateChannel(a.id)), e++;
+                        (a = await p.Z.ensurePrivateChannel(i.id)), e++;
                         break;
                     case D.bm.GROUP_DM:
-                        (i = a.id), t++;
+                        (a = i.id), t++;
                         break;
                     case D.bm.CHANNEL:
-                        (i = a.id), n++;
+                        (a = i.id), n++;
                         break;
                     default:
                         return;
                 }
-                let l = E.Z.getChannel(i);
+                let l = E.Z.getChannel(a);
                 if (null != Q) {
                     let e = new File([Q], Q.name, { type: Q.type });
                     b.Z.addFile({
@@ -164,13 +164,13 @@ function V(e) {
                             platform: h.ow.WEB,
                             origin: "unknown:activity_share",
                         },
-                        channelId: i,
+                        channelId: a,
                         draftType: T.d.ChannelMessage,
                     });
                 }
-                let s = x.Z.getUploads(i, T.d.ChannelMessage);
-                g.Z.sendMessage(
-                    i,
+                let s = x.Z.getUploads(a, T.d.ChannelMessage);
+                f.Z.sendMessage(
+                    a,
                     null != j
                         ? v.ZP.parse(
                               l,
@@ -189,10 +189,10 @@ function V(e) {
                         applicationId: r,
                         attachmentsToUpload: s,
                         onAttachmentUploadError: (e, t, n) => {
-                            var a;
+                            var i;
                             (0, S.A)({
                                 file: e,
-                                guildId: null != (a = null == l ? void 0 : l.getGuildId()) ? a : null,
+                                guildId: null != (i = null == l ? void 0 : l.getGuildId()) ? i : null,
                                 analyticsLocations: [],
                                 code: t,
                                 reason: n,
@@ -200,9 +200,9 @@ function V(e) {
                         },
                     },
                 ),
-                    b.Z.clearAll(i, T.d.ChannelMessage);
+                    b.Z.clearAll(a, T.d.ChannelMessage);
             }
-            let i = V.map((e) => a(e));
+            let a = V.map((e) => i(e));
             A.default.track(F.rMx.ACTIVITY_SHARE_MOMENT_SEND, {
                 user_id: null == P ? void 0 : P.id,
                 application_id: r,
@@ -212,7 +212,7 @@ function V(e) {
                 n_channels: n,
             });
             try {
-                await Promise.all(i),
+                await Promise.all(a),
                     null != j &&
                         (0, m.showToast)(
                             (0, m.createToast)(
@@ -224,49 +224,32 @@ function V(e) {
                 throw ((0, m.showToast)((0, m.createToast)(B.intl.string(B.t.PanA4O), m.ToastType.FAILURE)), e);
             }
             et();
-        }, [O, j, r, V, Q, et, P]),
-        ei = (e) => {
-            let t = () => {
-                if (-1 !== V.findIndex((t) => t.id === e.item.id)) K(V.filter((t) => t.id !== e.item.id));
-                else {
-                    if (V.length >= 10) return;
-                    null != Q &&
-                        K([
-                            ...V,
-                            {
-                                id: e.item.id,
-                                type: e.type,
-                            },
-                        ]);
-                }
-            };
-            return () => t();
-        };
+        }, [O, j, r, V, Q, et, P]);
     return null == W
-        ? (0, a.jsx)(m.$jN, {})
-        : (0, a.jsx)(
+        ? (0, i.jsx)(m.$jN, {})
+        : (0, i.jsx)(
               u.Modal,
               ((t = (function (e) {
                   for (var t = 1; t < arguments.length; t++) {
                       var n = null != arguments[t] ? arguments[t] : {},
-                          a = Object.keys(n);
+                          i = Object.keys(n);
                       "function" == typeof Object.getOwnPropertySymbols &&
-                          (a = a.concat(
+                          (i = i.concat(
                               Object.getOwnPropertySymbols(n).filter(function (e) {
                                   return Object.getOwnPropertyDescriptor(n, e).enumerable;
                               }),
                           )),
-                          a.forEach(function (t) {
-                              var a;
-                              (a = n[t]),
+                          i.forEach(function (t) {
+                              var i;
+                              (i = n[t]),
                                   t in e
                                       ? Object.defineProperty(e, t, {
-                                            value: a,
+                                            value: i,
                                             enumerable: !0,
                                             configurable: !0,
                                             writable: !0,
                                         })
-                                      : (e[t] = a);
+                                      : (e[t] = i);
                           });
                   }
                   return e;
@@ -276,7 +259,7 @@ function V(e) {
                       onClose: et,
                       size: "md",
                       title: B.intl.string(B.t.r9qKo6),
-                      input: (0, a.jsx)(m.Rj2, {
+                      input: (0, i.jsx)(m.Rj2, {
                           className: H.searchBar,
                           placeholder: B.intl.string(B.t["5h0QOD"]),
                           label: B.intl.string(B.t["5h0QOD"]),
@@ -284,18 +267,18 @@ function V(e) {
                           onChange: (e) => k(e),
                           onClear: () => k(""),
                       }),
-                      preview: (0, a.jsxs)(m.Kqy, {
+                      preview: (0, i.jsxs)(m.Kqy, {
                           direction: "vertical",
                           align: "center",
                           gap: 12,
                           children: [
-                              (0, a.jsx)("img", {
+                              (0, i.jsx)("img", {
                                   alt: l,
                                   src: W,
                                   className: H.previewImage,
                               }),
                               V.length >= 10
-                                  ? (0, a.jsx)(m.Text, {
+                                  ? (0, i.jsx)(m.Text, {
                                         variant: "text-xs/normal",
                                         children: B.intl.format(B.t.mdE9iI, { maxShares: 10 }),
                                     })
@@ -315,7 +298,7 @@ function V(e) {
                               : []),
                           {
                               text: B.intl.string(B.t.TXNS7e),
-                              onClick: ea,
+                              onClick: ei,
                               variant: "primary",
                               disabled: V.length <= 0,
                           },
@@ -326,14 +309,29 @@ function V(e) {
               (n = n =
                   {
                       children: ee.map((e, t) =>
-                          (0, a.jsxs)(
-                              i.Fragment,
+                          (0, i.jsxs)(
+                              a.Fragment,
                               {
                                   children: [
-                                      0 === t ? null : (0, a.jsx)("div", { className: H.rowDivider }),
-                                      (0, a.jsx)(z, {
+                                      0 === t ? null : (0, i.jsx)("div", { className: H.rowDivider }),
+                                      (0, i.jsx)(z, {
                                           row: e,
-                                          onClick: ei(e),
+                                          onClick: () =>
+                                              (() => {
+                                                  if (-1 !== V.findIndex((t) => t.id === e.item.id))
+                                                      K(V.filter((t) => t.id !== e.item.id));
+                                                  else {
+                                                      if (V.length >= 10) return;
+                                                      null != Q &&
+                                                          K([
+                                                              ...V,
+                                                              {
+                                                                  id: e.item.id,
+                                                                  type: e.type,
+                                                              },
+                                                          ]);
+                                                  }
+                                              })(),
                                           checked: V.some((t) => t.id === e.item.id),
                                           disabled: !V.some((t) => t.id === e.item.id) && V.length >= 10,
                                       }),
@@ -348,8 +346,8 @@ function V(e) {
                   : (function (e, t) {
                         var n = Object.keys(e);
                         if (Object.getOwnPropertySymbols) {
-                            var a = Object.getOwnPropertySymbols(e);
-                            n.push.apply(n, a);
+                            var i = Object.getOwnPropertySymbols(e);
+                            n.push.apply(n, i);
                         }
                         return n;
                     })(Object(n)).forEach(function (e) {
@@ -359,14 +357,14 @@ function V(e) {
           );
 }
 function z(e) {
-    let { row: t, onClick: n, checked: i, disabled: r } = e,
+    let { row: t, onClick: n, checked: a, disabled: r } = e,
         s = null,
         o = null,
         c = null;
     switch (t.type) {
         case D.bm.DM:
         case D.bm.FRIEND:
-            (s = (0, a.jsx)(m.qEK, {
+            (s = (0, i.jsx)(m.qEK, {
                 size: m.EFr.SIZE_40,
                 src: t.item.getAvatarURL(null, 128, !1),
                 "aria-label": t.item.username,
@@ -377,7 +375,7 @@ function z(e) {
         case D.bm.GROUP_DM: {
             let e = (0, w.x)(t.item),
                 n = (0, _.F6)(t.item, Z.default, j.Z);
-            (s = (0, a.jsx)(m.qEK, {
+            (s = (0, i.jsx)(m.qEK, {
                 src: e,
                 "aria-label": n,
                 size: m.EFr.SIZE_40,
@@ -395,17 +393,17 @@ function z(e) {
                     icon: n.icon,
                     size: 40,
                 });
-                s = (0, a.jsx)(m.qEK, {
+                s = (0, i.jsx)(m.qEK, {
                     src: t,
                     "aria-label": o,
                     size: m.EFr.SIZE_40,
                 });
             } else {
                 let e = (0, U.Zg)(n.name);
-                s = (0, a.jsx)("div", {
+                s = (0, i.jsx)("div", {
                     className: H.acronym,
                     "aria-hidden": !0,
-                    children: (0, a.jsx)(m.Text, {
+                    children: (0, i.jsx)(m.Text, {
                         variant: "text-md/semibold",
                         children: e,
                     }),
@@ -413,26 +411,26 @@ function z(e) {
             }
         }
     }
-    return (0, a.jsxs)(m.P3F, {
+    return (0, i.jsxs)(m.P3F, {
         onClick: n,
         className: l()(H.rowContainer, { [H.disabled]: r }),
         children: [
-            (0, a.jsxs)("div", {
+            (0, i.jsxs)("div", {
                 className: H.rowLeft,
                 children: [
-                    (0, a.jsx)("div", {
+                    (0, i.jsx)("div", {
                         className: H.rowAvatar,
                         children: s,
                     }),
-                    (0, a.jsxs)("div", {
+                    (0, i.jsxs)("div", {
                         className: H.rowNameContainer,
                         children: [
-                            (0, a.jsx)(m.Text, {
+                            (0, i.jsx)(m.Text, {
                                 variant: "text-md/semibold",
                                 className: l()(H.rowName, { [H.disabled]: r }),
                                 children: o,
                             }),
-                            (0, a.jsx)(m.Text, {
+                            (0, i.jsx)(m.Text, {
                                 variant: "text-xs/medium",
                                 className: l()(H.rowSubName, { [H.disabled]: r }),
                                 children: c,
@@ -441,9 +439,9 @@ function z(e) {
                     }),
                 ],
             }),
-            (0, a.jsx)(m.XZJ, {
+            (0, i.jsx)(m.XZJ, {
                 disabled: r,
-                value: i,
+                value: a,
                 type: m.XZJ.Types.INVERTED,
                 displayOnly: !0,
                 className: H.rowRight,

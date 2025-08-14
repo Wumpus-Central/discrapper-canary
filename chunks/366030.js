@@ -31,8 +31,8 @@ var r = n(255367),
     D = n(981631),
     L = n(228168),
     x = n(388032),
-    M = n(887496);
-function j(e, t, n) {
+    M = n(852529);
+function k(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -45,7 +45,7 @@ function j(e, t, n) {
         e
     );
 }
-function k(e) {
+function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -56,7 +56,7 @@ function k(e) {
                 }),
             )),
             r.forEach(function (t) {
-                j(e, t, n[t]);
+                k(e, t, n[t]);
             });
     }
     return e;
@@ -236,7 +236,7 @@ function F(e) {
     i.useEffect(() => {
         T.default.track(
             D.rMx.PASSPORT_ROLE_POPOUT_VIEWED,
-            k(
+            j(
                 {
                     other_user_id: s,
                     role_id: l,
@@ -350,7 +350,7 @@ function V(e) {
                     (0, r.jsxs)(
                         "div",
                         G(
-                            k(
+                            j(
                                 {
                                     ref: m,
                                     className: M.badge,

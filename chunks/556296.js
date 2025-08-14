@@ -1,7 +1,7 @@
 let r;
 n.d(t, {
     Ek: () => D,
-    I1: () => j,
+    I1: () => k,
     ZP: () => eE,
 }),
     n(415506),
@@ -110,11 +110,11 @@ let x = "1001",
             params: {},
         };
     },
-    j = (e) => {
+    k = (e) => {
         let t = (0, O.UR)("shift");
         return null != t && (1 !== e.length || e[0][1] !== t);
     },
-    k = (e, t, n, r) => {
+    j = (e, t, n, r) => {
         var i, o;
         let a = (0, y.pz)(!1).get("Backquote"),
             s = (0, y.pz)(!0).get("Backquote");
@@ -145,27 +145,27 @@ function U(e) {
     let n = (0, O.Kd)(e),
         r = (0, y.T_)("`"),
         i = null != (t = null == r ? void 0 : r.keyCode) ? t : (0, O.UR)("`");
-    return j(n)
+    return k(n)
         ? n
         : null == i
-          ? (k(Error("Unable to get backtick code for overlay default keybind"), e, n, { rawBacktickShape: r }), null)
-          : (k(Error("Default overlay keybind is unsupported"), e, n, { rawBacktickCode: i }),
+          ? (j(Error("Unable to get backtick code for overlay default keybind"), e, n, { rawBacktickShape: r }), null)
+          : (j(Error("Default overlay keybind is unsupported"), e, n, { rawBacktickCode: i }),
             [...n, [I.MoX.KEYBOARD_KEY, i, (0, O.dU)()]]);
 }
 let G = () => {
         let e = L();
-        "shift" === e && (k(Error("Default overlay keybind is only shift"), e, null), (e = "shift+`"));
+        "shift" === e && (j(Error("Default overlay keybind is only shift"), e, null), (e = "shift+`"));
         let t = U(e);
         if (null == t) return M([], !1);
-        if (j(t)) return M(t, !0);
+        if (k(t)) return M(t, !0);
         let n = (0, O.UR)("shift"),
             r = (0, y.T_)("`");
         return (
             0 === t.length
-                ? k(Error("Default overlay keybind combo is empty"), e, t)
+                ? j(Error("Default overlay keybind combo is empty"), e, t)
                 : null == n
-                  ? k(Error("Unable to get shift code"), e, t, { shiftCode: n })
-                  : null == r && k(Error("Unable to get backtick code"), e, t),
+                  ? j(Error("Unable to get shift code"), e, t, { shiftCode: n })
+                  : null == r && j(Error("Unable to get backtick code"), e, t),
             M(t, !1)
         );
     },

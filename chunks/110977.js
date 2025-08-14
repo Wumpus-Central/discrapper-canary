@@ -3,18 +3,18 @@ var r = n(255367),
     i = n(73800),
     l = n(120356),
     o = n.n(l),
-    s = n(481060),
-    a = n(593214),
+    a = n(481060),
+    s = n(593214),
     c = n(981631),
     u = n(388032),
-    d = n(563937),
-    h = n(208772),
-    p = n(798297);
-function f() {
+    d = n(448213),
+    p = n(132789),
+    f = n(78480);
+function h() {
     return (0, r.jsx)("div", {
-        className: o()(h.row, h.rowGuildName),
+        className: o()(p.row, p.rowGuildName),
         children: (0, r.jsx)("span", {
-            className: o()(h.guildNameText, h.guildNameTextLimitedSize, d.tooltipText),
+            className: o()(p.guildNameText, p.guildNameTextLimitedSize, d.tooltipText),
             children: u.intl.string(u.t["4tSWQk"]),
         }),
     });
@@ -22,7 +22,7 @@ function f() {
 let g = i.memo(function (e) {
     let { "aria-label": t = !1, children: n } = e,
         l = (function () {
-            let { favoriteAdded: e, clearFavoriteAdded: t } = (0, a.up)();
+            let { favoriteAdded: e, clearFavoriteAdded: t } = (0, s.up)();
             return (
                 i.useEffect(() => {
                     if (e) {
@@ -37,16 +37,16 @@ let g = i.memo(function (e) {
                 e
             );
         })();
-    return (0, r.jsx)(s.ua7, {
+    return (0, r.jsx)(a.ua7, {
         forceOpen: l,
-        color: s.FGA.GREEN,
+        color: a.FGA.GREEN,
         hideOnClick: !0,
         spacing: 12,
         position: "right",
         align: "center",
-        text: (0, r.jsx)(f, {}),
+        text: (0, r.jsx)(h, {}),
         "aria-label": t,
-        tooltipClassName: p.listItemTooltip,
+        tooltipClassName: f.listItemTooltip,
         children: (e) => {
             var t, i;
             return (0, r.jsx)(

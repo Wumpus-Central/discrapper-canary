@@ -1,4 +1,4 @@
-a.d(t, { Z: () => D }), a(388685), a(49124);
+a.d(t, { Z: () => A }), a(388685), a(49124);
 var n = a(255367),
     r = a(73800),
     l = a(120356),
@@ -22,8 +22,8 @@ var n = a(255367),
     C = a(681619),
     N = a(621060),
     O = a(388032),
-    T = a(402369),
-    E = a(881291);
+    T = a(599832),
+    E = a(451429);
 let S = [
     {
         key: "event",
@@ -86,25 +86,7 @@ function w(e) {
     );
 }
 let I = new Set(["client_performance_cpu", "client_performance_memory"]),
-    k = (e, t, a) => {
-        let n = e.filter((e) => e.event === t);
-        if (0 === n.length)
-            return {
-                average: null,
-                count: 0,
-            };
-        let r = null,
-            l = 0;
-        for (let e of n) {
-            let t = e.properties[a];
-            "number" == typeof t && ((l += 1), null == r ? (r = t) : (r += t));
-        }
-        return {
-            average: null !== r ? r / n.length : null,
-            count: l,
-        };
-    },
-    R = [
+    k = [
         {
             id: "details",
             name: "Details",
@@ -223,7 +205,26 @@ let I = new Set(["client_performance_cpu", "client_performance_memory"]),
                         (0, n.jsx)(P, {
                             children: Object.entries(a).map((e) => {
                                 let [a, r] = e,
-                                    l = I.has(a) ? k(c, t, a) : null;
+                                    l = I.has(a)
+                                        ? ((e, t, a) => {
+                                              let n = e.filter((e) => e.event === t);
+                                              if (0 === n.length)
+                                                  return {
+                                                      average: null,
+                                                      count: 0,
+                                                  };
+                                              let r = null,
+                                                  l = 0;
+                                              for (let e of n) {
+                                                  let t = e.properties[a];
+                                                  "number" == typeof t && ((l += 1), null == r ? (r = t) : (r += t));
+                                              }
+                                              return {
+                                                  average: null !== r ? r / n.length : null,
+                                                  count: l,
+                                              };
+                                          })(c, t, a)
+                                        : null;
                                 return (0, n.jsxs)(
                                     "div",
                                     {
@@ -267,11 +268,11 @@ let I = new Set(["client_performance_cpu", "client_performance_memory"]),
             },
         },
     ],
-    Z = {
+    R = {
         events: {
             label: "Events",
             filter: (e) =>
-                Object.entries(Z)
+                Object.entries(R)
                     .filter((e) => {
                         let [t] = e;
                         return "events" !== t;
@@ -295,7 +296,7 @@ let I = new Set(["client_performance_cpu", "client_performance_memory"]),
             filter: (e) => e.event.startsWith("network_action"),
         },
     },
-    A = {
+    Z = {
         searchType: h.S.REGEX,
         searchStringGenerator: (e) => {
             let { event: t, properties: a } = e;
@@ -303,23 +304,23 @@ let I = new Set(["client_performance_cpu", "client_performance_memory"]),
         },
         throttleMs: 100,
     };
-function D() {
+function A() {
     let e = r.useRef(null),
         [t, a] = r.useState(""),
         l = (0, c.e7)([j.Z], () => j.Z.loggedEventsVersion),
-        [s, o] = r.useState(() => Object.keys(Z)),
+        [s, o] = r.useState(() => Object.keys(R)),
         [m, x] = r.useState(j.Z.loggedEvents),
         h = r.useCallback((e) => {
             x(e);
         }, []);
-    (0, p.BO)(t, j.Z.loggedEvents, h, A, [l]);
+    (0, p.BO)(t, j.Z.loggedEvents, h, Z, [l]);
     let b = m.filter((e) => {
-            for (let t of s) if (Z[t].filter(e)) return !0;
+            for (let t of s) if (R[t].filter(e)) return !0;
             return !1;
         }),
         [f, v] = r.useState(void 0),
         _ = b.find((e) => e.key === f),
-        { TabBar: P, renderSelectedTab: w } = (0, N.ZP)({ tabs: R }, []);
+        { TabBar: P, renderSelectedTab: w } = (0, N.ZP)({ tabs: k }, []);
     return (0, n.jsxs)("div", {
         ref: e,
         className: i()(E.panel, T.panel),
@@ -344,7 +345,7 @@ function D() {
                     (0, n.jsx)("div", { className: T.toolbarDivider }),
                     (0, n.jsx)("div", {
                         className: T.filters,
-                        children: Object.entries(Z).map((e) => {
+                        children: Object.entries(R).map((e) => {
                             let [t, a] = e;
                             return (0, n.jsx)(
                                 u.P3F,

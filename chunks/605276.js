@@ -16,7 +16,7 @@ var l = t(255367),
     x = t(825334),
     b = t(981631),
     j = t(388032),
-    C = t(760078);
+    C = t(31499);
 let v = r.memo(function (e) {
         let { guild: n } = e,
             { guildProfile: t, fetchGuildProfile: a } = (0, o.u)(n.id);
@@ -40,66 +40,67 @@ let v = r.memo(function (e) {
             _ = (0, c.zy)(v, !1),
             Z = (null == _ ? void 0 : _.length) > 0 ? _[0] : null,
             I = null != d && null == v && !x.loadingMore && !x.ready && !x.hasFetched && j;
-        r.useEffect(() => {
-            I &&
-                s.Z.fetchMessages({
-                    channelId: n,
-                    after: n,
-                    limit: 5,
-                });
-        }, [n, I]);
-        let y = (e) => {
-            null != d &&
-                (e.shiftKey
-                    ? (0, p.C3)(d.guild_id, d.id)
-                    : u.Z.openResourceChannelAsSidebar({
-                          guildId: d.guild_id,
-                          channelId: d.id,
-                      }));
-        };
-        return (0, l.jsx)(
-            i.P3F,
-            {
-                className: C.resourceChannel,
-                onClick: (e) => y(e),
-                children: (0, l.jsxs)(l.Fragment, {
-                    children: [
-                        (() => {
-                            let e = g.ZP.getResourceChannelIconURL({
-                                channelId: n,
-                                icon: o,
-                            });
-                            return null != o && null != e
-                                ? (0, l.jsx)("img", {
-                                      src: e,
-                                      className: C.resourceImage,
-                                      alt: "",
-                                      "aria-hidden": !0,
-                                  })
-                                : null != Z
-                                  ? (0, l.jsx)("img", {
-                                        className: C.resourceImage,
-                                        src: Z.src,
-                                        alt: Z.alt,
-                                    })
-                                  : (0, l.jsx)("div", {
-                                        className: C.placeholderImage,
-                                        children: (0, l.jsx)(i.hH0, {
-                                            size: "xs",
-                                            color: "currentColor",
-                                        }),
-                                    });
-                        })(),
-                        (0, l.jsx)(i.Text, {
-                            className: C.guildInfoText,
-                            variant: "text-sm/semibold",
-                            color: "none",
-                            children: t,
-                        }),
-                    ],
-                }),
-            },
-            n,
+        return (
+            r.useEffect(() => {
+                I &&
+                    s.Z.fetchMessages({
+                        channelId: n,
+                        after: n,
+                        limit: 5,
+                    });
+            }, [n, I]),
+            (0, l.jsx)(
+                i.P3F,
+                {
+                    className: C.resourceChannel,
+                    onClick: (e) => {
+                        null != d &&
+                            (e.shiftKey
+                                ? (0, p.C3)(d.guild_id, d.id)
+                                : u.Z.openResourceChannelAsSidebar({
+                                      guildId: d.guild_id,
+                                      channelId: d.id,
+                                  }));
+                    },
+                    children: (0, l.jsxs)(l.Fragment, {
+                        children: [
+                            (() => {
+                                let e = g.ZP.getResourceChannelIconURL({
+                                    channelId: n,
+                                    icon: o,
+                                });
+                                return null != o && null != e
+                                    ? (0, l.jsx)("img", {
+                                          src: e,
+                                          className: C.resourceImage,
+                                          alt: "",
+                                          "aria-hidden": !0,
+                                      })
+                                    : null != Z
+                                      ? (0, l.jsx)("img", {
+                                            className: C.resourceImage,
+                                            src: Z.src,
+                                            alt: Z.alt,
+                                        })
+                                      : (0, l.jsx)("div", {
+                                            className: C.placeholderImage,
+                                            children: (0, l.jsx)(i.hH0, {
+                                                size: "xs",
+                                                color: "currentColor",
+                                            }),
+                                        });
+                            })(),
+                            (0, l.jsx)(i.Text, {
+                                className: C.guildInfoText,
+                                variant: "text-sm/semibold",
+                                color: "none",
+                                children: t,
+                            }),
+                        ],
+                    }),
+                },
+                n,
+            )
         );
     },
     Z = r.memo(function (e) {

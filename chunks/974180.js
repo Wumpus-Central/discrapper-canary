@@ -18,8 +18,8 @@ var i,
     _ = n(287734),
     E = n(232567),
     p = n(579806),
-    T = n(761781),
-    N = n(728345),
+    N = n(761781),
+    T = n(728345),
     S = n(812206),
     I = n(802098),
     h = n(933557),
@@ -99,8 +99,8 @@ let tg = "message1",
     t_ = 0.4,
     tE = (null === p.Z || void 0 === p.Z ? void 0 : p.Z.features.supports("notifications")) ? 20 : 1,
     tp = "discord_dismissed_notification_shown",
-    tT = document.hasFocus(),
-    tN = null,
+    tN = document.hasFocus(),
+    tT = null,
     tS = new Set(),
     tI = {},
     th = {},
@@ -145,7 +145,7 @@ function tA(t, e) {
             return null == (e = t.metadata) || !e.distributor || t.metadata.distributor !== tu.GQo.STEAM;
         }));
     let a = l.filter((t) => t.type === tu.IIU.PLAYING && null != t.application_id).map((t) => t.application_id);
-    return n === o.Tv.ONLY_GAMES_PLAYED && (a = a.filter((t) => T.Z.currentUserApplicationIds.has(t))), a;
+    return n === o.Tv.ONLY_GAMES_PLAYED && (a = a.filter((t) => N.Z.currentUserApplicationIds.has(t))), a;
 }
 async function tv(t) {
     let e = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
@@ -163,7 +163,7 @@ async function tv(t) {
             });
             0 !== r.length && (t = new Set([...t, ...r]));
         }),
-            await N.ZP.fetchApplications([...t], !1);
+            await T.ZP.fetchApplications([...t], !1);
     }
     a.forEach((t) => {
         let { activities: a, user: r, guildId: o } = t;
@@ -280,7 +280,7 @@ tc(tD, "displayName", "NotificationStore"),
                       return !tP() && (to.Z.showNotification(e, n, i, l, a), !1);
                   },
                   WINDOW_FOCUS: function (t) {
-                      if ((tT = t.focused)) {
+                      if ((tN = t.focused)) {
                           let t = J.Z.getChannelId();
                           null != t && tZ.clearChannel(t);
                       }
@@ -293,24 +293,24 @@ tc(tD, "displayName", "NotificationStore"),
                           _ = $.default.getUser(null == (e = u.author) ? void 0 : e.id),
                           E = $.default.getCurrentUser();
                       if (null == f || null == _ || null == E) return !1;
-                      let p = (0, D.eF)(u, o, !tT),
-                          T = z.Z.getNotifyMessagesInSelectedChannel() && (0, D.N_)(u, o);
+                      let p = (0, D.eF)(u, o, !tN),
+                          N = z.Z.getNotifyMessagesInSelectedChannel() && (0, D.N_)(u, o);
                       if (
-                          (!p && !T) ||
+                          (!p && !N) ||
                           (u.type === tu.uaV.CHANGELOG &&
                               (null == u.changelog_id || I.Z.latestChangelogId() !== u.changelog_id))
                       )
                           return !1;
-                      let N = !z.Z.isSoundDisabled(tg),
+                      let T = !z.Z.isSoundDisabled(tg),
                           S = ta.ZP.canUseCustomNotificationSounds(E),
                           h = b.Y.getCurrentConfig({ location: "NotificationStore" }).enabled,
                           C =
-                              S && h && N
+                              S && h && T
                                   ? null != (a = (0, k.bb)(null != (l = f.guild_id) ? l : tu.aIL, o))
                                       ? a
                                       : (0, k.iD)(f.guild_id)
                                   : void 0;
-                      if ((T && (N && to.Z.playNotificationSound("message3", 0.4, C), !tT)) || !p) return !1;
+                      if ((N && (T && to.Z.playNotificationSound("message3", 0.4, C), !tN)) || !p) return !1;
                       let Z = n(808506).default,
                           A = n(624864).Z,
                           { OverlayNotificationDisabledSetting: v } = n(486016);
@@ -334,7 +334,7 @@ tc(tD, "displayName", "NotificationStore"),
                           (0, O.R)(u, f.guild_id),
                           z.Z.getDesktopType() === tu.qrD.NEVER)
                       )
-                          return N && to.Z.playNotificationSound(tg, t_, C), !1;
+                          return T && to.Z.playNotificationSound(tg, t_, C), !1;
                       let w = null != (r = q.Z.getMessage(o, u.id)) ? r : (0, P.e5)(u);
                       to.Z.showNotification(
                           m,
@@ -353,7 +353,7 @@ tc(tD, "displayName", "NotificationStore"),
                           {
                               omitViewTracking: L,
                               tag: u.id,
-                              sound: N ? tg : void 0,
+                              sound: T ? tg : void 0,
                               soundpack: C,
                               volume: t_,
                               onClick() {
@@ -555,7 +555,7 @@ tc(tD, "displayName", "NotificationStore"),
                       let { channel: n, isNewlyCreated: i } = t;
                       if (tP()) return !1;
                       let l = x.Z.getChannel(n.parent_id);
-                      if (null == l || !tu.TPd.GUILD_THREADS_ONLY.has(l.type) || !i || !(0, D.FI)(n, l, !tT)) return !1;
+                      if (null == l || !tu.TPd.GUILD_THREADS_ONLY.has(l.type) || !i || !(0, D.FI)(n, l, !tN)) return !1;
                       let { author: a, user: r } = (0, C.MC)(n);
                       if (null == r) return !1;
                       let o = Y.Z.getGuild(l.guild_id);
@@ -615,7 +615,7 @@ tc(tD, "displayName", "NotificationStore"),
                       );
                       if (!o) return !1;
                       let u = r.channel_id;
-                      if (null == u || (J.Z.getCurrentlySelectedChannelId() === u && tT)) return !1;
+                      if (null == u || (J.Z.getCurrentlySelectedChannelId() === u && tN)) return !1;
                       to.Z.showNotification(
                           e,
                           n,
@@ -637,7 +637,7 @@ tc(tD, "displayName", "NotificationStore"),
                       if (!(!u.K.get(tp, !1) && tl.isPlatformEmbedded && (t || e))) return !1;
                       let i = !1;
                       return (
-                          null != tN && (i = tC.includes(tN)),
+                          null != tT && (i = tC.includes(tT)),
                           !!i &&
                               (to.Z.showNotification(
                                   n(95045),
@@ -663,7 +663,7 @@ tc(tD, "displayName", "NotificationStore"),
                   },
                   CONNECTION_OPEN: function (t) {
                       let { countryCode: e, guilds: n, presences: i } = t;
-                      (tN = e),
+                      (tT = e),
                           tS.clear(),
                           n.forEach((t) => t.stage_instances.forEach((t) => tS.add(t.id))),
                           (0, Z.uw)("NotificationStore") &&

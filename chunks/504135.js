@@ -10,7 +10,7 @@ var r = n(255367),
     d = n(525220),
     f = n(481060),
     _ = n(939350),
-    p = n(968769);
+    p = n(334405);
 function h(e, t, n) {
     return (
         t in e
@@ -88,18 +88,18 @@ function b(e) {
             iconProps: x,
             sparkle: M,
         } = e,
-        { onSelect: j, onInteraction: k } = i.useContext(c.p),
+        { onSelect: k, onInteraction: j } = i.useContext(c.p),
         U = i.useRef(null),
         G = i.useCallback(
             (e) => {
                 var t;
-                if ((null == k || k({ type: c.U.DEFAULT }), null == A)) return !1;
+                if ((null == j || j({ type: c.U.DEFAULT }), null == A)) return !1;
                 (e.shiftKey && D) || L || N(),
                     e.persist(),
-                    null == j || j(),
+                    null == k || k(),
                     (null != (t = e.nativeEvent.view) ? t : window).requestAnimationFrame(() => A(e));
             },
-            [A, N, j, D, L, k],
+            [A, N, k, D, L, j],
         );
     return (
         i.useEffect(() => {

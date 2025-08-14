@@ -11,7 +11,7 @@ var i = t(255367),
     m = t(670199),
     p = t(800530),
     u = t(981631),
-    _ = t(140379);
+    _ = t(149390);
 function h(e) {
     let { classificationId: n, transitionState: t, initialSlide: h = p.Cs.SPEED_BUMP, onClose: g } = e,
         [C, N] = a.useState(h),

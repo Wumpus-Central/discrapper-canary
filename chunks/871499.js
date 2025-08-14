@@ -15,7 +15,7 @@ var r = n(255367),
     _ = n(618158),
     p = n(362267),
     h = n(388032),
-    m = n(973962);
+    m = n(119421);
 function g(e, t, n) {
     return (
         t in e
@@ -248,22 +248,22 @@ function A(e) {
     i.useEffect(() => {
         null != x.current && (M ? x.current.pause() : x.current.play());
     }, [M]);
-    let j = null != (t = P.onContextMenu) ? t : v,
-        k = null == v && !C,
+    let k = null != (t = P.onContextMenu) ? t : v,
+        j = null == v && !C,
         U = null != v && !C,
         G = C && null != v,
         B = (0, r.jsx)(
             I,
             y(E({}, P), {
                 grow: !1,
-                onContextMenu: j,
-                iconClassName: a()(b, m.centerIcon, k && m.fullRegionIcon),
+                onContextMenu: k,
+                iconClassName: a()(b, m.centerIcon, j && m.fullRegionIcon),
                 className: a()(
                     L || R ? g : null,
                     l && m.active,
                     m.centerButton,
                     S[w],
-                    k && m.fullRegionButton,
+                    j && m.fullRegionButton,
                     G && m.attachedButton,
                 ),
             }),

@@ -5,15 +5,15 @@ function a(e) {
     switch (e.arrayFormat) {
         case "index":
             return function (t, n, r) {
-                return null === n ? [l(t, e), "[", r, "]"].join("") : [l(t, e), "[", l(r, e), "]=", l(n, e)].join("");
+                return null === n ? l(t, e) + "[" + r + "]" : l(t, e) + "[" + l(r, e) + "]=" + l(n, e);
             };
         case "bracket":
             return function (t, n) {
-                return null === n ? l(t, e) : [l(t, e), "[]=", l(n, e)].join("");
+                return null === n ? l(t, e) : l(t, e) + "[]=" + l(n, e);
             };
         default:
             return function (t, n) {
-                return null === n ? l(t, e) : [l(t, e), "=", l(n, e)].join("");
+                return null === n ? l(t, e) : l(t, e) + "=" + l(n, e);
             };
     }
 }

@@ -15,9 +15,9 @@ var n = a(255367),
     m = a(246992),
     x = a(232867),
     h = a(981631),
-    p = a(225183),
-    b = a(743549),
-    f = a(881291);
+    p = a(696450),
+    b = a(711322),
+    f = a(451429);
 let v = {
         [h.kNB.QUEST_REWARD]: "Quest Reward",
         [h.kNB.DEVELOPER_GIFT]: "Developer Gift",
@@ -105,14 +105,13 @@ function _() {
             entitlements: E,
             loading: S,
         } = (0, x.m)();
-    r.useEffect(() => {
-        C();
-    }, [C]);
-    let P = (e) => e.filter((e) => null != e.endsAt && e.endsAt > new Date() && e.type === h.qc2.FRACTIONAL_REDEMPTION),
-        w = (e) => e.filter((e) => Object.values(s.a).includes(e.skuId) && null == e.startsAt);
     return (
         r.useEffect(() => {
-            v(P(E)), y(w(E));
+            C();
+        }, [C]),
+        r.useEffect(() => {
+            v(E.filter((e) => null != e.endsAt && e.endsAt > new Date() && e.type === h.qc2.FRACTIONAL_REDEMPTION)),
+                y(E.filter((e) => Object.values(s.a).includes(e.skuId) && null == e.startsAt));
         }, [E]),
         (0, n.jsx)(c.zJl, {
             className: f.panel,

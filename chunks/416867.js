@@ -3,32 +3,32 @@ var r = n(255367);
 n(73800);
 var i = n(755721),
     l = n(481060),
-    s = n(313201),
-    o = n(192635),
-    a = n(388032),
-    c = n(39281);
+    o = n(313201),
+    s = n(192635),
+    c = n(388032),
+    a = n(818235);
 function u(e) {
     let { transitionState: t, Icon: n, title: u, body: d, onClose: f } = e,
-        p = (0, s.Dt)();
+        p = (0, o.Dt)();
     return (0, r.jsxs)(l.Y0X, {
-        className: c.container,
+        className: a.container,
         transitionState: t,
         "aria-labelledby": p,
         parentComponent: "ActionCompletedSuccessModal",
         children: [
             (0, r.jsxs)(l.hzk, {
                 children: [
-                    (0, r.jsx)(o.Z, { Icon: n }),
+                    (0, r.jsx)(s.Z, { Icon: n }),
                     (0, r.jsx)(l.LZC, { size: 24 }),
                     (0, r.jsx)(l.X6q, {
                         id: p,
-                        className: c.__invalid_title,
+                        className: a.__invalid_title,
                         variant: "heading-xl/semibold",
                         children: u,
                     }),
                     (0, r.jsx)(l.LZC, { size: 8 }),
                     (0, r.jsx)(l.Text, {
-                        className: c.body,
+                        className: a.body,
                         variant: "text-sm/normal",
                         children: d,
                     }),
@@ -39,7 +39,7 @@ function u(e) {
                 size: i.zx.Sizes.MEDIUM,
                 grow: !1,
                 onClick: f,
-                children: a.intl.string(a.t["NX+WJC"]),
+                children: c.intl.string(c.t["NX+WJC"]),
             }),
         ],
     });

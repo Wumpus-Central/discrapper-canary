@@ -28,7 +28,7 @@ var r = n(512722),
     N = n(594174),
     y = n(74538),
     A = n(388032),
-    P = n(479973);
+    P = n(436360);
 function R() {
     var e, t, n, r, R, D, Z, w;
     let k = (0, a.e7)([N.default], () => {
@@ -37,8 +37,8 @@ function R() {
         }),
         L = (0, a.e7)([S.Z], () => S.Z.getUserProfile(k.id)),
         {
-            pendingAvatar: M,
-            pendingGlobalName: B,
+            pendingAvatar: B,
+            pendingGlobalName: M,
             pendingBanner: U,
             pendingBio: V,
             pendingPronouns: G,
@@ -95,11 +95,11 @@ function R() {
         }),
         K = (0, O.SD)({
             userId: k.id,
-            image: M,
+            image: B,
         }),
         q = (0, o.gS)(),
         X = y.ZP.canUsePremiumProfileCustomization(k),
-        J = (0, u.gd)(M, k.avatar),
+        J = (0, u.gd)(B, k.avatar),
         Q = (0, u.f$)(U, null == L ? void 0 : L.banner),
         $ = (0, T.ZP)(k.id),
         ee = null == $ ? void 0 : $.getLegacyUsername(),
@@ -123,7 +123,7 @@ function R() {
                 placeholder: k.username,
                 errors: et,
                 currentGlobalName: k.globalName,
-                pendingGlobalName: B,
+                pendingGlobalName: M,
                 onGlobalNameChange: l.W0,
                 user: k,
             }),

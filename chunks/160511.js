@@ -8,7 +8,7 @@ var l = n(255367),
     d = n(507453),
     c = n(981631),
     u = n(388032),
-    h = n(274851);
+    h = n(357507);
 function f(e) {
     let { mfaChallenge: t, finish: n, setSlide: f, onClose: m, isSlideReady: g, headerAlignStart: x } = e,
         [p, S] = r.useState(!1),

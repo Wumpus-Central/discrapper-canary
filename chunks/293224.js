@@ -61,7 +61,7 @@ var i = n(255367),
     $ = n(810632),
     ee = n(981631),
     et = n(388032),
-    en = n(552400);
+    en = n(131714);
 function ei(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -320,18 +320,15 @@ function es(e) {
         g = (e) => {
             p.Z.setVideoEnabled(e);
         },
-        y = () => {
-            h ? g(!0) : (0, L.Z)();
-        },
-        O = (e) => (t) => {
+        y = (e) => (t) => {
             e(t),
                 (0, X.Ws)(ee.Odu.QUICK_ACTIONS, {
                     type: X.Qu.CAMERA,
                     value: X.bk.SETTINGS_OPENED,
                 });
         },
-        b = () => {
-            f ? y() : g(!s),
+        O = () => {
+            f ? (h ? g(!0) : (0, L.Z)()) : g(!s),
                 (0, X.Ws)(ee.Odu.QUICK_ACTIONS, {
                     type: X.Qu.CAMERA,
                     value: s ? X.bk.DISABLED : X.bk.ENABLED,
@@ -339,11 +336,11 @@ function es(e) {
                 });
         },
         {
-            Component: E,
-            play: _,
-            events: { onMouseEnter: x, onMouseLeave: S },
+            Component: b,
+            play: E,
+            events: { onMouseEnter: _, onMouseLeave: x },
         } = (0, u.o)(s ? "disable" : "enable"),
-        I =
+        S =
             null != n
                 ? (0, k.X)({
                       enabled: s,
@@ -352,15 +349,15 @@ function es(e) {
                       channel: n,
                   })
                 : void 0;
-    r.useEffect(() => () => _(), [s, _]);
-    let j = er(l),
-        C = null == n || !m;
+    r.useEffect(() => () => E(), [s, E]);
+    let I = er(l),
+        j = null == n || !m;
     return (0, i.jsx)(d.yRy, {
         targetElementRef: a,
         renderPopout: (e) => {
             let { closePopout: t } = e;
             return (0, i.jsx)(v.Z, {
-                onClose: j(t),
+                onClose: I(t),
                 appContext: ee.IlC.OVERLAY,
             });
         },
@@ -372,17 +369,17 @@ function es(e) {
                 { isShown: r } = t;
             return (0, i.jsx)(eo, {
                 ref: a,
-                iconComponent: E,
-                tooltip: I,
-                onClick: b,
+                iconComponent: b,
+                tooltip: S,
+                onClick: O,
                 isActive: s,
                 highlightedColor: "green",
-                onPopoutClick: O(n),
+                onPopoutClick: y(n),
                 popoutOpen: r,
-                onContextMenu: O(n),
-                onMouseEnter: x,
-                onMouseLeave: S,
-                disabled: C,
+                onContextMenu: y(n),
+                onMouseEnter: _,
+                onMouseLeave: x,
+                disabled: j,
                 isTrayButton: !0,
             });
         },

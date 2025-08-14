@@ -30,18 +30,18 @@ var r = n(255367),
     C = n(685203),
     R = n(112560),
     P = n(442168),
-    w = n(542726),
+    w = n(822296),
     D = n(916771),
     L = n(792517),
     x = n(351483),
     M = n(979425),
-    j = n(651183),
-    k = n(623825),
+    k = n(651183),
+    j = n(623825),
     U = n(981631),
     G = n(354459),
     B = n(65154),
     Z = n(388032),
-    F = n(867236);
+    F = n(7504);
 function V(e, t, n) {
     return (
         t in e
@@ -77,10 +77,10 @@ let Y = 195,
 function z(e) {
     let { participant: t, selected: n, focused: i, idle: o, width: a, premiumIndicator: l } = e,
         c = (0, s.e7)([I.Z], () => I.Z.getActiveStreamForUser(t.user.id, t.stream.guildId)),
-        u = (0, k.K)(a);
+        u = (0, j.K)(a);
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            n || i ? null : (0, r.jsx)(j.Z, { participant: t }),
+            n || i ? null : (0, r.jsx)(k.Z, { participant: t }),
             i || null == c || c.state === U.jm8.ENDED || c.state === U.jm8.FAILED
                 ? null
                 : (0, r.jsx)(b.Z, {
@@ -102,8 +102,8 @@ function q(e) {
             fit: _,
             inPopout: p,
             inOverlayPopout: b = !1,
-            width: j,
-            focused: k,
+            width: k,
+            focused: j,
             wrapperClassName: V,
             paused: z = !1,
         } = e,
@@ -118,7 +118,7 @@ function q(e) {
         eo = (null == en ? void 0 : en.ownerId) === X,
         ea = eo && !ei && !p,
         es = null != en ? (0, g.Z)(en, $, $.id === X, ea) : null,
-        el = j < Y;
+        el = k < Y;
     (0, d.ZP)(() => {
         !er &&
             (null == et ? void 0 : et.isGuildStageVoice()) &&
@@ -147,7 +147,7 @@ function q(e) {
         return (0, r.jsx)(w.Z, {
             selected: n,
             stream: en,
-            width: j,
+            width: k,
         });
     if (null != ec || (null == en ? void 0 : en.state) === U.jm8.FAILED)
         return (0, r.jsx)(D.Z, {
@@ -155,13 +155,13 @@ function q(e) {
             avErrorContext: ec,
             selected: n,
             stream: t.stream,
-            width: j,
+            width: k,
         });
     if (t.type === G.fO.HIDDEN_STREAM)
         return (0, r.jsx)(L.Z, {
             selected: n,
             participant: t,
-            width: j,
+            width: k,
         });
     if (!(null != en && !n && null != q && A.Z.supports(B.AN.VIDEO)))
         return (0, r.jsxs)("div", {
@@ -182,7 +182,7 @@ function q(e) {
                                   children: (0, r.jsx)(l.Text, {
                                       variant: el ? "text-sm/semibold" : "text-md/semibold",
                                       color: "none",
-                                      children: j < W ? Z.intl.string(Z.t["I6JG4+"]) : Z.intl.string(Z.t["7Xq/nZ"]),
+                                      children: k < W ? Z.intl.string(Z.t["I6JG4+"]) : Z.intl.string(Z.t["7Xq/nZ"]),
                                   }),
                               }),
                               er
@@ -208,13 +208,13 @@ function q(e) {
         return eu && !b
             ? (0, r.jsx)(x.Z, {
                   selected: n,
-                  width: j,
+                  width: k,
               })
             : (0, r.jsxs)(r.Fragment, {
                   children: [
                       null != et
                           ? (0, r.jsx)(O.Z, {
-                                focused: k,
+                                focused: j,
                                 channelId: et.id,
                                 guildId: et.guild_id,
                                 streamerId: $.id,
@@ -238,7 +238,7 @@ function q(e) {
                           },
                           ee,
                       ),
-                      null != es ? (0, r.jsx)(v.Z, H({ size: (0, R.L)(j) }, es)) : null,
+                      null != es ? (0, r.jsx)(v.Z, H({ size: (0, R.L)(k) }, es)) : null,
                       (0, r.jsx)(P.Z, {
                           stream: J,
                           inPopout: p,

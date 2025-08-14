@@ -13,14 +13,14 @@ var r = n(255367),
     g = n(572004),
     p = n(63063),
     O = n(476221),
-    N = n(981631),
-    y = n(65154),
+    y = n(981631),
+    N = n(65154),
     b = n(388032),
-    x = n(230998);
+    x = n(827297);
 let E = () => {
         f.Z.getMediaEngine().once(s.aB.ConnectionStats, (e) => {
             let t = JSON.stringify(
-                Object.values(y.Yn)
+                Object.values(N.Yn)
                     .map((t) => {
                         let n = e
                             .filter((e) => {
@@ -47,7 +47,7 @@ let E = () => {
     },
     m = function (e) {
         (0, l.useEffect)(() => {
-            h.default.track(N.rMx.OPEN_POPOUT, { type: "RTC Connection" });
+            h.default.track(y.rMx.OPEN_POPOUT, { type: "RTC Connection" });
         }, []);
         let t = (0, l.useCallback)(() => {
                 let { closePopout: t } = e;
@@ -109,22 +109,22 @@ let E = () => {
             { connectionState: i, connectionTypeText: s } = e,
             g = d.Sb.getSetting(),
             m = {
-                [N.hes.AWAITING_ENDPOINT]: b.intl.format(b.t.Eu2vUV, { url: N.yXt.STATUS }),
-                [N.hes.CONNECTING]: b.intl.string(b.t["y+E8aG"]),
-                [N.hes.AUTHENTICATING]: b.intl.string(b.t["5lGIZG"]),
-                [N.hes.DISCONNECTED]: b.intl.string(b.t.fOX25O),
-                [N.hes.RTC_CONNECTING]: b.intl.string(b.t.b5Ubd3),
-                [N.hes.ICE_CHECKING]: b.intl.format(b.t.SyoYUV, {
-                    url: p.Z.getArticleURL(N.BhN.VOICE_CONNECTION_ERRORS),
+                [y.hes.AWAITING_ENDPOINT]: b.intl.format(b.t.Eu2vUV, { url: y.yXt.STATUS }),
+                [y.hes.CONNECTING]: b.intl.string(b.t["y+E8aG"]),
+                [y.hes.AUTHENTICATING]: b.intl.string(b.t["5lGIZG"]),
+                [y.hes.DISCONNECTED]: b.intl.string(b.t.fOX25O),
+                [y.hes.RTC_CONNECTING]: b.intl.string(b.t.b5Ubd3),
+                [y.hes.ICE_CHECKING]: b.intl.format(b.t.SyoYUV, {
+                    url: p.Z.getArticleURL(y.BhN.VOICE_CONNECTION_ERRORS),
                 }),
-                [N.hes.DTLS_CONNECTING]: b.intl.format(b.t.SyoYUV, {
-                    url: p.Z.getArticleURL(N.BhN.VOICE_CONNECTION_ERRORS),
+                [y.hes.DTLS_CONNECTING]: b.intl.format(b.t.SyoYUV, {
+                    url: p.Z.getArticleURL(y.BhN.VOICE_CONNECTION_ERRORS),
                 }),
-                [N.hes.RTC_CONNECTED]: n,
-                [N.hes.NO_ROUTE]: b.intl.format(b.t["2tgQnp"], {
-                    url: p.Z.getArticleURL(N.BhN.VOICE_CONNECTION_ERRORS),
+                [y.hes.RTC_CONNECTED]: n,
+                [y.hes.NO_ROUTE]: b.intl.format(b.t["2tgQnp"], {
+                    url: p.Z.getArticleURL(y.BhN.VOICE_CONNECTION_ERRORS),
                 }),
-                [N.hes.RTC_DISCONNECTED]: b.intl.string(b.t.fOX25O),
+                [y.hes.RTC_DISCONNECTED]: b.intl.string(b.t.fOX25O),
             }[i];
         return (0, r.jsxs)(r.Fragment, {
             children: [
@@ -150,7 +150,7 @@ let E = () => {
                             ],
                         }),
                         g &&
-                            f.Z.supports(y.AN.DIAGNOSTICS) &&
+                            f.Z.supports(N.AN.DIAGNOSTICS) &&
                             !__OVERLAY__ &&
                             (0, r.jsxs)(r.Fragment, {
                                 children: [
@@ -185,7 +185,7 @@ let E = () => {
                             !__OVERLAY__ &&
                             (0, r.jsx)(a.eee, {
                                 className: x.debugButton,
-                                href: p.Z.getArticleURL(N.BhN.VOICE_VIDEO_TROUBLESHOOTING),
+                                href: p.Z.getArticleURL(y.BhN.VOICE_VIDEO_TROUBLESHOOTING),
                                 children: b.intl.string(b.t.hvVgAQ),
                             }),
                     ],

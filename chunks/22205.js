@@ -1,4 +1,4 @@
-n.d(t, { Z: () => j }), n(388685);
+n.d(t, { Z: () => k }), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(392711),
@@ -26,7 +26,7 @@ var r = n(255367),
     N = n(987650),
     C = n(981631),
     R = n(388032),
-    P = n(475278);
+    P = n(534887);
 function w(e, t, n) {
     return (
         t in e
@@ -109,7 +109,7 @@ function x(e) {
             [c, a],
         ),
         M = (0, d.e7)([S.ZP], () => S.ZP.getFocusedRunningGame()),
-        j = g
+        k = g
             ? (0, r.jsxs)("div", {
                   children: [
                       (0, r.jsx)(f.Text, {
@@ -138,14 +138,14 @@ function x(e) {
                   ],
               })
             : null,
-        k = g ? null : R.intl.string(R.t.oEJEFh),
+        j = g ? null : R.intl.string(R.t.oEJEFh),
         U =
             (null != (t = null == I ? void 0 : I.isStaff()) && t) ||
             (null != (n = null == I ? void 0 : I.isStaffPersonal()) && n);
     return (0, r.jsx)(A.Y, {
         title: R.intl.string(R.t.U38qZm),
-        body: j,
-        hint: U ? k : void 0,
+        body: k,
+        hint: U ? j : void 0,
         confirmText: R.intl.string(R.t.a3HlgI),
         cancelText: null != M ? R.intl.string(R.t.qIYnPj) : void 0,
         icon: (0, r.jsx)(b.Z, {
@@ -239,4 +239,4 @@ class M extends i.PureComponent {
             w(this, "pid", null);
     }
 }
-let j = M;
+let k = M;

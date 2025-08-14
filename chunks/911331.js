@@ -80,11 +80,11 @@ var s = function (e, t) {
             L = D.getBoundingClientRect(),
             x = L.height,
             M = L.width,
-            j = L.top,
-            k = L.right,
+            k = L.top,
+            j = L.right,
             U = L.bottom,
             G = L.left;
-        if ("if-needed" === i && T >= 0 && N >= 0 && A <= E && S <= g && T >= j && A <= U && N >= G && S <= k) break;
+        if ("if-needed" === i && T >= 0 && N >= 0 && A <= E && S <= g && T >= k && A <= U && N >= G && S <= j) break;
         var B = getComputedStyle(D),
             Z = parseInt(B.borderLeftWidth, 10),
             F = parseInt(B.borderTopWidth, 10),
@@ -118,20 +118,20 @@ var s = function (e, t) {
         else {
             (Y =
                 "start" === s
-                    ? C - j - F
+                    ? C - k - F
                     : "end" === s
                       ? C - U + H + z
                       : "nearest" === s
-                        ? a(j, U, x, F, H + z, C, C + v, v)
-                        : C - (j + x / 2) + z / 2),
+                        ? a(k, U, x, F, H + z, C, C + v, v)
+                        : C - (k + x / 2) + z / 2),
                 (W =
                     "start" === l
                         ? R - G - Z
                         : "center" === l
                           ? R - (G + M / 2) + K / 2
                           : "end" === l
-                            ? R - k + V + K
-                            : a(G, k, M, Z, V + K, R, R + I, I));
+                            ? R - j + V + K
+                            : a(G, j, M, Z, V + K, R, R + I, I));
             var Q = D.scrollLeft,
                 J = D.scrollTop;
             (C += J - (Y = Math.max(0, Math.min(J + Y / X, D.scrollHeight - x / X + z)))),

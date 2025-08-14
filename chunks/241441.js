@@ -227,16 +227,16 @@ let a =
                     h[(this.ptr + 4) >> 2] = t;
                 }),
                 (this.set_caught = function (t) {
-                    (t = +!!t), (l[(this.ptr + 12) >> 0] = t);
+                    (t = +!!t), (l[(this.ptr + 12) | 0] = t);
                 }),
                 (this.get_caught = function () {
-                    return 0 != l[(this.ptr + 12) >> 0];
+                    return 0 != l[(this.ptr + 12) | 0];
                 }),
                 (this.set_rethrown = function (t) {
-                    (t = +!!t), (l[(this.ptr + 13) >> 0] = t);
+                    (t = +!!t), (l[(this.ptr + 13) | 0] = t);
                 }),
                 (this.get_rethrown = function () {
-                    return 0 != l[(this.ptr + 13) >> 0];
+                    return 0 != l[(this.ptr + 13) | 0];
                 }),
                 (this.init = function (t, n) {
                     this.set_type(t),
@@ -384,8 +384,8 @@ let a =
                     V().forEach(function (e, a) {
                         var u = n + r;
                         h[(t + 4 * a) >> 2] = u;
-                        for (var i = u, o = 0; o < e.length; ++o) l[i++ >> 0] = e.charCodeAt(o);
-                        (l[i >> 0] = 0), (r += e.length + 1);
+                        for (var i = u, o = 0; o < e.length; ++o) l[0 | i++] = e.charCodeAt(o);
+                        (l[0 | i] = 0), (r += e.length + 1);
                     }),
                     0
                 );
@@ -648,21 +648,20 @@ let a =
                             return 0 === w(r, n) ? "01" : "00";
                         },
                         "%V": function (t) {
-                            var n,
-                                r = new Date(t.tm_year + 1900, 0, 4),
-                                e = new Date(t.tm_year + 1901, 0, 4),
+                            var n = new Date(t.tm_year + 1900, 0, 4),
+                                r = new Date(t.tm_year + 1901, 0, 4),
+                                e = b(n),
                                 a = b(r),
-                                u = b(e),
-                                i = $(new Date(t.tm_year + 1900, 0, 1), t.tm_yday);
-                            return 0 > w(i, a)
+                                u = $(new Date(t.tm_year + 1900, 0, 1), t.tm_yday);
+                            return 0 > w(u, e)
                                 ? "53"
-                                : 0 >= w(u, i)
+                                : 0 >= w(a, u)
                                   ? "01"
                                   : v(
                                         Math.ceil(
-                                            (a.getFullYear() < t.tm_year + 1900
-                                                ? t.tm_yday + 32 - a.getDate()
-                                                : t.tm_yday + 1 - a.getDate()) / 7,
+                                            (e.getFullYear() < t.tm_year + 1900
+                                                ? t.tm_yday + 32 - e.getDate()
+                                                : t.tm_yday + 1 - e.getDate()) / 7,
                                         ),
                                         2,
                                     );

@@ -3,7 +3,7 @@ var r = n(255367),
     i = n(657707),
     o = n(793030),
     a = n(834129),
-    s = n(920706);
+    s = n(664677);
 function l(e) {
     let { channel: t, message: n, content: l, subtitle: c, compact: u, action: d } = e,
         f = n.reactions.length > 0;

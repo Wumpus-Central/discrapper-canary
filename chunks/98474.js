@@ -12,7 +12,7 @@ var r = n(255367),
     _ = n(768581),
     p = n(176354),
     h = n(675654),
-    m = n(974346);
+    m = n(42868);
 function g(e, t, n) {
     return (
         t in e
@@ -105,7 +105,7 @@ function T(e) {
                 N(t);
             },
         }),
-        j = (0, l.q_F)({
+        k = (0, l.q_F)({
             from: {
                 x: g.x,
                 scale: 1,
@@ -158,7 +158,7 @@ function T(e) {
                         style: E({}, M),
                         className: m.emojiContainer,
                         children: (0, r.jsx)(a.animated.div, {
-                            style: y(E({}, j), { opacity: j.opacity }),
+                            style: y(E({}, k), { opacity: k.opacity }),
                             children: (0, r.jsx)(c.Z, {
                                 className: m.emoji,
                                 emojiId: n.id,

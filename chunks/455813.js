@@ -6,7 +6,7 @@ var r = n(255367),
     s = n(481060),
     l = n(249458),
     c = n(388032),
-    u = n(986970);
+    u = n(700977);
 function d(e) {
     let { onPlay: t, className: n, inactive: o } = e,
         d = i.useRef(null),

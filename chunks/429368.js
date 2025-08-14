@@ -1,14 +1,13 @@
 r.d(t, {
-    $: () => c,
-    o: () => s,
+    $: () => s,
+    o: () => o,
 }),
     r(388685);
 var n = r(94171),
     l = r(362383),
     a = r(979554);
 let i = (0, l.F)(() => ({ selectionStates: new Map() }), n.X),
-    o = () => ({ selectedVariantIndex: 0 }),
-    s = (e, t) => {
+    o = (e, t) => {
         var r, n, l, o;
         let s = i();
         return (null == e ? void 0 : e.type) !== a.Z.VARIANTS_GROUP
@@ -27,10 +26,10 @@ let i = (0, l.F)(() => ({ selectionStates: new Map() }), n.X),
                       : 0,
               );
     },
-    c = (e, t) => {
+    s = (e, t) => {
         i.setState((r) => {
             var n, l, a;
-            let i = null != (n = r.selectionStates.get(e.storeListingId)) ? n : o();
+            let i = null != (n = r.selectionStates.get(e.storeListingId)) ? n : { selectedVariantIndex: 0 };
             return {
                 selectionStates: new Map(r.selectionStates).set(
                     e.storeListingId,

@@ -1,8 +1,8 @@
 n.r(t),
     n.d(t, {
         VerifyAccountDeekLink: () => E,
-        VerifyAccountLoading: () => m,
-        default: () => S,
+        VerifyAccountLoading: () => v,
+        default: () => m,
     }),
     n(388685),
     n(704826),
@@ -14,38 +14,38 @@ var r = n(255367),
     l = n(873546),
     a = n(604039),
     i = n(755721),
-    s = n(481060),
-    u = n(457330),
+    u = n(481060),
+    s = n(457330),
     d = n(733427),
     f = n(169382),
     p = n(726542),
     O = n(536285),
-    g = n(591759),
-    N = n(656649),
+    N = n(591759),
+    g = n(656649),
     C = n(981631),
     b = n(388032),
-    y = n(997928);
-let v = null != window.opener;
-function S() {
+    y = n(130560);
+let S = null != window.opener;
+function m() {
     var e, t;
     let n = (0, o.k6)(),
         i = (0, f.l)(),
-        s = i.get("code"),
+        u = i.get("code"),
         O = i.get("oauth_verifier"),
         b = null != (e = i.get("state")) ? e : "",
         y = i.get("loading"),
-        S = null != (t = i.get("iss")) ? t : void 0,
+        m = null != (t = i.get("iss")) ? t : void 0,
         { type: w } = (0, o.UO)(),
-        R = (0, N.vJ)(w),
+        R = (0, g.vJ)(w),
         [A, T] = c.useState(!1),
-        [x, D] = c.useState(!1),
+        [D, x] = c.useState(!1),
         Z = (0, d.Z)(),
-        k = null == O ? (null != s ? s : "") : O;
+        k = null == O ? (null != u ? u : "") : O;
     c.useEffect(() => {
         let e;
         if (null != y) return;
         for (let t of i.keys()) t.startsWith("openid.") && (null == e && (e = {}), (e[t] = i.get(t)));
-        let t = (0, N.vJ)(w);
+        let t = (0, g.vJ)(w);
         !(async function () {
             if (null == t || !p.Z.isSupported(t)) return;
             function r(e) {
@@ -56,7 +56,7 @@ function S() {
                         return;
                     }
                     if ([200, 204].includes(r)) {
-                        n.replace(C.Z5c.CONNECTIONS_SUCCESS(t)), v && window.close();
+                        n.replace(C.Z5c.CONNECTIONS_SUCCESS(t)), S && window.close();
                         return;
                     }
                     (null == c ? void 0 : c.code) != null && i.append("error-code", c.code),
@@ -69,19 +69,19 @@ function S() {
                     code: k,
                     state: b,
                     openidParams: e,
-                    iss: S,
+                    iss: m,
                     handleCallbackResponse: r,
                 })
             )
                 return;
-            let c = await h(t, b, k, e, S);
+            let c = await h(t, b, k, e, m);
             0 === c
                 ? T(!0)
                 : 1 === c
                   ? n.replace("".concat(C.Z5c.CONNECTIONS_ERROR(t), "?").concat(i.toString()))
                   : 3 === c
                     ? l.tq
-                        ? D(!0)
+                        ? x(!0)
                         : n.replace("".concat(C.Z5c.CONNECTIONS_ERROR(t), "?").concat(i.toString()))
                     : j({
                           platformType: t,
@@ -95,19 +95,19 @@ function S() {
                           },
                           openidParams: e,
                           code: k,
-                          iss: S,
+                          iss: m,
                       });
         })();
-    }, [k, n, y, w, i, b, S]),
+    }, [k, n, y, w, i, b, m]),
         c.useEffect(() => {
             let e;
             if (!A) return;
             let t = 0;
             async function r() {
                 if (null == R) return;
-                let { handoff_status: c, success_redirect: o } = (await u.Z.getHandoffStatus(R, b)).body;
+                let { handoff_status: c, success_redirect: o } = (await s.Z.getHandoffStatus(R, b)).body;
                 if (c === a.g.HANDOFF_SUCCESS)
-                    if (null == g.Z.toURLSafe(o)) return n.replace(C.Z5c.CONNECTIONS_SUCCESS(R));
+                    if (null == N.Z.toURLSafe(o)) return n.replace(C.Z5c.CONNECTIONS_SUCCESS(R));
                     else {
                         window.location = o;
                         return;
@@ -128,21 +128,21 @@ function S() {
         if (null != R) return "discord://".concat(C.Z5c.CONNECTIONS(R), "/?").concat(i.toString());
     }, [R, i]);
     return null != R && p.Z.isSupported(R)
-        ? x
+        ? D
             ? (0, r.jsx)(E, {
                   platformType: R,
                   deeplink: I,
                   onClick: () => {
-                      D(!1), T(!0);
+                      x(!1), T(!0);
                   },
               })
-            : (0, r.jsx)(m, { platformType: R })
+            : (0, r.jsx)(v, { platformType: R })
         : null;
 }
-function m(e) {
+function v(e) {
     let { platformType: t } = e,
         n = p.Z.get(t);
-    return (0, r.jsxs)(N.UV, {
+    return (0, r.jsxs)(g.UV, {
         platformType: t,
         children: [
             (0, r.jsx)("div", {
@@ -154,7 +154,7 @@ function m(e) {
                 children: (0, r.jsx)(i.zx, {
                     className: y.btn,
                     disabled: !0,
-                    children: (0, r.jsx)(s.$jN, { itemClassName: y.spinnerItem }),
+                    children: (0, r.jsx)(u.$jN, { itemClassName: y.spinnerItem }),
                 }),
             }),
         ],
@@ -163,7 +163,7 @@ function m(e) {
 function E(e) {
     let { deeplink: t, onClick: n, platformType: c } = e,
         o = p.Z.get(c);
-    return (0, r.jsx)(N.UV, {
+    return (0, r.jsx)(g.UV, {
         platformType: c,
         children: (0, r.jsxs)("div", {
             className: y.buttonContainer,
@@ -172,7 +172,7 @@ function E(e) {
                     className: y.message,
                     children: b.intl.format(b.t["6ig6i4"], { connectionName: o.name }),
                 }),
-                (0, r.jsx)(s.P3F, {
+                (0, r.jsx)(u.P3F, {
                     tag: "a",
                     href: t,
                     onClick: n,
@@ -188,9 +188,9 @@ function E(e) {
 }
 async function _(e) {
     let { platformType: t, code: n, state: r, openidParams: c, iss: o, handleCallbackResponse: a } = e;
-    if (l.tq || v) return !1;
+    if (l.tq || S) return !1;
     try {
-        var i, s;
+        var i, u;
         let e = await O.default
             .request(
                 C.Etm.CONNECTIONS_CALLBACK,
@@ -227,10 +227,10 @@ async function _(e) {
                         state: r,
                     },
                 )),
-                (s = { providerType: t }),
-                (s = null != s ? s : {}),
+                (u = { providerType: t }),
+                (u = null != u ? u : {}),
                 Object.getOwnPropertyDescriptors
-                    ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(s))
+                    ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(u))
                     : (function (e, t) {
                           var n = Object.keys(e);
                           if (Object.getOwnPropertySymbols) {
@@ -238,8 +238,8 @@ async function _(e) {
                               n.push.apply(n, r);
                           }
                           return n;
-                      })(Object(s)).forEach(function (e) {
-                          Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(s, e));
+                      })(Object(u)).forEach(function (e) {
+                          Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(u, e));
                       }),
                 i),
             )
@@ -253,7 +253,7 @@ async function _(e) {
 }
 async function h(e, t, n, r, c) {
     try {
-        return await u.Z.sessionHandoff(e, t, n, r, c), 0;
+        return await s.Z.sessionHandoff(e, t, n, r, c), 0;
     } catch (e) {
         var o, l;
         if ((null == e || null == (o = e.body) ? void 0 : o.code) === 10020) return 2;
@@ -272,7 +272,7 @@ async function j(e) {
         iss: a,
     } = e;
     try {
-        let e = await u.Z.callback(
+        let e = await s.Z.callback(
             t,
             {
                 code: l,
@@ -280,7 +280,7 @@ async function j(e) {
                 state: n,
                 iss: a,
             },
-            !v,
+            !S,
         );
         return r(e), !0;
     } catch (e) {

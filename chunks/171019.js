@@ -6,7 +6,7 @@ var r = n(255367),
     s = n(597688),
     l = n(884697),
     c = n(388032),
-    u = n(212291);
+    u = n(71414);
 let d = (e) => {
     let { isPurchaseSection: t, isPremiumSection: n, canUsePremiumCollectibles: d, skuId: f } = e,
         _ = (0, l.Yq)(f),

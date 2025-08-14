@@ -10,10 +10,10 @@ var r = n(255367),
     u = n(231239),
     m = n(881052),
     h = n(313201),
-    f = n(703656),
-    x = n(981631),
-    p = n(388032),
-    g = n(302468);
+    x = n(703656),
+    p = n(981631),
+    f = n(388032),
+    g = n(85890);
 let _ = (0, h.hQ)(),
     v = (e) => {
         let { email: t, guildId: n, onClose: i } = e,
@@ -23,7 +23,7 @@ let _ = (0, h.hQ)(),
                 if (null != n)
                     try {
                         let e = await u.Z.verifyCode(s, n, t);
-                        e.guild && (null == i || i(), (0, f.uL)(x.Z5c.CHANNEL(e.guild.id)));
+                        e.guild && (null == i || i(), (0, x.uL)(p.Z5c.CHANNEL(e.guild.id)));
                     } catch (e) {
                         N(new m.Hx(e));
                     }
@@ -32,7 +32,7 @@ let _ = (0, h.hQ)(),
                 u.Z.sendVerificationEmail(t, !0, n);
             }, 1000),
             y = async (e) => {
-                null != s && "" !== s && e.charCode === x.yXg.ENTER && (await E());
+                null != s && "" !== s && e.charCode === p.yXg.ENTER && (await E());
             };
         return (0, r.jsxs)("div", {
             className: g.container,
@@ -41,7 +41,7 @@ let _ = (0, h.hQ)(),
                 (0, r.jsx)(d.X6q, {
                     className: a()(g.centerText, g.header),
                     variant: "heading-xl/semibold",
-                    children: p.intl.string(p.t.SJ3Lxc),
+                    children: f.intl.string(f.t.SJ3Lxc),
                 }),
                 (0, r.jsx)("div", {
                     className: g.descriptionWidth,
@@ -49,7 +49,7 @@ let _ = (0, h.hQ)(),
                         className: g.centerText,
                         variant: "text-sm/normal",
                         color: "header-secondary",
-                        children: p.intl.format(p.t["b+W0oq"], {
+                        children: f.intl.format(f.t["b+W0oq"], {
                             email: t,
                             onClick: S,
                         }),
@@ -60,7 +60,7 @@ let _ = (0, h.hQ)(),
                     children: [
                         (0, r.jsx)(d.vwX, {
                             id: _,
-                            children: p.intl.string(p.t.rpWT1t),
+                            children: f.intl.string(f.t.rpWT1t),
                         }),
                         (0, r.jsx)(d.oil, {
                             onKeyPress: y,
@@ -80,7 +80,7 @@ let _ = (0, h.hQ)(),
                     children: (0, r.jsx)(d.Text, {
                         className: g.submitText,
                         variant: "text-sm/normal",
-                        children: p.intl.string(p.t.geKm7u),
+                        children: f.intl.string(f.t.geKm7u),
                     }),
                 }),
             ],

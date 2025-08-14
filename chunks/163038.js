@@ -32,10 +32,10 @@ var r = n(255367),
     L = n(944486),
     x = n(594174),
     M = n(626135),
-    j = n(22665),
-    k = n(981631),
+    k = n(22665),
+    j = n(981631),
     U = n(959517),
-    G = n(280293);
+    G = n(953278);
 function B(e) {
     let { message: t, snapshot: n, index: u } = e,
         f = i.useMemo(() => new d.r(t, n, u), [t, n, u]),
@@ -63,7 +63,7 @@ function B(e) {
                     guildId: r.guild_id,
                 }),
                 (0, T.Kh)(o),
-                M.default.track(k.rMx.MODERATOR_REPORT_ORIGINAL_MESSAGE_LINK_CLICKED, {
+                M.default.track(j.rMx.MODERATOR_REPORT_ORIGINAL_MESSAGE_LINK_CLICKED, {
                     moderator_report_id: t.channel_id,
                     destination_channel_id: o,
                     destination_message_id: t.id,
@@ -126,7 +126,7 @@ function F(e) {
             showAvatarPopout: f,
         } = Z(t, i);
     return (0, r.jsx)(m.Z, {
-        childrenExecutedCommand: (0, r.jsx)(j.Z, {
+        childrenExecutedCommand: (0, r.jsx)(k.Z, {
             reportingUserId: o,
             guildId: i.guild_id,
             channel: i,

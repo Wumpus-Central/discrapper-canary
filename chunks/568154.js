@@ -14,7 +14,7 @@ var s,
     c = i(133853),
     u = i(686694),
     p = i(898625),
-    f = i(554371);
+    f = i(771858);
 function m(t, e, i) {
     return (
         e in t
@@ -160,41 +160,46 @@ class b extends (s = a.PureComponent) {
                 let { naturalWidth: t, naturalHeight: e } = this.state,
                     i = g(t, e),
                     s = this.calculateShowWaveAnimation();
-                if (null != i) {
-                    var n, a;
-                    this.setState(
-                        ((n = (function (t) {
-                            for (var e = 1; e < arguments.length; e++) {
-                                var i = null != arguments[e] ? arguments[e] : {},
-                                    s = Object.keys(i);
-                                "function" == typeof Object.getOwnPropertySymbols &&
-                                    (s = s.concat(
-                                        Object.getOwnPropertySymbols(i).filter(function (t) {
-                                            return Object.getOwnPropertyDescriptor(i, t).enumerable;
+                null != i
+                    ? this.setState(
+                          (function (t, e) {
+                              return (
+                                  (e = null != e ? e : {}),
+                                  Object.getOwnPropertyDescriptors
+                                      ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(e))
+                                      : (function (t, e) {
+                                            var i = Object.keys(t);
+                                            if (Object.getOwnPropertySymbols) {
+                                                var s = Object.getOwnPropertySymbols(t);
+                                                i.push.apply(i, s);
+                                            }
+                                            return i;
+                                        })(Object(e)).forEach(function (i) {
+                                            Object.defineProperty(t, i, Object.getOwnPropertyDescriptor(e, i));
                                         }),
-                                    )),
-                                    s.forEach(function (e) {
-                                        m(t, e, i[e]);
-                                    });
-                            }
-                            return t;
-                        })({}, i)),
-                        (a = a = { showWaveAnimation: s }),
-                        Object.getOwnPropertyDescriptors
-                            ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(a))
-                            : (function (t, e) {
-                                  var i = Object.keys(t);
-                                  if (Object.getOwnPropertySymbols) {
-                                      var s = Object.getOwnPropertySymbols(t);
-                                      i.push.apply(i, s);
+                                  t
+                              );
+                          })(
+                              (function (t) {
+                                  for (var e = 1; e < arguments.length; e++) {
+                                      var i = null != arguments[e] ? arguments[e] : {},
+                                          s = Object.keys(i);
+                                      "function" == typeof Object.getOwnPropertySymbols &&
+                                          (s = s.concat(
+                                              Object.getOwnPropertySymbols(i).filter(function (t) {
+                                                  return Object.getOwnPropertyDescriptor(i, t).enumerable;
+                                              }),
+                                          )),
+                                          s.forEach(function (e) {
+                                              m(t, e, i[e]);
+                                          });
                                   }
-                                  return i;
-                              })(Object(a)).forEach(function (t) {
-                                  Object.defineProperty(n, t, Object.getOwnPropertyDescriptor(a, t));
-                              }),
-                        n),
-                    );
-                } else this.setState({ showWaveAnimation: s });
+                                  return t;
+                              })({}, i),
+                              { showWaveAnimation: s },
+                          ),
+                      )
+                    : this.setState({ showWaveAnimation: s });
             }),
             m(this, "handleLoad", (t) => {
                 let { currentTarget: e } = t,

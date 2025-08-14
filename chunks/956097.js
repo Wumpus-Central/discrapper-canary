@@ -1,18 +1,17 @@
-n.d(t, { Z: () => x }), n(388685);
+n.d(t, { Z: () => b }), n(388685);
 var i,
     r,
-    s,
-    a = n(442837),
-    l = n(544891),
-    o = n(570140),
-    c = n(668781),
-    d = n(358085),
-    u = n(998502),
-    m = n(49226),
-    p = n(981631);
-let g = { status: "" },
-    h = [],
-    f = [
+    s = n(442837),
+    a = n(544891),
+    l = n(570140),
+    o = n(668781),
+    c = n(358085),
+    d = n(998502),
+    u = n(49226),
+    m = n(981631);
+let p = { status: "" },
+    g = [],
+    h = [
         "discord.com",
         "discordapp.com",
         "discordapp.net",
@@ -21,23 +20,23 @@ let g = { status: "" },
         "discord.gg",
         "discord.media",
     ];
-class b extends (i = a.ZP.Store) {
+class f extends (i = s.ZP.Store) {
     initialize() {
         this.updateState(), this.addListener();
     }
     logEvent(e) {
-        "status" in e && "string" == typeof e.status && (g = e),
-            (h = [...h.slice(h.length < 10 ? 0 : 1, 10), e]),
+        "status" in e && "string" == typeof e.status && (p = e),
+            (g = [...g.slice(g.length < 10 ? 0 : 1, 10), e]),
             this.emitChange();
     }
     async updateState() {
         try {
             var e, t, n;
             this.logEvent(
-                await (null === u.ZP ||
-                void 0 === u.ZP ||
-                null == (n = u.ZP.getDiscordUtils) ||
-                null == (t = n.call(u.ZP)) ||
+                await (null === d.ZP ||
+                void 0 === d.ZP ||
+                null == (n = d.ZP.getDiscordUtils) ||
+                null == (t = n.call(d.ZP)) ||
                 null == (e = t.runWarpCommand)
                     ? void 0
                     : e.call(t, "status")),
@@ -47,10 +46,10 @@ class b extends (i = a.ZP.Store) {
     addListener() {
         try {
             var e, t, n;
-            null === u.ZP ||
-                void 0 === u.ZP ||
-                null == (n = u.ZP.getDiscordUtils) ||
-                null == (t = n.call(u.ZP)) ||
+            null === d.ZP ||
+                void 0 === d.ZP ||
+                null == (n = d.ZP.getDiscordUtils) ||
+                null == (t = n.call(d.ZP)) ||
                 null == (e = t.onWarpEvent) ||
                 e.call(t, (e) => this.logEvent(e));
         } catch (e) {}
@@ -58,7 +57,7 @@ class b extends (i = a.ZP.Store) {
     async runCommand(e) {
         for (var t = arguments.length, n = Array(t > 1 ? t - 1 : 0), i = 1; i < t; i++) n[i - 1] = arguments[i];
         try {
-            return await u.ZP.getDiscordUtils().runWarpCommand(e, ...n);
+            return await d.ZP.getDiscordUtils().runWarpCommand(e, ...n);
         } catch (e) {
             throw (this.logEvent({ commandError: e.message }), e);
         }
@@ -67,7 +66,7 @@ class b extends (i = a.ZP.Store) {
         if (this.clientEnabled)
             try {
                 this.logEvent({ status: "Installing" });
-                let e = await u.ZP.getDiscordUtils().installWarp();
+                let e = await d.ZP.getDiscordUtils().installWarp();
                 this.logEvent({
                     status: "Installed",
                     installLog: e,
@@ -81,7 +80,7 @@ class b extends (i = a.ZP.Store) {
             }
     }
     async promptInstall() {
-        (await c.Z.confirm({
+        (await o.Z.confirm({
             title: "Warp not installed",
             body: "Do you want to install Warp?",
         }))
@@ -96,11 +95,11 @@ class b extends (i = a.ZP.Store) {
                 ((null == t ? void 0 : t.code) === "MissingRegistration" &&
                     (await this.runCommand("registration", "new"), (t = await this.runCommand("registration", "show"))),
                 (null == t || null == (e = t.account) ? void 0 : e.type) === "free" &&
-                    m.Z.getCurrentConfig({ location: "configureLicense" }).plus)
+                    u.Z.getCurrentConfig({ location: "configureLicense" }).plus)
             ) {
                 let { key: e } = (
-                    await l.tn.get({
-                        url: p.ANM.USER_WARP_LICENSE,
+                    await a.tn.get({
+                        url: m.ANM.USER_WARP_LICENSE,
                         oldFormErrors: !0,
                         rejectWithError: !0,
                     })
@@ -113,7 +112,7 @@ class b extends (i = a.ZP.Store) {
         try {
             let t = await this.runCommand("tunnel", "host", "list");
             if ((null == t ? void 0 : t.mode) === "exclude")
-                for (let n of f) {
+                for (let n of h) {
                     var e;
                     (null == t || null == (e = t.hosts) ? void 0 : e.indexOf(n)) === -1 &&
                         (await this.runCommand("tunnel", "host", "add", n));
@@ -126,30 +125,30 @@ class b extends (i = a.ZP.Store) {
         } catch (e) {}
     }
     get state() {
-        return g;
+        return p;
     }
     get log() {
-        return h;
+        return g;
     }
     get clientEnabled() {
-        return m.Z.getCurrentConfig(
+        return u.Z.getCurrentConfig(
             { location: "WarpClientStore" },
             {
                 autoTrackExposure: !0,
-                disable: !d.isPlatformEmbedded,
+                disable: !c.isPlatformEmbedded,
             },
         ).enable;
     }
     get enabled() {
-        return "Connected" === g.status || this.connecting;
+        return "Connected" === p.status || this.connecting;
     }
     get connecting() {
         return (
-            "Configuring" === g.status ||
-            "Connecting" === g.status ||
-            "ConnectCommandSent" === g.status ||
-            "Installing" === g.status ||
-            "Installed" === g.status
+            "Configuring" === p.status ||
+            "Connecting" === p.status ||
+            "ConnectCommandSent" === p.status ||
+            "Installing" === p.status ||
+            "Installed" === p.status
         );
     }
     async connect() {
@@ -168,18 +167,17 @@ class b extends (i = a.ZP.Store) {
     }
     disconnect() {
         return (
-            this.clientEnabled && (this.runCommand("disconnect"), (g = { status: "DisconnectCommandSent" })),
+            this.clientEnabled && (this.runCommand("disconnect"), (p = { status: "DisconnectCommandSent" })),
             this.clientEnabled
         );
     }
 }
-(s = "WarpClientStore"),
-    (r = "displayName") in b
-        ? Object.defineProperty(b, r, {
-              value: s,
-              enumerable: !0,
-              configurable: !0,
-              writable: !0,
-          })
-        : (b[r] = s);
-let x = new b(o.Z, {});
+(r = "displayName") in f
+    ? Object.defineProperty(f, r, {
+          value: "WarpClientStore",
+          enumerable: !0,
+          configurable: !0,
+          writable: !0,
+      })
+    : (f[r] = "WarpClientStore");
+let b = new f(l.Z, {});

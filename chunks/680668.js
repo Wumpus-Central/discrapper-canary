@@ -16,7 +16,7 @@ var r = n(255367),
     g = n(358595),
     E = n(981631),
     b = n(388032),
-    y = n(664643);
+    y = n(105341);
 function O(e, t, n) {
     return (
         t in e
@@ -60,8 +60,8 @@ function I(e) {
             currentUserId: D,
         } = e,
         L = D === w.author.id,
-        { channel: x, approximate_member_count: M, approximate_presence_count: j } = P,
-        k = P.state === E.r2o.ACCEPTING,
+        { channel: x, approximate_member_count: M, approximate_presence_count: k } = P,
+        j = P.state === E.r2o.ACCEPTING,
         U = null != x ? (0, _.jD)(x) : null,
         G = null != R,
         B = null != U,
@@ -153,10 +153,10 @@ function I(e) {
                       }),
                   ],
               })))
-            : (null != M && M >= 5) || (null != j && j > 0)
+            : (null != M && M >= 5) || (null != k && k > 0)
               ? (T = (0, r.jsx)(f.Z.Data, {
                     members: M,
-                    membersOnline: j,
+                    membersOnline: k,
                 }))
               : B &&
                 (T = (0, r.jsx)(f.Z.Channel, {
@@ -185,7 +185,7 @@ function I(e) {
                         }),
                         (0, r.jsx)(f.Z.Button, {
                             onClick: J,
-                            submitting: k,
+                            submitting: j,
                             color: f.Z.Button.Colors.GREEN,
                             children: Z
                                 ? F
@@ -207,7 +207,7 @@ function I(e) {
                                 children: b.intl.format(b.t["/o1IfH"], {
                                     onClick: () =>
                                         (0, a.ZDy)(async () => {
-                                            let { default: e } = await Promise.all([n.e("95468"), n.e("42959")]).then(
+                                            let { default: e } = await Promise.all([n.e("95468"), n.e("70799")]).then(
                                                 n.bind(n, 650233),
                                             );
                                             return (t) => (0, r.jsx)(e, v({}, t));

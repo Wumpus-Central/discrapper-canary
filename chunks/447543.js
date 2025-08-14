@@ -39,8 +39,8 @@ var r = n(525654),
     L = n(922482),
     x = n(131704),
     M = n(314897),
-    j = n(592125),
-    k = n(984933),
+    k = n(592125),
+    j = n(984933),
     U = n(271383),
     G = n(430824),
     B = n(341165),
@@ -147,10 +147,10 @@ function ed(e, t, n) {
     var r, i;
     if ((null == n ? void 0 : n.targetType) === et.Iq.ROLE_SUBSCRIPTIONS_PURCHASE) return $.oC.ROLE_SUBSCRIPTIONS;
     if ((null == n ? void 0 : n.targetType) == null && !x.tx.has(t.type) && (0, I.s)(e)) return $.oC.GUILD_HOME;
-    let o = j.Z.getChannel(t.id);
+    let o = k.Z.getChannel(t.id);
     return Z.Z.can(J.Plq.VIEW_CHANNEL, o)
         ? t.id
-        : null != (i = null == (r = k.ZP.getDefaultChannel(e, !0, J.Plq.CREATE_INSTANT_INVITE)) ? void 0 : r.id)
+        : null != (i = null == (r = j.ZP.getDefaultChannel(e, !0, J.Plq.CREATE_INSTANT_INVITE)) ? void 0 : r.id)
           ? i
           : t.id;
 }
@@ -182,7 +182,7 @@ function e_(e) {
         } = null != i ? i : {};
     if (!f && !_ && !(null == i ? void 0 : i.forceTransition) && s && F.Z.getGuildId() !== t) return;
     let { type: p } = r,
-        g = j.Z.getChannel(r.id),
+        g = k.Z.getChannel(r.id),
         b = ed(t, r, i),
         I = p === J.d4z.GUILD_STAGE_VOICE,
         T = J.Z5c.CHANNEL(t, b);
@@ -274,9 +274,9 @@ function eh(e, t, n) {
 }
 let em = function (e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
-        j.Z.addConditionalChangeListener(() => {
+        k.Z.addConditionalChangeListener(() => {
             var r;
-            let i = j.Z.getChannel(e),
+            let i = k.Z.getChannel(e),
                 o = V.default.getCurrentUser();
             return (
                 null == i ||

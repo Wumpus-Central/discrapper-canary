@@ -84,7 +84,9 @@ function f(e) {
                           onConfirm: () => {
                               null == e || e(),
                                   (0, i.ZDy)(async () => {
-                                      let { default: e } = await n.e("74023").then(n.bind(n, 431583));
+                                      let { default: e } = await Promise.all([n.e("32996"), n.e("74023")]).then(
+                                          n.bind(n, 431583),
+                                      );
                                       return (t) => (0, r.jsx)(e, c({ source: "Video unsupported browser" }, t));
                                   });
                           },

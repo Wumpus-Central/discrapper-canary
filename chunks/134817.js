@@ -1,36 +1,36 @@
-n.d(t, { default: () => g });
-var r = n(255367),
-    i = n(73800),
-    a = n(512722),
-    s = n.n(a),
-    o = n(442837),
-    c = n(233787),
-    l = n(594174),
-    u = n(74538),
-    p = n(388032);
-class d extends i.Component {
+r.d(t, { default: () => d });
+var n = r(255367),
+    i = r(73800),
+    a = r(512722),
+    l = r.n(a),
+    o = r(442837),
+    c = r(233787),
+    s = r(594174),
+    u = r(74538),
+    m = r(388032);
+class p extends i.Component {
     render() {
-        let { user: e, transitionState: t, onClose: n } = this.props;
-        return (0, r.jsx)(c.C, {
+        let { user: e, transitionState: t, onClose: r } = this.props;
+        return (0, n.jsx)(c.C, {
             transitionState: t,
             onClose: async () => {
-                await n(!1);
+                await r(!1);
             },
-            "aria-label": p.intl.string(p.t.BNg1io),
-            title: p.intl.string(p.t.BNg1io),
+            "aria-label": m.intl.string(m.t.BNg1io),
+            title: m.intl.string(m.t.BNg1io),
             premiumModalType: c.C.Types.UPGRADE,
             primary: {
-                onClick: () => n(!0),
-                label: p.intl.string(p.t.P3etAg),
+                onClick: () => r(!0),
+                label: m.intl.string(m.t.P3etAg),
             },
             children:
                 u.ZP.isPremium(e) && !u.ZP.canInstallPremiumApplications(e)
-                    ? p.intl.string(p.t.mKA9OD)
-                    : p.intl.string(p.t.sqSlm5),
+                    ? m.intl.string(m.t.mKA9OD)
+                    : m.intl.string(m.t.sqSlm5),
         });
     }
 }
-let g = o.ZP.connectStores([l.default], () => {
-    let e = l.default.getCurrentUser();
-    return s()(null != e, "PremiumRequiredModal: user cannot be null"), { user: e };
-})(d);
+let d = o.ZP.connectStores([s.default], () => {
+    let e = s.default.getCurrentUser();
+    return l()(null != e, "PremiumRequiredModal: user cannot be null"), { user: e };
+})(p);

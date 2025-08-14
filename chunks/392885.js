@@ -1,57 +1,55 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => p });
 var r,
     i,
-    l,
-    a = n(442837),
-    s = n(570140),
-    o = n(999382),
-    c = n(740903),
-    d = n(981631);
-let u = c.u.OVERVIEW,
-    m = null;
-function g(e) {
+    l = n(442837),
+    a = n(570140),
+    s = n(999382),
+    o = n(740903),
+    c = n(981631);
+let d = o.u.OVERVIEW,
+    u = null;
+function m(e) {
     let { subsection: t } = e;
     switch (t) {
-        case d.KsC.SAFETY_AUTOMOD:
-            u = c.u.AUTOMOD;
+        case c.KsC.SAFETY_AUTOMOD:
+            d = o.u.AUTOMOD;
             break;
-        case d.KsC.SAFETY_DM_AND_SPAM_PROTECTION:
-            u = c.u.DM_AND_SPAM_PROTECTION;
+        case c.KsC.SAFETY_DM_AND_SPAM_PROTECTION:
+            d = o.u.DM_AND_SPAM_PROTECTION;
             break;
-        case d.KsC.SAFETY_CAPTCHA_AND_RAID_PROTECTION:
-            u = c.u.CAPTCHA_AND_RAID_PROTECTION;
+        case c.KsC.SAFETY_CAPTCHA_AND_RAID_PROTECTION:
+            d = o.u.CAPTCHA_AND_RAID_PROTECTION;
             break;
-        case d.KsC.SAFETY_PERMISSIONS:
-            u = c.u.PERMISSIONS;
+        case c.KsC.SAFETY_PERMISSIONS:
+            d = o.u.PERMISSIONS;
             break;
-        case d.KsC.SAFETY_OVERVIEW:
+        case c.KsC.SAFETY_OVERVIEW:
         default:
-            u = c.u.OVERVIEW;
+            d = o.u.OVERVIEW;
     }
 }
-class p extends (l = a.ZP.Store) {
+class g extends (i = l.ZP.Store) {
     getCurrentPage() {
-        return u;
+        return d;
     }
 }
-(i = "GuildSettingsSafetyStore"),
-    (r = "displayName") in p
-        ? Object.defineProperty(p, r, {
-              value: i,
-              enumerable: !0,
-              configurable: !0,
-              writable: !0,
-          })
-        : (p[r] = i);
-let h = new p(s.Z, {
+(r = "displayName") in g
+    ? Object.defineProperty(g, r, {
+          value: "GuildSettingsSafetyStore",
+          enumerable: !0,
+          configurable: !0,
+          writable: !0,
+      })
+    : (g[r] = "GuildSettingsSafetyStore");
+let p = new g(a.Z, {
     GUILD_SETTINGS_INIT: function () {
-        if (o.Z.getGuildId() === m) return !1;
-        m = o.Z.getGuildId();
+        if (s.Z.getGuildId() === u) return !1;
+        u = s.Z.getGuildId();
     },
-    GUILD_SETTINGS_SET_SECTION: g,
-    GUILD_SETTINGS_SAFETY_SET_SUBSECTION: g,
+    GUILD_SETTINGS_SET_SECTION: m,
+    GUILD_SETTINGS_SAFETY_SET_SUBSECTION: m,
     GUILD_SETTINGS_SAFETY_PAGE: function (e) {
         let { page: t } = e;
-        u = t;
+        d = t;
     },
 });

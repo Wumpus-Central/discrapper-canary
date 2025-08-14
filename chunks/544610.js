@@ -45,7 +45,7 @@ function R(e) {
 function P() {
     if (!O) return !1;
     let e = _.Z.getChannel(N);
-    if (0 === v.trim().length) return null != r && r.clearQuery(), (T = j(e)), !0;
+    if (0 === v.trim().length) return null != r && r.clearQuery(), (T = k(e)), !0;
     let t = null != e ? e.recipients : [];
     if (null != r) {
         var n;
@@ -98,7 +98,7 @@ function x(e) {
 function M(e) {
     (N = e.channelId), R(e.query);
 }
-function j(e) {
+function k(e) {
     let t = m.Z.getFriendIDs(),
         n = g.default.getCurrentUser();
     return (
@@ -123,7 +123,7 @@ function j(e) {
             .sort(D)
     );
 }
-function k(e) {
+function j(e) {
     let { results: t } = e;
     if (!O || "" === v) return;
     let n = [];
@@ -161,7 +161,7 @@ function G(e) {
     I = e.row;
 }
 function B() {
-    return null != r && (r.destroy(), (r = null)), s.Z.getUserSearchContext(k, y);
+    return null != r && (r.destroy(), (r = null)), s.Z.getUserSearchContext(j, y);
 }
 function Z(e) {
     if (e.key !== E.vTt) return !1;

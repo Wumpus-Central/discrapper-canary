@@ -1,49 +1,47 @@
-n.d(t, { Z: () => m }), n(388685);
+n.d(t, { Z: () => u }), n(388685);
 var i,
     r,
-    s,
-    a = n(442837),
-    l = n(570140),
-    o = n(911969);
-let c = !1,
-    d = [];
-class u extends (i = a.ZP.Store) {
+    s = n(442837),
+    a = n(570140),
+    l = n(911969);
+let o = !1,
+    c = [];
+class d extends (i = s.ZP.Store) {
     hasFetchedCredentials() {
-        return c;
+        return o;
     }
     get hasCredentials() {
-        return d.length > 0;
+        return c.length > 0;
     }
     getCredentials() {
-        return d;
+        return c;
     }
 }
-(s = "WebAuthnStore"),
-    (r = "displayName") in u
-        ? Object.defineProperty(u, r, {
-              value: s,
-              enumerable: !0,
-              configurable: !0,
-              writable: !0,
-          })
-        : (u[r] = s);
-let m = new u(l.Z, {
+(r = "displayName") in d
+    ? Object.defineProperty(d, r, {
+          value: "WebAuthnStore",
+          enumerable: !0,
+          configurable: !0,
+          writable: !0,
+      })
+    : (d[r] = "WebAuthnStore");
+let u = new d(a.Z, {
     LOGOUT: function () {
-        (d = []), (c = !1);
+        (c = []), (o = !1);
     },
     MFA_WEBAUTHN_CREDENTIALS_LOADED(e) {
-        (d = e.credentials), (c = !0);
+        (c = e.credentials), (o = !0);
     },
     AUTHENTICATOR_CREATE(e) {
         let { credential: t } = e;
-        t.type === o.Pi.WEBAUTHN && void 0 === d.find((e) => e.id === t.id) && (d = [...d, t]);
+        t.type === l.Pi.WEBAUTHN && void 0 === c.find((e) => e.id === t.id) && (c = [...c, t]);
     },
     AUTHENTICATOR_UPDATE(e) {
         let { credential: t } = e;
-        t.type === o.Pi.WEBAUTHN && (d = d.map((e) => (e.id === t.id ? t : e)));
+        t.type === l.Pi.WEBAUTHN && (c = c.map((e) => (e.id === t.id ? t : e)));
     },
     AUTHENTICATOR_DELETE(e) {
         let { credential: t } = e;
-        t.type === o.Pi.WEBAUTHN && (d = d.filter((e) => e.id !== t.id));
+        t.type === l.Pi.WEBAUTHN && (c = c.filter((e) => e.id !== t.id));
     },
 });

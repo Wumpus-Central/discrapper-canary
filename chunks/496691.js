@@ -10,7 +10,7 @@ var n = a(255367),
     u = a(626135),
     _ = a(981631),
     N = a(388032),
-    m = a(356998);
+    m = a(430355);
 class p extends r.Component {
     shouldScrollToTop(e) {
         let { location: t } = e;
@@ -52,20 +52,19 @@ class p extends r.Component {
         });
     }
     constructor(...e) {
-        var t, a;
         super(...e),
-            (t = "handleHeaderLocaleChange"),
-            (a = (e) => {
+            (function (e, t, a) {
+                t in e
+                    ? Object.defineProperty(e, t, {
+                          value: a,
+                          enumerable: !0,
+                          configurable: !0,
+                          writable: !0,
+                      })
+                    : (e[t] = a);
+            })(this, "handleHeaderLocaleChange", (e) => {
                 e !== this.props.locale && c.ZP.overrideLocale(e);
-            }),
-            t in this
-                ? Object.defineProperty(this, t, {
-                      value: a,
-                      enumerable: !0,
-                      configurable: !0,
-                      writable: !0,
-                  })
-                : (this[t] = a);
+            });
     }
 }
 let h = o.ZP.connectStores([d.default], () => ({ locale: d.default.locale }))(p);

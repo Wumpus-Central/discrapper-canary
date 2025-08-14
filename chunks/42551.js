@@ -1,4 +1,4 @@
-n.d(t, { Z: () => H }), n(388685), n(539854);
+n.d(t, { Z: () => _ }), n(388685), n(539854);
 var r = n(255367),
     l = n(73800),
     o = n(120356),
@@ -17,16 +17,16 @@ var r = n(255367),
     j = n(527379),
     g = n(285173),
     x = n(388032),
-    v = n(335265),
-    y = n(92006);
+    v = n(115491),
+    y = n(266631);
 let O = new Set();
-function H(e) {
+function _(e) {
     let { guildId: t, onClose: n } = e,
         o = (0, f.BG)(t),
         a = (0, m.e7)([h.Z], () => h.Z.getSearchStateByGuildId(t), [t], C()),
         [c, d] = l.useState(a.selectedRoleIds),
-        H = (0, p.h)(t, O, !0),
-        _ = (e, n) => {
+        _ = (0, p.h)(t, O, !0),
+        H = (e, n) => {
             let { record: l } = e;
             return (0, r.jsx)(
                 b.lo1,
@@ -62,37 +62,36 @@ function H(e) {
                 l.id,
             );
         },
-        w = (e, t) =>
-            H.reduce((n, r) => {
-                let { record: l } = r,
-                    o = e.has(l.id);
-                return s()(t.toLowerCase(), l.name.toLowerCase()) ? n.push(_(r, o)) : o && n.push(_(r, o)), n;
-            }, []),
-        N = l.useCallback(
+        w = l.useCallback(
             (e) => {
                 (0, j.Dr)(t, { selectedRoleIds: e }), o(e);
             },
             [t, o],
         ),
-        S = l.useMemo(() => u()(N, 300), [N]),
-        Z = l.useCallback(
+        N = l.useMemo(() => u()(w, 300), [w]),
+        S = l.useCallback(
             (e) => {
                 let t;
-                d((t = new Set(c.has(e) ? [...c].filter((t) => t !== e) : [...c, e]))), S(t);
+                d((t = new Set(c.has(e) ? [...c].filter((t) => t !== e) : [...c, e]))), N(t);
             },
-            [c, S],
+            [c, N],
         );
     return (0, r.jsx)(b.DBG, {
         className: v.rolePopout,
         placeholder: x.intl.string(x.t.ZveC7e),
         value: c,
-        onChange: Z,
+        onChange: S,
         onClose: () => {
             n();
         },
         multiSelect: !0,
         showScrollbar: !0,
         autoFocus: !0,
-        children: (e) => w(c, e),
+        children: (e) =>
+            _.reduce((t, n) => {
+                let { record: r } = n,
+                    l = c.has(r.id);
+                return s()(e.toLowerCase(), r.name.toLowerCase()) ? t.push(H(n, l)) : l && t.push(H(n, l)), t;
+            }, []),
     });
 }

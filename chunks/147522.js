@@ -4,12 +4,12 @@ n(73800);
 var i = n(392711),
     l = n.n(i),
     o = n(661824),
-    s = n(289481),
-    a = n(809780),
+    a = n(289481),
+    s = n(809780),
     c = n(388032),
-    u = n(551335);
+    u = n(803205);
 function d(e, t, n) {
-    let { markChannelRead: i, markGuildRead: d, deleteChannel: h, toggle: p, getNumUnreadChannels: f } = t,
+    let { markChannelRead: i, markGuildRead: d, deleteChannel: p, toggle: f, getNumUnreadChannels: h } = t,
         g = null;
     return l().flatMap(e, (e) => {
         let t = e.sortOrder !== g;
@@ -17,7 +17,7 @@ function d(e, t, n) {
         let l = [];
         return (
             t &&
-                (e.hasLoadedAnything && e.sortOrder === a.As.ReallyOldChannel
+                (e.hasLoadedAnything && e.sortOrder === s.As.ReallyOldChannel
                     ? l.push(
                           (0, r.jsx)(
                               o.Z,
@@ -30,7 +30,7 @@ function d(e, t, n) {
                           ),
                       )
                     : e.hasLoadedAnything &&
-                      e.sortOrder === a.As.NoNotifications &&
+                      e.sortOrder === s.As.NoNotifications &&
                       l.push(
                           (0, r.jsx)(
                               o.Z,
@@ -44,15 +44,15 @@ function d(e, t, n) {
                       )),
             l.push(
                 (0, r.jsx)(
-                    s.Z,
+                    a.Z,
                     {
                         channel: e,
                         markChannelRead: i,
                         markGuildRead: d,
-                        toggle: p,
-                        deleteChannel: h,
+                        toggle: f,
+                        deleteChannel: p,
                         onJump: n,
-                        getNumUnreadChannels: f,
+                        getNumUnreadChannels: h,
                     },
                     e.channelId,
                 ),

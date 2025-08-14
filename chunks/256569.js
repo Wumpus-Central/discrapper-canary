@@ -9,7 +9,7 @@ var r = n(255367),
     d = n(853276),
     u = n(596390),
     m = n(870472),
-    g = n(966800);
+    g = n(961010);
 function p(e) {
     let { resizableNode: t, onResize: n, onResizeEnd: i } = e,
         l = (0, c.Z)({

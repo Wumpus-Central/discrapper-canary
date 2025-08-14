@@ -7,7 +7,7 @@ var r = n(255367),
     s = n(55935),
     c = n(981631),
     u = n(388032),
-    d = n(177065);
+    d = n(529368);
 let p = (e) => {
         let { IconComponent: t, className: n } = e;
         return (0, r.jsx)("div", {

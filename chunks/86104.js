@@ -61,17 +61,17 @@ class p {
         s(this.native);
     }
     constructor(e) {
-        var t, i;
         if (
-            ((i = void 0),
-            (t = "native") in this
-                ? Object.defineProperty(this, t, {
-                      value: i,
-                      enumerable: !0,
-                      configurable: !0,
-                      writable: !0,
-                  })
-                : (this[t] = i),
+            (!(function (e, t, i) {
+                t in e
+                    ? Object.defineProperty(e, t, {
+                          value: i,
+                          enumerable: !0,
+                          configurable: !0,
+                          writable: !0,
+                      })
+                    : (e[t] = i);
+            })(this, "native", void 0),
             (this.native = a(e)),
             0 === this.native)
         )

@@ -18,7 +18,7 @@ var n = r(255367),
     v = r(81136),
     O = r(440617),
     C = r(981631),
-    E = r(4916);
+    E = r(891131);
 function S(e) {
     var t;
     let { isFetchingCategories: r, isFullScreen: a, scrollerRef: S, tab: y } = e,

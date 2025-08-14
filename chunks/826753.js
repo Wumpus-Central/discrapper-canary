@@ -82,7 +82,7 @@ e.exports = (function () {
                         (t.validate = function (r) {
                             var n = arguments[arguments.length - 1],
                                 o = "function" == typeof n ? n : null,
-                                i = arguments.length - +!!o;
+                                i = arguments.length - !!o;
                             if (1 === i) return e.validate(r, o);
                             var s = 3 === i ? arguments[2] : {},
                                 a = t.compile(arguments[1]);
@@ -1639,7 +1639,7 @@ e.exports = (function () {
                                 a = 0;
                             for (this[t] = 255 & e; ++i < r && (s *= 256); )
                                 e < 0 && 0 === a && 0 !== this[t + i - 1] && (a = 1),
-                                    (this[t + i] = (((e / s) >> 0) - a) & 255);
+                                    (this[t + i] = (((e / s) | 0) - a) & 255);
                             return t + r;
                         }),
                         (c.prototype.writeIntBE = function (e, t, r, n) {
@@ -1652,7 +1652,7 @@ e.exports = (function () {
                                 a = 0;
                             for (this[t + i] = 255 & e; --i >= 0 && (s *= 256); )
                                 e < 0 && 0 === a && 0 !== this[t + i + 1] && (a = 1),
-                                    (this[t + i] = (((e / s) >> 0) - a) & 255);
+                                    (this[t + i] = (((e / s) | 0) - a) & 255);
                             return t + r;
                         }),
                         (c.prototype.writeInt8 = function (e, t, r) {
@@ -3434,30 +3434,28 @@ e.exports = (function () {
                                     } else h["_$miss$_" + g + "|" + l + "_$end$_"] = "__missing__";
                                 }
                             }
-                        var w = {
-                                key: /_\$key\$_([, \d]+)_\$end\$_\"/g,
-                                missing: /\"_\$miss\$_([^\|]+)\|(\d+)_\$end\$_\"\: \"__missing__\"/g,
-                                arrayIndex: /\s*\"_\$idx\$_([, \d]+)_\$end\$_\",?\n(.*)/g,
-                                specials: /"\[(NaN|Symbol.*|-?Infinity|function.*|\(.*)\]"/g,
-                            },
-                            E = s
+                        var w = /_\$key\$_([, \d]+)_\$end\$_\"/g,
+                            E = /\"_\$miss\$_([^\|]+)\|(\d+)_\$end\$_\"\: \"__missing__\"/g,
+                            x = /\s*\"_\$idx\$_([, \d]+)_\$end\$_\",?\n(.*)/g,
+                            j = /"\[(NaN|Symbol.*|-?Infinity|function.*|\(.*)\]"/g,
+                            O = s
                                 .safeStringify(a, 2)
-                                .replace(w.key, function (e, r) {
+                                .replace(w, function (e, r) {
                                     return '" ' + t + "[" + r + "]" + i;
                                 })
-                                .replace(w.missing, function (e, n, o) {
+                                .replace(E, function (e, n, o) {
                                     return r + '"' + n + '"' + i + t + " [" + o + "]: -- missing --" + i;
                                 })
-                                .replace(w.arrayIndex, function (e, r, n) {
+                                .replace(x, function (e, r, n) {
                                     return "\n" + n + " " + t + "[" + r + "]" + i;
                                 })
-                                .replace(w.specials, function (e, t) {
+                                .replace(j, function (e, t) {
                                     return t;
                                 });
-                        E = E + "\n" + t;
-                        for (var x = 0; x < this.details.length; ++x)
-                            E = E + "\n[" + (x + 1) + "] " + this.details[x].message;
-                        return E + i;
+                        O = O + "\n" + t;
+                        for (var k = 0; k < this.details.length; ++k)
+                            O = O + "\n[" + (k + 1) + "] " + this.details[k].message;
+                        return O + i;
                     });
             },
             function (e, t) {
@@ -3984,9 +3982,7 @@ e.exports = (function () {
                                     ? (r.name = t)
                                     : (void 0 === t ? "undefined" : n(t)) === "object" &&
                                       ((r.invert = !!t.invert), t.name && (r.name = t.name));
-                                var o = ["string.regex", r.invert ? ".invert" : "", r.name ? ".name" : ".base"].join(
-                                    "",
-                                );
+                                var o = "string.regex" + (r.invert ? ".invert" : "") + (r.name ? ".name" : ".base");
                                 return this._test("regex", r, function (e, t, n) {
                                     return r.pattern.test(e) ^ r.invert
                                         ? e
@@ -4508,7 +4504,7 @@ e.exports = (function () {
                                 }
                                 if (
                                     t.minDomainAtoms &&
-                                    (t.minDomainAtoms !== (0 | +t.minDomainAtoms) || t.minDomainAtoms < 0)
+                                    (t.minDomainAtoms !== (0 | t.minDomainAtoms) || t.minDomainAtoms < 0)
                                 )
                                     throw TypeError("expected positive integer minDomainAtoms");
                                 for (
@@ -4526,85 +4522,83 @@ e.exports = (function () {
                                             local: "",
                                             domain: "",
                                         },
-                                        d = {
-                                            locals: [""],
-                                            domains: [""],
-                                        },
-                                        g = 0,
+                                        d = [""],
+                                        g = [""],
                                         y = 0,
                                         v = 0,
-                                        m = void 0,
-                                        b = !1,
+                                        m = 0,
+                                        b = void 0,
                                         _ = !1,
-                                        w = e.length,
-                                        E = void 0,
-                                        x = 0;
-                                    x < w;
-                                    ++x
+                                        w = !1,
+                                        E = e.length,
+                                        x = void 0,
+                                        j = 0;
+                                    j < E;
+                                    ++j
                                 ) {
-                                    switch (((E = e[x]), f.now)) {
+                                    switch (((x = e[j]), f.now)) {
                                         case i.components.localpart:
-                                            switch (E) {
+                                            switch (x) {
                                                 case "(":
-                                                    0 === y
+                                                    0 === v
                                                         ? l(
-                                                              0 === g
+                                                              0 === y
                                                                   ? i.diagnoses.cfwsComment
                                                                   : i.diagnoses.deprecatedComment,
                                                           )
-                                                        : (l(i.diagnoses.cfwsComment), (_ = !0)),
+                                                        : (l(i.diagnoses.cfwsComment), (w = !0)),
                                                         f.stack.push(f.now),
                                                         (f.now = i.components.contextComment);
                                                     break;
                                                 case ".":
-                                                    0 === y
+                                                    0 === v
                                                         ? l(
-                                                              0 === g
+                                                              0 === y
                                                                   ? i.diagnoses.errDotStart
                                                                   : i.diagnoses.errConsecutiveDots,
                                                           )
-                                                        : (_ && l(i.diagnoses.deprecatedLocalPart),
-                                                          (_ = !1),
-                                                          (y = 0),
-                                                          ++g,
-                                                          (h.local += E),
-                                                          (d.locals[g] = ""));
+                                                        : (w && l(i.diagnoses.deprecatedLocalPart),
+                                                          (w = !1),
+                                                          (v = 0),
+                                                          ++y,
+                                                          (h.local += x),
+                                                          (d[y] = ""));
                                                     break;
                                                 case '"':
-                                                    0 === y
+                                                    0 === v
                                                         ? (l(
-                                                              0 === g
+                                                              0 === y
                                                                   ? i.diagnoses.rfc5321QuotedString
                                                                   : i.diagnoses.deprecatedLocalPart,
                                                           ),
-                                                          (h.local += E),
-                                                          (d.locals[g] += E),
-                                                          ++y,
-                                                          (_ = !0),
+                                                          (h.local += x),
+                                                          (d[y] += x),
+                                                          ++v,
+                                                          (w = !0),
                                                           f.stack.push(f.now),
                                                           (f.now = i.components.contextQuotedString))
                                                         : l(i.diagnoses.errExpectingATEXT);
                                                     break;
                                                 case "\r":
-                                                    if (w === ++x || "\n" !== e[x]) {
+                                                    if (E === ++j || "\n" !== e[j]) {
                                                         l(i.diagnoses.errCRNoLF);
                                                         break;
                                                     }
                                                 case " ":
                                                 case "\t":
-                                                    0 === y
-                                                        ? l(0 === g ? i.diagnoses.cfwsFWS : i.diagnoses.deprecatedFWS)
-                                                        : (_ = !0),
+                                                    0 === v
+                                                        ? l(0 === y ? i.diagnoses.cfwsFWS : i.diagnoses.deprecatedFWS)
+                                                        : (w = !0),
                                                         f.stack.push(f.now),
                                                         (f.now = i.components.contextFWS),
-                                                        (p = E);
+                                                        (p = x);
                                                     break;
                                                 case "@":
                                                     if (1 !== f.stack.length)
                                                         throw Error("unexpected item on context stack");
                                                     0 === h.local.length
                                                         ? l(i.diagnoses.errNoLocalPart)
-                                                        : 0 === y
+                                                        : 0 === v
                                                           ? l(i.diagnoses.errDotEnd)
                                                           : h.local.length > 64
                                                             ? l(i.diagnoses.rfc5322LocalTooLong)
@@ -4613,12 +4607,12 @@ e.exports = (function () {
                                                               l(i.diagnoses.deprecatedCFWSNearAt),
                                                         (f.now = i.components.domain),
                                                         (f.stack[0] = i.components.domain),
-                                                        (g = 0),
                                                         (y = 0),
-                                                        (_ = !1);
+                                                        (v = 0),
+                                                        (w = !1);
                                                     break;
                                                 default:
-                                                    if (_)
+                                                    if (w)
                                                         switch (f.prev) {
                                                             case i.components.contextComment:
                                                             case i.components.contextFWS:
@@ -4635,73 +4629,72 @@ e.exports = (function () {
                                                         }
                                                     else
                                                         (f.prev = f.now),
-                                                            ((m = E.charCodeAt(0)) < 33 || m > 126 || i.specials(m)) &&
+                                                            ((b = x.charCodeAt(0)) < 33 || b > 126 || i.specials(b)) &&
                                                                 l(i.diagnoses.errExpectingATEXT),
-                                                            (h.local += E),
-                                                            (d.locals[g] += E),
-                                                            ++y;
+                                                            (h.local += x),
+                                                            (d[y] += x),
+                                                            ++v;
                                             }
                                             break;
                                         case i.components.domain:
-                                            switch (E) {
+                                            switch (x) {
                                                 case "(":
-                                                    0 === y
+                                                    0 === v
                                                         ? l(
-                                                              0 === g
+                                                              0 === y
                                                                   ? i.diagnoses.deprecatedCFWSNearAt
                                                                   : i.diagnoses.deprecatedComment,
                                                           )
-                                                        : ((_ = !0), l(i.diagnoses.cfwsComment)),
+                                                        : ((w = !0), l(i.diagnoses.cfwsComment)),
                                                         f.stack.push(f.now),
                                                         (f.now = i.components.contextComment);
                                                     break;
                                                 case ".":
-                                                    0 === y
+                                                    0 === v
                                                         ? l(
-                                                              0 === g
+                                                              0 === y
                                                                   ? i.diagnoses.errDotStart
                                                                   : i.diagnoses.errConsecutiveDots,
                                                           )
-                                                        : b
+                                                        : _
                                                           ? l(i.diagnoses.errDomainHyphenEnd)
-                                                          : y > 63 && l(i.diagnoses.rfc5322LabelTooLong),
-                                                        (_ = !1),
-                                                        (y = 0),
-                                                        ++g,
-                                                        (d.domains[g] = ""),
-                                                        (h.domain += E);
+                                                          : v > 63 && l(i.diagnoses.rfc5322LabelTooLong),
+                                                        (w = !1),
+                                                        (v = 0),
+                                                        (g[++y] = ""),
+                                                        (h.domain += x);
                                                     break;
                                                 case "[":
                                                     0 === h.domain.length
-                                                        ? ((_ = !0),
-                                                          ++y,
+                                                        ? ((w = !0),
+                                                          ++v,
                                                           f.stack.push(f.now),
                                                           (f.now = i.components.literal),
-                                                          (h.domain += E),
-                                                          (d.domains[g] += E),
+                                                          (h.domain += x),
+                                                          (g[y] += x),
                                                           (h.literal = ""))
                                                         : l(i.diagnoses.errExpectingATEXT);
                                                     break;
                                                 case "\r":
-                                                    if (w === ++x || "\n" !== e[x]) {
+                                                    if (E === ++j || "\n" !== e[j]) {
                                                         l(i.diagnoses.errCRNoLF);
                                                         break;
                                                     }
                                                 case " ":
                                                 case "\t":
-                                                    0 === y
+                                                    0 === v
                                                         ? l(
-                                                              0 === g
+                                                              0 === y
                                                                   ? i.diagnoses.deprecatedCFWSNearAt
                                                                   : i.diagnoses.deprecatedFWS,
                                                           )
-                                                        : (l(i.diagnoses.cfwsFWS), (_ = !0)),
+                                                        : (l(i.diagnoses.cfwsFWS), (w = !0)),
                                                         f.stack.push(f.now),
                                                         (f.now = i.components.contextFWS),
-                                                        (p = E);
+                                                        (p = x);
                                                     break;
                                                 default:
-                                                    if (_)
+                                                    if (w)
                                                         switch (f.prev) {
                                                             case i.components.contextComment:
                                                             case i.components.contextFWS:
@@ -4716,63 +4709,63 @@ e.exports = (function () {
                                                                         f.prev,
                                                                 );
                                                         }
-                                                    (m = E.charCodeAt(0)),
-                                                        (b = !1),
-                                                        m < 33 || m > 126 || i.specials(m)
+                                                    (b = x.charCodeAt(0)),
+                                                        (_ = !1),
+                                                        b < 33 || b > 126 || i.specials(b)
                                                             ? l(i.diagnoses.errExpectingATEXT)
-                                                            : "-" === E
-                                                              ? (0 === y && l(i.diagnoses.errDomainHyphenStart),
-                                                                (b = !0))
-                                                              : (m < 48 ||
-                                                                    m > 122 ||
-                                                                    (m > 57 && m < 65) ||
-                                                                    (m > 90 && m < 97)) &&
+                                                            : "-" === x
+                                                              ? (0 === v && l(i.diagnoses.errDomainHyphenStart),
+                                                                (_ = !0))
+                                                              : (b < 48 ||
+                                                                    b > 122 ||
+                                                                    (b > 57 && b < 65) ||
+                                                                    (b > 90 && b < 97)) &&
                                                                 l(i.diagnoses.rfc5322Domain),
-                                                        (h.domain += E),
-                                                        (d.domains[g] += E),
-                                                        ++y;
+                                                        (h.domain += x),
+                                                        (g[y] += x),
+                                                        ++v;
                                             }
                                             break;
                                         case i.components.literal:
-                                            switch (E) {
+                                            switch (x) {
                                                 case "]":
                                                     if (u < i.categories.deprecated) {
-                                                        var j = -1,
-                                                            O = h.literal,
-                                                            k = i.regex.ipV4.exec(O);
+                                                        var O = -1,
+                                                            k = h.literal,
+                                                            S = i.regex.ipV4.exec(k);
                                                         if (
-                                                            (k && 0 !== (j = k.index) && (O = O.slice(0, j) + "0:0"),
-                                                            0 === j)
+                                                            (S && 0 !== (O = S.index) && (k = k.slice(0, O) + "0:0"),
+                                                            0 === O)
                                                         )
                                                             l(i.diagnoses.rfc5321AddressLiteral);
-                                                        else if ("ipv6:" !== O.slice(0, 5).toLowerCase())
+                                                        else if ("ipv6:" !== k.slice(0, 5).toLowerCase())
                                                             l(i.diagnoses.rfc5322DomainLiteral);
                                                         else {
-                                                            var S = O.slice(5),
-                                                                A = i.maxIPv6Groups,
-                                                                T = S.split(":");
-                                                            ~(j = S.indexOf("::"))
-                                                                ? j !== S.lastIndexOf("::")
+                                                            var A = k.slice(5),
+                                                                T = i.maxIPv6Groups,
+                                                                P = A.split(":");
+                                                            ~(O = A.indexOf("::"))
+                                                                ? O !== A.lastIndexOf("::")
                                                                     ? l(i.diagnoses.rfc5322IPv62x2xColon)
-                                                                    : ((0 === j || j === S.length - 2) && ++A,
-                                                                      T.length > A
+                                                                    : ((0 === O || O === A.length - 2) && ++T,
+                                                                      P.length > T
                                                                           ? l(i.diagnoses.rfc5322IPv6MaxGroups)
-                                                                          : T.length === A &&
+                                                                          : P.length === T &&
                                                                             l(i.diagnoses.deprecatedIPv6))
-                                                                : T.length !== A &&
+                                                                : P.length !== T &&
                                                                   l(i.diagnoses.rfc5322IPv6GroupCount),
-                                                                ":" === S[0] && ":" !== S[1]
+                                                                ":" === A[0] && ":" !== A[1]
                                                                     ? l(i.diagnoses.rfc5322IPv6ColonStart)
-                                                                    : ":" === S[S.length - 1] && ":" !== S[S.length - 2]
+                                                                    : ":" === A[A.length - 1] && ":" !== A[A.length - 2]
                                                                       ? l(i.diagnoses.rfc5322IPv6ColonEnd)
-                                                                      : i.checkIpV6(T)
+                                                                      : i.checkIpV6(P)
                                                                         ? l(i.diagnoses.rfc5321AddressLiteral)
                                                                         : l(i.diagnoses.rfc5322IPv6BadCharacter);
                                                         }
                                                     } else l(i.diagnoses.rfc5322DomainLiteral);
-                                                    (h.domain += E),
-                                                        (d.domains[g] += E),
-                                                        ++y,
+                                                    (h.domain += x),
+                                                        (g[y] += x),
+                                                        ++v,
                                                         (f.prev = f.now),
                                                         (f.now = f.stack.pop());
                                                     break;
@@ -4782,7 +4775,7 @@ e.exports = (function () {
                                                         (f.now = i.components.contextQuotedPair);
                                                     break;
                                                 case "\r":
-                                                    if (w === ++x || "\n" !== e[x]) {
+                                                    if (E === ++j || "\n" !== e[j]) {
                                                         l(i.diagnoses.errCRNoLF);
                                                         break;
                                                     }
@@ -4791,73 +4784,73 @@ e.exports = (function () {
                                                     l(i.diagnoses.cfwsFWS),
                                                         f.stack.push(f.now),
                                                         (f.now = i.components.contextFWS),
-                                                        (p = E);
+                                                        (p = x);
                                                     break;
                                                 default:
-                                                    if ((m = E.charCodeAt(0)) > 127 || 0 === m || "[" === E) {
+                                                    if ((b = x.charCodeAt(0)) > 127 || 0 === b || "[" === x) {
                                                         l(i.diagnoses.errExpectingDTEXT);
                                                         break;
                                                     }
-                                                    (m < 33 || 127 === m) &&
+                                                    (b < 33 || 127 === b) &&
                                                         l(i.diagnoses.rfc5322DomainLiteralOBSDText),
-                                                        (h.literal += E),
-                                                        (h.domain += E),
-                                                        (d.domains[g] += E),
-                                                        ++y;
+                                                        (h.literal += x),
+                                                        (h.domain += x),
+                                                        (g[y] += x),
+                                                        ++v;
                                             }
                                             break;
                                         case i.components.contextQuotedString:
-                                            switch (E) {
+                                            switch (x) {
                                                 case "\\":
                                                     f.stack.push(f.now), (f.now = i.components.contextQuotedPair);
                                                     break;
                                                 case "\r":
-                                                    if (w === ++x || "\n" !== e[x]) {
+                                                    if (E === ++j || "\n" !== e[j]) {
                                                         l(i.diagnoses.errCRNoLF);
                                                         break;
                                                     }
                                                 case "\t":
                                                     (h.local += " "),
-                                                        (d.locals[g] += " "),
-                                                        ++y,
+                                                        (d[y] += " "),
+                                                        ++v,
                                                         l(i.diagnoses.cfwsFWS),
                                                         f.stack.push(f.now),
                                                         (f.now = i.components.contextFWS),
-                                                        (p = E);
+                                                        (p = x);
                                                     break;
                                                 case '"':
-                                                    (h.local += E),
-                                                        (d.locals[g] += E),
-                                                        ++y,
+                                                    (h.local += x),
+                                                        (d[y] += x),
+                                                        ++v,
                                                         (f.prev = f.now),
                                                         (f.now = f.stack.pop());
                                                     break;
                                                 default:
-                                                    (m = E.charCodeAt(0)) > 127 || 0 === m || 10 === m
+                                                    (b = x.charCodeAt(0)) > 127 || 0 === b || 10 === b
                                                         ? l(i.diagnoses.errExpectingQTEXT)
-                                                        : (m < 32 || 127 === m) && l(i.diagnoses.deprecatedQTEXT),
-                                                        (h.local += E),
-                                                        (d.locals[g] += E),
-                                                        ++y;
+                                                        : (b < 32 || 127 === b) && l(i.diagnoses.deprecatedQTEXT),
+                                                        (h.local += x),
+                                                        (d[y] += x),
+                                                        ++v;
                                             }
                                             break;
                                         case i.components.contextQuotedPair:
                                             switch (
-                                                ((m = E.charCodeAt(0)) > 127
+                                                ((b = x.charCodeAt(0)) > 127
                                                     ? l(i.diagnoses.errExpectingQPair)
-                                                    : ((m < 31 && 9 !== m) || 127 === m) && l(i.diagnoses.deprecatedQP),
+                                                    : ((b < 31 && 9 !== b) || 127 === b) && l(i.diagnoses.deprecatedQP),
                                                 (f.prev = f.now),
                                                 (f.now = f.stack.pop()),
-                                                (E = "\\" + E),
+                                                (x = "\\" + x),
                                                 f.now)
                                             ) {
                                                 case i.components.contextComment:
                                                     break;
                                                 case i.components.contextQuotedString:
-                                                    (h.local += E), (d.locals[g] += E), (y += 2);
+                                                    (h.local += x), (d[y] += x), (v += 2);
                                                     break;
                                                 case i.components.literal:
-                                                    (h.domain += E), (d.domains[g] += E), (y += 2);
+                                                    (h.domain += x), (g[y] += x), (v += 2);
                                                     break;
                                                 default:
                                                     throw Error(
@@ -4866,7 +4859,7 @@ e.exports = (function () {
                                             }
                                             break;
                                         case i.components.contextComment:
-                                            switch (E) {
+                                            switch (x) {
                                                 case "(":
                                                     f.stack.push(f.now), (f.now = i.components.contextComment);
                                                     break;
@@ -4877,7 +4870,7 @@ e.exports = (function () {
                                                     f.stack.push(f.now), (f.now = i.components.contextQuotedPair);
                                                     break;
                                                 case "\r":
-                                                    if (w === ++x || "\n" !== e[x]) {
+                                                    if (E === ++j || "\n" !== e[j]) {
                                                         l(i.diagnoses.errCRNoLF);
                                                         break;
                                                     }
@@ -4886,37 +4879,37 @@ e.exports = (function () {
                                                     l(i.diagnoses.cfwsFWS),
                                                         f.stack.push(f.now),
                                                         (f.now = i.components.contextFWS),
-                                                        (p = E);
+                                                        (p = x);
                                                     break;
                                                 default:
-                                                    (m = E.charCodeAt(0)) > 127 || 0 === m || 10 === m
+                                                    (b = x.charCodeAt(0)) > 127 || 0 === b || 10 === b
                                                         ? l(i.diagnoses.errExpectingCTEXT)
-                                                        : (m < 32 || 127 === m) && l(i.diagnoses.deprecatedCTEXT);
+                                                        : (b < 32 || 127 === b) && l(i.diagnoses.deprecatedCTEXT);
                                             }
                                             break;
                                         case i.components.contextFWS:
                                             if ("\r" === p) {
-                                                if ("\r" === E) {
+                                                if ("\r" === x) {
                                                     l(i.diagnoses.errFWSCRLFx2);
                                                     break;
                                                 }
-                                                ++v > 1 ? l(i.diagnoses.deprecatedFWS) : (v = 1);
+                                                ++m > 1 ? l(i.diagnoses.deprecatedFWS) : (m = 1);
                                             }
-                                            switch (E) {
+                                            switch (x) {
                                                 case "\r":
-                                                    (w === ++x || "\n" !== e[x]) && l(i.diagnoses.errCRNoLF);
+                                                    (E === ++j || "\n" !== e[j]) && l(i.diagnoses.errCRNoLF);
                                                     break;
                                                 case " ":
                                                 case "\t":
                                                     break;
                                                 default:
                                                     "\r" === p && l(i.diagnoses.errFWSCRLFEnd),
-                                                        (v = 0),
+                                                        (m = 0),
                                                         (f.prev = f.now),
                                                         (f.now = f.stack.pop()),
-                                                        --x;
+                                                        --j;
                                             }
-                                            p = E;
+                                            p = x;
                                             break;
                                         default:
                                             throw Error("unknown context: " + f.now);
@@ -4929,53 +4922,53 @@ e.exports = (function () {
                                     else if (f.now === i.components.contextQuotedPair) l(i.diagnoses.errBackslashEnd);
                                     else if (f.now === i.components.contextComment) l(i.diagnoses.errUnclosedComment);
                                     else if (f.now === i.components.literal) l(i.diagnoses.errUnclosedDomainLiteral);
-                                    else if ("\r" === E) l(i.diagnoses.errFWSCRLFEnd);
+                                    else if ("\r" === x) l(i.diagnoses.errFWSCRLFEnd);
                                     else if (0 === h.domain.length) l(i.diagnoses.errNoDomain);
-                                    else if (0 === y) l(i.diagnoses.errDotEnd);
-                                    else if (b) l(i.diagnoses.errDomainHyphenEnd);
+                                    else if (0 === v) l(i.diagnoses.errDotEnd);
+                                    else if (_) l(i.diagnoses.errDomainHyphenEnd);
                                     else if (h.domain.length > 255) l(i.diagnoses.rfc5322DomainTooLong);
                                     else if (h.local.length + h.domain.length + 1 > 254) l(i.diagnoses.rfc5322TooLong);
-                                    else if (y > 63) l(i.diagnoses.rfc5322LabelTooLong);
-                                    else if (t.minDomainAtoms && d.domains.length < t.minDomainAtoms)
+                                    else if (v > 63) l(i.diagnoses.rfc5322LabelTooLong);
+                                    else if (t.minDomainAtoms && g.length < t.minDomainAtoms)
                                         l(i.diagnoses.errDomainTooShort);
                                     else if (t.tldWhitelist || t.tldBlacklist) {
-                                        var P = d.domains[g];
-                                        i.validDomain(P, t) || l(i.diagnoses.errUnknownTLD);
+                                        var R = g[y];
+                                        i.validDomain(R, t) || l(i.diagnoses.errUnknownTLD);
                                     }
                                 }
-                                var R = !1,
-                                    D = !1,
-                                    C = function () {
-                                        !R &&
+                                var D = !1,
+                                    C = !1,
+                                    I = function () {
+                                        !D &&
                                             u < i.categories.dnsWarn &&
-                                            (57 >= d.domains[g].charCodeAt(0)
+                                            (57 >= g[y].charCodeAt(0)
                                                 ? l(i.diagnoses.rfc5321TLDNumeric)
-                                                : 0 === g && l(i.diagnoses.rfc5321TLD)),
+                                                : 0 === y && l(i.diagnoses.rfc5321TLD)),
                                             u < c && (u = i.diagnoses.valid);
                                         var e = a ? u : u < i.defaultThreshold;
-                                        return r && (D ? r(e) : i.defer(r.bind(null, e))), e;
+                                        return r && (C ? r(e) : i.defer(r.bind(null, e))), e;
                                     };
                                 if (t.checkDNS && u < i.categories.dnsWarn)
-                                    0 === g && (h.domain += "."),
+                                    0 === y && (h.domain += "."),
                                         (s = h.domain),
                                         o.resolveMx(s, function (e, t) {
-                                            if (e && e.code !== o.NODATA) return l(i.diagnoses.dnsWarnNoRecord), C();
-                                            if (t && t.length) return (R = !0), C();
+                                            if (e && e.code !== o.NODATA) return l(i.diagnoses.dnsWarnNoRecord), I();
+                                            if (t && t.length) return (D = !0), I();
                                             var r = 3,
                                                 n = !1;
                                             l(i.diagnoses.dnsWarnNoMXRecord);
                                             var a = function (e, t) {
                                                 if (!n) {
-                                                    if ((--r, t && t.length)) return (n = !0), C();
-                                                    0 === r && (l(i.diagnoses.dnsWarnNoRecord), (n = !0), C());
+                                                    if ((--r, t && t.length)) return (n = !0), I();
+                                                    0 === r && (l(i.diagnoses.dnsWarnNoRecord), (n = !0), I());
                                                 }
                                             };
                                             o.resolveCname(s, a), o.resolve4(s, a), o.resolve6(s, a);
                                         }),
-                                        (D = !0);
+                                        (C = !0);
                                 else {
-                                    var I = C();
-                                    return (D = !0), I;
+                                    var L = I();
+                                    return (C = !0), L;
                                 }
                             }),
                         (t.diagnoses = i.validate.diagnoses =

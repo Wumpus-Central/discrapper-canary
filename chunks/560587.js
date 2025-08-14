@@ -1,31 +1,29 @@
-n.d(t, { Z: () => c });
+n.d(t, { Z: () => d });
 var i,
     s,
-    r,
-    l = n(442837),
-    a = n(570140);
-let o = {};
-class d extends (r = l.ZP.Store) {
+    r = n(442837),
+    l = n(570140);
+let a = {};
+class o extends (s = r.ZP.Store) {
     getBranches(e) {
         var t;
-        return null != (t = o[e]) ? t : [];
+        return null != (t = a[e]) ? t : [];
     }
 }
-(s = "ApplicationBranchStore"),
-    (i = "displayName") in d
-        ? Object.defineProperty(d, i, {
-              value: s,
-              enumerable: !0,
-              configurable: !0,
-              writable: !0,
-          })
-        : (d[i] = s);
-let c = new d(a.Z, {
+(i = "displayName") in o
+    ? Object.defineProperty(o, i, {
+          value: "ApplicationBranchStore",
+          enumerable: !0,
+          configurable: !0,
+          writable: !0,
+      })
+    : (o[i] = "ApplicationBranchStore");
+let d = new o(l.Z, {
     OWNED_APPLICATION_BRANCHES_FETCH_SUCCESS: function (e) {
         let { applicationId: t, branches: n } = e;
-        o[t] = n;
+        a[t] = n;
     },
     LOGOUT: function () {
-        o = {};
+        a = {};
     },
 });

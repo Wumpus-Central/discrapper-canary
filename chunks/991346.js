@@ -46,13 +46,13 @@ var i = n(73800),
     w = n(839469),
     k = n(726985),
     L = n(46140),
-    M = n(388032);
-function B(e) {
+    B = n(388032);
+function M(e) {
     let { shouldMergeGameSettings: t, showRedesignedThirdPartyAccessSettings: n } = e,
         i = O.Z.isDeveloper,
         r = [
             {
-                header: M.intl.string(M.t.cduTBA),
+                header: B.intl.string(B.t.cduTBA),
                 settings: n
                     ? [
                           k.s6.ACCOUNT,
@@ -79,12 +79,12 @@ function B(e) {
                       ],
             },
             {
-                header: M.intl.string(M.t["4uOdGh"]),
+                header: B.intl.string(B.t["4uOdGh"]),
                 divider: !0,
                 settings: [k.s6.PREMIUM, k.s6.GUILD_BOOSTING, k.s6.SUBSCRIPTIONS, k.s6.GIFT_INVENTORY, k.s6.BILLING],
             },
             {
-                header: M.intl.string(M.t.f2n1TE),
+                header: B.intl.string(B.t.f2n1TE),
                 divider: !0,
                 settings: [
                     k.s6.APPEARANCE,
@@ -137,7 +137,7 @@ function B(e) {
             },
         ],
         s = {
-            header: M.intl.string(M.t.SmHCFR),
+            header: B.intl.string(B.t.SmHCFR),
             divider: !0,
             settings: [k.s6.ACTIVITY_PRIVACY, k.s6.REGISTERED_GAMES, k.s6.OVERLAY],
         };
@@ -149,9 +149,9 @@ function U() {
         A = (0, f.U)(),
         w = (0, r.e7)([I.Z], () => I.Z.getProps().impressionSource),
         k = (0, h.gU)(),
-        M = (0, Z.bC)(),
-        B = (0, o.Go)(),
-        [U] = (0, c.cv)(B ? [s.z.CLIPS_SETTINGS_BETA_TAG] : []),
+        B = (0, Z.bC)(),
+        M = (0, o.Go)(),
+        [U] = (0, c.cv)(M ? [s.z.CLIPS_SETTINGS_BETA_TAG] : []),
         { shouldMergeGameSettings: V } = y.b.useExperiment({ location: "settings" }),
         G = (0, m.Xo)({ location: "settings" }),
         F = null != (n = null == (e = N.default.getCurrentUser()) ? void 0 : e.isStaff()) && n,
@@ -191,7 +191,7 @@ function U() {
                 showPrepaidPaymentPastDueWarning: A,
                 impressionSource: w,
                 numOfPendingFamilyRequests: k,
-                isOverlaySupported: M,
+                isOverlaySupported: B,
                 isClipsBetaTagShowing: U === s.z.CLIPS_SETTINGS_BETA_TAG,
                 shouldMergeGameSettings: V,
                 isKeywordFilteringEnabled: G,
@@ -215,7 +215,7 @@ function U() {
                 activeInputProfile: ea,
                 isInputProfileCustom: el,
             }),
-        [X, U, et, en, K, ee, q, Q, w, $, Y, z, H, G, M, F, J, k, W, V, A, O, ei, er, es, ea, el],
+        [X, U, et, en, K, ee, q, Q, w, $, Y, z, H, G, B, F, J, k, W, V, A, O, ei, er, es, ea, el],
     );
 }
 function V(e) {
@@ -356,7 +356,7 @@ function F() {
         { showRedesign: n } = A.b.useExperiment({ location: "settings" }),
         r = i.useMemo(
             () =>
-                B({
+                M({
                     shouldMergeGameSettings: t,
                     showRedesignedThirdPartyAccessSettings: n,
                 }),
@@ -369,14 +369,14 @@ function H(e) {
         n = (function () {
             let { shouldMergeGameSettings: e } = y.b.useExperiment({ location: "settings" }),
                 { showRedesign: t } = A.b.useExperiment({ location: "settings" }),
-                n = B({
+                n = M({
                     shouldMergeGameSettings: e,
                     showRedesignedThirdPartyAccessSettings: t,
                 });
             return i.useMemo(
                 () => [
                     {
-                        header: M.intl.string(M.t.zkoeq6),
+                        header: B.intl.string(B.t.zkoeq6),
                         settings: [
                             ...n
                                 .map((e) => {

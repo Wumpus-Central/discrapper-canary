@@ -10,16 +10,16 @@ var i = n(255367),
     d = n(981631),
     T = n(526761),
     S = n(388032),
-    x = n(421670);
+    x = n(328355);
 let _ = function (t) {
     let { onClose: e, channelId: n } = t,
-        [_, b] = r.useState(!1),
-        O = r.useCallback(() => {
+        [_, O] = r.useState(!1),
+        b = r.useCallback(() => {
             l.Z.open(d.oAB.CONTENT_AND_SOCIAL, null, { scrollPosition: T.FY.DM_SAFETY_ALERTS_V2 }), e();
         }, [e]),
-        g = r.useCallback(() => {
+        E = r.useCallback(() => {
             _ ||
-                (b(!0),
+                (O(!0),
                 (0, o.Uj)(n)
                     .then(() => {
                         e(),
@@ -29,7 +29,7 @@ let _ = function (t) {
                             });
                     })
                     .catch(() => {
-                        b(!1), (0, s.showToast)((0, s.createToast)(S.intl.string(S.t.R0RpRU), s.ToastType.FAILURE));
+                        O(!1), (0, s.showToast)((0, s.createToast)(S.intl.string(S.t.R0RpRU), s.ToastType.FAILURE));
                     }));
         }, [n, e, _]);
     return (0, i.jsxs)(u.Z, {
@@ -43,7 +43,7 @@ let _ = function (t) {
             (0, i.jsxs)("div", {
                 children: [
                     (0, i.jsx)(s.zxk, {
-                        onClick: O,
+                        onClick: b,
                         fullWidth: !0,
                         text: S.intl.string(S.t.qpWnyM),
                     }),
@@ -58,7 +58,7 @@ let _ = function (t) {
                                     {
                                         className: x.reportFalsePositiveButton,
                                         tag: "span",
-                                        onClick: g,
+                                        onClick: E,
                                         children: t,
                                     },
                                     e,

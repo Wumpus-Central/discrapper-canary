@@ -1,6 +1,6 @@
 n.d(t, {
-    Tm: () => u,
-    ZP: () => _,
+    Tm: () => d,
+    ZP: () => p,
 }),
     n(415506),
     n(388685);
@@ -20,17 +20,15 @@ function a(e, t, n) {
         e
     );
 }
-let s = {
-    DROP: [" ", "Enter"],
-    CANCEL_DRAG: ["Escape"],
-};
-function l(e) {
+let s = [" ", "Enter"],
+    l = ["Escape"];
+function c(e) {
     e.preventDefault(), e.stopImmediatePropagation();
 }
-function c(e, t) {
+function u(e, t) {
     return t.includes(e.key);
 }
-function u(e) {
+function d(e) {
     var t;
     let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     return (
@@ -38,7 +36,7 @@ function u(e) {
         ((null == (t = e.key) ? void 0 : t.toLowerCase()) === "d" && (e.metaKey || e.ctrlKey) && !e.altKey)
     );
 }
-function d(e) {
+function f(e) {
     if (null == e)
         return {
             x: 0,
@@ -56,18 +54,18 @@ function d(e) {
         y: n,
     };
 }
-class f {
+class _ {
     setup() {
         var e;
-        if (f.isSetUp) throw Error("Cannot have two Keyboard backends at the same time.");
-        (f.isSetUp = !0),
+        if (_.isSetUp) throw Error("Cannot have two Keyboard backends at the same time.");
+        (_.isSetUp = !0),
             (this._handlingFirstEvent = !0),
             null == (e = this.context.window) ||
                 e.addEventListener("keydown", this.handleGlobalKeyDown, { capture: !0 });
     }
     teardown() {
         var e;
-        (f.isSetUp = !1),
+        (_.isSetUp = !1),
             null == (e = this.context.window) ||
                 e.removeEventListener("keydown", this.handleGlobalKeyDown, { capture: !0 }),
             this.endDrag();
@@ -114,7 +112,7 @@ class f {
     }
     endDrag(e) {
         var t;
-        null != e && l(e),
+        null != e && c(e),
             null == (t = this._navigator) || t.disconnect(),
             this._previewer.clear(),
             this.monitor.isDragging() && this.actions.endDrag(),
@@ -135,18 +133,18 @@ class f {
             a(this, "_announcer", void 0),
             a(this, "_handlingFirstEvent", !1),
             a(this, "handleGlobalKeyDown", (e) => {
-                this.monitor.isDragging() && c(e, s.CANCEL_DRAG) && (this.endDrag(e), this._announcer.announceCancel());
+                this.monitor.isDragging() && u(e, l) && (this.endDrag(e), this._announcer.announceCancel());
             }),
-            a(this, "getSourceClientOffset", (e) => d(this.sourceNodes.get(e))),
+            a(this, "getSourceClientOffset", (e) => f(this.sourceNodes.get(e))),
             a(this, "handleDragStart", (e, t) => {
                 var n;
                 if (
-                    !u(t, this._handlingFirstEvent) ||
+                    !d(t, this._handlingFirstEvent) ||
                     ((this._handlingFirstEvent = !1), !this.monitor.canDragSource(e))
                 )
                     return;
                 if (this.monitor.isDragging()) return void this.actions.publishDragSource();
-                l(t);
+                c(t);
                 let r = this.sourceNodes.get(e);
                 null != r &&
                     ((this._navigator = new o.n(r, this.targetNodes, this.manager, this._previewer, this._announcer)),
@@ -161,7 +159,7 @@ class f {
                     this._announcer.announceDrag(r, e));
             }),
             a(this, "handleDrop", (e) => {
-                c(e, s.DROP) && (this.actions.drop(), this.endDrag(e), this._announcer.announceDrop());
+                u(e, s) && (this.actions.drop(), this.endDrag(e), this._announcer.announceDrop());
             }),
             (this.manager = e),
             (this.actions = e.getActions()),
@@ -176,5 +174,5 @@ class f {
             (this._announcer = new r.Z(null == n ? void 0 : n.announcer));
     }
 }
-a(f, "isSetUp", void 0);
-let _ = (e, t, n) => new f(e, t, n);
+a(_, "isSetUp", void 0);
+let p = (e, t, n) => new _(e, t, n);

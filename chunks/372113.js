@@ -27,7 +27,7 @@ var r = n(255367),
     C = n(46140),
     R = n(981631),
     P = n(388032),
-    w = n(421317);
+    w = n(997267);
 function D(e, t, n) {
     return (
         t in e
@@ -80,7 +80,7 @@ function M(e, t) {
         e
     );
 }
-let j = (e, t, n) =>
+let k = (e, t, n) =>
     (0, A.uq)(e) && !n && "lg" === t
         ? "text-lg/medium"
         : "lg" === t
@@ -88,7 +88,7 @@ let j = (e, t, n) =>
           : "sm" === t
             ? "text-sm/medium"
             : "text-xs/medium";
-function k(e) {
+function j(e) {
     let { containerSize: t, onClick: n, children: i, tabIndex: o } = e;
     return "xs" === t
         ? (0, r.jsx)(c.P3F, {
@@ -345,7 +345,7 @@ let B = (e) => {
                         className: a()(w.gridText, w.taskDetails),
                         children: [
                             (0, r.jsx)(c.Text, {
-                                variant: j(o, u, F),
+                                variant: k(o, u, F),
                                 className: w.taskInstructions,
                                 children: _
                                     ? P.intl.formatToPlainString(P.t["ge+AJi"], {
@@ -389,7 +389,7 @@ let B = (e) => {
                               className: a()(w.ctaButtonContainer, w.gridCtaButtons),
                               children: [
                                   !W &&
-                                      (0, r.jsx)(k, {
+                                      (0, r.jsx)(j, {
                                           containerSize: u,
                                           onClick: er,
                                           children: P.intl.string(P.t.LLLLPD),

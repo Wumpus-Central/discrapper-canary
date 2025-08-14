@@ -1,45 +1,45 @@
 n.d(t, {
-    J: () => x,
-    y: () => S,
+    J: () => S,
+    y: () => x,
 });
 var r = n(255367),
     i = n(73800),
     l = n(512722),
     o = n.n(l),
-    s = n(481060),
-    a = n(24124),
+    a = n(481060),
+    s = n(24124),
     c = n(636449),
     u = n(620662),
     d = n(513202),
-    h = n(906732),
-    p = n(522651),
-    f = n(311352),
+    p = n(906732),
+    f = n(522651),
+    h = n(311352),
     g = n(668519),
     m = n(562224),
     b = n(803647),
     O = n(131704),
     _ = n(944486),
     y = n(626135),
-    C = n(870569),
-    v = n(981631),
-    j = n(388032),
-    E = n(537405);
-function S(e, t, n) {
+    v = n(870569),
+    j = n(981631),
+    C = n(388032),
+    E = n(258628);
+function x(e, t, n) {
     return (
         null != e &&
         (null != n
             ? n.applicationId === e.id
-            : null != t && t.application_id === e.id && t.type === v.IIU.PLAYING && (0, u.Z)(t, v.xjy.JOIN))
+            : null != t && t.application_id === e.id && t.type === j.IIU.PLAYING && (0, u.Z)(t, j.xjy.JOIN))
     );
 }
-let x = i.memo(function (e) {
+let S = i.memo(function (e) {
     let t,
         l,
         u,
-        x,
+        S,
         {
-            stream: I,
-            canGoLive: P,
+            stream: P,
+            canGoLive: I,
             guildId: N,
             isStreaming: w,
             channel: Z,
@@ -54,21 +54,21 @@ let x = i.memo(function (e) {
             location: "Activity Panel",
             autoTrackExposure: !1,
         }),
-        { parentAnalyticsLocation: G } = (0, h.ZP)(),
-        B = S(L, D, R),
+        { parentAnalyticsLocation: G } = (0, p.ZP)(),
+        B = x(L, D, R),
         V = i.useCallback(() => {
             o()(null != D, "Received null activity"),
-                (0, p.v)(G, p.d.INVITE),
-                y.default.track(v.rMx.OPEN_MODAL, {
+                (0, f.v)(G, f.d.INVITE),
+                y.default.track(j.rMx.OPEN_MODAL, {
                     type: "Send Join Invite",
                     application_id: D.application_id,
                     location: M.location,
                 }),
-                (0, a.h7)(D, !1);
+                (0, s.h7)(D, !1);
         }, [D, M, G]),
         F = i.useCallback(
             (e, t) => () => {
-                (0, p.v)(G, p.d.LEAVE_ACTIVITY),
+                (0, f.v)(G, f.d.LEAVE_ACTIVITY),
                     d.Z.leaveActivity({
                         location: t,
                         applicationId: e,
@@ -78,8 +78,8 @@ let x = i.memo(function (e) {
             [G],
         ),
         H = i.useCallback(() => {
-            (0, b.Z)(I);
-        }, [I]),
+            (0, b.Z)(P);
+        }, [P]),
         z = i.useCallback(() => {
             let e = null != Z && (0, O.vd)(Z.type) ? Z : null,
                 t = null != e ? e.getGuildId() : N;
@@ -87,7 +87,7 @@ let x = i.memo(function (e) {
                 (0, g.s)("Activity Panel"), (0, m.Z)(A.pid);
                 return;
             }
-            (0, s.ZDy)(async () => {
+            (0, a.ZDy)(async () => {
                 let { default: e } = await Promise.all([n.e("46746"), n.e("33641")]).then(n.bind(n, 60594));
                 return (n) => {
                     var i, l;
@@ -123,7 +123,7 @@ let x = i.memo(function (e) {
                                 sourcePID: null == A ? void 0 : A.pid,
                                 selectSource: !!U && null != _.Z.getVoiceChannelId(),
                                 guildId: t,
-                                analyticsLocation: v.Sbl.ACTIVITY_PANEL,
+                                analyticsLocation: j.Sbl.ACTIVITY_PANEL,
                             }),
                         Object.getOwnPropertyDescriptors
                             ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(l))
@@ -143,37 +143,37 @@ let x = i.memo(function (e) {
             });
         }, [Z, N, A, U, k]),
         W =
-            (null != A || null == R || (0, c.R)()) && (w || P)
+            (null != A || null == R || (0, c.R)()) && (w || I)
                 ? (w
                       ? ((t = !1),
                         (l = () => {
-                            H(), (0, p.v)(G, p.d.STREAM, !1);
+                            H(), (0, f.v)(G, f.d.STREAM, !1);
                         }),
-                        (u = s.g5r),
-                        (x = j.intl.string(j.t.S5anIS)))
+                        (u = a.g5r),
+                        (S = C.intl.string(C.t.S5anIS)))
                       : T
                         ? ((t = !1),
                           (l = () => {
-                              z(), (0, p.v)(G, p.d.STREAM, !0);
+                              z(), (0, f.v)(G, f.d.STREAM, !0);
                           }),
-                          (u = s.hGI),
-                          (x =
+                          (u = a.hGI),
+                          (S =
                               null != A
-                                  ? j.intl.formatToPlainString(j.t.AB5gT0, { game: A.name })
-                                  : j.intl.string(j.t.FeUKeH)))
+                                  ? C.intl.formatToPlainString(C.t.AB5gT0, { game: A.name })
+                                  : C.intl.string(C.t.FeUKeH)))
                         : ((t = !0),
                           (l = null),
-                          (u = s.hGI),
-                          (x =
+                          (u = a.hGI),
+                          (S =
                               null != Z && (0, O.vd)(Z.type)
-                                  ? j.intl.string(j.t.uQn9Bw)
+                                  ? C.intl.string(C.t.uQn9Bw)
                                   : null != N
-                                    ? j.intl.string(j.t.fBXEoK)
-                                    : j.intl.string(j.t.n3feND))),
+                                    ? C.intl.string(C.t.fBXEoK)
+                                    : C.intl.string(C.t.n3feND))),
                   (0, r.jsx)("div", {
                       className: E.panelButtonContainer,
-                      children: (0, r.jsx)(C.Z, {
-                          tooltipText: x,
+                      children: (0, r.jsx)(v.Z, {
+                          tooltipText: S,
                           disabled: t,
                           onClick: l,
                           icon: u,
@@ -182,21 +182,21 @@ let x = i.memo(function (e) {
                 : null,
         K =
             B && null == R
-                ? (0, r.jsx)(C.Z, {
-                      tooltipText: j.intl.string(j.t["hC/Ze3"]),
+                ? (0, r.jsx)(v.Z, {
+                      tooltipText: C.intl.string(C.t["hC/Ze3"]),
                       onClick: V,
-                      icon: s.ejJ,
+                      icon: a.ejJ,
                   })
                 : null,
         Y =
             null == R
                 ? null
-                : (0, r.jsx)(C.Z, {
-                      tooltipText: j.intl.string(j.t["R/FK4O"]),
+                : (0, r.jsx)(v.Z, {
+                      tooltipText: C.intl.string(C.t["R/FK4O"]),
                       onClick: F(R.applicationId, R.location),
-                      icon: s.PBZ,
+                      icon: a.PBZ,
                   }),
-        q = null == I ? null : (0, r.jsx)(f.Z, {});
+        q = null == P ? null : (0, r.jsx)(h.Z, {});
     return null == W && null == K && null == Y
         ? null
         : (0, r.jsxs)("div", {

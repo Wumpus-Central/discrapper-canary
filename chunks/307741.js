@@ -14,7 +14,7 @@ var r = n(255367),
     h = n(168524),
     m = n(715318),
     g = n(388032),
-    E = n(874672);
+    E = n(488463);
 function b(e) {
     let { detectedGame: t } = e,
         n = i.useMemo(() => {

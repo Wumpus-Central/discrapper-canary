@@ -6,7 +6,7 @@ var r = n(255367),
     s = n(663507),
     l = n(84735),
     c = n(562701),
-    u = n(170669);
+    u = n(121958);
 function d(e, t, n) {
     return (
         t in e
@@ -111,8 +111,8 @@ function g(e, t, n) {
                 paddingVertical: L,
                 paddingHorizontal: x,
                 fade: M = !1,
-                className: j,
-                style: k,
+                className: k,
+                style: j,
                 maxContentWidth: U,
                 renderAccessory: G,
                 onItemVisibilityChange: B,
@@ -149,7 +149,7 @@ function g(e, t, n) {
             { scrollerRef: K, scrollerState: z, getScrollerState: q } = (0, c.T4)();
         (0, c.tT)({
             scrollerRef: K,
-            className: j,
+            className: k,
             specs: o,
             orientation: "vertical",
             dir: b,
@@ -236,12 +236,12 @@ function g(e, t, n) {
                         {
                             ref: K,
                             onScroll: el,
-                            className: a()(j, {
+                            className: a()(k, {
                                 [e]: !0,
                                 [t]: M,
                                 [u.scrolling]: Y,
                             }),
-                            style: (0, c.uT)(k),
+                            style: (0, c.uT)(j),
                         },
                         Z,
                     ),

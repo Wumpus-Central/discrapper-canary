@@ -3,31 +3,31 @@ var r = n(255367),
     i = n(73800),
     l = n(120356),
     o = n.n(l),
-    s = n(91192),
-    a = n(442837),
+    a = n(91192),
+    s = n(442837),
     c = n(481060),
     u = n(493683),
     d = n(239091),
-    h = n(317381),
-    p = n(16609),
-    f = n(276952),
+    p = n(317381),
+    f = n(16609),
+    h = n(276952),
     g = n(682662),
     m = n(674552),
     b = n(593364),
     O = n(905423),
     _ = n(199902),
     y = n(592125),
-    C = n(944486),
-    v = n(979651),
-    j = n(709054),
+    v = n(944486),
+    j = n(979651),
+    C = n(709054),
     E = n(853856),
-    S = n(593214),
-    x = n(919755),
-    I = n(110977),
-    P = n(603274),
+    x = n(593214),
+    S = n(919755),
+    P = n(110977),
+    I = n(603274),
     N = n(981631),
     w = n(388032),
-    Z = n(448424);
+    Z = n(499951);
 function T(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -62,48 +62,48 @@ let A = {
 };
 function R() {
     var e, t;
-    let l = (0, s.Ie)("favorites"),
-        { favoriteAdded: R, clearFavoriteAdded: D } = (0, S.up)(),
+    let l = (0, a.Ie)("favorites"),
+        { favoriteAdded: R, clearFavoriteAdded: D } = (0, x.up)(),
         [L, M] = i.useState(!1),
-        { favoriteServerMuted: k, favoriteChannels: U } = (0, a.cj)([E.Z], () => ({
+        { favoriteServerMuted: k, favoriteChannels: U } = (0, s.cj)([E.Z], () => ({
             favoriteChannels: E.Z.getFavoriteChannels(),
             favoriteServerMuted: E.Z.favoriteServerMuted,
         })),
-        G = (0, a.e7)([C.Z], () => C.Z.getChannelId(N.I_8)),
-        B = (0, a.e7)([y.Z], () => y.Z.getChannel(G)),
+        G = (0, s.e7)([v.Z], () => v.Z.getChannelId(N.I_8)),
+        B = (0, s.e7)([y.Z], () => y.Z.getChannel(G)),
         V = (0, O.Z)((e) => e.guildId) === N.I_8,
-        { badge: F, unread: H } = (0, x.Z)(U),
+        { badge: F, unread: H } = (0, S.Z)(U),
         z = (function (e) {
-            let t = (0, a.e7)([C.Z], () => C.Z.getVoiceChannelId()),
+            let t = (0, s.e7)([v.Z], () => v.Z.getVoiceChannelId()),
                 n = null != t && null != e[t],
-                r = (0, a.e7)([_.Z], () => {
+                r = (0, s.e7)([_.Z], () => {
                     if (!n) return !1;
                     let t = _.Z.getCurrentUserActiveStream();
                     return null != t && null != e[t.channelId];
                 }),
-                i = (0, a.e7)([_.Z], () => _.Z.getAllApplicationStreams().some((t) => null != e[t.channelId])),
-                l = (0, a.e7)([v.Z], () => n && null != t && v.Z.hasVideo(t), [n, t]),
-                o = (0, a.Wu)([h.ZP], () =>
-                    j.default.keys(e).reduce((e, t) => (e.push(...h.ZP.getEmbeddedActivitiesForChannel(t)), e), []),
+                i = (0, s.e7)([_.Z], () => _.Z.getAllApplicationStreams().some((t) => null != e[t.channelId])),
+                l = (0, s.e7)([j.Z], () => n && null != t && j.Z.hasVideo(t), [n, t]),
+                o = (0, s.Wu)([p.ZP], () =>
+                    C.default.keys(e).reduce((e, t) => (e.push(...p.ZP.getEmbeddedActivitiesForChannel(t)), e), []),
                 ),
-                s = (0, a.e7)([h.ZP], () =>
-                    Array.from(h.ZP.getSelfEmbeddedActivities().values()).some((t) => {
+                a = (0, s.e7)([p.ZP], () =>
+                    Array.from(p.ZP.getSelfEmbeddedActivities().values()).some((t) => {
                         let { location: n } = t,
-                            r = (0, p.p)(n);
+                            r = (0, f.p)(n);
                         return null != r && null != e[r];
                     }),
                 ),
                 c = o.length > 0,
                 u = !1,
                 d = !1,
-                f = !1,
+                h = !1,
                 g = !1;
             return (
-                n ? ((u = !l), (d = l), (f = r), (g = s)) : ((f = i), (g = c)),
+                n ? ((u = !l), (d = l), (h = r), (g = a)) : ((h = i), (g = c)),
                 (0, m.Or)({
                     audio: u,
                     video: d,
-                    screenshare: f,
+                    screenshare: h,
                     liveStage: !1,
                     isCurrentUserConnected: n,
                     activity: g,
@@ -116,15 +116,15 @@ function R() {
         }, [D]);
     return (0, r.jsxs)(g.H, {
         children: [
-            (0, r.jsx)(f.Z, {
+            (0, r.jsx)(h.Z, {
                 selected: V,
                 hovered: L,
                 unread: H && !k,
                 className: Z.pill,
             }),
-            (0, r.jsx)(P.Z, {
+            (0, r.jsx)(I.Z, {
                 onShow: K,
-                children: (0, r.jsx)(I.S, {
+                children: (0, r.jsx)(P.S, {
                     children: (0, r.jsx)(c.aRk, {
                         selected: !0,
                         upperBadge: z,

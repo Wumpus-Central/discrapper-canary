@@ -20,22 +20,21 @@ class o extends i.Component {
         });
     }
     constructor(...e) {
-        var t, n;
         super(...e),
-            (t = "fetchStoreListing"),
-            (n = (e) => {
+            (function (e, t, n) {
+                t in e
+                    ? Object.defineProperty(e, t, {
+                          value: n,
+                          enumerable: !0,
+                          configurable: !0,
+                          writable: !0,
+                      })
+                    : (e[t] = n);
+            })(this, "fetchStoreListing", (e) => {
                 let { storeListingId: t, skuId: n, applicationId: r } = this.props,
                     i = null != e ? e : n;
                 return null != t ? (0, l.rV)(t) : null != i ? (0, l.km)(i) : null != r ? (0, l.Hq)(r) : void 0;
-            }),
-            t in this
-                ? Object.defineProperty(this, t, {
-                      value: n,
-                      enumerable: !0,
-                      configurable: !0,
-                      writable: !0,
-                  })
-                : (this[t] = n);
+            });
     }
 }
 let s = o;

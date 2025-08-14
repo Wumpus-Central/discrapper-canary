@@ -23,7 +23,7 @@ var i = n(255367),
     v = n(638631),
     S = n(869783),
     T = n(388032),
-    I = n(230546),
+    I = n(876544),
     N = n(181960),
     y = n(313199),
     A = n(821969);
@@ -40,8 +40,8 @@ let P = r.forwardRef((e, t) => {
         w = (0, b._O)(),
         k = (0, f.Nx)(),
         L = (0, l.e7)([h.Z], () => h.Z.affinities),
-        M = (0, _.Z)(),
-        B = null != M,
+        B = (0, _.Z)(),
+        M = null != B,
         U = P ? o.Tt.WHITE : o.Tt.BRAND,
         V = L.length > 0,
         G = (0, x.ZP)({ location: "HeroHeading" }) ? T.intl.string(T.t["EW+VIS"]) : T.intl.string(T.t.YCZldH),
@@ -66,8 +66,8 @@ let P = r.forwardRef((e, t) => {
                                 color: "header-primary",
                                 children: G,
                             }),
-                            B
-                                ? (0, i.jsx)(C.Z, { referrer: M })
+                            M
+                                ? (0, i.jsx)(C.Z, { referrer: B })
                                 : V &&
                                   (0, i.jsx)("div", {
                                       className: I.affinityDescriptionContainer,
@@ -80,7 +80,7 @@ let P = r.forwardRef((e, t) => {
                             w
                                 ? (0, i.jsx)("div", {
                                       className: a()(I.buttonContainer, I.marketingPageCTAContainer, {
-                                          [I.marketingPageCTAMargin]: !(V || B),
+                                          [I.marketingPageCTAMargin]: !(V || M),
                                       }),
                                       children: (0, i.jsx)(j.Z, {
                                           className: a()(I.button, r),
@@ -91,7 +91,7 @@ let P = r.forwardRef((e, t) => {
                                       subscriptionTier: s,
                                       inOfferExperience: k,
                                       containerClassName: a()(I.marketingPageCTAContainer, {
-                                          [I.marketingPageCTAMargin]: !(V || B),
+                                          [I.marketingPageCTAMargin]: !(V || M),
                                       }),
                                       buttonClassName: r,
                                       isApplicationHome: !0,

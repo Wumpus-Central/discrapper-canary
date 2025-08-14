@@ -25,17 +25,17 @@ class d extends i.EventEmitter {
             : (this.combo.push([e, n, (0, a.dU)()]), this.emit("change", this));
     }
     constructor() {
-        var e, t;
         super(),
-            (t = []),
-            (e = "combo") in this
-                ? Object.defineProperty(this, e, {
-                      value: t,
-                      enumerable: !0,
-                      configurable: !0,
-                      writable: !0,
-                  })
-                : (this[e] = t),
+            (function (e, t, n) {
+                t in e
+                    ? Object.defineProperty(e, t, {
+                          value: n,
+                          enumerable: !0,
+                          configurable: !0,
+                          writable: !0,
+                      })
+                    : (e[t] = n);
+            })(this, "combo", []),
             o.push(this),
             1 === o.length && s.ZP.setOnInputEventCallback(c);
     }

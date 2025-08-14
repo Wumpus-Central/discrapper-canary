@@ -16,7 +16,7 @@ var r = n(255367),
     h = n(256003),
     j = n(981631),
     g = n(388032),
-    x = n(519705);
+    x = n(800209);
 function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -63,8 +63,8 @@ function y(e, t) {
 function O(e) {
     let { guildId: t } = e,
         O = (0, f.xC)(t),
-        { selectedUserIds: H, clearSelection: _ } = (0, h.Z)(t),
-        w = H.size > 0,
+        { selectedUserIds: _, clearSelection: H } = (0, h.Z)(t),
+        w = _.size > 0,
         N = async (e, t, n, r) => {
             try {
                 let l = await u.Z.banMultipleUsers(e, t, n, r);
@@ -73,7 +73,7 @@ function O(e) {
                         j.rMx.BULK_MODERATION_ACTION_COMPLETED,
                         y(v({}, (0, C.hH)(e)), {
                             action_type: p.jQ.BAN,
-                            target_user_ids: [...H],
+                            target_user_ids: [..._],
                             mod_user_id: m.default.getId(),
                             successful_user_ids: l.body.banned_users,
                             location,
@@ -82,11 +82,11 @@ function O(e) {
             } catch (e) {
                 (0, c.showToast)((0, c.createToast)(g.intl.string(g.t.mICAWV), c.ToastType.FAILURE));
             }
-            _();
+            H();
         },
         S = l.useCallback(() => {
-            _();
-        }, [_]),
+            H();
+        }, [H]),
         Z = (0, r.jsxs)("span", {
             className: x.messageContainer,
             children: [
@@ -99,7 +99,7 @@ function O(e) {
                 (0, r.jsx)(c.Text, {
                     variant: "heading-md/bold",
                     color: "text-default",
-                    children: g.intl.format(g.t.TstoSU, { count: H.size }),
+                    children: g.intl.format(g.t.TstoSU, { count: _.size }),
                 }),
                 (0, r.jsx)(c.Avr, {
                     text: g.intl.string(g.t.yW6ZdH),
@@ -136,7 +136,7 @@ function O(e) {
                                   j.rMx.BULK_MODERATION_ACTION_STARTED,
                                   y(v({}, (0, C.hH)(t)), {
                                       action_type: p.jQ.BAN,
-                                      target_user_ids: [...H],
+                                      target_user_ids: [..._],
                                       mod_user_id: m.default.getId(),
                                       location,
                                   }),
@@ -149,7 +149,7 @@ function O(e) {
                                               y(v({}, n), {
                                                   guildId: t,
                                                   canBulkBan: O,
-                                                  userIds: H,
+                                                  userIds: _,
                                                   onBanMultiple: N,
                                               }),
                                           );

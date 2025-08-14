@@ -1,12 +1,12 @@
 n.d(t, {
     Eg: () => u,
-    XL: () => h,
+    XL: () => p,
 });
 var r = n(73800),
     i = n(94171),
     l = n(362383),
     o = n(731965);
-function s(e) {
+function a(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -31,7 +31,7 @@ function s(e) {
     }
     return e;
 }
-function a(e, t) {
+function s(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -65,7 +65,7 @@ function d(e) {
         return !1;
     }
 }
-function h(e, t) {
+function p(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         i = r.useRef(null);
     return (
@@ -85,9 +85,9 @@ function h(e, t) {
                                 c.setState((e) => {
                                     var t, n;
                                     return {
-                                        upsellsByGuildId: a(s({}, null != (t = e.upsellsByGuildId) ? t : {}), {
-                                            [u.guildId]: a(
-                                                s({}, null != (n = e.upsellsByGuildId[u.guildId]) ? n : {}),
+                                        upsellsByGuildId: s(a({}, null != (t = e.upsellsByGuildId) ? t : {}), {
+                                            [u.guildId]: s(
+                                                a({}, null != (n = e.upsellsByGuildId[u.guildId]) ? n : {}),
                                                 { [u.name]: u },
                                             ),
                                         }),

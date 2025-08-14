@@ -17,7 +17,7 @@ var r = n(255367),
     _ = n(981631),
     O = n(918559),
     E = n(388032),
-    y = n(43022);
+    y = n(909357);
 let v = {
     [O.MI.NO_CHAT]: y.noChat,
     [O.MI.RESIZABLE]: y.resizable,

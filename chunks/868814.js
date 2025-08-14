@@ -20,7 +20,7 @@ function o(e) {
                 }
                 r.length < 5 && !r.includes(e) && r.push(e);
             }),
-            r.sort((t, n) => +!!(0, i.s)(e.id, n.id) - +!!(0, i.s)(e.id, t.id)),
+            r.sort((t, n) => !!(0, i.s)(e.id, n.id) - !!(0, i.s)(e.id, t.id)),
             r
         );
     });

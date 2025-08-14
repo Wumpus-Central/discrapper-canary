@@ -1,4 +1,4 @@
-n.d(t, { default: () => g });
+n.d(t, { default: () => f });
 var r = n(255367),
     s = n(73800),
     a = n(481060),
@@ -8,37 +8,36 @@ var r = n(255367),
     c = n(497505),
     d = n(981631),
     m = n(388032),
-    u = n(543200),
+    u = n(101202),
     x = n(708901);
-let f = (e) => {
-    switch (e) {
-        case c.jn.QUEST_BAR:
-        case c.jn.QUEST_BAR_V2:
-            return {
-                location: !0,
-                age: !0,
-                activity: !0,
-            };
-        case c.jn.ACTIVITY_PANEL:
-        case c.jn.QUESTS_EMBED:
-        case c.jn.QUEST_LIVE_STREAM:
-            return { activity: !0 };
-        default:
-            return;
-    }
-};
-function g(e) {
-    let { transitionState: t, onClose: n, questContent: c, quest: g } = e,
-        p = f(c),
+function f(e) {
+    let { transitionState: t, onClose: n, questContent: f, quest: g } = e,
+        j = ((e) => {
+            switch (e) {
+                case c.jn.QUEST_BAR:
+                case c.jn.QUEST_BAR_V2:
+                    return {
+                        location: !0,
+                        age: !0,
+                        activity: !0,
+                    };
+                case c.jn.ACTIVITY_PANEL:
+                case c.jn.QUESTS_EMBED:
+                case c.jn.QUEST_LIVE_STREAM:
+                    return { activity: !0 };
+                default:
+                    return;
+            }
+        })(f),
         _ = s.useMemo(() => {
             var e;
             return (0, l.Fs)({
-                isTargetedDisclosure: null != p,
+                isTargetedDisclosure: null != j,
                 gamePublisher: g.config.messages.gamePublisher,
                 gameTitle: g.config.messages.gameTitle,
                 cosponsorName: null == (e = g.config.cosponsorMetadata) ? void 0 : e.name,
             });
-        }, [g, p]);
+        }, [g, j]);
     return (0, r.jsxs)(a.Y0X, {
         transitionState: t,
         size: a.CgR.DYNAMIC,
@@ -81,7 +80,7 @@ function g(e) {
                         className: u.upperBodyText,
                         children: _,
                     }),
-                    (0, r.jsx)(j, { targetedTraits: p }),
+                    (0, r.jsx)(p, { targetedTraits: j }),
                     (0, r.jsx)(a.Text, {
                         variant: "text-xs/medium",
                         color: "text-muted",
@@ -102,34 +101,34 @@ function g(e) {
         ],
     });
 }
-function p(e) {
+function g(e) {
     let { location: t, age: n, activity: s } = e;
     return (0, r.jsxs)("ul", {
         className: u.targetList,
         children: [
             t &&
-                (0, r.jsx)(_, {
+                (0, r.jsx)(j, {
                     icon: a.enf,
                     children: m.intl.string(m.t.xQSdPj),
                 }),
             n &&
-                (0, r.jsx)(_, {
+                (0, r.jsx)(j, {
                     icon: a.tBG,
                     children: m.intl.string(m.t.mYt7hY),
                 }),
             s &&
-                (0, r.jsx)(_, {
+                (0, r.jsx)(j, {
                     icon: a.iWm,
                     children: m.intl.string(m.t.XAsWxc),
                 }),
         ],
     });
 }
-function j(e) {
+function p(e) {
     let { targetedTraits: t } = e;
     return null != t
         ? (0, r.jsx)(
-              p,
+              g,
               (function (e) {
                   for (var t = 1; t < arguments.length; t++) {
                       var n = null != arguments[t] ? arguments[t] : {},
@@ -158,7 +157,7 @@ function j(e) {
           )
         : null;
 }
-function _(e) {
+function j(e) {
     let { icon: t, children: n } = e;
     return (0, r.jsxs)(a.Text, {
         variant: "text-sm/medium",

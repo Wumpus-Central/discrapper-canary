@@ -27,7 +27,7 @@ var i = n(255367),
     N = n(136015),
     w = n(981631),
     Z = n(388032),
-    P = n(235199);
+    P = n(89524);
 let T = (e) => [
         e.userId,
         ...(function (e) {
@@ -238,10 +238,7 @@ let T = (e) => [
             h = () => {
                 p(null);
             },
-            m = (e) => () => {
-                l(e);
-            },
-            g = u ? s.zJl : "div";
+            m = u ? s.zJl : "div";
         return (0, i.jsxs)("div", {
             children: [
                 (0, i.jsx)("div", {
@@ -252,7 +249,7 @@ let T = (e) => [
                         children: t,
                     }),
                 }),
-                (0, i.jsxs)(g, {
+                (0, i.jsxs)(m, {
                     className: P.channelList,
                     children: [
                         a && 0 === n.length && (0, i.jsx)(M, { emptyText: Z.intl.string(Z.t.nxSS09) }),
@@ -263,7 +260,9 @@ let T = (e) => [
                                     channelId: e,
                                     isHighlighted: e === d,
                                     currentVoiceChannel: o,
-                                    onClick: m(e),
+                                    onClick: () => {
+                                        l(e);
+                                    },
                                     onMouseOver: f,
                                     onMouseLeave: h,
                                     query: c,

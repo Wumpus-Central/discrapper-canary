@@ -3,28 +3,28 @@ var r = n(255367),
     i = n(73800),
     l = n(120356),
     o = n.n(l),
-    s = n(442837),
-    a = n(481060),
+    a = n(442837),
+    s = n(481060),
     c = n(262777),
     u = n(628238),
     d = n(976853),
-    h = n(977683),
-    p = n(869765),
-    f = n(695346),
+    p = n(977683),
+    f = n(869765),
+    h = n(695346),
     g = n(592125),
     m = n(699516),
     b = n(709054),
     O = n(594173),
     _ = n(786761),
     y = n(493892),
-    C = n(901461),
-    v = n(739566),
-    j = n(443877),
+    v = n(901461),
+    j = n(739566),
+    C = n(443877),
     E = n(492593),
-    S = n(453687),
-    x = n(938353),
-    I = n(25015),
-    P = n(689674),
+    x = n(453687),
+    S = n(938353),
+    P = n(25015),
+    I = n(689674),
     N = n(963550),
     w = n(845080),
     Z = n(295790),
@@ -33,8 +33,8 @@ var r = n(255367),
     R = n(834129),
     D = n(981631),
     L = n(388032),
-    M = n(960777),
-    k = n(433869);
+    M = n(378661),
+    k = n(360514);
 function U(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -83,7 +83,7 @@ let B = i.memo(function e(t) {
     let i,
         {
             channel: l,
-            message: a,
+            message: s,
             compact: R = !1,
             className: M,
             onContextMenu: B,
@@ -92,44 +92,44 @@ let B = i.memo(function e(t) {
             hasThread: z,
             treatSpam: W,
         } = t,
-        K = D.OBS.has(a.type) ? a.messageReference : void 0,
-        Y = (0, s.e7)([p.Z], () => p.Z.getMessageByReference(K)),
-        q = (0, s.e7)([g.Z], () =>
-            a.type === D.uaV.THREAD_STARTER_MESSAGE && Y.state === p.Y.LOADED
+        K = D.OBS.has(s.type) ? s.messageReference : void 0,
+        Y = (0, a.e7)([f.Z], () => f.Z.getMessageByReference(K)),
+        q = (0, a.e7)([g.Z], () =>
+            s.type === D.uaV.THREAD_STARTER_MESSAGE && Y.state === f.Y.LOADED
                 ? g.Z.getChannel(Y.message.channel_id)
                 : null,
         ),
-        X = f.x4.useSetting(),
-        Q = f.RS.useSetting(),
-        J = f.NA.useSetting(),
-        $ = f.QK.useSetting(),
-        ee = (0, u.A)((null != (n = a.editedTimestamp) ? n : a.timestamp).valueOf()),
+        X = h.x4.useSetting(),
+        Q = h.RS.useSetting(),
+        J = h.NA.useSetting(),
+        $ = h.QK.useSetting(),
+        ee = (0, u.A)((null != (n = s.editedTimestamp) ? n : s.timestamp).valueOf()),
         et = (0, d.Z)(null == l ? void 0 : l.id),
-        { disableReactionCreates: en } = (0, j.Z)(l),
-        { content: er, hasSpoilerEmbeds: ei } = (0, I.Z)(a, {
+        { disableReactionCreates: en } = (0, C.Z)(l),
+        { content: er, hasSpoilerEmbeds: ei } = (0, P.Z)(s, {
             hideSimpleEmbedContent: Q && J,
             allowList: ee,
             allowHeading: ee,
             allowLinks: !0,
             previewLinkTarget: !0,
         }),
-        el = (0, v.ZP)(a),
-        eo = (0, s.e7)(
+        el = (0, j.ZP)(s),
+        eo = (0, a.e7)(
             [g.Z],
-            () => a.hasFlag(D.iLy.HAS_THREAD) && g.Z.getChannel(b.default.castMessageIdAsChannelId(a.id)),
+            () => s.hasFlag(D.iLy.HAS_THREAD) && g.Z.getChannel(b.default.castMessageIdAsChannelId(s.id)),
         ),
-        es = a.type === D.uaV.THREAD_STARTER_MESSAGE && Y.state === p.Y.LOADED && null != q,
-        ea = !es && void 0 === i,
-        ec = (0, P.Z)({
-            message: a,
+        ea = s.type === D.uaV.THREAD_STARTER_MESSAGE && Y.state === f.Y.LOADED && null != q,
+        es = !ea && void 0 === i,
+        ec = (0, I.Z)({
+            message: s,
             channel: l,
-            enabled: ea,
+            enabled: es,
         }),
-        eu = (0, c.v)(a),
-        ed = (0, O.ro)(a.id, a.channel_id),
-        eh = (0, h.Z)(a),
-        ep = (0, S.iG)(a);
-    return es
+        eu = (0, c.v)(s),
+        ed = (0, O.ro)(s.id, s.channel_id),
+        ep = (0, p.Z)(s),
+        ef = (0, x.iG)(s);
+    return ea
         ? (0, r.jsx)(
               e,
               G(U({}, t), {
@@ -138,11 +138,11 @@ let B = i.memo(function e(t) {
                   hasThread: !1,
               }),
           )
-        : (m.Z.isBlockedForMessage(a)
+        : (m.Z.isBlockedForMessage(s)
                 ? (i = L.t["+FcYMz"])
-                : m.Z.isIgnoredForMessage(a)
+                : m.Z.isIgnoredForMessage(s)
                   ? (i = L.t.VFWjc3)
-                  : (0, y.DQ)(a) && W && (i = L.t.xfkfTE),
+                  : (0, y.DQ)(s) && W && (i = L.t.xfkfTE),
             void 0 !== i)
           ? (0, r.jsx)(V, {
                 className: M,
@@ -153,20 +153,20 @@ let B = i.memo(function e(t) {
           : (0, r.jsx)(E.Z, {
                 compact: R,
                 className: o()(M, {
-                    [k.ephemeral]: (0, _.Pv)(a),
+                    [k.ephemeral]: (0, _.Pv)(s),
                     [k.disableInteraction]: H,
                     [k.groupStart]: t.isGroupStart,
                 }),
-                childrenRepliedMessage: (0, A.Z)(a, l, K, Y, R),
+                childrenRepliedMessage: (0, A.Z)(s, l, K, Y, R),
                 childrenHeader: (0, w.Z)(
                     G(U({}, t), {
                         author: el,
                         guildId: l.guild_id,
                     }),
                 ),
-                childrenAccessories: (0, r.jsx)(x.BB, {
+                childrenAccessories: (0, r.jsx)(S.BB, {
                     channel: l,
-                    message: a,
+                    message: s,
                     hasSpoilerEmbeds: ei,
                     compact: R,
                     canSuppressEmbeds: !1,
@@ -180,24 +180,24 @@ let B = i.memo(function e(t) {
                     inlineEmbedMedia: Q,
                     renderEmbeds: J,
                     gifAutoPlay: $,
-                    poll: eh,
+                    poll: ep,
                     showListsAndHeaders: ee,
                     showMaskedLinks: ee,
                     shouldHideMediaOptions: et,
                     enabledContentHarmTypeFlags: eu,
                     ctaButtonType: ed,
                 }),
-                childrenExecutedCommand: (0, T.Z)(a, l, R),
+                childrenExecutedCommand: (0, T.Z)(s, l, R),
                 childrenMessageContent: (0, N.Z)(t, er),
                 childrenSystemMessage: (0, Z.Z)(t),
                 onContextMenu: B,
                 onClick: F,
-                hasThread: !1 !== z && null != eo && a.hasFlag(D.iLy.HAS_THREAD),
-                hasReply: a.type === D.uaV.REPLY,
-                isSystemMessage: (0, C.Z)(a),
+                hasThread: !1 !== z && null != eo && s.hasFlag(D.iLy.HAS_THREAD),
+                hasReply: s.type === D.uaV.REPLY,
+                isSystemMessage: (0, v.Z)(s),
                 messageRef: ec,
                 author: el,
-                "aria-labelledby": ep,
+                "aria-labelledby": ef,
                 "aria-roledescription": L.intl.string(L.t.BAB0yM),
             });
 });
@@ -210,7 +210,7 @@ function V(e) {
         childrenMessageContent: (0, r.jsx)(R.Z, {
             compact: i,
             className: M.blockedSystemMessage,
-            iconNode: (0, r.jsx)(a.Dio, {
+            iconNode: (0, r.jsx)(s.Dio, {
                 size: "md",
                 color: "currentColor",
                 className: M.blockedIcon,

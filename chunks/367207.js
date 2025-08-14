@@ -1,17 +1,17 @@
-n.d(t, { Z: () => v }), n(415506), n(388685);
+n.d(t, { Z: () => j }), n(415506), n(388685);
 var r = n(255367);
 n(73800);
 var i = n(481060),
     l = n(570140),
     o = n(317770),
-    s = n(100527),
-    a = n(963249),
+    a = n(100527),
+    s = n(963249),
     c = n(93127),
     u = n(594174),
     d = n(431),
-    h = n(74538),
-    p = n(970645),
-    f = n(30684),
+    p = n(74538),
+    f = n(970645),
+    h = n(30684),
     g = n(937579),
     m = n(522558),
     b = n(11352);
@@ -62,7 +62,7 @@ function y(e, t) {
         e
     );
 }
-class C extends o.Z {
+class v extends o.Z {
     _initialize() {
         __OVERLAY__
             ? l.Z.subscribe("PREMIUM_PAYMENT_MODAL_OPEN", this._handlePremiumPaymentModalOpen)
@@ -103,7 +103,7 @@ class C extends o.Z {
     openPremiumPaymentModalInApp(e) {
         if (__OVERLAY__) throw Error("Should not use this function from the overlay, use ModalAPI.openModal instead");
         return new Promise((t, n) => {
-            (0, a.Z)(
+            (0, s.Z)(
                 y(_({}, e), {
                     onClose: (e) => {
                         e ? t() : n();
@@ -134,14 +134,14 @@ class C extends o.Z {
             O(this, "_maybeFetchPremiumOffer", async () => {
                 let e = u.default.getCurrentUser();
                 if (null != e && e.verified) {
-                    let t = (d.Z.canFractionalPremiumUserUseOffer() || !(0, h.I5)(e)) && !d.Z.isFetchingOffer();
+                    let t = (d.Z.canFractionalPremiumUserUseOffer() || !(0, p.I5)(e)) && !d.Z.isFetchingOffer();
                     await (0, g.Tf)("PremiumManager", t);
                 }
                 l.Z.dispatch({ type: "PREMIUM_MARKETING_DATA_READY" });
             }),
             O(this, "_maybeFetchCheckoutRecovery", async () => {
                 let e = u.default.getCurrentUser();
-                null != e && e.verified && !(0, h.I5)(e) && f.Z.shouldFetchCheckoutRecovery() && (await (0, p.o)());
+                null != e && e.verified && !(0, p.I5)(e) && h.Z.shouldFetchCheckoutRecovery() && (await (0, f.o)());
             }),
             O(this, "_maybeFetchUserAffinities", () => {
                 let { enabled: e } = m.w.getCurrentConfig({ location: "PremiumManager" }, { autoTrackExposure: !1 });
@@ -151,9 +151,9 @@ class C extends o.Z {
                 b.Y.trackExposure({ location: "PremiumManager" });
             }),
             O(this, "_handlePremiumPaymentModalOpen", (e) => {
-                (0, a.Z)(
+                (0, s.Z)(
                     y(_({}, e), {
-                        analyticsLocations: [s.Z.OVERLAY],
+                        analyticsLocations: [a.Z.OVERLAY],
                         onClose: (e) => {
                             l.Z.dispatch({
                                 type: "PREMIUM_PAYMENT_MODAL_CLOSE",
@@ -173,4 +173,4 @@ class C extends o.Z {
             });
     }
 }
-let v = new C();
+let j = new v();

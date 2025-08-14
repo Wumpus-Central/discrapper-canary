@@ -9,8 +9,8 @@ var i = e(255367),
     d = e(585483),
     u = e(981631),
     p = e(388032),
-    h = e(224288),
-    C = e(692228);
+    h = e(314311),
+    C = e(430864);
 function k(t) {
     let { channel: n, isFromComposer: e, transitionState: a, onClose: k } = t;
     return (

@@ -1,13 +1,13 @@
-n.d(t, { Z: () => s });
+n.d(t, { Z: () => o });
 var r = n(255367);
 n(73800);
 var i = n(692547),
     l = n(313201);
-function s(e) {
+function o(e) {
     var t,
         n,
-        { isSelected: s } = e,
-        o = (function (e, t) {
+        { isSelected: o } = e,
+        s = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -28,7 +28,7 @@ function s(e) {
             }
             return i;
         })(e, ["isSelected"]);
-    let a = (0, l.Dt)();
+    let c = (0, l.Dt)();
     return (0, r.jsxs)(
         "svg",
         ((t = (function (e) {
@@ -55,7 +55,7 @@ function s(e) {
                     });
             }
             return e;
-        })({}, o)),
+        })({}, s)),
         (n = n =
             {
                 width: "16",
@@ -63,7 +63,7 @@ function s(e) {
                 viewBox: "0 0 16 16",
                 xmlns: "http://www.w3.org/2000/svg",
                 "aria-hidden": "true",
-                fill: "url(#".concat(a, ")"),
+                fill: "url(#".concat(c, ")"),
                 children: [
                     (0, r.jsx)("path", {
                         d: "M10 9.33332C10.7364 9.33332 11.3334 8.73637 11.3334 7.99999C11.3334 7.26361 10.7364 6.66666 10 6.66666C9.26364 6.66666 8.66669 7.26361 8.66669 7.99999C8.66669 8.73637 9.26364 9.33332 10 9.33332Z",
@@ -89,19 +89,19 @@ function s(e) {
                             gradientUnits: "userSpaceOnUse",
                             children: [
                                 (0, r.jsx)("stop", {
-                                    stopColor: s
+                                    stopColor: o
                                         ? i.Z.unsafe_rawColors.WHITE_500.css
                                         : i.Z.unsafe_rawColors.PREMIUM_TIER_2_PURPLE_FOR_GRADIENTS.css,
                                 }),
                                 (0, r.jsx)("stop", {
                                     offset: "0.502368",
-                                    stopColor: s
+                                    stopColor: o
                                         ? i.Z.unsafe_rawColors.WHITE_500.css
                                         : i.Z.unsafe_rawColors.PREMIUM_TIER_2_PURPLE_FOR_GRADIENTS_2.css,
                                 }),
                                 (0, r.jsx)("stop", {
                                     offset: "1",
-                                    stopColor: s
+                                    stopColor: o
                                         ? i.Z.unsafe_rawColors.WHITE_500.css
                                         : i.Z.unsafe_rawColors.PREMIUM_TIER_2_PINK_FOR_GRADIENTS.css,
                                 }),

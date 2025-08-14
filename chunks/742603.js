@@ -32,11 +32,11 @@ var r = n(255367),
     L = n(221888),
     x = n(339340),
     M = n(354459),
-    j = n(981631),
-    k = n(231338),
+    k = n(981631),
+    j = n(231338),
     U = n(388032),
-    G = n(408408),
-    B = n(692228);
+    G = n(39219),
+    B = n(430864);
 function Z(e, t, n) {
     return (
         t in e
@@ -100,7 +100,7 @@ function W(e) {
             maxVisibleUsers: Y,
             guildId: n.getGuildId(),
             channelId: n.id,
-            disableInteraction: i === j.IlC.POPOUT || o === j.AEg.FULL_SCREEN,
+            disableInteraction: i === k.IlC.POPOUT || o === k.AEg.FULL_SCREEN,
         }),
     });
 }
@@ -202,9 +202,9 @@ function q(e) {
         w = U.intl.string(U.t.BVZqJi);
     t.isDM() ? (w = U.intl.string(U.t.jN2DfX)) : t.isGroupDM() && (w = U.intl.string(U.t["e5y+go"]));
     let L = (0, s.e7)([_.Z], () => _.Z.getChannelStatus(t)),
-        j = t.isGuildVoice() && u && null != L && L.length > 0,
+        k = t.isGuildVoice() && u && null != L && L.length > 0,
         Z = (0, P.ZP)(t),
-        V = j
+        V = k
             ? (0, r.jsx)(l.ua7, {
                   text: U.intl.string(U.t.Mgpxi4),
                   delay: 500,
@@ -249,7 +249,7 @@ function q(e) {
         className: G.subtitleContainer,
         children: [
             (0, r.jsx)(l.f6W, {
-                theme: k.BR.DARK,
+                theme: j.BR.DARK,
                 children: (e) =>
                     (0, r.jsxs)(y.ZP, {
                         onDoubleClick: O.O,

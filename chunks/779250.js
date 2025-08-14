@@ -1,4 +1,4 @@
-n.d(t, { default: () => V }), n(388685);
+n.d(t, { default: () => X }), n(388685);
 var r,
     l = n(255367),
     i = n(73800),
@@ -31,8 +31,8 @@ var r,
     D = n(765305),
     _ = n(981631),
     R = n(388032),
-    k = n(583243);
-function A(e) {
+    A = n(869939);
+function k(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -57,9 +57,9 @@ function A(e) {
     }
     return e;
 }
-let { INVITE_OPTIONS_7_DAYS: U, INVITE_OPTIONS_UNLIMITED: M } = p.ZP;
-var L =
-    (((r = L || {})[(r.ENTITY = 0)] = "ENTITY"),
+let { INVITE_OPTIONS_7_DAYS: U, INVITE_OPTIONS_UNLIMITED: L } = p.ZP;
+var M =
+    (((r = M || {})[(r.ENTITY = 0)] = "ENTITY"),
     (r[(r.SETTINGS = 1)] = "SETTINGS"),
     (r[(r.PREVIEW = 2)] = "PREVIEW"),
     (r[(r.SUCCESS = 3)] = "SUCCESS"),
@@ -171,25 +171,25 @@ function z(e) {
             ],
             [g, d, C],
         ),
-        D = Object.keys(L).length,
+        D = Object.keys(M).length,
         _ = (0, j.xt)(n),
-        A = (e) => Math.max(0, Math.min(e, D - 1)),
-        [U, M] = i.useState(+!!_),
-        [z, V] = i.useState(!1),
-        W = i.useMemo(
+        k = (e) => Math.max(0, Math.min(e, D - 1)),
+        [U, L] = i.useState(+!!_),
+        [z, X] = i.useState(!1),
+        V = i.useMemo(
             () =>
                 Z.slice(0, U + 1)
                     .map((e) => e.valid)
                     .every(Boolean),
             [Z, U],
         ),
-        X = U >= Z.length ? 3 : Z[A(U)].slideId,
-        F = 3 === X;
+        W = U >= Z.length ? 3 : Z[k(U)].slideId,
+        F = 3 === W;
     (0, I.l)((e) => e.onUpdateCanCloseModal)(F);
     let B = (0, s.e7)([u.Z], () => u.Z.useReducedMotion),
         Y = i.useRef(null),
         q = (e) => {
-            V(!1), M(A(e));
+            X(!1), L(k(e));
         },
         H = i.useRef(q);
     i.useEffect(() => {
@@ -199,14 +199,14 @@ function z(e) {
             (null == O ? void 0 : O.id) != null && H.current(3);
         }, [null == O ? void 0 : O.id]);
     let J = () => {
-            W && (2 === X ? b() : F ? y() : q(U + 1));
+            V && (2 === W ? b() : F ? y() : q(U + 1));
         },
         K = () => {
             q(U - 1);
         },
         Q = R.intl.string(R.t.PDTjLC);
     return (
-        2 === X && (Q = d ? R.intl.string(R.t.e5VEcH) : R.intl.string(R.t["60lJ0N"])),
+        2 === W && (Q = d ? R.intl.string(R.t.e5VEcH) : R.intl.string(R.t["60lJ0N"])),
         (0, l.jsxs)(o.Y0X, {
             transitionState: h,
             "aria-labelledby": E,
@@ -216,7 +216,7 @@ function z(e) {
             children: [
                 !B && F ? (0, l.jsx)(G, { modal: Y.current }) : null,
                 (0, l.jsxs)(o.hzk, {
-                    className: k.content,
+                    className: A.content,
                     scrollerRef: Y,
                     "data-migration-pending": !0,
                     children: [
@@ -229,10 +229,10 @@ function z(e) {
                                 },
                             }),
                         (0, l.jsxs)(o.MyZ, {
-                            activeSlide: X,
+                            activeSlide: W,
                             width: 440,
                             onSlideReady: (e) => {
-                                V(e === X);
+                                X(e === W);
                             },
                             children: [
                                 (0, l.jsx)(o.Mi4, {
@@ -280,11 +280,11 @@ function z(e) {
                 }),
                 !F &&
                     (0, l.jsxs)(o.mzw, {
-                        className: k.footer,
+                        className: A.footer,
                         "data-migration-pending": !0,
                         children: [
                             (0, l.jsxs)("div", {
-                                className: k.inline,
+                                className: A.inline,
                                 children: [
                                     (0, l.jsx)(o.zxk, {
                                         variant: "secondary",
@@ -293,20 +293,20 @@ function z(e) {
                                     }),
                                     (0, l.jsx)("div", {
                                         "data-button-hoisted-classname-wrapper": !0,
-                                        className: k.button,
+                                        className: A.button,
                                         children: (0, l.jsx)(o.zxk, {
                                             variant: "primary",
                                             text: Q,
                                             onClick: J,
-                                            disabled: !W,
+                                            disabled: !V,
                                             loading: v,
                                         }),
                                     }),
                                 ],
                             }),
-                            0 !== X &&
+                            0 !== W &&
                                 (0, l.jsx)("div", {
-                                    className: k.textButtonWrapper,
+                                    className: A.textButtonWrapper,
                                     children: (0, l.jsx)(o.Avr, {
                                         variant: "secondary",
                                         size: "sm",
@@ -320,7 +320,7 @@ function z(e) {
         })
     );
 }
-function V(e) {
+function X(e) {
     let { guildId: t, guildScheduledEventId: r, transitionState: a, onClose: u } = e,
         d = (0, s.e7)([v.Z], () => v.Z.getGuild(t)),
         m = (0, s.e7)([j.ZP], () => j.ZP.getGuildScheduledEvent(r), [r]),
@@ -329,40 +329,42 @@ function V(e) {
         [I, S] = i.useState(p),
         [T] = i.useState((0, E.Ql)(m)),
         [P, w] = i.useState(null),
-        k = (e) => {
-            var t;
-            let n = (0, y.so)(e),
-                r = null != (t = e.channel_id) ? t : null == x ? void 0 : x.id;
-            null != r &&
-                c.ZP.createInvite(
-                    r,
-                    {
-                        max_age: U.value,
-                        max_uses: M.value,
-                    },
-                    _.t4x.GUILD_EVENTS,
-                ),
-                n ? w(e) : u();
-        },
-        L = (0, g.Z)(d, null == m ? void 0 : m.id, I),
-        [G, { loading: V, error: W }] = (0, f.Z)(async () => {
+        A = (0, g.Z)(d, null == m ? void 0 : m.id, I),
+        [M, { loading: G, error: X }] = (0, f.Z)(async () => {
             if (null != P) return;
-            let e = { broadcastToDirectoryChannels: L.broadcastToDirectoryChannels };
+            let e = { broadcastToDirectoryChannels: A.broadcastToDirectoryChannels };
             if (T && null != r) return await b.Z.saveEvent(r, I, t, e), u();
             let n = await b.Z.createGuildEvent(I, t, e);
-            return k(n.body), n;
+            return (
+                ((e) => {
+                    var t;
+                    let n = (0, y.so)(e),
+                        r = null != (t = e.channel_id) ? t : null == x ? void 0 : x.id;
+                    null != r &&
+                        c.ZP.createInvite(
+                            r,
+                            {
+                                max_age: U.value,
+                                max_uses: L.value,
+                            },
+                            _.t4x.GUILD_EVENTS,
+                        ),
+                        n ? w(e) : u();
+                })(n.body),
+                n
+            );
         }),
-        X = i.useMemo(() => (0, Z.Z)(I, T), [I, T]);
+        V = i.useMemo(() => (0, Z.Z)(I, T), [I, T]);
     return (0, l.jsx)(z, {
         guildId: t,
         guildEvent: I,
         guildEventId: r,
-        editBroadcastInfoData: L,
+        editBroadcastInfoData: A,
         isEdit: T,
-        formErrors: X,
+        formErrors: V,
         transitionState: a,
-        loading: V,
-        error: W,
+        loading: G,
+        error: X,
         onChange: (e) => {
             if (null != e.entityType) {
                 var n;
@@ -371,7 +373,7 @@ function V(e) {
                 (e.channelId = null != (n = null == l ? void 0 : l.id) ? n : null),
                     e.entityType !== D.WX.EXTERNAL && I.entityType === D.WX.EXTERNAL && (e.entityMetadata = null);
             }
-            S((t) => A({}, t, e));
+            S((t) => k({}, t, e));
         },
         onSave: () => {
             null != I.recurrenceRule && T && (0, C.BP)(m, I)
@@ -381,13 +383,13 @@ function V(e) {
                           var n, r;
                           return (0, l.jsxs)(
                               e,
-                              ((n = A({}, t)),
+                              ((n = k({}, t)),
                               (r = r =
                                   {
                                       header: R.intl.string(R.t.BW1Qoq),
                                       confirmText: R.intl.string(R.t.e5VEcH),
                                       cancelText: R.intl.string(R.t.oEAioK),
-                                      onConfirm: G,
+                                      onConfirm: M,
                                       children: [
                                           (0, l.jsx)(o.Text, {
                                               variant: "text-md/normal",
@@ -416,7 +418,7 @@ function V(e) {
                           );
                       };
                   })
-                : G();
+                : M();
         },
         onClose: u,
         createdEvent: P,

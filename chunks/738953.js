@@ -32,13 +32,13 @@ var r = n(255367),
     L = n(544989),
     x = n(481932),
     M = n(195387),
-    j = n(664794),
-    k = n(4517),
+    k = n(664794),
+    j = n(4517),
     U = n(978395),
     G = n(161572),
     B = n(228168),
     Z = n(388032),
-    F = n(81208);
+    F = n(116649);
 function V(e, t, n) {
     return (
         t in e
@@ -235,7 +235,7 @@ function z(e) {
                                             user: t,
                                         }),
                                         !eE &&
-                                            (0, r.jsx)(j.Z, {
+                                            (0, r.jsx)(k.Z, {
                                                 type: "banner",
                                                 user: t,
                                                 guildId: V,
@@ -274,7 +274,7 @@ function z(e) {
                                                   targetElementRef: ef,
                                                   onTryFeature: Q,
                                                   children: () =>
-                                                      (0, r.jsx)(k.Z, {
+                                                      (0, r.jsx)(j.Z, {
                                                           ref: ef,
                                                           location: "UserProfilePopout",
                                                           user: t,
@@ -285,7 +285,7 @@ function z(e) {
                                                           prompt: eI,
                                                       }),
                                               })
-                                            : (0, r.jsx)(k.Z, {
+                                            : (0, r.jsx)(j.Z, {
                                                   ref: eO ? ef : void 0,
                                                   location: "UserProfilePopout",
                                                   user: t,

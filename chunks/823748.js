@@ -109,14 +109,14 @@ var r = n(255367),
     e3 = n(194082),
     e7 = n(176505),
     e8 = n(981631),
-    e5 = n(918559),
-    e2 = n(354459),
+    e2 = n(918559),
+    e5 = n(354459),
     e4 = n(921944),
     e6 = n(408491),
     e9 = n(440493),
     te = n(157925),
     tt = n(388032),
-    tn = n(149771);
+    tn = n(97009);
 function tr(e, t, n) {
     return (
         t in e
@@ -165,7 +165,7 @@ function tl(e, t) {
     );
 }
 let ta = (0, M.Un)({
-    createPromise: () => Promise.all([n.e("22173"), n.e("54214")]).then(n.bind(n, 346975)),
+    createPromise: () => Promise.all([n.e("22173"), n.e("9456")]).then(n.bind(n, 346975)),
     webpackId: 346975,
     renderLoader: () =>
         (0, r.jsx)("div", {
@@ -191,7 +191,7 @@ class ts extends i.PureComponent {
         o()(null != t, "Missing channel in Channel.openChannelContextMenu"),
             o()(null != i, "Missing guild in Channel.openChannelContextMenu"),
             (0, y.jW)(e, async () => {
-                let { default: e } = await Promise.all([n.e("24783"), n.e("45735")]).then(n.bind(n, 439635));
+                let { default: e } = await Promise.all([n.e("24783"), n.e("41815")]).then(n.bind(n, 439635));
                 return (n) =>
                     (0, r.jsx)(
                         e,
@@ -220,7 +220,7 @@ class ts extends i.PureComponent {
                     n.e("98783"),
                     n.e("57789"),
                     n.e("56826"),
-                    n.e("2783"),
+                    n.e("36658"),
                 ]).then(n.bind(n, 131404));
                 return (n) =>
                     (0, r.jsx)(
@@ -402,7 +402,7 @@ class ts extends i.PureComponent {
                 l &&
                     (0, m.ZDy)(
                         async () => {
-                            let { default: e } = await n.e("77578").then(n.bind(n, 184782));
+                            let { default: e } = await n.e("90542").then(n.bind(n, 184782));
                             return (n) => (0, r.jsx)(e, tl(ti({}, n), { guildId: t }));
                         },
                         {
@@ -604,7 +604,7 @@ class ts extends i.PureComponent {
             }),
             tr(this, "renderStreamQualityLiveIndicatorToolbarItem", () => {
                 let { selectedParticipant: e, premiumIndicatorEnabled: t } = this.props;
-                return (null == e ? void 0 : e.type) !== e2.fO.STREAM
+                return (null == e ? void 0 : e.type) !== e5.fO.STREAM
                     ? null
                     : (0, r.jsx)(
                           z.Z,
@@ -892,7 +892,7 @@ let to = (0, C.Z)(ts),
         }, [R, c, v, C]);
         let D = (0, h.e7)([I.ZP], () => I.ZP.getCurrentEmbeddedActivity()),
             k = (0, h.e7)([I.ZP], () => I.ZP.getActivityPanelMode()),
-            L = null != D && !(0, P.Z)(null == c ? void 0 : c.id) && k === e5.Ez.PANEL,
+            L = null != D && !(0, P.Z)(null == c ? void 0 : c.id) && k === e2.Ez.PANEL,
             M = (0, h.e7)(
                 [eK.Z],
                 () => null != c && c.isVocalThread() && !u().isEmpty(eK.Z.getVoiceStatesForChannel(c.id)),
@@ -907,8 +907,8 @@ let to = (0, C.Z)(ts),
             q = (0, h.e7)(
                 [A.Z, I.ZP],
                 () =>
-                    null != I.ZP.getConnectedActivityLocation() && I.ZP.getActivityPanelMode() === e5.Ez.PANEL
-                        ? I.ZP.getFocusedLayout() === e5.MI.NO_CHAT
+                    null != I.ZP.getConnectedActivityLocation() && I.ZP.getActivityPanelMode() === e2.Ez.PANEL
+                        ? I.ZP.getFocusedLayout() === e2.MI.NO_CHAT
                             ? e8.AEg.NO_CHAT
                             : e8.AEg.NORMAL
                         : null != s

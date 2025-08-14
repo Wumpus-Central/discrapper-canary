@@ -8,7 +8,7 @@ var r = n(255367),
     c = n(893966),
     u = n(527379),
     d = n(388032),
-    C = n(961300);
+    C = n(671408);
 function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -69,13 +69,13 @@ function p(e) {
         v = new Intl.NumberFormat(d.intl.currentLocale).format(h),
         y = d.intl.formatToPlainString(d.t.RNDnQ0, { count: g ? "..." : v }),
         O = h > j.pageSize || g,
-        H = h > a.LU["0"];
+        _ = h > a.LU["0"];
     return (0, r.jsxs)("div", {
         className: C.paginationContainer,
         children: [
             (0, r.jsx)("div", {
                 className: C.pageSizeSelection,
-                children: H
+                children: _
                     ? (0, r.jsxs)(r.Fragment, {
                           children: [
                               (0, r.jsx)(i.Text, {

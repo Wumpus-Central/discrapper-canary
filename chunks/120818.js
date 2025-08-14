@@ -3,19 +3,19 @@ var r = n(255367),
     i = n(73800),
     l = n(91192),
     o = n(442837),
-    s = n(481060),
-    a = n(44315),
+    a = n(481060),
+    s = n(44315),
     c = n(563534),
     u = n(846121),
     d = n(703656),
-    h = n(259580),
-    p = n(981631),
-    f = n(176505),
+    p = n(259580),
+    f = n(981631),
+    h = n(176505),
     g = n(388032),
-    m = n(592315);
+    m = n(46674);
 function b(e, t) {
     return (0, r.jsx)(
-        s.Text,
+        a.Text,
         {
             variant: "text-xs/bold",
             color: "text-default",
@@ -29,7 +29,7 @@ let O = i.memo(function (e) {
     let { guild: O } = e,
         _ = (0, o.e7)([c.Z], () => c.Z.getNewMemberActions(O.id), [O.id]),
         y = (0, o.e7)([u.Z], () => u.Z.getCompletedActions(O.id)),
-        C = i.useMemo(() => {
+        v = i.useMemo(() => {
             if (null == _ || null == y) return 0;
             let e = 0;
             return (
@@ -39,12 +39,12 @@ let O = i.memo(function (e) {
                 e
             );
         }, [y, _]),
-        v = null == _ ? 0 : _.length,
-        j = (0, l.JA)("progress-bar-".concat(O.id));
+        j = null == _ ? 0 : _.length,
+        C = (0, l.JA)("progress-bar-".concat(O.id));
     return (0, r.jsxs)("li", {
         children: [
             (0, r.jsxs)(
-                s.P3F,
+                a.P3F,
                 ((t = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
@@ -69,50 +69,50 @@ let O = i.memo(function (e) {
                             });
                     }
                     return e;
-                })({}, j)),
+                })({}, C)),
                 (n = n =
                     {
                         role: "button",
                         focusProps: { offset: { right: 4 } },
                         className: m.progressBarContainer,
                         onClick: function () {
-                            (0, d.uL)(p.Z5c.CHANNEL(O.id, f.oC.GUILD_HOME));
+                            (0, d.uL)(f.Z5c.CHANNEL(O.id, h.oC.GUILD_HOME));
                         },
                         children: [
                             (0, r.jsxs)("div", {
                                 className: m.progressBarText,
                                 children: [
-                                    (0, r.jsx)(s.X6q, {
+                                    (0, r.jsx)(a.X6q, {
                                         variant: "heading-sm/bold",
                                         children: g.intl.string(g.t.SnrR39),
                                     }),
                                     (0, r.jsxs)("div", {
                                         className: m.rightContainer,
                                         children: [
-                                            (0, r.jsx)(s.Text, {
+                                            (0, r.jsx)(a.Text, {
                                                 variant: "text-xs/medium",
                                                 color: "text-muted",
                                                 className: m.rightText,
                                                 children: g.intl.format(g.t.eqZ1lZ, {
                                                     numberHook: b,
-                                                    total: v.toString(),
-                                                    completed: C.toString(),
+                                                    total: j.toString(),
+                                                    completed: v.toString(),
                                                 }),
                                             }),
-                                            (0, r.jsx)(h.Z, {
+                                            (0, r.jsx)(p.Z, {
                                                 className: m.arrow,
                                                 width: 16,
                                                 height: 16,
-                                                direction: h.Z.Directions.RIGHT,
+                                                direction: p.Z.Directions.RIGHT,
                                             }),
                                         ],
                                     }),
                                 ],
                             }),
-                            (0, r.jsx)(s.Exd, {
+                            (0, r.jsx)(a.Exd, {
                                 className: m.progressBar,
-                                foregroundGradientColor: [(0, a.Lq)(p.Ilk.GREEN_300), (0, a.Lq)(p.Ilk.GREEN_230)],
-                                percent: (C / v) * 100 + 3,
+                                foregroundGradientColor: [(0, s.Lq)(f.Ilk.GREEN_300), (0, s.Lq)(f.Ilk.GREEN_230)],
+                                percent: (v / j) * 100 + 3,
                                 animate: !0,
                             }),
                         ],

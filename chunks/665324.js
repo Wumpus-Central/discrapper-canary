@@ -34,7 +34,7 @@ var r = n(255367),
     A = n(981631),
     k = n(710111),
     L = n(388032),
-    M = n(242142);
+    M = n(180208);
 function G(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -258,7 +258,7 @@ function Y(e) {
               text: L.intl.string(L.t["/uNYPD"]),
               onClick: function () {
                   (0, m.ZDy)(async () => {
-                      let { default: e } = await Promise.all([n.e("56035"), n.e("14201")]).then(n.bind(n, 758961));
+                      let { default: e } = await Promise.all([n.e("56035"), n.e("78356")]).then(n.bind(n, 758961));
                       return (n) => (0, r.jsx)(e, U(G({}, n), { guildId: t.id }));
                   });
               },
@@ -444,7 +444,7 @@ function K(e) {
                               onClick: function (e) {
                                   e.stopPropagation(),
                                       (0, m.ZDy)(async () => {
-                                          let { default: e } = await Promise.all([n.e("56035"), n.e("14201")]).then(
+                                          let { default: e } = await Promise.all([n.e("56035"), n.e("78356")]).then(
                                               n.bind(n, 758961),
                                           );
                                           return (n) =>

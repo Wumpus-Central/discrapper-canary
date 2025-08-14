@@ -12,7 +12,7 @@ var r = n(255367),
     _ = n(279745),
     p = n(921944),
     h = n(388032),
-    m = n(707195);
+    m = n(882482);
 let g = 280,
     E = i.forwardRef(function (e, t) {
         let {
@@ -36,8 +36,8 @@ let g = 280,
                 art: L,
                 isPremiumEarlyAccess: x = !1,
                 maxWidth: M = g,
-                hideDismissButton: j = !1,
-                pointerClassName: k,
+                hideDismissButton: k = !1,
+                pointerClassName: j,
                 dismissIconClassName: U,
                 dismissIcon: G,
                 onDismissIconClick: B,
@@ -149,7 +149,7 @@ let g = 280,
                                                             : s.zx.Colors.WHITE,
                                                   children: null != O ? O : h.intl.string(h.t.IHf1RE),
                                               }),
-                                              !j &&
+                                              !k &&
                                                   (0, r.jsx)(s.zx, {
                                                       className: m.button,
                                                       size: F,
@@ -173,7 +173,7 @@ let g = 280,
                                       }),
                         }),
                         (0, r.jsx)("div", {
-                            className: a()(m.pointer, k, {
+                            className: a()(m.pointer, j, {
                                 [m.bottomPointer]: "top" === w,
                                 [m.centerLeftPointer]: "right" === w && "center" === D,
                                 [m.topLeftPointer]: "right" === w && "top" === D,

@@ -22,7 +22,7 @@ function i(e, t) {
 }
 let o = (() => {
     let e = 0,
-        t = () => `0000${((1679616 * Math.random()) << 0).toString(36)}`.slice(-4);
+        t = () => `0000${((1679616 * Math.random()) | 0).toString(36)}`.slice(-4);
     return () => ((e += 1), `u${t()}${e}`);
 })();
 function a(e) {

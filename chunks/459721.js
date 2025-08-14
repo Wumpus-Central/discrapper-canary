@@ -187,9 +187,9 @@ var l = s.prototype;
             }
         }
         for (var v = 0, g = 0; g < e.length; g++) v += e[g].totalCount;
-        for (var m = Array(v), T = 0, g = 0; g < o; g++)
-            for (var l = 0; l < e.length; l++) g < i[l].length && (m[T++] = i[l][g]);
-        for (var g = 0; g < n; g++) for (var l = 0; l < e.length; l++) g < s[l].length && (m[T++] = s[l][g]);
+        for (var m = Array(v), C = 0, g = 0; g < o; g++)
+            for (var l = 0; l < e.length; l++) g < i[l].length && (m[C++] = i[l][g]);
+        for (var g = 0; g < n; g++) for (var l = 0; l < e.length; l++) g < s[l].length && (m[C++] = s[l][g]);
         return m;
     }),
     (t.exports = s);

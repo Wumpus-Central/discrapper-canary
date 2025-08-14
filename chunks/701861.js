@@ -22,7 +22,7 @@ var r = n(255367),
     I = n(981631),
     C = n(65154),
     S = n(388032),
-    N = n(923303);
+    N = n(934422);
 function T(e, t, n) {
     return (
         t in e
@@ -190,47 +190,50 @@ class j extends i.PureComponent {
                 let { user: t, isGameRelationship: n, applicationId: i } = this.props;
                 (0, d.vq)(
                     e,
-                    (e) => {
-                        var l, a;
-                        return (0, r.jsx)(
+                    (e) =>
+                        (0, r.jsx)(
                             P,
-                            ((l = (function (e) {
-                                for (var t = 1; t < arguments.length; t++) {
-                                    var n = null != arguments[t] ? arguments[t] : {},
-                                        r = Object.keys(n);
-                                    "function" == typeof Object.getOwnPropertySymbols &&
-                                        (r = r.concat(
-                                            Object.getOwnPropertySymbols(n).filter(function (e) {
-                                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                            }),
-                                        )),
-                                        r.forEach(function (t) {
-                                            T(e, t, n[t]);
-                                        });
-                                }
-                                return e;
-                            })({}, e)),
-                            (a = a =
+                            (function (e, t) {
+                                return (
+                                    (t = null != t ? t : {}),
+                                    Object.getOwnPropertyDescriptors
+                                        ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+                                        : (function (e, t) {
+                                              var n = Object.keys(e);
+                                              if (Object.getOwnPropertySymbols) {
+                                                  var r = Object.getOwnPropertySymbols(e);
+                                                  n.push.apply(n, r);
+                                              }
+                                              return n;
+                                          })(Object(t)).forEach(function (n) {
+                                              Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+                                          }),
+                                    e
+                                );
+                            })(
+                                (function (e) {
+                                    for (var t = 1; t < arguments.length; t++) {
+                                        var n = null != arguments[t] ? arguments[t] : {},
+                                            r = Object.keys(n);
+                                        "function" == typeof Object.getOwnPropertySymbols &&
+                                            (r = r.concat(
+                                                Object.getOwnPropertySymbols(n).filter(function (e) {
+                                                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                                }),
+                                            )),
+                                            r.forEach(function (t) {
+                                                T(e, t, n[t]);
+                                            });
+                                    }
+                                    return e;
+                                })({}, e),
                                 {
                                     user: t,
                                     applicationId: i,
                                     isGameRelationship: n,
-                                }),
-                            Object.getOwnPropertyDescriptors
-                                ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(a))
-                                : (function (e, t) {
-                                      var n = Object.keys(e);
-                                      if (Object.getOwnPropertySymbols) {
-                                          var r = Object.getOwnPropertySymbols(e);
-                                          n.push.apply(n, r);
-                                      }
-                                      return n;
-                                  })(Object(a)).forEach(function (e) {
-                                      Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(a, e));
-                                  }),
-                            l),
-                        );
-                    },
+                                },
+                            ),
+                        ),
                     {
                         onClose: () => {
                             this.setState({ isActiveRow: !1 });

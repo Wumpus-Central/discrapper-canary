@@ -13,7 +13,7 @@ var i = n(442837),
     _ = n(215023),
     p = n(474936),
     h = n(388032),
-    m = n(576989);
+    m = n(498138);
 let g = (e, t, n, r) => {
         if (null == e || null == t || null == n) {
             let e = Error("Missing base rate for legal fine print"),
@@ -62,11 +62,11 @@ let g = (e, t, n, r) => {
                 planGroup: x,
                 isPrepaidPaymentSource: !1,
             }),
-            j = h.intl.format(h.t.Y2Rkqa, {
+            k = h.intl.format(h.t.Y2Rkqa, {
                 primaryText: M,
                 paidURL: f.EYA.PAID_TERMS,
             }),
-            k = h.intl.format(h.t.H2uH5e, {
+            j = h.intl.format(h.t.H2uH5e, {
                 primaryText: M,
                 paidURL: f.EYA.PAID_TERMS,
             }),
@@ -108,19 +108,19 @@ let g = (e, t, n, r) => {
         else if (N === f.GZQ.ONE_TIME)
             switch (C) {
                 case f.POd.COLLECTIBLES:
-                    (G = j),
+                    (G = k),
                         (U = y
                             ? h.intl.format(h.t.ofqyUl, { paidURL: f.EYA.PAID_TERMS })
                             : h.intl.format(h.t.G3l0s7, { paidURL: f.EYA.PAID_TERMS }));
                     break;
                 case f.POd.GUILD_PRODUCT:
-                    (G = j), (U = h.intl.format(h.t["GEAQ+v"], { paidURL: f.EYA.PAID_TERMS }));
+                    (G = k), (U = h.intl.format(h.t["GEAQ+v"], { paidURL: f.EYA.PAID_TERMS }));
                     break;
                 default:
-                    (G = k), (U = h.intl.string(h.t["9/siSU"]));
+                    (G = j), (U = h.intl.string(h.t["9/siSU"]));
             }
         else if (null == b || y)
-            switch ((y && (G = j), t)) {
+            switch ((y && (G = k), t)) {
                 case p.rV.MONTH:
                     (U = y ? h.intl.string(h.t.IjNapq) : h.intl.string(h.t["/sGXPj"])),
                         (U = y

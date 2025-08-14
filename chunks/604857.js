@@ -8,7 +8,7 @@ var r = n(255367),
     l = n(880419),
     u = n(535396),
     d = n(388032),
-    p = n(689878);
+    p = n(856945);
 function f(e) {
     let { className: t, guildId: n, powerup: o, onError: f, onClose: b } = e,
         m = (0, c.ZP)(n, o),

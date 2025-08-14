@@ -8,13 +8,10 @@ var l = e(442837),
     d = e(9156),
     r = e(621600),
     c = e(388032),
-    o = e(680569);
+    o = e(444766);
 let g = (t) => {
     let { onClose: n, channelId: e, applicationId: g, transitionState: p } = t,
-        h = (0, l.e7)([d.ZP], () => d.ZP.getChannelMuteConfig(null, e)),
-        _ = (t) => {
-            s.Z.updateAppDMOverrideSettings(null, e, g, (0, u.u9)(t), r.ZB.Muted);
-        };
+        h = (0, l.e7)([d.ZP], () => d.ZP.getChannelMuteConfig(null, e));
     return (0, i.jsxs)(a.Y0X, {
         transitionState: p,
         size: a.CgR.SMALL,
@@ -34,7 +31,13 @@ let g = (t) => {
                                 value: e,
                             };
                         }),
-                        onChange: (t) => _(t.value),
+                        onChange: (t) => {
+                            var n;
+                            return (
+                                (n = t.value),
+                                void s.Z.updateAppDMOverrideSettings(null, e, g, (0, u.u9)(n), r.ZB.Muted)
+                            );
+                        },
                         value: null == h ? void 0 : h.selected_time_window,
                     }),
                 }),

@@ -37,7 +37,7 @@ var n = r(255367),
     M = r(46140),
     q = r(675654),
     V = r(388032),
-    U = r(798060);
+    U = r(777738);
 function B(e) {
     var t;
     let { quest: r, rewardCode: o, hasTieredRewardCodes: a, sourceQuestContent: l } = e,

@@ -32,8 +32,8 @@ var r = n(255367),
     L = n(55935),
     x = n(70956),
     M = n(709054),
-    j = n(534091),
-    k = n(554838),
+    k = n(534091),
+    j = n(554838),
     U = n(481369),
     G = n(186877),
     B = n(294218),
@@ -236,7 +236,7 @@ function ea(e) {
                     message: e.content,
                     groupId: o,
                     flashKey: e.flashKey,
-                    id: (0, j.p)(l.id, e.content.id),
+                    id: (0, k.p)(l.id, e.content.id),
                     isLastItem: t >= I.length - 1,
                     renderContentOnly: ev || a,
                 },
@@ -250,7 +250,7 @@ function ea(e) {
             S.forEach((e, t) => {
                 let n =
                     0 === t &&
-                    (0, k.J)(
+                    (0, j.J)(
                         l,
                         eN,
                         new R.ZP({

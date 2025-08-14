@@ -87,8 +87,8 @@ let C = i.memo(function (e) {
         } = e,
         x = T.state === p.Y.LOADED ? T.message : void 0,
         M = (0, E.Uj)(x),
-        j = (0, u.p)(),
-        k = l.d.useExperiment({ location: "repliedMessage" }).enabled,
+        k = (0, u.p)(),
+        j = l.d.useExperiment({ location: "repliedMessage" }).enabled,
         U = (0, d.A)((null != (t = n.editedTimestamp) ? t : n.timestamp).valueOf()),
         G = i.useMemo(() => {
             if (null == x) return null;
@@ -135,25 +135,25 @@ let C = i.memo(function (e) {
                 let t = {
                         formatInline: !0,
                         allowLinks: !0,
-                        shouldFilterKeywords: j,
+                        shouldFilterKeywords: k,
                     },
                     n = e.isFirstMessageInForumPost(A)
                         ? N(S({}, t), {
                               noStyleAndInteraction: !0,
                               allowHeading: !0,
                               allowList: !0,
-                              allowGameMentions: k,
+                              allowGameMentions: j,
                           })
                         : N(S({}, t), {
                               formatInline: !0,
                               allowHeading: U,
                               allowList: U,
-                              allowGameMentions: k,
+                              allowGameMentions: j,
                           });
                 return (0, g.ZP)(e, n).content;
             }
             return null;
-        }, [x, M, A, U, j, k]),
+        }, [x, M, A, U, k, j]),
         { isReplyAuthorBlocked: B, isReplyAuthorIgnored: Z } = (0, o.cj)(
             [h.Z],
             () => ({

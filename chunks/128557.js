@@ -31,7 +31,7 @@ var r = n(255367),
     N = n(981631),
     C = n(231873),
     R = n(388032),
-    P = n(269651);
+    P = n(183334);
 function w(e, t, n) {
     return (
         t in e
@@ -123,7 +123,7 @@ function M(e) {
         })
     );
 }
-function j(e) {
+function k(e) {
     let t = i.useCallback(() => {
             _.ZP.trackWithMetadata(N.rMx.SERVER_SETUP_CTA_CLICKED, {
                 setup_type: C.Ft.CHANNEL_WELCOME,
@@ -131,7 +131,7 @@ function j(e) {
             }),
                 null != e &&
                     (0, u.ZDy)(async () => {
-                        let { default: t } = await Promise.all([n.e("7654"), n.e("49049"), n.e("36264")]).then(
+                        let { default: t } = await Promise.all([n.e("7654"), n.e("49049"), n.e("53020")]).then(
                             n.bind(n, 560114),
                         );
                         return (n) =>
@@ -172,7 +172,7 @@ function j(e) {
                 action: C.j7.DOWNLOAD,
             }),
                 (0, u.ZDy)(async () => {
-                    let { default: e } = await n.e("74023").then(n.bind(n, 431583));
+                    let { default: e } = await Promise.all([n.e("32996"), n.e("74023")]).then(n.bind(n, 431583));
                     return (t) => (0, r.jsx)(e, D({ source: N.jXE.CHANNEL_WELCOME_CTA }, t));
                 });
         }, []),
@@ -197,7 +197,7 @@ function j(e) {
         }, [e]),
     };
 }
-function k(e) {
+function j(e) {
     let t = (0, d.Z)(() => new s.Z.Value(0)),
         n = (0, d.Z)(() => new s.Z.Value(0)),
         r = (0, d.Z)(() => [new s.Z.Value(0), new s.Z.Value(0), new s.Z.Value(0), new s.Z.Value(0)]);
@@ -266,9 +266,9 @@ function U(e) {
             );
         }),
         { guildPopulated: g, guildMessaged: O, guildPersonalized: v } = (0, p.h_)(n),
-        { handleInvite: C, handleMessage: w, handlePersonalize: D, handleDownload: L, handleAddApplication: x } = j(n),
+        { handleInvite: C, handleMessage: w, handlePersonalize: D, handleDownload: L, handleAddApplication: x } = k(n),
         U = !(h || g || O || v),
-        { titleAnimatedStyle: G, opacities: B } = k(U),
+        { titleAnimatedStyle: G, opacities: B } = j(U),
         [Z, F] = i.useState([]),
         V = Z.length > 0;
     if (

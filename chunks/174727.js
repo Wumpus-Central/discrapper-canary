@@ -22,14 +22,9 @@ function r(e) {
     return e / 1000;
 }
 let s = (e, t, n) => (-1 === e ? n : e + (t * (n - e)) / n),
-    o = (e, t, n, l) => {
-        let a = 0;
-        return (t >= 0 && n > 0 ? ((e - (t - (n * t) / l)) * 100) / n : (100 * e) / l).toFixed(4);
-    },
-    u = (e, t, n, l) => {
-        let a = 0;
-        return (t >= 0 && n > 0 ? -((e - (t + (n * (l - t)) / l)) * 100) / n : -(100 * e * 1) / l + 100).toFixed(4);
-    };
+    o = (e, t, n, l) => (t >= 0 && n > 0 ? ((e - (t - (n * t) / l)) * 100) / n : (100 * e) / l).toFixed(4),
+    u = (e, t, n, l) =>
+        (t >= 0 && n > 0 ? -((e - (t + (n * (l - t)) / l)) * 100) / n : -(100 * e * 1) / l + 100).toFixed(4);
 async function c(e) {
     if (!(e.type.startsWith("audio") || e.type.startsWith("video")) || !l.bp.has(e.type))
         throw Error(a.intl.formatToPlainString(a.t["2y3xGR"], { fileType: e.type }));

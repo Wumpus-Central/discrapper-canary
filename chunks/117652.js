@@ -26,8 +26,8 @@ var i = n(442837),
     A = n(981631),
     N = n(474936),
     C = n(388032),
-    R = n(419388),
-    P = n(591858);
+    R = n(359739),
+    P = n(611344);
 function w(e, t, n) {
     return (
         t in e
@@ -92,7 +92,7 @@ function M(e) {
             giftRecipient: D,
             recommendedGiftSkuIds: L,
             giftingOrigin: M,
-            setValidatingGiftRecipient: k,
+            setValidatingGiftRecipient: j,
         } = (0, v.wD)(),
         {
             selectedSkuId: U,
@@ -109,7 +109,7 @@ function M(e) {
         W = H && M === N.Wt.DM_CHANNEL,
         K = Y === _.u.POPULAR ? C.intl.string(C.t.Kwgrrq) : C.intl.string(C.t.r1huYW),
         z = async (e, t) => {
-            k(!0), null != m && T(), (await (0, c.B1)(e.id, t)) || T(C.intl.string(C.t["4kgVqa"])), k(!1);
+            j(!0), null != m && T(), (await (0, c.B1)(e.id, t)) || T(C.intl.string(C.t["4kgVqa"])), j(!1);
         };
     (0, a.ZP)(() => {
         null != U &&
@@ -162,7 +162,7 @@ function M(e) {
                               children: K.toLocaleUpperCase(),
                           }),
                           L.map((e) => X(e)),
-                          (0, r.jsx)(j, { handleClose: n }),
+                          (0, r.jsx)(k, { handleClose: n }),
                       ],
                   })
                 : (0, r.jsx)("div", {
@@ -227,7 +227,7 @@ function M(e) {
         ],
     });
 }
-function j(e) {
+function k(e) {
     let { handleClose: t } = e,
         { analyticsLocations: n } = (0, l.ZP)(s.Z.COLLECTIBLES_GIFT_CUSTOMIZATION_MODAL);
     function i() {

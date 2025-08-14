@@ -33,7 +33,7 @@ function O(e) {
     let [w, D] = i.useState(P),
         L = (0, c.iE)(),
         [x, M] = i.useState(),
-        [j, k] = i.useState(
+        [k, j] = i.useState(
             t && (0, d.MY)(v) === d.xr.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD && null == u ? h.intl.string(h.t.ZkOo1d) : u,
         ),
         [U, G] = i.useState(void 0),
@@ -74,8 +74,8 @@ function O(e) {
             setSoundEffect: G,
             emojiConfetti: B,
             setEmojiConfetti: Z,
-            customGiftMessage: j,
-            setCustomGiftMessage: k,
+            customGiftMessage: k,
+            setCustomGiftMessage: j,
             selectedGiftStyle: w,
             setSelectedGiftStyle: D,
             sendGiftMessage: q,

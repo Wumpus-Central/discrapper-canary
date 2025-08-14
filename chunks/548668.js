@@ -1,5 +1,5 @@
 let n;
-a.d(t, { $: () => b });
+a.d(t, { $: () => f });
 var r,
     s = a(255367),
     l = a(73800),
@@ -13,7 +13,7 @@ var r,
     m = a(231338),
     p = a(436620),
     h = a(330711),
-    I = a(544747);
+    I = a(10416);
 function k(e, t, a) {
     return (
         t in e
@@ -32,160 +32,7 @@ let g = "Footer Navigation",
         BLURPLE: "Blurple",
         PRIMARY: "Primary",
     },
-    O = () => [
-        {
-            title: h.Z.Messages.NAVIGATION_PRODUCT,
-            routes: [
-                {
-                    link: m.am.DOWNLOAD,
-                    title: h.Z.Messages.NAVIGATION_DOWNLOAD,
-                    tracking: "download",
-                },
-                {
-                    link: m.am.BRANDING,
-                    title: h.Z.Messages.NAVIGATION_BRANDING,
-                    tracking: "branding",
-                },
-                {
-                    link: m.am.NITRO,
-                    title: h.Z.Messages.NAVIGATION_NITRO,
-                    tracking: "nitro",
-                    external: !0,
-                },
-            ],
-        },
-        {
-            title: h.Z.Messages.NAVIGATION_DEVELOPERS,
-            routes: [
-                {
-                    link: m.am.RICH_PRESENCE,
-                    title: h.Z.Messages.NAVIGATION_RICH_PRESENCE,
-                    tracking: "rich_presence",
-                },
-                {
-                    link: m.am.VERIFICATION,
-                    title: h.Z.Messages.NAVIGATION_VERIFICATION,
-                    tracking: "verification",
-                    external: !0,
-                },
-                {
-                    link: m.yX.DEV_PORTAL_APPLICATIONS,
-                    title: h.Z.Messages.NAVIGATION_APPLICATIONS,
-                    tracking: "developers",
-                    external: !0,
-                },
-                {
-                    link: m.yX.DEV_PORTAL_DOCUMENTATION,
-                    title: h.Z.Messages.NAVIGATION_DOCUMENTATION,
-                    tracking: "documentation",
-                    external: !0,
-                },
-            ],
-        },
-        {
-            title: h.Z.Messages.NAVIGATION_RESOURCES,
-            routes: [
-                {
-                    link: m.yX.HELP_AND_SUPPORT,
-                    title: h.Z.Messages.NAVIGATION_HELP_AND_SUPPORT,
-                    tracking: "helpandsupport",
-                    external: !0,
-                },
-                {
-                    link: m.am.GUIDELINES,
-                    title: h.Z.Messages.NAVIGATION_GUIDELINES,
-                    tracking: "guidelines",
-                    external: !0,
-                },
-                {
-                    link: m.yX.FEEDBACK,
-                    title: h.Z.Messages.NAVIGATION_FEEDBACK,
-                    tracking: "feedback",
-                    external: !0,
-                },
-                {
-                    link: m.am.TERMS,
-                    title: h.Z.Messages.NAVIGATION_TERMS,
-                    tracking: "terms",
-                    external: !0,
-                },
-                {
-                    link: m.am.PRIVACY,
-                    title: h.Z.Messages.NAVIGATION_PRIVACY,
-                    tracking: "privacy",
-                    external: !0,
-                },
-                {
-                    link: m.am.SECURITY,
-                    title: h.Z.Messages.NAVIGATION_SECURITY,
-                    tracking: "security",
-                },
-                {
-                    link: m.yX.STATUS,
-                    title: h.Z.Messages.NAVIGATION_STATUS,
-                    tracking: "status",
-                    external: !0,
-                },
-                {
-                    link: m.am.SAFETY_LANDING,
-                    title: h.Z.Messages.NAVIGATION_SAFETY_CENTER,
-                    tracking: "safetycenter",
-                    external: !0,
-                },
-            ],
-        },
-        {
-            title: h.Z.Messages.NAVIGATION_COMPANY,
-            routes: [
-                {
-                    link: m.am.COMPANY,
-                    title: h.Z.Messages.NAVIGATION_ABOUT,
-                    tracking: "about",
-                },
-                {
-                    link: m.am.BLOG,
-                    title: h.Z.Messages.NAVIGATION_BLOG,
-                    tracking: "blog",
-                    external: !0,
-                },
-                {
-                    link: m.am.JOBS,
-                    title: h.Z.Messages.NAVIGATION_JOBS,
-                    tracking: "join",
-                    external: !0,
-                },
-            ],
-        },
-        {
-            title: h.Z.Messages.NAVIGATION_MORE,
-            routes: [
-                {
-                    link: m.am.PARTNERS,
-                    title: h.Z.Messages.NAVIGATION_PARTNERS,
-                    tracking: "partners",
-                    external: !0,
-                },
-                {
-                    link: m.am.HYPESQUAD,
-                    title: h.Z.Messages.NAVIGATION_HYPESQUAD,
-                    tracking: "hypesquad",
-                    external: !0,
-                },
-                {
-                    link: m.yX.PRESS_INQUIRIES,
-                    title: h.Z.Messages.NAVIGATION_PRESS_INQUIRIES,
-                    tracking: "pressinquiries",
-                    external: !0,
-                },
-                {
-                    link: m.am.OPEN_SOURCE,
-                    title: h.Z.Messages.NAVIGATION_OPEN_SOURCE,
-                    tracking: "open_source",
-                },
-            ],
-        },
-    ],
-    f = (e) => {
+    O = (e) => {
         let { colorVariant: t, animate: a } = e;
         return (0, s.jsx)("svg", {
             className: (0, u.l)(I, "footerBackground", t),
@@ -202,7 +49,7 @@ let g = "Footer Navigation",
             }),
         });
     };
-class b extends (r = l.PureComponent) {
+class f extends (r = l.PureComponent) {
     componentDidMount() {
         this.setState({
             token: (0, d.getToken)(),
@@ -268,7 +115,159 @@ class b extends (r = l.PureComponent) {
     render() {
         let { variant: e, style: t, className: r, avoidRouter: l, showWave: i } = this.props,
             { animateBackground: d, token: _ } = this.state,
-            p = O().map((e) => {
+            p = [
+                {
+                    title: h.Z.Messages.NAVIGATION_PRODUCT,
+                    routes: [
+                        {
+                            link: m.am.DOWNLOAD,
+                            title: h.Z.Messages.NAVIGATION_DOWNLOAD,
+                            tracking: "download",
+                        },
+                        {
+                            link: m.am.BRANDING,
+                            title: h.Z.Messages.NAVIGATION_BRANDING,
+                            tracking: "branding",
+                        },
+                        {
+                            link: m.am.NITRO,
+                            title: h.Z.Messages.NAVIGATION_NITRO,
+                            tracking: "nitro",
+                            external: !0,
+                        },
+                    ],
+                },
+                {
+                    title: h.Z.Messages.NAVIGATION_DEVELOPERS,
+                    routes: [
+                        {
+                            link: m.am.RICH_PRESENCE,
+                            title: h.Z.Messages.NAVIGATION_RICH_PRESENCE,
+                            tracking: "rich_presence",
+                        },
+                        {
+                            link: m.am.VERIFICATION,
+                            title: h.Z.Messages.NAVIGATION_VERIFICATION,
+                            tracking: "verification",
+                            external: !0,
+                        },
+                        {
+                            link: m.yX.DEV_PORTAL_APPLICATIONS,
+                            title: h.Z.Messages.NAVIGATION_APPLICATIONS,
+                            tracking: "developers",
+                            external: !0,
+                        },
+                        {
+                            link: m.yX.DEV_PORTAL_DOCUMENTATION,
+                            title: h.Z.Messages.NAVIGATION_DOCUMENTATION,
+                            tracking: "documentation",
+                            external: !0,
+                        },
+                    ],
+                },
+                {
+                    title: h.Z.Messages.NAVIGATION_RESOURCES,
+                    routes: [
+                        {
+                            link: m.yX.HELP_AND_SUPPORT,
+                            title: h.Z.Messages.NAVIGATION_HELP_AND_SUPPORT,
+                            tracking: "helpandsupport",
+                            external: !0,
+                        },
+                        {
+                            link: m.am.GUIDELINES,
+                            title: h.Z.Messages.NAVIGATION_GUIDELINES,
+                            tracking: "guidelines",
+                            external: !0,
+                        },
+                        {
+                            link: m.yX.FEEDBACK,
+                            title: h.Z.Messages.NAVIGATION_FEEDBACK,
+                            tracking: "feedback",
+                            external: !0,
+                        },
+                        {
+                            link: m.am.TERMS,
+                            title: h.Z.Messages.NAVIGATION_TERMS,
+                            tracking: "terms",
+                            external: !0,
+                        },
+                        {
+                            link: m.am.PRIVACY,
+                            title: h.Z.Messages.NAVIGATION_PRIVACY,
+                            tracking: "privacy",
+                            external: !0,
+                        },
+                        {
+                            link: m.am.SECURITY,
+                            title: h.Z.Messages.NAVIGATION_SECURITY,
+                            tracking: "security",
+                        },
+                        {
+                            link: m.yX.STATUS,
+                            title: h.Z.Messages.NAVIGATION_STATUS,
+                            tracking: "status",
+                            external: !0,
+                        },
+                        {
+                            link: m.am.SAFETY_LANDING,
+                            title: h.Z.Messages.NAVIGATION_SAFETY_CENTER,
+                            tracking: "safetycenter",
+                            external: !0,
+                        },
+                    ],
+                },
+                {
+                    title: h.Z.Messages.NAVIGATION_COMPANY,
+                    routes: [
+                        {
+                            link: m.am.COMPANY,
+                            title: h.Z.Messages.NAVIGATION_ABOUT,
+                            tracking: "about",
+                        },
+                        {
+                            link: m.am.BLOG,
+                            title: h.Z.Messages.NAVIGATION_BLOG,
+                            tracking: "blog",
+                            external: !0,
+                        },
+                        {
+                            link: m.am.JOBS,
+                            title: h.Z.Messages.NAVIGATION_JOBS,
+                            tracking: "join",
+                            external: !0,
+                        },
+                    ],
+                },
+                {
+                    title: h.Z.Messages.NAVIGATION_MORE,
+                    routes: [
+                        {
+                            link: m.am.PARTNERS,
+                            title: h.Z.Messages.NAVIGATION_PARTNERS,
+                            tracking: "partners",
+                            external: !0,
+                        },
+                        {
+                            link: m.am.HYPESQUAD,
+                            title: h.Z.Messages.NAVIGATION_HYPESQUAD,
+                            tracking: "hypesquad",
+                            external: !0,
+                        },
+                        {
+                            link: m.yX.PRESS_INQUIRIES,
+                            title: h.Z.Messages.NAVIGATION_PRESS_INQUIRIES,
+                            tracking: "pressinquiries",
+                            external: !0,
+                        },
+                        {
+                            link: m.am.OPEN_SOURCE,
+                            title: h.Z.Messages.NAVIGATION_OPEN_SOURCE,
+                            tracking: "open_source",
+                        },
+                    ],
+                },
+            ].map((e) => {
                 let t = e.routes.map((e, t) =>
                     e.external
                         ? (0, s.jsx)(
@@ -323,7 +322,7 @@ class b extends (r = l.PureComponent) {
                 style: t,
                 children: [
                     i
-                        ? (0, s.jsx)(f, {
+                        ? (0, s.jsx)(O, {
                               colorVariant: e,
                               animate: d,
                           })
@@ -419,8 +418,8 @@ class b extends (r = l.PureComponent) {
                 ));
     }
 }
-k(b, "Variants", A),
-    k(b, "defaultProps", {
+k(f, "Variants", A),
+    k(f, "defaultProps", {
         variant: A.PRIMARY,
         showWave: !0,
     });

@@ -1,30 +1,30 @@
 t.d(n, { Z: () => s });
 var r = t(255367);
 t(73800);
-var o = t(120356),
-    i = t.n(o),
-    a = t(481060),
+var a = t(120356),
+    i = t.n(a),
+    o = t(481060),
     l = t(388032),
-    c = t(841026);
+    c = t(140764);
 function s(e) {
-    let { guild: n, speakers: t, speakerCount: o, className: s } = e,
+    let { guild: n, speakers: t, speakerCount: a, className: s } = e,
         d = t.slice(0, 5),
         u = d.map((e) => {
-            var t, o;
+            var t, a;
             return (0, r.jsxs)(
                 "div",
                 {
                     className: c.speakerContainer,
                     children: [
-                        (0, r.jsx)(a.qEK, {
+                        (0, r.jsx)(o.qEK, {
                             src: null == e || null == (t = e.user) ? void 0 : t.getAvatarURL(n.id, 20),
-                            size: a.EFr.SIZE_20,
+                            size: o.EFr.SIZE_20,
                             className: c.avatar,
                             "aria-label": "".concat(null == e ? void 0 : e.userNick, "-avatar"),
                         }),
                         (0, r.jsx)("div", {
                             className: c.textInGridContainer,
-                            children: (0, r.jsx)(a.Text, {
+                            children: (0, r.jsx)(o.Text, {
                                 color: "header-secondary",
                                 variant: "text-sm/normal",
                                 className: c.textInGrid,
@@ -33,10 +33,10 @@ function s(e) {
                         }),
                     ],
                 },
-                null == e || null == (o = e.user) ? void 0 : o.id,
+                null == e || null == (a = e.user) ? void 0 : a.id,
             );
         }),
-        _ = o - d.length;
+        _ = a - d.length;
     return (0, r.jsxs)("div", {
         className: i()(c.grid, s),
         children: [
@@ -47,13 +47,13 @@ function s(e) {
                     children: [
                         (0, r.jsx)("div", {
                             className: c.iconMicrophone,
-                            children: (0, r.jsx)(a.S6n, {
+                            children: (0, r.jsx)(o.S6n, {
                                 size: "custom",
                                 color: "currentColor",
                                 height: 12,
                             }),
                         }),
-                        (0, r.jsx)(a.Text, {
+                        (0, r.jsx)(o.Text, {
                             color: "header-secondary",
                             variant: "text-sm/normal",
                             className: c.textInGrid,

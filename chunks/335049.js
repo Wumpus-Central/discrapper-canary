@@ -1,4 +1,4 @@
-n.d(t, { Z: () => w });
+n.d(t, { Z: () => S });
 var i = n(255367),
     r = n(73800),
     l = n(120356),
@@ -17,12 +17,12 @@ var i = n(255367),
     x = n(271383),
     j = n(485386),
     v = n(246946),
-    O = n(594174),
-    y = n(51144),
+    y = n(594174),
+    O = n(51144),
     _ = n(981631),
     C = n(388032),
-    N = n(199159);
-function S(e) {
+    N = n(243226);
+function w(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -47,7 +47,7 @@ function S(e) {
     }
     return e;
 }
-function I(e, t) {
+function Z(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -65,7 +65,7 @@ function I(e, t) {
         e
     );
 }
-function w(e) {
+function S(e) {
     let { guild: t, id: l, type: o, isLocked: a, lockTooltipText: c } = e,
         d = !a || null != c;
     s()(d, "No lockTooltipText provided while isLocked=true");
@@ -76,7 +76,7 @@ function w(e) {
                 return (t) =>
                     (0, i.jsx)(
                         e,
-                        I(S({}, t), {
+                        Z(w({}, t), {
                             id: l,
                             label: C.intl.string(C.t.oJ1Mu7),
                         }),
@@ -87,7 +87,7 @@ function w(e) {
     );
     switch (o) {
         case p.Kw.CHANNEL:
-            return (0, i.jsx)(Z, {
+            return (0, i.jsx)(P, {
                 guild: t,
                 id: l,
                 isLocked: a,
@@ -95,7 +95,7 @@ function w(e) {
                 openEntryContextMenu: m,
             });
         case p.Kw.ROLE:
-            return (0, i.jsx)(E, {
+            return (0, i.jsx)(I, {
                 guild: t,
                 id: l,
                 isLocked: a,
@@ -103,7 +103,7 @@ function w(e) {
                 openEntryContextMenu: m,
             });
         case p.Kw.USER:
-            return (0, i.jsx)(P, {
+            return (0, i.jsx)(T, {
                 guild: t,
                 id: l,
                 isLocked: a,
@@ -112,7 +112,7 @@ function w(e) {
             });
     }
 }
-function Z(e) {
+function P(e) {
     let { guild: t, id: n, isLocked: l, lockTooltipText: a, openEntryContextMenu: s } = e,
         u = (0, m.bD)(t.id),
         {
@@ -165,11 +165,11 @@ function Z(e) {
                             children: ["(", f, ")"],
                         })
                       : null,
-                  l ? (0, i.jsx)(T, { tooltipText: a }) : null,
+                  l ? (0, i.jsx)(E, { tooltipText: a }) : null,
               ],
           });
 }
-function E(e) {
+function I(e) {
     var t;
     let { guild: l, id: a, isLocked: s, lockTooltipText: p } = e,
         m = (0, c.e7)([j.Z], () => j.Z.getRole(l.id, a)),
@@ -187,7 +187,7 @@ function E(e) {
                         return (t) =>
                             (0, i.jsx)(
                                 e,
-                                I(S({}, t), {
+                                Z(w({}, t), {
                                     guild: l,
                                     role: m,
                                 }),
@@ -203,7 +203,7 @@ function E(e) {
               className: N.identifier,
               children: [
                   null != b
-                      ? (0, i.jsx)(g.Z, S({ className: o()(N.__invalid_icon, N.image) }, b))
+                      ? (0, i.jsx)(g.Z, w({ className: o()(N.__invalid_icon, N.image) }, b))
                       : (0, i.jsx)(d.lZ8, {
                             size: "custom",
                             width: 23,
@@ -217,13 +217,13 @@ function E(e) {
                       variant: "text-md/normal",
                       children: m.name,
                   }),
-                  s ? (0, i.jsx)(T, { tooltipText: p }) : null,
+                  s ? (0, i.jsx)(E, { tooltipText: p }) : null,
               ],
           });
 }
-function P(e) {
+function T(e) {
     let { guild: t, id: n, isLocked: r, lockTooltipText: l, openEntryContextMenu: o } = e,
-        a = (0, c.e7)([O.default], () => O.default.getUser(n)),
+        a = (0, c.e7)([y.default], () => y.default.getUser(n)),
         s = (0, c.e7)([x.ZP], () => {
             var e;
             return null == (e = x.ZP.getMember(t.id, n)) ? void 0 : e.nick;
@@ -252,20 +252,20 @@ function P(e) {
                       : (0, i.jsx)(d.Text, {
                             className: N.tag,
                             variant: "text-sm/normal",
-                            children: y.ZP.getUserTag(a),
+                            children: O.ZP.getUserTag(a),
                         }),
-                  r ? (0, i.jsx)(T, { tooltipText: l }) : null,
+                  r ? (0, i.jsx)(E, { tooltipText: l }) : null,
               ],
           });
 }
-function T(e) {
+function E(e) {
     let { tooltipText: t } = e;
     return (0, i.jsx)(d.ua7, {
         text: t,
         children: (e) =>
             (0, i.jsx)(
                 "div",
-                I(S({ className: N.lockIcon }, e), {
+                Z(w({ className: N.lockIcon }, e), {
                     children: (0, i.jsx)(d.mBM, {
                         size: "xs",
                         color: "currentColor",

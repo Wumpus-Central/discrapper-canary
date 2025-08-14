@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => p });
 var i = n(255367);
 n(73800);
 var r = n(120356),
@@ -9,59 +9,58 @@ var r = n(120356),
     c = n(848572),
     d = n(787528),
     u = n(388032),
-    m = n(622329);
-let p = (e, t) =>
-        (null == e ? void 0 : e.status) === c.Vq.EARNED
-            ? u.intl.format(u.t.Hu4jfn, { date: null != t ? t : new Date() })
-            : (null == e ? void 0 : e.status) === c.Vq.UPCOMING
-              ? u.intl.format(u.t.E85flp, {
-                    date: null != t ? t : new Date(),
-                    days: e.daysLeft,
-                })
-              : null,
-    g = () => {
-        var e;
-        let t = (0, c.Rw)(),
-            n = null != (e = (0, c.GG)()) ? e : new Date(),
-            r = (0, d.u)(null == t ? void 0 : t.id);
-        if (null == t || null == r) return null;
-        let { id: g, nameUnformatted: h, tenureReqNumMonths: f, hasWideArt: b } = t,
-            x = u.intl.string(h),
-            _ = (0, o.q)(g, f),
-            j = { "--custom-badge-glow-color": (0, l.rj)(t.glowColor, 0.5) };
-        return (0, i.jsxs)("div", {
-            className: m.container,
-            style: j,
-            children: [
-                (0, i.jsx)("div", {}),
-                " ",
-                (0, i.jsx)("img", {
-                    src: r,
-                    alt: x,
-                    className: s()(m.badgeImage, {
-                        [m.upcomingBadge]: t.status === c.Vq.UPCOMING,
-                        [m.wide]: b,
+    m = n(726185);
+let p = () => {
+    var e;
+    let t = (0, c.Rw)(),
+        n = null != (e = (0, c.GG)()) ? e : new Date(),
+        r = (0, d.u)(null == t ? void 0 : t.id);
+    if (null == t || null == r) return null;
+    let { id: p, nameUnformatted: g, tenureReqNumMonths: h, hasWideArt: f } = t,
+        b = u.intl.string(g),
+        x = (0, o.q)(p, h),
+        _ = { "--custom-badge-glow-color": (0, l.rj)(t.glowColor, 0.5) };
+    return (0, i.jsxs)("div", {
+        className: m.container,
+        style: _,
+        children: [
+            (0, i.jsx)("div", {}),
+            " ",
+            (0, i.jsx)("img", {
+                src: r,
+                alt: b,
+                className: s()(m.badgeImage, {
+                    [m.upcomingBadge]: t.status === c.Vq.UPCOMING,
+                    [m.wide]: f,
+                }),
+            }),
+            (0, i.jsxs)("div", {
+                className: m.textColumn,
+                children: [
+                    (0, i.jsx)(a.xv, {
+                        variant: "text-lg/semibold",
+                        className: m.badgeText,
+                        children: b,
                     }),
-                }),
-                (0, i.jsxs)("div", {
-                    className: m.textColumn,
-                    children: [
-                        (0, i.jsx)(a.xv, {
-                            variant: "text-lg/semibold",
-                            className: m.badgeText,
-                            children: x,
-                        }),
-                        (0, i.jsx)(a.xv, {
-                            variant: "text-md/normal",
-                            className: m.badgeText,
-                            children: _,
-                        }),
-                        (0, i.jsx)(a.xv, {
-                            variant: "text-xs/normal",
-                            children: p(t, n),
-                        }),
-                    ],
-                }),
-            ],
-        });
-    };
+                    (0, i.jsx)(a.xv, {
+                        variant: "text-md/normal",
+                        className: m.badgeText,
+                        children: x,
+                    }),
+                    (0, i.jsx)(a.xv, {
+                        variant: "text-xs/normal",
+                        children:
+                            (null == t ? void 0 : t.status) === c.Vq.EARNED
+                                ? u.intl.format(u.t.Hu4jfn, { date: null != n ? n : new Date() })
+                                : (null == t ? void 0 : t.status) === c.Vq.UPCOMING
+                                  ? u.intl.format(u.t.E85flp, {
+                                        date: null != n ? n : new Date(),
+                                        days: t.daysLeft,
+                                    })
+                                  : null,
+                    }),
+                ],
+            }),
+        ],
+    });
+};

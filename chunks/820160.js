@@ -4,7 +4,7 @@ n(73800);
 var s = n(481060),
     l = n(813197),
     a = n(388032),
-    r = n(832576);
+    r = n(437907);
 function o(e) {
     let { icon: t, onChange: n } = e;
     return (0, i.jsx)(s.tEY, {

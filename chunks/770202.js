@@ -1,23 +1,23 @@
-n.d(t, { Z: () => x }), n(415506), n(388685);
+n.d(t, { Z: () => S }), n(415506), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
     o = n.n(l),
-    s = n(442837),
-    a = n(493683),
+    a = n(442837),
+    s = n(493683),
     c = n(239091),
     u = n(146773),
     d = n(201895),
-    h = n(703656),
-    p = n(592125),
-    f = n(430824),
+    p = n(703656),
+    f = n(592125),
+    h = n(430824),
     g = n(496675),
     m = n(98597),
     b = n(473403),
     O = n(981631),
     _ = n(490897),
-    y = n(81252);
-function C(e, t, n) {
+    y = n(55940);
+function v(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -30,7 +30,7 @@ function C(e, t, n) {
         e
     );
 }
-function v(e) {
+function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -41,15 +41,15 @@ function v(e) {
                 }),
             )),
             r.forEach(function (t) {
-                C(e, t, n[t]);
+                v(e, t, n[t]);
             });
     }
     return e;
 }
-function j(e, t) {
+function C(e, t) {
     let n = t.getGuildId();
     if (null == n) throw Error("TextChannel, preloadChannel: Channel does not have a guildId");
-    a.Z.preload(n, t.id);
+    s.Z.preload(n, t.id);
 }
 class E extends m.ZP {
     render() {
@@ -59,9 +59,9 @@ class E extends m.ZP {
                 connectChannelDropTarget: n,
                 connectChannelDragSource: i,
                 connectDragPreview: l,
-                canReorderChannel: s,
+                canReorderChannel: a,
             } = this.props,
-            a = (0, r.jsx)("li", {
+            s = (0, r.jsx)("li", {
                 className: o()(this.getClassName(), { [y.disabled]: this.isDisabled() }),
                 "data-dnd-name": e.name,
                 children: (0, r.jsxs)(b.ZP, {
@@ -69,76 +69,78 @@ class E extends m.ZP {
                     channel: e,
                     selected: t,
                     onClick: this.handleClick,
-                    onMouseDown: j,
+                    onMouseDown: C,
                     onContextMenu: this.handleContextMenu,
-                    connectDragPreview: s ? l : null,
+                    connectDragPreview: a ? l : null,
                     "aria-label": (0, d.ZP)({ channel: e }),
                     resolvedUnreadSetting: _.i.ONLY_MENTIONS,
                     children: [this.renderInviteButton(), this.renderEditButton()],
                 }),
             });
-        return s ? n(i(a)) : a;
+        return a ? n(i(s)) : s;
     }
     constructor(...e) {
         super(...e),
-            C(this, "handleContextMenu", (e) => {
+            v(this, "handleContextMenu", (e) => {
                 let { channel: t } = this.props,
-                    i = f.Z.getGuild(t.getGuildId());
+                    i = h.Z.getGuild(t.getGuildId());
                 null != i &&
                     (0, c.jW)(e, async () => {
                         let { default: e } = await n.e("99905").then(n.bind(n, 649400));
-                        return (n) => {
-                            var l, o;
-                            return (0, r.jsx)(
+                        return (n) =>
+                            (0, r.jsx)(
                                 e,
-                                ((l = v({}, n)),
-                                (o = o =
-                                    {
-                                        channel: t,
-                                        guild: i,
-                                    }),
-                                Object.getOwnPropertyDescriptors
-                                    ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(o))
-                                    : (function (e, t) {
-                                          var n = Object.keys(e);
-                                          if (Object.getOwnPropertySymbols) {
-                                              var r = Object.getOwnPropertySymbols(e);
-                                              n.push.apply(n, r);
-                                          }
-                                          return n;
-                                      })(Object(o)).forEach(function (e) {
-                                          Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(o, e));
-                                      }),
-                                l),
+                                (function (e, t) {
+                                    return (
+                                        (t = null != t ? t : {}),
+                                        Object.getOwnPropertyDescriptors
+                                            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+                                            : (function (e, t) {
+                                                  var n = Object.keys(e);
+                                                  if (Object.getOwnPropertySymbols) {
+                                                      var r = Object.getOwnPropertySymbols(e);
+                                                      n.push.apply(n, r);
+                                                  }
+                                                  return n;
+                                              })(Object(t)).forEach(function (n) {
+                                                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+                                              }),
+                                        e
+                                    );
+                                })(j({}, n), {
+                                    channel: t,
+                                    guild: i,
+                                }),
                             );
-                        };
                     });
             }),
-            C(this, "handleClick", (e) => {
-                let t = e.getGuildId();
-                if (null == t) throw Error("TextChannel, transitionTo: Channel does not have a guildId");
-                (0, h.uL)(O.Z5c.CHANNEL(t, e.id), {
-                    state: {
-                        analyticsSource: {
-                            page: O.ZY5.GUILD_CHANNEL,
-                            section: O.jXE.CHANNEL_LIST,
-                            object: O.qAy.CHANNEL,
+            v(this, "handleClick", (e) => {
+                !(function (e) {
+                    let t = e.getGuildId();
+                    if (null == t) throw Error("TextChannel, transitionTo: Channel does not have a guildId");
+                    (0, p.uL)(O.Z5c.CHANNEL(t, e.id), {
+                        state: {
+                            analyticsSource: {
+                                page: O.ZY5.GUILD_CHANNEL,
+                                section: O.jXE.CHANNEL_LIST,
+                                object: O.qAy.CHANNEL,
+                            },
                         },
-                    },
-                });
+                    });
+                })(e);
             });
     }
 }
-let S = (0, u.B)(E),
-    x = i.memo(function (e) {
+let x = (0, u.B)(E),
+    S = i.memo(function (e) {
         let { channel: t, guild: n, disableSorting: i } = e,
-            l = (0, s.cj)([p.Z, g.Z], () => {
-                let e = p.Z.getChannel(t.parent_id);
+            l = (0, a.cj)([f.Z, g.Z], () => {
+                let e = f.Z.getChannel(t.parent_id);
                 return {
                     canManageChannel: g.Z.can(O.Plq.MANAGE_CHANNELS, t),
                     canReorderChannel:
                         !0 !== i && null != e ? g.Z.can(O.Plq.MANAGE_CHANNELS, e) : g.Z.can(O.Plq.MANAGE_CHANNELS, n),
                 };
             });
-        return (0, r.jsx)(S, v({}, l, e));
+        return (0, r.jsx)(x, j({}, l, e));
     });

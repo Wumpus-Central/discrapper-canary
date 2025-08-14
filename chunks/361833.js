@@ -7,7 +7,7 @@ var s = n(255367),
     o = n(25990),
     c = n(155433),
     d = n(388032),
-    x = n(191208);
+    x = n(780187);
 function m(e) {
     var t, n;
     let { emailToken: m, isSlideReady: u, onClose: _, onBack: E, onNext: N } = e,

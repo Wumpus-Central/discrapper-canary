@@ -3,8 +3,8 @@ var r,
     i = n(442837),
     l = n(570140),
     o = n(823379),
-    s = n(981631);
-function a(e, t, n) {
+    a = n(981631);
+function s(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -28,23 +28,23 @@ function c(e) {
                 }),
             )),
             r.forEach(function (t) {
-                a(e, t, n[t]);
+                s(e, t, n[t]);
             });
     }
     return e;
 }
 let u = [],
     d = {},
-    h = null,
-    p = 0;
-function f(e) {
+    p = null,
+    f = 0;
+function h(e) {
     let t = null;
     try {
         t = JSON.parse(e.launch_parameters);
     } catch (e) {
         return null;
     }
-    if (e.platform_type === s.ABu.XBOX) {
+    if (e.platform_type === a.ABu.XBOX) {
         var n, r;
         let i = null == t ? void 0 : t.titleId,
             l = null == t ? void 0 : t.inviteToken;
@@ -90,22 +90,22 @@ class g extends (r = i.ZP.Store) {
         return null == (t = d[e.invite_id]) ? void 0 : t.joinable;
     }
     getLastUnseenInvite() {
-        return h;
-    }
-    getUnseenInviteCount() {
         return p;
     }
+    getUnseenInviteCount() {
+        return f;
+    }
 }
-a(g, "displayName", "GameInviteStore");
+s(g, "displayName", "GameInviteStore");
 let m = new g(l.Z, {
     CONNECTION_OPEN_SUPPLEMENTAL: function (e) {
         let { gameInvites: t } = e;
-        u = t.map(f).filter(o.lm);
+        u = t.map(h).filter(o.lm);
     },
     GAME_INVITE_CREATE: function (e) {
         let { gameInvite: t } = e,
-            n = f(t);
-        null != n && ((u = [n, ...u]), (h = t), (p += 1));
+            n = h(t);
+        null != n && ((u = [n, ...u]), (p = t), (f += 1));
     },
     GAME_INVITE_DELETE: function (e) {
         let { inviteId: t } = e;
@@ -122,6 +122,6 @@ let m = new g(l.Z, {
         };
     },
     GAME_INVITE_CLEAR_UNSEEN: function (e) {
-        (h = null), (p = 0);
+        (p = null), (f = 0);
     },
 });

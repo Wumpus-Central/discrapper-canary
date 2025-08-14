@@ -4,7 +4,7 @@ n(73800);
 var i = n(120356),
     o = n.n(i),
     a = n(388032),
-    s = n(996661);
+    s = n(284597);
 let l = (e) => {
     let { className: t } = e;
     return (0, r.jsx)("div", {

@@ -1,62 +1,51 @@
 n.d(t, {
-    RB: () => j,
-    VH: () => y,
-    Vi: () => E,
-    Vu: () => S,
-    q7: () => v,
+    RB: () => y,
+    VH: () => O,
+    Vi: () => v,
+    Vu: () => j,
+    q7: () => _,
 });
 var r = n(692547),
     i = n(497089),
     l = n(650473),
     o = n(389765),
-    s = n(137492),
-    a = n(387661),
+    a = n(137492),
+    s = n(387661),
     c = n(659953),
     u = n(319707),
     d = n(584914),
-    h = n(962575),
-    p = n(334702),
-    f = n(333722),
+    p = n(962575),
+    f = n(334702),
+    h = n(333722),
     g = n(549931),
     m = n(178561),
-    b = n(39863),
-    O = n(130312);
-let _ = {
-        CHECKED: a,
-        FRIENDS: u,
-        SHARE_SCREEN: b,
-        NEW_MESSAGE: g,
-        GAME_RELATIONSHIP: h,
-    },
-    y = {
-        MISSED_MESSAGES: f,
+    b = n(39863);
+let O = {
+        MISSED_MESSAGES: h,
         FRIEND_REQUEST_REMINDER: d,
         SCHEDULED_GUILD_EVENT: c,
-        TOP_MESSAGES: p,
-        NOTIFICATION_CENTER: s,
-        UPDATE_PROFILE: O,
+        TOP_MESSAGES: f,
+        NOTIFICATION_CENTER: a,
+        UPDATE_PROFILE: n(130312),
         FIND_FRIENDS: o,
         ADD_FRIEND: o,
         FIRST_MESSAGE: m,
     },
-    C = (e) => {
-        switch (e.item_enum) {
-            case i.AM.ADD_FRIEND:
-                return "ADD_FRIEND";
-            case i.AM.FIND_FRIENDS:
-                return "FIND_FRIENDS";
-            case i.AM.FIRST_MESSAGE:
-                return "FIRST_MESSAGE";
-            case i.AM.UPDATE_PROFILE:
-                return "UPDATE_PROFILE";
-            default:
-                return "NOTIFICATION_CENTER";
-        }
-    },
-    v = (e) => {
+    _ = (e) => {
         switch (e.type) {
             case "lifecycle_item":
-                return C(e);
+                switch (e.item_enum) {
+                    case i.AM.ADD_FRIEND:
+                        return "ADD_FRIEND";
+                    case i.AM.FIND_FRIENDS:
+                        return "FIND_FRIENDS";
+                    case i.AM.FIRST_MESSAGE:
+                        return "FIRST_MESSAGE";
+                    case i.AM.UPDATE_PROFILE:
+                        return "UPDATE_PROFILE";
+                    default:
+                        return "NOTIFICATION_CENTER";
+                }
             case "missed_messages":
                 return "MISSED_MESSAGES";
             case "friend_request_reminder":
@@ -69,48 +58,48 @@ let _ = {
                 return "NOTIFICATION_CENTER";
         }
     },
-    j = (e) => ("icHighlight" === e ? "TOP_MESSAGES" : "NOTIFICATION_CENTER"),
-    E = (e) => {
+    y = (e) => ("icHighlight" === e ? "TOP_MESSAGES" : "NOTIFICATION_CENTER"),
+    v = (e) => {
         switch (e) {
             case i.DY.GO_LIVE_PUSH:
                 return {
-                    icon: _.SHARE_SCREEN,
+                    icon: b,
                     color: r.Z.colors.BACKGROUND_ACCENT,
                 };
             case i.DY.FRIEND_REQUEST_ACCEPTED:
             case i.DY.GAME_FRIEND_REQUEST_ACCEPTED:
                 return {
-                    icon: _.CHECKED,
+                    icon: s,
                     color: r.Z.colors.STATUS_POSITIVE_BACKGROUND,
                 };
             case i.DY.FRIEND_REQUEST_PENDING:
             case i.DY.FRIEND_SUGGESTION_CREATED:
                 return {
-                    icon: _.FRIENDS,
+                    icon: u,
                     color: r.Z.colors.BACKGROUND_ACCENT,
                 };
             case i.DY.DM_FRIEND_NUDGE:
                 return {
-                    icon: _.NEW_MESSAGE,
+                    icon: g,
                     color: r.Z.colors.BACKGROUND_ACCENT,
                 };
             case i.O7.INCOMING_FRIEND_REQUESTS:
             case i.O7.INCOMING_FRIEND_REQUESTS_ACCEPTED:
                 return {
-                    icon: _.FRIENDS,
+                    icon: u,
                     color: r.Z.colors.BACKGROUND_ACCENT,
                 };
             case i.O7.INCOMING_GAME_FRIEND_REQUESTS:
             case i.O7.INCOMING_GAME_FRIEND_REQUESTS_ACCEPTED:
                 return {
-                    icon: _.GAME_RELATIONSHIP,
+                    icon: p,
                     color: r.Z.colors.BACKGROUND_ACCENT,
                 };
             default:
                 return null;
         }
     },
-    S = (e) => {
+    j = (e) => {
         switch (e.item_enum) {
             case i.AM.UPDATE_PROFILE:
                 return l.Y9;

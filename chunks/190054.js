@@ -6,7 +6,7 @@ var r = n(255367),
     s = n(481060),
     a = n(572004),
     c = n(388032),
-    u = n(476007);
+    u = n(198473);
 function d(e) {
     var { chunks: t, className: n, onCopy: i } = e,
         d = (function (e, t) {

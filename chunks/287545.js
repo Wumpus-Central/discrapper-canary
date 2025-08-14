@@ -36,8 +36,8 @@ var i = n(772848),
     L = n(969345),
     x = n(155268),
     M = n(148720),
-    j = n(122613),
-    k = n(790920),
+    k = n(122613),
+    j = n(790920),
     U = n(16609),
     G = n(761122),
     B = n(983695),
@@ -179,13 +179,13 @@ function et(e) {
         x = T.default.getCurrentUser();
     if (null == x) return;
     let M = D.ZP.getShelfActivities(E),
-        j = R.Z.getState().shelfOrder,
-        k = (0, L.Z)({
+        k = R.Z.getState().shelfOrder,
+        j = (0, L.Z)({
             applicationId: r,
             activityConfigs: M,
         }),
-        G = 1 + j.findIndex((e) => e === r),
-        { releasePhase: B } = q(k),
+        G = 1 + k.findIndex((e) => e === r),
+        { releasePhase: B } = q(j),
         Z = p.Z.getRawThermalState(),
         V = null != I ? [I] : [],
         H = {
@@ -210,7 +210,7 @@ function et(e) {
             n_participants: null != b ? _.Z.getUserParticipantCount(b.id) : null,
             is_activity_start: a,
             release_phase: B,
-            shelf_rank: null == k || null == (t = k.activity) ? void 0 : t.shelf_rank,
+            shelf_rank: null == j || null == (t = j.activity) ? void 0 : t.shelf_rank,
             shelf_sorted_rank: G > 0 ? G : null,
             activity_user_session_id: P,
             channel_type: null == b ? void 0 : b.type,
@@ -231,7 +231,7 @@ function et(e) {
             activity_user_session_id: P,
             raw_thermal_state: Z,
             is_activity_start: a,
-            shelf_rank: null == k || null == (n = k.activity) ? void 0 : n.shelf_rank,
+            shelf_rank: null == j || null == (n = j.activity) ? void 0 : n.shelf_rank,
             shelf_sorted_rank: G > 0 ? G : null,
             activities_infra_version: w,
             embedded_activity_location_kind: u.kind,
@@ -431,7 +431,7 @@ class er extends c.Z {
                 let u = D.ZP.getSelfEmbeddedActivityForChannel(i);
                 if ((null == u ? void 0 : u.applicationId) === o) return;
                 let d = await f.ZP.fetchApplication(o);
-                if (!(0, k.a)()) return void this.showLaunchErrorModal(V.intl.string(V.t.UXoQTk));
+                if (!(0, j.a)()) return void this.showLaunchErrorModal(V.intl.string(V.t.UXoQTk));
                 if (!(0, B.Z)(null == d || null == (t = d.embedded_activity_config) ? void 0 : t.supported_platforms))
                     return void this.showLaunchErrorModal(V.intl.string(V.t.uGDCc3));
                 let _ = null != (n = null == c ? void 0 : c.getGuildId()) ? n : void 0,
@@ -464,7 +464,7 @@ class er extends c.Z {
                           analyticsLocations: a,
                           inviterUserId: l,
                       })
-                    : await (0, j.Z)({
+                    : await (0, k.Z)({
                           targetApplicationId: o,
                           channelId: i,
                           analyticsLocations: a,

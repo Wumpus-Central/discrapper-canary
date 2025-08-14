@@ -27,13 +27,13 @@ var r,
     A = n(602168),
     R = "Promise",
     F = P.CONSTRUCTOR,
-    O = P.REJECTION_EVENT,
-    E = P.SUBCLASSING,
+    E = P.REJECTION_EVENT,
+    O = P.SUBCLASSING,
     I = N.getterFor(R),
     M = N.set,
-    B = x && x.prototype,
-    T = x,
-    D = B,
+    T = x && x.prototype,
+    B = x,
+    D = T,
     L = u.TypeError,
     V = u.document,
     j = u.process,
@@ -81,7 +81,7 @@ var r,
                   promise: t,
                   reason: n,
               }),
-            !O && (o = u["on" + e]) ? o(r) : e === K && Z("Unhandled promise rejection", n);
+            !E && (o = u["on" + e]) ? o(r) : e === K && Z("Unhandled promise rejection", n);
     },
     $ = function (e) {
         d(k, u, function () {
@@ -139,7 +139,7 @@ var r,
     };
 if (
     F &&
-    ((D = (T = function (e) {
+    ((D = (B = function (e) {
         b(this, D), y(e), d(r, this);
         var t = I(this);
         try {
@@ -161,7 +161,7 @@ if (
         });
     }).prototype = p(D, "then", function (e, t) {
         var n = I(this),
-            r = U(_(this, T));
+            r = U(_(this, B));
         return (
             (n.parent = !0),
             (r.ok = !v(e) || e),
@@ -182,27 +182,27 @@ if (
     }),
     (A.f = U =
         function (e) {
-            return e === T || e === a ? new o(e) : q(e);
+            return e === B || e === a ? new o(e) : q(e);
         }),
-    !c && v(x) && B !== Object.prototype)
+    !c && v(x) && T !== Object.prototype)
 ) {
-    (i = B.then),
-        E ||
+    (i = T.then),
+        O ||
             p(
-                B,
+                T,
                 "then",
                 function (e, t) {
                     var n = this;
-                    return new T(function (e, t) {
+                    return new B(function (e, t) {
                         d(i, n, e, t);
                     }).then(e, t);
                 },
                 { unsafe: !0 },
             );
     try {
-        delete B.constructor;
+        delete T.constructor;
     } catch (e) {}
-    h && h(B, D);
+    h && h(T, D);
 }
 s(
     {
@@ -211,7 +211,7 @@ s(
         wrap: !0,
         forced: F,
     },
-    { Promise: T },
+    { Promise: B },
 ),
-    f(T, R, !1, !0),
+    f(B, R, !1, !0),
     m(R);

@@ -1,5 +1,5 @@
 let r;
-n.d(t, { Z: () => S }), n(388685), n(539854), n(781311), n(35282);
+n.d(t, { Z: () => _ }), n(388685), n(539854), n(781311), n(35282);
 var l,
     i = n(442837),
     o = n(570140),
@@ -13,8 +13,8 @@ var l,
     g = n(699516),
     p = n(594174),
     O = n(55589),
-    N = n(981631);
-function y(e, t, n) {
+    y = n(981631);
+function N(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -48,7 +48,7 @@ function v(e) {
                                 }),
                             )),
                             r.forEach(function (t) {
-                                y(e, t, n[t]);
+                                N(e, t, n[t]);
                             });
                     }
                     return e;
@@ -69,7 +69,7 @@ function v(e) {
                 t
             );
         })),
-        _.emitChange();
+        S.emitChange();
 }
 function T() {
     (x = null), null != r && (r.destroy(), (r = null)), null != E && E();
@@ -93,8 +93,8 @@ class I extends (l = i.ZP.Store) {
         return C;
     }
 }
-y(I, "displayName", "ActivityInviteModalStore");
-let _ = new I(o.Z, {
+N(I, "displayName", "ActivityInviteModalStore");
+let S = new I(o.Z, {
         ACTIVITY_INVITE_MODAL_OPEN: function (e) {
             (x = e.activity),
                 (E = e.resolve),
@@ -110,7 +110,7 @@ let _ = new I(o.Z, {
                                               O.Z.getPrivateChannelIds().forEach((t) => {
                                                   let n = u.Z.getChannel(t);
                                                   if (null != n)
-                                                      if (n.type === N.d4z.DM) {
+                                                      if (n.type === y.d4z.DM) {
                                                           let t = n.getRecipientId(),
                                                               r = null != t ? p.default.getUser(t) : null;
                                                           null != r &&
@@ -169,7 +169,7 @@ let _ = new I(o.Z, {
                                     }
                                 })
                                 .filter((e) => null != e)),
-                                _.emitChange();
+                                S.emitChange();
                         },
                         b,
                         100,
@@ -187,14 +187,14 @@ let _ = new I(o.Z, {
             null != t
                 ? s.Z.sendActivityInvite({
                       channelId: t,
-                      type: N.mFx.JOIN,
+                      type: y.mFx.JOIN,
                       activity: x,
                       location: "Channel Text Area - Invite to Join Modal",
                   }).then(() => v(t))
                 : null != n &&
                   s.Z.sendActivityInviteUser({
                       userId: n,
-                      type: N.mFx.JOIN,
+                      type: y.mFx.JOIN,
                       activity: x,
                       location: "Channel Text Area - Invite to Join Modal",
                   }).then(() => v(n));
@@ -207,4 +207,4 @@ let _ = new I(o.Z, {
         LOCAL_ACTIVITY_UPDATE: j,
         RPC_APP_DISCONNECTED: j,
     }),
-    S = 12633 == n.j ? _ : null;
+    _ = 12633 == n.j ? S : null;

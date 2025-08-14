@@ -5,24 +5,24 @@ let l = function () {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
         { refreshOnDepChange: t } = e,
         [n, l] = r.useState([]),
-        [s, o] = r.useState(!0),
-        a = async () => {
-            o(!0);
+        [o, s] = r.useState(!0),
+        c = async () => {
+            s(!0);
             try {
                 let e = await i.Z.fetchTeams(!0);
                 l(e.body);
             } catch (e) {}
-            o(!1);
+            s(!1);
         },
-        c = r.useRef(!0);
+        a = r.useRef(!0);
     return (
         r.useEffect(() => {
-            (c.current || t) && ((c.current = !1), a());
+            (a.current || t) && ((a.current = !1), c());
         }, [t]),
         {
             teams: n,
-            loading: s,
-            refresh: a,
+            loading: o,
+            refresh: c,
         }
     );
 };

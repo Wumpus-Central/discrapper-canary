@@ -28,12 +28,12 @@ var r = n(255367),
     R = n(981631),
     P = n(689079),
     w = n(388032),
-    D = n(74761),
-    L = n(387191);
+    D = n(202874),
+    L = n(698342);
 let x = 5,
     M = "placeholder",
-    j = [, , , , ,].fill(M);
-function k(e) {
+    k = [, , , , ,].fill(M);
+function j(e) {
     var t, n;
     let { context: o, command: a, section: l, sectionName: c } = e,
         d = i.useCallback(() => {
@@ -218,7 +218,7 @@ function B(e) {
                           e === M
                               ? (0, r.jsx)(U, {}, e + n)
                               : (0, r.jsx)(
-                                    k,
+                                    j,
                                     {
                                         context: t,
                                         command: e,
@@ -288,7 +288,7 @@ function Z(e) {
                   (0, r.jsx)(B, {
                       context: n,
                       section: p,
-                      commands: _ ? j : E,
+                      commands: _ ? k : E,
                       headerName: w.intl.string(w.t.DUU9Ly),
                       sectionName: a,
                       children:

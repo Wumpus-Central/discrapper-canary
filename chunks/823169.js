@@ -15,10 +15,17 @@ class d extends i.Z {
         r.Z.unsubscribe("CONNECTION_OPEN", this.maybeFetchEligiblity);
     }
     constructor(...e) {
-        var t, n;
         super(...e),
-            (t = "maybeFetchEligiblity"),
-            (n = async () => {
+            (function (e, t, n) {
+                t in e
+                    ? Object.defineProperty(e, t, {
+                          value: n,
+                          enumerable: !0,
+                          configurable: !0,
+                          writable: !0,
+                      })
+                    : (e[t] = n);
+            })(this, "maybeFetchEligiblity", async () => {
                 if ((0, s.isDesktop)() || (0, s.isWeb)()) {
                     let e = a.Z.getGuildsArray(),
                         t = o.default.getCurrentUser(),
@@ -33,15 +40,7 @@ class d extends i.Z {
                         );
                     n.length > 0 && (await (0, c.av)(n.map((e) => e.id)));
                 }
-            }),
-            t in this
-                ? Object.defineProperty(this, t, {
-                      value: n,
-                      enumerable: !0,
-                      configurable: !0,
-                      writable: !0,
-                  })
-                : (this[t] = n);
+            });
     }
 }
 let p = new d();

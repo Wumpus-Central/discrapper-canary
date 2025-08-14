@@ -12,8 +12,8 @@ var i = t(255367),
     p = t(613734),
     u = t(800530),
     _ = t(388032),
-    h = t(244146),
-    g = t(979527);
+    h = t(707489),
+    g = t(186425);
 function C(e) {
     let { className: n, isDsaEligible: t = !1, onClose: s, onNext: C, onBack: N } = e,
         j = (0, p.U0)(),
@@ -23,23 +23,10 @@ function C(e) {
     a.useEffect(() => {
         T(null != I ? I : ""), f(j === u.bK.SOMETHING_ELSE);
     }, [I, j, t]);
-    let S = (e) => {
-            f(e === u.bK.SOMETHING_ELSE),
-                e !== u.bK.SOMETHING_ELSE &&
-                    (T(""),
-                    c.Z.dispatch({
-                        type: "SAFETY_HUB_APPEAL_SIGNAL_CUSTOM_INPUT_CHANGE",
-                        userInput: "",
-                    })),
-                c.Z.dispatch({
-                    type: "SAFETY_HUB_APPEAL_SIGNAL_SELECT",
-                    signal: e,
-                });
-        },
-        k = u.RY.map((e) => ({
-            value: e,
-            name: (0, m.ox)(e),
-        }));
+    let S = u.RY.map((e) => ({
+        value: e,
+        name: (0, m.ox)(e),
+    }));
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsxs)(o.xBx, {
@@ -76,10 +63,20 @@ function C(e) {
                         radioItemClassName: g.radioItem,
                         size: o.FXm.Sizes.NOT_SET,
                         value: j,
-                        options: k,
+                        options: S,
                         onChange: (e) => {
                             let { value: n } = e;
-                            return S(n);
+                            f(n === u.bK.SOMETHING_ELSE),
+                                n !== u.bK.SOMETHING_ELSE &&
+                                    (T(""),
+                                    c.Z.dispatch({
+                                        type: "SAFETY_HUB_APPEAL_SIGNAL_CUSTOM_INPUT_CHANGE",
+                                        userInput: "",
+                                    })),
+                                c.Z.dispatch({
+                                    type: "SAFETY_HUB_APPEAL_SIGNAL_SELECT",
+                                    signal: n,
+                                });
                         },
                     }),
                     t &&

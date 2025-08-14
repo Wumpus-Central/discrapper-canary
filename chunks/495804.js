@@ -1,9 +1,9 @@
-n.d(t, { Z: () => s });
+n.d(t, { Z: () => a });
 var r = n(73800),
     i = n(901005),
     l = n(535396),
     o = n(981631);
-function s(e, t) {
+function a(e, t) {
     let n = (0, i.i)(null == e ? void 0 : e.id, t);
     return (0, r.useMemo)(() => {
         if (null == e) return 0;

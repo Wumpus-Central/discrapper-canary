@@ -223,7 +223,7 @@ function R(e, t) {
         case p.l.Attachment:
             return M(e.media, n);
         case p.l.GenericMedia:
-            return j(e.media, n);
+            return k(e.media, n);
         default:
             return !1;
     }
@@ -306,7 +306,7 @@ function x(e, t) {
                 (null == (s = e.image) ? void 0 : s.height) === 0) ||
             ("images" in e &&
                 (null == (l = e.images) ? void 0 : l.some((e) => null != e && 0 === e.width && 0 === e.height)))
-        ) && k(B(e), t)
+        ) && j(B(e), t)
     );
 }
 function M(e, t) {
@@ -321,10 +321,10 @@ function M(e, t) {
                         media: e,
                     }),
             ).length &&
-        k(null != (n = e.content_scan_version) ? n : e.contentScanVersion, t)
+        j(null != (n = e.content_scan_version) ? n : e.contentScanVersion, t)
     );
 }
-function j(e, t) {
+function k(e, t) {
     var n;
     return (
         0 !== t.length &&
@@ -336,10 +336,10 @@ function j(e, t) {
                         media: e,
                     }),
             ).length &&
-        k(null == (n = e.contentScanMetadata) ? void 0 : n.version, t)
+        j(null == (n = e.contentScanMetadata) ? void 0 : n.version, t)
     );
 }
-function k(e, t) {
+function j(e, t) {
     let n = h.Z.validContentScanVersion;
     return e !== g && (t.includes(m._.GORE) ? null == e || e < n : null == e);
 }

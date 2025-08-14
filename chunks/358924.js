@@ -1,4 +1,4 @@
-n.d(t, { Z: () => el }), n(388685);
+n.d(t, { Z: () => ei }), n(388685);
 var r,
     i = n(255367),
     l = n(73800),
@@ -43,13 +43,9 @@ var r,
     F = n(599706),
     z = n(981631),
     W = n(388032),
-    Y = n(954275);
-let K = {
-        SMALL: 64,
-        LARGE: 160,
-    },
-    q = [14, 14, 12, 12, 10, 8, 6],
-    X = function (e) {
+    Y = n(84822);
+let K = [14, 14, 12, 12, 10, 8, 6],
+    q = function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
         return (0, i.jsx)(u.Text, {
             className: o()(Y.textContent, t),
@@ -57,7 +53,7 @@ let K = {
             children: e,
         });
     },
-    Q = function (e) {
+    X = function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
         return (0, i.jsx)(u.Text, {
             className: o()(Y.textContent, t),
@@ -65,33 +61,32 @@ let K = {
             children: e,
         });
     },
-    J = (0, p.Z)((e) => {
+    Q = (0, p.Z)((e) => {
         let { message: t } = e;
         return (0, i.jsx)("div", {
             className: Y.__invalid_timestamp,
             children: t,
         });
     }),
-    $ = (e) => {
+    J = (e) => {
         let { children: t } = e;
         return (0, i.jsx)("section", {
             className: Y.section,
             children: t,
         });
     };
-class ee extends l.Component {
+class $ extends l.Component {
     renderTimePlayed() {
-        let e,
-            { activity: t } = this.props,
-            { timestamps: n } = t;
-        return null == n || !(0, _.Z)(t) || (0, O.Z)(t)
+        let { activity: e } = this.props,
+            { timestamps: t } = e;
+        return null == t || !(0, _.Z)(e) || (0, O.Z)(e)
             ? null
-            : Q(
-                  (0, b.Z)(t)
-                      ? (0, i.jsx)(J, { timestamps: n })
+            : X(
+                  (0, b.Z)(e)
+                      ? (0, i.jsx)(Q, { timestamps: t })
                       : (0, i.jsx)(A.ZP, {
-                            start: n.start,
-                            end: n.end,
+                            start: t.start,
+                            end: t.end,
                             location: A.ZP.Locations.USER_ACTIVITY,
                             className: Y.__invalid_playTime,
                         }),
@@ -103,7 +98,7 @@ class ee extends l.Component {
             activity: { assets: r, details: l, state: a, application_id: s },
             getAssetImage: c,
         } = this.props;
-        return (0, i.jsx)($, {
+        return (0, i.jsx)(J, {
             children: (0, i.jsxs)("div", {
                 className: Y.activitySection,
                 children: [
@@ -113,13 +108,13 @@ class ee extends l.Component {
                               children: [
                                   (0, i.jsx)("img", {
                                       alt: null != (e = r.large_text) ? e : "",
-                                      src: c(s, r.large_image, [K.LARGE, K.LARGE]),
+                                      src: c(s, r.large_image, [160, 160]),
                                       className: o()(Y.largeImage, { [Y.largeImageMask]: null != r.small_image }),
                                   }),
                                   null != r.small_image
                                       ? (0, i.jsx)("img", {
                                             alt: null != (t = r.small_text) ? t : "",
-                                            src: c(s, r.small_image, [K.SMALL, K.SMALL]),
+                                            src: c(s, r.small_image, [64, 64]),
                                             className: Y.smallImage,
                                         })
                                       : null,
@@ -135,8 +130,8 @@ class ee extends l.Component {
                           }),
                     (0, i.jsxs)("div", {
                         children: [
-                            X(null != l && "" !== l ? l : W.intl.string(W.t["2TbM/P"])),
-                            null != a ? Q(a) : null,
+                            q(null != l && "" !== l ? l : W.intl.string(W.t["2TbM/P"])),
+                            null != a ? X(a) : null,
                             this.renderTimePlayed(),
                         ],
                     }),
@@ -145,8 +140,8 @@ class ee extends l.Component {
         });
     }
 }
-var et = (((r = et || {}).XBOX = "XBOX"), (r.SPOTIFY = "SPOTIFY"), (r.MULTIPLE = "MULTIPLE"), r);
-let en = (e) => {
+var ee = (((r = ee || {}).XBOX = "XBOX"), (r.SPOTIFY = "SPOTIFY"), (r.MULTIPLE = "MULTIPLE"), r);
+let et = (e) => {
     let t,
         { src: n, onClick: r, onContextMenu: l } = e;
     switch (n) {
@@ -188,8 +183,8 @@ let en = (e) => {
           })
         : t;
 };
-en.Src = et;
-let er = (e) => {
+et.Src = ee;
+let en = (e) => {
     let {
             priorityUser: t,
             title: n,
@@ -244,8 +239,8 @@ let er = (e) => {
         ],
     });
 };
-er.Icon = en;
-let ei = (e) => {
+en.Icon = et;
+let er = (e) => {
     var t,
         n,
         { children: r, className: l } = e,
@@ -321,8 +316,8 @@ let ei = (e) => {
         ),
     });
 };
-(ei.Header = er),
-    (ei.Body = (e) => {
+(er.Header = en),
+    (er.Body = (e) => {
         let { children: t } = e;
         return (0, i.jsx)(T.Z, {
             inset: !0,
@@ -331,18 +326,18 @@ let ei = (e) => {
             children: t,
         });
     }),
-    (ei.Separator = (e) => {
+    (er.Separator = (e) => {
         let { inset: t, className: n } = e;
         return (0, i.jsx)("div", { className: o()(Y.separator, { [Y.inset]: t }, n) });
     }),
-    (ei.VoiceSection = (e) => {
+    (er.VoiceSection = (e) => {
         var t;
         let { guild: n, channel: r, partySize: a, members: s, onChannelContextMenu: c } = e,
             p = l.useRef(null),
             f = (0, C.ZP)(r, !0),
             h = (0, R.EB)(n, 32),
             g = (0, R.gM)(n);
-        return (0, i.jsx)($, {
+        return (0, i.jsx)(J, {
             children: (0, i.jsxs)("div", {
                 className: Y.voiceSection,
                 ref: p,
@@ -365,7 +360,7 @@ let ei = (e) => {
                                           className: Y.voiceSectionNoGuildImageWrapper,
                                           children: (0, i.jsx)("div", {
                                               className: Y.voiceSectionNoGuildImage,
-                                              style: { fontSize: null != (t = q[g.length]) ? t : q[q.length - 1] },
+                                              style: { fontSize: null != (t = K[g.length]) ? t : K[K.length - 1] },
                                               children: g,
                                           }),
                                       }),
@@ -387,7 +382,7 @@ let ei = (e) => {
                         focusProps: { ringTarget: p },
                         children: (0, i.jsxs)("div", {
                             className: Y.voiceSectionDetails,
-                            children: [X(n.name, Y.voiceSectionText), Q(f, Y.voiceSectionText)],
+                            children: [q(n.name, Y.voiceSectionText), X(f, Y.voiceSectionText)],
                         }),
                     }),
                     (0, i.jsx)(F.Z, {
@@ -399,9 +394,9 @@ let ei = (e) => {
             }),
         });
     }),
-    (ei.GameSection = (e) => {
+    (er.GameSection = (e) => {
         let { icon: t, name: n, partySize: r, members: l } = e;
-        return (0, i.jsx)($, {
+        return (0, i.jsx)(J, {
             children: (0, i.jsxs)("div", {
                 className: Y.gameSection,
                 children: [
@@ -413,7 +408,7 @@ let ei = (e) => {
                           })
                         : null,
                     (0, i.jsxs)("div", {
-                        children: [X(n), Q(W.intl.formatToPlainString(W.t.C4WXvb, { memberCount: r.totalSize }))],
+                        children: [q(n), X(W.intl.formatToPlainString(W.t.C4WXvb, { memberCount: r.totalSize }))],
                     }),
                     (0, i.jsx)(F.Z, {
                         partySize: r,
@@ -423,23 +418,23 @@ let ei = (e) => {
             }),
         });
     }),
-    (ei.RichPresenceSection = ee),
-    (ei.XboxSection = (e) => {
+    (er.RichPresenceSection = $),
+    (er.XboxSection = (e) => {
         let { title: t } = e;
-        return (0, i.jsx)($, {
+        return (0, i.jsx)(J, {
             children: (0, i.jsxs)("div", {
                 className: Y.xboxSection,
                 children: [
                     (0, i.jsx)(G.Z, { className: Y.xboxSectionIcon }),
                     (0, i.jsxs)("div", {
                         className: Y.__invalid_xboxSectionDetails,
-                        children: [X(t), Q(W.intl.string(W.t["JG9r+/"]))],
+                        children: [q(t), X(W.intl.string(W.t["JG9r+/"]))],
                     }),
                 ],
             }),
         });
     }),
-    (ei.SpotifySection = (e) => {
+    (er.SpotifySection = (e) => {
         var t;
         let {
             activity: { assets: n, details: r, state: l, application_id: a },
@@ -448,7 +443,7 @@ let ei = (e) => {
             isSolo: d,
             getAssetImage: p,
         } = e;
-        return (0, i.jsx)($, {
+        return (0, i.jsx)(J, {
             children: (0, i.jsxs)("div", {
                 className: Y.spotifySection,
                 children: [
@@ -458,7 +453,7 @@ let ei = (e) => {
                               children: [
                                   (0, i.jsx)("img", {
                                       alt: null != (t = n.large_text) ? t : "",
-                                      src: p(a, n.large_image, [K.LARGE, K.LARGE]),
+                                      src: p(a, n.large_image, [160, 160]),
                                       className: o()(Y.largeImage, Y.borderRadius0, {
                                           [Y.largeImageMask]: null != n.small_image,
                                       }),
@@ -473,7 +468,7 @@ let ei = (e) => {
                           })
                         : (0, i.jsx)("div", {}),
                     (0, i.jsxs)("div", {
-                        children: [null != r ? X(r) : null, null != l ? Q(l) : null],
+                        children: [null != r ? q(r) : null, null != l ? X(l) : null],
                     }),
                     (0, i.jsx)(F.Z, {
                         minAvatarsShown: d ? 2 : 1,
@@ -484,7 +479,7 @@ let ei = (e) => {
             }),
         });
     }),
-    (ei.TwitchSection = (e) => {
+    (er.TwitchSection = (e) => {
         let t,
             { activity: r, user: l, getAssetImage: a, guildId: s } = e,
             { name: c, details: d, assets: p, application_id: f } = r;
@@ -512,7 +507,7 @@ let ei = (e) => {
                 }),
             });
         }
-        return (0, i.jsxs)($, {
+        return (0, i.jsxs)(J, {
             children: [
                 (0, i.jsxs)("div", {
                     className: o()({
@@ -526,7 +521,7 @@ let ei = (e) => {
                             className: Y.twitchSectionIcon,
                         }),
                         (0, i.jsxs)("div", {
-                            children: [X(c), null != d ? Q(d) : null],
+                            children: [q(c), null != d ? X(d) : null],
                         }),
                         null != l
                             ? (0, i.jsx)(u.qEK, {
@@ -542,7 +537,7 @@ let ei = (e) => {
             ],
         });
     }),
-    (ei.ApplicationStreamingSection = (e) => {
+    (er.ApplicationStreamingSection = (e) => {
         var t, n;
         let { activity: r, user: l, applicationStream: a, onPreviewClick: o, guildId: c } = e,
             d = (0, s.e7)([k.Z], () => k.Z.getChannel(a.channelId)),
@@ -564,7 +559,7 @@ let ei = (e) => {
                 ],
             }),
             g = null != (n = null == (t = (0, y.Z)(r, a)) ? void 0 : t.activityText) ? n : W.intl.string(W.t.eXan7O);
-        return (0, i.jsxs)($, {
+        return (0, i.jsxs)(J, {
             children: [
                 (0, i.jsxs)("div", {
                     className: Y.applicationStreamingSection,
@@ -576,7 +571,7 @@ let ei = (e) => {
                             className: Y.applicationStreamingAvatar,
                         }),
                         (0, i.jsxs)("div", {
-                            children: [X(H.ZP.getName(l)), Q(g)],
+                            children: [q(H.ZP.getName(l)), X(g)],
                         }),
                         (0, i.jsx)(S.ZP, { size: S.ZP.Sizes.SMALL }),
                     ],
@@ -585,7 +580,7 @@ let ei = (e) => {
             ],
         });
     }),
-    (ei.EmbeddedActivitySection = (e) => {
+    (er.EmbeddedActivitySection = (e) => {
         let { activity: t, channel: n, guildId: r, participants: a } = e,
             [o, c] = l.useState(null),
             d = t.application_id;
@@ -608,7 +603,7 @@ let ei = (e) => {
         if (null == b) return null;
         let _ = null != t.created_at && t.created_at > 0 ? { start: t.created_at } : void 0,
             O = (0, V.xF)(b.id, o, 300);
-        return (0, i.jsxs)($, {
+        return (0, i.jsxs)(J, {
             children: [
                 (0, i.jsxs)("div", {
                     className: Y.embeddedActivityTopRow,
@@ -631,7 +626,7 @@ let ei = (e) => {
                                   children: (0, i.jsx)(u.Text, {
                                       color: "text-muted",
                                       variant: "text-sm/normal",
-                                      children: (0, i.jsx)(J, { timestamps: _ }),
+                                      children: (0, i.jsx)(Q, { timestamps: _ }),
                                   }),
                               })
                             : null,
@@ -679,4 +674,4 @@ let ei = (e) => {
             ],
         });
     });
-let el = ei;
+let ei = er;

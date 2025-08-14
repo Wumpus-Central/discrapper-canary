@@ -1,8 +1,8 @@
-s.d(n, { Z: () => i });
-var e = s(287734),
-    r = s(592125),
-    a = s(894257);
-function i() {
-    let t = r.Z.getDMFromUserId(a.I);
-    null != t && e.default.selectPrivateChannel(t);
+e.d(n, { Z: () => s });
+var r = e(287734),
+    i = e(592125),
+    a = e(894257);
+function s() {
+    let t = i.Z.getDMFromUserId(a.I);
+    null != t && r.default.selectPrivateChannel(t);
 }

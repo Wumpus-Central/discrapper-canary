@@ -32,8 +32,8 @@ var r = n(255367),
     L = n(10718),
     x = n(998698),
     M = n(895924),
-    j = n(581364),
-    k = n(667204),
+    k = n(581364),
+    j = n(667204),
     U = n(104919),
     G = n(541716),
     B = n(752305),
@@ -65,7 +65,7 @@ var r = n(255367),
     ef = n(400023),
     e_ = n(64078),
     ep = n(351780),
-    eh = n(339478),
+    eh = n(843693),
     em = n(217871),
     eg = n(139577),
     eE = n(247944),
@@ -86,8 +86,8 @@ var r = n(255367),
     eL = n(271383),
     ex = n(375954),
     eM = n(496675),
-    ej = n(944486),
-    ek = n(117530),
+    ek = n(944486),
+    ej = n(117530),
     eU = n(594174),
     eG = n(626135),
     eB = n(934415),
@@ -111,8 +111,8 @@ var r = n(255367),
     e5 = n(981631),
     e4 = n(959517),
     e6 = n(388032),
-    e8 = n(149771),
-    e7 = n(793398);
+    e8 = n(97009),
+    e7 = n(180376);
 function e9(e, t, n) {
     return (
         t in e
@@ -225,7 +225,7 @@ class tc extends i.PureComponent {
     handleRecallLastCommand(e) {
         if (null == e.interactionData) return;
         let { channel: t } = this.props,
-            { commandKey: n, interactionOptions: r } = (0, j.XA)(e.interactionData),
+            { commandKey: n, interactionOptions: r } = (0, k.XA)(e.interactionData),
             { command: i, application: o } = L.Xq(
                 {
                     channel: t,
@@ -391,7 +391,7 @@ class tc extends i.PureComponent {
                     case e5.yXg.ARROW_UP:
                         if (i || o) return;
                         if ((e.preventDefault(), t))
-                            ek.Z.getUploadCount(r.id, ew.d.ChannelMessage) > 0
+                            ej.Z.getUploadCount(r.id, ew.d.ChannelMessage) > 0
                                 ? eF.S.dispatchToLastSubscribed(e5.CkL.FOCUS_ATTACHMENT_AREA)
                                 : eF.S.dispatchToLastSubscribed(e5.CkL.FOCUS_MESSAGES, { atEnd: !0 });
                         else {
@@ -410,7 +410,7 @@ class tc extends i.PureComponent {
                     case e5.yXg.ESCAPE:
                         if (i || e.target !== e.currentTarget) return;
                         if ((e.preventDefault(), t)) return void (0, O.rf)();
-                        if (ek.Z.getUploadCount(r.id, ew.d.ChannelMessage) > 0)
+                        if (ej.Z.getUploadCount(r.id, ew.d.ChannelMessage) > 0)
                             return void m.Z.clearAll(r.id, ew.d.ChannelMessage);
                 }
                 null == n || n(e, o);
@@ -514,7 +514,7 @@ class tc extends i.PureComponent {
                             });
                         (0, eQ.SC)(o);
                     }
-                    let n = await (0, k.Z)({
+                    let n = await (0, j.Z)({
                         command: o,
                         optionValues: null != a ? a : {},
                         context: {
@@ -618,7 +618,7 @@ class tc extends i.PureComponent {
                                     ("" !== t &&
                                         "" === ew.Z.getDraft(d.id, ew.d.ChannelMessage) &&
                                         _.Z.saveDraft(d.id, t, ew.d.ChannelMessage),
-                                    0 === ek.Z.getUploadCount(d.id, ew.d.ChannelMessage) &&
+                                    0 === ej.Z.getUploadCount(d.id, ew.d.ChannelMessage) &&
                                         m.Z.setUploads({
                                             channelId: d.id,
                                             uploads: n,
@@ -743,9 +743,9 @@ class tu extends i.PureComponent {
                 messagesTypingGradient: L,
                 isChatInputBottomAligned: x,
                 showLinkedLobbyApplicationLoadingIndicator: M,
-                announcementComposerEnabled: j,
+                announcementComposerEnabled: k,
             } = this.props,
-            { textAreaFocused: k, textAreaHighlighted: U } = this.state,
+            { textAreaFocused: j, textAreaHighlighted: U } = this.state,
             B = d === G.Ie.SIDEBAR;
         n =
             B && i.type === e5.d4z.GUILD_VOICE
@@ -770,7 +770,7 @@ class tu extends i.PureComponent {
                         children: (0, r.jsx)(tl, {
                             ref: this.refToChannelTextAreaFormComponent,
                             refInstance: this.containerDomRef,
-                            focused: k,
+                            focused: j,
                             highlighted: U,
                             channel: i,
                             guild: o,
@@ -789,7 +789,7 @@ class tu extends i.PureComponent {
                             renderAppLauncherButton: this.renderAppLauncherButton,
                             renderAppCommandButton: this.renderAppCommandButton,
                             pendingScheduledMessage: N,
-                            announcementComposerEnabled: j,
+                            announcementComposerEnabled: k,
                         }),
                     }),
                     this.renderAppCommandButton(),
@@ -974,7 +974,7 @@ class tu extends i.PureComponent {
                     switch (e.which) {
                         case e5.yXg.ARROW_LEFT:
                             n === G.Ie.SIDEBAR &&
-                                eF.S.dispatch(e5.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: ej.Z.getChannelId() });
+                                eF.S.dispatch(e5.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: ek.Z.getChannelId() });
                             return;
                         case e5.yXg.ARROW_RIGHT:
                             n === G.Ie.NORMAL &&
@@ -1093,8 +1093,8 @@ let td = i.memo(function (e) {
         {
             isInitialLoading: x,
             primaryEntryPointCommand: M,
-            isProfileFetching: j,
-            wasProfileFetching: k,
+            isProfileFetching: k,
+            wasProfileFetching: j,
             applicationId: U,
             channelId: G,
             commands: B,
@@ -1105,15 +1105,15 @@ let td = i.memo(function (e) {
             },
         });
     (0, S.Z)({
-        isProfileFetching: j,
-        wasProfileFetching: k,
+        isProfileFetching: k,
+        wasProfileFetching: j,
         applicationId: U,
         channelId: G,
         commands: B,
     });
     let Z = i.useRef(null),
         F = (0, d.e7)([C.Z], () => C.Z.appDMChannelsWithFailedLoads().has(t.id)),
-        V = (0, d.e7)([ej.Z], () => ej.Z.getVoiceChannelId()),
+        V = (0, d.e7)([ek.Z], () => ek.Z.getVoiceChannelId()),
         H = (0, d.e7)([eP.Z], () => eP.Z.getChannel(V)),
         Y = (0, d.e7)([eU.default], () => (t.type !== e5.d4z.DM ? null : eU.default.getUser(t.getRecipientId()))),
         z = (0, d.e7)([eh.ZP, eC.default], () => eh.ZP.getUserCombo(eC.default.getId(), t.id)),

@@ -22,7 +22,7 @@ var r = n(255367),
     I = n(474936),
     T = n(981631),
     S = n(388032),
-    A = n(255644),
+    A = n(144867),
     N = n(769860);
 function C(e, t) {
     if (null == e) return {};
@@ -70,8 +70,8 @@ function w(e) {
             analyticsSource: L,
             analyticsLocation: x,
             body: M,
-            context: j,
-            glowUp: k,
+            context: k,
+            glowUp: j,
             modalClassName: U,
             modalContentClassName: G,
             artContainerClassName: B,
@@ -269,11 +269,11 @@ function w(e) {
                                         ? o
                                         : I.Si.TIER_2,
                                 headingText: R,
-                                context: j,
+                                context: k,
                                 analyticsLocationObject: x,
                                 discountOffer: eg,
                                 trialOffer: em,
-                                children: k,
+                                children: j,
                             })
                           : (0, r.jsxs)("div", {
                                 className: A.contentContainer,

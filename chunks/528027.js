@@ -6,8 +6,8 @@ var i = n(120356),
     o = n(596454),
     u = n(377171),
     a = n(403910),
-    c = n(549631),
-    s = n(352537);
+    s = n(549631),
+    c = n(221237);
 function d(e) {
     var t;
     let { guildId: n, emojiId: i, emojiName: d, className: f } = e,
@@ -17,10 +17,10 @@ function d(e) {
               emojiId: null == m ? void 0 : m.id,
               emojiName: null != d ? d : null == m ? void 0 : m.name,
               animated: null != (t = null == m ? void 0 : m.animated) && t,
-              className: l()(s.emojiIcon, f),
+              className: l()(c.emojiIcon, f),
           })
-        : (0, r.jsx)(c.Z, {
-              className: l()(s.emojiIcon, f),
+        : (0, r.jsx)(s.Z, {
+              className: l()(c.emojiIcon, f),
               color: u.Z.CREATOR_REVENUE_LOCKED_CHANNEL_ICON,
           });
 }

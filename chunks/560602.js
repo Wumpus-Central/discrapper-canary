@@ -1,4 +1,4 @@
-l.d(t, { default: () => b }), l(388685), l(539854);
+l.d(t, { default: () => x }), l(388685), l(539854);
 var r = l(255367),
     n = l(73800),
     i = l(149765),
@@ -13,19 +13,11 @@ var r = l(255367),
     h = l(700785),
     m = l(993259),
     w = l(388032),
-    v = l(441837);
+    v = l(628903);
 function y(e) {
     return (t) => null != t && !(0, d.pM)(e, t);
 }
-let g = (e, t, l) => {
-        let r = h.Uu(l, t),
-            [i, a] = n.useState(r);
-        return {
-            shouldEveryonePost: i,
-            setShouldEveryonePost: a,
-        };
-    },
-    x = (e) => {
+let g = (e) => {
         let { rolesRow: t } = e;
         return (0, r.jsx)("div", {
             "aria-hidden": !0,
@@ -33,24 +25,31 @@ let g = (e, t, l) => {
             style: { backgroundColor: null == t ? void 0 : t.colorString },
         });
     },
-    b = (e) => {
-        let { guild: t, channel: l, permission: b, onClose: j, transitionState: O, currentSelectedRoles: S = [] } = e,
-            { shouldEveryonePost: k, setShouldEveryonePost: C } = g(t, l, b),
-            N = (function (e) {
+    x = (e) => {
+        let { guild: t, channel: l, permission: x, onClose: b, transitionState: j, currentSelectedRoles: O = [] } = e,
+            { shouldEveryonePost: S, setShouldEveryonePost: k } = ((e, t, l) => {
+                let r = h.Uu(l, t),
+                    [i, a] = n.useState(r);
+                return {
+                    shouldEveryonePost: i,
+                    setShouldEveryonePost: a,
+                };
+            })(0, l, x),
+            C = (function (e) {
                 let t = (0, a.e7)([f.Z], () => f.Z.getSortedRoles(e.id));
                 return n.useMemo(() => (0, m.K)(t).filter((t) => y(e.id)(t.id)), [e, t]);
             })(t),
-            H = N.reduce((e, t) => (e.set(t.id, t), e), new Map()),
-            E = N.map((e) => ({
+            N = C.reduce((e, t) => (e.set(t.id, t), e), new Map()),
+            H = C.map((e) => ({
                 key: e.key,
                 label: e.name,
                 value: e.id,
             })),
-            [P, _] = n.useState(S.map((e) => e.id).filter(y(t.id))),
-            [R, Z] = n.useState(!1),
-            [G, K] = n.useState(!1),
-            M = P.length > 0 || k,
-            B = (function (e, t) {
+            [E, P] = n.useState(O.map((e) => e.id).filter(y(t.id))),
+            [_, R] = n.useState(!1),
+            [Z, G] = n.useState(!1),
+            K = E.length > 0 || S,
+            M = (function (e, t) {
                 let l = (0, a.e7)([f.Z], () => f.Z.getSortedRoles(e.id));
                 return n.useCallback(
                     (r, n) => {
@@ -118,23 +117,23 @@ let g = (e, t, l) => {
                     [e, l, t],
                 );
             })(t, l),
-            T = async () => {
-                if (!M) return;
-                Z(!0), K(!1);
-                let e = [...P];
-                if (k) {
+            B = async () => {
+                if (!K) return;
+                R(!0), G(!1);
+                let e = [...E];
+                if (S) {
                     let l = (0, p.lV)(t);
                     e.push(l);
                 }
                 try {
-                    await B(b, e), j();
+                    await M(x, e), b();
                 } catch (e) {
-                    K(!0);
+                    G(!0);
                 } finally {
-                    Z(!1);
+                    R(!1);
                 }
             };
-        return R
+        return _
             ? (0, r.jsx)(s.$jN, {})
             : (0, r.jsxs)(o.Modal, {
                   title: w.intl.string(w.t.TFGnmp),
@@ -142,17 +141,17 @@ let g = (e, t, l) => {
                       {
                           variant: "secondary",
                           text: w.intl.string(w.t["ETE/oK"]),
-                          onClick: j,
+                          onClick: b,
                       },
                       {
                           variant: "primary",
                           text: w.intl.string(w.t.R3BPHx),
-                          onClick: T,
-                          disabled: !M,
+                          onClick: B,
+                          disabled: !K,
                       },
                   ],
-                  onClose: j,
-                  transitionState: O,
+                  onClose: b,
+                  transitionState: j,
                   children: [
                       (0, r.jsx)(s.VcW, {
                           closeOnSelect: !1,
@@ -160,20 +159,20 @@ let g = (e, t, l) => {
                           maxVisibleItems: 5,
                           placeholder: w.intl.string(w.t["8kKqCQ"]),
                           multi: !0,
-                          value: P,
-                          options: E,
+                          value: E,
+                          options: H,
                           onChange: (e) => {
-                              _(e);
+                              P(e);
                           },
-                          renderOptionPrefix: (e) => (null != e ? (0, r.jsx)(x, { rolesRow: H.get(e.value) }) : null),
+                          renderOptionPrefix: (e) => (null != e ? (0, r.jsx)(g, { rolesRow: N.get(e.value) }) : null),
                       }),
                       (0, r.jsxs)("div", {
                           className: v.row,
                           children: [
                               (0, r.jsx)(s.j7V, {
-                                  value: k,
+                                  value: S,
                                   hideBorder: !0,
-                                  onChange: C,
+                                  onChange: k,
                                   className: v.switchGroup,
                                   children: w.intl.string(w.t.kPwwAw),
                               }),
@@ -183,7 +182,7 @@ let g = (e, t, l) => {
                               }),
                           ],
                       }),
-                      G
+                      Z
                           ? (0, r.jsx)("div", {
                                 className: v.row,
                                 children: (0, r.jsx)(s.Text, {

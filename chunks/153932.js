@@ -14,7 +14,7 @@ var s = n(255367),
     h = n(974042),
     g = n(981631),
     O = n(388032),
-    f = n(831273);
+    f = n(862998);
 function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -59,8 +59,8 @@ function j(e, t) {
     );
 }
 function y(e) {
-    let { user: t, status: n, ignoredUser: o } = e;
-    let { analyticsLocations: i } = (0, d.ZP)(),
+    let { user: t, status: n, ignoredUser: o } = e,
+        { analyticsLocations: i } = (0, d.ZP)(),
         r = (e) => {
             e.stopPropagation(), c.Z.cancelFriendRequest(t.id, { location: "Spam requests modal" });
         },

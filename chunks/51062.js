@@ -84,7 +84,7 @@ function v(e, t, n) {
                             : null) && t
             );
         }),
-        { canMentionEveryone: j, hidePersonalInformation: k } = (0, o.cj)(
+        { canMentionEveryone: k, hidePersonalInformation: j } = (0, o.cj)(
             [d.Z, f.Z],
             () => ({
                 canMentionEveryone: P.isPrivate() || M || w === l.Ie.RULES_INPUT || d.Z.can(m.Plq.MENTION_EVERYONE, P),
@@ -112,8 +112,8 @@ function v(e, t, n) {
             activeCommandOption: G,
             activeInlineAutocompleteInput: V,
             canMentionUsers: null != (N = null == (v = w.users) ? void 0 : v.allowMentioning) && N,
-            canMentionEveryone: j,
-            hidePersonalInformation: k,
+            canMentionEveryone: k,
+            hidePersonalInformation: j,
             hideMentionDescription: w === l.Ie.RULES_INPUT,
             emojiIntention: w === l.Ie.RULES_INPUT ? g.Hz.COMMUNITY_CONTENT : g.Hz.CHAT,
             currentWord: null != (C = null == Z ? void 0 : Z.word) ? C : "",

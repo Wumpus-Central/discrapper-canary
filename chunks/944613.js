@@ -11,7 +11,7 @@ var i = n(658722),
     d = n(485386),
     f = n(981631),
     _ = n(388032),
-    p = n(171543);
+    p = n(470197);
 let h = function (e) {
     let { className: t, guild: n, roleStyle: i, roleFilter: a, onSelect: h, onClose: m } = e,
         g = (0, l.e7)([d.Z], () => d.Z.getSortedRoles(n.id)),

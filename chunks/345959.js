@@ -9,22 +9,21 @@ e.exports = function (e, r) {
         l,
         u,
         f,
-        b,
-        d = e.numberOfChannels,
-        h = e.sampleRate,
-        p = r.float32 ? 3 : 1;
+        b = e.numberOfChannels,
+        d = e.sampleRate,
+        h = r.float32 ? 3 : 1;
     return (
         (a =
-            2 === d
+            2 === b
                 ? (function (e, t) {
                       for (var r = e.length + t.length, a = new Float32Array(r), n = 0, s = 0; n < r; )
                           (a[n++] = e[s]), (a[n++] = t[s]), s++;
                       return a;
                   })(e.getChannelData(0), e.getChannelData(1))
                 : e.getChannelData(0)),
-        (n = p),
-        (s = h),
-        (l = (o = d) * (c = (i = 3 === p ? 32 : 16) / 8)),
+        (n = h),
+        (s = d),
+        (l = (o = b) * (c = (i = 3 === h ? 32 : 16) / 8)),
         t((f = new DataView((u = new ArrayBuffer(44 + a.length * c)))), 0, "RIFF"),
         f.setUint32(4, 36 + a.length * c, !0),
         t(f, 8, "WAVE"),

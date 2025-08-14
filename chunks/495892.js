@@ -1,4 +1,4 @@
-n.d(t, { Z: () => P }), n(539854), n(388685);
+n.d(t, { Z: () => T }), n(539854), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(392711),
@@ -15,7 +15,7 @@ var r = n(255367),
     f = n(295708),
     b = n(273504),
     x = n(388032),
-    j = n(558009);
+    j = n(260107);
 function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -105,11 +105,10 @@ function O(e) {
               children: l,
           });
 }
-let y = (e, t) => () => t(_(v({}, e), { enabled: !e.enabled })),
-    C = (e) => {
+let y = (e) => {
         e.stopPropagation(), e.preventDefault();
     },
-    N = (e) => {
+    C = (e) => {
         var { className: t, children: n } = e,
             i = (function (e, t) {
                 if (null == e) return {};
@@ -138,9 +137,9 @@ let y = (e, t) => () => t(_(v({}, e), { enabled: !e.enabled })),
                 v(
                     {
                         className: t,
-                        onClick: C,
-                        onMouseDown: C,
-                        onMouseUp: C,
+                        onClick: y,
+                        onMouseDown: y,
+                        onMouseUp: y,
                     },
                     i,
                 ),
@@ -148,12 +147,12 @@ let y = (e, t) => () => t(_(v({}, e), { enabled: !e.enabled })),
             ),
         );
     };
-function I(e) {
+function N(e) {
     var t;
     let { rule: n, onChangeRule: i, onContextMenu: l } = e,
-        s = y(n, i),
+        s = () => i(_(v({}, n), { enabled: !n.enabled })),
         o = (e) => {
-            C(e), l(e);
+            y(e), l(e);
         };
     return (0, r.jsxs)(r.Fragment, {
         children: [
@@ -164,7 +163,7 @@ function I(e) {
                     onChangeRule: i,
                 }),
             }),
-            (0, r.jsxs)(N, {
+            (0, r.jsxs)(C, {
                 className: j.actionContainer,
                 children: [
                     (0, r.jsx)(a.rsf, {
@@ -195,20 +194,20 @@ function I(e) {
         ],
     });
 }
-function E(e) {
+function I(e) {
     return (0, m.r5)(e, m.vT.ALPHA)
         ? (0, r.jsx)(o.Z, { className: j.alphaBetaTag })
         : (0, m.r5)(e, m.vT.BETA)
           ? (0, r.jsx)(c.Z, { className: j.alphaBetaTag })
           : null;
 }
-function S(e) {
+function E(e) {
     let { rule: t, isDefaultRule: n, onContextMenu: s } = e,
         o = (0, p.w)(t.triggerType, t),
         { isLoading: c, saveRule: m } = (0, g.w)(),
         { updateRule: h } = (0, u.pH)(t.guildId),
         [f, b] = i.useState(t.enabled),
-        y = (0, l.throttle)(async (e, n) => {
+        N = (0, l.throttle)(async (e, n) => {
             if ((n.preventDefault(), n.stopPropagation(), !c)) {
                 let e = _(v({}, t), { enabled: !f });
                 b(!f);
@@ -216,8 +215,8 @@ function S(e) {
                 null != n && (h(n), b(n.enabled));
             }
         }, 300),
-        I = (e) => {
-            C(e), s(e);
+        E = (e) => {
+            y(e), s(e);
         };
     if (null == o) return null;
     let { headerText: S, headerSubtext: T, descriptionText: P, icon: w } = o,
@@ -242,7 +241,7 @@ function S(e) {
                         children: [
                             (0, r.jsxs)("div", {
                                 className: j.ruleTextHeader,
-                                children: [S, E(t.triggerType)],
+                                children: [S, I(t.triggerType)],
                             }),
                             (0, r.jsx)(a.Text, {
                                 className: j.ruleSubtextHeader,
@@ -263,12 +262,12 @@ function S(e) {
                     }),
                 ],
             }),
-            (0, r.jsxs)(N, {
+            (0, r.jsxs)(C, {
                 className: j.actionContainer,
                 children: [
                     (0, r.jsx)(a.rsf, {
                         className: j.toggle,
-                        onChange: y,
+                        onChange: N,
                         checked: null != f && f,
                     }),
                     !n &&
@@ -280,7 +279,7 @@ function S(e) {
                                 (0, r.jsx)(
                                     a.P3F,
                                     _(v({}, e), {
-                                        onClick: I,
+                                        onClick: E,
                                         className: j.menuIconButton,
                                         children: (0, r.jsx)(a.Huf, {
                                             size: "md",
@@ -295,7 +294,7 @@ function S(e) {
         ],
     });
 }
-function T(e) {
+function S(e) {
     let { triggerType: t, onSetupRule: n } = e,
         l = i.useMemo(() => (0, p.w)(t), [t]);
     if (null == l) return null;
@@ -319,7 +318,7 @@ function T(e) {
                         color: "header-primary",
                         children: (0, r.jsxs)("div", {
                             className: j.ruleTextHeader,
-                            children: [s, E(t)],
+                            children: [s, I(t)],
                         }),
                     }),
                     (0, r.jsx)(a.Text, {
@@ -330,7 +329,7 @@ function T(e) {
                     (0, r.jsx)(O, { triggerType: t }),
                 ],
             }),
-            (0, r.jsx)(N, {
+            (0, r.jsx)(C, {
                 className: j.actionContainer,
                 children: (0, r.jsx)(a.zxk, {
                     variant: "primary",
@@ -342,7 +341,7 @@ function T(e) {
         ],
     });
 }
-function P(e) {
+function T(e) {
     let {
             rule: t,
             triggerType: i,
@@ -361,7 +360,7 @@ function P(e) {
                     return (n) => (0, r.jsx)(e, v({ rule: t }, n));
                 }));
         },
-        g = (0, r.jsx)(T, {
+        g = (0, r.jsx)(S, {
             triggerType: i,
             onSetupRule: d,
         });
@@ -369,12 +368,12 @@ function P(e) {
         null == t ||
             c ||
             (g = l
-                ? (0, r.jsx)(I, {
+                ? (0, r.jsx)(N, {
                       rule: t,
                       onChangeRule: u,
                       onContextMenu: m,
                   })
-                : (0, r.jsx)(S, {
+                : (0, r.jsx)(E, {
                       rule: t,
                       isDefaultRule: o,
                       onContextMenu: m,

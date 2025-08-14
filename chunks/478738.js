@@ -1,25 +1,23 @@
-n.d(t, { Z: () => u }), n(539854);
+n.d(t, { Z: () => c }), n(539854);
 var r,
     i,
-    l,
-    o = n(442837),
-    s = n(570140);
+    l = n(442837),
+    o = n(570140);
 let a = [];
-class c extends (r = o.ZP.Store) {
+class s extends (r = l.ZP.Store) {
     getGeoRestrictedGuilds() {
         return a;
     }
 }
-(l = "GeoRestrictedGuildStore"),
-    (i = "displayName") in c
-        ? Object.defineProperty(c, i, {
-              value: l,
-              enumerable: !0,
-              configurable: !0,
-              writable: !0,
-          })
-        : (c[i] = l);
-let u = new c(s.Z, {
+(i = "displayName") in s
+    ? Object.defineProperty(s, i, {
+          value: "GeoRestrictedGuildStore",
+          enumerable: !0,
+          configurable: !0,
+          writable: !0,
+      })
+    : (s[i] = "GeoRestrictedGuildStore");
+let c = new s(o.Z, {
     CONNECTION_OPEN: function (e) {
         a = e.geoRestrictedGuilds;
     },

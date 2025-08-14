@@ -1,4 +1,4 @@
-n.d(t, { Z: () => k }), n(388685);
+n.d(t, { Z: () => j }), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(442837),
@@ -25,7 +25,7 @@ var r = n(255367),
     A = n(463031),
     N = n(206583),
     C = n(388032),
-    R = n(822678);
+    R = n(527847);
 function P(e, t, n) {
     return (
         t in e
@@ -80,8 +80,8 @@ function L(e, t) {
 }
 let x = 10,
     M = 15,
-    j = "leaderboard.png";
-function k(e) {
+    k = "leaderboard.png";
+function j(e) {
     let { leaderboard: t, previewMode: n = !1, trackRankingItemInteraction: s } = e,
         f = (0, o.e7)([d.default], () => d.default.getId()),
         _ = (0, o.e7)([u.default], () => u.default.locale),
@@ -237,10 +237,10 @@ function G(e) {
                 ),
             imageOptions: { pixelRatio: 4 },
         }),
-        k = async () => {
+        j = async () => {
             try {
                 let e = await M();
-                await g.ZP.copyImageBlob(e, j), P("copied"), null == E || E(N.xP.COPIED_LEADERBOARD_ROW);
+                await g.ZP.copyImageBlob(e, k), P("copied"), null == E || E(N.xP.COPIED_LEADERBOARD_ROW);
             } catch (e) {
                 P("error");
             }
@@ -341,7 +341,7 @@ function G(e) {
                                 (0, r.jsx)(
                                     a.P3F,
                                     L(w({}, e), {
-                                        onClick: x ? void 0 : k,
+                                        onClick: x ? void 0 : j,
                                         "aria-busy": x,
                                         className: R.copyLinkContainer,
                                         children: x

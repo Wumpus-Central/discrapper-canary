@@ -1,16 +1,16 @@
-n.d(t, { Z: () => f });
+n.d(t, { Z: () => h });
 var r = n(255367);
 n(73800);
 var i = n(442837),
     l = n(239091),
     o = n(246364),
-    s = n(937111),
-    a = n(914010),
+    a = n(937111),
+    s = n(914010),
     c = n(451478),
     u = n(325257),
     d = n(674552),
-    h = n(981631);
-function p(e, t) {
+    p = n(981631);
+function f(e, t) {
     (0, l.jW)(e, async () => {
         let { default: e } = await n.e("6368").then(n.bind(n, 987999));
         return (n) => {
@@ -60,27 +60,27 @@ function p(e, t) {
         };
     });
 }
-function f(e) {
+function h(e) {
     let { guildNode: t } = e,
         n = t.id,
-        l = (0, i.e7)([s.Z], () => s.Z.getRequest(n)),
-        f = (0, i.e7)([s.Z], () => s.Z.getJoinRequestGuild(n), [n]),
+        l = (0, i.e7)([a.Z], () => a.Z.getRequest(n)),
+        h = (0, i.e7)([a.Z], () => a.Z.getJoinRequestGuild(n), [n]),
         g = (0, i.e7)([c.Z], () => c.Z.isFocused()),
-        m = (0, i.e7)([a.Z], () => a.Z.getGuildId());
-    return null == f
+        m = (0, i.e7)([s.Z], () => s.Z.getGuildId());
+    return null == h
         ? null
         : (0, r.jsx)(u.Z, {
               guildNode: t,
-              guild: f,
+              guild: h,
               animatable: g,
               draggable: !1,
               selected: n === m,
               preloadOnClick: !1,
-              contextMenu: p,
+              contextMenu: f,
               lowerBadge:
                   (null == l ? void 0 : l.applicationStatus) === o.wB.REJECTED
                       ? (0, d.jt)({ guildJoinRequestStatus: l.applicationStatus })
                       : void 0,
-              route: h.Z5c.GUILD_MEMBER_VERIFICATION(n),
+              route: p.Z5c.GUILD_MEMBER_VERIFICATION(n),
           });
 }

@@ -23,9 +23,9 @@ var r = n(255367),
     C = n(981631),
     N = n(921944),
     I = n(131085),
-    E = n(195196),
+    E = n(899926),
     S = n(388032),
-    T = n(8498);
+    T = n(616397);
 let P = function () {
     var e, t, n, P;
     (0, S.useSyncMessages)(E.messagesLoader);

@@ -1,7 +1,19 @@
-e.exports = {
-    nav: "nav_b2eddf",
-    navPrev: "navPrev_b2eddf nav_b2eddf",
-    navNext: "navNext_b2eddf nav_b2eddf",
-    obscureWrapper: "obscureWrapper_b2eddf",
-    obscure: "obscure_b2eddf",
-};
+n.d(t, { Z: () => l });
+var r = n(255367);
+n(73800);
+var i = n(481060),
+    o = n(358085),
+    a = n(998502),
+    s = n(388032);
+function l(e, t) {
+    return o.isPlatformEmbedded && (null == e ? void 0 : e.length) !== 0
+        ? (0, r.jsx)(i.sNh, {
+              id: "copy",
+              label: s.intl.string(s.t.OpuAlJ),
+              hint: (0, o.isMac)() ? "\u2318C" : "Ctrl+C",
+              action: () => {
+                  a.ZP.copy(e), null == t || t.focus();
+              },
+          })
+        : null;
+}

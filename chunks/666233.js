@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => j });
 var l = n(255367);
 n(73800);
 var r = n(442837),
@@ -11,13 +11,13 @@ var r = n(442837),
     u = n(196345),
     m = n(707592),
     x = n(388032);
-let h = function (e) {
-    let { guildId: t, formFields: n, user: h, showRequirements: j = !0 } = e;
-    return null == (0, r.e7)([i.default], () => (null != h ? h : i.default.getCurrentUser()))
+let j = function (e) {
+    let { guildId: t, formFields: n, user: j, showRequirements: h = !0 } = e;
+    return null == (0, r.e7)([i.default], () => (null != j ? j : i.default.getCurrentUser()))
         ? null
         : (0, l.jsxs)(l.Fragment, {
               children: [
-                  j &&
+                  h &&
                       (0, l.jsx)(o.Ih, {
                           icon: a.b7C,
                           text: x.intl.string(x.t.v2z4c3),

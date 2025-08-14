@@ -43,9 +43,9 @@ var i = n(255367),
     k = n(747212),
     B = n(210887),
     V = n(131704),
-    U = n(601964),
-    H = n(314897),
-    W = n(388610),
+    H = n(601964),
+    W = n(314897),
+    U = n(388610),
     G = n(430824),
     F = n(496675),
     z = n(903223),
@@ -64,8 +64,8 @@ var i = n(255367),
     er = n(710352),
     es = n(124368),
     ea = n(388032),
-    eo = n(32709),
-    ec = n(881488);
+    eo = n(257294),
+    ec = n(197571);
 function ed(e, t, n) {
     return (
         t in e
@@ -143,8 +143,8 @@ let eg = (0, Z.hQ)(),
         },
     },
     eZ = "AUTOMATIC_RTC_REGION",
-    ew = d.ZP.connectStores([W.Z], () => {
-        let { channel: e, submitting: t } = W.Z.getProps();
+    ew = d.ZP.connectStores([U.Z], () => {
+        let { channel: e, submitting: t } = U.Z.getProps();
         return {
             channel: e,
             submitting: t,
@@ -326,7 +326,7 @@ class eR extends l.PureComponent {
                       ],
                   })
                 : null,
-            H =
+            W =
                 I && M
                     ? (0, i.jsxs)("div", {
                           children: [
@@ -347,7 +347,7 @@ class eR extends l.PureComponent {
                           ],
                       })
                     : null,
-            W = e.isForumLikeChannel()
+            U = e.isForumLikeChannel()
                 ? (0, i.jsxs)("div", {
                       children: [
                           (0, i.jsxs)(m.xJW, {
@@ -660,7 +660,7 @@ class eR extends l.PureComponent {
                           }),
                       })
                     : null,
-            ed = null != O && (0, U.Y2)(O),
+            ed = null != O && (0, H.Y2)(O),
             ej = V.ov.has(e.type)
                 ? (0, i.jsx)("div", {
                       children: (0, i.jsx)(m.j7V, {
@@ -802,8 +802,8 @@ class eR extends l.PureComponent {
                     }),
                     (0, i.jsx)(m.$i$, { className: s()(ec.marginTop40, ec.marginBottom40) }),
                     B,
-                    H,
                     W,
+                    U,
                     G,
                     Y,
                     $,
@@ -1212,7 +1212,7 @@ class eR extends l.PureComponent {
     }
 }
 function e_() {
-    let { errors: e, channel: t, submitting: n, subsection: r } = (0, d.cj)([W.Z], () => W.Z.getProps()),
+    let { errors: e, channel: t, submitting: n, subsection: r } = (0, d.cj)([U.Z], () => U.Z.getProps()),
         s = (0, d.e7)([z.Z], () => {
             var e;
             return z.Z.getRegions(null != (e = null == t ? void 0 : t.getGuildId()) ? e : null);
@@ -1226,7 +1226,7 @@ function e_() {
             canSendMessages: F.Z.can(en.Plq.SEND_MESSAGES, t),
         })),
         m = (0, C.ZP)(t),
-        p = H.default.getId(),
+        p = W.default.getId(),
         f = (0, I.v)(),
         x = null == t ? void 0 : t.id,
         j = (0, v.ts)(t, !1, !0),

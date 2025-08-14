@@ -6,7 +6,7 @@ var r = n(120356),
     a = n(481060),
     l = n(313201),
     o = n(36703),
-    c = n(829749);
+    c = n(684554);
 let d = (0, l.hQ)();
 function u(e) {
     let { volume: t, title: n, description: r, label: l, onVolumeChange: u, refreshStyles: m = !1 } = e;

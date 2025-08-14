@@ -16,7 +16,7 @@ var r = t(255367),
     g = t(110223),
     N = t(981631),
     p = t(388032),
-    j = t(540215);
+    j = t(623146);
 function E(e) {
     let { channelId: n, userId: t, transitionState: E, onClose: C } = e,
         k = s.useRef(!1),

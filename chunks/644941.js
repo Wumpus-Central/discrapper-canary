@@ -1,4 +1,4 @@
-r.d(t, { default: () => X }), r(388685), r(49124);
+r.d(t, { default: () => Y }), r(388685), r(49124);
 var n = r(255367),
     a = r(73800),
     i = r(120356),
@@ -37,7 +37,7 @@ var n = r(255367),
     Z = r(978313),
     R = r(206583),
     z = r(388032),
-    F = r(110568);
+    F = r(226788);
 let H = () =>
     (0, n.jsxs)("div", {
         className: F.gameBadge,
@@ -240,127 +240,126 @@ function B(e) {
         ],
     });
 }
-let Y = (e) => e.filter(S.z6).slice(0, 5),
-    X = (e) => {
-        var t;
-        let { applicationId: r, source: i, sourceUserId: o, transitionState: s, onClose: c, appContext: p } = e,
-            { clientThemesClassName: b } = (0, x.ZP)(),
-            y = (0, d.e7)([O.default], () => O.default.locale),
-            _ = a.useMemo(() => (0, w.fP)(), []),
-            I = (0, d.Wu)([E.Z], () => {
-                var e;
-                return (null != (e = E.Z.getSimilarGames(r)) ? e : []).slice(0, 25);
-            }),
-            [S, C] = a.useState(null),
-            k = (0, N.N)(r),
-            [A, G] = a.useState(null),
-            T = (0, f.q)(r),
-            M = (0, d.e7)([h.Z], () => h.Z.getGame(r)),
-            D = null != (t = null == M ? void 0 : M.name) ? t : null == T ? void 0 : T.name,
-            L = (e, t) => {
-                var n;
-                (0, w.UE)({
-                    gameName: null != D ? D : "",
-                    applicationId: r,
-                    action: e,
-                    similarGameId: t,
-                    viewId: _,
-                    officialGuildId: null == A || null == (n = A.guild) ? void 0 : n.id,
-                });
-            };
-        return ((0, g.ZP)(() => {
-            (0, w.IS)({
-                source: i,
-                viewId: _,
-                applicationId: r,
-                gameName: null != D ? D : "",
-                authorId: o,
-            }),
-                (0, j.Jn)();
-        }),
-        (0, f.Z)(I),
-        a.useEffect(() => {
-            y.startsWith("en") ||
-                (null == M ? void 0 : M.summaryLocalized) != null ||
-                m.Z.getDetectableGamesSupplemental([r], { forceFetch: !0 });
-        }, [r, null == M ? void 0 : M.summaryLocalized, y]),
-        a.useEffect(() => {
-            (async () => {
-                if (0 === I.length) {
-                    C(null);
-                    try {
-                        await (0, P.i)(r);
-                    } catch (e) {
-                        C(e);
-                    }
-                }
-            })();
-        }, [r, I]),
-        (0, g.ZP)(() => () => {
+let Y = (e) => {
+    var t;
+    let { applicationId: r, source: i, sourceUserId: o, transitionState: s, onClose: c, appContext: p } = e,
+        { clientThemesClassName: b } = (0, x.ZP)(),
+        y = (0, d.e7)([O.default], () => O.default.locale),
+        _ = a.useMemo(() => (0, w.fP)(), []),
+        I = (0, d.Wu)([E.Z], () => {
             var e;
-            let t = Date.now(),
-                n = k.map((e) => {
-                    let r = (0, v.kr)(e) ? (0, v.T_)(e, t) : (0, v.GL)(e, y);
-                    return JSON.stringify({
-                        item_id: e.id,
-                        trait: e.traits,
-                        time_played: r,
-                    });
-                });
-            (0, w.wz)({
-                viewId: _,
-                applicationId: r,
-                gameName: null != D ? D : "",
-                playedFriendIds: k.map((e) => e.author_id),
-                playedFriendsData: n,
-                similarGames: Y(I),
-                officialGuildId: null == A || null == (e = A.guild) ? void 0 : e.id,
-            });
+            return (null != (e = E.Z.getSimilarGames(r)) ? e : []).slice(0, 25);
         }),
-        null == M || null == T)
-            ? null
-            : (0, n.jsx)(u.Y0X, {
-                  transitionState: s,
-                  size: u.CgR.DYNAMIC,
-                  className: l()(b, F.gameProfileModal),
-                  parentComponent: "GameProfileModal",
-                  children: (0, n.jsxs)(u.Ttm, {
-                      orientation: "auto",
-                      children: [
-                          (0, n.jsx)(W, {
-                              detectedGame: M,
-                              application: T,
-                              entries: k,
-                              viewId: _,
-                              trackAction: L,
+        [C, k] = a.useState(null),
+        A = (0, N.N)(r),
+        [G, T] = a.useState(null),
+        M = (0, f.q)(r),
+        D = (0, d.e7)([h.Z], () => h.Z.getGame(r)),
+        L = null != (t = null == D ? void 0 : D.name) ? t : null == M ? void 0 : M.name,
+        Z = (e, t) => {
+            var n;
+            (0, w.UE)({
+                gameName: null != L ? L : "",
+                applicationId: r,
+                action: e,
+                similarGameId: t,
+                viewId: _,
+                officialGuildId: null == G || null == (n = G.guild) ? void 0 : n.id,
+            });
+        };
+    return ((0, g.ZP)(() => {
+        (0, w.IS)({
+            source: i,
+            viewId: _,
+            applicationId: r,
+            gameName: null != L ? L : "",
+            authorId: o,
+        }),
+            (0, j.Jn)();
+    }),
+    (0, f.Z)(I),
+    a.useEffect(() => {
+        y.startsWith("en") ||
+            (null == D ? void 0 : D.summaryLocalized) != null ||
+            m.Z.getDetectableGamesSupplemental([r], { forceFetch: !0 });
+    }, [r, null == D ? void 0 : D.summaryLocalized, y]),
+    a.useEffect(() => {
+        (async () => {
+            if (0 === I.length) {
+                k(null);
+                try {
+                    await (0, P.i)(r);
+                } catch (e) {
+                    k(e);
+                }
+            }
+        })();
+    }, [r, I]),
+    (0, g.ZP)(() => () => {
+        var e;
+        let t = Date.now(),
+            n = A.map((e) => {
+                let r = (0, v.kr)(e) ? (0, v.T_)(e, t) : (0, v.GL)(e, y);
+                return JSON.stringify({
+                    item_id: e.id,
+                    trait: e.traits,
+                    time_played: r,
+                });
+            });
+        (0, w.wz)({
+            viewId: _,
+            applicationId: r,
+            gameName: null != L ? L : "",
+            playedFriendIds: A.map((e) => e.author_id),
+            playedFriendsData: n,
+            similarGames: I.filter(S.z6).slice(0, 5),
+            officialGuildId: null == G || null == (e = G.guild) ? void 0 : e.id,
+        });
+    }),
+    null == D || null == M)
+        ? null
+        : (0, n.jsx)(u.Y0X, {
+              transitionState: s,
+              size: u.CgR.DYNAMIC,
+              className: l()(b, F.gameProfileModal),
+              parentComponent: "GameProfileModal",
+              children: (0, n.jsxs)(u.Ttm, {
+                  orientation: "auto",
+                  children: [
+                      (0, n.jsx)(W, {
+                          detectedGame: D,
+                          application: M,
+                          entries: A,
+                          viewId: _,
+                          trackAction: Z,
+                      }),
+                      (0, n.jsx)(u.y5t, {
+                          children: (0, n.jsxs)("div", {
+                              className: l()(F.content, F.mainContent),
+                              children: [
+                                  (0, n.jsx)(U, {
+                                      detectedGame: D,
+                                      application: M,
+                                      entries: A,
+                                      officialGuildInvite: G,
+                                      similarGames: I,
+                                      similarGamesError: C,
+                                      onClose: c,
+                                      viewId: _,
+                                      trackAction: Z,
+                                  }),
+                                  (0, n.jsx)(B, {
+                                      detectedGame: D,
+                                      setOfficialGuildInvite: T,
+                                      trackAction: Z,
+                                      onClose: c,
+                                      appContext: p,
+                                      applicationId: r,
+                                  }),
+                              ],
                           }),
-                          (0, n.jsx)(u.y5t, {
-                              children: (0, n.jsxs)("div", {
-                                  className: l()(F.content, F.mainContent),
-                                  children: [
-                                      (0, n.jsx)(U, {
-                                          detectedGame: M,
-                                          application: T,
-                                          entries: k,
-                                          officialGuildInvite: A,
-                                          similarGames: I,
-                                          similarGamesError: S,
-                                          onClose: c,
-                                          viewId: _,
-                                          trackAction: L,
-                                      }),
-                                      (0, n.jsx)(B, {
-                                          detectedGame: M,
-                                          setOfficialGuildInvite: G,
-                                          trackAction: L,
-                                          onClose: c,
-                                          appContext: p,
-                                          applicationId: r,
-                                      }),
-                                  ],
-                              }),
-                          }),
-                      ],
-                  }),
-              });
-    };
+                      }),
+                  ],
+              }),
+          });
+};

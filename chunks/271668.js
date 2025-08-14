@@ -26,14 +26,14 @@ var r = n(255367),
     N = n(689079),
     C = n(981631),
     R = n(388032),
-    P = n(608559),
+    P = n(57507),
     w = n(239840);
 let D = 512,
     L = 7,
     x = 56,
     M = 16,
-    j = 32,
-    k = 20,
+    k = 32,
+    j = 20,
     U = 420,
     G = [8, 8, 0, 8],
     B = l().debounce(() => {
@@ -87,11 +87,11 @@ let D = 512,
                         m.Xn.setActiveCategoryIndex(e);
                     }
                 },
-                scrollOffset: k,
+                scrollOffset: j,
                 searchQuery: "",
             }),
             er = (e) => {
-                let t = q.length * (j + M) + (X.reduce((e, t) => e + t.data.length, 0) - (Q ? L : 0)) * x - D;
+                let t = q.length * (k + M) + (X.reduce((e, t) => e + t.data.length, 0) - (Q ? L : 0)) * x - D;
                 Q && e + U > t && ee(), en(e), B(), (l.current = e);
             },
             ei = i.useRef(er);
@@ -278,7 +278,7 @@ let D = 512,
                         rowCount: q.length,
                         rowCountBySection: ea,
                         rowHeight: x,
-                        sectionHeaderHeight: j,
+                        sectionHeaderHeight: k,
                         sectionMarginBottom: eo,
                         ref: H,
                         stickyHeaders: !0,

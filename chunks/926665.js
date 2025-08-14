@@ -1,51 +1,51 @@
-n.r(s), n.d(s, { default: () => j });
-var t = n(255367),
-    l = n(73800),
-    r = n(120356),
-    a = n.n(r),
-    o = n(114858),
-    i = n(873546),
-    c = n(755721),
-    d = n(481060),
-    u = n(169382),
-    f = n(726542),
-    g = n(656649),
-    m = n(981631),
-    h = n(388032),
-    v = n(242752);
-let p = "https://dis.gd/Amazon-Music-Connection",
-    x = null != window.opener;
-function j() {
-    let { type: e } = (0, o.UO)(),
-        s = (0, g.vJ)(e),
-        n = (0, u.l)().get("error-code"),
-        r = l.useCallback(() => {
+l.r(s), l.d(s, { default: () => p });
+var n = l(255367),
+    r = l(73800),
+    t = l(120356),
+    a = l.n(t),
+    i = l(114858),
+    o = l(873546),
+    c = l(755721),
+    d = l(481060),
+    u = l(169382),
+    m = l(726542),
+    f = l(656649),
+    g = l(981631),
+    h = l(388032),
+    v = l(78713);
+let x = "https://dis.gd/Amazon-Music-Connection",
+    j = null != window.opener;
+function p() {
+    let { type: e } = (0, i.UO)(),
+        s = (0, f.vJ)(e),
+        l = (0, u.l)().get("error-code"),
+        t = r.useCallback(() => {
             window.close();
         }, []),
-        j = l.useMemo(() => {
+        p = r.useMemo(() => {
             switch (s) {
-                case m.ABu.AMAZON_MUSIC:
-                    return (0, t.jsx)("div", {
+                case g.ABu.AMAZON_MUSIC:
+                    return (0, n.jsx)("div", {
                         className: a()(v.message, v.details),
-                        children: i.tq
+                        children: o.tq
                             ? h.intl.format(h.t["0EikXl"], {
                                   link: () =>
-                                      (0, t.jsx)(d.eee, {
-                                          href: p,
-                                          children: p,
+                                      (0, n.jsx)(d.eee, {
+                                          href: x,
+                                          children: x,
                                       }),
                               })
                             : h.intl.format(h.t.hKHZhI, {
                                   link: () =>
-                                      (0, t.jsx)(d.eee, {
-                                          href: p,
-                                          children: p,
+                                      (0, n.jsx)(d.eee, {
+                                          href: x,
+                                          children: x,
                                       }),
                               }),
                     });
-                case m.ABu.YOUTUBE:
-                    if (n === m.evJ.UNKNOWN_ACCOUNT.toString())
-                        return (0, t.jsx)("div", {
+                case g.ABu.YOUTUBE:
+                    if (l === g.evJ.UNKNOWN_ACCOUNT.toString())
+                        return (0, n.jsx)("div", {
                             className: a()(v.message, v.details),
                             children: h.intl.format(h.t.nQPJdH, {
                                 link: "https://support.google.com/youtube/answer/1646861",
@@ -55,32 +55,32 @@ function j() {
                 default:
                     return null;
             }
-        }, [n, s]);
+        }, [l, s]);
     if (null == s) return null;
-    let b = f.Z.get(s);
-    return (0, t.jsxs)(g.UV, {
+    let N = m.Z.get(s);
+    return (0, n.jsxs)(f.UV, {
         platformType: s,
         children: [
-            (0, t.jsx)("div", {
+            (0, n.jsx)("div", {
                 className: a()(v.message, v.error),
-                children: h.intl.format(h.t.E62dXl, { name: b.name }),
+                children: h.intl.format(h.t.E62dXl, { name: N.name }),
             }),
-            (0, t.jsx)("div", {
+            (0, n.jsx)("div", {
                 className: a()(v.message, v.details),
                 children: h.intl.string(h.t.Ra6lcn),
             }),
-            j,
-            x
-                ? (0, t.jsx)(c.zx, {
+            p,
+            j
+                ? (0, n.jsx)(c.zx, {
                       className: v.btn,
-                      onClick: r,
+                      onClick: t,
                       children: h.intl.string(h.t.i4jeWV),
                   })
                 : null,
-            null != n
-                ? (0, t.jsx)("div", {
+            null != l
+                ? (0, n.jsx)("div", {
                       className: a()(v.message, v.errorDetails),
-                      children: h.intl.format(h.t.LElyIC, { errorCode: n }),
+                      children: h.intl.format(h.t.LElyIC, { errorCode: l }),
                   })
                 : null,
         ],

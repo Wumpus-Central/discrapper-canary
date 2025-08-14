@@ -16,7 +16,7 @@ var i = n(255367),
     b = n(981631),
     x = n(869783),
     _ = n(388032),
-    j = n(554310);
+    j = n(104544);
 function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -92,7 +92,7 @@ function O(e) {
             let { isVideoBackgroundSupported: e, onSelectBackgroundOption: t, selectedBackgroundOption: n } = L.current;
             e ? (0, p.FU)(n, S, { track: !1 }).catch(() => t(null)) : null != n && t(null);
         }, [S]);
-    let M = (e) => {
+    let B = (e) => {
         v(e),
             (0, p.FU)(e, S, { location: w.location })
                 .then(() => A(null))
@@ -115,7 +115,7 @@ function O(e) {
                       canUseCustomBackgrounds: R,
                       customBackgroundOptions: Z,
                       selectedOption: O,
-                      onSelectOption: M,
+                      onSelectOption: B,
                       onUpsellClick: () => {
                           (0, a.ZDy)(async () => {
                               let { default: e } = await n.e("87200").then(n.bind(n, 592163));
@@ -134,7 +134,7 @@ function O(e) {
                           return new Promise(async (i) => {
                               try {
                                   let i = await (0, d.Ff)(e, f.xV.BACKGROUND);
-                                  M(i), (0, m.g5)(i, t.type === x.m.MP4, n), A(null);
+                                  B(i), (0, m.g5)(i, t.type === x.m.MP4, n), A(null);
                               } catch (e) {
                                   A(e.message);
                               }

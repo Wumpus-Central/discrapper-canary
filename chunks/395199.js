@@ -1,19 +1,19 @@
 n.d(t, { Z: () => N }), n(539854), n(388685);
 var l,
     r = n(255367),
-    s = n(73800),
-    i = n(120356),
-    a = n.n(i),
+    i = n(73800),
+    s = n(120356),
+    a = n.n(s),
     o = n(442837),
-    c = n(215569),
-    d = n(481060),
+    d = n(215569),
+    c = n(481060),
     u = n(600164),
     m = n(777789),
     x = n(78839),
     h = n(709054),
     p = n(388032),
-    g = n(313512);
-function f(e, t, n) {
+    g = n(542886);
+function j(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -26,36 +26,36 @@ function f(e, t, n) {
         e
     );
 }
-class j extends s.PureComponent {
+class f extends i.PureComponent {
     render() {
         let { onClose: e } = this.props;
-        return (0, r.jsxs)(d.xBx, {
+        return (0, r.jsxs)(c.xBx, {
             separator: !1,
             justify: u.Z.Justify.BETWEEN,
             children: [
-                (0, r.jsx)(d.X6q, {
+                (0, r.jsx)(c.X6q, {
                     variant: "heading-md/semibold",
                     children: this.props.text,
                 }),
-                null != e ? (0, r.jsx)(d.olH, { onClick: e }) : null,
+                null != e ? (0, r.jsx)(c.olH, { onClick: e }) : null,
             ],
         });
     }
 }
 function C(e) {
-    let { imageClass: t, children: n, error: l, onDismissError: s } = e;
+    let { imageClass: t, children: n, error: l, onDismissError: i } = e;
     return (0, r.jsxs)("div", {
         className: g.content,
         children: [
             (0, r.jsx)("div", { className: a()(g.image, t) }),
             n,
-            (0, r.jsx)(c.W, {
+            (0, r.jsx)(d.W, {
                 children:
                     null != l
-                        ? (0, r.jsx)(d.oXn, {
+                        ? (0, r.jsx)(c.oXn, {
                               className: g.error,
-                              children: (0, r.jsx)(d.kzN, {
-                                  onDismiss: s,
+                              children: (0, r.jsx)(c.kzN, {
+                                  onDismiss: i,
                                   children: l.message,
                               }),
                           })
@@ -72,14 +72,14 @@ let v = (e) => {
         : (0, r.jsxs)("div", {
               className: g.pendingCancellation,
               children: [
-                  (0, r.jsx)(d.Mgn, {
+                  (0, r.jsx)(c.Mgn, {
                       size: "custom",
                       width: 20,
                       height: 20,
                       color: "currentColor",
                       className: g.pendingCancellationIcon,
                   }),
-                  (0, r.jsx)(d.Text, {
+                  (0, r.jsx)(c.Text, {
                       variant: "text-md/normal",
                       className: g.pendingCancellationMessage,
                       children: p.intl.format(p.t.SFpsCA, {
@@ -90,23 +90,23 @@ let v = (e) => {
               ],
           });
 };
-function b(e) {
+function y(e) {
     let {
         imageClass: t,
         blurb: n,
         guild: l,
-        warning: s,
-        error: i,
+        warning: i,
+        error: s,
         onDismissError: a,
         slotCount: o = 1,
-        canceledCount: c = 0,
+        canceledCount: d = 0,
     } = e;
     return (0, r.jsxs)(C, {
         imageClass: t,
-        error: i,
+        error: s,
         onDismissError: a,
         children: [
-            (0, r.jsx)(d.Text, {
+            (0, r.jsx)(c.Text, {
                 variant: "text-md/normal",
                 children: n,
             }),
@@ -115,38 +115,38 @@ function b(e) {
                 guild: l,
                 subscriptionChange: o,
             }),
-            (0, r.jsx)(d.Text, {
+            (0, r.jsx)(c.Text, {
                 variant: "text-md/normal",
-                children: s,
+                children: i,
             }),
-            c > 0 ? (0, r.jsx)(v, { canceledCount: c }) : null,
+            d > 0 ? (0, r.jsx)(v, { canceledCount: d }) : null,
         ],
     });
 }
-class y extends s.PureComponent {
+class b extends i.PureComponent {
     render() {
         let {
             confirmation: e,
             confirmationLabel: t,
             isModifyingSubscription: n,
             onConfirm: l,
-            onCancel: s,
+            onCancel: i,
         } = this.props;
-        return (0, r.jsx)(d.mzw, {
-            children: (0, r.jsxs)(d.hE2, {
+        return (0, r.jsx)(c.mzw, {
+            children: (0, r.jsxs)(c.hE2, {
                 direction: "horizontal-reverse",
                 children: [
-                    (0, r.jsx)(d.zxk, {
+                    (0, r.jsx)(c.zxk, {
                         variant: "primary",
                         text: e,
                         onClick: l,
                         loading: n,
                         "aria-label": t,
                     }),
-                    (0, r.jsx)(d.zxk, {
+                    (0, r.jsx)(c.zxk, {
                         variant: "secondary",
                         text: p.intl.string(p.t["ETE/oK"]),
-                        onClick: s,
+                        onClick: i,
                         disabled: n,
                     }),
                 ],
@@ -154,39 +154,39 @@ class y extends s.PureComponent {
         });
     }
 }
-class S extends (l = s.PureComponent) {
+class S extends (l = i.PureComponent) {
     render() {
         let {
             guild: e,
             header: t,
             blurb: n,
             warning: l,
-            confirmation: i,
+            confirmation: s,
             confirmationLabel: a,
             imageClass: o,
-            error: c,
+            error: d,
             isModifyingSubscription: u,
             onConfirm: m,
             onCancel: x,
             onDismissError: h,
             canceledCount: p,
         } = this.props;
-        return (0, r.jsxs)(s.Fragment, {
+        return (0, r.jsxs)(i.Fragment, {
             children: [
-                (0, r.jsx)(j, { text: t }),
-                (0, r.jsx)(d.hzk, {
-                    children: (0, r.jsx)(b, {
+                (0, r.jsx)(f, { text: t }),
+                (0, r.jsx)(c.hzk, {
+                    children: (0, r.jsx)(y, {
                         guild: e,
                         blurb: n,
                         warning: l,
                         imageClass: o,
-                        error: c,
+                        error: d,
                         onDismissError: h,
                         canceledCount: p,
                     }),
                 }),
-                (0, r.jsx)(y, {
-                    confirmation: i,
+                (0, r.jsx)(b, {
+                    confirmation: s,
                     confirmationLabel: a,
                     isModifyingSubscription: u,
                     onConfirm: m,
@@ -196,54 +196,54 @@ class S extends (l = s.PureComponent) {
         });
     }
 }
-f(S, "Header", j),
-    f(S, "ApplyBody", b),
-    f(S, "TransferBody", function (e) {
+j(S, "Header", f),
+    j(S, "ApplyBody", y),
+    j(S, "TransferBody", function (e) {
         var t, n;
         let {
                 imageClass: l,
-                blurb: i,
+                blurb: s,
                 fromGuilds: a,
                 toGuild: o,
-                error: c,
+                error: d,
                 onDismissError: u,
                 slotCount: x = 1,
-                canceledCount: f = 0,
+                canceledCount: j = 0,
             } = e,
-            j = s.useRef(a),
-            b = null == (t = j.current) ? void 0 : t.length,
-            y =
-                null == (n = j.current)
+            f = i.useRef(a),
+            y = null == (t = f.current) ? void 0 : t.length,
+            b =
+                null == (n = f.current)
                     ? void 0
                     : n.reduce((e, t) => (e.hasOwnProperty(t.id) || (e[t.id] = []), e[t.id].push(t), e), {});
         return (0, r.jsxs)(C, {
             imageClass: l,
-            error: c,
+            error: d,
             onDismissError: u,
             children: [
-                (0, r.jsx)(d.Text, {
+                (0, r.jsx)(c.Text, {
                     variant: "text-md/normal",
-                    children: i,
+                    children: s,
                 }),
-                (0, r.jsx)(d.Text, {
+                (0, r.jsx)(c.Text, {
                     variant: "text-xs/bold",
                     className: g.transferGuildCardHeader,
-                    children: p.intl.format(p.t["5zQYEx"], { guildCount: b }),
+                    children: p.intl.format(p.t["5zQYEx"], { guildCount: y }),
                 }),
-                null != y
-                    ? h.default.keys(y).map((e) =>
+                null != b
+                    ? h.default.keys(b).map((e) =>
                           (0, r.jsx)(
                               m.Z,
                               {
                                   className: g.transferFromGuildCard,
-                                  guild: y[e][0],
-                                  subscriptionChange: -1 * y[e].length,
+                                  guild: b[e][0],
+                                  subscriptionChange: -1 * b[e].length,
                               },
                               e,
                           ),
                       )
                     : null,
-                (0, r.jsx)(d.Text, {
+                (0, r.jsx)(c.Text, {
                     variant: "text-xs/normal",
                     className: g.transferGuildCardHeader,
                     children: p.intl.format(p.t.ct6oxM, { slotCount: x }),
@@ -256,9 +256,9 @@ f(S, "Header", j),
                         subscriptionChange: null != a ? a.length : 1,
                     }),
                 }),
-                f > 0 ? (0, r.jsx)(v, { canceledCount: f }) : null,
+                j > 0 ? (0, r.jsx)(v, { canceledCount: j }) : null,
             ],
         });
     }),
-    f(S, "Footer", y);
+    j(S, "Footer", b);
 let N = S;

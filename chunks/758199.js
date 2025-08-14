@@ -25,7 +25,7 @@ var r = n(255367),
     m = n(914498),
     g = n(217702),
     E = n(388032),
-    b = n(706513);
+    b = n(906376);
 function y(e, t, n) {
     return (
         t in e
@@ -115,8 +115,8 @@ function N(e) {
         onClickBanner: x,
     } = e;
     D = S(D);
-    let { primaryColor: M, secondaryColor: j } = (0, f.Z)(null != C ? C : y),
-        k = "linear-gradient(45deg, ".concat(M, ", ").concat(j, ")"),
+    let { primaryColor: M, secondaryColor: k } = (0, f.Z)(null != C ? C : y),
+        j = "linear-gradient(45deg, ".concat(M, ", ").concat(k, ")"),
         U = (0, s.e7)([d.Z], () => d.Z.useReducedMotion),
         G = i.useRef(!1),
         B = (0, u.O)(
@@ -215,7 +215,7 @@ function N(e) {
                     ],
                 }),
             (0, r.jsxs)("div", {
-                style: { background: k },
+                style: { background: j },
                 children: [
                     (0, r.jsxs)("div", {
                         className: b.contentContainer,

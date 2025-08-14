@@ -23,7 +23,7 @@ var r = n(255367),
     T = n(145807),
     S = n(56744),
     A = n(981631),
-    N = n(433869);
+    N = n(360514);
 function C(e, t, n) {
     return (
         t in e
@@ -107,8 +107,8 @@ function x(e) {
             onClick: L,
             hideSimpleEmbedContent: x = !0,
             channel: M,
-            isGroupStart: j,
-            animateAvatar: k,
+            isGroupStart: k,
+            animateAvatar: j,
             subscribeToComponentDispatch: U,
             renderThreadAccessory: G,
             trackAnnouncementViews: B = !1,

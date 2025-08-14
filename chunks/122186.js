@@ -1,5 +1,5 @@
 n.d(t, {
-    Z: () => b,
+    Z: () => S,
     c: () => j,
 });
 var r = n(255367),
@@ -17,7 +17,7 @@ var r = n(255367),
     p = n(981631),
     x = n(474936),
     g = n(388032),
-    _ = n(200330);
+    _ = n(476215);
 function v(e) {
     var { location: t } = e,
         n = (function (e, t) {
@@ -108,7 +108,7 @@ function j() {
         ],
     });
 }
-function b(e) {
+function S(e) {
     let { message: t, onClose: n, openStreamUpsellModal: i, glow: l = !1 } = e,
         o = {
             section: p.jXE.STREAM_SETTINGS,

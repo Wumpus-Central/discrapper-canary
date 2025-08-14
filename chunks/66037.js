@@ -40,10 +40,17 @@ class o extends r.Component {
               });
     }
     constructor(...e) {
-        var t, a;
         super(...e),
-            (t = "handleOnClick"),
-            (a = () => {
+            (function (e, t, a) {
+                t in e
+                    ? Object.defineProperty(e, t, {
+                          value: a,
+                          enumerable: !0,
+                          configurable: !0,
+                          writable: !0,
+                      })
+                    : (e[t] = a);
+            })(this, "handleOnClick", () => {
                 let { to: e, avoidRouter: t, onClick: a, history: n } = this.props;
                 if (null != a) a();
                 else if (t) {
@@ -51,15 +58,7 @@ class o extends r.Component {
                         a = n.createHref(t);
                     window.location = a;
                 }
-            }),
-            t in this
-                ? Object.defineProperty(this, t, {
-                      value: a,
-                      enumerable: !0,
-                      configurable: !0,
-                      writable: !0,
-                  })
-                : (this[t] = a);
+            });
     }
 }
 let c = (0, i.EN)(o);

@@ -10,7 +10,7 @@ var r = n(255367),
     d = n(626135),
     f = n(981631),
     _ = n(388032),
-    p = n(664643);
+    p = n(105341);
 function h(e) {
     let { guild: t, channel: n, message: h } = e,
         m = u.Z.getGuildId(),

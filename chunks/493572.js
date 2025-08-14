@@ -5,7 +5,7 @@ var i = n(120356),
     o = n.n(i),
     a = n(481060),
     s = n(259580),
-    l = n(628479);
+    l = n(825456);
 function c(e) {
     let { breadcrumb: t, isActiveBreadcrumb: n, isFinalBreadcrumb: i, separatorClassName: c } = e;
     return (0, r.jsxs)(

@@ -1,4 +1,4 @@
-n.d(t, { r: () => O }), n(388685);
+n.d(t, { r: () => A }), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -9,7 +9,7 @@ var r = n(255367),
     u = n(84735),
     d = n(180035),
     f = n(481060),
-    _ = n(163089);
+    _ = n(760042);
 function p(e, t, n) {
     return (
         t in e
@@ -66,28 +66,18 @@ let E = {
         mass: 1,
         tension: 250,
     },
-    b = {
-        X: {
-            TOP: "M5.13231 6.72963L6.7233 5.13864L14.855 13.2704L13.264 14.8614L5.13231 6.72963Z",
-            BOTTOM: "M13.2704 5.13864L14.8614 6.72963L6.72963 14.8614L5.13864 13.2704L13.2704 5.13864Z",
-        },
-        BAR: {
-            TOP: "M6.56666 11.0013L6.56666 8.96683L13.5667 8.96683L13.5667 11.0013L6.56666 11.0013Z",
-            BOTTOM: "M13.5582 8.96683L13.5582 11.0013L6.56192 11.0013L6.56192 8.96683L13.5582 8.96683Z",
-        },
-        CHECK: {
-            TOP: "M7.89561 14.8538L6.30462 13.2629L14.3099 5.25755L15.9009 6.84854L7.89561 14.8538Z",
-            BOTTOM: "M4.08643 11.0903L5.67742 9.49929L9.4485 13.2704L7.85751 14.8614L4.08643 11.0903Z",
-        },
-    };
-function y(e, t, n, i) {
+    b = "M5.13231 6.72963L6.7233 5.13864L14.855 13.2704L13.264 14.8614L5.13231 6.72963Z",
+    y = "M13.2704 5.13864L14.8614 6.72963L6.72963 14.8614L5.13864 13.2704L13.2704 5.13864Z",
+    O = "M6.56666 11.0013L6.56666 8.96683L13.5667 8.96683L13.5667 11.0013L6.56666 11.0013Z",
+    v = "M13.5582 8.96683L13.5582 11.0013L6.56192 11.0013L6.56192 8.96683L13.5582 8.96683Z",
+    I = "M7.89561 14.8538L6.30462 13.2629L14.3099 5.25755L15.9009 6.84854L7.89561 14.8538Z",
+    T = "M4.08643 11.0903L5.67742 9.49929L9.4485 13.2704L7.85751 14.8614L4.08643 11.0903Z";
+function S(e, t, n, i) {
     let o = e.to({
             output: [t, n],
         }),
-        a = i ? [b.X.TOP, b.X.TOP, b.CHECK.TOP, b.CHECK.TOP] : [b.X.TOP, b.BAR.TOP, b.BAR.TOP, b.CHECK.TOP],
-        l = i
-            ? [b.X.BOTTOM, b.X.BOTTOM, b.CHECK.BOTTOM, b.CHECK.BOTTOM]
-            : [b.X.BOTTOM, b.BAR.BOTTOM, b.BAR.BOTTOM, b.CHECK.BOTTOM];
+        a = i ? [b, b, I, I] : [b, O, O, I],
+        l = i ? [y, y, T, T] : [y, v, v, T];
     return (0, r.jsxs)("svg", {
         viewBox: "0 0 20 20",
         fill: "none",
@@ -109,30 +99,30 @@ function y(e, t, n, i) {
         ],
     });
 }
-let O = function (e) {
-    let { id: t, onChange: n, checked: o, disabled: p, className: m, focusProps: b, innerRef: O } = e,
-        { reducedMotion: v } = i.useContext(c.S),
-        I = i.useRef(null),
-        [T, S] = i.useState(!1),
+let A = function (e) {
+    let { id: t, onChange: n, checked: o, disabled: p, className: m, focusProps: b, innerRef: y } = e,
+        { reducedMotion: O } = i.useContext(c.S),
+        v = i.useRef(null),
+        [I, T] = i.useState(!1),
         A = (0, d.d)(l.Z.colors.INTERACTIVE_MUTED).spring(),
         N = (0, d.d)(l.Z.colors.BG_BRAND).spring(),
         { state: C, opacity: R } = (0, f.q_F)(
             {
                 config: E,
                 opacity: p ? 0.5 : 1,
-                state: T ? (o ? 0.7 : 0.3) : +!!o,
+                state: I ? (o ? 0.7 : 0.3) : +!!o,
             },
             "animate-always",
         );
     function P(e) {
-        S(!1), null == n || n(e.currentTarget.checked, e);
+        T(!1), null == n || n(e.currentTarget.checked, e);
     }
     function w(e) {
-        p || e.repeat || ((" " === e.key || "Enter" === e.key) && S(!0));
+        p || e.repeat || ((" " === e.key || "Enter" === e.key) && T(!0));
     }
     function D(e) {
         var t;
-        p || !T || e.repeat || (S(!1), "Enter" === e.key && (null == (t = I.current) || t.click()));
+        p || !I || e.repeat || (T(!1), "Enter" === e.key && (null == (t = v.current) || t.click()));
     }
     return (0, r.jsx)(
         u.t,
@@ -145,9 +135,9 @@ let O = function (e) {
                     [_.checked]: o,
                     [_.disabled]: p,
                 }),
-                onMouseDown: () => !p && S(!0),
-                onMouseUp: () => S(!1),
-                onMouseLeave: () => S(!1),
+                onMouseDown: () => !p && T(!0),
+                onMouseUp: () => T(!1),
+                onMouseLeave: () => T(!1),
                 style: {
                     opacity: R,
                     backgroundColor: C.to({
@@ -187,14 +177,14 @@ let O = function (e) {
                                 }),
                                 rx: "10",
                             }),
-                            y(C, A, N, v.enabled),
+                            S(C, A, N, O.enabled),
                         ],
                     }),
                     (0, r.jsx)("input", {
                         id: t,
                         type: "checkbox",
                         ref: (e) => {
-                            (I.current = e), null != O && (O.current = e);
+                            (v.current = e), null != y && (y.current = e);
                         },
                         className: _.input,
                         tabIndex: p ? -1 : 0,

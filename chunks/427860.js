@@ -1,6 +1,6 @@
 n.d(t, {
     C7: () => a,
-    JC: () => h,
+    JC: () => g,
     l6: () => s,
 }),
     n(539854),
@@ -51,12 +51,16 @@ function u(e) {
 function d(e) {
     return -e.timestamp;
 }
-function f(e, t, n) {
+let f = new i.SnowflakeSequence();
+function _(e) {
+    return i.default.fromTimestampWithSequence(Math.floor(e), f);
+}
+function p(e, t, n) {
     var r;
-    let o = i.default.fromTimestamp(Math.floor(e.timestamp));
+    let i = _(e.timestamp);
     return {
-        id: o,
-        key: o,
+        id: i,
+        key: i,
         nativeId: Number(e.id),
         timestamp: e.timestamp,
         name: e.name,
@@ -67,10 +71,10 @@ function f(e, t, n) {
         stack: null != (r = Error().stack) ? r : "",
     };
 }
-function _() {
+function h() {
     return performance.timeOrigin + performance.now();
 }
-class p {
+class m {
     addBreadcrumb(e) {
         return this.breadcrumbs.set(e.id, e);
     }
@@ -82,27 +86,27 @@ class p {
         if (null == r) throw Error("Native breadcrumb has no native id");
         if (this.breadcrumbs.size(r) > 0) return !1;
         this.maxNativeBreadcrumbId = Math.max(this.maxNativeBreadcrumbId, Number(e.id));
-        let i = f(e, t, n);
+        let i = p(e, t, n);
         return this.addBreadcrumb(i);
     }
     addModuleBreadcrumb(e, t, n, r) {
-        var o;
-        let a = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "info",
-            s = _(),
-            l = i.default.fromTimestamp(Math.floor(s)),
-            c = {
-                id: l,
-                key: l,
+        var i;
+        let o = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "info",
+            a = h(),
+            s = _(a),
+            l = {
+                id: s,
+                key: s,
                 nativeId: null,
-                timestamp: s,
+                timestamp: a,
                 name: e,
                 data: t,
                 type: n,
                 pid: r,
-                logType: a,
-                stack: null != (o = Error().stack) ? o : "",
+                logType: o,
+                stack: null != (i = Error().stack) ? i : "",
             };
-        return this.addBreadcrumb(c);
+        return this.addBreadcrumb(l);
     }
     getBreadcrumbs(e) {
         return [this.breadcrumbs.values(e, !0), this.breadcrumbs.version];
@@ -111,4 +115,4 @@ class p {
         o(this, "breadcrumbs", new r.h(u, d)), o(this, "maxNativeBreadcrumbId", 0);
     }
 }
-let h = new p();
+let g = new m();

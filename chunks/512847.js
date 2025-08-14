@@ -223,7 +223,7 @@ function U() {
                     let r = _.Z.getChannel(n);
                     null != r &&
                         ((e = r.type),
-                        (t = N.ZP.countVoiceStatesForChannel(r.id) - +!!S.Z.isInChannel(r.id)),
+                        (t = N.ZP.countVoiceStatesForChannel(r.id) - !!S.Z.isInChannel(r.id)),
                         (i = m.Z.getAllApplicationStreamsForChannel(r.id).map((e) => e.ownerId)));
                 }
                 let s = null;

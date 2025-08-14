@@ -70,7 +70,7 @@ function M(e, t) {
     }
     return n;
 }
-function j(e, t) {
+function k(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -81,7 +81,7 @@ function j(e, t) {
         e
     );
 }
-function k(e, t, n) {
+function j(e, t, n) {
     let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
     if (t[0] !== e) return null;
     let i = t.substr(e.length);
@@ -107,7 +107,7 @@ function k(e, t, n) {
 function U(e, t, n) {
     let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
     if (t[0] !== e) return null;
-    if ('"' !== t[1]) return k(e, t, n, r);
+    if ('"' !== t[1]) return j(e, t, n, r);
     let i = 2;
     for (; i < t.length; i++) {
         if ("\\" === t[i]) {
@@ -174,13 +174,13 @@ let Z = d.Z.RULES,
             match(e, t, n) {
                 let r = n.split(" ").pop() + e;
                 if (/^[^ ]+@[^ ]+\.[^ .]+/.test(r)) return null;
-                let i = k("@", e, t.users, "mention");
-                if (i || (i = k("@", e, t.mentionableRoles, "roleMention"))) return i;
+                let i = j("@", e, t.users, "mention");
+                if (i || (i = j("@", e, t.mentionableRoles, "roleMention"))) return i;
                 if (
-                    !(i = k(
+                    !(i = j(
                         "@",
                         e,
-                        t.users.map((e) => j(x({}, e), { text: e.text.split("#")[0] })),
+                        t.users.map((e) => k(x({}, e), { text: e.text.split("#")[0] })),
                         "mention",
                     ))
                 )
@@ -274,7 +274,7 @@ let Z = d.Z.RULES,
                       };
             },
         },
-        text: j(x({}, F), {
+        text: k(x({}, F), {
             match: (e, t) =>
                 "string" == typeof t.textExclusions && "" !== t.textExclusions
                     ? (0, f.T9)(t.textExclusions).exec(e)
@@ -375,7 +375,7 @@ let Z = d.Z.RULES,
             match: a().anyScopeRegex(P.PEY),
             parse: (e) => ({ content: "<id:".concat(e[1], ">") }),
         },
-        timestamp: j(x({}, Z.timestamp), {
+        timestamp: k(x({}, Z.timestamp), {
             parse() {
                 for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
                 let r = Z.timestamp.parse(...t);

@@ -1,6 +1,6 @@
 n.d(t, {
-    As: () => j,
-    By: () => k,
+    As: () => k,
+    By: () => j,
     Lu: () => U,
     e9: () => Y,
     hG: () => Z,
@@ -34,7 +34,7 @@ var r = n(255367),
     T = n(474936),
     S = n(981631),
     A = n(388032),
-    N = n(957686);
+    N = n(146911);
 function C(e, t, n) {
     return (
         t in e
@@ -203,7 +203,7 @@ function M(e) {
         inTrialPeriod: _,
     });
 }
-function j(e) {
+function k(e) {
     let { label: t, tooltipText: n, tooltipAriaLabel: i } = e;
     return (0, r.jsxs)("div", {
         className: N.invoiceItemLabelWithIcon,
@@ -232,7 +232,7 @@ function j(e) {
         ],
     });
 }
-function k(e) {
+function j(e) {
     let { invoice: t, isPrepaidPaymentSource: n } = e,
         i = (0, y.j)(t.invoiceItems),
         o = i.find((e) => !(0, g.Z8)(e.subscriptionPlanId) && e.amount >= 0),
@@ -306,7 +306,7 @@ function U(e) {
             0 === h || f
                 ? null
                 : (0, r.jsx)(v.B1, {
-                      label: (0, r.jsx)(j, {
+                      label: (0, r.jsx)(k, {
                           label: A.intl.formatToPlainString(A.t.ZSVgeX, {
                               planName: (0, g.PV)(n.id) ? (0, g.aq)(n.id) : n.name,
                           }),
@@ -316,7 +316,7 @@ function U(e) {
                   }),
             0 !== m
                 ? (0, r.jsx)(v.B1, {
-                      label: (0, r.jsx)(j, {
+                      label: (0, r.jsx)(k, {
                           label: A.intl.string(A.t["+as5ZW"]),
                           tooltipText: A.intl.format(A.t.UDop9f, {}),
                           tooltipAriaLabel: A.intl.string(A.t.P68ePD),

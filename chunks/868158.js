@@ -107,15 +107,15 @@ function w(e, t) {
     var n,
         { guilds: r, merged_members: i, merged_presences: o } = e,
         a = S(e, ["guilds", "merged_members", "merged_presences"]);
-    let s = j(P, null == o ? void 0 : o.friends),
+    let s = k(P, null == o ? void 0 : o.friends),
         l =
             null !=
             (n =
                 null == r
                     ? void 0
                     : r.map((e, t) => {
-                          let n = j(P, null == o ? void 0 : o.guilds[t]),
-                              r = j(P, null == i ? void 0 : i[t]);
+                          let n = k(P, null == o ? void 0 : o.guilds[t]),
+                              r = k(P, null == i ? void 0 : i[t]);
                           return T(v({}, e), {
                               unavailable: void 0 === e.voice_states,
                               presences: n,
@@ -162,7 +162,7 @@ function L(e, t, n) {
         { users: o, relationships: s, private_channels: l, merged_members: c, guilds: u } = e,
         d = S(e, ["users", "relationships", "private_channels", "merged_members", "guilds"]);
     U(n);
-    let f = j((P = a().keyBy(o, (e) => e.id)), s);
+    let f = k((P = a().keyBy(o, (e) => e.id)), s);
     null == l ||
         l.forEach((e) => {
             let t = e.recipient_ids;
@@ -176,7 +176,7 @@ function L(e, t, n) {
                 null == u
                     ? void 0
                     : u.map((e, t) =>
-                          !0 === e.unavailable ? e : ((e.members = j(P, null == c ? void 0 : c[t])), B(e)),
+                          !0 === e.unavailable ? e : ((e.members = k(P, null == c ? void 0 : c[t])), B(e)),
                       ))
                 ? r
                 : [],
@@ -217,7 +217,7 @@ function M(e, t) {
         a
     );
 }
-function j(e, t) {
+function k(e, t) {
     let n = [];
     return (
         null == t ||
@@ -232,7 +232,7 @@ function j(e, t) {
         n
     );
 }
-function k(e) {
+function j(e) {
     let t = C[e];
     return delete C[e], t;
 }
@@ -273,7 +273,7 @@ function G(e, t, n) {
 }
 function B(e) {
     var t, n, r, i, o, a, s, l;
-    let c = k(e.id);
+    let c = j(e.id);
     if ("partial" !== e.data_mode)
         return {
             id: e.id,
@@ -341,7 +341,7 @@ function B(e) {
 }
 function Z(e, t) {
     var n, r, i, o, a, s, l, c;
-    if ((null == t && (t = k(e.id)), "partial" !== e.data_mode))
+    if ((null == t && (t = j(e.id)), "partial" !== e.data_mode))
         return {
             id: e.id,
             guild_scheduled_events: e.guild_scheduled_events,

@@ -18,7 +18,7 @@ var r = n(304789),
     x = n(474936),
     _ = n(981631),
     j = n(388032),
-    E = n(840652),
+    E = n(355758),
     C = n(22767);
 function O(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -145,7 +145,7 @@ let N = function (e) {
         },
         Z = (e) => {
             (0, s.ZDy)(async () => {
-                let { default: r } = await n.e("81709").then(n.bind(n, 833569));
+                let { default: r } = await Promise.all([n.e("58067"), n.e("81709")]).then(n.bind(n, 833569));
                 return (n) =>
                     (0, i.jsx)(
                         r,

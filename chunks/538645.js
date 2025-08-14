@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ }), n(388685), n(953529), n(35282), n(853839), n(570086), n(479048);
+n.d(t, { Z: () => x }), n(388685), n(953529), n(35282), n(853839), n(570086), n(479048);
 var i = n(255367),
     r = n(73800),
     s = n(120356),
@@ -11,7 +11,7 @@ var i = n(255367),
     m = n(25251),
     p = n(373071),
     g = n(782691),
-    h = n(189270);
+    h = n(558270);
 let f = "Make sure you're only uploading text files!",
     b = (e) => {
         var t, n, r;
@@ -50,31 +50,26 @@ let f = "Make sure you're only uploading text files!",
                 }),
             ],
         });
-    },
-    x = () => ({
-        id: (0, l.Z)(),
-        name: "New Profile Effect",
-        config: { effects: [] },
-    });
-function _() {
+    };
+function x() {
     let { profileEffects: e, upsertConfig: t } = (0, p.n6)(),
         [n, s] = r.useState(),
-        _ = r.useRef(null),
-        j = (0, o.Wu)([m.Z], () => m.Z.profileEffects),
-        [E, C] = r.useState(""),
-        O = r.useMemo(
+        x = r.useRef(null),
+        _ = (0, o.Wu)([m.Z], () => m.Z.profileEffects),
+        [j, E] = r.useState(""),
+        C = r.useMemo(
             () =>
-                "" === E
-                    ? j
-                    : j.filter((e) => {
-                          let t = E.toLowerCase();
+                "" === j
+                    ? _
+                    : _.filter((e) => {
+                          let t = j.toLowerCase();
                           return (
                               e.config.title.toLowerCase().includes(t) || e.config.description.toLowerCase().includes(t)
                           );
                       }),
-            [E, j],
+            [j, _],
         ),
-        v = r.useCallback(
+        O = r.useCallback(
             (e, n) => {
                 if (null == n || !e.type.startsWith("text/")) return (0, u.Eo)(f);
                 let [i, r] = n.split(",");
@@ -84,14 +79,14 @@ function _() {
             },
             [t],
         ),
-        S = r.useCallback(
+        v = r.useCallback(
             (e) => {
                 var t;
                 if ((null == (t = e.currentTarget) ? void 0 : t.files) == null)
                     return void (0, u.Eo)("Error uploading file. Try again!");
-                (0, u.Kr)(e.currentTarget.files, v, u.Eo);
+                (0, u.Kr)(e.currentTarget.files, O, u.Eo);
             },
-            [v],
+            [O],
         );
     return (0, i.jsxs)("div", {
         className: h.root,
@@ -138,8 +133,8 @@ function _() {
                                             children: "Import Shared Config",
                                         }),
                                         (0, i.jsx)(d.Z, {
-                                            ref: _,
-                                            onChange: S,
+                                            ref: x,
+                                            onChange: v,
                                             multiple: !1,
                                         }),
                                     ],
@@ -148,7 +143,11 @@ function _() {
                                     variant: "primary",
                                     text: "Create New Effect",
                                     onClick: () => {
-                                        t(x());
+                                        t({
+                                            id: (0, l.Z)(),
+                                            name: "New Profile Effect",
+                                            config: { effects: [] },
+                                        });
                                     },
                                 }),
                             ],
@@ -162,14 +161,14 @@ function _() {
                                     children: "All Effects",
                                 }),
                                 (0, i.jsx)("input", {
-                                    value: E,
+                                    value: j,
                                     onChange: (e) => {
-                                        C(e.target.value);
+                                        E(e.target.value);
                                     },
                                 }),
                                 (0, i.jsx)("div", {
                                     className: h.pfxGrid,
-                                    children: O.map((e) =>
+                                    children: C.map((e) =>
                                         (0, i.jsx)(
                                             c.P3F,
                                             {

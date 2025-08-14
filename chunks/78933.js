@@ -34,8 +34,8 @@ var i = n(255367),
     w = n(502762),
     k = n(530),
     L = n(309494),
-    M = n(4517),
-    B = n(420654),
+    B = n(4517),
+    M = n(420654),
     U = n(785184),
     V = n(695346),
     G = n(622562),
@@ -53,8 +53,8 @@ var i = n(255367),
     ee = n(981631),
     et = n(228168),
     en = n(388032),
-    ei = n(337134),
-    er = n(81208);
+    ei = n(54482),
+    er = n(116649);
 function es(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -125,13 +125,13 @@ function ea(e) {
         eZ = eR === l.z.CUSTOM_STATUS_PROMPTS_COACHMARK,
         ew = r.useRef((0, K.Z)((e) => e.shouldRenderTenureLevelUp)),
         ek = r.useMemo(() => (0, f.Z)(), []),
-        [eL, eM] = r.useState(!0);
+        [eL, eB] = r.useState(!0);
     r.useEffect(() => {
         setTimeout(() => {
-            eM(!1);
+            eB(!1);
         }, 500);
     }, []);
-    let eB = (e) => {
+    let eM = (e) => {
             null == n || n(),
                 (0, T.openUserProfileModal)(
                     es(
@@ -175,7 +175,7 @@ function ea(e) {
                                         user: t,
                                         displayProfile: ed,
                                         themeType: et.lY.POPOUT,
-                                        onOpenProfile: ec ? void 0 : eB,
+                                        onOpenProfile: ec ? void 0 : eM,
                                     }),
                                     eZ
                                         ? (0, i.jsx)(b.Z, {
@@ -184,7 +184,7 @@ function ea(e) {
                                               targetElementRef: ey,
                                               markAsDismissed: eD,
                                               children: () =>
-                                                  (0, i.jsx)(M.Z, {
+                                                  (0, i.jsx)(B.Z, {
                                                       ref: ey,
                                                       location: "UserProfileAccountPopout",
                                                       user: t,
@@ -193,7 +193,7 @@ function ea(e) {
                                                       prompt: ek,
                                                   }),
                                           })
-                                        : (0, i.jsx)(M.Z, {
+                                        : (0, i.jsx)(B.Z, {
                                               location: "UserProfileAccountPopout",
                                               user: t,
                                               themeType: et.lY.POPOUT,
@@ -210,7 +210,7 @@ function ea(e) {
                                         user: t,
                                         className: ei.username,
                                         nickname: W.ZP.getName(null, null, t),
-                                        onOpenProfile: ec ? void 0 : eB,
+                                        onOpenProfile: ec ? void 0 : eM,
                                         pronouns: null == ed ? void 0 : ed.pronouns,
                                         tags: (0, i.jsx)(N.Z, {
                                             displayProfile: ed,
@@ -229,7 +229,7 @@ function ea(e) {
                                             ],
                                         }),
                                     }),
-                                    (0, i.jsx)(B.Z, {
+                                    (0, i.jsx)(M.Z, {
                                         user: t,
                                         bio: null == ed ? void 0 : ed.bio,
                                         hidePersonalInformation: e_,
@@ -244,7 +244,7 @@ function ea(e) {
                                               user: t,
                                               currentUser: t,
                                               displayProfile: ed,
-                                              onOpenUserProfileModal: eB,
+                                              onOpenUserProfileModal: eM,
                                               onClose: n,
                                           })
                                         : (0, i.jsx)(R.Z, {

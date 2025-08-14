@@ -16,7 +16,7 @@ var r = n(255367),
     g = n(176412),
     E = n(981631),
     b = n(388032),
-    y = n(268468);
+    y = n(682964);
 function O(e, t, n) {
     return (
         t in e
@@ -112,8 +112,8 @@ function N(e) {
         }),
         M = i.useMemo(() => (0, h.XZ)(I.displayName), [I.displayName]),
         {
-            onActivityItemSelected: j,
-            buttonColor: k,
+            onActivityItemSelected: k,
+            buttonColor: j,
             buttonText: U,
         } = (0, g.P7)({
             context: t,
@@ -143,12 +143,12 @@ function N(e) {
                 T(v({}, i), {
                     type: "submit",
                     size: A,
-                    color: k,
+                    color: j,
                     disabled: G,
                     submitting: D,
                     onClick: () => {
                         L(!0),
-                            j(),
+                            k(),
                             null == t || t(),
                             u.default.track(E.rMx.APP_DETAIL_PAGE_ENTRY_POINT_COMMAND_BUTTON_CLICKED, {
                                 application_id: n.id,

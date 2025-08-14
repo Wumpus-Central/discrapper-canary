@@ -28,7 +28,7 @@ var r = n(255367),
     R = n(228168),
     P = n(244096),
     w = n(388032),
-    D = n(862075);
+    D = n(516089);
 function L(e, t, n) {
     return (
         t in e
@@ -70,7 +70,7 @@ function M(e, t) {
     }
     return n;
 }
-function j(e, t) {
+function k(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -81,7 +81,7 @@ function j(e, t) {
         e
     );
 }
-function k(e, t) {
+function j(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -127,7 +127,7 @@ let B = i.forwardRef(function (e, t) {
                         return (t) =>
                             (0, r.jsx)(
                                 e,
-                                j(x({}, t), {
+                                k(x({}, t), {
                                     sourceAnalyticsLocations: s,
                                     location: "UserProfileCustomStatusBubble",
                                     prompt: o,
@@ -205,10 +205,10 @@ let B = i.forwardRef(function (e, t) {
         i.useEffect(() => {
             null != W.current ? M(W.current.getBoundingClientRect().height > P.Ow + P.P) : M(!1);
         }, [S, x]);
-        let j = null != _ ? P.Hp : 0,
-            k = null != S ? P.du : 0,
-            U = (x && (null == _ || null != p) ? P._v : P.hT) + j + k,
-            B = P.YF + j + k,
+        let k = null != _ ? P.Hp : 0,
+            j = null != S ? P.du : 0,
+            U = (x && (null == _ || null != p) ? P._v : P.hT) + k + j,
+            B = P.YF + k + j,
             Z = i.useRef(null),
             F = i.useRef(null),
             V = i.useRef(null),
@@ -390,11 +390,11 @@ let B = i.forwardRef(function (e, t) {
     }),
     F = i.forwardRef(function (e, t) {
         var { emoji: n, text: o, label: a, onCloseProfile: s } = e,
-            l = k(e, ["emoji", "text", "label", "onCloseProfile"]);
+            l = j(e, ["emoji", "text", "label", "onCloseProfile"]);
         let [c, u] = i.useState(!1);
         return (0, r.jsx)(
             Z,
-            j(x({}, l), {
+            k(x({}, l), {
                 ref: t,
                 emoji: n,
                 text: o,
@@ -412,7 +412,7 @@ let B = i.forwardRef(function (e, t) {
     });
 function V(e) {
     var { emoji: t, text: n, label: o, user: a, guildId: s, channelId: l, themeType: c } = e,
-        u = k(e, ["emoji", "text", "label", "user", "guildId", "channelId", "themeType"]);
+        u = j(e, ["emoji", "text", "label", "user", "guildId", "channelId", "themeType"]);
     let { trackUserProfileAction: d } = (0, v.KZ)(),
         { interactionType: f, interactionSource: _, resetInteraction: p } = (0, T.Xo)(),
         h = _ === R.n_.STATUS && f === R.P.REACT,
@@ -459,7 +459,7 @@ function V(e) {
                 user: a,
                 children: (0, r.jsx)(
                     Z,
-                    j(x({}, u), {
+                    k(x({}, u), {
                         ref: b,
                         emoji: t,
                         text: n,
@@ -494,7 +494,7 @@ let H = i.forwardRef(function (e, t) {
             prompt: h,
             disableToolbar: g = !1,
         } = e,
-        b = k(e, [
+        b = j(e, [
             "location",
             "user",
             "onCloseProfile",

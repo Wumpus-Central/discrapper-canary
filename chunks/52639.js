@@ -15,7 +15,7 @@ var i = n(81897),
     g = n(502762),
     m = n(686625),
     b = n(388032),
-    y = n(667814);
+    y = n(439178);
 function x(e) {
     let { user: t, channelId: n } = e,
         { analyticsLocations: x } = (0, l.ZP)(),

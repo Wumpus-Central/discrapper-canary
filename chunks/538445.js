@@ -3,49 +3,49 @@ var r = n(255367),
     i = n(73800),
     l = n(120356),
     o = n.n(l),
-    s = n(866442),
-    a = n(399606),
+    a = n(866442),
+    s = n(399606),
     c = n(481060),
     u = n(100527),
     d = n(906732),
-    h = n(204418),
-    p = n(879892),
-    f = n(742409),
+    p = n(204418),
+    f = n(879892),
+    h = n(742409),
     g = n(970731),
     m = n(485386),
     b = n(594174),
     O = n(5192),
     _ = n(944888),
     y = n(234368),
-    C = n(981631),
-    v = n(921944),
-    j = n(93841),
+    v = n(981631),
+    j = n(921944),
+    C = n(989308),
     E = n(388032),
-    S = n(440156),
-    x = n(482985),
-    I = n(445648),
-    P = n(128647);
+    x = n(49777),
+    S = n(842926),
+    P = n(445648),
+    I = n(128647);
 function N(e) {
     let { guild: t, markAsDismissed: n } = e,
         l = (null == t ? void 0 : t.premiumProgressBarEnabled) === !0 ? g.DF.LEFT_TOP : g.DF.TOP_CENTER,
-        N = l === g.DF.TOP_CENTER || l === g.DF.LEFT_TOP ? S[l] : "",
+        N = l === g.DF.TOP_CENTER || l === g.DF.LEFT_TOP ? x[l] : "",
         { analyticsLocations: w } = (0, d.ZP)(u.Z.GUILD_BOOSTING_ENHANCED_ROLE_COLOR_COACHMARK),
         Z = i.useCallback(() => {
-            (0, p.u)({
-                analyticsLocation: { section: C.jXE.BOOSTER_ENHANCED_ROLE_COLORS_COACHMARK },
+            (0, f.u)({
+                analyticsLocation: { section: v.jXE.BOOSTER_ENHANCED_ROLE_COLORS_COACHMARK },
                 numberOfBoostsToAdd: 1,
                 analyticsLocations: w,
                 guild: t,
             });
         }, [t, w]),
-        T = (0, a.e7)([b.default], () => b.default.getCurrentUser()),
+        T = (0, s.e7)([b.default], () => b.default.getCurrentUser()),
         A = (function (e) {
-            let t = (0, a.e7)([m.Z], () => m.Z.getSortedRoles(e).find(_.YB));
+            let t = (0, s.e7)([m.Z], () => m.Z.getSortedRoles(e).find(_.YB));
             return (null == t ? void 0 : t.colorStrings) != null
                 ? t.colorStrings
                 : {
-                      primaryColor: (0, s.Rf)(y.oC.primary_color),
-                      secondaryColor: (0, s.Rf)(y.oC.secondary_color),
+                      primaryColor: (0, a.Rf)(y.oC.primary_color),
+                      secondaryColor: (0, a.Rf)(y.oC.secondary_color),
                       tertiaryColor: null,
                   };
         })(t.id),
@@ -57,51 +57,51 @@ function N(e) {
         });
     return (0, r.jsx)(g.ZP, {
         asset: (0, r.jsxs)("div", {
-            className: S.imageContainer,
+            className: x.imageContainer,
             children: [
                 null != T
                     ? (0, r.jsx)("div", {
-                          className: S.messageContainer,
-                          children: (0, r.jsx)(f.l, {
-                              avatar: (0, r.jsx)(h.Z, {
+                          className: x.messageContainer,
+                          children: (0, r.jsx)(h.l, {
+                              avatar: (0, r.jsx)(p.Z, {
                                   user: T,
                                   guildId: t.id,
                                   avatarSize: c.EFr.SIZE_40,
                                   "aria-hidden": !0,
                               }),
                               usernameStyle: R,
-                              usernameClassName: o()(D, x.animateGradient),
+                              usernameClassName: o()(D, S.animateGradient),
                               username: O.ZP.getName(t.id, null, T),
                               asset: (0, r.jsx)("img", {
                                   alt: "",
-                                  src: I.Z,
+                                  src: P.Z,
                               }),
                           }),
                       })
                     : (0, r.jsx)("img", {
                           alt: "",
-                          src: P.Z,
-                          className: S.image,
+                          src: I.Z,
+                          className: x.image,
                       }),
                 (0, r.jsx)(c.olH, {
-                    className: S.close,
-                    innerClassName: S.innerClose,
-                    onClick: () => (null == n ? void 0 : n(v.L.USER_DISMISS)),
+                    className: x.close,
+                    innerClassName: x.innerClose,
+                    onClick: () => (null == n ? void 0 : n(j.L.USER_DISMISS)),
                 }),
             ],
         }),
         header: (0, r.jsx)(c.Text, {
             variant: "text-md/semibold",
-            children: E.intl.string(j.default.bw76aG),
+            children: E.intl.string(C.default.bw76aG),
         }),
         content: (0, r.jsx)(c.Text, {
             variant: "text-sm/medium",
             color: "text-muted",
-            children: E.intl.string(j.default["/DTbiY"]),
+            children: E.intl.string(C.default["/DTbiY"]),
         }),
         buttonCTA: E.intl.string(E.t["oPAx7+"]),
         onClick: Z,
-        className: o()(S.container, N),
+        className: o()(x.container, N),
         caretPosition: l,
         markAsDismissed: n,
     });

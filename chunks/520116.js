@@ -1,33 +1,33 @@
-n.d(t, { Z: () => x }), n(539854);
+n.d(t, { Z: () => S }), n(539854);
 var r = n(255367),
     i = n(73800),
     l = n(913527),
     o = n.n(l),
-    s = n(91192),
-    a = n(755721),
+    a = n(91192),
+    s = n(755721),
     c = n(481060),
     u = n(135938),
     d = n(554838),
-    h = n(493892),
-    p = n(661824),
-    f = n(37772),
+    p = n(493892),
+    f = n(661824),
+    h = n(37772),
     g = n(695346),
     m = n(314897),
     b = n(594174),
     O = n(55935),
     _ = n(655354),
     y = n(809780),
-    C = n(981631),
-    v = n(388032),
-    j = n(70567);
+    v = n(981631),
+    j = n(388032),
+    C = n(557047);
 let E = {
     left: 4,
     right: -12,
 };
-function S(e) {
+function x(e) {
     var t, n, l;
-    let { channel: o, message: a, compact: u, isGroupStart: d, treatSpam: h, gotoChannel: p } = e,
-        g = (0, s.JA)(null != (t = a.id) ? t : ""),
+    let { channel: o, message: s, compact: u, isGroupStart: d, treatSpam: p, gotoChannel: f } = e,
+        g = (0, a.JA)(null != (t = s.id) ? t : ""),
         m = i.useCallback(
             (e) => {
                 if ("ArrowLeft" === e.key) {
@@ -67,7 +67,7 @@ function S(e) {
                 return e;
             })(
                 {
-                    className: j.messageContainer,
+                    className: C.messageContainer,
                     onKeyDown: m,
                 },
                 g,
@@ -76,19 +76,19 @@ function S(e) {
                 {
                     children: [
                         (0, r.jsx)(_.Z, {
-                            className: j.jumpButton,
-                            onJump: (e) => p(e, a.id),
+                            className: C.jumpButton,
+                            onJump: (e) => f(e, s.id),
                         }),
-                        (0, r.jsx)(f.Z, {
-                            id: a.id,
-                            message: a,
+                        (0, r.jsx)(h.Z, {
+                            id: s.id,
+                            message: s,
                             channel: o,
-                            className: j.message,
+                            className: C.message,
                             compact: u,
                             animateAvatar: !1,
                             isGroupStart: d,
                             onKeyDown: m,
-                            treatSpam: h,
+                            treatSpam: p,
                         }),
                     ],
                 }),
@@ -105,32 +105,32 @@ function S(e) {
                       Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(l, e));
                   }),
             n),
-            a.id,
+            s.id,
         ),
     });
 }
-function x(e) {
+function S(e) {
     var t, n;
-    let { channel: i, channelRecord: l, gotoChannel: s } = e,
-        { enabled: f } = u.Z.useExperiment({ location: "20e3b0_1" }, { autoTrackExposure: !1 }),
+    let { channel: i, channelRecord: l, gotoChannel: a } = e,
+        { enabled: h } = u.Z.useExperiment({ location: "20e3b0_1" }, { autoTrackExposure: !1 }),
         _ = g.jU.useSetting(),
-        E = (0, h.P1)(l),
-        x = !1,
-        I = 0 === i.messages.length || o()(i.messages[0].timestamp).isSame(o()(), "day"),
-        P = null != (n = null == (t = b.default.getUser(m.default.getId())) ? void 0 : t.hasFlag(C.xW$.SPAMMER)) && n,
+        E = (0, p.P1)(l),
+        S = !1,
+        P = 0 === i.messages.length || o()(i.messages[0].timestamp).isSame(o()(), "day"),
+        I = null != (n = null == (t = b.default.getUser(m.default.getId())) ? void 0 : t.hasFlag(v.xW$.SPAMMER)) && n,
         N = [];
     if (!i.collapsed) {
         let e = null,
             t = null,
             n = i.messages.slice(0, y.hC);
         n.forEach((n) => {
-            if (!I && (null == e || !e.isSame(n.timestamp, "day"))) {
+            if (!P && (null == e || !e.isSame(n.timestamp, "day"))) {
                 let t = (0, O.vc)(n.timestamp, "LL");
                 N.push(
                     (0, r.jsx)(
-                        p.Z,
+                        f.Z,
                         {
-                            className: j.divider,
+                            className: C.divider,
                             children: t,
                         },
                         t,
@@ -140,17 +140,17 @@ function x(e) {
             }
             let i = null == t || (0, d.Z)(l, t, n);
             (t = n),
-                (x = x || (0, h.DQ)(n)),
+                (S = S || (0, p.DQ)(n)),
                 N.push(
                     (0, r.jsx)(
-                        S,
+                        x,
                         {
                             channel: l,
                             message: n,
                             compact: _,
                             isGroupStart: i,
-                            treatSpam: !P && f && (0, h.DQ)(n) && E,
-                            gotoChannel: s,
+                            treatSpam: !I && h && (0, p.DQ)(n) && E,
+                            gotoChannel: a,
                         },
                         n.id,
                     ),
@@ -159,12 +159,12 @@ function x(e) {
             i.messages.length >= y.hC &&
                 N.push(
                     (0, r.jsxs)(
-                        a.zx,
+                        s.zx,
                         {
-                            color: a.zx.Colors.LINK,
-                            look: a.zx.Looks.LINK,
-                            onClick: (e) => s(e, n[n.length - 1].id),
-                            children: [v.intl.string(v.t["9OB9ho"]), " \u203A"],
+                            color: s.zx.Colors.LINK,
+                            look: s.zx.Looks.LINK,
+                            onClick: (e) => a(e, n[n.length - 1].id),
+                            children: [j.intl.string(j.t["9OB9ho"]), " \u203A"],
                         },
                         "view-all",
                     ),
@@ -172,9 +172,9 @@ function x(e) {
             0 === N.length && (N = [(0, r.jsx)(c.$jN, {}, "spinner")]);
     }
     return (
-        x && E && u.Z.trackExposure({ location: "20e3b0_2" }),
+        S && E && u.Z.trackExposure({ location: "20e3b0_2" }),
         (0, r.jsx)("div", {
-            className: j.messages,
+            className: C.messages,
             children: N,
         })
     );

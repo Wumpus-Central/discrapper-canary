@@ -52,7 +52,7 @@ let m = window.matchMedia("(prefers-reduced-motion: reduce)"),
     v = 5;
 function I() {
     let e = s.default.getCurrentUser();
-    return null == e || Date.now() - +e.createdAt < 86400000;
+    return null == e || Date.now() - e.createdAt < 86400000;
 }
 function T() {
     return "windows" === (0, c.getOS)();

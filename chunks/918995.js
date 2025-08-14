@@ -1,40 +1,40 @@
-n.d(t, { default: () => u }), n(388685);
-var r = n(255367),
-    i = n(73800),
-    a = n(481060),
-    s = n(233787),
-    c = n(388032);
-function o(e, t, n) {
+r.d(t, { default: () => u }), r(388685);
+var n = r(255367),
+    i = r(73800),
+    a = r(481060),
+    c = r(233787),
+    l = r(388032);
+function o(e, t, r) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
-                  value: n,
+                  value: r,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0,
               })
-            : (e[t] = n),
+            : (e[t] = r),
         e
     );
 }
-class l extends i.Component {
+class s extends i.Component {
     render() {
         let { transitionState: e } = this.props;
-        return (0, r.jsx)(s.C, {
+        return (0, n.jsx)(c.C, {
             transitionState: e,
             onClose: async () => await this.cancel(),
-            "aria-label": c.intl.string(c.t.Nn0Px8),
-            title: c.intl.string(c.t.Nn0Px8),
-            premiumModalType: s.C.Types.UNCLAIMED,
+            "aria-label": l.intl.string(l.t.Nn0Px8),
+            title: l.intl.string(l.t.Nn0Px8),
+            premiumModalType: c.C.Types.UNCLAIMED,
             primary: {
                 onClick: this.claimAccount,
-                label: c.intl.string(c.t.fiNVio),
+                label: l.intl.string(l.t.fiNVio),
             },
             secondary: {
                 onClick: this.cancel,
-                label: c.intl.string(c.t.oEAioK),
+                label: l.intl.string(l.t.oEAioK),
             },
-            children: c.intl.string(c.t["7btfmJ"]),
+            children: l.intl.string(l.t["7btfmJ"]),
         });
     }
     constructor(...e) {
@@ -47,22 +47,22 @@ class l extends i.Component {
                 let { onClose: e } = this.props;
                 null == e || e(),
                     (0, a.ZDy)(async () => {
-                        let { default: e } = await n.e("60827").then(n.bind(n, 324239));
+                        let { default: e } = await r.e("60827").then(r.bind(r, 324239));
                         return (t) =>
-                            (0, r.jsx)(
+                            (0, n.jsx)(
                                 e,
                                 (function (e) {
                                     for (var t = 1; t < arguments.length; t++) {
-                                        var n = null != arguments[t] ? arguments[t] : {},
-                                            r = Object.keys(n);
+                                        var r = null != arguments[t] ? arguments[t] : {},
+                                            n = Object.keys(r);
                                         "function" == typeof Object.getOwnPropertySymbols &&
-                                            (r = r.concat(
-                                                Object.getOwnPropertySymbols(n).filter(function (e) {
-                                                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                            (n = n.concat(
+                                                Object.getOwnPropertySymbols(r).filter(function (e) {
+                                                    return Object.getOwnPropertyDescriptor(r, e).enumerable;
                                                 }),
                                             )),
-                                            r.forEach(function (t) {
-                                                o(e, t, n[t]);
+                                            n.forEach(function (t) {
+                                                o(e, t, r[t]);
                                             });
                                     }
                                     return e;
@@ -72,4 +72,4 @@ class l extends i.Component {
             });
     }
 }
-let u = l;
+let u = s;

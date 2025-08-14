@@ -33,7 +33,7 @@ var r = n(255367),
     P = n(675654),
     w = n(509571),
     D = n(388032),
-    L = n(980028);
+    L = n(463063);
 function x(e, t, n) {
     return (
         t in e
@@ -63,7 +63,7 @@ function M(e) {
     }
     return e;
 }
-function j(e, t) {
+function k(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -75,12 +75,12 @@ function j(e, t) {
     }
     return n;
 }
-function k(e, t) {
+function j(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : j(Object(t)).forEach(function (n) {
+            : k(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -120,7 +120,7 @@ function Y(e) {
         children: (e) =>
             (0, r.jsx)(
                 d.P3F,
-                k(M({}, e), {
+                j(M({}, e), {
                     innerRef: l,
                     "aria-label": i,
                     className: a()(L.secondaryButton, { [L.buttonDisabled]: t }),
@@ -171,7 +171,7 @@ function K(e) {
                         ? (0, I.hs)(t.soundId)
                         : ((0, A.lF)({
                               sound: t,
-                              location: k(M({}, o), { object: R.qAy.SOUNDBOARD_SOUND }),
+                              location: j(M({}, o), { object: R.qAy.SOUNDBOARD_SOUND }),
                           }),
                           (0, I.TB)(t.soundId));
             },
@@ -223,7 +223,7 @@ let q = i.forwardRef(function (e, t) {
             channel: T,
             containerClassName: R,
             className: x,
-            focused: j,
+            focused: k,
             forceSecondaryActions: G = !1,
             interactive: Y = !0,
             enableSecondaryActions: q = !1,
@@ -298,10 +298,10 @@ let q = i.forwardRef(function (e, t) {
                 : "bottom",
         [eL, ex] = i.useState(!1),
         eM = eR && et;
-    function ej() {
+    function ek() {
         X || em($);
     }
-    function ek(e) {
+    function ej(e) {
         if (
             (eS &&
                 !ev &&
@@ -310,7 +310,7 @@ let q = i.forwardRef(function (e, t) {
             null != J)
         )
             return void J(e);
-        ej();
+        ek();
     }
     let eU = W({
             sound: I,
@@ -435,10 +435,10 @@ let q = i.forwardRef(function (e, t) {
                 children: (e) =>
                     (0, r.jsxs)(
                         d.kL8,
-                        k(
+                        j(
                             M(
-                                k(M({}, eu), {
-                                    buttonProps: k(M({}, eN), {
+                                j(M({}, eu), {
+                                    buttonProps: j(M({}, eN), {
                                         id: eA,
                                         role: "button",
                                     }),
@@ -456,7 +456,7 @@ let q = i.forwardRef(function (e, t) {
                                             [L.buttonDisabled]: !Y && !G,
                                             [L.premiumDisabled]: eR && !G,
                                             [L.buttonDisabledSecondaryActionsEnabled]: !Y && G,
-                                            [L.focused]: Y && j,
+                                            [L.focused]: Y && k,
                                         },
                                         x,
                                     ),
@@ -466,7 +466,7 @@ let q = i.forwardRef(function (e, t) {
                             {
                                 onClick: (t) => {
                                     var n;
-                                    null == e || null == (n = e.onClick) || n.call(e), null == ek || ek(t);
+                                    null == e || null == (n = e.onClick) || n.call(e), null == ej || ej(t);
                                 },
                                 onContextMenu: q && !eR ? eh : void 0,
                                 onMouseOver: () => {

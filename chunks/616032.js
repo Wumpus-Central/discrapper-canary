@@ -1,18 +1,18 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => f });
 var r = n(255367),
     i = n(73800),
     l = n(990547),
     o = n(91192),
-    s = n(481060),
-    a = n(724757),
+    a = n(481060),
+    s = n(724757),
     c = n(213609),
     u = n(441358),
     d = n(426521),
-    h = n(539391);
-function p(e) {
-    let { initialized: t, items: n, loading: p, loadMore: f } = e,
+    p = n(837284);
+function f(e) {
+    let { initialized: t, items: n, loading: f, loadMore: h } = e,
         g = i.useRef(null),
-        m = (0, a.Z)("for-you", g);
+        m = (0, s.Z)("for-you", g);
     (0, c.Z)(
         {
             type: l.ImpressionTypes.VIEW,
@@ -25,7 +25,7 @@ function p(e) {
     let b = () => {
         var e;
         let t = null == (e = g.current) ? void 0 : e.getScrollerState();
-        null != t && t.scrollHeight - t.scrollTop - t.offsetHeight < 1500 && f();
+        null != t && t.scrollHeight - t.scrollTop - t.offsetHeight < 1500 && h();
     };
     return t
         ? 0 === n.length
@@ -61,7 +61,7 @@ function p(e) {
                                   return i;
                               })(e, ["ref"]);
                           return (0, r.jsxs)(
-                              s.Den,
+                              a.Den,
                               ((t = (function (e) {
                                   for (var t = 1; t < arguments.length; t++) {
                                       var n = null != arguments[t] ? arguments[t] : {},
@@ -88,7 +88,7 @@ function p(e) {
                                   return e;
                               })(
                                   {
-                                      className: h.container,
+                                      className: p.container,
                                       ref: (e) => {
                                           var t;
                                           (g.current = e),
@@ -103,7 +103,7 @@ function p(e) {
                                       onScroll: b,
                                       children: [
                                           (0, r.jsx)(d.U, { items: n }),
-                                          p ? (0, r.jsx)(s.$jN, { className: h.spinner }) : null,
+                                          f ? (0, r.jsx)(a.$jN, { className: p.spinner }) : null,
                                       ],
                                   }),
                               Object.getOwnPropertyDescriptors
@@ -123,5 +123,5 @@ function p(e) {
                       },
                   }),
               })
-        : (0, r.jsx)(s.$jN, { className: h.loadingPlaceholder });
+        : (0, r.jsx)(a.$jN, { className: p.loadingPlaceholder });
 }

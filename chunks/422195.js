@@ -21,7 +21,7 @@ var r = n(255367),
     v = n(981631),
     I = n(957825),
     T = n(388032),
-    S = n(798524);
+    S = n(163289);
 function A(e, t, n) {
     return (
         t in e
@@ -80,8 +80,8 @@ let P = (0, m.Mg)(s.Z.STICKERS_CONSTANTS_STICKER_CATEGORY_LIST_PADDING),
     L = (0, m.Mg)(s.Z.STICKERS_CONSTANTS_STICKER_CATEGORY_UNICODE_ICON_SIZE),
     x = (0, m.Mg)(s.Z.STICKERS_CONSTANTS_CATEGORY_SEPARATOR_SIZE),
     M = (0, m.Mg)(s.Z.STICKERS_CONSTANTS_CATEGORY_SEPARATOR_MARGIN_VERTICAL),
-    j = [P, P, P, P],
-    k = (w + D) * 2 + P,
+    k = [P, P, P, P],
+    j = (w + D) * 2 + P,
     U = x + 2 * M,
     G = 7,
     B = (e) => {
@@ -161,8 +161,8 @@ let P = (0, m.Mg)(s.Z.STICKERS_CONSTANTS_STICKER_CATEGORY_LIST_PADDING),
                         );
                     let x = t === o,
                         M = n[o],
-                        j = n[o + 1],
-                        k = null != j && M.type === b.Ih.GUILD && j.type !== b.Ih.GUILD,
+                        k = n[o + 1],
+                        j = null != k && M.type === b.Ih.GUILD && k.type !== b.Ih.GUILD,
                         U = M.type === b.Ih.PACK,
                         G = "",
                         B = null;
@@ -221,7 +221,7 @@ let P = (0, m.Mg)(s.Z.STICKERS_CONSTANTS_STICKER_CATEGORY_LIST_PADDING),
                                             ),
                                         }),
                                 }),
-                                k ? (0, r.jsx)("hr", { className: S.guildCategorySeparator }, "separator") : null,
+                                j ? (0, r.jsx)("hr", { className: S.guildCategorySeparator }, "separator") : null,
                             ],
                         },
                         M.id,
@@ -229,7 +229,7 @@ let P = (0, m.Mg)(s.Z.STICKERS_CONSTANTS_STICKER_CATEGORY_LIST_PADDING),
                 },
                 [t, _, m, n],
             ),
-            A = i.useCallback((e, t) => (t ? k : 0), []);
+            A = i.useCallback((e, t) => (t ? j : 0), []);
         return {
             getScrollOffsetForIndex: A,
             renderCategoryListItem: g,
@@ -303,7 +303,7 @@ let P = (0, m.Mg)(s.Z.STICKERS_CONSTANTS_STICKER_CATEGORY_LIST_PADDING),
             categoryListRef: o,
             expressionsListRef: t,
             store: d.ZN,
-            listPadding: j,
+            listPadding: k,
             onScroll: v,
             renderCategoryListItem: y,
             rowCount: f.length,

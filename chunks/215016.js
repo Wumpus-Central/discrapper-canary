@@ -25,7 +25,7 @@ var r = n(255367),
     O = n(132748),
     v = n(981631),
     I = n(388032),
-    T = n(314988);
+    T = n(898404);
 function S(e, t, n) {
     return (
         t in e
@@ -90,19 +90,19 @@ function x(e, t) {
 function M(e) {
     return e === u.EO.VIDEO;
 }
-function j(e) {
+function k(e) {
     return (
         ((0, E._M)(e) || (0, E.MO)(e)) &&
         (e.pathname.toLowerCase().endsWith(".webp") || e.pathname.toLowerCase().endsWith(".avif"))
     );
 }
-function k(e) {
+function j(e) {
     return ((0, E._M)(e) || (0, E.MO)(e)) && e.pathname.toLowerCase().endsWith(".gif");
 }
 function U(e) {
     let t = y.Z.toURLSafe(e),
-        n = null != t && k(t);
-    return null != t && (j(t) || n)
+        n = null != t && j(t);
+    return null != t && (k(t) || n)
         ? (n && t.searchParams.set("format", "webp"), t.searchParams.set("animated", "true"), t.toString())
         : e;
 }

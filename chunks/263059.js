@@ -1,4 +1,4 @@
-n.d(t, { Z: () => j }), n(35282);
+n.d(t, { Z: () => k }), n(35282);
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -29,7 +29,7 @@ var r = n(255367),
     P = n(666984),
     w = n(386019),
     D = n(228168),
-    L = n(861242);
+    L = n(704543);
 function x(e, t, n) {
     return (
         t in e
@@ -59,9 +59,9 @@ function M(e) {
     }
     return e;
 }
-function j(e) {
+function k(e) {
     var t;
-    let { user: n, currentUser: o, activity: x, profileGuildId: j, className: k, onClose: U } = e,
+    let { user: n, currentUser: o, activity: x, profileGuildId: k, className: j, onClose: U } = e,
         G = (0, p.Dt)(),
         B = (0, p.Dt)(),
         Z = i.useRef(null),
@@ -154,7 +154,7 @@ function j(e) {
             user: n,
             children: (0, r.jsx)(O.Z, {
                 user: n,
-                guildId: j,
+                guildId: k,
                 themeType: F,
                 sourceId: et,
                 sourceDetails: null == Y ? (0, b.Z)(x) : null,
@@ -181,7 +181,7 @@ function j(e) {
                             }),
                         children: (0, r.jsxs)(A.Z, {
                             ref: Q,
-                            className: a()(k, { [L.hoisted]: en }),
+                            className: a()(j, { [L.hoisted]: en }),
                             onAction: X,
                             onClose: U,
                             "aria-labelledby": K ? "".concat(B, " ").concat(G) : G,

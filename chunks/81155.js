@@ -1,12 +1,12 @@
-o.d(e, { default: () => b });
+o.d(e, { default: () => p });
 var l = o(255367),
     n = o(73800),
     s = o(481060),
-    a = o(782568),
-    r = o(690221),
-    i = o(460181),
+    r = o(782568),
+    i = o(690221),
+    a = o(460181),
     d = o(388032),
-    u = o(758001);
+    u = o(943584);
 let c = [
     {
         preBold: "That's pretty...",
@@ -23,16 +23,16 @@ let c = [
         postBold: "lievable!",
     },
 ];
-function p(t) {
+function b(t) {
     let { punConfig: e } = t;
     return (0, l.jsxs)(l.Fragment, {
         children: [e.preBold, (0, l.jsx)("b", { children: (0, l.jsx)("i", { children: e.bold }) }), e.postBold],
     });
 }
-function b(t) {
-    let { transitionState: e, onClose: o, asanaTask: b } = t;
+function p(t) {
+    let { transitionState: e, onClose: o, asanaTask: p } = t;
     n.useEffect(() => {
-        (0, i.GN)("success", 0.1);
+        (0, a.GN)("success", 0.1);
     }, []);
     let m = n.useRef(c[Math.floor(Math.random() * c.length)]).current;
     return (0, l.jsx)(s.Y0X, {
@@ -59,13 +59,13 @@ function b(t) {
                     variant: "text-sm/normal",
                     children: [
                         "Thanks for submitting a ",
-                        (0, l.jsx)(r.Z, {
-                            onClick: () => (0, a.Z)(b.permalink_url),
+                        (0, l.jsx)(i.Z, {
+                            onClick: () => (0, r.Z)(p.permalink_url),
                             children: "bug",
                         }),
                         "!",
                         (0, l.jsx)("br", {}),
-                        (0, l.jsx)(p, { punConfig: m }),
+                        (0, l.jsx)(b, { punConfig: m }),
                     ],
                 }),
             ],

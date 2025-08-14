@@ -38,10 +38,10 @@ function O(e) {
         }),
         x = (0, i.e7)([g.ZP], () => g.ZP.getCurrentEmbeddedActivity()),
         M = (0, E.Z)(),
-        j = D === b.jy.CAN_LAUNCH,
-        k = null != v ? v : I.customId,
+        k = D === b.jy.CAN_LAUNCH,
+        j = null != v ? v : I.customId,
         U = [];
-    j &&
+    k &&
         U.push({
             label: null == L ? y.intl.string(y.t.RscU7O) : y.intl.string(y.t.VJlc0d),
             trackingArea: f.j_.PLAY,
@@ -51,7 +51,7 @@ function O(e) {
                     applicationId: O.id,
                     isStart: null == L,
                     embeddedActivitiesManager: M,
-                    customId: k,
+                    customId: j,
                     referrerId: S,
                     analyticsLocations: P,
                 });
@@ -60,7 +60,7 @@ function O(e) {
                 null != L && (null == x ? void 0 : x.compositeInstanceId) === L ? y.intl.string(y.t.wJNK8P) : void 0,
         }),
         R &&
-            !j &&
+            !k &&
             U.push({
                 label: y.intl.string(y.t.JeK1Wl),
                 trackingArea: f.j_.PLAY,
@@ -69,7 +69,7 @@ function O(e) {
                         appId: O.id,
                         botId: A,
                         analyticsLocations: P,
-                        customId: k,
+                        customId: j,
                         referrerId: S,
                     });
                 },
@@ -92,7 +92,7 @@ function O(e) {
             id: O.id,
             linkType: u.U.CUSTOM_ACTIVITY_LINK,
             referrerId: S,
-            activityCustomId: k,
+            activityCustomId: j,
         },
     });
 }

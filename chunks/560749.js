@@ -17,21 +17,21 @@ var r = n(255367),
     _ = n(984933),
     v = n(430824),
     j = n(496675),
-    b = n(914010),
-    S = n(594174),
+    S = n(914010),
+    b = n(594174),
     C = n(938475),
     y = n(823379),
     O = n(102172),
     I = n(981631),
-    Z = n(676462),
+    Z = n(637824),
     w = n(388032),
-    N = n(45011);
+    N = n(603410);
 function T(e) {
     let { result: t, onSelectChannel: n } = e,
         i = (0, o.e7)([v.Z], () => v.Z.getGuild(t.record.guild_id)),
-        l = (0, o.Wu)([C.ZP, S.default], () =>
+        l = (0, o.Wu)([C.ZP, b.default], () =>
             C.ZP.getVoiceStatesForChannel(t.record)
-                .map((e) => S.default.getUser(e.user.id))
+                .map((e) => b.default.getUser(e.user.id))
                 .filter(y.lm),
         );
     return (0, r.jsxs)(a.P3F, {
@@ -81,9 +81,9 @@ function T(e) {
 function E(e) {
     let { onSelectChannel: t, className: n } = e,
         { search: l, query: u, results: p } = (0, m.Z)({ searchOptions: { frecencyBoosters: !0 } }),
-        S = (0, o.Wu)([b.Z, _.ZP, x.Z, v.Z, j.Z], () => {
+        b = (0, o.Wu)([S.Z, _.ZP, x.Z, v.Z, j.Z], () => {
             let e = [],
-                t = b.Z.getGuildId();
+                t = S.Z.getGuildId();
             if (null == t) return e;
             for (let n of _.ZP.getVocalChannelIds(t)) {
                 let t = x.Z.getChannel(n);
@@ -110,16 +110,17 @@ function E(e) {
         }),
         E = i.useMemo(() => {
             let e = new Set(C.map((e) => e.id)),
-                t = new Set(S.map((e) => e.id));
+                t = new Set(b.map((e) => e.id));
             return [
-                ...S.toSorted((t, n) => (e.has(t.id) && !e.has(n.id) ? -1 : e.has(n.id) && !e.has(t.id) ? 1 : 0))
+                ...b
+                    .toSorted((t, n) => (e.has(t.id) && !e.has(n.id) ? -1 : e.has(n.id) && !e.has(t.id) ? 1 : 0))
                     .map((e) => (0, d.Z)(e.id))
                     .filter(y.lm),
                 ...C.filter((e) => !t.has(e.id))
                     .map((e) => (0, d.Z)(e.id))
                     .filter(y.lm),
             ];
-        }, [C, S]),
+        }, [C, b]),
         R = "" !== u ? p : E;
     return (0, r.jsxs)("div", {
         className: s()(N.root, n),

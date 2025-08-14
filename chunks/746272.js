@@ -2,16 +2,6 @@ var o = r(338091),
     n = r(669013),
     i = r(465758),
     a = {
-        PATTERN000: 0,
-        PATTERN001: 1,
-        PATTERN010: 2,
-        PATTERN011: 3,
-        PATTERN100: 4,
-        PATTERN101: 5,
-        PATTERN110: 6,
-        PATTERN111: 7,
-    },
-    u = {
         PATTERN_POSITION_TABLE: [
             [],
             [6, 18],
@@ -58,13 +48,13 @@ var o = r(338091),
         G18: 7973,
         G15_MASK: 21522,
         getBCHTypeInfo: function (t) {
-            for (var e = t << 10; u.getBCHDigit(e) - u.getBCHDigit(u.G15) >= 0; )
-                e ^= u.G15 << (u.getBCHDigit(e) - u.getBCHDigit(u.G15));
-            return ((t << 10) | e) ^ u.G15_MASK;
+            for (var e = t << 10; a.getBCHDigit(e) - a.getBCHDigit(a.G15) >= 0; )
+                e ^= a.G15 << (a.getBCHDigit(e) - a.getBCHDigit(a.G15));
+            return ((t << 10) | e) ^ a.G15_MASK;
         },
         getBCHTypeNumber: function (t) {
-            for (var e = t << 12; u.getBCHDigit(e) - u.getBCHDigit(u.G18) >= 0; )
-                e ^= u.G18 << (u.getBCHDigit(e) - u.getBCHDigit(u.G18));
+            for (var e = t << 12; a.getBCHDigit(e) - a.getBCHDigit(a.G18) >= 0; )
+                e ^= a.G18 << (a.getBCHDigit(e) - a.getBCHDigit(a.G18));
             return (t << 12) | e;
         },
         getBCHDigit: function (t) {
@@ -72,25 +62,25 @@ var o = r(338091),
             return e;
         },
         getPatternPosition: function (t) {
-            return u.PATTERN_POSITION_TABLE[t - 1];
+            return a.PATTERN_POSITION_TABLE[t - 1];
         },
         getMask: function (t, e, r) {
             switch (t) {
-                case a.PATTERN000:
+                case 0:
                     return (e + r) % 2 == 0;
-                case a.PATTERN001:
+                case 1:
                     return e % 2 == 0;
-                case a.PATTERN010:
+                case 2:
                     return r % 3 == 0;
-                case a.PATTERN011:
+                case 3:
                     return (e + r) % 3 == 0;
-                case a.PATTERN100:
+                case 4:
                     return (Math.floor(e / 2) + Math.floor(r / 3)) % 2 == 0;
-                case a.PATTERN101:
+                case 5:
                     return ((e * r) % 2) + ((e * r) % 3) == 0;
-                case a.PATTERN110:
+                case 6:
                     return (((e * r) % 2) + ((e * r) % 3)) % 2 == 0;
-                case a.PATTERN111:
+                case 7:
                     return (((e * r) % 3) + ((e + r) % 2)) % 2 == 0;
                 default:
                     throw Error("bad maskPattern:" + t);
@@ -187,4 +177,4 @@ var o = r(338091),
             return r + 10 * (Math.abs((100 * f) / e / e - 50) / 5);
         },
     };
-t.exports = u;
+t.exports = a;

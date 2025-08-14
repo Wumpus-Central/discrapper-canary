@@ -27,7 +27,7 @@ var r = n(512722),
     I = n(430131),
     N = n(291334),
     y = n(388032),
-    A = n(471166);
+    A = n(737788);
 function P(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -80,8 +80,8 @@ function D(e) {
         }),
         {
             pendingAvatar: L,
-            pendingNickname: M,
-            pendingBanner: B,
+            pendingNickname: B,
+            pendingBanner: M,
             pendingBio: U,
             pendingPronouns: V,
             pendingThemeColors: G,
@@ -118,7 +118,7 @@ function D(e) {
         q = (0, a.e7)([_.Z], () => _.Z.getGuildMemberProfile(k.id, W.id)),
         X = C.ZP.canUsePremiumProfileCustomization(k),
         J = (0, c.gd)(L, null == K ? void 0 : K.avatar),
-        Q = (0, c.f$)(B, null == q ? void 0 : q.banner),
+        Q = (0, c.f$)(M, null == q ? void 0 : q.banner),
         $ = (0, T.p)(G, null == q ? void 0 : q.themeColors),
         ee = null != (t = null == q ? void 0 : q.bio) ? t : "",
         et = null != (n = null == q ? void 0 : q.pronouns) ? n : "",
@@ -133,7 +133,7 @@ function D(e) {
                 {
                     errors: null != (r = null == F ? void 0 : F.nick) ? r : null == Y ? void 0 : Y.nick,
                     username: O.ZP.getName(k),
-                    pendingNick: M,
+                    pendingNick: B,
                     currentNick: null == K ? void 0 : K.nick,
                     guild: W,
                 },

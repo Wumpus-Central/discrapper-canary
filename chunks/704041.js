@@ -15,7 +15,7 @@ var r = n(255367),
     m = n(701488),
     g = n(231338),
     E = n(388032),
-    b = n(370389);
+    b = n(58807);
 function y(e) {
     let { children: t } = e;
     return (0, r.jsx)(o.f6W, {

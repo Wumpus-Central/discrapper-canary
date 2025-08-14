@@ -5,7 +5,7 @@ var o = n(755721),
     l = n(481060),
     i = n(313201),
     c = n(388032),
-    s = n(649781),
+    s = n(76349),
     a = n(298860);
 let u = (t) => {
     let { text: e, icon: n, foreground: o } = t;

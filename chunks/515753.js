@@ -40,8 +40,8 @@ var i = n(255367),
     w = n(93687),
     k = n(489618),
     L = n(785232),
-    M = n(172751),
-    B = n(850020),
+    B = n(172751),
+    M = n(850020),
     U = n(379839),
     V = n(359135),
     G = n(516817),
@@ -58,7 +58,7 @@ var i = n(255367),
     $ = n(998502),
     ee = n(981631),
     et = n(388032),
-    en = n(565757);
+    en = n(800525);
 function ei(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -275,7 +275,7 @@ function ep(e) {
             activities: _,
             applicationStream: E,
             voiceChannel: w,
-            isTyping: B,
+            isTyping: M,
             status: U,
             isMobile: z,
             nameplate: W,
@@ -314,11 +314,11 @@ function ep(e) {
         eZ = (0, g.e7)([Y.ZP], () => Y.ZP.getMentionCount(t.id) > 0),
         ew = (0, N.ZP)(t),
         ek = (0, g.e7)([Z.Z], () => Z.Z.isFavorite(t.id)),
-        { dotsInsteadOfCloseButton: eL, rearrangeContextMenu: eM } = k.Z.useExperiment(
+        { dotsInsteadOfCloseButton: eL, rearrangeContextMenu: eB } = k.Z.useExperiment(
             { location: "private_channel" },
             { autoTrackExposure: !0 },
         ),
-        eB = r.useRef(null),
+        eM = r.useRef(null),
         eU = null != W && (l || $ || eh),
         eV = () => {
             em(!0);
@@ -350,7 +350,7 @@ function ep(e) {
         },
         eq = (e) => {
             let r = "contextmenu" === e.type,
-                s = eM && !r,
+                s = eB && !r,
                 a = r ? d.ImpressionNames.DM_LIST_RIGHT_CLICK_MENU_SHOWN : d.ImpressionNames.DM_LIST_KEBAB_MENU_SHOWN;
             ef(!0),
                 t.isMultiUserDM()
@@ -361,7 +361,7 @@ function ep(e) {
                                   n.e("79695"),
                                   n.e("70205"),
                                   n.e("57789"),
-                                  n.e("53129"),
+                                  n.e("30470"),
                               ]).then(n.bind(n, 354741));
                               return (n) =>
                                   (0, i.jsx)(
@@ -389,7 +389,7 @@ function ep(e) {
                                         n.e("98783"),
                                         n.e("57789"),
                                         n.e("56826"),
-                                        n.e("88333"),
+                                        n.e("46840"),
                                     ]).then(n.bind(n, 131404));
                               return (n) =>
                                   (0, i.jsx)(
@@ -430,86 +430,17 @@ function ep(e) {
                         );
                 });
         },
-        eJ = () =>
-            t.isSystemDM()
-                ? (0, i.jsx)("div", {
-                      className: en.subtext,
-                      children: (0, S.Z)(t.id) ? et.intl.string(et.t.FL5T09) : et.intl.string(et.t.NnY5lZ),
-                  })
-                : t.isMultiUserDM()
-                  ? (0, i.jsx)("div", {
-                        className: en.subtext,
-                        children: et.intl.format(et.t.CxSA5O, { members: t.recipients.length + 1 }),
-                    })
-                  : (0, j.Z)({
-                          activities: _,
-                          status: U,
-                          applicationStream: E,
-                          voiceChannel: w,
-                      })
-                    ? (0, i.jsx)(C.Z, {
-                          location: "PrivateChannel",
-                          user: m,
-                          activities: _,
-                          voiceChannel: w,
-                          applicationStream: E,
-                          animateEmoji: $ || ep || eh,
-                          textClassName: en.activityStatusText,
-                          iconClassName: eD ? en.mutedIcon : void 0,
-                      })
-                    : null,
-        eQ = () => {
-            let e = h.EFr.SIZE_32;
-            if (t.isMultiUserDM())
-                if (t.recipients.length >= 2 && s && null == t.icon)
-                    return (0, i.jsx)(L.Z, {
-                        "aria-hidden": !0,
-                        recipients: t.recipients,
-                        size: e,
-                        isTyping: B,
-                        status: U,
-                    });
-                else
-                    return (0, i.jsx)(
-                        ea,
-                        er(ei({}, eC), {
-                            src: (0, I.x)(t),
-                            "aria-hidden": !0,
-                            size: e,
-                            status: B ? ee.Skl.ONLINE : U,
-                            isTyping: B,
-                        }),
-                    );
-            o()(null != m, "PrivateChannel.renderAvatar: Invalid prop configuration - no user or channel");
-            let n = null;
-            return (
-                m.isSystemUser() || (n = (0, x.Z)(_) ? ee.Skl.STREAMING : U),
-                (0, i.jsx)(
-                    ea,
-                    er(ei({}, eC), {
-                        size: h.EFr.SIZE_32,
-                        src: ej,
-                        avatarDecoration: eE,
-                        status: n,
-                        isMobile: z,
-                        isTyping: B,
-                        "aria-label": m.username,
-                        statusTooltip: !0,
-                    }),
-                )
-            );
-        },
-        e$ = (0, i.jsx)(D.Z, {
+        eJ = (0, i.jsx)(D.Z, {
             userName: ew,
             displayNameStyles: null == m ? void 0 : m.displayNameStyles,
             effectDisplayType: $ || l || eh ? R.F.ANIMATED : R.F.PLAIN,
             loop: $,
         }),
-        e0 = eI
+        eQ = eI
             ? (0, i.jsxs)(i.Fragment, {
                   children: [
-                      e$,
-                      (0, i.jsx)(M.ZP, {
+                      eJ,
+                      (0, i.jsx)(B.ZP, {
                           primaryGuild: null == m ? void 0 : m.primaryGuild,
                           userId: null == m ? void 0 : m.id,
                           inline: !0,
@@ -518,10 +449,10 @@ function ep(e) {
                       }),
                   ],
               })
-            : e$,
-        e3 = r.useRef(null),
-        e1 = (0, P.Y)({ location: "PrivateChannel" }) && (null == m ? void 0 : m.displayNameStyles) != null,
-        e8 = (0, p.Z)();
+            : eJ,
+        e$ = r.useRef(null),
+        e0 = (0, P.Y)({ location: "PrivateChannel" }) && (null == m ? void 0 : m.displayNameStyles) != null,
+        e1 = (0, p.Z)();
     return (0, i.jsx)(u.mh, {
         id: t.id,
         children: (e) => {
@@ -559,7 +490,7 @@ function ep(e) {
                                 nameplate: eU ? W : void 0,
                                 selected: l,
                                 hovered: $,
-                                content: e3,
+                                content: e$,
                                 placement: V.i.CHANNEL,
                             }),
                             (0, i.jsx)(
@@ -579,14 +510,87 @@ function ep(e) {
                                     ),
                                     {
                                         children: (0, i.jsx)(v.Z, {
-                                            ref: e3,
-                                            avatar: eQ(),
+                                            ref: e$,
+                                            avatar: (() => {
+                                                let e = h.EFr.SIZE_32;
+                                                if (t.isMultiUserDM())
+                                                    if (t.recipients.length >= 2 && s && null == t.icon)
+                                                        return (0, i.jsx)(L.Z, {
+                                                            "aria-hidden": !0,
+                                                            recipients: t.recipients,
+                                                            size: e,
+                                                            isTyping: M,
+                                                            status: U,
+                                                        });
+                                                    else
+                                                        return (0, i.jsx)(
+                                                            ea,
+                                                            er(ei({}, eC), {
+                                                                src: (0, I.x)(t),
+                                                                "aria-hidden": !0,
+                                                                size: e,
+                                                                status: M ? ee.Skl.ONLINE : U,
+                                                                isTyping: M,
+                                                            }),
+                                                        );
+                                                o()(
+                                                    null != m,
+                                                    "PrivateChannel.renderAvatar: Invalid prop configuration - no user or channel",
+                                                );
+                                                let n = null;
+                                                return (
+                                                    m.isSystemUser() || (n = (0, x.Z)(_) ? ee.Skl.STREAMING : U),
+                                                    (0, i.jsx)(
+                                                        ea,
+                                                        er(ei({}, eC), {
+                                                            size: h.EFr.SIZE_32,
+                                                            src: ej,
+                                                            avatarDecoration: eE,
+                                                            status: n,
+                                                            isMobile: z,
+                                                            isTyping: M,
+                                                            "aria-label": m.username,
+                                                            statusTooltip: !0,
+                                                        }),
+                                                    )
+                                                );
+                                            })(),
                                             highlighted: eZ && !eD,
                                             muted: eD,
-                                            subText: eJ(),
+                                            subText: t.isSystemDM()
+                                                ? (0, i.jsx)("div", {
+                                                      className: en.subtext,
+                                                      children: (0, S.Z)(t.id)
+                                                          ? et.intl.string(et.t.FL5T09)
+                                                          : et.intl.string(et.t.NnY5lZ),
+                                                  })
+                                                : t.isMultiUserDM()
+                                                  ? (0, i.jsx)("div", {
+                                                        className: en.subtext,
+                                                        children: et.intl.format(et.t.CxSA5O, {
+                                                            members: t.recipients.length + 1,
+                                                        }),
+                                                    })
+                                                  : (0, j.Z)({
+                                                          activities: _,
+                                                          status: U,
+                                                          applicationStream: E,
+                                                          voiceChannel: w,
+                                                      })
+                                                    ? (0, i.jsx)(C.Z, {
+                                                          location: "PrivateChannel",
+                                                          user: m,
+                                                          activities: _,
+                                                          voiceChannel: w,
+                                                          applicationStream: E,
+                                                          animateEmoji: $ || ep || eh,
+                                                          textClassName: en.activityStatusText,
+                                                          iconClassName: eD ? en.mutedIcon : void 0,
+                                                      })
+                                                    : null,
                                             name: (0, i.jsx)(A.Z, {
-                                                className: a()(en.overflowTooltip, { [en.withDisplayNameStyles]: e1 }),
-                                                children: e0,
+                                                className: a()(en.overflowTooltip, { [en.withDisplayNameStyles]: e0 }),
+                                                children: eQ,
                                             }),
                                             decorators: t.isSystemDM()
                                                 ? (0, i.jsx)(O.Z, {
@@ -595,7 +599,7 @@ function ep(e) {
                                                       verified: !0,
                                                   })
                                                 : null,
-                                            withDisplayNameStyles: e1,
+                                            withDisplayNameStyles: e0,
                                         }),
                                     },
                                 ),
@@ -606,11 +610,11 @@ function ep(e) {
                                     ek && !eh ? (0, i.jsx)(ec, {}) : null,
                                     eP ? (0, i.jsx)(ed, {}) : null,
                                     eR ? (0, i.jsx)(eu, {}) : null,
-                                    eL && !e8
+                                    eL && !e1
                                         ? (0, i.jsx)(h.ua7, {
                                               text: et.intl.string(eO ? et.t.Et8qws : et.t["d+e27u"]),
                                               delay: 500,
-                                              targetElementRef: eB,
+                                              targetElementRef: eM,
                                               children: (e) => {
                                                   var { onClick: t } = e,
                                                       n = es(e, ["onClick"]);
@@ -625,7 +629,7 @@ function ep(e) {
                                                           onMouseDown: eY,
                                                           nameplate: W,
                                                           forceShow: eh,
-                                                          visibleElementRef: eB,
+                                                          visibleElementRef: eM,
                                                       }),
                                                   );
                                               },
@@ -639,7 +643,7 @@ function ep(e) {
                                               onMouseDown: eY,
                                               nameplate: W,
                                               reducedClickTarget: !0,
-                                              visibleElementRef: eB,
+                                              visibleElementRef: eM,
                                           }),
                                 ],
                             }),
@@ -679,7 +683,7 @@ let eg =
                   }, [t, c, a]),
                   { voiceActivityStatusEnabled: u } = (0, _.U)({ location: "PrivateChannel" }),
                   { voiceChannel: m } = (0, E.Z)({ userId: c }),
-                  p = (0, B.K)({ user: s }),
+                  p = (0, M.K)({ user: s }),
                   h = (0, g.e7)([J.default, q.Z], () => {
                       if (t.isMultiUserDM())
                           if (l)

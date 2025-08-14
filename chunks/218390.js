@@ -38,8 +38,8 @@ var i = n(255367),
     w = n(74538),
     k = n(140465),
     L = n(695349),
-    M = n(46062),
-    B = n(717401),
+    B = n(46062),
+    M = n(717401),
     U = n(286961),
     V = n(533525),
     G = n(232076),
@@ -53,7 +53,7 @@ var i = n(255367),
     X = n(474936),
     J = n(981631),
     Q = n(388032),
-    $ = n(371335),
+    $ = n(458622),
     ee = n(881188),
     et = n(434691);
 let en = "to_premium_home_button",
@@ -68,7 +68,7 @@ function ea(e) {
         d = null != t.trialEndsAt ? o()(t.trialEndsAt).diff(o()(), "d") : 0,
         m = X.GP[t.planIdFromItems],
         g = w.ZP.formatPriceString(w.ZP.getDefaultPrice(m.id), m.interval),
-        { enabled: h } = M.T.getCurrentConfig({ location: "SubscriptionUserHeroSubheader" });
+        { enabled: h } = B.T.getCurrentConfig({ location: "SubscriptionUserHeroSubheader" });
     if (c) {
         var f, b, x;
         return (0, i.jsxs)(i.Fragment, {
@@ -266,7 +266,7 @@ function eo(e) {
     var t, n;
     let { className: r, config: s } = e,
         l = (0, c.e7)([E.Z], () => E.Z.useReducedMotion) ? s.getStaticImageUrl() : s.getAnimatedImageUrl(),
-        o = (0, B.Tl)(null != (t = s.gradientConfig) ? t : void 0),
+        o = (0, M.Tl)(null != (t = s.gradientConfig) ? t : void 0),
         d = { color: null != (n = s.textColor) ? n : "var(--always-white)" };
     return (0, i.jsxs)("div", {
         className: a()($.giftCardPromotion, r),

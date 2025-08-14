@@ -4,31 +4,30 @@ var a = r(135164),
     s = r(181568);
 let o = Math.PI / 180;
 function i(e, t, { l: r = 2, c = 1 } = {}) {
-    let l;
     [e, t] = (0, s.Z)([e, t]);
-    let [u, f, b] = a.Z.from(e),
-        [, d, h] = n.Z.from(a.Z, [u, f, b]),
-        [p, m, g] = a.Z.from(t),
-        y = n.Z.from(a.Z, [p, m, g])[1];
-    d < 0 && (d = 0), y < 0 && (y = 0);
-    let v = u - p,
-        Z = d - y,
+    let [l, u, f] = a.Z.from(e),
+        [, b, d] = n.Z.from(a.Z, [l, u, f]),
+        [h, p, m] = a.Z.from(t),
+        g = n.Z.from(a.Z, [h, p, m])[1];
+    b < 0 && (b = 0), g < 0 && (g = 0);
+    let y = l - h,
+        v = b - g,
+        Z = u - p,
         w = f - m,
-        M = b - g,
-        k = 0.511;
-    u >= 16 && (k = (0.040975 * u) / (1 + 0.01765 * u));
-    let O = (0.0638 * d) / (1 + 0.0131 * d) + 0.638;
-    Number.isNaN(h) && (h = 0);
-    let E = Math.pow(d, 4),
-        C = Math.sqrt(E / (E + 1900)),
-        x =
-            O *
-            (C *
-                (h >= 164 && h <= 345
-                    ? 0.56 + Math.abs(0.2 * Math.cos((h + 168) * o))
-                    : 0.36 + Math.abs(0.4 * Math.cos((h + 35) * o))) +
+        M = 0.511;
+    l >= 16 && (M = (0.040975 * l) / (1 + 0.01765 * l));
+    let k = (0.0638 * b) / (1 + 0.0131 * b) + 0.638;
+    Number.isNaN(d) && (d = 0);
+    let O = Math.pow(b, 4),
+        E = Math.sqrt(O / (O + 1900)),
+        C =
+            k *
+            (E *
+                (d >= 164 && d <= 345
+                    ? 0.56 + Math.abs(0.2 * Math.cos((d + 168) * o))
+                    : 0.36 + Math.abs(0.4 * Math.cos((d + 35) * o))) +
                 1 -
-                C),
-        j = (v / (r * k)) ** 2;
-    return Math.sqrt((j += (Z / (c * O)) ** 2 + (w ** 2 + M ** 2 - Z ** 2) / x ** 2));
+                E),
+        x = (y / (r * M)) ** 2;
+    return Math.sqrt((x += (v / (c * k)) ** 2 + (Z ** 2 + w ** 2 - v ** 2) / C ** 2));
 }

@@ -11,10 +11,10 @@ var i = n(255367),
     x = n(699516),
     p = n(473092),
     h = n(991981),
-    g = n(850165),
-    m = n(134612),
-    f = n(388032),
-    _ = n(682721),
+    m = n(850165),
+    g = n(134612),
+    _ = n(388032),
+    f = n(394968),
     b = n(149355);
 function O(t) {
     let { senderId: e, channelId: n, hasReported: O, onReport: v, trackAnalyticsEvent: j } = t,
@@ -25,20 +25,7 @@ function O(t) {
         [N, C] = r.useState(!1),
         k = (0, h.q)(n),
         I = r.useMemo(() => (S ? 0 : A ? 2 : 1), [S, A]),
-        M = () => {
-            y(!0),
-                j(p.NM.USER_TAKEOVER_MODAL_BLOCK),
-                o.Z.blockUser(e, { location: m.DL }).then(() => {
-                    u.Z.showBlockSuccessToast(e, n);
-                });
-        },
-        R = () => {
-            y(!1),
-                o.Z.unblockUser(e, { location: m.DL }),
-                j(p.NM.USER_TAKEOVER_MODAL_UNBLOCK),
-                u.Z.showUnblockSuccessToast(e, n);
-        },
-        Z = async () => {
+        M = async () => {
             null != k &&
                 (C(!0),
                 await (0, l.J7)(
@@ -53,55 +40,63 @@ function O(t) {
                 C(!1),
                 j(p.NM.USER_TAKEOVER_MODAL_REPORT));
         },
-        w = (t) => {
-            0 === t
-                ? ((0, c.Z)(m.EI), j(p.NM.USER_TAKEOVER_MODAL_CTL))
-                : 2 === t
-                  ? ((0, c.Z)(m.$l), j(p.NM.USER_TAKEOVER_MODAL_THROUGHLINE))
-                  : ((0, c.Z)(m.n4), j(p.NM.USER_TAKEOVER_MODAL_NO_FILTR));
-        },
-        L = r.useMemo(() => {
+        R = r.useMemo(() => {
             switch (I) {
                 case 0:
-                    return f.intl.string(f.t.sZf6c3);
+                    return _.intl.string(_.t.sZf6c3);
                 case 2:
-                    return f.intl.string(f.t.HQ2nKi);
+                    return _.intl.string(_.t.HQ2nKi);
                 default:
-                    return f.intl.string(f.t["65XQam"]);
+                    return _.intl.string(_.t["65XQam"]);
             }
         }, [I]);
-    return (0, i.jsx)(g.Z, {
+    return (0, i.jsx)(m.Z, {
         heroImageSrc: b,
-        heroImageAlt: f.intl.string(f.t.RVyYCA),
-        header: f.intl.string(f.t["mWO+ys"]),
-        description: f.intl.string(f.t.S0XtKC),
+        heroImageAlt: _.intl.string(_.t.RVyYCA),
+        header: _.intl.string(_.t["mWO+ys"]),
+        description: _.intl.string(_.t.S0XtKC),
         children: (0, i.jsxs)("div", {
-            className: _.buttonContainer,
+            className: f.buttonContainer,
             children: [
                 (0, i.jsx)(s.zxk, {
-                    text: E ? f.intl.string(f.t.XyHpKC) : f.intl.string(f.t.l4EmaW),
+                    text: E ? _.intl.string(_.t.XyHpKC) : _.intl.string(_.t.l4EmaW),
                     variant: "primary",
                     fullWidth: !0,
                     icon: s.k$p,
                     onClick: () => {
-                        E ? R() : M();
+                        E
+                            ? (y(!1),
+                              o.Z.unblockUser(e, { location: g.DL }),
+                              j(p.NM.USER_TAKEOVER_MODAL_UNBLOCK),
+                              u.Z.showUnblockSuccessToast(e, n))
+                            : (y(!0),
+                              j(p.NM.USER_TAKEOVER_MODAL_BLOCK),
+                              o.Z.blockUser(e, { location: g.DL }).then(() => {
+                                  u.Z.showBlockSuccessToast(e, n);
+                              }));
                     },
                 }),
                 (0, i.jsx)(s.zxk, {
-                    text: O ? f.intl.string(f.t.QvwOJy) : f.intl.string(f.t["7fHyEx"]),
+                    text: O ? _.intl.string(_.t.QvwOJy) : _.intl.string(_.t["7fHyEx"]),
                     variant: "secondary",
                     fullWidth: !0,
                     icon: s.U65,
-                    onClick: Z,
+                    onClick: M,
                     loading: N,
                     disabled: O,
                 }),
                 (0, i.jsx)(s.zxk, {
-                    text: L,
+                    text: R,
                     variant: "secondary",
                     fullWidth: !0,
                     icon: s.kBi,
-                    onClick: () => w(I),
+                    onClick: () => {
+                        0 === I
+                            ? ((0, c.Z)(g.EI), j(p.NM.USER_TAKEOVER_MODAL_CTL))
+                            : 2 === I
+                              ? ((0, c.Z)(g.$l), j(p.NM.USER_TAKEOVER_MODAL_THROUGHLINE))
+                              : ((0, c.Z)(g.n4), j(p.NM.USER_TAKEOVER_MODAL_NO_FILTR));
+                    },
                 }),
             ],
         }),

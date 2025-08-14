@@ -194,7 +194,7 @@ function S(e) {
         },
         w = (e, i, o) => {
             (0, s.ZDy)(async () => {
-                let { default: a } = await Promise.all([n.e("97652"), n.e("92842")]).then(n.bind(n, 744373));
+                let { default: a } = await Promise.all([n.e("97652"), n.e("72442")]).then(n.bind(n, 744373));
                 return (n) =>
                     (0, r.jsx)(
                         a,

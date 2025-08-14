@@ -11,7 +11,7 @@ var r = n(255367),
     f = n(190054),
     h = n(760373),
     g = n(388032),
-    p = n(509733);
+    p = n(506317);
 function O(e) {
     let { channelId: t } = e,
         n = (0, i.e7)([s.Z], () => {
@@ -23,7 +23,7 @@ function O(e) {
             chunkSize: h.y6,
             desiredLength: h.YP,
         }),
-        N = l.useCallback(() => {
+        y = l.useCallback(() => {
             (0, a.PM)({ channelId: t });
         }, [t]);
     return (0, r.jsxs)("div", {
@@ -60,7 +60,7 @@ function O(e) {
                         (0, r.jsx)(f.H, {
                             chunks: O,
                             color: o.TVs.colors.INTERACTIVE_NORMAL.css,
-                            onCopy: N,
+                            onCopy: y,
                         }),
                 ],
             }),

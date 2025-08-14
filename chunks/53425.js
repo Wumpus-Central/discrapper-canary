@@ -3,37 +3,37 @@ var r = n(255367),
     i = n(73800),
     l = n(120356),
     o = n.n(l),
-    s = n(442837),
-    a = n(481060),
+    a = n(442837),
+    s = n(481060),
     c = n(592125),
     u = n(938475),
     d = n(823379),
-    h = n(734190),
-    p = n(388032),
-    f = n(471688);
+    p = n(734190),
+    f = n(388032),
+    h = n(113914);
 let g = i.memo(function (e) {
     let { channel: t, selectedChannel: n, selectedVoiceChannelId: i, sortedThreadIds: l, withGuildIcon: g } = e,
-        { density: m } = (0, a.TCT)(),
-        b = (0, s.Wu)([c.Z], () => l.map((e) => c.Z.getChannel(e)).filter(d.lm), [l]),
-        O = (0, s.e7)([u.ZP], () => {
+        { density: m } = (0, s.TCT)(),
+        b = (0, a.Wu)([c.Z], () => l.map((e) => c.Z.getChannel(e)).filter(d.lm), [l]),
+        O = (0, a.e7)([u.ZP], () => {
             let e = b[b.length - 1];
             if (null == e) return 0;
             let t = u.ZP.getVoiceStates(e.guild_id)[e.id];
             return null == t || 0 === t.length ? 0 : i !== e.id ? 40 : 32 * t.length + 8;
         });
     return (0, r.jsx)("li", {
-        className: f.container,
+        className: h.container,
         children: (0, r.jsxs)("ul", {
             role: "group",
-            "aria-label": p.intl.formatToPlainString(p.t.EiyIi4, { channelName: t.name }),
+            "aria-label": f.intl.formatToPlainString(f.t.EiyIi4, { channelName: t.name }),
             children: [
                 (0, r.jsx)("div", {
-                    className: o()(f.spineBorder, { [f.spineBorderWithGuildIcon]: g }),
+                    className: o()(h.spineBorder, { [h.spineBorderWithGuildIcon]: g }),
                     style: { bottom: ("cozy" === m ? 28 : 24) + O },
                 }),
                 b.map((e, t) =>
                     (0, r.jsx)(
-                        h.Z,
+                        p.Z,
                         {
                             thread: e,
                             isSelectedChannel: (null == n ? void 0 : n.id) === e.id,

@@ -1,36 +1,36 @@
-n.d(t, { Z: () => h }), n(388685);
+n.d(t, { Z: () => p }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(755721),
     o = n(481060),
-    s = n(626135),
-    a = n(288552),
+    a = n(626135),
+    s = n(288552),
     c = n(981631),
     u = n(388032),
-    d = n(808934);
-function h(e) {
+    d = n(407067);
+function p(e) {
     let { type: t, onClick: n } = e,
-        [l, h] = i.useState(!1),
-        f = () => {
+        [l, p] = i.useState(!1),
+        h = () => {
             n(),
-                s.default.track(c.rMx.INBOX_CHANNEL_ACKED, {
+                a.default.track(c.rMx.INBOX_CHANNEL_ACKED, {
                     marked_all_channels_as_read: !0,
                     num_unread_channels_remaining: 0,
                 });
         },
         g = (e) => {
-            e.shiftKey ? f() : h(!0);
+            e.shiftKey ? h() : p(!0);
         };
     return (0, r.jsxs)(r.Fragment, {
         children: [
             l
-                ? (0, r.jsx)(p, {
-                      confirm: f,
-                      cancel: () => h(!1),
+                ? (0, r.jsx)(f, {
+                      confirm: h,
+                      cancel: () => p(!1),
                   })
                 : null,
             "bottom-floating" === t
-                ? (0, r.jsx)(a.a, {
+                ? (0, r.jsx)(s.a, {
                       text: u.intl.string(u.t["8k+6QU"]),
                       icon: o.W6s,
                       onClick: g,
@@ -48,7 +48,7 @@ function h(e) {
         ],
     });
 }
-function p(e) {
+function f(e) {
     let { cancel: t, confirm: n } = e;
     return (0, r.jsx)(o.sYh, {
         dismissable: !0,

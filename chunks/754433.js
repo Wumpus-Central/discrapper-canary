@@ -6,7 +6,7 @@ var l = r(120356),
     i = r(481060),
     o = r(937615),
     s = r(388032),
-    c = r(541725);
+    c = r(410187);
 let u = (e) => {
     let {
             price: { amount: t, currency: r },

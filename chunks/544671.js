@@ -5,7 +5,7 @@ var i = n(557711),
     o = n(620662),
     a = n(503438),
     s = n(981631),
-    l = n(10609);
+    l = n(7826);
 function c(e) {
     let { activity: t, user: n, guildId: c, channelId: u, source: d, look: f, color: _, onAction: p } = e;
     return null != t && (0, o.Z)(t, s.xjy.SYNC) && (0, a.Z)(t)

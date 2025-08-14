@@ -1,4 +1,4 @@
-n.d(t, { Z: () => v }), n(953529), n(388685);
+n.d(t, { Z: () => C }), n(953529), n(388685);
 var r = n(255367),
     a = n(73800),
     l = n(120356),
@@ -15,7 +15,7 @@ var r = n(255367),
     h = n(486324),
     b = n(485696),
     j = n(388032),
-    y = n(206392);
+    y = n(916340);
 function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -112,18 +112,18 @@ function A(e) {
         ],
     });
 }
-function C(e) {
+function v(e) {
     let { onComplete: t } = e,
         l = (0, s.e7)([c.default], () => c.default.getCurrentUser()),
-        { avatars: i, loading: g, error: C } = (0, f.S)(),
-        v = a.useRef([]),
+        { avatars: i, loading: g, error: v } = (0, f.S)(),
+        C = a.useRef([]),
         O = a.useRef(null),
         E = a.useRef(i.length),
         N = a.useRef(null),
         [S, w] = a.useState(!1),
         [P, T] = a.useState(!1),
         [R, _] = a.useState(null),
-        F = null != R ? R : null == C ? void 0 : C.message,
+        F = null != R ? R : null == v ? void 0 : v.message,
         Z = i.length,
         D = Math.max(b.iZ - Z, 0),
         I = (0, o.vRw)(),
@@ -146,7 +146,7 @@ function C(e) {
                         { filename: d, type: f } = (0, u.mh)(i, s);
                     (0, o.ZDy)(
                         async () => {
-                            let { default: a } = await Promise.all([n.e("59732"), n.e("46689")]).then(
+                            let { default: a } = await Promise.all([n.e("59732"), n.e("11866")]).then(
                                 n.bind(n, 712451),
                             );
                             return (n) =>
@@ -178,7 +178,7 @@ function C(e) {
         M = a.useCallback(
             (e, t, a, l, s) => {
                 let c = t + 1 < i.length ? t + 1 : t - 1;
-                (N.current = c >= 0 ? v.current[c] : O.current),
+                (N.current = c >= 0 ? C.current[c] : O.current),
                     e.shiftKey
                         ? (0, d.B)(a)
                         : (T(!0),
@@ -275,7 +275,7 @@ function C(e) {
                                                   onSelectRecentAvatar: k,
                                                   onDeleteRecentAvatar: M,
                                                   avatarButtonRef: (e) => {
-                                                      v.current[t] = e;
+                                                      C.current[t] = e;
                                                   },
                                               }),
                                           },
@@ -308,7 +308,7 @@ function C(e) {
               ],
           });
 }
-function v(e) {
+function C(e) {
     let { className: t, onComplete: n } = e;
     return (0, r.jsxs)("div", {
         className: i()(y.container, t),
@@ -326,7 +326,7 @@ function v(e) {
                     }),
                 ],
             }),
-            (0, r.jsx)(C, { onComplete: n }),
+            (0, r.jsx)(v, { onComplete: n }),
         ],
     });
 }

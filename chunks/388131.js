@@ -19,7 +19,7 @@ var i = n(255367),
     C = n(146085),
     N = n(71080),
     x = n(388032),
-    E = n(722595);
+    E = n(878713);
 function I(e, t) {
     return {
         id: e,
@@ -32,13 +32,13 @@ function j(e) {
     let { transitionState: t, onClose: n, channelId: g } = e,
         j = (0, u.Dt)(),
         b = (0, r.e7)([p.Z], () => p.Z.getChannel(g)),
-        v = (0, r.e7)([m.Z], () => m.Z.getGuild(null == b ? void 0 : b.getGuildId())),
-        [f, O] = s.useState({}),
-        [S, y] = s.useState(!1),
-        [A, _] = s.useState(null);
-    if (null == b || null == v) return null;
+        f = (0, r.e7)([m.Z], () => m.Z.getGuild(null == b ? void 0 : b.getGuildId())),
+        [v, O] = s.useState({}),
+        [S, A] = s.useState(!1),
+        [y, _] = s.useState(null);
+    if (null == b || null == f) return null;
     let T = async () => {
-        y(!0);
+        A(!0);
         try {
             await (function (e, t) {
                 let n = Object.values(t)
@@ -51,11 +51,11 @@ function j(e) {
                         return t.rowType === N.aC.ROLE ? I(t.id, d.BN.ROLE) : I(t.id, d.BN.MEMBER);
                     });
                 return (0, a.hw)(e.id, n, !0);
-            })(b, f),
+            })(b, v),
                 n();
         } catch (t) {
             let e = new o.Hx(t);
-            y(!1), _(e);
+            A(!1), _(e);
         }
     };
     return (0, i.jsxs)(l.Y0X, {
@@ -91,18 +91,18 @@ function j(e) {
                 ],
             }),
             (0, i.jsx)(c.U, {
-                guild: v,
+                guild: f,
                 channel: b,
                 permission: C.yP,
-                pendingAdditions: f,
+                pendingAdditions: v,
                 setPendingAdditions: O,
             }),
-            null != A
+            null != y
                 ? (0, i.jsx)(l.Text, {
                       className: E.error,
                       variant: "text-xs/normal",
                       color: "text-danger",
-                      children: A.getAnyErrorMessage(),
+                      children: y.getAnyErrorMessage(),
                   })
                 : null,
             (0, i.jsx)(l.mzw, {

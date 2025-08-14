@@ -41,11 +41,11 @@ var r = n(255367),
     L = n(176412),
     x = n(226026),
     M = n(570949),
-    j = n(753972),
-    k = n(981631),
+    k = n(753972),
+    j = n(981631),
     U = n(217702),
     G = n(388032),
-    B = n(572717),
+    B = n(992878),
     Z = n(413097),
     F = n(969728);
 function V(e, t, n) {
@@ -265,7 +265,7 @@ function ee(e) {
                 "div",
                 z(W({ className: a()(B.iconContainer, n) }, t), {
                     children: [
-                        (0, r.jsx)(j.Z, {
+                        (0, r.jsx)(k.Z, {
                             src: l,
                             className: B.iconCard,
                             "aria-hidden": !0,
@@ -354,7 +354,7 @@ function et(e) {
             (0, r.jsxs)("div", {
                 className: a()(B.appDetailsContainer, { [B.appDetailsRowContainer]: "row" === n }),
                 children: [
-                    (0, r.jsx)(j.Z, {
+                    (0, r.jsx)(k.Z, {
                         src: m,
                         className: a()(B.icon, { [B.rowIcon]: "row" === n }),
                         "aria-hidden": !0,
@@ -541,7 +541,7 @@ function el(e) {
         onClickAppCard: i.useCallback(
             (e) => {
                 e.stopPropagation(),
-                    (0, v.yw)(k.rMx.APPLICATION_COMMAND_SECTION_SELECTED, {
+                    (0, v.yw)(j.rMx.APPLICATION_COMMAND_SECTION_SELECTED, {
                         application_id: t.id,
                         section_name: n,
                         search_results_position: r,

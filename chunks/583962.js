@@ -8,29 +8,29 @@ var r = n(255367),
     i = n(73800),
     l = n(120356),
     o = n.n(l),
-    s = n(717976),
-    a = n(91192),
+    a = n(717976),
+    s = n(91192),
     c = n(442837),
     u = n(704215),
     d = n(477690),
-    h = n(481060),
-    p = n(239091),
-    f = n(100527),
+    p = n(481060),
+    f = n(239091),
+    h = n(100527),
     g = n(243778),
     m = n(538445),
     b = n(151494),
     O = n(496675),
     _ = n(259580),
     y = n(267642),
-    C = n(624138),
-    v = n(667815),
-    j = n(531572),
+    v = n(624138),
+    j = n(667815),
+    C = n(531572),
     E = n(18857),
-    S = n(981631),
-    x = n(921944),
-    I = n(388032),
-    P = n(93841),
-    N = n(339347);
+    x = n(981631),
+    S = n(921944),
+    P = n(388032),
+    I = n(989308),
+    N = n(210418);
 function w(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -74,7 +74,7 @@ function Z(e, t) {
         e
     );
 }
-let T = (0, C.Mg)(d.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
+let T = (0, v.Mg)(d.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
     A = 57,
     R = 57 + T,
     D = {
@@ -83,22 +83,22 @@ let T = (0, C.Mg)(d.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
     },
     L = i.memo((e) => {
         let { guild: t, tooltipTypes: l, withMargin: d } = e,
-            C = (0, y.Jh)(t.id),
+            v = (0, y.Jh)(t.id),
             T = (0, b.Z)(t.id),
-            A = (0, y.FZ)(C),
+            A = (0, y.FZ)(v),
             R = null == A,
-            L = null != A ? A : C,
-            M = (0, c.e7)([j.Z], () => {
+            L = null != A ? A : v,
+            M = (0, c.e7)([C.Z], () => {
                 var e;
-                return null != (e = j.Z.getCountForGuild(t.id)) ? e : 0;
+                return null != (e = C.Z.getCountForGuild(t.id)) ? e : 0;
             }),
-            k = (0, c.e7)([O.Z], () => O.Z.can(S.Plq.MANAGE_GUILD, t));
+            k = (0, c.e7)([O.Z], () => O.Z.can(x.Plq.MANAGE_GUILD, t));
         i.useEffect(() => {
-            M !== T && (0, v.v)(t.id, T);
+            M !== T && (0, j.v)(t.id, T);
         }, [t.id, M, T]);
-        let U = R ? "100%" : "".concat(Math.min(100, (T / S.oCV[L]) * 100), "%"),
+        let U = R ? "100%" : "".concat(Math.min(100, (T / x.oCV[L]) * 100), "%"),
             { current: G } = i.useRef(U),
-            [B] = (0, h.q_F)(
+            [B] = (0, p.q_F)(
                 () => ({
                     from: { width: M === T ? G : "0%" },
                     to: { width: U },
@@ -107,15 +107,15 @@ let T = (0, C.Mg)(d.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
                 "respect-motion-settings",
                 [M, T, G, U],
             ),
-            V = t.premiumTier < L && M >= S.oCV[L],
-            F = (0, E.Z)(t, f.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY, S.jXE.PREMIUM_GUILD_PROGRESS_BAR),
-            H = I.intl.formatToPlainString(I.t["2oNfMT"], { levelName: (0, y.e9)(L) }),
-            z = I.intl.format(I.t.dhKnYm, {
+            V = t.premiumTier < L && M >= x.oCV[L],
+            F = (0, E.Z)(t, h.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY, x.jXE.PREMIUM_GUILD_PROGRESS_BAR),
+            H = P.intl.formatToPlainString(P.t["2oNfMT"], { levelName: (0, y.e9)(L) }),
+            z = P.intl.format(P.t.dhKnYm, {
                 numBoosts: T,
-                numTotal: S.oCV[L],
+                numTotal: x.oCV[L],
             });
-        R && ((H = (0, y.e9)(L)), (z = I.intl.format(I.t.B2byER, { numBoosts: T }))), (H = H.toLocaleLowerCase());
-        let W = (0, a.JA)("boosts-".concat(t.id)),
+        R && ((H = (0, y.e9)(L)), (z = P.intl.format(P.t.B2byER, { numBoosts: T }))), (H = H.toLocaleLowerCase());
+        let W = (0, s.JA)("boosts-".concat(t.id)),
             K = i.useRef(null),
             [Y, q] = (0, g.US)(l),
             X = () =>
@@ -127,7 +127,7 @@ let T = (0, C.Mg)(d.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
                     : null,
             Q = (e, i) =>
                 (0, r.jsxs)(
-                    h.P3F,
+                    p.P3F,
                     Z(w({}, W, e, i), {
                         "aria-label": void 0,
                         role: "button",
@@ -146,19 +146,19 @@ let T = (0, C.Mg)(d.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
                         className: o()(N.container, { [N.containerWithMargin]: d }),
                         onContextMenu: (e) => {
                             k &&
-                                (0, p.jW)(e, async () => {
+                                (0, f.jW)(e, async () => {
                                     let { default: e } = await n.e("8570").then(n.bind(n, 651138));
                                     return (n) => (0, r.jsx)(e, Z(w({}, n), { guild: t }));
                                 });
                         },
                         children: [
-                            (0, r.jsx)(h.nn4, { children: e["aria-label"] }),
+                            (0, r.jsx)(p.nn4, { children: e["aria-label"] }),
                             (0, r.jsxs)("div", {
                                 className: N.textArea,
                                 children: [
                                     (0, r.jsx)("div", {
                                         className: N.goalTextContainer,
-                                        children: (0, r.jsx)(h.Text, {
+                                        children: (0, r.jsx)(p.Text, {
                                             className: N.goalText,
                                             color: "none",
                                             variant: "text-sm/medium",
@@ -169,7 +169,7 @@ let T = (0, C.Mg)(d.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
                                     (0, r.jsxs)("div", {
                                         className: N.progressFraction,
                                         children: [
-                                            (0, r.jsx)(h.Text, {
+                                            (0, r.jsx)(p.Text, {
                                                 color: "none",
                                                 variant: "text-sm/medium",
                                                 className: N.progressText,
@@ -189,13 +189,13 @@ let T = (0, C.Mg)(d.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
                             (0, r.jsxs)("div", {
                                 className: o()(N.progressBarContainer, { [N.progressBarContainerComplete]: R }),
                                 children: [
-                                    (0, r.jsx)(s.animated.div, {
+                                    (0, r.jsx)(a.animated.div, {
                                         className: N.progressBar,
                                         style: B,
                                     }),
                                     R
                                         ? (0, r.jsx)("span", {
-                                              "aria-label": I.intl.string(I.t["7iL1q6"]),
+                                              "aria-label": P.intl.string(P.t["7iL1q6"]),
                                               role: "img",
                                               className: N.tadaIcon,
                                               children: "\uD83C\uDF89",
@@ -207,26 +207,26 @@ let T = (0, C.Mg)(d.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
                     }),
                 );
         return (0, r.jsx)("li", {
-            children: (0, r.jsx)(h.ua7, {
+            children: (0, r.jsx)(p.ua7, {
                 text: V
-                    ? I.intl.formatToPlainString(P.default["9CtPjo"], { perk: (0, y.nW)(L) })
+                    ? P.intl.formatToPlainString(I.default["9CtPjo"], { perk: (0, y.nW)(L) })
                     : R
-                      ? I.intl.string(I.t["Y+V9go"])
-                      : I.intl.formatToPlainString(I.t.UyDKl5, { levelName: (0, y.nW)(L) }),
+                      ? P.intl.string(P.t["Y+V9go"])
+                      : P.intl.formatToPlainString(P.t.UyDKl5, { levelName: (0, y.nW)(L) }),
                 position: "top",
                 delay: 200,
                 hideOnClick: !0,
                 children: (e) =>
                     null != Y
-                        ? (0, r.jsx)(h.yRy, {
+                        ? (0, r.jsx)(p.yRy, {
                               targetElementRef: K,
                               renderPopout: X,
                               position: "right",
                               align: "top",
                               shouldShow: !0,
                               closeOnScroll: !0,
-                              onRequestClose: () => q(x.L.INDIRECT_ACTION),
-                              animation: h.yRy.Animation.TRANSLATE,
+                              onRequestClose: () => q(S.L.INDIRECT_ACTION),
+                              animation: p.yRy.Animation.TRANSLATE,
                               children: (t) =>
                                   (0, r.jsx)("div", {
                                       ref: K,

@@ -1,4 +1,4 @@
-a.d(t, { a: () => O }), a(388685), a(539854);
+a.d(t, { a: () => A }), a(388685), a(539854);
 var n = a(255367),
     r = a(73800),
     s = a(120356),
@@ -13,7 +13,7 @@ var n = a(255367),
     m = a(436620),
     p = a(431138),
     h = a(330711),
-    I = a(299635);
+    I = a(89004);
 function k(e, t, a) {
     return (
         t in e
@@ -27,28 +27,8 @@ function k(e, t, a) {
         e
     );
 }
-let g = N.j_.MAIN_NAVIGATION_MENU,
-    A = () => [
-        {
-            route: (0, i.L)(N.RK.TWITTER),
-            linkClicked: "twitter",
-            alt: "Discord's Twitter",
-            img: p.r.ASSET_SOCIAL_TWITTER,
-        },
-        {
-            route: N.fK.FACEBOOK_URL,
-            linkClicked: "facebook",
-            alt: "Discord's Facebook",
-            img: p.r.ASSET_SOCIAL_FACEBOOK,
-        },
-        {
-            route: N.fK.INSTAGRAM_URL,
-            linkClicked: "instagram",
-            alt: "Discord's Instagram",
-            img: p.r.ASSET_SOCIAL_INSTAGRAM,
-        },
-    ];
-class O extends r.PureComponent {
+let g = N.j_.MAIN_NAVIGATION_MENU;
+class A extends r.PureComponent {
     componentDidMount() {
         this.setState({ isAppCompatible: m.KO });
     }
@@ -145,7 +125,26 @@ class O extends r.PureComponent {
             }),
             k(this, "renderSocialMediaNav", () => {
                 let { TrackClick: e } = this.props,
-                    t = A().map((t) =>
+                    t = [
+                        {
+                            route: (0, i.L)(N.RK.TWITTER),
+                            linkClicked: "twitter",
+                            alt: "Discord's Twitter",
+                            img: p.r.ASSET_SOCIAL_TWITTER,
+                        },
+                        {
+                            route: N.fK.FACEBOOK_URL,
+                            linkClicked: "facebook",
+                            alt: "Discord's Facebook",
+                            img: p.r.ASSET_SOCIAL_FACEBOOK,
+                        },
+                        {
+                            route: N.fK.INSTAGRAM_URL,
+                            linkClicked: "instagram",
+                            alt: "Discord's Instagram",
+                            img: p.r.ASSET_SOCIAL_INSTAGRAM,
+                        },
+                    ].map((t) =>
                         (0, n.jsx)(
                             "li",
                             {

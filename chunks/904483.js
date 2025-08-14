@@ -73,7 +73,7 @@ function g(e) {
                           label: c.intl.string(c.t["fUYU+v"]),
                           action: () =>
                               (0, l.ZDy)(async () => {
-                                  let { default: t } = await Promise.all([n.e("45094"), n.e("78626")]).then(
+                                  let { default: t } = await Promise.all([n.e("45094"), n.e("67133")]).then(
                                       n.bind(n, 218613),
                                   );
                                   return (n) =>
@@ -95,7 +95,7 @@ function g(e) {
                           label: c.intl.string(c.t["ISN+ND"]),
                           action: () =>
                               (0, l.ZDy)(async () => {
-                                  let { default: t } = await Promise.all([n.e("45094"), n.e("78626")]).then(
+                                  let { default: t } = await Promise.all([n.e("45094"), n.e("67133")]).then(
                                       n.bind(n, 218613),
                                   );
                                   return (n) =>

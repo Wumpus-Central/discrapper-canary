@@ -2,7 +2,7 @@ n.d(t, { Z: () => o });
 var r = n(255367);
 n(73800);
 var l = n(753436),
-    i = n(485646);
+    i = n(443933);
 function o(e) {
     var { games: t, isGameFetching: n } = e,
         o = (function (e, t) {

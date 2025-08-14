@@ -12,7 +12,7 @@ var r = n(255367),
     _ = n(849464),
     p = n(765305),
     h = n(388032),
-    m = n(538369);
+    m = n(646615);
 function g(e, t, n) {
     return (
         t in e
@@ -204,7 +204,7 @@ function N(e) {
         w = (0, u.dQu)(c.Z.colors.TEXT_DANGER).hex();
     null == g && (g = o === p.WX.EXTERNAL ? h.intl.string(h.t.IyZxjI) : h.intl.string(h.t["X2K3//"]));
     let D = (0, d.Z)(C, N),
-        [{ startDateTimeString: L, endDateTimeString: x, currentOrPastEvent: M, upcomingEvent: j, diffMinutes: k }, U] =
+        [{ startDateTimeString: L, endDateTimeString: x, currentOrPastEvent: M, upcomingEvent: k, diffMinutes: j }, U] =
             i.useState((0, f.ub)(t, _));
     i.useEffect(() => {
         U((0, f.ub)(t, _));
@@ -230,10 +230,10 @@ function N(e) {
                         ? 4
                         : M
                           ? 2
-                          : +!!j,
-            [n, null == D ? void 0 : D.is_canceled, M, j],
+                          : +!!k,
+            [n, null == D ? void 0 : D.is_canceled, M, k],
         ),
-        Z = I(B, G, g, x, k),
+        Z = I(B, G, g, x, j),
         {
             Icon: F,
             iconColor: V,

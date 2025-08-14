@@ -144,9 +144,9 @@ class c {
                 case o.wx.DOUBLE:
                 case o.wx.FLOAT:
                     if (null === e) return 0;
-                    if ("NaN" === e) return Number.NaN;
-                    if ("Infinity" === e) return Number.POSITIVE_INFINITY;
-                    if ("-Infinity" === e) return Number.NEGATIVE_INFINITY;
+                    if ("NaN" === e) return NaN;
+                    if ("Infinity" === e) return 1 / 0;
+                    if ("-Infinity" === e) return -1 / 0;
                     if ("" === e) {
                         c = "empty string";
                         break;
@@ -208,7 +208,6 @@ class c {
                     try {
                         encodeURIComponent(e);
                     } catch (e) {
-                        e = "invalid UTF8";
                         break;
                     }
                     return e;

@@ -25,10 +25,17 @@ class f extends i.PureComponent {
         });
     }
     constructor(...e) {
-        var t, n;
         super(...e),
-            (t = "handleButtonClick"),
-            (n = () => {
+            (function (e, t, n) {
+                t in e
+                    ? Object.defineProperty(e, t, {
+                          value: n,
+                          enumerable: !0,
+                          configurable: !0,
+                          writable: !0,
+                      })
+                    : (e[t] = n);
+            })(this, "handleButtonClick", () => {
                 let { guild: e } = this.props;
                 (0, o.f)({
                     guildId: e.id,
@@ -37,15 +44,7 @@ class f extends i.PureComponent {
                         object: c.qAy.SERVER_STATUS_CTA,
                     },
                 });
-            }),
-            t in this
-                ? Object.defineProperty(this, t, {
-                      value: n,
-                      enumerable: !0,
-                      configurable: !0,
-                      writable: !0,
-                  })
-                : (this[t] = n);
+            });
     }
 }
 let h = l.ZP.connectStores([s.Z], (e) => {

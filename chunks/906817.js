@@ -7,28 +7,28 @@ var r = n(255367),
     i = n(73800),
     l = n(481060),
     o = n(997638),
-    s = n(362658),
-    a = n(216306),
+    a = n(362658),
+    s = n(216306),
     c = n(155409),
     u = n(540126),
     d = n(301342),
-    h = n(327530),
-    p = n(981631),
-    f = n(388032),
-    g = n(432178);
+    p = n(327530),
+    f = n(981631),
+    h = n(388032),
+    g = n(776677);
 function m(e, t, n, r) {
-    let i = "compact" === r ? 8 : h.$k;
+    let i = "compact" === r ? 8 : p.$k;
     if (e === u.wZ) return i;
-    if (e === u.wd) return t.features.has(p.oNc.HUB) ? 0 : i;
+    if (e === u.wd) return t.features.has(f.oNc.HUB) ? 0 : i;
     if (e === n.voiceChannelsSectionNumber) {
         var l;
         let t = n.getCategoryFromSection(e);
         if (null == t || t.isEmpty()) return 0;
-        if (t.isCollapsed) return h.Pw + 9;
+        if (t.isCollapsed) return p.Pw + 9;
         let r = null == (l = n.getChannelFromSectionRow(e, 0)) ? void 0 : l.channel;
-        return null == r || r.record.type === p.d4z.GUILD_CATEGORY ? 9 : 25;
+        return null == r || r.record.type === f.d4z.GUILD_CATEGORY ? 9 : 25;
     }
-    return "compact" === r ? 32 : h.Pw;
+    return "compact" === r ? 32 : p.Pw;
 }
 function b(e, t) {
     switch (e) {
@@ -58,28 +58,28 @@ let O = i.memo(function (e) {
             selectedChannelId: O,
             disableManageChannels: _,
         } = e,
-        { isFavoritesPerk: y } = (0, s.z)("ChannelListSection"),
-        C = i.useCallback(() => {
+        { isFavoritesPerk: y } = (0, a.z)("ChannelListSection"),
+        v = i.useCallback(() => {
             let e = m.getCategoryFromSection(m.recentsSectionNumber);
             if (null == e) return;
             let t = null,
                 r = e.getShownChannelAndThreadIds();
-            null != O && r.includes(O) && (t = (0, a.KY)(m)), (0, a.Uo)(n.id, r, t);
+            null != O && r.includes(O) && (t = (0, s.KY)(m)), (0, s.Uo)(n.id, r, t);
         }, [n.id, O, m, b]),
-        { density: v } = (0, l.TCT)(),
-        j = "compact" === v ? 8 : h.$k;
+        { density: j } = (0, l.TCT)(),
+        C = "compact" === j ? 8 : p.$k;
     switch (t) {
         case u.wZ:
-            return (0, r.jsx)("div", { style: { height: j } });
+            return (0, r.jsx)("div", { style: { height: C } });
         case u.wd:
-            if (n.features.has(p.oNc.HUB)) return null;
-            return (0, r.jsx)("div", { style: { height: j } });
+            if (n.features.has(f.oNc.HUB)) return null;
+            return (0, r.jsx)("div", { style: { height: C } });
         case u.p2:
-            return (0, r.jsx)(d.P, { name: y ? f.intl.string(f.t.mlPMCw) : f.intl.string(f.t.k8fFjo) });
+            return (0, r.jsx)(d.P, { name: y ? h.intl.string(h.t.mlPMCw) : h.intl.string(h.t.k8fFjo) });
         case m.recentsSectionNumber:
             return (0, r.jsx)(d.P, {
-                name: f.intl.string(f.t.gKcrqK),
-                onDismiss: C,
+                name: h.intl.string(h.t.gKcrqK),
+                onDismiss: v,
             });
         case m.voiceChannelsSectionNumber: {
             var E;
@@ -104,7 +104,7 @@ let O = i.memo(function (e) {
                 position: e.position,
                 disableManageChannels: _,
                 children: (0, r.jsx)(c.Z, {
-                    inlineSpecs: h.MF,
+                    inlineSpecs: p.MF,
                     arrowAlignment: o.cy.TOP,
                     tutorialId: "organize-by-topic",
                     position: "right",

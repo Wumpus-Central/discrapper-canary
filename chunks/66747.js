@@ -20,15 +20,15 @@ var r = n(255367),
     v = n(172751),
     y = n(493892),
     O = n(884902),
-    H = n(433355),
-    _ = n(430824),
+    _ = n(433355),
+    H = n(430824),
     w = n(496675),
     N = n(594174),
     S = n(203893),
     Z = n(777288),
     D = n(5192),
-    L = n(709054),
-    R = n(51144),
+    R = n(709054),
+    L = n(51144),
     I = n(815790),
     P = n(588215),
     M = n(241559),
@@ -42,7 +42,7 @@ var r = n(255367),
     F = n(176505),
     q = n(50493),
     z = n(388032),
-    G = n(92006);
+    G = n(266631);
 function Y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -172,7 +172,7 @@ let X = l.memo(function (e) {
     }),
     J = l.memo(function (e) {
         let { member: t, highestRole: n } = e,
-            o = (0, u.e7)([_.Z], () => _.Z.getGuild(t.guildId), [t.guildId]),
+            o = (0, u.e7)([H.Z], () => H.Z.getGuild(t.guildId), [t.guildId]),
             a = t.roles.length - 1,
             s = l.useMemo(() => new Intl.NumberFormat(z.intl.currentLocale).format(a), [a]),
             c = (0, A.vN)(t),
@@ -282,7 +282,7 @@ let X = l.memo(function (e) {
                               variant: "text-xs/normal",
                               color: "header-secondary",
                               tag: "span",
-                              children: R.ZP.getUserTag(o),
+                              children: L.ZP.getUserTag(o),
                           }),
                       }),
                   ],
@@ -335,7 +335,7 @@ function $(e) {
 let ee = l.memo(function (e) {
         let { member: t, showLongDate: n, isSortedBy: o } = e,
             { accountCreationDateShort: i, accountCreationDateLong: a } = l.useMemo(() => {
-                let e = L.default.extractTimestamp(t.userId);
+                let e = R.default.extractTimestamp(t.userId);
                 return {
                     accountCreationDateShort: (0, I.fv)(e, I.jq.ACCOUNT_AGE),
                     accountCreationDateLong: new Date(e).toLocaleDateString(z.intl.currentLocale, I.I),
@@ -373,7 +373,7 @@ let ee = l.memo(function (e) {
                 compact: m,
                 hasModViewPanelAccess: b,
             } = e,
-            p = (0, u.e7)([w.Z, _.Z], () => w.Z.can(U.Plq.MANAGE_GUILD, _.Z.getGuild(t.guildId)), [t.guildId]),
+            p = (0, u.e7)([w.Z, H.Z], () => w.Z.can(U.Plq.MANAGE_GUILD, H.Z.getGuild(t.guildId)), [t.guildId]),
             { selectedUserIds: f, addUsers: h, removeUser: j } = (0, k.Z)(t.guildId),
             g = (0, M.xC)(t.guildId),
             x = (0, M.hB)(t.guildId, g, t.userId),
@@ -397,7 +397,7 @@ let ee = l.memo(function (e) {
                 [h, x, t, j, f],
             ),
             O = v === P.d$.ORDER_BY_GUILD_JOINED_AT_ASC,
-            H = v === P.d$.ORDER_BY_USER_ID_ASC || v === P.d$.ORDER_BY_USER_ID_DESC;
+            _ = v === P.d$.ORDER_BY_USER_ID_ASC || v === P.d$.ORDER_BY_USER_ID_DESC;
         return (0, r.jsxs)(r.Fragment, {
             children: [
                 g &&
@@ -443,7 +443,7 @@ let ee = l.memo(function (e) {
                     children: (0, r.jsx)(ee, {
                         showLongDate: a,
                         member: t,
-                        isSortedBy: H,
+                        isSortedBy: _,
                     }),
                 }),
                 p &&
@@ -530,18 +530,18 @@ let ee = l.memo(function (e) {
                 compact: m = !1,
             } = e,
             { analyticsLocations: b } = (0, p.ZP)(),
-            f = (0, u.e7)([H.ZP], () => H.ZP.getGuildSidebarState(n), [n]),
+            f = (0, u.e7)([_.ZP], () => _.ZP.getGuildSidebarState(n), [n]),
             h = (null == f ? void 0 : f.details.userId) === t,
             j = (0, u.e7)([V.Z], () => V.Z.getEnhancedMember(n, t), [n, t]),
             v = (0, A.zq)(j),
             y = (0, u.e7)([N.default], () => N.default.getUser(t), [t]),
             O = (0, x.m)(n),
-            _ = (0, A.RN)(null != j ? j : void 0),
+            H = (0, A.RN)(null != j ? j : void 0),
             w = l.useCallback(
                 (e) => {
-                    e.stopPropagation(), e.preventDefault(), _(e);
+                    e.stopPropagation(), e.preventDefault(), H(e);
                 },
-                [_],
+                [H],
             ),
             S = l.useCallback(
                 (e) => {

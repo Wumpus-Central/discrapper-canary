@@ -32,10 +32,10 @@ var r = n(255367),
     L = n(667105),
     x = n(860151),
     M = n(46140),
-    j = n(981631),
-    k = n(354459),
+    k = n(981631),
+    j = n(354459),
     U = n(388032),
-    G = n(827255);
+    G = n(435413);
 function B(e, t, n) {
     return (
         t in e
@@ -91,13 +91,13 @@ function V(e, t) {
 function H(e, t, n) {
     for (let a of e) {
         var r, i, o;
-        if (a.type === k.fO.STREAM) {
+        if (a.type === j.fO.STREAM) {
             let e = null != (i = (0, _.Um)(a.stream, n)) ? i : null,
                 o = (0, b.ZZ)(t, e);
             if (null != o && (null == (r = o.userStatus) ? void 0 : r.claimedAt) == null) return o;
         }
         for (let r of e)
-            if (!(0, k.I)(r))
+            if (!(0, j.I)(r))
                 for (let e of n.getActivities(r.user.id)) {
                     let n = (0, b.ZZ)(t, e);
                     if (null != n && (null == (o = n.userStatus) ? void 0 : o.claimedAt) == null) return n;
@@ -107,21 +107,21 @@ function H(e, t, n) {
 }
 function Y(e, t, n, r) {
     return e.some((e) => {
-        if (e.type !== k.fO.STREAM || e.user.id !== n.id) return !1;
+        if (e.type !== j.fO.STREAM || e.user.id !== n.id) return !1;
         let i = (0, _.Um)(e.stream, r);
         return null != i && (0, b._D)(i, t);
     });
 }
 function W(e) {
     var t, n, o, _;
-    let { channelId: h, quest: N, previewQuest: k, isParticipatingOverride: B } = e,
+    let { channelId: h, quest: N, previewQuest: j, isParticipatingOverride: B } = e,
         F = (0, E.O5)(),
         [H, W] = i.useState(!1),
         K = i.useCallback(() => W(!0), []),
         z = i.useCallback(() => W(!1), []),
         q = (0, s.e7)([g.default], () => g.default.getCurrentUser()),
         X = (0, s.e7)([p.Z], () => p.Z.getState().theme),
-        Q = (0, l.wj)(X) ? j.BRd.DARK : j.BRd.LIGHT,
+        Q = (0, l.wj)(X) ? k.BRd.DARK : k.BRd.LIGHT,
         J = (0, s.e7)([d.Z], () => d.Z.getParticipants(e.channelId), [e.channelId]),
         $ = (0, s.e7)(
             [v.Z],
@@ -141,7 +141,7 @@ function W(e) {
         ei = (0, s.e7)([f.ZP, m.Z], () => {
             let e = f.ZP.getRunningGames().map((e) => e.id);
             if ((0, b.$H)(N) && e.includes(er)) return !0;
-            let t = null != q ? m.Z.findActivity(q.id, (e) => e.type !== j.IIU.CUSTOM_STATUS) : null;
+            let t = null != q ? m.Z.findActivity(q.id, (e) => e.type !== k.IIU.CUSTOM_STATUS) : null;
             return !!(null != t && (0, b.$J)(N) && (0, b._D)(t, N));
         }, [N, er, q]),
         eo = !0 === B || ee || ei,
@@ -209,7 +209,7 @@ function W(e) {
         isQuestBarShowing: ey,
         isCurrentUserCallParticipant: es,
     });
-    let eO = null != k && (null == (o = N.userStatus) ? void 0 : o.claimedAt) == null;
+    let eO = null != j && (null == (o = N.userStatus) ? void 0 : o.claimedAt) == null;
     if ((!eO && (eE || eh || ey)) || (!eO && !es)) return null;
     let ev = (0, b.il)(N),
         eI = (0, r.jsx)(P.Z, {

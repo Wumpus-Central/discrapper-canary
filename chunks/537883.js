@@ -1,39 +1,37 @@
-n.d(t, { Z: () => f });
+n.d(t, { Z: () => p });
 var r,
     i,
-    l,
-    a = n(442837),
-    o = n(570140),
-    s = n(331114),
-    c = n(356164);
-let u = [];
-function d() {
-    u = [];
+    l = n(442837),
+    a = n(570140),
+    o = n(331114),
+    s = n(356164);
+let c = [];
+function u() {
+    c = [];
 }
-class p extends (l = a.ZP.Store) {
+class d extends (i = l.ZP.Store) {
     initialize() {
-        this.waitFor(s.Z, c.Z);
+        this.waitFor(o.Z, s.Z);
     }
     getVisibleTabs() {
-        return u;
+        return c;
     }
 }
-(i = "GlobalDiscoveryServersSearchLayoutStore"),
-    (r = "displayName") in p
-        ? Object.defineProperty(p, r, {
-              value: i,
-              enumerable: !0,
-              configurable: !0,
-              writable: !0,
-          })
-        : (p[r] = i);
-let f = new p(o.Z, {
-    CONNECTION_OPEN: d,
-    GLOBAL_DISCOVERY_SERVERS_SEARCH_LAYOUT_RESET: d,
+(r = "displayName") in d
+    ? Object.defineProperty(d, r, {
+          value: "GlobalDiscoveryServersSearchLayoutStore",
+          enumerable: !0,
+          configurable: !0,
+          writable: !0,
+      })
+    : (d[r] = "GlobalDiscoveryServersSearchLayoutStore");
+let p = new d(a.Z, {
+    CONNECTION_OPEN: u,
+    GLOBAL_DISCOVERY_SERVERS_SEARCH_LAYOUT_RESET: u,
     GLOBAL_DISCOVERY_SERVERS_SEARCH_COUNT_SUCCESS: function (e) {
         let { query: t } = e,
-            n = s.Z.getCounts(t);
+            n = o.Z.getCounts(t);
         if (null == n) return !1;
-        u = n;
+        c = n;
     },
 });

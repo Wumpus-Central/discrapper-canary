@@ -30,10 +30,10 @@ var r = n(255367),
     w = n(558317),
     D = n(981631),
     L = n(388032),
-    x = n(560915);
+    x = n(201512);
 let M = 5,
-    j = 12,
-    k = 1000,
+    k = 12,
+    j = 1000,
     U = c.Y.APP_LAUNCHER_IN_VOICE_BANNER,
     G = 584,
     B = "vc-activities-".concat((0, s.Z)());
@@ -132,7 +132,7 @@ let V = i.forwardRef(function (e, t) {
         M = I === D.IlC.POPOUT,
         U = H(n.getGuildId());
     i.useEffect(() => {
-        let e = setTimeout(() => C.ux(), k);
+        let e = setTimeout(() => C.ux(), j);
         return () => clearTimeout(e);
     }, []);
     let { enabled: G } = N.c.useExperiment({ location: "ActivitiesMiniShelf" }, { autoTrackExposure: !0 }),
@@ -211,8 +211,8 @@ let V = i.forwardRef(function (e, t) {
                                             }),
                                             (0, r.jsx)(f.Fbu, {
                                                 size: "custom",
-                                                width: j,
-                                                height: j,
+                                                width: k,
+                                                height: k,
                                                 color: "var(--interactive-active)",
                                                 className: x.titleRightIcon,
                                             }),

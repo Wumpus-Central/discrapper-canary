@@ -18,8 +18,8 @@ var i,
     d = a.n(s),
     r = a(717976),
     p = a(442837),
-    M = a(544891),
-    u = a(481060),
+    u = a(544891),
+    M = a(481060),
     l = a(570140),
     _ = a(607070),
     m = a(70097),
@@ -30,12 +30,12 @@ var i,
     W = a(138464),
     T = a(438820),
     I = a(981631),
-    S = a(920345),
+    S = a(577562),
     g = a(426401),
     b = a(926734),
     P = a(601046),
-    Z = a(421391),
-    y = a(153911),
+    y = a(421391),
+    Z = a(153911),
     F = a(588369),
     U = (((i = {}).WUMPUS_FLIGHT = "wumpus_flight"), (i.GRADIENT_HIGHLIGHT = "gradient_highlight"), i);
 async function C(e, t) {
@@ -44,10 +44,10 @@ async function C(e, t) {
         let a = e ? g.Z : b.Z;
         window.matchMedia("(min-width: 1012px) and (max-width: 1980px)").matches ||
         window.matchMedia("(min-height: 720px) and (max-height: 1408px)").matches
-            ? (a = e ? P.Z : Z.Z)
+            ? (a = e ? P.Z : y.Z)
             : (window.matchMedia("(min-width: 1980px)").matches || window.matchMedia("(min-height: 1408px)").matches) &&
-              (a = e ? y.Z : F.Z);
-        let n = await M.tn.get({
+              (a = e ? Z.Z : F.Z);
+        let n = await u.tn.get({
                 url: a,
                 binary: !0,
                 rejectWithError: !0,
@@ -69,15 +69,15 @@ function H() {
             isFetchingMedia: T.Z.isFetchingWowMomentMedia,
             canPlayWowMoment: T.Z.canPlayWowMoment,
         })),
-        [M, l] = o.useState(!1),
+        [u, l] = o.useState(!1),
         f = (0, E.vu)(),
         g = (0, E.rO)(),
         b = f > 52 || -1 === f || g,
         P = g ? "video/mp4" : "video/webm",
-        Z = b && !e && s && null === t && !1 === i;
+        y = b && !e && s && null === t && !1 === i;
     o.useEffect(() => {
-        Z && C(g, a);
-    }, [Z, g, a]),
+        y && C(g, a);
+    }, [y, g, a]),
         o.useEffect(() => {
             function t() {
                 !e &&
@@ -97,13 +97,13 @@ function H() {
                 }
             );
         }, [e, b]);
-    let [y, F] = o.useState(!1),
+    let [Z, F] = o.useState(!1),
         [U, H] = o.useState(!1),
-        O = (0, u.q_F)({
-            opacity: 0.2 * !!y,
+        O = (0, M.q_F)({
+            opacity: 0.2 * !!Z,
             config: { duration: 100 },
         }),
-        x = (0, u.q_F)(
+        v = (0, M.q_F)(
             {
                 x: U ? "100%" : "-100%",
                 config: { duration: 500 },
@@ -113,7 +113,7 @@ function H() {
     o.useEffect(() => {
         let e = -1;
         return (
-            y &&
+            Z &&
                 (e = window.setTimeout(() => {
                     H(!0);
                 }, 1000)),
@@ -121,7 +121,7 @@ function H() {
                 window.clearTimeout(e);
             }
         );
-    }, [y]),
+    }, [Z]),
         o.useEffect(() => {
             let e = -1;
             return (
@@ -134,15 +134,15 @@ function H() {
                 }
             );
         }, [U]);
-    let v = M && null !== t,
-        R = v || y;
+    let x = u && null !== t,
+        R = x || Z;
     return (0, c.jsxs)("div", {
         className: d()({
             [S.wrapper]: !R,
             [S.activeWrapper]: R,
         }),
         children: [
-            v &&
+            x &&
                 (0, c.jsx)(m.Z, {
                     autoPlay: !0,
                     className: S.videoWrapper,
@@ -164,7 +164,7 @@ function H() {
             }),
             (0, c.jsx)(r.animated.div, {
                 className: S.swipeWrapper,
-                style: x,
+                style: v,
                 children: (0, c.jsxs)("svg", {
                     className: S.swipe,
                     viewBox: "0 0 848 1024",

@@ -18,7 +18,7 @@ var r = n(255367),
     h = n(410030),
     m = n(388032),
     g = n(974223),
-    E = n(454104);
+    E = n(214785);
 function b(e, t, n) {
     return (
         t in e
@@ -122,8 +122,8 @@ function C(e) {
             loadingFinishedLabel: L,
             rounded: x = !1,
             type: M = "button",
-            rel: j,
-            onClick: k,
+            rel: k,
+            onClick: j,
             onDoubleClick: U,
             onMouseEnter: G,
             onMouseLeave: B,
@@ -220,9 +220,9 @@ function C(e) {
                                     [E.rounded]: x,
                                 }),
                                 ref: ee,
-                                rel: j,
+                                rel: k,
                                 type: M,
-                                onClick: es ? (e) => e.preventDefault() : k,
+                                onClick: es ? (e) => e.preventDefault() : j,
                                 onDoubleClick: es ? (e) => e.preventDefault() : U,
                                 onMouseUp: es ? void 0 : Z,
                                 onMouseDown: es ? void 0 : F,

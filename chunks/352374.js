@@ -102,8 +102,8 @@
         L,
         x,
         M,
-        j,
         k,
+        j,
         U,
         G,
         B,
@@ -159,14 +159,14 @@
             eL = eu(N),
             ex = eu(C),
             eM = eu(R),
-            ej = eu(P),
-            ek = eu(w),
+            ek = eu(P),
+            ej = eu(w),
             eU = eu(D),
             eG = eu(L),
             eB = eu(x),
             eZ = eu(M),
-            eF = eu(j),
-            eV = eu(k),
+            eF = eu(k),
+            eV = eu(j),
             eH = eu(U),
             eY = eu(G),
             eW = eu(Z),
@@ -457,7 +457,7 @@
                 o = void 0 === i ? 0 : i,
                 a = t.second,
                 s = void 0 === a ? 0 : a;
-            return eU.default(ek.default(ej.default(e, s), o), r);
+            return eU.default(ej.default(ek.default(e, s), o), r);
         }
         function tR(e, t) {
             var n = (t && tV(t)) || (tF() && tV(tF()));
@@ -485,10 +485,10 @@
         function tM(e) {
             return eX.default(e);
         }
-        function tj(e, t) {
+        function tk(e, t) {
             return e && t ? e2.default(e, t) : !e && !t;
         }
-        function tk(e, t) {
+        function tj(e, t) {
             return e && t ? e1.default(e, t) : !e && !t;
         }
         function tU(e, t) {
@@ -582,11 +582,11 @@
                 }) ||
                 (i &&
                     i.some(function (t) {
-                        return tk(e, t);
+                        return tj(e, t);
                     })) ||
                 (o &&
                     !o.some(function (t) {
-                        return tk(e, t);
+                        return tj(e, t);
                     })) ||
                 (a && !a(tI(e))) ||
                 !1
@@ -675,9 +675,9 @@
             if (!n || !r) throw Error("Both minTime and maxTime props required");
             var i,
                 o = tI(),
-                a = eU.default(ek.default(o, eN.default(e)), eC.default(e)),
-                s = eU.default(ek.default(o, eN.default(n)), eC.default(n)),
-                l = eU.default(ek.default(o, eN.default(r)), eC.default(r));
+                a = eU.default(ej.default(o, eN.default(e)), eC.default(e)),
+                s = eU.default(ej.default(o, eN.default(n)), eC.default(n)),
+                l = eU.default(ej.default(o, eN.default(r)), eC.default(r));
             try {
                 i = !e6.default(a, {
                     start: s,
@@ -1253,7 +1253,7 @@
                         tl(t_((r = t.call(this, e))), "renderOptions", function () {
                             return r.state.monthYearsList.map(function (e) {
                                 var t = eM.default(e),
-                                    n = tj(r.props.date, e) && tk(r.props.date, e);
+                                    n = tk(r.props.date, e) && tj(r.props.date, e);
                                 return ed.default.createElement(
                                     "div",
                                     {
@@ -1385,7 +1385,7 @@
                         tl(t_(e), "onChange", function (t) {
                             e.toggleDropdown();
                             var n = tI(parseInt(t));
-                            (tj(e.props.date, n) && tk(e.props.date, n)) || e.props.onChange(n);
+                            (tk(e.props.date, n) && tj(e.props.date, n)) || e.props.onChange(n);
                         }),
                         tl(t_(e), "toggleDropdown", function () {
                             return e.setState({ dropdownVisible: !e.state.dropdownVisible });
@@ -1815,7 +1815,7 @@
                                 r = n.day,
                                 i = n.startDate,
                                 o = n.endDate;
-                            return !(!i || !o) && tk(eG.default(r, t), i);
+                            return !(!i || !o) && tj(eG.default(r, t), i);
                         }),
                         tl(t_(e), "isRangeStartQuarter", function (t) {
                             var n = e.props,
@@ -1829,7 +1829,7 @@
                                 r = n.day,
                                 i = n.startDate,
                                 o = n.endDate;
-                            return !(!i || !o) && tk(eG.default(r, t), o);
+                            return !(!i || !o) && tj(eG.default(r, t), o);
                         }),
                         tl(t_(e), "isRangeEndQuarter", function (t) {
                             var n = e.props,
@@ -1841,7 +1841,7 @@
                         tl(t_(e), "isWeekInMonth", function (t) {
                             var n = e.props.day,
                                 r = eE.default(t, 6);
-                            return tk(t, n) || tk(r, n);
+                            return tj(t, n) || tj(r, n);
                         }),
                         tl(t_(e), "renderWeeks", function () {
                             for (
@@ -2170,7 +2170,7 @@
                                     s = e.props.selected || e.props.openToDate || tI(),
                                     l = eC.default(s),
                                     c = eN.default(s),
-                                    u = eU.default(ek.default(i, c), l),
+                                    u = eU.default(ej.default(i, c), l),
                                     d = 0;
                                 d < o;
                                 d++
@@ -3586,7 +3586,9 @@
                                     ) {
                                         var d = c && !u,
                                             f = c && u;
-                                        c || u ? d && s(e4.default(o, c) ? [o, null] : [c, o], t) : s([o, null], t),
+                                        c || u
+                                            ? d && (e4.default(o, c) ? s([o, null], t) : s([c, o], t))
+                                            : s([o, null], t),
                                             f && s([o, null], t);
                                     } else s(o, t);
                                 n || (r.props.onSelect(o, t), r.setState({ inputValue: null }));

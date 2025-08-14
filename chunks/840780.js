@@ -3,33 +3,33 @@ var r = n(255367),
     i = n(73800),
     l = n(120356),
     o = n.n(l),
-    s = n(512722),
-    a = n.n(s),
+    a = n(512722),
+    s = n.n(a),
     c = n(442837),
     u = n(481060),
     d = n(570140),
-    h = n(475179),
-    p = n(925549),
-    f = n(438139),
+    p = n(475179),
+    f = n(925549),
+    h = n(438139),
     g = n(730749),
     m = n(607070),
     b = n(636449),
     O = n(566620),
     _ = n(317381),
     y = n(889441),
-    C = n(736409),
-    v = n(835473),
-    j = n(413523),
+    v = n(736409),
+    j = n(835473),
+    C = n(413523),
     E = n(933557),
-    S = n(194082),
-    x = n(550532),
-    I = n(436774),
-    P = n(594190),
+    x = n(194082),
+    S = n(550532),
+    P = n(436774),
+    I = n(594190),
     N = n(925329),
     w = n(102172),
     Z = n(74299),
     T = n(914923),
-    A = n(165393),
+    A = n(662304),
     R = n(989941),
     D = n(690221),
     L = n(522474),
@@ -55,7 +55,7 @@ var r = n(255367),
     en = n(441248),
     er = n(981631),
     ei = n(918559),
-    el = n(811842);
+    el = n(800339);
 function eo(e, t, n) {
     return (
         t in e
@@ -69,7 +69,7 @@ function eo(e, t, n) {
         e
     );
 }
-function es(e) {
+function ea(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -85,7 +85,7 @@ function es(e) {
     }
     return e;
 }
-let ea = (0, f.Z)(function (e) {
+let es = (0, h.Z)(function (e) {
     let { message: t } = e;
     return (0, r.jsx)($.Z, { children: t });
 });
@@ -106,7 +106,7 @@ class ec extends i.PureComponent {
         });
     }
     renderActions() {
-        return (0, r.jsx)(et.J, es({}, this.props));
+        return (0, r.jsx)(et.J, ea({}, this.props));
     }
     renderGame() {
         let {
@@ -136,9 +136,9 @@ class ec extends i.PureComponent {
                           title: l,
                           icon: null == t ? void 0 : t.sourceIcon,
                       })
-                    : (0, r.jsx)(S.ZP, {
-                          look: S.ZP.Looks.GRAY,
-                          size: S.ZP.Sizes.SMALL,
+                    : (0, r.jsx)(x.ZP, {
+                          look: x.ZP.Looks.GRAY,
+                          size: x.ZP.Sizes.SMALL,
                           className: el.liveIndicator,
                       }),
                 (0, r.jsxs)("div", {
@@ -151,7 +151,7 @@ class ec extends i.PureComponent {
                                 children: [
                                     (0, r.jsx)(u.SrA, {
                                         size: "xxs",
-                                        color: I.JX.PREMIUM_TIER_2,
+                                        color: P.JX.PREMIUM_TIER_2,
                                     }),
                                     (0, r.jsx)(k.Z, {
                                         className: el.perksDemoText,
@@ -173,8 +173,8 @@ class ec extends i.PureComponent {
                 channel: i,
                 channelName: l,
                 guildForConnectedChannel: o,
-                isForceShowSharingPopout: s,
-                setIsForceShowSharingPopout: a,
+                isForceShowSharingPopout: a,
+                setIsForceShowSharingPopout: s,
             } = this.props;
         if (null == n || null == t) return null;
         let c = { start: n.connectedSince },
@@ -190,7 +190,7 @@ class ec extends i.PureComponent {
                     children: u,
                 }),
             }),
-            h = (0, r.jsx)(D.Z, {
+            p = (0, r.jsx)(D.Z, {
                 href: e,
                 onClick: this.handleApplicationLinkClick,
                 children: (0, r.jsx)(ee.Z, {
@@ -198,26 +198,26 @@ class ec extends i.PureComponent {
                     children: t.name,
                 }),
             }),
-            p = (0, r.jsxs)(r.Fragment, {
+            f = (0, r.jsxs)(r.Fragment, {
                 children: [
                     (0, r.jsx)(N.Z, {
                         className: el.gameIcon,
                         game: t,
                         size: N.Z.Sizes.SMALL,
                     }),
-                    (0, r.jsx)(C.j, {
-                        isForceShowSharingPopout: s,
-                        setIsForceShowSharingPopout: a,
+                    (0, r.jsx)(v.j, {
+                        isForceShowSharingPopout: a,
+                        setIsForceShowSharingPopout: s,
                         children: (0, r.jsxs)("div", {
                             className: el.info,
-                            children: [h, null != i && (0, U.Qm)(i.type) ? d : (0, r.jsx)(ea, { timestamps: c })],
+                            children: [p, null != i && (0, U.Qm)(i.type) ? d : (0, r.jsx)(es, { timestamps: c })],
                         }),
                     }),
                 ],
             });
         return (0, r.jsx)("div", {
             className: el.gameWrapper,
-            children: p,
+            children: f,
         });
     }
     render() {
@@ -227,26 +227,24 @@ class ec extends i.PureComponent {
             runningGame: n,
             isStreaming: i,
             streamMetadata: l,
-            application: s,
-            activity: a,
+            application: a,
+            activity: s,
             className: c,
         } = this.props;
-        return i || (((0, et.y)(s, a, t) || e) && (null != n || null != t))
-            ? (0, r.jsx)("div", {
-                  className: o()(el.panel, c),
-                  children: (0, r.jsxs)("div", {
-                      className: el.body,
-                      children: [
-                          null == n || (i && (null == l ? void 0 : l.pid) == null)
-                              ? null != t
-                                  ? this.renderEmbeddedActivity()
-                                  : this.renderScreenshare()
-                              : this.renderGame(),
-                          this.renderActions(),
-                      ],
-                  }),
-              })
-            : null;
+        if (!i && ((!(0, et.y)(a, s, t) && !e) || (null == n && null == t))) return null;
+        let u = () =>
+            null == n || (i && (null == l ? void 0 : l.pid) == null)
+                ? null != t
+                    ? this.renderEmbeddedActivity()
+                    : this.renderScreenshare()
+                : this.renderGame();
+        return (0, r.jsx)("div", {
+            className: o()(el.panel, c),
+            children: (0, r.jsxs)("div", {
+                className: el.body,
+                children: [u(), this.renderActions()],
+            }),
+        });
     }
     constructor(...e) {
         super(...e),
@@ -258,14 +256,14 @@ class ec extends i.PureComponent {
             eo(this, "handleChannelLinkClick", () => {
                 var e;
                 let { channel: t, embeddedActivity: n, isActivityPopoutOpen: r } = this.props;
-                a()(null != n, "Activity cannot be null during navigation click"),
-                    a()(null != t, "Channel cannot be null during navigation click"),
-                    p.Z.channelListScrollTo(null != (e = t.guild_id) ? e : er.ME, t.id),
+                s()(null != n, "Activity cannot be null during navigation click"),
+                    s()(null != t, "Channel cannot be null during navigation click"),
+                    f.Z.channelListScrollTo(null != (e = t.guild_id) ? e : er.ME, t.id),
                     !r &&
                         ((0, U.vd)(t.type) &&
-                            h.Z.selectParticipant(
+                            p.Z.selectParticipant(
                                 t.id,
-                                (0, j.gN)({
+                                (0, C.gN)({
                                     applicationId: n.applicationId,
                                     instanceId: n.compositeInstanceId,
                                 }),
@@ -279,7 +277,7 @@ let eu = (0, g.Z)(function (e) {
         n,
         l,
         { guildId: o } = e,
-        s = (function (e, t) {
+        a = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -300,61 +298,61 @@ let eu = (0, g.Z)(function (e) {
             }
             return i;
         })(e, ["guildId"]);
-    let a = (0, c.e7)([B.default], () => B.default.getId()),
-        u = (0, c.e7)([P.ZP, Q.Z], () => (0, R.Z)(P.ZP, Q.Z)),
+    let s = (0, c.e7)([B.default], () => B.default.getId()),
+        u = (0, c.e7)([I.ZP, Q.Z], () => (0, R.Z)(I.ZP, Q.Z)),
         d = (0, c.e7)([q.Z, V.Z], () => V.Z.getChannel(q.Z.getVoiceChannelId())),
-        h = (0, c.e7)([_.ZP], () => _.ZP.getConnectedActivityChannelId()),
-        p = (0, c.e7)([V.Z], () => V.Z.getChannel(h)),
-        f = (0, c.e7)([H.Z], () => H.Z.getGuild(null == p ? void 0 : p.guild_id)),
+        p = (0, c.e7)([_.ZP], () => _.ZP.getConnectedActivityChannelId()),
+        f = (0, c.e7)([V.Z], () => V.Z.getChannel(p)),
+        h = (0, c.e7)([H.Z], () => H.Z.getGuild(null == f ? void 0 : f.guild_id)),
         [g, O] = (0, c.Wu)([G.Z], () => [G.Z.getCurrentUserActiveStream(), G.Z.getStreamerActiveStreamMetadata()]),
-        C = (0, c.e7)([m.Z], () => m.Z.useReducedMotion),
-        j = (0, c.e7)([_.ZP], () => _.ZP.getCurrentEmbeddedActivity()),
-        S = (0, c.e7)([H.Z, W.Z, F.ZP], () =>
+        v = (0, c.e7)([m.Z], () => m.Z.useReducedMotion),
+        C = (0, c.e7)([_.ZP], () => _.ZP.getCurrentEmbeddedActivity()),
+        x = (0, c.e7)([H.Z, W.Z, F.ZP], () =>
             null != d ? w.JL(d, H.Z, W.Z, !1) : null != o && w.h_(F.ZP.getChannels(o), H.Z, W.Z).length > 0,
         ),
-        [I] = (0, v.Z)([
+        [P] = (0, j.Z)([
             null !=
             (l =
                 null != O && null != O.id
                     ? O.id
                     : null != u && null != u.id
                       ? u.id
-                      : null != j
-                        ? j.applicationId
+                      : null != C
+                        ? C.applicationId
                         : void 0)
                 ? l
                 : "",
         ]),
-        N = (0, c.e7)([x.Z], () => x.Z.getFakeGameData()),
+        N = (0, c.e7)([S.Z], () => S.Z.getFakeGameData()),
         T = (0, c.e7)([_.ZP], () => _.ZP.getCurrentEmbeddedActivity()),
         A = (0, y.Z)() && null != T && (0, b.R)(),
         D = (0, c.e7)([z.Z], () => (0, Z.Z)(z.Z) && (0, J.isWindows)()),
-        k = (0, c.e7)([K.Z], () => (null != a ? K.Z.findActivity(a, (e) => e.type === er.IIU.PLAYING) : null)),
-        U = null != g && g.ownerId === a && g.state !== er.jm8.ENDED,
-        $ = (0, c.e7)([X.default, Y.Z], () => (null != p ? (0, E.F6)(p, X.default, Y.Z) : void 0)),
+        k = (0, c.e7)([K.Z], () => (null != s ? K.Z.findActivity(s, (e) => e.type === er.IIU.PLAYING) : null)),
+        U = null != g && g.ownerId === s && g.state !== er.jm8.ENDED,
+        $ = (0, c.e7)([X.default, Y.Z], () => (null != f ? (0, E.F6)(f, X.default, Y.Z) : void 0)),
         ee = (0, M.Z)(),
         [et, en] = i.useState(!1),
         ei = (0, c.e7)([L.Z], () => L.Z.getWindowOpen(er.KJ3.ACTIVITY_POPOUT));
     return (0, r.jsx)(
         ec,
-        ((t = es({}, s)),
+        ((t = ea({}, a)),
         (n = n =
             {
                 guildId: o,
                 canGoLive: D || A || void 0 !== N,
                 activity: k,
-                embeddedActivity: j,
-                userId: a,
+                embeddedActivity: C,
+                userId: s,
                 runningGame: null != N ? N : u,
-                application: I,
-                useReducedMotion: C,
+                application: P,
+                useReducedMotion: v,
                 isStreaming: U,
-                channel: p,
-                canStream: S,
+                channel: f,
+                canStream: x,
                 stream: g,
                 streamMetadata: O,
                 channelName: $,
-                guildForConnectedChannel: f,
+                guildForConnectedChannel: h,
                 streamQualityIndicator: ee,
                 isForceShowSharingPopout: et,
                 setIsForceShowSharingPopout: en,

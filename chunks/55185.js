@@ -7,30 +7,30 @@ var r,
     i = n(255367),
     l = n(73800),
     o = n(793030),
-    s = n(442837),
-    a = n(381499),
+    a = n(442837),
+    s = n(381499),
     c = n(481060),
     u = n(695346),
     d = n(675478),
-    h = n(885110),
-    p = n(63063),
-    f = n(316496),
+    p = n(885110),
+    f = n(63063),
+    h = n(316496),
     g = n(223730),
     m = n(981631),
-    b = n(29953),
+    b = n(933554),
     O = n(388032),
-    _ = n(296753),
+    _ = n(87587),
     y = n(354810);
-async function C(e) {
+async function v(e) {
     await d.hW.updateAsync(
         "status",
         (t) => {
-            (t.status = a.Gm.create({ value: e })), (t.statusExpiresAtMs = "0");
+            (t.status = s.Gm.create({ value: e })), (t.statusExpiresAtMs = "0");
         },
         d.fy.INFREQUENT_USER_ACTION,
     );
 }
-function v(e) {
+function j(e) {
     let { closePopout: t } = e;
     return (0, i.jsx)("div", {
         "data-button-hoisted-classname-wrapper": !0,
@@ -40,16 +40,16 @@ function v(e) {
             size: "sm",
             text: O.intl.string(b.default.Poezn5),
             onClick: () => {
-                t(), C(c.Skl.ONLINE);
+                t(), v(c.Skl.ONLINE);
             },
             fullWidth: !0,
         }),
     });
 }
-function j(e) {
+function C(e) {
     let { showCurrentGame: t, shouldShowStatus: n = !1, shouldShowCustomizeLink: r = !1, closePopout: l } = e,
-        o = (0, s.e7)([h.Z], () => h.Z.getStatus()),
-        { showLinkToSettings: a } = (0, f.D)("popout");
+        o = (0, a.e7)([p.Z], () => p.Z.getStatus()),
+        { showLinkToSettings: s } = (0, h.D)("popout");
     return (0, i.jsxs)("div", {
         className: _.toggleContainer,
         children: [
@@ -79,12 +79,12 @@ function j(e) {
                                 }),
                             ],
                         }),
-                    r && a && (0, i.jsx)(g.K, { onClosePopout: l }),
+                    r && s && (0, i.jsx)(g.K, { onClosePopout: l }),
                 ],
             }),
             (0, i.jsx)(c.rsf, {
                 onChange: (e) => {
-                    u.G6.updateSetting(e), n && C(e ? c.Skl.ONLINE : c.Skl.INVISIBLE);
+                    u.G6.updateSetting(e), n && v(e ? c.Skl.ONLINE : c.Skl.INVISIBLE);
                 },
                 checked: t,
             }),
@@ -95,8 +95,8 @@ function E(e) {
     let { children: t, closePopout: n } = e,
         r = (0, l.useRef)(null);
     (0, c.Tbt)(r);
-    let a = u.G6.useSetting(),
-        d = (0, s.e7)([h.Z], () => h.Z.getStatus()) === c.Skl.INVISIBLE && a;
+    let s = u.G6.useSetting(),
+        d = (0, a.e7)([p.Z], () => p.Z.getStatus()) === c.Skl.INVISIBLE && s;
     return (0, i.jsxs)("div", {
         className: _.wrapper,
         ref: r,
@@ -138,7 +138,7 @@ function E(e) {
         ],
     });
 }
-function S(e) {
+function x(e) {
     let { closePopout: t } = e,
         n = u.G6.useSetting();
     return (0, i.jsxs)(E, {
@@ -149,12 +149,12 @@ function S(e) {
                 color: "text-secondary",
                 className: _.nuxContent,
                 children: O.intl.format(b.default.nHDuwM, {
-                    learnMoreLink: p.Z.getArticleURL(m.BhN.ACTIVITY_STATUS_SETTINGS),
+                    learnMoreLink: f.Z.getArticleURL(m.BhN.ACTIVITY_STATUS_SETTINGS),
                 }),
             }),
             (0, i.jsx)("div", {
                 className: _.toggleContainerWrapper,
-                children: (0, i.jsx)(j, {
+                children: (0, i.jsx)(C, {
                     showCurrentGame: n,
                     shouldShowCustomizeLink: !0,
                     closePopout: t,
@@ -163,7 +163,7 @@ function S(e) {
         ],
     });
 }
-function x(e) {
+function S(e) {
     let { closePopout: t } = e;
     return (0, i.jsxs)(E, {
         closePopout: t,
@@ -173,14 +173,14 @@ function x(e) {
                 color: "text-secondary",
                 className: _.nuxContent,
                 children: O.intl.format(b.default["vtp/IS"], {
-                    learnMoreLink: p.Z.getArticleURL(m.BhN.ACTIVITY_STATUS_SETTINGS),
+                    learnMoreLink: f.Z.getArticleURL(m.BhN.ACTIVITY_STATUS_SETTINGS),
                 }),
             }),
-            (0, i.jsx)(v, { closePopout: t }),
+            (0, i.jsx)(j, { closePopout: t }),
         ],
     });
 }
-function I(e) {
+function P(e) {
     let { closePopout: t } = e,
         n = u.G6.useSetting();
     return (0, i.jsxs)(E, {
@@ -191,12 +191,12 @@ function I(e) {
                 color: "text-secondary",
                 className: _.nuxContent,
                 children: O.intl.format(b.default.nHDuwM, {
-                    learnMoreLink: p.Z.getArticleURL(m.BhN.ACTIVITY_STATUS_SETTINGS),
+                    learnMoreLink: f.Z.getArticleURL(m.BhN.ACTIVITY_STATUS_SETTINGS),
                 }),
             }),
             (0, i.jsx)("div", {
                 className: _.toggleContainerWrapper,
-                children: (0, i.jsx)(j, {
+                children: (0, i.jsx)(C, {
                     showCurrentGame: n,
                     shouldShowStatus: !0,
                     closePopout: t,
@@ -205,13 +205,13 @@ function I(e) {
         ],
     });
 }
-function P(e) {
+function I(e) {
     let { closePopout: t } = e,
         n = u.G6.useSetting(),
-        { showLinkToSettings: r } = (0, f.D)("popout");
+        { showLinkToSettings: r } = (0, h.D)("popout");
     return (0, i.jsxs)(E, {
         children: [
-            (0, i.jsx)(j, {
+            (0, i.jsx)(C, {
                 showCurrentGame: n,
                 closePopout: t,
             }),
@@ -220,7 +220,7 @@ function P(e) {
                 variant: "text-xs/normal",
                 color: "text-secondary",
                 children: O.intl.format(b.default.nHDuwM, {
-                    learnMoreLink: p.Z.getArticleURL(m.BhN.ACTIVITY_STATUS_SETTINGS),
+                    learnMoreLink: f.Z.getArticleURL(m.BhN.ACTIVITY_STATUS_SETTINGS),
                 }),
             }),
             r && (0, i.jsx)(g.y, { onClosePopout: t }),
@@ -241,20 +241,20 @@ function N(e) {
                 variant: "text-xs/normal",
                 color: "text-secondary",
                 children: O.intl.format(b.default["vtp/IS"], {
-                    learnMoreLink: p.Z.getArticleURL(m.BhN.ACTIVITY_STATUS_SETTINGS),
+                    learnMoreLink: f.Z.getArticleURL(m.BhN.ACTIVITY_STATUS_SETTINGS),
                 }),
             }),
-            (0, i.jsx)(v, { closePopout: t }),
+            (0, i.jsx)(j, { closePopout: t }),
         ],
     });
 }
 function w(e) {
     let { closePopout: t } = e,
         n = u.G6.useSetting(),
-        { showLinkToSettings: r } = (0, f.D)("popout");
+        { showLinkToSettings: r } = (0, h.D)("popout");
     return (0, i.jsxs)(E, {
         children: [
-            (0, i.jsx)(j, {
+            (0, i.jsx)(C, {
                 showCurrentGame: n,
                 shouldShowStatus: !0,
                 closePopout: t,
@@ -264,7 +264,7 @@ function w(e) {
                 variant: "text-xs/normal",
                 color: "text-secondary",
                 children: O.intl.format(b.default.nHDuwM, {
-                    learnMoreLink: p.Z.getArticleURL(m.BhN.ACTIVITY_STATUS_SETTINGS),
+                    learnMoreLink: f.Z.getArticleURL(m.BhN.ACTIVITY_STATUS_SETTINGS),
                 }),
             }),
             r && (0, i.jsx)(g.y, { onClosePopout: t }),
@@ -289,13 +289,13 @@ function T(e) {
         o)
     ) {
         case 0:
-            return (0, i.jsx)(S, { closePopout: n });
-        case 1:
             return (0, i.jsx)(x, { closePopout: n });
+        case 1:
+            return (0, i.jsx)(S, { closePopout: n });
         case 2:
-            return (0, i.jsx)(I, { closePopout: n });
-        case 3:
             return (0, i.jsx)(P, { closePopout: n });
+        case 3:
+            return (0, i.jsx)(I, { closePopout: n });
         case 4:
             return (0, i.jsx)(N, { closePopout: n });
         case 5:

@@ -3,21 +3,21 @@ n.d(t, {
     U1: () => y,
     XW: () => d,
     _J: () => m,
-    aP: () => f,
+    aP: () => h,
     e7: () => g,
     h6: () => O,
-    oE: () => p,
-    pB: () => h,
+    oE: () => f,
+    pB: () => p,
     y: () => _,
-    yS: () => C,
-    yr: () => v,
+    yS: () => v,
+    yr: () => j,
 }),
     n(781311);
 var r = n(97519),
     i = n(524437),
     l = n(695346),
     o = n(594174);
-function s(e) {
+function a(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -42,7 +42,7 @@ function s(e) {
     }
     return e;
 }
-function a(e, t) {
+function s(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -79,49 +79,49 @@ let d = (0, r.U)((e) => ({
         touched: !1,
         setNickname: (t) =>
             e((e) =>
-                a(s({}, e), {
+                s(a({}, e), {
                     nickname: t,
                     touched: !0,
                 }),
             ),
         setDmsAllowed: (t) =>
             e((e) =>
-                a(s({}, e), {
+                s(a({}, e), {
                     dmsAllowed: t,
                     touched: !0,
                 }),
             ),
         setShowActivity: (t) =>
             e((e) =>
-                a(s({}, e), {
+                s(a({}, e), {
                     showActivity: t,
                     touched: !0,
                 }),
             ),
         setMutedServer: (t) =>
             e((e) =>
-                a(s({}, e), {
+                s(a({}, e), {
                     mutedServer: t,
                     touched: !0,
                 }),
             ),
         setInviteCode: (t) =>
             e((e) =>
-                a(s({}, e), {
+                s(a({}, e), {
                     inviteCode: t,
                     touched: !0,
                 }),
             ),
         setGuildId: (t) =>
             e((e) =>
-                a(s({}, e), {
+                s(a({}, e), {
                     guildId: t,
                     touched: !0,
                 }),
             ),
         initialize: (t, n, r) =>
             e((e) =>
-                a(s({}, e), {
+                s(a({}, e), {
                     guildSize: t,
                     inviteCode: n,
                     guildId: r,
@@ -142,13 +142,13 @@ let d = (0, r.U)((e) => ({
                 touched: !1,
             })),
     })),
-    h = (e, t, n) => {
+    p = (e, t, n) => {
         d.getState().initialize(e, t, n);
     },
-    p = () => {
+    f = () => {
         d.getState().reset();
     },
-    f = () => {
+    h = () => {
         let e = d.getState();
         return (
             e.nickname !== c.nickname ||
@@ -163,8 +163,8 @@ let d = (0, r.U)((e) => ({
     O = () => d.getState().dmsAllowed,
     _ = () => d.getState().nickname,
     y = () => d.getState().showActivity,
-    C = () => d.getState().mutedServer,
-    v = () => {
+    v = () => d.getState().mutedServer,
+    j = () => {
         var e, t;
         let { nickname: n } = d();
         if (null != n && "" !== n.trim()) return n;

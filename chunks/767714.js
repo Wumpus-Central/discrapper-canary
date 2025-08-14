@@ -10,7 +10,7 @@ var i = n(120356),
     u = n(648613),
     d = n(433390),
     f = n(474936),
-    _ = n(20052);
+    _ = n(402623);
 function p(e, t, n) {
     return (
         t in e
@@ -141,7 +141,7 @@ let y = function (e) {
             confirmationFooter: C,
             paymentModalBanner: R,
         };
-    function j(e) {
+    function k(e) {
         let n = null != P ? P : t === f.Si.TIER_1 ? s.zx.Colors.PRIMARY : s.zx.Colors.GREEN;
         return (0, r.jsx)(
             u.Z,
@@ -201,7 +201,7 @@ let y = function (e) {
     return null != x.buttonTooltipText
         ? (0, r.jsx)(l.ua7, {
               text: x.buttonTooltipText,
-              children: j,
+              children: k,
           })
-        : j();
+        : k();
 };

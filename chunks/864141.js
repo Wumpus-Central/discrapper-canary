@@ -23,7 +23,7 @@ var i = n(120356),
     I = n(670451),
     T = n(228168),
     S = n(388032),
-    A = n(861242);
+    A = n(704543);
 function N(e, t, n) {
     return (
         t in e
@@ -92,8 +92,8 @@ function w(e) {
             onAction: L,
         }),
         M = (0, a.e7)([d.Z], () => d.Z.getGuild(i.guild_id)),
-        j = (0, _.Z)(i),
-        k = (0, u.ZP)(i),
+        k = (0, _.Z)(i),
+        j = (0, u.ZP)(i),
         { channelStatusEnabled: U } = (0, f.D)({ location: "UserProfileVoiceActivityCard" }),
         G = () => {
             if (t.id !== n.id) return null;
@@ -125,7 +125,7 @@ function w(e) {
             className: o()(A.card, N),
             onAction: L,
             onClose: R,
-            "aria-label": "".concat(Z, ", ").concat(k),
+            "aria-label": "".concat(Z, ", ").concat(j),
             children: [
                 (0, r.jsx)(E.Z, {
                     text: Z,
@@ -142,7 +142,7 @@ function w(e) {
                         className: A.content,
                         children: [
                             (0, r.jsx)(y.Z, {
-                                users: j,
+                                users: k,
                                 channel: i,
                             }),
                             (0, r.jsxs)("div", {

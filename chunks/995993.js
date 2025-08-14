@@ -3,42 +3,42 @@ var r = n(255367),
     i = n(73800),
     l = n(399606),
     o = n(704215),
-    s = n(692547),
-    a = n(481060),
+    a = n(692547),
+    s = n(481060),
     c = n(239091),
     u = n(266454),
     d = n(45966),
-    h = n(31445),
-    p = n(22082),
-    f = n(703656),
+    p = n(31445),
+    f = n(22082),
+    h = n(703656),
     g = n(306680),
     m = n(709054),
     b = n(540126),
     O = n(434479),
     _ = n(981631),
     y = n(176505),
-    C = n(490897),
-    v = n(388032),
-    j = n(526099);
+    v = n(490897),
+    j = n(388032),
+    C = n(885525);
 function E(e) {
     let { guild: t, selected: E } = e,
-        S = (0, h.Z)(t),
-        x = (0, u.Nj)(o.z.CHANNEL_BROWSER_NEW_BADGE_NUX),
-        I = (0, l.Wu)([p.Z], () =>
-            Array.from(p.Z.getNewChannelIds(t.id)).filter((e) => p.Z.shouldIndicateNewChannel(t.id, e)),
+        x = (0, p.Z)(t),
+        S = (0, u.Nj)(o.z.CHANNEL_BROWSER_NEW_BADGE_NUX),
+        P = (0, l.Wu)([f.Z], () =>
+            Array.from(f.Z.getNewChannelIds(t.id)).filter((e) => f.Z.shouldIndicateNewChannel(t.id, e)),
         ),
-        P = (0, l.e7)([g.ZP], () => g.ZP.hasUnread(t.id, C.W.GUILD_ONBOARDING_QUESTION)),
-        N = I.length > b.Cb,
+        I = (0, l.e7)([g.ZP], () => g.ZP.hasUnread(t.id, v.W.GUILD_ONBOARDING_QUESTION)),
+        N = P.length > b.Cb,
         w = (0, l.e7)([d.Z, g.ZP], () => {
             let e = d.Z.lastFetchedAt(t.id),
-                n = g.ZP.lastMessageId(t.id, C.W.GUILD_ONBOARDING_QUESTION);
+                n = g.ZP.lastMessageId(t.id, v.W.GUILD_ONBOARDING_QUESTION);
             if (null == n) return !1;
             let r = m.default.extractTimestamp(n);
             return null != e && e > r;
         }),
         Z = i.useCallback(() => {
-            (0, f.uL)(_.Z5c.CHANNEL(t.id, S ? y.oC.CUSTOMIZE_COMMUNITY : y.oC.CHANNEL_BROWSER));
-        }, [t.id, S]),
+            (0, h.uL)(_.Z5c.CHANNEL(t.id, x ? y.oC.CUSTOMIZE_COMMUNITY : y.oC.CHANNEL_BROWSER));
+        }, [t.id, x]),
         T = i.useCallback(
             (e) => {
                 (0, c.jW)(e, async () => {
@@ -94,23 +94,23 @@ function E(e) {
         ),
         A = null;
     return (
-        (x && !P && !N) ||
+        (S && !I && !N) ||
             E ||
             w ||
-            (A = (0, r.jsx)(a.IGR, {
-                color: s.Z.colors.BADGE_BRAND_BG.css,
-                text: v.intl.string(v.t.y2b7CA),
-                className: j.newChannel,
+            (A = (0, r.jsx)(s.IGR, {
+                color: a.Z.colors.BADGE_BRAND_BG.css,
+                text: j.intl.string(j.t.y2b7CA),
+                className: C.newChannel,
             })),
         (0, r.jsx)(O.m, {
             id: "channels-".concat(t.id),
             renderIcon: (e) =>
-                (0, r.jsx)(a.H$4, {
+                (0, r.jsx)(s.H$4, {
                     size: "md",
                     color: "currentColor",
                     className: e,
                 }),
-            text: S ? v.intl.string(v.t.h9mGOD) : v.intl.string(v.t.et6wam),
+            text: x ? j.intl.string(j.t.h9mGOD) : j.intl.string(j.t.et6wam),
             selected: E,
             onClick: Z,
             onContextMenu: T,

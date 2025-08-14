@@ -5,7 +5,7 @@ var i = n(409794),
     o = n(777207),
     a = n(541822),
     s = n(330711),
-    l = n(281900);
+    l = n(163315);
 let c = 96;
 function u(e) {
     let { benefits: t, description: n, imgSrc: u, title: d, tag: f, FallbackIcon: _ } = e,

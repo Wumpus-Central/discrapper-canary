@@ -188,8 +188,8 @@ function x(e) {
     null != r && (r.mode = n);
 }
 let M = [],
-    j = [],
-    k = [];
+    k = [],
+    j = [];
 class U extends (r = a.ZP.Store) {
     initialize() {
         this.waitFor(c.Z, _.ZP, l.Z);
@@ -205,10 +205,10 @@ class U extends (r = a.ZP.Store) {
     getOnboardingResponses(e) {
         var t, n, r;
         return l.Z.isFullServerPreview(e)
-            ? Array.from(null != (n = l.Z.getOnboardingResponses(e)) ? n : j)
+            ? Array.from(null != (n = l.Z.getOnboardingResponses(e)) ? n : k)
             : null != (r = null == (t = b[e]) ? void 0 : t.responses)
               ? r
-              : j;
+              : k;
     }
     getSelectedOptions(e) {
         let t = this.getOnboardingResponses(e);
@@ -219,10 +219,10 @@ class U extends (r = a.ZP.Store) {
     }
     getOnboardingResponsesForPrompt(e, t) {
         let n = b[e];
-        if (null == n) return j;
+        if (null == n) return k;
         let r = n.prompts.find((e) => e.id === t);
         return null == r
-            ? j
+            ? k
             : o().intersection(
                   r.options.map((e) => e.id),
                   this.getOnboardingResponses(e),
@@ -241,7 +241,7 @@ class U extends (r = a.ZP.Store) {
     }
     getDefaultChannelIds(e) {
         var t, n;
-        return null != (n = null == (t = b[e]) ? void 0 : t.defaultChannelIds) ? n : k;
+        return null != (n = null == (t = b[e]) ? void 0 : t.defaultChannelIds) ? n : j;
     }
     getEnabled(e) {
         var t, n;

@@ -1,56 +1,56 @@
-n.d(t, { j: () => C }), n(388685);
+n.d(t, { j: () => v }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(442837),
     o = n(704215),
-    s = n(481060),
-    a = n(266454),
+    a = n(481060),
+    s = n(266454),
     c = n(243778),
     u = n(7093),
     d = n(667105),
-    h = n(695346),
-    p = n(819640),
-    f = n(885110),
+    p = n(695346),
+    f = n(819640),
+    h = n(885110),
     g = n(626135),
     m = n(316496),
     b = n(55185),
     O = n(981631),
     _ = n(921944),
     y = n(46140);
-let C = (e) => {
-    let { children: t, isForceShowSharingPopout: n, setIsForceShowSharingPopout: C } = e,
-        [v, j] = (0, i.useState)(!1),
+let v = (e) => {
+    let { children: t, isForceShowSharingPopout: n, setIsForceShowSharingPopout: v } = e,
+        [j, C] = (0, i.useState)(!1),
         E = (function (e) {
             let { isForceShowSharingPopout: t } = e,
                 { isEnabled: n, showActivitySharingIndicatorWhenSharing: r } = (0, m.D)("SharingPrivacyPopout"),
                 i = (0, d.Ws)({ location: y.dr.CONFLICT_CHECKS }),
-                o = h.G6.useSetting(),
-                s = (0, l.e7)([p.Z], () => p.Z.getLayers().includes(O.S9g.USER_SETTINGS)),
-                a = (0, l.e7)([f.Z], () => f.Z.getStatus()),
+                o = p.G6.useSetting(),
+                a = (0, l.e7)([f.Z], () => f.Z.getLayers().includes(O.S9g.USER_SETTINGS)),
+                s = (0, l.e7)([h.Z], () => h.Z.getStatus()),
                 { isOpen: c } = (0, u.Z)();
-            if ((i || (!i && t)) && !s && !c && !__OVERLAY__ && n) {
-                if (r && o && a !== O.Skl.INVISIBLE) return t ? b.N.Activity : null;
-                if (!o && a === O.Skl.INVISIBLE) return t ? b.N.ActivityAndStatus : b.N.ActivityAndStatusNux;
+            if ((i || (!i && t)) && !a && !c && !__OVERLAY__ && n) {
+                if (r && o && s !== O.Skl.INVISIBLE) return t ? b.N.Activity : null;
+                if (!o && s === O.Skl.INVISIBLE) return t ? b.N.ActivityAndStatus : b.N.ActivityAndStatusNux;
                 if (!o) return t ? b.N.Activity : b.N.ActivityNux;
-                if (a === O.Skl.INVISIBLE) return t ? b.N.Status : b.N.StatusNux;
+                if (s === O.Skl.INVISIBLE) return t ? b.N.Status : b.N.StatusNux;
             }
             return null;
         })({ isForceShowSharingPopout: n }),
-        S = (0, i.useRef)(null);
+        x = (0, i.useRef)(null);
     return ((0, i.useEffect)(() => {
         n && g.default.track(O.rMx.OPEN_POPOUT, { type: "SharingPrivacyPopout" });
     }, [n]),
-    null != E || v)
+    null != E || j)
         ? (0, r.jsx)(c.ZP, {
               contentTypes: n ? [] : [o.z.SHARE_ACTIVITY_COACHMARK_V2],
               children: (e) => {
                   let { visibleContent: i } = e;
                   if (i === o.z.SHARE_ACTIVITY_COACHMARK_V2 || n) {
                       let e = () => {
-                          (0, a.Q3)(o.z.SHARE_ACTIVITY_COACHMARK_V2, { dismissAction: _.L.USER_DISMISS }), C(!1), j(!1);
+                          (0, s.Q3)(o.z.SHARE_ACTIVITY_COACHMARK_V2, { dismissAction: _.L.USER_DISMISS }), v(!1), C(!1);
                       };
-                      return (0, r.jsx)(s.yRy, {
-                          targetElementRef: S,
+                      return (0, r.jsx)(a.yRy, {
+                          targetElementRef: x,
                           shouldShow: !0,
                           spacing: 10,
                           position: "top",
@@ -60,13 +60,13 @@ let C = (e) => {
                               let { closePopout: t } = e;
                               return (0, r.jsx)(b.I, {
                                   closePopout: t,
-                                  onOpen: () => j(!0),
+                                  onOpen: () => C(!0),
                                   popoutState: E,
                               });
                           },
                           children: () =>
-                              (0, r.jsx)(s.P3F, {
-                                  innerRef: S,
+                              (0, r.jsx)(a.P3F, {
+                                  innerRef: x,
                                   onClick: e,
                                   children: t,
                               }),

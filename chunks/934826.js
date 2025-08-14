@@ -36,18 +36,18 @@ function u(e) {
             };
         }),
         f = null == m ? void 0 : m.subscription_plans[0],
-        h = null == f ? void 0 : f.id,
-        g = null == f ? void 0 : f.sku_id,
-        v = (0, r.e7)([a.Z], () => (null != h ? a.Z.get(h) : null)),
-        p = null == m ? void 0 : m.soft_deleted;
+        g = null == f ? void 0 : f.id,
+        h = null == f ? void 0 : f.sku_id,
+        p = (0, r.e7)([a.Z], () => (null != g ? a.Z.get(g) : null)),
+        v = null == m ? void 0 : m.soft_deleted;
     return (
         i.useEffect(() => {
-            null != v || null == g || a.Z.isFetchingForSKU(g) || (0, l.GZ)(g, void 0, void 0, p);
-        }, [v, g, p]),
+            null != p || null == h || a.Z.isFetchingForSKU(h) || (0, l.GZ)(h, void 0, void 0, v);
+        }, [p, h, v]),
         {
             activeSubscription: u,
             activeSubscriptionListing: m,
-            activeSubscriptionPlanFromStore: v,
+            activeSubscriptionPlanFromStore: p,
         }
     );
 }

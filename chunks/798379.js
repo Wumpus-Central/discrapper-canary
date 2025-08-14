@@ -1,36 +1,36 @@
-t.d(n, { Z: () => o }), t(388685);
-var l,
-    i = t(442837),
-    r = t(570140);
-function a(e, n, t) {
+n.d(t, { Z: () => o }), n(388685);
+var i,
+    s = n(442837),
+    l = n(570140);
+function r(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: t,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0,
               })
-            : (e[n] = t),
+            : (e[t] = n),
         e
     );
 }
-let u = new Set();
-class s extends (l = i.ZP.PersistedStore) {
+let a = new Set();
+class d extends (i = s.ZP.PersistedStore) {
     initialize(e) {
-        u.clear(), null == e || e.guilds.forEach((e) => u.add(e));
+        a.clear(), null == e || e.guilds.forEach((e) => a.add(e));
     }
     isCollapsed(e) {
-        return u.has(e);
+        return a.has(e);
     }
     getState() {
-        return { guilds: u };
+        return { guilds: a };
     }
 }
-a(s, "displayName", "RecentlyActiveCollapseStore"), a(s, "persistKey", "RecentlyActiveCollapseStore");
-let o = new s(r.Z, {
+r(d, "displayName", "RecentlyActiveCollapseStore"), r(d, "persistKey", "RecentlyActiveCollapseStore");
+let o = new d(l.Z, {
     SET_RECENTLY_ACTIVE_COLLAPSED: function (e) {
-        let { guildId: n, collapsed: t } = e;
-        t ? u.add(n) : u.delete(n);
+        let { guildId: t, collapsed: n } = e;
+        n ? a.add(t) : a.delete(t);
     },
 });

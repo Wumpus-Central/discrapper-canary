@@ -1,24 +1,24 @@
-n.d(t, { default: () => m }), n(388685), n(457542);
+n.d(t, { default: () => b }), n(388685), n(457542);
 var r = n(255367),
     i = n(73800),
     l = n(512722),
-    s = n.n(l),
-    a = n(442837),
-    o = n(82659),
+    a = n.n(l),
+    o = n(442837),
+    s = n(82659),
     c = n(481060),
     u = n(418632),
     d = n(594174),
     f = n(388032),
-    b = n(535033);
-let m = function (e) {
+    m = n(97411);
+let b = function (e) {
     let { onClose: t, transitionState: l } = e,
-        m = (0, a.e7)([d.default], () => d.default.getCurrentUser()),
+        b = (0, o.e7)([d.default], () => d.default.getCurrentUser()),
         [p, g] = i.useState(!1),
         y = i.useCallback(() => (null == t || t(), Promise.resolve()), [t]),
         h = i.useCallback(() => {
             null == t || t(),
                 (0, c.ZDy)(async () => {
-                    let { default: e } = await Promise.all([n.e("9343"), n.e("31227")]).then(n.bind(n, 642298));
+                    let { default: e } = await Promise.all([n.e("9343"), n.e("84577")]).then(n.bind(n, 642298));
                     return (t) =>
                         (0, r.jsx)(
                             e,
@@ -52,13 +52,13 @@ let m = function (e) {
         }, [t]),
         O = i.useCallback(() => {
             null == t || t(),
-                s()(null != m, "ResendEmailVerificationButton: currentUser cannot be undefined"),
+                a()(null != b, "ResendEmailVerificationButton: currentUser cannot be undefined"),
                 g(!0),
-                (0, u.s)(m).finally(() => g(!1));
-        }, [m, t]),
+                (0, u.s)(b).finally(() => g(!1));
+        }, [b, t]),
         j = i.useMemo(
             () =>
-                (null == m ? void 0 : m.email) == null
+                (null == b ? void 0 : b.email) == null
                     ? [
                           {
                               text: f.intl.string(f.t.ydw5nZ),
@@ -79,18 +79,18 @@ let m = function (e) {
                               loading: p,
                           },
                       ],
-            [m, h, O, p],
+            [b, h, O, p],
         );
-    return (0, r.jsxs)(o.Modal, {
+    return (0, r.jsxs)(s.Modal, {
         title: f.intl.string(f.t.UZLrY2),
         transitionState: l,
         onClose: y,
         actions: j,
         children: [
-            (0, r.jsx)("div", { className: b.imageUnverified }),
+            (0, r.jsx)("div", { className: m.imageUnverified }),
             (0, r.jsx)(c.Text, {
                 variant: "text-md/normal",
-                className: b.message,
+                className: m.message,
                 children: f.intl.string(f.t["0LgOKC"]),
             }),
         ],

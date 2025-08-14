@@ -4,12 +4,12 @@ n(73800);
 var i = n(120356),
     l = n.n(i),
     o = n(793030),
-    s = n(442837),
-    a = n(607070),
-    c = n(804466);
+    a = n(442837),
+    s = n(607070),
+    c = n(495940);
 function u(e) {
     let { withHeader: t = !0, size: n = 15 } = e,
-        i = (0, s.e7)([a.Z], () => a.Z.useReducedMotion);
+        i = (0, a.e7)([s.Z], () => s.Z.useReducedMotion);
     return (0, r.jsxs)(o.Kq, {
         gap: 4,
         children: [
@@ -22,7 +22,7 @@ function u(e) {
                     },
                     children: (0, r.jsx)(d, { className: l()(c.lineShort, c.loadingAnimation) }),
                 }),
-            Array.from({ length: n }).map((e, t) => (0, r.jsx)(h, {}, t)),
+            Array.from({ length: n }).map((e, t) => (0, r.jsx)(p, {}, t)),
         ],
     });
 }
@@ -30,8 +30,8 @@ function d(e) {
     let { className: t } = e;
     return (0, r.jsx)("div", { className: l()(c.line, t) });
 }
-function h() {
-    let e = (0, s.e7)([a.Z], () => a.Z.useReducedMotion);
+function p() {
+    let e = (0, a.e7)([s.Z], () => s.Z.useReducedMotion);
     return (0, r.jsxs)("div", {
         style: {
             display: "flex",

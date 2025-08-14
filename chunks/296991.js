@@ -19,7 +19,7 @@ var r = n(255367),
     v = n(592286),
     _ = n(981631),
     O = n(388032),
-    y = n(446333);
+    y = n(94228);
 function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -228,21 +228,7 @@ function S(e) {
             },
             [a, t, n],
         ),
-        R = (e) => {
-            if (a) return;
-            let r = [...t.slice(0, e), ...t.slice(e + 1)];
-            n(
-                0 === r.length
-                    ? [
-                          {
-                              id: o()(),
-                              value: "",
-                          },
-                      ]
-                    : r,
-            );
-        },
-        Z = i.useCallback(
+        R = i.useCallback(
             (e, r, i) => {
                 if (a || null == t) return;
                 let l = t.indexOf(e);
@@ -254,52 +240,66 @@ function S(e) {
             },
             [a, p, t, n],
         ),
-        D = t.length === v.X2,
-        A = i.useMemo(() => {
-            let e = D ? O.intl.formatToPlainString(O.t.tU718P, { number: v.X2 }) : void 0;
+        Z = t.length === v.X2,
+        D = i.useMemo(() => {
+            let e = Z ? O.intl.formatToPlainString(O.t.tU718P, { number: v.X2 }) : void 0;
             return [
                 {
                     text: O.intl.string(O.t.DXq2oa),
                     onClick: () => T(O.intl.string(O.t.XudkSk)),
-                    disabled: D || a,
+                    disabled: Z || a,
                     tooltipText: e,
                 },
                 {
                     text: O.intl.string(O.t.nSqTjI),
                     onClick: () => T(O.intl.string(O.t.np91jI)),
-                    disabled: D || a,
+                    disabled: Z || a,
                     tooltipText: e,
                 },
                 {
                     text: O.intl.string(O.t.AtRxsL),
                     onClick: () => T(O.intl.string(O.t.PNIDDA)),
-                    disabled: D || a,
+                    disabled: Z || a,
                     tooltipText: e,
                 },
                 {
                     text: O.intl.string(O.t["0K5NJi"]),
                     onClick: () => T(O.intl.string(O.t.HolIDw)),
-                    disabled: D || a,
+                    disabled: Z || a,
                     tooltipText: e,
                 },
             ];
-        }, [T, a, D]);
+        }, [T, a, Z]);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)("div", {
                 className: y.rulesContainer,
-                children: t.map((e, n) =>
+                children: t.map((e, i) =>
                     (0, r.jsx)(
                         E,
                         {
                             rulesChannel: null != d ? d : g,
                             rule: e,
-                            index: n,
-                            onChange: (e) => w(e, n),
-                            onClear: () => R(n),
-                            onRuleReorder: Z,
-                            isDropHovered: n === p,
-                            focused: n === I,
+                            index: i,
+                            onChange: (e) => w(e, i),
+                            onClear: () =>
+                                ((e) => {
+                                    if (a) return;
+                                    let r = [...t.slice(0, e), ...t.slice(e + 1)];
+                                    n(
+                                        0 === r.length
+                                            ? [
+                                                  {
+                                                      id: o()(),
+                                                      value: "",
+                                                  },
+                                              ]
+                                            : r,
+                                    );
+                                })(i),
+                            onRuleReorder: R,
+                            isDropHovered: i === p,
+                            focused: i === I,
                             onFocus: S,
                             previewEnabled: null == c || c,
                             isDragEnabled: !a && t.length > 1,
@@ -309,7 +309,7 @@ function S(e) {
                     ),
                 ),
             }),
-            !D &&
+            !Z &&
                 (0, r.jsx)(x.A, {
                     text: O.intl.string(O.t.Cq5Jub),
                     onClick: P,
@@ -322,7 +322,7 @@ function S(e) {
                 children: O.intl.string(O.t.XHWj8f),
             }),
             (0, r.jsx)(j.j, {
-                pills: A,
+                pills: D,
                 pillClassName: y.pill,
             }),
         ],

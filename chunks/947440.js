@@ -142,89 +142,7 @@ function M(t, e) {
                       location: F.Sbl.CONTEXT_MENU,
                   });
         },
-        tl = (l, o) => {
-            let d = Z.Z.getChannel(l),
-                r = null == d ? void 0 : O.Z.getGuild(d.guild_id);
-            if (null != d && null != r) {
-                if (null != e)
-                    return x.pu({
-                        channelId: d.id,
-                        applicationId: o,
-                        userId: e.id,
-                        location: F.t4x.CONTEXT_MENU,
-                    });
-                if (null != t && t.type === F.d4z.GUILD_VOICE)
-                    return (0, a.ZDy)(
-                        async () => {
-                            let { default: e } = await Promise.all([i.e("7654"), i.e("49049"), i.e("36264")]).then(
-                                i.bind(i, 560114),
-                            );
-                            return (i) => {
-                                var l, a;
-                                return (0, n.jsx)(
-                                    e,
-                                    ((l = (function (t) {
-                                        for (var e = 1; e < arguments.length; e++) {
-                                            var i = null != arguments[e] ? arguments[e] : {},
-                                                n = Object.keys(i);
-                                            "function" == typeof Object.getOwnPropertySymbols &&
-                                                (n = n.concat(
-                                                    Object.getOwnPropertySymbols(i).filter(function (t) {
-                                                        return Object.getOwnPropertyDescriptor(i, t).enumerable;
-                                                    }),
-                                                )),
-                                                n.forEach(function (e) {
-                                                    var n;
-                                                    (n = i[e]),
-                                                        e in t
-                                                            ? Object.defineProperty(t, e, {
-                                                                  value: n,
-                                                                  enumerable: !0,
-                                                                  configurable: !0,
-                                                                  writable: !0,
-                                                              })
-                                                            : (t[e] = n);
-                                                });
-                                        }
-                                        return t;
-                                    })({}, i)),
-                                    (a = a =
-                                        {
-                                            guild: r,
-                                            channel: d,
-                                            applicationId: o,
-                                            analyticsLocation:
-                                                t.type === F.d4z.GUILD_VOICE ? F.ZY5.GUILD_CHANNEL : F.ZY5.DM_CHANNEL,
-                                            source: F.t4x.ACTIVITY_INVITE,
-                                        }),
-                                    Object.getOwnPropertyDescriptors
-                                        ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(a))
-                                        : (function (t, e) {
-                                              var i = Object.keys(t);
-                                              if (Object.getOwnPropertySymbols) {
-                                                  var n = Object.getOwnPropertySymbols(t);
-                                                  i.push.apply(i, n);
-                                              }
-                                              return i;
-                                          })(Object(a)).forEach(function (t) {
-                                              Object.defineProperty(l, t, Object.getOwnPropertyDescriptor(a, t));
-                                          }),
-                                    l),
-                                );
-                            };
-                        },
-                        { modalKey: "use-activity-items-embedded-invite-modal" },
-                    );
-                if ((null == t ? void 0 : t.id) != null)
-                    return x.sN({
-                        activityChannelId: d.id,
-                        invitedChannelId: t.id,
-                        applicationId: o,
-                        location: F.t4x.CONTEXT_MENU,
-                    });
-            }
-        },
-        ta = async (t) => {
+        tl = async (t) => {
             let i = (0, D.Z)(t, F.xjy.EMBEDDED),
                 n = S.Z.getVoiceChannelId(),
                 l = Z.Z.getChannel(n);
@@ -256,7 +174,7 @@ function M(t, e) {
                 });
             }
         },
-        to = async (e) => {
+        ta = async (e) => {
             await (0, A.Z)({
                 applicationId: e.applicationId,
                 activityChannelId: null == t ? void 0 : t.id,
@@ -264,36 +182,137 @@ function M(t, e) {
                 analyticsLocations: M,
             });
         },
-        td = [];
+        to = [];
     return (
         null == X ||
-            X.forEach((i) => {
-                let l = (null == e ? void 0 : e.id) != null && i.userIds.has(null == e ? void 0 : e.id),
-                    o = h.Z.can(F.Plq.CREATE_INSTANT_INVITE, t),
-                    d = K.find((t) => (null == t ? void 0 : t.id) === i.applicationId);
-                null != i.launchId &&
-                    !l &&
-                    o &&
-                    null != d &&
-                    td.push(
+            X.forEach((l) => {
+                let o = (null == e ? void 0 : e.id) != null && l.userIds.has(null == e ? void 0 : e.id),
+                    d = h.Z.can(F.Plq.CREATE_INSTANT_INVITE, t),
+                    r = K.find((t) => (null == t ? void 0 : t.id) === l.applicationId);
+                null != l.launchId &&
+                    !o &&
+                    d &&
+                    null != r &&
+                    to.push(
                         (0, n.jsx)(
                             a.sNh,
                             {
                                 id: "invite-to-join-embedded",
                                 label: J.intl.string(J.t["3fRyS0"]),
-                                subtext: d.name,
+                                subtext: r.name,
                                 action: () => {
-                                    tl((0, w.p)(i.location), i.applicationId);
+                                    ((l, o) => {
+                                        let d = Z.Z.getChannel(l),
+                                            r = null == d ? void 0 : O.Z.getGuild(d.guild_id);
+                                        if (null != d && null != r) {
+                                            if (null != e)
+                                                return x.pu({
+                                                    channelId: d.id,
+                                                    applicationId: o,
+                                                    userId: e.id,
+                                                    location: F.t4x.CONTEXT_MENU,
+                                                });
+                                            if (null != t && t.type === F.d4z.GUILD_VOICE)
+                                                return (0, a.ZDy)(
+                                                    async () => {
+                                                        let { default: e } = await Promise.all([
+                                                            i.e("7654"),
+                                                            i.e("49049"),
+                                                            i.e("53020"),
+                                                        ]).then(i.bind(i, 560114));
+                                                        return (i) => {
+                                                            var l, a;
+                                                            return (0, n.jsx)(
+                                                                e,
+                                                                ((l = (function (t) {
+                                                                    for (var e = 1; e < arguments.length; e++) {
+                                                                        var i =
+                                                                                null != arguments[e]
+                                                                                    ? arguments[e]
+                                                                                    : {},
+                                                                            n = Object.keys(i);
+                                                                        "function" ==
+                                                                            typeof Object.getOwnPropertySymbols &&
+                                                                            (n = n.concat(
+                                                                                Object.getOwnPropertySymbols(i).filter(
+                                                                                    function (t) {
+                                                                                        return Object.getOwnPropertyDescriptor(
+                                                                                            i,
+                                                                                            t,
+                                                                                        ).enumerable;
+                                                                                    },
+                                                                                ),
+                                                                            )),
+                                                                            n.forEach(function (e) {
+                                                                                var n;
+                                                                                (n = i[e]),
+                                                                                    e in t
+                                                                                        ? Object.defineProperty(t, e, {
+                                                                                              value: n,
+                                                                                              enumerable: !0,
+                                                                                              configurable: !0,
+                                                                                              writable: !0,
+                                                                                          })
+                                                                                        : (t[e] = n);
+                                                                            });
+                                                                    }
+                                                                    return t;
+                                                                })({}, i)),
+                                                                (a = a =
+                                                                    {
+                                                                        guild: r,
+                                                                        channel: d,
+                                                                        applicationId: o,
+                                                                        analyticsLocation:
+                                                                            t.type === F.d4z.GUILD_VOICE
+                                                                                ? F.ZY5.GUILD_CHANNEL
+                                                                                : F.ZY5.DM_CHANNEL,
+                                                                        source: F.t4x.ACTIVITY_INVITE,
+                                                                    }),
+                                                                Object.getOwnPropertyDescriptors
+                                                                    ? Object.defineProperties(
+                                                                          l,
+                                                                          Object.getOwnPropertyDescriptors(a),
+                                                                      )
+                                                                    : (function (t, e) {
+                                                                          var i = Object.keys(t);
+                                                                          if (Object.getOwnPropertySymbols) {
+                                                                              var n = Object.getOwnPropertySymbols(t);
+                                                                              i.push.apply(i, n);
+                                                                          }
+                                                                          return i;
+                                                                      })(Object(a)).forEach(function (t) {
+                                                                          Object.defineProperty(
+                                                                              l,
+                                                                              t,
+                                                                              Object.getOwnPropertyDescriptor(a, t),
+                                                                          );
+                                                                      }),
+                                                                l),
+                                                            );
+                                                        };
+                                                    },
+                                                    { modalKey: "use-activity-items-embedded-invite-modal" },
+                                                );
+                                            if ((null == t ? void 0 : t.id) != null)
+                                                return x.sN({
+                                                    activityChannelId: d.id,
+                                                    invitedChannelId: t.id,
+                                                    applicationId: o,
+                                                    location: F.t4x.CONTEXT_MENU,
+                                                });
+                                        }
+                                    })((0, w.p)(l.location), l.applicationId);
                                 },
                             },
-                            "self-embedded-".concat(i.applicationId),
+                            "self-embedded-".concat(l.applicationId),
                         ),
                     );
             }),
         q.forEach((t, i) => {
             (null == e ? void 0 : e.id) !== v.default.getId() &&
                 (t.type === F.IIU.PLAYING && (0, D.Z)(t, F.xjy.JOIN)
-                    ? td.push(
+                    ? to.push(
                           (0, n.jsx)(
                               a.sNh,
                               {
@@ -307,7 +326,7 @@ function M(t, e) {
                       )
                     : t.type === F.IIU.LISTENING &&
                       (0, D.Z)(t, F.xjy.SYNC) &&
-                      td.push(
+                      to.push(
                           (0, n.jsx)(
                               a.sNh,
                               {
@@ -320,7 +339,7 @@ function M(t, e) {
                           ),
                       ));
         }),
-        td.length > 0 && td.push((0, n.jsx)(a.Clw, {}, "menu-separator")),
+        to.length > 0 && to.push((0, n.jsx)(a.Clw, {}, "menu-separator")),
         $.forEach((i, l) => {
             let o = (0, D.Z)(i, F.xjy.EMBEDDED),
                 d = (0, D.Z)(i, F.xjy.CONTEXTLESS);
@@ -333,7 +352,7 @@ function M(t, e) {
             )
                 if (tt[l]) {
                     let t = B[l];
-                    td.push(
+                    to.push(
                         (0, n.jsx)(
                             a.sNh,
                             {
@@ -342,13 +361,13 @@ function M(t, e) {
                                 disabled: t,
                                 hint: t ? (0, n.jsx)(a.$jN, { type: a.$jN.Type.PULSING_ELLIPSIS }) : null,
                                 subtext: i.name,
-                                action: () => ta(i),
+                                action: () => tl(i),
                             },
                             l,
                         ),
                     );
                 } else
-                    td.push(
+                    to.push(
                         (0, n.jsx)(
                             a.sNh,
                             {
@@ -363,7 +382,7 @@ function M(t, e) {
             else if (i.type === F.IIU.LISTENING && (0, D.Z)(i, F.xjy.SYNC) && null != te[l]) {
                 let o = te[l],
                     { playDisabled: d, syncDisabled: r } = o;
-                td.push(
+                to.push(
                     (0, n.jsx)(
                         a.sNh,
                         {
@@ -411,7 +430,7 @@ function M(t, e) {
             let c = K.find((e) => (null == e ? void 0 : e.id) === t.applicationId);
             tt[o] &&
                 null != c &&
-                td.push(
+                to.push(
                     (0, n.jsx)(
                         a.sNh,
                         {
@@ -420,12 +439,12 @@ function M(t, e) {
                             disabled: d,
                             hint: B[o] ? (0, n.jsx)(a.$jN, { type: a.$jN.Type.PULSING_ELLIPSIS }) : null,
                             subtext: c.name,
-                            action: () => to(t),
+                            action: () => ta(t),
                         },
                         "embedded-activity-".concat(t.applicationId),
                     ),
                 );
         }),
-        td
+        to
     );
 }

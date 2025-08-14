@@ -15,8 +15,8 @@ var r = n(255367),
     g = n(63063),
     _ = n(981631),
     x = n(388032),
-    b = n(962194),
-    E = n(881488);
+    b = n(884110),
+    E = n(197571);
 function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -68,21 +68,7 @@ let I = {
     },
     O = (e) => {
         let { title: t, menuType: i } = e,
-            o = () => {
-                (0, s.ZDy)(async () => {
-                    let { default: e } = await n.e("93288").then(n.bind(n, 396410));
-                    return (t) =>
-                        (0, r.jsx)(
-                            e,
-                            j(v({}, t), {
-                                onSuccess: a,
-                                headerText: x.intl.string(x.t.ZLRYGR),
-                                confirmButtonText: x.intl.string(x.t.PDTjLC),
-                            }),
-                        );
-                });
-            },
-            a = (e) => {
+            o = (e) => {
                 let t = async () => {
                         await (0, f.yL)(i, e);
                     },
@@ -114,7 +100,19 @@ let I = {
             };
         return (0, r.jsxs)(s.P3F, {
             className: b.reportButton,
-            onClick: () => o(),
+            onClick: () =>
+                void (0, s.ZDy)(async () => {
+                    let { default: e } = await n.e("93288").then(n.bind(n, 396410));
+                    return (t) =>
+                        (0, r.jsx)(
+                            e,
+                            j(v({}, t), {
+                                onSuccess: o,
+                                headerText: x.intl.string(x.t.ZLRYGR),
+                                confirmButtonText: x.intl.string(x.t.PDTjLC),
+                            }),
+                        );
+                }),
             children: [
                 (0, r.jsx)(s.Text, {
                     variant: "text-md/medium",

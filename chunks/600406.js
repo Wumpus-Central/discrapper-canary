@@ -14,7 +14,7 @@ var r = n(255367),
     c = n(594174),
     u = n(997612),
     d = n(981631),
-    f = n(443203);
+    f = n(567);
 let _ = RegExp("^dev://mana(/([-\\w._0-9]+))?$", "i");
 function p(e) {
     return _.test(e);

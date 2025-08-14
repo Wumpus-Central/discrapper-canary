@@ -1,10 +1,10 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => p });
 var r = n(255367),
     i = n(73800),
     l = n(481060),
     o = n(110255),
-    s = n(64247),
-    a = n(981631),
+    a = n(64247),
+    s = n(981631),
     c = n(388032);
 function u(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -49,7 +49,7 @@ function d(e, t) {
         e
     );
 }
-function h(e) {
+function p(e) {
     let { channel: t } = e,
         n = i.useRef(null);
     return (0, r.jsx)(l.yRy, {
@@ -60,7 +60,7 @@ function h(e) {
         renderPopout: (e) =>
             t.isThread()
                 ? (0, r.jsx)(
-                      s.Z,
+                      a.Z,
                       d(u({}, e), {
                           channel: t,
                           navId: "recents-thread-notifications",
@@ -73,7 +73,7 @@ function h(e) {
                           channel: t,
                           navId: "recents-notifications",
                           label: c.intl.string(c.t.ljs3OT),
-                          location: { section: a.jXE.INBOX },
+                          location: { section: s.jXE.INBOX },
                           includeGuildMute: !0,
                       }),
                   ),

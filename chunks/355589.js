@@ -1,4 +1,4 @@
-n.d(t, { Z: () => eg }), n(539854), n(388685), n(953529);
+n.d(t, { Z: () => ee }), n(539854), n(388685), n(953529);
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -38,7 +38,7 @@ var r = n(255367),
     D = n(710352),
     z = n(981631),
     H = n(388032),
-    B = n(452027);
+    B = n(951718);
 function U(e, t, n) {
     return (
         t in e
@@ -113,136 +113,6 @@ class K {
     }
 }
 let J = (e) => {
-        let t = null != e.topic && e.topic.length > 0;
-        return {
-            name: H.intl.string(H.t.UgJu1d),
-            description: H.intl.string(H.t["3C6/Gx"]),
-            clickHandler: () => {
-                X(D.ZI.GUIDELINES), f.ZP.open(e.id, void 0, z.ZfP.TOPIC);
-            },
-            isDone: t,
-        };
-    },
-    Y = (e) => {
-        let t = null != e.availableTags && e.availableTags.length > 0;
-        return {
-            name: H.intl.string(H.t.xiBFCg),
-            description: H.intl.string(H.t.wCv4Oz),
-            clickHandler: () => {
-                X(D.ZI.TAGS),
-                    f.ZP.open(e.id),
-                    (0, g.ZDy)(async () => {
-                        let { default: t } = await n.e("21971").then(n.bind(n, 201049));
-                        return (n) =>
-                            (0, r.jsx)(
-                                t,
-                                G(V({}, n), {
-                                    channelId: e.id,
-                                    guildId: e.guild_id,
-                                }),
-                            );
-                    });
-            },
-            isDone: t,
-        };
-    },
-    Q = (e) => {
-        let t = null != e.defaultReactionEmoji;
-        return {
-            name: H.intl.string(H.t.QlyC9v),
-            description: H.intl.string(H.t["+50LJi"]),
-            clickHandler: () => {
-                X(D.ZI.DEFAULT_REACTION),
-                    (0, g.ZDy)(async () => {
-                        let { default: t } = await n.e("80404").then(n.bind(n, 158586));
-                        return (n) => (0, r.jsx)(t, G(V({}, n), { channel: e }));
-                    });
-            },
-            isDone: t,
-        };
-    },
-    $ = (e, t, i) => ({
-        name: H.intl.string(H.t["6A0O6+"]),
-        description: t
-            ? H.intl.string(H.t["8hI5vr"])
-            : H.intl.format(H.t.ysxcAw, {
-                  onClick: (e) => {
-                      null != i &&
-                          (e.preventDefault(),
-                          e.stopPropagation(),
-                          (0, k.qz)(),
-                          (0, g.ZDy)(async () => {
-                              let { default: e } = await n.e("18417").then(n.bind(n, 740696));
-                              return (t) => (0, r.jsx)(e, G(V({}, t), { guildId: i }));
-                          }));
-                  },
-              }),
-        clickHandler: () => {
-            X(D.ZI.CREATE_POST), S.S.dispatch(z.CkL.FOCUS_COMPOSER_TITLE);
-        },
-        isDone: e,
-    }),
-    ee = (e, t) => i.useCallback(() => (t(!1), E.Z.hideAdminOnboarding(e, !0)), [e, t]),
-    et = (e) => {
-        let t = N.default.extractTimestamp(e);
-        return o()().isBefore(o()(t).add(o().duration(15, "days")));
-    },
-    en = (e, t, n) => {
-        i.useEffect(() => {
-            e || n(!t);
-        }, [e, n, t]);
-    },
-    er = (e, t, n, r) => {
-        let a = i.useRef(0);
-        i.useEffect(
-            () => (
-                n || !e || t
-                    ? clearTimeout(a.current)
-                    : (a.current = setTimeout(() => {
-                          r();
-                      }, 60 * T.Z.Millis.SECOND)),
-                () => clearTimeout(a.current)
-            ),
-            [e, t, r, n],
-        );
-    },
-    ei = (e, t, n) => {
-        (0, p.ZP)(() => {
-            e && t && n();
-        });
-    },
-    ea = (e) => {
-        let { isAllDone: t, isVisible: n, canManageChannel: r, guildId: a, channel: l } = e,
-            s = (0, h.e7)([O.Z], () => (null != a ? O.Z.partitionVersion(a) : void 0)),
-            o = i.useCallback(() => {
-                S.S.dispatch(z.CkL.REMEASURE_TARGET);
-            }, []);
-        i.useEffect(() => {
-            o();
-        }, [o, t, n, r, s, l.id, l.permissionOverwrites]);
-    },
-    el = () => {
-        let [e, t] = i.useState(!0);
-        return {
-            transitions: (0, g.Yzy)(e, {
-                keys: (e) => (e ? "shown" : "hidden"),
-                config: ec,
-                from: { opacity: 0 },
-                enter: { opacity: 1 },
-                leave: { opacity: 0 },
-                unique: !0,
-            }),
-            setVisible: t,
-        };
-    },
-    es = (e) =>
-        (0, g.Yzy)(e, {
-            from: { maxHeight: 0 },
-            enter: { maxHeight: 500 },
-            leave: { maxHeight: 0 },
-            config: { duration: 200 },
-        }),
-    eo = (e) => {
         let { guild: t, roles: n } = e;
         return (0, r.jsx)("div", {
             className: B.rolesList,
@@ -262,107 +132,13 @@ let J = (e) => {
             ),
         });
     },
-    ec = {
+    Y = {
         mass: 1,
         tension: 250,
         friction: 18,
         clamp: !0,
     },
-    ed = (e) => {
-        let { guild: t, channel: a, hasAnyThread: l, handleHide: s } = e,
-            [o, c] = i.useState(!1),
-            d = (0, A.c)(a.id),
-            u = (0, h.e7)([I.Z], () => I.Z.hasHidden(a.id)),
-            f = (function (e, t, a, l) {
-                let s = null == e ? void 0 : e.id,
-                    o = (0, h.e7)([O.Z], () => (null != s ? O.Z.getSortedRoles(s) : void 0));
-                return i.useMemo(() => {
-                    let i = new K(),
-                        s = (null == t ? void 0 : t.isMediaChannel()) === !0;
-                    return (
-                        null == e ||
-                            null == t ||
-                            s ||
-                            null == o ||
-                            i.addStep(
-                                (function (e, t, i, a) {
-                                    let l = (0, b.Z)(i)
-                                            ? m.$e(z.Plq.VIEW_CHANNEL, z.Plq.SEND_MESSAGES)
-                                            : z.Plq.SEND_MESSAGES,
-                                        s =
-                                            null != e
-                                                ? (0, R.E)(t, i, l).filter(
-                                                      (e) =>
-                                                          i.permissionOverwrites.hasOwnProperty(e.id) || (0, y.fI)(e),
-                                                  )
-                                                : [],
-                                        o = s.length > 0,
-                                        c = s.some((e) => (0, y.fI)(e));
-                                    return {
-                                        name: H.intl.string(H.t["/Ax2go"]),
-                                        description: H.intl.string(H.t.gAIOfn),
-                                        isDone: o && c,
-                                        shouldWarn: o && !c,
-                                        children: o
-                                            ? (0, r.jsx)(eo, {
-                                                  guild: e,
-                                                  roles: s,
-                                              })
-                                            : null,
-                                        clickHandler: () => {
-                                            X(D.ZI.PERMISSIONS),
-                                                (0, g.ZDy)(
-                                                    async () => {
-                                                        let { default: t } = await n.e("78704").then(n.bind(n, 560602));
-                                                        return (
-                                                            a(!0),
-                                                            (n) =>
-                                                                (0, r.jsx)(
-                                                                    t,
-                                                                    G(V({}, n), {
-                                                                        channel: i,
-                                                                        guild: e,
-                                                                        permission: l,
-                                                                        currentSelectedRoles: s,
-                                                                    }),
-                                                                )
-                                                        );
-                                                    },
-                                                    {
-                                                        modalKey: "SEND_MESSAGE_ROLE_PERMISSION_FIX_MODAL_KEY",
-                                                        onCloseRequest: z.VqG,
-                                                        onCloseCallback: () => a(!1),
-                                                    },
-                                                );
-                                        },
-                                    };
-                                })(e, o, t, l),
-                            ),
-                        s || i.addStep(J(t)),
-                        i.addStep(Y(t)),
-                        i.addStep(Q(t)),
-                        i.addStep($(a, s, null == e ? void 0 : e.id)),
-                        i
-                    );
-                }, [t, e, o, a, l]);
-            })(t, a, l, c),
-            x = f.isAllDone();
-        return (
-            er(x, d || u || !et(a.id), o, s),
-            {
-                onboardingSteps: f,
-                isHidden: u,
-                isDismissed: d,
-                isAllDone: x,
-            }
-        );
-    },
-    eu = () =>
-        i.useCallback((e) => {
-            var t;
-            null == (t = e.clickHandler) || t.call(e);
-        }, []),
-    em = (e) => {
+    Q = (e) => {
         let { handleHide: t } = e;
         return (0, r.jsx)(g.P3F, {
             onClick: t,
@@ -375,7 +151,7 @@ let J = (e) => {
             }),
         });
     },
-    eh = (e) => {
+    $ = (e) => {
         let { expanded: t, onClick: n } = e;
         return (0, r.jsx)(g.P3F, {
             onClick: n,
@@ -394,63 +170,286 @@ let J = (e) => {
                   }),
         });
     },
-    eg = (e) => {
-        let { hasAnyThread: t, hasActiveThreads: n, channel: i } = e,
-            { onboardingExpanded: a } = (0, F.xH)((e) => {
+    ee = (e) => {
+        let t,
+            { hasAnyThread: a, hasActiveThreads: s, channel: x } = e,
+            { onboardingExpanded: U } = (0, F.xH)((e) => {
                 let { onboardingExpanded: t } = e;
                 return { onboardingExpanded: t };
             }, d.X),
-            { tagFilter: s } = (0, M.H)(i.id),
-            o = (0, h.e7)([w.Z], () => w.Z.getGuild(i.getGuildId())),
-            m = (0, Z.r_)(i),
-            { transitions: f, setVisible: x } = el(),
-            b = es(a),
-            y = eu(),
-            O = ee(i.id, x),
-            {
-                onboardingSteps: S,
-                isDismissed: T,
-                isHidden: N,
-                isAllDone: I,
-            } = ed({
-                guild: o,
-                channel: i,
-                hasAnyThread: t,
-                handleHide: O,
+            { tagFilter: ee } = (0, M.H)(x.id),
+            et = (0, h.e7)([w.Z], () => w.Z.getGuild(x.getGuildId())),
+            en = (0, Z.r_)(x),
+            { transitions: er, setVisible: ei } = (() => {
+                let [e, t] = i.useState(!0);
+                return {
+                    transitions: (0, g.Yzy)(e, {
+                        keys: (e) => (e ? "shown" : "hidden"),
+                        config: Y,
+                        from: { opacity: 0 },
+                        enter: { opacity: 1 },
+                        leave: { opacity: 0 },
+                        unique: !0,
+                    }),
+                    setVisible: t,
+                };
+            })(),
+            ea = (0, g.Yzy)(U, {
+                from: { maxHeight: 0 },
+                enter: { maxHeight: 500 },
+                leave: { maxHeight: 0 },
+                config: { duration: 200 },
             }),
-            E = !N && !T,
-            R = (0, F.AF)(),
-            k = i.isMediaChannel(),
-            A = (e) => R.getState().setOnboardingExpanded(e);
-        return (ei(I, E, O),
-        ea({
-            isAllDone: I,
-            isVisible: E,
-            canManageChannel: m,
-            guildId: null == o ? void 0 : o.id,
-            channel: i,
+            el = i.useCallback((e) => {
+                var t;
+                null == (t = e.clickHandler) || t.call(e);
+            }, []),
+            es = ((t = x.id), i.useCallback(() => (ei(!1), E.Z.hideAdminOnboarding(t, !0)), [t, ei])),
+            {
+                onboardingSteps: eo,
+                isDismissed: ec,
+                isHidden: ed,
+                isAllDone: eu,
+            } = ((e) => {
+                let { guild: t, channel: a, hasAnyThread: l, handleHide: s } = e,
+                    [c, d] = i.useState(!1),
+                    u = (0, A.c)(a.id),
+                    x = (0, h.e7)([I.Z], () => I.Z.hasHidden(a.id)),
+                    p = (function (e, t, a, l) {
+                        let s = null == e ? void 0 : e.id,
+                            o = (0, h.e7)([O.Z], () => (null != s ? O.Z.getSortedRoles(s) : void 0));
+                        return i.useMemo(() => {
+                            let i,
+                                s = new K(),
+                                c = (null == t ? void 0 : t.isMediaChannel()) === !0;
+                            return (
+                                null == e ||
+                                    null == t ||
+                                    c ||
+                                    null == o ||
+                                    s.addStep(
+                                        (function (e, t, i, a) {
+                                            let l = (0, b.Z)(i)
+                                                    ? m.$e(z.Plq.VIEW_CHANNEL, z.Plq.SEND_MESSAGES)
+                                                    : z.Plq.SEND_MESSAGES,
+                                                s =
+                                                    null != e
+                                                        ? (0, R.E)(t, i, l).filter(
+                                                              (e) =>
+                                                                  i.permissionOverwrites.hasOwnProperty(e.id) ||
+                                                                  (0, y.fI)(e),
+                                                          )
+                                                        : [],
+                                                o = s.length > 0,
+                                                c = s.some((e) => (0, y.fI)(e));
+                                            return {
+                                                name: H.intl.string(H.t["/Ax2go"]),
+                                                description: H.intl.string(H.t.gAIOfn),
+                                                isDone: o && c,
+                                                shouldWarn: o && !c,
+                                                children: o
+                                                    ? (0, r.jsx)(J, {
+                                                          guild: e,
+                                                          roles: s,
+                                                      })
+                                                    : null,
+                                                clickHandler: () => {
+                                                    X(D.ZI.PERMISSIONS),
+                                                        (0, g.ZDy)(
+                                                            async () => {
+                                                                let { default: t } = await n
+                                                                    .e("78704")
+                                                                    .then(n.bind(n, 560602));
+                                                                return (
+                                                                    a(!0),
+                                                                    (n) =>
+                                                                        (0, r.jsx)(
+                                                                            t,
+                                                                            G(V({}, n), {
+                                                                                channel: i,
+                                                                                guild: e,
+                                                                                permission: l,
+                                                                                currentSelectedRoles: s,
+                                                                            }),
+                                                                        )
+                                                                );
+                                                            },
+                                                            {
+                                                                modalKey: "SEND_MESSAGE_ROLE_PERMISSION_FIX_MODAL_KEY",
+                                                                onCloseRequest: z.VqG,
+                                                                onCloseCallback: () => a(!1),
+                                                            },
+                                                        );
+                                                },
+                                            };
+                                        })(e, o, t, l),
+                                    ),
+                                c ||
+                                    s.addStep(
+                                        ((e) => {
+                                            let t = null != e.topic && e.topic.length > 0;
+                                            return {
+                                                name: H.intl.string(H.t.UgJu1d),
+                                                description: H.intl.string(H.t["3C6/Gx"]),
+                                                clickHandler: () => {
+                                                    X(D.ZI.GUIDELINES), f.ZP.open(e.id, void 0, z.ZfP.TOPIC);
+                                                },
+                                                isDone: t,
+                                            };
+                                        })(t),
+                                    ),
+                                s.addStep(
+                                    ((e) => {
+                                        let t = null != e.availableTags && e.availableTags.length > 0;
+                                        return {
+                                            name: H.intl.string(H.t.xiBFCg),
+                                            description: H.intl.string(H.t.wCv4Oz),
+                                            clickHandler: () => {
+                                                X(D.ZI.TAGS),
+                                                    f.ZP.open(e.id),
+                                                    (0, g.ZDy)(async () => {
+                                                        let { default: t } = await n.e("21971").then(n.bind(n, 201049));
+                                                        return (n) =>
+                                                            (0, r.jsx)(
+                                                                t,
+                                                                G(V({}, n), {
+                                                                    channelId: e.id,
+                                                                    guildId: e.guild_id,
+                                                                }),
+                                                            );
+                                                    });
+                                            },
+                                            isDone: t,
+                                        };
+                                    })(t),
+                                ),
+                                s.addStep(
+                                    ((e) => {
+                                        let t = null != e.defaultReactionEmoji;
+                                        return {
+                                            name: H.intl.string(H.t.QlyC9v),
+                                            description: H.intl.string(H.t["+50LJi"]),
+                                            clickHandler: () => {
+                                                X(D.ZI.DEFAULT_REACTION),
+                                                    (0, g.ZDy)(async () => {
+                                                        let { default: t } = await n.e("80404").then(n.bind(n, 158586));
+                                                        return (n) => (0, r.jsx)(t, G(V({}, n), { channel: e }));
+                                                    });
+                                            },
+                                            isDone: t,
+                                        };
+                                    })(t),
+                                ),
+                                s.addStep(
+                                    ((i = null == e ? void 0 : e.id),
+                                    {
+                                        name: H.intl.string(H.t["6A0O6+"]),
+                                        description: c
+                                            ? H.intl.string(H.t["8hI5vr"])
+                                            : H.intl.format(H.t.ysxcAw, {
+                                                  onClick: (e) => {
+                                                      null != i &&
+                                                          (e.preventDefault(),
+                                                          e.stopPropagation(),
+                                                          (0, k.qz)(),
+                                                          (0, g.ZDy)(async () => {
+                                                              let { default: e } = await n
+                                                                  .e("18417")
+                                                                  .then(n.bind(n, 740696));
+                                                              return (t) => (0, r.jsx)(e, G(V({}, t), { guildId: i }));
+                                                          }));
+                                                  },
+                                              }),
+                                        clickHandler: () => {
+                                            X(D.ZI.CREATE_POST), S.S.dispatch(z.CkL.FOCUS_COMPOSER_TITLE);
+                                        },
+                                        isDone: a,
+                                    }),
+                                ),
+                                s
+                            );
+                        }, [t, e, o, a, l]);
+                    })(t, a, l, d),
+                    j = p.isAllDone(),
+                    v =
+                        u ||
+                        x ||
+                        !((e) => {
+                            let t = N.default.extractTimestamp(e);
+                            return o()().isBefore(o()(t).add(o().duration(15, "days")));
+                        })(a.id),
+                    C = i.useRef(0);
+                return (
+                    i.useEffect(
+                        () => (
+                            c || !j || v
+                                ? clearTimeout(C.current)
+                                : (C.current = setTimeout(() => {
+                                      s();
+                                  }, 60 * T.Z.Millis.SECOND)),
+                            () => clearTimeout(C.current)
+                        ),
+                        [j, v, s, c],
+                    ),
+                    {
+                        onboardingSteps: p,
+                        isHidden: x,
+                        isDismissed: u,
+                        isAllDone: j,
+                    }
+                );
+            })({
+                guild: et,
+                channel: x,
+                hasAnyThread: a,
+                handleHide: es,
+            }),
+            em = !ed && !ec,
+            eh = (0, F.AF)(),
+            eg = x.isMediaChannel(),
+            ef = (e) => eh.getState().setOnboardingExpanded(e);
+        return ((0, p.ZP)(() => {
+            eu && em && es();
         }),
-        en(T, N, x),
+        ((e) => {
+            let { isAllDone: t, isVisible: n, canManageChannel: r, guildId: a, channel: l } = e,
+                s = (0, h.e7)([O.Z], () => (null != a ? O.Z.partitionVersion(a) : void 0)),
+                o = i.useCallback(() => {
+                    S.S.dispatch(z.CkL.REMEASURE_TARGET);
+                }, []);
+            i.useEffect(() => {
+                o();
+            }, [o, t, n, r, s, l.id, l.permissionOverwrites]);
+        })({
+            isAllDone: eu,
+            isVisible: em,
+            canManageChannel: en,
+            guildId: null == et ? void 0 : et.id,
+            channel: x,
+        }),
+        i.useEffect(() => {
+            ec || ei(!ed);
+        }, [ec, ei, ed]),
         (0, p.ZP)(() => {
-            (t && E) || A(!0);
+            (a && em) || ef(!0);
         }),
-        null == o)
+        null == et)
             ? null
-            : (0, v.iZ)(i)
-              ? n || 0 !== s.size
-                  ? s.size > 0
+            : (0, v.iZ)(x)
+              ? s || 0 !== ee.size
+                  ? ee.size > 0
                       ? null
-                      : (0, r.jsx)(C.Z, { guild: o })
+                      : (0, r.jsx)(C.Z, { guild: et })
                   : (0, r.jsxs)(r.Fragment, {
-                        children: [(0, r.jsx)(C.Z, { guild: o }), (0, r.jsx)(_.q, {})],
+                        children: [(0, r.jsx)(C.Z, { guild: et }), (0, r.jsx)(_.q, {})],
                     })
-              : E && m
-                ? k
-                    ? t
+              : em && en
+                ? eg
+                    ? a
                         ? null
-                        : (0, r.jsx)(j.Z, { channel: i })
+                        : (0, r.jsx)(j.Z, { channel: x })
                     : (0, r.jsx)(r.Fragment, {
-                          children: f((e, t) =>
+                          children: er((e, t) =>
                               t
                                   ? (0, r.jsx)(c.animated.div, {
                                         style: e,
@@ -470,8 +469,8 @@ let J = (e) => {
                                                                 variant: "heading-md/medium",
                                                                 className: B.header,
                                                                 children: H.intl.format(H.t["9L+8b2"], {
-                                                                    numCompleted: S.completedSteps.toString(),
-                                                                    numSteps: S.steps.length.toString(),
+                                                                    numCompleted: eo.completedSteps.toString(),
+                                                                    numSteps: eo.steps.length.toString(),
                                                                 }),
                                                             }),
                                                             (0, r.jsxs)(g.Text, {
@@ -486,28 +485,28 @@ let J = (e) => {
                                                                     H.intl.string(H.t.znhX2d),
                                                                 ],
                                                             }),
-                                                            (0, r.jsx)(eh, {
-                                                                expanded: a,
-                                                                onClick: () => A(!a),
+                                                            (0, r.jsx)($, {
+                                                                expanded: U,
+                                                                onClick: () => ef(!U),
                                                             }),
-                                                            (0, r.jsx)(em, { handleHide: O }),
+                                                            (0, r.jsx)(Q, { handleHide: es }),
                                                         ],
                                                     }),
                                                 }),
-                                                b((e, t) =>
+                                                ea((e, t) =>
                                                     t
                                                         ? (0, r.jsx)(c.animated.div, {
                                                               style: e,
                                                               className: B.listContainer,
                                                               children: (0, r.jsx)("ol", {
                                                                   className: B.checklist,
-                                                                  children: S.getSteps().map((e) =>
+                                                                  children: eo.getSteps().map((e) =>
                                                                       (0, r.jsxs)(
                                                                           g.P3F,
                                                                           {
                                                                               tag: "li",
                                                                               "aria-label": e.name,
-                                                                              onClick: () => y(e),
+                                                                              onClick: () => el(e),
                                                                               className: l()(B.stepContainer, {
                                                                                   [B.completed]: e.isDone,
                                                                               }),
@@ -579,12 +578,12 @@ let J = (e) => {
                                   : null,
                           ),
                       })
-                : t
+                : a
                   ? null
                   : (0, r.jsx)(L.Z, {
-                        channelName: i.name,
-                        guildId: i.guild_id,
-                        tagFilter: s,
-                        channel: i,
+                        channelName: x.name,
+                        guildId: x.guild_id,
+                        tagFilter: ee,
+                        channel: x,
                     });
     };

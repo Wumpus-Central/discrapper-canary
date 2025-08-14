@@ -27,7 +27,7 @@ var r = n(255367),
     C = n(925994),
     R = n(981631),
     P = n(388032),
-    w = n(939267);
+    w = n(564355);
 function D(e, t, n) {
     return (
         t in e
@@ -81,10 +81,10 @@ function M(e, t) {
     );
 }
 new E.Z("ChannelEditor.tsx");
-let j = function () {
+let k = function () {
         for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
     },
-    k = 1000;
+    j = 1000;
 class U extends i.Component {
     _getEditorWindow() {
         var e, t, n, r, i;
@@ -106,7 +106,7 @@ class U extends i.Component {
         this.props.focused && requestAnimationFrame(() => this.focus()),
             document.addEventListener("selectionchange", this.handleSelectionChange),
             window.addEventListener("beforeunload", this.handleBeforeUnload),
-            (this._initTimeoutId = setTimeout(() => void this._getEditorWindow(), k));
+            (this._initTimeoutId = setTimeout(() => void this._getEditorWindow(), j));
     }
     componentDidUpdate(e) {
         if ((this.fixFocus(e), this.props.useSlate !== e.useSlate)) {
@@ -250,8 +250,8 @@ class U extends i.Component {
                 required: P,
                 maxCharacterCount: D,
                 allowNewLines: x,
-                "aria-describedby": j,
-                "aria-labelledby": k,
+                "aria-describedby": k,
+                "aria-labelledby": j,
                 accessibilityLabel: U,
             } = this.props,
             { submitting: G, popup: B } = this.state,
@@ -296,8 +296,8 @@ class U extends i.Component {
                 "aria-expanded": null !== B.id || void 0,
                 "aria-activedescendant": null != (s = B.activeDescendant) ? s : void 0,
                 "aria-invalid": l.length > D,
-                "aria-describedby": j,
-                "aria-labelledby": k,
+                "aria-describedby": k,
+                "aria-labelledby": j,
                 "aria-autocomplete": "list",
             },
             F = E
@@ -452,7 +452,7 @@ class U extends i.Component {
                     O = null != s ? s : c,
                     { files: v } = G(e.clipboardData, u.uploadLongMessages ? O : null);
                 return (
-                    j(
+                    k(
                         "onPaste",
                         [...e.clipboardData.items].map((e) => {
                             if ("file" !== e.kind)

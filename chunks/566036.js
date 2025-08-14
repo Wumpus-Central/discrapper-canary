@@ -9,8 +9,8 @@ var r = n(255367),
     d = n(383124),
     u = n(795691),
     m = n(388032),
-    g = n(856317),
-    p = n(920643);
+    g = n(448369),
+    p = n(270856);
 let h = () => null;
 function f(e) {
     let { gameApplicationIds: t, handleChange: n, disabled: i } = e,

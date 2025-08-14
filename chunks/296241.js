@@ -2,7 +2,7 @@ n.d(t, { Z: () => o }), n(35282);
 var r = n(255367),
     i = n(73800),
     l = n(208450),
-    a = n(401623);
+    a = n(921667);
 let o = i.memo(function (e) {
     let { searchContext: t, focusSectionProps: n } = e;
     return (0, r.jsx)(

@@ -2,7 +2,7 @@ n.d(t, { Z: () => s }), n(539854);
 var r = n(255367),
     i = n(73800),
     l = n(965288),
-    a = n(5519);
+    a = n(461918);
 let s = i.memo(function (e) {
     let { channel: t, participants: n, maxTiles: i } = e;
     if (0 === n.length) return null;

@@ -15,7 +15,7 @@ var l = n(255367),
     p = n(903749),
     y = n(185923),
     b = n(388032),
-    v = n(502807);
+    v = n(239336);
 function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -81,19 +81,10 @@ function w(e) {
         I = () => {
             E(void 0), O(void 0);
         },
-        T = (e) => (t) => {
-            let { emoji: n, willClose: l } = t,
-                a = (null == n ? void 0 : n.id) == null;
-            I(),
-                a
-                    ? E(null == n ? void 0 : n.optionallyDiverseSequence)
-                    : (S && E(null == n ? void 0 : n.name), O(null == n ? void 0 : n.id)),
-                l && e();
-        },
-        D = (e) => {
+        T = (e) => {
             e.stopPropagation(), I();
         },
-        R = a.useMemo(() => {
+        D = a.useMemo(() => {
             let e = null != w && "" !== w,
                 t = null != N && "" !== N,
                 n = null != P && "" !== P,
@@ -120,7 +111,15 @@ function w(e) {
                     closePopout: t,
                     pickerIntention: y.Hz.SOUNDBOARD,
                     onNavigateAway: t,
-                    onSelectEmoji: T(t),
+                    onSelectEmoji: (e) => {
+                        let { emoji: n, willClose: l } = e,
+                            a = (null == n ? void 0 : n.id) == null;
+                        I(),
+                            a
+                                ? E(null == n ? void 0 : n.optionallyDiverseSequence)
+                                : (S && E(null == n ? void 0 : n.name), O(null == n ? void 0 : n.id)),
+                            l && t();
+                    },
                     guildId: n,
                     channel: Z,
                 });
@@ -138,7 +137,7 @@ function w(e) {
                                 active: n,
                                 tabIndex: 0,
                                 renderButtonContents:
-                                    !R.isDeletedCustomEmoji && (R.hasEmojiId || R.hasEmojiName)
+                                    !D.isDeletedCustomEmoji && (D.hasEmojiId || D.hasEmojiName)
                                         ? () =>
                                               (0, l.jsx)(c.Z, {
                                                   emojiName: N,
@@ -149,16 +148,16 @@ function w(e) {
                             (0, l.jsx)(o.Is, {
                                 inputClassName: v.emojiText,
                                 placeholder: b.intl.string(b.t.QTK0TE),
-                                value: !R.isDeletedCustomEmoji && R.hasEmojiDisplayName ? ":".concat(P, ":") : "",
+                                value: !D.isDeletedCustomEmoji && D.hasEmojiDisplayName ? ":".concat(P, ":") : "",
                                 readOnly: !0,
                             }),
-                            !R.isDeletedCustomEmoji &&
-                                R.hasEmojiDisplayName &&
+                            !D.isDeletedCustomEmoji &&
+                                D.hasEmojiDisplayName &&
                                 k &&
                                 (0, l.jsx)(
                                     d.Z,
                                     j(x({}, e), {
-                                        onClick: D,
+                                        onClick: T,
                                         className: v.removeButton,
                                     }),
                                 ),

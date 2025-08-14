@@ -731,7 +731,7 @@
                                                 Db: new Float32Array(s),
                                                 indices: new Uint16Array(l),
                                                 mc: f,
-                                                wb: (t.Ka << 1) | +!!f,
+                                                wb: (t.Ka << 1) | !!f,
                                             }),
                                                 (S += a.length),
                                                 (A += l.length);
@@ -925,8 +925,8 @@
                             }
                             var x,
                                 M = [],
-                                j = [],
-                                k = [];
+                                k = [],
+                                j = [];
                             function U() {
                                 var e = o.preRun.shift();
                                 M.unshift(e);
@@ -1457,7 +1457,7 @@
                                                     stream: eH,
                                                 },
                                             }),
-                                        16384 == (61440 & (n = ek(e, t, n, r)).mode)
+                                        16384 == (61440 & (n = ej(e, t, n, r)).mode)
                                             ? ((n.l = eb.O.dir.node), (n.m = eb.O.dir.stream), (n.j = {}))
                                             : 32768 == (61440 & n.mode)
                                               ? ((n.l = eb.O.file.node),
@@ -1526,7 +1526,7 @@
                                     ub(e, t, n) {
                                         if (16384 == (61440 & e.mode)) {
                                             try {
-                                                var r = ej(t, n);
+                                                var r = ek(t, n);
                                             } catch (e) {}
                                             if (r) for (var i in r.j) throw new ew(55);
                                         }
@@ -1542,7 +1542,7 @@
                                     },
                                     vb(e, t) {
                                         var n,
-                                            r = ej(e, t);
+                                            r = ek(e, t);
                                         for (n in r.j) throw new ew(55);
                                         delete e.j[t], (e.timestamp = Date.now());
                                     },
@@ -1658,7 +1658,7 @@
                                         var o = i === e.length - 1;
                                         if (o && t.parent) break;
                                         if (
-                                            ((n = ej(n, e[i])),
+                                            ((n = ek(n, e[i])),
                                             (r = et(r + "/" + e[i])),
                                             n.wa && (!o || (o && t.gb)) && (n = n.wa.root),
                                             !o || t.fb)
@@ -1690,7 +1690,7 @@
                                     for (var n = 0, r = 0; r < t.length; r++) n = ((n << 5) - n + t.charCodeAt(r)) | 0;
                                     return ((e + n) >>> 0) % eR.length;
                                 },
-                                ej = (e, t) => {
+                                ek = (e, t) => {
                                     var n;
                                     if ((n = (n = eG(e, "x")) ? n : 2 * !e.l.ka)) throw new ew(n, e);
                                     for (n = eR[eM(e.id, t)]; n; n = n.lc) {
@@ -1699,7 +1699,7 @@
                                     }
                                     return e.l.ka(e, t);
                                 },
-                                ek = (e, t, n, r) => (
+                                ej = (e, t, n, r) => (
                                     (t = eM((e = new nh(e, t, n, r)).parent.id, e.name)), (e.lc = eR[t]), (eR[t] = e)
                                 ),
                                 eU = (e) => {
@@ -1716,7 +1716,7 @@
                                           : 0,
                                 eB = (e, t) => {
                                     try {
-                                        return ej(e, t), 20;
+                                        return ek(e, t), 20;
                                     } catch (e) {}
                                     return eG(e, "wx");
                                 },
@@ -1918,7 +1918,7 @@
                                     e = et("/dev/" + e);
                                     var r = ey(!!t, !!n);
                                     ev || (ev = 64);
-                                    var i = (ev++ << 8) | 0;
+                                    var i = ev++ << 8;
                                     eY(i, {
                                         open: (e) => {
                                             e.seekable = !1;
@@ -2165,7 +2165,7 @@
                                         (e[t].B[r.ea] = r);
                                 }
                             }
-                            function tj(e, t, n) {
+                            function tk(e, t, n) {
                                 o.hasOwnProperty(e)
                                     ? ((void 0 === n || (void 0 !== o[e].B && void 0 !== o[e].B[n])) &&
                                           e9(`Cannot register public name '${e}' twice`),
@@ -2177,7 +2177,7 @@
                                       (o[e].B[n] = t))
                                     : ((o[e] = t), void 0 !== n && (o[e].Pc = n));
                             }
-                            function tk(e, t, n, r, i, o, a, s) {
+                            function tj(e, t, n, r, i, o, a, s) {
                                 (this.name = e),
                                     (this.constructor = t),
                                     (this.N = n),
@@ -2783,7 +2783,7 @@
                                         eW(
                                             {
                                                 U: () => {
-                                                    var t = ek(e, "fd", 16895, 73);
+                                                    var t = ej(e, "fd", 16895, 73);
                                                     return (
                                                         (t.l = {
                                                             ka: (e, t) => {
@@ -3014,7 +3014,7 @@
                                                         (C[(i + 4) >> 2] = 5),
                                                         (C[(i + 8) >> 2] = 191),
                                                         (C[(i + 12) >> 2] = 35387);
-                                                    for (var o = 0; 32 > o; o++) T[(i + o + 17) >> 0] = t[o] || 0;
+                                                    for (var o = 0; 32 > o; o++) T[(i + o + 17) | 0] = t[o] || 0;
                                                 }
                                                 return 0;
                                             case 21506:
@@ -3023,7 +3023,7 @@
                                                 if (!r.s) return -59;
                                                 if (r.s.V.cc)
                                                     for (i = e3(), t = [], o = 0; 32 > o; o++)
-                                                        t.push(T[(i + o + 17) >> 0]);
+                                                        t.push(T[(i + o + 17) | 0]);
                                                 return 0;
                                             case 21519:
                                                 if (!r.s) return -59;
@@ -3190,7 +3190,7 @@
                                         c && (c = tK(l, c)),
                                         (f = tK(d, f));
                                     var _ = e5(u);
-                                    tj(_, function () {
+                                    tk(_, function () {
                                         tq(`Cannot construct ${u} due to unbound types`, [r]);
                                     }),
                                         tR([e, t, n], r ? [r] : [], function (t) {
@@ -3215,7 +3215,7 @@
                                                 },
                                             });
                                             t.prototype = a;
-                                            var l = new tk(u, t, a, f, n, o, s, c);
+                                            var l = new tj(u, t, a, f, n, o, s, c);
                                             l.A && (void 0 === l.A.oa && (l.A.oa = []), l.A.oa.push(l)),
                                                 (n = new tF(u, l, !0, !1)),
                                                 (i = new tF(u + "*", l, !1, !1));
@@ -3438,7 +3438,7 @@
                                             readValueFromPointer: t0(t, n, r),
                                             K: null,
                                         }),
-                                        tj(t, i);
+                                        tk(t, i);
                                 },
                                 _embind_register_enum_value: function (e, t, n) {
                                     var r = t_(e, "enum");
@@ -3472,7 +3472,7 @@
                                     var a = tQ(t, n);
                                     (e = to(e)),
                                         (i = tK(r, i)),
-                                        tj(
+                                        tk(
                                             e,
                                             function () {
                                                 tq(`Cannot call ${e} due to unbound types`, a);
@@ -3768,8 +3768,8 @@
                                         nu().forEach(function (r, i) {
                                             var o = t + n;
                                             for (i = R[(e + 4 * i) >> 2] = o, o = 0; o < r.length; ++o)
-                                                T[i++ >> 0] = r.charCodeAt(o);
-                                            (T[i >> 0] = 0), (n += r.length + 1);
+                                                T[0 | i++] = r.charCodeAt(o);
+                                            (T[0 | i] = 0), (n += r.length + 1);
                                         }),
                                         0
                                     );
@@ -3856,8 +3856,8 @@
                                                 ((X = o.position),
                                                 1 <= +Math.abs(X)
                                                     ? 0 < X
-                                                        ? +Math.floor(X / 4294967296) >>> 0
-                                                        : ~~+Math.ceil((X - +(~~X >>> 0)) / 4294967296) >>> 0
+                                                        ? Math.floor(X / 4294967296) >>> 0
+                                                        : ~~Math.ceil((X - (~~X >>> 0)) / 4294967296) >>> 0
                                                     : 0),
                                             ]),
                                             (C[i >> 2] = Q[0]),
@@ -3918,7 +3918,7 @@
                                         ((v = (I = e = e.exports).memory),
                                         L(),
                                         (x = I.__indirect_function_table),
-                                        j.unshift(I.__wasm_call_ctors),
+                                        k.unshift(I.__wasm_call_ctors),
                                         G--,
                                         o.monitorRunDependencies && o.monitorRunDependencies(G),
                                         0 == G && (null !== B && (clearInterval(B), (B = null)), Z))
@@ -3979,7 +3979,7 @@
                                                 eQ("/dev/stdout", 1),
                                                 eQ("/dev/stderr", 1)),
                                             (eP = !1),
-                                            $(j),
+                                            $(k),
                                             r(o),
                                             o.onRuntimeInitialized && o.onRuntimeInitialized(),
                                             o.postRun)
@@ -3989,9 +3989,9 @@
                                                 o.postRun.length;
                                             ) {
                                                 var e = o.postRun.shift();
-                                                k.unshift(e);
+                                                j.unshift(e);
                                             }
-                                        $(k);
+                                        $(j);
                                     }
                                 }
                                 if (!(0 < G)) {
@@ -4336,7 +4336,7 @@
                         StateMachineInputType: () => i,
                         Testing: () => K,
                         ViewModel: () => x,
-                        ViewModelInstance: () => j,
+                        ViewModelInstance: () => k,
                         ViewModelInstanceBoolean: () => B,
                         ViewModelInstanceColor: () => H,
                         ViewModelInstanceEnum: () => F,
@@ -4344,7 +4344,7 @@
                         ViewModelInstanceNumber: () => G,
                         ViewModelInstanceString: () => U,
                         ViewModelInstanceTrigger: () => Z,
-                        ViewModelInstanceValue: () => k,
+                        ViewModelInstanceValue: () => j,
                         decodeAudio: () => z,
                         decodeFont: () => X,
                         decodeImage: () => q,
@@ -4700,18 +4700,11 @@
                                                       "Could not load Rive WASM file from "
                                                           .concat(e.wasmURL, " or ")
                                                           .concat(r, "."),
-                                                      "Possible reasons:",
-                                                      "- Network connection is down",
-                                                      "- WebAssembly is not supported in this environment",
-                                                      "- The WASM file is corrupted or incompatible",
-                                                      "\nError details:",
+                                                      "Possible reasons:\n- Network connection is down\n- WebAssembly is not supported in this environment\n- The WASM file is corrupted or incompatible\n\nError details:",
                                                       "- Type: ".concat(n.type),
                                                       "- Message: ".concat(n.message),
                                                       "- WebAssembly-specific error: ".concat(n.wasmError),
-                                                      "\nTo resolve, you may need to:",
-                                                      "1. Check your network connection",
-                                                      "2. Set a new WASM source via RuntimeLoader.setWasmUrl()",
-                                                      "3. Call RuntimeLoader.loadRuntime() again",
+                                                      "\nTo resolve, you may need to:\n1. Check your network connection\n2. Set a new WASM source via RuntimeLoader.setWasmUrl()\n3. Call RuntimeLoader.loadRuntime() again",
                                                   ].join("\n"),
                                               );
                                     });
@@ -5827,7 +5820,7 @@
                                         if (null !== c) {
                                             var u = c.defaultInstance();
                                             if (null !== u) {
-                                                var d = new j(u, null);
+                                                var d = new k(u, null);
                                                 this.bindViewModelInstance(d);
                                             }
                                         }
@@ -6561,19 +6554,19 @@
                             }),
                             (e.prototype.instanceByIndex = function (e) {
                                 var t = this._viewModel.instanceByIndex(e);
-                                return null !== t ? new j(t, null) : null;
+                                return null !== t ? new k(t, null) : null;
                             }),
                             (e.prototype.instanceByName = function (e) {
                                 var t = this._viewModel.instanceByName(e);
-                                return null !== t ? new j(t, null) : null;
+                                return null !== t ? new k(t, null) : null;
                             }),
                             (e.prototype.defaultInstance = function () {
                                 var e = this._viewModel.defaultInstance();
-                                return null !== e ? new j(e, null) : null;
+                                return null !== e ? new k(e, null) : null;
                             }),
                             (e.prototype.instance = function () {
                                 var e = this._viewModel.instance();
-                                return null !== e ? new j(e, null) : null;
+                                return null !== e ? new k(e, null) : null;
                             }),
                             Object.defineProperty(e.prototype, "properties", {
                                 get: function () {
@@ -6623,7 +6616,7 @@
                         (e.Enum = "enum"),
                         (e.List = "list");
                 })(c || (c = {}));
-                var j = (function () {
+                var k = (function () {
                         function e(e, t) {
                             (this._parents = []),
                                 (this._children = []),
@@ -6949,7 +6942,7 @@
                             e
                         );
                     })(),
-                    k = (function () {
+                    j = (function () {
                         function e(e, t) {
                             (this.callbacks = []), (this._viewModelInstanceValue = e), (this._parentViewModel = t);
                         }
@@ -7013,7 +7006,7 @@
                             }),
                             t
                         );
-                    })(k),
+                    })(j),
                     G = (function (e) {
                         function t(t, n) {
                             return e.call(this, t, n) || this;
@@ -7035,7 +7028,7 @@
                             }),
                             t
                         );
-                    })(k),
+                    })(j),
                     B = (function (e) {
                         function t(t, n) {
                             return e.call(this, t, n) || this;
@@ -7057,7 +7050,7 @@
                             }),
                             t
                         );
-                    })(k),
+                    })(j),
                     Z = (function (e) {
                         function t(t, n) {
                             return e.call(this, t, n) || this;
@@ -7072,7 +7065,7 @@
                             }),
                             t
                         );
-                    })(k),
+                    })(j),
                     F = (function (e) {
                         function t(t, n) {
                             return e.call(this, t, n) || this;
@@ -7111,7 +7104,7 @@
                             }),
                             t
                         );
-                    })(k),
+                    })(j),
                     V = (function (e) {
                         function t(t, n) {
                             return e.call(this, t, n) || this;
@@ -7138,14 +7131,14 @@
                             }),
                             (t.prototype.instanceAt = function (e) {
                                 var t = this._viewModelInstanceValue.instanceAt(e);
-                                return null != t ? new j(t, null) : null;
+                                return null != t ? new k(t, null) : null;
                             }),
                             (t.prototype.internalHandleCallback = function (e) {
                                 e();
                             }),
                             t
                         );
-                    })(k),
+                    })(j),
                     H = (function (e) {
                         function t(t, n) {
                             return e.call(this, t, n) || this;
@@ -7182,7 +7175,7 @@
                             }),
                             t
                         );
-                    })(k),
+                    })(j),
                     Y = function (e) {
                         return m(void 0, void 0, void 0, function () {
                             return g(this, function (t) {

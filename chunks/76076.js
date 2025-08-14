@@ -7,11 +7,11 @@ var r = n(255367),
     c = n(442837),
     s = n(481060),
     d = n(607070),
-    u = n(247989),
+    u = n(872269),
     f = n(228168),
     p = n(388032),
-    m = n(918857),
-    g = n(276441);
+    m = n(361623),
+    g = n(583140);
 let b = {
         [f.qb.WIDGET_ADDED]: {
             message: p.intl.string(p.t.fFP1U1),

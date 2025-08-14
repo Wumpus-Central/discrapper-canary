@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C }), n(388685);
+n.d(t, { Z: () => I }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -14,7 +14,7 @@ var r = n(255367),
     g = n(115530),
     m = n(981631),
     b = n(388032),
-    _ = n(263986);
+    _ = n(79822);
 function O(e, t, n) {
     return (
         t in e
@@ -62,11 +62,7 @@ function y(e, t) {
         e
     );
 }
-let v = {
-    HOST: 5,
-    LISTENER: 4,
-};
-class I extends i.PureComponent {
+class v extends i.PureComponent {
     isHost() {
         let { currentUser: e, host: t } = this.props;
         return e.id === (null == t ? void 0 : t.id);
@@ -114,7 +110,7 @@ class I extends i.PureComponent {
                     className: _.party,
                     children: (0, r.jsx)(d.Z, {
                         users: this.props.party,
-                        max: this.isHost() ? v.HOST : v.LISTENER,
+                        max: this.isHost() ? 5 : 4,
                         renderUser: this.renderPartyMember,
                         renderMoreUsers: this.renderPartyMemberOverflow,
                     }),
@@ -203,4 +199,4 @@ class I extends i.PureComponent {
             });
     }
 }
-let C = I;
+let I = v;

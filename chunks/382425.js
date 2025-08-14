@@ -32,14 +32,14 @@ var r = n(255367),
     L = n(336383),
     x = n(194811),
     M = n(265386),
-    j = n(668700),
-    k = n(384298),
+    k = n(668700),
+    j = n(384298),
     U = n(386019),
     G = n(228168),
     B = n(981631),
     Z = n(388032),
-    F = n(861242),
-    V = n(247352),
+    F = n(704543),
+    V = n(936524),
     H = n(924482),
     Y = n(774797);
 function W(e) {
@@ -167,7 +167,7 @@ function W(e) {
                               users: en,
                               guildId: ee.id,
                               channelId: et.id,
-                              maxUsers: j.W,
+                              maxUsers: k.W,
                               size: l.EFr.SIZE_16,
                               onClickOverflow: (e) => {
                                   null == e || e.stopPropagation(),
@@ -184,7 +184,7 @@ function W(e) {
         eg = () =>
             X === G.lY.MODAL || X === G.lY.MODAL_V2
                 ? null
-                : (0, r.jsx)(j.Z, {
+                : (0, r.jsx)(k.Z, {
                       user: t,
                       guild: ee,
                       channel: et,
@@ -196,7 +196,7 @@ function W(e) {
                 ? null
                 : (0, r.jsx)("div", {
                       className: F.actions,
-                      children: (0, r.jsx)(k.Z, {
+                      children: (0, r.jsx)(j.Z, {
                           channel: et,
                           onAction: eo,
                           onClose: K,

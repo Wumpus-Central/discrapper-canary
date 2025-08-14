@@ -11,8 +11,8 @@ var r = n(255367),
     C = n(893966),
     m = n(527379),
     b = n(388032),
-    p = n(92006),
-    f = n(21977);
+    p = n(266631),
+    f = n(51237);
 function h(e) {
     let { guild: t, onSubmit: o } = e,
         h = (0, a.e7)([C.Z], () => C.Z.getMembersCountByGuildId(t.id, u.R_.NEW_GUILD_MEMBER), [t.id]),
@@ -78,8 +78,8 @@ function h(e) {
         }, [x, g]),
         y = new Intl.NumberFormat(b.intl.currentLocale).format(h),
         O = (0, d.nX)(t.id),
-        H = (0, d.xC)(t.id),
-        _ = l.useMemo(() => 1 + +!!O + +!!H, [O, H]);
+        _ = (0, d.xC)(t.id),
+        H = l.useMemo(() => 1 + +!!O + +!!_, [O, _]);
     return 0 === h
         ? null
         : (0, r.jsxs)("tr", {
@@ -97,7 +97,7 @@ function h(e) {
                           }),
                       }),
                   }),
-                  (0, r.jsx)("td", { colSpan: _ }),
+                  (0, r.jsx)("td", { colSpan: H }),
                   (0, r.jsx)("td", {
                       colSpan: 2,
                       children: (0, r.jsx)("div", {

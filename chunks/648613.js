@@ -116,7 +116,12 @@ function v(e) {
             }
             if (!R.isClaimed())
                 return void (0, o.ZDy)(async () => {
-                    let { default: e } = await n.e("69417").then(n.bind(n, 918995));
+                    let { default: e } = await Promise.all([
+                        n.e("58067"),
+                        n.e("88470"),
+                        n.e("76235"),
+                        n.e("69417"),
+                    ]).then(n.bind(n, 918995));
                     return (t) => {
                         var { onClose: n } = t,
                             i = y(t, ["onClose"]);
@@ -125,7 +130,7 @@ function v(e) {
                 });
             if (!R.verified)
                 return void (0, o.ZDy)(async () => {
-                    let { default: e } = await n.e("20102").then(n.bind(n, 444688));
+                    let { default: e } = await Promise.all([n.e("88470"), n.e("20102")]).then(n.bind(n, 444688));
                     return (t) => {
                         var { onClose: n } = t,
                             i = y(t, ["onClose"]);

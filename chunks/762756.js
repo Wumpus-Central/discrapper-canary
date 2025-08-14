@@ -1,4 +1,4 @@
-n.d(t, { Z: () => v }), n(388685);
+n.d(t, { Z: () => j }), n(388685);
 var r,
     i = n(255367),
     a = n(73800),
@@ -11,8 +11,8 @@ var r,
     f = n(1964),
     p = n(981631),
     y = n(388032),
-    m = n(740526);
-function g(e, t, n) {
+    m = n(222198);
+function h(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -25,7 +25,7 @@ function g(e, t, n) {
         e
     );
 }
-let h = d.Z.getArticleURL(p.BhN.VERIFICATION_FAQ);
+let g = d.Z.getArticleURL(p.BhN.VERIFICATION_FAQ);
 class b extends (r = a.PureComponent) {
     renderFields() {
         let { types: e, captchaKey: t, theme: n, onCaptchaVerify: r } = this.props;
@@ -86,7 +86,7 @@ class b extends (r = a.PureComponent) {
                                         }),
                                         (0, i.jsx)(s.Text, {
                                             variant: "text-md/normal",
-                                            children: y.intl.format(y.t["0rqMV1"], { helpCenterURL: h }),
+                                            children: y.intl.format(y.t["0rqMV1"], { helpCenterURL: g }),
                                         }),
                                     ],
                                 }),
@@ -141,15 +141,15 @@ class b extends (r = a.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            g(this, "handleClick", (e) => {
+            h(this, "handleClick", (e) => {
                 let { onClick: t } = this.props;
                 null == t || t(e);
             });
     }
 }
-g(b, "defaultProps", {
+h(b, "defaultProps", {
     types: [p.PUi.CAPTCHA],
     onCaptchaVerify: p.dG4,
     onLogout: p.dG4,
 });
-let v = b;
+let j = b;

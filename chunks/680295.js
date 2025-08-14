@@ -19,7 +19,7 @@ var r = n(255367),
     m = n(142145),
     g = n(710867),
     E = n(312904),
-    b = n(599558);
+    b = n(107225);
 function y(e, t, n) {
     return (
         t in e
@@ -94,16 +94,16 @@ let v = (e) => {
                     A(t),
                     C(e);
             }, [C, I]);
-        let [j, k] = i.useState(!1);
+        let [k, j] = i.useState(!1);
         return (
             i.useEffect(() => {
                 !0 === c || s || (D(), w(0)),
-                    !s && j && x.current && (D(), w(0)),
+                    !s && k && x.current && (D(), w(0)),
                     o &&
                         s &&
                         !x.current &&
                         (L(), g.animationType === f.Q.PERSISTENT ? w(u === f.j.FromStart ? 0 : S) : w(0));
-            }, [s, j, S, o, D, L, x, g.animationType, c, u]),
+            }, [s, k, S, o, D, L, x, g.animationType, c, u]),
             (0, r.jsx)("div", {
                 ref: v,
                 className: a()(b.profileEffects, { [b.hovered]: s && l }),
@@ -143,8 +143,8 @@ let v = (e) => {
                                 animationType: g.animationType,
                                 ticking: x.current,
                                 time: P,
-                                hasPlayedThrough: j,
-                                setHasPlayedThrough: k,
+                                hasPlayedThrough: k,
+                                setHasPlayedThrough: j,
                                 urlQueryString: p,
                                 maxLoops: n,
                                 loopEnd: N,

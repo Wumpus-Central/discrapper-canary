@@ -1,6 +1,6 @@
 n.d(e, {
-    default: () => f,
-    x: () => m,
+    default: () => _,
+    x: () => g,
 }),
     n(388685);
 var i,
@@ -13,7 +13,7 @@ var i,
     d = n(745982),
     u = n(463439),
     x = n(388032),
-    p = n(161688);
+    p = n(35853);
 function h(t) {
     for (var e = 1; e < arguments.length; e++) {
         var n = null != arguments[e] ? arguments[e] : {},
@@ -39,7 +39,7 @@ function h(t) {
     }
     return t;
 }
-function g(t, e) {
+function m(t, e) {
     return (
         (e = null != e ? e : {}),
         Object.getOwnPropertyDescriptors
@@ -57,30 +57,30 @@ function g(t, e) {
         t
     );
 }
-var m =
+var g =
     (((i = {})[(i.INTRO = 0)] = "INTRO"),
     (i[(i.SAFETY_TIPS = 1)] = "SAFETY_TIPS"),
     (i[(i.TAKE_ACTION = 2)] = "TAKE_ACTION"),
     i);
-let f = (t) => {
-    let { warningId: e, warningType: n, senderId: i, modalProps: m, channelId: f } = t,
-        [_, b] = s.useState(0),
+let _ = (t) => {
+    let { warningId: e, warningType: n, senderId: i, modalProps: g, channelId: _ } = t,
+        [f, b] = s.useState(0),
         O = s.useMemo(
             () => ({
-                channelId: f,
+                channelId: _,
                 senderId: i,
                 warningId: e,
                 warningType: n,
                 isNudgeWarning: !1,
             }),
-            [f, i, e, n],
+            [_, i, e, n],
         );
     s.useEffect(() => {
-        (0, c.KQ)(g(h({}, O), { viewName: c.pb.SAFETY_TAKEOVER_MODAL }));
+        (0, c.KQ)(m(h({}, O), { viewName: c.pb.SAFETY_TAKEOVER_MODAL }));
     }, [O]);
     let v = s.useCallback(
             (t) => {
-                (0, c.qc)(g(h({}, O), { cta: t }));
+                (0, c.qc)(m(h({}, O), { cta: t }));
             },
             [O],
         ),
@@ -90,14 +90,14 @@ let f = (t) => {
     }
     return (0, r.jsxs)(a.Y0X, {
         "data-migration-pending": !0,
-        transitionState: m.transitionState,
+        transitionState: g.transitionState,
         parentComponent: "InappropriateConversationModal",
         children: [
             (0, r.jsx)("div", {
                 className: p.container,
                 children: (0, r.jsxs)(a.MyZ, {
                     width: 440,
-                    activeSlide: _,
+                    activeSlide: f,
                     centered: !1,
                     overflow: "visible",
                     contentDisplay: "flex",
@@ -125,7 +125,7 @@ let f = (t) => {
                                 warningId: e,
                                 senderId: i,
                                 trackAnalyticsEvent: v,
-                                channelId: f,
+                                channelId: _,
                                 hasReported: j,
                                 onReport: function () {
                                     T(!0);
@@ -144,11 +144,11 @@ let f = (t) => {
                         size: "sm",
                         text: x.intl.string(x.t.cpT0Cg),
                         onClick: function () {
-                            m.onClose(), (0, o.T)(f, [e]), v(c.NM.USER_TAKEOVER_MODAL_DISMISS);
+                            g.onClose(), (0, o.T)(_, [e]), v(c.NM.USER_TAKEOVER_MODAL_DISMISS);
                         },
                         textVariant: "text-sm/normal",
                     }),
-                    0 !== _ &&
+                    0 !== f &&
                         (0, r.jsx)(a.Avr, {
                             variant: "secondary",
                             size: "sm",

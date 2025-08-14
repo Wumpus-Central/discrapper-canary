@@ -30,7 +30,7 @@ var r = n(255367),
     S = n(585483),
     A = n(981631),
     N = n(388032),
-    C = n(495130);
+    C = n(547660);
 function R(e, t, n) {
     return (
         t in e
@@ -105,8 +105,8 @@ function x(e, t) {
     return i;
 }
 let M = 43,
-    j = 25,
-    k = 40,
+    k = 25,
+    j = 40,
     U = 250;
 function G(e) {
     e.stopPropagation();
@@ -311,8 +311,8 @@ function H(e) {
                       }),
                   })
                 : null,
-        z = { maxHeight: Z.height - M - j - 48 };
-    B && (z.maxHeight -= k);
+        z = { maxHeight: Z.height - M - k - 48 };
+    B && (z.maxHeight -= j);
     let q = null != _ && o;
     return (0, r.jsx)("div", {
         className: a()(O, C.messagesPopoutWrap),

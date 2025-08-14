@@ -15,9 +15,9 @@ var r = n(255367),
     m = n(233398),
     g = n(866419),
     E = n(771934),
-    b = n(671147),
+    b = n(119475),
     y = n(388032),
-    O = n(826439);
+    O = n(531604);
 function v(e, t, n) {
     return (
         t in e
@@ -161,14 +161,14 @@ function D(e) {
                 (t[v] = e.hex), s(t);
             }
         },
-        j = async () => {
+        k = async () => {
             if (null != c)
                 try {
                     let { sRGBHex: e } = await c.open();
                     (0, E.J4)(), L(e);
                 } catch (e) {}
         },
-        k = () => {
+        j = () => {
             if (a.length === C) return;
             0 === a.length && (0, g.ft)(), (0, E.gG)();
             let e = a.length > 0 ? a[a.length - 1] : A,
@@ -204,7 +204,7 @@ function D(e) {
                             (0, r.jsx)(
                                 p.P3F,
                                 S(I({}, e), {
-                                    onClick: a.length === C ? void 0 : k,
+                                    onClick: a.length === C ? void 0 : j,
                                     className: l()(O.addColorButton, { [O.disabled]: a.length === C }),
                                     children: (0, r.jsx)(p.Text, {
                                         variant: "text-sm/medium",
@@ -257,7 +257,7 @@ function D(e) {
                                                     e,
                                                 ),
                                                 {
-                                                    onClick: j,
+                                                    onClick: k,
                                                     icon: d.i,
                                                     "aria-label": y.intl.string(b.default["8QXO8v"]),
                                                 },

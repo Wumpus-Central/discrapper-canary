@@ -42,8 +42,7 @@ var i = (function () {
                 value: function () {
                     var n,
                         r = this.spec,
-                        t = this.monitor,
-                        o = null;
+                        t = this.monitor;
                     return null != (n = "object" === e(r.item) ? r.item : "function" == typeof r.item ? r.item(t) : {})
                         ? n
                         : null;

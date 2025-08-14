@@ -15,7 +15,7 @@ var r = n(255367),
     b = n(382405),
     j = n(386019),
     y = n(228168),
-    x = n(861242);
+    x = n(704543);
 function O(e) {
     let { user: t, entry: n, profileGuildId: i, className: O, onClose: h, hideContextMenu: v = !1 } = e,
         _ = l.useRef(null),

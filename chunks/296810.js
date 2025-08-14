@@ -6,7 +6,7 @@ var r = n(120356),
     a = n(481060),
     l = n(993413),
     o = n(388032),
-    c = n(574346);
+    c = n(34747);
 function d(e) {
     let {
         children: t,

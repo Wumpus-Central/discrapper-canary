@@ -141,7 +141,7 @@ class Z extends o.Z {
                                 n.e("6583"),
                                 n.e("1337"),
                                 n.e("42483"),
-                                n.e("396"),
+                                n.e("63359"),
                             ]).then(n.bind(n, 599219));
                             return (n) => (0, i.jsx)(e, x(j({}, n), { onSlideChange: t }));
                         },
@@ -186,7 +186,7 @@ class Z extends o.Z {
                 open: (e) =>
                     (0, l.ZDy)(
                         async () => {
-                            let { default: e } = await n.e("77578").then(n.bind(n, 184782));
+                            let { default: e } = await n.e("90542").then(n.bind(n, 184782));
                             return (t) => (0, i.jsx)(e, x(j({}, t), { guildId: A }));
                         },
                         { onCloseCallback: e },

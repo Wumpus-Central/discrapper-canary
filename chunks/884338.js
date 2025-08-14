@@ -1,6 +1,6 @@
 n.d(t, {
-    ZP: () => C,
-    ag: () => O,
+    ZP: () => w,
+    ag: () => T,
     u8: () => b,
 }),
     n(539854),
@@ -16,7 +16,7 @@ var r,
     d = n(598077),
     f = n(594174),
     _ = n(426563),
-    p = n(625401);
+    p = n(245141);
 function h(e, t, n) {
     return (
         t in e
@@ -75,31 +75,29 @@ let b = {
         SIZE_32: 32,
         SIZE_56: 56,
     },
-    y = {
-        SIZE_10: 10,
-        SIZE_15: 15,
-        SIZE_20: 20,
-        SIZE_35: 35,
-    },
-    O = "user-icon";
-function v(e, t) {
-    if (e === O) return "user-icon-".concat(t);
+    y = 10,
+    O = 15,
+    v = 20,
+    I = 35,
+    T = "user-icon";
+function S(e, t) {
+    if (e === T) return "user-icon-".concat(t);
     let n = e instanceof d.Z ? e : null != e ? e.user : null;
     return null != n ? n.id : "user-".concat(t);
 }
-function I(e) {
+function A(e) {
     return (0, i.jsx)("div", {
         className: p.moreUsers,
         children: e,
     });
 }
-function T(e) {
+function N(e) {
     return (0, i.jsx)("div", {
         className: s()(p.moreUsers, p.moreUsersDimmed),
         children: e,
     });
 }
-function S() {
+function C() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : b.SIZE_24;
     switch (e) {
         case b.SIZE_16:
@@ -114,22 +112,22 @@ function S() {
             return p.size24;
     }
 }
-function A() {
+function R() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : b.SIZE_24;
     switch (e) {
         case b.SIZE_16:
-            return y.SIZE_10;
+            return y;
         case b.SIZE_24:
-            return y.SIZE_15;
+            return O;
         case b.SIZE_32:
-            return y.SIZE_20;
+            return v;
         case b.SIZE_56:
-            return y.SIZE_35;
+            return I;
         default:
-            return y.SIZE_10;
+            return y;
     }
 }
-class N extends (r = o.PureComponent) {
+class P extends (r = o.PureComponent) {
     renderUsers() {
         let { users: e, max: t, renderUser: n = this.defaultRenderUser, size: r, extraDetail: o } = this.props,
             a = [],
@@ -148,7 +146,7 @@ class N extends (r = o.PureComponent) {
                               className: p.avatarContainer,
                               children: s,
                           },
-                          v(null != (d = e[u]) ? d : null, u),
+                          S(null != (d = e[u]) ? d : null, u),
                       )
                     : (0, i.jsx)(
                           c.ZP,
@@ -159,7 +157,7 @@ class N extends (r = o.PureComponent) {
                               mask: c.ZP.Masks.VOICE_USER_SUMMARY_ITEM,
                               children: s,
                           },
-                          v(e[u], u),
+                          S(e[u], u),
                       ),
             ),
                 u++;
@@ -169,7 +167,7 @@ class N extends (r = o.PureComponent) {
     renderMoreUsers(e) {
         let { max: t, count: n, hideMoreUsers: r, renderMoreUsers: a, users: s, dimEmptyUsers: l } = this.props,
             c = Math.min(e, s.length),
-            u = l ? T : a;
+            u = l ? N : a;
         if (!r) {
             if (null != n) {
                 if (n >= t) return (0, i.jsx)(o.Fragment, { children: u("".concat(t, "+"), t) }, "more-users");
@@ -205,7 +203,7 @@ class N extends (r = o.PureComponent) {
             { popoutUserId: l } = this.state;
         if (null == l)
             return (0, i.jsxs)("div", {
-                className: s()(e, p.container, S(t)),
+                className: s()(e, p.container, C(t)),
                 children: [this.renderIcon(), this.renderUsers()],
             });
         let c = n.find((e) => e instanceof d.Z && e.id === l),
@@ -225,7 +223,7 @@ class N extends (r = o.PureComponent) {
                     E(
                         m(
                             {
-                                className: s()(e, p.container, S(t)),
+                                className: s()(e, p.container, C(t)),
                                 ref: this._ref,
                             },
                             n,
@@ -256,8 +254,8 @@ class N extends (r = o.PureComponent) {
                             className: p.avatar,
                         });
                     }
-                if (e === O) {
-                    let e = A(c);
+                if (e === T) {
+                    let e = R(c);
                     r = (0, i.jsx)(l.tBG, {
                         size: "custom",
                         color: "currentColor",
@@ -276,9 +274,9 @@ class N extends (r = o.PureComponent) {
                         className: p.avatarWithBackground,
                         children: r,
                     },
-                    v(e, n),
+                    S(e, n),
                 );
-                return o && e !== O
+                return o && e !== T
                     ? (0, i.jsx)(
                           l.P3F,
                           {
@@ -289,17 +287,17 @@ class N extends (r = o.PureComponent) {
                               tabIndex: -1,
                               children: d,
                           },
-                          v(e, n),
+                          S(e, n),
                       )
                     : d;
             });
     }
 }
-h(N, "defaultProps", {
+h(P, "defaultProps", {
     max: 10,
-    renderMoreUsers: I,
+    renderMoreUsers: A,
     renderIcon: !1,
     showDefaultAvatarsForNullUsers: !1,
     size: b.SIZE_24,
 });
-let C = N;
+let w = P;

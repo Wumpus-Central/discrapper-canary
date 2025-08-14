@@ -10,9 +10,9 @@ var r = n(255367),
     u = n(313201),
     m = n(592125),
     h = n(888592),
-    f = n(981631),
-    x = n(388032),
-    p = n(33715);
+    x = n(981631),
+    p = n(388032),
+    f = n(330966);
 let g = (0, u.hQ)(),
     _ = (e) => {
         let {
@@ -57,50 +57,50 @@ let g = (0, u.hQ)(),
                     I(!1);
                 }
             },
-            O = x.intl.string(x.t.H1jCHB),
-            C = x.intl.string(x.t.YfeHRE);
-        if (E) (O = x.intl.string(x.t.LVyxND)), (C = x.intl.string(x.t.ECd7Rk));
+            O = p.intl.string(p.t.H1jCHB),
+            C = p.intl.string(p.t.YfeHRE);
+        if (E) (O = p.intl.string(p.t.LVyxND)), (C = p.intl.string(p.t.ECd7Rk));
         else if (
             (null == v ? void 0 : v.guild) != null &&
             v.guild.id !== h.fQ &&
             (null == v ? void 0 : v.approximate_member_count) != null
         ) {
             let { name: e } = v.guild;
-            O = x.intl.formatToPlainString(x.t["4T4+p6"], {
+            O = p.intl.formatToPlainString(p.t["4T4+p6"], {
                 guildName: e,
                 count: v.approximate_member_count,
             });
         }
         return (0, r.jsxs)("div", {
-            className: p.container,
+            className: f.container,
             children: [
-                (0, r.jsx)("div", { className: p.topImage }),
+                (0, r.jsx)("div", { className: f.topImage }),
                 (0, r.jsx)(o.X6q, {
-                    className: a()(p.centerText, p.header),
+                    className: a()(f.centerText, f.header),
                     variant: "heading-xl/semibold",
                     children: O,
                 }),
                 (0, r.jsx)("div", {
-                    className: p.descriptionWidth,
+                    className: f.descriptionWidth,
                     children: (0, r.jsx)(o.Text, {
-                        className: p.centerText,
+                        className: f.centerText,
                         variant: "text-sm/normal",
                         color: "header-secondary",
                         children: C,
                     }),
                 }),
                 (0, r.jsxs)("form", {
-                    className: p.formContent,
+                    className: f.formContent,
                     onSubmit: b,
                     children: [
                         (0, r.jsxs)(o.xJW, {
                             children: [
                                 (0, r.jsx)(o.vwX, {
                                     id: g,
-                                    children: x.intl.string(x.t.kmCxkZ),
+                                    children: p.intl.string(p.t.kmCxkZ),
                                 }),
                                 (0, r.jsx)(o.oil, {
-                                    placeholder: x.intl.string(x.t.ImAOh4),
+                                    placeholder: p.intl.string(p.t.ImAOh4),
                                     onChange: (e) => {
                                         u(e);
                                     },
@@ -111,33 +111,33 @@ let g = (0, u.hQ)(),
                         }),
                         (0, r.jsx)(o.Text, {
                             color: "header-secondary",
-                            className: p.formDescription,
+                            className: f.formDescription,
                             variant: "text-sm/normal",
-                            children: x.intl.string(x.t.Cv7mmJ),
+                            children: p.intl.string(p.t.Cv7mmJ),
                         }),
                         (0, r.jsx)(s.zx, {
                             type: "submit",
                             size: s.zx.Sizes.LARGE,
                             color: s.zx.Colors.BRAND,
-                            className: p.submitButton,
+                            className: f.submitButton,
                             submitting: j,
-                            children: x.intl.string(x.t["8vmKOz"]),
+                            children: p.intl.string(p.t["8vmKOz"]),
                         }),
                         (0, r.jsx)(o.Text, {
-                            className: p.termsPhrase,
+                            className: f.termsPhrase,
                             color: "header-secondary",
                             variant: "text-xs/normal",
-                            children: x.intl.format(x.t.RPT0vr, {
-                                termsURL: f.EYA.TERMS,
-                                privacyURL: f.EYA.PRIVACY,
+                            children: p.intl.format(p.t.RPT0vr, {
+                                termsURL: x.EYA.TERMS,
+                                privacyURL: x.EYA.PRIVACY,
                             }),
                         }),
                         E &&
                             (0, r.jsx)(s.zx, {
                                 look: s.zx.Looks.LINK,
                                 onClick: N,
-                                className: p.cancelButton,
-                                children: x.intl.string(x.t.hO6qJy),
+                                className: f.cancelButton,
+                                children: p.intl.string(p.t.hO6qJy),
                             }),
                     ],
                 }),

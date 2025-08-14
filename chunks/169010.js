@@ -17,10 +17,9 @@ let i = {
 function s(e) {
     let t = [],
         n = e.reduce((e, t) => {
-            var n;
             if (t.type !== o.Us.PERK) return e;
-            let r = l[t.skuId];
-            return null == r || (null != e[r] || (e[r] = []), e[r].push(t)), e;
+            let n = l[t.skuId];
+            return null == n || (null != e[n] || (e[n] = []), e[n].push(t)), e;
         }, {});
     for (let r of e) {
         if (r.type === o.Us.LEVEL) {

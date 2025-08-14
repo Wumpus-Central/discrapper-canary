@@ -30,9 +30,9 @@ var i = n(255367),
     P = n(981631),
     R = n(420212),
     D = n(388032),
-    Z = n(84601),
-    w = n(423279),
-    k = n(881488);
+    Z = n(894462),
+    w = n(620842),
+    k = n(197571);
 function L(e, t, n) {
     return (
         t in e
@@ -46,7 +46,7 @@ function L(e, t, n) {
         e
     );
 }
-function M(e) {
+function B(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -62,7 +62,7 @@ function M(e) {
     }
     return e;
 }
-function B(e, t) {
+function M(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -164,7 +164,7 @@ class G extends r.PureComponent {
                                     children: (e) =>
                                         (0, i.jsx)(
                                             "div",
-                                            B(M({}, e), {
+                                            M(B({}, e), {
                                                 children: (0, i.jsx)(m.rsf, {
                                                     checked: t,
                                                     onChange: this.handleEnableDisable,
@@ -188,17 +188,17 @@ class G extends r.PureComponent {
     constructor(...e) {
         super(...e),
             L(this, "handleActionChanged", (e) => {
-                p.Z.setKeybind(B(M({}, this.props.keybind), { action: e }));
+                p.Z.setKeybind(M(B({}, this.props.keybind), { action: e }));
             }),
             L(this, "handleShortcutChange", (e) => {
-                p.Z.setKeybind(B(M({}, this.props.keybind), { shortcut: e }));
+                p.Z.setKeybind(M(B({}, this.props.keybind), { shortcut: e }));
             }),
             L(this, "handleDeleteKeybind", () => {
                 p.Z.deleteKeybind(this.props.keybind.id);
             }),
             L(this, "handleEnableDisable", () => {
                 let { keybind: e } = this.props;
-                p.Z.setKeybind(B(M({}, this.props.keybind), { enabled: !e.enabled }));
+                p.Z.setKeybind(M(B({}, this.props.keybind), { enabled: !e.enabled }));
             });
     }
 }

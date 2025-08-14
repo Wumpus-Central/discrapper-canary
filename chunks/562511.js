@@ -1,23 +1,23 @@
 n.d(t, {
     A2: () => g,
-    S3: () => f,
+    S3: () => h,
 });
 var r = n(73800),
     i = n(442837),
     l = n(704215),
     o = n(570140),
-    s = n(645041),
-    a = n(271383),
+    a = n(645041),
+    s = n(271383),
     c = n(430824),
     u = n(594174),
     d = n(731722),
-    h = n(864133),
-    p = n(981631);
-function f(e) {
+    p = n(864133),
+    f = n(981631);
+function h(e) {
     let t = (function (e) {
-        let t = (0, s.FT)(l.C.ADOPT_CLAN_IDENTITY_NOTICE, null != e ? e : p.lds);
+        let t = (0, a.FT)(l.C.ADOPT_CLAN_IDENTITY_NOTICE, null != e ? e : f.lds);
         return (
-            (0, i.e7)([c.Z, u.default, a.ZP], () => {
+            (0, i.e7)([c.Z, u.default, s.ZP], () => {
                 var t, n;
                 if (null === e) return !1;
                 let r = c.Z.getGuild(e);
@@ -29,15 +29,15 @@ function f(e) {
                         (null == (n = i.primaryGuild) ? void 0 : n.tag) === r.profile.tag)
                 )
                     return !1;
-                let l = a.ZP.getMember(e, i.id);
+                let l = s.ZP.getMember(e, i.id);
                 return null != l && !l.isPending;
             }, [e]) && !t
         );
     })(e);
     return !(function (e) {
-        let t = (0, s.FT)(l.C.ADOPT_CLAN_IDENTITY_NOTICE, null != e ? e : p.lds),
-            n = (0, i.e7)([h.Z], () => (null === e ? null : h.Z.getGuildLastSeenInfo(e))),
-            a = (0, i.e7)([u.default], () => {
+        let t = (0, a.FT)(l.C.ADOPT_CLAN_IDENTITY_NOTICE, null != e ? e : f.lds),
+            n = (0, i.e7)([p.Z], () => (null === e ? null : p.Z.getGuildLastSeenInfo(e))),
+            s = (0, i.e7)([u.default], () => {
                 var e;
                 return null == (e = u.default.getCurrentUser()) ? void 0 : e.primaryGuild;
             }),
@@ -57,12 +57,12 @@ function f(e) {
                         lastSeenInfo: { tag: d },
                     });
             }, [e, d, t, n]),
-            null == d || ((null == a ? void 0 : a.identityGuildId) === e && (null == a ? void 0 : a.tag) === d))
+            null == d || ((null == s ? void 0 : s.identityGuildId) === e && (null == s ? void 0 : s.tag) === d))
         )
             return !1;
-        let f = (null == a ? void 0 : a.identityGuildId) === e && (null == a ? void 0 : a.tag) === null,
+        let h = (null == s ? void 0 : s.identityGuildId) === e && (null == s ? void 0 : s.tag) === null,
             g = null === n || (null == n ? void 0 : n.tag) === d;
-        return f && !g && t;
+        return h && !g && t;
     })(e)
         ? t
             ? "available"
@@ -70,5 +70,5 @@ function f(e) {
         : "changed";
 }
 function g(e) {
-    return null !== f(e);
+    return null !== h(e);
 }

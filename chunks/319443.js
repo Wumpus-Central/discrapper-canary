@@ -1,4 +1,4 @@
-n.r(t), n.d(t, { default: () => z }), n(388685), n(781311);
+n.r(t), n.d(t, { default: () => U }), n(388685), n(781311);
 var r = n(255367),
     a = n(73800),
     i = n(120356),
@@ -35,7 +35,7 @@ var r = n(255367),
     D = n(979007),
     k = n(981631),
     M = n(388032),
-    G = n(354451);
+    G = n(813525);
 function B(e) {
     let { applicationId: t, hideDetailHeaderButtons: n, onClickBack: i } = e,
         s = (0, o.e7)([y.Z], () => y.Z.getApplication(t)),
@@ -78,7 +78,7 @@ function B(e) {
         ],
     });
 }
-function U() {
+function z() {
     let e = a.useCallback(() => {
             (0, S.qF)();
         }, []),
@@ -119,12 +119,12 @@ function U() {
         ],
     });
 }
-let z = function () {
+let U = function () {
     var e;
     let t = (0, o.e7)([b.default], () => !b.default.isAuthenticated()),
         { onScroll: n, scrollPosition: i, resetScrollPosition: y } = (0, u.M)(),
         R = (0, N.Xh)(),
-        z = (0, S.nu)(),
+        U = (0, S.nu)(),
         F = (null == R ? void 0 : R.type) === N.m_.CATEGORY ? R.categoryId : void 0,
         { applicationId: V, section: H } = (null == R ? void 0 : R.type) === N.m_.APPLICATION ? R : {},
         { query: Y, categoryId: W } = (null == R ? void 0 : R.type) === N.m_.SEARCH ? R : {},
@@ -156,8 +156,8 @@ let z = function () {
             C.CP();
         }, []),
         a.useEffect(() => {
-            z && C.g5();
-        }, [z]),
+            U && C.g5();
+        }, [U]),
         a.useEffect(() => N.aQ.setState({ lastItem: R }), [R]);
     let { enabled: ei } = d.c.useExperiment({ location: "GlobalDiscoveryAppsRoot" }, { autoTrackExposure: !0 }),
         el = null != V,
@@ -214,7 +214,7 @@ let z = function () {
     return (0, r.jsxs)("div", {
         className: l()(G.outerContainer, { [G.loggedOutContainer]: t }),
         children: [
-            t ? (0, r.jsx)(U, {}) : null,
+            t ? (0, r.jsx)(z, {}) : null,
             (0, r.jsxs)("div", {
                 className: G.innerContainer,
                 children: [

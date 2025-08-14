@@ -2,7 +2,7 @@ n.d(t, {
     $Z: () => D,
     Cp: () => Z,
     F_: () => A,
-    Se: () => M,
+    Se: () => B,
     ZN: () => w,
     tF: () => L,
     yC: () => k,
@@ -180,7 +180,7 @@ function L(e) {
         selectedIndex: e,
     });
 }
-function M(e) {
+function B(e) {
     let t,
         n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     R(), (0, i.pTH)(), P(v.rMx.QUICKSWITCHER_RESULT_SELECTED, e);

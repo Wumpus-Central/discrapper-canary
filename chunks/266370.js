@@ -1199,12 +1199,7 @@
                                     i = o(e),
                                     l = a(arguments[0], e),
                                     c = void 0;
-                                c =
-                                    0 === i && 0 === l
-                                        ? Number.POSITIVE_INFINITY
-                                        : 0 === i || 0 === l
-                                          ? Math.max(i, l)
-                                          : Math.min(i, l);
+                                c = 0 === i && 0 === l ? 1 / 0 : 0 === i || 0 === l ? Math.max(i, l) : Math.min(i, l);
                                 var u = {};
                                 Object.defineProperty(u, "maxMessageSize", {
                                     get: function () {

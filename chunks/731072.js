@@ -7,7 +7,7 @@ var i = n(255367),
     s = n(434404),
     c = n(486199),
     d = n(13051),
-    u = n(772865);
+    u = n(66544);
 function p(e) {
     let {
             integrations: t,
@@ -34,7 +34,7 @@ function p(e) {
             },
             [h, n, p.id],
         ),
-        O = r.useCallback(
+        y = r.useCallback(
             (e) => {
                 h() &&
                     (e === (null == n ? void 0 : n.id) ? o.Z.stopEditingIntegration() : o.Z.startEditingIntegration(e));
@@ -62,7 +62,7 @@ function p(e) {
                         isExpanded: (null == n ? void 0 : n.id) === e.id,
                         onEnable: j,
                         onDisable: v,
-                        onToggleExpand: () => O(e.id),
+                        onToggleExpand: () => y(e.id),
                     },
                     e.id,
                 ),

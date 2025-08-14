@@ -18,7 +18,7 @@ var r = n(255367),
     b = n(463031),
     y = n(981631),
     O = n(388032),
-    v = n(607006);
+    v = n(259782);
 function I(e, t, n) {
     return (
         t in e
@@ -140,8 +140,8 @@ function R(e) {
             leaderboardId: p,
             statisticId: o.E.LOL_TOTAL_KILLS,
         }),
-        { disabled: M, subtext: j } = C(L, x),
-        k = (0, a.e7)([f.Z, d.Z], () => {
+        { disabled: M, subtext: k } = C(L, x),
+        j = (0, a.e7)([f.Z, d.Z], () => {
             let e = d.Z.getGuild(t);
             return f.Z.can(y.Plq.ADMINISTRATOR, e);
         }, [t]),
@@ -171,7 +171,7 @@ function R(e) {
                                       label: O.intl.string(O.t.iopWUV),
                                       action: w,
                                       disabled: M,
-                                      subtext: j,
+                                      subtext: k,
                                   }),
                               (0, r.jsx)(s.sNh, {
                                   id: "leaderboard-modal",
@@ -191,7 +191,7 @@ function R(e) {
                                           null == i || i();
                                   },
                               }),
-                              k
+                              j
                                   ? (0, r.jsx)(s.sNh, {
                                         id: "leaderboard-settings-modal",
                                         label: O.intl.string(O.t["QV4/6u"]),

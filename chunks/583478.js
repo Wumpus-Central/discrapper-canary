@@ -1,4 +1,4 @@
-r.d(t, { Z: () => _ }), r(388685);
+r.d(t, { Z: () => C }), r(388685);
 var n = r(255367),
     a = r(73800),
     l = r(120356),
@@ -10,43 +10,41 @@ var n = r(255367),
     d = r(168232),
     b = r(976845),
     f = r(48541),
-    h = r(791144);
+    h = r(664597);
 let O = new s.Z("BalanceCounter"),
     y = (0, d.dU)(void 0) === f.C.PRODUCTION,
     p = (e) => (null === e ? 0 : "".concat(e.toFixed(0)).length),
-    m = (e, t) => {
-        let r = e > 0,
-            n = t * b.eg[r ? "EARN" : "SPEND"];
-        return {
-            duration: n,
-            delay: r ? t - n : 0,
-        };
-    },
-    C = (e, t, r) => (null === r ? Math.max(e, t) : Math.max(t, r)),
-    g = (e) => {
+    m = (e) => {
         var t, r;
         let { value: l, onSetDigitCount: i, onValueChange: c, onValueReached: s, targetTotalCounterTime: d = 3000 } = e,
-            [b, f] = (0, a.useState)(0),
-            h = (0, a.useRef)(null),
+            [f, h] = (0, a.useState)(0),
+            m = (0, a.useRef)(null),
             C = (0, a.useRef)(null);
         (0, a.useEffect)(() => {
             if (null === l) return;
-            if (null === h.current) {
-                h.current = l;
+            if (null === m.current) {
+                m.current = l;
                 return;
             }
-            let e = null !== h.current ? l - h.current : l;
-            0 !== e && null !== h.current && c(e),
+            let e = null !== m.current ? l - m.current : l;
+            0 !== e && null !== m.current && c(e),
                 (C.current = {
                     lastChangedAt: Date.now(),
                     totalDelta: Math.abs(e),
                 });
         }, [l, c]);
         let g = null != l ? l : 0,
-            _ = null != (t = h.current) ? t : g,
-            { duration: E, delay: R } = m(g - _, d),
+            _ = null != (t = m.current) ? t : g,
+            { duration: E, delay: R } = ((e, t) => {
+                let r = e > 0,
+                    n = t * b.eg[r ? "EARN" : "SPEND"];
+                return {
+                    duration: n,
+                    delay: r ? t - n : 0,
+                };
+            })(g - _, d),
             { number: j } = (0, u.q_F)({
-                from: { number: null != (r = h.current) ? r : g },
+                from: { number: null != (r = m.current) ? r : g },
                 number: g,
                 config: {
                     mass: 1,
@@ -59,14 +57,14 @@ let O = new s.Z("BalanceCounter"),
                     i(p(_));
                 },
                 onRest: () => {
-                    if ((f(b + 1), s(), !y && null !== C.current && null !== h.current)) {
+                    if ((h(f + 1), s(), !y && null !== C.current && null !== m.current)) {
                         let e = Date.now();
                         O.log("Balance Counter finished updating: ", {
                             time: e - C.current.lastChangedAt,
-                            delta: g - h.current,
+                            delta: g - m.current,
                         });
                     }
-                    i(p(g)), (h.current = g);
+                    i(p(g)), (m.current = g);
                 },
             }),
             v = p(Math.max(null != l ? l : 0, j.get()));
@@ -75,7 +73,7 @@ let O = new s.Z("BalanceCounter"),
             children: j.to((e) => "".concat(e.toFixed(0))),
         });
     },
-    _ = (e) => {
+    C = (e) => {
         var t,
             { value: r, className: l } = e,
             o = (function (e, t) {
@@ -103,7 +101,7 @@ let O = new s.Z("BalanceCounter"),
             [d, b] = (0, a.useState)(null),
             f = (0, a.useMemo)(() => p(r), [r]),
             O = null != (t = (0, c.Z)(f)) ? t : 0,
-            y = (0, a.useMemo)(() => C(O, f, d), [O, f, d]);
+            y = (0, a.useMemo)(() => (null === d ? Math.max(O, f) : Math.max(f, d)), [O, f, d]);
         return (0, n.jsx)(u.Text, {
             variant: "text-md/semibold",
             className: i()(h.balanceCounterText, s ? void 0 : h.balanceCounterMargin, l),
@@ -114,7 +112,7 @@ let O = new s.Z("BalanceCounter"),
             children: s
                 ? null
                 : (0, n.jsx)(
-                      g,
+                      m,
                       (function (e) {
                           for (var t = 1; t < arguments.length; t++) {
                               var r = null != arguments[t] ? arguments[t] : {},

@@ -7,7 +7,7 @@ var i = n(255367),
     o = n(711703),
     c = n(484710),
     d = n(388032),
-    u = n(15238);
+    u = n(449081);
 function m(e) {
     let { label: t, labelHook: n, dismissNotice: s, className: m, noticeType: p } = e,
         g = null != s;

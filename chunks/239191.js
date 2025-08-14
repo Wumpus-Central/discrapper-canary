@@ -1,8 +1,8 @@
 n.d(t, { DesktopRefreshOnboardingModal: () => w }), n(388685), n(539854);
 var i = n(255367),
-    s = n(73800),
-    r = n(120356),
-    a = n.n(r),
+    r = n(73800),
+    s = n(120356),
+    a = n.n(s),
     l = n(442837),
     o = n(524437),
     c = n(481060),
@@ -16,9 +16,9 @@ var i = n(255367),
     x = n(874893),
     b = n(231338),
     j = n(388032),
-    O = n(47305);
+    O = n(3498);
 function f(e) {
-    let { options: t, selected: n, onSelect: s, showLabels: r, renderOptionContainer: l } = e;
+    let { options: t, selected: n, onSelect: r, showLabels: s, renderOptionContainer: l } = e;
     return (0, i.jsx)(c.Kqy, {
         direction: "horizontal",
         gap: 8,
@@ -30,7 +30,7 @@ function f(e) {
                     gap: 16,
                     children: (0, i.jsx)(c.ua7, {
                         text: e.label,
-                        shouldShow: !r && void 0,
+                        shouldShow: !s && void 0,
                         children: (t) => {
                             var l, o;
                             return (0, i.jsxs)(
@@ -63,11 +63,11 @@ function f(e) {
                                 (o = o =
                                     {
                                         "data-selected": e.id === n,
-                                        onClick: () => s(e.id),
+                                        onClick: () => r(e.id),
                                         className: a()(e.className, O.option),
                                         style: e.style,
                                         children: [
-                                            r &&
+                                            s &&
                                                 (0, i.jsx)(c.Text, {
                                                     variant: "text-sm/medium",
                                                     color: "text-primary",
@@ -104,7 +104,7 @@ function f(e) {
         }),
     });
 }
-let v = [
+let _ = [
         {
             id: b.BR.LIGHT,
             label: j.intl.string(j.t.K2sFfn),
@@ -128,7 +128,7 @@ let v = [
             new: !0,
         },
     ],
-    _ = [
+    v = [
         {
             id: "compact",
             label: j.intl.string(j.t["7iegX1"]),
@@ -144,21 +144,21 @@ let v = [
     ];
 function w(e) {
     let { transitionState: t, onClose: n } = e,
-        [r] = s.useState(() => h.Z.gradientPreset),
+        [s] = r.useState(() => h.Z.gradientPreset),
         b = (0, l.e7)([p.Z], () => p.Z.theme),
-        [w] = s.useState(() => u.ZP.useSystemTheme === x.KW.ON),
-        [N, k] = s.useState(() => (w ? "system" : null != r ? "gradient" : b)),
+        [w] = r.useState(() => u.ZP.useSystemTheme === x.KW.ON),
+        [N, k] = r.useState(() => (w ? "system" : null != s ? "gradient" : b)),
         { density: C } = (0, c.TCT)(),
-        P = s.useMemo(() => {
-            if (null == r && !w) return v;
-            let e = [...v];
-            if (null != r) {
-                let { colors: t, angle: n, theme: i, getName: s } = r,
+        P = r.useMemo(() => {
+            if (null == s && !w) return _;
+            let e = [..._];
+            if (null != s) {
+                let { colors: t, angle: n, theme: i, getName: r } = s,
                     l = (0, g.VK)({
                         colors: t,
                         angle: n,
                     }),
-                    o = s();
+                    o = r();
                 e.push({
                     id: "gradient",
                     label: o,
@@ -175,7 +175,7 @@ function w(e) {
                     }),
                 e
             );
-        }, [r, w]),
+        }, [s, w]),
         K = (0, m.Z)("(max-height: 800px)");
     return (0, i.jsxs)(c.Y0X, {
         transitionState: t,
@@ -228,10 +228,10 @@ function w(e) {
                                     onSelect: (e) => {
                                         k(e),
                                             "gradient" === e
-                                                ? null != r &&
+                                                ? null != s &&
                                                   (0, d.ZI)({
-                                                      backgroundGradientPresetId: r.id,
-                                                      theme: r.theme,
+                                                      backgroundGradientPresetId: s.id,
+                                                      theme: s.theme,
                                                   })
                                                 : (0, d.ZI)({ theme: e });
                                     },
@@ -291,7 +291,7 @@ function w(e) {
                                 }),
                                 (0, i.jsx)(f, {
                                     showLabels: !0,
-                                    options: _,
+                                    options: v,
                                     selected: C,
                                     onSelect: (e) => {
                                         switch (e) {

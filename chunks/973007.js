@@ -5,7 +5,7 @@ var i = n(481060),
     o = n(744129),
     a = n(823188),
     l = n(474936),
-    s = n(115525);
+    s = n(402450);
 function C(e) {
     let { onClick: r, isGift: n, priceOptions: l, showPromotionalGiftBanner: C, enablePremiumBrandRefresh: d } = e;
     return d

@@ -3,7 +3,7 @@ var r = n(255367);
 n(73800);
 var i = n(146187),
     o = n(388032),
-    a = n(748491);
+    a = n(254477);
 function s(e) {
     let { onClick: t, "aria-label": n = o.intl.string(o.t.cpT0Cg), colorMix: s } = e;
     return (0, r.jsx)("div", {

@@ -20,7 +20,7 @@ var l = n(442837),
     O = n(179828),
     h = n(228168),
     v = n(388032),
-    _ = n(926505);
+    _ = n(54966);
 function I(e) {
     let { user: t, currentUser: n, displayProfile: I, subsection: P, onClose: E } = e,
         { trackUserProfileAction: T } = (0, f.KZ)(),

@@ -19,9 +19,9 @@ var r = n(255367),
     x = n(734557),
     v = n(981631),
     y = n(388032),
-    O = n(410688),
-    H = n(968769);
-function _(e) {
+    O = n(791051),
+    _ = n(334405);
+function H(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -157,8 +157,8 @@ function Z(e) {
         { inviteCodes: c } = (0, x.s)(n),
         p = (0, d.e7)([m.Z], () => m.Z.getGuild(n)),
         Z = null != (t = null == p ? void 0 : p.vanityURLCode) ? t : null,
-        [D, L] = l.useState(!1),
-        { selectedSourceInviteCode: R, selectedJoinSourceType: I } = a,
+        [D, R] = l.useState(!1),
+        { selectedSourceInviteCode: L, selectedJoinSourceType: I } = a,
         P = null != I && I !== g.gq.UNSPECIFIED,
         M = (0, d.e7)([b.Z], () => b.Z.hideInstantInvites, []);
     M && (c = []);
@@ -196,7 +196,7 @@ function Z(e) {
                           selectedSourceInviteCode: null,
                           selectedJoinSourceType: e,
                       }),
-                    L(!1);
+                    R(!1);
             },
             [n, I],
         ),
@@ -222,11 +222,11 @@ function Z(e) {
                   children: [
                       (0, r.jsx)(C.sNh, {
                           id: "back",
-                          action: () => L(!1),
+                          action: () => R(!1),
                           render: (e) =>
                               (0, r.jsxs)(
                                   "span",
-                                  w(_({}, e), {
+                                  w(H({}, e), {
                                       className: O.customLabelContainer,
                                       children: [
                                           (0, r.jsx)(C.V7D, {
@@ -253,7 +253,7 @@ function Z(e) {
                                   label: (t) =>
                                       (0, r.jsx)(
                                           S,
-                                          w(_({}, t), {
+                                          w(H({}, t), {
                                               type: e,
                                               vanityUrl: Z,
                                               text: (0, g.bE)(e, Z, M),
@@ -278,8 +278,8 @@ function Z(e) {
                               control: (e, t) =>
                                   (0, r.jsx)(
                                       C.ne,
-                                      w(_({}, e), {
-                                          query: null != R ? R : "",
+                                      w(H({}, e), {
+                                          query: null != L ? L : "",
                                           onChange: k,
                                           ref: t,
                                           placeholder: y.intl.string(y.t.YwJnGx),
@@ -294,7 +294,7 @@ function Z(e) {
                           {
                               id: "join-source-type-option-all",
                               label: y.intl.string(y.t.an9Ry8),
-                              checked: null == R && null == I,
+                              checked: null == L && null == I,
                               disabled: !1,
                               action: () => T(null),
                               group: "join-source-type-options",
@@ -309,13 +309,13 @@ function Z(e) {
                                   label: (t) =>
                                       (0, r.jsx)(
                                           S,
-                                          w(_({}, t), {
+                                          w(H({}, t), {
                                               type: g.gq.INVITE,
                                               vanityUrl: Z,
                                               text: e,
                                           }),
                                       ),
-                                  checked: R === e,
+                                  checked: L === e,
                                   disabled: !1,
                                   action: () => E(e),
                                   group: "join-source-type-options",
@@ -328,13 +328,13 @@ function Z(e) {
                           C.sNh,
                           {
                               id: "other-join-methods",
-                              action: () => L(!0),
+                              action: () => R(!0),
                               render: (e) =>
                                   (0, r.jsxs)("div", {
                                       className: i()(O.containerWithRightCaret, O.customLabelContainer),
                                       children: [
                                           (0, r.jsxs)("div", {
-                                              className: H.label,
+                                              className: _.label,
                                               children: [
                                                   (0, r.jsx)(C.Text, {
                                                       variant: "text-sm/medium",
@@ -348,7 +348,7 @@ function Z(e) {
                                                             className: O.selectedOption,
                                                             children: (0, r.jsx)(
                                                                 S,
-                                                                w(_({}, e), {
+                                                                w(H({}, e), {
                                                                     size: 12,
                                                                     text: (0, g.bE)(I, Z, M),
                                                                     type: I,

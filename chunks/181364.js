@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f });
+n.d(t, { Z: () => p });
 var i = n(255367);
 n(73800);
 var r = n(13245),
@@ -9,22 +9,15 @@ var r = n(13245),
     c = n(312839),
     d = n(987650),
     u = n(388032);
-let h = () => ({
-        icon: n(328756),
-        title: u.intl.string(u.t.pkXAeH),
-        body: null,
-        hint: p,
-        notifType: d.n0.WelcomeNudge,
-    }),
-    p = (e) => (0, o.QR)(e, (0, c.P)(), u.t["z8/sgI"]);
-function f(e) {
+let h = (e) => (0, o.QR)(e, (0, c.P)(), u.t["z8/sgI"]);
+function p(e) {
     let { type: t } = e,
         {
-            icon: n,
-            title: o,
-            body: p,
-            hint: f,
-            notifType: g,
+            icon: o,
+            title: p,
+            body: f,
+            hint: g,
+            notifType: m,
         } = (function (e, t) {
             if (t.type === d.nc.NEWS) {
                 var n, i, r, o, l, s, a, c;
@@ -37,13 +30,22 @@ function f(e) {
                 };
             }
             return e;
-        })(h(), e),
-        { trackView: m, trackClick: y } = (0, c.R)(g, { notif_type: g });
+        })(
+            {
+                icon: n(328756),
+                title: u.intl.string(u.t.pkXAeH),
+                body: null,
+                hint: h,
+                notifType: d.n0.WelcomeNudge,
+            },
+            e,
+        ),
+        { trackView: y, trackClick: O } = (0, c.R)(m, { notif_type: m });
     return {
-        icon: n,
-        title: o,
-        body: p,
-        hint: f,
+        icon: o,
+        title: p,
+        body: f,
+        hint: g,
         renderFooter: () =>
             (0, i.jsx)("div", {
                 style: {
@@ -53,17 +55,17 @@ function f(e) {
                 children: u.intl.string(u.t["9MyuT0"]),
             }),
         onNotificationShow: () => {
-            m();
+            y();
         },
         onNotificationClick: (e, n) => {
-            y("unlock"),
+            O("unlock"),
                 t === d.nc.NEWS && r.Z.updateNotificationStatus(n),
                 l.default.isOverlayOOPEnabledForPid((0, a.getPID)())
                     ? r.Z.setInputLocked(!1, (0, a.getPID)())
                     : s.default.isInstanceLocked() && r.Z.setInstanceLocked(!1);
         },
         onDismissClick: () => {
-            y("dismiss");
+            O("dismiss");
         },
     };
 }

@@ -23,7 +23,7 @@ var r = n(255367),
     y = n(354459),
     O = n(185923),
     v = n(420212),
-    I = n(720157);
+    I = n(339051);
 function T(e, t, n) {
     return (
         t in e
@@ -152,7 +152,7 @@ function D(e) {
         D = (0, f.Dt)(),
         [L, x] = i.useState(!1),
         M = (0, _.wC)(t.guild_id),
-        j = (0, s.uniqBy)([...M, ...R], "name")
+        k = (0, s.uniqBy)([...M, ...R], "name")
             .filter(
                 (e) =>
                     !E.ZP.isEmojiFilteredOrLocked({
@@ -162,17 +162,17 @@ function D(e) {
                     }),
             )
             .slice(0, y.e5);
-    null != b && b.length > 0 && j.splice(j.length - 1, 1, b[0]);
-    let k = (e) => {
+    null != b && b.length > 0 && k.splice(k.length - 1, 1, b[0]);
+    let j = (e) => {
             x(e), null == p || p(e);
         },
         U = (e) => {
             let { emoji: t, willClose: n } = e;
             if (null == t && n) return void o();
-            null != t && u(t), k(!n), n && g.kJ.setSearchPlaceholder(null);
+            null != t && u(t), j(!n), n && g.kJ.setSearchPlaceholder(null);
         },
         G = (e) => {
-            null != e && e.key !== v.vn.TAB && (e.key !== v.vn.ENTER || e.shiftKey ? k(!0) : k(!L));
+            null != e && e.key !== v.vn.TAB && (e.key !== v.vn.ENTER || e.shiftKey ? j(!0) : j(!L));
         };
     return (0, r.jsxs)(c.VqE, {
         "aria-labelledby": D,
@@ -204,7 +204,7 @@ function D(e) {
                             accessory: (0, r.jsx)(w, {
                                 otherAccessories: null == m ? void 0 : m.accessory,
                                 isEmojiPickerExpanded: L,
-                                onSetExpanded: k,
+                                onSetExpanded: j,
                                 onFocus: l,
                             }),
                             onKeyDown: G,
@@ -214,7 +214,7 @@ function D(e) {
                         className: I.slotsContainer,
                         children: (0, r.jsx)("div", {
                             className: a()(I.slots, I.slotsWide),
-                            children: j.map((e) => {
+                            children: k.map((e) => {
                                 let n = E.ZP.isEmojiDisabled({
                                     emoji: e,
                                     channel: t,

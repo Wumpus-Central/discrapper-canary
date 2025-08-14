@@ -4,7 +4,7 @@ var i = n(255367),
     s = n(120356),
     a = n.n(s),
     l = n(981631),
-    o = n(700469);
+    o = n(537539);
 class c extends r.Component {
     render() {
         let { className: e, videoID: t, videoClassName: n } = this.props;

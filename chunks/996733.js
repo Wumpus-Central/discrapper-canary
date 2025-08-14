@@ -1,6 +1,6 @@
 n.d(t, {
     QH: () => l,
-    Z7: () => s,
+    Z7: () => o,
     yN: () => i,
 }),
     n(781311);
@@ -15,6 +15,6 @@ function i(e) {
 function l(e) {
     r.setState({ isActive: e });
 }
-function s() {
+function o() {
     return r.useField("query");
 }

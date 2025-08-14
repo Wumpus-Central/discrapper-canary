@@ -16,7 +16,7 @@ var r,
     C = n(553826),
     m = n(981631),
     b = n(388032),
-    p = n(877087);
+    p = n(182362);
 function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -88,8 +88,8 @@ function y(e) {
             onClose: v,
             onSelectDateOption: y,
             onToggleCustomDateRange: O,
-            onSelectStartDate: H,
-            onSelectEndDate: _,
+            onSelectStartDate: _,
+            onSelectEndDate: H,
         } = e,
         w = [
             {
@@ -160,17 +160,17 @@ function y(e) {
         D = o.useCallback(() => {
             S(!0), O();
         }, [O]),
-        L = o.useCallback(
-            (e) => {
-                H(e);
-            },
-            [H],
-        ),
         R = o.useCallback(
             (e) => {
                 _(e);
             },
             [_],
+        ),
+        L = o.useCallback(
+            (e) => {
+                H(e);
+            },
+            [H],
         ),
         I = o.useCallback(() => {
             null == i && null == r && y(0, null), S(!1);
@@ -221,7 +221,7 @@ function y(e) {
                                           h(f({}, e), {
                                               calendarClassName: p.calendar,
                                               value: u && null != r ? c()(r) : void 0,
-                                              onSelect: L,
+                                              onSelect: R,
                                               maxDate: c()().local(),
                                               minDate: g,
                                           }),
@@ -241,7 +241,7 @@ function y(e) {
                                           h(f({}, e), {
                                               calendarClassName: p.calendar,
                                               value: u && null != i ? c()(i) : void 0,
-                                              onSelect: R,
+                                              onSelect: L,
                                               maxDate: c()().local(),
                                               minDate: u && null != r ? c()(r) : g,
                                           }),

@@ -42,12 +42,12 @@ var i = n(255367),
     k = n(5192),
     B = n(233608),
     V = n(700785),
-    U = n(51144),
-    H = n(257017),
-    W = n(188857),
+    H = n(51144),
+    W = n(257017),
+    U = n(188857),
     G = n(981631),
     F = n(388032),
-    z = n(753965);
+    z = n(198750);
 function X(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -153,7 +153,7 @@ function Y(e) {
                 let e;
                 if (t.type === j.BN.MEMBER) {
                     let n = A.default.getUser(t.id);
-                    null != n && (e = U.ZP.getName(n));
+                    null != n && (e = H.ZP.getName(n));
                 } else if (t.type === j.BN.ROLE) {
                     let i = I.Z.getGuild(n.getGuildId());
                     if (null != i) {
@@ -161,7 +161,7 @@ function Y(e) {
                         null != n && (e = n.name);
                     }
                 }
-                H.X(e);
+                W.X(e);
             }
         },
         v = (e) => {
@@ -221,7 +221,7 @@ function Q(e) {
     let { guildId: t, channelId: n, user: l } = e,
         r = l.getAvatarURL(t, 32),
         s = k.ZP.getNickname(t, n, l),
-        a = U.ZP.useUserTag(l),
+        a = H.ZP.useUserTag(l),
         o = null,
         c = null;
     return (
@@ -330,7 +330,7 @@ function ee() {
                 sortedGuildRoles: t,
             };
         }, [f]),
-        N = (0, W.Z)(f, r),
+        N = (0, U.Z)(f, r),
         S = (0, b.ZP)(),
         E = (0, o.e7)([v.Z], () => v.Z.roleStyle),
         Z = l.useCallback(
@@ -422,7 +422,7 @@ function ee() {
                         guild: x,
                         theme: S,
                         roleStyle: E,
-                        "aria-label": U.ZP.getUserTag(e, { decoration: "never" }),
+                        "aria-label": H.ZP.getUserTag(e, { decoration: "never" }),
                         onContextMenu: (t) =>
                             Z(t, {
                                 id: e.id,
@@ -439,7 +439,7 @@ function ee() {
                                 }),
                                 (0, i.jsx)("span", {
                                     className: z.username,
-                                    children: U.ZP.getUserTag(e),
+                                    children: H.ZP.getUserTag(e),
                                 }),
                             ],
                         }),

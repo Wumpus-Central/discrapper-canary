@@ -16,7 +16,7 @@ var i = n(255367),
     N = n(981631),
     x = n(486324),
     h = n(388032),
-    A = n(547256);
+    A = n(382775);
 function P(e) {
     let { transitionState: t, onClose: o, onComplete: P, uploadType: b, showUpsellHeader: E, analyticsPage: R } = e,
         [j, v] = a.useState(!1),
@@ -33,7 +33,7 @@ function P(e) {
         o(),
             (0, l.ZDy)(
                 async () => {
-                    let { default: e } = await Promise.all([n.e("59732"), n.e("68969")]).then(n.bind(n, 712451));
+                    let { default: e } = await Promise.all([n.e("59732"), n.e("42529")]).then(n.bind(n, 712451));
                     return (t) =>
                         (0, i.jsx)(
                             e,

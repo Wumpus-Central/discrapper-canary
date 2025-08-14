@@ -29,10 +29,17 @@ class O extends r.PureComponent {
         return null;
     }
     constructor(...e) {
-        var t, n;
         super(...e),
-            (t = "getIcon"),
-            (n = () => {
+            (function (e, t, n) {
+                t in e
+                    ? Object.defineProperty(e, t, {
+                          value: n,
+                          enumerable: !0,
+                          configurable: !0,
+                          writable: !0,
+                      })
+                    : (e[t] = n);
+            })(this, "getIcon", () => {
                 let { deafened: e, muted: t, speaking: n, connected: r, unread: i } = this.props,
                     l = _;
                 return (0, g.isMac)() && !r
@@ -40,15 +47,7 @@ class O extends r.PureComponent {
                     : (0, g.isLinux)() || !r
                       ? (i && (l = "UNREAD"), l)
                       : (l = e ? "DEAFENED" : t ? "MUTED" : n ? "SPEAKING" : "CONNECTED");
-            }),
-            t in this
-                ? Object.defineProperty(this, t, {
-                      value: n,
-                      enumerable: !0,
-                      configurable: !0,
-                      writable: !0,
-                  })
-                : (this[t] = n);
+            });
     }
 }
 let E = () => null;

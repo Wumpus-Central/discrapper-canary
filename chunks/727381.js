@@ -1,9 +1,9 @@
-n.d(t, { Z: () => N });
+n.d(t, { Z: () => h });
 var r = n(255367);
 n(73800);
 var l = n(120356),
-    s = n.n(l),
-    i = n(399606),
+    i = n.n(l),
+    s = n(399606),
     a = n(481060),
     o = n(271383),
     u = n(594174),
@@ -15,8 +15,8 @@ var l = n(120356),
     T = n(908474),
     m = n(467014),
     I = n(388032),
-    g = n(983843);
-function f() {
+    g = n(87819);
+function N() {
     return (0, r.jsxs)("div", {
         className: g.header,
         children: [
@@ -43,31 +43,31 @@ function f() {
         ],
     });
 }
-function N(e) {
+function h(e) {
     let { userId: t, guildId: n, location: l, className: c, onNavigate: I } = e,
-        N = (0, i.e7)([u.default], () => u.default.getUser(t), [t]),
-        h = (0, i.e7)([o.ZP], () => o.ZP.getMember(n, t), [n, t]);
-    return null == N || null == h
+        h = (0, s.e7)([u.default], () => u.default.getUser(t), [t]),
+        f = (0, s.e7)([o.ZP], () => o.ZP.getMember(n, t), [n, t]);
+    return null == h || null == f
         ? null
         : (0, r.jsxs)("div", {
-              className: s()(g.container, c),
+              className: i()(g.container, c),
               children: [
-                  (0, r.jsx)(f, {}),
+                  (0, r.jsx)(N, {}),
                   (0, r.jsxs)(a.Ttm, {
                       className: g.innerContainer,
                       children: [
-                          (0, r.jsx)(T.Z, { member: h }),
+                          (0, r.jsx)(T.Z, { member: f }),
                           (0, r.jsx)(m.Z, {
                               userId: t,
                               guildId: n,
                           }),
                           (0, r.jsx)(A.Z, {
-                              member: h,
+                              member: f,
                               onNavigate: I,
                           }),
-                          (0, r.jsx)(d.Z, { member: h }),
-                          (0, r.jsx)(E.Z, { member: h }),
-                          (0, r.jsx)(_.Z, { member: h }),
+                          (0, r.jsx)(d.Z, { member: f }),
+                          (0, r.jsx)(E.Z, { member: f }),
+                          (0, r.jsx)(_.Z, { member: f }),
                       ],
                   }),
               ],

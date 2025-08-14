@@ -1,4 +1,4 @@
-i.d(t, { default: () => T }), i(388685);
+i.d(t, { default: () => h }), i(388685);
 var n = i(255367),
     a = i(73800),
     s = i(755721),
@@ -14,29 +14,32 @@ var n = i(255367),
     m = i(635840),
     x = i(981631),
     I = i(388032),
-    S = i(92323);
-let h = (e) => {
-    let [t, i] = a.useState(!1),
-        [n, s] = a.useState(null);
-    return {
-        cancelSubscription: async (t) => {
-            try {
-                return i(!0), await r.EO(t, e), !0;
-            } catch (e) {
-                s(e);
-            } finally {
-                i(!1);
-            }
-        },
-        error: n,
-        submitting: t,
-    };
-};
-function T(e) {
-    let { transitionState: t, application: i, storeListing: r, subscription: T, guild: A, onClose: E } = e,
+    S = i(304495);
+function h(e) {
+    let { transitionState: t, application: i, storeListing: h, subscription: T, guild: A, onClose: E } = e,
         p = (0, c.Dt)(),
         { analyticsLocations: O } = (0, d.ZP)(o.Z.APPLICATION_SUBSCRIPTION_CANCELLATION_MODAL),
-        { cancelSubscription: g, error: j, submitting: P } = h(O),
+        {
+            cancelSubscription: g,
+            error: j,
+            submitting: P,
+        } = ((e) => {
+            let [t, i] = a.useState(!1),
+                [n, s] = a.useState(null);
+            return {
+                cancelSubscription: async (t) => {
+                    try {
+                        return i(!0), await r.EO(t, e), !0;
+                    } catch (e) {
+                        s(e);
+                    } finally {
+                        i(!1);
+                    }
+                },
+                error: n,
+                submitting: t,
+            };
+        })(O),
         [L, f] = a.useState(0),
         R = async () => {
             (await g(T.id)) && (_.ZP.disableApplicationSubscriptionCancellationSurvey ? E() : f(1));
@@ -44,7 +47,7 @@ function T(e) {
     a.useEffect(() => {
         C.default.track(x.rMx.CANCELLATION_FLOW_STARTED, { location_stack: O });
     }, [O]);
-    let b = (0, u.KW)(r.skuFlags);
+    let b = (0, u.KW)(h.skuFlags);
     return (0, n.jsx)(l.Y0X, {
         transitionState: t,
         className: S.modal,
@@ -69,7 +72,7 @@ function T(e) {
                                             (0, n.jsx)(N.CW, { application: i }),
                                             (0, n.jsx)(N.r0, {
                                                 id: p,
-                                                children: I.intl.format(I.t.irka9v, { tier: r.summary }),
+                                                children: I.intl.format(I.t.irka9v, { tier: h.summary }),
                                             }),
                                             (0, n.jsx)(N.s$, {}),
                                             (0, n.jsx)(N.K9, {
@@ -84,8 +87,8 @@ function T(e) {
                                                       }),
                                             }),
                                             (0, n.jsx)(N.G9, {
-                                                applicationId: r.applicationId,
-                                                storeListingBenefits: r.benefits,
+                                                applicationId: h.applicationId,
+                                                storeListingBenefits: h.benefits,
                                             }),
                                         ],
                                     }),

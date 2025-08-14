@@ -29,7 +29,7 @@ var k = x(255367),
     V = x(535170),
     b = x(981631),
     F = x(388032),
-    g = x(989970);
+    g = x(577436);
 function S(a) {
     for (var i = 1; i < arguments.length; i++) {
         var x = null != arguments[i] ? arguments[i] : {},
@@ -196,14 +196,11 @@ function L(a) {
                 }
             );
     }, [i.id, l, o]);
-    let y = r.useMemo(() => (0, d.EB)(i, 135, !1, !0), [i]),
-        f = () => {
-            (l.current = !0), x();
-        };
+    let y = r.useMemo(() => (0, d.EB)(i, 135, !1, !0), [i]);
     return (
         (0, p.ZP)(() => {
             setTimeout(() => {
-                f();
+                (l.current = !0), x();
             }, 3000);
         }),
         (0, k.jsx)("div", {

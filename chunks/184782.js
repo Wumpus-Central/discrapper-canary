@@ -18,13 +18,13 @@ var i = a(255367),
     C = a(496675),
     g = a(259580),
     b = a(626135),
-    k = a(524329),
-    E = a(995532),
+    E = a(524329),
+    k = a(995532),
     Z = a(845606),
     f = a(981631),
     I = a(231338),
-    S = a(388032),
-    v = a(92884);
+    v = a(388032),
+    S = a(557401);
 let T = (e) => {
         var n;
         let { channelData: a, onClose: l, trackOptionClick: s } = e,
@@ -37,7 +37,7 @@ let T = (e) => {
             N = null != (n = (0, r.KS)(d)) ? n : t.VL1;
         return null != d && m
             ? (0, i.jsxs)(t.P3F, {
-                  className: v.optionContainer,
+                  className: S.optionContainer,
                   onClick: () => {
                       s(), l(), (0, j.XU)(d.guild_id, d.id);
                   },
@@ -48,15 +48,15 @@ let T = (e) => {
                                 animated: null != h && h.animated,
                                 emojiId: null == h ? void 0 : h.id,
                                 autoplay: !0,
-                                className: v.optionEmoji,
+                                className: S.optionEmoji,
                             })
-                          : (0, i.jsx)(N, { className: v.channelIcon }),
+                          : (0, i.jsx)(N, { className: S.channelIcon }),
                       (0, i.jsxs)("div", {
-                          className: v.optionTextContainer,
+                          className: S.optionTextContainer,
                           children: [
                               (0, i.jsx)(t.Text, {
                                   variant: "text-md/normal",
-                                  className: v.channelDescription,
+                                  className: S.channelDescription,
                                   children: a.description,
                               }),
                               (0, i.jsxs)(t.Text, {
@@ -64,7 +64,7 @@ let T = (e) => {
                                   color: "header-secondary",
                                   children: [
                                       (0, i.jsx)(N, {
-                                          className: v.channelTitleIcon,
+                                          className: S.channelTitleIcon,
                                           size: "xxs",
                                           color: "currentColor",
                                       }),
@@ -75,7 +75,7 @@ let T = (e) => {
                       }),
                       (0, i.jsx)(g.Z, {
                           direction: g.Z.Directions.RIGHT,
-                          className: v.optionArrow,
+                          className: S.optionArrow,
                       }),
                   ],
               })
@@ -89,20 +89,20 @@ let T = (e) => {
                 welcomeScreen: j,
                 fetching: x,
                 hasError: C,
-            } = (0, o.cj)([E.Z], () => ({
-                welcomeScreen: E.Z.get(r),
-                fetching: E.Z.isFetching(),
-                hasError: E.Z.hasError(),
+            } = (0, o.cj)([k.Z], () => ({
+                welcomeScreen: k.Z.get(r),
+                fetching: k.Z.isFetching(),
+                hasError: k.Z.hasError(),
             })),
             g = (0, m.Dt)();
         l.useEffect(() => {
-            null == j && (0, k.RM)(r);
+            null == j && (0, E.RM)(r);
         }, [r, j]),
             l.useEffect(() => {
                 !1 === x && !0 === C && null == j && a();
             }, [x, C, a, j]),
             l.useEffect(() => {
-                j === E.a && !1 === x && a();
+                j === k.a && !1 === x && a();
             }, [a, j, x]),
             l.useEffect(() => {
                 !0 !== u &&
@@ -138,26 +138,26 @@ let T = (e) => {
             : null == j
               ? (0, i.jsx)(t.Y0X, {
                     transitionState: c,
-                    className: v.main,
-                    "aria-label": S.intl.string(S.t.ZTNur6),
+                    className: S.main,
+                    "aria-label": v.intl.string(v.t.ZTNur6),
                     parentComponent: "WelcomeScreenModal",
                     children: (0, i.jsx)(t.$jN, { type: t.$jN.Type.SPINNING_CIRCLE }),
                 })
               : (0, i.jsxs)(t.Y0X, {
                     transitionState: c,
-                    className: v.main,
+                    className: S.main,
                     "aria-labelledby": g,
                     parentComponent: "WelcomeScreenModal",
                     children: [
                         (0, i.jsx)(t.olH, {
                             onClick: a,
-                            className: v.close,
+                            className: S.close,
                         }),
                         (0, i.jsx)(d.ZP, {
                             mask: d.ZP.Masks.SQUIRCLE,
                             width: 64,
                             height: 64,
-                            className: v.guildIcon,
+                            className: S.guildIcon,
                             children: (0, i.jsx)(h.Z, {
                                 size: h.Z.Sizes.LARGER,
                                 guild: _,
@@ -168,9 +168,9 @@ let T = (e) => {
                         }),
                         (0, i.jsx)(t.X6q, {
                             variant: "heading-xl/semibold",
-                            className: v.header,
+                            className: S.header,
                             id: g,
-                            children: S.intl.format(S.t["0aydCA"], {
+                            children: v.intl.format(v.t["0aydCA"], {
                                 guildName: _.name,
                                 guildNameHook: (e, n) =>
                                     (0, i.jsxs)(
@@ -179,12 +179,12 @@ let T = (e) => {
                                             children: [
                                                 (0, i.jsx)(p.Z, {
                                                     guild: _,
-                                                    className: v.headerGuildBadge,
-                                                    flowerStarClassName: v.flowerStar,
+                                                    className: S.headerGuildBadge,
+                                                    flowerStarClassName: S.flowerStar,
                                                     tooltipColor: t.ua7.Colors.PRIMARY,
                                                 }),
                                                 (0, i.jsx)("strong", {
-                                                    className: v.headerGuildName,
+                                                    className: S.headerGuildName,
                                                     children: e,
                                                 }),
                                             ],
@@ -197,16 +197,16 @@ let T = (e) => {
                             ? (0, i.jsx)(t.Text, {
                                   variant: "text-sm/normal",
                                   color: "header-secondary",
-                                  className: v.guildDescription,
+                                  className: S.guildDescription,
                                   children: j.description,
                               })
                             : null,
                         (0, i.jsx)(t.vwX, {
-                            className: v.choiceHeader,
-                            children: S.intl.string(S.t["haj5+v"]),
+                            className: S.choiceHeader,
+                            children: v.intl.string(v.t["haj5+v"]),
                         }),
                         (0, i.jsx)("div", {
-                            className: v.options,
+                            className: S.options,
                             children:
                                 null == (n = j.welcome_channels)
                                     ? void 0
@@ -224,10 +224,10 @@ let T = (e) => {
                         }),
                         (0, i.jsx)(s.zx, {
                             look: s.zx.Looks.LINK,
-                            color: v.skipColor,
-                            className: v.skip,
+                            color: S.skipColor,
+                            className: S.skip,
                             onClick: a,
-                            children: S.intl.string(S.t["jizr8/"]),
+                            children: v.intl.string(v.t["jizr8/"]),
                         }),
                     ],
                 });

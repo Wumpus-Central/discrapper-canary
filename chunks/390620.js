@@ -1,37 +1,37 @@
 n.d(t, { y: () => x });
-var r = n(255367);
+var l = n(255367);
 n(73800);
-var l = n(120356),
-    i = n.n(l),
+var r = n(120356),
+    i = n.n(r),
     a = n(442837),
     o = n(481060),
     s = n(596454),
     u = n(430824),
     c = n(70956),
     d = n(388032),
-    m = n(201133),
-    h = n(276441);
+    m = n(384490),
+    h = n(583140);
 let g = 6 * c.Z.Millis.SECOND;
 function f(e) {
     let { emoji: t, guildId: n } = e,
-        l = (0, a.e7)([u.Z], () => {
+        r = (0, a.e7)([u.Z], () => {
             var e;
             return null == (e = u.Z.getGuild(n)) ? void 0 : e.name;
         });
-    return (0, r.jsxs)("div", {
+    return (0, l.jsxs)("div", {
         className: i()(h.toast, m.toast),
         children: [
-            (0, r.jsx)(s.Z, {
+            (0, l.jsx)(s.Z, {
                 emojiId: t.id,
                 size: "default",
             }),
-            (0, r.jsx)(o.Text, {
+            (0, l.jsx)(o.Text, {
                 variant: "text-md/normal",
                 color: "text-tertiary",
                 children: d.intl.format(d.t.BaxFf3, {
                     emojiName: t.name,
                     emojiNameHook: (e, t) =>
-                        (0, r.jsx)(
+                        (0, l.jsx)(
                             o.Text,
                             {
                                 variant: "text-md/semibold",
@@ -41,9 +41,9 @@ function f(e) {
                             },
                             t,
                         ),
-                    guildName: l,
+                    guildName: r,
                     guildNameHook: (e, t) =>
-                        (0, r.jsx)(
+                        (0, l.jsx)(
                             o.Text,
                             {
                                 variant: "text-md/semibold",
@@ -63,7 +63,7 @@ function x(e) {
     (0, o.showToast)(
         (0, o.createToast)("", o.ToastType.CUSTOM, {
             position: o.ToastPosition.TOP,
-            component: (0, r.jsx)(f, {
+            component: (0, l.jsx)(f, {
                 emoji: t,
                 guildId: n,
             }),

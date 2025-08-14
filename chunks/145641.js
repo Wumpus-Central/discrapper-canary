@@ -7,7 +7,7 @@ var r = n(255367),
     s = n(481060),
     c = n(607070),
     u = n(617015),
-    d = n(271251);
+    d = n(983703);
 let p = function (e) {
     let { rows: t, renderRow: n, renderSection: p, footer: f } = e,
         h = (e) => {

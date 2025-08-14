@@ -37,8 +37,8 @@ var r,
     B = n(180529),
     M = n(703656),
     U = n(108427),
-    G = n(314897),
-    F = n(480294),
+    F = n(314897),
+    G = n(480294),
     z = n(896797),
     V = n(626135),
     H = n(585483),
@@ -53,8 +53,8 @@ var r,
     ee = n(701476),
     et = n(801461),
     en = n(388032),
-    er = n(499921),
-    ei = n(881488);
+    er = n(33724),
+    ei = n(197571);
 function el(e, t, n) {
     return (
         t in e
@@ -524,11 +524,17 @@ class eu extends (r = l.PureComponent) {
                         !L.Z.wasRegistrationSuggestionFetched(o) &&
                         (await w.Z.fetchSuggestionsRegistration(o));
             },
-            P =
+            P = (e) => {
+                this.setState({
+                    username: e.toLocaleLowerCase(),
+                    usernameClientError: 0 === e.length ? en.intl.string(en.t.EkokLy) : null,
+                });
+            },
+            R =
                 null != e
                     ? (0, i.jsx)(l.Fragment, { children: e() }, "custom-header")
                     : (0, i.jsx)(I.Dx, { children: en.intl.string(en.t.wC4TlZ) }, "title"),
-            R = (0, i.jsxs)(I.gO, {
+            D = (0, i.jsxs)(I.gO, {
                 className: ei.marginTop20,
                 children: [
                     (0, i.jsx)(I.II, {
@@ -591,12 +597,7 @@ class eu extends (r = l.PureComponent) {
                                 className: ei.marginBottom20,
                                 name: "username",
                                 value: r,
-                                onChange: (e) => {
-                                    this.setState({
-                                        username: e.toLocaleLowerCase(),
-                                        usernameClientError: 0 === e.length ? en.intl.string(en.t.EkokLy) : null,
-                                    });
-                                },
+                                onChange: P,
                                 error: null != f ? f : ec(E),
                                 autoComplete: "off",
                                 setRef: (e) => {
@@ -661,7 +662,7 @@ class eu extends (r = l.PureComponent) {
                   tag: "form",
                   className: s()(y, er.horizontalAuthBox),
                   children: () => [
-                      P,
+                      R,
                       (0, i.jsxs)(
                           "div",
                           {
@@ -671,7 +672,7 @@ class eu extends (r = l.PureComponent) {
                                       className: er.createAccountTemplateHeader,
                                       children: en.intl.string(en.t.wC4TlZ),
                                   }),
-                                  R,
+                                  D,
                               ],
                           },
                           "register-title",
@@ -705,8 +706,8 @@ class eu extends (r = l.PureComponent) {
                                 }),
                             })
                           : null,
-                      P,
                       R,
+                      D,
                   ],
               });
     }
@@ -800,16 +801,17 @@ class eu extends (r = l.PureComponent) {
             }),
             el(this, "renderUsernameValidation", () => {
                 let { username: e, globalName: t, usernameFocused: n } = this.state,
-                    { usernameSuggestion: r } = this.props;
+                    { usernameSuggestion: r } = this.props,
+                    l = () => {
+                        null != this.usernameRef && this.usernameRef.focus(),
+                            null != r && r.length > 0 && this.setState({ username: r });
+                    };
                 return (0, i.jsx)(eh, {
                     username: e,
                     suggestion: r,
                     globalName: t,
                     isUsernameFocused: n,
-                    onClickSuggestion: () => {
-                        null != this.usernameRef && this.usernameRef.focus(),
-                            null != r && r.length > 0 && this.setState({ username: r });
-                    },
+                    onClickSuggestion: l,
                 });
             });
         let n = null != e.location ? (0, a.parse)(e.location.search) : {};
@@ -835,9 +837,9 @@ class eu extends (r = l.PureComponent) {
     }
 }
 function ed(e) {
-    let t = (0, d.cj)([F.Z, G.default, g.Z, R.Z, Z.Z], () => ({
-            consentRequired: F.Z.getAuthenticationConsentRequired(),
-            authenticated: G.default.isAuthenticated(),
+    let t = (0, d.cj)([G.Z, F.default, g.Z, R.Z, Z.Z], () => ({
+            consentRequired: G.Z.getAuthenticationConsentRequired(),
+            authenticated: F.default.isAuthenticated(),
             isUnderage: g.Z.isUnderageAnonymous(),
             country: R.Z.getCountryCode(),
             hasLoggedInAccounts: Z.Z.getHasLoggedInAccounts(),

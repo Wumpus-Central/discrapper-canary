@@ -67,7 +67,7 @@ var r = n(255367),
     eg = n(981631),
     ef = n(124368),
     ex = n(388032),
-    ep = n(105603);
+    ep = n(816922);
 function eb(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -566,8 +566,8 @@ function eN(e) {
             getItemKey: e8,
             renderGridSection: e9,
             renderGridItem: e4,
-            getGridSectionHeight: e5,
-            getSectionProps: e2,
+            getGridSectionHeight: e2,
+            getSectionProps: e5,
             handleGridFocus: e7,
         } = (function (e) {
             let {
@@ -840,11 +840,11 @@ function eN(e) {
                                               columns: ek,
                                               sections: eB,
                                               getItemKey: e8,
-                                              getSectionHeight: e5,
+                                              getSectionHeight: e2,
                                               getItemHeight: eO,
                                               renderSection: e9,
                                               renderItem: e4,
-                                              getSectionProps: e2,
+                                              getSectionProps: e5,
                                               onScroll: j ? te : void 0,
                                               chunkSize: 350,
                                           },
@@ -1035,22 +1035,7 @@ function eZ(e) {
         if (!e) return F(0);
         null != eI.current && F(e ? eI.current.clientHeight : 0);
     }, [F, eR, eZ, eI]);
-    let eA = (e) => {
-            (0, $.e7)({
-                guildId: s.guild_id,
-                channelId: s.id,
-                tagId: e,
-                filterTagIds: Array.from(D),
-                added: !D.has(e),
-                location: {
-                    page: eg.ZY5.GUILD_CHANNEL,
-                    section: eg.jXE.FORUM_CHANNEL_HEADER,
-                    object: eg.qAy.CHANNEL_TAG,
-                },
-            }),
-                X.getState().toggleTagFilter(s.id, e);
-        },
-        eL = (0, u.ZP)({
+    let eA = (0, u.ZP)({
             id: "".concat(s.id, "-tags-navigator"),
             isEnabled: !0,
             wrap: !0,
@@ -1058,11 +1043,11 @@ function eZ(e) {
             scrollToEnd: eM,
             orientation: m.hy.HORIZONTAL,
         }),
-        eF = (0, d.JA)("forum-channel-header"),
-        { role: eD, onFocus: ez } = eF,
-        eH = ev(eF, ["role", "onFocus"]),
-        eB = i.useRef(null),
-        eU = (function () {
+        eL = (0, d.JA)("forum-channel-header"),
+        { role: eF, onFocus: eD } = eL,
+        ez = ev(eL, ["role", "onFocus"]),
+        eH = i.useRef(null),
+        eB = (function () {
             let e = i.useRef(!1),
                 t = (0, g.e7)([v.Z], () => v.Z.keyboardModeEnabled),
                 n = i.useCallback(
@@ -1082,16 +1067,16 @@ function eZ(e) {
                 e
             );
         })(),
-        eV = i.useCallback(
+        eU = i.useCallback(
             (e) => {
-                if ((ez(), e.target === eh.current && !eU.current)) {
+                if ((eD(), e.target === eh.current && !eB.current)) {
                     var t;
-                    null == (t = eB.current) || t.focus();
+                    null == (t = eH.current) || t.focus();
                 }
             },
-            [ez, eh, eU],
+            [eD, eh, eB],
         ),
-        eG = i.useMemo(() => (ec ? (0, N.iq)(s.availableTags) : s.availableTags), [s.availableTags, ec]);
+        eV = i.useMemo(() => (ec ? (0, N.iq)(s.availableTags) : s.availableTags), [s.availableTags, ec]);
     return (0, r.jsx)(
         "div",
         ej(
@@ -1099,9 +1084,9 @@ function eZ(e) {
                 {
                     className: l()(ep.card, ep.headerRow, ep.columnsSpan),
                     ref: eh,
-                    onFocus: eV,
+                    onFocus: eU,
                 },
-                eH,
+                ez,
             ),
             {
                 style: ej(eb({}, S), {
@@ -1125,7 +1110,7 @@ function eZ(e) {
                                 isSearchLoading: C,
                                 numResults: w,
                                 canCreatePost: eu,
-                                inputRef: eB,
+                                inputRef: eH,
                             }),
                         }),
                         (eR || eZ) &&
@@ -1223,7 +1208,7 @@ function eZ(e) {
                             ref: eO,
                             children: [
                                 (0, r.jsx)(ek, { channel: s }),
-                                eG.length > 0
+                                eV.length > 0
                                     ? (0, r.jsxs)(r.Fragment, {
                                           children: [
                                               (0, r.jsx)("div", { className: ep.divider }),
@@ -1231,7 +1216,7 @@ function eZ(e) {
                                                   className: ep.tagList,
                                                   ref: ew,
                                                   children: (0, r.jsx)(d.bG, {
-                                                      navigator: eL,
+                                                      navigator: eA,
                                                       children: (0, r.jsx)(d.SJ, {
                                                           children: (e) => {
                                                               var { ref: t } = e,
@@ -1247,12 +1232,38 @@ function eZ(e) {
                                                                           n,
                                                                       ),
                                                                       {
-                                                                          children: eG.map((e) =>
+                                                                          children: eV.map((e) =>
                                                                               (0, r.jsx)(
                                                                                   eo.Z,
                                                                                   {
                                                                                       tag: e,
-                                                                                      onClick: () => eA(e.id),
+                                                                                      onClick: () => {
+                                                                                          var t;
+                                                                                          return (
+                                                                                              (t = e.id),
+                                                                                              void ((0, $.e7)({
+                                                                                                  guildId: s.guild_id,
+                                                                                                  channelId: s.id,
+                                                                                                  tagId: t,
+                                                                                                  filterTagIds:
+                                                                                                      Array.from(D),
+                                                                                                  added: !D.has(t),
+                                                                                                  location: {
+                                                                                                      page: eg.ZY5
+                                                                                                          .GUILD_CHANNEL,
+                                                                                                      section:
+                                                                                                          eg.jXE
+                                                                                                              .FORUM_CHANNEL_HEADER,
+                                                                                                      object: eg.qAy
+                                                                                                          .CHANNEL_TAG,
+                                                                                                  },
+                                                                                              }),
+                                                                                              X.getState().toggleTagFilter(
+                                                                                                  s.id,
+                                                                                                  t,
+                                                                                              ))
+                                                                                          );
+                                                                                      },
                                                                                       selected: D.has(e.id),
                                                                                   },
                                                                                   e.id,

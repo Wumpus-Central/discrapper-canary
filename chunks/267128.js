@@ -31,8 +31,8 @@ var r = n(255367),
     C = n(217702),
     R = n(981631),
     P = n(388032),
-    w = n(966661),
-    D = n(692228);
+    w = n(724913),
+    D = n(430864);
 function L(e) {
     let { width: t = 12, height: n = 8, color: i = "currentColor", className: o, foreground: a } = e;
     return (0, r.jsx)("svg", {
@@ -81,7 +81,7 @@ function M(e, t, n, i, o, s) {
         ref: s,
     });
 }
-function j(e, t, n) {
+function k(e, t, n) {
     let {
             referencedMessage: o,
             channel: a,
@@ -143,7 +143,7 @@ function j(e, t, n) {
               children: y(),
           });
 }
-function k(e, t) {
+function j(e, t) {
     let {
             baseMessage: n,
             channel: i,
@@ -359,8 +359,8 @@ function B(e) {
         [m, g] = i.useState(!1),
         b = i.useMemo(() => (null != d && u.state === E.Y.LOADED ? (e) => d(e, u.message) : void 0), [u, d]),
         y = i.useCallback(() => g((e) => !e), []),
-        O = j(e, b, s.type),
-        I = k(e, b),
+        O = k(e, b, s.type),
+        I = j(e, b),
         S = U(e, m, y),
         A = i.useMemo(() => (e.compact ? (0, N.Z)((0, v.vc)(l()(), "LT")) : null), [e.compact]);
     null != n &&

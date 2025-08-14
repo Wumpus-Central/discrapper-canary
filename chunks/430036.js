@@ -52,7 +52,7 @@ var i = n(255367),
     $ = n(981631),
     ee = n(959517),
     et = n(388032),
-    en = n(893157);
+    en = n(442010);
 function ei(e, t, n) {
     return (
         t in e
@@ -320,9 +320,8 @@ class ec extends r.PureComponent {
         (0, X.m3)(this.props, this.shouldDisplay());
     }
     getOpacity() {
-        let e,
-            { locked: t, activated: n, opacity: i, isPreviewingInGame: r } = this.props;
-        return (t && !n) || r ? i / 100 : n || !t ? Math.min(1, (i + 25) / 100) : Q.wB;
+        let { locked: e, activated: t, opacity: n, isPreviewingInGame: i } = this.props;
+        return (e && !t) || i ? n / 100 : t || !e ? Math.min(1, (n + 25) / 100) : Q.wB;
     }
     renderContent() {
         let e,
@@ -530,7 +529,7 @@ class ec extends r.PureComponent {
                             n.e("98783"),
                             n.e("57789"),
                             n.e("56826"),
-                            n.e("39544"),
+                            n.e("69497"),
                         ]).then(n.bind(n, 131404));
                         return (n) =>
                             (0, i.jsx)(

@@ -1,5 +1,3 @@
-e.exports = {
-    soundRow: "soundRow__98c14",
-    soundIcon: "soundIcon__98c14",
-    icon: "icon__98c14",
-};
+a.exports = JSON.parse(
+    '{"rdfRys":["Burada ",[8,"$code",["const static codeSpan = 2;"]]," var."],"HMvECw":"Tüm bunlar yerel olarak yönetiliyor ve henüz küresel i18n sisteminin yerine geçmedi.","JJ0wpK":"Bu sayfa mesajları görüntülemek için yeni uluslararası sistemi kullanıyor","XOdbAw":["Özel içerikler için ",[8,"usernameHook",[[1,"username"]]]," gibi kancaları kullan."],"Q+eyqq":[[6,"count",{"one":[[7]," şey"],"other":[[1,"count"]," şey"]},0,"cardinal"]],"rmps8/":["Bu satır, url\'nin tanımlandığı bir ",[8,"$link",["sabit bağlantı"],["https://discord.com"]]," içerir."],"uczI4u":["Bu bağlantı, çalışma zamanında sağlanan ",[8,"$link",["değişken bağlantı"],[[1,"linkTarget"]]]," kullanıyor."],"swfLzc":"Bu mesaj ayrı bir dosyadan geliyor"}',
+);

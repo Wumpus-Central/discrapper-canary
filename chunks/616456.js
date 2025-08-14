@@ -1,7 +1,7 @@
 let r, _, n, o, i, c;
 a.d(e, {
-    G: () => aH,
-    T: () => ax,
+    G: () => aY,
+    T: () => ak,
 });
 var E,
     s,
@@ -223,10 +223,8 @@ function tT(t, e) {
             c = a || _ || "";
         if (!i) return t;
         if (tN.test(i) || tA.test(i) || tf.test(i)) return `url(${c}${i}${c})`;
-        if ("/" === i[0]) {
-            let t;
+        if ("/" === i[0])
             return `url(${c}${(e.indexOf("//") > -1 ? e.split("/").slice(0, 3).join("/") : e.split("/")[0]).split("?")[0] + i}${c})`;
-        }
         let E = e.split("/"),
             s = i.split("/");
         for (let t of (E.pop(), s))
@@ -1959,63 +1957,63 @@ function el(t, e = {}) {
             if (!1 === o.mouseInteraction) return () => {};
             let i = !0 === o.mouseInteraction || void 0 === o.mouseInteraction ? {} : o.mouseInteraction,
                 c = [],
-                E = null,
-                s = (e) => (o) => {
-                    let i = er(o);
-                    if (tk(i, r, _, n, !0)) return;
-                    let c = null,
-                        s = e;
-                    if ("pointerType" in o) {
-                        switch (o.pointerType) {
-                            case "mouse":
-                                c = t3.Mouse;
-                                break;
-                            case "touch":
-                                c = t3.Touch;
-                                break;
-                            case "pen":
-                                c = t3.Pen;
-                        }
-                        c === t3.Touch
-                            ? t2[e] === t2.MouseDown
-                                ? (s = "TouchStart")
-                                : t2[e] === t2.MouseUp && (s = "TouchEnd")
-                            : t3.Pen;
-                    } else tF(o) && (c = t3.Touch);
-                    null !== c
-                        ? ((E = c),
-                          ((s.startsWith("Touch") && c === t3.Touch) || (s.startsWith("Mouse") && c === t3.Mouse)) &&
-                              (c = null))
-                        : t2[e] === t2.Click && ((c = E), (E = null));
-                    let l = tF(o) ? o.changedTouches[0] : o;
-                    if (!l) return;
-                    let u = a.getId(i),
-                        { clientX: I, clientY: R } = l;
-                    et(t)({
-                        type: t2[s],
-                        id: u,
-                        x: I,
-                        y: R,
-                        ...(null !== c && { pointerType: c }),
-                    });
-                };
+                E = null;
             return (
                 Object.keys(t2)
                     .filter((t) => Number.isNaN(Number(t)) && !t.endsWith("_Departed") && !1 !== i[t])
-                    .forEach((t) => {
-                        let a = ta(t),
-                            r = s(t);
+                    .forEach((o) => {
+                        let i = ta(o),
+                            s = (e) => {
+                                let i = er(e);
+                                if (tk(i, r, _, n, !0)) return;
+                                let c = null,
+                                    s = o;
+                                if ("pointerType" in e) {
+                                    switch (e.pointerType) {
+                                        case "mouse":
+                                            c = t3.Mouse;
+                                            break;
+                                        case "touch":
+                                            c = t3.Touch;
+                                            break;
+                                        case "pen":
+                                            c = t3.Pen;
+                                    }
+                                    c === t3.Touch
+                                        ? t2[o] === t2.MouseDown
+                                            ? (s = "TouchStart")
+                                            : t2[o] === t2.MouseUp && (s = "TouchEnd")
+                                        : t3.Pen;
+                                } else tF(e) && (c = t3.Touch);
+                                null !== c
+                                    ? ((E = c),
+                                      ((s.startsWith("Touch") && c === t3.Touch) ||
+                                          (s.startsWith("Mouse") && c === t3.Mouse)) &&
+                                          (c = null))
+                                    : t2[o] === t2.Click && ((c = E), (E = null));
+                                let l = tF(e) ? e.changedTouches[0] : e;
+                                if (!l) return;
+                                let u = a.getId(i),
+                                    { clientX: I, clientY: R } = l;
+                                et(t)({
+                                    type: t2[s],
+                                    id: u,
+                                    x: I,
+                                    y: R,
+                                    ...(null !== c && { pointerType: c }),
+                                });
+                            };
                         if (window.PointerEvent)
-                            switch (t2[t]) {
+                            switch (t2[o]) {
                                 case t2.MouseDown:
                                 case t2.MouseUp:
-                                    a = a.replace("mouse", "pointer");
+                                    i = i.replace("mouse", "pointer");
                                     break;
                                 case t2.TouchStart:
                                 case t2.TouchEnd:
                                     return;
                             }
-                        c.push(tU(a, r, e));
+                        c.push(tU(i, s, e));
                     }),
                 et(() => {
                     c.forEach((t) => t());
@@ -3809,57 +3807,20 @@ function eG(t) {
     (R[(R.CDATA = 4)] = "CDATA"),
     (R[(R.Comment = 5)] = "Comment");
 let eW = new Set([
-        "id",
-        "class",
-        "aria-label",
-        "role",
-        "name",
-        "alt",
-        "title",
-        "data-test-id",
-        "data-testid",
-        "disabled",
-        "aria-disabled",
-        "data-sentry-component",
-    ]),
-    ew = (t) => (e) => {
-        var a, r;
-        if (!t.isEnabled()) return;
-        let _ = (function (t) {
-            let { target: e, message: a } = (function (t) {
-                let e,
-                    a = "click" === t.name,
-                    r = null;
-                try {
-                    (r = a ? ev(t.event) : ey(t.event)), (e = (0, y.Rt)(r, { maxStringLength: 200 }) || "<unknown>");
-                } catch (t) {
-                    e = "<unknown>";
-                }
-                return {
-                    target: r,
-                    message: e,
-                };
-            })(t);
-            return eG({
-                category: `ui.${t.name}`,
-                ...eM(e, a),
-            });
-        })(e);
-        if (!_) return;
-        let n = "click" === e.name,
-            o = n ? e.event : void 0;
-        n &&
-            t.clickDetector &&
-            o &&
-            o.target &&
-            !o.altKey &&
-            !o.metaKey &&
-            !o.ctrlKey &&
-            !o.shiftKey &&
-            ((a = t.clickDetector), (r = ev(e.event)), a.handleClick(_, r)),
-            eC(t, _);
-    };
-function eM(t, e) {
+    "id",
+    "class",
+    "aria-label",
+    "role",
+    "name",
+    "alt",
+    "title",
+    "data-test-id",
+    "data-testid",
+    "disabled",
+    "aria-disabled",
+    "data-sentry-component",
+]);
+function ew(t, e) {
     let a = eP.mirror.getId(t),
         r = a && eP.mirror.getNode(a),
         _ = r && eP.mirror.getMeta(r),
@@ -3894,7 +3855,7 @@ function eM(t, e) {
             : {},
     };
 }
-let eB = {
+let eM = {
     resource: function (t) {
         let {
             entryType: e,
@@ -3911,8 +3872,8 @@ let eB = {
             ? null
             : {
                   type: `${e}.${a}`,
-                  start: eK(n),
-                  end: eK(_),
+                  start: eH(n),
+                  end: eH(_),
                   name: r,
                   data: {
                       size: E,
@@ -3924,7 +3885,7 @@ let eB = {
     },
     paint: function (t) {
         let { duration: e, entryType: a, name: r, startTime: _ } = t,
-            n = eK(_);
+            n = eH(_);
         return {
             type: a,
             name: r,
@@ -3955,8 +3916,8 @@ let eB = {
             ? null
             : {
                   type: `${e}.${d}`,
-                  start: eK(I),
-                  end: eK(n),
+                  start: eH(I),
+                  end: eH(n),
                   name: a,
                   data: {
                       size: R,
@@ -3974,38 +3935,38 @@ let eB = {
               };
     },
 };
-function eY(t, e) {
+function eB(t, e) {
     return ({ metric: a }) => void e.replayPerformanceEntries.push(t(a));
 }
-function eH(t) {
-    let e = eB[t.entryType];
+function eY(t) {
+    let e = eM[t.entryType];
     return e ? e(t) : null;
 }
-function eK(t) {
+function eH(t) {
     return ((S.Z1 || F.performance.timeOrigin) + t) / 1000;
 }
-function ek(t) {
+function eK(t) {
     let e = t.entries[t.entries.length - 1];
-    return ej(t, "largest-contentful-paint", e && e.element ? [e.element] : void 0);
+    return eV(t, "largest-contentful-paint", e && e.element ? [e.element] : void 0);
 }
-function ex(t) {
+function ek(t) {
     let e = t.entries[t.entries.length - 1],
         a = [];
     if (e && e.sources) for (let t of e.sources) t.node && a.push(t.node);
-    return ej(t, "cumulative-layout-shift", a);
+    return eV(t, "cumulative-layout-shift", a);
+}
+function ex(t) {
+    let e = t.entries[t.entries.length - 1];
+    return eV(t, "first-input-delay", e && e.target ? [e.target] : void 0);
 }
 function eF(t) {
     let e = t.entries[t.entries.length - 1];
-    return ej(t, "first-input-delay", e && e.target ? [e.target] : void 0);
+    return eV(t, "interaction-to-next-paint", e && e.target ? [e.target] : void 0);
 }
-function eV(t) {
-    let e = t.entries[t.entries.length - 1];
-    return ej(t, "interaction-to-next-paint", e && e.target ? [e.target] : void 0);
-}
-function ej(t, e, a) {
+function eV(t, e, a) {
     let r = t.value,
         _ = t.rating,
-        n = eK(r);
+        n = eH(r);
     return {
         type: "web-vital",
         name: e,
@@ -4019,19 +3980,19 @@ function ej(t, e, a) {
         },
     };
 }
-let eX = "undefined" == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__;
-function e$(t, e) {
-    eX && (U.kg.info(t), e && ez(t));
+let ej = "undefined" == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__;
+function eX(t, e) {
+    ej && (U.kg.info(t), e && eq(t));
 }
-function eq(t, e) {
-    eX &&
+function e$(t, e) {
+    ej &&
         (U.kg.info(t),
         e &&
             (0, Y.iK)(() => {
-                ez(t);
+                eq(t);
             }, 0));
 }
-function ez(t) {
+function eq(t) {
     (0, T.n)(
         {
             category: "console",
@@ -4042,12 +4003,12 @@ function ez(t) {
         { level: "info" },
     );
 }
-class eJ extends Error {
+class ez extends Error {
     constructor() {
         super("Event buffer exceeded maximum size of 20000000.");
     }
 }
-class eZ {
+class eJ {
     constructor() {
         (this.events = []), (this._totalSize = 0), (this.hasCheckout = !1);
     }
@@ -4062,7 +4023,7 @@ class eZ {
     }
     async addEvent(t) {
         let e = JSON.stringify(t).length;
-        if (((this._totalSize += e), this._totalSize > 20000000)) throw new eJ();
+        if (((this._totalSize += e), this._totalSize > 20000000)) throw new ez();
         this.events.push(t);
     }
     finish() {
@@ -4079,7 +4040,7 @@ class eZ {
         return t ? eg(t) : null;
     }
 }
-class eQ {
+class eZ {
     constructor(t) {
         (this._worker = t), (this._id = 0);
     }
@@ -4106,7 +4067,7 @@ class eQ {
         );
     }
     destroy() {
-        e$("[Replay] Destroying compression worker"), this._worker.terminate();
+        eX("[Replay] Destroying compression worker"), this._worker.terminate();
     }
     postMessage(t, e) {
         let a = this._getAndIncrementId();
@@ -4114,7 +4075,7 @@ class eQ {
             let n = ({ data: e }) => {
                 if (e.method === t && e.id === a) {
                     if ((this._worker.removeEventListener("message", n), !e.success)) {
-                        eX && U.kg.error("[Replay]", e.response), _(Error("Error in compression worker"));
+                        ej && U.kg.error("[Replay]", e.response), _(Error("Error in compression worker"));
                         return;
                     }
                     r(e.response);
@@ -4132,9 +4093,9 @@ class eQ {
         return this._id++;
     }
 }
-class e0 {
+class eQ {
     constructor(t) {
-        (this._worker = new eQ(t)), (this._earliestTimestamp = null), (this._totalSize = 0), (this.hasCheckout = !1);
+        (this._worker = new eZ(t)), (this._earliestTimestamp = null), (this._totalSize = 0), (this.hasCheckout = !1);
     }
     get hasEvents() {
         return !!this._earliestTimestamp;
@@ -4153,7 +4114,7 @@ class e0 {
         (!this._earliestTimestamp || e < this._earliestTimestamp) && (this._earliestTimestamp = e);
         let a = JSON.stringify(t);
         return ((this._totalSize += a.length), this._totalSize > 20000000)
-            ? Promise.reject(new eJ())
+            ? Promise.reject(new ez())
             : this._sendEventToWorker(a);
     }
     finish() {
@@ -4164,7 +4125,7 @@ class e0 {
             (this._totalSize = 0),
             (this.hasCheckout = !1),
             this._worker.postMessage("clear").then(null, (t) => {
-                eX && U.kg.warn('[Replay] Sending "clear" message to worker failed', t);
+                ej && U.kg.warn('[Replay] Sending "clear" message to worker failed', t);
             });
     }
     getEarliestTimestamp() {
@@ -4178,10 +4139,10 @@ class e0 {
         return (this._earliestTimestamp = null), (this._totalSize = 0), t;
     }
 }
-class e1 {
+class e0 {
     constructor(t) {
-        (this._fallback = new eZ()),
-            (this._compression = new e0(t)),
+        (this._fallback = new eJ()),
+            (this._compression = new eQ(t)),
             (this._used = this._fallback),
             (this._ensureWorkerIsLoadedPromise = this._ensureWorkerIsLoaded());
     }
@@ -4219,7 +4180,7 @@ class e1 {
         try {
             await this._compression.ensureReady();
         } catch (t) {
-            e$("[Replay] Failed to load the compression worker, falling back to simple buffer");
+            eX("[Replay] Failed to load the compression worker, falling back to simple buffer");
             return;
         }
         await this._switchToCompressionWorker();
@@ -4232,21 +4193,21 @@ class e1 {
         try {
             await Promise.all(a);
         } catch (t) {
-            eX && U.kg.warn("[Replay] Failed to add events when switching buffers.", t);
+            ej && U.kg.warn("[Replay] Failed to add events when switching buffers.", t);
         }
     }
 }
-function e2() {
+function e1() {
     try {
         return "sessionStorage" in F && !!F.sessionStorage;
     } catch (t) {
         return !1;
     }
 }
-function e3(t) {
+function e2(t) {
     return void 0 !== t && Math.random() < t;
 }
-function e6(t) {
+function e3(t) {
     let e = Date.now(),
         a = t.id || (0, b.DM)(),
         r = t.started || e,
@@ -4261,62 +4222,62 @@ function e6(t) {
         previousSessionId: t.previousSessionId,
     };
 }
-function e4(t) {
-    if (e2())
+function e6(t) {
+    if (e1())
         try {
             F.sessionStorage.setItem(V, JSON.stringify(t));
         } catch (t) {}
 }
-function e5({ sessionSampleRate: t, allowBuffering: e, stickySession: a = !1 }, { previousSessionId: r } = {}) {
-    let _ = e6({
-        sampled: e3(t) ? "session" : !!e && "buffer",
+function e4({ sessionSampleRate: t, allowBuffering: e, stickySession: a = !1 }, { previousSessionId: r } = {}) {
+    let _ = e3({
+        sampled: e2(t) ? "session" : !!e && "buffer",
         previousSessionId: r,
     });
-    return a && e4(_), _;
+    return a && e6(_), _;
 }
-function e8(t, e, a = +new Date()) {
+function e5(t, e, a = +new Date()) {
     return null === t || void 0 === e || e < 0 || (0 !== e && t + e <= a);
 }
-function e7(t, { maxReplayDuration: e, sessionIdleExpire: a, targetTime: r = Date.now() }) {
-    return e8(t.started, e, r) || e8(t.lastActivity, a, r);
+function e8(t, { maxReplayDuration: e, sessionIdleExpire: a, targetTime: r = Date.now() }) {
+    return e5(t.started, e, r) || e5(t.lastActivity, a, r);
 }
-function e9(t, { sessionIdleExpire: e, maxReplayDuration: a }) {
+function e7(t, { sessionIdleExpire: e, maxReplayDuration: a }) {
     return (
-        !!e7(t, {
+        !!e8(t, {
             sessionIdleExpire: e,
             maxReplayDuration: a,
         }) &&
         ("buffer" !== t.sampled || 0 !== t.segmentId)
     );
 }
-function at({ traceInternals: t, sessionIdleExpire: e, maxReplayDuration: a, previousSessionId: r }, _) {
+function e9({ traceInternals: t, sessionIdleExpire: e, maxReplayDuration: a, previousSessionId: r }, _) {
     let n =
         _.stickySession &&
         (function (t) {
-            if (!e2()) return null;
+            if (!e1()) return null;
             try {
                 let e = F.sessionStorage.getItem(V);
                 if (!e) return null;
                 let a = JSON.parse(e);
-                return eq("[Replay] Loading existing session", t), e6(a);
+                return e$("[Replay] Loading existing session", t), e3(a);
             } catch (t) {
                 return null;
             }
         })(t);
     return n
-        ? e9(n, {
+        ? e7(n, {
               sessionIdleExpire: e,
               maxReplayDuration: a,
           })
-            ? (eq("[Replay] Session in sessionStorage is expired, creating new one..."),
-              e5(_, { previousSessionId: n.id }))
+            ? (e$("[Replay] Session in sessionStorage is expired, creating new one..."),
+              e4(_, { previousSessionId: n.id }))
             : n
-        : (eq("[Replay] Creating new session", t), e5(_, { previousSessionId: r }));
+        : (e$("[Replay] Creating new session", t), e4(_, { previousSessionId: r }));
 }
-function ae(t, e, a) {
-    return !!ar(t, e) && (aa(t, e, a), !0);
+function at(t, e, a) {
+    return !!aa(t, e) && (ae(t, e, a), !0);
 }
-async function aa(t, e, a) {
+async function ae(t, e, a) {
     if (!t.eventBuffer) return null;
     try {
         a && "buffer" === t.recordingMode && t.eventBuffer.clear(), a && (t.eventBuffer.hasCheckout = !0);
@@ -4326,7 +4287,7 @@ async function aa(t, e, a) {
                     if ("function" == typeof e && t.type === t0.Custom) return e(t);
                 } catch (t) {
                     return (
-                        eX &&
+                        ej &&
                             U.kg.error(
                                 "[Replay] An error occured in the `beforeAddRecordingEvent` callback, skipping the event...",
                                 t,
@@ -4339,35 +4300,35 @@ async function aa(t, e, a) {
         if (!_) return;
         return await t.eventBuffer.addEvent(_);
     } catch (r) {
-        let e = r && r instanceof eJ ? "addEventSizeExceeded" : "addEvent";
+        let e = r && r instanceof ez ? "addEventSizeExceeded" : "addEvent";
         t.handleException(r), await t.stop({ reason: e });
         let a = (0, p.s3)();
         a && a.recordDroppedEvent("internal_sdk_error", "replay");
     }
 }
-function ar(t, e) {
+function aa(t, e) {
     if (!t.eventBuffer || t.isPaused() || !t.isEnabled()) return !1;
     let a = eg(e.timestamp);
     return (
         !(a + t.timeouts.sessionIdlePause < Date.now()) &&
         (!(a > t.getContext().initialTimestamp + t.getOptions().maxReplayDuration) ||
-            (eq(
+            (e$(
                 `[Replay] Skipping event with timestamp ${a} because it is after maxReplayDuration`,
                 t.getOptions()._experiments.traceInternals,
             ),
             !1))
     );
 }
-function a_(t) {
+function ar(t) {
     return "transaction" === t.type;
 }
-function an(t) {
+function a_(t) {
     return "feedback" === t.type;
 }
-function ao(t) {
+function an(t) {
     return !!t.category;
 }
-function ai(t, e) {
+function ao(t, e) {
     return e.map(({ type: e, start: a, end: r, name: _, data: n }) => {
         let o = t.throttledAddEvent({
             type: t0.Custom,
@@ -4386,45 +4347,45 @@ function ai(t, e) {
         return "string" == typeof o ? Promise.resolve(null) : o;
     });
 }
-function ac(t, e) {
+function ai(t, e) {
     var a;
     t.isEnabled() &&
         null !== e &&
         ((a = e.name),
-        ((!eX || !t.getOptions()._experiments.traceInternals) && (0, L.W)(a, (0, p.s3)())) ||
-            t.addUpdate(() => (ai(t, [e]), !0)));
+        ((!ej || !t.getOptions()._experiments.traceInternals) && (0, L.W)(a, (0, p.s3)())) ||
+            t.addUpdate(() => (ao(t, [e]), !0)));
 }
-function aE(t) {
+function ac(t) {
     if (!t) return;
     let e = new TextEncoder();
     try {
         if ("string" == typeof t) return e.encode(t).length;
         if (t instanceof URLSearchParams) return e.encode(t.toString()).length;
         if (t instanceof FormData) {
-            let a = aA(t);
+            let a = aN(t);
             return e.encode(a).length;
         }
         if (t instanceof Blob) return t.size;
         if (t instanceof ArrayBuffer) return t.byteLength;
     } catch (t) {}
 }
-function as(t) {
+function aE(t) {
     if (!t) return;
     let e = parseInt(t, 10);
     return isNaN(e) ? void 0 : e;
 }
-function al(t) {
+function as(t) {
     try {
         if ("string" == typeof t) return [t];
         if (t instanceof URLSearchParams) return [t.toString()];
-        if (t instanceof FormData) return [aA(t)];
+        if (t instanceof FormData) return [aN(t)];
         if (!t) return [void 0];
     } catch (e) {
-        return eX && U.kg.warn("[Replay] Failed to serialize body", t), [void 0, "BODY_PARSE_ERROR"];
+        return ej && U.kg.warn("[Replay] Failed to serialize body", t), [void 0, "BODY_PARSE_ERROR"];
     }
-    return eX && U.kg.info("[Replay] Skipping network body because of body type", t), [void 0, "UNPARSEABLE_BODY_TYPE"];
+    return ej && U.kg.info("[Replay] Skipping network body because of body type", t), [void 0, "UNPARSEABLE_BODY_TYPE"];
 }
-function au(t, e) {
+function al(t, e) {
     if (!t)
         return {
             headers: {},
@@ -4435,7 +4396,7 @@ function au(t, e) {
         r = a.warnings || [];
     return (a.warnings = [...r, e]), (t._meta = a), t;
 }
-function aI(t, e) {
+function au(t, e) {
     if (!e) return null;
     let { startTimestamp: a, endTimestamp: r, url: _, method: n, statusCode: o, request: i, response: c } = e;
     return {
@@ -4451,14 +4412,14 @@ function aI(t, e) {
         }),
     };
 }
-function aR(t) {
+function aI(t) {
     return {
         headers: {},
         size: t,
         _meta: { warnings: ["URL_SKIPPED"] },
     };
 }
-function ad(t, e, a) {
+function aR(t, e, a) {
     if (!e && 0 === Object.keys(t).length) return;
     if (!e) return { headers: t };
     if (!a)
@@ -4498,16 +4459,16 @@ function ad(t, e, a) {
         })(a);
     return (r.body = _), n && n.length > 0 && (r._meta = { warnings: n }), r;
 }
-function aN(t, e) {
+function ad(t, e) {
     return Object.entries(t).reduce((a, [r, _]) => {
         let n = r.toLowerCase();
         return e.includes(n) && t[r] && (a[n] = _), a;
     }, {});
 }
-function aA(t) {
+function aN(t) {
     return new URLSearchParams(t).toString();
 }
-function af(t, e) {
+function aA(t, e) {
     let a = (function (t, e = F.document.baseURI) {
         if (t.startsWith("http://") || t.startsWith("https://") || t.startsWith(F.location.origin)) return t;
         let a = new URL(t, e);
@@ -4517,20 +4478,20 @@ function af(t, e) {
     })(t);
     return (0, G.U0)(a, e);
 }
-async function aT(t, e, a) {
+async function af(t, e, a) {
     try {
-        let r = await ap(t, e, a),
-            _ = aI("resource.fetch", r);
-        ac(a.replay, _);
+        let r = await aT(t, e, a),
+            _ = au("resource.fetch", r);
+        ai(a.replay, _);
     } catch (t) {
-        eX && U.kg.error("[Replay] Failed to capture fetch breadcrumb", t);
+        ej && U.kg.error("[Replay] Failed to capture fetch breadcrumb", t);
     }
 }
-async function ap(t, e, a) {
+async function aT(t, e, a) {
     let r = Date.now(),
         { startTimestamp: _ = r, endTimestamp: n = r } = e,
         { url: o, method: i, status_code: c = 0, request_body_size: E, response_body_size: s } = t.data,
-        l = af(o, a.networkDetailAllowUrls) && !af(o, a.networkDetailDenyUrls);
+        l = aA(o, a.networkDetailAllowUrls) && !aA(o, a.networkDetailDenyUrls);
     return {
         startTimestamp: _,
         endTimestamp: n,
@@ -4543,30 +4504,30 @@ async function ap(t, e, a) {
                   let o = a
                       ? ((_ = a),
                         (n = e),
-                        1 === _.length && "string" != typeof _[0] ? ag(_[0], n) : 2 === _.length ? ag(_[1], n) : {})
+                        1 === _.length && "string" != typeof _[0] ? aP(_[0], n) : 2 === _.length ? aP(_[1], n) : {})
                       : {};
-                  if (!t) return ad(o, r, void 0);
-                  let [i, c] = al(aO(a)),
-                      E = ad(o, r, i);
-                  return c ? au(E, c) : E;
+                  if (!t) return aR(o, r, void 0);
+                  let [i, c] = as(ah(a)),
+                      E = aR(o, r, i);
+                  return c ? al(E, c) : E;
               })(a, e.input, E)
-            : aR(E),
-        response: await aL(l, a, e.response, s),
+            : aI(E),
+        response: await ap(l, a, e.response, s),
     };
 }
-async function aL(t, { networkCaptureBodies: e, networkResponseHeaders: a }, r, _) {
-    if (!t && void 0 !== _) return aR(_);
-    let n = r ? aP(r.headers, a) : {};
-    if (!r || (!e && void 0 !== _)) return ad(n, _, void 0);
-    let [o, i] = await ah(r),
+async function ap(t, { networkCaptureBodies: e, networkResponseHeaders: a }, r, _) {
+    if (!t && void 0 !== _) return aI(_);
+    let n = r ? aO(r.headers, a) : {};
+    if (!r || (!e && void 0 !== _)) return aR(n, _, void 0);
+    let [o, i] = await aL(r),
         c = (function (t, { networkCaptureBodies: e, responseBodySize: a, captureDetails: r, headers: _ }) {
             try {
-                let n = t && t.length && void 0 === a ? aE(t) : a;
-                if (!r) return aR(n);
-                if (e) return ad(_, n, t);
-                return ad(_, n, void 0);
+                let n = t && t.length && void 0 === a ? ac(t) : a;
+                if (!r) return aI(n);
+                if (e) return aR(_, n, t);
+                return aR(_, n, void 0);
             } catch (t) {
-                return eX && U.kg.warn("[Replay] Failed to serialize response body", t), ad(_, a, void 0);
+                return ej && U.kg.warn("[Replay] Failed to serialize response body", t), aR(_, a, void 0);
             }
         })(o, {
             networkCaptureBodies: e,
@@ -4574,14 +4535,14 @@ async function aL(t, { networkCaptureBodies: e, networkResponseHeaders: a }, r, 
             captureDetails: t,
             headers: n,
         });
-    return i ? au(c, i) : c;
+    return i ? al(c, i) : c;
 }
-async function ah(t) {
+async function aL(t) {
     let e = (function (t) {
         try {
             return t.clone();
         } catch (t) {
-            eX && U.kg.warn("[Replay] Failed to clone response body", t);
+            ej && U.kg.warn("[Replay] Failed to clone response body", t);
         }
     })(t);
     if (!e) return [void 0, "BODY_PARSE_ERROR"];
@@ -4591,7 +4552,7 @@ async function ah(t) {
             await ((a = e),
             new Promise((t, e) => {
                 let r = (0, Y.iK)(() => e(Error("Timeout while trying to read response body")), 500);
-                aD(a)
+                ag(a)
                     .then(
                         (e) => t(e),
                         (t) => e(t),
@@ -4600,13 +4561,13 @@ async function ah(t) {
             })),
         ];
     } catch (t) {
-        return eX && U.kg.warn("[Replay] Failed to get text body from response", t), [void 0, "BODY_PARSE_ERROR"];
+        return ej && U.kg.warn("[Replay] Failed to get text body from response", t), [void 0, "BODY_PARSE_ERROR"];
     }
 }
-function aO(t = []) {
+function ah(t = []) {
     if (2 === t.length && "object" == typeof t[1]) return t[1].body;
 }
-function aP(t, e) {
+function aO(t, e) {
     let a = {};
     return (
         e.forEach((e) => {
@@ -4615,23 +4576,23 @@ function aP(t, e) {
         a
     );
 }
-function ag(t, e) {
+function aP(t, e) {
     if (!t) return {};
     let a = t.headers;
-    return a ? (a instanceof Headers ? aP(a, e) : Array.isArray(a) ? {} : aN(a, e)) : {};
+    return a ? (a instanceof Headers ? aO(a, e) : Array.isArray(a) ? {} : ad(a, e)) : {};
 }
-async function aD(t) {
+async function ag(t) {
     return await t.text();
 }
-async function aC(t, e, a) {
+async function aD(t, e, a) {
     try {
         let r = (function (t, e, a) {
                 let r = Date.now(),
                     { startTimestamp: _ = r, endTimestamp: n = r, input: o, xhr: i } = e,
                     { url: c, method: E, status_code: s = 0, request_body_size: l, response_body_size: u } = t.data;
                 if (!c) return null;
-                if (!i || !af(c, a.networkDetailAllowUrls) || af(c, a.networkDetailDenyUrls)) {
-                    let t = aR(l);
+                if (!i || !aA(c, a.networkDetailAllowUrls) || aA(c, a.networkDetailDenyUrls)) {
+                    let t = aI(l);
                     return {
                         startTimestamp: _,
                         endTimestamp: n,
@@ -4639,12 +4600,12 @@ async function aC(t, e, a) {
                         method: E,
                         statusCode: s,
                         request: t,
-                        response: aR(u),
+                        response: aI(u),
                     };
                 }
                 let I = i[K.xU],
-                    R = I ? aN(I.request_headers, a.networkRequestHeaders) : {},
-                    d = aN(
+                    R = I ? ad(I.request_headers, a.networkRequestHeaders) : {},
+                    d = ad(
                         (function (t) {
                             let e = t.getAllResponseHeaders();
                             return e
@@ -4656,7 +4617,7 @@ async function aC(t, e, a) {
                         })(i),
                         a.networkResponseHeaders,
                     ),
-                    [N, A] = a.networkCaptureBodies ? al(o) : [void 0],
+                    [N, A] = a.networkCaptureBodies ? as(o) : [void 0],
                     [f, T] = a.networkCaptureBodies
                         ? (function (t) {
                               let e = [];
@@ -4675,42 +4636,42 @@ async function aC(t, e, a) {
                                       if (!a) return [void 0];
                                   } catch (t) {
                                       return (
-                                          eX && U.kg.warn("[Replay] Failed to serialize body", a),
+                                          ej && U.kg.warn("[Replay] Failed to serialize body", a),
                                           [void 0, "BODY_PARSE_ERROR"]
                                       );
                                   }
                                   return (
-                                      eX && U.kg.info("[Replay] Skipping network body because of body type", a),
+                                      ej && U.kg.info("[Replay] Skipping network body because of body type", a),
                                       [void 0, "UNPARSEABLE_BODY_TYPE"]
                                   );
                               } catch (t) {
                                   e.push(t);
                               }
-                              return eX && U.kg.warn("[Replay] Failed to get xhr response body", ...e), [void 0];
+                              return ej && U.kg.warn("[Replay] Failed to get xhr response body", ...e), [void 0];
                           })(i)
                         : [void 0],
-                    p = ad(R, l, N),
-                    L = ad(d, u, f);
+                    p = aR(R, l, N),
+                    L = aR(d, u, f);
                 return {
                     startTimestamp: _,
                     endTimestamp: n,
                     url: c,
                     method: E,
                     statusCode: s,
-                    request: A ? au(p, A) : p,
-                    response: T ? au(L, T) : L,
+                    request: A ? al(p, A) : p,
+                    response: T ? al(L, T) : L,
                 };
             })(t, e, a),
-            _ = aI("resource.xhr", r);
-        ac(a.replay, _);
+            _ = au("resource.xhr", r);
+        ai(a.replay, _);
     } catch (t) {
-        eX && U.kg.error("[Replay] Failed to capture xhr breadcrumb", t);
+        ej && U.kg.error("[Replay] Failed to capture xhr breadcrumb", t);
     }
 }
-async function am(t) {
+async function aC(t) {
     try {
         return Promise.all(
-            ai(t, [
+            ao(t, [
                 (function (t) {
                     let { jsHeapSizeLimit: e, totalJSHeapSize: a, usedJSHeapSize: r } = t,
                         _ = Date.now() / 1000;
@@ -4734,7 +4695,7 @@ async function am(t) {
         return [];
     }
 }
-async function av({ client: t, scope: e, replayId: a, event: r }) {
+async function am({ client: t, scope: e, replayId: a, event: r }) {
     let _ = {
         event_id: a,
         integrations:
@@ -4757,7 +4718,7 @@ async function av({ client: t, scope: e, replayId: a, event: r }) {
         n
     );
 }
-async function ay({ recordingData: t, replayId: e, segmentId: a, eventContext: r, timestamp: _, session: n }) {
+async function av({ recordingData: t, replayId: e, segmentId: a, eventContext: r, timestamp: _, session: n }) {
     var o;
     let i,
         c = (function ({ recordingData: t, headers: e }) {
@@ -4791,7 +4752,7 @@ async function ay({ recordingData: t, replayId: e, segmentId: a, eventContext: r
             segment_id: a,
             replay_type: n.sampled,
         },
-        f = await av({
+        f = await am({
             scope: R,
             client: I,
             replayId: e,
@@ -4800,7 +4761,7 @@ async function ay({ recordingData: t, replayId: e, segmentId: a, eventContext: r
     if (!f)
         return (
             I.recordDroppedEvent("event_processor", "replay", A),
-            e$("An event processor returned `null`, will not send event."),
+            eX("An event processor returned `null`, will not send event."),
             (0, w.WD)({})
         );
     delete f.sdkProcessingMetadata;
@@ -4825,22 +4786,22 @@ async function ay({ recordingData: t, replayId: e, segmentId: a, eventContext: r
         } catch (t) {}
         throw t;
     }
-    if ("number" == typeof i.statusCode && (i.statusCode < 200 || i.statusCode >= 300)) throw new aS(i.statusCode);
+    if ("number" == typeof i.statusCode && (i.statusCode < 200 || i.statusCode >= 300)) throw new ay(i.statusCode);
     let L = (0, M.WG)({}, i);
-    if ((0, M.Q)(L, "replay")) throw new aU(L);
+    if ((0, M.Q)(L, "replay")) throw new aS(L);
     return i;
 }
-class aS extends Error {
+class ay extends Error {
     constructor(t) {
         super(`Transport returned status code ${t}`);
     }
 }
-class aU extends Error {
+class aS extends Error {
     constructor(t) {
         super("Rate limit hit"), (this.rateLimits = t);
     }
 }
-async function ab(
+async function aU(
     t,
     e = {
         count: 0,
@@ -4850,12 +4811,12 @@ async function ab(
     let { recordingData: a, options: r } = t;
     if (a.length)
         try {
-            return await ay(t), !0;
+            return await av(t), !0;
         } catch (a) {
-            if (a instanceof aS || a instanceof aU) throw a;
+            if (a instanceof ay || a instanceof aS) throw a;
             if (
                 ((0, h.v)("Replays", { _retryCount: e.count }),
-                eX && r._experiments && r._experiments.captureExceptions && (0, h.Tb)(a),
+                ej && r._experiments && r._experiments.captureExceptions && (0, h.Tb)(a),
                 e.count >= 3)
             ) {
                 let t = Error(`${j} - max retries exceeded`);
@@ -4869,7 +4830,7 @@ async function ab(
                 new Promise((a, r) => {
                     (0, Y.iK)(async () => {
                         try {
-                            await ab(t, e), a(!0);
+                            await aU(t, e), a(!0);
                         } catch (t) {
                             r(t);
                         }
@@ -4878,15 +4839,15 @@ async function ab(
             );
         }
 }
-let aG = "__THROTTLED";
-class aW {
+let ab = "__THROTTLED";
+class aG {
     constructor({ options: t, recordingOptions: e }) {
-        aW.prototype.__init.call(this),
-            aW.prototype.__init2.call(this),
-            aW.prototype.__init3.call(this),
-            aW.prototype.__init4.call(this),
-            aW.prototype.__init5.call(this),
-            aW.prototype.__init6.call(this),
+        aG.prototype.__init.call(this),
+            aG.prototype.__init2.call(this),
+            aG.prototype.__init3.call(this),
+            aG.prototype.__init4.call(this),
+            aG.prototype.__init5.call(this),
+            aG.prototype.__init6.call(this),
             (this.eventBuffer = null),
             (this.performanceEntries = []),
             (this.replayPerformanceEntries = []),
@@ -4933,25 +4894,31 @@ class aW {
             })(() => this._flush(), this._options.flushMinDelay, { maxWait: this._options.flushMaxDelay })),
             (this._throttledAddEvent = (function (t, e, a) {
                 let r = new Map(),
-                    _ = (t) => {
-                        let e = t - 5;
-                        r.forEach((t, a) => {
-                            a < e && r.delete(a);
-                        });
-                    },
-                    n = () => [...r.values()].reduce((t, e) => t + e, 0),
-                    o = !1;
+                    _ = !1;
                 return (...e) => {
-                    let a = Math.floor(Date.now() / 1000);
-                    if ((_(a), n() >= 300)) {
-                        let t = o;
-                        return (o = !0), t ? "__SKIPPED" : aG;
+                    let a = Math.floor(Date.now() / 1000),
+                        n = a - 5;
+                    if (
+                        (r.forEach((t, e) => {
+                            e < n && r.delete(e);
+                        }),
+                        [...r.values()].reduce((t, e) => t + e, 0) >= 300)
+                    ) {
+                        let t = _;
+                        return (_ = !0), t ? "__SKIPPED" : ab;
                     }
-                    o = !1;
-                    let i = r.get(a) || 0;
-                    return r.set(a, i + 1), t(...e);
+                    _ = !1;
+                    let o = r.get(a) || 0;
+                    return r.set(a, o + 1), t(...e);
                 };
-            })((t, e) => (ar(this, t) ? aa(this, t, e) : Promise.resolve(null)), 0, 0));
+            })(
+                (t, e) =>
+                    (function (t, e, a) {
+                        return aa(t, e) ? ae(t, e, a) : Promise.resolve(null);
+                    })(this, t, e),
+                0,
+                0,
+            ));
         let { slowClickTimeout: a, slowClickIgnoreSelectors: r } = this.getOptions(),
             _ = a
                 ? {
@@ -4979,8 +4946,8 @@ class aW {
         return this._options;
     }
     handleException(t) {
-        eX && U.kg.error("[Replay]", t),
-            eX && this._options._experiments && this._options._experiments.captureExceptions && (0, h.Tb)(t);
+        ej && U.kg.error("[Replay]", t),
+            ej && this._options._experiments && this._options._experiments.captureExceptions && (0, h.Tb)(t);
     }
     initializeSampling(t) {
         let { errorSampleRate: e, sessionSampleRate: a } = this._options,
@@ -4991,22 +4958,22 @@ class aW {
             !1 !== this.session.sampled &&
                 ((this.recordingMode =
                     "buffer" === this.session.sampled && 0 === this.session.segmentId ? "buffer" : "session"),
-                eq(`[Replay] Starting replay in ${this.recordingMode} mode`, this._options._experiments.traceInternals),
+                e$(`[Replay] Starting replay in ${this.recordingMode} mode`, this._options._experiments.traceInternals),
                 this._initializeRecording());
         }
     }
     start() {
         if (this._isEnabled && "session" === this.recordingMode) {
-            eX && U.kg.info("[Replay] Recording is already in progress");
+            ej && U.kg.info("[Replay] Recording is already in progress");
             return;
         }
         if (this._isEnabled && "buffer" === this.recordingMode) {
-            eX && U.kg.info("[Replay] Buffering is in progress, call `flush()` to save the replay");
+            ej && U.kg.info("[Replay] Buffering is in progress, call `flush()` to save the replay");
             return;
         }
-        eq("[Replay] Starting replay in session mode", this._options._experiments.traceInternals),
+        e$("[Replay] Starting replay in session mode", this._options._experiments.traceInternals),
             this._updateUserActivity();
-        let t = at(
+        let t = e9(
             {
                 maxReplayDuration: this._options.maxReplayDuration,
                 sessionIdleExpire: this.timeouts.sessionIdleExpire,
@@ -5022,11 +4989,11 @@ class aW {
     }
     startBuffering() {
         if (this._isEnabled) {
-            eX && U.kg.info("[Replay] Buffering is in progress, call `flush()` to save the replay");
+            ej && U.kg.info("[Replay] Buffering is in progress, call `flush()` to save the replay");
             return;
         }
-        eq("[Replay] Starting replay in buffer mode", this._options._experiments.traceInternals);
-        let t = at(
+        e$("[Replay] Starting replay in buffer mode", this._options._experiments.traceInternals);
+        let t = e9(
             {
                 sessionIdleExpire: this.timeouts.sessionIdleExpire,
                 maxReplayDuration: this._options.maxReplayDuration,
@@ -5053,7 +5020,7 @@ class aW {
                     (e = !1),
                     (a, r) => {
                         if (!t.checkAndHandleExpiredSession()) {
-                            eX && U.kg.warn("[Replay] Received replay event after session expired.");
+                            ej && U.kg.warn("[Replay] Received replay event after session expired.");
                             return;
                         }
                         let _ = r || !e;
@@ -5077,14 +5044,14 @@ class aW {
                                 })(t.clickDetector, a),
                             t.addUpdate(() => {
                                 var e;
-                                if (("buffer" === t.recordingMode && _ && t.setInitialState(), !ae(t, a, _))) return !0;
+                                if (("buffer" === t.recordingMode && _ && t.setInitialState(), !at(t, a, _))) return !0;
                                 if (!_) return !1;
                                 if (
                                     ((e = t),
                                     _ &&
                                         e.session &&
                                         0 === e.session.segmentId &&
-                                        ae(
+                                        at(
                                             e,
                                             (function (t) {
                                                 let e = t.getOptions();
@@ -5121,12 +5088,12 @@ class aW {
                                 if ("buffer" === t.recordingMode && t.session && t.eventBuffer) {
                                     let e = t.eventBuffer.getEarliestTimestamp();
                                     e &&
-                                        (e$(
+                                        (eX(
                                             `[Replay] Updating session start time to earliest event in buffer to ${new Date(e)}`,
                                             t.getOptions()._experiments.traceInternals,
                                         ),
                                         (t.session.started = e),
-                                        t.getOptions().stickySession && e4(t.session));
+                                        t.getOptions().stickySession && e6(t.session));
                                 }
                                 return "session" === t.recordingMode && t.flush(), !0;
                             });
@@ -5156,7 +5123,7 @@ class aW {
         if (this._isEnabled) {
             this._isEnabled = !1;
             try {
-                e$(
+                eX(
                     `[Replay] Stopping Replay${e ? ` triggered by ${e}` : ""}`,
                     this._options._experiments.traceInternals,
                 ),
@@ -5167,7 +5134,7 @@ class aW {
                     this.eventBuffer && this.eventBuffer.destroy(),
                     (this.eventBuffer = null),
                     (function () {
-                        if (e2())
+                        if (e1())
                             try {
                                 F.sessionStorage.removeItem(V);
                             } catch (t) {}
@@ -5182,19 +5149,19 @@ class aW {
         this._isPaused ||
             ((this._isPaused = !0),
             this.stopRecording(),
-            e$("[Replay] Pausing replay", this._options._experiments.traceInternals));
+            eX("[Replay] Pausing replay", this._options._experiments.traceInternals));
     }
     resume() {
         this._isPaused &&
             this._checkSession() &&
             ((this._isPaused = !1),
             this.startRecording(),
-            e$("[Replay] Resuming replay", this._options._experiments.traceInternals));
+            eX("[Replay] Resuming replay", this._options._experiments.traceInternals));
     }
     async sendBufferedReplayOrFlush({ continueRecording: t = !0 } = {}) {
         if ("session" === this.recordingMode) return this.flushImmediate();
         let e = Date.now();
-        e$("[Replay] Converting buffer to session", this._options._experiments.traceInternals),
+        eX("[Replay] Converting buffer to session", this._options._experiments.traceInternals),
             await this.flushImmediate();
         let a = this.stopRecording();
         t &&
@@ -5236,7 +5203,7 @@ class aW {
     }
     checkAndHandleExpiredSession() {
         return this._lastActivity &&
-            e8(this._lastActivity, this.timeouts.sessionIdlePause) &&
+            e5(this._lastActivity, this.timeouts.sessionIdlePause) &&
             this.session &&
             "session" === this.session.sampled
             ? void this.pause()
@@ -5254,11 +5221,11 @@ class aW {
     }
     throttledAddEvent(t, e) {
         let a = this._throttledAddEvent(t, e);
-        if (a === aG) {
+        if (a === ab) {
             let t = eG({ category: "replay.throttled" });
             this.addUpdate(
                 () =>
-                    !ae(this, {
+                    !at(this, {
                         type: 5,
                         timestamp: t.timestamp || 0,
                         data: {
@@ -5299,16 +5266,16 @@ class aW {
                                     return "";
                                 })();
                             if (!e) return;
-                            e$(`[Replay] Using compression worker${t ? ` from ${t}` : ""}`);
+                            eX(`[Replay] Using compression worker${t ? ` from ${t}` : ""}`);
                             let a = new Worker(e);
-                            return new e1(a);
+                            return new e0(a);
                         } catch (t) {
-                            e$("[Replay] Failed to create compression worker");
+                            eX("[Replay] Failed to create compression worker");
                         }
                     })(e);
                     if (t) return t;
                 }
-                return e$("[Replay] Using simple buffer"), new eZ();
+                return eX("[Replay] Using simple buffer"), new eJ();
             })({
                 useCompression: this._options.useCompression,
                 workerUrl: this._options.workerUrl,
@@ -5321,7 +5288,7 @@ class aW {
     }
     _initializeSessionForSampling(t) {
         let e = this._options.errorSampleRate > 0,
-            a = at(
+            a = e9(
                 {
                     sessionIdleExpire: this.timeouts.sessionIdleExpire,
                     maxReplayDuration: this._options.maxReplayDuration,
@@ -5340,7 +5307,7 @@ class aW {
         if (!this.session) return !1;
         let t = this.session;
         return (
-            !e9(t, {
+            !e7(t, {
                 sessionIdleExpire: this.timeouts.sessionIdleExpire,
                 maxReplayDuration: this._options.maxReplayDuration,
             }) || (this._refreshSession(t), !1)
@@ -5359,7 +5326,44 @@ class aW {
                 this._hasInitializedCoreListeners ||
                     (!(function (t) {
                         let e = (0, p.s3)();
-                        (0, k.O)(ew(t)),
+                        (0, k.O)((e) => {
+                            var a, r;
+                            if (!t.isEnabled()) return;
+                            let _ = (function (t) {
+                                let { target: e, message: a } = (function (t) {
+                                    let e,
+                                        a = "click" === t.name,
+                                        r = null;
+                                    try {
+                                        (r = a ? ev(t.event) : ey(t.event)),
+                                            (e = (0, y.Rt)(r, { maxStringLength: 200 }) || "<unknown>");
+                                    } catch (t) {
+                                        e = "<unknown>";
+                                    }
+                                    return {
+                                        target: r,
+                                        message: e,
+                                    };
+                                })(t);
+                                return eG({
+                                    category: `ui.${t.name}`,
+                                    ...ew(e, a),
+                                });
+                            })(e);
+                            if (!_) return;
+                            let n = "click" === e.name,
+                                o = n ? e.event : void 0;
+                            n &&
+                                t.clickDetector &&
+                                o &&
+                                o.target &&
+                                !o.altKey &&
+                                !o.metaKey &&
+                                !o.ctrlKey &&
+                                !o.shiftKey &&
+                                ((a = t.clickDetector), (r = ev(e.event)), a.handleClick(_, r)),
+                                eC(t, _);
+                        }),
                             (0, x.a)((e) => {
                                 if (!t.isEnabled()) return;
                                 let a = (function (t) {
@@ -5376,17 +5380,17 @@ class aW {
                                 null !== a &&
                                     (t.getContext().urls.push(a.name),
                                     t.triggerUserActivity(),
-                                    t.addUpdate(() => (ai(t, [a]), !1)));
+                                    t.addUpdate(() => (ao(t, [a]), !1)));
                             });
                         let a = (0, p.s3)();
                         a &&
                             a.on("beforeAddBreadcrumb", (e) =>
                                 (function (t, e) {
                                     var a;
-                                    if (!t.isEnabled() || !ao(e)) return;
+                                    if (!t.isEnabled() || !an(e)) return;
                                     let r =
                                         ((a = e),
-                                        !ao(a) ||
+                                        !an(a) ||
                                         ["fetch", "xhr", "sentry.event", "sentry.transaction"].includes(a.category) ||
                                         a.category.startsWith("ui.")
                                             ? null
@@ -5459,9 +5463,9 @@ class aW {
                                                         (!(function (t, e) {
                                                             let { xhr: a, input: r } = e;
                                                             if (!a) return;
-                                                            let _ = aE(r),
+                                                            let _ = ac(r),
                                                                 n = a.getResponseHeader("content-length")
-                                                                    ? as(a.getResponseHeader("content-length"))
+                                                                    ? aE(a.getResponseHeader("content-length"))
                                                                     : (function (t, e) {
                                                                           try {
                                                                               let a =
@@ -5470,7 +5474,7 @@ class aW {
                                                                                   "object" == typeof t
                                                                                       ? JSON.stringify(t)
                                                                                       : t;
-                                                                              return aE(a);
+                                                                              return ac(a);
                                                                           } catch (t) {
                                                                               return;
                                                                           }
@@ -5478,19 +5482,19 @@ class aW {
                                                             void 0 !== _ && (t.data.request_body_size = _),
                                                                 void 0 !== n && (t.data.response_body_size = n);
                                                         })(e, a),
-                                                        aC(e, a, t)),
+                                                        aD(e, a, t)),
                                                     (n = e),
                                                     "fetch" === n.category && (o = a) && o.response)
                                                 ) {
                                                     let { input: r, response: _ } = a,
-                                                        n = aE(r ? aO(r) : void 0),
-                                                        o = _ ? as(_.headers.get("content-length")) : void 0;
+                                                        n = ac(r ? ah(r) : void 0),
+                                                        o = _ ? aE(_.headers.get("content-length")) : void 0;
                                                     void 0 !== n && (e.data.request_body_size = n),
                                                         void 0 !== o && (e.data.response_body_size = o),
-                                                        aT(e, a, t);
+                                                        af(e, a, t);
                                                 }
                                             } catch (t) {
-                                                eX && U.kg.warn("Error when enriching network breadcrumb");
+                                                ej && U.kg.warn("Error when enriching network breadcrumb");
                                             }
                                     })(i, t, e),
                                 );
@@ -5500,8 +5504,8 @@ class aW {
                                 t.isEnabled()
                                     ? "replay_event" === e.type
                                         ? (delete e.breadcrumbs, e)
-                                        : (!e.type || a_(e) || an(e)) && t.checkAndHandleExpiredSession()
-                                          ? an(e)
+                                        : (!e.type || ar(e) || a_(e)) && t.checkAndHandleExpiredSession()
+                                          ? a_(e)
                                               ? (t.flush(),
                                                 (e.contexts.feedback.replay_id = t.getSessionId()),
                                                 t.triggerUserActivity(),
@@ -5531,13 +5535,13 @@ class aW {
                                                   a.originalException &&
                                                   a.originalException.__rrweb__ &&
                                                   !t.getOptions()._experiments.captureExceptions
-                                                ? (eX && U.kg.log("[Replay] Ignoring error from rrweb internals", e),
+                                                ? (ej && U.kg.log("[Replay] Ignoring error from rrweb internals", e),
                                                   null)
                                                 : ((("buffer" === t.recordingMode &&
                                                       e.message !== j &&
                                                       e.exception &&
                                                       !e.type &&
-                                                      e3(t.getOptions().errorSampleRate)) ||
+                                                      e2(t.getOptions().errorSampleRate)) ||
                                                       "session" === t.recordingMode) &&
                                                       (e.tags = {
                                                           ...e.tags,
@@ -5576,10 +5580,10 @@ class aW {
                                         })(t, e);
                                 }),
                                 e.on("afterSendEvent", (e, a) => {
-                                    if (!t.isEnabled() || (e.type && !a_(e))) return;
+                                    if (!t.isEnabled() || (e.type && !ar(e))) return;
                                     let r = a && a.statusCode;
                                     if (r && !(r < 200) && !(r >= 300)) {
-                                        if (a_(e))
+                                        if (ar(e))
                                             return void (function (t, e) {
                                                 let a = t.getContext();
                                                 e.contexts &&
@@ -5644,7 +5648,7 @@ class aW {
                 ["navigation", "paint", "resource"].forEach((t) => {
                     r.push((0, H._j)(t, a));
                 }),
-                r.push((0, H.$A)(eY(ek, t)), (0, H.PR)(eY(ex, t)), (0, H.to)(eY(eF, t)), (0, H.YF)(eY(eV, t))),
+                r.push((0, H.$A)(eB(eK, t)), (0, H.PR)(eB(ek, t)), (0, H.to)(eB(ex, t)), (0, H.YF)(eB(eF, t))),
                 () => {
                     r.forEach((t) => t());
                 }
@@ -5696,7 +5700,7 @@ class aW {
                         E = 1 === o.length;
                     if (!c && E) return null;
                     let s = (0, y.Rt)(i, { maxStringLength: 200 }) || "<unknown>",
-                        l = eM(i, s);
+                        l = ew(i, s);
                     return eG({
                         category: "ui.keyDown",
                         message: s,
@@ -5716,7 +5720,7 @@ class aW {
     }
     _doChangeToBackgroundTasks(t) {
         this.session &&
-            (e7(this.session, {
+            (e8(this.session, {
                 maxReplayDuration: this._options.maxReplayDuration,
                 sessionIdleExpire: this.timeouts.sessionIdleExpire,
             }) ||
@@ -5725,7 +5729,7 @@ class aW {
     _doChangeToForegroundTasks(t) {
         if (this.session) {
             if (!this.checkAndHandleExpiredSession())
-                return void e$("[Replay] Document has become active, but session has expired");
+                return void eX("[Replay] Document has become active, but session has expired");
             t && this._createCustomBreadcrumb(t);
         }
     }
@@ -5748,8 +5752,8 @@ class aW {
         });
     }
     _addPerformanceEntries() {
-        let t = this.performanceEntries.map(eH).filter(Boolean).concat(this.replayPerformanceEntries);
-        return (this.performanceEntries = []), (this.replayPerformanceEntries = []), Promise.all(ai(this, t));
+        let t = this.performanceEntries.map(eY).filter(Boolean).concat(this.replayPerformanceEntries);
+        return (this.performanceEntries = []), (this.replayPerformanceEntries = []), Promise.all(ao(this, t));
     }
     _clearContext() {
         this._context.errorIds.clear(), this._context.traceIds.clear(), (this._context.urls = []);
@@ -5773,11 +5777,11 @@ class aW {
     async _runFlush() {
         let t = this.getSessionId();
         if (!this.session || !this.eventBuffer || !t) {
-            eX && U.kg.error("[Replay] No session or eventBuffer found to flush.");
+            ej && U.kg.error("[Replay] No session or eventBuffer found to flush.");
             return;
         }
         if ((await this._addPerformanceEntries(), this.eventBuffer && this.eventBuffer.hasEvents)) {
-            if ((await am(this), this.eventBuffer) && t === this.getSessionId())
+            if ((await aC(this), this.eventBuffer) && t === this.getSessionId())
                 try {
                     this._updateInitialTimestampFromEventBuffer();
                     let e = Date.now();
@@ -5787,7 +5791,7 @@ class aW {
                         r = this.session.segmentId++;
                     this._maybeSaveSession();
                     let _ = await this.eventBuffer.finish();
-                    await ab({
+                    await aU({
                         replayId: t,
                         recordingData: _,
                         segmentId: r,
@@ -5807,7 +5811,7 @@ class aW {
         this._flush = async ({ force: t = !1 } = {}) => {
             if (!this._isEnabled && !t) return;
             if (!this.checkAndHandleExpiredSession()) {
-                eX && U.kg.error("[Replay] Attempting to finish replay event after session expired.");
+                ej && U.kg.error("[Replay] Attempting to finish replay event after session expired.");
                 return;
             }
             if (!this.session) return;
@@ -5817,7 +5821,7 @@ class aW {
             let r = a < this._options.minReplayDuration,
                 _ = a > this._options.maxReplayDuration + 5000;
             if (r || _) {
-                e$(
+                eX(
                     `[Replay] Session duration (${Math.floor(a / 1000)}s) is too ${r ? "short" : "long"}, not sending replay.`,
                     this._options._experiments.traceInternals,
                 ),
@@ -5829,7 +5833,7 @@ class aW {
                 (n &&
                     0 === this.session.segmentId &&
                     !n.hasCheckout &&
-                    e$(
+                    eX(
                         "[Replay] Flushing initial segment without checkout.",
                         this._options._experiments.traceInternals,
                     ),
@@ -5841,14 +5845,14 @@ class aW {
             try {
                 await this._flushLock;
             } catch (t) {
-                eX && U.kg.error(t);
+                ej && U.kg.error(t);
             } finally {
                 this._debouncedFlush();
             }
         };
     }
     _maybeSaveSession() {
-        this.session && this._options.stickySession && e4(this.session);
+        this.session && this._options.stickySession && e6(this.session);
     }
     __init6() {
         this._onMutationHandler = (t) => {
@@ -5877,14 +5881,14 @@ class aW {
         };
     }
 }
-function aw(t, e) {
+function aW(t, e) {
     return [...t, ...e].join(",");
 }
-let aM = 'img,image,svg,video,object,picture,embed,map,audio,link[rel="icon"],link[rel="apple-touch-icon"]',
-    aB = ["content-length", "content-type", "accept"],
-    aY = !1,
-    aH = (t) => new aK(t);
-class aK {
+let aw = 'img,image,svg,video,object,picture,embed,map,audio,link[rel="icon"],link[rel="apple-touch-icon"]',
+    aM = ["content-length", "content-type", "accept"],
+    aB = !1,
+    aY = (t) => new aH(t);
+class aH {
     static __initStatic() {
         this.id = "Replay";
     }
@@ -5919,14 +5923,14 @@ class aK {
         beforeAddRecordingEvent: C,
         beforeErrorSampling: m,
     } = {}) {
-        this.name = aK.id;
+        this.name = aH.id;
         let v = (function ({ mask: t, unmask: e, block: a, unblock: r, ignore: _ }) {
             return {
-                maskTextSelector: aw(t, [".sentry-mask", "[data-sentry-mask]"]),
-                unmaskTextSelector: aw(e, []),
-                blockSelector: aw(a, [".sentry-block", "[data-sentry-block]", 'base[href="/"]']),
-                unblockSelector: aw(r, []),
-                ignoreSelector: aw(_, [".sentry-ignore", "[data-sentry-ignore]", 'input[type="file"]']),
+                maskTextSelector: aW(t, [".sentry-mask", "[data-sentry-mask]"]),
+                unmaskTextSelector: aW(e, []),
+                blockSelector: aW(a, [".sentry-block", "[data-sentry-block]", 'base[href="/"]']),
+                unblockSelector: aW(r, []),
+                ignoreSelector: aW(_, [".sentry-ignore", "[data-sentry-ignore]", 'input[type="file"]']),
             };
         })({
             mask: p,
@@ -5989,26 +5993,26 @@ class aK {
                 networkDetailAllowUrls: d,
                 networkDetailDenyUrls: N,
                 networkCaptureBodies: A,
-                networkRequestHeaders: ak(f),
-                networkResponseHeaders: ak(T),
+                networkRequestHeaders: aK(f),
+                networkResponseHeaders: aK(T),
                 beforeAddRecordingEvent: C,
                 beforeErrorSampling: m,
                 _experiments: i,
             }),
             this._initialOptions.blockAllMedia &&
                 (this._recordingOptions.blockSelector = this._recordingOptions.blockSelector
-                    ? `${this._recordingOptions.blockSelector},${aM}`
-                    : aM),
+                    ? `${this._recordingOptions.blockSelector},${aw}`
+                    : aw),
             this._isInitialized && (0, B.j)())
         )
             throw Error("Multiple Sentry Session Replay instances are not supported");
         this._isInitialized = !0;
     }
     get _isInitialized() {
-        return aY;
+        return aB;
     }
     set _isInitialized(t) {
-        aY = t;
+        aB = t;
     }
     afterAllSetup(t) {
         (0, B.j)() && !this._replay && (this._setup(t), this._initialize(t));
@@ -6060,7 +6064,7 @@ class aK {
                 r
             );
         })(this._initialOptions, t);
-        this._replay = new aW({
+        this._replay = new aG({
             options: e,
             recordingOptions: this._recordingOptions,
         });
@@ -6073,11 +6077,11 @@ class aK {
         } catch (t) {}
     }
 }
-function ak(t) {
-    return [...aB, ...t.map((t) => t.toLowerCase())];
+function aK(t) {
+    return [...aM, ...t.map((t) => t.toLowerCase())];
 }
-function ax() {
+function ak() {
     let t = (0, p.s3)();
     return t && t.getIntegrationByName("Replay");
 }
-aK.__initStatic();
+aH.__initStatic();

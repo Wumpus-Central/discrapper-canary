@@ -33,9 +33,9 @@ var i = n(120356),
     L = n(910424),
     x = n(981631),
     M = n(477839),
-    j = n(388032),
-    k = n(603571),
-    U = n(555993);
+    k = n(388032),
+    j = n(511479),
+    U = n(964719);
 function G(e, t, n) {
     return (
         t in e
@@ -136,7 +136,7 @@ let V = (e) => {
         if ((null == t ? void 0 : t.application_id) === M.bO)
             return (
                 (t = F(B({}, t), {
-                    buttons: [j.intl.string(k.default["Fv/2Oz"])],
+                    buttons: [k.intl.string(j.default["Fv/2Oz"])],
                     metadata: { button_urls: [M.U8] },
                 })),
                 (0, r.jsx)(V, {

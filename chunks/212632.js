@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b }), n(388685);
+n.d(t, { Z: () => f }), n(388685);
 var i = n(255367),
     r = n(73800),
     s = n(120356),
@@ -6,11 +6,10 @@ var i = n(255367),
     l = n(481060),
     o = n(981631),
     c = n(388032),
-    d = n(968591),
-    u = n(881488);
+    d = n(379249),
+    u = n(197571);
 let m = 0,
-    p = () => "notification-position-selector-".concat(m++),
-    g = (e) => {
+    p = (e) => {
         switch (e) {
             case o._vf.TOP_LEFT:
                 return c.intl.string(c.t.xlchpa);
@@ -24,14 +23,14 @@ let m = 0,
                 return c.intl.string(c.t.AlY4ZW);
         }
     },
-    h = [o._vf.DISABLED, o._vf.TOP_LEFT, o._vf.TOP_RIGHT, o._vf.BOTTOM_LEFT, o._vf.BOTTOM_RIGHT];
-function f(e) {
+    g = [o._vf.DISABLED, o._vf.TOP_LEFT, o._vf.TOP_RIGHT, o._vf.BOTTOM_LEFT, o._vf.BOTTOM_RIGHT];
+function h(e) {
     let { position: t, onChange: n } = e,
-        [s] = r.useState(() => p()),
-        m =
+        [s] = r.useState(() => "notification-position-selector-".concat(m++)),
+        h =
             t === o._vf.DISABLED
                 ? c.intl.string(c.t.R6LxVV)
-                : c.intl.formatToPlainString(c.t.XXHDMz, { position: g(t) });
+                : c.intl.formatToPlainString(c.t.XXHDMz, { position: p(t) });
     return (0, i.jsxs)("div", {
         children: [
             (0, i.jsx)(l.tEY, {
@@ -39,7 +38,7 @@ function f(e) {
                 offset: -2,
                 children: (0, i.jsx)("div", {
                     className: a()(d.wrapper, { [d.disabledSelected]: t === o._vf.DISABLED }),
-                    children: h.map((e) =>
+                    children: g.map((e) =>
                         (0, i.jsxs)(
                             "label",
                             {
@@ -52,7 +51,7 @@ function f(e) {
                                     [d.bottomLeft]: e === o._vf.BOTTOM_LEFT,
                                 }),
                                 children: [
-                                    g(e),
+                                    p(e),
                                     e === o._vf.DISABLED
                                         ? (0, i.jsx)(l.t6m, {
                                               size: "md",
@@ -77,10 +76,10 @@ function f(e) {
             (0, i.jsx)(l.R94, {
                 type: l.geA.DESCRIPTION,
                 className: u.marginTop8,
-                children: m,
+                children: h,
             }),
         ],
     });
 }
-f.Positions = o._vf;
-let b = f;
+h.Positions = o._vf;
+let f = h;

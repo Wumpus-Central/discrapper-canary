@@ -1,4 +1,4 @@
-a.d(t, { o: () => m }), a(388685);
+a.d(t, { o: () => N }), a(388685);
 var n,
     r = a(255367),
     s = a(73800),
@@ -20,165 +20,166 @@ function u(e, t, a) {
         e
     );
 }
-let _ = c.j_.MAIN_NAVIGATION_MENU,
-    N = (e) => [
-        {
-            route: c.am.DOWNLOAD,
-            linkClicked: "download",
-            title: d.Z.Messages.NAVIGATION_DOWNLOAD,
-        },
-        {
-            route: c.am.NITRO,
-            linkClicked: "nitro",
-            title: d.Z.Messages.NAVIGATION_NITRO,
-            external: !0,
-        },
-        {
-            route: c.am.JOBS,
-            linkClicked: "jobs",
-            title: d.Z.Messages.NAVIGATION_JOBS,
-            external: !0,
-        },
-        {
-            title: d.Z.Messages.NAVIGATION_DEVELOPERS,
-            links: [
-                {
-                    route: c.am.RICH_PRESENCE,
-                    linkClicked: "rich_presence",
-                    title: d.Z.Messages.NAVIGATION_RICH_PRESENCE,
-                },
-                {
-                    route: c.am.VERIFICATION,
-                    linkClicked: "verification",
-                    title: d.Z.Messages.NAVIGATION_VERIFICATION,
-                    external: !0,
-                },
-                {
-                    route: c.yX.DEV_PORTAL,
-                    linkClicked: "developers",
-                    title: d.Z.Messages.NAVIGATION_DEVELOPER_PORTAL,
-                    external: !0,
-                },
-                {
-                    route: c.yX.DEV_PORTAL_DOCUMENTATION,
-                    linkClicked: "documentation",
-                    title: d.Z.Messages.NAVIGATION_DOCUMENTATION,
-                    external: !0,
-                },
-            ],
-        },
-        {
-            title: d.Z.Messages.NAVIGATION_COMMUNITY,
-            links: [
-                {
-                    route: c.am.OPEN_SOURCE,
-                    linkClicked: "open_source",
-                    title: d.Z.Messages.NAVIGATION_OPEN_SOURCE,
-                },
-                {
-                    route: c.am.PARTNERS,
-                    linkClicked: "partners",
-                    title: d.Z.Messages.NAVIGATION_PARTNERS,
-                    external: !0,
-                },
-                {
-                    route: c.am.HYPESQUAD,
-                    linkClicked: "hypesquad",
-                    title: d.Z.Messages.NAVIGATION_HYPESQUAD,
-                    external: !0,
-                },
-                {
-                    route: c.am.GUIDELINES,
-                    linkClicked: "guidelines",
-                    title: d.Z.Messages.NAVIGATION_GUIDELINES,
-                    external: !0,
-                },
-            ],
-        },
-        {
-            title: d.Z.Messages.NAVIGATION_SUPPORT,
-            links: [
-                {
-                    route: "//support.discord.com/hc/".concat(e),
-                    linkClicked: "helpandsupport",
-                    title: d.Z.Messages.NAVIGATION_HELP_AND_SUPPORT,
-                    external: !0,
-                },
-                {
-                    route: c.yX.STATUS,
-                    linkClicked: "status",
-                    title: d.Z.Messages.NAVIGATION_STATUS,
-                    external: !0,
-                },
-                {
-                    route: c.am.SAFETY_LANDING,
-                    linkClicked: "safetycenter",
-                    title: d.Z.Messages.NAVIGATION_SAFETY_CENTER,
-                    external: !0,
-                },
-            ],
-        },
-    ];
-class m extends (n = s.PureComponent) {
+let _ = c.j_.MAIN_NAVIGATION_MENU;
+class N extends (n = s.PureComponent) {
     render() {
-        let e = (0, l.fQ)(this.context.router),
-            { isMobile: t, isVisible: a, styles: n, TrackClick: s, avoidRouter: u } = this.props,
+        let e,
+            t = (0, l.fQ)(this.context.router),
+            { isMobile: a, isVisible: n, styles: s, TrackClick: u, avoidRouter: N } = this.props,
             { sectionShown: m } = this.state;
-        return N(null != d.Z ? d.Z.getLocale().toLowerCase() : "").map((l) =>
-            null != l.links
+        return ((e = null != d.Z ? d.Z.getLocale().toLowerCase() : ""),
+        [
+            {
+                route: c.am.DOWNLOAD,
+                linkClicked: "download",
+                title: d.Z.Messages.NAVIGATION_DOWNLOAD,
+            },
+            {
+                route: c.am.NITRO,
+                linkClicked: "nitro",
+                title: d.Z.Messages.NAVIGATION_NITRO,
+                external: !0,
+            },
+            {
+                route: c.am.JOBS,
+                linkClicked: "jobs",
+                title: d.Z.Messages.NAVIGATION_JOBS,
+                external: !0,
+            },
+            {
+                title: d.Z.Messages.NAVIGATION_DEVELOPERS,
+                links: [
+                    {
+                        route: c.am.RICH_PRESENCE,
+                        linkClicked: "rich_presence",
+                        title: d.Z.Messages.NAVIGATION_RICH_PRESENCE,
+                    },
+                    {
+                        route: c.am.VERIFICATION,
+                        linkClicked: "verification",
+                        title: d.Z.Messages.NAVIGATION_VERIFICATION,
+                        external: !0,
+                    },
+                    {
+                        route: c.yX.DEV_PORTAL,
+                        linkClicked: "developers",
+                        title: d.Z.Messages.NAVIGATION_DEVELOPER_PORTAL,
+                        external: !0,
+                    },
+                    {
+                        route: c.yX.DEV_PORTAL_DOCUMENTATION,
+                        linkClicked: "documentation",
+                        title: d.Z.Messages.NAVIGATION_DOCUMENTATION,
+                        external: !0,
+                    },
+                ],
+            },
+            {
+                title: d.Z.Messages.NAVIGATION_COMMUNITY,
+                links: [
+                    {
+                        route: c.am.OPEN_SOURCE,
+                        linkClicked: "open_source",
+                        title: d.Z.Messages.NAVIGATION_OPEN_SOURCE,
+                    },
+                    {
+                        route: c.am.PARTNERS,
+                        linkClicked: "partners",
+                        title: d.Z.Messages.NAVIGATION_PARTNERS,
+                        external: !0,
+                    },
+                    {
+                        route: c.am.HYPESQUAD,
+                        linkClicked: "hypesquad",
+                        title: d.Z.Messages.NAVIGATION_HYPESQUAD,
+                        external: !0,
+                    },
+                    {
+                        route: c.am.GUIDELINES,
+                        linkClicked: "guidelines",
+                        title: d.Z.Messages.NAVIGATION_GUIDELINES,
+                        external: !0,
+                    },
+                ],
+            },
+            {
+                title: d.Z.Messages.NAVIGATION_SUPPORT,
+                links: [
+                    {
+                        route: "//support.discord.com/hc/".concat(e),
+                        linkClicked: "helpandsupport",
+                        title: d.Z.Messages.NAVIGATION_HELP_AND_SUPPORT,
+                        external: !0,
+                    },
+                    {
+                        route: c.yX.STATUS,
+                        linkClicked: "status",
+                        title: d.Z.Messages.NAVIGATION_STATUS,
+                        external: !0,
+                    },
+                    {
+                        route: c.am.SAFETY_LANDING,
+                        linkClicked: "safetycenter",
+                        title: d.Z.Messages.NAVIGATION_SAFETY_CENTER,
+                        external: !0,
+                    },
+                ],
+            },
+        ]).map((e) =>
+            null != e.links
                 ? (0, r.jsx)(
                       o.Z,
                       {
-                          title: l.title,
-                          links: l.links,
-                          isOpen: m === l.title,
-                          isMobile: t,
-                          avoidRouter: u,
-                          TrackClick: s,
+                          title: e.title,
+                          links: e.links,
+                          isOpen: m === e.title,
+                          isMobile: a,
+                          avoidRouter: N,
+                          TrackClick: u,
                           onClose: this.closeSubNav,
                           onOpen: this.openSubNav,
                       },
-                      l.title,
+                      e.title,
                   )
-                : l.external && null != l.route
+                : e.external && null != e.route
                   ? (0, r.jsx)(
                         "li",
                         {
-                            className: n.listItemInactive,
+                            className: s.listItemInactive,
                             role: "none",
-                            children: (0, r.jsx)(s, {
-                                className: n.mainNavLink,
+                            children: (0, r.jsx)(u, {
+                                className: s.mainNavLink,
                                 eventName: _,
-                                data: l.linkClicked ? { linkClicked: l.linkClicked } : {},
-                                href: l.route,
+                                data: e.linkClicked ? { linkClicked: e.linkClicked } : {},
+                                href: e.route,
                                 rel: "me",
-                                children: l.title,
+                                children: e.title,
                             }),
                         },
-                        "external_link_".concat(l.route),
+                        "external_link_".concat(e.route),
                     )
-                  : null != l.route
+                  : null != e.route
                     ? (0, r.jsx)(
                           "li",
                           {
-                              className: e(l.route) ? n.listItemActive : n.listItemInactive,
+                              className: t(e.route) ? s.listItemActive : s.listItemInactive,
                               role: "none",
                               children: (0, r.jsx)(i.Z, {
-                                  avoidRouter: u,
-                                  to: l.route,
+                                  avoidRouter: N,
+                                  to: e.route,
                                   from: c.j_.MAIN_NAVIGATION_MENU,
-                                  tabIndex: a ? 0 : -1,
+                                  tabIndex: n ? 0 : -1,
                                   role: "menuitem",
-                                  children: (0, r.jsx)(s, {
+                                  children: (0, r.jsx)(u, {
                                       tag: "span",
-                                      className: n.mainNavLink,
+                                      className: s.mainNavLink,
                                       eventName: _,
-                                      data: { linkClicked: l.linkClicked },
-                                      children: l.title,
+                                      data: { linkClicked: e.linkClicked },
+                                      children: e.title,
                                   }),
                               }),
                           },
-                          "link_".concat(l.route),
+                          "link_".concat(e.route),
                       )
                     : [],
         );
@@ -196,7 +197,7 @@ class m extends (n = s.PureComponent) {
             });
     }
 }
-u(m, "defaultProps", {
+u(N, "defaultProps", {
     isMobile: !1,
     isVisible: !0,
 });

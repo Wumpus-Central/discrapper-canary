@@ -8,7 +8,7 @@ var r = n(255367),
     c = n(981631),
     u = n(186901),
     d = n(388032),
-    p = n(903312);
+    p = n(87805);
 function f(e) {
     let { applicationId: t } = e.match.params,
         [f, h] = i.useState(!1),

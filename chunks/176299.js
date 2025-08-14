@@ -1,4 +1,4 @@
-n.d(t, { Z: () => e4 }), n(35282), n(388685);
+n.d(t, { Z: () => e5 }), n(35282), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -80,7 +80,7 @@ var r = n(255367),
     eT = n(215023),
     eP = n(290511),
     ej = n(186901),
-    ex = n(479098);
+    ex = n(981028);
 function eA(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -316,59 +316,58 @@ let eZ = (0, u.Un)({
     e$ = () => (0, r.jsx)(Y.Z, {}),
     e0 = () => (0, r.jsx)($.Z, {}),
     e1 = (e) => {
-        let { match: t } = e;
-        switch (t.params.feature) {
-            case "friends":
-                return (0, r.jsx)(ee.Z, { initialSection: eS.pJs.ONLINE });
-            case "addFriends":
-                return (0, r.jsx)(ee.Z, { initialSection: eS.pJs.ADD_FRIEND });
-            case "pendingFriends":
-                return (0, r.jsx)(ee.Z, { initialSection: eS.pJs.PENDING });
-            case "sessionManagement":
-                return (0, r.jsx)(s.l_, { to: eS.Z5c.SETTINGS("sessions") });
-            case "connections":
-                return (0, r.jsx)(s.l_, {
-                    to: {
-                        pathname: eS.Z5c.SETTINGS("connections"),
-                        search: e.location.search,
-                    },
-                });
-            case "family-center":
-                return (0, r.jsx)(s.l_, { to: eS.Z5c.FAMILY_CENTER });
-            case "account-standing":
-                return (0, r.jsx)(s.l_, { to: eS.Z5c.SETTINGS("account", "account-standing") });
-            case "authorized-apps":
-                return (0, r.jsx)(s.l_, { to: eS.Z5c.SETTINGS("authorized-apps") });
-            case "open-shop":
-                return (0, r.jsx)(s.l_, { to: eS.Z5c.COLLECTIBLES_SHOP_FULLSCREEN });
-            case "editProfile":
-                return (0, r.jsx)(s.l_, { to: { pathname: eS.Z5c.SETTINGS("profile-customization") } });
-            case "gift":
-            case "store":
-                return (0, r.jsx)(s.l_, { to: { pathname: eS.Z5c.NITRO_HOME } });
-            case "connected-games":
-                return (0, r.jsx)(s.l_, { to: eS.Z5c.SETTINGS("content-and-social", "connected-games") });
-            case "boost":
-                let n = t.params.guildId;
-                return (0, r.jsx)(s.l_, { to: eS.Z5c.POWERUP_STORE(n) });
-            case "boost-settings":
-                return (0, r.jsx)(s.l_, { to: eS.Z5c.SETTINGS("guild-boosting") });
-            default:
-                return (0, r.jsx)(s.l_, { to: eS.Z5c.ME });
-        }
-    },
-    e3 = (e) => {
         let t = e.location.pathname;
         return (0, r.jsx)(m.Z, {
             deepLinkType: ej.jE.FEATURES,
             path: t,
-            children: e1(e),
+            children: ((e) => {
+                let { match: t } = e;
+                switch (t.params.feature) {
+                    case "friends":
+                        return (0, r.jsx)(ee.Z, { initialSection: eS.pJs.ONLINE });
+                    case "addFriends":
+                        return (0, r.jsx)(ee.Z, { initialSection: eS.pJs.ADD_FRIEND });
+                    case "pendingFriends":
+                        return (0, r.jsx)(ee.Z, { initialSection: eS.pJs.PENDING });
+                    case "sessionManagement":
+                        return (0, r.jsx)(s.l_, { to: eS.Z5c.SETTINGS("sessions") });
+                    case "connections":
+                        return (0, r.jsx)(s.l_, {
+                            to: {
+                                pathname: eS.Z5c.SETTINGS("connections"),
+                                search: e.location.search,
+                            },
+                        });
+                    case "family-center":
+                        return (0, r.jsx)(s.l_, { to: eS.Z5c.FAMILY_CENTER });
+                    case "account-standing":
+                        return (0, r.jsx)(s.l_, { to: eS.Z5c.SETTINGS("account", "account-standing") });
+                    case "authorized-apps":
+                        return (0, r.jsx)(s.l_, { to: eS.Z5c.SETTINGS("authorized-apps") });
+                    case "open-shop":
+                        return (0, r.jsx)(s.l_, { to: eS.Z5c.COLLECTIBLES_SHOP_FULLSCREEN });
+                    case "editProfile":
+                        return (0, r.jsx)(s.l_, { to: { pathname: eS.Z5c.SETTINGS("profile-customization") } });
+                    case "gift":
+                    case "store":
+                        return (0, r.jsx)(s.l_, { to: { pathname: eS.Z5c.NITRO_HOME } });
+                    case "connected-games":
+                        return (0, r.jsx)(s.l_, { to: eS.Z5c.SETTINGS("content-and-social", "connected-games") });
+                    case "boost":
+                        let n = t.params.guildId;
+                        return (0, r.jsx)(s.l_, { to: eS.Z5c.POWERUP_STORE(n) });
+                    case "boost-settings":
+                        return (0, r.jsx)(s.l_, { to: eS.Z5c.SETTINGS("guild-boosting") });
+                    default:
+                        return (0, r.jsx)(s.l_, { to: eS.Z5c.ME });
+                }
+            })(e),
         });
     };
-function e8(e) {
+function e3(e) {
     document.body.style.setProperty("--custom-guild-sidebar-width", "".concat(e, "px"));
 }
-function e5(e) {
+function e8(e) {
     let {
         hasNotice: t,
         sidebarTheme: n,
@@ -390,7 +389,7 @@ function e5(e) {
             Number.isNaN(t) && (t = ev.qO),
                 (t = Math.min(Math.max(t, ev.li), ev.zx)),
                 !m && t <= ev.p8 && (t = ev.qO),
-                e8(t);
+                e3(t);
             let n = (e) => {
                 e.metaKey && "b" === e.key && P.useAppSidebarState.setState((e) => ({ isOpen: !e.isOpen }));
             };
@@ -403,18 +402,18 @@ function e5(e) {
         }
     }, [m]),
         i.useLayoutEffect(() => {
-            if (E) e8(ev.p8);
+            if (E) e3(ev.p8);
             else {
                 var e;
                 let t = parseInt(null != (e = f.K.get(ev.nT)) ? e : "");
-                Number.isNaN(t) && (t = ev.qO), e8(t);
+                Number.isNaN(t) && (t = ev.qO), e3(t);
             }
         }, [E]);
     let y = i.useRef(null),
         v = i.useCallback(
             (e, t) => {
                 var n;
-                e8(e);
+                e3(e);
                 let r = t < ev.li / 3;
                 t <= ev.li
                     ? document.body.classList.add(ex.draggingMin)
@@ -425,7 +424,7 @@ function e5(e) {
                 let i = t - e;
                 null == (n = y.current) ||
                     n.style.setProperty("--custom-overdrag", "".concat(1 + Math.min(Math.abs(i / ev.p8), 0.25))),
-                    m && (P.useAppSidebarState.setState({ isOpen: !r }), r && e8(ev.p8));
+                    m && (P.useAppSidebarState.setState({ isOpen: !r }), r && e3(ev.p8));
             },
             [m],
         ),
@@ -457,7 +456,7 @@ function e5(e) {
         }, []);
     if (
         (i.useLayoutEffect(() => {
-            E && e8(ev.p8);
+            E && e3(ev.p8);
         }, [E]),
         l)
     )
@@ -517,7 +516,7 @@ function e5(e) {
         },
     });
 }
-function e4() {
+function e5() {
     var e;
     let t = (0, p.e7)([eh.ZP], () => eh.ZP.hasNotice()),
         n = (0, es.Ll)(),
@@ -592,7 +591,7 @@ function e4() {
                         className: ex.content,
                         children: [
                             (0, r.jsx)(N.Z, {}),
-                            (0, r.jsx)(e5, {
+                            (0, r.jsx)(e8, {
                                 isOnFullScreenCollectiblesShopRoute: u,
                                 isSidebarOpen: f,
                                 hasNotice: t,
@@ -752,13 +751,13 @@ function e4() {
                                                 (0, r.jsx)(I.Z, {
                                                     path: eS.Z5c.GUILD_FEATURE(":feature", ea.Hw.guildId()),
                                                     exact: !0,
-                                                    render: e3,
+                                                    render: e1,
                                                     disableTrack: !0,
                                                 }),
                                                 (0, r.jsx)(I.Z, {
                                                     path: eS.Z5c.FEATURE(":feature"),
                                                     exact: !0,
-                                                    render: e3,
+                                                    render: e1,
                                                     disableTrack: !0,
                                                 }),
                                             ],

@@ -1,8 +1,8 @@
 n.d(t, {
     C1: () => H,
     Gh: () => Y,
-    N0: () => j,
-    T1: () => k,
+    N0: () => k,
+    T1: () => j,
     Tm: () => W,
     _Q: () => M,
     eL: () => K,
@@ -133,14 +133,14 @@ function M(e) {
                 D(P({}, t && { clips_enabled: !0 }), { decoupled_clips_enabled: t }),
             );
 }
-function j(e) {
+function k(e) {
     o.Z.dispatch({
         type: "CLIPS_SETTINGS_UPDATE",
         settings: { remindersEnabled: e },
     }),
         b.default.track(C.rMx.CLIPS_SETTINGS_UPDATED, { reminders_enabled: e });
 }
-function k(e) {
+function j(e) {
     o.Z.dispatch({
         type: "CLIPS_SETTINGS_UPDATE",
         settings: { storageLocation: e },

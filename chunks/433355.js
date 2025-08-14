@@ -102,10 +102,10 @@ function x() {
 function M() {
     S && (S = L(S)), (A = L(A));
 }
-function j() {
+function k() {
     N || u.S.dispatch(g.CkL.SEARCH_RESULTS_CLOSE), (N = L(N));
 }
-function k(e) {
+function j(e) {
     let { sidebarType: t, guildId: n, baseChannelId: r, details: i } = e;
     C = !1;
     let o = w(r);
@@ -271,10 +271,10 @@ class z extends (r = o.ZP.PersistedStore) {
 y(z, "displayName", "ChannelSectionStore"), y(z, "persistKey", "ChannelSectionStore2");
 let q = new z(a.Z, {
     CHANNEL_TOGGLE_MEMBERS_SECTION: x,
-    USER_PROFILE_SIDEBAR_TOGGLE_SECTION: j,
+    USER_PROFILE_SIDEBAR_TOGGLE_SECTION: k,
     CHANNEL_TOGGLE_SUMMARIES_SECTION: M,
     SIDEBAR_VIEW_CHANNEL: G,
-    SIDEBAR_VIEW_GUILD: k,
+    SIDEBAR_VIEW_GUILD: j,
     SIDEBAR_CREATE_THREAD: B,
     SIDEBAR_CLOSE: Y,
     SIDEBAR_CLOSE_GUILD: U,

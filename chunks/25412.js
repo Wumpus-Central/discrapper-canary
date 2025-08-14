@@ -11,65 +11,65 @@ function u(e) {
     return t * t * t * e;
 }
 function f(e, t, { kL: r = 1, kC: b = 1, kH: d = 1 } = {}) {
-    let h, p, m;
+    let h, p;
     [e, t] = (0, o.Z)([e, t]);
-    let [g, y, v] = n.Z.from(e),
-        Z = s.Z.from(n.Z, [g, y, v])[1],
-        [w, M, k] = n.Z.from(t),
-        O = s.Z.from(n.Z, [w, M, k])[1];
-    Z < 0 && (Z = 0), O < 0 && (O = 0);
-    let E = u((Z + O) / 2),
-        C = 0.5 * (1 - Math.sqrt(E / (E + 6103515625))),
-        x = (1 + C) * y,
-        j = (1 + C) * M,
-        R = Math.sqrt(x ** 2 + v ** 2),
-        A = Math.sqrt(j ** 2 + k ** 2),
-        _ = 0 === x && 0 === v ? 0 : Math.atan2(v, x),
-        B = 0 === j && 0 === k ? 0 : Math.atan2(k, j);
-    _ < 0 && (_ += 2 * i), B < 0 && (B += 2 * i), (_ *= c);
-    let N = w - g,
-        S = A - R,
-        I = (B *= c) - _,
-        P = _ + B,
-        D = Math.abs(I);
-    R * A == 0
+    let [m, g, y] = n.Z.from(e),
+        v = s.Z.from(n.Z, [m, g, y])[1],
+        [Z, w, M] = n.Z.from(t),
+        k = s.Z.from(n.Z, [Z, w, M])[1];
+    v < 0 && (v = 0), k < 0 && (k = 0);
+    let O = u((v + k) / 2),
+        E = 0.5 * (1 - Math.sqrt(O / (O + 6103515625))),
+        C = (1 + E) * g,
+        x = (1 + E) * w,
+        j = Math.sqrt(C ** 2 + y ** 2),
+        R = Math.sqrt(x ** 2 + M ** 2),
+        A = 0 === C && 0 === y ? 0 : Math.atan2(y, C),
+        _ = 0 === x && 0 === M ? 0 : Math.atan2(M, x);
+    A < 0 && (A += 2 * i), _ < 0 && (_ += 2 * i), (A *= c);
+    let B = Z - m,
+        N = R - j,
+        S = (_ *= c) - A,
+        I = A + _,
+        P = Math.abs(S);
+    j * R == 0
         ? (h = 0)
-        : D <= 180
-          ? (h = I)
-          : I > 180
-            ? (h = I - 360)
-            : I < -180
-              ? (h = I + 360)
+        : P <= 180
+          ? (h = S)
+          : S > 180
+            ? (h = S - 360)
+            : S < -180
+              ? (h = S + 360)
               : a.Z.warn("the unthinkable has happened");
-    let T = 2 * Math.sqrt(A * R) * Math.sin((h * l) / 2),
-        L = (g + w) / 2,
-        F = (R + A) / 2,
-        q = u(F),
-        z = (L - 50) ** 2,
-        $ = 1 + (0.015 * z) / Math.sqrt(20 + z),
-        U = 1 + 0.045 * F,
-        W =
+    let D = 2 * Math.sqrt(R * j) * Math.sin((h * l) / 2),
+        T = (m + Z) / 2,
+        L = (j + R) / 2,
+        F = u(L),
+        q = (T - 50) ** 2,
+        z = 1 + (0.015 * q) / Math.sqrt(20 + q),
+        $ = 1 + 0.045 * L,
+        U =
             1 +
             0.015 *
-                F *
+                L *
                 (1 -
                     0.17 *
                         Math.cos(
-                            ((p = R * A == 0 ? P : D <= 180 ? P / 2 : P < 360 ? (P + 360) / 2 : (P - 360) / 2) - 30) *
+                            ((p = j * R == 0 ? I : P <= 180 ? I / 2 : I < 360 ? (I + 360) / 2 : (I - 360) / 2) - 30) *
                                 l,
                         ) +
                     0.24 * Math.cos(2 * p * l) +
                     0.32 * Math.cos((3 * p + 6) * l) -
                     0.2 * Math.cos((4 * p - 63) * l)),
-        G = (N / (r * $)) ** 2;
+        W = (B / (r * z)) ** 2;
     return Math.sqrt(
-        (G +=
-            (S / (b * U)) ** 2 +
-            (T / (d * W)) ** 2 +
-            (S / (b * U)) *
+        (W +=
+            (N / (b * $)) ** 2 +
+            (D / (d * U)) ** 2 +
+            (N / (b * $)) *
                 (-1 *
                     Math.sin(2 * (30 * Math.exp(-1 * ((p - 275) / 25) ** 2)) * l) *
-                    (2 * Math.sqrt(q / (q + 6103515625)))) *
-                (T / (d * W))),
+                    (2 * Math.sqrt(F / (F + 6103515625)))) *
+                (D / (d * U))),
     );
 }

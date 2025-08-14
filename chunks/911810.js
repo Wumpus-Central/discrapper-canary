@@ -4,7 +4,7 @@ n(73800);
 var i = n(120356),
     o = n.n(i),
     a = n(939350),
-    s = n(968769);
+    s = n(334405);
 function l(e) {
     let { contents: t, label: n, className: i, color: l = "default" } = e;
     return 0 === t.length

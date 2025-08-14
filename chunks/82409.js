@@ -3,29 +3,29 @@ var r = n(255367),
     i = n(73800),
     l = n(120356),
     o = n.n(l),
-    s = n(717976),
-    a = n(442837),
+    a = n(717976),
+    s = n(442837),
     c = n(481060),
     u = n(570140),
     d = n(45114),
-    h = n(493773);
+    p = n(493773);
 n(100527), n(906732);
-var p = n(377171),
-    f = n(315174),
+var f = n(377171),
+    h = n(315174),
     g = n(340541),
     m = n(768943),
     b = n(592125),
     O = n(430824),
     _ = n(375954),
     y = n(306680),
-    C = n(709054),
-    v = n(821020),
-    j = n(948154),
+    v = n(709054),
+    j = n(821020),
+    C = n(948154),
     E = n(804932),
-    S = n(725739),
-    x = n(787879),
-    I = n(370774),
-    P = n(334426),
+    x = n(725739),
+    S = n(787879),
+    P = n(370774),
+    I = n(334426),
     N = n(862149),
     w = n(207913),
     Z = n(553984),
@@ -33,7 +33,7 @@ var p = n(377171),
     A = n(982183),
     R = n(981631),
     D = n(388032),
-    L = n(548265);
+    L = n(567133);
 function M(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -61,7 +61,7 @@ function M(e) {
 }
 let k = [],
     U = {
-        controller: new s.Controller({
+        controller: new a.Controller({
             value: 1,
             immediate: !0,
         }),
@@ -76,53 +76,53 @@ let k = [],
 function G(e) {
     var t, n;
     let { includePanelSpacing: l } = e,
-        s = (0, E.fJ)(),
-        { selectedFilter: p } = (0, S.Z)(),
-        P = (0, a.e7)([x.Z], () => x.Z.oldestDisplayedMessageId),
-        N = (0, a.Wu)([x.Z], () => x.Z.getInboxMessages()),
-        w = (0, a.Wu)([y.ZP, O.Z, x.Z], () =>
+        a = (0, E.fJ)(),
+        { selectedFilter: f } = (0, x.Z)(),
+        I = (0, s.e7)([S.Z], () => S.Z.oldestDisplayedMessageId),
+        N = (0, s.Wu)([S.Z], () => S.Z.getInboxMessages()),
+        w = (0, s.Wu)([y.ZP, O.Z, S.Z], () =>
             N.filter(
                 (e) =>
-                    !(0, I.YH)({
+                    !(0, P.YH)({
                         messageId: e.id,
                         channelId: e.channelId,
                         guildId: e.guildId,
                         ReadStateStore_: y.ZP,
                         GuildStore_: O.Z,
-                    }) && !(0, I.Tj)(e, x.Z.selectedItemInfo),
+                    }) && !(0, P.Tj)(e, S.Z.selectedItemInfo),
             ),
         ),
-        D = (0, a.Wu)([y.ZP, O.Z, x.Z], () =>
+        D = (0, s.Wu)([y.ZP, O.Z, S.Z], () =>
             N.filter(
                 (e) =>
-                    (0, I.YH)({
+                    (0, P.YH)({
                         messageId: e.id,
                         channelId: e.channelId,
                         guildId: e.guildId,
                         ReadStateStore_: y.ZP,
                         GuildStore_: O.Z,
-                    }) || (0, I.Tj)(e, x.Z.selectedItemInfo),
+                    }) || (0, P.Tj)(e, S.Z.selectedItemInfo),
             ),
         ),
         G = i.useCallback(
             (e) => {
-                p !== A.V5.BOOKMARKS &&
-                    j.Z.loadMoreInbox({
-                        viewId: s,
+                f !== A.V5.BOOKMARKS &&
+                    C.Z.loadMoreInbox({
+                        viewId: a,
                         loadingTrigger: e,
                     });
             },
-            [p, s],
+            [f, a],
         ),
-        { hasLoadedEver: B, canLoadMore: W } = (0, a.cj)([x.Z], () => ({
-            hasLoadedEver: x.Z.hasLoadedEver,
-            canLoadMore: x.Z.canLoadMore({}),
+        { hasLoadedEver: B, canLoadMore: W } = (0, s.cj)([S.Z], () => ({
+            hasLoadedEver: S.Z.hasLoadedEver,
+            canLoadMore: S.Z.canLoadMore({}),
         }));
     i.useEffect(() => {
         W && !B && G(A.X.ON_OPEN);
     }, [W, B, G]),
         (function (e) {
-            let { unreadChannelIds: t } = (0, I.O4)();
+            let { unreadChannelIds: t } = (0, P.O4)();
             i.useEffect(() => {
                 null != e &&
                     t.forEach((e) => {
@@ -134,7 +134,7 @@ function G(e) {
                         null != r &&
                             null != i &&
                             l &&
-                            C.default.compare(i, r) >= 0 &&
+                            v.default.compare(i, r) >= 0 &&
                             d.In(
                                 e,
                                 {
@@ -147,7 +147,7 @@ function G(e) {
                     });
             }, [e, t]);
         })(B ? D : null);
-    let K = (0, a.Wu)([m.Z], () => m.Z.getSavedMessages()),
+    let K = (0, s.Wu)([m.Z], () => m.Z.getSavedMessages()),
         Y = i.useMemo(
             () =>
                 K.flatMap((e) => {
@@ -167,31 +167,31 @@ function G(e) {
                 }),
             [K],
         ),
-        q = V(w, p, P),
-        X = V(D, p, null);
-    (0, h.ZP)(() => {
+        q = V(w, f, I),
+        X = V(D, f, null);
+    (0, p.ZP)(() => {
         var e;
         u.Z.dispatch({ type: "NOTIFICATIONS_INBOX_OPEN" });
-        let t = (0, v.Ag)({ location: "NotificationsInboxSidebar" }).notificationCenterVariant,
-            n = null == (e = x.Z.getDevOverrides().navOnClick) || e;
-        if (t !== v.jP.SIDEBAR || !1 === n) return;
+        let t = (0, j.Ag)({ location: "NotificationsInboxSidebar" }).notificationCenterVariant,
+            n = null == (e = S.Z.getDevOverrides().navOnClick) || e;
+        if (t !== j.jP.SIDEBAR || !1 === n) return;
         let { message: r, isUnread: i } = (function (e, t) {
             var n, r, i;
             let l = null == (n = e[e.length - 1]) ? void 0 : n.message,
                 o = null == (r = t[t.length - 1]) ? void 0 : r.message,
-                s = null != o ? o : l;
-            if (null != s)
+                a = null != o ? o : l;
+            if (null != a)
                 return {
-                    message: s,
+                    message: a,
                     isUnread: null != o,
                 };
-            let a = x.Z.getNotifyingChannelIds();
-            if (null == a || 0 === a.length)
+            let s = S.Z.getNotifyingChannelIds();
+            if (null == s || 0 === s.length)
                 return {
                     message: null,
                     isUnread: !1,
                 };
-            let c = a[0],
+            let c = s[0],
                 u = y.ZP.getTrackedAckMessageId(c);
             return null == u
                 ? {
@@ -200,35 +200,35 @@ function G(e) {
                   }
                 : {
                       message: {
-                          id: C.default.atNextMillisecond(u),
+                          id: v.default.atNextMillisecond(u),
                           channel_id: c,
                       },
                       isUnread: null != (i = y.ZP.hasUnread(c)) && i,
                   };
         })(q, X);
         null != r &&
-            j.Z.inboxItemClick({
+            C.Z.inboxItemClick({
                 message: r,
                 channel: { id: r.channel_id },
                 isUnread: i,
                 isSidebar: !0,
                 track: !1,
-                viewId: s,
+                viewId: a,
             });
     }),
-        (0, h.zq)(() => {
+        (0, p.zq)(() => {
             u.Z.dispatch({ type: "NOTIFICATIONS_INBOX_CLOSE" });
         });
-    let { filterStyle: Q } = (0, v.pN)({ location: "NotificationsInboxSidebar" }),
+    let { filterStyle: Q } = (0, j.pN)({ location: "NotificationsInboxSidebar" }),
         { entrypoints: J } = (0, g._k)({ location: "NotificationsInboxSidebar" }),
-        $ = Q === v.v8.DROPDOWN && p !== A.V5.ALL,
-        ee = (0, A.H_)(p);
+        $ = Q === j.v8.DROPDOWN && f !== A.V5.ALL,
+        ee = (0, A.H_)(f);
     return (0, r.jsx)("nav", {
         className: o()(L.container, { [L.panelSpacing]: l }),
         children: (0, r.jsxs)(c.y5t, {
             forceLevel: 1,
             component: (0, r.jsx)(
-                f.ZP,
+                h.ZP,
                 ((t = M(
                     {
                         hasSubheader: !0,
@@ -242,7 +242,7 @@ function G(e) {
                             direction: "horizontal",
                             gap: 4,
                             style: { marginRight: -4 },
-                            children: Q === v.v8.DROPDOWN && !J && (0, r.jsx)(Z.p, {}),
+                            children: Q === j.v8.DROPDOWN && !J && (0, r.jsx)(Z.p, {}),
                         }),
                     }),
                 Object.getOwnPropertyDescriptors
@@ -260,16 +260,16 @@ function G(e) {
                 t),
             ),
             children: [
-                p === A.V5.ALL && (0, r.jsx)(z, { hideBanner: !B || p !== A.V5.ALL }),
+                f === A.V5.ALL && (0, r.jsx)(z, { hideBanner: !B || f !== A.V5.ALL }),
                 $ && (0, r.jsx)(c.LZC, { size: 8 }),
                 (0, r.jsx)(T.Z, {
                     className: L.messageList,
                     renderMessageGroup: H,
-                    messages: p === A.V5.BOOKMARKS ? Y : q,
-                    unreadMessages: p === A.V5.BOOKMARKS ? [] : X,
+                    messages: f === A.V5.BOOKMARKS ? Y : q,
+                    unreadMessages: f === A.V5.BOOKMARKS ? [] : X,
                     listName: "notifications-inbox",
                     renderLoadingState: F,
-                    ignoreGrouping: p === A.V5.BOOKMARKS,
+                    ignoreGrouping: f === A.V5.BOOKMARKS,
                     loadMore: G,
                 }),
             ],
@@ -287,7 +287,7 @@ function V(e, t, n) {
                 : e.filter((e) => {
                       let { id: r } = e;
                       return (
-                          !(C.default.age(r) > A.ib || (null != n && 0 >= C.default.compare(r, n))) && t === A.V5.ALL
+                          !(v.default.age(r) > A.ib || (null != n && 0 >= v.default.compare(r, n))) && t === A.V5.ALL
                       );
                   }),
         [e, t, n],
@@ -309,7 +309,7 @@ function H(e, t) {
 }
 function z(e) {
     let { hideBanner: t } = e,
-        n = (0, P.d)((e) => e.shouldHide());
+        n = (0, I.d)((e) => e.shouldHide());
     return (0, r.jsx)("div", {
         className: o()(L.caughtUpContainer, { [L.hide]: n || t }),
         children: (0, r.jsxs)("div", {
@@ -323,7 +323,7 @@ function z(e) {
                 }),
                 (0, r.jsx)(c.W6s, {
                     size: "sm",
-                    color: p.Z.TEXT_FEEDBACK_POSITIVE,
+                    color: f.Z.TEXT_FEEDBACK_POSITIVE,
                 }),
             ],
         }),

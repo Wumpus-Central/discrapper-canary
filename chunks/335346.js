@@ -3,7 +3,7 @@ var i = n(255367);
 n(73800);
 var r = n(120356),
     s = n.n(r),
-    a = n(185905);
+    a = n(557766);
 let l = (e) => {
     let { invertTail: t, leftOffset: n, rightOffset: r, tailSpineClassName: l, tailTargetInnerClassName: o } = e;
     return (0, i.jsxs)("div", {

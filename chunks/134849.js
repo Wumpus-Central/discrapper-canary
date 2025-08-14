@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x }), n(539854), n(388685);
+n.d(t, { Z: () => _ }), n(539854), n(388685);
 var i = n(255367),
     r = n(73800),
     o = n(442837),
@@ -13,7 +13,7 @@ var i = n(255367),
     h = n(371467),
     m = n(981631),
     g = n(388032),
-    y = n(92724);
+    y = n(63452);
 let O = [];
 function b(e) {
     return e.notification.id;
@@ -39,51 +39,50 @@ function E(e) {
         children: e,
     });
 }
-let _ = (e) => r.useState(() => new f.AS(e))[0],
-    x = r.memo(function (e) {
-        let { locked: t, pinned: n, showEmpty: p = !0 } = e,
-            y = (0, o.e7)(
-                [h.Z, c.Z],
-                () => {
-                    if (c.Z.isNotificationDisabled(a.OverlayNotificationDisabledSetting.TEXT_CHAT)) return O;
-                    let e = [],
-                        i = 0;
-                    for (let r of h.Z.getNotifications()) {
-                        if (i > 4) break;
-                        (!t || r.status !== m._1z.TIMED_OUT) &&
-                            (e.push({
-                                index: i,
-                                locked: t,
-                                pinned: n,
-                                notification: r,
-                            }),
-                            i++);
-                    }
-                    return e;
-                },
-                [t, n],
-                u.E6,
-            ),
-            x = _(t);
-        return (r.useLayoutEffect(() => x.updateState(y, t)),
-        r.useLayoutEffect(() => (x.initialize((0, d.i)()), () => x.cleanUp()), [x]),
-        0 !== y.length || t)
-            ? (0, i.jsx)(f.S4.Provider, {
-                  value: x,
-                  children: (0, i.jsx)(l.W3x, {
-                      items: y,
-                      renderItem: v,
-                      getItemKey: b,
-                      wrapChildren: E,
-                  }),
-              })
-            : p
-              ? t
-                  ? null
-                  : (0, i.jsx)(s.E, {
-                        emptyText: g.intl.string(g.t.O1Nbjo),
-                        icon: l.Dkj,
-                        absolute: !0,
-                    })
-              : null;
-    });
+let _ = r.memo(function (e) {
+    let { locked: t, pinned: n, showEmpty: p = !0 } = e,
+        y = (0, o.e7)(
+            [h.Z, c.Z],
+            () => {
+                if (c.Z.isNotificationDisabled(a.OverlayNotificationDisabledSetting.TEXT_CHAT)) return O;
+                let e = [],
+                    i = 0;
+                for (let r of h.Z.getNotifications()) {
+                    if (i > 4) break;
+                    (!t || r.status !== m._1z.TIMED_OUT) &&
+                        (e.push({
+                            index: i,
+                            locked: t,
+                            pinned: n,
+                            notification: r,
+                        }),
+                        i++);
+                }
+                return e;
+            },
+            [t, n],
+            u.E6,
+        ),
+        _ = r.useState(() => new f.AS(t))[0];
+    return (r.useLayoutEffect(() => _.updateState(y, t)),
+    r.useLayoutEffect(() => (_.initialize((0, d.i)()), () => _.cleanUp()), [_]),
+    0 !== y.length || t)
+        ? (0, i.jsx)(f.S4.Provider, {
+              value: _,
+              children: (0, i.jsx)(l.W3x, {
+                  items: y,
+                  renderItem: v,
+                  getItemKey: b,
+                  wrapChildren: E,
+              }),
+          })
+        : p
+          ? t
+              ? null
+              : (0, i.jsx)(s.E, {
+                    emptyText: g.intl.string(g.t.O1Nbjo),
+                    icon: l.Dkj,
+                    absolute: !0,
+                })
+          : null;
+});

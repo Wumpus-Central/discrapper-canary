@@ -5,7 +5,7 @@ var i = n(255367),
     a = n(481060),
     l = n(259580),
     o = n(991346),
-    c = n(758887);
+    c = n(321523);
 function d(e) {
     let { setting: t, hasChildren: n } = e;
     return (0, i.jsx)(a.Text, {
@@ -79,7 +79,7 @@ function u(e) {
 }
 function m() {
     let e = (0, o.Pt)(),
-        t = { children: [] },
+        t = [],
         n = Object.keys(e)
             .filter((t) => {
                 let n = e[t];
@@ -93,12 +93,12 @@ function m() {
                 };
             });
     n.filter((e) => null === e.parent).forEach((e) => {
-        t.children.push({
+        t.push({
             setting: e.setting,
             children: [],
         });
     });
-    let r = [...t.children];
+    let r = [...t];
     for (; r.length > 0; ) {
         let e = r.shift();
         if (null == e) continue;
@@ -119,7 +119,7 @@ function m() {
             }),
             (0, i.jsx)("div", {
                 className: c.tree,
-                children: t.children
+                children: t
                     .sort((e, t) => e.setting.localeCompare(t.setting))
                     .map((e) =>
                         (0, i.jsx)(

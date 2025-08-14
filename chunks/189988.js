@@ -4,7 +4,7 @@ n(73800);
 var l = n(624238),
     i = n(481060),
     o = n(388032),
-    a = n(89118);
+    a = n(673176);
 function c(e) {
     let { widgetType: t } = e;
     return (0, r.jsx)("div", {

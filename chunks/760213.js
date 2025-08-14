@@ -23,7 +23,7 @@ var r,
     E = n(251423),
     v = n(981631),
     j = n(388032),
-    I = n(43716),
+    I = n(878709),
     O =
         (((r = {})[(r.LOGIN_REQUIRED = 0)] = "LOGIN_REQUIRED"),
         (r[(r.SWITCHED = 1)] = "SWITCHED"),

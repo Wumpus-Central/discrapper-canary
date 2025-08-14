@@ -12,7 +12,7 @@ var i = n(255367),
     p = n(353926),
     f = n(703656),
     m = n(981631),
-    g = n(730955);
+    g = n(816282);
 let _ = n(575703),
     x = n(2984),
     b = [
@@ -50,15 +50,14 @@ function j(e) {
     let { children: t } = e;
     switch (
         (function () {
-            var e;
-            let [t, n] = l.useState(!1),
-                [i, o] = l.useState(!0),
-                a = (0, s.e7)([p.Z], () => p.Z.hasLoadedExperiments);
+            let [e, t] = l.useState(!1),
+                [n, i] = l.useState(!0),
+                o = (0, s.e7)([p.Z], () => p.Z.hasLoadedExperiments);
             return ((0, c.Z)(() => {}, 300), void 0 !== r)
                 ? r
-                : !i && a
-                  ? (t || n(!0), v(((e = 0), "default")))
-                  : i
+                : !n && o
+                  ? (e || t(!0), v("default"))
+                  : n
                     ? v("default")
                     : "loading";
         })()
@@ -151,20 +150,19 @@ class I extends l.Component {
         return e || o.tq || o.Em || t ? this.renderMobile() : this.renderDefault();
     }
     constructor(e) {
-        var t, n;
         super(e),
-            (t = "handleResize"),
-            (n = () => {
+            (function (e, t, n) {
+                t in e
+                    ? Object.defineProperty(e, t, {
+                          value: n,
+                          enumerable: !0,
+                          configurable: !0,
+                          writable: !0,
+                      })
+                    : (e[t] = n);
+            })(this, "handleResize", () => {
                 this.setState({ isMobileWidth: window.innerWidth <= 485 });
             }),
-            t in this
-                ? Object.defineProperty(this, t, {
-                      value: n,
-                      enumerable: !0,
-                      configurable: !0,
-                      writable: !0,
-                  })
-                : (this[t] = n),
             (this.state = { isMobileWidth: window.innerWidth <= 485 });
     }
 }

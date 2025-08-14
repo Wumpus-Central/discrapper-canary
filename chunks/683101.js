@@ -1,15 +1,15 @@
 n.d(t, { Z: () => I }), n(388685);
 var r = n(255367),
     l = n(73800),
-    s = n(392711),
-    i = n.n(s),
+    i = n(392711),
+    s = n.n(i),
     a = n(374470),
     o = n(481060),
     u = n(239091),
     c = n(294218),
     E = n(592125),
     d = n(388032),
-    _ = n(482688);
+    _ = n(374815);
 function A(e, t, n) {
     return (
         t in e
@@ -59,8 +59,8 @@ function m(e, t) {
 }
 class I extends l.PureComponent {
     render() {
-        let { result: e, listItemProps: t, searchOffset: n, index: l, totalResults: s } = this.props,
-            a = i().find(e, (e) => e.isSearchHit);
+        let { result: e, listItemProps: t, searchOffset: n, index: l, totalResults: i } = this.props,
+            a = s().find(e, (e) => e.isSearchHit);
         if (null == a) return null;
         let u = E.Z.getChannel(a.channel_id);
         if (null == u) return null;
@@ -73,7 +73,7 @@ class I extends l.PureComponent {
                 "li",
                 m(T({ className: _.container }, t), {
                     "aria-posinset": 1 + n + l,
-                    "aria-setsize": s,
+                    "aria-setsize": i,
                     "aria-labelledby": A,
                     children: [
                         (0, r.jsx)(o.P3F, {

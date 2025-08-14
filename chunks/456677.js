@@ -60,16 +60,6 @@ function c(e) {
                       }),
                 i),
             );
-        },
-        g = (e) => async (n) => {
-            let r = t.actions.find((t) => t.type === e),
-                i = null != r,
-                l = u[e],
-                a = n ? r : l;
-            if (null != a && (!i || n)) {
-                let n = d[e];
-                null != n ? m(!0, await n(t, a)) : m(!0, a);
-            } else m(!1, i ? r : l);
         };
     return (0, r.jsx)(r.Fragment, {
         children: c.map((e) => {
@@ -81,7 +71,16 @@ function c(e) {
                     triggerType: t.triggerType,
                     action: null != n ? n : u[e],
                     toggled: null != n,
-                    onToggleAction: g(e),
+                    onToggleAction: async (n) => {
+                        let r = t.actions.find((t) => t.type === e),
+                            i = null != r,
+                            l = u[e],
+                            a = n ? r : l;
+                        if (null != a && (!i || n)) {
+                            let n = d[e];
+                            null != n ? m(!0, await n(t, a)) : m(!0, a);
+                        } else m(!1, i ? r : l);
+                    },
                 },
                 e,
             );

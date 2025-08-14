@@ -23,10 +23,10 @@ var i = n(255367),
     v = n(210887),
     S = n(981631),
     T = n(388032),
-    I = n(762712),
-    N = n(210297),
-    y = n(794287),
-    A = n(881488);
+    I = n(740508),
+    N = n(315091),
+    y = n(149715),
+    A = n(197571);
 function P(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -142,7 +142,7 @@ function k(e) {
                     : O.name,
             [O, b],
         ),
-        [M, B] = r.useState(null != L ? L : "???"),
+        [B, M] = r.useState(null != L ? L : "???"),
         U = a()(y.flexCenter, {
             [I.game]: !s,
             [I.activeGame]: s,
@@ -246,14 +246,14 @@ function k(e) {
                                       className: a()(I.gameName, I.gameNameInput),
                                       type: "text",
                                       maxLength: 128,
-                                      value: M,
+                                      value: B,
                                       onBlur: function () {
-                                          O.name !== M && u.Z.editName(O, M);
+                                          O.name !== B && u.Z.editName(O, B);
                                       },
                                       onKeyDown: function (e) {
                                           13 === e.keyCode && (e.currentTarget.blur(), e.preventDefault());
                                       },
-                                      onChange: (e) => B(e.target.value),
+                                      onChange: (e) => M(e.target.value),
                                   }),
                             (function () {
                                 let e,
@@ -437,7 +437,7 @@ function L() {
         }),
     });
 }
-function M(e) {
+function B(e) {
     let { children: t } = e;
     return (0, i.jsxs)(D, {
         className: A.marginTop40,
@@ -452,7 +452,7 @@ function M(e) {
         ],
     });
 }
-let B = (0, C.oH)(function () {
+let M = (0, C.oH)(function () {
         for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
         return new Set(t.map((e) => e.exePath));
     }),
@@ -461,7 +461,7 @@ let B = (0, C.oH)(function () {
             s = (0, l.Wu)([g.ZP], () => g.ZP.getGamesSeen(!1)),
             { runningGame: o, overrideExePaths: u } = (0, l.cj)([g.ZP], () => ({
                 runningGame: g.ZP.getVisibleGame(),
-                overrideExePaths: B(...g.ZP.getOverrides()),
+                overrideExePaths: M(...g.ZP.getOverrides()),
             })),
             { gameHistory: m, robloxSubgameHistory: p } = r.useMemo(
                 () =>
@@ -518,7 +518,7 @@ let B = (0, C.oH)(function () {
                         ],
                     }),
                     0 === m.length
-                        ? (0, i.jsx)(M, { children: (0, i.jsx)(d.OZU, { children: T.intl.string(T.t["1yiJws"]) }) })
+                        ? (0, i.jsx)(B, { children: (0, i.jsx)(d.OZU, { children: T.intl.string(T.t["1yiJws"]) }) })
                         : (0, i.jsxs)(d.hjN, {
                               className: A.marginTop40,
                               children: [

@@ -10,7 +10,7 @@ var i = n(255367),
     u = n(936726),
     p = n(981631),
     m = n(388032),
-    b = n(876841);
+    b = n(246906);
 function g(e) {
     let {
             webhooks: t,
@@ -42,7 +42,7 @@ function g(e) {
                 }
             return Object.values(e).sort((e, t) => e.channel.name.localeCompare(t.channel.name));
         }, [n, t]),
-        O = r.useCallback(
+        y = r.useCallback(
             (e) => {
                 x() && (e === (null == f ? void 0 : f.id) ? o.Z.stopEditingWebhook() : o.Z.startEditingWebhook(e));
             },
@@ -121,7 +121,7 @@ function g(e) {
                 lastCreatedWebhookId: g,
                 editedWebhook: f,
                 errors: h,
-                toggleWebhookExpand: O,
+                toggleWebhookExpand: y,
             });
         }),
     });

@@ -22,7 +22,7 @@ var r = n(255367),
     I = n(625938),
     T = n(981631),
     S = n(388032),
-    A = n(337022);
+    A = n(84709);
 function N(e, t, n) {
     return (
         t in e
@@ -84,8 +84,8 @@ let w = 40,
             }),
             x = (0, s.e7)([f.default], () => f.default.getId()),
             M = (0, s.e7)([m.default], () => m.default.getUser(o)),
-            j = (0, s.e7)([h.Z], () => h.Z.getChannelId() === N.id),
-            k = (0, s.e7)([p.Z], () => p.Z.can(T.Plq.CONNECT, N)),
+            k = (0, s.e7)([h.Z], () => h.Z.getChannelId() === N.id),
+            j = (0, s.e7)([p.Z], () => p.Z.can(T.Plq.CONNECT, N)),
             U = (null == t ? void 0 : t.emoji) == null || (0, O.K)(t.emoji, N),
             G = (0, s.e7)([_.ZP], () => (null != N.guild_id && null != M ? _.ZP.getMember(N.guild_id, o) : null)),
             B = i.useMemo(() => (null != M ? (0, d.SG)(void 0, G, M, { size: w }) : void 0), [G, M]);
@@ -93,8 +93,8 @@ let w = 40,
             (0, E.UP)();
         }, []);
         let Z = () => {
-            !j &&
-                k &&
+            !k &&
+                j &&
                 (u.default.selectVoiceChannel(N.id),
                 g.default.track(T.rMx.HANG_STATUS_CTA_CLICKED, {
                     source: "HangStatusPopout",
@@ -193,14 +193,14 @@ let w = 40,
                         }),
                     ],
                 }),
-                !j && k
+                !k && j
                     ? (0, r.jsx)(c.zxk, {
                           size: "sm",
                           text: S.intl.string(S.t["B/dHXF"]),
                           onClick: Z,
                       })
                     : null,
-                j && U
+                k && U
                     ? (0, r.jsx)(c.zxk, {
                           size: "sm",
                           text: S.intl.string(S.t.xcVcFR),

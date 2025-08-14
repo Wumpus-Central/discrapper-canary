@@ -62,7 +62,7 @@ var r = i(255367),
     en = i(981631),
     el = i(474936),
     es = i(388032),
-    ea = i(726773);
+    ea = i(300179);
 function eo(e) {
     for (var t = 1; t < arguments.length; t++) {
         var i = null != arguments[t] ? arguments[t] : {},
@@ -303,161 +303,14 @@ function eh(e) {
         });
     if (0 === K.length) return null;
     let eo = () =>
-            (0, r.jsx)("div", {
-                className: ea.hoverUpsellContainer,
-                children: (0, r.jsx)(P.Z, {
-                    fullWidth: !0,
-                    className: ea.__invalid_premiumSubscribeButton,
-                    disabled: R,
-                    onClick: (e) => e.stopPropagation(),
-                    textOptions: { textOverride: es.intl.string(es.t.sEAnVF) },
-                    subscriptionTier: el.Si.TIER_2,
-                }),
-            }),
-        ed = () =>
-            (0, r.jsx)(m.zxk, {
-                variant: "primary",
-                onClick: (e) => {
-                    e.stopPropagation(), F(e);
-                },
-                text: es.intl.string(es.t.FdGl5O),
-                fullWidth: !0,
-            }),
-        eu = () => {
-            let e = () => {
-                    j.default.track(en.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
-                        collectibles_shop_session_id: null == I ? void 0 : I.sessionId,
-                        sku_id: t.skuId,
-                        page_type: i,
-                        page_section: null == I ? void 0 : I.pageSection,
-                        page_category: i === er.AW.HOME || null == I ? void 0 : I.pageCategory,
-                        page_index: i === er.AW.CATALOG ? (null == I ? void 0 : I.pageIndex) : void 0,
-                        page_size: i === er.AW.CATALOG ? (null == I ? void 0 : I.pageSize) : void 0,
-                        tile_type: u.Z[t.type],
-                        tile_position: String(null == I ? void 0 : I.tilePosition),
-                        cta_name: "buy button",
-                    }),
-                        (0, y.Z)({
-                            skuId: (0, Q.S)({
-                                product: t,
-                                selectedVariantIndex: l,
-                            }),
-                            analyticsLocations: a,
-                            returnRef: s,
-                            variantsReturnStyle: c.v.VARIANTS_GROUP,
-                        });
-                },
-                n = q
-                    ? es.intl.formatToPlainString(es.t["5U5RBw"], { discountOfferAmount: U })
-                    : es.intl.formatToPlainString(es.t["cNSL/v"], { price: Z });
-            return (0, r.jsx)(m.zxk, {
-                variant: "primary",
-                onClick: (t) => {
-                    t.stopPropagation(), e();
-                },
-                text: n,
-                fullWidth: !0,
-            });
-        },
-        ec = () => {
-            let e = () => {
-                j.default.track(en.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
-                    collectibles_shop_session_id: null == I ? void 0 : I.sessionId,
-                    sku_id: t.skuId,
-                    page_type: i,
-                    page_section: null == I ? void 0 : I.pageSection,
-                    page_category: i === er.AW.HOME || null == I ? void 0 : I.pageCategory,
-                    page_index: i === er.AW.CATALOG ? (null == I ? void 0 : I.pageIndex) : void 0,
-                    page_size: i === er.AW.CATALOG ? (null == I ? void 0 : I.pageSize) : void 0,
-                    tile_type: u.Z[t.type],
-                    tile_position: String(null == I ? void 0 : I.tilePosition),
-                    cta_name: "claim with orbs button",
-                }),
-                    (0, E.qA)({
-                        skuId: (0, Q.S)({
-                            product: t,
-                            selectedVariantIndex: l,
-                        }),
-                        onCheckoutSuccess: (e) => {
-                            var i;
-                            let { entitlements: r } = e;
-                            (0, A.qg)({ variantsReturnStyle: c.v.VARIANTS_GROUP }),
-                                (0, ei.Z)({
-                                    product: t,
-                                    analyticsLocations: a,
-                                    itemConsumed: null == (i = r[0]) ? void 0 : i.consumed,
-                                    purchaseType: er.o8.ORB,
-                                });
-                        },
-                        analyticsLocations: a,
-                    });
-            };
-            return (0, r.jsx)(m.zxk, {
-                variant: "primary",
-                text: es.intl.format(es.t.kAgx5O, {
-                    orbPrice: X[0].amount,
-                    orbIconHook: () => (0, r.jsx)(O.Z, { className: ea.orbIconAligned }),
-                }),
-                onClick: (t) => {
-                    t.stopPropagation(), e();
-                },
-                "aria-label": es.intl.formatToPlainString(es.t["fNG/09"], { orbPrice: X[0].amount }),
-                fullWidth: !0,
-            });
-        },
-        ep = () => {
-            let e = async () => {
-                j.default.track(en.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
-                    collectibles_shop_session_id: null == I ? void 0 : I.sessionId,
-                    sku_id: t.skuId,
-                    page_type: i,
-                    page_section: null == I ? void 0 : I.pageSection,
-                    page_category: i === er.AW.HOME || null == I ? void 0 : I.pageCategory,
-                    page_index: i === er.AW.CATALOG ? (null == I ? void 0 : I.pageIndex) : void 0,
-                    page_size: i === er.AW.CATALOG ? (null == I ? void 0 : I.pageSize) : void 0,
-                    tile_type: u.Z[t.type],
-                    tile_position: String(null == I ? void 0 : I.tilePosition),
-                    cta_name: "claim premium product button",
-                }),
-                    await (0, A.fK)(t.skuId),
-                    (0, ei.Z)({
-                        product: t,
-                        analyticsLocations: a,
-                        purchaseType: er.o8.PREMIUM_PURCHASE,
-                    });
-            };
-            return (0, r.jsx)(m.zxk, {
-                variant: "primary",
-                onClick: (t) => {
-                    t.stopPropagation(), e();
-                },
-                disabled: R,
-                loading: L,
-                loadingStartedLabel: es.intl.string(es.t["TYw+9v"]),
-                loadingFinishedLabel: es.intl.string(es.t.Pg1UPz),
-                text: es.intl.string(es.t.zp6caG),
-                fullWidth: !0,
-            });
-        },
-        eg = () =>
-            (0, r.jsx)(m.zxk, {
-                variant: "primary",
-                onClick: (e) => {
-                    e.stopPropagation(), D();
-                },
-                loading: V,
-                text: es.intl.string(es.t.MAS7uL),
-                fullWidth: !0,
-            }),
-        em = () =>
-            (0, r.jsx)(m.zxk, {
-                variant: "primary",
-                onClick: (e) => {
-                    e.stopPropagation(), F(e);
-                },
-                text: es.intl.string(es.t.GpnHfH),
-                fullWidth: !0,
-            });
+        (0, r.jsx)(m.zxk, {
+            variant: "primary",
+            onClick: (e) => {
+                e.stopPropagation(), F(e);
+            },
+            text: es.intl.string(es.t.FdGl5O),
+            fullWidth: !0,
+        });
     return (0, r.jsxs)("div", {
         className: ea.detailsWrapper,
         children: [
@@ -507,14 +360,168 @@ function eh(e) {
                     className: ea.buttonsContainer,
                     children: [
                         (() => {
-                            if (h && !g && !k) return eo();
-                            if (!W || C) return ed();
-                            if (v) return eg();
-                            if (h) return ep();
-                            if ($)
-                                if (ee) return ec();
-                                else return ed();
-                            return i === er.AW.ORBS ? em() : eu();
+                            if (h && !g && !k)
+                                return (0, r.jsx)("div", {
+                                    className: ea.hoverUpsellContainer,
+                                    children: (0, r.jsx)(P.Z, {
+                                        fullWidth: !0,
+                                        className: ea.__invalid_premiumSubscribeButton,
+                                        disabled: R,
+                                        onClick: (e) => e.stopPropagation(),
+                                        textOptions: { textOverride: es.intl.string(es.t.sEAnVF) },
+                                        subscriptionTier: el.Si.TIER_2,
+                                    }),
+                                });
+                            if (!W || C) return eo();
+                            if (v)
+                                return (0, r.jsx)(m.zxk, {
+                                    variant: "primary",
+                                    onClick: (e) => {
+                                        e.stopPropagation(), D();
+                                    },
+                                    loading: V,
+                                    text: es.intl.string(es.t.MAS7uL),
+                                    fullWidth: !0,
+                                });
+                            {
+                                if (h) {
+                                    let e = async () => {
+                                        j.default.track(en.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                                            collectibles_shop_session_id: null == I ? void 0 : I.sessionId,
+                                            sku_id: t.skuId,
+                                            page_type: i,
+                                            page_section: null == I ? void 0 : I.pageSection,
+                                            page_category: i === er.AW.HOME || null == I ? void 0 : I.pageCategory,
+                                            page_index:
+                                                i === er.AW.CATALOG ? (null == I ? void 0 : I.pageIndex) : void 0,
+                                            page_size: i === er.AW.CATALOG ? (null == I ? void 0 : I.pageSize) : void 0,
+                                            tile_type: u.Z[t.type],
+                                            tile_position: String(null == I ? void 0 : I.tilePosition),
+                                            cta_name: "claim premium product button",
+                                        }),
+                                            await (0, A.fK)(t.skuId),
+                                            (0, ei.Z)({
+                                                product: t,
+                                                analyticsLocations: a,
+                                                purchaseType: er.o8.PREMIUM_PURCHASE,
+                                            });
+                                    };
+                                    return (0, r.jsx)(m.zxk, {
+                                        variant: "primary",
+                                        onClick: (t) => {
+                                            t.stopPropagation(), e();
+                                        },
+                                        disabled: R,
+                                        loading: L,
+                                        loadingStartedLabel: es.intl.string(es.t["TYw+9v"]),
+                                        loadingFinishedLabel: es.intl.string(es.t.Pg1UPz),
+                                        text: es.intl.string(es.t.zp6caG),
+                                        fullWidth: !0,
+                                    });
+                                }
+                                if ($)
+                                    if (ee)
+                                        return (0, r.jsx)(m.zxk, {
+                                            variant: "primary",
+                                            text: es.intl.format(es.t.kAgx5O, {
+                                                orbPrice: X[0].amount,
+                                                orbIconHook: () => (0, r.jsx)(O.Z, { className: ea.orbIconAligned }),
+                                            }),
+                                            onClick: (e) => {
+                                                e.stopPropagation(),
+                                                    j.default.track(en.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                                                        collectibles_shop_session_id: null == I ? void 0 : I.sessionId,
+                                                        sku_id: t.skuId,
+                                                        page_type: i,
+                                                        page_section: null == I ? void 0 : I.pageSection,
+                                                        page_category:
+                                                            i === er.AW.HOME || null == I ? void 0 : I.pageCategory,
+                                                        page_index:
+                                                            i === er.AW.CATALOG
+                                                                ? null == I
+                                                                    ? void 0
+                                                                    : I.pageIndex
+                                                                : void 0,
+                                                        page_size:
+                                                            i === er.AW.CATALOG
+                                                                ? null == I
+                                                                    ? void 0
+                                                                    : I.pageSize
+                                                                : void 0,
+                                                        tile_type: u.Z[t.type],
+                                                        tile_position: String(null == I ? void 0 : I.tilePosition),
+                                                        cta_name: "claim with orbs button",
+                                                    }),
+                                                    (0, E.qA)({
+                                                        skuId: (0, Q.S)({
+                                                            product: t,
+                                                            selectedVariantIndex: l,
+                                                        }),
+                                                        onCheckoutSuccess: (e) => {
+                                                            var i;
+                                                            let { entitlements: r } = e;
+                                                            (0, A.qg)({ variantsReturnStyle: c.v.VARIANTS_GROUP }),
+                                                                (0, ei.Z)({
+                                                                    product: t,
+                                                                    analyticsLocations: a,
+                                                                    itemConsumed:
+                                                                        null == (i = r[0]) ? void 0 : i.consumed,
+                                                                    purchaseType: er.o8.ORB,
+                                                                });
+                                                        },
+                                                        analyticsLocations: a,
+                                                    });
+                                            },
+                                            "aria-label": es.intl.formatToPlainString(es.t["fNG/09"], {
+                                                orbPrice: X[0].amount,
+                                            }),
+                                            fullWidth: !0,
+                                        });
+                                    else return eo();
+                                if (i === er.AW.ORBS)
+                                    return (0, r.jsx)(m.zxk, {
+                                        variant: "primary",
+                                        onClick: (e) => {
+                                            e.stopPropagation(), F(e);
+                                        },
+                                        text: es.intl.string(es.t.GpnHfH),
+                                        fullWidth: !0,
+                                    });
+                                let e = q
+                                    ? es.intl.formatToPlainString(es.t["5U5RBw"], { discountOfferAmount: U })
+                                    : es.intl.formatToPlainString(es.t["cNSL/v"], { price: Z });
+                                return (0, r.jsx)(m.zxk, {
+                                    variant: "primary",
+                                    onClick: (e) => {
+                                        e.stopPropagation(),
+                                            j.default.track(en.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                                                collectibles_shop_session_id: null == I ? void 0 : I.sessionId,
+                                                sku_id: t.skuId,
+                                                page_type: i,
+                                                page_section: null == I ? void 0 : I.pageSection,
+                                                page_category: i === er.AW.HOME || null == I ? void 0 : I.pageCategory,
+                                                page_index:
+                                                    i === er.AW.CATALOG ? (null == I ? void 0 : I.pageIndex) : void 0,
+                                                page_size:
+                                                    i === er.AW.CATALOG ? (null == I ? void 0 : I.pageSize) : void 0,
+                                                tile_type: u.Z[t.type],
+                                                tile_position: String(null == I ? void 0 : I.tilePosition),
+                                                cta_name: "buy button",
+                                            }),
+                                            (0, y.Z)({
+                                                skuId: (0, Q.S)({
+                                                    product: t,
+                                                    selectedVariantIndex: l,
+                                                }),
+                                                analyticsLocations: a,
+                                                returnRef: s,
+                                                variantsReturnStyle: c.v.VARIANTS_GROUP,
+                                            });
+                                    },
+                                    text: e,
+                                    fullWidth: !0,
+                                });
+                            }
                         })(),
                         h || o.tq || J || !W || i === er.AW.ORBS
                             ? null

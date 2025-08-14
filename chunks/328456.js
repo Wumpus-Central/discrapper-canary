@@ -26,16 +26,16 @@ class s {
         }, new Map());
     }
     constructor(e) {
-        var t, i;
-        (i = void 0),
-            (t = "itemsByTypes") in this
-                ? Object.defineProperty(this, t, {
+        !(function (e, t, i) {
+            t in e
+                ? Object.defineProperty(e, t, {
                       value: i,
                       enumerable: !0,
                       configurable: !0,
                       writable: !0,
                   })
-                : (this[t] = i),
+                : (e[t] = i);
+        })(this, "itemsByTypes", void 0),
             (this.itemsByTypes = this.sortByTypes(e));
     }
 }

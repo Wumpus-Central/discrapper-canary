@@ -1,4 +1,4 @@
-n.d(t, { Z: () => j }), n(388685), n(539854);
+n.d(t, { Z: () => k }), n(388685), n(539854);
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -23,7 +23,7 @@ var r = n(255367),
     T = n(228168),
     S = n(231338),
     A = n(388032),
-    N = n(405479);
+    N = n(31948);
 function C(e, t, n) {
     return (
         t in e
@@ -103,11 +103,11 @@ let M = {
     animationPhase: "awaitingInput",
     height: "auto",
 };
-function j(e) {
+function k(e) {
     let { user: t, currentUser: n, displayProfile: o, guildId: m, onOpenUserProfileModal: C, onClose: P } = e,
         w = (0, _.Dt)(),
-        { analyticsLocations: j } = (0, f.ZP)(),
-        { trackUserProfileAction: k } = (0, g.KZ)(),
+        { analyticsLocations: k } = (0, f.ZP)(),
+        { trackUserProfileAction: j } = (0, g.KZ)(),
         { live: U, stream: G } = (0, E.Z)(t.id),
         { voiceChannel: B, voiceActivity: Z } = (0, b.Z)({
             userId: t.id,
@@ -178,9 +178,9 @@ function j(e) {
                       color: l.zx.Colors.TRANSPARENT,
                       className: a()(N.viewAllButton, er && N.isShown),
                       onClick: () => {
-                          k({
+                          j({
                               action: "PRESS_VIEW_PROFILE",
-                              analyticsLocations: j,
+                              analyticsLocations: k,
                           }),
                               C({ section: T.oh.ACTIVITY });
                       },
@@ -193,9 +193,9 @@ function j(e) {
                 : null,
         eu = i.useCallback(() => {
             if (null == z.current || null == X.current) return;
-            k({
+            j({
                 action: "PRESS_SHOW_MORE_ACTIVITY",
-                analyticsLocations: j,
+                analyticsLocations: k,
             });
             let e = z.current.getBoundingClientRect().height,
                 t = X.current.getBoundingClientRect().height;
@@ -217,7 +217,7 @@ function j(e) {
                                 null == (e = q.current) || e.focus();
                         }, D));
                 });
-        }, [j, k]);
+        }, [k, j]);
     return ((0, u.zq)(() => {
         null != Q.current && window.clearTimeout(Q.current);
     }),

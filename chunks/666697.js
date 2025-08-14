@@ -22,7 +22,7 @@ var r = n(255367),
     y = n(979007),
     I = n(981631),
     O = n(388032),
-    S = n(995138);
+    S = n(352677);
 let P = function (e) {
     let { applicationId: t, onSelectApplication: n, onScroll: P, initialTab: E, onButtonsVisibilityChange: N } = e,
         T = a.useRef(null),
@@ -54,16 +54,16 @@ let P = function (e) {
         M = (0, i.e7)([p.Z], () => p.Z.getFetchState({ applicationId: null == A ? void 0 : A.id })),
         G = (0, i.e7)([p.Z], () => p.Z.getSimilarApplications({ applicationId: null == A ? void 0 : A.id })),
         B = a.useMemo(() => (null == G ? void 0 : G.applications.slice(0, 3)), [G]),
-        U = {
+        z = {
             displayedSimilarApplications: B,
             previousView: k,
         },
-        z = a.useRef(U);
+        U = a.useRef(z);
     a.useEffect(() => {
-        z.current = U;
+        U.current = z;
     }),
         a.useEffect(() => {
-            let { displayedSimilarApplications: e, previousView: t } = z.current;
+            let { displayedSimilarApplications: e, previousView: t } = U.current;
             (null == A ? void 0 : A.id) != null &&
                 M !== p.M.FETCHING &&
                 (0, m.zZ)(I.rMx.APP_DIRECTORY_PAGE_VIEWED, {

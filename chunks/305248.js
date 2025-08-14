@@ -3,25 +3,25 @@ var r = n(255367),
     i = n(73800),
     l = n(392711),
     o = n.n(l),
-    s = n(442837),
-    a = n(570140),
+    a = n(442837),
+    s = n(570140),
     c = n(45114),
     u = n(404616),
     d = n(470623),
-    h = n(344185),
-    p = n(488131),
-    f = n(592125),
+    p = n(344185),
+    f = n(488131),
+    h = n(592125),
     g = n(823379),
     m = n(709054),
     b = n(981631),
     O = n(124368),
-    _ = n(612622);
+    _ = n(479014);
 function y(e) {
     let { channel: t, channelRecord: n, deleteChannel: l } = e,
-        y = (0, s.Wu)(
-            [h.Z, f.Z],
+        y = (0, a.Wu)(
+            [p.Z, h.Z],
             () =>
-                o()(h.Z.getThreadsForParent(n.guild_id, n.id))
+                o()(p.Z.getThreadsForParent(n.guild_id, n.id))
                     .values()
                     .filter((e) => {
                         let { id: n } = e;
@@ -29,15 +29,15 @@ function y(e) {
                     })
                     .map((e) => {
                         let { id: t } = e;
-                        return f.Z.getChannel(t);
+                        return h.Z.getChannel(t);
                     })
                     .filter(g.lm)
                     .sort((e, t) => m.default.compare(e.id, t.id))
                     .value(),
             [t.oldestReadMessageId, n.guild_id, n.id],
         ),
-        C = i.useCallback((e, t) => {
-            (0, p.ok)(e, t, O.on.INBOX);
+        v = i.useCallback((e, t) => {
+            (0, f.ok)(e, t, O.on.INBOX);
         }, []);
     return (
         i.useEffect(() => {
@@ -46,7 +46,7 @@ function y(e) {
                 t.hasError ||
                 t.collapsed ||
                 0 !== y.length ||
-                a.Z.wait(() => {
+                s.Z.wait(() => {
                     (0, c.In)(
                         t.channelId,
                         {
@@ -69,7 +69,7 @@ function y(e) {
                         children: (0, r.jsx)(u.ZP, {
                             className: _.forumPost,
                             threadId: e.id,
-                            goToThread: C,
+                            goToThread: v,
                         }),
                     },
                     e.id,

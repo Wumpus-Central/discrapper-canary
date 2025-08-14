@@ -1,8 +1,8 @@
 n.d(t, { Z: () => a });
 var r = n(255367),
     l = n(73800),
-    s = n(481060),
-    i = n(58922);
+    i = n(481060),
+    s = n(254610);
 function a(e) {
     let { onPageChange: t, offset: n, totalCount: a, pageSize: o, renderPageWrapper: u } = e,
         c = Math.floor(n / o) + 1,
@@ -13,8 +13,8 @@ function a(e) {
             [t],
         );
     return (0, r.jsx)("div", {
-        className: i.container,
-        children: (0, r.jsx)(s.DsT, {
+        className: s.container,
+        children: (0, r.jsx)(i.DsT, {
             currentPage: c,
             totalCount: a,
             pageSize: o,
