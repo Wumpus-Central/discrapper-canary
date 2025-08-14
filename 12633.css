@@ -73252,21 +73252,6 @@ strong {
     flex: 1
 }
 
-.buttons__51057 {
-    display: flex
-}
-
-.button__51057 {
-    border-radius: 8px;
-    padding: 3px 8px
-}
-
-.buttonInner__51057 {
-    align-items: center;
-    display: flex;
-    justify-content: center
-}
-
 .chatHeaderBar_dc83f5 {
     align-items: center;
     background-color: var(--background-surface-high);
