@@ -1,8 +1,8 @@
 n.d(t, { Z: () => a });
 var r = n(255367);
 n(73800);
-var l = n(750312),
-    i = n(189988),
+var i = n(750312),
+    l = n(189988),
     o = n(623132);
 function a(e) {
     var { user: t, widget: n, isGameFetching: a, containerClassName: c, disableInteraction: s } = e,
@@ -10,25 +10,25 @@ function a(e) {
             if (null == e) return {};
             var n,
                 r,
-                l = (function (e, t) {
+                i = (function (e, t) {
                     if (null == e) return {};
                     var n,
                         r,
-                        l = {},
-                        i = Object.keys(e);
-                    for (r = 0; r < i.length; r++) (n = i[r]), t.indexOf(n) >= 0 || (l[n] = e[n]);
-                    return l;
+                        i = {},
+                        l = Object.keys(e);
+                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                    return i;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var i = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < i.length; r++)
-                    (n = i[r]),
-                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]);
+                var l = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < l.length; r++)
+                    (n = l[r]),
+                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
             }
-            return l;
+            return i;
         })(e, ["user", "widget", "isGameFetching", "containerClassName", "disableInteraction"]);
     let u = n.games[0];
-    return (0, r.jsx)(l.Z, {
+    return (0, r.jsx)(i.Z, {
         userId: t.id,
         widget: n,
         className: c,
@@ -72,6 +72,6 @@ function a(e) {
                           d,
                       ),
                   )
-                : (0, r.jsx)(i.Z, { widgetType: n.type }),
+                : (0, r.jsx)(l.Z, { widgetType: n.type }),
     });
 }

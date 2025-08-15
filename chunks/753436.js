@@ -1,8 +1,8 @@
 n.d(t, { S: () => f });
 var r = n(255367);
 n(73800);
-var l = n(594174),
-    i = n(971082),
+var i = n(594174),
+    l = n(971082),
     o = n(817053),
     a = n(533815),
     c = n(853072),
@@ -21,7 +21,7 @@ function f(e) {
         } = e,
         j = (0, c.Z)(t.applicationId),
         y = j.length > 0,
-        O = l.default.getCurrentUser(),
+        O = i.default.getCurrentUser(),
         x = (null == O ? void 0 : O.id) === n;
     return g
         ? (0, r.jsx)("div", { className: d.loadingCover })
@@ -46,7 +46,7 @@ function f(e) {
                       }),
                   !b &&
                       y &&
-                      (0, r.jsx)(i.Z, {
+                      (0, r.jsx)(l.Z, {
                           label: s.intl.formatToPlainString(s.t.ujhJdH, { numFriends: j.length }),
                           className: u.socialProof,
                           users: j,

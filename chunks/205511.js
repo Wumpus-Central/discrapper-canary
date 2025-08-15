@@ -1,4 +1,4 @@
-n.d(t, { Z: () => E });
+n.d(t, { Z: () => O });
 var r = n(255367),
     s = n(73800),
     o = n(120356),
@@ -27,7 +27,7 @@ function y(e) {
         children: e.children,
     });
 }
-function O(e) {
+function E(e) {
     let { quest: t, useReducedMotion: n } = e,
         o = (0, g.n)(),
         l = (0, j.k3)(t.id, h.jn.QUEST_BAR_V2, h.jn.QUEST_BAR_V2),
@@ -35,8 +35,8 @@ function O(e) {
         b = (0, p.O5)(),
         _ = (0, m.aM)(),
         {
-            errorHints: O,
-            startingConsoleQuest: E,
+            errorHints: E,
+            startingConsoleQuest: O,
             startConsoleQuest: S,
         } = (0, x.GI)({
             questId: t.id,
@@ -52,7 +52,7 @@ function O(e) {
             afterRequest: u.stopAnimation,
         }),
         { header: T, renderBody: w } = s.useMemo(() => {
-            let e = O.length > 0,
+            let e = E.length > 0,
                 n = t.config.messages.gameTitle;
             return {
                 header: e
@@ -61,7 +61,7 @@ function O(e) {
                 renderBody: e
                     ? () =>
                           (0, r.jsx)(r.Fragment, {
-                              children: O.map((e, n) => {
+                              children: E.map((e, n) => {
                                   if (e.type === i.K.EXPIRED_CREDENTIAL && o) {
                                       let s = d.Z.getAccount(e.connected_account_id, e.connected_account_type),
                                           o = (0, f.C9)(e),
@@ -101,7 +101,7 @@ function O(e) {
                               children: v.intl.format(v.t.GXqvCw, { gameTitle: n }),
                           }),
             };
-        }, [O, t, o, _]);
+        }, [E, t, o, _]);
     return (0, r.jsxs)("div", {
         className: C.microphoneUnit,
         children: [
@@ -111,7 +111,7 @@ function O(e) {
                     (0, r.jsx)(c.Mgn, {
                         size: "custom",
                         color: "currentColor",
-                        className: 0 === O.length ? C.warningCircle : C.errorCircle,
+                        className: 0 === E.length ? C.warningCircle : C.errorCircle,
                         width: 16,
                         height: 16,
                     }),
@@ -120,20 +120,20 @@ function O(e) {
                         children: T,
                     }),
                     (0, r.jsx)(c.P3F, {
-                        className: a()(C.microphoneUnitRefreshIconWrapper, { [C.disabled]: E }),
+                        className: a()(C.microphoneUnitRefreshIconWrapper, { [C.disabled]: O }),
                         onClick: () => S(),
                         children: u.render(),
                     }),
                 ],
             }),
             (0, r.jsxs)("div", {
-                className: a()({ [C.opacity_50]: E }),
-                children: [w(), 0 === O.length ? null : (0, r.jsx)(y, { children: l })],
+                className: a()({ [C.opacity_50]: O }),
+                children: [w(), 0 === E.length ? null : (0, r.jsx)(y, { children: l })],
             }),
         ],
     });
 }
-let E = function (e) {
+let O = function (e) {
     let { quest: t, taskDetails: n } = e,
         o = (0, l.e7)([u.Z], () => u.Z.useReducedMotion),
         a = (0, x.z6)(),
@@ -231,7 +231,7 @@ let E = function (e) {
             d &&
             !p &&
             !m &&
-            (0, r.jsx)(O, {
+            (0, r.jsx)(E, {
                 useReducedMotion: o,
                 quest: t,
             }),

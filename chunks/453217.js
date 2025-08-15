@@ -27,7 +27,7 @@ let h = function (e) {
         v = (null == (t = b.userStatus) ? void 0 : t.enrolledAt) != null,
         { percentComplete: C } = (0, l.Rf)(b),
         y = (0, l.Jf)(b),
-        O = null != y ? y.percentComplete > 0 : C > 0;
+        E = null != y ? y.percentComplete > 0 : C > 0;
     return (0, r.jsxs)(a.animated.div, {
         "aria-hidden": h && j,
         className: o()(n, x.contentCollapsed, {
@@ -59,7 +59,7 @@ let h = function (e) {
                                   location: g.dr.QUESTS_BAR,
                                   sourceQuestContent: c.jn.QUEST_BAR,
                               }),
-                              O
+                              E
                                   ? (0, r.jsx)(d.Z, {
                                         className: x.questProgressBar,
                                         quest: b,

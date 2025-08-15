@@ -1,7 +1,7 @@
 n.d(t, { Z: () => u }), n(388685);
 var r = n(255367),
-    l = n(73800),
-    i = n(481060),
+    i = n(73800),
+    l = n(481060),
     o = n(785717),
     a = n(86419),
     c = n(286957),
@@ -9,29 +9,29 @@ var r = n(255367),
     d = n(44258);
 function u(e) {
     let { tags: t, widgetType: n, applicationId: u } = e,
-        f = (0, l.useRef)(null),
+        f = (0, i.useRef)(null),
         { trackUserProfileAction: p } = (0, o.KZ)(),
         m = null != t ? t : [];
-    return (0, r.jsx)(i.yRy, {
+    return (0, r.jsx)(l.yRy, {
         targetElementRef: f,
         position: "right",
         align: "top",
         renderPopout: (e) => {
             let { closePopout: t } = e;
-            return (0, r.jsx)(i.v2r, {
+            return (0, r.jsx)(l.v2r, {
                 navId: "widget-game-tags",
                 "aria-label": s.intl.string(s.t.r6EJOj),
                 onClose: t,
                 onSelect: () => {},
                 children: Object.entries(c.aE).map((e) => {
-                    let [t, l] = e,
-                        o = l.tags
+                    let [t, i] = e,
+                        o = i.tags
                             .map((e) => {
                                 let t = c.XV[e];
                                 return null == t
                                     ? null
                                     : (0, r.jsx)(
-                                          i.S89,
+                                          l.S89,
                                           {
                                               id: e,
                                               label: t.getText(),
@@ -50,9 +50,9 @@ function u(e) {
                             })
                             .filter(Boolean);
                     return (0, r.jsx)(
-                        i.kSQ,
+                        l.kSQ,
                         {
-                            label: l.getLabel(),
+                            label: i.getLabel(),
                             children: o,
                         },
                         t,
@@ -65,7 +65,7 @@ function u(e) {
             return (0, r.jsx)("div", {
                 ref: f,
                 children: (0, r.jsx)(
-                    i.P3F,
+                    l.P3F,
                     ((t = (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
@@ -95,7 +95,7 @@ function u(e) {
                         {
                             className: d.addButton,
                             "aria-label": s.intl.string(s.t.r6EJOj),
-                            children: (0, r.jsx)(i.Text, {
+                            children: (0, r.jsx)(l.Text, {
                                 variant: "text-xxs/medium",
                                 color: "text-secondary",
                                 children: s.intl.string(s.t.fZSej4),

@@ -1,7 +1,7 @@
 n.d(t, { Z: () => u }), n(539854);
 var r = n(447448),
-    l = n(585305),
-    i = n(806729),
+    i = n(585305),
+    l = n(806729),
     o = n(517157),
     a = n(708108),
     c = n(146078),
@@ -9,9 +9,9 @@ var r = n(447448),
     d = n(388032);
 function u(e) {
     let { user: t, currentUser: n } = e,
-        { mutualFriendsCount: u, mutualGuilds: f } = (0, i.Z)(t),
+        { mutualFriendsCount: u, mutualGuilds: f } = (0, l.Z)(t),
         p = null == f ? void 0 : f.length,
-        m = (0, l.Z)(t),
+        m = (0, i.Z)(t),
         g = (0, r.k)({ location: "useUserProfileModalV2TabBarItems" }),
         b = (0, o.Z)(t.id),
         j = [],

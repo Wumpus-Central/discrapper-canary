@@ -1,4 +1,4 @@
-n.d(t, { Z: () => O }), n(388685);
+n.d(t, { Z: () => E }), n(388685);
 var r = n(255367),
     s = n(73800),
     o = n(442837),
@@ -67,8 +67,8 @@ function y(e) {
             return (0, c.vE)(e[0].value);
     }
 }
-function O(e) {
-    var t, n, O, E;
+function E(e) {
+    var t, n, E, O;
     let {
             quest: S,
             questContent: T,
@@ -97,7 +97,7 @@ function O(e) {
         })),
         L = (null == (t = S.userStatus) ? void 0 : t.enrolledAt) != null,
         Z = (null == (n = S.userStatus) ? void 0 : n.completedAt) != null,
-        W = Z && (null == (O = S.userStatus) ? void 0 : O.claimedAt) == null,
+        W = Z && (null == (E = S.userStatus) ? void 0 : E.claimedAt) == null,
         U = (0, d.iQ)(S),
         H = !(0, d.zi)(S),
         F = (0, p._Q)(S),
@@ -149,7 +149,7 @@ function O(e) {
             location: j.dr.QUEST_HOME_DESKTOP,
             questFeatures: S.config.features,
         }),
-        eu = (null == (E = S.userStatus) ? void 0 : E.claimedAt) != null,
+        eu = (null == (O = S.userStatus) ? void 0 : O.claimedAt) != null,
         ed = null;
     return (U && W
         ? (ed = (0, r.jsx)(a.zx, {

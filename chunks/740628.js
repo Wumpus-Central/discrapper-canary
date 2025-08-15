@@ -1,7 +1,7 @@
 n.d(t, { Z: () => h }), n(388685);
 var r = n(255367),
-    l = n(73800),
-    i = n(442837),
+    i = n(73800),
+    l = n(442837),
     o = n(706898),
     a = n(481060),
     c = n(246946),
@@ -20,8 +20,8 @@ function x(e) {
     let {
         section: t,
         subsection: n,
-        user: l,
-        currentUser: i,
+        user: i,
+        currentUser: l,
         displayProfile: o,
         guildId: a,
         channelId: c,
@@ -29,38 +29,38 @@ function x(e) {
     } = e;
     return t === b.oh.ACTIVITY
         ? (0, r.jsx)(f.Z, {
-              user: l,
-              currentUser: i,
+              user: i,
+              currentUser: l,
               displayProfile: o,
               guildId: a,
               onClose: s,
           })
         : t === b.oh.MUTUAL_FRIENDS
           ? (0, r.jsx)(m.Z, {
-                user: l,
+                user: i,
                 guildId: a,
                 channelId: c,
                 onClose: s,
             })
           : t === b.oh.MUTUAL_GUILDS
             ? (0, r.jsx)(g.Z, {
-                  user: l,
+                  user: i,
                   onClose: s,
               })
             : t === b.oh.BOT_DATA_ACCESS
-              ? (0, r.jsx)(d.Z, { user: l })
+              ? (0, r.jsx)(d.Z, { user: i })
               : t === b.oh.BOT_INFO
                 ? (0, r.jsx)(u.Z, {
-                      user: l,
-                      currentUser: i,
+                      user: i,
+                      currentUser: l,
                       displayProfile: o,
                       guildId: a,
                       subsection: n,
                       onClose: s,
                   })
                 : (0, r.jsx)(p.Z, {
-                      user: l,
-                      currentUser: i,
+                      user: i,
+                      currentUser: l,
                       displayProfile: o,
                       subsection: n,
                       onClose: s,
@@ -79,8 +79,8 @@ function h(e) {
             onClose: _,
         } = e,
         { trackUserProfileAction: I } = (0, s.KZ)(),
-        P = (0, i.e7)([c.Z], () => c.Z.hidePersonalInformation),
-        [{ section: E, subsection: T }, Z] = l.useState({
+        P = (0, l.e7)([c.Z], () => c.Z.hidePersonalInformation),
+        [{ section: E, subsection: T }, Z] = i.useState({
             section:
                 null !=
                 (d =
@@ -97,14 +97,14 @@ function h(e) {
                       : n.section,
             subsection: v,
         });
-    l.useEffect(() => {
+    i.useEffect(() => {
         null == g.find((e) => e.section === E) &&
             Z({
                 section: g[0].section,
                 subsection: void 0,
             });
     }, [g, E]);
-    let N = l.useCallback(
+    let N = i.useCallback(
         (e) => {
             I({
                 action: "PRESS_SECTION",

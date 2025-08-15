@@ -1,8 +1,8 @@
 n.d(t, { Z: () => y }), n(388685);
 var r = n(255367),
-    l = n(73800),
-    i = n(120356),
-    o = n.n(i),
+    i = n(73800),
+    l = n(120356),
+    o = n.n(l),
     a = n(717976),
     c = n(442837),
     s = n(481060),
@@ -40,10 +40,10 @@ let b = {
         },
     },
     j = (e) => {
-        let { message: t, icon: n, type: l } = e;
+        let { message: t, icon: n, type: i } = e;
         return (0, r.jsxs)("div", {
             className: o()(g.toast, m.toast),
-            "data-type": l,
+            "data-type": i,
             children: [
                 (0, r.jsx)("div", {
                     className: m.toastIcon,
@@ -59,13 +59,13 @@ let b = {
     },
     y = (e) => {
         let { className: t, onAutoHide: n } = e,
-            i = (0, u.be)(),
+            l = (0, u.be)(),
             f = (0, c.e7)([d.Z], () => d.Z.useReducedMotion),
-            [p, g] = l.useState(!1),
-            [y, O] = l.useState(null);
-        l.useEffect(() => {
-            null !== i ? (g(!0), O(b[i]), s.uvj.announce(b[i].message)) : g(!1);
-        }, [i]);
+            [p, g] = i.useState(!1),
+            [y, O] = i.useState(null);
+        i.useEffect(() => {
+            null !== l ? (g(!0), O(b[l]), s.uvj.announce(b[l].message)) : g(!1);
+        }, [l]);
         let x = (0, s.Yzy)(
             p,
             {
@@ -91,7 +91,7 @@ let b = {
             "animate-always",
         );
         return (
-            l.useEffect(() => {
+            i.useEffect(() => {
                 if (p) {
                     let e = setTimeout(() => {
                         null == n || n();

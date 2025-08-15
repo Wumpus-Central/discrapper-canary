@@ -1,46 +1,46 @@
-r.d(t, { Z: () => i });
+r.d(t, { Z: () => l });
 var n = r(255367);
 r(73800);
-var l = r(481060),
-    o = r(313201),
-    c = r(547990);
-function i(e) {
-    let { transitionState: t, title: r, subtitle: i, children: s } = e,
-        a = (0, o.Dt)();
-    return (0, n.jsxs)(l.Y0X, {
+var o = r(481060),
+    c = r(313201),
+    i = r(547990);
+function l(e) {
+    let { transitionState: t, title: r, subtitle: l, children: a } = e,
+        s = (0, c.Dt)();
+    return (0, n.jsxs)(o.Y0X, {
         "data-migration-pending": !0,
         transitionState: t,
-        "aria-labelledby": a,
+        "aria-labelledby": s,
         parentComponent: "SecureFramesVerificationModal",
         children: [
             (0, n.jsx)("div", {
-                className: c.shieldIconContainer,
+                className: i.shieldIconContainer,
                 children: (0, n.jsx)("div", {
-                    className: c.shieldIcon,
-                    children: (0, n.jsx)(l.tQf, {
+                    className: i.shieldIcon,
+                    children: (0, n.jsx)(o.tQf, {
                         size: "custom",
                         width: 55,
                         height: 55,
-                        color: l.TVs.colors.HEADER_SECONDARY,
+                        color: o.TVs.colors.HEADER_SECONDARY,
                     }),
                 }),
             }),
-            (0, n.jsxs)(l.hzk, {
-                className: c.content,
+            (0, n.jsxs)(o.hzk, {
+                className: i.content,
                 children: [
-                    (0, n.jsx)(l.X6q, {
-                        className: c.title,
+                    (0, n.jsx)(o.X6q, {
+                        className: i.title,
                         variant: "heading-lg/bold",
                         color: "header-primary",
                         children: r,
                     }),
-                    (0, n.jsx)(l.Text, {
-                        className: c.subtitle,
+                    (0, n.jsx)(o.Text, {
+                        className: i.subtitle,
                         variant: "text-md/normal",
                         color: "header-secondary",
-                        children: i,
+                        children: l,
                     }),
-                    s,
+                    a,
                 ],
             }),
         ],

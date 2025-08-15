@@ -1,7 +1,7 @@
 n.d(t, { Z: () => g });
 var r = n(255367),
-    l = n(73800),
-    i = n(481060),
+    i = n(73800),
+    l = n(481060),
     o = n(81897),
     a = n(906732),
     c = n(785717),
@@ -18,17 +18,17 @@ function g(e) {
         { context: O, trackUserProfileAction: x } = (0, c.KZ)(),
         h = (0, o.Z)();
     return (
-        l.useEffect(() => {
+        i.useEffect(() => {
             (0, d.Z)(t.id, h);
         }, [t.id, h]),
-        (0, r.jsx)(i.zJl, {
+        (0, r.jsx)(l.zJl, {
             className: m.listScroller,
             fade: !0,
             children:
                 null == j
                     ? (0, r.jsx)("div", {
                           className: m.empty,
-                          children: (0, r.jsx)(i.$jN, {}),
+                          children: (0, r.jsx)(l.$jN, {}),
                       })
                     : 0 === j.length
                       ? (0, r.jsxs)("div", {
@@ -42,19 +42,19 @@ function g(e) {
                             ],
                         })
                       : j.map((e) => {
-                            let { key: t, user: l, status: i } = e;
+                            let { key: t, user: i, status: l } = e;
                             return (0, r.jsx)(
                                 f.Z,
                                 {
-                                    user: l,
-                                    status: i,
+                                    user: i,
+                                    status: l,
                                     guildId: n,
                                     channelId: g,
                                     onSelect: () => {
                                         var e, t, n;
                                         null == b || b(),
                                             x({ action: "PRESS_MUTUAL_FRIEND" }),
-                                            (e = l.id),
+                                            (e = i.id),
                                             (0, u.openUserProfileModal)(
                                                 ((t = (function (e) {
                                                     for (var t = 1; t < arguments.length; t++) {

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => s });
 var r = n(255367);
 n(73800);
-var l = n(481060),
-    i = n(906732),
+var i = n(481060),
+    l = n(906732),
     o = n(335131),
     a = n(475413),
     c = n(388032);
@@ -12,24 +12,24 @@ function s(e) {
             if (null == e) return {};
             var n,
                 r,
-                l = (function (e, t) {
+                i = (function (e, t) {
                     if (null == e) return {};
                     var n,
                         r,
-                        l = {},
-                        i = Object.keys(e);
-                    for (r = 0; r < i.length; r++) (n = i[r]), t.indexOf(n) >= 0 || (l[n] = e[n]);
-                    return l;
+                        i = {},
+                        l = Object.keys(e);
+                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                    return i;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var i = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < i.length; r++)
-                    (n = i[r]),
-                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]);
+                var l = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < l.length; r++)
+                    (n = l[r]),
+                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
             }
-            return l;
+            return i;
         })(e, ["onClose"]);
-    let { analyticsLocations: s, newestAnalyticsLocation: d } = (0, i.ZP)();
+    let { analyticsLocations: s, newestAnalyticsLocation: d } = (0, l.ZP)();
     return (0, r.jsx)(
         a.ef,
         (function (e) {
@@ -59,7 +59,7 @@ function s(e) {
         })(
             {
                 action: "VISIT_SHOP",
-                icon: l.EOn,
+                icon: i.EOn,
                 tooltipText: c.intl.string(c.t.b2d0Nz),
                 themeColor: "secondary",
                 onClick: () => {

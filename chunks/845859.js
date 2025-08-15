@@ -3,5 +3,6 @@ e.exports = {
     header: "header__203bc",
     dismissButton: "dismissButton__203bc",
     addButtonWrapper: "addButtonWrapper__203bc",
+    coverContainer: "coverContainer__203bc",
     addButton: "addButton__203bc",
 };

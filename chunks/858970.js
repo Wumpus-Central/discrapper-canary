@@ -1,7 +1,7 @@
 n.d(t, { Z: () => I }), n(388685), n(953529);
 var r = n(255367),
-    l = n(442837),
-    i = n(755721),
+    i = n(442837),
+    l = n(755721),
     o = n(481060),
     a = n(100527),
     c = n(906732),
@@ -57,7 +57,7 @@ function I(e) {
             sourceAnalyticsLocations: S = [],
         } = e,
         w = n === x.ME ? void 0 : n,
-        A = (0, l.e7)([d.Z], () => d.Z.isBlocked(t.id)),
+        A = (0, i.e7)([d.Z], () => d.Z.isBlocked(t.id)),
         { analyticsLocations: C } = (0, c.ZP)([...S, A ? a.Z.BLOCKED_PROFILE_MODAL : a.Z.IGNORED_PROFILE_MODAL]),
         D = (0, f.ZB)({
             layout: "MODAL_V2",
@@ -127,12 +127,12 @@ function I(e) {
                                 (0, r.jsx)("div", {
                                     className: v.safetyTable,
                                     children: L.map((e, t) => {
-                                        let { icon: n, description: l } = e;
+                                        let { icon: n, description: i } = e;
                                         return (0, r.jsx)(
                                             s.JZ,
                                             {
                                                 icon: n,
-                                                title: l,
+                                                title: i,
                                                 titleVariant: "text-md/normal",
                                                 color: o.TVs.colors.TEXT_DEFAULT.css,
                                             },
@@ -144,7 +144,7 @@ function I(e) {
                                     align: "center",
                                     children: [
                                         (0, r.jsx)(y.Z, {
-                                            size: i.Ph.MEDIUM,
+                                            size: l.Ph.MEDIUM,
                                             isBlocked: A,
                                             onClick: () => {
                                                 N(),

@@ -5,8 +5,8 @@ n.d(t, {
     n(539854),
     n(388685);
 var r = n(73800),
-    l = n(442837),
-    i = n(224706),
+    i = n(442837),
+    l = n(224706),
     o = n(669764);
 function a(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -56,11 +56,11 @@ function s(e) {
         r.useEffect(() => {
             if (e.length > 0) {
                 let t = e.filter((e) => o.Z.canFetch(e));
-                t.length > 0 && i.Z.getDetectableGamesSupplemental(t);
+                t.length > 0 && l.Z.getDetectableGamesSupplemental(t);
             }
         }, [e]),
         {
-            gameDataMap: (0, l.cj)([o.Z], () => {
+            gameDataMap: (0, i.cj)([o.Z], () => {
                 let t = {};
                 return (
                     e.forEach((e) => {

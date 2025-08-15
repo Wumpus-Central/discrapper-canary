@@ -1,4 +1,4 @@
-n.d(t, { Z: () => ea }), n(704826), n(35282), n(388685), n(361932), n(187205);
+n.d(t, { Z: () => el }), n(704826), n(35282), n(388685), n(361932), n(187205);
 var i = n(255367),
     r = n(73800),
     s = n(120356),
@@ -30,21 +30,22 @@ var i = n(255367),
     P = n(377089),
     R = n(581612),
     D = n(580747),
-    Z = n(526156),
-    w = n(799071),
-    k = n(554042),
-    L = n(706705),
-    B = n(726985),
-    M = n(981631),
-    U = n(231338),
-    V = n(726927),
-    G = n(177475),
-    F = n(518797),
-    H = n(691739),
-    z = n(453707),
-    W = n(315416),
-    Y = n(715720);
-function K(e) {
+    Z = n(594174),
+    w = n(526156),
+    k = n(799071),
+    L = n(554042),
+    B = n(706705),
+    M = n(726985),
+    U = n(981631),
+    V = n(231338),
+    G = n(726927),
+    F = n(177475),
+    H = n(518797),
+    z = n(691739),
+    W = n(453707),
+    Y = n(315416),
+    K = n(715720);
+function q(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -69,7 +70,7 @@ function K(e) {
     }
     return e;
 }
-function q(e, t) {
+function X(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -87,26 +88,27 @@ function q(e, t) {
         e
     );
 }
-function X() {
+function J() {
     return (0, i.jsxs)("div", {
-        className: V.root,
+        className: G.root,
         children: [
-            (0, i.jsx)(J, {}),
-            (0, i.jsx)(eo, {}),
-            (0, i.jsx)(ef, {}),
+            (0, i.jsx)(Q, {}),
+            (0, i.jsx)(ec, {}),
             (0, i.jsx)(eb, {}),
+            (0, i.jsx)(ex, {}),
+            (0, i.jsx)(ef, {}),
+            (0, i.jsx)(eg, {}),
             (0, i.jsx)(eh, {}),
             (0, i.jsx)(ep, {}),
-            (0, i.jsx)(eg, {}),
             (0, i.jsx)(em, {}),
-            (0, i.jsx)(eu, {}),
-            (0, i.jsx)(eT, {}),
-            (0, i.jsx)(Q, {}),
             (0, i.jsx)(eI, {}),
+            (0, i.jsx)(eN, {}),
+            (0, i.jsx)($, {}),
+            (0, i.jsx)(eA, {}),
         ],
     });
 }
-function J() {
+function Q() {
     let e = (0, D.Z)("highlight_mana_components");
     return (0, i.jsx)(I.hjN, {
         title: "Design System Controls",
@@ -121,10 +123,10 @@ function J() {
         }),
     });
 }
-function Q() {
+function $() {
     let e = Object.keys(I.DM8);
     return (0, i.jsxs)("div", {
-        className: V.section,
+        className: G.section,
         children: [
             (0, i.jsx)(I.X6q, {
                 variant: "heading-xl/semibold",
@@ -148,7 +150,7 @@ function Q() {
         ],
     });
 }
-let $ = [
+let ee = [
         "neutral",
         "blue_new",
         "blurple",
@@ -160,7 +162,7 @@ let $ = [
         "pink",
         "purple",
     ],
-    ee = [
+    et = [
         "background-surface-highest",
         "background-surface-higher",
         "background-surface-high",
@@ -168,7 +170,7 @@ let $ = [
         "background-base-lower",
         "background-base-lowest",
     ],
-    et = [
+    en = [
         "background-gradient-lowest",
         "background-gradient-lower",
         "background-gradient-low",
@@ -176,9 +178,9 @@ let $ = [
         "background-gradient-higher",
         "background-gradient-highest",
     ],
-    en = ["", "background-mod-subtle", "background-mod-normal", "background-mod-strong"],
-    ei = ["critical", "warning", "positive", "info"],
-    er = [
+    ei = ["", "background-mod-subtle", "background-mod-normal", "background-mod-strong"],
+    er = ["critical", "warning", "positive", "info"],
+    es = [
         "text-default",
         "text-primary",
         "text-secondary",
@@ -189,20 +191,20 @@ let $ = [
         "text-feedback-info",
         "premium-nitro-pink-text",
     ];
-function es() {
+function ea() {
     let e = (0, c.e7)([y.Z], () => y.Z.gradientPreset);
     return (0, i.jsxs)("div", {
         children: [
             (0, i.jsx)(I.X6q, {
                 variant: "heading-xl/semibold",
-                className: V.heading,
+                className: G.heading,
                 children: "Background Colors",
             }),
-            ee.map((e) =>
+            et.map((e) =>
                 (0, i.jsxs)(
                     "div",
                     {
-                        className: V.palette,
+                        className: G.palette,
                         style: {
                             backgroundColor: "var(--".concat(e, ")"),
                             padding: 24,
@@ -218,11 +220,11 @@ function es() {
                                     gap: 8,
                                     gridTemplateColumns: "repeat(3, 1fr)",
                                 },
-                                children: en.map((e) =>
+                                children: ei.map((e) =>
                                     (0, i.jsxs)(
                                         "div",
                                         {
-                                            className: V.color,
+                                            className: G.color,
                                             style: {
                                                 padding: 16,
                                                 background: "var(--".concat(e, ")"),
@@ -233,8 +235,8 @@ function es() {
                                                     color: "header-secondary",
                                                     children: e,
                                                 }),
-                                                (0, i.jsx)("hr", { className: V.sectionDivider }),
-                                                er.map((e) =>
+                                                (0, i.jsx)("hr", { className: G.sectionDivider }),
+                                                es.map((e) =>
                                                     (0, i.jsx)(
                                                         I.Text,
                                                         {
@@ -251,19 +253,19 @@ function es() {
                                     ),
                                 ),
                             }),
-                            (0, i.jsx)("hr", { className: V.sectionDivider }),
+                            (0, i.jsx)("hr", { className: G.sectionDivider }),
                             (0, i.jsx)("div", {
                                 style: {
                                     display: "grid",
                                     gap: 8,
                                     gridTemplateColumns: "repeat(3, 1fr)",
                                 },
-                                children: ei.map((e) => {
+                                children: er.map((e) => {
                                     let t = "var(--text-feedback-".concat(e, ")");
                                     return (0, i.jsxs)(
                                         "div",
                                         {
-                                            className: V.color,
+                                            className: G.color,
                                             style: {
                                                 padding: 16,
                                                 background: "var(--background-feedback-".concat(e, ")"),
@@ -304,7 +306,7 @@ function es() {
                     children: [
                         (0, i.jsx)(I.X6q, {
                             variant: "heading-xl/semibold",
-                            className: V.heading,
+                            className: G.heading,
                             children: "Gradient Background Colors",
                         }),
                         (0, i.jsx)("div", {
@@ -314,11 +316,11 @@ function es() {
                                 gridTemplateColumns: "repeat(6, 1fr)",
                                 transform: "translateZ(0)",
                             },
-                            children: et.map((e) =>
+                            children: en.map((e) =>
                                 (0, i.jsx)(
                                     "div",
                                     {
-                                        className: V.palette,
+                                        className: G.palette,
                                         style: {
                                             background: "var(--".concat(e, ")"),
                                             height: 400,
@@ -336,26 +338,26 @@ function es() {
                 }),
             (0, i.jsx)(I.X6q, {
                 variant: "heading-xl/semibold",
-                className: V.heading,
+                className: G.heading,
                 children: "Scales",
             }),
-            $.map((e) =>
+            ee.map((e) =>
                 (0, i.jsxs)(
                     "div",
                     {
-                        className: V.palette,
+                        className: G.palette,
                         children: [
                             (0, i.jsx)(I.Text, {
                                 variant: "text-lg/semibold",
                                 children: e,
                             }),
                             (0, i.jsx)("div", {
-                                className: V.colors,
+                                className: G.colors,
                                 children: Array.from({ length: 100 }, (t, n) =>
                                     (0, i.jsx)(
                                         "div",
                                         {
-                                            className: V.color,
+                                            className: G.color,
                                             style: {
                                                 background: "var(--"
                                                     .concat(e.replace("_", "-"), "-")
@@ -383,51 +385,51 @@ function es() {
         ],
     });
 }
-function ea() {
+function el() {
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(Z.Z, {
-                parentSetting: B.s6.DESIGN_SYSTEMS,
-                settingsSection: M.oAB.DESIGN_SYSTEMS,
+            (0, i.jsx)(w.Z, {
+                parentSetting: M.s6.DESIGN_SYSTEMS,
+                settingsSection: U.oAB.DESIGN_SYSTEMS,
                 tabs: [
                     {
                         title: "Components",
-                        component: () => (0, i.jsx)(X, {}),
-                        setting: B.s6.DESIGN_SYSTEMS_COMPONENTS,
+                        component: () => (0, i.jsx)(J, {}),
+                        setting: M.s6.DESIGN_SYSTEMS_COMPONENTS,
                     },
                     {
                         title: "Colors",
-                        component: () => (0, i.jsx)(es, {}),
-                        setting: B.s6.DESIGN_SYSTEMS_COLORS,
+                        component: () => (0, i.jsx)(ea, {}),
+                        setting: M.s6.DESIGN_SYSTEMS_COLORS,
                     },
                     {
                         title: "Animations",
-                        component: () => (0, i.jsx)(L.Z, {}),
-                        setting: B.s6.ANIMATION_TESTING,
+                        component: () => (0, i.jsx)(B.Z, {}),
+                        setting: M.s6.ANIMATION_TESTING,
                     },
                     {
                         title: "Text Playground",
-                        component: () => (0, i.jsx)(k.Z, {}),
-                        setting: B.s6.TEXT_PLAYGROUND,
+                        component: () => (0, i.jsx)(L.Z, {}),
+                        setting: M.s6.TEXT_PLAYGROUND,
                     },
                     {
                         title: "Text Componnts",
-                        component: () => (0, i.jsx)(w.Z, {}),
-                        setting: B.s6.TEXT_COMPONENTS,
+                        component: () => (0, i.jsx)(k.Z, {}),
+                        setting: M.s6.TEXT_COMPONENTS,
                     },
                 ],
             }),
             (0, i.jsx)("div", {
-                className: V.themes,
+                className: G.themes,
                 children: (0, i.jsx)(A.ZP, {
                     type: A.yH.SETTINGS,
-                    children: (0, i.jsx)(A.ZP.Basic, { className: V.themeSelectionGroup }),
+                    children: (0, i.jsx)(A.ZP.Basic, { className: G.themeSelectionGroup }),
                 }),
             }),
         ],
     });
 }
-function el(e) {
+function eo(e) {
     var { component: t, showLoadingAnimation: n } = e,
         s = (function (e, t) {
             if (null == e) return {};
@@ -468,14 +470,14 @@ function el(e) {
         ),
         (0, i.jsx)(
             t,
-            q(K({}, s), {
+            X(q({}, s), {
                 loading: n ? a : void 0,
                 onClick: () => l(!a),
             }),
         )
     );
 }
-function eo() {
+function ec() {
     let [e, t] = r.useState("md"),
         [n, s] = r.useState("start"),
         [a, o] = r.useState(!0),
@@ -492,7 +494,7 @@ function eo() {
             (0, i.jsxs)(i.Fragment, {
                 children: [
                     (0, i.jsx)(
-                        el,
+                        eo,
                         {
                             component: u.z,
                             variant: t,
@@ -505,7 +507,7 @@ function eo() {
                         t + e,
                     ),
                     (0, i.jsx)(
-                        el,
+                        eo,
                         {
                             component: u.z,
                             variant: t,
@@ -523,7 +525,7 @@ function eo() {
         ),
         g = [...c, "icon-only"].map((t) =>
             (0, i.jsx)(
-                el,
+                eo,
                 {
                     component: p.h,
                     variant: t,
@@ -548,13 +550,13 @@ function eo() {
             ),
         );
     return (0, i.jsxs)("div", {
-        className: V.section,
+        className: G.section,
         children: [
             (0, i.jsx)(I.X6q, {
                 variant: "heading-xl/semibold",
                 children: "Buttons",
             }),
-            (0, i.jsxs)(ed, {
+            (0, i.jsxs)(eu, {
                 title: "Button Options",
                 children: [
                     (0, i.jsx)(I.xJW, {
@@ -653,13 +655,13 @@ function eo() {
                                     (0, i.jsxs)(m.h, {
                                         size: e,
                                         children: [
-                                            (0, i.jsx)(el, {
+                                            (0, i.jsx)(eo, {
                                                 component: u.z,
                                                 variant: "secondary",
                                                 text: "Cancel",
                                                 showLoadingAnimation: a,
                                             }),
-                                            (0, i.jsx)(el, {
+                                            (0, i.jsx)(eo, {
                                                 component: u.z,
                                                 variant: "primary",
                                                 text: "Submit",
@@ -670,13 +672,13 @@ function eo() {
                                     (0, i.jsxs)(m.h, {
                                         size: e,
                                         children: [
-                                            (0, i.jsx)(el, {
+                                            (0, i.jsx)(eo, {
                                                 component: u.z,
                                                 variant: "primary",
                                                 text: "Submit",
                                                 showLoadingAnimation: a,
                                             }),
-                                            (0, i.jsx)(el, {
+                                            (0, i.jsx)(eo, {
                                                 component: p.h,
                                                 variant: "secondary",
                                                 icon: I.gw7,
@@ -693,13 +695,13 @@ function eo() {
                                     size: e,
                                     fullWidth: !0,
                                     children: [
-                                        (0, i.jsx)(el, {
+                                        (0, i.jsx)(eo, {
                                             component: u.z,
                                             variant: "secondary",
                                             text: "Cancel",
                                             showLoadingAnimation: a,
                                         }),
-                                        (0, i.jsx)(el, {
+                                        (0, i.jsx)(eo, {
                                             component: u.z,
                                             variant: "primary",
                                             text: "Submit",
@@ -724,13 +726,13 @@ function eo() {
                                     direction: "vertical",
                                     size: e,
                                     children: [
-                                        (0, i.jsx)(el, {
+                                        (0, i.jsx)(eo, {
                                             component: u.z,
                                             variant: "secondary",
                                             text: "Cancel",
                                             showLoadingAnimation: a,
                                         }),
-                                        (0, i.jsx)(el, {
+                                        (0, i.jsx)(eo, {
                                             component: u.z,
                                             variant: "primary",
                                             text: "Submit",
@@ -746,13 +748,13 @@ function eo() {
                                     direction: "vertical",
                                     size: e,
                                     children: [
-                                        (0, i.jsx)(el, {
+                                        (0, i.jsx)(eo, {
                                             component: u.z,
                                             variant: "secondary",
                                             text: "Cancel",
                                             showLoadingAnimation: a,
                                         }),
-                                        (0, i.jsx)(el, {
+                                        (0, i.jsx)(eo, {
                                             component: u.z,
                                             variant: "primary",
                                             text: "Submit",
@@ -763,13 +765,13 @@ function eo() {
                             }),
                         ],
                     }),
-                    (0, i.jsx)(ec, { buttonSize: e }),
+                    (0, i.jsx)(ed, { buttonSize: e }),
                 ],
             }),
         ],
     });
 }
-function ec(e) {
+function ed(e) {
     let { buttonSize: t } = e,
         [n, s] = r.useState(!1);
     return (0, i.jsxs)(I.Kqy, {
@@ -786,7 +788,7 @@ function ec(e) {
                     (0, i.jsx)(
                         "div",
                         {
-                            className: V.video,
+                            className: G.video,
                             "data-luminance": e,
                             children: (0, i.jsx)(g.J, {
                                 size: t,
@@ -801,14 +803,14 @@ function ec(e) {
         ],
     });
 }
-function ed(e) {
+function eu(e) {
     let { children: t, title: n } = e,
         [s, l] = r.useState(!1);
     return (0, i.jsxs)(I.Kqy, {
         direction: "vertical",
         gap: 0,
         padding: 16,
-        className: V.floatingControls,
+        className: G.floatingControls,
         children: [
             (0, i.jsxs)(I.Kqy, {
                 direction: "horizontal",
@@ -830,16 +832,16 @@ function ed(e) {
             }),
             (0, i.jsx)(I.Kqy, {
                 gap: 16,
-                className: a()(V.floatingControlsContent, { [V.floatingControlsContentHidden]: !s }),
+                className: a()(G.floatingControlsContent, { [G.floatingControlsContentHidden]: !s }),
                 children: t,
             }),
         ],
     });
 }
-function eu() {
+function em() {
     let [e, t] = r.useState("1");
     return (0, i.jsxs)("div", {
-        className: V.section,
+        className: G.section,
         children: [
             (0, i.jsx)(I.X6q, {
                 variant: "heading-xl/semibold",
@@ -850,7 +852,7 @@ function eu() {
                 look: "brand",
                 selectedItem: e,
                 onItemSelect: (e) => t(e),
-                className: V.tabBar,
+                className: G.tabBar,
                 children: [
                     (0, i.jsx)(I.njP.Item, {
                         id: "1",
@@ -873,14 +875,14 @@ function eu() {
         ],
     });
 }
-function em() {
+function ep() {
     let [e, t] = r.useState(1),
         [n, s] = r.useState(!1),
         [a, l] = r.useState(5),
         [o, c] = r.useState(!1),
         d = r.useRef(null);
     return (0, i.jsxs)("div", {
-        className: V.section,
+        className: G.section,
         children: [
             (0, i.jsx)(I.X6q, {
                 variant: "heading-xl/semibold",
@@ -995,7 +997,7 @@ function em() {
         ],
     });
 }
-function ep() {
+function eg() {
     let [e, t] = r.useState(I.FGA.PRIMARY),
         n = r.useMemo(
             () =>
@@ -1009,7 +1011,7 @@ function ep() {
             [],
         );
     return (0, i.jsxs)("div", {
-        className: V.section,
+        className: G.section,
         children: [
             (0, i.jsx)(I.X6q, {
                 variant: "heading-xl/semibold",
@@ -1041,7 +1043,7 @@ function ep() {
                         children: (e) =>
                             (0, i.jsx)(
                                 I.zxk,
-                                K(
+                                q(
                                     {
                                         variant: "primary",
                                         text: "Tooltip on the top",
@@ -1057,7 +1059,7 @@ function ep() {
                         children: (e) =>
                             (0, i.jsx)(
                                 I.zxk,
-                                K(
+                                q(
                                     {
                                         variant: "primary",
                                         text: "Tooltip on the left",
@@ -1073,7 +1075,7 @@ function ep() {
                         children: (e) =>
                             (0, i.jsx)(
                                 I.zxk,
-                                K(
+                                q(
                                     {
                                         variant: "primary",
                                         text: "Tooltip on the bottom",
@@ -1089,7 +1091,7 @@ function ep() {
                         children: (e) =>
                             (0, i.jsx)(
                                 I.zxk,
-                                K(
+                                q(
                                     {
                                         variant: "primary",
                                         text: "Tooltip on the right",
@@ -1351,7 +1353,7 @@ function ep() {
                         title: "With Graphic Asset",
                         body: "This tooltip includes a graphic element on the left side",
                         asset: (0, i.jsx)("img", {
-                            src: F.Z,
+                            src: H.Z,
                             alt: "Graphic slot 48px",
                         }),
                         position: "top",
@@ -1365,7 +1367,7 @@ function ep() {
         ],
     });
 }
-function eg() {
+function eh() {
     let [e, t] = r.useState(!1),
         [n, s] = r.useState(!1),
         [a, l] = r.useState(!1),
@@ -1384,9 +1386,8 @@ function eg() {
         [w, k] = r.useState(!1),
         [L, B] = r.useState(!1),
         [M, U] = r.useState(!1),
-        [G, F] = r.useState(!1),
-        H = r.useRef(null),
-        K = r.useRef(null),
+        [V, F] = r.useState(!1),
+        [H, z] = r.useState(!1),
         q = r.useRef(null),
         X = r.useRef(null),
         J = r.useRef(null),
@@ -1404,7 +1405,10 @@ function eg() {
         ec = r.useRef(null),
         ed = r.useRef(null),
         eu = r.useRef(null),
-        em = r.useCallback(() => {
+        em = r.useRef(null),
+        ep = r.useRef(null),
+        eg = r.useRef(null),
+        eh = r.useCallback(() => {
             t(!1),
                 s(!1),
                 l(!1),
@@ -1423,19 +1427,20 @@ function eg() {
                 k(!1),
                 B(!1),
                 U(!1),
-                F(!1);
+                F(!1),
+                z(!1);
         }, []);
     return (0, i.jsxs)("div", {
-        className: V.section,
+        className: G.section,
         children: [
             (0, i.jsx)(I.X6q, {
                 variant: "heading-xl/semibold",
                 children: "Popovers",
             }),
             (0, i.jsx)(v.J2, {
-                targetElementRef: H,
+                targetElementRef: q,
                 shouldShow: e,
-                onRequestClose: em,
+                onRequestClose: eh,
                 caretConfig: {
                     position: "bottom",
                     align: "center",
@@ -1444,21 +1449,21 @@ function eg() {
                 body: "Body",
                 size: "sm",
                 asset: (0, i.jsx)("img", {
-                    src: W.Z,
+                    src: Y.Z,
                     alt: "Small placeholder",
                 }),
                 badge: "new",
                 actions: [
                     {
                         text: "Button",
-                        onClick: em,
+                        onClick: eh,
                     },
                 ],
             }),
             (0, i.jsx)(v.J2, {
-                targetElementRef: K,
+                targetElementRef: X,
                 shouldShow: n,
-                onRequestClose: em,
+                onRequestClose: eh,
                 caretConfig: {
                     position: "bottom",
                     align: "center",
@@ -1466,21 +1471,21 @@ function eg() {
                 title: "Header",
                 body: "Body",
                 asset: (0, i.jsx)("img", {
-                    src: z.Z,
+                    src: W.Z,
                     alt: "Medium placeholder",
                 }),
                 badge: "new",
                 actions: [
                     {
                         text: "Button",
-                        onClick: em,
+                        onClick: eh,
                     },
                 ],
             }),
             (0, i.jsx)(v.J2, {
-                targetElementRef: q,
+                targetElementRef: J,
                 shouldShow: a,
-                onRequestClose: em,
+                onRequestClose: eh,
                 caretConfig: {
                     position: "bottom",
                     align: "center",
@@ -1490,14 +1495,14 @@ function eg() {
                 actions: [
                     {
                         text: "Button",
-                        onClick: em,
+                        onClick: eh,
                     },
                 ],
             }),
             (0, i.jsx)(v.J2, {
-                targetElementRef: X,
+                targetElementRef: Q,
                 shouldShow: o,
-                onRequestClose: em,
+                onRequestClose: eh,
                 caretConfig: {
                     position: "bottom",
                     align: "center",
@@ -1505,14 +1510,14 @@ function eg() {
                 title: "Ipsum Dolor",
                 body: "Lorem ipsum dolor sit amet, consectetur elit. Sed do eiusmod.",
                 asset: (0, i.jsx)("img", {
-                    src: z.Z,
+                    src: W.Z,
                     alt: "Medium placeholder",
                 }),
                 badge: "new",
                 actions: [
                     {
                         text: "Button",
-                        onClick: em,
+                        onClick: eh,
                     },
                 ],
                 textLink: {
@@ -1522,9 +1527,9 @@ function eg() {
                 },
             }),
             (0, i.jsx)(v.J2, {
-                targetElementRef: J,
+                targetElementRef: $,
                 shouldShow: d,
-                onRequestClose: em,
+                onRequestClose: eh,
                 caretConfig: {
                     position: "bottom",
                     align: "center",
@@ -1532,27 +1537,27 @@ function eg() {
                 title: "Header",
                 body: "Body",
                 asset: (0, i.jsx)("img", {
-                    src: z.Z,
+                    src: W.Z,
                     alt: "Medium placeholder",
                 }),
                 badge: "new",
                 actions: [
                     {
                         text: "Primary",
-                        onClick: em,
+                        onClick: eh,
                         variant: "primary",
                     },
                     {
                         text: "Secondary",
-                        onClick: em,
+                        onClick: eh,
                         variant: "secondary",
                     },
                 ],
             }),
             (0, i.jsx)(v.J2, {
-                targetElementRef: Q,
+                targetElementRef: ee,
                 shouldShow: m,
-                onRequestClose: em,
+                onRequestClose: eh,
                 caretConfig: {
                     position: "bottom",
                     align: "center",
@@ -1560,15 +1565,15 @@ function eg() {
                 title: "No Actions",
                 body: "This popover has no action buttons, just content to display.",
                 asset: (0, i.jsx)("img", {
-                    src: z.Z,
+                    src: W.Z,
                     alt: "Medium placeholder",
                 }),
                 badge: "new",
             }),
             (0, i.jsx)(v.J2, {
-                targetElementRef: $,
+                targetElementRef: et,
                 shouldShow: g,
-                onRequestClose: em,
+                onRequestClose: eh,
                 caretConfig: {
                     position: "top",
                     align: "end",
@@ -1576,21 +1581,21 @@ function eg() {
                 title: "Custom Caret API",
                 body: "Using CaretConfig with END placement",
                 asset: (0, i.jsx)("img", {
-                    src: z.Z,
+                    src: W.Z,
                     alt: "Medium placeholder",
                 }),
                 badge: "new",
                 actions: [
                     {
                         text: "Got it",
-                        onClick: em,
+                        onClick: eh,
                     },
                 ],
             }),
             (0, i.jsx)(v.J2, {
-                targetElementRef: ee,
+                targetElementRef: en,
                 shouldShow: f,
-                onRequestClose: em,
+                onRequestClose: eh,
                 caretConfig: {
                     position: "left",
                     align: "start",
@@ -1598,21 +1603,21 @@ function eg() {
                 title: "Left Side Caret",
                 body: "Caret positioned on the left side at start",
                 asset: (0, i.jsx)("img", {
-                    src: z.Z,
+                    src: W.Z,
                     alt: "Medium placeholder",
                 }),
                 badge: "early_access",
                 actions: [
                     {
                         text: "Close",
-                        onClick: em,
+                        onClick: eh,
                     },
                 ],
             }),
             (0, i.jsx)(v.J2, {
-                targetElementRef: et,
+                targetElementRef: ei,
                 shouldShow: x,
-                onRequestClose: em,
+                onRequestClose: eh,
                 caretConfig: {
                     position: "bottom",
                     align: "custom",
@@ -1621,21 +1626,21 @@ function eg() {
                 title: "Custom Offset",
                 body: "Caret positioned 50px from center with custom offset",
                 asset: (0, i.jsx)("img", {
-                    src: z.Z,
+                    src: W.Z,
                     alt: "Medium placeholder",
                 }),
                 badge: "beta",
                 actions: [
                     {
                         text: "Amazing!",
-                        onClick: em,
+                        onClick: eh,
                     },
                 ],
             }),
             (0, i.jsx)(v.J2, {
-                targetElementRef: en,
+                targetElementRef: er,
                 shouldShow: j,
-                onRequestClose: em,
+                onRequestClose: eh,
                 position: "right",
                 caretConfig: {
                     position: "left",
@@ -1644,21 +1649,21 @@ function eg() {
                 title: "Left Center Positioning",
                 body: "Popover appears to the right with caret centered on the left side",
                 asset: (0, i.jsx)("img", {
-                    src: z.Z,
+                    src: W.Z,
                     alt: "Medium placeholder",
                 }),
                 badge: "new",
                 actions: [
                     {
                         text: "Perfect!",
-                        onClick: em,
+                        onClick: eh,
                     },
                 ],
             }),
             (0, i.jsx)(v.J2, {
-                targetElementRef: ei,
+                targetElementRef: es,
                 shouldShow: C,
-                onRequestClose: em,
+                onRequestClose: eh,
                 caretConfig: {
                     position: "bottom",
                     align: "center",
@@ -1666,7 +1671,7 @@ function eg() {
                 title: "Purple Gradient",
                 body: "This popover has a beautiful purple gradient background",
                 asset: (0, i.jsx)("img", {
-                    src: z.Z,
+                    src: W.Z,
                     alt: "Medium placeholder",
                 }),
                 gradientColor: "purple",
@@ -1674,14 +1679,14 @@ function eg() {
                 actions: [
                     {
                         text: "Looks Great!",
-                        onClick: em,
+                        onClick: eh,
                     },
                 ],
             }),
             (0, i.jsx)(v.J2, {
-                targetElementRef: er,
+                targetElementRef: ea,
                 shouldShow: T,
-                onRequestClose: em,
+                onRequestClose: eh,
                 caretConfig: {
                     position: "bottom",
                     align: "center",
@@ -1689,7 +1694,7 @@ function eg() {
                 title: "Blue Gradient",
                 body: "This popover showcases the blue gradient option",
                 asset: (0, i.jsx)("img", {
-                    src: z.Z,
+                    src: W.Z,
                     alt: "Medium placeholder",
                 }),
                 gradientColor: "blue",
@@ -1697,14 +1702,14 @@ function eg() {
                 actions: [
                     {
                         text: "Nice!",
-                        onClick: em,
+                        onClick: eh,
                     },
                 ],
             }),
             (0, i.jsx)(v.J2, {
-                targetElementRef: es,
+                targetElementRef: el,
                 shouldShow: y,
-                onRequestClose: em,
+                onRequestClose: eh,
                 caretConfig: {
                     position: "bottom",
                     align: "center",
@@ -1712,7 +1717,7 @@ function eg() {
                 title: "Nitro Pink Gradient",
                 body: "Experience the premium nitro-pink gradient effect",
                 asset: (0, i.jsx)("img", {
-                    src: z.Z,
+                    src: W.Z,
                     alt: "Medium placeholder",
                 }),
                 gradientColor: "nitro-pink",
@@ -1724,14 +1729,14 @@ function eg() {
                 actions: [
                     {
                         text: "Get Nitro",
-                        onClick: em,
+                        onClick: eh,
                     },
                 ],
             }),
             (0, i.jsx)(v.J2, {
-                targetElementRef: ea,
+                targetElementRef: eo,
                 shouldShow: P,
-                onRequestClose: em,
+                onRequestClose: eh,
                 caretConfig: {
                     position: "bottom",
                     align: "center",
@@ -1739,7 +1744,7 @@ function eg() {
                 title: "Voice Filters",
                 body: "Experience enhanced voice quality with our latest filtering technology. Perfect for gaming and streaming.",
                 asset: (0, i.jsx)("img", {
-                    src: Y.Z,
+                    src: K.Z,
                     alt: "Voice Filters",
                 }),
                 badge: "new",
@@ -1747,14 +1752,14 @@ function eg() {
                 actions: [
                     {
                         text: "Try it now",
-                        onClick: em,
+                        onClick: eh,
                     },
                 ],
             }),
             (0, i.jsx)(v.Mb, {
-                targetElementRef: el,
+                targetElementRef: ec,
                 shouldShow: D,
-                onRequestClose: em,
+                onRequestClose: eh,
                 caretConfig: {
                     position: "bottom",
                     align: "center",
@@ -1766,13 +1771,32 @@ function eg() {
                 gradientColor: "blue",
                 action: {
                     text: "Learn More",
-                    onClick: em,
+                    onClick: eh,
+                },
+            }),
+            (0, i.jsx)(v.Mb, {
+                targetElementRef: ed,
+                shouldShow: w,
+                onRequestClose: eh,
+                caretConfig: {
+                    position: "bottom",
+                    align: "center",
+                },
+                title: "With different preview",
+                body: "Click the video to view it in the media viewer!",
+                previewUrl: "https://cdn.discordapp.com/assets/server_products/storefront/default-header.mov",
+                assetUrl: "https://cdn.discordapp.com/assets/server-subscription-tier-template/upsell.mov",
+                badge: "new",
+                gradientColor: "blue",
+                action: {
+                    text: "Learn More",
+                    onClick: eh,
                 },
             }),
             (0, i.jsx)(S.e, {
-                targetElementRef: eo,
-                shouldShow: w,
-                onRequestClose: em,
+                targetElementRef: eu,
+                shouldShow: L,
+                onRequestClose: eh,
                 caretConfig: {
                     position: "bottom",
                     align: "center",
@@ -1782,7 +1806,7 @@ function eg() {
                         title: "Welcome to Quests!",
                         body: "Journey to Quest Home in Discover to start earning Orbs.",
                         asset: (0, i.jsx)("img", {
-                            src: z.Z,
+                            src: W.Z,
                             alt: "Medium placeholder",
                         }),
                         badge: "new",
@@ -1793,7 +1817,7 @@ function eg() {
                         title: "Earn Rewards",
                         body: "Complete quests to earn Orbs and unlock exclusive rewards.",
                         asset: (0, i.jsx)("img", {
-                            src: Y.Z,
+                            src: K.Z,
                             alt: "Quest Rewards",
                         }),
                         action: { text: "Next" },
@@ -1803,7 +1827,7 @@ function eg() {
                         title: "Quest Complete!",
                         body: "You're all set to start your quest adventure. Good luck!",
                         asset: (0, i.jsx)("img", {
-                            src: z.Z,
+                            src: W.Z,
                             alt: "Medium placeholder",
                         }),
                         action: { text: "Get Started" },
@@ -1818,9 +1842,9 @@ function eg() {
                 onStepChange: (e) => {},
             }),
             (0, i.jsx)(v.J2, {
-                targetElementRef: ec,
-                shouldShow: L,
-                onRequestClose: em,
+                targetElementRef: em,
+                shouldShow: M,
+                onRequestClose: eh,
                 caretConfig: {
                     position: "bottom",
                     align: "center",
@@ -1828,7 +1852,7 @@ function eg() {
                 title: "Experience Voice Filters",
                 body: "Enhanced voice quality with our latest filtering technology. Try the expressive button!",
                 asset: (0, i.jsx)("img", {
-                    src: Y.Z,
+                    src: K.Z,
                     alt: "Voice Filters",
                 }),
                 badge: "new",
@@ -1836,15 +1860,15 @@ function eg() {
                 actions: [
                     {
                         text: "Subscribe to Nitro",
-                        onClick: em,
+                        onClick: eh,
                         variant: "expressive",
                     },
                 ],
             }),
             (0, i.jsx)(S.e, {
-                targetElementRef: ed,
-                shouldShow: M,
-                onRequestClose: em,
+                targetElementRef: ep,
+                shouldShow: V,
+                onRequestClose: eh,
                 caretConfig: {
                     position: "bottom",
                     align: "center",
@@ -1854,7 +1878,7 @@ function eg() {
                         title: "Discover Features",
                         body: "Explore amazing new capabilities in Discord.",
                         asset: (0, i.jsx)("img", {
-                            src: z.Z,
+                            src: W.Z,
                             alt: "Medium placeholder",
                         }),
                         badge: "new",
@@ -1865,7 +1889,7 @@ function eg() {
                         title: "Unlock Potential",
                         body: "Learn how to make the most of your Discord experience.",
                         asset: (0, i.jsx)("img", {
-                            src: Y.Z,
+                            src: K.Z,
                             alt: "Features",
                         }),
                         action: { text: "Almost There" },
@@ -1875,7 +1899,7 @@ function eg() {
                         title: "Ready to Go!",
                         body: "You're all set! Notice the expressive button animation.",
                         asset: (0, i.jsx)("img", {
-                            src: z.Z,
+                            src: W.Z,
                             alt: "Medium placeholder",
                         }),
                         action: {
@@ -1893,9 +1917,9 @@ function eg() {
                 onStepChange: (e) => {},
             }),
             (0, i.jsx)(v.Mb, {
-                targetElementRef: eu,
-                shouldShow: G,
-                onRequestClose: em,
+                targetElementRef: eg,
+                shouldShow: H,
+                onRequestClose: eh,
                 caretConfig: {
                     position: "bottom",
                     align: "center",
@@ -1906,7 +1930,7 @@ function eg() {
                 badge: "new",
                 action: {
                     text: "Experience More",
-                    onClick: em,
+                    onClick: eh,
                     variant: "expressive",
                 },
             }),
@@ -1928,23 +1952,23 @@ function eg() {
                             (0, i.jsx)(I.zxk, {
                                 variant: "primary",
                                 text: "Small Content",
-                                buttonRef: H,
+                                buttonRef: q,
                                 onClick: () => {
-                                    em(), t(!0);
+                                    eh(), t(!0);
                                 },
                             }),
                             (0, i.jsx)(I.zxk, {
                                 variant: "primary",
                                 text: "Medium Content",
-                                buttonRef: K,
+                                buttonRef: X,
                                 onClick: () => {
-                                    em(), s(!0);
+                                    eh(), s(!0);
                                 },
                             }),
                             (0, i.jsx)(I.zxk, {
-                                buttonRef: q,
+                                buttonRef: J,
                                 onClick: () => {
-                                    em(), l(!0);
+                                    eh(), l(!0);
                                 },
                                 text: "No Asset",
                             }),
@@ -1970,23 +1994,23 @@ function eg() {
                             (0, i.jsx)(I.zxk, {
                                 variant: "primary",
                                 text: "External Link",
-                                buttonRef: X,
+                                buttonRef: Q,
                                 onClick: () => {
-                                    em(), c(!0);
+                                    eh(), c(!0);
                                 },
                             }),
                             (0, i.jsx)(I.zxk, {
                                 variant: "primary",
                                 text: "Two Actions",
-                                buttonRef: J,
+                                buttonRef: $,
                                 onClick: () => {
-                                    em(), u(!0);
+                                    eh(), u(!0);
                                 },
                             }),
                             (0, i.jsx)(I.zxk, {
-                                buttonRef: Q,
+                                buttonRef: ee,
                                 onClick: () => {
-                                    em(), p(!0);
+                                    eh(), p(!0);
                                 },
                                 text: "No Actions",
                             }),
@@ -2012,33 +2036,33 @@ function eg() {
                             (0, i.jsx)(I.zxk, {
                                 variant: "primary",
                                 text: "Custom Caret API",
-                                buttonRef: $,
+                                buttonRef: et,
                                 onClick: () => {
-                                    em(), h(!0);
+                                    eh(), h(!0);
                                 },
                             }),
                             (0, i.jsx)(I.zxk, {
                                 variant: "primary",
                                 text: "Left Side Caret",
-                                buttonRef: ee,
+                                buttonRef: en,
                                 onClick: () => {
-                                    em(), b(!0);
+                                    eh(), b(!0);
                                 },
                             }),
                             (0, i.jsx)(I.zxk, {
                                 variant: "primary",
                                 text: "Custom Offset",
-                                buttonRef: et,
+                                buttonRef: ei,
                                 onClick: () => {
-                                    em(), _(!0);
+                                    eh(), _(!0);
                                 },
                             }),
                             (0, i.jsx)(I.zxk, {
                                 variant: "primary",
                                 text: "Left Center",
-                                buttonRef: en,
+                                buttonRef: er,
                                 onClick: () => {
-                                    em(), E(!0);
+                                    eh(), E(!0);
                                 },
                             }),
                         ],
@@ -2063,25 +2087,25 @@ function eg() {
                             (0, i.jsx)(I.zxk, {
                                 variant: "primary",
                                 text: "Purple Gradient",
-                                buttonRef: ei,
+                                buttonRef: es,
                                 onClick: () => {
-                                    em(), O(!0);
+                                    eh(), O(!0);
                                 },
                             }),
                             (0, i.jsx)(I.zxk, {
                                 variant: "primary",
                                 text: "Blue Gradient",
-                                buttonRef: er,
+                                buttonRef: ea,
                                 onClick: () => {
-                                    em(), N(!0);
+                                    eh(), N(!0);
                                 },
                             }),
                             (0, i.jsx)(I.zxk, {
                                 variant: "primary",
                                 text: "Nitro Pink Gradient",
-                                buttonRef: es,
+                                buttonRef: el,
                                 onClick: () => {
-                                    em(), A(!0);
+                                    eh(), A(!0);
                                 },
                             }),
                         ],
@@ -2106,17 +2130,25 @@ function eg() {
                             (0, i.jsx)(I.zxk, {
                                 variant: "primary",
                                 text: "Voice Filters",
-                                buttonRef: ea,
+                                buttonRef: eo,
                                 onClick: () => {
-                                    em(), R(!0);
+                                    eh(), R(!0);
                                 },
                             }),
                             (0, i.jsx)(I.zxk, {
                                 variant: "primary",
                                 text: "Video Media Viewer",
-                                buttonRef: el,
+                                buttonRef: ec,
                                 onClick: () => {
-                                    em(), Z(!0);
+                                    eh(), Z(!0);
+                                },
+                            }),
+                            (0, i.jsx)(I.zxk, {
+                                variant: "primary",
+                                text: "Video with Different Preview",
+                                buttonRef: ed,
+                                onClick: () => {
+                                    eh(), k(!0);
                                 },
                             }),
                         ],
@@ -2140,9 +2172,9 @@ function eg() {
                         children: (0, i.jsx)(I.zxk, {
                             variant: "primary",
                             text: "Multi-Step",
-                            buttonRef: eo,
+                            buttonRef: eu,
                             onClick: () => {
-                                em(), k(!0);
+                                eh(), B(!0);
                             },
                         }),
                     }),
@@ -2166,25 +2198,25 @@ function eg() {
                             (0, i.jsx)(I.zxk, {
                                 variant: "primary",
                                 text: "Expressive Popover",
-                                buttonRef: ec,
+                                buttonRef: em,
                                 onClick: () => {
-                                    em(), B(!0);
+                                    eh(), U(!0);
                                 },
                             }),
                             (0, i.jsx)(I.zxk, {
                                 variant: "primary",
                                 text: "Expressive Multi-Step",
-                                buttonRef: ed,
+                                buttonRef: ep,
                                 onClick: () => {
-                                    em(), U(!0);
+                                    eh(), F(!0);
                                 },
                             }),
                             (0, i.jsx)(I.zxk, {
                                 variant: "primary",
                                 text: "Expressive Video",
-                                buttonRef: eu,
+                                buttonRef: eg,
                                 onClick: () => {
-                                    em(), F(!0);
+                                    eh(), z(!0);
                                 },
                             }),
                         ],
@@ -2194,14 +2226,14 @@ function eg() {
         ],
     });
 }
-function eh() {
+function ef() {
     let [e, t] = r.useState(!1),
         [n, s] = r.useState(!1),
         [a, l] = r.useState("auto");
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsxs)("div", {
-                className: V.section,
+                className: G.section,
                 children: [
                     (0, i.jsx)(I.X6q, {
                         variant: "heading-xl/semibold",
@@ -2245,7 +2277,7 @@ function eh() {
                 ],
             }),
             (0, i.jsxs)("div", {
-                className: V.section,
+                className: G.section,
                 children: [
                     (0, i.jsx)(I.X6q, {
                         variant: "heading-xl/semibold",
@@ -2260,7 +2292,7 @@ function eh() {
                 ],
             }),
             (0, i.jsxs)("div", {
-                className: V.section,
+                className: G.section,
                 children: [
                     (0, i.jsx)(I.X6q, {
                         variant: "heading-xl/semibold",
@@ -2292,14 +2324,14 @@ function eh() {
                 ],
             }),
             (0, i.jsxs)("div", {
-                className: V.section,
+                className: G.section,
                 children: [
                     (0, i.jsx)(I.X6q, {
                         variant: "heading-xl/semibold",
                         children: "Slider",
                     }),
                     (0, i.jsxs)("div", {
-                        className: V.slider,
+                        className: G.slider,
                         children: [
                             (0, i.jsx)(I.Text, {
                                 variant: "text-md/medium",
@@ -2315,7 +2347,7 @@ function eh() {
                         ],
                     }),
                     (0, i.jsxs)("div", {
-                        className: V.slider,
+                        className: G.slider,
                         children: [
                             (0, i.jsx)(I.Text, {
                                 variant: "text-md/medium",
@@ -2331,7 +2363,7 @@ function eh() {
                         ],
                     }),
                     (0, i.jsxs)("div", {
-                        className: V.slider,
+                        className: G.slider,
                         children: [
                             (0, i.jsx)(I.Text, {
                                 variant: "text-md/medium",
@@ -2347,7 +2379,7 @@ function eh() {
                         ],
                     }),
                     (0, i.jsxs)("div", {
-                        className: V.slider,
+                        className: G.slider,
                         children: [
                             (0, i.jsx)(I.Text, {
                                 variant: "text-md/medium",
@@ -2363,7 +2395,7 @@ function eh() {
                         ],
                     }),
                     (0, i.jsxs)("div", {
-                        className: V.slider,
+                        className: G.slider,
                         children: [
                             (0, i.jsx)(I.Text, {
                                 variant: "text-md/medium",
@@ -2377,7 +2409,7 @@ function eh() {
                         ],
                     }),
                     (0, i.jsxs)("div", {
-                        className: V.slider,
+                        className: G.slider,
                         children: [
                             (0, i.jsx)(I.Text, {
                                 variant: "text-md/medium",
@@ -2396,14 +2428,14 @@ function eh() {
         ],
     });
 }
-function ef() {
+function eb() {
     let [e, t] = r.useState(null),
         [n, s] = r.useState(null),
         [a, l] = r.useState([]),
         [c, d] = r.useState([]),
         [u, m] = r.useState([]);
     return (0, i.jsxs)("div", {
-        className: V.section,
+        className: G.section,
         children: [
             (0, i.jsx)(I.X6q, {
                 variant: "heading-xl/semibold",
@@ -2444,7 +2476,7 @@ function ef() {
                 onChange: (e) => d(e),
                 options: o.G,
                 hidePills: !0,
-                customPillContainerClassName: V.customPillContainer,
+                customPillContainerClassName: G.customPillContainer,
                 renderCustomPill: (e) =>
                     (0, i.jsx)("div", {
                         style: {
@@ -2461,13 +2493,13 @@ function ef() {
         ],
     });
 }
-function eb() {
+function ex() {
     let [e, t] = r.useState(""),
         [n, s] = r.useState(""),
         [a, l] = r.useState(""),
         o = (0, P.U)("UserSettingsDesignSystems");
     return (0, i.jsxs)("div", {
-        className: V.section,
+        className: G.section,
         children: [
             (0, i.jsx)(I.X6q, {
                 variant: "heading-xl/semibold",
@@ -2581,12 +2613,12 @@ function eb() {
         ],
     });
 }
-function ex(e) {
+function e_(e) {
     let { transitionState: t } = e,
         [n, s] = r.useState(!1),
         [a, l] = r.useState(I.CgR.SMALL),
         [o, c] = r.useState(!1),
-        d = n ? V.modalOutlines : "";
+        d = n ? G.modalOutlines : "";
     return (0, i.jsxs)(I.Y0X, {
         transitionState: t,
         size: a,
@@ -2667,7 +2699,7 @@ function ex(e) {
         ],
     });
 }
-function e_(e) {
+function ej(e) {
     let { transitionState: t, onClose: n, modalCount: s = 1 } = e,
         [a, l] = r.useState("replace"),
         o = s < 3;
@@ -2761,7 +2793,7 @@ function e_(e) {
                                 text: "Open Next Modal",
                                 onClick: () => {
                                     let e = s + 1;
-                                    (0, I.h7j)((t) => (0, i.jsx)(e_, q(K({}, t), { modalCount: e })), {
+                                    (0, I.h7j)((t) => (0, i.jsx)(ej, X(q({}, t), { modalCount: e })), {
                                         stackingBehavior: a,
                                     });
                                 },
@@ -2772,12 +2804,12 @@ function e_(e) {
         ],
     });
 }
-function ej(e) {
+function eE(e) {
     let { transitionState: t, onClose: n } = e;
     function r(e) {
         let { children: t } = e;
         return (0, i.jsx)("div", {
-            className: V.modalOutlines,
+            className: G.modalOutlines,
             style: { padding: "24px" },
             children: t,
         });
@@ -2787,7 +2819,7 @@ function ej(e) {
         onClose: n,
         children: [
             (0, i.jsx)("div", {
-                className: V.modalOutlines,
+                className: G.modalOutlines,
                 children: (0, i.jsx)(O.x, {
                     title: "Demo Modal",
                     subtitle: "The ModalHeader can have leading and trailing items on either side of the text",
@@ -2796,7 +2828,7 @@ function ej(e) {
                 }),
             }),
             (0, i.jsx)("div", {
-                className: V.modalOutlines,
+                className: G.modalOutlines,
                 children: (0, i.jsx)(E.f, {
                     controls: (0, i.jsx)(r, { children: "This ModalBody renders any controls here" }),
                     children: (0, i.jsx)(r, {
@@ -2805,11 +2837,11 @@ function ej(e) {
                 }),
             }),
             (0, i.jsx)("div", {
-                className: V.modalOutlines,
+                className: G.modalOutlines,
                 children: (0, i.jsx)(C.m, { children: (0, i.jsx)(r, { children: "This is the ModalFooter" }) }),
             }),
             (0, i.jsx)("div", {
-                className: V.modalOutlines,
+                className: G.modalOutlines,
                 children: (0, i.jsx)(j.G, {
                     leading: (0, i.jsx)(r, { children: "ModalActionBar leading" }),
                     actions: [
@@ -2829,7 +2861,7 @@ function ej(e) {
         ],
     });
 }
-function eE(e) {
+function eC(e) {
     let { transitionState: t, onClose: n } = e,
         [s, a] = r.useState("md"),
         [l, o] = r.useState("Demo Modal"),
@@ -2988,7 +3020,7 @@ function eE(e) {
         ],
     });
 }
-function eC(e) {
+function eO(e) {
     let { transitionState: t, onClose: n } = e;
     function s(e) {
         let { text: t } = e,
@@ -3062,7 +3094,7 @@ function eC(e) {
         ],
     });
 }
-function eO(e) {
+function ev(e) {
     let { transitionState: t, onClose: n } = e;
     return (0, i.jsx)(_.Modal, {
         transitionState: t,
@@ -3083,7 +3115,7 @@ function eO(e) {
         ],
     });
 }
-function ev(e) {
+function eS(e) {
     let { transitionState: t, onClose: s } = e,
         [a, l] = r.useState(0),
         [o, c] = r.useState(!1),
@@ -3092,7 +3124,7 @@ function ev(e) {
                 0 === a
                     ? {
                           type: "image",
-                          src: G,
+                          src: F,
                       }
                     : 1 === a
                       ? {
@@ -3108,8 +3140,8 @@ function ev(e) {
                         : 3 === a
                           ? {
                                 type: "video",
-                                src: H.Z,
-                                fallbackImageSrc: G,
+                                src: z.Z,
+                                fallbackImageSrc: F,
                                 loop: !0,
                                 loopAt: 2.5,
                             }
@@ -3186,7 +3218,7 @@ function ev(e) {
         ],
     });
 }
-function eS(e) {
+function eT(e) {
     let { transitionState: t, onClose: n, modalCount: s = 1 } = e,
         [a, l] = r.useState("replace"),
         o = s < 3;
@@ -3209,7 +3241,7 @@ function eS(e) {
                           text: "Open Next Modal",
                           onClick: () => {
                               let e = s + 1;
-                              (0, I.h7j)((t) => (0, i.jsx)(eS, q(K({}, t), { modalCount: e })), {
+                              (0, I.h7j)((t) => (0, i.jsx)(eT, X(q({}, t), { modalCount: e })), {
                                   stackingBehavior: a,
                               });
                           },
@@ -3275,11 +3307,11 @@ function eS(e) {
         }),
     });
 }
-function eT() {
+function eI() {
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsxs)("div", {
-                className: V.section,
+                className: G.section,
                 children: [
                     (0, i.jsx)(I.X6q, {
                         variant: "heading-xl/semibold",
@@ -3289,7 +3321,7 @@ function eT() {
                         variant: "primary",
                         text: "Open modal",
                         onClick: () => {
-                            (0, I.h7j)((e) => (0, i.jsx)(ex, K({}, e)));
+                            (0, I.h7j)((e) => (0, i.jsx)(e_, q({}, e)));
                         },
                     }),
                     (0, i.jsx)(I.zxk, {
@@ -3308,13 +3340,13 @@ function eT() {
                         variant: "primary",
                         text: "Open modal stacking demo",
                         onClick: () => {
-                            (0, I.h7j)((e) => (0, i.jsx)(e_, K({}, e)));
+                            (0, I.h7j)((e) => (0, i.jsx)(ej, q({}, e)));
                         },
                     }),
                 ],
             }),
             (0, i.jsxs)("div", {
-                className: V.section,
+                className: G.section,
                 children: [
                     (0, i.jsx)(I.X6q, {
                         variant: "heading-xl/semibold",
@@ -3324,42 +3356,42 @@ function eT() {
                         variant: "primary",
                         text: "Open modal section visualizer",
                         onClick: () => {
-                            (0, I.h7j)((e) => (0, i.jsx)(ej, K({}, e)));
+                            (0, I.h7j)((e) => (0, i.jsx)(eE, q({}, e)));
                         },
                     }),
                     (0, i.jsx)(I.zxk, {
                         variant: "primary",
                         text: "Open demo modal",
                         onClick: () => {
-                            (0, I.h7j)((e) => (0, i.jsx)(eE, K({}, e)));
+                            (0, I.h7j)((e) => (0, i.jsx)(eC, q({}, e)));
                         },
                     }),
                     (0, i.jsx)(I.zxk, {
                         variant: "primary",
                         text: "Open sample invite modal",
                         onClick: () => {
-                            (0, I.h7j)((e) => (0, i.jsx)(eC, K({}, e)));
+                            (0, I.h7j)((e) => (0, i.jsx)(eO, q({}, e)));
                         },
                     }),
                     (0, i.jsx)(I.zxk, {
                         variant: "primary",
                         text: "Open sample alert modal",
                         onClick: () => {
-                            (0, I.h7j)((e) => (0, i.jsx)(eO, K({}, e)));
+                            (0, I.h7j)((e) => (0, i.jsx)(ev, q({}, e)));
                         },
                     }),
                     (0, i.jsx)(I.zxk, {
                         variant: "primary",
                         text: "Open expressive modal",
                         onClick: () => {
-                            (0, I.h7j)((e) => (0, i.jsx)(ev, K({}, e)));
+                            (0, I.h7j)((e) => (0, i.jsx)(eS, q({}, e)));
                         },
                     }),
                     (0, i.jsx)(I.zxk, {
                         variant: "primary",
                         text: "Open Mana modal stacking demo",
                         onClick: () => {
-                            (0, I.h7j)((e) => (0, i.jsx)(eS, K({}, e)));
+                            (0, I.h7j)((e) => (0, i.jsx)(eT, q({}, e)));
                         },
                     }),
                 ],
@@ -3367,14 +3399,89 @@ function eT() {
         ],
     });
 }
-function eI() {
+function eN() {
+    return (0, i.jsxs)("div", {
+        className: G.section,
+        children: [
+            (0, i.jsx)(I.X6q, {
+                variant: "heading-xl/semibold",
+                children: "User Avatars",
+            }),
+            (0, i.jsx)("div", {
+                style: {
+                    display: "flex",
+                    justifyContent: "space-between",
+                },
+                children: [
+                    "SIZE_16",
+                    "SIZE_20",
+                    "SIZE_24",
+                    "SIZE_32",
+                    "SIZE_40",
+                    "SIZE_44",
+                    "SIZE_48",
+                    "SIZE_80",
+                    "SIZE_96",
+                    "SIZE_120",
+                ].map((e) => (0, i.jsx)(ey, { size: e }, e)),
+            }),
+        ],
+    });
+}
+function ey(e) {
+    let { size: t } = e,
+        { user: n } = (0, c.cj)([Z.default], () => ({ user: Z.default.getCurrentUser() })),
+        r = Number(t.split("_")[1]);
+    return (0, i.jsxs)("div", {
+        style: {
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "space-between",
+            gap: 8,
+        },
+        children: [
+            (0, i.jsxs)(I.X6q, {
+                variant: "heading-sm/semibold",
+                style: { textAlign: "center" },
+                children: [r, "px"],
+            }),
+            (0, i.jsx)(I.qEK, {
+                src: null == n ? void 0 : n.getAvatarURL(void 0, r),
+                size: t,
+                "aria-label": null == n ? void 0 : n.username,
+                status: V.Sk.ONLINE,
+            }),
+            (0, i.jsx)(I.qEK, {
+                src: null == n ? void 0 : n.getAvatarURL(void 0, r),
+                size: t,
+                "aria-label": null == n ? void 0 : n.username,
+                status: V.Sk.ONLINE,
+                isTyping: !0,
+            }),
+            (0, i.jsx)(I.qEK, {
+                src: null == n ? void 0 : n.getAvatarURL(void 0, r),
+                size: t,
+                "aria-label": null == n ? void 0 : n.username,
+                status: V.Sk.ONLINE,
+                isMobile: !0,
+            }),
+            (0, i.jsx)(I.qEK, {
+                src: null == n ? void 0 : n.getAvatarURL(void 0, r),
+                size: t,
+                "aria-label": null == n ? void 0 : n.username,
+                isSpeaking: !0,
+            }),
+        ],
+    });
+}
+function eA() {
     let e = (0, c.e7)([y.Z], () => y.Z.gradientPreset);
     return (0, i.jsx)(I.f6W, {
-        theme: U.BR.DARKER,
+        theme: V.BR.DARKER,
         disableAdaptiveTheme: !0,
         children: (t) =>
             (0, i.jsxs)("div", {
-                className: a()(t, V.section),
+                className: a()(t, G.section),
                 children: [
                     (0, i.jsx)(I.zxk, {
                         variant: "secondary",
@@ -3382,10 +3489,10 @@ function eI() {
                         fullWidth: !0,
                     }),
                     (0, i.jsx)(I.f6W, {
-                        theme: U.BR.LIGHT,
+                        theme: V.BR.LIGHT,
                         children: (t) =>
                             (0, i.jsxs)("div", {
-                                className: a()(t, V.section),
+                                className: a()(t, G.section),
                                 children: [
                                     (0, i.jsx)(I.zxk, {
                                         variant: "secondary",
@@ -3393,10 +3500,10 @@ function eI() {
                                         fullWidth: !0,
                                     }),
                                     (0, i.jsx)(I.f6W, {
-                                        theme: U.BR.DARKER,
+                                        theme: V.BR.DARKER,
                                         children: (e) =>
                                             (0, i.jsx)("div", {
-                                                className: a()(e, V.section),
+                                                className: a()(e, G.section),
                                                 children: (0, i.jsx)(I.zxk, {
                                                     variant: "secondary",
                                                     text: "Button",
@@ -3408,7 +3515,7 @@ function eI() {
                                         gradient: e,
                                         children: (e) =>
                                             (0, i.jsx)("div", {
-                                                className: a()(e, V.section),
+                                                className: a()(e, G.section),
                                                 children: (0, i.jsx)(I.zxk, {
                                                     variant: "secondary",
                                                     text: "Button",

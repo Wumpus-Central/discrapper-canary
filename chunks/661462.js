@@ -1,7 +1,7 @@
 n.d(t, { Z: () => m }), n(388685);
 var r = n(255367),
-    l = n(73800),
-    i = n(481060),
+    i = n(73800),
+    l = n(481060),
     o = n(785717),
     a = n(128156),
     c = n(311044),
@@ -13,36 +13,36 @@ function p(e) {
     let {
         user: t,
         currentUser: n,
-        section: l,
-        subsection: i,
+        section: i,
+        subsection: l,
         displayProfile: o,
         guildId: f,
         channelId: p,
         onClose: m,
     } = e;
-    return l === u.oh.ACTIVITY
+    return i === u.oh.ACTIVITY
         ? (0, r.jsx)(a.Z, {
               user: t,
               currentUser: n,
               displayProfile: o,
               guildId: f,
               channelId: p,
-              subsection: i,
+              subsection: l,
               onClose: m,
           })
-        : l === u.oh.MUTUAL_FRIENDS
+        : i === u.oh.MUTUAL_FRIENDS
           ? (0, r.jsx)(c.Z, {
                 user: t,
                 guildId: f,
                 channelId: p,
                 onClose: m,
             })
-          : l === u.oh.MUTUAL_GUILDS
+          : i === u.oh.MUTUAL_GUILDS
             ? (0, r.jsx)(s.Z, {
                   user: t,
                   onClose: m,
               })
-            : l === u.oh.WIDGETS
+            : i === u.oh.WIDGETS
               ? (0, r.jsx)(d.C, {
                     user: t,
                     guildId: f,
@@ -64,7 +64,7 @@ function m(e) {
             onClose: y,
         } = e,
         { trackUserProfileAction: O } = (0, o.KZ)(),
-        [{ section: x, subsection: h, text: v }, _] = l.useState(
+        [{ section: x, subsection: h, text: v }, _] = i.useState(
             ((n = (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
@@ -117,12 +117,12 @@ function m(e) {
     return (0, r.jsxs)("div", {
         className: f.container,
         children: [
-            (0, r.jsx)(i.Ttm, {
+            (0, r.jsx)(l.Ttm, {
                 orientation: "horizontal",
                 className: f.scroller,
                 fade: !0,
                 paddingFix: !1,
-                children: (0, r.jsx)(i.njP, {
+                children: (0, r.jsx)(l.njP, {
                     type: "top",
                     look: "custom",
                     selectedItem: x,
@@ -138,7 +138,7 @@ function m(e) {
                     },
                     children: g.map((e) =>
                         (0, r.jsx)(
-                            i.njP.Item,
+                            l.njP.Item,
                             {
                                 className: f.tabBarItem,
                                 id: e.section,
@@ -150,7 +150,7 @@ function m(e) {
                     ),
                 }),
             }),
-            (0, r.jsx)(i.njP.Panel, {
+            (0, r.jsx)(l.njP.Panel, {
                 id: x,
                 "aria-label": v,
                 className: f.tabBarPanel,

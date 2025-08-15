@@ -24,8 +24,8 @@ var r = n(255367),
     v = n(977156),
     C = n(5881),
     y = n(602667),
-    O = n(110560),
-    E = n(78826),
+    E = n(110560),
+    O = n(78826),
     S = n(667105),
     T = n(693900),
     w = n(617889),
@@ -66,7 +66,7 @@ function k(e) {
         W = (0, u.Z)(Z),
         U = (null == (n = o.userStatus) ? void 0 : n.completedAt) != null,
         H = (0, u.Z)(U),
-        { hasError: F, isLoading: z } = (0, E.d7)(),
+        { hasError: F, isLoading: z } = (0, O.d7)(),
         X = s.useContext(P.T) || (k && I && !z && !q),
         K = s.useRef(X),
         Y = (0, w.B)(o, X && !F),
@@ -160,7 +160,7 @@ function k(e) {
             X !== K.current && ei(!1), (K.current = X);
         }, [X]);
     let eC = Z ? A.XZ : A.R4,
-        [{ expansionSpring: ey }, eO] = (0, c.q_F)(() => ({
+        [{ expansionSpring: ey }, eE] = (0, c.q_F)(() => ({
             from: { expansionSpring: 0 },
             config: eC,
             onRest: () => {
@@ -171,12 +171,12 @@ function k(e) {
             },
         }));
     s.useEffect(() => {
-        eO({
+        eE({
             expansionSpring: +!!en,
             immediate: D,
         });
-    }, [en, eO, D]);
-    let { visibilitySpring: eE } = (0, c.q_F)({
+    }, [en, eE, D]);
+    let { visibilitySpring: eO } = (0, c.q_F)({
         from: { visibilitySpring: 0 },
         to: { visibilitySpring: +!!X },
         config: {
@@ -192,7 +192,7 @@ function k(e) {
         },
     });
     s.useEffect(() => {
-        L && (0, O.loadVideoQuestModal)();
+        L && (0, E.loadVideoQuestModal)();
     }, [L]),
         s.useLayoutEffect(() => {
             U && !H && Y.canCollapseOnBlur && ep();
@@ -279,7 +279,7 @@ function k(e) {
                             }),
                             style: {
                                 color: eS ? void 0 : o.config.colors.secondary,
-                                height: eE.to({
+                                height: eO.to({
                                     range: [0, 1],
                                     output: [0, !Y.canCollapseOnBlur && en ? el : eT],
                                 }),
@@ -326,7 +326,7 @@ let q =
               return null == e
                   ? null
                   : (0, r.jsx)(
-                        E.p,
+                        O.p,
                         {
                             source: A.dr.QUESTS_BAR,
                             questId: e.id,

@@ -1,7 +1,7 @@
 n.d(t, { Z: () => p }), n(35282);
 var r = n(255367),
-    l = n(73800),
-    i = n(442837),
+    i = n(73800),
+    l = n(442837),
     o = n(481060),
     a = n(34854),
     c = n(531301),
@@ -11,10 +11,10 @@ var r = n(255367),
     f = n(215258);
 function p(e) {
     let { autoFocus: t = !1, className: n, userId: p, onUpdate: m } = e,
-        g = (0, i.e7)([s.Z], () => s.Z.hidePersonalInformation),
+        g = (0, l.e7)([s.Z], () => s.Z.hidePersonalInformation),
         { loading: b, note: j } = (0, c.Z)(p),
-        y = l.useRef(null);
-    return (l.useEffect(() => {
+        y = i.useRef(null);
+    return (i.useEffect(() => {
         if (!t || g) return;
         let e = y.current;
         (null == e ? void 0 : e.selectionStart) != null && (e.focus(), e.setSelection(e.value.length, e.value.length));

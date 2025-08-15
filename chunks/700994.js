@@ -1,74 +1,74 @@
 n.d(t, { Z: () => b });
-var i = n(255367);
+var l = n(255367);
 n(73800);
-var l = n(442837),
-    r = n(481060),
+var r = n(442837),
+    i = n(481060),
     o = n(846027),
     a = n(131951),
-    s = n(594174),
-    d = n(36703),
-    u = n(358085),
-    c = n(65154),
+    u = n(594174),
+    c = n(36703),
+    s = n(358085),
+    d = n(65154),
     f = n(388032);
 function b(e) {
     var t;
-    let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : c.Yn.DEFAULT,
-        b = (0, l.e7)([a.Z], () => a.Z.getLocalVolume(e, n), [e, n]),
-        g = e === (null == (t = s.default.getCurrentUser()) ? void 0 : t.id),
-        Z = n === c.Yn.STREAM;
+    let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : d.Yn.DEFAULT,
+        b = (0, r.e7)([a.Z], () => a.Z.getLocalVolume(e, n), [e, n]),
+        g = e === (null == (t = u.default.getCurrentUser()) ? void 0 : t.id),
+        O = n === d.Yn.STREAM;
     return g
         ? null
-        : (0, i.jsx)(r.II_, {
+        : (0, l.jsx)(i.II_, {
               id: "user-volume",
-              label: Z ? f.intl.string(f.t.t4JBnJ) : f.intl.string(f.t.m7TNdH),
-              control: (t, l) => {
-                  var a, s;
-                  return (0, i.jsx)(
-                      r._wy,
+              label: O ? f.intl.string(f.t.t4JBnJ) : f.intl.string(f.t.m7TNdH),
+              control: (t, r) => {
+                  var a, u;
+                  return (0, l.jsx)(
+                      i._wy,
                       ((a = (function (e) {
                           for (var t = 1; t < arguments.length; t++) {
                               var n = null != arguments[t] ? arguments[t] : {},
-                                  i = Object.keys(n);
+                                  l = Object.keys(n);
                               "function" == typeof Object.getOwnPropertySymbols &&
-                                  (i = i.concat(
+                                  (l = l.concat(
                                       Object.getOwnPropertySymbols(n).filter(function (e) {
                                           return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                       }),
                                   )),
-                                  i.forEach(function (t) {
-                                      var i;
-                                      (i = n[t]),
+                                  l.forEach(function (t) {
+                                      var l;
+                                      (l = n[t]),
                                           t in e
                                               ? Object.defineProperty(e, t, {
-                                                    value: i,
+                                                    value: l,
                                                     enumerable: !0,
                                                     configurable: !0,
                                                     writable: !0,
                                                 })
-                                              : (e[t] = i);
+                                              : (e[t] = l);
                                   });
                           }
                           return e;
                       })({}, t)),
-                      (s = s =
+                      (u = u =
                           {
-                              ref: l,
-                              value: (0, d.P)(b),
-                              maxValue: u.isPlatformEmbedded ? 200 : 100,
-                              onChange: (t) => o.Z.setLocalVolume(e, (0, d.A)(t), n),
-                              "aria-label": Z ? f.intl.string(f.t.t4JBnJ) : f.intl.string(f.t.m7TNdH),
+                              ref: r,
+                              value: (0, c.P)(b),
+                              maxValue: s.isPlatformEmbedded ? 200 : 100,
+                              onChange: (t) => o.Z.setLocalVolume(e, (0, c.A)(t), n),
+                              "aria-label": O ? f.intl.string(f.t.t4JBnJ) : f.intl.string(f.t.m7TNdH),
                           }),
                       Object.getOwnPropertyDescriptors
-                          ? Object.defineProperties(a, Object.getOwnPropertyDescriptors(s))
+                          ? Object.defineProperties(a, Object.getOwnPropertyDescriptors(u))
                           : (function (e, t) {
                                 var n = Object.keys(e);
                                 if (Object.getOwnPropertySymbols) {
-                                    var i = Object.getOwnPropertySymbols(e);
-                                    n.push.apply(n, i);
+                                    var l = Object.getOwnPropertySymbols(e);
+                                    n.push.apply(n, l);
                                 }
                                 return n;
-                            })(Object(s)).forEach(function (e) {
-                                Object.defineProperty(a, e, Object.getOwnPropertyDescriptor(s, e));
+                            })(Object(u)).forEach(function (e) {
+                                Object.defineProperty(a, e, Object.getOwnPropertyDescriptor(u, e));
                             }),
                       a),
                   );

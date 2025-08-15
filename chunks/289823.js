@@ -172,6 +172,11 @@ let I = {
         typing: u.QS.DIAGONAL_FACEPILE_TYPING_80,
         status: u.QS.DIAGONAL_FACEPILE_STATUS_80,
     },
+    [c.EFr.SIZE_96]: {
+        default: u.QS.DIAGONAL_FACEPILE_96,
+        typing: u.QS.DIAGONAL_FACEPILE_TYPING_96,
+        status: u.QS.DIAGONAL_FACEPILE_STATUS_96,
+    },
     [c.EFr.SIZE_120]: {
         default: u.QS.DIAGONAL_FACEPILE_120,
         typing: u.QS.DIAGONAL_FACEPILE_TYPING_120,

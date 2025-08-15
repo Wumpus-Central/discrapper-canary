@@ -4,8 +4,8 @@ n.d(t, {
     qs: () => a,
 });
 var r = n(379405),
-    l = n(296009),
-    i = n(388032);
+    i = n(296009),
+    l = n(388032);
 let o = {
         VALORANT: "700136079562375258",
         ROBLOX: "363445589247131668",
@@ -28,17 +28,17 @@ let o = {
     c = () => [
         {
             id: "0",
-            type: l.l.FAVORITE_GAMES,
+            type: i.l.FAVORITE_GAMES,
             games: [
                 {
                     applicationId: o.VALORANT,
-                    comment: i.intl.string(i.t["7CCylJ"]),
+                    comment: l.intl.string(l.t["7CCylJ"]),
                 },
             ],
         },
         {
             id: "1",
-            type: l.l.CURRENT_GAMES,
+            type: i.l.CURRENT_GAMES,
             games: [
                 {
                     applicationId: o.ROBLOX,
@@ -52,7 +52,7 @@ let o = {
         },
         {
             id: "2",
-            type: l.l.WANT_TO_PLAY_GAMES,
+            type: i.l.WANT_TO_PLAY_GAMES,
             games: [
                 { applicationId: o.MINECRAFT },
                 { applicationId: o.COUNTERSTRIKE_2 },
@@ -62,7 +62,7 @@ let o = {
         },
         {
             id: "3",
-            type: l.l.PLAYED_GAMES,
+            type: i.l.PLAYED_GAMES,
             games: [
                 { applicationId: o.FORTNITE },
                 { applicationId: o.GRAND_THEFT_AUTO_V },

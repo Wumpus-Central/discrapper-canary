@@ -1,4 +1,4 @@
-n.d(t, { M: () => O });
+n.d(t, { M: () => v });
 var r = n(255367),
     i = n(73800),
     o = n(780842),
@@ -85,25 +85,30 @@ function y(e, t) {
     return i;
 }
 function O(e) {
+    return e.endsWith(".gif") || e.endsWith(".webp") || e.endsWith(".png");
+}
+function v(e) {
     var {
             title: t,
             body: n,
             assetUrl: h,
-            action: g,
-            caretConfig: y = {
+            previewUrl: g = h,
+            action: y,
+            caretConfig: v = {
                 position: "bottom",
                 align: "center",
             },
-            badge: O,
-            textLink: v,
-            onWatchVideo: I,
-            onRequestClose: T,
-            popoverRef: S,
+            badge: I,
+            textLink: T,
+            onWatchVideo: S,
+            onRequestClose: A,
+            popoverRef: N,
         } = e,
-        A = b(e, [
+        C = b(e, [
             "title",
             "body",
             "assetUrl",
+            "previewUrl",
             "action",
             "caretConfig",
             "badge",
@@ -112,9 +117,9 @@ function O(e) {
             "onRequestClose",
             "popoverRef",
         ]);
-    let N = i.useRef(null),
-        C = h.endsWith(".gif") || h.endsWith(".webp") || h.endsWith(".png"),
-        R = i.useCallback(
+    let R = i.useRef(null),
+        P = O(g),
+        w = i.useCallback(
             () => ({
                 type: "VIDEO",
                 url: h,
@@ -126,27 +131,27 @@ function O(e) {
             }),
             [h, t],
         ),
-        P = i.useCallback(() => {
-            null !== N.current && N.current.pause(), null == T || T();
-        }, [T]),
-        w = i.useCallback(() => {
-            null !== N.current && N.current.pause(), null == T || T();
-        }, [T]),
         D = i.useCallback(() => {
-            null !== N.current && N.current.pause();
-            let e = R();
+            null !== R.current && R.current.pause(), null == A || A();
+        }, [A]),
+        L = i.useCallback(() => {
+            null !== R.current && R.current.pause(), null == A || A();
+        }, [A]),
+        x = i.useCallback(() => {
+            null !== R.current && R.current.pause();
+            let e = w();
             (0, s.K)({
                 items: [e],
                 startingIndex: 0,
                 location: "VideoPopover",
                 shouldHideMediaOptions: !0,
             }),
-                null == T || T(),
-                null == I || I();
-        }, [R, I, T]),
-        L = C
+                null == A || A(),
+                null == S || S();
+        }, [w, S, A]),
+        M = P
             ? (0, r.jsx)("img", {
-                  src: h,
+                  src: g,
                   alt: "",
                   draggable: !1,
                   className: p.inlineAsset,
@@ -154,8 +159,8 @@ function O(e) {
             : (0, r.jsxs)(r.Fragment, {
                   children: [
                       (0, r.jsx)(a.Z, {
-                          ref: N,
-                          src: h,
+                          ref: R,
+                          src: g,
                           width: 240,
                           height: 135,
                           autoPlay: !0,
@@ -172,39 +177,39 @@ function O(e) {
                               playing: !1,
                               size: "sm",
                               "aria-label": "Play video: ".concat(t),
-                              onClick: D,
+                              onClick: x,
                           }),
                       }),
                   ],
               });
     return (0, r.jsx)(
         l.m,
-        E(m({}, A), {
-            onRequestClose: P,
+        E(m({}, C), {
+            onRequestClose: D,
             hasVideo: !0,
             children: (0, r.jsxs)("div", {
-                ref: S,
+                ref: N,
                 children: [
                     (0, r.jsx)(f.u, {
-                        onClick: w,
+                        onClick: L,
                         colorMix: !0,
                     }),
-                    (0, r.jsx)(d.$, { caretConfig: y }),
+                    (0, r.jsx)(d.$, { caretConfig: v }),
                     (0, r.jsx)(u.V, {
                         asset: (0, r.jsx)("div", {
                             className: p.assetContainer,
-                            children: L,
+                            children: M,
                         }),
                         size: "video",
                     }),
                     (0, r.jsx)(_.Y, {
                         title: t,
                         body: n,
-                        badge: O,
-                        textLink: v,
-                        hasBottomMargin: null != g,
+                        badge: I,
+                        textLink: T,
+                        hasBottomMargin: null != y,
                     }),
-                    null != g ? (0, r.jsx)(c.k, { actions: [g] }) : null,
+                    null != y ? (0, r.jsx)(c.k, { actions: [y] }) : null,
                 ],
             }),
         }),

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => P });
 var r = n(255367);
 n(73800);
-var l = n(442837),
-    i = n(481060),
+var i = n(442837),
+    l = n(481060),
     o = n(468363),
     a = n(353647),
     c = n(566898),
@@ -31,11 +31,11 @@ function P(e) {
             userId: t.id,
             guildId: E,
         }),
-        G = (0, l.e7)([a.Z], () => a.Z.isFetchingUserOutbox(t.id)),
+        G = (0, i.e7)([a.Z], () => a.Z.isFetchingUserOutbox(t.id)),
         k = t.id === n.id,
-        B = (0, l.e7)([d.Z, s.Z], () => {
+        B = (0, i.e7)([d.Z, s.Z], () => {
             let e = k ? d.Z.getStatus() : s.Z.getStatus(t.id);
-            return e === i.Skl.OFFLINE || e === i.Skl.INVISIBLE;
+            return e === l.Skl.OFFLINE || e === l.Skl.INVISIBLE;
         }),
         M = A.length > 0 || null != D,
         U = S && null == D && null == R && null != L,
@@ -75,7 +75,7 @@ function P(e) {
                   onClose: N,
               });
     }
-    return (0, r.jsxs)(i.Ttm, {
+    return (0, r.jsxs)(l.Ttm, {
         className: I.scroller,
         fade: !0,
         children: [
@@ -106,7 +106,7 @@ function P(e) {
                                           profileGuildId: null == P ? void 0 : P.guildId,
                                       }),
                                   }),
-                              A.map((e, l) =>
+                              A.map((e, i) =>
                                   (0, r.jsx)(
                                       "li",
                                       {
@@ -118,7 +118,7 @@ function P(e) {
                                               profileGuildId: null == P ? void 0 : P.guildId,
                                           }),
                                       },
-                                      "live-".concat(l),
+                                      "live-".concat(i),
                                   ),
                               ),
                               w &&
@@ -142,7 +142,7 @@ function P(e) {
                           ? _.intl.format(_.t["4bk9Ag"], {
                                 learnMoreHook: (e, t) =>
                                     (0, r.jsx)(
-                                        i.eee,
+                                        l.eee,
                                         {
                                             href: u.Z.getArticleURL(v.BhN.ACTIVITY_STATUS_SETTINGS),
                                             children: e,

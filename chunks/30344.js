@@ -1,36 +1,36 @@
 n.d(t, { Z: () => o });
 var r = n(255367);
 n(73800);
-var l = n(890814),
-    i = n(753436);
+var i = n(890814),
+    l = n(753436);
 function o(e) {
     var { games: t, isGameFetching: n } = e,
         o = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
-                l = (function (e, t) {
+                i = (function (e, t) {
                     if (null == e) return {};
                     var n,
                         r,
-                        l = {},
-                        i = Object.keys(e);
-                    for (r = 0; r < i.length; r++) (n = i[r]), t.indexOf(n) >= 0 || (l[n] = e[n]);
-                    return l;
+                        i = {},
+                        l = Object.keys(e);
+                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                    return i;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var i = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < i.length; r++)
-                    (n = i[r]),
-                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]);
+                var l = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < l.length; r++)
+                    (n = l[r]),
+                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
             }
-            return l;
+            return i;
         })(e, ["games", "isGameFetching"]);
-    return (0, r.jsx)(l.Z, {
+    return (0, r.jsx)(i.Z, {
         games: t,
         renderGame: (e) =>
             (0, r.jsx)(
-                i.S,
+                l.S,
                 (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},

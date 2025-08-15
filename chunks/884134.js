@@ -404,48 +404,49 @@ function J(e) {
     let { metadata: n, markAsDismissed: o, isCoachmark: a } = e,
         u = A.Mc.useExperiment({ location: "ClientThemeColorPickerTools" }).enabled,
         _ = (0, S.jJ)(),
-        b = i.useRef(!1),
+        b = (0, S.SK)(),
+        y = i.useRef(!1),
         {
-            colors: y,
-            chassisMixAmount: T,
-            gradientAngle: P,
-            setColors: D,
-            setChassisMixAmount: j,
-            setGradientAngle: k,
+            colors: T,
+            chassisMixAmount: P,
+            gradientAngle: D,
+            setColors: j,
+            setChassisMixAmount: k,
+            setGradientAngle: U,
         } = (0, I.Ig)(),
-        [U, G] = i.useState(null != (t = y[0]) ? t : I.Dp),
-        B = (0, s.e7)([v.Z], () => v.Z.theme),
-        Z = (0, E.Nj)(l.z.CUSTOM_THEME_ENTRYPOINT_GRADIENT),
-        { analyticsLocations: F } = (0, m.ZP)(h.Z.CUSTOM_THEMES_EDITOR),
-        V = async () => {
-            (b.current = !0),
+        [G, B] = i.useState(null != (t = T[0]) ? t : I.Dp),
+        Z = (0, s.e7)([v.Z], () => v.Z.theme),
+        F = (0, E.Nj)(l.z.CUSTOM_THEME_ENTRYPOINT_GRADIENT),
+        { analyticsLocations: V } = (0, m.ZP)(h.Z.CUSTOM_THEMES_EDITOR),
+        Y = async () => {
+            (y.current = !0),
                 await (0, f.ZI)({
-                    theme: B,
+                    theme: Z,
                     customUserThemeSettings: {
-                        colors: y,
+                        colors: T,
                         gradientColorStops: [],
-                        gradientAngle: P,
-                        baseMix: T,
+                        gradientAngle: D,
+                        baseMix: P,
                     },
                 }),
-                (0, N.u7)(y, T, P, B, F),
+                (0, N.u7)(T, P, D, Z, V),
                 null == o || o(w.L.TAKE_ACTION),
-                Z || (0, E.Q3)(l.z.CUSTOM_THEME_ENTRYPOINT_GRADIENT),
+                F || (0, E.Q3)(l.z.CUSTOM_THEME_ENTRYPOINT_GRADIENT),
                 (0, g.Ll)(),
                 (0, O.UD)();
         },
-        Y = () => {
+        q = () => {
             _(S._m.RESET_BUTTON), (0, N.uf)();
         },
-        q = y.length > 0;
+        J = T.length > 0;
     return (i.useEffect(
         () => () => {
-            b.current || _(S._m.EDITOR_CLOSE);
+            y.current || _(S._m.EDITOR_CLOSE);
         },
         [_],
     ),
     (0, p.ZP)(() => {
-        a || (0, S.lT)(y, U, D);
+        a || (0, S.lT)(T, G, j);
     }),
     u)
         ? (0, r.jsxs)("div", {
@@ -481,11 +482,11 @@ function J(e) {
                                       }),
                                       (0, r.jsx)(C.U, {
                                           onChange: (e) => {
-                                              G(e), 0 === y.length && (0, S.lT)(y, e, D);
+                                              B(e), 0 === T.length && (0, S.lT)(T, e, j);
                                           },
-                                          value: U,
-                                          colors: y,
-                                          setColors: D,
+                                          value: G,
+                                          colors: T,
+                                          setColors: j,
                                       }),
                                   ],
                               }),
@@ -497,15 +498,15 @@ function J(e) {
                                           color: "text-secondary",
                                           children: x.intl.string(L.default.F1t0c3),
                                       }),
-                                      y.length > 1 &&
+                                      T.length > 1 &&
                                           (0, r.jsx)(W, {
-                                              gradientAngle: P,
-                                              setGradientAngle: k,
+                                              gradientAngle: D,
+                                              setGradientAngle: U,
                                           }),
                                       (0, r.jsx)(K, {
-                                          chassisMixAmount: T,
+                                          chassisMixAmount: P,
                                           setChassisMixAmount: (e) => {
-                                              j(e), 0 === y.length && (0, S.lT)(y, U, D);
+                                              k(e), 0 === T.length && (0, S.lT)(T, G, j);
                                           },
                                       }),
                                   ],
@@ -516,7 +517,8 @@ function J(e) {
                                       (0, r.jsx)(z, {}),
                                       (0, r.jsx)(c.z, {
                                           variant: "secondary",
-                                          onClick: Y,
+                                          onClick: q,
+                                          disabled: b,
                                           text: x.intl.string(x.t.yBZMsb),
                                           fullWidth: !0,
                                       }),
@@ -527,12 +529,12 @@ function J(e) {
                   }),
                   a
                       ? (0, r.jsx)(X, {
-                            onSaveTheme: V,
-                            canApply: q,
+                            onSaveTheme: Y,
+                            canApply: J,
                         })
                       : (0, r.jsx)(Q, {
-                            onSaveTheme: V,
-                            canApply: q,
+                            onSaveTheme: Y,
+                            canApply: J,
                             metadata: n,
                         }),
               ],

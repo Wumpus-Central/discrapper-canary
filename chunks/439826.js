@@ -20,8 +20,8 @@ var r = n(255367),
     v = n(18578),
     C = n(623249),
     y = n(685613),
-    O = n(110560),
-    E = n(670638),
+    E = n(110560),
+    O = n(670638),
     S = n(251360),
     T = n(19148),
     w = n(46140),
@@ -107,9 +107,9 @@ function q(e) {
             height: v ? f : 0,
             config: P.Y,
         }),
-        O = 0 === b ? u.Mgn : u.d3s,
-        E = (0, m.Lq)(A.Ilk.RED_345),
-        S = 0 === b ? E : l ? u.TVs.colors.TEXT_DEFAULT : u.TVs.colors.WHITE;
+        E = 0 === b ? u.Mgn : u.d3s,
+        O = (0, m.Lq)(A.Ilk.RED_345),
+        S = 0 === b ? O : l ? u.TVs.colors.TEXT_DEFAULT : u.TVs.colors.WHITE;
     return (0, r.jsx)(i.animated.div, {
         style: y,
         children: (0, r.jsxs)("div", {
@@ -119,7 +119,7 @@ function q(e) {
                 (0, r.jsxs)("div", {
                     className: R.hintsContainer,
                     children: [
-                        (0, r.jsx)(O, {
+                        (0, r.jsx)(E, {
                             size: "xs",
                             color: S,
                         }),
@@ -219,7 +219,7 @@ function Q(e) {
                         questContentCTA: g.jZ.ACCEPT_QUEST,
                         sourceQuestContent: Q,
                     }),
-                (0, O.openVideoQuestModal)({
+                (0, E.openVideoQuestModal)({
                     quest: d,
                     questContent: j.jn.QUEST_HOME_DESKTOP,
                     sourceQuestContent: Q,
@@ -285,7 +285,7 @@ function Q(e) {
                                                     }),
                                                 ),
                                         }),
-                                    (0, r.jsx)(E.r, {
+                                    (0, r.jsx)(O.r, {
                                         onOpen: w,
                                         onClose: C,
                                         onSelect: P,

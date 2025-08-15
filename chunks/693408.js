@@ -1,8 +1,8 @@
 n.d(t, { Z: () => c });
 var r = n(255367);
 n(73800);
-var l = n(120356),
-    i = n.n(l),
+var i = n(120356),
+    l = n.n(i),
     o = n(678738),
     a = n(207911);
 function c(e) {
@@ -11,22 +11,22 @@ function c(e) {
             if (null == e) return {};
             var n,
                 r,
-                l = (function (e, t) {
+                i = (function (e, t) {
                     if (null == e) return {};
                     var n,
                         r,
-                        l = {},
-                        i = Object.keys(e);
-                    for (r = 0; r < i.length; r++) (n = i[r]), t.indexOf(n) >= 0 || (l[n] = e[n]);
-                    return l;
+                        i = {},
+                        l = Object.keys(e);
+                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                    return i;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var i = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < i.length; r++)
-                    (n = i[r]),
-                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]);
+                var l = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < l.length; r++)
+                    (n = l[r]),
+                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
             }
-            return l;
+            return i;
         })(e, ["className"]);
     return (0, r.jsx)(
         o.Z,
@@ -56,7 +56,7 @@ function c(e) {
             return e;
         })(
             {
-                className: i()(a.section, t),
+                className: l()(a.section, t),
                 headingVariant: "text-xs/medium",
                 headingColor: "currentColor",
             },

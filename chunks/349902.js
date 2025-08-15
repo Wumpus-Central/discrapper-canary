@@ -1,9 +1,9 @@
-n.d(t, { Z: () => i }), n(997841);
+n.d(t, { Z: () => l }), n(997841);
 var r = n(442837),
-    l = n(621853);
-function i(e) {
+    i = n(621853);
+function l(e) {
     var t;
-    let n = (0, r.e7)([l.Z], () => l.Z.getUserProfile(e.id));
+    let n = (0, r.e7)([i.Z], () => i.Z.getUserProfile(e.id));
     return (
         (null == n ? void 0 : n.bio) === "" &&
         (null == n ? void 0 : n.pronouns) === "" &&

@@ -1,7 +1,7 @@
 n.d(t, { Z: () => b });
 var r = n(255367),
-    l = n(73800),
-    i = n(481060),
+    i = n(73800),
+    l = n(481060),
     o = n(81897),
     a = n(906732),
     c = n(566898),
@@ -19,10 +19,10 @@ function b(e) {
         { mutualFriends: h, mutualFriendsCount: v } = (0, d.Z)(t),
         _ = (0, o.Z)();
     return (
-        l.useEffect(() => {
+        i.useEffect(() => {
             (0, u.Z)(t.id, _);
         }, [t.id, _]),
-        (0, r.jsx)(i.Ttm, {
+        (0, r.jsx)(l.Ttm, {
             className: g.scroller,
             fade: !0,
             children:
@@ -49,12 +49,12 @@ function b(e) {
                     : 0 === h.length
                       ? (0, r.jsx)(m.s_, {})
                       : h.map((e) => {
-                            let { key: t, user: l, status: i } = e;
+                            let { key: t, user: i, status: l } = e;
                             return (0, r.jsx)(
                                 p.Z,
                                 {
-                                    user: l,
-                                    status: i,
+                                    user: i,
+                                    status: l,
                                     guildId: n,
                                     channelId: b,
                                     onSelect: () => {
@@ -90,7 +90,7 @@ function b(e) {
                                                 })({}, O)),
                                                 (t = t =
                                                     {
-                                                        userId: l.id,
+                                                        userId: i.id,
                                                         sourceAnalyticsLocations: y,
                                                     }),
                                                 Object.getOwnPropertyDescriptors

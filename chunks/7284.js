@@ -1,58 +1,59 @@
 n.d(t, {
-    j: () => f,
-    y: () => d,
+    j: () => _,
+    y: () => f,
 });
 var r = n(120356),
     i = n.n(r),
     o = n(342905),
-    a = n(594928),
-    s = n(181430),
-    l = n(693450),
-    c = n(806539);
-let u = {
-        name: l.default.ZEL6m5,
+    a = n(526167),
+    s = n(594928),
+    l = n(181430),
+    c = n(693450),
+    u = n(806539);
+let d = {
+        name: c.default.ZEL6m5,
         className: "",
     },
-    d = {
-        [o.C.DEFAULT]: u,
+    f = {
+        [o.C.DEFAULT]: d,
         [o.C.CHERRY_BOMB]: {
-            name: l.default.rN7cub,
-            className: c.cherryBomb,
+            name: c.default.rN7cub,
+            className: u.cherryBomb,
         },
         [o.C.CHICLE]: {
-            name: l.default.CbHHnJ,
-            className: c.chicle,
+            name: c.default.CbHHnJ,
+            className: u.chicle,
         },
         [o.C.MUSEO_MODERNO]: {
-            name: l.default.iEcEKC,
-            className: c.museoModerno,
+            name: c.default.iEcEKC,
+            className: u.museoModerno,
         },
         [o.C.NEO_CASTEL]: {
-            name: l.default.DL7jLS,
-            className: c.neoCastel,
+            name: c.default.DL7jLS,
+            className: u.neoCastel,
         },
         [o.C.PIXELIFY]: {
-            name: l.default.jq4aRk,
-            className: c.pixelify,
+            name: c.default.jq4aRk,
+            className: u.pixelify,
         },
         [o.C.SINISTRE]: {
-            name: l.default.jV9DNz,
-            className: c.sinistre,
+            name: c.default.jV9DNz,
+            className: u.sinistre,
         },
         [o.C.ZILLA_SLAB]: {
-            name: l.default.KMR8ra,
-            className: c.zillaSlab,
+            name: c.default.KMR8ra,
+            className: u.zillaSlab,
         },
-        [o.C.BIO_RHYME]: u,
-        [o.C.BANGERS]: u,
-        [o.C.COMPAGNON]: u,
-        [o.C.RIBES]: u,
+        [o.C.BIO_RHYME]: d,
+        [o.C.BANGERS]: d,
+        [o.C.COMPAGNON]: d,
+        [o.C.RIBES]: d,
     };
-function f(e) {
+function _(e) {
     var t;
     let { displayNameStyles: n, inProfile: r } = e,
-        { includeNonProfile: o } = a.f.useExperiment({ location: "useDisplayNameStylesFont" });
-    if (!(0, s.Y)({ location: "useDisplayNameStylesFont" }) || (!r && !o) || null == n) return "";
-    let l = null != (t = d[n.fontId]) ? t : u;
-    return "" === l.className ? "" : i()(c.dnsFont, l.className);
+        { includeNonProfile: o } = s.f.useExperiment({ location: "useDisplayNameStylesFont" });
+    if (!(0, l.Y)({ location: "useDisplayNameStylesFont" }) || (!r && !o) || null == n) return "";
+    let c = null != (t = f[n.fontId]) ? t : d;
+    return "" === c.className ? "" : i()(u.dnsFont, c.className, { [u.safari]: (0, a.G6)() });
 }

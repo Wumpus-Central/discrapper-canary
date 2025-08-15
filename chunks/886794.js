@@ -1,7 +1,7 @@
 n.d(t, { Z: () => S }), n(388685);
 var r = n(255367),
-    l = n(73800),
-    i = n(481060),
+    i = n(73800),
+    l = n(481060),
     o = n(727637),
     a = n(100527),
     c = n(906732),
@@ -53,7 +53,7 @@ function S(e) {
             messageId: w,
             roleId: A,
         }),
-        Y = l.useRef(null),
+        Y = i.useRef(null),
         W = (0, o.Z)(Y);
     return (0, r.jsx)(c.Gt, {
         value: F,
@@ -63,7 +63,7 @@ function S(e) {
             fetchStartedAt: null == B ? void 0 : B.fetchStartedAt,
             fetchEndedAt: null == B ? void 0 : B.fetchEndedAt,
             isLoaded: null == B ? void 0 : B.isLoaded,
-            children: (0, r.jsxs)(i.Y0X, {
+            children: (0, r.jsxs)(l.Y0X, {
                 "data-migration-pending": !0,
                 transitionState: D,
                 className: T.root,
@@ -71,9 +71,9 @@ function S(e) {
                 "aria-labelledby": U,
                 parentComponent: "NonUserBotProfileModal",
                 children: [
-                    (0, r.jsx)(i.y5t, {
-                        component: (0, r.jsx)(i.nn4, {
-                            children: (0, r.jsx)(i.H, {
+                    (0, r.jsx)(l.y5t, {
+                        component: (0, r.jsx)(l.nn4, {
+                            children: (0, r.jsx)(l.H, {
                                 id: U,
                                 children: E.intl.format(E.t.KRe1Fh, { name: M }),
                             }),
@@ -122,18 +122,18 @@ function S(e) {
                                         (0, r.jsxs)("div", {
                                             className: N.container,
                                             children: [
-                                                (0, r.jsx)(i.njP, {
+                                                (0, r.jsx)(l.njP, {
                                                     className: N.tabBar,
                                                     type: "top",
                                                     selectedItem: I.oh.BOT_INFO,
                                                     onItemSelect: P.dG4,
                                                     children: (0, r.jsx)(
-                                                        i.njP.Item,
+                                                        l.njP.Item,
                                                         {
                                                             className: N.tabBarItem,
                                                             id: I.oh.BOT_INFO,
                                                             "aria-label": E.intl.string(E.t.jGoPJS),
-                                                            children: (0, r.jsx)(i.Text, {
+                                                            children: (0, r.jsx)(l.Text, {
                                                                 variant: "text-sm/normal",
                                                                 children: E.intl.string(E.t.jGoPJS),
                                                             }),
@@ -141,7 +141,7 @@ function S(e) {
                                                         I.oh.BOT_INFO,
                                                     ),
                                                 }),
-                                                (0, r.jsxs)(i.zJl, {
+                                                (0, r.jsxs)(l.zJl, {
                                                     fade: !0,
                                                     className: Z.scroller,
                                                     children: [

@@ -1,8 +1,8 @@
-n.d(t, { Z: () => g }), n(388685);
+n.d(t, { Z: () => b }), n(388685);
 var r = n(255367),
-    l = n(73800),
-    i = n(120356),
-    o = n.n(i),
+    i = n(73800),
+    l = n(120356),
+    o = n.n(l),
     a = n(481060),
     c = n(810568),
     s = n(168524),
@@ -33,11 +33,29 @@ function f(e) {
     }
     return e;
 }
-function p(e) {
+function p(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function m(e) {
     let { imageSrc: t, gameName: n } = e,
-        [i, o] = l.useState(!1),
+        [l, o] = i.useState(!1),
         c = null != n ? n : d.intl.string(d.t.GIWFlJ);
-    return i || null == t
+    return l || null == t
         ? (0, r.jsx)("div", {
               role: "img",
               "aria-label": c,
@@ -57,72 +75,90 @@ function p(e) {
               onLoad: () => o(!1),
           });
 }
-function m(e) {
-    let { imageSrc: t, gameName: n, applicationId: l, userId: i, className: f } = e,
-        m = (0, s.Z)({
-            location: "GameCover",
-            applicationId: l,
-            source: c.m1.UserProfile,
-            sourceUserId: i,
-            trackEntryPointImpression: !0,
-        });
-    if (null == m)
-        return (0, r.jsx)("div", {
-            className: f,
-            children: (0, r.jsx)(p, {
-                imageSrc: t,
-                gameName: n,
-            }),
-        });
-    let g = d.intl.formatToPlainString(d.t["8QLQBw"], { gameName: null != n ? n : d.intl.string(d.t.GIWFlJ) });
-    return (0, r.jsx)(a.P3F, {
-        onClick: m,
-        "aria-label": g,
-        className: o()(u.clickable, f),
-        children: (0, r.jsx)(p, {
-            imageSrc: t,
-            gameName: n,
-        }),
-    });
-}
 function g(e) {
-    var { applicationId: t, userId: n, className: l, disableInteraction: i = !1 } = e,
-        a = (function (e, t) {
+    let { imageSrc: t, gameName: n, applicationId: i, userId: l, className: g, hideTooltip: b = !1 } = e,
+        j = (0, s.Z)({
+            location: "GameCover",
+            applicationId: i,
+            source: c.m1.UserProfile,
+            sourceUserId: l,
+            trackEntryPointImpression: !0,
+        }),
+        y = null != n ? n : d.intl.string(d.t.GIWFlJ),
+        O = d.intl.formatToPlainString(d.t["8QLQBw"], { gameName: y }),
+        x = (e) =>
+            b
+                ? e()
+                : (0, r.jsx)(a.ua7, {
+                      text: y,
+                      children: (t) => e(t),
+                  });
+    return x(
+        null == j
+            ? (e) =>
+                  (0, r.jsx)(
+                      "div",
+                      p(f({ className: g }, e), {
+                          children: (0, r.jsx)(m, {
+                              imageSrc: t,
+                              gameName: n,
+                          }),
+                      }),
+                  )
+            : (e) =>
+                  (0, r.jsx)(
+                      a.P3F,
+                      p(f({}, e), {
+                          onClick: j,
+                          "aria-label": O,
+                          className: o()(u.clickable, g),
+                          children: (0, r.jsx)(m, {
+                              imageSrc: t,
+                              gameName: n,
+                          }),
+                      }),
+                  ),
+    );
+}
+function b(e) {
+    var { applicationId: t, userId: n, className: i, disableInteraction: l = !1, hideTooltip: a } = e,
+        c = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
-                l = (function (e, t) {
+                i = (function (e, t) {
                     if (null == e) return {};
                     var n,
                         r,
-                        l = {},
-                        i = Object.keys(e);
-                    for (r = 0; r < i.length; r++) (n = i[r]), t.indexOf(n) >= 0 || (l[n] = e[n]);
-                    return l;
+                        i = {},
+                        l = Object.keys(e);
+                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                    return i;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var i = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < i.length; r++)
-                    (n = i[r]),
-                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]);
+                var l = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < l.length; r++)
+                    (n = l[r]),
+                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
             }
-            return l;
-        })(e, ["applicationId", "userId", "className", "disableInteraction"]);
-    let c = o()(u.coverContainer, l);
-    return i
+            return i;
+        })(e, ["applicationId", "userId", "className", "disableInteraction", "hideTooltip"]);
+    let s = o()(u.coverContainer, i);
+    return l
         ? (0, r.jsx)("div", {
-              className: c,
-              children: (0, r.jsx)(p, f({}, a)),
+              className: s,
+              children: (0, r.jsx)(m, f({}, c)),
           })
         : (0, r.jsx)(
-              m,
+              g,
               f(
                   {
-                      className: c,
+                      className: s,
                       applicationId: t,
                       userId: n,
+                      hideTooltip: a,
                   },
-                  a,
+                  c,
               ),
           );
 }

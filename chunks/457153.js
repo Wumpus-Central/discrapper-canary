@@ -24,8 +24,8 @@ let x = s.forwardRef(function (e, t) {
             useReducedMotion: v,
             onCtxMenuOpen: C,
             onCtxMenuClose: y,
-            onCtxMenuSelect: O,
-            overlayRef: E,
+            onCtxMenuSelect: E,
+            overlayRef: O,
             shouldShowRewardsCTAWhenCollapsed: S,
         } = e,
         T = (0, l.Jf)(b),
@@ -38,7 +38,7 @@ let x = s.forwardRef(function (e, t) {
             S &&
                 (0, r.jsx)(d.Z, {
                     expansionSpring: x,
-                    overlayRef: E,
+                    overlayRef: O,
                     progressBarRef: w,
                     quest: b,
                     isExpanded: h,
@@ -71,7 +71,7 @@ let x = s.forwardRef(function (e, t) {
                                         quest: b,
                                         onCtxMenuOpen: C,
                                         onCtxMenuClose: y,
-                                        onCtxMenuSelect: O,
+                                        onCtxMenuSelect: E,
                                     }),
                                     (0, r.jsx)("div", { className: f.divider }),
                                 ],

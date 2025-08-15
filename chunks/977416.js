@@ -1,45 +1,48 @@
-n.d(t, { Z: () => f });
-var r = n(255367);
-n(73800);
-var l = n(481060),
-    i = n(313201),
-    o = n(817053),
-    a = n(890814),
-    c = n(388032),
-    s = n(932366),
-    d = n(845859);
-function u(e) {
+n.d(t, { Z: () => p });
+var r = n(255367),
+    i = n(73800),
+    l = n(481060),
+    o = n(313201),
+    a = n(817053),
+    c = n(890814),
+    s = n(388032),
+    d = n(932366),
+    u = n(845859);
+function f(e) {
     var t,
         n,
-        { onClick: i, loading: a } = e,
-        u = (function (e, t) {
+        { onClick: o, loading: c = !0 } = e,
+        f = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
-                l = (function (e, t) {
+                i = (function (e, t) {
                     if (null == e) return {};
                     var n,
                         r,
-                        l = {},
-                        i = Object.keys(e);
-                    for (r = 0; r < i.length; r++) (n = i[r]), t.indexOf(n) >= 0 || (l[n] = e[n]);
-                    return l;
+                        i = {},
+                        l = Object.keys(e);
+                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                    return i;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var i = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < i.length; r++)
-                    (n = i[r]),
-                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]);
+                var l = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < l.length; r++)
+                    (n = l[r]),
+                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
             }
-            return l;
+            return i;
         })(e, ["onClick", "loading"]);
-    return a
-        ? (0, r.jsx)("div", { className: s.loadingCover })
+    let p = i.useRef(null);
+    return c
+        ? (0, r.jsx)("div", { className: d.loadingCover })
         : (0, r.jsxs)("div", {
-              className: d.addButtonWrapper,
+              ref: p,
+              className: u.addButtonWrapper,
+              onClick: o,
               children: [
                   (0, r.jsx)(
-                      o.Z,
+                      a.Z,
                       ((t = (function (e) {
                           for (var t = 1; t < arguments.length; t++) {
                               var n = null != arguments[t] ? arguments[t] : {},
@@ -64,8 +67,12 @@ function u(e) {
                                   });
                           }
                           return e;
-                      })({}, u)),
-                      (n = n = { disableInteraction: !0 }),
+                      })({}, f)),
+                      (n = n =
+                          {
+                              className: u.coverContainer,
+                              disableInteraction: !0,
+                          }),
                       Object.getOwnPropertyDescriptors
                           ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
                           : (function (e, t) {
@@ -81,31 +88,35 @@ function u(e) {
                       t),
                   ),
                   (0, r.jsx)("div", {
-                      className: d.addButton,
+                      className: u.addButton,
                       children: (0, r.jsx)(l.hU, {
-                          onClick: i,
+                          onClick: (e) => {
+                              e.stopPropagation(), o();
+                          },
+                          focusProps: { ringTarget: p },
                           icon: l.svS,
-                          variant: "overlay-secondary",
-                          "aria-label": c.intl.string(c.t.E3l3Z2),
+                          variant: "overlay-primary",
+                          size: "sm",
+                          "aria-label": s.intl.string(s.t.E3l3Z2),
                       }),
                   }),
               ],
           });
 }
-function f(e) {
-    let { userId: t, games: n, isGameFetching: o, isSuggestedGamesLoading: s, onDismiss: f, onClick: p } = e,
-        m = (0, i.Dt)();
+function p(e) {
+    let { userId: t, games: n, isGameFetching: i, isSuggestedGamesLoading: a, onDismiss: d, onClick: p } = e,
+        m = (0, o.Dt)();
     return (0, r.jsxs)("aside", {
-        className: d.container,
+        className: u.container,
         "aria-labelledby": m,
         children: [
             (0, r.jsxs)("div", {
-                className: d.header,
+                className: u.header,
                 children: [
                     (0, r.jsx)(l.P3F, {
-                        className: d.dismissButton,
-                        "aria-label": c.intl.string(c.t["pUR+3t"]),
-                        onClick: f,
+                        className: u.dismissButton,
+                        "aria-label": s.intl.string(s.t["pUR+3t"]),
+                        onClick: d,
                         children: (0, r.jsx)(l.Dio, {
                             size: "sm",
                             color: "currentColor",
@@ -115,21 +126,21 @@ function f(e) {
                         id: m,
                         variant: "text-xs/medium",
                         color: "text-secondary",
-                        children: c.intl.string(c.t.zMUr6e),
+                        children: s.intl.string(s.t.zMUr6e),
                     }),
                 ],
             }),
-            (0, r.jsx)(a.Z, {
+            (0, r.jsx)(c.Z, {
                 games: n,
                 renderGame: (e) => {
-                    let { applicationId: n, gameName: l, imageSrc: i } = e;
-                    return (0, r.jsx)(u, {
-                        onClick: () => p(n, l, i),
+                    let { applicationId: n, gameName: l, imageSrc: o } = e;
+                    return (0, r.jsx)(f, {
+                        onClick: () => p(n, l, o),
                         userId: t,
-                        loading: s || o(n),
+                        loading: a || i(n),
                         applicationId: n,
                         gameName: l,
-                        imageSrc: i,
+                        imageSrc: o,
                     });
                 },
             }),

@@ -26,13 +26,13 @@ function b(e) {
             impressionRef: v,
             sourceQuestContent: C,
         } = e,
-        [y, O] = s.useState(!1),
-        [E, S] = s.useState([]),
+        [y, E] = s.useState(!1),
+        [O, S] = s.useState([]),
         T = (0, c.qb)(o),
         w = s.useMemo(() => (0, l.q8)(o), [o]),
         P = (0, i._F)(),
         A = s.useCallback(() => {
-            O(!0),
+            E(!0),
                 P({
                     questId: o.id,
                     event: h.rMx.QUEST_HOVER,
@@ -45,7 +45,7 @@ function b(e) {
                 w && (0, p.loadVideoQuestModal)();
         }, [P, o.id, d, w, C]),
         N = s.useCallback(() => {
-            O(!1),
+            E(!1),
                 P({
                     questId: o.id,
                     event: h.rMx.QUEST_HOVER_OFF,
@@ -89,7 +89,7 @@ function b(e) {
             (0, r.jsx)(f.Z, {
                 quest: o,
                 isHovering: y,
-                errorHints: E,
+                errorHints: O,
                 warningHints: T,
                 isVisibleInViewport: k,
                 sourceQuestContent: C,

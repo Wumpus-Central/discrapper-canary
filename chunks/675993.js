@@ -1,32 +1,31 @@
-n.d(t, { Z: () => x }), n(388685), n(953529);
+n.d(t, { Z: () => L }), n(388685), n(953529);
 var r = n(255367),
     i = n(73800),
     o = n(120356),
     a = n.n(o),
     s = n(442837),
-    l = n(755721),
-    c = n(481060),
-    u = n(115130),
-    d = n(147865),
-    f = n(427996),
-    _ = n(906732),
-    p = n(706302),
-    h = n(812236),
-    m = n(835473),
-    g = n(70097),
-    E = n(240991),
-    b = n(973616),
-    y = n(626135),
-    O = n(783097),
-    v = n(695676),
-    I = n(520315),
-    T = n(29380),
-    S = n(783685),
-    A = n(981631),
-    N = n(388032),
-    C = n(208733),
-    R = n(430864);
-function P(e, t, n) {
+    l = n(481060),
+    c = n(115130),
+    u = n(147865),
+    d = n(427996),
+    f = n(906732),
+    _ = n(706302),
+    p = n(812236),
+    h = n(835473),
+    m = n(70097),
+    g = n(240991),
+    E = n(973616),
+    b = n(626135),
+    y = n(783097),
+    O = n(695676),
+    v = n(520315),
+    I = n(29380),
+    T = n(783685),
+    S = n(981631),
+    A = n(388032),
+    N = n(208733),
+    C = n(430864);
+function R(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -39,7 +38,7 @@ function P(e, t, n) {
         e
     );
 }
-function w(e) {
+function P(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -50,115 +49,119 @@ function w(e) {
                 }),
             )),
             r.forEach(function (t) {
-                P(e, t, n[t]);
+                R(e, t, n[t]);
             });
     }
     return e;
 }
-let D = 1,
-    L = 2000;
-function x(e) {
-    let { context: t, application: n, videoUrl: o, imageCoverUrl: l, sectionName: c, hasCommands: d } = e,
+let w = 2,
+    D = 2000;
+function L(e) {
+    let { context: t, application: n, videoUrl: o, imageCoverUrl: l, sectionName: u, hasCommands: f } = e,
         _ = i.useMemo(() => {
             var e;
-            return null != (e = (0, O.jD)(n)) ? e : "";
+            return null != (e = (0, y.jD)(n)) ? e : "";
         }, [n]),
-        p = (0, s.e7)([u.Z], () => u.Z.inDevModeForApplication(n.id)),
-        { isSlideReady: h } = (0, v.hH)(),
-        [m, E] = i.useState(!1);
+        p = (0, s.e7)([c.Z], () => c.Z.inDevModeForApplication(n.id)),
+        { isSlideReady: h } = (0, O.hH)(),
+        [g, E] = i.useState(!1);
     i.useEffect(() => {
         h && E(!0);
     }, [h]);
     let b = null != o;
     return (0, r.jsxs)("div", {
-        className: C.container,
+        className: N.container,
         children: [
-            b
-                ? (0, r.jsxs)("div", {
-                      className: C.videoContainer,
-                      children: [
-                          m
-                              ? (0, r.jsx)(g.Z, {
-                                    className: a()(C.videoCover, C.video),
-                                    loop: !0,
-                                    muted: !0,
-                                    autoPlay: !0,
-                                    src: o,
-                                    poster: l,
-                                })
-                              : null,
-                          (0, r.jsx)("img", {
-                              className: C.videoCover,
-                              src: l,
-                              "aria-label": N.intl.string(N.t.X4IxWF),
-                          }),
-                      ],
-                  })
-                : null,
             (0, r.jsxs)("div", {
-                className: b ? C.overviewContainerWithVideo : C.overviewContainerNoVideo,
                 children: [
-                    (0, r.jsx)(j, { application: n }),
-                    (0, r.jsx)(k, { application: n }),
-                    _.length > 0 ? (0, r.jsx)(B, { description: _ }) : null,
-                    p
-                        ? (0, r.jsx)("div", {
-                              className: C.developerShelfControlsContainer,
-                              children: (0, r.jsx)(f.W, {
-                                  hideSearch: !0,
-                                  className: C.developerShelfControls,
-                              }),
+                    b
+                        ? (0, r.jsxs)("div", {
+                              className: N.videoContainer,
+                              children: [
+                                  g
+                                      ? (0, r.jsx)(m.Z, {
+                                            className: a()(N.videoCover, N.video),
+                                            loop: !0,
+                                            muted: !0,
+                                            autoPlay: !0,
+                                            src: o,
+                                            poster: l,
+                                        })
+                                      : null,
+                                  (0, r.jsx)("img", {
+                                      className: N.videoCover,
+                                      src: l,
+                                      "aria-label": A.intl.string(A.t.X4IxWF),
+                                  }),
+                              ],
                           })
                         : null,
-                    (0, r.jsx)(G, {
-                        context: t,
-                        application: n,
-                        sectionName: c,
-                        isDeveloperOfThisApp: p,
-                        hasCommands: d,
+                    (0, r.jsxs)("div", {
+                        className: b ? N.overviewContainerWithVideo : N.overviewContainerNoVideo,
+                        children: [
+                            (0, r.jsx)(M, { application: n }),
+                            (0, r.jsx)(j, { application: n }),
+                            _.length > 0 ? (0, r.jsx)(G, { description: _ }) : null,
+                            p
+                                ? (0, r.jsx)("div", {
+                                      className: N.developerShelfControlsContainer,
+                                      children: (0, r.jsx)(d.W, {
+                                          hideSearch: !0,
+                                          className: N.developerShelfControls,
+                                      }),
+                                  })
+                                : null,
+                            (0, r.jsx)(U, {
+                                context: t,
+                                application: n,
+                                sectionName: u,
+                                isDeveloperOfThisApp: p,
+                                hasCommands: f,
+                            }),
+                        ],
                     }),
                 ],
             }),
-            (0, r.jsx)(M, { application: n }),
+            (0, r.jsx)(x, { application: n }),
         ],
     });
 }
-function M(e) {
+function x(e) {
     let { application: t } = e,
-        n = (0, O.Cb)(t),
-        i = (0, O.Hu)(t);
+        n = (0, y.Cb)(t),
+        i = (0, y.Hu)(t);
     return n || i
         ? (0, r.jsxs)("div", {
-              className: C.monetizationDisclosureContainerStyle,
+              className: N.monetizationDisclosureContainerStyle,
               children: [
                   n
                       ? (0, r.jsxs)("div", {
-                            className: C.monetizationDisclosureStyle,
+                            className: N.monetizationDisclosureStyle,
                             children: [
-                                (0, r.jsx)(c.EOn, {
+                                (0, r.jsx)(l.EOn, {
                                     size: "sm",
-                                    color: c.TVs.colors.INTERACTIVE_MUTED,
+                                    color: l.TVs.colors.INTERACTIVE_MUTED,
                                 }),
-                                (0, r.jsx)(c.Text, {
+                                (0, r.jsx)(l.Text, {
                                     variant: "text-sm/normal",
                                     color: "text-secondary",
-                                    children: N.intl.string(N.t["8z5B2d"]),
+                                    children: A.intl.string(A.t["8z5B2d"]),
                                 }),
                             ],
                         })
                       : null,
                   i
                       ? (0, r.jsxs)("div", {
-                            className: C.monetizationDisclosureStyle,
+                            className: N.monetizationDisclosureStyle,
                             children: [
-                                (0, r.jsx)(c.uMN, {
+                                (0, r.jsx)(l.uMN, {
                                     size: "sm",
-                                    color: c.TVs.colors.INTERACTIVE_MUTED,
+                                    color: l.TVs.colors.INTERACTIVE_MUTED,
                                 }),
-                                (0, r.jsx)(c.Text, {
+                                (0, r.jsx)(l.Text, {
                                     variant: "text-sm/normal",
                                     color: "text-secondary",
-                                    children: N.intl.string(N.t["5khEk5"]),
+                                    children: A.intl.string(A.t["5khEk5"]),
                                 }),
                             ],
                         })
@@ -167,49 +170,49 @@ function M(e) {
           })
         : null;
 }
-function j(e) {
+function M(e) {
     var t;
     let { application: n } = e,
-        i = (0, O.BQ)(n) ? n.name : null != (t = (0, O.$d)(n)) ? t : "",
-        o = (0, O.vJ)(n);
+        i = (0, y.BQ)(n) ? n.name : null != (t = (0, y.$d)(n)) ? t : "",
+        o = (0, y.vJ)(n);
     return (0, r.jsxs)("div", {
-        className: C.titleContainer,
+        className: N.titleContainer,
         children: [
-            (0, r.jsx)(c.X6q, {
+            (0, r.jsx)(l.X6q, {
                 variant: "heading-xl/extrabold",
                 lineClamp: 1,
                 children: i,
             }),
             o
                 ? (0, r.jsx)("div", {
-                      className: C.partnerLabelContainer,
-                      children: (0, r.jsx)(c.Text, {
+                      className: N.partnerLabelContainer,
+                      children: (0, r.jsx)(l.Text, {
                           variant: "text-xs/medium",
                           color: "text-default",
-                          children: N.intl.string(N.t.LO4f0N),
+                          children: A.intl.string(A.t.LO4f0N),
                       }),
                   })
                 : null,
         ],
     });
 }
-function k(e) {
+function j(e) {
     let { application: t } = e,
         n = i.useMemo(() => {
             var e;
-            return (0, O.BQ)(t) && null != (e = null == t ? void 0 : t.tags) ? e : [];
+            return (0, y.BQ)(t) && null != (e = null == t ? void 0 : t.tags) ? e : [];
         }, [t]);
-    return (0, O.ye)(t)
+    return (0, y.ye)(t)
         ? (0, r.jsxs)("div", {
-              className: C.tagsContainer,
+              className: N.tagsContainer,
               children: [
-                  (0, r.jsx)(U, { application: t }),
+                  (0, r.jsx)(k, { application: t }),
                   n.map((e, t) =>
                       (0, r.jsx)(
                           "div",
                           {
-                              className: C.tagContainer,
-                              children: (0, r.jsx)(c.Text, {
+                              className: N.tagContainer,
+                              children: (0, r.jsx)(l.Text, {
                                   variant: "text-sm/semibold",
                                   color: "interactive-normal",
                                   children: e,
@@ -222,142 +225,131 @@ function k(e) {
           })
         : null;
 }
-function U(e) {
+function k(e) {
     var t;
     let { application: n } = e;
-    if (!(0, O.ye)(n)) return null;
-    let i = null != (t = (0, O.BQ)(n) ? (n instanceof b.ZP ? n.maxParticipants : n.max_participants) : 0) ? t : 0;
+    if (!(0, y.ye)(n)) return null;
+    let i = null != (t = (0, y.BQ)(n) ? (n instanceof E.ZP ? n.maxParticipants : n.max_participants) : 0) ? t : 0;
     return (0, r.jsxs)("div", {
-        className: C.tagContainer,
+        className: N.tagContainer,
         children: [
-            (0, r.jsx)(c.BFJ, {
+            (0, r.jsx)(l.BFJ, {
                 size: "xs",
-                color: c.TVs.colors.INTERACTIVE_NORMAL,
+                color: l.TVs.colors.INTERACTIVE_NORMAL,
             }),
-            (0, r.jsx)(c.Text, {
+            (0, r.jsx)(l.Text, {
                 variant: "text-sm/semibold",
                 color: "interactive-normal",
-                children: (0, d.lY)(i),
+                children: (0, u.lY)(i),
             }),
         ],
     });
 }
-function G(e) {
+function U(e) {
     var t;
-    let { context: n, application: o, sectionName: a, hasCommands: s, isDeveloperOfThisApp: u } = e,
-        d = (0, h.Fs)(n, o.id),
-        f = (0, m.q)(o.id),
-        g = null == f || null == (t = f.bot) ? void 0 : t.id,
-        E = (0, p.Z)({
+    let { context: n, application: o, sectionName: a, hasCommands: s, isDeveloperOfThisApp: c } = e,
+        u = (0, p.Fs)(n, o.id),
+        d = (0, h.q)(o.id),
+        m = null == d || null == (t = d.bot) ? void 0 : t.id,
+        g = (0, _.Z)({
             context: n,
             application: o,
-            botUserId: g,
+            botUserId: m,
         }),
-        { analyticsLocations: b } = (0, _.ZP)();
-    if (
-        (i.useEffect(() => {
-            if (!(0, O.BQ)(o) || !(0, O.ye)(o)) return;
-            let e = setTimeout(() => {
-                (null == d || null == g) &&
-                    y.default.track(A.rMx.APP_LAUNCHER_PEP_BUTTON_NOT_RENDERED, {
-                        application_id: o.id,
-                        is_primary_entry_point_command_non_null: null != d,
-                        is_bot_user_id_non_null: null != g,
-                        show_try_it_out_button: E,
-                    });
-            }, L);
-            return () => clearTimeout(e);
-        }, [o, d, g, E]),
-        !(0, O.BQ)(o) || !(0, O.ye)(o))
-    )
-        return null;
-    let v = l.Ph.MAX;
-    return null != d && null != g
-        ? (0, r.jsxs)("div", {
-              className: C.entrypointContainer,
-              children: [
-                  (0, r.jsx)("div", {
-                      className: C.entryPointContainerFlexChild,
-                      children: (0, r.jsx)(T.Z, {
+        { analyticsLocations: E } = (0, f.ZP)();
+    return (i.useEffect(() => {
+        if (!(0, y.BQ)(o) || !(0, y.ye)(o)) return;
+        let e = setTimeout(() => {
+            (null == u || null == m) &&
+                b.default.track(S.rMx.APP_LAUNCHER_PEP_BUTTON_NOT_RENDERED, {
+                    application_id: o.id,
+                    is_primary_entry_point_command_non_null: null != u,
+                    is_bot_user_id_non_null: null != m,
+                    show_try_it_out_button: g,
+                });
+        }, D);
+        return () => clearTimeout(e);
+    }, [o, u, m, g]),
+    (0, y.BQ)(o) && (0, y.ye)(o))
+        ? null != u && null != m
+            ? (0, r.jsxs)(l.hE2, {
+                  fullWidth: !0,
+                  children: [
+                      (0, r.jsx)(I.Z, {
                           context: n,
                           application: o,
                           sectionName: a,
-                          primaryEntryPointCommand: d,
-                          buttonSize: v,
+                          primaryEntryPointCommand: u,
                       }),
-                  }),
-                  E && null != g
-                      ? (0, r.jsx)("div", {
-                            className: C.entryPointContainerFlexChild,
-                            children: (0, r.jsx)(S.Z, {
-                                botUserId: g,
+                      g && null != m
+                          ? (0, r.jsx)(T.Z, {
+                                botUserId: m,
                                 applicationId: o.id,
-                                buttonSize: v,
-                                analyticsLocations: b,
-                            }),
-                        })
-                      : null,
-              ],
-          })
-        : u && !s && (0, O.ye)(o)
-          ? (0, r.jsx)(c.Wn, {
-                className: C.primaryEntryPointWarningMessage,
-                messageType: c.QYI.WARNING,
-                children: N.intl.format(N.t["s/3hjI"], {}),
-            })
-          : null;
+                                analyticsLocations: E,
+                            })
+                          : null,
+                  ],
+              })
+            : c && !s && (0, y.ye)(o)
+              ? (0, r.jsx)(l.Wn, {
+                    className: N.primaryEntryPointWarningMessage,
+                    messageType: l.QYI.WARNING,
+                    children: A.intl.format(A.t["s/3hjI"], {}),
+                })
+              : null
+        : null;
 }
-function B(e) {
+function G(e) {
     let { description: t } = e,
         [n, o] = i.useState(!0);
     i.useLayoutEffect(() => o(!1), []);
-    let a = i.useMemo(() => (0, E.parseBioReact)(t), [t]),
-        { ref: s, lineHeight: l, lineCount: u } = Z(),
+    let a = i.useMemo(() => (0, g.parseBioReact)(t), [t]),
+        { ref: s, lineHeight: c, lineCount: u } = B(),
         d = i.useMemo(() => {
-            if (null == l || null == u) return { key: 0 };
-            let e = l * u;
+            if (null == c || null == u) return { key: 0 };
+            let e = c * u;
             return {
                 key: 1,
-                minHeightOverride: Math.min(e, D * l),
+                minHeightOverride: Math.min(e, w * c),
                 maxHeightOverride: e,
             };
-        }, [u, l]),
-        { ref: f, isTransitioning: _, onTransitionEnd: p } = (0, I.Z)(w({ isExpanded: n }, d)),
+        }, [u, c]),
+        { ref: f, isTransitioning: _, onTransitionEnd: p } = (0, v.Z)(P({ isExpanded: n }, d)),
         h = n || _;
     return (0, r.jsxs)("div", {
-        className: C.descriptionContainer,
+        className: N.descriptionContainer,
         children: [
             (0, r.jsx)("div", {
                 ref: f,
-                className: C.overflowHidden,
+                className: N.overflowHidden,
                 onTransitionEnd: p,
-                children: (0, r.jsx)(c.Text, {
+                children: (0, r.jsx)(l.Text, {
                     ref: s,
-                    className: R.markup,
+                    className: C.markup,
                     variant: "text-sm/medium",
-                    lineClamp: h ? void 0 : D,
+                    lineClamp: h ? void 0 : w,
                     style: { maxHeight: h ? void 0 : d.minHeightOverride },
                     children: a,
                 }),
             }),
-            null != u && u > D
-                ? (0, r.jsxs)(c.P3F, {
-                      className: C.expandableDescriptionClickable,
+            null != u && u > w
+                ? (0, r.jsxs)(l.P3F, {
+                      className: N.expandableDescriptionClickable,
                       onClick: () => o((e) => !e),
                       children: [
-                          (0, r.jsx)(c.Text, {
+                          (0, r.jsx)(l.Text, {
                               variant: "text-sm/semibold",
                               color: "text-brand",
-                              children: h ? N.intl.string(N.t.u4YJ8v) : N.intl.string(N.t["N/tajI"]),
+                              children: h ? A.intl.string(A.t.u4YJ8v) : A.intl.string(A.t["N/tajI"]),
                           }),
                           h
-                              ? (0, r.jsx)(c.u04, {
+                              ? (0, r.jsx)(l.u04, {
                                     size: "sm",
-                                    color: c.TVs.colors.TEXT_BRAND,
+                                    color: l.TVs.colors.TEXT_BRAND,
                                 })
-                              : (0, r.jsx)(c.CJ0, {
+                              : (0, r.jsx)(l.CJ0, {
                                     size: "sm",
-                                    color: c.TVs.colors.TEXT_BRAND,
+                                    color: l.TVs.colors.TEXT_BRAND,
                                 }),
                       ],
                   })
@@ -365,7 +357,7 @@ function B(e) {
         ],
     });
 }
-function Z() {
+function B() {
     let e = i.useRef(null),
         [t, n] = i.useState(null),
         [r, o] = i.useState(null);

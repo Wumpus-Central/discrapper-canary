@@ -1,8 +1,8 @@
 n.d(t, { Z: () => g }), n(388685);
 var r = n(255367),
-    l = n(73800),
-    i = n(120356),
-    o = n.n(i),
+    i = n(73800),
+    l = n(120356),
+    o = n.n(l),
     a = n(793030),
     c = n(442837),
     s = n(313201),
@@ -12,8 +12,8 @@ var r = n(255367),
     p = n(272289),
     m = n(415734);
 function g(e) {
-    let { userId: t, widget: n, children: i, disableInteraction: g, className: b } = e,
-        [j, y] = l.useState(!1),
+    let { userId: t, widget: n, children: l, disableInteraction: g, className: b } = e,
+        [j, y] = i.useState(!1),
         O = (0, s.Dt)(),
         x = (0, c.e7)([d.default], () => d.default.getId() === t),
         h = (0, u.kQ)(n);
@@ -29,7 +29,7 @@ function g(e) {
             }),
             (0, r.jsxs)(a.y5, {
                 children: [
-                    i,
+                    l,
                     x &&
                         !h &&
                         !g &&

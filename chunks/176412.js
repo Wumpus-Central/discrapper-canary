@@ -161,17 +161,19 @@ function P(e) {
             fetchesApplication: E,
             onConfirmActivityLaunchChecksAlertOpen: S,
         }),
-        D = l.Tt.BRAND,
-        L = null != s ? s : T.intl.string(T.t.zKX8Nj);
+        D = "primary",
+        L = l.Tt.BRAND,
+        x = null != s ? s : T.intl.string(T.t.zKX8Nj);
     return (
         C === u.JS.JOIN
-            ? ((D = l.Tt.GREEN), (L = T.intl.string(T.t.d9PsMj)))
-            : C !== u.JS.LEAVE || g || ((D = l.Tt.RED), (L = T.intl.string(T.t["Hi1/aW"]))),
+            ? ((D = "active"), (L = l.Tt.GREEN), (x = T.intl.string(T.t.d9PsMj)))
+            : C !== u.JS.LEAVE || g || ((D = "critical-primary"), (x = T.intl.string(T.t["Hi1/aW"]))),
         {
             onActivityItemSelected: w,
             activityAction: C,
-            buttonColor: D,
-            buttonText: L,
+            buttonVariant: D,
+            buttonColor: L,
+            buttonText: x,
         }
     );
 }

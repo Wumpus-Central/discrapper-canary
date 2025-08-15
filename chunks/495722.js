@@ -20,8 +20,8 @@ var r = n(255367),
     v = n(497505),
     C = n(184299),
     y = n(381176),
-    O = n(373370),
-    E = n(475595),
+    E = n(373370),
+    O = n(475595),
     S = n(720293),
     T = n(644646),
     w = n(110560),
@@ -43,7 +43,7 @@ function Z(e) {
     let { quest: o, onClick: i, reducedMotion: l, isExpanded: u } = e,
         [p, g] = s.useState(!1),
         x = s.useRef(null),
-        h = (0, E.fh)(o, E.eC.QUEST_BAR_HERO_VIDEO),
+        h = (0, O.fh)(o, O.eC.QUEST_BAR_HERO_VIDEO),
         j = (0, S.z0)(o, c.X.WATCH_VIDEO, S.n1.VIDEO, S.O.THUMBNAIL),
         b = (0, C.km)((e) => e.getVideoProgressState);
     s.useEffect(() => {
@@ -114,7 +114,7 @@ function U(e) {
     return (0, r.jsx)(m.Text, {
         className: L.description,
         variant: "text-xs/normal",
-        children: (0, O.DD)({
+        children: (0, E.DD)({
             quest: e.quest,
             location: D.dr.QUESTS_BAR,
             questContent: v.jn.QUEST_BAR_V2,
@@ -135,13 +135,13 @@ function H(e) {
             onAcceptQuest: x,
         } = e,
         h = (0, u.e7)([_.Z], () => _.Z.isEnrolling(t.id), [t]),
-        j = s.useMemo(() => (0, E.fh)(t, E.eC.QUEST_BAR_HERO), [t]),
-        b = (0, O.CR)({ quest: t }),
+        j = s.useMemo(() => (0, O.fh)(t, O.eC.QUEST_BAR_HERO), [t]),
+        b = (0, E.CR)({ quest: t }),
         v = (0, y.h)({
             location: D.dr.QUESTS_BAR,
             questConfig: t.config,
         }),
-        C = s.useMemo(() => (0, E.fh)(t, E.eC.HERO_IMAGE), [t]),
+        C = s.useMemo(() => (0, O.fh)(t, O.eC.HERO_IMAGE), [t]),
         S = s.useMemo(() => (null == C ? {} : { backgroundImage: "url(".concat(C.url, ")") }), [C]),
         T = (0, g.ZP)(),
         w = (0, p.wj)(T);
@@ -291,7 +291,7 @@ function z(e) {
         _ = (null == (t = n.userStatus) ? void 0 : t.completedAt) != null,
         C = o.percentComplete > 0,
         y = (0, b.z)(n),
-        [O, E, S] = (0, b.me)(n, o),
+        [E, O, S] = (0, b.me)(n, o),
         T = s.useRef(null),
         P = (0, b._s)({ quest: n }),
         M = (0, h.q8)(n),
@@ -343,13 +343,13 @@ function z(e) {
                         progressBarRef: T,
                         isExpanded: !0,
                         percentComplete: H,
-                        activeScreen: O,
+                        activeScreen: E,
                     }),
                     (0, r.jsx)(A.n, {
                         children:
                             !_ &&
                             !(0, h.Gd)(n) &&
-                            (0, l.EQ)(O)
+                            (0, l.EQ)(E)
                                 .with(v.LI.SELECT, () =>
                                     (0, r.jsx)(Q.Z, {
                                         onConsole: () => S(D.cd.CONSOLE),
@@ -381,8 +381,8 @@ function z(e) {
                                 awaitingConsoleConnections: P,
                                 hasMadeProgress: C,
                                 isProgressing: y,
-                                activeScreen: O,
-                                showBackButton: O !== v.LI.SELECT && E.length > 1 && !C && !y,
+                                activeScreen: E,
+                                showBackButton: E !== v.LI.SELECT && O.length > 1 && !C && !y,
                                 onBack: () => S(null),
                                 taskDetails: o,
                                 sourceQuestContent: v.jn.QUEST_BAR_V2,
@@ -414,9 +414,9 @@ let X = s.forwardRef(function (e, t) {
             overlayRef: _,
             quest: C,
             useReducedMotion: y,
-            taskDetails: O,
+            taskDetails: E,
         } = e,
-        E = (0, h.q8)(C),
+        O = (0, h.q8)(C),
         S = (0, h.Vl)(C),
         { launchInGameActivity: T } = (0, b.zB)(C),
         P = s.useCallback(() => {
@@ -427,7 +427,7 @@ let X = s.forwardRef(function (e, t) {
                 questContentCTA: t,
                 sourceQuestContent: v.jn.QUEST_BAR_V2,
             }),
-                E &&
+                O &&
                     (0, w.openVideoQuestModal)({
                         quest: C,
                         questContent: v.jn.QUEST_BAR_V2,
@@ -435,7 +435,7 @@ let X = s.forwardRef(function (e, t) {
                         sourceQuestContentCTA: t,
                     }),
                 S && e && T();
-        }, [C, E, S, T]),
+        }, [C, O, S, T]),
         A = (null == (n = C.userStatus) ? void 0 : n.enrolledAt) != null,
         N = u && d;
     return (0, r.jsxs)(i.animated.div, {
@@ -466,7 +466,7 @@ let X = s.forwardRef(function (e, t) {
                 children: A
                     ? (0, r.jsx)(z, {
                           quest: C,
-                          taskDetails: O,
+                          taskDetails: E,
                           expansionSpring: p,
                           overlayRef: _,
                           isExpanded: u,
@@ -478,7 +478,7 @@ let X = s.forwardRef(function (e, t) {
                       })
                     : (0, r.jsx)(H, {
                           quest: C,
-                          taskDetails: O,
+                          taskDetails: E,
                           expansionSpring: p,
                           isInteractable: N,
                           reducedMotion: y,

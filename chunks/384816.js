@@ -1,8 +1,8 @@
 n.d(t, { Z: () => I });
 var r = n(255367);
 n(73800);
-var l = n(442837),
-    i = n(481060),
+var i = n(442837),
+    l = n(481060),
     o = n(666520),
     a = n(246016),
     c = n(189156),
@@ -24,13 +24,13 @@ var l = n(442837),
 function I(e) {
     let { user: t, currentUser: n, displayProfile: I, subsection: P, onClose: E } = e,
         { trackUserProfileAction: T } = (0, f.KZ)(),
-        Z = (0, l.e7)([d.Z], () => d.Z.getGuildId()),
+        Z = (0, i.e7)([d.Z], () => d.Z.getGuildId()),
         N = (0, a.Y)({ userId: t.id }),
-        S = (0, l.e7)([u.Z], () => u.Z.hidePersonalInformation),
-        w = (0, l.e7)([s.default], () => s.default.locale),
+        S = (0, i.e7)([u.Z], () => u.Z.hidePersonalInformation),
+        w = (0, i.e7)([s.default], () => s.default.locale),
         A = (0, m.Z)(t.id),
         C = (0, p.Z)(t.id);
-    return (0, r.jsxs)(i.zJl, {
+    return (0, r.jsxs)(l.zJl, {
         fade: !0,
         className: _.scroller,
         children: [
@@ -51,9 +51,9 @@ function I(e) {
             t.isProvisional &&
                 (0, r.jsx)(O.Z, {
                     heading: v.intl.string(v.t.Iyka0d),
-                    headingIcon: (0, r.jsx)(i.Mgn, {
+                    headingIcon: (0, r.jsx)(l.Mgn, {
                         size: "xxs",
-                        color: i.TVs.colors.HEADER_PRIMARY,
+                        color: l.TVs.colors.HEADER_PRIMARY,
                     }),
                     headingColor: "header-secondary",
                     children: (0, r.jsx)(c.n, { userId: t.id }),

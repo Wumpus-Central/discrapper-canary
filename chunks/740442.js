@@ -1,13 +1,13 @@
-r.d(t, { SV: () => a });
-var n = r(73800);
-let o = (0, n.createContext)(null),
-    i = {
+u.d(t, { SV: () => o });
+var r = u(73800);
+let n = (0, r.createContext)(null),
+    f = {
         didCatch: !1,
         error: null,
     };
-class a extends n.Component {
+class o extends r.Component {
     constructor(e) {
-        super(e), (this.resetErrorBoundary = this.resetErrorBoundary.bind(this)), (this.state = i);
+        super(e), (this.resetErrorBoundary = this.resetErrorBoundary.bind(this)), (this.state = f);
     }
     static getDerivedStateFromError(e) {
         return {
@@ -18,65 +18,65 @@ class a extends n.Component {
     resetErrorBoundary() {
         let { error: e } = this.state;
         if (null !== e) {
-            for (var t, r, n = arguments.length, o = Array(n), a = 0; a < n; a++) o[a] = arguments[a];
-            null == (t = (r = this.props).onReset) ||
-                t.call(r, {
-                    args: o,
+            for (var t, u, r = arguments.length, n = Array(r), o = 0; o < r; o++) n[o] = arguments[o];
+            null == (t = (u = this.props).onReset) ||
+                t.call(u, {
+                    args: n,
                     reason: "imperative-api",
                 }),
-                this.setState(i);
+                this.setState(f);
         }
     }
     componentDidCatch(e, t) {
-        var r, n;
-        null == (r = (n = this.props).onError) || r.call(n, e, t);
+        var u, r;
+        null == (u = (r = this.props).onError) || u.call(r, e, t);
     }
     componentDidUpdate(e, t) {
-        let { didCatch: r } = this.state,
-            { resetKeys: n } = this.props;
+        let { didCatch: u } = this.state,
+            { resetKeys: r } = this.props;
         if (
-            r &&
+            u &&
             null !== t.error &&
             (function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [],
                     t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
-                return e.length !== t.length || e.some((e, r) => !Object.is(e, t[r]));
-            })(e.resetKeys, n)
+                return e.length !== t.length || e.some((e, u) => !Object.is(e, t[u]));
+            })(e.resetKeys, r)
         ) {
-            var o, a;
-            null == (o = (a = this.props).onReset) ||
-                o.call(a, {
-                    next: n,
+            var n, o;
+            null == (n = (o = this.props).onReset) ||
+                n.call(o, {
+                    next: r,
                     prev: e.resetKeys,
                     reason: "keys",
                 }),
-                this.setState(i);
+                this.setState(f);
         }
     }
     render() {
-        let { children: e, fallbackRender: t, FallbackComponent: r, fallback: i } = this.props,
-            { didCatch: a, error: s } = this.state,
-            c = e;
-        if (a) {
+        let { children: e, fallbackRender: t, FallbackComponent: u, fallback: f } = this.props,
+            { didCatch: o, error: i } = this.state,
+            s = e;
+        if (o) {
             let e = {
-                error: s,
+                error: i,
                 resetErrorBoundary: this.resetErrorBoundary,
             };
-            if ("function" == typeof t) c = t(e);
-            else if (r) c = (0, n.createElement)(r, e);
-            else if (void 0 !== i) c = i;
-            else throw s;
+            if ("function" == typeof t) s = t(e);
+            else if (u) s = (0, r.createElement)(u, e);
+            else if (void 0 !== f) s = f;
+            else throw i;
         }
-        return (0, n.createElement)(
-            o.Provider,
+        return (0, r.createElement)(
+            n.Provider,
             {
                 value: {
-                    didCatch: a,
-                    error: s,
+                    didCatch: o,
+                    error: i,
                     resetErrorBoundary: this.resetErrorBoundary,
                 },
             },
-            c,
+            s,
         );
     }
 }

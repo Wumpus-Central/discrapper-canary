@@ -3,8 +3,8 @@ n.d(t, {
     Z: () => h,
 });
 var r = n(255367),
-    l = n(73800),
-    i = n(296009),
+    i = n(73800),
+    l = n(296009),
     o = n(442837),
     a = n(481060),
     c = n(314897),
@@ -50,40 +50,40 @@ function h(e) {
             if (null == e) return {};
             var n,
                 r,
-                l = (function (e, t) {
+                i = (function (e, t) {
                     if (null == e) return {};
                     var n,
                         r,
-                        l = {},
-                        i = Object.keys(e);
-                    for (r = 0; r < i.length; r++) (n = i[r]), t.indexOf(n) >= 0 || (l[n] = e[n]);
-                    return l;
+                        i = {},
+                        l = Object.keys(e);
+                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                    return i;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var i = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < i.length; r++)
-                    (n = i[r]),
-                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]);
+                var l = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < l.length; r++)
+                    (n = l[r]),
+                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
             }
-            return l;
+            return i;
         })(e, ["widget"]);
     switch (t.type) {
-        case i.l.FAVORITE_GAMES:
+        case l.l.FAVORITE_GAMES:
             return (0, r.jsx)(m.Z, x({ widget: t }, n));
-        case i.l.CURRENT_GAMES:
+        case l.l.CURRENT_GAMES:
             return (0, r.jsx)(p.Z, x({ widget: t }, n));
-        case i.l.WANT_TO_PLAY_GAMES:
+        case l.l.WANT_TO_PLAY_GAMES:
             return (0, r.jsx)(b.Z, x({ widget: t }, n));
-        case i.l.PLAYED_GAMES:
+        case l.l.PLAYED_GAMES:
             return (0, r.jsx)(g.Z, x({ widget: t }, n));
         default:
             return null;
     }
 }
 function v(e) {
-    let { user: t, guildId: n, channelId: l } = e,
-        i = (0, f.Z)(t.id),
-        { widgets: a, isGameFetching: s } = (0, u.Z)(i),
+    let { user: t, guildId: n, channelId: i } = e,
+        l = (0, f.Z)(t.id),
+        { widgets: a, isGameFetching: s } = (0, u.Z)(l),
         d = (0, o.e7)([c.default], () => c.default.getId() === t.id);
     return 0 === a.length && d
         ? (0, r.jsx)(y.Z, {})
@@ -96,7 +96,7 @@ function v(e) {
                               widget: e,
                               user: t,
                               guildId: n,
-                              channelId: l,
+                              channelId: i,
                               isGameFetching: s,
                           },
                           e.id,
@@ -109,7 +109,7 @@ function v(e) {
 function _(e) {
     let t = (0, o.e7)([d.Z], () => d.Z.suggestedFetchAttempted);
     return (
-        l.useEffect(() => {
+        i.useEffect(() => {
             t || s.Z.fetchSuggestedGames();
         }, [t]),
         (0, r.jsx)(a.Ttm, {

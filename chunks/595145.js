@@ -1,7 +1,7 @@
 n.d(t, { Z: () => en }), n(388685);
 var r = n(255367),
-    l = n(73800),
-    i = n(717976),
+    i = n(73800),
+    l = n(717976),
     o = n(442837),
     a = n(481060),
     c = n(666520),
@@ -42,8 +42,8 @@ var r = n(255367),
     V = n(4517),
     Y = n(179828),
     W = n(993160),
-    H = n(574887),
-    z = n(693408),
+    z = n(574887),
+    H = n(693408),
     K = n(661462),
     X = n(76076),
     q = n(872269),
@@ -58,8 +58,8 @@ function en(e) {
             user: n,
             currentUser: en,
             guildId: er,
-            channelId: el,
-            messageId: ei,
+            channelId: ei,
+            messageId: el,
             roleId: eo,
             sessionId: ea,
             initialSection: ec,
@@ -78,23 +78,23 @@ function en(e) {
             userId: n.id,
             sourceSessionId: ea,
             guildId: er,
-            channelId: el,
-            messageId: ei,
+            channelId: ei,
+            messageId: el,
             roleId: eo,
             showGuildProfile: em,
         }),
-        eO = l.useRef(null),
+        eO = i.useRef(null),
         ex = (0, s.Z)(eO),
-        [eh, ev] = l.useState(!1),
+        [eh, ev] = i.useState(!1),
         e_ = (0, N.$m)(),
         eI = (0, a.q_F)({
             opacity: +(null != e_.interactionType),
             config: { duration: 150 },
         }),
-        eP = l.useMemo(() => (null != er ? { [er]: [n.id] } : {}), [er, n.id]);
+        eP = i.useMemo(() => (null != er ? { [er]: [n.id] } : {}), [er, n.id]);
     (0, d.$)(eP);
     let eE = (0, T.ZP)(n.id, em ? er : void 0),
-        eT = _.ZP.useName(null == eE ? void 0 : eE.guildId, el, n),
+        eT = _.ZP.useName(null == eE ? void 0 : eE.guildId, ei, n),
         { relationshipType: eZ, originApplicationId: eN } = (0, o.cj)([x.Z], () => ({
             relationshipType: x.Z.getRelationshipType(n.id),
             originApplicationId: x.Z.getOriginApplicationId(n.id),
@@ -108,7 +108,7 @@ function en(e) {
                       size: 1024,
                   }),
         eA = (0, m.p)({ location: "UserProfileModalV2" }),
-        eC = l.useMemo(() => (null != eu ? eu : (0, g.Z)()), [eu]),
+        eC = i.useMemo(() => (null != eu ? eu : (0, g.Z)()), [eu]),
         eD = (0, J.Z)({
             user: n,
             currentUser: en,
@@ -119,7 +119,7 @@ function en(e) {
         ek = (0, p.Dt)(),
         eB = ee.intl.format(ee.t.KRe1Fh, { name: eT });
     return (
-        l.useEffect(() => {
+        i.useEffect(() => {
             let e = () => {
                 ev(!0),
                     setTimeout(() => {
@@ -202,7 +202,7 @@ function en(e) {
                                                     style: { backgroundImage: "url(".concat(ew, ")") },
                                                 }),
                                             null != e_.interactionType &&
-                                                (0, r.jsx)(i.animated.div, {
+                                                (0, r.jsx)(l.animated.div, {
                                                     style: eI,
                                                     className: et.backdrop,
                                                 }),
@@ -232,14 +232,14 @@ function en(e) {
                                                                 user: n,
                                                                 displayProfile: eE,
                                                                 guildId: er,
-                                                                channelId: el,
+                                                                channelId: ei,
                                                                 themeType: Q.lY.MODAL_V2,
                                                             }),
                                                             (0, r.jsx)(V.Z, {
                                                                 location: "UserProfileModalV2",
                                                                 user: n,
                                                                 guildId: er,
-                                                                channelId: el,
+                                                                channelId: ei,
                                                                 themeType: Q.lY.MODAL_V2,
                                                                 hasEntered: ed === a.Dvm.ENTERED,
                                                                 prompt: eA && n.id === en.id ? eC : null,
@@ -256,7 +256,7 @@ function en(e) {
                                                                 onClose: ep,
                                                                 nickname: _.ZP.useName(
                                                                     null == eE ? void 0 : eE.guildId,
-                                                                    el,
+                                                                    ei,
                                                                     n,
                                                                 ),
                                                                 nicknameIcons: (0, r.jsx)(L.Z, {
@@ -282,13 +282,13 @@ function en(e) {
                                                                             (t = null == eE ? void 0 : eE.guildId)
                                                                                 ? t
                                                                                 : void 0,
-                                                                        channelId: el,
+                                                                        channelId: ei,
                                                                         className: et.profileBanner,
                                                                     }),
                                                                 }),
                                                             eR.map((e) => {
                                                                 var t;
-                                                                let { applicationId: l } = e;
+                                                                let { applicationId: i } = e;
                                                                 return (0, r.jsx)(
                                                                     U.Z.Overlay,
                                                                     {
@@ -300,19 +300,19 @@ function en(e) {
                                                                                 (t = null == eE ? void 0 : eE.guildId)
                                                                                     ? t
                                                                                     : void 0,
-                                                                            channelId: el,
+                                                                            channelId: ei,
                                                                             isGameRelationship: !0,
-                                                                            applicationId: l,
+                                                                            applicationId: i,
                                                                             className: et.profileBanner,
                                                                         }),
                                                                     },
-                                                                    l,
+                                                                    i,
                                                                 );
                                                             }),
                                                             n.isProvisional &&
                                                                 (0, r.jsx)(U.Z.Overlay, {
                                                                     className: et.profileOverlay,
-                                                                    children: (0, r.jsx)(z.Z, {
+                                                                    children: (0, r.jsx)(H.Z, {
                                                                         heading: ee.intl.string(ee.t.Iyka0d),
                                                                         headingVariant: "text-md/semibold",
                                                                         headingIcon: (0, r.jsx)(a.Mgn, {
@@ -341,7 +341,7 @@ function en(e) {
                                                                     user: n,
                                                                     currentUser: en,
                                                                     guildId: er,
-                                                                    channelId: el,
+                                                                    channelId: ei,
                                                                     displayProfile: eE,
                                                                     relationshipType: eZ,
                                                                     onClose: ep,
@@ -355,11 +355,11 @@ function en(e) {
                                                                     setLineClamp: !1,
                                                                 }),
                                                             eL.length > 0 &&
-                                                                (0, r.jsx)(z.Z, {
+                                                                (0, r.jsx)(H.Z, {
                                                                     heading: ee.intl.string(ee.t["Uv/eT0"]),
                                                                     children: (0, r.jsx)(R.Z, { applicationIds: eL }),
                                                                 }),
-                                                            (0, r.jsx)(z.Z, {
+                                                            (0, r.jsx)(H.Z, {
                                                                 heading: ee.intl.string(ee.t.a6XYDw),
                                                                 children: (0, r.jsx)(B.Z, {
                                                                     userId: n.id,
@@ -378,16 +378,16 @@ function en(e) {
                                                                     scrollIntoView: es === Q.Tb.ROLES,
                                                                 }),
                                                             eG.length > 0 &&
-                                                                (0, r.jsx)(z.Z, {
+                                                                (0, r.jsx)(H.Z, {
                                                                     heading: ee.intl.string(ee.t["3fe7U1"]),
                                                                     scrollIntoView: es === Q.Tb.CONNECTIONS,
-                                                                    children: (0, r.jsx)(H.Z, {
+                                                                    children: (0, r.jsx)(z.Z, {
                                                                         connections: eG,
                                                                         userId: n.id,
                                                                         className: et.profileAppConnections,
                                                                     }),
                                                                 }),
-                                                            (0, r.jsx)(z.Z, {
+                                                            (0, r.jsx)(H.Z, {
                                                                 heading: ee.intl.string(ee.t["mQKv+v"]),
                                                                 scrollIntoView: es === Q.Tb.NOTE,
                                                                 children: (0, r.jsx)(c.Z, {
@@ -458,7 +458,7 @@ function en(e) {
                                                 currentUser: en,
                                                 displayProfile: eE,
                                                 guildId: er,
-                                                channelId: el,
+                                                channelId: ei,
                                                 items: eD,
                                                 initialSection: ec,
                                                 initialSubsection: es,

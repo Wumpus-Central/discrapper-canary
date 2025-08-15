@@ -1,8 +1,8 @@
 n.d(t, { Z: () => O });
 var r = n(255367);
 n(73800);
-var l = n(442837),
-    i = n(481060),
+var i = n(442837),
+    l = n(481060),
     o = n(666520),
     a = n(592125),
     c = n(944486),
@@ -19,12 +19,12 @@ var l = n(442837),
 function O(e) {
     let { user: t, currentUser: n, displayProfile: O, guildId: x, subsection: h, onClose: v } = e,
         { trackUserProfileAction: _ } = (0, s.KZ)(),
-        I = (0, l.e7)([d.Z], () => {
+        I = (0, i.e7)([d.Z], () => {
             var e;
             return null == (e = d.Z.getUserProfile(t.id)) ? void 0 : e.application;
         }),
-        P = (0, l.e7)([a.Z, c.Z], () => a.Z.getChannel(c.Z.getChannelId()));
-    return (0, r.jsxs)(i.zJl, {
+        P = (0, i.e7)([a.Z, c.Z], () => a.Z.getChannel(c.Z.getChannelId()));
+    return (0, r.jsxs)(l.zJl, {
         fade: !0,
         className: y.scroller,
         children: [

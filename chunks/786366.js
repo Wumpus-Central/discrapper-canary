@@ -1,15 +1,15 @@
 n.d(t, { Z: () => f }), n(953529), n(997841);
 var r = n(255367);
 n(73800);
-var l = n(597312),
-    i = n(442837),
+var i = n(597312),
+    l = n(442837),
     o = n(481060),
     a = n(860719),
     c = n(621853),
     s = n(388032),
     d = n(770978);
 function u(e) {
-    let { icon: t, title: n, description: l } = e;
+    let { icon: t, title: n, description: i } = e;
     return (0, r.jsxs)("div", {
         className: d.row,
         children: [
@@ -31,7 +31,7 @@ function u(e) {
                     }),
                     (0, r.jsx)(o.Text, {
                         variant: "text-sm/normal",
-                        children: l,
+                        children: i,
                     }),
                 ],
             }),
@@ -40,7 +40,7 @@ function u(e) {
 }
 function f(e) {
     let { user: t } = e,
-        n = (0, i.e7)([c.Z], () => {
+        n = (0, l.e7)([c.Z], () => {
             var e;
             return null == (e = c.Z.getUserProfile(t.id)) ? void 0 : e.application;
         }),
@@ -49,7 +49,7 @@ function f(e) {
             hasGuildPresences: p,
             hasGuildMembers: m,
         } = (0, a.w)({ flags: null == n ? void 0 : n.flags });
-    return (0, r.jsxs)(l.zJ, {
+    return (0, r.jsxs)(i.zJ, {
         fade: !0,
         className: d.scroller,
         children: [

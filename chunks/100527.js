@@ -477,6 +477,7 @@ var r = (function (e) {
         (e.GAME_PROFILE = "game profile"),
         (e.GO_LIVE_KEYBIND = "go live keybind"),
         (e.OVERLAY_VOICE_WIDGET = "overlay voice widget"),
+        (e.REQUEST_TO_STREAM_INVITE_EMBED = "request to stream invite embed"),
         e
     );
 })(r || {});

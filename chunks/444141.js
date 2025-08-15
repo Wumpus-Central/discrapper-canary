@@ -1,7 +1,7 @@
 n.d(t, { Z: () => p });
 var r = n(255367),
-    l = n(481060),
-    i = n(906732),
+    i = n(481060),
+    l = n(906732),
     o = n(5192),
     a = n(785717),
     c = n(892001),
@@ -52,13 +52,13 @@ function f(e, t) {
 }
 function p(e) {
     let { user: t, guildId: n, channelId: p, displayProfile: m, onClose: g } = e,
-        { analyticsLocations: b, sourceAnalyticsLocations: j } = (0, i.ZP)(),
+        { analyticsLocations: b, sourceAnalyticsLocations: j } = (0, l.ZP)(),
         { context: y, trackUserProfileAction: O } = (0, a.KZ)(),
         x = (0, s.ZP)(t.id, n);
     return (null == x ? void 0 : x.guildId) == null || null == y
         ? null
         : (null == m ? void 0 : m.guildId) != null
-          ? (0, r.jsx)(l.sNh, {
+          ? (0, r.jsx)(i.sNh, {
                 id: "view-main-profile",
                 label: d.intl.string(d.t.GISTtb),
                 subtext: d.intl.formatToPlainString(d.t["mn/nW1"], { displayName: o.ZP.getName(void 0, void 0, t) }),
@@ -81,7 +81,7 @@ function p(e) {
                         );
                 },
             })
-          : (0, r.jsx)(l.sNh, {
+          : (0, r.jsx)(i.sNh, {
                 id: "view-server-profile",
                 label: d.intl.string(d.t.DisZzM),
                 subtext: d.intl.formatToPlainString(d.t["mn/nW1"], { displayName: o.ZP.getName(n, p, t) }),

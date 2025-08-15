@@ -25,8 +25,8 @@ let p = function (e) {
         } = e,
         C = s.useRef(null),
         y = s.useRef(null),
-        O = (null == (t = j.userStatus) ? void 0 : t.enrolledAt) != null,
-        E = (0, o.Rf)(j);
+        E = (null == (t = j.userStatus) ? void 0 : t.enrolledAt) != null,
+        O = (0, o.Rf)(j);
     return (0, r.jsxs)(i.p, {
         expandedContentRef: n,
         collapsedContentRef: C,
@@ -42,7 +42,7 @@ let p = function (e) {
                     isExpansionAnimationComplete: g,
                     quest: j,
                     useReducedMotion: b,
-                    taskDetails: E,
+                    taskDetails: O,
                     onCtxMenuOpen: f,
                     onCtxMenuClose: x,
                     onCtxMenuSelect: h,
@@ -64,14 +64,14 @@ let p = function (e) {
                 quest: j,
                 useReducedMotion: b,
                 ref: n,
-                taskDetails: E,
+                taskDetails: O,
                 children: (0, r.jsxs)(r.Fragment, {
                     children: [
                         (0, r.jsx)(u.Z, {
                             expansionSpring: p,
                             isExpanded: m,
                         }),
-                        !O &&
+                        !E &&
                             (0, r.jsx)(a.Z, {
                                 quest: j,
                                 expansionSpring: p,

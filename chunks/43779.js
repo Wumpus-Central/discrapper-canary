@@ -20,8 +20,8 @@ var r = n(255367),
     v = n(46140),
     C = n(642145),
     y = n(388032),
-    O = n(289157);
-let E = async () => await n.e("67963").then(n.t.bind(n, 145193, 19));
+    E = n(289157);
+let O = async () => await n.e("67963").then(n.t.bind(n, 145193, 19));
 function S(e) {
     var t, n, o, S, w;
     let {
@@ -100,7 +100,7 @@ function S(e) {
                                   children: [
                                       (0, r.jsx)(p.Z, {
                                           shouldUseThemeColor: !0,
-                                          className: O.orbsBalanceIcon,
+                                          className: E.orbsBalanceIcon,
                                       }),
                                       K,
                                   ],
@@ -119,7 +119,7 @@ function S(e) {
                                       children: [
                                           (0, r.jsx)(p.Z, {
                                               shouldUseThemeColor: !0,
-                                              className: O.orbsBalanceIcon,
+                                              className: E.orbsBalanceIcon,
                                           }),
                                           K,
                                       ],
@@ -139,36 +139,36 @@ function S(e) {
                 return (0, r.jsx)(c.Text, {
                     variant: "text-sm/medium",
                     color: "text-muted",
-                    className: O.description,
+                    className: E.description,
                     children: J,
                 });
         }, [J]),
         et = (0, l.e7)([d.Z], () => d.Z.useReducedMotion);
     return (0, r.jsxs)("div", {
-        className: O.container,
+        className: E.container,
         children: [
             (0, r.jsxs)(i.animated.div, {
                 style: {
                     maxHeight: H.to([0, 1], [104, (null != Z ? Z : 0) + 12]),
                 },
-                className: O.rewardDescriptionContainer,
+                className: E.rewardDescriptionContainer,
                 children: [
                     (0, r.jsx)(b.E, {
                         showPlaceholder: !k,
                         width: 80,
                         height: 80,
                         children: (0, r.jsxs)("div", {
-                            className: O.assetWrapper,
+                            className: E.assetWrapper,
                             children: [
-                                !z && F && (0, r.jsx)("div", { className: O.completionAnimation }),
+                                !z && F && (0, r.jsx)("div", { className: E.completionAnimation }),
                                 M && !z
                                     ? (0, r.jsxs)("div", {
-                                          className: O.progressWrapper,
+                                          className: E.progressWrapper,
                                           children: [
                                               F &&
                                                   (0, r.jsx)(c.Fmz, {
-                                                      importData: E,
-                                                      className: O.confetti,
+                                                      importData: O,
+                                                      className: E.confetti,
                                                       loop: !1,
                                                       autoplay: !1,
                                                       shouldAnimate: !et,
@@ -179,11 +179,11 @@ function S(e) {
                                                   percentComplete: Y,
                                                   percentCompleteText: N && !(0, m.zi)(P) ? G : void 0,
                                                   children: (0, r.jsx)("div", {
-                                                      className: O.circularRewardTileWrapper,
+                                                      className: E.circularRewardTileWrapper,
                                                       children: (0, r.jsx)(h.Z, {
                                                           quest: P,
                                                           questContent: A,
-                                                          className: O.circularQuestRewardTileAsset,
+                                                          className: E.circularQuestRewardTileAsset,
                                                           location: v.dr.QUEST_HOME_DESKTOP,
                                                           autoplay: N,
                                                           onLoadComplete: U,
@@ -198,7 +198,7 @@ function S(e) {
                                           quest: P,
                                           autoplay: N,
                                           questContent: A,
-                                          className: O.questRewardTileAsset,
+                                          className: E.questRewardTileAsset,
                                           location: v.dr.QUEST_HOME_DESKTOP,
                                           onLoadComplete: U,
                                           lazyLoad: !0,
@@ -209,18 +209,18 @@ function S(e) {
                     }),
                     (0, r.jsxs)("div", {
                         ref: L,
-                        className: a()(O.textContainer, { [O.justifyCenter]: !W }),
+                        className: a()(E.textContainer, { [E.justifyCenter]: !W }),
                         children: [
                             (0, r.jsx)(c.X6q, {
                                 variant: "eyebrow",
                                 color: "text-brand",
-                                className: O.questName,
+                                className: E.questName,
                                 children: y.intl.format(y.t.EAYZAg, { questName: P.config.messages.questName }),
                             }),
                             (0, r.jsx)(c.Text, {
                                 variant: "text-md/semibold",
                                 color: "header-primary",
-                                className: O.header,
+                                className: E.header,
                                 children: $,
                             }),
                             ee,
@@ -231,7 +231,7 @@ function S(e) {
                             style: {
                                 opacity: H.to([0, 1], [1, 0]),
                             },
-                            className: O.textOverflowBlur,
+                            className: E.textOverflowBlur,
                         }),
                 ],
             }),
@@ -254,7 +254,7 @@ let T = s.memo(function (e) {
             variant: "text-md/semibold",
             color: "header-primary",
             tag: "span",
-            className: O.header,
+            className: E.header,
             children: n,
         },
         "".concat(t, "_reward"),

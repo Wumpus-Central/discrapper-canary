@@ -1,8 +1,8 @@
 n.d(t, { Z: () => g });
 var r = n(255367);
 n(73800);
-var l = n(624238),
-    i = n(296009),
+var i = n(624238),
+    l = n(296009),
     o = n(442837),
     a = n(481060),
     c = n(314897),
@@ -12,10 +12,10 @@ var l = n(624238),
     f = n(388032),
     p = n(635318);
 let m = {
-    [i.l.FAVORITE_GAMES]: () => f.intl.string(f.t.sUQar6),
-    [i.l.CURRENT_GAMES]: () => f.intl.string(f.t.SqNnur),
-    [i.l.WANT_TO_PLAY_GAMES]: () => f.intl.string(f.t.bWSQwc),
-    [i.l.PLAYED_GAMES]: () => f.intl.string(f.t.scOKER),
+    [l.l.FAVORITE_GAMES]: () => f.intl.string(f.t.sUQar6),
+    [l.l.CURRENT_GAMES]: () => f.intl.string(f.t.SqNnur),
+    [l.l.WANT_TO_PLAY_GAMES]: () => f.intl.string(f.t.bWSQwc),
+    [l.l.PLAYED_GAMES]: () => f.intl.string(f.t.scOKER),
 };
 function g(e) {
     var t;
@@ -25,9 +25,9 @@ function g(e) {
         O = m[u.type](),
         x =
             j && u.games.length > 0
-                ? (t = u.type) === i.l.FAVORITE_GAMES
+                ? (t = u.type) === l.l.FAVORITE_GAMES
                     ? f.intl.string(f.t.wiXdER)
-                    : f.intl.format(f.t["zR1+09"], { numGames: l.k[t] })
+                    : f.intl.format(f.t["zR1+09"], { numGames: i.k[t] })
                 : void 0;
     return (0, r.jsxs)("div", {
         className: p.headerRow,
@@ -59,9 +59,9 @@ function g(e) {
     });
 }
 function b(e) {
-    let { widget: t, disabled: n, disabledInteraction: l, userId: a } = e,
+    let { widget: t, disabled: n, disabledInteraction: i, userId: a } = e,
         s = (0, o.e7)([c.default], () => c.default.getId() === a);
-    return !l && (s || (t.type === i.l.FAVORITE_GAMES && t.games.some((e) => null != e.comment)))
+    return !i && (s || (t.type === l.l.FAVORITE_GAMES && t.games.some((e) => null != e.comment)))
         ? (0, r.jsxs)("div", {
               className: p.actions,
               children: [

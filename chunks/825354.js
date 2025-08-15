@@ -1,7 +1,7 @@
 n.d(t, { Z: () => b });
 var r = n(255367),
-    l = n(73800),
-    i = n(442837),
+    i = n(73800),
+    l = n(442837),
     o = n(481060),
     a = n(239091),
     c = n(726521),
@@ -55,7 +55,7 @@ function g(e, t) {
 }
 function b(e) {
     let { widget: t, userId: b } = e,
-        j = l.useRef(null),
+        j = i.useRef(null),
         y = (e) => {
             if (e.shiftKey) {
                 (0, d.y8)(t.type), (0, u.L$)(f.qb.WIDGET_REMOVED);
@@ -79,7 +79,7 @@ function b(e) {
         O = () => {
             (0, c.G1)(b, t);
         },
-        x = (0, i.e7)([s.default], () => s.default.getId() === b);
+        x = (0, l.e7)([s.default], () => s.default.getId() === b);
     return (0, r.jsx)(o.yRy, {
         targetElementRef: j,
         align: "top",

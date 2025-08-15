@@ -1,8 +1,8 @@
 n.d(t, { Z: () => _ });
 var r = n(255367);
 n(73800);
-var l = n(120356),
-    i = n.n(l),
+var i = n(120356),
+    l = n.n(i),
     o = n(442837),
     a = n(481060),
     c = n(726542),
@@ -62,9 +62,9 @@ function h(e, t) {
 }
 function v(e) {
     var t;
-    let { account: n, locale: l, userId: i } = e,
+    let { account: n, locale: i, userId: l } = e,
         o = null != (t = n.metadata) ? t : {},
-        m = (0, u.FI)(o[j.PC.CREATED_AT], l),
+        m = (0, u.FI)(o[j.PC.CREATED_AT], i),
         v = c.Z.get((0, d.rR)(n.type));
     return (0, r.jsxs)("li", {
         className: O.connection,
@@ -120,7 +120,7 @@ function v(e) {
                                           onClick: (e) => {
                                               (0, s.yw)(b.rMx.CONNECTED_ACCOUNT_VIEWED, {
                                                   platform_type: n.type,
-                                                  other_user_id: i,
+                                                  other_user_id: l,
                                               }),
                                                   (0, g.q)(
                                                       {
@@ -184,12 +184,12 @@ function v(e) {
     });
 }
 function _(e) {
-    let { connections: t, userId: n, className: l } = e,
+    let { connections: t, userId: n, className: i } = e,
         a = (0, o.e7)([m.default], () => m.default.locale);
     return 0 === t.length
         ? null
         : (0, r.jsx)("ul", {
-              className: i()(O.container, l),
+              className: l()(O.container, i),
               children: t.map((e) =>
                   (0, r.jsx)(
                       v,

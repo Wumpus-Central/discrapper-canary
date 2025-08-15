@@ -24,8 +24,8 @@ var r = n(255367),
     v = n(981631),
     C = n(388032),
     y = n(301889),
-    O = n(708901);
-function E(e) {
+    E = n(708901);
+function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -102,7 +102,7 @@ function S(e) {
                                 children: (0, r.jsx)("img", {
                                     className: y.icon,
                                     alt: "",
-                                    src: O,
+                                    src: E,
                                 }),
                             }),
                             (0, r.jsx)(u.olH, {
@@ -182,7 +182,7 @@ function S(e) {
                                               var t, n;
                                               return (0, r.jsx)(
                                                   "img",
-                                                  ((t = E({}, e)),
+                                                  ((t = O({}, e)),
                                                   (n = n =
                                                       {
                                                           className: y.gameTile,
@@ -312,6 +312,6 @@ function T(e) {
 function w(e) {
     (0, u.ZDy)(async () => {
         let { default: t } = await Promise.resolve().then(n.bind(n, 623249));
-        return (n) => (0, r.jsx)(t, E({}, n, e));
+        return (n) => (0, r.jsx)(t, O({}, n, e));
     });
 }

@@ -1,11 +1,13 @@
 n.d(t, {
     Bv: () => h,
+    SK: () => b,
     _m: () => _,
     ft: () => g,
     jJ: () => m,
     lT: () => E,
     zu: () => f,
-});
+}),
+    n(49124);
 var r = n(73800),
     i = n(780384),
     o = n(781391),
@@ -60,4 +62,13 @@ function g() {
 }
 function E(e, t, n) {
     0 === e.length && n([t]), g();
+}
+function b() {
+    var e, t, n;
+    let { colors: r, chassisMixAmount: i, gradientAngle: o } = (0, l.Ig)(),
+        a = s.L1.getSetting().customUserThemeSettings,
+        c = null != (e = null == a ? void 0 : a.colors) ? e : [l.Dp],
+        u = null != (t = null == a ? void 0 : a.gradientAngle) ? t : 0,
+        d = null != (n = null == a ? void 0 : a.baseMix) ? n : l.BH;
+    return JSON.stringify(r) === JSON.stringify(c) && i === d && o === u;
 }

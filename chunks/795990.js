@@ -1,7 +1,7 @@
 n.d(t, { Z: () => O });
 var r = n(255367),
-    l = n(73800),
-    i = n(296009),
+    i = n(73800),
+    l = n(296009),
     o = n(481060),
     a = n(210753),
     c = n(804919),
@@ -13,17 +13,17 @@ var r = n(255367),
     m = n(958461);
 function g(e) {
     let { widgetType: t } = e,
-        n = t === i.l.FAVORITE_GAMES ? c.LM.BALDURS_GATE_3 : c.LM.CYBERPUNK_2077,
-        { coverImageUrl: l, localizedName: o } = (0, a.$)(n);
+        n = t === l.l.FAVORITE_GAMES ? c.LM.BALDURS_GATE_3 : c.LM.CYBERPUNK_2077,
+        { coverImageUrl: i, localizedName: o } = (0, a.$)(n);
     return (0, r.jsxs)("div", {
         className: m.placeholderDetailCard,
         children: [
             (0, r.jsx)("div", {
                 className: m.placeholderCover,
                 children:
-                    null != l && "" !== l
+                    null != i && "" !== i
                         ? (0, r.jsx)("img", {
-                              src: l,
+                              src: i,
                               alt: null != o ? o : "",
                               className: m.placeholderGameImage,
                           })
@@ -42,7 +42,7 @@ function g(e) {
 function b(e) {
     let { widgetType: t } = e,
         n =
-            t === i.l.WANT_TO_PLAY_GAMES
+            t === l.l.WANT_TO_PLAY_GAMES
                 ? [c.LM.ROBLOX, c.LM.VALORANT, c.LM.LEAGUE_OF_LEGENDS]
                 : [c.LM.ZENLESS_ZONE_ZERO, c.LM.ELDEN_RING, c.LM.RED_DEAD_REDEMPTION_2];
     return (0, r.jsx)("div", {
@@ -52,14 +52,14 @@ function b(e) {
 }
 function j(e) {
     let { applicationId: t } = e,
-        { coverImageUrl: n, localizedName: l } = (0, a.$)(t);
+        { coverImageUrl: n, localizedName: i } = (0, a.$)(t);
     return (0, r.jsx)("div", {
         className: m.placeholderCoverItem,
         children:
             null != n && "" !== n
                 ? (0, r.jsx)("img", {
                       src: n,
-                      alt: null != l ? l : "",
+                      alt: null != i ? i : "",
                       className: m.placeholderGameImage,
                   })
                 : (0, r.jsx)("div", { className: m.placeholderGameFallback }),
@@ -67,7 +67,7 @@ function j(e) {
 }
 function y(e) {
     let { widgetType: t } = e,
-        n = l.useCallback(() => {
+        n = i.useCallback(() => {
             (0, s.qH)(t), (0, d.L$)(u.qb.WIDGET_ADDED);
         }, [t]);
     return (0, r.jsxs)(o.P3F, {
@@ -77,11 +77,11 @@ function y(e) {
         children: [
             (() => {
                 switch (t) {
-                    case i.l.FAVORITE_GAMES:
-                    case i.l.CURRENT_GAMES:
+                    case l.l.FAVORITE_GAMES:
+                    case l.l.CURRENT_GAMES:
                         return (0, r.jsx)(g, { widgetType: t });
-                    case i.l.WANT_TO_PLAY_GAMES:
-                    case i.l.PLAYED_GAMES:
+                    case l.l.WANT_TO_PLAY_GAMES:
+                    case l.l.PLAYED_GAMES:
                         return (0, r.jsx)(b, { widgetType: t });
                     default:
                         return null;

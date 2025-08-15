@@ -1,8 +1,8 @@
 n.d(t, { Z: () => x });
 var r = n(255367),
-    l = n(73800),
-    i = n(120356),
-    o = n.n(i),
+    i = n(73800),
+    l = n(120356),
+    o = n.n(l),
     a = n(100527),
     c = n(906732),
     s = n(26033),
@@ -17,8 +17,8 @@ var r = n(255367),
     y = n(228168),
     O = n(704543);
 function x(e) {
-    let { user: t, entry: n, profileGuildId: i, className: x, onClose: h, hideContextMenu: v = !1 } = e,
-        _ = l.useRef(null),
+    let { user: t, entry: n, profileGuildId: l, className: x, onClose: h, hideContextMenu: v = !1 } = e,
+        _ = i.useRef(null),
         { analyticsLocations: I } = (0, c.ZP)(a.Z.USER_PROFILE_RECENT_ACTIVITY_CARD),
         { themeType: P } = (0, m.z)(),
         { interactionSource: E, interactionSourceId: T } = (0, u.Xo)(),
@@ -37,7 +37,7 @@ function x(e) {
                   user: t,
                   children: (0, r.jsx)(f.Z, {
                       user: t,
-                      guildId: i,
+                      guildId: l,
                       themeType: P,
                       sourceId: n.id,
                       entry: n,

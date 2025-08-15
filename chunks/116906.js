@@ -1,8 +1,8 @@
 n.d(t, { Z: () => I });
 var r = n(255367);
 n(73800);
-var l = n(442837),
-    i = n(481060),
+var i = n(442837),
+    l = n(481060),
     o = n(468363),
     a = n(353647),
     c = n(158776),
@@ -30,18 +30,18 @@ function I(e) {
             userId: t.id,
             guildId: P,
         }),
-        L = (0, l.e7)([a.Z], () => a.Z.isFetchingUserOutbox(t.id)),
+        L = (0, i.e7)([a.Z], () => a.Z.isFetchingUserOutbox(t.id)),
         R = t.id === n.id,
-        G = (0, l.e7)([s.Z, c.Z], () => {
+        G = (0, i.e7)([s.Z, c.Z], () => {
             let e = R ? s.Z.getStatus() : c.Z.getStatus(t.id);
-            return e === i.Skl.OFFLINE || e === i.Skl.INVISIBLE;
+            return e === l.Skl.OFFLINE || e === l.Skl.INVISIBLE;
         }),
         k = S.length > 0 || null != A,
         B = Z && null == A && null == D && null != C,
         M = !G && (k || B),
         U = w.length > 0;
     return M || U || !L
-        ? (0, r.jsxs)(i.zJl, {
+        ? (0, r.jsxs)(l.zJl, {
               className: v.scroller,
               fade: !0,
               children: [
@@ -72,7 +72,7 @@ function I(e) {
                                                 profileGuildId: null == I ? void 0 : I.guildId,
                                             }),
                                         }),
-                                    S.map((e, l) =>
+                                    S.map((e, i) =>
                                         (0, r.jsx)(
                                             "li",
                                             {
@@ -84,7 +84,7 @@ function I(e) {
                                                     profileGuildId: null == I ? void 0 : I.guildId,
                                                 }),
                                             },
-                                            "live-".concat(l),
+                                            "live-".concat(i),
                                         ),
                                     ),
                                 ],
@@ -98,7 +98,7 @@ function I(e) {
                                 ? h.intl.format(h.t["4bk9Ag"], {
                                       learnMoreHook: (e, t) =>
                                           (0, r.jsx)(
-                                              i.eee,
+                                              l.eee,
                                               {
                                                   href: d.Z.getArticleURL(x.BhN.ACTIVITY_STATUS_SETTINGS),
                                                   children: e,
@@ -133,6 +133,6 @@ function I(e) {
           })
         : (0, r.jsx)("div", {
               className: _.empty,
-              children: (0, r.jsx)(i.$jN, {}),
+              children: (0, r.jsx)(l.$jN, {}),
           });
 }

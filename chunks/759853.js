@@ -26,7 +26,7 @@ let j = ["#51BC9D"],
                 isHovered: C,
                 shouldShowRewardsCTAWhenCollapsed: y,
             } = e,
-            { completionSpring: O, startCompletionAnimation: E } = (0, g.G)(),
+            { completionSpring: E, startCompletionAnimation: O } = (0, g.G)(),
             S = (null == (t = b.userStatus) ? void 0 : t.completedAt) != null,
             T = s.useRef(!1),
             w = (0, u.e7)([p.Z], () => p.Z.useReducedMotion),
@@ -138,22 +138,22 @@ let j = ["#51BC9D"],
             }, [_, P, Q, w]),
             V = (0, d.Z)(v);
         return (s.useEffect(() => {
-            S && v && !V && (E(), D());
-        }, [v, S, E, D, V]),
+            S && v && !V && (O(), D());
+        }, [v, S, O, D, V]),
         s.useEffect(() => {
             S &&
                 !A &&
                 N &&
                 setTimeout(() => {
-                    E(), D();
+                    O(), D();
                 }, 200);
-        }, [S, N, A, E, D]),
+        }, [S, N, A, O, D]),
         s.useEffect(() => {
-            Q.isReady && (!T.current && S && (E(), D()), (T.current = S));
-        }, [S, T, D, E, Q]),
+            Q.isReady && (!T.current && S && (O(), D()), (T.current = S));
+        }, [S, T, D, O, Q]),
         s.useEffect(() => {
-            C && y && (E(), D());
-        }, [C, y, E, D]),
+            C && y && (O(), D());
+        }, [C, y, O, D]),
         w)
             ? null
             : (0, r.jsxs)("div", {
@@ -163,11 +163,11 @@ let j = ["#51BC9D"],
                   children: [
                       (0, r.jsx)(c.animated.div, {
                           className: x.background,
-                          style: { opacity: O },
+                          style: { opacity: E },
                       }),
                       (0, r.jsx)(c.animated.div, {
                           className: a()(x.borders, x.bordersTopLeft),
-                          style: { opacity: O },
+                          style: { opacity: E },
                       }),
                       (0, r.jsxs)(c.animated.div, {
                           className: x.confettiWrapper,
@@ -196,7 +196,7 @@ let j = ["#51BC9D"],
                                   (0, l.createPortal)(
                                       (0, r.jsx)(c.animated.div, {
                                           className: a()(x.borders, x.bordersBottom),
-                                          style: { opacity: O },
+                                          style: { opacity: E },
                                       }),
                                       o.current,
                                   ),

@@ -37,6 +37,7 @@ let a = (e) => ({
     rewardsConfig: (0, r.v)(e.rewards_config),
     videoMetadata: (0, o.FG)(e.video_metadata),
     cosponsorMetadata: s(e.cosponsor_metadata),
+    sharePolicy: e.share_policy,
 });
 function s(e) {
     if (null != e)

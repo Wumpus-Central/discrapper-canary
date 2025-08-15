@@ -1,7 +1,7 @@
 n.d(t, { Z: () => m }), n(388685), n(539854);
 var r = n(255367),
-    l = n(73800),
-    i = n(392711),
+    i = n(73800),
+    l = n(392711),
     o = n(296009),
     a = n(399606),
     c = n(804919),
@@ -16,22 +16,22 @@ function m(e) {
             if (null == e) return {};
             var n,
                 r,
-                l = (function (e, t) {
+                i = (function (e, t) {
                     if (null == e) return {};
                     var n,
                         r,
-                        l = {},
-                        i = Object.keys(e);
-                    for (r = 0; r < i.length; r++) (n = i[r]), t.indexOf(n) >= 0 || (l[n] = e[n]);
-                    return l;
+                        i = {},
+                        l = Object.keys(e);
+                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                    return i;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var i = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < i.length; r++)
-                    (n = i[r]),
-                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]);
+                var l = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < l.length; r++)
+                    (n = l[r]),
+                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
             }
-            return l;
+            return i;
         })(e, ["widgetGames", "widgetType"]);
     let {
             games: g,
@@ -39,10 +39,10 @@ function m(e) {
             isSuggestedGamesLoading: j,
         } = (function (e, t) {
             let { games: n } = (function () {
-                    let [e] = l.useState(() => (0, i.sampleSize)(c.qs, 4)),
+                    let [e] = i.useState(() => (0, l.sampleSize)(c.qs, 4)),
                         { gameDataMap: t, isGameFetching: n } = (0, f.F)(e);
                     return {
-                        games: l.useMemo(
+                        games: i.useMemo(
                             () =>
                                 e.map((e) => {
                                     let n = t[e];
@@ -64,7 +64,7 @@ function m(e) {
                     d.Z.suggestedFetchError,
                     d.Z.suggestedGameIds,
                 ]),
-                g = l.useMemo(() => {
+                g = i.useMemo(() => {
                     var t, n;
                     if (
                         p ||
@@ -84,7 +84,7 @@ function m(e) {
                 }, [s, m, p, e]),
                 { gameDataMap: b, isGameFetching: j } = (0, f.F)(g);
             return {
-                games: l.useMemo(
+                games: i.useMemo(
                     () =>
                         g.map((e) => {
                             let t = b[e];
@@ -101,7 +101,7 @@ function m(e) {
                 isSuggestedGamesLoading: u,
             };
         })(n, t),
-        y = l.useCallback(
+        y = i.useCallback(
             (e, t, r) => {
                 s.Z.removeGameFromSuggestedGames(e),
                     (0, u.ES)(n, {
