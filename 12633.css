@@ -72353,10 +72353,6 @@ strong {
     gap: 4px
 }
 
-.entryPointContainerFlexChild__95856 {
-    flex: 1
-}
-
 .expandableDescriptionClickable__95856 {
     cursor: pointer;
     display: flex;
@@ -72386,7 +72382,8 @@ strong {
     align-items: center;
     display: flex;
     flex-direction: row;
-    gap: var(--custom-disclosure-spacing)
+    gap: var(--custom-disclosure-spacing);
+    margin-bottom: 16.75px
 }
 
 .monetizationDisclosureStyle__95856 {
