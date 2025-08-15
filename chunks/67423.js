@@ -81,6 +81,9 @@ class g {
         if (this.seq > s) throw Error("Snowflake sequence number overflow: ".concat(this.seq));
         return this.seq++;
     }
+    willOverflowNext() {
+        return this.seq > s;
+    }
     reset() {
         this.seq = 0;
     }

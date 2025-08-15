@@ -1,49 +1,49 @@
-n.d(t, { Z: () => s }), n(953529), n(388685);
-var r = n(255367),
-    l = n(73800),
-    a = n(82659),
-    i = n(481060),
-    o = n(388032),
-    c = n(1904);
-function s(e) {
-    let { errorText: t, title: n, description: s, transitionState: u, onCancel: d, onConfirm: p, children: g } = e,
-        [m, b] = l.useState(!1),
-        h = l.useCallback(async () => {
-            b(!0);
+r.d(e, { Z: () => s }), r(953529), r(388685);
+var n = r(255367),
+    i = r(73800),
+    o = r(82659),
+    a = r(481060),
+    l = r(388032),
+    c = r(1904);
+function s(t) {
+    let { errorText: e, title: r, description: s, transitionState: u, onCancel: d, onConfirm: p, children: b } = t,
+        [g, y] = i.useState(!1),
+        _ = i.useCallback(async () => {
+            y(!0);
             try {
                 await p();
-            } catch (e) {
-                throw e;
+            } catch (t) {
+                throw t;
             } finally {
-                b(!1);
+                y(!1);
             }
         }, [p]);
-    return (0, r.jsxs)(a.Modal, {
+    return (0, n.jsxs)(o.Modal, {
         transitionState: u,
         onClose: d,
-        title: n,
+        title: r,
         subtitle: s,
         actions: [
             {
-                text: o.intl.string(o.t["ETE/oK"]),
+                text: l.intl.string(l.t["ETE/oK"]),
                 variant: "secondary",
                 onClick: d,
             },
             {
-                text: o.intl.string(o.t.R3BPHx),
-                onClick: h,
+                text: l.intl.string(l.t.R3BPHx),
+                onClick: _,
                 variant: "primary",
-                loading: m,
+                loading: g,
             },
         ],
         children: [
-            g,
-            null != t && "" !== t
-                ? (0, r.jsx)(i.Text, {
+            b,
+            null != e && "" !== e
+                ? (0, n.jsx)(a.Text, {
                       className: c.errorText,
                       variant: "text-xs/normal",
                       color: "text-danger",
-                      children: t,
+                      children: e,
                   })
                 : null,
         ],

@@ -1,16 +1,18 @@
-n.d(t, { m: () => O }), n(388685);
+n.d(t, { m: () => I }), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(120356),
     a = n.n(o),
     s = n(717976),
-    l = n(507274),
+    l = n(442837),
     c = n(930295),
-    u = n(304789),
-    d = n(866577),
-    f = n(231338),
-    _ = n(254477);
-function p(e, t, n) {
+    u = n(681803),
+    d = n(304789),
+    f = n(819640),
+    _ = n(866577),
+    p = n(231338),
+    h = n(254477);
+function m(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -23,7 +25,7 @@ function p(e, t, n) {
         e
     );
 }
-function h(e) {
+function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -34,12 +36,12 @@ function h(e) {
                 }),
             )),
             r.forEach(function (t) {
-                p(e, t, n[t]);
+                m(e, t, n[t]);
             });
     }
     return e;
 }
-function m(e, t) {
+function E(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -51,40 +53,50 @@ function m(e, t) {
     }
     return n;
 }
-function g(e, t) {
+function b(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : m(Object(t)).forEach(function (n) {
+            : E(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let E = 10,
-    b = 4,
-    y = f.Vq;
-function O(e) {
+let y = 10,
+    O = 4,
+    v = p.Vq;
+function I(e) {
+    var t;
     let {
-            children: t,
-            targetElementRef: n,
-            shouldShow: o = !0,
-            onRequestClose: f,
-            position: p = "top",
-            align: m = "center",
-            hasVideo: O = !1,
-            gradientColor: v,
-            caretConfig: I,
+            children: n,
+            targetElementRef: o,
+            shouldShow: p = !0,
+            onRequestClose: m,
+            position: E = "top",
+            align: I = "center",
+            hasVideo: T = !1,
+            gradientColor: S,
+            caretConfig: A,
         } = e,
-        [T, S] = i.useState(o);
+        [N, C] = i.useState(p),
+        R = (0, l.e7)([f.Z], () => f.Z.getLayers()),
+        P = null != (t = R[R.length - 1]) ? t : "base",
+        w = i.useMemo(() => {
+            var e;
+            return (
+                null == o.current ||
+                (null == (e = o.current.closest("[data-layer]")) ? void 0 : e.getAttribute("data-layer")) === P
+            );
+        }, [o, P]);
     i.useEffect(() => {
-        o && S(!0);
-    }, [o]);
-    let A = () => {
-            S(!1);
+        C(w && p);
+    }, [w, p]);
+    let D = () => {
+            C(!1);
         },
-        N = (e) => {
+        L = (e) => {
             switch (e) {
                 case "top":
                     return "bottom";
@@ -97,51 +109,53 @@ function O(e) {
                     return "left";
             }
         },
-        C = (0, d.i)({
-            shouldShow: o,
-            caretPosition: (null == I ? void 0 : I.position) != null ? I.position : N(p),
-            onExitComplete: A,
+        x = (0, _.i)({
+            shouldShow: p,
+            caretPosition: (null == A ? void 0 : A.position) != null ? A.position : L(E),
+            onExitComplete: D,
         }),
-        R = (e) =>
-            C((i, o) => {
-                if (!o) return null;
-                let c = (0, r.jsx)(
-                    l.V,
-                    g(h({}, e), {
-                        className: a()(null != v ? _.popoverContentWithGradient : _.popover, {
-                            [_["popover--video"]]: O,
+        M = (e) =>
+            x((t, i) => {
+                if (!i) return null;
+                let l = (0, r.jsx)(
+                    u.V,
+                    b(g({}, e), {
+                        modal: !1,
+                        className: a()(null != S ? h.popoverContentWithGradient : h.popover, {
+                            [h["popover--video"]]: T,
                         }),
-                        returnRef: n,
-                        children: t,
+                        returnRef: o,
+                        children: n,
                     }),
                 );
                 return (0, r.jsx)(s.animated.div, {
                     "data-mana-component": "popover",
-                    style: i,
+                    style: t,
                     children:
-                        null != v
-                            ? (0, r.jsx)(u.$, {
-                                  color: v,
-                                  className: _.popoverGradientWrapper,
-                                  children: c,
+                        null != S
+                            ? (0, r.jsx)(d.$, {
+                                  color: S,
+                                  className: h.popoverGradientWrapper,
+                                  children: l,
                               })
-                            : c,
+                            : l,
                 });
             });
     return (0, r.jsx)(c.H, {
-        targetElementRef: n,
-        shouldShow: T,
-        onRequestClose: f,
-        position: p,
-        align: m,
-        spacing: E + b,
+        targetElementRef: o,
+        shouldShow: N,
+        onRequestClose: m,
+        position: E,
+        align: I,
+        spacing: y + O,
         layerContext: void 0,
         positionKey: void 0,
         popoutKey: void 0,
         fixed: !1,
         autoInvert: !0,
         nudgeAlignIntoViewport: !0,
-        renderPopout: R,
-        children: y,
+        closeOnClickOutside: !1,
+        renderPopout: M,
+        children: v,
     });
 }

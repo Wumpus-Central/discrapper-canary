@@ -136,7 +136,7 @@ function _(e) {
     let { user: t, guildId: n, channelId: i, game: o, widgetType: c, loading: s = !1, disableInteraction: p = !1 } = e,
         { gameName: _ = m.intl.string(m.t.GIWFlJ), imageSrc: I, applicationId: P, comment: E, tags: T } = o,
         Z = {
-            variant: "text-md/normal",
+            variant: "heading-sm/semibold",
             color: "text-default",
         },
         N = a.default.getCurrentUser(),

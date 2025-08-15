@@ -179,8 +179,8 @@ class k extends (r = l.PureComponent) {
     render() {
         let { animating: e } = this.state,
             t = this.props,
-            { mode: n, children: r, baseLayer: l } = t,
-            a = (function (e, t) {
+            { name: n, mode: r, children: l, baseLayer: a } = t,
+            c = (function (e, t) {
                 if (null == e) return {};
                 var n,
                     r,
@@ -200,32 +200,33 @@ class k extends (r = l.PureComponent) {
                             !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
                 }
                 return i;
-            })(t, ["mode", "children", "baseLayer"]),
-            c = e || n === L ? this.getAnimatedStyle() : null,
-            u = (0, i.jsx)(
+            })(t, ["name", "mode", "children", "baseLayer"]),
+            u = e || r === L ? this.getAnimatedStyle() : null,
+            p = (0, i.jsx)(
                 s.Z.div,
                 S(
                     C(
                         {
                             ref: (e) => (this.containerRef.current = null != e ? e.componentRef : void 0),
-                            "aria-hidden": n === L,
+                            "data-layer": null != n ? n : "base",
+                            "aria-hidden": r === L,
                             className: o()(v.layer, {
-                                [v.baseLayer]: l,
+                                [v.baseLayer]: a,
                                 [v.animating]: e,
-                                "stop-animations": n === L,
+                                "stop-animations": r === L,
                             }),
-                            style: c,
+                            style: u,
                         },
-                        a,
+                        c,
                     ),
-                    { children: r },
+                    { children: l },
                 ),
             );
-        return l
-            ? u
+        return a
+            ? p
             : (0, i.jsx)(d.EqS, {
                   containerRef: this.containerRef,
-                  children: u,
+                  children: p,
               });
     }
     getAnimatedStyle() {
@@ -285,6 +286,7 @@ class M extends l.PureComponent {
             (0, i.jsxs)(
                 k,
                 {
+                    name: "string" == typeof e ? e : void 0,
                     mode: t === n - 1 ? w : L,
                     children: [(0, i.jsx)(D, {}), r],
                 },

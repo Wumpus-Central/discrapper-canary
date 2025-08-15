@@ -3,15 +3,15 @@ var n = t(255367);
 t(73800);
 var o = t(481060),
     i = t(198952),
-    a = t(329242),
-    s = t(345909),
-    l = t(388032),
-    c = t(167154);
+    s = t(329242),
+    c = t(345909),
+    a = t(388032),
+    l = t(167154);
 let d = (e) => {
     var r,
         t,
-        { children: i, className: a } = e,
-        s = (function (e, r) {
+        { children: i, className: s } = e,
+        c = (function (e, r) {
             if (null == e) return {};
             var t,
                 n,
@@ -61,9 +61,9 @@ let d = (e) => {
         })(
             {
                 "data-migration-pending": !0,
-                className: a,
+                className: s,
             },
-            s,
+            c,
         )),
         (t = t =
             {
@@ -88,28 +88,28 @@ let d = (e) => {
 (d.ButtonFooter = (e) => {
     let { children: r } = e;
     return (0, n.jsx)("div", {
-        className: c.footer,
+        className: l.footer,
         children: r,
     });
 }),
     (d.Header = (e) => {
-        let { icon: r, currentUser: t, otherUser: s, header: l } = e;
+        let { icon: r, currentUser: t, otherUser: c, header: a } = e;
         return (0, n.jsxs)("div", {
-            className: c.header,
+            className: l.header,
             children: [
                 (0, n.jsx)(i.Z, {
                     currentUser: t,
-                    otherUser: s,
+                    otherUser: c,
                     children: r,
                 }),
                 (0, n.jsxs)("div", {
-                    className: c.heading,
+                    className: l.heading,
                     children: [
                         (0, n.jsx)(o.X6q, {
                             variant: "text-lg/bold",
-                            children: l,
+                            children: a,
                         }),
-                        (0, n.jsx)(a.Z, { user: s }),
+                        (0, n.jsx)(s.Z, { user: c }),
                     ],
                 }),
             ],
@@ -118,19 +118,19 @@ let d = (e) => {
     (d.Content = (e) => {
         let { children: r } = e;
         return (0, n.jsx)("div", {
-            className: c.content,
+            className: l.content,
             children: r,
         });
     }),
     (d.Notice = (e) => {
         let { notice: r } = e;
         return (0, n.jsxs)("div", {
-            className: c.notice,
+            className: l.notice,
             children: [
                 (0, n.jsx)(o.Text, {
                     variant: "eyebrow",
                     color: "header-primary",
-                    children: l.intl.string(s.default.cXgKMD),
+                    children: a.intl.string(c.default.cXgKMD),
                 }),
                 (0, n.jsx)(o.Text, {
                     variant: "text-sm/normal",
@@ -145,7 +145,7 @@ let d = (e) => {
         return null == r
             ? null
             : (0, n.jsx)(o.kzN, {
-                  className: c.error,
+                  className: l.error,
                   onDismiss: t,
                   children: r,
               });

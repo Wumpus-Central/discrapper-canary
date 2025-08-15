@@ -296,11 +296,12 @@ class N extends (r = o.Component) {
                 A.has(e.key) && this.handlePreload();
             }),
             O(this, "handleDocumentMouseDown", (e) => {
-                let { ignoreModalClicks: t } = this.props,
-                    n = e.target,
-                    r = this.domElementRef.current;
-                if (null != r) {
-                    if ((0, f.t)(r, n) || g.Z.isOpen() || (t && (0, _.$s)())) return;
+                let { ignoreModalClicks: t, closeOnClickOutside: n } = this.props;
+                if (!1 === n) return;
+                let r = e.target,
+                    i = this.domElementRef.current;
+                if (null != i) {
+                    if ((0, f.t)(i, r) || g.Z.isOpen() || (t && (0, _.$s)())) return;
                     this.isValidClickStart = !0;
                 }
             }),
@@ -320,5 +321,6 @@ O(N, "defaultProps", {
     nudgeAlignIntoViewport: !1,
     spacing: 0,
     loadingComponent: (0, i.jsx)(b.x, {}),
+    closeOnClickOutside: !0,
 }),
     O(N, "contextType", h.ZP);

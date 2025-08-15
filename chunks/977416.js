@@ -113,7 +113,7 @@ function f(e) {
                     }),
                     (0, r.jsx)(l.X6q, {
                         id: m,
-                        variant: "text-sm/medium",
+                        variant: "text-xs/medium",
                         color: "text-secondary",
                         children: c.intl.string(c.t.zMUr6e),
                     }),

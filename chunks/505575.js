@@ -1,5 +1,6 @@
 e.exports = {
     tryItOutButtons: "tryItOutButtons_fbfab6",
+    tryItOutButtonsV2: "tryItOutButtonsV2_fbfab6",
     premiumCta: "premiumCta_fbfab6",
     basicThemeSelectors: "basicThemeSelectors_fbfab6",
     featureBorder: "featureBorder_fbfab6",

@@ -53,7 +53,12 @@ function d(e) {
 }
 let f = new i.SnowflakeSequence();
 function _(e) {
-    return i.default.fromTimestampWithSequence(Math.floor(e), f);
+    let t = Math.floor(e);
+    try {
+        return f.willOverflowNext() && f.reset(), i.default.fromTimestampWithSequence(t, f);
+    } catch (e) {
+        return f.reset(), i.default.fromTimestampWithSequence(t, f);
+    }
 }
 function p(e, t, n) {
     var r;
