@@ -83,23 +83,26 @@ function E(e, t) {
         null != t && g.searchParams.set(e, t);
     }
     let E = encodeURIComponent(g.toString()),
-        b = encodeURIComponent((0, o.Z)()),
-        y = +!!h(),
-        O = null != a ? encodeURIComponent(a) : null,
-        v = null != l ? encodeURIComponent(l) : null;
+        b = encodeURIComponent("discord://app/open#".concat(g.toString())),
+        y = encodeURIComponent((0, o.Z)()),
+        O = +!!h(),
+        v = null != a ? encodeURIComponent(a) : null,
+        I = null != l ? encodeURIComponent(l) : null;
     if ((null == (r = window) || null == (n = r.location) ? void 0 : n.hash) === "#test") {
-        let e = ""
-            .concat(_, "/")
-            .concat(p, "/?deep_link_value=")
-            .concat(E, "&pid=")
-            .concat(i, "&af_og_description=")
-            .concat(b, "&af_force_deeplink=")
-            .concat(y);
+        let e = 1 === O ? "true" : "false",
+            t = ""
+                .concat(_, "/")
+                .concat(p, "/?deep_link_value=")
+                .concat(E, "&pid=")
+                .concat(i, "&af_force_deeplink=")
+                .concat(e, "&af_og_description=")
+                .concat(y, "&af_dp=")
+                .concat(b);
         return (
-            null != O && (e += "&af_android_url=".concat(O)),
-            null != v && (e += "&af_ios_url=".concat(v)),
-            console.log("Redirecting to ".concat(e)),
-            e
+            null != v && (t += "&af_android_url=".concat(v)),
+            null != I && (t += "&af_ios_url=".concat(I)),
+            console.log("Redirecting to ".concat(t)),
+            t
         );
     }
     {
@@ -111,8 +114,8 @@ function E(e, t) {
                 .concat(c, "&isi=")
                 .concat(u, "&ibi=")
                 .concat(d, "&sd=")
-                .concat(b, "&efr=")
-                .concat(y);
-        return null != O && (t += "&afl=".concat(O)), null != v && (t += "&ifl=".concat(v)), t;
+                .concat(y, "&efr=")
+                .concat(O);
+        return null != v && (t += "&afl=".concat(v)), null != I && (t += "&ifl=".concat(I)), t;
     }
 }

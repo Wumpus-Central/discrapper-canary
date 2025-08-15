@@ -15,7 +15,7 @@ function s(e, t) {
               label: a.intl.string(a.t.dEaPc3),
               action: () =>
                   (0, l.ZDy)(async () => {
-                      let { default: i } = await Promise.all([n.e("7590"), n.e("45094"), n.e("30946")]).then(
+                      let { default: i } = await Promise.all([n.e("7590"), n.e("45094"), n.e("76480")]).then(
                           n.bind(n, 218613),
                       );
                       return (n) => {

@@ -11,7 +11,7 @@ var i,
     o = n(300284),
     c = n(526167),
     d = n(63063),
-    u = n(220654),
+    u = n(47280),
     m = n(963590),
     p = n(981631),
     g = n(526761),
@@ -73,7 +73,7 @@ let et = () => {
         n = (0, c.rO)(),
         i = d.Z.getArticleURL(p.BhN.REFERRAL_PROGRAM),
         r = (0, m.Z)({ location: "WhatsNewSection" }),
-        $ = (0, u.Z)({ location: "useBentoBoxes" }),
+        $ = (0, u.ZP)({ location: "useBentoBoxes" }),
         ee = (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},

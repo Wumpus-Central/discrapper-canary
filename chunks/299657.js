@@ -25,7 +25,7 @@ var i = n(255367),
     T = n(111361),
     N = n(357355),
     I = n(937579),
-    y = n(220654),
+    y = n(47280),
     A = n(104494),
     P = n(639119),
     R = n(2359),
@@ -48,7 +48,7 @@ let L = function (e) {
         [z, W] = r.useState(!0),
         Y = r.useRef(0),
         K = (0, T.M5)(U, Z.p9.TIER_2),
-        q = (0, y.Z)({ location: "PremiumMarketingPage" }),
+        q = (0, y.ZP)({ location: "PremiumMarketingPage" }),
         X = (0, l.e7)([N.Z], () => N.Z.hasFetched);
     r.useEffect(() => {
         X || d.MH();

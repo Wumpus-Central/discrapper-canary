@@ -1,6 +1,6 @@
 n.d(t, {
     G: () => v,
-    Z: () => T,
+    Z: () => w,
 }),
     n(388685),
     n(781311);
@@ -19,13 +19,13 @@ var r = n(255367),
     b = n(537383),
     y = n(71080),
     f = n(388032),
-    p = n(257803);
+    p = n(663961);
 let g = (0, u.hQ)(),
     j = (0, u.hQ)();
 function v(e) {
     return "".concat(e.rowType, ":").concat(e.id);
 }
-function E(e) {
+function S(e) {
     return (0, r.jsx)(
         o.vwX,
         {
@@ -36,7 +36,7 @@ function E(e) {
         e,
     );
 }
-function S(e) {
+function E(e) {
     var t, n;
     let {
             id: l,
@@ -134,43 +134,43 @@ function S(e) {
         t),
     );
 }
-function T(e) {
+function w(e) {
     let {
             listClassName: t,
             pendingAdditions: n,
             query: i,
             onQueryChange: s,
-            onClickRow: u,
-            onRemovePendingAddition: T,
+            onClickRow: d,
+            onRemovePendingAddition: u,
             roles: w = [],
-            members: R = [],
+            members: T = [],
             users: O = [],
-            guilds: C = [],
-            placeholderText: N,
-            disabledText: M,
-            hintText: L,
+            guilds: R = [],
+            placeholderText: C,
+            disabledText: N,
+            hintText: M,
             searchTitleText: k,
-            renderEmptyText: Z,
+            renderEmptyText: L,
             focusSearchAfterReady: P,
-            isReady: A,
-            maxCount: z,
-            hideRowLabel: I = !1,
+            isReady: Z,
+            maxCount: A,
+            hideRowLabel: z = !1,
         } = e,
+        I = l.useRef(null),
         B = l.useRef(null),
-        D = l.useRef(null),
-        $ = [w.length, R.length, O.length, C.length],
-        [U, _] = l.useState(!1),
-        [q, G] = l.useState(0),
-        [F, Q] = l.useState(-1);
+        D = [w.length, T.length, O.length, R.length],
+        [$, U] = l.useState(!1),
+        [_, q] = l.useState(0),
+        [G, F] = l.useState(-1);
     l.useEffect(() => {
         var e;
-        null == (e = B.current) || e.focus();
+        null == (e = I.current) || e.focus();
     }, []);
-    let V = l.useCallback(function (e, t) {
+    let Q = l.useCallback(function (e, t) {
             let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
-            if ((G(e), Q(t), n)) {
+            if ((q(e), F(t), n)) {
                 var r;
-                null == (r = D.current) ||
+                null == (r = B.current) ||
                     r.scrollToIndex({
                         section: null != e ? e : 0,
                         row: null != t ? t : 0,
@@ -178,44 +178,44 @@ function T(e) {
                     });
             }
         }, []),
-        J = l.useCallback(
+        V = l.useCallback(
             (e, t) => {
                 if (null == t) return;
                 s("");
                 let n = (e === y.m$.ROLES ? w : [])[t];
-                n.rowType !== y.aC.EMPTY_STATE && u(n);
+                n.rowType !== y.aC.EMPTY_STATE && d(n);
             },
-            [w, u, s],
+            [w, d, s],
         ),
         X = l.useCallback(
             (e) => {
                 var t;
-                null != e && e.rowType !== y.aC.EMPTY_STATE && (u(e), s(""), null == (t = B.current) || t.focus());
+                null != e && e.rowType !== y.aC.EMPTY_STATE && (d(e), s(""), null == (t = I.current) || t.focus());
             },
-            [u, s],
+            [d, s],
         ),
         Y = l.useMemo(() => Object.keys(n), [n]),
         H =
             l.useMemo(
                 () =>
-                    R.some((e) => !e.disabled) ||
+                    T.some((e) => !e.disabled) ||
                     w.some((e) => !e.disabled) ||
                     O.some((e) => !e.disabled) ||
-                    C.some((e) => !e.disabled),
-                [R, w, O, C],
+                    R.some((e) => !e.disabled),
+                [T, w, O, R],
             ) || "" === i.trim();
-    function W() {
+    function J() {
         var e;
-        _(!(null == (e = D.current) ? void 0 : e.isScrolledToTop()) && H);
+        U(!(null == (e = B.current) ? void 0 : e.isScrolledToTop()) && H);
     }
     return (
         l.useEffect(() => {
-            W();
+            J();
         }),
         (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsxs)("div", {
-                    className: a()(p.searchBox, { [p.scrollSeparator]: U }),
+                    className: a()(p.searchBox, { [p.scrollSeparator]: $ }),
                     children: [
                         null != k &&
                             (0, r.jsx)(o.vwX, {
@@ -223,37 +223,38 @@ function T(e) {
                                 children: k,
                             }),
                         (0, r.jsx)(b.Z, {
-                            ref: B,
+                            ref: I,
                             query: i,
                             onQueryChange: s,
-                            selectedSection: q,
-                            selectedRow: F,
-                            onSelectionChange: V,
-                            onSelect: J,
+                            selectedSection: _,
+                            selectedRow: G,
+                            onSelectionChange: Q,
+                            onSelect: V,
                             tags: Y.map((e) => n[e].display),
-                            sections: $,
+                            sections: D,
                             onRemoveTag: function (e) {
-                                T(Y[e]);
+                                u(Y[e]);
                             },
-                            placeholder: N,
+                            placeholder: C,
                             focusAfterReady: P,
-                            isReady: A,
+                            isReady: Z,
                             "aria-labelledby": g,
                             "aria-controls": j,
                         }),
-                        null != L
+                        null != M
                             ? (0, r.jsx)(o.Text, {
+                                  className: p.hintText,
                                   variant: "text-xs/normal",
-                                  children: L,
+                                  children: M,
                               })
                             : null,
                     ],
                 }),
                 H
                     ? (0, r.jsx)(o.aVo, {
-                          ref: D,
+                          ref: B,
                           className: a()(p.roleMemberList, t),
-                          sections: $,
+                          sections: D,
                           renderRow: (e) => {
                               let t,
                                   l,
@@ -262,12 +263,12 @@ function T(e) {
                                   u = !1,
                                   x = !1,
                                   b = !1,
-                                  f = null != z && Object.keys(n).length >= z;
+                                  f = null != A && Object.keys(n).length >= A;
                               switch (i) {
                                   case y.m$.ROLES:
                                       (u = (l = v((d = w[s]))) in n || d.disabled),
                                           (x = d.disabled || (!u && f)),
-                                          (b = q === y.m$.ROLES && F === s),
+                                          (b = _ === y.m$.ROLES && G === s),
                                           (t = (0, r.jsxs)("div", {
                                               className: p.rowBody,
                                               children: [
@@ -291,11 +292,11 @@ function T(e) {
                                                                       : "text-default",
                                                               children: d.name,
                                                           }),
-                                                          d.disabled && null != M
+                                                          d.disabled && null != N
                                                               ? (0, r.jsx)(o.Text, {
                                                                     color: "header-secondary",
                                                                     variant: "text-xs/normal",
-                                                                    children: M,
+                                                                    children: N,
                                                                 })
                                                               : null,
                                                       ],
@@ -304,9 +305,9 @@ function T(e) {
                                           }));
                                       break;
                                   case y.m$.MEMBERS:
-                                      (u = (l = v((d = R[s]))) in n || d.disabled),
+                                      (u = (l = v((d = T[s]))) in n || d.disabled),
                                           (x = d.disabled || (!u && f)),
-                                          (b = q === y.m$.MEMBERS && F === s),
+                                          (b = _ === y.m$.MEMBERS && G === s),
                                           (t = (0, r.jsxs)("div", {
                                               className: p.rowBody,
                                               children: [
@@ -336,7 +337,7 @@ function T(e) {
                                   case y.m$.USERS:
                                       (u = (l = v((d = O[s]))) in n || d.disabled),
                                           (x = d.disabled || (!u && f)),
-                                          (b = q === y.m$.USERS && F === s),
+                                          (b = _ === y.m$.USERS && G === s),
                                           (t = (0, r.jsxs)("div", {
                                               className: p.rowBody,
                                               children: [
@@ -352,11 +353,11 @@ function T(e) {
                                                               variant: "text-sm/normal",
                                                               children: d.name,
                                                           }),
-                                                          d.disabled && null != M
+                                                          d.disabled && null != N
                                                               ? (0, r.jsx)(o.Text, {
                                                                     color: "header-secondary",
                                                                     variant: "text-xs/normal",
-                                                                    children: M,
+                                                                    children: N,
                                                                 })
                                                               : null,
                                                       ],
@@ -365,9 +366,9 @@ function T(e) {
                                           }));
                                       break;
                                   case y.m$.GUILDS:
-                                      (u = (l = v((d = C[s]))) in n || d.disabled),
+                                      (u = (l = v((d = R[s]))) in n || d.disabled),
                                           (x = d.disabled || (!u && f)),
-                                          (b = q === y.m$.GUILDS && F === s),
+                                          (b = _ === y.m$.GUILDS && G === s),
                                           (t = (0, r.jsxs)("div", {
                                               className: p.rowBody,
                                               children: [
@@ -390,18 +391,18 @@ function T(e) {
                               return null == d
                                   ? null
                                   : (0, r.jsx)(
-                                        S,
+                                        E,
                                         {
                                             id: "user-row-".concat(s),
-                                            rowLabel: I ? null : h.zB(d.rowType),
+                                            rowLabel: z ? null : h.zB(d.rowType),
                                             checked: u,
                                             disabled: x,
                                             onSelect: () => X(d),
                                             showCheckbox: d.rowType !== y.aC.EMPTY_STATE,
-                                            onMouseEnter: () => V(i, s, !1),
+                                            onMouseEnter: () => Q(i, s, !1),
                                             selected: b,
                                             "aria-posinset": s + 1,
-                                            "aria-setsize": $.reduce((e, t) => e + t, 0),
+                                            "aria-setsize": D.reduce((e, t) => e + t, 0),
                                             children: t,
                                         },
                                         l,
@@ -412,33 +413,30 @@ function T(e) {
                               let { section: t } = e;
                               switch (t) {
                                   case y.m$.ROLES:
-                                      return E(f.intl.string(f.t.LPJmLy));
+                                      return S(f.intl.string(f.t.LPJmLy));
                                   case y.m$.MEMBERS:
-                                      return E(f.intl.string(f.t["9Oq93t"]));
+                                      return S(f.intl.string(f.t["9Oq93t"]));
                                   case y.m$.USERS:
-                                      return E(f.intl.string(f.t.nqDUBQ));
+                                      return S(f.intl.string(f.t.nqDUBQ));
                                   case y.m$.GUILDS:
-                                      return E(f.intl.string(f.t["7hB4kp"]));
+                                      return S(f.intl.string(f.t["7hB4kp"]));
                               }
                           },
                           sectionHeight: 32,
-                          onScroll: W,
+                          onScroll: J,
                           role: void 0,
                           innerRole: "listbox",
                           innerId: j,
                           innerAriaMultiselectable: !0,
                           innerAriaOrientation: "vertical",
                       })
-                    : (0, r.jsxs)(d.Z, {
-                          className: t,
-                          align: d.Z.Align.CENTER,
-                          justify: d.Z.Justify.CENTER,
-                          direction: d.Z.Direction.VERTICAL,
+                    : (0, r.jsxs)("div", {
+                          className: a()(p.noResults, t),
                           children: [
                               (0, r.jsx)(x.Z, { className: p.noResultIcon }),
                               (0, r.jsx)(o.Text, {
                                   variant: "text-sm/normal",
-                                  children: Z(i),
+                                  children: L(i),
                               }),
                           ],
                       }),

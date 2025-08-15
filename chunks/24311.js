@@ -1,74 +1,74 @@
-t.d(n, { Z: () => v });
-var i = t(255367);
+t.d(n, { Z: () => f });
+var l = t(255367);
 t(73800);
-var l = t(442837),
+var i = t(442837),
     r = t(481060),
     a = t(493683),
     o = t(40851),
     u = t(740492),
     s = t(314897),
-    d = t(592125),
-    c = t(699516),
-    f = t(944486),
-    g = t(981631),
-    h = t(388032);
-function v(e) {
-    let { user: n, context: v, label: b, joinCallVideo: _, id: p, onCall: Z } = e,
-        O = (0, o.Aq)(),
-        m = (0, l.e7)([s.default], () => s.default.getId() === n.id),
-        E = (0, l.e7)([c.Z], () => c.Z.isBlocked(n.id)),
-        C = (0, l.e7)([f.Z, d.Z], () => f.Z.getVoiceChannelId() === d.Z.getDMFromUserId(n.id));
-    if (m || v === g.IlC.POPOUT || C || n.bot || n.isProvisional) return null;
-    let N = () => {
-            null == Z || Z(),
+    c = t(592125),
+    d = t(699516),
+    g = t(944486),
+    Z = t(981631),
+    b = t(388032);
+function f(e) {
+    let { user: n, context: f, label: p, joinCallVideo: m, id: O, onCall: h } = e,
+        j = (0, o.Aq)(),
+        P = (0, i.e7)([s.default], () => s.default.getId() === n.id),
+        v = (0, i.e7)([d.Z], () => d.Z.isBlocked(n.id)),
+        x = (0, i.e7)([g.Z, c.Z], () => g.Z.getVoiceChannelId() === c.Z.getDMFromUserId(n.id));
+    if (P || f === Z.IlC.POPOUT || x || n.bot || n.isProvisional) return null;
+    let _ = () => {
+            null == h || h(),
                 a.Z.openPrivateChannel({
                     recipientIds: n.id,
                     joinCall: !0,
-                    joinCallVideo: _,
+                    joinCallVideo: m,
                 }),
-                O.dispatch(g.CkL.POPOUT_CLOSE),
+                j.dispatch(Z.CkL.POPOUT_CLOSE),
                 (0, r.pTH)();
         },
-        j = !u.ZP.disableCallUserConfirmationPrompt;
-    return (0, i.jsx)(r.sNh, {
-        id: null != p ? p : "call",
-        label: null != b ? b : h.intl.string(h.t.JJogjo),
-        action: j
+        y = !u.ZP.disableCallUserConfirmationPrompt;
+    return (0, l.jsx)(r.sNh, {
+        id: null != O ? O : "call",
+        label: null != p ? p : b.intl.string(b.t.JJogjo),
+        action: y
             ? () => {
                   (0, r.ZDy)(async () => {
                       let { default: e } = await t.e("27157").then(t.bind(t, 736454));
                       return (n) =>
-                          (0, i.jsx)(
+                          (0, l.jsx)(
                               e,
                               (function (e) {
                                   for (var n = 1; n < arguments.length; n++) {
                                       var t = null != arguments[n] ? arguments[n] : {},
-                                          i = Object.keys(t);
+                                          l = Object.keys(t);
                                       "function" == typeof Object.getOwnPropertySymbols &&
-                                          (i = i.concat(
+                                          (l = l.concat(
                                               Object.getOwnPropertySymbols(t).filter(function (e) {
                                                   return Object.getOwnPropertyDescriptor(t, e).enumerable;
                                               }),
                                           )),
-                                          i.forEach(function (n) {
-                                              var i;
-                                              (i = t[n]),
+                                          l.forEach(function (n) {
+                                              var l;
+                                              (l = t[n]),
                                                   n in e
                                                       ? Object.defineProperty(e, n, {
-                                                            value: i,
+                                                            value: l,
                                                             enumerable: !0,
                                                             configurable: !0,
                                                             writable: !0,
                                                         })
-                                                      : (e[n] = i);
+                                                      : (e[n] = l);
                                           });
                                   }
                                   return e;
-                              })({ onSubmit: N }, n),
+                              })({ onSubmit: _ }, n),
                           );
                   });
               }
-            : N,
-        disabled: E,
+            : _,
+        disabled: v,
     });
 }

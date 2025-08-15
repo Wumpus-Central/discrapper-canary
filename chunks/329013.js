@@ -49,89 +49,103 @@ let Z = () => {
             d = (0, j.Ng)(),
             u = (0, j.Wp)(d, P.Si.TIER_2),
             { v2EditorEnabled: m } = f.Mc.useExperiment({ location: "UserSettingsAppearanceClientThemes" });
-        return (
-            r.useEffect(() => {
+        r.useEffect(() => {
+            a &&
+                N.default.track(y.rMx.PREMIUM_UPSELL_VIEWED, {
+                    type: P.cd.PREMIUM_CLIENT_THEME_TRY_IT_OUT,
+                    location_stack: n,
+                });
+        }, [a, n]);
+        let x =
+                l &&
                 a &&
-                    N.default.track(y.rMx.PREMIUM_UPSELL_VIEWED, {
-                        type: P.cd.PREMIUM_CLIENT_THEME_TRY_IT_OUT,
-                        location_stack: n,
-                    });
-            }, [a, n]),
-            (0, i.jsxs)("div", {
+                (0, i.jsxs)("div", {
+                    children: [
+                        (0, i.jsx)(o.zx, {
+                            className: D.previewThemeButtonWide,
+                            color: o.zx.Colors.PRIMARY,
+                            onClick: () => Z(),
+                            children: R.intl.string(R.t["E+COuL"]),
+                        }),
+                        (0, i.jsx)("div", { className: D.premiumTier2Divider }),
+                        (0, i.jsx)(v.ZP, {
+                            type: P.cd.PREMIUM_CLIENT_THEME_SETTINGS_UPSELL,
+                            subscriptionTier: P.Si.TIER_2,
+                        }),
+                    ],
+                }),
+            _ = (0, i.jsxs)(i.Fragment, {
                 children: [
-                    (0, i.jsxs)(b.ZP, {
-                        type: b.yH.SETTINGS,
-                        children: [
-                            (0, i.jsx)(b.ZP.Basic, { className: D.basicThemeSelectors }),
-                            (0, i.jsx)(k, {}),
-                            (0, i.jsxs)(S.Z, {
-                                className: D.featureBorder,
-                                isShown: a,
-                                type: S.Y.PREMIUM,
-                                children: [
-                                    (0, i.jsx)(b.ZP.Gradient, {
-                                        disabled: a,
-                                        renderCTAButtons: () => {
-                                            if (!a || l) return null;
-                                            let e = u
-                                                    ? R.intl.formatToPlainString(R.t.bkQ4bG, {
-                                                          percent: null == d ? void 0 : d.discount.amount,
-                                                      })
-                                                    : R.intl.string(R.t.mr4K7O),
-                                                t = m ? D.tryItOutButtonsV2 : D.tryItOutButtons;
-                                            return (0, i.jsxs)("div", {
-                                                className: t,
-                                                children: [
-                                                    (0, i.jsx)(c.zxk, {
-                                                        variant: "secondary",
-                                                        text: R.intl.string(R.t["E+COuL"]),
-                                                        onClick: () => Z(),
-                                                    }),
-                                                    m
-                                                        ? (0, i.jsx)(C.Z, {
-                                                              subscriptionTier: P.Si.TIER_2,
-                                                              defaultTextOverride: e,
-                                                              premiumModalAnalyticsLocation: {
-                                                                  object: y.qAy.BUTTON_CTA,
-                                                                  objectType: y.Qqv.BUY,
-                                                              },
-                                                              fullWidth: !0,
-                                                          })
-                                                        : (0, i.jsx)(O.Z, {
-                                                              showGradient: !1,
-                                                              subscriptionTier: P.Si.TIER_2,
-                                                              textOptions: { textOverride: e },
-                                                              className: D.premiumCta,
-                                                          }),
-                                                ],
-                                            });
-                                        },
-                                    }),
-                                    l &&
-                                        a &&
-                                        (0, i.jsxs)("div", {
-                                            children: [
-                                                (0, i.jsx)(o.zx, {
-                                                    className: D.previewThemeButtonWide,
-                                                    color: o.zx.Colors.PRIMARY,
-                                                    onClick: () => Z(),
-                                                    children: R.intl.string(R.t["E+COuL"]),
-                                                }),
-                                                (0, i.jsx)("div", { className: D.premiumTier2Divider }),
-                                                (0, i.jsx)(v.ZP, {
-                                                    type: P.cd.PREMIUM_CLIENT_THEME_SETTINGS_UPSELL,
-                                                    subscriptionTier: P.Si.TIER_2,
-                                                }),
-                                            ],
-                                        }),
-                                ],
-                            }),
-                        ],
+                    (0, i.jsx)(b.ZP.Gradient, {
+                        disabled: !m && a,
+                        renderCTAButtons: () => {
+                            if (!a || l) return null;
+                            let e = u
+                                ? R.intl.formatToPlainString(R.t.bkQ4bG, {
+                                      percent: null == d ? void 0 : d.discount.amount,
+                                  })
+                                : R.intl.string(R.t.mr4K7O);
+                            return m
+                                ? (0, i.jsxs)("div", {
+                                      className: D.tryItOutButtonsV2,
+                                      children: [
+                                          (0, i.jsx)(c.zxk, {
+                                              variant: "secondary",
+                                              text: R.intl.string(R.t["E+COuL"]),
+                                              onClick: () => Z(),
+                                          }),
+                                          (0, i.jsx)(C.Z, {
+                                              subscriptionTier: P.Si.TIER_2,
+                                              defaultTextOverride: e,
+                                              premiumModalAnalyticsLocation: {
+                                                  object: y.qAy.BUTTON_CTA,
+                                                  objectType: y.Qqv.BUY,
+                                              },
+                                              fullWidth: !0,
+                                          }),
+                                      ],
+                                  })
+                                : (0, i.jsxs)("div", {
+                                      className: D.tryItOutButtons,
+                                      children: [
+                                          (0, i.jsx)(c.zxk, {
+                                              variant: "secondary",
+                                              text: R.intl.string(R.t["E+COuL"]),
+                                              onClick: () => Z(),
+                                          }),
+                                          (0, i.jsx)(O.Z, {
+                                              showGradient: !1,
+                                              subscriptionTier: P.Si.TIER_2,
+                                              textOptions: { textOverride: e },
+                                              className: D.premiumCta,
+                                          }),
+                                      ],
+                                  });
+                        },
                     }),
-                    (0, i.jsx)(c.$i$, { className: D.divider }),
+                    x,
                 ],
-            })
-        );
+            });
+        return (0, i.jsxs)("div", {
+            children: [
+                (0, i.jsxs)(b.ZP, {
+                    type: b.yH.SETTINGS,
+                    children: [
+                        (0, i.jsx)(b.ZP.Basic, { className: D.basicThemeSelectors }),
+                        (0, i.jsx)(k, {}),
+                        m
+                            ? _
+                            : (0, i.jsx)(S.Z, {
+                                  className: D.featureBorder,
+                                  isShown: a,
+                                  type: S.Y.PREMIUM,
+                                  children: _,
+                              }),
+                    ],
+                }),
+                (0, i.jsx)(c.$i$, { className: D.divider }),
+            ],
+        });
     };
 function k() {
     let e = (0, T.A6)(),

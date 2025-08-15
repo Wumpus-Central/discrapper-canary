@@ -249,31 +249,34 @@ function ec(e) {
         } = ed(ea({}, e)),
         p = I.w.useExperiment({ location: "oauth2_authorize" }),
         h =
-            null != a
-                ? (0, r.jsx)("div", {
-                      className: o()(er.fakeHeader, { [er.moveUp]: !e.hideHeader }),
-                      children: a,
-                  })
-                : void 0,
-        m =
             null != a || null != s || null != u
                 ? (0, r.jsxs)("div", {
                       className: er.authorize,
                       children: [
+                          a,
                           (0, r.jsxs)("div", {
-                              className: o()(er.content, d ? er.contentBackground : null, f ? er.noPadding : null),
-                              children: [s, null != c || p.enabled ? null : u],
+                              className: er.contentWrapper,
+                              children: [
+                                  (0, r.jsxs)("div", {
+                                      className: o()(
+                                          er.content,
+                                          d ? er.contentBackground : null,
+                                          f ? er.noPadding : null,
+                                      ),
+                                      children: [s, null != c || p.enabled ? null : u],
+                                  }),
+                                  null == c && p.enabled
+                                      ? (0, r.jsx)("div", {
+                                            className: o()(
+                                                er.content,
+                                                d ? er.contentBackground : null,
+                                                f ? er.noPadding : null,
+                                            ),
+                                            children: u,
+                                        })
+                                      : null,
+                              ],
                           }),
-                          null == c && p.enabled
-                              ? (0, r.jsx)("div", {
-                                    className: o()(
-                                        er.content,
-                                        d ? er.contentBackground : null,
-                                        f ? er.noPadding : null,
-                                    ),
-                                    children: u,
-                                })
-                              : null,
                       ],
                   })
                 : null;
@@ -288,9 +291,8 @@ function ec(e) {
             actions: l,
             title: n,
             subtitle: i,
-            input: h,
             "aria-label": t,
-            children: m,
+            children: h,
         }),
     );
 }
@@ -686,7 +688,7 @@ function ed(e) {
                     (0, M.yE)(null != (n = eP.application.flags) ? n : 0, ee.udG.EMBEDDED) &&
                     eJ === c.Y.USER_INSTALL &&
                     e4.enabled;
-            (m = (0, r.jsxs)(r.Fragment, {
+            (h = (0, r.jsxs)(r.Fragment, {
                 children: [
                     (0, r.jsx)(Y.Z, {
                         application: eP.application,
@@ -739,8 +741,8 @@ function ed(e) {
                         : null,
                 ],
             })),
-                e5.includes(u.x.BOT) && !d.fS(e8, k.Hn) && (N = "AUTHORIZE_BOT_PERMISSIONS"),
-                to.length > 1 && (v = "SELECT_INSTALL_TYPE"),
+                e5.includes(u.x.BOT) && !d.fS(e8, k.Hn) && (v = "AUTHORIZE_BOT_PERMISSIONS"),
+                to.length > 1 && (m = "SELECT_INSTALL_TYPE"),
                 (t_ = (tO && null == eQ) || (ty && null == eZ)),
                 (tf = !0);
             break;
@@ -750,20 +752,20 @@ function ed(e) {
                     label: en.intl.string(en.t.ZTNur6),
                     body: (0, r.jsx)(eu, {}),
                 };
-            (m = (0, r.jsx)(K.Z, {
+            (h = (0, r.jsx)(K.Z, {
                 application: eP.application,
                 permissions: e8,
                 deniedPermissions: eY,
                 onPermissionsChange: td,
                 guild: eQ,
             })),
-                (v = "AUTHORIZE_SCOPES"),
+                (m = "AUTHORIZE_SCOPES"),
                 (tf = !0);
     }
     let tI = [];
     if (tp && null != eP) {
         let e = null == (_ = eP.bot) ? void 0 : _.approximate_guild_count;
-        C = (0, r.jsxs)(r.Fragment, {
+        N = (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(H.Z, {
                     application: eP.application,
@@ -784,7 +786,7 @@ function ed(e) {
         th &&
             null != eP &&
             null != eq &&
-            (h = (0, r.jsx)(q.Z, {
+            (C = (0, r.jsx)(q.Z, {
                 user: eq,
                 application: eP.application,
                 bot: eP.bot,
@@ -795,10 +797,10 @@ function ed(e) {
             })),
         tm &&
             (tI.push(
-                null != v
+                null != m
                     ? {
                           variant: "secondary",
-                          onClick: () => eL(v),
+                          onClick: () => eL(m),
                           text: en.intl.string(en.t["13/7kZ"]),
                       }
                     : {
@@ -811,12 +813,12 @@ function ed(e) {
                 tI.push(
                     eU
                         ? {
-                              onClick: null != N ? () => eL(N) : () => tr(!0),
+                              onClick: null != v ? () => eL(v) : () => tr(!0),
                               loading: ek,
-                              disabled: null == C || t_,
+                              disabled: null == N || t_,
                               text: t_
                                   ? en.intl.string(en.t.BwwiSE)
-                                  : null != N
+                                  : null != v
                                     ? en.intl.string(en.t["3PatS0"])
                                     : en.intl.string(en.t["y+/PEx"]),
                           }
@@ -828,11 +830,11 @@ function ed(e) {
                           },
                 )),
         {
-            header: h,
-            body: m,
+            header: C,
+            body: h,
             actions: tI,
-            nextStep: N,
-            appDetails: C,
+            nextStep: v,
+            appDetails: N,
             sendAuthorize: tr,
             hasContentBackground: tf,
             noPadding: tg,
